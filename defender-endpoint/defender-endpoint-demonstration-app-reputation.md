@@ -1,15 +1,12 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint SmartScreen app reputation demonstration
 description: Test how Microsoft Defender for Endpoint SmartScreen helps you identify phishing and malware websites
-search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: ngp
-ms.author: kesharab
-author: KesemSharabi
+ms.author: lwainstein
+author: limwainstein
 ms.reviewer: yongrhee 
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -81,5 +78,5 @@ This download is known malware; SmartScreen should block this program from runni
 ## See also
 
 [Microsoft Defender for Endpoint - demonstration scenarios](defender-endpoint-demonstrations.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

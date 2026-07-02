@@ -1,25 +1,23 @@
-﻿---
+---
 title: Microsoft Defender XDR time zone settings
 description: Use the info contained here to configure the Microsoft Defender XDR time zone settings.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: article
 ms.subservice: reference
-search.appverid: met150
 ms.date: 11/30/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange
 
 ---
-# Microsoft Defender XDR time zone settings
+# Microsoft Defender time zone settings
 
 
 This article describes how to configure time zone settings and options.
@@ -86,5 +84,5 @@ The following date and time formats are currently not supported:
 
 Decimal symbol used is always a dot, even if a comma is selected in  the **Numbers** format settings in **Region** settings. For example, `15,5K` is displayed as `15.5K`.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

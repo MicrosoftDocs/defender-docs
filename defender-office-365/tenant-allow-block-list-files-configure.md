@@ -1,32 +1,32 @@
 ---
 title: Allow or block files using the Tenant Allow/Block List
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.collection:
   - m365-security
   - tier1
 description: Admins can learn how to allow or block files in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 07/08/2025
+ms.date: 06/08/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ms.custom: sfi-ga-nochange
 ---
 
 # Allow or block files using the Tenant Allow/Block List
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In all organizations with cloud mailboxes, admins can create and manage entries for files in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
+In all organizations with cloud mailboxes, admins can create and manage entries for files in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md). Tenant Allow/Block List file hash matching applies to all files extracted during message analysis, including:
+
+- Standard attachments.
+- Inline or embedded content. For example:
+  - Images in the message body.
+  - Files contained within supported attachment types.
 
 This article describes how admins can manage entries for files in the Microsoft Defender portal and in Exchange Online PowerShell.
 
@@ -80,7 +80,7 @@ This article describes how admins can manage entries for files in the Microsoft 
     > [!IMPORTANT]
     > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
-- A **Files** tab is available on the **Submissions** page only in organizations with Microsoft Defender XDR or Microsoft Defender for Endpoint Plan 2. For information and instructions to submit files from the **Files** tab, see [Submit files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
+- A **Files** tab is available on the **Submissions** page only in organizations with Microsoft Defender or Microsoft Defender for Endpoint Plan 2. For information and instructions to submit files from the **Files** tab, see [Submit files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
 
 ## Create allow entries for files
 
@@ -108,7 +108,7 @@ To create block entries for files, use either of the following methods:
 
 2. On the **Tenant Allow/Block Lists** page, select the **Files** tab.
 
-3. On the **Files** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**, and then select **Block**.
+3. On the **Files** tab, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add**, and then select **Block**.
 
 4. In the **Block files** flyout that opens, configure the following settings:
 
@@ -160,7 +160,7 @@ On the **Files** tab, you can sort the entries by clicking on an available colum
 - **Remove on**: The expiration date.
 - **Notes**
 
-To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
 
 - **Action**: The available values are **Allow** and **Block**.
 - **Never expire**: :::image type="icon" source="media/scc-toggle-on.png" border="false"::: or :::image type="icon" source="media/scc-toggle-off.png" border="false":::
@@ -169,11 +169,11 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **Remove on**: Select **From** and **To** dates.
 - **Modified by**: Provide an incomplete or complete email address to search by it.
 
-When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific entries.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific entries.
 
-To group the entries, select :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select **Action**. To ungroup the entries, select **None**.
+To group the entries, select :::image type="icon" source="media/defender-portal-icon-group.png" border="false"::: **Group** and then select **Action**. To ungroup the entries, select **None**.
 
 ### Use PowerShell to view entries for files in the Tenant Allow/Block List
 
@@ -211,7 +211,7 @@ In existing file entries, you can change the expiration date and note.
 
 2. Select the **Files** tab
 
-3. On the **Files** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
+3. On the **Files** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** action that appears.
 
 4. In the **Edit file** flyout that opens, the following settings are available:
    - **Block entries**:
@@ -234,7 +234,7 @@ In existing file entries, you can change the expiration date and note.
    When you're finished in the **Edit file** flyout, select **Save**.
 
 > [!TIP]
-> In the details flyout of an entry on the **Files** tab, use :::image type="icon" source="media/m365-cc-sc-view-submission-icon.png" border="false"::: **View submission** at the top of the flyout to go to the details of the corresponding entry on the **Submissions** page. This action is available if a submission was responsible for creating the entry in the Tenant Allow/Block List.
+> In the details flyout of an entry on the **Files** tab, use :::image type="icon" source="media/defender-portal-icon-view-submission.png" border="false"::: **View submission** at the top of the flyout to go to the details of the corresponding entry on the **Submissions** page. This action is available if a submission was responsible for creating the entry in the Tenant Allow/Block List.
 
 ### Use PowerShell to modify existing allow or block entries for files in the Tenant Allow/Block List
 
@@ -260,8 +260,8 @@ For detailed syntax and parameter information, see [Set-TenantAllowBlockListItem
 
 3. On the **Files** tab, do one of the following steps:
 
-   - Select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
-   - Select the entry from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** at the top of the flyout.
+   - Select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears.
+   - Select the entry from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** at the top of the flyout.
 
      > [!TIP]
      > To see details about other entries without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.

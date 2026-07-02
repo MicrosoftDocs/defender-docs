@@ -1,36 +1,33 @@
 ---
 title: Use shared queries in Microsoft Defender advanced hunting
 description: Start threat hunting immediately with predefined and shared queries. Share your queries to the public or to your organization.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 ms.custom:
+- msecd-doc-authoring-1014
 - cx-ti
 - cx-ah
 ms.topic: how-to
-ms.date: 04/22/2024
+ms.date: 06/16/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
+ai-usage: ai-assisted
 ---
 
 # Use shared queries in advanced hunting
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-[Advanced hunting](advanced-hunting-overview.md) queries can be shared among users in the same organization. You can also save queries that are only accessible to you. You can also find community queries that are shared publicly on GitHub. These saved queries let you quickly pursue specific threat hunting scenarios without having to write queries from scratch.
+[Advanced hunting](advanced-hunting-overview.md) queries can be shared with users in your organization. You can also save queries that only you can access. Community queries shared on GitHub are available too. These saved queries help you quickly start hunting for threats without writing queries from scratch.
 
-Under the Queries tab in advanced hunting, you can find the drop-down menus for **Shared queries**, **My queries**, and **Community queries**. You can select a downward-facing arrow to expand a menu.
+The **Queries** tab in advanced hunting has drop-down menus for **Shared queries**, **My queries**, and **Community queries**. Select an arrow to expand a menu.
 
 :::image type="content" source="media/advanced-hunting-shared-queries/advanced-hunting-shared-queries-1.png" alt-text="Shared queries, My queries, and Community queries in the Microsoft Defender portal" lightbox="media/advanced-hunting-shared-queries/advanced-hunting-shared-queries-1.png":::
 
@@ -53,11 +50,16 @@ You can save a new or existing query so that it is only accessible to you or sha
 
 ## Delete or rename a query
 
-1. Select the three dots to the right of a query you want to rename or delete.
+To rename a saved query or delete one you no longer need, follow these steps:
+
+1. Find the query you want to change. Select the three dots to its right.
 
     :::image type="content" source="media/advanced-hunting-shared-queries/advanced-hunting-del-save-query.png" alt-text="Rename or delete a query in the Advanced Hunting page in the Microsoft Defender portal" lightbox="media/advanced-hunting-shared-queries/advanced-hunting-del-save-query.png":::
 
-2. Select **Delete** and confirm deletion. Or select **Rename** and provide a new name for the query.
+> [!CAUTION]
+> Deleting a query removes it permanently. If you want to keep the query, rename it instead.
+
+2. To remove the query, select **Delete** and confirm. To change its name, select **Rename** and enter a new name.
 
 ## Create a direct link to a query
 
@@ -65,23 +67,25 @@ To generate a link that opens your query directly in the advanced hunting query 
 
 ## Access community queries in the GitHub repo
 
-Microsoft security researchers regularly share advanced hunting queries in a [designated public repository on GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Hunting%20Queries/Microsoft%20365%20Defender). Contributions to this repository are reviewed before getting published. To contribute, [join GitHub for free](https://github.com/).
+Microsoft security researchers share advanced hunting queries in a [public GitHub repository](https://github.com/Azure/Azure-Sentinel/tree/master/Hunting%20Queries/Microsoft%20365%20Defender). All contributions are reviewed before they're published. To contribute, [join GitHub for free](https://github.com/).
 
 You can easily find these queries in the **Community queries** drop-down menu as well.
 
 :::image type="content" source="media/advanced-hunting-shared-queries/advanced-hunting-shared-queries-2.png" alt-text="Community queries organized by folder in the Microsoft Defender portal" lightbox="media/advanced-hunting-shared-queries/advanced-hunting-shared-queries-2.png":::
 
-Community queries are grouped into folders like *Campaigns*, *Collection*, *Defense evasion*, and the like. Further information about the query is provided as in-line comments in the query itself.
+Community queries are grouped into folders such as *Campaigns*, *Collection*, and *Defense evasion*. Each query includes in-line comments with more details.
 
 > [!TIP]
 > Microsoft security researchers also provide advanced hunting queries that you can use to locate activities and indicators associated with emerging threats. These queries are provided as part of the [threat analytics](/windows/security/threat-protection/microsoft-defender-atp/threat-analytics) reports in Microsoft Defender XDR.
 
-## Related topics
+<a name="related-topics"></a>
+## Related content
 
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Learn the query language](advanced-hunting-query-language.md)
 - [Work with query results](advanced-hunting-query-results.md)
 - [Hunt across devices, emails, apps, and identities](advanced-hunting-query-emails-devices.md)
+- [Understand the schema](advanced-hunting-schema-tables.md)
 - [Understand the schema](advanced-hunting-schema-tables.md)
 - [Apply query best practices](advanced-hunting-best-practices.md)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

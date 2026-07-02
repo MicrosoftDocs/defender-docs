@@ -1,14 +1,7 @@
 ---
 title: Responding to a Compromised Email Account
-f1.keywords:
-  - NOCSH
-  - Hijacked account
-  - Hacked account
-  - Compromised account
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.collection:
   - o365_security_incident_response
@@ -20,13 +13,11 @@ ms.custom:
   - TopSMBIssues
   - seo-marvel-apr2020
 ms.localizationpriority: high
-search.appverid:
-  - MET150
 description: Learn how to recognize and respond to a compromised email account using tools available in Microsoft 365.
 ms.service: defender-office-365
 ms.date: 03/31/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---

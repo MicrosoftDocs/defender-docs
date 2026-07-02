@@ -1,14 +1,12 @@
-﻿---
+---
 title: Use network protection to help prevent connections to malicious or suspicious sites
 description: Protect your network by preventing users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 10/20/2025
-audience: ITPro
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.reviewer: ericlaw
-manager: bagol
 ms.custom: asr
 ms.subservice: asr
 ms.topic: overview
@@ -16,7 +14,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-search.appverid: met150
 appliesto:
   - Microsoft Defender Antivirus
 ---
@@ -92,7 +89,7 @@ Network protection also requires Microsoft Defender Antivirus with real-time pro
 
 ## Why network protection is important
 
-Network protection is a part of the [attack surface reduction](overview-attack-surface-reduction.md) group of solutions in Microsoft Defender for Endpoint. Network protection enables the network layer to block connections to domains and IP addresses. By default, network protection guards your computers from known malicious domains using the SmartScreen feed, which blocks malicious URLs in a manner similar to SmartScreen in the Microsoft Edge browser. The network protection functionality can be extended to:
+Network protection is a part of the [attack surface reduction](attack-surface-reduction-overview.md) group of solutions in Microsoft Defender for Endpoint. Network protection enables the network layer to block connections to domains and IP addresses. By default, network protection guards your computers from known malicious domains using the SmartScreen feed, which blocks malicious URLs in a manner similar to SmartScreen in the Microsoft Edge browser. The network protection functionality can be extended to:
 
 - Block IP/URL addresses from your own threat intelligence ([indicators](indicator-ip-domain.md))
 - Block unsanctioned services from [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
@@ -179,15 +176,15 @@ By enabling this setting, network protection blocks network traffic instead of d
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 
-2. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-3. In the **Group Policy Management Editor** go to **Computer configuration** and then select **Administrative templates**.
+1. In the **Group Policy Management Editor** go to **Computer configuration** and then select **Administrative templates**.
 
-4. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Network inspection system**.
+1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Network inspection system**.
 
-5. Double-click **Convert warn verdict to block** and set the option to **Enabled**.
+1. Double-click **Convert warn verdict to block** and set the option to **Enabled**.
 
-6. Select **OK**.
+1. Select **OK**.
 
 #### Block experience
 
@@ -198,7 +195,7 @@ When a user visits a website whose url has a bad reputation, a toast notificatio
 
 :::image type="content" source="media/network-protection-phishing-blocked.png" alt-text="Shows a network protection known phishing content blocked notification." lightbox="media/network-protection-phishing-blocked.png":::
 
-Your security operations team can [customize the notification](attack-surface-reduction-rules-deployment-implement.md#customize-attack-surface-reduction-rules) shown for a blocked connection with your organization's details and contact information.
+Your security operations team can [customize the notification](attack-surface-reduction-rules-overview.md#notifications-and-alerts-for-asr-rules) shown for a blocked connection with your organization's details and contact information.
 
 ## SmartScreen Unblock
 
@@ -219,7 +216,7 @@ Network protection is enabled per device, which is typically done using your man
 > [!NOTE]
 > Microsoft Defender Antivirus must be in active mode to enable network protection.
 
-You can enable network protection in `audit` mode or `block` mode. If you want to evaluate the impact of enabling network protection before actually blocking IP addresses or URLs, you can enable network protection in [audit mode](overview-attack-surface-reduction.md). Audit mode logs whenever end users connect to an address or site that would otherwise be blocked by network protection. To enforce blocking of custom indicators or Web content filtering categories, network protection must be in `block` mode.
+You can enable network protection in `audit` mode or `block` mode. If you want to evaluate the impact of enabling network protection before actually blocking IP addresses or URLs, you can enable network protection in [audit mode](attack-surface-reduction-overview.md#audit-mode). Audit mode logs whenever end users connect to an address or site that would otherwise be blocked by network protection. To enforce blocking of custom indicators or Web content filtering categories, network protection must be in `block` mode.
 
 For information about network protection for Linux and macOS see the following articles: 
 
@@ -309,14 +306,14 @@ Network protection works best with [Microsoft Defender for Endpoint](microsoft-d
 
 ## Review network protection events in the Microsoft Defender portal
 
-Defender for Endpoint provides detailed reporting into events and blocks as part of its [alert investigation scenarios](investigate-alerts.md). You can view these details in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) in the [alerts queue](review-alerts.md) or by using [advanced hunting](/defender-xdr/advanced-hunting-overview). If you're using [audit mode](overview-attack-surface-reduction.md), you can use advanced hunting to see how network protection settings would affect your environment if they were enabled.
+Defender for Endpoint provides detailed reporting into events and blocks as part of its [alert investigation scenarios](investigate-alerts.md). You can view these details in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) in the [alerts queue](review-alerts.md) or by using [advanced hunting](/defender-xdr/advanced-hunting-overview). If you're using [audit mode](attack-surface-reduction-overview.md#audit-mode), you can use advanced hunting to see how network protection settings would affect your environment if they were enabled.
 
 ## Review network protection events in Windows Event Viewer
 
 You can review the Windows event log to see events that are created when network protection blocks (or audits) access to a malicious IP or domain:
 
-1. [Create an XML query](/defender-endpoint/overview-attack-surface-reduction#copy-the-xml-directly).
-2. Select **OK**.
+1. [Create an XML query](attack-surface-reduction-windows-events.md#copy-the-xml-directly).
+1. Select **OK**.
 
    This procedure creates a custom view that filters to only show the following events related to network protection:
 
@@ -334,9 +331,9 @@ Here's an example of how that works:
 
 1. Suppose that a user attempts to access a website. The site happens to be hosted on a dangerous domain, and it should be blocked by network protection.  
 
-2. The three-way handshake via TCP/IP commences. Before it completes, a `DeviceNetworkEvents` action is logged, and its `ActionType` is listed as `ConnectionSuccess`. However, as soon as the three-way handshake process completes, network protection blocks access to the site. All of this happens quickly.
+1. The three-way handshake via TCP/IP commences. Before it completes, a `DeviceNetworkEvents` action is logged, and its `ActionType` is listed as `ConnectionSuccess`. However, as soon as the three-way handshake process completes, network protection blocks access to the site. All of this happens quickly.
 
-3. In the Microsoft Defender portal, an alert is listed in the [alerts queue](alerts-queue.md). Details of that alert include both `DeviceNetworkEvents` and [`AlertEvidence`](/defender-xdr/advanced-hunting-alertevidence-table). You can see that the site was blocked, even though you also have a `DeviceNetworkEvents` item with the ActionType of `ConnectionSuccess`.
+1. In the Microsoft Defender portal, an alert is listed in the [alerts queue](alerts-queue.md). Details of that alert include both `DeviceNetworkEvents` and [`AlertEvidence`](/defender-xdr/advanced-hunting-alertevidence-table). You can see that the site was blocked, even though you also have a `DeviceNetworkEvents` item with the ActionType of `ConnectionSuccess`.
 
 ## Considerations for Windows virtual desktop running Windows 10 Enterprise Multi-Session
 
@@ -353,7 +350,7 @@ For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified sol
 
 1. Use [Turn on network protection](enable-network-protection.md) and follow the instructions to apply your policy.
 
-2. Run the following PowerShell commands:
+1. Run the following PowerShell commands:
 
    ```powershell
    Set-MpPreference -EnableNetworkProtection Enabled
@@ -378,13 +375,13 @@ Verify whether network protection is enabled on a local device by using Registry
 
 1. Select the **Start** button in the task bar and type `regedit` to open Registry Editor.
 
-2. Select **HKEY_LOCAL_MACHINE** from the side menu.
+1. Select **HKEY_LOCAL_MACHINE** from the side menu.
 
-3. Navigate through the nested menus to **SOFTWARE** \> **Policies** \> **Microsoft** \> **Windows Defender** \> **Windows Defender Exploit Guard** \> **Network Protection**.
+1. Navigate through the nested menus to **SOFTWARE** \> **Policies** \> **Microsoft** \> **Windows Defender** \> **Windows Defender Exploit Guard** \> **Network Protection**.
 
    If the key isn't present, navigate to **SOFTWARE** \> **Microsoft** \> **Windows Defender** \> **Windows Defender Exploit Guard** \> **Network Protection**.
 
-4. Select **EnableNetworkProtection** to see the current state of network protection on the device:
+1. Select **EnableNetworkProtection** to see the current state of network protection on the device:
    - `0` = Off
    - `1` = On (enabled)
    - `2` = Audit mode
@@ -397,7 +394,7 @@ For Windows Server 2012 R2 and Windows Server 2016 using the [modern unified sol
 
 1. Go to **HKEY_LOCAL_MACHINE** > **SOFTWARE** > **Microsoft** > **Windows Defender** > **Windows Defender Exploit Guard** > **Network Protection**.
 
-2. Configure the following keys:
+1. Configure the following keys:
 
    - `AllowNetworkProtectionOnWinServer` (DWORD) set to `1` (hex)
    - `EnableNetworkProtection` (DWORD) set to `1` (hex)
@@ -465,15 +462,15 @@ This procedure enables network protection to improve performance by switching fr
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 
-2. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-3. In the Group Policy Management Editor, go to **Computer configuration**, and then select **Administrative templates**.
+1. In the Group Policy Management Editor, go to **Computer configuration**, and then select **Administrative templates**.
 
-4. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Network inspection system**.
+1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Network inspection system**.
 
-5. Double-click **Turn on asynchronous inspection**, and then set the option to **Enabled**.
+1. Double-click **Turn on asynchronous inspection**, and then set the option to **Enabled**.
 
-6. Select **OK**.
+1. Select **OK**.
 
 ### Use Microsoft Defender Antivirus Powershell to enable Turn on asynchronous inspection
 
@@ -487,8 +484,8 @@ Set-MpPreference -AllowSwitchToAsyncInspection $true
 
 - [Evaluate network protection](evaluate-network-protection.md) | Undertake a quick scenario that demonstrates how the feature works, and what events would typically be created.
 - [Enable network protection](enable-network-protection.md) | Use Group Policy, PowerShell, or MDM CSPs to enable and manage network protection in your network.
-- [Configuring attack surface reduction capabilities in Microsoft Intune](/mem/intune/protect/endpoint-security-asr-policy)
+- [Configuring attack surface reduction capabilities in Microsoft Intune](/intune/intune-service/protect/endpoint-security-asr-policy)
 - [Network protection for Linux](network-protection-linux.md) | To learn about using Microsoft Network protection for Linux devices.
 - [Network protection for macOS](network-protection-macos.md) | To learn more about Microsoft Network protection for macOS
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

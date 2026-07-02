@@ -1,19 +1,16 @@
-﻿---
+---
 title: Live response command examples
 description: Learn to run basic or advanced live response commands for Microsoft Defender for Endpoint, and see examples on how they're used.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-edr
 ms.topic: reference
 ms.subservice: edr
-search.appverid: met150
 ms.date: 01/24/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
@@ -248,4 +245,4 @@ undo scheduledtask Microsoft\Windows\Subscription\LicenseAcquisition
 undo file c:\Users\user\Desktop\malware.exe
 ```
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -6,16 +6,13 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
 ms.topic: install-set-up-deploy
 ms.subservice: linux
-search.appverid: met150
-ms.date: 11/17/2025
+ms.date: 02/26/2026
 appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender for Endpoint Plan 1
@@ -35,14 +32,15 @@ Before you get started, see [Prerequisites for Microsoft Defender for Endpoint o
 - Allow connection to the URL: `msdefender.download.prss.microsoft.com`. Before you begin deployment, make sure to run the [connectivity test](#check-connectivity-issues), which checks if the URLs Defender for Endpoint uses are accessible or not.
 - The endpoint must have either **wget** or **curl** installed.
 
-
-The Defender deployment tool enforces the following set of prerequisites checks, which if not met will abort the deployment process:
+The deployment tool enforces the following set of prerequisites checks, which if not met will abort the deployment process:
 
 - Device memory: Greater than 1 GB
 - Available disk space on the device: Greater than 2GB
 - Glibc library version on the device: Newer than 2.17
 - mdatp version on the device: Must be a supported version and not expired. To check product expiration date, run the command `-mdatp health`.
 
+> [!TIP]
+> Before running the deployment tool to onboard Defender onto your Linux server, it's recommended to run the tool with the `--pre-req` option to help identify and fix any potential issues that might impact the deployment.
 
 ## Deployment: Step-by-step guide
 
@@ -62,11 +60,11 @@ The Defender deployment tool enforces the following set of prerequisites checks,
 1. From a command prompt, extract the contents of the archive:
 
    ```bash
-   unzip WindowsDefenderATPOnboardingPackage.zip
+   unzip GatewayLinuxDefenderDeploymentTool.zip
    ```
 
    ```console
-   Archive: WindowsDefenderATPOnboardingPackage.zip
+   Archive: GatewayLinuxDefenderDeploymentTool.zip
    inflating: defender_deployment_tool.sh
    ```
 
@@ -107,15 +105,15 @@ The Defender deployment tool enforces the following set of prerequisites checks,
    | Deploy a specific agent version | `sudo ./defender_deployment_tool.sh --mdatp 101.25042.0003 --channel prod` |
    | Upgrade to a specific agent version | `sudo ./defender_deployment_tool.sh --upgrade --mdatp 101.24082.0004` |
    | Downgrade to a specific agent version | `sudo ./defender_deployment_tool.sh --downgrade --mdatp 101.24082.0004` |
-   | Uninstall Defender | `sudo ./defender_deployment_tool.sh --remove` |
+   | Uninstall Defender | `sudo ./defender_deployment_tool.sh --remove` For more information, see [Offboard or uninstall Microsoft Defender for Endpoint on Linux](linux-off-board-endpoints.md) |
    | Only onboard if Defender is already installed | `sudo ./defender_deployment_tool.sh --only-onboard` |
-   | Offboard Defender | `sudo ./defender_deployment_tool.sh --offboard MicrosoftDefenderATPOffboardingLinuxServer.py`<br>*(Note: The latest offboarding file can be downloaded from the Microsoft Defender portal)* |
+   | <a name="ddt-offboard-switch-linux"></a>Offboard Defender | `sudo ./defender_deployment_tool.sh --offboard MicrosoftDefenderATPOffboardingLinuxServer.py`<br>*(Note: Before using the --offboard option, you must first download the latest offboarding script from the Defender portal at System > Settings > Endpoints > Offboarding). For other methods of offboarding, see [Offboard or uninstall Microsoft Defender for Endpoint on Linux](linux-off-board-endpoints.md).* |
 
 ## Verify deployment status
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com/), open the device inventory. It might take 5-20 minutes for the device to show up in the portal.
 
-2. Run an antivirus detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
+1. Run an antivirus detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
     1. Ensure that real-time protection is enabled (denoted by a result of true from running the following command):
 
@@ -164,7 +162,7 @@ The Defender deployment tool enforces the following set of prerequisites checks,
          ./mde_linux_edr_diy.sh
          ```
 
-    1. After a few minutes, a detection should be raised in the Microsoft Defender XDR.
+    1. After a few minutes, a detection should be raised in the Defender portal.
 
     1. Check the alert details, machine timeline, and perform your typical investigation steps.
 

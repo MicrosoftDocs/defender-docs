@@ -1,24 +1,18 @@
 ---
 title: Manage allows and blocks in the Tenant Allow/Block List
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 12/05/2025
-search.appverid:
-- MET150
+ms.date: 05/11/2026
 ms.collection:
 - m365-security
 - tier1
-ms.custom:
-description: Learn about allow entries and block entries in the Tenant Allow/Block List in Microsoft 365.
+ms.custom: msecd-doc-authoring-1012
+description: Learn how to use allow and block entries in the Tenant Allow/Block List in Microsoft Defender for Office 365 to manually override email filtering verdicts.
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 #customer intent: As an admin, I need to know when to create allow or block entries, their effects, and how to use the Tenant Allow/Block List safely so I can override filtering appropriately.
@@ -28,11 +22,11 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-You might occasionally disagree with the Microsoft filtering verdict for email messages, Microsoft Teams messages, or Office apps. For example, a good message might be marked as bad (a false positive), or a bad message might be allowed through (a false negative), or a URL might be blocked when it shouldn't have.
+You might occasionally disagree with the Microsoft filtering verdict for email messages, Microsoft Teams messages, or Office apps. For example, a good message might be marked as bad (a false positive), or a bad message might be allowed through (a false negative), or a URL might be blocked when it shouldn't be.
 
 The Tenant Allow/Block List in the Microsoft Defender portal gives you a way to manually override filtering verdicts. The list is used during mail flow (for email) or time of click (for email, Teams, or Office apps).
 
-The Tenant Allow/Block list is available in the Microsoft Defender portal at <https://security.microsoft.com> **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+The Tenant Allow/Block List is available in the Microsoft Defender portal at <https://security.microsoft.com> **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 For usage and configuration instructions, see the following articles:
 
@@ -44,14 +38,16 @@ For usage and configuration instructions, see the following articles:
 - **URLs**: [Allow or block URLs using the Tenant Allow/Block List](tenant-allow-block-list-urls-configure.md).
   - To allow phishing URLs from non-Microsoft attack simulation training, don't use URL allow entries in the Tenant Allow/Block List. Use the [advanced delivery policy](advanced-delivery-policy-configure.md) to specify the URLs.
 - **IP addresses**: [Allow or block IPv6 addresses using the Tenant Allow/Block List](tenant-allow-block-list-ip-addresses-configure.md).
-- **Teams domains**: [Block domains in Microsoft Teams using the Tenant Allow/Block List](tenant-allow-block-list-teams-domains-configure.md).
+- **Teams domains and email addresses**: [Block domains and addresses in Microsoft Teams using the Tenant Allow/Block List](tenant-allow-block-list-teams-domains-configure.md).
 
 These articles contain procedures in the Microsoft Defender portal and in PowerShell.
 
 ## Block entries in the Tenant Allow/Block List
 
-> [!TIP]
+> [!IMPORTANT]
 > In the Tenant Allow/Block List, block entries take precedence over allow entries.
+>
+> Block entries directly control message delivery. If an email message contains a URL or domain that's blocked in the Tenant Allow/Block List, the message can be classified as *high confidence phishing* and moved to quarantine, even if the sender is legitimate. If legitimate messages are quarantined as high confidence phishing, review your Tenant Allow/Block List block entries for URLs or domains that are included in the affected messages.
 
 Use the **Submissions** page (also known as *admin submission*) at <https://security.microsoft.com/reportsubmission> to create block entries for the following types of items as you submit them as false negatives to Microsoft:
 
@@ -74,9 +70,9 @@ In the Tenant Allow/Block List, you can also directly create block entries for t
 
 - **[IP addresses](tenant-allow-block-list-ip-addresses-configure.md#create-block-entries-for-ipv6-addresses)**: If you manually create a block entry, all incoming email messages from that IP address are dropped at the edge of the service.
 
-- **[Teams domains](tenant-allow-block-list-teams-domains-configure.md)**: If you manually create a block entry, all incoming communication over Teams from that domain will be blocked whereas existing communication will be deleted.
+- **[Teams domains and addresses](tenant-allow-block-list-teams-domains-configure.md)**: If you manually create a block entry, all incoming Teams communication from that domain and email address is blocked, and existing communication is deleted.
 
-By default, the following types of block entries expire after 30 days, but you can set them to expire up 90 days or to never expire:
+By default, the following types of block entries expire after 30 days, but you can set them to expire up to 90 days or to never expire:
 
 - [Domains and email addresses](tenant-allow-block-list-email-spoof-configure.md#create-block-entries-for-domains-and-email-addresses)
 - [Files](tenant-allow-block-list-files-configure.md#create-block-entries-for-files)
@@ -86,7 +82,7 @@ The following types of block entries never expire:
 
 - [Spoofed senders](tenant-allow-block-list-email-spoof-configure.md#create-block-entries-for-spoofed-senders)
 - [IP addresses](tenant-allow-block-list-ip-addresses-configure.md#create-block-entries-for-ipv6-addresses)
-- [Teams domains](tenant-allow-block-list-teams-domains-configure.md).
+- [Teams domains and addresses](tenant-allow-block-list-teams-domains-configure.md).
 
 ## Allow entries in the Tenant Allow/Block List
 
@@ -106,16 +102,16 @@ Unnecessary allow entries expose your organization to malicious email that the s
   - If spoof intelligence already blocked the message as spoofing, use the **Submissions** page at <https://security.microsoft.com/reportsubmission> to [report the email to Microsoft](submissions-admin.md#report-good-email-to-microsoft) as **I've confirmed it's clean**, and then select **Allow this message**.
   - You can proactively create [an allow entry for a spoofed sender](tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-spoofed-senders) on the **Spoofed sender** tab in the Tenant Allow/Block List before [spoof intelligence](anti-spoofing-spoof-intelligence.md) identifies and blocks the message as spoofing.
 
-- **IP Addresses**: You can proactively create [an allow entry for an IP address](tenant-allow-block-list-ip-addresses-configure.md#create-block-entries-for-ipv6-addresses) on the **IP addresses** tab in the Tenant Allow/Block List to override the IP filters for incoming messages.
+- **IP addresses**: You can proactively create [an allow entry for an IP address](tenant-allow-block-list-ip-addresses-configure.md#create-block-entries-for-ipv6-addresses) on the **IP addresses** tab in the Tenant Allow/Block List to override the IP filters for incoming messages.
   - An IP address allow entry bypasses IP-based filtering checks (for example, connection filtering or IP reputation checks).
   - An IP address allow entry doesn't change message throttling behavior.
   - An IP address block entry rejects messages at the service edge.
 
 The following list describes what happens in the Tenant Allow/Block List when you submit something to Microsoft as a false positive on the **Submissions** page:
 
-- **Email attachments** and **URLs**: An allow entry is created and the entry appears on the **Files** or **URLs** tab in the Tenant Allow/Block List respectively.
+- **Email attachments** and **URLs**: An allow entry is created and the entry appears on the **Files** or **URLs** tab in the Tenant Allow/Block List, respectively.
 
-   For URLs reported as false positives, we allow subsequent messages that contain variations of the original URL. For example, you use the **Submissions** page to report the incorrectly blocked URL `www.contoso.com/abc`. If your organization later receives a message that contains the URL (for example but not limited to: `www.contoso.com/abc`, `www.contoso.com/abc?id=1`, `www.contoso.com/abc/def/gty/uyt?id=5`, or `www.contoso.com/abc/whatever`), the message isn't blocked based on the URL. In other words, you don't need to report multiple variations of the same URL as good to Microsoft.
+   For URLs reported as false positives, subsequent messages that contain variations of the original URL are allowed. For example, you use the **Submissions** page to report the incorrectly blocked URL `www.contoso.com/abc`. If your organization later receives a message that contains the URL (for example but not limited to: `www.contoso.com/abc`, `www.contoso.com/abc?id=1`, `www.contoso.com/abc/def/gty/uyt?id=5`, or `www.contoso.com/abc/whatever`), the message isn't blocked based on the URL. In other words, you don't need to report multiple variations of the same URL as good to Microsoft.
 
 - **Email**: If Microsoft 365 blocked a message, an allow entry might be created in the Tenant Allow/Block List:
   - If the message was blocked by [spoof intelligence](anti-spoofing-spoof-intelligence.md), an allow entry for the sender is created, and the entry appears on the **Spoofed senders** tab in the Tenant Allow/Block List.

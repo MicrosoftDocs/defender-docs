@@ -1,33 +1,27 @@
-﻿---
+---
 title: Machine resource type
 description: Learn about the methods and properties of the Machine resource type in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Business
-
 ---
 
 # Machine resource type
 
-
-[!include[Prerelease information](../../includes/prerelease.md)]
-
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## Properties
 
@@ -54,4 +48,3 @@ appliesto:
 |deviceValue|Nullable Enum|The [value of the device](/defender-vulnerability-management/tvm-assign-device-value). Possible values are: `Normal`, `Low`, and `High`.|
 |ipAddresses|IpAddress collection|Set of ***IpAddress*** objects. See [Get machines API](get-machines.md).|
 |osArchitecture|String|Operating system architecture. Possible values are: `32-bit`, `64-bit`. Use this property instead of osProcessor.|
-

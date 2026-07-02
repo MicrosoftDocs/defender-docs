@@ -1,30 +1,25 @@
-﻿---
+---
 title: Release device from isolation API
 description: Use this API to create calls related to release a device from isolation.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
 
 # Release device from isolation API
-
 
 ## API description
 
@@ -41,11 +36,10 @@ Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 ### Supported operating systems
 
 - Full isolation is available for devices on Windows 10, version 1703.
-- Full isolation is available in **public preview** for all supported Microsoft Defender for Endpoint on Linux listed in [System requirements](/defender-endpoint/mde-linux-prerequisites).
+- Full isolation is available in **public preview** for all supported Microsoft Defender for Endpoint on Linux listed in [System requirements](../mde-linux-prerequisites.md).
 - Selective isolation is available for devices on Windows 10, version 1709 or later.
 
 ## Permissions
-
 
 When obtaining a token using user credentials:
 
@@ -54,11 +48,10 @@ When obtaining a token using user credentials:
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Machine.Isolate|'Isolate machine'
-Delegated (work or school account)|Machine.Isolate|'Isolate machine'
-
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Machine.Isolate|'Isolate machine'|
+|Delegated (work or school account)|Machine.Isolate|'Isolate machine'|
 
 ## HTTP request
 
@@ -68,18 +61,18 @@ POST https://api.security.microsoft.com/api/machines/{id}/unisolate
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
-Content-Type|string|application/json. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
+|Content-Type|string|application/json. **Required**.|
 
 ## Request body
 
 In the request body, supply a JSON object with the following parameters:
 
-Parameter|Type|Description
-:---|:---|:---
-Comment|String|Comment to associate with the action. **Required**.
+|Parameter|Type|Description|
+|---|---|---|
+|Comment|String|Comment to associate with the action. **Required**.|
 
 ## Response
 
@@ -94,7 +87,7 @@ If you send multiple API calls to remove isolation for the same device, it retur
 Here is an example of the request.
 
 ```http
-POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/unisolate 
+POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/unisolate
 ```
 
 ```json
@@ -102,5 +95,3 @@ POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e41
   "Comment": "Unisolate machine since it was clean and validated"
 }
 ```
-
-

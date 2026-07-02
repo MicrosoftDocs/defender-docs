@@ -1,22 +1,19 @@
-﻿---
+---
 title: Microsoft Defender Antivirus export device antivirus health details API methods and properties
-description: "Learn how to export a list of Microsoft Defender Antivirus device health details." 
+description: "Learn how to export a list of Microsoft Defender Antivirus device health details."
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
-ms.localizationpriority: medium 
+ms.author: painbar
+author: paulinbar
+ms.localizationpriority: medium
 ms.date: 11/11/2025
-manager: bagol 
 ms.reviewr: mkaminska
-audience: ITPro 
 ms.collection:
  - m365-security
  - must-keep
  - tier3
-ms.topic: reference 
+ms.topic: reference
 ms.subservice: reference
-ms.custom: api 
-search.appverid: met150
+ms.custom: api
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
@@ -24,8 +21,7 @@ appliesto:
 
 # Export device antivirus health details API methods and properties
 
-
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## Export device antivirus health details API description
 
@@ -46,8 +42,6 @@ For information about using the **Device health and antivirus compliance** repor
 ### Prerequisites
 
 - For Windows Server 2012 R2 and Windows Server 2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](../onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
-
-
 
 ### 1.1 Export device antivirus health details API methods
 

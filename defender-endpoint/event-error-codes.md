@@ -1,37 +1,37 @@
-﻿---
+---
 title: Review events and errors using Event Viewer
 description: Get descriptions and further troubleshooting steps (if necessary) for all events reported by the Microsoft Defender for Endpoint service.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.reviewer: yongrhee
 ms.collection: 
 - m365-security
 - tier3
 - mde-ngp
 ms.topic: how-to
-ms.date: 03/25/2025
+ms.date: 06/16/2026
 ms.subservice: ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 # Review events and errors using Event Viewer
 
+This article provides descriptions and troubleshooting steps for events reported by the Microsoft Defender for Endpoint service. Use the Windows Event Viewer on individual devices to review these events and determine appropriate actions to resolve issues with the service.
 
 ## View events in the Defender for Endpoint service event log
 
-You can review event IDs in the [Event Viewer](/shows/inside/event-viewer) on individual devices. This can help when, for example, a device isn't appearing in the Devices list. In this scenario, you can look for event IDs on the device and then use the table below to determine further troubleshooting steps based on the corresponding event ID.
+You can review event IDs in the [Event Viewer](/shows/inside/event-viewer) on individual devices. Reviewing event IDs in Event Viewer can help when, for example, a device isn't appearing in the Devices list. In this scenario, you can look for event IDs on the device and then use the event ID reference table in this article to determine further troubleshooting steps based on the corresponding event ID.
 
 To open the Defender for Endpoint service event log:
 
 1. Select **Start** on the Windows menu, type **Event Viewer**, and press **Enter** to open the Event Viewer.
-2. In the log list, under **Log Summary**, scroll until you see **Microsoft-Windows-SENSE/Operational**. Double-click the item to
+1. In the log list, under **Log Summary**, scroll until you see **Microsoft-Windows-SENSE/Operational**. Double-click the item to
    open the log.
 
    You can also access the log by expanding **Applications and Services Logs** \> **Microsoft** \> **Windows** \> **SENSE** and select **Operational**.
@@ -39,9 +39,9 @@ To open the Defender for Endpoint service event log:
    > [!NOTE]
    > SENSE is the internal name used to refer to the behavioral sensor that powers Microsoft Defender for Endpoint.
 
-3. Events recorded by the service appear in the log.
+1. Events recorded by the service appear in the log.
 
-See the following table for a list of events recorded by the service.
+The service event ID table in this article lists events recorded by the service.
 
    |Event ID|Message|Description|Action|
    |---|---|---|---|
@@ -198,12 +198,15 @@ See the following table for a list of events recorded by the service.
 
 Microsoft Defender for Endpoint events also appear in the System event log.
 
+> [!NOTE]
+> The Event Viewer UI can vary by Windows version. The steps in this article reflect a recent version of Windows 11.
+
 To open the System event log:
 
 1. Select **Start** on the Windows menu, type **Event Viewer**, and press **Enter**  to open the Event Viewer.
 2. In the log list, under **Log Summary**, scroll until you see **System**. Double-click the item to open the log.
 
-You can use this table for more information on the Defender for Endpoint events in the System events log and to determine further troubleshooting steps.
+You can use the System event log event ID table for more information on the Defender for Endpoint events in the System events log and to determine further troubleshooting steps.
 
    |Event ID|Message|Description|Action|
    |---|---|---|---|
@@ -217,5 +220,5 @@ You can use this table for more information on the Defender for Endpoint events 
 - [Client analyzer overview](overview-client-analyzer.md)
 - [Understand the analyzer HTML report](analyzer-report.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

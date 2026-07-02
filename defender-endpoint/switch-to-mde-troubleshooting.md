@@ -1,13 +1,11 @@
-﻿---
+---
 title: Troubleshooting issues when moving to Microsoft Defender for Endpoint
 description: Learn how to troubleshoot issues when you migrate to Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365solution-scenario
 - m365-security
 - highpri
@@ -17,14 +15,12 @@ ms.custom: migrationguides
 ms.date: 02/12/2025
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho
 ms.subservice: onboard
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ---
 # Troubleshooting issues when migrating to Microsoft Defender for Endpoint
-
 
 This article provides troubleshooting information for security administrators who are experiencing issues when moving from a non-Microsoft endpoint protection solution to Microsoft Defender for Endpoint.
 
@@ -35,7 +31,7 @@ When you migrate to Defender for Endpoint, you begin with your non-Microsoft ant
 To resolve this issue, take the following steps:
 
 1. [Add Microsoft Defender for Endpoint to the exclusion list](#add-microsoft-defender-for-endpoint-to-the-exclusion-list).
-2. [Set Microsoft Defender Antivirus to passive mode manually](#set-microsoft-defender-antivirus-to-passive-mode-manually).
+1. [Set Microsoft Defender Antivirus to passive mode manually](#set-microsoft-defender-antivirus-to-passive-mode-manually).
 
 ### Add Microsoft Defender for Endpoint to the exclusion list
 
@@ -48,7 +44,6 @@ To resolve this issue, take the following steps:
 > [!IMPORTANT]
 > As a best practice, keep your organization's devices and endpoints up to date. Make sure to get the [latest updates for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md), and keep your organization's operating systems and productivity apps up to date.
 
-
 ### Set Microsoft Defender Antivirus to passive mode manually
 
 > [!TIP]
@@ -60,13 +55,10 @@ You must set Microsoft Defender Antivirus to passive mode manually on Windows Se
 
 You can set Microsoft Defender Antivirus to passive mode by setting the following registry key:
 
-Path: `HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`
-
-Name: `ForceDefenderPassiveMode`
-
-Type: `REG_DWORD`
-
-Value: `1`
+- Path: `HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`
+- Name: `ForceDefenderPassiveMode`
+- Type: `REG_DWORD`
+- Value: `1`
 
 > [!NOTE]
 > For passive mode to work on endpoints running Windows Server 2016 and Windows Server 2012 R2, those endpoints must be onboarded using the instructions in [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-server.md).
@@ -79,29 +71,50 @@ If Microsoft Defender Antivirus is stuck in passive mode, set it to active mode 
 
 1. On your Windows device, open Registry Editor as an administrator.
 
-2. Go to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
+1. Go to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
 
-3. Set or define a **REG_DWORD** entry called `ForceDefenderPassiveMode`, and set its value to `0`.
+1. Set or define a **REG_DWORD** entry called `ForceDefenderPassiveMode`, and set its value to `0`.
 
-4. Reboot the device.
+1. Reboot the device.
 
 > [!IMPORTANT]
 > If you're still having trouble setting Microsoft Defender Antivirus to active mode after following this procedure, [contact support](/Microsoft-365/admin/get-help-support).
 
 ## I'm having trouble re-enabling Microsoft Defender Antivirus on Windows Server 2016
 
-If you're using a non-Microsoft antivirus/antimalware solution on Windows Server 2016, your existing solution might have required Microsoft Defender Antivirus to be disabled or uninstalled. You can use the [Malware Protection Command-Line Utility](command-line-arguments-microsoft-defender-antivirus.md) to re-enable Microsoft Defender Antivirus on Windows Server 2016.
+If you're using a non-Microsoft antivirus/antimalware solution on Windows Server 2016, your existing solution might have required you to disable or uninstall Microsoft Defender Antivirus.
 
-1. As a local administrator on the server, open Command Prompt.
+- **Disabled**: Use the `-WdEnable` option on the MpCmdRun command-line tool to enable Microsoft Defender Antivirus on Windows Server 2016:
+  1. In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
 
-2. Run the following command: `MpCmdRun.exe -wdenable`
+     > [!TIP]
+     > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
 
-3. Restart the device.
+     ```dos
+     (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+
+     MpCmdRun.exe -WdEnable
+     ```
+
+  1. Restart the device.
+
+- **Uninstalled**: In an elevated Command Prompt, do the following steps to reinstall Microsoft Defender Antivirus on Windows Server 2016:
+  1. In an elevated Command Prompt, run the following commands:
+
+     ```dos
+     Dism /Online /Enable-Feature /FeatureName:Windows-Defender-Features
+
+     Dism /Online /Enable-Feature /FeatureName:Windows-Defender
+
+     Dism /Online /Enable-Feature /FeatureName:Windows-Defender-Gui
+     ```
+
+     > [!TIP]
+     > You can also use [Server Manager or PowerShell to install the Microsoft Defender Antivirus feature](microsoft-defender-antivirus-on-windows-server.md#install-microsoft-defender-antivirus-on-windows-server).
+
+  1. Reboot the system.
 
 ## See also
 
 - [Microsoft Defender Antivirus compatibility with other security products](microsoft-defender-antivirus-compatibility.md)
 - [Onboarding tools and methods for Windows and Mac devices in Defender for Endpoint](onboard-client.md)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-

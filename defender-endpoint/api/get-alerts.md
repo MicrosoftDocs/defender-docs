@@ -1,45 +1,49 @@
-﻿---
+---
 title: List alerts API
 description: Learn how to use the List alerts API to retrieve a collection of alerts in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 11/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
 
 # List alerts API
-
 
 ## API description
 
 Retrieves a collection of Alerts.
 
-Supports [OData V4 queries](https://www.odata.org/documentation/).
+Supports [OData V4 queries](https://www.odata.org/documentation/). OData supported operators:
 
-OData supported operators:
+- `$filter` on the following properties:
+  - `alertCreationTime`
+  - `lastUpdateTime`
+  - `incidentId`
+  - `InvestigationId`
+  - `id`
+  - `asssignedTo`
+  - `detectionSource`
+  - `lastEventTime`
+  - `status`
+  - `severity`
+  - `category`
+- `$top` with max value of 10,000.
+- `$skip`
+- `$expand` of `evidence`.
 
-- ```$filter``` on: ```alertCreationTime```, ```lastUpdateTime```, ```incidentId```, ```InvestigationId```, ```id```, ```asssignedTo```, ```detectionSource```, ```lastEventTime```, ```status```, ```severity``` and ```category``` properties.
-- ```$top``` with max value of 10,000 
-- ```$skip```
-- ```$expand``` of ```evidence```
-- See examples at [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md).
-
+See examples at [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md).
 
 ## Limitations
 
@@ -47,11 +51,9 @@ OData supported operators:
 
 - Maximum page size is 10,000.
 
-- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour. 
-
+- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
-
 
 When obtaining a token using user credentials:
 
@@ -59,15 +61,12 @@ When obtaining a token using user credentials:
 
 - The response includes only alerts that are associated with devices that the user can access, based on device group settings. For more information, see: [Create and manage device groups](../machine-groups.md).
 
-
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md).
 
 |Permission type | Permission | Permission display name|
-|:---|:---|:---|
+|---|---|---|
 |Application | Alert.ReadWrite.All | `Read and write all alerts`|
 |Delegated (work or school account) | Alert.ReadWrite | `Read and write alerts`|
-
-
 
 ## HTTP request
 
@@ -78,7 +77,7 @@ GET /api/alerts
 ## Request headers
 
 |Name|Type|Description|
-|:---|:---|:---|
+|---|---|---|
 |Authorization | String | Bearer {token}. **Required**.|
 
 ## Request body
@@ -96,7 +95,7 @@ If successful, this method returns 200 OK, and a list of [alert](alerts.md) obje
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/alerts
+GET https://api.security.microsoft.com/api/alerts
 ```
 
 ### Response
@@ -105,7 +104,7 @@ The response list shown here has been shortened. The call returns the full set o
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Alerts",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Alerts",
     "value": [
         {
             "id": "da637308392288907382_-880718168",
@@ -162,7 +161,7 @@ The response list shown here has been shortened. The call returns the full set o
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/alerts?$top=10&$expand=evidence
+GET https://api.security.microsoft.com/api/alerts?$top=10&$expand=evidence
 ```
 
 ### Response
@@ -171,7 +170,7 @@ The response list shown here has been shortened. The call returns the full set o
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Alerts",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Alerts",
     "value": [
         {
             "id": "da637472900382838869_1364969609",
@@ -303,7 +302,3 @@ The response list shown here has been shortened. The call returns the full set o
     ]
 }
 ```
-
-
-
-

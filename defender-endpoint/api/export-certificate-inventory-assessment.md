@@ -1,20 +1,17 @@
-﻿---
+---
 title: Certificate assessment methods and properties per device
 description: Provides information about the certificates APIs that pull "Microsoft Defender Vulnerability Management" data. There are different API calls to get different types of data. In general, each API call contains the requisite data for devices in your organization.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 11/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -23,7 +20,6 @@ appliesto:
 ---
 
 # Export certificate inventory per device
-
 
 There are different API calls to get different types of data. In general, each API call contains the requisite data for devices in your organization.
 Unless indicated otherwise, all export security baseline assessment methods listed are **_full export_** and **_by device_** (also referred to as **_per device_**)
@@ -53,10 +49,10 @@ Returns all certificate assessments for all devices, on a per-device basis. It r
 
 One of the following permissions is required to call this API. For more information on how to choose permissions, see [Use Microsoft Defender for Endpoint APIs for details.](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Vulnerability.Read.All|'Read Threat and Vulnerability Management software information'
-Delegated (work or school account)|Vulnerability.Read|'Read Threat and Vulnerability Management software information'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Vulnerability.Read.All|'Read Threat and Vulnerability Management software information'|
+|Delegated (work or school account)|Vulnerability.Read|'Read Threat and Vulnerability Management software information'|
 
 ### 1.3 URL
 
@@ -69,9 +65,7 @@ GET /api/machines/certificateAssessmentByMachine
 - pageSize (default = 50,000): Number of results in response.
 - $top: Number of results to return (doesn't return @odata.nextLink and so doesn't pull all the data).
 
-
 ### 1.5 Properties (JSON response)
-
 
 - Each record is approximately 1 KB of data. You should take this into account when choosing the correct pageSize parameter.
 
@@ -79,31 +73,31 @@ GET /api/machines/certificateAssessmentByMachine
 
 The properties defined in the following table are listed alphabetically by property ID. When running this API, the resulting output will not necessarily be returned in the same order listed in this table.
 
-Property (ID)|Data type|Description
-:---|:---|:---
-|DeviceId|String|Unique identifier for the device in the service.
-|DeviceName|String|Fully qualified domain name (FQDN) of the device.
-|Thumbprint|Boolean|Unique identifier for the certificate.
-|Path|String|The location of the certificate.
-|SignatureAlgorithm|String|Hashing algorithm and encryption algorithm used.
-|KeySize|String|Size of the key used in the signature algorithm.
-|ExpirationDate|String|The date and time beyond which the certificate is no longer valid.
-|IssueDate|String|The earliest date and time when the certificate became valid.
-|SubjectType|String|Indicates if the holder of the certificate is a CA or end entity.
-|SerialNumber|String|Unique identifier for the certificate within a certificate authority's systems.
-|IssuedTo|Object|Entity that a certificate belongs to; can be a device, an individual, or an organization.
-|IssuedBy|Object|Entity that verified the information and signed the certificate.
-|KeyUsage|String|The valid cryptographic uses of the certificate's public key.
-|ExtendedKeyUsage|String|Other valid uses for the certificate.
-|RbacGroupId|String|The role-based access control (RBAC) group id.
-|RbacGroupName|String|The role-based access control (RBAC) group. If this device isn't assigned to any RBAC groups, the value will be "Unassigned." If the organization doesn't contain any RBAC groups, the value will be "None."
+|Property (ID)|Data type|Description|
+|---|---|---|
+|DeviceId|String|Unique identifier for the device in the service.|
+|DeviceName|String|Fully qualified domain name (FQDN) of the device.|
+|Thumbprint|Boolean|Unique identifier for the certificate.|
+|Path|String|The location of the certificate.|
+|SignatureAlgorithm|String|Hashing algorithm and encryption algorithm used.|
+|KeySize|String|Size of the key used in the signature algorithm.|
+|ExpirationDate|String|The date and time beyond which the certificate is no longer valid.|
+|IssueDate|String|The earliest date and time when the certificate became valid.|
+|SubjectType|String|Indicates if the holder of the certificate is a CA or end entity.|
+|SerialNumber|String|Unique identifier for the certificate within a certificate authority's systems.|
+|IssuedTo|Object|Entity that a certificate belongs to; can be a device, an individual, or an organization.|
+|IssuedBy|Object|Entity that verified the information and signed the certificate.|
+|KeyUsage|String|The valid cryptographic uses of the certificate's public key.|
+|ExtendedKeyUsage|String|Other valid uses for the certificate.|
+|RbacGroupId|String|The role-based access control (RBAC) group id.|
+|RbacGroupName|String|The role-based access control (RBAC) group. If this device isn't assigned to any RBAC groups, the value will be "Unassigned." If the organization doesn't contain any RBAC groups, the value will be "None."|
 
 ## 1.6 Example
 
 ### 1.6.1 Request example
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/machines/CertificateAssessmentByMachine
+GET https://api.security.microsoft.com/api/machines/CertificateAssessmentByMachine
 ```
 
 ### 1.6.2 Response example
@@ -116,8 +110,8 @@ GET https://api.securitycenter.microsoft.com/api/machines/CertificateAssessmentB
         {
         "deviceId":"49126b9e4a5473b5229c73799e9e55c48668101b",
         "deviceName":"testmachine5",
-        "thumbprint":"A4B37F4F6DE956922273D5CB8E7E0AAFB7033B90",
-        "path":"LocalMachine\\TestSignRoot\\A4B37F4F6DE956922273D5CB8E7E0AAFB7033B90",
+        "thumbprint":"AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00",
+        "path":"LocalMachine\\TestSignRoot\\AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00",
         "signatureAlgorithm":"sha384ECDSA",
         "keyLength":0,"notAfter":"0001-01-01T00:00:00Z",
         "notBefore":"0001-01-01T00:00:00Z",
@@ -148,10 +142,10 @@ Returns all certificate assessments for all devices, on a per-device basis. It r
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs for details.](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Vulnerability.Read.All|'Read Threat and Vulnerability Management software information'
-Delegated (work or school account)|Vulnerability.Read|'Read Threat and Vulnerability Management software information'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Vulnerability.Read.All|'Read Threat and Vulnerability Management software information'|
+|Delegated (work or school account)|Vulnerability.Read|'Read Threat and Vulnerability Management software information'|
 
 ### 2.3 URL
 
@@ -175,18 +169,17 @@ GET /api/machines/certificateAssessmentExport
 
 - Some additional columns might be returned in the response. These columns are temporary and might be removed. Only use the documented columns.
 
-Property (ID)|Data type|Description
-:---|:---|:---
-|Export files|String[array]|A list of download URLs for files holding the current snapshot of the organization.
-|GeneratedTime|DateTime|The time the export was generated.
-
+|Property (ID)|Data type|Description|
+|---|---|---|
+|Export files|String[array]|A list of download URLs for files holding the current snapshot of the organization.|
+|GeneratedTime|DateTime|The time the export was generated.|
 
 ## 2.6 Example
 
 ### 2.6.1 Request example
 
 ```http
-GET https://api.securitycenter.contoso.com/api/machines/certificateAssessmentExport
+GET https://api.security.contoso.com/api/machines/certificateAssessmentExport
 ```
 
 ### 2.6.2 Response example

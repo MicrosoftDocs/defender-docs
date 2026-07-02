@@ -1,15 +1,11 @@
 ---
 title: Integrate Palo Alto Prisma data connector in Microsoft Security Exposure Management
 description: Learn how to integrate the Palo Alto Prisma data connector in Microsoft Security Exposure Management.
-ms.author: dlanger
-author: dlanger
-manager: ornat-spodek
 ms.topic: overview
-ms.service: exposure-management
 ms.date: 09/09/2025
 ---
 
-# Palo Alto Prisma data connector?
+# Palo Alto Prisma data connector
 
 To integrate with Palo Alto Prisma, you need to provide an authentication endpoint API URL, and a valid Access Key and Secret Key generated using a Palo Alto service account.
 
@@ -41,7 +37,7 @@ To establish a connection with Palo Alto Prisma in Exposure Management, follow t
 
 ## Retrieved data
 
-The Palo Alto Prisma connector retrieves data on your IT assets and risks, providing extended exposure insights based on the additional data and context it offers.
+The Palo Alto Prisma connector retrieves data on compute devices. This data includes virtual machines and cloud resources, along with vulnerability findings and configuration data from Palo Alto Prisma on those assets. It also retrieves network and configuration information to identify those devices.
 
 | **Category**            | **Properties**                                                                 |
 |-------------------------|--------------------------------------------------------------------------------|

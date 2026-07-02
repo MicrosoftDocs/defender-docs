@@ -49,6 +49,7 @@
       "feedback_product_url": "https://techcommunity.microsoft.com/t5/microsoft-365-defender/bd-p/MicrosoftThreatProtection",
       "uhfHeaderId": "MSDocsHeader-MicrosoftDefender",
       "titleSuffix": "Microsoft Defender XDR",
+      "manager": "orspodek",
       "searchScope": ["Defender XDR"],
       "contributors_to_exclude": [
         "dstrome",

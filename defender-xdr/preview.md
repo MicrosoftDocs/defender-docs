@@ -4,10 +4,9 @@ description: Learn about new features in Microsoft 365 security
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -23,6 +22,7 @@ appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Identity
   - Microsoft Defender for Cloud Apps
+ms.custom: sfi-ga-nochange
 ---
 
 # Microsoft Defender XDR preview features
@@ -62,7 +62,7 @@ In the Microsoft Defender portal, navigate to **Settings > Microsoft Defender XD
 
 If you already have preview features turned on and you're a Microsoft Defender for Business, Microsoft Defender for Endpoint, or Microsoft Defender for Cloud Apps customer, you can also select to turn preview features on and off for specific services only. For example:
 
-:::image type="content" source="media/preview-features-settings.png" alt-text="Screenshot of the preview features settings.":::
+:::image type="content" source="media/preview/preview-features-settings.png" alt-text="Screenshot of the preview features settings.":::
 
 If you don't yet have preview features turned on, manage Defender for Business and Defender for Endpoint preview features from the **System > Settings > Endpoints > Advanced features > Preview features** page, and Defender for Cloud Apps preview features from the **Settings > Cloud Apps > General > Preview features** page.
 

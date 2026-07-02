@@ -1,23 +1,19 @@
 ---
 title: Go to the Action center to view and approve your automated investigation and remediation tasks
 description: Use the Action center to view details about automated investigation and approve pending actions
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords:
-- NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 4/28/2025
-manager: deniseb
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
 ms.custom:
-- autoir
-- admindeeplinkDEFENDER
+  - autoir
+  - admindeeplinkDEFENDER
+  - sfi-ga-nochange
 ms.reviewer: evaldm, isco
 appliesto:
 - Microsoft Defender XDR
@@ -38,7 +34,7 @@ Because the Action center provides a comprehensive view of Microsoft Defender XD
 
 The unified Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) lists pending and completed remediation actions for your devices, email & collaboration content, and identities in one location.
 
-:::image type="content" source="/defender/media/m3d-action-center-unified.png" alt-text="The unified Action center in the Microsoft Defender portal." lightbox="/defender/media/m3d-action-center-unified.png":::
+:::image type="content" source="media/m3d-action-center-unified.png" alt-text="The unified Action center in the Microsoft Defender portal." lightbox="media/m3d-action-center-unified.png":::
 
 The unified Action center brings together remediation actions across Microsoft Defender for Endpoint and Microsoft Defender for Office 365. It defines a common language for all remediation actions and provides a unified investigation experience. Your security operations team has a "single pane of glass" experience to view and manage remediation actions.
 
@@ -145,9 +141,6 @@ You have the following options:
 
 - [Defender for Endpoint permissions](/defender-endpoint/rbac):
   - _Microsoft Defender for Endpoint remediation (devices)_: Membership in the **Active remediation actions** role.
-
-> [!TIP]
-> Members of the **Global Administrator** role in Microsoft Entra ID can approve or reject any pending action in the Action center. However, as a best practice, you should limit the members of the **Global Administrator** role. We recommend using the alternative roles and role groups as described in the previous list for Action center permissions.
 
 ## Next step
 

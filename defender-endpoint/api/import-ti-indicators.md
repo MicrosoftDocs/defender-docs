@@ -1,12 +1,10 @@
-﻿---
+---
 title: Import Indicators API
 description: Learn how to use the Import batch of Indicator API in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -14,16 +12,13 @@ ms.collection:
 ms.topic: reference
 ms.custom: api
 ms.subservice: reference
-search.appverid: met150
 ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
 
 # Import Indicators API
-
 
 ## API description
 
@@ -49,7 +44,7 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/indicators/import
+POST https://api.security.microsoft.com/api/indicators/import
 ```
 
 ## Request headers
@@ -79,7 +74,7 @@ In the request body, supply a JSON object with the following parameters:
 Here's an example of the request.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/indicators/import
+POST https://api.security.microsoft.com/api/indicators/import
 ```
 
 ```json
@@ -136,5 +131,3 @@ Here's an example of the response.
     ]
 }
 ```
-
-

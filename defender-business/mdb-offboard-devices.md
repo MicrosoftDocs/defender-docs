@@ -1,17 +1,13 @@
 ---
 title: Offboard a device from Microsoft Defender for Business
 description: Learn about how to remove or offboard a device from Microsoft Defender for Business.
-search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 07/08/2024
+ms.date: 04/25/2026
 ms.reviewer: nehabha
-f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security
@@ -92,11 +88,11 @@ Choose the operating system for your server:
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), and sign in.
 
-2. In the navigation pane, choose **Settings** > **Endpoints**, and then under **Device management**, choose **Offboarding**.
+2. In the navigation pane, choose **Settings** \> **Endpoints**, and then under **Device management**, choose **Offboarding**.
 
 3. Select an operating system, such as **Windows Server 1803, 2019, and 2022**, and then in the **Deployment method** section, choose **Local script**.
 
-4. Select **Download package**. We recommend that you save the offboarding package to a removable drive. The zipped folder will be called `WindowsDefenderATPOffboardingPackage_valid_until_YYYY-MM-DD.zip` (where `YYYY-MM-DD` is the expiry date of the package).
+4. Select **Download package**. We recommend that you save the offboarding package to a removable drive. The zipped folder is named `WindowsDefenderATPOffboardingPackage_valid_until_YYYY-MM-DD.zip` (where `YYYY-MM-DD` is the expiry date of the package).
 
 5. On your Windows Server device, extract the contents of the zipped folder to a location such as the Desktop folder.
 
@@ -108,11 +104,11 @@ Choose the operating system for your server:
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), and sign in.
 
-2. In the navigation pane, choose **Settings** > **Endpoints**, and then under **Device management**, choose **Offboarding**.
+2. In the navigation pane, choose **Settings** \> **Endpoints**, and then under **Device management**, choose **Offboarding**.
 
 3. Select **Linux Server** for the operating system, and then in the **Deployment method** section, choose **Local script**.
 
-4. Select **Download package**. We recommend that you save the offboarding package to a removable drive. The zipped folder will be called `WindowsDefenderATPOffboardingPackage_valid_until_YYYY-MM-DD.zip` (where `YYYY-MM-DD` is the expiry date of the package).
+4. Select **Download package**. We recommend that you save the offboarding package to a removable drive. The zipped folder is named `WindowsDefenderATPOffboardingPackage_valid_until_YYYY-MM-DD.zip` (where `YYYY-MM-DD` is the expiry date of the package).
 
 5. On your Linux Server device, extract the contents of the zipped folder to a location such as the Desktop folder.
 
@@ -120,8 +116,8 @@ Choose the operating system for your server:
 
 7. Type `python MicrosoftDefenderATPOffboardingLinuxServer_valid_until_YYYY-MM-DD.py` in the terminal.
 
-> [!TIP]
-> For more information, see [Uninstall](/defender-endpoint/linux-resources) in the Microsoft Defender for Endpoint on Linux guidance.
+> [!NOTE]
+> This procedure offboards the server, meaning that the server stops sending security data to Defender for Business. However, it doesn't remove the Defender for Business software from the device. For information about how to completely remove the software from the device, see [Offboard or uninstall Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-off-board-endpoints).
 
 ## [**Mobile devices**](#tab/mobiles)
 

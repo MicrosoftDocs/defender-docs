@@ -1,18 +1,14 @@
-﻿---
+---
 title: Get started with Microsoft Defender for Endpoint Plan 1
 description: Get started using Defender for Endpoint Plan 1. Learn how to use the Microsoft Defender portal, manage alerts and devices, and view reports. 
-search.appverid: MET150 
-author: KesemSharabi
-ms.author: kesharab
-manager: bagol 
-audience: ITPro
+author: limwainstein
+ms.author: lwainstein
 ms.topic: overview
 ms.date: 03/21/2025
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
 ms.reviewer: shlomiakirav
-f1.keywords: NOCSH
 ms.collection: 
 - m365-security
 - tier1
@@ -119,9 +115,9 @@ In Defender for Endpoint Plan 1, several reports are available in the Microsoft 
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
-2. In the navigation bar, choose **Reports**.
+1. In the navigation bar, choose **Reports**.
 
-3. Select a report in the list. Reports include:
+1. Select a report in the list. Reports include:
 
    - Threat protection report
    - Device health report
@@ -171,5 +167,5 @@ Scroll down to see all the views in the Web protection report. Some views includ
 - [Manage Microsoft Defender for Endpoint Plan 1](preferences-setup.md)
 - [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

@@ -4,6 +4,7 @@ description: This article provides a description of Anomaly detection policies a
 ms.date: 03/01/2023
 ms.topic: how-to
 ms.reviewer: Ronen-Refaeli
+ms.custom: sfi-image-nochange
 ---
 
 # Create Defender for Cloud Apps anomaly detection policies
@@ -36,6 +37,7 @@ Based on the policy results, security alerts are triggered. Defender for Cloud A
 > - [Suspicious inbox forwarding](#suspicious-inbox-forwarding).
 > - [Unusual ISP for an OAuth App](#unusual-isp-for-an-oauth-app).
 > - [Suspicious file access activity (by user)](#unusual-activities-by-user).
+> - [Ransomware activity](#ransomware-activity).
 >
 > You will continue to receive the same standard of protection without disruption to your existing security coverage. No action is required from your side.
 
@@ -90,6 +92,9 @@ Defender for Cloud Apps supports "File Sandboxing" malware detection for the fol
 This detection identifies that users were active from an IP address that has been identified as an anonymous proxy IP address. These proxies are used by people who want to hide their device's IP address, and may be used for malicious intent. This detection uses a machine-learning algorithm that reduces "false positives", such as mis-tagged IP addresses that are widely used by users in the organization.
 
 ### Ransomware activity
+
+> [!NOTE]
+> As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model and renamed to Ransomware payment instruction file uploaded to {Application}. If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
 
 Defender for Cloud Apps extended its ransomware detection capabilities with anomaly detection to ensure a more comprehensive coverage against sophisticated Ransomware attacks. Using our security research expertise to identify behavioral patterns that reflect ransomware activity, Defender for Cloud Apps ensures holistic and robust protection. If Defender for Cloud Apps identifies, for example, a high rate of file uploads or file deletion activities it may represent an adverse encryption process. This data is collected in the logs received from connected APIs and is then combined with learned behavioral patterns and threat intelligence, for example, known ransomware extensions. For more information about how Defender for Cloud Apps detects ransomware, see [Protecting your organization against ransomware](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware).
 
@@ -239,10 +244,6 @@ You can triage the various alerts triggered by the new anomaly detection policie
    
 1. For malware infected files, After files are detected, you can then see a list of **Infected files**. Select the malware file name in the file drawer to open a malware report that provides you with information about that type of malware the file is infected with.
 
-## Related videos
-
-> [!div class="nextstepaction"]
-> [Threat protection webinar](webinars.md#on-demand-webinars)
 
 ## Next steps
 

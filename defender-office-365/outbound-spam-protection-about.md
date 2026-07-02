@@ -1,27 +1,21 @@
 ---
 title: Outbound spam protection
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
-  - MOE150
 ms.assetid: 6a601501-a6a8-4559-b2e7-56b59c96a586
 ms.collection: 
   - m365-security
   - tier2
-ms.custom: 
+ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
 description: Admins can learn about the outbound spam controls in Microsoft 365, and what to do if you need to send mass mailings.
 ms.service: defender-office-365
 ms.date: 09/03/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 #customer intent: As an IT administrator responsible for email deliverability and security, I want to understand how outbound spam protection works and how to configure protections and policies so that my organization's email reputation and message delivery remain reliable.
@@ -80,6 +74,7 @@ Use the following resources outside of Microsoft 365 to send bulk email:
 
 ## Related content
 
+- [Troubleshoot outbound sending limits in Exchange Online](outbound-spam-sending-limits-troubleshoot.md)
 - [Troubleshoot email delivery issues with error codes (NDR)](/troubleshoot/exchange/email-delivery/ndr/fix-error-code-550-4-4-7-in-exchange-online)
 - [External sender delivery troubleshooting](external-senders-mail-flow-troubleshooting.md)
 - [Common non-delivery report (NDR) codes explanation](/troubleshoot/exchange/email-delivery/ndr/non-delivery-reports-in-exchange-online)

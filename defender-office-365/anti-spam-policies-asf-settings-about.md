@@ -1,15 +1,9 @@
 ---
 title: ASF settings in anti-spam policies
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: b286f853-b484-4af0-b01f-281fffd85e7a
 ms.collection: 
   - m365-security
@@ -20,7 +14,7 @@ description: Admins can learn about the Advanced Spam Filter (ASF) settings that
 ms.service: defender-office-365
 ms.date: 08/26/2024
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -40,7 +34,7 @@ In all organizations with cloud mailboxes, Advanced Spam Filter (ASF) settings i
 
 The following sections describe the ASF settings and options that are available in anti-spam policies in the Microsoft Defender portal, and in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) ([New-HostedContentFilterPolicy](/powershell/module/exchangepowershell/new-hostedcontentfilterpolicy) and [Set-HostedContentFilterPolicy](/powershell/module/exchangepowershell/set-hostedcontentfilterpolicy)).
 
-For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md).
+For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md). For troubleshooting information about ASF false positives, see [ASF settings that cause false positives](anti-spam-policies-troubleshooting.md#asf-settings-that-cause-false-positives).
 
 > [!TIP]
 > ASF settings aren't enabled in [Standard or Strict preset security policies](preset-security-policies.md), so you can configure ASF settings in the default anti-spam policy or custom anti-spam policies only. For more information about using threat policies, see [Determine your threat policy strategy](mdo-deployment-guide.md#determine-your-threat-policy-strategy).

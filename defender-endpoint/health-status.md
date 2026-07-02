@@ -2,17 +2,14 @@
 title: Investigate agent health issues
 description: Learn about the values returned when running the mdatp health command
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: reference
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 11/04/2024
 ---
 
@@ -78,4 +75,4 @@ mdatp health --details help
 
 You can run `mdatp health --help` on recent versions to list all supported features.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

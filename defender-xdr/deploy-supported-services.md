@@ -2,22 +2,15 @@
 title: Deploy services supported by Microsoft Defender XDR
 description: Learn about the Microsoft security services that integrate with Microsoft Defender XDR, their licensing requirements, and deployment procedures
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
   - m365-security
   - m365solution-getstarted
   - highpri
   - tier1
 ms.topic: install-set-up-deploy
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 04/25/2025
 appliesto:
   - Microsoft Defender XDR

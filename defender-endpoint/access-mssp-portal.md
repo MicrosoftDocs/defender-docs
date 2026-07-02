@@ -1,33 +1,34 @@
-﻿---
+---
 title: Access the Microsoft Defender XDR MSSP customer portal
-description: Access the Microsoft Defender XDR MSSP customer portal
+description: Learn how MSSPs access a customer tenant in Microsoft Defender XDR using a tenant-specific portal URL.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
-ms.date: 03/21/2025
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
-# Access the Microsoft Defender XDR MSSP customer portal
+# Access the Microsoft Defender MSSP customer portal
 
 
+
+## Access an MSSP customer tenant in Microsoft Defender XDR
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 > [!NOTE]
-> These set of steps are directed towards the MSSP.
+> The following steps show MSSPs how to find a customer tenant ID and access the tenant-specific Microsoft Defender XDR portal URL.
 
 By default, MSSP customers access their Microsoft Defender XDR tenant through the following URL: `https://security.microsoft.com/`.
 
@@ -38,15 +39,16 @@ In general, MSSPs will need to be added to each of the MSSP customer's Microsoft
 Use the following steps to obtain the MSSP customer tenant ID and then use the ID to access the tenant-specific URL:
 
 1. As an MSSP, log in to Microsoft Entra ID with your credentials.
-2. Switch directory to the MSSP customer's tenant.
-3. Select **Microsoft Entra ID > Properties**. You'll find the tenant ID in the Tenant ID field.
-4. Access the MSSP customer portal by replacing the `customer_tenant_id` value in the following URL: `https://security.microsoft.com/?tid=customer_tenant_id`.
-5. Access a Unified View for MSSP (Preview) in `https://mto.security.microsoft.com/`
+1. Switch directory to the MSSP customer's tenant.
+1. Select **Microsoft Entra ID > Properties**. You'll find the tenant ID in the Tenant ID field.
+1. Access the MSSP customer portal by replacing the `customer_tenant_id` value in the following URL: `https://security.microsoft.com/?tid=customer_tenant_id`.
+1. Access a Unified View for MSSP (Preview) in `https://mto.security.microsoft.com/`
 
-## Related topics
+<a name="related-topics"></a>
+## Related content
 
 - [Grant MSSP access to the portal](grant-mssp-access.md)
 - [Configure alert notifications](configure-mssp-notifications.md)
 - [Fetch alerts from customer tenant](api/fetch-alerts-mssp.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

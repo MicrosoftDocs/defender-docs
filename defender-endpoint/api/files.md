@@ -1,34 +1,29 @@
-﻿---
+---
 title: File resource type
 description: Retrieve recent Microsoft Defender for Endpoint alerts related to files.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 11/12/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # File resource type
 
-
 ## Properties
 
 |Property | Type | Description |
-|:---|:---|:---|
+|---|---|---|
 |sha1 | String | Sha1 hash of the file content |
 |sha256 | String | Sha256 hash of the file content |
 |globalPrevalence | Nullable long | File prevalence across organization |
@@ -68,5 +63,3 @@ appliesto:
     "determinationValue": "PUA:Win32/FusionCore"
 }
 ```
-
-

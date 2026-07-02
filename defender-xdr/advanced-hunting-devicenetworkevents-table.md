@@ -1,16 +1,11 @@
 ---
 title: DeviceNetworkEvents table in the advanced hunting schema
 description: Learn about network connection events you can query from the DeviceNetworkEvents table of the advanced hunting schema
-search.appverid: met150
 ms.service: defender-xdr
 ms.pagetype: security
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -84,8 +79,8 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `IsInitiatingProcessRemoteSession` | `bool` |   Indicates whether the initiating process was run under a remote desktop protocol (RDP) session (true) or locally (false) |
 | `InitiatingProcessRemoteSessionDeviceName` | `string` | Device name of the remote device from which the initiating process's RDP session was initiated |
 | `InitiatingProcessRemoteSessionIP` | `string` | IP address of the remote device from which the initiating process's RDP session was initiated |
-| `ProcessUniqueId` | `string` | Unique identifier of the process; this is equal to the Process Start Key in Windows devices |
 | `InitiatingProcessUniqueId` | `string` | Unique identifier of the initiating process; this is equal to the Process Start Key in Windows devices |
+| `LogonID`|`long` |A unique identifier for the user initiating the event, enabling attribution of network activity to the originating interactive user across privilege escalation and session transitions. This field is located inside AdditionalFields/InitiatingProcessPosixEffectiveUser|
 
 
 ## Related topics

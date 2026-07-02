@@ -1,15 +1,10 @@
-﻿---
+---
 title: Upload files to the live response library
 description: Learn how to upload a file to the live response library.
-search.appverid: met150
 ms.service: defender-endpoint
-f1.keywords:
-- NOCSH
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
@@ -20,22 +15,22 @@ ms.custom: api
 ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
-
 ---
 
 # Upload files to the live response library
 
-
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## API description
 
 Upload file to live response library.
 
+> [!TIP]
+> You can also upload live response files from the [Library management](../configure-libraries-live-response.md) page in the Microsoft Defender portal.
+
 ## Limitations
 
 - File max size limitation is 20MB.
-
 - Rate limitations for this API are 100 calls per minute and 1500 calls per
     hour.
 
@@ -44,10 +39,10 @@ Upload file to live response library.
 One of the following permissions is required to call this API. To learn more,
 including how to choose permissions, see [Get started](apis-intro.md).
 
-| Permission type                    | Permission     | Permission display name        |
-|------------------------------------|----------------|--------------------------------|
-| Application                        | Library.Manage | Manage live response library |
-| Delegated (work or school account) | Library.Manage | Manage live response library |
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Library.Manage|Manage live response library|
+|Delegated (work or school account)|Library.Manage|Manage live response library|
 
 ## HTTP request
 
@@ -59,21 +54,21 @@ POST https://api.security.microsoft.com/api/libraryfiles
 
 ## Request headers
 
-|  Name   |    Type    |       Description                         |
-|-----------------|--------|--------------------------------|
-| Authorization   | String | Bearer\<token>. Required.      |
-| Content-Type    | string | multipart/form-data. Required. |
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer\<token>. Required.|
+|Content-Type|string|multipart/form-data. Required.|
 
 ## Request body
 
 In the request body, supply a form-data object with the following parameters:
 
-| Parameter         |     Type         |       Description                                        |
-|-----------------------|--------------|------------------------------------------------------------|
-| File                  | File content | The file to be uploaded to live response library.Required |
-| Description           | String       | Description of the file.                                  |
-| ParametersDescription | String       | (Optional) Parameters required for the script to run. Default value is an empty string.                |
-| OverrideIfExists      | Boolean      | (Optional) Whether to override the file if it already exists. Default value is an empty string.          |
+|Parameter|Type|Description|
+|---|---|---|
+|File|File content|The file to be uploaded to live response library.Required|
+|Description|String|Description of the file.|
+|ParametersDescription|String|(Optional) Parameters required for the script to run. Default value is an empty string.|
+|OverrideIfExists|Boolean|(Optional) Whether to override the file if it already exists. Default value is an empty string.|
 
 ## Response
 

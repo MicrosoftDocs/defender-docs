@@ -1,15 +1,10 @@
 ---
 title: Live response library methods and properties
 description: Learn how to use the live response library methods and properties.
-search.appverid: met150
 ms.service: defender-endpoint
-f1.keywords:
-- NOCSH
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

@@ -2,16 +2,13 @@
 title: Aggregated reporting in Microsoft Defender for Endpoint
 description: Learn how you collect important telemetry in Microsoft Defender for Endpoint by turning on aggregated reporting.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: article
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
 - Microsoft Defender for Endpoint Plan 2
@@ -34,7 +31,6 @@ The following requirements must be met before turning on aggregated reporting:
 
 - Permissions to enable advanced features
 
-
 ### Supported operating systems: 
 
   - Windows 10 (20H2, 21H1, 21H2)
@@ -47,7 +43,7 @@ The following requirements must be met before turning on aggregated reporting:
 
 To turn aggregated reporting on, go to **Settings > Endpoints > Advanced features**. Toggle on the **Aggregated reporting** feature.
 
-:::image type="content" source="/defender-endpoint/media/reports/aggregated-reporting/aggregated-reporting-toggle.png" alt-text="Screenshot of the aggregated reporting toggle in the Microsoft Defender portal settings page.":::
+:::image type="content" source="media/reports/aggregated-reporting/aggregated-reporting-toggle.png" alt-text="Screenshot of the aggregated reporting toggle in the Microsoft Defender portal settings page.":::
 
 Once aggregated reporting is turned on, it can take up to seven days for aggregated reports to become available. You can then begin to query new data after the feature is turned on.
 
@@ -75,13 +71,13 @@ Aggregated reporting supports the following event types:
 To query new data with aggregated reports:
 
 1. Go to **Investigation & response > Hunting > Custom detection rules**.
-2. Review and modify [existing rules and queries](/defender-xdr/custom-detection-rules) that might be affected by aggregated reporting.
-3. When necessary, create new custom rules to incorporate new action types.
-4. Go to the **Advanced Hunting** page and query the new data.
+1. Review and modify [existing rules and queries](/defender-xdr/custom-detection-rules) that might be affected by aggregated reporting.
+1. When necessary, create new custom rules to incorporate new action types.
+1. Go to the **Advanced Hunting** page and query the new data.
 
-   Here is an example of advanced hunting query results with aggregated reports.
+    Here is an example of advanced hunting query results with aggregated reports.
 
-   :::image type="content" source="/defender-endpoint/media/reports/aggregated-reporting/sample-results-aggregated-reports-small.png" alt-text="Screenshot of advanced hunting query results with aggregated reports." lightbox="/defender-endpoint/media/reports/aggregated-reporting/sample-results-aggregated-reports.png":::
+      :::image type="content" source="media/reports/aggregated-reporting/sample-results-aggregated-reports-small.png" alt-text="Screenshot of advanced hunting query results with aggregated reports." lightbox="media/reports/aggregated-reporting/sample-results-aggregated-reports.png":::
 
 ## Sample advanced hunting queries
 

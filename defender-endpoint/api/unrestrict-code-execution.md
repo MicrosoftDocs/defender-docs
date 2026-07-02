@@ -1,29 +1,24 @@
-﻿---
+---
 title: Remove app restriction API
 description: Use this API to create calls related to removing a restriction from applications from executing.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # Remove app restriction API
-
 
 ## API description
 
@@ -44,7 +39,6 @@ Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
 ## Permissions
 
-
 When obtaining a token using user credentials:
 
 - The user needs to have at least the following role permission: 'Active remediation actions'. For more information, see: [Create and manage roles](../user-roles.md)
@@ -52,33 +46,31 @@ When obtaining a token using user credentials:
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Machine.RestrictExecution|'Restrict code execution'
-Delegated (work or school account)|Machine.RestrictExecution|'Restrict code execution'
-
-
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Machine.RestrictExecution|'Restrict code execution'|
+|Delegated (work or school account)|Machine.RestrictExecution|'Restrict code execution'|
 
 ## HTTP request
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/machines/{id}/unrestrictCodeExecution
+POST https://api.security.microsoft.com/api/machines/{id}/unrestrictCodeExecution
 ```
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
-Content-Type|string|application/json. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
+|Content-Type|string|application/json. **Required**.|
 
 ## Request body
 
 In the request body, supply a JSON object with the following parameters:
 
-Parameter|Type|Description
-:---|:---|:---
-Comment|String|Comment to associate with the action. **Required**.
+|Parameter|Type|Description|
+|---|---|---|
+|Comment|String|Comment to associate with the action. **Required**.|
 
 ## Response
 
@@ -93,12 +85,11 @@ If you send multiple API calls to remove app restrictions for the same device, i
 Here is an example of the request.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/unrestrictCodeExecution 
+POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/unrestrictCodeExecution
 ```
 
 ```json
 {
   "Comment": "Unrestrict code execution since machine was cleaned and validated"
 }
-
 ```

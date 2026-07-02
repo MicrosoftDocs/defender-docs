@@ -1,29 +1,24 @@
-﻿---
+---
 title: Batch Update alert entities API
 description: Learn how to update Microsoft Defender for Endpoint alerts in a batch by using this API. You can update the status, determination, classification, and assignedTo properties.
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 11/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
 
 # Batch update alerts
-
 
 ## API description
 
@@ -48,10 +43,10 @@ When obtaining a token using user credentials:
 
 One of the following permissions is required to call this API. For more information on how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type | Permission | Permission display name
-:---|:---|:---
-Application | Alert.ReadWrite.All | 'Read and write all alerts'
-Delegated (work or school account) | Alert.ReadWrite | 'Read and write alerts'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Alert.ReadWrite.All|'Read and write all alerts'|
+|Delegated (work or school account)|Alert.ReadWrite|'Read and write alerts'|
 
 ## HTTP request
 
@@ -61,10 +56,10 @@ POST /api/alerts/batchUpdate
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization | String | Bearer {token}. **Required**.
-Content-Type | String | application/json. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
+|Content-Type|String|application/json. **Required**.|
 
 ## Request body
 
@@ -74,14 +69,14 @@ Existing properties that aren't included in the request body will maintain their
 
 For best performance you shouldn't include existing values that haven't changed.
 
-Property | Type | Description
-:---|:---|:---
-alertIds | List&lt;String&gt;| A list of the IDs of the alerts to be updated. **Required**
-status | String | Specifies the updated status of the specified alerts. The property values are: 'New', 'InProgress' and 'Resolved'.
-assignedTo | String | Owner of the specified alerts
-classification | String | Specifies the specification of the specified alerts. The property values are: `TruePositive`, `Informational, expected activity`, and `FalsePositive`.
-determination | String | Specifies the determination of the specified alerts. <p>Possible determination values for each classification are: <br><li> <b>True positive</b>: `Multistage attack` (MultiStagedAttack), `Malicious user activity` (MaliciousUserActivity), `Compromised account` (CompromisedUser) – consider changing the enum name in public API accordingly, `Malware` (Malware), `Phishing` (Phishing), `Unwanted software` (UnwantedSoftware), and `Other` (Other). <li> <b>Informational, expected activity:</b> `Security test` (SecurityTesting), `Line-of-business application` (LineOfBusinessApplication), `Confirmed activity` (ConfirmedUserActivity) - consider changing the enum name in public API accordingly, and `Other` (Other). <li>  <b>False positive:</b> `Not malicious` (Clean) - consider changing the enum name in public API accordingly, `Not enough data to validate` (InsufficientData), and `Other` (Other).
-comment | String | Comment to be added to the specified alerts.
+|Property|Type|Description|
+|---|---|---|
+|alertIds|List&lt;String&gt;|A list of the IDs of the alerts to be updated. **Required**|
+|status|String|Specifies the updated status of the specified alerts. The property values are: 'New', 'InProgress' and 'Resolved'.|
+|assignedTo|String|Owner of the specified alerts|
+|classification|String|Specifies the specification of the specified alerts. The property values are: `TruePositive`, `Informational, expected activity`, and `FalsePositive`.|
+|determination|String|Specifies the determination of the specified alerts. <p>Possible determination values for each classification are: <br><li> <b>True positive</b>: `Multistage attack` (MultiStagedAttack), `Malicious user activity` (MaliciousUserActivity), `Compromised account` (CompromisedUser) – consider changing the enum name in public API accordingly, `Malware` (Malware), `Phishing` (Phishing), `Unwanted software` (UnwantedSoftware), and `Other` (Other). <li> <b>Informational, expected activity:</b> `Security test` (SecurityTesting), `Line-of-business application` (LineOfBusinessApplication), `Confirmed activity` (ConfirmedUserActivity) - consider changing the enum name in public API accordingly, and `Other` (Other). <li>  <b>False positive:</b> `Not malicious` (Clean) - consider changing the enum name in public API accordingly, `Not enough data to validate` (InsufficientData), and `Other` (Other).|
+|comment|String|Comment to be added to the specified alerts.|
 
 > [!NOTE]
 > Around August 29, 2022, previously supported alert determination values ('Apt' and 'SecurityPersonnel') will be deprecated and no longer available via the API.
@@ -97,7 +92,7 @@ If successful, this method returns 200 OK, with an empty response body.
 Here's an example of the request.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/alerts/batchUpdate
+POST https://api.security.microsoft.com/api/alerts/batchUpdate
 ```
 
 ```json
@@ -110,5 +105,3 @@ POST https://api.securitycenter.microsoft.com/api/alerts/batchUpdate
     "comment": "Resolve my alert and assign to secop2"
 }
 ```
-
-

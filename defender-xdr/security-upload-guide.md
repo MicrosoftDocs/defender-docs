@@ -11,9 +11,6 @@ ms.collection:
   - security-copilot
   - magic-ai-copilot
 ms.topic: install-set-up-deploy
-search.appverid:
-  - MOE150
-  - MET150
 ms.date: 11/18/2025
 appliesto:
 - Microsoft Defender XDR
@@ -24,9 +21,9 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-[Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) in the Microsoft Defender portal supports incident response teams in immediately resolving incidents with guided responses. Copilot in Defender uses AI and machine learning capabilities to contextualize an incident and learn from previous investigations to generate appropriate response actions.
+[Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) in the Microsoft Defender portal provides guided responses to support the response team in resolving incidents. Copilot in Defender uses AI and machine learning to contextualize an incident and learn from previous investigations to generate appropriate response actions.
 
-This guide outlines how to upload your organization's specific guidelines to Microsoft Security Copilot to enhance the relevance and effectiveness of the guided response recommendations.
+This guide outlines how to upload your organization's specific guidelines to Microsoft Security Copilot to improve the guided response recommendations.
 
 ## Prerequisites
 
@@ -74,5 +71,7 @@ You have the opportunity to provide feedback on the effectiveness of the guided 
 ## Best practices for creating effective guidebooks
 
 For examples of Microsoft's own incident response playbooks, see [Incident response playbooks](/security/operations/incident-response-playbooks).
+
+To create a guidebook for your organization, start with the [SOP template - Compromised identity](sop-documentation-template.md).
 
 When creating your organization's guidebooks, keep in mind that the guidebook can only read text. Avoid using images, graphs, or complex formatting that may hinder text extraction.

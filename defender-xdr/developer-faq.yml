@@ -5,10 +5,9 @@ metadata:
   ms.reviewer: 
   description: This page provides answers to common questions we receive from software developers.
   ms.service: defender-xdr
-  ms.author: dansimp
-  author: dansimp
+  ms.author: guywild
+  author: guywi-ms
   ms.localizationpriority: medium
-  manager: dansimp
   audience: ITPro
   ms.collection: m365-security
   ms.topic: faq

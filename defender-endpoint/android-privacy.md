@@ -5,15 +5,12 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-android
 ms.topic: article
 ms.subservice: android
-search.appverid: met150
 ms.date: 03/21/2025
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
@@ -100,4 +97,4 @@ Optional data includes diagnostic data and feedback data. Optional diagnostic da
 
 - The user's email address, if they choose to provide it.
 - Feedback type (smile, frown, idea) and any feedback comments submitted by the user.
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

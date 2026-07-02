@@ -1,17 +1,12 @@
 ---
 title: EmailPostDeliveryEvents table in the advanced hunting schema
 description: Learn about post-delivery actions taken on Microsoft 365 emails in the EmailPostDeliveryEvents table of the advanced hunting schema
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 ms.custom:
@@ -21,7 +16,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/28/2025
+ms.date: 06/01/2026
 ---
 
 # EmailPostDeliveryEvents
@@ -53,6 +48,7 @@ To get more information about individual email messages, you can also use the [`
 | `ActionResult` | `string` | Result of the action |
 | `RecipientEmailAddress` | `string` | Email address of the recipient, or email address of the recipient after distribution list expansion |
 | `DeliveryLocation` | `string` | Location where the email was delivered: Inbox/Folder, On-premises/External, Junk, Quarantine, Failed, Dropped, Deleted items |
+| `SourceLocation` | `string` | Source folder or location where the post-delivery action occurred: Inbox, JunkEmail, DeletedItems |
 | `ThreatTypes` | `string` | Verdict from the email filtering stack on whether the email contains malware, phishing, or other threats |
 | `DetectionMethods` | `string` | Methods used to detect malware, phishing, or other threats found in the email |
 | `ReportId` | `string` | Event identifier based on a repeating counter. To identify unique events, this column must be used in conjunction with the DeviceName and Timestamp columns. |

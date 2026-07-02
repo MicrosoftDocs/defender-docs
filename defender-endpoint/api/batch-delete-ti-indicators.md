@@ -1,20 +1,18 @@
-﻿---
+---
 title: Batch Delete Indicators API
 description: Learn how to use the Batch Delete Indicators API to delete indicator entities by ID in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: reference
 ms.reviewer: itsela
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
@@ -22,7 +20,6 @@ appliesto:
 ---
 
 # Batch Delete Indicators
-
 
 ## API description
 
@@ -45,13 +42,13 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/indicators/BatchDelete
+POST https://api.security.microsoft.com/api/indicators/BatchDelete
 ```
 
 ## Request headers
 
 |Name|Type|Description|
-|:---|:---|:---|
+|---|---|---|
 |Authorization | String | Bearer {token}. **Required**.|
 
 ## Request body
@@ -59,7 +56,7 @@ POST https://api.securitycenter.microsoft.com/api/indicators/BatchDelete
 In the request body, supply a JSON object with the following parameters:
 
 |Parameter|Type|Description|
-|:---|:---|:---|
+|---|---|---|
 |IndicatorIds|List *String* |A list of the IDs of the indicators to be removed. **Required**|
 
 ## Response
@@ -81,7 +78,7 @@ In the request body, supply a JSON object with the following parameters:
 Here's an example of the request.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/indicators/BatchDelete
+POST https://api.security.microsoft.com/api/indicators/BatchDelete
 ```
 
 ```json
@@ -89,4 +86,3 @@ POST https://api.securitycenter.microsoft.com/api/indicators/BatchDelete
     "IndicatorIds": [ "1", "2", "5" ]
 }
 ```
-

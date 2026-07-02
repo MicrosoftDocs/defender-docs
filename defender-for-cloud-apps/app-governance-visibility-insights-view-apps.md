@@ -1,16 +1,18 @@
 ---
 title: View your app details with app governance | Microsoft Defender for Cloud Apps
-ms.date: 08/18/2025
+ms.date: 06/16/2026
 ms.topic: how-to
 description: Learn how to view app details with app governance in Microsoft Defender XDR with Microsoft Defender for Cloud Apps.
 ms.reviewer: anandd512
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # View your app details with app governance
 
 Use app governance to gain visibility and meaningful insights on your app ecosystem.
 
-For example, view a list of apps in your tenant, together with relevant app metadata and usage data. Select a specific app to rill down for more data and insights.
+For example, view a list of apps in your tenant, together with relevant app metadata and usage data. Select a specific app to open its details pane and view more data and insights.
 
 ## View the apps in your tenant
 
@@ -21,7 +23,7 @@ For example:
 :::image type="content" source="media/app-governance-visibility-insights-view-apps/app-governance-app-list-view-new.png" alt-text="Screenshot of the Azure AD apps tab on the App governance page.":::
 
 >[!NOTE]
-> Your sign-in account must have one of [these roles](app-governance-get-started.md#roles) to view any app governance data.
+> Your sign-in account must have one of the [required app governance roles](app-governance-get-started.md#roles) to view any app governance data.
 >
 
 On the **Microsoft 365** tab, the apps in your tenant are listed with the following details:
@@ -59,9 +61,19 @@ Select a specific app in the grid to view more details on an apps details pane o
 
 :::image type="content" source="media/app-governance-visibility-insights-view-apps/app-governance-app-list-view.png" alt-text="Screenshot of an app details pane on the Azure AD tab.":::
 
-The **Summary** tab also shows more data about the app, such as the date first consented and the App ID. To see the properties of the app as registered in Microsoft Entra ID, select **View in Microsoft Entra ID**.
+The **Summary** tab shows more data about the app, such as the date first consented and the App ID. To see the properties of the app as registered in Microsoft Entra ID, select **View in Microsoft Entra ID**.
 
-In the details pane, select any of the following tabs to view more details:
+In the details pane, select any of the following tabs to view more details. Some tabs are available only for specific app types, as noted.
+
+- Select the **Risk score** tab to view a 1-100 risk score for the app, where higher values mean greater risk. The risk score helps you quickly prioritize which apps need attention first. The tab shows the risk summary, including the factors behind the app's risk score.
+
+    > [!NOTE]
+    > The Risk score tab is available only for OAuth apps registered in Microsoft Entra ID.
+
+- Select the **Graph** tab to view a visual identity graph that shows how the app connects to other entities in your organization, like users, resources, SaaS workloads, and critical assets. Select any node or edge in the graph to open a details pane with deeper context. When applicable, the pane also shows attack paths involving the selected nodes or edges. To explore further, select **View in map** below the graph to open the full Attack Map experience in a new window.
+
+    > [!NOTE]
+    > The Graph tab is available only for OAuth apps registered in Microsoft Entra ID.
 
 - Select the **Data usage** tab to view a graph of data usage over time, for Exchange, SharePoint, OneDrive, and Teams resources via Microsoft Graph and EWS APIs. For example:
 
@@ -71,7 +83,7 @@ In the details pane, select any of the following tabs to view more details:
 
 - Select the **Users** tab to see a list of users who are using the app, whether they're a priority account, and the amount of data downloaded and uploaded. For example:
 
-  ![Screenshot 2025-02-24 005703](media/app-governance-visibility-insights-view-apps/screenshot-2025-02-24-005703.png)
+  ![Screenshot of the Users tab showing app users, priority account status, and data usage.](media/app-governance-visibility-insights-view-apps/screenshot-2025-02-24-005703.png)
   
   If an app is *admin consented*, the **Total consented users** are all users in the tenant.
 
@@ -85,7 +97,7 @@ In the details pane, select any of the following tabs to view more details:
 
     :::image type="content" source="media/app-governance-visibility-insights-view-apps/sensitive-labels-details.png" alt-text="Screenshot of the Sensitivity labels tab.":::
 
-For an enabled app, there's also a **Disable app** control to disable the use of the selected app and an **Enable app** control to enable the use of the disabled app. These actions require a *Company Administrator* administrator role.
+If you have the *Company Administrator* role, you can also use the **Disable app** control to disable the use of the selected app, or the **Enable app** control to enable the use of a disabled app.
 
 
 ## Managing Google Workspace and Salesforce OAuth apps
@@ -121,7 +133,7 @@ Select **Show details** at the top right to view more information about all of t
 
 |Column name  |Description  |
 |---------|---------|
-|**Permissions**     |  A list of all permissions currently granted to the app. This information is available for Google Workspace only.     |
+|**Permissions**     |  A list of all permissions currently granted to the app. Available for Google Workspace and Salesforce (Preview).     |
 |**Community use**     | Common, Uncommon, Rare. Indicates how popular the app is across all your users.      |
 |**App ID**     |  The app's ID      |
 |**App activities**     |  A link to the app's activity log, which you can use to understand the app's recent usage.      |

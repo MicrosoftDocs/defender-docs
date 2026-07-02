@@ -1,25 +1,21 @@
-﻿---
+---
 title: Start Investigation API
 description: Use this API to start investigation on a device.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 11/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1 and Plan 2
   - Microsoft Defender for Business
-
 ---
 
 # Start Investigation API
@@ -57,11 +53,10 @@ When obtaining a token using user credentials:
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Alert.ReadWrite.All|'Read and write all alerts'
-Delegated (work or school account)|Alert.ReadWrite|'Read and write alerts'
-
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Alert.ReadWrite.All|'Read and write all alerts'|
+|Delegated (work or school account)|Alert.ReadWrite|'Read and write alerts'|
 
 ## HTTP request
 
@@ -71,18 +66,18 @@ POST https://api.security.microsoft.com/api/machines/{id}/startInvestigation
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
-Content-Type|string|application/json. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
+|Content-Type|string|application/json. **Required**.|
 
 ## Request body
 
 In the request body, supply a JSON object with the following parameters:
 
-Parameter|Type|Description
-:---|:---|:---
-Comment|String|Comment to associate with the action. **Required**.
+|Parameter|Type|Description|
+|---|---|---|
+|Comment|String|Comment to associate with the action. **Required**.|
 
 ## Response
 
@@ -103,5 +98,3 @@ POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e41
   "Comment": "Test investigation"
 }
 ```
-
-

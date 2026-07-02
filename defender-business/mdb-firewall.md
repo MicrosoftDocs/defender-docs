@@ -1,17 +1,13 @@
 ---
 title: Firewall in Microsoft Defender for Business
-description: Learn about Windows Defender Firewall settings in Defender for Business. Firewall can help prevent unwanted network traffic from flowing to your company devices.
-search.appverid: MET150
+description: Learn about Windows Firewall settings in Defender for Business. Firewall can help prevent unwanted network traffic from flowing to your company devices.
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.date: 06/19/2024
 ms.reviewer: nehabha
-f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security
@@ -20,7 +16,7 @@ ms.collection:
 
 # Firewall in Microsoft Defender for Business
 
-Defender for Business includes firewall capabilities through [Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security). Firewall protection helps secure devices by establishing rules that determine what network traffic is permitted to flow to and from devices.
+Defender for Business includes firewall capabilities through [Windows Firewall](/windows/security/operating-system-security/network-security/windows-firewall/). Firewall protection helps secure devices by establishing rules that determine what network traffic is permitted to flow to and from devices.
 
 You can use firewall protection to specify whether to allow or to block connections on devices in various locations. For example, your firewall settings can allow inbound connections on devices that are connected to your company's internal network but prevent connections when the device is on a network with untrusted devices.
 
@@ -66,7 +62,7 @@ You can use custom rules to define exceptions for your firewall policies. That i
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
-2. Go to **Endpoints** > **Device configuration**, and review the list of policies.
+2. Go to **Endpoints** \> **Device configuration**, and review the list of policies.
 
 3. In the **Firewall** section, select an existing policy, or add a new policy.
 
@@ -94,7 +90,7 @@ You can use custom rules to define exceptions for your firewall policies. That i
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
-2. Go to **Endpoints** > **Device configuration**, and review the list of policies.
+2. Go to **Endpoints** \> **Device configuration**, and review the list of policies.
 
 3. In the **Firewall** section, select an existing policy, or add a new policy.
 
@@ -124,7 +120,7 @@ You can use custom rules to define exceptions for your firewall policies. That i
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
-2. Go to **Endpoints** > **Device configuration**, and review the list of policies.
+2. Go to **Endpoints** \> **Device configuration**, and review the list of policies.
 
 3. In the **Firewall** section, select an existing policy, or add a new policy.
 
@@ -146,20 +142,19 @@ In Defender for Business, you can define exceptions to block or allow incoming c
 
 ## Firewall settings you can configure in Defender for Business
 
-Defender for Business includes firewall protection through Windows Defender Firewall. The following table lists settings that can be configured in Defender for Business.
+Defender for Business includes firewall protection through Windows Firewall. The following table lists settings that can be configured in Defender for Business.
 
-| Setting | Description |
-|--|--|
-| **Domain network** | The domain network profile applies to your company's network. Firewall settings for your domain network apply to inbound connections that are initiated on other devices on the same network. By default, incoming connections is set to **Block all**.  |
-| **Public network** | The public network profile applies to networks that you can use in a public location, such as a coffee shop or airport. Firewall settings for public networks apply to inbound connections that are initiated on other devices on the same network. Because a public network can include devices that you don't know or don't trust, incoming connections is set to **Block all** by default.  |
-| **Private network** | The private network profile applies to networks in a private location, such as your home. Firewall settings for private networks apply to inbound connections that are initiated on other devices on the same network. In general, on a private network, it's assumed that all other devices on the same network are trusted devices. However, by default, incoming connections is set to **Block all**. |
-| **Custom rules** | [Custom rules](mdb-firewall.md) let you block or allow specific connections. For example, suppose that you want to block all incoming connections on devices that are connected to a private network except for connections through a specific app on a device. In this case, you'd set **Private network** to block all incoming connections, and then add a custom rule to define the exception. <p>You can use custom rules to define exceptions for specific files or apps, an Internet protocol (IP) address, or a range of IP addresses. Depending on the type of custom rule you're creating, here are some examples of values you could use: <br/>- Application file path: `C:\Windows\System\Notepad.exe or %WINDIR%\Notepad.exe` <br/>- IP: A valid IPv4/IPv6 address, such as `192.168.11.0` or `192.168.1.0/24` <br/>- IP: A valid IPv4/IPv6 address range, formatted like `192.168.1.0-192.168.1.9` (with no spaces included) |
+|Setting|Description|
+|---|---|
+|**Domain network**|The domain network profile applies to your company's network. Firewall settings for your domain network apply to inbound connections that are initiated on other devices on the same network. By default, incoming connections are set to **Block all**.|
+|**Public network**|The public network profile applies to networks that you can use in a public location, such as a coffee shop or airport. Firewall settings for public networks apply to inbound connections that are initiated on other devices on the same network. Because a public network can include devices that you don't know or don't trust, incoming connections are set to **Block all** by default.|
+|**Private network**|The private network profile applies to networks in a private location, such as your home. Firewall settings for private networks apply to inbound connections that are initiated on other devices on the same network. In general, all devices on the same private network are assumed to be trusted devices. However, by default, incoming connections are set to **Block all**.|
+|**Custom rules**|[Custom rules](mdb-firewall.md) let you block or allow specific connections. For example, you want to block all incoming connections on devices connected to a private network except for connections through a specific app on a device. Set **Private network** to block all incoming connections, and then add a custom rule to define the exception. <br/><br/> You can use custom rules to define exceptions for specific files, apps, or IP addresses. For example: <ul><li>**App file path**: `C:\Windows\System\Notepad.exe` or `%WINDIR%\Notepad.exe`.</li><li>**Single IPv4 or IPv6 address**: `192.168.11.0` or `fd12:3456:789a:1::1`.</li><li>**IPv4 or IPv6 Classless Inter-Domain Routing (CIDR)**: `192.168.1.0/24` or `fd12:3456:789a::/64`.</li><li>**IPv4 or IPv6 address range**: `192.168.1.0-192.168.1.9` or `fd12:3456:789a::1—fd12:3456:789a::ffff` (no spaces).|
 
 ## Next steps
 
 - [Manage firewall settings in Defender for Business](mdb-firewall.md)
-- [Learn more about Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security)
+- [Learn more about Windows Firewall](/windows/security/operating-system-security/network-security/windows-firewall/)
 - [View and manage incidents in Defender for Business](mdb-view-manage-incidents.md)
 - [Respond to and mitigate threats in Defender for Business](mdb-respond-mitigate-threats.md)
 - [Review remediation actions in the Action center](mdb-review-remediation-actions.md)
-

@@ -2,19 +2,17 @@
 title: What's new in Microsoft Defender for Office 365
 description: Learn about the new features and functionality available in the latest release of Microsoft Defender for Office 365.
 keywords: what's new in Microsoft Defender for Office 365, ga, generally available, capabilities, available, new
-search.appverid: met150
-f1.keywords: NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
-ms.date: 11/10/2025
-audience: ITPro
+ms.date: 05/26/2026
 ms.collection:
   - m365-security
   - tier1
 ms.topic: whats-new
-ms.custom: seo-marvel-apr2020
+ms.custom:
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
 ms.reviewer: vippand
 ms.service: defender-office-365
 appliesto:
@@ -37,7 +35,32 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender XDR](/defender-xdr/whats-new)
 - [What's new in Microsoft Defender for Endpoint](/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
-- [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
+- [What's new in Microsoft Defender for Cloud Apps](/defender-cloud-apps/release-notes)
+
+## April 2026
+
+- **Promotions folder for bulk email (preview)**: You can configure anti-spam policies to deliver bulk mail below the BCL threshold to the **Promotions** folder in supported versions of Outlook. For more information, see [Deliver bulk mail below the BCL threshold to the Promotions folder](anti-spam-bulk-complaint-level-bcl-about.md#deliver-bulk-mail-below-the-bcl-threshold-to-the-promotions-folder).
+
+- **Security Copilot email summary on the Email entity page**: If you have a [Microsoft Security Copilot](/copilot/security/get-started-security-copilot) subscription, you can generate an AI summary of email entity data directly from the [Email entity page](mdo-email-entity-page.md) by selecting the **Copilot** action.
+
+- **Remove users from Teams chats is generally available**: The ability to [remove internal users from Teams chats](teams-message-entity-panel.md#remove-users-from-teams-chats-in-the-teams-message-entity-panel) in the Teams message entity panel is now generally available.
+
+- **New RBAC permission for email content associated with alerts**: A new granular Unified RBAC permission **Email & collaboration content: Emails associated with alerts (read)** allows analysts to preview or download email messages associated with specific security alerts. For more information, see [Email entity page actions](mdo-email-entity-page.md#actions-on-the-email-entity-page).
+
+## March 2026
+
+- **Expanding User reporting in Teams to include Calls**: Users can reported completed or missed one-to-one [Microsoft Teams calls](submissions-teams.md) from the call history as malicious (scam) or non malicious (non-scam) to the specified reporting mailbox, or Microsoft and the reporting mailbox via [user reported settings](submissions-user-reported-messages-custom-mailbox.md).
+- **Added support for contextual Teams messages in User reported Teams Messages**: When Users report [Microsoft Teams messages](submissions-teams.md) from chats, channels (standard, shared, and private), and meeting conversations to Microsoft as malicious (security risk), up to fifteen messages before and after the reported message are shared for analysis.
+
+## February 2026
+
+- **Expanding User reporting in Teams to Defender for Office 365 Plan 1**: Users can report external and intra-org [Microsoft Teams messages](submissions-teams.md) from chats, standard, shared, and private channels, meeting conversations to Microsoft as malicious (security risk) the specified reporting mailbox, or both via [user reported settings](submissions-user-reported-messages-custom-mailbox.md).
+
+## January 2026
+
+- **Block communication from sender email address and domains in Teams**: Admins can directly block [malicious domains and email addresses](tenant-allow-block-list-teams-domains-configure.md) from within the Microsoft Defender portal, seamlessly adding targeted entries to the Teams Admin Center (TAC) blocked domains and users list. This capability enables near real-time protection. When suspicious or abusive external organizations are identified, SOC teams can immediately block them, effectively halting new external chat messages, invites, and channel communications from those domains and senders while deleting existing ones.
+
+- **Expanding ZAP and Teams Admin quarantine to Plan 1**: [Zero-hour-auto-purge (ZAP)](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-in-microsoft-teams) and [admin management of quarantined Teams messages](quarantine-admin-manage-messages-files.md#use-the-microsoft-defender-portal-to-manage-microsoft-teams-quarantined-messages) is available to Microsoft Defender for Plan 1 by default, bringing a post-delivery protection layer.
 
 ## October 2025
 
@@ -74,7 +97,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## May 2025
 
-- In government cloud environments, :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** replaces the **Message actions** drop down list on the **Email** tab (view) of the details area of the **All email**, **Malware**, or **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md):
+- In government cloud environments, :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** replaces the **Message actions** drop down list on the **Email** tab (view) of the details area of the **All email**, **Malware**, or **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md):
   - SecOps personnel can now create organization block entries on URLs and files via the [Tenant Allow/Block List](tenant-allow-block-list-about.md) directly from Threat Explorer.
   - For 100 or fewer messages selected in Threat Explorer, SecOps personnel can take multiple actions on the selected messages from the same page. For example:
     - Purge email messages or propose email remediation.
@@ -134,9 +157,9 @@ For more information on what's new with other Microsoft Defender security produc
 
 - (GA) Learning hub resources have moved from the Microsoft Defender portal to [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118). Access Microsoft Defender XDR Ninja training, learning paths, training modules and more. Browse the [list of learning paths](/training/browse/?products=m365-ems-cloud-app-security%2Cdefender-for-cloud-apps%2Cdefender-identity%2Cm365-information-protection%2Cm365-threat-protection%2Cmdatp%2Cdefender-office365&expanded=m365%2Coffice-365), and filter by product, role, level, and subject.
 
-- (GA) SecOps personnel can now release email messages from quarantine or move messages from quarantine back to user Inboxes directly from :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** in Threat Explorer, Advanced hunting, custom detection, the Email entity page, and the Email summary panel. This capability allows security operators to manage false positives more efficiently and without losing context. For more information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+- (GA) SecOps personnel can now release email messages from quarantine or move messages from quarantine back to user Inboxes directly from :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** in Threat Explorer, Advanced hunting, custom detection, the Email entity page, and the Email summary panel. This capability allows security operators to manage false positives more efficiently and without losing context. For more information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
-- We're introducing intra-org protection data into three of our core customer facing reports: the [Mailflow status report](reports-email-security.md#mailflow-status-report), [Threat protection status report](reports-email-security.md#threat-protection-status-report), and [Top senders and recipient report](reports-email-security.md#top-senders-and-recipients-report). Admins and security operators now have insight into how the default email protections for cloud mailboxes and Defender for Office 365 protect users from malicious email traffic inside the organization. For more information, see [Email security report changes in the Microsoft Defender portal](reports-email-security.md#email-security-report-changes-in-the-microsoft-defender-portal).
+- We're introducing intra-org protection data into three of our core customer facing reports: the [Mailflow status report](reports-email-security.md#mailflow-status-report), [Threat protection status report](reports-email-security.md#threat-protection-status-report), and [Top senders and recipient report](reports-email-security.md#top-senders-and-recipients-report). Admins and security operators now have insight into how [the built-in security features for all cloud mailboxes](eop-about.md) and Defender for Office 365 protect users from malicious email traffic inside the organization. For more information, see [Email security report changes in the Microsoft Defender portal](reports-email-security.md#email-security-report-changes-in-the-microsoft-defender-portal).
 
 ## May 2024
 
@@ -153,7 +176,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - **Last used date** added to Tenant Allow/Block List entries for domains and email addresses, files, and URLs.
 - **Enhanced clarity in submissions results**: Admins and security operators now see enhanced results within submissions across email, Microsoft Teams messages, email attachments, URLs, and user-reported messages. These updates aim to eliminate any ambiguity associated with the current submission results. The results are refined to ensure clarity, consistency, and conciseness, making the submission results more actionable for you. [Learn more](submissions-admin.md).
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** replaces the **Message actions** drop down list on the **Email** tab (view) of the details area of the **All email**, **Malware**, or **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md):
+- :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** replaces the **Message actions** drop down list on the **Email** tab (view) of the details area of the **All email**, **Malware**, or **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md):
   - SecOps personnel can now create organization block entries on URLs and files via the [Tenant Allow/Block List](tenant-allow-block-list-about.md) directly from Threat Explorer.
   - For 100 or fewer messages selected in Threat Explorer, SecOps personnel can take multiple actions on the selected messages from the same page. For example:
     - Purge email messages or propose email remediation.
@@ -184,11 +207,11 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## December 2023
 
-- **QR code related phishing protection in the default email protections for cloud mailboxes and in Microsoft Defender for Office 365**: New detection capabilities using image detection, threat signals, URL analysis now extracts QR codes from URLs and blocks QR code based phishing attacks from the body of an email. To learn more, see our [blog](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/protect-your-organizations-against-qr-code-phishing-with-defender-for-office-365/4007041).
-- **Microsoft Defender XDR Unified RBAC is now generally available**: Defender XDR Unified RBAC supports all Defender for Office 365 scenarios previously controlled by [Email & collaboration permissions](mdo-portal-permissions.md) and [Exchange Online permissions](/exchange/permissions-exo/permissions-exo). To learn more about the supported workloads and data resources, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
+- **QR code related phishing protection in the built-in security features for all cloud mailboxes and in Microsoft Defender for Office 365**: New detection capabilities using image detection, threat signals, URL analysis now extracts QR codes from URLs and blocks QR code based phishing attacks from the body of an email. To learn more, see our [blog](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/protect-your-organizations-against-qr-code-phishing-with-defender-for-office-365/4007041).
+- **Microsoft Defender unified RBAC is now generally available**: Defender unified RBAC supports all Defender for Office 365 scenarios previously controlled by [Email & collaboration permissions](mdo-portal-permissions.md) and [Exchange Online permissions](/exchange/permissions-exo/permissions-exo). To learn more about the supported workloads and data resources, see [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
   > [!TIP]
-  > Defender XDR Unified RBAC isn't generally available in Microsoft 365 Government Community Cloud High (GCC High) or Department of Defense (DoD).
+  > Defender unified RBAC isn't generally available in Microsoft 365 Government Community Cloud High (GCC High) or Department of Defense (DoD).
 
 ## November 2023
 
@@ -201,7 +224,7 @@ For more information on what's new with other Microsoft Defender security produc
 ## October 2023
 
 - **Create and manage simulations using the Graph API** in Attack simulation training. [Learn more](/graph/api/attacksimulationroot-post-simulation)
-- **Exchange Online permission management in Defender for Office 365 is now supported in Microsoft Defender XDR Unified role-based access control (RBAC)**: In addition to the existing support for [Email & collaboration permissions](mdo-portal-permissions.md), Defender XDR Unified RBAC now also supports protection-related [Exchange Online permissions](/exchange/permissions-exo/permissions-exo). To learn more about the supported Exchange Online permissions, see [Exchange Online permissions mapping](/defender-xdr/compare-rbac-roles#exchange-online-permissions-mapping).
+- **Exchange Online permission management in Defender for Office 365 is now supported in Microsoft Defender unified role-based access control (RBAC)**: In addition to the existing support for [Email & collaboration permissions](mdo-portal-permissions.md), Defender unified RBAC now also supports protection-related [Exchange Online permissions](/exchange/permissions-exo/permissions-exo). To learn more about the supported Exchange Online permissions, see [Exchange Online permissions mapping](/defender-xdr/compare-rbac-roles#exchange-online-permissions-mapping).
 
 ## September 2023
 

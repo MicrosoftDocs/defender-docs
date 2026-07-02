@@ -1,29 +1,27 @@
 ---
 title: Microsoft Security Copilot Threat Hunting Agent in advanced hunting
 description: Learn how Microsoft Security Copilot threat hunting agent can help you investigate threats using natural language.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
   - security-copilot
   - magic-ai-copilot
 ms.custom:
+- msecd-doc-authoring-1014
 - cx-ti
 - cx-ah
 ms.topic: how-to
-ms.date: 12/08/2025
+ms.date: 06/16/2026
 appliesto:
 - Microsoft Defender
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
+ai-usage: ai-assisted
 ---
 
 # Microsoft Security Copilot Threat Hunting Agent in advanced hunting (preview)
@@ -34,7 +32,14 @@ The Microsoft Security Copilot Threat Hunting Agent is an AI-powered agent that 
 
 The Threat Hunting Agent goes beyond query generation by delivering a complete, conversational threat hunting experience. It not only generates queries but also interprets results, surfaces insights, and guides you through full hunting sessions. These capabilities empower analysts of all levels to hunt threats faster, more accurately, and with greater confidence.
 
+Watch this video to get an overview of the Threat Hunting Agent:
+
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=74ef2c98-5dc7-406b-9b30-25e158ced334]
+
 ## Key capabilities
+
+The Threat Hunting Agent provides the following key capabilities:
+
 - **Natural language question to natural language answer.** Ask any data-related question in natural language (for example, *Which devices communicated with IPs in France in the last 24 hours?*) and receive direct conversational answers backed by KQL queries and tabular results. 
 
 - **Conversational flow.** The agent keeps track of context throughout your hunting session, enabling you to ask follow-up questions that build on previous ones and ensuring continuity across the entire session.
@@ -51,7 +56,7 @@ The Threat Hunting Agent goes beyond query generation by delivering a complete, 
 To start using the Threat Hunting Agent, follow these steps:
 
 >[!NOTE]
-> Make sure that the Threat Hunting Agent mode is active. [Learn more](advanced-hunting-security-copilot.md#get-access)
+> Make sure that the Threat Hunting Agent mode is active. [Get access to Security Copilot in advanced hunting](advanced-hunting-security-copilot.md#get-access)
 
 1. Open the **Advanced hunting** page from the navigation bar in Microsoft Defender portal. The Security Copilot side pane for advanced hunting appears at the right hand side.
 
@@ -102,7 +107,7 @@ When the Threat Hunting Agent responds to your question, you get a comprehensive
 
       :::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-suggestions.png" alt-text="Screenshot of the Copilot pane in advanced hunting with follow-up suggestions highlighted." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-suggestions.png":::
 
-    - You might also get **Action suggestions** in case a remediation action is recommended and needed in the context of your investigation. When you select a suggestion, the **Take actions** wizard opens with the action type and targeted entities already filled out. Complete the wizard to apply the suggested action. 
+    - You might also get **Action suggestions** in case a remediation action is recommended and needed in the context of your investigation. When you select an action suggestion, the **Take actions** wizard opens with the action type and targeted entities already filled out. Complete the wizard to apply the suggested action. 
 
       :::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-take-action.png" alt-text="Screenshot of the Copilot pane in advanced hunting with action suggestion highlighted." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-take-action.png":::
 
@@ -117,10 +122,11 @@ After receiving a response, you can continue your hunting session in several way
 - **Use advanced hunting features:** Save your query, export results, create a detection rule, or use any of the other advanced hunting features for the KQL query displayed in the editor and the generated results.
 
 ## Start a new session
-To start a new hunting session, select the **New chat (+)** icon at the top of the Copilot side pane.
 
->[!NOTE]
+>[!WARNING]
 > Starting a new session deletes all chat history, which isn't saved.
+
+To start a new hunting session, select the **New chat (+)** icon at the top of the Copilot side pane.
 
 ## Provide feedback
 You can provide feedback directly in the portal by selecting the feedback icon and choosing your response. Your feedback helps improve the Threat Hunting Agent's capabilities and accuracy.

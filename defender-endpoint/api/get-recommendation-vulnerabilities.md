@@ -1,31 +1,26 @@
-﻿---
+---
 title: List vulnerabilities by recommendation
 description: Retrieves a list of vulnerabilities associated with the security recommendation.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
-- tier3 
+- tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # List vulnerabilities by recommendation
 
-
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieves a list of vulnerabilities associated with the security recommendation.
 
@@ -33,10 +28,10 @@ Retrieves a list of vulnerabilities associated with the security recommendation.
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md) for details.
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Vulnerability.Read.All|'Read Threat and Vulnerability Management security recommendation information'
-Delegated (work or school account)|Vulnerability.Read|'Read Threat and Vulnerability Management security recommendation information'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Vulnerability.Read.All|'Read Threat and Vulnerability Management security recommendation information'|
+|Delegated (work or school account)|Vulnerability.Read|'Read Threat and Vulnerability Management security recommendation information'|
 
 ## HTTP request
 
@@ -46,9 +41,9 @@ GET /api/recommendations/{id}/vulnerabilities
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -65,7 +60,7 @@ If successful, this method returns 200 OK, with the list of vulnerabilities asso
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/recommendations/va-_-google-_-chrome/vulnerabilities
+GET https://api.security.microsoft.com/api/recommendations/va-_-google-_-chrome/vulnerabilities
 ```
 
 ### Response example
@@ -74,7 +69,7 @@ Here is an example of the response.
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Collection(Analytics.Contracts.PublicAPI.PublicVulnerabilityDto)",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Collection(Analytics.Contracts.PublicAPI.PublicVulnerabilityDto)",
     "value": [
         {
             "id": "CVE-2019-13748",

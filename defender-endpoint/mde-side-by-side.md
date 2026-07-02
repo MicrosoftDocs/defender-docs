@@ -1,21 +1,19 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint alongside other security solutions
 description: See recommendations for running Defender for Endpoint alongside other security solutions.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 06/13/2025
 ms.topic: article
-author: KesemSharabi
-ms.author: kesharab
+author: limwainstein
+ms.author: lwainstein
 ms.custom: 
 - nextgen
 - partner-contribution
 ms.reviewer: pahuijbr
-manager: bagol
 ms.collection: 
 - m365-security
 - tier2
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

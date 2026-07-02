@@ -1,29 +1,24 @@
-﻿---
+---
 title: Get alert related files information
 description: Retrieve all files related to a specific alert using Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 11/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # Get alert related files information API
-
 
 ## API description
 
@@ -44,10 +39,10 @@ When obtaining a token using user credentials:
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|File.Read.All|'Read file profiles'
-Delegated (work or school account)|File.Read.All|'Read file profiles'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|File.Read.All|'Read file profiles'|
+|Delegated (work or school account)|File.Read.All|'Read file profiles'|
 
 ## HTTP request
 
@@ -57,9 +52,9 @@ GET /api/alerts/{id}/files
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -76,7 +71,7 @@ If successful and alert and files exist - 200 OK. If alert not found - 404 Not F
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/alerts/636688558380765161_2136280442/files
+GET https://api.security.microsoft.com/api/alerts/636688558380765161_2136280442/files
 ```
 
 ### Response example
@@ -85,7 +80,7 @@ Here is an example of the response.
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Files",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Files",
     "value": [
         {
             "sha1": "f2a00fd2f2de1be0214b8529f1e9f67096c1aa70",

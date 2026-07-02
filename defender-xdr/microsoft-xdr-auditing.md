@@ -5,17 +5,15 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: how-to
 ms.date: 01/14/2025
-search.appverid: met150
 appliesto:
 - Microsoft Defender for Endpoint Plan 2
 - Microsoft Defender XDR
+ms.custom: sfi-ga-nochange
 
 #customer intent: As a SOC analyst, I want to learn how to use the audit log to search for Microsoft Defender XDR activities to help with investigation.
 ---

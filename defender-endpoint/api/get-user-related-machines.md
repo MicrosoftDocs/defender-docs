@@ -1,31 +1,27 @@
-﻿---
+---
 title: Get user-related machines API
 description: Learn how to use the Get user-related machines API to retrieve a collection of devices related to a user ID in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 11/16/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
 
 # Get user-related machines API
 
-
 ## API description
+
 Retrieves a collection of devices related to a given user ID.
 
 ## Limitations
@@ -41,10 +37,10 @@ When obtaining a token using user credentials:
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application |Machine.ReadWrite.All |'Read and write all machine information'
-Delegated (work or school account) | Machine.ReadWrite | 'Read and write machine information'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Machine.ReadWrite.All|'Read and write all machine information'|
+|Delegated (work or school account)|Machine.ReadWrite|'Read and write machine information'|
 
 ## HTTP request
 
@@ -56,9 +52,9 @@ GET /api/users/{id}/machines
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization | String | Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -75,6 +71,5 @@ If successful and user exists - 200 OK with list of [machine](machine.md) entiti
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/users/user1/machines
+GET https://api.security.microsoft.com/api/users/user1/machines
 ```
-

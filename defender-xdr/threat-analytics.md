@@ -3,24 +3,21 @@ title: Threat analytics in Microsoft Defender
 ms.reviewer: 
 description: Learn about emerging threats and attack techniques and how to stop them. Assess their impact to your organization and evaluate your organizational resilience.
 ms.service: defender-xdr
-f1.keywords:
-- NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection: 
 - m365-security 
 - m365initiative-m365-defender 
 - tier1
 ms.topic: article
 ms.custom: 
+- sfi-ga-nochange
 - cx-ti
 - cx-ta
 - seo-marvel-apr2020
-search.appverid: met150
-ms.date: 12/18/2025
+ms.date: 05/26/2026
+ai-usage: ai-assisted
 ---
 
 # Threat analytics in Microsoft Defender
@@ -41,6 +38,8 @@ Threat analytics is an in-product threat intelligence solution from expert Micro
 - Common attack surfaces
 - Prevalent malware
 
+In addition to Microsoft first-party intelligence, threat analytics also surfaces open-source intelligence (OSINT) articles—curated threat reports derived from publicly available sources—giving security teams a unified view of both Microsoft and external threat intelligence in a single experience.
+
 You can access threat analytics from the upper left-hand side of Microsoft Defender portal's navigation bar, or from a dedicated dashboard card that shows the top threats to your organization, both in terms of known impact and your exposure.
 
 :::image type="content" source="media/threat-analytics/ta_inlandingpage_mtp.png" alt-text="Screenshot of the threat analytics landing page" lightbox="media/threat-analytics/ta_inlandingpage_mtp.png":::
@@ -58,6 +57,7 @@ With more sophisticated adversaries and new threats emerging frequently and prev
 Each report provides an analysis of a tracked threat and extensive guidance on how to defend against that threat. It also incorporates data from your network, indicating whether the threat is active and if you have applicable protections in place.
 
 ## Required roles and permissions
+
 To access Threat analytics in the Defender portal, you need a license for at least one Microsoft Defender XDR product. For more information, see [Microsoft Defender XDR prerequisites](prerequisites.md). 
 
 >[!NOTE]
@@ -65,16 +65,15 @@ To access Threat analytics in the Defender portal, you need a license for at lea
 >
 > Microsoft Sentinel SIEM customers have access to certain Threat analytics sections or tabs only. [Learn more](/azure/sentinel/threat-analytics-sentinel) 
 
-The following roles and permissions are also required to access Threat analytics: 
+The following roles and permissions are also required to access Threat analytics:
+
 - **Security data basics (read)**—to view threat analytics report, related incidents and alerts, and impacted assets
 - **Vulnerability management (read)** and **Exposure Management (read)**—to see related exposure data and recommended actions
 
-By default, access to services available in the Defender portal is managed collectively using [Microsoft Entra global roles](m365d-permissions.md). If you need greater flexibility and control over access to specific product data, and aren't yet using the [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md) for centralized permissions management, we recommend creating custom roles for each service. [Learn more about creating custom roles](custom-roles.md)
+By default, access to services available in the Defender portal is managed collectively using [Microsoft Entra global roles](m365d-permissions.md). If you need greater flexibility and control over access to specific product data, and aren't yet using the [Microsoft Defender unified role-based access control (RBAC)](manage-rbac.md) for centralized permissions management, we recommend creating custom roles for each service. [Learn more about creating custom roles](custom-roles.md)
 
 >[!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
->
-> You have visibility to all threat analytics reports even if you have just one of the supported products. However, you need each product and role to see that product's specific incidents, assets, exposure, and recommended actions associated with the threat. 
+> You have visibility to all threat analytics reports even if you have just one of the supported products. However, you need each product and role to see that product's specific incidents, assets, exposure, and recommended actions associated with the threat.
 
 ## View the threat analytics dashboard
 
@@ -88,7 +87,7 @@ The threat analytics dashboard ([security.microsoft.com/threatanalytics3](https:
 
 Select a threat from the dashboard to view the report for that threat. You can also select the **Search** field to key in a keyword that's related to the threat analytics report that you'd like to read.
 
-#### View reports by category
+### View reports by category
 
 You can filter the threat report list and view the most relevant reports according to the following options:
 
@@ -100,7 +99,7 @@ You can filter the threat report list and view the most relevant reports accordi
   - Activity group
   - Vulnerability
 
-- **Category**—assists you in viewing the most relevant reports according to a specific report type. For example, the **Actor** category includes all threat actor profiles. [Learn more about the different analyst report types](threat-analytics-analyst-reports.md#know-the-different-analyst-report-types)
+- **Category**—assists you in viewing the most relevant reports according to a specific report type. For example, the **Actor** category includes all threat actor profiles, and the **OSINT** category surfaces open-source intelligence articles from external sources. [Learn more about the different analyst report types](threat-analytics-analyst-reports.md#know-the-different-analyst-report-types)
 
 
 These filters assist you in efficiently reviewing the threat report list. For example, you can view all threat reports related to the ransomware category, or threat reports that involve vulnerabilities.

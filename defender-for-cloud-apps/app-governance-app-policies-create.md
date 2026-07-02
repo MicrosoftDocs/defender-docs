@@ -1,20 +1,22 @@
 ---
 title: Create app governance policies | Microsoft Defender for Cloud Apps
-ms.date: 08/12/2025
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: shragar
-description: Learn how to create app policies on app governance.
+description: Create app governance policies to detect anomalous app behavior, trigger remediation, and enforce compliance for apps connected to Microsoft 365, Google Workspace, and Salesforce.
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Create app policies in app governance
 
-Along with a built-in set of capabilities to detect anomalous app behavior and generate alerts based on machine learning algorithms, policies in app governance enable you to:
+App governance uses machine learning algorithms to detect anomalous app behavior and generate alerts. You can also create policies that enable you to:
 
 - Specify conditions by which app governance alerts you to app behavior for automatic or manual remediation.
 
 - Enforce the app compliance policies for your organization.
 
-Use app governance to create OAuth policies for apps connected to Microsoft 365, Google Workspace, and Salesforce.
+This article shows you how to create and configure OAuth app policies in app governance for apps connected to Microsoft 365, Google Workspace, and Salesforce, including using templates, creating custom policies, and working with anomaly detection policies.
 
 <br/>
 
@@ -45,7 +47,7 @@ For apps connected to Microsoft Entra ID, create app policies from provided temp
 
 To create a new app policy based on an app policy template, on the **Choose App policy template page**, select a category of app template, select the name of the template, and then select **Next**.
 
-The following sections describe the app policy template categories.
+App policy templates are grouped into these categories: Usage, Permissions, and Certification.
 
 ### Usage
 
@@ -169,7 +171,7 @@ Policies for OAuth apps trigger alerts only on policies that are authorized by u
 
 1. Go to **Microsoft Defender XDR > App governance > Policies > Other apps**. For example:
 
-    ![Other apps-policy creation](media/app-governance-app-policies-create/other-apps-policy-creation.jpg)
+    ![Screenshot of the Other apps policy creation page in App Governance](media/app-governance-app-policies-create/other-apps-policy-creation.jpg)
    
 2. Filter the apps according to your needs. For example, you might want to view all apps that request **Permission** to **Modify calendars in your mailbox**.
 
@@ -180,13 +182,13 @@ Policies for OAuth apps trigger alerts only on policies that are authorized by u
 
    For example:
     
-    ![new OAuth app policy.](media/app-permissions-policy.png)
+    ![Screenshot of the new OAuth app policy configuration page with group-based permission settings](media/app-permissions-policy.png)
 
 ### Anomaly detection policies for OAuth apps connected to Salesforce and Google Workspace
 
-In addition to Oauth app policies that you can create, Defender for Cloud apps provides out-of-the-box anomaly detection policies that profile metadata of OAuth apps to identify ones that are potentially malicious.
+In addition to Oauth app policies that you can create, Microsoft Defender for Cloud Apps provides out-of-the-box anomaly detection policies that profile metadata of OAuth apps to identify ones that are potentially malicious. Defender for Cloud Apps is the Microsoft security service that helps protect your organization's cloud app environment, including OAuth apps connected to Salesforce and Google Workspace.
 
-This section is only relevant for Salesforce and Google Workspace applications.
+These anomaly detection policies are only relevant for Salesforce and Google Workspace applications.
 
 > [!NOTE]
 > Anomaly detection policies are only available for OAuth apps that are authorized in your Microsoft Entra ID.

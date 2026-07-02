@@ -1,7 +1,1 @@
-/defender @dansimp
-/defender-business @dansimp
-/defender-endpoint @dansimp
-/defender-office-365 @dansimp
-/defender-vulnerability-management @dansimp
-/defender-xdr @dansimp
-/exposure-management @dansimp
+

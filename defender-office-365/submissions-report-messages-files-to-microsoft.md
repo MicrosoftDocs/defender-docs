@@ -1,54 +1,55 @@
 ---
-title: Report spam, non-spam, phishing, suspicious emails and files to Microsoft
-f1.keywords: 
-  - NOCSH
+title: Report spam, non-spam, phishing, suspicious emails, Teams messages, and files to Microsoft
 author: chrisda
 ms.author: chrisda
-manager: bagol
-ms.date: 02/24/2025
-audience: ITPro
+ms.date: 06/23/2026
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: c31406ea-2979-4fac-9288-f835269b9d2f
 ms.collection: 
   - m365-security
   - tier1
-description: How do I report a suspicious email or file to Microsoft? Report messages, URLs, email attachments and files to Microsoft for analysis. Learn to report spam email and phishing emails.
+description: How do I report a suspicious email, Teams message, or file to Microsoft? Report messages, Teams messages, URLs, email attachments, and files to Microsoft for analysis. Learn to report spam email and phishing emails.
 ms.service: defender-office-365
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1015
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+#customer intent: As a user or admin, I want to know the ways to report suspicious email messages, Teams messages, URLs, email attachments, and files to Microsoft, so that I can submit threats and false positives for analysis.
 ---
 
-# How do I report a suspicious email or file to Microsoft?
+# How do I report a suspicious email, Teams message, or file to Microsoft?
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Wondering what to do with suspicious email messages, URLs, email attachments, or files? In all organizations with cloud mailboxes, *users* and *admins* have different ways to report suspicious email messages, URLs, and email attachments to Microsoft.
+Wondering what to do with suspicious email messages, Teams messages, URLs, email attachments, or files? In all organizations with cloud mailboxes, *users* and *admins* have different ways to report suspicious email messages, URLs, and email attachments to Microsoft. In organizations with Microsoft Defender for Office 365 Plan 1 or Plan 2, or Microsoft Defender XDR, users can also report suspicious Teams messages and calls.
 
-In addition, admins in Microsoft 365 organizations with Microsoft Defender for Endpoint also have several methods for reporting files.
+Admins in Microsoft 365 organizations with Microsoft Defender for Endpoint also have several methods for reporting files.
 
-Watch this video that shows more information about the unified submissions experience.
+Watch this video for more information about the unified submissions experience.
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=65c688e4-8b79-4a39-a731-ddbffa053448]
 
 ## Report suspicious email messages to Microsoft
 
 > [!IMPORTANT]
 >
-> When you make a submission to Microsoft, everything associated with the submission is copied and included in the continual algorithm reviews. This copy includes all data associated with submission, including: message content, headers, any attachments, related data about routing and all other data directly associated with the submission.
+> When you make a submission to Microsoft, everything associated with the submission is copied and included in the continual algorithm reviews. This copy includes all data associated with the submission, including message content, headers, any attachments, related data about routing, and all other data directly associated with the submission.
 >
-> Microsoft treats your submission as your organization's permission to analyze all the information to fine tune the submission hygiene algorithms. Your submission is held in secured and audited data centers in the USA. The submission is deleted as soon as it's no longer required. Microsoft personnel might read your submitted messages and attachments, which is normally not permitted for customer data in Microsoft 365. However, your submission is still treated as confidential between you and Microsoft, and your data isn't shared with any other party as part of the review process. Microsoft may also use AI to evaluate and create responses tailored to your submissions.
+> Microsoft treats your submission as your organization's permission to analyze all the information to fine-tune the submission hygiene algorithms. Your submission is held in secured and audited data centers in the USA. The submission is deleted as soon as it's no longer required. Microsoft personnel might read your submitted messages and attachments, which is normally not permitted for customer data in Microsoft 365. However, your submission is still treated as confidential between you and Microsoft, and your data isn't shared with any other party as part of the review process. Microsoft might also use AI to evaluate and create responses tailored to your submissions.
 >
-> For information about reporting messages in Microsoft Teams in Defender for Office 365 Plan 2, see [User reported message settings in Microsoft Teams](submissions-teams.md).
+> For information about reporting messages and calls in Microsoft Teams in Defender for Office 365 Plan 1 or Plan 2, see [User reported settings in Microsoft Teams](submissions-teams.md).
 
 |Method|Submission type|Comments|
 |---|---|---|
 |[The built-in Report button in supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook)|User||
-|[The Submissions page in the Microsoft Defender portal](submissions-admin.md)|Admin|Admins can report good (false positives) and bad (false negative) messages, email attachments, and URLs (entities) from the available tabs on the **Submissions** page. <br><br> Admins can also submit user reported messages from the **User reported** tab on the **Submissions** page to Microsoft for analysis. The **Submissions** page is available only in organizations with cloud mailboxes.|
+|[The Submissions page in the Microsoft Defender portal](submissions-admin.md)|Admin|Admins can report good (false positives) and bad (false negatives) messages, email attachments, and URLs (entities) from the available tabs on the **Submissions** page. <br><br> Admins can also submit user reported messages from the **User reported** tab on the **Submissions** page to Microsoft for analysis. The **Submissions** page is available only in organizations with cloud mailboxes.|
 |Report messages from quarantine|Admin and User|Admins can [submit quarantined messages to Microsoft for analysis](quarantine-admin-manage-messages-files.md#submit-email-to-microsoft-for-review-from-quarantine) (false positives and false negatives). <br><br> If users are allowed to [release their own messages from quarantine](quarantine-end-user.md#release-quarantined-email), and [user reported settings](submissions-user-reported-messages-custom-mailbox.md) is configured to allow users to report quarantined messages, users can select **Report message as having no threats** (false positive) when they release a quarantined message.|
+|[Report messages and calls in Microsoft Teams](submissions-teams.md#how-users-report-items-in-teams)|User|In organizations with Defender for Office 365 Plan 1 or Plan 2, or Microsoft Defender XDR, users can report malicious messages and calls in Microsoft Teams.|
+
+> [!NOTE]
+> If your organization doesn't have Microsoft Defender for Office 365, users and admins can still report suspicious emails by submitting them directly through the Microsoft submission portals (for example, the Microsoft malware or phishing submission sites). Forwarding suspicious emails isn't a replacement for Defender-based reporting and might not include full message metadata required for analysis.
 
 ## Related reporting settings for admins
 
@@ -56,7 +57,7 @@ Watch this video that shows more information about the unified submissions exper
 
 User reported messages are also available to admins in the following locations in the Microsoft Defender portal:
 
-- The [User-reported messages report](reports-email-security.md#user-reported-messages-report)
+- [User-reported messages report](reports-email-security.md#user-reported-messages-report)
 - [Automated investigation and response (AIR) results](air-view-investigation-results.md) (Defender for Office 365 Plan 2)
 - [Threat Explorer](threat-explorer-real-time-detections-about.md) (Defender for Office 365 Plan 2)
 
@@ -64,11 +65,11 @@ In Defender for Office 365, admins can also submit messages from the [Email enti
 
 Admins can use the sample submission portal at <https://www.microsoft.com/wdsi/filesubmission> to submit other suspected files to Microsoft for analysis. For more information, see [Submit files for analysis](/unified-secops-platform/submission-guide).
 
-To report suspected phishing or fraud, you can also go directly to the submission portal: [Reportsubmission](https://security.microsoft.com/reportsubmission).
+To report suspected phishing or fraud, you can also go directly to the [Submissions page](https://security.microsoft.com/reportsubmission) in the Defender portal.
 
-If you encountered a tech support scam, report it here: [Reportscam](https://www.microsoft.com/en-us/concern/scam).
+If you encounter a tech support scam, report it at [Report a scam](https://www.microsoft.com/concern/scam).
 
 > [!TIP]
 > In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD), admins can submit messages to Microsoft for analysis. The messages are analyzed for email authentication and policy checks only. Payload reputation, detonation, and grader analysis aren't done for compliance reasons (data isn't allowed to leave the organization boundary). If you report a message, URL, or email attachment to Microsoft from one of these organizations, you get the following message in the result details:
 >
->   **Further investigation needed**. Your tenant doesn't allow data to leave the environment, so nothing was found during the initial scan. You'll need to contact Microsoft support to have this item reviewed.
+> **Further investigation needed**. Your tenant doesn't allow data to leave the environment, so nothing was found during the initial scan. You'll need to contact Microsoft support to have this item reviewed.

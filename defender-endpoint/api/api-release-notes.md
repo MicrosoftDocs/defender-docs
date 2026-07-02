@@ -1,30 +1,24 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint API release notes
 description: Release notes for updates made to the Microsoft Defender for Endpoint set of APIs.
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 03/21/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Microsoft Defender for Endpoint API release notes
-
-
-
 
 The following information lists the updates made to the Microsoft Defender for Endpoint APIs and the dates they were made.
 
@@ -77,4 +71,3 @@ The following information lists the updates made to the Microsoft Defender for E
 
 - Added option to expand the Alert entity with its related Evidence. See [List Alerts](get-alerts.md).
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
-

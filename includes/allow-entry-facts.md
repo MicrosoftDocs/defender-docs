@@ -3,7 +3,7 @@ title: Allow entry facts
 description: Customers learn they can sign-up for a free trial of Defender for Office 365.
 ms.reviewer: 
 ms.date: 07/18/2024
-manager: deniseb
+manager: bagol
 ms.author: chrisda
 author: chrisda
 ms.service: microsoft-365-security

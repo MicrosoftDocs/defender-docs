@@ -1,20 +1,17 @@
-﻿---
+---
 title: Troubleshooting mode in Microsoft Defender for Endpoint on macOS
 description: This article describes how to enable the troubleshooting mode in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 author: paulinbar
 ms.author: painbar
 ms.reviewer: joshbregman
-manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-macos
 ms.topic: troubleshooting-general
 ms.subservice: macos
-search.appverid: met150
 ms.date: 12/15/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -55,21 +52,21 @@ During troubleshooting mode, you can't:
 - Supported version of macOS for Microsoft Defender for Endpoint.
 - Microsoft Defender for Endpoint must be tenant-enrolled and active on the device.
 - Permissions for "Manage security settings in Security Center" in Microsoft Defender for Endpoint.
-- Platform Update version: [101.23122.0005](mac-whatsnew.md#jan-2024-build-101231220005---release-version-2012312250) or newer.
+- Platform Update version: 101.23122.0005 or newer.
 
 ## Enable troubleshooting mode on macOS
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com/), and sign in.
-2. Navigate to the device page you would like to turn on troubleshooting mode. Then, select the ellipses(...) and select **Turn on troubleshooting mode**.
+1. Navigate to the device page you would like to turn on troubleshooting mode. Then, select the ellipses(...) and select **Turn on troubleshooting mode**.
 
    :::image type="content" source="media/troubleshooting-mode-on-mac.png" alt-text="Screenshot displaying the screenshot of the troubleshooting mode on mac.":::
 
    > [!NOTE]
    > The **Turn on troubleshooting mode** option is available on all devices, even if the device does not meet the prerequisites for troubleshooting mode. For more information, see the [Problems with troubleshooting mode](#problems-with-troubleshooting-mode) section later in this article.
 
-3. Read the information displayed on the pane and once you're ready, select **Submit** to confirm that you want to turn on troubleshooting mode for that device.
-4. You'll see *It might take a few minutes for the change to take effect* text being displayed. During this time, when you select the ellipses again, you'll see the **Turn On Troubleshooting mode is pending** option grayed-out.
-5. Once complete, the device page shows that the device is now in troubleshooting mode.
+1. Read the information displayed on the pane and once you're ready, select **Submit** to confirm that you want to turn on troubleshooting mode for that device.
+1. You'll see *It might take a few minutes for the change to take effect* text being displayed. During this time, when you select the ellipses again, you'll see the **Turn On Troubleshooting mode is pending** option grayed-out.
+1. Once complete, the device page shows that the device is now in troubleshooting mode.
 
    If the end-user is logged-in on the macOS device, they'll see the following text:
 
@@ -77,7 +74,7 @@ During troubleshooting mode, you can't:
 
    Select **OK**.
 
-6. Once enabled, you can test the different command line options that are togglable in the troubleshooting mode (TS Mode).
+1. Once enabled, you can test the different command line options that are togglable in the troubleshooting mode (TS Mode).
 
    For example, when you use `mdatp config real-time-protection --value disabled` command to disable real time protection, you'll be prompted to enter your password. Select **OK** after entering your password.
 
@@ -156,17 +153,15 @@ DeviceEvents
 
 If you can't enable troubleshooting mode, do the following troubleshooting steps on the target Mac:
 
-- Verify the app version by running the following commands:
+- Verify the app version by running the following command:
 
   ```terminal
   mdatp health --field app_version
-
-  mdatp health --field edr_client_version
   ```
 
-  As previously mentioned, you need Platform Update version: [101.23122.0005](mac-whatsnew.md#jan-2024-build-101231220005---release-version-2012312250) or newer.
+  As previously mentioned, you need Platform Update version: 101.23122.0005 or newer.
 
-- Verify the device is enrolled and and active by running the following commands:
+- Verify the device is enrolled and active by running the following commands:
 
   ```terminal
   mdatp health --field edr_machine_id
@@ -210,4 +205,4 @@ sudo mdatp log level set --level info
 - [Create indicators](indicators-overview.md)
 - [Web content filtering](web-content-filtering.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

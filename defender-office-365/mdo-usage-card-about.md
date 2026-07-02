@@ -3,9 +3,8 @@ title: Usage card in Microsoft Defender for Office 365
 keywords: AIR, autoIR, Microsoft Defender for Endpoint, automated, investigation, response, remediation, threats, advanced, threat, protection
 f1.keywords:
 - NOCSH
-author: dansimp
-ms.author: dansimp
-manager: deniseb
+author: chrisda
+ms.author: chrisda
 audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
@@ -16,6 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 ms.custom:
+  - sfi-ga-nochange
 description: Learn about your organization's active usage of Microsoft Defender for Office 365 licenses versus the actual number of licenses purchased.
 ms.service: defender-office-365
 ms.date: 1/17/2024

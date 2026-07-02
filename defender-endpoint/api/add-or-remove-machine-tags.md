@@ -1,26 +1,23 @@
-﻿---
+---
 title: Add or remove a tag for a machine
 description: Learn how to use the Add or Remove machine tags API to adds or remove a tag for a machine in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1
-
 ---
+
 # Add or remove a tag for a machine
 
 ## API description
@@ -42,25 +39,23 @@ When obtaining a token using user credentials:
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Defender for Endpoint APIs](apis-intro.md).
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Machine.ReadWrite.All|'Read and write all machine information'
-Delegated (work or school account)|Machine.ReadWrite|'Read and write machine information'
-
-
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Machine.ReadWrite.All|'Read and write all machine information'|
+|Delegated (work or school account)|Machine.ReadWrite|'Read and write machine information'|
 
 ## HTTP request
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/machines/{id}/tags
+POST https://api.security.microsoft.com/api/machines/{id}/tags
 ```
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
-Content-Type|string|application/json. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
+|Content-Type|string|application/json. **Required**.|
 
 ## Request body
 
@@ -68,10 +63,10 @@ To remove machine tag, set the Action to 'Remove' instead of 'Add' in the reques
 
 In the request body, supply a JSON object with the following parameters:
 
-Parameter|Type|Description
-:---|:---|:---
-Value|String|The tag name. **Required**.
-Action|Enum|Add or Remove. Allowed values are: 'Add' or 'Remove'. **Required**.
+|Parameter|Type|Description|
+|---|---|---|
+|Value|String|The tag name. **Required**.|
+|Action|Enum|Add or Remove. Allowed values are: 'Add' or 'Remove'. **Required**.|
 
 ## Response
 
@@ -82,7 +77,7 @@ If successful, this method returns 200 - Ok response code and the updated Machin
 Here is an example of a request that adds a machine tag.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/tags
+POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/tags
 ```
 
 ```json
@@ -91,7 +86,3 @@ POST https://api.securitycenter.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2
   "Action": "Add"
 }
 ```
-
-
-
-

@@ -2,13 +2,10 @@
 title: Get started with Microsoft Defender XDR
 ms.reviewer: 
 description: Learn what steps you need to take to get started with Microsoft Defender XDR
-search.appverid: met150
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
   - m365-security
   - m365solution-getstarted

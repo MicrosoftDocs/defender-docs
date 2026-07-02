@@ -5,9 +5,8 @@ ms.service: defender-xdr
 ms.localizationpriority: medium
 f1.keywords:
 - NOCSH
-ms.author: dansimp
-author: diannegali
-manager: deniseb
+ms.author: guywild
+author: guywi-ms
 ms.date: 10/16/2024
 audience: ITPro
 ms.topic: article

@@ -3,10 +3,10 @@ title: include file
 description: include file
 ms.collection: M365-security-compliance
 ms.service: defender-for-cloud-apps
-author: batamig
+author: AbbyMSFT
 ms.topic: include
 ms.date: 12/31/2023
-ms.author: bagol
+ms.author: abbyweisberg
 ms.custom: include file
 ---
 
@@ -25,7 +25,7 @@ This procedure provides a high-level example of how to create a Conditional Acce
    1. Under **Include**, choose **Select resources**.
    1. Select the client apps that you want to include in your policy.
 1. Under **Conditions**, select any conditions that you want to include in your policy.
-1. Under **Access controls** > **Session**, select **Use app enforced restrictions**, then select **Select**.
+1. Under **Access controls** > **Session**, select **Use Conditional Access App Control**, then select **Select**.
 1. Confirm your settings and set **Enable policy** to **Report-only**.
 1. Select **Create** to create to enable your policy.
 

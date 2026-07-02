@@ -6,7 +6,6 @@ f1.keywords:
   - NOCSH
 author: MSFTBen
 ms.author: benharri
-manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:
@@ -15,7 +14,9 @@ ms.collection:
 - tier3
 ms.topic: how-to
 search.appverid: met150
-ms.date: 02/24/2025
+ms.date: 06/12/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Getting the best security value from Microsoft Defender for Office 365 when you have non-Microsoft email filtering
@@ -23,11 +24,12 @@ ms.date: 02/24/2025
 This guide is for you if:
 
 - You're licensed for Microsoft Defender for Office 365 and host your mailboxes in Office 365
-- You're also using a non-Microsoft for your email security
+- You're also using a non-Microsoft solution for your email security
 
 The following information details how to get the most out of your investment, broken down into easy to follow steps.
 
-## What you need
+<a name="what-you-need"></a>
+## Prerequisites
 
 - Mailboxes hosted in Office 365
 - One or more of:
@@ -38,7 +40,10 @@ The following information details how to get the most out of your investment, br
 
 ## Step 1 – Understand the value you already have
 
-### Built-in protection features
+<a name="built-in-protection-features"></a>
+### Review built-in protection features
+
+Built-in protection features provide a baseline layer of security that's included with Microsoft Defender for Office 365.
 
 - Built-in protection offers a base level of unobtrusive protection, and includes malware, zero day (Safe Attachments), and URL protection (Safe Links) in email (including internal email), SharePoint, OneDrive, and Microsoft Teams. URL protection provided in this state is via API call only. It doesn't wrap or rewrite URLs but does require a supported Outlook client. You can create your own custom Safe Links policies and Safe Attachments policies to expand your protection.
 
@@ -46,15 +51,18 @@ The following information details how to get the most out of your investment, br
 
   **Read more about Safe Attachments here:** [Safe Attachments](../safe-attachments-about.md)
 
-### Detection, investigation, response, and hunting features
+<a name="detection-investigation-response-and-hunting-features"></a>
+### Review detection, investigation, response, and hunting features
+
+The following capabilities help security teams investigate, respond to, and proactively hunt threats.
 
 - When alerts fire in Microsoft Defender for Office 365, they're automatically correlated, and combined into Incidents to help reduce the alert fatigue on security staff. Automated Investigation and Response (AIR) triggers investigations to help remediate and contain threats.
 
-  **Read more, watch an overview video and get started here :** [Incident response with Microsoft Defender XDR](/defender-xdr/incidents-overview)
+  **Read more, watch an overview video and get started here:** [Incident response with Microsoft Defender XDR](/defender-xdr/incidents-overview)
 
 - Threat Analytics is our in-product, detailed threat intelligence solution from expert Microsoft security researchers. Threat Analytics contains detailed reports that are designed to get you up to speed on the latest threat groups, attack techniques, how to protect your organization with Indicators of Compromise (IOC) and much more.
 
-  **Read more, watch an overview video and get started here :** [Threat analytics in Microsoft Defender XDR](/defender-xdr/threat-analytics)
+  **Read more, watch an overview video and get started here:** [Threat analytics in Microsoft Defender XDR](/defender-xdr/threat-analytics)
 
 - Explorer can be used to hunt threats, visualize mail flow patterns, spot trends, and identify the affect of changes you make during tuning Defender for Office 365. You can also quickly delete messages from your organization with a few simple clicks.
 
@@ -66,9 +74,12 @@ The following information details how to get the most out of your investment, br
 
 ## Step 2 – Enhance the value further with these simple steps
 
-### Additional protection features
+<a name="additional-protection-features"></a>
+### Enable additional protection features
 
-- Consider enabling policies beyond the built-in Protection. Enabling time-of-click protection, or impersonation protection, for example, to add extra layers or fill gaps missing from your non-Microsoft protection. If you have a mail flow rule (also known as a transport rule) or connection filter that overrides verdicts (also known as an SCL=-1 rule) you need to address this configuration before turning on other protection features.
+You can increase protection further by enabling additional Defender for Office 365 features.
+
+- Consider enabling policies beyond the built-in Protection. Enabling time-of-click protection, or impersonation protection, for example, to add extra layers or fill gaps missing from your non-Microsoft protection. If you have a mail flow rule (also known as a transport rule) or connection filter that overrides verdicts (also known as an SCL=-1 rule) you need to address any such mail flow rule or connection filter before turning on other protection features.
 
   **Read more here:** [Anti-phishing policies](../anti-phishing-policies-about.md)
 
@@ -76,25 +87,31 @@ The following information details how to get the most out of your investment, br
 
   **Read more here:** [Configure trusted ARC sealers](../email-authentication-arc-configure.md)
 
-- Enhanced Filtering for connectors allows IP address and sender information to be preserved through the non-Microsoft service. This feature improves accuracy for the filtering (protection) stack, post breach capabilities & authentication improvements.
+- Enhanced Filtering for connectors allows IP address and sender information to be preserved through the non-Microsoft service. Enhanced Filtering for connectors improves accuracy for the filtering (protection) stack, post breach capabilities & authentication improvements.
 
   **Read more here:** [Enhanced filtering for connectors in Exchange Online](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors)
 
 - Priority account protection offers enhanced visibility for accounts in tooling, along with additional protection when in an advanced defense in-depth configuration state.
 
-  **Read more here:** [Priority account protection](protect-your-c-suite-with-priority-account-protection.md)
+  **Read more here:** [Manage and monitor priority accounts](/microsoft-365/admin/security-and-compliance/priority-accounts)
 
 - Advanced Delivery should be configured to deliver any non-Microsoft phish simulations correctly, and if you have a Security Operations mailbox, consider defining it as a SecOps mailbox to ensure emails *don't* get removed from the mailbox due to threats.
 
   **Read more here:** [Advanced delivery](../advanced-delivery-policy-configure.md)
 
-- You can configure user reported settings to allow users to report good or bad messages to Microsoft, to a designated reporting mailbox (to integrate with current security workflows) or both using the built-in **Report** button in [supported versions of Outlook](../submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or using [supported non-Microsoft solutions](../submissions-user-reported-messages-custom-mailbox.md#options-for-non-microsoft-reporting-tools). Admins can use the **User reported** tab on the **Submissions** page to triage false positives and false negative user reported messages.
+- You can configure user reported settings to allow users to report good or bad messages to Microsoft, to a designated reporting mailbox (to integrate with current security workflows) or both using the built-in **Report** button in [supported versions of Outlook](../submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or using [supported non-Microsoft solutions](../submissions-user-reported-messages-custom-mailbox.md#options-for-non-microsoft-reporting-tools). Admins can use the **User reported** tab on the **Submissions** page to triage false positives and false negative user reported messages. In organizations with Defender for Office 365 Plan 2 and Security Copilot, the [Phishing Triage Agent](/defender-xdr/phishing-triage-agent) can autonomously triage and classify user-reported phishing emails.
+
+  > [!TIP]
+  > In [attack simulation training in Defender for Office 365 Plan 2](../attack-simulation-training-get-started.md), simulation messages reported by non-Microsoft tools aren't captured in attack simulation reports.
 
   **Read more here:** [User reported settings](../submissions-user-reported-messages-custom-mailbox.md) and [Report phishing and suspicious emails in Outlook for admins](../submissions-outlook-report-messages.md)
 
-### Education features
+<a name="education-features"></a>
+### Use education features to improve user awareness
 
-- Attack simulation training allows you to run realistic but benign cyber-attack scenarios in your organization. If you don't already have phishing simulation capabilities from your primary email security provider, Microsoft's simulated attacks can help you identify and find vulnerable users, policies, and practices. This capability contains important knowledge to have and correct *before* a real attack impacts your organization. Post simulation we assign in product or custom training to educate users about the threats they missed, ultimately reducing your organization's risk profile. With Attack simulation training, we deliver messages directly into the inbox, so the user experience is rich. This experience also means no security changes such as overrides needed to get simulations delivered correctly.
+Education features help users recognize and respond to threats before real attacks occur.
+
+- Attack simulation training allows you to run realistic but benign cyber-attack scenarios in your organization. If you don't already have phishing simulation capabilities from your primary email security provider, Microsoft's simulated attacks can help you identify and find vulnerable users, policies, and practices. Attack simulation training provides important knowledge to have and correct *before* a real attack impacts your organization. Post simulation we assign in product or custom training to educate users about the threats they missed, ultimately reducing your organization's risk profile. With Attack simulation training, we deliver messages directly into the inbox, so the user experience is rich. Because Attack simulation training delivers messages directly into the inbox, no security changes such as overrides are needed to get simulations delivered correctly.
 
 **Get started here:** [Get started using Attack simulation.](../attack-simulation-training-get-started.md)
 
@@ -102,19 +119,24 @@ The following information details how to get the most out of your investment, br
 
 ## Step 3 and beyond, becoming a dual use hero
 
-- Your security teams should repeat many of the detection, investigation, response, and hunting activities as previously described. This guidance offers a detailed description of tasks, cadence, and team assignments we would recommend.
+After the initial setup, continue maturing your dual-use approach with ongoing operational practices.
+
+- Your security teams should repeat many of the detection, investigation, response, and hunting activities described in the [Security Operations Guide for Defender for Office 365](../mdo-sec-ops-guide.md). This guidance offers a detailed description of tasks, cadence, and team assignments we would recommend.
 
   **Read More:** [Security Operations Guide for Defender for Office 365](../mdo-sec-ops-guide.md)
 
-- Consider user experiences such as accessing multiple quarantines, or the submission / reporting of false positives and false negatives. You can mark messages detected by the non-Microsoft service with a custom *X* header. For example, you can use mail flow rules to detect and quarantine email that contains the *X* header. This result also gives users a single place to access quarantined mail.
+- Consider user experiences such as accessing multiple quarantines, or the submission / reporting of false positives and false negatives. You can mark messages detected by the non-Microsoft service with a custom *X* header. For example, you can use mail flow rules to detect and quarantine email that contains the *X* header. Quarantining messages identified by the custom *X* header also gives users a single place to access quarantined mail.
 
   **Read More:** [How to configure quarantine permissions and policies](how-to-configure-quarantine-permissions-with-quarantine-policies.md)
 
-- The Migration guide contains lots of useful guidance on preparing and tuning your environment to ready it for a migration. But many of the steps are *also* applicable to a dual-use scenario. Ignore the MX switch guidance in the final steps.
+- The Migration guide contains lots of useful guidance on preparing and tuning your environment to ready it for a migration. But many of the steps in the Migration guide are *also* applicable to a dual-use scenario. Ignore the MX switch guidance in the final steps.
 
   **Read it here:** [Migrate from a non-Microsoft protection service to Microsoft Defender for Office 365](../migrate-to-defender-for-office-365.md)
 
-## More information
+<a name="more-information"></a>
+## Related content
+
+For more guidance, see the following resources.
 
 [Migrate from a non-Microsoft protection service to Microsoft Defender for Office 365](../migrate-to-defender-for-office-365.md)
 

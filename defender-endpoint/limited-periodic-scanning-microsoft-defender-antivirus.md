@@ -1,27 +1,26 @@
-﻿---
+---
 title: Enable the limited periodic Microsoft Defender Antivirus scanning feature
-description: Limited periodic scanning lets you use Microsoft Defender Antivirus in addition to your other installed AV providers
+description: Enable limited periodic scanning on Windows 10 or Windows 11 so Microsoft Defender Antivirus can check for threats alongside another installed antivirus product. Includes important limitations for enterprise use.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: KesemSharabi
-ms.author: kesharab
-ms.custom: nextgen
-ms.date: 10/20/2025
+author: chrisda
+ms.author: chrisda
+ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 06/16/2026
 ms.reviewer: yongrhee
-manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier3
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
   - Microsoft Defender for Individual
 
+ai-usage: ai-assisted
 ---
 # Use limited periodic scanning in Microsoft Defender Antivirus
 
@@ -35,6 +34,8 @@ Limited periodic scanning is a special type of threat detection and remediation 
 
 ### Supported operating systems
 
+Limited periodic scanning is supported on the following operating systems:
+
 - Windows
 
 ## How to enable limited periodic scanning
@@ -43,11 +44,13 @@ By default, Microsoft Defender Antivirus enables itself on a Windows 10 or a Win
 
 :::image type="content" source="media/vtp-wdav.png" alt-text="The Windows Security app showing Microsoft Defender Antivirus options, including scan options, settings, and update options" lightbox="media/vtp-wdav.png":::
 
-If another antivirus product is installed and working correctly, Microsoft Defender Antivirus disables itself. In this case, the Windows Security app changes the **Virus & threat protection** section to show status about the antivirus product, and provides a link to the product's configuration options. 
+If another antivirus product is installed and working correctly, Microsoft Defender Antivirus disables itself. When Microsoft Defender Antivirus is disabled, the Windows Security app changes the **Virus & threat protection** section to show status about the antivirus product, and provides a link to the product's configuration options. 
 
 Underneath the name of a non-Microsoft antivirus product, a link appears as **Microsoft Defender Antivirus options**. Select this link to show the toggle that enables limited periodic scanning. The limited periodic option is a toggle to enable or disable periodic scanning. Sliding the switch to **On** shows the standard Microsoft Defender Antivirus options underneath the non-Microsoft antivirus product. The limited periodic scanning option appears at the bottom of the page.
 
 ## Related articles
+
+For more information about configuring and using Microsoft Defender Antivirus, see the following articles:
 
 - [Configure behavioral, heuristic, and real-time protection](configure-protection-features-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
@@ -56,10 +59,10 @@ Underneath the name of a non-Microsoft antivirus product, a link appears as **Mi
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

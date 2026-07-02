@@ -1,21 +1,19 @@
-﻿---
+---
 title: Deploy, manage, and report on Microsoft Defender Antivirus
 description: You can deploy and manage Microsoft Defender Antivirus with Intune, Microsoft Configuration Manager, Group Policy, PowerShell, or WMI.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 10/20/2025
 ms.topic: install-set-up-deploy
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: pahuijbr
-manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -46,27 +44,27 @@ Microsoft Defender Antivirus is installed as a core part of Windows 10 and 11, a
 
 ## Microsoft Intune
 
-With Intune, you can manage device security through policies, such as a policy to configure Microsoft Defender Antivirus and other security capabilities in Defender for Endpoint. To learn more, see [Use policies to manage device security](/mem/intune/protect/endpoint-security#use-policies-to-manage-device-security).
+With Intune, you can manage device security through policies, such as a policy to configure Microsoft Defender Antivirus and other security capabilities in Defender for Endpoint. To learn more, see [Use policies to manage device security](/intune/intune-service/protect/endpoint-security#use-policies-to-manage-device-security).
 
 For reporting, you can choose from several options:
 
 - [Use the Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal), which includes a [device inventory list](machines-view-overview.md). To access the device inventory, in the Microsoft Defender portal ([https://security.microsoft.com/](https://security.microsoft.com/)), go to **Assets** > **Devices**. The device inventory list displays onboarded devices along with their health state and risk level.
 
-- [Manage devices with Intune](/mem/intune/remote-actions/device-management), which includes the ability to view detailed information about devices and take action. [Available actions](/mem/intune/remote-actions/device-management#available-device-actions) include starting an antivirus scan, restarting a device, locating a device, wiping a device, and more. 
+- [Manage devices with Intune](/intune/intune-service/remote-actions/device-management), which includes the ability to view detailed information about devices and take action. [Available actions](/intune/intune-service/remote-actions/device-management#available-device-actions) include starting an antivirus scan, restarting a device, locating a device, wiping a device, and more. 
 
 ## Configuration Manager
 
-With Configuration Manager, you can manage security and malware on Configuration Manager client computers. Use the [Endpoint Protection point site system role](/mem/configmgr/protect/deploy-use/endpoint-protection-site-role) and [enable Endpoint Protection with custom client settings](/mem/configmgr/protect/deploy-use/endpoint-protection-configure-client). You can use [default and customized antimalware policies](/defender-office-365/anti-malware-policies-configure).
+With Configuration Manager, you can manage security and malware on Configuration Manager client computers. Use the [Endpoint Protection point site system role](/intune/configmgr/protect/deploy-use/endpoint-protection-site-role) and [enable Endpoint Protection with custom client settings](/intune/configmgr/protect/deploy-use/endpoint-protection-configure-client). You can use [default and customized antimalware policies](/defender-office-365/anti-malware-policies-configure).
 
 For reporting, you can choose from several options:
 
 - [Use the Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal), which includes a [device inventory list](machines-view-overview.md). To access the device inventory, in the Microsoft Defender portal ([https://security.microsoft.com/](https://security.microsoft.com/)), go to **Assets** > **Devices**. The device inventory list displays onboarded devices along with their health state and risk level.
 
-- [Use Intune to view device details](/mem/intune/remote-actions/device-inventory).
+- [Use Intune to view device details](/intune/intune-service/remote-actions/device-inventory).
 
-- Use the default [Configuration Manager Monitoring workspace](/mem/configmgr/apps/deploy-use/monitor-applications-from-the-console).
+- Use the default [Configuration Manager Monitoring workspace](/intune/configmgr/apps/deploy-use/monitor-applications-from-the-console).
 
-- [Create email alerts](/configmgr/protect/deploy-use/endpoint-configure-alerts).
+- [Create email alerts](/intune/configmgr/protect/deploy-use/endpoint-configure-alerts).
 
 - If your organization has Defender for Endpoint, you can also use the [Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal), which includes a [device inventory list](machines-view-overview.md). To access the device inventory, in the Microsoft Defender portal ([https://security.microsoft.com/](https://security.microsoft.com/)), go to **Assets** > **Devices**. The device inventory list displays onboarded devices along with their health state and risk level.
 
@@ -82,9 +80,9 @@ For reporting, you can choose from the following options:
 
 - [Use the Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal), which includes a [device inventory list](machines-view-overview.md). To access the device inventory, in the Microsoft Defender portal ([https://security.microsoft.com/](https://security.microsoft.com/)), go to **Assets** > **Devices**. The device inventory list displays onboarded devices along with their health state and risk level.
 
-- [Use Intune to view device details](/mem/intune/remote-actions/device-inventory).
+- [Use Intune to view device details](/intune/intune-service/remote-actions/device-inventory).
 
-- Use the default [Configuration Manager Monitoring workspace](/mem/configmgr/apps/deploy-use/monitor-applications-from-the-console).
+- Use the default [Configuration Manager Monitoring workspace](/intune/configmgr/apps/deploy-use/monitor-applications-from-the-console).
 
 <a name='group-policy-and-azure-active-directory'></a>
 
@@ -106,8 +104,7 @@ With Windows Management Instrumentation (WMI), you can manage Microsoft Defender
 
 - Use the [MSFT_MpComputerStatus](/previous-versions/windows/desktop/defender/msft-mpcomputerstatus) class and the get method of associated classes in the [Windows Defender WMIv2 Provider](/windows/win32/wmisdk/wmi-providers).
 
-For reporting, Windows events comprise several security event sources, including Security Account Manager (SAM) events ([enhanced for Windows 10](/windows/whats-new/whats-new-windows-10-version-1507-and-1511)). Also see [Security auditing](/windows/security/threat-protection/auditing/security-auditing-overview) and [Windows Defender events](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/).
-
+For reporting, Windows events comprise several security event sources, including Security Account Manager (SAM) events ([enhanced for Windows 10](/windows/whats-new/whats-new-windows-10-version-1507-and-1511)). Also see [Security auditing](/windows/security/threat-protection/auditing/security-auditing-overview) and [Windows Defender events](troubleshoot-microsoft-defender-antivirus.yml).
 
 ## See also
 
@@ -123,5 +120,5 @@ For reporting, Windows events comprise several security event sources, including
 
 > [!TIP]
 > **Performance tip**: Due to various factors, Microsoft Defender Antivirus, like other antivirus software, can cause performance issues on endpoint devices. In some cases, you might need to tune the performance of Microsoft Defender Antivirus to alleviate those performance issues. Microsoft's **Performance analyzer** is a PowerShell command-line tool that helps determine which files, file paths, processes, and file extensions might be causing performance issues. You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions. See [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

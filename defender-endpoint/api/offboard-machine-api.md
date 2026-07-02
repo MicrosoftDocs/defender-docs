@@ -1,25 +1,23 @@
-﻿---
+---
 title: Offboard machine API
 description: Learn how to use an API to offboard a device from Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
-ms.custom: api
-search.appverid: met150
+ms.custom:
+  - api
+  - sfi-ga-nochange
 ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1 and Plan 2
-
 ---
 
 # Offboard machine API
@@ -32,7 +30,7 @@ Offboard device from Defender for Endpoint.
 
 ### Supported operating systems
 
-- This API is supported on Windows 11, Windows 10, version 1703 and later; Windows Server 2019 and later; Windows Server 2012 R2 and Windows Server 2016 when using the [new, unified agent for Defender for Endpoint](../update-agent-mma-windows.md#upgrade-to-the-new-unified-agent-for-defender-for-endpoint).
+- This API is supported on Windows 11, Windows 10, version 1703 and later; Windows Server 2019 and later; Windows Server 2012 R2 and Windows Server 2016 when using the [new, unified agent for Defender for Endpoint](../update-agent-mma-windows.md#upgrade-to-the-new-agent-for-defender-for-endpoint).
 
 ## Limitations
 
@@ -46,7 +44,7 @@ Microsoft recommends that you use roles with the fewest permissions. This helps 
 
 When obtaining a token using user credentials:
 
-- The user must have an appropriate role assigned. For more information,see: [Permission options](../user-roles.md#permission-options).
+- The user must have an appropriate role assigned. For more information, see: [Permission options](../user-roles.md#permission-options).
 
 - The user must have access to the device, based on device group settings. For more information, see: [Create and manage device groups](../machine-groups.md).
 
@@ -56,8 +54,6 @@ One of the following permissions is required to call this API. To learn more, in
 |---|---|---|
 |Application|`Machine.Offboard`|`Offboard machine`|
 |Delegated (work or school account)|`Machine.Offboard`|`Offboard machine`|
-
-
 
 ## HTTP request
 
@@ -69,10 +65,10 @@ The machine ID can be found in the URL when you select the device. Generally, it
 
 ## Request headers
 
-Name|Type|Description
----|---|---
-Authorization|String|Bearer {token}. **Required**.
-Content-Type|string|application/json. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
+|Content-Type|string|application/json. **Required**.|
 
 ## Request body
 
@@ -101,4 +97,3 @@ POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e41
   "Comment": "Offboard machine by automation"
 }
 ```
-

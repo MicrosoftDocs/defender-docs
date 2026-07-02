@@ -1,16 +1,11 @@
-﻿---
+---
 title: Get live response results
 description: Learn how to retrieve a specific live response command result by its index.
-search.appverid: met150
 ms.service: defender-endpoint
-f1.keywords:
-- NOCSH
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
@@ -25,18 +20,16 @@ appliesto:
 
 # Get live response results
 
-
-[!include[Prerelease information](../../includes/prerelease.md)]
-
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## Prerequisites
 
-Devices must be running one of the following versions of Windows: 
+Devices must be running one of the following versions of Windows:
 
 ### Supported operating systems
 
   - Windows 11
-  
+
   - Windows 10
     - [Version 1909](/windows/whats-new/whats-new-windows-10-version-1909) or later
     - [Version 1903](/windows/whats-new/whats-new-windows-10-version-1903) with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)
@@ -61,8 +54,6 @@ Retrieves a specific live response command result by its index.
 Rate limitations for this API are 100 calls per minute and 1500 calls per
     hour.
 
-
-
 ## Permissions
 
 One of the following permissions is required to call this API. To learn more,
@@ -76,7 +67,7 @@ Application|Machine.ReadWrite.All|Read and write all machine information
 ## HTTP request
 
 ```HTTP
-GET https://api.securitycenter.microsoft.com/api/machineactions/{machine action
+GET https://api.security.microsoft.com/api/machineactions/{machine action
 id}/GetLiveResponseResultDownloadLink(index={command-index})
 ```
 
@@ -110,7 +101,7 @@ If successful, this method returns 200, Ok response code with object that holds 
 Here's an example of the request.
 
 ```HTTP
-GET https://api.securitycenter.microsoft.com/api/machineactions/988cc94e-7a8f-4b28-ab65-54970c5d5018/GetLiveResponseResultDownloadLink(index=0)
+GET https://api.security.microsoft.com/api/machineactions/aaaabbbb-0000-cccc-1111-dddd2222eeee/GetLiveResponseResultDownloadLink(index=0)
 ```
 
 ### Response example
@@ -123,7 +114,7 @@ Content-type: application/json
 
 ```JSON
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Edm.String",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Edm.String",
     "value": "https://core.windows.net/investigation-actions-data/ID/CustomPlaybookCommandOutput/4ed5e7807ad1fe59b00b664fe06a0f07?se=2021-02-04T16%3A13%3A50Z&sp=r&sv=2019-07-07&sr=b&sig=1dYGe9rPvUlXBPvYSmr6/OLXPY98m8qWqfIQCBbyZTY%3D"
 }
 ```
@@ -139,5 +130,3 @@ C:\\windows\\TEMP\\OfficeClickToRun.dmp.zip\n51 MB\n\u0000\u0000\u0000",
     "script_errors":""
 }
 ```
-
-

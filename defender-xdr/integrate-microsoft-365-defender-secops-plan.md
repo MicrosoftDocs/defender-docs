@@ -2,20 +2,13 @@
 title: Step 1. Plan for Microsoft Defender XDR operations readiness
 description: The basics of planning for Microsoft Defender XDR operations readiness when integrating Microsoft Defender XDR into your security operations.
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
   - msftsolution-secops
   - tier2
 ms.topic: how-to
-search.appverid:
-  - MOE150
-  - MET150
 ms.date: 07/15/2021
 ---
 

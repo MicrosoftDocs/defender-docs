@@ -1,32 +1,30 @@
-﻿---
+---
 title: Configure Microsoft Defender Antivirus with Group Policy
 description: Learn how to use a Group Policy to configure and manage Microsoft Defender Antivirus on your endpoints in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: KesemSharabi
-ms.author: kesharab
-ms.custom: nextgen
-ms.date: 10/20/2025
+author: chrisda
+ms.author: chrisda
+ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 06/16/2026
 ms.reviewer: ksarens, jtoole, pahuijbr, yongrhee
-manager: bagol
 ms.subservice: ngp
-audience: ITPro
 ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
 ---
 
 # Use Group Policy settings to configure and manage Microsoft Defender Antivirus
 
-We recommend using [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to manage Microsoft Defender Antivirus settings for your organization. However, you can use [Group Policy](/windows/win32/srvnodes/group-policy) to configure and manage some settings for Microsoft Defender Antivirus.
+We recommend using [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune) to manage Microsoft Defender Antivirus settings for your organization. However, you can use [Group Policy](/windows/win32/srvnodes/group-policy) to configure and manage some settings for Microsoft Defender Antivirus.
 
 > [!IMPORTANT]
 > If [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) is enabled in your organization, any changes made to [tamper-protected settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on) are ignored. In addition, you can't turn off tamper protection by using Group Policy. 
@@ -35,7 +33,11 @@ We recommend using [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) t
 
 ## Prerequisites
 
+To configure Microsoft Defender Antivirus using Group Policy, your environment must meet the following requirements.
+
 ### Supported operating systems
+
+Group Policy configuration for Microsoft Defender Antivirus is supported on the following operating systems:
 
 - Windows
 - Windows Server
@@ -46,15 +48,15 @@ In general, you can use the following procedure to configure or change some sett
 
 1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)). Right-click the Group Policy Object (GPO) you want to configure and select **Edit**.
 
-2. Using the **Group Policy Management Editor** go to **Computer configuration**.
+1. Using the **Group Policy Management Editor** go to **Computer configuration**.
 
-3. Select **Administrative templates**.
+1. Select **Administrative templates**.
 
-4. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus**.
+1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus**.
 
-5. Expand the section (referred to as **Location** in the table in this article) that contains the setting you want to configure, double-click the setting to open it, and make configuration changes.
+1. Expand the section (referred to as **Location** in the following table) that contains the setting you want to configure, double-click the setting to open it, and make configuration changes.
 
-6. [Deploy the updated GPO as you normally do](/windows/win32/srvnodes/group-policy).
+1. Deploy the updated GPO as you normally do. For more information, see [Group Policy](/windows/win32/srvnodes/group-policy).
 
 ## Group Policy settings and resources
 
@@ -70,7 +72,7 @@ The following table lists commonly used Group Policy settings that are available
 | Client interface| Suppress all notifications | [Configure the notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
 | Client interface| Suppresses reboot notifications| [Configure the notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
 | Exclusions| Extension Exclusions| [Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md) |
-| Exclusions | IP Address Exclusions | [Add exclusions](troubleshoot-np.md#add-exclusions) |
+| Exclusions | IP Address Exclusions | [Add network protection exclusions](troubleshoot-np.md#add-exclusions) |
 | Exclusions|Path Exclusions | [Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md) |
 | Exclusions|Process Exclusions | [Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md) |
 | Exclusions| Turn off Auto Exclusions | [Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md) |
@@ -82,7 +84,7 @@ The following table lists commonly used Group Policy settings that are available
 | MAPS |  Configure local setting override for reporting to Microsoft MAPS| [Prevent or allow users to locally modify policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md) |
 | MpEngine | Configure extended cloud check| [Configure the cloud block time-out period](configure-cloud-block-timeout-period-microsoft-defender-antivirus.md) |
 | MpEngine | Disable gradual rollout of Microsoft Defender updates | [Configure updates: Group Policy](configure-updates.md#group-policy) |
-| MpEngine | Enable file hash computation feature |[Create indicators for files](/defender-endpoint/indicator-file#windows-prerequisites)<br/>This drives the ability to enforce Indicators of Compromise (IoC) by using file hash allow/block indicators, available in Defender for Endpoint Plan 1 and Plan 2, and in Defender for Business. Note that Microsoft Defender Antivirus automatically does hash-based computation for the antimalware engine, so you don't have to do anything extra unless it is a [VDI non-persistent image](/defender-endpoint/deployment-vdi-microsoft-defender-antivirus). |
+| MpEngine | Enable file hash computation feature |[Create indicators for files](indicator-file.md#windows-prerequisites)<br/>This drives the ability to enforce Indicators of Compromise (IoC) by using file hash allow/block indicators, available in Defender for Endpoint Plan 1 and Plan 2, and in Defender for Business. Note that Microsoft Defender Antivirus automatically does hash-based computation for the antimalware engine, so you don't have to do anything extra unless it is a [VDI non-persistent image](deployment-vdi-microsoft-defender-antivirus.md). |
 | MpEngine | Select cloud protection level | [Specify the cloud-delivered protection level](specify-cloud-protection-level-microsoft-defender-antivirus.md) |
 | Network inspection system | Convert warn verdict to block | [Network protection: Warn experience](network-protection.md#warn-experience) |
 | Network inspection system | Specify more definition sets for network traffic inspection | Not used (deprecated) |
@@ -152,7 +154,7 @@ The following table lists commonly used Group Policy settings that are available
 | Scan | Turn on reparse point scanning| [Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md) |
 | Scan | Run full scan on mapped network drives| [Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md) |
 | Scan | Scan archive files| [Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md) |
-| Scan | Scan excluded files and directories during quick scan | [Configure scanning options: Settings and locations](/defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus#settings-and-locations) |
+| Scan | Scan excluded files and directories during quick scan | [Configure scanning options: Settings and locations](configure-advanced-scan-types-microsoft-defender-antivirus.md#settings-and-locations) |
 | Scan | Scan packed executables| [Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md) |
 | Scan | Scan scripts | [Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md) <p>Also see [Defender/AllowScriptScanning](/windows/client-management/mdm/policy-csp-defender).|
 | Scan | Scan removable drives| [Configure scanning options in Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md) |
@@ -165,7 +167,7 @@ The following table lists commonly used Group Policy settings that are available
 | Scan | Specify the time for a daily quick scan | [About scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md) |
 | Scan | Specify the time of day to run a scheduled scan | [About scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md) |
 | Scan | Start the scheduled scan only when computer is on but not in use| [About scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md) |
-| Scan | Trigger a quick scan after X days without any scans | [Configure scanning options: Settings and locations](/defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus#settings-and-locations) |
+| Scan | Trigger a quick scan after X days without any scans | [Configure scanning options: Settings and locations](configure-advanced-scan-types-microsoft-defender-antivirus.md#settings-and-locations) |
 | Security intelligence updates|Allow security intelligence updates from Microsoft Update| [Manage updates for mobile devices and virtual machines (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md) |
 | Security intelligence updates|Allow security intelligence updates when running on battery power | [Manage updates for mobile devices and virtual machines (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md) |
 | Security intelligence updates | Allow Microsoft Defender Antivirus to update and communicate over a metered connection | [Manage Microsoft Defender Antivirus updates and scans for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md) |
@@ -202,4 +204,4 @@ The following table lists commonly used Group Policy settings that are available
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

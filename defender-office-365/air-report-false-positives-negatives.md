@@ -1,16 +1,11 @@
 ---
 title: "Report false positives or false negatives following automated investigation and response"
 description: Was something missed or wrongly detected by AIR in Microsoft Defender for Office 365 Plan 2? Learn how to submit false positives or false negatives to Microsoft for analysis.
-search.appverid: met150
-f1.keywords: 
-- NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.service: defender-office-365
 ms.date: 07/10/2024
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -46,13 +41,13 @@ For instructions, see the following articles, based on the available subscriptio
 > [!TIP]
 > For permission and licensing requirements, see [Required permissions and licensing for AIR](air-about.md#required-permissions-and-licensing-for-air).
 
-SecOps personnel can often use :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** to undo the remediation action. For example:
+SecOps personnel can often use :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** to undo the remediation action. For example:
 
 - From Explorer (Threat Explorer). For details, see [Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 - From the Email entity page. For more information, see [Actions on the Email entity page](mdo-email-entity-page.md#actions-on-the-email-entity-page).
 - From the details flyout of entries on the **History** tab of the Action center at <https://security.microsoft.com/action-center/history>.
 
-For details about the available actions in :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**, see the [Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
+For details about the available actions in :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action**, see the [Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
 - To take action on messages that were moved to the Junk Email folder in the mailbox, use **Take action** \> **Move to mailbox folder** and then select one of the following destinations:
   - **Inbox** for false positives.

@@ -1,29 +1,28 @@
-﻿---
+---
 title: Configure Microsoft Defender for Endpoint on iOS features
-description: Describes how to deploy Microsoft Defender for Endpoint on iOS features.
+description: Configure Defender for Endpoint features on iOS, including setup requirements and platform-specific behavior such as web protection using a local VPN.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-ios
 ms.topic: how-to
 ms.subservice: ios
-search.appverid: met150
-ms.date: 05/19/2025
+ms.date: 06/19/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
 
+ai-usage: ai-assisted
 ---
 # Configure Microsoft Defender for Endpoint on iOS features
 
 
-Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+Want to experience Defender for Endpoint? [Sign up for a Microsoft Defender for Endpoint free trial](https://go.microsoft.com/fwlink/p/?linkid=2225630).
 
 > [!NOTE]
 > Defender for Endpoint on iOS would use a VPN in order to provide the Web Protection feature. This isn't a regular VPN and is a local/self-looping VPN that doesn't take traffic outside the device.
@@ -32,13 +31,13 @@ Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go
 
 Microsoft Defender for Endpoint on iOS along with Microsoft Intune and Microsoft Entra ID enables enforcing Device compliance and Conditional Access policies based on device risk score. Defender for Endpoint is a Mobile Threat Defense (MTD) solution that you can deploy to use this capability via Intune.
 
-For more information about how to set up Conditional Access with Defender for Endpoint on iOS, see [Defender for Endpoint and Intune](/mem/intune/protect/advanced-threat-protection).
+For more information about how to set up Conditional Access with Defender for Endpoint on iOS, see [Defender for Endpoint and Intune](/intune/intune-service/protect/advanced-threat-protection).
 
 ## Web protection and VPN
 
 By default, Defender for Endpoint on iOS includes and enables [web protection](web-protection-overview.md), which helps to secure devices against web threats and protect users from phishing attacks. Anti-phishing and custom indicators (URL and Domain) are supported as part of web protection. IP based custom indicators are currently not supported on iOS. Web Content Filtering is currently not supported on mobile platforms (Android and iOS).
 
-Defender for Endpoint on iOS uses a VPN in order to provide this capability. The VPN is local, and unlike traditional VPN, network traffic isn't sent outside the device.
+Defender for Endpoint on iOS uses a VPN in order to provide web protection. The VPN is local, and unlike traditional VPN, network traffic isn't sent outside the device.
 
 While enabled by default, there might be some cases that require you to disable VPN. For example, you want to run some apps that don't work when a VPN is configured. In such cases, you can choose to disable VPN from the app on the device by following these steps:
 
@@ -55,9 +54,9 @@ While enabled by default, there might be some cases that require you to disable 
 
 ## Disable web protection
 
-Web protection is one of the key features of Defender for Endpoint and it requires a VPN to provide that capability. The VPN used is a local/loopback VPN and not a traditional VPN, however there are several reasons for which customers might not prefer the VPN. If you don't want to set up a VPN, you can disable web protection and deploy Defender for Endpoint without that feature. Other Defender for Endpoint features continues to work.
+Web protection is one of the key features of Defender for Endpoint and it requires a VPN to provide web protection. The VPN used is a local/loopback VPN and not a traditional VPN, however there are several reasons for which customers might not prefer the VPN. If you don't want to set up a VPN, you can disable web protection and deploy Defender for Endpoint without that feature. Other Defender for Endpoint features continues to work.
 
-This configuration is available for both the enrolled (MDM) devices and unenrolled (MAM) devices. For customers with MDM, admins can configure web protection through managed devices in the App Config. For customers without enrollment, using MAM, admins can configure the web protection through managed apps in the App Config.
+The web protection configuration is available for both enrolled (MDM) devices and unenrolled (MAM) devices. For customers with MDM, admins can configure web protection through managed devices in the App Config. For customers without enrollment, using MAM, admins can configure the web protection through managed apps in the App Config.
 
 ### Configure web protection
 
@@ -67,11 +66,11 @@ Use the following steps to disable web protection for enrolled devices.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
    
-2. Give the policy a name, **Platform \> iOS/iPadOS**.
+1. Give the policy a name, **Platform \> iOS/iPadOS**.
 
-3. Select Microsoft Defender for Endpoint as the target app.
+1. Select Microsoft Defender for Endpoint as the target app.
 
-4. On the **Settings** page, select **Use configuration designer**, and then add `WebProtection` as the key, and set its value type to `String`.
+1. On the **Settings** page, select **Use configuration designer**, and then add `WebProtection` as the key, and set its value type to `String`.
 
    - By default, `WebProtection = true`. An admin must set `WebProtection = false` to turn off web protection.
    - Defender for Endpoint sends the heartbeat to the Microsoft Defender portal whenever a user opens the app.
@@ -83,11 +82,11 @@ Use the following steps to disable web protection for unenrolled devices.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed apps**.
 
-2. Give the policy a name.
+1. Give the policy a name.
 
-3. Under **Select Public Apps**, choose **Microsoft Defender for Endpoint** as the target app.
+1. Under **Select Public Apps**, choose **Microsoft Defender for Endpoint** as the target app.
 
-4. On the **Settings** page, under **General Configuration Settings**, add `WebProtection` as the key, and set its value to `false`.
+1. On the **Settings** page, under **General Configuration Settings**, add `WebProtection` as the key, and set its value to `false`.
 
    - By default, `WebProtection = true`. An admin can set `WebProtection = false` to switch off web protection.
    - Defender for Endpoint sends the heartbeat to the Microsoft Defender portal whenever a user opens the app.
@@ -98,7 +97,7 @@ Use the following steps to disable web protection for unenrolled devices.
 
 ## Configure network protection
 
-Network protection in Microsoft Defender for endpoint is enabled by default. Admins can use the following steps to configure network protection. This configuration is available for both enrolled devices through MDM config and unenrolled devices through MAM config.
+Network protection in Microsoft Defender for endpoint is enabled by default. Admins can use the following steps to configure network protection. Network protection configuration is available for both enrolled devices through MDM config and unenrolled devices through MAM config.
 
 > [!NOTE]
 > Only one policy should be created for network Protection, either through MDM or MAM. Network protection initialization requires the end user to open the app once.
@@ -109,28 +108,28 @@ To set up network protection using MDM configuration for enrolled devices, follo
 
 1. In the Microsoft Intune admin center, navigate to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
 
-2. Provide name and description for the policy. Under **Platform**, choose **iOS/iPad**.
+1. Provide name and description for the policy. Under **Platform**, choose **iOS/iPad**.
 
-3. In the targeted app, choose **Microsoft Defender for Endpoint**.
+1. In the targeted app, choose **Microsoft Defender for Endpoint**.
 
-4. On the **Settings** page, choose configuration settings format **Use configuration designer**.
+1. On the **Settings** page, choose configuration settings format **Use configuration designer**.
 
-5. Add `DefenderNetworkProtectionEnable` as the configuration key. Set its value type as `String`, and set its value to `false` to disable network protection. (Network protection is enabled by default.)
+1. Add `DefenderNetworkProtectionEnable` as the configuration key. Set its value type as `String`, and set its value to `false` to disable network protection. (Network protection is enabled by default.)
 
    :::image type="content" source="media/np-mdmconfig-key.png" alt-text="Screenshot that shows the mdm configuration policy." lightbox="media/np-mdmconfig-key.png":::
 
-6. For other configurations related to network protection, add the following keys, choose the corresponding value type and value.
+1. For other configurations related to network protection, add the following keys, choose the corresponding value type and value.
 
    | Key | Value Type | Default (true-enable, false-disable) | Description |
    | --- | --- | --- | --- |
-   | `DefenderOpenNetworkDetection` | Integer | 2 | 1 - Audit; 0 - Disable; 2 - Enable (default). This setting is managed by an IT Admin to audit, disable, or enable open network detection, respectively. In audit mode, events are sent only to the Microsoft Defender portal with no end-user experience. For end-user experience, set it to `Enable`.|
-   | `DefenderEndUserTrustFlowEnable` | String | false | true - enable, false - disable; This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks. |
-   | `DefenderNetworkProtectionAutoRemediation` | String | true | true - enable; false - disable. This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer Wi-Fi access points. This setting is only applied to alerts and not device timeline events. So, this is not applicable to open Wi-Fi detection.|
-   | `DefenderNetworkProtectionPrivacy` | String | true | true - enable; false - disable. This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious Wi-Fi is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
-   
-7. In the **Assignments** section, an admin can choose groups of users to include and exclude from the policy.
+   | `DefenderOpenNetworkDetection` | Integer | 2 | 0 - Disable<br>1 - Audit<br>2 - Enable (default)<br><br>This setting is managed by an IT Admin to audit, disable, or enable open network detection, respectively. In audit mode, events are sent only to the Microsoft Defender portal with no end-user experience. For end-user experience, set it to `Enable`.|
+   | `DefenderEndUserTrustFlowEnable` | String | false | true - enable<br>false - disable<br><br>This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure networks. |
+   | `DefenderNetworkProtectionAutoRemediation` | String | true | true - enable<br>false - disable<br><br>This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer Wi-Fi access points. This setting is only applied to alerts and not device timeline events. So, this is not applicable to open Wi-Fi detection.|
+   | `DefenderNetworkProtectionPrivacy` | String | true | true - enable<br>false - disable<br><br>This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious Wi-Fi is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
 
-8. Review and create the configuration policy.
+1. In the **Assignments** section, an admin can choose groups of users to include and exclude from the policy.
+
+1. Review and create the configuration policy.
 
 ### Configure network protection using MAM
 
@@ -140,28 +139,27 @@ Use the following procedure to set up MAM config for unenrolled devices for netw
 
    :::image type="content" source="media/addiosconfig.png" alt-text="Add configuration policy." lightbox="media/addiosconfig.png":::
 
-2. Provide a name and description to uniquely identify the policy. Then select **Select Public apps**, and choose **Microsoft Defender for Platform iOS/iPadOS**.
+1. Provide a name and description to uniquely identify the policy. Then select **Select Public apps**, and choose **Microsoft Defender for Platform iOS/iPadOS**.
 
    :::image type="content" source="media/nameiosconfig.png" alt-text="Name the configuration." lightbox="media/nameiosconfig.png":::
 
-3. On the **Settings** page, add **DefenderNetworkProtectionEnable** as the key and the value as `false` to disable network protection. (Network protection is enabled by default.)
-
+1. On the **Settings** page, add **DefenderNetworkProtectionEnable** as the key and the value as `false` to disable network protection. (Network protection is enabled by default.)
    :::image type="content" source="media/addiosconfigvalue.png" alt-text="Add configuration value." lightbox="media/addiosconfigvalue.png":::
 
-4. For other configurations related to network protection, add the following keys and appropriate corresponding value.
+1. For other configurations related to network protection, add the following keys and appropriate corresponding value.
 
    |Key| Default (true - enable, false - disable)|Description|
    |---|---|---|
-   |`DefenderOpenNetworkDetection`|2| 1 - Audit; 0 - Disable; 2 - Enable (default). This setting is managed by an IT admin to enable, audit, or disable open network detection. In Audit mode, events are sent only to the ATP portal with no user side experience. For user experience, set the config to "Enable" mode.|
-   |`DefenderEndUserTrustFlowEnable`| false | true - enable; false - disable. This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks.|
-   |`DefenderNetworkProtectionAutoRemediation`| true |true - enable; false - disable. This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer Wi-Fi access points. This setting is only applied to alerts and not the device timeline events. So, this is not applicable to open Wi-Fi detection.|
-   |`DefenderNetworkProtectionPrivacy`| true |true - enable; false - disable. This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious wifi is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
-   
-5. In the **Assignments** section, an admin can choose groups of users to include and exclude from the policy.
+   |`DefenderOpenNetworkDetection`|2| 0 - Disable<br>1 - Audit<br>2 - Enable (default)<br><br>This setting is managed by an IT admin to enable, audit, or disable open network detection. In Audit mode, events are sent only to the ATP portal with no user side experience. For user experience, set the config to "Enable" mode.|
+   |`DefenderEndUserTrustFlowEnable`| false | true - enable<br>false - disable<br><br>This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust unsecure networks.|
+   |`DefenderNetworkProtectionAutoRemediation`| true |true - enable<br>false - disable<br><br>This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer Wi-Fi access points. This setting is only applied to alerts and not the device timeline events. So, this is not applicable to open Wi-Fi detection.|
+   |`DefenderNetworkProtectionPrivacy`| true |true - enable<br>false - disable<br><br>This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious wifi is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
+
+1. In the **Assignments** section, an admin can choose groups of users to include and exclude from the policy.
 
    :::image type="content" source="media/assigniosconfig.png" alt-text="Assign configuration." lightbox="media/assigniosconfig.png":::
 
-6. Review and create the configuration policy.
+1. Review and create the configuration policy.
 
 > [!IMPORTANT]
 > Starting May 19, 2025, alerts in the Microsoft Defender portal are no longer generated when users connect to an open wireless network. Instead, this activity now generates events and are viewable in the device timeline. With this change, security operations center (SOC) analysts can now view connection/disconnection to open wireless networks as events. If auto-remediation key is enabled, old alerts are resolved automatically after the changes take effect.</br></br>
@@ -177,13 +175,13 @@ Apple iOS doesn't support multiple device-wide VPNs to be active simultaneously.
 
 ## Configure Microsoft Defender for Endpoint risk signal in app protection policy (MAM)
 
-Microsoft Defender for Endpoint on iOS enables the App Protection Policy scenario. End-users can install the latest version of the app directly from the Apple app store. Ensure the device is registered to Authenticator with the same account being used to onboard in Defender for successful MAM registration.
+Microsoft Defender for Endpoint on iOS enables the App Protection Policy (APP, also known as MAM) scenario. End-users can install the latest version of the app directly from the Apple app store. Ensure the device is registered to Authenticator with the same account being used to onboard in Defender for successful MAM registration.
 
 Microsoft Defender for Endpoint can be configured to send threat signals to be used in App Protection Policies (APP, also known as MAM) on iOS/iPadOS. With this capability, you can use Microsoft Defender for Endpoint to protect access to corporate data from unenrolled devices as well.
 
-Follow the steps in the following link to set up app protection policies with Microsoft Defender for Endpoint [Configure Defender risk signals in app protection policy (MAM)](ios-install-unmanaged.md)
+To set up app protection policies with Microsoft Defender for Endpoint, see [Configure Defender risk signals in app protection policy (MAM)](ios-install-unmanaged.md).
 
-For more information on MAM or app protection policy, see [iOS app protection policy settings](/mem/intune/apps/app-protection-policy-settings-ios).
+For more information on MAM or app protection policy, see [iOS app protection policy settings](/intune/intune-service/apps/app-protection-policy-settings-ios).
 
 ## Privacy controls
 
@@ -201,16 +199,16 @@ Use the following steps to enable privacy and not collect the domain name as par
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
 
-2. Give the policy a name, **Platform \> iOS/iPadOS**, select the profile type.
+1. Give the policy a name, **Platform \> iOS/iPadOS**, select the profile type.
 
-3. Select **Microsoft Defender for Endpoint** as the target app.
+1. Select **Microsoft Defender for Endpoint** as the target app.
 
-4. On the **Settings** page, select **Use configuration designer** and add `DefenderExcludeURLInReport` as the key, and set its value type to **Boolean**.
+1. On the **Settings** page, select **Use configuration designer** and add `DefenderExcludeURLInReport` as the key, and set its value type to **Boolean**.
 
    - To enable privacy and not collect the domain name, enter the value as `true` and assign this policy to users. By default, this value is set to `false`.
    - For users with key set as `true`, the phish alert doesn't contain the domain name information whenever a malicious site is detected and blocked by Defender for Endpoint.
 
-5. Select **Next** and assign this profile to targeted devices/users.
+1. Select **Next** and assign this profile to targeted devices/users.
 
 #### Configure privacy controls in MAM
 
@@ -218,16 +216,16 @@ Use the following steps to enable privacy and not collect the domain name as par
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed apps**.
 
-2. Give the policy a name.
+1. Give the policy a name.
 
-3. Under **Select Public Apps**, choose **Microsoft Defender for Endpoint** as the target app.
+1. Under **Select Public Apps**, choose **Microsoft Defender for Endpoint** as the target app.
 
-4. On the **Settings** page, under the **General Configuration Settings**, add `DefenderExcludeURLInReport` as the key, and set its value as `true`.
+1. On the **Settings** page, under the **General Configuration Settings**, add `DefenderExcludeURLInReport` as the key, and set its value as `true`.
 
    - To enable privacy and not collect the domain name, enter the value as `true` and assign this policy to users. By default, this value is set to `false`.
    - For users with key set as `true`, the phish alert doesn't contain the domain name information whenever a malicious site is detected and blocked by Defender for Endpoint.
 
-5. Select **Next** and assign this profile to targeted devices/users.
+1. Select **Next** and assign this profile to targeted devices/users.
 
 #### Configure end-user privacy controls in the Microsoft Defender app
 
@@ -255,16 +253,16 @@ Admins can use the following steps to enable Optional VPN permission for enrolle
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
 
-2. Give the policy a name, select **Platform \> iOS/iPadOS**.
+1. Give the policy a name, select **Platform \> iOS/iPadOS**.
 
-3. Select **Microsoft Defender for Endpoint** as the target app.
+1. Select **Microsoft Defender for Endpoint** as the target app.
 
-4. On the **Settings** page, select **Use configuration designer** and add `DefenderOptionalVPN` as the key, and set its value type as `Boolean`.
+1. On the **Settings** page, select **Use configuration designer** and add `DefenderOptionalVPN` as the key, and set its value type as `Boolean`.
 
    - To enable optional VPN permission, enter value as `true` and assign this policy to users. By default, this value is set to `false`.
    - For users with key set as `true`, the users are able to onboard the app without giving the VPN permission.
 
-5. Select **Next** and assign this profile to targeted devices/users.
+1. Select **Next** and assign this profile to targeted devices/users.
 
 ### Configure optional permissions as an end user
 
@@ -298,19 +296,18 @@ Follow the steps below to create a compliance policy against jailbroken devices.
 
    :::image type="content" source="media/ios-jb-policy.png" alt-text="The Create Policy tab" lightbox="media/ios-jb-policy.png":::
 
-2. Specify a name of the policy, such as *Compliance Policy for Jailbreak*.
+1. Specify a name of the policy, such as *Compliance Policy for Jailbreak*.
 
-3. In the compliance settings page, select to expand **Device Health** section and select `Block` in the **Jailbroken devices** field.
+1. In the compliance settings page, select to expand **Device Health** section and select `Block` in the **Jailbroken devices** field.
 
    :::image type="content" source="media/ios-jb-settings.png" alt-text="The Compliance settings tab" lightbox="media/ios-jb-settings.png":::
 
-4. In the **Actions for noncompliance** section, select the actions as per your requirements, and then select **Next**.
+1. In the **Actions for noncompliance** section, select the actions as per your requirements, and then select **Next**.
 
    :::image type="content" source="media/ios-jb-actions.png" alt-text="The Actions for noncompliance tab" lightbox="media/ios-jb-actions.png":::
 
-5. In the **Assignments** section, select the user groups that you want to include for this policy and then select **Next**.
-
-6. In the **Review + Create** section, verify that all the information entered is correct and then select **Create**.
+1. In the **Assignments** section, select the user groups that you want to include for this policy and then select **Next**.
+1. In the **Review + Create** section, verify that all the information entered is correct and then select **Create**.
 
 ## Configure custom indicators
 
@@ -325,15 +322,17 @@ Defender for Endpoint on iOS enables admins to configure custom indicators on iO
 
 ## Configure vulnerability assessment of apps
 
-Reducing cyber risk requires comprehensive risk-based vulnerability management to identify, assess, remediate, and track all your biggest vulnerabilities across your most critical assets, all in a single solution. Visit this [page](/defender-vulnerability-management/defender-vulnerability-management) to learn more about Microsoft Defender Vulnerability Management in Microsoft Defender for Endpoint.
+Reducing cyber risk requires comprehensive risk-based vulnerability management to identify, assess, remediate, and track all your biggest vulnerabilities across your most critical assets, all in a single solution. To learn more, see [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management).
 
 Defender for Endpoint on iOS supports vulnerability assessments of OS and apps. Vulnerability assessment of iOS versions is available for both enrolled (MDM) and unenrolled (MAM) devices. Vulnerability assessment of apps is only for enrolled (MDM) devices. Admins can use the following steps to configure the vulnerability assessment of apps.
 
 ### On a supervised device
 
+Use the following steps to enable vulnerability assessment of apps on a supervised device:
+
 1. Ensure the device is configured in the [Supervised mode](ios-install.md#complete-deployment-for-supervised-devices).
 
-2. To enable the feature in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint Security** \> **Microsoft Defender for Endpoint** \> **Enable App sync for iOS/iPadOS devices**.
+1. To enable the feature in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint Security** \> **Microsoft Defender for Endpoint** \> **Enable App sync for iOS/iPadOS devices**.
 
    :::image type="content" source="media/tvm-app-sync-toggle.png" alt-text="App sync toggleSup" lightbox="media/tvm-app-sync-toggle.png":::
 
@@ -343,34 +342,34 @@ Defender for Endpoint on iOS supports vulnerability assessments of OS and apps. 
 
 ### On an unsupervised device
 
+Use the following steps to enable vulnerability assessment of apps on an unsupervised device:
+
 1. To enable the feature in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint Security** \> **Microsoft Defender for Endpoint** \> **Enable App sync for iOS/iPadOS devices**.
 
    :::image type="content" source="media/tvm-app-sync-toggle.png" alt-text="App sync toggle" lightbox="media/tvm-app-sync-toggle.png":::
 
-2. To get the list of all the apps including unmanaged apps, enable the toggle **Send full application inventory data on personally owned iOS/iPadOS devices**.
+1. To get the list of all the apps including unmanaged apps, enable the toggle **Send full application inventory data on personally owned iOS/iPadOS devices**.
 
     :::image type="content" source="media/tvm-full-app-data.png" alt-text="Full App Data" lightbox="media/tvm-full-app-data.png":::
 
-3. Use the following steps to configure the privacy setting.
-
+1. Use the following steps to configure the privacy setting.
    1. Go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
    
-   2. Give the policy a name, **Platform** \> **iOS/iPadOS**.
+   1. Give the policy a name, **Platform** \> **iOS/iPadOS**.
 
-   3. Select **Microsoft Defender for Endpoint** as the target app.
+   1. Select **Microsoft Defender for Endpoint** as the target app.
 
-   4. On the **Settings** page, select Use configuration designer and add `DefenderTVMPrivacyMode` as the key. Set its value type as `String`.
+   1. On the **Settings** page, select Use configuration designer and add `DefenderTVMPrivacyMode` as the key. Set its value type as `String`.
 
       - To disable privacy and collect the list of apps installed, specify the value as `False`, and then assign this policy to users. 
       - By default, this value is set to `True` for unsupervised devices.
       - For users with key set as `False`, Defender for Endpoint sends the list of apps installed on the device for vulnerability assessment.
    
-   5. Select **Next** and assign this profile to targeted devices/users.
+   1. Select **Next** and assign this profile to targeted devices/users.
    
-   6. Turning privacy controls on or off doesn't impact the device compliance check or conditional access.
+   1. Turning privacy controls on or off doesn't impact the device compliance check or conditional access.
 
-4. Once the config is applied, end users must open the app to approve the privacy setting.
-
+1. Once the config is applied, end users must open the app to approve the privacy setting.
    - The privacy approval screen appears only for unsupervised devices.
    - Only if end-user approves the privacy, the app information is sent to the Defender for Endpoint console.
 
@@ -387,7 +386,7 @@ Once the client versions are deployed to target iOS devices, processing starts. 
 
 Defender for Endpoint on iOS supports deployment without sign out button in the app to prevent users from signing out of the Defender app. This is important to prevent users from tampering the device. 
 
-This configuration is available for both the enrolled (MDM) devices and unenrolled (MAM) devices. Admins can use the following steps to configure the Disable sign out
+The disable sign-out configuration is available for both enrolled (MDM) devices and unenrolled (MAM) devices. Admins can use the following steps to configure the disable sign-out setting.
 
 ### Configure disable sign out using MDM
 
@@ -412,22 +411,22 @@ This configuration is available for both the enrolled (MDM) devices and unenroll
 
 1. In the Microsoft Intune admin center, navigate to **Apps** > **App configuration policies** > **Add** > **Managed apps**.
 
-2. Give the policy a name.
+1. Give the policy a name.
 
-3. Under **Select Public Apps**, select `Microsoft Defender for Endpoint` as the target app.
+1. Under **Select Public Apps**, select `Microsoft Defender for Endpoint` as the target app.
 
-4. On the **Settings** page, add `DisableSignOut` as the key, and set its value as `true`.
+1. On the **Settings** page, add `DisableSignOut` as the key, and set its value as `true`.
 
    - By default, `DisableSignOut = false`.
    - An admin can set `DisableSignOut = true` to disable the sign out button in the app. Users don't see the sign out button once the policy is pushed.
 
-5. Select **Next**, and then assign this policy to targeted devices/users.
+1. Select **Next**, and then assign this policy to targeted devices/users.
 
 ## Device tagging
 
 Defender for Endpoint on iOS enables bulk tagging the mobile devices during onboarding by allowing the admins to set up tags via Intune. Admin can configure the device tags through Intune via configuration policies and push them to user's devices. Once the User installs and activates Defender, the client app passes the device tags to the Microsoft Defender portal. The Device tags appear against the devices in the Device Inventory. 
 
-This configuration is available for both the enrolled (MDM) devices and unenrolled (MAM) devices. Admins can use the following steps to configure the Device tags.
+Device tag configuration is available for both enrolled (MDM) devices and unenrolled (MAM) devices. Admins can use the following steps to configure device tags.
 
 > [!NOTE]
 > Configuring more than one device tags from Intune isn't supported as only one device tag reflects when configured. However, multiple device tags can be added manually in the Microsoft Defender portal.
@@ -438,17 +437,17 @@ This configuration is available for both the enrolled (MDM) devices and unenroll
 
 1. In the Microsoft Intune admin center, go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
 
-2. Give the policy a name, and then select **Platform** \> **iOS/iPadOS**.
+1. Give the policy a name, and then select **Platform** \> **iOS/iPadOS**.
 
-3. Select `Microsoft Defender for Endpoint` as the target app. 
+1. Select `Microsoft Defender for Endpoint` as the target app. 
 
-4. On the **Settings** page, select **Use configuration designer**, and add `DefenderDeviceTag` as the key. Set its value type as `String`.
+1. On the **Settings** page, select **Use configuration designer**, and add `DefenderDeviceTag` as the key. Set its value type as `String`.
 
    - An admin can assign a new tag by adding the key `DefenderDeviceTag` and setting a value for the device tag.
    - An admin can edit an existing tag by modifying the value of the key `DefenderDeviceTag`.
    - An admin can delete an existing tag by removing the key `DefenderDeviceTag`.
 
-5. Select **Next**, and then assign this policy to targeted devices/users.
+1. Select **Next**, and then assign this policy to targeted devices/users.
 
 ### Configure device tags using MAM
 
@@ -456,17 +455,17 @@ This configuration is available for both the enrolled (MDM) devices and unenroll
 
 1. In the Microsoft Intune admin center, go to **Apps** > **App configuration policies** > **Add** > **Managed apps**.
 
-2. Give the policy a name.
+1. Give the policy a name.
 
-3. Under the **Select Public Apps**, choose `Microsoft Defender for Endpoint` as the target app.
+1. Under the **Select Public Apps**, choose `Microsoft Defender for Endpoint` as the target app.
 
-4. On the **Settings** page, add `DefenderDeviceTag` as the key (under **General Configuration Settings**).
+1. On the **Settings** page, add `DefenderDeviceTag` as the key (under **General Configuration Settings**).
 
    - An admin can assign a new tag by adding the key `DefenderDeviceTag` and setting a value for device tag.
    - An admin can edit an existing tag by modifying the value of the key `DefenderDeviceTag`.
    - An admin can delete an existing tag by removing the key `DefenderDeviceTag`.
 
-5. Select **Next**, and then assign this policy to targeted devices/users.
+1. Select **Next**, and then assign this policy to targeted devices/users.
 
 > [!NOTE] 
 > The Microsoft Defender app must be opened for tags to be synced with Intune and passed to the Microsoft Defender portal. It might take up to 18 hours for tags to reflect in the portal.
@@ -475,7 +474,7 @@ This configuration is available for both the enrolled (MDM) devices and unenroll
 
 A configuration is available for customers to suppress OS update notification in Defender for Endpoint on iOS. Once the config key is set in the Intune App configuration policies, Defender for Endpoint won't send any notifications on the device for OS updates. However, when you open the Microsoft Defender app, the Device Health card is visible and show the state of your OS. 
 
-This configuration is available for both the enrolled (MDM) devices and unenrolled (MAM) devices. Admins can use the following steps to suppress the OS update Notification.
+The OS update notification suppression configuration is available for both enrolled (MDM) devices and unenrolled (MAM) devices. Admins can use the following steps to suppress OS update notifications.
 
 ### Configure OS update notifications using MDM
 
@@ -483,11 +482,11 @@ This configuration is available for both the enrolled (MDM) devices and unenroll
 
 1. In the Microsoft Intune admin center, go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
 
-2. Give the policy a name, select **Platform** \> **iOS/iPadOS**.
+1. Give the policy a name, select **Platform** \> **iOS/iPadOS**.
 
-3. Select `Microsoft Defender for Endpoint` as the target app. 
+1. Select `Microsoft Defender for Endpoint` as the target app. 
 
-4. On the **Settings** page, select **Use configuration designer**, and add `SuppressOSUpdateNotification` as the key. Set its value type as `String`.
+1. On the **Settings** page, select **Use configuration designer**, and add `SuppressOSUpdateNotification` as the key. Set its value type as `String`.
 
    - By default, `SuppressOSUpdateNotification = false`.
    - An admin can set `SuppressOSUpdateNotification = true` to suppress the OS update notifications.
@@ -499,16 +498,16 @@ This configuration is available for both the enrolled (MDM) devices and unenroll
 
 1. In the Microsoft Intune admin center, navigate to **Apps** > **App configuration policies** > **Add** > **Managed apps**.
 
-2. Give the policy a name.
+1. Give the policy a name.
 
-3. Under the **Select Public Apps**, choose `Microsoft Defender for Endpoint` as the target app.
+1. Under the **Select Public Apps**, choose `Microsoft Defender for Endpoint` as the target app.
 
-4. On the **Settings** page, add `SuppressOSUpdateNotification` as the key (under **General Configuration Settings**).
+1. On the **Settings** page, add `SuppressOSUpdateNotification` as the key (under **General Configuration Settings**).
 
    - By default, `SuppressOSUpdateNotification = false`.
    - An admin can set `SuppressOSUpdateNotification = true` to suppress the OS update notifications.
 
-5. Select **Next** and assign this policy to targeted devices/users.
+1. Select **Next** and assign this policy to targeted devices/users.
 
 ## Configure the option to send in-app feedback
 
@@ -521,20 +520,20 @@ Use the following steps to configure the option to send feedback data to Microso
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
 
-2. Give the policy a name, and select **Platform \> iOS/iPadOS** as the profile type.
+1. Give the policy a name, and select **Platform \> iOS/iPadOS** as the profile type.
 
-3. Select `Microsoft Defender for Endpoint` as the target app.
+1. Select `Microsoft Defender for Endpoint` as the target app.
 
-4. On the **Settings** page, select **Use configuration designer** and add `DefenderFeedbackData` as the key, and set its value type as `Boolean`.
+1. On the **Settings** page, select **Use configuration designer** and add `DefenderFeedbackData` as the key, and set its value type as `Boolean`.
 
    - To remove the ability of end-users to provide feedback, set the value as `false` and assign this policy to users. By default, this value is set to `true`. For US Government customers, the default value is set to 'false'.
    - For users with key set as `true`, there's an option to send Feedback data to Microsoft within the app (**Menu** \> **Help & Feedback** \> **Send Feedback to Microsoft**).
 
-5. Select **Next** and assign this profile to targeted devices/users.
+1. Select **Next** and assign this profile to targeted devices/users.
 
 ## Report unsafe sites
 
 Phishing websites impersonate trustworthy websites by obtaining your personal or financial information. Visit the [Provide feedback about network protection](https://www.microsoft.com/wdsi/filesubmission/exploitguard/networkprotection) page to report a website that could be a phishing site.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

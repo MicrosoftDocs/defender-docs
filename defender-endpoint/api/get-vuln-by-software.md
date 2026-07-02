@@ -1,20 +1,17 @@
-﻿---
+---
 title: List vulnerabilities by software
 description: Retrieve a list of vulnerabilities in the installed software.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 11/16/2025
 appliesto:
   - Microsoft Defender for Endpoint
@@ -23,8 +20,7 @@ appliesto:
 
 # List vulnerabilities by software
 
-
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieve a list of vulnerabilities in the installed software.
 
@@ -32,10 +28,10 @@ Retrieve a list of vulnerabilities in the installed software.
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md) for details.
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Vulnerability.Read.All|'Read Threat and Vulnerability Management Software information'
-Delegated (work or school account)|Vulnerability.Read|'Read Threat and Vulnerability Management Software information'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Vulnerability.Read.All|'Read Threat and Vulnerability Management Software information'|
+|Delegated (work or school account)|Vulnerability.Read|'Read Threat and Vulnerability Management Software information'|
 
 ## HTTP request
 
@@ -45,9 +41,9 @@ GET /api/Software/{Id}/vulnerabilities
 
 ## Request headers
 
-|Name|Type|Description
+|Name|Type|Description|
 |---|---|---|
-|Authorization|String|Bearer {token}.**Required**.
+|Authorization|String|Bearer {token}.**Required**.|
 
 ## Request body
 
@@ -64,7 +60,7 @@ If successful, this method returns 200 OK with a list of vulnerabilities exposed
 Here's an example of the request.
 
 ```http
-GET https://api.securitycenter.microsoft.com/api/Software/microsoft-_-edge/vulnerabilities
+GET https://api.security.microsoft.com/api/Software/microsoft-_-edge/vulnerabilities
 ```
 
 ### Response example
@@ -73,7 +69,7 @@ Here's an example of the response.
 
 ```json
 {
-    "@odata.context": "https://api.securitycenter.microsoft.com/api/$metadata#Collection(Analytics.Contracts.PublicAPI.PublicVulnerabilityDto)",
+    "@odata.context": "https://api.security.microsoft.com/api/$metadata#Collection(Analytics.Contracts.PublicAPI.PublicVulnerabilityDto)",
     "value": [
             {
                 "id": "CVE-2017-0140",
@@ -94,4 +90,3 @@ Here's an example of the response.
         ]
 }
 ```
-

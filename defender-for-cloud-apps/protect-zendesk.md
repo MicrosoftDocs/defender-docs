@@ -1,19 +1,22 @@
 ---
 title: Protect your Zendesk | Microsoft Defender for Cloud Apps
-description: Learn how about connecting your Zendesk app to Defender for Cloud Apps using the API connector.
-ms.date: 12/06/2023
+description: Connect Zendesk to Microsoft Defender for Cloud Apps by using the API connector to gain visibility into admin activities and detect anomalous behavior.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
+
 # How Defender for Cloud Apps helps protect your Zendesk
 
+As a customer service software solution, Zendesk holds the sensitive information to your organization. Any abuse of Zendesk by a malicious actor or any human error might expose your most critical assets and services to potential attacks.
 
-
-As a customer service software solution, Zendesk holds the sensitive information to your organization. Any abuse of Zendesk by a malicious actor or any human error may expose your most critical assets and services to potential attacks.
-
-Connecting Zendesk to Defender for Cloud Apps gives you improved insights into your Zendesk admin activities and provides threat detection for anomalous behavior.
+Connecting Zendesk to Defender for Cloud Apps gives you improved insights into your Zendesk admin activities and provides threat detection for anomalous user and admin activity in Zendesk.
 
 ## Main threats
+
+Zendesk usage without proper protection can expose your organization to the following threats:
 
 - Compromised accounts and insider threats
 
@@ -25,11 +28,15 @@ Connecting Zendesk to Defender for Cloud Apps gives you improved insights into y
 
 ## How Defender for Cloud Apps helps to protect your environment
 
+Use the following Defender for Cloud Apps best practices to help protect your Zendesk environment:
+
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 
 - [Use the audit trail of activities for forensic investigations](best-practices.md#use-the-audit-trail-of-activities-for-forensic-investigations)
 
 ## Control Zendesk with policies
+
+The following table lists the policy types you can use to monitor and control Zendesk activity:
 
 |   Type                             |   Name                                                       |
 | ---------------------------------- | ------------------------------------------------------------ |
@@ -54,9 +61,9 @@ Review our best practices for [securing and collaborating with external users](b
 
 ## SaaS security posture management
 
-[Connect Zendesk](#connect-zendesk-to-microsoft-defender-for-cloud-apps) to automatically get security posture recommendations for Zendesk in Microsoft Secure Score. In Secure Score, select **Recommended actions** and filter by **Product** = **Zendesk**. For example, recommendations for Zendesk include:
+Software as a Service (SaaS) security posture management helps you evaluate and improve the security configuration of your SaaS apps. After you connect Zendesk to Microsoft Defender for Cloud Apps, you automatically get security posture recommendations for Zendesk in Microsoft Secure Score. In Secure Score, select **Recommended actions** and filter by **Product** = **Zendesk**. For example, recommendations for Zendesk include:
 
-- *Enable multi-factor authentication (MFA)*
+- *Enable multifactor authentication (MFA)*
 - *Enable session timeout for users*
 - *Enable IP restrictions*
 - *Block admins to set passwords.*
@@ -68,7 +75,7 @@ For more information, see:
 
 ## Connect Zendesk to Microsoft Defender for Cloud Apps
 
-This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Zendesk using the App Connector APIs. This connection gives you visibility into and control over your organization's Zendesk use.
+The following instructions explain how to connect Microsoft Defender for Cloud Apps to your existing Zendesk using the App Connector APIs. This connection gives you visibility into and control over your organization's Zendesk use.
 
 ### Prerequisites
 
@@ -78,16 +85,13 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
   - Enterprise Plus
 
  >[!NOTE]
-> Connecting Zendesk to Defender for Cloud Apps with a Zendesk user that is not an admin will result in a connection error.
+> Connecting Zendesk to Defender for Cloud Apps with a Zendesk user that isn't an admin will result in a connection error.
 
 ### Configure Zendesk
 
-1. Navigate to **Admin** -> **Apps and integrations** -> **APIs** -> **Zendesk API** -> **OAuth Client** and select **Add OAuth client**.
+1. Select **Add OAuth client**.
 
-    ![Zendesk API configuration.](media/zendesk-api-configuration.png)
-
-1. Select **New Credential**.
-1. Fill out the following fields:
+1. Select **New Credential**. Fill out the following fields:
 
     - Client name: **Microsoft Defender for Cloud Apps** (you can also choose another name).
     - Description: **Microsoft Defender for Cloud Apps API Connector** (you can also choose another description).
@@ -101,14 +105,12 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
       > - For US Government GCC customers, enter the following value: `https://portal.cloudappsecuritygov.com/api/oauth/saga`
       > - For US Government GCC High customers, enter the following value: `https://portal.cloudappsecurity.us/api/oauth/saga`
 
-1. Select **Save**, and then select **OK**.
-
 1. Copy the **Secret** that was generated. You'll need it in the upcoming steps.
 
 ### Configure Defender for Cloud Apps
 
 >[!NOTE]
->The Zendesk user that is configuring the integration must always remain a Zendesk admin, even after the connector is installed.
+>The Zendesk user that's configuring the integration must always remain a Zendesk admin, even after the connector is installed.
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
 
@@ -116,9 +118,9 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 1. In the next window, give the connector a descriptive name, and select **Next**.
 
-    ![Connect Zendesk.](media/connect-zendesk.png)
+    :::image type="content" source="media/connect-zendesk.png" alt-text="Screenshot that shows where to add the instance name in the Defender portal." lightbox="media/connect-zendesk.png":::
 
-1. In the **Enter details** page, enter the following fields and then select **Next**.
+1. In the **Enter details** page, enter the following fields, and then select **Next**.
 
     - **Client ID**: the Unique identifier you used when you created the OAuth app in the Zendesk admin portal.
     - **Client Secret**: your saved secret.
@@ -130,21 +132,17 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 1. After the connector's **Status** is marked as **Connected**, the connector is live and works.
 
 >[!NOTE]
->Microsoft recommends using a short lived access token. Zendesk doesn't currently support short lived tokens. We recommend our customers refresh the token every 6 months as a security best practice. To refresh the access token, revoke the old token by following [Revoke Token](https://developer.zendesk.com/api-reference/ticketing/oauth/oauth_tokens/#revoke-token). Once the old token is revoked, create a new secret and reconnect the Zendesk connector as documented above.
-
->[!NOTE]
->System activities will be shown with the **Zendesk** account name.
+> - Microsoft recommends using a short lived access token. Zendesk doesn't currently support short lived tokens. We recommend refreshing your token every 6 months as a security best practice. To refresh and revoke an old access token see: [Revoke Token](https://developer.zendesk.com/api-reference/ticketing/oauth/oauth_tokens/#revoke-token). After you revoke the old token, create a new secret and reconnect the Zendesk connector.
+>
+>- System activities are shown with the **Zendesk** account name.
 
 ## Rate limits
 
 The default rate limit is 200 requests per minute. To increase the rate limit, [open a support ticket](/defender-xdr/contact-defender-support).
 
->[!NOTE]
->The maximum rate limit for every subscription is described [here](https://developer.zendesk.com/api-reference/ticketing/account-configuration/usage_limits/#zendesk-support-plan-limits).
+For more information about the maximum rate limit for every subscription, see: [Zendesk Suite plan limits](https://developer.zendesk.com/api-reference/ticketing/account-configuration/usage_limits/#zendesk-support-plan-limits).
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Control cloud apps with policies](control-cloud-apps-with-policies.md)
+- [Control cloud apps with policies](control-cloud-apps-with-policies.md)
 
-[!INCLUDE [Open support ticket](includes/support.md)]

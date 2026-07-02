@@ -1,30 +1,26 @@
-﻿---
+---
 title: Get exposure score
 description: Retrieves the organizational exposure score.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # Get exposure score
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieves the organizational exposure score.
 
@@ -32,10 +28,10 @@ Retrieves the organizational exposure score.
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
----|---|---
-Application|Score.Read.All|'Read Threat and Vulnerability Management score'
-Delegated (work or school account)|Score.Read|'Read Threat and Vulnerability Management score'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Score.Read.All|'Read Threat and Vulnerability Management score'|
+|Delegated (work or school account)|Score.Read|'Read Threat and Vulnerability Management score'|
 
 ## HTTP request
 
@@ -45,9 +41,9 @@ GET /api/exposureScore
 
 ## Request headers
 
-Name|Type|Description
----|---|---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -71,7 +67,6 @@ GET https://api.security.microsoft.com/api/exposureScore
 
 Here's an example of a shortened response list.
 
-
 ```json
 {
     "@odata.context": "https://api.security.microsoft.com/api/$metadata#ExposureScore/$entity",
@@ -79,5 +74,3 @@ Here's an example of a shortened response list.
     "score": 33.491554051195706
 }
 ```
-
-

@@ -1,20 +1,17 @@
-﻿---
+---
 title: List machines API
 description: Learn how to use the List machines API to retrieve a collection of machines that have communicated with Microsoft Defender for Endpoint cloud.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.topic: reference
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 12/11/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -24,36 +21,48 @@ appliesto:
 
 # List machines API
 
-
 ## API description
 
 Retrieves a collection of [Machines](machine.md) that have communicated with Microsoft Defender for Endpoint.
 
-Supports [OData V4 queries](https://www.odata.org/documentation/).
+Supports [OData V4 queries](https://www.odata.org/documentation/). OData supported operators:
 
-The OData's `$filter` query is supported on: `computerDnsName`, `id`, `version`, `deviceValue`, `aadDeviceId`, `machineTags`, `lastSeen`,`exposureLevel`, `onboardingStatus`, `lastIpAddress`, `healthStatus`, `osPlatform`, `riskScore` and `rbacGroupId`.
-<br>```$top``` with max value of 10,000 
-<br>```$skip```
+- `$filter` on the following properties:
+  - `computerDnsName`
+  - `id`
+  - `version`
+  - `deviceValue`
+  - `aadDeviceId`
+  - `machineTags`
+  - `lastSeen`
+  - `exposureLevel`
+  - `onboardingStatus`
+  - `lastIpAddress`
+  - `healthStatus`
+  - `osPlatform`
+  - `riskScore`
+  - `rbacGroupId`
+- `$top` with max value of 10,000.
+- `$skip`
+
 See examples at [OData queries with Defender for Endpoint](exposed-apis-odata-samples.md)
 
 ## Limitations
 
 - You can get devices last seen according to your configured retention period.
 - Maximum page size is 10,000.
-- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour. 
+- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
 ## Permissions
 
 When obtaining a token using user credentials, the user needs to have at least the following role permission: `View Data`. For more information, see: [Create and manage roles](../user-roles.md).
 
-
 Responses include only devices that the user has access to, based on device group settings. For more information, see: [Create and manage device groups](../machine-groups.md).
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Machine.ReadWrite.All|'Read and write all machine information'
-Delegated (work or school account)|Machine.ReadWrite|'Read and write machine information'
-
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Machine.ReadWrite.All|'Read and write all machine information'|
+|Delegated (work or school account)|Machine.ReadWrite|'Read and write machine information'|
 
 ## HTTP request
 
@@ -63,9 +72,9 @@ GET https://api.security.microsoft.com/api/machines
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -119,5 +128,3 @@ Content-type: application/json
     ]
 }
 ```
-
-

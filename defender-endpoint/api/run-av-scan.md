@@ -1,26 +1,22 @@
-﻿---
+---
 title: Run antivirus scan API
 description: Use this API to create calls related to running an antivirus scan on a device.
 ms.service: defender-endpoint
-ms.author: kesharab
-author: KesemSharabi
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
 
 # Run antivirus scan API
@@ -39,9 +35,9 @@ Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
 ### Supported operating systems
 
-- This action is available for devices on Windows 10, version  1709 or later, and on Windows 11.
-
-
+- Windows 10, version  1709 or later, and on Windows 11.
+- Linux Servers. See [Supported Linux distributions](../mde-linux-prerequisites.md#supported-linux-distributions)
+- macOS. See [Prerequisites for Defender for Endpoint on macOS](../microsoft-defender-endpoint-mac-prerequisites.md)
 
 ## Permissions
 
@@ -52,11 +48,10 @@ When obtaining a token using user credentials:
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
-:---|:---|:---
-Application|Machine.Scan|'Scan machine'
-Delegated (work or school account)|Machine.Scan|'Scan machine'
-
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Machine.Scan|'Scan machine'|
+|Delegated (work or school account)|Machine.Scan|'Scan machine'|
 
 ## HTTP request
 
@@ -66,19 +61,19 @@ POST https://api.security.microsoft.com/api/machines/{id}/runAntiVirusScan
 
 ## Request headers
 
-Name|Type|Description
-:---|:---|:---
-Authorization|String|Bearer {token}. **Required**.
-Content-Type|string|application/json
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
+|Content-Type|string|application/json|
 
 ## Request body
 
 In the request body, supply a JSON object with the following parameters:
 
-Parameter|Type|Description
-:---|:---|:---
-Comment|String|Comment to associate with the action. **Required**.
-ScanType|String|Defines the type of the Scan. **Required**.
+|Parameter|Type|Description|
+|---|---|---|
+|Comment|String|Comment to associate with the action. **Required**.|
+|ScanType|String|Defines the type of the Scan. **Required**.|
 
 **ScanType** controls the type of scan to perform and can be one of the following:
 
@@ -98,7 +93,7 @@ If you send  multiple API calls to run an antivirus scan for the same device, it
 Here is an example of the request.
 
 ```http
-POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/runAntiVirusScan 
+POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/runAntiVirusScan
 ```
 
 ```json

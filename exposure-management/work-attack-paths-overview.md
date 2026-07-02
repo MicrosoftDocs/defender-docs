@@ -1,12 +1,8 @@
 ---
 title: Overview of attack paths in Microsoft Security Exposure Management
 description: Learn how to mitigate security risks using attack paths in Microsoft Security Exposure Management.
-ms.author: dlanger
-author: dlanger
-manager: ornat-spodek
 ms.topic: overview
-ms.service: exposure-management
-ms.date: 10/15/2025
+ms.date: 05/14/2026
 
 ---
 
@@ -60,7 +56,10 @@ Cloud attack paths reflect real, externally driven and exploitable risks, helpin
 
 ### On-premises attack paths
 
-Attack paths now terminate automatically when they reach End Game assets (Domain Admins, Enterprise Admins, Administrators, or Domain Controllers). These assets provide full domain control if compromised. The visualization and prioritization of attack path risks for on-premises infrastructure provide consistent clarity, enabling security teams to focus on high-impact scenarios and reduce noise
+Attack paths now terminate automatically when they reach End Game assets (Domain Admins, Enterprise Admins, Administrators, or Domain Controllers). These assets provide full domain control if compromised. The visualization and prioritization of attack path risks for on-premises infrastructure provide consistent clarity, enabling security teams to focus on high-impact scenarios and reduce noise.
+
+>[!NOTE]
+>For on-premises attack paths, you might occasionally see an attack path highlighted without a directly associated recommendation in the same view. In these scenarios, the attack paths are still generated based on observed risk signals, while device-related vulnerabilities and security recommendations remain available under the **Devices Experience** for the specific device involved in the attack path.
 
 ## Next steps
 
