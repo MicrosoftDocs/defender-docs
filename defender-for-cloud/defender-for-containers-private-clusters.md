@@ -33,7 +33,7 @@ Before you begin, ensure the following prerequisites are met:
 
 ## Install components for private clusters
 
-Defender for Containers Helm charts are published to mcr.microsoft.com/azuredefender/microsoft-defender-for-containers.
+Defender for Containers Helm charts are published to `mcr.microsoft.com/azuredefender/microsoft-defender-for-containers`.
 Private clusters are supported in 0.11.X chart versions.
 Use the following tabs to install the components for your environment.
 
