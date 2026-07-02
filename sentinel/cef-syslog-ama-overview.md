@@ -1,8 +1,9 @@
 ---
 title:  Syslog and CEF AMA connectors - Microsoft Sentinel
 description: Learn how Microsoft Sentinel collects Syslog and Common Event Format (CEF) messages with the Azure Monitor Agent.
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: krishsa
 ms.topic: concept-article
 ms.custom: linux-related-content
 ms.date: 07/29/2025
@@ -113,8 +114,11 @@ To avoid this scenario, use one of these methods:
 
 - **If changing the facility for the source appliance isn't applicable**: After you create the DCR, add ingestion time transformation to filter out CEF messages from the Syslog stream to avoid duplication. See [Tutorial: Edit a data collection rule (DCR)](/azure/azure-monitor/essentials/data-collection-rule-edit). Add KQL transformation similar to the following example:
 
+    > [!NOTE]
+    > Starting with AMA version 1.41, the `ProcessName` field might not reliably contain "CEF" for messages from vendors that don't comply with RFC 3164/RFC 5424 syslog header format. To ensure CEF messages are properly filtered, check both `ProcessName` and `SyslogMessage`.
+
     ```json
-    "transformKql": "  source\n    |  where ProcessName !contains \"CEF\"\n"
+    "transformKql": "  source\n    |  where ProcessName !contains \"CEF\" and SyslogMessage !contains \"CEF:0\"\n"
     ```
  
 ## Next steps

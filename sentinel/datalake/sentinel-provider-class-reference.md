@@ -1,12 +1,13 @@
 ---  
 title: Microsoft Sentinel data lake Microsoft Sentinel Provider class reference
 description: Reference documentation for the Microsoft Sentinel Provider class, which allows you to connect to the Microsoft Sentinel data lake and perform various operations.
+ms.author: edbaynash  
 author: EdB-MSFT
+ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 
 ms.topic: reference 
-ms.author: edbaynash  
 ms.date: 02/08/2026
 
 # Customer intent: As a security engineer or data scientist, I want to understand how to use the Microsoft Sentinel Provider class to connect to the Microsoft Sentinel data lake and perform operations such as listing databases, reading tables, and saving data.

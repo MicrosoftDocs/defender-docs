@@ -10,11 +10,13 @@ ms.collection:
 - tier2
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 12/18/2025
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Create and manage device groups
@@ -50,6 +52,9 @@ As part of the process of creating a device group, you'll:
 
 > [!NOTE]
 > Device Groups in Defender for Business are managed differently. For more information, see [Device groups in Microsoft Defender for Business](/defender-business/mdb-create-edit-device-groups).
+
+> [!NOTE]
+> You can create up to 2,000 device groups per tenant.
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Settings** \> **Endpoints** \> **Permissions** section \> **Device groups**. Or, to go directly to the device groups tab, use <https://security.microsoft.com/securitysettings/endpoints/machine_groups>.
 
@@ -99,7 +104,7 @@ Devices that aren't matched to any groups are added to Ungrouped devices (defaul
 
 ### Add device group definitions
 
-Device group definitions can also include multiple values for each condition. You can set multiple tags, device names, and domains to the definition of a single device group.
+A device group definition can include multiple values for each condition. You can set multiple tags, device names, and domains to the definition of a single device group.
 
 1. Create a new device group, then select **Devices** tab.
 1. Add the first value for one of the conditions.
@@ -109,9 +114,10 @@ Device group definitions can also include multiple values for each condition. Yo
 > Use the 'OR' operator between rows of the same condition type, which allows multiple values per property.
 > You can add up to 10 rows (values) for each property type - tag, device name, domain.
 
-For more information on linking to device groups definitions, see [Device groups - Microsoft 365 security](https://sip.security.microsoft.com/homepage).
+For more information about device group definitions, see [Device groups - Microsoft 365 security](https://sip.security.microsoft.com/homepage).
 
-## Related topics
+<a name="related-topics"></a>
+## Related content
 
 - [Manage portal access using role-based based access control](rbac.md)
 - [Create and manage device tags](machine-tags.md)

@@ -12,7 +12,7 @@ ms.collection:
 - magic-ai-copilot 
 ms.topic: article
 ms.update-cycle: 180-days
-ms.date: 01/08/2026
+ms.date: 05/08/2026
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1012
 appliesto:
@@ -49,7 +49,7 @@ If you're new to Security Copilot, you should familiarize yourself with it by re
 You can access Copilot in two ways:
 
 - Security Copilot is embedded in the Microsoft Defender portal to help provide security teams with enhanced capabilities to investigate and respond to incidents, hunt for threats, and protect their organization with relevant threat intelligence.
-- Defender Chat experience (preview) is an open prompt chat assistant built into Microsoft Defender. It helps SOC analysts investigate threats, explore incidents, and answer security questions in plain language, without needing to navigate multiple screens or write complex queries. This preview isn't yet available in Australia or New Zealand.
+- Defender Chat experience (preview) is an open prompt chat assistant built into Microsoft Defender. It helps SOC analysts investigate threats, explore incidents, and answer security questions in plain language, without needing to navigate multiple screens or write complex queries.
 
 Copilot in Defender operates using [Microsoft's AI principles](https://www.microsoft.com/ai/responsible-ai). For more information, see the [Application card for Microsoft Copilot in Microsoft Defender](application-card-copilot-defender.md).
 
@@ -128,7 +128,7 @@ These AI tools enable security teams to tackle attack investigations in a timely
 
 #### Summarize incidents quickly
 
-Investigating incidents with multiple alerts can be a daunting task. To immediately understand an incident, you can ask Copilot to [summarize an incident](security-copilot-m365d-incident-summary.md) for you. Copilot creates an overview of the attack. The overview contains essential information for you to understand what transpired in the attack, what assets are involved, and the timeline of the attack. Copilot automatically creates a summary when you open an incident page. It also helps you understand the assets involved and how to act by suggesting prompts about related identities, devices, IPs, and so on.
+Investigating incidents with multiple alerts can be a daunting task. To immediately understand an incident, you can tap Copilot to [summarize an incident](security-copilot-m365d-incident-summary.md) for you. Copilot creates an overview of the attack. The overview contains essential information for you to understand what transpired in the attack, what assets are involved, and the timeline of the attack. Copilot automatically creates a summary when you navigate to an incident's page. It also helps you understand the assets involved and how to act by suggesting prompts about related identities, devices, IPs, and so on.
 
 :::image type="content" source="media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png" alt-text="Screenshot of the incident summary card on the Copilot pane as seen in the Microsoft Defender incident page." lightbox="media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png":::
 
@@ -167,6 +167,32 @@ Quickly assess a user's risk by generating an [identity summary](security-copilo
 Security operations teams usually write reports to record important information. These reports include response actions taken, their results, the team members involved, and other information to aid future security decisions. Documenting incidents can be time-consuming because an effective incident report must contain the incident summary, actions taken, and who took what actions and when. Copilot [generates an incident report](security-copilot-m365d-create-incident-report.md) by consolidating the incident summary, response actions, and team involvement.
 
 :::image type="content" source="media/copilot-in-defender/create-report/incident-report-main1-small.png" alt-text="Screenshot of the incident report card in the incident page showing the top half of the card." lightbox="media/copilot-in-defender/create-report/incident-report-main1.png":::
+
+### Manage incidents in a unified experience
+
+The Copilot tab consolidates incident-related actions into a single, unified chat experience, eliminating the need to switch between multiple panels or layers.
+
+:::image type="content" source="media/security-copilot-in-microsoft-365-defender/copilot-tab.png" alt-text="Screenshot that shows the Copilot tab in the top right corner of the screen.":::
+
+Select the **Copilot** tab on the incident page to view the incident summary, get recommendations, or generate a report.
+
+:::image type="content" source="./media/security-copilot-in-microsoft-365-defender/copilot-tab-details.png" alt-text="Screenshot that shows the available options in the Copilot tab, including incident summary, recommendations, and report generation.":::
+
+Select **Summarize** to generate the incident summary or view it if it already exists. You can view summaries and interact with of all your events and related prompts in the same panel.
+
+You can run multiple summary requests in parallel for different entities (such as users and devices), and the results are cached unless regenerated.
+
+:::image type="content" source="media/security-copilot-in-microsoft-365-defender/copilot-integrations.png" alt-text="Screenshot that shows the Copilot summary panel with multiple summary suggestions." lightbox="media/security-copilot-in-microsoft-365-defender/copilot-integrations.png":::
+
+:::image type="content" source="media/security-copilot-in-microsoft-365-defender/summarize-device.png" alt-text="Screenshot that shows the Copilot panel generating a device summary in response to a summarize request in the device page.":::
+
+When you close a summary panel, the summary process stops.
+
+Incident chats persist across incidents. When you switch to a different incident, the chat automatically closes, but when you reopen the Copilot panel you see the chat history. This lets you compare summaries of different incidents and navigate to relevant reports.
+
+:::image type="content" source="media/security-copilot-in-microsoft-365-defender/multiple-summaries.png" alt-text="Screenshot that shows the Copilot chat history with summaries of different incidents." lightbox="media/security-copilot-in-microsoft-365-defender/multiple-summaries.png":::
+
+You can also select **Recommendations** to get AI-powered recommendations for next steps on how to investigate and remediate the incident, or select **Report** to generate a comprehensive report of the incident that includes the summary, timelines, involved entities, and more.
 
 ### Hunt like a pro
 

@@ -1,7 +1,7 @@
 ### YamlMime:FAQ
 metadata:
   title: Endpoint detection and response (EDR) in block mode frequently asked questions (FAQ)
-  description: Find answers to frequently asked questions about Microsoft Defender for Endpoint's attack surface reduction rules.
+  description: Find answers to frequently asked questions about endpoint detection and response (EDR) in Microsoft Defender for Endpoint.
   ms.service: defender-endpoint
   ms.subservice: ngp
   ms.localizationpriority: medium
@@ -9,7 +9,7 @@ metadata:
   author: paulinbar
   ms.author: painbar
   ms.reviewer: sugamar, kausd
-  ms.custom: 
+  ms.custom:
   - asr
   - partner-contribution
   ms.topic: faq
@@ -47,7 +47,7 @@ sections:
       - question: |
           Why do I need to keep Microsoft Defender Antivirus up to date?
         answer: |
-          Because Microsoft Defender Antivirus detects and remediates malicious items, it's important to keep it up to date. For EDR in block mode to be effective, it uses the latest device learning models, behavioral detections, and heuristics. The [Defender for Endpoint](microsoft-defender-endpoint.md) stack of capabilities works in an integrated manner. To get best protection value, you should keep Microsoft Defender Antivirus up to date. See [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md).    
+          Because Microsoft Defender Antivirus detects and remediates malicious items, it's important to keep it up to date. For EDR in block mode to be effective, it uses the latest device learning models, behavioral detections, and heuristics. The [Defender for Endpoint](microsoft-defender-endpoint.md) stack of capabilities works in an integrated manner. To get best protection value, you should keep Microsoft Defender Antivirus up to date. See [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md).
 
       - question: |
           Why do we need cloud protection (MAPS) on?

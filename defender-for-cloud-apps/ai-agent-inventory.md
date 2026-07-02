@@ -2,34 +2,32 @@
 title: Discover and detect threats using the AI agents inventory (Preview)
 ms.author: abbyweisberg
 author: AbbyMSFT
-description: Learn how to view all of the AI Agents in your organization using Microsoft Defender.
+description: Learn how to view all of the AI agents in your organization using Microsoft Defender.
 ms.date: 04/14/2026
 ms.topic: how-to
 ms.service: defender-for-cloud-apps
 ms.reviewer: gayasalomon
 ai-usage: ai-assisted
-#customer-intent: As a security administrator, I want view all of the AI Agents in my organization, and detect threats on my AI agents using advanced hunting.
+#customer-intent: As a security administrator, I want to view all of the AI agents in my organization, and detect threats on my AI agents using advanced hunting.
 ---
 
-# Discover and protect your Copilot Studio AI Agents (Preview)
+# Discover and protect AI agents with Microsoft Defender (Preview)
 
-Microsoft Defender detects all Copilot Studio custom AI agents in your tenant and provides tools to identify misconfigured or potentially risky agents, and collects data from Copilot Studio for use in [advanced hunting](/defender-xdr/advanced-hunting-overview).
+Microsoft Defender detects all Copilot Studio custom AI agents in your tenant and provides tools to identify misconfigured or potentially risky agents, and collects data from Copilot Studio for use in [advanced hunting](/defender-xdr/security-for-ai/ai-agent-detection-protection#investigate-ai-agent-threats-and-hunt-for-risks-using-advanced-hunting).
 
 ## Prerequisites
 
 To enable AI agent inventory and detection, you must:
+ - Have a Microsoft Agent 365 license
+  
+ Until July 1, 2026, you can access the Copilot Studio AI agent inventory and detection without a Microsoft Agent 365 license if you:
+ - Have a Microsoft Defender for Cloud Apps license 
+ - Opt in to the [Microsoft Defender for Cloud apps and Defender XDR preview features](https://security.microsoft.com/securitysettings/defender/preview_features) 
 
-- Have one of the following:
-  - A Microsoft Agent 365 license.
-  - Both a Microsoft Defender for Cloud Apps license and a Microsoft Copilot Studio license.
-
-- Opt in to the [Microsoft Defender preview features](https://security.microsoft.com/securitysettings/defender/preview_features) of:
-  - Microsoft Defender for Cloud
-  - Microsoft Defender XDR
 
 ## Enable discovery of Copilot Studio AI agents
 
-After you enable Security for AI, Microsoft Defender automatically discovers all Copilot Studio custom AI agents in your tenant. After discovery, you can view your agents in the [AI agent inventory](/defender-xdr/security-for-ai/ai-agent-inventory) and use [advanced hunting](/defender-xdr/advanced-hunting-overview) to investigate potential threats and misconfigurations.
+After you enable Security for AI, Microsoft Defender automatically discovers all Copilot Studio custom AI agents in your tenant. After discovery, you can view your agents in the [AI agent inventory](/defender-xdr/security-for-ai/ai-agent-inventory) and use [advanced hunting](/defender-xdr/security-for-ai/ai-agent-detection-protection#investigate-ai-agent-threats-and-hunt-for-risks-using-advanced-hunting) to investigate potential threats and misconfigurations.
 
 > [!NOTE]
 > The onboarding process for the AI agent inventory requires collaboration with Power Platform administrators.

@@ -1,15 +1,16 @@
 ---
 title: Create and perform incident tasks in Microsoft Sentinel using playbooks
-description: This article explains how to use playbooks to create (and optionally perform) incident tasks, in order to manage complex analyst workflow processes in Microsoft Sentinel.
+description: Use the Microsoft Sentinel connector's Add task action in playbooks to create or complete incident tasks automatically, with support for Standard and Consumption Logic Apps workflows.
 ms.topic: how-to
-author: mberdugo
 ms.author: monaberdugo
-ms.date: 03/14/2024
+author: mberdugo
+ms.date: 06/12/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 #Customer intent: As a security analyst, I want to automate incident management tasks using playbooks so that I can streamline and manage complex workflows efficiently.
 
@@ -19,7 +20,7 @@ ms.custom: sfi-image-nochange
 
 This article explains how to use playbooks to create, and optionally perform, incident tasks to manage complex analyst workflow processes in Microsoft Sentinel.
 
-Use the **Add task** action in a playbook, in the Microsoft Sentinel connector, to automatically add a task to the incident that triggered the playbook. Both Standard and Consumption workflows are supported.
+Use the **Add task** action in a playbook, in the Microsoft Sentinel connector, to automatically add a task to the incident that triggered the playbook. Both Standard and Consumption workflows are supported. Before you begin, make sure you meet the [prerequisites](#prerequisites), including required role assignments.
 
 > [!TIP]
 > Incident tasks can be created automatically not only by playbooks, but also by automation rules, and also manually, ad-hoc, from within an incident.
@@ -29,6 +30,8 @@ For more information, see [Use tasks to manage incidents in Microsoft Sentinel](
 
 ## Prerequisites
 
+Before you begin, make sure you have the following roles and permissions:
+
 - The **Microsoft Sentinel Responder** role is required to view and edit incidents, which is necessary to add, view, and edit tasks.
 
 - The **Logic Apps Contributor** role is required to create and edit playbooks.
@@ -37,13 +40,13 @@ For more information, see [Microsoft Sentinel playbook prerequisites](automate-r
 
 ## Use a playbook to add a task and perform it
 
-This section provides a sample procedure for adding a playbook action that does the following:
+The following sample procedure shows how to add playbook actions that reset a compromised user's password:
 
 - Adds a task to the incident, resetting a compromised user's password
 - Adds another playbook action to send a signal to Microsoft Entra ID Protection (AADIP) to actually reset the password
 - Adds a final playbook action to mark the task in the incident complete.
 
-To add and configure these actions, take the following steps:
+To add and configure the task-creation, password-reset, and task-completion actions, take the following steps:
 
 1. From the **Microsoft Sentinel** connector, add the **Add task to incident** action and then:
 
@@ -71,7 +74,7 @@ To add and configure these actions, take the following steps:
     1. Select the **Confirm a risky user as compromised (Preview)** action.  
     1. Add the **Accounts Microsoft Entra user ID** dynamic content item to the **userIds Item - 1** field.
 
-    This action sets in motion processes inside Microsoft Entra ID Protection to reset the user's password.
+    The **Confirm a risky user as compromised** action sets in motion processes inside Microsoft Entra ID Protection to reset the user's password.
 
     :::image type="content" source="../media/create-tasks-playbook/confirm-compromised.png" alt-text="Screenshot shows sending entities to AADIP to confirm compromise.":::
 
@@ -86,12 +89,12 @@ To add and configure these actions, take the following steps:
 
 ## Use a playbook to add a task conditionally
 
-This section provides a sample procedure for adding a playbook action that researches an IP address that appears in an incident.
+The following sample procedure shows how to add a playbook action that researches an IP address appearing in an incident.
 
 - If the results of this research are that the IP address is malicious, the playbook creates a task for the analyst to disable the user using that IP address.
 - If the IP address isn't a known malicious address, the playbook creates a different task, for the analyst to contact the user to verify the activity.
 
-To add and configure these actions, take the following steps:
+To add and configure the IP-research condition and conditional task-creation actions, take the following steps:
 
 1. From the Microsoft Sentinel connector, add the **Entities - Get IPs** action. Add the **Entities** dynamic content item (from the Microsoft Sentinel incident schema) to the **Entities list** field. For example:
 
@@ -117,7 +120,7 @@ To add and configure these actions, take the following steps:
     1. Add the **Last analysis statistics Malicious** dynamic content item from the **Get an IP report** output. You might have to select **See more** to find it.
     1. Select the **is greater than** operator and enter `0` as the value. 
     
-    This condition asks the question "Did the Virus Total IP report have any results?" For example:
+    The **Last analysis statistics Malicious is greater than 0** condition checks whether the Virus Total IP report returned any malicious results. For example:
 
     :::image type="content" source="../media/create-tasks-playbook/set-condition.png" alt-text="Screenshot shows how to set a true-false condition in a playbook." border="false":::
 
@@ -145,8 +148,6 @@ To add and configure these actions, take the following steps:
 
 
 ## Related content
-
-For more information, see:
 
 - [Investigate incidents with Microsoft Sentinel](../investigate-cases.md)
 - [Create incident tasks in Microsoft Sentinel using automation rules](../create-tasks-automation-rule.md)

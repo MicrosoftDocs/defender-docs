@@ -1,8 +1,9 @@
 ---
 title: Best practices for Microsoft Sentinel
 description: Learn about best practices to employ when managing your Log Analytics workspace for Microsoft Sentinel.
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: abhiag
 ms.topic: best-practice
 ms.date: 07/16/2025
 
@@ -57,7 +58,7 @@ More than ingesting alerts and logs from other sources, Microsoft Sentinel also 
 
 ## Create custom integration solutions (partners) 
 
-For partners who want to create custom solutions that integrate with Microsoft Sentinel, see [Best practices for partners integrating with Microsoft Sentinel](partner-integrations.md).
+For partners who want to create custom solutions that integrate with Microsoft Sentinel, see [Best practices for partners integrating with Microsoft Sentinel](isv/partner-integrations.md).
 
 ## Plan incident management and response process
 

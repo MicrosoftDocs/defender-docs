@@ -1,9 +1,14 @@
 ---
 title: Advanced log collector management | Microsoft Defender for Cloud Apps
-description: This article provides information about advanced management tasks for Defender for Cloud Apps cloud discovery log collectors.
-ms.date: 01/14/2026
+description: Configure advanced settings for Defender for Cloud Apps cloud discovery log collectors, including FTP configuration, proxy setup, certificate management, custom ports, and traffic validation.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: Mravela
+ms.custom:
+  - msecd-doc-authoring-1014
+  - sfi-image-nochange
+  - sfi-ropc-nochange
+ai-usage: ai-assisted
 ---
 # Advanced log collector management
 
@@ -16,11 +21,11 @@ Defender for Cloud Apps cloud discovery continues to focus on base firewall form
 This article describes how to modify the configuration for your Defender for Cloud Apps cloud discovery Docker.
 
 ## Modify the log collector FTP configuration
-Use these steps in the following sections to modify the configuration for your Defender for Cloud Apps cloud discovery Docker.
+Use the steps in [Verify the log collector version](#verify-the-log-collector-version), [Change the FTP password](#change-the-ftp-password), and [Add certificate files](#add-certificate-files) to modify the configuration for your Defender for Cloud Apps cloud discovery Docker.
 
 ### Verify the log collector version
 
-To verify the version of the log collector currently installed on your system, connect to the log collector host and run:
+To verify the version of the log collector currently installed on your system, connect to the log collector host and run the following command to check the installed collector component version:
 
 ``` bash
 cat /var/adallom/versions | grep columbus-
@@ -45,7 +50,7 @@ This procedure describes how to change the password used to access log collector
     docker exec -it <collector name> pure-pw mkdb
     ```
 
-You should be able to view the following contents:
+In the log collector's FTP root directory, you should be able to view the following contents:
 
 - `run_logs`
 - `ssl_update`
@@ -91,9 +96,9 @@ Files are mandatory. If any of the files for the receiver type are missing, the 
 
 ## Enable the log collector behind a proxy
 
-If you're running behind a proxy, the log collector might have issues sending data to Defender for Cloud Apps. For example, this might happen because the log collector doesn't trust the proxy's root certificate authority and isn't able to connect to Microsoft Defender for Cloud Apps to retrieve its configuration or upload the received logs.
+If you're running behind a proxy, the log collector might have issues sending data to Defender for Cloud Apps. For example, connection failures might happen because the log collector doesn't trust the proxy's root certificate authority and isn't able to connect to Microsoft Defender for Cloud Apps to retrieve its configuration or upload the received logs.
 
-The following procedures describe how to enable your log collector behind a proxy.
+To enable your log collector behind a proxy, [set up the log collector behind a proxy](#set-up-the-log-collector-behind-a-proxy), [validate Docker log collector container creation](#validate-docker-log-collector-container-creation), [copy the proxy root CA certificate to the container](#copy-the-proxy-root-ca-certificate-to-the-container), and [set the configuration to work with the CA certificate](#set-the-configuration-to-work-with-the-ca-certificate).
 
 >[!TIP]
 > You might also want to change the certificates used by the log collector for Syslog or FTP, or resolve connectivity issues from the firewalls and proxies to the log collector. For more information, see [Modify the log collector FTP configuration](#modify-the-log-collector-ftp-configuration).
@@ -121,13 +126,15 @@ You should see something similar to the following output:
 
 From your virtual machine, copy the CA certificate to the Defender for Cloud Apps container. In the following example, the container is named *Ubuntu-LogCollector* and the CA certificate is named *Proxy-CA.crt*.
 
-The following command copies the certificate to a folder in the running container. Run the command on the Ubuntu host:
+The following command copies the proxy CA certificate into the running container's discovery folder so the log collector can trust the proxy. Run the command on the Ubuntu host:
 
 ```bash
 docker cp Proxy-CA.crt Ubuntu-LogCollector:/var/adallom/ftp/discovery
 ```
 
 ### Set the configuration to work with the CA certificate
+
+Perform the following steps to import the proxy CA certificate into the container's Java KeyStore so the log collector trusts the proxy.
 
 1. Go into the container. Run the following command to open bash in the log collector container:
 
@@ -144,7 +151,7 @@ docker cp Proxy-CA.crt Ubuntu-LogCollector:/var/adallom/ftp/discovery
 
 1. Import the root certificate that you copied earlier, from the *discovery* folder into the Java KeyStore and define a password.
 
-    The default password is `changeit`. For more information, see [Change the Java KeyStore password](#change-the-java-keystore-password).
+    The default password is `changeit`. To change the default password, see [Change the Java KeyStore password](#change-the-java-keystore-password).
 
     ```bash
     ./keytool --import --noprompt --trustcacerts --alias SelfSignedCert --file /var/adallom/ftp/discovery/Proxy-CA.crt --keystore ../lib/security/cacerts --storepass <password>
@@ -184,14 +191,16 @@ For example:
 
 The log collector is now able to communicate with Defender for Cloud Apps. After sending data to Defender for Cloud Apps, the log collector's status changes from **Healthy** to **Connected**. For example:
 
-![Screenshot of the upload status.](media/log-collector-advanced-tasks/docker-5.png)
+![Screenshot of the log collector status changing from Healthy to Connected after uploading data.](media/log-collector-advanced-tasks/docker-5.png)
 
 >[!NOTE]
-> If you have to update the configuration of the log collector, to add or remove a data source for example, you normally have to **delete** the container and perform the previous steps again. 
+> If you have to update the configuration of the log collector, to add or remove a data source for example, you normally have to **delete** the container and repeat the steps in [Set up the log collector behind a proxy](#set-up-the-log-collector-behind-a-proxy) through [Set the log collector to run with the new configuration](#set-the-log-collector-to-run-with-the-new-configuration). 
 >
 > To avoid this, you can re-run the *collector_config* tool with the new API token generated in the Defender for Cloud Apps.
 
 ### Change the Java KeyStore password
+
+Perform the following steps to change the Java KeyStore password used by the log collector.
 
 1. Stop the Java KeyStore server.
 1. Open a bash shell inside the container and go to the *appdata/conf* folder.
@@ -225,7 +234,7 @@ Many companies have the requirement to move data to a separate partition. This p
 
 This procedure describes moving data to a partition called *datastore* and assumes you have already mounted the partition. For example:
 
-![List of Linux partitions.](media/log-collector-advanced-tasks/move-lc-new-partition-linux-disk-list.png)
+![Screenshot of Linux disk partitions showing the mounted datastore partition for log collector data.](media/log-collector-advanced-tasks/move-lc-new-partition-linux-disk-list.png)
 
 Adding and configuring a new partition on your Linux host isn't in the scope of this guide.
 
@@ -255,7 +264,7 @@ Adding and configuring a new partition on your Linux host isn't in the scope of 
     service docker start
     ```
 
-1. Optionally, verify the status of your log collector. Run:
+1. Optionally, verify that the log collector container is running by listing the active Docker containers. Run:
 
     ```bash
     docker ps
@@ -281,7 +290,7 @@ This procedure describes how to review your log collector disk usage and locatio
     du -sh /var/lib/docker/overlay2/<log_collector_id>/
     ```
 
-    :::image type="content" source="media/log-collector-advanced-tasks/inspect-lc-linux-disk-usage-size.png" alt-text="Screenshot of how to identify the log collector size on disk." lightbox="media/log-collector-advanced-tasks/inspect-lc-linux-disk-usage-size.png":::
+    :::image type="content" source="media/log-collector-advanced-tasks/inspect-lc-linux-disk-usage-size.png" alt-text="Screenshot of the du command output showing the log collector directory size on disk." lightbox="media/log-collector-advanced-tasks/inspect-lc-linux-disk-usage-size.png":::
 
 
     > [!NOTE]
@@ -297,6 +306,8 @@ The downloaded image can be imported either in your private repository or direct
 
 ### Prerequisites
 
+Before you begin, make sure the following prerequisites are met.
+
 1. Make sure that you have Docker installed on your host. For example, use one of the following downloads:
 
     - <https://download.docker.com/linux/ubuntu>
@@ -304,13 +315,15 @@ The downloaded image can be imported either in your private repository or direct
 
 1. After the download, use Docker's [offline installation guide](https://docs.docker.com/engine/install/binaries/) to install your operating system.
 
-    Start the process by [exporting the log collector image](#export-the-log-collector-image-from-your-docker-hub) and then [import the image to your destination host](#import-and-load-the-log-collector-image-to-your-destination-host).
+    Start the offline transfer workflow by [exporting the log collector image](#export-the-log-collector-image-from-your-docker-hub) and then [importing the image to your destination host](#import-and-load-the-log-collector-image-to-your-destination-host).
 
 ### Export the log collector image from your Docker Hub
 
-The following procedures describe how to export the log collector image, using Linux or Windows.
+To export the log collector image, use [Export the image on Linux](#export-the-image-on-linux) or [Export the image on Windows](#export-the-image-on-windows), depending on your operating system.
 
 #### Export the image on Linux
+
+Use the following steps to export the log collector image from a Linux machine.
 
 1. On a Linux computer that has access to the Docker Hub, run the following command to install Docker and download the log collector image.
 
@@ -334,6 +347,8 @@ The following procedures describe how to export the log collector image, using L
 
 
 #### Export the image on Windows
+
+Use the following steps to export the log collector image from a Windows machine.
 
 1. On a Windows 10 computer that has access to the Docker Hub, install [Docker Desktop](https://docs.docker.com/docker-for-windows/install/).
 
@@ -359,7 +374,7 @@ This procedure describes how to transfer the exported image to your destination 
 
 1. Upload the log collector image to your destination host under `/tmp/`. For example:
 
-    ![Screenshot of uploading the log collector to the destination host.](media/log-collector-advanced-tasks/move-lc-to-accessible-host-upload-host-winscp.png)
+    ![Screenshot of WinSCP transfer window showing the log collector image file being uploaded to the destination host.](media/log-collector-advanced-tasks/move-lc-to-accessible-host-upload-host-winscp.png)
 
 1. On the destination host, import the log collector image to the Docker images repository. Run:
 
@@ -369,7 +384,7 @@ This procedure describes how to transfer the exported image to your destination 
 
     For example:
 
-    ![Screenshot of importing the log collector image to the Docker repo.](media/log-collector-advanced-tasks/move-lc-to-accessible-host-import-docker-repo.png)
+    ![Screenshot of the docker load command output confirming the log collector image was added to the local repository.](media/log-collector-advanced-tasks/move-lc-to-accessible-host-import-docker-repo.png)
 
 1. Optionally, verify that the import completed successfully. Run:
 
@@ -403,7 +418,7 @@ Use the following steps to define custom ports:
 
 1. On the **Log collectors** tab, add or edit a log collector and after updating the data sources, copy the run command from the dialog. For example:
 
-    ![Copy run command from log collector wizard.](media/log-collector-advanced-tasks/define-lc-custom-ports-copy-default-run-command.png)
+    ![Screenshot of the log collector wizard showing the generated run command available to copy.](media/log-collector-advanced-tasks/define-lc-custom-ports-copy-default-run-command.png)
 
     If used as provided, the wizard-provided command configures the log collector to use ports 514/udp and 515/udp. For example:
 
@@ -449,7 +464,7 @@ Use the following steps to verify that traffic is received by log collectors:
 
         If everything is correctly configured, you should see network traffic from your appliances. For example:
 
-        :::image type="content" source="media/log-collector-advanced-tasks/validate-traffic-and-log-format-tcpdump-analyze-traffic.png" alt-text="Screenshot of analyzing network traffic via tcpdump." lightbox="media/log-collector-advanced-tasks/validate-traffic-and-log-format-tcpdump-analyze-traffic.png":::
+        :::image type="content" source="media/log-collector-advanced-tasks/validate-traffic-and-log-format-tcpdump-analyze-traffic.png" alt-text="Screenshot of tcpdump output showing incoming Syslog traffic from appliances on port 514." lightbox="media/log-collector-advanced-tasks/validate-traffic-and-log-format-tcpdump-analyze-traffic.png":::
 
     - **Use *netcat*, or a similar command to analyze network traffic on the host machine**:
 
@@ -476,7 +491,7 @@ Use the following steps to verify that traffic is received by log collectors:
             cat <path_to_downloaded_sample_log>.log | nc -w 0 localhost <datasource_port>
             ```
 
-        If the collector is correctly configured, the log data is present in the messages file and shortly after that it's uploaded to Defender for Cloud Apps.
+        If the collector is correctly configured, the log data is present in the messages file and is uploaded to Defender for Cloud Apps shortly after being written.
 
     - **Inspect relevant files within the Defender for Cloud Apps Docker container**:
 
@@ -502,13 +517,13 @@ Use the following steps to verify that traffic is received by log collectors:
 
 1. Review the logs that were uploaded to Defender for Cloud Apps in the `/var/adallom/discoverylogsbackup` directory. For example:
 
-    ![Review uploaded log files.](media/log-collector-advanced-tasks/validate-traffic-and-log-format-review-uploaded-logs.png)
+    ![Screenshot of uploaded log files in the discoverylogsbackup directory showing collected Syslog entries.](media/log-collector-advanced-tasks/validate-traffic-and-log-format-review-uploaded-logs.png)
 
 1. Validate the log format received by the log collector by comparing the messages stored in `/var/adallom/discoverylogsbackup` to the sample log format provided in the Defender for Cloud Apps **Create log collector** wizard.
 
 ### Write output of the *messages* file to a local file
 
-If you want to use your own sample log but don't have access to the appliance, use the following commands to write the output of the *messages* file, located in the log collector's syslog directory, to a local file on the host:
+If you want to use your own sample log but don't have access to the appliance, you can capture incoming Syslog messages from a specific data source port to a local file for troubleshooting. Use the following command to continuously tail the *messages* file from the log collector's syslog directory and write the output to a local file on the host:
 
 ```bash
 docker exec CustomerLogCollectorName tail -f -q /var/adallom/syslog/<datasource_port>/messages > /tmp/log.log

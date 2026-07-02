@@ -1,18 +1,22 @@
 ---
 title: Protect your Azure environment
-description: Learn how about connecting your Azure app to Defender for Cloud Apps using the API connector.
-ms.date: 01/07/2026
+description: Learn how to connect your Azure environment to Microsoft Defender for Cloud Apps using the API connector to monitor activities and detect threats.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # How Defender for Cloud Apps helps protect your Azure environment
 
-Azure is an IaaS provider that enables your organization to host and manage their entire workloads in the cloud. Along with the benefits of using infrastructure in the cloud, your organization's most critical assets might be exposed to threats. Exposed assets include storage instances with potentially sensitive information, compute resources that operate some of your most critical applications, ports, and virtual private networks that enable access to your organization.
+Azure is a cloud provider that lets your organization host and manage its workloads. Cloud hosting has many benefits, but it can also expose critical assets to threats. These assets include storage with sensitive data, compute resources that run key apps, ports, and virtual private networks.
 
-Connecting Azure to Defender for Cloud Apps helps you secure your assets and detect potential threats by monitoring administrative and sign-in activities, notifying on possible brute force attacks, malicious use of a privileged user account, and unusual deletions of VMs.
+When you connect Azure to Defender for Cloud Apps, you can secure your assets and spot threats. The service monitors admin and sign-in activity. It alerts you to brute force attacks, misuse of privileged accounts, and unusual VM deletions.
 
 ## Main threats
+
+The main threats to your Azure environment include:
 
 - Abuse of cloud resources
 - Compromised accounts and insider threats
@@ -20,6 +24,8 @@ Connecting Azure to Defender for Cloud Apps helps you secure your assets and det
 - Resource misconfiguration and insufficient access control
 
 ## How Defender for Cloud Apps helps to protect your environment
+
+Use the following best practices to protect your Azure environment with Defender for Cloud Apps:
 
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 - [Limit exposure of shared data and enforce collaboration policies](best-practices.md#limit-exposure-of-shared-data-and-enforce-collaboration-policies)
@@ -37,7 +43,7 @@ For more information about creating policies, see [Create a policy](control-clou
 
 ## Automate governance controls
 
-In addition to monitoring for potential threats, you can apply and automate the following Azure governance actions to remediate detected threats:
+You can also automate Azure governance actions to fix detected threats. The following table lists the available actions:
 
 | Type | Action |
 | ---- | ---- |
@@ -51,7 +57,7 @@ Review our best practices for [securing and collaborating with guests](best-prac
 
 ## Connect Azure to Microsoft Defender for Cloud Apps
 
-This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Azure account using the app connector API. This connection gives you visibility into and control over Azure use. For information about how Defender for Cloud Apps protects Azure, see [Protect Azure](protect-azure.md).
+Use the app connector API to connect your Azure account to Defender for Cloud Apps. This connection gives you visibility into and control over Azure use. To learn how Defender for Cloud Apps protects Azure, see [Protect Azure](protect-azure.md).
 
 ### Prerequisites
 
@@ -90,5 +96,5 @@ When you connect Azure to Defender for Cloud Apps, keep in mind the following sc
 
 - If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
 
-- [Control cloud apps with policies](control-cloud-apps-with-policies.md)
+- To learn how to create and manage policies for connected apps, see [Control cloud apps with policies](control-cloud-apps-with-policies.md).
 

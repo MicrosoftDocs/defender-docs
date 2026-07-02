@@ -1,7 +1,7 @@
 ---
 title: Accessing incident notifications and DENs using Graph security API
 ms.reviewer:
-description: The method to access Defender Experts Notifications using Graph security API
+description: Learn how to access Defender Experts Notifications (DENs) and related incident details by using the Microsoft Graph security API.
 ms.service: defender-experts-for-hunting
 ms.author: pauloliveria
 author: poliveria
@@ -10,12 +10,14 @@ ms.collection:
   - m365-security
   - tier1
 ms.topic: how-to
-ms.custom: 
+ms.custom:
+- msecd-doc-authoring-1014
 - cx-ti
 - cx-ean
-ms.date: 10/30/2024
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender XDR
+ai-usage: ai-assisted
 ---
 
 # Access incident notifications using Graph API
@@ -23,7 +25,7 @@ appliesto:
 [Defender Experts Notifications](onboarding-defender-experts-for-hunting.md#receive-defender-experts-notifications) are incidents that have been generated from hunting conducted by Defender Experts in your environment. They contain information regarding the hunting investigation and recommended actions provided by Defender Experts. You can now access DENs using the [Microsoft Graph security API](/graph/api/resources/security-api-overview).
 
 > [!NOTE]
-> Any incident in the Microsoft Defender portal is a collection of correlated alerts. [Learn more](/graph/api/resources/security-incident)
+> Any incident in the Microsoft Defender portal is a collection of correlated alerts. [Microsoft Graph security incident resource type](/graph/api/resources/security-incident)
 
 The following Defender Experts Notification details are available in the Microsoft Defender portal:
 
@@ -35,14 +37,14 @@ The following Defender Experts Notification details are available in the Microso
 In Microsoft Graph security API, the following fields are also available:
 
 - **Graph endpoint** -  <https://graph.microsoft.com/beta/security/incidents>
-- The following **field names** that correspond to the details mentioned earlier:
+- The following **field names** that correspond to the Defender Experts Notification details listed above:
   - displayName
   - description
   - recommendedActions
   - recommendedHuntingQueries
 
 > [!NOTE]
-> These fields will soon be available in Graph v1.0 endpoint. For more information, see [Microsoft Graph REST API v1.0](/graph/api/resources/security-incident)
+> The displayName, description, recommendedActions, and recommendedHuntingQueries fields will soon be available in the Graph v1.0 endpoint. For more information, see [Microsoft Graph REST API v1.0](/graph/api/resources/security-incident)
 
 Your approach to consuming Defender Experts Notifications from the API will vary depending on the downstream system you intend to use and your specific requirements. However, the following steps are a basic implementation to help you get started:
 
@@ -61,7 +63,8 @@ Your approach to consuming Defender Experts Notifications from the API will vary
 3. Continue reading the remaining fields for such incidents.
 4. Synchronize the Defender Experts Notification (DEN) information into your downstream tool (for example, ServiceNow).
 
-### Next step
+<a name="next-step"></a>
+## Next step
 
 - [Collaborate with Experts on Demand](experts-on-demand.md)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

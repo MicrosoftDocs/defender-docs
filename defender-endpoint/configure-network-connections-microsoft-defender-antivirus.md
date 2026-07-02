@@ -7,8 +7,8 @@ ms.localizationpriority: medium
 author: paulinbar
 ms.author: painbar
 ms.topic: how-to
-ms.custom: nextgen
-ms.date: 10/20/2025
+ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 06/17/2026
 ms.reviewer: yongrhee; pahuijbr
 ms.collection:
 - m365-security
@@ -16,6 +16,7 @@ ms.collection:
 - mde-ngp
 appliesto:
   - Microsoft Defender Antivirus
+ai-usage: ai-assisted
 ---
 
 # Configure and validate Microsoft Defender Antivirus network connections
@@ -23,11 +24,13 @@ appliesto:
 > [!IMPORTANT]
 > This article contains information about configuring network connections only for Microsoft Defender Antivirus, when used without Microsoft Defender for Endpoint. If you are using **Microsoft Defender for Endpoint** (which includes Microsoft Defender Antivirus), see [Configure device proxy and Internet connectivity settings for Defender for Endpoint](configure-proxy-internet.md).
 
-To ensure Microsoft Defender Antivirus cloud-delivered protection works properly, your security team must configure your network to allow connections between your endpoints and certain Microsoft servers. This article lists which destinations must be accessible. It also provides instructions for validating connections. Configuring connectivity properly ensures you receive the best value from Microsoft Defender Antivirus cloud-delivered protection services.
+To ensure Microsoft Defender Antivirus cloud-delivered protection works properly, your security team must configure your network to allow connections between your endpoints and certain Microsoft servers. This article lists which destinations must be accessible. It also provides instructions for validating connections. Configuring connectivity properly ensures your organization receives the best value from Microsoft Defender Antivirus cloud-delivered protection services.
 
 ## Prerequisites
 
 ### Supported operating systems
+
+The following operating systems are supported:
 
 - Windows
 
@@ -38,9 +41,10 @@ The Microsoft Defender Antivirus cloud service provides fast, strong protection 
 After you've enabled the service, you need to configure your network or firewall to allow connections between network and your endpoints. Computers must have access to the internet and reach the Microsoft cloud services for proper operation.
 
 > [!NOTE]
-> The Microsoft Defender Antivirus cloud service delivers updated protection to your network and endpoints. The cloud service should not be considered as protection for or against files that are stored in the cloud; instead, the cloud service uses distributed resources and machine learning to deliver protection for your endpoints at a faster rate than the traditional Security intelligence updates, and applies to file-based and file-less threats, regardless of where they originate from.
+> The Microsoft Defender Antivirus cloud service delivers updated protection to your network and endpoints. The cloud service should not be considered as protection for or against files that are stored in the cloud; instead, the cloud service uses distributed resources and machine learning to deliver protection for your endpoints at a faster rate than the traditional Security intelligence updates, and applies to file-based and file-less threats, regardless of where the threats originate.
 
-## Services and URLs
+<a name="services-and-urls"></a>
+## Required Microsoft Defender Antivirus services and URLs
 
 The table in this section lists services and their associated website addresses (URLs).
 
@@ -57,31 +61,29 @@ Make sure that there are no firewall or network filtering rules denying access t
 
 ## Validate connections between your network and the cloud
 
-After allowing the URLs listed, test whether you're connected to the Microsoft Defender Antivirus cloud service. Test the URLs are correctly reporting and receiving information to ensure you're fully protected.
+After allowing the listed URLs, verify that your endpoints can connect to the Microsoft Defender Antivirus cloud service and can send and receive data correctly.
 
 <a name="use-the-cmdline-tool-to-validate-cloud-delivered-protection"></a>
 
 ### Use the MpCmdRun command-line tool to validate cloud-delivered protection
 
-Do the following steps to verify that your network can communicate with the Microsoft Defender Antivirus cloud service:
+Verify that your network can communicate with the Microsoft Defender Antivirus cloud service:
 
-1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
-   1. Open the **Start** menu, and then type **cmd**.
-   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
-2. In the elevated Command Prompt, run the following commands:
+In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
 
-   > [!TIP]
-   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
+> [!TIP]
+> The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, the command changes the directory to `%ProgramFiles%\Windows Defender`.
 
-   ```dos
-   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+```dos
+(set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
-   MpCmdRun.exe -ValidateMapsConnection
-   ```
+MpCmdRun.exe -ValidateMapsConnection
+```
 
 For more information about MpCmdRun, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
 
-#### Error messages
+<a name="error-messages"></a>
+#### Common cloud validation error messages
 
 Here are some error messages you might see:
 
@@ -106,15 +108,17 @@ ValidateMapsConnection failed to establish a connection to MAPS (hr=0x80072EFE h
 MpCmdRun.exe: hr = 0x80072EFE
 ```
 
-#### Root causes
+<a name="root-causes"></a>
+#### Root causes of cloud validation failures
 
-The root cause of these error messages is that the device doesn't have its system-wide `WinHttp` proxy configured. If you don't set this proxy, then the operating system isn't aware of the proxy and can't fetch the CRL (the operating system does this, not Defender for Endpoint), which means that TLS connections to URLs like `http://cp.wd.microsoft.com/` don't succeed. You see successful (response 200) connections to the endpoints, but the MAPS connections would still fail.
+The root cause of these error messages is that the device doesn't have its system-wide `WinHttp` proxy configured. If you don't set the system-wide WinHttp proxy, then the operating system isn't aware of the proxy and can't fetch the CRL (the operating system does this, not Defender for Endpoint), which means that TLS connections to URLs like `http://cp.wd.microsoft.com/` don't succeed. You see successful (response 200) connections to the endpoints, but the MAPS connections would still fail.
 
-#### Solutions
+<a name="solutions"></a>
+#### Solutions for cloud validation failures
 
 - **Preferred solution**: Configure the system-wide WinHttp proxy that allows the CRL check.
 
-- **Alternate solution**: Configuring the following `SSLOption` registry key and value to Disable the CRL check for SpyNet only. This registry key doesn't affect other services. This solution isn't a best practice since you're no longer checking for revoked certificates or certificate pinning.
+- **Alternate solution**: Configuring the following `SSLOption` registry key and value to Disable the CRL check for SpyNet only. The `SSLOptions` registry key doesn't affect other services. Disabling the CRL check isn't a best practice because the device no longer checks for revoked certificates or certificate pinning.
 
   ```text
   Windows Registry Editor Version 5.00
@@ -132,10 +136,10 @@ The root cause of these error messages is that the device doesn't have its syste
 
 ## Attempt to download a fake malware file from Microsoft
 
-You can download a [sample file](defender-endpoint-demonstration-cloud-delivered-protection.md) that Microsoft Defender Antivirus will detect and block if you're properly connected to the cloud.
+You can download a [cloud-delivered protection test file](defender-endpoint-demonstration-cloud-delivered-protection.md) that Microsoft Defender Antivirus will detect and block if your device is properly connected to the Microsoft Defender Antivirus cloud service.
 
 > [!NOTE]
-> The downloaded file is not exactly malware. It's a fake file designed to test if you're properly connected to the cloud.
+> The downloaded file is not exactly malware. It's a fake file designed to test whether your device is properly connected to the Microsoft Defender Antivirus cloud service.
 
 If you're properly connected, you'll see a warning Microsoft Defender Antivirus notification.
 
@@ -143,11 +147,13 @@ If you're using Microsoft Edge, you'll also see a notification message:
 
 :::image type="content" source="/defender/media/wdav-bafs-edge.png" alt-text="The notification that malware was found in Edge" lightbox="/defender/media/wdav-bafs-edge.png":::
 
-A similar message occurs if you're using Internet Explorer:
+Internet Explorer also displays a malware-detected notification:
 
 :::image type="content" source="/defender/media/wdav-bafs-ie.png" alt-text="The Microsoft Defender Antivirus notification that malware was found" lightbox="/defender/media/wdav-bafs-ie.png":::
 
 ### View the fake malware detection in your Windows Security app
+
+To view the fake malware detection in the Windows Security app, perform the following steps:
 
 1. On your task bar, select the Shield icon, open the **Windows Security** app. Or, search the **Start** for *Security*.
 
@@ -158,7 +164,7 @@ A similar message occurs if you're using Internet Explorer:
    > [!NOTE]
    > Versions of Windows 10 before version 1703 have a different user interface. See [Microsoft Defender Antivirus in the Windows Security app](microsoft-defender-security-center-antivirus.md).
 
-   The Windows event log will also show [Windows Defender client event ID 1116](troubleshoot-microsoft-defender-antivirus.yml).
+   The Windows event log will also show [Troubleshoot Microsoft Defender Antivirus event ID 1116](troubleshoot-microsoft-defender-antivirus.yml).
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:

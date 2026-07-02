@@ -1,16 +1,18 @@
 ---
 title: Integrate Microsoft Defender for Endpoint
 description: This article describes how to integrate Microsoft Defender for Endpoint with Defender for Cloud Apps for enhanced visibility into Shadow IT and risk management.
-ms.date: 05/12/2025
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: Mravela 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Integrate Microsoft Defender for Endpoint with Microsoft Defender for Cloud Apps
 
 [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint) is a security platform for intelligent protection, detection, investigation, and response. Defender for Endpoint protects endpoints from cyber threats, detects advanced attacks and data breaches, automates security incidents, and improves security posture.
 
-This article describes the out-of-the-box integration available between Microsoft Defender for Cloud Apps and Microsoft Defender for Endpoint, which  simplifies cloud discovery and enabling device-based investigation.
+The out-of-the-box integration between Microsoft Defender for Cloud Apps and Microsoft Defender for Endpoint simplifies cloud discovery and enables device-based investigation.
 
 > [!IMPORTANT]
 > This article focuses on shadow IT discovery capabilities from Defender for Endpoint logs. For more information on shadow IT governing capabilities via Defender for Endpoint, see [Govern discovered apps using Microsoft Defender for Endpoint](mde-govern.md).
@@ -48,7 +50,7 @@ This article describes the out-of-the-box integration available between Microsof
 
 ## How it works
 
-On its own, Defender for Cloud Apps collects logs from your endpoints using either [logs you upload](create-snapshot-cloud-discovery-reports.md) or by [configuring automatic log upload](discovery-docker.md). The out-of-the-box integration enables you to take advantage of the logs Defender for Endpoint's agent creates when it runs on Windows and monitors network transactions. Use this information for Shadow IT discovery across the Windows devices on your network.
+On its own, Defender for Cloud Apps collects logs from your endpoints using either [logs you upload](create-snapshot-cloud-discovery-reports.md) or by [configuring automatic log upload](discovery-docker.md). The out-of-the-box integration enables you to take advantage of the logs Defender for Endpoint's agent creates when it runs on Windows and monitors network transactions. Use these Defender for Endpoint network transaction logs for Shadow IT discovery across the Windows devices on your network.
 
 The integration doesn't require extra deployment steps or routing or mirroring traffic from your endpoints, and works as follows:
 
@@ -59,21 +61,22 @@ The integration doesn't require extra deployment steps or routing or mirroring t
 Customers integrating with macOS devices may observe a spike in CPU consumption.
 
 > [!TIP]
-> [Watch our videos](#related-videos) showing the benefits of using Defender for Endpoint with Defender for Cloud Apps.
->
+> Watch these videos showing the benefits of using Defender for Endpoint with Defender for Cloud Apps: [Discover and block Shadow IT using Defender for Endpoint](https://www.youtube.com/watch?v=MsHkTOoqSQo) and [Shadow IT discovery beyond the corporate network](https://www.youtube.com/watch?v=f8hbvbY1Hnc).
 
 ## Integrate Microsoft Defender for Endpoint with Defender for Cloud Apps <a name="how-to-integrate-microsoft-defender-for-endpoint-with-defender-for-cloud-apps"></a>
 
+Use the [Microsoft Defender portal](https://security.microsoft.com), the central management portal for Microsoft Defender services, to configure the integration.
+
 To enable Defender for Endpoint integration with Defender for Cloud Apps:
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), from the navigation pane, select **Settings** > **Endpoints** > **General** > **Advanced features**.
+1. In the Microsoft Defender portal, from the navigation pane, select **Settings** > **Endpoints** > **General** > **Advanced features**.
 1. Toggle the **Microsoft Defender for Cloud Apps** to **On**.
 1. Select **Save preferences**.
 
 >[!NOTE]
 > It takes up to two hours after you enable the integration for the data to show up in Defender for Cloud Apps.
 >
-![Screenshot of the Defender for Endpoint settings.](media\turn-on-advanced-features-for-microsoft-defender-for-cloud-apps.png)
+![Screenshot of the Defender for Endpoint Advanced features settings page with the Microsoft Defender for Cloud Apps toggle enabled.](media\turn-on-advanced-features-for-microsoft-defender-for-cloud-apps.png)
 
 To configure the severity for alerts sent to Microsoft Defender for Endpoint:
 
@@ -85,6 +88,8 @@ To configure the severity for alerts sent to Microsoft Defender for Endpoint:
 
 ## Next steps
 
+After you enable the integration, use the following articles to investigate and govern discovered apps:
+
 > [!div class="nextstepaction"]
 > [Investigate apps discovered by Microsoft Defender for Endpoint](mde-investigation.md)
 
@@ -92,6 +97,8 @@ To configure the severity for alerts sent to Microsoft Defender for Endpoint:
 > [Govern apps discovered by Microsoft Defender for Endpoint](mde-govern.md)
 
 ## Related videos
+
+The following videos provide additional background and examples for using Defender for Endpoint with Defender for Cloud Apps.
 
 > [!div class="nextstepaction"]
 > [Discover and block Shadow IT using Defender for Endpoint](https://www.youtube.com/watch?v=MsHkTOoqSQo)

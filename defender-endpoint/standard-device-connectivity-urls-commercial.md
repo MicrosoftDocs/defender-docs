@@ -11,15 +11,19 @@ ms.collection:
 - m365-security
 - tier1
 ms.reviewer: pahuijbr
-ms.date: 03/11/2026
+ms.date: 06/17/2026
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Microsoft Defender for Endpoint standard connectivity URLs - commercial
 
-This article includes a list of the standard connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in commercial cloud environments.
+This article includes a list of the standard connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in commercial cloud environments. Use this list to configure your network firewall or proxy allow rules so that devices can communicate with the required Microsoft Defender for Endpoint services.
 
 ## Microsoft Defender URLs
+
+The following table lists the Microsoft Defender service URLs organized by geography and category. Allow these endpoints in your firewall or proxy to ensure proper device connectivity.
 
 |Service|Geography|Category|Port|Endpoint/URL|Endpoint/URL Description|Required or Optional|Windows 10, 11; Server 2022, 2019, 2016 (Unified Agent); Server 2012 R2 (Unified Agent)|Windows 7, 8.1|Windows Server 2008 R2, 2012 R2, 2016 (MMA Based)|Mac|Linux|Comments|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -38,12 +42,13 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|WW|Common (Linux)|443|`packages.microsoft.com`|Required to download and update the MDE Linux agent|Required|||||Yes||
 |Microsoft Defender for Endpoint|WW|Microsoft Defender for Endpoint|443|`login.windows.net`|Microsoft Defender for Endpoint Vulnerability assessment for network devices (network scanner)|Optional|Yes|Yes|Yes|||Supported on Windows 8 and above and Windows Server 2012 and above|
 |Microsoft Defender for Endpoint|WW|Microsoft Defender for Endpoint|443|`*.security.microsoft.com`|Microsoft Defender for Endpoint Vulnerability assessment for network devices (network scanner)|Optional|Yes|Yes|Yes|||Supported on Windows 8 and above and Windows Server 2012 and above|
+|Microsoft Defender for Endpoint|WW|Microsoft Defender for Endpoint|443|`reflector.defender.microsoft.com`|Used to probe IPv6 connectivity|Optional|Yes|Yes|Yes|Yes|Yes|Helps Microsoft Security Intelligence detect attacker activity|
 |Microsoft Defender for Endpoint|WW|Microsoft Defender for Endpoint|443|`*.blob.core.windows.net/networkscannerstable/*`|Microsoft Defender for Endpoint Vulnerability assessment for network devices (network scanner)|Optional|Yes|Yes|Yes|||Supported on Windows 8 and above and Windows Server 2012 and above|
 |Microsoft Defender for Endpoint|WW|Security Management|443|`enterpriseregistration.windows.net`|Security Management for Microsoft Defender for Endpoint - Azure Registration|Optional|Yes|||||Only required when using Security Management for Microsoft Defender for Endpoint|
 |Microsoft Defender for Endpoint|WW|Security Management|443|`*.dm.microsoft.com`|Security Management for Microsoft Defender for Endpoint - Enrollment, check-in, and reporting|Optional|Yes|||||Only required when using Security Management for Microsoft Defender for Endpoint|
-|Microsoft Defender for Endpoint|WW|Microsoft Monitoring Agent (MMA)|443|`*.ods.opinsights.azure.com`|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||Required when using MMA, refer to the unified solution for Windows Server 2012 R2 and 2016. Refer to steps at <https://aka.ms/mde_network_requirements> to eliminate wildcards (*)|
-|Microsoft Defender for Endpoint|WW|Microsoft Monitoring Agent (MMA)|443|`*.oms.opinsights.azure.com`|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||Required when using MMA, refer to the unified solution for Windows Server 2012 R2 and 2016. Refer to steps at <https://aka.ms/mde_network_requirements> to eliminate wildcards (*)|
-|Microsoft Defender for Endpoint|WW|Microsoft Monitoring Agent (MMA)|443|`*.blob.core.windows.net`|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||Required when using MMA, refer to the unified solution for Windows Server 2012 R2 and 2016. Refer to steps at <https://aka.ms/mde_network_requirements> to eliminate wildcards (*)|
+|Microsoft Defender for Endpoint|WW|Microsoft Monitoring Agent (MMA)|443|`*.ods.opinsights.azure.com`|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||Required when using MMA. For Windows Server 2012 R2 and 2016, consider migrating to the [Microsoft Defender for Endpoint unified agent](/microsoft-365/security/defender-endpoint/configure-server-endpoints). Refer to steps at <https://aka.ms/mde_network_requirements> to eliminate wildcards (*)|
+|Microsoft Defender for Endpoint|WW|Microsoft Monitoring Agent (MMA)|443|`*.oms.opinsights.azure.com`|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||Required when using MMA. For Windows Server 2012 R2 and 2016, see the [Microsoft Defender for Endpoint unified agent](/microsoft-365/security/defender-endpoint/configure-server-endpoints). Refer to steps at <https://aka.ms/mde_network_requirements> to eliminate wildcards (*)|
+|Microsoft Defender for Endpoint|WW|Microsoft Monitoring Agent (MMA)|443|`*.blob.core.windows.net`|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||Required when using MMA. For Windows Server 2012 R2 and 2016, see the [Microsoft Defender for Endpoint unified agent](/microsoft-365/security/defender-endpoint/configure-server-endpoints). Refer to steps at <https://aka.ms/mde_network_requirements> to eliminate wildcards (*)|
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|`unitedstates.x.cp.wd.microsoft.com`|Used by Microsoft Defender Antivirus to provide cloud-delivered protection and security intelligence updates|Required||||Yes|Yes||
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|`us.vortex-win.data.microsoft.com`|Microsoft Defender for Endpoint EDR Cyber Data|Optional|Yes|||||Not required for Windows 10 1803 (RS4) and above / Windows Server 2019 and above|
 |Microsoft Defender for Endpoint|US|Microsoft Defender for Endpoint US|443|`us-v20.events.data.microsoft.com`|Microsoft Defender for Endpoint EDR Cyber Data|Required|Yes|||Yes|Yes||
@@ -128,6 +133,8 @@ This article includes a list of the standard connectivity URLs required to onboa
 
 ## Defender portal URLs
 
+The following table lists the URLs required to access the Microsoft Defender portal from a browser.
+
 > [!NOTE]
 > All URLs in this table are required to have access to the Microsoft Defender Security Center Portal URL.
 
@@ -143,16 +150,21 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|WW|`https://onboardingpackagescusprd.blob.core.windows.net`|
 |Microsoft 365 Defender|WW|`https://security.microsoft.com`|
 
-## Client processes
+<a name="client-processes"></a>
+## Required client processes for network connectivity
 
-Because these Defender for Endpoint-related processes generate network communications, make sure that communications from these processes are not blocked.
+Because the Microsoft Defender for Endpoint client processes listed below generate network communications, make sure that traffic from those processes is not blocked.
 
 [!INCLUDE [Microsoft Defender for Endpoint processes](includes/streamlined-connectivity-processes.md)]
 
-## Change log
+<a name="change-log"></a>
+## Changelog
+
+The following table summarizes recent changes to this article and its endpoint listings.
 
 |Date|Change Log|
 |---|---|
+|06/02/2026|Added `reflector.defender.microsoft.com`.|
 |04/14/2026|Replaced `officecdn-microsoft-com.akamaized.net` with new CDN ChannelURL reference for Mac/Linux product updates. New CDN endpoint starting with macOS build 101.26012.0012.|
 |04/13/2026|Added SmartScreen URLs (`*.checkappexec.microsoft.com`, `*.urs.microsoft.com`) to [Microsoft Defender URLs](#microsoft-defender-urls).|
 |03/26/2026|Added new Azure UAE North (AEN) and Azure UAE Central (AEC) URLs to the [Microsoft Defender URLs](#microsoft-defender-urls) section: `winatp-gw-aec0a.microsoft.com`, `winatp-gw-aen0a.microsoft.com`, `automatedirstrprdaen0a.blob.core.windows.net`,`automatedirstrprdaec0a.blob.core.windows.net`.|

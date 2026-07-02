@@ -1,11 +1,13 @@
 ---
 title: Cloud discovery policies 
-description: This article outlines the steps to configure many cloud discovery policies in Defender for Cloud Apps.
-ms.date: 12/15/2025
+description: Get started with cloud discovery in Defender for Cloud Apps to gain visibility into Shadow IT and analyze cloud app usage across your organization.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: Mravela
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
-# Cloud discovery policies
+# Create cloud discovery policies in Defender for Cloud Apps
 
 
 
@@ -21,7 +23,11 @@ Detect new apps that are highly used, in terms of number of users or amount of t
 
 Configure automatic log upload for continuous cloud discovery reports, as described in [Configure automatic log upload for continuous reports](discovery-docker.md) or enable the Defender for Cloud Apps integration with Defender for Endpoint, as described in [Integrate Microsoft Defender for Endpoint with Defender for Cloud Apps](mde-integration.md).
 
-### Steps
+<a name="steps"></a>
+
+### Create a high-volume app discovery policy
+
+Perform the following steps to create a policy for detecting new high-volume or popular apps.
 
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new **App discovery policy**.
 
@@ -42,7 +48,11 @@ Detect potential exposure of your organization in cloud apps that don't meet you
 
 Configure automatic log upload for continuous cloud discovery reports, as described in [Configure automatic log upload for continuous reports](discovery-docker.md) or enable the Defender for Cloud Apps integration with Defender for Endpoint, as described in [Integrate Microsoft Defender for Endpoint with Defender for Cloud Apps](mde-integration.md).
 
-### Steps
+<a name="steps-1"></a>
+
+### Create a risky app discovery policy
+
+Perform the following steps to create a policy that detects risky or non-compliant app use.
 
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new **App discovery policy**.
 
@@ -68,7 +78,11 @@ You can detect when your employees continue to use unsanctioned apps as a replac
 
 - Configure automatic log upload for continuous cloud discovery reports, as described in [Configure automatic log upload for continuous reports](discovery-docker.md) or enable the Defender for Cloud Apps integration with Defender for Endpoint, as described in [Integrate Microsoft Defender for Endpoint with Defender for Cloud Apps](mde-integration.md).
 
-### Steps
+<a name="steps-2"></a>
+
+### Create an unsanctioned app discovery policy
+
+Perform the following steps to detect use of unsanctioned business apps.
 
 1. In the Cloud app catalog, search for your business-ready apps and mark them with a [custom app tag](discovered-app-queries.md#creating-and-managing-custom-app-tags).
 
@@ -89,9 +103,13 @@ Get visibility and control over [OAuth apps](investigate-risky-oauth.md) that ar
 
 You must have the Google Workspace, Microsoft 365, or Salesforce app connected using [app connectors](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).
 
-### Steps
+<a name="steps-3"></a>
 
-1. 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new  **OAuth app policy**.
+### Create a risky OAuth app policy
+
+Perform the following steps to create a policy for detecting risky OAuth apps.
+
+1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new  **OAuth app policy**.
 
 1. Select the filter **App** and set the app the policy should cover, Google Workspace, Microsoft 365, or Salesforce.
 
@@ -104,7 +122,9 @@ You must have the Google Workspace, Microsoft 365, or Salesforce app connected u
 > [!NOTE]
 > Supported for Google Workspace, Microsoft 365, and Salesforce app stores.
 
-## Next steps
+<a name="next-steps"></a>
+
+## Related content
 
 > [!div class="nextstepaction"]
 > [Best practices for protecting your organization](best-practices.md)

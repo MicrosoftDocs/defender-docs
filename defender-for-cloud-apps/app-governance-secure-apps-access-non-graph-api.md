@@ -1,14 +1,16 @@
 ---
 title: Secure apps accessing non-Graph APIs using app governance
-ms.date: 10/30/2025
+ms.date: 06/16/2026
 ms.topic: how-to
 description: Learn how to secure apps accessing other APIs using app governance in the Microsoft Defender portal.
 ms.reviewer: shragar
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Secure apps accessing non-Graph APIs using app governance
 
-Many apps use APIs other than Microsoft Graph to access Microsoft 365 and other resources. With visibility over such apps, you can identify and defend against risks inherent to these apps including APIs that they access, some of which might receive limited support and updates.
+Many apps use APIs other than Microsoft Graph to access Microsoft 365 and other resources. With visibility over such apps, you can identify and defend against risks inherent to these apps, including the APIs that they access. Some of these APIs might receive limited support and updates.
 
 App governance provides visibility over OAuth apps registered on Microsoft Entra ID, regardless of whether they access Graph API or other APIs. Additionally, you can monitor these apps and automatically take action if they're noncompliant or exhibit suspicious behavior.
 
@@ -38,7 +40,7 @@ To view Microsoft 365 apps that access non-Graph APIs:
 
 ## View APIs used by an app
 
-To view the APIs that an app uses:
+The **Permissions** tab in the app details pane shows all permissions granted to an app, including both Graph API and non-Graph API permissions. To view the APIs that an app uses:
 
 1. In the App governance page, select the app you want to investigate.
 
@@ -50,9 +52,7 @@ The Permissions tab lists all permissions granted to the app, including Graph AP
 
 ## Create policies for apps accessing non-graph APIs
 
-Create app governance policies to monitor and take action on apps that access non-Graph APIs.
-
-You can decide to create a custom policy or use an existing template.
+You can create app governance policies to monitor and take action on apps that access non-Graph APIs. To create a custom policy or use an existing template, follow these steps:
 
 1. In the App governance page, select the **Policies** tab.
 1. Select **+ Create policy**.
@@ -75,5 +75,7 @@ You can decide to create a custom policy or use an existing template.
 
 ## Next steps
 
-[Secure apps with app hygiene features](app-governance-secure-apps-app-hygiene-features.md)<br>
-[View your app details with app governance](app-governance-visibility-insights-view-apps.md#getting-detailed-information-on-an-app)
+Learn more about managing and investigating apps with app governance:
+
+- [Secure apps with app hygiene features](app-governance-secure-apps-app-hygiene-features.md)
+- [View your app details with app governance](app-governance-visibility-insights-view-apps.md#getting-detailed-information-on-an-app)

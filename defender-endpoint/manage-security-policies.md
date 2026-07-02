@@ -9,11 +9,13 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
-ms.date: 05/28/2025
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
 
+ai-usage: ai-assisted
 ---
 # Manage endpoint security policies in Microsoft Defender for Endpoint
 
@@ -29,7 +31,7 @@ Use security policies to manage security settings on devices. As a Security Admi
 You'll find endpoint security policies under **Endpoints** > **Configuration management** > **Endpoint security policies**.
 
 > [!NOTE]
-> The **Endpoint Security Policies** page in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) is available only for users who have access to all devices and possess `Core security settings (manage)` permissions. Any user role without these permissions, such as `Security Reader`, cannot access the portal. When a user has the required permissions to view policies in the Microsoft Defender portal, the data is presented based on Intune permissions. If the user is in scope for Intune role-based access control, it applies to the list of policies presented in the Microsoft Defender portal. We recommend granting security administrators with the [Intune built-in role, "Endpoint Security Manager"](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) to effectively align the level of permissions between Intune and the Microsoft Defender portal.
+> The **Endpoint Security Policies** page in the [Microsoft Defender portal](https://security.microsoft.com) is available only for users who have access to all devices and possess `Core security settings (manage)` permissions. Any user role without these permissions, such as `Security Reader`, cannot access the portal. When a user has the required permissions to view policies in the Microsoft Defender portal, the data is presented based on Intune permissions. If the user is in scope for Intune role-based access control, it applies to the list of policies presented in the Microsoft Defender portal. We recommend granting security administrators with the [Intune built-in role, "Endpoint Security Manager"](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) to effectively align the level of permissions between Intune and the Microsoft Defender portal.
 
 :::image type="content" source="./media/endpoint-security-policies.png" alt-text="Managing Endpoint security policies in the Microsoft Defender portal":::
 
@@ -47,6 +49,8 @@ The following list provides a brief description of each endpoint security policy
 
 
 ## Create an endpoint security policy
+
+To create an endpoint security policy, perform the following steps:
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) using at least a Security Administrator role.
 
@@ -72,7 +76,8 @@ The following list provides a brief description of each endpoint security policy
 > [!NOTE]
 > To edit the scope tags, you'll need to go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-## To edit an endpoint security policy
+<a name="to-edit-an-endpoint-security-policy"></a>
+## Edit an endpoint security policy
 
 1. Select the new policy, and then select **Edit**.
  

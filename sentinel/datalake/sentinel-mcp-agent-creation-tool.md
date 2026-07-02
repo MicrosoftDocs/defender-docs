@@ -2,19 +2,22 @@
 title: Agent creation tool collection in Microsoft Sentinel MCP server
 titleSuffix: Microsoft Security  
 description: Learn about the different tools available in the Agent creation collection in Microsoft Sentinel 
-author: poliveria
-ms.topic: how-to
-ms.date: 01/30/2026
 ms.author: pauloliveria
+author: poliveria
+ms.reviewer: macasgra
+ms.topic: how-to
+ms.date: 06/12/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #customer intent: As a security analyst, I want to know the different tools available to create AI agents
 ---
 
 # Create AI agents with agent creation collection
 
-The agent creation tool collection in the Microsoft Sentinel Model Context Protocol (MCP) server lets you create effective Microsoft Security Copilot agents. 
+The agent creation tool collection in the Microsoft Sentinel Model Context Protocol (MCP) server lets you create effective Microsoft Security Copilot agents. This article explains how to add the tool collection to your code editor and describes each tool and its parameters. Before you start, make sure you meet the prerequisites listed in the next section.
 
 ## Prerequisites
 
@@ -25,19 +28,21 @@ To access the agent creation tool collection, you must have the following prereq
 
 ## Add the agent creation collection
 
-To add the agent creation collection, you must first set up add Microsoft Sentinel's unified MCP server interface. Follow the step-by-step instructions for compatible [AI-powered code editors and agent-building platforms](sentinel-mcp-get-started.md#add-microsoft-sentinels-collection-of-mcp-tools).
+First, set up the Microsoft Sentinel unified MCP server. Follow the steps for your [code editor or agent-building platform](sentinel-mcp-get-started.md#add-microsoft-sentinels-collection-of-mcp-tools).
 
-The agent creation collection is hosted in the following URL:
+Use the following endpoint URL to connect to the agent creation collection in your code editor:
 
-```
+```text
 https://sentinel.microsoft.com/mcp/security-copilot-agent-creation
 ```
 
-After adding the agent creation tool, you can use the following sample prompt to create complex, agentic workflows in Security Copilot:
+After adding the agent creation tool collection, you can use the following sample prompt to create complex, agentic workflows in Security Copilot:
 
 - Create an agent that generates a comprehensive post-incident report from Microsoft Defender, Microsoft Purview, and Microsoft Sentinel incidents; aggregates incident summaries, detailed insights, entities, and alerts; and provides actionable remediation steps.
 
 ## Tools in the agent creation collection
+
+The following tools help you search for capabilities, create, compose, evaluate, and deploy Security Copilot agents.
 
 ### Search for tools (`search_for_tools`)
 This tool finds relevant tools, including skills, agents and MCP tools, in Security Copilot that can be used to fulfill the intent.
@@ -55,7 +60,7 @@ This tool creates a new Security Copilot session to start building a new agent.
 
  
 ### Compose agent (`compose_agent`)
-This tool iterates on composing the Security Copilot agent YAML.
+This tool iterates on composing the Security Copilot agent definition in YAML (a structured text format used for configuration).
 
 | Parameters | Required? | Description | 
 |----------|----------|----------|

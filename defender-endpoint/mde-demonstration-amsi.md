@@ -1,6 +1,6 @@
 ---
 title: AMSI demonstrations with Microsoft Defender for Endpoint
-description: Demonstration of AMSI detection by Microsoft Defender for Endpoint
+description: Test AMSI detection in Microsoft Defender for Endpoint by using a benign sample. Learn how AMSI helps detect fileless and script-based threats and how to validate the engine safely.
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: yongrhee
@@ -10,14 +10,16 @@ ms.subservice: ngp
 ms.collection: 
 - m365-security
 ms.topic: how-to
-ms.date: 01/14/2026
-ms.custom: 
+ms.date: 06/17/2026
+ms.custom:
+- msecd-doc-authoring-1014
 - partner-contribution
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
 
+ai-usage: ai-assisted
 ---
 # AMSI demonstrations with Microsoft Defender for Endpoint
 
@@ -26,12 +28,14 @@ Microsoft Defender for Endpoint uses the [Antimalware Scan Interface (AMSI)](ams
 
 ## Prerequisites
 
-- Microsoft Defender Antivirus (as primary) and these capabilities need to be enabled:
+- Microsoft Defender Antivirus (as primary) must be enabled, along with the following capabilities:
   - Real-Time Protection (RTP) 
   - Behavior Monitoring (BM)  
   - Turn on script scanning
 
 ### Supported operating systems
+
+The following operating systems support this AMSI test scenario:
 
 - Windows 10 and later
 - Windows Server 2016 and later
@@ -46,6 +50,8 @@ In this demonstration article, you can choose from three engines to test AMSI:
 
 ### Test AMSI with PowerShell
 
+Perform the following steps to test AMSI by using PowerShell:
+
 1. Save the following PowerShell script as `AMSI_PoSh_script.ps1`:
 
    ```powershell
@@ -57,7 +63,7 @@ In this demonstration article, you can choose from three engines to test AMSI:
 
 1. Type `Powershell -ExecutionPolicy Bypass AMSI_PoSh_script.ps1`, and then press **Enter**.
 
-   The result should be as follows:
+   The expected PowerShell output is as follows:
 
     ```powershell
        Invoke-Expression : At line:1 char:1
@@ -81,6 +87,8 @@ In this demonstration article, you can choose from three engines to test AMSI:
 
 ### Testing AMSI with VBScript
 
+Use the following steps to test AMSI with VBScript:
+
 1. Save the following VBScript as `AMSI_vbscript.vbs`:
 
    ```vbscript
@@ -94,7 +102,7 @@ In this demonstration article, you can choose from three engines to test AMSI:
 
 1. Type `wscript AMSI_vbscript.vbs`, and then press **Enter**.
 
-   The result should be as follows:
+   The expected VBScript output is as follows:
 
     ```vbscript
     Windows Script Host
@@ -125,7 +133,7 @@ In this demonstration article, you can choose from three engines to test AMSI:
 
 1. On your Windows device, open Command Prompt as an administrator.
 1. Type `cscript AMSI_jscript.js`, and then select **Enter**.
-The result should be as follows:
+The expected JavaScript output is as follows:
 
     ```javascript
     C:\tools>cscript AMSI_jscript.js
@@ -182,6 +190,8 @@ You can view detected threats by using the Event log or PowerShell.
 
 #### Use the Event log
 
+Use the following steps to view detected threats in Event Viewer:
+
 1. Go to **Start**, and search for `EventVwr.msc`. Open Event Viewer in the list of results.
 
 1. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **Windows Defender operational events**.
@@ -221,6 +231,8 @@ You can view detected threats by using the Event log or PowerShell.
 
 #### Use PowerShell 
 
+Use PowerShell to list detected threats by following these steps:
+
 1. On your device, open PowerShell.
 
 1. Type the following command: `Get-MpThreat`.
@@ -252,7 +264,8 @@ You can view detected threats by using the Event log or PowerShell.
     ```
 
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 [Microsoft Defender for Endpoint - demonstration scenarios](defender-endpoint-demonstrations.md)
 

@@ -1,27 +1,29 @@
 ---
 title: Connect to the Defender for Identity service | Microsoft Defender for Identity
 description: Learn how to set up your firewall or proxy to allow communication between the Microsoft Defender for Identity cloud service and Microsoft Defender for Identity sensors.
-ms.date: 02/12/2024
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
+ms.custom: sfi-ropc-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Connect to the Defender for Identity service
 
 Each Microsoft Defender for Identity sensor requires internet connectivity to the Defender for Identity cloud service to report sensor data and operate successfully.
 
-In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection, and SSL inspection and intercepting proxies are not supported for security reasons. In such cases, your proxy server must allow the data to directly pass from the Defender for Identity sensors to the relevant URLs without interception.
+In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection, and SSL inspection and intercepting proxies are not supported for security reasons. In such cases, your proxy server must allow sensor traffic to pass directly from the Defender for Identity sensors to the relevant URLs without interception.
 
 > [!IMPORTANT]
 > Microsoft does not provide a proxy server. This article describes how to ensure that the required URLs are accessible via a proxy server that you configure.
 
 ## Enable access to Defender for Identity service URLs in the proxy server
 
-To ensure maximal security and data privacy, Defender for Identity uses certificate-based, mutual authentication between each Defender for Identity sensor and the Defender for Identity cloud back-end. SSL inspection and interception are not supported, as they interfere in the authentication process.
+To ensure maximal security and data privacy, Defender for Identity uses certificate-based, mutual authentication between each Defender for Identity sensor and the Defender for Identity cloud back-end. SSL inspection and interception are not supported, because these proxy behaviors interfere in the authentication process.
 
 To enable access to Defender for Identity, make sure to allow traffic to the sensor URL, using the following syntax: `<your-workspace-name>sensorapi.atp.azure.com`. For example, `contoso-corpsensorapi.atp.azure.com`.
 
-- To get your workspace name, see the [About page](https://security.microsoft.com/settings/identities) in the portal.
+- To get your workspace name, see the [Defender for Identity settings page](https://security.microsoft.com/settings/identities) in the Microsoft Defender portal.
 - If your proxy or firewall uses explicit allowlists, we also recommend ensuring that the following URLs are allowed:
 
     - `crl.microsoft.com`
@@ -73,7 +75,7 @@ Get-MDISensorProxyConfiguration
 Set-MDISensorProxyConfiguration -ProxyUrl 'http://proxy.contoso.com:8080'
 ```
 
-This example sets the proxy configuration for the Defender for Identity sensor to use the specified proxy server without any credentials.
+The preceding command sets the proxy configuration for the Defender for Identity sensor to use the specified proxy server without any credentials.
 
 
 **To remove the current sensor's proxy configuration entirely**:
@@ -90,9 +92,9 @@ For more information, see the following [DefenderForIdentity PowerShell referenc
 
 ## Change proxy configuration using legacy methods
 
-If you'd previously configured your proxy settings via either WinINet or a registry key and need to update them, you'll need to use the same method you used originally.
+If you'd previously configured your proxy settings via either WinINet or a registry key and need to update them, you'll need to use the matching method: update WinINet settings through WinINet, or update registry-based settings through the registry.
 
-While configuring your proxy from the command line during installation ensures that only the Defender for Identity sensor services communicate through the proxy, using WinINet or a registry allow other services running in the context as Local System or Local Service to also direct traffic through the proxy.  
+While configuring your proxy from the command line during installation ensures that only the Defender for Identity sensor services communicate through the proxy, using WinINet or a registry allow other services running under the LocalSystem or LocalService accounts to also direct traffic through the proxy.  
 
 ### Configure a proxy server using WinINet
 
@@ -104,7 +106,7 @@ When configuring the proxy using WinINet, keep in mind that the embedded Defende
 
 ### Configure a proxy server using the registry
 
-This section describes how to configure a static proxy server manually using a registry-based static proxy.
+The following procedure describes how to configure a static proxy server manually by using a registry-based static proxy.
 
 > [!IMPORTANT]
 > Configuring a proxy via the registry affects all applications that use WinINet with the **LocalService** and **LocalSystem** accounts, including Windows services.

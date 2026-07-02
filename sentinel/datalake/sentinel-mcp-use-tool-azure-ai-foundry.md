@@ -2,12 +2,15 @@
 title: Use a Microsoft Sentinel MCP tool in Microsoft Foundry 
 titleSuffix: Microsoft Security  
 description: Learn how to use Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools or your own custom tool in Microsoft Foundry 
-author: poliveria
-ms.topic: how-to
-ms.date: 04/27/2026
 ms.author: pauloliveria
+author: poliveria
+ms.reviewer: macasgra
+ms.topic: how-to
+ms.date: 06/12/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #customer intent: As a security analyst, I want to add Sentinel MCP tools in Microsoft Foundry.
 ---
@@ -39,7 +42,7 @@ To add a Microsoft Sentinel tool collection in Microsoft Foundry, follow these s
 
      :::image type="content" source="media/sentinel-mcp/get-started-foundry-add-tool.png" alt-text="Screenshot of an agent's page in Microsoft Foundry with add tool option highlighted." lightbox="media/sentinel-mcp/get-started-foundry-add-tool.png":::   
 
-1. On the **Select a tool** pop-up window, search for `Sentinel` and choose any [available collection](sentinel-mcp-tools-overview.md) (for example, `Microsoft Sentinel – Data exploration`).
+1. On the **Select a tool** pop-up window, search for `Sentinel` and choose any [available Microsoft Sentinel tool collection](sentinel-mcp-tools-overview.md) (for example, `Microsoft Sentinel – Data exploration`).
 
      :::image type="content" source="media/sentinel-mcp/get-started-foundry-select-tool.png" alt-text="Screenshot of the Select a tool pop-up window in Microsoft Foundry agent builder page with a Sentinel tool collection highlighted." lightbox="media/sentinel-mcp/get-started-foundry-select-tool.png":::   
 
@@ -94,13 +97,15 @@ Custom tools let you build deterministic workflows by prescribing exactly what d
 
 ### Step 2: Add your custom MCP tool
 
+Add the custom MCP tool to your agent in Microsoft Foundry by following these steps:
+
 1. Go to Microsoft Foundry and select an existing agent or a newly created agent. 
 
 1. On the agent's page, go to the **Tools** section then select **Add** > **+ Add a new tool**.
  
       :::image type="content" source="media/sentinel-mcp/custom-foundry-add-tool.png" alt-text="Screenshot of an agent's page in Microsoft Foundry with Add a new tool highlighted." lightbox="media/sentinel-mcp/custom-foundry-add-tool.png":::
 
-1.	On the pop-up window that appears, select **Custom** > **Model Context Protocol (MCP)** then select **Create**.
+1.	In the **Add a new tool** pop-up window, select **Custom** > **Model Context Protocol (MCP)**, and then select **Create**.
  
        :::image type="content" source="media/sentinel-mcp/custom-foundry-mcp.png" alt-text="Screenshot of the add tool setup in Microsoft Foundry." lightbox="media/sentinel-mcp/custom-foundry-mcp.png":::
 
@@ -128,11 +133,13 @@ Custom tools let you build deterministic workflows by prescribing exactly what d
        
     :::image type="content" source="media/sentinel-mcp/custom-foundry-mcp-details.png" alt-text="Screenshot of the MCP details in add tool setup in Microsoft Foundry." lightbox="media/sentinel-mcp/custom-foundry-mcp-details.png":::
  
-1. Select **Connect**. Your tool is created successfully and a redirect URL is generated. Copy and save this URL.
+1. Select **Connect**. Your tool is created successfully and a redirect URL is generated. Copy and save the redirect URL.
 
     :::image type="content" source="media/sentinel-mcp/custom-foundry-redirect.png" alt-text="Screenshot of the credential provider or redirect URL details in add tool setup in Microsoft Foundry." lightbox="media/sentinel-mcp/custom-foundry-redirect.png":::
 
 ### Step 3: Authenticate Microsoft Foundry to use your custom tool
+
+To authenticate Microsoft Foundry with the custom tool, complete the following steps:
  
 1. Go back to your tenant's Azure portal and into the app you just added then select **Add a redirect URI**.
  
@@ -147,7 +154,7 @@ Custom tools let you build deterministic workflows by prescribing exactly what d
 
      :::image type="content" source="media/sentinel-mcp/custom-foundry-open-consent.png" alt-text="Screenshot of chat details in Microsoft Foundry with Open consent window highlighted." lightbox="media/sentinel-mcp/custom-foundry-open-consent.png":::
 
-1. On the pop-up window that appears, select **Allow access**. 
+1. In the consent pop-up window, select **Allow access**. 
 
 Once you give consent, your agent can reason over data returned by your custom MCP tool.
 

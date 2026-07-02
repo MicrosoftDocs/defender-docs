@@ -16,14 +16,12 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/28/2025
+ms.date: 06/14/2026
 ---
 
 # DeviceTvmHardwareFirmware
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
@@ -33,6 +31,8 @@ The `DeviceTvmHardwareFirmware` table in the advanced hunting schema contains ha
 This advanced hunting table is populated by records from Microsoft Defender for Endpoint. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Endpoint in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
 
 For information on other tables in the advanced hunting schema, see [the advanced hunting reference](advanced-hunting-schema-tables.md).
+
+[!INCLUDE [TVM Sentinel schema visibility note](../includes/tvm-sentinel-schema-visibility-note.md)]
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|

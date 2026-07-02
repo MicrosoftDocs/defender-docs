@@ -1,10 +1,10 @@
 ---
-title: Deploy custom content from your repository (Preview)
+title: Deploy custom content from your repository
 titleSuffix: Microsoft Sentinel
 description: This article describes how to create connections with a GitHub or Azure DevOps repository where you can manage your custom content and deploy it to Microsoft Sentinel.
 author: mberdugo 
 ms.topic: how-to
-ms.date: 12/31/2024
+ms.date: 5/11/2026
 ms.author: monaberdugo 
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
@@ -17,13 +17,12 @@ ms.custom:
   - build-2025
 ---
 
-# Deploy content as code from your repository (Preview)
+# Deploy content as code from your repository
 
 When creating custom content, you can manage it from your own Microsoft Sentinel workspaces, or an external source control repository. This article describes how to create and manage connections between Microsoft Sentinel and GitHub or Azure DevOps repositories. Managing your content in an external repository allows you to make updates to that content outside of Microsoft Sentinel, and have it automatically deployed to your workspaces. For more information, see [Update custom content with repository connections](ci-cd-custom-content.md).
 
 > [!IMPORTANT]
-> - The Microsoft Sentinel **Repositories** feature is currently in **PREVIEW**. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
-> - [!INCLUDE [unified-soc-preview](includes/unified-soc-preview-without-alert.md)]
+> [!INCLUDE [unified-soc-preview](includes/unified-soc-preview-without-alert.md)]
 
 ## Prerequisites
 
@@ -167,5 +166,5 @@ Use your custom content in Microsoft Sentinel in the same way that you'd use out
 For more information, see:
 
 - [Customize repository deployments](ci-cd-custom-deploy.md)
-- [Discover and deploy Microsoft Sentinel solutions (Public preview)](sentinel-solutions-deploy.md)
+- [Discover and deploy Microsoft Sentinel solutions](sentinel-solutions-deploy.md)
 - [Microsoft Sentinel data connectors](connect-data-sources.md)

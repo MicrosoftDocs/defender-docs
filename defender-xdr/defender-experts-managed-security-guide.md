@@ -15,7 +15,7 @@ ms.custom:
 
 **Applies to:** 
 - [Microsoft Defender Experts for XDR](dex-xdr-overview.md) 
-- Microsoft Defender Experts for Servers 
+- [Microsoft Defender Experts for Servers](dex-servers-overview.md) 
 - [Microsoft Defender Experts for Hunting](defender-experts-for-hunting.md) 
 - Microsoft Defender Experts for Hunting - Servers 
 

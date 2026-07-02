@@ -1,10 +1,13 @@
 ---
 title: Stream and filter Windows DNS logs with the AMA connector 
 description: Ingest and filter data from your Windows DNS server logs with this data connector. Query this data to protect your DNS servers from threats and attacks.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: ofshezaf
 ms.topic: how-to
-ms.date: 03/25/2025
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security engineer, I want to stream and filter DNS server logs using a cloud-based monitoring agent so that analysts can detect and mitigate potential threats efficiently.
 
@@ -41,7 +44,7 @@ To collect events from any system that isn't an Azure virtual machine, ensure th
 
 Use the portal setup option to configure the connector using a single Data Collection Rule (DCR) per workspace. Afterwards, use advanced filters to filter out specific events or information, uploading only the valuable data you want to monitor, reducing costs and bandwidth usage.
 
-If you need to create multiple DCRs, [use the API](#configure-the-windows-dns-over-ama-connector-via-api) instead. Using the API to create multiple DCRs will still show only one DCR in the portal.
+If you need to create multiple DCRs, [configure the connector via API](#configure-the-windows-dns-over-ama-connector-via-api) instead. Using the API to create multiple DCRs will still show only one DCR in the portal.
 
 **To configure the connector**:
 
@@ -62,7 +65,7 @@ If you need to create multiple DCRs, [use the API](#configure-the-windows-dns-ov
 
 ## Configure the Windows DNS over AMA connector via API
 
-Use the API setup option to configure the connector using multiple [DCRs](/rest/api/monitor/data-collection-rules) per workspace. If you'd prefer to use a single DCR, use the [portal option](#configure-the-windows-dns-over-ama-connector-via-the-portal) instead.
+Use the API setup option to configure the connector using multiple [DCRs](/rest/api/monitor/data-collection-rules) per workspace. If you'd prefer to use a single DCR, [configure the connector via the portal](#configure-the-windows-dns-over-ama-connector-via-the-portal) instead.
 
 Using the API to create multiple DCRs still shows only one DCR in the portal.
 
@@ -74,11 +77,13 @@ Use the following example as a template to create or update a DCR:
 PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Insights/dataCollectionRules/{dataCollectionRuleName}?api-version={latest-supported-version}
 ```
 
-For the latest supported API version, see [Data Collection Rules - REST API (Azure Monitor) | Microsoft Learn](/rest/api/monitor/data-collection-rules).
+For the latest supported API version, see [Data Collection Rules - REST API (Azure Monitor)](/rest/api/monitor/data-collection-rules).
 
 :::image type="content" source="media/connect-dns-ama/windows-dns-ama-connector-dcr-api-version.png" border="false" alt-text="Screenshot of the API version's appearance in the DCR documentation.":::
 
 ### Request body
+
+Use the following sample request body when creating the DCR. This payload defines the DCR properties, including the location, platform kind, data sources, event filters, and the Log Analytics workspace destination:
 
 ```json
 {
@@ -200,6 +205,8 @@ This filter instructs the connector not to collect EventID 256 or EventID 257 or
 
 **Using the API**:
 
+The following JSON defines two filters in the DCR: the first excludes events with EventID 256, 257, or 260 that have an AAAA (IPv6) query type, and the second excludes EventID 230 with specific error result details.
+
 ```json
 "Filters": [
     {
@@ -247,7 +254,7 @@ This filter instructs the connector not to collect events from any subdomains of
 
 Set the **DnsQuery** field using the **Equals** operator, with the list *\*.microsoft.com,\*.google.com,facebook.com,\*.amazon.com,center.local*. 
 
-Review these considerations for [using wildcards](#use-wildcards). 
+Review these considerations for [wildcard filtering in DNS AMA domain filters](#use-wildcards). 
 
 :::image type="content" source="media/connect-dns-ama/windows-dns-ama-connector-domain-filter.png" alt-text="Screenshot of filtering out domains for the Windows D N S over A M A connector."::: 
 
@@ -255,7 +262,7 @@ To define different values in a single field, use the **OR** operator.
 
 **Using the API**:
 
-Review these considerations for [using wildcards](#use-wildcards). 
+The following JSON defines a filter that excludes DNS query events matching specific domains and their subdomains. Review these considerations for [wildcard filtering in DNS AMA domain filters](#use-wildcards). 
 
 ```json
 "Filters": [ 
@@ -275,7 +282,7 @@ Review these considerations for [using wildcards](#use-wildcards).
 
 ## Normalization using ASIM
 
-This connector is fully normalized using [Advanced Security Information Model (ASIM) parsers](normalization.md). The connector streams events originated from the analytical logs into the normalized table named `ASimDnsActivityLogs`. This table acts as a translator, using one unified language, shared across all DNS connectors to come. 
+This connector is fully normalized using [Advanced Security Information Model (ASIM) parsers](normalization.md). The connector streams events originated from the Windows DNS analytical logs into the normalized table named `ASimDnsActivityLogs`. This table acts as a translator, using one unified language, shared across all DNS connectors to come. 
 
 For a source-agnostic parser that unifies all DNS data and ensures that your analysis runs across all configured sources, use the [ASIM DNS unifying parser](normalization-schema-dns.md#out-of-the-box-parsers) `_Im_Dns`.   
 

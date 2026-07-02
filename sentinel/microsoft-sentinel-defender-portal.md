@@ -1,10 +1,11 @@
 ---
 title: Microsoft Sentinel in the Microsoft Defender portal
 description: Learn about the Microsoft Sentinel experience when you onboard Microsoft Sentinel to the Microsoft Defender portal.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: soulisabag
 ms.topic: overview
-ms.date: 07/13/2025
+ms.date: 06/16/2026
 appliesto: 
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.collection: usx-security
@@ -18,46 +19,91 @@ ms.collection: usx-security
 
 Microsoft Defender provides a unified cybersecurity solution that integrates endpoint protection, cloud security, identity protection, email security, threat intelligence, exposure management, and SIEM into a centralized platform powered by a modern data lake. It uses AI-driven defense to help organizations anticipate and stop attacks, ensuring efficient and effective security operations.
 
-Microsoft Sentinel is generally available in the Microsoft Defender portal, either with [Microsoft Defender XDR](/microsoft-365/security/defender), or on its own, delivering a unified experience across SIEM and XDR for faster and more accurate threat detection and response, simplified workflows, and enhanced operational efficiency.
+Microsoft Sentinel is generally available in the Microsoft Defender portal, either with [Microsoft Defender](/defender-xdr/microsoft-365-defender) or on its own, delivering a unified SIEM and XDR experience for faster and more accurate threat detection and response, simplified workflows, and enhanced operational efficiency.
 
 This article describes the Microsoft Sentinel experience in the Defender portal.
 
-[!INCLUDE [sentinel-azure-deprecation.md](includes/sentinel-azure-deprecation.md)] 
+Microsoft Sentinel is generally available in the Microsoft Defender portal, including for customers without Microsoft Defender XDR or an E5 license. This means that you can use Microsoft Sentinel in the Defender portal even if you aren't using other Microsoft Defender services.
+
+After **March 31, 2027**, Microsoft Sentinel will no longer be supported in the Azure portal and will be available only in the Microsoft Defender portal.
+
+If you're currently using Microsoft Sentinel in the Azure portal, we recommend that you start planning your transition to the Defender portal now to ensure a smooth transition and take full advantage of the [unified security operations experience offered by Microsoft Defender](/unified-secops-platform/overview-unified-security).
+
+For more information, see:
+
+- [Transition your Microsoft Sentinel environment to the Defender portal](move-to-defender.md)
+- [Planning your move to Microsoft Defender portal for all Microsoft Sentinel customers](https://techcommunity.microsoft.com/blog/microsoft-security-blog/planning-your-move-to-microsoft-defender-portal-for-all-microsoft-sentinel-custo/4428613) (blog)
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
+## Feature comparison: Sentinel in Azure vs. Sentinel in the Defender portal
 
-## New and improved capabilities
+The following tables compare Microsoft Sentinel capabilities in the Azure portal with capabilities in the Defender portal.
 
-The following table describes the new or improved capabilities available in the Defender portal with the integration of Microsoft Sentinel. Microsoft continues to innovate in this new experience with features that might be exclusive to the Defender portal.
+### Incidents and investigation
 
+| **Capability area** | **Sentinel in Azure portal** | **Sentinel in Defender portal** | **Benefits** |
+|----|----|----|----|
+| Core SIEM capabilities | Full SIEM functionality (ingestion, analytics rules, incidents, workbooks, hunting) | Full SIEM functionality integrated into unified SIEM and Defender experience. | Same SIEM power, better operating model |
+| Incident management | Sentinel incident queue separate from Defender | [Unified incident queue](/defender-xdr/incidents-overview) for SIEM and XDR, with [Security Copilot for incident investigation](sentinel-security-copilot.md) to summarize and respond. Incidents are automatically enriched with Defender signals. | Single pane of glass, deeper analyst insights |
+| Alert correlation and threat detection | Separate correlation for Sentinel and Defender incidents | Automatic cross-domain correlation with AI/ML for faster [threat detection](/unified-secops-platform/detect-threats-overview). | Reduced alert fatigue, full attack story in one incident |
+| Investigation experience | Log-centric workflows  | Attack story and entity graph (Sentinel Graph) with [unified entity pages](entity-pages.md) for devices, users, IPs, and Azure resources. Entity pages combine Sentinel and Defender data to provide expanded investigation context. | Visual investigation, faster root-cause analysis |
+| Threat intelligence (TI) | TI managed within Sentinel | Rich TI embedded in incidents, hunting, and investigations including premium Microsoft Threat Intelligence feed. | Better intelligence, operationalized out of the box |
 
-| Capabilities      | Description              | Learn more |
-| ----------------- | ------------------------ | ---------- |
-| **Streamlined operations** | Manage all security incidents, alerts, and investigations from a single, unified interface.<br><br>- **Unified entity pages** for devices, users, IP addresses, and Azure resources in the Defender portal display information from Microsoft Sentinel and Defender data sources. These entity pages give you an expanded context for your investigations of incidents and alerts in the Defender portal.<br><br>- **Unified incidents** let you manage and investigate security incidents in a single location and from a single queue in the Defender portal. Use Security Copilot to summarize, respond, and report. Unified incidents include data from the breadth of sources, AI analytics tools of security information and event management (SIEM), and context and mitigation tools offered by extended detection and response (XDR).<br><br>- Use **Advanced hunting** to query from a single portal across different data sets to make hunting more efficient and remove the need for context-switching. Use Security Copilot to help generate your KQL, view and query all data including data from Microsoft security services and Microsoft Sentinel, and then use all your existing Microsoft Sentinel workspace content, including queries and functions, to investigate. | - [Investigate entities with entity pages in Microsoft Sentinel](/azure/sentinel/entity-pages)<br><br>-  [Incident response in the Microsoft Defender portal](/microsoft-365/security/defender/incidents-overview)<br><br>- [Investigate Microsoft Sentinel incidents in Security Copilot](sentinel-security-copilot.md)<br><br>- [Advanced hunting in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2264410)<br>[Security Copilot in advanced hunting](/defender-xdr/advanced-hunting-security-copilot) |
-| **Enhanced threat detection** | Use advanced AI and machine learning for faster and more accurate threat detection and response. Benefit from an improved signal-to-noise ratio and enhanced alert correlation, ensuring critical threats are addressed promptly. | [Threat detection for unified security operations](/unified-secops-platform/detect-threats-overview) |
-| **New features** | Access robust tools like [Case management](/unified-secops-platform/cases-overview) for organizing and managing security incidents, [automatic attack disruption](/defender-xdr/automatic-attack-disruption?toc=%2Funified-secops-platform%2Ftoc.json&bc=%2Funified-secops-platform%2Fbreadcrumb%2Ftoc.json) for remediating compromised entities on high-fidelity true positives, and an embedded Security Copilot experience for [automated incident summary](/defender-xdr/security-copilot-m365d-incident-summary) and [guided response actions](/microsoft-365/security/defender/security-copilot-m365d-guided-response), and more.<br><br>For example, when investigating incidents in the Defender portal, use Security Copilot to [analyze scripts](/defender-xdr/security-copilot-m365d-script-analysis), [analyze files](/defender-xdr/copilot-in-defender-file-analysis), and [create incident reports](/defender-xdr/security-copilot-m365d-create-incident-report). When hunting for threats in advanced hunting, [create ready-to-run KQL queries](/defender-xdr/advanced-hunting-security-copilot) by using the query assistant. | - [Case management](/unified-secops-platform/cases-overview)<br><br>- [Automatic attack disruption](/defender-xdr/automatic-attack-disruption?toc=%2Funified-secops-platform%2Ftoc.json&bc=%2Funified-secops-platform%2Fbreadcrumb%2Ftoc.json)<br><br>- [Automated incident summary](/defender-xdr/security-copilot-m365d-incident-summary)<br><br>- [Guided response actions](/microsoft-365/security/defender/security-copilot-m365d-guided-response)<br><br>- [Analyze scripts](/defender-xdr/security-copilot-m365d-script-analysis)<br><br>- [Analyze files](/defender-xdr/copilot-in-defender-file-analysis)<br><br>- [Create incident reports](/defender-xdr/security-copilot-m365d-create-incident-report)<br><br>- [Create ready-to-run KQL queries](/defender-xdr/advanced-hunting-security-copilot) |
-| **Enhanced visibility and reduced risk exposure** | Analyze attack paths to see how a cyber attacker could exploit vulnerabilities. Use guided SOC optimization recommendations to reduce costs and exposure, and prioritize actions based on potential impact. | - [Optimize your security operations](soc-optimization/soc-optimization-access.md)<br><br>- [Use SOC optimizations programmatically](soc-optimization/soc-optimization-api.md)<br><br>- [SOC optimization reference of recommendations](soc-optimization/soc-optimization-reference.md) |
-| **Tailored post-incident recommendations** | Prevent similar or repeat cyberattacks with tailored recommendations tied to Microsoft Security Exposure Management initiatives. | [Microsoft Security Exposure Management for enhanced security posture](/unified-secops-platform/overview-msem-strategy) |
-| **Cost and data optimization** | Customers can access both Microsoft Sentinel and Defender XDR data in a unified and consistent schema in the Defender portal. <br><br>Advanced hunting raw logs are available for 30 days for hunting free of charge without needing to ingest them into Microsoft Sentinel. | [What to expect to for Defender XDR tables streamed to Microsoft Sentinel](/defender-xdr/advanced-hunting-microsoft-defender#what-to-expect-for-defender-xdr-tables-streamed-to-microsoft-sentinel) |
-| **Unified, cost-effective data lake** | Improve costs and scale with simplified data onboarding, dynamic recommendations, robust out of the box solutions, and a centralized, cost-effective data lake, enabling enterprise-wide visibility. | [What is Microsoft Sentinel data lake](datalake/sentinel-lake-overview.md) |
+### Hunting and AI
+
+| **Capability area** | **Sentinel in Azure portal** | **Sentinel in Defender portal** | **Benefits** |
+|----|----|----|----|
+| Advanced hunting | Sentinel-only (Log Analytics) | Unified [advanced hunting](https://go.microsoft.com/fwlink/p/?linkid=2264410) for SIEM, Defender, and the data lake, with [Security Copilot in advanced hunting](/defender-xdr/advanced-hunting-security-copilot) for KQL generation. Supports hunting in the tenant and workspaces and reuse of existing Sentinel workspace queries and functions. | Broader dataset, richer context, no context-switching |
+| AI-assisted SOC (Security Copilot) | Not available | Native Security Copilot: [automated incident summary](/defender-xdr/security-copilot-m365d-incident-summary), [guided response actions](/defender-xdr/security-copilot-m365d-guided-response), [script analysis](/defender-xdr/security-copilot-m365d-script-analysis), [file analysis](/defender-xdr/copilot-in-defender-file-analysis), and [incident reports](/defender-xdr/security-copilot-m365d-create-incident-report). | Faster investigation, lower skill barrier |
+| Post-incident recommendations | Not available | Tailored recommendations via [Exposure Management](/unified-secops-platform/overview-msem-strategy), including attack path analysis to identify exploitable vulnerabilities. | Proactive posture improvement |
+
+### Automation and workflow
+
+| **Capability area** | **Sentinel in Azure portal** | **Sentinel in Defender portal** | **Benefits** |
+|----|----|----|----|
+| Automation and SOAR | Manual playbook creation | AI-assisted [playbook generator](automation/generate-playbook.md) and integrated SOAR, including [automatic attack disruption](/defender-xdr/automatic-attack-disruption) | Faster response, reduced manual effort |
+| Case management | Not available | End-to-end [case management](/unified-secops-platform/cases-overview) integrated with incidents and workflows | Track multi-incident investigations |
+| SOC workflow / UX | Multiple portals, tool switching | Unified SecOps experience in the Defender portal | Less context-switching, faster response |
+| SOC optimization | Limited, fragmented views | Guided [SOC optimization](soc-optimization/soc-optimization-access.md) recommendations, available [programmatically via API](soc-optimization/soc-optimization-api.md); see [optimization reference](soc-optimization/soc-optimization-reference.md) | More actionable guidance, measurable improvements |
+
+### Data and cost
+
+| **Capability area** | **Sentinel in Azure portal** | **Sentinel in Defender portal** | **Benefits** |
+|----|----|----|----|
+| Data lake and long-term analytics | Log Analytics-centric | Centralized [data lake](datalake/sentinel-lake-overview.md) with tiered retention, massive-scale analytics, and simplified onboarding | Enterprise-wide visibility, lower costs at scale |
+| Cost and data optimization | Separate billing models | Unified schema for Sentinel and Defemder, with [advanced hunting raw logs free for 30 days without ingestion](/defender-xdr/advanced-hunting-microsoft-defender#what-to-expect-for-defender-xdr-tables-streamed-to-microsoft-sentinel) | Simplified billing, reduced ingestion costs |
+| Defender data integration | Enable the Defender XDR connector in Sentinel | Automatically integrates Sentinel with Defender | Defender data integrated by default |
+| Unified data model | Separate schemas | Normalized schema for Defender and SIEM | Simpler queries, less transform work |
+
+### Platform and administration
+
+| **Capability area** | **Sentinel in Azure portal** | **Sentinel in Defender portal** | **Benefits** |
+|----|----|----|----|
+| Innovation focus / roadmap | Maintenance and parity only | Primary innovation surface, all new Sentinel experiences land here first | Faster access to new capabilities, optimized workflows |
+| Multi-tenant / MSSP operations | Azure Lighthouse | Native multi-tenant operations (MTO) with easy delegation and management | Centralized SOC management |
+| Cross-tenant visibility | Manual | Unified cross-tenant incidents and alerts | MSSP efficiency |
+| RBAC model | Azure RBAC | Unified Defender RBAC, with row-level RBAC support | Granular permissions, simpler administration |
+| Extensibility and APIs | Sentinel APIs | Unified Defender and Sentinel APIs | Broader integration surface |
+| Support timeline | Supported until March 31, 2027 | Long-term home for Sentinel | Future-proof investment |
+
 ## Limited or unavailable capabilities with Microsoft Sentinel only in the Defender portal
 
-When you onboard Microsoft Sentinel to the Defender portal without Defender XDR or other services enabled, the following capabilities are limited or unavailable:
+When you onboard Microsoft Sentinel to the Defender portal without enabling Defender capabilities or other services, the following capabilities are limited or unavailable:
 
-- [Microsoft Security Exposure Management](/security-exposure-management/)
-- [Custom detection rules](/defender-xdr/custom-detections-overview), provided by Microsoft Defender XDR
-- The [Action center](/defender-xdr/m365d-action-center), provided by Microsoft Defender XDR
+- [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management)
+- [Custom detection rules](/defender-xdr/custom-detections-overview), provided by Microsoft Defender
+- The [Action center](/defender-xdr/m365d-action-center), provided by Microsoft Defender
 
 ## Quick reference
 
-Some Microsoft Sentinel capabilities, like the unified incident queue, are integrated with Microsoft Defender XDR in the Defender portal. Many other Microsoft Sentinel capabilities are available in the **Microsoft Sentinel** section of the Defender portal.
+Some Microsoft Sentinel capabilities, like the unified incident queue, are integrated with other Microsoft Defender capabilities in the Defender portal. Many other Microsoft Sentinel capabilities are available in the **Microsoft Sentinel** section of the Defender portal.
 
 The following image shows the  Microsoft Sentinel  menu in the Defender portal:
 
 :::image type="content" source="media/microsoft-sentinel-defender-portal/navigation-defender-portal.png" alt-text="Screenshot of the Defender portal left navigation with the Microsoft Sentinel section." lightbox="media/microsoft-sentinel-defender-portal/navigation-defender-portal.png":::
 
-The following sections describe where to find Microsoft Sentinel features in the Defender portal, and are intended for existing customers who are moving to the Defender portal. The sections are organized as Microsoft Sentinel is in the Azure portal.
+The following sections describe where to find Microsoft Sentinel features in the Defender portal. They're intended for existing customers who are moving to the Defender portal. The sections are organized as Microsoft Sentinel is in the Azure portal.
 
 For more information, see [Transition your Microsoft Sentinel environment to the Defender portal](move-to-defender.md).
 
@@ -113,5 +159,5 @@ The following table lists the changes in navigation between the Azure and Defend
 ## Related content
 
 - [What are unified security operations?](/unified-secops-platform/overview-unified-security)
-- [Microsoft Defender XDR integration with Microsoft Sentinel](microsoft-365-defender-sentinel-integration.md)
-- [Connect Microsoft Sentinel to Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-sentinel-onboard)
+- [Microsoft Defender integration with Microsoft Sentinel](microsoft-365-defender-sentinel-integration.md)
+- [Connect Microsoft Sentinel to Microsoft Defender](/unified-secops-platform/microsoft-sentinel-onboard)

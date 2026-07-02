@@ -3,6 +3,7 @@ title: Remediation actions
 description: Learn how to respond to compromised users with remediation actions in Microsoft Defender for Identity
 ms.date: 03/05/2026
 ms.topic: how-to
+ms.custom: sfi-ga-blocked
 ---
 
 # Remediation actions in Microsoft Defender for Identity
@@ -23,7 +24,10 @@ Remediation actions are initiated by a user in the Microsoft Defender portal and
 After authorization, the action is executed by the identity system that manages the affected account:
 
 - **Active Directory**
-  Actions are executed by the Microsoft Defender for Identity sensor on the domain controller. The sensor impersonates the **LocalSystem** account to perform the action.
+  Actions are executed by the Microsoft Defender for Identity sensor on the domain controller. Only sensors installed on domain controllers perform remediation actions; sensors on AD FS, AD CS, or Microsoft Entra Connect servers don't perform remediation actions. The sensor uses the domain controller's local system account to perform the action.
+
+  > [!IMPORTANT]
+  > Make sure the **Automatically use the sensor's local system account** option is selected. This is required for sensor v3.x and recommended for all environments, including mixed (v2.x and v3.x) deployments. To verify, in the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Identities** > **Microsoft Defender for Identity** > **Manage action accounts**.
 
 - **Microsoft Entra ID**
   Microsoft Defender for Identity creates and uses a Microsoft‑managed enterprise application to execute remediation actions in Entra ID.  
@@ -61,13 +65,13 @@ This table lists the remediation actions supported by Defender for Identity and 
 
 | Remediation Action | Active Directory |Microsoft Entra ID | Okta |
 | ---- | ---- | ---- | ---- |
-| Disable | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | <ul><li>Global Administrator</li><li>User Administrator</li><li>Authentication Administrator</li><li>Privileged Authentication Administrator</li><li>Directory Writers</li></ul> | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
-| Enable | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) |<ul><li>Global Administrator</li><li>User Administrator</li><li>Authentication Administrator</li><li>Privileged Authentication Administrator</li><li>Directory Writers</li></ul> | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
-| Revoke session | N/A |<ul><li>Global Administrator</li><li>User Administrator</li><li>Authentication Administrator</li><li>Privileged Authentication Administrator</li><li>Directory Writers</li><li>Helpdesk Administrator</li></ul> | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
+| Disable | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | <ul><li>Global Administrator</li><li>User Administrator</li><li>Authentication Administrator</li><li>Privileged Authentication Administrator</li><li>Directory Writers</li></ul> | <ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
+| Enable | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) |<ul><li>Global Administrator</li><li>User Administrator</li><li>Authentication Administrator</li><li>Privileged Authentication Administrator</li><li>Directory Writers</li></ul> |<ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
+| Revoke session | N/A |<ul><li>Global Administrator</li><li>User Administrator</li><li>Authentication Administrator</li><li>Privileged Authentication Administrator</li><li>Directory Writers</li><li>Helpdesk Administrator</li></ul> |<ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
 | Mark as compromised | N/A |<ul><li>Global Administrator</li><li>Security Administrator</li><li>Security Operator</li></ul> | N/A |
 | Force password change | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | N/A | N/A |
-| Deactivate | N/A | N/A | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
-| Set identity risk to High/Medium/Low | N/A | N/A | A custom role defined with permissions for Response (manage) or one of the following Microsoft Entra roles: <ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
+| Deactivate | N/A | N/A |<ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
+| Set identity risk to High/Medium/Low | N/A | N/A |<ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
 
 > [!NOTE]
 > There are some limitations for Microsoft Entra ID when performing certain actions on other roles. For more information, see the [Graph API documentation](/graph/api/resources/users?view=graph-rest-1.0&preserve-view=true).
@@ -76,10 +80,8 @@ This table lists the remediation actions supported by Defender for Identity and 
 
 To perform any of the [supported actions](#supported-actions), you need to:
 
-- **Configure the account that Microsoft Defender for Identity uses to perform actions.** By default, the Microsoft Defender for Identity sensor installed on a domain controller impersonates the **LocalSystem** account of the domain controller to perform Active Directory actions. For more information, see [Microsoft Defender for Identity action accounts](deploy/manage-action-accounts.md).
-- **Sign in to the Microsoft Defender portal with the required permissions.** For Defender for Identity actions, you need a custom role with **Response (Manage)** permissions. For more information, see [Create custom roles with Microsoft Defender XDR Unified RBAC](/microsoft-365/security/defender/create-custom-rbac-roles). For details on the specific roles required for each action, see [Roles and permissions](#roles-and-permissions).
-
-## Apply a remediation action
+- **Configure the account that Microsoft Defender for Identity uses to perform actions.** Make sure the **Automatically use the sensor's local system account** option is selected. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Identities** > **Microsoft Defender for Identity** > **Manage action accounts**. This setting is required if any of your sensors are v3.x. For more information, see [Manage action accounts](deploy/manage-action-accounts.md).
+- **Sign in to the Microsoft Defender portal with the required permissions.** For Defender for Identity actions, you'll need a custom role with **Response (manage)** permissions. For more information, see [Create custom roles with Microsoft Defender unified RBAC](/microsoft-365/security/defender/create-custom-rbac-roles). For details on the specific roles required for each action, see [Roles and permissions](#roles-and-permissions).
 
 To apply a remediation action to an identity:
 

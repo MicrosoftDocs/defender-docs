@@ -18,7 +18,7 @@ ms.topic: concept-article
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 04/14/2026
+ms.date: 06/09/2026
 ---
 
 # Advanced hunting with Microsoft Sentinel data in Microsoft Defender portal
@@ -84,7 +84,6 @@ In the unified portal, you can view the schema column names and descriptions, as
 
 ## Known issues
 
-- The Microsoft Sentinel `SecurityAlert` table is replaced by `AlertInfo` and `AlertEvidence` tables, which both contain all the data on alerts. While `SecurityAlert` isn't available in the schema tab, you can still use it in queries by using the advanced hunting editor. This provision prevents existing queries from Microsoft Sentinel that use this table from breaking. 
 - Guided hunting mode and take actions capabilities support Defender XDR data only.
 - Custom detections have the following limitations:
     - Near real-time detection frequency isn't available for detections that include Microsoft Sentinel data. 
@@ -92,6 +91,7 @@ In the unified portal, you can view the schema column names and descriptions, as
 - Bookmarks aren't supported in the advanced hunting experience. They're supported in the **Microsoft Sentinel > Threat management > Hunting** feature. Alternatively, you can use the [Link to incident](advanced-hunting-defender-results.md#link-query-results-to-an-incident) feature to link query results to new or existing incidents.
 - If you're streaming Defender XDR tables to Log Analytics, there might be a difference between the `Timestamp` and `TimeGenerated` columns. If the data arrives to Log Analytics after 48 hours, the ingestion process overrides it to `now()`. Therefore, to get the actual time the event happened, rely on the `Timestamp` column.
 - When prompting [Security Copilot](advanced-hunting-security-copilot.md) for advanced hunting queries, you might find that not all Microsoft Sentinel tables are currently supported. However, support for these tables can be expected in the future.
+- When a query contains a function with a time range defined within the function, the time range applied through the advanced hunting or custom detections UI overrides the function's intended time scope instead of using the **Set in query** option.
 
 
 ## See also

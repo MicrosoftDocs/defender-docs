@@ -1,10 +1,12 @@
 ---
 title: Entity tags in Microsoft Defender for Identity
 description: Learn about when to use entity tags with Microsoft Defender for Identity and how to apply them in Microsoft Defender XDR.
-ms.date: 09/03/2023
+ms.date: 06/15/2026
 ms.topic: how-to
 #CustomerIntent: As a Defender for Identity customer, I want to learn how to apply entity tags so that I can identify sensitive accounts in Microsoft Defender XDR.
 ms.reviewer: LiorShapiraa
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Defender for Identity entity tags in Microsoft Defender XDR
@@ -19,13 +21,13 @@ This article describes how to apply Microsoft Defender for Identity entity tags,
 
 ## Prerequisites
 
-To set Defender for Identity entity tags in Microsoft Defender XDR, you'll need Defender for Identity [deployed in your environment](deploy-defender-identity.md), and administrator or user access to Microsoft Defender XDR.
+To set Defender for Identity entity tags in Microsoft Defender XDR, you'll need Defender for Identity [deployed in your environment, as described in the Defender for Identity deployment guide](deploy-defender-identity.md), and administrator or user access to Microsoft Defender XDR.
 
 For more information, see [Microsoft Defender for Identity role groups](role-groups.md).
 
 ## Tag entities manually
 
-This section describes how to tag an entity manually, such as for a honeytoken account, or if your entity hasn't been automatically tagged as *Sensitive*.
+To manually tag an entity in Microsoft Defender XDR, such as a honeytoken account or an entity not automatically tagged as *Sensitive*, use the following steps:
 
 1. Sign into [Microsoft Defender XDR](https://security.microsoft.com) and select **Settings** > **Identities**.
 
@@ -78,11 +80,15 @@ In addition to these groups, Defender for Identity identifies the following high
 - Microsoft Exchange Server
 - Replicating Directory Changes Permissions
 
-## Defender for Identity Integrations
+<a name="defender-for-identity-integrations"></a>
+## Supported integrations for entity tags
 
 The following roles are designated as Sensitive by Microsoft Defender for Identity. Any entity assigned membership in these roles is automatically classified as sensitive.
 
-### Okta
+<a name="okta"></a>
+### Okta sensitive roles
+
+The following Okta roles are designated as Sensitive by Defender for Identity:
 
 - Super Administrator
 - Application Administrator
@@ -95,7 +101,10 @@ The following roles are designated as Sensitive by Microsoft Defender for Identi
 - Read-only Administrator
 - Report Administrator
 
-### CyberArk
+<a name="cyberark-identity"></a>
+### CyberArk Identity sensitive roles
+
+The following CyberArk Identity roles are designated as Sensitive by Defender for Identity:
 
 - Administration Role
 - Cloud Onboarding Admin
@@ -111,9 +120,14 @@ The following roles are designated as Sensitive by Microsoft Defender for Identi
 - Privilege Cloud Session Risk Managers
 - System Administrator
 
-### SailPoint
+<a name="sailpoint-identity-security-cloud"></a>
+### SailPoint Identity Security Cloud sensitive roles
 
-#### Entra Id Roles
+<a name="entra-id-roles"></a>
+#### Entra ID roles used for tagging
+
+The following Entra ID roles are designated as Sensitive by Defender for Identity:
+
 - Global Administrator
 - User Administrator
 - Authentication Administrator
@@ -128,7 +142,10 @@ The following roles are designated as Sensitive by Microsoft Defender for Identi
 - Hybrid Identity Administrator
 - Cloud Application Administrator
 
-#### SailPoint Roles
+<a name="sailpoint-identity-security-cloud-roles"></a>
+#### SailPoint Identity Security Cloud roles used for tagging
+
+The following SailPoint Identity Security Cloud role is designated as Sensitive by Defender for Identity:
 
 - IdentityNow Administrator
 

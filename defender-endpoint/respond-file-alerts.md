@@ -11,9 +11,11 @@ ms.collection:
 - mde-edr
 ms.topic: how-to
 ms.subservice: edr
-ms.date: 03/04/2025
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Take response actions on a file
@@ -67,7 +69,7 @@ You can contain an attack in your organization by stopping the malicious process
 
 The **Stop and Quarantine File** action includes stopping running processes, quarantining the files, and deleting persistent data such as registry keys.
 
-This action takes effect on devices with Windows 10, version 1703 or later, and Windows 11 and Windows Server 2012 R2 or later, where the file was observed in the last 30 days.
+The **Stop and Quarantine File** action takes effect on devices with Windows 10, version 1703 or later, and Windows 11 and Windows Server 2012 R2 or later, where the file was observed in the last 30 days.
 
 > [!NOTE]
 > You'll be able to restore the file from quarantine at any time.
@@ -110,25 +112,22 @@ When the file is being removed from a device, the following notification is show
 
 In the device timeline, a new event is added for each device where a file was stopped and quarantined.
 
-A warning is shown before the action is implemented for files widely used throughout an organization. It's to validate that the operation is intended.
+A warning is shown before the action is implemented for files widely used throughout an organization. This warning helps validate that the operation is intended.
 
 ## Restore file from quarantine
 
 You can roll back and remove a file from quarantine if you've determined that it's clean after an investigation. Run the following command on each device where the file was quarantined.
 
-1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
-   1. Open the **Start** menu, and then type **cmd**.
-   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
-2. In the elevated Command Prompt, run the following commands:
+In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
 
-   > [!TIP]
-   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
+> [!TIP]
+> The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
-   ```dos
-   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+```dos
+(set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
-   MpCmdRun.exe -Restore -Name EUS:Win32/CustomEnterpriseBlock -All
-   ```
+MpCmdRun.exe -Restore -Name EUS:Win32/CustomEnterpriseBlock -All
+```
 
 For more information about MpCmdRun, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
 
@@ -150,8 +149,8 @@ The **Download file** button can have the following states:
 - **Active** - You are able to collect the file.
 
 - **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate RBAC permissions to collect files. The following permissions are required:
-  - Microsoft Defender XDR Unified role-based access control (RBAC):
-    - Add file collection permission in Microsoft Defender XDR Unified (RBAC)
+  - Microsoft Defender Unified role-based access control (RBAC):
+    - Add file collection permission in Microsoft Defender Unified (RBAC)
   - Microsoft Defender for Endpoint role-based access control (RBAC):
     - Portable Executable files (.exe, .sys, .dll, and others):
       - Security Administrator or Advanced live response or Alerts
@@ -167,17 +166,17 @@ The **Download file** button can have the following states:
 
 ### Download quarantined files
 
-Files that were quarantined by Microsoft Defender Antivirus or your security team are saved in a compliant way according to your [sample submission configurations](enable-cloud-protection-microsoft-defender-antivirus.md). Your security team can download the files directly from the file's detail page via the "Download file" button. **This feature is turned 'On' by default**.
+Files that were quarantined by Microsoft Defender Antivirus or your security team are saved in a compliant way according to your [sample submission configurations](enable-cloud-protection-microsoft-defender-antivirus.md). Your security team can download the files directly from the file's detail page via the "Download file" button. **The Download file feature is turned on by default**.
 
 The location depends on your organization's geo settings (either EU, UK, or US). A quarantined file is collected only once per organization. Learn more about Microsoft's data protection from the Service Trust Portal at https://aka.ms/STP.
 
-Having this setting turned on can help security teams examine potentially bad files and investigate incidents quickly and in a less risky way. However, if you need to turn off this setting, go to **Settings** \> **Endpoints** \> **Advanced features** \> **Download quarantined files** to adjust the setting. [Learn more about advanced features](advanced-features.md)
+Having the **Download quarantined files** setting turned on can help security teams examine potentially bad files and investigate incidents quickly and in a less risky way. However, if you need to turn off this setting, go to **Settings** \> **Endpoints** \> **Advanced features** \> **Download quarantined files** to adjust the setting. For more information, see [Advanced features](advanced-features.md).
 
 #### Backing up quarantined files
 
 Users might be prompted to provide explicit consent before backing up the quarantined file, depending on your [sample submission configuration](enable-cloud-protection-microsoft-defender-antivirus.md#use-group-policy-to-turn-on-cloud-protection).
 
-This feature doesn't work if sample submission is turned off. If automatic sample submission is set to request permission from the user, only samples that the user agrees to send are collected.
+The **Download quarantined files** feature doesn't work if sample submission is turned off. If automatic sample submission is set to request permission from the user, only samples that the user agrees to send are collected.
 
 > [!IMPORTANT]
 > Download quarantined file requirements:
@@ -218,11 +217,11 @@ Prevent further propagation of an attack in your organization by banning potenti
 
 > [!IMPORTANT]
 >
-> - This feature is available if your organization uses Microsoft Defender Antivirus and Cloud-delivered protection is enabled. For more information, see [Manage cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
+> - The **Block or allow** feature is available if your organization uses Microsoft Defender Antivirus and Cloud-delivered protection is enabled. For more information, see [Manage cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
 >
 > - The Anti-malware client version must be 4.18.1901.x or later.
-> - This feature is designed to prevent suspected malware (or potentially malicious files) from being downloaded from the web. It supports portable executable (PE) files, including _.exe_ and _.dll_ files. The coverage will be extended over time.
-> - This response action is available for devices on Windows 10, version 1703 or later, and Windows 11.
+> - The **Block or allow** feature is designed to prevent suspected malware (or potentially malicious files) from being downloaded from the web. It supports portable executable (PE) files, including _.exe_ and _.dll_ files. The coverage will be extended over time.
+> - The **Block or allow** response action is available for devices on Windows 10, version 1703 or later, and Windows 11.
 > - The allow or block function cannot be done on files if the file's classification exists on the device's cache prior to the allow or block action.
 
 > [!NOTE]
@@ -242,7 +241,7 @@ Files automatically blocked by an indicator don't show up in the file's Action c
 
 See [Overview of indicators](indicators-overview.md) for more details on blocking and raising alerts on files.
 
-To stop blocking a file, remove the indicator. You can do so via the **Edit Indicator** action on the file's profile page. This action is visible in the same position as the **Add Indicator** action, before you added the indicator.
+To stop blocking a file, remove the indicator. You can do so via the **Edit Indicator** action on the file's profile page. The **Edit Indicator** action is visible in the same position as the **Add Indicator** action, before you added the indicator.
 
 You can also edit indicators from  the **Settings** page, under **Rules** \> **Indicators**. Indicators are listed in this area by their file's hash.
 
@@ -272,7 +271,7 @@ The deep analysis summary includes a list of observed *behaviors*, some of which
 
 Results of deep analysis are matched against threat intelligence and any matches generate appropriate alerts.
 
-Use the deep analysis feature to investigate the details of any file, usually during an investigation of an alert or for any other reason where you suspect malicious behavior. This feature is available at the top of the file's page. Select the three dots to access the **Deep analysis** action.
+Use the deep analysis feature to investigate the details of any file, usually during an investigation of an alert or for any other reason where you suspect malicious behavior. The **Deep analysis** feature is available at the top of the file's page. Select the three dots to access the **Deep analysis** action.
 
 :::image type="content" source="/defender/media/defender-endpoint/deep-analysis.png" alt-text="Screenshot of the Deep analysis action" lightbox="/defender/media/defender-endpoint/deep-analysis.png":::
 
@@ -290,6 +289,8 @@ You can also submit a sample through the [Microsoft Defender portal](https://www
 > Due to backend processing flows in the Microsoft Defender portal, there could be up to 10 minutes of latency between file submission and availability of the deep analysis feature in Defender for Endpoint.
 
 ### Submit files for deep analysis
+
+To submit a file for deep analysis, use the following steps:
 
 1. Select the file that you want to submit for deep analysis. You can select or search a file from any of the following views:
 
@@ -311,7 +312,7 @@ You can also submit a sample through the [Microsoft Defender portal](https://www
 
 ### View deep analysis reports
 
-View the provided deep analysis report to see more in-depth insights on the file you submitted. This feature is available in the file view context.
+View the provided deep analysis report to see more in-depth insights on the file you submitted. The deep analysis report is available in the file view context.
 
 You can view the comprehensive report that provides details on the following sections:
 
@@ -350,7 +351,8 @@ If you come across a problem when trying to submit a file, try each of the follo
 
 1. If these steps don't resolve the issue, contact support.
 
-## Related articles
+<a name="related-articles"></a>
+## Related content
 
 - [Take response actions on a device](respond-machine-alerts.md)
 - [Investigate files](investigate-files.md)

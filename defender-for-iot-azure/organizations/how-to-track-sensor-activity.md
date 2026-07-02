@@ -1,9 +1,10 @@
 ---
 title: Track network and sensor activity with the event timeline in Microsoft Defender for IoT
 description: Track network and sensor activity in the event timeline.
-ms.date: 02/27/2023
+ms.date: 06/12/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Track network and sensor activity with the event timeline
@@ -21,9 +22,10 @@ For more information, see:
 - [View and manage alerts](how-to-view-alerts.md#view-details-and-remediate-a-specific-alert)
 - [Analyze programming details and changes](how-to-analyze-programming-details-changes.md)
 
-## Permissions
+<a name="permissions"></a>
+## Permissions required to view the event timeline
 
-Before you perform the procedures described in this article, make sure that you have access to an OT sensor as an **Admin** or **Security Analyst** role. For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](roles-on-premises.md).
+Before you perform the procedures described in this section, make sure that you have access to an OT sensor as an **Admin** or **Security Analyst** role. For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](roles-on-premises.md).
 
 ## View the event timeline
 
@@ -46,7 +48,7 @@ You can also view the event timeline of a specific device from the **Device inve
 
 1. Select the specific device to open the device details pane, and then select **View full details** to open the device properties page.
 
-1. Select the **Event timeline** tab to view all events associated with this device, and [filter the events](#filter-events-on-the-timeline) as needed.
+1. Select the **Event timeline** tab to view all events associated with this device, and [filter events on the timeline](#filter-events-on-the-timeline) as needed.
 
     For example:
 
@@ -106,7 +108,7 @@ For example:
 
 The amount of data that can be stored in the event timeline depends on various factors, such as the size of the network, the frequency of events, and the storage capacity of your sensor. The data stored in the event timeline can include information about network traffic, security events, and other relevant data points.
 
-The maximum number of events shown in the event timeline is dependent on [the hardware profile](ot-appliance-sizing.md) selected during sensor installation. Each hardware profile has a maximum capacity of events. For more information on the maximum event capacity for each hardware profile, see [OT event timeline retention](references-data-retention.md#ot-event-timeline-retention).
+The maximum number of events shown in the event timeline is dependent on [the OT appliance sizing and hardware profile](ot-appliance-sizing.md) selected during sensor installation. Each hardware profile has a maximum capacity of events. For more information on the maximum event capacity for each hardware profile, see [OT event timeline retention](references-data-retention.md#ot-event-timeline-retention).
 
 ## Next steps
 

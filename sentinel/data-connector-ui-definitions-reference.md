@@ -3,10 +3,11 @@ title: Data connector definitions reference for the Codeless Connector Framework
 titleSuffix: Microsoft Sentinel
 description: This article provides a supplemental reference for creating the connectorUIConfig JSON section for the Data Connector Definitions API as part of the Codeless Connector Framework.
 services: sentinel
+ms.author: edbaynash
 author: EdB-MSFT
+ms.reviewer: krishsa
 ms.topic: reference
 ms.date: 11/13/2023
-ms.author: edbaynash
 ms.custom:
   - sfi-image-nochange
   - sfi-ga-nochange
@@ -23,7 +24,7 @@ To create a data connector with the Codeless Connector Framework (CCF), use this
 
 - `connectorUiConfig` - defines the visual elements and text displayed on the data connector page in Microsoft Sentinel.
 
-For more information, see [Create a codeless connector](create-codeless-connector.md).
+For more information, see [Create a codeless connector](isv/create-codeless-connector.md).
 
 ## Data connector definitions - Create or update
 
