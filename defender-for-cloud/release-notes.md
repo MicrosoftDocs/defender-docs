@@ -62,7 +62,7 @@ For migration steps, see [Introduction to Microsoft Defender for Containers](def
 
 To validate coverage and availability after migration, see [Support matrices for Defender for Cloud](support-matrix-defender-for-cloud.md).
 
-No official retirement date is announced yet for these plans. Customers are expected and encouraged to migrate because these plans are deprecated and on the retirement path.
+No official retirement date has been announced for these plans. Customers are encouraged to migrate to the recommended plans.
 
 ### New container security capabilities are now generally available
 
