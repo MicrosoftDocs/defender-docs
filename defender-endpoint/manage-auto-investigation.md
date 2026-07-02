@@ -2,50 +2,43 @@
 title: Review remediation actions following automated investigations
 description: Review and approve (or reject) remediation actions following an automated investigation.
 ms.service: defender-endpoint
-author: emmwalshh
-ms.author: ewalsh
+author: chrisda
+ms.author: chrisda
 ms.localizationpriority: medium
-ms.date: 04/04/2025
-manager: deniseb
-audience: ITPro
+ms.date: 06/16/2026
 ms.collection: 
 - m365-security
 - tier2
 - mde-edr
-ms.custom: admindeeplinkDEFENDER
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
 ms.topic: how-to
 ms.subservice: edr
-search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 
+ai-usage: ai-assisted
+---
 # Review remediation actions following an automated investigation
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
+This article explains how to review, approve, or reject remediation actions that result from automated investigations in Microsoft Defender for Endpoint. Depending on your organization's automation settings, some remediation actions are taken automatically while others require approval.
 
 ## Remediation actions
 
 When an [automated investigation](automated-investigations.md) runs, a verdict is generated for each piece of evidence investigated. Verdicts can be *Malicious*, *Suspicious*, or *No threats found*.
 
-Depending on
-
-- the type of threat,
-- the resulting verdict, and
-- how your organization's [device groups](machine-groups.md) are configured,
-
-Remediation actions can occur automatically or only upon approval by your organization's security operations team.
+Whether remediation actions occur automatically or require approval by your organization's security operations team depends on the type of threat, the resulting verdict, and how your organization's [device groups](machine-groups.md) are configured.
 
 > [!NOTE]
 > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
 
 Here are a few examples:
 
-- **Example 1**: Fabrikam's device groups are set to **Full - remediate threats automatically** (the recommended setting). In this case, remediation actions are taken automatically for artifacts that are considered to be malicious following an automated investigation (see [Review completed actions](#review-completed-actions)).
+- **Example 1**: Fabrikam's device groups are set to **Full - remediate threats automatically** (the recommended setting). With this setting, remediation actions are taken automatically for artifacts that are considered to be malicious following an automated investigation (see [Review completed actions](#review-completed-actions)).
 
-- **Example 2**: Contoso's devices are included in a device group that is set for **Semi - require approval for any remediation**. In this case, Contoso's security operations team must review and approve all remediation actions following an automated investigation (see [Review pending actions](#review-pending-actions)).
+- **Example 2**: Contoso's devices are included in a device group that is set for **Semi - require approval for any remediation**. With this setting, Contoso's security operations team must review and approve all remediation actions following an automated investigation (see [Review pending actions](#review-pending-actions)).
 
-- **Example 3**: Tailspin Toys has their device groups set to **No automated response** (not recommended). In this case, automated investigations don't occur. No remediation actions are taken or pending, and no actions are logged in the [Action center](auto-investigation-action-center.md) for their devices (see [Manage device groups](machine-groups.md#manage-device-groups)).
+- **Example 3**: Tailspin Toys has their device groups set to **No automated response** (not recommended). With this setting, automated investigations don't occur. No remediation actions are taken or pending, and no actions are logged in the [Action center](auto-investigation-action-center.md) for their devices (see [Manage device groups](machine-groups.md#manage-device-groups)).
 
 Whether taken automatically or upon approval, an automated investigation and remediation can result in one or more of the remediation actions:
 
@@ -58,15 +51,17 @@ Whether taken automatically or upon approval, an automated investigation and rem
 
 ## Review pending actions
 
+To review pending remediation actions in the Action center, perform the following steps:
+
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
-2. In the navigation pane, choose **Action center**.
+1. In the navigation pane, choose **Action center**.
 
-3. Review the items on the **Pending** tab.
+1. Review the items on the **Pending** tab.
 
-4. Select an action to open its flyout pane.
+1. Select an action to open its flyout pane.
 
-5. In the flyout pane, review the information, and then take one of the following steps:
+1. In the flyout pane, review the information, and then take one of the following steps:
 
    - Select **Open investigation page** to view more details about the investigation.
    - Select **Approve** to initiate a pending action.
@@ -78,11 +73,11 @@ Whether taken automatically or upon approval, an automated investigation and rem
 For incidents with a remediation status of **Pending approval**, you can also approve or reject a remediation action from within the incident.
 
 1. In the navigation pane, go to **Incidents & alerts** \> **Incidents**.
-2. Filter on **Pending action** for the Automated investigation state (optional).
-3. Select an incident name to open its summary page.
-4. Select the **Evidence and Response** tab.
-5. Select an item in the list to open its flyout pane.
-6. Review the information, and then take one of the following steps:
+1. Filter on **Pending action** for the Automated investigation state (optional).
+1. Select an incident name to open its summary page.
+1. Select the **Evidence and Response** tab.
+1. Select an item in the list to open its flyout pane.
+1. Review the information, and then take one of the following steps:
    - Select the Approve pending action option to initiate a pending action.
    - Select the Reject pending action option to prevent a pending action from being taken.
 
@@ -90,13 +85,15 @@ For incidents with a remediation status of **Pending approval**, you can also ap
 
 ## Review completed actions
 
+To review completed remediation actions, follow these steps:
+
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
-2. In the navigation pane, choose **Action center**.
+1. In the navigation pane, choose **Action center**.
 
-3. Review the items on the **History** tab.
+1. Review the items on the **History** tab.
 
-4. Select an item to view more details about that remediation action.
+1. Select an item to view more details about that remediation action.
 
 ## Undo completed actions
 
@@ -116,19 +113,23 @@ If you've determined that a device or a file isn't a threat, you can undo remedi
 
 ### To undo multiple actions at one time
 
-1. Go to the Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) and sign in.
+Use the following steps to undo multiple remediation actions at once:
 
-2. On the **History** tab, select the actions that you want to undo. Make sure to select items that have the same Action type. A flyout pane opens.
+1. Go to the [Action center](https://security.microsoft.com/action-center) and sign in.
 
-3. In the flyout pane, select **Undo**.
+1. On the **History** tab, select the actions that you want to undo. Make sure to select items that have the same Action type. A flyout pane opens.
+
+1. In the flyout pane, select **Undo**.
 
 ### To remove a file from quarantine across multiple devices
 
-1. Go to the Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) and sign in.
+Use the following steps to remove a quarantined file from multiple devices at once:
 
-2. On the **History** tab, select an item that has the Action type **Quarantine file**.
+1. Go to the [Action center](https://security.microsoft.com/action-center) and sign in.
 
-3. In the flyout pane, select **Apply to X more instances of this file**, and then select **Undo**.
+1. On the **History** tab, select an item that has the Action type **Quarantine file**.
+
+1. In the flyout pane, select **Apply to X more instances of this file**, and then select **Undo**.
 
 ## Automation levels, automated investigation results, and resulting actions
 
@@ -159,4 +160,5 @@ All verdicts are tracked in the [Action center](auto-investigation-action-center
 ## See also
 
 - [Overview of automated investigations](automated-investigations.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

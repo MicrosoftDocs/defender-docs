@@ -3,11 +3,9 @@ title: FAQs related to Microsoft Defender Experts for Hunting service
 ms.reviewer:
 description: Frequently asked questions related to the Microsoft Defender Experts for hunting service
 ms.service: defender-experts-for-hunting
-ms.author: vpattnaik
-author: vpattnai
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
@@ -16,7 +14,6 @@ ms.topic: faq
 ms.custom: 
 - cx-ti
 - cx-ean
-search.appverid: met150
 ms.date: 06/27/2025
 ---
 

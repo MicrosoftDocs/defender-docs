@@ -1,16 +1,11 @@
 ---
 title: MessageUrlInfo table in the advanced hunting schema
 description: Learn about the MessageUrlInfo table in the advanced hunting schema which contains information about URLs sent through Microsoft Teams messages in your organization. 
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

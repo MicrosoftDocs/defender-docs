@@ -1,21 +1,18 @@
 ---
 title: How to run attack simulations for your team
-description: The steps to send an Attack Simulation payload to your target users for your team or organization for training. Simulated attacks can help you identify and find vulnerable users, policies, and practices before a real attack impacts your organization.
+description: Send an Attack Simulation Training payload to users in your team or organization. Use simulated attacks to identify vulnerable users, policies, and practices before a real attack occurs.
 ms.service: defender-office-365
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-guidance-templates
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
-ms.date: 01/31/2023
+ms.date: 06/12/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # How to run attack simulations for your team
@@ -24,11 +21,15 @@ Attack simulation training allows you to run realistic but benign cyber attack s
 
 ## What you need
 
+Before you begin, make sure you have the following prerequisites:
+
 - Microsoft Defender for Office 365 Plan 2 (included as part of E5)
 - Sufficient permissions (Security Administrator role)
 - 5-10 minutes to perform the following procedures.
 
 ## Send a payload to target users
+
+Perform the following steps to send a simulation payload to your target users:
 
 1. Navigate to [Attack Simulation Training](https://security.microsoft.com/attacksimulator) in your subscription.
 1. Choose **Simulations** from the top navigation bar.
@@ -52,4 +53,4 @@ Attack simulation training allows you to run realistic but benign cyber attack s
 
 ### Further reading
 
-To learn how Attack Simulation works see [Simulate a phishing attack with Attack simulation training - Office 365 | Microsoft Docs](../attack-simulation-training-simulations.md).
+To learn how attack simulation training works, see [Simulate a phishing attack with Attack simulation training](../attack-simulation-training-simulations.md).

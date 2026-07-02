@@ -5,10 +5,9 @@ search.appverid: met150
 ms.service: defender-xdr
 f1.keywords: 
 - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -37,7 +36,7 @@ Threat actors use innovative ways to infiltrate their target environments. Takin
 
 This attack works by setting up an intermediate (phishing) site, effectively working as a proxy connection between the user and the legitimate website that the attacker is impersonating. By acting as an intermediary (proxy), the attacker is able to steal the target's password and session cookie. The attacker is therefore able to authenticate to a legitimate session as they're authenticating on behalf of the user.
 
-This playbook helps in investigating cases where suspicious behavior is observed indicative of an Attack-in-the-middle (AiTM) type of attack for cookie theft. This helps security teams like security operations center (SOC) and IT administrators to review, manage, and grade the alerts as True Positive (TP) or False Positive (FP), and if it's TP, take recommended actions to remediate the attack and mitigate the security risks arising because of it.
+This playbook helps in investigating cases where suspicious behavior is observed indicative of an adversary-in-the-middle (AiTM) type of attack for cookie theft. This helps security teams like security operations center (SOC) and IT administrators to review, manage, and grade the alerts as True Positive (TP) or False Positive (FP), and if it's TP, take recommended actions to remediate the attack and mitigate the security risks arising because of it.
 
 The results of using this playbook are:
 

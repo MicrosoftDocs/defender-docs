@@ -2,20 +2,18 @@
 title: Search the audit log for events in Microsoft Defender XDR
 description: Learn how to use the audit log to search for Microsoft Defender XDR activities to help with investigation.
 ms.service: defender-xdr
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: how-to
 ms.date: 01/14/2025
-search.appverid: met150
 appliesto:
 - Microsoft Defender for Endpoint Plan 2
 - Microsoft Defender XDR
+ms.custom: sfi-ga-nochange
 
 #customer intent: As a SOC analyst, I want to learn how to use the audit log to search for Microsoft Defender XDR activities to help with investigation.
 ---
@@ -56,12 +54,12 @@ Follow these steps to search the audit log:
 
 1. Navigate to the [Microsoft Defender portal's Audit page](https://security.microsoft.com/auditlogsearch) or go to the [Purview compliance portal](https://purview.microsoft.com) and select **Audit**.
 
-   :::image type="content" source="/defender/media/defender/unified-audit-log-xdr.png" alt-text="Screenshot of the unified audit log page in Microsoft Defender XDR " lightbox="/defender/media/defender/unified-audit-log-xdr.png":::
+   :::image type="content" source="media/microsoft-xdr-auditing/unified-audit-log-xdr.png" alt-text="Screenshot of the unified audit log page in Microsoft Defender XDR " lightbox="media/microsoft-xdr-auditing/unified-audit-log-xdr.png":::
 
 2. On the **New Search** page, filter the activities, dates, and users you want to audit.
 3. Select **Search**
 
-   :::image type="content" source="/defender/media/defender/unified-audit-search.png" alt-text="Screenshot of the unified audit log search options in Microsoft Defender XDR " lightbox="/defender/media/defender/unified-audit-search.png":::
+   :::image type="content" source="media/microsoft-xdr-auditing/unified-audit-search.png" alt-text="Screenshot of the unified audit log search options in Microsoft Defender XDR " lightbox="media/microsoft-xdr-auditing/unified-audit-search.png":::
 
 4. Export your results to Excel for further analysis.
 

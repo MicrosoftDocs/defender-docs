@@ -1,40 +1,34 @@
 ---
 title: Enroll Microsoft Defender for Endpoint on macOS devices into Jamf Pro
-description: Enroll Microsoft Defender for Endpoint on macOS devices into Jamf Pro
+description: Learn how to enroll macOS devices into Jamf Pro for Microsoft Defender for Endpoint management using enrollment invitations or prestage enrollments.
 ms.service: defender-endpoint
-author: emmwalshh
-ms.author: ewalsh
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
-manager: deniseb
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
 ms.topic: how-to
 ms.subservice: macos
-search.appverid: met150
-ms.date: 05/08/2025
----
+ms.date: 06/17/2026
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
 
+ai-usage: ai-assisted
+---
 # Enroll Microsoft Defender for Endpoint on macOS devices into Jamf Pro
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+This article walks you through enrolling macOS devices that run Microsoft Defender for Endpoint into Jamf Pro for centralized management. It covers two enrollment methods—Enrollment Invitations and Prestage Enrollments—and the steps to complete device enrollment.
 
 ## Enroll macOS devices
 
 There are multiple methods of getting enrolled to JamF.
 
-This article will guide you on two methods:
+This article covers two enrollment methods: Enrollment Invitations and Prestage Enrollments.
 
 - [Method 1:  Enrollment Invitations](#enrollment-method-1-enrollment-invitations)
 - [Method 2:  Prestage Enrollments](#enrollment-method-2-prestage-enrollments)
@@ -43,15 +37,17 @@ For a complete list, see [About Computer Enrollment](https://docs.jamf.com/9.9/c
 
 ## Enrollment Method 1: Enrollment Invitations
 
+Use enrollment invitations to send an email-based enrollment link to macOS device users from the Jamf Pro dashboard.
+
 1. In the Jamf Pro dashboard, navigate to **Enrollment invitations**.
 
    :::image type="content" source="media/a347307458d6a9bbfa88df7dbe15398f.png" alt-text="The configuration settings1" lightbox="media/a347307458d6a9bbfa88df7dbe15398f.png":::
 
-2. Select **+ New**.
+1. Select **+ New**.
 
    :::image type="content" source="media/b6c7ad56d50f497c38fc14c1e315456c.png" alt-text="The close up of a logo description automatically generated" lightbox="media/b6c7ad56d50f497c38fc14c1e315456c.png":::
 
-3. In **Specify Recipients for the Invitation** > under **Email Addresses** enter the e-mail address(es) of the recipients.
+1. In **Specify Recipients for the Invitation** > under **Email Addresses** enter the e-mail address(es) of the recipients.
 
     :::image type="content" source="media/718b9d609f9f77c8b13ba88c4c0abe5d.png" alt-text="The configuration settings2" lightbox="media/718b9d609f9f77c8b13ba88c4c0abe5d.png":::
 
@@ -61,7 +57,7 @@ For a complete list, see [About Computer Enrollment](https://docs.jamf.com/9.9/c
 
     :::image type="content" source="media/4922c0fcdde4c7f73242b13bf5e35c19.png" alt-text="The configuration settings4" lightbox="media/4922c0fcdde4c7f73242b13bf5e35c19.png":::
 
-4. Configure the message for the invitation.
+1. Configure the message for the invitation.
 
    :::image type="content" source="media/ce580aec080512d44a37ff8e82e5c2ac.png" alt-text="The configuration settings5" lightbox="media/ce580aec080512d44a37ff8e82e5c2ac.png":::
 
@@ -73,35 +69,41 @@ For a complete list, see [About Computer Enrollment](https://docs.jamf.com/9.9/c
 
 ## Enrollment Method 2: Prestage Enrollments
 
+Use Prestage Enrollments to automatically enroll new macOS devices into Jamf Pro when they're first set up.
+
 1. In the Jamf Pro dashboard, navigate to **Prestage enrollments**.
 
    :::image type="content" source="media/6fd0cb2bbb0e60a623829c91fd0826ab.png" alt-text="The configuration settings9" lightbox="media/6fd0cb2bbb0e60a623829c91fd0826ab.png":::
 
-2. Follow the instructions in [Computer PreStage Enrollments](https://docs.jamf.com/9.9/casper-suite/administrator-guide/Computer_PreStage_Enrollments.html).
+1. Follow the instructions in [Computer PreStage Enrollments](https://docs.jamf.com/9.9/casper-suite/administrator-guide/Computer_PreStage_Enrollments.html).
 
 ## Enroll macOS device
+
+Complete the following steps on the macOS device to finish enrollment and install the MDM profile.
 
 1. Select **Continue** and install the CA certificate from a **System Preferences** window.
 
    :::image type="content" source="media/jamfpro-ca-certificate.png" alt-text="The Jamf Pro enrollment1" lightbox="media/jamfpro-ca-certificate.png":::
 
-2. Once CA certificate is installed, return to the browser window and select **Continue** and install the MDM profile.
+1. Once CA certificate is installed, return to the browser window and select **Continue** and install the MDM profile.
 
    :::image type="content" source="media/jamfpro-install-mdm-profile.png" alt-text="The Jamf Pro enrollment2" lightbox="media/jamfpro-install-mdm-profile.png":::
 
-3. Select **Allow** to downloads from JAMF.
+1. Select **Allow** to downloads from JAMF.
 
    :::image type="content" source="media/jamfpro-download.png" alt-text="The Jamf Pro enrollment3" lightbox="media/jamfpro-download.png":::
 
-4. Select **Continue** to proceed with the MDM Profile installation.
+1. Select **Continue** to proceed with the MDM Profile installation.
 
    :::image type="content" source="media/jamfpro-install-mdm.png" alt-text="The Jamf Pro enrollment4" lightbox="media/jamfpro-install-mdm.png":::
 
-5. Select **Continue** to install the MDM Profile.
+1. Select **Continue** to install the MDM Profile.
 
    :::image type="content" source="media/jamfpro-mdm-unverified.png" alt-text="The Jamf Pro enrollment5" lightbox="media/jamfpro-mdm-unverified.png":::
 
-6. Select **Continue**  to complete the configuration.
+1. Select **Continue**  to complete the configuration.
 
    :::image type="content" source="media/jamfpro-mdm-profile.png" alt-text="The Jamf Pro enrollment6" lightbox="media/jamfpro-mdm-profile.png":::
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+   
+
+

@@ -1,49 +1,49 @@
 ---
 title: Respond to and mitigate threats in Microsoft Defender for Business
-description: As threats are detected in Defender for Business, you can take actions to respond to those threats. See how to use the device inventory view.
-search.appverid: MET150
+description: Learn how to investigate, respond to, and mitigate detected threats in Microsoft Defender for Business through an example workflow in the Defender portal.
 author: chrisda
 ms.author: chrisda
-manager: orspodek
-audience: Admin
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 10/10/2023
+ms.date: 06/11/2026
 ms.reviewer: nehabha
-f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security
 - m365-initiative-defender-business
 - tier1
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Respond to and mitigate threats in Microsoft Defender for Business
 
-The Microsoft Defender portal enables your security team to respond to and mitigate detected threats. This article walks you through an example of how you can use Defender for Business.
+The Microsoft Defender portal enables your security team to respond to and mitigate detected threats. This article walks you through an example of how you can use Defender for Business to review threat indicators on the Home page, investigate at-risk devices in the device inventory, and take response actions such as running an antivirus scan or initiating an automated investigation.
 
 ## View detected threats
 
-1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
+Use the following steps to view detected threats in the Microsoft Defender portal and take response actions.
+
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
 2. Notice cards on the Home page. These cards were designed to tell you at a glance how many threats were detected, how many user accounts, and what endpoints (devices) or other assets were affected. The following image is an example of cards you might see:
 
-   :::image type="content" source="/defender/media/defender-business/mdb-examplecards.png" alt-text="Screenshot of cards in the Microsoft Defender portal":::
+   :::image type="content" source="media/mdb-examplecards.png" alt-text="Screenshot of cards in the Microsoft Defender portal":::
 
-3. Select a button or link on the card to view more information and take action. As an example, our **Devices at risk** card includes a **View details** button. Selecting that button takes us to the **Devices** list, as shown in the following image:
+3. To view more information and take action, select a button or link on the card. For example, our **Devices at risk** card includes a **View details** button. Selecting that button takes us to the **Devices** list, as shown in the following image:
 
-   :::image type="content" source="/defender/media/defender-business/mdb-device-inventory.png" alt-text="Screenshot of device inventory":::
+   :::image type="content" source="media/mdb-device-inventory.png" alt-text="Screenshot of device inventory":::
 
    The **Devices** page lists company devices, along with their risk level and exposure level.
 
 4. Select an item, such as a device. A flyout pane opens and displays more information about alerts and incidents generated for that item, as shown in the following image:
 
-   :::image type="content" source="/defender/media/defender-business/mdb-deviceinventory-selecteddeviceflyout.png" alt-text="Screenshot of the flyout pane for a selected device":::
+   :::image type="content" source="media/mdb-deviceinventory-selecteddeviceflyout.png" alt-text="Screenshot of the flyout pane for a selected device":::
 
 5. On the flyout, view the information that is displayed. Select the ellipsis (...) to open a menu that lists available actions, as shown in the following image:
 
-   :::image type="content" source="/defender/media/defender-business/mdb-deviceinventory-selecteddeviceflyout-menu.png" alt-text="Screenshot of available actions for a selected device":::
+   :::image type="content" source="media/mdb-deviceinventory-selecteddeviceflyout-menu.png" alt-text="Screenshot of available actions for a selected device":::
 
 6. Select an available action. For example, you might choose **Run antivirus scan**, which starts a quick scan with Microsoft Defender Antivirus on the device. Or, you could select **Initiate Automated Investigation** to trigger an automated investigation on the device.
 

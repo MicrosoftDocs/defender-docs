@@ -5,11 +5,10 @@ search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 ms.date: 06/19/2025
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection:
   - m365-security
@@ -112,13 +111,13 @@ You'll first need to check the license state to verify that it was properly prov
 
 1. To view your licenses, go to the **Microsoft Azure portal** and navigate to the [Microsoft Azure portal license section](https://portal.azure.com/#blade/Microsoft_AAD_IAM/LicensesMenuBlade/Products).
 
-   :::image type="content" source="/defender/media/defender/atp-licensing-azure-portal.png" alt-text="Screenshot of the Azure Licensing page in the Microsoft Defender portal." lightbox="/defender/media/defender/atp-licensing-azure-portal.png":::
+   :::image type="content" source="media/pilot-deploy-defender-endpoint/atp-licensing-azure-portal.png" alt-text="Screenshot of the Azure Licensing page in the Microsoft Defender portal." lightbox="media/pilot-deploy-defender-endpoint/atp-licensing-azure-portal.png":::
 
 1. Alternately, in the admin center, navigate to **Billing** > **Subscriptions**.
 
     On the screen, you'll see all the provisioned licenses and their current **Status**.
 
-    :::image type="content" source="/defender/media/defender/atp-billing-subscriptions.png" alt-text="Screenshot of the Billing licenses page in the Microsoft Azure portal." lightbox="/defender/media/defender/atp-billing-subscriptions.png":::
+    :::image type="content" source="media/pilot-deploy-defender-endpoint/atp-billing-subscriptions.png" alt-text="Screenshot of the Billing licenses page in the Microsoft Azure portal." lightbox="media/pilot-deploy-defender-endpoint/atp-billing-subscriptions.png":::
 
 ## Step 2: Onboard endpoints using any of the supported management tools
 
@@ -143,7 +142,7 @@ The following table lists the available tools based on the endpoint that you nee
 | **Windows** | - [Local script (up to 10 devices)](/defender-endpoint/configure-endpoints-script)<br/>- [Group Policy](/defender-endpoint/configure-endpoints-gp)<br/>- [Microsoft Intune / Mobile Device Manager](/defender-endpoint/configure-endpoints-mdm)<br/>- [Microsoft Endpoint Configuration Manager](/defender-endpoint/configure-endpoints-sccm)<br/>- [VDI scripts](/defender-endpoint/configure-endpoints-vdi) |
 | **macOS** | - [Local scripts](/defender-endpoint/mac-install-manually)<br/>- [Microsoft Intune](/defender-endpoint/mac-install-with-intune)<br/>- [JAMF Pro](/defender-endpoint/mac-install-with-jamf)<br/>- [Mobile Device Management](/defender-endpoint/mac-install-with-other-mdm) |
 | **iOS** | [App-based](/defender-endpoint/ios-install) |
-| **Android** | [Microsoft Intune](/defender-endpoint/android-intune) |
+| **Android** | [Microsoft Intune](/intune/intune-service/protect/microsoft-defender-deploy-android) |
 
 When you pilot Microsoft Defender for Endpoint, you may choose to onboard a few devices to the service before onboarding your entire organization.  
 

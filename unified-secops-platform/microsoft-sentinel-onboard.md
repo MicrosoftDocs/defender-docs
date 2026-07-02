@@ -1,15 +1,9 @@
 ---
 title: Connect Microsoft Sentinel to the Microsoft Defender portal
 description: Learn how to connect your Microsoft Sentinel environment to the Defender portal to unify your security operations.
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
-f1.keywords: 
-  - NOCSH
-ms.author: bagol
-author: batamig
+author: mberdugo
+ms.author: monaberdugo
 ms.localizationpriority: high
-manager: orspodek
-audience: ITPro
 ms.collection: 
 - m365-security
 - m365solution-getstarted
@@ -19,13 +13,11 @@ ms.collection:
 - zerotrust-solution
 - msftsolution-secops
 ms.topic: how-to
-search.appverid: 
-- MOE150
-- MET150
+ai-usage: ai-assisted
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 07/16/2025
+ms.date: 06/08/2026
 ---
 
 # Connect Microsoft Sentinel to the Microsoft Defender portal
@@ -53,28 +45,36 @@ The Microsoft Defender portal supports a single Microsoft Entra tenant and the c
 
 ### Microsoft Sentinel prerequisites
 
-To onboard and use Microsoft Sentinel in the Defender portal, you must have the following resources and access:
+To onboard and use Microsoft Sentinel in the Defender portal for a single workspace, you need the following resources and access:
 
 - A Log Analytics workspace that has Microsoft Sentinel enabled
 
-- An Azure account with the appropriate roles to onboard, use, and create support requests for Microsoft Sentinel in the Defender portal. You won't see workspaces in the Defender portal to onboard where you don't have the required permissions. The following table highlights some of the key roles needed.
+- An Azure account with the appropriate roles to onboard, use, and create support requests for Microsoft Sentinel in the Defender portal. You won't see workspaces in the Defender portal to onboard where you don't have the required permissions.
+
+The following table shows some of the key roles needed for a single workspace setup. For permissions related to multiple workspaces, see [Permissions to manage workspaces and view workspace data](/azure/sentinel/workspaces-defender-portal#permissions-to-manage-workspaces-and-view-workspace-data).
+
+For onboarding, the [Owner](/azure/role-based-access-control/built-in-roles#owner) role assignment must be unconditional at the subscription scope.
+
+:::image type="content" source="media/microsoft-sentinel-onboard/owner-unconditional-role-assignment.png" alt-text="Screenshot of Azure Add role assignment conditions showing Owner set to Allow user to assign all roles (highly privileged).":::
 
   |Task |Microsoft Entra or Azure built-in role required |Scope  |
   |---------|---------|---------|
-  |**Onboard Microsoft Sentinel to the Defender portal**|One of the following in Microsoft Entra ID:<br><br> - [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) AND subscription [Owner](/azure/role-based-access-control/built-in-roles#owner) <br>- [Security administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) AND subscription [Owner](/azure/role-based-access-control/built-in-roles#owner) <br>- [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) AND [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) AND [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) <br>- [Security administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) AND [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) AND [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor)|Tenant|
-  |**Connect or disconnect a secondary workspace**|One of the following:<br><br>- [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) AND subscription [Owner](/azure/role-based-access-control/built-in-roles#owner)<br>- [Security administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) AND subscription [Owner](/azure/role-based-access-control/built-in-roles#owner)<br>- [Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) AND [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) AND [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor)<br>- [Security administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) AND [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) AND [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor)<br>- Subscription [Owner](/azure/role-based-access-control/built-in-roles#owner)<br>- [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) AND [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor)|- Subscription Owner or User Access Administrator roles </br></br>- Subscription, resource group, or workspace resource for Microsoft Sentinel Contributor |
-  |**Change the primary workspace**|[Global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) or [security administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) in Microsoft Entra ID|Tenant|
+  |**Onboard Microsoft Sentinel to the Defender portal**<sup>1</sup>|  At least a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) in Microsoft Entra ID <br><br> [Owner](/azure/role-based-access-control/built-in-roles#owner) (unconditional role assignment)<br> OR <br>[User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) and [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) |Tenant<br><br><br>- Subscription for Owner role|
   |**View Microsoft Sentinel in the Defender portal**|[Microsoft Sentinel Reader](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-reader) |Subscription, resource group, or workspace resource  |
   |**Query Microsoft Sentinel data tables or view incidents**  |[Microsoft Sentinel Reader](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-reader) or a role with the following actions:</br>- Microsoft.OperationalInsights/workspaces/read</br>- Microsoft.OperationalInsights/workspaces/query/read</br>- Microsoft.SecurityInsights/Incidents/read</br>- Microsoft.SecurityInsights/incidents/comments/read</br>- Microsoft.SecurityInsights/incidents/relations/read</br>- Microsoft.SecurityInsights/incidents/tasks/read|Subscription, resource group, or workspace resource       |
   |**Take investigative actions on incidents** |[Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) or a role with the following actions:</br>- Microsoft.OperationalInsights/workspaces/read</br>- Microsoft.OperationalInsights/workspaces/query/read</br>- Microsoft.SecurityInsights/incidents/read</br>- Microsoft.SecurityInsights/incidents/write</br>- Microsoft.SecurityInsights/incidents/comments/read</br>- Microsoft.SecurityInsights/incidents/comments/write</br>- Microsoft.SecurityInsights/incidents/relations/read</br>- Microsoft.SecurityInsights/incidents/relations/write</br>- Microsoft.SecurityInsights/incidents/tasks/read</br>- Microsoft.SecurityInsights/incidents/tasks/write    |Subscription, resource group, or workspace resource  |
   |**Create a support request** |[Owner](/azure/role-based-access-control/built-in-roles#owner) or </br> [Contributor](/azure/role-based-access-control/built-in-roles#contributor) or </br> [Support request contributor](/azure/role-based-access-control/built-in-roles#support-request-contributor) or  a custom role with Microsoft.Support/*|Subscription  |
 
+  <sup>1</sup> If your tenant has exactly one workspace with Microsoft Sentinel enabled, use the permissions listed in the table. If your tenant has [more than one workspace with Microsoft Sentinel enabled](/azure/sentinel/workspaces-defender-portal#permissions-to-manage-workspaces-and-view-workspace-data), you must also be at least a [Security administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) in Microsoft Entra ID.
+
+  If you're working with multiple tenants, note that [granular delegated admin privileges (GDAP)](/partner-center/gdap-introduction) with [Azure Lighthouse](/azure/sentinel/multiple-tenants-service-providers) isn't supported for Microsoft Sentinel data in the Defender portal. Instead, use [Microsoft Entra B2B authentication](/entra/external-id/what-is-b2b). For more information, see [Set up Microsoft Defender multitenant management](mto-requirements.md#review-the-requirements).
+  
   After you connect Microsoft Sentinel to the Defender portal, your existing Azure role-based access control (RBAC) permissions allow you to work with the Microsoft Sentinel features that you have access to. Continue to manage roles and permissions for your Microsoft Sentinel users from the Azure portal, as any Azure RBAC changes are reflected in the Defender portal. 
 
   For more information, see [Roles and permissions in Microsoft Sentinel](/azure/sentinel/roles) and [Manage access to Microsoft Sentinel data by resource](/azure/sentinel/resource-context-rbac).
 
   > [!IMPORTANT]
-  > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+  > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization.
 
 ### Unified security operations prerequisites
 
@@ -96,19 +96,10 @@ If applicable, complete these prerequisites:
 This procedure describes how to onboard a Microsoft Sentinel-enabled workspace to the Defender portal.
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com/) and sign in.
-
-1. If you're a Microsoft Sentinel-only customer without licenses for Defender services, and are onboarding your first workspace to Defender, start by triggering the connection to Microsoft Sentinel.
-
-    In the Defender portal, select **Investigation & response** > **Incidents**, and then wait a few minutes for the connection to complete. This step isn't needed for any subsequent workspaces you onboard to Defender.
-  
-1. Select **Home** > **Connect a workspace**.
-
+1. Select **System** > **Settings** > **Microsoft Sentinel** > **Connect a workspace**.
 1. Select the workspaces you want to connect and select **Next**.
-
 1. Select the **Primary workspace**.
-
-1. Read and understand the product changes associated with connecting your workspace. 
-
+1. Read and understand the product changes associated with connecting your workspace.
 1. Select **Connect**.
 
 After your workspace is connected, the banner on the **Home** page shows that your environment is ready. The **Home** page is updated with new sections that include metrics from Microsoft Sentinel, like the number of data connectors and automation rules.
@@ -119,30 +110,12 @@ After you connect your workspace to the Defender portal, **Microsoft Sentinel** 
 
 Many of the existing Microsoft Sentinel features are integrated into the Defender portal. For these features, notice that the experience between Microsoft Sentinel in the Azure portal and Defender portal are similar. Use the following articles to help you start working with Microsoft Sentinel in the Defender portal. When using these articles, keep in mind that your starting point in this context is the [Defender portal](https://security.microsoft.com/) instead of the Azure portal.
 
-- Search
-  - [Search across long time spans in large datasets](/azure/sentinel/search-jobs?tabs=defender-portal)
-  - [Restore archived logs from search](/azure/sentinel/restore)
-- Threat management
-  - [Visualize and monitor your data by using workbooks](/azure/sentinel/monitor-your-data?tabs=defender-portal)
-  - [Conduct end-to-end threat hunting with Hunts](/azure/sentinel/hunts)
-  - [Use hunting bookmarks for data investigations](/azure/sentinel/bookmarks)
-  - [Use hunting Livestream in Microsoft Sentinel to detect threat](/azure/sentinel/livestream)
-  - [Hunt for security threats with Jupyter notebooks](/azure/sentinel/notebooks-hunt)
-  - [Add indicators in bulk to Microsoft Sentinel threat intelligence from a CSV or JSON file](/azure/sentinel/indicators-bulk-file-import?tabs=defender-portal)
-  - [Work with threat indicators in Microsoft Sentinel](/azure/sentinel/work-with-threat-indicators?tabs=defender-portal)
-  - [Understand security coverage by the MITRE ATT&CK framework](/azure/sentinel/mitre-coverage)
-- Content management
-  - [Discover and manage Microsoft Sentinel out-of-the-box content](/azure/sentinel/sentinel-solutions-deploy?tabs=defender-portal)
-  - [Microsoft Sentinel content hub catalog](/azure/sentinel/sentinel-solutions-catalog)
-  - [Deploy custom content from your repository](/azure/sentinel/ci-cd)
-- Configuration
-  - [Find your Microsoft Sentinel data connector](/azure/sentinel/data-connectors-reference)
-  - [Create custom analytics rules to detect threats](/azure/sentinel/create-analytics-rules?tabs=defender-portal)
-  - [Work with near-real-time (NRT) detection analytics rules in Microsoft Sentinel](/azure/sentinel/create-nrt-rules?tabs=defender-portal)
-  - [Create watchlists](/azure/sentinel/watchlists-create?tabs=defender-portal)
-  - [Manage watchlists in Microsoft Sentinel](/azure/sentinel/watchlists-manage)
-  - [Create automation rules](/azure/sentinel/create-manage-use-automation-rules)
-  - [Create and customize Microsoft Sentinel playbooks from content templates](/azure/sentinel/use-playbook-templates)
+| Feature category   | Links |
+|--------------------|----------|
+| **Search**         | - [Search across long time spans in large datasets](/azure/sentinel/search-jobs?tabs=defender-portal)<br>- [Restore archived logs from search](/azure/sentinel/restore) |
+| **Threat management** | - [Visualize and monitor your data by using workbooks](/azure/sentinel/monitor-your-data?tabs=defender-portal)<br>- [Conduct end-to-end threat hunting with Hunts](/azure/sentinel/hunts)<br>- [Use hunting bookmarks for data investigations](/azure/sentinel/bookmarks)<br>- [Use hunting Livestream in Microsoft Sentinel to detect threat](/azure/sentinel/livestream)<br>- [Hunt for security threats with Jupyter notebooks](/azure/sentinel/notebooks-hunt)<br>- [Add indicators in bulk to Microsoft Sentinel threat intelligence from a CSV or JSON file](/azure/sentinel/indicators-bulk-file-import?tabs=defender-portal)<br>- [Work with threat indicators in Microsoft Sentinel](/azure/sentinel/work-with-threat-indicators?tabs=defender-portal)<br>- [Understand security coverage by the MITRE ATT&CK framework](/azure/sentinel/mitre-coverage) |
+| **Content management** | - [Discover and manage Microsoft Sentinel out-of-the-box content](/azure/sentinel/sentinel-solutions-deploy?tabs=defender-portal)<br>- [Microsoft Sentinel content hub catalog](/azure/sentinel/sentinel-solutions-catalog)<br>- [Deploy custom content from your repository](/azure/sentinel/ci-cd) |
+| **Configuration**  | - [Find your Microsoft Sentinel data connector](/azure/sentinel/data-connectors-reference)<br>- [Create custom analytics rules to detect threats](/azure/sentinel/create-analytics-rules?tabs=defender-portal)<br>- [Work with near-real-time (NRT) detection analytics rules in Microsoft Sentinel](/azure/sentinel/create-nrt-rules?tabs=defender-portal)<br>- [Create watchlists](/azure/sentinel/watchlists-create?tabs=defender-portal)<br>- [Manage watchlists in Microsoft Sentinel](/azure/sentinel/watchlists-manage)<br>- [Create automation rules](/azure/sentinel/create-manage-use-automation-rules)<br>- [Create and customize Microsoft Sentinel playbooks from content templates](/azure/sentinel/use-playbook-templates) |
 
 Find Microsoft Sentinel settings in the Defender portal under **System** > **Settings** > **Microsoft Sentinel**.
 
@@ -167,7 +140,7 @@ If your workspace has the [Microsoft Defender XDR connector](/azure/sentinel/con
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com/) and sign in.
 1. In the Defender portal, under **System**, select **Settings** > **Microsoft Sentinel**.
 1. On the **Workspaces** page, select the connected workspace and **Disconnect workspace**.
-1. Provide a reason why you're disconnecting the workspace. 
+1. Provide a reason why you're disconnecting the workspace.
 1. Confirm your selection.
 
    When your workspace is disconnected, the **Microsoft Sentinel** section is removed from the left-hand side navigation of the Defender portal. Data from Microsoft Sentinel is no longer included on the **Home** page.

@@ -3,7 +3,7 @@ title: Microsoft Defender for Endpoint repackaging warning
 description: Warning for Microsoft Defender for Endpoint installation package
 ms.date: 06/02/2023
 ms.reviewer: 
-manager: dansimp
+manager: bagol
 ms.author: macapara
 author: mjcaparas
 ms.service: microsoft-365-security

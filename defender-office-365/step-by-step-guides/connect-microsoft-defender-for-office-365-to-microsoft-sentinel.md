@@ -1,30 +1,30 @@
 ---
 title: Connect Microsoft Defender for Office 365 to Microsoft Sentinel
-description: The steps to connect Microsoft Defender for Office 365 to Sentinel. Add your Microsoft Defender for Office 365 data (*and* data from the rest of the Microsoft Defender XDR suite), including incidents, to Microsoft Sentinel for a single pane of glass into your security.
+description: Learn how to connect Microsoft Defender for Office 365 data to Microsoft Sentinel. Ingest incidents, alerts, and other Defender XDR data for unified investigation and advanced hunting.
 ms.service: defender-office-365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-guidance-templates
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
-ms.date: 01/31/2023
+ms.date: 06/12/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Connect Microsoft Defender for Office 365 to Microsoft Sentinel
 
-You can ingest your Microsoft Defender for Office 365 data (*and* data from the rest of the Microsoft Defender XDR suite), including incidents, into Microsoft Sentinel.
+This article walks you through connecting Microsoft Defender for Office 365 to Microsoft Sentinel by using the Microsoft Defender XDR data connector. This includes incidents and data from the rest of the Microsoft Defender suite.
 
-Take advantage of rich security information events management (SIEM) combined with data from other Microsoft 365 sources, synchronization of incidents and alerts, and advanced hunting.
+This integration provides security information and event management (SIEM) features with data from other Microsoft 365 sources. You can also sync incidents and alerts, and run advanced hunting queries.
 
-## What you need
+<a name="what-you-need"></a>
+## Prerequisites
+
+Before you begin, make sure you have the following items:
 
 - Microsoft Defender for Office 365 Plan 2 or higher. (Included in E5 plans)
 - Microsoft Sentinel [Quickstart guide](/azure/sentinel/quickstart-onboard).
@@ -32,19 +32,21 @@ Take advantage of rich security information events management (SIEM) combined wi
 
 ## Add the Microsoft Defender XDR Connector
 
-1. [Sign in to the Azure portal](https://portal.azure.com) and navigate to **Microsoft Sentinel** \> Pick the relevant workspace to integrate with Microsoft Defender XDR.
-1. In the navigation pane, under **Configuration**, go to **Data connectors**.
-1. When the page loads, **search for** Microsoft Defender XDR **and select the Microsoft Defender XDR connector**.
-1. On the right-hand flyout, select **Open Connector Page**.
-1. Under the **Configuration** section of the page that loads, select **Connect incidents & alerts**, leaving **Turn off all Microsoft incident creation rules for these products** selected.
-1. Scroll to **Microsoft Defender for Office 365** in the **Connect events** section of the page. Select **EmailEvents, EmailUrlInfo, EmailAttachmentInfo & EmailPostDeliveryEvents** then  **Apply Changes** at the bottom of the page. (Choose tables from other Defender products if helpful and applicable, during this step.)
+Microsoft Defender for Office 365 data is onboarded to Microsoft Sentinel through the Microsoft Defender XDR connector. Follow these steps to add and configure the connector:
+
+1. [Sign in to the Azure portal](https://portal.azure.com) and go to **Microsoft Sentinel**. Pick the workspace to use with Microsoft Defender XDR.
+1. Under **Configuration**, select **Data connectors**.
+1. Search for **Microsoft Defender XDR** and select the connector.
+1. Select **Open Connector Page**.
+1. Under **Configuration**, select **Connect incidents & alerts**. Keep **Turn off all Microsoft incident creation rules for these products** selected.
+1. In the **Connect events** section, under **Microsoft Defender for Office 365**, select **EmailEvents**, **EmailUrlInfo**, **EmailAttachmentInfo**, and **EmailPostDeliveryEvents**, then select **Apply Changes**. You can also choose tables from other Defender products during this step.
 
 ## Next Steps
 
-Admins are now able to see incidents, alerts, and raw data in Microsoft Sentinel and use this data for *advanced hunting*, pivoting on existing and new data from Microsoft Defender.
+Admins can now view incidents, alerts, and raw data in Microsoft Sentinel. They can also use *advanced hunting* to explore new and existing data from Microsoft Defender.
 
-## More Information
+<a name="more-information"></a>
+## Related content
 
-[Connect Microsoft Defender XDR data to Microsoft Sentinel | Microsoft Docs](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE).
-
-[Connect Microsoft Teams to Microsoft Sentinel](/microsoftteams/teams-sentinel-guide).
+- [Connect Microsoft Defender data to Microsoft Sentinel | Microsoft Docs](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE)
+- [Connect Microsoft Teams to Microsoft Sentinel](/microsoftteams/teams-sentinel-guide)

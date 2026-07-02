@@ -2,11 +2,9 @@
 title: Merge incidents manually in the Microsoft Defender portal
 description: Learn how to merge two or more incidents into a single incident in the Microsoft Defender portal, to help you investigate incidents more efficiently and effectively and resolve them more quickly and accurately.
 ms.service: defender-xdr
-ms.author: yelevin
-author: yelevin
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-manager: raynew
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -14,10 +12,10 @@ ms.collection:
 - sentinel-only
 ms.topic: how-to
 ms.date: 04/09/2025
-search.appverid: met150
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
+ms.custom: sfi-image-nochange
 ---
 
 # Merge incidents manually in the Microsoft Defender portal (Preview)
@@ -43,6 +41,8 @@ Sometimes, however, the automatic merging doesn't happen, due to certain conditi
 1. Select **Merge incidents** from the toolbar. The **Merge incidents** flyout opens.
 
 1. In the **Reason for merging** text box, type a description of the reason why you want to merge the incidents.
+
+1. Provide feedback explaining why you are merging the incidents by selecting one of the predefined options. This step helps Microsoft improve alert correlation in the future.
 
 1. Select **Merge incidents** at the bottom of the flyout to execute the merge.
 

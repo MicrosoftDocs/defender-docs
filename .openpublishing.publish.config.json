@@ -2,7 +2,7 @@
   "docsets_to_publish": [
     {
       "docset_name": "ATA-Docs",
-      "build_source_folder": "ATADocs",
+      "build_source_folder": "advanced-threat-analytics",
       "build_output_subfolder": "ATA-Docs",
       "locale": "en-us",
       "monikers": [],
@@ -14,11 +14,24 @@
     },
     {
       "docset_name": "ATP-Docs",
-      "build_source_folder": "ATPDocs",
+      "build_source_folder": "defender-for-identity",
       "build_output_subfolder": "ATP-Docs",
       "locale": "en-us",
       "monikers": [],
       "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs"
+    },
+    {
+      "docset_name": "d4iot-azure",
+      "build_source_folder": "defender-for-iot-azure",
+      "build_output_subfolder": "d4iot-azure",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content"
       },
@@ -51,7 +64,7 @@
     },
     {
       "docset_name": "defender-cloud-apps",
-      "build_source_folder": "CloudAppSecurityDocs",
+      "build_source_folder": "defender-for-cloud-apps",
       "build_output_subfolder": "defender-cloud-apps",
       "locale": "en-us",
       "monikers": [],
@@ -79,6 +92,7 @@
       "build_output_subfolder": "defender-for-cloud",
       "locale": "en-us",
       "monikers": [],
+      "moniker_ranges": [],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
@@ -136,6 +150,19 @@
       "template_folder": "_themes"
     },
     {
+      "docset_name": "easm-azure",
+      "build_source_folder": "easm",
+      "build_output_subfolder": "easm-azure",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs"
+    },
+    {
       "docset_name": "exposure-management",
       "build_source_folder": "exposure-management",
       "build_output_subfolder": "exposure-management",
@@ -148,6 +175,19 @@
       },
       "build_entry_point": "docs",
       "template_folder": "_themes"
+    },
+    {
+      "docset_name": "sentinel-azure",
+      "build_source_folder": "sentinel",
+      "build_output_subfolder": "sentinel-azure",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs"
     },
     {
       "docset_name": "unified-secops-platform",
@@ -180,19 +220,38 @@
       "url": "https://github.com/MicrosoftDocs/memdocs-pr/",
       "branch": "main",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "reusable-content",
+      "url": "https://github.com/MicrosoftDocs/reusable-content",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "azure-policy-autogen-docs",
+      "url": "https://github.com/MicrosoftDocs/azure-policy-autogen-docs/",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "quickstart-templates",
+      "url": "https://github.com/Azure/azure-quickstart-templates",
+      "branch": "master",
+      "branch_mapping": {}
     }
   ],
   "branch_target_mapping": {},
   "targets": {},
   "redirection_files": [
-    ".openpublishing.redirection.ata-atp.json",
+    ".openpublishing.redirection.ata.json",
     ".openpublishing.redirection.defender.json",
     ".openpublishing.redirection-defender-business.json",
     ".openpublishing.redirection.defender-cloud-apps.json",
     ".openpublishing.redirection.defender-endpoint.json",
+    ".openpublishing.redirection.defender-identity.json",
     ".openpublishing.redirection.defender-office-365.json",
     ".openpublishing.redirection.defender-xdr.json",
-    ".openpublishing.redirection.unified-secops.json"
-
+    ".openpublishing.redirection.unified-secops.json",
+    ".openpublishing.redirection.sentinel.json"
   ]
 }

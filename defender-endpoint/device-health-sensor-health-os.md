@@ -1,32 +1,25 @@
 ---
 title: Device health Sensor health & OS report
 description: Use the device health report to track device health, OS platforms, and Windows 10 versions.
-search.appverid: met150
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-ms.date: 03/25/2025
-manager: deniseb
-audience: ITPro
+ms.date: 06/16/2026
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
 ms.subservice: ngp
 ms.reviewer: mkaminska
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
-# Device health, Sensor health & OS report
-
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+# Review the device health sensor health and OS report in Microsoft Defender for Endpoint
 
 The Device Health report provides information about the devices in your organization. The report includes trending information showing the sensor health state, antivirus status, OS platforms, Windows 10 versions, and Microsoft Defender Antivirus update versions.
 
@@ -77,20 +70,23 @@ Sensor health and OS cards report on general operating system health, which incl
 
 Each of the three cards on the **Sensor health** tab has two reporting sections, _Current state_ and _device trends_, presented as graphs:
 
-### Current state graph
+<a name="current-state-graph"></a>
+### Current state graph overview
 
 In each card, the Current state (referred to in some documentation as _Device summary_) is the top, horizontal bar graph. Current state is a snapshot that shows information collected about devices in your organization, scoped to the current day. This graph represents the distribution of devices across your organization that report status or are detected to be in a specific state.
 
 >:::image type="content" source="media/device-health-sensor-health-os-current-state-graph.png" alt-text="Shows the current state graph." lightbox="media/device-health-sensor-health-os-current-state-graph.png":::
 
-### Device trends graph
+<a name="device-trends-graph"></a>
+### Device trends graph overview
 
 The lower graph on each of the three cards isn't named, but is commonly known as _device trends_. The device trends graph depicts the collection of devices across your organization, throughout the time span indicated directly above the graph.
 By default, the device trends graph displays device information from the 30-day period, ending in the latest full day. To gain a better perspective about trends occurring in your organization, you can fine-tune the reporting period by adjusting the time period shown. To adjust the time period, open the filter and select a start day and end day.
 
 >:::image type="content" source="media/device-health-sensor-health-os-device-trends-graph.png" alt-text="Shows the Device Health versions trends graph." lightbox="media/device-health-sensor-health-os-device-trends-graph.png":::
 
-### Filtering data
+<a name="filtering-data"></a>
+### Data filters
 
 Use the provided filters to include or exclude devices with certain attributes. You can select multiple filters to apply from the device attributes. When applied, filters apply to all three cards in the report.
 
@@ -98,11 +94,12 @@ For example, to show data about Windows 10 devices with Active sensor health sta
 
 1. Under **Filters** > **Sensor health state** > **Active**.
 
-2. Then select **OS platforms** > **Windows 10**.
+1. Then select **OS platforms** > **Windows 10**.
 
-3. Select **Apply**.
+1. Select **Apply**.
 
-### Sensor health card
+<a name="sensor-health-card"></a>
+### Sensor health card overview
 
 The Sensor health card displays information about the sensor state on devices. Sensor health provides an aggregate view of devices that are:
 
@@ -117,16 +114,18 @@ Devices that are either experiencing impaired communications, or devices from wh
 >
 > In a small percentage of cases, the numbers and distributions reported when clicking on the horizontal Sensor health bar graph will be out of synch with the values shown in the **Device inventory** page. The disparity in values can occur because the Sensor Health Reports has a different refresh cadence than the Device Inventory page.
 
-### Operating systems and platforms card
+<a name="operating-systems-and-platforms-card"></a>
+### Operating systems and platforms card overview
 
 This card shows the distribution of operating systems and platforms that exist within your organization.
 _OS systems and platforms_ can give useful insights into whether devices in your organization are running current or outdated operating systems. When new operating systems are introduced, security enhancements are frequently included that improve your organization's posture against security threats.
 
 For example, Secure Boot (introduced in Windows 8) practically eliminated the threat from some of the most harmful types of malware. Improvements in Windows 10 provide PC manufacturers the option to prevent users from disabling Secure Boot. Preventing users from disabling Secure Boot removes almost any chance of malicious rootkits or other low-level malware from infecting the boot process.
 
-Ideally, the "Current state" graph shows that the number of operating systems is weighted in favor of more current OS over older versions. Otherwise, the trends graph indicates that new systems are being adopted and/or older systems are being updated or replaced.
+Ideally, the "Current state" graph shows that the number of operating systems is weighted in favor of more current OS over older versions. If the current state graph is not weighted toward newer operating systems, the trends graph should indicate that new systems are being adopted and/or older systems are being updated or replaced.
 
-### Windows versions card
+<a name="windows-versions-card"></a>
+### Windows versions card overview
 
 The Windows 10 versions card shows the distribution of Windows devices and their versions in your organization.
 In the same way that an upgrade from Windows 8 to Windows 10 improves security in your organization, changing from early releases of Windows to more current versions improves your posture against possible threats.
@@ -153,6 +152,9 @@ The Windows version trend graph can help you quickly determine whether your orga
 > See: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 >
 
+## Related content
+
 [Microsoft Defender Antivirus health](device-health-microsoft-defender-antivirus-health.md#microsoft-defender-antivirus-health-tab)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

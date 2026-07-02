@@ -1,12 +1,8 @@
 ---
 title: Order and precedence of email protection
 keywords: security, malware, Microsoft 365, M365, security center, Microsoft Defender portal, Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Identity
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
-audience: ITPro
 ms.topic: reference
 ms.localizationpriority: medium
 ms.collection: 
@@ -16,10 +12,9 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how the order of protection settings and the priority order of threat policies affect the application of protection in Microsoft 365.
 ms.service: defender-office-365
-search.appverid: met150
-ms.date: 07/08/2025
+ms.date: 09/12/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -99,7 +94,7 @@ To make sure that recipients get the protection settings that you want, use the 
 
 ## Appendix
 
-It's important to understand how user allows and blocks, organization allows and blocks, and filtering stack verdicts in the default email protections for cloud mailboxes and in Defender for Office 365 complement or contradict each other.
+It's important to understand how user allows and blocks, organization allows and blocks, and filtering stack verdicts in [the built-in security features for all cloud mailboxes](eop-about.md) and in Defender for Office 365 complement or contradict each other.
 
 - For information about filtering stacks and how they're combined, see [Step-by-step threat protection in Microsoft Defender for Office 365](protection-stack-microsoft-defender-for-office365.md).
 - After the filtering stack determines a verdict, only then are organization policies and their configured actions evaluated.
@@ -153,10 +148,10 @@ Organization allows and blocks are able to override some filtering stack verdict
   |---|---|---|
   |Malware|**Filter wins**: Email quarantined|**Filter wins**: Email quarantined|
   |High confidence phishing|**Filter wins**: Email quarantined except in complex routing|**Filter wins**: Email quarantined|
-  |Phishing|**Organization wins**: Email delivered to mailbox|**Organization wins**: Phishing action in the applicable anti-spam policy|
-  |High confidence spam|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email delivered to user's Junk Email folder|
-  |Spam|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email delivered to user's Junk Email folder|
-  |Bulk|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email delivered to user's Junk Email folder|
+  |Phishing|**Organization wins**: Email delivered to mailbox|**Filter wins**: Phishing action in the applicable anti-spam policy|
+  |High confidence spam|**Organization wins**: Email delivered to mailbox|**Filter wins**: Email delivered to user's Junk Email folder|
+  |Spam|**Organization wins**: Email delivered to mailbox|**Filter wins**: Email delivered to user's Junk Email folder|
+  |Bulk|**Organization wins**: Email delivered to mailbox|**Filter wins**: Email delivered to user's Junk Email folder|
   |Not spam|**Organization wins**: Email delivered to mailbox|**Organization wins**: Email delivered to user's Junk Email folder|
 
   <sup>\*</sup> Organizations that use a non-Microsoft security service or device in front of Microsoft 365 should consider using [Authenticated Received Chain (ARC)](email-authentication-arc-configure.md) (contact the service for availability) and [Enhanced Filtering for Connectors (also known as skip listing)](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) instead of an SCL=-1 mail flow rule. These improved methods reduce email authentication issues and encourage [defense-in-depth](step-by-step-guides/defense-in-depth-guide.md) email security.

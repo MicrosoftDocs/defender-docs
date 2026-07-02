@@ -4,34 +4,22 @@ description: Learn how to use the Batch Delete Indicators API to delete indicato
 ms.service: defender-endpoint
 ms.subservice: reference
 ms.reviewer: itsela
-author: denisebmsft
-ms.author: deniseb
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.custom: api
-search.appverid: met150
-ms.date: 07/31/2023
+ms.date: 12/11/2025
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1
 ---
 
 # Batch Delete Indicators
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 
@@ -39,9 +27,9 @@ Deletes [Indicator](ti-indicator.md) entities by ID.
 
 ## Limitations
 
-Rate limitations for this API are 30 calls per minute and 1,500 calls per hour.
+- Rate limitations for this API are 30 calls per minute and 1,500 calls per hour.
 
-Batch size limit of up to 500 [Indicator](ti-indicator.md) IDs.
+- Batch size limit of up to 500 [Indicator](ti-indicator.md) IDs.
 
 ## Permissions
 
@@ -49,21 +37,18 @@ One of the following permissions is required to call this API. To learn more, in
 
 | Permission type | Permission | Permission display name |
 |---|---|---|
-| Application | Ti.ReadWrite | 'Read and write TI Indicators' |
 | Application | Ti.ReadWrite.All | 'Read and write Indicators' |
 
 ## HTTP request
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/indicators/BatchDelete
+POST https://api.security.microsoft.com/api/indicators/BatchDelete
 ```
-
-[!include [Improve request performance](../../includes/improve-request-performance.md)]
 
 ## Request headers
 
 |Name|Type|Description|
-|:---|:---|:---|
+|---|---|---|
 |Authorization | String | Bearer {token}. **Required**.|
 
 ## Request body
@@ -71,20 +56,20 @@ POST https://api.securitycenter.microsoft.com/api/indicators/BatchDelete
 In the request body, supply a JSON object with the following parameters:
 
 |Parameter|Type|Description|
-|:---|:---|:---|
+|---|---|---|
 |IndicatorIds|List *String* |A list of the IDs of the indicators to be removed. **Required**|
 
 ## Response
 
-If Indicators all existed and were deleted successfully - 204 OK without content.
+- If Indicators all existed and were deleted successfully - 204 OK without content.
 
-If indicator IDs list is empty or exceeds size limit - 400 Bad Request.
+- If indicator IDs list is empty or exceeds size limit - 400 Bad Request.
 
-If any indicator ID is invalid - 400 Bad Request.
+- If any indicator ID is invalid - 400 Bad Request.
 
-If requestor isn't exposed to any indicator's device groups - 403 Forbidden.
+- If requestor isn't exposed to any indicator's device groups - 403 Forbidden.
 
-If any Indicator ID wasn't found - 404 Not Found.
+- If any Indicator ID wasn't found - 404 Not Found.
 
 ## Example
 
@@ -93,7 +78,7 @@ If any Indicator ID wasn't found - 404 Not Found.
 Here's an example of the request.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/indicators/BatchDelete
+POST https://api.security.microsoft.com/api/indicators/BatchDelete
 ```
 
 ```json

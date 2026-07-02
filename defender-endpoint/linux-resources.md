@@ -3,31 +3,22 @@ title: Microsoft Defender for Endpoint on Linux resources
 ms.reviewer: gopkr, yujiao
 description: Describes resources for Microsoft Defender for Endpoint on Linux, including how to uninstall it, how to collect diagnostic logs, CLI commands, and known issues with the product.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
 ms.topic: troubleshooting-general
 ms.subservice: linux
-search.appverid: met150
-ms.date: 05/02/2025
+ms.date: 04/16/2026
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
 ---
-
 # Resources
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 This article provides resources for resolving issues or configuring Microsoft Defender for Endpoint on Linux. This article describes how to collect diagnostic information, log installation issues, and configure Defender for Endpoint on Linux using the command line. This article also describes how to uninstall Defender for Endpoint on Linux.
 
@@ -139,34 +130,9 @@ The following table lists commands for some of the most common scenarios. Run `m
 |Endpoint Detection and Response|Set early preview |`mdatp edr early-preview [enabled\|disabled]`|
 |Endpoint Detection and Response|Set group-id|`mdatp edr group-ids --group-id [group-id]`|
 |Endpoint Detection and Response|Set / remove tag, only `GROUP` supported|`mdatp edr tag set --name GROUP --value [tag]`|
-|Endpoint Detection and Response|List exclusions (root)|`mdatp edr exclusion list [processes|paths|extensions|all]`|
 
-## Uninstall Defender for Endpoint on Linux
-
-There are several ways to uninstall Defender for Endpoint on Linux. If you are using a configuration tool such as Puppet, follow the package uninstallation instructions for the configuration tool.
-
-### Offboard Linux devices
-
-To prevent decommissioned devices from showing up in your device inventory, and to help ensure a more accurate Secure Score rating, add device tags to devices that you want to offboard from Defender for Endpoint. Otherwise, you'll see those devices in the [Device inventory](machines-view-overview.md) for 180 days.
-
-1. Create a [device tag](/defender-endpoint/machine-tags), and name the tag `decommissioned`. Assign the tag to the Linux devices that you want to offboard from Defender for Endpoint.
-
-2. Create a [Device group](/defender-endpoint/machine-groups) and name it something like, `Decommissioned Linux`. Assign this tag to an appropriate user group.
-   
-3. In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, select **Settings** > **Offboard**. In the **Select operating system to start offboarding process**, select **Linux Server**, and then select a deployment method.  
-
-   :::image type="content" source="media/offboard-linux.png" alt-text="Screenshot showing Offboarding page in the Microsoft Defender portal.":::
-
-   Or, if you're using a non-Microsoft device management solution, disable integration with Defender for Endpoint.
-
-4. Uninstall Defender for Endpoint on the devices.
-
-### Manual uninstallation
-
-- `sudo yum remove mdatp` for RHEL and variants(CentOS and Oracle Linux).
-- `sudo zypper remove mdatp` for SLES and variants.
-- `sudo apt-get purge mdatp` for Ubuntu and Debian systems.
-- `sudo dnf remove mdatp` for Mariner.
+## Quarantine directory for Defender for Endpoint Linux
+The default directory for files quarantined by MDATP is `/var/opt/microsoft/mdatp/quarantine`. For best results, use the command `MDATP threat quarantine` to manage quarantined files, rather than moving or modifying files directly in the quarantine directory. Direct file operations aren't recommended - always use the CLI for safe and supported quarantine management.
 
 ## Related content
 
@@ -175,4 +141,5 @@ To prevent decommissioned devices from showing up in your device inventory, and 
 - [Configure security settings in Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 - [Run the client analyzer on Linux](run-analyzer-linux.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

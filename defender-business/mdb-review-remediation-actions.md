@@ -1,22 +1,20 @@
 ---
 title: Review remediation actions in Microsoft Defender for Business
 description: View remediations that were taken on detected threats or suspected attacks with Defender for Business.
-search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: orspodek
-audience: Admin
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 12/02/2022
+ms.date: 06/11/2026
 ms.reviewer: efratka
-f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security
 - m365-initiative-defender-business
 - tier1
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Review remediation actions in the Action Center
@@ -27,12 +25,11 @@ All remediation actions are tracked in the Action Center.
 
 :::image type="content" source="media/mdb-actioncenter.png" alt-text="Screenshot of the location of the Action Center in the Microsoft Defender portal." lightbox="media/mdb-actioncenter.png":::
 
-**This article describes**:
-
-- [How to use the Action Center](#how-to-use-the-action-center)
-- [Remediation actions](#remediation-actions)
+This article describes how to use the Action Center to review pending and completed remediation actions in Defender for Business.
 
 ## How to use the Action Center
+
+Use the following steps to open and review the Action Center.
 
 1. In the Defender portal at <https://security.microsoft.com>, go to  **Actions & submissions** \> **Action Center**. Or, to go directly to the **Action Center** page, use <https://security.microsoft.com/action-center>.
 

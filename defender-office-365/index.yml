@@ -30,7 +30,7 @@ landingContent:
         links:
           - text: Microsoft Defender for Office 365 overview
             url: mdo-about.md
-          - text: Overview of default email protections for cloud mailboxes
+          - text: Overview of the built-in security features for all cloud mailboxes
             url: eop-about.md
           - text: What's new in Defender for Office 365
             url: defender-for-office-365-whats-new.md

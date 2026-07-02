@@ -3,73 +3,87 @@ title: Restore quarantined files in Microsoft Defender Antivirus
 description: You can restore quarantined files and folders in Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: emmwalshh
-ms.author: ewalsh
-ms.custom: nextgen
-ms.date: 03/26/2025
+author: chrisda
+ms.author: chrisda
+ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 06/16/2026
 ms.reviewer: yongrhee, pahuijbr
-manager: deniseb
 ms.subservice: ngp
 ms.topic: how-to
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
+
+ai-usage: ai-assisted
 ---
 
 # Restore quarantined files in Microsoft Defender Antivirus
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
-
 Depending on how Microsoft Defender Antivirus is configured, it quarantines suspicious files. If you're certain a quarantined file isn't a threat, you can restore it on your Windows device.
 
-### Using the Windows Security app
+## Prerequisites
+
+### Supported operating systems
+
+The following operating systems support restoring quarantined files:
+
+- Windows
+
+## Using the Windows Security app
+
+To restore a quarantined file by using the Windows Security app, perform the following steps:
 
 1. On your Windows device, open **Windows Security**.
 
-2. Select **Virus & threat protection** and then, under **Current threats**, select **Protection history**.
+1. Select **Virus & threat protection** and then, under **Current threats**, select **Protection history**.
 
-3. If you have a list of items, you can filter on **Quarantined Items**.
+1. If you have a list of items, you can filter on **Quarantined Items**.
 
-4. Select an item you want to keep, and choose an action, such as **Restore**.
+1. Select an item you want to keep, and choose an action, such as **Restore**.
 
-### Using the MpCmdRun command line
+## Using the MpCmdRun command line
 
-1. Open Command Prompt as an administrator.
+Use the following steps to restore quarantined files from the command line using the MpCmdRun utility:
 
-2. Type the following command, and then press **Enter**:
+1. **Show all quarantined files**:
+
+   In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
+
+   > [!TIP]
+   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
    ```dos
-   "%ProgramFiles%\Windows Defender\MpCmdRun.exe" -Restore -Name <filename>
+   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+
+   MpCmdRun.exe -Restore -ListAll
    ```
 
-### Download or collect the file
+2. **Restore a quarantined file**: After identifying the quarantined item from the list, you can restore a specific file by name. Replace \<filename\> with the name of the quarantined file you want to restore (as shown in the previous command's output), and then run the following command:
 
-Selecting **Download file** from the response actions allows you to download a local, password-protected .zip archive containing your file. A flyout appears where you can record a reason for downloading the file, and set a password. By default, you should be able to download files that are in quarantine.
+   ```dos
+   MpCmdRun.exe -Restore -Name <filename>
+   ```
+
+For more information about MpCmdRun, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
+
+## Download or collect the file
+
+In the Microsoft Defender for Endpoint portal, you can download or collect a quarantined file from a device's file page. Selecting **Download file** from the response actions allows you to download a local, password-protected .zip archive containing your file. A flyout appears where you can record a reason for downloading the file, and set a password. By default, you should be able to download quarantined files using this response action.
 
 The **Download file** button can have the following states:
 
-   - **Active** - You're able to collect the file. 
-   - **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate permissions to collect files.
+- **Active** - You're able to collect the file.
+- **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate permissions to collect files.
 
-For more information, see [Download or collect file](/defender-endpoint/respond-file-alerts#download-or-collect-file).
+For more information, see [Download or collect file](respond-file-alerts.md#download-or-collect-file).
 
 ## See also
 
 - [Configure remediation for scans](configure-remediation-microsoft-defender-antivirus.md)
 - [Review scan results](review-scan-results-microsoft-defender-antivirus.md)
-- [Address false positives/negatives in Microsoft Defender for Endpoint](/defender-endpoint/defender-endpoint-false-positives-negatives)
-
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-
+- [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)

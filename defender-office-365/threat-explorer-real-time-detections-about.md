@@ -1,13 +1,9 @@
 ---
 title: About Threat Explorer and Real-time detections in Microsoft Defender for Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
-audience: ITPro
 ms.topic: concept-article
-ms.date: 06/19/2025
+ms.date: 09/08/2025
 ms.localizationpriority: medium
 ms.collection:
   - m365-security
@@ -15,9 +11,10 @@ ms.collection:
   - highpri
 description: Learn about the available views, filters, and actions in Threat Explorer (Explorer) or Real-time detections to investigate and respond to threats.
 ms.custom:
-- seo-marvel-apr2020
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
+  - sfi-image-nochange
 ms.service: defender-office-365
-search.appverid: met150
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -69,19 +66,21 @@ To use Explorer or Real-time detections, you need to be assigned permissions. Yo
     - _Preview and download messages_: Requires the **Preview** role, which is assigned only to the **Data Investigator** or **eDiscovery Manager** role groups by default. Or, you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Preview** role assigned, and add the users to the custom role group.
     - _Move messages in and delete messages from mailboxes_: Requires the **Search and Purge** role, which is assigned only to the **Data Investigator** or **Organization Management** role groups by default. Or, you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
   - _Read-only access_: Membership in the **Security Reader** role group.
-- [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
+- [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
   - _Full access_: Membership in the **Global Administrator**<sup>\*</sup> or **Security Administrator** roles. More permissions are required to do all available actions:
     - _Preview and download messages_: Requires the **Preview** role, which is assigned only to the **Data Investigator** or **eDiscovery Manager** role groups by default.
   - _Search for Exchange mail flow rules (transport rules) by name in Threat Explorer_: Membership in the **Security Administrator** or **Security Reader** roles.
   - _Read-only access_: Membership in the **Global Reader** or **Security Reader** roles.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 > [!TIP]
 > End-user spam notifications and system generated messages aren't available in Threat Explorer. These types of messages are available if there's a mail flow rule (also known as a transport rule) to override.
 >
 > Audit log entries are generated when admins preview or download email messages. You can search the admin audit log by user for **AdminMailAccess** activity. For instructions, see [Audit New Search](/purview/audit-new-search).
+>
+> Email delivered to moderated mailboxes or moderated distribution groups is visible in Threat Explorer. But moderator actions (for example, approve or reject messages) and messages released by a moderator to members of a distribution group aren't logged and aren't shown in Threat Explorer.
 
 To use Threat Explorer or Real-time detections, you need to be assigned a license for Defender for Office 365 (included in your subscription or an add-on license).
 
@@ -101,18 +100,18 @@ Threat Explorer and Real-time detections contain the following elements:
   |**Malware**|✔|✔|Default view for Real-time detections. Information about email messages that contain malware.|
   |**Phish**|✔|✔|Information about email messages that contain phishing threats.|
   |**Campaigns**|✔||Information about malicious email that Defender for Office 365 Plan 2 identified as part of a [coordinated phishing or malware campaign](campaigns.md).|
-  |**Content malware**|✔|✔|Information about malicious files detected by the following features: <ul><li>[Built-in virus protection in SharePoint, OneDrive, and Microsoft Teams](anti-malware-protection-for-spo-odfb-teams-about.md)</li><li>[Safe Attachments for Sharepoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md)</li></ul>|
+  |**Content malware**|✔|✔|Information about files processed by the following features: <ul><li>[Built-in virus protection in SharePoint, OneDrive, and Microsoft Teams](anti-malware-protection-for-spo-odfb-teams-about.md)</li><li>[Safe Attachments for Sharepoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md)</li></ul>|
   |**URL clicks**|✔||Information about user clicks on URLs in email messages, Teams messages, SharePoint files, and OneDrive files.|
 
   These views are described in detail in this article, including the differences between Threat Explorer and Real-time detections.
-  
+
   > [!TIP]
-  > Real-time detections shows the malicious email detections at the time of delivery only. Threat Explorer shows all email detections at the time of delivery along with post-delivery activities.
+  > Real-time detections show the malicious email detections at the time of delivery only. Threat Explorer shows all email detections at the time of delivery along with post-delivery activities.
 
 - **Date/time filters**: By default, the view is filtered by yesterday and today. To change the date filter, select the date range, and then select **Start Date** and **End date** values up to 30 days ago.
 
   :::image type="content" source="media/te-rtd-date-filter.png" alt-text="Screenshot of the date filter used in Threat Explorer and Real-time detections in the Defender portal." lightbox="media/te-rtd-date-filter.png":::
-  
+
 - **Property filters (queries)**: Filter the results in the view by the available message, file, or threat properties. The available filterable properties depend on the view. Some properties are available in many views, while other properties are limited to a specific view.
 
   The available property filters for each view are listed in this article, including the differences between Threat Explorer and Real-time detections.
@@ -123,19 +122,19 @@ Threat Explorer and Real-time detections contain the following elements:
 
 - **Charts**: Each view contains a visual, aggregate representation of the filtered or unfiltered data. You can use available pivots to organize the chart in different ways.
 
-  You can often use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export chart data** to export filtered or unfiltered chart data to a CSV file.
+  You can often use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export chart data** to export filtered or unfiltered chart data to a CSV file.
 
    The charts and available pivots are described in detail in this article, including the differences between Threat Explorer and Real-time detections.
 
   > [!TIP]
   > To remove the chart from the page (which maximizes the size of the details area), use either of the following methods:
   >
-  > - Select :::image type="icon" source="media/m365-cc-sc-chart-view-icon.png" border="false"::: **Chart View** \> :::image type="icon" source="media/m365-cc-sc-list-view-icon.png" border="false"::: **List View** at the top of the page.
-  > - Select :::image type="icon" source="media/m365-cc-sc-show-list-view-icon.png" border="false"::: **Show list view** between the chart and the details area.
+  > - Select :::image type="icon" source="media/defender-portal-icon-chart-view.png" border="false"::: **Chart View** \> :::image type="icon" source="media/defender-portal-icon-list-view.png" border="false"::: **List View** at the top of the page.
+  > - Select :::image type="icon" source="media/defender-portal-icon-show-list-view.png" border="false"::: **Show list view** between the chart and the details area.
 
 - **Details area**: The details area for a view typically shows a table that contains the filtered or unfiltered data. You can use the available views (tabs) to organize the data in the details area in different ways. For example, a view might contain charts, maps, or different tables.
 
-   If the details area contains a table, you can often use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to selectively export up to 200,000 filtered or unfiltered results to a CSV file.
+   If the details area contains a table, you can often use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to selectively export up to 200,000 filtered or unfiltered results to a CSV file.
 
    > [!TIP]
    > In the **Export** flyout, you can select some or all of the available properties to export. The selections are saved per user. Selections in Incognito or InPrivate browsing mode are saved until you close the web browser.
@@ -184,7 +183,7 @@ The filterable properties that are available in the **Delivery action** box in t
 |Delivery action|Select one or more values: <ul><li>**Blocked**: Email messages that were quarantined, that failed delivery, or were dropped.</li><li>**Delivered**: Email delivered to the user's Inbox or other folder where the user can access the message.</li><li>**Delivered to junk**: Email delivered to the user's Junk Email folder or Deleted Items folder where the user can access the message.</li><li>**Replaced**: Message attachments that were replaced by [Dynamic Delivery in Safe Attachments policies](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies).</li></ul>|
 |Additional action|Select one or more values: <ul><li>**Automated remediation**</li><li>**Dynamic Delivery**: For more information, see [Dynamic Delivery in Safe Attachments policies](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies).</li><li>**Manual remediation**</li><li>**None**</li><li>**Quarantine release**</li><li>**Reprocessed**: The message was retroactively identified as good.</li><li>**ZAP**: For more information, see [Zero-hour auto purge (ZAP) in Microsoft Defender for Office 365](zero-hour-auto-purge.md).</li></ul>|
 |Directionality|Select one or more values: <ul><li>**Inbound**</li><li>**Intra-org**</li><li>**Outbound**</li></ul>|
-|Detection technology|Select one or more values: <ul><li>**Advanced filter**: Signals based on machine learning.</li><li>**Antimalware protection**</li><li>**Bulk**</li><li>**Campaign**</li><li>**Domain reputation**</li><li>**File detonation**: [Safe Attachments](safe-attachments-about.md) detected a malicious attachment during detonation analysis.</li><li>**File detonation reputation**: File attachments previously detected by [Safe Attachments](safe-attachments-about.md) detonations in other Microsoft 365 organizations.</li><li>**File reputation**: The message contains a file that was previously identified as malicious in other Microsoft 365 organizations.</li><li>**Fingerprint matching**: The message closely resembles a previous detected malicious message.</li><li>**General filter**</li><li>**Impersonation brand**: Sender impersonation of well-known brands.</li><li>**Impersonation domain**: Impersonation of sender domains that you own or specified for protection in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>**Impersonation user**</li><li>**IP reputation**</li><li>**LLM content analysis**: Analyis by Microsoft's purpose-built large language models to detect harmful email.</li><li>**Mail bombing**: A distributed denial of service (DDoS) attack that typically subscribes recipients to a large number of legitimate newsletters and services. The resulting volume of incoming email within minutes intends to overwhelm the recipient's mailbox and email security systems, and acts as a precursor to malware, ransomware, or data exfiltration.</li><li>**Mailbox intelligence impersonation**: Impersonation detections from mailbox intelligence in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).</li><li>**Mixed analysis detection**: Multiple filters contributed to the message verdict.</li><li>**spoof DMARC**: The message failed [DMARC authentication](email-authentication-dmarc-configure.md).</li><li>**Spoof external domain**: Sender email address spoofing using a domain that's external to your organization.</li><li>**Spoof intra-org**: Sender email address spoofing using a domain that's internal to your organization.</li><li>**URL detonation**: [Safe Links](safe-links-about.md) detected a malicious URL in the message during detonation analysis.</li<li>**URL detonation reputation**: URLs previously detected by [Safe Links](safe-links-about.md) detonations in other Microsoft 365 organizations.</li><li>**URL malicious reputation**: The message contains a URL that was previously identified as malicious in other Microsoft 365 organizations.</li></ul>|
+|Detection technology|Select one or more values: <ul><li>**Advanced filter**: Signals based on machine learning.</li><li>**Antimalware protection**</li><li>**Bulk**</li><li>**Campaign**</li><li>**Domain reputation**</li><li>**File detonation**: [Safe Attachments](safe-attachments-about.md) detected a malicious attachment during detonation analysis.</li><li>**File detonation reputation**: File attachments previously detected by [Safe Attachments](safe-attachments-about.md) detonations in other Microsoft 365 organizations.</li><li>**File reputation**: The message contains a file that was previously identified as malicious in other Microsoft 365 organizations.</li><li>**Fingerprint matching**: The message closely resembles a previous detected malicious message.</li><li>**General filter**</li><li>**Impersonation brand**: Sender impersonation of well-known brands.</li><li>**Impersonation domain**: Impersonation of sender domains that you own or specified for protection in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>**Impersonation user**</li><li>**IP reputation**</li><li>**LLM content analysis**: Analysis by Microsoft's purpose-built large language models to detect harmful email.</li><li>**Mail bombing**: A distributed denial of service (DDoS) attack that typically subscribes recipients to a large number of legitimate newsletters and services. The resulting volume of incoming email within minutes intends to overwhelm the recipient's mailbox and email security systems, and acts as a precursor to malware, ransomware, or data exfiltration.</li><li>**Mailbox intelligence impersonation**: Impersonation detections from mailbox intelligence in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).</li><li>**Mixed analysis detection**: Multiple filters contributed to the message verdict.</li><li>**spoof DMARC**: The message failed [DMARC authentication](email-authentication-dmarc-configure.md).</li><li>**Spoof external domain**: Sender email address spoofing using a domain that's external to your organization.</li><li>**Spoof intra-org**: Sender email address spoofing using a domain that's internal to your organization.</li><li>**URL detonation**: [Safe Links](safe-links-about.md) detected a malicious URL in the message during detonation analysis.</li<li>**URL detonation reputation**: URLs previously detected by [Safe Links](safe-links-about.md) detonations in other Microsoft 365 organizations.</li><li>**URL malicious reputation**: The message contains a URL that was previously identified as malicious in other Microsoft 365 organizations.</li></ul>|
 |Threat classification|Select one or more values: <ul><li>**Business intelligence**</li><li>**Contact establishment**</li><li>**Gift card**</li><li>**Invoice**</li><li>**Payroll**</li><li><**PII gathering**/li><li>**Task**</li></ul> For more information, see [Threat classification in Microsoft Defender for Office 365](mdo-threat-classification.md).|
 |Original delivery location|Select one or more values: <ul><li>**Deleted Items folder**</li><li>**Dropped**</li><li>**Failed**</li><li>**Inbox/folder**</li><li>**Junk folder**</li><li>**On-prem/external**</li><li>**Quarantine**</li><li>**Unknown**</li></ul>|
 |Latest delivery location¹|Same values as **Original delivery location**</li></ul>|
@@ -201,7 +200,7 @@ The filterable properties that are available in the **Delivery action** box in t
 |**Advanced**||
 |Internet Message ID|Text. Separate multiple values by commas. <br/><br/> Available in the **Message-ID** header field in the message header. An example value is `<08f1e0f6806a47b4ac103961109ae6ef@server.domain>` (note the angle brackets).|
 |Network message ID|Text. Separate multiple values by commas. <br/><br/> A GUID value that's available in the **X-MS-Exchange-Organization-Network-Message-Id** header field in the message header.|
-|Sender IP|Text. Separate multiple values by commas.|
+|Sender IP²|Text. Separate multiple values by commas.|
 |Attachment SHA256|Text. Separate multiple values by commas.|
 |Cluster ID|Text. Separate multiple values by commas.|
 |Alert ID|Text. Separate multiple values by commas.|
@@ -210,10 +209,10 @@ The filterable properties that are available in the **Delivery action** box in t
 |ZAP URL signal|Text. Separate multiple values by commas.|
 |**Urls**||
 |URL Count|Integer. Separate multiple values by commas.|
-|URL domain²|Text. Separate multiple values by commas.|
-|URL domain and path²|Text. Separate multiple values by commas.|
-|URL²|Text. Separate multiple values by commas.|
-|URL path²|Text. Separate multiple values by commas.|
+|URL domain³|Text. Separate multiple values by commas.|
+|URL domain and path³|Text. Separate multiple values by commas.|
+|URL³|Text. Separate multiple values by commas.|
+|URL path³|Text. Separate multiple values by commas.|
 |URL source|Select one or more values: <ul><li>**Attachments**</li><li>**Cloud attachment**</li><li>**Email body**</li><li>**Email header**</li><li>**QR Code**</li><li>**Subject**</li><li>**Unknown**</li></ul>|
 |Click verdict|Select one or more values: <ul><li>**Allowed**: The user was allowed to open the URL.</li><li>**Block overridden**: The user was blocked from directly opening the URL, but they overrode the block to open the URL.</li><li>**Blocked**: The user was blocked from opening the URL.</li><li>**Error**: The user was presented with the error page, or an error occurred in capturing the verdict.</li><li>**Failure**: An unknown exception occurred while capturing the verdict. The user might have opened the URL.</li><li>**None**: Unable to capture the verdict for the URL. The user might have opened the URL.</li><li>**Pending verdict**: The user was presented with the detonation pending page.</li><li>**Pending verdict bypassed**: The user was presented with the detonation page, but they overrode the message to open the URL.</li></ul>|
 |URL Threat|Select one or more values: <ul><li>**Malware**</li><li>**Phish**</li><li>**Spam**</li></ul>|
@@ -230,19 +229,26 @@ The filterable properties that are available in the **Delivery action** box in t
 |Composite|Select one or more values: <ul><li>**Fail**</li><li>**None**</li><li>**Pass**</li><li>**Soft pass**</li></ul>|
 
 > [!TIP]
-> ¹ **Latest delivery location** doesn't include end-user actions on messages. For example, if the user deleted the message or moved the message to an archive or PST file.
 >
-> There are scenarios where **Original delivery location**/**Latest delivery location** and/or **Delivery action** have the value **Unknown**. For example:
+> - ¹ **Latest delivery location** doesn't include end-user actions on messages. For example, if the user deleted the message or moved the message to an archive or PST file.
 >
-> - The message was delivered (**Delivery action** is **Delivered**), but an Inbox rule moved the message to a default folder other than the Inbox or Junk Email folder (for example, the Draft or Archive folder).
-> - ZAP attempted to move the message after delivery, but the message wasn't found (for example, the user moved or deleted the message).
+>   There are scenarios where **Original delivery location**/**Latest delivery location** and/or **Delivery action** have the value **Unknown**. For example:
 >
-> ² By default, a URL search maps to `http`, unless another value is explicitly specified. For example:
+>   - The message was delivered (**Delivery action** is **Delivered**), but an Inbox rule moved the message to a default folder other than the Inbox or Junk Email folder (for example, the Draft or Archive folder).
+>   - ZAP attempted to move the message after delivery, but the message wasn't found (for example, the user moved or deleted the message).
 >
-> - Searching with and without the `http://` prefix in **URL**, **URL Domain**, and **URL Domain and Path** should show the same results.
-> - Search for the `https://` prefix in **URL**. When no value is specified, the `http://` prefix is assumed.
-> - `/` at the beginning and end of the **URL path**, **URL Domain**, **URL domain and path** fields is ignored.
-> - `/` at the end of the **URL** field is ignored.
+> - ² **Sender IP** values are sometimes logged as empty or 0.0.0.0 in the following scenarios:
+>   - Automatic replies.
+>   - Undelivered email where delivery has failed.
+>   - Email where the sender IP address is Microsoft internal. For example, system generated notifications, alerts, or forwarded messages delivered from Microsoft IP addresses.
+>
+>   IP addresses in these scenarios might be visible in Exchange message trace.
+>
+> - ³ By default, a URL search maps to `http`, unless another value is explicitly specified. For example:
+>   - Searching with and without the `http://` prefix in **URL**, **URL Domain**, and **URL Domain and Path** should show the same results.
+>   - Search for the `https://` prefix in **URL**. When no value is specified, the `http://` prefix is assumed.
+>   - `/` at the beginning and end of the **URL path**, **URL Domain**, **URL domain and path** fields is ignored.
+>   - `/` at the end of the **URL** field is ignored.
 
 ### Pivots for the chart in the All email view in Threat Explorer
 
@@ -322,7 +328,7 @@ The available views (tabs) in the details area of the **All email** view are des
 
 **Email** is the default view for the details area in the **All email** view.
 
-The **Email** view shows a details table. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
+The **Email** view shows a details table. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
 
 - **Date**<sup>\*</sup>
 - **Subject**<sup>\*</sup>
@@ -366,11 +372,11 @@ The **Email** view shows a details table. You can sort the entries by clicking o
 >
 > Customized column settings are saved per user. Customized column settings in Incognito or InPrivate browsing mode are saved until you close the web browser.
 
-When you select one or more entries from the list by selecting the check box next to the first column, the :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+When you select one or more entries from the list by selecting the check box next to the first column, the :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
 :::image type="content" source="media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active." lightbox="media/te-rtd-all-email-view-take-action.png":::
 
-In the **Subject** value for the entry, the :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open in new window** action is available. This action opens the message in the [Email entity page](mdo-email-entity-page.md).
+In the **Subject** value for the entry, the :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Open in new window** action is available. This action opens the message in the [Email entity page](mdo-email-entity-page.md).
 
 When you click on the **Subject** or **Recipient** values in an entry, details flyouts open. These flyouts are described in the following subsections.
 
@@ -382,27 +388,27 @@ For details about the information in the Email summary panel, see [The Email sum
 
 The following actions are available at the top of the Email summary panel for Threat Explorer and Real-time detections:
 
-- :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**
-- :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **View header**
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
-- :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options**:
-  - :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **Email preview**¹ ²
-  - :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Download email**¹ ² ³
-  - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **View in Explorer**
-  - :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **Go hunt**⁴
+- :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Open email entity**
+- :::image type="icon" source="media/defender-portal-icon-view-message-headers.png" border="false"::: **View header**
+- :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action**: For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+- :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options**:
+  - :::image type="icon" source="media/defender-portal-icon-view-message-headers.png" border="false"::: **Email preview**¹ ²
+  - :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Download email**¹ ² ³
+  - :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **View in Explorer**
+  - :::image type="icon" source="media/defender-portal-icon-view-message-headers.png" border="false"::: **Go hunt**⁴
 
 ¹ The **Email preview** and **Download email** actions require the **Preview** role in [Email & collaboration permissions](mdo-portal-permissions.md). By default, this role is assigned to the **Data Investigator** and **eDiscovery Manager** role groups. By default, members of the **Organization Management** or **Security Administrators** role groups can't do these actions. To allow these actions for the members of those groups, you have the following options:
 
 - Add the users to the **Data Investigator** or **eDiscovery Manager** role groups.
 - [Create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
 
-² You can preview or download email messages that are available in cloud mailboxes. Examples of when messages are no longer available in mailboxes include:
+² You can preview or download email messages that are available in cloud mailboxes and quarantine. Examples of when messages are no longer available in mailboxes include:
 
 - The message was dropped before delivery or delivery failed.
 - The message was _soft deleted_ (deleted from the Deleted items folder, which moves the message to the Recoverable Items\Deletions folder).
 - ZAP moved the message to quarantine.
 
-³ **Download email** isn't available for messages that were quarantined. Instead, [download a password protected copy of the message from quarantine](quarantine-admin-manage-messages-files.md#download-email-from-quarantine).
+³ **Download email** for quarantined messages is available with password protection. You can also [download a password protected copy of the message from quarantine](quarantine-admin-manage-messages-files.md#download-email-from-quarantine).
 
 ⁴ **Go hunt** is available only in Threat Explorer. It isn't available in Real-time detections.
 
@@ -457,7 +463,7 @@ The chart pivots are described in the following subsections.
 :::image type="content" source="media/te-rtd-all-email-view-details-area-url-clicks-tab-default-view.png" alt-text="Screenshot of the details area of the All email view in Threat Explorer with the URL clicks tab selected and showing the available pivots with no pivot selected." lightbox="media/te-rtd-all-email-view-details-area-url-clicks-tab-default-view.png":::
 
 > [!TIP]
-> In Threat Explorer, each pivot in **URL clicks** view has a :::image type="icon" source="media/m365-cc-sc-view-icon.png" border="false"::: **View all clicks** action that opens the [URL clicks view](#url-clicks-view-in-threat-explorer) in a new tab.
+> In Threat Explorer, each pivot in **URL clicks** view has a :::image type="icon" source="media/defender-portal-icon-view.png" border="false"::: **View all clicks** action that opens the [URL clicks view](#url-clicks-view-in-threat-explorer) in a new tab.
 
 ##### URL domain pivot for the URL clicks view for the details area of the All email view in Threat Explorer
 
@@ -510,21 +516,21 @@ When you select an entry by clicking anywhere in the row other than the check bo
 > To see details about other URLs without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
 - The following actions are available at the top of the flyout:
-  - :::image type="icon" source="media/m365-cc-sc-open-url-page-icon.png" border="false"::: **Open URL page**
-  - :::image type="icon" source="media/m365-cc-sc-send-icon.png" border="false"::: **Submit for analysis**:
-    - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Report clean**
-    - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Report phishing**
-    - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Report malware**
+  - :::image type="icon" source="media/defender-portal-icon-open-url-page.png" border="false"::: **Open URL page**
+  - :::image type="icon" source="media/defender-portal-icon-send.png" border="false"::: **Submit for analysis**:
+    - :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Report clean**
+    - :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Report phishing**
+    - :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Report malware**
     <!--- The target URL is constructed such that it should open a new submission with the details filled out. But it takes me to the Email tab on the main Submissions page.--->
-  - :::image type="icon" source="media/m365-cc-sc-manage-indicator-icon.png" border="false"::: **Manage indicator**:
-    - :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add indicator**
-    - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Manage in tenant block list**
+  - :::image type="icon" source="media/defender-portal-icon-manage-indicator.png" border="false"::: **Manage indicator**:
+    - :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add indicator**
+    - :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Manage in tenant block list**
 
     Selecting any of these options takes you to the **Submissions** page in the Defender portal.
 
-  - :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More**:
-    - :::image type="icon" source="media/m365-cc-sc-show-trends-icon.png" border="false"::: **View in Explorer**
-    - :::image type="icon" source="media/m365-cc-sc-go-hunt-icon.png" border="false":::**Go hunt**
+  - :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More**:
+    - :::image type="icon" source="media/defender-portal-icon-show-trends.png" border="false"::: **View in Explorer**
+    - :::image type="icon" source="media/defender-portal-icon-go-hunt.png" border="false":::**Go hunt**
 - **Original URL**
 - **Detection** section:
   - **Threat intelligence verdict**
@@ -567,7 +573,7 @@ The **Top clicks** view shows a details table. You can sort the entries by click
 - **Failure**
 
 > [!TIP]
-> All available columns are selected. If you select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns**, you can't deselect any columns.
+> All available columns are selected. If you select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns**, you can't deselect any columns.
 >
 > To see all columns, you likely need to do one or more of the following steps:
 >
@@ -586,7 +592,7 @@ The **Top targeted users** view organizes the data into a table of the top five 
 - The number of attempts: If you select the number of attempts, Threat Explorer opens in a new tab filtered by the recipient.
 
 > [!TIP]
-> Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of up to 3000 users and the corresponding attempts.
+> Use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to export the list of up to 3000 users and the corresponding attempts.
 
 #### Email origin view for the details area of the All email view in Threat Explorer
 
@@ -641,7 +647,7 @@ The filterable properties that are available in the **Sender address** box in th
 |Delivery action|Select one or more values: <ul><li>**Blocked**</li><li>**Delivered**</li><li>**Delivered to junk**</li><li>**Replaced**: Message attachments that were replaced by [Dynamic Delivery in Safe Attachments policies](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies).</li></ul>|✔|✔|
 |Additional action|Select one or more values: <ul><li>**Automated remediation**</li><li>**Dynamic Delivery**: For more information, see [Dynamic Delivery in Safe Attachments policies](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies).</li><li>**Manual remediation**</li><li>**None**</li><li>**Quarantine release**</li><li>**Reprocessed**</li><li>**ZAP**: For more information, see [Zero-hour auto purge (ZAP) in Microsoft Defender for Office 365](zero-hour-auto-purge.md).</li></ul>|✔|✔|
 |Directionality|Select one or more values: <ul><li>**Inbound**</li><li>**Intra-org**</li><li>**Outbound**</li></ul>|✔|✔|
-|Detection technology|Select one or more values: <ul><li>**Advanced filter**: Signals based on machine learning.</li><li>**Antimalware protection**</li><li>**Bulk**</li><li>**Campaign**</li><li>**Domain reputation**</li><li>**File detonation**: [Safe Attachments](safe-attachments-about.md) detected a malicious attachment during detonation analysis.</li><li>**File detonation reputation**: File attachments previously detected by [Safe Attachments](safe-attachments-about.md) detonations in other Microsoft 365 organizations.</li><li>**File reputation**: The message contains a file that was previously identified as malicious in other Microsoft 365 organizations.</li><li>**Fingerprint matching**: The message closely resembles a previous detected malicious message.</li><li>**General filter**</li><li>**Impersonation brand**: Sender impersonation of well-known brands.</li><li>**Impersonation domain**: Impersonation of sender domains that you own or specified for protection in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>**Impersonation user**</li><li>**IP reputation**</li><li>**LLM content analysis**: Analyis by Microsoft's purpose-built large language models to detect harmful email.</li><li>**Mail bombing**: A distributed denial of service (DDoS) attack that typically subscribes recipients to a large number of legitimate newsletters and services. The resulting volume of incoming email within minutes intends to overwhelm the recipient's mailbox and email security systems, and acts as a precursor to malware, ransomware, or data exfiltration.</li><li>**Mailbox intelligence impersonation**: Impersonation detections from mailbox intelligence in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).</li><li>**Mixed analysis detection**: Multiple filters contributed to the message verdict.</li><li>**spoof DMARC**: The message failed [DMARC authentication](email-authentication-dmarc-configure.md).</li><li>**Spoof external domain**: Sender email address spoofing using a domain that's external to your organization.</li><li>**Spoof intra-org**: Sender email address spoofing using a domain that's internal to your organization.</li><li>**URL detonation**: [Safe Links](safe-links-about.md) detected a malicious URL in the message during detonation analysis.</li><li>**URL detonation reputation**: URLs previously detected by [Safe Links](safe-links-about.md) detonations in other Microsoft 365 organizations.</li><li>**URL malicious reputation**: The message contains a URL that was previously identified as malicious in other Microsoft 365 organizations.</li></ul>|✔|✔|
+|Detection technology|Select one or more values: <ul><li>**Advanced filter**: Signals based on machine learning.</li><li>**Antimalware protection**</li><li>**Bulk**</li><li>**Campaign**</li><li>**Domain reputation**</li><li>**File detonation**: [Safe Attachments](safe-attachments-about.md) detected a malicious attachment during detonation analysis.</li><li>**File detonation reputation**: File attachments previously detected by [Safe Attachments](safe-attachments-about.md) detonations in other Microsoft 365 organizations.</li><li>**File reputation**: The message contains a file that was previously identified as malicious in other Microsoft 365 organizations.</li><li>**Fingerprint matching**: The message closely resembles a previous detected malicious message.</li><li>**General filter**</li><li>**Impersonation brand**: Sender impersonation of well-known brands.</li><li>**Impersonation domain**: Impersonation of sender domains that you own or specified for protection in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>**Impersonation user**</li><li>**IP reputation**</li><li>**LLM content analysis**: Analysis by Microsoft's purpose-built large language models to detect harmful email.</li><li>**Mail bombing**: A distributed denial of service (DDoS) attack that typically subscribes recipients to a large number of legitimate newsletters and services. The resulting volume of incoming email within minutes intends to overwhelm the recipient's mailbox and email security systems, and acts as a precursor to malware, ransomware, or data exfiltration.</li><li>**Mailbox intelligence impersonation**: Impersonation detections from mailbox intelligence in [anti-phishing policies](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).</li><li>**Mixed analysis detection**: Multiple filters contributed to the message verdict.</li><li>**spoof DMARC**: The message failed [DMARC authentication](email-authentication-dmarc-configure.md).</li><li>**Spoof external domain**: Sender email address spoofing using a domain that's external to your organization.</li><li>**Spoof intra-org**: Sender email address spoofing using a domain that's internal to your organization.</li><li>**URL detonation**: [Safe Links](safe-links-about.md) detected a malicious URL in the message during detonation analysis.</li><li>**URL detonation reputation**: URLs previously detected by [Safe Links](safe-links-about.md) detonations in other Microsoft 365 organizations.</li><li>**URL malicious reputation**: The message contains a URL that was previously identified as malicious in other Microsoft 365 organizations.</li></ul>|✔|✔|
 |Original delivery location|Select one or more values: <ul><li>**Deleted Items folder**</li><li>**Dropped**</li><li>**Failed**</li><li>**Inbox/folder**</li><li>**Junk folder**</li><li>**On-prem/external**</li><li>**Quarantine**</li><li>**Unknown**</li></ul>|✔|✔|
 |Latest delivery location|Same values as **Original delivery location**</li></ul>|✔|✔|
 |Primary override|Select one or more values: <ul><li>**Allowed by organization policy**</li><li>**Allowed by user policy**</li><li>**Blocked by organization policy**</li><li>**Blocked by user policy**</li><li>**None**</li></ul>|✔|✔|
@@ -764,7 +770,7 @@ The available views (tabs) in the details area of the **Malware** view are liste
 
 **Email** is the default view for the details area of the **Malware** view in Threat Explorer and Real-time detections.
 
-The **Email** view shows a details table. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown.
+The **Email** view shows a details table. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown.
 
 The following table shows the columns that are available in Threat Explorer and Real-time detections. The default values are marked with an asterisk (<sup>\*</sup>).
 
@@ -812,7 +818,7 @@ The following table shows the columns that are available in Threat Explorer and 
 >
 > Customized column settings are saved per user. Customized column settings in Incognito or InPrivate browsing mode are saved until you close the web browser.
 
-When you select one or more entries from the list by selecting the check box next to the first column, the :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+When you select one or more entries from the list by selecting the check box next to the first column, the :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
 :::image type="content" source="media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active." lightbox="media/te-rtd-all-email-view-take-action.png":::
 
@@ -860,7 +866,7 @@ The **Top targeted users** view organizes the data into a table of the top five 
 - The number of attempts: If you select the number of attempts, Threat Explorer opens in a new tab filtered by the malware family name.
 
 > [!TIP]
-> Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of up to 3000 users and the corresponding attempts.
+> Use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to export the list of up to 3000 users and the corresponding attempts.
 
 #### Email origin view for the details area of the Malware view in Threat Explorer
 
@@ -1059,7 +1065,7 @@ The available views (tabs) in the details area of the **Phish** view are listed 
 
 **Email** is the default view for the details area of the **Phish** view in Threat Explorer and Real-time detections.
 
-The **Email** view shows a details table. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown.
+The **Email** view shows a details table. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown.
 
 The following table shows the columns that are available in Threat Explorer and Real-time detections. The default values are marked with an asterisk (<sup>\*</sup>).
 
@@ -1108,7 +1114,7 @@ The following table shows the columns that are available in Threat Explorer and 
 >
 > Customized column settings are saved per user. Customized column settings in Incognito or InPrivate browsing mode are saved until you close the web browser.
 
-When you select one or more entries from the list by selecting the check box next to the first column, the :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+When you select one or more entries from the list by selecting the check box next to the first column, the :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
 :::image type="content" source="media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active." lightbox="media/te-rtd-all-email-view-take-action.png":::
 
@@ -1149,7 +1155,7 @@ The same chart pivots are available and described for the **All email** view in 
 :::image type="content" source="media/te-rtd-all-email-view-details-area-url-clicks-tab-default-view.png" alt-text="Screenshot of the details area of the Phish view in Threat Explorer with the URL clicks tab selected and showing the available pivots with no pivot selected." lightbox="media/te-rtd-all-email-view-details-area-url-clicks-tab-default-view.png":::
 
 > [!TIP]
-> In Threat Explorer, each pivot in **URL clicks** view has a :::image type="icon" source="media/m365-cc-sc-view-icon.png" border="false"::: **View all clicks** action that opens the [URL clicks view in Threat Explorer](#url-clicks-view-in-threat-explorer) in a new tab. This action isn't available in Real-time detections, because the **URL clicks** view isn't available in Real-time detections.
+> In Threat Explorer, each pivot in **URL clicks** view has a :::image type="icon" source="media/defender-portal-icon-view.png" border="false"::: **View all clicks** action that opens the [URL clicks view in Threat Explorer](#url-clicks-view-in-threat-explorer) in a new tab. This action isn't available in Real-time detections, because the **URL clicks** view isn't available in Real-time detections.
 
 #### Top URLs view for the details area of the Phish view in Threat Explorer and Real-time detections
 
@@ -1165,7 +1171,7 @@ The **Top URLs** view shows a details table. You can sort the entries by clickin
 When you select an entry by clicking anywhere in the row other than the check box next to the first column, a details flyout opens. The information in the flyout is the same as described in [Top URLs details for the All email view](#top-urls-details-for-the-all-email-view).
 
 > [!TIP]
-> The :::image type="icon" source="media/m365-cc-sc-go-hunt-icon.png" border="false"::: **Go hunt** action is available only in Threat Explorer. It isn't available in Real-time detections.
+> The :::image type="icon" source="media/defender-portal-icon-go-hunt.png" border="false"::: **Go hunt** action is available only in Threat Explorer. It isn't available in Real-time detections.
 
 #### Top clicks view for the details area of the Phish view in Threat Explorer and Real-time detections
 
@@ -1182,7 +1188,7 @@ The **Top clicks** view shows a details table. You can sort the entries by click
 - **Failure**
 
 > [!TIP]
-> All available columns are selected. If you select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns**, you can't deselect any columns.
+> All available columns are selected. If you select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns**, you can't deselect any columns.
 >
 > To see all columns, you likely need to do one or more of the following steps:
 >
@@ -1201,7 +1207,7 @@ The **Top targeted users** view organizes the data into a table of the top five 
 - The number of attempts: If you select the number of attempts, Threat Explorer opens in a new tab filtered by the malware family name.
 
 > [!TIP]
-> Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of up to 3000 users and the corresponding attempts.
+> Use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to export the list of up to 3000 users and the corresponding attempts.
 
 #### Email origin view for the details area of the Phish view in Threat Explorer
 
@@ -1227,7 +1233,7 @@ All of the available information and actions are identical to the information an
 
 ## Content malware view in Threat Explorer and Real-time detections
 
-The **Content malware** view in Threat Explorer and Real-time detections shows information about files that were identified as malware by:
+The **Content malware** view in Threat Explorer and Real-time detections shows information about files that were processed by:
 
 - [Built-in virus protection in SharePoint, OneDrive, and Microsoft Teams](anti-malware-protection-for-spo-odfb-teams-about.md)
 - [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md).
@@ -1306,7 +1312,7 @@ In Threat Explorer and Real-time detections, the details area of the **Content m
 
 **Document** is the default and only view for the details area in the **Content malware** view.
 
-The **Document** view shows a details table. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
+The **Document** view shows a details table. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
 
 - **Date**<sup>\*</sup>
 - **Name**<sup>\*</sup>
@@ -1449,7 +1455,7 @@ The available views (tabs) in the details area of the **URL clicks** view are de
 
 **Results** is the default view for the details area in the **URL clicks** view.
 
-The **Results** view shows a details table. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all columns are selected:
+The **Results** view shows a details table. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all columns are selected:
 
 - **Time clicked**
 - **Recipient**
@@ -1473,7 +1479,7 @@ The **Results** view shows a details table. You can sort the entries by clicking
 >
 > Customized column settings are saved per user. Customized column settings in Incognito or InPrivate browsing mode are saved until you close the web browser.
 
-Select one or entries by selecting the check box next to the first column in the row, and then select :::image type="icon" source="media/m365-cc-sc-view-icon.png" border="false"::: **View all emails** to open Threat Explorer in **All email** view in a new tab filtered by the **Network message ID** values of the selected messages.
+Select one or entries by selecting the check box next to the first column in the row, and then select :::image type="icon" source="media/defender-portal-icon-view.png" border="false"::: **View all emails** to open Threat Explorer in **All email** view in a new tab filtered by the **Network message ID** values of the selected messages.
 
 #### Top clicks view for the details area of the URL clicks view in Threat Explorer
 
@@ -1490,7 +1496,7 @@ The **Top clicks** view shows a details table. You can sort the entries by click
 - **Failure**
 
 > [!TIP]
-> All available columns are selected. If you select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns**, you can't deselect any columns.
+> All available columns are selected. If you select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns**, you can't deselect any columns.
 >
 > To see all columns, you likely need to do one or more of the following steps:
 >
@@ -1498,7 +1504,7 @@ The **Top clicks** view shows a details table. You can sort the entries by click
 > - Narrow the width of appropriate columns.
 > - Zoom out in your web browser.
 
-Select an entry by selecting the check box next to the first column in the row, and then select :::image type="icon" source="media/m365-cc-sc-view-icon.png" border="false"::: **View all clicks** to open Threat Explorer in a new tab in **URL clicks** view.
+Select an entry by selecting the check box next to the first column in the row, and then select :::image type="icon" source="media/defender-portal-icon-view.png" border="false"::: **View all clicks** to open Threat Explorer in a new tab in **URL clicks** view.
 
 When you select an entry by clicking anywhere in the row other than the check box next to the first column, a details flyout opens. The information in the flyout is the same as described in [Top URLs details for the All email view](#top-urls-details-for-the-all-email-view).
 
@@ -1511,7 +1517,7 @@ The **Top targeted users** view organizes the data into a table of the top five 
 - The number of attempts: If you select the number of attempts, Threat Explorer opens in a new tab filtered by the malware family name.
 
 > [!TIP]
-> Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of up to 3000 users and the corresponding attempts.
+> Use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to export the list of up to 3000 users and the corresponding attempts.
 
 ## Property filters in Threat Explorer and Real-time detections
 
@@ -1556,7 +1562,7 @@ The steps to create property filter/query conditions are the same in all views i
 
    To edit an existing condition, double-click on it to bring the selected property, filter operator, and values back into the corresponding boxes.
 
-   To remove an existing condition, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: on the condition.
+   To remove an existing condition, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: on the condition.
 
 5. To apply the filter to the chart and the details table, select **Refresh**
 
@@ -1573,7 +1579,7 @@ Most views in Threat Explorer allow you to save filters (queries) for later use.
 
 To save queries in Threat Explorer, do the following steps:
 
-1. After you create the filter/query as previously described, select **Save query** \> :::image type="icon" source="media/m365-cc-sc-save-icon.png" border="false"::: **Save query**.
+1. After you create the filter/query as previously described, select **Save query** \> :::image type="icon" source="media/defender-portal-icon-save.png" border="false"::: **Save query**.
 
 2. In the **Save query** flyout that opens, configure the following options:
    - **Query name**: Enter a unique name for the query.
@@ -1590,11 +1596,11 @@ To save queries in Threat Explorer, do the following steps:
 
 On the **Saved query** or **Tracked query** tabs on the **Threat tracker** page in the Defender portal at <https://security.microsoft.com/threattrackerv2>, you can select **Explore** in the **Actions** column to open and use the query in Threat Explorer.
 
-When you open the query by selecting **Explore** from the **Threat tracker** page, :::image type="icon" source="media/m365-cc-sc-save-icon.png" border="false"::: **Save query as** and :::image type="icon" source="media/m365-cc-sc-gear-icon.png" border="false"::: **Saved query settings** are now available in **Save query** on the **Explorer** page:
+When you open the query by selecting **Explore** from the **Threat tracker** page, :::image type="icon" source="media/defender-portal-icon-save.png" border="false"::: **Save query as** and :::image type="icon" source="media/defender-portal-icon-gear.png" border="false"::: **Saved query settings** are now available in **Save query** on the **Explorer** page:
 
-- If you select :::image type="icon" source="media/m365-cc-sc-save-icon.png" border="false"::: **Save query as**, the **Save query** flyout opens with all previously selected settings. If you make changes, select **Save**, and then select **OK** in the **Success** dialog, the updated query is saved as a new query on the **Threat tracker** page (you might need to select :::image type="icon" source="media/m365-cc-sc-refresh-icon.png" border="false":::**Refresh** to see it).
+- If you select :::image type="icon" source="media/defender-portal-icon-save.png" border="false"::: **Save query as**, the **Save query** flyout opens with all previously selected settings. If you make changes, select **Save**, and then select **OK** in the **Success** dialog, the updated query is saved as a new query on the **Threat tracker** page (you might need to select :::image type="icon" source="media/defender-portal-icon-refresh.png" border="false":::**Refresh** to see it).
 
-- If you select :::image type="icon" source="media/m365-cc-sc-gear-icon.png" border="false"::: **Saved query settings**, the **Saved query settings** flyout opens where you can update the date and **Track query** settings of the existing query.
+- If you select :::image type="icon" source="media/defender-portal-icon-gear.png" border="false"::: **Saved query settings**, the **Saved query settings** flyout opens where you can update the date and **Track query** settings of the existing query.
 
 :::image type="content" source="media/te-rtd-query-save-query-as-saved-query-settings.png" alt-text="Screenshot of Save query in Threat Explorer with Save query as and Saved query settings available." lightbox="media/te-rtd-query-save-query-as-saved-query-settings.png":::
 

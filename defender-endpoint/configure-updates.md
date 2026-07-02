@@ -3,36 +3,40 @@ title: Create a custom gradual rollout process for Microsoft Defender updates
 description: Learn how to use supported tools to create a custom gradual rollout process for updates
 ms.service: defender-endpoint
 ms.subservice: onboard
-f1.keywords:
-- NOCSH
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
-search.appverid: met150
-ms.date: 02/10/2025
+ms.date: 06/17/2026
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
+
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Create a custom gradual rollout process for Microsoft Defender updates
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+This article describes how to create a custom gradual rollout process for Microsoft Defender updates by using Group Policy, Microsoft Intune, or PowerShell. You can control when devices receive platform, engine, and security intelligence updates by assigning them to specific update channels.
 
-**Applies to:**
+## Prerequisites
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
+Before you configure a custom gradual rollout process, make sure the following requirement is met:
 
-**Platforms**
+- This functionality requires Microsoft Defender Antivirus version 4.18.2106.X or newer. 
+
+
+### Supported operating systems
+
+Custom gradual rollout configuration is supported on the following operating systems:
+
 - Windows
 
-> [!NOTE]
-> This functionality requires Microsoft Defender Antivirus version 4.18.2106.X or newer.
 
 To create your own custom gradual rollout process for Defender updates, you can use Group Policy, Intune, and PowerShell.
 
@@ -46,34 +50,35 @@ The following table lists the available group policy settings for configuring up
 |Disable gradual rollout of Microsoft Defender updates|Enable this policy to disable gradual rollout of Defender updates. <p> Current Channel (Broad): Devices set to this channel are offered updates last during the gradual release cycle. Best for datacenter machines that only receive limited updates. <p> Note: This setting applies to both monthly and daily Defender updates and overrides any previously configured channel selections for platform and engine updates. <p> If you disable or don't configure this policy, the device remains in Current Channel (Default) unless specified otherwise in specific channels for platform and engine updates. Stay up to date automatically during the gradual release cycle. Suitable for most devices.|Windows Components\Microsoft Defender Antivirus\MpEngine|
 
 
-## Group Policy
+<a name="group-policy"></a>
+## Configure a gradual rollout by using Group Policy
 
 > [!NOTE]
-> An updated Defender ADMX template is published together with the 21H2 release of Windows 10. A non-localized version is available for download at [defender-updatecontrols](https://github.com/microsoft/defender-updatecontrols) on GitHub.
+> An updated Defender ADMX template is published together with the 21H2 release of Windows 10. A non-localized version is available for download at [Microsoft Defender update controls repository](https://github.com/microsoft/defender-updatecontrols) on GitHub.
 
 You can use [Group Policy](/windows/win32/srvnodes/group-policy?redirectedfrom=MSDN) to configure and manage Microsoft Defender Antivirus on your endpoints. In general, you can use the following procedure to configure or change Microsoft Defender Antivirus group policy settings:
 
 1. On your Group Policy management machine, open the **Group Policy Management Console**, right-click the **Group Policy Object** (GPO) you want to configure and select **Edit**.
 
-2. Using the Group Policy Management Editor go to **Computer configuration**.
+1. Using the Group Policy Management Editor go to **Computer configuration**.
 
-3. Select **Administrative templates**.
+1. Select **Administrative templates**.
 
-4. Expand the tree to **Windows components** > **Microsoft Defender Antivirus**.
+1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus**.
 
-5. Expand the section (referred to as **Location** in the table in this article) that contains the setting you want to configure, double-click the setting to open it, and make configuration changes.
+1. Expand the section listed in the **Location** column of the preceding policy settings table (for example, **Windows Components\Microsoft Defender Antivirus**) that contains the setting you want to configure, double-click the setting to open it, and make configuration changes.
 
-6. [Deploy the updated GPO as you normally do](https://msdn.microsoft.com/library/ee663280(v=vs.85).aspx).
+1. Deploy the updated GPO as you normally do. For guidance, see [Deploying Group Policy Objects](https://msdn.microsoft.com/library/ee663280(v=vs.85).aspx).
 
-## Intune
+<a name="intune"></a>
+## Configure a gradual rollout by using Microsoft Intune
 
-Follow the instructions in below link to create a custom policy in Intune:
-
-[Add custom settings for Windows 10 devices in Microsoft Intune](/mem/intune/configuration/custom-settings-windows-10).
+To create a custom policy in Intune, follow the instructions in [Add custom settings for Windows 10 devices in Microsoft Intune](/intune/intune-service/configuration/custom-settings-windows-10).
 
 For more information on the Defender CSP used for the gradual rollout process, see [Defender CSP](/windows/client-management/mdm/defender-csp).
 
-## PowerShell
+<a name="powershell"></a>
+## Configure a gradual rollout by using PowerShell
 
 Use the `Set-MpPreference` cmdlet to configure roll out of the gradual updates.
 
@@ -92,7 +97,8 @@ Use `Set-MpPreference -PlatformUpdatesChannel Beta` to configure platform update
 
 For more information on the parameters and how to configure them, see [Set-MpPreference](/powershell/module/defender/set-mppreference) (Microsoft Defender Antivirus).
 
-## Registry
+<a name="registry"></a>
+## Verify gradual rollout configuration in the registry
 
 These settings can be confirmed in the registry under `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender`:
 
@@ -101,16 +107,17 @@ These settings can be confirmed in the registry under `HKEY_LOCAL_MACHINE\SOFTWA
 - `SignaturesRing`
 
 > [!NOTE]
-> You can also use a management tool such as Microsoft Configuration Manager to run PowerShell scripts. See [Create and run PowerShell scripts from the Configuration Manager console](/mem/configmgr/apps/deploy-use/create-deploy-scripts).
+> You can also use a management tool such as Microsoft Configuration Manager to run PowerShell scripts. See [Create and run PowerShell scripts from the Configuration Manager console](/intune/configmgr/apps/deploy-use/create-deploy-scripts).
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

@@ -1,20 +1,20 @@
 ---
 title: 'Tutorial: Gathering threat intelligence and infrastructure chaining using Microsoft Defender Threat Intelligence (Defender TI)'
 description: Learn how to gather threat intelligence and infrastructure chain together indicators of compromise in Microsoft Defender Threat Intelligence (Defender TI). This article covers a historical investigation of the MyPillow Magecart breach.
-author: alexroland24
-ms.author: aroland
-manager: dolmont
-ms.service: threat-intelligence
 ms.topic: tutorial
-ms.date: 01/15/2025
-ms.custom: 
-- template-overview
-- cx-ti
-- cx-mdti
+ms.date: 09/12/2025
+ms.custom:
+  - template-overview
+  - cx-ti
+  - cx-mdti
+  - sfi-image-nochange
 ---
 
 
 # Tutorial: Gathering threat intelligence and infrastructure chaining
+
+> [!IMPORTANT]
+> Microsoft Defender Threat Intelligence (Defender TI) will be discontinued and merged into Microsoft Defender for a powerful unified experience. Existing customers will continue to have full access to their current Defender TI experience until the product is retired on August 1, 2026. [Learn more](https://techcommunity.microsoft.com/blog/defenderthreatintelligence/mdti-is-converging-into-microsoft-sentinel-and-defender-xdr/4427991)
 
 This tutorial walks you through how to perform several types of indicator searches and gather threat and adversary intelligence using Microsoft Defender Threat Intelligence (Defender TI) in the Microsoft Defender portal.
 

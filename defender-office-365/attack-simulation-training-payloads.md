@@ -2,8 +2,6 @@
 title: Payloads in Attack simulation training
 author: chrisda
 ms.author: chrisda
-manager: orspodek
-audience: ITPro
 ms.topic: how-to
 ms.service: defender-office-365
 ms.localizationpriority: medium
@@ -12,8 +10,7 @@ ms.collection:
   - tier2
 ms.custom:
 description: Admins can learn how to create and manage payloads for Attack simulation training in Microsoft Defender for Office 365 Plan 2.
-search.appverid: met150
-ms.date: 03/10/2025
+ms.date: 06/09/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -34,6 +31,11 @@ To see the available payloads, open the Microsoft Defender portal at <https://se
 - **Tenant payloads**: Contains the custom payloads that you created.
 - **MDO recommendations**: Payloads that are recommended by Defender for Office 365 as having considerable impact when used by attackers. The recommendations are based on identified campaigns and a high predicted compromise rate. This list is refreshed monthly. If there's no recent campaign activity in your organization (less than 60 days), the **MDO recommendations** tab might be empty.
 
+> [!NOTE]
+> The trademark, logo, and brand guidance for payloads applies equally to **Global payloads** (built-in payloads provided by Microsoft) and **Tenant payloads** (custom payloads that you create). For the detailed legal considerations, see [Create payloads](#create-payloads).
+>
+> Microsoft provides Attack simulation training payloads to help customers simulate real-world attack techniques. Microsoft does not provide legal advice, and customers remain responsible for determining the appropriate use of any payloads in their own environment. For questions relating to applicable laws, trademark use, or other legal considerations, customers should consult their own legal advisors.
+
 The information that's available on the tabs is described in the following list:
 
 - **MDO recommendations** tab: The following information is shown for each payload:
@@ -42,7 +44,7 @@ The information that's available on the tabs is described in the following list:
   - **Recommended by**
   - **Recommendation date time**
 
-- **Global payloads** and **Tenant payloads** tabs: The following information is shown for each payload. You can sort the payloads by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default columns are marked with an asterisk (<sup>\*</sup>):
+- **Global payloads** and **Tenant payloads** tabs: The following information is shown for each payload. You can sort the payloads by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. The default columns are marked with an asterisk (<sup>\*</sup>):
   - **Payload name**<sup>\*</sup>
   - **Type<sup>\*</sup>**: Currently, this value is always **Social engineering**.
   - **Platform**
@@ -74,9 +76,9 @@ The information that's available on the tabs is described in the following list:
   > - Remove columns from the view.
   > - Zoom out in your web browser.
 
-  To find a payload in the list, type part of the payload name in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and then press the ENTER key.
+  To find a payload in the list, type part of the payload name in the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and then press the ENTER key.
 
-  Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: to filter the payloads by one or of the following values:
+  Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: to filter the payloads by one or of the following values:
 
   - **Technique**: One of the available [social engineering techniques](attack-simulation-training-simulations.md#select-a-social-engineering-technique):
     - **Credential Harvest**
@@ -103,7 +105,7 @@ The information that's available on the tabs is described in the following list:
 
   - **Controversial**: The available values are **Yes** or **No**.
 
-  When you're finished configuring filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+  When you're finished configuring filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
 When you select a payload by clicking anywhere in the row other than the check box next to the name, a details flyout appears with the following information:
 
@@ -133,7 +135,7 @@ To see payloads that have been archived (the **Status** value is **Archive**), u
 
 ## QR code payloads
 
-On the **Global payloads** tab of **Content library** \> **Payloads** at <https://security.microsoft.com/attacksimulator?viewid=contentlibrary&source=global>, you can see the built-in, unmodifiable QR code payloads by typing **QR** in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box, and then pressing the ENTER key.
+On the **Global payloads** tab of **Content library** \> **Payloads** at <https://security.microsoft.com/attacksimulator?viewid=contentlibrary&source=global>, you can see the built-in, unmodifiable QR code payloads by typing **QR** in the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box, and then pressing the ENTER key.
 
 QR code payloads are available in five languages to address real-world scenarios that involve QR code attacks.
 
@@ -156,20 +158,16 @@ You can also create custom payloads that use QR codes as phishing links as descr
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Content library** tab \> **Payloads** \> **Tenant payloads** tab. To go directly to the **Content library** tab where you can select **Payloads** and the **Tenant payloads** tab, use <https://security.microsoft.com/attacksimulator?viewid=contentlibrary>.
 
-   On the **Tenant payloads** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create a payload** to start the new payload wizard.
+   On the **Tenant payloads** tab, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create a payload** to start the new payload wizard.
 
    :::image type="content" source="media/attack-sim-training-payload-create.png" alt-text="Create a payload on the Tenant payloads tab in Payloads in Attack simulation training in the Microsoft Defender portal." lightbox="media/attack-sim-training-payload-create.png":::
 
    > [!NOTE]
-   > At any point after you name the payload during the new payload wizard, you can select **Save and close** to save your progress and continue later. The incomplete payload has the **Status** value **Draft**. You can pick up where you left off by selecting the payload and then clicking the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit payload** action that appears.
+   > At any point after you name the payload during the new payload wizard, you can select **Save and close** to save your progress and continue later. The incomplete payload has the **Status** value **Draft**. You can pick up where you left off by selecting the payload and then clicking the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit payload** action that appears.
    >
    > You can also create payloads during the creation of simulations. For more information, see [Create a simulation: Select a payload and login page](attack-simulation-training-simulations.md#select-a-payload-and-login-page).
 
-2. On the **Select type** page, select one of the following values:
-   - **Email**
-   - **Teams**: Currently, this value is available only in Private Preview. For more information, see [Microsoft Teams in Attack simulation training](attack-simulation-training-teams.md).
-
-   When you're finished on the **Select type** page, select **Next**.
+2. On the **Select type** page, select **Email**, and then select **Next**.
 
 3. On the **Select technique** page, the available options are the same as on the **Select technique** page in the new simulation wizard:
    - **Credential Harvest**<sup>\*</sup>
@@ -324,7 +322,7 @@ You can also create custom payloads that use QR codes as phishing links as descr
 
    Indicators help employees identify the tell-tale signs of phishing messages.
 
-   On the **Add indicators** page, select :::image type="icon" source="media/m365-cc-sc-add-internal-icon.png" border="false"::: **Add indicator**. In the **Add indicator** flyout that opens, configure the following settings:
+   On the **Add indicators** page, select :::image type="icon" source="media/defender-portal-icon-add-internal.png" border="false"::: **Add indicator**. In the **Add indicator** flyout that opens, configure the following settings:
 
    - **Select and indicator you would like to use** and **Where do you want to place this indicator on the payload?**:
 
@@ -374,19 +372,19 @@ You can also create custom payloads that use QR codes as phishing links as descr
 
    Back on the **Add indicators** page, you can review the indicators you selected:
 
-   - To edit an existing indicator, select it and then select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit indicator**.
+   - To edit an existing indicator, select it and then select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit indicator**.
 
-   - To delete an existing indicator, select it and then select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete**.
+   - To delete an existing indicator, select it and then select :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete**.
 
-   - To move indicators up or down in the list, select the indicator, and then select :::image type="icon" source="media/m365-cc-sc-increase-icon.png" border="false"::: **Move up** or :::image type="icon" source="media/m365-cc-sc-decrease-icon.png" border="false"::: **Move down**.
+   - To move indicators up or down in the list, select the indicator, and then select :::image type="icon" source="media/defender-portal-icon-increase.png" border="false"::: **Move up** or :::image type="icon" source="media/defender-portal-icon-decrease.png" border="false"::: **Move down**.
 
    When you're finished on the **Add indicators** page, select **Next**.
 
 7. On the **Review payload** page, you can review the details of your payload.
 
-   Select the :::image type="icon" source="media/m365-cc-sc-send-icon.png" border="false"::: **Send a test** button to send a copy of the payload email to yourself (the currently logged in user) for inspection.
+   Select the :::image type="icon" source="media/defender-portal-icon-send.png" border="false"::: **Send a test** button to send a copy of the payload email to yourself (the currently logged in user) for inspection.
 
-   Select the :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Preview indicator** button open the payload in a preview flyout. The preview includes all payload indicators that you've created.
+   Select the :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Preview indicator** button open the payload in a preview flyout. The preview includes all payload indicators that you've created.
 
    On the **Review payload** page, you can select **Edit** in each section to modify the settings within the section. Or you can select **Back** or the specific page in the wizard.
 
@@ -418,9 +416,9 @@ You can't modify built-in payloads on the **Global payloads** tab. You can only 
 
 To modify an existing payload on the **Tenant payloads** tab, do one of the following steps:
 
-- Select the payload by clicking the check box next to the name. Select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit payload** action that appears.
+- Select the payload by clicking the check box next to the name. Select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit payload** action that appears.
 - Select the payload by clicking anywhere in the row other than the check box. In the details flyout that opens, select **Edit payload** at the bottom of the flyout.
-- Select the payload by clicking **⋮** (**Actions**) at the end of the row, and then select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit**.
+- Select the payload by clicking **⋮** (**Actions**) at the end of the row, and then select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit**.
 
 The payload wizard opens with the settings and values of the selected payload. The steps are the same as described in the [Create payloads](#create-payloads) section.
 
@@ -428,8 +426,8 @@ The payload wizard opens with the settings and values of the selected payload. T
 
 To copy an existing payload on the **Tenant payloads** or **Global payloads** tabs, do one of the following steps:
 
-- Select the payload by clicking the check box next to the name, and then select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Copy payload** action that appears.
-- Select the payload by clicking **⋮** (**Actions**) at the end of the row, and then select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Copy payload**.
+- Select the payload by clicking the check box next to the name, and then select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Copy payload** action that appears.
+- Select the payload by clicking **⋮** (**Actions**) at the end of the row, and then select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Copy payload**.
 
 The create payload wizard opens with the settings and values of the selected payload. The steps are the same as described in the [Create payloads](#create-payloads) section.
 
@@ -438,7 +436,7 @@ The create payload wizard opens with the settings and values of the selected pay
 
 ## Archive payloads
 
-To archive an existing payload on the **Tenant payloads** tab, select the payload by clicking **⋮** (**Actions**) at the end of the row, and then select :::image type="icon" source="media/m365-cc-sc-archive-icon.png" border="false"::: **Archive**.
+To archive an existing payload on the **Tenant payloads** tab, select the payload by clicking **⋮** (**Actions**) at the end of the row, and then select :::image type="icon" source="media/defender-portal-icon-archive.png" border="false"::: **Archive**.
 
 The **Status** value of the payload changes to **Archive**, and the payload is no longer visible on the **Tenant payloads** table when **Show archived payloads** is toggled off :::image type="icon" source="media/scc-toggle-off.png" border="false":::.
 
@@ -451,7 +449,7 @@ After you archive a payload, you can restore it or remove it as described in the
 To restore an archive payload on the **Tenant payloads** tab, do the following steps:
 
 1. Set the **Show archived payloads** toggle to on :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
-2. Select the payload by clicking **⋮** (**Actions**) at the end of the row, and then select :::image type="icon" source="media/m365-cc-sc-archive-icon.png" border="false"::: **Restore**.
+2. Select the payload by clicking **⋮** (**Actions**) at the end of the row, and then select :::image type="icon" source="media/defender-portal-icon-archive.png" border="false"::: **Restore**.
 
 After you restore the archived payload, the **Status** value changes to **Draft**. Toggle **Show archived payloads** to off :::image type="icon" source="media/scc-toggle-off.png" border="false"::: to see the restored payload. To return the payload to the **Status** value **Ready**, [edit the payload](#modify-payloads), review or change the settings, and then select **Submit**.
 
@@ -460,13 +458,13 @@ After you restore the archived payload, the **Status** value changes to **Draft*
 To remove an archived payload from the **Tenant payloads** tab, do the following steps:
 
 1. Set the **Show archived payloads** toggle to on :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
-2. Select the payload by clicking **⋮** (**Actions**) at the end of the row, select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete**, and then select **Confirm** in the confirmation dialog.
+2. Select the payload by clicking **⋮** (**Actions**) at the end of the row, select :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete**, and then select **Confirm** in the confirmation dialog.
 
 ## Send a test
 
 On the **Tenant payloads** or **Global payloads** tabs, you can send a copy of the payload email to yourself (the currently logged in user) for inspection.
 
-Select the payload by clicking the check box next to the name, and then select the :::image type="icon" source="media/m365-cc-sc-send-icon.png" border="false"::: **Send a test** button that appears.
+Select the payload by clicking the check box next to the name, and then select the :::image type="icon" source="media/defender-portal-icon-send.png" border="false"::: **Send a test** button that appears.
 
 ## Related links
 

@@ -1,0 +1,329 @@
+{
+  "redirections": [
+    {
+      "source_path": "advanced-threat-analytics/ata-privacy-compliance.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-privacy-compliance.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/manage-telemetry-settings.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/manage-telemetry-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/ATA-versions.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ATA-versions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/ata-architecture.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-architecture",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/ata-capacity-planning.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-capacity-planning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/ata-configuration-file.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-configuration-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/ata-database-management.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-database-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/ata-health-center.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-health-center",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/ata-prerequisites.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-prerequisites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/ata-resources.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-resources",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/ata-role-groups.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-role-groups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/ata-silent-installation.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-silent-installation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/ata-technical-faq.yml",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-technical-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/ata-threats.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-threats",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/ata-update-1.5-migration-guide.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-update-1.5-migration-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/ata-update-1.6-migration-guide.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-update-1.6-migration-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/ata-update-1.7-migration-guide.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-update-1.7-migration-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/ata-update-1.8-migration-guide.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-update-1.8-migration-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/ata-update-1.9-migration-guide.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-update-1.9-migration-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/ata-update-1.9.1-migration-guide.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-update-1.9.1-migration-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/ata-update-1.9.2-migration-guide.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-update-1.9.2-migration-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/ata-update-1.9.3-migration-guide.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/ata-update-1.9.3-migration-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/cef-format-sa.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/cef-format-sa",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/configure-event-collection.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/configure-event-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/configure-port-mirroring.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/configure-port-mirroring",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/disaster-recovery.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/disaster-recovery",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/entity-profiles.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/entity-profiles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/event-id-reference.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/event-id-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/excluding-entities-from-detections.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/excluding-entities-from-detections",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/index.yml",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/install-ata-step1.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/install-ata-step1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/install-ata-step2.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/install-ata-step2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/install-ata-step3.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/install-ata-step3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/install-ata-step4.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/install-ata-step4",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/install-ata-step5.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/install-ata-step5",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/install-ata-step6.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/install-ata-step6",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/install-ata-step7.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/install-ata-step7",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/install-ata-step9-samr.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/install-ata-step9-samr",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/modifying-ata-center-configuration.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/modifying-ata-center-configuration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/modifying-ata-config-dcpassword.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/modifying-ata-config-dcpassword",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/monitoring-alerts.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/monitoring-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/reports.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/setting-ata-alerts.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/setting-ata-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/setting-syslog-email-server-settings.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/setting-syslog-email-server-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/suspicious-activity-guide.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/suspicious-activity-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/tag-sensitive-accounts.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/tag-sensitive-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/troubleshoot-audit.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/troubleshoot-audit",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/troubleshooting-ata-known-errors.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/troubleshooting-ata-known-errors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/troubleshooting-ata-using-ata-database.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/troubleshooting-ata-using-ata-database",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/troubleshooting-ata-using-logs.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/troubleshooting-ata-using-logs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/troubleshooting-ata-using-perf-counters.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/troubleshooting-ata-using-perf-counters",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/troubleshooting-service-startup.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/troubleshooting-service-startup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/upgrade-path.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/upgrade-path",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/use-case-lateral-movement-path.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/use-case-lateral-movement-path",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/validate-port-mirroring.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/validate-port-mirroring",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/vpn-integration-install-step.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/vpn-integration-install-step",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/what-is-ata.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/what-is-ata",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/whats-new-version-1.4.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/whats-new-version-1.4",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/whats-new-version-1.5.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/whats-new-version-1.5",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/whats-new-version-1.6.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/whats-new-version-1.6",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/whats-new-version-1.7.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/whats-new-version-1.7",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/whats-new-version-1.8.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/whats-new-version-1.8",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/whats-new-version-1.9.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/whats-new-version-1.9",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/working-with-ata-console.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/working-with-ata-console",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "advanced-threat-analytics/working-with-suspicious-activities.md",
+      "redirect_url": "/previous-versions/advanced-threat-analytics/working-with-suspicious-activities",
+      "redirect_document_id": false
+    }
+  ]
+}

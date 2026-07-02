@@ -1,11 +1,7 @@
 ---
 title: Threat hunting in Threat Explorer and Real-time detections
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
-audience: ITPro
 ms.topic: how-to
 ms.date: 05/19/2025
 ms.localizationpriority: medium
@@ -14,9 +10,9 @@ ms.collection:
   - tier1
 description: Learn about threat hunting and remediation in Microsoft Defender for Office 365 using Threat Explorer or Real-time detections in the Microsoft Defender portal.
 ms.custom:
-- seo-marvel-apr2020
+  - seo-marvel-apr2020
+  - sfi-image-nochange
 ms.service: defender-office-365
-search.appverid: met150
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -140,7 +136,7 @@ You can use this information for the following results:
 
 In the **All email**, **Malware**, or **Phish** views in Threat Explorer or Real-time detections, email message results are shown in a table in the **Email** tab (view) of the details area below the chart.
 
-When you see a suspicious email message, click on the **Subject** value of an entry in the table. The details flyout that opens contains :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity** at the top of the flyout.
+When you see a suspicious email message, click on the **Subject** value of an entry in the table. The details flyout that opens contains :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Open email entity** at the top of the flyout.
 
 :::image type="content" source="media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png" alt-text="Screenshot of the actions available in the email details flyout after you select a Subject value in the Email tab of the details area in the All email view." lightbox="media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png":::
 
@@ -148,11 +144,11 @@ The Email entity page pulls together everything you need to know about the messa
 
 ### Email remediation
 
-After you determine that an email message is a threat, the next step is remediating the threat. You remediate the threat in Threat Explorer or Real-time detections using :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**.
+After you determine that an email message is a threat, the next step is remediating the threat. You remediate the threat in Threat Explorer or Real-time detections using :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action**.
 
 **Take action** is available in the **All email**, **Malware**, or **Phish** views in Threat Explorer or Real-time detections in the **Email** tab (view) of the details area below the chart:
 
-- Select one or more entries in the table by selecting the check box next to the first column. :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available directly in the tab.
+- Select one or more entries in the table by selecting the check box next to the first column. :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** is available directly in the tab.
 
   :::image type="content" source="media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active." lightbox="media/te-rtd-all-email-view-take-action.png":::
 
@@ -166,13 +162,13 @@ After you determine that an email message is a threat, the next step is remediat
   > - **Threat Explorer**: **Move or delete** and **Propose remediation** are available, but they're mutually exclusive (you can select one or the other).
   > - **Real-time detections**: Only **Submit to Microsoft for review** and creating corresponding allow/block entries in the Tenant Allow/Block list are available.
 
-- Click on the **Subject** value of an entry in the table. The details flyout that opens contains :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout.
+- Click on the **Subject** value of an entry in the table. The details flyout that opens contains :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** at the top of the flyout.
 
   :::image type="content" source="media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png" alt-text="The actions available in the details tab after you select a Subject value in the Email tab of the details area in the All email view." lightbox="media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png":::
 
 #### The Take action wizard
 
-Selecting :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** opens the **Take action** wizard in a flyout. The available actions in the **Take action** wizard in Defender for Office 365 Plan 2 and Defender for Office 365 Plan 1 are listed in the following table:
+Selecting :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** opens the **Take action** wizard in a flyout. The available actions in the **Take action** wizard in Defender for Office 365 Plan 2 and Defender for Office 365 Plan 1 are listed in the following table:
 
 |Action|Defender for<br/>Office 365 Plan 2|Defender for<br/>Office 365 Plan 1|
 |---|:---:|:---:|
@@ -234,7 +230,7 @@ The **Take action** wizard is described in the following list:
        - :::image type="icon" source="media/scc-toggle-off.png" border="false"::: **Expire on**: Select a date for block entries to expire.
        - :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Never expire**
 
-       The number of blocked entities is shown (for example, **4/4 entities to be blocked**). Select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** to reopen the **Add to block rule** and make changes.
+       The number of blocked entities is shown (for example, **4/4 entities to be blocked**). Select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** to reopen the **Add to block rule** and make changes.
 
    - **Initiate automated investigation**: Threat Explorer only. Select one of the following values that appear:
      - **Investigate email**
@@ -294,7 +290,7 @@ The **Take action** wizard is described in the following list:
 
 3. On the **Review and submit** page, review your previous selections.
 
-   Select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the impacted assets to a CSV file. By default, the filename is **Impacted assets.csv** located in the **Downloads** folder.
+   Select :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to export the impacted assets to a CSV file. By default, the filename is **Impacted assets.csv** located in the **Downloads** folder.
 
    Select **Back** to go back and change your selections.
 
@@ -313,7 +309,7 @@ Threat Explorer or Real-time detections helps your security operations team inve
 
 The **Alerts** page is available in the Defender portal at **Incidents & alerts** \> **Alerts**, or directly at <https://security.microsoft.com/alerts>.
 
-Many alerts with the **Detection source** value **MDO** have the :::image type="icon" source="media/m365-cc-sc-show-trends-icon.png" border="false"::: **View messages in Explorer** action available at the top of the alert details flyout.
+Many alerts with the **Detection source** value **MDO** have the :::image type="icon" source="media/defender-portal-icon-show-trends.png" border="false"::: **View messages in Explorer** action available at the top of the alert details flyout.
 
 The alert details flyout opens when you click anywhere on the alert other than the check box next to the first column. For example:
 
@@ -383,7 +379,7 @@ Pre-delivery and post-delivery actions on email messages are consolidated into a
 > [!TIP]
 > Verdict analysis might not necessarily be tied to entities. The filters evaluate content and other details of an email message before assigning a verdict. For example, an email message might be classified as phishing or spam, but no URLs in the message are stamped with a phishing or spam verdict.
 
-Select :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity** at the top of the flyout to see exhaustive details about the email message. For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
+Select :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Open email entity** at the top of the flyout to see exhaustive details about the email message. For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
 
 :::image type="content" source="media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout.png" alt-text="Screenshot of the email details flyout after you select a Subject value in the Email tab of the details area in the All email view." lightbox="media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout.png":::
 

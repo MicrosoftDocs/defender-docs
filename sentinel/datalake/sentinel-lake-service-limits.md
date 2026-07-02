@@ -1,0 +1,29 @@
+---  
+title: Microsoft Sentinel data lake service limits
+titleSuffix: Microsoft Security  
+description: Service limits for the Microsoft Sentinel data lake service.
+ms.author: edbaynash  
+author: EdB-MSFT  
+ms.reviewer: abhiag
+ms.service: microsoft-sentinel
+ms.subservice: sentinel-platform  
+ms.topic: concept-article
+ms.custom: sentinel-graph
+ms.date: 07/09/2025
+
+---  
+
+
+# Microsoft Sentinel data lake service parameters and limits
+
+The following service parameters and limits apply to the Microsoft Sentinel data lake service.
+
+[!INCLUDE [Service limits for tables, data management and ingestion](../includes/service-limits-table-manaement-ingestion.md)]
+
+[!INCLUDE [Service limits for VS Code notebooks](../includes/service-limits-notebooks.md)]
+
+[!INCLUDE [Service limits for KQL queries against the data lake](../includes/service-limits-kql-queries.md)]
+
+[!INCLUDE [Service limits for KQL jobs](../includes/service-limits-kql-jobs.md)]
+
+[!INCLUDE [Service limits for KQL async queries](../includes/service-limits-kql-async-queries.md)]
