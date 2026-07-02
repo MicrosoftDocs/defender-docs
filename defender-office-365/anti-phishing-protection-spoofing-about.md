@@ -1,14 +1,8 @@
 ---
 title: Anti-spoofing protection
-f1.keywords: 
-  - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-audience: ITPro
+ms.author: chrisda
 ms.topic: overview
-search.appverid: 
-  - MET150
 ms.assetid: d24bb387-c65d-486e-93e7-06a4f1a436c0
 ms.collection: 
   - m365-security
@@ -21,11 +15,13 @@ ms.custom:
   - TopSMBIssues
   - seo-marvel-apr2020
 ms.localizationpriority: high
-description: Admins can learn how the default anti-spoofing protection features in all organizations with cloud mailboxes can help mitigate against phishing attacks from spoofed senders and domains.
+description: Anti-spoofing protection features in Microsoft 365 organizations with cloud mailboxes help mitigate phishing attacks from spoofed senders and domains.
 ms.service: defender-office-365
-ms.date: 07/02/2025
+#customer intent: As an admin, I want to understand how anti-spoofing protection works in Microsoft 365 so I can protect my organization from phishing attacks that use forged sender addresses.
+ai-usage: ai-assisted
+ms.date: 05/29/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -34,11 +30,11 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-All organizations with cloud mailboxes include features to help protect against spoofed (forged) senders Spoofing is a common technique used by attackers. **Spoofed messages appear to originate from someone or somewhere other than the actual source**. This technique is often used in phishing campaigns designed to get user credentials.
+All organizations with cloud mailboxes include features to help protect against spoofed (forged) senders. Spoofing is a common technique used by attackers. **Spoofed messages appear to originate from someone or somewhere other than the actual source**. This technique is often used in phishing campaigns designed to get user credentials.
 
-Anti-spoofing technology in Microsoft 365 specifically examines forgery of the From header in the message body (also known as the `5322.From` address, From address or P2 sender), because email clients show the From header value as the message sender. When Microsoft 365 has high confidence the From header is forged, the message is identified as spoofed.
+Anti-spoofing technology in Microsoft 365 specifically examines forgery of the From header field (also known as the `5322.From` address, From address, or P2 sender), because email clients show the From header value as the message sender. When Microsoft 365 has high confidence the From header is forged, the message is identified as spoofed.
 
-The following anti-spoofing technologies are available in the default email protections for cloud mailboxes:
+The following anti-spoofing technologies are available in [the built-in security features for all cloud mailboxes](eop-about.md):
 
 - **Email authentication**: An integral part of any anti-spoofing effort is the use of email authentication (also known as email validation) by SPF, DKIM, and DMARC records in DNS. You can configure these records for your domains so destination email systems can check the validity of messages that claim to be from senders in your domains. For inbound messages, Microsoft 365 requires email authentication of sender domains. For more information, see [Email authentication](email-authentication-about.md).
 
@@ -50,21 +46,21 @@ The following anti-spoofing technologies are available in the default email prot
 
 - **Allow or block spoofed senders in the Tenant Allow/Block List**: When you override the verdict in the spoof intelligence insight, the spoofed sender becomes a manual allow or block entry that only appears on the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page at <https://security.microsoft.com/tenantAllowBlockList?viewid=SpoofItem>. You can also manually create allow or block entries for spoof senders before spoof intelligence detects them. For more information, see [Spoofed senders in the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#spoofed-senders-in-the-tenant-allowblock-list).
 
-- **Anti-phishing policies**: In the default email protections for cloud mailboxes and in Microsoft Defender for Office 365, anti-phishing policies contain the following anti-spoofing settings:
+- **Anti-phishing policies**: In the built-in security features for all cloud mailboxes and in Microsoft Defender for Office 365, anti-phishing policies contain the following anti-spoofing settings:
   - Turn spoof intelligence on or off.
   - Turn unauthenticated sender indicators in Outlook on or off.
   - Specify the action for blocked spoofed senders.
 
   For more information, see [Spoof settings in anti-phishing policies](anti-phishing-policies-about.md#spoof-settings).
 
-  Anti-phishing policies in Defender for Office 365 contain addition protections, including _impersonation_ protection. For more information, see [Exclusive settings in anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-about.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+  Anti-phishing policies in Defender for Office 365 contain more protections, including _impersonation_ protection. For more information, see [Exclusive settings in anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-about.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
 - **Spoof detections report**: For more information, see [Spoof Detections report](reports-email-security.md#spoof-detections-report).
 
   Microsoft 365 organizations with Defender for Office 365 (included or in add-on subscriptions) have Real-time detections (Plan 1) or Threat Explorer (Plan 2) to view information about phishing attempts. For more information, see [Microsoft 365 threat investigation and response](office-365-ti.md).
 
 > [!TIP]
-> It's important to understand that a [composite authentication](email-authentication-about.md#composite-authentication) failure doesn't directly result in blocking a message. Microsoft 365 using a holistic evaluation strategy that considers the overall suspicious nature of a message along with composite authentication results. This method is designed to mitigate the risk of incorrectly blocking legitimate email from domains that might not strictly adhere to email authentication protocols. This balanced approach helps distinguish genuinely malicious email from message senders that simply fail to conform to standard email authentication practices.
+> It's important to understand that a [composite authentication](email-authentication-about.md#composite-authentication) failure doesn't directly result in blocking a message. Microsoft 365 uses a holistic evaluation strategy that considers the overall suspicious nature of a message along with composite authentication results. This method is designed to mitigate the risk of incorrectly blocking legitimate email from domains that might not strictly adhere to email authentication protocols. This balanced approach helps distinguish genuinely malicious email from message senders that simply fail to conform to standard email authentication practices.
 
 ## How spoofing is used in phishing attacks
 
@@ -90,11 +86,11 @@ Spoofed senders in messages have the following negative implications for users:
 
   :::image type="content" source="media/58a3154f-e83d-4f86-bcfe-ae9e8c87bd37.jpg" alt-text="Microsoft legitimate password reset." lightbox="media/58a3154f-e83d-4f86-bcfe-ae9e8c87bd37.jpg":::
 
-  The message really did come from Microsoft, but users are conditioned to be suspicious. Because it's difficult to the difference between a real password reset message and a fake one, users might ignore the message, report it as spam, or unnecessarily report the message to Microsoft as phishing.
+  The message really did come from Microsoft, but users are conditioned to be suspicious. Because it's difficult to tell the difference between a real password reset message and a fake one, users might ignore the message, report it as spam, or unnecessarily report the message to Microsoft as phishing.
 
 ## Different types of spoofing
 
-Microsoft differentiates between two different types of spoofed senders in messages:
+Microsoft differentiates between two types of spoofed senders in messages:
 
 - **Intra-org spoofing**: Also known as _self-to-self_ spoofing. For example:
 
@@ -137,7 +133,7 @@ Microsoft differentiates between two different types of spoofed senders in messa
   To: michelle@tailspintoys.com
   ```
 
-  Messages that fail [composite authentication](email-authentication-about.md#composite-authentication) due to cross-domain spoofing contain the following headers values:
+  Messages that fail [composite authentication](email-authentication-about.md#composite-authentication) due to cross-domain spoofing contain the following header values:
 
   `Authentication-Results: ... compauth=fail reason=000/001`
 
@@ -151,6 +147,59 @@ Microsoft differentiates between two different types of spoofed senders in messa
 
   For more information about **Authentication-Results** and `compauth` values, see [Authentication-results message header fields](message-headers-eop-mdo.md#authentication-results-message-header-fields).
 
+## How spoof intelligence verdicts work
+
+Microsoft 365 uses a multi-layer evaluation process to determine whether a message is spoofed. Understanding how these systems interact helps explain why some messages with authentication failures are delivered and others are blocked.
+
+The evaluation layers are:
+
+1. **Composite authentication**: Checks SPF, DKIM, and DMARC and combines the results into a single verdict. For more information, see [Composite authentication](email-authentication-about.md#composite-authentication).
+1. **Spoof intelligence**: Evaluates sender legitimacy based on mail-flow patterns and sender-infrastructure history. For more information, see [Spoof intelligence insight](anti-spoofing-spoof-intelligence.md).
+1. **Anti-phishing policy**: Determines the final action for messages that spoof intelligence flags as suspicious. For more information, see [Spoof settings in anti-phishing policies](anti-phishing-policies-about.md#spoof-settings).
+
+The decision flow is:
+
+- Composite authentication passes > Message is delivered normally.
+- Composite authentication fails > Spoof intelligence evaluates the sender:
+  - Spoof intelligence identifies the sender as legitimate > Message is delivered.
+  - Spoof intelligence flags the sender as suspicious > Anti-phishing policy action is applied (move to Junk Email folder or quarantine the message).
+
+> [!TIP]
+> Remember, a composite authentication failure doesn't automatically block a message.
+
+### Partner messages marked as spoofed
+
+Business partners often send messages through non-Microsoft services, which creates authentication misalignment that triggers spoof detections.
+
+For example, a partner uses a marketing service to send messages on their behalf:
+
+- **From header**: `sender@fabrikam.com`
+- **MAIL FROM (envelope sender)**: `bounces@adatum.com`
+- **DKIM signature domain**: `adatum.com`
+
+The authentication results are:
+
+- SPF passes for adatum.com (the envelope sender domain).
+- DKIM passes for adatum.com (the signing domain).
+- DMARC fails because neither SPF nor DKIM aligns with the From header domain (fabrikam.com).
+- **Verdict**: `compauth=fail` → the message is flagged as spoofed.
+
+Common causes of this mismatch:
+
+- Email marketing services (for example, Marketo, HubSpot, or Mailchimp).
+- Cloud email gateways (for example, Proofpoint or Mimecast).
+- Email relay services or shared hosting platforms.
+
+Users might see a spoof warning banner in Outlook, the "?" symbol next to the sender name, or the message delivered to the Junk Email folder.
+
+**Short-term resolution**: Create an allow entry for the spoofed sender pair in the Tenant Allow/Block List. Pair the From header domain with the actual sending infrastructure. For more information, see [Create allow entries for spoofed senders](tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-spoofed-senders).
+
+**Long-term resolution**: Ask the partner to fix their email authentication:
+
+- Configure DKIM signing with their own domain.
+- Add the non-Microsoft service to their SPF record.
+- Use a subdomain for service messages (for example, `marketing.fabrikam.com`) with proper SPF and DKIM alignment.
+
 ## Problems with anti-spoofing protection
 
 Mailing lists (also known as discussion lists) are known to have problems with anti-spoofing protection because of how they forward and modify messages.
@@ -158,7 +207,7 @@ Mailing lists (also known as discussion lists) are known to have problems with a
 For example, Gabriela Laureano (`glaureano@contoso.com`) is interested in bird watching, so she joins the mailing list `birdwatchers@fabrikam.com`, and sends the following message to the list:
 
 ```text
-From: "Gabriela Laureano" <glaureano@contoso.com> 
+From: "Gabriela Laureano" <glaureano@contoso.com>
 To: Birdwatcher's Discussion List <birdwatchers@fabrikam.com>
 Subject: Great viewing of blue jays at the top of Mt. Rainier this week
 

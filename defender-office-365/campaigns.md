@@ -1,21 +1,17 @@
 ---
 title: Campaigns in Microsoft Defender for Office 365 Plan
-f1.keywords: 
-  - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
+ms.author: chrisda
 ms.reviewer: mcostea
-audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: 
 ms.collection: 
   - m365-security
   - tier1
 ms.custom:
+  - sfi-ga-nochange
+  - sfi-image-nochange
 description: Learn about Campaigns in Microsoft Defender for Office 365.
 ms.service: defender-office-365
 ms.date: 06/19/2025
@@ -56,12 +52,12 @@ A campaign might be short-lived, or could span several days, weeks, or months wi
 
 - The campaigns feature is available in organizations with Defender for Office 365 Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5).
 - You need to be assigned permissions to view information about campaigns as described in this article. You have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Security operations/Raw data (email & collaboration)/Email message headers (read)**.
+  - [Microsoft Defender Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Security operations/Raw data (email & collaboration)/Email message headers (read)**.
   - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in the **Organization Management**, **Security Administrator**, or **Security Reader** role group.
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Campaigns page in the Microsoft Defender portal
 
@@ -105,12 +101,12 @@ Change the organization of the chart by selecting **Campaign Type**, and then se
 - **URL domain**
 - **URL domain and path**
 
-Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export chart data** to export the data in the chart to a CSV file.
+Use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export chart data** to export the data in the chart to a CSV file.
 
 To remove the chart from the page (which maximizes the size of the details area), do either of the following steps:
 
-- Select :::image type="icon" source="media/m365-cc-sc-chart-view-icon.png" border="false"::: **Chart View** \> :::image type="icon" source="media/m365-cc-sc-list-view-icon.png" border="false"::: **List View** at the top of the page.
-- Select :::image type="icon" source="media/m365-cc-sc-show-list-view-icon.png" border="false"::: **Show list view** between the chart and the views for the details table.
+- Select :::image type="icon" source="media/defender-portal-icon-chart-view.png" border="false"::: **Chart View** \> :::image type="icon" source="media/defender-portal-icon-list-view.png" border="false"::: **List View** at the top of the page.
+- Select :::image type="icon" source="media/defender-portal-icon-show-list-view.png" border="false"::: **Show list view** between the chart and the views for the details table.
 
 ### Details area on the Campaigns page
 
@@ -132,9 +128,9 @@ On the **Campaigns** page, the **Campaign** tab below the chart shows the follow
 - **Click rate**: In phishing campaigns, the percentage as calculated by "**Clicked** / **Inboxed**". This value is an indicator of the effectiveness of the campaign. In other words, were the recipients able to identify the message as phishing, and therefore avoided the payload URL? **Click rate** isn't used in malware campaigns.
 - **Visited**: How many users actually made it through to the payload website. If there are **Clicked** values, but [Safe Links](safe-links-about.md) blocked access to the website, this value is zero.
 
-Select a column header to sort by that column. To remove columns, select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns**. By default, all available columns are selected.
+Select a column header to sort by that column. To remove columns, select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns**. By default, all available columns are selected.
 
-Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the data in the details table to a CSV file.
+Use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to export the data in the details table to a CSV file.
 
 On the **Campaigns** page, the **Campaign origin** tab below the chart shows the message sources on a map of the world.
 
@@ -206,11 +202,11 @@ After you select a property from the **Campaign Type** dropdown, select **Equal 
 
 To add more conditions, select another property/value pair, and then select **AND** or **OR**. Repeat these steps as many times as necessary.
 
-To remove existing property/value pairs, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the entry.
+To remove existing property/value pairs, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the entry.
 
 When you're finished building your filter query, select **Refresh**.
 
-To save your filter query, select **Save query** \> :::image type="icon" source="media/m365-cc-sc-save-icon.png" border="false"::: **Save query**. In the **Save query** flyout that opens, configure the following settings:
+To save your filter query, select **Save query** \> :::image type="icon" source="media/defender-portal-icon-save.png" border="false"::: **Save query**. In the **Save query** flyout that opens, configure the following settings:
 
 - **Query name**: Enter a unique value.
 - Select one of the following values:
@@ -220,7 +216,7 @@ To save your filter query, select **Save query** \> :::image type="icon" source=
 
 When you're finished in the **Save query** flyout, select **Save**, and then select **OK** in the confirmation dialog.
 
-When you return to the **Campaigns** page, you can load a saved filter by selecting **Save query** \> :::image type="icon" source="media/m365-cc-sc-gear-icon.png" border="false"::: **Saved query settings**.
+When you return to the **Campaigns** page, you can load a saved filter by selecting **Save query** \> :::image type="icon" source="media/defender-portal-icon-gear.png" border="false"::: **Saved query settings**.
 
 ## Campaign details
 
@@ -329,7 +325,7 @@ The tabs in the campaign details flyout allow you to further investigate the cam
   - **SPF passed**: The sender was authenticated by the [Sender Policy Framework (SPF)](email-authentication-spf-configure.md). A sender that doesn't pass SPF validation indicates an unauthenticated sender, or the message is spoofing a legitimate sender.
 
 - **Senders**
-  - **Sender**: This is the actual sender address in the SMTP **MAIL FROM** command, which isn't necessarily the **From:** email address that users see in their email clients.
+  - **Sender**: This address is the actual sender address in the SMTP **MAIL FROM** command, which isn't necessarily the **From:** email address that users see in their email clients.
   - **Total count**
   - **Inboxed**
   - **Not Inboxed**
@@ -348,7 +344,7 @@ The tabs in the campaign details flyout allow you to further investigate the cam
 
 <sup>\*</sup> Selecting this value opens a new flyout that contains more details about the specified item (user, URL, etc.) on top of the campaign details view. To return to the campaign details flyout, select **Done** in the new flyout.
 
-On each tab, select a column header to sort by that column. To remove columns, select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns**. By default, all available columns on each tab are selected.
+On each tab, select a column header to sort by that column. To remove columns, select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns**. By default, all available columns on each tab are selected.
 
 ### Additional actions
 

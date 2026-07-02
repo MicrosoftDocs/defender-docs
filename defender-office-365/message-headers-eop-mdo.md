@@ -1,28 +1,23 @@
 ---
 title: Anti-spam message headers
-f1.keywords: 
-  - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-audience: ITPro
+ms.author: chrisda
 ms.topic: article
 
 ms.localizationpriority: high
-search.appverid: 
-  - MET150
 ms.assetid: 2e3fcfc5-5604-4b88-ac0a-c5c45c03f1db
 ms.collection: 
   - m365-security
   - tier2
-description: Admins can learn about the header fields that the default email protections for cloud mailboxes add to incoming email messages. These header fields provide information about the message and how it was processed.
+description: Admins can learn about the header fields added to incoming messages by the built-in security features for all cloud mailboxes and by Microsoft Defender for Office 365. These header fields provide information about the message and how it was processed.
 ms.custom: seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 07/07/2025
+ms.date: 10/08/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+#customer intent: As an IT pro, I need to understand the antispam and authentication headers added to incoming email so I can interpret message headers during investigations.
 ---
 
 # Anti-spam message headers in cloud organizations
@@ -33,7 +28,7 @@ In all organizations with cloud mailboxes, Microsoft 365 scans all incoming mess
 
 - **X-Forefront-Antispam-Report**: Contains information about the message and about how it was processed.
 - **X-Microsoft-Antispam**: Contains additional information about bulk mail and phishing.
-- **Authentication-results**: Contains information about email authentication results including Sender Policy Framework (SPF), Domainkeys Identified Mail (DKIM), and Domain-based Message Authentication, Reporting, and Conformance (DMARC). 
+- **Authentication-results**: Contains information about email authentication results including Sender Policy Framework (SPF), Domainkeys Identified Mail (DKIM), and Domain-based Message Authentication, Reporting, and Conformance (DMARC).
 
 This article describes what's available in these header fields.
 
@@ -150,7 +145,47 @@ The following table describes the fields and possible values for each email auth
 |`dkim`|Describes the results of the DKIM check for the message. Possible values include: <ul><li>**pass**: Indicates the DKIM check for the message passed.</li><li>**fail (reason)**: Indicates the DKIM check for the message failed and why. For example, if the message wasn't signed or the signature wasn't verified.</li><li>**none**: Indicates that the message wasn't signed. This result might or might not indicate that the domain has a DKIM record or the DKIM record doesn't evaluate to a result.</li></ul>|
 |`dmarc`|Describes the results of the DMARC check for the message. Possible values include: <ul><li>**pass**: Indicates the DMARC check for the message passed.</li><li>**fail**: Indicates the DMARC check for the message failed.</li><li>**bestguesspass**: Indicates that no DMARC TXT record exists for the domain exists. If the domain had a DMARC TXT record, the DMARC check for the message would pass.</li><li>**none**: Indicates that no DMARC TXT record exists for the sending domain in DNS.|
 |`header.d`|Domain identified in the DKIM signature, if any. This domain is queried for the public key.|
-|`header.from`|The domain of the `5322.From` address in the email message header (also known as the From address or P2 sender). Recipient sees the From address in email clients.|
-|`reason`|The reason the composite authentication passed or failed. The value is a three-digit code. For example: <ul><li>**000**: The message failed explicit authentication (`compauth=fail`). For example, the message received a DMARC fail and the DMARC policy action is `p=quarantine` or `p=reject`.</li><li>**001**: The message failed implicit authentication (`compauth=fail`). This result means that the sending domain didn't have email authentication records published, or if they did, they had a weaker failure policy (SPF `~all` or `?all`, or a DMARC policy of `p=none`).</li><li>**002**: The organization has a policy for the sender/domain pair that is explicitly prohibited from sending spoofed email. An admin manually configures this setting.</li><li>**010**: The message failed DMARC, the DMARC policy action is `p=reject` or `p=quarantine`, and the sending domain is one of your organization's accepted domains (self-to-self or intra-org spoofing).</li><li>**1xx** or **7xx**: The message passed authentication (`compauth=pass`). The last two digits are internal codes used by Microsoft 365. The value **130** indicates that the message passed authentication, and the ARC result was used to override a DMARC failure.</li><li>**2xx**: The message soft-passed implicit authentication (`compauth=softpass`). The last two digits are internal codes used by Microsoft 365.</li><li>**3xx**: The message wasn't checked for composite authentication (`compauth=none`).</li><li>**4xx** or **9xx**: The message bypassed composite authentication (`compauth=none`). The last two digits are internal codes used by Microsoft 365.</li><li>**6xx**: The message failed implicit email authentication, and the sending domain is one of your organization's accepted domains (self-to-self or intra-org spoofing).</li></ul>|
-|`smtp.mailfrom`|The domain of the `5321.MailFrom` address (also known as the MAIL FROM address, P1 sender, or envelope sender). This email address is used for non-delivery reports (also known as NDRs or bounce messages).|
+|`header.from`|The domain of the From address in the email message header (also known as the `5322.From` address or P2 sender). Recipient sees the From address in email clients.|
+|`reason`|The reason composite authentication passed or failed. The value is a three-digit code. For more information, see the [Composite authentication Reason codes](#composite-authentication-reason-codes) section.|
+|`smtp.mailfrom`|The domain of the MAIL FROM address (also known as the `5321.MailFrom` address, P1 sender, or envelope sender). This email address is used for non-delivery reports (also known as NDRs or bounce messages).|
 |`spf`|Describes the results of the SPF check for the message (whether the message source is included in the SPF record for the domain). Possible values include: <ul><li>`pass (IP address)`: The message source is included in the SPF record for the domain. The source is authorized to send or relay email for the domain.</li><li>`fail (IP address)`: Also known as _hard fail_. The message source isn't included in the SPF record for the domain, and the domain instructs the destination email system to reject the message (`-all`).</li><li>`softfail (reason)`: Also known as _soft fail_. The message source isn't included in the SPF record for the domain, and the domain instructs the destination email system to accept and mark the message (`~all`).</li><li>`neutral`: The message source isn't included in the SPF record for the domain, and the domain offers the destination no specific instruction for the message (`?all`).</li><li>`none`: The domain doesn't have an SPF record or the SPF record doesn't evaluate to a result.</li><li>`temperror`: A temporary error occurred. For example, a DNS error. The same check later might succeed.</li><li>`permerror`: A permanent error occurred. For example, the domain has a badly formatted SPF record.</li></ul>|
+
+### Composite authentication Reason codes
+
+The following table describes the three-digit `reason` codes used with `compauth` results.
+
+> [!TIP]
+> For more information about email authentication results and how to correct failures, see [Security Operations guide for email authentication in Microsoft 365](email-auth-sec-ops-guide.md).
+
+|Reason code|Description|
+|---|---|
+|000|The message failed explicit authentication (`compauth=fail`). The message received a DMARC fail and the DMARC policy action is `p=quarantine` or `p=reject`.|
+|001|The message failed implicit authentication (`compauth=fail`). The sending domain didn't have email authentication records published, or if they did, they had a weaker failure policy (SPF `~all` or `?all`, or a DMARC policy of `p=none`).|
+|002|The organization has a policy for the sender/domain pair that's explicitly prohibited from sending spoofed email. An admin manually configures this setting.|
+|010|The message failed DMARC, the DMARC policy action is `p=reject` or `p=quarantine`, and the sending domain is one of your organization's accepted domains (self-to-self or intra-org spoofing).|
+|1xx|The message passed explicit or implicit authentication (`compauth=pass`).|
+|&nbsp;&nbsp;100|SPF passed or DKIM passed and the domains in the MAIL FROM and From addresses are aligned.|
+|&nbsp;&nbsp;101|The message was DKIM signed by the domain used in the From address.|
+|&nbsp;&nbsp;102|The MAIL FROM and From address domains were aligned, and SPF passed.|
+|&nbsp;&nbsp;103|The From address domain aligns with the DNS PTR record (reverse lookup) associated with the source IP address|
+|&nbsp;&nbsp;104|The DNS PTR record (reverse lookup) associated with the source IP address aligns with the From address domain.|
+|&nbsp;&nbsp;108|DKIM failed due to a message body modification attributed to previous legitimate hops. For example, the message body was modified in the organization's on-premises email environment.|
+|&nbsp;&nbsp;109|Although the sender's domain has no DMARC record, the message would pass, anyway.|
+|&nbsp;&nbsp;111|Despite a DMARC temporary error or permanent error, the SPF or DKIM domain aligns with the From address domain.|
+|&nbsp;&nbsp;112|A DNS timeout prevented the DMARC record from being retrieved.|
+|&nbsp;&nbsp;115|The message was sent from a Microsoft 365 organization where the From address domain is configured as an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).|
+|&nbsp;&nbsp;116|The MX record for the From address domain aligns with the PTR record (reverse lookup) of the connecting IP address.|
+|&nbsp;&nbsp;130|The ARC result from a [trusted ARC sealer](email-authentication-arc-configure.md) overrode the DMARC failure.|
+|2xx|The message soft-passed implicit authentication (`compauth=softpass`).|
+|&nbsp;&nbsp;201|The PTR record for the From address domain aligns with the subnet of the PTR record for the connecting IP address.|
+|&nbsp;&nbsp;202|The From address domain aligns with the domain of the PTR record for the connecting IP address.|
+|3xx|The message wasn't checked for composite authentication (`compauth=none`).|
+|4xx|The message bypassed composite authentication (`compauth=none`).|
+|501|DMARC wasn't enforced. The message is a valid non-delivery report (also known as an NDR or bounce message), and contact between the sender and recipient is previously established.|
+|502|DMARC wasn't enforced. The message is a valid NDR for a message sent from this organization.|
+|6xx|The message failed implicit email authentication  (`compauth=fail`).|
+|&nbsp;&nbsp;601|The sending domain is an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) in your organization (self-to-self or intra-org spoofing).|
+|7xx|The message passed implicit authentication (`compauth=pass`).|
+|&nbsp;&nbsp;701-704|DMARC wasn't enforced because this organization has a history of receiving legitimate messages from the sending infrastructure.|
+|9xx|The message bypassed composite authentication (`compauth=none`).|
+|&nbsp;&nbsp;905|DMARC wasn't enforced due to complex routing. For example, internet messages are routed through an on-premises Exchange environment or a non-Microsoft service before reaching Microsoft 365.|

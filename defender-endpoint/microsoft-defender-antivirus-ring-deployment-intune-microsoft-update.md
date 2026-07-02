@@ -2,44 +2,39 @@
 title: Ring deployment using Intune and Microsoft Update (MU)
 description: Microsoft Defender Antivirus is an enterprise endpoint security platform that helps defend against advanced persistent threats. This article provides information about how to use a ring deployment method to update your Microsoft Defender Antivirus clients using Intune and Microsoft Update (MU).
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: chrisda
+author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: high
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 - mde-ngp
-ms.custom: intro-overview
+ms.custom:
+  - intro-overview
+  - sfi-image-nochange
 ms.topic: install-set-up-deploy
 ms.subservice: ngp
-search.appverid: met150
-ms.date: 07/25/2024
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
+
 ---
 
 # Microsoft Defender Antivirus ring deployment using Intune and direct internet access for Microsoft Update
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows
-- Windows Server
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.
 
 > [!TIP]
 > Microsoft Defender for Endpoint is available in two plans, Defender for Endpoint Plan 1 and Plan 2. A new Microsoft Defender Vulnerability Management add-on is now available for Plan 2.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+- Windows Server
 
 ## Setting up the pilot environment 
 
@@ -67,8 +62,8 @@ Recommended settings are as follows:
 
 ### References
 
-- [Antivirus profiles - Devices managed by Microsoft Intune](/mem/intune/protect/endpoint-security-antivirus-policy#antivirus-profiles)
-- [Use Endpoint security Antivirus policy to manage Microsoft Defender update behavior](/mem/intune/fundamentals/whats-new#use-endpoint-security-antivirus-policy-to-manage-microsoft-defender-update-behavior-preview)
+- [Antivirus profiles - Devices managed by Microsoft Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy#antivirus-profiles)
+- [Use Endpoint security Antivirus policy to manage Microsoft Defender update behavior](/intune/intune-service/fundamentals/whats-new#use-endpoint-security-antivirus-policy-to-manage-microsoft-defender-update-behavior-preview)
 - - [Manage the gradual rollout process for Microsoft Defender updates](manage-gradual-rollout.md#manage-the-gradual-rollout-process-for-microsoft-defender-updates)
 
 ## Setting up the Production environment 
@@ -102,7 +97,7 @@ It forces Microsoft Defender Antivirus to look for the **Security Intelligence U
 
 If you update a policy, it's within a few minutes (3-5 minutes) via WNS, as long the WNS URLs' are open.
 
-Reference:   [Intune actions that immediately send a notification to a device](/mem/intune/configuration/device-profile-troubleshoot#intune-actions-that-immediately-send-a-notification-to-a-device)
+Reference:   [Intune actions that immediately send a notification to a device](/intune/intune-service/configuration/device-profile-troubleshoot#intune-actions-that-immediately-send-a-notification-to-a-device)
 
 After the issue is resolved, set the "Signature Update Fallback Order" back to the original setting"
 
@@ -111,3 +106,4 @@ After the issue is resolved, set the "Signature Update Fallback Order" back to t
 ## See also 
 
 [Microsoft Defender Antivirus ring deployment](microsoft-defender-antivirus-ring-deployment.md)
+

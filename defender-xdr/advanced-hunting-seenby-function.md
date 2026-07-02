@@ -1,16 +1,11 @@
 ---
 title: SeenBy() function in advanced hunting for Microsoft Defender XDR
-description: Learn how to use the SeenBy() function to look for which onboarded devices discovered a certain device
-search.appverid: met150
+description: Learn how to use the SeenBy() function to look for which onboarded devices discovered a certain device.
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -21,7 +16,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/28/2025
+ms.date: 08/05/2025
 ---
 
 # SeenBy()
@@ -39,7 +34,7 @@ This function returns a table that has the following column:
 |------------|---------------|-------------|
 | `DeviceId` | `string` | Unique identifier for the device in the service |
 
-Up to 1,000 results are returned. 
+You can enter up to 1,000 devices in this function. 
 
 ## Syntax
 
@@ -65,4 +60,5 @@ DeviceInfo
 - [Learn the query language](advanced-hunting-query-language.md)
 - [Understand the schema](advanced-hunting-schema-tables.md)
 - [Get more query examples](advanced-hunting-shared-queries.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

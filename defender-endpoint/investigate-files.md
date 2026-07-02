@@ -2,11 +2,9 @@
 title: Investigate Microsoft Defender for Endpoint files
 description: Use the investigation options to get details on files associated with alerts, behaviors, or events.
 ms.service: defender-endpoint
-ms.author: diannegali
-author: diannegali
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -14,20 +12,13 @@ ms.collection:
 ms.topic: concept-article
 ms.date: 07/10/2023
 ms.subservice: edr
-search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Investigate a file
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Investigate the details of a file associated with a specific alert, behavior, or event to help determine if the file exhibits malicious activities, identify the attack motivation, and understand the potential scope of the breach.
 
@@ -118,11 +109,11 @@ The file capabilities view lists a file's activities as mapped to the MITRE ATT&
 ## Related topics
 
 - [View and organize the Microsoft Defender for Endpoint queue](alerts-queue.md)
-- [Manage Microsoft Defender for Endpoint alerts](manage-alerts.md)
+- [Manage Microsoft Defender for Endpoint alerts](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#manage-alerts)
 - [Investigate Microsoft Defender for Endpoint alerts](investigate-alerts.md)
 - [Investigate devices in the Microsoft Defender for Endpoint Devices list](investigate-machines.md)
 - [Investigate an IP address associated with a Microsoft Defender for Endpoint alert](investigate-ip.md)
 - [Investigate a domain associated with a Microsoft Defender for Endpoint alert](investigate-domain.md)
 - [Investigate a user account in Microsoft Defender for Endpoint](investigate-user.md)
 - [Take response actions on a file](respond-file-alerts.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

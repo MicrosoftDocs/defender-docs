@@ -1,26 +1,21 @@
 ---
 title: Configure the default connection filter policy
-f1.keywords:
-  - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-audience: ITPro
+ms.author: chrisda
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.assetid: 6ae78c12-7bbe-44fa-ab13-c3768387d0e3
 ms.collection:
   - m365-security
   - tier2
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
 description: Admins can learn how to configure connection filtering in Microsoft 365 to allow or block emails from email servers.
 ms.service: defender-office-365
-ms.date: 07/03/2025
+ms.date: 10/30/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -60,7 +55,9 @@ This article describes how to configure the default connection filter policy in 
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
+
+  [!INCLUDE [rbac-save-failure-tip](../includes/rbac-save-failure-tip.md)]
 
 - To find the source IP addresses of the email servers (senders) that you want to allow or block, you can check the connecting IP (**CIP**) header field in the message header. To view a message header in various email clients, see [View internet message headers in Outlook](https://support.microsoft.com/office/cd039382-dc6e-4264-ac74-c048563d212c).
 
@@ -70,7 +67,7 @@ This article describes how to configure the default connection filter policy in 
 
 ## Use the Microsoft Defender portal to modify the default connection filter policy
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
 
 2. On the **Anti-spam policies** page, select **Connection filter policy (Default)** from the list by clicking anywhere in the row other than the check box next to the name.
 
@@ -87,7 +84,7 @@ This article describes how to configure the default connection filter policy in 
        - IP range: For example, 192.168.0.1-192.168.0.254.
        - CIDR IP: For example, 192.168.0.1/25. Valid subnet mask values are /24 through /32. To skip spam filtering for /1 to /23, see the [Skip spam filtering for a CIDR IP outside of the available range](#skip-spam-filtering-for-a-cidr-ip-outside-of-the-available-range) section later in this article.
 
-       Repeat this step as many times as necessary. To remove an existing entry, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the entry.
+       Repeat this step as many times as necessary. To remove an existing entry, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the entry.
 
    - **Always block messages from the following IP addresses or address range**: This setting is the IP Block List. Enter a single IP, IP range, or CIDR IP in the box as previously described in the **Always allow messages from the following IP addresses or address range** setting.
 
@@ -97,9 +94,22 @@ This article describes how to configure the default connection filter policy in 
 
 4. Back on the policy details flyout, select **Close**.
 
+> [!TIP]
+> If the IP address ranges you added don't immediately appear in the connection filter policy, do the following steps:
+>
+> - Try refreshing the portal or verify the changes in Exchange Online PowerShell:
+>
+>   ```powershell
+>   Get-HostedConnectionFilterPolicy -Identity Default
+>   ```
+>
+> - Verify you have the required Microsoft Entra ID permissions as described in the [What do you need to know before you begin?](#what-do-you-need-to-know-before-you-begin) section.
+>
+> If the issue persists, it might indicate a synchronization delay or a service issue.
+
 ## Use the Microsoft Defender portal to view the default connection filter policy
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
+In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
 
 On the **Anti-spam policies** page, the following properties are displayed in the list of policies:
 
@@ -108,9 +118,9 @@ On the **Anti-spam policies** page, the following properties are displayed in th
 - **Priority**: The value is **Lowest** for the default connection filter policy.
 - **Type**: The value is blank for the default connection filter policy.
 
-To change the list of policies from normal to compact spacing, select :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
+To change the list of policies from normal to compact spacing, select :::image type="icon" source="media/defender-portal-icon-standard.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/defender-portal-icon-compact.png" border="false"::: **Compact list**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific policies.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific policies.
 
 Select the default connection filter policy by clicking anywhere in the row other than the check box next to the name to open the details flyout for the policy.
 
@@ -142,7 +152,7 @@ This example adds and removes the specified IP addresses and address ranges from
 Set-HostedConnectionFilterPolicy -Identity Default -IPAllowList @{Add="192.168.2.10","192.169.3.0/24","192.168.4.1-192.168.4.5";Remove="192.168.1.10"}
 ```
 
-For detailed syntax and parameter information, see [Set-HostedConnectionFilterPolicy](/powershell/module/exchange/set-hostedconnectionfilterpolicy).
+For detailed syntax and parameter information, see [Set-HostedConnectionFilterPolicy](/powershell/module/exchangepowershell/set-hostedconnectionfilterpolicy).
 
 ## How do you know these procedures worked?
 
@@ -192,6 +202,9 @@ For example, the source email server 192.168.1.25 sends email from the domains c
    - Rule exception: **The sender** \> **domain is** \> fabrikam.com (only the domain or domains that you want to skip spam filtering).
 
 ### Scenarios where messages from sources in the IP Allow List are still filtered
+
+> [!NOTE]
+> These scenarios apply to all environments: standalone, hybrid, multi-geo, and cross-forest. Filtering behavior is based on security checks (for example, malware detection, phishing protection, or mail flow rules, not on the deployment model.
 
 Messages from an email server in your IP Allow List are still subject to spam filtering in the following scenarios:
 

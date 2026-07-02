@@ -1,11 +1,7 @@
 ---
 title: Preset security policies
-f1.keywords:
-  - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-audience: ITPro
+ms.author: chrisda
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.assetid:
@@ -13,12 +9,12 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
-description: Admins can learn how to apply Standard and Strict policy settings across the default email protections for cloud mailboxes and Microsoft Defender for Office 365
+  - sfi-ga-nochange
+description: Admins can learn how to apply Standard and Strict policy settings across the built-in security features for all cloud mailboxes and Microsoft Defender for Office 365
 ms.service: defender-office-365
-search.appverid: met150
-ms.date: 07/07/2025
+ms.date: 05/22/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -29,7 +25,7 @@ appliesto:
 
 _Preset security policies_ allow you to apply many email protection features to users based on our recommended settings. Unlike custom threat policies that are infinitely configurable, virtually all of the settings in preset security policies aren't configurable, and are based on our observations in the datacenters. The threat policy settings in preset security policies provide a balance between keeping harmful content away from users while avoiding unnecessary disruptions.
 
-Depending on your organization, preset security policies provide many of the protection features that are available in the [default email protections for cloud mailboxes](eop-about.md) and [Microsoft Defender for Office 365](mdo-about.md).
+Depending on your organization, preset security policies provide many of the protection features that are available in [the built-in security features for all cloud mailboxes](eop-about.md) and [Microsoft Defender for Office 365](mdo-about.md).
 
 The following preset security policies are available:
 
@@ -58,31 +54,31 @@ The rest of this article how to configure preset security policies.
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, or **Global Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Use the Microsoft Defender portal to assign Standard and Strict preset security policies to users
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Preset Security Policies** in the **Templated policies** section. Or, to go directly to the **Preset security policies** page, use <https://security.microsoft.com/presetSecurityPolicies>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Preset Security Policies** in the **Templated policies** section. Or, to go directly to the **Preset security policies** page, use <https://security.microsoft.com/presetSecurityPolicies>.
 
 2. During your first visit to the **Preset security policies** page, it's likely that **Standard protection** and **Strict protection** are turned off :::image type="icon" source="media/scc-toggle-off.png" border="false":::.
 
    Slide the toggle of the one you want to configure to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**, and then select **Manage protection settings** to start the configuration wizard.
 
-3. On the **Apply Exchange Online Protection** page, identify the internal recipients who receive the [default email protections for cloud mailboxes](#policies-in-preset-security-policies) (recipient conditions):
+3. On the **Apply Exchange Online Protection** page, identify the internal recipients who receive [the built-in security features for all cloud mailboxes](#policies-in-preset-security-policies) (recipient conditions):
 
    - **All recipients**
 
    - **Specific recipients**: Configure one of the following recipient conditions that appear:
-     - **Users**: The specified mailboxes, mail users, or mail contacts.
+     - **Users**: The specified mailboxes, or mail users.
      - **Groups**:
        - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
-       - The specified Microsoft 365 Groups.
+       - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
      - **Domains**: All recipients in the organization with a primary email address in the specified [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 
      > [!TIP]
      > Subdomains are automatically included unless you specifically exclude them. For example, a policy that includes contoso.com also includes marketing.contoso.com unless you exclude marketing.contoso.com.
 
-   Click in the appropriate box, start typing a value, and select the value that you want from the results. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
+   Click in the appropriate box, start typing a value, and select the value that you want from the results. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the value.
 
    For users or groups, you can use most identifiers (name, display name, alias, email address, account name, etc.), but the corresponding display name is shown in the results. For users or groups, enter an asterisk (\*) by itself to see all available values.
 
@@ -142,9 +138,9 @@ The rest of this article how to configure preset security policies.
 
    Repeat these steps as many times as necessary.
 
-   The users you added are listed on the page by **Display name** and **Sender email address**. To remove a user, select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: next to the entry.
+   The users you added are listed on the page by **Display name** and **Sender email address**. To remove a user, select :::image type="icon" source="media/defender-portal-icon-remove.png" border="false"::: next to the entry.
 
-   Use the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Search** box to find entries on the page.
+   Use the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Search** box to find entries on the page.
 
    When you're finished on the **Apply Defender for Office 365 protection** page, select **Next**.
 
@@ -155,13 +151,13 @@ The rest of this article how to configure preset security policies.
    >
    > You can specify a maximum of 50 custom domains for domain impersonation protection in the Standard or Strict preset security policy.
 
-   Click in the **Add domains** box, enter a domain value, and then press the ENTER key or select the value displayed below the box. To remove a domain from the box and start over, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the domain. When you're ready to add the domain, select **Add**. Repeat this step as many times as necessary.
+   Click in the **Add domains** box, enter a domain value, and then press the ENTER key or select the value displayed below the box. To remove a domain from the box and start over, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the domain. When you're ready to add the domain, select **Add**. Repeat this step as many times as necessary.
 
-   The domains you added are listed on the page. To remove the domain, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
+   The domains you added are listed on the page. To remove the domain, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the value.
 
-   The domains you added are listed on the page. To remove a domain, select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: next to the entry.
+   The domains you added are listed on the page. To remove a domain, select :::image type="icon" source="media/defender-portal-icon-remove.png" border="false"::: next to the entry.
 
-   To remove an existing entry from the list, select :::image type="icon" source="media/m365-cc-sc-remove-icon.png" border="false"::: next to the entry.
+   To remove an existing entry from the list, select :::image type="icon" source="media/defender-portal-icon-remove.png" border="false"::: next to the entry.
 
    When you're finished on the **Add domains to flag when impersonated by attackers**, select **Next**.
 
@@ -170,9 +166,9 @@ The rest of this article how to configure preset security policies.
    > [!NOTE]
    > Trusted domain entries don't include subdomains of the specified domain. You need to add an entry for each subdomain.
 
-   Enter the email address or domain in the box, and then press the ENTER key or select the value displayed below the box. To remove a value from the box and start over, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value. When you're ready to add the user or domain, select **Add**. Repeat this step as many times as necessary.
+   Enter the email address or domain in the box, and then press the ENTER key or select the value displayed below the box. To remove a value from the box and start over, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the value. When you're ready to add the user or domain, select **Add**. Repeat this step as many times as necessary.
 
-   The users and domains you added are listed on the page by **Name** and **Type**. To remove an entry, select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: next to the entry.
+   The users and domains you added are listed on the page by **Name** and **Type**. To remove an entry, select :::image type="icon" source="media/defender-portal-icon-remove.png" border="false"::: next to the entry.
 
    When you're finished on the **Add trusted email addresses and domains to not flag as impersonation** page, select **Next**.
 
@@ -195,7 +191,7 @@ To disable the **Standard protection** or **Strict protection** preset security 
 >
 > <u>The **Built-in protection** preset security policy doesn't affect recipients who are defined in the **Standard** or **Strict** preset security policies, or in custom Safe Links or Safe Attachments policies</u>. Therefore, we typically don't recommend exceptions to the **Built-in protection** preset security policy, unless you want to exclude users who aren't eligible for Safe Links and Safe Attachments protections (users who lack Defender for Office 365 licenses).
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Preset Security Policies** in the **Templated policies** section. Or, to go directly to the **Preset security policies** page, use <https://security.microsoft.com/presetSecurityPolicies>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Preset Security Policies** in the **Templated policies** section. Or, to go directly to the **Preset security policies** page, use <https://security.microsoft.com/presetSecurityPolicies>.
 
 2. On the **Preset security policies** page, select **Add exclusions (not recommended)** in the **Built-in protection** section.
 
@@ -203,10 +199,10 @@ To disable the **Standard protection** or **Strict protection** preset security 
    - **Users**
    - **Groups**:
        - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
-       - The specified Microsoft 365 Groups.
+       - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
    - **Domains**
 
-   Click in the appropriate box, start typing a value, and then select the value displayed below the box. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
+   Click in the appropriate box, start typing a value, and then select the value displayed below the box. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the value.
 
    For users or groups, you can use most identifiers (name, display name, alias, email address, account name, etc.), but the corresponding display name is shown in the results. For users, enter an asterisk (\*) by itself to see all available values.
 
@@ -230,34 +226,34 @@ Or, for [bulk mail](anti-spam-bulk-complaint-level-bcl-about.md), verify that th
 In PowerShell, preset security policies consist of the following elements:
 
 - **Individual threat policies**: For example, anti-malware policies, anti-spam policies, anti-phishing policies, Safe Links policies, and Safe Attachments policies. These policies are visible using the standard policy management cmdlets in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
-  - <u>Default email protections for cloud mailboxes</u>:
-    - **[Get-AntiPhishPolicy](/powershell/module/exchange/get-antiphishpolicy)**
-    - **[Get-HostedContentFilterPolicy](/powershell/module/exchange/get-hostedcontentfilterpolicy)** (anti-spam policies)
-    - **[Get-MalwareFilterPolicy](/powershell/module/exchange/get-malwarefilterpolicy)**
+  - <u>The built-in security features for all cloud mailboxes</u>:
+    - **[Get-AntiPhishPolicy](/powershell/module/exchangepowershell/get-antiphishpolicy)**
+    - **[Get-HostedContentFilterPolicy](/powershell/module/exchangepowershell/get-hostedcontentfilterpolicy)** (anti-spam policies)
+    - **[Get-MalwareFilterPolicy](/powershell/module/exchangepowershell/get-malwarefilterpolicy)**
   - <u>Defender for Office 365 protection</u>:
-    - **[Get-SafeAttachmentPolicy](/powershell/module/exchange/get-safeattachmentpolicy)**
-    - **[Get-SafeLinksPolicy](/powershell/module/exchange/get-safelinkspolicy)**
+    - **[Get-SafeAttachmentPolicy](/powershell/module/exchangepowershell/get-safeattachmentpolicy)**
+    - **[Get-SafeLinksPolicy](/powershell/module/exchangepowershell/get-safelinkspolicy)**
 
   > [!WARNING]
   > Don't attempt to create, modify, or remove the individual threat policies associated with preset security policies. The only supported method for creating the individual threat policies for Standard or Strict preset security policies is to turn on the preset security policy in the Microsoft Defender portal for the first time.
 
 - **Rules**: Separate rules are used for the Standard preset security policy, the Strict preset security policy, and the Built-in protection preset security policy. The rules define the recipient conditions and exceptions for the policies (who the policies apply to). You manage these rules using the following cmdlets in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
-  - <u>Rules for default email protections for cloud mailboxes</u>:
-    - **[Disable-EOPProtectionPolicyRule](/powershell/module/exchange/disable-eopprotectionpolicyrule)**
-    - **[Enable-EOPProtectionPolicyRule](/powershell/module/exchange/enable-eopprotectionpolicyrule)**
-    - **[Get-EOPProtectionPolicyRule](/powershell/module/exchange/get-eopprotectionpolicyrule)**
-    - **[New-EOPProtectionPolicyRule](/powershell/module/exchange/new-eopprotectionpolicyrule)**
-    - **[Set-EOPProtectionPolicyRule](/powershell/module/exchange/set-eopprotectionpolicyrule)**
+  - <u>Rules for the built-in security features for all cloud mailboxes</u>:
+    - **[Disable-EOPProtectionPolicyRule](/powershell/module/exchangepowershell/disable-eopprotectionpolicyrule)**
+    - **[Enable-EOPProtectionPolicyRule](/powershell/module/exchangepowershell/enable-eopprotectionpolicyrule)**
+    - **[Get-EOPProtectionPolicyRule](/powershell/module/exchangepowershell/get-eopprotectionpolicyrule)**
+    - **[New-EOPProtectionPolicyRule](/powershell/module/exchangepowershell/new-eopprotectionpolicyrule)**
+    - **[Set-EOPProtectionPolicyRule](/powershell/module/exchangepowershell/set-eopprotectionpolicyrule)**
   - <u>Rules for Defender for Office 365 protections</u>:
-    - **[Disable-ATPProtectionPolicyRule](/powershell/module/exchange/disable-atpprotectionpolicyrule)**
-    - **[Enable-ATPProtectionPolicyRule](/powershell/module/exchange/enable-atpprotectionpolicyrule)**
-    - **[Get-ATPProtectionPolicyRule](/powershell/module/exchange/get-atpprotectionpolicyrule)**
-    - **[New-ATPProtectionPolicyRule](/powershell/module/exchange/new-atpprotectionpolicyrule)**
-    - **[Set-ATPProtectionPolicyRule](/powershell/module/exchange/set-atpprotectionpolicyrule)**
+    - **[Disable-ATPProtectionPolicyRule](/powershell/module/exchangepowershell/disable-atpprotectionpolicyrule)**
+    - **[Enable-ATPProtectionPolicyRule](/powershell/module/exchangepowershell/enable-atpprotectionpolicyrule)**
+    - **[Get-ATPProtectionPolicyRule](/powershell/module/exchangepowershell/get-atpprotectionpolicyrule)**
+    - **[New-ATPProtectionPolicyRule](/powershell/module/exchangepowershell/new-atpprotectionpolicyrule)**
+    - **[Set-ATPProtectionPolicyRule](/powershell/module/exchangepowershell/set-atpprotectionpolicyrule)**
   - <u>The rule for the Build-in protection preset security policy</u>:
-    - **[Get-ATPBuiltInProtectionRule](/powershell/module/exchange/get-atpbuiltinprotectionrule)**
-    - **[New-ATPBuiltInProtectionRule](/powershell/module/exchange/new-atpbuiltinprotectionrule)**
-    - **[Set-ATPBuiltInProtectionRule](/powershell/module/exchange/set-atpbuiltinprotectionrule)**
+    - **[Get-ATPBuiltInProtectionRule](/powershell/module/exchangepowershell/get-atpbuiltinprotectionrule)**
+    - **[New-ATPBuiltInProtectionRule](/powershell/module/exchangepowershell/new-atpbuiltinprotectionrule)**
+    - **[Set-ATPBuiltInProtectionRule](/powershell/module/exchangepowershell/set-atpbuiltinprotectionrule)**
 
   For the Standard and Strict preset security policies, these rules are created the first time you turn on the preset security policy in the Microsoft Defender portal. If you never turned on the preset security policy, the associated rules don't exist. Turning off the preset security policy doesn't delete the associated rules.
 
@@ -281,7 +277,7 @@ Remember, if you never turned on the Standard preset security policy or the Stri
 
 - **Standard preset security policy**: The associated threat policies are named `Standard Preset Security Policy<13-digit number>`. For example, `Standard Preset Security Policy1622650008019`. The RecommendPolicyType property value for the policies is Standard.
 
-  - To view the individual threat policies for the Standard preset security policy in organizations with **the default email protections for cloud mailboxes only**, run the following command:
+  - To view the individual threat policies for the Standard preset security policy in organizations with **the built-in security features for all cloud mailboxes only**, run the following command:
 
     ```powershell
     Write-Output -InputObject ("`r`n"*3),"Standard anti-malware policy",("-"*79);Get-MalwareFilterPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Standard"; Write-Output -InputObject ("`r`n"*3),"Standard anti-spam policy",("-"*79);Get-HostedContentFilterPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Standard"; Write-Output -InputObject ("`r`n"*3),"Standard anti-phishing policy",("-"*79);Get-AntiPhishPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Standard"
@@ -295,7 +291,7 @@ Remember, if you never turned on the Standard preset security policy or the Stri
 
 - **Strict preset security policy**: The associated threat policies are named `Strict Preset Security Policy<13-digit number>`. For example, `Strict Preset Security Policy1642034872546`. The RecommendPolicyType property value for the policies is Strict.
 
-  - To view the individual threat policies for the Strict preset security policy in organizations with **the default email protections for cloud mailboxes only**, run the following command:
+  - To view the individual threat policies for the Strict preset security policy in organizations with **the built-in security features for all cloud mailboxes only**, run the following command:
 
     ```powershell
     Write-Output -InputObject ("`r`n"*3),"Strict anti-malware policy",("-"*79);Get-MalwareFilterPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Strict"; Write-Output -InputObject ("`r`n"*3),"Strict anti-spam policy",("-"*79);Get-HostedContentFilterPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Strict"; Write-Output -InputObject ("`r`n"*3),"Strict anti-phishing policy",("-"*79);Get-AntiPhishPolicy | Where-Object -Property RecommendedPolicyType -eq -Value "Strict"
@@ -323,7 +319,7 @@ Remember, if you never turned on the Standard preset security policy or the Stri
 
   Use the following commands to view the rules that are associated with the Standard preset security policy:
 
-  - To view the rule associated with **the default email protections for cloud mailboxes** in the Standard preset security policy, run the following command:
+  - To view the rule associated with **the built-in security features for all cloud mailboxes** in the Standard preset security policy, run the following command:
 
     ```powershell
     Get-EOPProtectionPolicyRule -Identity "Standard Preset Security Policy"
@@ -345,7 +341,7 @@ Remember, if you never turned on the Standard preset security policy or the Stri
 
   Use the following commands to view the rules that are associated with the Strict preset security policy:
 
-  - To view the rule associated with **the default email protections for cloud mailboxes** in the Strict preset security policy, run the following command:
+  - To view the rule associated with **the built-in security features for all cloud mailboxes** in the Strict preset security policy, run the following command:
 
     ```powershell
     Get-EOPProtectionPolicyRule -Identity "Strict Preset Security Policy"
@@ -367,11 +363,11 @@ Remember, if you never turned on the Standard preset security policy or the Stri
 
 To turn on or turn off the Standard or Strict preset security policies in PowerShell, enable or disable the rules that are associated with policy. The State property value of the rule shows whether the rule is Enabled or Disabled.
 
-If your organization has the default email protections for cloud mailboxes only, you disable or enable the rule for the default email protections.
+If your organization has [the built-in security features for all cloud mailboxes](eop-about.md) only, you disable or enable the rule for the built-in security features for all cloud mailboxes.
 
-If your organization has Defender for Office 365, you enable or disable the rule for the default email protections for cloud mailboxes **and** the rule for Defender for Office 365 protections (enable or disable both rules).
+If your organization has Defender for Office 365, you enable or disable the rule for the built-in security features for all cloud mailboxes **and** the rule for Defender for Office 365 protections (enable or disable both rules).
 
-- **Organizations with the default email protections for cloud mailboxes only**:
+- **Organizations with the built-in security features for all cloud mailboxes only**:
 
   - Run the following command to determine whether the rules for the Standard and Strict preset security policies are currently enabled or disabled:
 
@@ -453,7 +449,7 @@ You can use a recipient condition or exception only once, but the condition or e
 
 For the Built-in protection preset security policy, you can specify only recipient exceptions. If all exception parameter values are empty (`$null`), there are no exceptions to the policy.
 
-For the Standard and Strict preset security policies, you can specify recipient conditions and exceptions for the default email protections for cloud mailboxes and Defender for Office 365 protections. If all of conditions and exception parameter values are empty (`$null`), there are no recipient conditions or exceptions to the Standard or Strict preset security policies.
+For the Standard and Strict preset security policies, you can specify recipient conditions and exceptions for [the built-in security features for all cloud mailboxes](eop-about.md) and protections for Defender for Office 365. If all of conditions and exception parameter values are empty (`$null`), there are no recipient conditions or exceptions to the Standard or Strict preset security policies.
 
 - **Built-in protection preset security policy**:
 
@@ -469,7 +465,7 @@ For the Standard and Strict preset security policies, you can specify recipient 
   Set-ATPBuiltInProtectionRule -Identity "ATP Built-In Protection Rule" -ExceptIfRecipientDomainIs $null -ExceptIfSentTo $null -ExceptIfSentToMemberOf $null
   ```
 
-  For detailed syntax and parameter information, see [Set-ATPBuiltInProtectionRule](/powershell/module/exchange/set-atpbuiltinprotectionrule).
+  For detailed syntax and parameter information, see [Set-ATPBuiltInProtectionRule](/powershell/module/exchangepowershell/set-atpbuiltinprotectionrule).
 
 - **Standard or Strict preset security policies**
 
@@ -479,7 +475,7 @@ For the Standard and Strict preset security policies, you can specify recipient 
   <Set-EOPProtectionPolicyRule | SetAtpProtectionPolicyRule> -Identity "<Standard Preset Security Policy | Strict Preset Security Policy>" -SentTo <"user1","user2",... | $null> -ExceptIfSentTo <"user1","user2",... | $null> -SentToMemberOf <"group1","group2",... | $null> -ExceptIfSentToMemberOf <"group1","group2",... | $null> -RecipientDomainIs <"domain1","domain2",... | $null> -ExceptIfRecipientDomainIs <"domain1","domain2",... | $null>
   ```
 
-  This example configures members of the Executives distribution group as exceptions from the default email protections for cloud mailboxes in the Standard preset security policy.
+  This example configures members of the Executives distribution group as exceptions from the built-in security features for all cloud mailboxes in the Standard preset security policy.
 
   ```powershell
   Set-EOPProtectionPolicyRule -Identity "Standard Preset Security Policy" -ExceptIfSentToMemberOf Executives
@@ -491,7 +487,7 @@ For the Standard and Strict preset security policies, you can specify recipient 
   Set-ATPProtectionPolicyRule -Identity "Strict Preset Security Policy" -ExceptIfSentTo "SecOps1","SecOps2"
   ```
 
-  For detailed syntax and parameter information, see [Set-EOPProtectionPolicyRule](/powershell/module/exchange/set-eopprotectionpolicyrule) and [Set-ATPProtectionPolicyRule](/powershell/module/exchange/Set-atpprotectionpolicyrule).
+  For detailed syntax and parameter information, see [Set-EOPProtectionPolicyRule](/powershell/module/exchangepowershell/set-eopprotectionpolicyrule) and [Set-ATPProtectionPolicyRule](/powershell/module/exchangepowershell/Set-atpprotectionpolicyrule).
 
 ## Appendix
 
@@ -522,9 +518,9 @@ Until you turn on the profiles and assign users to them, the Standard and Strict
 
 ### Policies in preset security policies
 
-Preset security policies use special versions of the individual threat policies for default email protections for cloud mailboxes and for Microsoft Defender for Office 365. These policies are created _after_ you assign the **Standard protection** or **Strict protection** preset security policies to users.
+Preset security policies use special versions of the individual threat policies for the built-in security features for all cloud mailboxes and for Microsoft Defender for Office 365. These policies are created _after_ you assign the **Standard protection** or **Strict protection** preset security policies to users.
 
-- **Threat policies in the default email protections for cloud mailboxes**: These policies are in all organizations with cloud mailboxes:
+- **Threat policies in the built-in security features for all cloud mailboxes**: These policies are in all organizations with cloud mailboxes:
 
   - [Anti-spam policies](anti-spam-policies-configure.md) named **Standard Preset Security Policy** and **Strict Preset Security Policy**.
   - [Anti-malware policies](anti-malware-policies-configure.md) named **Standard Preset Security Policy** and **Strict Preset Security Policy**.
@@ -541,7 +537,7 @@ Preset security policies use special versions of the individual threat policies 
   - [Safe Links policies](safe-links-policies-configure.md) named **Standard Preset Security Policy**, **Strict Preset Security Policy**, and **Built-in Protection Policy**.
   - [Safe Attachments policies](safe-attachments-policies-configure.md) named **Standard Preset Security Policy**, **Strict Preset Security Policy**, and **Built-in Protection Policy**.
 
-As previously described, you can apply default email protections to different users than Defender for Office 365 protections, or you can all protections to the same recipients.
+As previously described, you can apply the built-in security features for all cloud mailboxes to different users than Defender for Office 365 protections, or you can apply all protections to the same recipients.
 
 ### Policy settings in preset security policies
 

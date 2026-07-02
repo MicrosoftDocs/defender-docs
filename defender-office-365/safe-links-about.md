@@ -1,15 +1,11 @@
 ---
 title: Complete Safe Links overview for Microsoft Defender for Office 365
-f1.keywords:
-  - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-audience: Admin
+ms.author: chrisda
 ms.topic: overview
 f1_keywords:
   - '197503'
-ms.date: 06/03/2025
+ms.date: 05/22/2026
 ms.localizationpriority: medium
 ms.collection:
   - Strat_O365_IP
@@ -17,13 +13,6 @@ ms.collection:
   - tier1
 ms.custom:
   - seo-marvel-apr2020
-search.appverid:
-  - MET150
-  - MOE150
-  - ZVO160
-  - ZXL160
-  - ZPP160
-  - ZWD160
 ms.assetid: dd6a1fef-ec4a-4cf4-a25a-bb591c5811e3
 description: Learn about Safe Links protection in Defender for Office 365 to protect an organization from phishing and other attacks that use malicious URLs. Discover Teams Safe Links, and see graphics of Safe Links messages.
 ms.service: defender-office-365
@@ -47,6 +36,8 @@ Watch this short video on how to protect against malicious links with Safe Links
 
 > [!NOTE]
 > Although there's no default Safe Links policy, the **Built-in protection** preset security policy provides Safe Links protection in e-mail messages, Microsoft Teams, and files in supported Office apps to all recipients for customers that have at least one Defender for Office 365 license (users who aren't defined in the Standard or Strict preset security policies or in custom Safe Links policies). For more information, see [Preset security policies](preset-security-policies.md). You can also create Safe Links policies that apply to specific users, group, or domains. For instructions, see [Set up Safe Links policies in Microsoft Defender for Office 365](safe-links-policies-configure.md).
+>
+> If a system failure occurs when reading the Safe Links policy configuration from certain apps (for example, classic Outlook), the user doesn't receive Safe Links protection, and the user is redirected to the clicked link.
 
 Safe Links protection by Safe Links policies is available in the following locations:
 
@@ -57,12 +48,12 @@ Safe Links protection by Safe Links policies is available in the following locat
   > [!NOTE]
   >
   > - Safe Links doesn't work on mail-enabled public folders.
-  > - Safe Links doesn't provide protection for URLs in Rich Text Format (RTF) email messages.
-  > - Safe Links supports only HTTP(S) and FTP formats.
+  > - Safe Links supports only HTTP, HTTPS and FTP link formats.
+  > - Safe Links doesn't provide protection for URLs in rich text format (RTF) email messages (also known as Transport Neutral Encapsulation Format or TNEF).
   > - Safe Links ignores S/MIME signed messages.
   > - Safe Links no longer wraps URLs pointing to SharePoint or OneDrive sites, but the URLs are still processed by the Safe Links service. This change doesn't degrade protection. Instead, it improves the performance of loading SharePoint or OneDrive URLs.
-  > - Using another service to wrap links before Defender for Office 365 might prevent Safe Links from process links, including wrapping, detonating, or otherwise validating the "maliciousness" of the link.
- 
+  > - Using another service to wrap links before Defender for Office 365 might prevent Safe Links from processing links. This processing includes wrapping, detonating, or otherwise validating the "maliciousness" of the link.
+
 - **Microsoft Teams**: Safe Links protection for links in Teams conversations, group chats, or from channels.
 
   For more information about Safe Links protection in Teams, see the [Safe Links settings for Microsoft Teams](#safe-links-settings-for-microsoft-teams) section later in this article.
@@ -79,16 +70,16 @@ The following table describes scenarios for Safe Links in Microsoft 365 and Offi
 |Chris's Microsoft 365 E5 organization has no Safe Links policies configured. Chris receives an email from an external sender that contains a URL to a malicious website that he ultimately clicks.|Chris is protected by Safe Links. <br><br> The **Built-in protection** preset security policy provides Safe Links protection to all recipients (users who aren't defined in the Standard or Strict preset security policies or in custom Safe Links policies). For more information, see [Preset security policies](preset-security-policies.md).|
 |In Pat's organization, admins have created a Safe Links policy that applies Pat, but Safe Links protection for Office apps is turned off. Pat opens a Word document and clicks a URL in the file.|Pat isn't protected by Safe Links. <br><br> Although Pat is included in an active Safe Links policy, Safe Links protection for Office apps is turned off in that policy, so the protection can't be applied.|
 |Jamie and Julia both work for contoso.com. A long time ago, admins configured Safe Links policies that apply to both of Jamie and Julia. Jamie sends an email to Julia, not knowing that the email contains a malicious URL.|Julia is protected by Safe Links **if** the Safe Links policy that applies to her is configured to apply to messages between internal recipients. For more information, see the [Safe Links settings for email messages](#safe-links-settings-for-email-messages) section later in this article.|
-|Jim's IT department configured SafeLinks to not rewrite URLs, and to check via API only. Jim receives an email about an urgent crypto opportunity within BroMail - an 'aternative' email client that doesn't use 'woke' APIs, and clicks the link. The link was legitimate on delivery, but was later weaponized.|Jim is phished. BroMail doesn't support the SafeLinks API. Because the link wasn't malicious on delivery, SafeLinks didn't detect it.|
+|Jim's IT department configured SafeLinks to not rewrite URLs, and to check via API only. Jim clicks a link in an alternative email client that doesn't support the SafeLinks API. The link was legitimate on delivery, but was later weaponized.|Jim is phished. Because the link wasn't malicious on delivery, SafeLinks didn't detect it.|
 
 ## Recipient filters in Safe Links policies
 
 Recipient filters use conditions and exceptions to identify the internal recipients that the policy applies to. At least one condition is required. You can use the following recipient filters for conditions and exceptions:
 
-- **Users**: One or more mailboxes, mail users, or mail contacts in the organization.
+- **Users**: One or more mailboxes, or mail users in the organization.
 - **Groups**:
   - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
-  - The specified Microsoft 365 Groups.
+  - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
 - **Domains**: One or more of the configured [accepted domains](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) in Microsoft 365. The recipient's primary email address is in the specified domain.
 
 You can use a condition or exception only once, but the condition or exception can contain multiple values:
@@ -135,7 +126,7 @@ The settings in Safe Links policies that apply to email messages are described i
   - **Apply real-time URL scanning for suspicious links and links that point to files**: Turns on real-time scanning of links, including links in email messages that point to downloadable content. The recommended value is selected (on).
 
     - **Wait for URL scanning to complete before delivering the message**:
-      - Selected (on): Messages that contain URLs are held until scanning is finished. Messages are delivered only after the URLs are confirmed to be safe. This is the recommended value.
+      - Selected (on): Messages that contain URLs are held until scanning is finished. Messages are delivered only after the URLs are confirmed to be safe. This value is the recommended value.
       - Not selected (off): If URL scanning can't complete, deliver the message anyway.
 
   - **Do not rewrite URLs, do checks via SafeLinks API only**: If this setting is selected (on), no URL wrapping takes place but the URLs are scanned prior to message delivery. In supported versions of Outlook (Windows, Mac, and Outlook on the web), Safe Links is called via APIs at the time of URL click for an extra scan.
@@ -165,7 +156,7 @@ You turn on or turn off Safe Links protection for Microsoft Teams in Safe Links 
 > [!NOTE]
 > When you turn on or turn off Safe Links protection for Teams, it might take up to 24 hours for the change to take effect.
 >
-> Safe Links protection for Teams is supported in Teams desktop and web instances.
+> Safe Links protection for Teams is supported in Teams desktop, web, and mobile (android and iOS) apps.
 >
 > Websites opened from Teams might require re-authentication when `SameSite=Strict` cookies are required for authentication by the target page. This behavior occurs because the intermediary page that does Safe Links validation redirects to the target page, which is treated as a cross-site request. The same issue applies to links opened from Teams for Web with Safe Links disabled.
 
@@ -240,6 +231,9 @@ These settings apply to Safe Links in email, Teams, and Office apps:
 - **Track user clicks**: Turn on or turn off storing Safe Links click data for URLs clicked. We recommend that you leave this setting selected (on).
 
   In Safe Links for Office apps, this setting applies to the desktop versions Word, Excel, PowerPoint, and Visio.
+
+  > [!TIP]
+  > In [advanced hunting](/defender-xdr/advanced-hunting-urlclickevents-table), click events on URLs wrapped by Safe Links have the `AppName` value `Mail` in the `UrlClickEvents` table.
 
   If you select this setting, the following settings are available:
 

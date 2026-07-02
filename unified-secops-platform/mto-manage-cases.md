@@ -1,18 +1,14 @@
 ---
 title: View and manage cases across multiple tenants in the Microsoft Defender multitenant portal
 description: Learn how to use the Microsoft Defender multitenant portal to manage cases across multiple tenants.
-search.appverid: met150
-ms.service: unified-secops-platform
-ms.author: yelevin
-author: yelevin
-ms.localizationpriority: medium
+author: mberdugo
+ms.author: monaberdugo
 ms.date: 05/07/2025
-audience: ITPro
 ms.collection:
 - M365-security-compliance
 - tier1
 - usx-security
-ms.topic: conceptual
+ms.topic: article
 
 # customer intent: As an analyst or an engineer in a security operations center, I want to learn how to use the multi-tenant capabilities of the case management tools available in the Microsoft Defender portal. This knowledge will help me unify security tickets and increase visibility across multi-tenant environments, both hybrid and multicloud; and disrupt attacks on identities, endpoints, email, cloud apps, and data in real time.
 ---

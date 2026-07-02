@@ -2,30 +2,25 @@
 title: Fetch alerts from MSSP customer tenant
 description: Learn how to fetch alerts from a customer tenant
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 12/18/2020
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 ---
 
 # Fetch alerts from MSSP customer tenant
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 > [!NOTE]
 > This action is taken by the MSSP.
@@ -41,13 +36,13 @@ To fetch alerts into your SIEM system, you'll need to take the following steps:
 
 - Step 1: Create a third-party application
 - Step 2: Get access and refresh tokens from your customer's tenant
-- Step 3: allow your application on Microsoft Defender XDR
+- Step 3: allow your application on Microsoft Defender
 
 <a name='step-1-create-an-application-in-azure-active-directory-azure-ad'></a>
 
 ### Step 1: Create an application in Microsoft Entra ID
 
-You'll need to create an application and grant it permissions to fetch alerts from your customer's Microsoft Defender XDR tenant.
+You'll need to create an application and grant it permissions to fetch alerts from your customer's Microsoft Defender tenant.
 
 1. Sign in to the [Microsoft Entra admin center](https://aad.portal.azure.com/).
 
@@ -138,6 +133,7 @@ After providing your credentials, you'll need to grant consent to the applicatio
     Write-Host " ----------------------------------- REFRESH TOKEN ---------------------------------- "
     Write-Host $refreshToken
     ```
+
 4. Open an elevated PowerShell command prompt in the `MsspTokensAcquisition` folder.
 
 5. Run the following command:
@@ -155,9 +151,9 @@ After providing your credentials, you'll need to grant consent to the applicatio
 
 <a name='step-3-allow-your-application-on-microsoft-365-defender'></a>
 
-### Step 3: Allow your application on Microsoft Defender XDR
+### Step 3: Allow your application on Microsoft Defender
 
-You'll need to allow the application you created in Microsoft Defender XDR.
+You'll need to allow the application you created in the Defender portal.
 
 You'll need to have **Manage portal system settings** permission to allow the application. Otherwise, you'll need to request your customer to allow the application for you.
 
@@ -171,7 +167,7 @@ You'll need to have **Manage portal system settings** permission to allow the ap
 
 5. Click **Authorize application**.
 
-You can now download the relevant configuration file for your SIEM and connect to the Microsoft Defender XDR API. For more information, see, [Pull alerts to your SIEM tools](../configure-siem.md).
+You can now download the relevant configuration file for your SIEM and connect to the Microsoft Defender API. For more information, see, [Pull alerts to your SIEM tools](../configure-siem.md).
 
 - In the ArcSight configuration file / Splunk Authentication Properties file, write your application key manually by setting the secret value.
 - Instead of acquiring a refresh token in the portal, use the script from the previous step to acquire a refresh token (or acquire it by other means).

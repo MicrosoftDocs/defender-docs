@@ -1,26 +1,23 @@
 ---
 title: Configure the advanced delivery policy for non-Microsoft phishing simulations and email delivery to SecOps mailboxes
-f1.keywords:
-  - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-audience: ITPro
+ms.author: chrisda
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.collection:
   - m365-security
   - tier3
 ms.custom:
+  - msecd-doc-authoring-1014
+  - sfi-ga-nochange
 description: Admins can learn how to use the advanced delivery policy in Microsoft 365 to identify messages that shouldn't be filtered in specific supported scenarios. For example, non-Microsoft phishing simulations and messages delivered to security operations (SecOps) mailboxes.
 ms.service: defender-office-365
-ms.date: 07/02/2025
+ms.date: 06/15/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Configure the advanced delivery policy for non-Microsoft phishing simulations and email delivery to SecOps mailboxes
@@ -32,19 +29,19 @@ To keep your organization [secure by default](secure-by-default.md), Microsoft 3
 - **Non-Microsoft phishing simulations**: Simulated attacks can help you identify and train vulnerable users before a real attack impacts your organization.
 - **Security operations (SecOps) mailboxes**: Dedicated mailboxes that are used by security teams to collect and analyze unfiltered messages (both good and bad).
 
-Use the _advanced delivery policy_ in Microsoft 365 to prevent filtering of inbound messages _in these and [other supported scenarios](#other-scenarios-that-require-filtering-bypass)_. The advanced delivery policy ensures that messages in these scenarios achieve the following results:
+Use the _advanced delivery policy_ in Microsoft 365 to prevent filtering of inbound messages _in non-Microsoft phishing simulations, SecOps mailboxes, and [other supported scenarios](#other-scenarios-that-require-filtering-bypass)_. The advanced delivery policy ensures that messages in the non-Microsoft phishing simulation and SecOps mailbox scenarios achieve the following results:
 
 - Filters in Microsoft 365 take no action on these messages. Malware filtering is bypassed for SecOps mailboxes only.
 - [Zero-hour auto purge (ZAP)](zero-hour-auto-purge.md) for spam and phishing take no action on these messages. ZAP for malware is bypassed for SecOps mailboxes only.
 - [Safe Links in Defender for Office 365](safe-links-about.md) doesn't block or detonate the specified URLs in these messages at time of click. URLs are still wrapped, but they aren't blocked.
 - [Safe Attachments in Defender for Office 365](safe-attachments-about.md) doesn't detonate attachments in these messages.
-- [Default system alerts](/defender-xdr/alert-policies#default-alert-policies) aren't triggered for these scenarios.
+- [Default system alerts](/defender-xdr/alert-policies#default-alert-policies) aren't triggered for non-Microsoft phishing simulation and SecOps mailbox scenarios.
 - [AIR and clustering in Defender for Office 365](air-about.md) ignores these messages.
 - Specifically for non-Microsoft phishing simulations:
   - [Admin submission](submissions-admin.md) generates an automatic response saying that the message is part of a phishing simulation campaign and isn't a real threat. Alerts and AIR aren't triggered. The admin submissions experience shows these messages as a simulated threat.
   - When a user reports a phishing simulation message using the [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook), the system doesn't generate an alert, investigation, or incident. The links or files aren't detonated, but the message appears on the **User reported** tab of the **Submissions** page.
 
-Messages identified by the advanced delivery policy aren't security threats, so the messages are marked with system overrides. Admin experiences show these messages as **Phishing simulation** or **SecOps mailbox** system overrides. Admins can use these values to filter and analyze messages in the following experiences:
+Messages identified by the advanced delivery policy aren't security threats, so the messages are marked with system overrides. Admin experiences show messages identified by the advanced delivery policy as **Phishing simulation** or **SecOps mailbox** system overrides. Admins can use the **Phishing simulation** and **SecOps mailbox** system override values to filter and analyze messages in the following experiences:
 
 - [Threat Explorer (Explorer) or Real-time detections in Defender for Office 365](threat-explorer-real-time-detections-about.md): Admins can filter on **System override source** and select **Phishing simulation** or **SecOps Mailbox**.
 - The [Email entity page](mdo-email-entity-page.md): Admins can view a message that was allowed by organization policy by **SecOps mailbox** or **Phishing simulation** under **Tenant override** in the **Override(s)** section.
@@ -67,17 +64,17 @@ Messages identified by the advanced delivery policy aren't security threats, so 
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Use the Microsoft Defender portal to configure SecOps mailboxes in the advanced delivery policy
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
 
    On the **Advanced delivery** page, verify that the **SecOps mailbox** tab is selected.
 
 2. On the **SecOps mailbox** tab, select the **Add** button in the **No SecOps mailboxes configured** area of the page.
 
-   If there are already existing entries on the **SecOps mailbox** tab, select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** (the **Add** button isn't available).
+   If there are already existing entries on the **SecOps mailbox** tab, select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** (the **Add** button isn't available).
 
 3. In the **Add SecOps mailboxes** flyout that opens, enter an existing Exchange Online mailbox that you want to designate as SecOps mailbox by doing either of the following steps:
    - Click in the box, let the list of mailboxes resolve, and then select the mailbox.
@@ -85,7 +82,7 @@ Messages identified by the advanced delivery policy aren't security threats, so 
 
      Repeat this step as many times as necessary. Distribution groups aren't allowed.
 
-     To remove an existing value, select remove :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
+     To remove an existing value, select remove :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the value.
 
 4. When you're finished in the **Add SecOps mailboxes** flyout, select **Add**.
 
@@ -95,19 +92,19 @@ Back on the **SecOps mailbox** tab, the SecOps mailbox entries that you configur
 
 - The **Display name** column contains display name of the mailboxes.
 - The **Email** column contains the email address for each entry.
-- To change the list of entries from normal to compact spacing, select :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
+- To change the list of entries from normal to compact spacing, select :::image type="icon" source="media/defender-portal-icon-standard.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/defender-portal-icon-compact.png" border="false"::: **Compact list**.
 
 ## Use the Microsoft Defender portal to modify or remove SecOps mailboxes in the advanced delivery policy
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
 
    On the **Advanced delivery** page, verify that the **SecOps mailbox** tab is selected.
 
-2. On the **SecOps mailbox** tab, select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit**.
+2. On the **SecOps mailbox** tab, select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit**.
 
 3. In **Edit SecOps mailboxes** flyout that opens, add or remove mailboxes as described in Step 3 in the [Use the Microsoft Defender portal to configure SecOps mailboxes in the advanced delivery policy](#use-the-microsoft-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy) section.
 
-   To remove all mailboxes, select remove :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to each value until there are no more mailboxes selected.
+   To remove all mailboxes, select remove :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to each value until there are no more mailboxes selected.
 
 4. When you're finished in the **Edit SecOps mailboxes** flyout, select **Save**.
 
@@ -121,7 +118,7 @@ Back on the **SecOps mailbox** tab, the SecOps mailbox entries that you configur
 
 To configure a non-Microsoft phishing simulation, you need to provide the following information:
 
-- At least one **Domain**: The domain from the MAIL FROM address (also known as the `5321.MailFrom` address, P1 sender, or envelope sender) that's used in the SMTP transmission of the message **or** a DKIM domain as specified by the phishing simulation vendor.
+- At least one **Domain**: The domain from the MAIL FROM address (also known as the `5321.MailFrom` address, P1 sender, or envelope sender) that's used in the SMTP transmission of the message **or** a DKIM domain as specified by the phishing simulation vendor. For internationalized domain names (IDNA), use Punycode.
 - At least one **Sending IP**.
 - For **non-email** phishing simulations (for example, Microsoft Teams messages, Word documents, or Excel spreadsheets), you can optionally identify the **Simulation URLs to allow** that shouldn't be treated as real threats at time of click: the URLs aren't blocked or detonated, and no URL click alerts or resulting incidents are generated. The URLs are wrapped at time of click, but they aren't blocked.
 
@@ -130,6 +127,8 @@ There must be a match on at least one **Domain** and one **Sending IP**, but no 
 If your MX record doesn't point to Microsoft 365, the IP address in the `Authentication-results` header must match the IP address in the advanced delivery policy. If the IP addresses don't match, you might need to configure [Enhanced Filtering for Connectors](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) so the correct IP address is detected.
 
 > [!NOTE]
+>
+> - Currently, IPv6 addresses are supported only in PowerShell. To use PowerShell to configure non-Microsoft phishing simulations in the advanced delivery policy, see [Use PowerShell to configure non-Microsoft phishing simulations](#use-powershell-to-configure-non-microsoft-phishing-simulations).
 >
 > - Enhanced Filtering for Connectors doesn't work for non-Microsoft phishing simulations in the following in-and-out email routing scenario:
 >
@@ -148,13 +147,13 @@ If your MX record doesn't point to Microsoft 365, the IP address in the `Authent
 >
 > - Adding phishing simulation URLs to the **Do not rewrite the following URLs in email** section in Safe Links policies might result in unwanted alerts for URL clicks. Phishing simulation URLs in email messages are automatically allowed both during mail flow and at time of click.
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
 
    On the **Advanced delivery** page, select the **Phishing simulation** tab.
 
 2. On the **Phishing simulation** tab, select the **Add** button in the **No third party phishing simulations configured** area of the page.
 
-   If there are already existing entries on the **Phishing simulation** tab, select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** (the **Add** button isn't available).
+   If there are already existing entries on the **Phishing simulation** tab, select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** (the **Add** button isn't available).
 
 3. In the **Add third party phishing simulations** flyout that opens, configure the following settings:
 
@@ -171,9 +170,9 @@ If your MX record doesn't point to Microsoft 365, the IP address in the `Authent
 
      Add URL entries by expanding this setting, clicking in the box, entering a value, and then pressing the ENTER key or selecting the value displayed below the box. You can add up to 30 entries. For the URL syntax, see [URL syntax for the Tenant Allow/Block List](tenant-allow-block-list-urls-configure.md#url-syntax-for-the-tenant-allowblock-list).
 
-   To remove an existing domain, IP, or URL value, select remove :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
+   To remove an existing domain, IP, or URL value, select remove :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the value.
 
-   Consider the following example:
+   Consider the following example email header, which shows the authentication results you can use to identify the sending IP address, MAIL FROM domain, and DKIM domain for the advanced delivery policy configuration:
 
    ```text
    Authentication-Results: spf=pass (sender IP is 172.17.17.7)
@@ -207,21 +206,21 @@ Back on the **Phishing simulation** tab, the non-Microsoft phishing simulation e
 - The **Value** column contains the domain, IP address, or URL entry.
 - The **Type** column contains the value **Sending IP**, **Domain**, or **Allowed simulation URL** for each entry.
 - The **Date** column shows when the entry was created.
-- To change the list of entries from normal to compact spacing, select :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
+- To change the list of entries from normal to compact spacing, select :::image type="icon" source="media/defender-portal-icon-standard.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/defender-portal-icon-compact.png" border="false"::: **Compact list**.
 
 <a name='use-the-microsoft-defender-portal-to-modify-or-remove-third-party-phishing-simulations-in-the-advanced-delivery-policy'></a>
 
 ## Use the Microsoft Defender portal to modify or remove non-Microsoft phishing simulations in the advanced delivery policy
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
 
    On the **Advanced delivery** page, select the **Phishing simulation** tab.
 
-2. On the **Phishing simulation** tab, select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit**.
+2. On the **Phishing simulation** tab, select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit**.
 
-3. In the **Edit non-Microsoft phishing simulation** flyout that opens, add or remove entries for **Domain**, **Sending IP**, and **Simulation URLs** as described in Step 3 in the [Use the Microsoft Defender portal to configure SecOps mailboxes in the advanced delivery policy](#use-the-microsoft-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy) section.
+3. In the **Edit non-Microsoft phishing simulation** flyout that opens, add or remove entries for **Domain**, **Sending IP**, and **Simulation URLs** as described in Step 3 in the [Use the Microsoft Defender portal to configure non-Microsoft phishing simulations in the advanced delivery policy](#use-the-microsoft-defender-portal-to-configure-non-microsoft-phishing-simulations-in-the-advanced-delivery-policy) section.
 
-   To remove all entries, select remove :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to each value until there are no more domains, IPs, or URLs selected.
+   To remove all entries, select remove :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to each value until there are no more domains, IPs, or URLs selected.
 
 4. When you're finished in the **Edit non-Microsoft phishing simulation** flyout, select **Save**.
 
@@ -231,7 +230,7 @@ Back on the **Phishing simulation** tab, the non-Microsoft phishing simulation e
 
 ## Other scenarios that require filtering bypass
 
-In addition to the two scenarios that the advanced delivery policy can help you with, there are other scenarios where you might need to bypass filtering for messages:
+In addition to non-Microsoft phishing simulations and SecOps mailboxes that the advanced delivery policy can help you with, there are other scenarios where you might need to bypass filtering for messages:
 
 - **Non-Microsoft filters**: If your domain's MX record _doesn't_ point to Office 365 (messages are routed somewhere else first), [secure by default](secure-by-default.md) _isn't available_. If you'd like to add protection, you need to enable Enhanced Filtering for Connectors (also known as _skip listing_). For more information, see [Manage mail flow using a non-Microsoft cloud service with Exchange Online](/exchange/mail-flow-best-practices/manage-mail-flow-using-third-party-cloud). If you don't want Enhanced Filtering for Connectors, use mail flow rules (also known as transport rules) to bypass Microsoft filtering for messages that the non-Microsoft filtering service already evaluated. For more information, see [Use mail flow rules to set the SCL in messages](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
 - **False positives under review**: You might want to _temporarily_ allow good messages incorrectly identified as bad (false positives) that you reported via [admin submissions](submissions-admin.md) to Microsoft, and those messages are sill being analyzed. As with all overrides, we _**highly recommended**_ that these allowances are temporary.
@@ -272,7 +271,7 @@ This example creates the SecOps mailbox policy.
 New-SecOpsOverridePolicy -Name SecOpsOverridePolicy -SentTo secops@contoso.com
 ```
 
-For detailed syntax and parameter information, see [New-SecOpsOverridePolicy](/powershell/module/exchange/new-secopsoverridepolicy).
+For detailed syntax and parameter information, see [New-SecOpsOverridePolicy](/powershell/module/exchangepowershell/new-secopsoverridepolicy).
 
 #### Step 2: Use PowerShell to create the SecOps override rule
 
@@ -284,7 +283,7 @@ New-ExoSecOpsOverrideRule -Name SecOpsOverrideRule -Policy SecOpsOverridePolicy
 
 Regardless of the Name value you specify, the rule name is `_Exe:SecOpsOverrid:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 312c23cf-0377-4162-b93d-6548a9977efb9).
 
-For detailed syntax and parameter information, see [New-ExoSecOpsOverrideRule](/powershell/module/exchange/new-ExoSecOpsOverrideRule).
+For detailed syntax and parameter information, see [New-ExoSecOpsOverrideRule](/powershell/module/exchangepowershell/new-ExoSecOpsOverrideRule).
 
 ### Use PowerShell to view the SecOps override policy
 
@@ -294,7 +293,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 Get-SecOpsOverridePolicy
 ```
 
-For detailed syntax and parameter information, see [Get-SecOpsOverridePolicy](/powershell/module/exchange/get-secopsoverridepolicy).
+For detailed syntax and parameter information, see [Get-SecOpsOverridePolicy](/powershell/module/exchangepowershell/get-secopsoverridepolicy).
 
 ### Use PowerShell to view SecOps override rules
 
@@ -312,9 +311,9 @@ This example identifies the valid rule (one) and any invalid rules.
 Get-ExoSecOpsOverrideRule | Format-Table Name,Mode
 ```
 
-After you identify the invalid rules, you can remove them by using the **Remove-ExoSecOpsOverrideRule** cmdlet as described [later in this article](#use-powershell-to-remove-secops-override-rules).
+After you identify the invalid rules, you can remove them by using the **Remove-ExoSecOpsOverrideRule** cmdlet as described in [Use PowerShell to remove SecOps override rules](#use-powershell-to-remove-secops-override-rules).
 
-For detailed syntax and parameter information, see [Get-ExoSecOpsOverrideRule](/powershell/module/exchange/get-exosecopsoverriderule).
+For detailed syntax and parameter information, see [Get-ExoSecOpsOverrideRule](/powershell/module/exchangepowershell/get-exosecopsoverriderule).
 
 ### Use PowerShell to modify the SecOps override policy
 
@@ -324,7 +323,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 Set-SecOpsOverridePolicy -Identity SecOpsOverridePolicy [-AddSentTo <EmailAddress1>,<EmailAddress2>,...<EmailAddressN>] [-RemoveSentTo <EmailAddress1>,<EmailAddress2>,...<EmailAddressN>]
 ```
 
-This example adds `secops2@contoso.com` to the SecOps override policy.
+This example adds `secops2@contoso.com` to the existing SecOps override policy recipient list.
 
 ```powershell
 Set-SecOpsOverridePolicy -Identity SecOpsOverridePolicy -AddSentTo secops2@contoso.com
@@ -333,23 +332,23 @@ Set-SecOpsOverridePolicy -Identity SecOpsOverridePolicy -AddSentTo secops2@conto
 > [!NOTE]
 > If an associated, valid SecOps override rule exists, the email addresses in the rule is also updated.
 
-For detailed syntax and parameter information, see [Set-SecOpsOverridePolicy](/powershell/module/exchange/set-secopsoverridepolicy).
+For detailed syntax and parameter information, see [Set-SecOpsOverridePolicy](/powershell/module/exchangepowershell/set-secopsoverridepolicy).
 
 ### Use PowerShell to modify a SecOps override rule
 
 The **Set-ExoSecOpsOverrideRule** cmdlet doesn't modify the email addresses in the SecOps override rule. To modify the email addresses in the SecOps override rule, use the **Set-SecOpsOverridePolicy** cmdlet.
 
-For detailed syntax and parameter information, see [Set-ExoSecOpsOverrideRule](/powershell/module/exchange/set-exosecopsoverriderule).
+For detailed syntax and parameter information, see [Set-ExoSecOpsOverrideRule](/powershell/module/exchangepowershell/set-exosecopsoverriderule).
 
 ### Use PowerShell to remove the SecOps override policy
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), this example removes the SecOps Mailbox policy and the corresponding rule.
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), this example removes the SecOps mailbox policy and the corresponding rule when SecOps mailbox filtering bypass is no longer needed.
 
 ```powershell
 Remove-SecOpsOverridePolicy -Identity SecOpsOverridePolicy
 ```
 
-For detailed syntax and parameter information, see [Remove-SecOpsOverridePolicy](/powershell/module/exchange/remove-secopsoverridepolicy).
+For detailed syntax and parameter information, see [Remove-SecOpsOverridePolicy](/powershell/module/exchangepowershell/remove-secopsoverridepolicy).
 
 ### Use PowerShell to remove SecOps override rules
 
@@ -367,7 +366,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
   Remove-ExoSecOpsOverrideRule -Identity "_Exe:SecOpsOverrid:312c23cf-0377-4162-b93d-6548a9977efb"
   ```
 
-For detailed syntax and parameter information, see [Remove-ExoSecOpsOverrideRule](/powershell/module/exchange/remove-exosecopsoverriderule).
+For detailed syntax and parameter information, see [Remove-ExoSecOpsOverrideRule](/powershell/module/exchangepowershell/remove-exosecopsoverriderule).
 
 <a name='powershell-procedures-for-third-party-phishing-simulations-in-the-advanced-delivery-policy'></a>
 
@@ -380,7 +379,7 @@ In PowerShell, the basic elements of non-Microsoft phishing simulations in the a
 - **The allowed (unblocked) phishing simulation URLs**: Controlled by the **\*-TenantAllowBlockListItems** cmdlets.
 
 > [!NOTE]
-> As previously described, identifying URLs isn't required for links in email-based phishing simulations. You can optionally identify links in **non-email** phishing simulations (links in Teams messages or in Office documents) that shouldn't be treated as real threats at time of click.
+> Identifying URLs isn't required for links in email-based phishing simulations. You can optionally identify links in **non-email** phishing simulations (links in Teams messages or in Office documents) that shouldn't be treated as real threats at time of click.
 
 This behavior has the following results:
 
@@ -398,7 +397,7 @@ Configuring a non-Microsoft phishing simulation in PowerShell is a multi-step pr
 1. Create the phishing simulation override policy.
 2. Create the phishing simulation override rule that specifies:
    - The policy that the rule applies to.
-   - The source IP address of the phishing simulation messages.
+   - The source IPv4 or IPv6 address of the phishing simulation messages.
 3. Optionally, identity the phishing simulation URLs in **non-email** phishing simulations (links in Teams messages or in Office documents) that shouldn't be treated as real threats at time of click.
 
 #### Step 1: Use PowerShell to create the phishing simulation override policy
@@ -411,7 +410,7 @@ New-PhishSimOverridePolicy -Name PhishSimOverridePolicy
 
 Regardless of the Name value you specify, the policy name is _PhishSimOverridePolicy_, so you might as well use that value.
 
-For detailed syntax and parameter information, see [New-PhishSimOverridePolicy](/powershell/module/exchange/new-phishsimoverridepolicy).
+For detailed syntax and parameter information, see [New-PhishSimOverridePolicy](/powershell/module/exchangepowershell/new-phishsimoverridepolicy).
 
 #### Step 2: Use PowerShell to create the phishing simulation override rule
 
@@ -423,7 +422,7 @@ New-ExoPhishSimOverrideRule -Name <ArbitraryTextValue> -Policy PhishSimOverrideP
 
 Regardless of the Name value you specify, the rule name is `_Exe:PhishSimOverr:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 6fed4b63-3563-495d-a481-b24a311f8329).
 
-A valid IP address entry is one of the following values:
+A valid IPv4 or IPv6 address entry is one of the following values:
 
 - Single IP: For example, 192.168.1.1.
 - IP range: For example, 192.168.0.1-192.168.0.254.
@@ -435,7 +434,7 @@ This example creates the phishing simulation override rule with the specified se
 New-ExoPhishSimOverrideRule -Policy PhishSimOverridePolicy -Domains fabrikam.com,wingtiptoys.com -SenderIpRanges 192.168.1.55
 ```
 
-For detailed syntax and parameter information, see [New-ExoPhishSimOverrideRule](/powershell/module/exchange/new-exophishsimoverriderule).
+For detailed syntax and parameter information, see [New-ExoPhishSimOverrideRule](/powershell/module/exchangepowershell/new-exophishsimoverriderule).
 
 #### Step 3: (Optional) Use PowerShell to identify the phishing simulation URLs to allow
 
@@ -453,7 +452,7 @@ This example adds a URL allow entry for the specified non-Microsoft phishing sim
 New-TenantAllowBlockListItems -Allow -ListType Url -ListSubType AdvancedDelivery -Entries *.fabrikam.com -NoExpiration
 ```
 
-For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchange/new-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchangepowershell/new-tenantallowblocklistitems).
 
 ### Use PowerShell to view the phishing simulation override policy
 
@@ -463,7 +462,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 Get-PhishSimOverridePolicy
 ```
 
-For detailed syntax and parameter information, see [Get-PhishSimOverridePolicy](/powershell/module/exchange/get-phishsimoverridepolicy).
+For detailed syntax and parameter information, see [Get-PhishSimOverridePolicy](/powershell/module/exchangepowershell/get-phishsimoverridepolicy).
 
 ### Use PowerShell to view phishing simulation override rules
 
@@ -483,7 +482,7 @@ Get-ExoPhishSimOverrideRule | Format-Table Name,Mode
 
 After you identify the invalid rules, you can remove them by using the **Remove-ExoPhishSimOverrideRule** cmdlet as described [later in this article](#use-powershell-to-remove-phishing-simulation-override-rules).
 
-For detailed syntax and parameter information, see [Get-ExoPhishSimOverrideRule](/powershell/module/exchange/get-exophishsimoverriderule).
+For detailed syntax and parameter information, see [Get-ExoPhishSimOverrideRule](/powershell/module/exchangepowershell/get-exophishsimoverriderule).
 
 ### Use PowerShell to view the allowed phishing simulation URL entries
 
@@ -493,7 +492,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 Get-TenantAllowBlockListItems -ListType Url -ListSubType AdvancedDelivery
 ```
 
-For detailed syntax and parameter information, see [Get-TenantAllowBlockListItems](/powershell/module/exchange/get-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Get-TenantAllowBlockListItems](/powershell/module/exchangepowershell/get-tenantallowblocklistitems).
 
 ### Use PowerShell to modify the phishing simulation override policy
 
@@ -509,7 +508,7 @@ This example disables the phishing simulation override policy.
 Set-PhishSimOverridePolicy -Identity PhishSimOverridePolicy -Enabled $false
 ```
 
-For detailed syntax and parameter information, see [Set-PhishSimOverridePolicy](/powershell/module/exchange/set-phishsimoverridepolicy).
+For detailed syntax and parameter information, see [Set-PhishSimOverridePolicy](/powershell/module/exchangepowershell/set-phishsimoverridepolicy).
 
 ### Use PowerShell to modify phishing simulation override rules
 
@@ -525,24 +524,19 @@ Or
 Set-ExoPhishSimOverrideRule -Identity <PhishSimOverrideRuleIdentity> [-Comment "<DescriptiveText>"] [-AddSenderDomainIs <DomainEntry1>,<DomainEntry2>,...<DomainEntryN>] [-RemoveSenderDomainIs <DomainEntry1>,<DomainEntry2>,...<DomainEntryN>] [-AddSenderIpRanges <IPAddressEntry1>,<IPAddressEntry2>,...<IPAddressEntryN>] [-RemoveSenderIpRanges <IPAddressEntry1>,<IPAddressEntry2>,...<IPAddressEntryN>]
 ```
 
-Use the **Get-ExoPhishSimOverrideRule** cmdlet to find the \<PhishSimOverrideRuleIdentity\> values. The name of the rule uses the following syntax: `_Exe:PhishSimOverr:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 6fed4b63-3563-495d-a481-b24a311f8329).
+Use the **Get-ExoPhishSimOverrideRule** cmdlet to find the rule identity value to use for the \<PhishSimOverrideRuleIdentity\> parameter. The name of the rule uses the following syntax: `_Exe:PhishSimOverr:<GUID\>` \[sic\] where \<GUID\> is a unique GUID value (for example, 6fed4b63-3563-495d-a481-b24a311f8329).
 
-This example modifies the (presumably only) phishing simulation override rule with the following settings:
-
-- Add the domain entry blueyonderairlines.com.
-- Remove the IP address entry 192.168.1.55.
-
-These changes don't affect existing entries in the rule.
+This example updates the existing phishing simulation override rule by adding the domain blueyonderairlines.com and removing the IP address 192.168.1.55. These changes don't affect other existing entries in the rule.
 
 ```powershell
 Get-ExoPhishSimOverrideRule| Set-ExoPhishSimOverrideRule -AddSenderDomainIs blueyonderairlines.com -RemoveSenderIpRanges 192.168.1.55
 ```
 
-For detailed syntax and parameter information, see [Set-ExoPhishSimOverrideRule](/powershell/module/exchange/set-exophishsimoverriderule).
+For detailed syntax and parameter information, see [Set-ExoPhishSimOverrideRule](/powershell/module/exchangepowershell/set-exophishsimoverriderule).
 
 ### Use PowerShell to modify the allowed phishing simulation URL entries
 
-You can't modify the URL values directly. You can [remove existing URL entries](#use-powershell-to-remove-the-allowed-phishing-simulation-url-entries) and [add new URL entries](#step-3-optional-use-powershell-to-identify-the-phishing-simulation-urls-to-allow) as described in this article.
+You can't modify the URL values directly. You can [remove existing URL entries](#use-powershell-to-remove-the-allowed-phishing-simulation-url-entries) and [add new URL entries](#step-3-optional-use-powershell-to-identify-the-phishing-simulation-urls-to-allow).
 
 In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), to modify other properties of an allowed phishing simulation URL entry (for example, the expiration date or comments), use the following syntax:
 
@@ -552,13 +546,13 @@ Set-TenantAllowBlockListItems <-Entries "<URL1>","<URL2>",..."<URLN>" | -Ids <Id
 
 You identify the entry to modify by its URL values (the _Entries_ parameter) or the Identity value from the output of the **Get-TenantAllowBlockListItems** cmdlet (the _Ids_ parameter).
 
-This example modified the expiration date of the specified entry.
+This example changes the expiration date for the existing allowed phishing simulation URL entry.
 
 ```powershell
 Set-TenantAllowBlockListItems -ListType Url -ListSubType AdvancedDelivery -Entries "*.fabrikam.com" -ExpirationDate 9/11/2021
 ```
 
-For detailed syntax and parameter information, see [Set-TenantAllowBlockListItems](/powershell/module/exchange/set-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Set-TenantAllowBlockListItems](/powershell/module/exchangepowershell/set-tenantallowblocklistitems).
 
 ### Use PowerShell to remove a phishing simulation override policy
 
@@ -568,7 +562,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 Remove-PhishSimOverridePolicy -Identity PhishSimOverridePolicy
 ```
 
-For detailed syntax and parameter information, see [Remove-PhishSimOverridePolicy](/powershell/module/exchange/remove-phishsimoverridepolicy).
+For detailed syntax and parameter information, see [Remove-PhishSimOverridePolicy](/powershell/module/exchangepowershell/remove-phishsimoverridepolicy).
 
 ### Use PowerShell to remove phishing simulation override rules
 
@@ -586,7 +580,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
   Remove-ExoSPhishSimOverrideRule -Identity "_Exe:PhishSimOverr:6fed4b63-3563-495d-a481-b24a311f8329"
   ```
 
-For detailed syntax and parameter information, see [Remove-ExoPhishSimOverrideRule](/powershell/module/exchange/remove-exophishsimoverriderule).
+For detailed syntax and parameter information, see [Remove-ExoPhishSimOverrideRule](/powershell/module/exchangepowershell/remove-exophishsimoverriderule).
 
 ### Use PowerShell to remove the allowed phishing simulation URL entries
 
@@ -604,4 +598,4 @@ This example modified the expiration date of the specified entry.
 Remove-TenantAllowBlockListItems -ListType Url -ListSubType AdvancedDelivery -Entries "*.fabrikam.com" -ExpirationDate 9/11/2021
 ```
 
-For detailed syntax and parameter information, see [Remove-TenantAllowBlockListItems](/powershell/module/exchange/remove-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Remove-TenantAllowBlockListItems](/powershell/module/exchangepowershell/remove-tenantallowblocklistitems).

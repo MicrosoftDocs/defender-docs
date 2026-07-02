@@ -1,30 +1,26 @@
 ---
 title: Find and release quarantined messages as a user
-f1.keywords:
-  - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-audience: Consumer/IW
+ms.author: chrisda
 ms.topic: how-to
 ms.localizationpriority: high
-search.appverid:
-  - MET150
-  - MEW150
 ms.assetid: efff08ec-68ff-4099-89b7-266e3c4817be
 ms.collection:
   - m365-security
   - tier1
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-image-nochange
 description: Users can learn how to view and manage quarantined email messages in Microsoft 365 that were meant to be delivered to them.
 ms.service: defender-office-365
 adobe-target: true
-ms.date: 07/08/2025
+ms.date: 05/19/2026
+ai-usage: ai-assisted
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+#customer intent:  As an end user who receives email in Microsoft 365, I want clear, step‑by‑step guidance to find, view, and manage messages and files placed in quarantine (view, preview, release, request release, delete, and allow/block senders) so I can recover legitimate messages and keep my mailbox secure.
 ---
 
 # Manage quarantined messages and files as a user
@@ -64,7 +60,7 @@ You view and manage your quarantined messages in the Microsoft Defender portal o
 
 - To open the Microsoft Defender portal, go to <https://security.microsoft.com>. To go directly to the **Quarantine** page, use <https://security.microsoft.com/quarantine>.
 
-- Admins can configure how long messages are kept in quarantine before they're permanently deleted in anti-spam policies. Messages expired from quarantine are unrecoverable. For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md).
+- Admins can configure how long messages are kept in quarantine before they're permanently deleted in anti-spam policies. Messages expired from quarantine are unrecoverable. For more information, see [Configure anti-spam policies for cloud mailboxes](anti-spam-policies-configure.md).
 
 - By default, messages that were quarantined for high confidence phishing, malware, or by mail flow rules are only available to admins, and aren't visible to users. For more information, see [Manage quarantined messages and files as an admin](quarantine-admin-manage-messages-files.md).
 
@@ -81,16 +77,16 @@ You view and manage your quarantined messages in the Microsoft Defender portal o
 
 In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Quarantine** \> **Email** tab. Or, to go directly to the **Email** tab on the **Quarantine** page, use <https://security.microsoft.com/quarantine?viewid=Email>.
 
-On the **Email** tab, you can decrease the vertical spacing in the list by clicking :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal** and then selecting :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
+On the **Email** tab, you can decrease the vertical spacing in the list by clicking :::image type="icon" source="media/defender-portal-icon-standard.png" border="false"::: **Change list spacing to compact or normal** and then selecting :::image type="icon" source="media/defender-portal-icon-compact.png" border="false"::: **Compact list**.
 
-You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
+You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
 
 - **Time received**<sup>\*</sup>
 - **Subject**<sup>\*</sup>
 - **Sender**<sup>\*</sup>
-- **Quarantine reason**<sup>\*</sup> (see the possible values in the :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** description.)
-- **Release status**<sup>\*</sup> (see the possible values in the :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** description.)
-- **Policy type**<sup>\*</sup> (see the possible values in the :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** description.)
+- **Quarantine reason**<sup>\*</sup> (see the possible values in the :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** description.)
+- **Release status**<sup>\*</sup> (see the possible values in the :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** description.)
+- **Policy type**<sup>\*</sup> (see the possible values in the :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** description.)
 - **Expires**<sup>\*</sup>
 - **Recipient**<sup>\*</sup>
 - **Sender address override reason**<sup>\*</sup>: One of the following values:
@@ -99,7 +95,7 @@ You can sort the entries by clicking on an available column header. Select :::im
   - **Message sender is blocked by administrator settings**
 
   > [!TIP]
-  > If a sender is blocked and **Don't show blocked senders** is selected (default), messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides.
+  > If a sender is blocked and **Don't show blocked senders** is selected (default), messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides. For more information, see [Limits for junk email settings](configure-junk-email-settings-on-exo-mailboxes.md#limits-for-junk-email-settings).
 
 - **Released by**<sup>\*</sup>
 - **Message ID**
@@ -107,7 +103,7 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Message size**
 - **Mail direction**
 
-To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filters** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter**. The following filters are available in the **Filters** flyout that opens:
 
 - **Message ID**: The globally unique identifier of the message.
 - **Sender address**
@@ -128,7 +124,7 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
   - **Transport rule** (mail flow rule)
   - **Bulk**
   - **Spam**
-  - **Malware**: Anti-malware policies in the default email protections for cloud mailboxes or in Safe Attachments policies in Defender for Office 365. The **Policy Type** value indicates which feature was used.
+  - **Malware**: Anti-malware policies in [the built-in security features for all cloud mailboxes](eop-about.md) or in Safe Attachments policies in Defender for Office 365. The **Policy Type** value indicates which feature was used.
   - **Phishing**: The spam filter verdict was **Phishing** or anti-phishing protection quarantined the message ([spoof settings](anti-phishing-policies-about.md#spoof-settings) or [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)).
   - **High confidence phishing**
 - **Blocked sender**: One of the following values:
@@ -136,7 +132,7 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
   - **Show all senders**
 
   > [!TIP]
-  > If a sender is blocked and **Don't show blocked senders** is selected, messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides.
+  > If a sender is blocked and **Don't show blocked senders** is selected, messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides. For more information, see [Limits for junk email settings](configure-junk-email-settings-on-exo-mailboxes.md#limits-for-junk-email-settings).
 
 - **Release status**: Any of the following values:
   - **Needs review**
@@ -153,27 +149,27 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 
   The **Policy type** and **Quarantine reason** values are interrelated. For example, **Bulk** is always associated with an **Anti-spam policy**, never with an **Anti-malware policy**.
 
-When you're finished on the **Filters** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished on the **Filters** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
 > [!TIP]
 > Filters are cached. The filters from the last sessions are selected by default the next time you open the **Quarantine** page. This behavior helps with triage operations.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific messages. Wildcards aren't supported. You can search by the following values:
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific messages. Wildcards aren't supported. You can search by the following values:
 
-- Sender email address
-- Subject. Use the entire subject of the message. The search isn't case-sensitive.
+- **Sender email address**
+- **Subject**: Use the entire subject of the message. The search isn't case-sensitive.
 
-After you enter the search criteria, press the ENTER key to filter the results.
+After you enter the search criteria, press the **Enter** key to filter the results.
 
 > [!NOTE]
-> The **Search** box searches for quarantined items in the current view, not all quarantined items. To search all quarantined items, use :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** and the resulting **Filters** flyout.
+> The **Search** box searches for quarantined items in the current view, not all quarantined items. To search all quarantined items, use :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** and the resulting **Filters** flyout.
 
 After you find a specific quarantined message, select the message to view details about it and to take action on it (for example, view, release, download, or delete the message).
 
 > [!TIP]
-> On mobile devices, the previously described controls are available under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More**.
+> On mobile devices, the previously described controls are available under :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More**.
 >
-> :::image type="content" source="media/quarantine-user-message-main-page-mobile-actions.png" alt-text="Selecting a quarantined message and then selecting More on a mobile device." lightbox="media/quarantine-user-message-main-page-mobile-actions.png":::
+> :::image type="content" source="media/quarantine-user-message-main-page-mobile-actions.png" alt-text="Screenshot of selecting a quarantined message and then selecting More on a mobile device." lightbox="media/quarantine-user-message-main-page-mobile-actions.png":::
 
 #### View quarantined message details
 
@@ -187,18 +183,20 @@ In the details flyout that opens, the following information is available:
   - **Received**: The date/time when the message was received.
   - **Expires**: The date/time when the message is automatically and permanently deleted from quarantine.
   - **Subject**
-  - **Quarantine reason**:
+  - **Quarantine reason**: For example:
     - The message was identified as **Spam**, **Bulk**, or **Phish**.
     - The message matched a mail flow rule (**Transport rule**).
     - The message was identified as **Malware**.
   - **Policy type**
-  - **Recipient count**
-  - **Recipients**: If the message contains multiple recipients, you might need to select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **Preview message** or :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **View message header** to see the complete list of recipients.
+  - **Recipient**
+
+    If the original message was sent to multiple recipients, select :::image type="icon" source="media/defender-portal-icon-preview-message.png" border="false"::: **Preview message** or :::image type="icon" source="media/defender-portal-icon-view-message-headers.png" border="false"::: **View message headers** to see the complete list of recipients.
+
   - **Sender override reason**
-  - **Released by**:
-    - User released: The user's email address is shown.
-    - Admin released: The value **Admin** is shown.
-    - System released: The value **System** is shown.
+  - **Released by**: For example:
+    - User released: The user's email address.
+    - Admin released: The value is **Admin**.
+    - System released: The value is **System**.
     - Other: The default value is **Admin**.
 - **Email details** section:
   - **Sender address**
@@ -206,7 +204,7 @@ In the details flyout that opens, the following information is available:
   - **Network message ID**
   - **Recipients**
 
-:::image type="content" source="media/quarantine-user-message-details-released-by.png" alt-text="The details flyout of a quarantined message" lightbox="media/quarantine-user-message-details-released-by.png":::
+:::image type="content" source="media/quarantine-user-message-details-with-actions.png" alt-text="Screenshot of the details flyout of a quarantined message." lightbox="media/quarantine-user-message-details-with-actions.png":::
 
 To take action on the message, see the next section.
 
@@ -221,26 +219,26 @@ To take action on the message, see the next section.
 
    - Select the message from the list by selecting the check box next to the first column. The available actions are no longer grayed out.
 
-     :::image type="content" source="media/quarantine-user-message-selected-message-actions.png" alt-text="Available actions after you select a quarantined message on the Email tab of the Quarantine page." lightbox="media/quarantine-user-message-selected-message-actions.png":::
+     :::image type="content" source="media/quarantine-user-message-selected-message-actions.png" alt-text="Screenshot of available actions after you select a quarantined message on the Email tab of the Quarantine page." lightbox="media/quarantine-user-message-selected-message-actions.png":::
 
    - Select the message from the list by clicking anywhere in the row other than the check box. The available actions are in the details flyout that opens.
 
-     :::image type="content" source="media/quarantine-user-message-details-flyout-actions.png" alt-text="The available actions in the details flyout of a quarantined message" lightbox="media/quarantine-user-message-details-flyout-actions.png":::
+     :::image type="content" source="media/quarantine-user-message-details-flyout-actions.png" alt-text="Screenshot of the available actions in the details flyout of a quarantined message" lightbox="media/quarantine-user-message-details-flyout-actions.png":::
 
-   Using either method to select the message, some actions are available under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More** or **More options**.
+   Using either method to select the message, some actions are available under :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More** or **More options**.
 
 After you select the quarantined message, the available actions are described in the following subsections.
 
 > [!TIP]
 > On mobile devices, the action experience is slightly different:
 >
-> - When you select the message by selecting the check box, all actions are under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More**:
+> - When you select the message by selecting the check box, all actions are under :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More**:
 >
->   :::image type="content" source="media/quarantine-user-message-main-page-mobile-actions.png" alt-text="Selecting a quarantined message and then selecting More on a mobile device." lightbox="media/quarantine-user-message-main-page-mobile-actions.png":::
+>   :::image type="content" source="media/quarantine-user-message-main-page-mobile-actions.png" alt-text="Screenshot of selecting a quarantined message and then selecting More on a mobile device." lightbox="media/quarantine-user-message-main-page-mobile-actions.png":::
 >
-> - When you select the message by clicking anywhere in the row other than the check box, most options are available under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More** in the details flyout:
+> - When you select the message by clicking anywhere in the row other than the check box, most options are available under :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More** in the details flyout:
 >
->   :::image type="content" source="media/quarantine-user-message-details-flyout-mobile-actions.png" alt-text="The details of a quarantined message with available actions shown." lightbox="media/quarantine-user-message-details-flyout-mobile-actions.png":::
+>   :::image type="content" source="media/quarantine-user-message-details-flyout-mobile-actions.png" alt-text="Screenshot of the details of a quarantined message with available actions shown." lightbox="media/quarantine-user-message-details-flyout-mobile-actions.png":::
 
 #### Release quarantined email
 
@@ -248,6 +246,8 @@ After you select the quarantined message, the available actions are described in
 > The quarantine policy assigned to the verdict that quarantined the message controls your ability to view quarantined messages. The quarantine policy might be the default quarantine policy as described in [Recommended email and collaboration threat policy settings for cloud organizations](recommended-settings-for-eop-and-office365.md).
 >
 > A quarantine policy can allow you to release a message or request the release of a message, but both options aren't available for the same message. A quarantine policy can also prevent you from releasing or requesting the release of quarantined messages.
+>
+> If the Release button is greyed out, this is an expected behavior. Some quarantined messages can't be released by users, based on the quarantine reason or assigned quarantine policy. In such cases, you can only request release, or an admin must release the message.
 
 This action isn't available for released email messages (the **Release status** value is **Released**).
 
@@ -255,8 +255,8 @@ Messages are automatically deleted from quarantine after the date shown in the *
 
 After you select the message, use either of the following methods to release it (deliver it to your mailbox):
 
-- **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: **Release**.
-- **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: **Release email**.
+- **On the Email tab**: Select :::image type="icon" source="media/defender-portal-icon-check-mark.png" border="false"::: **Release**.
+- **In the details flyout of the selected message**: Select :::image type="icon" source="media/defender-portal-icon-check-mark.png" border="false"::: **Release email**.
 
 In the **Release message to your Inbox** flyout that opens, select **Report message as having no threats** as appropriate, and then select **Release message**.
 
@@ -267,6 +267,9 @@ In the **Messages released to your Inbox** flyout that opens, select **Done**.
 Back on the **Email** tab, the **Release status** value of the message is **Released**.
 
 The message is delivered to your Inbox (or some other folder, depending on any [Inbox rules](https://support.microsoft.com/office/c24f5dea-9465-4df4-ad17-a50704d66c59) in your mailbox).
+
+> [!NOTE]
+> Releasing a message from quarantine re-delivers it to your mailbox rather than restoring it in place. As a result, the message appears in Outlook with the re-delivery time as the delivery timestamp instead of the original delivery time. The original send date is preserved in the message headers.
 
 #### Request the release of quarantined email
 
@@ -281,8 +284,8 @@ Messages are automatically deleted from quarantine after the date shown in the *
 
 After you select the message, use either of the following methods to request its release:
 
-- **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-request-release-icon.png" border="false"::: **Request release**.
-- **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-request-release-icon.png" border="false"::: **Request release**.
+- **On the Email tab**: Select :::image type="icon" source="media/defender-portal-icon-request-release.png" border="false"::: **Request release**.
+- **In the details flyout of the selected message**: Select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** \> :::image type="icon" source="media/defender-portal-icon-request-release.png" border="false"::: **Request release**.
 
 In the **Request release** flyout that opens, review the information, select **Request release**. In the **Release requested** flyout that opens, select **Done**.
 
@@ -296,15 +299,12 @@ Messages are automatically deleted from quarantine after the date shown in the *
 
 After you select the message, use either of the following methods to remove it:
 
-- **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete messages**.
-- **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete from quarantine**.
+- **On the Email tab**: Select :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete messages**.
+- **In the details flyout of the selected message**: Select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** \> :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete from quarantine**.
 
-In the **Delete (n) messages from quarantine** flyout that opens, use one of the following methods to delete the message:
+In the **Delete (n) messages from quarantine** flyout that opens, select **Permanently delete the message from quarantine** and then select **Delete**. The deleted message isn't recoverable.
 
-- Select **Permanently delete the message from quarantine** and then select **Delete**: The message is permanently deleted and isn't recoverable.
-- Select **Delete** only: The message is deleted, but is potentially recoverable.
-
-After you select **Delete** on the **Delete (n) messages from quarantine** flyout, you return to the **Email** tab where the message is no longer listed.
+Back on the **Email** tab, the deleted message is no longer listed.
 
 > [!TIP]
 > Admins can find out who deleted a quarantined message by searching the admin audit log. For instructions, see [Find who deleted a quarantined message](quarantine-admin-manage-messages-files.md#find-who-deleted-a-quarantined-message).
@@ -313,8 +313,8 @@ After you select **Delete** on the **Delete (n) messages from quarantine** flyou
 
 After you select the message, use either of the following methods to preview it:
 
-- **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-preview-message-icon.png" border="false"::: **Preview message**.
-- **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-preview-message-icon.png" border="false"::: **Preview message**.
+- **On the Email tab**: Select :::image type="icon" source="media/defender-portal-icon-preview-message.png" border="false"::: **Preview message**.
+- **In the details flyout of the selected message**: Select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** \> :::image type="icon" source="media/defender-portal-icon-preview-message.png" border="false"::: **Preview message**.
 
 In the flyout that opens, choose one of the following tabs:
 
@@ -325,12 +325,12 @@ In the flyout that opens, choose one of the following tabs:
 
 After you select the message, use either of the following methods to view the message headers:
 
-- **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More** \> :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **View message headers**.
-- **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **View message headers**.
+- **On the Email tab**: Select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More** \> :::image type="icon" source="media/defender-portal-icon-view-message-headers.png" border="false"::: **View message headers**.
+- **In the details flyout of the selected message**: Select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** \> :::image type="icon" source="media/defender-portal-icon-view-message-headers.png" border="false"::: **View message headers**.
 
 In the **Message header** flyout that opens, the message header (all header fields) is shown.
 
-Use :::image type="icon" source="media/m365-cc-sc-copy-icon.png" border="false"::: **Copy message header** to copy the message header to the clipboard.
+Use :::image type="icon" source="media/defender-portal-icon-copy.png" border="false"::: **Copy message header** to copy the message header to the clipboard.
 
 Select the **Microsoft Message Header Analyzer** link to analyze the header fields and values in depth. Paste the message header into the **Insert the message header you would like to analyze** section (CTRL+V or right-click and choose **Paste**), and then select **Analyze headers**.
 
@@ -343,8 +343,8 @@ The **Allow sender** action adds the message sender to the Safe Senders list in 
 
 After you select the message, use either of the following methods to add the message sender to the Safe Senders list in your mailbox:
 
-- **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-allow-sender-icon.png" border="false"::: **More** \> :::image type="icon" source="media/m365-cc-sc-block-sender-icon.png" border="false"::: **Allow sender**.
-- **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-allow-sender-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-block-sender-icon.png" border="false"::: **Allow sender**.
+- **On the Email tab**: Select :::image type="icon" source="media/defender-portal-icon-allow-sender.png" border="false"::: **More** \> :::image type="icon" source="media/defender-portal-icon-block-sender.png" border="false"::: **Allow sender**.
+- **In the details flyout of the selected message**: Select :::image type="icon" source="media/defender-portal-icon-allow-sender.png" border="false"::: **More options** \> :::image type="icon" source="media/defender-portal-icon-block-sender.png" border="false"::: **Allow sender**.
 
 The flyout that opens indicates when the sender was successfully added to your Safe Senders list. Select **Done**.
 
@@ -359,8 +359,8 @@ The **Block sender** action adds the message sender to the Blocked Senders list 
 
 After you select the message, use either of the following methods to add the message sender to the Blocked Senders list in your mailbox:
 
-- **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More** \> :::image type="icon" source="media/m365-cc-sc-block-sender-icon.png" border="false"::: **Block sender**.
-- **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-block-sender-icon.png" border="false"::: **Block sender**.
+- **On the Email tab**: Select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More** \> :::image type="icon" source="media/defender-portal-icon-block-sender.png" border="false"::: **Block sender**.
+- **In the details flyout of the selected message**: Select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** \> :::image type="icon" source="media/defender-portal-icon-block-sender.png" border="false"::: **Block sender**.
 
 In the **Block sender** flyout that opens, review the information about the sender, and then select **Block**.
 
@@ -373,8 +373,8 @@ The **Remove sender from user block list** is available only if the sender of th
 
 After you select the message, use either of the following methods to remove the sender from your Block Senders list:
 
-- **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More** \> :::image type="icon" source="media/m365-cc-sc-remove-sender-icon.png" border="false"::: **Remove sender from user block list**.
-- **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-remove-sender-icon.png" border="false"::: **Remove sender from user block list**.
+- **On the Email tab**: Select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More** \> :::image type="icon" source="media/defender-portal-icon-remove-sender.png" border="false"::: **Remove sender from user block list**.
+- **In the details flyout of the selected message**: Select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** \> :::image type="icon" source="media/defender-portal-icon-remove-sender.png" border="false"::: **Remove sender from user block list**.
 
 The flyout that opens indicates when the sender was successfully removed from your Blocked Senders list. Select **Done**.
 
@@ -397,7 +397,7 @@ When a potentially malicious chat message is detected in Microsoft Teams, zero-h
 
 In the Microsoft Defender portal at https://security.microsoft.com, go to **Email & collaboration** > **Review** > **Quarantine** > **Teams messages** tab. Or, to go directly to the **Teams messages** tab on the **Quarantine** page, use <https://security.microsoft.com/quarantine?viewid=Teams>.
 
-You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default columns are:
+You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. The default columns are:
 
 - **Teams message text**: Contains the subject for the teams message.
 - **Date quarantined**: Showed when the message was quarantined.
@@ -406,7 +406,7 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Quarantine reason**: Available options are **High confidence phish** and **Malware**.
 - **Expires**: Indicates the time after which the message is removed from quarantine. By default, this value is 30 days.
 
-To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filters** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter**. The following filters are available in the **Filters** flyout that opens:
 
 - **Sender address**
 - **Time received**:
@@ -423,9 +423,9 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **Quarantine reason**: Available values are **Malware** and **High confidence phishing**.
 - **Status**: Select **Needs review** and **Released**.
 
-When you're finished in the **Filters** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished in the **Filters** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific Teams messages. Wildcards aren't supported.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific Teams messages. Wildcards aren't supported.
 
 After you find a specific quarantined Teams message, select the message to view details about it and to take action on it (for example, view, release, download, or delete the message).
 

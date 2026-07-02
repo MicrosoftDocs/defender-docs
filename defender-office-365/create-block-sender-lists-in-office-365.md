@@ -1,23 +1,17 @@
 ---
 title: Create blocklists
-f1.keywords: 
-  - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-audience: ITPro
+ms.author: chrisda
 ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier2
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150s
 description: Admins can learn about the available and preferred options to block inbound messages to Microsoft 365.
 ms.service: defender-office-365
-ms.date: 07/03/2025
+ms.date: 10/06/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -87,3 +81,6 @@ Regardless of the conditions or exceptions that you use to identify the messages
 When it's not possible to use one of the other options to block a sender, _only then_ should you use the IP Block List in the default connection filter policy. For more information, see [Configure connection filtering](connection-filter-policies-configure.md). It's important to keep the number of blocked IPs to a minimum, so we don't recommend blocking entire IP address ranges.
 
 You should _especially_ avoid adding IP address ranges that belong to consumer services (for example, outlook.com) or shared infrastructures. You also need to review the list of blocked IP addresses as part of regular maintenance.
+
+> [!TIP]
+> The IP Block List accepts Classless Inter-Domain Routing (CIDR) IP address ranges from /24 through /32.

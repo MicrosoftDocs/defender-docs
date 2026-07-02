@@ -1,12 +1,8 @@
 ---
 title: Review and classify critical assets in Microsoft Security Exposure Management
 description: Learn how to manage critical assets in Microsoft Security Exposure Management.
-ms.author: dlanger
-author: dlanger
-manager: ornat-spodek
 ms.topic: overview
-ms.service: exposure-management
-ms.date: 07/23/2025
+ms.date: 09/08/2025
 ---
 
 # Review and classify critical assets
@@ -34,6 +30,9 @@ Impact analysis and crown jewels analysis are essential methodologies for identi
 
 The NIST Cybersecurity Framework (CSF) 800-53 also emphasizes guidance for asset management and criticality analysis, as outlined in ID.AM-05, which can be found at: [https://csf.tools/reference/nist-cybersecurity-framework/v2-0/id/id-am/id-am-05/](https://csf.tools/reference/nist-cybersecurity-framework/v2-0/id/id-am/id-am-05/).
 
+> [!NOTE]
+> When multiple classification rules apply to an asset, the rule with the highest criticality level takes precedence. This classification remains in effect until the asset no longer meets the criteria for that rule, at which point it will automatically revert to the next applicable classification level.
+
 ## Prerequisites
 
 Before you begin, ensure you meet the following requirements for working with critical assets in Microsoft Security Exposure Management.
@@ -56,7 +55,7 @@ Review critical assets as follows.
 1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Settings > Microsoft XDR > Rules > Critical asset management**.
 1. On the **Critical asset management** page, review predefined and custom critical asset classifications, including the number of assets in the classification, whether assets are on or off, and criticality levels.
 
-:::image type="content" source="./media/classify-critical-assets/critical-asset-management-window.png" alt-text="Screenshot of the Critical asset management window.":::
+   :::image type="content" source="./media/classify-critical-assets/critical-asset-management-window.png" alt-text="Screenshot of the Critical asset management window.":::
 
 > [!NOTE]
 > You can also see critical assets in **Assets > Devices** > **Classify critical asset**. In addition, you can view the **Critical Asset Protection** initiative in **Exposure insights -> Initiatives**.
@@ -102,7 +101,7 @@ Set levels as follows.
 1. In the **Overview** tab, select the desired criticality level.
 1. Select **Save**.
 
-:::image type="content" source="./media/classify-critical-assets/edit-criticality-levels.png" alt-text="Screenshot of the Critical asset management criticality editing feature.":::
+   :::image type="content" source="./media/classify-critical-assets/edit-criticality-levels.png" alt-text="Screenshot of the Critical asset management criticality editing feature.":::
 
 > [!NOTE]
 > You can set critical levels manually in the device inventory. We recommend creating criticality rules that allow broad application of critical levels across assets.
@@ -118,16 +117,16 @@ Edit custom classifications as follows.
 
 1. On the **Critical asset management** page, select the relevant asset classification. The **Pending Approval** column helps find classifications with assets that didn't meet the automatic classification threshold and require user approval.
 
-  :::image type="content" source="media/classify-critical-assets/add-assets.png" alt-text="Screenshot of predefined classifications in the asset management interface.":::
+    :::image type="content" source="media/classify-critical-assets/add-assets.png" alt-text="Screenshot of predefined classifications in the asset management interface.":::
 
 1. To see all assets in the classification that are currently considered critical, select the **Assets** tab.
 1. To approve assets that fit the classification but are out of threshold, browse to **Pending Approval**.
 1. Review the listed assets. Select the **plus** button next to the assets you want to add.
 
-> [!NOTE]
-> **Pending Approval** only displays when there are assets to review.
+    > [!NOTE]
+    > **Pending Approval** only displays when there are assets to review.
 
-:::image type="content" source="media/classify-critical-assets/pending-approval.png" alt-text="Screenshot of the pending approval tab in asset management.":::
+   :::image type="content" source="media/classify-critical-assets/pending-approval.png" alt-text="Screenshot of the pending approval tab in asset management.":::
 
 You can change the criticality levels and turn off the classification for all assets. You can also edit and delete custom critical assets.
 
@@ -137,14 +136,14 @@ You can change the criticality levels and turn off the classification for all as
 1. To see all assets in the classification that are currently considered critical, select the **Assets** tab.
 1. Select the **X** next to the assets you want to remove.
 
-:::image type="content" source="media/classify-critical-assets/assets-tab.png" alt-text="Screenshot of the assets tab in asset management.":::
+   :::image type="content" source="media/classify-critical-assets/assets-tab.png" alt-text="Screenshot of the assets tab in asset management.":::
 
 ## Sort by criticality
 
 1. Select **Devices** in the **Device Inventory**.
 1. Sort by **Criticality level** to view business critical assets with a "very high" level of criticality.
 
-:::image type="content" source="./media/classify-critical-assets/device-inventory.png" alt-text="Screenshot of the Device inventory window showing criticality sorting.":::
+   :::image type="content" source="./media/classify-critical-assets/device-inventory.png" alt-text="Screenshot of the Device inventory window showing criticality sorting.":::
 
 ## Prioritize recommendations for critical assets
 

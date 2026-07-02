@@ -69,6 +69,8 @@
           href: plan-incident-response.md
         - name: Correlation and merging
           href: /defender-xdr/alerts-incidents-correlation?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json&tabs=defender-portal
+        - name: Use tasks to handle incident workflow
+          href: /defender-xdr/split-incidents-into-tasks?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
         - name: Investigate incidents in Security Copilot
           href: /azure/sentinel/sentinel-security-copilot?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json
         - name: Investigate with Microsoft Copilot in Microsoft Defender
@@ -94,6 +96,10 @@
           items: 
             - name: Overview
               href: mto-overview.md
+            - name: MSSP deployment guide
+              href: playbook-managed-security.md
+            - name: Configure delegated access with governance relationships
+              href: governance-relationships.md
             - name: Set up multitenant management
               href: mto-requirements.md
             - name: View and manage incidents and alerts
@@ -111,10 +117,14 @@
               href: mto-dashboard.md
             - name: Manage tenants
               href: mto-tenants.md
+            - name: Create and manage tenant groups
+              href: mto-tenant-groups.md
             - name: Create and manage endpoint security policies
               href: mto-endpoint-security-policy.md
-            - name: Manage content distribution with tenant groups
-              href: mto-tenantgroups.md
+            - name: Manage content distribution across tenants
+              href: mto-distribution-profiles.md
+            - name: Workbooks in multitenant management
+              href: mto-workbooks.md
             - name: Manage tenants in other Microsoft clouds
               href: mto-cross-cloud.md
             - name: Manage unified role-based access control (URBAC) for multitenant management

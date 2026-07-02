@@ -1,18 +1,15 @@
 ---
 title: Microsoft Defender portal overview
 description: Learn about the Microsoft services and features available in the Microsoft Defender portal.
-search.appverid: met150
-ms.service: unified-secops-platform
-ms.author: bagol
-author: batamig
-ms.localizationpriority: medium
+author: guywi-ms
+ms.author: guywild
 ms.date: 11/14/2024
-audience: ITPro
 ms.collection:
 - M365-security-compliance
 - tier1
 - usx-security
 ms.topic: concept-article
+ms.custom: sfi-image-nochange
 
 # customer intent: As a security operations center leader, I want to learn about the services and features available in the Defender portal to help me determine whether they meet my organization's requirements.
 ---
@@ -46,7 +43,7 @@ In the Defender portal **Permissions** page, use the following methods to config
 
 Methods | Details
 --- | ---
-[Global Microsoft Entra roles](/defender-xdr/m365d-permissions) | Accounts with the following Global Microsoft Entra roles can access Microsoft Defender XDR functionality and data: <ul><li>Global administrator</li><li>Security administrator</li><li>Security Operator</li><li>Global Reader</li><li>Security Reader</li>
+[Global Microsoft Entra roles](/defender-xdr/m365d-permissions) | Accounts with the following Global Microsoft Entra roles can access Microsoft Defender XDR functionality and data: <ul><li>Security administrator or higher</li><li>Security Operator</li><li>Global Reader</li><li>Security Reader</li>
 [Custom roles](/defender-xdr/custom-roles) | Allow access to specific data, tasks, and features using custom roles. Custom roles control granular access, and can be used together with Microsoft Entra global roles.
 [Unified RBAC](/defender-xdr/manage-rbac) | Unified role-based access control (RBAC) provides a permissions management model for controlling user permissions in the Defender portal, and across services within the portal.
 
@@ -198,7 +195,7 @@ In the **Identities** section of the Defender portal, monitor user and account h
 
 Feature | Details
 --- | ---
-**ITDR dashboard** | On the [Identity threat detection and response (ITDR) dashboard](/defender-for-identity/dashboard), get insights and real-time data about the security state of users and accounts.<br/><br/> The dashboard includes information about Defender for Identity deployment, information about highly privileged identities, and information about identity-related incidents.<br/><br/> If there's a problem with a Defender for Identity workspace, it's raised on the [Health issues page](/defender-for-identity/health-alerts).
+**Identity Security dashboard** | On the [Identity Security dashboard](/defender-for-identity/dashboard), get insights and real-time data about the security state of users and accounts.<br/><br/> The dashboard includes information about Defender for Identity deployment, information about highly privileged identities, and information about identity-related incidents.<br/><br/> If there's a problem with a Defender for Identity workspace, it's raised on the [Health issues page](/defender-for-identity/health-alerts).
 **Health issues** | Any Defender for Identity global or sensor-based health issues are displayed on this page.
 **Tools** | Access common tools to help you manage Defender for Identity.
 

@@ -3,7 +3,7 @@ title: Microsoft Security Exposure Management pre-release Disclaimer
 description: Disclaimer for pre-release version of Microsoft Security Exposure Management.
 ms.date: 03/21/2024
 ms.reviewer: 
-manager: dansimp
+manager: orspodek
 ms.author: macapara
 author: mjcaparas
 ms.service: exposure-management

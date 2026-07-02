@@ -2,32 +2,24 @@
 title: Detect and block potentially unwanted applications with Microsoft Defender for Endpoint on Linux
 description: Detect and block Potentially Unwanted Applications (PUA) using Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
 ms.topic: concept-article
 ms.subservice: linux
-search.appverid: met150
 ms.date: 10/11/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Detect and block potentially unwanted applications with Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 The potentially unwanted application (PUA) protection feature in Defender for Endpoint on Linux can detect and block PUA files on endpoints in your network.
 
@@ -46,8 +38,8 @@ When a PUA is detected on an endpoint, Defender for Endpoint on Linux keeps a re
 PUA protection in Defender for Endpoint on Linux can be configured in one of the following ways:
 
 - **Off**: PUA protection is disabled.
-- **Audit**: PUA files are reported in the product logs, but not in Microsoft Defender XDR. No record of the infection is stored in the threat history and no action is taken by the product.
-- **Block**: PUA files are reported in the product logs and in Microsoft Defender XDR. A record of the infection is stored in the threat history and action is taken by the product.
+- **Audit**: PUA files are reported in the product logs, but not in the Defender portal. No record of the infection is stored in the threat history and no action is taken by the product.
+- **Block**: PUA files are reported in the product logs and in the Defender portal. A record of the infection is stored in the threat history and action is taken by the product.
 
 > [!WARNING]
 > By default, PUA protection is configured in **Audit** mode.
@@ -69,4 +61,5 @@ In your enterprise, you can configure PUA protection from a management console, 
 ## Related articles
 
 - [Set preferences for Defender for Endpoint on Linux](linux-preferences.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

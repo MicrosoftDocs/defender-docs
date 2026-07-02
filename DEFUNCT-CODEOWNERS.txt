@@ -1,0 +1,2 @@
+# These owners will be the default owners for everything in the repo unless a later match takes precedence
+* @batamig @abbyMSFT @DeCohen @paulinbar @chrisda @limwainstein @orspod @DebLanger @ElazarK @janetjo2510 @EdB-MSFT @guywi-ms @mjcaparas @mberdugo @sbreingold-ms @poliveria @snicklezzz @MicrosoftDocs/msecd-codeowners

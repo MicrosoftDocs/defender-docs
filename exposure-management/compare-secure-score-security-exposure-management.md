@@ -1,11 +1,7 @@
 ---
 title: Compare Microsoft Secure Score and Microsoft Security Exposure Management 
 description: Compare Microsoft secure score and Microsoft Security Exposure Management.
-ms.author: dlanger
-author: dlanger
-manager: rayne-wiselman
 ms.topic: overview
-ms.service: exposure-management
 ms.date: 11/04/2024
 ---
 

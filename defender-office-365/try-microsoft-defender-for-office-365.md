@@ -1,24 +1,18 @@
 ---
 title: Try and evaluate Defender for Office 365
 description: Learn how to evaluate and try the capabilities of Microsoft Defender for Office 365 without affecting your existing mail flow.
-f1.keywords:
-  - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-audience: ITPro
+ms.author: chrisda
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.collection:
   - m365-security
   - tier1
-ms.custom: 
+ms.custom:
+  - sfi-ga-nochange
 ms.service: defender-office-365
 ROBOTS:
-ms.date: 04/18/2025
+ms.date: 05/22/2026
 ---
 
 # Try Microsoft Defender for Office 365
@@ -57,7 +51,7 @@ For pricing information, see [Microsoft Defender for Office 365](https://www.mic
 
 ### Policies
 
-Defender for Office 365 includes the default email protections for cloud mailboxes and features exclusive to Defender for Office 365.
+Defender for Office 365 includes [built-in security features for all cloud mailboxes](eop-about.md) and features exclusive to Defender for Office 365.
 
 The email and collaboration protection features of Microsoft 365 are implemented using policies. **Policies exclusive to Defender for Office 365 are created for you as needed**:
 
@@ -102,9 +96,9 @@ The key factors that determine which modes are available to you are:
 - Whether or not you currently have Defender for Office 365 (Plan 1 or Plan 2) as described in the next section.
 - How email is delivered to your Microsoft 365 organization as described in the following scenarios:
 
-  - Mail from the internet flows directly into Microsoft 365, but your current subscription has only the [default email protections for cloud mailboxes](eop-about.md) or [Defender for Office 365 Plan 1](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet).
+  - Mail from the internet flows directly into Microsoft 365, but your current subscription has [the built-in security features for all cloud mailboxes](eop-about.md) only or [Defender for Office 365 Plan 1](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet).
 
-    :::image type="content" source="media/mdo-trial-mail-flow.png" alt-text="Mail flows from the internet into Microsoft 365, with the default email protections for cloud mailboxes and/or Defender for Office 365 Plan 1." lightbox="media/mdo-trial-mail-flow.png":::
+    :::image type="content" source="media/mdo-trial-mail-flow.png" alt-text="Mail flows from the internet into Microsoft 365, with the built-in security features for all cloud mailboxes and/or Defender for Office 365 Plan 1." lightbox="media/mdo-trial-mail-flow.png":::
 
     In these environments, **audit mode** or **blocking mode** are available, depending on your licensing as explained in the next section.
 
@@ -178,16 +172,16 @@ Remember, when you evaluate or try Defender for Office 365 in audit mode, specia
 
    - **All users**: The default and recommended option.
    - **Specific users**: If you select this option, you need to select the internal recipients that the evaluation applies to:
-     - **Users**: The specified mailboxes, mail users, or mail contacts.
+     - **Users**: The specified mailboxes, or mail users.
      - **Groups**:
        - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
-       - The specified Microsoft 365 Groups.
+       - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
      - **Domains**: All recipients in the organization with a primary email address in the specified [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 
      > [!TIP]
      > Subdomains are automatically included unless you specifically exclude them. For example, a policy that includes contoso.com also includes marketing.contoso.com unless you exclude marketing.contoso.com.
 
-     Click in the box, start typing a value, and select the value from the results below the box. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value in the box.
+     Click in the box, start typing a value, and select the value from the results below the box. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the value in the box.
 
      For users or groups, you can use most identifiers (name, display name, alias, email address, account name, etc.), but the corresponding display name is shown in the results. For users, enter an asterisk (\*) by itself to see all available values.
 
@@ -256,16 +250,16 @@ Remember, when you try Defender for Office 365 in **blocking mode**, the Standar
 
    - **All users**: The default and recommended option.
    - **Select users**: If you select this option, you need to select the internal recipients that the trial applies to:
-     - **Users**: The specified mailboxes, mail users, or mail contacts.
+     - **Users**: The specified mailboxes, or mail users.
      - **Groups**:
        - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
-       - The specified Microsoft 365 Groups.
+       - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
      - **Domains**: All recipients in the organization with a primary email address in the specified [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 
      > [!TIP]
      > Subdomains are automatically included unless you specifically exclude them. For example, a policy that includes contoso.com also includes marketing.contoso.com unless you exclude marketing.contoso.com.
 
-     Click in the box, start typing a value, and select the value from the results below the box. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value in the box.
+     Click in the box, start typing a value, and select the value from the results below the box. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the value in the box.
 
      For users or groups, you can use most identifiers (name, display name, alias, email address, account name, etc.), but the corresponding display name is shown in the results. For users, enter an asterisk (\*) by itself to see all available values.
 
@@ -298,7 +292,7 @@ In the **Manage MDO evaluation settings** flyout that opens, the following infor
 
 - Whether the evaluation is on is shown at the top of the flyout (**Evaluation on** or **Evaluation off**). This information is also available on the **Microsoft Defender for Office 365 evaluation** page.
 
-  The :::image type="icon" source="media/m365-cc-sc-turn-on-off-icon.png" border="false"::: **Turn off** or **Turn on** action allows you to turn off or turn on the evaluation policies.
+  The :::image type="icon" source="media/defender-portal-icon-turn-on-off.png" border="false"::: **Turn off** or **Turn on** action allows you to turn off or turn on the evaluation policies.
 
 - How many days are left in the evaluation is shown at the top of the flyout (**nn days remaining**).
 
@@ -324,14 +318,14 @@ In the **Manage MDO evaluation settings** flyout that opens, the following infor
 
     To modify the settings, select **Edit impersonation settings**.
 
-When you're finished in the **Manage MDO evaluation settings** flyout, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: **Close**.
+When you're finished in the **Manage MDO evaluation settings** flyout, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: **Close**.
 
 ### Convert to Standard protection
 
 For your evaluation or trial, you can switch from **audit mode** (evaluation policies) to **blocking mode** (Standard preset security policy) using either of the following methods:
 
 - <u>On the **Microsoft Defender for Office 365 evaluation** page</u>: Select **Convert to standard protection**
-- <u>In the **Manage MDO evaluation settings** flyout</u>: On the **Microsoft Defender for Office 365 evaluation** page, select **Manage evaluation settings**. In the details flyout that opens, select :::image type="icon" source="media/m365-cc-sc-convert-to-std-prot-icon.png" border="false"::: **Convert to standard protection**.
+- <u>In the **Manage MDO evaluation settings** flyout</u>: On the **Microsoft Defender for Office 365 evaluation** page, select **Manage evaluation settings**. In the details flyout that opens, select :::image type="icon" source="media/defender-portal-icon-convert-to-standard-protection.png" border="false"::: **Convert to standard protection**.
 
 After you select **Convert to standard protection**, read the information in the dialog that opens, and then select **Continue**.
 
@@ -342,7 +336,7 @@ You're taken to the **Apply standard protection** wizard on the **Preset securit
   1. Turn off the Standard preset security policy on the **Preset security policies** page at <https://security.microsoft.com/presetSecurityPolicies>.
   2. On the **Microsoft Defender for Office 365 evaluation** page at <https://security.microsoft.com/atpEvaluation>, verify the value **Evaluation on** is shown.
 
-     If **Evaluation off** is shown, select **Manage evaluation settings**. In the **Manage MDO evaluation settings** flyout that opens, select :::image type="icon" source="media/m365-cc-sc-turn-on-off-icon.png" border="false"::: **Turn on**.
+     If **Evaluation off** is shown, select **Manage evaluation settings**. In the **Manage MDO evaluation settings** flyout that opens, select :::image type="icon" source="media/defender-portal-icon-turn-on-off.png" border="false"::: **Turn on**.
 
   3. Select **Manage evaluation settings** to verify the users that the evaluation applies to in the **Users, groups, and domains** section in the **Manage MDO evaluation settings** details flyout that opens.
 
@@ -403,7 +397,7 @@ In **audit mode**, you're looking for reports that show detections by the evalua
 
 - The **Microsoft Defender for Office 365 evaluation** page at <https://security.microsoft.com/atpEvaluation> consolidates the detections from the standard reports that are available in Defender for Office 365. The reports on this page are primarily filtered by **Evaluation: Yes** to show detections by the evaluation policies only, but most reports also use other clarifying filters.
 
-  By default, the report summaries on the page show data for the last 30 days, but you can filter the date range by selecting :::image type="icon" source="media/m365-cc-sc-add-internal-icon.png" border="false"::: **30 days** and selecting from following values that are less than 30 days:
+  By default, the report summaries on the page show data for the last 30 days, but you can filter the date range by selecting :::image type="icon" source="media/defender-portal-icon-add-internal.png" border="false"::: **30 days** and selecting from following values that are less than 30 days:
 
   - **24 hours**
   - **7 days**
@@ -412,7 +406,7 @@ In **audit mode**, you're looking for reports that show detections by the evalua
 
   The date range filter affects the data displayed in the report summaries on the page and in the main report when you select **View details** in a card.
 
-  Select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Download** to download the chart data to a .csv file.
+  Select :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Download** to download the chart data to a .csv file.
 
   - The following reports on the **Microsoft Defender for Office 365 evaluation** page contain filtered information from specific views in the [Threat protection status report](reports-email-security.md#threat-protection-status-report):
     - **Email links**:
@@ -448,7 +442,7 @@ The following permissions are required in [Microsoft Entra ID](/entra/identity/r
 For more information about Microsoft Entra permissions in the Microsoft Defender portal, see [Microsoft Entra roles in the Microsoft Defender portal](mdo-portal-permissions.md#microsoft-entra-roles-in-the-microsoft-defender-portal)
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Frequently asked questions
 

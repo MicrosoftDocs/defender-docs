@@ -2,11 +2,9 @@
 title: Get started with your Microsoft Defender for Endpoint deployment
 description: Learn how to get started with the deploy, setup, licensing validation, tenant configuration, network configuration stages.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection:
   - m365-security
   - m365solution-endpointprotect
@@ -14,22 +12,21 @@ ms.collection:
   - highpri
   - tier1
   - essentials-get-started
-ms.custom: admindeeplinkDEFENDER
+ms.custom:
+  - admindeeplinkDEFENDER
+  - sfi-ga-nochange
 ms.topic: get-started
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 06/19/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Get started with your Microsoft Defender for Endpoint deployment
 
-**Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 [!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
 
@@ -42,10 +39,10 @@ The steps to deploy Defender for Endpoint are:
 :::image type="content" source="/defender/media/defender-endpoint/onboard-mde.png" alt-text="The deployment steps" lightbox="/defender/media/defender-endpoint/onboard-mde.png":::
 
 1. [Step 1 - Set up Microsoft Defender for Endpoint deployment](production-deployment.md): This step focuses on getting your environment ready for deployment.
-2. [Step 2 - Assign roles and permissions](prepare-deployment.md): Identify and assign roles and permissions to view and manage Defender for Endpoint.
-3. [Step 3 - Identify your architecture and choose your deployment method](deployment-strategy.md): Identify your architecture and the deployment method that best suits your organization.
-4. [Step 4 - Onboard devices](onboarding.md): Assess and onboard your devices to Defender for Endpoint.
-5. [Step 5 - Configure capabilities](onboard-configure.md): You're now ready to configure Defender for Endpoint security capabilities to protect your devices.
+1. [Step 2 - Assign roles and permissions](prepare-deployment.md): Identify and assign roles and permissions to view and manage Defender for Endpoint.
+1. [Step 3 - Identify your architecture and choose your deployment method](deployment-strategy.md): Identify your architecture and the deployment method that best suits your organization.
+1. [Step 4 - Onboard devices](onboarding.md): Assess and onboard your devices to Defender for Endpoint.
+1. [Step 5 - Configure capabilities](onboard-configure.md): You're now ready to configure Defender for Endpoint security capabilities to protect your devices.
 
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
@@ -72,4 +69,5 @@ Here's a list of prerequisites required to deploy Defender for Endpoint:
 
 Start your deployment with [Step 1 - Set up Microsoft Defender for Endpoint deployment](production-deployment.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

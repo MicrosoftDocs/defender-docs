@@ -3,28 +3,24 @@ title: API Explorer in Microsoft Defender for Endpoint
 ms.reviewer:
 description: Use the API Explorer to construct and do API queries, test, and send requests for any available API
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 12/18/2020
+appliesto:
+  - Microsoft Defender for Endpoint
 ---
 
 # API Explorer
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 
 The Microsoft Defender for Endpoint API Explorer is a tool that helps you explore various Defender for Endpoint APIs interactively.
 
@@ -59,7 +55,8 @@ Some of the samples may require specifying a parameter in the URL, for example, 
 
 ## FAQ
 
-**Do I need to have an API token to use the API Explorer?** <br>
+### Do I need to have an API token to use the API Explorer?**
+
 Credentials to access an API aren't needed. The API Explorer uses the Defender for Endpoint management portal token whenever it makes a request.
 
 The logged-in user authentication credential is used to verify that the API Explorer is authorized to access data on your behalf.

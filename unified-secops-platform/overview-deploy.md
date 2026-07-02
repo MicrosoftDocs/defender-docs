@@ -1,9 +1,8 @@
 ---
 title: Deploy for Unified Security Operations | Microsoft Defender
 description: Deploy Microsoft Defender portal services for unified security operations, including Microsoft Defender XDR, Microsoft Sentinel, and other Microsoft Defender services.
-author: batamig
-ms.author: bagol
-ms.service: unified-secops-platform
+author: guywi-ms
+ms.author: guywild
 ms.topic: how-to #Don't change.
 ms.date: 03/17/2025
 ms.collection:

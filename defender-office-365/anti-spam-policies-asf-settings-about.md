@@ -1,15 +1,9 @@
 ---
 title: ASF settings in anti-spam policies
-f1.keywords: 
-  - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-audience: ITPro
+ms.author: chrisda
 ms.topic: article
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: b286f853-b484-4af0-b01f-281fffd85e7a
 ms.collection: 
   - m365-security
@@ -20,7 +14,7 @@ description: Admins can learn about the Advanced Spam Filter (ASF) settings that
 ms.service: defender-office-365
 ms.date: 08/26/2024
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -38,9 +32,9 @@ In all organizations with cloud mailboxes, Advanced Spam Filter (ASF) settings i
 >
 > ASF adds `X-CustomSpam:` X-header fields to messages _after_ the messages have been processed by Exchange mail flow rules (also known as transport rules), so you can't use mail flow rules to identify and act on messages that were filtered by ASF. You can use [Inbox rules](https://support.microsoft.com/office/8400435c-f14e-4272-9004-1548bb1848f2) in mailboxes to affect the delivery of the message.
 
-The following sections describe the ASF settings and options that are available in anti-spam policies in the Microsoft Defender portal, and in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) ([New-HostedContentFilterPolicy](/powershell/module/exchange/new-hostedcontentfilterpolicy) and [Set-HostedContentFilterPolicy](/powershell/module/exchange/set-hostedcontentfilterpolicy)).
+The following sections describe the ASF settings and options that are available in anti-spam policies in the Microsoft Defender portal, and in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) ([New-HostedContentFilterPolicy](/powershell/module/exchangepowershell/new-hostedcontentfilterpolicy) and [Set-HostedContentFilterPolicy](/powershell/module/exchangepowershell/set-hostedcontentfilterpolicy)).
 
-For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md).
+For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md). For troubleshooting information about ASF false positives, see [ASF settings that cause false positives](anti-spam-policies-troubleshooting.md#asf-settings-that-cause-false-positives).
 
 > [!TIP]
 > ASF settings aren't enabled in [Standard or Strict preset security policies](preset-security-policies.md), so you can configure ASF settings in the default anti-spam policy or custom anti-spam policies only. For more information about using threat policies, see [Determine your threat policy strategy](mdo-deployment-guide.md#determine-your-threat-policy-strategy).
@@ -52,7 +46,7 @@ For each ASF setting, the following options are available in anti-spam policies:
 - **On**: ASF adds the corresponding X-header field to the message:
   - For [Increase spam score settings](#increase-spam-score-settings), the message has a higher chance of being marked as**Spam**.
   - For [Mark as spam settings](#mark-as-spam-settings), the message is marked as **Spam** or **High confidence spam**.
-- **Off**: The ASF setting is disabled. This is the default value.
+- **Off**: The ASF setting is disabled. This value is the default.
 - **Test**: The ASF setting is in Test Mode. What happens to the message is determined by the **Test mode** (_TestModeAction_) value:
   - **None**: Message delivery is unaffected by the ASF detection. The message is still subject to other types of filtering and rules.
   - **Add default X-header text** (_AddXHeader_): The X-header value `X-CustomSpam: This message was filtered by the custom spam filter option` is added to the message. You can use this value in Inbox rules (not mail flow rules) to affect the delivery of the message.

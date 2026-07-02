@@ -6,11 +6,12 @@ summary: Bring together the full capabilities of Microsoft Sentinel, Microsoft D
 metadata:
   title: Unified security operations documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Bring together the full capabilities of Microsoft Sentinel, Defender XDR, Microsoft Security Exposure Management, and generative AI into the Defender portal. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: unified-secops-platform #Required; use either service or product per approved list. 
+  ms.service: microsoft-defender
+  ms.subservice: unified-security-operations #Required; use either service or product per approved list. 
   ms.topic: landing-page # Required
   ms.collection: usx-security # Optional; Remove if no collection is used.
-  ms.author: bagol
-  author: batamig
+  ms.author: guywild
+  author: guywi-ms
   ms.date: 12/03/2024 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | tutorial | overview | quickstart | reference | sample | tutorial | video | whats-new

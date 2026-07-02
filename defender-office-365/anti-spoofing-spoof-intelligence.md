@@ -1,27 +1,21 @@
 ---
 title: Spoof intelligence insight
-f1.keywords:
-  - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-audience: Admin
+ms.author: chrisda
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MOE150
-  - MET150
 ms.assetid: 978c3173-3578-4286-aaf4-8a10951978bf
 ms.collection:
   - m365-security
   - tier2
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
 description: Admins can learn about the spoof intelligence insight in Microsoft 365.
 ms.service: defender-office-365
 ms.date: 07/03/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -78,7 +72,7 @@ The rest of this article explains how to use the spoof intelligence insight in t
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 - For our recommended settings for anti-phishing policies, including spoof intelligence, see [Anti-phishing policy settings for all cloud mailboxes](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-for-all-cloud-mailboxes).
 
@@ -88,7 +82,7 @@ The rest of this article explains how to use the spoof intelligence insight in t
 
 ## Find the spoof intelligence insight in the Microsoft Defender portal
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Tenant Allow/Block Lists** in the **Rules** section. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Tenant Allow/Block Lists** in the **Rules** section. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. Select the **Spoofed senders** tab.
 
@@ -131,18 +125,18 @@ On the **Spoof intelligence insight** page, you can sort the entries by clicking
 
     For more information, see [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md).
 
-To change the list of spoofed senders from normal to compact spacing, select :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
+To change the list of spoofed senders from normal to compact spacing, select :::image type="icon" source="media/defender-portal-icon-standard.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/defender-portal-icon-compact.png" border="false"::: **Compact list**.
 
-To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
 
 - **Spoof type**: The available values are **Internal** and **External**.
 - **Action**: The available values are **Allow** and **Block**
 
-When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific entries.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific entries.
 
-Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of spoof detections to a CSV file.
+Use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to export the list of spoof detections to a CSV file.
 
 ### View details about spoof detections
 
@@ -171,7 +165,7 @@ To change the spoof detection from **Allow** to **Block** or vice-versa, see the
 On the **Spoof intelligence insight** page at <https://security.microsoft.com/spoofintelligence>, use either of the following methods to override the spoof intelligence verdict:
 
 - Select one or more entries from the list by selecting the check box next to the first column.
-  1. Select the :::image type="icon" source="media/m365-cc-sc-bulk-actions-icon.png" border="false"::: **Bulk actions** action that appears.
+  1. Select the :::image type="icon" source="media/defender-portal-icon-bulk-actions.png" border="false"::: **Bulk actions** action that appears.
   2. In the **Bulk actions** flyout that opens, select **Allow to spoof** or **Block from spoofing**, and then select **Apply**.
 
 - Select the entry from the list by clicking anywhere in the row other than the check box.
@@ -199,7 +193,7 @@ To view the information in the spoof intelligence insight, run the following com
 Get-SpoofIntelligenceInsight
 ```
 
-For detailed syntax and parameter information, see [Get-SpoofIntelligenceInsight](/powershell/module/exchange/get-spoofintelligenceinsight).
+For detailed syntax and parameter information, see [Get-SpoofIntelligenceInsight](/powershell/module/exchangepowershell/get-spoofintelligenceinsight).
 
 ## Other ways to manage spoofing and phishing
 

@@ -1,24 +1,18 @@
 ---
 title: Get started with Microsoft Defender for Office 365
-f1.keywords: 
-  - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-audience: Admin
+ms.author: chrisda
 ms.topic: get-started
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
-  - MOE150
 ms.collection: 
   - zerotrust-solution
   - tier1
   - essentials-get-started
 ms.custom:
+  - sfi-ga-nochange
 description: Learn how to get started with the initial deployment and configuration of Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 07/09/2025
+ms.date: 02/06/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -33,8 +27,8 @@ Although your Microsoft 365 organization includes a default level of protection 
 > [!TIP]
 > For information about configuring protection for Microsoft Teams, see the following articles:
 >
-> - [Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams](mdo-support-teams-about.md)
-> - [Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365 Plan 2](mdo-support-teams-quick-configure.md)
+> - [Microsoft Defender for Office 365 support for Microsoft Teams](mdo-support-teams-about.md)
+> - [Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365](mdo-support-teams-quick-configure.md)
 > - [Security Operations Guide for Teams protection in Microsoft Defender for Office 365](mdo-support-teams-sec-ops-guide.md)
 
 The steps to configure Defender for Office 365 are described in the following diagram:
@@ -45,7 +39,7 @@ The steps to configure Defender for Office 365 are described in the following di
 
 ## Requirements
 
-Default email protections are included in _all_ Microsoft 365 subscriptions with cloud mailboxes. Defender for Office 365 includes more protection features. For detailed feature comparisons, see [Microsoft Defender for Office 365 overview](mdo-about.md).
+[The built-in security features](eop-about.md) are included in _all_ Microsoft 365 subscriptions with cloud mailboxes. Defender for Office 365 includes more protection features. For detailed feature comparisons, see [Microsoft Defender for Office 365 overview](mdo-about.md).
 
 ### Roles and permissions
 
@@ -60,7 +54,7 @@ Configuration requires permissions. The following table lists the permissions th
 |Exchange Online Organization Management|[Permissions in Exchange Online](/exchange/permissions-exo/permissions-exo)|
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Step 1: Configure email authentication for your Microsoft 365 domains
 
@@ -105,7 +99,7 @@ As you can probably imagine, a lot of threat policies for email and collaboratio
   - The Standard preset security policy.
   - Built-in protection.
 
-  The Standard and Strict preset security policies are turned off by default until you turn them on. You specify recipient conditions and exceptions (users, group members, domains, or all recipients) for default email protection features for cloud mailboxes and protection features in Defender for Office 365 within the Standard and Strict preset security policies.
+  The Standard and Strict preset security policies are turned off by default until you turn them on. You specify recipient conditions and exceptions (users, group members, domains, or all recipients) for the built-in security features for all cloud mailboxes and protection features in Defender for Office 365 within the Standard and Strict preset security policies.
 
   Built-in protection in Defender for Office 365 is on by default to provides basic Safe Attachments and Safe Links protection for all recipients. You can specify recipient exceptions to identify users who don't get the protection.
 
@@ -119,7 +113,7 @@ The previous information and the threat policies involved are summarized in the 
 
 |&nbsp;|Default threat policies|Preset security policies|Custom threat policies|
 |---|:---:|:---:|:---:|
-|**Threat policies in default email protections for cloud mailboxes**:||||
+|**Threat policies in the built-in security features for all cloud mailboxes**:||||
 |&nbsp;&nbsp;[Anti-malware](anti-malware-policies-configure.md)|✔|✔|✔|
 |&nbsp;&nbsp;[Anti-spam](anti-spam-policies-configure.md)|✔|✔|✔|
 |&nbsp;&nbsp;[Anti-phishing (spoofing protection)](anti-phishing-policies-about.md#spoof-settings)|✔|✔|✔|
@@ -143,7 +137,7 @@ The previous information and the threat policies involved are summarized in the 
 
 ⁴ The Built-in protection preset security policy (Safe Attachments and Safe Links protection in Defender for Office 365) is the only preset security policy that's on by default.
 
-⁵ For the Standard and Strict preset security policies, you can configure separate recipient conditions and optional exceptions for the default email protections for all cloud mailboxes and protections in Defender for Office 365. For Built-in protection in Defender for Office 365, you can only configure recipient exceptions from protection.
+⁵ For the Standard and Strict preset security policies, you can configure separate recipient conditions and optional exceptions for the built-in security features for all cloud mailboxes and protections in Defender for Office 365. For Built-in protection in Defender for Office 365, you can only configure recipient exceptions from protection.
 
 ⁶ The only customizable security settings in preset security policies are the entries and optional exceptions for user impersonation protection and domain impersonation protection in the Standard and Strict preset security policies in Defender for Office 365.
 
@@ -211,7 +205,7 @@ Keep in mind that the following protection feature configurations are unaffected
 - [Outbound spam policies (custom and default)](outbound-spam-policies-configure.md)
 - [The default connection filter policy (IP Allow List and IP Block List)](connection-filter-policies-configure.md)
 - [Globally turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-configure.md)
-- [Globally turn on and configure Safe Documents](safe-documents-in-e5-plus-security-about.md) (available and meaningful only with licenses that aren't included in Defender for Office 365 (for example, Microsoft 365 A5 or Microsoft 365 E5 Security))
+- [Globally turn on and configure Safe Documents](safe-documents-in-e5-plus-security-about.md) (available and meaningful only with licenses that aren't included in Defender for Office 365 (for example, Microsoft 365 A5 or Microsoft Defender Suite))
 
 To turn on and configure preset security policies, see [Preset security policies](preset-security-policies.md).
 
@@ -269,7 +263,7 @@ In Defender for Office 365 Plan 2, you also have access to create and apply cust
 
 ## Step 5: Review and configure user reported message settings
 
-**Summary**: Use the [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or a [supported non-Microsoft tool](submissions-user-reported-messages-custom-mailbox.md#message-submission-format-for-non-microsoft-reporting-tools) so users can report false positives and false negatives in Outlook, and so those reported messages are available to admins on the **User-reported** tab of the **Submissions** page in the Defender portal. Configure the organization so reported messages go to a specified reporting mailbox, to Microsoft, or both.
+**Summary**: Use the [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or a [supported non-Microsoft tool](submissions-user-reported-messages-custom-mailbox.md#message-submission-format-for-non-microsoft-reporting-tools) so users can report false positives and false negatives in Outlook, and so those reported messages are available to admins on the **User reported** tab of the **Submissions** page in the Defender portal. Configure the organization so reported messages go to a specified reporting mailbox, to Microsoft, or both.
 
 **Details**:
 
@@ -277,13 +271,16 @@ The ability of users to report good messages marked as bad (false positives) or 
 
 The important parts of user message reporting are:
 
-- **How do users report messages?**: Make sure clients are using one of the following methods so reported messages appear on the **User-reported** tab of the **Submissions** page in the Defender portal at <https://security.microsoft.com/reportsubmission?viewid=user>:
+- **How do users report messages?**: Make sure clients are using one of the following methods so reported messages appear on the **User reported** tab of the **Submissions** page in the Defender portal at <https://security.microsoft.com/reportsubmission?viewid=user>:
 
 - The built-in **Report** button in Outlook on the web (formerly known as Outlook Web App or OWA).
 - Non-Microsoft reporting tools that use the [supported message submission format](submissions-user-reported-messages-custom-mailbox.md#message-submission-format-for-non-microsoft-reporting-tools).
 
+  > [!TIP]
+  > In [attack simulation training in Defender for Office 365 Plan 2](attack-simulation-training-get-started.md), simulation messages reported by non-Microsoft tools aren't captured in attack simulation reports.
+
 - **Where do user reported messages go?**: You have the following options:
-  - To a designated reporting mailbox and to Microsoft (this is the default value).
+  - To a designated reporting mailbox and to Microsoft (this value is the default).
   - To a designated reporting mailbox only.
   - To Microsoft only.
 
@@ -291,7 +288,7 @@ The important parts of user message reporting are:
 
   It's up to you whether you want user reported messages to also go to Microsoft for analysis (exclusively or along with delivery to your designated reporting mailbox).
 
-  If you want user reported messages to go only to your designated reporting mailbox, admins should [manually submit user reported messages to Microsoft for analysis](submissions-admin.md#submit-user-reported-messages-to-microsoft-for-analysis) from the **User-reported** tab of the **Submissions** page in the Defender portal at <https://security.microsoft.com/reportsubmission?viewid=user>.
+  If you want user reported messages to go only to your designated reporting mailbox, admins should [manually submit user reported messages to Microsoft for analysis](submissions-admin.md#submit-user-reported-messages-to-microsoft-for-analysis) from the **User reported** tab of the **Submissions** page in the Defender portal at <https://security.microsoft.com/reportsubmission?viewid=user>.
 
   Submitting user reported messages to Microsoft is important to allow our filters to learn and improve.
 

@@ -1,28 +1,22 @@
 ---
 title: Migrate from the MDE SIEM API to the Microsoft Defender XDR alerts API
 description: Learn how to ingest incidents and alerts, and integrate SIEM tools.
-search.appverid: met150
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: upgrade-and-migration-article
 ms.date: 09/21/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Migrate from the MDE SIEM API to the Microsoft Defender XDR alerts API
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
 
 <a name='use-the-new-microsoft-365-defender-api-for-all-your-alerts'></a>
 
@@ -50,9 +44,9 @@ Read about the new Microsoft Defender XDR [alerts and incidents API](https://tec
 
 If you're pulling Defender for Endpoint alerts into an external system, there are several supported options to give organizations the flexibility to work with the solution of their choice:
 
-1. **Microsoft Sentinel** is a scalable, cloud-native, SIEM and Security orchestration, automation, and response (SOAR) solution. Delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for attack detection, threat visibility, proactive hunting, and threat response. The Microsoft Defender XDR connector allows customers to easily pull in all their incidents and alerts from all Microsoft Defender XDR products. To learn more about the integration, see [Microsoft Defender XDR integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration).
+1. **Microsoft Sentinel** is a scalable, cloud-native, SIEM and Security orchestration, automation, and response (SOAR) solution. Delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for attack detection, threat visibility, proactive hunting, and threat response. The Microsoft Defender connector allows customers to easily pull in all their incidents and alerts from all Microsoft Defender products. To learn more about the integration, see [Microsoft Defender integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration).
 
-1. **IBM Security QRadar** SIEM provides centralized visibility and intelligent security analytics to identify and prevent threats and vulnerabilities from disrupting business operations. [QRadar SIEM team has just announced the release of a new DSM](https://community.ibm.com/community/user/security/blogs/gaurav-sharma/2022/10/18/ibm-qradar-and-microsoft-defender) that is integrated with the new Microsoft Defender XDR alerts API to pull in Microsoft Defender for Endpoint alerts. New customers are welcome to take advantage of the new DSM upon release. Learn more about the new DSM and how to easily migrate to it at [Microsoft Defender XDR - IBM Documentation](https://www.ibm.com/docs/en/dsm?topic=microsoft-365-defender).
+1. **IBM Security QRadar** SIEM provides centralized visibility and intelligent security analytics to identify and prevent threats and vulnerabilities from disrupting business operations. [QRadar SIEM team has just announced the release of a new DSM](https://community.ibm.com/community/user/security/blogs/gaurav-sharma/2022/10/18/ibm-qradar-and-microsoft-defender) that is integrated with the new Microsoft Defender alerts API to pull in Microsoft Defender for Endpoint alerts. New customers are welcome to take advantage of the new DSM upon release. Learn more about the new DSM and how to easily migrate to it at [Microsoft Defender XDR - IBM Documentation](https://www.ibm.com/docs/en/dsm?topic=microsoft-365-defender).
 
 1. **Splunk SOAR** helps customers orchestrate workflows and automate tasks in seconds to work smarter and respond faster. Splunk SOAR is integrated with the new Microsoft Defender XDR APIs, including the alerts API. For more information, see [Microsoft Defender XDR | Splunkbase](https://splunkbase.splunk.com/app/6563)
 
@@ -62,9 +56,9 @@ Other integrations are listed in [Technological partners of Microsoft Defender X
 
 ### Calling the Microsoft Defender XDR alerts API directly
 
-The below table provides a mapping between the SIEM API to the Microsoft Defender XDR alerts API:
+The below table provides a mapping between the SIEM API to the Microsoft Defender alerts API:
 
-| SIEM API property | Mapping | Microsoft Defender XDR alert API property |
+| SIEM API property | Mapping | Microsoft Defender alert API property |
 |:---|:---:|:---|
 | `AlertTime` |->| `createdDateTime` |
 | `ComputerDnsName` |->| `evidence/deviceEvidence: deviceDnsName` |
@@ -132,4 +126,5 @@ For more information, see:
 - [Hello World example (describes how to register an application in Microsoft Entra ID)](api/api-hello-world.md)
 - [Get access with application context](api/exposed-apis-create-app-webapp.md)
 - [Microsoft Defender XDR SIEM integration](/defender-xdr/configure-siem-defender)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

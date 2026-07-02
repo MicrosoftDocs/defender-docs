@@ -1,16 +1,11 @@
 ---
 title: MessagePostDeliveryEvents table in the advanced hunting schema
 description: Learn about the MessagePostDeliveryEvents table in the advanced hunting schema which contains information about security events that occurred after the delivery of a Microsoft Teams message in your organization. 
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -21,20 +16,22 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/18/2025
+ms.date: 05/25/2026
 ---
 
-# MessagePostDeliveryEvents (Preview)
+# MessagePostDeliveryEvents
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-> [!IMPORTANT]
-> Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+
 
 The `MessagePostDeliveryEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about security events that occurred after the delivery of a Microsoft Teams message in your organization. 
 
 This advanced hunting table is populated by records from Microsoft Defender for Office 365. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Office 365 in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
 
+
+> [!NOTE]
+> This table surfaces metadata for all messages from external conversations, along with metadata from internal conversation messages that contain URLs.
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
@@ -54,7 +51,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `LatestDeliveryLocation` | `string` |Last known location of the message |
 | `ReportId` | `string` |Unique identifier for the event|
 | `IsExternalThread` | `boolean` |Indicates if there are external recipients in the thread (1) or none (0)|
-
+| `SafetyTip` | `string` |The safety tip that has been added on a message, if any|
 
 
 ## Related topics
