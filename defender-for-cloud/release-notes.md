@@ -3,7 +3,7 @@ title: What's new in Defender for Cloud features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 07/02/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
 ---
 
@@ -33,32 +33,10 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| July 2, 2026 | Deprecation | [Plan enablement API now blocks onboarding to five deprecated Defender plans](#plan-enablement-api-now-blocks-onboarding-to-five-deprecated-defender-plans) |
 | July 1, 2026 | GA | [New container security capabilities are now generally available](#new-container-security-capabilities-are-now-generally-available) |
 | July 1, 2026 | GA | [Kubernetes misconfiguration enforcement in Defender for Containers is now generally available](#kubernetes-misconfiguration-enforcement-in-defender-for-containers-is-now-generally-available) |
 | July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
 | July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
-
-### Plan enablement API now blocks onboarding to five deprecated Defender plans
-
-July 2, 2026
-
-Effective immediately, onboarding is blocked through the plan-enablement API for five deprecated Microsoft Defender for Cloud pricing plans. This update aligns with Microsoft deprecation policy and matches existing portal behavior, where these plans are already blocked in the UI.
-
-This update applies to new enablement only. Existing subscriptions on these plans continue to receive product access, value, and billing with no immediate change to their current experience.
-
-> [!IMPORTANT]
-> If you have existing scripts or automations that call the plan-enablement API for these deprecated plans, update those workflows to use supported plans before enforcement reaches your environment. Calls that try to enable deprecated plans can fail after the block is in effect.
-
-| Deprecated plan | Migration path |
-| --- | --- |
-| Microsoft Defender for Azure Kubernetes Service | Defender for Containers |
-| Microsoft Defender for Azure Container Registry | Defender for Containers |
-| Microsoft Defender for Key Vault | Fixed pricing model |
-| Microsoft Defender for DNS | Defender for Servers |
-| Microsoft Defender for Azure Resource Manager | Fixed pricing model |
-
-No official retirement date has been announced for these plans. Customers are encouraged to migrate to the recommended plans.
 
 ### New container security capabilities are now generally available
 
