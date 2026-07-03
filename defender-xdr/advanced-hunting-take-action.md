@@ -121,7 +121,7 @@ Apart from device-focused remediation steps, you can also take actions on emails
 
   **Initiate automated investigation** might be disabled if mandatory columns are missing. To resolve this issue, select **Show empty columns** before you select **Take actions**.
 
-  See the following query as reference to enable *Submit to Microsoft* and *Initiate automated investigation*
+  Use the following query as a reference to enable **Submit to Microsoft** and **Initiate automated investigation**.
 
    ```kusto
    EmailEvents
