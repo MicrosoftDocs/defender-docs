@@ -4,7 +4,7 @@ description: Learn how to troubleshoot specific issues that might occur in your 
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: troubleshooting
-ms.date: 09/30/2025
+ms.date: 07/03/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
@@ -122,6 +122,21 @@ Two patterns typically cause this:
 - **Resource saturation on a shared tenant.** High parallel loads from other integration flows or SAP systems on the same SAP Cloud Integration tenant reduce the resources available to the Data Collector iflow, extending processing times across all flows.
 
 To recover, first apply the remediation in the timeouts section to break the retry pattern and reduce the volume returned per message. If memory exhaustions continue, use SAP Cloud Integration monitoring to determine whether the pressure originates from one SAP system or from overall tenant load. Sustained saturation may require additional SAP Cloud Integration capacity, or distributing SAP systems across multiple Cloud Integration instances.
+
+## Timeouts when SAP security audit logs are filesystem-backed
+
+If Microsoft Sentinel integration requests time out during connector onboarding or ongoing log reads, review how your SAP Security Audit Log is recorded and retrieved, especially when recording is configured as **Filesystem and database**.
+
+Selecting audit logs from SAP HANA database often provides the best performance. Other databases and filesystem-backed selection might require tuning.
+
+To remediate:
+
+1. Confirm with your SAP administrator whether Security Audit Log recording targets include filesystem storage.
+1. Implement SAP note **3726943 - RSAU_API_GET_LOG_DATA \| Dataselection only from Filesystem details** (applies to **SAP_BASIS 750+**) by using **SNOTE** or by importing the referenced support package.
+1. After implementing the correction, use filesystem-only selection with required parameters `ID_FILESYSTEM_SEL_ONLY` and `ID_FILE_SEL_SIMPLE` for faster retrieval. For behavior details and explanation, see SAP note **3500090**.
+1. Re-run connector validation.
+
+Applying these SAP notes often improves retrieval performance significantly. If delays continue, they're typically related to SAP-side factors such as log shipping between application servers and network latency.
 
 :::zone-end
 
