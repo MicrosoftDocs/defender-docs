@@ -76,7 +76,6 @@ View the schema to understand the graph ontology – nodes, edges, and their pro
 
 
 
-
 ## Interact with graphs
 
 Use the following capabilities to traverse and explore your graphs:
@@ -112,7 +111,16 @@ You can use the filters at the top-right of the graph canvas to narrow down the 
 :::image type="content" source="media/graph-visualization/filters.png" lightbox="media/graph-visualization/filters.png" alt-text="Screenshot showing the graph filters for node and edge types.":::
 
 
-### Table view
+### Sharing graph results 
+
+You can share your query results by selecting **Share query**. From this dropdown menu, you can choose between three options: 
+
+* **Copy link to their last run query:** produces and copies a URL that routes the user to the graph page with the referenced query already in the GQL editor. 
+* **Copy link to code**: produces and copies a shareable URL link and the query code content. 
+* **Copy graph results**: produces and copies a shareable URL link that automatically runs the query to generate the graph, as well as the query code content and a screenshot of the produced graph. 
+
+
+## Table view
 
 View a tabular representation of your data by selecting the **Table** tab. From the table, you can:
 
