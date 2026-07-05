@@ -24,6 +24,12 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## July 2026
+
+### The **Domain investigation page** is now generally available
+
+ The **Domain investigation** page allows you to investigate an Active Directory domain. It shows Active Directory domain security, including domain properties, deployment health, identity summary, service account breakdown, sensitive entities, active recommendations, group policies, and trust relationships. For more information, see [Investigate a domain](investigate-domain.md).
+
 ## June 2026
 
 ### Identity risk score is now generally available
