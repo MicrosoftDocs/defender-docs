@@ -126,7 +126,7 @@ You may need to reactivate an OT sensor because you want to:
 
 - **Associate the sensor to a new site**:  Re-register the sensor with new site definitions and use the new activation file to activate.
 
-- **Change your plan commitment**: If you make changes to your plan, such as changing your price plan from a trial to a monthly commitment, you need to reactivate your sensors to reflect the new changes.
+- **Change your plan commitment**: If you make changes to your plan, such as changing your price plan to a monthly commitment, you need to reactivate your sensors to reflect the new changes.
 
 To reactivate an OT sensor for any of these reasons, do the following steps:
 
