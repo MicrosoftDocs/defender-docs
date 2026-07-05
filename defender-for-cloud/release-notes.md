@@ -3,7 +3,7 @@ title: What's new in Defender for Cloud features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 07/02/2026
+ms.date: 07/05/2026
 ai-usage: ai-assisted
 ---
 
@@ -33,7 +33,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| July 2, 2026 | Deprecation | [Plan enablement API now blocks onboarding to five deprecated Defender plans](#plan-enablement-api-now-blocks-onboarding-to-five-deprecated-defender-plans) |
+| July 5, 2026 | Deprecation | [Plan enablement API now blocks onboarding to five deprecated Defender plans](#plan-enablement-api-now-blocks-onboarding-to-five-deprecated-defender-plans) |
 | July 1, 2026 | GA | [New container security capabilities are now generally available](#new-container-security-capabilities-are-now-generally-available) |
 | July 1, 2026 | GA | [Kubernetes misconfiguration enforcement in Defender for Containers is now generally available](#kubernetes-misconfiguration-enforcement-in-defender-for-containers-is-now-generally-available) |
 | July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
@@ -41,7 +41,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ### Plan enablement API now blocks onboarding to five deprecated Defender plans
 
-July 2, 2026
+July 5, 2026
 
 Effective immediately, onboarding is blocked through the plan-enablement API for five deprecated Microsoft Defender for Cloud pricing plans. This update aligns with Microsoft deprecation policy and matches existing portal behavior, where these plans are already blocked in the UI.
 
