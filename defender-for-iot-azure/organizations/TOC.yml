@@ -28,7 +28,7 @@
     href: architecture.md
   - name: Subscription billing
     href: billing.md
-  - name: Licenses and the trial license
+  - name: Licenses
     href: license-and-trial-license-extention.md
   - name: Roles and permissions
     items:
