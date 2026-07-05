@@ -16,7 +16,7 @@ Use the content below to learn how to plan your overall OT monitoring with Micro
 
 ## Prerequisites
 
-Before you start planning your OT monitoring deployment, make sure that you have an Azure subscription and an OT plan onboarded Defender for IoT. For more information, see [Start a Microsoft Defender for IoT trial](../getting-started.md).
+Before you start planning your OT monitoring deployment, make sure that you have an Azure subscription and an OT plan onboarded to Defender for IoT. For more information, see [Manage Defender for IoT plans for OT monitoring](../how-to-manage-subscriptions.md).
 
 This step is performed by your architecture teams.
 
