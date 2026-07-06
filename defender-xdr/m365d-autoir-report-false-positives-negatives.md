@@ -24,6 +24,8 @@ ai-usage: ai-assisted
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+[!INCLUDE [defender-endpoint-air-deprecation](../includes/defender-endpoint-air-deprecation.md)]
+
 False positives or negatives can occasionally occur with any threat protection solution. If [automated investigation and response capabilities](m365d-autoir.md) in Microsoft Defender XDR missed or wrongly detected something, there are steps your security operations team can take:
 
 - [Report a false positive/negative to Microsoft](#report-a-false-positivenegative-to-microsoft-for-analysis)
