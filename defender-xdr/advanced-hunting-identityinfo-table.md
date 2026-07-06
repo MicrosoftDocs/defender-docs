@@ -79,7 +79,7 @@ This advanced hunting table is populated by records from Microsoft Defender for 
 | `SourceSystem` [*](#mdi-only) | `string` | The source system for the record|
 | `OnPremObjectId` | `string` | Active Directory object ID of the user |
 | `TenantMembershipType` | `string` | User type in Microsoft Entra ID; possible values: Guest, Member|
-| `RiskStatus` | `string` | Status of the user's risk; possible values: None, ConfirmedSafe, Remediated, Dismissed, AtRisk, ConfirmedCompromised, UnknownFutureValue|
+| `RiskStatus` [**](#sentinel)| `string` | Status of the user's risk; possible values: None, ConfirmedSafe, Remediated, Dismissed, AtRisk, ConfirmedCompromised, UnknownFutureValue|
 | `UserAccountControl` | `string` | Security attributes of the user account in the Active Directory domain |
 | `IdentityEnvironment` | `string` | Environment where the identity is used; possible values: CloudOnly, Hybrid, On-premises |
 | `SourceProviders` | `dynamic` | Source providers of the accounts for the identity; possible values: ActiveDirectory, EntraID, Okta |
@@ -101,6 +101,7 @@ If you use the Microsoft Defender portal but don't onboard a Microsoft Sentinel 
 - `Tags`
 - `State`
 - `GroupMembership`
+- `RiskStatus`
 
 
 For more information about UEBA, see [Advanced threat detection with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](/azure/sentinel/identify-threats-with-entity-behavior-analytics). For more information about the different data sources in UEBA, see [Microsoft Sentinel UEBA reference](/azure/sentinel/ueba-reference).
