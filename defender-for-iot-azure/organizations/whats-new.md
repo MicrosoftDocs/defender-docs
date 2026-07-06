@@ -114,4 +114,4 @@ The legacy on-premises management console isn't available for download after **J
 
 ## Next steps
 
-[Start a Microsoft Defender for IoT trial](getting-started.md)
+[Get started with Defender for IoT](getting-started.md)

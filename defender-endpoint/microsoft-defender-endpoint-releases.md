@@ -29,8 +29,9 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|Android |1.0.9029.0101|June 2026|- Build: 1.0.9029.0101<br>- Release: June 30, 2026|[Release details and updates](#android--june-2026--platform-1090290101)| 
 |macOS |101.26042.0020  |June 2026 |- Release version: 20.126042.20.0<br>- Engine version: 1.1.26040.3000<br>- Signature version: 1.453.151.0 |[Release details and updates](#macos--june-2026--101260420020) |
-|Linux  |101.26042.0009  |June 2026 |- Release version: 30.126042.0009.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates](#linux--june-2026--101260420009) |
+|Linux  |101.26042.0009  |June 2026 |- Release version: 30.126042.0009.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates](#linux--june-2026--101260420009). See [considerations and updates for this release](#linux-known-issues). |
 |Android |1.0.9014.0101|June 2026|- Build: 1.0.9014.0101<br>- Release: June 19, 2026|[Release details and updates](#android--june-2026--platform-1090140101)| 
 |iOS |1.1.78020101|June 2026|- Build: 1.1.78020101<br>- Release: June 11, 2026|[Release details and updates](#ios--june-2026--platform-version-1178020101)|
 |Android |1.0.9003.0101|June 2026|- Build: 1.0.9003.0101<br>- Release: June 8, 2026|[Release details and updates](#android--june-2026--platform-1090030101)|
@@ -469,26 +470,20 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 >
 > If you have any concerns or need assistance during this transition, contact support.
 
+### Linux known issues
+
+[!INCLUDE [Linux 101.26012.0007 known issue](includes/linux-build-issue.md)]
+
 ### Linux | June 2026 | 101.26042.0009
+
+> [!IMPORTANT]
+> Issues have been found with this version, where the Defender service might be disabled on some devices after the upgrade and the host is rebooted. For more information, see [Known issues](#linux-known-issues).
 
 #### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
 |30.126042.0009.0 |1.1.26040.3001 |1.449.136.0 |
-
-#### Enhancements and features
-
-|Feature area | Update summary |
-|--------------|---------------|
-|Visibility |Better user attribution in security events: [file](/defender-xdr/advanced-hunting-devicefileevents-table),  [process](/defender-xdr/advanced-hunting-deviceprocessevents-table), and [network](/defender-xdr/advanced-hunting-devicenetworkevents-table) security events  now include the original login user's ID, even when actions are performed via sudo or under root. This information is exposed in Advanced Hunting, making  it easier to trace elevated actions back to the actual user's session for improved insider threat detection and investigations. Improved login event  accuracy by preventing stale remote IP data from being reused across different login event types.|
-|Configuration | Offline security intelligence updates (GA): Customers can now configure offline security intelligence updates for Linux using Security  Settings Management policies in the Defender portal. For more information, see [Configure Offline SIU  updates](/defender-endpoint/linux-support-offline-security-intelligence-update?tabs=portal) Scheduled antivirus scans (Public Preview): Customers can  centrally schedule antivirus scans on Linux using managed JSON and policy settings through the Defender portal. For more information, see [Schedule AV  scans](/defender-endpoint/schedule-antivirus-scans-linux) |
-|Platform support |Added package publishing support for newer Linux distributions, including Fedora 43, Azure Linux 4.0, and RHEL 10 RPM variants.|
-|Security| Improved client IPC hardening for mdatp commands by rejecting requests from mdatp processes launched with dynamic loader injection environment variables (for example, LD_PRELOAD).
-If this affects your workflow, run mdatp without those variables set. For example: env -u LD_PRELOAD mdatp health|
-|Performance |Faster threat remediation: Malware is now quarantined and cleaned up more quickly, improving response time when threats are detected.|
-|Stability |This release includes EDR SDK updates and stability improvements that help the Defender agent run more reliably with continuous protection.|
-
 
 ### Linux | April 2026 | 101.26032.0000
 
@@ -538,6 +533,10 @@ Fixed an issue in the January 2026 release, where real-time scanning of the /dev
 |--------------|---------------|
 | Vulnerability detection | Strengthened Linux security coverage for Python workloads by improving vulnerability detection across system, user, and virtual environments, expanding coverage for CVE‑2025‑68664/5 LangGrinch (langchain vulnerability).|
 | General | Bug and performance fixes. <br> Real-time protection statistics collection is now disabled by default as a performance optimization; enable it on-demand when needed for diagnostics with `mdatp config real-time-protection-statistics --value enabled`.  |
+
+#### Known issues
+
+[!INCLUDE [Linux 101.26012.0007 known issue](includes/linux-build-issue.md)]
 
 ### Linux | February 2026 | 101.25122.0004
 
@@ -684,6 +683,20 @@ Fixed an issue in the January 2026 release, where real-time scanning of the /dev
 ## Android releases
 
 See the full list of [Android UX improvements](android-new-ux.md).
+
+### Android | June 2026 | Platform: 1.0.9029.0101
+
+#### Release details
+
+| Platform version| Release Date |
+| -------- | -------- |
+|1.0.9029.0101|June 30, 2026|
+
+#### Enhancements and features
+
+|__Feature Area__| __Update Summary__|
+| -------- | -------- |
+|General|Performance improvements and general bug fixes. |
 
 ### Android | June 2026 | Platform: 1.0.9014.0101
 

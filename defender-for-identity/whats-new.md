@@ -24,6 +24,12 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## July 2026
+
+### The **Domain investigation page** is now generally available
+
+ The **Domain investigation** page allows you to investigate an Active Directory domain. It shows Active Directory domain security, including domain properties, deployment health, identity summary, service account breakdown, sensitive entities, active recommendations, group policies, and trust relationships. For more information, see [Investigate a domain](investigate-domain.md).
+
 ## June 2026
 
 ### Identity risk score is now generally available
@@ -58,6 +64,10 @@ These new alerts were added to the Defender for Identity security alerts:
 - **Expanded Entra ID inventory**: The non-human identity inventory now includes all Microsoft Entra service principals, not just those with API permissions. For more information, see [View the Identity inventory](identity-inventory.md).
 
 - **Microsoft Entra roles visibility**: The Permissions tab now shows assigned Microsoft Entra roles alongside API permissions. For more information, see [View your app details with app governance](/defender-cloud-apps/app-governance-visibility-insights-view-apps).
+
+### Visibility into service principals used by AI agents (Preview)
+
+The non-human identity inventory now identifies which Entra ID service principals are used by AI agents. A new "Used by AI agents" column and insight card help you find and prioritize these identities. For more information, see [View the Identity inventory](identity-inventory.md).
 
 ## May 2026
 

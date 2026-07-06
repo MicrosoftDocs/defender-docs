@@ -27,7 +27,7 @@ Before you create a site, make sure you meet the following prerequisites:
 
 - Review [the general prerequisites for Microsoft Defender for IoT](prerequisites.md).
 - Review the required site security permissions according to [RBAC requirements](set-up-rbac.md).
-- Get a Microsoft Defender for IoT trial license. For more information, see [Microsoft Defender for IoT subscriptions settings](get-started.md).
+- Have a Microsoft Defender for IoT license. For more information, see [Get started with Defender for IoT](get-started.md).
 - We recommend you have IP or MAC address details of at least one OT device at the site that is discovered by Microsoft Defender for Endpoint.
 
 ## Create a site

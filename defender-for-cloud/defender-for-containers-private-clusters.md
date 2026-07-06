@@ -7,7 +7,7 @@ ms.date: 06/01/2026
 ai-usage: ai-assisted
 ---
 
-# Deploy Defender for Containers to private clusters (preview)
+# Deploy Defender for Containers to private clusters
 
 Private clusters isolate Kubernetes environments from the internet and, in this context, restricted connectivity means no direct access to the Kubernetes API server. Defender for Containers extends threat detection and security visibility to these environments, so you can maintain protection coverage while preserving private cluster network boundaries.
 
@@ -31,27 +31,24 @@ Before you begin, ensure the following prerequisites are met:
     - Your cluster [connected to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
     - The Azure command-line interface (Azure CLI) is installed and you're signed in.
 
-## Install preview components for private clusters
+## Install components for private clusters
 
-Defender for Containers Helm preview charts are published to `mcr.microsoft.com/azuredefender/microsoft-defender-for-containers` with a `-preview` suffix.
-
-Private clusters are supported in `0.11.X-preview` chart versions.
-
-Use the following tabs to install preview components for your environment.
+Defender for Containers Helm charts are published to `mcr.microsoft.com/azuredefender/microsoft-defender-for-containers`.
+Private clusters are supported in 0.11.X chart versions.
+Use the following tabs to install the components for your environment.
 
 # [Helm on Amazon EKS](#tab/helm-eks)
 
-To get the latest `0.11.X-preview` chart version:
+You can list the published versions by running the following command:
 
 ```bash
-curl -s https://mcr.microsoft.com/v2/azuredefender/microsoft-defender-for-containers/tags/list | jq -r '.tags[] | select(test("^0\\.11\\..*-preview$"))' | sort -V | tail -1
+curl https://mcr.microsoft.com/v2/azuredefender/microsoft-defender-for-containers/tags/list
 ```
 
-To install the latest `0.11.X-preview` chart and enable private cluster components:
+To install the latest `0.11.X` chart and enable private cluster components:
 
 ```bash
 helm install defender-k8s oci://mcr.microsoft.com/azuredefender/microsoft-defender-for-containers \
-  --version $(curl -s https://mcr.microsoft.com/v2/azuredefender/microsoft-defender-for-containers/tags/list | jq -r '.tags[] | select(test("^0\\.11\\..*-preview$"))' | sort -V | tail -1) \
   --create-namespace \
   --namespace mdc \
   --set global.cloudIdentifiers.AWS.accountId="<aws-account-id>" \
@@ -63,17 +60,16 @@ helm install defender-k8s oci://mcr.microsoft.com/azuredefender/microsoft-defend
 
 # [Helm on Google Kubernetes Engine](#tab/helm-gke)
 
-To get the latest `0.11.X-preview` chart version:
+You can list the published versions by running the following command:
 
 ```bash
-curl -s https://mcr.microsoft.com/v2/azuredefender/microsoft-defender-for-containers/tags/list | jq -r '.tags[] | select(test("^0\\.11\\..*-preview$"))' | sort -V | tail -1
+curl https://mcr.microsoft.com/v2/azuredefender/microsoft-defender-for-containers/tags/list
 ```
 
-To install the latest `0.11.X-preview` chart and enable private cluster components:
+To install the latest `0.11.X` chart and enable private cluster components:
 
 ```bash
 helm install defender-k8s oci://mcr.microsoft.com/azuredefender/microsoft-defender-for-containers \
-  --version $(curl -s https://mcr.microsoft.com/v2/azuredefender/microsoft-defender-for-containers/tags/list | jq -r '.tags[] | select(test("^0\\.11\\..*-preview$"))' | sort -V | tail -1) \
   --create-namespace \
   --namespace mdc \
   --set global.cloudIdentifiers.GCP.projectId="<gcp-project-id>" \
@@ -85,7 +81,7 @@ helm install defender-k8s oci://mcr.microsoft.com/azuredefender/microsoft-defend
 
 # [Azure Arc-enabled Kubernetes](#tab/arc)
 
-To install the Defender extension by using the Preview release train and enable private cluster components:
+To install the Defender extension and enable private cluster components:
 
 ```azurecli
 az k8s-extension create \
@@ -94,11 +90,9 @@ az k8s-extension create \
   --cluster-name $ARC_CLUSTER_NAME \
   --resource-group $ARC_RESOURCE_GROUP \
   --extension-type microsoft.azuredefender.kubernetes \
-  --release-train Preview \
   --configuration-settings inventoryCollector.enabled='true' \
   --configuration-settings configController.enabled='true'
 ```
-
 ---
 
 ## Verify the deployment
