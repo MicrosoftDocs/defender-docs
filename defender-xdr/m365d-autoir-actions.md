@@ -23,6 +23,8 @@ ai-usage: ai-assisted
 
 # View and manage actions in the Action center
 
+[!INCLUDE [defender-endpoint-air-deprecation](../includes/defender-endpoint-air-deprecation.md)]
+
 Threat protection features in Microsoft Defender XDR can result in certain remediation actions. Here are some examples:
 
 - [Automated investigations](m365d-autoir.md) can result in remediation actions that are taken automatically or await your approval.

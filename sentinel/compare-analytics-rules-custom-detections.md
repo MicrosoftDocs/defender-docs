@@ -8,7 +8,7 @@ ms.reviewer: nonutkev
 ms.service: microsoft-sentinel  
 ms.topic: product-comparison
 ms.date: 05/19/2026
-
+ai-usage: ai-assisted
 ms.collection: ms-security
 
 #Customer intent: As a Microsoft Sentinel user, I want to understand the diffence between analytics rules and custom detections features as the latter becomes the unified feature for creating rules across Microsoft Sentinel SIEM and Microsoft Defender XDR.
@@ -52,9 +52,9 @@ This article lists and compares the different features supported by Microsoft Se
 | **Rules management** | Rerun rule on demand on a previous time window | Supported | Planned |
 | | Run rule on demand | Not supported | Supported |
 | | Health and quality workbooks | Supported | Planned |
-| | Integration with Sentinel repositories | Supported | Planned |
+| | Integration with Sentinel repositories | Supported | Supported (Preview) |
 | | Manage rules from API | Supported | Supported |
-| | Bicep support | Supported | Planned |
+| | Bicep support | Supported | Supported (Preview) |
 | **Content hub** | Create rules from content hub | Supported | Planned |
 | **Multi workspace** | Create custom detections on any workspaces onboarded to Defender | Supported | Planned |
 | | Cross workspaces detection using the workspace operator | Supported | Planned |

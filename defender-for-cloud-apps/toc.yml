@@ -141,10 +141,6 @@ items:
         href: app-governance-visibility-insights-overview.md
       - name: View your OAuth apps with app governance
         href: app-governance-visibility-insights-view-apps.md
-  - name: Discover AI agents (Preview)
-    items:
-    - name: Discover and protect Copilot Studio AI agents
-      href: ai-agent-inventory.md
   - name: Explore the cloud discovery dashboard
     items:
     - name: Cloud discovery dashboard
@@ -312,6 +308,9 @@ items:
       items:
       - name: File policies
         href: data-protection-policies.md
+      - name: Migrate file policies to Microsoft Purview
+        displayName: migrate file policies, deprecation, Purview DLP
+        href: migrate-file-policies-to-purview.md
       - name: Content inspection policies
         items:
         - name: DLP content inspection
@@ -342,12 +341,6 @@ items:
     href: governance-discovery.md
   - name: Govern apps discovered by Microsoft Defender for Endpoint
     href: mde-govern.md
-  - name: Protect AI agents (Preview)
-    items:
-    - name: Overview
-      href: ai-agent-protection.md
-    - name: Enable real-time protection for AI agents
-      href: real-time-agent-protection-during-runtime.md
 - name: Detect threats
   items:
   - name: Control cloud apps with policies
