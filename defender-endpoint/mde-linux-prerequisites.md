@@ -99,12 +99,12 @@ The following Linux server distributions are supported:
 | Ubuntu LTS | 16.04, 18.04, 20.04, 22.04,24.04 | 20.04, 22.04, 24.04 |
 | Ubuntu Pro | 22.04, 24.04 | 22.04, 24.04 |
 | Debian | 9–13 | 11, 12, 13 |
-| SUSE Linux Enterprise Server | 12.x, 15.x | 15 (SP5, SP6) |
-| Oracle Linux | 7.2+, 8.x, 9.x | 8.x, 9.x |
+| SUSE Linux Enterprise Server | 12.x, 15.x, 16.x | 15 (SP5, SP6), 16.x |
+| Oracle Linux | 7.2+, 8.x, 9.x, 10.x | 8.x, 9.x, 10.x |
 | Amazon Linux | 2, 2023 | 2 (Support retiring 31 October 2026. See notice below.)<br>2023 |
-| Fedora | 33–42 | - |
-| Rocky Linux | 8.7+, 9.2+ | 8.7+, 9.2+ |
-| Alma Linux | 8.4+, 9.2+ | 8.4+, 9.2+ |
+| Fedora | 33–43 | 40-43 |
+| Rocky Linux | 8.7+, 9.2+, 10.x | 8.7+, 9.2+, 10.x |
+| Alma Linux | 8.4+, 9.2+, 10.x | 8.4+, 9.2+, 10.x |
 | Mariner | 2 | 2 |
 
 > [!IMPORTANT]

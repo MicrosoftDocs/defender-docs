@@ -40,6 +40,7 @@ Custom exclusions apply to [scheduled scans](schedule-antivirus-scans.md), [on-d
 >     - Exclusions aren't visible in [Get-MpPreference](/powershell/module/defender/get-mppreference) or Registry Editor.
 >   - [HideExclusionsFromLocalUsers](/windows/client-management/mdm/defender-csp#configurationhideexclusionsfromlocalusers): Implicitly enabled if HideExclusionsFromLocalAdmins is enabled.
 > - Excluded files can still generate anti-virus alerts in the Microsoft Defender portal. For example, excluded files can trigger behavioral or heuristic detections.
+> - Even when Antivirus exclusions are configured, Microsoft Defender Antivirus performs a minimal evaluation to determine whether the exclusion applies. This evaluation does not involve a full content scan. If the exclusion criteria are met, the scan is skipped for the specified file, folder, or process.
 
 ## Prerequisites
 
