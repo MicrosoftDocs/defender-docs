@@ -312,6 +312,9 @@ items:
       items:
       - name: File policies
         href: data-protection-policies.md
+      - name: Migrate file policies to Microsoft Purview
+        displayName: migrate file policies, deprecation, Purview DLP
+        href: migrate-file-policies-to-purview.md
       - name: Content inspection policies
         items:
         - name: DLP content inspection

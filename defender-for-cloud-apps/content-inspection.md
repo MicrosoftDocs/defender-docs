@@ -8,6 +8,9 @@ ms.custom: sfi-ga-blocked
 ---
 # DLP content inspection in Microsoft Defender for Cloud Apps
 
+> [!IMPORTANT]
+> File policies retire on January 6, 2027. To maintain file-based data protection, [migrate to Microsoft Purview DLP or auto-labeling policies](migrate-file-policies-to-purview.md).
+
 
 Data loss prevention (DLP) in Microsoft Defender for Cloud Apps uses content inspection to detect sensitive information in files. When content inspection is enabled, Defender for Cloud Apps analyzes files for text patterns defined by expressions. Text that meets these expressions is treated as a match and can be used to determine a policy violation.
 
