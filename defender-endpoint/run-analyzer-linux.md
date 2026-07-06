@@ -539,12 +539,15 @@ If Microsoft Defender for Endpoint is already installed on the device, you can r
    echo "Running MDESupportTool"
    ./MDESupportTool $@
    ```
+
 -  Execute:
+
    ```bash
    run MDESupportToolBinary.sh -parameters "--bypass-disclaimer -d"
    ```
 
 -  For Client Analyzer Python shipped with Microsoft Defender for Linux, create an `MDESupportToolPython.sh` file and paste the following content into it.
+
    ```bash
    #! /usr/bin/bash
 
@@ -554,7 +557,9 @@ If Microsoft Defender for Endpoint is already installed on the device, you can r
    echo "Running MDESupportTool"
    ./mde_support_tool.sh $@
    ```
+
 -  Execute:
+
    ```bash
    run MDESupportToolPython.sh -parameters "--bypass-disclaimer -d"
    ```
