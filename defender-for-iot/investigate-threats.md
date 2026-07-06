@@ -1,12 +1,14 @@
 ---
 title: Investigate incidents and alerts in Microsoft Defender for IoT in the Defender portal
-description: This article describes how to investigate incidents and alerts in Microsoft Defender for IoT in the Defender portal.
+description: Investigate Defender for IoT incidents and related alerts in the Defender portal, analyze evidence, and remediate security issues detected in your OT environment.
 ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 06/26/2024
+ms.date: 06/11/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Investigate incidents and alerts
@@ -15,9 +17,9 @@ Microsoft Defender for IoT in the Microsoft Defender portal displays incidents a
 
 Alerts are the basis of all incidents and indicate the occurrence of malicious or suspicious events in your environment. Within an incident, you analyze the alerts that affect your network, understand what they mean, and collate the evidence so that you can devise an effective remediation plan.
 
-Learn more about [alerts](/defender-xdr/investigate-alerts) and [incidents](/defender-xdr/investigate-incidents) in the Defender portal.
+Learn more about [alert investigation in Microsoft Defender XDR](/defender-xdr/investigate-alerts) and [incident investigation in Microsoft Defender XDR](/defender-xdr/investigate-incidents) in the Defender portal.
 
-In this article, you learn how to investigate a Microsoft Defender for IoT incident and its associated alerts, and how to remediate the security issues raised by the alert.
+The following sections explain how to investigate a Microsoft Defender for IoT incident and its associated alerts, and how to remediate the security issues raised by those alerts.
 
 Alerts in the **Incidents** page uniquely combine IT and OT environment signals to detect potential threats and data leaks. The **Incidents** page displays:
 
@@ -26,7 +28,7 @@ Alerts in the **Incidents** page uniquely combine IT and OT environment signals 
 - Remediation options to solve the security problem.
 
 > [!NOTE]
-> Incident and alert data for Defender for IoT only appear once you have a site set up and your devices are sending data to the Defender portal. Learn how to [set up a site](set-up-sites.md).
+> Incident and alert data for Defender for IoT only appear once you have a site set up and your devices are sending data to the Defender portal. If you haven't configured a site yet, see [Set up a site for Defender for IoT](set-up-sites.md).
 
 [!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 
@@ -53,7 +55,8 @@ To investigate an alert:
 
 1. In the **Incident** panel, review the information, read the **Alert description**, **Evidence** and **Impacted assetts** and follow the **Alert recommended actions** to remediate the issue.
 
-## Defender for IoT alert
+<a name="defender-for-iot-alert"></a>
+## Review a Defender for IoT alert
 
 Defender for IoT generates its own unique alert.
 
@@ -61,7 +64,8 @@ Defender for IoT generates its own unique alert.
 |----|----|
 |**Possible operational impact due to a compromised device** |A compromised device communicated with an operational technology (OT) asset. An attacker might be attempting to control or disrupt physical operations. |
 
-## Advanced hunting
+<a name="advanced-hunting"></a>
+## Use advanced hunting to investigate IoT alerts
 
 Use the **Site** property listed in the **DeviceInfo** table to write queries for advanced hunting. This allows you to filter devices according to a specific site, for example, all devices that communicated with malicious devices at a specific site.
 
@@ -72,4 +76,4 @@ DeviceInfo
 |where Site == "SanFrancisco" and PublicIP == "192.168.1.1" and DeviceCategory == "Endpoint"
 ```
 
-This is relevant for both the device inventory and site security. For more information, see [Advanced hunting](/../defender-xdr/advanced-hunting-overview) and the [Advanced hunting DeviceInfo schema](/../defender-xdr/advanced-hunting-deviceinfo-table).
+Filtering devices by site in advanced hunting queries is relevant for both the device inventory and site security. For more information, see [Advanced hunting](/../defender-xdr/advanced-hunting-overview) and the [Advanced hunting DeviceInfo schema](/../defender-xdr/advanced-hunting-deviceinfo-table).

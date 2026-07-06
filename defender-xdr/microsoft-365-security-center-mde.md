@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 f1.keywords:
 - NOCSH
 ms.author: guywild
-author: diannegali
+author: guywi-ms
 ms.date: 10/16/2024
 audience: ITPro
 ms.topic: article

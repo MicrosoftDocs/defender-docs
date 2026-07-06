@@ -2,13 +2,16 @@
 title: Run KQL queries on Microsoft Sentinel data lake using APIs
 titleSuffix: Microsoft Security  
 description: Learn how to run KQL queries against the Microsoft Sentinel data lake programmatically using REST APIs. Enable automation, intelligent agents, and scalable analytics.
+ms.author: edbaynash  
 author: EdB-MSFT  
+ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to
-ms.date: 03/26/2026
-ms.author: edbaynash  
+ms.date: 06/12/2026
 ms.collection: ms-security  
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---  
 
 # Run KQL queries on the Microsoft Sentinel data lake using APIs
@@ -35,7 +38,7 @@ You can authenticate to the Sentinel data lake API by using either:
 - A user access token
 
 > [!NOTE]
-> Using a service principal currently Entra ID roles and Microsoft Defender XDR unified RBAC roles aren't supported for querying the Sentinel data lake through this API.
+> Using a service principal currently Entra ID roles and Microsoft Defender XDR unified RBAC roles aren't supported for querying the Sentinel data lake through the Sentinel data lake KQL query API.
 
 ## Calling the API
 
@@ -99,10 +102,11 @@ sample payload:
             "servertimeout": "00:04:00",
             "queryconsistency": "strongconsistency",
             "query_language": "kql",
-            "request_readonly": False,
-            "request_readonly_hardline": False
+            "request_readonly": false,
+            "request_readonly_hardline": false
         }
     }
+}
 ```
 
 ## Service limits and considerations

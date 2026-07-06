@@ -1,14 +1,17 @@
 ---  
 title: Set up connectors for the Microsoft Sentinel data lake
 titleSuffix: Microsoft Security  
-description: Set up and configuring connectors for Microsoft Sentinel data lake.
+description: Set up connectors for the Microsoft Sentinel data lake and configure data retention across analytics and data lake tiers.
+ms.author: edbaynash  
 author: EdB-MSFT  
+ms.reviewer: sourinpaul
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to
-ms.date: 11/05/2025
-ms.author: edbaynash  
+ms.date: 06/12/2026
 ms.collection: ms-security  
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 # Customer intent: As a security admin, I want to set up connectors for Microsoft Sentinel data lake so that I can mirror and retain security data for long-term analysis.
 
@@ -18,7 +21,7 @@ ms.collection: ms-security
 
 The Microsoft Sentinel data lake mirrors data from Microsoft Sentinel workspaces. When you onboard to Microsoft Sentinel data lake, your existing Microsoft Sentinel data connectors are configured to send data to both the analytics tier - your Microsoft Sentinel workspaces, and mirror the data to the data lake tier for longer term storage. After onboarding, configure your connectors to retain data in each tier according to your requirements.   
 
-This article explains how to set up connectors for the Microsoft Sentinel data lake and configure retention. For more information on onboarding, see [Onboarding to Microsoft Sentinel data lake](sentinel-lake-onboarding.md).
+The following sections explain how to set up connectors for the Microsoft Sentinel data lake and configure retention. For more information on onboarding, see [Onboarding to Microsoft Sentinel data lake](sentinel-lake-onboarding.md).
 
 ## Configure retention and data tiering
 
@@ -29,9 +32,9 @@ After onboarding, you can enable new connectors and configure retention for exis
 When you enable a connector, by default the data is sent to the analytics tier and mirrored in the data lake tier. When you enable Microsoft Sentinel data lake, the mirroring is automatically enabled for all the tables from onboarding forward. Mirrored data in the data lake with the same retention as the analytics tier doesn't incur extra billing charges.
 Preexisting data in the tables isn't mirrored. The retention of the data lake tier is set to the same value as the analytics tier. You can switch to ingest data to data lake tier only. When you configure to ingest only to the data lake tier, ingestion to the analytics tier stops and the existing data in the analytics tier is retained according to the retention settings.
 
-The data retained in Archive is still available and can be restored by using Search and Restore functionality. 
+The data retained in the Archive tier is still available and can be restored by using Search and Restore functionality. 
 
-To configure retention and tiering for the data connector see [Configure data connector](../configure-data-connector.md).
+To configure retention and tiering for your connectors, see [Configure data connector](../configure-data-connector.md).
 
  ## Microsoft Sentinel XDR data
 

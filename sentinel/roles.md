@@ -1,10 +1,11 @@
 ---
 title: Roles and permissions in the Microsoft Sentinel platform
 description: Learn how Microsoft Sentinel assigns permissions to users using both Azure and Microsoft Entra ID role-based access control, and identify the allowed actions for each role.
+ms.author: monaberdugo
 author: mberdugo
+ms.reviewer: noak
 ms.topic: concept-article
 ms.date: 01/07/2026
-ms.author: monaberdugo
 ms.collection: usx-security
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
@@ -17,7 +18,11 @@ This article explains how Microsoft Sentinel assigns permissions to user roles f
 
 Microsoft Sentinel uses [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/) to provide built-in and custom roles for Microsoft Sentinel SIEM, and [Microsoft Entra ID role-based access control (Microsoft Entra ID RBAC)](/entra/identity/role-based-access-control/custom-overview) to provide built-in and custom roles for Microsoft Sentinel data lake.
 
-You can assign roles to users, groups, and services in either [Azure](/azure/role-based-access-control/role-assignments-steps) or [Microsoft Entra ID](/entra/identity/role-based-access-control/manage-roles-portal?tabs=admin-center).
+Before assigning roles, see the planning guide [Steps to assign an Azure role](/azure/role-based-access-control/role-assignments-steps) for help determining who needs access, which role to choose, and what scope to apply.
+
+Use the following step-by-step instructions to assign roles to users, groups, and services, based on your role type:
+- **Azure roles**: [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal)
+- **Microsoft Entra ID roles**: [Assign Microsoft Entra roles](/entra/identity/role-based-access-control/manage-roles-portal?tabs=admin-center)
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 

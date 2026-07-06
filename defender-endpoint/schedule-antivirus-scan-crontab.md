@@ -12,14 +12,13 @@ ms.collection:
 - mde-linux
 ms.topic: article
 ms.subservice: linux
-ms.date: 03/24/2025
+ms.date: 05/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
-# Schedule an antivirus scan using crontab with Microsoft Defender for Endpoint on Linux
 
+# Schedule an antivirus scan using crontab with Microsoft Defender for Endpoint on Linux
 
 To run a scan for Linux, see [Supported commands](linux-resources.md#supported-commands).
 
@@ -30,7 +29,7 @@ For Linux (and Unix), you can use a tool called **crontab** (similar to Task Sch
 > [!NOTE]
 > To get a list of all the time zones, run the following command:
 > `timedatectl list-timezones`<br>
-> Examples for timezones:
+> Examples for time zones:
 >
 > - `America/Los_Angeles`
 > - `America/New_York`
@@ -43,17 +42,16 @@ To set the cron job, use the commands in this article.
 
 ### Backup crontab entries
 
+> [!TIP]
+> Do this step before you edit or remove entries.
+
 ```bash
 sudo crontab -l > /var/tmp/cron_backup_200919.dat
 ```
 
-> [!NOTE]
-> Where 200919 == YRMMDD
+Where 200919 = YYMMDD
 
-> [!TIP]
-> Do this before you edit or remove.
-
-To edit the crontab, and add a new job as a root user:
+To edit the crontab and add a new job as a root user:
 
 ```bash
 sudo crontab -e
@@ -77,7 +75,7 @@ CRON_TZ=America/Los_Angeles
 ```
 
 > [!NOTE]
-> In this example, we have  set it to 00 minutes, 2 a.m. (hour in 24 hour format), any day of the month, any month, on Saturdays. Meaning it will run Saturdays at 2:00 a.m. Pacific (UTC -8).
+> In this example, we have set it to 00 minutes, 2 a.m. (hour in 24-hour format), any day of the month, any month, on Saturdays. This setting means the job runs Saturdays at 2:00 a.m. Pacific (UTC -8).
 
 Press **Esc**, and then type "`:wq`" without the double quotes.
 
@@ -99,6 +97,64 @@ sudo grep mdatp /var/log/cron
 ```bash
 sudo nano mdatp_cron_job.log
 ```
+
+## Verify scan execution
+
+Linux doesn't provide a direct way to confirm that a scheduled scan ran.
+
+Scheduled scans configured through crontab don't surface a status field or dedicated confirmation in Microsoft Defender for Endpoint on Linux.
+
+To verify that a scan ran, run the following command:
+
+```bash
+mdatp scan list
+```
+
+`mdatp scan list` returns a history of the last 7 scans performed on the device by Microsoft Defender for Endpoint. For each scan entry, you can see:
+
+- Scan Type - Quick or Full
+- Scan Start Time - For example, Jan 05 2023 at 03:18:39 PM
+- Scan State - For example, Succeeded, Failed, or Cancelled
+
+Use this command to verify that scheduled scans ran at the expected date, time, and frequency. 
+
+The output only covers the last seven scans. If you need to check whether both quick and full scans are running regularly, monitor it over time or script around it.
+
+You can also verify the scan ran by:
+
+**Running on-demand scans:**
+
+- Quick scan
+
+    ```bash
+    mdatp scan quick
+    ```
+
+- Full scan
+
+    ```bash
+     mdatp scan full
+    ```
+
+- Scan a specific path
+
+  ```bash
+  mdatp scan custom --path /home/user/downloads
+  ```
+
+**Checking scan results**
+
+- List all detected threats.
+
+  ```bash
+  mdatp threat list
+  ```
+
+- Get details on a specific threat.
+
+  ```bash
+  mdatp threat get --id [threat-id]
+  ```
 
 ## If you're using Ansible, Chef, Puppet, or SaltStack
 
@@ -156,13 +212,13 @@ For more information, see the [Salt.States.Cron documentation](https://docs.salt
 man crontab
 ```
 
-### To get a list of crontab file of the current user
+### To get a list of crontab files for the current user
 
 ```bash
 crontab -l
 ```
 
-### To get a list of crontab file of another user
+### To get a list of crontab files for another user
 
 ```bash
 crontab -u username -l
@@ -170,12 +226,12 @@ crontab -u username -l
 
 ### To back up crontab entries
 
+> [!TIP]
+> Do this step before you edit or remove entries.
+
 ```bash
 crontab -l > /var/tmp/cron_backup.dat
 ```
-
-> [!TIP]
-> Do this before you edit or remove.
 
 ### To restore crontab entries
 
@@ -229,5 +285,3 @@ crontab -u username -r
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
 - [Configure security settings and policies for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
-
-

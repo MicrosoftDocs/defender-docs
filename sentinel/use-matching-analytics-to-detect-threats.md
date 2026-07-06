@@ -2,10 +2,11 @@
 title: Use matching analytics to detect threats
 titleSuffix: Microsoft Sentinel
 description: This article explains how to detect threats with Microsoft-generated threat intelligence in Microsoft Sentinel.
+ms.author: guywild
 author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
 ms.date: 01/28/2025
-ms.author: guywild
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
@@ -118,7 +119,7 @@ For more information, see [Searching and pivoting with Intel Explorer](/defender
 
 In this article, you learned how to connect threat intelligence produced by Microsoft to generate alerts and incidents. For more information about threat intelligence in Microsoft Sentinel, see the following articles:
 
-- [Work with threat indicators in Microsoft Sentinel](work-with-threat-indicators.md).
+- [Work with threat indicators in Microsoft Sentinel](work-with-threat-indicators.md)
 - Connect Microsoft Sentinel to [STIX/TAXII threat intelligence feeds](./connect-threat-intelligence-taxii.md).
 - [Connect threat intelligence platforms](./connect-threat-intelligence-tip.md) to Microsoft Sentinel.
 - See which [TIP platforms, TAXII feeds, and enrichments](threat-intelligence-integration.md) can be readily integrated with Microsoft Sentinel.

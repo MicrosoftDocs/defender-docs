@@ -1,8 +1,9 @@
 ---
 title: What is Microsoft Sentinel?
 description: Learn about Microsoft Sentinel, an AI-first, cloud-native security information and event management (SIEM) and security platform that consolidates and analyzes security data at scale, empowers security operations teams with proactive, AI-enhanced defense capabilities, and provides unified tools for detecting, investigating, and responding to threats across hybrid and multicloud environments.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: efratka
 ms.topic: overview
 ms.service: microsoft-sentinel
 ms.date: 09/14/2025
@@ -109,7 +110,7 @@ For example, partners can create, package, and publish:
 - Microsoft Sentinel SIEM content such as connectors, analytic rules, hunting queries, and playbooks. 
 - Microsoft Sentinel platform content, such as connectors, Jupyter notebook jobs to analyze the data, and agents that correlate that data with existing lake content. The agent can then interact with other endpoints and external applications to provide customers with a powerful unified experience. 
 
-For more information, see [Build and publish Microsoft Sentinel solutions](./partner-integrations.md).
+For more information, see [Build and publish Microsoft Sentinel solutions](isv/partner-integrations.md).
 
 ## Get started
 
@@ -122,4 +123,4 @@ To get started with the Microsoft Sentinel platform and SIEM, see:
 - [Manage data tiers and retention in Microsoft Defender Portal (preview)](./manage-data-overview.md)
 - [Manage and monitor costs for Microsoft Sentinel](./billing-monitor-costs.md)
 - [Jupyter notebooks in the Microsoft Sentinel data lake](../sentinel/datalake/notebooks-overview.md)
-- [Build and publish Microsoft Sentinel solutions](../sentinel/partner-integrations.md)
+- [Build and publish Microsoft Sentinel solutions](isv/partner-integrations.md)

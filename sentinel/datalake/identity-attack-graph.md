@@ -2,17 +2,18 @@
 title: Identity attack graph in Microsoft Sentinel
 titleSuffix: Microsoft Security
 description: Learn how the identity attack graph in Microsoft Sentinel models identities, permissions, and Azure resources to surface lateral movement paths and privilege escalation risks.
-author: evangelinew
+ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: evwhite
 ms.topic: overview
 ms.date: 04/10/2026
-ms.author: evwhite
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 
 #CustomerIntent: As a security analyst, I want to turn on the identity attack graph so that I can identify lateral movement paths and privilege escalation risks in my environment.
 ---
 
-# What is the identity attack graph?
+# What is the identity attack graph? (preview)
 
 The identity attack graph in Microsoft Sentinel visualizes how identities connect to Azure resources through permissions and group memberships. Security analysts can use the graph to identify lateral movement paths, which are the potential routes an attacker could take to move from one identity or resource to another by exploiting existing permissions, group memberships, or trust relationships, often to escalate privileges or reach sensitive assets.
 

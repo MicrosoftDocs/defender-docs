@@ -1,10 +1,11 @@
 ---
 title: Reference to feature availability in Azure Government cloud
 description: References the feature availability table for Azure Government.
-author: limwainstein
+ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: include
 ms.date: 01/09/2023
-ms.author: lwainstein
 ms.custom: include file
 ---
 

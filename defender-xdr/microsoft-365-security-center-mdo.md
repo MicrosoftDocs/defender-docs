@@ -2,8 +2,8 @@
 title: Microsoft Defender for Office 365 in the Microsoft Defender portal
 description: Learn about how Microsoft Defender for Office 365 operates in the Microsoft Defender portal.
 ms.date: 09/11/2024
-ms.author: chrisda
-author: chrisda
+ms.author: guywild
+author: guywi-ms
 ms.topic: overview
 ms.localizationpriority: medium
 ms.collection:
@@ -51,12 +51,12 @@ Defender for Office 365 safeguards your organization against malicious threats p
 
 The **Home** page of the Defender portal shows important summary information (cards) about the security status of your Microsoft 365 environment.
 
-- Use :::image type="icon" source="media/m365-cc-sc-guided-tour-icon.png" border="false"::: **Guided tour** to take a quick tour of:
+- Use :::image type="icon" source="media/defender-portal-icon-guided-tour.png" border="false"::: **Guided tour** to take a quick tour of:
   - Email & collaboration
   - Attack simulation training (Defender for Office 365 Plan 2 only)
-- Use :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **What's New** to go to the [Microsoft Defender XDR Blog](https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/bg-p/MicrosoftThreatProtectionBlog).
-- Use :::image type="icon" source="media/m365-cc-sc-community-icon.png" border="false"::: **Community** to go to the [Security, Compliance, and Identity community](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance).
-- Use :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add cards** to customize the information on the page.
+- Use :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **What's New** to go to the [Microsoft Defender XDR Blog](https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/bg-p/MicrosoftThreatProtectionBlog).
+- Use :::image type="icon" source="media/defender-portal-icon-community.png" border="false"::: **Community** to go to the [Security, Compliance, and Identity community](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance).
+- Use :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add cards** to customize the information on the page.
 
 ### Investigation & response
 

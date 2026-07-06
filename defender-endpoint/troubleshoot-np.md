@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot problems with Network protection
-description: Resources and sample code to troubleshoot issues with Network protection in Microsoft Defender for Endpoint.
+description: Troubleshoot false positives, false negatives, and network performance issues with Network protection in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
@@ -12,11 +12,13 @@ ms.collection:
 - m365-security
 - tier3
 - mde-asr
-ms.date: 02/24/2025
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Troubleshoot network protection
@@ -49,7 +51,7 @@ Network protection works on devices with the following conditions:
 
 ## Use audit mode
 
-You can enable network protection in audit mode and then visit a website designed to demo the feature. All website connections are allowed by network protection but an event is logged to indicate any connection that would be blocked if network protection were enabled.
+You can enable network protection in audit mode and then visit the [network protection demo site](https://smartscreentestratings2.net) to test the feature. All website connections are allowed by network protection but an event is logged to indicate any connection that would be blocked if network protection were enabled.
 
 1. Set network protection to **Audit mode**.
 
@@ -61,7 +63,7 @@ You can enable network protection in audit mode and then visit a website designe
 
 1. [Review the network protection event logs](network-protection.md#review-network-protection-events-in-windows-event-viewer) to see if the feature would block the connection if it were set to **Enabled**.
 
-   If network protection isn't blocking a connection that you're expecting it should block, enable the feature.
+   If network protection isn't blocking a connection that you're expecting it should block, re-enable the feature to restore enforcement:
 
    ```PowerShell
    Set-MpPreference -EnableNetworkProtection Enabled
@@ -69,7 +71,7 @@ You can enable network protection in audit mode and then visit a website designe
 
 ## Report a false positive or false negative
 
-If you've tested the feature with the demo site and with audit mode, and network protection is working on preconfigured scenarios, but isn't working as expected for a specific connection, use the [Windows Defender Security Intelligence web-based submission form](https://www.microsoft.com/wdsi/filesubmission) to report a false negative or false positive for network protection. With an E5 subscription, you can also [provide a link to any associated alert](alerts-queue.md).
+If you've tested the feature with the demo site and with audit mode, and network protection is working on preconfigured scenarios, but isn't working as expected for a specific connection, use the [Windows Defender Security Intelligence web-based submission form](https://www.microsoft.com/wdsi/filesubmission) to report a false negative or false positive for network protection. With an E5 subscription, you can also provide a link to any associated alert from the [Alerts queue](alerts-queue.md).
 
 See [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md).
 
@@ -83,11 +85,12 @@ The current exclusion options are:
 
 1. Excluding an entire process. For more information, see [Microsoft Defender Antivirus exclusions](configure-exclusions-microsoft-defender-antivirus.md).
 
-## Network Performance issues
+<a name="network-performance-issues"></a>
+## Troubleshoot network performance issues
 
-In certain circumstances, a network protections component might contribute to slow network connections to Domain Controllers and/or Exchange servers. You might also notice Event ID 5783 NETLOGON errors.
+In certain circumstances, a network protections component might contribute to slow network connections to Domain Controllers and/or Exchange servers. You might also notice Event ID 5783 NETLOGON errors, which indicate authentication-related connectivity failures between the device and a Domain Controller.
 
-To attempt to solve these issues, change Network Protection from 'block mode' to either '[audit mode](troubleshoot-np.md)' or 'disabled'. If your network issues are fixed, follow the next steps to find out which component in Network Protection is contributing to the behavior.
+To attempt to solve these issues, change Network Protection from 'block mode' to either '[audit mode](troubleshoot-np.md)' or 'disabled'. If your network issues are fixed, use the following component-isolation procedure to find out which component in Network Protection is contributing to the behavior.
 
 Disable the following components in order and test your network connectivity performance after disabling each one:
 
@@ -113,13 +116,17 @@ For detailed instructions, see [Collect Microsoft Defender Antivirus diagnostic 
 
 ## Resolve connectivity issues with network protection (for E5 customers)
 
-Due to the environment where network protection runs, Microsoft is unable to see your operating system proxy settings. In some cases, network protection clients are unable to reach the cloud service. To resolve connectivity issues with network protection, configure one of the following registry keys so that network protection becomes aware of the proxy configuration:
+Because network protection can't see your operating system proxy settings, network protection clients might be unable to reach the cloud service in some environments. To resolve these connectivity issues, configure one of the following registry keys so that network protection becomes aware of the proxy configuration:
+
+To configure a static proxy server, set the proxy address and port:
 
 ```powershell
 Set-MpPreference -ProxyServer <proxy IP address: Port>
 ```
 
 ---OR---
+
+If your environment uses a proxy auto-configuration (PAC) file instead of a static proxy, specify the PAC URL:
 
 ```powershell
 Set-MpPreference -ProxyPacUrl <Proxy PAC url>

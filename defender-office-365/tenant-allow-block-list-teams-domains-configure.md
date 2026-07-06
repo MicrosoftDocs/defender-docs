@@ -14,6 +14,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ms.custom: sfi-ga-nochange
 ---
 
 # Block domains and addresses in Microsoft Teams using the Tenant Allow/Block List
@@ -74,7 +75,7 @@ This article describes how security admins can manage entries for blocked domain
 
 2. On the **Tenant Allow/Block Lists** page, select the **Teams senders** tab.
 
-3. On the **Teams senders** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Block**.
+3. On the **Teams senders** tab, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Block**.
 
 4. In the **Block sender domains & addresses on Teams** flyout that opens, enter up to 20 domains separated by commas or line breaks, and then select **Add**.
 
@@ -90,7 +91,7 @@ On the **Teams senders** tab, you can sort the entries by clicking on an availab
 
 - **Value**: The domain or email address.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific entries.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific entries.
 
 ### Remove block entries for domains and addresses in Teams in the Tenant Allow/Block List
 
@@ -98,7 +99,7 @@ Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="f
 
 2. On the **Tenant Allow/Block Lists** page, select the **Teams senders** tab.
 
-3. On **Teams senders** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
+3. On **Teams senders** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears.
 
    > [!TIP]
    > You can select multiple entries by selecting each check box, or select all entries by selecting the check box next to the **Value** column header.

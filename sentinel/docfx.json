@@ -137,9 +137,40 @@
       "ms.subservice": "sentinel-siem",
       "search.appverid": "met150"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.reviewer": {
+        "sap/**": "mapankra",
+        "automation/**": "sshuster",
+        "business-applications/**": "mapankra",
+        "dynamics-365/**": "mapankra",
+        "soc-optimization/**": "yohasson",
+        "normalization-*": "ofshezaf"
+      }
+    },
     "overwrite": [],
     "externalReference": [],
-    "template": []
+    "template": [],
+    "rules": {
+      "sensitive-language-ma": {
+        "exclude": []
+      },
+      "filename-incomplete": {
+        "exclude": []
+      },
+      "sensitive-language-sl": {
+        "exclude": []
+      },
+      "sensitive-language-bl": {
+        "exclude": []
+      },
+      "sensitive-language-wl": {
+        "exclude": [
+          "includes/connector-details.md",
+          "includes/deprecated-connectors.md",
+          "data-connectors-reference.md",
+          "includes/sentinel-tables-connectors.md"
+        ]
+      }
+    }
   }
 }

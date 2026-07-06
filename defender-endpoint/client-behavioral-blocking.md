@@ -74,7 +74,7 @@ If your organization is using Defender for Endpoint, client behavioral blocking 
 - [Defender for Endpoint baselines](configure-machines-security-baseline.md)
 - [Devices onboarded to Defender for Endpoint](onboard-configure.md)
 - [EDR in block mode](edr-in-block-mode.md)
-- [Attack surface reduction](attack-surface-reduction.md)
+- [Attack surface reduction](attack-surface-reduction-rules-overview.md)
 - [Next-generation protection](configure-microsoft-defender-antivirus-features.md) (antivirus, antimalware, and other threat protection capabilities)
 
 > [!TIP]

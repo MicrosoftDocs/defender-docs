@@ -1,8 +1,9 @@
 ---
 title: Integrate Microsoft Sentinel and Microsoft Purview
 description: This article describes how to use the Microsoft Sentinel data connector and solution for Microsoft Purview to enable data sensitivity insights, create rules to monitor when classifications have been detected, and get an overview about data found by Microsoft Purview, and where sensitive data resides in your organization.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
 ms.date: 11/11/2024
 

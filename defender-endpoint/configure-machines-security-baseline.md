@@ -1,6 +1,6 @@
 ---
 title: Increase compliance to the Microsoft Defender for Endpoint security baseline
-description: The Microsoft Defender for Endpoint security baseline sets security controls to provide optimal protection.
+description: Learn how to deploy the Microsoft Defender for Endpoint security baseline in Intune and track device compliance against recommended security controls.
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: lwainstein
@@ -10,19 +10,21 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 03/25/2025
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
-# Increase compliance to the Microsoft Defender for Endpoint security baseline
+# Increase compliance with the Microsoft Defender for Endpoint security baseline
 
 
 
 Security baselines ensure that security features are configured according to guidance from both security experts and expert Windows system administrators. When deployed, the Defender for Endpoint security baseline sets Defender for Endpoint security controls to provide optimal protection.
 
-To understand security baselines and how they're assigned on Intune using configuration profiles, [read this FAQ](/intune/intune-service/protect/security-baselines#q--a).
+To understand security baselines and how they're assigned on Intune using configuration profiles, [Security baselines FAQ](/intune/intune-service/protect/security-baselines#q--a).
 
 Before you can deploy and track compliance to security baselines:
 
@@ -56,7 +58,7 @@ Each device is given one of the following status types:
 - **Misconfigured**: At least one baseline setting isn't properly configured on the device and is in a conflict, error, or pending state.
 - **Not applicable**: At least one baseline setting isn't applicable on the device.
 
-To review specific devices, select **Configure security baseline** on the card. This takes you to Intune device management. From there, select **Device status** for the names and statuses of the devices.
+To review specific devices, select **Configure security baseline** on the **Security baseline** card. This takes you to Intune device management. From there, select **Device status** for the names and statuses of the devices.
 
 > [!NOTE]
 > You might experience discrepancies in aggregated data displayed on the device configuration management page and those displayed on overview screens in Intune.
@@ -99,6 +101,6 @@ Device configuration management monitors baseline compliance only of Windows 10 
 
 - [Ensure your devices are configured properly](configure-machines.md)
 - [Get devices onboarded to Microsoft Defender for Endpoint](configure-machines-onboarding.md)
-- [Optimize ASR rule deployment and detections](configure-machines-asr.md)
+- [Monitor ASR rule activity](attack-surface-reduction-rules-monitor.md)
 
 

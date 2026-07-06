@@ -64,9 +64,7 @@ If the workload is active, all assigned user permissions are deleted by removing
 ## Export roles
 
 > [!IMPORTANT]
-> Starting February 16, 2025, the Microsoft Defender unified RBAC model will be the default permissions model for new Microsoft Defender Endpoint tenants. These new tenants won't have the capability to export roles and permissions from the current model. Defender for Endpoint tenants with roles and permissions assigned or exported prior to this date will maintain their current roles and permissions configuration.
->
-> Starting March 2, 2025, new Microsoft Defender for Identity tenants will also have the unified RBAC model as their default permissions model. They won't be able to export roles and permissions from the current model. Existing Defender for Identity tenants will maintain their current roles and permissions configuration.
+> Starting 2025, the Microsoft Defender unified RBAC model is the default permissions model for new Microsoft Defender Endpoint tenants and Microsoft Defender for Identity tenants. These tenants can't export roles and permissions from the old model. Defender for Endpoint or Defender for Identity tenants with roles and permissions assigned or exported prior to this date maintain their old roles and permissions configuration.
 
 The Export feature enables you to export the following roles data:
 

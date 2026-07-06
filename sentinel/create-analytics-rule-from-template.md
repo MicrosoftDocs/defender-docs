@@ -1,15 +1,17 @@
 ---
-title: Create scheduled analytics rules from templates in Microsoft Sentinel | Microsoft Docs
+title: Create scheduled analytics rules from templates in Microsoft Sentinel
 description: This article explains how to view and create scheduled analytics rules from templates in Microsoft Sentinel.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
-ms.date: 07/02/2024
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 #Customer intent: As a security engineer, I want to create scheduled analytics rules from templates so that I can efficiently monitor and detect anomalies in my data.
 
@@ -26,7 +28,7 @@ This article shows you how to create a scheduled analytics rule using a template
 
 ## View existing analytics rules
 
-To view the installed analytics rules in Microsoft Sentinel, go to the **Analytics** page. The **Rule templates** tab displays all the installed rule templates. To find more rule templates, go to the **Content hub** in Microsoft Sentinel to install the related product solutions or standalone content.
+To view the installed analytics rules in Microsoft Sentinel, go to the **Analytics** page. The **Rule templates** tab displays all the installed rule templates. To find more rule templates, go to the **Content hub** in Microsoft Sentinel to install product solutions that contain the rule templates you need, or install standalone content.
 
 # [Defender portal](#tab/defender-portal)
 
@@ -76,7 +78,7 @@ From the **Configuration** section of the Microsoft Sentinel navigation menu, se
 
 1. Select a template name, and then select the **Create rule** button on the details pane to create a new active rule based on that template. 
 
-    Each template has a list of required data sources. When you open the template, the data sources are automatically checked for availability. If a data source isn't enabled, the **Create rule** button may be disabled, or you might see a message to that effect.
+    Each template has a list of required data sources. When you open the selected template, the data sources are automatically checked for availability. If a data source isn't enabled, the **Create rule** button may be disabled, or you might see a message to that effect.
 
     :::image type="content" source="media/create-analytics-rule-from-template/use-built-in-template.png" alt-text="Screenshot of analytics rule preview panel.":::
 
@@ -95,13 +97,11 @@ From the **Configuration** section of the Microsoft Sentinel navigation menu, se
 > [!TIP]
 > - Make sure that you **enable all rules associated with your connected data sources** in order to ensure full security coverage for your environment. The most efficient way to enable analytics rules is directly from the data connector page, which lists any related rules. For more information, see [Connect data sources](connect-data-sources.md).
 > 
-> - You can also **push rules to Microsoft Sentinel via [API](/rest/api/securityinsights/) and [PowerShell](https://www.powershellgallery.com/packages/Az.SecurityInsights/0.1.0)**, although doing so requires additional effort. 
+> - You can also **push rules to Microsoft Sentinel via the [Microsoft Sentinel REST API](/rest/api/securityinsights/) and [PowerShell](https://www.powershellgallery.com/packages/Az.SecurityInsights/0.1.0)**, although doing so requires additional effort. 
 > 
->     When using API or PowerShell, you must first export the rules to JSON before enabling the rules. API or PowerShell may be helpful when enabling rules in multiple instances of Microsoft Sentinel with identical settings in each instance.
+>     When using API or PowerShell, you must first export the analytics rules you want to enable to JSON before enabling them. API or PowerShell may be helpful when enabling rules in multiple instances of Microsoft Sentinel with identical settings in each instance.
 
 ## Next steps
-
-In this document, you learned how to create scheduled analytics rules from templates in Microsoft Sentinel.
 
 - Learn more about [analytics rules](threat-detection.md).
 - Learn how to [create an analytics rule from scratch](create-analytics-rules.md).

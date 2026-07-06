@@ -2,17 +2,20 @@
 title: Notebook examples for querying the Microsoft Sentinel data lake
 titleSuffix: Microsoft Security  
 description: This article provides sample code snippets for querying the Microsoft Sentinel data lake using Jupyter notebooks, demonstrating how to access and analyze security data.
-author: EdB-MSFT  
-ms.topic: how-to  
-ms.date: 08/27/2025
 ms.author: edbaynash  
+author: EdB-MSFT  
+ms.reviewer: zeinam
+ms.topic: how-to  
+ms.date: 06/12/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 # Customer intent: As a security engineer or data scientist, I want to see examples of how to query the Microsoft Sentinel data lake using Jupyter notebooks, so I can analyze security data effectively.
 ---
  
-# Jupyter notebook code examples  
+# Microsoft Sentinel Jupyter notebook code examples  
  
 This article presents some sample code snippets that demonstrate how to interact with Microsoft Sentinel lake data using Jupyter notebooks to analyze security data in the Microsoft Sentinel data lake. These examples illustrate how to access and analyze data from various tables, such as Microsoft Entra ID sign-in logs, group information, and device network events. The code snippets are designed to run in Jupyter notebooks within Visual Studio Code using the Microsoft Sentinel extension.
 
@@ -106,14 +109,15 @@ plt.tight_layout()
 plt.show()  
 ```
 
-The following screenshot shows a sample of the output of the code above, displaying the top 20 users with the highest number of failed sign-in attempts in a bar chart format.
+The following screenshot shows sample output from the failed sign-in analysis code sample, displaying the top 20 users with the highest number of failed sign-in attempts in a bar chart format.
 
 :::image type="content" source="media/notebook-examples/failed-login-analysis.png" lightbox="media/notebook-examples/failed-login-analysis.png" alt-text="A screenshot showing a bar chart of the users with the highest number of failed sign-in attempts.":::
 
-## Access lake tier Microsoft Entra ID Group table
+<a name="access-lake-tier-microsoft-entra-id-group-table"></a>
+## Query the EntraGroups table
 
 
-The following code sample demonstrates how to access the `EntraGroups` table in the Microsoft Sentinel data lake. It displays various fields such as `displayName`, `groupTypes`, `mail`, `mailNickname`, `description`, and `tenantId`. 
+This code sample reads the `EntraGroups` table from the data lake. It returns fields like `displayName`, `groupTypes`, `mail`, `mailNickname`, `description`, and `tenantId`. 
 
 ```python  
 from sentinel_lake.providers import MicrosoftSentinelProvider
@@ -123,7 +127,7 @@ table_name = "EntraGroups"
 df = data_provider.read_table(table_name)  
 df.select("displayName", "groupTypes", "mail", "mailNickname", "description", "tenantId").show(100, truncate=False)   
 ```  
-The following screenshot shows a sample of the output of the code above, displaying the Microsoft Entra ID group information in a dataframe format.
+The following screenshot shows sample output from the EntraGroups table query code sample, displaying the Microsoft Entra ID group information in a dataframe format.
 
 :::image type="content" source="media/notebook-examples/entra-id-group-output.png" lightbox="media/notebook-examples/entra-id-group-output.png" alt-text="A screenshot showing sample output from the Microsoft Entra ID group table.":::
 
@@ -247,7 +251,7 @@ result_df.show()
 
 ## Detect lateral movement attempts
 
-Use DeviceNetworkEvents to identify suspicious internal IP connections that may signal lateral movement, for example, abnormal SMB/RDP traffic between endpoints.
+Use DeviceNetworkEvents to identify suspicious internal IP connections that may signal lateral movement, for example, abnormal Server Message Block (SMB) or Remote Desktop Protocol (RDP) traffic between endpoints.
 
 ```python
 from sentinel_lake.providers import MicrosoftSentinelProvider

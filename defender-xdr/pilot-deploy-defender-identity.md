@@ -145,7 +145,7 @@ On the machines that you installed the sensor on, configure Windows event log co
 
 | Step | Description | More information |
 |---|---|---|
-| 1 | Configure Windows event log collection | [Event collection with Microsoft Defender for Identity](/defender-for-identity/deploy/event-collection-overview) <br><br>[Configure audit policies for Windows event logs](/defender-for-identity/deploy/configure-windows-event-collection) |
+| 1 | Configure Windows event log collection | [Configure Windows event auditing](/defender-for-identity/deploy/configure-windows-event-collection) |
 
 <a name="step-4"></a>
 
@@ -194,7 +194,7 @@ For more information, see:
 
 Incorporate the following into your SecOps processes:
 
-- [View the ITDR dashboard](/defender-for-identity/dashboard)
+- [View the Identity Security dashboard](/defender-for-identity/dashboard)
 - [View and manage Defender for Identity health issues](/defender-for-identity/health-alerts)
 
 ## Next step for the end-to-end deployment of Microsoft Defender XDR

@@ -1,8 +1,8 @@
 ---
 title: Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel
 description: The Microsoft Sentinel UEBA behaviors layer translates security telemetry into normalized behavioral patterns for investigation, hunting, and detection engineering.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
 ms.reviewer: mshechter
 ms.date: 12/29/2025
 ms.topic: how-to
@@ -230,9 +230,8 @@ To start aggregating UEBA behaviors, **make sure to connect at least one support
 
 To enable the UEBA behaviors layer in your workspace:
 
-1. In the Defender portal, select **System > Settings > Microsoft Sentinel > SIEM workspaces**.
-1. Select the Sentinel workspace where you want to enable the UEBA behaviors layer.
-1. Select **Enable behavior analytics > Configure UEBA > New! Behaviors layer**.
+1. In the Defender portal, select **Settings > Microsoft Sentinel > UEBA**.
+1. Select **New! Behaviors layer**.
 1. Toggle on **Enable Behaviors layer**.
 1. Select **Connect all data sources** or select the specific data sources from the list.
 

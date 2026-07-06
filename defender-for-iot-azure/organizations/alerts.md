@@ -1,11 +1,12 @@
 ---
 title: Microsoft Defender for IoT alerts
 description: Learn about Microsoft Defender for IoT alerts across the Azure portal and OT network sensors.
-ms.date: 04/06/2025
+ms.date: 06/12/2026
 ms.topic: how-to
-ms.custom:
+ms.custom: msecd-doc-authoring-1014
   - enterprise-iot
   - sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Microsoft Defender for IoT alerts
@@ -52,7 +53,7 @@ While you can view alert details, investigate alert context, and triage and mana
 
 Alert fatigue caused by a high number of identical alerts could lead to your team failing to see or remediate vital alerts. Each alert listed in the Alerts page is a result of a network violation, for example the *Unpermitted Usage of Modbus Function Code*. Aggregating violations with the same parameters and remediation requirements into one single alert listing, reduces the number of alerts displayed on the Alerts page. The matching parameters differ depending on the alert type. For example, the *Unpermitted Usage of Modbus Function Code* alert needs to have the same source and destination IP addresses to produce an aggregated alert violation. The aggregated alert could include alerts with different violation codes, such as read and write codes.
 
-You download the aggregated alert violation data, that lists each alert with the relevant parameters and functions, as a CSV file in the **Violations** tab of the alert details. This data can help teams to identify patterns, assess impact and prioritize responses more effectively based on the remediation suggestions in the **Take action** tab. Only alerts that have the same remediation process are aggregated into a single alert. However, individual violation events can still be viewed separately within their respective devices, providing additional clarity.
+You download the aggregated alert violation data, that lists each alert with the relevant parameters and functions, as a CSV file in the **Violations** tab of the alert details. The exported alert violation data can help teams to identify patterns, assess impact and prioritize responses more effectively based on the remediation suggestions in the **Take action** tab. Only alerts that have the same remediation process are aggregated into a single alert. However, individual violation events can still be viewed separately within their respective devices, providing additional clarity.
 
 > [!NOTE]
 > After you learn an alert (with the **Learn** option in the alert's **Take action** tab), the same alert might be triggered again. This can happen if the new alert has different violation parameters than the original alert. To check which violations exist for an alert: 
@@ -77,9 +78,9 @@ However, to maintain triggering of alerts that indicate critical scenarios:
 Users working in hybrid environments might be managing OT alerts in [Defender for IoT](https://portal.azure.com/#view/Microsoft_Azure_IoT_Defender/IoTDefenderDashboard/~/Getting_started) on the Azure portal or the OT sensor.
 
 > [!NOTE]
-> While the sensor console displays an alert's **Last detection** field in real-time, Defender for IoT in the Azure portal may take up to one hour to display the updated time. This explains a scenario where the last detection time in the sensor console isn't the same as the last detection time in the Azure portal.
+> While the sensor console displays an alert's **Last detection** field in real-time, Defender for IoT in the Azure portal may take up to one hour to display the updated time. This display delay explains a scenario where the last detection time in the sensor console isn't the same as the last detection time in the Azure portal.
 
-Alert statuses are otherwise fully synchronized between the Azure portal and the OT sensor. This means that regardless of where you manage the alert in Defender for IoT, the alert is updated in other locations as well.
+Alert statuses are otherwise fully synchronized between the Azure portal and the OT sensor. This synchronization means that regardless of where you manage the alert in Defender for IoT, the alert is updated in other locations as well.
 
 Setting an alert status to **Closed** or **Muted** on a sensor updates the alert status to **Closed** on the Azure portal.
 

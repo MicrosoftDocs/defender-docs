@@ -1,10 +1,10 @@
 ---
 title: The Advanced Security Information Model (ASIM) Network Session normalization schema reference | Microsoft Docs
 description: This article displays the Microsoft Sentinel Network Session normalization schema.
-author: oshezaf
+ms.author: edbaynash
+author: EdB-MSFT
 ms.topic: reference
 ms.date: 11/17/2021
-ms.author: ofshezaf
 
 
 
@@ -34,7 +34,7 @@ For the list of the Network Session parsers Microsoft Sentinel provides out-of-t
 
 ### Add your own normalized parsers
 
-When [developing custom parsers](normalization-develop-parsers.md) for the Network Session information model, name your KQL functions using the following syntax:
+When [developing custom parsers](isv/normalization-develop-parsers.md) for the Network Session information model, name your KQL functions using the following syntax:
 
 - `vimNetworkSession<vendor><Product>` for parametrized parsers
 - `ASimNetworkSession<vendor><Product>` for regular parsers
@@ -386,12 +386,10 @@ The following are the changes in version 0.2.7 of the schema:
 
 
 
-## Next steps
+## Related content
 
-For more information, see:
-
-- Watch the [ASIM Webinar](https://www.youtube.com/watch?v=WoGD-JeC7ng) or review the [slides](https://1drv.ms/b/s!AnEPjr8tHcNmjDY1cro08Fk3KUj-?e=murYHG)
 - [Advanced Security Information Model (ASIM) overview](normalization.md)
 - [Advanced Security Information Model (ASIM) schemas](normalization-about-schemas.md)
 - [Advanced Security Information Model (ASIM) parsers](normalization-parsers-overview.md)
 - [Advanced Security Information Model (ASIM) content](normalization-content.md)
+- [Azure Sentinel Webinar: The Information Model-Understanding Normalization in Azure Sentinel](https://www.youtube.com/watch?v=WoGD-JeC7ng)

@@ -1,16 +1,17 @@
 ---
 title: Install a Microsoft Sentinel solution for SAP applications
 description: Learn how to install a Microsoft Sentinel solution for SAP applications from the content hub to your Log Analytics workspace enabled for Microsoft Sentinel.
-author: mberdugo
 ms.author: monaberdugo
+author: mberdugo
 ms.topic: how-to
-ms.date: 09/30/2025
+ms.date: 06/12/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 zone_pivot_groups: sentinel-sap-connection
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 
 #Customer intent: As a security administrator, I want to deploy and configure security monitoring for SAP applications using Microsoft Sentinel so that I can enhance the security posture and threat detection capabilities of my SAP environment.
@@ -19,7 +20,7 @@ ms.custom: sfi-image-nochange
 
 # Install a Microsoft Sentinel solution for SAP applications
 
-The Microsoft Sentinel solutions for SAP applications include an SAP data connector, which collects logs from your SAP systems and sends them to your Microsoft Sentinel workspace, and out-of-the-box security content, which helps you gain insight into your organization's SAP environment and detect and respond to security threats. Installing your solution is a required step before you can configure your data connector.
+This article shows you how to install the Microsoft Sentinel solution for SAP applications from the content hub. The solution includes an SAP data connector, which collects logs from your SAP systems and sends them to your Microsoft Sentinel workspace, and out-of-the-box security content—including workbooks and analytics rules—that helps you gain insight into your organization's SAP environment and detect and respond to security threats. Installing your solution is a required step before you can configure your data connector. Before you start, make sure you meet the [prerequisites for deploying the Microsoft Sentinel solution for SAP applications](prerequisites-for-deploying-sap-continuous-threat-monitoring.md).
 
 :::zone pivot="connection-agent"
 
@@ -110,7 +111,7 @@ For more information, see [Discover and manage Microsoft Sentinel out-of-the-box
 
 ## View deployed content
 
-When the deployment is finished, display your new content by browsing again to the Microsoft Sentinel for SAP applications solution from the **Content hub**. Alternatively:
+When the SAP applications solution deployment is finished, display your new content by browsing again to the Microsoft Sentinel for SAP applications solution from the **Content hub**. Alternatively:
 
 - For the [built-in SAP workbooks](sap-solution-security-content.md#built-in-workbooks), in Microsoft Sentinel, go to **Threat Management** > **Workbooks** > **Templates**.
 

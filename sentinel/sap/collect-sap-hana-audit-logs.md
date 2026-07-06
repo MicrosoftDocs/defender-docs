@@ -1,14 +1,16 @@
 ---
-title: Collect SAP HANA audit logs in Microsoft Sentinel | Microsoft Docs
+title: Collect SAP HANA audit logs in Microsoft Sentinel
 description: This article explains how to collect audit logs from your SAP HANA database.
-author: mberdugo
 ms.author: monaberdugo
+author: mberdugo
 ms.topic: how-to
-ms.date: 06/09/2024
+ms.date: 06/12/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #Customer intent: As a security analyst, I want to collect and analyze SAP HANA audit logs to Microsoft Sentinel so that I can monitor and respond to security events effectively.
 
 ---
@@ -31,6 +33,8 @@ SAP HANA logs are sent over Syslog. Make sure that your Azure Monitor Agent is c
 
 ## Collect SAP HANA audit logs
 
+Perform the following steps to configure SAP HANA audit log collection.
+
 1. Make sure that the SAP HANA audit log trail is configured to use Syslog, as described in *SAP Note 0002624117*, which is accessible from the [SAP Launchpad support site](https://launchpad.support.sap.com/#/notes/0002624117). For more information, see:
 
     - [SAP HANA Audit Trail - Best Practice](https://help.sap.com/docs/SAP_HANA_PLATFORM/b3ee5778bc2e4a089d3299b82ec762a7/35eb4e567d53456088755b8131b7ed1d.html)
@@ -52,8 +56,9 @@ SAP HANA logs are sent over Syslog. Make sure that your Azure Monitor Agent is c
 
 Use the following steps in both Microsoft Sentinel and your SAP HANA database to verify that your system is configured as expected.
 
-### Microsoft Sentinel 
-In Microsoft Sentinel's **Logs** page, check to confirm that HANA database events are now shown in the ingested logs. For example, run the following query:
+<a name="microsoft-sentinel"></a>
+### Verify the configuration in Microsoft Sentinel
+In Microsoft Sentinel's **Logs** page, check to confirm that HANA database events are now shown in the ingested logs. For example, run the following query. This Kusto function template defines the schema and union logic for querying a custom Syslog table:
 
 ```Kusto
 //generated function structure for custom log Syslog
@@ -83,7 +88,7 @@ TimeGenerated = column_ifexists('TimeGenerated', '1000-01-01T00:00:00Z')
 T_Syslog | union isfuzzy= true (D_Syslog | where TimeGenerated != '1000-01-01T00:00:00Z')
 ```
 
-See more information on the following items used in the preceding examples, in the Kusto documentation:
+See more information on the Kusto operators and functions used in the sample query, in the Kusto documentation:
 - [***let*** statement](/kusto/query/let-statement?view=microsoft-sentinel&preserve-view=true)
 - [***datatable*** operator](/kusto/query/datatable-operator?view=microsoft-sentinel&preserve-view=true)
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
@@ -93,7 +98,8 @@ See more information on the following items used in the preceding examples, in t
 
 [!INCLUDE [kusto-reference-general-no-alert](../includes/kusto-reference-general-no-alert.md)]
 
-### SAP HANA
+<a name="sap-hana"></a>
+### Verify the configuration in SAP HANA
 
 In your SAP HANA database, check your configured audit policies. For more information on the required SQL statements, see [SAP Note 3016478](https://me.sap.com/notes/3016478/E).
 

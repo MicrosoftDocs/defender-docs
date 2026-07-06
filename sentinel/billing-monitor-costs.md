@@ -1,8 +1,9 @@
 ---
 title: Manage and monitor costs for Microsoft Sentinel
 description: Learn how to manage and monitor costs and billing for Microsoft Sentinel by using cost analysis in the Azure portal and other methods.
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: daniha
 ms.custom: subject-cost-optimization
 ms.topic: how-to
 ms.date: 03/29/2026
@@ -156,7 +157,8 @@ Once onboarded, usage of data lake tier capabilities is billed using new Microso
 The new cost management experience, currently in preview and under **Microsoft Sentinel** > **Cost management** in the [Microsoft Defender portal](https://security.microsoft.com), helps you manage and monitor costs associated with your use of the data lake tier.
 
 >[!IMPORTANT]
->You must have both the Billing Administrator and Security Administrator roles to access the Sentinel cost management pages. 
+ >To **view usage and limits** (read-only access), you need the **Security Reader** role.
+ >To **set limits and configure alerts**, you need either the **Billing Administrator** or **Security Administrator** role.
 
 #### Usage
 

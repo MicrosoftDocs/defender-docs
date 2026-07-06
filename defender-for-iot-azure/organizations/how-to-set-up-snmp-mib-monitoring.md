@@ -1,19 +1,21 @@
 ---
 title: Set up SNMP MIB monitoring on an OT sensor
 description: Learn how to set up your OT sensor for health monitoring via SNMP. 
-ms.date: 03/22/2023
+ms.date: 06/12/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Set up SNMP MIB health monitoring on an OT sensor
 
-This article describes how to configure your OT sensors for health monitoring via an authorized Simple Network Management Protocol (SNMP) monitoring server. SNMP queries are polled up to 50 times a second, using UDP over port 161.
+Configure your OT sensors for health monitoring by using an authorized Simple Network Management Protocol (SNMP) monitoring server. SNMP queries are polled up to 50 times a second, using UDP over port 161.
 
 Setup for SNMP monitoring includes configuring settings on your OT sensor and on your SNMP server. To define Defender for IoT sensors on your SNMP server, either define your settings manually or use a predefined SNMP MIB file downloaded from the Azure portal.
 
 ## Prerequisites
 
-Before you perform the procedures in this article, make sure you have:
+Before you configure SNMP monitoring, make sure you have:
 
 - **An SNMP monitoring server**, using SNMP versions 2 or 3. 
     - If you're using SNMP version 3 with AES and 3-DES encryption, you also need:
@@ -30,7 +32,7 @@ Before you perform the procedures in this article, make sure you have:
 - Secret key
 - SNMP v2 community string
 
-- **An OT sensor** [installed](ot-deploy/install-software-ot-sensor.md) and [activated](ot-deploy/activate-deploy-sensor.md), with access as an **Admin** user. For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](roles-on-premises.md).
+- **An OT sensor** with [OT sensor software installed](ot-deploy/install-software-ot-sensor.md) and [activate and deploy the OT sensor](ot-deploy/activate-deploy-sensor.md), with access as an **Admin** user. For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](roles-on-premises.md).
 
 To download a predefined SNMP MIB file from the Azure portal, you need access to the Azure portal as a [Security admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner) user. For more information, see [Azure user roles and permissions for Defender for IoT](roles-azure.md).
 
@@ -59,7 +61,7 @@ To download a predefined SNMP MIB file from the Azure portal, you need access to
 
 ## Download Defender for IoT's SNMP MIB file
 
-Defender for IoT in the Azure portal provides a downloadable MIB file for you to load into your SNMP monitoring system to predefine Defender for IoT sensors.
+Defender for IoT in the Azure portal provides a downloadable SNMP MIB file. Load this SNMP MIB file into your SNMP monitoring system to predefine Defender for IoT sensors.
 
 **To download the SNMP MIB file** from [Defender for IoT](https://portal.azure.com/#view/Microsoft_Azure_IoT_Defender/IoTDefenderDashboard/~/Getting_started) on the Azure portal, select **Sites and sensors** > **More actions** > **Download SNMP MIB file**.
 
@@ -72,7 +74,7 @@ To validate and query the SNMP MIB monitoring configuration in the OT sensor:
 
 1. In the OT sensor, go to **System settings > Sensor management**
 1. To [access the Defender for IoT CLI](references-work-with-defender-for-iot-cli-commands.md#defender-for-iot-cli-access), sign in to your OT or Enterprise IoT sensor as the *cyberx* user, using a terminal emulator and SSH.
-1. Run the following query depending on what SNMP version was configured and update the variables accordingly:
+1. Run the appropriate query for the SNMP version you configured, and update the variables accordingly:
 - For version 2 type: `snmpwalk -v 2c -c<community-string> <sensor-ip> isa`
 - For version 3 type: `snmpwalk -v 3 -aMD5|SHA -xDES|AES -A<password> -X<secret-key> -u<username> -|autoPriv <sensor-ip> isa`
 
@@ -114,4 +116,4 @@ If you're configuring Defender for IoT sensors on your SNMP monitoring system ma
 
 ## Next steps
 
-For more information, see [Maintain OT network sensors from the GUI](how-to-manage-individual-sensors.md).
+For more information about managing OT sensors from the web interface, see [Maintain OT network sensors from the GUI](how-to-manage-individual-sensors.md).

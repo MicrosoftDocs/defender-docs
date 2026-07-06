@@ -53,15 +53,16 @@ The following reference lists all the tables in the schema. Each table name link
 |------------|-------------|
 | **[AADSignInEventsBeta](advanced-hunting-aadsignineventsbeta-table.md)** | Microsoft Entra interactive and non-interactive sign-ins |	
 | **[AADSpnSignInEventsBeta](advanced-hunting-aadspnsignineventsbeta-table.md)** | Microsoft Entra service principal and managed identity sign-ins |	
-|**[AIAgentsInfo](advanced-hunting-aiagentsinfo-table.md)** (Preview) | Information about AI agents created with Microsoft Copilot Studio, including agent configuration and ownership details |	
+| **[AgentsInfo](advanced-hunting-agentsinfo-table.md)** (Preview) | Information about AI agents and their properties from various platforms |
+|**[AIAgentsInfo](advanced-hunting-aiagentsinfo-table.md)** (Preview) | Information about AI agents created with Microsoft Copilot Studio, including agent configuration and ownership details |
 | **[AlertEvidence](advanced-hunting-alertevidence-table.md)** | Files, IP addresses, URLs, users, or devices associated with alerts |	
 | **[AlertInfo](advanced-hunting-alertinfo-table.md)** | Alerts from Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, and Microsoft Defender for Identity, including severity information and threat categorization  |	
 | **[BehaviorEntities](advanced-hunting-behaviorentities-table.md)** (Preview) | Entities (file, process, device, user, and others) that are involved in a behavior in Microsoft Defender for Cloud Apps (not available for GCC) and User and Entity Behavior Analytics (UEBA) |	
 | **[BehaviorInfo](advanced-hunting-behaviorinfo-table.md)** (Preview) | Behaviors from Microsoft Defender for Cloud Apps (not available for GCC) and User and Entity Behavior Analytics (UEBA) |	
 | **[CampaignInfo](advanced-hunting-campaigninfo-table.md)** (Preview) | Email campaigns identified by Microsoft Defender for Office 365 |	
 | **[CloudAppEvents](advanced-hunting-cloudappevents-table.md)** | Events involving accounts and objects in Office 365 and other cloud apps and services |	
-| **[CloudAuditEvents](advanced-hunting-cloudauditevents-table.md)** (Preview)| Cloud audit events for various cloud platforms protected by the organization's Microsoft Defender for Cloud |	
-| **[CloudDnsEvents](advanced-hunting-clouddnsevents-table.md)** (Preview)| DNS activity events from cloud infrastructure environments |	
+| **[CloudAuditEvents](advanced-hunting-cloudauditevents-table.md)** | Cloud audit events for various cloud platforms protected by the organization's Microsoft Defender for Cloud |	
+| **[CloudDnsEvents](advanced-hunting-clouddnsevents-table.md)** | DNS activity events from cloud infrastructure environments |	
 | **[CloudPolicyEnforcementEvents](advanced-hunting-cloudpolicyenforcementevents-table.md)** (Preview)| Policy enforcement evaluation decisions and metadata of security gating events for various cloud platforms protected by the organization's Microsoft Defender for Cloud |	
 | **[CloudProcessEvents](advanced-hunting-cloudprocessevents-table.md)** (Preview)| Cloud process events for various cloud platforms protected by the organization's Microsoft Defender for Containers |	
 | **[CloudStorageAggregatedEvents](advanced-hunting-cloudstorageaggregatedevents-table.md)** (Preview)| Cloud storage activity and related events |	

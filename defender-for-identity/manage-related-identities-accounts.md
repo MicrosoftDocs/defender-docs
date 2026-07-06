@@ -1,10 +1,12 @@
 ---
 title: Manually link an account to an identity
 description: This article explains how to link or unlink accounts to and from identities in Microsoft Defender for Identity, including legacy, orphaned, or unused accounts.
-ms.date: 04/15/2026
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.service: microsoft-defender-for-identity
 ms.reviewer: Almog Omrad
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #customer intent: As a SOC analyst, I want to view all accounts linked to an identity so that I can gain a complete and accurate understanding of the identity's footprint across the organization, validate accounts correlated are correct, and remove any unused, legacy, or orphaned accounts from the identity.
 ---
 
@@ -48,16 +50,20 @@ Use the procedures in this article to manually link accounts to identities, and 
 > - Cloud discovery user enrichment and anonymization
 > - RBAC scoping
 >
-> These features continue to use the Cloud Application Accounts inventory.
+> The preceding features continue to use the Cloud Application Accounts inventory.
 
 > [!TIP]
-> To automatically correlate accounts using naming conventions or employee IDs, see [Create custom account correlation rules](custom-account-correlation-rules.md).
+> To automatically correlate accounts using naming conventions, see [Create custom account correlation rules](custom-account-correlation-rules.md).
 
 ## Prerequisites
+
+Before you begin, ensure that you meet the following requirement:
 
 - You must have [Unified role-based access control (URBAC)](/defender-for-identity/role-groups) roles: Global Administrator or Security Data (Manage).
 
 ## Manually link accounts to an identity in Defender for Identity
+
+Use the following steps to manually link accounts to an identity in Defender for Identity.
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Assets** \> **Identities**. Or, to go directly to the **Identity Inventory** page, use <https://security.microsoft.com/identity-inventory>.
 
@@ -97,12 +103,16 @@ Use the procedures in this article to manually link accounts to identities, and 
 
 ## Manually unlink legacy, orphaned, or unused accounts from an identity in Defender for Identity
 
+Use the following steps to manually unlink legacy, orphaned, or unused accounts from an identity.
+
 1. On the **Identities** tab of the **Identity Inventory** page at <https://security.microsoft.com/identity-inventory>, select an **Identity** from the list by clicking on the **Display name** value.
 1. On the identity details page that opens, select the **Observed in organization** tab, and verify the **Accounts** tab is selected.
 1. On the **Accounts** tab, select the account you want to unlink from the identity by selecting the check box next to the **Display name** column, and then select :::image type="icon" source="media/unlink-accounts.png" border="false"::: **Unlink**.
 1. In the **Unlink accounts from ...** confirmation dialog that opens, read the information, and then select **Unlink accounts**.
 
 ## What to expect after linking or unlinking an account in Defender for Identity
+
+After you link or unlink an account, the following changes occur:
 
 - The selected accounts are linked or unlinked immediately.
 - The system updates the identity context and refreshes the account list.

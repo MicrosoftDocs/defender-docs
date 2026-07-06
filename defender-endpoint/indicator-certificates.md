@@ -12,19 +12,21 @@ ms.collection:
 - mde-asr
 ms.topic: how-to
 ms.subservice: asr
-ms.date: 03/04/2025
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
-# Create indicators based on certificates
+# Create indicators for certificates in Microsoft Defender for Endpoint
 
 
 
 You can create indicators for certificates. Some common use cases include:
 
-- Scenarios when you need to deploy blocking technologies, such as [attack surface reduction rules](attack-surface-reduction.md) but need to allow behaviors from signed applications by adding the certificate in the allowlist.
+- Scenarios when you need to deploy blocking technologies, such as [attack surface reduction rules](attack-surface-reduction-rules-overview.md) but need to allow behaviors from signed applications by adding the certificate in the allowlist.
 - Blocking the use of a specific signed application across your organization. By creating an indicator to block the certificate of the application, Microsoft Defender Antivirus prevents file executions (block and remediate), and automated investigation and remediation behaves the same.
 
 ## Before you begin
@@ -36,7 +38,7 @@ It's important to understand the following requirements before creating indicato
 - Supported on machines on Windows 10, version 1703 or later, Windows Server 2012 R2 and later, or Azure Stack HCI OS, version 23H2 and later.
 
   > [!NOTE]
-  > Windows Server 2016 and Windows Server 2012 R2 must be onboarded using the instructions in [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-server.md) for this feature to work.
+  > Windows Server 2016 and Windows Server 2012 R2 must be onboarded using the instructions in [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-server.md) for certificate-based indicators to work.
 
 - The virus and threat protection definitions must be up to date.
 - This feature supports entering .CER or .PEM file extensions.
@@ -56,10 +58,11 @@ It's important to understand the following requirements before creating indicato
 >
 > is **not supported**. Certificate-based indicators take precedence, and therefore the file will continue to be blocked.
 
-## Create an indicator for certificates from the settings page:
+<a name="create-an-indicator-for-certificates-from-the-settings-page"></a>
+## Create an indicator for certificates from the settings page
 
 > [!IMPORTANT]
-> It can take up to 3 hours to create and remove a certificate IoC.
+> Creating or removing a certificate IoC can take up to 3 hours.
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
 

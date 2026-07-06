@@ -2,7 +2,8 @@
 title: OT monitoring software versions - Microsoft Defender for IoT
 description: This article lists Microsoft Defender for IoT on-premises OT monitoring software versions, including release and support dates and highlights for new features.
 ms.topic: release-notes
-ms.date: 04/06/2025
+ms.date: 05/03/2026
+ai-usage: ai-assisted
 ---
 
 # OT monitoring software versions
@@ -37,6 +38,8 @@ Cloud features may be dependent on a specific sensor version. Such features are 
 
 | Version / Patch |  Release date | Scope     | Supported until |
 | ------- |  ------------ | ----------- | ------------------- |
+| **26.1** | | | |
+| 26.1.0 | 04/2026 | Major |03/2027 |
 | **25.2** | | | |
 | 25.2.2 | 02/2026 | Minor |01/2027 |
 | 25.2.1 | 12/2025 | Minor |11/2026 |
@@ -84,6 +87,21 @@ Maintain your sensors and on-premises management consoles, for activities like b
 Version numbers are listed only in this article and in the [What's new in Microsoft Defender for IoT?](whats-new.md) article, and not in detailed descriptions elsewhere in the documentation.
 
 To understand whether a feature is supported in your sensor version, check the relevant version section below and its listed features.
+
+## Versions 26.1.x
+
+### Version 26.1.0
+
+**Release date**: 04/2026
+
+**Supported until**: 03/2027
+
+**Scope**: Major
+
+This version includes the following updates:
+
+- CVE updates
+- OT sensor operating system upgrade to Debian 12
 
 ## Versions 25.2.x
 

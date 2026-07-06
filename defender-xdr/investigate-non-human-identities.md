@@ -2,8 +2,9 @@
 title: Non-human identities in Microsoft Defender (Preview)
 description: Learn about non-human identities in Microsoft Defender, including OAuth apps, service accounts, and SaaS apps. Understand identity types and where to investigate them.
 #customer intent: As a security analyst using Microsoft Defender, I want to understand how to investigate non-human identities so that I can assess risk, understand permissions, and identify potential security issues with OAuth apps and service accounts.
-author: AbbyMSFT
 ms.author: abbyweisberg
+author: AbbyMSFT
+ms.reviewer: maelgami
 ms.date: 03/17/2026
 ms.topic: concept-article
 ms.service: microsoft-defender-for-identity

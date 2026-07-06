@@ -2,13 +2,16 @@
 title: Sample KQL queries for Microsoft Sentinel data lake
 titleSuffix: Microsoft Security
 description: Use KQL queries to explore and analyze data in the Microsoft Sentinel data lake.
+ms.author: edbaynash
 author: EdB-MSFT
+ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to
-ms.date: 12/10/2025
-ms.author: edbaynash
+ms.date: 06/12/2026
 ms.collection: ms-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #customer intent: As a security analyst, I want to run learn from sample KQL queries so that I can investigate incidents and monitor suspicious activity in Microsoft Sentinel data lake.
 ---  
@@ -710,7 +713,7 @@ AllLogonEvents
 
 ## Additional sample queries
 
-The following sample queries can be used to explore and analyze data in the Microsoft Sentinel data lake.
+This section provides additional sample KQL queries for exploring and analyzing data in the Microsoft Sentinel data lake. Each query targets a specific security scenario. You can run them as-is or change them to fit your needs.
 
 
 ### Identify possible insider threats
@@ -768,7 +771,7 @@ SigninLogs
 
 ## Sample queries for KQL jobs
 
-The following queries can be used in KQL jobs to automate investigations and monitoring tasks in the Microsoft Sentinel data lake.
+Use these KQL job queries to automate investigations and monitoring tasks in the Microsoft Sentinel data lake.
 
 
 

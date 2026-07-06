@@ -1,8 +1,9 @@
 ---
 title: Aggregate Microsoft Sentinel data with summary rules
 description: Learn how to aggregate large sets of Microsoft Sentinel data across log tiers with summary rules.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to #Don't change
 ms.date: 07/01/2025
 appliesto:

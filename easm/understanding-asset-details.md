@@ -1,5 +1,5 @@
 ---
-title: Understand asset details
+title: Understand Asset Details
 description: Learn how Microsoft Defender External Attack Surface Management discovers and defines your organization's internet-exposed attack surface.
 author: danielledennis
 ms.author: dandennis
@@ -106,12 +106,11 @@ The following data is specific to the issuer of an SSL certificate.
 
 ## Data tabs
 
-On the rightmost pane of the asset details page, users can access more expansive data related to the selected asset. This data is organized in a series of categorized tabs. The available metadata tabs change depending on the type of asset you're viewing. 
+On the rightmost pane of the asset details page, users can access more expansive data related to the selected asset. This data is organized in a series of categorized tabs. The available metadata tabs change depending on the type of asset you're viewing.
 
-Certain tabs display a "Recent only" toggle in the upper-right corner. By default, Defender EASM displays all data that we've collected for each asset, including historical observations that may not be actively running on your current attack surface. While this historical context is very valuable for certain use cases, the "Recent only" toggle will limit all results on the Asset Details page to those most recently observed on the asset. It is recommended that you use the "Recent only" toggle when you only wish to view data that represents the current state of the asset for remediation purposes. 
+Certain tabs display a **Recent only** toggle in the upper-right corner. By default, Defender EASM displays all data that we've collected for each asset, including historical observations that may not be actively running on your current attack surface. While this historical context is very valuable for certain use cases, the **Recent only** toggle limits all results on the Asset Details page to those most recently observed on the asset. We recommend that you use the **Recent only** toggle when you only wish to view data that represents the current state of the asset for remediation purposes.
 
-![Screenshot that highlights the "Recent only" toggle from the Overview page of Asset Details.](media/inventory-1b.png)
-
+![Screenshot that highlights the Recent only toggle from the Overview page of Asset Details.](media/inventory-1b.png)
 
 ### Overview
 
@@ -134,7 +133,8 @@ In the example, you can see that the seed domain is tied to this asset through t
 This section provides information about the process that's used to detect the asset. It includes information about the discovery seed that connects to the asset and the approval process.
 
 Options include:
-- **Approved inventory**: This option indicates the relationship between the seed and discovered asset was strong enough to warrant an automatic approval by the Defender EASM system. 
+
+- **Approved inventory**: This option indicates the relationship between the seed and discovered asset was strong enough to warrant an automatic approval by the Defender EASM system.
 - **Candidate**: This option indicates that the asset required manual approval to be incorporated into your inventory.
 - **Last discovery run**: This date indicates when the discovery group that initially detected the asset was last utilized for a discovery scan.
 
@@ -178,7 +178,7 @@ This section displays any name servers that are running on the asset to provide 
 
 This section lists any open ports detected on the asset. Microsoft regularly scans around 230 distinct ports. This data is useful to identify any unsecured services that shouldn't be accessible from the open internet. These services include databases, IoT devices, and network services like routers and switches. It's also helpful in identifying shadow IT infrastructure or insecure remote access services.
 
-In this section, Defender EASM provides the open port number, a description of the port, the last state it was observed in, and the **First seen** and **Last seen** dates. The **Recent** column indicates whether the port was observed as open during the most recent scan. Defender EASM considers a port “open” when our system can successfully complete a syn-ack handshake that results in attributed banners. When we can establish a TCP connection but are unable to complete our service fingerprinting, we mark the port as “filtered”. A "closed" port is still accessible but there is no service listening on the port and thus denies connections.
+In this section, Defender EASM provides the open port number, a description of the port, the last state it was observed in, and the **First seen** and **Last seen** dates. The **Recent** column indicates whether the port was observed as open during the most recent scan. Defender EASM considers a port **open** when our system can successfully complete a syn-ack handshake that results in attributed banners. When we can establish a TCP connection but are unable to complete our service fingerprinting, we mark the port as **filtered**. A **closed** port is still accessible but there is no service listening on the port and thus denies connections.
 
 ![Screenshot that shows the asset details page Open ports section of the Services tab.](media/inventory-9.png)
 
@@ -223,31 +223,26 @@ The **Observation** tab displays any insights from the Attack Surface Priorities
 
 For more information on observations, see [Understanding dashboards](understanding-dashboards.md). For each observation, Defender EASM provides the name of the observation, categorizes it by type, assigns a priority, and lists both CVSS v2 and v3 scores where applicable.
 
-The Observations tab features two tables: Observations and Non-appliable observations. All active observations determined to be "recent" within your attack surface will be in the Observations table, whereas the Non-applicable observations table lists any observations that have either been manually marked as non-applicable or were determined by the system to no longer be applicable. To mark observations as non-applicable and therefore exclude that particular observation from dashboard counts, simply select the desired observations and click "Set as non-applicable."  The observation(s) will immediately disappear from the active Observations table and will instead appear on the "Non-applicable observations" table. You can revert this change at any time by selection the relevant observation(s) from this table and selecting "Set as applicable." 
-
+The **Observations** tab features two tables: **Observations** and **Non-applicable observations**. All active observations determined to be **recent** within your attack surface will be in the **Observations** table, whereas the **Non-applicable observations** table lists any observations that have either been manually marked as non-applicable or were determined by the system to no longer be applicable. To mark observations as non-applicable and therefore exclude that particular observation from dashboard counts, simply select the desired observations and select **Set as non-applicable**.  The observation(s) will immediately disappear from the active **Observations** table and will instead appear on the **Non-applicable observations** table. You can revert this change at any time by selection the relevant observation(s) from this table and selecting **Set as applicable**.
 
    ![Screenshot that shows the Observations tab with multiple CVEs selected to be marked as non-applicable.](media/cves-3.png)
 
-
-
-
-### Connected assets 
+### Connected assets
 
 Connected Assets empowers users to graphically link and gather information about assets for investigative analysis. You can explore your environment and its intricate relationships through relationship mappings, which offer clear and concise views. This helps you identify hidden connections and potential attack paths. By visually mapping out the relationships between assets and vulnerabilities, you can comprehend your environment's complexity and make well-informed decisions to enhance your security posture and apply choke points effectively. 
 
 [![Screenshot that shows the Connected assets tab.](media/connected-1.png)](media/connected-1.png#lightbox)
 
+On this page, all the assets that are connected to the specified asset are identified in a list. The list provides key information about each policy including:
 
-On this page, all the assets that are connected to the specified asset are identified in a list. The list provides key information about each policy including:  
-- **Asset:** the identified connected asset.
-- **Kind:** the type of asset.
-- **State:** the state of the asset.
-- **Labels:** any labels associated with the asset.
-- **First Seen:** when the asset was first discovered.
-- **Last Seen:** when the asset was last identified.
+- **Asset:** The identified connected asset.
+- **Kind:** The type of asset.
+- **State:** The state of the asset.
+- **Labels:** Any labels associated with the asset.
+- **First Seen:** When the asset was first discovered.
+- **Last Seen:** When the asset was last identified.
 
-From this page, you can modify or remove connected assets. You can also sort or filter the asset list to further categorize the list of connected assets. You can also download a CSV report of the listed assets. Any filters applied will be reflected on the CSV export. 
-
+From this page, you can modify or remove connected assets. You can also sort or filter the asset list to further categorize the list of connected assets. You can also download a CSV report of the listed assets. Any filters applied will be reflected on the CSV export.
 
 ### Resources
 
@@ -289,17 +284,13 @@ The following fields are included in the table in the **Values** section on the 
 
 Many organizations opt to obfuscate their registry information. Sometimes contact email addresses end in *@anonymised.email*. This placeholder is used instead of a real contact address. Many fields are optional during registration configuration, so any field with an empty value wasn't included by the registrant.
 
+### Change history
 
+The **Change history** tab displays a list of modifications that have been applied to an asset over time. This information helps you track these changes over time and better understand the lifecycle of the asset. This tab displays a variety of changes, including but not limited to asset states, labels and external IDs. For each change, we list the user who implemented the change and a timestamp.
 
-### Change history 
+[![Screenshot that shows the Change history tab.](media/change-history-1.png) ](media/change-history-1.png#lightbox)
 
-The "Change history" tab displays a list of modifications that have been applied to an asset over time. This information helps you track these changes over time and better understand the lifecycle of the asset.  This tab displays a variety of changes, including but not limited to asset states, labels and external IDs. For each change, we list the user who implemented the change and a timestamp. 
-
-[ ![Screenshot that shows the Change history tab.](media/change-history-1.png) ](media/change-history-1.png#lightbox)
-
-
-
-## Next steps
+## Related content
 
 - [Understand dashboards](understanding-dashboards.md)
 - [Use and manage discovery](using-and-managing-discovery.md)

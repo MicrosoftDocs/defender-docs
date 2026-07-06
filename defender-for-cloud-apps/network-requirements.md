@@ -6,6 +6,7 @@ ms.topic: reference
 author: AbbyMSFT
 ms.author: abbyweisberg
 ms.reviewer: Naama-Goldbart
+ms.custom: sfi-image-nochange
 ---
 
 # Network requirements

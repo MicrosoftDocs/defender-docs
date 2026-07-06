@@ -2,10 +2,10 @@
 title: The Advanced Security Information Model (ASIM) Application Entity reference
 titleSuffix: Microsoft Sentinel
 description: This article displays the Microsoft Sentinel Application Entity schema.
-author: oshezaf
+ms.author: edbaynash
+author: EdB-MSFT
 ms.topic: reference
 ms.date: 12/29/2025
-ms.author: ofshezaf
 
 #Customer intent: As a security analyst, I want to understand the ASIM Application Entity so that I can accurately understand application information captured in normalized events, enabling consistent and comprehensive monitoring across security platforms and improving threat detection and response efforts.
 

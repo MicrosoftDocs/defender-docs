@@ -1,8 +1,8 @@
 ---
 title: SAP LogServ integration with Microsoft Sentinel Solution for SAP overview
 description: This article introduces the Microsoft Sentinel Solution for SAP integration with SAP LogServ, an SAP-provided add-on that extends monitoring beyond the SAP application layer to infrastructure, database, and OS logs for SAP RISE customers.
-author: MartinPankraz
-ms.author: mapankra
+ms.author: edbaynash
+author: EdB-MSFT
 ms.topic: concept-article
 ms.date: 04/07/2026
 appliesto:

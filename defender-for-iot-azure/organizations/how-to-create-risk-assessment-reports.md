@@ -1,15 +1,17 @@
 ---
 title: Create risk assessment reports on an OT sensor - Microsoft Defender for IoT
 description: Gain insight into network risks detected by individual Defender for IoT OT sensors or an aggregate view of risks detected by all OT sensors.
-ms.date: 12/01/2022
+ms.date: 06/12/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Create risk assessment reports
 
-Risk assessment reports provide details about security scores, vulnerabilities, and operational issues on devices detected by a specific OT network sensor, as well as risks coming from imported firewall rules.
+Risk assessment reports provide details about security scores, vulnerabilities, and operational issues for devices that a specific OT network sensor detects. These reports also cover risks from imported firewall rules.
 
-Each Defender for IoT network sensor can generate a risk assessment report.
+Each Defender for IoT network sensor can generate a risk assessment report. This article explains how to generate, view, and enrich risk assessment reports from individual OT sensors or across multiple sensors.
 
 ## Prerequisites
 
@@ -23,11 +25,11 @@ For more information, see [On-premises users and roles for OT monitoring with De
 
 ## Generate risk assessment reports from an OT sensor
 
-Use an individual OT sensor to view reports generated for that sensor only.
+Use an individual OT sensor to view reports generated only for the selected sensor.
 
 **To generate a report**:
 
-1. Sign in to the sensor console and select **Risk assessment** > **Generate report**. The report is generated and appears in the **Reports list**, along with the timestamp and report size.
+1. Sign in to the sensor console and select **Risk assessment** > **Generate report**. The report appears in the **Reports list** with the timestamp and report size.
 
     For example:
 
@@ -78,7 +80,7 @@ For example:
 
 ### Define backup and anti-virus servers on an OT sensor
 
-Backup and anti-virus servers aren't defined on your sensor by default. We recommend defining these addresses on your sensor to keep your network risk assessment low.
+Backup and anti-virus servers aren't set up on your sensor by default. Define these addresses on your sensor to keep your risk assessment score low.
 
 **To add backup and anti-virus server addresses**:
 
@@ -96,7 +98,7 @@ Use an OT sensor to view risk assessment reports for all connected sensors.
 
 1. From the **Select Sensor** drop-down menu, select the sensor for which you want to generate the report, and then select **Generate Report**.
 
-    A new report is listed in the **Archived Reports** area, listed by the time and date it was created, and showing the security score and report size.
+    The new report appears in the **Archived Reports** area. It shows the date, time, security score, and report size.
 
     For example:
 
@@ -106,7 +108,7 @@ Use an OT sensor to view risk assessment reports for all connected sensors.
 
 ## Next steps
 
-- Take action based on the recommendations provided in the risk assessment reports to improve your overall network security score. For example, you might install the latest security or firmware updates, or investigate any PLCs that are currently in unsecure states.
+- Use the report tips to improve your network security score. For example, install the latest security or firmware updates, or check for PLCs in unsecure states.
 
     For more information, see [Enhance security posture with security recommendations](recommendations.md).
 

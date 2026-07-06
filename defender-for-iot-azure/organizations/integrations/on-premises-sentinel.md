@@ -2,19 +2,20 @@
 title: Connect Defender for IoT on-premises resources to Microsoft Sentinel (legacy)
 description: This article describes the legacy method for connecting your OT sensor to Microsoft Sentinel.
 ms.topic: how-to
-ms.date: 08/17/2023
-ms.custom: template-how-to-pattern
+ms.date: 06/12/2026
+ms.custom: template-how-to-pattern, msecd-doc-authoring-1014
 #CustomerIntent: As an admin user for my locally-managed OT sensor, I want to learn how to connect my sensor to Microsoft Sentinel so that I can view alerts generated together with other Microsoft Sentinel data.
+ai-usage: ai-assisted
 ---
 
 # Connect OT network sensors to Microsoft Sentinel (legacy)
 
-This article describes the legacy method for connecting your OT sensor to Microsoft Sentinel. Stream data into Microsoft Sentinel whenever you want to use Microsoft Sentinel's advanced threat hunting, security analytics, and automation features when responding to security incidents and threats across your network.
+This article describes the legacy method for connecting your OT sensor to Microsoft Sentinel. Before you begin, review the [prerequisites](#prerequisites). Stream data into Microsoft Sentinel whenever you want to use Microsoft Sentinel's advanced threat hunting, security analytics, and automation features when responding to security incidents and threats across your network.
 
 > [!IMPORTANT]
-> This feature will be deprecated in **January 2025**.
+> The legacy OT sensor integration with Microsoft Sentinel will be deprecated in **January 2025**.
 >
-> If you're using a cloud connected sensor, we recommend that you connect Defender for IoT data using the Microsoft Sentinel solution instead of the legacy integration method. For more information, see:
+> If you're using a cloud connected sensor, we recommend that you connect Defender for IoT data using the Microsoft Sentinel solution instead of the legacy OT sensor to Microsoft Sentinel connection method described in this article. For more information, see:
 >
 > - [OT threat monitoring in enterprise SOCs](../concept-sentinel-integration.md)
 > - [Tutorial: Connect Microsoft Defender for IoT with Microsoft Sentinel](../iot-solution.md)
@@ -28,7 +29,7 @@ Before you start, make sure that you have the following prerequisites as needed:
 
 - A proxy machine prepared to send data to Microsoft Sentinel. For more information, see [Get CEF-formatted logs from your device or appliance into Microsoft Sentinel](/azure/sentinel/connect-common-event-format).
 
-- If you want to encrypt the data you send to Microsoft Sentinel using TLS, make sure to generate a valid TLS certificate from the proxy server to use in your forwarding alert rule.
+- If you want to encrypt the data you send to Microsoft Sentinel using TLS, make sure to generate a valid TLS certificate from the proxy server to use when you create the OT sensor forwarding alert rule.
 
 ## Set up forwarding alert rules
 
@@ -40,7 +41,7 @@ Before you start, make sure that you have the following prerequisites as needed:
 
 1. If you're using TLS encryption, make sure to select **Enable encryption** and upload your certificate and key files.
 
-Select **Save** when you're done. Make sure to test the rule to make sure that it works as expected.
+After you finish configuring the forwarding rule, select **Save**. Make sure to test the rule to make sure that it works as expected.
 
 > [!IMPORTANT]
 > To forward alert details to multiple Microsoft Sentinel instances, make sure to create a separate forwarding rule for each instance. Don't use the **Add server** option in the same forwarding rule to send data to multiple Microsoft Sentinel instances.

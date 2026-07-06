@@ -1,8 +1,9 @@
 ---
 title: Scheduled analytics rules in Microsoft Sentinel | Microsoft Docs
 description: Understand how scheduled analytics rules work in Microsoft Sentinel. Learn about all the configuration options for this rule type.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: overview
 ms.date: 10/16/2024
 appliesto:

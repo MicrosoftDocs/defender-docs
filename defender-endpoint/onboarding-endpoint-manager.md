@@ -17,6 +17,7 @@ ms.date: 03/26/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange
 
 ---
 # Onboarding using Microsoft Intune
@@ -219,7 +220,7 @@ Then, you continue by creating several different types of endpoint security poli
     > [!NOTE]
     > We will be configuring all of the Attack surface reduction rules to Audit.
     >
-    > For more information, see [Attack surface reduction rules](attack-surface-reduction.md).
+    > For more information, see [Attack surface reduction rules](attack-surface-reduction-rules-overview.md).
 
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="media/dd0c00efe615a64a4a368f54257777d0.png" alt-text="The Microsoft Intune admin center21" lightbox="media/dd0c00efe615a64a4a368f54257777d0.png":::

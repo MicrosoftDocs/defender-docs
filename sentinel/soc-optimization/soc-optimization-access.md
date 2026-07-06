@@ -1,16 +1,17 @@
 ---
 title: Optimize security operations
 description: Use Microsoft Sentinel SOC optimization recommendations to optimize your security operations center (SOC) team activities.
-ms.author: abbyweisberg
-author: AbbyMSFT
+ms.author: monaberdugo
+author: mberdugo
 ms.collection:
   - usx-security
 ms.topic: how-to
-ms.date: 05/06/2025
+ms.date: 06/12/2026
 appliesto:
   - Microsoft Sentinel in the Microsoft Defender portal
   - Microsoft Sentinel in the Azure portal
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 
 #Customer intent: As a SOC analyst, I want to optimize security controls and data ingestion so that I can enhance threat detection and reduce costs without compromising coverage.
@@ -33,13 +34,15 @@ Watch the following video for an overview and demo of SOC optimization in the Mi
 
 ## Prerequisites
 
+Before you use SOC optimization, make sure the following prerequisites are in place:
+
 - SOC optimization uses standard Microsoft Sentinel roles and permissions. For more information, see [Roles and permissions in Microsoft Sentinel](../roles.md).
 
 - To use SOC optimization in the Defender portal, onboard Microsoft Sentinel to the Defender portal. For more information, see [Connect Microsoft Sentinel to the Microsoft Defender portal](/microsoft-365/security/defender/microsoft-sentinel-onboard).
 
 ## Access the SOC optimization page
 
-Use one of the following tabs, depending on whether you're working in the Azure portal or Defender portal. When your workspace is onboarded to the Defender portal, SOC optimizations include coverage from across Microsoft security services.
+Choose the instructions for your portal — Microsoft Defender portal or Azure portal. When your workspace is onboarded to the Defender portal, SOC optimizations include coverage from across Microsoft security services.
 
 ### [Defender portal](#tab/defender-portal)
 
@@ -83,6 +86,8 @@ Select **See all threat scenarios** to view the full list of relevant threat and
 
 ## View and manage optimization recommendations
 
+Use the following views to locate and review SOC optimization recommendations in each portal.
+
 ### [Defender portal](#tab/defender-portal)
 
 In the Defender portal, SOC optimization recommendations are listed in the **Your Optimizations** area on the **SOC optimizations** tab. 
@@ -113,7 +118,7 @@ Filter the optimizations based on optimization type, or search for a specific op
 
 ### View optimization details and take action
 
-Select one of the following tabs, depending on the portal you're using:
+Choose the instructions for your portal — Microsoft Defender portal or Azure portal:
 
 ### [Defender portal](#tab/defender-portal)
 
@@ -122,7 +127,7 @@ Select one of the following tabs, depending on the portal you're using:
 1. For threat-based coverage optimizations:
 
     - Toggle between the spider charts to understand your coverage across different tactics and techniques, based on the user-defined and out-of-the-box detections active in your environment.
-    - Select **View threat scenario in MITRE ATT&CK** to jump to the [**MITRE ATT&CK** page in Microsoft Sentinel](../mitre-coverage.md?tabs=defender-portal), prefiltered for your threat scenario. For more information, see [Understand security coverage by the MITRE ATT&CK® framework].
+    - Select **View threat scenario in MITRE ATT&CK** to jump to the [**MITRE ATT&CK** page in Microsoft Sentinel](../mitre-coverage.md?tabs=defender-portal), prefiltered for your threat scenario. For more information, see [Understand security coverage by the MITRE ATT&CK® framework](../mitre-coverage.md).
 
 1. Scroll down to the bottom of the details pane for a link to where you can take the recommended actions. For example:
 
@@ -164,7 +169,7 @@ Either select the options menu or select **View details** to take one of the fol
 
 If you marked a specific optimization as *Completed* or *Dismissed*, or if an optimization is automatically completed, it's listed on the **Completed** and **Dismissed** tabs, respectively.
 
-From here, either select the options menu or select **View full details** to take one of the following actions:
+On the **Completed** or **Dismissed** tab, either select the options menu or select **View full details** to take one of the following actions:
 
 - **Reactivate the optimization**, sending it back to the **Overview** tab. Reactivated optimizations are recalculated to provide the most updated value and action. Recalculating these details can take up to an hour, so wait before checking the details and recommended actions again.
 
@@ -174,7 +179,7 @@ From here, either select the options menu or select **View full details** to tak
 
 ## SOC optimization usage flow
 
-This section provides a sample flow for using SOC optimizations, from either the Defender or Azure portal:
+The following sample flow shows how to use SOC optimizations in either the Defender or Azure portal:
 
 1. On the **SOC optimization** page, start by understanding the dashboard:
 

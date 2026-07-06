@@ -138,7 +138,7 @@ The tables and related data that are inaccessible when you remove Microsoft Sent
 - `SecurityIncident`
 - `SentinelAudit`
 - `SentinelHealth`
-- `ThreatIntelligenceIndicator`
+- `ThreatIntelIndicators`
 - `UrlClickEvents`
 - `Watchlist`
 - `WindowsEvent`

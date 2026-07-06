@@ -48,7 +48,7 @@ Script analysis is also available in the Security Copilot standalone experience 
 
 ## Key features
 
-You can access the script analysis capability within the attack story below the incident graph on an incident page and in the [device timeline](/defender-endpoint/device-timeline-event-flag).
+You can access the script analysis capability within the attack story below the incident graph on an incident page and in the [device timeline](/defender-endpoint/investigate-machines#investigate-device-timeline).
 
 To begin analysis, perform the following steps:
 
@@ -72,7 +72,7 @@ To begin analysis, perform the following steps:
   
     ![Screenshot that shows the More actions option in the Copilot script analysis card.](media/security-copilot-m365d-script-analysis/script-analysis-options.png)
 
-5. Review the results an use the information to guide your investigation and response to the incident.
+5. Review the results and use the information to guide your investigation and response to the incident.
 
 ## Sample script analysis prompt
 

@@ -1,12 +1,12 @@
 ---
 title: Schedule antivirus scans using PowerShell
-description: Schedule antivirus scans using PowerShell
+description: Use the Set-MpPreference PowerShell cmdlet to configure scheduled Microsoft Defender Antivirus scans, including scan timing, scan type, and CPU usage settings.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen
-ms.date: 12/16/2025
+ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 06/16/2026
 ms.reviewer: pauhijbr, ksarens
 ms.subservice: ngp
 ms.topic: how-to
@@ -20,12 +20,15 @@ appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
 ---
 # Schedule antivirus scans using PowerShell
 
 This article describes how to use the [Set-MpPreference](/powershell/module/defender/set-mppreference) PowerShell cmdlet to configure scheduled scans. To learn more about scheduling scans and about scan types, see [About scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md).
 
 ## Prerequisites
+
+The procedures in this article have the following requirements:
 
 **Supported operating systems**:
 
@@ -78,25 +81,26 @@ The following **Set-MpPreference** parameters are important for scheduled scans:
 > - Cloud Protection enabled.
 > - Network connectivity to the Cloud Protection backend.
 
-## Use PowerShell to scheduling daily quick scans
+<a name="use-powershell-to-scheduling-daily-quick-scans"></a>
+## Use PowerShell to schedule daily quick scans
 
-This example sets the daily scheduled quick scan to ±4 minutes of 12:30 PM. The device is likely on, but activity on the device is likely minimal (lunch).
+The following command sets the daily scheduled quick scan to ±4 minutes of 12:30 PM. The device is likely on, but activity on the device is likely minimal (lunch).
 
 ```powershell
 Set-MpPreference -ScanScheduleQuickScanTime 12:30:00 -ScanScheduleOffset 0 -RandomizeScheduleTaskTimes $false -ScanOnlyIfIdleEnabled $false
 ```
 
-We didn't need to use the following parameters in this command:
+The preceding **Set-MpPreference** command doesn't require the following parameters because their default values already match the desired behavior:
 
 - _ScanParameters_: The default value is 0 (QuickScan).
 - _ScanScheduleDay_: The default value is 0 (Everyday).
 
 ## Use PowerShell to schedule weekly full scans
 
-This example schedules a weekly full scan every Wednesday at to ±4 minutes of 12:30 PM.
+The following command schedules a weekly full scan every Wednesday at to ±4 minutes of 12:30 PM.
 
 ```powershell
-Set-MpPreference -ScanParameters FullScan -ScanScheduleDay Wednesday -ScanScheduleQuickScanTime 12:30:00 -ScanScheduleOffset 0 -RandomizeScheduleTaskTimes $false
+Set-MpPreference -ScanParameters FullScan -ScanScheduleDay Wednesday -ScanScheduleTime 12:30:00 -ScanScheduleOffset 0 -RandomizeScheduleTaskTimes $false
 ```
 
 ## General PowerShell parameters for scheduled scans
@@ -154,6 +158,8 @@ Scheduled full scans to complete remediation use the following parameters:
 - _RemediationScheduleTime_: Specifies the time on the local computer to run the scan. To specify a value, enter it as a time span: `hh:mm:ss` where `hh` = hours, `mm` = minutes and `ss` = seconds. For example, `13:30:00` indicates 1:30 PM. The default value is 02:00:00 (2:00 AM).
 
 ## See also
+
+For more information about scheduled scans and related PowerShell cmdlets, see the following articles:
 
 [Troubleshoot Microsoft Defender Antivirus scan issues](troubleshoot-mdav-scan-issues.md)
 

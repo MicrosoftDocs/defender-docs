@@ -1,8 +1,10 @@
 ---
 title: Import extra data for detected OT devices - Microsoft Defender for IoT
 description: Learn how to manually enhance the device data automatically detected by your Microsoft Defender for IoT OT sensor with extra, imported data.
-ms.date: 11/26/2025
+ms.date: 06/12/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Import extra data for detected OT devices
@@ -15,7 +17,7 @@ This article describes how you can manually import the missing data to your OT s
 
 Before performing the procedures in this article, you must have:
 
-- An OT network sensor [installed](ot-deploy/install-software-ot-sensor.md), [configured, and activated](ot-deploy/activate-deploy-sensor.md).
+- An OT network sensor with [software installed](ot-deploy/install-software-ot-sensor.md), [configured, and activated](ot-deploy/activate-deploy-sensor.md).
 
 - Access to your OT network sensor as an **Admin** user. For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](roles-on-premises.md).
 
@@ -63,9 +65,11 @@ Your device data is updated.
     - **Device OS**. Enter one of the device operating systems listed in the [supported values for the Device OS table](#supported-values-for-device-operating-system).
     - **Last Update**. Enter the date that the device was last updated, in `YYYY-MM-DD` format.
 
-The following sections include information to help you fill in the Device OS column: The [device information example](#device-information-example) includes sample device details, and the [supported values table](#supported-values-for-device-operating-system) includes the supported operating system values.
+To fill in the Device OS column, use the [device information example](#device-information-example) for sample device details and the [supported values table](#supported-values-for-device-operating-system) for supported operating system values.
 
 ### Device information example
+
+The following table shows an example of correctly formatted device information in the .csv file.
 
 |**IP Address**  |**Device OS**|**Last Update**  |
 |---------|---------|---------|
@@ -73,6 +77,8 @@ The following sections include information to help you fill in the Device OS col
 
 
 ### Supported values for Device operating system
+
+The following table lists the supported values you can enter in the **Device OS** column.
 
 | Windows | Windows Server | Other OS |
 |---|---|---|
@@ -104,7 +110,7 @@ The following sections include information to help you fill in the Device OS col
 
 5. Select **Close** to save your changes.
 
-### Import device authorization status:
+### Import device authorization status
 
 After importing device authorization status, any devices *not* included in the import list are newly defined as not-authorized, and you'll start to receive new alerts about any traffic on each of these devices.
 

@@ -5,8 +5,8 @@ ms.localizationpriority: medium
 f1.keywords:
   - NOCSH
 ms.service: defender-xdr
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 audience: ITPro
 ms.collection: 
   - m365-security
@@ -16,6 +16,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.date: 02/19/2024
+ms.custom: sfi-ga-nochange
 ---
 
 # What's new in Microsoft Secure Score

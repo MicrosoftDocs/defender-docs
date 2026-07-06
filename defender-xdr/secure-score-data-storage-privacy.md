@@ -2,8 +2,8 @@
 title: Microsoft Secure score data storage and privacy
 description: Learn about how Microsoft Secure score handles privacy and data that it collects.
 ms.service: defender-xdr
-ms.author: deniseb
-author: denisebmsft
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 

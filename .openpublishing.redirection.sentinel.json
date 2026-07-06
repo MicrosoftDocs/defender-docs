@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path_from_root": "/sentinel/datalake/sentinel-mcp-responsible-ai-faq.md",
+      "redirect_url": "/azure/sentinel/datalake/sentinel-mcp-application-card",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/scoping.md",
+      "redirect_url": "/defender-xdr/scoping",
+      "redirect_document_id": false
+    },
+    {
       "source_path_from_root": "/sentinel/summary-rules-tutorial.md",
       "redirect_url": "/azure/sentinel/datalake/kql-jobs",
       "redirect_document_id": false
@@ -3403,6 +3413,101 @@
     {
       "source_path": "sentinel/work-with-styx-objects-indicators.md",
       "redirect_url": "/azure/sentinel/work-with-stix-objects-indicators",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/sentinel-solutions-post-publish-tracking.md",
+      "redirect_url": "/azure/sentinel/isv/sentinel-solutions-post-publish-tracking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/sentinel-integration-guide.md",
+      "redirect_url": "/azure/sentinel/isv/sentinel-integration-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/partner-integrations.md",
+      "redirect_url": "/azure/sentinel/isv/partner-integrations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/sentinel-solution-quality-guidance.md",
+      "redirect_url": "/azure/sentinel/isv/sentinel-solution-quality-guidance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/solution-setup-essentials.md",
+      "redirect_url": "/azure/sentinel/isv/solution-setup-essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/create-custom-connector-builder-agent.md",
+      "redirect_url": "/azure/sentinel/isv/create-custom-connector-builder-agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/create-codeless-connector.md",
+      "redirect_url": "/azure/sentinel/isv/create-codeless-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/create-push-codeless-connector.md",
+      "redirect_url": "/azure/sentinel/isv/create-push-codeless-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/sentinel-analytic-rules-creation.md",
+      "redirect_url": "/azure/sentinel/isv/sentinel-analytic-rules-creation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/sentinel-hunting-rules-creation.md",
+      "redirect_url": "/azure/sentinel/isv/sentinel-hunting-rules-creation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/sentinel-summary-rules-creation.md",
+      "redirect_url": "/azure/sentinel/isv/sentinel-summary-rules-creation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/sentinel-workbook-creation.md",
+      "redirect_url": "/azure/sentinel/isv/sentinel-workbook-creation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/sentinel-playbook-creation.md",
+      "redirect_url": "/azure/sentinel/isv/sentinel-playbook-creation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/normalization-create-parsers-ai-agent.md",
+      "redirect_url": "/azure/sentinel/isv/normalization-create-parsers-ai-agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/normalization-develop-parsers.md",
+      "redirect_url": "/azure/sentinel/isv/normalization-develop-parsers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/publish-sentinel-solutions.md",
+      "redirect_url": "/azure/sentinel/isv/publish-sentinel-solutions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/package-platform-solution.md",
+      "redirect_url": "/azure/sentinel/isv/package-platform-solution",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/manage-platform-solutions.md",
+      "redirect_url": "/azure/sentinel/isv/manage-platform-solutions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/troubleshoot-sentinel-solutions.md",
+      "redirect_url": "/azure/sentinel/isv/troubleshoot-sentinel-solutions",
       "redirect_document_id": false
     }
   ]

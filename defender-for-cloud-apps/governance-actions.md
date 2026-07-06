@@ -1,19 +1,22 @@
 ---
 title: Governing connected apps
 description: This article lists and describes all the governance actions that can be taken in Defender for Cloud Apps and the log messages that track them.
-ms.date: 02/16/2023
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: Ronen-Refaeli
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
-# Governing connected apps
+# Govern actions for connected apps in Defender for Cloud Apps
 
 Governance enables you to control what your users do across apps. For connected apps, you can apply governance actions to files or activities. Governance actions are integrated actions you can run on files or activities directly from Microsoft Defender for Cloud Apps. Governance actions control what your users do across connected apps.
 
 > [!NOTE]
 > When Microsoft Defender for Cloud Apps attempts to run a governance action on a file but fails because the file is locked, it automatically retries the governance action.
 
-## File governance actions
+<a name="file-governance-actions"></a>
+## Available file governance actions
 
 The following governance actions can be taken for connected apps either on a specific file, user or from a specific policy.
 
@@ -47,9 +50,10 @@ The following governance actions can be taken for connected apps either on a spe
 
       :::image type="content" source="media/governance-actions/governance-actions-box.png" alt-text="Screenshot that shows the available file governance actions for Box and Dropbox." lightbox="media/governance-actions/governance-actions-box.png":::
 
-## Malware governance actions (Preview)
+<a name="malware-governance-actions-preview"></a>
+## Available malware governance actions (Preview)
 
-The following governance actions can be taken for connected apps either on a specific file, user or from a specific policy. For security reasons, this list is limited only to malware related actions that don't imply risk for the user or the tenant.
+The following governance actions can be taken for connected apps either on a specific file, user or from a specific policy. For security reasons, the malware governance actions listed in this section are limited only to malware-related actions that don't imply risk for the user or the tenant.
 
 - **Notifications:**
   - **Alerts** – Alerts can be triggered in the system and propagated via email and text message, based on severity level.
@@ -67,7 +71,7 @@ The following governance actions can be taken for connected apps either on a spe
 
   - **Trash** – Move the file to the trash folder. (Box, Dropbox, Google Drive, OneDrive, SharePoint)
 
-These actions are restricted to users with specific administrative roles. If the options described are not visible or accessible, please confirm with your system administrator that your account has one of the following roles assigned:
+The malware governance actions in this section are restricted to users with specific administrative roles. If the malware governance action options in this section are not visible or accessible, confirm with your system administrator that your account has one of the following roles assigned:
 
 - Security Operator
 - Security administrator
@@ -76,13 +80,16 @@ These actions are restricted to users with specific administrative roles. If the
 :::image type="content" source="media/governance-actions/governance-actions-dropbox-google-workspace.png" alt-text="Screenshot that shows malware governance actions." lightbox="media/governance-actions/governance-actions-dropbox-google-workspace.png":::
 
 > [!NOTE]
-> In SharePoint and OneDrive, Defender for Cloud Apps supports user quarantine only for files in Shared Documents libraries and only for files with Shared Documents in path in English (SharePoint Online) and files in the Documents library (OneDrive for Business). In addition, you must [enable the service principal](/graph/api/serviceprincipal-get) to get Malware detection and response support (this service API is enabled by default). Once API is enabled, Defender for Cloud Apps starts getting the logs (with a delay of 24-72 hours).
+> In SharePoint and OneDrive, Defender for Cloud Apps supports user quarantine only for files in Shared Documents libraries and only for files with Shared Documents in path in English (SharePoint Online) and files in the Documents library (OneDrive for Business). In addition, you must enable the service principal (see [Get servicePrincipal - Microsoft Graph API](/graph/api/serviceprincipal-get)) to get Malware detection and response support (this service API is enabled by default). Once API is enabled, Defender for Cloud Apps starts getting the logs (with a delay of 24-72 hours).
 >
 > Microsoft Defender for Office 365 customers can control detected malware files in SharePoint and OneDrive on the **Files** tab of the **Quarantine** page in the Microsoft Defender portal at <https://security.microsoft.com/quarantine?viewid=Files>. For example, supported activities include recovering files, deleting files, and downloading files in password-protected ZIP files. These activities are limited to files that were not already quarantined by Microsoft Defender for Cloud Apps.
 >
 > Actions show only for connected apps.
 
-## Activity governance actions
+<a name="activity-governance-actions"></a>
+## Available activity governance actions
+
+The following governance actions are available for activities in connected apps.
 
 - **Notifications**
   - **Alerts** – Alerts can be triggered in the system and propagated via email, based on severity level.
@@ -100,7 +107,7 @@ These actions are restricted to users with specific administrative roles. If the
 
   - **Confirm user compromised** - Set the user's risk level to high. This causes the relevant policy actions defined in Microsoft Entra ID to be enforced. For more information How Microsoft Entra ID works with risk levels, see [How does Microsoft Entra ID use my risk feedback](/azure/active-directory/identity-protection/howto-identity-protection-risk-feedback#how-does-azure-ad-use-my-risk-feedback).
 
-  ![Defender for Cloud Apps activity policy governance actions.](media/activity-policy-ref6.png)
+  ![Screenshot of the available activity policy governance actions in Defender for Cloud Apps, including suspend user, require sign-in, and confirm compromised options.](media/activity-policy-ref6.png)
   
 ## Revoke an OAuth app and notify user
 
@@ -117,22 +124,27 @@ After creating multiple policies, a situation might arise in which the governanc
 
 ### Conflicts between policies
 
+Defender for Cloud Apps handles overlapping governance actions between policies based on the following outcomes:
+
 - If two policies contain actions that are contained on in each other (for example, **Remove external shares** is included in **Make private**), Defender for Cloud Apps resolves the conflict and the stronger action is enforced.
 - If the actions are unrelated (for example, **Notify owner** and **Make private**). Both actions take place.
 - If the actions conflict (for example **Change owner to user A** and **Change owner to user B**), different results might result from every match. It's important to change your policies to prevent conflicts because they might result in unwanted changes in the drive that are hard to detect.
 
 ### Conflicts in user sync
 
+User sync between on-premises Active Directory and Microsoft Entra ID can affect how governance actions are applied:
+
 - If your Microsoft Entra ID is set to automatically sync with the users in your Active Directory on-premises environment, the settings in the on-premises environment override the Microsoft Entra settings and this governance action are reverted.
 
-## Governance log
+<a name="governance-log"></a>
+## Review the governance log
 
 The Governance log provides a status record of each task that you set Defender for Cloud Apps to run, including both manual and automatic tasks. These tasks include those you set in policies, governance actions that you set on files and users, and any other action you set Defender for Cloud Apps to take. The Governance log also provides information about the success or failure of these actions. You can choose to retry or revert some of the governance actions from the Governance log.
 
 To view the governance log, in the Microsoft Defender Portal, under **Cloud Apps**, select **Governance log**.
 
 The following table is the full list of actions Microsoft Defender for Cloud Apps enables you to take. These actions are enabled in various places throughout the console as described in the **Location** column. Each governance action taken is listed in the Governance Log.
-For information about how governance actions are treated when there are policy conflicts, see [Policy Conflicts](control-cloud-apps-with-policies.md).
+When multiple policies overlap, Defender for Cloud Apps enforces the stronger action and resolves conflicts automatically. For detailed information about how governance actions are treated when there are policy conflicts, see the separate [Control cloud apps with policies](control-cloud-apps-with-policies.md) article.
 
 |Location|Target object type|Governance action|Description|Related connectors|
 |---|---|---|---|---|
@@ -145,10 +157,10 @@ For information about how governance actions are treated when there are policy c
 |Activity policy, Accounts|Account|Confirm user compromised|Set the user's risk level to high. This causes the relevant policy actions defined in Microsoft Entra ID to be enforced.|Office|
 |Activity policy, Accounts|Account|Revoke admin privileges|Revokes privileges for an admin account. For example, setting an activity policy that revokes admin privileges after 10 failed login attempts.|Google Workspace|
 |App dashboard > App permissions|Permissions|Unban app|In Google and Salesforce: remove the banning from the app and allow users to give permissions to the third-party app with their Google or Salesforce. In Microsoft 365: restores the permissions of the third-party app's to Office.|Google Workspace, Salesforce, Office|
-|App dashboard > App permissions|Permissions|Disable app permissions|Revoke a third-party app's permissions to Google, Salesforce, or Office. This is a one-time action that occurs on all existing permissions, but won't prevent future connections.|Google Workspace, Salesforce, Office|
-|App dashboard > App permissions|Permissions|Enable app permissions|Grant a third-party app's permissions to Google, Salesforce, or Office. This is a one-time action that occurs on all existing permissions, but won't prevent future connections.|Google Workspace, Salesforce, Office|
+|App dashboard > App permissions|Permissions|Disable app permissions|Revoking a third-party app's permissions is a one-time action that applies to Google, Salesforce, or Office. The revocation occurs on all existing permissions, but doesn't prevent future connections.|Google Workspace, Salesforce, Office|
+|App dashboard > App permissions|Permissions|Enable app permissions|Grant a third-party app's permissions to Google, Salesforce, or Office. Granting app permissions is a one-time action that occurs on all existing permissions, but won't prevent future connections.|Google Workspace, Salesforce, Office|
 |App dashboard > App permissions|Permissions|Ban app|In Google and Salesforce: revoke a third-party app's permissions to Google or Salesforce and ban it from receiving permissions in the future. In Microsoft 365: doesn't allow the permission of third-party apps to access Office, but doesn't revoke them.|Google Workspace, Salesforce, Office|
-|App dashboard > App permissions|Permissions|Revoke app|Revoke a third-party app's permissions to Google or Salesforce. This is a one-time action that occurs on all existing permissions, but won't prevent future connections.|Google Workspace, Salesforce|
+|App dashboard > App permissions|Permissions|Revoke app|Revoke a third-party app's permissions to Google or Salesforce. Revoking app permissions is a one-time action that occurs on all existing permissions, but won't prevent future connections.|Google Workspace, Salesforce|
 |App dashboard > App permissions|Account|Revoke user from app|You can revoke specific users when clicking on the number under Users. The screen displays the specific users and you can use the X to delete permissions for any user.|Google Workspace, Salesforce|
 |Discover > Discovered Apps/IP addresses/Users|Cloud discovery|Export discovery data|Creates a CSV from the discovery data.|Discovery|
 |File policy|File|Trash|Moves the file in the user's trash.|Box, Dropbox, Google Drive, OneDrive, SharePoint, Cisco Webex (Permanently delete)|

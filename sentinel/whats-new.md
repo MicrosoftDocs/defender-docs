@@ -4,7 +4,7 @@ description: Learn about the latest new features and announcement in Microsoft S
 author: guywi-ms
 ms.author: guywild
 ms.topic: concept-article
-ms.date: 04/10/2026
+ms.date: 06/23/2026
 #Customer intent: As a security team member, I want to stay updated on the latest features and enhancements in Microsoft Sentinel so that I can effectively manage and optimize my organization's security posture.
 ms.custom:
   - build-2025
@@ -17,6 +17,36 @@ This article lists recent features added for Microsoft Sentinel, and new feature
 The listed features were released in the last six months. For information about earlier features delivered, see our [Tech Community blogs](https://techcommunity.microsoft.com/t5/azure-sentinel/bg-p/AzureSentinelBlog/label-name/What's%20New).
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
+
+## June 2026
+
+- [Link behavior results to incidents in advanced hunting (Preview)](#link-behavior-results-to-incidents-in-advanced-hunting-preview)
+- [Reason over Microsoft Sentinel graphs with graph tool (Preview)](#reason-over-microsoft-sentinel-graphs-with-graph-tool-preview)
+
+### Link behavior results to incidents in advanced hunting (Preview)
+
+You can now link behavior-based query results from the `BehaviorInfo` table to new or existing incidents in advanced hunting. This feature lets you enrich incident context with behavior records from Microsoft Sentinel UEBA. The wizard automatically populates alert metadata and entities from the selected behavior record. For more information, see [Link a behavior result to an incident](/defender-xdr/advanced-hunting-link-to-incident#link-a-behavior-result-to-an-incident-preview).
+
+### Reason over Microsoft Sentinel graphs with graph tool (Preview)
+
+The graph tool collection in the Microsoft Sentinel Model Context Protocol (MCP) server provides visual graph-based exploration of relationships across identities, devices, threats, and signals to assess coverage, dependencies, and configuration gaps. For more information, see [Explore Microsoft Sentinel graphs with graph tools](datalake/sentinel-mcp-data-exploration-tool.md#graph-tools-preview).
+
+## May 2026
+
+- [Generate playbooks using AI in Microsoft Sentinel is now generally available (GA)](#generate-playbooks-using-ai-in-microsoft-sentinel-is-now-generally-available-ga)
+- [UEBA enhancements: New settings experience, Okta V2 support, and more GCP anomaly detections](#ueba-enhancements-new-settings-experience-okta-v2-support-and-more-gcp-anomaly-detections)
+
+### Generate playbooks using AI in Microsoft Sentinel is now generally available (GA)
+
+You can now [generate playbooks using AI in Microsoft Sentinel](./automation/generate-playbook.md). The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. For more information, see [the Playbook Generation blog post](https://aka.ms/PlaybookGenBlog).
+
+### UEBA enhancements: New settings experience, Okta V2 support, and more GCP anomaly detections
+
+- We introduced a new entry point and created a consolidated view for the UEBA Settings and the Behaviors Settings. You can now access the UEBA settings from the new UEBA tab in the Microsoft Sentinel settings page. For more information, see [Enable User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](enable-entity-behavior-analytics.md#access-ueba-from-ueba-tab).
+
+- UEBA Okta anomalies now support the OktaV2_CL table alongside the existing Okta_CL table. This extends the existing Anomalous Activity and Anomalous MFA Failures detections to customers using the newer Okta connector format—no new anomaly types are introduced. For more information, see [UEBA reference](ueba-reference.md).
+
+- UEBA now supports five new GCP Audit Logs anomaly detections that identify unusual login behavior, privileged actions, resource deployments, secret/KMS key access, and infrastructure usage patterns. For more information, see [UEBA anomalies](anomalies-reference.md#ueba-anomalies).
 
 ## April 2026
 
@@ -64,7 +94,7 @@ For more information, see [Data federation overview in Microsoft Sentinel data l
 Native filtering and splitting in the Microsoft Defender portal helps you reduce noise before ingestion, control costs, and intelligently route data between analytics and data lake tiers so you can optimize what gets analyzed versus retained. For more information, see [Transform data using filter and split in Microsoft Sentinel](transformation-filter-split.md).
 
 ### Accelerate Microsoft Sentinel connector development with Visual Studio Code connector builder agent (Preview)
-An AI-powered, low-code agent in Visual Studio Code helps you build Microsoft Sentinel connectors in minutes, bringing in new data sources faster and unlocking security outcomes sooner. For more information, see [Get started with custom connectors using AI agent in Microsoft Sentinel](create-custom-connector-builder-agent.md).
+An AI-powered, low-code agent in Visual Studio Code helps you build Microsoft Sentinel connectors in minutes, bringing in new data sources faster and unlocking security outcomes sooner. For more information, see [Get started with custom connectors using AI agent in Microsoft Sentinel](isv/create-custom-connector-builder-agent.md).
 
 ### Build custom graphs (Preview)
 Build tailored security graphs across the Sentinel data lake and third-party data to uncover attack paths, blast radius, and hidden relationships. These graphs also serve as a foundation for advanced investigations and AI agents. For more information, see [Custom Graph overview](datalake/custom-graphs-overview.md).
@@ -177,7 +207,7 @@ To help SOC teams get value from behaviors from day one, Microsoft Sentinel now 
 
 For more information about the workbook, see the [Microsoft Sentinel Behaviors Workbook blog post](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/introducing-the-microsoft-sentinel-ueba-behaviors-workbook/4448398).
 
-### Generate playbooks using AI in Microsoft Sentinel (preview)
+### Generate playbooks using AI in Microsoft Sentinel (Preview)
 
 You can now [generate playbooks using AI in Microsoft Sentinel](./automation/generate-playbook.md). The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. For more information, see [the Playbook Generation blog post](https://aka.ms/PlaybookGenBlog).
 
@@ -499,14 +529,14 @@ For more information, see:
 
 The Microsoft Sentinel Codeless Connector Platform (CCP) has been renamed to **Codeless Connector Framework (CCF)**. The new name reflects the platform's evolution and avoids confusion with other platform-oriented services, while still providing the same ease of use and flexibility that users have come to expect.
 
-For more information, see [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md).
+For more information, see [Create a codeless connector for Microsoft Sentinel](isv/create-codeless-connector.md).
 
 ### Consolidated Microsoft Sentinel data connector reference
 
 We've consolidated the connector reference documentation, merging the separate connector articles into a single, comprehensive reference table.
 
 You can find the new connector reference at [Microsoft Sentinel data connectors](/azure/sentinel/data-connectors-reference#sentinel-data-connectors).
-For more information, see [Create a codeless connector](create-codeless-connector.md) and [Unlock the potential of Microsoft Sentinel's Codeless Connector Framework and do more with Microsoft Sentinel faster](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/exciting-announcements-new-data-connectors-released-using-the-codeless-connector/4421104).
+For more information, see [Create a codeless connector](isv/create-codeless-connector.md) and [Unlock the potential of Microsoft Sentinel's Codeless Connector Framework and do more with Microsoft Sentinel faster](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/exciting-announcements-new-data-connectors-released-using-the-codeless-connector/4421104).
 
 ### Summary rule templates now in public preview
 
