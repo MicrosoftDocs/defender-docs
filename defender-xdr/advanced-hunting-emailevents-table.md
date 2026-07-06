@@ -16,7 +16,8 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/28/2025
+ms.date: 07/03/2026
+ai-usage: ai-assisted
 ---
 
 # EmailEvents
@@ -80,6 +81,15 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `LatestDeliveryLocation`* | `string` | Last known location of the email |
 |`LatestDeliveryAction`* | `string` | Last known action attempted on an email by the service or by an admin through manual remediation |
 |`DistributionList` | `string` | Name of the distribution list (DL) to which the email was sent, if applicable; in cases of nested DLs, it shows the top-level list |
+| `ExchangeTransportRule` | `string` | Mail flow rules (also known as transport rules) that took action on the email while it was in transit; mail flow rules are similar to the Inbox rules available in Outlook and Outlook on the web |
+| `ForwardingInformation` | `string` | JSON array of forwarding details, including the forwarding user and the forwarding type |
+| `Context` | `string` | Protection context in which the detection ran, for example, Priority Account Protection |
+| `To` | `string` | Addresses listed in the To fields of the email |
+| `Cc` | `string` | Addresses listed in the Cc fields of the email |
+| `ThreatClassification` | `string` | Threat classification applied to the email |
+| `RecipientDomain` | `string` | Domain address of the recipient |
+| `EmailSize` | `long` | Size of the email message in bytes |
+| `IsFirstContact` | `int` | Whether the email was the first contact between the sender and recipient (1 if yes, 0 if no) |
 
 > [!NOTE]
 >\* The `LatestDeliveryLocation` and `LatestDeliveryAction` columns are **not** available in the Streaming API. 

@@ -22,7 +22,7 @@ appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Defender for Endpoint Plan 2
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to create custom detection rules so that I can proactively monitor for threats and automate response actions using advanced hunting queries.
 ---
@@ -159,7 +159,9 @@ In the query editor, select **Create detection rule** and specify the following 
 - **Alert title** - Title displayed with alerts triggered by the rule; make it unique and use plaintext. Strings are sanitized for security purposes, so HTML, Markdown, and other code don't work. Any URLs included in the title should follow the [percent-encoding format](https://en.m.wikipedia.org/wiki/Percent-encoding) for them to display properly.
 - **Severity** - Potential risk of the component or activity identified by the rule.
 - **Category** - Threat component or activity identified by the rule.
-- **MITRE ATT&CK techniques** - One or more attack techniques identified by the rule as documented in the [MITRE ATT&CK framework](https://attack.mitre.org/). The MITRE ATT&CK techniques field is hidden for certain alert categories, including malware, ransomware, suspicious activity, and unwanted software.
+- **Tactic** - MITRE ATT&CK tactic identified by the rule as documented in the [MITRE ATT&CK framework](https://attack.mitre.org/).
+- **Techniques** - One or more attack techniques identified by the rule as documented in the MITRE ATT&CK framework.
+- **Sub-techniques** - One or more attack sub-techniques identified by the rule as documented in the MITRE ATT&CK framework.
 - **Threat analytics report** - Link the generated alert to an existing threat analytics report so that it appears in the [Related incidents](threat-analytics.md#set-up-custom-detections-and-link-them-to-threat-analytics-reports) tab in threat analytics.
 - **Description** - More information about the component or activity identified by the rule. Strings are sanitized for security purposes, so HTML, Markdown, and other code don't work. Any URLs included in the description should follow the percent-encoding format for them to display properly.
 - **Recommended actions** - Additional actions that responders might take in response to an alert.
