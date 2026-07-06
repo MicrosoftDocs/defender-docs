@@ -245,7 +245,8 @@
               items:
                 - name: Deploy using Azure CLI
                   href: defender-for-containers-deploy-azure-cli.md
-                - name: Deploy to private clusters (Preview)
+                - name: Deploy to private clusters
+                  displayName: private, clusters, private clusters
                   href: defender-for-containers-private-clusters.md
                 - name: Deploy using Helm (advanced)
                   href: deploy-helm.md
