@@ -1,14 +1,16 @@
 ---
 title: Protect your ServiceNow environment | Microsoft Defender for Cloud Apps
-description: Learn how about connecting your ServiceNow app to Defender for Cloud Apps using the API connector.
-ms.date: 08/18/2025
+description: Connect ServiceNow to Microsoft Defender for Cloud Apps with the API connector to monitor user activity and detect anomalous behavior and sensitive data exposure.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli 
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # How Defender for Cloud Apps helps protect your ServiceNow environment
 
-As a major CRM cloud provider, ServiceNow incorporates large amounts of sensitive information about customers, internal processes, incidents, and reports inside your organization. Being a business-critical app, ServiceNow is accessed and used by people inside your organization and by others outside of it (such as partners and contractors) for various purposes. In many cases, a large proportion of your users accessing ServiceNow have low awareness of security and might put your sensitive information at risk by unintentionally sharing it. In other instances, malicious actors might gain access to your most sensitive customer-related assets.
+As a major CRM cloud provider, ServiceNow incorporates large amounts of sensitive information about customers, internal processes, incidents, and reports inside your organization. Being a business-critical app, ServiceNow is accessed and used by people inside your organization and by others outside of it (such as partners and contractors) for various purposes. In many cases, a large proportion of your users accessing ServiceNow have low awareness of security and might put your sensitive information at risk by unintentionally sharing sensitive data. In other instances, malicious actors might gain access to your most sensitive customer-related assets.
 
 Connecting ServiceNow to Defender for Cloud Apps improves insights into your users' activities. It also helps detect threats using machine-learning anomaly detection and information protection, such as identifying when sensitive customer data is uploaded to ServiceNow.
 
@@ -17,6 +19,8 @@ Connecting ServiceNow to Defender for Cloud Apps improves insights into your use
 
 ## Main threats
 
+Connecting ServiceNow to Defender for Cloud Apps helps you address the following threats:
+
 - Compromised accounts and insider threats
 - Data leakage
 - Insufficient security awareness
@@ -24,16 +28,18 @@ Connecting ServiceNow to Defender for Cloud Apps improves insights into your use
 
 ## How Defender for Cloud Apps helps to protect your environment
 
+Defender for Cloud Apps helps protect your ServiceNow environment in the following ways:
+
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 - [Discover, classify, label, and protect regulated and sensitive data stored in the cloud](best-practices.md#discover-classify-label-and-protect-regulated-and-sensitive-data-stored-in-the-cloud)
 - [Enforce DLP and compliance policies for data stored in the cloud](best-practices.md#enforce-dlp-and-compliance-policies-for-data-stored-in-the-cloud)
 - [Limit exposure of shared data and enforce collaboration policies](best-practices.md#limit-exposure-of-shared-data-and-enforce-collaboration-policies)
 - [Use the audit trail of activities for forensic investigations](best-practices.md#use-the-audit-trail-of-activities-for-forensic-investigations)
 
-## SaaS security posture management
+<a name="saas-security-posture-management"></a>
+## SaaS security posture management for ServiceNow
 
-[
-Connect ServiceNow](#connect-servicenow-to-microsoft-defender-for-cloud-apps) to automatically get security recommendations for ServiceNow in Microsoft Secure Score.
+[Connect ServiceNow](#connect-servicenow-to-microsoft-defender-for-cloud-apps) to automatically get security recommendations for ServiceNow in Microsoft Secure Score.
 
 In Secure Score, select **Recommended actions** and filter by **Product** = **ServiceNow**. For example, recommendations for ServiceNow include:
 
@@ -62,7 +68,7 @@ For more information about creating policies, see [Create a policy](control-clou
 
 ## Automate governance controls
 
-In addition to monitoring for potential threats, you can apply and automate the following ServiceNow governance actions to remediate detected threats:
+In addition to monitoring for potential threats, you can apply and automate the following ServiceNow governance actions to remediate detected threats. These actions are performed through Microsoft Entra ID, Microsoft's cloud identity service:
 
 | Type | Action |
 | ---- | ---- |
@@ -77,7 +83,7 @@ Review our best practices for [securing and collaborating with external users](b
 
 ## Connect ServiceNow to Microsoft Defender for Cloud Apps
 
-This article provides instructions for connecting Microsoft Defender for Cloud Apps to your existing ServiceNow account using the app connector API. This connection gives you visibility into and control over ServiceNow use. For information about how Defender for Cloud Apps protects ServiceNow, see [Protect ServiceNow](protect-servicenow.md).
+The following section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing ServiceNow account using the app connector API. The ServiceNow app connector gives you visibility into and control over ServiceNow use. For information about how Defender for Cloud Apps protects ServiceNow, see [Protect ServiceNow](protect-servicenow.md).
 
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
@@ -112,15 +118,17 @@ Defender for Cloud Apps supports the following ServiceNow versions:
 - Yokohama
 - Zurich
 
-For more information, see the [ServiceNow product documentation](https://docs.servicenow.com/bundle/paris-platform-administration/page/administer/security/concept/c_OAuthApplications.html#c_OAuthApplications).
+For more information, see [ServiceNow OAuth applications documentation](https://docs.servicenow.com/bundle/paris-platform-administration/page/administer/security/concept/c_OAuthApplications.html#c_OAuthApplications).
 
 > [!TIP]
-> We recommend deploying ServiceNow  using OAuth app tokens, available for Fuji and later releases. For more information, see the relevant [ServiceNow documentation](https://docs.servicenow.com/bundle/paris-platform-administration/page/administer/security/concept/c_OAuthApplications.html#c_OAuthApplications).
+> We recommend deploying ServiceNow  using OAuth app tokens, available for Fuji and later releases. For more information, see [Configure OAuth applications in ServiceNow](https://docs.servicenow.com/bundle/paris-platform-administration/page/administer/security/concept/c_OAuthApplications.html#c_OAuthApplications).
 >
 > For earlier releases, a [legacy connection mode](#legacy-servicenow-connection) is used that uses usernames and passwords The username and password provided are only used for API token generation and aren't saved after the initial connection process.
 >
 
 ### How to connect ServiceNow to Defender for Cloud Apps using OAuth
+
+Perform the following steps to create an OAuth profile in ServiceNow and connect it to Defender for Cloud Apps:
 
 1. Sign in with an Admin account to your ServiceNow account.
 
@@ -148,7 +156,9 @@ For more information, see the [ServiceNow product documentation](https://docs.se
     > This is a recurring process every 90 days. Without this, the ServiceNow connection will stop working.
 
 ### Connect ServiceNow to Microsoft Defender for Cloud Apps
-      
+
+To complete the connection in the Microsoft Defender Portal, follow these steps:
+
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
 
 1. In the **App connectors** page, select **+Connect an app**, and then **ServiceNow**.

@@ -67,7 +67,7 @@ Make sure that audit logging is turned on before you configure SIEM server integ
 Verify the following requirements:
 
 - Your current Microsoft 365 subscription (for example, Microsoft Defender for Office 365 Plan 2) allows for Microsoft Sentinel integration.
-- Your account in Microsoft Defender for Office 365 or Microsoft Defender XDR is a *Security Administrator*.
+- Your account in Microsoft Defender for Office 365 or Microsoft Defender is a *Security Administrator*.
 - Verify that you have *Write permissions in Microsoft Sentinel*.
 
 1. Navigate to Microsoft Sentinel.

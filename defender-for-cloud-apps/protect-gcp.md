@@ -1,9 +1,11 @@
 ---
 title: Protect your Google Cloud Platform environment | Microsoft Defender for Cloud Apps
-description: Learn how about connecting your Google Cloud Platform app to Defender for Cloud Apps using the API connector.
-ms.date: 11/25/2025
+description: Connect Google Cloud Platform to Microsoft Defender for Cloud Apps by using the API connector to monitor admin and sign-in activity and detect threats such as brute-force attacks and unusual VM deletions.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # How Defender for Cloud Apps helps protect your Google Cloud Platform (GCP) environment
@@ -15,12 +17,16 @@ Connecting GCP to Defender for Cloud Apps helps you secure your assets and detec
     
 ## Main threats
 
+Connecting GCP to Defender for Cloud Apps helps you detect and address the following threats:
+
 - Abuse of cloud resources
 - Compromised accounts and insider threats
 - Data leakage
 - Resource misconfiguration and insufficient access control
 
 ## How Defender for Cloud Apps helps to protect your environment
+
+Review the following best practices to learn how Defender for Cloud Apps helps protect your GCP environment:
 
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 - [Use the audit trail of activities for forensic investigations](best-practices.md#use-the-audit-trail-of-activities-for-forensic-investigations)
@@ -53,7 +59,7 @@ blocking and protecting the download of sensitive data to unmanaged or risky dev
 
 ## Connect Google Cloud Platform to Microsoft Defender for Cloud Apps
 
-This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Google Cloud Platform (GCP) account using the connector APIs. This connection gives you visibility into and control over GCP use. For information about how Defender for Cloud Apps protects GCP, see [Protect GCP](protect-gcp.md).
+The following instructions describe how to connect Microsoft Defender for Cloud Apps to your existing Google Cloud Platform (GCP) account using the connector APIs. This connection gives you visibility into and control over GCP use. For information about how Defender for Cloud Apps protects GCP, see [Protect GCP](protect-gcp.md).
 
 We recommend that you use a dedicated project for the integration and restrict access to the project to maintain stable integration and prevent deletions/modifications of the setup process.
 
@@ -88,6 +94,8 @@ You can connect GCP **Security auditing** to your Defender for Cloud Apps connec
 
 #### Create a dedicated service account with required roles
 
+To create a service account and assign the required roles, perform the following steps:
+
 1. Create a dedicated service account.
 1. Copy the **Email** value, you'll need this later.
 1. Assign the **Pub/Sub Admin** role to the service account.
@@ -95,6 +103,8 @@ You can connect GCP **Security auditing** to your Defender for Cloud Apps connec
 
 
 #### Create a private key for the dedicated service account
+
+To generate a private key for the service account, perform the following steps:
 
 1. Switch to project level.
 1. Select **Service accounts**.
@@ -156,6 +166,8 @@ This procedure describes how to add the GCP connection details to connect Google
 
 
 ## Next steps
+
+Use the following resources to learn more about controlling and troubleshooting cloud app connections:
 
 - [Control cloud apps with policies](control-cloud-apps-with-policies.md)
 - If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).

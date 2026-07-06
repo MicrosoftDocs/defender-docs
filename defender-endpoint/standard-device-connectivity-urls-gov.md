@@ -11,17 +11,21 @@ ms.collection:
 - m365-security
 - tier1
 ms.reviewer: pahuijbr
-ms.date: 12/25/2025
+ms.date: 06/16/2026
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Microsoft Defender for Endpoint standard connectivity URLs - US government
 
 
-This article includes a list of the standard connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in US government cloud environments.
+This article lists the standard connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in US government cloud environments, including GCC, GCC High, and DoD. Network and security administrators should allow these URLs through firewalls and proxy servers to ensure that Defender for Endpoint services can communicate correctly.
 
 ## Microsoft Defender URLs
+
+The following table lists the Microsoft Defender URLs required for US government cloud environments, including GCC, GCC High, and DoD.
 
 |Service|Geography|Category|Port|Endpoint/URL|Endpoint/URL Description|Required / Optional|Windows 10/11 / Server 2019 -2022 / Server 2012 R2/Server 2016 (Unified Agent)|Windows 7 / 8.1|Windows Server 2008 R2 / 2012 R2 / 2016 (MMA Based)|Mac|Linux|Comments|
 |---|---|---|---|---|---|:---:|:---:|:---:|:---:|:---:|:---:|---|
@@ -88,7 +92,8 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender SmartScreen|DoD|Reporting and Notifications|443|`unitedstates2.ss.wd.microsoft.us`|Used for Microsoft Defender SmartScreen protection, reporting, and notifications. Microsoft Defender Antivirus Network Protection and custom URL indicators|Required|Yes|||Yes|Yes|Microsoft Defender SmartScreen reporting and notifications. Network Protection and custom URL indicators|
 |Consolidated Defender for Endpoint services|WW|Streamlined connectivity new URL pattern|443|`*.endpoint.security.microsoft.com`|Used for streamlined connectivity URL consolidation as well as for future services|Required|Yes|No|Yes|Yes|Yes|Only required for streamlined connectivity initially. New services also follow this new pattern.|
 
-## Security center URLs
+<a name="security-center-urls"></a>
+## Defender portal URLs
 
 > [!NOTE]
 > All URLs in this table are required to have access to the Microsoft Defender Security Center Portal URL.
@@ -109,13 +114,15 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|DoD|`https://login.microsoftonline.us`|
 |Microsoft Defender for Endpoint|DoD|`https://onboardingpckgsusgvprd.blob.core.usgovcloudapi.net`|
 
-## Client processes
+<a name="client-processes"></a>
+## Required client processes
 
-Because these Defender for Endpoint-related processes generate network communications, make sure that communications from these processes are not blocked.
+The following Defender for Endpoint-related client processes generate network communications. Make sure that communications from these processes are not blocked.
 
 [!INCLUDE [Microsoft Defender for Endpoint processes](includes/streamlined-connectivity-processes.md)]
 
-## Change log
+<a name="change-log"></a>
+## Changelog
 
 |Date|Change log|
 |---|---|

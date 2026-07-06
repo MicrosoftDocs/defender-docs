@@ -1,9 +1,10 @@
 ---
 title: Create data mining queries and reports in Defender for IoT
-description: Learn how to create granular reports about network devices.
-ms.date: 10/14/2024
+description: Create data mining queries and generate detailed reports about OT network devices in Defender for IoT, including connectivity, ports, firmware, programming commands, and device state.
+ms.date: 06/12/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Create data mining queries
@@ -72,7 +73,7 @@ Each data mining report on an OT sensor has the following options for managing y
 | :::image type="icon" source="media/how-to-generate-reports/manage-icon.png" border="false"::: **Manage report** | Update the values of an existing custom data mining report. This option is disabled for Recommended reports. |
 | :::image type="icon" source="media/how-to-generate-reports/edit-icon.png" border="false"::: **Edit mode** | Select to remove specific results from the saved report. |
 
-For example, select **Manage report** to update the data your report includes by using the same fields.
+For example, select **Manage report** to update the data your report includes by editing the **Name**, **Choose category**, **Order by**, **Filter by**, and **Add filter type** fields.
 
 ## Next steps
 

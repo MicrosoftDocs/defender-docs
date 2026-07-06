@@ -1,6 +1,6 @@
 ---
 title: Microsoft Security Copilot advanced hunting query assistant
-description: Learn how Microsoft Security Copilot threat hunting agent can help you can generate a KQL query for you.
+description: Learn how Microsoft Security Copilot threat hunting agent can help you generate a KQL query.
 ms.service: defender-xdr
 ms.subservice: adv-hunting
 ms.author: pauloliveria
@@ -12,14 +12,16 @@ ms.collection:
   - security-copilot
   - magic-ai-copilot
 ms.custom:
+- msecd-doc-authoring-1014
 - cx-ti
 - cx-ah
 ms.topic: how-to
-ms.date: 12/08/2025
+ms.date: 06/16/2026
 appliesto:
 - Microsoft Defender
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
+ai-usage: ai-assisted
 ---
 
 # Microsoft Security Copilot advanced hunting query assistant
@@ -28,9 +30,9 @@ appliesto:
 
 Threat hunters or security analysts who aren't familiar with or haven't learned Kusto query language (KQL) can make a request or ask a question in natural language (for example, *Get all alerts involving user admin123*). Security Copilot then generates a KQL query that matches the request by using the advanced hunting data schema.
 
-This feature reduces the time it takes to write a hunting query from scratch, so threat hunters and security analysts can focus on hunting and investigating threats.
+The query assistant feature reduces the time it takes to write a hunting query from scratch, so threat hunters and security analysts can focus on hunting and investigating threats.
 
-Users with access to Security Copilot can use this feature in advanced hunting.
+Users with access to Security Copilot can use the query assistant feature in advanced hunting.
 
 > [!NOTE]
 > The advanced hunting capability is also available in the Security Copilot standalone experience through the Microsoft Defender XDR plugin. Know more about [preinstalled plugins in Security Copilot](/security-copilot/manage-plugins#preinstalled-plugins).
@@ -39,7 +41,7 @@ Users with access to Security Copilot can use this feature in advanced hunting.
 To start using the Query assistant, follow these steps:
 
 >[!NOTE]
-> Make sure that the Query assistant mode is active. [Learn more](advanced-hunting-security-copilot.md#get-access)
+> Make sure that the Query assistant mode is active. [Get access to Security Copilot in advanced hunting](advanced-hunting-security-copilot.md#get-access)
 
 1. Open the **Advanced hunting** page from the navigation bar in Microsoft Defender portal. The Security Copilot side pane for advanced hunting appears at the right hand side.
 
@@ -67,7 +69,7 @@ To start using the Query assistant, follow these steps:
 
    ![Screenshot of Copilot button showing Run query option.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-run-query.png)
 
-    The generated query then appears as the last query in the query editor and runs automatically.
+    The generated query appears as the last query in the query editor and runs automatically.
 
     If you need to make further tweaks, select **Add to editor**.
 
@@ -76,7 +78,7 @@ To start using the Query assistant, follow these steps:
     The generated query appears in the query editor as the last query, where you can edit it before running using the regular **Run query** above the query editor.
 
 
-1. You can provide feedback about the generated response by selecting the feedback icon ![Screenshot of feedback icon.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-feedback-icon.png) and choosing **Looks right**, **Needs improvement**, or **Inappropriate**.
+1. You can provide feedback about the generated response by selecting the feedback icon ![Screenshot of the feedback icon in Security Copilot for advanced hunting.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-feedback-icon.png) and choosing **Looks right**, **Needs improvement**, or **Inappropriate**.
 
 
 > [!TIP]

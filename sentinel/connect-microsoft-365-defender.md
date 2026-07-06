@@ -5,10 +5,12 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 12/24/2025
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security engineer, I want to integrate Microsoft Defender XDR data with Microsoft Sentinel so that we can centralize and streamline incident management and advanced threat hunting.
 
@@ -16,18 +18,18 @@ ms.collection: usx-security
 
 # Stream data from Microsoft Defender XDR to Microsoft Sentinel in the Azure portal 
 
-The Defender XDR connector allows you to stream all Microsoft Defender XDR incidents, alerts, and advanced hunting events into Microsoft Sentinel and keeps incidents synchronized between both portals. This article explains how to configure the Microsoft Defender XDR connector for Microsoft Sentinel in the Azure portal. 
+The Defender XDR connector allows you to stream all Microsoft Defender XDR incidents, alerts, and advanced hunting events into Microsoft Sentinel and keeps incidents synchronized between both portals. This article explains how to configure the Microsoft Defender XDR connector for Microsoft Sentinel in the Azure portal. Before you start, make sure you meet the [prerequisites](#prerequisites), including licensing, permissions, and solution installation.
 
 > [!NOTE]
 > The Defender XDR connector is automatically enabled when you onboard Microsoft Sentinel to the Defender portal. The manual configuration steps described in this article are not required if you've already onboarded Microsoft Sentinel to the Defender portal. For more information, see [Microsoft Sentinel in the Microsoft Defender portal](/unified-secops/microsoft-sentinel-onboard).
 
-Microsoft Defender XDR incidents include alerts, entities, and other relevant information from all the Microsoft Defender products and services. For more information, see [Microsoft Defender XDR integration with Microsoft Sentinel](microsoft-365-defender-sentinel-integration.md).
+Microsoft Defender XDR incidents include alerts, entities, and other relevant information from all the Microsoft Defender products and services. For details about data flow, supported components, and schema mapping, see [Microsoft Defender XDR integration with Microsoft Sentinel](microsoft-365-defender-sentinel-integration.md).
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
 ## Prerequisites
 
-Before you begin, you must have the appropriate licensing, access, and configured resources described in this section.
+Before you begin, ensure you have the following licensing, access, and resources:
 
 - You must have a valid license for Microsoft Defender XDR, as described in [Microsoft Defender XDR prerequisites](/microsoft-365/security/mtp/prerequisites).
 - Your user must have the [Security Administrator](/azure/active-directory/roles/permissions-reference#security-administrator) role on the tenant you want to stream the logs from, or the equivalent permissions.
@@ -41,13 +43,13 @@ For on-premises Active Directory sync via Microsoft Defender for Identity:
 - Your tenant must be onboarded to Microsoft Defender for Identity.
 - You must have the Microsoft Defender for Identity sensor installed.
 
-For more information, see [Deploy Microsoft Defender for Identity](/defender-for-identity/deploy/deploy-defender-identity).
+For deployment prerequisites and sensor setup steps, see [Deploy Microsoft Defender for Identity](/defender-for-identity/deploy/deploy-defender-identity).
 
 ## Connect to Microsoft Defender XDR
 
 In Microsoft Sentinel, select **Data connectors**. Select **Microsoft Defender XDR** from the gallery and **Open connector page**.
 
-The  **Configuration** section has three parts:
+On the connector page, the **Configuration** section has three parts:
 
 1. [**Connect incidents and alerts**](#connect-incidents-and-alerts) enables the basic integration between Microsoft Defender XDR and Microsoft Sentinel, synchronizing incidents and their alerts between the two platforms.
 
@@ -55,30 +57,30 @@ The  **Configuration** section has three parts:
 
 1. [**Connect events**](#connect-events) enables the collection of raw advanced hunting events from Defender components.
 
-For more information, see [Microsoft Defender XDR integration with Microsoft Sentinel](microsoft-365-defender-sentinel-integration.md).
+For connector architecture and supported data types, see [Microsoft Defender XDR integration with Microsoft Sentinel](microsoft-365-defender-sentinel-integration.md).
 
 ### Connect incidents and alerts
 
 To ingest and synchronize Microsoft Defender XDR incidents with all their alerts to your Microsoft Sentinel incidents queue, complete the following steps.
 
-1. Mark the check box labeled **Turn off all Microsoft incident creation rules for these products. Recommended**, to avoid duplication of incidents. This check box doesn't appear once the Microsoft Defender XDR connector is connected.
+1. Mark the check box labeled **Turn off all Microsoft incident creation rules for these products. Recommended**, to avoid duplication of incidents. The **Turn off all Microsoft incident creation rules for these products** check box doesn't appear once the Microsoft Defender XDR connector is connected.
 
 1. Select the **Connect incidents & alerts** button.
-1. Verify that Microsoft Sentinel is collecting Microsoft Defender XDR incident data. In Microsoft Sentinel **Logs** in the Azure portal, run the following statement in the query window:
+1. Verify that Microsoft Sentinel is collecting Microsoft Defender XDR incident data. In Microsoft Sentinel **Logs** in the Azure portal, run the following query in the query window to retrieve security incidents ingested from the Microsoft XDR provider:
 
    ```kusto
       SecurityIncident
       | where ProviderName == "Microsoft XDR"
    ```
 
-When you enable the Microsoft Defender XDR connector, any Microsoft Defender components’ connectors that were previously connected are automatically disconnected in the background. Although they continue to *appear* connected, no data flows through them.
+When you enable the Microsoft Defender XDR connector, any Microsoft Defender components’ connectors that were previously connected are automatically disconnected in the background. Although those component connectors continue to *appear* connected, no data flows through them.
 
 > [!NOTE]
 > Replacing standalone connectors with the XDR connector changes the schema of your alerts and might impact your existing queries. For a detailed comparison, see [Alert schema differences: Standalone vs. XDR connector](security-alert-schema-differences.md).
 
 ### Connect entities
 
-Use Microsoft Defender for Identity to sync user entities from your on-premises Active Directory to Microsoft Sentinel.
+Use Microsoft Defender for Identity to sync user entities from your on-premises Active Directory to Microsoft Sentinel. This integration requires User and Entity Behavior Analytics (UEBA), which profiles entity behavior to help detect anomalous activity.
 
 1. Select the **Go the UEBA configuration page** link.
 
@@ -91,6 +93,9 @@ Use Microsoft Defender for Identity to sync user entities from your on-premises 
 ### Connect events
 
 If you want to collect advanced hunting events from Microsoft Defender for Endpoint or Microsoft Defender for Office 365, the following types of events can be collected from their corresponding advanced hunting tables.
+
+> [!IMPORTANT]
+> **Defender Vulnerability Management (TVM) tables aren't ingested into Microsoft Sentinel.** Tables such as `DeviceTvmSoftwareInventory` and `DeviceTvmSoftwareVulnerabilities` appear in the advanced hunting schema for autocomplete and discoverability, but Microsoft Sentinel doesn't ingest TVM data into the workspace. TVM queries can be accepted by the query editor but return no results. To query TVM data, run your queries in Defender XDR Advanced Hunting, where the data is available. To use TVM data in Microsoft Sentinel, you must build a [custom ingestion path](/azure/sentinel/create-custom-connector). For more information, see [Which Defender XDR tables aren't supported in Microsoft Sentinel](#which-defender-xdr-tables-arent-supported-in-microsoft-sentinel).
 
 1. Mark the check boxes of the tables with the event types you wish to collect:
 
@@ -167,7 +172,7 @@ let Now = now();
 | render timechart 
 ```
 
-Use the following KQL query to generate a graph of event volume for a single table (change the *DeviceEvents* table to the required table of your choosing):
+Use the following KQL query to generate a graph of daily event volume for a single advanced hunting table over the last 14 days. Replace the *DeviceEvents* table name with the table you want to monitor. The query renders a time chart so you can visually confirm that events are flowing:
 
 ```kusto
 let Now = now();
@@ -182,6 +187,27 @@ let Now = now();
 | project Value = iff(isnull(Count), 0, Count), Time = TimeGenerated, Legend = "Events")
 | render timechart
 ```
+
+## Which Defender XDR tables aren't supported in Microsoft Sentinel
+
+The following advanced hunting tables are **not ingested** into Microsoft Sentinel, even though they appear in the schema:
+
+### Defender Vulnerability Management (TVM) tables
+
+- `DeviceTvmBrowserExtensions`
+- `DeviceTvmBrowserExtensionsKB`
+- `DeviceTvmCertificateInfo`
+- `DeviceTvmHardwareFirmware`
+- `DeviceTvmInfoGathering`
+- `DeviceTvmInfoGatheringKB`
+- `DeviceTvmSecureConfigurationAssessment`
+- `DeviceTvmSecureConfigurationAssessmentKB`
+- `DeviceTvmSoftwareEvidenceBeta`
+- `DeviceTvmSoftwareInventory`
+- `DeviceTvmSoftwareVulnerabilities`
+- `DeviceTvmSoftwareVulnerabilitiesKB`
+
+These tables are critical for security vulnerability management, but data is not currently streamed to Microsoft Sentinel through the Defender XDR connector. If you need to use this data in Microsoft Sentinel for analytics or detections, you must implement a [custom ingestion solution](/azure/sentinel/create-custom-connector). Otherwise, query the data in Defender XDR Advanced Hunting, where it’s available.
 
 See more information on the following items used in the preceding examples, in the Kusto documentation:
 - [***let*** statement](/kusto/query/let-statement?view=microsoft-sentinel&preserve-view=true)
@@ -201,6 +227,6 @@ See more information on the following items used in the preceding examples, in t
 
 ## Next step
 
-In this document, you learned how to integrate Microsoft Defender XDR incidents, alerts, and advanced hunting event data from Microsoft Defender services, into Microsoft Sentinel, by using the Microsoft Defender XDR connector.
+You learned how to stream Defender XDR incidents, alerts, and hunting events into Microsoft Sentinel. You used the Defender XDR connector to set up this data flow.
 
-To use Microsoft Sentinel together with Defender XDR in the Defender portal, see [Connect Microsoft Sentinel to the Microsoft Defender portal](/unified-secops-platform/microsoft-sentinel-onboard?toc=%2Fazure%2Fsentinel%2FTOC.json&bc=%2Fazure%2Fsentinel%2Fbreadcrumb%2Ftoc.json)
+To use Microsoft Sentinel with Defender XDR in the Defender portal, see [Connect Microsoft Sentinel to the Microsoft Defender portal](/unified-secops-platform/microsoft-sentinel-onboard?toc=%2Fazure%2Fsentinel%2FTOC.json&bc=%2Fazure%2Fsentinel%2Fbreadcrumb%2Ftoc.json)

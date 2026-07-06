@@ -1,18 +1,19 @@
 ---
-title: IP address asset filters
+title: IP Address Asset Filters
 titleSuffix: Defender EASM IP address asset filters 
 description: This article outlines the filter functionality available in Microsoft Defender External Attack Surface Management for IP address assets specifically, including operators and applicable field values.
 author: danielledennis
 ms.author: dandennis
 ms.service: defender-easm
-ms.date: 12/14/2022
+ms.date: 06/15/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
-# IP address asset filters 
+# IP address asset filters
 
-These filters specifically apply to IP address assets. Use these filters when searching for a specific subset of IPs.  
-
+This article provides a comprehensive reference for all filters that apply specifically to IP address assets in Microsoft Defender External Attack Surface Management. Use these filters when searching your inventory for a specific subset of IP addresses based on criteria such as port status, geolocation, web components, banners, and CVE scores. The following sections organize the available filters into defined value filters with predefined options and freeform filters that accept custom input, along with the applicable operators and expected value formats for each.
 
 ## Defined value filters  
 
@@ -26,8 +27,7 @@ The following filters provide a drop-down list of options to select. The availab
 |     Is Name Server Record  |   Indicates that the host powers a name server.                                                                         |   true / false               |                           |
 |     Port Last Seen         |   Indicates the time frame in which a port was last observed on the host.                                               |   7 days, 14 days, 30 days   |   `Equals` `In`             |
 
-
-## Free form filters  
+## Freeform filters  
 
 The following filters require that the user manually enters the value with which they want to search.  This list is organized by the number of applicable operators for each filter, then alphabetically.  
 
@@ -56,9 +56,7 @@ The following filters require that the user manually enters the value with which
 |     Web Component Name & Version    |   A list of any detected web component names and associated versions that have been observed on the asset.                                                                                               |   Netscaler Gateway 12.1, jQuery 3.4.1                                                               |                                                                                                                                                                                                                                                     |
 |     Web Component Version           |   The version number associated to any web component detected on the asset.                                                                                                                              |   12.1, 3.4.1                                                                                        |                                                                                                                                                                                                                                                     |
 
+## Related content
 
-
-## Next steps 
-[Understanding asset details](understanding-asset-details.md)
-
-[Inventory filters](inventory-filters.md) 
+- [Understand asset details](understanding-asset-details.md)
+- [Inventory filters](inventory-filters.md)

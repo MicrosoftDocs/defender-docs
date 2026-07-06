@@ -1,7 +1,7 @@
 ---
 title: Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies)
 ms.reviewer: yongrhee
-description: Learn how to evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies).
+description: Configure, activate, and test Microsoft Defender Antivirus protection features using Endpoint security policies in Security Settings Management on Windows 10, Windows 11, and Windows Server.
 ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
@@ -11,24 +11,27 @@ ms.collection:
 - tier2
 ms.topic: how-to
 ms.subservice: edr
-ms.date: 02/12/2025
+ms.date: 06/16/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
-# Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies)
+# Evaluate Microsoft Defender Antivirus by using Microsoft Defender for Endpoint security settings management
 
 In Windows 10 or later, and in Windows Server 2016 or later, you can use next-generation protection features offered by Microsoft Defender Antivirus (MDAV) and Microsoft Defender Exploit Guard (Microsoft Defender EG).
 
-This article outlines the configuration options available in Windows 10 and later versions, as well as in Windows Server 2016 and later versions. It provides step-by-step guidance on how to activate and test the key protection features in Microsoft Defender Antivirus (MDAV) and Microsoft Defender for Endpoint (EG).
+The following configuration options are available in Windows 10 and later versions, as well as in Windows Server 2016 and later versions. Use the step-by-step guidance to activate and test the key protection features in Microsoft Defender Antivirus (MDAV) and Microsoft Defender for Endpoint (EG).
 
 If you have any questions about a detection that MDAV makes, or you discover a missed detection, you can submit a file to us at our [sample submission help site](/unified-secops-platform/submission-guide).
 
-## Use Microsoft Defender Endpoint Security Settings Management (Endpoint security policies) to enable the features
+<a name="use-microsoft-defender-endpoint-security-settings-management-endpoint-security-policies-to-enable-the-features"></a>
+## Use Endpoint security policies to evaluate Microsoft Defender Antivirus features
 
-This section describes the [Microsoft Defender for Endpoint Security Settings Management (Endpoint security policies)](/intune/intune-service/protect/mde-security-integration) that configure the features you should use to evaluate our protection.
+The following guidance describes the [Microsoft Defender for Endpoint Security Settings Management (Endpoint security policies)](/intune/intune-service/protect/mde-security-integration) settings that configure the features you should use to evaluate Microsoft Defender Antivirus protection.
 
-MDAV indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also review detections in the MDAV app. To do this, see [Review Microsoft Defender Antivirus scan results](review-scan-results-microsoft-defender-antivirus.md).
+MDAV indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also review detections in the MDAV app. To review scan results in the MDAV app, see [Review Microsoft Defender Antivirus scan results](review-scan-results-microsoft-defender-antivirus.md).
 
-The Windows event log also records detection and engine events. See the Microsoft Defender Antivirus events article for a list of event IDs and their corresponding actions. For information on the list of event IDs and their corresponding actions, see [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](troubleshoot-microsoft-defender-antivirus.yml).
+The Windows event log also records detection and engine events. For a list of event IDs and their corresponding actions, see [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](troubleshoot-microsoft-defender-antivirus.yml).
 
 To configure the options that you must use to test the protection features, do the following steps:
 
@@ -201,6 +204,8 @@ Select **Endpoint security policies** at the top of the page to return to the **
 
 #### Enable Tamper Protection
 
+To enable Tamper Protection by using endpoint security policies, complete the following steps:
+
 1. Sign in to [Microsoft Defender XDR](https://sip.security.microsoft.com/).
 1. Go to **Endpoints > Configuration management > Endpoint security policies > Windows policies > Create new policy**.
 1. Select **Windows 10, Windows 11, and Windows Server** from the **Select Platform** drop-down list.
@@ -220,20 +225,16 @@ Select **Endpoint security policies** at the top of the page to return to the **
 
 It's important to verify that Cloud Protection network connectivity is working during your penetration testing.
 
-1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
-   1. Open the **Start** menu, and then type **cmd**.
-   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
+**Prerequisite:** Open Command Prompt as an administrator (select **Run as administrator**) before running the following commands.
 
-1. In the elevated Command Prompt, run the following commands:
+> [!TIP]
+> The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
-   > [!TIP]
-   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
+```dos
+(set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
-   ```dos
-   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
-
-   MpCmdRun.exe -ValidateMapsConnection
-   ```
+MpCmdRun.exe -ValidateMapsConnection
+```
 
 For more information, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
 
@@ -273,5 +274,5 @@ If you find that your settings aren't taking effect, you might have a conflict. 
 
 For information on how to make False Negatives (FNs) submissions, see:
 
-- [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md) if you have Microsoft XDR, Microsoft Defender for Endpoint P2/P1, or Microsoft Defender for Business.
+- [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md) if you have Microsoft Defender, Microsoft Defender for Endpoint P2/P1, or Microsoft Defender for Business.
 - [Submit files for analysis](/unified-secops-platform/submission-guide) if you have Microsoft Defender Antivirus.

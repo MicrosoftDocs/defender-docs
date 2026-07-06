@@ -349,9 +349,7 @@ The following fields exist in version 0.1 only, and were removed in [version 0.2
 
 
 
-## Next steps
-
-For more information, see:
+## Related content
 
 - [Normalization in Microsoft Sentinel](normalization.md)
 - [Microsoft Sentinel authentication normalization schema reference (Public preview)](normalization-schema-authentication.md)

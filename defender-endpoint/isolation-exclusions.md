@@ -1,6 +1,6 @@
 ---
 title: Isolation exclusions in Microsoft Defender for Endpoint
-description: Learn about to exclude specific processes, IP addresses, or services from network isolation when applying selective isolation action to devices.
+description: Learn how to exclude specific processes, IP addresses, or services from network isolation when applying selective isolation action to devices.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
@@ -11,11 +11,13 @@ ms.collection:
 - mde-edr
 ms.topic: how-to
 ms.subservice: edr
-ms.date: 10/20/2025
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
 
+ai-usage: ai-assisted
 ---
 # Isolation exclusions
 
@@ -27,10 +29,14 @@ Isolation exclusions allow designated processes or endpoints to bypass the restr
 
 ## Prerequisites
 
+Before you use isolation exclusions, make sure the following prerequisites are met:
+
 * Isolation exclusion must be enabled. 
 * Enabling isolation exclusion requires Security Admin or Manage Security settings permissions or above. 
 
 ### Supported operating systems 
+
+Isolation exclusion is supported on the following operating systems:
 
 * Isolation exclusion is available on Windows 11, Windows 10 version 1703 or later, Windows Server 2016 and later, Windows Server 2012 R2, macOS and Azure Stack HCI OS, version 23H2 and later.
 
@@ -64,6 +70,8 @@ There are two steps to using isolation exclusion: defining isolation exclusion r
 
 ### Step 1: Define global exclusions in the settings
 
+To define global isolation exclusion rules, perform the following steps:
+
 1. In the [Microsoft Defender portal](https://security.microsoft.com), navigate to **Settings** > **Endpoints** > **Advanced features** > **Isolation Exclusion Rules**.
 
 1. Select the relevant OS tab (Windows rules or Mac rules).
@@ -90,7 +98,7 @@ There are two steps to using isolation exclusion: defining isolation exclusion r
 
 1.	Save and apply changes.
 
-**These global rules apply whenever selective isolation is enabled for a device.**
+**The global isolation exclusion rules you define in the portal apply whenever selective isolation is enabled for a device.**
 
 ### Step 2: Apply selective isolation to a specific device
 
@@ -111,6 +119,8 @@ Exclusions that were applied to a specific device can be reviewed in the Action 
 Alternatively, you can apply selective isolation via API. To do so, set the **IsolationType** parameter to *Selective*. For more information, see [Isolate machine API](api/isolate-machine.md).
  
 ## Exclusion Logic
+
+Isolation exclusions are evaluated according to the following logic:
 
 * All rules that match will be applied.
 * Within a single rule, conditions use AND logic (all must match).
@@ -144,7 +154,7 @@ Rule 3:
 
 Changes to exclusion rules only impact new isolation requests. Devices that were already isolated remain with the exclusions that were defined when they were applied. To apply updated exclusion rules to isolated devices, release those devices from isolation and then reisolate them.
 
-This behavior ensures that isolation rules remain consistent throughout the duration of an active isolation session.
+Keeping existing exclusions unchanged for already-isolated devices ensures that isolation rules remain consistent throughout the duration of an active isolation session.
 
 ## Related content
 

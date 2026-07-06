@@ -5,7 +5,7 @@ ms.author: chrisda
 ms.topic: overview
 f1_keywords:
   - '197503'
-ms.date: 05/08/2026
+ms.date: 05/22/2026
 ms.localizationpriority: medium
 ms.collection:
   - Strat_O365_IP
@@ -76,7 +76,7 @@ The following table describes scenarios for Safe Links in Microsoft 365 and Offi
 
 Recipient filters use conditions and exceptions to identify the internal recipients that the policy applies to. At least one condition is required. You can use the following recipient filters for conditions and exceptions:
 
-- **Users**: One or more mailboxes, mail users, or mail contacts in the organization.
+- **Users**: One or more mailboxes, or mail users in the organization.
 - **Groups**:
   - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
   - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).

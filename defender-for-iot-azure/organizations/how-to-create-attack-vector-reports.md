@@ -1,12 +1,13 @@
 ---
-title: Create attack vector reports
+title: Create attack vector reports in Microsoft Defender for IoT
 description: Attack vector reports provide a graphical representation of a vulnerability chain of exploitable devices.
-ms.date: 02/03/2022
+ms.date: 06/12/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
-# Create attack vector reports
+# Create attack vector reports in Microsoft Defender for IoT
 
 Attack vector reports show a chain of vulnerable devices in a specified attack path, for devices detected by a specific OT network sensor. Simulate an attack on a specific target in your network to discover vulnerable devices and analyze attack vectors in real time.
 
@@ -63,7 +64,7 @@ For more information, see [Investigate sensor detections in the Device map](how-
 
 ## Next steps
 
-- Enhance security posture with Azure security [recommendations](recommendations.md).
+- Enhance security posture with Azure [security recommendations](recommendations.md).
 
 - View additional reports based on cloud-connected sensors in the Azure portal. For more information, see [Visualize Microsoft Defender for IoT data with Azure Monitor workbooks](workbooks.md)
 

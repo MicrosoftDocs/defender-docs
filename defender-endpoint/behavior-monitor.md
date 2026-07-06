@@ -94,7 +94,7 @@ If the value returned is `true`, behavior monitoring is enabled.
 
 You can use Advanced Hunting (AH) to query the status of behavior monitoring.
 
-Requires Microsoft Defender XDR, Microsoft Defender for Endpoint Plan 2, or Microsoft Defender for Business.
+Requires Microsoft Defender, Microsoft Defender for Endpoint Plan 2, or Microsoft Defender for Business.
 
 ```kusto
 let EvalTable = DeviceTvmSecureConfigurationAssessment

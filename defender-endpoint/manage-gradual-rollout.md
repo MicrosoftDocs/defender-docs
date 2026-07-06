@@ -1,6 +1,6 @@
 ---
 title: Manage the gradual rollout process for Microsoft Defender updates
-description: Learn about the gradual update process and controls.
+description: Learn how Microsoft Defender engine and platform updates roll out gradually through deployment rings, and how administrators can control update channels for their devices.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
@@ -11,12 +11,14 @@ ms.collection:
 - tier2
 ms.topic: how-to
 ms.subservice: ngp
-ms.date: 03/14/2026
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Manage the gradual rollout process for Microsoft Defender updates
@@ -27,9 +29,9 @@ Capabilities are provided through several components:
 
 - [Endpoint Detection & Response](overview-endpoint-detection-response.md)
 - [Next-generation protection](microsoft-defender-antivirus-windows.md) with [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md)
-- [Attack Surface Reduction](overview-attack-surface-reduction.md)
+- [Attack Surface Reduction](attack-surface-reduction-overview.md)
 
-Updates are released monthly using a gradual release process. This process helps to enable early failure detection to identify issues as they occur and address them quickly before a larger rollout.
+Updates are released monthly using a gradual release process. The gradual release process helps enable early failure detection to identify issues as they occur and address them quickly before a larger rollout.
 
 > [!NOTE]
 > For more information on how to control daily security intelligence updates, see [Schedule Microsoft Defender Antivirus protection updates](manage-protection-update-schedule-microsoft-defender-antivirus.md). Updates ensure that next-generation protection can defend against new threats, even if cloud-delivered protection is not available to the endpoint.
@@ -38,6 +40,8 @@ Updates are released monthly using a gradual release process. This process helps
 
 
 ### Supported operating systems
+
+The following operating systems are supported:
 
 - Windows
 
@@ -55,7 +59,7 @@ Our engineers continuously monitor impact and escalate any issues to create a fi
 
 ## How to customize your internal deployment process
 
-If your machines are receiving Defender updates from Windows Update, the gradual rollout process can result in some of your devices receiving Defender updates sooner than others. The following section explains how to define a strategy that will allow automatic updates to flow differently to specific groups of devices by using update channel configuration.
+If your machines are receiving Defender updates from Windows Update, the gradual rollout process can result in some of your devices receiving Defender updates sooner than others. You can define a strategy for routing automatic updates to specific device groups by using update channel configuration.
 
 > [!NOTE]
 > When planning for your own gradual release, please make sure to always have a selection of devices subscribed to the preview and staged channels. This will provide your organization as well as Microsoft the opportunity to prevent or find and fix issues specific to your environment.
@@ -68,7 +72,7 @@ For machines receiving updates through, for example, Windows Server Update Servi
 
 You can assign a machine to an update channel to define the cadence in which a machine receives monthly engine and platform updates.
 
-For more information on how to configure updates, see [Create a custom gradual rollout process for Microsoft Defender updates](configure-updates.md).
+For more information on how to configure Defender update channels and the gradual rollout process, see [Create a custom gradual rollout process for Microsoft Defender updates](configure-updates.md).
 
 The following update channels are available:
 
@@ -83,7 +87,7 @@ The following update channels are available:
 
 ### Update channels for security intelligence updates
 
-You can also assign a machine to a channel to define the cadence in which it receives SIUs (formerly referred to as signature, definition, or daily updates). Unlike the monthly process, this gradual release cycle occurs multiple times a day.
+You can also assign a machine to a channel to define the cadence in which it receives security intelligence updates (SIUs), formerly referred to as signature, definition, or daily updates. Unlike the monthly process, this gradual release cycle occurs multiple times a day.
 
 |Channel name|Description|Application|
 |---|---|---|
@@ -92,7 +96,7 @@ You can also assign a machine to a channel to define the cadence in which it rec
 |(default)||If you disable or don't configure this policy, Microsoft will either assign the device to Current Channel (Broad) or a beta channel early in the gradual release cycle. The channel selected by Microsoft might be one that receives updates early during the gradual release cycle, which may not be suitable for devices in a production or critical environment.|
 
 > [!NOTE]
-> In case you wish to force an update to the newest signature instead of leveraging the time delay, you will need to remove this policy first.
+> If you want to force an update to the newest signature instead of leveraging the time delay, you must remove the security intelligence update channel policy first.
 
 ## Update guidance
 
@@ -109,7 +113,7 @@ For environments where there's a need for a more controlled gradual rollout of a
 1. Designate a group of machines that receive updates after the gradual release cycle completes. These are typically important production systems.
 For the remainder of devices, the default setting is to receive new updates as they arrive during the Microsoft gradual rollout process and no further configuration is required.
 
-Adopting this model:
+Adopting this deployment-group rollout model:
 
 - Allows you to test early releases before they reach a production environment
 - Ensure the production environment still receives regular updates and ensure protection against critical threats.

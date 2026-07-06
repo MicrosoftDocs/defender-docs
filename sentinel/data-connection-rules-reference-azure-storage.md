@@ -17,14 +17,14 @@ To create an Azure Storage Blob data connector with the Codeless Connector Frame
 
 Each `dataConnector` represents a specific *connection* of a Microsoft Sentinel data connector. One data connector might have multiple connections, which fetch data from different endpoints. The JSON configuration built using this reference document is used to complete the deployment template for the CCF data connector.
 
-For more information, see [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md#create-the-deployment-template).
+For more information, see [Create a codeless connector for Microsoft Sentinel](isv/create-codeless-connector.md#create-the-deployment-template).
 
 ## Build the Azure Storage Blob CCF data connector
 
 Simplify the development of connecting your Azure Storage Blob data source with a sample Storage Blob CCF data connector deployment template. For more information see [Connector StorageBlob CCF template](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/Templates/Connector_StorageBlob_CCF_template.json).
 
 
-With most of the deployment template sections filled out, you only need to build the first two components, the output table and the DCR. For more information, see the [Output table definition](create-codeless-connector.md#output-table-definition) and [Data Collection Rule (DCR)](create-codeless-connector.md#data-collection-rule) sections.
+With most of the deployment template sections filled out, you only need to build the first two components, the output table and the DCR. For more information, see the [Output table definition](isv/create-codeless-connector.md#output-table-definition) and [Data Collection Rule (DCR)](isv/create-codeless-connector.md#data-collection-rule) sections.
 
 ## Data Connectors - Create or update
 
@@ -75,7 +75,7 @@ The request body for a `StorageAccountBlobContainer` CCF data connector has the 
 | **name** | True | string | The unique name of the connection matching the URI parameter |
 | **kind** | True | string | Must be `StorageAccountBlobContainer` |
 | **etag** |  | GUID | Leave empty for creation of new connectors. For update operations, the etag must match the existing connector's etag (GUID). |
-| properties.**connectorDefinitionName** |  | string | The name of the DataConnectorDefinition resource that defines the UI configuration of the data connector. For more information, see [Data Connector Definition](create-codeless-connector.md#data-connector-user-interface). |
+| properties.**connectorDefinitionName** |  | string | The name of the DataConnectorDefinition resource that defines the UI configuration of the data connector. For more information, see [Data Connector Definition](isv/create-codeless-connector.md#data-connector-user-interface). |
 | properties.**auth** | True | Nested JSON | Describes the credentials for ingesting Azure Storage Blob data. For more information, see [authentication configuration](#authentication-configuration). |
 | properties.**request** | True | Nested JSON | Describes the Azure Storage queues receiving in-scope blob created events. For more information, see [request configuration](#request-configuration). |
 | properties.**dcrConfig** |  | Nested JSON | Required parameters when the data is sent to a Data Collection Rule (DCR). For more information, see [DCR configuration](#dcr-configuration). |
@@ -200,5 +200,5 @@ For more information, see [Create data connector REST API example](/rest/api/sec
 ## Related content
 
 - [Set up your Azure Storage connector to stream logs to Microsoft Sentinel](setup-azure-storage-connector.md)
-- [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md)
+- [Create a codeless connector for Microsoft Sentinel](isv/create-codeless-connector.md)
 - [Enable network security on connector integrated storage resources](enable-storage-network-security.md)

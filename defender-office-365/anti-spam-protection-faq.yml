@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  ms.date: 05/12/2026
+  ms.date: 06/23/2026
   title: Anti-spam protection FAQ
   f1.keywords:
     - NOCSH
@@ -17,8 +17,10 @@ metadata:
     - tier2
   ms.custom:
     - seo-marvel-apr2020
+    - msecd-doc-authoring-1015
   description: Admins can view frequently asked questions and answers about anti-spam protection in Microsoft 365 organizations with cloud mailboxes.
   ms.service: defender-office-365
+  ai-usage: ai-assisted
 title: Frequently asked questions - Anti-spam protection
 summary: |
   [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
@@ -86,6 +88,11 @@ sections:
           If I change an anti-spam policy, how long does it take for the changes to take effect?
         answer: |
           Changes might take up to 1 hour to take effect after you save them.
+
+      - question: |
+          If I modify a distribution group that's used to scope an anti-spam policy, how long does it take for the changes to take effect for added or removed group members?
+        answer: |
+          Policy enforcement might be delayed when you add a user to a group that's used to scope an existing policy. This delay isn't caused by policy update latency. Instead, group membership expansion and caching latency cause the delay. Anti-spam and other threat policy rule objects rely on the same rules engine used by Exchange mail flow rules (also known as transport rules), so they inherit the same group membership evaluation behavior. If a policy change needs to take effect quickly for a specific user, scope the policy to the individual rather than a group.
 
       - question: |
           Is bulk email filtering automatically enabled?

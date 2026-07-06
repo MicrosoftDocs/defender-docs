@@ -10,13 +10,14 @@ ms.collection:
   - tier1
   - usx-security
 ms.topic: how-to
-ms.date: 11/12/2025
+ms.date: 06/16/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint
+ms.custom: msecd-doc-authoring-1014
 ---
 
-# Create and manage custom data collection rules in Microsoft Defender for Endpoint (Preview)
+# Create and manage custom data collection rules in Microsoft Defender for Endpoint
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
@@ -41,6 +42,8 @@ Ensure you have:
 > Even if you have a connected Microsoft Sentinel workspace, you must select the workspace when creating custom data collection rules.
 
 ### Performance and limits
+
+The following limits and operational characteristics apply to custom data collection rules:
 
 - Each rule can capture up to **75,000 events per device per 24-hour rolling window**
 - When a device reaches the threshold, telemetry for that rule stops until the window resets
@@ -117,6 +120,8 @@ search in (DeviceCustomFileEvents, DeviceCustomScriptEvents, DeviceCustomNetwork
 
 ### Common issues and solutions
 
+The following table lists common issues with custom data collection rules and how to resolve them:
+
 | Issue | Possible cause | Solution |
 |-------|---------------|----------|
 | No events collected | Rule not yet deployed | Wait up to 1 hour for deployment; check rule status in the portal |
@@ -169,12 +174,14 @@ When you disable a rule, data collection stops on all targeted devices within th
 
 ### Delete a rule
 
+> [!IMPORTANT]
+> Deleting a rule is permanent and cannot be undone. Historical data in Microsoft Sentinel remains available, but new collection stops immediately.
+
+Use the following steps to permanently delete a custom data collection rule:
+
 1. In **Custom Data Collection**, select the rule
 2. Select **Delete**
 3. Confirm deletion
-
-> [!IMPORTANT]
-> Deleting a rule is permanent and cannot be undone. Historical data in Microsoft Sentinel remains available, but new collection stops immediately.
 
 ## Next steps
 

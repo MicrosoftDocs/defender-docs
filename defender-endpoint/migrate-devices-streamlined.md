@@ -10,11 +10,13 @@ ms.collection:
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 11/17/2025
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Migrate devices to use the streamlined connectivity method
@@ -36,7 +38,10 @@ In most cases, full device offboarding isn't required when reonboarding. You can
 
 ## Migrating devices using the streamlined method
 
-### Migration recommendation
+<a name="migration-recommendation"></a>
+### Review migration recommendations before switching connectivity methods
+
+Use the following recommendations to plan your migration rollout:
 
 - **Start small**. It's recommended to start with a small set of devices first. Apply the onboarding blob using any of the supported deployment tools, then monitor for connectivity. If you're using a new onboarding policy, to prevent conflicts make sure to exclude device from any other existing onboarding policies.
 
@@ -44,7 +49,7 @@ In most cases, full device offboarding isn't required when reonboarding. You can
 
 - **Complete migration**. At this stage, you can gradually roll out the migration to a larger set of devices. To complete the migration, you can replace previous onboarding policies and remove the old URLs from your network device.
 
-Validate [device prerequisites](configure-device-connectivity.md#prerequisites) before proceeding with any migrations. This information builds upon the previous article by focusing on migrating existing devices.
+Validate [device prerequisites](configure-device-connectivity.md#prerequisites) before proceeding with any migrations. This article builds upon [Onboarding devices using streamlined connectivity](configure-device-connectivity.md) by focusing on migrating existing devices.
 
 To reonboard devices, you need to use the streamlined onboarding package. For more information on how to access the package, see [Streamlined connectivity](configure-device-connectivity.md).
 
@@ -98,7 +103,8 @@ For general information on onboarding Windows server devices, see [Onboard Windo
 
 Confirm prerequisites are met: [Prerequisites for streamlined method](configure-device-connectivity.md#prerequisites).
 
-### Microsoft Defender for Cloud
+<a name="microsoft-defender-for-cloud"></a>
+### Migrate devices with Microsoft Defender for Cloud
 
 Devices already onboarded don't reonboard automatically. Turn on the following Advanced Feature setting in the Microsoft Defender portal (**Settings > Endpoints > Advanced Features**) and select the option "Apply streamlined connectivity settings to devices managed by Intune and Defender for Cloud". Newly added devices start using the new onboarding information within ~48 hours. To reonboard existing devices, apply the onboarding script - see [Onboard Windows servers to the Microsoft Defender for Endpoint service](onboard-server.md).
 
@@ -126,9 +132,11 @@ Confirm prerequisites are met: [Prerequisites for streamlined method](configure-
 
 Follow the guidance in [Manual deployment for Microsoft Defender for Endpoint on macOS](mac-install-manually.md) using the streamlined onboarding package.
 
-After completing the steps, you must either reboot the device or restart the service for connectivity to switch over.
+After completing the steps, you must either reboot the device or restart the Defender for Endpoint service for connectivity to switch over.
 
 ### Microsoft Intune
+
+Use the following steps to migrate macOS devices with Microsoft Intune:
 
 1. In Microsoft Intune, create a new onboarding policy using Custom Configuration profile. Don't assign it yet. Follow the instructions under [Intune-based deployment for Microsoft Defender for Endpoint on Mac](mac-install-with-intune.md).
 
@@ -138,7 +146,10 @@ After completing the steps, you must either reboot the device or restart the ser
 
 1. Reboot the device.
 
-### JAMF Pro
+<a name="jamf-pro"></a>
+### Migrate macOS devices with JAMF Pro
+
+Use the following steps to migrate macOS devices with JAMF Pro:
 
 1. Exclude device from any existing 'onboarding' policies in JAMF Pro.
 
@@ -171,7 +182,7 @@ Device connectivity to streamlined approach doesn't start if you don't reboot th
 
 ### Third-party Linux deployment tools (Puppet, Ansible, Chef)
 
-Replace the onboarding package file in the current deployment method.
+Replace the onboarding package file in your existing Puppet, Ansible, or Chef deployment configuration with the streamlined onboarding package.
 
 ---
 
@@ -180,7 +191,7 @@ Replace the onboarding package file in the current deployment method.
 You can use the following methods to check that you have successfully connected Windows devices:
 
 - [Client analyzer](#use-defender-for-endpoint-client-analyzer-windows-to-validate-connectivity-after-onboarding-for-migrated-endpoints)
-- [Tracking with advanced hunting in Microsoft Defender XDR](#tracking-with-advanced-hunting-in-microsoft-365-defender)
+- [Tracking with advanced hunting in Microsoft Defender](#tracking-with-advanced-hunting-in-microsoft-365-defender)
 - [Track locally using Event Viewer (for Windows)](#tracking-locally-on-a-device-through-windows-event-viewer)
 - [Run tests to confirm connectivity with Defender for Endpoint services](#run-tests-to-confirm-connectivity-with-defender-for-endpoint-services)
 - Checking the registry editor
@@ -189,7 +200,7 @@ You can use the following methods to check that you have successfully connected 
 For macOS and Linux, you can use the following methods:
 
 - MDATP connectivity tests
-- Tracking with advanced hunting in Microsoft Defender XDR
+- Tracking with advanced hunting in Microsoft Defender
 - Run tests to confirm connectivity with Defender for Endpoint services
 
 ### Use Defender for Endpoint Client Analyzer (Windows) to validate connectivity after onboarding for migrated endpoints
@@ -198,13 +209,13 @@ Once onboarded, run the MDE Client Analyzer to confirm your device is connecting
 
 Download the Microsoft Defender for Endpoint Client Analyzer tool where Defender for Endpoint sensor is running.
 
-You can follow the same instructions as in [Verify client connectivity to Microsoft Defender for Endpoint service](verify-connectivity.md).  The script automatically uses the onboarding package configured on the device (should be streamlined version) to test connectivity.
+Follow the client connectivity validation steps in [Verify client connectivity to Microsoft Defender for Endpoint service](verify-connectivity.md).  The script automatically uses the onboarding package configured on the device (should be streamlined version) to test connectivity.
 
 Ensure connectivity is established with the appropriate URLs.
 
 <a name='tracking-with-advanced-hunting-in-microsoft-365-defender'></a>
 
-### Tracking with advanced hunting in Microsoft Defender XDR
+### Tracking with advanced hunting in Microsoft Defender
 
 You can use advanced hunting in Microsoft Defender portal to view the connectivity type status.
 
@@ -259,35 +270,35 @@ Once the device is onboarded to Defender for Endpoint, validate that it's contin
 
 Check the Device Page Timeline tab to confirm events are flowing from the device.
 
-#### Live Response
+<a name="live-response"></a>
+#### Test Live Response connectivity
 
 Ensure [Live Response](respond-machine-alerts.md#initiate-live-response-session) is working on your test device. Follow instructions in [Investigate entities on devices using live response](live-response.md).
 
 Make sure to run a couple of basic commands post-connection to confirm connectivity (such as cd, jobs, connect).
 
-#### Automated investigation and response
+<a name="automated-investigation-and-response"></a>
+#### Test automated investigation and response connectivity
 
 Ensure that Automated investigation and response is working on your test device: [Configure automated investigation and response capabilities](/defender-xdr/m365d-configure-auto-investigation-response).
 
 For Auto-IR testing labs, navigate to **Microsoft Defender XDR** \> **Evaluations & Tutorials** \> **Tutorials & Simulations** \> **Tutorials** \> **Automated Investigation tutorials**.
 
-#### Cloud-delivered protection
+<a name="cloud-delivered-protection"></a>
+#### Test cloud-delivered protection connectivity
 
-verify that Cloud Protection network connectivity is working.
+Verify that Cloud Protection network connectivity is working:
 
-1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
-   1. Open the **Start** menu, and then type **cmd**.
-   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
-2. In the elevated Command Prompt, run the following commands:
+In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
 
-   > [!TIP]
-   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
+> [!TIP]
+> The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
-   ```dos
-   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+```dos
+(set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
-   MpCmdRun.exe -ValidateMapsConnection
-   ```
+MpCmdRun.exe -ValidateMapsConnection
+```
 
 For more information about MpCmdRun, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
 
@@ -316,7 +327,7 @@ After the command runs, the Command Prompt window closes automatically. If succe
 For macOS and Linux, you can use the following methods:
 
 - MDATP connectivity tests
-- Tracking with advanced hunting in Microsoft Defender XDR
+- Tracking with advanced hunting in Microsoft Defender
 - Run tests to confirm connectivity with Defender for Endpoint services
 
 ### MDATP connectivity test (macOS and Linux)
@@ -329,7 +340,7 @@ For example: `https://mdav.us.endpoint.security.microsoft.com/storage`
 
 <a name='tracking-with-advanced-hunting-in-microsoft-365-defender'></a>
 
-### Tracking with advanced hunting in Microsoft Defender XDR
+### Tracking with advanced hunting in Microsoft Defender
 
 To view all devices (limit 30k) and their most recently reported connectivity type:
 

@@ -11,7 +11,9 @@ ms.collection:
   - highpri
 description: Learn about the available views, filters, and actions in Threat Explorer (Explorer) or Real-time detections to investigate and respond to threats.
 ms.custom:
-- seo-marvel-apr2020
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
+  - sfi-image-nochange
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -120,19 +122,19 @@ Threat Explorer and Real-time detections contain the following elements:
 
 - **Charts**: Each view contains a visual, aggregate representation of the filtered or unfiltered data. You can use available pivots to organize the chart in different ways.
 
-  You can often use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export chart data** to export filtered or unfiltered chart data to a CSV file.
+  You can often use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export chart data** to export filtered or unfiltered chart data to a CSV file.
 
    The charts and available pivots are described in detail in this article, including the differences between Threat Explorer and Real-time detections.
 
   > [!TIP]
   > To remove the chart from the page (which maximizes the size of the details area), use either of the following methods:
   >
-  > - Select :::image type="icon" source="media/m365-cc-sc-chart-view-icon.png" border="false"::: **Chart View** \> :::image type="icon" source="media/m365-cc-sc-list-view-icon.png" border="false"::: **List View** at the top of the page.
-  > - Select :::image type="icon" source="media/m365-cc-sc-show-list-view-icon.png" border="false"::: **Show list view** between the chart and the details area.
+  > - Select :::image type="icon" source="media/defender-portal-icon-chart-view.png" border="false"::: **Chart View** \> :::image type="icon" source="media/defender-portal-icon-list-view.png" border="false"::: **List View** at the top of the page.
+  > - Select :::image type="icon" source="media/defender-portal-icon-show-list-view.png" border="false"::: **Show list view** between the chart and the details area.
 
 - **Details area**: The details area for a view typically shows a table that contains the filtered or unfiltered data. You can use the available views (tabs) to organize the data in the details area in different ways. For example, a view might contain charts, maps, or different tables.
 
-   If the details area contains a table, you can often use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to selectively export up to 200,000 filtered or unfiltered results to a CSV file.
+   If the details area contains a table, you can often use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to selectively export up to 200,000 filtered or unfiltered results to a CSV file.
 
    > [!TIP]
    > In the **Export** flyout, you can select some or all of the available properties to export. The selections are saved per user. Selections in Incognito or InPrivate browsing mode are saved until you close the web browser.
@@ -326,7 +328,7 @@ The available views (tabs) in the details area of the **All email** view are des
 
 **Email** is the default view for the details area in the **All email** view.
 
-The **Email** view shows a details table. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
+The **Email** view shows a details table. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
 
 - **Date**<sup>\*</sup>
 - **Subject**<sup>\*</sup>
@@ -370,11 +372,11 @@ The **Email** view shows a details table. You can sort the entries by clicking o
 >
 > Customized column settings are saved per user. Customized column settings in Incognito or InPrivate browsing mode are saved until you close the web browser.
 
-When you select one or more entries from the list by selecting the check box next to the first column, the :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+When you select one or more entries from the list by selecting the check box next to the first column, the :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
 :::image type="content" source="media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active." lightbox="media/te-rtd-all-email-view-take-action.png":::
 
-In the **Subject** value for the entry, the :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open in new window** action is available. This action opens the message in the [Email entity page](mdo-email-entity-page.md).
+In the **Subject** value for the entry, the :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Open in new window** action is available. This action opens the message in the [Email entity page](mdo-email-entity-page.md).
 
 When you click on the **Subject** or **Recipient** values in an entry, details flyouts open. These flyouts are described in the following subsections.
 
@@ -386,14 +388,14 @@ For details about the information in the Email summary panel, see [The Email sum
 
 The following actions are available at the top of the Email summary panel for Threat Explorer and Real-time detections:
 
-- :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**
-- :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **View header**
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
-- :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options**:
-  - :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **Email preview**¹ ²
-  - :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Download email**¹ ² ³
-  - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **View in Explorer**
-  - :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **Go hunt**⁴
+- :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Open email entity**
+- :::image type="icon" source="media/defender-portal-icon-view-message-headers.png" border="false"::: **View header**
+- :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action**: For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+- :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options**:
+  - :::image type="icon" source="media/defender-portal-icon-view-message-headers.png" border="false"::: **Email preview**¹ ²
+  - :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Download email**¹ ² ³
+  - :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **View in Explorer**
+  - :::image type="icon" source="media/defender-portal-icon-view-message-headers.png" border="false"::: **Go hunt**⁴
 
 ¹ The **Email preview** and **Download email** actions require the **Preview** role in [Email & collaboration permissions](mdo-portal-permissions.md). By default, this role is assigned to the **Data Investigator** and **eDiscovery Manager** role groups. By default, members of the **Organization Management** or **Security Administrators** role groups can't do these actions. To allow these actions for the members of those groups, you have the following options:
 
@@ -461,7 +463,7 @@ The chart pivots are described in the following subsections.
 :::image type="content" source="media/te-rtd-all-email-view-details-area-url-clicks-tab-default-view.png" alt-text="Screenshot of the details area of the All email view in Threat Explorer with the URL clicks tab selected and showing the available pivots with no pivot selected." lightbox="media/te-rtd-all-email-view-details-area-url-clicks-tab-default-view.png":::
 
 > [!TIP]
-> In Threat Explorer, each pivot in **URL clicks** view has a :::image type="icon" source="media/m365-cc-sc-view-icon.png" border="false"::: **View all clicks** action that opens the [URL clicks view](#url-clicks-view-in-threat-explorer) in a new tab.
+> In Threat Explorer, each pivot in **URL clicks** view has a :::image type="icon" source="media/defender-portal-icon-view.png" border="false"::: **View all clicks** action that opens the [URL clicks view](#url-clicks-view-in-threat-explorer) in a new tab.
 
 ##### URL domain pivot for the URL clicks view for the details area of the All email view in Threat Explorer
 
@@ -514,21 +516,21 @@ When you select an entry by clicking anywhere in the row other than the check bo
 > To see details about other URLs without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
 - The following actions are available at the top of the flyout:
-  - :::image type="icon" source="media/m365-cc-sc-open-url-page-icon.png" border="false"::: **Open URL page**
-  - :::image type="icon" source="media/m365-cc-sc-send-icon.png" border="false"::: **Submit for analysis**:
-    - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Report clean**
-    - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Report phishing**
-    - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Report malware**
+  - :::image type="icon" source="media/defender-portal-icon-open-url-page.png" border="false"::: **Open URL page**
+  - :::image type="icon" source="media/defender-portal-icon-send.png" border="false"::: **Submit for analysis**:
+    - :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Report clean**
+    - :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Report phishing**
+    - :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Report malware**
     <!--- The target URL is constructed such that it should open a new submission with the details filled out. But it takes me to the Email tab on the main Submissions page.--->
-  - :::image type="icon" source="media/m365-cc-sc-manage-indicator-icon.png" border="false"::: **Manage indicator**:
-    - :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add indicator**
-    - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Manage in tenant block list**
+  - :::image type="icon" source="media/defender-portal-icon-manage-indicator.png" border="false"::: **Manage indicator**:
+    - :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add indicator**
+    - :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Manage in tenant block list**
 
     Selecting any of these options takes you to the **Submissions** page in the Defender portal.
 
-  - :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More**:
-    - :::image type="icon" source="media/m365-cc-sc-show-trends-icon.png" border="false"::: **View in Explorer**
-    - :::image type="icon" source="media/m365-cc-sc-go-hunt-icon.png" border="false":::**Go hunt**
+  - :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More**:
+    - :::image type="icon" source="media/defender-portal-icon-show-trends.png" border="false"::: **View in Explorer**
+    - :::image type="icon" source="media/defender-portal-icon-go-hunt.png" border="false":::**Go hunt**
 - **Original URL**
 - **Detection** section:
   - **Threat intelligence verdict**
@@ -571,7 +573,7 @@ The **Top clicks** view shows a details table. You can sort the entries by click
 - **Failure**
 
 > [!TIP]
-> All available columns are selected. If you select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns**, you can't deselect any columns.
+> All available columns are selected. If you select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns**, you can't deselect any columns.
 >
 > To see all columns, you likely need to do one or more of the following steps:
 >
@@ -590,7 +592,7 @@ The **Top targeted users** view organizes the data into a table of the top five 
 - The number of attempts: If you select the number of attempts, Threat Explorer opens in a new tab filtered by the recipient.
 
 > [!TIP]
-> Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of up to 3000 users and the corresponding attempts.
+> Use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to export the list of up to 3000 users and the corresponding attempts.
 
 #### Email origin view for the details area of the All email view in Threat Explorer
 
@@ -768,7 +770,7 @@ The available views (tabs) in the details area of the **Malware** view are liste
 
 **Email** is the default view for the details area of the **Malware** view in Threat Explorer and Real-time detections.
 
-The **Email** view shows a details table. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown.
+The **Email** view shows a details table. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown.
 
 The following table shows the columns that are available in Threat Explorer and Real-time detections. The default values are marked with an asterisk (<sup>\*</sup>).
 
@@ -816,7 +818,7 @@ The following table shows the columns that are available in Threat Explorer and 
 >
 > Customized column settings are saved per user. Customized column settings in Incognito or InPrivate browsing mode are saved until you close the web browser.
 
-When you select one or more entries from the list by selecting the check box next to the first column, the :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+When you select one or more entries from the list by selecting the check box next to the first column, the :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
 :::image type="content" source="media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active." lightbox="media/te-rtd-all-email-view-take-action.png":::
 
@@ -864,7 +866,7 @@ The **Top targeted users** view organizes the data into a table of the top five 
 - The number of attempts: If you select the number of attempts, Threat Explorer opens in a new tab filtered by the malware family name.
 
 > [!TIP]
-> Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of up to 3000 users and the corresponding attempts.
+> Use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to export the list of up to 3000 users and the corresponding attempts.
 
 #### Email origin view for the details area of the Malware view in Threat Explorer
 
@@ -1063,7 +1065,7 @@ The available views (tabs) in the details area of the **Phish** view are listed 
 
 **Email** is the default view for the details area of the **Phish** view in Threat Explorer and Real-time detections.
 
-The **Email** view shows a details table. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown.
+The **Email** view shows a details table. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown.
 
 The following table shows the columns that are available in Threat Explorer and Real-time detections. The default values are marked with an asterisk (<sup>\*</sup>).
 
@@ -1112,7 +1114,7 @@ The following table shows the columns that are available in Threat Explorer and 
 >
 > Customized column settings are saved per user. Customized column settings in Incognito or InPrivate browsing mode are saved until you close the web browser.
 
-When you select one or more entries from the list by selecting the check box next to the first column, the :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+When you select one or more entries from the list by selecting the check box next to the first column, the :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
 :::image type="content" source="media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active." lightbox="media/te-rtd-all-email-view-take-action.png":::
 
@@ -1153,7 +1155,7 @@ The same chart pivots are available and described for the **All email** view in 
 :::image type="content" source="media/te-rtd-all-email-view-details-area-url-clicks-tab-default-view.png" alt-text="Screenshot of the details area of the Phish view in Threat Explorer with the URL clicks tab selected and showing the available pivots with no pivot selected." lightbox="media/te-rtd-all-email-view-details-area-url-clicks-tab-default-view.png":::
 
 > [!TIP]
-> In Threat Explorer, each pivot in **URL clicks** view has a :::image type="icon" source="media/m365-cc-sc-view-icon.png" border="false"::: **View all clicks** action that opens the [URL clicks view in Threat Explorer](#url-clicks-view-in-threat-explorer) in a new tab. This action isn't available in Real-time detections, because the **URL clicks** view isn't available in Real-time detections.
+> In Threat Explorer, each pivot in **URL clicks** view has a :::image type="icon" source="media/defender-portal-icon-view.png" border="false"::: **View all clicks** action that opens the [URL clicks view in Threat Explorer](#url-clicks-view-in-threat-explorer) in a new tab. This action isn't available in Real-time detections, because the **URL clicks** view isn't available in Real-time detections.
 
 #### Top URLs view for the details area of the Phish view in Threat Explorer and Real-time detections
 
@@ -1169,7 +1171,7 @@ The **Top URLs** view shows a details table. You can sort the entries by clickin
 When you select an entry by clicking anywhere in the row other than the check box next to the first column, a details flyout opens. The information in the flyout is the same as described in [Top URLs details for the All email view](#top-urls-details-for-the-all-email-view).
 
 > [!TIP]
-> The :::image type="icon" source="media/m365-cc-sc-go-hunt-icon.png" border="false"::: **Go hunt** action is available only in Threat Explorer. It isn't available in Real-time detections.
+> The :::image type="icon" source="media/defender-portal-icon-go-hunt.png" border="false"::: **Go hunt** action is available only in Threat Explorer. It isn't available in Real-time detections.
 
 #### Top clicks view for the details area of the Phish view in Threat Explorer and Real-time detections
 
@@ -1186,7 +1188,7 @@ The **Top clicks** view shows a details table. You can sort the entries by click
 - **Failure**
 
 > [!TIP]
-> All available columns are selected. If you select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns**, you can't deselect any columns.
+> All available columns are selected. If you select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns**, you can't deselect any columns.
 >
 > To see all columns, you likely need to do one or more of the following steps:
 >
@@ -1205,7 +1207,7 @@ The **Top targeted users** view organizes the data into a table of the top five 
 - The number of attempts: If you select the number of attempts, Threat Explorer opens in a new tab filtered by the malware family name.
 
 > [!TIP]
-> Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of up to 3000 users and the corresponding attempts.
+> Use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to export the list of up to 3000 users and the corresponding attempts.
 
 #### Email origin view for the details area of the Phish view in Threat Explorer
 
@@ -1310,7 +1312,7 @@ In Threat Explorer and Real-time detections, the details area of the **Content m
 
 **Document** is the default and only view for the details area in the **Content malware** view.
 
-The **Document** view shows a details table. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
+The **Document** view shows a details table. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
 
 - **Date**<sup>\*</sup>
 - **Name**<sup>\*</sup>
@@ -1453,7 +1455,7 @@ The available views (tabs) in the details area of the **URL clicks** view are de
 
 **Results** is the default view for the details area in the **URL clicks** view.
 
-The **Results** view shows a details table. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all columns are selected:
+The **Results** view shows a details table. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all columns are selected:
 
 - **Time clicked**
 - **Recipient**
@@ -1477,7 +1479,7 @@ The **Results** view shows a details table. You can sort the entries by clicking
 >
 > Customized column settings are saved per user. Customized column settings in Incognito or InPrivate browsing mode are saved until you close the web browser.
 
-Select one or entries by selecting the check box next to the first column in the row, and then select :::image type="icon" source="media/m365-cc-sc-view-icon.png" border="false"::: **View all emails** to open Threat Explorer in **All email** view in a new tab filtered by the **Network message ID** values of the selected messages.
+Select one or entries by selecting the check box next to the first column in the row, and then select :::image type="icon" source="media/defender-portal-icon-view.png" border="false"::: **View all emails** to open Threat Explorer in **All email** view in a new tab filtered by the **Network message ID** values of the selected messages.
 
 #### Top clicks view for the details area of the URL clicks view in Threat Explorer
 
@@ -1494,7 +1496,7 @@ The **Top clicks** view shows a details table. You can sort the entries by click
 - **Failure**
 
 > [!TIP]
-> All available columns are selected. If you select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns**, you can't deselect any columns.
+> All available columns are selected. If you select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns**, you can't deselect any columns.
 >
 > To see all columns, you likely need to do one or more of the following steps:
 >
@@ -1502,7 +1504,7 @@ The **Top clicks** view shows a details table. You can sort the entries by click
 > - Narrow the width of appropriate columns.
 > - Zoom out in your web browser.
 
-Select an entry by selecting the check box next to the first column in the row, and then select :::image type="icon" source="media/m365-cc-sc-view-icon.png" border="false"::: **View all clicks** to open Threat Explorer in a new tab in **URL clicks** view.
+Select an entry by selecting the check box next to the first column in the row, and then select :::image type="icon" source="media/defender-portal-icon-view.png" border="false"::: **View all clicks** to open Threat Explorer in a new tab in **URL clicks** view.
 
 When you select an entry by clicking anywhere in the row other than the check box next to the first column, a details flyout opens. The information in the flyout is the same as described in [Top URLs details for the All email view](#top-urls-details-for-the-all-email-view).
 
@@ -1515,7 +1517,7 @@ The **Top targeted users** view organizes the data into a table of the top five 
 - The number of attempts: If you select the number of attempts, Threat Explorer opens in a new tab filtered by the malware family name.
 
 > [!TIP]
-> Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of up to 3000 users and the corresponding attempts.
+> Use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to export the list of up to 3000 users and the corresponding attempts.
 
 ## Property filters in Threat Explorer and Real-time detections
 
@@ -1560,7 +1562,7 @@ The steps to create property filter/query conditions are the same in all views i
 
    To edit an existing condition, double-click on it to bring the selected property, filter operator, and values back into the corresponding boxes.
 
-   To remove an existing condition, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: on the condition.
+   To remove an existing condition, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: on the condition.
 
 5. To apply the filter to the chart and the details table, select **Refresh**
 
@@ -1577,7 +1579,7 @@ Most views in Threat Explorer allow you to save filters (queries) for later use.
 
 To save queries in Threat Explorer, do the following steps:
 
-1. After you create the filter/query as previously described, select **Save query** \> :::image type="icon" source="media/m365-cc-sc-save-icon.png" border="false"::: **Save query**.
+1. After you create the filter/query as previously described, select **Save query** \> :::image type="icon" source="media/defender-portal-icon-save.png" border="false"::: **Save query**.
 
 2. In the **Save query** flyout that opens, configure the following options:
    - **Query name**: Enter a unique name for the query.
@@ -1594,11 +1596,11 @@ To save queries in Threat Explorer, do the following steps:
 
 On the **Saved query** or **Tracked query** tabs on the **Threat tracker** page in the Defender portal at <https://security.microsoft.com/threattrackerv2>, you can select **Explore** in the **Actions** column to open and use the query in Threat Explorer.
 
-When you open the query by selecting **Explore** from the **Threat tracker** page, :::image type="icon" source="media/m365-cc-sc-save-icon.png" border="false"::: **Save query as** and :::image type="icon" source="media/m365-cc-sc-gear-icon.png" border="false"::: **Saved query settings** are now available in **Save query** on the **Explorer** page:
+When you open the query by selecting **Explore** from the **Threat tracker** page, :::image type="icon" source="media/defender-portal-icon-save.png" border="false"::: **Save query as** and :::image type="icon" source="media/defender-portal-icon-gear.png" border="false"::: **Saved query settings** are now available in **Save query** on the **Explorer** page:
 
-- If you select :::image type="icon" source="media/m365-cc-sc-save-icon.png" border="false"::: **Save query as**, the **Save query** flyout opens with all previously selected settings. If you make changes, select **Save**, and then select **OK** in the **Success** dialog, the updated query is saved as a new query on the **Threat tracker** page (you might need to select :::image type="icon" source="media/m365-cc-sc-refresh-icon.png" border="false":::**Refresh** to see it).
+- If you select :::image type="icon" source="media/defender-portal-icon-save.png" border="false"::: **Save query as**, the **Save query** flyout opens with all previously selected settings. If you make changes, select **Save**, and then select **OK** in the **Success** dialog, the updated query is saved as a new query on the **Threat tracker** page (you might need to select :::image type="icon" source="media/defender-portal-icon-refresh.png" border="false":::**Refresh** to see it).
 
-- If you select :::image type="icon" source="media/m365-cc-sc-gear-icon.png" border="false"::: **Saved query settings**, the **Saved query settings** flyout opens where you can update the date and **Track query** settings of the existing query.
+- If you select :::image type="icon" source="media/defender-portal-icon-gear.png" border="false"::: **Saved query settings**, the **Saved query settings** flyout opens where you can update the date and **Track query** settings of the existing query.
 
 :::image type="content" source="media/te-rtd-query-save-query-as-saved-query-settings.png" alt-text="Screenshot of Save query in Threat Explorer with Save query as and Saved query settings available." lightbox="media/te-rtd-query-save-query-as-saved-query-settings.png":::
 

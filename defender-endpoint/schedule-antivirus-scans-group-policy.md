@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen
-ms.date: 10/20/2025
+ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 06/16/2026
 ms.reviewer: pauhijbr, ksarens
 ms.subservice: ngp
 ms.topic: how-to
@@ -19,18 +19,23 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
 ---
 # Schedule antivirus scans using Group Policy
 
-This article describes how to configure scheduled scans using Group Policy. To learn more about scheduling scans and about scan types, see [About scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md).
+This article describes how to configure scheduled scans using Group Policy. Use Group Policy when you manage Windows endpoints in an Active Directory domain and want centralized control over scan timing, frequency, and CPU usage. The settings covered include daily and weekly scan schedules, CPU throttling, randomization, and remediation scans. To learn more about scheduling scans and about scan types, see [About scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md).
 
 ## Prerequisites
 
 ### Supported operating systems
 
+This feature is supported on the following operating systems:
+
 - Windows
 
 ## Configure antivirus scans using Group Policy
+
+To configure scheduled antivirus scans using Group Policy, follow these steps:
 
 1. On your Group Policy management machine, in the Group Policy Editor, go to **Computer configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **Scan**.
 
@@ -38,7 +43,7 @@ This article describes how to configure scheduled scans using Group Policy. To l
 
 1. Specify the settings for the Group Policy Object, and then select **OK**. 
 
-1. Repeat steps for each setting you want to configure.
+1. Repeat steps 1-3 for each setting you want to configure.
 
 1. Deploy your Group Policy Object as you normally do. If you need help with Group Policy Objects, see [Create a Group Policy Object](/windows/security/threat-protection/windows-firewall/create-a-group-policy-object).
 
@@ -50,6 +55,8 @@ For more information, see the [Manage when protection updates should be download
 
 ## Group Policy settings for scheduling daily scans (quick)
 
+The following table lists the Group Policy settings for scheduling daily quick scans:
+
 | Location | Setting | Description | Default setting (if not configured) |
 | -------- | -------- | -------- | -------- |
 | Scan |Specify the daily interval for running quick scans. |Specify the number of hours that should pass before the next quick scan is performed. For example, to run every two hours, enter **2**, for once a day, enter **24**. Enter **0** to never run a daily quick scan. | Never |
@@ -59,6 +66,8 @@ For more information, see the [Manage when protection updates should be download
 > When scheduling a scan, depending on your environment, if your client devices are shutdown after-hours, you might want to consider setting the daily quick scans during lunch time (720). 
 
 ## Group Policy settings for scheduling weekly scans (quick or full)
+
+The following table lists the Group Policy settings for scheduling weekly quick or full scans:
 
 | Location | Setting | Description | Default setting (if not configured) |
 | -------- | -------- | -------- | -------- |
@@ -74,6 +83,8 @@ For more information, see the [Manage when protection updates should be download
 
 ## Group Policy settings for general scheduling scans
 
+The following table describes general Group Policy settings for scan scheduling:
+
 | Location | Setting | Description | Default setting (if not configured) |
 |:---|:---|:---|:---|
 | Root | Randomize scheduled task times |In Microsoft Defender Antivirus, randomize the start time of the scan to any interval from **0 to 23 hours**. By default, scheduled tasks begin at a random time within four hours of the time specified in Task Scheduler. | Enabled |
@@ -84,6 +95,8 @@ For more information, see the [Manage when protection updates should be download
 
 ## Group Policy settings for scheduling scans for specifying the maximum percentage of CPU utilization during a scan
 
+The following table describes the Group Policy setting for controlling maximum CPU utilization during scans:
+
 | Location | Setting |Description |Default setting (if not configured) |
 | -------- | -------- | -------- | -------- |
 | Scan |Specify the maximum percentage of CPU utilization during a scan|Configure the maximum percentage CPU utilization permitted during a scan.  Valid values for this setting are a percentage represented by integers 5 to 100.  A value of 0 indicates that there should be no throttling of CPU utilization.|Enabled - 50|
@@ -93,27 +106,29 @@ For more information, see the [Manage when protection updates should be download
 
 ## Group Policy settings for scheduling scans for lowering the CPU priority
 
-| Location | Setting | Description | Default setting (if not configured) |
-|:---|:---|:---|:---|
-| Scan | Start the scheduled scan only when computer is on but not in use | Scheduled scans won't run, unless the computer is on but not in use | Enabled |
-
-## Group Policy settings for scheduling scans for when an endpoint isn't in use
+The following table lists the setting that controls whether scans run only when the computer is idle, which lowers CPU priority for other tasks:
 
 | Location | Setting | Description | Default setting (if not configured) |
 |:---|:---|:---|:---|
 | Scan | Start the scheduled scan only when computer is on but not in use | Scheduled scans won't run, unless the computer is on but not in use | Enabled |
+
+<a name="group-policy-settings-for-scheduling-scans-for-when-an-endpoint-isnt-in-use"></a>
 
 > [!NOTE]
 > When you schedule scans for times when endpoints aren't in use, scans don't honor the CPU throttling configuration and takes full advantage of the resources available to complete the scan as fast as possible.
 
 ## Group Policy settings for scheduling remediation-required scans
 
+The following table lists the Group Policy settings for scheduling remediation-required scans:
+
 |Location |Setting |Description |Default setting (if not configured) |
 |---|---|---|---|
-| Remediation |Specify the day of the week to run a scheduled full scan to complete remediation |Specify the day (or never) to run a scan. |Never |
-| Remediation |Specify the time of day to run a scheduled full scan to complete remediation |Specify the number of minutes after midnight (for example, enter **60** for 1 AM.) |120 (2 AM)|
+| Remediation |Specify the day of the week to run a scheduled full scan to complete remediation |Choose which day to run a scan, or select never. |Never |
+| Remediation |Specify the time of day to run a scheduled full scan to complete remediation |Enter the minutes after midnight for the scan time (for example, **60** means 1 AM). |120 (2 AM)|
 
 ## Group Policy settings for scheduling scans after protection updates
+
+The following table describes the setting for running scans after protection updates are downloaded:
 
 |Location |Setting |Description |Default setting (if not configured)|
 |:---|:---|:---|:---|

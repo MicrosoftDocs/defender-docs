@@ -3,7 +3,7 @@ title: What's new in Microsoft Defender for Business
 description: Learn about new features and capabilities in Microsoft Defender for Business.
 author: chrisda
 ms.author: chrisda
-ms.date: 08/19/2025
+ms.date: 06/11/2026
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
@@ -12,24 +12,32 @@ ms.collection:
 - SMB
 - m365-security
 - tier1
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # What's new in Microsoft Defender for Business
 
-This article lists new features in the latest releases of Microsoft Defender for Business. Features that are currently in preview are denoted with **(preview)**.
+This article lists new features in the latest releases of Microsoft Defender for Business, including product updates, new capabilities, preview announcements, and changes to feature availability. Use these release notes to stay current on what's changed and assess how updates might affect your environment. Features that are currently in preview are denoted with **(preview)**.
 
 > [!TIP]
 > Microsoft 365 Business Premium includes Microsoft Defender for Business. For information about what's new in security in Microsoft 365 for business (including Business Premium), see [What's new in security in Microsoft 365 for business](/microsoft-365/admin/security-and-compliance/m365b-security-whats-new).
 
 ## January 2024
 
+The following update was released in January 2024:
+
 - **Ability to manage endpoint security subscription settings**. Defender for Business customers who have a mix of subscriptions (such as Defender for Business and Defender for Endpoint Plan 2 licenses) can now change their subscription settings to apply Defender for Endpoint Plan 2 features and capabilities across devices. See [Manage your endpoint security subscription settings across client devices](mdb-manage-subscription.md).
 
 ## December 2023
 
+The following update was released in December 2023:
+
 - **Streaming API is now generally available for Defender for Business**. For partners or customers looking to build their own security operations center, the Defender for Endpoint streaming API is now available for Defender for Business and Microsoft 365 Business Premium. See [Use the streaming API with Microsoft Defender for Business](mdb-streaming-api.md).
 
 ## October 2023
+
+The following announcements and updates were released in October 2023:
 
 - **Automated attack disruption** capabilities are coming to Defender for Business! Learn how these capabilities can disrupt a human-operated attack almost immediately. See [Automatic attack disruption in Microsoft Defender for Business](mdb-attack-disruption.md).
 
@@ -40,21 +48,23 @@ This article lists new features in the latest releases of Microsoft Defender for
 > [!TIP]
 > **Read all about the exciting, new capabilities releasing in July 2023 in the [Tech Community blog: New SMB security innovations from Microsoft Inspire 2023](https://aka.ms/SMBSecurityJulyBlog)**.
 
-- **Mobile threat defense is rolling out**. Mobile threat defense includes operating system-level threat and vulnerability management, web protection, and app security. It's not generally available in Defender for Business. [Learn more about mobile threat defense](mdb-mtd.md).
+- **Mobile threat defense is rolling out**. Mobile threat defense includes operating system-level threat and vulnerability management, web protection, and app security. It's not generally available in Defender for Business. See [Mobile threat defense capabilities in Microsoft Defender for Business](mdb-mtd.md).
 
-- **Automatic attack disruption** is rolling out. During an ongoing attack, automatic attack disruption capabilities swiftly contain compromised devices to help stop lateral movement within the network and minimize the overall impact of the attack. Automatic attack disruption is included in Defender for Business. [Learn more about automatic attack disruption](/defender-xdr/automatic-attack-disruption).
+- **Automatic attack disruption** is rolling out. During an ongoing attack, automatic attack disruption capabilities swiftly contain compromised devices to help stop lateral movement within the network and minimize the overall impact of the attack. Automatic attack disruption is included in Defender for Business. See [Automatic attack disruption in Microsoft Defender XDR](/defender-xdr/automatic-attack-disruption).
 
 - **Security summary reports** are rolling out. Use these reports to view threats that were prevented by Defender for Business, Microsoft Secure Score status, and recommendations for improving security. See [Reports in Microsoft Defender for Business](mdb-reports.md).
 
 - **Streaming API (preview) is now available for Defender for Business**. For partners or customers looking to build their own security operations center, the Defender for Endpoint streaming API is now in preview for Defender for Business. The API supports streaming of device file, registry, network, sign-in events and more to Azure Event Hub, Azure Storage, and Microsoft Sentinel to support advanced hunting and attack detection. See [Use the streaming API (preview) with Microsoft Defender for Business](mdb-streaming-api.md).
 
-- **Managed detection and response integration with Blackpoint Cyber**. This solution is ideal for customers who don't have the resources to invest in an in-house security operations center and for partners who want to augment their IT team with security experts to investigate, triage, and remediate the alerts generated by Defender for Business. [Learn more about Blackpoint Cyber](https://aka.ms/BlackpointMSFT).
+- **Managed detection and response integration with Blackpoint Cyber**. This solution is ideal for customers who don't have the resources to invest in an in-house security operations center and for partners who want to augment their IT team with security experts to investigate, triage, and remediate the alerts generated by Defender for Business. See [Blackpoint Cyber integration](https://aka.ms/BlackpointMSFT).
 
-- **Customizable security baselines and configuration drift reports in Microsoft 365 Lighthouse**. For Microsoft Managed Service Providers (MSPs), Microsoft 365 Lighthouse includes security baselines to deploy a standardized set of configurations to customers' tenants. Microsoft 365 Lighthouse now lets MSPs customize baselines based on expertise and tailor them to customers' unique needs. [Learn more about Microsoft 365 Lighthouse](/microsoft-365/lighthouse/m365-lighthouse-overview).
+- **Customizable security baselines and configuration drift reports in Microsoft 365 Lighthouse**. For Microsoft Managed Service Providers (MSPs), Microsoft 365 Lighthouse includes security baselines to deploy a standardized set of configurations to customers' tenants. Microsoft 365 Lighthouse now lets MSPs customize baselines based on expertise and tailor them to customers' unique needs. See [Microsoft 365 Lighthouse overview](/microsoft-365/lighthouse/m365-lighthouse-overview).
 
 - **New training resources for Microsoft partners**. To provide step-by-step guidance for partners on how to build services based on critical CIS cybersecurity controls, a Security Managed services kit and a three-part digital training series are now available. See **IT partner resources to help build security services** in the [Tech Community blog: New SMB security innovations from Microsoft Inspire 2023](https://aka.ms/SMBSecurityJulyBlog).
 
 ## March 2023
+
+The following preview features and updates were added in March 2023:
 
 - **Mobile threat defense (preview) is added to Defender for Business**. The ability to [onboard iOS and Android devices](mdb-onboard-devices.md) to the standalone version of Defender for Business is now in preview! These capabilities provide OS-level threat and vulnerability management, web protection, and app security to help you and employees stay more secure on the go. See [Mobile threat defense capabilities in Microsoft Defender for Business](mdb-mtd.md).
 
@@ -64,11 +74,15 @@ This article lists new features in the latest releases of Microsoft Defender for
 
 ## January 2023
 
+The following updates were released in January 2023:
+
 - **Attack surface reduction capabilities are rolling out**. [Attack surface reduction capabilities in Defender for Business](mdb-asr.md) include attack surface reduction rules and a new attack surface reduction rules report. Attack surface reduction rules target certain behaviors that are considered risky because they're commonly abused by attackers through malware. In the Microsoft Defender portal (<https://security.microsoft.com>), you can now view a report showing detections and configuration information for attack surface reduction rules. In the navigation pane, choose **Reports**, and under **Endpoints**, choose **Attack surface reduction rules**.
 
 - **Default experience for Defender for Business when an enterprise plan is added**. Defender for Business now retains its default experience ([simplified configuration and setup](mdb-setup-configuration.md)) even if an enterprise plan, such as [Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint) or [Microsoft Defender for Servers Plan 1 or 2](/azure/defender-for-cloud/plan-defender-for-servers) is added. To learn more, see [What happens if I have a mix of Microsoft endpoint security subscriptions](/defender-business/mdb-faq#what-happens-if-i-have-a-mix-of-microsoft-endpoint-security-subscriptions)?
 
 ## November 2022
+
+The following updates were announced in November 2022:
 
 - **Microsoft Defender for Business servers**, a new add-on for Defender for Business, is now generally available. To learn more, see the following articles:
   - [How to get Microsoft Defender for Business servers](get-defender-business.md)
@@ -78,9 +92,13 @@ This article lists new features in the latest releases of Microsoft Defender for
 
 ## July 2022
 
+The following preview update was announced in July 2022:
+
 - **Microsoft Defender for Business servers (preview)** is available to customers who have at least one paid license of Microsoft 365 for business or Defender for Business. See [Tech Community blog: Server protection for small business is now in preview within Microsoft Defender for Business](https://techcommunity.microsoft.com/t5/small-and-medium-business-blog/server-protection-for-small-business-now-in-preview-within/ba-p/3571185).
 
 ## May 2022
+
+The following release update was announced in May 2022:
 
 - **Defender for Business** (standalone) is now generally available. To learn more, see the following resources:
   - [Tech Community blog: Introducing Microsoft Defender for Business](https://techcommunity.microsoft.com/t5/small-and-medium-business-blog/introducing-microsoft-defender-for-business/ba-p/2898701)
@@ -88,5 +106,7 @@ This article lists new features in the latest releases of Microsoft Defender for
   - [Get Microsoft Defender for Business](get-defender-business.md)
 
 ## March 2022
+
+The following update was announced in March 2022:
 
 - **Microsoft 365 Business Premium now includes Defender for Business**. To learn more, see [Tech Community blog: New security solutions to help secure small and medium businesses](https://techcommunity.microsoft.com/t5/small-and-medium-business-blog/new-security-solutions-to-help-secure-small-and-medium/ba-p/3207043).

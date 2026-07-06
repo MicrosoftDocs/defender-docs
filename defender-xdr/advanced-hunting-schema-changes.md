@@ -16,7 +16,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 12/10/2025
+ms.date: 06/03/2026
 ---
 
 # Advanced hunting schema - Naming changes
@@ -31,6 +31,19 @@ The [advanced hunting schema](advanced-hunting-schema-tables.md) is updated regu
 Naming changes are automatically applied to queries that are saved in Microsoft Defender XDR, including queries used by custom detection rules. You don't need to update these queries manually. However, you will need to update the following queries:
 - Queries that are run using the API
 - Queries that are saved elsewhere outside Microsoft Defender XDR
+
+## June 2026
+
+- The [`AIAgentsInfo`](advanced-hunting-aiagentsinfo-table.md) table is transitioning to the [`AgentsInfo`](advanced-hunting-agentsinfo-table.md) table. The `AIAgentsInfo` table was originally built for Copilot Studio scenarios, and many of its columns were specific to that platform. The new `AgentsInfo` table provides a unified schema that supports agent inventory and governance for all agent types, including Copilot Studio, Microsoft Foundry, Microsoft 365 Copilot, third-party agents, and endpoint-discovered agents. Microsoft Agent 365 customers should use the `AgentsInfo` table today.
+
+    Key changes in the new table include expanded coverage for agent identity, authentication, permissions, lifecycle, and configuration. The new schema also includes a `RawAgentInfo` column that stores additional agent data in JSON format, ensuring no data loss as the schema evolves.
+
+    To prepare for this change:
+    - Update your advanced hunting queries to use the `AgentsInfo` table instead of `AIAgentsInfo`.
+    - Review and update any filters, projections, or joins that reference `AIAgentsInfo` column names, as column names have changed in the new table.
+    - Update any queries run through the API or saved outside Microsoft Defender XDR. Saved queries in Microsoft Defender XDR, including custom detection rules, are updated automatically.
+
+    The `AIAgentsInfo` table remains accessible until July 1, 2026, to allow time for migration.
 
 ## November 2025
 - The Boolean field values in advanced hunting results will change from numeric (`1` and `0`) to textual (`True` and `False`) on February 25, 2026. While your queries and custom detection rules won't be affected by this change, you might want to update your automated processes (for example, scripts, playbooks, or integrations) parsing these values.

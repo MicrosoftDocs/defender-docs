@@ -13,6 +13,7 @@ appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
   - Microsoft Defender for Endpoint
+ms.custom: sfi-image-nochange
 ---
 
 # Endpoint security policies in multitenant management

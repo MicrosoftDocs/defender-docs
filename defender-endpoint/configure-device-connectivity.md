@@ -3,7 +3,7 @@ title: Onboarding devices using streamlined connectivity for Microsoft Defender 
 description: Learn how to use a streamlined domain or static IP ranges during onboarding when connecting devices to Microsoft Defender for Endpoint.         
 author: paulinbar
 ms.author: painbar
-ms.date: 09/29/2025
+ms.date: 06/17/2026
 ms.topic: how-to
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -18,6 +18,8 @@ appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender Vulnerability Management
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
@@ -29,7 +31,8 @@ The Defender for Endpoint client might require the use of proxied connections to
 
 To simplify network configuration and management, you can now onboard new devices to Defender for Endpoint using a reduced URL set or static IP ranges. For more information, see [Migrating devices to streamlined connectivity](migrate-devices-streamlined.md).
 
-## Defender for Endpoint-recognized simplified domain
+<a name="defender-for-endpoint-recognized-simplified-domain"></a>
+## Understand the Defender for Endpoint-recognized simplified domain
 
 The Defender for Endpoint-recognized simplified domain `*.endpoint.security.microsoft.com` (for commercial devices) or `*.endpoint.security.microsoft.us*` (for US government devices - Preview) consolidates connectivity to the following core Defender for Endpoint services:
 
@@ -64,6 +67,8 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 - **Antivirus (Security Intelligence):** `1.391.345.0`
 
 ### Supported operating systems
+
+The following operating systems support streamlined connectivity:
 
 - Windows 10 version 1809 or later. 
 - Windows 10 versions 1607, 1703, 1709, 1803 are supported on the streamlined onboarding package but require a different URL list, see [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](streamlined-device-connectivity-urls-commercial.md)
@@ -124,7 +129,7 @@ You must maintain connectivity with remaining required services listed under the
 
 With streamlined connectivity, IP-based solutions can be used as an alternative to URLs. These IPs cover the following services:
 
-- MAPS
+- Microsoft Active Protection Service (MAPS)
 - Malware Sample Submission Storage
 - Auto-IR Sample Storage
 - Defender for Endpoint Command and Control
@@ -156,7 +161,7 @@ The following pre-onboarding checks can be run on both Windows and Xplat MDE Cli
 
 To test streamlined connectivity for devices not yet onboarded to Defender for Endpoint, you can use the Client Analyzer for Windows using the following commands: 
 
-- Run `mdeclientanalyzer.cmd -o <path to cmd file>`  from within the MDEClientAnalyzer folder. The command uses parameters from onboarding package to test connectivity.
+- Run `mdeclientanalyzer.cmd -o <path to cmd file>`  from within the MDEClientAnalyzer folder. The command uses parameters from the Defender for Endpoint streamlined onboarding package to test connectivity.
 
 - Run `mdeclientanalyzer.cmd -g <GW_US, GW_UK, GW_EU>` , where parameter is of GW_US, GW_EU, GW_UK. GW refers to the streamlined option. Run with applicable tenant geo.
 
@@ -164,20 +169,20 @@ As a supplementary check, you can also use the client analyzer to test whether a
  
 
 > [!NOTE]
-> For devices not yet onboarded to Defender for Endpoint, client analyzer will test against standard set of URLs. To test the streamlined approach, you will need to run with the switches listed earlier in this article. 
+> For devices not yet onboarded to Defender for Endpoint, client analyzer will test against standard set of URLs. To test the streamlined approach, you will need to run with the `-o` switch (to use onboarding package parameters) or the `-g` switch (to specify tenant geo such as GW_US, GW_EU, or GW_UK). 
 
 ### Stage 4. Apply the new onboarding package required for streamlined connectivity
 
 Once you configure your network to communicate with the full list of services, you can begin onboarding devices using the streamlined method. 
 
-Before proceeding, confirm devices meet the [prerequisites](#prerequisites) and have updated sensor and Microsoft Defender Antivirus versions. 
+Before proceeding, confirm devices meet the [streamlined connectivity prerequisites](#prerequisites) and have updated sensor and Microsoft Defender Antivirus versions. 
 
 
 1. To get the new package, in Microsoft Defender XDR, select **Settings > Endpoints > Device management> Onboarding**.
 
 1. Select the applicable operating system and choose "Streamlined" from the Connectivity type dropdown menu.
 
-1. For new devices (not onboarded to Defender for Endpoint) supported under this method, follow onboarding steps from previous sections using the updated onboarded package with your preferred deployment method:
+1. For new devices (not onboarded to Defender for Endpoint) supported under this method, follow the linked onboarding articles below using the updated onboarding package with your preferred deployment method:
 
    - [Onboard to Microsoft Defender for Endpoint](onboarding.md)
    - [Onboard client devices running Windows or macOS](onboard-client.md)
@@ -186,4 +191,4 @@ Before proceeding, confirm devices meet the [prerequisites](#prerequisites) and 
 
 1. Exclude devices from any existing onboarding policies that use the standard onboarding package.
 
-For migrating devices already onboarded to Defender for Endpoint, see [Migrating devices to the streamlined connectivity](migrate-devices-streamlined.md). You must reboot your device and follow specific guidance here.
+For migrating devices already onboarded to Defender for Endpoint, see [Migrating devices to the streamlined connectivity](migrate-devices-streamlined.md). You must reboot your device and follow the specific guidance in that migration article.

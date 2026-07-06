@@ -96,5 +96,5 @@ Each health alert provides specific details of the method, sensors, the problema
 
 
 ## See Also
-- [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md)
+- [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/deploy-sensor-v3.md)
 - [Configure event collection](deploy/configure-event-collection.md)

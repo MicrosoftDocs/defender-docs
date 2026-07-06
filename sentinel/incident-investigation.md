@@ -174,11 +174,11 @@ The activity log is constantly auto-refreshing, even while open, so you can see 
 
 In this document, you learned how the Microsoft Sentinel incident investigation experience in the Azure portal helps you [carry out an investigation in a single context](investigate-incidents.md). For more information about managing and investigating incidents, see the following articles:
 
-- [Investigate entities with entity pages in Microsoft Sentinel](entity-pages.md).
+- [Investigate entities with entity pages in Microsoft Sentinel](entity-pages.md)
 - [Use tasks to manage incidents in Microsoft Sentinel](incident-tasks.md)
-- [Automate incident handling in Microsoft Sentinel with automation rules](automate-incident-handling-with-automation-rules.md).
+- [Automate incident handling in Microsoft Sentinel with automation rules](automate-incident-handling-with-automation-rules.md)
 - [Identify advanced threats with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](identify-threats-with-entity-behavior-analytics.md)
-- [Hunt for security threats](./hunting.md).
+- [Hunt for security threats](./hunting.md)
 
 ## Next step
 

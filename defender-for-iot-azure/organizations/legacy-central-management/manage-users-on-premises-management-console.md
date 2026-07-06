@@ -1,17 +1,19 @@
 ---
 title: Create and manage users on an on-premises management console - Microsoft Defender for IoT
 description: Create and manage users on a Microsoft Defender for IoT on-premises management console.
-ms.date: 08/07/2023
+ms.date: 06/12/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Create and manage users on an on-premises management console (Legacy)
 
 [!INCLUDE [on-premises-management-deprecation](../includes/on-premises-management-deprecation.md)]
 
-Microsoft Defender for IoT provides tools for managing on-premises user access in the [OT network sensor](../manage-users-sensor.md), and the on-premises management console. Azure users are managed [at the Azure subscription level](../manage-users-overview.md) using Azure RBAC.
+Microsoft Defender for IoT provides tools for managing on-premises user access in the [OT network sensor](../manage-users-sensor.md), and the on-premises management console. Azure users are managed at the Azure subscription level using Azure RBAC. For more information, see [Manage users and user access](../manage-users-overview.md).
 
-This article describes how to manage on-premises users directly on an on-premises management console.
+This section describes how to manage on-premises users directly on an on-premises management console.
 
 ## Default privileged users
 
@@ -49,9 +51,12 @@ This procedure describes how to create new users for an on-premises management c
 
 1. Select **Save** when you're done.
 
-Your new user is added and is listed on the sensor **Users** page.
+Your new user is added and is listed on the on-premises management console **Users** page.
 
 **To edit a user**, select the **Edit** :::image type="icon" source="../media/manage-users-on-premises-management-console/icon-edit.png" border="false"::: button for the user you want to edit, and change any values as needed.
+
+> [!WARNING]
+> Deleting a user is irreversible and cannot be undone.
 
 **To delete a user**, select the **Delete**  :::image type="icon" source="../media/manage-users-on-premises-management-console/icon-delete.png" border="false"::: button for the user you want to delete.
 
@@ -220,7 +225,7 @@ Before you create access groups, we also recommend that you:
 
 If you later modify a topology entity and the change affects the rule logic, the rule is automatically deleted.
 
-If modifications to topology entities affect rule logic so that all rules are deleted, the access group remains but users won't be able to sign in to the on-premises management console. Instead, users are notified to contact their on-premises management console administrator for help with signing in. [Update the settings](#add-new-on-premises-management-console-users) for these users so that they're no longer part of the legacy access group.
+If modifications to topology entities affect rule logic so that all rules are deleted, the access group remains but users won't be able to sign in to the on-premises management console. Instead, users are notified to contact their on-premises management console administrator for help with signing in. [Edit each affected user](#add-new-on-premises-management-console-users) to update their **Remote Sites Access Group** assignment so that they're no longer part of the legacy access group.
 
 ## Control user session timeouts
 
@@ -228,11 +233,11 @@ By default, on-premises users are signed out of their sessions after 30 minutes 
 For more information, see [Work with Defender for IoT CLI commands](../references-work-with-defender-for-iot-cli-commands.md).
 
 > [!NOTE]
-> Any changes made to user session timeouts are reset to defaults when you [update the OT monitoring software](../update-ot-software.md).
+> Any changes made to user session timeouts are reset to defaults when you update the software. For more information, see [Update OT monitoring software](../update-ot-software.md).
 
 **Prerequisites**: This procedure is available for the *support* and *cyberx* users only.
 
-**To control sensor user session timeouts**:
+**To control on-premises management console user session timeouts**:
 
 1. Sign in to your sensor via a terminal and run:
 

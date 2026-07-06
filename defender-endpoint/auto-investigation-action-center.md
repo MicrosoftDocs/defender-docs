@@ -10,23 +10,29 @@ ms.collection:
 - m365-security
 - tier3
 - mde-edr
-ms.custom: admindeeplinkDEFENDER
+ms.custom: msecd-doc-authoring-1014
+  - admindeeplinkDEFENDER
+  - sfi-image-nochange
 ms.topic: how-to
 ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs
-ms.date: 03/26/2025
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
 
+ai-usage: ai-assisted
 ---
 # Visit the Action center to see remediation actions
+
+This article explains how to use the Action center in Microsoft Defender for Endpoint to review pending and completed remediation actions, approve actions when required, and understand action status.
 
 During and after an automated investigation, remediation actions for threat detections are identified. Depending on the particular threat and how [automated investigation and remediation capabilities are configured](configure-automated-investigations-remediation.md) for your organization, some remediation actions are taken automatically, and others require approval. If you're part of your organization's security operations team, you can view pending and completed [remediation actions](manage-auto-investigation.md#remediation-actions) in the **Action center**.
 
 
-## The unified Action center
+<a name="the-unified-action-center"></a>
+## Overview of the unified Action center
 
-Recently, the Action center was updated. You now have a unified Action center experience. To access your Action center, go to [https://security.microsoft.com/action-center](https://security.microsoft.com/action-center) and sign in.
+Recently, the Action center was updated. You now have a unified Action center experience. To access your Action center, go to the [Action center in the Microsoft Defender portal](https://security.microsoft.com/action-center) and sign in.
 
 :::image type="content" source="media/mde-action-center-unified.png" alt-text="The Action center page in the Microsoft Defender portal" lightbox="media/mde-action-center-unified.png":::
 
@@ -37,7 +43,7 @@ The following table compares the new, unified Action center to the previous Acti
 |The new, unified Action center  |The previous Action center  |
 |---------|---------|
 |Lists pending and completed actions for devices and email in one location <br/>([Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) plus [Microsoft Defender for Office 365](/defender-office-365/mdo-about)|Lists pending and completed actions for devices <br/> ([Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) only)   |
-|Is located at:<br/>[https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)         |Is located at:<br/>[https://securitycenter.windows.com/action-center](https://securitycenter.windows.com/action-center)     |
+|Is located at:<br/>[Microsoft Defender Action center](https://security.microsoft.com/action-center)         |Is located at:<br/>[Previous Action center portal](https://securitycenter.windows.com/action-center)     |
 | In the [Microsoft Defender portal](https://security.microsoft.com), choose **Action center**. <p>:::image type="content" source="media/action-center-nav-new.png" alt-text="The navigation pane to the Action Center in the Microsoft Defender portal" lightbox="media/action-center-nav-new.png"::: | In the Microsoft Defender portal, choose **Automated investigations** > **Action center**. <p>:::image type="content" source="media/action-center-nav-old.png" alt-text="An older version of the navigation pane to the Action Center in the Microsoft Defender portal" lightbox="media/action-center-nav-old.png":::  |
 
 The unified Action center brings together remediation actions across Defender for Endpoint and Defender for Office 365. It defines a common language for all remediation actions, and provides a unified investigation experience.
@@ -49,7 +55,8 @@ You can use the unified Action center if you have appropriate permissions and on
 - [Defender for Office 365](/defender-office-365/mdo-about)
 - [Defender for Business](/defender-business/mdb-overview)
 
-## Using the Action center
+<a name="using-the-action-center"></a>
+## Use the Action center
 
 To get to the unified Action center in the improved Microsoft Defender portal:
 
@@ -75,13 +82,12 @@ To get to the unified Action center in the improved Microsoft Defender portal:
    - Use filters to view just the items you want to see.
    - Select **Export** to export results to a .csv file.
 
-## Next steps
+<a name="next-steps"></a>
+<a name="see-also"></a>
+## Related content
 
 - [View and approve remediation actions](manage-auto-investigation.md)
 - [See the interactive guide: Investigate and remediate threats with Microsoft Defender for Endpoint](https://aka.ms/MDATP-IR-Interactive-Guide)
-
-## See also
-
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 
 
