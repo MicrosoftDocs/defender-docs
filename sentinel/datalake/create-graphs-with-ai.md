@@ -2,13 +2,16 @@
 title: AI-assisted custom graph authoring in Microsoft Sentinel (preview)
 titleSuffix: Microsoft Security  
 description: Use AI assistance in Visual Studio Code to create, modify, and query custom security graphs using Jupyter notebooks and GitHub Copilot.
+ms.author: edbaynash  
 author: EdB-MSFT  
+ms.reviewer: sourinpaul
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to
-ms.date: 03/23/2026
-ms.author: edbaynash  
+ms.date: 06/12/2026
 ms.collection: ms-security  
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #customer intent: As a security engineer, I want to use AI assistance to create and modify custom security graphs so that I can efficiently model and analyze complex security relationships.
 ---  
@@ -89,15 +92,19 @@ Once the graph is created, you can continue the conversation to refine it, for e
 
 ## Modify or debug an existing graph
 
-Ask Copilot to update or fix specific parts of your notebook. For example:
+Ask Copilot to update or fix specific parts of your notebook. For example, you can change filters, adjust columns, or troubleshoot build errors:
 
 ```text
 @sentinel Change the time range to the last 7 days
 ```
 
+The following prompt asks Copilot to modify a specific notebook cell by adding a field to the output:
+
 ```text
 @sentinel Update cell 3 to include the Subject column
 ```
+
+The following prompt asks Copilot to troubleshoot and repair a failure in the graph build stage:
 
 ```text
 @sentinel Fix the error in the graph build step
@@ -107,15 +114,19 @@ Only the affected cells are updated. Other cells remain unchanged.
 
 ## Understand graph code and queries
 
-Ask questions about the generated code without changing the notebook. For example:
+Ask questions about the generated code without changing the notebook. For example, the following prompt asks Copilot to explain the purpose of a specific graph API helper method:
 
 ```text
 @sentinel What does show_schema() do?
 ```
 
+The following prompt asks Copilot to clarify how edge keys are modeled in Sentinel graph schemas:
+
 ```text
 @sentinel Explain how edge keys are defined
 ```
+
+The following prompt asks Copilot to explain the logic of a graph query step by step:
 
 ```text
 @sentinel How does this graph query work?
@@ -123,17 +134,19 @@ Ask questions about the generated code without changing the notebook. For exampl
 
 ## Look up graph APIs and examples
 
-If you want help with Sentinel graph APIs, method parameters, or example queries, you can ask Copilot for explanations. For more accurate, Sentinel-specific answers, include the `#Sentinel` reference helper in your prompt. For example:
+If you want help with Sentinel graph APIs, method parameters, or example queries, you can ask Copilot for explanations. For more accurate, Sentinel-specific answers, include the `#Sentinel` reference helper in your prompt. For example, the following prompt asks Copilot for reference-style information about the `build_graph_with_data()` method signature:
 
 ```text
 What parameters does build_graph_with_data() accept? #sentinel
 ```
 
+The following example asks Copilot to generate a graph traversal query between two entity types:
+
 ```text
 Write a graph query to find all paths between User and IPAddress #sentinel
 ```
 
-This helper provides Copilot with authoritative Sentinel graph API documentation. It doesn't modify your notebook.
+This helper provides Copilot with authoritative Sentinel graph API documentation. The `#sentinel` reference helper doesn't modify your notebook.
 
 ## Choose how to interact with Copilot
 
@@ -148,6 +161,8 @@ Use the following table to choose the best way to interact with Copilot based on
 
 ## Key concepts
 
+The following concepts are important to understand when using AI-assisted graph authoring.
+
 ### Workspace and table availability
 
 AI assistance uses the tables visible in your Sentinel data lake. Only tables you have access to are used in generated code.
@@ -160,7 +175,9 @@ AI assistance uses the tables visible in your Sentinel data lake. Only tables yo
 When modifying a notebook, only the cells that need to change are updated. You can undo changes using standard editor undo commands.
 
 ## Troubleshooting
- 
+
+The following table lists common issues and how to resolve them.
+
 | Issue | Resolution |
 |---|---|
 | No notebook is open | Open or create a `.ipynb` file before starting graph authoring. |

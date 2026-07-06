@@ -1,10 +1,11 @@
 ---
 title: Microsoft Sentinel graph provider reference
 description: Reference documentation for the Microsoft Sentinel Graph Builder API for building and querying security graphs.
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: sourinpaul
 ms.topic: reference
-ms.date: 03/23/2026
+ms.date: 06/18/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 
@@ -829,7 +830,7 @@ NodeBuilderInitial(alias: str, graph_builder: GraphSpecBuilder)
 ##### `from_table`
 
 ```python
-def from_table(table_name: str, database: Optional[str] = None) -> NodeBuilderSourceSet
+def from_table(self, table_name: str, database: Optional[str] = None, time_generated_start: Optional[str] = None, time_generated_end: Optional[str] = None) -> NodeBuilderSourceSet
 ```
 
 Set table as data source with intelligent database resolution.
@@ -837,6 +838,7 @@ Set table as data source with intelligent database resolution.
 **Parameters:**
 - `table_name` (str): Name of the table (required)
 - `database` (str, optional): Explicit database name (takes precedence over context default)
+- `time_generated_start` (str, optional) & `time_generated_end` (str, optional): Optional timestamp fields, when used together activates Optimized Delta Reading. We recommend using the the canonical form: "yyyy-MM-dd HH:mm:ss".
 
 **Returns:**
 - `NodeBuilderSourceSet`: Builder for further configuration
@@ -851,7 +853,10 @@ Set table as data source with intelligent database resolution.
 
 **Example:**
 ```python
-builder.add_node("user").from_table("SigninLogs", database="security_db")
+end = datetime.now(timezone.utc)
+start = end - timedelta(hours=24)
+
+builder.add_node("user").from_table("SigninLogs", database="security_db", time_generated_start = start, time_generated_end = end)
 ```
 
 ##### `from_dataframe`
@@ -870,7 +875,15 @@ Set Spark DataFrame as data source.
 
 **Example:**
 ```python
-df = spark.read.table("users")
+# For Standard Read
+df = spark.read.table("users", WORKSPACE_NAME)
+
+# Optional Optimized Read - You could use the below pattern to activate Optimized Delta Reading
+end = datetime.now(timezone.utc)
+start = end - timedelta(hours=24)
+
+df = spark.read.table("users", WORKSPACE_NAME, time_generated_start = start, time_generated_end = end )
+
 builder.add_node("user").from_dataframe(df)
 ```
 

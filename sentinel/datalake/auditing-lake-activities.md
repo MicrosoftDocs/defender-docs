@@ -1,18 +1,23 @@
 ---
 title: Audit log for Microsoft Sentinel data lake and graph in Microsoft Purview portal
-description: Learn how to use the audit log to search for Microsoft Sentinel data lake activities to help with investigation.
+description: Learn how to use the audit log to search for Microsoft Sentinel data lake and graph activities to help with investigation.
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.author: edbaynash
 author: EdB-MSFT
+ms.reviewer: amyhari
 ms.topic: how-to
-ms.date: 09/29/2025
+ms.date: 06/12/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #customer intent: As a SOC analyst, I want to learn how to use the audit log to search for Microsoft Sentinel data lake activities to help with investigation.
 
 ---
 
 # Audit log for Microsoft Sentinel data lake and graph in Microsoft Purview portal
+
+This article explains how to access, search, and interpret audit logs for Microsoft Sentinel data lake and graph activities in the Microsoft Purview portal.
 
 The audit log helps you investigate specific activities across Microsoft services. Microsoft Sentinel data lake and graph activities are audited and can be searched in the audit log. The audit log provides a record of activities that are performed by users and administrators in Microsoft Sentinel data lake and graph, such as:
 + Accessing data in lake via KQL queries
@@ -22,7 +27,7 @@ The audit log helps you investigate specific activities across Microsoft service
 + Create and run MCP tools
 
 
-Auditing is automatically turned on for Microsoft Sentinel data lake and graph. Features that are audited are logged in the audit log automatically.
+Auditing is automatically turned on for Microsoft Sentinel data lake and graph. All Microsoft Sentinel data lake and graph activities are logged in the audit log automatically.
 
 ## Prerequisites
 Microsoft Sentinel data lake and graph uses the [Microsoft Purview auditing solution](/purview/audit-solutions-overview). Before you can look at the audit data, you need to turn on auditing in the Microsoft Purview portal. For more information, see [Turn auditing on or off](/purview/audit-log-enable-disable). 
@@ -38,7 +43,7 @@ To access the audit log, you need to have the **View-Only Audit Logs** or **Audi
 
 ## Microsoft Sentinel data lake and graph activities
 
-For a list of all events that are logged for user and admin activities in Microsoft Sentinel data lake, see the following articles:
+The following linked articles list the audited events for Microsoft Sentinel data lake and graph activities:
 
 + [Microsoft Sentinel data lake onboarding activities](/purview/audit-log-activities#microsoft-sentinel-data-lake-onboarding-activities)
 + [Microsoft Sentinel data lake notebook activities](/purview/audit-log-activities#microsoft-sentinel-data-lake-notebook-activities)
@@ -72,7 +77,7 @@ Audit log record retention is based on Microsoft Purview retention policies. For
 
 ## Search for events using a PowerShell script
 
-You can use the following PowerShell code snippet to query the Office 365 Management API to retrieve information about Microsoft Defender XDR events:
+You can use the following PowerShell code snippet to query the Office 365 Management API to retrieve information about Microsoft Sentinel data lake and graph audit events. This script opens a remote Exchange Online session, imports the session cmdlets, and then runs `Search-UnifiedAuditLog` to search for audit log entries within a specified date range and record type.
 
 ```PowerShell
 $cred = Get-Credential
@@ -82,7 +87,7 @@ Search-UnifiedAuditLog -StartDate 2023/03/12 -EndDate 2023/03/20 -RecordType <ID
 ```
 
 >[!NOTE]
-> See the API column in Audit activities included for the record type values.
+> See the API column in [Audit activities](/purview/audit-log-activities) for the record type values.
 
 For more information, see [Use a PowerShell script to search the audit log](/purview/audit-log-search-script)
 

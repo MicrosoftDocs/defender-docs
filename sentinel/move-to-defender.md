@@ -1,8 +1,9 @@
 ---
 title: Transition Your Microsoft Sentinel Environment to the Defender Portal
 description: Move Microsoft Sentinel operations from the Azure portal to the Microsoft Defender portal.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: soulisabag
 ms.topic: how-to #Required; leave this attribute/value as-is
 ms.date: 03/17/2026
 ms.collection: usx-security
@@ -103,14 +104,16 @@ For more information, see:
 
 ### Confirm and configure data collection
 
-When Microsoft Sentinel is integrated with Microsoft Defender, the fundamental architecture of data collection and telemetry flow remains intact. Existing connectors that were configured in Microsoft Sentinel, whether for Microsoft Defender products or other data sources, continue operating without interruption.
+When Microsoft Sentinel is integrated with Microsoft Defender, the fundamental architecture of data collection and telemetry flow remains intact. Existing non-Microsoft data connectors continue operating without interruption. However, alert ingestion for Microsoft security products changes after onboarding to the Defender portal with Microsoft Defender XDR. Alerts from Microsoft security products are routed through the Microsoft Defender XDR connector instead of standalone Microsoft security product alert connectors.
 
-From a Log Analytics perspective, Microsoft Sentinel’s integration into Microsoft Defender introduces no change to the underlying ingestion pipeline or data schema. Despite the front-end unification, the Microsoft Sentinel backend remains fully integrated with Log Analytics for data storage, search, and correlation.
+In multi-workspace environments, the Microsoft Defender XDR connector is connected to the primary workspace only. To prevent duplicate tenant-based alerts across workspaces, standalone data connectors for Microsoft Defender for Office 365, Microsoft Entra ID Protection, Microsoft Defender for Cloud Apps, Microsoft Defender for Endpoint, and Microsoft Defender for Identity are automatically disconnected in secondary workspaces during onboarding. As a result, tenant-based alerts from these Microsoft security products are available only in the primary workspace.
+
+From a Log Analytics perspective, Microsoft Sentinel’s integration into Microsoft Defender doesn't change how Microsoft Sentinel stores log data in Log Analytics. Despite the front-end unification, the Microsoft Sentinel backend remains fully integrated with Log Analytics for data storage, search, and correlation.
 
 Alerts related to Defender products are streamed directly from the [Microsoft Defender XDR connector](/azure/sentinel/connect-microsoft-365-defender) to ensure consistency. Make sure that you have incidents and alerts from this connector turned on in your workspace. Once you have this data connector configured in your workspace, [offboarding the workspace from Microsoft Defender](/unified-secops/microsoft-sentinel-onboard#offboard-microsoft-sentinel) also disconnects the Microsoft Defender XDR connector.
 
 > [!NOTE]
-> This change in connectors results in schema differences for some alerts. For a detailed comparison, see [Alert schema differences: Standalone vs. XDR connector](security-alert-schema-differences.md).
+> This change in connectors results in schema differences for some alerts. For a detailed comparison, see [Alert schema differences: Standalone vs. Microsoft Defender XDR connector](security-alert-schema-differences.md).
 
 For more information, see [Connect data from Microsoft Defender XDR to Microsoft Sentinel](connect-microsoft-365-defender.md).
 
@@ -170,7 +173,7 @@ The following limitations apply to Microsoft Sentinel automation rules and playb
 
 ### Configure APIs
 
-The unified experience in the Defender portal introduces notable changes to incidents and alerts from APIs. It supports API calls based on the [Microsoft Graph REST API v1.0](/graph/api/resources/security-api-overview?view=graph-rest-1.0), which can be used for automation related to alerts, incidents, advanced hunting, and more.
+The unified experience in the Defender portal introduces notable changes to incidents and alerts from APIs. It supports API calls based on the [Microsoft Graph REST API v1.0](/graph/api/resources/security-api-overview?view=graph-rest-1.0&preserve-view=true), which can be used for automation related to alerts, incidents, advanced hunting, and more.
 
 The [Microsoft Sentinel API](/rest/api/securityinsights/api-versions) continues to support actions against Microsoft Sentinel resources, like analytics rules, automation rules and more.   For interacting with unified incidents and alerts, we recommend that you use the Microsoft Graph REST API.
 If you're using the Microsoft Sentinel `SecurityInsights` API to interact with Microsoft Sentinel incidents, you may need to update your automation conditions and trigger criteria due to changes in the response body.
@@ -303,4 +306,4 @@ The Microsoft Sentinel [similar incidents](investigate-cases.md#similar-incident
 - [The Best of Microsoft Sentinel - now in Microsoft Defender](https://techcommunity.microsoft.com/blog/MicrosoftThreatProtectionBlog/the-best-of-microsoft-sentinel-%E2%80%94-now-in-microsoft-defender/4415822) (blog)
 - Watch the webinar: [Transition to the Unified SOC Platform: Deep Dive and Interactive Q&A for SOC Professionals](https://www.youtube.com/watch?v=WIM6fbJDkK4).
 - See frequently asked questions in the [TechCommunity blog](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/unified-security-operations-platform---technical-faq/4189136) or the [Microsoft Community Hub](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/frequently-asked-questions-about-the-unified-security-operations-platform/4212048).
-- Review [alert schema differences between Standalone and XDR connectors](security-alert-schema-differences.md)
+- Review [alert schema differences between standalone and Microsoft Defender XDR connectors](security-alert-schema-differences.md)

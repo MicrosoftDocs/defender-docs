@@ -2,19 +2,22 @@
 title: KQL jobs, summary rules, and search jobs
 titleSuffix: Microsoft Security  
 description: A comparison of KQL jobs, summary rules, and search jobs in Microsoft Sentinel to choose the best tool for querying and analyzing security data.
+ms.author: edbaynash  
 author: EdB-MSFT  
+ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to
-ms.date: 03/29/2026
-ms.author: edbaynash  
+ms.date: 06/12/2026
 ms.collection: ms-security  
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 # Customer intent: As a security analyst, I need to choose the right tool for querying and analyzing data in Microsoft Sentinel.
 
 ---
 
-# KQL jobs, summary rules, and search jobs
+# Compare KQL jobs, summary rules, and search jobs in Microsoft Sentinel
 
 This article compares KQL jobs, summary rules, and search jobs in Microsoft Sentinel. These features let you query and analyze data in Microsoft Sentinel, and each serves different purposes and use cases.
 
@@ -29,7 +32,7 @@ This article compares KQL jobs, summary rules, and search jobs in Microsoft Sent
 
 ## Usage scenarios and feature choice
 
-The following section helps you decide which feature is best for your needs.
+Use the guidance below to decide which feature best fits your needs.
 
 If you have any of the following requirements, use KQL jobs:
 
@@ -50,6 +53,8 @@ If you have any of the following requirements, use search jobs:
 
 ## Feature comparison
 
+The following table compares KQL jobs, summary rules, and search jobs across scope, limits, and pricing.
+
 | Feature | KQL Jobs | Summary Rules | Search jobs |
 |---|---|---|---|
 | **Source data tier** | Microsoft Sentinel data lake tier | Analytics, auxiliary, basic, data lake (except for tables in System tables) | Analytics, data lake (except for tables in System tables). For non-data-lake workspaces: Auxiliary, Basic, Archived tier |
@@ -68,6 +73,8 @@ If you have any of the following requirements, use search jobs:
 
 
 ## Related articles
+
+For more information about the features discussed in this article, see the following resources:
 
 - [KQL and the Microsoft Sentinel data lake](kql-overview.md)
 - [Jupyter notebooks and the Microsoft Sentinel data lake](notebooks-overview.md)

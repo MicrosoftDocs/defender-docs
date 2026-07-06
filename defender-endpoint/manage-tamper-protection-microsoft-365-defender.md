@@ -4,13 +4,14 @@ ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov, oogunrinde
 description: Turn tamper protection on or off for your tenant using the Microsoft Defender portal.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 10/20/2025
+ms.date: 06/16/2026
 ms.topic: how-to
 author: limwainstein
 ms.author: lwainstein
-ms.custom: 
-- nextgen
-- admindeeplinkDEFENDER
+ms.custom: msecd-doc-authoring-1014
+  - nextgen
+  - admindeeplinkDEFENDER
+  - sfi-ga-nochange
 ms.subservice: ngp
 ms.collection: 
 - m365-security
@@ -22,19 +23,22 @@ appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
 ---
 # Manage tamper protection for your organization using Microsoft Defender portal
 
 
 
-[Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps protect certain [security settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on), such as virus and threat protection, from being disabled or changed. If you're part of your organization's security team, you can turn tamper protection on (or off) tenant wide by using the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)).
+[Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps protect certain [security settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on), such as virus and threat protection, from being disabled or changed. If you're part of your organization's security team, you can turn tamper protection on (or off) tenant wide by using the [Microsoft Defender portal](https://security.microsoft.com).
 
 > [!IMPORTANT]
-> If tamper protection is [deployed and managed through Intune](manage-tamper-protection-intune.md), turning tamper protection on or off in the Microsoft Defender portal doesn't impact the state of tamper protection. It restricts tamper-protected settings to their secure default values. For more information, see [What happens when tamper protection is turned on](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on)?
+> If tamper protection is [deployed and managed through Intune](manage-tamper-protection-intune.md), turning tamper protection on or off in the Microsoft Defender portal doesn't impact the state of tamper protection. Instead, the Microsoft Defender portal restricts tamper-protected settings to their secure default values. For more information, see [What happens when tamper protection is turned on](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on)?
 
 <a name='requirements-for-managing-tamper-protection-in-the-microsoft-365-defender-portal'></a>
 
 ## Prerequisites
+
+Before you manage tamper protection in the Microsoft Defender portal, ensure the following prerequisites are met:
 
 - You must have appropriate permissions assigned through roles, such as Security Administrator. See [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
@@ -51,15 +55,19 @@ appliesto:
 
 ### Supported operating systems
 
+Managing tamper protection in the Microsoft Defender portal is supported on the following operating systems:
+
 - Windows
 
 <a name='turn-tamper-protection-on-or-off-in-the-microsoft-365-defender-portal'></a>
 
 ## Turn tamper protection on (or off) in the Microsoft Defender portal
 
+Use the following steps to turn tamper protection on or off in the Microsoft Defender portal.
+
 :::image type="content" source="/defender/media/mde-turn-tamperprotectionon.png" alt-text="Turn tamper protection turned on in the Microsoft Defender portal" lightbox="/defender/media/mde-turn-tamperprotectionon.png":::
 
-1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
 1. Choose **Settings** \> **Endpoints**.
 

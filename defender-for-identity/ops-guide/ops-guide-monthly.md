@@ -12,20 +12,21 @@ This article reviews the Microsoft Defender for Identity activities we recommend
 
 ## Review tuned alerts and adjust tuning if needed
 
-**Where**: In Microsoft Defender XDR, select **Hunting > Advanced hunting**
+**Where**: In Microsoft Defender, select **Hunting > Advanced hunting**
 
 **Persona**: Security and compliance administrators, SOC analysts
 
-Microsoft Defender XDR allows you to *tune* alerts, helping you reduce the number of alerts you need to triage. Tuning alerts resolves alerts automatically based on your configurations and rule conditions.
+Microsoft Defender allows you to *tune* alerts, helping you reduce the number of alerts you need to triage. Tuning alerts resolves alerts automatically based on your configurations and rule conditions.
 
 We recommend reviewing your tuning configurations regularly to make sure that they're still relevant and effective. For example:
 
 - Check to see if your existing rules have matches as expected
 - If a rule has no matches, consider whether you still need it or if you can remove it
 
-For more information, see [Investigate Defender for Identity security alerts in Microsoft Defender XDR](../manage-security-alerts.md).
+For more information, see [Investigate Defender for Identity security alerts in Microsoft Defender](../manage-security-alerts.md).
 
-## Track new changes in Microsoft Defender XDR and Defender for Identity
+<a name="track-new-changes-in-microsoft-defender-xdr-and-defender-for-identity"></a>
+## Track new changes in Microsoft Defender and Defender for Identity
 
 **Where**:
 
@@ -41,7 +42,7 @@ For more information, see [Investigate Defender for Identity security alerts in 
 
 For more information, see:
 
-- [Microsoft Defender XDR Security operations overview](/security/operations/overview)
+- [Microsoft Defender Security operations overview](/security/operations/overview)
 - [Microsoft Defender for Identity operational guide](ops-guide.md)
 - [Daily operational guide - Microsoft Defender for Identity](ops-guide-daily.md)
 - [Weekly operational guide - Microsoft Defender for Identity](ops-guide-weekly.md)

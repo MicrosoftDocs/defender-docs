@@ -1,8 +1,9 @@
 ---
 title: Investigate incidents with Microsoft Sentinel (legacy)| Microsoft Docs
 description: In this article, learn how to use the legacy incident investigation experience in Microsoft Sentinel to create advanced alert rules that generate incidents you can assign and investigate.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: idpelleg
 ms.topic: how-to
 ms.date: 11/26/2024
 appliesto:

@@ -11,6 +11,7 @@ ms.collection:
   - tier1
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
 description: Learn about threat investigation and response capabilities in Microsoft Defender for Office 365 Plan.
 ms.service: defender-office-365
 appliesto:
@@ -51,7 +52,7 @@ To view and use this report in the Microsoft Defender portal at <https://securit
 
 This feature is only available if you have an active Office 365 E5 or G5 or Microsoft 365 E5 or G5 subscription or the Threat Intelligence add-on. For more information, see the Office 365 Enterprise E5 product page.
 
-Data from Microsoft Defender for Office 365 is incorporated into Microsoft Defender XDR to conduct a comprehensive security investigation across Office 365 mailboxes and Windows devices.
+Data from Microsoft Defender for Office 365 is incorporated into Microsoft Defender to conduct a comprehensive security investigation in Office 365 mailboxes and Windows devices.
 
 ### Incidents
 

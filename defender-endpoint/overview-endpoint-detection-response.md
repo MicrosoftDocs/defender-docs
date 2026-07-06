@@ -41,6 +41,10 @@ Inspired by the "assume breach" mindset, Defender for Endpoint continuously coll
 
 The response capabilities give you the power to promptly remediate threats by acting on the affected entities.
 
+## Automatic attack disruption
+
+Defender for Endpoint signals contribute to [automatic attack disruption](/defender-xdr/automatic-attack-disruption) in Microsoft Defender XDR. Attack disruption uses signal correlation and AI to automatically contain active attacks in progress—such as ransomware, business email compromise, and adversary-in-the-middle attacks—limiting lateral movement and reducing overall impact. Automatic attack disruption works with other Defender XDR sources to contain compromised assets, including automatically disabling compromised user accounts and isolating affected devices.
+
 ## See also
 
 - [Incidents queue](view-incidents-queue.md)

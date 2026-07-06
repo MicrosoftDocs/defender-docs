@@ -1,10 +1,13 @@
 ---
-title: Use Azure Functions to connect Microsoft Sentinel to your data source | Microsoft Docs
+title: Use Azure Functions to connect Microsoft Sentinel to your data source
 description: Learn how to configure data connectors that use Azure Functions to get data from data sources into Microsoft Sentinel.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: ofshezaf
 ms.topic: how-to
-ms.date: 06/05/2023
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security engineer, I want to use Azure Functions to connect Microsoft Sentinel to my data sources so that I can automate the ingestion of logs and enhance threat detection capabilities.
 
@@ -42,13 +45,13 @@ Make sure that you have the following permissions and credentials before using A
 ## Configure and connect your data source
 
 > [!NOTE]
-> - You can securely store workspace and API authorization keys or tokens in Azure Key Vault. Azure Key Vault provides a secure mechanism to store and retrieve key values. [Follow these instructions](/azure/app-service/app-service-key-vault-references) to use Azure Key Vault with an Azure Function App.
+> - You can securely store workspace and API authorization keys or tokens in Azure Key Vault. Azure Key Vault provides a secure mechanism to store and retrieve key values. For more information, see [Use Key Vault references for Azure App Service and Azure Functions](/azure/app-service/app-service-key-vault-references).
 >
 > - Some data connectors depend on a parser based on a [Kusto Function](/kusto/query/functions/user-defined-functions?view=microsoft-sentinel&preserve-view=true) to work as expected. See the section for your service in the [Microsoft Sentinel data connectors reference](data-connectors-reference.md) page for links to instructions to create the Kusto function and alias.
 
 ### Azure Functions runtime configuration
 > [!NOTE]
-> Microsoft Sentinel connectors that use Azure Functions include precompiled Python dependencies. The Azure Function App runtime, including the Python version, is preconfigured in the solution ARM template and should not be modified.
+> Microsoft Sentinel connectors that use Azure Functions include precompiled Python dependencies. The Azure Function App runtime, including the Python version, is preconfigured in the solution Azure Resource Manager (ARM) template and should not be modified.
 
 ### Step 1: Get your source system's API credentials
 
@@ -56,12 +59,12 @@ Follow your source system's instructions to get its **API credentials / authoriz
 
 You can find details on the exact credentials you'll need, and links to your product's instructions for finding or creating them, on the data connector page in the portal and in the section for your service in the [Microsoft Sentinel data connectors reference](data-connectors-reference.md) page.
 
-You may also need to configure logging or other settings on your source system. You'll find the relevant instructions together with those in the preceding paragraph.
+You may also need to configure logging or other settings on your source system. You'll find the relevant instructions on the data connector page in the portal and in the section for your service in the [Microsoft Sentinel data connectors reference](data-connectors-reference.md) page.
 ### Step 2: Deploy the connector and the associated Azure Function App
 
 #### Choose a deployment option
 
-# [Azure Resource Manager (ARM) template](#tab/ARM)
+## [Azure Resource Manager (ARM) template](#tab/ARM)
 
 This method provides an automated deployment of your Azure Function-based connector using an ARM template.
 
@@ -74,7 +77,7 @@ This method provides an automated deployment of your Azure Function-based connec
 1. The **Custom deployment** screen will appear.
     - Select a **subscription**, **resource group**, and **region** in which to deploy your Function App.
 
-    - Enter your API credentials / authorization keys / tokens that you saved in [Step 1](#step-1-get-your-source-systems-api-credentials) above.
+    - Enter your API credentials / authorization keys / tokens that you saved in [Step 1](#step-1-get-your-source-systems-api-credentials).
 
     - Enter your Microsoft Sentinel **Workspace ID** and **Workspace Key** (primary key) that you copied and put aside.
 
@@ -85,7 +88,7 @@ This method provides an automated deployment of your Azure Function-based connec
 
     - Select **Review + create**. When the validation completes, select **Create**.
 
-# [Manual deployment with PowerShell](#tab/MPS)
+### [Manual deployment with PowerShell](#tab/MPS)
 
 Use the following step-by-step instructions to manually deploy Azure Functions-based connectors that use PowerShell functions.
 
@@ -135,13 +138,13 @@ Use the following step-by-step instructions to manually deploy Azure Functions-b
 
     1. In the **Application settings** tab, select **+ New application setting**.
 
-    1. Add the prescribed application settings for your product individually, with their respective case-sensitive string values. See the data connector page or your product's section of the section for your service in the [Microsoft Sentinel data connectors reference](data-connectors-reference.md) page.
+    1. Add the prescribed application settings for your product individually, with their respective case-sensitive string values. See the data connector page or the section for your service in the [Microsoft Sentinel data connectors reference](data-connectors-reference.md) page.
 
         > [!TIP]
         > If applicable, use the *logAnalyticsUri* application setting to override the log analytics API endpoint if you're using a dedicated cloud. So, for example, if you're using the public cloud, leave the value empty; for Azure GovUS cloud environment, specify the value in the following format: `https://<CustomerId>.ods.opinsights.azure.us`.
         >
 
-# [Manual deployment with Python](#tab/MPY)
+### [Manual deployment with Python](#tab/MPY)
 
 Use the following step-by-step instructions to manually deploy Azure Functions-based connectors that use Python functions. This kind of deployment requires Visual Studio Code.
 
@@ -192,7 +195,7 @@ Use the following step-by-step instructions to manually deploy Azure Functions-b
 
 After a successful connection is established, the data appears in **Logs** under *CustomLogs*, in the tables listed in the section for your service in the [Microsoft Sentinel data connectors reference](data-connectors-reference.md) page.
 
-To query data, enter one of those table names - or the relevant Kusto function alias - in the query window.
+To query data, enter one of the table names listed for your service in the [Microsoft Sentinel data connectors reference](data-connectors-reference.md) page - or the relevant Kusto function alias - in the query window.
 
 See the **Next steps** tab in the connector page for some useful sample queries.
 

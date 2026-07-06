@@ -7,8 +7,8 @@ ms.topic: how-to
 author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
-ms.custom: nextgen
-ms.date: 07/25/2024
+ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 06/16/2026
 ms.subservice: ngp
 ms.collection: 
 - m365-security
@@ -20,6 +20,7 @@ appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender for Individuals
   - Microsoft Defender Antivirus
+ai-usage: ai-assisted
 ---
 
 # Configure and run on-demand Microsoft Defender Antivirus scans
@@ -33,7 +34,9 @@ Combined with always-on, real-time protection, which reviews files when they are
 
 ## Use Microsoft Defender portal to run a scan
 
-1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com/)) and sign-in.
+To run a scan from the Microsoft Defender portal, perform the following steps:
+
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com/) and sign-in.
 1. Go to the **device page** that you would like to run a remote scan.
 1. Click on the ellipses **(...)**.
 1. Click on **Run Antivirus Scan**.
@@ -50,13 +53,15 @@ To check on the status:
 1. Select one of the **radio button**.
 1. Under **Action Status**, you'll see the status such as **Completed**.
 
-To check on the detections, see [Review the results of Microsoft Defender Antivirus scans | Microsoft Learn](review-scan-results-microsoft-defender-antivirus.md)
+To check on the detections, see [Review the results of Microsoft Defender Antivirus scans](review-scan-results-microsoft-defender-antivirus.md)
 
 ## Use Microsoft Intune to run a scan
 
 ### Use endpoint security to run a scan on Windows devices
 
-1. Go to the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)) and sign-in.
+Use the following steps to run a scan from Endpoint security in Intune:
+
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com) and sign-in.
 
 1. Choose **Endpoint security** \> **Antivirus**.
 
@@ -64,14 +69,16 @@ To check on the detections, see [Review the results of Microsoft Defender Antivi
 
 1. From the list of actions provided, select **Quick Scan** (recommended) or **Full Scan**.
 
-   [![Scan options on the Windows 10 unhealthy endpoints tab.](media/mem-antivirus-scan-on-demand.png)](media/mem-antivirus-scan-on-demand.png#lightbox)
+   [![Screenshot of the Windows 10 unhealthy endpoints tab showing available scan options in Microsoft Intune.](media/mem-antivirus-scan-on-demand.png)](media/mem-antivirus-scan-on-demand.png#lightbox)
 
 > [!TIP]
 > For more information about using Microsoft Configuration Manager to run a scan, see [Antimalware and firewall tasks: How to perform an on-demand scan](/intune/configmgr/protect/deploy-use/endpoint-antimalware-firewall#how-to-perform-an-on-demand-scan-of-computers).
 
 ### Use devices to run a scan on a single device
 
-1. Go to the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)) and sign-in.
+To run a scan on a single device, complete the following steps:
+
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com) and sign-in.
 
 1. From the sidebar, select **Devices** \> **All Devices** and choose the device you want to scan.
 
@@ -116,19 +123,16 @@ For more information on how to use PowerShell with Microsoft Defender Antivirus,
 
 ## Use the MpCmdRun command-line tool to run a quick scan
 
-1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
-   1. Open the **Start** menu, and then type **cmd**.
-   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
-2. In the elevated Command Prompt, run the following commands:
+To run a quick scan from the command-line utility, first switch to the current Defender platform folder and then invoke `MpCmdRun.exe`. In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
 
-   > [!TIP]
-   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
+> [!TIP]
+> The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, the command changes to `%ProgramFiles%\Windows Defender`.
 
-   ```dos
-   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+```dos
+(set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
-   MpCmdRun.exe -Scan -ScanType 1
-   ```
+MpCmdRun.exe -Scan -ScanType 1
+```
 
 For more information about MpCmdRun and the different `-ScanType` values, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
 

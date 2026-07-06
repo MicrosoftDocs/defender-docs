@@ -1,13 +1,16 @@
 ---
 title: Triage tool collection in Microsoft Sentinel MCP server
 titleSuffix: Microsoft Security  
-description: Learn about the different tools available in the triage collection
-author: poliveria
-ms.topic: how-to
-ms.date: 04/30/2026
+description: Explore the Microsoft Sentinel MCP triage tools for incident triage and hunting, including tools to fetch incidents, alerts, entities, and run hunting queries.
 ms.author: pauloliveria
+author: poliveria
+ms.reviewer: macasgra
+ms.topic: how-to
+ms.date: 06/12/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #customer intent: As a security analyst, I want to know the different tools available to triage incidents and hunt for threats 
 ---
@@ -30,15 +33,17 @@ To access the triage tool collection, you must have the following prerequisites:
 
 ## Add the triage collection
 
-To add the data exploration collection, you must first set up add Microsoft Sentinel's unified MCP server interface. Follow the step-by-step instructions for compatible AI-powered code editors and agent-building platforms listed in the **Prerequisites** section.
+To add the triage collection, first set up Microsoft Sentinel's unified MCP server interface. Follow the instructions for compatible platforms listed in the **Prerequisites** section.
 
-The triage collection is hosted at the following URL:
+Use the following endpoint URL to connect your code editor or agent platform to the triage collection:
 
-```
+```text
 https://sentinel.microsoft.com/mcp/triage
 ```
 
 ## Tools in the triage collection
+
+The following tools are available in the triage collection.
 
 ### List security incidents (`ListIncidents`)
 
@@ -306,6 +311,8 @@ The following sample prompts demonstrate what you can do with the triage collect
 - Run a hunting query to check which users interacted with <entity\> 
 
 ## Limitations
+
+The triage collection has the following limitations:
 
 - You can't use this collection as a guest in another tenant or with delegated access. You can only use the MCP server on your own home tenant.
 - Microsoft Sentinel users can't choose which workspace to use.

@@ -3,7 +3,6 @@ title: Set up the Azure Storage connector to stream logs to Microsoft Sentinel
 description: Learn how to set up the Azure Storage Blob connector to ingest logs from Azure Storage into Microsoft Sentinel using the Codeless Connector Framework.
 author: EdB-MSFT
 ms.author: edbaynash
-ms.reviewer: edbaynash
 ms.date: 02/08/2026
 ms.topic: how-to
 ms.service: microsoft-sentinel
@@ -46,7 +45,7 @@ The connector authenticates to the Storage Account by using a service principal 
 ## Create an Azure Storage Blob connector
 
 1. Review and adapt the example ARM template in the [Azure Storage Blob connectors API reference](data-connection-rules-reference-azure-storage.md#build-the-azure-storage-blob-ccf-data-connector). Set the container name, queue name (if not auto-created), blob prefix/suffix filters, and destination table mapping.
-2. Deploy the template by following [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md#data-connection-rules). Ensure the deployment scope matches the storage account and Microsoft Sentinel workspace.
+2. Deploy the template by following [Create a codeless connector for Microsoft Sentinel](isv/create-codeless-connector.md#data-connection-rules). Ensure the deployment scope matches the storage account and Microsoft Sentinel workspace.
 3. After deployment, confirm the connector instance is created in Microsoft Sentinel and that the Event Grid subscription status is **Healthy**.
 
 ## Validate the connector
@@ -62,6 +61,6 @@ For troubleshooting steps, see [Troubleshoot Azure Storage Blob connector issues
 ## Related content
 
 - [Azure Storage Blob connectors API reference](data-connection-rules-reference-azure-storage.md)
-- [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md)
+- [Create a codeless connector for Microsoft Sentinel](isv/create-codeless-connector.md)
 - [Enable network security on connector integrated storage resources](enable-storage-network-security.md)
 - [Troubleshoot Azure Storage Blob connector issues](azure-storage-blob-connector-troubleshoot.md)

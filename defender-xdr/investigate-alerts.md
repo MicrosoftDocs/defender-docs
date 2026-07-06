@@ -9,9 +9,11 @@ ms.collection:
 - m365-security
 - m365initiative-m365-defender
 - tier1
-ms.custom: admindeeplinkDEFENDER
+ms.custom:
+  - admindeeplinkDEFENDER
+  - sfi-ga-nochange
 ms.topic: how-to
-ms.date: 01/23/2026
+ms.date: 06/14/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -81,25 +83,21 @@ To search for specific alerts, enter the search term in the search bar. You can 
 
 :::image type="content" source="media/investigate-alerts/alerts-search-bar-small.png" alt-text="Highlighting the search bar in the Alerts queue" lightbox="media/investigate-alerts/alerts-search-bar.png":::
 
-## Required roles for Defender for Office 365 alerts
+## Permissions
 
-You'll need to have any of the following roles to access Microsoft Defender for Office 365 alerts:
+Access to alerts in the Microsoft Defender portal is controlled by Microsoft Defender permissions and role assignments.
 
-- For Microsoft Entra global roles:
-  - Global Administrator
-  - Security Administrator
-  - Security Operator
-  - Global Reader
-  - Security Reader
+### Role assignments
 
-- Office 365 Security & Compliance Role Groups
-  - Compliance Administrator
-  - Organization Management
+You can receive the permissions required to view alerts through these role assignments:
 
-- A [custom role](custom-roles.md)
+- Microsoft Entra roles, such as Security Reader, Security Operator, or Security Administrator.
+- Microsoft Defender custom roles that include permissions to access security data, such as Security data basics (read).
+
+For more information, see [Permissions in Microsoft Defender unified role-based access control (RBAC)](manage-rbac.md).
 
 > [!NOTE]
-> Microsoft recommends using roles with fewer permissions for better security. The Global Administrator role, which has many permissions, should only be used in emergencies when no other role fits.
+> Microsoft Sentinel data continues to use Microsoft Sentinel workspace permissions. To view alerts that contain Microsoft Sentinel data, you need the appropriate Azure RBAC permissions on the corresponding Sentinel workspace. For more information, see [Connect Microsoft Sentinel to the Microsoft Defender portal](/unified-secops-platform/microsoft-sentinel-onboard).
 
 ## Analyze an alert
 
@@ -242,10 +240,7 @@ This action is only applicable for Defender for Endpoint alerts.
 - **Resolve alert**: Automatically resolves the alert and related incidents. Matching alerts and their associated incidents are triggered with resolved status.
 - **Set as behavior**: Converts matching signals into behaviors. They won’t appear in the alert queue or trigger incidents. Data remains in *BehaviorInfo* and *BehaviorEntities* tables for hunting. This action isn't supported for Defender for Cloud or Microsoft Defender for Office 365 alerts.
 
-> [!NOTE]
-> Alert tuning is available for Microsoft Defender XDR services, including Defender for Endpoint, Defender for Office 365, Defender for Identity, Defender for Cloud Apps, and Microsoft Entra ID Protection.
-
-Microsoft Defender XDR also includes built-in alert tuning rules that suppress alerts from common benign activitywithout affecting Automated Investigation and Response (AIR) investigations and email notifications.
+Microsoft Defender XDR also includes built-in alert tuning rules that suppress alerts from common benign activity without affecting Automated Investigation and Response (AIR) investigations and email notifications.
 
 > [!CAUTION]
 > Use alert tuning with caution, for scenarios where known, internal business applications or security tests trigger expected activity.

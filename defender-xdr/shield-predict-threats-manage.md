@@ -11,10 +11,12 @@ ms.collection:
   - usx-security
   - usx-security
 ms.topic: how-to
-ms.date: 11/04/2025
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Defender for Endpoint
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Manage predictive shielding in Microsoft Defender (Preview)
@@ -29,7 +31,7 @@ This article describes how to manage predictive shielding so that you can enrich
 
 ## Review predictive shielding details and results
 
-The incident view in Microsoft Defender includes built-in predictive shielding details. Use the incident graph and activity information to assess the predictive shielding impact and status.
+The incident details page in Microsoft Defender includes built-in predictive shielding details. Use the incident graph and activity information to assess the predictive shielding impact and status.
 
 > [!TIP]
 > To enrich your predictive shielding data, we recommend that you use the Microsoft Defender for Identity sensor to improve security insights and expand coverage. For more information, see [Enrich predictive shielding data](#enrich-predictive-shielding-data).
@@ -53,13 +55,13 @@ You can also review the alert, and disruption information for predictive shieldi
     
     :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-alert-details.png" alt-text="Screenshot of the alert details with the Predictive Shielding label."::: 
 
-- In the disruption summary, view the number of predictive shielding policies invoked as part of this incident, and the number of hardened devices across all policies.
+- In the [disruption summary](autoad-results.md#review-the-attack-disruption-summary-card), view the number of predictive shielding policies invoked as part of this incident, and the number of hardened devices across all policies.
 
     :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-disruption-summary.png" alt-text="Screenshot of the disruption summary card showing predictive shielding details." loc-scope="other":::
 
 ### Review the activity information
 
-Select the incident's **Activities** tab and filter by the **Response** category to get a live snapshot of the activities where predictive shielding actions are applied:
+On the incident details page, select the **Activities** tab and filter by the **Response** category to get a live snapshot of the activities where predictive shielding actions are applied:
 
 - Review the **Type** column to see the actions triggered by predictive shielding.
     
@@ -82,11 +84,11 @@ Select the incident's **Activities** tab and filter by the **Response** category
 
 ### Review the triggering alert information
 
-To investigate the alert that led to the predictive shielding action, select the triggering alert either from the incident details pane or from the activity page.
+To investigate the alert that triggered a specific predictive shielding action, select that action's triggering alert either from the incident details pane or from the activity page.
 
 :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-view-triggering-alert.png" alt-text="Screenshot of the alert details pane showing relevant alert data." lightbox="media/shield-predict-threats-manage/shield-predict-threats-view-triggering-alert.png":::
 
-In the alert, you can review:
+In the triggering alert details pane, you can review:
 
 - Which assets are at risk.
 - The triggering malicious activity from the **Alert chain**.
@@ -94,13 +96,13 @@ In the alert, you can review:
 
 ## Enrich predictive shielding data
 
-We recommend that you use the Microsoft Defender for Identity sensor to improve security insights and expand coverage. This approach adds metadata like usernames, Active Directory details, and group memberships to alerts, making them more actionable.
+We recommend that you use the Microsoft Defender for Identity sensor to improve security insights and expand coverage. Using the Defender for Identity sensor adds metadata like usernames, Active Directory details, and group memberships to alerts, making them more actionable.
 
 To add the Defender for Identity sensor, see [Deploy Microsoft Defender for Identity](/defender-for-identity/deploy/deploy-defender-identity).
 
 ### Enriched data example
 
-In this example scenario:
+In the following scenario:
 
 - Both Microsoft Defender for Endpoint and Microsoft Defender for Identity are enabled in the environment. 
 - An attacker gained a foothold on a jump box and conducted malicious activities that led to compromising a workstation (WSA).
@@ -115,9 +117,9 @@ You can use specific queries in [advanced hunting](advanced-hunting-overview.m
 
 ### Track enabled predictive shielding hardening policies
 
-This sample query retrieves events related to changes in predictive shielding hardening policies, and allows you to monitor when policies are enabled or disabled for specific domains. The query uses the [DisruptionAndResponseEvents table](advanced-hunting-disruptionandresponseevents-table.md).
+The following query retrieves events related to changes in predictive shielding hardening policies, and allows you to monitor when policies are enabled or disabled for specific domains. The query uses the [DisruptionAndResponseEvents table](advanced-hunting-disruptionandresponseevents-table.md).
 
-```Kusto
+```kusto
   DisruptionAndResponseEvents
 let hardeningPolicyType = 
 let lookBackTime = 
@@ -131,7 +133,7 @@ DisruptionAndResponseEvents
 
 ### Track policy modification events in the environment
 
-This sample query retrieves policy modification events in the environment, including application and removal of hardening policies from devices onboarded to Defender for Endpoint. The query uses the [DisruptionAndResponseEvents table](advanced-hunting-disruptionandresponseevents-table.md).
+The following query retrieves policy modification events in the environment, including application and removal of hardening policies from devices onboarded to Defender for Endpoint. The query uses the [DisruptionAndResponseEvents table](advanced-hunting-disruptionandresponseevents-table.md).
 
 ```kusto
   DisruptionAndResponseEvents
@@ -146,7 +148,7 @@ DisruptionAndResponseEvents
 
 ### Track blocked events related to predictive shielding hardening policies
 
-This sample query retrieves blocked events related to predictive shielding hardening policies, and allows you to monitor when specific actions were blocked on devices. The query uses the [DisruptionAndResponseEvents table](advanced-hunting-disruptionandresponseevents-table.md).
+The following query retrieves blocked events related to predictive shielding hardening policies, and allows you to monitor when specific actions were blocked on devices. The query uses the [DisruptionAndResponseEvents table](advanced-hunting-disruptionandresponseevents-table.md).
 
 ```kusto
   DisruptionAndResponseEvents

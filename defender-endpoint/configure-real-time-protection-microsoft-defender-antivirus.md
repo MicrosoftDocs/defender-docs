@@ -8,8 +8,8 @@ author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
 ms.topic: how-to
-ms.date: 10/20/2025
-ms.custom: nextgen
+ms.date: 06/16/2026
+ms.custom: nextgen, msecd-doc-authoring-1014
 ms.collection: 
 - m365-security
 - tier2
@@ -19,12 +19,13 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
 ---
 # Enable and configure Microsoft Defender Antivirus always-on protection
 
 
 
-Always-on protection consists of real-time protection, behavior monitoring, and heuristics to identify malware based on known suspicious and malicious activities. These activities include events, such as processes making unusual changes to existing files, modifying or creating automatic startup registry keys and startup locations (also known as autostart extensibility points, or ASEPs), and other changes to the file system or file structure. Always-on protection is an important part of your antivirus protection and should be enabled. 
+Always-on protection consists of real-time protection, behavior monitoring, and heuristics to identify malware based on known suspicious and malicious activities. Suspicious and malicious activities include events, such as processes making unusual changes to existing files, modifying or creating automatic startup registry keys and startup locations (also known as autostart extensibility points, or ASEPs), and other changes to the file system or file structure. Always-on protection is an important part of your antivirus protection and should be enabled. 
 
 > [!NOTE]
 > [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps keep always-on protection and other security settings from being changed. As a result, when tamper protection is enabled, any changes made to [tamper-protected settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on) are ignored. If you must make changes to a device and those changes are blocked by tamper protection, we recommend using [troubleshooting mode](enable-troubleshooting-mode.md) to temporarily disable tamper protection on the device. Note that after troubleshooting mode ends, any changes made to tamper-protected settings are reverted to their configured state.
@@ -33,6 +34,8 @@ Always-on protection consists of real-time protection, behavior monitoring, and 
 ## Prerequisites
 
 ### Supported operating systems 
+
+The following operating systems support always-on protection:
 
 - Windows
 
@@ -66,6 +69,8 @@ You can use **Local Group Policy Editor** to enable and configure Microsoft Defe
 
 ### Enable and configure always-on protection using Group Policy
 
+Use the following steps to enable and configure always-on protection using Local Group Policy Editor:
+
 1. Open **Local Group Policy Editor**, as follows:
 
     1. In your Windows 10 or Windows 11 taskbar search box, type **gpedit**.
@@ -86,7 +91,7 @@ You can use **Local Group Policy Editor** to enable and configure Microsoft Defe
 
     1. In the **Microsoft Defender Antivirus** details pane, double-click **Real-time Protection**. Or, from the **Microsoft Defender Antivirus** tree on left pane, select **Real-time Protection**.
 
-    1. In the **Real-time Protection** details pane on right, double-click the policy setting as specified in [Real-time protection policy settings](#real-time-protection-policy-settings) (later in this article).
+    1. In the **Real-time Protection** details pane on right, double-click the policy setting as specified in [Real-time protection policy settings](#real-time-protection-policy-settings).
 
     1. Configure the setting as appropriate, and select **OK**.
 
@@ -104,7 +109,7 @@ You can use **Local Group Policy Editor** to enable and configure Microsoft Defe
 
 ### Real-time protection policy settings
 
-For the most current settings, get the latest ADMX files in your central store. See [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) and download the latest files. 
+For the most current settings, get the latest ADMX files in the Group Policy Central Store. See [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) and download the latest files. 
 
 ### Disable real-time protection in Group Policy
 
@@ -129,8 +134,12 @@ For the most current settings, get the latest ADMX files in your central store. 
 
 ## See also
 
+### Related content
+
 - [Configure behavioral, heuristic, and real-time protection](configure-protection-features-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
+
+### Other platforms
 
 If you're looking for antivirus-related information for other platforms, see:
 - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)

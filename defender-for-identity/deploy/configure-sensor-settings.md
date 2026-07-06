@@ -1,9 +1,11 @@
 ---
 title: Configure sensor settings  | Microsoft Defender for Identity
-description: Learn how to configure Microsoft Defender for Identity sensor settings 
-ms.date: 06/21/2023
+description: Configure Microsoft Defender for Identity sensor settings to start collecting data, validate your deployment, and prepare additional integrations for full functionality.
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Configure Microsoft Defender for Identity sensor settings
@@ -25,7 +27,7 @@ After the Defender for Identity sensor is installed, do the following to view an
           - Sensor name
           - Sensor domain membership
           - Sensor version number
-          - Whether updates should be [delayed](../sensor-settings.md#delayed-update-for-sensor-v2x)
+          - Whether updates should be [delayed (delayed sensor updates)](../sensor-settings.md#delayed-update-for-sensor-v2x)
           - Sensor service status
        :::column-end:::
        :::column:::
@@ -40,7 +42,7 @@ After the Defender for Identity sensor is installed, do the following to view an
 
 1. Select **Filters** to select the filters you want visible. For example:
 
-   [![Screenshot of sensor filters.](../media/sensor-filters.png)](../media/sensor-filters.png#lightbox)
+   [![Screenshot of the Sensors page filter options for narrowing the sensor list.](../media/sensor-filters.png)](../media/sensor-filters.png#lightbox)
 
 1. Use the displayed filters to determine which sensors to display. For example:
 
@@ -48,11 +50,11 @@ After the Defender for Identity sensor is installed, do the following to view an
 
 1. Select a sensor to show a details pane with more information about the sensor and its health status. For example:
 
-   [![Screenshot of a sensor details pane.](../media/sensor-details.png)](../media/sensor-details.png#lightbox)
+   [![Screenshot of a sensor details pane showing health status and configuration.](../media/sensor-details.png)](../media/sensor-details.png#lightbox)
 
 1. Scroll down and select **Manage sensor** to show a pane where you can configure sensor details. For example:
 
-   :::image type="content" source="../media/manage-sensor.png" alt-text="Screenshot of the Manage sensor option." lightbox="../media/manage-sensor.png":::
+   :::image type="content" source="../media/manage-sensor.png" alt-text="Screenshot of the Sensors page with the Manage sensor option selected to open sensor configuration settings." lightbox="../media/manage-sensor.png":::
 
 1. Configure the following sensor details:
 
@@ -64,7 +66,7 @@ After the Defender for Identity sensor is installed, do the following to view an
 
 1. On the **Sensors** page, select **Export** to export a list of your sensors to a **.csv** file. For example:
 
-   :::image type="content" source="../media/export-sensors.png" alt-text="Screenshot of exporting a list of sensors." lightbox="../media/export-sensors.png":::
+   :::image type="content" source="../media/export-sensors.png" alt-text="Screenshot of the Sensors page with the Export option for downloading the sensor list as a CSV file." lightbox="../media/export-sensors.png":::
 
 ## Validate installations
 
@@ -84,9 +86,9 @@ To validate that the Defender for Identity sensor has been successfully deployed
 
 ### Verify security alert functionality
 
-This section describes how you can verify that security alerts are being triggered as expected.
+The following procedure describes how to verify that security alerts are triggered as expected.
 
-When using the examples in the following steps, make sure to replace `contosodc.contoso.azure` and `contoso.azure` with the FQDN of your Defender for Identity sensor and domain name respectively.
+When using the examples in this validation procedure, make sure to replace `contosodc.contoso.azure` and `contoso.azure` with the fully qualified domain name (FQDN) of your Defender for Identity sensor and your domain name, respectively.
 
 1. On a member-joined device, open a command prompt and enter `nslookup`
 
@@ -94,7 +96,7 @@ When using the examples in the following steps, make sure to replace `contosodc.
 
 1. Enter `ls -d contoso.azure`
    
-1. Repeat the previous two steps for each sensor you want to test.
+1. Repeat the `server` and `ls -d` commands for each sensor you want to test.
 
 1. Access the device details page for the computer you ran the connectivity test from, such as from the **Devices** page, by searching for device name, or from elsewhere in the Defender portal.
 
@@ -111,7 +113,7 @@ The Defender for Identity version is updated frequently. Check for the latest ve
 
 ## Related content
 
-Now that you've configured the initial configuration steps, you can configure more settings. Go to any of the pages below for more information:
+Now that you've configured the Defender for Identity sensor settings, you can configure additional settings. Go to any of the pages below for more information:
 
 - [Set entity tags: sensitive, honeytoken, and Exchange server](../entity-tags.md)
 - [Configure detection exclusions](../exclusions.md)
@@ -120,4 +122,4 @@ Now that you've configured the initial configuration steps, you can configure mo
 ## Next step
 
 > [!div class="step-by-step"]
-> [Event collection with Microsoft Defender for Identity »](event-collection-overview.md)
+> [Configure audit policies for Windows event logs](configure-windows-event-collection.md)

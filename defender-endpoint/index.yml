@@ -114,6 +114,6 @@ landingContent:
         - text: Microsoft Defender Vulnerability Management
           url: /defender-vulnerability-management/defender-vulnerability-management
         - text: Attack surface reduction
-          url: overview-attack-surface-reduction.md
+          url: attack-surface-reduction-overview.md
         - text: Next-generation protection
           url: next-generation-protection.md         

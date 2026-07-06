@@ -1,10 +1,12 @@
 ---
 title: Cloud app catalog and risk scores | Microsoft Defender for Cloud Apps
 description: Learn about the Microsoft Defender for Cloud Apps' cloud app catalog, and how to use and customize your cloud app risk score.
-ms.date: 05/12/2025
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: Mravela
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
 #CustomerIntent: As a Defender for Cloud Apps user, I want to understand how to use the Cloud app catalog and my cloud app risk scores.
+ai-usage: ai-assisted
 ---
 
 # Find your cloud app and calculate risk scores
@@ -19,7 +21,7 @@ For example:
 Apps in the cloud app catalog are scored based on more than 90 risk factors. This article describes how to identify apps covered by the catalog, and how to use and customize the cloud app risk scores.
 
 >[!TIP]
-> By default, Defender for Cloud Apps can't discover apps that aren't in the catalog. To see Defender for Cloud Apps data for an app that's not currently in the catalog, we recommend that you [check our roadmap](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=Microsoft%20Defender%20for%20Identity), [suggest a new app](#suggest-a-change-to-the-cloud-app-catalog), or [create a custom app](cloud-discovery-custom-apps.md).
+> By default, Defender for Cloud Apps can't discover apps that aren't in the catalog. To see Defender for Cloud Apps data for an app that's not currently in the catalog, we recommend that you [check the Microsoft 365 roadmap for Defender for Identity](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=Microsoft%20Defender%20for%20Identity), [suggest a change to the cloud app catalog](#suggest-a-change-to-the-cloud-app-catalog), or [create a custom cloud app](cloud-discovery-custom-apps.md).
 
 ## Risk scoring process
 
@@ -51,7 +53,7 @@ Risk scores are kept up to date using the following sources:
 
 ## Confirm cloud app security risk
 
-Check the cloud app catalog to ensure that the apps used by the organization fit into your organization's security requirements. For example, you might want to periodically check that CRM apps used in your organization are adequately secure. In this case, you'd use the following steps to identify your apps:
+Check the cloud app catalog to ensure that the apps used by the organization fit into your organization's security requirements. For example, you might want to periodically check that CRM apps used in your organization are adequately secure. To identify CRM apps in your organization that meet these security criteria, use the following steps:
 
 1. Sign into Microsoft Defender XDR and select **Cloud apps** > **Cloud app catalog**.
 
@@ -88,7 +90,7 @@ For example:
 
 1. For each field or risk category slide the **Importance** slide to change the weight of the field or the risk category. Importance can be set to **Ignored**, **Low**, **Medium**, **High**, or **Very High**.
 
-1. Select the **N/A values** checkbox to define whether a value is either not available or not applicable in the score calculation. When included, N/A values have a negative contribution to the calculated score.
+1. Select the **N/A values** checkbox to define whether a value is either not available or not applicable in the score calculation. When N/A values are included in the score calculation, they have a negative contribution to the calculated score.
 
 ## Override the risk score
 
@@ -137,7 +139,7 @@ If you find a new app in your environment that hasn't been scored by Defender fo
 3. We recommend selecting the checkbox to enable Defender for Cloud Apps analysts to contact you in case additional information about the app is needed.
 
 > [!NOTE]
-> If your organization has enabled integration between Defender for Endpoint and Defender for Cloud Apps, block indicators are created in Defender for Endpoint for all unsanctioned cloud applications. While Microsoft does its best to keep the list of urls or indicators for an app up to date, however it is beyond control that the app vendors could add, change, use different urls for different types of their app such as web, desktop, or mobile, and so on, resulting in inconsistent unsanctioned behavior for an app or app type due to missing url or an indicator in the catalog. In such case we suggest proposing a change to the cloud app catalog for such urls to be added.
+> If your organization has enabled integration between Defender for Endpoint and Defender for Cloud Apps, block indicators are created in Defender for Endpoint for all unsanctioned cloud applications. While Microsoft does its best to keep the list of urls or indicators for an app up to date, however it is beyond control that the app vendors could add, change, use different urls for different types of their app such as web, desktop, or mobile, and so on, resulting in inconsistent unsanctioned behavior for an app or app type due to missing url or an indicator in the catalog. If app vendors use additional or changed URLs that aren't yet represented in the catalog, suggest a change to the cloud app catalog to add those URLs.
 
 ## Supported filters and categories
 

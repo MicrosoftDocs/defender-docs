@@ -7,17 +7,18 @@ ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.topic: how-to
-ms.custom: nextgen
+ms.custom: nextgen, msecd-doc-authoring-1014
 ms.reviewer: yongrhee
 ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-ms.date: 10/20/2025
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
+ai-usage: ai-assisted
 ---
 
 # Configure exclusions for files opened by processes
@@ -31,6 +32,8 @@ This article describes how to configure exclusion lists.
 ## Prerequisites
 
 ### Supported operating systems
+
+Process exclusions as described in this article are supported on the following operating systems:
 
 - Windows
 
@@ -57,7 +60,7 @@ By default, local changes made to the lists (by users with administrator privile
 You can [configure how locally and globally defined exclusions lists are merged](configure-local-policy-overrides-microsoft-defender-antivirus.md#merge-lists) to allow local changes to override managed deployment settings.
 
 > [!NOTE]
-> **Network Protection** and **Attack surface reduction rules** are directly affected by process exclusions on all platforms, meaning that a process exclusion on any OS (Windows, macOS, Linux) results in Network Protection or ASR being unable to inspect traffic or enforce rules for that specific process.
+> **Network Protection** and [attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md) are directly affected by process exclusions on all platforms. A process exclusion on any OS (Windows, macOS, or Linux) means Network Protection or ASR rules can't inspect traffic or enforce rules for that specific process.
 
 ### Image name vs full path for process exclusions
 
@@ -69,9 +72,9 @@ Image name exclusions are much more broad - an exclusion on `MyProcess.exe` excl
 
 ### Use wildcards in the process exclusion list
 
-The use of wildcards in the process exclusion list is different from their use in other exclusion lists. When the process exclusion is defined as an image name only, wildcard usage isn't allowed. However when a full path is used, wildcards are supported and the wildcard behavior behaves as described in [File and Folder Exclusions](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
+The use of wildcards in the process exclusion list is different from their use in other exclusion lists. When the process exclusion is defined as an image name only, wildcard usage isn't allowed. However when a full path is used, wildcards are supported and the wildcard behavior follows the rules described in the "Use wildcards in the file name and folder path or extension exclusion lists" section of [Configure and validate exclusions based on file name, extension, and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists)
 
-The use of environment variables (such as `%ALLUSERSPROFILE%`) as wildcards when defining items in the process exclusion list is also supported. Details and a full list of supported environment variables are described in [File and Folder Exclusions](configure-extension-file-exclusions-microsoft-defender-antivirus.md).
+The use of environment variables (such as `%ALLUSERSPROFILE%`) as wildcards when defining items in the process exclusion list is also supported. Details and a full list of supported environment variables are described in the "System environment variables" section of [Configure and validate exclusions based on file name, extension, and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md#system-environment-variables).
 
 The following table describes how the wildcards can be used in the process exclusion list, when a path is supplied:
 
@@ -89,6 +92,8 @@ A process exclusion might also be defined via a [Contextual exclusion](configure
 
 ## Configure the list of exclusions for files opened by specified processes
 
+Use one of the following methods to configure exclusions for files opened by specified processes.
+
 ### Use Microsoft Intune to exclude files that have been opened by specified processes from scans
 
 For more information, see [Configure device restriction settings in Microsoft Intune](/intune/intune-service/configuration/device-restrictions-configure) and [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/intune/intune-service/configuration/device-restrictions-windows-10#microsoft-defender-antivirus).
@@ -98,6 +103,8 @@ For more information, see [Configure device restriction settings in Microsoft In
 See [How to create and deploy anti-malware policies: Exclusion settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) for details on configuring Microsoft Configuration Manager (current branch).
 
 ### Use Group Policy to exclude files that have been opened by specified processes from scans
+
+Perform the following steps to configure process-based exclusions by using Group Policy:
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)). Right-click the Group Policy Object you want to configure and select **Edit**.
 
@@ -116,7 +123,7 @@ See [How to create and deploy anti-malware policies: Exclusion settings](/intune
 
 Using PowerShell to add or remove exclusions for files that are opened by processes requires using a combination of three cmdlets with the `-ExclusionProcess` parameter. The cmdlets are all in the [Defender module](/powershell/module/defender/).
 
-The format for the cmdlets is:
+Use the following syntax to add a process exclusion so that files opened by the specified process are excluded from Microsoft Defender Antivirus scans:
 
 ```PowerShell
 <cmdlet> -ExclusionProcess "<item>"
@@ -133,17 +140,17 @@ The following are allowed as the \<cmdlet\>:
 > [!IMPORTANT]
 > If you create a list, with either `Set-MpPreference` or `Add-MpPreference`, using the `Set-MpPreference`, cmdlet overwrites the existing list.
 
-For example, the following code snippet would cause Microsoft Defender Antivirus scans to exclude any file that is opened by the specified process:
+The following example adds a process exclusion for `c:\internal\test.exe`, so that Microsoft Defender Antivirus skips scanning any file opened by that process:
 
 ```PowerShell
 Add-MpPreference -ExclusionProcess "c:\internal\test.exe"
 ```
 
-For more information on how to use PowerShell with Microsoft Defender Antivirus, see Manage antivirus with PowerShell cmdlets and [Microsoft Defender Antivirus cmdlets](/powershell/module/defender).
+For more information on how to use PowerShell with Microsoft Defender Antivirus, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Microsoft Defender Antivirus cmdlets](/powershell/module/defender).
 
 ## Use Windows Management Instrumentation (WMI) to exclude files that have been opened by specified processes from scans
 
-Use the [**Set**, **Add**, and **Remove** methods of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
+Use the [**Set**, **Add**, and **Remove** methods of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following property. The `ExclusionProcess` property is the WMI property name you use to manage process exclusions programmatically:
 
 ```WMI
 ExclusionProcess
@@ -171,7 +178,7 @@ To check exclusions with the MpCmdRun command-line tool, see [Verify whether a s
 
 ### Review the list of exclusions by using PowerShell
 
-Run the following commands in an elevated PowerShell window (a PowerShell window you opened by selecting **Run as administrator**):
+Run the following commands in an elevated PowerShell window (a PowerShell window you opened by selecting **Run as administrator**). This script retrieves all currently configured Microsoft Defender Antivirus exclusions and lists them by type (extension, path, and process) so you can verify your configuration:
 
 ```PowerShell
 $p=Get-MpPreference; @(

@@ -1,9 +1,11 @@
 ---
 title: Investigate predefined app governance policy alerts | Microsoft Defender for Cloud Apps 
-ms.date: 08/12/2025
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: shragar
 description: Learn how to investigate predefined app policy alerts from app governance in Microsoft Defender XDR with Microsoft Defender for Cloud Apps.
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Investigate predefined app policy alerts
@@ -36,12 +38,15 @@ Use the following general guidelines when investigating any type of alert to gai
    - Unusual behavior  
    - IP address and location
 
-## Predefined app policy alerts
+<a name="predefined-app-policy-alerts"></a>
+## Review predefined app policy alerts
 
-This section provides information on each predefined policy alert, along with steps for investigation and remediation.
+The following predefined app governance policy alerts include investigation and remediation guidance.
 
 
 ### Increase in data usage by an overprivileged or highly privileged app
+
+An overprivileged app has permissions that exceed what it needs for its intended function, while a highly privileged app holds powerful permissions such as full mailbox or directory access. This alert detects unusual increases in data usage by these apps.
 
 > [!NOTE]
 > As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy, we have disabled this policy. This policy remains visible in the Defender portal in a disabled state. If you want to continue using this policy,  in the Defender portal, go to **App Governance**, and then the **Policies** page. Select the policy, and then select **Activate**.
@@ -63,6 +68,8 @@ To determine if the alert is a true positive (TP) or a false positive (FP), revi
   **Recommended action**: Dismiss the alert.
 
 ### Unusual activity from an app with priority account consent
+
+A priority account is a high-value account, such as an executive or service administrator, that you tag in Microsoft Defender for Cloud Apps. This alert triggers when an app that a priority account has consented to exhibits unusual activity.
 
 > [!NOTE]
 > As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy, we have disabled this policy. This policy remains visible in the Defender portal in a disabled state. If you want to continue using this policy,  in the Defender portal, go to **App Governance**, and then the **Policies** page. Select the policy, and then select **Activate**.
@@ -248,6 +255,7 @@ To determine if the alert is a true positive (TP) or a false positive (FP), revi
 
   **Recommended action**: Dismiss the alert.
 
-## Next steps
+<a name="next-steps"></a>
+## Related content
 
-[Learn about app threat detection and remediation](app-governance-detect-remediate-overview.md)
+- [Learn about app threat detection and remediation](app-governance-detect-remediate-overview.md)

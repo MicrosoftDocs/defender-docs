@@ -1,8 +1,9 @@
 ---
 title: Microsoft Sentinel data connectors
 description: Learn about supported data connectors, like Microsoft Defender XDR (formerly Microsoft 365 Defender), Microsoft 365 and Office 365, Microsoft Entra ID, ATP, and Defender for Cloud Apps to Microsoft Sentinel.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: ofshezaf
 ms.topic: concept-article
 ms.date: 11/06/2024
 appliesto:
@@ -74,7 +75,7 @@ To add more data connectors, install the solution associated with the data conne
 
 If you're unable to connect your data source to Microsoft Sentinel using any of the existing solutions available, consider creating your own data source connector. For example, many security solutions provide a set of APIs for retrieving log files and other security data from their product or service. Those APIs connect to Microsoft Sentinel with one of the following methods:
 
-- The data source APIs are configured with the [Codeless Connector Framework](create-codeless-connector.md).
+- The data source APIs are configured with the [Codeless Connector Framework](isv/create-codeless-connector.md).
 - The data connector uses the Log Ingestion API for Azure Monitor as part of an [Azure Function](connect-azure-functions-template.md) or [Logic App](create-custom-connector.md#connect-with-logic-apps).
 
 You can also use Azure Monitor Agent directly or Logstash to create your custom connector. For more information, see [Resources for creating Microsoft Sentinel custom connectors](create-custom-connector.md).

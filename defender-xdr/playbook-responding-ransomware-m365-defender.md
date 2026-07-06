@@ -1,17 +1,16 @@
 ---
 title:                     Responding to ransomware attacks
 description:               This article provides a generalized playbook for responding to ransomware attacks.
-search.appverid: MET150     
+search.appverid: MET150
 ms.author: pauloliveria
 author: poliveria
 ms.reviewer: noriordan
 audience:                  ITPro
 ms.topic: concept-article
-ms.date:                   05/30/2022 
-ms.service:                microsoft-365-security
-ms.subservice:             m365d
+ms.date:                   05/30/2022
+ms.service: defender-xdr
 ms.localizationpriority:   medium
-ms.collection: 
+ms.collection:
   - msftsolution-secops
   - tier1
 ms.custom:                 cx-rw
@@ -54,7 +53,7 @@ Run through this list of questions and tasks to discover the extent of the attac
 
 Run through this list of tasks and questions to protect existing systems from attack:
 
-* If you have online backups, consider disconnecting the backup system from the network until you're confident that the attack is contained, see [Backup and restore plan to protect against ransomware | Microsoft Docs](/azure/security/fundamentals/backup-plan-to-protect-against-ransomware).
+* If you have online backups, consider disconnecting the backup system from the network until you're confident that the attack is contained, see [Backup and restore plan to protect against ransomware](/azure/security/fundamentals/backup-plan-to-protect-against-ransomware).
 * If you're experiencing or expect an imminent and active ransomware deployment:
   * [Suspend privileged and local accounts](./investigate-users.md) that you suspect are part of the attack. You can do this from the **Users** tab in the properties of the incident in the Microsoft Defender portal.
   * Stop all [remote logon sessions](/defender-for-identity/playbook-domain-dominance).
@@ -63,7 +62,7 @@ Run through this list of tasks and questions to protect existing systems from at
   * If shared local accounts are compromised, have your IT admin help you to enforce a password change across all exposed devices. Example Kusto query:
 
 ```kusto
-DeviceLogonEvents | where DeviceName  contains (AccountDomain) | take 10 
+DeviceLogonEvents | where DeviceName  contains (AccountDomain) | take 10
 ```
 
 * For the devices that aren't yet isolated and aren't part of the critical infrastructure:
@@ -98,8 +97,8 @@ DeviceLogonEvents
 * Ensure that your antivirus solution is configurable in its optimal protection state. For Microsoft Defender Antivirus, this includes:
   * [Real time protection](/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus) is enabled.
   * [Tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) is enabled. In the Microsoft Defender portal, select **Settings > Endpoints > Advanced features > Tamper protection**.
-  * [Attack surface reduction](/defender-endpoint/enable-attack-surface-reduction) rules are enabled.
-  * [Cloud protection](/defender-endpoint/enable-attack-surface-reduction) is enabled.
+  * [Attack surface reduction rules](/defender-endpoint/enable-attack-surface-reduction) are enabled.
+  * [Cloud protection](/defender-endpoint/enable-cloud-protection-microsoft-defender-antivirus) is enabled.
 * Disable Exchange ActiveSync and OneDrive sync.
   * To disable Exchange ActiveSync for a mailbox, see [How to disable Exchange ActiveSync for users in Exchange Online](/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-exchange-activesync).
   * To disable other types of access to a mailbox, see:

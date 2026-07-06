@@ -1,13 +1,15 @@
 ---
 title: Upgrade the Microsoft Defender for IoT micro agent
 description: Learn how to upgrade your Defender for IoT micro agent for device builders.
-ms.date: 02/20/2022
+ms.date: 06/12/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Upgrade the Microsoft Defender for IoT micro agent
 
-This article describes how to upgrade a Microsoft Defender for IoT micro agent with the latest software version.
+This article describes how to upgrade a Microsoft Defender for IoT micro agent to the latest software version on Debian or Ubuntu-based Linux distributions. It covers upgrade procedures for both the standalone micro agent and the micro agent for Edge, including version-specific steps for upgrading from version 4.2.* to 4.6.2 and from legacy versions (3.13.1 or lower). Device builders can use these procedures to keep their IoT devices protected with the latest security capabilities.
 
 For more information, see our [release notes for device builders](release-notes.md).
 
@@ -59,6 +61,8 @@ When upgrading the micro agent from version 4.2.* to 4.6.2, you would first need
 
 ## Upgrade a standalone micro agent
 
+Perform the following steps to upgrade a standalone micro agent to the latest version:
+
 1. Ensure that you've upgraded the apt. Run:
 
     ```bash
@@ -72,6 +76,8 @@ When upgrading the micro agent from version 4.2.* to 4.6.2, you would first need
     ```
 
 ## Upgrade a micro agent for Edge
+
+Perform the following steps to upgrade a micro agent for Edge to the latest version:
 
 1. Ensure that you've upgraded the apt. Run:
 
@@ -87,11 +93,11 @@ When upgrading the micro agent from version 4.2.* to 4.6.2, you would first need
 
 ## Upgrade a standalone micro agent from a legacy version
 
-This section is relevant specifically when upgrading a micro agent from version 3.13.1 or lower to version 4.1.2 or higher.
+The following upgrade steps apply when upgrading a standalone micro agent from version 3.13.1 or lower to version 4.1.2 or higher.
 
-In version 4.1.2, the standalone micro agent directory changed to align with standard Linux installation directory structures. This change requires customers to reauthenticate the micro agent and modify the connection string location.
+In version 4.1.2, the standalone micro agent directory changed to align with standard Linux installation directory structures. The directory change in version 4.1.2 requires customers to reauthenticate the micro agent and modify the connection string location.
 
-1. Upgrade your micro agent as described [above](#upgrade-a-standalone-micro-agent).
+1. Upgrade your micro agent as described in [Upgrade a standalone micro agent](#upgrade-a-standalone-micro-agent): run `sudo apt-get update`, then run `sudo apt-get install defender-iot-micro-agent`.
 
 1. Reauthenticate your micro agent. For more information, see [Authenticate the micro agent](tutorial-standalone-agent-binary-installation.md#authenticate-the-micro-agent).
 
@@ -105,9 +111,10 @@ Use the following command syntax:
 sudo apt-get install defender-iot-micro-agent=<version>
 ```
 
-## Next steps
+<a name="next-steps"></a>
+## Related content
 
-For more information, see:
+After upgrading your micro agent, explore these additional resources for installation and configuration:
 
 - [Install Defender for IoT micro agent for Edge](how-to-install-micro-agent-for-edge.md)
 

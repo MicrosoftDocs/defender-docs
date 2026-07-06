@@ -1,16 +1,16 @@
 ---
 title: Enable Attack Disruption Actions on AWS with Microsoft Sentinel
 description: Enable Attack Disruption Actions on AWS with Microsoft Sentinel
-author: mberdugo
 ms.author: monaberdugo
-ms.reviewer: Christos Ventouris
+author: mberdugo
+ms.reviewer: eyalhaik
 ms.date: 01/13/2026
 ms.topic: how-to
 ---
 
 # Enable attack disruption actions on AWS with Microsoft Sentinel (preview)
 
-This article describes how to configure your AWS environment so that Microsoft Sentinel can take automated actions on a user that assumes a SAML role, or on an AWS IAM account when an alert is triggered. Attack disruption uses high-confidence signals to contain compromised assets and limit the damage from attacks, including actions on identities in AWS.
+This article describes how to configure your AWS environment so that Microsoft Sentinel can take automated actions on a user that assumes a SAML role, or on an AWS IAM account when an alert is triggered. [Attack disruption](/defender-xdr/automatic-attack-disruption) uses high-confidence signals to contain compromised assets and limit the damage from attacks, including actions on identities in AWS.
 
 ## Prerequisites
 
@@ -40,19 +40,18 @@ Before you begin, you need the following prerequisites in place:
         {
           "Effect": "Allow",
           "Action": [
-            "iam:UpdateLoginProfile",
-            "iam:DeactivateMFADevice",
-            "iam:DeleteAccessKey",
-            "iam:DeleteLoginProfile",
-            "iam:DeleteUser",
-            "iam:RemoveUserFromGroup",
-            "iam:ResetServiceSpecificCredential",
-            "iam:ResyncMFADevice",
-            "iam:DeleteUserPermissionsBoundary",
-            "iam:DeleteUserPolicy",
-            "iam:DetachUserPolicy"
-          ],
-          "Resource": "arn:aws:iam::<YOUR_ACCOUNT_ID>:user/*"
+            "iam:GetUserPolicy",
+            "iam:DeleteRolePolicy",
+            "iam:PutUserPolicy",
+            "iam:AttachUserPolicy",
+            "iam:ListUserPolicies",
+            "iam:PutRolePolicy",
+            "iam:GetUser",
+            "iam:DetachUserPolicy",
+            "iam:GetRolePolicy",
+            "iam:DeleteUserPolicy", 
+         ],
+         "Resource": "*"
         }
       ]
     }

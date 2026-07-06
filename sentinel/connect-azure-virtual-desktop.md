@@ -1,10 +1,13 @@
 ---
-title: Connect Azure Virtual Desktop to Microsoft Sentinel | Microsoft Docs
-description: Learn to connect your Azure Virtual Desktop data to Microsoft Sentinel.
-author: guywi-ms
+title: Connect Azure Virtual Desktop to Microsoft Sentinel
+description: Connect Azure Virtual Desktop to Microsoft Sentinel to monitor desktop environment activity and security data. Includes guidance for enabling the connector and using the ingested data for monitoring.
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: ofshezaf
 ms.topic: how-to
-ms.date: 01/09/2023
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security analyst, I want to monitor Azure Virtual Desktop environments using Microsoft Sentinel so that I can enhance remote work capabilities while maintaining security.
 
@@ -43,8 +46,8 @@ For example, see sample queries from the [Azure Virtual Desktop documentation](/
 
 Microsoft Sentinel also provides built-in queries in the **General** > **Logs** > **Azure Virtual Desktop** area:
 
-[![Azure Virtual Desktop built-in queries in Microsoft Sentinel.](media/connect-windows-virtual-desktop/windows-virtual-desktop-queries.png) ](media/connect-windows-virtual-desktop/windows-virtual-desktop-queries.png#lightbox)
+:::image type="content" source="media/connect-windows-virtual-desktop/windows-virtual-desktop-queries.png" alt-text="Screenshot showing Azure Virtual Desktop built-in queries in Microsoft Sentinel." lightbox="media/connect-windows-virtual-desktop/windows-virtual-desktop-queries.png#lightbox":::
 
 ## Next steps
 
-For more information, see the [Azure Monitor for Azure Virtual Desktop glossary](/azure/virtual-desktop/azure-monitor-glossary).
+For more information, see the [Azure Monitor for Azure Virtual Desktop glossary](/azure/virtual-desktop/azure-monitor-glossary) article in the Azure Virtual Desktop documentation.

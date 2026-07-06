@@ -1,12 +1,13 @@
 ---
 title: Microsoft Sentinel feature support for Azure commercial/other clouds
 description: This article describes feature availability in Microsoft Sentinel across different Azure environments.
-author: guywi-ms
-ms.author: guywild
+ms.author: bagol
+author: batamig
+ms.reviewer: noak
 ms.topic: feature-availability
 ms.custom: references_regions
 ms.service: microsoft-sentinel
-ms.date: 08/21/2025
+ms.date: 05/14/2026
 
 
 #Customer intent: As a security operations manager, I want to understand the Microsoft Sentinel's feature availability across different Azure environments so that I can effectively plan and manage our security operations.
@@ -33,7 +34,7 @@ For more information, see [Microsoft Defender XDR for US Government customers](/
 
 |Feature  |Feature stage |Azure commercial  |Azure Government |Azure operated by 21Vianet   |
 |---------|---------|---------|---------|---------|
-|[Analytics rules health](monitor-analytics-rule-integrity.md) |Public preview |Yes |No |No |
+|[Analytics rules health](monitor-analytics-rule-integrity.md) |Public preview |Yes |Yes |No |
 |[MITRE ATT&CK dashboard](mitre-coverage.md)	|Public preview |Yes |Yes |Yes |
 |[NRT rules](near-real-time-rules.md) |GA |Yes |Yes |Yes |
 |[Recommendations](detection-tuning.md) |Public preview |Yes |Yes|No|
@@ -64,7 +65,7 @@ For more information, see [Microsoft Defender XDR for US Government customers](/
 |[Azure SQL Databases](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/azure-sentinel-sql-solution-query-deep-dive/ba-p/2597961) |GA |Yes |Yes|Yes |
 |[Azure Web Application Firewall (WAF)](data-connectors-reference.md#azure-web-application-firewall-waf) |GA |Yes |Yes|Yes |
 |[Cisco ASA](data-connectors-reference.md#cisco-asaftd-via-ama) |GA |Yes |Yes|Yes |
-|[Codeless Connectors Platform](create-codeless-connector.md?tabs=deploy-via-arm-template%2Cconnect-via-the-azure-portal) |Public preview |Yes |No|No |
+|[Codeless Connectors Platform](isv/create-codeless-connector.md?tabs=deploy-via-arm-template%2Cconnect-via-the-azure-portal) |Public preview |Yes |No|No |
 |[Common Event Format (CEF)](connect-common-event-format.md) |GA |Yes |Yes|Yes |
 |[Common Event Format (CEF) via AMA](connect-cef-syslog-ama.md) |GA |Yes |Yes |Yes |
 |[DNS](data-connectors-reference.md#dns) |Public preview |Yes |No |Yes |
@@ -169,20 +170,20 @@ For more information, see [Microsoft Defender XDR for US Government customers](/
 |---------|---------|---------|---------|---------|
 |[GeoLocation and WhoIs data enrichment](work-with-threat-indicators.md) |Public preview |Yes |No |No |
 |[Import TI from flat file](indicators-bulk-file-import.md) |Public preview |Yes |Yes |Yes |
-|[Threat Intelligence Platform data connector](understand-threat-intelligence.md) |Public preview |Yes |No |No |
+|[Threat Intelligence Platform data connector](understand-threat-intelligence.md) |Public preview |Yes |Yes |No |
 |[Threat Intelligence Research page](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-threat-intelligence-menu-item-in-public-preview/ba-p/1646597) |GA |Yes |Yes |Yes |
 |[Threat Intelligence - TAXII data connector](understand-threat-intelligence.md) |GA |Yes |Yes |Yes |
-|[Microsoft Defender for Threat Intelligence connector](connect-mdti-data-connector.md) |Public preview |Yes |No |No |
+|[Microsoft Defender for Threat Intelligence connector](connect-mdti-data-connector.md) |Public preview |Yes |Yes |No |
 |[Microsoft Defender Threat intelligence matching analytics](use-matching-analytics-to-detect-threats.md) |Public preview |Yes |No |No |
 |[Threat Intelligence workbook](/azure/architecture/example-scenario/data/sentinel-threat-intelligence) |GA |Yes |Yes |Yes |
 |[URL detonation](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/using-the-new-built-in-url-detonation-in-azure-sentinel/ba-p/996229) |Public preview |Yes |No |No |
-|[Threat Intelligence Upload Indicators API](connect-threat-intelligence-upload-api.md) |Public preview |Yes |No |No |
+|[Threat Intelligence Upload Indicators API](connect-threat-intelligence-upload-api.md) |Public preview |Yes |Yes |No |
 
 ## UEBA 
 
 |Feature  |Feature stage |Azure commercial  |Azure Government |Azure operated by 21Vianet  |
 |---------|---------|---------|---------|---------|
-|[Active Directory sync via MDI](enable-entity-behavior-analytics.md#enable-ueba-from-workspace-settings) |Public preview |Yes |Yes |No |
+|[Active Directory sync via MDI](./enable-entity-behavior-analytics.md#access-ueba-from-ueba-tab) |Public preview |Yes |Yes |No |
 |[Azure resource entity pages](entity-pages.md) |Public preview |Yes |Yes |No |
 |[Entity insights](identify-threats-with-entity-behavior-analytics.md) |GA |Yes |Yes |Yes |
 |[Entity pages](entity-pages.md) |GA |Yes |Yes |Yes |
@@ -197,9 +198,9 @@ For more information, see [Microsoft Defender XDR for US Government customers](/
 
 |Feature  |Feature stage |Azure commercial  |Azure Government |Azure operated by 21Vianet  |
 |---------|---------|---------|---------|---------|
-|[Large watchlists from Azure Storage](watchlists.md) |Public preview |Yes |No |No |
+|[Large watchlists from Azure Storage](watchlists.md) |Public preview |Yes |Yes |No |
 |[Watchlists](watchlists.md) |GA |Yes |Yes |Yes |
-|[Watchlist templates](watchlist-schemas.md) |Public preview |Yes |No |No |
+|[Watchlist templates](watchlist-schemas.md) |Public preview |Yes |Yes |No |
 
 ## Next steps
 

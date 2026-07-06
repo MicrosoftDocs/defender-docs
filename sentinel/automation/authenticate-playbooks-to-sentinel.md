@@ -1,15 +1,16 @@
 ---
-title: Authenticate playbooks to Microsoft Sentinel | Microsoft Docs
+title: Authenticate playbooks to Microsoft Sentinel
 description: Learn how to give your playbooks access to Microsoft Sentinel and authorization to take remedial actions.
 ms.topic: how-to
-author: mberdugo
 ms.author: monaberdugo
-ms.date: 03/14/2024
+author: mberdugo
+ms.date: 06/12/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 #Customer intent: As a security analyst, I want to authenticate playbooks to Microsoft Sentinel so that I can automate and orchestrate security tasks efficiently.
 
@@ -87,17 +88,17 @@ Authenticating as a managed identity allows you to give permissions directly to 
 
     1. In the Logic Apps designer, add a Microsoft Sentinel Logic Apps connector step. If the connector is already enabled for an existing connection, select the **Change connection** link. For example:
 
-        ![Screenshot of the Change connection link.](../media/authenticate-playbooks-to-sentinel/change-connection.png)
+        ![Screenshot of the Microsoft Sentinel connector showing where to select Change connection to update authentication.](../media/authenticate-playbooks-to-sentinel/change-connection.png)
 
     1. In the resulting list of connections, select **Add new**.
 
     1. Create a new connection by selecting **Connect with managed identity (preview)**. For example:
 
-        ![Screenshot of the Connect with managed identity option.](../media/authenticate-playbooks-to-sentinel/auth-methods-msi-choice.png)
+        ![Screenshot of Microsoft Sentinel connector authentication options with Connect with managed identity selected.](../media/authenticate-playbooks-to-sentinel/auth-methods-msi-choice.png)
 
     1. Enter a name for this connection, select **System-assigned managed identity**, and then select **Create**.
 
-        ![Screenshot of the Connect with managed identity link.](../media/authenticate-playbooks-to-sentinel/auth-methods-msi.png)
+        ![Screenshot of the Microsoft Sentinel connector showing the connection name and system-assigned managed identity options.](../media/authenticate-playbooks-to-sentinel/auth-methods-msi.png)
 
     1. Select **Create** to finish creating your connection.
 
@@ -135,11 +136,11 @@ Create a service principal by registering a Microsoft Entra application. We reco
 
     1. If the connector is already enabled for an existing connection, select the **Change connection** link. For example:
 
-        ![Screenshot of the Change connection link.](../media/authenticate-playbooks-to-sentinel/change-connection.png)
+        ![Screenshot of the Microsoft Sentinel connector showing where to select Change connection to update the service principal authentication.](../media/authenticate-playbooks-to-sentinel/change-connection.png)
 
     1. In the resulting list of connections, select **Add new**, and then select **Connect with Service Principal**. For example:
 
-        ![Screenshot of the Service principal option selected.](../media/authenticate-playbooks-to-sentinel/auth-methods-spn-choice.png)
+        ![Screenshot of the Microsoft Sentinel connector authentication options with Connect with Service Principal selected as the authorization method.](../media/authenticate-playbooks-to-sentinel/auth-methods-spn-choice.png)
 
     1. Enter the required parameter values, which are available in the registered application's details page:
 
@@ -149,7 +150,7 @@ Create a service principal by registering a Microsoft Entra application. We reco
 
         For example:
 
-        ![Screenshot of the Connect with service principal parameters.](../media/authenticate-playbooks-to-sentinel/auth-methods-spn.png)
+        ![Screenshot of Microsoft Sentinel connector fields for service principal authentication, including tenant ID, client ID, and client secret.](../media/authenticate-playbooks-to-sentinel/auth-methods-spn.png)
 
     1. Select **Create** to finish creating your connection.
 
@@ -159,7 +160,7 @@ To make a connection as a Microsoft Entra user:
 
 1. In the Logic Apps designer, add a Microsoft Sentinel Logic Apps connector step. If the connector is already enabled for an existing connection, select the **Change connection** link. For example:
 
-    ![Screenshot of the Change connection link.](../media/authenticate-playbooks-to-sentinel/change-connection.png)
+    ![Screenshot of the connector configuration showing the Change connection link used to switch authentication settings.](../media/authenticate-playbooks-to-sentinel/change-connection.png)
 
 1. In the resulting list of connections, select **Add new**, and then select **Sign in**.
 

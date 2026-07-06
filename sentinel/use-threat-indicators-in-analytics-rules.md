@@ -2,10 +2,11 @@
 title: Use threat indicators in analytics rules
 titleSuffix: Microsoft Sentinel
 description: This article explains how to generate alerts and incidents with threat intelligence indicators in Microsoft Sentinel.
+ms.author: guywild
 author: guywi-ms
+ms.reviewer: yoninave
 ms.topic: how-to
 ms.date: 3/14/2024
-ms.author: guywild
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
@@ -84,7 +85,7 @@ In Microsoft Sentinel, the alerts generated from analytics rules also generate s
 
 In this article, you learned how to use threat intelligence indicators to detect threats. For more about threat intelligence in Microsoft Sentinel, see the following articles:
 
-- [Work with threat indicators in Microsoft Sentinel](work-with-threat-indicators.md).
+- [Work with threat indicators in Microsoft Sentinel](work-with-threat-indicators.md)
 - Connect Microsoft Sentinel to [STIX/TAXII threat intelligence feeds](./connect-threat-intelligence-taxii.md).
 - [Connect threat intelligence platforms](./connect-threat-intelligence-tip.md) to Microsoft Sentinel.
 - See which [TIP platforms, TAXII feeds, and enrichments](threat-intelligence-integration.md) can be readily integrated with Microsoft Sentinel.

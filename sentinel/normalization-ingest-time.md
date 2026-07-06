@@ -3,7 +3,6 @@ title: Ingest time normalization | Microsoft Docs
 description: This article explains how Microsoft Sentinel normalizes data at ingest
 ms.author: edbaynash
 author: EdB-MSFT
-ms.reviewer: ofshezaf
 ms.topic: concept-article
 ms.date: 12/28/2022
 
@@ -61,7 +60,7 @@ The stub parser presents a view to the calling query that adds to the ASIM nativ
 
 When using custom normalized tables, create your own stub parser to implement this functionality, and add it to the unifying parsers as discussed in [Manage Parsers](normalization-manage-parsers.md). Use the stub parser for the native table, such as the [DNS native table stub parser](https://github.com/Azure/Azure-Sentinel/blob/master/Parsers/ASimDns/Parsers/ASimDnsNative.yaml) and its [filtering counterpart](https://github.com/Azure/Azure-Sentinel/blob/master/Parsers/ASimDns/Parsers/vimDnsNative.yaml), as a starting point. If your table is semi-normalized, use the stub parser to perform the additional parsing and normalization needed.
 
-Learn more about writing parsers in [Developing ASIM parsers](normalization-develop-parsers.md).
+Learn more about writing parsers in [Developing ASIM parsers](isv/normalization-develop-parsers.md).
 
 ## Implementing ingest time normalization
  
@@ -70,9 +69,7 @@ To normalize data at ingest, you need to use a [Data Collection Rule (DCR)](/azu
 A [KQL](/kusto/query/?view=microsoft-sentinel&toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json) transformation query is the core of a DCR. The KQL version used in DCRs is slightly different than the version used elsewhere in Microsoft Sentinel to accommodate for requirements of pipeline event processing. Therefore, you need to modify any query-time parser to use it in a DCR. For more information on the differences, and how to convert a query-time parser to an ingest-time parser, read about the [DCR KQL limitations](/azure/azure-monitor/essentials/data-collection-transformations-structure#kql-limitations).
 
 
-## <a name="next-steps"></a>Next steps
-
-For more information, see:
+## Related content
 
 - [Normalization and the Advanced Security Information Model (ASIM)](normalization.md)
 - [Advanced Security Information Model (ASIM) parsers](normalization-parsers-overview.md)

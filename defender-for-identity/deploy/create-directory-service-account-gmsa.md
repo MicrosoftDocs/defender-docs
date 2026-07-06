@@ -1,16 +1,23 @@
 ---
 title: Configure a gMSA directory service account for Defender for Identity
 description: Create and configure a group managed service account (gMSA) for use as the Directory service account in Microsoft Defender for Identity.
-ms.date: 10/12/2025
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Configure a gMSA directory service account for Defender for Identity
 
-This article describes how to create a [group managed service account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) to use as a Microsoft Defender for Identity directory service account entry.
+Create and configure a [group managed service account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) for the sensor v2.x to use when reading Active Directory data (querying objects, tracking changes, resolving entities). This is separate from the [action account](manage-action-accounts.md) used to perform remediation actions like disabling users or resetting passwords.
+
+> [!IMPORTANT]
+> This configuration applies to the sensor v2.x only. The sensor v3.x uses LocalSystem for all AD interactions and doesn't require a gMSA or any other Directory Service Account. If all your sensors are v3.x, skip this page.
 
 ## Prerequisites
+
+Before you create the gMSA account, make sure the following prerequisites are met:
 
 - Make sure you have permissions to create gMSAs and security groups in Active Directory.
 
@@ -30,7 +37,7 @@ This article describes how to create a [group managed service account (gMSA)](/w
 
 - In multi-forest or multi-domain environments, make sure the domain where you create the gMSA trusts the sensors’ computer accounts.
 
-- Create a universal group in each domain that includes all sensors computer accounts so that all sensors can retrieve the gMSAs' passwords, and perform the cross-domain authentications.
+- Create a universal group in each domain that contains sensor computer accounts so that all sensors can retrieve the gMSAs' passwords and perform cross-domain authentications.
 
 
 ## Create the gMSA account
@@ -105,6 +112,8 @@ If you see this alert, check to see if the *Log on as a service policy* is confi
 
 ### Check the Local Security Policy
 
+To verify the local policy assignment, perform the following steps:
+
 1. Run `secpol.msc` 
 1. Select **Local Policies** > **User Rights Assignment**
 1. Open the **Log on as a service policy** setting. 
@@ -114,6 +123,8 @@ If you see this alert, check to see if the *Log on as a service policy* is confi
 1. Once the policy is enabled, add the gMSA account to the list of accounts that can log on as a service.
 
 ### Check the Group Policy setting
+
+To verify whether Group Policy configures this setting, perform the following steps:
 
 1. Run `rsop.msc` 
 1. Go to **Computer Configuration -> Windows Settings -> Security Settings -> Local Policies -> User Rights Assignment -> Log on as a service.**
@@ -125,13 +136,14 @@ If you see this alert, check to see if the *Log on as a service policy* is confi
 > [!NOTE]
 > If you use the Group Policy Management Editor to configure the **Log on as a service** setting, make sure to add both **NT Service\All Services** and the gMSA account you created.
 
-## Configure a Directory service account in Microsoft Defender XDR
+<a name="configure-a-directory-service-account-in-microsoft-defender-portal"></a>
+## Configure a directory service account in the Microsoft Defender portal
 
-To connect your sensors with your Active Directory domains, configure Directory service accounts in Microsoft Defender XDR.
+To connect your sensors with your Active Directory domains, configure Directory service accounts in Microsoft Defender portal.
 
-1. In [Microsoft Defender XDR](https://security.microsoft.com/), go to **Settings > Identities**.
+1. In [Microsoft Defender portal](https://security.microsoft.com/), go to **Settings > Identities**.
 
-    :::image type="content" source="../media/settings-identities.png" alt-text="Screenshot that shows the settings page and how to access the Defender for Identity page." lightbox="../media/settings-identities.png":::
+    :::image type="content" source="../media/detect-exclusions/settings-identities.png" alt-text="Screenshot that shows the settings page and how to access the Defender for Identity page." lightbox="../media/detect-exclusions/settings-identities.png":::
 
 1. Select **Directory service accounts** to see which accounts are associated with which domains. 
 

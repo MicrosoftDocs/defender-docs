@@ -1,21 +1,23 @@
 ---
 title: Collect logs from text files with the Azure Monitor Agent and ingest to Microsoft Sentinel - AMA
 description: Collect text file-based logs from network or security applications installed on Windows- or Linux-based machines, using the Custom Logs via AMA data connector based on the Azure Monitor Agent (AMA).
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
-ms.custom: linux-related-content
-ms.date: 08/06/2024
+ms.custom: linux-related-content, msecd-doc-authoring-1014
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+ai-usage: ai-assisted
 #Customer intent: As a security engineer, I want to ingest and filter text file-based logs from network or security applications installed on Windows- or Linux-based machines to my Microsoft Sentinel workspace, so that analysts can monitor activity on these systems and detect security threats.
 ---
 
 # Collect logs from text files with the Azure Monitor Agent and ingest to Microsoft Sentinel
 
-This article describes how to use the **Custom Logs via AMA** connector to quickly filter and ingest logs in text-file format from network or security applications installed on Windows or Linux machines.
+This article describes how to use the **Custom Logs via AMA** connector to quickly filter and ingest logs in text-file format from network or security applications installed on Windows or Linux machines. Before you configure the connector, review the [Prerequisites](#prerequisites) section for required permissions, supported machines, and agent installation requirements.
 
 Many applications log data to text files instead of standard logging services like Windows Event log or Syslog. You can use the Azure Monitor Agent (AMA) to collect data in text files of nonstandard formats from both Windows and Linux computers. The AMA can also effect transformations on the data at the time of collection, to parse it into different fields.
 
@@ -30,7 +32,7 @@ For more general information about ingesting custom logs from text files, see [C
 
 ## Prerequisites
 
-Before you begin, you must have the resources configured and the appropriate permissions assigned, as described in this section. 
+Before configuring the Custom Logs via AMA connector, make sure the following resources and permissions are in place. 
 
 ### Microsoft Sentinel prerequisites
 
@@ -62,7 +64,7 @@ Certain custom applications are hosted on closed appliances that necessitate sen
 
 - The log forwarder must have either the `syslog-ng` or `rsyslog` daemon enabled.
 
-- For space requirements for your log forwarder, refer to the [Azure Monitor Agent Performance Benchmark](/azure/azure-monitor/agents/azure-monitor-agent-performance). You can also review [this blog post](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/designs-for-accomplishing-microsoft-sentinel-scalable-ingestion/ba-p/3741516), which includes designs for scalable ingestion.
+- For space requirements for your log forwarder, refer to the [Azure Monitor Agent Performance Benchmark](/azure/azure-monitor/agents/azure-monitor-agent-performance). You can also review [Designs for accomplishing Microsoft Sentinel scalable ingestion](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/designs-for-accomplishing-microsoft-sentinel-scalable-ingestion/ba-p/3741516).
 
 - Your log sources, security devices, and appliances must be configured to send their log messages to the log forwarder's syslog daemon instead of to their local syslog daemon.
 
@@ -123,7 +125,7 @@ To get started, open either the **Custom Logs via AMA** data connector in Micros
 
 ### Define VM resources
 
-In the **Resources** tab, select the machines from which you want to collect the logs. These are either the machines on which your application is installed, or your log forwarder machines. If the machine you're looking for doesn't appear in the list, it might not be an Azure VM with the Azure Connected Machine agent installed.
+In the **Resources** tab, select the machines from which you want to collect the logs. These are either the machines on which your application is installed, or your log forwarder machines. If the machine you're looking for doesn't appear in the list, the machine might not be an Azure VM with the Azure Connected Machine agent installed.
 
 1. Use the available filters or search box to find the machine you're looking for. Expand a subscription in the list to see its resource groups, and a resource group to see its VMs.
 
@@ -145,7 +147,7 @@ In the **Resources** tab, select the machines from which you want to collect the
 
 1. In the **Transform** field, if you chose a custom new table in step 1, enter a Kusto query that applies a transformation of your choice to the data.
 
-    If you chose one of the listed applications or devices in step 1, this field is automatically populated with the proper transformation. DO NOT edit the transformation that appears there. Depending on the chosen type, this value should be one of the following:  
+    If you chose one of the listed applications or devices in step 1, the **Transform** field is automatically populated with the proper transformation. DO NOT edit the transformation that appears there. Depending on the chosen type, this value should be one of the following:  
     - `source` (the default&mdash;no transformation)
     - `source | project-rename Message=RawData` (for devices that send logs to a forwarder)
 
@@ -169,7 +171,7 @@ After you complete all the tabs, review what you entered and create the data col
 
 ### Install the Azure Monitor Agent
 
-Follow the appropriate instructions from the Azure Monitor documentation to install the Azure Monitor Agent on the machine hosting your application, or on your log forwarder. Use the instructions for Windows or for Linux, as appropriate.
+Follow the appropriate instructions from the Azure Monitor documentation to install the Azure Monitor Agent on the machine hosting your application, or on your log forwarder. Use the Windows instructions if the machine runs Windows, or the Linux instructions if it runs Linux.
 - [Install the AMA using PowerShell](/azure/azure-monitor/agents/azure-monitor-agent-manage?tabs=azure-powershell)
 - [Install the AMA using the Azure CLI](/azure/azure-monitor/agents/azure-monitor-agent-manage?tabs=azure-cli)
 - [Install the AMA using an Azure Resource Manager template](/azure/azure-monitor/agents/azure-monitor-agent-manage?tabs=azure-resource-manager)
@@ -178,7 +180,7 @@ Create Data Collection Rules (DCRs) using the [Azure Monitor Logs Ingestion API]
 
 ### Create the data collection rule
 
-Use the following ARM template to create or modify a DCR for collecting text log files:
+Use the following ARM template to create or modify a data collection rule (DCR) for collecting text log files:
 
 ```json
 {
@@ -246,7 +248,7 @@ Use the following ARM template to create or modify a DCR for collecting text log
 }
 ```
 
-Replace the {PLACE_HOLDER} values with the following values:
+Replace each placeholder enclosed in braces (for example, `{DCR_NAME}` and `{TABLE_NAME}`) with the appropriate value from the following table:
 
 | Placeholder | Value |
 | ----------- | ----- |
@@ -277,7 +279,7 @@ If you're collecting logs from an appliance using a log forwarder, configure the
 1. Sign in to the log forwarder machine where you just installed the AMA.
 
 1. Paste the command you copied in the last step to launch the installation script.  
-    The script configures the `rsyslog` or `syslog-ng` daemon to use the required protocol and restarts the daemon. The script opens port 514 to listen to incoming messages in both UDP and TCP protocols. To change this setting, refer to the syslog daemon configuration file according to the daemon type running on the machine:
+    The script configures the `rsyslog` or `syslog-ng` daemon to use the required protocol and restarts the daemon. The script opens port 514 to listen to incoming messages in both UDP and TCP protocols. To change the listening port or protocol configuration, refer to the syslog daemon configuration file according to the daemon type running on the machine:
     - Rsyslog: `/etc/rsyslog.conf`
     - Syslog-ng: `/etc/syslog-ng/syslog-ng.conf`
 
@@ -291,7 +293,7 @@ If you're collecting logs from an appliance using a log forwarder, configure the
 
 For specific instructions to configure your security application or appliance, see [Custom Logs via AMA data connector - Configure data ingestion to Microsoft Sentinel from specific applications](unified-connector-custom-device.md)
 
-Contact the solution provider for more information or where information is unavailable for the appliance or device.
+Contact the solution provider for more information, or if the product documentation doesn't include instructions for your appliance or device.
 
 ## Related content
 

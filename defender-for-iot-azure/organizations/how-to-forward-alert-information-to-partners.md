@@ -1,8 +1,10 @@
 ---
 title: Forward on-premises OT alert information to partners - Microsoft Defender for IoT
-description: Learn how to forward OT alert details from an OT sensor to partner services.
-ms.date: 01/01/2023
+description: Configure your OT sensor to forward alert details to partner services, syslog servers, email recipients, and other external destinations.
+ms.date: 06/12/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Forward on-premises OT alert information
@@ -61,21 +63,26 @@ This article describes how to configure your OT sensor to forward alerts to part
 
 ### Edit or delete forwarding rules on an OT sensor
 
+
+> [!WARNING]
+> Deleting a forwarding rule is irreversible.
+
 To edit or delete an existing rule:
 
 1. Sign into your OT sensor and select **Forwarding** on the left-hand menu.
 
 1. Select the options menu (**...**) for your rule, and then do one of the following:
 
-    - Select **Edit** and [update the fields as needed](#create-forwarding-rules-on-an-ot-sensor). When you're done, select **Save**.
+    - Select **Edit** and update the fields as needed. For field descriptions, see [Create forwarding rules on an OT sensor](#create-forwarding-rules-on-an-ot-sensor). When you're done, select **Save**.
 
     - Select **Delete** > **Yes** to confirm the deletion.
 
 ## Configure alert forwarding rule actions
 
-This section describes how to configure settings for supported forwarding rule actions on an OT sensor.
+The following action types are supported for OT sensor alert forwarding rules.
 
-### Email address action
+<a name="email-address-action"></a>
+### Configure the email address action
 
 Configure an **Email** action to forward alert data to the configured email address.
 
@@ -87,7 +94,8 @@ In the **Actions** area, enter the following details:
 |**Email**     | Enter the email address you want to forward the alerts to. Each rule supports a single email address.        |
 |**Timezone**    |  Select the time zone you want to use for the alert detection in the target system.  |
 
-### Syslog server actions
+<a name="syslog-server-actions"></a>
+### Configure syslog server actions
 
 Configure a Syslog server action to forward alert data to the selected type of Syslog server.
 
@@ -101,9 +109,11 @@ In the **Actions** area, enter the following details:
 | **Protocol** | Supported for text messages only. Select **TCP** or **UDP**. |
 | **Enable encryption** | Supported for CEF format only. Toggle on to configure a TLS encryption certificate file, key file, and passphrase. |
 
-The following sections describe the syslog output syntax for each format.
+For syslog output syntax details, see [Syslog text message output fields](#syslog-text-message-output-fields), [Syslog object output fields](#syslog-object-output-fields), [Syslog CEF output fields](#syslog-cef-output-fields), and [Syslog LEEF output fields](#syslog-leef-output-fields).
 
 #### Syslog text message output fields
+
+The following table describes the fields included in syslog text message output.
 
 | Name | Description |
 |--|--|
@@ -111,6 +121,8 @@ The following sections describe the syslog output syntax for each format.
 | Message | CyberX platform name: The sensor name.<br /> Microsoft Defender for IoT Alert: The title of the alert.<br /> Type: The type of the alert. Can be **Protocol Violation**, **Policy Violation**, **Malware**, **Anomaly**, or **Operational**.<br /> Severity: The severity of the alert. Can be **Warning**, **Minor**, **Major**, or **Critical**.<br /> Source: The source device name.<br /> Source IP: The source device IP address.<br /> Protocol (Optional): The detected source protocol.<br /> Address (Optional): Source protocol address.<br /> Destination: The destination device name.<br /> Destination IP: The IP address of the destination device.<br /> Protocol (Optional): The detected destination protocol.<br /> Address (Optional): The destination protocol address.<br /> Message: The message of the alert.<br /> Alert group: The alert group associated with the alert. <br /> UUID (Optional): The UUID the alert. |
 
 #### Syslog object output fields
+
+The following table lists the fields included in syslog object output.
 
 | Name | Description |
 |--|--|
@@ -121,6 +133,8 @@ The following sections describe the syslog output syntax for each format.
 
 #### Syslog CEF output fields
 
+The following table describes the fields included in syslog CEF output.
+
 | Name | Description |
 |--|--|
 | Priority | `User.Alert` |
@@ -130,6 +144,8 @@ The following sections describe the syslog output syntax for each format.
 
 #### Syslog LEEF output fields
 
+The following table describes the fields included in syslog LEEF output.
+
 | Name | Description |
 |--|--|
 | Priority | `User.Alert` |
@@ -137,7 +153,8 @@ The following sections describe the syslog output syntax for each format.
 | Hostname | Sensor IP |
 | Message | Sensor name: The name of the Microsoft Defender for IoT appliance. <br />*LEEF:1.0* <br />Microsoft Defender for IoT <br />Sensor  <br />Sensor version <br />Microsoft Defender for IoT Alert <br />title: The title of the alert. <br />msg: The message of the alert. <br />protocol: The protocol of the alert.<br />severity: **Warning**, **Minor**, **Major**, or **Critical**. <br />type: The type of the alert: **Protocol Violation**, **Policy Violation**, **Malware**, **Anomaly**, or **Operational**. <br />start: The time of the alert. It might be different from the time of the syslog server machine, and depends on the time-zone configuration. <br />src_ip: IP address of the source device.<br />dst_ip: IP address of the destination device. <br />cat: The alert group associated with the alert. |
 
-### NetWitness action
+<a name="netwitness-action"></a>
+### Configure the NetWitness action
 
 Configure a **NetWitness** action to send alert information to a NetWitness server.
 
@@ -217,7 +234,7 @@ If your forwarding alert rules aren't working as expected, check the following d
 
 - **Certificate validation**. Forwarding rules for [Syslog CEF](#syslog-server-actions), [Microsoft Sentinel](integrate-overview.md#microsoft-sentinel), and [QRadar](tutorial-qradar.md) support encryption and certificate validation.
 
-    If your OT sensors are configured to [validate certificates](ot-deploy/create-ssl-certificates.md#verify-crl-server-access) and the certificate can't be verified, the alerts aren't forwarded.
+    If your OT sensors are configured to [verify CRL server access for SSL certificates](ot-deploy/create-ssl-certificates.md#verify-crl-server-access) and the certificate can't be verified, the alerts aren't forwarded.
 
     In these cases, the sensor is the session's client and initiator. Certificates are typically received from the server or use asymmetric encryption, where a specific certificate is provided to set up the integration.
 

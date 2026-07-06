@@ -2,16 +2,18 @@
 title: Add threat intelligence in bulk by file
 titleSuffix: Microsoft Sentinel
 description: Learn how to add threat intelligence in bulk from flat files like .csv or .json into Microsoft Sentinel. 
+ms.author: pauloliveria 
 author: poliveria  
+ms.reviewer: yoninave
 ms.service: microsoft-sentinel
 ms.topic: how-to
-ms.date: 10/23/2025
-ms.author: pauloliveria 
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 
 #Customer intent: As a security analyst, I want to import threat intelligence in bulk from CSV or JSON files so that I can quickly integrate and analyze emerging threats within Microsoft Sentinel.
@@ -60,17 +62,19 @@ Add multiple threat intelligence objects with a specially crafted CSV or JSON fi
 
 1. After you choose a bulk upload template, select the **Download template** link.
 
-1. Consider grouping your threat intelligence by source because each file upload requires one.
+1. Consider grouping your threat intelligence by source because each file upload requires a source.
 
 The templates provide all the fields you need to create a single valid indicator, including required fields and validation parameters. Replicate that structure to populate more indicators in one file, or add STIX objects to the JSON file. For more information on the templates, see [Understand the import templates](indicators-bulk-file-import.md#understand-the-import-templates).
 
 ## Upload the threat intelligence file
 
+Upload your prepared CSV or JSON file and provide the source details for the import.
+
 1. Change the file name from the template default, but keep the file extension as .csv or .json. When you create a unique file name, it's easier to monitor your imports from the **Manage file imports** pane. 
 
 1. Drag your bulk threat intelligence file to the **Upload a file** section, or browse for the file by using the link.
 
-1. Enter a source for the threat intelligence in the **Source** text box. This value is stamped on all the indicators included in that file. View this property as the `SourceSystem` field. The source is also displayed in the **Manage file imports** pane. For more information, see [Work with threat indicators](work-with-threat-indicators.md#find-and-view-threat-intelligence-with-queries). 
+1. Enter a source for the threat intelligence in the **Source** text box. The source value is stamped on all the indicators included in that file. View this property as the `SourceSystem` field. The source value is also displayed in the **Manage file imports** pane. For more information, see [Work with threat indicators](work-with-threat-indicators.md#find-and-view-threat-intelligence-with-queries). 
 
 1. Choose how you want Microsoft Sentinel to handle invalid entries by selecting one of the buttons at the bottom of the **Import using a file** pane:
 
@@ -101,7 +105,7 @@ Microsoft Sentinel maintains the status of the file import for 30 days. The actu
 
 ## Understand the import templates
 
-Review each template to ensure that your threat intelligence is imported successfully. Be sure to reference the instructions in the template file and the following supplemental guidance.
+Review each template to ensure that your threat intelligence is imported successfully. Be sure to reference the instructions in the template file and the supplemental guidance in the [CSV template structure](#csv-template-structure) and [JSON template structure](#json-template-structure) sections.
 
 ### CSV template structure
 
@@ -109,7 +113,7 @@ Review each template to ensure that your threat intelligence is imported success
 
     The CSV template needs multiple columns to accommodate the file indicator type because file indicators can have multiple hash types like MD5 and SHA256. All other indicator types like IP addresses only require the observable type and the observable value.
 
-1. The column headings for the CSV **All other indicator types** template include fields such as `threatTypes`, single or multiple `tags`, `confidence`, and `tlpLevel`. Traffic Light Protocol (TLP) is a sensitivity designation to help make decisions on threat intelligence sharing.
+1. The column headings for the CSV **All other indicator types** template include fields such as `threatTypes`, single or multiple `tags`, `confidence`, and `tlpLevel`. The `tlpLevel` field sets the Traffic Light Protocol (TLP) level, which is a sensitivity designation to help make decisions on threat intelligence sharing.
 
 1. Only the `validFrom`, `observableType`, and `observableValue` fields are required.
 
