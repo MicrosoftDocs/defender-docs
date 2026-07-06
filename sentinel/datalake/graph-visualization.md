@@ -119,6 +119,8 @@ You can share your query results by selecting **Share query**. From this dropdow
 * **Copy link to code**: produces and copies a shareable URL link and the query code content. 
 * **Copy graph results**: produces and copies a shareable URL link that automatically runs the query to generate the graph, as well as the query code content and a screenshot of the produced graph. 
 
+You can also create direct links to your graph queries that will open your graph page with the query prefilled and optionally run the query. For more information, see [Create deep links to Microsoft Sentinel graph queries](create-deep-links-graph-queries.md).
+
 
 ## Table view
 
@@ -190,3 +192,4 @@ Select the zoom to fit option to reposition your graph so that all nodes are vis
 - [Custom graphs in Microsoft Sentinel](custom-graphs-overview.md)
 - [Create custom graphs in Microsoft Sentinel](create-custom-graphs.md)
 - [GQL reference for Microsoft Sentinel graph](gql-reference-for-sentinel-custom-graph.md)
+- [Create deep links to Microsoft Sentinel graph queries](create-deep-links-graph-queries.md)
