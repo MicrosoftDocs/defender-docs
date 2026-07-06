@@ -1,14 +1,14 @@
 ---
-title: Microsoft Defender for IoT license overview information and trial license extension - Microsoft Defender for IoT 
-description: Learn about the Defender for IoT license and trial license options and details.
+title: Microsoft Defender for IoT license overview - Microsoft Defender for IoT 
+description: Learn about the Defender for IoT license options and details.
 ms.topic: concept-article
-ms.date: 11/17/2024
+ms.date: 05/31/2026
 ms.custom: enterprise-iot
 ---
 
 # Defender for IoT licenses overview
 
-This article provides an overview about the Microsoft Defender for IoT license and trial license. It also explains how to extend the trial period, if needed, and continue the Proof of Concept (POC) to further explore the value of Defender for IoT.
+This article provides an overview about the Microsoft Defender for IoT license. It also explains how to purchase and manage your license to use Defender for IoT.
 
 ## The Defender for IoT license
 
@@ -44,24 +44,9 @@ Tenants without an active site license have a 30-day grace period from the last 
 
 The legacy ACR license can be migrated to the new Microsoft 365 license. For more information, see [migrate from a legacy OT plan](how-to-manage-subscriptions.md#migrate-from-a-legacy-ot-plan).
 
-## Trial license extension
+## Government license customers
 
-A trial license covers a site with up to 1,000 devices for a minimum of 30 days. To start a trial license, see [start a Microsoft Defender for IoT trial](getting-started.md).
-
-During the period of the trial license Defender for IoT gives full security value to all of the devices connected to the site, even if there are more than 1000 devices.
-
-To extend your trial license, see [extend a trial license in the Admin center](how-to-manage-subscriptions.md#extend-a-trial-license-in-the-admin-center).
-
-To purchase a full Defender for IoT license at the end of the trial period, see [purchase a Defender for IoT license](how-to-manage-subscriptions.md#purchase-a-defender-for-iot-license).
-
->[!NOTE]
->
->A trial license can be extended by the customer up until 15 days before the end of the trial using the [Microsoft 365 Admin Center](https://admin.microsoft.com/Adminportal/Home?#/homepage).
->
-
-### Government license customers
-
-For Government Community Cloud (GCC), Government Community Cloud High (GCC-H) and U.S. Department of Defense (DoD) customers who want to activate the trial, see [government customers trial license extension](getting-started.md#government-customers-trial-license).
+For Government Community Cloud (GCC), Government Community Cloud High (GCC-H) and U.S. Department of Defense (DoD) customers who need licensing assistance, contact the Microsoft sales team.
 
 ## Next steps
 

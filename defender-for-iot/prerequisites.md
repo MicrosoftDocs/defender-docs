@@ -13,11 +13,11 @@ ms.topic: get-started
 
 Microsoft Defender for IoT in the Microsoft Defender portal monitors and secures network traffic across your operational technology (OT) networks and allows you to analyze OT data, generate alerts, identify network risks, and more.
 
-To see how Defender for IoT can help and protect your network sign up to a free trial version. This article describes the prerequisites needed to set up a trial license for Microsoft Defender for IoT.
+This article describes the prerequisites needed to set up a license for Microsoft Defender for IoT.
 
 [!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 
-## Prerequisites for a trial license
+## Prerequisites for a license
 
 Before you start, you need:
 
