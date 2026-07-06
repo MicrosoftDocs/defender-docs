@@ -16,7 +16,8 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/28/2025
+ms.date: 07/03/2026
+ai-usage: ai-assisted
 ---
 
 # EmailUrlInfo
@@ -40,6 +41,8 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `Url` | `string` | Full URL in the email subject, body, or attachment |
 | `UrlDomain` | `string` | Domain name or host name of the URL |
 | `UrlLocation` | `string` | Indicates which part of the email the URL is located |
+| `UrlChainId` | `string` | Unique identifier of the entire URL chain |
+| `UrlChainPosition` | `int` | Position of the URL in the URL chain relative to the root URL, which is assigned 0 |
 | `ReportId` | `string` | Event identifier based on a repeating counter. To identify unique events, this column must be used in conjunction with the DeviceName and Timestamp columns |
 
 > [!TIP] 
