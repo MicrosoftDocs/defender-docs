@@ -1,6 +1,21 @@
 {
   "redirections": [
     {
+      "source_path": "defender-for-cloud-apps/ai-agent-inventory.md",
+      "redirect_url": "/defender-xdr/security-for-ai/ai-agent-inventory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-cloud-apps/ai-agent-protection.md",
+      "redirect_url": "/defender-xdr/security-for-ai/defender-security-for-ai",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-cloud-apps/real-time-agent-protection-during-runtime.md",
+      "redirect_url": "/defender-xdr/security-for-ai/ai-agent-real-time-protection",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-for-cloud-apps/lifecycle-management.md",
       "redirect_url": "/defender-cloud-apps/ops-guide/ops-guide",
       "redirect_document_id": false
