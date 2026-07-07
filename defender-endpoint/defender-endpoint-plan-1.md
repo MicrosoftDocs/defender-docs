@@ -11,7 +11,7 @@ ms.date: 05/02/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
 ms.reviewer: shlomiakirav
-ms.collection: 
+ms.collection:
 - m365-security
 - tier1
 ms.custom: intro-overview
@@ -19,10 +19,9 @@ ms.custom: intro-overview
 
 # Overview of Microsoft Defender for Endpoint Plan 1
 
+Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help organizations to prevent, detect, investigate, and respond to advanced threats. Defender for Endpoint is now available in two plans:
 
-Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help organizations to prevent, detect, investigate, and respond to advanced threats. Defender for Endpoint is now available in two plans: 
-
-- **Defender for Endpoint Plan 1**, described in this article; and 
+- **Defender for Endpoint Plan 1**, described in this article; and
 - **[Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)**, generally available, and formerly known as [Defender for Endpoint](microsoft-defender-endpoint.md).
 
 The green boxes in the following image depict what's included in Defender for Endpoint Plan 1:
@@ -47,15 +46,15 @@ Defender for Endpoint Plan 1 includes the following capabilities:
 - **[Attack surface reduction capabilities](#attack-surface-reduction)** that harden devices, prevent zero-day attacks, and offer granular control over endpoint access and behaviors
 - **[Centralized configuration and management](#centralized-management)** with the Microsoft Defender portal and integration with Microsoft Intune
 
-The following sections provide more details about these capabilities. 
+The following sections provide more details about these capabilities.
 
 ## Next-generation protection
 
-Next-generation protection includes robust antivirus and antimalware protection. With next-generation protection, you get: 
+Next-generation protection includes robust antivirus and antimalware protection. With next-generation protection, you get:
 
-- Behavior-based, heuristic, and real-time antivirus protection 
-- Cloud-delivered protection, which includes near-instant detection and blocking of new and emerging threats 
-- Dedicated protection and product updates, including updates related to Microsoft Defender Antivirus 
+- Behavior-based, heuristic, and real-time antivirus protection
+- Cloud-delivered protection, which includes near-instant detection and blocking of new and emerging threats
+- Dedicated protection and product updates, including updates related to Microsoft Defender Antivirus
 
 To learn more, see [Next-generation protection overview](next-generation-protection.md).
 
@@ -102,7 +101,7 @@ To learn more, see [Controlled folder access (CFA) overview](controlled-folder-a
 
 ### Device control
 
-Sometimes threats to your organization's devices come in the form of files on removable drives, such as USB drives. Defender for Endpoint includes capabilities to help prevent threats from unauthorized peripherals from compromising your devices. You can configure Defender for Endpoint to block or allow removable devices and files on removable devices. 
+Sometimes threats to your organization's devices come in the form of files on removable drives, such as USB drives. Defender for Endpoint includes capabilities to help prevent threats from unauthorized peripherals from compromising your devices. You can configure Defender for Endpoint to block or allow removable devices and files on removable devices.
 
 To learn more, see [Control USB devices and removable media](device-control-overview.md).
 
@@ -117,7 +116,7 @@ To learn more, see [web protection](web-protection-overview.md).
 
 ### Network protection
 
-With network protection, you can prevent your organization from accessing dangerous domains that might host phishing scams, exploits, and other malicious content on the Internet. 
+With network protection, you can prevent your organization from accessing dangerous domains that might host phishing scams, exploits, and other malicious content on the Internet.
 
 To learn more, see [Protect your network](network-protection.md).
 
@@ -145,7 +144,7 @@ To learn more, see [Microsoft Defender portal overview](/defender-xdr/microsoft-
 
 ### Role-based access control
 
-Using role-based access control (RBAC), your security administrator can create roles and groups to grant appropriate access to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). With RBAC, you have fine-grained control over who can access the Defender for Cloud, and what they can see and do. 
+Using role-based access control (RBAC), your security administrator can create roles and groups to grant appropriate access to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). With RBAC, you have fine-grained control over who can access the Defender for Cloud, and what they can see and do.
 
 To learn more, see [Manage portal access using role-based access control](rbac.md).
 
@@ -155,20 +154,20 @@ To learn more, see [Manage portal access using role-based access control](rbac.m
 
 ### Reporting
 
-The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) provides easy access to information about detected threats and actions to address those threats. 
+The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) provides easy access to information about detected threats and actions to address those threats.
 
 - The **Home** page includes cards to show at a glance which users or devices are at risk, how many threats were detected, and what alerts/incidents were created.
 - The **Incidents & alerts** section lists any incidents that were created as a result of triggered alerts. Alerts and incidents are generated as threats are detected across devices.
 - The **Action center** lists remediation actions that were taken. For example, if a file is sent to quarantine, or a URL is blocked, each action is listed in the Action center on the **History** tab.
-- The **Reports** section includes reports that show threats detected and their status. 
+- The **Reports** section includes reports that show threats detected and their status.
 
 To learn more, see [Get started with Microsoft Defender for Endpoint Plan 1](mde-plan1-getting-started.md).
 
 ### APIs
 
-With the Defender for Endpoint APIs, you can automate workflows and integrate with your organization's custom solutions. 
+With the Defender for Endpoint APIs, you can automate workflows and integrate with your organization's custom solutions.
 
-To learn more, see [Defender for Endpoint APIs](api/management-apis.md). 
+To learn more, see [Defender for Endpoint APIs](api/management-apis.md).
 
 ## Next steps
 
