@@ -10,7 +10,7 @@ ms.collection:
 ms.custom: msecd-doc-authoring-1012
 description: Diagnose and resolve anti-spam policy issues including policy precedence conflicts, SCL override behavior, and false positives from ASF settings in Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 05/21/2026
+ms.date: 07/071/2026
 ai-usage: ai-assisted
 #customer intent: As an admin, I want to troubleshoot anti-spam policy issues so that I can resolve policy precedence conflicts, unexpected SCL overrides, and ASF false positives.
 appliesto:
@@ -29,6 +29,14 @@ Use the following information to diagnose and resolve common anti-spam policy is
 - Unexpected SCL overrides.
 - False positives from Advanced Spam Filter (ASF) settings.
 
+> [!TIP]
+> **Email Threat Policies diagnostics for a recipient**
+>
+> List threat policies in [the built-in security features for all cloud mailboxes](eop-about.md) and in [Microsoft Defender for Office 365](defender-office-365/mdo-about.md) that apply to a received message or a recipient, and identify the inbound connector used for the message.
+>
+> - [Run Tests: Email Threat Policies](https://aka.ms/mdopolicy)
+> - [Order and precedence of email protection](how-policies-and-protections-are-combined.md)
+  
 ## Policy precedence issues
 
 Anti-spam policies are evaluated in a specific order. Only the **first matching policy** (highest priority) applies to a recipient. This order matters when multiple policies exist. Anti-spam policies are processed in the following order:
@@ -377,7 +385,7 @@ The following examples show how to interpret message headers to identify which c
 [Advanced Spam Filter (ASF) settings](anti-spam-policies-asf-settings-about.md) mark messages as spam based on specific message properties. While these settings target characteristics commonly found in spam, they can cause **false positives** when legitimate messages contain the same properties.
 
 > [!NOTE]
-> Enabling one or more ASF settings is an **aggressive** approach to spam filtering. You can't report messages that ASF settings flag as false positives to Microsoft. Microsoft is deprecating ASF settings and incorporating the features into other parts of the filtering stack.
+> Enabling one or more ASF settings is an **aggressive** approach to spam filtering. You can't report messages that ASF settings flag as false positives to Microsoft. Microsoft no longer recommends enabling ASF settings, since the capabilities are already covered by other layers of the filtering stack.
 
 The following tables identify ASF settings that commonly cause false positives and provide guidance on when to disable them.
 
