@@ -127,7 +127,7 @@ Defender for Cloud also includes a Data and AI security dashboard. This dashboar
 
 Microsoft Defender Experts for Servers is a managed detection and response service that adds Microsoft analyst expertise to your Defender for Servers deployment. Microsoft analysts and automation work together to detect, investigate, and respond to threats on Windows and Linux servers across Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and on-premises environments. Defender Experts for Servers is sold separately from Defender for Servers Plan 1 and Plan 2, and you opt in when you want Microsoft to operate detection and response on your behalf. To learn more, see [Microsoft Defender Experts for Servers](/defender-xdr/dex-servers-overview).
 
-## Learn More
+## Related content
 
 For more information about Defender for Cloud and how it works, see:
 

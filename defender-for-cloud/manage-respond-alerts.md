@@ -1,5 +1,5 @@
 ---
-title: Manage and respond to security alerts
+title: Manage and Respond to Security Alerts
 description: This document helps you to use Microsoft Defender for Cloud capabilities to manage and respond to security alerts.
 ms.date: 05/28/2026
 ms.topic: how-to
@@ -29,13 +29,13 @@ For prerequisites and requirements, see [Support matrices for Defender for Cloud
 
 Follow these steps:
 
-1.  Sign in to the [Azure portal](https://portal.azure.com/).
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-1.  Navigate to **Microsoft Defender for Cloud** > **Security alerts**.
+1. Navigate to **Microsoft Defender for Cloud** > **Security alerts**.
 
     :::image type="content" source="media/managing-and-responding-alerts/overview-page-alerts-links.png" alt-text="Screenshot that shows the security alerts page from Microsoft Defender for Cloud's overview page.":::
 
-1.  (Optional) Filter the alerts list with any of the relevant filters. You can add extra filters with the **Add filter** option.
+1. (Optional) Filter the alerts list with any of the relevant filters. You can add extra filters with the **Add filter** option.
 
     :::image type="content" source="./media/managing-and-responding-alerts/alerts-adding-filters-small.png" alt-text="Screenshot that shows you how to add filters to the alerts view." lightbox="./media/managing-and-responding-alerts/alerts-adding-filters-large.png":::
 
@@ -47,30 +47,30 @@ Each alert contains information regarding the alert that assists you in your inv
 
 **To investigate a security alert**:
 
-1.  Select an alert. A side pane opens and shows a description of the alert and all the affected resources.
+1. Select an alert. A side pane opens and shows a description of the alert and all the affected resources.
 
     :::image type="content" source="./media/managing-and-responding-alerts/alerts-details-pane.png" alt-text="Screenshot of the high-level details view of a security alert.":::
 
-1.  Review the high-level information about the security alert.
+1. Review the high-level information about the security alert.
 
-    -   Alert severity, status, and activity time
-    -   Description that explains the precise activity that was detected
-    -   Affected resources
-    -   Kill chain intent of the activity on the MITRE ATT&CK matrix (if applicable)
+    - Alert severity, status, and activity time
+    - Description that explains the precise activity that was detected
+    - Affected resources
+    - Kill chain intent of the activity on the MITRE ATT&CK matrix (if applicable)
 
-1.  Select **View full details**.
+1. Select **View full details**.
 
     The right pane includes the **Alert details** tab containing further details of the alert to help you investigate the issue: IP addresses, files, processes, and more.
 
     :::image type="content" source="./media/managing-and-responding-alerts/security-center-alert-remediate.png" alt-text="Screenshot that shows the full details page for an alert.":::
 
-    Also in the right pane is the **Take action** tab. Use this tab to take further actions regarding the security alert. Actions such as:
+    Also in the right pane is the **Take action** tab. Use this tab to take further actions regarding the security alert, such as:
 
-    -   *Inspect resource context* - sends you to the resource's activity logs that support the security alert
-    -   *Mitigate the threat* - provides manual remediation steps for this security alert
-    -   *Prevent future attacks* - provides security recommendations to help reduce the attack surface, increase security posture, and thus prevent future attacks
-    -   *Trigger automated response* - provides the option to trigger a logic app as a response to this security alert
-    -   *Suppress similar alerts* - provides the option to suppress future alerts with similar characteristics if the alert isn’t relevant for your organization
+    - **Inspect resource context**: Sends you to the resource's activity logs that support the security alert
+    - **Mitigate the threat**: Provides manual remediation steps for this security alert
+    - **Prevent future attacks**: Provides security recommendations to help reduce the attack surface, increase security posture, and thus prevent future attacks
+    - **Trigger automated response**: Provides the option to trigger a logic app as a response to this security alert
+    - **Suppress similar alerts**: Provides the option to suppress future alerts with similar characteristics if the alert isn’t relevant for your organization
 
     :::image type="content" source="./media/managing-and-responding-alerts/alert-take-action.png" alt-text="Screenshot that shows the options available in the Take action tab.":::
 
@@ -80,19 +80,19 @@ Each alert contains information regarding the alert that assists you in your inv
 
 The alerts list includes checkboxes so you can handle multiple alerts at once. For example, for triaging purposes you might decide to dismiss all informational alerts for a specific resource.
 
-1.  Filter according to the alerts you want to handle in bulk.
+1. Filter according to the alerts you want to handle in bulk.
 
     In this example, the alerts with severity of `Informational` for the resource `ASC-AKS-CLOUD-TALK` are selected.
 
     :::image type="content" source="media/managing-and-responding-alerts/processing-alerts-bulk-filter.png" alt-text="Screenshot that shows how to filter alerts to show related alerts.":::
 
-1.  Use the checkboxes to select the alerts to be processed.
+1. Use the checkboxes to select the alerts to be processed.
 
     In this example, all alerts are selected. The **Change status** button is now available.
 
     :::image type="content" source="media/managing-and-responding-alerts/processing-alerts-bulk-select.png" alt-text="Screenshot of selecting all alerts to handle in bulk.":::
 
-1.  Use the **Change status** options to set the desired status.
+1. Use the **Change status** options to set the desired status.
 
     :::image type="content" source="media/managing-and-responding-alerts/processing-alerts-bulk-change-status.png" alt-text="Screenshot of the security alerts status tab.":::
 
@@ -104,33 +104,33 @@ After investigating a security alert, you can respond to the alert from within M
 
 **To respond to a security alert**:
 
-1.  Open the **Take action** tab to see the recommended responses.
+1. Open the **Take action** tab to see the recommended responses.
 
     :::image type="content" source="./media/managing-and-responding-alerts/alert-details-take-action.png" alt-text="Screenshot of the security alerts take action tab." lightbox="./media/managing-and-responding-alerts/alert-details-take-action.png":::
 
-1.  Review the **Mitigate the threat** section for the manual investigation steps necessary to mitigate the issue.
+1. Review the **Mitigate the threat** section for the manual investigation steps necessary to mitigate the issue.
 
-1.  To harden your resources and prevent future attacks of this kind, remediate the security recommendations in the **Prevent future attacks** section.
+1. To harden your resources and prevent future attacks of this kind, remediate the security recommendations in the **Prevent future attacks** section.
 
-1.  To trigger a logic app with automated response steps, use the **Trigger automated response** section and select **Trigger logic app**.
+1. To trigger a logic app with automated response steps, use the **Trigger automated response** section and select **Trigger logic app**.
 
-1.  If the detected activity *isn’t* malicious, you can suppress future alerts of this kind using the **Suppress similar alerts** section and select **Create suppression rule**.
+1. If the detected activity *isn’t* malicious, you can suppress future alerts of this kind using the **Suppress similar alerts** section and select **Create suppression rule**.
 
-1.  Select **Configure email notification settings**, to view who receives emails regarding security alerts on this subscription. Contact the subscription owner, to configure the emails settings.
+1. Select **Configure email notification settings**, to view who receives emails regarding security alerts on this subscription. Contact the subscription owner, to configure the emails settings.
 
-1.  When you complete the investigation into the alert and responded in the appropriate way, change the status to **Dismissed**.
+1. When you complete the investigation into the alert and responded in the appropriate way, change the status to **Dismissed**.
 
     :::image type="content" source="./media/managing-and-responding-alerts/set-status-dismissed.png" alt-text="Screenshot of the alert's status drop down menu.":::
 
     The alert is removed from the main alerts list. You can use the filter from the alerts list page to view all alerts with **Dismissed** status.
 
-1.  We encourage you to provide feedback about the alert to Microsoft:
-    1.  Marking the alert as **Useful** or **Not useful**.
-    1.  Select a reason and add a comment.
+1. We encourage you to provide feedback about the alert to Microsoft:
+    1. Marking the alert as **Useful** or **Not useful**.
+    1. Select a reason and add a comment.
 
     :::image type="content" source="./media/managing-and-responding-alerts/alert-feedback.png" alt-text="Screenshot of the provide feedback to Microsoft window that allows you to select the usefulness of an alert.":::
 
-> [!Tip]
+> [!TIP]
 > We review your feedback to improve our algorithms and provide better security alerts.
 
 To learn about the different types of alerts, see [Security alerts - a reference guide](alerts-reference.md).
@@ -146,7 +146,7 @@ Results for both the agent-based and agentless scanner appear on the Security al
 > [!NOTE]
 > Remediating one of these alerts will not remediate the other alert until the next scan is completed.
 
-## Learn more
+## Related content
 
 - [Configure alert suppression rules](alerts-suppression-rules.md)
 - [Security alerts - a reference guide](alerts-reference.md)
@@ -155,4 +155,3 @@ Results for both the agent-based and agentless scanner appear on the Security al
 
 > [!div class="nextstepaction"]
 > [Automate responses to Defender for Cloud triggers](workflow-automations.md)
-

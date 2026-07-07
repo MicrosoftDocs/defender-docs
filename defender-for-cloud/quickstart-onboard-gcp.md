@@ -1,5 +1,5 @@
 ---
-title: Connect your GCP project
+title: Connect your GCP Project
 description: Connect your GCP project or organization to Microsoft Defender for Cloud to protect workloads and assess your security posture.
 ms.topic: install-set-up-deploy
 ms.date: 01/13/2026
@@ -93,7 +93,7 @@ Learn more about the [Google Cloud resource hierarchy](https://cloud.google.com/
 1. Select **Next: Select plans**.
 
     > [!NOTE]
-    > As the Log Analytics agent (also known as MMA) retired in [August 2024](https://azure.microsoft.com/updates/were-retiring-the-log-analytics-agent-in-azure-monitor-on-31-august-2024/), all Defender for Servers features and security capabilities that currently depend on it, including those described on this page, will be available through either [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) or [agentless scanning](concept-agentless-data-collection.md), before the retirement date. For more information about the roadmap for each of the features that are currently rely on Log Analytics Agent, see [this announcement](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation).
+    > As the Log Analytics agent (also known as MMA) retired in [August 2024](https://azure.microsoft.com/updates/were-retiring-the-log-analytics-agent-in-azure-monitor-on-31-august-2024/), all Defender for Servers features and security capabilities that currently depend on it, including those described on this page, will be available through either [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) or [agentless scanning](concept-agentless-data-collection.md), before the retirement date. For more information about the roadmap for each of the features that are currently rely on Log Analytics Agent, see [this article](prepare-deprecation-log-analytics-mma-agent.md).
 
 1. Choose the Defender plans you want to enable.
 
