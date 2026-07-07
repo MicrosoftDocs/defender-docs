@@ -1,5 +1,5 @@
 ---
-title: Connect your AWS account
+title: Connect your AWS Account
 description: Defend your AWS resources with Microsoft Defender for Cloud, a guide to set up and configure Defender for Cloud to protect your workloads in AWS.
 ms.topic: install-set-up-deploy
 ms.date: 06/04/2026
@@ -93,7 +93,6 @@ Region availability: All public AWS regions except Tel Aviv, Milan, Jakarta, Spa
 
 > [!NOTE]
 > The Log Analytics agent retired in [August 2024](https://azure.microsoft.com/updates/were-retiring-the-log-analytics-agent-in-azure-monitor-on-31-august-2024/). Features that depend on it are transitioning to [Defender for Endpoint integration](integration-defender-for-endpoint.md) or [agentless scanning](concept-agentless-data-collection.md).  
-> Learn more about [upcoming changes](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation).
 
 Defender for Servers assigns resource tags (`AccountId`, `Cloud`, `InstanceId`, `MDFCSecurityConnector`) to manage the autoprovisioning process.
 
@@ -341,7 +340,7 @@ AWS CloudTrail management event ingestion can enhance identity and configuration
 
 Learn more about [integrating AWS CloudTrail logs with Microsoft Defender for Cloud (Preview)](integrate-cloud-trail.md).
 
-## Learn more
+## Related content
 
 Check out the following blogs:
 

@@ -29,6 +29,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|iOS |1.1.78290102|July 2026|- Build: 1.1.78290102<br>- Release: July 3, 2026|[Release details and updates](#ios--july-2026--platform-version-1178290102)|
 |Android |1.0.9029.0101|June 2026|- Build: 1.0.9029.0101<br>- Release: June 30, 2026|[Release details and updates](#android--june-2026--platform-1090290101)| 
 |macOS |101.26042.0020  |June 2026 |- Release version: 20.126042.20.0<br>- Engine version: 1.1.26040.3000<br>- Signature version: 1.453.151.0 |[Release details and updates](#macos--june-2026--101260420020) |
 |Linux  |101.26042.0011  |June 2026 |- Release version: 30.126042.0011.0<br>- Engine version: 1.1.26060.7001<br>- Signature version: 1.453.406.0 |[Release details and updates](#linux--june-2026--101260420011). |
@@ -901,6 +902,21 @@ See the full list of [Android UX improvements](android-new-ux.md).
 ## iOS releases
 
 For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
+
+### iOS | July 2026 | Platform Version: 1.1.78290102
+
+#### Release details
+
+| Platform version | Release Date |
+| -------- | -------- |
+| 1.1.78290102| July 3, 2026 |
+
+#### Enhancements and features
+
+|__Feature Area__| __Update Summary__|
+| -------- | -------- |
+|Improvements|Performance improvements and general bug fixes.|
+|Feature|Improvement in compliance flow.|
 
 ### iOS | June 2026 | Platform Version: 1.1.78020101
 

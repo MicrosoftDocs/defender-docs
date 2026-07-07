@@ -1,5 +1,5 @@
 ---
-title: Data and AI security dashboard
+title: Data and AI Security Dashboard
 description: Discover the capabilities of the Data and AI Security Dashboard in Microsoft Defender for Cloud. Enhance your security posture and manage risks effectively.
 ms.topic: concept-article
 ms.date: 05/01/2025
@@ -33,7 +33,7 @@ The Data and AI security dashboard allows you to:
 >
 > You must also register each relevant Azure subscription to the [Microsoft.Security resource provider](/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider).
 >
->  You must also have the following:
+> You must also have the following:
 >
 > **Permissions**:
 > - Microsoft.Security/assessments/read
@@ -69,7 +69,7 @@ This section includes:
 - **Sensitive data discovery**: Provides an overview of sensitive findings, including the most common sensitive information types and sensitivity labels in cloud data resources.
 
     > [!TIP]
-    > Select **Manage Sensitivity Settings** to navigate to the Data Sensitivity page. The Data Sensitivity page allows you to [customize sensitivity settings](data-sensitivity-settings.md) for cloud resources at the tenant level. Sensitivity settings can be set based on selected information types and labels from the Purview compliance portal, including sensitivity label thresholds. For more information, see [Manage sensitivity settings](data-sensitivity-settings.md).
+    > Select **Manage Sensitivity Settings** to navigate to the Data Sensitivity page. The Data Sensitivity page allows you to [customize sensitivity settings](data-sensitivity-settings.md) for cloud resources at the tenant level. Sensitivity settings can be set based on selected information types and labels from the Purview compliance portal, including sensitivity label thresholds.
 
 - **Data threat protection**: Provides an overview of alerts detected in storage and managed database resources.
 
