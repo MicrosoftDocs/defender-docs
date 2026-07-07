@@ -40,6 +40,8 @@
        items:
        - name: Overview
          href: overview-data-connectors.md
+       - name: Getting value from your data connectors
+         href: value-data-connectors.md
        - name: Configure your data connectors
          href: configure-data-connectors.md
        - name: CMDB data connectors
@@ -60,8 +62,16 @@
              href: rapid7-data-connector.md
            - name: Tenable
              href: tenable-data-connector.md
-       - name: Getting value from your data connectors
-         href: value-data-connectors.md
+       - name: OT data connectors
+         items:
+           - name: Overview
+             href: ot-data-connectors.md
+           - name: Armis
+             href: armis-data-connector.md
+           - name: Dragos
+             href: dragos-data-connector.md
+           - name: Forescout
+             href: forescout-data-connector.md
     - name: Work with attack paths
       items:      
         - name: Overview

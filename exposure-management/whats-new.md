@@ -22,8 +22,18 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 >
 > `https://aka.ms/msem/rss`
 
-## June 2026
+## July 2026
 
+### OT data connectors in Microsoft Security Exposure Management
+
+Microsoft Security Exposure Management now supports operational technology (OT) data connectors for Armis, Dragos, and Forescout.
+
+OT data connectors bring OT asset and vulnerability data from supported third-party OT platforms into the Defender portal. This helps security teams view OT devices alongside other assets, enrich device inventory with OT context, and investigate vulnerabilities across IT and OT environments.
+
+For more information, see [OT data connectors](ot-data-connectors.md).
+
+## June 2026
+ 
 ### New predefined classifications for AI agents
 
 The following predefined **AI agent** classification rules were added to the critical assets list:
@@ -405,7 +415,7 @@ For more information on understanding data from external sources, see [Getting v
 
 ### OT security initiative
 
-The new Operational Technology (OT) security initiative equips practitioners with a powerful tool to identify, monitor, and mitigate risks across the OT environment, ensuring both operational reliability and safety. This initiative aims to identify devices across physical sites, assess their associated risks, and provide faster, more effective protection for OT systems.
+The new OT security initiative equips practitioners with a powerful tool to identify, monitor, and mitigate risks across the OT environment, ensuring both operational reliability and safety. This initiative aims to identify devices across physical sites, assess their associated risks, and provide faster, more effective protection for OT systems.
 
 For more information, see, [Review security initiatives](initiatives.md)
 
