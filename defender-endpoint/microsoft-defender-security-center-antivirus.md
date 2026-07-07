@@ -23,7 +23,6 @@ ai-usage: ai-assisted
 
 # Microsoft Defender Antivirus in the Windows Security app
 
-
 Beginning with Windows 10, version 1703 and later, Microsoft Defender Antivirus settings are viewable in the Windows Security app. See [Windows Security](/windows/security/operating-system-security/system-security/windows-defender-security-center/windows-defender-security-center) for more information about security features and settings that are built into Windows.
 
 > [!IMPORTANT]
@@ -119,6 +118,7 @@ To learn more, see the following resources:
 - [Configure exclusions for files opened by processes](./configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
 
 <a name="review-threat-detection-history-in-the-windows-defender-app"></a>
+
 ## Review threat detection history in the Windows Security app
 
 1. Open the Windows Security app by searching the start menu for *Security*, and then selecting **Windows Security**.
@@ -141,12 +141,6 @@ Use the following steps to configure ransomware protection and recovery options 
 
 1. To set up ransomware recovery options, select **Set up** under **Ransomware data recovery** and follow the instructions for linking or setting up your OneDrive account so you can easily recover from a ransomware attack.
 
-<a name="see-also"></a>
 ## Related content
 
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
-
-
-
-
-

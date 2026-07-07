@@ -52,6 +52,7 @@ Although you can use a non-Microsoft antivirus solution with Microsoft Defender 
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
+>
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
 > - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
@@ -65,5 +66,3 @@ Although you can use a non-Microsoft antivirus solution with Microsoft Defender 
 [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
 
 [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-
-

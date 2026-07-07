@@ -184,7 +184,7 @@ Or, if you used the minimal manual steps, do the following:
    Add-MpPreference -AttackSurfaceReductionRules_Ids C1DB55AB-C21A-4637-BB3F-A12568109D35 -AttackSurfaceReductionRules_Actions <Mode>
    ```
 
-Whichever method you used, the cleanup script doesn't delete the test files or remove the `c:\demo` Microsoft Defender Antivirus exclusion that the setup script (or the manual steps) added. To fully revert the changes:
+Whichever method you used, the cleanup script doesn't remove the `c:\demo` Microsoft Defender Antivirus exclusion that the setup script (or the manual steps) added. To fully revert the changes, do the following steps:
 
 1. Delete the `c:\demo` folder and the test files it contains. Do this step _before_ you remove the exclusion in the next step. Otherwise, when real-time protection resumes for the folder, Microsoft Defender Antivirus detects the leftover test files (such as the ransomware test file and the decryption tool) and quarantines them. Run the following command in an elevated PowerShell session:
 
