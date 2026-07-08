@@ -12,7 +12,7 @@ ms.collection:
 description: Learn how to view and manage quarantined messages sent to shared mailboxes in Microsoft Defender for Office 365, including permissions and access methods.
 #customer intent: As a user with Full Access to a shared mailbox, I want to view and manage quarantined messages sent to the shared mailbox so that I can release or delete them.
 ms.service: defender-office-365
-ms.date: 05/13/2026
+ms.date: 06/24/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -27,14 +27,16 @@ Users can manage quarantined messages where they're one of the recipients as des
 
 Previously, the ability for users to manage quarantined messages sent to a shared mailbox required admins to leave automapping enabled for the shared mailbox (it's enabled by default when an admin gives a user access to another mailbox). However, depending on the size and number of mailboxes that the user has access to, performance can suffer as Outlook tries to open _all_ mailboxes that the user has access to. For this reason, many admins choose to [remove automapping for shared mailboxes](/outlook/troubleshoot/profiles-and-accounts/remove-automapping-for-shared-mailbox).
 
-Now, automapping is no longer required for users to manage quarantined messages that were sent to shared mailboxes. There are two different methods to access quarantined messages that were sent to a shared mailbox:
+Automapping is no longer required for users to manage quarantined messages in shared mailboxes.
 
-- If the following statements are all true:
-  - An admin has configured [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy) to allow quarantine notifications (formerly known as end-user spam notifications).
-  - The user has access to quarantine notifications of the shared mailbox.
-  - The user has Full Access permissions to the shared mailbox (assigned directly or through a cloud-only security group).
+There are two methods to access quarantined messages:
 
-  The user can select **Review** in the notification to go to quarantine in the Microsoft Defender portal. This method only allows access to quarantined messages that were sent to the shared mailbox. Users can't manage their own quarantine messages in this context.
+- The user can select **Review** in quarantine notifications to go to quarantine in the Microsoft Defender portal if all of the following conditions are met:
+  - An admin has configured [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy) to allow quarantine notifications.
+  - The user has access to quarantine notifications for the mailbox.
+  - The user has Full Access permissions to the shared mailbox (assigned directly or through a cloud-only security group), or is the owner of the mailbox.
+
+   This method only allows access to quarantined messages that were sent to the shared mailbox. Users can't manage their own quarantine messages in this context.
 
 - The user can [go to quarantine in the Microsoft Defender portal](quarantine-end-user.md) and select **Filter** to filter the results by **Recipient address** (the email address of the shared mailbox). On the main **Quarantine** page, the user can select the **Recipient** column header to sort by messages that were sent to the shared mailbox.
 
