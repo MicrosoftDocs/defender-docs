@@ -156,6 +156,7 @@ When you validate upgrades or troubleshoot, the last two numbers in the version 
 
 |Version number|Updates|
 |---|---|
+|2.255.19243.47944|This sensor update includes bug fixes.|
 |2.255.19201.14651|This sensor update includes bug fixes.|
 
 ### Migrate Defender for Identity sensors from v2.x to v3.x
