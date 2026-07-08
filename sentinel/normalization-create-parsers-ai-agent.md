@@ -98,6 +98,10 @@ The `asim-parser-create-parameter-parser` skill creates a second version of the 
 
 After creation, the parameterized parser goes through the same validation and refinement loop described in the [Validation](#validation) and [Refinement loop](#refinement-loop) sections.
 
+### Parameterized filter validation
+
+The `asim-parser-filter-validator` skill verifies that the parameterized parser's filtering parameters behave correctly. It runs a PowerShell-based test suite against your Log Analytics workspace that checks each parameter declared in the parser's KQL function signature.
+
 ### Deployment or packaging
 
 After both parsers are validated, you choose what to do next:
@@ -129,6 +133,7 @@ We highly recommend submitting your parsers as a pull request to the [Azure-Sent
 
 - For more information about the skills, you can refer to the skills folder in the [Azure-Sentinel](https://github.com/Azure/Azure-Sentinel/tree/master/.github/skills) repository.
 - The [ASIM parser agent README](https://github.com/Azure/Azure-Sentinel/blob/master/ASIM/tools/ASIMParserCreation-Agentic/README.md) in the repository also provides troubleshooting guidance.
+- [Develop ASIM parsers](/azure/sentinel/normalization-develop-parsers) provides detailed guidance on manually developing and testing ASIM parsers.
 
 ## Getting Help
 
