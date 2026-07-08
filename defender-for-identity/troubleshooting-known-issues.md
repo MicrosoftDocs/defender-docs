@@ -84,7 +84,7 @@ connection failed because connected host has failed to respond...
 
 **Resolution:**
 
-Make sure that communication isn't blocked for localhost, TCP port 444. To learn more about Microsoft Defender for Identity prerequisites, see [ports](prerequisites.md#required-ports).
+Make sure that communication isn't blocked for localhost, TCP port 443. To learn more about Microsoft Defender for Identity prerequisites, see [ports](deploy/prerequisites-sensor-version-2.md#required-ports).
 
 ## Deployment log location
 
