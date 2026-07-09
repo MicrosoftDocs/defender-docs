@@ -348,6 +348,11 @@ The following limitations apply to live response sessions and commands.
   - `fileinfo` limit: 30 GB
   - `library` limit: 250 MB
 
+  > [!NOTE]
+  > Successful completion of a getfile operation depends on both file size and available network throughput.  
+  > In low-bandwidth environments, a file transfer might not complete before the command timeout is reached, even when the file is within the supported size limit.  
+  > If necessary, split large files into smaller parts and download them separately.
+
 ## Related article
 
 For more examples, see the following article.
