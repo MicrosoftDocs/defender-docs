@@ -287,6 +287,9 @@ For more information, see:
 
 Defender for Cloud Apps file policies and alerts allow you to enforce a wide range of automated processes. Create policies to provide information protection, including continuous compliance scans, legal eDiscovery tasks, and data loss protection (DLP) for sensitive content shared publicly.
 
+> [!IMPORTANT]
+> File policies retire on January 6, 2027. To maintain file-based data protection, [migrate to Microsoft Purview DLP or auto-labeling policies](../migrate-file-policies-to-purview.md).
+
 In addition to [triaging alerts and incidents](#review-alerts-and-incidents), we recommend that your SOC teams run extra, proactive actions and queries. In the **Cloud apps > Files** page, check for the following questions:
 
 - How many files are shared publicly so that anyone can access them without a link?

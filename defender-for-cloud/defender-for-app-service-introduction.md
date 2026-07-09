@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for App Service - the benefits and features
+title: Microsoft Defender for App Service - Benefits and Features
 description: Learn about the capabilities of Microsoft Defender for App Service and how to enable it on your subscription.
 ms.date: 05/14/2026
 ms.topic: overview
@@ -88,7 +88,7 @@ In this article, you learned about Microsoft Defender for App Service.
 > [!div class="nextstepaction"]
 > [Enable enhanced protections](connect-azure-subscription.md)
 
-For related material, see the following articles:
+## Related content
 
 - To export your alerts to Microsoft Sentinel, any partner SIEM, or any other external tool, follow the instructions in [Stream alerts to monitoring solutions](export-to-siem.md).
 - For a list of the Microsoft Defender for App Service alerts, see the [Reference table of alerts](alerts-azure-app-service.md).

@@ -11,7 +11,7 @@
 #   - To keep default owners on a specific folder, include them on that line too.
 
 # Default owners for everything unless a later match takes precedence
-* @MicrosoftDocs/msecd-org
+* @MicrosoftDocs/msecd-org @snicklezzz
 
 # Specific folder overrides (include default team to retain their approval)
 # /FOLDER/ @MicrosoftDocs/msecd-org OPTIONAL_APPROVERS

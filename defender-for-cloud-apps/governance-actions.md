@@ -10,6 +10,9 @@ ms.custom: msecd-doc-authoring-1014
 
 # Govern actions for connected apps in Defender for Cloud Apps
 
+> [!IMPORTANT]
+> File policies retire on January 6, 2027. To maintain file-based data protection, [migrate to Microsoft Purview DLP or auto-labeling policies](migrate-file-policies-to-purview.md).
+
 Governance enables you to control what your users do across apps. For connected apps, you can apply governance actions to files or activities. Governance actions are integrated actions you can run on files or activities directly from Microsoft Defender for Cloud Apps. Governance actions control what your users do across connected apps.
 
 > [!NOTE]

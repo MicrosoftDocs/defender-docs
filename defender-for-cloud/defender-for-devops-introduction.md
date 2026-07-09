@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for Cloud DevOps security benefits
+title: Microsoft Defender for Cloud DevOps Security Benefits
 description: Learn about the benefits and features of Microsoft Defender for Cloud DevOps security, including visibility, posture management, and threat protection.
 ms.date: 03/12/2025
 ms.topic: overview
@@ -71,7 +71,7 @@ In this section, you see:
 
 You can view this table as a flat view at the DevOps resource level (repositories for Azure DevOps and GitHub, projects for GitLab) or in a grouping view showing organizations, projects, and groups hierarchy. You can also filter the table by subscription, resource type, finding type, or severity.
 
-## Learn more
+## Related content
 
 - You can learn more about DevOps from our [DevOps resource center](/devops/).
 
@@ -80,8 +80,6 @@ You can view this table as a flat view at the DevOps resource level (repositorie
 - You can learn about [securing Azure Pipelines](/azure/devops/pipelines/security/overview).
 
 - Learn about [security hardening practices for GitHub actions](https://docs.github.com/actions/security-guides/security-hardening-for-github-actions).
-
-## Related content
 
 - [Connect your Azure DevOps organizations](quickstart-onboard-devops.md).
 - [Connect your GitHub organizations](quickstart-onboard-github.md).

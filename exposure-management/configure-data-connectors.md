@@ -2,7 +2,7 @@
 title: Configuring the data connectors in Microsoft Security Exposure Management
 description: Learn about configuring the data connectors in Microsoft Security Exposure Management.
 ms.topic: overview
-ms.date: 09/21/2025
+ms.date: 06/30/2026
 ms.custom: sfi-ga-nochange
 ---
 
@@ -38,11 +38,17 @@ You can find more details about the permission levels here, [Prerequisites, and 
 
 To establish a connection with any of the supported external products, follow these steps:
 
+> [!NOTE]
+> **OT data connectors** use a different setup flow in the Microsoft Defender portal. To configure Armis, Dragos, or Forescout, see [OT data connectors](ot-data-connectors.md).
+
 1. Complete the applicable prerequisite steps for your external data connectors. Each connector has the following explicit instructions for setting up valid credentials and creating the connection:
    - [ServiceNow CMDB](ServiceNow-data-connector.md)
    - [Qualys VM](Qualys-data-connector.md)
    - [Rapid7 VM](Rapid7-data-connector.md)
    - [Tenable](Tenable-data-connector.md)
+   - [Armis](armis-data-connector.md)
+   - [Dragos](dragos-data-connector.md)
+   - [Forescout](forescout-data-connector.md)
    - [Wiz](wiz-data-connector.md)
    - [Palo Alto Prisma](palo-alto-prisma-data-connector.md)
 
@@ -56,7 +62,11 @@ To establish a connection with any of the supported external products, follow th
 
 ## Allowlist IP addresses
 
-To ensure successful connections between Exposure Management and external products, you might need to allowlist specific Microsoft IP addresses. Follow these steps to obtain the required IP addresses and configure it with the external products:
+To ensure successful connections between Exposure Management and external products, you might need to allowlist specific Microsoft IP addresses. 
+
+These allowlist steps apply to external data connectors, including OT data connectors, when the external product requires Microsoft IP addresses to be allowed.
+
+Follow these steps to obtain the required IP addresses and configure it with the external products:
 
 1. Identify the IP addresses:
    1. Obtain and copy the list of the IPs for your allowlist from the IP ranges under "Scuba" in the public IP ranges reference here: [Download Azure IP Ranges and Service Tags – Public Cloud from Official Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=56519)
@@ -82,4 +92,5 @@ Select the external data connector you want to configure and follow the steps to
 
 - [CMDB data connectors](ServiceNow-data-connector.md)
 - [Vulnerability management data connectors](Qualys-data-connector.md)
+- [OT data connectors](armis-data-connector.md)
 - [Cloud security data connectors](wiz-data-connector.md)

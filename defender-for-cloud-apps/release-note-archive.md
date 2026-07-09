@@ -23,7 +23,7 @@ Microsoft Defender delivers comprehensive protection for AI agents, combining pr
 
     Defender monitors agents for misconfigurations and vulnerabilities, identifies potential attack paths, and delivers actionable security recommendations through Exposure Management to strengthen your AI security posture.
 
-For more information, see [Protect your AI agents (Preview)](ai-agent-inventory.md).
+For more information, see [Protect your AI agents (Preview)](/defender-xdr/security-for-ai/ai-agent-inventory).
 
 ## September 2025
 
@@ -31,7 +31,7 @@ For more information, see [Protect your AI agents (Preview)](ai-agent-inventory.
 
 Microsoft Defender offers real-time protection during runtime for AI agents built with Microsoft Copilot Studio. This capability automatically blocks the agent's response during runtime if a suspicious behavior like a prompt injection attack is detected, and notifies security teams with a detailed alert in the Microsoft Defender portal.
 
-For more information, see [Real-time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)](real-time-agent-protection-during-runtime.md).
+For more information, see [Real-time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)](/defender-xdr/security-for-ai/ai-agent-real-time-protection).
 
 ## July 2025
 

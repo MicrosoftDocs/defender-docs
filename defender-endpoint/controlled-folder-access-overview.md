@@ -12,7 +12,7 @@ ms.custom:
   - sfi-image-nochange
 ms.subservice: asr
 ms.topic: how-to
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 - mde-asr
@@ -21,6 +21,8 @@ ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+
+#customer intent: As an IT admin, I want to understand how controlled folder access protects important folders from ransomware so that I can decide how to deploy it in my organization.
 ---
 
 # Controlled folder access (CFA) overview

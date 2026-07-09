@@ -67,6 +67,9 @@ After you connect an app, you can gain deeper visibility so you can investigate 
 
 -  Enable file monitoring and create file policies
 
+> [!IMPORTANT]
+> File policies retire on January 6, 2027. To maintain file-based data protection, [migrate to Microsoft Purview DLP or auto-labeling policies](migrate-file-policies-to-purview.md).
+
 - To enable File monitoring of Microsoft 365 files, you are required to use a relevant Entra Admin ID, such as Application Administrator or Cloud Application Administrator. For more details, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**.

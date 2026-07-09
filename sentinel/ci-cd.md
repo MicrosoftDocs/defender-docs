@@ -11,8 +11,6 @@ appliesto:
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-
-
 #Customer intent: As a security administrator or MSSP analyst, I want to manage dynamic Microsoft Sentinel content as code based on source control repositories using CI/CD pipelines. I want to automate updates and ensure consistent configurations across workspaces in my security monitoring environment. As an MSSP content manager, I want to deploy one solution to many customer workspaces and still be able to tailor custom content for their environments.
 ms.custom: msecd-doc-authoring-1014
   - build-2025
@@ -32,6 +30,7 @@ Microsoft Sentinel currently supports connections to GitHub and Azure DevOps rep
 - You have an **Owner** role in the resource group that contains your Microsoft Sentinel workspace
 - Custom content files you want to deploy to your workspaces are in a supported format. For supported formats, see [Plan your repository content](ci-cd-custom-content.md#plan-your-repository-content).
 - The account you use to create the connection is in your home tenant. External identities, such as B2B guest accounts, and delegated access aren’t supported.
+- **(Custom detection rules only)** A Microsoft 365 E5 license (or equivalent license that includes Microsoft Defender XDR) and Microsoft Sentinel workspaces onboarded to the Microsoft Defender portal. For more information, see [Deploy custom detection rules as code](ci-cd-custom-content.md#deploy-custom-detection-rules-as-code-preview).
 
 ### [GitHub prerequisites](#tab/github)
 
@@ -56,7 +55,7 @@ For more information on deployable content types, see [Plan your repository cont
 
 This procedure describes how to connect a GitHub or Azure DevOps repository to your Microsoft Sentinel workspace.
 
-Each connection can support multiple types of custom content, including analytics rules, automation rules, hunting queries, parsers, playbooks, and workbooks. For more information, see [About Microsoft Sentinel content and solutions](sentinel-solutions.md).
+Each connection can support multiple types of custom content, including analytics rules, automation rules, custom detection rules (Preview), hunting queries, parsers, playbooks, and workbooks. For more information, see [About Microsoft Sentinel content and solutions](sentinel-solutions.md).
 
 You can't create duplicate connections, with the same repository and branch, in a single Microsoft Sentinel workspace.
 

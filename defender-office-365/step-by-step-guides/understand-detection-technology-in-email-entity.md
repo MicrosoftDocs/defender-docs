@@ -5,7 +5,7 @@ author: chrisda
 ms.author: chrisda
 ms.service: microsoft-365-security
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/07/2026
 ms.collection:
 - m365-guidance-templates
 - m365-security
@@ -47,6 +47,7 @@ To resolve false positives like the ones listed in the following table, you shou
 |Mail bombing|A distributed denial of service (DDoS) attack that typically subscribes recipients to a large number of legitimate newsletters and services. The resulting volume of incoming email within minutes intends to overwhelm the recipient's mailbox and email security systems, and acts as a precursor to malware, ransomware, or data exfiltration.||
 |Mailbox intelligence impersonation|Sender detected as impersonating an address in the user's personal sender map.|[Mailbox intelligence impersonation protection](../anti-phishing-policies-about.md)|
 |Mixed analysis detection|Multiple filters contributed to the verdict for this message.||
+|Prompt injection protection|Detection of prompt injection instructions hidden in inbound email that target an AI assistant.|[Prompt injection protection in Microsoft Defender for Office 365](prompt-injection-protection-defender-for-office-365.md)|
 |Spoof DMARC|The message failed DMARC authentication.|[Set up DMARC to validate the From address domain for cloud senders](../email-authentication-dmarc-configure.md)|
 |Spoof external domain|Spoof intelligence detected email spoofing of a domain that is external to your organization.||
 |Spoof intra-org|Spoof intelligence detected email spoofing of a user or domain that is internal to your organization.||

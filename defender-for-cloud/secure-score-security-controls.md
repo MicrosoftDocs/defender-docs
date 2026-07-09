@@ -1,5 +1,5 @@
 ---
-title: Cloud secure score in Microsoft Defender for Cloud
+title: Cloud Secure Score in Microsoft Defender for Cloud
 description: Learn about the Microsoft Defender for Cloud secure score, which is part of the Microsoft cloud security benchmark.
 ms.topic: concept-article
 ms.date: 06/30/2026
@@ -345,7 +345,7 @@ Microsoft secure score is a broader, unified concept spanning multiple security 
 > Recommendations flagged as **preview** aren't included in secure score calculations. You should still remediate these recommendations wherever possible, so that when the preview period ends, they'll contribute toward your score. Preview recommendations are marked with an icon: :::image type="icon" source="media/secure-score-security-controls/preview-icon.png" border="false":::.
 > Recommendation maturity [Preview] doesn't modify the secure score UI or weighting model; it only classifies recommendations. Aside from excluding preview recommendations, the secure score formulas and UI values remain unchanged.
 
-## Next steps
+## Next step
 
 - [Learn about the different elements of a recommendation](review-security-recommendations.md)
 

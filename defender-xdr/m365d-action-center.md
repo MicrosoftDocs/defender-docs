@@ -24,6 +24,8 @@ ai-usage: ai-assisted
 
 # Overview of the Action center in Microsoft Defender XDR
 
+[!INCLUDE [defender-endpoint-air-deprecation](../includes/defender-endpoint-air-deprecation.md)]
+
 The Action center provides a "single pane of glass" experience for incident and alert tasks such as:
 
 - Approving pending remediation actions.

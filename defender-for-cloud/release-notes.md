@@ -1,5 +1,5 @@
 ---
-title: What's new in Defender for Cloud features
+title: What's New in Defender for Cloud Features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
@@ -66,12 +66,11 @@ July 1, 2026
 
 The following container security capabilities in Microsoft Defender for Cloud are now generally available:
 
-- **Container-level misconfiguration recommendations for Kubernetes** — agentless, container-level KSPM recommendations in Defender CSPM that assess individual containers rather than entire clusters. The following cluster-level recommendations are now deprecated: HostPath volume mount restrictions, allowed ports enforcement, host networking/ports restrictions, CAP_SYS_ADMIN capability restrictions, and AppArmor profile restrictions. Learn more about [container security recommendations](recommendations-reference-container.md).
-- **Upgrade Azure Kubernetes Service Version recommendation** — actionable recommendation to remediate vulnerabilities in AKS-managed system pods by identifying the minimum AKS version upgrade required. Learn more about [reviewing and remediating Kubernetes node vulnerabilities](kubernetes-nodes-va.md) and [security recommendations for containers](recommendations-reference-container.md).
-- **Vulnerability assessment for runtime-discovered container images on EKS and GKE** — extends vulnerability assessment to runtime-discovered images on Amazon EKS and Google GKE, providing unified coverage across Azure, AWS, and GCP. Learn more about [vulnerability assessment for containers](view-and-remediate-vulnerabilities-containers.md).
-- **Kubernetes node vulnerability assessment for EKS and GKE** — extends Kubernetes node (host) vulnerability assessment to EKS and GKE, bringing parity with the existing AKS capability. Learn more about [Kubernetes node vulnerability assessment](kubernetes-nodes-va.md).
-- **Scanning support for Docker Hardened container images** — extends vulnerability scanning coverage to Docker Hardened container images. For all supported distributions, see [Registries and images support for vulnerability assessment](support-matrix-defender-for-containers.md#registries-and-images-support-for-vulnerability-assessment).
-
+- **Container-level misconfiguration recommendations for Kubernetes**: Agentless, container-level KSPM recommendations in Defender CSPM that assess individual containers rather than entire clusters. The following cluster-level recommendations are now deprecated: HostPath volume mount restrictions, allowed ports enforcement, host networking/ports restrictions, CAP_SYS_ADMIN capability restrictions, and AppArmor profile restrictions. Learn more about [container security recommendations](recommendations-reference-container.md).
+- **Upgrade Azure Kubernetes Service Version recommendation**: Actionable recommendation to remediate vulnerabilities in AKS-managed system pods by identifying the minimum AKS version upgrade required. Learn more about [reviewing and remediating Kubernetes node vulnerabilities](kubernetes-nodes-va.md) and [security recommendations for containers](recommendations-reference-container.md).
+- **Vulnerability assessment for runtime-discovered container images on EKS and GKE**: Extends vulnerability assessment to runtime-discovered images on Amazon EKS and Google GKE, providing unified coverage across Azure, AWS, and GCP. Learn more about [vulnerability assessment for containers](view-and-remediate-vulnerabilities-containers.md).
+- **Kubernetes node vulnerability assessment for EKS and GKE**: Extends Kubernetes node (host) vulnerability assessment to EKS and GKE, bringing parity with the existing AKS capability. Learn more about [Kubernetes node vulnerability assessment](kubernetes-nodes-va.md).
+- **Scanning support for Docker Hardened container images**: Extends vulnerability scanning coverage to Docker Hardened container images. For all supported distributions, see [Registries and images support for vulnerability assessment](support-matrix-defender-for-containers.md#registries-and-images-support-for-vulnerability-assessment).
 
 ### Kubernetes misconfiguration enforcement in Defender for Containers is now generally available
 
@@ -81,8 +80,8 @@ Kubernetes misconfiguration enforcement in Microsoft Defender for Containers is 
 
 With this release, Kubernetes misconfiguration enforcement is available through automatic provisioning.
 
-- **AKS and Azure Arc-enabled Kubernetes:** Enable Defender for Containers with Kubernetes API access.
-- **AWS and GCP:** Enable Defender for Containers with Agentless threat protection.
+- **AKS and Azure Arc-enabled Kubernetes**: Enable Defender for Containers with Kubernetes API access.
+- **AWS and GCP**: Enable Defender for Containers with Agentless threat protection.
 
 Manual deployment with Helm is still supported.
 
@@ -206,18 +205,13 @@ June 17, 2026
 
 Microsoft Defender for Cloud has expanded the supported environment primitives for cloud scopes to include additional container-related resources. Cloud scopes now support the following new environment types:
 
-- **K8s namespace** - Organize resources by Kubernetes namespace for granular access control
-- **K8s cluster** - Group entire Kubernetes clusters for comprehensive security management  
-- **Registry (multi cloud)** - Include container registries from multiple cloud providers
-- **Repository (multi cloud)** - Manage artifact repositories across different cloud platforms
+- **K8s namespace**: Organize resources by Kubernetes namespace for granular access control
+- **K8s cluster**: Group entire Kubernetes clusters for comprehensive security management  
+- **Registry (multi cloud)**: Include container registries from multiple cloud providers
+- **Repository (multi cloud)**: Manage artifact repositories across different cloud platforms
 
 These additions provide greater flexibility when grouping container and Kubernetes resources, helping you better align cloud scopes with operational boundaries and security requirements across multicloud environments.
 
-Learn more about [cloud scopes](cloud-scopes-unified-rbac.md).
-
-Learn more about [cloud scopes](cloud-scopes-unified-rbac.md).
-
-Learn more about [cloud scopes](cloud-scopes-unified-rbac.md).
 Learn more about [cloud scopes](cloud-scopes-unified-rbac.md).
 
 ### New multicloud security recommendations now in public preview
@@ -704,9 +698,9 @@ March 29, 2026
 
 Microsoft Defender for Cloud expands multicloud posture management with broader native coverage for AWS and GCP. This update adds discovery and posture assessment for additional resource types across compute, databases, storage, analytics, networking, identity, secrets, DevOps, and AI/ML services.
 
-**Asset inventory** – Newly supported AWS and GCP resources are now discovered and visible in the Asset inventory experience.
+**Asset inventory**: Newly supported AWS and GCP resources are now discovered and visible in the Asset inventory experience.
 
-**Security recommendations** – Approximately 150 new recommendations help identify misconfigurations and posture gaps across the newly supported resources.
+**Security recommendations**: Approximately 150 new recommendations help identify misconfigurations and posture gaps across the newly supported resources.
 
 > [!IMPORTANT]
 >
@@ -793,13 +787,13 @@ During the transition period, grouped and individual recommendations may appear 
 
 The following grouped container vulnerability recommendations will be deprecated on April 13, 2026:
 
-**Container recommendations**
+#### Container recommendations
 
 - [Preview] Containers running in Azure should have vulnerability findings resolved
 - [Preview] Containers running in AWS should have vulnerability findings resolved
 - [Preview] Containers running in GCP should have vulnerability findings resolved
 
-**Container image recommendations**
+#### Container image recommendations
 
 - [Preview] Container images in Azure registry should have vulnerability findings resolved
 - [Preview] Container images in AWS registry should have vulnerability findings resolved
@@ -809,7 +803,7 @@ Customers should update any queries, automation, governance rules, or workflows 
 
 When querying individual recommendations, the same logic can be applied across cloud providers by adjusting the `Source` value.
 
-**Example: Container vulnerability recommendations**
+#### Example: Container vulnerability recommendations
 
 The following query allows customers to identify the new individual container vulnerability recommendations for containers running in Azure. To target containers running in AWS or GCP, change the `Source` value to `"AWS"` or `"GCP"`.
 
@@ -821,7 +815,7 @@ securityresources
 | where properties.resourceDetails.Source == "Azure"
 ```
 
-**Example: Container image vulnerability recommendations**
+#### Example: Container image vulnerability recommendations
 
 The following query allows customers to identify the new individual container image vulnerability recommendations in Azure container registries. To target AWS or GCP registries, update the `Source` value accordingly.
 
@@ -841,7 +835,7 @@ March 04, 2026
 
 Microsoft Defender for Cloud is converting grouped recommendations into individual recommendations in the Azure portal. This change reflects a shift from grouping related findings under one recommendation to listing each recommendation separately.
 
-**What's changing**
+#### What's changing
 
 You might see a longer list of recommendations than before. Combined findings (such as vulnerabilities, exposed secrets, or misconfigurations) now show as individual recommendations rather than nested under a parent recommendation.
 
@@ -851,7 +845,7 @@ The new individual recommendations are marked as **Preview** with additional **N
 
 You can now manage exemptions at scale instead of for each recommendation.
 
-**Benefits**
+#### Benefits
 
 1. **Smart and accurate prioritization**
 

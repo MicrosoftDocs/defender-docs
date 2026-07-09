@@ -61,6 +61,9 @@ Defender for Cloud Apps helps protect your environment in the following ways:
 
 You can use the following built-in policy templates to detect and notify you about potential threats:
 
+> [!IMPORTANT]
+> File policies retire on January 6, 2027. To maintain file-based data protection for this app, [migrate to Microsoft Purview DLP or auto-labeling policies](migrate-file-policies-to-purview.md).
+
 |Type|Name|
 |---|---|
 |Built-in anomaly detection policy|[Activity from anonymous IP addresses](anomaly-detection-policy.md#activity-from-anonymous-ip-addresses) <br/> [Activity from infrequent country](anomaly-detection-policy.md#activity-from-infrequent-country) <br/> [Activity from suspicious IP addresses](anomaly-detection-policy.md#activity-from-suspicious-ip-addresses) <br/> [Impossible travel](anomaly-detection-policy.md#impossible-travel) <br/> [Activity performed by terminated user](anomaly-detection-policy.md#activity-performed-by-terminated-user) (requires Microsoft Entra ID as IdP) <br/> [Malware detection](anomaly-detection-policy.md#malware-detection) <br/> [Multiple failed login attempts](anomaly-detection-policy.md#multiple-failed-login-attempts) <br/> [Ransomware detection](anomaly-detection-policy.md#ransomware-activity) <br/> [Suspicious email deletion activity (Preview)](anomaly-detection-policy.md#suspicious-email-deletion-activity-preview) <br/> [Suspicious inbox forwarding](anomaly-detection-policy.md#suspicious-inbox-forwarding) <br/> [Unusual file deletion activities](anomaly-detection-policy.md#unusual-activities-by-user) <br/> [Unusual file share activities](anomaly-detection-policy.md#unusual-activities-by-user) <br/> [Unusual multiple file download activities](anomaly-detection-policy.md#unusual-activities-by-user)|
