@@ -576,6 +576,8 @@
           href: step-by-step-guides/how-to-prioritize-and-manage-automated-investigations-and-response-air.md
         - name: Add Advanced Hunting community queries to Microsoft Defender XDR and Microsoft Sentinel
           href: step-by-step-guides/add-advanced-hunting-community-queries.md
+        - name: Prompt injection protection in Microsoft Defender for Office 365
+          href: step-by-step-guides/prompt-injection-protection-defender-for-office-365.md
       - name: Diagnose
         items:
         - name: Understanding overrides within the email entity page in Microsoft Defender
