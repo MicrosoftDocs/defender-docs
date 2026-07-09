@@ -492,7 +492,8 @@ When you add or remove a filesystem from the unmonitored list, Microsoft validat
   - `cifs`<sup>\*</sup>
   - `fuse`
   - `nfs`
-  - `nfs4`<sup>\*</sup>
+  - `nfs4`
+    
   - `smb`<sup>\*</sup>
 
   These filesystems are also unmonitored by Quick and Full scans, but are scannable by custom scans.
