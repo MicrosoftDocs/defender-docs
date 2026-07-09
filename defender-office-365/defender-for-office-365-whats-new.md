@@ -5,7 +5,7 @@ keywords: what's new in Microsoft Defender for Office 365, ga, generally availab
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
-ms.date: 05/26/2026
+ms.date: 07/09/2026
 ms.collection:
   - m365-security
   - tier1
@@ -13,8 +13,10 @@ ms.topic: whats-new
 ms.custom:
   - seo-marvel-apr2020
   - sfi-ga-nochange
+  - msecd-doc-authoring-1015
 ms.reviewer: vippand
 ms.service: defender-office-365
+ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -36,6 +38,12 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Endpoint](/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/defender-cloud-apps/release-notes)
+
+## July 2026
+
+- **Microsoft Defender for Office 365 Plan 1 included in Microsoft 365 E3**: Microsoft 365 E3 now includes Microsoft Defender for Office 365 Plan 1. For more information about what's included in each plan, see [Microsoft Defender for Office 365 Plan 1 vs. Plan 2 cheat sheet](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet).
+
+- **Prompt injection protection**: Microsoft Defender for Office 365 now detects prompt injection attacks hidden in inbound email. For more information, see [Prompt injection protection in Microsoft Defender for Office 365](step-by-step-guides/prompt-injection-protection-defender-for-office-365.md).
 
 ## April 2026
 
