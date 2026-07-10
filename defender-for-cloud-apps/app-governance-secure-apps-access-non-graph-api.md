@@ -1,5 +1,5 @@
 ---
-title: Secure apps accessing non-Graph APIs using app governance
+title: Secure OAuth apps accessing non-Graph APIs using app governance
 ms.date: 06/16/2026
 ms.topic: how-to
 description: Learn how to secure apps accessing other APIs using app governance in the Microsoft Defender portal.
@@ -8,7 +8,7 @@ ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
 ai-usage: ai-assisted
 ---
 
-# Secure apps accessing non-Graph APIs using app governance
+# Secure OAuth apps accessing non-Graph APIs using app governance
 
 Many apps use APIs other than Microsoft Graph to access Microsoft 365 and other resources. With visibility over such apps, you can identify and defend against risks inherent to these apps, including the APIs that they access. Some of these APIs might receive limited support and updates.
 
@@ -56,7 +56,7 @@ You can create app governance policies to monitor and take action on apps that a
 
 1. In the App governance page, select the **Policies** tab.
 1. Select **+ Create policy**.
-1. To create a custom policy, select **Custom policy** and then configure the policy settings as needed. Select the the **Non-Graph API permissions** policy condition to identify and monitor apps that access non-Graph APIs.
+1. To create a custom policy, select **Custom policy** and then configure the policy settings as needed. Select the **Non-Graph API permissions** policy condition to identify and monitor apps that access non-Graph APIs.
 
 
 
@@ -78,4 +78,4 @@ You can create app governance policies to monitor and take action on apps that a
 Learn more about managing and investigating apps with app governance:
 
 - [Secure apps with app hygiene features](app-governance-secure-apps-app-hygiene-features.md)
-- [View your app details with app governance](app-governance-visibility-insights-view-apps.md#getting-detailed-information-on-an-app)
+- [View your app details with app governance](app-governance-visibility-insights-view-apps.md#get-detailed-information-about-an-app)

@@ -13,7 +13,9 @@ appliesto:
     - Microsoft Sentinel in the Azure portal
     - Microsoft Sentinel in the Defender portal
     - Security Copilot
-ms.date: 04/22/2025
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #Customer intent: As a security analyst, I want to integrate Security Copilot with Microsoft Sentinel data so that I can investigate incidents and generate advanced hunting queries at machine speed and scale.
 ---
 
@@ -28,7 +30,8 @@ This guide outlines what to expect and how to access the summarizing capability 
 > [!IMPORTANT]
 > The Copilot incident summary feature for Microsoft Sentinel is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
-## Know before you begin
+<a name="know-before-you-begin"></a>
+## Prerequisites
 
 If you're new to Security Copilot, you should familiarize yourself with it by reading these articles:
 - [What is Microsoft Security Copilot?](/security-copilot/microsoft-security-copilot)
@@ -41,9 +44,10 @@ If you're new to Security Copilot, you should familiarize yourself with it by re
 
 The incident summary capability is available in Microsoft Sentinel in the Azure portal for customers who have provisioned access to Security Copilot.
 
-This capability is also available in the Defender portal, and in the Security Copilot standalone experience through the Microsoft Sentinel plugins. Know more about [preinstalled plugins in Security Copilot](/security-copilot/manage-plugins#preinstalled-plugins).
+The incident summary capability is also available in the Defender portal, and in the Security Copilot standalone experience through the Microsoft Sentinel plugins. Know more about [preinstalled plugins in Security Copilot](/security-copilot/manage-plugins#preinstalled-plugins).
 
-## Key features
+<a name="key-features"></a>
+## Key features of incident summarization
 
 Incidents containing up to 100 alerts can be summarized into one incident summary. An incident summary, depending on the availability of the data, includes the following:
 
@@ -70,7 +74,8 @@ Select **Show more** to expand the summary to see its complete content.
 
 Review the summary and use the information to guide your investigation and response to the incident.
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 - [Learn about other Security Copilot embedded experiences](/security-copilot/experiences-security-copilot)
 - [Privacy and data security in Security Copilot](/copilot/security/privacy-data-security)

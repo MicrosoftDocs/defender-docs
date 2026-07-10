@@ -11,7 +11,14 @@ ms.date: 09/21/2025
 
 ## Imported assets and data types
 
-The intent of connecting to external products is to create complete visibility across all your digital assets and any security context that could impact your attack surface. The following asset types, context enrichment, and vulnerability information are ingested for this purpose:
+The intent of connecting to external products is to create complete visibility across all your digital assets and any security context that could impact your attack surface. 
+
+> [!NOTE]
+> At this time, devices are onboarded into the unified inventory only when they include sufficient identifying attributes (such as, MAC address, cloud resource identifiers, or other supported unique identifiers). If this information is not present or is incomplete, the system may not be able to confidently match or represent those assets in the Device Inventory page. 
+>
+> In such cases, assets may still be visible in Advanced Hunting. This is a **known** **limitation** of the current onboarding and normalization process, and we are actively working on enhancing data coverage and improve how these assets are represented across experiences.
+
+The following asset types, context enrichment, and vulnerability information are ingested for this purpose:
 
 - Devices
 - Cloud assets
@@ -25,7 +32,7 @@ The intent of connecting to external products is to create complete visibility a
 
 The asset information and security context are imported into Exposure Management and consolidated to provide a comprehensive view of the security posture across all digital assets. Currently supported external data sources include Qualys, Rapid7 InsightVM, Tenable Vulnerability Management, and ServiceNow CMDB.
 
-Data ingested from the Connectors gets normalized and incorporated into the Exposure Graph and Device Inventory. Exposure Management uses the valuable context and insights gained to generate a more accurate assessment of your attack surface, and provide you with a deeper understanding of your exposure risk. This data can be consumed in the Device Inventory, in Exposure Graph exploration tools like the Attack Surface Map and Advanced Hunting, and within Attack Paths that are discovered based on enrichment data ingested by the connectors.
+Data ingested from the connectors gets normalized and incorporated into the Exposure Graph and Device Inventory. Exposure Management uses the valuable context and insights gained to generate a more accurate assessment of your attack surface, and provide you with a deeper understanding of your exposure risk. This data can be consumed in the Device Inventory, in Exposure Graph exploration tools like the Attack Surface Map and Advanced Hunting, and within Attack Paths that are discovered based on enrichment data ingested by the connectors.
 
 Eventually this data will additionally serve to enhance security metrics that measure your exposure risk against a particular criteria, and it will also impact broader organizational initiatives that measure exposure risk across a workload or related to a specific threat area.
 
@@ -51,7 +58,6 @@ Benefits of using the external data connectors include:
 In the Device Inventory, you'll see the discovery sources for each device, which are the products from which we got any report on this device. These might include Microsoft Security products like MDE, MDC, and MDI, and also external data sources like Qualys or ServiceNow CMDB. You can filter on one or more discovery sources within the inventory to view devices that were discovered specifically by those sources.
 
 :::image type="content" source="media/value-data-connectors/DI data connectors.png" alt-text="Screenshot of device inventory with discovery source highlighted" lightbox="media/value-data-connectors/DI data connectors.png":::
-":::
 
 ### Critical Asset Management
 
@@ -121,6 +127,9 @@ ExposureGraphEdges
 ### Attack paths
 
 Security Exposure Management automatically generates attack paths based on the data collected across assets and workloads, including data from external connectors. It simulates attack scenarios, and identifies vulnerabilities and weaknesses that an attacker could exploit.
+
+> [!NOTE]
+> Attack paths aren't currently supported for OT data connectors.
 
 As you explore attack paths in your environment, you can view the discovery sources that contributed to this attack path based on the graphical view of the path.
 

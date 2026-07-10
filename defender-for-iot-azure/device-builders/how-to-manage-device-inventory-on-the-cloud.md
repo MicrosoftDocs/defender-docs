@@ -1,14 +1,15 @@
 ---
-title: Manage your IoT devices with the cloud device inventory
-description: Learn how to manage your IoT devices with the device inventory.
-ms.date: 01/01/2023
+title: Manage IoT and OT devices with the cloud device inventory
+description: Learn how to manage your IoT and OT devices with the device inventory.
+ms.date: 06/12/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
-# Manage your IoT devices with the device inventory
+# Manage IoT and OT devices with the device inventory
 
-The device inventory can be used to view device systems, and network information. The search, filter, edit columns, and export tools can be used to manage this information.
+The device inventory can be used to view device systems, and network information. The search, filter, edit columns, and export tools can be used to manage device system and network information.
 
 :::image type="content" source="media/how-to-manage-device-inventory-on-the-cloud/device-inventory-screenshot.png" alt-text="A total overview of Defender for IoT's device inventory screen.":::
 
@@ -144,7 +145,8 @@ If you are under the impression that certain devices are not actively communicat
 
 1. Enter a time period, or a custom date range, and select **Apply**.
 
-## See next
+<a name="see-next"></a>
+## Related content
 
 - [Welcome to Microsoft Defender for IoT for organizations](overview.md)
 

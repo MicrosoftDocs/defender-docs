@@ -197,7 +197,7 @@ Kubernetes gated deployment in Microsoft Defender for Containers is now generall
 - Performance optimizations with reduced latency for admission decisions
 - Enhanced documentation for troubleshooting and developer experience
 
-Learn more about [gated deployment for Kubernetes container images](runtime-gated-overview.md), [how to enable gated deployment](enablement-guide-runtime-gated.md), and [gated deployment FAQ](faq-runtime-gated.md).
+Learn more about [gated deployment for Kubernetes container images](runtime-gated-overview.md) and [how to enable gated deployment](enablement-guide-runtime-gated.md).
 
 ### Defender for Cloud integration into the Defender portal (preview)
 
@@ -1139,7 +1139,7 @@ For more information about Defender for Cloud Regulatory Compliance offering, [L
 
 January 30, 2025
 
-We are updating one of the scan criteria for registry images in the preview recommendation for registry images across all clouds and external registries ([Azure](recommendations-reference-container.md#azure-registry-container-images-should-have-vulnerabilities-resolved-powered-by-microsoft-defender-vulnerability-management), [AWS](recommendations-reference-container.md#aws-registry-container-images-should-have-vulnerability-findings-resolved), [GCP](recommendations-reference-container.md#gcp-registry-container-images-should-have-vulnerability-findings-resolved), [Docker](recommendations-reference-container.md#preview-container-images-in-docker-hub-registry-should-have-vulnerability-findings-resolved), [JFrog](recommendations-reference-container.md#preview-container-images-in-jfrog-artifactory-registry-should-have-vulnerability-findings-resolved)).
+We are updating one of the scan criteria for registry images in the preview recommendation for registry images across all clouds and external registries ([Azure](recommendations-reference-container.md#azure-registry-container-images-should-have-vulnerabilities-resolved-powered-by-microsoft-defender-vulnerability-management), [AWS](recommendations-reference-container.md#aws-registry-container-images-should-have-vulnerability-findings-resolved), [GCP](recommendations-reference-container.md#gcp-registry-container-images-should-have-vulnerability-findings-resolved), [Docker](recommendations-reference-container.md#container-images-in-docker-hub-registry-should-have-vulnerability-findings-resolved), [JFrog](recommendations-reference-container.md#preview-container-images-in-jfrog-artifactory-registry-should-have-vulnerability-findings-resolved)).
 
 **What's Changing?**
 

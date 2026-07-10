@@ -24,6 +24,10 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ## June 2026
 
+### File policies retiring January 6, 2027
+
+File-based data protection is moving from Defender for Cloud Apps to Microsoft Purview. File policies retire on **January 6, 2027**. Review your existing file policies and recreate them as Microsoft Purview DLP or auto-labeling policies before the retirement date. For detailed guidance, including parity gaps and governance action mapping, see [Migrate file policies to Microsoft Purview](migrate-file-policies-to-purview.md).
+
 ### Salesforce connector enhancements (Preview)
 
 Modern Salesforce attacks increasingly abuse OAuth tokens, connected apps, sessions, and APIs, often bypassing MFA and traditional controls. The Salesforce connector for Microsoft Defender for Cloud Apps is now better equipped to detect these attacks. The connector ingests Salesforce Real-Time Event Monitoring data for near real-time detection of identity and OAuth threats with richer investigation context, and adds OAuth app governance for Salesforce Connected Apps and External Client Apps (ECAs).

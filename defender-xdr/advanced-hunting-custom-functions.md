@@ -27,7 +27,7 @@ ai-usage: ai-assisted
 
 
 **Applies to:**
-- Microsoft Defender XDR
+- Microsoft Defender
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
@@ -42,7 +42,7 @@ Advanced hunting includes three different types of functions:
 
 ![Screenshot of the three function types available in advanced hunting.](media/advanced-hunting-custom-functions/function-types.png)
 
-- **Built-in functions** – Prebuilt functions included with Microsoft Defender XDR advanced hunting. All advanced hunting instances provide these functions, and you can't modify them.
+- **Built-in functions** – Prebuilt functions included with Microsoft Defender advanced hunting. All advanced hunting instances provide these functions, and you can't modify them.
 - **Shared functions** – Custom functions that users create. All users in a specific tenant can access these functions. Users can modify and control these functions.
 - **My functions** – Custom functions that a user creates. Only the user who created these functions can view and modify them.
 

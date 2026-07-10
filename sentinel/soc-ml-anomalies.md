@@ -1,5 +1,5 @@
 ---
-title: Use customizable anomalies to detect threats in Microsoft Sentinel | Microsoft Docs
+title: Use customizable anomalies to detect threats in Microsoft Sentinel
 description: This article explains how to use the new customizable anomaly detection capabilities in Microsoft Sentinel.
 ms.author: guywild
 author: guywi-ms

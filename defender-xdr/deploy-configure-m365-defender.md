@@ -1,5 +1,5 @@
 ---
-title: Setup guides for Microsoft Defender XDR 
+title: Setup guides for Microsoft Defender XDR
 description: Learn how to deploy and configure Microsoft Defender XDR by using online setup guides 
 ms.service: defender-xdr
 ms.author: guywild
@@ -35,8 +35,8 @@ Setup guides in the admin center require authentication to a Microsoft 365 tenan
 
 ## Related topics
 
-- [Microsoft Defender XDR overview](microsoft-365-defender.md)
-- [Turn on Microsoft Defender XDR](m365d-enable.md)
+- [Microsoft Defender overview](microsoft-365-defender.md)
+- [Turn on Microsoft Defender](m365d-enable.md)
 - [Deploy supported services](deploy-supported-services.md)
 - [Microsoft Defender for Endpoint overview](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender for Office 365 overview](/defender-office-365/mdo-about)

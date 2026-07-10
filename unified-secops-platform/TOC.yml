@@ -43,6 +43,8 @@
         href: overview-deploy.md
       - name: Connect Microsoft Sentinel to Microsoft Defender
         href: microsoft-sentinel-onboard.md
+      - name: Migrate Sentinel incident creation rules to alert grouping
+        href: migrate-sentinel-incident-creation-rules-alert-grouping.md
     - name: Transition
       href: /azure/sentinel/move-to-defender?toc=/unified-secops-platform/toc.json&bc=/unified-secops-platform/breadcrumb/toc.json    
     - name: Reduce security risk

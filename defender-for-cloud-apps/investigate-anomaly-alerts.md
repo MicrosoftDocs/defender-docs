@@ -564,7 +564,7 @@ Establishing a new user's activity pattern requires an initial learning period o
 
 1. Review the sharing activities and create a list of shared files.
 1. Review the sensitivity of the shared files with the resource owner and validate the access level.
-1. Create a file policy for similar documents to detect future sharing of sensitive files.
+1. Create a Microsoft Purview DLP policy for similar documents to detect future sharing of sensitive files.
 
 ### Ransomware activity
 

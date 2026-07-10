@@ -6,7 +6,7 @@ ms.author: edbaynash
 ms.topic: how-to
 ms.date: 05/27/2026
 ai-usage: ai-assisted
-
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a data engineer, I want to compare Microsoft target platforms for historical data migration so that I can select the most suitable option based on performance, cost, usability, and management overhead.
 
@@ -14,7 +14,9 @@ ai-usage: ai-assisted
 
 # Select a target Microsoft platform to host the exported historical data
 
-One of the most important decisions you make during your migration to Microsoft Sentinel is where to store your historical data. This article helps you compare the available target platforms so you can pick the option that best matches your team's access, performance, and cost requirements. For most scenarios, [Microsoft Sentinel data lake](/azure/sentinel/datalake/sentinel-lake-overview) is the recommended and default target, providing a native, integrated data platform for long-term retention and analysis.
+One of the important decisions you make during your migration process is where to store your historical data. To decide where to store your historical data, you need to understand and compare the various target platforms. 
+
+This article compares target platforms in terms of performance, cost, usability and management overhead.
 
 > [!NOTE]
 > The considerations in this article apply only to historical log migration. They don't apply to other scenarios, such as long-term retention of operational data.
@@ -73,8 +75,7 @@ In most of these scenarios, Microsoft Sentinel data lake is the recommended targ
 
 In some scenarios, you have to meet a tight deadline. For example, your organization might need to urgently move from a previous SIEM because of a license expiration event.
 
-Review the components and factors that determine the speed of your migration:
-
+Review the components and factors that determine migration speed: data source, compute power, and target platform.
 - [Data source](#data-source)
 - [Compute power](#compute-power)
 - [Target platform](#target-platform)
@@ -87,14 +88,14 @@ For example, Azure virtual machine performance ranges from 30 MB per second on s
 
 #### Compute power
 
-In some cases, even when your disk can copy data quickly, compute power is the bottleneck in the copy process. In these cases, choose one of these scaling options:
+In some cases, even if your disk is capable of copying your data quickly, compute power is the bottleneck in the copy process. When compute power is the bottleneck, you can choose one of these scaling options: 
 
 - **Scale vertically.** Increase the power of a single server by adding more CPUs or increasing the CPU speed.
 - **Scale horizontally.** Add more servers, which increases the parallelism of the copy process.
 
 #### Target platform
 
-Each target platform discussed in this article has a different performance profile.
+Azure Monitor Basic Logs, Azure Data Explorer, and Azure Blob Storage each have a different performance profile.
 
 - **Microsoft Sentinel data lake.** The data lake is designed for high-throughput ingestion of large volumes of security data. Because storage and compute are separated, ingestion scales independently from query workloads. For service limits, see [Microsoft Sentinel data lake service limits](/azure/sentinel/datalake/sentinel-lake-service-limits).
 - **Azure Data Explorer.** Ingestion performance varies depending on the size of the cluster you provision and the batching settings you apply. [Learn about ingestion best practices](/azure/data-explorer/ingestion-faq), including performance and monitoring.
@@ -106,6 +107,6 @@ The amount of data is the main factor that affects the duration of the migration
 
 To determine the minimum duration of the migration and where the bottleneck could be, consider the amount of data and the ingestion speed of the target platform. For example, if you select a target platform that can ingest 1 GB per second and you have to migrate 100 TB, your migration takes a minimum of 100,000 GB divided by 1 GB per second. Divide the result by 3,600 and the migration takes at least 27 hours. This calculation is correct only when the rest of the components in the pipeline—such as the local disk, the network, and the virtual machines—can perform at a speed of 1 GB per second.
 
-## Related articles
+## Related content
 
 [Select a data ingestion tool](migration-ingestion-tool.md)

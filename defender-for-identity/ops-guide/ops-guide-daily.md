@@ -1,14 +1,16 @@
 ---
 title: Daily operational guide - Microsoft Defender for Identity
 description: Learn about the Microsoft Defender for Identity activities that we recommend for your team on a daily basis.
-ms.date: 01/29/2024
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.reviewer: martin77s
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Daily operational guide - Microsoft Defender for Identity
 
-This article reviews the Microsoft Defender for Identity activities we recommend for your team on a daily basis.
+This article reviews the Microsoft Defender for Identity activities we recommend for your team on a daily basis. It covers key tasks such as reviewing identity security dashboards, triaging incidents, tuning alerts, proactive threat hunting, and monitoring deployment health. These daily activities are intended for SOC analysts, security administrators, and identity management teams to help maintain a strong security posture and quickly detect identity-based threats.
 
 ## Review the Identity Security dashboard
 

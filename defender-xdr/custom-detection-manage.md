@@ -31,7 +31,7 @@ ai-usage: ai-assisted
 You can view the list of existing custom detection rules, check their previous runs, and review the alerts that were triggered. You can also run a rule on demand, modify it, or create a new custom detection rule directly from the list.
 
 > [!TIP]
-> Alerts raised by custom detections are available over alerts and incident APIs. For more information, see [Supported Microsoft Defender XDR APIs](api-supported.md).
+> Alerts raised by custom detections are available over alerts and incident APIs. For more information, see [Supported Microsoft Defender APIs](api-supported.md).
 
 For users who have onboarded a Microsoft Sentinel workspace to the unified Microsoft Defender portal, the custom detection rules list includes [analytics rules](advanced-hunting-defender-use-custom-rules.md#analytics-rules). The [View existing rules](#view-existing-rules) and [View rule details, modify rule, and run rule](#view-rule-details-modify-rule-and-run-rule) sections also apply to analytics rules unless otherwise indicated.
 

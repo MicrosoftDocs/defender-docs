@@ -3,7 +3,7 @@ title: Reference table for all deprecated security recommendations in Microsoft 
 description: This article lists all Microsoft Defender for Cloud deprecated security recommendations that help you harden and protect your resources.
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 05/18/2025
+ms.date: 06/23/2026
 ms.custom: generated
 ai-usage: ai-assisted
 ---
@@ -137,6 +137,52 @@ Using the latest Python version for web apps is recommended to benefit from secu
 (Related policy: [MFA should be enabled accounts with write permissions on your subscription](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f9297c21d-2ed6-4474-b48f-163f75654ce3)).
 
 **Severity**: High
+
+### Containers should only use allowed AppArmor profiles
+
+**Description**: Containers running on Kubernetes clusters should be limited to allowed AppArmor profiles only.
+AppArmor (Application Armor) is a Linux security module that protects an operating system and its applications from security threats. To use it, a system administrator associates an AppArmor security profile with each program.
+(Related policy: [Kubernetes cluster containers should only use allowed AppArmor profiles](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f511f5417-5d12-434d-ab2e-816901e72a5e)).
+
+**Severity**: High
+
+**Type**: Kubernetes data plane
+
+### Kubernetes clusters should not grant CAPSYSADMIN security capabilities
+
+**Description**: To reduce the attack surface of your containers, restrict CAP_SYS_ADMIN Linux capabilities. For more information, see <https://aka.ms/kubepolicydoc>.
+(No related policy)
+
+**Severity**: High
+
+**Type**: Kubernetes data plane
+
+### Services should listen on allowed ports only
+
+**Description**: To reduce the attack surface of your Kubernetes cluster, restrict access to the cluster by limiting services access to the configured ports.
+(Related policy: [Ensure services listen only on allowed ports in Kubernetes cluster](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f233a2a17-77ca-4fb1-9b6b-69223d272a44)).
+
+**Severity**: Medium
+
+**Type**: Kubernetes data plane
+
+### Usage of host networking and ports should be restricted
+
+**Description**: Restrict pod access to the host network and the allowable host port range in a Kubernetes cluster. Pods created with the hostNetwork attribute enabled will share the node's network space. To avoid compromised container from sniffing network traffic, we recommend not putting your pods on the host network. If you need to expose a container port on the node's network, and using a Kubernetes Service node port does not meet your needs, another possibility is to specify a hostPort for the container in the pod spec.
+(Related policy: [Kubernetes cluster pods should only use approved host network and port range](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f82985f06-dc18-4a48-bc1c-b9f4f0098cfe)).
+
+**Severity**: Medium
+
+**Type**: Kubernetes data plane
+
+### Usage of pod HostPath volume mounts should be restricted to a known list to restrict node access from compromised containers
+
+**Description**: We recommend limiting pod HostPath volume mounts in your Kubernetes cluster to the configured allowed host paths. If there's a compromise, the container node access from the containers should be restricted.
+(Related policy: [Kubernetes cluster pod hostPath volumes should only use allowed host paths](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f098fc59e-46c7-4d99-9b16-64990e543d75)).
+
+**Severity**: Medium
+
+**Type**: Kubernetes data plane
 
 ## Related content
 

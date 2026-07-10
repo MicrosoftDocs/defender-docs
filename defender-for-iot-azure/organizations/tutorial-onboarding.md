@@ -7,7 +7,7 @@ ms.date: 12/19/2023
 
 # Tutorial: Onboard and activate a virtual OT sensor
 
-This tutorial describes the basics of setting up a Microsoft Defender for IoT OT sensor, using a trial subscription of Microsoft Defender for IoT and your own virtual machine.
+This tutorial describes the basics of setting up a Microsoft Defender for IoT OT sensor, using a subscription of Microsoft Defender for IoT and your own virtual machine.
 
 For a full, end-to-end deployment, make sure to follow steps to plan and prepare your system, and also fully calibrate and fine-tune your settings. For more information, see [Deploy Defender for IoT for OT monitoring](ot-deploy/ot-deploy-path.md).
 

@@ -1,5 +1,5 @@
 ---
-title: Security alerts and incidents
+title: Security Alerts and Incidents
 description: Learn how Microsoft Defender for Cloud generates security alerts and correlates them into incidents.
 ms.topic: concept-article
 ms.date: 07/14/2025
@@ -108,7 +108,7 @@ You have a range of options for viewing your alerts outside of Defender for Clou
 
 Learn about [streaming alerts to a SIEM, SOAR, or IT Service Management solution](export-to-siem.md) and how to [continuously export data](continuous-export.md).
 
-## Next steps
+## Related content
 
 In this article, you learned about the different types of alerts available in Defender for Cloud. For more information, see:
 

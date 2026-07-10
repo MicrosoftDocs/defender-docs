@@ -1,16 +1,17 @@
 ---
 title: Create and use Microsoft Sentinel automation rules to manage response
-description: This article explains how to create and use automation rules in Microsoft Sentinel to manage and handle incidents, in order to maximize your SOC's efficiency and effectiveness in response to security threats.
+description: Create automation rules in Microsoft Sentinel to trigger actions on incidents based on defined conditions, and configure triggers, conditions, and response actions.
 ms.topic: how-to
 ms.author: monaberdugo
 author: mberdugo
 ms.reviewer: sshuster
-ms.date: 02/24/2026
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 
 #Customer intent: As a SOC analyst, I want to manage automation rules for incident and alert responses so that I can enhance the efficiency and effectiveness of my security operations center.
@@ -31,7 +32,7 @@ Before you create your automation rule, we recommend that you determine its scop
 
 ### Determine the scope
 
-The first step in designing and defining your automation rule is figuring out which incidents or alerts you want it to apply to. This determination directly impacts how you create the rule.
+The first step in designing and defining your automation rule is figuring out which incidents or alerts you want it to apply to. Deciding which incidents or alerts the rule applies to directly impacts how you create the rule.
 
 You also want to determine your use case. What are you trying to accomplish with this automation? Consider the following options:
 
@@ -58,9 +59,12 @@ The following table shows the different possible scenarios that cause an automat
 | **When incident is updated** | <li>An incident's status is changed (closed/reopened/triaged).<li>An incident's owner is assigned or changed.<li>An incident's severity is raised or lowered.<li>Alerts are added to an incident.<li>Comments, tags, or tactics are added to an incident. |
 | **When alert is created** | <li>An alert is created by a Microsoft Sentinel **Scheduled** or **NRT** analytics rule. |
 
+> [!NOTE]
+> **In the Defender portal:** Alert triggers work only on Microsoft Sentinel alerts. To automate responses to alerts across Microsoft Sentinel, Microsoft Defender, and XDR platforms, use the **[Enhanced Alert Trigger](automation/generate-playbook.md#enhanced-alert-trigger)**.
+
 ## Create your automation rule
 
-Most of the following instructions apply to any and all use cases for which you'll create automation rules.
+The steps in this section apply to most automation rule scenarios.
 
 If you're looking to suppress noisy incidents and are working in the Azure portal, try [handling false positives](false-positives.md#add-exceptions-with-automation-rules-azure-portal-only).
 
@@ -86,6 +90,9 @@ If you want to create an automation rule to apply to a specific analytics rule, 
 
 From the **Trigger** drop-down, select the appropriate trigger according to the circumstance for which you're creating the automation rule&mdash;**When incident is created**, **When incident is updated**, or **When alert is created**.
 
+> [!NOTE]
+> If your workspace is onboarded to the Microsoft Defender portal, the trigger drop-down also includes the **Case created** and **Case updated** triggers from [Simple Flows](automation/create-basic-automation-rules-simple-flows.md) (preview).
+
 :::image type="content" source="media/create-manage-use-automation-rules/select-trigger.png" alt-text="Screenshot of selecting the incident create or incident update trigger.":::
 
 ### Define conditions
@@ -96,7 +103,7 @@ Use the options in the **Conditions** area to define conditions for your automat
 
     Analytic rule name values include only analytics rules, and don't include other types of rules, such as threat intelligence or anomaly rules.
 
-- Rules you create for when an incident is created or updated support a large variety of conditions, depending on your environment. These options start with you've onboarded Microsoft Sentinel to the Defender portal:
+- Rules you create for when an incident is created or updated support a large variety of conditions, depending on your environment. The available condition options depend on whether you've onboarded Microsoft Sentinel to the Defender portal:
 
     #### [Onboarded to the Defender portal](#tab/onboarded)
 
@@ -181,7 +188,7 @@ Use the options in the **Conditions** area to define conditions for your automat
 
     :::image type="content" source="media/create-manage-use-automation-rules/add-values-to-condition.png" alt-text="Screenshot of adding values to your condition in automation rules.":::
 
-Again, for setting complex **Or** conditions with different fields, see [Add advanced conditions to automation rules](add-advanced-conditions-to-automation-rules.md).
+For information about setting complex **Or** conditions with different fields, see [Add advanced conditions to automation rules](add-advanced-conditions-to-automation-rules.md).
 
 #### Conditions based on tags
 
@@ -210,7 +217,7 @@ To add one of these conditions based on an incident's tags, take the following s
 
     ---
 
-    See how the operators are divided in two categories as described before. Choose your operator carefully based on how you want the tags to be evaluated.
+    The operators are divided into two categories: **Any individual tag** and **Collection of all tags**. Choose your operator carefully based on how you want the tags to be evaluated.
 
     For more information, see [*Tag* property: individual vs. collection](automate-incident-handling-with-automation-rules.md#tag-property-individual-vs-collection).
 
@@ -222,7 +229,7 @@ You can set the value of a [custom detail surfaced in an incident](surface-custo
 
 **To add a condition based on a custom detail**:
 
-1. Create a new automation rule as described [earlier](#create-your-automation-rule).
+1. Create a new automation rule as described in [Create your automation rule](#create-your-automation-rule).
 
 1. Add a condition or a condition group.
 
@@ -250,6 +257,8 @@ In this example, if the incident has the custom detail *DestinationEmail*, and i
 ### Add actions
 
 Choose the actions you want this automation rule to take. Available actions include **Assign owner**, **Change status**, **Change severity**, **Add tags**, and **Run playbook**. You can add as many actions as you like.
+
+If your workspace is onboarded to the Microsoft Defender portal, [Simple Flows](automation/create-basic-automation-rules-simple-flows.md) (preview) adds more pre-built case and alert actions to this list that don't require a playbook: **Send Case Created/Updated/SLA Exceeded Email**, **Update Case**, **Add Task**, and **Update Alert**.
 
 > [!NOTE]
 > Only the **Run playbook** action is available in automation rules using the **alert trigger**.
@@ -280,6 +289,8 @@ You can change the order of actions in your rule even after you've added them. S
 
 ### Finish creating your rule
 
+Complete the remaining settings to finalize your automation rule:
+
 1. Under **Rule expiration**, if you want your automation rule to expire, set an expiration date, and optionally, a time. Otherwise, leave it as *Indefinite*.
 
 1. The **Order** field is prepopulated with the next available number for your rule's trigger type. This number determines where in the sequence of automation rules (of the same trigger type) that this rule runs. You can change the number if you want this rule to run before an existing rule.
@@ -292,7 +303,7 @@ You can change the order of actions in your rule even after you've added them. S
 
 ## Audit automation rule activity
 
-Find out what automation rules might have done to a given incident. You have a full record of incident chronicles available to you in the *SecurityIncident* table in the **Logs** page in the Azure portal, or the **Advanced hunting** page in the Defender portal. Use the following query to see all your automation rule activity:
+Find out what automation rules might have done to a given incident. You have a full record of incident chronicles available to you in the *SecurityIncident* table in the **Logs** page in the Azure portal, or the **Advanced hunting** page in the Defender portal. The following Kusto query retrieves all incidents that were modified by an automation rule, so you can review which actions were taken automatically:
 
 ```kusto
 SecurityIncident

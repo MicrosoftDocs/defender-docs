@@ -9,7 +9,7 @@ metadata:
   ms.topic: faq
   ms.service: defender-business
   ms.localizationpriority: medium
-  ms.date: 05/20/2025
+  ms.date: 06/10/2026
   ms.reviewer: efratka, nehabha
   f1.keywords: NOCSH
   ms.collection:
@@ -104,7 +104,7 @@ sections:
         answer: |
           Yes, but with limitations.
 
-          Defender for Business includes built-in Attack Surface Reduction (ASR) rules. For more information, see [Enable your attack surface reduction rules in Microsoft Defender for Business](mdb-asr.md).
+          Defender for Business includes built-in attack surface reduction features. For more information, see [Attack surface reduction in Microsoft Defender for Business](mdb-asr.md).
 
           You can't create custom ASR rules in Defender for Business. You need [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune) to create ASR rules.
 
@@ -112,9 +112,9 @@ sections:
 
           [Device control in Microsoft Defender for Endpoint](/defender-endpoint/device-control-overview) prevents users, endpoints, or both from using unauthorized removable storage media.
 
-      - question: How do I configure attack surface reduction rules and capabilities in Defender for Business?
+      - question: How do I configure attack surface reduction capabilities in Defender for Business?
         answer: |
-          Use Intune to configure your attack surface reduction rules. Other attack surface reduction capabilities can be configured in the Microsoft Defender portal. See [Attack surface reduction capabilities in Defender for Business](mdb-asr.md).
+          See [Attack surface reduction in Microsoft Defender for Business](mdb-asr.md).
 
       - question: How do I run custom reports with Defender for Business?
         answer: |

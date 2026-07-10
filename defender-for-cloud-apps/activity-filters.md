@@ -1,10 +1,11 @@
 ---
-title: Investigate activities 
+title: Investigate activities in Microsoft Defender for Cloud Apps
 description: This article provides a list of activities, filters, and match parameters that can be applied to activity policies.
-ms.date: 06/24/2025
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: gayasalomon
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Investigate activities
@@ -26,8 +27,11 @@ For a full list of Microsoft 365 activities monitored by Defender for Cloud Apps
 
 The **Activity log** can be filtered to enable you to find specific activities. You create policies based on the activities and then define what you want to be alerted about and act on. You can search for activities performed on certain files. The type of activities and the information we get for each activity depends on the app and what kind of data the app can provide.
 
-For example, you can use the **Activity log** to find users in your organization who are using operating systems or browsers that are out of date, as follows:
-After you connect an app to Defender for Cloud Apps in the **Activity log** page, use the advanced filter and select **User agent tag**. Then select **Outdated browser** or **Outdated operating system**.
+For example, you can use the **Activity log** to find users in your organization who are using operating systems or browsers that are out of date:
+
+1. After you connect an app to Defender for Cloud Apps, on the **Activity log** page, select **Advanced filters**.
+1. Select **User agent tag**.
+1. Select **Outdated browser** or **Outdated operating system**.
 
 :::image type="content" source="media/activity-filters/activity-example-outdated.png" alt-text="Screenshot that shows the Activity log with an outdated browser example." lightbox="media/activity-filters/activity-example-outdated.png":::
 
@@ -54,18 +58,16 @@ You can expand the basic filter by selecting **Advanced filters** to drill down 
 You can view more information about each activity, by selecting the Activity itself in the Activity log. This opens the Activity drawer that provides the following additional actions and insights for each activity:
 
 - Matched policies: Select the **Matched policies** link to see a list of policies this activity matched.
-
 - View raw data: Select **View raw data** to see the actual data that was received from the app.
-
 - User: Select the user to view the user page for the user who performed the activity.
-
 - Device type: Select **Device type** to view the raw user agent data.
-
 - Location: Select the location to view the location in Bing Maps.
-
 - IP address category and tags: Select the IP tag to view the list of IP tags found in this activity. You can then filter by all activities matching this tag.
 
-The fields in the Activity drawer provide contextual links to additional activities and drill-downs you might want to perform from the drawer directly. For example, if you move your cursor next to the IP address category, you can use the **add to filter** icon ![add to filter.](media/activity-filters/add-to-filter-icon.png) to immediately add the IP address to the current page's filter. You can also use the settings cog icon ![settings icon](media/activity-filters/contextual-settings-icon.png) that pops up to arrive directly at the settings page necessary to modify the configuration of one of the fields, such as **User groups**.
+> [!NOTE]
+> The **IP address category** is assigned automatically based on threat intelligence and can be manually overridden using [IP address ranges](ip-tags.md).
+
+The fields in the Activity drawer provide contextual links to additional activities and drill-downs you might want to perform from the drawer directly. For example, if you move your cursor next to the IP address category, you can use the **add to filter** icon ![Icon for adding the activity to a filter.](media/activity-filters/add-to-filter-icon.png) to immediately add the IP address to the current page's filter. You can also use the settings cog icon ![Settings cog icon used to access configuration settings](media/activity-filters/contextual-settings-icon.png) that pops up to arrive directly at the settings page necessary to modify the configuration of one of the fields, such as **User groups**.
 
 You can also use the icons at the top of the tab to:
 
@@ -150,5 +152,5 @@ In the **Activity log**, select the **Export** button in the top-left corner.
 > [!div class="nextstepaction"]
 > [Best practices for protecting your organization](best-practices.md)
 
-If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support).
+If you run into any problems, we're here to help. To get assistance or support for your product issue, please [contact Microsoft Defender XDR support](/defender-xdr/contact-defender-support).
 

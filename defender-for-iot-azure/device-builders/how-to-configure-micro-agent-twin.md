@@ -1,17 +1,21 @@
 ---
 title: Configure a micro agent twin
-description: Learn how to configure a micro agent twin.
+description: Learn how to view and update Microsoft Defender for IoT micro agent twin configuration properties, such as message frequency and collector settings, through the Azure portal.
 ms.topic: how-to
-ms.date: 01/16/2022
+ms.date: 06/12/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
-# Configure a micro agent twin
+# Configure a Microsoft Defender for IoT micro agent twin
 
-Learn how to configure a micro agent twin.
+The Microsoft Defender for IoT micro agent twin lets you customize the security agent's behavior for each device. By editing the module identity twin's desired properties in the Azure portal, you can control settings such as message frequency, collector enablement, and cache sizes. This article walks you through viewing and updating those configuration properties in IoT Hub.
 
 [!INCLUDE [device-agents-note](../includes/device-agents-note.md)]
 
 ## Prerequisites
+
+Before you configure the micro agent twin, make sure you have the following prerequisites:
 
 - An Azure account. If you do not already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
@@ -86,11 +90,12 @@ Learn how to configure a micro agent twin.
 
     :::image type="content" source="media/tutorial-micro-agent-configuration/reported-success.png" alt-text="Screenshot of a successful configuration change.":::
 
-    If the agent fails to set the new configuration, the value of `"latest_state"`, under the `"reported"` section will show `"failed"`. If this occurs, the `"latest_invalid_fields"` will contain a list of the fields that are invalid.
+    If the agent fails to set the new configuration, the value of `"latest_state"`, under the `"reported"` section will show `"failed"`. If the configuration update fails, the `"latest_invalid_fields"` will contain a list of the fields that are invalid.
 
-## Next steps
+<a name="next-steps"></a>
+## Related content
 
-You learned how to configure a micro agent twin. For more information about micro agent configurations and event aggregation, see:
+For more information about micro agent configurations and event aggregation, see:
 
 - [Micro agent configurations](concept-micro-agent-configuration.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Sentinel Advanced Security Information Model (ASIM) parsers overview | Microsoft Docs
+title: Microsoft Sentinel Advanced Security Information Model (ASIM) parsers overview
 description: This article provides an overview of Advanced Security Information Model (ASIM) parsers and a link to more detailed ASIM parsers documents.
 ms.author: edbaynash
 author: EdB-MSFT
@@ -38,14 +38,14 @@ The unifying parser name is `_Im_<schema>` where `<schema>` stands for the speci
 > A corresponding set of parsers that use `_ASim_<schema>`. These parsers do not support filtering parameters and are provided for backward compatibility.
 
 >[!TIP]
-> The parser hierarchy adds a layer to support customization. For more information, see [Managing ASIM parsers](isv/normalization-develop-parsers.md).
+> The parser hierarchy adds a layer to support customization. For more information, see [Managing ASIM parsers](normalization-develop-parsers.md).
 
 ## Related content
 
 Learn more about ASIM parsers:
 
 - [Use ASIM parsers](normalization-about-parsers.md)
-- [Develop custom ASIM parsers](isv/normalization-develop-parsers.md)
+- [Develop custom ASIM parsers](normalization-develop-parsers.md)
 - [Manage ASIM parsers](normalization-manage-parsers.md)
 - [The ASIM parsers list](normalization-parsers-list.md)
 

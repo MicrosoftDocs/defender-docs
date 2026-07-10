@@ -245,7 +245,8 @@
               items:
                 - name: Deploy using Azure CLI
                   href: defender-for-containers-deploy-azure-cli.md
-                - name: Deploy to private clusters (Preview)
+                - name: Deploy to private clusters
+                  displayName: private, clusters, private clusters
                   href: defender-for-containers-private-clusters.md
                 - name: Deploy using Helm (advanced)
                   href: deploy-helm.md
@@ -379,7 +380,7 @@
           href: enable-permissions-management.md
         - name: Agentless machine scanning
           href: concept-agentless-data-collection.md
-        - name: Discovery and posture for serverless container workloads (Preview)
+        - name: Discovery and posture for serverless container workloads
           displayName: serverless containers, ACA, ACI, posture, inventory, recommendations, attack path
           href: posture-for-serverless-containers.md
         - name: What is Serverless protection?
@@ -801,31 +802,26 @@
       - name: Kubernetes data plane hardening
         displayName: k8s, containers, aks
         href: kubernetes-workload-protections.md
-      - name: Container software supply chain (CSSC) security
+      - name: Container software supply chain protection
         items:
-          - name: Overview
+          - name: Software supply chain security
             href: containers-software-supply-chain-security-introduction.md
-          - name: Securing a container image
-            href: secure-container-image.md
           - name: Gated deployment
             items:
               - name: Overview
                 href: runtime-gated-overview.md
-              - name: Enable gated deployment
-                displayName: gated deployment, enable
+              - name: Configure gated deployment
+                displayName: gated deployment, configure
                 href: enablement-guide-runtime-gated.md
-              - name: Kubernetes misconfiguration enforcement (preview)
+              - name: Kubernetes misconfiguration enforcement
                 displayName: misconfiguration, kubernetes, enforcement, admission
                 href: kubernetes-misconfiguration-enforcement.md
-              - name: Gated deployment for Infrastructure as Code
+              - name: Enable gated deployment by API
                 displayName: gated deployment, infrastructure as code, IaC
                 href: gated-deployment-infrastructure-as-code.md
               - name: Troubleshooting
                 displayName: troubleshooting, gated deployment
                 href: troubleshooting-runtime-gated.md
-              - name: Frequently asked questions
-                displayName: faq, frequently asked questions, gated deployment
-                href: faq-runtime-gated.md
       - name: Protect clusters with AKS Security Dashboard
         items:
           - name: Overview

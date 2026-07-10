@@ -421,7 +421,7 @@ For detailed syntax and parameter information, see [Set-AntiPhishPolicy](/powers
 
 The only setting that's not available when you modify an anti-phish rule in PowerShell is the _Enabled_ parameter that allows you to create a disabled rule. To enable or disable existing anti-phish rules, see the next section.
 
-Otherwise, the same settings are available when you modify an anti-phish rule as when you create one. The configurable rule settings include the associated anti-phish policy (_AntiPhishPolicy_), recipient filters (_SentTo_, _SentToMemberOf_, _RecipientDomainIs_), recipient filter exceptions, priority, and comments. For the full list of parameters, see [Set-AntiPhishRule](/powershell/module/exchangepowershell/set-antiphishrule) and [Step 2: Use PowerShell to create an anti-phish rule](#step-2-use-powershell-to-create-an-anti-phish-rule).
+Otherwise, the same settings are available when you create a rule as described in [Step 2: Use PowerShell to create an anti-phish rule](#step-2-use-powershell-to-create-an-anti-phish-rule).
 
 To modify an existing anti-phish rule in PowerShell, use the following syntax:
 

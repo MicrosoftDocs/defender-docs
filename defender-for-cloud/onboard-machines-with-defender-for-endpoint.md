@@ -1,5 +1,5 @@
 ---
-title: Onboard non-Azure servers with Defender for Endpoint
+title: Onboard Non-Azure Servers with Defender for Endpoint
 description: Learn how to connect your non-Azure machines directly to Microsoft Defender for Cloud with Microsoft Defender for Endpoint.
 ms.topic: quickstart
 ms.date: 06/17/2026
@@ -33,10 +33,11 @@ This capability is **generally available (GA)** and supports on-premises servers
 
 Supported operating systems include all Windows Server and Linux server versions supported by Defender for Endpoint. For OS-specific requirements, see:
 
-- [Supported Windows Server versions](/microsoft-365/security/defender-endpoint/minimum-requirements#supported-windows-versions)
-- [Supported Linux server versions](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux#system-requirements)
+- [Supported Windows Server versions](/defender-endpoint/minimum-requirements#windows-versions-supported-by-defender-for-endpoint)
+- [Supported Linux server versions](/defender-endpoint/mde-linux-prerequisites#system-requirements)
 
 This capability works with both:
+
 - **Defender for Servers Plan 1 (P1)**
 - **Defender for Servers Plan 2 (P2)** (with [limitations](#current-limitations))
 
@@ -50,8 +51,8 @@ Before you begin:
 > If you have both Microsoft Defender for Endpoint for Servers licenses and Defender for Servers enabled, request the billing discount to avoid double billing. For steps, see [Can I get a discount if I already have a Microsoft Defender for Endpoint license?](faq-defender-for-servers.yml#can-i-get-a-discount-if-i-already-have-a-microsoft-defender-for-endpoint-license-).
 
 - Make sure you have the required permissions:
-    - **Subscription Owner** permissions on the subscription you select for onboarding.
-    - **Microsoft Entra Security Administrator** (or higher) permissions on the tenant.
+  - **Subscription Owner** permissions on the subscription you select for onboarding.
+  - **Microsoft Entra Security Administrator** (or higher) permissions on the tenant.
 - Review the [current limitations](#current-limitations)
 
 ### Enable in the Defender for Cloud portal
@@ -91,7 +92,7 @@ Deploy the Defender for Endpoint agent the same way on Windows and Linux servers
   |Linux (AMD64)|30.101.23052.009|
   |Linux (ARM64)|30.101.25022.004|
 
-## Next steps
+## Next step
 
 After onboarding your non-Azure servers, you can monitor their security posture and connection status in Defender for Cloud:
 

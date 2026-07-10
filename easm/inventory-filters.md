@@ -5,16 +5,18 @@ description: This article outlines the filter functionality available in Defende
 author: danielledennis
 ms.author: dandennis
 ms.service: defender-easm
-ms.date: 12/14/2022
+ms.date: 06/15/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Defender EASM inventory filters overview
 
 This article outlines the filter functionality available in Microsoft Defender External Attack Surface Management (Defender EASM). Filtering helps you find specific subsets of inventory assets based on selected parameters. This article outlines each filter and operator and provides guidance on input options that yield the best results. It also explains how to save queries for easy accessibility to the filtered results.
 
-## How it works
+<a name="how-it-works"></a>
+## How Defender EASM inventory filters work
 
 Inventory filters allow you to access a specific subset of data that meets your search parameters. You can apply as many filters as you need to obtain the results you want.
 
@@ -28,29 +30,31 @@ Removing the **Approved** inventory filter is useful when you need to:
 
 Defender EASM offers various filters to obtain results of differing levels of granularity. With some filters, you can select value options from a dropdown list. Others require you to manually enter the value you want.
 
-![Screenshot that shows expanded inventory filters.](media/filters-1.png)
+![Screenshot of the inventory filters panel expanded to show available filter options and operators.](media/filters-1.png)
 
-## Saved queries
+<a name="saved-queries"></a>
+## Manage saved queries for inventory filters
 
 You can save queries of interest to quickly access the resulting asset list. This feature is beneficial if you need to search for a particular subset of assets on a routine basis. It's also helpful if you need to easily refer to a specific filter configuration at a later time. Saved filters help you easily access the assets you care about most based on highly customizable parameters.
 
 To save a query:
 
-1. First, carefully select the filters to produce the results you want. For more information on the applicable filters for each kind of asset, see the "Next steps" section. In this example, you're searching for domains that expire within 30 days that require renewal. Select **Search**.
+1. First, carefully select the filters to produce the results you want. For more information on the applicable filters for each kind of asset, see [Related content](#related-content). In this example, you're searching for domains that expire within 30 days that require renewal. Select **Search**.
 
-    ![Screenshot that shows the Inventory page with the Search and Saved query buttons highlighted.](media/saved-filters-1.png)
+    ![Screenshot of the Inventory page showing where to run a search and access saved queries.](media/saved-filters-1.png)
 
 1. Review the resulting assets. If you're satisfied with the selected filters and want to save the query, select **Save query**.
   
 1. Name your query and provide a description. Query names can't be edited after the initial setup, but descriptions can be changed at a later time. Select **Save**. A banner appears that confirms the query was saved.
 
-    ![Screenshot that shows the Save query configuration page.](media/saved-filters-2.png)
+    ![Screenshot of the Save query page where you enter a name and description for the current inventory filter.](media/saved-filters-2.png)
 
 1. To view your saved filters, select the **Saved queries** tab at the top of the inventory list page. Any saved queries are visible in the top section. Selecting **Open query** filters your inventory by the designated parameters. From this page, you can also edit or delete saved queries.
 
-    ![Screenshot that shows the Saved queries tab on the Inventory page.](media/saved-filters-3.png)
+    ![Screenshot of the Saved queries tab listing existing saved queries with options to open, edit, or delete them.](media/saved-filters-3.png)
 
-## Operators
+<a name="operators"></a>
+## Filter operators
 
 Inventory filters can be used with the following operators. Some operators aren't available for every filter. Some operators are hidden if they aren't logically applicable to the specific filter.
 
@@ -79,7 +83,7 @@ Inventory filters can be used with the following operators. Some operators aren'
 
 ## Common filters
 
-These filters apply to all kinds of assets within an inventory. You can use these filters when you search for a wider range of assets. For a list of filters for specific kinds of assets, see the "Next steps" section.
+The following common filters apply to all kinds of assets within an inventory. You can use these filters when you search for a wider range of assets. For filters specific to each kind of asset, see [Related content](#related-content).
 
 ### Defined value filters
 
@@ -109,21 +113,23 @@ The following filters require you to manually enter the value you want to use fo
 
 ## Filter for assets outside your approved inventory
 
+Use the following steps to remove the default **Approved** state filter and locate assets in other states, such as **Candidate** or **Requires investigation**.
+
 1. On the leftmost pane, select **Inventory** to view your inventory.
 
 1. To remove the **Approved** inventory filter, select the **X** next to the **State = Approved** filter. Your inventory list expands to include assets in other states, such as **Dismissed**.
 
-   ![Screenshot that shows Approved inventory filter highlighted.](media/filters-2.png)
+   ![Screenshot of the inventory filter bar with the State equals Approved filter applied, showing the X button to remove it.](media/filters-2.png)
 
 1. Use the inventory filters to identify the assets you want to find. You might want to review all assets in the **Candidate** state. You can also add any assets that are important to your organization to the **Approved** inventory.
 
-   ![Screenshot that shows the query editor searching for Candidate assets.](media/filters-3.png)
-   ![Screenshot that shows results returned when filtering for Candidate assets.](media/filters-4.png)
+   ![Screenshot of a query configured to filter inventory for assets in the Candidate state.](media/filters-3.png)
+   ![Screenshot of inventory results filtered to show assets in the Candidate state.](media/filters-4.png)
 
 1. Or you might need to find a single specific asset that you want to add to the **Approved** inventory. To discover a specific asset, apply a filter to search for the name.
 
-   ![Screenshot that shows the query editor searching for a specific named asset.](media/filters-5.png)
-   ![Screenshot that shows results returned when filtering for an asset by name.](media/filters-6.png)
+   ![Screenshot of a query configured to search for a specific asset by name.](media/filters-5.png)
+   ![Screenshot of inventory results filtered to a single asset matched by name.](media/filters-6.png)
 
 1. When your inventory list shows the unapproved assets you were searching for, you can modify the assets. For more information on how to update assets, see [Modifying inventory assets](labeling-inventory-assets.md).
 

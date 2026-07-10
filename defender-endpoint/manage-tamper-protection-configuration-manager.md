@@ -48,20 +48,18 @@ Tamper protection using tenant attach is supported on the following operating sy
 <a name="turn-tamper-protection-using-tenant-attach"></a>
 ## Turn tamper protection on or off by using tenant attach
 
-1. Set up tenant attach. To learn more, see [Get started: Create and deploy endpoint security policies from the admin center](/intune/configmgr/tenant-attach/endpoint-security-get-started).
+First, set up tenant attach. To learn more, see [Get started: Create and deploy endpoint security policies from the admin center](/intune/configmgr/tenant-attach/endpoint-security-get-started).
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** \> **Antivirus**, and then choose **+ Create Policy**.
+Then, create a new policy. To create a new policy, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
 
-   - In the **Platform** list, select **Windows 10, Windows 11, and Windows Server (ConfigMgr)**.
-   - In the **Profile** list, select **Windows Security experience (preview)**.
+- **Policy type**: Antivirus
+- **Platform**: Windows 10, Windows 11, and Windows Server (ConfigMgr)
+- **Profile**: Windows Security experience (preview)
+- **Configuration settings**: Set **Enable tamper protection to prevent Microsoft Defender from being disabled** to **Enabled** under **Windows Security**
 
-1. On the **Configuration settings** step, under **Windows Security**, set **Enable tamper protection to prevent Microsoft Defender from being disabled** to **Enabled**.
+Finish selecting options and settings for your policy and deploy the policy to your devices.
 
-1. Finish selecting options and settings for your policy.
-
-1. Deploy the policy to your devices.
-
-    :::image type="content" source="media/tamper-protect-configmgr.png" alt-text="Screenshot showing Windows Security settings with tamper protection enabled.":::
+:::image type="content" source="media/tamper-protect-configmgr.png" alt-text="Screenshot showing Windows Security settings with tamper protection enabled.":::
 
 <a name="see-also"></a>
 ## Related content

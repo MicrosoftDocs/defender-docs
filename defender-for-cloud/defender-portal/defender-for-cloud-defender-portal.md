@@ -1,5 +1,5 @@
 ---
-title: Overview of Defender for Cloud in Defender portal
+title: Overview of Defender for Cloud in Defender Portal
 description: Comprehensive overview of Microsoft Defender for Cloud in the Defender portal, including navigation hub, dashboard features, and unified security management capabilities.
 ms.topic: overview
 ms.date: 04/28/2026
@@ -65,15 +65,15 @@ Cloud security data and signals can be accessed through several experiences. Som
 
 ## Key values and benefits
 
-**[Cloud overview dashboard](../cloud-infrastructure-dashboard.md?pivots=defender-portal)** - The Cloud overview dashboard centralizes both posture management and threat protection, giving security personas an overview of their environment. It also highlights the top improvement actions for risk reduction, workload-specific views with security insights and track security progress over time out of the box. 
+**[Cloud overview dashboard](../cloud-infrastructure-dashboard.md?pivots=defender-portal)**: The Cloud overview dashboard centralizes both posture management and threat protection, giving security personas an overview of their environment. It also highlights the top improvement actions for risk reduction, workload-specific views with security insights and track security progress over time out of the box. 
 
-**[Cloud asset inventory](../asset-inventory.md?pivots=defender-portal)** – A complete inventory offers a comprehensive view of cloud and code assets across Azure, AWS, and GCP. Assets are categorized by workload, criticality, and coverage, with integrated health data, asset actions, and risk signals. Information security and SOC teams can easily access resource-specific views, exposure map, and metadata to address security recommendations and respond quickly to threats. 
+**[Cloud asset inventory](../asset-inventory.md?pivots=defender-portal)**: A complete inventory offers a comprehensive view of cloud and code assets across Azure, AWS, and GCP. Assets are categorized by workload, criticality, and coverage, with integrated health data, asset actions, and risk signals. Information security and SOC teams can easily access resource-specific views, exposure map, and metadata to address security recommendations and respond quickly to threats. 
 
-**[Unified cloud security posture capabilities](/security-exposure-management/microsoft-security-exposure-management)** – All the cloud security posture management (CSPM) capabilities unified into Microsoft Security Exposure Management (MSEM). Security personas can view secure scores, prioritized recommendations, attack paths and vulnerabilities, all in a single pane of glass, empowering them to reduce risk and get a holistic view of all their posture end-to-end including devices, identities, SaaS apps and data. For more information, see [What's new in Microsoft Security Exposure Management](/security-exposure-management/whats-new).
+**[Unified cloud security posture capabilities](/security-exposure-management/microsoft-security-exposure-management)**: All the cloud security posture management (CSPM) capabilities unified into Microsoft Security Exposure Management (MSEM). Security personas can view secure scores, prioritized recommendations, attack paths and vulnerabilities, all in a single pane of glass, empowering them to reduce risk and get a holistic view of all their posture end-to-end including devices, identities, SaaS apps and data. For more information, see [What's new in Microsoft Security Exposure Management](/security-exposure-management/whats-new).
 
-**[Granular access management](../cloud-scopes-unified-rbac.md?pivots=defender-portal)** – Security teams can now provide targeted access to security content, so only relevant users see necessary information. This allows users to view security insights without direct resource permissions, enhancing operational security and compliance. Using a new cloud scopes capability, cloud accounts like Azure subscriptions, AWS accounts, and GCP projects can be organized into logical groups for improved data pivoting and RBAC, supporting segmentation by business unit, region, or workload with persistent filtering across dashboards and workflows. 
+**[Granular access management](../cloud-scopes-unified-rbac.md?pivots=defender-portal)**: Security teams can now provide targeted access to security content, so only relevant users see necessary information. This allows users to view security insights without direct resource permissions, enhancing operational security and compliance. Using a new cloud scopes capability, cloud accounts like Azure subscriptions, AWS accounts, and GCP projects can be organized into logical groups for improved data pivoting and RBAC, supporting segmentation by business unit, region, or workload with persistent filtering across dashboards and workflows. 
 
-## Why integrate into the Defender portal? 
+## Why integrate into the Defender portal?
 
 The Microsoft Defender portal delivers a unified security operations experience across endpoints, identities, email, and cloud resources. By integrating Defender solutions, such as Defender for Cloud, Defender for Endpoint, and others, it provides comprehensive protection, detection, investigation, and response capabilities in one place. This unified approach streamlines threat detection, correlates insights, and strengthens your organization’s security posture. Powered by advanced AI and Microsoft’s global threat intelligence, it helps identify emerging risks faster and enables proactive defense against sophisticated attacks.
 
@@ -83,14 +83,14 @@ Defender for Cloud customers with at any paid plan can access the consumption ex
 
 To get started, go to **Defender portal** → **Cloud security** → **Overview**, and select **Prepare my tenant**.
 
->[!Note]
-> Data may take up to 24 hours to appear.
+> [!NOTE]
+> Data might take up to 24 hours to appear.
 
 - Read the [known limitations](known-limitations.md)
 
 - Read the [FAQ](integration-faq.md)  
 
-## Next steps
+## Related content
 
 - [Explore the Cloud Overview dashboard](../cloud-infrastructure-dashboard.md?pivots=defender-portal)
 - [Configure Cloud Scopes and Unified RBAC](../cloud-scopes-unified-rbac.md?pivots=defender-portal)

@@ -1,11 +1,13 @@
 ---
-title: Audit Microsoft Sentinel queries and activities | Microsoft Docs
+title: Audit Microsoft Sentinel queries and activities
 description: This article describes how to audit queries and activities performed in Microsoft Sentinel.
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 11/12/2024
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security analyst, I want to audit queries and activities in my SOC environment so that I can ensure compliance and monitor security operations effectively.
 ---
@@ -198,7 +200,8 @@ LAQueryLogs
 | sort by Queries desc
 ```
 
-## Configuring alerts for Microsoft Sentinel activities
+<a name="configuring-alerts-for-microsoft-sentinel-activities"></a>
+## Configure alerts for Microsoft Sentinel activities
 
 You might want to use Microsoft Sentinel auditing resources to create proactive alerts.
 
@@ -234,7 +237,7 @@ Use Microsoft Sentinel's own features to monitor events and actions that occur w
 
 - **Monitor data connector health** using the [Connector Health Push Notification Solution](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/Send-ConnectorHealthStatus) playbook to watch for stalled or stopped ingestion, and send notifications when a connector has stopped collecting data or machines have stopped reporting.
 
-See more information on the following items used in the preceding examples, in the Kusto documentation:
+See more information on the following items used in the KQL examples in this article, in the Kusto documentation:
 - [***let*** statement](/kusto/query/let-statement?view=microsoft-sentinel&preserve-view=true)
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
 - [***project*** operator](/kusto/query/project-operator?view=microsoft-sentinel&preserve-view=true)

@@ -1,27 +1,28 @@
 ---
 title: Enhance security posture with security recommendations - Microsoft Defender for IoT
 description: Learn about how to find security recommendations for devices detected by Microsoft Defender for IoT.
-ms.date: 12/31/2023
+ms.date: 06/12/2026
 ms.topic: how-to
-ms.custom:
+ms.custom: msecd-doc-authoring-1014
   - enterprise-iot
   - sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Enhance security posture with security recommendations
 
-Use Microsoft Defender for IoT's security recommendations to enhance your network security posture across unhealthy devices in your network. Lower your attack surface by creating actionable, prioritized mitigation plans that address the unique challenges in OT/IoT networks.
+Microsoft Defender for IoT provides security recommendations to help you improve your network security posture. Use these recommendations to find unhealthy devices in your network. Then create prioritized mitigation plans to lower your attack surface and address the unique challenges in OT/IoT networks.
 
 > [!IMPORTANT]
 > The **Recommendations** page is currently in **PREVIEW**. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 ## View security recommendations
 
-View all current recommendations for your organization on the Defender for IoT **Recommendations** page on the Azure portal. For example:
+To see all current recommendations for your organization, go to the Defender for IoT **Recommendations** page in the Azure portal. For example:
 
 :::image type="content" source="media/recommendations/recommendations.png" alt-text="Screenshot of the Recommendations page on the Azure portal." lightbox="media/recommendations/recommendations.png":::
 
-The **Active recommendations** widget indicates the number of recommendations that represent actionable steps you can currently take on unhealthy devices. We recommend reviewing unhealthy devices regularly, taking recommended actions, and keeping the number of active recommendations as low as possible.
+The **Active recommendations** widget shows how many recommendations need action on unhealthy devices. Review unhealthy devices regularly, take the recommended actions, and keep the number of active recommendations as low as possible.
 
 > [!NOTE]
 > Only recommendations that are relevant to your environment are shown in the grid, with at least one healthy or unhealthy device found. You won't see recommendations that aren't related to any devices in your network.
@@ -45,9 +46,9 @@ To export a CSV file of all recommendations for your network, select :::image ty
 
 ## View recommendation details
 
-Select a specific recommendation in the grid to drill down for more details. The recommendation name is shown as the page's title. Details with the recommendation's severity, number of unhealthy devices detected, and last update date and time in widgets on the left.
+Select a recommendation in the grid to see more details. The recommendation name appears as the page title. The left side shows the severity, the number of unhealthy devices detected, and the last update date and time.
 
-The left pane also shows the following information:
+On the recommendation details page, the left pane also shows the following information:
 
 - **Description**: More context for the recommended mitigation step
 - **Remediation steps**: The full list of mitigation steps recommended for unhealthy devices
@@ -62,7 +63,7 @@ For example:
 
 You might want to review all recommendations for a specific device in order to handle them all together.
 
-Recommendations are also listed on the **Device details** page for each detected device, accessed either from the [**Device inventory** page](how-to-manage-device-inventory-for-organizations.md#view-the-device-inventory), or from the list of healthy or unhealthy devices on a recommendation details page.
+You can also find recommendations on the **Device details** page for each detected device. To open this page, go to the [**Device inventory** page](how-to-manage-device-inventory-for-organizations.md#view-the-device-inventory), or select a device from the list of healthy or unhealthy devices on a recommendation details page.
 
 On a device details page, select the **Recommendations** tab to view a list of security recommendations specific for the selected device.
 
@@ -72,7 +73,7 @@ For example:
 
 ## Supported security recommendations
 
-The following recommendations are displayed for OT devices in the Azure portal:
+The following recommendations are displayed for OT devices in the Azure portal. Recommendations are grouped by detection source, starting with those reported by OT network sensors:
 
 |Name  |Description  |
 |---------|---------|
@@ -84,9 +85,9 @@ The following recommendations are displayed for OT devices in the Azure portal:
 | **Set a stronger password with minimum length and complexity** | Devices with this recommendation are found with weak passwords based on successful sign-ins. <br><br> We recommend that you change the device password to a password that has eight or more characters and that contains characters from 3 of the following categories: <br><br> - Uppercase letters <br> - Lowercase letters <br> - Special characters <br> - Numbers (0-9) |
 | **Disable insecure administration protocol**| Devices with this recommendation are exposed to malicious threats because they use Telnet, which isn't a secured and encrypted communication protocol. <br><br>We recommend that you switch to a more secure protocol, such as SSH, disable the server altogether, or apply network access restrictions.|
 
-Other recommendations you may see in the **Recommendations** page are relevant for the [Defender for IoT micro agent](../device-builders/index.yml).
+Additional recommendations not listed in the preceding table might appear on the **Recommendations** page. These recommendations apply to the [Defender for IoT micro agent](../device-builders/index.yml).
 
-The following Defender for Endpoint recommendations are relevant for Enterprise IoT customers and are available in Microsoft 365 Defender only:
+The following Defender for Endpoint recommendations apply to Enterprise IoT customers. They're available only in Microsoft 365 Defender:
 
 - **Require authentication for VNC management interface**
 - **Disable insecure administration protocol – Telnet**

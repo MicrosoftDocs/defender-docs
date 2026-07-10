@@ -7,6 +7,7 @@ ms.author: monaberdugo
 ms.service: microsoft-sentinel
 ms.topic: article
 ms.date: 3/30/2026
+ai-usage: ai-assisted
 ms.custom:
   - template-concept
   - build-2025
@@ -31,6 +32,7 @@ You can deploy these Microsoft Sentinel custom content types from an external so
 
 - Analytics rules
 - Automation rules
+- Custom detection rules (Preview)
 - Hunting queries
 - Parsers
 - Playbooks
@@ -91,6 +93,128 @@ Although you can build templates from scratch, it's often easier to start from e
 > Analytic rules deployed using the Microsoft Sentinel **Repositories** feature can use cross-workspace queries only if the destination workspace is in the same Resource Group as the workspace connected to the repository.
 
 For information on creating custom content from scratch, see the relevant [Microsoft Sentinel GitHub wiki](https://github.com/Azure/Azure-Sentinel/wiki#get-started) for each content type.
+
+## Deploy custom detection rules as code (Preview)
+
+> [!IMPORTANT]
+> Custom detection rules support in Microsoft Sentinel Repositories is currently in **Preview**. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+
+You can manage [custom detection rules](/defender-xdr/custom-detections-overview) as code in your repository using the Microsoft Security BICEP extension. Custom detection rules use a different BICEP extension and resource provider than other Microsoft Sentinel content types.
+
+### Prerequisites for custom detection rules
+
+In addition to the standard [repository connection prerequisites](ci-cd.md#prerequisites), custom detection rules require:
+
+- A Microsoft 365 E5 license (or equivalent license that includes Microsoft Defender XDR).
+- Microsoft Sentinel workspaces onboarded to the Microsoft Defender portal.
+
+### Configure the Microsoft Security BICEP extension
+
+Custom detection rules require the Microsoft Security BICEP extension. Create a `bicepconfig.json` file in the root of your repository:
+
+```json
+{
+  "extensions": {
+    "MicrosoftSecurity": "br:mcr.microsoft.com/bicep/extensions/microsoftsecurity:v1.0.1"
+  }
+}
+```
+
+This configuration is required for both repository-based sync and direct BICEP deployment.
+
+### Create a custom detection rule BICEP file
+
+Define a custom detection rule using the `Microsoft.Security/detectionRules` resource type. Create a `.bicep` file (for example, `detectionRule.bicep`) with the following structure:
+
+```bicep
+extension MicrosoftSecurity
+
+resource detectionRule 'Microsoft.Security/detectionRules@2026-06-01-preview' = {
+  id: 'custom-rule-id'
+  displayName: 'Custom Rule Display Name'
+  status: 'enabled'
+  queryCondition: {
+    queryText: 'DeviceProcessEvents | take 10 | project DeviceId, Timestamp, FileName'
+  }
+  schedule: {
+    frequency: 'PT1H'
+  }
+  detectionAction: {
+    alertTemplate: {
+      title: '<ruleTitle>'
+      description: 'Custom detection rule'
+      severity: 'medium'
+      tactics: [
+        {
+          tactic: 'Execution'
+          techniques: [
+            {
+              technique: 'T1059'
+            }
+          ]
+        }
+      ]
+      entityMappings: {
+        hosts: [
+          {
+            id: 'h'
+            deviceIdColumn: 'DeviceId'
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+Rules are uniquely identified by their **ID**, which must be provided in the template.
+
+### Deploy custom detection rules
+
+You can deploy custom detection rules using one of the following methods.
+
+| Deployment method | Description | Who runs the deployment |
+|---|---|---|
+| **Microsoft Sentinel Repositories (sync)** | Automatic sync from your GitHub or Azure DevOps repository to Microsoft Sentinel. | Sentinel runs the deployment automatically on each commit. |
+| **BICEP CLI (direct)** | Deploy using `az deployment group create` from Azure CLI. | You run the deployment manually or from a custom pipeline. |
+
+#### Option 1: Deploy using Microsoft Sentinel Repositories
+
+1. Commit the BICEP file and `bicepconfig.json` to your GitHub or Azure DevOps repository.
+1. In the Microsoft Defender portal, navigate to **Microsoft Sentinel** > **Content management** > **Repositories**.
+1. Create a new repository connection or edit an existing one.
+1. In the connection settings, select **Custom Detection Rules** under **Content Types**.
+1. Save the connection.
+
+Once enabled, Microsoft Sentinel syncs custom detection rules from the repository automatically.
+
+#### Option 2: Deploy using BICEP directly
+
+Run the following Azure CLI command:
+
+```azurecli
+az deployment group create \
+  --resource-group <RESOURCE_GROUP> \
+  --template-file detectionRule.bicep \
+  --name mtp-deployment
+```
+
+Verify the deployment completed successfully in the resource group.
+
+### Validate the deployment
+
+After deployment with either option:
+
+1. Confirm the detection rule appears in your list of custom detection rules in the Microsoft Defender portal.
+1. Verify the rule is enabled and producing expected results.
+1. If you used repository sync (Option 1), make changes in the repository to validate sync behavior.
+
+### Preview limitations
+
+During the preview:
+
+- Custom frequency for Microsoft Sentinel data isn't supported.
+- Custom details aren't supported.
 
 ## Improve performance with smart deployments
 

@@ -36,6 +36,10 @@ Custom detections provide:
 
 Optimizing your queries in custom detection rules is important in avoiding time-outs and ensuring efficiency. There are several resources available that provide guidance on optimizing your queries in  [Advanced hunting query best practices](advanced-hunting-best-practices.md).
 
+## Manage custom detections as code (Preview)
+
+You can manage custom detection rules as code in a GitHub or Azure DevOps repository using the Microsoft Security BICEP extension. Deploy custom detections through Microsoft Sentinel Repositories for automatic sync, or use BICEP CLI for custom pipelines. For more information, see [Deploy custom detection rules as code](/azure/sentinel/ci-cd-custom-content#deploy-custom-detection-rules-as-code-preview).
+
 ## See also
 
 - [Create and manage custom detection rules](custom-detection-rules.md)

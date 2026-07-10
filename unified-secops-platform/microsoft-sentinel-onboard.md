@@ -17,14 +17,15 @@ ai-usage: ai-assisted
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 06/08/2026
+ms.date: 06/15/2026
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Connect Microsoft Sentinel to the Microsoft Defender portal
 
-Microsoft Sentinel is generally available in the Microsoft Defender portal, with or without Microsoft Defender XDR or an E5 license. Using Microsoft Sentinel in the Defender portal together with Microsoft Defender XDR services, you unify capabilities like incident management and advanced hunting. Reduce tool switching and build a more context-focused investigation that expedites incident response and stops breaches faster. 
+Microsoft Sentinel is available in the Microsoft Defender portal. You don't need Microsoft Defender XDR or an E5 license. When you use Microsoft Sentinel with Defender XDR in the Defender portal, you get shared incident management and advanced hunting. You can reduce tool switching and run faster, more focused investigations. 
 
-This article is relevant for customers whose Microsoft Sentinel workspaces are not yet connected to the Defender portal. In many cases, customers onboarding to Microsoft Sentinel after **July 1, 2025** are automatically onboarded to the Defender portal.
+This article walks you through connecting a Microsoft Sentinel workspace to the Defender portal, including prerequisites, onboarding steps, and available features. Follow these steps if your workspaces aren't yet connected to the Defender portal. In many cases, customers onboarding to Microsoft Sentinel after **July 1, 2025** are automatically onboarded to the Defender portal.
 
 For more information, see:
 
@@ -106,9 +107,9 @@ After your workspace is connected, the banner on the **Home** page shows that yo
 
 ## Explore Microsoft Sentinel features in the Defender portal
 
-After you connect your workspace to the Defender portal, **Microsoft Sentinel** is on the left-hand side navigation pane. If you have Defender XDR enabled, pages like  **Home**, **Incidents**, and **Advanced Hunting** have unified data from the primary workspace for Microsoft Sentinel and Defender XDR. If you don't have Defender XDR enabled, these pages just include data from Microsoft Sentinel. For more information about the unified capabilities and differences between portals, see  [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690).
+After you connect your workspace, **Microsoft Sentinel** appears in the left-side navigation pane. If Defender XDR is enabled, pages like **Home**, **Incidents**, and **Advanced Hunting** show combined data from Microsoft Sentinel and Defender XDR. Without Defender XDR, those pages show only Microsoft Sentinel data. For more information, see [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690).
 
-Many of the existing Microsoft Sentinel features are integrated into the Defender portal. For these features, notice that the experience between Microsoft Sentinel in the Azure portal and Defender portal are similar. Use the following articles to help you start working with Microsoft Sentinel in the Defender portal. When using these articles, keep in mind that your starting point in this context is the [Defender portal](https://security.microsoft.com/) instead of the Azure portal.
+Many Microsoft Sentinel features are built into the Defender portal. For the integrated features listed in the following table, the experience is similar to the Azure portal. Use the articles in the following table to get started. When you use the linked articles, start from the [Defender portal](https://security.microsoft.com/) instead of the Azure portal.
 
 | Feature category   | Links |
 |--------------------|----------|
@@ -133,9 +134,10 @@ When you switch the primary workspace for Microsoft Sentinel, the Defender XDR c
 
 ## Offboard Microsoft Sentinel
 
-If you decide to offboard a workspace from the Defender portal, disconnect the workspace from the settings for Microsoft Sentinel.
+> [!WARNING]
+> If your workspace has the [Microsoft Defender XDR connector](/azure/sentinel/connect-microsoft-365-defender) configured, offboarding the workspace from the Defender portal also disconnects the Microsoft Defender XDR connector. Make sure to reconnect the Microsoft Defender XDR connector if you want to receive Defender XDR incidents in Microsoft Sentinel again.
 
-If your workspace has the [Microsoft Defender XDR connector](/azure/sentinel/connect-microsoft-365-defender) configured, offboarding the workspace from the Defender portal will also disconnect the Microsoft Defender XDR connector.
+To offboard a workspace from the Defender portal, disconnect the workspace from the settings for Microsoft Sentinel.
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com/) and sign in.
 1. In the Defender portal, under **System**, select **Settings** > **Microsoft Sentinel**.
@@ -145,7 +147,7 @@ If your workspace has the [Microsoft Defender XDR connector](/azure/sentinel/con
 
    When your workspace is disconnected, the **Microsoft Sentinel** section is removed from the left-hand side navigation of the Defender portal. Data from Microsoft Sentinel is no longer included on the **Home** page.
 
-If you want to connect to a different workspace, from the **Workspaces** page, select the workspace and **Connect a workspace**.
+If you want to connect a different workspace, on the **Workspaces** page, select **Connect a workspace**, and then choose the workspace you want to connect.
 
 ## Related content
 

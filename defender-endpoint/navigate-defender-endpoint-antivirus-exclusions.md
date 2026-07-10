@@ -184,9 +184,9 @@ For more information, see [Manage automation folder exclusions](manage-automatio
 
 ### Controlled folder access exclusions
 
-[Controlled folder access](controlled-folders.md) monitors apps for activities that are detected as malicious and protects the contents of certain (protected) folders on Windows devices. Controlled folder access allows only trusted apps to access protected folders, such as common system folders (including boot sectors) and other folders that you specify. You can allow certain apps or signed executables to access protected folders by defining exclusions.
+[Controlled folder access (CFA)](controlled-folder-access-overview.md) protects your data by blocking untrusted apps from changing files in [protected folders](controlled-folder-access-overview.md#default-folders-protected-by-cfa) on Windows devices. By default, CFA protects common system folders, and you can [add other folders](controlled-folder-access-overview.md#add-other-folders-to-cfa). If CFA blocks an app that you trust, you can define an exclusion to [allow the app to modify files in protected folders](controlled-folder-access-overview.md#allow-apps-to-modify-files-in-protected-folders).
 
-For more information, See [Customize controlled folder access](customize-controlled-folders.md).
+For more information, see [Configure controlled folder access](controlled-folder-access-configure.md).
 
 ### Custom remediation actions
 

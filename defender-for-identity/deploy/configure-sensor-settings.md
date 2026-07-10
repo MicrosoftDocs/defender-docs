@@ -109,7 +109,7 @@ If the domain controller or AD FS / AD CS that you're testing is the first senso
 
 ### Verify latest available sensor version
 
-The Defender for Identity version is updated frequently. Check for the latest version in the Microsoft Defender XDR **Settings** > **Identities** > **About** page.
+The Defender for Identity version is updated frequently. Check for the latest version in the Microsoft Defender **Settings** > **Identities** > **About** page.
 
 ## Related content
 

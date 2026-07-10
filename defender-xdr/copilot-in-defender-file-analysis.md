@@ -42,7 +42,7 @@ The file analysis capability of Copilot in Defender reduces the barrier to learn
 
 The file analysis capability is available in Microsoft Defender for customers who have provisioned access to Security Copilot. 
 
-Security Copilot standalone portal users also have the file analysis capability and other Defender XDR capabilities through the Microsoft Defender XDR plugin. Know more about [preinstalled plugins in Security Copilot](/security-copilot/manage-plugins#preinstalled-plugins).
+Security Copilot standalone portal users also have the file analysis capability and other Defender capabilities through the Microsoft Defender XDR plugin. Know more about [preinstalled plugins in Security Copilot](/security-copilot/manage-plugins#preinstalled-plugins).
 
 ## Key features
 

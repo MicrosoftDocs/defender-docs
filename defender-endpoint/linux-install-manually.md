@@ -362,6 +362,8 @@ sudo apt install mdatp
 
 > [!NOTE]
 > If you have multiple Microsoft repositories configured on your device, you can be specific about which repository to install the package from. The following example shows how to install the package from the `production` channel if you also have the `insiders-fast` repository channel configured on this device. This situation can happen if you're using multiple Microsoft products on your device.
+>
+> The version numbers and release codenames in the following code snippets are examples. Use the actual release codename the bash command returns.
 
 ```bash
 cat /etc/apt/sources.list.d/*

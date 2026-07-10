@@ -7,9 +7,9 @@ ms.date: 09/21/2025
 
 # Connecting data sources in Microsoft Security Exposure Management
 
-[Microsoft Security Exposure Management](microsoft-security-exposure-management.md) consolidates security posture data from all your digital assets across endpoints, cloud environments, and external attack surfaces, enabling you to map your attack surface and focus your security efforts on areas at greatest risk. Data from Microsoft Security products like Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft Defender for Cloud (including Azure, AWS, and GCP), Microsoft Entra ID, and others are automatically ingested and consolidated within Exposure Management in the unified portal. You can further enrich and extend this data by connecting to a range of external data sources through the new Exposure Management connectors.
+[Microsoft Security Exposure Management](microsoft-security-exposure-management.md) consolidates security posture data from all your digital assets across endpoints, cloud environments, operational technology (OT) environments, and external attack surfaces, enabling you to map your attack surface and focus your security efforts on areas at greatest risk. Data from Microsoft Security products like Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft Defender for Cloud (including Azure, AWS, and GCP), Microsoft Entra ID, and others are automatically ingested and consolidated within Exposure Management in the unified portal. You can further enrich and extend this data by connecting to a range of external data sources through Exposure Management data connectors.
 
-To provide coverage of all your assets and security signals and to help you establish a comprehensive, single source of truth for your assets, Exposure Management provides data connectors. These new Exposure Management connectors ingest data from third-party security tools (such as ServiceNow CMDB for assets, and Tenable, Qualys, Rapid7 for vulnerabilities) and other asset management products deployed in your environment.
+To provide coverage of your assets and security signals and to help you establish a comprehensive, single source of truth for your assets, Exposure Management provides data connectors. These connectors ingest data from third-party security tools, including CMDB tools such as ServiceNow, vulnerability management tools such as Tenable, Qualys, and Rapid7, cloud security tools such as Wiz and Palo Alto Prisma, and OT tools such as Armis, Dragos, and Forescout.
 
 These third-party vulnerability management connectors also replace the 'bring your own license' scanners previously available in Microsoft Defender for Cloud in Azure, but they offer significantly more capabilities beyond just that functionality.
 
@@ -29,7 +29,11 @@ The support for external solutions helps to further streamline, integrate, and o
 
 :::image type="content" source="media/connect-data-sources/data-connectors.png" alt-text="Screenshot of data connectors available in MSEM" lightbox="media/connect-data-sources/data-connectors.png":::
 
-Data Connectors in Microsoft Security Exposure Management is currently in public preview.
+OT data connectors are available in the unified connector catalog in the Microsoft Defender portal. OT connectors use a dedicated setup flow under **System** > **Data management** > **Data connectors**.
+
+:::image type="content" source="media/connect-data-sources/ot-data-connectors.png" alt-text="Screenshot of OT data connectors in the unified connector catalog." lightbox="media/connect-data-sources/ot-data-connectors.png":::
+
+Data Connectors in Microsoft Security Exposure Management is currently in preview.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 

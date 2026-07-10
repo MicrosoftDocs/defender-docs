@@ -81,18 +81,23 @@ For more information about the specific network-connectivity requirements to ens
 
 ## Use Microsoft Intune to turn on cloud protection
 
-To enable cloud protection by using Microsoft Intune, perform the following steps:
+To enable cloud protection by using Microsoft Intune, you first select an existing policy or create a new policy.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com) and sign in.
+To create a new policy and enable cloud protection in Intune, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
 
-1. Choose **Endpoint security** \> **Antivirus**.
+- **Policy type**: Antivirus
+- **Platform**: Windows
+- **Profile**: Microsoft Defender Antivirus
+- **Basics**: Specify a name and description for the policy
+- **Defender**: Find **Allow Cloud Protection** and set it to **Allowed**.
+- **Submit Samples Consent**: Select **Send all samples automatically** or **Send safe samples automatically**
+- **Scope tags**: If your organization is using [scope tags](/intune/intune-service/fundamentals/scope-tags), select the tags you want to use
+- **Assignments**: Select the groups, users, or devices to whicj that you want to apply this policy
 
-1. In the **AV policies** section, either select an existing policy, or choose **+ Create Policy**.
+When modifying an existing policy, see <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (opens in a new tab in the Intune documentation). Select the policy you want to edit and choose the following options:
 
-   | Task  | Steps  |
-   |---------|---------|
-   | Create a new policy     | 1. For **Platform**, select **Windows**. <br/><br/>2. For **Profile**, select **Microsoft Defender Antivirus**.<br/><br/>3. On the **Basics** page, specify a name and description for the policy, and then choose **Next**.<br/><br/>4. In the **Defender** section, find **Allow Cloud Protection**, and set it to **Allowed**.<br/><br/>5. Scroll down to **Submit Samples Consent**, and select one of the following settings:<br/>- **Send all samples automatically**<br/>- **Send safe samples automatically**<br/><br/>6. On the **Scope tags** step, if your organization is using [scope tags](/intune/intune-service/fundamentals/scope-tags), select the tags you want to use, and then choose **Next**.<br/><br/>7. On the **Assignments** step, select the groups, users, or devices that you want to apply this policy to, and then choose **Next**.<br/><br/>8. On the **Review + create** step, review the settings for your policy, and then choose **Create**.          |
-   | Edit an existing policy     | 1. Select the policy that you want to edit.<br/><br/>2. Under **Configuration settings**, choose **Edit**.<br/><br/>3. In the **Defender** section, find **Allow Cloud Protection**, and set it to **Allowed**.<br/><br/>4. Scroll down to **Submit Samples Consent**, and select one of the following settings:<br/>- **Send all samples automatically**<br/>- **Send safe samples automatically**<br/><br/>5. Select **Review + save**.        |
+- **Defender**: Find **Allow Cloud Protection** and set it to **Allowed**.
+- **Submit Samples Consent**: Select **Send all samples automatically** or **Send safe samples automatically**
 
 > [!TIP]
 > To learn more about Microsoft Defender Antivirus settings in Intune, see [Antivirus policy for endpoint security in Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy).

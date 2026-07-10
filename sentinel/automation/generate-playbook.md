@@ -368,6 +368,7 @@ Generated playbooks have the following limitations:
 - **Runtime**: Maximum runtime per playbook execution is 10 minutes
 - **Integrations**: Maximum number of integrations per tenant is 500.
 - **AI interactions**: Maximum of 8M tokens per day per tenant
+- **Playbook nesting**: Playbook-to-playbook calls aren't supported. A playbook can't invoke another playbook.
 
 ### Integration profiles limitations
 

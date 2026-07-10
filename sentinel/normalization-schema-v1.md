@@ -1,5 +1,5 @@
 ---
-title: Microsoft Sentinel network normalization schema (Legacy version - Public preview)| Microsoft Docs
+title: Microsoft Sentinel network normalization schema (Legacy version - Public preview)
 description: This article displays the Microsoft Sentinel data normalization schema.
 ms.author: edbaynash
 author: EdB-MSFT

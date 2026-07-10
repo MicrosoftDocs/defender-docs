@@ -8,9 +8,7 @@ ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to  
-ms.date: 06/12/2026
-ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.date: 06/25/2026
 
 # Customer intent: As a security engineer or data scientist, I want to explore and analyze security data in the Microsoft Sentinel data lake using Jupyter notebooks, so that I can gain insights and build advanced analytics solutions.
 ---
@@ -85,6 +83,90 @@ You can create a job in one of three ways:
 
 1. Select an activity to see more details.
     :::image type="content" source="./media/notebook-jobs/run-details.png" lightbox="./media/notebook-jobs/run-details.png" alt-text="A screenshot showing the job run details page.":::
+
+## Create and manage parameterized notebook jobs
+
+Notebook jobs can use parameters defined in the notebook. Parameters help you reuse the same notebook job with different input values without editing the notebook code each time. For example, you might run the same analysis for different users, entities, time ranges, or other investigation inputs.
+
+Parameterized notebook jobs support three levels of values:
+
+- **Notebook values**: Default parameter values defined in the notebook.
+- **Job configuration values**: Values saved with the notebook job and used for scheduled runs.
+- **Runtime values**: Values provided when you run the job manually. Runtime values apply only to that job run.
+
+### Create a parameterized notebook job
+
+When you create a notebook job from a notebook that contains parameters, the Microsoft Sentinel extension reads the parameters from the notebook and displays them in the job configuration.
+
+To create a parameterized notebook job:
+
+1. In the notebook, create a code cell near the top of the notebook that contains the parameter defaults. Open the cell menu and select **Mark Cell as Parameters**.
+
+    :::image type="content" source="./media/notebook-jobs/mark-cell-as-parameters.png" lightbox="./media/notebook-jobs/mark-cell-as-parameters.png" alt-text="Screenshot of Visual Studio Code showing the Mark Cell as Parameters menu item for a notebook cell.":::
+
+1. Define the parameters in the cell. For example:
+
+    ```python
+    # Parameters
+    lookback_days = [7, 14, 30, 90]
+    min_failed_attempts = [5, 10, 20]
+    ```
+
+1. In the **Explorer** pane, right-click the notebook file, select **Microsoft Sentinel**, and then select **Create Scheduled Job**.
+
+    :::image type="content" source="./media/notebook-jobs/create-scheduled-job-from-notebook.png" lightbox="./media/notebook-jobs/create-scheduled-job-from-notebook.png" alt-text="Screenshot of Visual Studio Code showing the Microsoft Sentinel menu with Create Scheduled Job selected.":::
+
+1. In the job editor, expand **Default parameters**, and then select **Refresh parameters** to load the latest parameter definitions from the notebook.
+
+    :::image type="content" source="./media/notebook-jobs/refresh-notebook-job-parameters.png" lightbox="./media/notebook-jobs/refresh-notebook-job-parameters.png" alt-text="Screenshot of the scheduled notebook job editor showing the Refresh parameters button under Default parameters.":::
+
+1. Review or update the default parameter values, and then submit the job.
+
+You can keep the notebook default values or change the values before you submit the job. Values that you change are saved with the job configuration and used for future scheduled runs.
+
+If a parameter value doesn't match the expected type, the extension shows an inline validation error and prevents you from submitting the job until the error is fixed.
+
+### Add parameters to an existing notebook job
+
+To add parameters to an existing notebook job, download the latest notebook, update the notebook locally to define the parameters, and then edit the job. When you upload or refresh the updated notebook in the job configuration, the parameters are available for the job.
+
+After the parameters are available, you can update their values and submit the job again. Updated parameter values are saved with the job configuration and used for future scheduled runs.
+
+### Refresh parameters from the notebook
+
+If the notebook is updated after the job is created, refresh the job parameters to sync the job configuration with the latest notebook parameters.
+
+Refreshing parameters:
+
+- Adds new parameters that were added to the notebook.
+- Removes parameters that were removed from the notebook.
+- Preserves existing job configuration values that you changed.
+
+Refreshing parameters doesn't overwrite parameter values that were already edited in the job configuration.
+
+### Reset parameter values
+
+You can reset parameter values to the defaults defined in the notebook.
+
+Use reset for an individual parameter to restore only that value. Use **Reset all** to restore all parameter values to the notebook defaults. When you reset all parameter values, confirm the reset before the values are restored.
+
+### Run with custom runtime parameter values
+
+When you select **Run now** for a parameterized notebook job, the Microsoft Sentinel extension opens a runtime parameters dialog. The dialog is prepopulated with the parameter values saved in the job configuration.
+
+:::image type="content" source="./media/notebook-jobs/run-job-with-parameter-overrides.png" lightbox="./media/notebook-jobs/run-job-with-parameter-overrides.png" alt-text="Screenshot of the Run job dialog showing parameter values that can be changed before running a notebook job.":::
+
+You can keep the saved values or change them for the current run. Runtime parameter changes apply only to that job run and don't update the saved job configuration or future scheduled runs.
+
+Use runtime parameters when you want to reuse the same job for different inputs, such as running the same risk analysis for a different user.
+
+### View job run history
+
+After you run a parameterized notebook job, view the job status and run history the same way you view other notebook job runs. In the **Run history** tab, select a run to see more details.
+
+### Jobs with no parameters
+
+If the selected notebook doesn't define parameters, the job configuration shows an empty parameter state. To add parameters, update the notebook to include parameter definitions, save the notebook, and upload or refresh the job configuration.
 
 ## Edit a submitted job
 

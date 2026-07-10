@@ -1,5 +1,5 @@
 ---
-title: Normalization and the Advanced Security Information Model (ASIM) | Microsoft Docs
+title: Normalization and the Advanced Security Information Model (ASIM)
 description: This article explains how Microsoft Sentinel normalizes data from many different sources using the Advanced Security Information Model (ASIM)
 ms.author: edbaynash
 author: EdB-MSFT
@@ -123,7 +123,7 @@ To start using ASIM:
 
 - Write your own analytics rules using ASIM or [convert existing ones](normalization-content.md#builtin).
 
-- Enable your custom data to use built-in analytics by [writing parsers](isv/normalization-develop-parsers.md) for your custom sources and [adding](normalization-manage-parsers.md) them to the relevant source agnostic parser.
+- Enable your custom data to use built-in analytics by [writing parsers](normalization-develop-parsers.md) for your custom sources and [adding](normalization-manage-parsers.md) them to the relevant source agnostic parser.
 
 ## Related content
 

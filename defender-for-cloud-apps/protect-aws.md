@@ -35,6 +35,9 @@ Defender for Cloud Apps helps protect your AWS environment in the following ways
 
 You can use the following built-in policy templates to detect and notify you about potential threats:
 
+> [!IMPORTANT]
+> File policies retire on January 6, 2027. To maintain file-based data protection for this app, [migrate to Microsoft Purview DLP or auto-labeling policies](migrate-file-policies-to-purview.md).
+
 | Type | Name |
 | ---- | ---- |
 | Activity policy template |Admin console sign-in failures<br />EC2 instance configuration changes<br />IAM policy changes<br />Logon from a risky IP address<br />Network access control list (ACL) changes<br />Network gateway changes<br />S3 Bucket Activity<br />Security group configuration changes<br />Virtual private network changes |

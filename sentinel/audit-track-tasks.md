@@ -5,9 +5,11 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: idpelleg
 ms.topic: how-to
-ms.date: 05/08/2023
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #Customer intent: As a SOC manager, I want to audit and track changes to incident tasks so that I can evaluate the effectiveness of task assignments and improve SOC efficiency.
 ---
 
@@ -23,7 +25,7 @@ This article explains how you, as a SOC manager, can audit the history of Micros
 
 The *SecurityIncident* table is an audit table&mdash;it stores not the incidents themselves, but rather records of the life of an incident: its creation and any changes made to it. Any time an incident is created or a change is made to an incident, a record is generated in this table showing the now-current state of the incident.
 
-The addition of tasks details to the schema of this table allows you to audit tasks in greater depth.
+The addition of tasks details to the schema of the *SecurityIncident* table allows you to audit tasks in greater depth.
 
 The detailed information added to the **Tasks** field consists of key-value pairs taking the following structure:
 
@@ -94,13 +96,13 @@ Apart from the **Incident tasks workbook**, you can audit task activity by query
 
 ### View status changes to tasks
 
-Now, if we go back to that new task in the incident details page and mark it as complete, and then come back to **Logs** and rerun the query again, we'll see yet another new record for the same incident, this time showing our task's new status as **Completed**.
+Now, if we go back to the task titled "This task is a test task!" in the incident details page and mark it as complete, and then come back to **Logs** and rerun the query again, we'll see yet another new record for the same incident, this time showing our task's new status as **Completed**.
 
 :::image type="content" source="media/audit-track-tasks/incident-with-tasks-query-6.png" alt-text="Screenshot of query results showing an incident task with its new status." lightbox="media/audit-track-tasks/incident-with-tasks-query-5.png":::
 
 ### View deletion of tasks
 
-Let's go back to the task list in the incident details page and delete the task we added earlier.
+Let's go back to the task list in the incident details page and delete the task titled "This task is a test task!".
 
 When we come back to **Logs** and run the query yet again, we'll see another new record, only this time the status for our task&mdash;the one titled "This task is a test task!"&mdash;will be **Deleted**.
 
@@ -122,7 +124,7 @@ SecurityIncident
 | sort by lastModifiedTimeUtc desc
 ```
 
-See more information on the following items used in the preceding examples, in the Kusto documentation:
+See more information on the following Kusto operators and functions used in the example queries in this article:
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
 - [***project*** operator](/kusto/query/project-operator?view=microsoft-sentinel&preserve-view=true)
 - [***sort*** operator](/kusto/query/sort-operator?view=microsoft-sentinel&preserve-view=true)
@@ -135,6 +137,6 @@ See more information on the following items used in the preceding examples, in t
 
 - Learn more about [incident tasks](incident-tasks.md).
 - Learn how to [investigate incidents](investigate-cases.md).
-- Learn how to add tasks to groups of incidents automatically using [automation rules](create-tasks-automation-rule.md) or [playbooks](create-tasks-playbook.md), and [when to use which](incident-tasks.md#use-automation-rules-or-playbooks-to-add-tasks).
-- Learn more about [automation rules](automate-incident-handling-with-automation-rules.md) and how to [create them](./create-manage-use-automation-rules.md).
-- Learn more about [playbooks](automate-responses-with-playbooks.md) and how to [create them](tutorial-respond-threats-playbook.md).
+- Learn how to add tasks to groups of incidents automatically using [automation rules](create-tasks-automation-rule.md) or [playbooks](create-tasks-playbook.md), and [when to use automation rules or playbooks to add tasks](incident-tasks.md#use-automation-rules-or-playbooks-to-add-tasks).
+- Learn more about [automation rules](automate-incident-handling-with-automation-rules.md) and how to [create and manage automation rules](./create-manage-use-automation-rules.md).
+- Learn more about [playbooks](automate-responses-with-playbooks.md) and how to [create a playbook to respond to threats](tutorial-respond-threats-playbook.md).
