@@ -46,7 +46,7 @@ Review the following requirements and considerations before you create or manage
 
 - Before adding a block entry, check the [Microsoft Teams external domain anomalies report](/microsoftteams/teams-analytics-and-reports/external-domain-anomalies-report) to identify suspicious external domains that might need to be blocked.
 
-- After you add the block entry for the domain or sender address in Teams, all new Teams communication from that organization is blocked. Block communication includes new Teams meetings, chats, channels, and calls. 
+- After you add the block entry for the domain or sender address in Teams, all new Teams communication from that organization is blocked. Blocked communication includes new Teams meeting chats, chats, channels, and calls. Existing Teams meeting chats, chats, channels, and calls are deleted.
 
 - On the **Organization settings** tab of the **External access** page in the Microsoft Teams admin center at <https://admin.teams.microsoft.com/company-wide-settings/external-communications>, the following settings are required to create and manage block entries for domains and senders in Teams using the Tenant Allow/Block List:
   - **Teams and Skype for Business users in external organizations** must be **Allow all external domains** or **Block only specific external domains**.
