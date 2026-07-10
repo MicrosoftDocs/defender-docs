@@ -5,7 +5,7 @@ author: chrisda
 ms.author: chrisda
 ms.reviewer: kellycrider
 ms.topic: overview
-ms.date: 05/21/2026
+ms.date: 07/10/2026
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
@@ -53,8 +53,8 @@ This article explains how to enable and customize automatic feedback response fo
 
    In the **Customize admin review email notifications** flyout that opens, configure the following settings on the **Phishing** (which corresponds to the **Phishing or malware** automatic feedback response option), **Junk** and **No threats found** tabs:
 
-   - **Email body results text**: Enter the custom text to use. You can use different text for **Phishing**, **Junk** and **No threats found**.
-   - **Email footer text**: Enter the custom message footer text to use. The same text is used for **Phishing**, **Junk** and **No threats found**.
+   - **Email body results text**: Enter the custom text to use. You can use different text for **Phishing**, **Junk** and **No threats found**. The maximum length is 1115 characters.
+   - **Email footer text**: Enter the custom message footer text to use. The same text is used for **Phishing**, **Junk** and **No threats found**. The maximum length is 1115 characters.
 
    :::image type="content" source="media/air-automatic-feedback-customize-email-notifications.png" alt-text="The user email notification customization options on the User reported settings page." lightbox="media/air-automatic-feedback-customize-email-notifications.png":::
 
