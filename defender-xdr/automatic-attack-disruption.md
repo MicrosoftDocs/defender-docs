@@ -127,7 +127,7 @@ Use the following table to find where each supported identity service is configu
 
 | Identity service | Availability | Configuration and setup |
 | --- | --- | --- |
-| Microsoft Entra ID and Active Directory | Generally available | [Configure automatic attack disruption in Microsoft Defender XDR](configure-attack-disruption.md) |
+| Microsoft Entra ID and Active Directory | Generally available | [Configure automatic attack disruption in Microsoft Defender](configure-attack-disruption.md) |
 | Okta | Preview | [Enable attack disruption actions in Okta with Microsoft Sentinel](okta-attack-disruption.md) |
 | AWS IAM | Preview | [Enable attack disruption actions on AWS with Microsoft Sentinel](/azure/sentinel/aws-disruption?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json) |
 

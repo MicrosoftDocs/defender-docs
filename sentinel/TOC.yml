@@ -509,6 +509,8 @@
               href: automate-incident-handling-with-automation-rules.md
             - name: Create automation rules
               href: create-manage-use-automation-rules.md
+            - name: Create basic automation rules with Simple Flows
+              href: automation/create-basic-automation-rules-simple-flows.md
             - name: Add advanced conditions to automation rules
               href: add-advanced-conditions-to-automation-rules.md
             - name: Create incident tasks using automation rules
@@ -638,6 +640,8 @@
               href: datalake/create-graphs-with-ai.md 
             - name: GQL reference for Sentinel custom graph
               href: datalake/gql-reference-for-sentinel-custom-graph.md
+            - name: Create deep links to graph queries
+              href: datalake/create-deep-links-graph-queries.md
             - name: Graph REST API
               href: datalake/graph-rest-api.md
     - name: Microsoft Sentinel MCP server
@@ -850,9 +854,11 @@
         - name: Manage ASIM parsers
           href: normalization-manage-parsers.md
         - name: Develop ASIM parsers
-          href: isv/normalization-develop-parsers.md
+          href: normalization-develop-parsers.md
         - name: Modify content to use ASIM
           href: normalization-modify-content.md
+        - name: Creating ASIM parsers using AI agent in Microsoft Sentinel
+          href: normalization-create-parsers-ai-agent.md
     - name: Aggregate data
       items:
         - name: Aggregate data with summary rules
@@ -964,10 +970,7 @@
         href: isv/sentinel-workbook-creation.md
       - name: Creating playbooks
         href: isv/sentinel-playbook-creation.md
-      - name: Creating ASIM parsers using AI agent in Microsoft Sentinel
-        href: isv/normalization-create-parsers-ai-agent.md
-      - name: Creating ASIM parsers
-        href: isv/normalization-develop-parsers.md
+
     - name: Publish solutions
       href: isv/publish-sentinel-solutions.md
     - name: Sentinel SIEM solution lifecycle post publish

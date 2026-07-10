@@ -9,13 +9,14 @@ ms.collection:
   - msftsolution-secops
   - tier1
   - essentials-manage
-ms.custom:
+ms.custom: msecd-doc-authoring-1014
 description: A prescriptive playbook for SecOps personnel to manage Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 05/21/2026
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Microsoft Defender for Office 365 Security Operations Guide
@@ -26,7 +27,7 @@ This article gives an overview of the requirements and tasks for successfully op
 
 The rest of this guide describes the required activities for SecOps personnel. The activities are grouped into prescriptive daily, weekly, monthly, and ad-hoc tasks.
 
-A companion article to this guide provides an overview to [manage incidents and alerts from Defender for Office 365 on the Incidents page in the Microsoft Defender portal](mdo-sec-ops-manage-incidents-and-alerts.md).
+A companion article to this guide provides an overview to [manage Defender for Office 365 incidents and alerts](mdo-sec-ops-manage-incidents-and-alerts.md).
 
 The [Microsoft Defender XDR Security Operations Guide](/defender-xdr/integrate-microsoft-365-defender-secops) contains additional information that you can use for planning and development.
 
@@ -74,7 +75,7 @@ In Defender for Office 365, you manage false positives (good mail marked as bad)
 - The [Tenant Allow/Block List](tenant-allow-block-list-about.md)
 - [Threat Explorer](threat-explorer-real-time-detections-about.md)
 
-For more information, see the [Manage false positive and false negative detections](#manage-false-positive-and-false-negative-detections) section later in this article.
+For more information, see [Manage false positive and false negative detections](#manage-false-positive-and-false-negative-detections).
 
 False positive and false negative management and the responsible personas are described in the following table:
 
@@ -87,9 +88,11 @@ False positive and false negative management and the responsible personas are de
 
 ### Review phishing and malware campaigns that resulted in delivered mail
 
+Review phishing and malware campaigns that resulted in delivered mail, and take action to remove malicious messages from user mailboxes.
+
 |Activity|Cadence|Description|Persona|
 |---|---|---|---|
-|Review email campaigns.|Daily|[Review email campaigns](campaigns.md) that targeted your organization at <https://security.microsoft.com/campaigns>. Focus on campaigns that resulted in messages being delivered to recipients. <br/><br/> Remove messages from campaigns that exist in user mailboxes. This action is required only when a campaign contains email that hasn't already been remediated by actions from incidents, [zero-hour auto purge (ZAP)](zero-hour-auto-purge.md), or manual remediation.|Security Operations Team|
+|Review email campaigns.|Daily|[Review email campaigns](campaigns.md) that targeted your organization at <https://security.microsoft.com/campaigns>. Focus on campaigns that resulted in messages being delivered to recipients. <br/><br/> Remove messages from campaigns that exist in user mailboxes. Removing messages from campaigns is required only when a campaign contains email that hasn't already been remediated by actions from incidents, [zero-hour auto purge (ZAP)](zero-hour-auto-purge.md), or manual remediation.|Security Operations Team|
 
 ## Weekly activities
 
@@ -135,11 +138,15 @@ Campaign Views reveals malware and phishing attacks against your organization. F
 
 ### Manual investigation and removal of email
 
+Use the following activity to manually investigate and remove malicious email when needed.
+
 |Activity|Cadence|Description|Persona|
 |---|---|---|---|
 |Investigate and remove bad email in Threat Explorer at <https://security.microsoft.com/threatexplorer> based on user requests.|Ad-hoc|Use the **Trigger investigation** action in Threat Explorer to start an automated investigation and response playbook on any email from the last 30 days. Manually triggering an investigation saves time and effort by centrally including: <ul><li>A root investigation.</li><li>Steps to identify and correlate threats.</li><li>Recommended actions to mitigate those threats.</li></ul> <br/> For more information, see [Example: A user-reported phish message launches an investigation playbook](air-examples.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer) <br/><br/> Or, you can use Threat Explorer to [manually investigate email](threat-explorer-investigate-delivered-malicious-email.md) with powerful search and filtering capabilities and [take manual response action](remediate-malicious-email-delivered-office-365.md) directly from the same place. Available manual actions: <ul><li>Move to Inbox</li><li>Move to Junk</li><li>Move to Deleted items</li><li>Soft delete</li><li>Hard delete.</li></ul>|Security Operations Team|
 
 ### Proactively hunt for threats
+
+Use the following activities to proactively hunt for threats across Defender for Office 365 tools.
 
 |Activity|Cadence|Description|Persona|
 |---|---|---|---|
@@ -149,6 +156,8 @@ Campaign Views reveals malware and phishing attacks against your organization. F
 
 ### Review Defender for Office 365 policy configurations
 
+Review the following policy configuration activities to help maintain your organization's security posture.
+
 |Activity|Cadence|Description|Persona|
 |---|---|---|---|
 |Review the configuration of Defender for Office 365 policies at <https://security.microsoft.com/configurationAnalyzer>.|Ad-hoc <br/><br/> Monthly|Use the [Configuration analyzer](configuration-analyzer-for-security-policies.md) to compare your existing policy settings to the [recommended Standard or Strict values for Defender for Office 365](recommended-settings-for-eop-and-office365.md). The Configuration analyzer identifies accidental or malicious changes that can lower your organization's security posture. <br/><br/> Or you can use the PowerShell-based [ORCA tool](https://aka.ms/getorca).|Security Administration <br/><br/> Messaging Team|
@@ -156,17 +165,22 @@ Campaign Views reveals malware and phishing attacks against your organization. F
 
 ### Review spoof and impersonation detections
 
+Use the following activity to review spoof and impersonation detections and adjust filtering as needed.
+
 |Activity|Cadence|Description|Persona|
 |---|---|---|---|
 |Review the **Spoof intelligence insight** and the **Impersonation detection insights** at <ul><li><https://security.microsoft.com/spoofintelligence></li><li><https://security.microsoft.com/impersonationinsight></li></ul>.|Ad-hoc <br/><br/> Monthly|Use the [spoof intelligence insight](anti-spoofing-spoof-intelligence.md) and the [impersonation insight](anti-phishing-mdo-impersonation-insight.md) to adjust filtering for spoof and impersonation detections.|Security Administration <br/><br/> Messaging Team|
 
 ### Review priority account membership
 
+Review priority account membership regularly to keep protections aligned with organizational changes.
+
 |Activity|Cadence|Description|Persona|
 |---|---|---|---|
 |Review who's defined as a priority account at <https://security.microsoft.com/securitysettings/userTags>.|Ad-hoc|Keep the membership of [priority accounts](/microsoft-365/admin/setup/priority-accounts) current with organizational changes to get the following benefits for those users: <ul><li>Better visibility in reports.</li><li>Filtering in incidents and alerts.</li><li>Tailored heuristics for executive mail flow patterns (priority account protection).</li></ul> <br/> Use custom [user tags](user-tags-about.md) for other users to get: <ul><li>Better visibility in reports.</li><li>Filtering in incidents and alerts.</li></ul>|Security Operations Team|
 
-## Appendix
+<a name="appendix"></a>
+## Appendix: Defender for Office 365 tools, permissions, and SIEM/SOAR integration
 
 ### Learn about Microsoft Defender for Office 365 tools and processes
 
@@ -185,7 +199,7 @@ Permissions for managing Defender for Office 365 in the Microsoft Defender porta
 
 The following permissions (roles and role groups) are available in Defender for Office 365 and can be used to grant access to security team members:
 
-- **Microsoft Defender unified role based access control (RBAC)**: A single permissions management experience that provides one central location for administrators to control user permissions across different security solutions. For more information, see [Microsoft Defender unified RBAC](/defender-xdr/manage-rbac).
+- **Microsoft Defender unified role based access control (RBAC)**: A single permissions management experience that provides one central location for administrators to control user permissions across different security solutions. For more information, see [Microsoft Defender unified RBAC](/defender-xdr/manage-rbac). For Defender for Office 365-specific permissions, see [Unified RBAC permissions for Defender for Office 365](defender-office-365-unified-rbac-permissions.md). For step-by-step configuration, see [How to configure Unified RBAC for Defender for Office 365](step-by-step-guides/configure-unified-rbac-defender-office-365.md).
   - _Read access for email and Teams message headers_: **Security operations/Raw data (email & collaboration)/Email & collaboration metadata (read)**.
   - _Preview and download email messages_: **Security operations/Raw data (email & collaboration)/Email & collaboration content (read)**.
   - _Remediate malicious email_: **Security operations/Security data/Email & collaboration advanced actions (manage)**.

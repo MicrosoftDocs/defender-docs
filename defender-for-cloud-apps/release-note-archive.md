@@ -23,7 +23,7 @@ Microsoft Defender delivers comprehensive protection for AI agents, combining pr
 
     Defender monitors agents for misconfigurations and vulnerabilities, identifies potential attack paths, and delivers actionable security recommendations through Exposure Management to strengthen your AI security posture.
 
-For more information, see [Protect your AI agents (Preview)](ai-agent-inventory.md).
+For more information, see [Protect your AI agents (Preview)](/defender-xdr/security-for-ai/ai-agent-inventory).
 
 ## September 2025
 
@@ -31,7 +31,7 @@ For more information, see [Protect your AI agents (Preview)](ai-agent-inventory.
 
 Microsoft Defender offers real-time protection during runtime for AI agents built with Microsoft Copilot Studio. This capability automatically blocks the agent's response during runtime if a suspicious behavior like a prompt injection attack is detected, and notifies security teams with a detailed alert in the Microsoft Defender portal.
 
-For more information, see [Real-time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)](real-time-agent-protection-during-runtime.md).
+For more information, see [Real-time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)](/defender-xdr/security-for-ai/ai-agent-real-time-protection).
 
 ## July 2025
 
@@ -256,7 +256,7 @@ For more information, see [detailed insights into OAuth apps](/defender-cloud-ap
 
 Defender for Cloud Apps users who use app governance can utilize the new *Permissions* filter and export capabilities to quickly identify apps with specific permissions to access Microsoft 365. 
 
-For more information, see [filters on app governance](/defender-cloud-apps/app-governance-visibility-insights-get-started#view-app-insights).
+For more information, see [filters on app governance](/defender-cloud-apps/app-governance-visibility-insights-overview#view-app-insights).
 
 ### Visibility into privilege level for popular Microsoft first-party APIs (Preview)
 
@@ -1116,7 +1116,7 @@ In November 2020, we moved to suffix domains in the form of `<appName>.mcas.ms`,
 
 ### App governance July 2022 release
 
-- **Added more predefined policies**: App governance released five more out of the box policies to detect anomalous app behaviors. These policies are activated by default, but you can deactivate them if you choose to. [Learn more here](app-governance-predefined-policies.md)
+- **Added more predefined policies**: App governance released five more out of the box policies to detect anomalous app behaviors. These policies are activated by default, but you can deactivate them if you choose to. [Learn more here](app-governance-app-policies-overview.md#predefined-policies)
 - **New video library**: App governance created a new library of short videos on features in app governance, how to use them, and info on how to learn more. [Check it out here](https://youtube.com/playlist?list=PLyhj1WZ29G66k4F_OZeMkQymRGyqHwZVp)
 - **Secure Score integration GA**: Microsoft Secure Score integration with the app governance (AppG) add-on to Microsoft Defender for Cloud Apps (MDA) has reached general availability. AppG customers now receive recommendations in Secure Score, helping them secure their Microsoft 365 OAuth apps.
    Why is this integration important?
@@ -1160,7 +1160,7 @@ The DocuSign API connector is generally available, providing you deeper visibili
 
 ### App governance May 2022 release
 
-- **Predefined policies GA**: App governance released a set of out of the box policies to detect anomalous app behaviors. These policies are activated by default, but you can deactivate them if you choose to. [Learn more here](app-governance-predefined-policies.md)
+- **Predefined policies GA**: App governance released a set of out of the box policies to detect anomalous app behaviors. These policies are activated by default, but you can deactivate them if you choose to. [Learn more here](app-governance-app-policies-overview.md#predefined-policies)
 - **Teams workload GA**: App governance added insights, policy capabilities, and governance for the Teams workload. You can see data usage, permissions usage, and create policies on Teams permissions and usage.
 - **App governance alerts unified in the M365D alerts and incidents queues**: The app governance alerts queue has been unified with the Microsoft Defender XDR alerts experience and are aggregated into incidents.
 

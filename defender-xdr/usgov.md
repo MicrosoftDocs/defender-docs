@@ -1,6 +1,6 @@
 ---
-title: Microsoft Defender XDR for US Government customers
-description: Learn about the Microsoft Defender XDR for US Government customers requirements and capabilities available
+title: Microsoft Defender XDR for US Government
+description: Learn about Microsoft Defender XDR for US Government requirements and capabilities available
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
@@ -12,21 +12,21 @@ ms.topic: article
 ms.date: 12/07/2021
 ---
 
-# Microsoft Defender XDR for US Government customers
+# Microsoft Defender for US Government
 
 **Applies to:**
 - Microsoft Defender XDR
 
-Microsoft Defender XDR for US Government customers, built in the Azure US Government environment, uses the same underlying technologies as Microsoft Defender XDR in Azure Commercial.
+Microsoft Defender for US Government customers, built in the Azure US Government environment, uses the same underlying technologies as Microsoft Defender in Azure Commercial.
 
 This offering is available to GCC, GCC High, and DoD customers and is based on the same prevention, detection, investigation, and remediation as the commercial version. However, there are some differences in the availability of capabilities for this offering.
 
 > [!NOTE]
-> If you are a GCC customer using Defender for Cloud Apps, Defender for Endpoint, or Defender for Identity in Commercial, you need to transition those services to their GCC versions to be eligible for Microsoft Defender XDR GCC.
+> If you are a GCC customer using Defender for Cloud Apps, Defender for Endpoint, or Defender for Identity in Commercial, you need to transition those services to their GCC versions to be eligible for Microsoft Defender GCC.
 
 ## Licensing requirements
 
-Microsoft Defender XDR for US Government customers requires one of the following Microsoft volume licensing offers:
+Microsoft Defender for US Government customers requires one of the following Microsoft volume licensing offers:
 
 ### Desktop licensing
 
@@ -81,7 +81,7 @@ Instead of the public URIs listed in our [API documentation](api-overview.md), y
 
 ## Feature parity with commercial
 
-Microsoft Defender XDR for US Government customers doesn't have complete parity with the commercial offering. While our goal is to deliver all commercial features and functionality to our US Government customers, there are some capabilities not yet available we want to highlight.
+Microsoft Defender for US Government customers doesn't have complete parity with the commercial offering. While our goal is to deliver all commercial features and functionality to our US Government customers, there are some capabilities not yet available we want to highlight.
 
 These are the known gaps:
 
@@ -92,7 +92,7 @@ These are the known gaps:
 |Microsoft Threat Experts|![No](/defender-endpoint/media/svg/check-no.svg) On engineering backlog|![No](/defender-endpoint/media/svg/check-no.svg) On engineering backlog|![No](/defender-endpoint/media/svg/check-no.svg) On engineering backlog|
 |Microsoft Defender for IoT enterprise IoT security|![No](/defender-endpoint/media/svg/check-no.svg)|![No](/defender-endpoint/media/svg/check-no.svg)|![No](/defender-endpoint/media/svg/check-no.svg)|
 
-For detailed list of Event Streaming API tables, see [Microsoft Defender XDR streaming event types supported in Event Streaming API](supported-event-types.md).
+For detailed list of Event Streaming API tables, see [Microsoft Defender streaming event types supported in Event Streaming API](supported-event-types.md).
 
 ## More details
 

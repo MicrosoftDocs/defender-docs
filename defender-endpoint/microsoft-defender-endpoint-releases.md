@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 06/22/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
@@ -29,8 +29,10 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|iOS |1.1.78290102|July 2026|- Build: 1.1.78290102<br>- Release: July 3, 2026|[Release details and updates](#ios--july-2026--platform-version-1178290102)|
+|Android |1.0.9029.0101|June 2026|- Build: 1.0.9029.0101<br>- Release: June 30, 2026|[Release details and updates](#android--june-2026--platform-1090290101)| 
 |macOS |101.26042.0020  |June 2026 |- Release version: 20.126042.20.0<br>- Engine version: 1.1.26040.3000<br>- Signature version: 1.453.151.0 |[Release details and updates](#macos--june-2026--101260420020) |
-|Linux  |101.26042.0009  |June 2026 |- Release version: 30.126042.0009.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates](#linux--june-2026--101260420009) |
+|Linux  |101.26042.0011  |June 2026 |- Release version: 30.126042.0011.0<br>- Engine version: 1.1.26060.7001<br>- Signature version: 1.453.406.0 |[Release details and updates](#linux--june-2026--101260420011). |
 |Android |1.0.9014.0101|June 2026|- Build: 1.0.9014.0101<br>- Release: June 19, 2026|[Release details and updates](#android--june-2026--platform-1090140101)| 
 |iOS |1.1.78020101|June 2026|- Build: 1.1.78020101<br>- Release: June 11, 2026|[Release details and updates](#ios--june-2026--platform-version-1178020101)|
 |Android |1.0.9003.0101|June 2026|- Build: 1.0.9003.0101<br>- Release: June 8, 2026|[Release details and updates](#android--june-2026--platform-1090030101)|
@@ -469,26 +471,28 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 >
 > If you have any concerns or need assistance during this transition, contact support.
 
-### Linux | June 2026 | 101.26042.0009
+### Linux known issues
+
+[!INCLUDE [Linux 101.26012.0007 known issue](includes/linux-build-issue.md)]
+
+### Linux | June 2026 | 101.26042.0011
 
 #### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
-|30.126042.0009.0 |1.1.26040.3001 |1.449.136.0 |
+|30.126042.0011.0 |1.1.26060.7001 |1.453.406.0 |
 
 #### Enhancements and features
 
 |Feature area | Update summary |
 |--------------|---------------|
+| Resolved build issue | This release contains a fix for a previously reported issue where Microsoft Defender for Endpoint on Linux could become disabled after upgrade or reinstall scenarios followed by a system reboot. The issue affected platform builds 101.26042.0000–101.26042.0009. Customers running affected builds or older supported versions can upgrade directly to 101.26042.0011 to receive the fix. See the Linux [Known issues](#linux-known-issues) documentation for additional details.|
 |Visibility |Better user attribution in security events: [file](/defender-xdr/advanced-hunting-devicefileevents-table),  [process](/defender-xdr/advanced-hunting-deviceprocessevents-table), and [network](/defender-xdr/advanced-hunting-devicenetworkevents-table) security events  now include the original login user's ID, even when actions are performed via sudo or under root. This information is exposed in Advanced Hunting, making  it easier to trace elevated actions back to the actual user's session for improved insider threat detection and investigations. Improved login event  accuracy by preventing stale remote IP data from being reused across different login event types.|
-|Configuration | Offline security intelligence updates (GA): Customers can now configure offline security intelligence updates for Linux using Security  Settings Management policies in the Defender portal. For more information, see [Configure Offline SIU  updates](/defender-endpoint/linux-support-offline-security-intelligence-update?tabs=portal) Scheduled antivirus scans (Public Preview): Customers can  centrally schedule antivirus scans on Linux using managed JSON and policy settings through the Defender portal. For more information, see [Schedule AV  scans](/defender-endpoint/schedule-antivirus-scans-linux) |
-|Platform support |Added package publishing support for newer Linux distributions, including Fedora 43, Azure Linux 4.0, and RHEL 10 RPM variants.|
-|Security| Improved client IPC hardening for mdatp commands by rejecting requests from mdatp processes launched with dynamic loader injection environment variables (for example, LD_PRELOAD).
-If this affects your workflow, run mdatp without those variables set. For example: env -u LD_PRELOAD mdatp health|
+|Configuration |- Offline security intelligence updates (GA): Customers can now configure offline security intelligence updates for Linux using Security  Settings Management policies in the Defender portal. For more information, see [Configure Offline SIU  updates](/defender-endpoint/linux-support-offline-security-intelligence-update?tabs=portal)<br>- Scheduled antivirus scans (Public Preview): Customers can  centrally schedule antivirus scans on Linux using managed JSON and policy settings through the Defender portal. For more information, see [Schedule AV  scans](/defender-endpoint/schedule-antivirus-scans-linux) |
+|Platform support |Added package publishing support for newer Linux distributions including Fedora 43,  RockyLinux 10, AlmaLinux 10 and SUSE Linux Enterprise Server 16 |
 |Performance |Faster threat remediation: Malware is now quarantined and cleaned up more quickly, improving response time when threats are detected.|
 |Stability |This release includes EDR SDK updates and stability improvements that help the Defender agent run more reliably with continuous protection.|
-
 
 ### Linux | April 2026 | 101.26032.0000
 
@@ -538,6 +542,10 @@ Fixed an issue in the January 2026 release, where real-time scanning of the /dev
 |--------------|---------------|
 | Vulnerability detection | Strengthened Linux security coverage for Python workloads by improving vulnerability detection across system, user, and virtual environments, expanding coverage for CVE‑2025‑68664/5 LangGrinch (langchain vulnerability).|
 | General | Bug and performance fixes. <br> Real-time protection statistics collection is now disabled by default as a performance optimization; enable it on-demand when needed for diagnostics with `mdatp config real-time-protection-statistics --value enabled`.  |
+
+#### Known issues
+
+[!INCLUDE [Linux 101.26012.0007 known issue](includes/linux-build-issue.md)]
 
 ### Linux | February 2026 | 101.25122.0004
 
@@ -684,6 +692,20 @@ Fixed an issue in the January 2026 release, where real-time scanning of the /dev
 ## Android releases
 
 See the full list of [Android UX improvements](android-new-ux.md).
+
+### Android | June 2026 | Platform: 1.0.9029.0101
+
+#### Release details
+
+| Platform version| Release Date |
+| -------- | -------- |
+|1.0.9029.0101|June 30, 2026|
+
+#### Enhancements and features
+
+|__Feature Area__| __Update Summary__|
+| -------- | -------- |
+|General|Performance improvements and general bug fixes. |
 
 ### Android | June 2026 | Platform: 1.0.9014.0101
 
@@ -880,6 +902,21 @@ See the full list of [Android UX improvements](android-new-ux.md).
 ## iOS releases
 
 For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
+
+### iOS | July 2026 | Platform Version: 1.1.78290102
+
+#### Release details
+
+| Platform version | Release Date |
+| -------- | -------- |
+| 1.1.78290102| July 3, 2026 |
+
+#### Enhancements and features
+
+|__Feature Area__| __Update Summary__|
+| -------- | -------- |
+|Improvements|Performance improvements and general bug fixes.|
+|Feature|Improvement in compliance flow.|
 
 ### iOS | June 2026 | Platform Version: 1.1.78020101
 

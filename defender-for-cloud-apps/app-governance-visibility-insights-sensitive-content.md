@@ -1,5 +1,5 @@
 ---
-title: Get insights on and regulate access to sensitive content with app governance
+title: View and regulate OAuth app access to sensitive content with app governance | Microsoft Defender for Cloud Apps
 ms.date: 06/16/2026
 ms.topic: how-to
 description: Identify which Microsoft 365 services apps access and determine whether they have accessed content protected with sensitivity labels.
@@ -8,7 +8,7 @@ ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
 ai-usage: ai-assisted
 ---
 
-# Get insights on and regulate access to sensitive content
+# View and regulate OAuth app access to sensitive content
 
 App governance lets you quickly identify the Microsoft 365 services apps have accessed and if these apps have accessed content with sensitivity labels.
 

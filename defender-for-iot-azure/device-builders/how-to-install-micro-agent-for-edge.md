@@ -1,21 +1,25 @@
 ---
 title: Install Defender for IoT micro agent for Microsoft Edge
 description: Learn how to install, and authenticate the Defender Micro agent for Microsoft Edge.
-ms.date: 02/08/2022
+ms.date: 06/12/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Install Defender for IoT micro agent for Edge
 
-This article explains how to install, and authenticate the Defender micro agent for Edge.
+This article explains how to install, and authenticate the Defender micro agent for Edge. The micro agent runs as a module on Azure IoT Edge devices and provides security monitoring, threat detection, and security posture management for your IoT deployment. The steps in this article cover setting up the required package repositories, installing the agent package on Debian and Ubuntu-based Linux distributions, and validating the installation.
 
 [!INCLUDE [device-agents-note](../includes/device-agents-note.md)]
 
 ## Prerequisites 
 
+Before you install the Defender micro agent for Edge, complete the following prerequisites:
+
 1. Navigate to your IoT Hub or, [create a new IoT hub](/azure/iot-hub/iot-hub-create-through-portal#create-an-iot-hub).
 
-1. [Register an IoT Edge device in IoT Hub](/azure/iot-edge/how-to-register-device) and [retrieve connection strings](/azure/iot-edge/how-to-register-device#view-registered-devices-and-retrieve-connection-strings).
+1. [Register an IoT Edge device in IoT Hub](/azure/iot-edge/how-to-register-device) and [retrieve the device connection strings](/azure/iot-edge/how-to-register-device#view-registered-devices-and-retrieve-connection-strings).
     
 1. Add the appropriate Microsoft package repository. 
 
@@ -53,7 +57,8 @@ This article explains how to install, and authenticate the Defender micro agent 
 
 1. Install and configure [Edge runtime version 1.2](/azure/iot-edge/how-to-install-iot-edge)
 
-## Installation 
+<a name="installation"></a>
+## Install the Defender for IoT micro agent for Edge
 
 1. Install the Defender micro agent package on Debian, and Ubuntu based Linux distributions, using the following command: 
 
@@ -85,7 +90,7 @@ This article explains how to install, and authenticate the Defender micro agent 
     
     :::image type="content" source="media/quickstart-standalone-agent-binary-installation/validation-failure.png" alt-text="The baseline validation failure recommendation that occurs in the hub." lightbox="media/quickstart-standalone-agent-binary-installation/validation-failure-expanded.png":::
 
-    Allow up to one hour for the recommendation to appear in the hub. 
+    Allow up to one hour for the recommendation to appear in your IoT Hub. 
 
 1. Install a specific version of the Defender IoT micro agent, use the following command:
     
@@ -94,6 +99,8 @@ This article explains how to install, and authenticate the Defender micro agent 
     ```
 
 ## Next steps
+
+After you install and validate the micro agent, configure your agent-based solution:
 
 > [!div class="nextstepaction"]
 > [Configure Microsoft Defender for IoT agent-based solution](tutorial-configure-agent-based-solution.md)

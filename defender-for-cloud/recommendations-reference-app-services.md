@@ -3,7 +3,7 @@ title: Reference table for Azure App Service security recommendations
 description: This article lists the Microsoft Defender for Cloud security recommendations for Azure App Service.
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 06/08/2026
+ms.date: 06/30/2026
 ms.custom: generated
 ai-usage: ai-assisted
 ---
@@ -240,25 +240,25 @@ Only clients that have a valid certificate will be able to reach the app.
 
 ## AWS app services recommendations
 
-### Audit logging should be enabled on Amazon MQ broker (Preview)
+### Audit logging should be enabled on Amazon MQ broker
 
 **Description**: Defender for Cloud identified Amazon MQ Brokers that do not have Audit logs enabled. Audit logs record administrative and user-management actions, supporting incident response and accountability. Without audit logging, malicious or unauthorized changes may go undetected and investigations will lack critical evidence.
 
 **Severity**: Medium
 
-### Data at rest encryption with customer-managed keys should be enabled on Kinesis streams (Preview)
+### Data at rest encryption with customer-managed keys should be enabled on Kinesis streams
 
 **Description**: Defender for Cloud identified missing customer-managed key encryption in Kinesis streams. This poses a risk of unauthorized disclosure of stream data if default key controls do not meet your organization's key management and access governance requirements.
 
 **Severity**: Medium
 
-### General logging should be enabled on Amazon MQ broker (Preview)
+### General logging should be enabled on Amazon MQ broker
 
 **Description**: Defender for Cloud identified Amazon MQ brokers that do not have general logging enabled. General logs provide operational and connection-related visibility that can help detect suspicious behavior and support troubleshooting. Without general logging, monitoring coverage is reduced and detection of misconfigurations or unexpected activity may be delayed.
 
 **Severity**: Medium
 
-### VPC Access Endpoints should be configured on WorkSpaces Applications (AppStream) Stacks (Preview)
+### VPC Access Endpoints should be configured on WorkSpaces Applications (AppStream) Stacks
 
 **Description**: Defender for Cloud identified that WorkSpaces Applications (AppStream) Stacks are not configured with VPC access endpoints. This poses a risk of unauthorized access from the public internet. Configuring VPC access endpoints ensures that users can only connect to WorkSpaces Applications through private network connections.
 

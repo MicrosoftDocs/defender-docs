@@ -41,6 +41,6 @@ In this article, you learned about Microsoft Defender for Resource Manager.
 > [!div class="nextstepaction"]
 > [Enable enhanced protections](connect-azure-subscription.md)
 
-For related material, see the following article:
+## Related content
 
 - Security alerts might be generated or received by Defender for Cloud from different security products. To export all of these alerts to Microsoft Sentinel, any third-party SIEM, or any other external tool, follow the instructions in [Exporting alerts to a SIEM solution](continuous-export.md).

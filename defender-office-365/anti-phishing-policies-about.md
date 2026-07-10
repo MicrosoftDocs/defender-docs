@@ -14,7 +14,7 @@ ms.custom:
   - sfi-image-nochange
 description: Admins can learn about the anti-phishing policies that are available in the built-in security features for all cloud mailboxes and in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 06/30/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -39,7 +39,7 @@ Anti-phishing policies protect against phishing attacks by detecting spoofed sen
 - **Additional reporting and insights**:
   - Advanced reporting features and visibility into phishing attempts beyond basic logging.
 
-In Microsoft Defender, anti-phishing policies are available on the [**Email & Collaboration** > **Policies & rules** > **Threat policies** > **Anti-phishing**](https://security.microsoft.com/antiphishing) page. While a default anti-phishing policy automatically applies to all recipients, you can also create custom policies for specific users, groups, or domains. This article describes the settings that are available in anti-phishing policies for all cloud mailboxes and in anti-phishing policies in Defender for Office 365.
+In Microsoft Defender, anti-phishing policies are available on the [**Email & Collaboration** > **Policies & rules** > **Threat policies** > **Anti-phishing**](https://security.microsoft.com/antiphishing) page. While a default anti-phishing policy automatically applies to all recipients, you can also create custom policies for specific users, groups, or domains. The following sections describe the settings that are available in anti-phishing policies for all cloud mailboxes and in anti-phishing policies in Defender for Office 365.
 
 ## Configure anti-phishing policies
 
@@ -101,7 +101,7 @@ The following policy settings are available in anti-phishing policies for all cl
     The policy is applied to `romain@contoso.com` _only_ if he's also a member of the Executives group. Otherwise, the policy isn't applied to him.
 
   > [!TIP]
-  > At least one selection in the **Users, groups, and domains** settings is required in custom anti-phishing policies to identify the message **recipients that the policy applies to**. Anti-phishing policies in Defender for Office 365 also have [impersonation settings](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) where you can specify **sender email addresses or sender domains that receive impersonation protection**. For details, see [Impersonation settings in anti-phishing policies in Microsoft Defender for Office 365](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+  > At least one selection in the **Users, groups, and domains** settings is required in custom anti-phishing policies to identify the message **recipients that the policy applies to**. Anti-phishing policies in Defender for Office 365 also have [impersonation settings](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) where you can specify **sender email addresses or sender domains that receive impersonation protection**.
 
 ## Spoof settings
 
@@ -167,7 +167,7 @@ The relationship between spoof intelligence and whether sender DMARC policies ar
 > Customers can override the **Honor DMARC policy** setting for specific email messages and/or senders using the following methods:
 >
 > - [Admins can use Exchange Online PowerShell to configure the safelist collection](configure-junk-email-settings-on-exo-mailboxes.md#use-exchange-online-powershell-to-configure-the-safelist-collection-on-a-mailbox) or [users can update their Safe Senders list in Outlook](https://support.microsoft.com/office/48c9f6f7-2309-4f95-9a4d-de987e880e46) to add the senders to the Safe Senders list in the user's mailbox.
-> - Admins can use the [spoof intelligence insight](anti-spoofing-spoof-intelligence.md#override-the-spoof-intelligence-verdict) or the [Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-spoofed-senders) to allow messages from the spoofed sender.
+> - Admins can use the [spoof intelligence insight](anti-spoofing-spoof-intelligence.md#override-the-spoof-intelligence-verdict), the [Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-spoofed-senders), or [allowed sender or domain lists in anti-spam policies](create-safe-sender-lists-in-office-365.md#use-allowed-sender-lists-or-allowed-domain-lists-in-anti-spam-policies) to allow messages from the spoofed sender.
 > - Admins create an Exchange mail flow rule (also known as a transport rule) for all users that allows messages for those particular senders.
 > - Admins create an Exchange mail flow rule for all users for rejected email that fails the organization's DMARC policy.
 

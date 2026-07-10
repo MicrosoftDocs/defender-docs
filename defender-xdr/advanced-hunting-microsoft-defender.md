@@ -38,7 +38,7 @@ Querying from a single portal across different data sets makes hunting more effi
 
 You can query data in any workload that you can currently access based on your roles and permissions.
 
-To query across Microsoft Sentinel and Microsoft Defender XDR data in the unified advanced hunting page, you need at least the Microsoft Sentinel Reader role. For more information, see [Microsoft Sentinel-specific roles](/azure/sentinel/roles#microsoft-sentinel-specific-roles).
+To query across Microsoft Sentinel and Microsoft Defender data in the unified advanced hunting page, you need at least the Microsoft Sentinel Reader role. For more information, see [Microsoft Sentinel-specific roles](/azure/sentinel/roles#microsoft-sentinel-specific-roles).
 
 ### Connect a workspace
 
@@ -47,22 +47,22 @@ In Microsoft Defender, you can connect workspaces by selecting **Connect a works
 After connecting your Microsoft Sentinel workspace and Microsoft Defender XDR advanced hunting data, you can start querying Microsoft Sentinel data from the advanced hunting page. For an overview of advanced hunting features, read [Proactively hunt for threats with advanced hunting](advanced-hunting-overview.md).
 
 ## What to expect for Defender XDR tables streamed to Microsoft Sentinel
-- **Use tables with longer data retention periods in queries** – Advanced hunting follows the maximum data retention period you set for the Defender XDR tables (see [Understand quotas](advanced-hunting-limits.md#understand-advanced-hunting-quotas-and-usage-parameters)). If you [stream Defender XDR tables](/defender-xdr/streaming-api) to Microsoft Sentinel and set a data retention period longer than 30 days for those tables, you can query for the longer period in advanced hunting.
+- **Use tables with longer data retention periods in queries** – Advanced hunting follows the maximum data retention period you set for the Defender tables (see [Understand quotas](advanced-hunting-limits.md#understand-advanced-hunting-quotas-and-usage-parameters)). If you [stream Defender tables](/defender-xdr/streaming-api) to Microsoft Sentinel and set a data retention period longer than 30 days for those tables, you can query for the longer period in advanced hunting.
 - **Use Kusto operators you use in Microsoft Sentinel** – In general, queries from Microsoft Sentinel work in advanced hunting, including queries that use the `adx()` operator. IntelliSense might warn you that the operators in your query don't match the schema. However, you can still run the query and it should execute successfully.
-- **Use the time filter dropdown instead of setting the time span in the query** – If you're filtering ingestion of Defender XDR tables to Sentinel instead of streaming the tables as is, don't filter the time in the query as this action might generate incomplete results. If you set the time in the query, the streamed, filtered data from Sentinel is used because it usually has the longer data retention period. If you want to make sure you're querying all Defender XDR data for up to 30 days, use the time filter dropdown provided in the query editor instead. 
-- **View `SourceSystem` and `MachineGroup` columns for Defender XDR data that you stream from Microsoft Sentinel** – Since the columns `SourceSystem` and `MachineGroup` are added to Defender XDR tables once you stream them to Microsoft Sentinel, they also appear in results in advanced hunting in Defender. However, they remain blank for Defender XDR tables that you don't stream (tables that follow the default 30-day data retention period).
+- **Use the time filter dropdown instead of setting the time span in the query** – If you're filtering ingestion of Defender tables to Sentinel instead of streaming the tables as is, don't filter the time in the query as this action might generate incomplete results. If you set the time in the query, the streamed, filtered data from Sentinel is used because it usually has the longer data retention period. If you want to make sure you're querying all Defender data for up to 30 days, use the time filter dropdown provided in the query editor instead. 
+- **View `SourceSystem` and `MachineGroup` columns for Defender data that you stream from Microsoft Sentinel** – Since the columns `SourceSystem` and `MachineGroup` are added to Defender tables once you stream them to Microsoft Sentinel, they also appear in results in advanced hunting in Defender. However, they remain blank for Defender tables that you don't stream (tables that follow the default 30-day data retention period).
 
 > [!NOTE]
-> Using the unified portal, where you can query Microsoft Sentinel data after connecting a Microsoft Sentinel workspace, doesn't automatically mean you can also query Defender XDR data while in Microsoft Sentinel. You still need to configure raw data ingestion of Defender XDR in Microsoft Sentinel for this to happen.
+> Using the unified portal, where you can query Microsoft Sentinel data after connecting a Microsoft Sentinel workspace, doesn't automatically mean you can also query Defender data while in Microsoft Sentinel. You still need to configure raw data ingestion of Defender in Microsoft Sentinel for this to happen.
 
 > [!IMPORTANT]
 > Microsoft Government Community Cloud Moderate (GCC-M) customers should be aware of the following limitation in advanced hunting:
-> - Queries that reference both Microsoft Sentinel and Defender XDR tables aren't supported. If you use _Search_ or _Union *_ in your queries, consider replacing the _*_ with an explicit list of tables that are limited to Microsoft Sentinel only or Defender XDR only.
+> - Queries that reference both Microsoft Sentinel and Defender tables aren't supported. If you use _Search_ or _Union *_ in your queries, consider replacing the _*_ with an explicit list of tables that are limited to Microsoft Sentinel only or Defender only.
 
 ## Where to find your Microsoft Sentinel data
 You can use advanced hunting KQL (Kusto Query Language) queries to hunt through Microsoft Defender XDR and Microsoft Sentinel data.
 
-When you open the advanced hunting page for the first time after connecting a workspace, you can find many of that workspace's tables  organized by solution after the Microsoft Defender XDR tables under the **Schema** tab.
+When you open the advanced hunting page for the first time after connecting a workspace, you can find many of that workspace's tables  organized by solution after the Microsoft Defender tables under the **Schema** tab.
 
 
 :::image type="content" source="./media/advanced-hunting-microsoft-defender/advanced-hunting-unified-sentinel-data.png" alt-text="Screenshot of advanced hunting schema tab in the Microsoft Defender portal highlighting location of Sentinel tables" lightbox="./media/advanced-hunting-microsoft-defender/advanced-hunting-unified-sentinel-data.png":::

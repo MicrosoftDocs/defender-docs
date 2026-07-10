@@ -29,7 +29,7 @@ Reviewing events in Event Viewer is useful when you evaluate attack surface redu
 This article describes how to use [Windows Event Viewer](/training/modules/manage-monitor-event-logs/) to view events from attack surface reduction (ASR) capabilities, including:
 
 - [Attack surface reduction rules](attack-surface-reduction-rules-overview.md)
-- [Controlled folder access](controlled-folders.md)
+- [Controlled folder access (CFA)](controlled-folder-access-overview.md)
 - [Exploit protection](exploit-protection.md)
 - [Network protection](network-protection.md)
 
@@ -44,7 +44,7 @@ To view attack surface reduction events, you have the following options as expla
 > The Microsoft Defender portal also provides reporting for attack surface reduction features that's easier to use than Windows Event Viewer:
 >
 > - [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md)
-> - [Controlled folder access report](controlled-folders.md)
+> - [Controlled folder access report](controlled-folder-access-overview.md)
 > - [Exploit protection report](exploit-protection.md)
 > - [Network protection report](network-protection.md)
 
@@ -253,6 +253,6 @@ The following XML query filters the Windows Defender Operational log for network
 
 - [Attack surface reduction capabilities overview](attack-surface-reduction-overview.md)
 - [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md)
-- [Protect important folders with controlled folder access](controlled-folders.md)
+- [Controlled folder access (CFA) overview](controlled-folder-access-overview.md)
 - [Protect devices from exploits](exploit-protection.md)
 - [Network protection](network-protection.md)

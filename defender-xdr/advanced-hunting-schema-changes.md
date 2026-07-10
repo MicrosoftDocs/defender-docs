@@ -28,9 +28,9 @@ ms.date: 06/03/2026
 
 The [advanced hunting schema](advanced-hunting-schema-tables.md) is updated regularly to add new tables and columns. In some cases, existing columns names are renamed or replaced to improve the user experience. Refer to this article to review naming changes that could impact your queries.
 
-Naming changes are automatically applied to queries that are saved in Microsoft Defender XDR, including queries used by custom detection rules. You don't need to update these queries manually. However, you will need to update the following queries:
+Naming changes are automatically applied to queries that are saved in Microsoft Defender, including queries used by custom detection rules. You don't need to update these queries manually. However, you will need to update the following queries:
 - Queries that are run using the API
-- Queries that are saved elsewhere outside Microsoft Defender XDR
+- Queries that are saved elsewhere outside Microsoft Defender
 
 ## June 2026
 

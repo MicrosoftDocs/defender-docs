@@ -9,10 +9,11 @@ ms.collection:
   - m365-security
   - tier2
 description: Admins can learn how to create automated simulations that contain specific techniques and payloads that launch when the specified conditions are met in Microsoft Defender for Office 365 Plan 2.
-ms.date: 04/23/2026
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Simulation automations for Attack simulation training
@@ -46,7 +47,18 @@ To create a simulation automation, do the following steps:
 
    :::image type="content" source="media/attack-sim-training-sim-automations-create.png" alt-text="The Create simulation button on the Simulation automations tab in Attack simulation training in the Microsoft Defender portal" lightbox="media/attack-sim-training-sim-automations-create.png":::
 
-   The following sections describe the steps and configuration options to create a simulation automation.
+   The wizard walks you through these configuration steps:
+
+   - [Name and describe the simulation automation](#name-and-describe-the-simulation-automation)
+   - [Select social engineering techniques](#select-one-or-more-social-engineering-techniques)
+   - [Select payloads and login pages](#select-payloads-and-login-pages)
+   - [Target users](#target-users)
+   - [Assign training](#assign-training)
+   - [Select end user notifications](#select-end-user-notifications)
+   - [Simulation schedule](#simulation-schedule)
+   - [Schedule details](#schedule-details)
+   - [Launch details](#launch-details)
+   - [Review simulation automation](#review-simulation-automation).
 
    > [!NOTE]
    > At any point after you name the simulation automation during the new simulation automation wizard, you can select **Save and close** to save your progress and continue later. The incomplete simulation automation has the **Status** value **Draft**. You can pick up where you left off by selecting the simulation automation from the list and then clicking the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit automation** action that appears.
@@ -107,7 +119,7 @@ On the **Select payloads and login page** page, select one of the following opti
   > [!TIP]
   > To see details about other payloads without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
-  Leave the payload details flyout open to change the login page or create a new login page to use as described in the following subsections.
+  Leave the payload details flyout open to change the login page or create a new login page as described in [Select login pages](#select-login-pages).
 
   Or, if you're finished in the payload details flyout, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: **Close** to return to the **Select payloads and login page** page, verify one or more of the required payloads are selected and then select **Next** to continue.
 
@@ -161,7 +173,8 @@ On the **Select payloads and login page** page, verify the payloads that you con
 
 When you're finished on the **Select a payload and login page** page, select **Next**.
 
-### Configure OAuth Payload
+<a name="configure-oauth-payload"></a>
+### Configure OAuth payloads
 
 > [!NOTE]
 > This page is available only if you selected **OAuth Consent Grant** on the [Select social engineering techniques](#select-one-or-more-social-engineering-techniques) page and a corresponding payload.
@@ -300,7 +313,8 @@ Use the following options on the page to assign trainings as part of the simulat
 
 When you're finished on the **Assign training** page, select **Next**.
 
-### Training assignment
+<a name="training-assignment"></a>
+### Select training courses
 
 > [!NOTE]
 > This page is available only if you selected **Select training courses and modules myself** on the **Assign training** page.
@@ -634,7 +648,7 @@ When you're finished on the **New automation created** page, select **Done**.
 
 Back on the **Simulation automations** page on the **Automations** tab, the simulation automation that you created is now listed with the **Status** value **Inactive**.
 
-To turn on the simulation automation, see the next section.
+To turn on the simulation automation, see [Turn on or turn off a simulation automation](#turn-on-or-turn-off-a-simulation-automation).
 
 ## Turn on or turn off a simulation automation
 
@@ -648,7 +662,7 @@ To turn off an **Active** simulation automation, select it from the list by clic
 
 ## Remove simulation automations
 
-To remove a simulation automation, select the simulation automation from the list by clicking the check box next to the name. Select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears, and then select **Confirm** in the dialog.
+To remove a simulation automation, select it from the list by clicking the check box next to the name. Select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears. Select **Confirm** in the dialog.
 
 ## View simulation automation details
 
@@ -671,9 +685,10 @@ For simulation automations with the **Status** value **Active** or **Inactive**,
 
 You can view the simulation reports for automated campaigns in the **Simulations** tab. Click on the name of the simulation, having a prefix of **AutomatedSimulation_** and automation name available under the column **Created by**. To view the report click anywhere in the simulation row other than the check box next to the name.
 
-## Frequently asked questions (FAQ) for simulations automations
+<a name="frequently-asked-questions-faq-for-simulations-automations"></a>
+## Frequently asked questions (FAQ) for simulation automations
 
-This section contains some of the most common questions about Simulation automations.
+The following frequently asked questions cover common issues with simulation automations.
 
 ### Why does the Status value under Automations show Completed, but the Status value under Simulations show In progress?
 
@@ -695,13 +710,13 @@ The **Randomize** option on the [Simulation schedule](#simulation-schedule) page
 
 ### How does the Randomize option on the Select a payload and login page work?
 
-The **Randomize** option on the [Select payloads and login pages](#select-payloads-and-login-pages) page works as follows:
+The **Randomize** option on the [Select payloads and login pages](#select-payloads-and-login-pages) page automatically picks a technique and a payload instead of requiring you to select them manually.
 
-For every run, a social engineering technique from the list of selected techniques is chosen, and then a random payload for that technique will be chosen from both **Global payloads** (built-in) and **Tenant payloads** (custom). This behavior helps to ensure that the selected payload wasn't part of any previous run for this particular automation.
+For every run, a social engineering technique from the list of selected techniques is chosen, and then a random payload for that technique is chosen from both **Global payloads** (built-in) and **Tenant payloads** (custom). This behavior helps to ensure that the selected payload wasn't part of any previous run for this particular automation.
 
 ### With a randomized schedule, the maximum number of simulations is between 1 and 10. How does this work?
 
-This number is the maximum number of runs that can be created by this automation. For example, if you select 10, the maximum number of simulations that will be created by this automation is 10. The number of simulations can be fewer depending on the number of targeted users and the availability of payloads.
+The **Max number of simulations** value is the maximum number of runs that can be created by this automation. For example, if you select 10, the maximum number of simulations that will be created by this automation is 10. The number of simulations can be fewer depending on the number of targeted users and the availability of payloads.
 
 ### If I select only one specific day between two days (for example, Wednesday), how many simulations will I see on the Simulation tab?
 
@@ -711,7 +726,8 @@ If there's only one Wednesday between the start date and end date, the automatio
 
 Randomize send time works in batches of 1,000 users and is meant to be used with a large number of targeted users. If less than 1,000 users are involved in simulations created by automations, batches of 100 users are created for randomized send times.
 
-## Related links
+<a name="related-links"></a>
+## Related content
 
 [Get started using Attack simulation training](attack-simulation-training-get-started.md)
 

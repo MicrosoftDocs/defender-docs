@@ -1,10 +1,12 @@
 ---
-title: "Microsoft Sentinel migration: Select a data ingestion tool | Microsoft Docs"
+title: "Microsoft Sentinel migration: Select a data ingestion tool"
 description: Select a tool to transfer your historical data to the selected target platform.
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 05/03/2022
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a data engineer, I want to select the appropriate data ingestion tool so that I can efficiently transfer historical data to my target platform.
@@ -13,9 +15,9 @@ ms.date: 05/03/2022
 
 # Select a data ingestion tool
 
-After you [select a target platform](migration-ingestion-target-platform.md) for your historical data, the next step is to select a tool to transfer your data.
+After you [select a target platform for your migration](migration-ingestion-target-platform.md), select a tool to transfer your historical data.
 
-This article describes a set of different tools used to transfer your historical data to the selected target platform. This table lists the tools available for each target platform, and general tools to help you with the ingestion process.
+The following tools can transfer historical data to Azure Monitor, Azure Data Explorer, or Azure Blob Storage. The table lists the tools available for each target platform, along with general tools to help you with the ingestion process.
 
 | Microsoft Sentinel data lake |Azure Data Explorer  |Azure Blob Storage  |General tools |
 |---------|---------|---------|---------|
@@ -29,15 +31,15 @@ To learn more, see [What is Microsoft Sentinel data lake?](/azure/sentinel/datal
 
 ### Azure Monitor custom log ingestion tool
 
-The [custom log ingestion tool](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/CustomLogsIngestion-DCE-DCR) is a PowerShell script that sends custom data to an Azure Monitor Logs workspace. You can point the script to the folder where all your log files reside, and the script pushes the files to that folder. The script accepts a CSV or JSON format for log files. 
+The [Azure Monitor Custom Log Ingestion Tool on GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/CustomLogsIngestion-DCE-DCR) is a PowerShell script that sends custom data to an Azure Monitor Logs workspace. You can point the script to the folder where all your log files reside, and the script pushes the files to that folder. The script accepts a CSV or JSON format for log files. 
 
 ### Direct API 
 
-With this option, you [ingest your custom logs into Azure Monitor Logs](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal). You ingest the logs with a PowerShell script that uses a REST API. Alternatively, you can use any other programming language to perform the ingestion, and you can use other Azure services to abstract the compute layer, such as Azure Functions or Azure Logic Apps. 
+With this option, you ingest your custom logs into Azure Monitor Logs. For more information, see [Tutorial: Send data to Azure Monitor Logs with Logs ingestion API](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal). You ingest the logs with a PowerShell script that uses a REST API. Alternatively, you can use any other programming language to perform the ingestion, and you can use other Azure services to abstract the compute layer, such as Azure Functions or Azure Logic Apps. 
 
 ## Azure Data Explorer 
 
-You can [ingest data to Azure Data Explorer](/azure/data-explorer/ingest-data-overview) (ADX) in several ways.
+Azure Data Explorer (ADX) supports several data ingestion methods. For more information, see [Azure Data Explorer data ingestion overview](/azure/data-explorer/ingest-data-overview).
 
 The ingestion methods that ADX accepts are based on different components:
 
@@ -78,7 +80,7 @@ You can ingest data to Azure Blob Storage in several ways.
 - [Python](/azure/storage/blobs/storage-quickstart-blobs-python)
 - [SSIS](/azure/architecture/data-science-process/move-data-to-azure-blob-using-ssis)
 
-Review the Azure Data Factory (ADF) and Azure Synapse methods, which are better tailored to the data migration use case.
+Review [Azure Data Factory or Azure Synapse](#azure-data-factory-or-azure-synapse), which are better tailored to the data migration use case.
 
 ### Azure Data Factory or Azure Synapse
 
@@ -92,13 +94,14 @@ To use the Copy activity in Azure Data Factory (ADF) or Synapse pipelines:
 [AzCopy](/azure/storage/common/storage-use-azcopy-v10) is a simple command-line utility that copies files to or from storage accounts. AzCopy is available for Windows, Linux, and macOS. Learn how to [copy on-premises data to Azure Blob storage with AzCopy](/azure/storage/common/storage-use-azcopy-v10). 
 
 You can also use these options to copy the data:
-- Learn how to [optimize the performance](/azure/storage/common/storage-use-azcopy-optimize) of AzCopy.
-- Learn how to [configure AzCopy](/azure/storage/common/storage-ref-azcopy-configuration-settings). 
-- Learn how to use the [copy command](/azure/storage/common/storage-ref-azcopy-copy).
+- Learn how to [optimize AzCopy performance](/azure/storage/common/storage-use-azcopy-optimize).
+- See [AzCopy configuration settings](/azure/storage/common/storage-ref-azcopy-configuration-settings). 
+- See the [AzCopy copy command reference](/azure/storage/common/storage-ref-azcopy-copy).
 
-## Azure Data Box
+<a name="azure-data-box"></a>
+## Use Azure Data Box for large-scale data ingestion
 
-In a scenario where the source SIEM doesn't have good connectivity to Azure, ingesting the data using the tools reviewed in this section might be slow or even impossible. To address this scenario, you can use [Azure Data Box](/azure/databox/data-box-overview) to copy the data locally from the customer's data center into an appliance, and then ship that appliance to an Azure data center. While Azure Data Box isn't a replacement for AzCopy or LightIngest, you can use this tool to accelerate the data transfer between the customer data center and Azure.
+In a scenario where the source SIEM doesn't have good connectivity to Azure, ingesting the data using tools such as [AzCopy](#azcopy), [LightIngest](#lightingest), or [Azure Data Factory](#azure-data-factory-or-azure-synapse) might be slow or even impossible. To address this scenario, you can use [Azure Data Box](/azure/databox/data-box-overview) to copy the data locally from the customer's data center into an appliance, and then ship that appliance to an Azure data center. While Azure Data Box isn't a replacement for AzCopy or LightIngest, you can use this tool to accelerate the data transfer between the customer data center and Azure.
 
 Azure Data Box offers three different SKUs, depending on the amount of data to migrate: 
 
@@ -106,9 +109,10 @@ Azure Data Box offers three different SKUs, depending on the amount of data to m
 - [Data Box](/azure/databox/data-box-overview)
 - [Data Box Heavy](/azure/databox/data-box-heavy-overview)
 
-After you complete the migration, the data is available in a storage account under one of your Azure subscriptions. You can then use [AzCopy](#azcopy), [LightIngest](#lightingest), or [ADF](#azure-data-factory-or-azure-synapse) to ingest data from the storage account. 
+After you complete the migration, the data is available in a storage account under one of your Azure subscriptions. You can then use [AzCopy](#azcopy), [LightIngest](#lightingest), or [Azure Data Factory](#azure-data-factory-or-azure-synapse) to ingest data from the storage account. 
 
-## SIEM data migration accelerator
+<a name="siem-data-migration-accelerator"></a>
+## Use the SIEM data migration accelerator
 
 In addition to selecting an ingestion tool, your team needs to invest time in setting up the foundation environment. To ease this process, you can use the [SIEM data migration accelerator](https://aka.ms/siemdatamigration), which automates the following tasks:
 

@@ -9,14 +9,16 @@ ms.collection:
 ms.localizationpriority: medium
 ms.assetid: 9721b46d-cbea-4121-be51-542395e6fd21
 ms.custom:
+  - msecd-doc-authoring-1014
   - seo-marvel-apr2020
 description: Admins can learn about the available and preferred options to allow inbound messages to Microsoft 365.
 ms.service: defender-office-365
-ms.date: 09/16/2024
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Create sender allowlists for cloud mailboxes
@@ -33,7 +35,7 @@ The following list contains the available methods to allow senders from most rec
 4. IP Allow List in the default connection filter policy.
 5. Allowed sender lists or allowed domain lists in anti-spam policies.
 
-The rest of this article contains specifics about each method.
+The following sections describe each allowlist method in detail, including the Tenant Allow/Block List, mail flow rules, Outlook Safe Senders, the IP Allow List, and allowed sender or domain lists in anti-spam policies.
 
 > [!IMPORTANT]
 > Messages that are identified as malware<sup>\*</sup> or high confidence phishing are always quarantined, regardless of the allowlist option you use. For more information, see [Secure by default in Office 365](secure-by-default.md).
@@ -106,10 +108,7 @@ When a message skips spam filtering due to a mail flow rule, the value `SFV:SKN`
 > [!CAUTION]
 > This method creates a high risk of attackers successfully delivering email that would otherwise be filtered. Messages determined to be malware or high confidence phishing are filtered. For more information, see [When user and organization settings conflict](how-policies-and-protections-are-combined.md#when-user-and-organization-settings-conflict).
 
-Instead of an organizational setting, users or admins can add the sender email addresses to the Safe Senders list in the mailbox. Safe Senders list entries in the mailbox affect that mailbox only. For instructions, see the following articles:
-
-- **Users**: [Add recipients of my email messages to the Safe Senders List](https://support.microsoft.com/office/be1baea0-beab-4a30-b968-9004332336ce).
-- **Admins**: [Configure junk email settings on cloud mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).
+Instead of an organizational setting, users or admins can add the sender email addresses to the Safe Senders list in the mailbox. Safe Senders list entries in the mailbox affect that mailbox only. For user instructions, see [Add recipients of my email messages to the Safe Senders List](https://support.microsoft.com/office/be1baea0-beab-4a30-b968-9004332336ce). For admin instructions, see [Configure junk email settings on cloud mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).
 
 This method isn't desirable in most situations since senders bypass parts of the filtering stack. Although you trust the sender, the sender can still be compromised and send malicious content. You should let our filters check every message and then [report the false positive/negative to Microsoft](submissions-report-messages-files-to-microsoft.md) if we got it wrong. Bypassing the filtering stack also interferes with [zero-hour auto purge (ZAP)](zero-hour-auto-purge.md). If allow list entries aren't working as expected, see [Troubleshoot common anti-spam policy issues](anti-spam-policies-troubleshooting.md#problem-allow-list-entries-arent-working).
 
@@ -141,7 +140,7 @@ The next best option is to add the source email servers to the IP Allow List in 
 >
 > Don't use popular domains (for example, microsoft.com) in allowed domain lists.
 
-The least desirable option is to use the allowed sender lists or allowed domain lists in custom anti-spam policies or in the default anti-spam policy. You should avoid this option _if at all possible_ because senders bypass all spam, spoof, phishing protection (except high confidence phishing), and sender authentication (SPF, DKIM, DMARC). This method is best used for temporary testing only. The detailed steps can be found in [Configure anti-spam policies](anti-spam-policies-configure.md).
+The least desirable option is to use the allowed sender lists or allowed domain lists in custom anti-spam policies or in the default anti-spam policy. You should avoid this option _if at all possible_ because senders bypass all spam, spoof, phishing protection (except high confidence phishing), and sender authentication (SPF, DKIM, DMARC). This method is best used for temporary testing only. For detailed steps to configure allowed sender lists or allowed domain lists, see [Configure anti-spam policies](anti-spam-policies-configure.md).
 
 The maximum limit for these lists is approximately 1,000 entries, but you can enter a maximum of 30 entries in the Microsoft Defender portal. Use PowerShell to add more than 30 entries.
 

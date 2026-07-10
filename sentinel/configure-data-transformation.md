@@ -5,7 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 02/27/2022
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security engineer, I want to configure ingestion-time data transformation and custom log ingestion so that I can control, filter, and enrich data before it is ingested into Microsoft Sentinel.
@@ -33,9 +35,11 @@ Before you start configuring DCRs for data transformation:
 
 - **Verify data connector support**. Make sure that your data connectors are supported for data transformation.
 
-    In our [data connector reference](data-connectors-reference.md) article, check the section for your data connector to understand which types of DCRs are supported. Continue in this article to understand how the DCR type you select affects the rest of the ingestion and transformation process.
+    In our [data connector reference](data-connectors-reference.md) article, check the section for your data connector to understand which types of DCRs are supported. Continue in this article to understand how the DCR type you select affects the remaining steps to configure and transform your data.
 
 ## Determine your requirements
+
+Use the following table to determine which DCR type you need based on your ingestion scenario.
 
 | If you are ingesting | Ingestion-time transformation is... | Use this DCR type |
 | -------------------- | ---------------------------- | ----------------- |
@@ -47,22 +51,31 @@ Before you start configuring DCRs for data transformation:
 
 ## Configure your data transformation
 
-Use the following procedures from the Log Analytics and Azure Monitor documentation to configure your data transformation DCRs:
+Use the following procedures from the Log Analytics and Azure Monitor documentation to configure your data transformation DCRs.
 
-[Direct ingestion through the Log Ingestion API](/azure/azure-monitor/logs/logs-ingestion-api-overview):
+### Direct ingestion through the Log Ingestion API
+
+For [direct ingestion through the Log Ingestion API](/azure/azure-monitor/logs/logs-ingestion-api-overview), use the following tutorials:
+
 - Walk through a tutorial for [ingesting logs using the Azure portal](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal).
 - Walk through a tutorial for [ingesting logs using Azure Resource Manager (ARM) templates and REST API](/azure/azure-monitor/logs/tutorial-logs-ingestion-api).
 
-[Workspace transformations](/azure/azure-monitor/essentials/data-collection-transformations-workspace):
-- Walk through a tutorial for [configuring workspace transformation using the Azure portal](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal).
-- Walk through a tutorial for [configuring workspace transformation using Azure Resource Manager (ARM) templates and REST API](/azure/azure-monitor/logs/tutorial-workspace-transformations-api).- 
+### Workspace transformations
 
-[More on data collection rules](/azure/azure-monitor/essentials/data-collection-rule-overview):
+For [workspace transformations](/azure/azure-monitor/essentials/data-collection-transformations-workspace), use the following tutorials:
+
+- Walk through a tutorial for [configuring workspace transformation using the Azure portal](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal).
+- Walk through a tutorial for [configuring workspace transformation using Azure Resource Manager (ARM) templates and REST API](/azure/azure-monitor/logs/tutorial-workspace-transformations-api).
+
+### More on data collection rules
+
+For more information, see [data collection rules](/azure/azure-monitor/essentials/data-collection-rule-overview):
+
 - [Structure of a data collection rule in Azure Monitor (preview)](/azure/azure-monitor/essentials/data-collection-rule-structure)
 - [Data collection transformations in Azure Monitor (preview)](/azure/azure-monitor/essentials/data-collection-transformations)
 
 
-When you're done, come back to Microsoft Sentinel to verify that your data is being ingested based on your newly configured transformation. It may take up to 60 minutes for the data transformation configurations to apply.
+After you complete one of the DCR configuration procedures linked above, return to Microsoft Sentinel to verify that your data is being ingested based on the transformation you configured. It may take up to 60 minutes for the data transformation configurations to apply.
 
 
 ## Migrate to ingestion-time data transformation
@@ -71,7 +84,7 @@ If you currently have custom Microsoft Sentinel data connectors, or built-in, AP
 
 Use one of the following methods:
 
-- Configure a DCR to define, from scratch, the custom ingestion from your data source to a new table. You might use this option if you want to use a new schema that doesn't have the current column suffixes, and doesn't require query-time KQL functions to standardize your data.
+- Configure a DCR to define, from scratch, the custom ingestion from your data source to a new table. You might use this option if you want to use a new schema that doesn't have the current column suffixes, and doesn't require query-time Kusto Query Language (KQL) functions to standardize your data.
 
     After you've verified that your data is properly ingested to the new table, you can delete the legacy table, as well as your legacy, custom data connector.
 

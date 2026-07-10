@@ -15,7 +15,7 @@ If you're looking to manage support for enterprise IoT security, see [Manage ent
 
 These licensing and plan-management instructions apply to commercial Defender for IoT customers.
 
-If you're a government customer, see [Defender for IoT government customers trial license](getting-started.md#government-customers-trial-license) or contact your Microsoft sales representative for more information.
+If you're a government customer, contact your Microsoft sales representative for more information.
 
 ## Prerequisites
 
@@ -39,9 +39,11 @@ This procedure describes how to purchase Defender for IoT licenses in the Micros
 
 1. Go to the [Microsoft 365 admin center](https://portal.office.com/AdminPortal/Home#/catalog) **Billing > Purchase services**. If you don't have this option, select **Marketplace** instead.
 
-1. Search for **Microsoft Defender for IoT**, and then locate the **Microsoft Defender for IoT** license for your site size.
+1. Search for **Defender for IoT**.
 
-1. Follow the options through to buy the license and add it to your Microsoft 365 products.
+1. Choose the license appropriate for the size of your site.
+
+1. Complete the purchasing instructions.
 
    Make sure to select the number of licenses you want to purchase, based on the number of sites you want to monitor at the selected size.
 
@@ -93,28 +95,6 @@ You might need to cancel a Defender for IoT plan from your Azure subscription, f
 Canceling an OT plan in the Azure portal *doesn't* also cancel your Defender for IoT license. To change your billed licenses, make sure that you also cancel your Defender for IoT license from the Microsoft 365 admin center.
 
 For more information, see the [Cancel a purchase or trial subscription in Microsoft 365](/microsoft-365/commerce/subscriptions/manage-self-service-purchases-admins#cancel-a-purchase-or-trial-subscription).
-
-<a name="the-trial-license"></a>
-## Manage the trial license
-
-A trial license covers a site with up to 1,000 devices for a minimum of 30 days. To start a trial license, see [start a Microsoft Defender for IoT trial](getting-started.md).
-
-### Extend a trial license in the Admin Center
-
-If you need more time to evaluate the product and security value of Defender for IoT the trial license can be extended up until 15 days before the end of the trial. Within the last 15 days the trial can’t be extended.
-
-To extend the trial, either:
-
-1. Use the [Microsoft 365 Admin Center](https://admin.microsoft.com/Adminportal/Home?#/homepage) portal and follow the [Extend your Microsoft 365 trial subscription](/microsoft-365/commerce/try-or-buy-microsoft-365#extend-your-trial).
-
-    The trial extension request must be made by a user with Global or Billing Admin permissions on the customer tenant. For more information, see admin roles in [Microsoft 365 Admin Center](https://admin.microsoft.com/Adminportal/Home?#/homepage).
-
-1. Contact your sale's team representative who can help you extend your license.
-
->[!NOTE]
->
->A trial license can be extended by the customer up until 15 days before the end of the trial using the [Microsoft 365 Admin Center](https://admin.microsoft.com/Adminportal/Home?#/homepage).
->
 
 ## Migrate from a legacy OT plan
 
@@ -195,8 +175,8 @@ Use the following steps to edit a legacy Defender for IoT plan in the Azure port
 
 1. Make any of the following changes as needed:
 
-   - Change your price plan from a trial to a monthly, annual, or Microsoft 365 plan
-   - Update the number of [calculate committed devices in your network](best-practices/plan-prepare-deploy.md#calculate-devices-in-your-network) (monthly and annual plans only)
+   - Change your price plan to a monthly, annual, or Microsoft 365 plan
+   - Update the number of [committed devices](best-practices/plan-prepare-deploy.md#calculate-devices-in-your-network) (monthly and annual plans only)
    - Update the number of sites (annual plans only)
 
 1. Select the **I accept the terms and conditions** option, and then select **Save**.

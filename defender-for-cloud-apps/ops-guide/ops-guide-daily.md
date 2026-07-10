@@ -165,7 +165,7 @@ For more information, see:
 
 - [View and manage incidents and alerts](/unified-secops-platform/mto-incidents-alerts)
 - [View your app details with app governance](../app-governance-visibility-insights-view-apps.md)
-- [Getting detailed information on an app](../app-governance-visibility-insights-view-apps.md#getting-detailed-information-on-an-app)
+- [Get detailed information about an app](../app-governance-visibility-insights-view-apps.md#get-detailed-information-about-an-app)
 
 ### Create and manage app governance policies
 
@@ -178,7 +178,7 @@ We recommend that you check your OAuth apps daily for regular in-depth visibilit
 For more information, see:
 
 - [Create app policies in app governance](../app-governance-app-policies-create.md)
-- [Manage app policies](../app-governance-app-policies-manage.md)
+- [Manage app policies](../app-governance-app-policies-create.md#manage-app-policies)
 
 ## Review Conditional Access app control
 
@@ -286,6 +286,9 @@ For more information, see:
 **Persona**: Security and Compliance administrators, SOC analysts
 
 Defender for Cloud Apps file policies and alerts allow you to enforce a wide range of automated processes. Create policies to provide information protection, including continuous compliance scans, legal eDiscovery tasks, and data loss protection (DLP) for sensitive content shared publicly.
+
+> [!IMPORTANT]
+> File policies retire on January 6, 2027. To maintain file-based data protection, [migrate to Microsoft Purview DLP or auto-labeling policies](../migrate-file-policies-to-purview.md).
 
 In addition to [triaging alerts and incidents](#review-alerts-and-incidents), we recommend that your SOC teams run extra, proactive actions and queries. In the **Cloud apps > Files** page, check for the following questions:
 

@@ -16,7 +16,8 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/28/2025
+ms.date: 07/03/2026
+ai-usage: ai-assisted
 ---
 
 # EmailAttachmentInfo
@@ -29,7 +30,7 @@ ms.date: 03/28/2025
 The `EmailAttachmentInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about attachments on emails processed by Microsoft Defender for Office 365. Use this reference to construct queries that return information from this table.
 
 
-This advanced hunting table is populated by records from Defender for Office 365. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Office 365 in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+This advanced hunting table is populated by records from Defender for Office 365. If your organization hasn't deployed the service in Microsoft Defender, queries that use the table aren't going to work or return any results. For more information about how to deploy Defender for Office 365 in the Defender portal, read [Deploy supported services](deploy-supported-services.md).
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
@@ -46,13 +47,15 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `RecipientEmailAddress` | `string` | Email address of the recipient, or email address of the recipient after distribution list expansion |
 | `RecipientObjectId` | `string` | Unique identifier for the email recipient in Microsoft Entra ID |
 | `FileName` | `string` | Name of the file that the recorded action was applied to |
-| `FileType` | `string` | File content type |
+| `FileType` | `string` | File extension type |
+| `FileExtension` | `string` | File extension of the attachment |
 | `SHA256` | `string` | SHA-256 of the file that the recorded action was applied to. This field is usually not populated — use the SHA1 column when available. |
 | `FileSize` | `long` | Size of the file in bytes |
 | `ThreatTypes` | `string` | Verdict from the email filtering stack on whether the email contains malware, phishing, or other threats |
 | `ThreatNames` | `string` | Detection name for malware or other threats found |
 | `DetectionMethods` | `string` | Methods used to detect malware, phishing, or other threats found in the email |
 | `ReportId` | `string` | Event identifier based on a repeating counter. To identify unique events, this column must be used in conjunction with the DeviceName and Timestamp columns. |
+| `AdditionalFields` | `string` | Additional information about the entity or event |
 
 
 ## Related topics

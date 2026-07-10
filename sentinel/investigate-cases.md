@@ -1,20 +1,21 @@
 ---
-title: Investigate incidents with Microsoft Sentinel (legacy)| Microsoft Docs
-description: In this article, learn how to use the legacy incident investigation experience in Microsoft Sentinel to create advanced alert rules that generate incidents you can assign and investigate.
+title: Investigate incidents with Microsoft Sentinel (legacy)
+description: Use the legacy incident investigation experience in Microsoft Sentinel to review, assign, and investigate security incidents in the Azure portal.
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: idpelleg
 ms.topic: how-to
-ms.date: 11/26/2024
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 #Customer intent: As a security analyst, I want to investigate and manage security incidents using advanced analytics and visualization tools so that I can effectively identify, understand, and respond to potential threats.
 ---
 
 # Investigate incidents with Microsoft Sentinel (legacy)
 
-This article helps you use Microsoft Sentinel's legacy incident investigation experience. If you're using the newer version of the interface, use the newer set of instructions to match. For more information, see [Navigate and investigate incidents in Microsoft Sentinel](investigate-incidents.md).
+This article helps you use Microsoft Sentinel's legacy incident investigation experience. If you're using the newer version of the interface, see [Navigate and investigate incidents in Microsoft Sentinel](investigate-incidents.md) for instructions that match that experience.
 
 After connecting your data sources to Microsoft Sentinel, you want to be notified when something suspicious happens. To enable you to do this, Microsoft Sentinel lets you create advanced analytics rules that generate incidents that you can assign and investigate.
 
@@ -26,11 +27,15 @@ An incident can include multiple alerts. It's an aggregation of all the relevant
 
 ## Prerequisites
 
+Before you investigate or assign incidents, make sure the following prerequisites are met:
+
 - You'll only be able to investigate the incident if you used the entity mapping fields when you set up your analytics rule. The investigation graph requires that your original incident includes entities.
 
 - If you have a guest user that needs to assign incidents, the user must be assigned the [Directory Reader](/azure/active-directory/roles/permissions-reference#directory-readers) role in your Microsoft Entra tenant. Regular (nonguest) users have this role assigned by default.
 
 ## How to investigate incidents
+
+Perform the following steps to review and investigate incidents:
 
 1. Select **Incidents**. The **Incidents** page lets you know how many incidents you have and whether they're new, **Active**, or closed. For each incident, you can see the time it occurred and the status of the incident. Look at the severity to decide which incidents to handle first.
 
@@ -48,15 +53,15 @@ An incident can include multiple alerts. It's an aggregation of all the relevant
 
     - In the **Timeline** tab, review the timeline of alerts and bookmarks in the incident, which can help you reconstruct the timeline of attacker activity.
 
-    - In the **Similar incidents (Preview)** tab, you see a collection of up to 20 other incidents that most closely resemble the current incident. This allows you to view the incident in a larger context and helps direct your investigation. [Learn more about similar incidents below](#similar-incidents-preview).
+    - In the **Similar incidents (Preview)** tab, you see a collection of up to 20 other incidents that most closely resemble the current incident. Viewing similar incidents allows you to understand the incident in a larger context and helps direct your investigation. For more information, see [Similar incidents (preview)](#similar-incidents-preview).
 
     - In the **Alerts** tab, review the alerts included in this incident. You see all relevant information about the alerts – the analytics rules that produced them, the number of results returned per alert, and the ability to run playbooks on the alerts. To drill down even further into the incident, select the number of **Events**. This opens the query that generated the results and the events that triggered the alert in Log Analytics. 
 
-    - In the **Bookmarks** tab, you see any bookmarks you or other investigators have linked to this incident. [Learn more about bookmarks](./bookmarks.md).
+    - In the **Bookmarks** tab, you see any bookmarks you or other investigators have linked to this incident. For more information, see [Bookmarks in Microsoft Sentinel](./bookmarks.md).
 
-    - In the **Entities** tab, you can see all the [entities](entities.md) that you [mapped](./map-data-fields-to-entities.md) as part of the alert rule definition. These are the objects that played a role in the incident, whether they be users, devices, addresses, files, or [any other types](./entities-reference.md).
+    - In the **Entities** tab, you can see all the [entities](entities.md) that you [mapped to data fields](./map-data-fields-to-entities.md) as part of the alert rule definition. These are the objects that played a role in the incident, whether they be users, devices, addresses, files, or [other supported entity types](./entities-reference.md).
 
-    - Finally, in the **Comments** tab, you can add your comments on the investigation and view any comments made by other analysts and investigators. [Learn more about comments](#comment-on-incidents).
+    - Finally, in the **Comments** tab, you can add your comments on the investigation and view any comments made by other analysts and investigators. For more information, see [Comment on incidents](#comment-on-incidents).
 
 1. If you're actively investigating an incident, it's a good idea to set the incident's status to **Active** until you close it.
 
@@ -86,7 +91,7 @@ To use the investigation graph:
 1. Select an incident, then select **Investigate**. This takes you to the investigation graph. The graph provides an illustrative map of the entities directly connected to the alert and each resource connected further.
 
 
-    [![View map.](media/investigate-cases/investigation-map.png)](media/investigate-cases/investigation-map.png#lightbox)
+    [![Screenshot of the investigation map showing entity relationships and connections in Microsoft Sentinel.](media/investigate-cases/investigation-map.png)](media/investigate-cases/investigation-map.png#lightbox)
 
    > [!IMPORTANT] 
    > - You'll only be able to investigate the incident if you used the entity mapping fields when you set up your analytics rule. The investigation graph requires that your original incident includes entities.
@@ -96,27 +101,27 @@ To use the investigation graph:
 
 1. Select an entity to open the **Entities** pane so you can review information on that entity.
 
-    ![View entities in map](media/investigate-cases/map-entities.png)
+    ![Screenshot of the Entities pane showing entity details in the investigation map.](media/investigate-cases/map-entities.png)
   
 1. Expand your investigation by hovering over each entity to reveal a list of questions that was designed by our security experts and analysts per entity type to deepen your investigation. We call these options **exploration queries**.
 
-    ![Explore more details](media/investigate-cases/exploration-cases.png)
+    ![Screenshot of exploration query options displayed when hovering over an entity in the investigation map.](media/investigate-cases/exploration-cases.png)
 
     For example, you can request related alerts. If you select an exploration query, the resulting entitles are added back to the graph. In this example, selecting **Related alerts** returned the following alerts into the graph:
 
-    :::image type="content" source="media/investigate-cases/related-alerts.png" alt-text="Screenshot: view related alerts" lightbox="media/investigate-cases/related-alerts.png":::
+    :::image type="content" source="media/investigate-cases/related-alerts.png" alt-text="Screenshot of the investigation graph showing related alerts connected to an entity by dotted lines." lightbox="media/investigate-cases/related-alerts.png":::
 
-    See that the related alerts appear connected to the entity by dotted lines.
+    In the graph, related alerts appear connected to the entity by dotted lines.
 
 1. For each exploration query, you can select the option to open the raw event results and the query used in Log Analytics, by selecting **Events\>**.
 
 1. In order to understand the incident, the graph gives you a parallel timeline.
 
-    :::image type="content" source="media/investigate-cases/map-timeline.png" alt-text="Screenshot: view timeline in map." lightbox="media/investigate-cases/map-timeline.png":::
+    :::image type="content" source="media/investigate-cases/map-timeline.png" alt-text="Screenshot of the investigation map timeline showing incident events in parallel over time." lightbox="media/investigate-cases/map-timeline.png":::
 
 1. Hover over the timeline to see which things on the graph occurred at what point in time.
 
-    :::image type="content" source="media/investigate-cases/use-timeline.png" alt-text="Screenshot: use timeline in map to investigate alerts.'" lightbox="media/investigate-cases/use-timeline.png":::
+    :::image type="content" source="media/investigate-cases/use-timeline.png" alt-text="Screenshot of the investigation map timeline highlighting when specific events and alerts occurred." lightbox="media/investigate-cases/use-timeline.png":::
 
 ## Focus your investigation
 
@@ -134,7 +139,7 @@ As a security operations analyst, when investigating an incident you want to pay
 
 The **similar incidents** tab in the incident details page, now in preview, presents up to 20 other incidents that are the most similar to the current one. Similarity is calculated by internal Microsoft Sentinel algorithms, and the incidents are sorted and displayed in descending order of similarity.
 
-:::image type="content" source="media/investigate-cases/similar-incidents.png" alt-text="Screenshot of the similar incidents display." lightbox="media/investigate-cases/similar-incidents.png":::
+:::image type="content" source="media/investigate-cases/similar-incidents.png" alt-text="Screenshot of the Similar incidents tab listing related incidents ranked by similarity to the current incident." lightbox="media/investigate-cases/similar-incidents.png":::
 
 ### Similarity calculation
 
@@ -152,7 +157,7 @@ The reasons an incident appears in the similar incidents list are displayed in t
 
 #### Similarity time frame
 
-Incident similarity is calculated based on data from the 14 days prior to the last activity in the incident, that being the end time of the most recent alert in the incident.
+Incident similarity is calculated based on data from the 14 days before the incident's last activity, defined as the end time of the most recent alert in the incident.
 
 Incident similarity is recalculated every time you enter the incident details page, so the results might vary between sessions if new incidents were created or updated.
 
@@ -168,9 +173,11 @@ Comments are simple to use. You access them through the **Comments** tab on the 
 
 ### Frequently asked questions about incident comments
 
-There are several considerations to take into account when using incident comments. The following list of questions points to these considerations.
+The following frequently asked questions describe key considerations for using incident comments.
 
 #### What kinds of input are supported?
+
+Comments support the following types of input:
 
 - **Text:** Comments in Microsoft Sentinel support text inputs in plain text, basic HTML, and Markdown. You can also paste copied text, HTML, and Markdown into the comment window.
 
@@ -178,16 +185,20 @@ There are several considerations to take into account when using incident commen
 
 #### Is there a size limit on comments?
 
+Yes. The following limits apply to incident comments:
+
 - **Per comment:** A single comment can contain up to **30,000 characters**. 
 
 - **Per incident:** A single incident can contain up to **100 comments**.  
 
     > [!NOTE]
-    > The size limit of a single incident record in the *SecurityIncident* table in Log Analytics is 64 KB. If this limit is exceeded, comments (starting with the earliest) will be truncated, which may affect the comments that will appear in [advanced search](#search-for-incidents) results.
+    > The size limit of a single incident record in the *SecurityIncident* table in Log Analytics is 64 KB. If this limit is exceeded, comments (starting with the earliest) will be truncated, which may affect the comments that will appear in [advanced incident search](#search-for-incidents) results.
     >
     > The actual incident records in the incidents database will not be affected.
 
 #### Who can edit or delete comments?
+
+The following permissions apply to editing and deleting comments:
 
 - **Editing:** Only the author of a comment has permission to edit it.
 
@@ -209,9 +220,9 @@ Once you resolve a particular incident (for example, when your investigation has
 
 For more information about false positives and benign positives, see [Handle false positives in Microsoft Sentinel](false-positives.md).
 
-After choosing the appropriate classification, add some descriptive text in the **Comment** field. This is useful in the event you need to refer back to this incident. Select **Apply** when you’re done, and the incident is closed.
+After choosing the appropriate classification, add some descriptive text in the **Comment** field. Adding a descriptive comment is useful in the event you need to refer back to this incident. Select **Apply** when you’re done, and the incident is closed.
 
-:::image type="content" source="media/investigate-cases/closing-reasons-comment-apply.png" alt-text="Screenshot of closing an incident.":::
+:::image type="content" source="media/investigate-cases/closing-reasons-comment-apply.png" alt-text="Screenshot of the incident closing dialog with a classification selected and a descriptive comment added.":::
 
 ## Search for incidents
 

@@ -9,9 +9,11 @@ ms.collection:
   - m365-security
   - tier2
 description: Admins can learn how to create and manage login pages for simulated phishing attacks in Microsoft Defender for Office 365 Plan 2.
-ms.date: 06/14/2024
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Login pages in Attack simulation training
@@ -35,7 +37,7 @@ To see the available login pages, open the Microsoft Defender portal at <https:/
 The following information is shown for each login page. You can sort the login pages by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 
 - **Name**
-- **⋮** (**Actions** control): Take action on the login page. The available actions depend on the **Status** value of the login page as described in the procedure sections.
+- **⋮** (**Actions** control): Take action on the login page. The available actions depend on the **Status** value of the login page as described in [Create login pages](#create-login-pages), [Modify login pages](#modify-login-pages), [Copy login pages](#copy-login-pages), and [Remove login pages](#remove-login-pages).
 - **Language**
 - **Source**: For built-in login pages, the value is **Global**. For custom login pages, the value is **Tenant**.
 - **Status**: **Ready** or **Draft**.
@@ -63,6 +65,8 @@ When you select a login page from the list by clicking anywhere in the row other
 > To see details about other login pages without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
 ## Create login pages
+
+To create a custom login page, follow these steps:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Content library** tab \> and then select **Login pages**. To go directly to the **Content library** tab where you can select **Login pages**, use <https://security.microsoft.com/attacksimulator?viewid=contentlibrary>.
 
@@ -127,7 +131,7 @@ When you select a login page from the list by clicking anywhere in the row other
 
    You can preview the results by clicking the **Preview email** button at the top of the page.
 
-   When you're finished on the **Review login page** page, select **Next**.
+   When you're finished on the **Configure login page** page, select **Next**.
 
 5. On the **Review login page** page, you can review the details of your login page.
 
@@ -151,7 +155,7 @@ To modify an existing custom login page on the **Tenant login pages** tab, do on
 - Select **⋮** (**Actions**) next to the **Name** value of the login page, and then select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit**.
 - Select the login page from the list by clicking anywhere in the row other than the check box next to the name. In the details flyout that opens, select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit**.
 
-The login page wizard opens with the settings and values of the selected login page. The steps are the same as described in the [Create login pages](#create-login-pages) section.
+The login page wizard opens with the settings and values of the selected login page. To modify the login page, follow the same wizard steps described in [Create login pages](#create-login-pages).
 
 ## Copy login pages
 
@@ -160,7 +164,7 @@ To copy an existing login page on the **Tenant login pages** or **Global login p
 - Select the login page from the list by clicking the check box next to the name, and then select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Create a copy** action that appears.
 - Select **⋮** (**Actions**) next to the **Name** value of the login page, and then select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Create a copy**.
 
-The login page wizard opens with the settings and values of the selected login page. The steps are the same as described in the [Create login pages](#create-login-pages) section.
+The login page wizard opens with the settings and values of the selected login page. To copy the login page, follow the same wizard steps described in [Create login pages](#create-login-pages).
 
 > [!NOTE]
 > When you copy a built-in login page on the **Global login pages** tab, be sure to change the **Name** value. This step ensures the copy is saved as a custom login page on the **Tenant login pages** tab.
@@ -189,13 +193,14 @@ To make a login page the default on the **Tenant login pages** or **Global login
 - Select **Make this the default login page** on the **Configure login page** page in the wizard when you [create or modify a login page](#create-login-pages).
 
 > [!NOTE]
-> The previous procedures aren't available if the login page is already the default.
+> The options for setting a default login page that are described in this section aren't available if the login page is already the default.
 >
 > The default login page is also marked in the list, although you might need to widen the **Name** column to see it:
 >
 > :::image type="content" source="media/attack-sim-training-login-pages-default.png" alt-text="The default login page marked in the list of login pages in Attack simulation training." lightbox="media/attack-sim-training-login-pages-default.png":::
 
-## Related links
+<a name="related-links"></a>
+## Related content
 
 [Get started using Attack simulation training](attack-simulation-training-get-started.md)
 

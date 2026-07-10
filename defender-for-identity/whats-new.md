@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 05/26/2026
+ms.date: 07/02/2026
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality.
 ms.reviewer: AbbyMSFT
@@ -24,7 +24,21 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## July 2026
+
+### Expanded SaaS app support in Password protection (Preview)
+
+The Password protection page now includes password risks from SaaS apps connected through Microsoft Defender for Cloud Apps, in addition to Active Directory, Microsoft Entra ID, and Okta. SaaS apps that support SaaS Security Posture Management (SSPM), such as Salesforce and ServiceNow, appear on the Password Hygiene and Password Policies tabs. Each SaaS app requires a Defender for Cloud Apps app connector. For more information, see [Investigate identity password protection](password-protection.md).
+
+### The **Domain investigation page** is now generally available
+
+ The **Domain investigation** page allows you to investigate an Active Directory domain. It shows Active Directory domain security, including domain properties, deployment health, identity summary, service account breakdown, sensitive entities, active recommendations, group policies, and trust relationships. For more information, see [Investigate a domain](investigate-domain.md).
+
 ## June 2026
+
+### Identity risk score is now generally available
+
+The [identity risk score](/defender-xdr/investigate-users#risk-score-tab) is now generally available. The score ranges from 0 to 100 and reflects how likely an identity is to be compromised and how much damage a compromise could cause, based on the identity's criticality level and privileged role assignments. The **Risk score** tab on the **Identity** page provides a detailed breakdown of risk factors, percentile comparison, and risk trends.
 
 ### New Defender for Identity security alerts
 
@@ -48,6 +62,16 @@ These new alerts were added to the Defender for Identity security alerts:
 **New alerts related to other identity providers**:
 
 - [SailPoint ISC suspected brute-force attack](alerts-xdr.md#sailpoint-isc-suspected-brute-force-attack)
+
+### NHI inventory enhancements (Preview)
+
+- **Expanded Entra ID inventory**: The non-human identity inventory now includes all Microsoft Entra service principals, not just those with API permissions. For more information, see [View the Identity inventory](identity-inventory.md).
+
+- **Microsoft Entra roles visibility**: The Permissions tab now shows assigned Microsoft Entra roles alongside API permissions. For more information, see [View your app details with app governance](/defender-cloud-apps/app-governance-visibility-insights-view-apps).
+
+### Visibility into service principals used by AI agents (Preview)
+
+The non-human identity inventory now identifies which Entra ID service principals are used by AI agents. A new "Used by AI agents" column and insight card help you find and prioritize these identities. For more information, see [View the Identity inventory](identity-inventory.md).
 
 ## May 2026
 
@@ -136,6 +160,7 @@ When you validate upgrades or troubleshoot, the last two numbers in the version 
 
 |Version number|Updates|
 |---|---|
+|2.255.19243.47944|This sensor update includes bug fixes.|
 |2.255.19201.14651|This sensor update includes bug fixes.|
 
 ### Migrate Defender for Identity sensors from v2.x to v3.x

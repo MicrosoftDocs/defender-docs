@@ -9,6 +9,7 @@ ms.date: 06/02/2026
 audience: Admin
 ms.topic: concept-article
 #customer-intent: As a security administrator, I want to understand what actions I need to take to prepare for the transition of AI agent security capabilities to the Microsoft Agent 365 license.
+ai-usage: ai-assisted
 ---
 
 # Transition Microsoft Copilot Studio and Microsoft Foundry agent security capabilities to Microsoft Agent 365
@@ -17,7 +18,7 @@ Effective July 1, 2026, AI agent security capabilities for Microsoft Copilot Stu
 
 Once you onboard to Agent 365, these experiences remain in the Microsoft Defender portal — powered by Agent 365 observability logs and the agent registry as the single source of truth for agent inventory, real-time threat protection, and consistent posture across your environment.
 
-This article lists the capabilities that require an Agent 365 license, describes how the experience changes after you transition, and provides step-by-step actions to prepare your environment before July 1, 2026.
+The following sections list the capabilities that require an Agent 365 license, describe how the experience changes after you transition, and provide step-by-step actions to prepare your environment before July 1, 2026.
 
 ## Capabilities that require a Microsoft Agent 365 license as of July 1, 2026
 
@@ -41,7 +42,7 @@ These capabilities, currently through Microsoft Defender for Cloud Apps and Micr
 
 #### Advanced Hunting
 
-The AI agent inventory in Advanced Hunting is moving from the `AIAgentInfo` table to a new `Agentsinfo` table, powered by Microsoft Agent 365 as the single source of truth for AI agent inventory. The `AIAgentInfo` table will be deprecated. The `Agentsinfo` schema will be published on Microsoft Learn, and Microsoft-published community queries will be updated to use the new table.
+The AI agent inventory in Advanced Hunting is moving from the `AIAgentsInfo` table to a new `AgentsInfo` table, powered by Microsoft Agent 365 as the single source of truth for AI agent inventory. The `AIAgentsInfo` table will be deprecated. The `AgentsInfo` schema will be published on Microsoft Learn, and Microsoft-published community queries will be updated to use the new table.
 
 #### Threat detection alerts
 
@@ -54,7 +55,7 @@ The AI agent inventory in Advanced Hunting is moving from the `AIAgentInfo` tabl
 - **Copilot Studio (through Defender for Cloud Apps)**: Real-time protection for Microsoft Copilot Studio through Defender for Cloud Apps remains unchanged for tenants that continue using this experience. No action is required.
 
 > [!IMPORTANT]
-> Tenants currently configured to **Block** on existing Agent 365 rules will stop blocking on July 1, 2026. To resume blocking, define rules under the new real-time protection policy experience, available under **Settings** > **Security for AI** > **Policies** starting July 1, 2026.
+> Tenants currently configured to **Block** on existing Agent 365 rules will stop blocking on July 1, 2026. To resume blocking, define rules under the new real-time protection policy experience, available under **Settings** > **Security for AI** > **Policies & rules** > **Real-time protection** starting July 1, 2026.
 
 #### Third-party cloud agents (previously through Defender for Cloud)
 
@@ -66,7 +67,7 @@ For tenants with a Microsoft Agent 365-eligible license, the following experienc
 
 - AI Agents inventory and asset pages
 - AI Agents recommendations (Foundry agents)
-- `AIAgentInfo` table in Advanced Hunting (until migrated to `Agentsinfo`)
+- `AIAgentsInfo` table in Advanced Hunting (until migrated to `AgentsInfo`)
 - Security for AI settings page
 
 The **AI Agents** sub-tab under **Cloud Assets** will be removed for all customers.
@@ -91,9 +92,9 @@ Microsoft Foundry agent data will no longer appear in the following Azure portal
 
 1. **Confirm your Defender enablement settings** - On July 1, 2026, all Security for AI capabilities consolidate under a single **Security for AI Agents** toggle in Defender settings. Confirm the toggle is **On** and review the consolidated configuration. When the toggle is off, all Security for AI capabilities are disabled.
 
-1. **Update Advanced Hunting queries** - Review saved queries, custom detections, and workbooks that reference the `AIAgentInfo` table and update them to the new `Agentsinfo` table before July 1, 2026.
+1. **Update Advanced Hunting queries** - Review saved queries, custom detections, and workbooks that reference the `AIAgentsInfo` table and update them to the new `AgentsInfo` table before July 1, 2026.
 
-1. **If you already use Agent 365, redefine real-time protection blocking rules** - The existing Agent 365 real-time protection settings are moving to a new **Policies** experience. Any rules currently set to **Block** stop enforcing on July 1, 2026. Redefine them under **Settings** > **Security for AI** > **Policies** (available July 1, 2026) to preserve blocking. This applies only to Agent 365 real-time protection — Copilot Studio real-time protection through Defender for Cloud Apps is unchanged.
+1. **If you already use Agent 365, redefine real-time protection blocking rules** - The existing Agent 365 real-time protection settings are moving to a new **Policies** experience. Any rules currently set to **Block** stop enforcing on July 1, 2026. Redefine them under **Settings** > **Security for AI** > **Policies & rules** > **Real-time protection** (available July 1, 2026) to preserve blocking. This applies only to Agent 365 real-time protection — Copilot Studio real-time protection through Defender for Cloud Apps is unchanged.
 
 1. **Connect third-party cloud agents using the Agent 365 registry sync (previously through Defender for Cloud)** - Configure [registry sync in the Microsoft 365 agent registry (preview)](/microsoft-agent-365/admin/agent-registry) to continue discovering third-party cloud agents previously discovered using Microsoft Defender for Cloud connectors.
 
@@ -106,6 +107,8 @@ Microsoft Foundry agent data will no longer appear in the following Azure portal
 ## Related content
 
 - [Protect AI assets from emerging threats and vulnerabilities using Microsoft Defender](defender-security-for-ai.md)
+- [Enable security for AI agents using Microsoft Defender](get-started-defender-security-for-ai.md)
 - [Microsoft Agent 365 overview](/microsoft-agent-365/overview)
-- [Detect, block, and investigate threats to AI agents using Microsoft Defender](ai-agent-detection-protection.md)
+- [Detect and investigate threats to AI agents using Microsoft Defender](ai-agent-detection-protection.md)
+- [Protect AI agents in real time using Microsoft Defender](ai-agent-real-time-protection.md)
 - [Discover AI agents and assess security posture using Microsoft Defender](ai-agent-inventory.md)

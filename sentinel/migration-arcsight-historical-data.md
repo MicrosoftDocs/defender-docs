@@ -1,10 +1,12 @@
 ---
-title: "Microsoft Sentinel migration: Export ArcSight data to target platform  | Microsoft Docs"
-description: Learn how to export your historical data from ArcSight.
+title: "Microsoft Sentinel migration: Export ArcSight data to target platform"
+description: Export historical data from ArcSight for migration to a target platform, and choose the appropriate export method based on your data volume and environment.
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 05/03/2022
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security engineer, I want to export historical data from ArcSight so that I can migrate it to a new platform for further analysis and storage.
@@ -43,7 +45,7 @@ Use the lacat utility to export data from ArcSight Logger. lacat exports CEF rec
 
 To export data with the lacat utility:
 
-1. [Download the lacat utility](https://github.com/hpsec/lacat). For large volumes of data, we suggest that you modify the script for better performance. [Use the modified version](https://aka.ms/lacatmicrosoft).
+1. [Download the lacat utility](https://github.com/hpsec/lacat). For large volumes of data, we suggest that you modify the script for better performance. [Download the Microsoft-modified lacat utility](https://aka.ms/lacatmicrosoft).
 1. Follow the examples in the lacat repository on how to run the script.
 
 ## Next steps

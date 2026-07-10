@@ -1,20 +1,20 @@
 ---
-title: Discovery and posture for serverless container workloads (Preview)
+title: Discovery and posture for serverless container workloads
 description: Learn how Microsoft Defender for Cloud uses Defender cloud security posture management (Defender CSPM) to provide inventory, recommendations, and attack path visibility for serverless containers.
 ms.topic: concept-article
-ms.date: 06/03/2026
+ms.date: 07/01/2026
 #customer intent: "As a cloud security administrator, I want to understand posture for serverless containers in Microsoft Defender for Cloud so that I can prioritize risk across supported serverless workloads."
 ai-usage: ai-assisted
 ---
 
-# Discovery and posture for serverless container workloads (Preview)
+# Discovery and posture for serverless container workloads
 
 Discovery and posture for serverless container workloads in Microsoft Defender for Cloud helps you assess and prioritize risk in serverless container environments where host-level agents aren't available.
 
 In Defender cloud security posture management (Defender CSPM), this capability extends posture coverage to supported serverless container resources and surfaces findings in the same experiences you already use. These experiences include inventory, recommendations, and attack path analysis. This visibility helps your team find exposed workloads, understand broader risk, and focus remediation on the issues that matter most.
 
 > [!NOTE]
-> In preview, posture for serverless containers supports:
+> Posture for serverless containers supports:
 >
 > - Azure Container Apps (ACA)
 > - Azure Container Instances (ACI)
@@ -24,18 +24,19 @@ In Defender cloud security posture management (Defender CSPM), this capability e
 
 Discovery and posture for serverless container workloads extends Defender CSPM capabilities to serverless container platforms. It gives you a unified view of discovered resources, misconfiguration findings, vulnerability assessment findings, and attack path context for supported workloads.
 
-This capability is discovery and posture focused in preview. It is designed for serverless container environments where runtime and host telemetry are limited by the platform abstraction.
+This capability is discovery and posture focused. It is designed for serverless container environments where runtime and host telemetry are limited by the platform abstraction.
 
 ## Requirements and availability
 
 To use discovery and posture for serverless container workloads:
 
 - Enable [Defender CSPM](tutorial-enable-cspm-plan.md).
+- For full access to all Serverless Containers features, enable **Registry access** in Defender CSPM plan settings.
 - Make sure supported workloads are present in your connected environments.
 - Use a role with the required permissions:
   - **Security Reader** to view findings and posture state.
   - **Security Admin** to change settings and manage exemptions.
-- Use commercial clouds only. This preview supports Azure and AWS and isn't available in sovereign or national clouds.
+- Use commercial clouds only. This capability supports Azure and AWS and isn't available in sovereign or national clouds.
 
 For cloud and platform availability details, see:
 
@@ -43,7 +44,7 @@ For cloud and platform availability details, see:
 
 ## Key capabilities
 
-Posture for Serverless Containers provides these capabilities in preview:
+Posture for Serverless Containers provides these capabilities:
 
 - Inventory visibility for supported serverless container resources.
 - Security recommendations for misconfiguration findings and vulnerability assessment findings derived from image and control-plane context.
@@ -71,7 +72,6 @@ Defender for Cloud generates posture recommendations based on control-plane conf
 
 :::image type="content" source="media/posture-for-serverless-containers/serverless-container-recommendations.png" alt-text="Screenshot showing the recommendations page filtered to serverless container resources, with recommendation names, severity levels, and affected resource counts." lightbox="media/posture-for-serverless-containers/serverless-container-recommendations.png":::
 
-
 To remediate findings, see [Remediate security recommendations in Microsoft Defender for Cloud](implement-security-recommendations.md).
 
 ### Attack path analysis
@@ -92,7 +92,7 @@ Learn how to [build queries with Cloud Security Explorer](how-to-manage-cloud-se
 
 ## Limitations
 
-In preview, posture for serverless containers has the following limitations:
+Posture for serverless containers has the following limitations:
 
 - Posture-only coverage. Runtime threat detection and active response aren't included.
 - Insights are based on control-plane signals and image metadata. Host and runtime process telemetry isn't used.

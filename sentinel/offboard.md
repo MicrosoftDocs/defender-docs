@@ -3,11 +3,13 @@ title: Remove Microsoft Sentinel from your workspace
 description: Learn how to delete your Microsoft Sentinel instance to discontinue use of Microsoft Sentinel and the associated costs.
 author: EdB-MSFT
 ms.topic: how-to
-ms.date: 07/16/2025
+ms.date: 06/15/2026
 ms.author: edbaynash
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As an IT admin, I want to remove Microsoft Sentinel from my Log Analytics workspace so that I can discontinue its use and manage associated costs and configurations.
@@ -44,7 +46,7 @@ Complete the following steps to remove Microsoft Sentinel from your Log Analytic
 
     ----
 
-1. Review the **Know before you go...** section and the rest of this document carefully. Take all the necessary actions before proceeding.
+1. Review the **Know before you go...** section on the removal page and the rest of this document carefully. Take all the necessary actions before proceeding.
 
 1. Select the appropriate checkboxes to let us know why you're removing Microsoft Sentinel. Enter any other details in the space provided, and indicate whether you want Microsoft to email you in response to your feedback.
 
@@ -56,6 +58,8 @@ Complete the following steps to remove Microsoft Sentinel from your Log Analytic
 
 If you don't want to keep the workspace and the data collected for Microsoft Sentinel, delete the resources associated with the workspace in the Azure portal.
 
+> [!WARNING]
+> Deleting resources or the resource group is irreversible and can permanently remove workspace data. Before proceeding, confirm that you no longer need the workspace or its data.
 
 - Delete just the individual resources within the associated resource group that you no longer need. For more information, see [Delete resource](/azure/azure-resource-manager/management/delete-resource-group?tabs=azure-portal#delete-resource).
 - Or, if you don't need any of the resources in the associated resource group, delete the resource group. For more information, see [Delete resource group](/azure/azure-resource-manager/management/delete-resource-group?tabs=azure-portal).

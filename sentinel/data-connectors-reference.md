@@ -1,5 +1,5 @@
 ---
-title: Find your Microsoft Sentinel data connector | Microsoft Docs
+title: Find your Microsoft Sentinel data connector
 description: Learn about specific configuration steps for Microsoft Sentinel data connectors.
 ms.author: edbaynash
 author: EdB-MSFT

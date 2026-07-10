@@ -39,7 +39,7 @@ Creating custom roles for [Microsoft Sentinel data lake](https://aka.ms/data-lak
 To create custom roles in Microsoft Defender unified RBAC, you must be assigned one of the following roles or permissions:
 
 - At leastSecurity Administrator in Microsoft Entra ID.
-- All **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC.
+- All **Authorization** permissions assigned in Microsoft Defender Unified RBAC.
 
 For more information on permissions, see [Permission prerequisites](manage-rbac.md#permissions-prerequisites).
 
@@ -136,18 +136,18 @@ The following steps describe how to create custom roles in the Microsoft Defende
 1. Select **Next** to review and finish creating the role and then select **Submit**.
 
 > [!NOTE]
-> For the Microsoft Defender XDR security portal to start enforcing the permissions and assignments configured in your new or imported roles, you need to activate the new Microsoft Defender unified RBAC model. For more information, see [Activate Microsoft Defender unified RBAC](activate-defender-rbac.md).
+> For the Microsoft Defender portal to start enforcing the permissions and assignments configured in your new or imported roles, you need to activate the new Microsoft Defender unified RBAC model. For more information, see [Activate Microsoft Defender unified RBAC](activate-defender-rbac.md).
 
 
 ## Configure scoped roles for Microsoft Defender for Identity
 
-You can configure scoped access using Microsoft Defender XDR’s Unified RBAC (URBAC) model for identities managed by Microsoft Defender for Identity (MDI). This allows you to restrict access and visibility to specific Active Directory domains or Organizational units, helping align with team responsibilities and reduce unnecessary data exposure.
+You can configure scoped access using Microsoft Defender Unified RBAC (URBAC) model for identities managed by Microsoft Defender for Identity (MDI). This allows you to restrict access and visibility to specific Active Directory domains or Organizational units, helping align with team responsibilities and reduce unnecessary data exposure.
 
 For more information, see: [Configure scoped access for Microsoft Defender for Identity](/defender-for-identity/configure-scoped-access).
 
 ## Configure scoped roles for Microsoft Defender for Cloud
 
-You can configure scoped access using Microsoft Defender XDR’s Unified RBAC model for resources managed by Microsoft Defender for Cloud. This enables you to limit access and visibility to specific **subscriptions**, **resource groups**, or **individual resources**. By applying scoped roles, you help ensure that team members only see and manage the assets relevant to their responsibilities, reducing unnecessary exposure and improving operational security.
+You can configure scoped access using the Microsoft Defender Unified RBAC model for resources managed by Microsoft Defender for Cloud. This enables you to limit access and visibility to specific **subscriptions**, **resource groups**, or **individual resources**. By applying scoped roles, you help ensure that team members only see and manage the assets relevant to their responsibilities, reducing unnecessary exposure and improving operational security.
 
 For more information, see: [Manage cloud scopes and unified role-based access control](/azure/defender-for-cloud/cloud-scopes-unified-rbac?pivots=defender-portal).
 

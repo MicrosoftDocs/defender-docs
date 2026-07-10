@@ -212,7 +212,7 @@ Once you identify the compromised system, you can run a [workflow automation](wo
 > [!NOTE]
 > Read [Managing and responding to security alerts in Defender for Cloud](manage-respond-alerts.md) for more information on how to use Defender for Cloud capabilities to assist you during your Incident Response process.
 
-## Next steps
+## Related content
 
 In this document, you learned how to plan for Defender for Cloud adoption. Learn more about Defender for Cloud:
 

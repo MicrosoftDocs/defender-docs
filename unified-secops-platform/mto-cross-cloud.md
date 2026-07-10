@@ -1,6 +1,6 @@
 ---
 title: Manage tenants in other Microsoft cloud environments
-description: Overview of cross-cloud management for other Microsoft clouds in multitenant management in Microsoft Defender XDR.
+description: Learn how multitenant management in Microsoft Defender supports cross-cloud visibility for GCC High and DoD tenants to view and manage tenants in Microsoft GCC and Commercial cloud environments.
 author: guywi-ms
 ms.author: guywild
 ms.collection: 
@@ -8,10 +8,12 @@ ms.collection:
 - highpri
 - tier1
 ms.topic: how-to
-ms.date: 04/02/2025
+ms.date: 06/15/2026
 appliesto: 
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #customer intent: As a security administrator, I want to learn how to manage tenants in other Microsoft cloud environments.
 ---
 
@@ -52,7 +54,7 @@ Configure your tenant settings to the following:
 
 No other MFA Trust settings are required for the home tenant.
 
-You then need to configure outbound access settings for the home tenant by following these steps:
+Configure outbound access settings for the home tenant by following these steps:
 
 1. In the **Cross-tenant access settings** pane, select **Outbound access**.
 2. Configure B2B collaboration by setting access status to **Allow**.
@@ -65,6 +67,8 @@ You then need to configure outbound access settings for the home tenant by follo
 9. Set the Applies to to **All external applications**. Select **Save**.
 
 #### Target tenant settings
+
+Perform the following steps to add the target tenant organization:
 
 1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com).
 2. Navigate to **Identity > External identities > Cross-tenant access settings**, then select **Cross-tenant access settings**.
@@ -79,7 +83,7 @@ Configure the target tenant settings to the following:
 5. On the Application tab, set access to **Block** and Applies to **All applications**, then select **Save**.
 6. Select **Trust settings**, then select **Trust multi-factor authentication from Microsoft Entra tenants**.
 
-You then need to configure outbound access settings from the home tenant by following these steps:
+You then need to configure outbound access settings for the target tenant by following these steps:
 
 1. In the **Cross-tenant access settings** pane, select **Outbound access**.
 2. Configure B2B collaboration by setting access status to **Block**.
@@ -91,16 +95,17 @@ You then need to configure outbound access settings from the home tenant by foll
 8. Select **External applications** and set access status to **Block**.
 9. Set the Applies to to **All external applications**. Select **Save**.
 
-## Cross-cloud tenant management
+<a name="cross-cloud-tenant-management"></a>
+## Manage tenants across cloud environments
 
 To manage tenants from other Microsoft cloud environments:
 
-1. Go to the [Settings page](https://mto.security.microsoft.com/settings) in Microsoft Defender multitenant management.
+1. Go to the [Multitenant management settings page](https://mto.security.microsoft.com/settings) in Microsoft Defender.
 2. Select the dropdown beside **Add tenants**, then select **add from another cloud**.
 
     :::image type="content" source="/unified-secops-platform/media/mto-cross-cloud/mto-add-from-cloud-small.png" alt-text="Screenshot of the Settings page with the Add tenant option highlighted." lightbox="/unified-secops-platform/media/mto-cross-cloud/mto-add-from-cloud.png":::
 
-3. In the next pane, type the tenant ID or domain where the tenant is to add a tenant, then select **Verify tenant**. The verification process looks at the added tenant’s information and permissions.
+3. In the **Add from another cloud** pane, type the tenant ID or domain of the tenant you want to add, then select **Verify tenant**. The verification process looks at the added tenant’s information and permissions.
     
     :::image type="content" source="/unified-secops-platform/media/mto-cross-cloud/mto-verify-tenant-small.png" alt-text="Screenshot of the add tenants pane with the verification highlighted." lightbox="/unified-secops-platform/media/mto-cross-cloud/mto-verify-tenant.png":::
 
@@ -118,7 +123,7 @@ To remove tenants from the list, select the tenant, then select **Remove tenants
 After successfully adding tenants from other clouds, you can view these tenants in other multitenant pages like the incidents and device inventory pages.
 
 > [!NOTE]
-> When a cross-cloud tenant is added to a distribution profile and subsequently removed from cross-cloud visibility, the tenant's name is removed from the tenant list and won’t be available for content management. This is a recognized limitation of cross-cloud visibility and is currently under review. See [Troubleshooting issues](mto-troubleshoot.md#content-assignment-failure-in-cross-cloud-tenant-management) for more information.
+> When a cross-cloud tenant is added to a distribution profile and subsequently removed from cross-cloud visibility, the tenant's name is removed from the tenant list and won’t be available for content management. This is a recognized limitation of cross-cloud visibility and is currently under review. See [Content assignment failure in cross-cloud tenant management](mto-troubleshoot.md#content-assignment-failure-in-cross-cloud-tenant-management) for more information.
 
 ## Next steps
 

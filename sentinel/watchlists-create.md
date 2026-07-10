@@ -6,12 +6,12 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 04/29/2026
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1012
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
 ai-usage: ai-assisted
 
 
@@ -46,7 +46,7 @@ You have two ways to upload a CSV file from your local machine to create a watch
 
 ### Upload a watchlist from a file you created
 
-If you didn't use a watchlist template to create your file:
+If you didn't use a watchlist template to create the CSV watchlist file:
 
 1. In the [Defender portal](https://security.microsoft.com/), go to **Microsoft Sentinel** > **Configuration** > **Watchlist**.
 
@@ -83,7 +83,7 @@ It might take several minutes for the watchlist to be created and the new data t
 
 ### Upload a watchlist created from a template (preview)
 
-To create a watchlist from a template you populated:
+To create a watchlist from a populated watchlist template file:
 
 1. In the [Defender portal](https://security.microsoft.com/), go to **Microsoft Sentinel** > **Configuration** > **Watchlist**.
 
@@ -105,7 +105,7 @@ It might take several minutes for the watchlist to be created and the new data t
 
 ## Create a large watchlist from file in Azure Storage (preview)
 
-If you have a large watchlist up to 500 MB, upload your watchlist file to your Azure Storage account. Then create a shared access signature URL for Microsoft Sentinel to retrieve the watchlist data. A shared access signature URL is a URI that contains both the resource URI and shared access signature token of a resource like a CSV file in your storage account. Finally, add the watchlist to your workspace in Microsoft Sentinel.
+If you have a large watchlist up to 500 MB, upload your watchlist file to your Azure Storage account. Then create a shared access signature URL for Microsoft Sentinel to retrieve the watchlist data. A shared access signature URL is a URI that contains both the resource URI and shared access signature token of a resource like a CSV file in your storage account. Finally, create the watchlist in your Microsoft Sentinel workspace by using the uploaded file's SAS URL.
 
 For more information about shared access signatures, see [Azure Storage shared access signature token](/azure/storage/common/storage-sas-overview#sas-token).
 
@@ -120,14 +120,14 @@ To upload a large watchlist file to your Azure Storage account, use AzCopy or th
 
 Upload files and directories to Blob storage by using the AzCopy v10 command-line utility. To learn more, see [Upload files to Azure Blob storage by using AzCopy](/azure/storage/common/storage-use-azcopy-blobs-upload).
 
-1. If you don't already have a storage container, create one by running the following command.
+1. If you don't already have a storage container, create the destination blob container by running the following command.
 
    ```azcopy
    azcopy make 
    https://<storage-account-name>.<blob or dfs>.core.windows.net/<container-name>
    ```
 
-1. Next, run the following command to upload the file.
+1. Upload the local watchlist CSV file to the blob container by running the following command.
 
    ```azcopy
    azcopy copy '<local-file-path>' 'https://<storage-account-name>.<blob or dfs>.core.windows.net/<container-name>/<blob-name>'
@@ -142,17 +142,15 @@ If you don't use AzCopy, upload your file by using the Azure portal. Go to your 
 
 ### Step 2: Create shared access signature URL
 
-Create a shared access signature URL for Microsoft Sentinel to retrieve the watchlist data.
-
-> [!NOTE]
-> Only public Blob SAS URI is supported.
+Create a public Blob SAS URL for Microsoft Sentinel to retrieve the watchlist data. Only public Blob SAS URI is supported.
 
 1. Follow the steps in [Create SAS tokens for blobs in the Azure portal](/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=blobs#create-sas-tokens-in-the-azure-portal).
 1. Set the shared access signature token expiry time to at least six hours.
 1. Keep the default value for **Allowed IP addresses** as blank.
 1. Copy the value for **Blob SAS URL**.
 
-### Step 3: Add Azure to the CORS tab
+<a name="step-3-add-azure-to-the-cors-tab"></a>
+### Step 3: Add Azure to the Cross-Origin Resource Sharing (CORS) tab
 
 Before you use a SAS URI, add the Azure portal to the Cross-Origin Resource Sharing (CORS) configuration.
 
@@ -229,7 +227,7 @@ To view the status of a watchlist in your workspace:
 
 ## Download watchlist template (preview)
 
-Download one of the watchlist templates from Microsoft Sentinel to populate with your data. Then upload that file when you create the watchlist in Microsoft Sentinel.
+Download one of the watchlist templates from Microsoft Sentinel to populate with your data. Then upload the populated template CSV file when you create the watchlist in Microsoft Sentinel.
 
 Each built-in watchlist template has its own set of data listed in the CSV file attached to the template. For more information, see [Built-in watchlist schemas](watchlist-schemas.md).
 
@@ -249,9 +247,10 @@ To download one of the watchlist templates:
 
 1. Populate your local version of the file and save it locally as a CSV file.
 
-1. Follow the steps to [upload watchlist created from a template (Preview)](#upload-a-watchlist-created-from-a-template-preview).
+1. Follow the steps in [Upload a watchlist created from a template (Preview)](#upload-a-watchlist-created-from-a-template-preview).
 
-## Deleted and recreated watchlists in Log Analytics view
+<a name="deleted-and-recreated-watchlists-in-log-analytics-view"></a>
+## Understand deleted and recreated watchlists in Log Analytics
 
 If you delete and recreate a watchlist, you might see both the deleted and recreated entries in Log Analytics within the five-minute SLA for data ingestion. If you see these entries together in Log Analytics for a longer period of time, submit a support ticket.
 

@@ -2,7 +2,9 @@
 title: Release notes
 description: This page is updated frequently with the latest updates in Microsoft Security Exposure Management.
 ms.topic: overview
-ms.date: 06/18/2026
+ms.author: dlanger
+author: dlanger
+ms.date: 06/30/2026
 ai-usage: ai-assisted
 ---
 
@@ -20,7 +22,40 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 >
 > `https://aka.ms/msem/rss`
 
+## July 2026
+
+### OT data connectors in Microsoft Security Exposure Management
+
+Microsoft Security Exposure Management now supports operational technology (OT) data connectors for Armis, Dragos, and Forescout.
+
+OT data connectors bring OT asset and vulnerability data from supported third-party OT platforms into the Defender portal. This helps security teams view OT devices alongside other assets, enrich device inventory with OT context, and investigate vulnerabilities across IT and OT environments.
+
+For more information, see [OT data connectors](ot-data-connectors.md).
+
 ## June 2026
+ 
+### New predefined classifications for AI agents
+
+The following predefined **AI agent** classification rules were added to the critical assets list:
+
+| Classification | Description |
+| -------------- | ----------- |
+| Executive-Sponsored AI Agent | This rule applies to AI agents that are created or owned by senior executives in the organization. As such, these agents may be granted access to sensitive data and act on the executive's behalf. Compromise could lead to unauthorized actions performed under executive authority, and exposure of sensitive executive-level data - without the executive's identity being directly compromised. |
+| AI Agent with Privileged Business System Write Access | This rule applies to AI agents configured with tools that can perform high-risk write operations on business-critical systems. These operations include creating, modifying, and deleting records such as sales orders, customer data, financial transactions, and legal agreements. Compromise could lead to significant business impact. |
+
+For more information, see [Predefined classifications](predefined-classification-rules-and-levels.md).
+
+### New predefined classifications
+
+The following predefined **Identity** classification rules were added to the critical assets list:
+
+| Classification | Description |
+| -------------- | ----------- |
+| Widespread Local Admin on Servers | This rule applies to identities that are configured as local administrators on a high number of servers in the environment. |
+| Widespread Local Admin on Workstations | This rule applies to identities that are configured as local administrators on a high number of workstations in the environment. |
+| Widespread Local Admin on Servers and Workstations | This rule applies to identities that are configured as local administrators on a high number of both servers and workstations in the environment. **Note**: This rule logic relies on the predefined critical identity classifications "Widespread Local Admin on Servers" and "Widespread Local Admin on Workstations". |
+
+For more information, see [Predefined classifications](predefined-classification-rules-and-levels.md).
 
 ### New predefined classifications
 
@@ -380,7 +415,7 @@ For more information on understanding data from external sources, see [Getting v
 
 ### OT security initiative
 
-The new Operational Technology (OT) security initiative equips practitioners with a powerful tool to identify, monitor, and mitigate risks across the OT environment, ensuring both operational reliability and safety. This initiative aims to identify devices across physical sites, assess their associated risks, and provide faster, more effective protection for OT systems.
+The new OT security initiative equips practitioners with a powerful tool to identify, monitor, and mitigate risks across the OT environment, ensuring both operational reliability and safety. This initiative aims to identify devices across physical sites, assess their associated risks, and provide faster, more effective protection for OT systems.
 
 For more information, see, [Review security initiatives](initiatives.md)
 

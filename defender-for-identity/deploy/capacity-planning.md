@@ -27,7 +27,7 @@ The sizing tool measures the capacity needed for domain controllers only. There 
 Before you run the sizing tool, complete the following prerequisites:
 
 - Download the [Defender for Identity sizing tool](<https://aka.ms/mdi/sizingtool>).
-- Review the [Defender for Identity prerequisites](prerequisites-sensor-version-2.md).
+- Review the [Defender for Identity prerequisites](prerequisites-sensor-version-2.md). The Microsoft Defender for Identity Sizing Tool currently only applies to the sensor version 2.x.
 
 To ensure accurate results, only run the sizing tool *before* you've installed any Defender for Identity sensors in your environment.
 

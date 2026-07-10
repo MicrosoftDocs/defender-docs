@@ -5,8 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 10/30/2025
-ms.custom: sfi-image-nochange
+ms.date: 06/15/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 
 #Customer intent: As a security analyst, I want to monitor and audit the health and integrity of my analytics rules so that I can ensure uninterrupted and tampering-free threat detection.
@@ -15,16 +16,18 @@ ms.custom: sfi-image-nochange
 
 # Monitor the health and audit the integrity of your analytics rules
 
-To ensure comprehensive, uninterrupted, and tampering-free threat detection in your Microsoft Sentinel service, keep track of your analytics rules' health and integrity. Keep them functioning optimally by monitoring their [execution insights](monitor-optimize-analytics-rule-execution.md#view-analytics-rule-insights), by querying the health and audit logs, and by [using manual rerun to test and optimize your rules](monitor-optimize-analytics-rule-execution.md#use-cases-and-benefits-of-rule-rerun).
+To ensure comprehensive, uninterrupted, and tampering-free threat detection in your Microsoft Sentinel service, keep track of your analytics rules' health and integrity. Keep them functioning optimally by monitoring their [analytics rule execution insights](monitor-optimize-analytics-rule-execution.md#view-analytics-rule-insights), by querying the health and audit logs, and by [use manual rerun to test and optimize analytics rules](monitor-optimize-analytics-rule-execution.md#use-cases-and-benefits-of-rule-rerun).
 
 Set up notifications of health and audit events for relevant stakeholders, who can then take action. For example, define and send email or Microsoft Teams messages, create new tickets in your ticketing system, and so on.
 
-This article describes how to use Microsoft Sentinel's [auditing and health monitoring features](health-audit.md) to keep track of your analytics rules' health and integrity from within Microsoft Sentinel.
+This article describes how to use Microsoft Sentinel's [auditing and health monitoring in Microsoft Sentinel](health-audit.md) to keep track of your analytics rules' health and integrity from within Microsoft Sentinel.
 
 For information on rule insights and manual rerunning of rules, see [Monitor and optimize the execution of your scheduled analytics rules](monitor-optimize-analytics-rule-execution.md).
 
 
 ## Summary
+
+Microsoft Sentinel provides two types of logs for monitoring analytics rules: health logs and audit logs. The following sections summarize what each log captures and where the data is stored.
 
 - **Microsoft Sentinel analytics rule health logs:**
 
@@ -49,7 +52,7 @@ For information on rule insights and manual rerunning of rules, see [Monitor and
 
 ## Use the SentinelHealth and SentinelAudit data tables
 
-To get audit and health data from the tables described earlier, you must first turn on the Microsoft Sentinel health feature for your workspace. For more information, see [Turn on auditing and health monitoring for Microsoft Sentinel](enable-monitoring.md).
+To get audit and health data from the *SentinelHealth* and *SentinelAudit* tables, you must first turn on the Microsoft Sentinel health feature for your workspace. For more information, see [Turn on auditing and health monitoring for Microsoft Sentinel](enable-monitoring.md).
 
 Once the health feature is turned on, the *SentinelHealth* data table is created at the first success or failure event generated for your automation rules and playbooks.
 
@@ -92,7 +95,7 @@ If you want, you can further filter the list for a particular kind of analytics 
 
 Here are some sample queries to help you get started:
 
-- Find rules that are "[autodisabled](troubleshoot-analytics-rules.md#issue-a-scheduled-rule-failed-to-execute-or-appears-with-auto-disabled-added-to-the-name)":
+- Find rules that are "[auto-disabled scheduled analytics rules](troubleshoot-analytics-rules.md#issue-a-scheduled-rule-failed-to-execute-or-appears-with-auto-disabled-added-to-the-name)":
 
     ```kusto
     _SentinelHealth()
@@ -108,7 +111,7 @@ Here are some sample queries to help you get started:
     | summarize Occurrence=count(), Unique_rule=dcount(SentinelResourceId) by Status, Reason
     ``` 
  
-- Find rule deletion activity:
+- Find rule deletion activity in the *SentinelAudit* table. This query returns audit records where an analytics rule was deleted, so you can track who removed a rule and when:
 
     ```kusto
     _SentinelAudit()
@@ -133,7 +136,7 @@ Here are some sample queries to help you get started:
     | summarize Count = count() by Caller, Activity=Description
     ```
 
- See more information on the following items used in the preceding examples, in the Kusto documentation:
+ For more information on the Kusto operators and functions used in the sample queries, see the Kusto documentation:
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
 - [***summarize*** operator](/kusto/query/summarize-operator?view=microsoft-sentinel&preserve-view=true)
 - [***tostring()*** function](/kusto/query/tostring-function?view=microsoft-sentinel&preserve-view=true)
@@ -142,7 +145,8 @@ Here are some sample queries to help you get started:
 
 [!INCLUDE [kusto-reference-general-no-alert](includes/kusto-reference-general-no-alert.md)]
 
-#### Scheduled rules
+<a name="scheduled-rules"></a>
+#### Query health and integrity issues for scheduled rules
 When a schedule rule fails, it's retried five more times on the exact same window. The rule doesn't skip the window and miss an alert as long as one of the six attempts is successful.
 
 Failure in one of the six attempts indicates a delay in the alert triggering. The following query calculates the exact delay:
@@ -170,7 +174,8 @@ _SentinelHealth()| where SentinelResourceType == @"Analytics Rule"
 This query looks for scheduled analytics rule runs where none of the six retries were successful. You can identify a retry by looking at the start time of the rule’s window since the retries always look at the original start time. This query gives you the amount of skipped windows for each analytic rule. We expect skipped windows to be rare. If you see that you have analytics rules with skipped windows, use the queries to understand the failure reason of these specific rules and the table of failures reasons and mitigations to fix them.
 
 
-#### NRT rules
+<a name="nrt-rules"></a>
+#### Query health and integrity issues for NRT rules
 The retry mechanism for NRT rules behaves differently from scheduled rules. If a rule fails to run, the system also considers the failed window in the next run (one minute later). This behavior continues for up to 60 failures (one hour).
 
 Since one failure of a specific run reflects only one-minute delay, don't look at single failures. Instead, use the following query to monitor the delay of each analytic rule:
@@ -204,7 +209,7 @@ For either **Scheduled analytics rule run** or **NRT analytics rule run**, you m
     | A function called by the query is named with a reserved word.   | Remove or rename the function.   |
     | A syntax error occurred while running the query.   | Try resetting the analytics rule by editing and saving it (without changing any settings). |
     | The workspace doesn't exist.   |   |
-    | This query uses too many system resources and was prevented from running. | Review and tune the analytics rule. Consult our Kusto Query Language [overview](/kusto/query/?view=microsoft-sentinel&toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json) and [best practices](/kusto/query/best-practices?view=microsoft-sentinel&preserve-view=true&toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json) documentation. |
+    | This query uses too many system resources and was prevented from running. | Review and tune the analytics rule. Consult our Kusto Query Language [Kusto Query Language overview](/kusto/query/?view=microsoft-sentinel&toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json) and [Kusto Query Language best practices](/kusto/query/best-practices?view=microsoft-sentinel&preserve-view=true&toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json) documentation. |
     | A function called by the query wasn't found.   | Verify the existence in your workspace of all functions called by the query.   |
     | The workspace used in the query wasn't found.   | Verify that all workspaces in the query exist.   |
     | You don't have permissions to run this query.   | Try resetting the analytics rule by editing and saving it (without changing any settings).   |
@@ -224,6 +229,8 @@ For either **Scheduled analytics rule run** or **NRT analytics rule run**, you m
     | The query resulted in \<*number*> events, which exceeds the maximum of \<*limit*> results allowed for \<*rule type*> rules with alert-per-row event-grouping configuration. Alert-per-row was generated for first \<*limit*-1> events and an additional aggregated alert was generated to account for all events.<br>- \<*number*> = number of events returned by the query<br>- \<*limit*> = currently 150 alerts for scheduled rules, 30 for NRT rules<br>- \<*rule type*> = Scheduled or NRT
 
 ## Use the auditing and health monitoring workbook
+
+To visualize analytics rule health and audit data, install and configure the Analytics Health & Audit workbook from the Microsoft Sentinel content hub.
 
 1. To make the workbook available in your workspace, install the workbook solution from the Microsoft Sentinel content hub:
     1. From the Microsoft Sentinel portal, select **Content hub (Preview)** from the **Content management** menu.
@@ -250,13 +257,15 @@ For either **Scheduled analytics rule run** or **NRT analytics rule run**, you m
 
 This workbook has three tabbed sections:
 
-### Overview tab
+<a name="overview-tab"></a>
+### Review health and audit summaries on the Overview tab
 
 The **Overview** tab shows health and audit summaries:
 - Health summaries of the status of analytics rule runs in the selected workspace: number of runs, successes and failures, and failure event details.
 - Audit summaries of activities on analytics rules in the selected workspace: number of activities over time, number of activities by type, and number of activities of different types by rule.
 
-### Health tab
+<a name="health-tab"></a>
+### Use the Health tab to identify analytics rule issues
 
 The **Health** tab lets you explore specific health events.
 
@@ -287,7 +296,8 @@ The **Health** tab lets you explore specific health events.
 :::image type="content" source="media/monitor-analytics-rule-integrity/health-events-for-rule.png" alt-text="Screenshot of list of runs of selected analytics rule, in analytics health workbook.":::
 
 
-### Audit tab
+<a name="audit-tab"></a>
+### Use the Audit tab to review analytics rule changes
 
 The **Audit** tab lets you drill down to particular audit events.
 
@@ -308,7 +318,8 @@ The **Audit** tab lets you drill down to particular audit events.
 - If you selected a rule name in the preceding chart, another table appears showing the audited **activities** on that rule. Select the value that appears as a link in the ExtendedProperties column to open a side panel displaying the changes made to the rule.
     :::image type="content" source="media/monitor-analytics-rule-integrity/audit-activity-for-rule.png" alt-text="Screenshot of audit activity for selected rule in analytics health workbook.":::
 
-## Next steps
+<a name="next-steps"></a>
+## Related content
 
 - [Monitor and optimize analytics rule execution in Microsoft Sentinel](monitor-optimize-analytics-rule-execution.md).
 - Learn about [auditing and health monitoring in Microsoft Sentinel](health-audit.md).

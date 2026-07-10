@@ -32,7 +32,7 @@ The `CloudPolicyEnforcementEvents` table in the [advanced hunting](advanced-hunt
 > [!IMPORTANT]
 > Some information relates to prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-Defender for Cloud populates this advanced hunting table with records. If your organization doesn't have Microsoft Defender for Cloud, queries that use the table won't work or return any results. For more information about prerequisites in integrating Defender for Cloud with Defender XDR, see [Microsoft Defender XDR integration](/azure/defender-for-cloud/concept-integration-365).
+Defender for Cloud populates this advanced hunting table with records. If your organization doesn't have Microsoft Defender for Cloud, queries that use the table won't work or return any results. For more information about prerequisites in integrating Defender for Cloud with Defender, see [Microsoft Defender XDR integration](/azure/defender-for-cloud/concept-integration-365).
 
 
 For information on other tables in the advanced hunting schema, see the [advanced hunting reference](advanced-hunting-schema-tables.md).

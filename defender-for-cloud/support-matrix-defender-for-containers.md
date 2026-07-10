@@ -112,7 +112,7 @@ The following table lists the features provided by Defender for Containers for t
 | Binary drift blocking | Blocks binary drift in runtime containers | EKS | Preview | - | Requires **Defender sensor via Helm** | **Defender for Containers** | AWS |
 | Control plane detection | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | EKS | GA | GA | Enabled with plan | **Defender for Containers** | AWS |
 | DNS Detection | Detects suspicious DNS activity from container workloads | EKS | GA | - | Requires **Defender sensor via Helm** | **Defender for Containers** | AWS |
-| Malware detection | Detection of malware | EKS nodes | Preview | Preview | Requires **Agentless scanning for machines** | **Defender for Containers** or **Defender for Servers Plan 2** | - |
+| Malware detection | Detection of malware | EKS nodes | GA | GA | Requires **Agentless scanning for machines** | **Defender for Containers** or **Defender for Servers Plan 2** | - |
 | Response actions in XDR | Provides automated and manual remediation in Microsoft XDR | EKS | Preview | - | Requires **Defender sensor** and **K8S access API** | **Defender for Containers** | AWS |
 | Workload detection | Monitors containerized workloads for threats and gives alerts to suspicious activities | EKS | GA | - | Requires **Defender sensor** | **Defender for Containers** | AWS |
 
@@ -139,7 +139,7 @@ The following table lists the features provided by Defender for Containers for t
 | Binary drift blocking | Blocks binary drift in runtime containers | GKE | Preview | - | Requires **Defender sensor via Helm** | **Defender for Containers** | GCP |
 | Control plane detection | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | GKE | GA | GA | Enabled with plan | **Defender for Containers** | GCP |
 | DNS Detection | Detects suspicious DNS activity from container workloads | GKE | GA | - | Requires **Defender sensor via Helm** | **Defender for Containers** | GCP |
-| Malware detection | Detection of malware | GKE nodes | Preview | Preview | Requires **Agentless scanning for machines** | **Defender for Containers** or **Defender for Servers Plan 2** | - |
+| Malware detection | Detection of malware | GKE nodes | GA | GA | Requires **Agentless scanning for machines** | **Defender for Containers** or **Defender for Servers Plan 2** | - |
 | Response actions in XDR | Provides automated and manual remediation in Microsoft XDR | GKE | Preview | - | Requires **Defender sensor** and **K8S access API** | **Defender for Containers** | GCP |
 | Workload detection | Monitors containerized workloads for threats and gives alerts to suspicious activities | GKE | GA | - | Requires **Defender sensor** | **Defender for Containers** | GCP |
 
@@ -252,6 +252,7 @@ The following table lists the features provided by Defender for Containers for t
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Cloud availability |
 |--|--|--|--|--|--|--|--|
 | Gated deployment | Gated deployment of container images to your Kubernetes environment | AKS 1.31 or higher (including AKS Automatic)<sup>[1](#footnote1cssc)</sup> | GA | - | Requires **Defender sensor**, **Security gating**, **Security findings**, and **Registry access**.| Commercial clouds |
+| Kubernetes misconfiguration enforcement | Audits or blocks Kubernetes deployments that don't meet Microsoft security best-practice rules | AKS | GA | - | Requires **Kubernetes API access**. For manual deployment, Helm is supported. | Commercial clouds |
 
 <sup><a name="footnote1cssc"></a>1</sup> On AKS Automatic clusters, the Defender sensor must be installed by using Helm in the `kube-system` namespace. Installation in the `mdc` namespace and add-on deployment aren’t supported for gated deployment.
 
@@ -260,18 +261,22 @@ The following table lists the features provided by Defender for Containers for t
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method |
 |--|--|--|--|--|--|--|--|
 | Gated deployment | Gated deployment of container images to your Kubernetes environment | EKS 1.31 or higher, Amazon Elastic Container Registry (ECR) | GA | - | Requires **Defender Sensor**, **Security Gating**, **Security Findings**, and **Registry Access** |
+| Kubernetes misconfiguration enforcement | Audits or blocks Kubernetes deployments that don't meet Microsoft security best-practice rules | EKS | GA | - | Requires **Agentless threat protection**. For manual deployment, Helm is supported. |
 
 ### [GCP](#tab/gcpcssc)
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method |
 |--|--|--|--|--|--|--|--|
 | Gated deployment | Gated deployment of container images to your Kubernetes environment | GKE 1.31 or higher, Google Artifact Registry | GA | - | Requires **Defender Sensor**, **Security Gating**, **Security Findings**, and **Registry Access** |
+| Kubernetes misconfiguration enforcement | Audits or blocks Kubernetes deployments that don't meet Microsoft security best-practice rules | GKE | GA | - | Requires **Agentless threat protection**. For manual deployment, Helm is supported. |
 
 ### [Arc enabled](#tab/arccssc)
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method |
-|--|--|--|--|--|--|--|--|
-| Gated deployment | Gated deployment of container images to your Kubernetes environment | Arc enabled Kubernetes clusters | GA | - | Requires **Defender Sensor**, **Security Gating**, **Security Findings**, and **Registry Access** |
+|--|--|--|--|--|--|
+| Gated deployment | Gated deployment of container images to your Kubernetes environment | Arc enabled Kubernetes clusters | GA | - | Requires **Defender sensor**, **Security gating**, **Security findings**, and **Registry access** |
+| Kubernetes misconfiguration enforcement | Audits or blocks Kubernetes deployments that don't meet Microsoft security best-practice rules | Arc enabled Kubernetes clusters | GA | - | Requires **Kubernetes API access**. For manual deployment, Helm is supported. |
+
 
 ---
 

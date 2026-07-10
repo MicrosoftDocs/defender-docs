@@ -44,7 +44,7 @@ If you can't take action, contact a Global Administrator about getting the follo
 
 To take action on emails through advanced hunting, you need a role in Microsoft Defender for Office 365 to [search and purge emails](/defender-office-365/scc-permissions).
 
-- [Microsoft Defender XDR Unified role based access control (URBAC)](manage-rbac.md): Membership assigned with the following URBAC permissions enables the **Take action** option in advanced hunting and grants users the required permissions to perform remediation actions:
+- [Microsoft Defender Unified role based access control (URBAC)](manage-rbac.md): Membership assigned with the following URBAC permissions enables the **Take action** option in advanced hunting and grants users the required permissions to perform remediation actions:
   - **Security operations** \> **Security data** \> **Response (manage)**: Required to approve or dismiss remediation actions.
   - **Security operations** \> **Security data** \> **Email & collaboration advanced actions (manage)**: Required to take actions on emails (move, soft delete, hard delete).
 
@@ -145,7 +145,7 @@ The [action center](m365d-action-center.md) under **Action center** \
 > **History** ([Action center history](https://security.microsoft.com/action-center/history)) records each action individually. To check the status of each action, go to the action center.
 
 > [!NOTE]
-> Some tables in this article might not be available in Microsoft Defender for Endpoint. [Turn on Microsoft Defender XDR](m365d-enable.md) to hunt for threats by using more data sources. To move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender XDR, see [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
+> Some tables in this article might not be available in Microsoft Defender for Endpoint. [Turn on Microsoft Defender](m365d-enable.md) to hunt for threats by using more data sources. To move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender, see [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
 
 ## Related content
 

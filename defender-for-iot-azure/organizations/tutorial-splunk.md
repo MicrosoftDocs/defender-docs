@@ -2,8 +2,9 @@
 title: Integrate Splunk with Microsoft Defender for IoT
 description: This article describes how to integrate Splunk with Microsoft Defender for IoT for multidimensional visibility across OT protocols and IIoT devices. 
 ms.topic: how-to
-ms.date: 12/21/2023
-ms.custom: how-to
+ms.date: 06/12/2026
+ms.custom: how-to, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Integrate Splunk with Microsoft Defender for IoT
@@ -12,6 +13,8 @@ This article describes how to integrate Splunk with Microsoft Defender for IoT, 
 
 Viewing both Defender for IoT and Splunk information together provides SOC analysts with multidimensional visibility into the specialized OT protocols and IIoT devices deployed in industrial environments, along with ICS-aware behavioral analytics to rapidly detect suspicious or anomalous behavior.
 
+Before you begin, make sure you have a Defender for IoT OT sensor deployed and a Splunk environment configured. If you're using the legacy integration, see the [Prerequisites](#prerequisites) section for specific version and permission requirements.
+
 If you're integrating with Splunk, we recommend that you use Splunk's own [OT Security Add-on for Splunk](https://apps.splunk.com/app/5151). For more information, see:
 
 - [The Splunk documentation on installing add-ins](https://docs.splunk.com/Documentation/AddOns/released/Overview/Distributedinstall)
@@ -19,7 +22,8 @@ If you're integrating with Splunk, we recommend that you use Splunk's own [OT Se
 
 The OT Security Add-on for Splunk is supported for both cloud and on-premises integrations.
 
-## Cloud-based integrations
+<a name="cloud-based-integrations"></a>
+## Integrate cloud-based Splunk deployments with Defender for IoT
 
 > [!TIP]
 > Cloud-based security integrations provide several benefits over on-premises solutions, such as centralized, simpler sensor management and centralized security monitoring.
@@ -29,7 +33,8 @@ The OT Security Add-on for Splunk is supported for both cloud and on-premises in
 
 To integrate a cloud-connected sensor with Splunk, we recommend that you use the [OT Security Add-on for Splunk](https://apps.splunk.com/app/5151).
 
-## On-premises integrations
+<a name="on-premises-integrations"></a>
+## Integrate on-premises Splunk deployments with Defender for IoT
 
 If you're working with an air-gapped, locally managed sensor, you might also want to configure your sensor to send syslog files directly to Splunk, or use Defender for IoT's built-in API.
 
@@ -38,9 +43,10 @@ For more information, see:
 - [Forward on-premises OT alert information](how-to-forward-alert-information-to-partners.md)
 - [Defender for IoT API reference](references-work-with-defender-for-iot-apis.md)
 
-## On-premises integration (legacy)
+<a name="on-premises-integration-legacy"></a>
+## Set up the legacy on-premises Splunk integration
 
-This section describes how to integrate Defender for IoT and Splunk using the legacy, [CyberX ICS Threat Monitoring for Splunk](https://splunkbase.splunk.com/app/4313) application.
+The following instructions describe how to integrate Defender for IoT and Splunk using the legacy [CyberX ICS Threat Monitoring for Splunk](https://splunkbase.splunk.com/app/4313) application.
 
 > [!IMPORTANT]
 > The legacy **CyberX ICS Threat Monitoring for Splunk** application is supported through October 2024 using sensor version 23.1.3, and won't be supported in upcoming major software versions.

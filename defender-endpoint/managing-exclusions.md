@@ -133,7 +133,7 @@ The following table lists the Group Policy locations for supported exclusion set
 |Attack surface reduction rule per rule exclusion|**Windows components > Microsoft Defender Antivirus > Microsoft Defender Exploit Guard > Attack surface reduction > Apply a list of exclusions to specific Attack Surface Reduction (ASR) rules**|See [Group Policy](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-group-policy)|
 |Automatic antivirus exclusions|**Windows components** > **Microsoft Defender Antivirus** > **Exclusions** > **Enabled**|See [Use Group Policy to disable the auto-exclusions list on Windows Server 2016, Windows Server 2019, and later](configure-server-exclusions-microsoft-defender-antivirus.md#use-group-policy-to-disable-the-auto-exclusions-list-on-windows-server-2016-windows-server-2019-and-later)|
 |Automation folder exclusions|Not supported||
-|Controlled Folder Access exclusions|**Windows components** > **Microsoft Defender Antivirus** > **Windows Defender Exploit Guard** > **Controlled folder access** > **Configure allowed applications**|See [Use group policy to allow specific apps](customize-controlled-folders.md#use-group-policy-to-allow-specific-apps)|
+|Controlled Folder Access exclusions|**Windows components** > **Microsoft Defender Antivirus** > **Windows Defender Exploit Guard** > **Controlled folder access** > **Configure allowed applications**|See [Allow apps to modify files in protected folders in group policy](controlled-folder-access-configure.md#allow-apps-to-modify-files-in-protected-folders-in-group-policy)|
 
 <a name="windows-management-instrumentation-wmi"></a>
 ### Manage exclusions with Windows Management Instrumentation (WMI)
@@ -165,7 +165,7 @@ The following table links to Configuration Manager guidance for supported exclus
 |Custom antivirus exclusion|For more information, see [exclusion settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings)|
 |Global exclusions for attack surface reduction (ASR) rules only|For more information, see [Configure ASR rules and global ASR rule exclusions in Microsoft Configuration Manager](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-global-asr-rule-exclusions-in-microsoft-configuration-manager)|
 |Per-ASR rule exclusion|Not supported|
-|Controlled Folder Access exclusions|For more information, see [Microsoft Configuration Manager](enable-controlled-folders.md#microsoft-configuration-manager)|
+|Controlled folder access (CFA) exclusions|For more information, see [Configure CFA in Microsoft Configuration Manager](controlled-folder-access-configure.md#configure-cfa-in-microsoft-configuration-manager)|
 |Automation folder exclusions|Not supported|
 
 ## Manage exclusions for Linux

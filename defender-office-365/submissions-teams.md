@@ -8,13 +8,15 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
+  - msecd-doc-authoring-1014
   - sfi-ga-nochange
 description: "Admins can configure whether users can report malicious messages or calls in Microsoft Teams."
 ms.service: defender-office-365
-ms.date: 05/27/2026
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # User reported settings in Microsoft Teams
@@ -66,7 +68,7 @@ User reporting of messages or calls in Teams consists of two separate settings:
 
 ### Turn off or turn on user reporting in the Teams admin center
 
-To view or configure this setting, you need to be a member of the **Global Administrator**<sup>\*</sup> or **Teams Administrator** roles. For more information about permissions in Teams, see [Use Microsoft Teams administrator roles to manage Teams](/microsoftteams/using-admin-roles).
+To view or configure user reporting in the Teams admin center, you need to be a member of the **Global Administrator**<sup>\*</sup> or **Teams Administrator** roles. For more information about permissions in Teams, see [Use Microsoft Teams administrator roles to manage Teams](/microsoftteams/using-admin-roles).
 
 > [!IMPORTANT]
 > Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
@@ -105,15 +107,15 @@ For more information about messaging policies in Teams, see [Manage messaging po
 
 ### Turn off or turn on user reporting in the Defender portal
 
-To modify this setting in the Defender portal, you need to be a member of the **Organization Management** or **Security Administrator** role groups. For more information about permissions in the Defender portal, see [Permissions in the Microsoft Defender portal](mdo-portal-permissions.md).
+To modify the **Monitor reported items in Microsoft Teams** setting in the Defender portal, you need to be a member of the **Organization Management** or **Security Administrator** role groups. For more information about permissions in the Defender portal, see [Permissions in the Microsoft Defender portal](mdo-portal-permissions.md).
 
-The value of this setting is meaningful only if reporting is turned on in the Teams admin center as described in the previous section.
+The **Monitor reported items in Microsoft Teams** setting is meaningful only if Teams message or call reporting is turned on in the Teams admin center.
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Settings** \> **Email & collaboration** \> **User reported settings** tab. To go directly to the **User reported settings** page, use <https://security.microsoft.com/securitysettings/userSubmission>.
 
 2. On the **User reported settings** page, go to the **Microsoft Teams** section for the **Monitor reported items in Microsoft Teams** setting.
 
-   As previously described, this setting is turned on by default for new tenants, and existing tenants need to enable it. Typically, you leave it turned on if message reporting is also turned on in Teams admin center. [Learn more about reported item destinations](submissions-report-messages-files-to-microsoft.md#report-suspicious-email-messages-to-microsoft).
+   The **Monitor reported items in Microsoft Teams** setting is turned on by default for new tenants; existing tenants need to enable it. Typically, you leave it turned on if message reporting is also turned on in Teams admin center. For more information, see [Report suspicious email messages to Microsoft](submissions-report-messages-files-to-microsoft.md#report-suspicious-email-messages-to-microsoft).
 
    :::image type="content" source="media/submissions-teams-turn-on-off-defender-portal.png" alt-text="Screenshot of the 'Monitor reported items in Microsoft Teams' setting in the Microsoft Defender portal." lightbox="media/submissions-teams-turn-on-off-defender-portal.png":::
 
@@ -130,6 +132,8 @@ For more information about user reported items settings in the Defender portal, 
 
 ### Report malicious messages in Teams
 
+To report a malicious message in Teams, perform the following steps:
+
 1. In the Microsoft Teams client, hover over the malicious message without selecting it, and then select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** \> **Report this message**.
 
    :::image type="content" source="media/submissions-user-report-message-in-teams-client-click-path.png" alt-text="Screenshot of the select path to report a message in the Microsoft Teams client." lightbox="media/submissions-user-report-message-in-teams-client-click-path.png":::
@@ -144,6 +148,8 @@ For more information about user reported items settings in the Defender portal, 
 3. In the confirmation dialog that opens, select **Close**.
 
 ### Report non-malicious messages in Teams
+
+To report a non-malicious message in Teams, use the following steps:
 
 1. In the Teams chat or channel, hover over the message without selecting it, and then select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** \> **Report this message**.
 
@@ -185,4 +191,4 @@ For more information, see [User reported settings](submissions-user-reported-mes
 
 ## View and triage user reported items in Teams
 
-As previously described, information about user reported items in Teams is available on the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>. For more information, see [View user reported items to Microsoft](submissions-admin.md#view-user-reported-messages-to-microsoft).
+Information about user reported items in Teams is available on the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>. For more information, see [View user reported items to Microsoft](submissions-admin.md#view-user-reported-messages-to-microsoft).

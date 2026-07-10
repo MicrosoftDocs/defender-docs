@@ -5,7 +5,9 @@ ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: abhiag
 ms.topic: how-to
-ms.date: 06/18/2024
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security operations analyst, I want to enable and configure Microsoft Sentinel and its key features so that I can monitor and secure my organization's environment effectively.
@@ -14,9 +16,11 @@ ms.date: 06/18/2024
 
 # Enable Microsoft Sentinel SIEM and initial features and content
 
-To begin your deployment, you need to enable Microsoft Sentinel SIEM and set up key features and content. In this article, you learn how to enable Microsoft Sentinel, enable the health and audit feature, and enable the solutions and content you've identified according to your organization's needs. This article is part of the [Deployment guide for Microsoft Sentinel](deploy-overview.md).
+As part of the [Deployment guide for Microsoft Sentinel](deploy-overview.md), this procedure walks you through enabling Microsoft Sentinel, enabling the health and audit feature, and enabling the solutions and content you've identified according to your organization's needs.
 
 ## Enable features and content
+
+Use the following steps to enable Microsoft Sentinel features and content for your deployment.
 
 |Step  |Description  |
 |---------|---------|
@@ -24,9 +28,10 @@ To begin your deployment, you need to enable Microsoft Sentinel SIEM and set up 
 |2. [Enable health and audit](enable-monitoring.md)     |Enable health and audit at this stage of your deployment to make sure that the service's many moving parts are always functioning as intended and that the service isn't being manipulated by unauthorized actions. Learn more about the [health and audit](health-audit.md) feature.         |
 |3. [Enable solutions and content](sentinel-solutions-deploy.md)     |When you planned your deployment, you identified which data sources you need to ingest into Microsoft Sentinel. Now, you want to enable the relevant solutions and content so that the data you need can start flowing into Microsoft Sentinel.         |
 
-## Next steps
+<a name="next-steps"></a>
+## Next step: Configure content
 
-In this article, you learned how to enable Microsoft Sentinel, its health and audit feature, and required content.
+After you enable Microsoft Sentinel, its health and audit feature, and the required content, proceed to configure the content for your environment.
 
 > [!div class="nextstepaction"]
 >>[Configure content](configure-content.md)

@@ -3,7 +3,7 @@ title: Reference table for all networking security recommendations
 description: This article lists all Microsoft Defender for Cloud networking security recommendations that help you harden and protect your resources.
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 06/15/2026
+ms.date: 06/30/2026
 ms.custom: generated
 ai-usage: ai-assisted
 ---
@@ -188,7 +188,7 @@ By default, ALBs aren't configured to drop invalid HTTP header values. Removing 
 
 **Severity**: Medium
 
-### AWS WAF web ACL should be associated with AppSync APIs (Preview)
+### AWS WAF web ACL should be associated with AppSync APIs
 
 **Description**: Defender for Cloud identified that your AppSync API does not have an associated AWS WAF (Web Application Firewall) web ACL. This poses a risk of the GraphQL endpoint being vulnerable to Layer 7 attacks, including common web exploits and bots that can affect availability or compromise security.
 
@@ -401,7 +401,7 @@ Monitoring changes to IAM policies helps ensure authentication and authorization
 
 **Severity**: Medium
 
-### HTTPS should be enforced on OpenSearch Service domains (Preview)
+### HTTPS should be enforced on OpenSearch Service domains
 
 **Description**: Defender for Cloud identified OpenSearch Service domains that do not enforce HTTPS for all traffic to the domain. Without HTTPS, communication between clients and the domain can be intercepted, increasing the risk of data exposure and credential theft, which can lead to unauthorized access.
 (No related policy)
@@ -426,7 +426,7 @@ Monitoring changes to IAM policies helps ensure authentication and authorization
 
 **Severity**: Medium
 
-### Node-to-node encryption should be enabled on OpenSearch Service domains (Preview)
+### Node-to-node encryption should be enabled on OpenSearch Service domains
 
 **Description**: Defender for Cloud identified OpenSearch Service domains without node-to-node encryption enabled. Without encryption, data transmitted between cluster nodes can be intercepted, increasing the risk of unauthorized access to sensitive data.
 (No related policy)
@@ -445,32 +445,32 @@ Monitoring changes to IAM policies helps ensure authentication and authorization
 
 **Severity**: Medium
 
-### Public access should be disabled on Amazon MQ brokers (Preview)
+### Public access should be disabled on Amazon MQ brokers
 
 **Description**: Defender for Cloud identified Amazon MQ brokers that are publicly accessible. Publicly accessible brokers can be reached from the internet, increasing the risk of unauthorized access and potential data exposure. Restricting public access reduces the attack surface and helps protect broker endpoints from external threats.
 
 **Severity**: High
 
-### Public access should be disabled on Amazon MSK clusters (Preview)
+### Public access should be disabled on Amazon MSK clusters
 
 **Description**: Defender for Cloud identified that Amazon MSK clusters have public access enabled, making them accessible from the internet. This poses a risk of unauthorized access and potential data exfiltration, as the increased attack surface exposes the cluster to external threats. Access should be restricted to private VPC connections.
 (No related policy)
 
 **Severity**: High
 
-### Public access should be disabled on DMS replication instances (Preview)
+### Public access should be disabled on DMS replication instances
 
 **Description**: Defender for Cloud identified that a DMS replication instance is configured as publicly accessible. This poses a risk of unauthorized access and potential data breaches, as the instance can be reached from the internet rather than being restricted to the VPC.
 
 **Severity**: High
 
-### Public access should be disabled on Neptune DB instances (Preview)
+### Public access should be disabled on Neptune DB instances
 
 **Description**: Defender for Cloud identified that your Neptune DB instance is publicly accessible. This poses a risk of unauthorized access and data breaches, as the database is exposed to the internet. Restricting public access ensures that only trusted networks can connect to the database.
 
 **Severity**: High
 
-### Public network access should be disabled on EMR cluster primary nodes (Preview)
+### Public network access should be disabled on EMR cluster primary nodes
 
 **Description**: Defender for Cloud identified EMR clusters whose primary node is reachable through a public DNS name. Public exposure of the primary node increases the attack surface, allowing internet-based actors to interact with cluster endpoints and management interfaces, which can increase the risk of unauthorized access, reconnaissance, and exploitation of exposed services.
 
@@ -507,7 +507,7 @@ When you change the port, you must also update the existing connection strings t
 
 **Severity**: Medium
 
-### Secure TLS policy should be configured on OpenSearch Service domains (Preview)
+### Secure TLS policy should be configured on OpenSearch Service domains
 
 **Description**: Defender for Cloud identified OpenSearch Service domains that are not using a secure TLS policy. Using a secure minimum TLS version ensures that only strong encryption protocols are used for data in transit, reducing the risk of interception or downgrade attacks.
 (No related policy)
@@ -570,7 +570,7 @@ Unless a port is specifically allowed, the port should deny unrestricted access.
 
 **Severity**: Medium
 
-### TLS encryption for data in transit should be configured on Amazon MSK clusters (Preview)
+### TLS encryption for data in transit should be configured on Amazon MSK clusters
 
 **Description**: Defender for Cloud identified Amazon MSK clusters not enforcing TLS encryption for client-to-broker communication. Allowing plaintext enables data to be transmitted unencrypted, risking unauthorized interception of sensitive streaming data. Note: MSK Serverless clusters enforce TLS 1.2 by default and are not affected.
 (No related policy)
@@ -604,13 +604,13 @@ If other relationships are listed, then the control passes.
 
 **Severity**: High
 
-### VPC Access Endpoints should be configured on WorkSpaces Applications (AppStream) Stacks (Preview)
+### VPC Access Endpoints should be configured on WorkSpaces Applications (AppStream) Stacks
 
 **Description**: Defender for Cloud identified that WorkSpaces Applications (AppStream) Stacks are not configured with VPC access endpoints. This poses a risk of unauthorized access from the public internet. Configuring VPC access endpoints ensures that users can only connect to WorkSpaces Applications through private network connections.
 
 **Severity**: Medium
 
-### VPC access should be enabled on OpenSearch Service domains (Preview)
+### VPC access should be enabled on OpenSearch Service domains
 
 **Description**: Defender for Cloud identified OpenSearch Service domains that are not deployed within a VPC. This poses a risk of unauthorized access and data exposure, as the domain might be reachable from the internet.
 (No related policy)
@@ -660,7 +660,7 @@ If other relationships are listed, then the control passes.
 
 **Severity**: High
 
-### DNS authorization should be configured on Google-managed certificates (Preview)
+### DNS authorization should be configured on Google-managed certificates
 
 **Description**: Defender for Cloud identified Google-managed certificates in Certificate Manager that are not configured with DNS authorization. Without it, ownership is validated by reaching the domain through the load balancer that serves it, posing a risk that misconfiguration or unauthorized control of routing could result in unintended certificate issuance. DNS authorization uses a CNAME record in the authoritative DNS zone, which is a more constrained control surface.
 (No related policy)
@@ -1101,7 +1101,7 @@ Flow Logs provide visibility into network traffic for each VM inside the subnet 
 
 **Severity**: High
 
-### SSL certificates should be renewed before expiration on App Engine (Preview)
+### SSL certificates should be renewed before expiration on App Engine
 
 **Description**: Defender for Cloud identified an SSL certificate nearing or past its expiration date in App Engine. This poses a risk of service disruptions and security vulnerabilities, as expired certificates break secure communication and can trigger client warnings or connection failures. Renew or replace the certificate promptly to maintain compliance and uninterrupted service.
 (No related policy)

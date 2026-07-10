@@ -22,7 +22,7 @@ appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Defender for Endpoint Plan 2
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to create custom detection rules so that I can proactively monitor for threats and automate response actions using advanced hunting queries.
 ---
@@ -35,18 +35,18 @@ Custom detection rules are [advanced hunting](advanced-hunting-overview.md) quer
 
 ## Required permissions for managing custom detections
 
-To manage custom detections, you need roles with permissions for the data these detections target. For example, to manage custom detections on multiple data sources (Microsoft Defender XDR and Microsoft Sentinel, or multiple Defender workloads), you need all the applicable Defender XDR and Sentinel roles. For more information, see [Microsoft Defender XDR](#microsoft-defender-xdr) and [Microsoft Sentinel](#microsoft-sentinel).
+To manage custom detections, you need roles with permissions for the data these detections target. For example, to manage custom detections on multiple data sources (Microsoft Defender and Microsoft Sentinel, or multiple Defender workloads), you need all the applicable Defender and Sentinel roles. For more information, see the following sections.
 
 ### Microsoft Defender XDR
-To manage custom detections on Microsoft Defender XDR data, you need to be assigned one of these roles:
+To manage custom detections on Microsoft Defender data, you need to be assigned one of these roles:
 
-- **Security settings (manage)** - Users with this [Microsoft Defender XDR permission](manage-rbac.md) can manage security settings in the Microsoft Defender portal.
+- **Security settings (manage)** - Users with this [Microsoft Defender permission](manage-rbac.md) can manage security settings in the Microsoft Defender portal.
 
 - **Security Administrator** - Users with this [Microsoft Entra role](/azure/active-directory/roles/permissions-reference#security-administrator) can manage security settings in the Microsoft Defender portal and other portals and services.
 
 - **Security Operator** - Users with this [Microsoft Entra role](/azure/active-directory/roles/permissions-reference#security-operator) can manage alerts and have global read-only access to security-related features, including all information in the Microsoft Defender portal. This role is sufficient for managing custom detections only if role-based access control (RBAC) is turned off in Microsoft Defender for Endpoint. If you have RBAC configured, you also need the **Manage Security Settings** permission for Defender for Endpoint.
 
-You can manage custom detections that apply to data from specific Defender XDR solutions if you have the right permissions for them. For example, if you only have manage permissions for Microsoft Defender for Office 365, you can create custom detections using `Email*` tables but not `Identity*` tables.
+You can manage custom detections that apply to data from specific Defender solutions if you have the right permissions for them. For example, if you only have manage permissions for Microsoft Defender for Office 365, you can create custom detections using `Email*` tables but not `Identity*` tables.
 
 Likewise, since the `IdentityLogonEvents` table holds authentication activity information from both Microsoft Defender for Cloud Apps and Defender for Identity, you need to have manage permissions for both services to manage custom detections querying that table.
 
@@ -96,12 +96,12 @@ In the Microsoft Defender portal, go to **Advanced hunting** and select an exist
 #### Required columns in the query results
 
 
-To create a custom detection rule by using Defender XDR data, we recommend that the query returns the following columns: 
+To create a custom detection rule by using Defender data, we recommend that the query returns the following columns: 
 1. `Timestamp` or `TimeGenerated` - This column sets the timestamp for generated alerts. If these columns aren't projected from the KQL, the first and last event time for the generated alert is set according to the lookback window of the detection. 
 1. **For Microsoft Defender for Endpoint tables**, include `DeviceId` or `DeviceName` columns to ensure that: 
     - Alerts are tagged with the correct device group scope 
     - Process tree view is built successfully.
-1. **For all other XDR tables**, project `Timestamp` and `ReportId` from the same event to ensure Defender XDR identifies the original event that triggered the alert so that: 
+1. **For all other Defender tables**, project `Timestamp` and `ReportId` from the same event to ensure Defender identifies the original event that triggered the alert so that: 
     - Alerts are tagged with the correct entity scope (only relevant for organizations that use Defender XDR scopes) 
     - Alert timeline view is fully enriched with relevant data. 
 1. To map an impacted asset automatically in the wizard, project one of the following columns that contain a strong identifier for an impacted asset: 
@@ -159,7 +159,9 @@ In the query editor, select **Create detection rule** and specify the following 
 - **Alert title** - Title displayed with alerts triggered by the rule; make it unique and use plaintext. Strings are sanitized for security purposes, so HTML, Markdown, and other code don't work. Any URLs included in the title should follow the [percent-encoding format](https://en.m.wikipedia.org/wiki/Percent-encoding) for them to display properly.
 - **Severity** - Potential risk of the component or activity identified by the rule.
 - **Category** - Threat component or activity identified by the rule.
-- **MITRE ATT&CK techniques** - One or more attack techniques identified by the rule as documented in the [MITRE ATT&CK framework](https://attack.mitre.org/). The MITRE ATT&CK techniques field is hidden for certain alert categories, including malware, ransomware, suspicious activity, and unwanted software.
+- **Tactic** - MITRE ATT&CK tactic identified by the rule as documented in the [MITRE ATT&CK framework](https://attack.mitre.org/).
+- **Techniques** - One or more attack techniques identified by the rule as documented in the MITRE ATT&CK framework.
+- **Sub-techniques** - One or more attack sub-techniques identified by the rule as documented in the MITRE ATT&CK framework.
 - **Threat analytics report** - Link the generated alert to an existing threat analytics report so that it appears in the [Related incidents](threat-analytics.md#set-up-custom-detections-and-link-them-to-threat-analytics-reports) tab in threat analytics.
 - **Description** - More information about the component or activity identified by the rule. Strings are sanitized for security purposes, so HTML, Markdown, and other code don't work. Any URLs included in the description should follow the percent-encoding format for them to display properly.
 - **Recommended actions** - Additional actions that responders might take in response to an alert.
@@ -227,7 +229,7 @@ When you select this frequency option, the **Run query every input** component a
 > [!IMPORTANT]
 >When you select a custom frequency, Defender fetches your data from Microsoft Sentinel. This condition means that: 
 >1.	You must have data available in Microsoft Sentinel.
->1.	Defender XDR data doesn't support scoping, since Microsoft Sentinel doesn't support scoping.
+>1.	Defender data doesn't support scoping, since Microsoft Sentinel doesn't support scoping.
 
 #### Lookback
 
@@ -337,7 +339,7 @@ After selecting the identifier, select a column from the query results that cont
 
 ### 4. Specify actions
 
-If your custom detection rule uses Defender XDR data, it can automatically take actions on devices, files, users, or emails that the query returns.
+If your custom detection rule uses Defender data, it can automatically take actions on devices, files, users, or emails that the query returns.
 
 :::image type="content" source="media/custom-detection-rules/ah-custom-actions.png" alt-text="Screenshot that shows actions for custom detections in the Microsoft Defender portal." lightbox="media/custom-detection-rules/ah-custom-actions.png":::
 

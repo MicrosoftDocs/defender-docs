@@ -1,10 +1,12 @@
 ---
-title: Manage Advanced Security Information Model (ASIM) parsers | Microsoft Docs
+title: Manage Advanced Security Information Model (ASIM) parsers
 description: This article explains how to manage Advanced Security Information Model (ASIM) parsers, add a customer parser, and replace a built-in parser.
 ms.author: edbaynash
 author: EdB-MSFT
 ms.topic: how-to
-ms.date: 11/09/2021
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security analyst, I want to manage and customize ASIM parsers so that I can normalize and analyze security data from various sources effectively.
@@ -31,15 +33,17 @@ You may need to manage the source-specific parsers used by each unifying parser 
 
 - **Configure a source-specific parser**, for example to define the sources that send information relevant to the parser.
 
-This article guides you through managing your parsers. 
+This article guides you through managing the source-specific parsers used by unifying parsers.
 
 ## Prerequisites
 
 The procedures in this article assume that all source-specific parsers have already been deployed to your Microsoft Sentinel workspace. 
 
-For more information, see [Develop ASIM parsers](isv/normalization-develop-parsers.md#deploy-parsers).
+For more information, see [Develop ASIM parsers](normalization-develop-parsers.md#deploy-parsers).
 
 ## Manage built-in unifying parsers
+
+Because built-in unifying parsers can't be edited directly, you manage them by deploying custom unifying parsers, adding or excluding source-specific parsers, and using watchlists to control parser behavior.
 
 ### Set up your workspace
 
@@ -49,7 +53,7 @@ Microsoft Sentinel users cannot edit built-in unifying parsers. Instead, use the
 
     You can deploy initial, empty, unifying custom parsers to your Microsoft Sentinel workspace for all supported schemas, or individually for specific schemas. For more information, see [Deploy initial ASIM empty custom unifying parsers](https://aka.ms/ASimDeployEmptyCustomUnifyingParsers) in the Microsoft Sentinel GitHub repository.
 
-- **To support excluding built-in source-specific parsers**, ASIM uses a watchlist. Deploy the watchlist to your Microsoft Sentinel workspace from the Microsoft Sentinel [GitHub](https://aka.ms/DeployASimWatchlists) repository.
+- **To support excluding built-in source-specific parsers**, ASIM uses a watchlist. Deploy the watchlist to your Microsoft Sentinel workspace from the Microsoft Sentinel [ASIM watchlist deployment template](https://aka.ms/DeployASimWatchlists) on GitHub.
 
 - **To define source type for built-in and custom parsers**, ASIM uses a watchlist. Deploy the watchlist to your Microsoft Sentinel workspace from the Microsoft Sentinel [GitHub](https://aka.ms/DeployASimWatchlists) repository.
 
@@ -77,7 +81,7 @@ The syntax of the line to add is different for each schema:
 
 When adding an additional parser to a unifying custom parser that already references parsers, make sure you add a comma at the end of the previous line. 
 
-For example, the following code shows a custom unifying parser after having added the `added_parser`:
+For example, the following code shows a custom unifying parser after adding `added_parser`. The `union isfuzzy=true` statement combines results from both the existing and the new custom parser, tolerating minor schema differences between them:
 
 ```kusto
 union isfuzzy=true
@@ -89,7 +93,7 @@ added_parser(starttime, endtime, srcipaddr, domain_has_any, responsecodename, re
 
 To modify an existing, built-in source-specific parser:
 
-1. Create a custom parser based on the original parser and [add it](#add-a-custom-parser-to-a-built-in-unifying-parser) to the built-in parser. You can use the [workspace deployed version](normalization-about-workspace-parsers.md) of the parser as a starting point.
+1. Create a custom parser based on the original parser and [add the custom parser to the built-in unifying parser](#add-a-custom-parser-to-a-built-in-unifying-parser). You can use the [workspace-deployed ASIM parsers](normalization-about-workspace-parsers.md) version of the parser as a starting point.
 
 1. Add a record to the `ASim Disabled Parsers` watchlist.
 
@@ -106,9 +110,9 @@ For example, to exclude the Azure Firewall DNS parser, add the following record 
 
 ### Prevent an automated update of a built-in parser
 
-Use the following process to prevent automatic updates for built-in, source-specific parsers:
+To pin a built-in, source-specific parser to a specific version and prevent automatic updates, complete these steps:
 
-1. Add the built-in parser version you want to use, such as `_Im_Dns_AzureFirewallV02`, to the custom unifying parser. For more information, see above, [Add a custom parser to a built-in unifying parser](#add-a-custom-parser-to-a-built-in-unifying-parser).
+1. Add the built-in parser version you want to use, such as `_Im_Dns_AzureFirewallV02`, to the custom unifying parser. For more information, see [Add a custom parser to a built-in unifying parser](#add-a-custom-parser-to-a-built-in-unifying-parser).
 
 1. Add an exception for the built-in parser. For example, when you want to entirely opt out from automatic updates, and therefore exclude a large number of built-in parsers, add:
 
@@ -123,7 +127,7 @@ Some parsers require you to update the list of sources that are relevant to the 
 - Set the `SourceType` field to the parser specific value specified in the parser documentation. 
 - Set the `Source` field to the identifier of the source used in the events. You may need to query the original table, such as Syslog, to determine the correct value.
 
-If your system does not have the `Sources_by_SourceType` watchlist deployed, deploy the watchlist to your Microsoft Sentinel workspace from the Microsoft Sentinel [GitHub](https://aka.ms/DeployASimWatchlists) repository.
+If your system does not have the `Sources_by_SourceType` watchlist deployed, deploy the watchlist to your Microsoft Sentinel workspace from the [ASIM watchlist deployment template](https://aka.ms/DeployASimWatchlists) on GitHub.
 
 ## Related content
 
@@ -131,7 +135,7 @@ Learn more about ASIM parsers:
 
 - [ASIM parsers overview](normalization-parsers-overview.md)
 - [Use ASIM parsers](normalization-about-parsers.md)
-- [Develop custom ASIM parsers](isv/normalization-develop-parsers.md)
+- [Develop custom ASIM parsers](normalization-develop-parsers.md)
 - [The ASIM parsers list](normalization-parsers-list.md)
 
 Learn more about the ASIM in general: 

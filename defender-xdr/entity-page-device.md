@@ -359,7 +359,7 @@ Response actions run along the top of a specific device page and include:
 
 ## Related topics
 
-- [Microsoft Defender XDR overview](microsoft-365-defender.md)
+- [Microsoft Defender overview](microsoft-365-defender.md)
 - [Turn on Microsoft Defender XDR](m365d-enable.md)
 - [User entity page in Microsoft Defender](investigate-users.md)
 - [IP address entity page in Microsoft Defender](entity-page-ip.md)
