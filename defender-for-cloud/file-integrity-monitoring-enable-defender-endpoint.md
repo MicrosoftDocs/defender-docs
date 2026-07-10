@@ -143,8 +143,8 @@ Disable as follows:
 
 ## Considerations and limitations
 
-The current Linux sensor doesn't distinguish between Create and Modify actions.
-It identifies both as Modify actions. As a result, when a new file is created, the event is logged as a Modify event rather than a Create event.
+- Custom file and directory path monitoring rules are currently supported only for Azure virtual machines. Custom path monitoring isn't supported for non-Azure machines connected through Azure Arc.
+- The current Linux sensor doesn't distinguish between Create and Modify actions. It identifies both as Modify actions. As a result, when a new file is created, the event is logged as a Modify event rather than a Create event.
 
 ## Related content
 
