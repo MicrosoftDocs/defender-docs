@@ -5,7 +5,7 @@ ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: amyhari
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/12/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
@@ -88,11 +88,12 @@ For more information, see:
 ## Enable CMK 
 
 To provision CMK, follow these steps:
-1.  Configure CMK on a log analytics workspace on a dedicated cluster. See [Prerequisites](#prerequisites).
-1.  Register to the Azure Cosmos DB Resource Provider.
-1.  Add an access policy to your Azure Key Vault instance.
-1.  Onboard the workspace to Microsoft Sentinel via the [Onboarding API](/rest/api/securityinsights/preview/sentinel-onboarding-states/create).
-1.  Contact the Microsoft Sentinel Product group to confirm onboarding.
+
+1. Configure CMK on a Log Analytics workspace on a dedicated cluster. See [Prerequisites](#prerequisites).
+1. Register the Azure Cosmos DB Resource Provider.
+1. Add an access policy to your Azure Key Vault instance.
+1. Onboard the workspace to Microsoft Sentinel via the [Onboarding API](/rest/api/securityinsights/preview/sentinel-onboarding-states/create).
+1. Wait for the onboarding process to complete.
 
 ### Step 1: Configure CMK on a Log Analytics workspace on a dedicated cluster
 
@@ -138,9 +139,11 @@ The following request body sets the `customerManagedKey` property to `true`, whi
 } 
 ```
 
-### Step 5: Contact the Microsoft Sentinel Product group to confirm onboarding 
+### Step 5: Wait for onboarding to complete
 
-Lastly, confirm the onboarding status of your CMK-enabled workspace by contacting the [Microsoft Sentinel Product Group](mailto:onboardrecoeng@microsoft.com).
+After the onboarding API request completes, no additional action is required. The onboarding process continues asynchronously.
+
+You might see a message in the Defender portal indicating that onboarding is still in progress. Once onboarding completes, Microsoft Sentinel becomes available in the Defender portal.
 
 ## Key Encryption Key revocation or deletion
 
