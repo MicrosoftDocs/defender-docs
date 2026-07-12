@@ -143,7 +143,7 @@ The following request body sets the `customerManagedKey` property to `true`, whi
 
 After the onboarding API request completes, no additional action is required. The onboarding process continues asynchronously.
 
-You might see a message in the Defender portal indicating that onboarding is still in progress. Once onboarding completes, Microsoft Sentinel becomes available in the Defender portal.
+You might see a message in the Azure portal indicating that onboarding is still in progress. Once onboarding completes, the Sentinel Overview page becomes available in the Azure portal.
 
 ## Key Encryption Key revocation or deletion
 
