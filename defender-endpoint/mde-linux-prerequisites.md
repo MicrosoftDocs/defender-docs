@@ -138,17 +138,16 @@ The following Linux server distributions are supported:
 |`ext2`|`S3fs`|
 |`ext3`|`Blobfuse`|
 |`ext4`|`Lustre`|
-|`fuse`|`glusterfs`|
-|`fuseblk`|`Afs`|
-|`jfs`|`sshfs`|
-|`nfs` (v3)|`cifs`|
-|`overlay`|`smb`|
-|`ramfs`|`gcsfuse`|
-|`reiserfs`|`sysfs`|
-|`tmpfs`|`nfs4`|
-|`udf`||
-|`vfat`||
-|`xfs`||
+|`fuseblk`|`glusterfs`|
+|`jfs`|`Afs`|
+|`overlay`|`sshfs`|
+|`ramfs`|`cifs`|
+|`reiserfs`|`smb`|
+|`tmpfs`|`gcsfuse`|
+|`udf`|`sysfs`|
+|`vfat`|`nfs` (v3)|
+|`xfs`|`fuse`|
+||`nfs4`|
 
 > [!NOTE]
 > To scan NFS v3 mount points, make sure to set the `no_root_squash` export option. Without this option, scanning NFS v3 can potentially fail due to lack of permissions.
