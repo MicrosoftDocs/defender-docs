@@ -34,6 +34,10 @@ The Password protection page now includes password risks from SaaS apps connecte
 
  The **Domain investigation** page allows you to investigate an Active Directory domain. It shows Active Directory domain security, including domain properties, deployment health, identity summary, service account breakdown, sensitive entities, active recommendations, group policies, and trust relationships. For more information, see [Investigate a domain](investigate-domain.md).
 
+### Apply the Sensor Extended RPC Audit tag for more identity detections
+
+You can now apply the **Sensor Extended RPC Audit** tag to enable additional RPC-based identity detections and capabilities. The tag requires Defender for Identity sensor version 3.0.7 or later. For more information, see [Configure RPC auditing](deploy/deploy-sensor-v3.md#configure-rpc-auditing).
+
 ## June 2026
 
 ### Identity risk score is now generally available
