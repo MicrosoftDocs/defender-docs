@@ -103,6 +103,12 @@ Migrating domain controllers running Windows Server 2025 to sensor v3.x isn't cu
 
 For more information, see [Known Issues for migrating sensors](troubleshooting-known-issues.md#windows-server-2025-sensor-v3x-migration-not-supported).
 
+### Defender for Identity sensor updates
+
+|Version number|Updates|
+|---|---|
+|2.255.19247.44775|This sensor update adds properties to Group Policy (GPO) event collection and includes bug fixes.|
+
 ## April 2026
 
 ### **Identity Explorer (Preview)**
