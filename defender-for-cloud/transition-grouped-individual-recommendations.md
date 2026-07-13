@@ -264,13 +264,21 @@ The following grouped recommendations transition under Microsoft Defender for Se
 | EC2 instances should have secrets findings resolved | `490d3be5-0abd-485c-bcd7-b8d6c6f443c8` | ExposedSecrets |
 | VM instances should have secrets findings resolved | `17b615fd-ce09-494b-a3fa-5937a137a571` | ExposedSecrets |
 
-**Deprecated recommendations** — the following grouped recommendations are deprecated and don't have a direct replacement:
+**Replaced by individual recommendations** — the following grouped recommendations are deprecated and don't have a single direct replacement. They are replaced by new individual recommendations now available in Defender for Cloud.
 
 | Recommendation | Recommendation ID |
 |---|---|
 | EDR configuration issues should be resolved on virtual machines | `dc5357d0-3858-4d17-a1a3-072840bff5be` |
 | EDR configuration issues should be resolved on EC2s | `695abd03-82bd-4d7f-a94c-140e8a17666c` | 
 | EDR configuration issues should be resolved on GCP Virtual machines | `f36a15fb-61a6-428c-b719-6319538ecfbc` |
+
+**New individual recommendations**
+
+| Recommendation | Recommendation ID |
+|---|---|
+| Anti-Virus scans of your EDR are out of 7 days | `d44de051-1862-48f8-8476-192aee854699` |
+| Anti-Virus component of your EDR uses outdated signatures | `aafa7d27-01ae-40c6-a56c-1d0ef04b1d71` | 
+| Anti-Virus component in your EDR is off or partially configured | `506d18a1-d571-4341-aad5-a7d363c5bbd4` |
 
 ### Microsoft Defender for Databases
 
