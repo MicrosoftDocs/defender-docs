@@ -29,10 +29,6 @@ To migrate, each server must meet the following requirements:
 
 For the full list of v3.x requirements, see [Defender for Identity sensor v3.x prerequisites](deploy-sensor-v3.md).
 
-## Known limitations
-
-- **Windows Server 2025 domain controllers:** Migrating domain controllers running Windows Server 2025 to sensor v3.x isn't currently supported.
-
 ## Start the migration
 
 Servers that meet all prerequisites appear as **Ready for migration** on the **Sensors** page.
