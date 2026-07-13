@@ -112,7 +112,7 @@ Install the solution to get started quickly with threat hunting and investigatio
 
 For more information, see [Install or update Microsoft Sentinel solutions](sentinel-solutions-deploy.md#install-or-update-content).
 
-## Enable the UEBA behaviors layer (Preview)
+## Enable the UEBA behaviors layer
 
 The UEBA behaviors layer generates enriched summaries of activity observed across multiple data sources. Unlike alerts or anomalies, behaviors don’t necessarily indicate risk - they create an abstraction layer that optimizes your data for investigations, hunting, and detection by enhancing clarity, context, and correlation.
 
