@@ -218,6 +218,20 @@ To get latest features, configure your device for the Beta channel (formerly Ins
 
 For known issues, see [macOS known issues](#macos-known-issues).
 
+### macOS | July-2026 | 101.26052.0016
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 20.126052.16.0  | 1.1.26060.12000 | 1.455.47.0       |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|----------------|
+| General      | Security and critical updates |
+
 ### macOS | June-2026 | 101.26042.0020
 
 #### Versions
