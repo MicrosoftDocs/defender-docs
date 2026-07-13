@@ -32,19 +32,9 @@ This service uses a multistage agentic pipeline where specialized AI agents coll
 
 ## Language support
 
-This service supports scanning across major programming languages:
+Codename MDASH operates across codebases generically and supports all major programming languages. It has 100+ agents with different roles and expertise, and we tune it to deepen expertise across languages and environments.
 
-- C/C++
-- TypeScript/JavaScript
-- Python
-- C#
-- Java
-- Kotlin
-- Go
-- Rust
-- Swift
-- PHP
-- Ruby
+Codename MDASH is continually adding new agents and expertise to improve both detection and prioritization of findings. Currently, we've trained individual specially tuned expert agents with particularly deep expertise in languages such as C, C++, Java, and C#.
 
 ## Key features
 
