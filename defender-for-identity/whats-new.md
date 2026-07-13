@@ -26,6 +26,10 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## July 2026
 
+### Migrate Windows Server 2025 domain controllers to sensor v3.x
+
+You can now migrate domain controllers running Windows Server 2025 from sensor v2.x to sensor v3.x. For more information, see [Migrate to Defender for Identity sensor v3.x](deploy/migrate-to-sensor-v3.md).
+
 ### Expanded SaaS app support in Password protection (Preview)
 
 The Password protection page now includes password risks from SaaS apps connected through Microsoft Defender for Cloud Apps, in addition to Active Directory, Microsoft Entra ID, and Okta. SaaS apps that support SaaS Security Posture Management (SSPM), such as Salesforce and ServiceNow, appear on the Password Hygiene and Password Policies tabs. Each SaaS app requires a Defender for Cloud Apps app connector. For more information, see [Investigate identity password protection](password-protection.md).
@@ -33,6 +37,10 @@ The Password protection page now includes password risks from SaaS apps connecte
 ### The **Domain investigation page** is now generally available
 
  The **Domain investigation** page allows you to investigate an Active Directory domain. It shows Active Directory domain security, including domain properties, deployment health, identity summary, service account breakdown, sensitive entities, active recommendations, group policies, and trust relationships. For more information, see [Investigate a domain](investigate-domain.md).
+
+### Apply the Sensor Extended RPC Audit tag for more identity detections
+
+You can now apply the **Sensor Extended RPC Audit** tag to enable additional RPC-based identity detections and capabilities. The tag requires Defender for Identity sensor version 3.0.7 or later. For more information, see [Configure RPC auditing](deploy/deploy-sensor-v3.md#configure-rpc-auditing).
 
 ## June 2026
 
@@ -100,8 +108,6 @@ These new alerts were added to the Defender for Identity security alerts:
 ### Known limitation: Migration of domain controllers with Windows Server 2025 from sensor v2.x to sensor v3.x is not supported
 
 Migrating domain controllers running Windows Server 2025 to sensor v3.x isn't currently supported. Continue using the v2.x sensor on Windows Server 2025 domain controllers should until support for migration to v3.x is available.
-
-For more information, see [Known Issues for migrating sensors](troubleshooting-known-issues.md#windows-server-2025-sensor-v3x-migration-not-supported).
 
 ### Defender for Identity sensor updates
 
