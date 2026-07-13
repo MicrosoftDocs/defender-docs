@@ -142,11 +142,10 @@ The following Linux server distributions are supported:
 |`fuseblk`|`Afs`|
 |`jfs`|`sshfs`|
 |`nfs` (v3)|`cifs`|
-|`nfs4`|`smb`|
-|`overlay`|`gcsfuse`|
-|`ramfs`|`sysfs`|
-|`reiserfs`||
-|`tmpfs`||
+|`overlay`|`smb`|
+|`ramfs`|`gcsfuse`|
+|`reiserfs`|`sysfs`|
+|`tmpfs`|`nfs4`|
 |`udf`||
 |`vfat`||
 |`xfs`||
