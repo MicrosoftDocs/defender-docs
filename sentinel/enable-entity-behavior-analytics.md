@@ -97,7 +97,7 @@ To get to the **Entity behavior configuration** page:
 
 1. Select the directory services from which you want to synchronize user entities with Microsoft Sentinel.
 
-    - **Active Directory** on-premises (Preview)
+    - **Active Directory** on-premises
     - **Microsoft Entra ID**
 
     To sync user entities from on-premises Active Directory, you must onboard your Azure tenant to Microsoft Defender for Identity (either standalone or as part of Microsoft Defender XDR) and you must have the MDI sensor installed on your Active Directory domain controller. For more information, see [Microsoft Defender for Identity prerequisites](/defender-for-identity/prerequisites).
