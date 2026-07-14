@@ -5,7 +5,7 @@ keywords: what's new in Microsoft Defender for Office 365, ga, generally availab
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
-ms.date: 07/09/2026
+ms.date: 07/10/2026
 ms.collection:
   - m365-security
   - tier1
@@ -40,6 +40,8 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Cloud Apps](/defender-cloud-apps/release-notes)
 
 ## July 2026
+
+- **Unified RBAC is the default permission model for new Defender for Office 365 Plan 2 organizations**: Starting July 2026, new Microsoft Defender for Office 365 Plan 2 organizations use the Microsoft Defender unified role-based access control (Unified RBAC) model by default. For more information, see [Configure Unified RBAC for Microsoft Defender for Office 365](step-by-step-guides/configure-unified-rbac-defender-office-365.md) and [MC1246006](https://admin.microsoft.com/Adminportal/Home#/MessageCenter/:/messages/MC1246006).
 
 - **Microsoft Defender for Office 365 Plan 1 included in Microsoft 365 E3**: Microsoft 365 E3 now includes Microsoft Defender for Office 365 Plan 1. For more information about what's included in each plan, see [Microsoft Defender for Office 365 Plan 1 vs. Plan 2 cheat sheet](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet).
 
