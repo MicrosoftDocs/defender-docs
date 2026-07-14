@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.reviewer: sugamar
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
   - asr
   - sfi-image-nochange
 ms.topic: how-to
@@ -17,7 +17,7 @@ ms.collection:
  - highpri
  - tier1
  - mde-asr
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 #customer intent: As an IT admin, I want to test ASR rules in Audit mode so that I can identify false positives and configure exclusions before enabling rules in Block mode.
 appliesto:
@@ -34,13 +34,13 @@ Testing attack surface reduction (ASR) rules is a critical step in your deployme
 > [!NOTE]
 > Before you begin the testing phase of your ASR rules deployment, disable any related ASR rules that are currently enabled in **Block** or **Warn** mode (if applicable). For information about using the report to find enabled ASR rules, see [Attack surface reduction rules reports](attack-surface-reduction-rules-report.md).
 
-As illustrated in the following diagram, begin your ASR rules deployment with ring 1.
+As illustrated in the following diagram, begin your ASR rules deployment with ring 1 (the initial small pilot group of devices used for testing).
 
 > :::image type="content" source="media/asr-rules-testing-steps.png" alt-text="Diagram of the ASR rules testing steps: audit rules, review data, and configure exclusions." lightbox="media/asr-rules-testing-steps.png":::
 
 ## Assess and evaluate rules before deployment
 
-In Defender for Endpoint Plan 2, [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) surfaces ASR rule–related security recommendations that can provide high-level impact indicators (for example, whether audit activity was observed across devices).
+If you have Defender for Endpoint Plan 2 (which includes advanced vulnerability management and hunting capabilities), [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) surfaces ASR rule–related security recommendations that can provide high-level impact indicators (for example, whether audit activity was observed across devices).
 
 In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Exposure management** \> **Recommendations** (or directly to the **Security recommendations** page at <https://security.microsoft.com/exposure-recommendations>). On the **Security recommendations** page, select an ASR rule to open the details flyout, and then select the **Devices** tab. The **User impact** value shows the percentage of devices that can accept a new policy enabling the rule in block mode without adversely affecting productivity.
 
@@ -76,7 +76,7 @@ If you don't have Intune, other ASR rule deployment methods are available:
 
 ## Step 2: Review ASR rule data and assess impact
 
-After ASR rules are deployed in **Audit** mode, review the triggered events to assess their effects and identify potential exclusions using some or all of the following methods:
+After ASR rules are deployed in **Audit** mode, review the triggered events to assess their effects and identify potential exclusions. The reporting methods available to you depend on your product and plan: the ASR rules report and device timeline require Defender for Endpoint Plan 2 or Microsoft Defender for Business, Advanced hunting requires Defender for Endpoint Plan 2, and Windows Event Viewer is available with any plan. Use one or more of the following methods:
 
 In Defender for Endpoint Plan 2 or Microsoft Defender for Business, use the **Attack surface reduction rules report** in the Microsoft Defender portal. For complete information, see [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md).
 

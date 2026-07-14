@@ -11,14 +11,14 @@ ms.collection:
 - m365-security
 - tier3
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Understanding detection technology in the email entity page of Microsoft Defender for Office 365
 
-If a threat is detected on the Microsoft Defender for Office 365 [*email entity page*](../mdo-email-entity-page.md), threat information displays on the left-hand flyout. The threat-information flyout also shows you the **detection technology** that produced the threat verdict.
+If a threat is detected on the Microsoft Defender for Office 365 [*email entity page in Microsoft Defender for Office 365*](../mdo-email-entity-page.md), threat information displays on the left-hand flyout. The threat-information flyout also shows you the **detection technology** that produced the threat verdict.
 
-The following sections help you **understand the different detection technologies**, how the detection technologies work, and how to avoid any false alarms. An Admin Submissions video is included at the end.
+This article helps you **understand the different detection technologies**, how the detection technologies work, and how to avoid any false alarms. It also includes an Admin Submissions video.
 
 ## Detection technology details table
 
@@ -57,6 +57,6 @@ To resolve false positives like the ones listed in the following table, you shou
 
 ## Watch a video on submitting messages to Microsoft to learn more
 
-Watch the following video for an overview of how to submit messages to Microsoft.
+Watch the Admin Submissions video for an overview of how to submit messages to Microsoft.
 
 > [!VIDEO https://www.youtube.com/embed/ta5S09Yz6Ks]

@@ -38,7 +38,7 @@
       - name: Implement baseline security measures
         href: /security/zero-trust/prioritizing-defense/baseline-security-measures
         maintainContext: true
-    - name: Agentic code security
+    - name: Codename MDASH
       items:
       - name: Overview
         href: ai-code-security-overview.md

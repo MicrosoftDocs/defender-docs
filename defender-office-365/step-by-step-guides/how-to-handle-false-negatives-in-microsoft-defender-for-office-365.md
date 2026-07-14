@@ -10,9 +10,9 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # How to handle malicious emails that are delivered to recipients (false negatives) using Microsoft Defender for Office 365
@@ -41,7 +41,7 @@ Perform the following steps to handle malicious emails that reached end users' I
    > [!TIP]
    > In organizations with Defender for Office 365 Plan 2 and Security Copilot, the [Phishing Triage Agent](/defender-xdr/phishing-triage-agent) can autonomously triage and classify user-reported phishing emails, reducing manual investigation work for security teams.
 
-4. From those reported messages, admins can **submit to** [notify users about admin-submitted messages to Microsoft](../submissions-admin-review-user-reported-messages.md#notify-users-from-within-the-portal) to learn why the reported message was allowed in the first place.
+4. From the user-reported messages on the Submissions page, admins can **submit to** [notify users about admin-submitted messages to Microsoft](../submissions-admin-review-user-reported-messages.md#notify-users-from-within-the-portal) to learn why the reported message was allowed in the first place.
 5. If needed, while submitting to Microsoft for analysis, admins can [create a block entry for the sender](../tenant-allow-block-list-email-spoof-configure.md#create-block-entries-for-domains-and-email-addresses) to mitigate the problem.
 6. Once the results for submissions are available, read the verdict to understand why emails were allowed, and how your organization setup could be improved to prevent similar issues from happening in the future.
 
@@ -56,7 +56,7 @@ Perform the following steps to handle malicious emails that were delivered to en
    > [!TIP]
    > In organizations with Defender for Office 365 Plan 2 and Security Copilot, the [Phishing Triage Agent](/defender-xdr/phishing-triage-agent) can autonomously triage and classify user-reported phishing emails, reducing manual investigation work for security teams.
 
-3. From those reported messages admins can **submit to** [notify users about admin-submitted messages to Microsoft](../submissions-admin.md#notify-users-about-admin-submitted-messages-to-microsoft) and learn why the reported message was allowed in the first place.
+3. From the user-reported messages on the Submissions page, admins can **submit to** [notify users about admin-submitted messages to Microsoft](../submissions-admin.md#notify-users-about-admin-submitted-messages-to-microsoft) and learn why the reported message was allowed in the first place.
 4. If needed, while submitting to Microsoft for analysis, admins can [create a block entry for the sender](../tenant-allow-block-list-email-spoof-configure.md#create-block-entries-for-domains-and-email-addresses) to mitigate the problem.
 5. Once the results for submissions are available, read the verdict to understand why emails were allowed, and how your organization setup could be improved to prevent similar issues from happening in the future.
 
