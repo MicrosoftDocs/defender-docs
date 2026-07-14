@@ -1,14 +1,14 @@
 ---
-title: Configure and validate exclusions based on extension, name, or location
+title: Configure and validate Microsoft Defender Antivirus exclusions based on extension, name, or location
 description: Exclude files from Microsoft Defender Antivirus scans based on their file extension, file name, or location.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 author: chrisda
 ms.author: chrisda
 ms.topic: how-to
-ms.custom: nextgen, msecd-doc-authoring-1014
+ms.custom: nextgen, msecd-doc-authoring-1016
 ms.reviewer: thdoucet
 ms.collection:
 - m365-security
@@ -145,7 +145,7 @@ For more information, see [How to create and deploy antimalware policies: Exclus
 
 ### Use PowerShell cmdlets to configure file name, folder, or file extension exclusions
 
-Use the following cmdlets in the [Defender module](/powershell/module/defender/) to manage exclusions:
+Use the following cmdlets in the [Defender module](/powershell/module/defender/) (the PowerShell module that provides Microsoft Defender Antivirus management cmdlets) to manage exclusions:
 
 - [Set-MpPreference](/powershell/module/defender/set-mppreference): Create or replace the list of exclusions.
 
@@ -348,7 +348,8 @@ For more information, see [Use PowerShell cmdlets to configure and run Microsoft
 
 <a id="validate"></a>
 
-## Validate exclusions lists with the EICAR test file
+<a name="validate-exclusions-lists-with-the-eicar-test-file"></a>
+## Validate exclusion lists with the EICAR test file
 
 You can validate your exclusion lists are working by using PowerShell with the **Invoke-WebRequest** cmdlet or the .NET WebClient class to download a test file.
 

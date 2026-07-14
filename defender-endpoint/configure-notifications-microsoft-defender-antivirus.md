@@ -7,8 +7,8 @@ ms.localizationpriority: medium
 author: chrisda
 ms.topic: how-to
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1014
-ms.date: 06/16/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.reviewer: yongrhee
 ms.collection: 
 - m365-security
@@ -41,7 +41,7 @@ The following operating systems are supported:
 
 ## Configure antivirus notifications using Group Policy or the Windows Security app
 
-You can configure the display of more notifications, such as recent threat detection summaries, in the [Windows Security app](microsoft-defender-security-center-antivirus.md) and with Group Policy.
+You can configure the display of enhanced notifications (additional notification summaries such as recent threat detections) in the [Windows Security app](microsoft-defender-security-center-antivirus.md) and with Group Policy.
 
 
 | Setting| Description |
@@ -62,6 +62,9 @@ You can configure the display of more notifications, such as recent threat detec
 > In Windows 10, version 1607 the feature was called **Enhanced notifications** and was configured under **Windows Settings** \> **Update & security** \> **Windows Defender**. In Group Policy settings for all versions of Windows 10 and Windows 11, the notification feature is called **Enhanced notifications**.
 
 ### Use Group Policy to disable other notifications
+
+> [!IMPORTANT]
+> Disabling other notifications won't disable critical notifications, such as threat detection and remediation alerts.
 
 To disable additional notifications by using Group Policy, perform the following steps:
 
@@ -97,7 +100,9 @@ Use the following steps to disable additional notifications in the Windows Secur
 
 ## Configure standard notifications on endpoints using Group Policy
 
-You can use Group Policy to:
+### Hide notifications with Group Policy
+
+You can use Group Policy to configure Microsoft Defender Antivirus notifications in the following ways:
 
 - Display more, customized text on endpoints when the user needs to perform an action
 - Hide all notifications on endpoints

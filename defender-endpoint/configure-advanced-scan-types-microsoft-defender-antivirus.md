@@ -5,10 +5,10 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1014
+ms.custom: nextgen, msecd-doc-authoring-1016
 ms.reviewer: pahuijbr
 ms.subservice: ngp
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
@@ -22,16 +22,23 @@ ai-usage: ai-assisted
 
 # Configure Microsoft Defender Antivirus scanning options
 
-You can configure Microsoft Defender Antivirus to scan email storage files, reparse points, network files, and archived files (such as .zip files). You can configure these scanning options by using Microsoft Intune, Microsoft Configuration Manager, Group Policy, PowerShell, or WMI.
+You can configure Microsoft Defender Antivirus to scan email storage files, reparse points, network files, and archived files (such as .zip files).
+
+Use Microsoft Intune, Microsoft Configuration Manager, Group Policy, PowerShell, or WMI to set up these scan options.
 
 ## Use Microsoft Intune to configure scanning options
 
-You can configure Microsoft Defender Antivirus scanning options in Microsoft Intune by using device restriction profiles. For more information, see [Configure device restriction settings in Microsoft Intune](/intune/intune-service/configuration/device-restrictions-configure) and [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/intune/intune-service/configuration/device-restrictions-windows-10#microsoft-defender-antivirus).
+In Microsoft Intune, use device restriction profiles to set up scanning options. For details, see the following articles:
+
+- [Configure device restriction settings in Microsoft Intune](/intune/intune-service/configuration/device-restrictions-configure)
+- [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/intune/intune-service/configuration/device-restrictions-windows-10#microsoft-defender-antivirus)
 
 
 ## Prerequisites
 
 ### Supported operating systems
+
+These scanning options are supported on the following operating systems:
 
 - Windows
 
@@ -42,7 +49,7 @@ For details on configuring Microsoft Configuration Manager (current branch), see
 ## Use Group Policy to configure scanning options
 
 > [!TIP]
-> Download the Group Policy Reference Spreadsheet, which lists the policy settings for computer and user configurations that are included in the Administrative template files delivered for Windows. Refer to the spreadsheet when you edit Group Policy Objects. Here are the most recent versions:
+> Download the Group Policy Reference Spreadsheet. It lists policy settings for computer and user setups in the Administrative template files for Windows. Use it when you edit Group Policy Objects. Here are the most recent versions:
 > - [Group Policy Settings Reference Spreadsheet for Windows 10 May 2020 Update (2004)](https://www.microsoft.com/download/details.aspx?id=101451)
 > - [Group Policy Settings Reference Spreadsheet for Windows 11 October 2021 Update (21H2)](https://www.microsoft.com/download/details.aspx?id=103506)
 

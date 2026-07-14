@@ -8,8 +8,8 @@ author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
 ms.topic: how-to
-ms.date: 06/16/2026
-ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 07/02/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
 ms.collection: 
 - m365-security
 - tier2
@@ -79,11 +79,13 @@ You can use **Local Group Policy Editor** to enable and configure Microsoft Defe
 
 ### Enable and configure always-on protection using Group Policy
 
+This procedure applies to Windows 10 and Windows 11 devices.
+
 Use the following steps to enable and configure always-on protection using Local Group Policy Editor:
 
 1. Open **Local Group Policy Editor**, as follows:
 
-    1. In your Windows 10 or Windows 11 taskbar search box, type **gpedit**.
+    1. In your taskbar search box, type **gpedit**.
 
     1. Under **Best match**, select **Edit group policy** to launch **Local Group Policy Editor**.
     

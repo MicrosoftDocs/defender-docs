@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1014
-ms.date: 06/16/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.reviewer: pahuijbr, yongrhee
 ms.subservice: ngp
 ms.topic: how-to
@@ -32,6 +32,8 @@ This article describes how to collect diagnostic data to send to Microsoft suppo
 > For performance-specific issues related to Microsoft Defender Antivirus, see: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 
 <a name="redirect-diagnostic-data-to-a-unc-share"></a>
+
+## Collect diagnostic data using MpCmdRun
 
 On at least two devices that are experiencing the same issue, use the following procedures to generate the diagnostic log files:
 
@@ -68,7 +70,7 @@ On at least two devices that are experiencing the same issue, use the following 
      - `<HHMM>` is the Universal Coordinated Time (UTC) when you ran the MpCmdRun command (for example 2221 for 22:21 UTC).
 
     > [!NOTE]
-    > If you don't have write access to the location specified by the command, the diagnostic log files are still saved to the default location `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab` on the local device. But the last step that copies and renames the .cab file to the `-SupportLogLocation` path fails.
+    > If you don't have write access to the location specified by the command, the diagnostic log files are still saved to the default location `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab` on the local device. But copying and renaming the .cab file to the `-SupportLogLocation` path fails.
 
      In this example, you ran the following commands on the device named LAPTOP01 on March 18 at 22:21 UTC:
 
