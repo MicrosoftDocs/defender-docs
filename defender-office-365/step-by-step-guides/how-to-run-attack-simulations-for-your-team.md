@@ -10,16 +10,19 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # How to run attack simulations for your team
 
-Attack simulation training allows you to run realistic but benign cyber attack scenarios in your organization. Simulated attacks can help you identify and find vulnerable users, policies, and practices before a real attack impacts your organization, using inbuilt or custom training to reduce risk and better educate end users about threats.
+## Overview
 
-## What you need
+Attack simulation training lets you run safe, realistic cyber attack scenarios in your organization. These simulations help you find vulnerable users, policies, and practices before a real attack hits. You can use built-in or custom training to reduce risk and help end users learn about threats. This article walks you through creating and launching a simulated phishing attack, choosing target users, and configuring training assignments. Before you start, you need Microsoft Defender for Office 365 Plan 2 and the Security Administrator role.
+
+<a name="what-you-need"></a>
+## Prerequisites
 
 Before you begin, make sure you have the following prerequisites:
 

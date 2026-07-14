@@ -10,16 +10,16 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Add Advanced Hunting community queries to Microsoft Defender and Microsoft Sentinel
 
-Creating and sharing Advanced Hunting queries in Microsoft Defender not only enhances your own security operations but also contributes to the broader community of Defender users. This guide walks you through the process of creating new or modifying existing queries, and publishing them to the **Community queries** section within the Microsoft Defender portal.
+You can create and share Advanced Hunting queries in Microsoft Defender. Shared queries help your own security work and help other Defender users find threats.
 
-Making your queries accessible to all customers helps others detect threats more effectively and promotes collaboration and shared learning across the security ecosystem.
+This guide shows you how to create or modify queries. You then publish them to the **Community queries** section in the Microsoft Defender portal. When you share queries, other customers can detect threats faster. This drives collaboration across the security community.
 
 :::image type="content" source="../media/add-advanced-hunting-community-queries-in-advanced-hunting.png" alt-text="Screenshot of community queries in Advanced Hunting in the Microsoft Defender portal." lightbox="../media/add-advanced-hunting-community-queries-in-advanced-hunting.png":::
 
@@ -27,7 +27,7 @@ Making your queries accessible to all customers helps others detect threats more
 
 - A GitHub account.
 
-- The procedures in this article use [Visual Studio Code](https://code.visualstudio.com/) (VS Code) for forking, cloning, creating, and synchronizing queries to and from the Azure Sentinel GitHub repository. Different tools with different instructions are available for forking, cloning, creating queries, and synchronizing queries.
+- This article uses [Visual Studio Code](https://code.visualstudio.com/) (VS Code) to fork, clone, create, and sync queries with the Azure Sentinel GitHub repository. You can also use other tools, but the steps might differ.
 
 - A Microsoft 365 subscription that includes Advanced Hunting. For example:
   - Microsoft Defender
@@ -118,7 +118,7 @@ The active branch changes from **master** to the new branch you created.
 
 To separate your work on different queries, you can create multiple working branches with different names by repeating the previous steps in this section.
 
-Next, create or modify Advanced Hunting queries in your working branch as described in [Step 4](#step-4-create-advanced-hunting-queries-in-the-working-branch-in-the-cloned-repository-on-your-local-computer).
+Next, create or modify Advanced Hunting queries in your working branch as described in [Create Advanced Hunting queries in the working branch](#step-4-create-advanced-hunting-queries-in-the-working-branch-in-the-cloned-repository-on-your-local-computer).
 
 ## Step 4: Create Advanced Hunting queries in the working branch in the cloned repository on your local computer
 
@@ -142,7 +142,7 @@ If it isn't, select the active branch name in the bottom left corner, and then s
 
    :::image type="content" source="../media/add-advanced-hunting-community-queries-test-query-in-advanced-hunting.png" alt-text="Screenshot of the Advanced Hunting page in the Defender portal with the previous example query and results without error." lightbox="../media/add-advanced-hunting-community-queries-test-query-in-advanced-hunting.png":::
 
-3. In the **Explorer** view of VS Code, go to one of the following parent folders based on the usage and availability of the query in the Defender portal:
+3. In the **Explorer** view of VS Code, go to one of the following folders. The folder you choose depends on where you want the query to appear:
 
    - `\Azure-Sentinel\Hunting Queries\Microsoft 365 Defender\Email Queries`: Available in the **Community queries** section on the **Queries** tab of the **Advanced hunting** page in the Defender portal at <https://security.microsoft.com/v2/advanced-hunting>.
    - `\Azure-Sentinel\Solutions\Microsoft Defender XDR\Hunting Queries\Email Queries`: Available as Sentinel queries (Microsoft Defender XDR Solution).
@@ -155,7 +155,7 @@ If it isn't, select the active branch name in the bottom left corner, and then s
 
    Use the [New-Guid](/powershell/module/microsoft.powershell.utility/new-guid) cmdlet in Windows PowerShell to create a unique GUID for the **id** property of the query file (for example, 36f68d74-3e45-44d8-9915-0d35b7567bcf).
 
-   The finished `Top users receiving phish.yaml` file looks something like this:
+   The finished `Top users receiving phish.yaml` file looks something like the following example. The `query` field contains the KQL query body that counts inbound phishing messages by recipient:
 
    ```yml
    id: 36f68d74-3e45-44d8-9915-0d35b7567bcf
@@ -185,7 +185,7 @@ If it isn't, select the active branch name in the bottom left corner, and then s
 
 ## Step 5: Synchronize the changes from your local computer to the fork in your GitHub account
 
-After you add .yaml query files in the cloned repository on your local computer, you need to synchronize those updates back to the forked copy of the Azure Sentinel repository in your GitHub account.
+After you add .yaml query files on your local computer, sync those updates back to your fork on GitHub.
 
 1. In VS Code, select the **Source Control** view.
 
@@ -201,11 +201,11 @@ After you add .yaml query files in the cloned repository on your local computer,
 
      :::image type="content" source="../media/add-advanced-hunting-community-queries-vs-code-source-control-message-and-commit.png" alt-text="Screenshot of the Source Control view in Visual Studio Code with the Message box filled out and the Commit button highlighted." lightbox="../media/add-advanced-hunting-community-queries-vs-code-source-control-message-and-commit.png":::
 
-   - If you're synchronizing the working branch and its updates into the fork in your GitHub account for the first time, you're presented with **Publish Branch** which you should select.
+   - If this is the first time you push this branch to your GitHub fork, select **Publish Branch**.
 
      :::image type="content" source="../media/add-advanced-hunting-community-queries-vs-code-source-control-publish-branch.png" alt-text="Screenshot of the Source Control view in Visual Studio Code with the Publish Branch button highlighted." lightbox="../media/add-advanced-hunting-community-queries-vs-code-source-control-publish-branch.png":::
 
-    In the future, when you synchronize local changes in the working branch into the fork in your GitHub account, you're presented with **Sync Changes** instead.
+    For later updates, select **Sync Changes** instead.
 
 ## Step 6: Create a pull request from the fork in your GitHub account to the public Azure Sentinel repository
 
@@ -224,7 +224,7 @@ After you synchronize the updates to the forked copy of the repository in your G
 
 4. If you need to make further changes, you can select **Create draft pull request** to indicate the pull request isn't ready to be reviewed and approved. However, you can usually select **Create pull request** to proceed.
 
-5. Someone with the permissions to merge the pull request will review your changes. The reviewer might request additional changes to conform with the standards of the repository. You can use [Create Advanced Hunting queries in the working branch](#step-4-create-advanced-hunting-queries-in-the-working-branch-in-the-cloned-repository-on-your-local-computer) and [Synchronize changes from your local computer to your GitHub fork](#step-5-synchronize-the-changes-from-your-local-computer-to-the-fork-in-your-github-account) to make requested changes on your local computer and synchronize them back into your fork so they're included in the pull request.
+5. Someone with the permissions to merge the pull request will review your changes. The reviewer might request additional changes to conform with the standards of the repository. You can use [Create Advanced Hunting queries in the working branch](#step-4-create-advanced-hunting-queries-in-the-working-branch-in-the-cloned-repository-on-your-local-computer) and [Synchronize the changes from your local computer to the fork in your GitHub account](#step-5-synchronize-the-changes-from-your-local-computer-to-the-fork-in-your-github-account) to make requested changes on your local computer and synchronize them back into your fork so they're included in the pull request.
 
 ## Related resources
 
