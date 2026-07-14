@@ -10,7 +10,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 06/30/2026
+ms.date: 07/10/2026
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1015
 appliesto:
@@ -24,7 +24,7 @@ appliesto:
 Microsoft Defender unified role-based access control (RBAC) provides a single permission model for all Defender workloads, including Microsoft Defender for Office 365. Unified RBAC replaces legacy Email & collaboration roles with granular permissions, custom role design, and precise control over investigation and remediation access.
 
 > [!IMPORTANT]
-> Unified RBAC will become the default permission model for new Microsoft Defender for Office 365 Plan 2 organizations. Existing organizations can manually activate Unified RBAC at any time. For more information, see [MC1246006](https://admin.microsoft.com/Adminportal/Home#/MessageCenter/:/messages/MC1246006).
+> Starting July 2026, Unified RBAC is the default permission model for new Microsoft Defender for Office 365 Plan 2 organizations. Existing organizations can manually activate Unified RBAC at any time. For more information, see [MC1246006](https://admin.microsoft.com/Adminportal/Home#/MessageCenter/:/messages/MC1246006).
 
 ## What you need
 

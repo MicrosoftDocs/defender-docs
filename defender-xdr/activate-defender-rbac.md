@@ -8,7 +8,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/10/2026
 ms.reviewer: Tomas Beerthuis
 appliesto:
 - Microsoft Defender for Endpoint Plan 2
@@ -33,6 +33,8 @@ This article lists the steps to activate Defender workloads available in your en
 
 > [!IMPORTANT]
 > Starting 2025, the Microsoft Defender unified RBAC model is the default permissions model for new Microsoft Defender Endpoint tenants and Microsoft Defender for Identity tenants. These tenants can't export roles and permissions from the old model. Defender for Endpoint or Defender for Identity tenants with roles and permissions assigned or exported prior to this date maintain their old roles and permissions configuration.
+
+Starting July 2026, the Microsoft Defender unified RBAC model is also the default permissions model for new Microsoft Defender for Office 365 Plan 2 organizations. For more information, see [MC1246006](https://admin.microsoft.com/Adminportal/Home#/MessageCenter/:/messages/MC1246006).
 
 <a name='activate-microsoft-365-defender-unified-rbac'></a>
 

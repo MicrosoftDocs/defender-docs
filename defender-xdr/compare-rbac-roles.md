@@ -11,7 +11,7 @@ ms.collection:
 ms.custom:
   - sfi-ga-nochange
 ms.topic: concept-article
-ms.date: 04/07/2026
+ms.date: 07/10/2026
 ms.reviewer:
 appliesto:
 - Microsoft Defender for Endpoint Plan 2
@@ -89,14 +89,14 @@ You configured Email & collaboration permissions in the Defender portal at <http
 
 |Email & collaboration permission|Type|Microsoft Defender unified RBAC permission|
 |---|---|---|
-|Global Reader|Role group|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Authorization and settings \ Security settings \ Core security settings (read) <br/> Authorization and settings \ System setting (read)|
-|Organization Management|Role group|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Security operations \ Security data \ Email advanced actions (manage) <br/> Security operations \ Security data \ Email quarantine (manage) <br/> Authorization and settings \ Authorization (Read and manage) <br/> Authorization and settings \ Security setting (All permissions) <br/> Authorization and settings \ System settings (Read and manage)|
-|Security Administrator|Role group|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Security operations \ Security data \ Email quarantine (manage) <br/> Authorization and settings \ Authorization (read) <br/> Authorization and settings \ Security setting (All permissions) <br/> Authorization and settings \ System settings (Read and manage)|
-|Security Reader|Role group|Security operations \ Security data \Security data basics (read) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Authorization and settings \ Security settings \ Core security settings (read) <br/> Authorization and settings \ System setting (read)|
+|Global Reader|Role group|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Authorization and settings \ Security settings \ Core security settings (read) <br/> Authorization and settings \ System setting (read)<br/>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read)|
+|Organization Management|Role group|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Security operations \ Security data \ Email advanced actions (manage) <br/> Security operations \ Security data \ Email quarantine (manage) <br/> Authorization and settings \ Authorization (Read and manage) <br/> Authorization and settings \ Security setting (All permissions) <br/> Authorization and settings \ System settings (Read and manage)<br/>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read)|
+|Security Administrator|Role group|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Security operations \ Security data \ Email quarantine (manage) <br/> Authorization and settings \ Authorization (read) <br/> Authorization and settings \ Security setting (All permissions) <br/> Authorization and settings \ System settings (Read and manage)<br/>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read)|
+|Security Reader|Role group|Security operations \ Security data \Security data basics (read) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Authorization and settings \ Security settings \ Core security settings (read) <br/> Authorization and settings \ System setting (read) <br/>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read)|
 |Audit Logs|Role|Security operations \ Security data \ Security data basics (read)|
 |Manage Alerts|Role|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage)|
 |Preview|Role|Security operations\ Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: All Emails (read)|
-|Quarantine|Role|Security operations \ Security data \ Email quarantine (manage)|
+|Quarantine|Role|Security operations \ Security data \ Email quarantine (manage) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read)|
 |Role Management|Role|Authorization and settings \ Authorization (Read and manage)|
 |Search and Purge|Role|Security operations \ Security data \ Email advanced actions (manage)|
 |View-Only Manage Alerts|Role|Security operations \ Security data \ Security data basics (read)|
@@ -115,6 +115,9 @@ You configured protection-related Exchange Online permissions in the Exchange ad
 |View-Only Organization Management|Role group|Authorization and settings \ Security settings (Read-only) <br/> Authorization and settings \ System settings (Read-only)|
 |Tenant AllowBlockList Manager|Role|Authorization and settings \ Security settings \ Detection tuning (manage)|
 |View-only Recipients|Role|Security operations \ Raw data (email & collaboration) \ Email & collaboration metadata (read)|
+|Security Reader|Role group|Authorization and settings \ Security settings \ Core security settings (read)|
+|View-Only Configuration|Role|Authorization and settings \ Security settings \ Core security settings (read)|
+|Security Operator|Role group|Authorization and settings \ Security settings \ Detection tuning (manage)|
 
 <a name='microsoft-defender-for-identity'></a>
 
