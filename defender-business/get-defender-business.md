@@ -128,7 +128,7 @@ The following table summarizes these portals and how you use them.
 |---|---|
 |Microsoft 365 admin center|<ul><li>Activate your trial and sign in for the first time.</li><li>Assign user licenses.</li><li>View your products and services.</li><li>Complete setup tasks for your Microsoft 365 subscription.</li></ul> <br/> For more information, see [Overview of the Microsoft 365 admin center](/microsoft-365/admin/admin-overview/admin-center-overview).|
 |Defender portal|<ul><li>Set up and configure Defender for Business.</li><li>Monitor your devices and threat detections</li><li>View your devices and device protection policies.</li><li>View detected threats and take action.</li><li>View security recommendations and manage your security settings.</li></ul> <br/> For more information, see [Get started using the Microsoft Defender portal](mdb-get-started.md).|
-|Intune admin center|<ul><li>Onboard iOS and Android devices.</li><li>Configure certain capabilities, such as [attack surface reduction rules](mdb-asr.md).</li></ul> <br/> For more information about Intune, see [Microsoft Intune securely manages identities, manages apps, and manages devices](/intune/intune-service/fundamentals/what-is-intune).|
+|Intune admin center|<ul><li>Onboard iOS and Android devices.</li><li>Configure certain capabilities, such as [attack surface reduction features](mdb-asr.md).</li></ul> <br/> For more information about Intune, see [Microsoft Intune securely manages identities, manages apps, and manages devices](/intune/intune-service/fundamentals/what-is-intune).|
 
 ## Next step
 

@@ -1,10 +1,11 @@
 ---
 title: Protect your Amazon Web Services environment
-description: Learn how about connecting your Amazon Web Services (AWS) environment to Defender for Cloud Apps using the API connector.
-ms.date: 11/24/2025
+description: Learn how to connect your Amazon Web Services (AWS) environment to Microsoft Defender for Cloud Apps using the API connector to monitor activities and detect threats.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # How Defender for Cloud Apps helps protect your Amazon Web Services (AWS) environment
@@ -15,12 +16,16 @@ Connecting AWS to Defender for Cloud Apps helps you secure your assets and detec
 
 ## Main threats
 
+Connecting AWS to Defender for Cloud Apps helps you detect and respond to the following threats:
+
 - Abuse of cloud resources
 - Compromised accounts and insider threats
 - Data leakage
 - Resource misconfiguration and insufficient access control
 
 ## How Defender for Cloud Apps helps to protect your environment
+
+Defender for Cloud Apps helps protect your AWS environment in the following ways:
 
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 - [Limit exposure of shared data and enforce collaboration policies](best-practices.md#limit-exposure-of-shared-data-and-enforce-collaboration-policies)
@@ -29,6 +34,9 @@ Connecting AWS to Defender for Cloud Apps helps you secure your assets and detec
 ## Control AWS with built-in policies and policy templates
 
 You can use the following built-in policy templates to detect and notify you about potential threats:
+
+> [!IMPORTANT]
+> File policies retire on January 6, 2027. To maintain file-based data protection for this app, [migrate to Microsoft Purview DLP or auto-labeling policies](migrate-file-policies-to-purview.md).
 
 | Type | Name |
 | ---- | ---- |
@@ -55,11 +63,13 @@ Review our best practices for [blocking and protecting the download of sensitive
 
 ## Connect Amazon Web Services to Microsoft Defender for Cloud Apps
 
-This section provides instructions for connecting your existing Amazon Web Services (AWS) account to Microsoft Defender for Cloud Apps using the connector APIs. For information about how Defender for Cloud Apps protects AWS, see [Protect AWS](protect-aws.md).
+Use the connector APIs to connect your existing Amazon Web Services (AWS) account to Microsoft Defender for Cloud Apps. For information about how Defender for Cloud Apps protects AWS, see [Protect AWS](protect-aws.md).
 
 You can connect AWS **Security auditing** to Defender for Cloud Apps connections to gain visibility into and control over AWS app use.
 
 ### Step 1: Configure Amazon Web Services auditing
+
+To configure AWS auditing for Defender for Cloud Apps, perform the following steps:
 
 1. Sign in to the [Amazon Web Services console](https://aws.amazon.com/console/)
 1. Add a new user for Defender for Cloud Apps, and give the user **Programmatic access**.
@@ -100,7 +110,10 @@ You can connect AWS **Security auditing** to Defender for Cloud Apps connections
    > [!NOTE]
     > After connecting AWS, you'll receive events for seven days prior to connection. If you just enabled CloudTrail, you receive events from the time you enabled CloudTrail.
 
-### Connect Amazon Web Services auditing to Defender for Cloud Apps
+<a name="connect-amazon-web-services-auditing-to-defender-for-cloud-apps"></a>
+### Step 2: Connect Amazon Web Services auditing to Defender for Cloud Apps
+
+To connect AWS auditing to Defender for Cloud Apps, complete the following steps:
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
 

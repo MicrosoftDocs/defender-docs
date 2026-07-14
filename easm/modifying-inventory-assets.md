@@ -1,12 +1,13 @@
 ---
 title: Modify Inventory Assets 
-description: This article outlines how to update assets with customized text labels to categorize and make use of inventory data.
+description: Learn how to modify Defender EASM inventory assets by changing asset state, assigning external IDs, applying labels, marking observations as non-applicable, removing assets in bulk, and tracking changes with Task Manager.
 ms.author: dandennis
 author: dandennis
 ms.service: defender-easm
-ms.date: 3/1/2022
+ms.date: 06/15/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Asset modification overview
@@ -52,9 +53,10 @@ From the drill-down view of any CVE-related chart, next to the **Download CSV re
 
 ## How to modify assets
 
-You can modify assets from both the inventory list and asset details pages. You can make changes to a single asset from the asset details page. You can make changes to a single asset or multiple assets from the inventory list page. The following sections describe how to apply changes from the two inventory views depending on your use case.
+You can modify assets from both the inventory list and asset details pages. You can make changes to a single asset from the asset details page. You can make changes to a single asset or multiple assets from the inventory list page. The [Inventory list page](#inventory-list-page) and [Asset details page](#asset-details-page) sections describe how to apply changes from each inventory view depending on your use case.
 
-### Inventory list page
+<a name="inventory-list-page"></a>
+### Modify assets from the inventory list page
 
 You should modify assets from the inventory list page if you want to update numerous assets at once. You can refine your asset list based on filter parameters. This process helps you to identify assets that should be categorized with the label, external ID or state change that you want. To modify assets from this page:
 
@@ -70,7 +72,7 @@ You should modify assets from the inventory list page if you want to update nume
 
 4. Select **Modify assets**.
 
-  ![Screenshot that shows the available modification options.](media/cves-2.png)
+  ![Screenshot that shows the Modify Assets pane with options to change state, add labels, and apply external IDs.](media/cves-2.png)
 
 5. On the **Modify Assets** pane that opens on the right side of your screen, you can quickly change various fields for the selected assets. For this example, you create a new label. Select **Create a new label**.
 
@@ -78,7 +80,7 @@ You should modify assets from the inventory list page if you want to update nume
 
   Select a color for your new label and select **Add**. This action takes you back to the **Modify Assets** screen.
 
-  ![Screenshot that shows the Add label pane that displays the configuration fields.](media/labels-4.png)
+  ![Screenshot of the Add label pane with fields to enter a label name, display text, and select a color.](media/labels-4.png)
 
 7. Apply your new label to the assets. Select inside the **Add labels** text box to view a full list of available labels. Or you can type inside the box to search by keyword. After you select the labels you want to apply, select **Update**.
 
@@ -88,7 +90,8 @@ You should modify assets from the inventory list page if you want to update nume
 
   [![Screenshot that shows the inventory list view with the selected assets now displaying the new label.](media/labels-6.png)](media/labels-6.png#lightbox)
 
-### Asset details page
+<a name="asset-details-page"></a>
+### Modify assets from the asset details page
 
 You can also modify a single asset from the asset details page. This option is ideal for situations when assets need to be thoroughly reviewed before a label or state change is applied.
 
@@ -100,7 +103,7 @@ You can also modify a single asset from the asset details page. This option is i
 
   ![Screenshot that shows the asset details page with the Modify asset button highlighted.](media/labels-7a.png)
 
-4. Follow steps 5 to 7 in the *Inventory list page* section.
+4. On the **Modify Assets** pane that opens on the right side of your screen, make your desired changes. You can change the asset state, apply an external ID, or add or remove labels. If you need to create a new label, select **Create a new label**, enter the label name and display text, select a color, and select **Add**. After you configure your changes, select **Update**.
 
 5. The asset details page refreshes and displays the newly applied label or state change. A banner indicates that the asset was successfully updated.
 
@@ -137,7 +140,9 @@ After a task is submitted, a notification confirms that the update is in progres
 ![Screenshot that shows the Task submitted notification.](media/labels-12.png)
 ![Screenshot that shows the Notifications pane that displays recent task status.](media/labels-13.png)
 
-The Defender EASM system can take seconds to update a handful of assets or minutes to update thousands. You can use the Task Manager to check on the status of any modification tasks in progress. This section outlines how to access the Task Manager and use it to better understand the completion of submitted updates.
+### Track modification tasks in Task Manager
+
+The Defender EASM system can take seconds to update a handful of assets or minutes to update thousands. You can use the Task Manager to check on the status of any modification tasks in progress. The following procedure explains how to access the Task Manager and review the completion status of submitted updates.
 
 1. On the leftmost pane of your Defender EASM resource, select **Task Manager**.
 
@@ -171,7 +176,8 @@ In some instances, you might wish to remove multiple assets at once based on the
 
  You can still view removed assets in Defender EASM; simply filter your inventory list for assets in the "Archived" state.
 
-### Seed-based deletion
+<a name="seed-based-deletion"></a>
+### Delete assets by seed
 
 You might decide that one of your initially designated discovery seeds should no longer be included in a discovery group. The seed might no longer be relevant to your organization, or it might be bringing in more false positives than legitimate owned assets. In this situation, you can remove the seed from your Discovery Group to prevent it from being used in future discovery runs while simultaneously removing any assets that have been brought to inventory through the designated seed in the past.
 
@@ -179,7 +185,8 @@ To perform a bulk removal based on a seed, route to the appropriate Discovery Gr
 
 ![Screenshot that shows the Edit Discovery Group page with a warning indicating the removal of a seed and any assets discovered through that seed.](media/chain-1.png)
 
-### Discovery chain-based deletion
+<a name="discovery-chain-based-deletion"></a>
+### Delete assets by discovery chain
 
 In the following example, imagine that you've discovered an insecure login form on your **Attack Surface Summary** dashboard. Your investigation routes you to a host that does not appear to be owned by your organization. You view the asset details page for more information; upon reviewing the Discovery chain, you learn that the host was brought into inventory because the corresponding domain was registered using an employee's corporate email address that was also used to register approved business entities.
 
@@ -187,9 +194,10 @@ In the following example, imagine that you've discovered an insecure login form 
 
 In this situation, the initial discovery seed (the corporate domain) is still legitimate so we need to instead remove a problematic asset from the discovery chain. While we could perform the chain deletion from the contact email, we'll instead elect to remove everything associated to the personal domain registered to this employee so that Defender EASM will alert us of any other domains registered to that email address in the future. From the discovery chain, select this personal domain to view the asset details page. From this view, select **Remove from discovery chain** to remove the asset from your inventory, as well as all assets brought into inventory due to an observed connection to the personal domain. You need to confirm the removal of the asset and all downstream assets and are then presented with a summarized list of the other assets that are removed with this action. Select "Remove discovery chain" to confirm the bulk removal.
 
-![Screenshot that shows the box that prompts users to confirm the removal of the current asset and all downstream assets, with a summary of the other assets that are removed with this action.](media/chain-3.png)
+![Screenshot that shows the confirmation box for removing the current asset and all downstream assets, with a summary of other assets also removed.](media/chain-3.png)
 
-### Discovery group deletion
+<a name="discovery-group-deletion"></a>
+### Delete assets by discovery group
 
 You might need to delete and entire discovery group and all the assets discovered through the group. For instance, your company might have sold a subsidiary that no longer needs to be monitored. Users can delete discovery groups from the Discovery management page. To remove a discovery group and all related assets, select the **trash bin** icon next to the appropriate group in the list. You'll receive a warning that lists a summary of the assets that will be removed with this action. To confirm the deletion of the discovery group; and all related assets, select **Remove discovery group**.
 

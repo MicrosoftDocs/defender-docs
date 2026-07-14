@@ -509,6 +509,8 @@
               href: automate-incident-handling-with-automation-rules.md
             - name: Create automation rules
               href: create-manage-use-automation-rules.md
+            - name: Create basic automation rules with Simple Flows
+              href: automation/create-basic-automation-rules-simple-flows.md
             - name: Add advanced conditions to automation rules
               href: add-advanced-conditions-to-automation-rules.md
             - name: Create incident tasks using automation rules
@@ -638,6 +640,8 @@
               href: datalake/create-graphs-with-ai.md 
             - name: GQL reference for Sentinel custom graph
               href: datalake/gql-reference-for-sentinel-custom-graph.md
+            - name: Create deep links to graph queries
+              href: datalake/create-deep-links-graph-queries.md
             - name: Graph REST API
               href: datalake/graph-rest-api.md
     - name: Microsoft Sentinel MCP server
@@ -695,7 +699,7 @@
         - name: Create KQL jobs
           href: datalake/kql-jobs.md
           displayName: data lake
-        - name: Manage KQL jobs
+        - name: Manage jobs
           href: datalake/kql-manage-jobs.md
           displayName: data lake
         - name: Compare KQL jobs, summary rules, and search jobs
@@ -853,6 +857,8 @@
           href: normalization-develop-parsers.md
         - name: Modify content to use ASIM
           href: normalization-modify-content.md
+        - name: Creating ASIM parsers using AI agent in Microsoft Sentinel
+          href: normalization-create-parsers-ai-agent.md
     - name: Aggregate data
       items:
         - name: Aggregate data with summary rules
@@ -938,45 +944,43 @@
 - name: Build and publish Microsoft Sentinel solutions
   items:
     - name: Overview
-      href: sentinel-integration-guide.md
+      href: isv/sentinel-integration-guide.md
     - name: Partner integrations best practices
-      href: partner-integrations.md
+      href: isv/partner-integrations.md
     - name: Sentinel solution quality guidelines
-      href: sentinel-solution-quality-guidance.md
+      href: isv/sentinel-solution-quality-guidance.md
     - name: Microsoft Sentinel solution setup essentials
-      href: solution-setup-essentials.md      
+      href: isv/solution-setup-essentials.md      
     - name: Sentinel SIEM content 
       items:
       - name: Create custom connectors using AI agent in Microsoft Sentinel
-        href: create-custom-connector-builder-agent.md
+        href: isv/create-custom-connector-builder-agent.md
         displayName: custom sentinel connector agent
       - name: Creating codeless data connectors (CCF)
-        href: create-codeless-connector.md
+        href: isv/create-codeless-connector.md
       - name: Creating push codeless data connectors (CCF)
-        href: create-push-codeless-connector.md
+        href: isv/create-push-codeless-connector.md
       - name: Creating analytics rules
-        href: sentinel-analytic-rules-creation.md
+        href: isv/sentinel-analytic-rules-creation.md
       - name: Creating hunting queries
-        href: sentinel-hunting-rules-creation.md
+        href: isv/sentinel-hunting-rules-creation.md
       - name: Creating summary rules
-        href: sentinel-summary-rules-creation.md
+        href: isv/sentinel-summary-rules-creation.md
       - name: Creating workbooks
-        href: sentinel-workbook-creation.md
+        href: isv/sentinel-workbook-creation.md
       - name: Creating playbooks
-        href: sentinel-playbook-creation.md
-      - name: Creating ASIM parsers
-        href: normalization-develop-parsers.md
-        displayName: Build solutions
+        href: isv/sentinel-playbook-creation.md
+
     - name: Publish solutions
-      href: publish-sentinel-solutions.md
+      href: isv/publish-sentinel-solutions.md
     - name: Sentinel SIEM solution lifecycle post publish
-      href: sentinel-solutions-post-publish-tracking.md
+      href: isv/sentinel-solutions-post-publish-tracking.md
     - name: Packaging and publishing a Sentinel platform solution
-      href: package-platform-solution.md
+      href: isv/package-platform-solution.md
     - name: Managing Platform Solutions
-      href: manage-platform-solutions.md
+      href: isv/manage-platform-solutions.md
     - name: Troubleshoot solutions in Microsoft Sentinel
-      href: troubleshoot-sentinel-solutions.md
+      href: isv/troubleshoot-sentinel-solutions.md
     - name: Remove Microsoft Sentinel from your workspace
       items:
         - name: Overview

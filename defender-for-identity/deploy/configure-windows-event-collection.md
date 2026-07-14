@@ -1,9 +1,10 @@
 ---
 title: Configure Windows event auditing
 description: Configure Windows event auditing for Defender for Identity sensors. Learn automatic, manual, and PowerShell methods to enable required audit policies.
-ms.date: 05/07/2026
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.custom:
+  - msecd-doc-authoring-1014
   - msecd-doc-authoring-106
   - sfi-image-nochange
 ms.reviewer: rlitinsky
@@ -23,7 +24,7 @@ Configure auditing using one of these methods:
 
 Defender for Identity generates health alerts when it detects incorrect Windows event auditing configurations. For more information, see [Microsoft Defender for Identity health alerts](../health-alerts.md).
 
-If you configure auditing properly, it has minimal effect on server performance.
+If you configure auditing properly, Windows event auditing has minimal effect on server performance.
 
 ## Configure Defender for Identity to collect Windows events automatically
 
@@ -45,15 +46,18 @@ When enabled, the sensor automatically:
     - **Directory services advanced auditing**: Adds audit entries to the domain root object's System Access Control List (SACL) to enable required directory service auditing.
     - **NTLM auditing**: Uses standard Windows Registry APIs to configure the required NTLM auditing registry values.
     - **Domain object auditing**: Modifies the SACL on the Configuration partition to capture changes to directory service configuration objects.
-    - **ADFS auditing**: Adds audit entries to the object's System Access Control List (SACL) of the AD FS configuration container, to enable auditing of AD FS-related directory objects.
-    - **Windows audit policy**: Configures the local Windows audit policies using the Windows Local Security Authority (LSA) audit policy APIs.
+    - **AD FS auditing**: Automatically configures both of the following:
+        - **Object-level auditing on the AD FS configuration container**: Adds audit entries to the object's System Access Control List (SACL) of the AD FS configuration container, to enable auditing of AD FS-related directory objects.
+        - **Group Policy for event auditing**: Configures the **Audit Application Generated** advanced audit policy (Success and Failure) on the local system by using the Windows Local Security Authority (LSA) audit policy APIs under the sensor's local system account. Other AD FS auditing settings aren't included in automatic auditing and remain manual, such as AD FS event auditing in AD FS Management and verbose logging for AD FS events.
+    - **AD CS auditing**: Writes the required value to the certificate authority (CA) audit filter in the CA's registry configuration. Automatic auditing modifies an audit filter that's already set to some value; it doesn't create one, so the CA must already have an audit filter configured. The new value takes effect only after the Certificate Services (certsvc) service restarts. Until the service is restarted, Defender for Identity raises a health alert that prompts you to restart it.
+    - **Microsoft Entra Connect auditing**: Configures the **Audit Logon** advanced audit policy (Success and Failure) on Microsoft Entra Connect servers by using the Windows LSA audit policy APIs.
+    - **Windows audit policy**: Configures the local Windows audit policies using the Windows LSA audit policy APIs.
 - Applies auditing settings directly to the local system policy of the domain controller.
-- Sends health alerts about the configuration state.
 - Runs once every 24 hours.
 
 > [!NOTE]
-> - Automatic Windows event auditing is supported for domain controllers that use the Defender for Identity sensor version 3.x only. It doesn't apply to v2.x domain controllers or to AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers. For those servers, [configure Windows event auditing manually](#configure-windows-event-collection-manually).
-> - If you don't turn on automatic Windows auditing, you **must** configure Windows event auditing either [manually](#configure-windows-event-collection-manually) or by using [PowerShell](#configure-windows-event-collection-using-powershell).
+> - Automatic Windows event auditing is supported for domain controllers, or AD FS, AD CS, and Microsoft Entra Connect servers, that use the Defender for Identity sensor version 3.x only. It doesn't apply to v2.x domain controllers. For those servers, [configure Windows event auditing manually](#configure-windows-event-collection-manually).
+> - If you don't turn on automatic Windows auditing, you **must** [configure Windows event auditing manually](#configure-windows-event-collection-manually) or by [configuring Windows event collection using PowerShell](#configure-windows-event-collection-using-powershell).
 > - GPO settings can conflict with local settings set by the sensor.
 
 ## Required Windows events
@@ -207,12 +211,12 @@ This section describes how to modify your domain controller's Audit (Premium) Po
         | Audit policy | Subcategory | Triggers event IDs |
         | --- |---|---|
         | **Account Logon** | **Audit Credential Validation** | 4776 |
-        | **Account Management** | **Audit Computer Account Management**<sup>[*](#failure)</sup> | 4741, 4743 |
-        | **Account Management** | **Audit Distribution Group Management**<sup>[*](#failure)</sup> | 4753, 4763 |
-        | **Account Management** | **Audit Security Group Management**<sup>[*](#failure)</sup> | 4728, 4729, 4730, 4732, 4733, 4756, 4757, 4758 |
+        | **Account Management** | **Audit Computer Account Management**<sup>[See note](#failure)</sup> | 4741, 4743 |
+        | **Account Management** | **Audit Distribution Group Management**<sup>[See note](#failure)</sup> | 4753, 4763 |
+        | **Account Management** | **Audit Security Group Management**<sup>[See note](#failure)</sup> | 4728, 4729, 4730, 4732, 4733, 4756, 4757, 4758 |
         | **Account Management** | **Audit User Account Management** | 4726 |
-        | **DS Access** | **Audit Directory Service Changes**<sup>[*](#failure)</sup> | 5136  |
-        | **System** | **Audit Security System Extension**<sup>[*](#failure)</sup> | 7045 |
+        | **DS Access** | **Audit Directory Service Changes**<sup>[See note](#failure)</sup> | 5136  |
+        | **System** | **Audit Security System Extension**<sup>[See note](#failure)</sup> | 7045 |
         | **DS Access** | **Audit Directory Service Access** | 4662 - For this event, you must also [configure domain object auditing](#configure-domain-object-auditing).  |
 
         > [!NOTE]
@@ -470,6 +474,8 @@ The following commands show how to modify your domain controller's Audit (Premiu
 
 **To view your audit policies:**
 
+Use the `Get-MDIConfiguration` cmdlet to retrieve the current Defender for Identity configuration values in domain or local machine mode:
+
 ```powershell
 Get-MDIConfiguration [-Mode] <String> [-Configuration] <String[]>
 ```
@@ -480,6 +486,8 @@ Where:
 - `Configuration` specifies which configuration to get. Use `All` to get all configurations.
 
 **To configure your settings:**
+
+Use the following syntax to apply one or more Defender for Identity configurations in domain or local machine mode:
 
 ```powershell
 Set-MDIConfiguration [-Mode] <String> [-Configuration] <String[]> [-CreateGpoDisabled] [-SkipGpoLink] [-Force]
@@ -493,7 +501,7 @@ Where:
 - `SkipGpoLink` specifies that GPO links aren't created.
 - `Force` specifies that the configuration is set or GPOs are created without validating the current state.
 
-The following command defines all settings for the domain, creates group policy objects, and links them.
+The following example applies the full recommended Defender for Identity configuration set through Group Policy in domain mode, creates the group policy objects, and links them:
 
 ```powershell
 Set-MDIConfiguration -Mode Domain -Configuration All
@@ -501,7 +509,7 @@ Set-MDIConfiguration -Mode Domain -Configuration All
 
 ## Update legacy configurations
 
-Defender for Identity no longer requires logging 1,644 events. If you enabled either of the following settings, remove them from the registry.
+Defender for Identity no longer requires logging 1,644 events. If you enabled either of the following settings, remove them from the registry. These registry values configured NTDS diagnostic logging levels and search thresholds that were previously required for event 1644 collection but are no longer needed.
 
 ```reg
 Windows Registry Editor Version 5.00

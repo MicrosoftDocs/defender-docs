@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "defender-endpoint/get-started-partner-integration.md",
+      "redirect_url": "https://partner.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/professional-services.md",
+      "redirect_url": "https://marketplace.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-endpoint/troubleshoot-asr-rules.md",
       "redirect_url": "/defender-endpoint/attack-surface-reduction-rules-monitor",
       "redirect_document_id": false
@@ -143,6 +153,36 @@
     {
       "source_path": "defender-endpoint/non-windows.md",
       "redirect_url": "/defender-endpoint/microsoft-defender-endpoint",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/evaluate-controlled-folder-access.md",
+      "redirect_url": "/defender-endpoint/controlled-folder-access-monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/controlled-folders.md",
+      "redirect_url": "/defender-endpoint/controlled-folder-access-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/enable-controlled-folders.md",
+      "redirect_url": "/defender-endpoint/controlled-folder-access-configure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/customize-controlled-folders.md",
+      "redirect_url": "/defender-endpoint/controlled-folder-access-configure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/defender-endpoint-demonstration-controlled-folder-access-test-tool.md",
+      "redirect_url": "/defender-endpoint/defender-endpoint-demonstration-controlled-folder-access-block-app",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/defender-endpoint-demonstration-controlled-folder-access.md",
+      "redirect_url": "/defender-endpoint/defender-endpoint-demonstration-controlled-folder-access-ransomware",
       "redirect_document_id": true
     },
     {

@@ -93,7 +93,7 @@ Alerts can be classified as false positives or true positives in the Microsoft D
 
 ### Suppress an alert
 
-If you have alerts that are either false positives or that are true positives but for unimportant events, you can suppress those alerts in Microsoft Defender XDR. Suppressing alerts helps reduce noise in your queue.
+If you have alerts that are either false positives or that are true positives but for unimportant events, you can suppress those alerts in the Defender portal. Suppressing alerts helps reduce noise in your queue.
 
 1. In the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139), in the navigation pane, choose **Incidents & alerts** and then select **Alerts**.
 
@@ -278,39 +278,27 @@ In general, you shouldn't need to define exclusions for Microsoft Defender Antiv
 
 #### Use Intune to manage antivirus exclusions (for existing policies)
 
-1. In the [Microsoft Intune admin center](https://intune.microsoft.com), choose **Endpoint security** \> **Antivirus**, and then select an existing policy. (If you don't have an existing policy, or you want to create a new policy, skip to [Use Intune to create a new antivirus policy with exclusions](#use-intune-to-create-a-new-antivirus-policy-with-exclusions).)
+To manage antivirus exclusions with Microsoft Intune, see <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (opens in a new tab in the Intune documentation). Choose the following options:
 
-1. Choose **Properties**, and next to **Configuration settings**, choose **Edit**.
-
-1. Expand **Microsoft Defender Antivirus Exclusions** and then specify your exclusions.
-
-   - **Excluded Extensions** are exclusions that you define by file type extension. These extensions apply to any file name that has the defined extension without the file path or folder. Separate each file type in the list must be separated with a `|` character. For example, `lib|obj`. For more information, see [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#excludedextensions).
-   - **Excluded Paths** are exclusions that you define by their location (path). These types of exclusions are also known as file and folder exclusions. Separate each path in the list with a `|` character. For example, `C:\Example|C:\Example1`. For more information, see [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#excludedpaths).
-   - **Excluded Processes** are exclusions for files that are opened by certain processes. Separate each file type in the list with a `|` character. For example, `C:\Example. exe|C:\Example1.exe`. These exclusions aren't for the actual processes. To exclude processes, you can use file and folder exclusions. For more information, see [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#excludedprocesses).
-
-1. Choose **Review + save**, and then choose **Save**.
+- **Policy**: **Antivirus**, then select your Microsoft Defender Antivirus policy
+- **Microsoft Defender Antivirus Exclusions**: Specify your exclusions.
+  - **Excluded Extensions** are exclusions that you define by file type extension. These extensions apply to any file name that has the defined extension without the file path or folder. Separate each file type in the list must be separated with a `|` character. For example, `lib|obj`. For more information, see [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#excludedextensions).
+  - **Excluded Paths** are exclusions that you define by their location (path). These types of exclusions are also known as file and folder exclusions. Separate each path in the list with a `|` character. For example, `C:\Example|C:\Example1`. For more information, see [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#excludedpaths).
+  - **Excluded Processes** are exclusions for files that are opened by certain processes. Separate each file type in the list with a `|` character. For example, `C:\Example. exe|C:\Example1.exe`. These exclusions aren't for the actual processes. To exclude processes, you can use file and folder exclusions. For more information, see [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#excludedprocesses).
 
 #### Use Intune to create a new antivirus policy with exclusions
 
-1. In the [Microsoft Intune admin center](https://intune.microsoft.com), choose **Endpoint security** \> **Antivirus** \> **+ Create Policy**.
+To create a new antivirus policy with exclusions in Microsoft Intune, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
 
-1. Select a platform (such as **Windows 10, Windows 11, and Windows Server**).
-
-1. For **Profile**, select **Microsoft Defender Antivirus exclusions**, and then choose **Create**.
-
-1. On the **Create profile** step, specify a name and description for the profile, and then choose **Next**.
-
-1. On the **Configuration settings** tab, specify your antivirus exclusions, and then choose **Next**.
-
-   - **Excluded Extensions** are exclusions that you define by file type extension. These extensions apply to any file name that has the defined extension without the file path or folder. Separate each file type in the list with a `|` character. For example, `lib|obj`. For more information, see [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#excludedextensions).
-   - **Excluded Paths** are exclusions that you define by their location (path). These types of exclusions are also known as file and folder exclusions. Separate each path in the list with a `|` character. For example, `C:\Example|C:\Example1`. For more information, see [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#excludedpaths).
-   - **Excluded Processes** are exclusions for files that are opened by certain processes. Separate each file type in the list with a `|` character. For example, `C:\Example. exe|C:\Example1.exe`. These exclusions aren't for the actual processes. To exclude processes, you can use file and folder exclusions. For more information, see [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#excludedprocesses).
-
-1. On the **Scope tags** tab, if you're using scope tags in your organization, specify scope tags for the policy you're creating. (See [Scope tags](/intune/intune-service/fundamentals/scope-tags).)
-
-1. On the **Assignments** tab, specify the users and groups to whom your policy should be applied, and then choose **Next**. (If you need help with assignments, see [Assign user and device profiles in Microsoft Intune](/intune/intune-service/configuration/device-profile-assign).)
-
-1. On the **Review + create** tab, review the settings, and then choose **Create**.
+- **Policy type**: Antivirus
+- **Platform**: Windows 10, Windows 11, and Windows Server
+- **Profile**: Microsoft Defender Antivirus exclusions
+- **Configuration settings**: Specify your antivirus exclusions.
+  - **Excluded Extensions** are exclusions that you define by file type extension. These extensions apply to any file name that has the defined extension without the file path or folder. Separate each file type in the list with a `|` character. For example, `lib|obj`. For more information, see [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#excludedextensions).
+  - **Excluded Paths** are exclusions that you define by their location (path). These types of exclusions are also known as file and folder exclusions. Separate each path in the list with a `|` character. For example, `C:\Example|C:\Example1`. For more information, see [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#excludedpaths).
+  - **Excluded Processes** are exclusions for files that are opened by certain processes. Separate each file type in the list with a `|` character. For example, `C:\Example. exe|C:\Example1.exe`. These exclusions aren't for the actual processes. To exclude processes, you can use file and folder exclusions. For more information, see [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#excludedprocesses).
+- **Scope tags**: If you're using scope tags in your organization, specify scope tags for the policy you're creating. (See [Scope tags](/intune/intune-service/fundamentals/scope-tags).)
+- **Assignments**: specify the users and groups to whom your policy should be applied, and then choose **Next**. (If you need help with assignments, see [Assign user and device profiles in Microsoft Intune](/intune/intune-service/configuration/device-profile-assign).)
 
 ## Part 4: Submit a file for analysis
 

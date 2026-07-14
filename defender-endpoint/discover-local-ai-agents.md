@@ -7,8 +7,6 @@ ms.service: defender-endpoint
 ms.topic: overview
 ms.date: 05/27/2026
 ai-usage: ai-assisted
-appliesto:
-  - Microsoft Defender for Endpoint Plan 2
 #customer intent: As a security administrator, I want to discover and monitor local AI agents on my organization's devices so that I can manage AI-related security risks on endpoints.
 ---
 
@@ -27,11 +25,11 @@ In this article, you learn how to view discovered agents in the inventory, explo
 
 Before you can discover local AI agents on endpoints, make sure you meet the following requirements:
 
-- Your devices are onboarded to [Microsoft Defender for Endpoint](/defender-endpoint/onboard-configure).
-- Your devices run a supported version of Windows, and Microsoft Defender Antivirus is updated with current monthly platform and engine updates.
-- Your organization has the applicable Plan 2 license.
-- Your devices are running Microsoft Defender Antivirus in active mode.
 - Your environment is in the commercial cloud. Sovereign and national clouds aren't supported.
+- Your organization has a Microsoft Defender for Endpoint Plan 2, Microsoft 365 E5, Microsoft Agent 365, or Microsoft 365 E7 license.
+- Your devices are [onboarded to Microsoft Defender for Endpoint](onboard-configure.md).
+- Your devices run a supported version of Windows or macOS, and Microsoft Defender Antivirus is updated with current monthly platform and engine updates.
+- Your devices are running Microsoft Defender Antivirus in active mode with real-time protection enabled in Windows Security.
 
 You don't need additional deployment, configuration, or scripts beyond the device onboarding requirements. If the device meets all of the prerequisites, agent discovery begins automatically.
 

@@ -2,8 +2,10 @@
 title: Release notes
 description: This page is updated frequently with the latest updates in Microsoft Security Exposure Management.
 ms.topic: overview
-ms.date: 05/18/2026
-
+ms.author: dlanger
+author: dlanger
+ms.date: 06/30/2026
+ai-usage: ai-assisted
 ---
 
 # What's new in Microsoft Security Exposure Management
@@ -19,6 +21,73 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 > Get notified when this page is updated by copying and pasting the following URL into your feed reader:
 >
 > `https://aka.ms/msem/rss`
+
+## July 2026
+
+### Codename MDASH - Agentic code scanner public preview
+
+Codename MDASH - Agentic code scanner is now available in public preview in Microsoft Security Exposure Management.
+
+Codename MDASH uses a multi-model agentic AI system to detect code vulnerabilities with greater depth and accuracy than traditional static analysis. Security teams can run scans from Defender CLI or through a GitHub connector, review findings in the Defender portal, and use results to help prioritize code security risks.
+
+For more information, see [Agentic code security overview](ai-code-security-overview.md).
+
+### OT data connectors in Microsoft Security Exposure Management
+
+Microsoft Security Exposure Management now supports operational technology (OT) data connectors for Armis, Dragos, and Forescout.
+
+OT data connectors bring OT asset and vulnerability data from supported third-party OT platforms into the Defender portal. This helps security teams view OT devices alongside other assets, enrich device inventory with OT context, and investigate vulnerabilities across IT and OT environments.
+
+For more information, see [OT data connectors](ot-data-connectors.md).
+
+## June 2026
+ 
+### New predefined classifications for AI agents
+
+The following predefined **AI agent** classification rules were added to the critical assets list:
+
+| Classification | Description |
+| -------------- | ----------- |
+| Executive-Sponsored AI Agent | This rule applies to AI agents that are created or owned by senior executives in the organization. As such, these agents may be granted access to sensitive data and act on the executive's behalf. Compromise could lead to unauthorized actions performed under executive authority, and exposure of sensitive executive-level data - without the executive's identity being directly compromised. |
+| AI Agent with Privileged Business System Write Access | This rule applies to AI agents configured with tools that can perform high-risk write operations on business-critical systems. These operations include creating, modifying, and deleting records such as sales orders, customer data, financial transactions, and legal agreements. Compromise could lead to significant business impact. |
+
+For more information, see [Predefined classifications](predefined-classification-rules-and-levels.md).
+
+### New predefined classifications
+
+The following predefined **Identity** classification rules were added to the critical assets list:
+
+| Classification | Description |
+| -------------- | ----------- |
+| Widespread Local Admin on Servers | This rule applies to identities that are configured as local administrators on a high number of servers in the environment. |
+| Widespread Local Admin on Workstations | This rule applies to identities that are configured as local administrators on a high number of workstations in the environment. |
+| Widespread Local Admin on Servers and Workstations | This rule applies to identities that are configured as local administrators on a high number of both servers and workstations in the environment. **Note**: This rule logic relies on the predefined critical identity classifications "Widespread Local Admin on Servers" and "Widespread Local Admin on Workstations". |
+
+For more information, see [Predefined classifications](predefined-classification-rules-and-levels.md).
+
+### New predefined classifications
+
+The following predefined **SaaS application** classification rules were added to the critical assets list. These classifications require onboarding to Microsoft Defender for Cloud Apps.
+
+| Classification | Description |
+| -------------- | ----------- |
+| Microsoft Entra ID | Core identity and access control plane for the tenant. Compromise can enable tenant-wide privilege escalation, persistent access, role manipulation, token abuse, application ownership takeover, and conditional access or policy tampering. |
+| Microsoft Azure | Cloud infrastructure and management plane for workloads, networking, storage, and secrets. Compromise can result in full environment takeover, workload disruption, secret exposure, and governance/control-plane abuse. |
+| Microsoft 365 Defender | Unified security operations and detection platform for identities, endpoints, email, and cloud apps. Compromise can blind detection, suppress or manipulate incidents and alerts, and interfere with security response actions. |
+| Microsoft Intune | Endpoint management and compliance control plane for enterprise devices. Compromise can enable device reconfiguration, remote wipe/reset, BitLocker key access, policy tampering, and fleet-wide operational disruption. |
+| Microsoft Dynamics 365 | Business-critical CRM and ERP platform containing customer, financial, operational, and service data. Compromise can lead to business-data exposure, process abuse, and high-impact operational disruption. |
+| Microsoft Purview | Governance, compliance, and information protection platform for eDiscovery, DLP, labeling, and lifecycle controls. Compromise can cause severe compliance, legal, and regulatory impact through abuse of highly privileged governance capabilities. |
+| Microsoft SharePoint Online | Enterprise content and collaboration backbone with tenant-wide access to sites, files, and document repositories. Compromise can enable bulk data exfiltration, ransomware-style impact, and widespread document exposure. |
+| Microsoft Teams | Organization-wide collaboration and communication hub for chats, meetings, calls, and files. Compromise can enable surveillance, internal reconnaissance, lateral movement, and abuse of integrated SharePoint and Exchange content. |
+| Microsoft Exchange Online | Primary organizational email and calendaring surface. Compromise can enable mailbox access, impersonation, phishing/BEC operations, message manipulation, and large-scale email data exfiltration. |
+| Microsoft OneDrive | User and enterprise cloud file storage platform with scalable access to user content. Compromise can enable silent bulk exfiltration of sensitive files at scale. |
+| Microsoft Office Online | Web-based productivity layer for document interaction for Word, Excel, and PowerPoint via browser workflows. Compromise can amplify access to enterprise documents through inherited SharePoint and OneDrive-connected data paths. |
+| Microsoft Power Apps | Low-code application platform capable of connecting to business systems and data sources. Compromise can turn applications into access brokers and indirectly expose or manipulate critical connected systems. |
+| Microsoft Power Automate | Workflow automation platform that enables headless data movement and orchestration for services and connectors. Compromise can support persistence, silent data transfer, and chaining throughout enterprise applications. |
+| Microsoft Power BI | Business intelligence and reporting platform with access to strategic, financial, and operational analytics. Compromise can expose sensitive insight data, reports, and dashboards used for decision-making. |
+| Microsoft Universal Print | Cloud print management service with service-specific printer and print-job permissions. Compromise is typically limited to a niche workload and has relatively low enterprise-wide security impact compared to core control planes. |
+
+For more information, see [Predefined classifications](predefined-classification-rules-and-levels.md).
 
 ## May 2026
 
@@ -354,7 +423,7 @@ For more information on understanding data from external sources, see [Getting v
 
 ### OT security initiative
 
-The new Operational Technology (OT) security initiative equips practitioners with a powerful tool to identify, monitor, and mitigate risks across the OT environment, ensuring both operational reliability and safety. This initiative aims to identify devices across physical sites, assess their associated risks, and provide faster, more effective protection for OT systems.
+The new OT security initiative equips practitioners with a powerful tool to identify, monitor, and mitigate risks across the OT environment, ensuring both operational reliability and safety. This initiative aims to identify devices across physical sites, assess their associated risks, and provide faster, more effective protection for OT systems.
 
 For more information, see, [Review security initiatives](initiatives.md)
 
@@ -528,3 +597,4 @@ For more information, see, [Query the enterprise exposure graph](query-enterpris
 - **Blog** - [Critical Asset Protection with Microsoft Security Exposure Management](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/critical-asset-protection-with-microsoft-security-exposure/ba-p/4122645)
 
 For more information, see, [Overview of critical asset management](critical-asset-management.md)
+

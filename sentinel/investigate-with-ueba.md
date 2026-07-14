@@ -1,14 +1,15 @@
 ---
-title: Investigate incidents with UEBA data | Microsoft Docs
+title: Investigate incidents with UEBA data
 description: Learn how to use UEBA data while investigating to gain greater context to potentially malicious activity occurring in your organization.
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: mshechter
 ms.topic: how-to
-ms.date: 11/09/2021
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 #Customer intent: As a security analyst, I want to use User and Entity Behavior Analytics (UEBA) data to investigate incidents so that I can identify and respond to potential security threats more effectively.
 ---
 
@@ -31,7 +32,7 @@ Start looking for machine powered insights about one week after enabling UEBA.
 
 In the Defender portal, a **UEBA Anomalies** tag identifies users with anomalies, making it easier to prioritize investigations.
 
-The **Top UEBA anomalies** section - which appears on the User side panel and the **Overview** tab of the User entity page - displays the user's top three anomalies from the last 30 days. Select the links at the bottom of this section to hunt for all of the user's anomalies and view the Sentinel events timeline.
+The **Top UEBA anomalies** section - which appears on the User side panel and the **Overview** tab of the User entity page - displays the user's top three anomalies from the last 30 days. Select the links at the bottom of the **Top UEBA anomalies** section to hunt for all of the user's anomalies and view the Sentinel events timeline.
 
 :::image type="content" source="media/investigate-with-ueba/entity-behavior-analytics-user-investigations.png" alt-text="Screenshot that shows the overview tab of the User page for a user with UEBA anomalies in the last 30 days." lightbox="media/investigate-with-ueba/entity-behavior-analytics-user-investigations.png":::
 
@@ -86,9 +87,9 @@ For example, for an **Impossible travel** incident, after confirming with the us
 
 For example:
 
-[ ![Open an incident's user entity page.](media/ueba/open-entity-pages.png) ](media/ueba/open-entity-pages.png#lightbox)
+[ ![Screenshot of an incident's user entity page showing user details and commonly known locations.](media/ueba/open-entity-pages.png) ](media/ueba/open-entity-pages.png#lightbox)
 
-The user entity page is also linked from the [incident page](investigate-cases.md#how-to-investigate-incidents) itself and the [investigation graph](investigate-cases.md#use-the-investigation-graph-to-deep-dive).
+The user entity page is also linked from the [incident page](investigate-cases.md#how-to-investigate-incidents) and from the [investigation graph](investigate-cases.md#use-the-investigation-graph-to-deep-dive).
 
 > [!TIP]
 > After confirming the data on the user entity page for the specific user associated with the incident, go to the Microsoft Sentinel **Hunting** area to understand whether the user's peers usually connect from the same locations as well. If so, this knowledge would make an even stronger case for a false positive.
@@ -100,7 +101,7 @@ The user entity page is also linked from the [incident page](investigate-cases.m
 
 As attackers often use the organization's own user and service accounts, data about those user accounts, including the user identification and privileges, are crucial for the analysts in the process of an investigation.
 
-Embed data from the **IdentityInfo table** to fine-tune your analytics rules to fit your use cases, reducing false positives, and possibly speeding up your investigation process.
+The **IdentityInfo** table is a Microsoft Sentinel UEBA table that stores identity attributes such as user metadata, group memberships, and Microsoft Entra roles, synchronized from your Microsoft Entra workspace. Embed data from the **IdentityInfo** table to fine-tune your analytics rules to fit your use cases, reducing false positives, and possibly speeding up your investigation process.
 
 For example:
 
@@ -129,7 +130,7 @@ For example:
 
 The **IdentityInfo** table synchronizes with your Microsoft Entra workspace to create a snapshot of your user profile data, such as user metadata, group information, and Microsoft Entra roles assigned to each user. For more information, see [IdentityInfo table](ueba-reference.md#identityinfo-table) in the UEBA enrichments reference.
 
-See more information on the following items used in the preceding examples, in the Kusto documentation:
+See more information on the following operators and functions used in the SecurityEvent and SigninLogs query examples, in the Kusto documentation:
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
 - [***join*** operator](/kusto/query/join-operator?view=microsoft-sentinel&preserve-view=true)
 - [***summarize*** operator](/kusto/query/summarize-operator?view=microsoft-sentinel&preserve-view=true)
@@ -178,7 +179,7 @@ The Investigation graph includes a node for the detonated URL, as well as the fo
 
 For example:
 
-:::image type="content" source="media/investigate-with-ueba/url-detonation-example.png" alt-text="Sample URL detonation shown in the Investigation graph.":::
+:::image type="content" source="media/investigate-with-ueba/url-detonation-example.png" alt-text="Screenshot of a sample URL detonation shown in the Investigation graph.":::
 
 > [!TIP]
 > If you don't see URLs in your logs, check that URL logging, also known as threat logging, is enabled for your secure web gateways, web proxies, firewalls, or legacy IDS/IPS.

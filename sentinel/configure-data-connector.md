@@ -124,6 +124,6 @@ For more information about solutions and data connectors in Microsoft Sentinel, 
 - [Connect Microsoft Sentinel to Azure, Windows, Microsoft, and Amazon services](connect-azure-windows-microsoft-services.md)
 - [What is Microsoft Sentinel data lake?](datalake/sentinel-lake-overview.md)
 - [Onboarding to Microsoft Sentinel data lake](datalake/sentinel-lake-onboarding.md)
-- [Manage data tiers and retention in Microsoft Defender Portal](manage-data-overview.md). 
+- [Manage data tiers and retention in Microsoft Defender Portal](manage-data-overview.md)
 - [KQL and the Microsoft Sentinel data lake](datalake/kql-overview.md)
 - [Jupyter notebooks and the Microsoft Sentinel data lake](datalake/notebooks-overview.md)

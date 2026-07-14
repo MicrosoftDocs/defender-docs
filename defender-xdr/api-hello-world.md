@@ -160,11 +160,11 @@ You're all done! You've successfully:
 
 ## Related articles
 
-- [Microsoft Defender XDR APIs overview](api-overview.md)
+- [Microsoft Defender APIs overview](api-overview.md)
 - [Access the Microsoft Defender XDR APIs](api-access.md)
 - [Create an app to access Microsoft Defender XDR without a user](api-create-app-web.md)
-- [Create an app to access Microsoft Defender XDR APIs on behalf of a user](api-create-app-user-context.md)
-- [Create an app with multitenant partner access to Microsoft Defender XDR APIs](api-partner-access.md)
+- [Create an app to access Microsoft Defender APIs on behalf of a user](api-create-app-user-context.md)
+- [Create an app with multitenant partner access to Microsoft Defender APIs](api-partner-access.md)
 - [Manage secrets in your server apps with Azure Key Vault](/training/modules/manage-secrets-with-azure-key-vault/)
 - [OAuth 2.0 Authorization for user sign in and API access](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

@@ -1,5 +1,5 @@
 ---
-title: The Advanced Security Information Model (ASIM) Process Event normalization schema reference | Microsoft Docs
+title: The Advanced Security Information Model (ASIM) Process Event normalization schema reference
 description: This article describes the Microsoft Sentinel Process Event normalization schema.
 ms.author: edbaynash
 author: EdB-MSFT
@@ -57,6 +57,7 @@ The following filtering parameters are available:
 | **targetusername_has** or **actorusername_has** | string| Filter only process events for which the target username (for process create events), or actor username (for process terminate events) has any of the listed values. The length of the list is limited to 10,000 items. |
 | **dvcipaddr_has_any_prefix** | dynamic | Filter only process events for which the device IP address matches any of the listed IP addresses or IP address prefixes. Prefixes should end with a `.`, for example: `10.0.`. The length of the list is limited to 10,000 items.| 
 | **dvchostname_has_any**| dynamic | Filter only process events for which the device hostname, or device FQDN is available,  has any of the listed values. The length of the list is limited to 10,000 items. | 
+| **hashes_has_any** | dynamic | Filter only process events for which any of the target process hashes matches any of the listed values. |
 | **eventtype**| string | Filter only process events of the specified type. |
 
 For example, to filter only authentication events from the last day to a specific user, use:

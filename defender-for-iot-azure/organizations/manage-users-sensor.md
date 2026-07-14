@@ -1,13 +1,15 @@
 ---
 title: Create and manage users on an OT network sensor - Microsoft Defender for IoT
 description: Create and manage on-premises users on a Microsoft Defender for IoT OT network sensor.
-ms.date: 12/19/2023
+ms.date: 06/12/2026
 ms.topic: how-to
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 # Create and manage users on an OT network sensor
 
-Microsoft Defender for IoT provides tools for managing on-premises user access in the OT network sensor. Azure users are managed [at the Azure subscription level](manage-users-overview.md) using Azure RBAC.
+Microsoft Defender for IoT provides tools for managing on-premises user access in the OT network sensor. Azure users are managed [using Azure RBAC at the Azure subscription level](manage-users-overview.md).
 
 This article describes how to manage on-premises users directly on an OT network sensor.
 
@@ -93,6 +95,9 @@ This procedure describes how to create new users for a specific OT network senso
 Your new user is added and is listed on the sensor **Users** page.
 
 To edit a user, select the **Edit** :::image type="icon" source="media/manage-users-on-premises-management-console/icon-edit.png" border="false"::: icon for the user you want to edit, and change any values as needed.
+
+> [!WARNING]
+> Deleting a user removes that account from the sensor. This action can't be undone. Confirm that the user no longer needs access before you continue.
 
 To delete a user, select the **Delete** button for the user you want to delete.
 

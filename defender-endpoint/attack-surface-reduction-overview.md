@@ -32,7 +32,7 @@ Attack surface reduction in Defender for Endpoint includes the following capabil
 
 - **Attack surface reduction (ASR) rules** constrain risky software behaviors that attackers exploit, such as launching executables that attempt to download files, running obfuscated scripts, or performing actions that apps don't normally initiate during day-to-day work. For more information, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
 
-- **Controlled folder access** protects valuable data from malicious apps and threats like ransomware. It checks apps against a list of known, trusted apps and prevents untrusted apps from modifying files in protected folders. For more information, see [Protect important folders with controlled folder access](controlled-folders.md).
+- **Controlled folder access** (CFA) protects valuable data from malicious apps and threats like ransomware. It checks apps against a list of known, trusted apps and prevents untrusted apps from modifying files in protected folders. For more information, see [Controlled folder access (CFA) overview](controlled-folder-access-overview.md).
 
 - **Exploit protection** applies exploit mitigation techniques to operating system processes and apps automatically. It builds on the protections that were available in the Enhanced Mitigation Experience Toolkit (EMET) and integrates with Defender for Endpoint for reporting and alerting. For more information, see [Protect devices from exploits](exploit-protection.md).
 
@@ -87,7 +87,7 @@ Each capability addresses a different part of the attack surface:
 Audit mode helps you evaluate the impact of attack surface reduction features on your environment without affecting productivity. The following capabilities support audit mode:
 
 - [Attack surface reduction (ASR) rules and exclusions](attack-surface-reduction-rules-configure.md)
-- [Controlled folder access](enable-controlled-folders.md)
+- [Controlled folder access](controlled-folder-access-configure.md)
 - [Exploit protection](enable-exploit-protection.md)
 - [Network protection](enable-network-protection.md)
 
@@ -109,7 +109,7 @@ The right tool depends on your organization's infrastructure and management pref
 - [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md)
 - [Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md)
 - [Attack surface reduction events in Windows Event Viewer](attack-surface-reduction-windows-events.md)
-- [Protect important folders with controlled folder access](controlled-folders.md)
+- [Controlled folder access (CFA) overview](controlled-folder-access-overview.md)
 - [Protect devices from exploits](exploit-protection.md)
 - [Network protection](network-protection.md)
 - [Web protection](web-protection-overview.md)

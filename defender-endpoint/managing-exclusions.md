@@ -8,12 +8,14 @@ ms.service: defender-endpoint
 ms.subservice: onboard
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 10/25/2024
-ms.custom: 
-- partner-contribution
+ms.date: 06/17/2026
+ms.custom:
+  - msecd-doc-authoring-1014
+  - partner-contribution
 ms.collection: 
 - m365-security
 - tier2
+ai-usage: ai-assisted
 ---
 
 # Managing exclusions reference
@@ -41,7 +43,7 @@ The following table shows which exclusion types are supported by each management
 |[WMI](#windows-management-instrumentation-wmi)|:::image type="icon" source="media/exclusions/check-mark-button-2705.svg" border="false":::|:::image type="icon" source="media/exclusions/cross-mark-274c.svg" border="false":::|:::image type="icon" source="media/exclusions/cross-mark-274c.svg" border="false":::|:::image type="icon" source="media/exclusions/cross-mark-274c.svg" border="false":::|:::image type="icon" source="media/exclusions/cross-mark-274c.svg" border="false":::|:::image type="icon" source="media/exclusions/check-mark-button-2705.svg" border="false":::|
 |[Configuration Manager](#configuration-manager)|:::image type="icon" source="media/exclusions/check-mark-button-2705.svg" border="false":::|:::image type="icon" source="media/exclusions/check-mark-button-2705.svg" border="false":::|:::image type="icon" source="media/exclusions/cross-mark-274c.svg" border="false":::|:::image type="icon" source="media/exclusions/check-mark-button-2705.svg" border="false":::|:::image type="icon" source="media/exclusions/cross-mark-274c.svg" border="false":::|:::image type="icon" source="media/exclusions/cross-mark-274c.svg" border="false":::|
 
-The following sections expand on this information.
+The following sections show how to configure each exclusion type in each management tool.
 
 ### The Microsoft Defender portal
 
@@ -64,7 +66,8 @@ The following table describes where you configure supported exclusions in the Mi
 - <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus</a>
 - [Add automatic folder exclusions](manage-automation-folder-exclusions.md#add-an-automation-folder-exclusion)
 
-### Intune
+<a name="intune"></a>
+### Manage exclusions with Intune
 
 Many exclusions can be managed in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -81,7 +84,10 @@ Many exclusions can be managed in the [Microsoft Intune admin center](https://go
 
 - [Create Microsoft Defender antivirus exclusion policies in Intune](configure-exclusions-microsoft-defender-antivirus.md#create-microsoft-defender-antivirus-exclusion-policies-in-intune)
 
-### MDM CSP
+<a name="mdm-csp"></a>
+### Manage exclusions with MDM CSP
+
+The following table lists the Defender Policy CSP OMA-URI settings for supported exclusion types.
 
 |Exclusion type|OMA-URI|
 |--|--|
@@ -97,7 +103,8 @@ Many exclusions can be managed in the [Microsoft Intune admin center](https://go
 - [Defender Policy CSP](/windows/client-management/mdm/policy-csp-defender)
 - [Use custom settings for Windows client devices in Intune](/intune/intune-service/configuration/custom-settings-windows-10)
 
-### PowerShell
+<a name="powershell"></a>
+### Manage exclusions with PowerShell
 
 Use `Set-MpPreference` or `Get-MpPreference` in the [Defender PowerShell Module](/powershell/module/defender/?view=windowsserver2022-ps&preserve-view=true).
 
@@ -113,7 +120,10 @@ Use `Set-MpPreference` or `Get-MpPreference` in the [Defender PowerShell Module]
 |Automation folder exclusions|N/A|Not supported|
 |Automatic antivirus exclusions <br/>(*Only available on Windows Server 2016 and later*)|`DisableAutoExclusions`|[Disable automatic antivirus exclusions](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true#-disableautoexclusions)|
 
-### Group Policy Object (GPO)
+<a name="group-policy-object-gpo"></a>
+### Manage exclusions with Group Policy Object (GPO)
+
+The following table lists the Group Policy locations for supported exclusion settings.
 
 |Exclusion Type|Setting location|Reference|
 |---|---|---|
@@ -123,9 +133,12 @@ Use `Set-MpPreference` or `Get-MpPreference` in the [Defender PowerShell Module]
 |Attack surface reduction rule per rule exclusion|**Windows components > Microsoft Defender Antivirus > Microsoft Defender Exploit Guard > Attack surface reduction > Apply a list of exclusions to specific Attack Surface Reduction (ASR) rules**|See [Group Policy](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-group-policy)|
 |Automatic antivirus exclusions|**Windows components** > **Microsoft Defender Antivirus** > **Exclusions** > **Enabled**|See [Use Group Policy to disable the auto-exclusions list on Windows Server 2016, Windows Server 2019, and later](configure-server-exclusions-microsoft-defender-antivirus.md#use-group-policy-to-disable-the-auto-exclusions-list-on-windows-server-2016-windows-server-2019-and-later)|
 |Automation folder exclusions|Not supported||
-|Controlled Folder Access exclusions|**Windows components** > **Microsoft Defender Antivirus** > **Windows Defender Exploit Guard** > **Controlled folder access** > **Configure allowed applications**|See [Use group policy to allow specific apps](customize-controlled-folders.md#use-group-policy-to-allow-specific-apps)|
+|Controlled Folder Access exclusions|**Windows components** > **Microsoft Defender Antivirus** > **Windows Defender Exploit Guard** > **Controlled folder access** > **Configure allowed applications**|See [Allow apps to modify files in protected folders in group policy](controlled-folder-access-configure.md#allow-apps-to-modify-files-in-protected-folders-in-group-policy)|
 
-### Windows Management Instrumentation (WMI)
+<a name="windows-management-instrumentation-wmi"></a>
+### Manage exclusions with Windows Management Instrumentation (WMI)
+
+The following table lists the WMI properties used for supported exclusion types.
 
 |Exclusion Type|Property|
 |---|---|
@@ -142,14 +155,17 @@ Use `Set-MpPreference` or `Get-MpPreference` in the [Defender PowerShell Module]
 
 - [Windows Defender WMIv2 APIs](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal)
 
-### Configuration Manager
+<a name="configuration-manager"></a>
+### Manage exclusions with Configuration Manager
+
+The following table links to Configuration Manager guidance for supported exclusion types.
 
 |Exclusion Type|Reference|
 |---|---|
 |Custom antivirus exclusion|For more information, see [exclusion settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings)|
 |Global exclusions for attack surface reduction (ASR) rules only|For more information, see [Configure ASR rules and global ASR rule exclusions in Microsoft Configuration Manager](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-global-asr-rule-exclusions-in-microsoft-configuration-manager)|
 |Per-ASR rule exclusion|Not supported|
-|Controlled Folder Access exclusions|For more information, see [Microsoft Configuration Manager](enable-controlled-folders.md#microsoft-configuration-manager)|
+|Controlled folder access (CFA) exclusions|For more information, see [Configure CFA in Microsoft Configuration Manager](controlled-folder-access-configure.md#configure-cfa-in-microsoft-configuration-manager)|
 |Automation folder exclusions|Not supported|
 
 ## Manage exclusions for Linux

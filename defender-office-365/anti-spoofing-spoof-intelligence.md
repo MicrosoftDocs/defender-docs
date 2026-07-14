@@ -1,5 +1,5 @@
 ---
-title: Spoof intelligence insight
+title: Review and manage spoof intelligence insight in Microsoft Defender for Office 365
 author: chrisda
 ms.author: chrisda
 ms.topic: how-to
@@ -9,15 +9,17 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
+  - msecd-doc-authoring-1014
   - seo-marvel-apr2020
   - sfi-ga-nochange
 description: Admins can learn about the spoof intelligence insight in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 07/03/2025
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Spoof intelligence insight for cloud mailboxes
@@ -42,13 +44,13 @@ Use the _spoof intelligence insight_ in the Microsoft Defender portal to quickly
 
 By allowing known senders to send spoofed messages from known locations, you can reduce false positives (good email marked as bad). By monitoring the allowed spoofed senders, you provide an extra layer of security to prevent unsafe messages from arriving in your organization.
 
-Likewise, you can use the spoof intelligence insight to review spoofed senders allowed by spoof intelligence and manually block those senders.
+Likewise, you can use the spoof intelligence insight to review spoofed senders allowed by spoof intelligence and manually block specific allowed spoofed senders.
 
 The rest of this article explains how to use the spoof intelligence insight in the Microsoft Defender portal and in PowerShell.
 
 > [!NOTE]
 >
-> - Only spoofed senders detected by spoof intelligence appear in this insight. Messages from domains that fail DMARC where the DMARC policy is set to `p=reject` or `p=quarantine` don't appear in this insight. Those messages are processed based on the **Honor DMARC record policy when the message is detected as spoof** setting [in anti-phishing policies](anti-phishing-policies-about.md#spoof-protection-and-sender-dmarc-policies).
+> - Only spoofed senders detected by spoof intelligence appear in this insight. Messages from domains that fail DMARC where the DMARC policy is set to `p=reject` or `p=quarantine` don't appear in this insight. Those messages are processed based on the **Honor DMARC record policy when the message is detected as spoof** setting in [anti-phishing policy spoof protection settings](anti-phishing-policies-about.md#spoof-protection-and-sender-dmarc-policies).
 >
 > - When you override the allow or block verdict in the spoof intelligence insight, the spoofed sender becomes a manual allow or block entry that appears only on the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page at <https://security.microsoft.com/tenantAllowBlockList?viewid=SpoofItem>. You can also manually create allow or block entries for spoofed senders before spoof intelligence detects them. For more information, see [Spoofed senders in the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#spoofed-senders-in-the-tenant-allowblock-list).
 >
@@ -82,11 +84,13 @@ The rest of this article explains how to use the spoof intelligence insight in t
 
 ## Find the spoof intelligence insight in the Microsoft Defender portal
 
+### Open the spoof intelligence insight
+
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Tenant Allow/Block Lists** in the **Rules** section. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. Select the **Spoofed senders** tab.
 
-3. On the **Spoofed senders** tab, the spoof intelligence insight looks like this:
+3. On the **Spoofed senders** tab, the spoof intelligence insight appears as shown in the following image:
 
    :::image type="content" source="media/m365-sc-spoof-intelligence-insight.png" alt-text="The Spoof intelligence insight on the Anti-phishing policy page":::
 
@@ -100,7 +104,7 @@ To view information about the spoof intelligence detections, select **View spoof
 ### View information about spoof detections
 
 > [!NOTE]
-> Remember, only spoofed senders detected by spoof intelligence appear in this insight. Messages from domains that fail DMARC where the DMARC policy is set to `p=reject` or `p=quarantine` don't appear in this insight. Those messages are processed based on the **Honor DMARC record policy when the message is detected as spoof** setting [in anti-phishing policies](anti-phishing-policies-about.md#spoof-protection-and-sender-dmarc-policies).
+> Remember, only spoofed senders detected by spoof intelligence appear in this insight. Messages from domains that fail DMARC where the DMARC policy is set to `p=reject` or `p=quarantine` don't appear in this insight. Those messages are processed based on the **Honor DMARC record policy when the message is detected as spoof** setting in [anti-phishing policy spoof protection settings](anti-phishing-policies-about.md#spoof-protection-and-sender-dmarc-policies).
 
 The **Spoof intelligence insight** page at <https://security.microsoft.com/spoofintelligence> is available when you select **View spoofing activity** from the spoof intelligence insight on the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page.
 
@@ -158,7 +162,7 @@ When you select a spoof detection from the list by clicking anywhere in the row 
 > [!TIP]
 > To see details about other entries without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
-To change the spoof detection from **Allow** to **Block** or vice-versa, see the next section.
+To change the spoof detection from **Allow** to **Block** or vice-versa, see [Override the spoof intelligence verdict](#override-the-spoof-intelligence-verdict).
 
 ### Override the spoof intelligence verdict
 
@@ -195,7 +199,8 @@ Get-SpoofIntelligenceInsight
 
 For detailed syntax and parameter information, see [Get-SpoofIntelligenceInsight](/powershell/module/exchangepowershell/get-spoofintelligenceinsight).
 
-## Other ways to manage spoofing and phishing
+<a name="other-ways-to-manage-spoofing-and-phishing"></a>
+## Additional tools to manage spoofing and phishing
 
 Be diligent about spoofing and phishing protection. Here are related ways to check on senders who are spoofing your domain and help prevent them from damaging your organization:
 

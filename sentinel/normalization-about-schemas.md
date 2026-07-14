@@ -1,5 +1,5 @@
 ---
-title: Advanced Security Information Model (ASIM) schemas | Microsoft Docs
+title: Advanced Security Information Model (ASIM) schemas
 description: This article explains Advanced Security Information Model (ASIM) schemas, and how they help. ASIM normalizes data from many different sources to a uniform presentation.
 ms.author: edbaynash
 author: EdB-MSFT
@@ -42,7 +42,7 @@ ASIM currently defines the following schemas for entities:
 
 | Schema | Schema Name for Tests | Version | Status |
 | ------ | --------------------- | ------- | ------ |
-| [Asset Entity](normalization-schema-asset.md) | `AssetEntity` | 0.1.0 | GA |
+| [Asset Entity](normalization-schema-asset.md) | `AssetEntity` | 1.0.0 | GA |
 
 For entities which are part of other ASIM schemas, refer to [Event Entities](#event-entities).
 

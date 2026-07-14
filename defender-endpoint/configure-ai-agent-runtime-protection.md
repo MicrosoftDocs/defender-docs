@@ -7,9 +7,6 @@ ms.service: defender-endpoint
 ms.topic: how-to
 ms.date: 05/27/2026
 ai-usage: ai-assisted
-appliesto:
-  - Microsoft Defender for Endpoint Plan 1
-  - Microsoft Defender Antivirus
 #customer intent: As a security administrator, I want to configure runtime protection for local AI agents on my organization's endpoints so that I can detect and block prompt injection attacks in real time.
 ---
 
@@ -17,7 +14,7 @@ appliesto:
 
 Local AI agents run with the user's privileges on the endpoints they operate on, where they can read files, invoke tools, and run commands. Malicious instructions hidden in the content an agent reads can hijack the agent through prompt injection. AI agent runtime protection helps you detect prompt injection at the device level and block or audit the agent's action before it acts on those instructions.
 
-This article explains how to enable runtime protection, deploy it across your organization, and investigate detections.
+This article explains how to enable runtime protection in Microsoft Defender for Endpoint, deploy it across your organization, and investigate detections.
 
 For an overview of how runtime protection works, see [AI agent runtime protection with Microsoft Defender for Endpoint](ai-agent-runtime-protection-overview.md).
 
@@ -25,14 +22,10 @@ For an overview of how runtime protection works, see [AI agent runtime protectio
 
 Before you configure runtime protection, review the following requirements:
 
-- Your devices are onboarded to [Microsoft Defender for Endpoint](/defender-endpoint/onboard-configure).
-- Your devices are running a supported version of Windows, and Microsoft Defender Antivirus is updated with current monthly platform and engine updates.
-
-    > [!NOTE]
-    > Runtime protection is currently available only on devices configured to receive `Beta` platform and engine updates.
-- Your devices are running Microsoft Defender Antivirus in active mode.
-- Your devices have one or more [supported local AI agents](ai-agent-runtime-protection-overview.md#supported-agents) installed.
-- The local AI agent you want to protect natively supports a hooks framework. See [Supported agents](ai-agent-runtime-protection-overview.md#supported-agents) for the full list.
+- Your organization has a Microsoft Defender for Endpoint Plan 2, Microsoft 365 E5, Microsoft Agent 365, or Microsoft 365 E7 license.
+- Your devices are [onboarded to Defender for Endpoint](onboard-configure.md), and Microsoft Defender Antivirus is running in active mode with real-time protection enabled.
+- Your devices are running a supported version of Windows, and Microsoft Defender Antivirus is updated with current monthly platform, engine, and security intelligence updates.
+- Your devices have one or more [supported local AI agents](ai-agent-runtime-protection-overview.md#supported-agents) installed for the runtime protection approach you plan to enable.
 
 ## Recommended deployment approach
 
@@ -45,56 +38,74 @@ Microsoft recommends the following phased rollout:
 
 ## Enable runtime protection
 
-To enable runtime protection on a single device for testing or validation:
- 
+To enable runtime protection on a single device:
+
 1. Open an elevated PowerShell session.
-1. Configure the device to receive preview updates.
- 
-   ```powershell
-   Set-MpPreference -PlatformUpdatesChannel Beta
-   Set-MpPreference -EngineUpdatesChannel Beta
- 
-   Update-MpSignature
-   Update-MpSignature
-   Update-MpSignature
-   ```
- 
-1. Run `Update-MpSignature` three times. This step is required for preview validation.
-1. Verify that `AntivirusSignatureVersion` is `1.451.224.0` or later.
- 
+
+1. Verify that `AntivirusSignatureVersion` is `1.451.224.0` or later:
+
    ```powershell
    Get-MpComputerStatus | Select-Object AntivirusSignatureVersion
    ```
 
-1. Enable runtime protection.
- 
+1. Choose which runtime protection method to enable.
+
+   You can enable agent-native event inspection, network inspection, or both. Both methods support the same modes: `Disabled`, `Audit`, and `Block`.
+
+   * Use `AiAgentProtection` to protect agents that expose vendor-supported agent event interfaces.
+   * Use `AiAgentNetworkInspection` to extend protection to agents that don't expose vendor-supported agent event interfaces.
+
+1. Enable the method or methods you need:
+
+   - To enable agent-native event inspection, run:
+
+      ```powershell
+      Set-MpPreference -AiAgentProtection <mode>
+      ```
+
+      Replace `<mode>` with `Disabled`, `Audit`, or `Block`.
+
+   - To enable network inspection, run:
+
+      ```powershell
+      Set-MpPreference -AiAgentNetworkInspection <mode>
+      ```
+
+      Replace `<mode>` with `Disabled`, `Audit`, or `Block`.
+
+      For details about each mode, see [What happens when you enable runtime protection](ai-agent-runtime-protection-overview.md#what-happens-when-you-enable-runtime-protection). For more information about the runtime protection methods, see [Network inspection](ai-agent-runtime-protection-overview.md#network-inspection) and [Agent-native event inspection](ai-agent-runtime-protection-overview.md#agent-native-event-inspection).
+
+1. Verify the current settings:
+
    ```powershell
-   Set-MpPreference -AiAgentProtection <mode>
+   Get-MpPreference | Select-Object AiAgentProtection, AiAgentNetworkInspection
    ```
- 
-   Replace `<mode>` with `Disabled`, `Audit`, or `Block`.
- 
-   For details about each mode, see [What happens when you enable runtime protection](ai-agent-runtime-protection-overview.md#what-happens-when-you-enable-runtime-protection). 
-1. Verify the current setting.
- 
-   ```powershell
-   Get-MpPreference | Select-Object AiAgentProtection
-   ```
+
+1. Close the PowerShell window and any terminal windows used to run agents. Then open a new terminal window before starting the agent.
+
 
 ## Deploy settings across your organization with Intune
 
-After validating runtime protection on test devices, use Intune to deploy settings at scale across your organization. You deploy the same PowerShell command as a script to target device groups, setting the runtime protection mode (audit or block) for all devices in scope.
+The PowerShell commands in the [enable runtime protection section](#enable-runtime-protection) configure a single device. After you confirm runtime protection behavior on a limited device group, you can deploy PowerShell commands as a script to target device groups, setting agent-native event inspection, network inspection, or both to `Audit` or `Block` for all devices in scope.
 
 > [!NOTE]
-> AI agent runtime protection doesn't include native Intune policy support. You can deploy settings using PowerShell scripts in Intune.
+> Native Intune policy support for AI agent runtime protection isn't available. You can deploy these settings using PowerShell scripts in Intune.
 
-The PowerShell command in the previous section configures a single device and is useful for testing and validation. To deploy the same settings across your organization, use Intune to run a PowerShell script on target device groups.
+1. Create a PowerShell script that includes the settings you want to deploy.
 
-1. Create a PowerShell script that includes the following command, setting the mode to match your rollout phase (`Audit` while validating, `Block` for enforcement):
+   To enable agent-native event inspection:
 
-    ```powershell
-    Set-MpPreference -AiAgentProtection Block
-    ```
+   ```powershell
+   Set-MpPreference -AiAgentProtection Audit
+   ```
+
+   To enable network inspection:
+
+   ```powershell
+   Set-MpPreference -AiAgentNetworkInspection Audit
+   ```
+
+   Replace `Audit` with `Block` when you're ready to enforce protection. You can enable either setting, or both, based on the agent coverage you need.
 
 1. Use Intune to deploy the script to target devices. For detailed steps, see [Use PowerShell scripts on Windows devices in Intune](/intune/device-management/tools/run-powershell-scripts-windows).
 

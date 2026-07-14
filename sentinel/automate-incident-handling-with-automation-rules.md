@@ -1,5 +1,5 @@
 ---
-title: Automate threat response in Microsoft Sentinel with automation rules | Microsoft Docs
+title: Automate threat response in Microsoft Sentinel with automation rules
 description: This article explains what Microsoft Sentinel automation rules are, and how to use them to implement your Security Orchestration, Automation and Response (SOAR) operations. Automation rules increase your SOC's effectiveness and save you time and resources.
 ms.author: monaberdugo
 author: mberdugo
@@ -67,6 +67,8 @@ The following table shows the different possible scenarios that cause an automat
 | **When incident is updated** | <li>An incident's status is changed (closed/reopened/triaged).<li>An incident's owner is assigned or changed.<li>An incident's severity is raised or lowered.<li>Alerts are added to an incident.<li>Comments, tags, or tactics are added to an incident. |
 | **When alert is created** | <li>An alert is created by a Microsoft Sentinel **Scheduled** or **NRT** analytics rule. |
 
+If your workspace is onboarded to the Microsoft Defender portal, you can also use the **Case created** and **Case updated** triggers from [Simple Flows](automation/create-basic-automation-rules-simple-flows.md) (preview) to automate case workflows.
+
 #### Incident-based or alert-based automation?
 
 With automation rules centrally handling the response to both incidents and alerts, how should you choose which to automate, and in which circumstances?
@@ -92,7 +94,7 @@ Even without being onboarded to the unified portal, you might anyway decide to u
 > [!NOTE]
 > - Alert-triggered automation is available only for alerts created by [**Scheduled**, **NRT**, and **Microsoft security** analytics rules](threat-detection.md).
 >
-> - Alert-triggered automation for alerts created by Microsoft Defender XDR is not available in the Defender portal. For more information, see [Automation in the Defender portal](automation.md#automation-with-the-unified-security-operations-platform).
+> - **In the Defender portal:** Alert-triggered automation for alerts created by Microsoft Defender XDR isn't available. To automate responses to alerts across Microsoft Sentinel, Microsoft Defender, and XDR platforms, use the **[Enhanced Alert Trigger](automation/generate-playbook.md#enhanced-alert-trigger)**. For more information, see [Automation in the Defender portal](automation.md#automation-with-the-unified-security-operations-platform).
 
 ### Conditions
 
@@ -198,6 +200,8 @@ Actions can be defined to run when the conditions (see above) are met. You can d
 
 - Adding a tag to an incident: This is useful for classifying incidents by subject, by attacker, or by any other common denominator.
 
+If your workspace is onboarded to the Microsoft Defender portal, [Simple Flows](automation/create-basic-automation-rules-simple-flows.md) (preview) adds more pre-built actions you can use directly from the automation rule wizard, without writing a playbook. Available actions include **Send Case Created/Updated/SLA Exceeded Email**, **Update Case**, **Add Task**, and **Update Alert**.
+
 Also, you can define an action to [**run a playbook**](tutorial-respond-threats-playbook.md), in order to take more complex response actions, including any that involve external systems. The playbooks available to be used in an automation rule depend on the [**trigger**](automate-responses-with-playbooks.md#extra-permissions-required-for-microsoft-sentinel-to-run-playbooks) on which the playbooks *and* the automation rule are based: Only incident-trigger playbooks can be run from incident-trigger automation rules, and only alert-trigger playbooks can be run from alert-trigger automation rules. You can define multiple actions that call playbooks, or combinations of playbooks and other actions.  Actions are executed in the order in which they are listed in the rule.
 
 Playbooks using [either version of Azure Logic Apps (Standard or Consumption)](automate-responses-with-playbooks.md#logic-app-types) are available to run from automation rules.
@@ -229,7 +233,7 @@ Rules based on the update trigger have their own separate order queue. If such r
 - Rules always run sequentially, never in parallel.
 
 > [!NOTE]
-> After onboarding to the Defender portal, if multiple changes are made to the same incident in a five to ten minute period, a single update is sent to Microsoft Sentinel, with only the most recent change.
+> After onboarding to the Defender portal, if multiple changes are made to the same incident in a 5-10 minute period, a single update is sent to Microsoft Sentinel, with only the most recent change. Intermediate updates are lost, which can impact workflows that depend on processing sequential incident state changes.
 
 ## Common use cases and scenarios
 

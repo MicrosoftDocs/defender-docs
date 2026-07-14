@@ -9,14 +9,16 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
+  - msecd-doc-authoring-1014
   - sfi-ga-nochange
 description: Admins can learn how to remove connectors from the Restricted entities page in the Microsoft Defender portal. Connectors are added to the Restricted entities page after signs of compromise.
 ms.service: defender-office-365
-ms.date: 6/14/2023
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Remove blocked connectors from the Restricted entities page
@@ -41,6 +43,8 @@ The procedures in this article explain how admins can remove connectors from the
 For more information about compromised _user accounts_ and how to remove them from the **Restricted entities** page, see [Remove blocked users from the Restricted entities page](outbound-spam-restore-restricted-users.md).
 
 ## What do you need to know before you begin?
+
+Before you begin, make sure you have access to the required tools and permissions:
 
 - Open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Restricted entities** page, use <https://security.microsoft.com/restrictedentities>.
 
@@ -133,7 +137,10 @@ Remove-BlockedConnector -ConnectorId <ConnectorID>
 
 For detailed syntax and parameter information, see [Remove-BlockedConnector](/powershell/module/exchangepowershell/remove-blockedconnector).
 
-## More information
+<a name="more-information"></a>
+## Related content
+
+For more information about compromised connectors and restricted users, see the following articles:
 
 - [Respond to a compromised connector](connectors-detect-respond-to-compromise.md)
-- [Remove blocked users](outbound-spam-restore-restricted-users.md)
+- [Remove blocked users from the Restricted entities page](outbound-spam-restore-restricted-users.md)

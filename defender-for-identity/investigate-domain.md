@@ -1,17 +1,17 @@
 ---
-title: Investigate an Active Directory domain (Preview)
+title: Investigate an Active Directory domain
 description: Learn how to investigate an Active Directory domain in Microsoft Defender. Review domain health scores, security policies, trust relationships, and recommendations.
 #customer intent: As a security admin, I want to view the security posture of my Active Directory domains so that I can identify coverage gaps, review security policies, and act on recommendations.
 author: AbbyMSFT
 ms.author: abbyweisberg
-ms.date: 04/14/2026
+ms.date: 07/05/2026
 ms.topic: concept-article
 ms.service: microsoft-defender-for-identity
 ms.custom: msecd-doc-authoring-106
 ai-usage: ai-assisted
 ---
 
-# Investigate an Active Directory domain (Preview)
+# Investigate an Active Directory domain
 
 Active Directory domains are frequently targeted in identity-based attacks. Configuration issues such as unhealthy sensors, weak security policies, or risky trust relationships can expose an environment, but the information needed to assess a domain's security is often distributed between different tools and views.
 
@@ -116,7 +116,6 @@ Lists the groups in the domain. You can filter by tags, type, and scope. You can
 Lists the computer accounts in the domain. You can filter by tags. You can mark computer accounts as sensitive to support exposure analysis and detect potential attack paths.
 
 :::image type="content" source="media/investigate-domain/domain-page-computers.png" alt-text="Screenshot that shows the Computer Accounts tab of the domain page in Microsoft Defender." lightbox="media/investigate-domain/domain-page-computers.png":::
-
 
 | Column | Description |
 |---|---|

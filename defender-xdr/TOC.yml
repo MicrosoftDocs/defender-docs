@@ -68,14 +68,20 @@
         items:
         - name: Secure AI using Microsoft Defender
           href: security-for-ai/defender-security-for-ai.md
-        - name: Discover AI agents and manage posture
-          href: security-for-ai/ai-agent-inventory.md
-        - name: Detect, block, and investigate threats to AI agents
-          href: security-for-ai/ai-agent-detection-protection.md
-        - name: Data privacy as part of Agent 365
-          href: security-for-ai/privacy-defender-agent-365.md
-        - name: Transition agent security to Agent 365
-          href: security-for-ai/transition-agent-security-to-agent-365.md
+        - name: Protect AI agents
+          items:
+          - name: Enable security for AI agents using Microsoft Defender
+            href: security-for-ai/get-started-defender-security-for-ai.md
+          - name: Configure real-time agent protection and prompt evidence
+            href: security-for-ai/ai-agent-real-time-protection.md
+          - name: Discover AI agents and manage posture
+            href: security-for-ai/ai-agent-inventory.md
+          - name: Detect and investigate threats to AI agents
+            href: security-for-ai/ai-agent-detection-protection.md
+          - name: Data privacy as part of Agent 365
+            href: security-for-ai/privacy-defender-agent-365.md
+          - name: Transition agent security to Agent 365
+            href: security-for-ai/transition-agent-security-to-agent-365.md
       - name: Microsoft Secure Score
         items:
           - name: Overview
@@ -100,6 +106,8 @@
         href: incident-queue.md
       - name: Manage incidents
         href: manage-incidents.md
+      - name: Manually create an incident or alert
+        href: manually-create-incident.md
       - name: Use tasks to handle incident workflow
         href: split-incidents-into-tasks.md
       - name: Investigate and respond to incidents
@@ -126,6 +134,8 @@
             href: entity-page-device.md
           - name: IP
             href: entity-page-ip.md
+          - name: View threat intelligence in entity pages
+            href: entity-page-threat-intelligence.md
         - name: Investigate data loss prevention alerts with Microsoft Defender XDR
           href: dlp-investigate-alerts-defender.md
         - name: Investigate data loss prevention alerts with Microsoft Sentinel
@@ -164,10 +174,10 @@
           href: automatic-attack-disruption-exclusions.md
         - name: External disruptions
           items:
-          - name: Enable attack disruption actions in Okta (preview)
+          - name: Enable attack disruption actions in Okta with Microsoft Sentinel (preview)
             href: okta-attack-disruption.md
-          - name: Enable attack disruption actions on AWS (preview)
-            href: /azure/sentinel/aws-disruption?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json  
+          - name: Enable attack disruption actions in AWS with Microsoft Sentinel (preview)
+            href: /azure/sentinel/aws-disruption?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Predictive shielding
         items:
         - name: Overview
@@ -408,7 +418,7 @@
             href: threat-analytics-analyst-reports.md
           - name: Get access to indicators
             href: threat-analytics-indicators.md
-        - name: Microsoft Defender Threat Intelligence in Defender XDR
+        - name: Microsoft Threat Intelligence in Defender XDR
           href: defender-threat-intelligence.md
       - name: Investigate and respond with Microsoft Copilot in Microsoft Defender
         items:
@@ -476,82 +486,84 @@
           href: ./identity-security/identity-security-recommendations.md
     - name: Collaborate with Microsoft Defender Experts
       items:
-      - name: Defender Experts for Hunting
+      - name: Overview
+        href: defender-experts/defender-experts-overview.md
+      - name: Defender Experts Hunting
         items:
         - name: Overview
-          href: defender-experts-for-hunting.md
+          href: defender-experts/defender-experts-hunting-overview.md
         - name: Before you begin
-          href: before-you-begin-defender-experts.md
-        - name: Start using Defender Experts for Hunting
+          href: defender-experts/defender-experts-hunting-prerequisites.md
+        - name: Start using Defender Experts Hunting
           items:
           - name: Onboard and set up Defender Experts Notifications
-            href: onboarding-defender-experts-for-hunting.md
+            href: defender-experts/defender-experts-hunting-onboarding.md
           - name: Access Defender Experts Notifications using Graph security API
-            href: access-den-graph-api.md
+            href: defender-experts/defender-experts-hunting-graph-api.md
           - name: Ask Defender Experts
-            href: experts-on-demand.md
-          - name: Understand Defender Experts for Hunting reports
-            href: defender-experts-report.md
+            href: defender-experts/defender-experts-hunting-ask-experts.md
+          - name: Understand Defender Experts Hunting reports
+            href: defender-experts/defender-experts-hunting-report.md
           - name: Work with MSSPs
-            href: defender-experts-managed-security-guide.md
+            href: defender-experts/defender-experts-mssp-guide.md
         - name: Frequently asked questions
           items:
           - name: Troubleshooting Defender Experts app permissions in Microsoft Teams
-            href: teams-restrictions-dexapp.md
+            href: defender-experts/defender-experts-teams-app-permissions.md
           - name: General information
-            href: faq-defender-experts-hunting.md
+            href: defender-experts/defender-experts-hunting-faq.md
           - name: Server and cloud workload coverage
-            href: faq-cloud-coverage-defender-experts.md
-      - name: Defender Experts for XDR
+            href: defender-experts/defender-experts-faq-cloud-coverage.md
+      - name: Defender Experts MDR
         items:
         - name: Overview
-          href: dex-xdr-overview.md
+          href: defender-experts/defender-experts-mdr-overview.md
         - name: Before you begin
-          href: before-you-begin-xdr.md
-        - name: Get started with Defender Experts for XDR
-          href: get-started-xdr.md
-        - name: Start using Defender Experts for XDR
+          href: defender-experts/defender-experts-mdr-prerequisites.md
+        - name: Get started with Defender Experts MDR
+          href: defender-experts/defender-experts-mdr-get-started.md
+        - name: Start using Defender Experts MDR
           items:
           - name: Overview
-            href: start-using-mdex-xdr.md
+            href: defender-experts/defender-experts-mdr-start-using.md
           - name: Managed detection and response
-            href: managed-detection-and-response-xdr.md
+            href: defender-experts/defender-experts-mdr-managed-response.md
           - name: Scoped coverage
-            href: defender-experts-scoped-coverage.md  
+            href: defender-experts/defender-experts-mdr-scoped-coverage.md  
           - name: Communicate with Defender Experts
-            href: communicate-defender-experts-xdr.md
+            href: defender-experts/defender-experts-mdr-communication.md
           - name: Reports
-            href: reports-xdr.md
+            href: defender-experts/defender-experts-mdr-reports.md
           - name: Third-party enrichment
-            href: third-party-enrichment-defender-experts.md
-          - name: Defender Experts for Hunting
-            href: defender-experts-for-hunting.md
+            href: defender-experts/defender-experts-mdr-third-party-enrichment.md
+          - name: Defender Experts Hunting
+            href: defender-experts/defender-experts-hunting-overview.md
           - name: Auditing
-            href: auditing.md
+            href: defender-experts/defender-experts-mdr-auditing.md
           - name: Work with MSSPs
-            href: defender-experts-managed-security-guide.md
-        - name: Additional information on Defender Experts for XDR
+            href: defender-experts/defender-experts-mssp-guide.md
+        - name: Additional information on Defender Experts MDR
           items:
           - name: Frequently asked questions
             items:
             - name: General information
-              href: frequently-asked-questions.md
+              href: defender-experts/defender-experts-mdr-faq.md
             - name: Managed response
-              href: faq-managed-response.md
+              href: defender-experts/defender-experts-mdr-faq-managed-response.md
           - name: Important considerations
-            href: additional-information-xdr.md
-          - name: How Defender Experts for XDR permissions work
-            href: dex-xdr-permissions.md
+            href: defender-experts/defender-experts-mdr-considerations.md
+          - name: How Defender Experts MDR permissions work
+            href: defender-experts/defender-experts-mdr-permissions.md
           - name: Troubleshooting Defender Experts app permissions in Microsoft Teams
-            href: teams-restrictions-dexapp.md
+            href: defender-experts/defender-experts-teams-app-permissions.md
       - name: Defender Experts for Servers
         items:
         - name: Overview
-          href: dex-servers-overview.md
+          href: defender-experts/defender-experts-servers-overview.md
         - name: Get started with Defender Experts for Servers
-          href: get-started-dex-servers.md
+          href: defender-experts/defender-experts-servers-get-started.md
         - name: Frequently asked questions
-          href: faq-cloud-coverage-defender-experts.md
+          href: defender-experts/defender-experts-faq-cloud-coverage.md
     - name: Enhance security operations
       items:
       - name: Security operations guide
@@ -722,6 +734,8 @@
         href: /security/operations/incident-response-playbooks
       - name: Customize incident responses
         href: security-upload-guide.md
+      - name: SOP template - Compromised identity
+        href: sop-documentation-template.md
       - name: Ransomware playbooks
         items:
         - name: Detecting human-operated ransomware attacks with Microsoft Defender XDR

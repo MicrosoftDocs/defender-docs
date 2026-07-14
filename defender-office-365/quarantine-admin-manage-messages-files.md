@@ -9,12 +9,13 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
+  - msecd-doc-authoring-1014
   - seo-marvel-apr2020
   - sfi-ga-nochange
   - sfi-image-nochange
 description: Admins can learn how to view and manage quarantined messages for all users in Microsoft 365 organizations with cloud mailboxes. Admins in organizations with Microsoft Defender for Office 365 can also manage quarantined files in SharePoint, OneDrive, and Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 05/19/2026
+ms.date: 06/15/2026
 ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
@@ -208,6 +209,8 @@ After you find a specific quarantined message, select the message to view detail
 
 ### View quarantined email details
 
+Use the following steps to open the details flyout for a quarantined email message.
+
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Quarantine** \> **Email** tab. Or, to go directly to the **Email** tab on the **Quarantine** page, use <https://security.microsoft.com/quarantine?viewid=Email>.
 
 2. On the **Email** tab, select the quarantined message by clicking anywhere in the row other than the check box.
@@ -243,12 +246,14 @@ The rest of the details flyout contains the **Delivery details**, **Email detail
 
 :::image type="content" source="media/quarantine-message-details-flyout-with-actions.png" alt-text="Screenshot of the details flyout that opens after you select a quarantined email message from the Email tab of the Quarantine page." lightbox="media/quarantine-message-details-flyout-with-actions.png":::
 
-To take action on the message, see the next section.
+To take action on the message, see [Take action on quarantined email](#take-action-on-quarantined-email).
 
 > [!TIP]
 > To see details about other quarantined messages without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
 ### Take action on quarantined email
+
+Use the following steps to select a quarantined email message and access its available actions.
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Quarantine** \> **Email** tab. Or, to go directly to the **Email** tab on the **Quarantine** page, use <https://security.microsoft.com/quarantine?viewid=Email>.
 
@@ -366,7 +371,10 @@ After you select the message, use either of the following methods to remove it:
 - **On the Email tab**: Select :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete from quarantine**.
 - **In the details flyout of the selected message**: Select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** \> :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete from quarantine**.
 
-In the **Delete (n) messages from quarantine** flyout that opens, select **Permanently delete the message from quarantine** and then select **Delete**. The deleted message isn't recoverable.
+> [!WARNING]
+> Deleting the message from quarantine is permanent and the message isn't recoverable.
+
+In the **Delete (n) messages from quarantine** flyout that opens, select **Permanently delete the message from quarantine** and then select **Delete**.
 
 Back on the **Email** tab, the deleted message is no longer listed.
 
@@ -607,6 +615,8 @@ After you find a specific quarantined file, select the file to view details abou
 
 ### View quarantined file details
 
+Use the following steps to open the details flyout for a quarantined file.
+
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Quarantine** \> **Files** tab. Or, to go directly to the **Files** tab on the **Quarantine** page, use <https://security.microsoft.com/quarantine?viewid=Files>.
 
 2. On the **Files** tab, select the quarantined file by clicking anywhere in the row other than the check box.
@@ -636,6 +646,8 @@ To take action on the file, see the next section.
 > To see details about other quarantined files without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
 ### Take action on quarantined files
+
+Use the following steps to select a quarantined file and view the actions available for it.
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Quarantine** \> **Files** tab. Or, to go directly to the **Files** tab on the **Quarantine** page, use <https://security.microsoft.com/quarantine?viewid=Files>.
 
@@ -685,9 +697,10 @@ Back on the **Download file** flyout, select **Done**.
 
 Messages are automatically deleted from quarantine after the date shown in the **Expires** column if you don't release or manually remove the messages, but the blocked file remains in SharePoint or OneDrive in the blocked state.
 
-After you select the file, select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More** \> :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete from quarantine** in the details flyout that opens.
+> [!WARNING]
+> Deleting a file from quarantine is a destructive action that can't be undone.
 
-Select **Continue** in the warning dialog that opens.
+After you select the file, select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More** \> :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete from quarantine** in the details flyout that opens. Review the warning dialog, and then select **Continue** to proceed.
 
 Back on the **Files** tab, the file is no longer listed.
 
@@ -767,12 +780,12 @@ The following message information is available at the top of the details flyout:
 - The title of the flyout is the subject or the first 100 characters of the Teams message.
 - The **Quarantine reason** value.
 - The number of links in the message.
-- The available actions are described in the [Take action on quarantined Teams messages](#take-action-on-quarantined-teams-messages) section.
+- The available actions are described in [Take action on quarantined Teams messages](#take-action-on-quarantined-teams-messages).
 
 > [!TIP]
 > To see details about other quarantined Teams messages without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
-The next section in the details flyout is related to quarantined Teams messages:
+The **Quarantine details** section in the details flyout contains information related to quarantined Teams messages:
 
 - **Quarantine details** section:
   - **Expires**
@@ -823,6 +836,9 @@ In the **Release message to your Teams app** flyout that opens, decide whether t
 #### Delete Teams messages from quarantine
 
 Teams messages are automatically deleted from quarantine after the date shown in the **Expires** column if you don't release or manually remove the messages.
+
+> [!WARNING]
+> Deleting a Teams message from quarantine is a destructive action that can't be undone.
 
 After you select the Teams message, use either of the following methods to remove it:
 
@@ -877,10 +893,10 @@ Back on the **Download messages** flyout, select **Done**.
 > [!TIP]
 > Currently, this feature is in Preview, isn't available in all organizations, is subject to change, and is available only in organizations with Microsoft Defender for Office 365 Plan 2.
 
+For complete instructions, see [Remove users from Teams chats in the Teams message entity panel](teams-message-entity-panel.md#remove-users-from-teams-chats-in-the-teams-message-entity-panel). The opening steps of the procedure are:
+
 1. On the **Teams messages** tab, select the Teams message by clicking anywhere in the row other than the check box next to the first column.
 2. In the details flyout that opens (the Teams message entity panel), select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More actions** \> :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** at the top of the flyout.
-
-For complete instructions, see [Remove users from Teams chats in the Teams message entity panel](teams-message-entity-panel.md#remove-users-from-teams-chats-in-the-teams-message-entity-panel).
 
 #### Take action on multiple quarantined Teams messages
 
@@ -911,4 +927,4 @@ The [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online
 
 ## For more information
 
-[Quarantined messages FAQ](quarantine-faq.yml)
+For additional background and answers to common questions, see [Quarantined messages FAQ](quarantine-faq.yml).

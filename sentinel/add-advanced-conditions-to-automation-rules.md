@@ -5,11 +5,13 @@ ms.topic: how-to
 ms.author: monaberdugo
 author: mberdugo
 ms.reviewer: sshuster
-ms.date: 10/16/2024
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 
@@ -25,13 +27,13 @@ Add "Or" conditions in the form of *condition groups* in the Conditions section 
 
 Condition groups can contain two levels of conditions:
 
-- [**Simple**](#example-1-simple-conditions): At least two conditions, each separated by an `OR` operator: 
+- [**Simple conditions**](#example-1-simple-conditions): At least two conditions, each separated by an `OR` operator: 
 
     - **A `OR` B**
-    - **A `OR` B `OR` C** ([See Example 1B below](#example-1b-add-more-or-conditions).)
+    - **A `OR` B `OR` C** ([Example 1B: Add more OR conditions](#example-1b-add-more-or-conditions).)
     - and so on.
 
-- [**Compound**](#example-2-compound-conditions): More than two conditions, with at least two conditions on at least one side of an `OR` operator:
+- [**Compound conditions**](#example-2-compound-conditions): More than two conditions, with at least two conditions on at least one side of an `OR` operator:
 
     - **(A `and` B) `OR` C**
     - **(A `and` B) `OR` (C `and` D)**
@@ -39,13 +41,13 @@ Condition groups can contain two levels of conditions:
     - **(A `and` B) `OR` (C `and` D) `OR` (E `and` F)**
     - and so on.
 
-You can see that this capability affords you great power and flexibility in determining when rules will run. It can also greatly increase your efficiency by enabling you to combine many old automation rules into one new rule.
+Using condition groups with OR logic affords you great power and flexibility in determining when rules will run. It can also greatly increase your efficiency by enabling you to combine many old automation rules into one new rule.
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
 ## Add a condition group
 
-Since condition groups offer a lot more power and flexibility in creating automation rules, the best way to explain how to do this is by presenting some examples.
+Since condition groups offer a lot more power and flexibility in creating automation rules, the best way to explain how to add condition groups to automation rules is by presenting some examples.
 
 Let's create a rule that will change the severity of an incoming incident from whatever it is to High, assuming it meets the conditions we'll set.
 
@@ -65,13 +67,17 @@ Let's create a rule that will change the severity of an incoming incident from w
 
 1. Select **High** from the drop-down list that appears below **Change severity**.
 
-For example, the following tabs show samples from a workspace that's onboarded to the Defender portal, in either the Azure or Defender portals, and a workspace that isn't:
+For example, the **Onboarded workspaces** and **Workspaces that aren't onboarded** tabs show samples from a workspace that's onboarded to the Defender portal, in either the Azure or Defender portals, and a workspace that isn't:
 
 ### [Onboarded workspaces](#tab/after-onboarding)
+
+The following example shows the automation rule creation experience for workspaces onboarded to the Defender portal.
 
 :::image type="content" source="media/add-advanced-conditions-to-automation-rules/create-automation-rule-no-conditions-onboarded.png" alt-text="Screenshot of creating new automation rule without adding conditions.":::
 
 ### [Workspaces that aren't onboarded](#tab/before-onboarding)
+
+The following example shows the automation rule creation experience for workspaces that aren't onboarded to the Defender portal.
 
 :::image type="content" source="media/add-advanced-conditions-to-automation-rules/create-automation-rule-no-conditions.png" alt-text="Screenshot of creating new automation rule without adding conditions.":::
 
@@ -84,7 +90,7 @@ In this first example, we'll create a simple condition group: If either conditio
 
     :::image type="content" source="media/add-advanced-conditions-to-automation-rules/add-condition-group.png" alt-text="Screenshot of adding a condition group to an automation rule's condition set.":::
 
-1. See that two sets of condition fields are displayed, separated by an `OR` operator. These are the "A" and "B" conditions we mentioned above: If A or B is true, the rule will run.  
+1. See that two sets of condition fields are displayed, separated by an `OR` operator. These are conditions A and B, representing the two sides of a simple OR condition group: If A or B is true, the rule will run.  
     (Don't be confused by all the different layers of "Add" links - these will all be explained.)
 
     :::image type="content" source="media/add-advanced-conditions-to-automation-rules/empty-condition-group.png" alt-text="Screenshot of empty condition group fields.":::
@@ -114,13 +120,14 @@ Let's say we want to have this rule run if one of THREE (or more) conditions is 
 
     :::image type="content" source="media/add-advanced-conditions-to-automation-rules/add-another-or-condition.png" alt-text="Screenshot of adding another OR condition to an automation rule.":::
 
-1. Now, fill in the parameters and values of this condition the same way you did the first two.
+1. Now, select the field, operator, and value for the new condition, as you did for conditions A and B.
 
     :::image type="content" source="media/add-advanced-conditions-to-automation-rules/added-another-or-condition.png" alt-text="Screenshot of another OR condition added to an automation rule.":::
 
-## Example 2: compound conditions
+<a name="example-2-compound-conditions"></a>
+## Example 2: Add compound conditions
 
-Now we decide we're going to be a little more picky. We want to add more conditions to each side of our original OR condition. That is, we want the rule to run if A *and* B are true, *OR* if C *and* D are true.
+In this example, we add multiple conditions to each side of an OR condition group, creating compound logic. The goal is for the rule to run if A *and* B are true, *OR* if C *and* D are true.
 
 1. To add a condition to one side of an OR condition group, select the **+ Add** link immediately below the existing condition, on the same side of the `OR` operator (in the same blue-shaded area) to which you want to add the new condition.
 
@@ -130,11 +137,11 @@ Now we decide we're going to be a little more picky. We want to add more conditi
 
     :::image type="content" source="media/add-advanced-conditions-to-automation-rules/empty-new-condition.png" alt-text="Screenshot of empty new condition row in automation rules.":::
 
-1. Fill in the parameters and values of this condition the same way you did the others.
+1. Fill in the parameters and values of this condition the same way you did the previously added conditions in the group.
 
     :::image type="content" source="media/add-advanced-conditions-to-automation-rules/fill-in-new-condition.png" alt-text="Screenshot of new condition fields to fill in to add to automation rules.":::
 
-1. Repeat the previous two steps to add an AND condition to either side of the OR condition group.
+1. On either side of the OR condition group, select the **+ Add** link below an existing condition to add a new row, and then enter the new condition's parameters and values.
 
     :::image type="content" source="media/add-advanced-conditions-to-automation-rules/add-compound-conditions.png" alt-text="Screenshot of adding multiple compound conditions to an automation rule.":::
 
@@ -142,7 +149,7 @@ That's it! You can use what you've learned here to add more conditions and condi
 
 ## Next steps
 
-In this document, you learned how to add condition groups using `OR` operators to automation rules.
+For more information about automation rules and related capabilities, see the following resources:
 
 - For instructions on creating basic automation rules, see [Create and use Microsoft Sentinel automation rules to manage response](create-manage-use-automation-rules.md).
 - To learn more about automation rules, see [Automate incident handling in Microsoft Sentinel with automation rules](automate-incident-handling-with-automation-rules.md)

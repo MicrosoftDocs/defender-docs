@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen
-ms.date: 10/20/2025
+ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 06/16/2026
 ms.reviewer: ksarens, jtoole, pahuijbr, yongrhee
 ms.subservice: ngp
 ms.topic: how-to
@@ -19,6 +19,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
 ---
 
 # Use Group Policy settings to configure and manage Microsoft Defender Antivirus
@@ -32,7 +33,11 @@ We recommend using [Microsoft Intune](/intune/intune-service/fundamentals/what-i
 
 ## Prerequisites
 
+To configure Microsoft Defender Antivirus using Group Policy, your environment must meet the following requirements.
+
 ### Supported operating systems
+
+Group Policy configuration for Microsoft Defender Antivirus is supported on the following operating systems:
 
 - Windows
 - Windows Server
@@ -49,9 +54,9 @@ In general, you can use the following procedure to configure or change some sett
 
 1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus**.
 
-1. Expand the section (referred to as **Location** in the table in this article) that contains the setting you want to configure, double-click the setting to open it, and make configuration changes.
+1. Expand the section (referred to as **Location** in the following table) that contains the setting you want to configure, double-click the setting to open it, and make configuration changes.
 
-1. [Deploy the updated GPO as you normally do](/windows/win32/srvnodes/group-policy).
+1. Deploy the updated GPO as you normally do. For more information, see [Group Policy](/windows/win32/srvnodes/group-policy).
 
 ## Group Policy settings and resources
 
@@ -67,7 +72,7 @@ The following table lists commonly used Group Policy settings that are available
 | Client interface| Suppress all notifications | [Configure the notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
 | Client interface| Suppresses reboot notifications| [Configure the notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
 | Exclusions| Extension Exclusions| [Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md) |
-| Exclusions | IP Address Exclusions | [Add exclusions](troubleshoot-np.md#add-exclusions) |
+| Exclusions | IP Address Exclusions | [Add network protection exclusions](troubleshoot-np.md#add-exclusions) |
 | Exclusions|Path Exclusions | [Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md) |
 | Exclusions|Process Exclusions | [Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md) |
 | Exclusions| Turn off Auto Exclusions | [Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md) |

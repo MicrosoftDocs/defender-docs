@@ -9,18 +9,20 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
-ms.date: 03/19/2026
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Manage the live response file library in Microsoft Defender for Endpoint
 
 The **Library management** page in the Microsoft Defender portal allows you to manage files used during Microsoft Defender for Endpoint live response sessions. You can also add, view, and delete files in the library, instead of uploading them during a live response session.
 
-This article describes how to view, add, and manage libraries for live response.
+This article describes how to view, add, and manage files in the live response library.
 
 For more information about live response, see [Investigate entities on devices using live response](live-response.md).
 
@@ -67,19 +69,20 @@ To view a file's details, select **View details** from the menu, or right-click 
 
 ## View and analyze files
 
+> [!NOTE]
+> You need a [Microsoft Security Copilot license](https://www.microsoft.com/security/pricing/microsoft-security-copilot) to analyze files. Without this license, you can only view files.
+
 To view and analyze a file:
 
 1. Right-click the file and select **View file** or double-click the file row.
 1. Select **Download** to download the file, or **Analyze** to open Copilot script analysis.
 
-    > [!NOTE]
-    > You need a [Microsoft Security Copilot license](https://www.microsoft.com/security/pricing/microsoft-security-copilot) to analyze the files. If you don't have this license, you can only view files.
-    
-    The analysis provides a description of the actions the script takes, and more information, including the methods used and output.
+    The analysis describes what the script does, including its methods and output.
 
     :::image type="content" source="media/configure-libraries-live-response/library-management-view-analyze-file.png" alt-text="Screenshot of the library management page - view and analyze a file" lightbox="media/configure-libraries-live-response/library-management-view-analyze-file.png":::
 
-## Manage files
+<a name="manage-files"></a>
+## Manage files in the library
 
 The following options are available for managing existing files in the library:
 

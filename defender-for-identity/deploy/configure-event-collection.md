@@ -1,9 +1,11 @@
 ---
 title: Listen for SIEM events | Microsoft Defender for Identity
 description: Learn how to configure your Microsoft Defender for Identity sensor to listen for SIEM events and enhance your detection abilities with extra Windows events.
-ms.date: 08/10/2023
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.reviewer: martin77s
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Listen for SIEM events on your Defender for Identity standalone sensor
@@ -15,9 +17,10 @@ For more information, see [Configure Windows event auditing](configure-windows-e
 > [!IMPORTANT]
 > Defender for Identity standalone sensors don't support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Defender for Identity sensor.
 
-## RSA Security Analytics
+<a name="rsa-security-analytics"></a>
+## Configure RSA Security Analytics event collection
 
-Use the following message syntax to configure your standalone sensor to listen for RSA Security Analytics events:
+Use the following message syntax to configure your standalone sensor to listen for RSA Security Analytics events. In the example, `<Syslog Header>` represents the standard RFC 3164 syslog header prefix, which is optional:
 
 ```text
 <Syslog Header>RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
@@ -44,9 +47,10 @@ In this syntax:
 > [!IMPORTANT]
 > The order of the fields is important and nothing else should be included in the message.
 
-## MicroFocus ArcSight
+<a name="microfocus-arcsight"></a>
+## Configure MicroFocus ArcSight event collection
 
-Use the following message syntax to configure your standalone sensor to listen for MicroFocus ArcSight events:
+The following example shows a complete Common Event Format (CEF) event 4776 message with the required Extension keys populated. Use this syntax to configure your standalone sensor to listen for MicroFocus ArcSight events:
 
 ```text
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|The domain controller attempted to validate the credentials for an account.|Low| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Reason or Error Code
@@ -78,9 +82,10 @@ In this syntax:
     - `EventSource`
     - `Reason or Error Code` = The result code of the NTLM
 
-## Splunk
+<a name="splunk"></a>
+## Configure Splunk event collection
 
-Use the following message syntax to configure your standalone sensor to listen for Splunk events:
+The following example shows a sample Splunk event message for event 4776 in key-value format, with the required fields in context. Use this syntax to configure your standalone sensor to listen for Splunk events:
 
 ```text
 <Syslog Header>\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=
@@ -109,9 +114,9 @@ In this syntax:
 
 - The order isn't important for the key=value pairs.
 
-A message similar to the following appears:
+The following example shows the message body content of a Splunk event for Windows event 4776. You can use this sample to validate your sensor formatting:
 
-```bash
+```text
 The computer attempted to validate the credentials for an account.
 
 Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
@@ -124,7 +129,8 @@ Error Code: 0x0
 ```
 
 
-## QRadar
+<a name="qradar"></a>
+## Configure QRadar event collection
 
 QRadar enables event collection via an agent. If the data is gathered using an agent, the time format is gathered without millisecond data.
 

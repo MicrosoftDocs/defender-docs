@@ -65,10 +65,10 @@
         href: demonstration-behavior-monitoring.md
       - name: Cloud-delivered protection
         href: defender-endpoint-demonstration-cloud-delivered-protection.md
-      - name: Controlled folder access (block script) demonstration
-        href: defender-endpoint-demonstration-controlled-folder-access-test-tool.md
+      - name: Controlled folder access (block an untrusted app) demonstration
+        href: defender-endpoint-demonstration-controlled-folder-access-block-app.md
       - name: Controlled folder access (block ransomware) demonstration
-        href: defender-endpoint-demonstration-controlled-folder-access.md
+        href: defender-endpoint-demonstration-controlled-folder-access-ransomware.md
       - name: EDR detections demonstration
         href: edr-detection.md
       - name: Exploit protection demonstration
@@ -606,27 +606,30 @@
     - name: Detect vulnerabilities
     - name: Detect vulnerabilities
       href: /defender-vulnerability-management
-    - name: Discover devices
+    - name: Discover and manage devices
       items:
-      - name: Overview
+      - name: Device discovery
         href: device-discovery.md
       - name: Manage device discovery
         href: configure-device-discovery.md
       - name: Review and assess devices
         href: assess-devices.md
-
       - name: Configure network authenticated scans
         href: network-devices.md
-      - name: Troubleshoot
-        href: troubleshoot-device-discovery-network-scans.md
-    - name: Devices
-      items:
-      - name: Overview
+        items:
+        - name: Troubleshoot
+          href: troubleshoot-device-discovery-network-scans.md    
+      - name: Device inventory
         displayName: devices, device inventory
         href: devices-overview.md
       - name: Explore devices in the device inventory
-        displayName: device inventory
-        href: machines-view-overview.md
+        items:
+        - name: Overview
+          displayName: device inventory
+          href: machines-view-overview.md
+        - name: Device inventory field and filter reference
+          displayName: device inventory fields, device inventory filters
+          href: device-inventory-field-reference.md
       - name: Manage device scope and relevance
         displayName: exclude devices, transient devices
         href: manage-device-scope-relevance.md
@@ -695,14 +698,12 @@
           href: attack-surface-reduction-rules-reference.md
       - name: Controlled folder access
         items:
-        - name: Protect folders
-          href: controlled-folders.md
-        - name: Evaluate controlled folder access
-          href: evaluate-controlled-folder-access.md
-        - name: Enable controlled folder access
-          href: enable-controlled-folders.md
-        - name: Customize controlled folder access
-          href: customize-controlled-folders.md
+        - name: Controlled folder access overview
+          href: controlled-folder-access-overview.md
+        - name: Configure controlled folder access
+          href: controlled-folder-access-configure.md
+        - name: Monitor controlled folder access
+          href: controlled-folder-access-monitor.md
       - name: Device Control
         items:
         - name: Overview of device control
@@ -1575,10 +1576,6 @@
       items:
       - name: Technical partner opportunities
         href: partner-integration.md
-      - name: Become a Microsoft Defender for Endpoint partner
-        href: get-started-partner-integration.md
-      - name: Professional security services that integrate with Defender for Endpoint
-        href: professional-services.md
     - name: Integrations
       items:
       - name: Microsoft Defender for Endpoint integrations

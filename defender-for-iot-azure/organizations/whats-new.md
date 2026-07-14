@@ -21,6 +21,12 @@ Features released earlier than nine months ago are described in the [What's new 
 
 [!INCLUDE [defender-iot-defender-reference](../includes/defender-for-iot-defender-reference.md)]
 
+## June 2026
+
+|Service area  |Updates  |
+|---------|---------|
+| **OT networks** | Sensor version 26.1.1 is now available. This release includes CVE updates and bug fixes for stability improvements. See [release details and updates](release-notes.md#version-2611). |
+
 ## April 2026
 
 |Service area  |Updates  |
@@ -108,4 +114,4 @@ The legacy on-premises management console isn't available for download after **J
 
 ## Next steps
 
-[Start a Microsoft Defender for IoT trial](getting-started.md)
+[Get started with Defender for IoT](getting-started.md)

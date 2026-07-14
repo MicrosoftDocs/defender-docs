@@ -4,7 +4,7 @@ description: Learn how the Password protection page in Microsoft Defender helps 
 #customer intent: As a security admin, I want to see password-related risks across my identity sources so that I can find exposed credentials, weak policies, and configuration issues and take action to reduce risk.
 author: AbbyMSFT
 ms.author: abbyweisberg
-ms.date: 04/14/2026
+ms.date: 07/02/2026
 ms.topic: concept-article
 ms.service: defender-xdr
 ms.custom: msecd-doc-authoring-106
@@ -15,7 +15,7 @@ ai-usage: ai-assisted
 
 Compromised credentials remain one of the most common ways attackers gain initial access, even in environments that use multifactor authentication and modern authentication protocols. Password risks are often spread between different tools and identity providers, which can make it difficult for security teams to assess exposure and prioritize remediation.
 
-The **Password protection** page in Microsoft Defender consolidates password-related risks from your identity sources into a single, prioritized view. Use it to find leaked credentials, exposed passwords, weak password policies, and configuration issues in on-premises Active Directory, Microsoft Entra ID, federated identities, and non-Microsoft providers like Okta. For each issue, you can see why an account is at risk and take action—such as resetting a password or disabling an account—directly from the page.
+The **Password protection** page in Microsoft Defender consolidates password-related risks from your identity sources into a single, prioritized view. Use it to find leaked credentials, exposed passwords, weak password policies, and configuration issues in on-premises Active Directory, Microsoft Entra ID, federated identities, non-Microsoft identity providers like Okta, and SaaS apps connected through Microsoft Defender for Cloud Apps. For each issue, you can see why an account is at risk and take action, such as resetting a password or disabling an account, directly from the page.
 
 ## Prerequisites
 
@@ -23,6 +23,7 @@ To access the **Password protection** page, you need:
 
 - A Microsoft Defender for Identity license, or another license that includes Defender for Identity (such as E5), and a Microsoft Entra ID Protection license.
 - A user role with at least [Security Reader](/azure/active-directory/roles/permissions-reference#security-reader) permissions.
+- To review SaaS app sources, a Microsoft Defender for Cloud Apps license and an app connector for each SaaS app you want to see. Only SaaS apps that support SSPM appear.
 
 ## The Password protection page
 
@@ -35,6 +36,7 @@ The page includes a left panel where you select the identity source you want to 
 - **Active Directory**: Available on all four tabs.
 - **Microsoft Entra ID**: Available on the Leaked Credentials tab.
 - **Okta**: Available on the Password Hygiene and Password Policies tabs.
+- **SaaS apps**: Available on the Password Hygiene and Password Policies tabs for SaaS apps connected to Microsoft Defender for Cloud Apps that support SaaS Security Posture Management (SSPM), such as Salesforce and ServiceNow. For the full list, see [security configuration visibility per connected app](/defender-cloud-apps/enable-instant-visibility-protection-and-governance-actions-for-your-apps#user-app-governance-and-security-configuration-visibility).
 
 The page has four tabs:
 

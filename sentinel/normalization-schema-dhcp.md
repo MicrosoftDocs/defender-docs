@@ -1,5 +1,5 @@
 ---
-title: The Advanced Security Information Model (ASIM) DHCP normalization schema reference | Microsoft Docs
+title: The Advanced Security Information Model (ASIM) DHCP normalization schema reference
 description: This article describes the Microsoft Sentinel DHCP normalization schema.
 ms.author: guywild
 author: guywi-ms

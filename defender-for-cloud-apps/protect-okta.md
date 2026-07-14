@@ -1,10 +1,11 @@
 ---
 title: Protect your Okta environment | Microsoft Defender for Cloud Apps
-description: Learn how about connecting your Okta app to Defender for Cloud Apps using the API connector.
-ms.date: 11/24/2025
+description: Connect Okta to Microsoft Defender for Cloud Apps with the API connector to monitor admin activity, managed users, and sign-ins, and detect anomalous behavior.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # How Defender for Cloud Apps helps protect your Okta environment
@@ -21,6 +22,8 @@ Connecting Okta to Defender for Cloud Apps gives you improved insights into your
 - Compromised accounts and insider threats
 
 ## How Defender for Cloud Apps helps to protect your environment
+
+Defender for Cloud Apps helps you protect your Okta environment with the following best practices:
 
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 - [Use the audit trail of activities for forensic investigations](best-practices.md#use-the-audit-trail-of-activities-for-forensic-investigations)
@@ -73,7 +76,7 @@ To connect Okta to Defender for Cloud Apps:
 
 ## Connect Okta to Microsoft Defender for Cloud Apps
 
-This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Okta account using the connector APIs. This connection gives you visibility into and control over Okta use. For information about how Defender for Cloud Apps protects Okta, see [Protect Okta](protect-okta.md).
+The following procedure provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Okta account using the connector APIs. This connection gives you visibility into and control over Okta use. For information about how Defender for Cloud Apps protects Okta, see [Protect Okta](protect-okta.md).
 
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
@@ -89,7 +92,7 @@ In the Okta console, create a token for the API. Copy the token value, you will 
 
 1. In the **App connectors page**, select **+Connect an app**, and then **Okta**.
 
-    ![Connect Okta.](media/connect-okta.png "Connect Okta")
+    ![Screenshot showing the Connect Okta option in the App connectors page.](media/connect-okta.png "Connect Okta")
 
 1. In the next window, give your connection a name and select **Next**.
 1. In the **Enter details** window, in the **Domain** field, enter your Okta domain and paste your Token into the **Token** field.
@@ -102,6 +105,8 @@ After connecting Okta, you'll receive events for seven days prior to connection.
 
 
 ## Next steps
+
+After you connect Okta, use the following resources to continue:
 
 - If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
 

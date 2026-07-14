@@ -1,5 +1,5 @@
 ---
-title: Manage submissions
+title: Submit messages, URLs, and attachments for analysis in the Microsoft Defender portal
 author: chrisda
 ms.author: chrisda
 ms.topic: how-to
@@ -8,22 +8,24 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
+  - msecd-doc-authoring-1014
   - seo-marvel-apr2020
   - sfi-image-nochange
 description: "Admins can learn how to use the Submissions page in the Microsoft Defender portal to submit messages, URLs, and email attachments to Microsoft for analysis. Reasons for submission include: legitimate messages that were blocked, suspicious messages that were allowed, suspected phishing email, spam, malware, and other potentially harmful messages."
 ms.service: defender-office-365
-ms.date: 04/29/2026
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Use the Submissions page to submit suspected spam, phish, URLs, legitimate email getting blocked, and email attachments to Microsoft
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-For more information about how Microsoft stores and handle your submissions, [check this out](submissions-report-messages-files-to-microsoft.md#report-suspicious-email-messages-to-microsoft).
+For more information about how Microsoft stores and handles your submissions, see [Report suspicious email messages to Microsoft](submissions-report-messages-files-to-microsoft.md#report-suspicious-email-messages-to-microsoft).
 
 In Microsoft 365 organizations with Exchange Online mailboxes, admins can use the **Submissions** page in the Microsoft Defender portal to submit messages, URLs, and attachments to Microsoft for analysis. There are two basic types of admin submissions:
 
@@ -33,7 +35,7 @@ In Microsoft 365 organizations with Exchange Online mailboxes, admins can use th
 
 - **Admin submission of user reported messages**: The built-in [user reporting experience](submissions-user-reported-messages-custom-mailbox.md) is turned on and configured. User reported messages appear on the **User reported** tab on the **Submissions** page, and admins submit or resubmit the messages to Microsoft from the **User reported** tab.
 
-  After an admin submits the message from the **User reported** tab, an entry is also created on the corresponding tab on the **Submissions** page (for example, the **Emails** tab). These types of admin submissions are described in the [Admin options for user reported messages](#admin-options-for-user-reported-messages) section.
+  After an admin submits the message from the **User reported** tab, an entry is also created on the corresponding tab on the **Submissions** page (for example, the **Emails** tab). From the **User reported** tab, admins can review, submit (or resubmit) these messages to Microsoft for analysis, mark them with a verdict, and notify the reporting user. For the full set of admin actions, see [Admin options for user reported messages](#admin-options-for-user-reported-messages).
 
 When admins or users submit messages to Microsoft for analysis, we do the following checks:
 
@@ -71,7 +73,7 @@ For other ways that **admins** can report messages to Microsoft in the Defender 
 
 - If the [User reported settings](submissions-user-reported-messages-custom-mailbox.md) in the organization send user reported messages (email and [Microsoft Teams](submissions-teams.md)) to Microsoft (exclusively or in addition to the reporting mailbox), we do the same checks as when admins submit messages to Microsoft for analysis from the **Submissions** page. So, submitting or resubmitting messages to Microsoft is useful to admins only for messages that have never been submitted to Microsoft, or when you disagree with the original verdict.
 
-- A **Files** tab is available on the **Submissions** page only in organizations with Microsoft Defender XDR or Microsoft Defender for Endpoint Plan 2. For information and instructions to submit files from the **Files** tab, see [Submit files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
+- A **Files** tab is available on the **Submissions** page only in organizations with Microsoft Defender or Microsoft Defender for Endpoint Plan 2. For information and instructions to submit files from the **Files** tab, see [Submit files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
 
 ## Admin-originated submissions
 
@@ -434,9 +436,9 @@ After a few moments, the allow entry is available on the **URL** tab on the **Te
 > [!TIP]
 > [Submission of Teams message to Microsoft](submissions-teams.md) is currently in Preview, isn't available in all organizations, and is subject to change.
 
-In Microsoft 365 organizations that have Microsoft Defender for Office 365 Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5), You can't submit Teams messages from the **Teams messages** tab on the **Submissions** page. The only way to submit a Teams message to Microsoft for analysis is to submit a user reported Teams message from the **User reported** tab as described in the [Submit user reported messages to Microsoft for analysis](#submit-user-reported-messages-to-microsoft-for-analysis) section later in this article.
+In Microsoft 365 organizations that have Microsoft Defender for Office 365 Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5), You can't submit Teams messages from the **Teams messages** tab on the **Submissions** page. The only way to submit a Teams message to Microsoft for analysis is to submit a user reported Teams message from the **User reported** tab as described in [Submit user reported messages to Microsoft for analysis](#submit-user-reported-messages-to-microsoft-for-analysis).
 
-The entries on the **Teams messages** tab are the result of submitting user reported Teams message to Microsoft. For more information, see the [View converted admin submissions](#view-converted-admin-submissions) section later in this article.
+The entries on the **Teams messages** tab are the result of submitting user reported Teams message to Microsoft. For more information, see [View converted admin submissions](#view-converted-admin-submissions).
 
 ### View email admin submissions to Microsoft
 
@@ -962,7 +964,7 @@ In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Ac
 
 On the **Submissions** page, select the **User reported** tab.
 
-The following subsections describe the information and actions that are available on the **User reported** tab on the **Submissions** page.
+The **User reported** tab provides information and actions including [viewing user reported messages](#view-user-reported-messages-to-microsoft), [viewing message details](#view-user-reported-email-message-details), and [admin actions for user reported messages](#admin-actions-for-user-reported-messages).
 
 ### View user reported messages to Microsoft
 
@@ -1033,7 +1035,7 @@ When you're finished on the **Filter** flyout, select **Apply**. To clear the fi
 
 Use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to export the list of entries to a CSV file.
 
-For more information about the actions that are available for messages on the **User reported** tab, see the next subsection.
+For more information about the actions that are available for messages on the **User reported** tab, see [Admin actions for user reported messages](#admin-actions-for-user-reported-messages).
 
 ### View user reported email message details
 
@@ -1150,8 +1152,6 @@ On the **User reported** tab, actions for user reported messages are available o
     - :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Open email entity**
     - :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take actions**
     - :::image type="icon" source="media/defender-portal-icon-view-alert.png" border="false"::: **View alert**
-
-[Actions for user reported messages in Defender for Office](#actions-for-user-reported-messages-in-defender-for-office-365)
 
   > [!TIP]
   > To see details or take action on other user reported messages without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.

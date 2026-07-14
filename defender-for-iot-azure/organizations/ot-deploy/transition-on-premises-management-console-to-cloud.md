@@ -1,8 +1,10 @@
 ---
 title: Transition from a legacy on-premises management console to the cloud
-description: This article describes how to transition from the on-premises management console to the cloud.
+description: Migrate from the legacy on-premises management console to the cloud-based Defender for IoT architecture. Learn the updated architecture approach, key retirement considerations, and planning guidance for the transition.
 ms.topic: how-to
-ms.date: 12/17/2024
+ms.date: 06/12/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Transition from a legacy on-premises management console to the cloud
@@ -23,11 +25,15 @@ If you're an existing customer using an on-premises management console to manage
 
 ## How to manage the transition period
 
+The following stages describe how sensor connectivity changes during the transition period:
+
 - **In your legacy configuration**, all sensors are connected to the on-premises management console.
 - **During the transition period**, your sensors remain connected to the on-premises management console while you connect any sensors possible to the cloud.
 - **After fully transitioning**, you'll remove the connection to the on-premises management console, keeping cloud connections where possible. Any sensors that must remain air-gapped are accessible directly from the sensor UI.
 
 ## Transition your architecture
+
+Use the following steps to transition from the legacy on-premises management console architecture to the updated deployment model:
 
 1. For each of your OT sensors, identify the legacy integrations in use and the permissions currently configured for on-premises security teams. For example, what backup systems are in place? Which user groups access the sensor data?
 

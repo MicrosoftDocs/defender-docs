@@ -7,13 +7,15 @@ ms.localizationpriority: medium
 ms.collection: 
   - m365-security
   - tier2
-description: Admins can learn to identify the reasons why and how a phishing message what delivered in Microsoft 365, and what to do to prevent more phishing messages in the future.
+description: Identify why a phishing message was delivered in Microsoft 365 and learn how to adjust anti-phishing settings to help prevent similar messages in the future.
 ms.service: defender-office-365
-ms.date: 07/02/2025
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Tune anti-phishing protection
@@ -30,7 +32,7 @@ If you have Microsoft Defender for Office 365 (included or in an add-on subscrip
 - [Safe Attachments in Microsoft Defender for Office 365](safe-attachments-policies-configure.md)
 - [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md). You can temporarily increase the **Phishing email threshold** in the policy from **Standard** to **Aggressive**, **More aggressive**, or **Most aggressive**.
 
-Verify these policies are working. Safe Links and Safe Attachments protection is turned on by default via Built-in protection in [preset security policies](preset-security-policies.md). Anti-phishing has a default policy that applies to all recipients where anti-spoofing protection is turned on by default. Impersonation protection isn't turned on in the policy, and therefore needs to be configured. For instructions, see [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md).
+Verify that Safe Links, Safe Attachments, and anti-phishing policies are working. Safe Links and Safe Attachments protection is turned on by default via Built-in protection in [preset security policies](preset-security-policies.md). Anti-phishing has a default policy that applies to all recipients where anti-spoofing protection is turned on by default. Impersonation protection isn't turned on in the default anti-phishing policy, and therefore needs to be configured. For instructions, see [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md).
 
 ## Report the phishing message to Microsoft
 
@@ -48,6 +50,8 @@ Specifically, you should check the **X-Forefront-Antispam-Report** header field 
 You can also use the [configuration analyzer](configuration-analyzer-for-security-policies.md) to compare your threat policies to the Standard and Strict recommendations.
 
 ## Best practices to stay protected
+
+Use the following best practices to reduce future phishing risk and validate your protection settings.
 
 - On a monthly basis, run [Secure Score](/defender-xdr/microsoft-secure-score) to assess your organization's security settings.
 

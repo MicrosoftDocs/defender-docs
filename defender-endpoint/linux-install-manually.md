@@ -362,6 +362,8 @@ sudo apt install mdatp
 
 > [!NOTE]
 > If you have multiple Microsoft repositories configured on your device, you can be specific about which repository to install the package from. The following example shows how to install the package from the `production` channel if you also have the `insiders-fast` repository channel configured on this device. This situation can happen if you're using multiple Microsoft products on your device.
+>
+> The version numbers and release codenames in the following code snippets are examples. Use the actual release codename the bash command returns.
 
 ```bash
 cat /etc/apt/sources.list.d/*
@@ -514,7 +516,7 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
       
 1. Run an EDR detection test and simulate a detection to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
-   1. Verify that the onboarded Linux server appears in Microsoft Defender XDR. If this is the first onboarding of the machine, it can take up to 20 minutes until it appears.
+   1. Verify that the onboarded Linux server appears in the Defender portal. If this is the first onboarding of the machine, it can take up to 20 minutes until it appears.
       
    1. Download and extract the [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server, and then run the following command: `./mde_linux_edr_diy.sh`
    

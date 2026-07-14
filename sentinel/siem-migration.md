@@ -6,7 +6,7 @@ ms.author: monaberdugo
 author: mberdugo
 ms.reviewer: yohasson
 ms.topic: how-to
-ms.date: 05/4/2026
+ms.date: 06/17/2026
 ai-usage: ai-assisted
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
@@ -48,15 +48,42 @@ You need a Splunk admin role to export all Splunk alerts. For more information, 
 
 ### [QRadar](#tab/qradar)
 
-Export your QRadar rule data as a CSV file, as explained here [Exporting rules - IBM Documentation](https://go.microsoft.com/fwlink/?linkid=2332524).
+Use the QRadar migration data collector script to export your QRadar detection rules and building blocks to a CSV file that the SIEM migration experience can analyze.
 
-Two notes regarding the export:
+Before you start, make sure you have:
 
-1. The default export includes the alert rules, but not the building blocks that can carry important information. Clear any filter values for the *Rule or Building Block(BB)* to allow both the rules and the BBs to be exported.
+- Python 3 installed on the machine where you'll run the script. The latest stable release is recommended.
+- A QRadar authorized service token with Admin privileges. For more information, see [Creating authorized service tokens in IBM QRadar](https://www.ibm.com/docs/qradar-common?topic=configuration-creating-authorized-service-token).
+- Network access from the script machine to your QRadar console.
 
-1. Only include the following fields in your export to avoid duplications that can lead to QRadar application freeze:
+1. In the SIEM migration experience, select **QRadar**, then select **Download script**.
+1. Save `qradar_collector.py` to the machine where you'll run it.
+1. From a terminal, run the script with your QRadar console hostname or IP address:
+
+    ```bash
+    python3 qradar_collector.py --host <qradar-host-or-ip>
+    ```
+
+    If `python3` isn't recognized, use the Python command for your environment, such as `python`.
+
+1. When prompted, enter your QRadar authorized service token. The token input is hidden. Don't include the token in the command line.
+1. When the script finishes, upload the generated `qradar_rules_YYYYMMDDHHMMSS.csv` file in the SIEM migration experience, then select **Next**.
+
+For more information about the script and its parameters, see the [QRadar migration data collector README](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/QRadarMigration).
+
+#### Troubleshoot QRadar exports
+
+If the script fails and you need a workaround, manually export QRadar rules as a CSV file by using [Exporting rules - IBM Documentation](https://go.microsoft.com/fwlink/?linkid=2332524).
+
+When you export manually:
+
+1. Clear any filter values for *Rule or Building Block(BB)* so the export includes both rules and building blocks.
+
+1. Include only the supported fields:
 
    "Rule name", "Type", "Rule enabled", "Notes", "Action details", "Response details", "Rule response: Event description", "Is rule", "Rule installed", "Rule response: Event name", "Rule: test definition", "Content extension name", "Content category"
+
+Manual exports can produce less accurate migration results than the collector script because the script enriches and normalizes QRadar data for migration analysis.
 
 ---
 

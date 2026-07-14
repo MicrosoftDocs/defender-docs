@@ -1,26 +1,26 @@
 ---
 title: Configure scoped access for Microsoft Defender for Identity
-description: Learn about working with Microsoft Defender for Identity scoped role groups.
-ms.date: 05/25/2025
+description: Configure scoped access in Microsoft Defender for Identity by creating custom unified RBAC roles that limit visibility to specific Active Directory domains or organizational units.
+ms.date: 06/15/2026
 ms.topic: how-to
 ms. reviewer: 'LiorShapiraa'
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Configure scoped access for Microsoft Defender for Identity
 
-As organizations grow and their identity environments become more complex, it's important to control who has access to which resources. Microsoft Defender for Identity scoping lets you focus monitoring on specific Active Directory domains or organizational units. This helps improve efficiency by reducing noise from nonessential data and focusing on critical assets. You can also limit visibility to specific entities, so access matches each person's responsibilities.
-Scoped access is implemented by [creating a custom role using Microsoft Defender unified RBAC](/defender-xdr/create-custom-rbac-roles). During the role configuration process, you define which users or Entra ID groups have access to specific Active Directory domains or Organizational units.
+As your organization grows, you need to control who can access which resources. Microsoft Defender for Identity scoping lets you focus monitoring on specific Active Directory domains or organizational units. This reduces noise from data you don't need and helps you focus on critical assets. You can also limit visibility to specific entities so that access matches each person's role.
+To set up scoped access, [create a custom role using Microsoft Defender unified RBAC](/defender-xdr/create-custom-rbac-roles). When you configure the role, you choose which users or Entra ID groups can access specific Active Directory domains or organizational units.
 
 ## Prerequisites
 
 Before you begin, make sure you meet the following requirements:
 
-- Check that Microsoft Defender for Identity sensor installed. 
-- Confirm the [Identity workload for URBAC](/defender-xdr/activate-defender-rbac#activate-from-the-permissions-and-roles-page) is activated. 
-- Ensure you have the [Security Administrator](/entra/identity/role-based-access-control/permissions-reference) role in Microsoft Entra ID to create and manage custom roles.
-
-- Make sure Authorization permissions are configured through [URBAC](/defender-xdr/manage-rbac) to manage roles without Security Administrator privileges.
+- A Microsoft Defender for Identity sensor is installed.
+- The [Identity workload in Microsoft Defender unified RBAC](/defender-xdr/activate-defender-rbac#activate-from-the-permissions-and-roles-page) is turned on.
+- You have the [Security Administrator](/entra/identity/role-based-access-control/permissions-reference) role in Microsoft Entra ID.
+- Authorization permissions are set up through [URBAC](/defender-xdr/manage-rbac) if you want to manage roles without the Security Administrator role.
 
 ### Configure scoping rules
 
@@ -42,9 +42,9 @@ To enable identity scoping, follow these steps:​
     1. Under **Assign users and groups**, enter the usernames or Microsoft Entra ID groups you want to assign to the role.
     1. Select Microsoft Defender for Identity as the data source.
     1. Under **Scope**, select the user groups (AD domains or OU's) that will be scoped to the assignment. For an optimal experience, use the filter or search box.
-   ![Screenshot showing how the user selects the user group to be scoped to the assignment.](media/configure-scoped-access/add-scope.png)
+   ![Screenshot of the scoped assignment page with a user group selected for the assignment.](media/configure-scoped-access/add-scope.png)
    
-   ![Screenshot that shows how to create a custom scope.](media/configure-scoped-access/custom-scope.png)
+   ![Screenshot of the custom scope creation page with options for defining a custom scope.](media/configure-scoped-access/custom-scope.png)
    
    
 1. Select **Apply** and **Add**.

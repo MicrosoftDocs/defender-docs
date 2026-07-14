@@ -12,7 +12,7 @@ ms.collection:
 - must-keep
 ms.subservice: reference
 ms.custom: api
-ms.date: 12/11/2025
+ms.date: 06/28/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -53,16 +53,21 @@ See examples at [OData queries with Defender for Endpoint](exposed-apis-odata-sa
 - Maximum page size is 10,000.
 - Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
+
 ## Permissions
 
-When obtaining a token using user credentials, the user needs to have at least the following role permission: `View Data`. For more information, see: [Create and manage roles](../user-roles.md).
+Permission type|Permission|Permission display name
+:---|:---|:---
+Application|Machine.Read.All|'Read all machine profiles'
+Application|Machine.ReadWrite.All|'Read and write all machine information'
+Delegated (work or school account)|Machine.Read|'Read machine information'
+Delegated (work or school account)|Machine.ReadWrite|'Read and write machine information'
 
-Responses include only devices that the user has access to, based on device group settings. For more information, see: [Create and manage device groups](../machine-groups.md).
+When obtaining a token using user credentials, the user needs to have at least the following role permission: `View Data` (see [Create and manage roles](../user-roles.md)).
 
-|Permission type|Permission|Permission display name|
-|---|---|---|
-|Application|Machine.ReadWrite.All|'Read and write all machine information'|
-|Delegated (work or school account)|Machine.ReadWrite|'Read and write machine information'|
+Responses include only devices that the user has access to, based on device group settings (See [Create and manage device groups](../machine-groups.md)).
+
+Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
 ## HTTP request
 

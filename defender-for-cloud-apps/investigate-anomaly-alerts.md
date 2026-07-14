@@ -1,9 +1,11 @@
 ---
 title: How to investigate anomaly detection alerts | Microsoft Defender for Cloud Apps
 description: This article explains how to investigate the Defender for Cloud Apps anomaly detection alerts issued when attacks are detected against your organization.
-ms.date: 05/19/2024
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: gayasalomon
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # How to investigate anomaly detection alerts
@@ -16,7 +18,8 @@ Microsoft Defender for Cloud Apps provides security detections and alerts for ma
 >
 > You will continue to receive the same standard of protection without disruption to your existing security coverage. No action is required from your side.
 
-## MITRE ATT\&CK
+<a name="mitre-attck"></a>
+## MITRE ATT&CK coverage for anomaly detection alerts
 
 To explain and make it easier to map the relationship between Defender for Cloud Apps alerts and the familiar MITRE ATT\&CK Matrix, we've categorized the alerts by their corresponding MITRE ATT\&CK tactic. This extra reference makes it easier to understand the suspected attacks technique potentially in use when a Defender for Cloud Apps alert is triggered.
 
@@ -48,9 +51,10 @@ You should use the following general guidelines when investigating any type of a
   - Browser and version
   - IP address and location
 
-## Initial access alerts
+<a name="initial-access-alerts"></a>
+## Initial access alerts: Detect attempts to gain an initial foothold
 
-This section describes alerts indicating that a malicious actor might be attempting to gain an initial foothold into your organization.
+The Initial Access alerts indicate that a malicious actor might be attempting to gain an initial foothold into your organization.
 
 ### Activity from anonymous IP address
 
@@ -178,7 +182,7 @@ To ban access to the app, on the **Google** or **Salesforce** tabs on the **App 
 
 **Understand the scope of the breach**
 
-- Follow the tutorial on how to [investigate risky OAuth apps](investigate-risky-oauth.md).
+- Follow the [Investigate risky OAuth apps](investigate-risky-oauth.md) tutorial.
 
 ### Misleading publisher name for an OAuth app
 
@@ -204,9 +208,10 @@ This detection identifies apps with characters, such as foreign letters, that re
    - Apps that have irrelevant permissions. This might indicate that an app is risky.
 1. If you still suspect that an app is suspicious, you can research the app name, publisher, and URL online.
 
-## Persistence alerts
+<a name="persistence-alerts"></a>
+## Persistence alerts: Detect attempts to maintain a foothold
 
-This section describes alerts indicating that a malicious actor might be attempting to maintain their foothold in your organization.
+The Persistence alerts indicate that a malicious actor might be attempting to maintain their foothold in your organization.
 
 ### Activity performed by terminated user
 
@@ -252,7 +257,7 @@ Activities in a single session indicating that, a user performed suspicious emai
 - Review all user activity for other indicators of compromise such as the [Suspicious inbox forwarding](#suspicious-inbox-forwarding) alert followed by an [Impossible Travel](#impossible-travel) alert. Look for:
 
     1. New SMTP forwarding rules, as follows:
-        - Check for malicious forwarding rule names. Rule names can vary from simple names, such as "Forward All Emails" and "Auto forward", or deceptive names, such as a barely visible ".". Forwarding rule names can even be empty, and the forwarding recipient can be a single email account or an entire list. Malicious rules can also be hidden from the user interface. Once detected, you can use this helpful [blog post](/archive/blogs/hkong/how-to-delete-corrupted-hidden-inbox-rules-from-a-mailbox-using-mfcmapi) on how to delete hidden rules from mailboxes.
+        - Check for malicious forwarding rule names. Rule names can vary from simple names, such as "Forward All Emails" and "Auto forward", or deceptive names, such as a barely visible ".". Forwarding rule names can even be empty, and the forwarding recipient can be a single email account or an entire list. Malicious rules can also be hidden from the user interface. Once detected, you can learn [how to delete corrupted hidden inbox rules from a mailbox using MFCMAPI](/archive/blogs/hkong/how-to-delete-corrupted-hidden-inbox-rules-from-a-mailbox-using-mfcmapi).
         - If you detect an unrecognized forwarding rule to an unknown internal or external email address, you can assume that the inbox account was compromised.
     1. New inbox rules, such as "delete all", "move messages to another folder", or those with obscure naming conventions, for example "…".
     1. An increase in sent emails.
@@ -282,9 +287,10 @@ Activities indicating that an attacker gained access to a user's inbox and creat
 1. Collect IP address and location information for the action.
 1. Review activities performed from the IP address used to create the rule to detect other compromised users.
 
-## Privilege escalation alerts
+<a name="privilege-escalation-alerts"></a>
+## Privilege escalation alerts: Detect attempts to gain higher-level permissions
 
-This section describes alerts indicating that a malicious actor might be attempting to gain higher-level permissions in your organization.
+The Privilege Escalation alerts indicate that a malicious actor might be attempting to gain higher-level permissions in your organization.
 
 ### Unusual administrative activity (by user)
 
@@ -308,9 +314,10 @@ Establishing a new user's activity pattern requires an initial learning period o
 1. Review all user activity for other indicators of compromise such as [Suspicious inbox forwarding](#suspicious-inbox-forwarding) or [Impossible Travel](#impossible-travel).
 1. Review other configuration changes, such as creating a user account that might be used for persistence.
 
-## Credential access alerts
+<a name="credential-access-alerts"></a>
+## Credential access alerts: Detect attempts to steal account credentials
 
-This section describes alerts indicating that a malicious actor might be attempting to steal account names and passwords from your organization.
+The Credential Access alerts indicate that a malicious actor might be attempting to steal account names and passwords from your organization.
 
 ### Multiple failed login attempts
 
@@ -385,9 +392,10 @@ The learning period for this detection is 30 days.
 
 1. Investigate if an attacker has access to generating OAuth access tokens.
 
-## Collection alerts
+<a name="collection-alerts"></a>
+## Collection alerts: Detect attempts to gather data from your organization
 
-This section describes alerts indicating that a malicious actor might be attempting to gather data of interest to their goal from your organization.
+The Collection alerts indicate that a malicious actor might be attempting to gather data of interest to their goal from your organization.
 
 ### Multiple Power BI report sharing activities
 
@@ -455,9 +463,10 @@ Establishing a new user's activity pattern requires an initial learning period o
 1. Review the impersonation activities to identify potential malicious activities.
 1. Review delegated access configuration.
 
-## Exfiltration alerts
+<a name="exfiltration-alerts"></a>
+## Exfiltration alerts: Detect attempts to steal data from your organization
 
-This section describes alerts indicating that a malicious actor might be attempting to steal data from your organization.
+The Exfiltration alerts indicate that a malicious actor might be attempting to steal data from your organization.
 
 ### Suspicious inbox forwarding
 
@@ -480,7 +489,7 @@ Activities indicating that an attacker gained access to a user's inbox and creat
 1. Review all user activity for additional indicators of compromise such as the alert is followed by an [Impossible Travel](#impossible-travel) alert. Look for:
 
     1. New SMTP forwarding rules, as follows:
-        - Check for malicious forwarding rule names. Rule names can vary from simple names, such as "Forward All Emails" and "Auto forward", or deceptive names, such as a barely visible ".". Forwarding rule names can even be empty, and the forwarding recipient can be a single email account or an entire list. Malicious rules can also be hidden from the user interface. Once detected, you can use this helpful [blog post](/archive/blogs/hkong/how-to-delete-corrupted-hidden-inbox-rules-from-a-mailbox-using-mfcmapi) on how to delete hidden rules from mailboxes.
+        - Check for malicious forwarding rule names. Rule names can vary from simple names, such as "Forward All Emails" and "Auto forward", or deceptive names, such as a barely visible ".". Forwarding rule names can even be empty, and the forwarding recipient can be a single email account or an entire list. Malicious rules can also be hidden from the user interface. Once detected, you can learn [how to delete corrupted hidden inbox rules from a mailbox using MFCMAPI](/archive/blogs/hkong/how-to-delete-corrupted-hidden-inbox-rules-from-a-mailbox-using-mfcmapi).
         - If you detect an unrecognized forwarding rule to an unknown internal or external email address, you can assume that the inbox account was compromised.
     1. New inbox rules, such as "delete all", "move messages to another folder", or those with obscure naming conventions, for example "…".
 1. Review activities performed from the IP address used to create the rule to detect other compromised users.
@@ -555,7 +564,7 @@ Establishing a new user's activity pattern requires an initial learning period o
 
 1. Review the sharing activities and create a list of shared files.
 1. Review the sensitivity of the shared files with the resource owner and validate the access level.
-1. Create a file policy for similar documents to detect future sharing of sensitive files.
+1. Create a Microsoft Purview DLP policy for similar documents to detect future sharing of sensitive files.
 
 ### Ransomware activity
 

@@ -7,6 +7,9 @@ ms.reviewer: MayaAbelson
 ---
 # Tutorial: Automatically apply sensitivity labels from Microsoft Purview Information Protection
 
+> [!IMPORTANT]
+> File policies retire on January 6, 2027. To maintain file-based data protection, [migrate to Microsoft Purview DLP or auto-labeling policies](migrate-file-policies-to-purview.md).
+
 
 
 In a perfect world, all your employees understand the importance of information protection and work within your policies. But in a real world, it's probable a partner who works with accounting uploads a document to your OneDrive for Business repository with the wrong permissions. A week later you realize your enterprise's confidential information was leaked to your competition. Microsoft Defender for Cloud Apps helps you prevent this kind of disaster before it happens. This feature is available for Box, SharePoint and OneDrive for Business. Applying a sensitivity label is one of a long list of available [governance actions](governance-actions.md).

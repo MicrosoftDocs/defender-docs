@@ -12,16 +12,18 @@ ms.collection:
   - usx-security
   - tier1
 ms.custom:
+  - msecd-doc-authoring-1014
   - admindeeplinkDEFENDER
   - sfi-image-nochange
 ms.topic: how-to
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 1/04/2026
+ms.date: 06/16/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
+ai-usage: ai-assisted
 
 #customer intent: As a security operations analyst, I want to gain insights into specific incidents so that I can manage my workload effectively.
 ---
@@ -32,11 +34,13 @@ appliesto:
 
 Incident management is critical to ensuring that incidents are named, assigned, and tagged to optimize time in your incident workflow and more quickly contain and address threats.
 
-To manage your incidents in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), use the quick launch and go to **Investigation & response > Incidents & alerts > Incidents**.
+To manage your incidents in the [Microsoft Defender portal](https://security.microsoft.com), use the quick launch and go to **Investigation & response > Incidents & alerts > Incidents**.
 
 :::image type="content" source="./media/manage-incidents/incidents-queue.png" alt-text="Screenshot showing the incident queue and quick launch pane in the Microsoft Defender portal." lightbox="./media/manage-incidents/incidents-queue.png":::
 
 This article shows you how to perform various incident management tasks associated with different stages in an incident's lifecycle.
+
+To open an incident or alert on demand for an investigation or operational workflow, see [Manually create an incident or alert in Microsoft Defender](manually-create-incident.md).
 
 **[Incident triage:](#incident-triage)**
 
@@ -77,6 +81,8 @@ Alternatively, you can select the row of an incident (without selecting the inci
 
 ### [From the incident page](#tab/incident-page)
 
+To access the **Manage incident** pane from the incident page, follow these steps:
+
 1. Select the name of an incident from the queue. Or, select the row of an incident in the queue and then select **Open incident page** from the incident details pane.
 
 1. From the incident page, select **Manage incident** from the top panel.
@@ -100,7 +106,8 @@ The following management tasks are closely associated with incident triage, thou
 
 By default, new incidents are created with no owner. Ideally, your SecOps team should have mechanisms and procedures in place to automatically assign incidents to owners. You might need to reassign an incident in the case of escalation or mistaken original assignment.
 
-#### Assign an owner
+<a name="assign-an-owner"></a>
+#### Assign an owner from the incident pane
 
 To manually assign a new owner to an incident, take the following steps:
 
@@ -118,7 +125,7 @@ To manually assign a new owner to an incident, take the following steps:
 
 1. Select **Save**.
 
-Assigning ownership of an incident assigns the same ownership to all the alerts associated with it.
+Assigning ownership of an incident assigns the same ownership to all the alerts associated with the incident.
 
    :::image type="content" source="./media/manage-incidents/assign-incident.png" alt-text="Screenshot showing how to assign an owner in the Manage incident pane in the Microsoft Defender portal.":::
 
@@ -144,7 +151,7 @@ To save a link to the incident queue with the current filters applied, select **
 
 ### Assign or change incident severity
 
-The severity of an incident is set to the highest severity of the alerts associated with it. The severity of an incident can be set to *high*, *medium*, *low*, or *informational*.
+The severity of an incident is set to the highest severity of the alerts associated with the incident. The severity of an incident can be set to *high*, *medium*, *low*, or *informational*.
 
 To manually assign or change the severity of an incident, take the following steps:
 
@@ -226,10 +233,10 @@ When you resolve an incident, or at any point in an incident's investigation, as
 
     - **Not set** (the default).
     - **True positive** with a type of threat. Use this classification for incidents that accurately indicate a real threat. Specifying the threat type helps your security team see threat patterns and act to defend your organization from them.
-    - **Informational, expected activity** with a type of activity. Use the options in this category to classify incidents for security tests, red team activity, and expected unusual behavior from trusted apps and users.
+    - **Informational, expected activity** with a type of activity. Use the options in the **Informational, expected activity** category to classify incidents for security tests, red team activity, and expected unusual behavior from trusted apps and users.
     - **False positive** for types of incidents that you determine can be ignored because they're technically inaccurate or misleading.
 
-    See the available types of activities and threats for each of these classifications in the following screenshot.
+    The **Classification** drop-down list shows the available activity and threat types for each classification.
 
 1. Select **Save**.
 
@@ -281,9 +288,11 @@ To edit the incident name, take the following steps:
 
 ### View the activity log of an incident
 
-When doing a postmortem of an incident, view the incident's **Activity log** to see the history of actions performed on the incident (called "Audits") and any comments recorded. All changes made to the incident, whether by a user or by the system, are recorded in the activity log. For a more detailed view of all activities, access the [Activities tab](./investigate-incidents.md#activities) from the bottom of the activity log.
+When doing a postmortem of an incident, view the incident's **Activity log** to see the history of actions performed on the incident (called "Audits") and any comments recorded. All changes made to the incident, whether by a user or by the system, are recorded in the activity log. For a more detailed view of all activities, select the [Activities tab](./investigate-incidents.md#activities) on the incident page.
 
 #### Open an incident's activity log
+
+To open an incident's activity log, follow these steps:
 
 1. From the incident page, or from the incident details panel on the incident queue page, select the three dots in the upper right corner, and from the resulting menu, select **Activities**.
 
@@ -299,7 +308,8 @@ When doing a postmortem of an incident, view the incident's **Activity log** to 
 
 You can also [add your own comments](#add-comments-to-an-incident) by selecting **Add comment** at the top of the Activities panel. The comment box accepts text and formatting, links, and images.
 
-## AI generated analyst notes
+<a name="ai-generated-analyst-notes"></a>
+## AI-generated analyst notes
 
 When you finish investigating an incident, you can generate an automatic summary and analysis of the investigation.
 
@@ -308,7 +318,7 @@ The analysis includes details such as:
 - A high-level summary of the incident and investigation process including actions and activities done by the analyst.
 - Detailed step by step log and KQL queries run during the investigation process.
 
-Use the output to train new analysts, conduct audits, support investigations, hand off work to teammates, or feed AI models and tools.
+Use the generated analyst notes to train new analysts, conduct audits, support investigations, hand off work to teammates, or feed AI models and tools.
 
 ### Prerequisites for generating analyst notes
 
@@ -336,11 +346,11 @@ To generate analyst notes after investigation is finished, take the following st
 
     :::image type="content" source="./media/manage-incidents/generate-analyst-notes.png" alt-text="Screenshot highlighting the generate analyst notes option from the incident page in the Microsoft Defender portal.":::
 
-    A banner appears with the date and time the generation started. The preparation process can take up to 20 minutes. You can leave the page and continue working elsewhere. You receive a notification when it finishes.
+    A banner appears with the date and time the analyst-notes generation started. The preparation process can take up to 20 minutes. You can leave the page and continue working elsewhere. You receive a notification when it finishes.
 
    :::image type="content" source="./media/manage-incidents/notes-ready-notification.png" alt-text="Screenshot showing a notification that says the analyst notes are ready with a link to the activities tab.":::
 
-1. In the **Activities** tab, there's a new line in the activity log indicating that the generation is in progress. You might have to refresh the screen to see it. Select the line to open the side panel with the status of the generation. If needed, you can stop the generation by selecting **Stop generating**.
+1. In the **Activities** tab, there's a new line in the activity log indicating that the generation is in progress. You might have to refresh the screen to see it. Select the line to open the side panel with the status of the generation. If needed, you can stop analyst-notes generation by selecting **Stop generating**.
 
     :::image type="content" source="./media/manage-incidents/stop-generating.png" alt-text="Screenshot showing the side panel while it is in the process of generating analyst notes. There's a Stop generating button visible." lightbox="./media/manage-incidents/stop-generating.png":::
 

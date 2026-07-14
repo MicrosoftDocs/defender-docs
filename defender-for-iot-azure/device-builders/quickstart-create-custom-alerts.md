@@ -2,12 +2,14 @@
 title: Create custom alerts
 description: Understand, create, and assign custom device alerts for the Microsoft Defender for IoT security service.
 ms.topic: how-to
-ms.date: 01/01/2023
+ms.date: 06/12/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
-# Create custom alerts
+# Create custom alerts in Microsoft Defender for IoT
 
-Using custom security groups and alerts, takes full advantage of the end-to-end security information and categorical device knowledge to ensure better security across your IoT solution.
+By using custom security groups and alerts, Defender for IoT takes full advantage of end-to-end security information and categorical device knowledge to improve security across your IoT solution.
 
 ## Why use custom alerts?
 
@@ -15,17 +17,18 @@ You know your IoT devices best.
 
 For customers who fully understand their expected device behavior, Defender for IoT allows you to translate this understanding into a device behavior policy and alert on any deviation from expected, normal behavior.
 
-## Security groups
+<a name="security-groups"></a>
+## Use security groups for custom alerts
 
 Security groups enable you to define logical groups of devices, and manage their security state in a centralized way.
 
-These groups can represent devices with specific hardware, devices deployed in a certain location, or any other group suitable to your specific needs.
+Security groups can represent devices with specific hardware, devices deployed in a certain location, or any other grouping suitable to your specific needs.
 
 Security groups are defined by a device twin tag property named **SecurityGroup**. By default, each IoT solution on IoT Hub has one security group named **default**. Change the value of the **SecurityGroup** property to change the security group of a device.
 
-For example:
+The following JSON example shows a device twin with the **SecurityGroup** tag set to the default security group:
 
-```
+```json
 {
   "deviceId": "VM-Contoso12",
   "etag": "AAAAAAAAAAM=",
@@ -48,7 +51,8 @@ For example:
 
 Use security groups to group your devices into logical categories. After creating the groups, assign them to the custom alerts of your choice, for the most effective end-to-end IoT security solution.
 
-## Customize an alert
+<a name="customize-an-alert"></a>
+## Configure custom alert settings
 
 1. Open your IoT Hub and select **Settings** from the **Security** menu.
 
@@ -70,7 +74,4 @@ Defender for IoT offers a large number of alerts, which can be customized accord
 
 ## Next steps
 
-Advance to the next article to learn how to deploy a security agent...
-
-> [!div class="nextstepaction"]
-> [Deploy a security agent](how-to-deploy-agent.md)
+- [Deploy a security agent](how-to-deploy-agent.md)

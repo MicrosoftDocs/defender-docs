@@ -3,13 +3,14 @@ title: Address unwanted behaviors in Microsoft Defender for Endpoint
 description: Use exclusions, indicators, and other techniques to address false positives, performance issues, and app incompatibilities in Microsoft Defender for Endpoint.
 author: limwainstein
 ms.author: lwainstein
-ms.date: 05/06/2026
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
 ms.reviewer: joshbregman
 ms.custom:
+- msecd-doc-authoring-1014
 - partner-contribution
 - msecd-doc-authoring-1012
 ms.collection:
@@ -21,13 +22,13 @@ ai-usage: ai-assisted
 
 # Address unwanted behaviors in Microsoft Defender for Endpoint
 
-The primary function of Microsoft Defender for Endpoint is to prevent and detect access to malicious processes and files. Defender for Endpoint protects people in your organization from threats while maintaining productivity with default security settings and policies. Occasionally, unwanted behaviors might occur, such as:
+Microsoft Defender for Endpoint helps prevent and detect malicious processes and files. It protects your organization from threats while keeping productivity intact. Sometimes, unwanted behaviors can occur, such as:
 
-- **False positives**: A false positive is when an entity, such as a file or a process, was detected and identified as malicious, even though the entity isn't a threat
-- **Poor performance**: Applications experience performance issues when certain features of Defender for Endpoint are enabled
-- **Application incompatibility**: Applications don't function properly when certain features of Defender for Endpoint are enabled
+- **False positives**: A file or process is flagged as malicious even though it isn't a threat
+- **Poor performance**: Apps run slower when certain Defender for Endpoint features are active
+- **Application incompatibility**: Apps don't work correctly when certain Defender for Endpoint features are active
 
-This article describes how to address these types of unwanted behaviors and includes some example scenarios.
+This article explains how to address these unwanted behaviors and includes example scenarios.
 
 > [!NOTE]
 > Creating an indicator or an exclusion should only be considered after thoroughly understanding the root cause of the unexpected behavior.
@@ -36,7 +37,7 @@ This article describes how to address these types of unwanted behaviors and incl
 
 At a high level, the process for addressing an unwanted behavior in Defender for Endpoint is as follows:
 
-1. Identify which capability is causing the unwanted behavior. To make your determination, determine if there's a misconfiguration with Microsoft Defender Antivirus, endpoint detection and response, attack surface reduction, or controlled folder access. Use information in the Microsoft Defender portal or on the device.
+1. Identify which capability is causing the unwanted behavior. To make your determination, determine if there's a misconfiguration with Microsoft Defender Antivirus, endpoint detection and response, attack surface reduction (ASR) rules, or controlled folder access (CFA). Use information in the Microsoft Defender portal or on the device.
 
    | Location | What to do |
    |---|---|
@@ -57,7 +58,7 @@ At a high level, the process for addressing an unwanted behavior in Defender for
 
 ## Examples of unwanted behaviors
 
-This section includes several example scenarios that can be addressed by using exclusions and indicators. For more information about exclusions, see [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md).
+The following example scenarios show cases that can be addressed by using exclusions and indicators. For more information about exclusions, see [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md).
 
 ### An app is detected by Microsoft Defender Antivirus when the application runs
 
@@ -109,7 +110,7 @@ In this scenario, an app is detected as PUA, and you want to allow it to run.
 
 In this scenario, a legitimate app is blocked from writing to folders that are protected by controlled folder access.
 
-**How to address**: Add the app to the "allowed" list for controlled folder access. See [Allow specific apps to make changes to controlled folders](customize-controlled-folders.md#allow-specific-apps-to-make-changes-to-controlled-folders).
+**How to address**: Add the app to the "allowed" list for controlled folder access. See [Allow apps to modify files in protected folders](controlled-folder-access-configure.md#allow-apps-to-modify-files-in-protected-folders-in-the-windows-security-app).
 
 ### A third-party app is detected as malicious by Microsoft Defender Antivirus
 
@@ -125,7 +126,7 @@ For the available methods to see ASR rule detections in Defender for Endpoint, s
 
 **How to address**:
 
-Use the **Attack surface reduction rules** report to see the detections, affected devices, and affected files. In particular, you can download the full file and path information for the affected files to exclude from the ASR rule on the [Add exclusions tab](attack-surface-reduction-rules-report.md#add-exclusions-tab) of the report.
+Use the **Attack surface reduction rules** report to see the detections, affected devices, and affected files. In particular, you can download the full file and path information for the affected files to exclude from the ASR rule on the [Add exclusions tab](attack-surface-reduction-rules-report.md#manage-exclusions-on-the-add-exclusions-tab) of the report.
 
 For the available methods to configure ASR rule exclusions, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
 
@@ -137,7 +138,7 @@ For the available methods to see ASR rule detections in Defender for Endpoint, s
 
 **How to address**:
 
-Use the **Attack surface reduction rules** report to see the detections, affected devices, and affected files. In particular, you can download the full file and path information for the affected files to exclude from the ASR rule on the [Add exclusions tab](attack-surface-reduction-rules-report.md#add-exclusions-tab) of the report.
+Use the **Attack surface reduction rules** report to see the detections, affected devices, and affected files. In particular, you can download the full file and path information for the affected files to exclude from the ASR rule on the [Add exclusions tab](attack-surface-reduction-rules-report.md#manage-exclusions-on-the-add-exclusions-tab) of the report.
 
 For the available methods to configure ASR rule exclusions, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
 

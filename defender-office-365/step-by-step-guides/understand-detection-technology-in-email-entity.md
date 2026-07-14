@@ -5,18 +5,20 @@ author: chrisda
 ms.author: chrisda
 ms.service: microsoft-365-security
 ms.topic: how-to
-ms.date: 06/19/2025
+ms.date: 07/07/2026
 ms.collection:
 - m365-guidance-templates
 - m365-security
 - tier3
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Understanding detection technology in the email entity page of Microsoft Defender for Office 365
 
-If a threat is detected on the Microsoft Defender for Office 365 [*email entity page*](../mdo-email-entity-page.md), threat information displays on the left-hand flyout. This panel also shows you the **detection technology** that led to that verdict.
+If a threat is detected on the Microsoft Defender for Office 365 [*email entity page*](../mdo-email-entity-page.md), threat information displays on the left-hand flyout. The threat-information flyout also shows you the **detection technology** that produced the threat verdict.
 
-This article is all about helping you **understand the different detection technologies**, how they work, and how to avoid any false alarms. Stay tuned for the Admin Submissions video at the end.
+The following sections help you **understand the different detection technologies**, how the detection technologies work, and how to avoid any false alarms. An Admin Submissions video is included at the end.
 
 ## Detection technology details table
 
@@ -30,7 +32,7 @@ To resolve false positives like the ones listed in the following table, you shou
 |Advanced filter|Machine learning models to detect phishing and spam.||
 |Antimalware protection|Detection from signature based anti-malware.||
 |Bulk|Detection for advertising/marketing and similar message types with their relative bulk complaint levels (BCL).|[Step-by-Step guide on how to tune bulk thresholds](tune-bulk-mail-filtering-walkthrough.md)|
-|Campaign|Messages identified and grouped as part of a malware or phishing campaign.|[Learn more about campaigns](track-and-respond-to-emerging-threats-with-campaigns.md)|
+|Campaign|Messages identified and grouped as part of a malware or phishing campaign.|[Campaigns in Microsoft Defender for Office 365](track-and-respond-to-emerging-threats-with-campaigns.md)|
 |Domain reputation|The message was sent from a domain that was identified as spam or phishing domain, based on internal or external signals.||
 |File detonation|Safe Attachments detected a malicious attachment during detonation within a sandbox.||
 |File detonation reputation|File attachments previously detected by Safe Attachments during detonation.||
@@ -45,6 +47,7 @@ To resolve false positives like the ones listed in the following table, you shou
 |Mail bombing|A distributed denial of service (DDoS) attack that typically subscribes recipients to a large number of legitimate newsletters and services. The resulting volume of incoming email within minutes intends to overwhelm the recipient's mailbox and email security systems, and acts as a precursor to malware, ransomware, or data exfiltration.||
 |Mailbox intelligence impersonation|Sender detected as impersonating an address in the user's personal sender map.|[Mailbox intelligence impersonation protection](../anti-phishing-policies-about.md)|
 |Mixed analysis detection|Multiple filters contributed to the verdict for this message.||
+|Prompt injection protection|Detection of prompt injection instructions hidden in inbound email that target an AI assistant.|[Prompt injection protection in Microsoft Defender for Office 365](prompt-injection-protection-defender-for-office-365.md)|
 |Spoof DMARC|The message failed DMARC authentication.|[Set up DMARC to validate the From address domain for cloud senders](../email-authentication-dmarc-configure.md)|
 |Spoof external domain|Spoof intelligence detected email spoofing of a domain that is external to your organization.||
 |Spoof intra-org|Spoof intelligence detected email spoofing of a user or domain that is internal to your organization.||
@@ -53,5 +56,7 @@ To resolve false positives like the ones listed in the following table, you shou
 |URL malicious reputation|The message contains a URL that was previously identified as malicious or spam by other sources.||
 
 ## Watch a video on submitting messages to Microsoft to learn more
+
+Watch the following video for an overview of how to submit messages to Microsoft.
 
 > [!VIDEO https://www.youtube.com/embed/ta5S09Yz6Ks]

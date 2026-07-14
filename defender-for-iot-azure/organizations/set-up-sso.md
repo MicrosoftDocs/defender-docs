@@ -1,8 +1,10 @@
 ---
 title: Set up single sign-on for Microsoft Defender for IoT sensor console
-description: Learn how to set up single sign-on (SSO) in the Azure portal for Microsoft Defender for IoT.
-ms.date: 04/10/2024
+description: Configure single sign-on (SSO) for the Microsoft Defender for IoT sensor console using Microsoft Entra ID in the Azure portal.
+ms.date: 06/12/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #customer intent: As a security operator, I want to set up SSO for my users so that they can log in to the sensor console easily to multiple applications.
 ---
 
@@ -28,8 +30,11 @@ Before you begin:
 - Ensure that each user has a **First name**, **Last name**, and **User principal name**.
 - If needed, set up [Multifactor authentication (MFA)](/entra/identity/authentication/tutorial-enable-azure-mfa).
 
-## Create application ID on Microsoft Entra ID
-​
+<a name="create-application-id-on-microsoft-entra-id"></a>
+## Create an application ID in Microsoft Entra ID
+
+To create an application ID in Microsoft Entra ID, perform the following steps:
+
 1. In the Azure portal, open Microsoft Entra ID.
 1. Select **Add > App registration**.
 
@@ -49,9 +54,11 @@ Before you begin:
     Microsoft Entra ID displays your newly registered application.
 
 ## Add your sensor URIs
-​
+
+Add the redirect URIs for each sensor to your registered application:
+
 1. In your new application, select **Authentication​**.
-1. Under **Redirect URIs**, the URI for the first sensor, added in the [previous step](#create-application-id-on-microsoft-entra-id), is displayed under **Redirect URIs**. To add the rest of the URIs: 
+1. Under **Redirect URIs**, the URI for the first sensor, added in [Create application ID on Microsoft Entra ID](#create-application-id-on-microsoft-entra-id), is displayed under **Redirect URIs**. To add the rest of the URIs: 
     1. Select **Add URI** to add another row, and type an IP or hostname. 
     1. Repeat this step for the rest of the connected sensors. 
     
@@ -61,14 +68,20 @@ Before you begin:
 
 1. Select **Save**.
 
-## Grant access to application​
+<a name="grant-access-to-application"></a>
+## Grant the application required permissions
+
+Grant the required API permissions for your application:
 
 1. In your new application, select **API permissions​**.
 1. Next to **Add a permission**, select **Grant admin consent for \<Directory name\>**.
 
     :::image type="content" source="media/set-up-sso/api-permissions.png" alt-text="Screenshot of setting up API permissions in Microsoft Entra ID." lightbox="media/set-up-sso/api-permissions.png":::
 
-## Create SSO configuration​
+<a name="create-sso-configuration"></a>
+## Configure single sign-on settings
+
+Create the SSO configuration in Defender for IoT to enable single sign-on for your sensors:
 
 1. In [Defender for IoT](https://portal.azure.com/#view/Microsoft_Azure_IoT_Defender/IoTDefenderDashboard/%7E/Getting_started) on the Azure portal, select **Sites and sensors** > **Sensor settings**.
 1. On the **Sensor settings** page, select **+ Add**. In the **Basics** tab:
@@ -79,7 +92,7 @@ Before you begin:
         :::image type="content" source="media/set-up-sso/sensor-setting-sso.png" alt-text="Screenshot of creating a new Single sign-on sensor setting in Defender for IoT.":::
 
 1. In the **Settings** tab:
-    1. Next to **Application name**, select the ID of the [application you created in Microsoft Entra ID](#create-application-id-on-microsoft-entra-id).
+    1. Next to **Application name**, select the ID of the [registered Microsoft Entra application](#create-application-id-on-microsoft-entra-id).
     1. Under **Permissions management**, assign the **Admin**, **Security analyst**, and **Read only​** permissions to relevant user groups. You can select multiple user groups​.
     
         :::image type="content" source="media/set-up-sso/permissions-management.png" alt-text="Screenshot of setting up permissions in the Defender for IoT sensor settings.":::    
@@ -97,7 +110,8 @@ Before you begin:
 
 1. Select **Next**, review your configuration, and select **Create**.
 
-## Sign in using SSO ​
+<a name="sign-in-using-sso"></a>
+## Test sign-in with SSO
 
 To test signing in with SSO:
 ​

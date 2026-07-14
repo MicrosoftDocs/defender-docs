@@ -45,7 +45,7 @@ The Codeless Connector Framework (CCF) provides a configuration file that can be
 
 Connectors created using the CCF are fully SaaS, without any requirements for service installations, and also include health monitoring and full support from Microsoft Sentinel.
 
-For more information, see [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md).
+For more information, see [Create a codeless connector for Microsoft Sentinel](isv/create-codeless-connector.md).
 
 ## Connect with the Azure Monitor Agent
 

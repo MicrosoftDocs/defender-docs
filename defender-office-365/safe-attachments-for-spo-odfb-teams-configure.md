@@ -11,13 +11,15 @@ ms.collection:
   - tier2
 description: Admins can learn how to turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, including how to set alerts for detected files.
 ms.custom:
+  - msecd-doc-authoring-1014
   - seo-marvel-apr2020
   - sfi-ga-nochange
 ms.service: defender-office-365
-ms.date: 08/05/2025
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams
@@ -30,7 +32,9 @@ You turn on or turn off Safe Attachments for Office 365 for SharePoint, OneDrive
 
 ## What do you need to know before you begin?
 
-- You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Safe Attachments** page, use <https://security.microsoft.com/safeattachmentv2>.
+Before you begin, make sure you have the following access, permissions, and setup in place:
+
+- You open the Microsoft Defender portal at [Microsoft Defender portal](https://security.microsoft.com). To go directly to the **Safe Attachments** page, use [Safe Attachments](https://security.microsoft.com/safeattachmentv2).
 
 - To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -51,6 +55,8 @@ You turn on or turn off Safe Attachments for Office 365 for SharePoint, OneDrive
 - Allow up to 30 minutes for the settings to take effect.
 
 ## Step 1: Use the Microsoft Defender portal to turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams
+
+Perform the following steps to turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams in the Microsoft Defender portal:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Safe Attachments** in the **Policies** section. Or, to go directly to the **Safe Attachments** page, use <https://security.microsoft.com/safeattachmentv2>.
 
@@ -125,7 +131,7 @@ You can create an alert policy that notifies admins when Safe Attachments for Sh
 
    When you're finished n the **Review your settings** page, select **Submit**.
 
-7. On this page, you can review the alert policy in read-only mode.
+7. On the confirmation page, you can review the alert policy in read-only mode.
 
    When you're finished, select **Done**.
 
@@ -133,7 +139,7 @@ You can create an alert policy that notifies admins when Safe Attachments for Sh
 
 ### Use Security & Compliance PowerShell to create an alert policy for detected files
 
-If you'd rather use PowerShell to create the same alert policy as described in the previous section, [connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) and run the following command:
+If you'd rather use PowerShell to create the same alert policy as described in [Step 3: Use the Microsoft Defender portal to create an alert policy for detected files](#step-3-recommended-use-the-microsoft-defender-portal-to-create-an-alert-policy-for-detected-files), [connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) and run the following command:
 
 ```powershell
 New-ProtectionAlert -Name "Malicious Files in Libraries" -Description "Notifies admins when malicious files are detected in SharePoint, OneDrive, or Microsoft Teams" -AggregationType None -Category ThreatManagement -ThreatType Activity -Operation FileMalwareDetected -NotifyUser "admin1@contoso.com","admin2@contoso.com"
@@ -144,6 +150,8 @@ The default _Severity_ value is Low. To specify Medium or High, include the _Sev
 For detailed syntax and parameter information, see [New-ProtectionAlert](/powershell/module/exchangepowershell/new-protectionalert).
 
 ### How do you know these procedures worked?
+
+Use the following methods to confirm that each procedure completed successfully:
 
 - To verify you successfully turned on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, use either of the following steps:
 

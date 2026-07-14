@@ -9,7 +9,7 @@ ms.custom: sfi-ga-nochange
 
 # Prerequisites and support
 
-This article describes the requirements and prerequisites for using Microsoft Security Exposure Management in the unified Microsoft Defender XDR portal.
+This article describes the requirements and prerequisites for using Microsoft Security Exposure Management in the unified Microsoft Defender portal.
 
 ## Portal access and setup
 
@@ -45,7 +45,7 @@ For more sensitive actions in Exposure Management, users need the **Core securit
 
 To access Exposure Management data and actions, a custom role in Defender unified RBAC with any of the permissions mentioned here, shall be assigned to the **Microsoft Security Exposure Management** data source.
 
-To learn more about using Microsoft Defender unified RBAC to manage your Secure Score permissions, see [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
+To learn more about using Microsoft Defender unified RBAC to manage your Secure Score permissions, see [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/manage-rbac). For the full list of available permissions and their descriptions, see [Permissions in Microsoft Defender unified RBAC](/defender-xdr/custom-permissions-details).
 
 The following table highlights what a user can access or perform with each of the permissions:
 

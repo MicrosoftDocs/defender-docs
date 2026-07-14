@@ -30,11 +30,11 @@ Microsoft Sentinel uses a slightly expanded version of this table in Log Analyti
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
-The following schema is the unified `IdentityInfo` schema that streamlines a similar table in Microsoft Sentinel's log analytics and in Microsoft Defender XDR advanced hunting. The complete set of columns is available for Defender portal users who onboarded Microsoft Sentinel and turned on the User and Entity Behavior Analytics (UEBA) service. 
+The following schema is the unified `IdentityInfo` schema that streamlines a similar table in Microsoft Sentinel's log analytics and in Microsoft Defender advanced hunting. The complete set of columns is available for Defender portal users who onboarded Microsoft Sentinel and turned on the User and Entity Behavior Analytics (UEBA) service. 
 
 Defender portal users who don't onboard a Microsoft Sentinel workspace that has the UEBA service turned on can't view UEBA-specific columns. Read [UEBA-specific columns](#ueba-specific-columns).
 
-This advanced hunting table is populated by records from Microsoft Defender for Identity or Microsoft Sentinel and Microsoft Entra ID. If your organization doesn't deploy the service in Microsoft Defender XDR, queries that use the table don't work or return any results. For more information about how to deploy Defender for Identity in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+This advanced hunting table is populated by records from Microsoft Defender for Identity or Microsoft Sentinel and Microsoft Entra ID. If your organization doesn't deploy the service in Microsoft Defender, queries that use the table don't work or return any results. For more information about how to deploy Defender for Identity in the Defender portal, read [Deploy supported services](deploy-supported-services.md).
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
@@ -79,7 +79,7 @@ This advanced hunting table is populated by records from Microsoft Defender for 
 | `SourceSystem` [*](#mdi-only) | `string` | The source system for the record|
 | `OnPremObjectId` | `string` | Active Directory object ID of the user |
 | `TenantMembershipType` | `string` | User type in Microsoft Entra ID; possible values: Guest, Member|
-| `RiskStatus` | `string` | Status of the user's risk; possible values: None, ConfirmedSafe, Remediated, Dismissed, AtRisk, ConfirmedCompromised, UnknownFutureValue|
+| `RiskStatus` [**](#sentinel)| `string` | Status of the user's risk; possible values: None, ConfirmedSafe, Remediated, Dismissed, AtRisk, ConfirmedCompromised, UnknownFutureValue|
 | `UserAccountControl` | `string` | Security attributes of the user account in the Active Directory domain |
 | `IdentityEnvironment` | `string` | Environment where the identity is used; possible values: CloudOnly, Hybrid, On-premises |
 | `SourceProviders` | `dynamic` | Source providers of the accounts for the identity; possible values: ActiveDirectory, EntraID, Okta |
@@ -101,6 +101,7 @@ If you use the Microsoft Defender portal but don't onboard a Microsoft Sentinel 
 - `Tags`
 - `State`
 - `GroupMembership`
+- `RiskStatus`
 
 
 For more information about UEBA, see [Advanced threat detection with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](/azure/sentinel/identify-threats-with-entity-behavior-analytics). For more information about the different data sources in UEBA, see [Microsoft Sentinel UEBA reference](/azure/sentinel/ueba-reference).

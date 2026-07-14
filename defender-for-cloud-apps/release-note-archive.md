@@ -1,7 +1,7 @@
 ---
 title: What's new archive
 description: This article lists Microsoft Defender for Cloud Apps release notes for versions and features released over 6 months ago.
-ms.date: 02/08/2026
+ms.date: 06/14/2026
 ms.topic: reference
 ms.custom: sfi-ga-blocked
 ---
@@ -9,6 +9,29 @@ ms.custom: sfi-ga-blocked
 
 This article is an archive that describes updates made in past releases of Defender for Cloud Apps. To see the latest what's new list, see [What's new in Defender for Cloud Apps](release-notes.md).
 
+
+## November 2025
+
+### AI Agent Protection (Preview)
+Microsoft Defender delivers comprehensive protection for AI agents, combining proactive exposure management with advanced threat detection. It automatically discovers AI agents created in Microsoft Copilot Studio and Azure AI Foundry, collects audit logs, continuously monitors for suspicious activity, and integrates detections and alerts into the XDR Incidents and Alerts experience with a dedicated Agent entity.
+
+- **Copilot Studio AI agents**
+
+    Defender ingests data from Copilot Studio agents into Advanced Hunting, enabling you to create custom queries and proactively hunt for threats. It also provides real-time protection by monitoring agent runtime and blocking harmful or suspicious actions, fully integrated with XDR incidents and alerts.
+
+  - **Azure AI Foundry AI agents**
+
+    Defender monitors agents for misconfigurations and vulnerabilities, identifies potential attack paths, and delivers actionable security recommendations through Exposure Management to strengthen your AI security posture.
+
+For more information, see [Protect your AI agents (Preview)](/defender-xdr/security-for-ai/ai-agent-inventory).
+
+## September 2025
+
+### Real time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)
+
+Microsoft Defender offers real-time protection during runtime for AI agents built with Microsoft Copilot Studio. This capability automatically blocks the agent's response during runtime if a suspicious behavior like a prompt injection attack is detected, and notifies security teams with a detailed alert in the Microsoft Defender portal.
+
+For more information, see [Real-time protection during agent runtime for Microsoft Copilot Studio AI agents (Preview)](/defender-xdr/security-for-ai/ai-agent-real-time-protection).
 
 ## July 2025
 
@@ -233,7 +256,7 @@ For more information, see [detailed insights into OAuth apps](/defender-cloud-ap
 
 Defender for Cloud Apps users who use app governance can utilize the new *Permissions* filter and export capabilities to quickly identify apps with specific permissions to access Microsoft 365. 
 
-For more information, see [filters on app governance](/defender-cloud-apps/app-governance-visibility-insights-get-started#view-app-insights).
+For more information, see [filters on app governance](/defender-cloud-apps/app-governance-visibility-insights-overview#view-app-insights).
 
 ### Visibility into privilege level for popular Microsoft first-party APIs (Preview)
 
@@ -1093,7 +1116,7 @@ In November 2020, we moved to suffix domains in the form of `<appName>.mcas.ms`,
 
 ### App governance July 2022 release
 
-- **Added more predefined policies**: App governance released five more out of the box policies to detect anomalous app behaviors. These policies are activated by default, but you can deactivate them if you choose to. [Learn more here](app-governance-predefined-policies.md)
+- **Added more predefined policies**: App governance released five more out of the box policies to detect anomalous app behaviors. These policies are activated by default, but you can deactivate them if you choose to. [Learn more here](app-governance-app-policies-overview.md#predefined-policies)
 - **New video library**: App governance created a new library of short videos on features in app governance, how to use them, and info on how to learn more. [Check it out here](https://youtube.com/playlist?list=PLyhj1WZ29G66k4F_OZeMkQymRGyqHwZVp)
 - **Secure Score integration GA**: Microsoft Secure Score integration with the app governance (AppG) add-on to Microsoft Defender for Cloud Apps (MDA) has reached general availability. AppG customers now receive recommendations in Secure Score, helping them secure their Microsoft 365 OAuth apps.
    Why is this integration important?
@@ -1137,7 +1160,7 @@ The DocuSign API connector is generally available, providing you deeper visibili
 
 ### App governance May 2022 release
 
-- **Predefined policies GA**: App governance released a set of out of the box policies to detect anomalous app behaviors. These policies are activated by default, but you can deactivate them if you choose to. [Learn more here](app-governance-predefined-policies.md)
+- **Predefined policies GA**: App governance released a set of out of the box policies to detect anomalous app behaviors. These policies are activated by default, but you can deactivate them if you choose to. [Learn more here](app-governance-app-policies-overview.md#predefined-policies)
 - **Teams workload GA**: App governance added insights, policy capabilities, and governance for the Teams workload. You can see data usage, permissions usage, and create policies on Teams permissions and usage.
 - **App governance alerts unified in the M365D alerts and incidents queues**: The app governance alerts queue has been unified with the Microsoft Defender XDR alerts experience and are aggregated into incidents.
 
@@ -1963,7 +1986,7 @@ Microsoft Cloud App Security now supports the Azure AD Global Reader role. The G
 Released March 17, 2019
 
 - **Microsoft Defender ATP integration is now GA**  
-Last year we announced [integration with Windows Defender Advanced Threat Protection](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-cloud-app-security-and-windows-defender-atp-better/ba-p/263265) that enhances the Discovery of Shadow IT in your organization, and extends it beyond the corporate network. [Enabled with a single click](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWtNmG), we're excited to announce that this unique integration is now generally available.
+Last year we announced [integration with Windows Defender Advanced Threat Protection](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-cloud-app-security-and-windows-defender-atp-better/ba-p/263265) that enhances the Discovery of Shadow IT in your organization, and extends it beyond the corporate network. Enabled with a single click, we're excited to announce that this unique integration is now generally available.
 - **Dynamics 365 CRM support**  
 Cloud App Security added real-time monitoring and control for Dynamics 365 CRM, to enable you to protect your business applications and the sensitive content stored within these apps. For more information about what can be done with Dynamics 365 CRM, see [this article](classic-proxy-intro-aad.md#how-it-works).
 

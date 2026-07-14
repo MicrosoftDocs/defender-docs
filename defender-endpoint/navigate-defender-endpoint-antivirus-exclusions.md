@@ -1,5 +1,5 @@
 ---
-title: Exclusions overview
+title: Overview of exclusions in Microsoft Defender for Endpoint and Microsoft Defender Antivirus
 description: Learn how to navigate exclusions for Defender for Endpoint and Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.subservice: ngp
@@ -7,16 +7,17 @@ ms.localizationpriority: medium
 ms.topic: how-to
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen
-ms.date: 01/09/2025
+ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 06/16/2026
 ms.reviewer: joshbregman
 ms.collection:
 - m365-security
 - tier2
 - mde-ngp
+ai-usage: ai-assisted
 ---
 
-# Exclusions overview
+# Exclusions and indicators overview for Microsoft Defender for Endpoint
 
 
 
@@ -32,6 +33,8 @@ Creating an exclusion is one possible approach for addressing these types of iss
 > Creating an indicator or an exclusion should only be considered after thoroughly understanding the root cause of the unexpected behavior.
 
 ## Examples of issues and steps to consider
+
+The following table lists common scenarios and the steps to consider before creating an exclusion or allow indicator.
 
 | Example scenario | Steps to consider |
 |:---|:----|
@@ -58,7 +61,7 @@ Submitting files for analysis helps reduce false positives and false negatives f
 
 ### Suppressing alerts
 
-If you're getting alerts in the Microsoft Defender portal for tools or processes that you know aren't actually a threat, you can suppress those alerts. To suppress an alert, you create a suppression rule, and specify what actions to take for that on other, identical alerts. You can create suppression rules for a specific alert on a single device, or for all alerts that have the same title across your organization.
+If you're getting alerts in the Microsoft Defender portal for tools or processes that you know aren't actually a threat, you can suppress those alerts. To suppress an alert, you create a suppression rule, and specify what actions to take for that alert on other, identical alerts. You can create suppression rules for a specific alert on a single device, or for all alerts that have the same title across your organization.
 
 To learn more, see the following articles:
 
@@ -181,9 +184,9 @@ For more information, see [Manage automation folder exclusions](manage-automatio
 
 ### Controlled folder access exclusions
 
-[Controlled folder access](controlled-folders.md) monitors apps for activities that are detected as malicious and protects the contents of certain (protected) folders on Windows devices. Controlled folder access allows only trusted apps to access protected folders, such as common system folders (including boot sectors) and other folders that you specify. You can allow certain apps or signed executables to access protected folders by defining exclusions.
+[Controlled folder access (CFA)](controlled-folder-access-overview.md) protects your data by blocking untrusted apps from changing files in [protected folders](controlled-folder-access-overview.md#default-folders-protected-by-cfa) on Windows devices. By default, CFA protects common system folders, and you can [add other folders](controlled-folder-access-overview.md#add-other-folders-to-cfa). If CFA blocks an app that you trust, you can define an exclusion to [allow the app to modify files in protected folders](controlled-folder-access-overview.md#allow-apps-to-modify-files-in-protected-folders).
 
-For more information, See [Customize controlled folder access](customize-controlled-folders.md).
+For more information, see [Configure controlled folder access](controlled-folder-access-configure.md).
 
 ### Custom remediation actions
 
@@ -221,11 +224,11 @@ In cases where Defender for Endpoint indicators conflict, here's what to expect:
 
 [Automated investigation and remediation capabilities](automated-investigations.md) in Defender for Endpoint first determine a verdict for each piece of evidence, and then take an action depending on Defender for Endpoint indicators. Thus, a file/process could get a verdict of "good" (which means no threats were found) and still be blocked if there's an indicator with that action. Similarly, an entity could get a verdict of "bad" (which means it's determined to be malicious) and still be allowed if there's an indicator with that action.
 
-For more information, see [automated investigation and remediation and indicators](indicators-overview.md#automated-investigation-and-remediation-engine).
+For more information, see [Automated investigation and remediation engine](indicators-overview.md#automated-investigation-and-remediation-engine).
 
 ## Other server workloads and exclusions
 
-If your organization is using other server workloads, such as Exchange Server, SharePoint Server, or SQL Server, keep in mind that only built-in server roles (that could be prerequisites for software you install later) on Windows Server are excluded by [automatic server role exclusions](#automatic-server-role-exclusions) feature (and only when using their default installation location). You'll likely need to define antivirus exclusions for these other workloads, or for all workloads if you disable automatic exclusions.
+If your organization is using other server workloads, such as Exchange Server, SharePoint Server, or SQL Server, keep in mind that only built-in server roles (that could be prerequisites for software you install later) on Windows Server are excluded by [automatic server role exclusions](#automatic-server-role-exclusions) feature (and only when using their default installation location). You'll likely need to define antivirus exclusions for these other workloads, or for all workloads if you disable automatic server role exclusions.
 
 Here are some examples of technical documentation to identify and implement the exclusions you need:
 

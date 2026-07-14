@@ -1,9 +1,11 @@
 ---
 title: Identity-managed devices with Conditional Access app control | Microsoft Defender for Cloud Apps
-description: This article provides information about how to configure access and session policies for Conditional Access app control to check for identity-managed devices.
-ms.date: 12/24/2023
+description: Configure Conditional Access app control access and session policies to detect whether devices are identity-managed, with guidance for Microsoft Entra and non-Entra scenarios.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Identity-managed devices with Conditional Access app control
@@ -14,7 +16,7 @@ You might want to add conditions to your policy about whether a device is manage
 
 If you have Microsoft Entra, have your policies check for Microsoft Intune-compliant devices, or Microsoft Entra hybrid joined devices.
 
-Microsoft Entra Conditional Access enables Intune-compliant and Microsoft Entra hybrid joined device information to be passed directly to Defender for Cloud Apps. From there, create an access or session policy that considers the device state. For more information, see the [What is a device identity?](/entra/identity/devices/overview)
+Microsoft Entra Conditional Access enables Intune-compliant and Microsoft Entra hybrid joined device information to be passed directly to Defender for Cloud Apps. In Defender for Cloud Apps, create an access or session policy that considers the device state. For more information, see the [What is a device identity?](/entra/identity/devices/overview)
 
 > [!NOTE]
 > Some browsers may require additional configuration such as installing an extension. For more information, see [Conditional Access browser support](/azure/active-directory/conditional-access/concept-conditional-access-conditions).
@@ -25,7 +27,7 @@ If you don't have Microsoft Entra, check for the presence of client certificates
 
 Make sure that the client certificate is installed in the user store and not the computer store. You then use the presence of those certificates to set access and session policies.
 
-Once the certificate is uploaded and a relevant policy is configured, when an applicable session traverses Defender for Cloud Apps and Conditional Access app control,  Defender for Cloud Apps requests the browser to present the SSL/TLS client certificates. The browser serves the SSL/TLS client certificates that are installed with a private key. This combination of certificate and private key is done by using the PKCS #12 file format, typically .p12 or .pfx.
+Once the certificate is uploaded and a relevant policy is configured, when an applicable session traverses Defender for Cloud Apps and Conditional Access app control,  Defender for Cloud Apps requests the browser to present the SSL/TLS client certificates. The browser serves the SSL/TLS client certificates that are installed with a private key. A certificate and its private key are typically packaged by using the PKCS #12 file format, such as .p12 or .pfx.
 
 When a client certificate check is performed, Defender for Cloud Apps checks for the following conditions:
 
@@ -43,9 +45,9 @@ Upload your root or intermediate CA certificates to Defender for Cloud Apps in t
 
 After the certificates are uploaded, you can create access and session policies based on **Device tag** and **Valid client certificate**.
 
-**To test how this works**, use our sample root CA and client certificate, as follows:
+**To test client certificate-based device identification**, use our sample root CA and client certificate, as follows:
 
-1. Download the sample [root CA](https://github.com/microsoft/Microsoft-Cloud-App-Security/blob/master/Doc%20Assets/Proxy/Samples/SampleRootCA.crt.pem) and [client certificate](https://github.com/microsoft/Microsoft-Cloud-App-Security/blob/master/Doc%20Assets/Proxy/Samples/SampleClientCert.pfx).
+1. Download the [sample root CA certificate (.pem)](https://github.com/microsoft/Microsoft-Cloud-App-Security/blob/master/Doc%20Assets/Proxy/Samples/SampleRootCA.crt.pem) and [sample client certificate (.pfx)](https://github.com/microsoft/Microsoft-Cloud-App-Security/blob/master/Doc%20Assets/Proxy/Samples/SampleClientCert.pfx).
 1. Upload the root CA to Defender for Cloud Apps.
 1. Install the client certificate onto the relevant devices. The password is `Microsoft`.
 

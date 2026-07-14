@@ -25,6 +25,22 @@ Microsoft regularly releases [security intelligence updates and product updates 
 
 ## Engine and platform updates
 
+### February-2026 (Platform: 4.18.26020.6 | Engine: 1.1.26020.3)
+
+- Security intelligence update version: **1.447.2.0**
+- Release date:  **March 25, 2026 (Engine) / March 25, 2026 (Platform)**
+- Platform: **4.18.26020.6**
+- Engine: **1.1.26020.3**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- **Network protection**: Improved the network protection feature to promptly release closed connections and reduce unnecessary memory usage.
+- **PowerShell**: Fixed an issue where the `Get-MpComputerStatus` PowerShell cmdlet could fail after updates due to a configuration mismatch.
+- **Performance**: Improved performance for Network Response Intelligence (NRI) by reducing CPU usage during high-volume asynchronous message processing.
+- **AMSI**: Added support for AMSI path exclusions for Exchange Server so configured path exclusions are now correctly evaluated during AMSI scanning for Exchange workloads.
+- **Device control**: Improved policy refresh behavior for device control by updating default policy and Azure AD refresh intervals to reduce retry frequency.
+
 ### January-2026 (Platform: 4.18.26010.5 | Engine: 1.1.26010.1)
 
 - Security intelligence update version: **1.445.6.0**
@@ -209,7 +225,7 @@ What's new
 - Fixed the Defender service description to match the latest installed version.
 - Improved Defender engine update logic when the update is included in a custom image.
 - Fix in health reporting where signature update data might have been incorrect.
-- Fixed reporting issue with [controlled folder access](controlled-folders.md) (CFA) protected folders using the PowerShell cmdlet [Get-MpPreference](/powershell/module/defender/get-mppreference) when CFA is disabled.
+- Fixed reporting issue with [controlled folder access](controlled-folder-access-overview.md) (CFA) protected folders using the PowerShell cmdlet [Get-MpPreference](/powershell/module/defender/get-mppreference) when CFA is disabled.
 - Improved performance when scanning UPX-packed files (Ultimate Packer for eXecutables) and updated the validation process to verify the integrity of the packed file itself.
 - Added support for distinguishing regular cloud allow signatures from clean [Indicators of Compromise](indicators-overview.md) (IoC) in [attack surface reduction](attack-surface-reduction-rules-overview.md) (ASR).
 
@@ -245,7 +261,7 @@ What's new
 
 - Improved handling of [attack surface reduction rule](attack-surface-reduction-rules-reference.md) exclusions.
 - Improved AMSI scan performance with changes to exclusion handling.
-- Fixed [Controlled Folder Access](controlled-folders.md) (CFA) protection for OneDrive when backup is enabled.
+- Fixed [Controlled Folder Access](controlled-folder-access-overview.md) (CFA) protection for OneDrive when backup is enabled.
 - Fixed performance issues with [full scans](schedule-antivirus-scans.md) when initiated from the Microsoft Defender portal.
 - Fixed attack surface reduction warn mode processing for containerized objects (such as Office files) when the unblock option is selected.
 - Fixed attack surface reduction warn mode processing when exclusions are applied.
@@ -293,7 +309,7 @@ What's new
 
 #### What's new
 
-- Added a new parameter (`ControlledFolderAccessDefaultProtectedFolders`) to [Get-MpPreference](/powershell/module/defender/get-mppreference) cmdlet to show default protected folders for [controlled folder access](enable-controlled-folders.md).
+- Added a new parameter (`ControlledFolderAccessDefaultProtectedFolders`) to [Get-MpPreference](/powershell/module/defender/get-mppreference) cmdlet to show default protected folders for [controlled folder access](controlled-folder-access-configure.md).
 - Fixed an issue with device control regarding printer security checks.
 - Resolved an issue with platform rollback after an upgrade from Windows 10 to Windows 11.
 - Fixed an issue where volume exclusions weren't properly enforced in real-time protection after the completion of OOBE.
@@ -425,7 +441,7 @@ What's new
 - Cloud-based entries are regularly removed from the persistent user mode cache in Windows Defender to prevent an uncommon issue where a user could still add a certificate, based on an Indicator of compromise (IoC), to the cache after a file with that certificate had already been added via cloud signature.
 - The Sense onboarding event is now sent in passive mode for operating systems with the old Sense client.
 - Improved performance for logs created/accessed by powershell.
-- Improved performance for folders included in [Controlled folder access(CFA)](controlled-folders.md) when accessing network files.
+- Improved performance for folders included in [Controlled folder access(CFA)](controlled-folder-access-overview.md) when accessing network files.
 - Fixed a deadlock that occurred at shutdown for Data Loss Prevention (DLP) enabled devices.
 - Fixed an issue to remove a vulnerability in the Microsoft Defender Core service.
 - Fixed an onboarding issue in the Unified Agent installation script [install.ps1](https://github.com/microsoft/mdefordownlevelserver).
@@ -467,7 +483,7 @@ What's new
 
 #### What's new
 
-- Improved processing of environment variables in protected folders list for [controlled folder access](controlled-folders.md)
+- Improved processing of environment variables in protected folders list for [controlled folder access](controlled-folder-access-overview.md)
 - Improved performance of [on-access scanning](configure-advanced-scan-types-microsoft-defender-antivirus.md) of files with Mark of the Web (MoTW)
 - Added support for Active Directory device groups with [device control](device-control-overview.md)
 - Fixed an issue so that [ASROnlyPerRuleExclusions](/windows/client-management/mdm/defender-csp#configurationasronlyperruleexclusions) don't apply during an engine reboot
@@ -750,7 +766,7 @@ What's new
 - Improved [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) capabilities
 - Enhanced enabling of tamper protection for newly onboarded devices
 - Improved reporting for [cloud protection](cloud-protection-microsoft-defender-antivirus.md)
-- Improved [controlled folder access](controlled-folders.md) notifications
+- Improved [controlled folder access](controlled-folder-access-overview.md) notifications
 - Improved scanning of network shares
 - Enhanced processing of host files containing a wild card
 - Improved performance for [scan events](customize-run-review-remediate-scans-microsoft-defender-antivirus.md)

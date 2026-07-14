@@ -4,11 +4,13 @@ description: Deploy Microsoft Defender portal services for unified security oper
 author: guywi-ms
 ms.author: guywild
 ms.topic: how-to #Don't change.
-ms.date: 03/17/2025
+ms.date: 06/15/2026
 ms.collection:
 - usx-security
 - zerotrust-solution
 - msftsolution-secops
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #customer intent: As a security administrator, I want to deploy Microsoft Defender portal services for unified security operations.
 
@@ -69,7 +71,7 @@ For more information, see [Onboard Microsoft Sentinel](/azure/sentinel/quickstar
 
 ## Configure roles and permissions
 
-Provision your users based on the access plan you'd [prepared earlier](overview-plan.md#plan-roles-and-permissions). To comply with Zero Trust principles, we recommend that you use role-based access control (RBAC) to provide user access only to the resources that are allowed and relevant for each user, instead of providing access to the entire environment.
+Provision your users based on your documented [roles and permissions access plan](overview-plan.md#plan-roles-and-permissions). To comply with Zero Trust principles, we recommend that you use role-based access control (RBAC) to provide user access only to the resources that are allowed and relevant for each user, instead of providing access to the entire environment.
 
 [!INCLUDE [mininum-access-requirements](includes/mininum-access-requirements.md)]
 
@@ -90,13 +92,13 @@ Use the following Microsoft Sentinel configuration options to fine-tune your dep
 
 ### Enable health and auditing
 
-Monitor the health and audit the integrity of supported Microsoft Sentinel resources by turning on the auditing and health monitoring feature in Microsoft Sentinel's Settings page. Get insights on health drifts, such as the latest failure events or changes from success to failure states, and on unauthorized actions, and use this information to create notifications and other automated actions.
+Monitor the health and audit the integrity of supported Microsoft Sentinel resources by turning on the auditing and health monitoring feature in Microsoft Sentinel's Settings page. Get insights on health drifts, such as the latest failure events or changes from success to failure states, and on unauthorized actions, and use health monitoring and audit data to create notifications and other automated actions.
 
 For more information, see[Turn on auditing and health monitoring for Microsoft Sentinel](/azure/sentinel/enable-monitoring?tabs=azure-portal).
 
 ### Configure Microsoft Sentinel content
 
-Based on the [data sources you selected](overview-plan.md#plan-microsoft-sentinel-costs-and-data-sources) when planning your deployment, install Microsoft Sentinel solutions and configure your data connectors. Microsoft Sentinel provides a wide range of built-in solutions and data connectors, but you can also build custom connectors and set up connectors to ingest CEF or Syslog logs.
+Based on your [planned Microsoft Sentinel costs and data sources](overview-plan.md#plan-microsoft-sentinel-costs-and-data-sources), install the corresponding Microsoft Sentinel solutions and configure your data connectors. Microsoft Sentinel provides a wide range of built-in solutions and data connectors, but you can also build custom connectors and set up connectors to ingest CEF or Syslog logs.
 
 For more information, see:
 
@@ -126,7 +128,7 @@ For more information, see [Work with anomaly detection analytics rules](/azure/s
 
 ### Use the Microsoft Threat Intelligence analytics rule
 
-Enable the out-of-the-box Microsoft Threat Intelligence analytics rule and verify that [this rule matches your log data with Microsoft-generated threat intelligence](/azure/sentinel/understand-threat-intelligence#detect-threats-with-threat-indicator-analytics). Microsoft has a vast repository of threat intelligence data, and this analytic rule uses a subset of it to generate high fidelity alerts and incidents for SOC (security operations centers) teams to triage.
+Enable the out-of-the-box Microsoft Threat Intelligence analytics rule and verify that the rule matches your log data with Microsoft-generated threat intelligence. For more information, see [Detect threats with threat indicator analytics](/azure/sentinel/understand-threat-intelligence#detect-threats-with-threat-indicator-analytics). Microsoft has a vast repository of threat intelligence data, and this analytic rule uses a subset of it to generate high fidelity alerts and incidents for SOC (security operations centers) teams to triage.
 
 ### Avoid duplicate incidents
 

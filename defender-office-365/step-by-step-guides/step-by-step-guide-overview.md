@@ -39,7 +39,7 @@ Instead, these guides are streamlined for **learning by doing**, **testing**, an
 
 - If you recently got Microsoft Defender for Office 365, and you want to get protected as quickly as possible use [preset security policies](ensuring-you-always-have-the-optimal-security-controls-with-preset-security-policies.md).
 
-- Take advantage of other protections designed for [members of your c-suite](protect-your-c-suite-with-priority-account-protection.md).
+- Take advantage of other protections designed for [members of your c-suite](/microsoft-365/admin/security-and-compliance/priority-accounts).
 
 - How do you [setup](how-to-run-attack-simulations-for-your-team.md) or [automate](how-to-setup-attack-simulation-training-for-automated-attacks-and-training.md) a new simulation quickly and easily?
 

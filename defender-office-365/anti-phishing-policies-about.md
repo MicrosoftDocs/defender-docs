@@ -9,15 +9,17 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
+  - msecd-doc-authoring-1014
   - seo-marvel-apr2020
   - sfi-image-nochange
 description: Admins can learn about the anti-phishing policies that are available in the built-in security features for all cloud mailboxes and in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 04/14/2026
+ms.date: 06/30/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 #customer intent:As a security administrator, I need clear, step‑by‑step guidance for configuring anti‑phishing policies—especially spoofing and impersonation protections—so I can protect users and minimize false positives.
 ---
 
@@ -37,7 +39,7 @@ Anti-phishing policies protect against phishing attacks by detecting spoofed sen
 - **Additional reporting and insights**:
   - Advanced reporting features and visibility into phishing attempts beyond basic logging.
 
-In Microsoft Defender, anti-phishing policies are available on the [**Email & Collaboration** > **Policies & rules** > **Threat policies** > **Anti-phishing**](https://security.microsoft.com/antiphishing) page. While a default anti-phishing policy automatically applies to all recipients, you can also create custom policies for specific users, groups, or domains. This article describes the settings that are available in anti-phishing policies for all cloud mailboxes and in anti-phishing policies in Defender for Office 365.
+In Microsoft Defender, anti-phishing policies are available on the [**Email & Collaboration** > **Policies & rules** > **Threat policies** > **Anti-phishing**](https://security.microsoft.com/antiphishing) page. While a default anti-phishing policy automatically applies to all recipients, you can also create custom policies for specific users, groups, or domains. The following sections describe the settings that are available in anti-phishing policies for all cloud mailboxes and in anti-phishing policies in Defender for Office 365.
 
 ## Configure anti-phishing policies
 
@@ -99,14 +101,14 @@ The following policy settings are available in anti-phishing policies for all cl
     The policy is applied to `romain@contoso.com` _only_ if he's also a member of the Executives group. Otherwise, the policy isn't applied to him.
 
   > [!TIP]
-  > At least one selection in the **Users, groups, and domains** settings is required in custom anti-phishing policies to identify the message **recipients that the policy applies to**. Anti-phishing policies in Defender for Office 365 also have [impersonation settings](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) where you can specify **sender email addresses or sender domains that receive impersonation protection** as described later in this article.
+  > At least one selection in the **Users, groups, and domains** settings is required in custom anti-phishing policies to identify the message **recipients that the policy applies to**. Anti-phishing policies in Defender for Office 365 also have [impersonation settings](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) where you can specify **sender email addresses or sender domains that receive impersonation protection**.
 
 ## Spoof settings
 
 Spoofing is when the From address in an email message (the sender address that email clients show) doesn't match the domain of the email source. For more information about spoofing, see [Anti-spoofing protection](anti-phishing-protection-spoofing-about.md).
 
 > [!TIP]
-> For a comparison of spoofing versus impersonation, see the [Spoofing vs. impersonation](#spoofing-vs-impersonation) section later in this article.
+> For a comparison of spoofing versus impersonation, see [Spoofing vs. impersonation](#spoofing-vs-impersonation).
 
 The following spoof settings are available in anti-phishing policies for all cloud mailboxes and in anti-phishing policies in Defender for Office 365:
 
@@ -164,8 +166,8 @@ The relationship between spoof intelligence and whether sender DMARC policies ar
 >
 > Customers can override the **Honor DMARC policy** setting for specific email messages and/or senders using the following methods:
 >
-> - [Admins](configure-junk-email-settings-on-exo-mailboxes.md#use-exchange-online-powershell-to-configure-the-safelist-collection-on-a-mailbox) or [users](https://support.microsoft.com/office/48c9f6f7-2309-4f95-9a4d-de987e880e46) can add the senders to the Safe Senders list in the user's mailbox.
-> - Admins can use the [spoof intelligence insight](anti-spoofing-spoof-intelligence.md#override-the-spoof-intelligence-verdict) or the [Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-spoofed-senders) to allow messages from the spoofed sender.
+> - [Admins can use Exchange Online PowerShell to configure the safelist collection](configure-junk-email-settings-on-exo-mailboxes.md#use-exchange-online-powershell-to-configure-the-safelist-collection-on-a-mailbox) or [users can update their Safe Senders list in Outlook](https://support.microsoft.com/office/48c9f6f7-2309-4f95-9a4d-de987e880e46) to add the senders to the Safe Senders list in the user's mailbox.
+> - Admins can use the [spoof intelligence insight](anti-spoofing-spoof-intelligence.md#override-the-spoof-intelligence-verdict), the [Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-spoofed-senders), or [allowed sender or domain lists in anti-spam policies](create-safe-sender-lists-in-office-365.md#use-allowed-sender-lists-or-allowed-domain-lists-in-anti-spam-policies) to allow messages from the spoofed sender.
 > - Admins create an Exchange mail flow rule (also known as a transport rule) for all users that allows messages for those particular senders.
 > - Admins create an Exchange mail flow rule for all users for rejected email that fails the organization's DMARC policy.
 
@@ -173,7 +175,7 @@ The relationship between spoof intelligence and whether sender DMARC policies ar
 
 Unauthenticated sender indicators are part of the [Spoof settings](#spoof-settings) that are available in the **Safety tips & indicators** section in anti-phishing policies for all cloud mailboxes and in anti-phishing policies in Defender for Office 365. The following settings are available only when spoof intelligence is turned on:
 
-- **Show (?) for unauthenticated senders for spoof**: Adds a question mark to the sender's photo in the From box if the message doesn't pass SPF or DKIM checks **and** the message doesn't pass DMARC or [composite authentication](email-authentication-about.md#composite-authentication). When this setting is turned off, the question mark isn't added to the sender's photo.
+- **Show (?) for unauthenticated senders for spoof**: Adds a question mark to the sender's photo in the From box if the message doesn't pass SPF or DKIM checks **and** the message doesn't pass DMARC or [composite authentication](email-authentication-about.md#composite-authentication) (Microsoft's combined assessment of SPF, DKIM, and DMARC results). When this setting is turned off, the question mark isn't added to the sender's photo.
 
   :::image type="content" source="media/anti-phishing-policies-safety-tip-unauthenticated-senders.png" alt-text="Screenshot of an unauthenticated sender in an email message." lightbox="media/anti-phishing-policies-safety-tip-unauthenticated-senders.png":::
 
@@ -244,7 +246,7 @@ The impersonation settings described in the following sections are available onl
 > [!TIP]
 > Details about detected impersonation attempts are available in the impersonation insight. For more information, see [Impersonation insight in Defender for Office 365](anti-phishing-mdo-impersonation-insight.md).
 >
-> For a comparison of impersonation versus spoofing, see the [Spoofing vs. impersonation](#spoofing-vs-impersonation) section later in this article.
+> For a comparison of impersonation versus spoofing, see [Spoofing vs. impersonation](#spoofing-vs-impersonation).
 
 #### User impersonation protection
 

@@ -3,10 +3,10 @@ title: Migrate from sensor v2.x to sensor v3.x (Preview)
 description: Learn how to migrate from the Defender for Identity sensor v2.x to the sensor v3.x with no downtime using the Sensors page in the Microsoft Defender portal.
 author: AbbyMSFT
 ms.author: abbyweisberg
-ms.date: 05/27/2026
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.service: microsoft-defender-for-identity
-ms.custom: msecd-doc-authoring-106
+ms.custom: msecd-doc-authoring-1014
 ai-usage: ai-assisted
 
 #customer intent: As a security admin, I want to migrate my Defender for Identity sensors from v2.x to v3.x so that I can use the latest sensor without downtime or data loss.
@@ -25,13 +25,9 @@ To migrate, each server must meet the following requirements:
 - Domain controller without additional identity roles
 - Defender for Identity sensor v2.x (version 2.254.19112.470 or later)
 - Windows Server 2019 or later
-- Microsoft Defender for Endpoint deployed, with the [March 2026 or later](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) cumulative update installed.
+- Microsoft Defender for Endpoint deployed, with the [March 10, 2026 Windows Server update (KB5078766)](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) or later cumulative update installed.
 
 For the full list of v3.x requirements, see [Defender for Identity sensor v3.x prerequisites](deploy-sensor-v3.md).
-
-## Known limitations
-
-- **Windows Server 2025 domain controllers:** Migrating domain controllers running Windows Server 2025 to sensor v3.x isn't currently supported.
 
 ## Start the migration
 
@@ -77,7 +73,7 @@ If a server shows **Not ready for migration**, use the Microsoft Defender for En
 | Defender for Identity v2.x sensor is running | Go to the **Sensors** page in the portal and validate the **Service status** column shows **Running**, or run `sc query AATPSensorUpdater` and confirm the service state is **Running**. | Start the `AATPSensorUpdater` service. If the service fails to start, reinstall the v2.x sensor. |
 | Defender for Identity v2.x sensor version is 2.254 or later | Check the installed sensor version in **Programs and Features** or on the **Sensors** page in the portal. | Update the Defender for Identity v2 sensor to version 2.254.19112.470 or later. Ensure delayed updates aren't blocking the update. |
 | Defender for Endpoint sensor version is 10.8735 or later | Client Analyzer report: the **Sense version** field displays the installed version. | Update the Defender for Endpoint sensor to the latest version. |
-| Windows Server 2019 or later with March 2026 cumulative update | Run `winver` to confirm the OS version and build number. | Upgrade the operating system to Windows Server 2019 or later and install the [March 2026 or later](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) cumulative update. |
+| Windows Server 2019 or later with March 2026 cumulative update | Run `winver` to confirm the OS version and build number. | Upgrade the operating system to Windows Server 2019 or later and install the [March 10, 2026 cumulative update (KB5078766)](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) or later. |
 | Domain controller without additional identity roles | Verify the server is a pure domain controller and doesn't run AD FS, AD CS, or Entra Connect alongside the DC role. | Migration is only supported on pure domain controllers. Use the v2.x sensor for servers with additional roles. |
 
 ## Troubleshoot migration failures

@@ -84,7 +84,7 @@ connection failed because connected host has failed to respond...
 
 **Resolution:**
 
-Make sure that communication isn't blocked for localhost, TCP port 444. To learn more about Microsoft Defender for Identity prerequisites, see [ports](prerequisites.md#required-ports).
+Make sure that communication isn't blocked for localhost, TCP port 443. To learn more about Microsoft Defender for Identity prerequisites, see [ports](deploy/prerequisites-sensor-version-2.md#required-ports).
 
 ## Deployment log location
 
@@ -488,12 +488,6 @@ If permissions need to be reconfigured, follow the steps outlined in this [guide
 ## Auditing health alerts persist on sensor v3
 
 In some v3 sensor environments, auditing health alerts might persist even when Windows auditing is correctly configured. This primarily occurs with manual auditing configuration, such as using Group Policy or PowerShell. The sensor remains healthy and detections aren't affected. To resolve, enable **Automatic Windows auditing configuration** in the Defender for Identity portal under **Settings** > **Advanced features**.
-
-## Windows Server 2025 sensor v3.x migration not supported
-
-Migrating domain controllers running Windows Server 2025 to sensor v3.x isn't currently supported. Continue using the v2.x sensor on Windows Server 2025 domain controllers until support for migration to v3.x is available.
-
-
 
 ## Next steps
 

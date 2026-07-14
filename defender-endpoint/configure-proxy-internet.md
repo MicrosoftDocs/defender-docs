@@ -10,13 +10,15 @@ ms.collection:
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 11/09/2025
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
-# STEP 2: Configure your devices to connect to the Defender for Endpoint service using a proxy
+# Configure device proxy connectivity to the Defender for Endpoint service
 
 
 > [!IMPORTANT]
@@ -29,7 +31,7 @@ appliesto:
 
 Depending on the operating system, the proxy to be used for Microsoft Defender for Endpoint can be configured automatically. You can use autodiscovery, an autoconfig file, or a method statically specific to Defender for Endpoint services running on the device.
 
-- For Windows devices, see [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md) (in this article).
+- For Windows devices, see [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md).
 - For Linux devices, see [Configure Microsoft Defender for Endpoint on Linux for static proxy discovery](linux-static-proxy-configuration.md).
 - For macOS devices, see [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac-prerequisites.md#network-connectivity).
 
@@ -56,7 +58,7 @@ The `WinHTTP` configuration setting is independent of the Windows Internet (`Win
   - WinHTTP configured using netsh command: Suitable only for desktops in a stable topology (for example: a desktop in a corporate network behind the same proxy)
 
 > [!NOTE]
-> Microsoft Defender Antivirus and EDR proxies can be set independently. In the sections that follow, be aware of those distinctions.
+> Microsoft Defender Antivirus and EDR proxies can be set independently. Each configuration is described separately because they require different settings.
 
 ## Configure the proxy server manually using a registry-based static proxy setting
 
@@ -65,7 +67,7 @@ Configure a registry-based static proxy for Defender for Endpoint detection and 
 > [!NOTE]
 > Always ensure to apply the latest updates to ensure successful connectivity to Defender for Endpoint services. 
 
-The static proxy settings are configurable through group policy (GP), both settings under group policy values should be configured. The group policy is available in Administrative Templates.
+The static proxy settings are configurable through group policy (GP), both settings under group policy values should be configured. These Group Policy settings are available in Administrative Templates.
 
 - **Administrative Templates > Windows Components > Data Collection and Preview Builds > Configure Authenticated Proxy usage for the Connected User Experience and Telemetry Service**.
 
@@ -96,11 +98,11 @@ The static proxy settings are configurable through group policy (GP), both setti
 > reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection" /v PreferStaticProxyForHttpRequest /t REG_DWORD /d 1 /f
 > ```
 >
-> The registry value mentioned earlier is applicable only starting with MsSense.exe version `10.8210.*` and later, or version `10.8049.*` and later.
+> The `PreferStaticProxyForHttpRequest` registry value is applicable only starting with MsSense.exe version `10.8210.*` and later, or version `10.8049.*` and later.
 
 ## Configure a static proxy for Microsoft Defender Antivirus
 
-Microsoft Defender Antivirus [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) provides near-instant, automated protection against new and emerging threats. Connectivity is required for [custom indicators](indicators-overview.md) when Microsoft Defender Antivirus is your active anti-malware solution and [EDR in block mode](edr-in-block-mode.md), which provides a fallback option when a non-Microsoft solution didn't perform a block.
+Microsoft Defender Antivirus [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) provides near-instant, automated protection against new and emerging threats. Connectivity is required for [custom indicators](indicators-overview.md) when Microsoft Defender Antivirus is your active anti-malware solution and [endpoint detection and response (EDR) in block mode](edr-in-block-mode.md), which provides a fallback option when a non-Microsoft solution didn't perform a block.
 
 Configure the static proxy using the Group Policy available in Administrative Templates:
 
@@ -159,7 +161,8 @@ Use `netsh` to configure a system-wide static proxy.
 
 See [Netsh Command Syntax, Contexts, and Formatting](/windows-server/networking/technologies/netsh/netsh-contexts) to learn more.
 
-### Windows devices running the previous MMA-based solution
+<a name="windows-devices-running-the-previous-mma-based-solution"></a>
+### Configure proxy settings for Windows devices running the previous MMA-based solution
 
 For devices running Windows 7, Windows 8.1, Windows Server 2008 R2, and servers that aren't upgraded to Unified Agent and use the Microsoft Monitoring Agent (also known as Log Analytics Agent) to connect to the Defender for Endpoint service, you can either use a system-wide proxy setting, or configure the agent to connect through a proxy or a log analytics gateway.
 
@@ -170,11 +173,14 @@ For devices running Windows 7, Windows 8.1, Windows Server 2008 R2, and servers 
 
 ## Next step
 
-[STEP 3: Verify client connectivity to Microsoft Defender for Endpoint service URLs](verify-connectivity.md)
+[Verify client connectivity to Microsoft Defender for Endpoint service URLs](verify-connectivity.md)
 
 For the required service endpoints, see [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](streamlined-device-connectivity-urls-commercial.md)
 
-## Related articles
+<a name="related-articles"></a>
+## Related content
+
+The following articles provide additional information about proxy configuration, onboarding, and troubleshooting for Defender for Endpoint:
 
 - [Disconnected environments, proxies, and Microsoft Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/disconnected-environments-proxies-and-microsoft-defender-for/ba-p/3710502)
 - [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](use-group-policy-microsoft-defender-antivirus.md)

@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-ms.date: 12/31/2025
+ms.date: 06/17/2026
 ms.collection:
 - m365-security
 - tier2
@@ -14,6 +14,8 @@ ms.topic: how-to
 ms.subservice: edr
 appliesto:
   - Microsoft Defender for Business
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Take response actions on a device
@@ -56,7 +58,7 @@ Response actions run along the top of a specific device page and include:
 - **Search box**: Select **Device** from the drop-down menu and enter the device name.
 
 > [!IMPORTANT]
-> For information on availability and support for each response action, see the supported minimum operating system requirements for each feature.
+> For information on availability and support for each response action, see the supported minimum operating system requirements listed in [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md).
 
 ### Limiting high-impact response actions on high-value assets
 
@@ -98,22 +100,22 @@ Or, use this alternate procedure:
 
 1. Select **Collect Investigation Package** from the response actions section of the device page.
 
-   ![Image of collect investigation package](media/collect-investigation-package.png)
+   ![Screenshot of the device page option to collect an investigation package](media/collect-investigation-package.png)
    
 1. Add comments and then select **Confirm**.
 
-   ![Image of confirm comment](media/comments-confirm.png)
+   ![Screenshot of the confirmation dialog for adding a comment to the action](media/comments-confirm.png)
    
 1. Select **Action center** from the response actions section of the device page.
 
-   ![Image of action center](media/action-center-selected.png)
+   ![Screenshot of the Action center selected in the response actions section of the device page](media/action-center-selected.png)
    
 1. Select **Package collection package available** to download the collection package.
 
-   ![Image of download package](media/download-package.png)
+   ![Screenshot of the option to download the collected investigation package from the Action center](media/download-package.png)
    
    > [!NOTE]
-   > The collection of the investigation package might fail if a device has a low battery level or is on a metered connection.
+   > Collection of the investigation package might fail if the target device has a low battery level or is on a metered connection.
 
 ### Investigation package contents for Windows devices
 
@@ -159,7 +161,7 @@ As part of the investigation or response process, you can remotely initiate an a
 
 > [!IMPORTANT]
 >
-> - This action is supported for macOS and Linux for client version 101.98.84 and above. You can also use live response to run the action. For more information on live response, see [Investigate entities on devices using live response](live-response.md)
+> - The remote antivirus scan action is supported for macOS and Linux for client version 101.98.84 and above. You can also use live response to run the action. For more information on live response, see [Investigate entities on devices using live response](live-response.md)
 > - A Microsoft Defender Antivirus scan can run alongside other antivirus solutions, whether Microsoft Defender Antivirus is the active antivirus solution or not. Microsoft Defender Antivirus can be in Passive mode. For more information, see [Microsoft Defender Antivirus compatibility](microsoft-defender-antivirus-compatibility.md).
 
 One you have selected **Run antivirus scan**, select the scan type that you'd like to run (quick or full) and add a comment before confirming the scan.
@@ -179,11 +181,11 @@ In addition to containing an attack by stopping malicious processes, you can als
 
 > [!IMPORTANT]
 >
-> - This action is available for devices on Windows 10, version 1709 or later, Windows 11, and Windows Server 2019 or later.
-> - This feature is available if your organization uses Microsoft Defender Antivirus.
-> - This action needs to meet the Windows Defender Application Control code integrity policy formats and signing requirements. For more information, see [Code integrity policy formats and signing](/windows/security/threat-protection/windows-defender-application-control/use-code-signing-to-simplify-application-control-for-classic-windows-applications)).
+> - Restrict app execution is available for devices on Windows 10, version 1709 or later, Windows 11, and Windows Server 2019 or later.
+> - Restrict app execution is available if your organization uses Microsoft Defender Antivirus.
+> - Restrict app execution needs to meet the Windows Defender Application Control code integrity policy formats and signing requirements. For more information, see [Code integrity policy formats and signing](/windows/security/threat-protection/windows-defender-application-control/use-code-signing-to-simplify-application-control-for-classic-windows-applications)).
 
-To restrict an application from running, a code integrity policy is applied that only allows files to run if they're signed by a Microsoft issued certificate. This method of restriction can help prevent an attacker from controlling compromised devices and performing further malicious activities.
+To restrict an application from running, a code integrity policy is applied that only allows files to run if they're signed by a Microsoft issued certificate. Restricting app execution to only Microsoft-signed files can help prevent an attacker from controlling compromised devices and performing further malicious activities.
 
 > [!NOTE]
 > You are able to reverse the restriction of applications from running at any time. The button on the device page changes to say **Remove app restrictions**, and then you take the same steps as restricting app execution.
@@ -203,7 +205,7 @@ When an app is restricted, the following notification is displayed to inform the
 
 ## Isolate devices from the network
 
-Depending on the severity of the attack and the sensitivity of the device, you might want to isolate the device from the network. This action can help prevent the attacker from controlling the compromised device and performing further activities such as data exfiltration and lateral movement.
+Depending on the severity of the attack and the sensitivity of the device, you might want to isolate the device from the network. Device isolation can help prevent the attacker from controlling the compromised device and performing further activities such as data exfiltration and lateral movement.
 
 **Important points to keep in mind**:
 
@@ -224,6 +226,7 @@ Depending on the severity of the attack and the sensitivity of the device, you m
 - Exclusions, such as e-mail, messaging application, and other applications for both macOS and Linux isolation aren't supported.
 - An isolated device is removed from isolation when an administrator modifies or adds a new `iptable` rule to the isolated device.
 - Isolating a server running on Microsoft Hyper-V blocks network traffic to all child virtual machines of the server.
+- Device isolation is automatically lifted after seven days.
 
 The device isolation feature disconnects the compromised device from the network while retaining connectivity to the Defender for Endpoint service, which continues to monitor the device. On Windows 10, version 1709 or later, you can use selective isolation for more control over the network isolation level. You can also choose to enable Outlook and Microsoft Teams connectivity.
 
@@ -276,7 +279,7 @@ Before deploying or responding to automatic device isolation, consider the follo
 ### Isolation exclusions and automatic attack disruption exclusions
 There are two types of exclusions relevant to automatic device isolation:
 
-- [Selective isolation exclusions](isolation-exclusions.md): Define which processes and network destinations remain accessible on an isolated device. Use these to preserve critical communications (for example, management tools or business applications) while the device is isolated. This feature is available for devices running on Windows 11, Windows 10 version 1703 or later, Windows Server 2012 R2 and later, Azure Stack HCI OS, version 23H2 and later, and macOS.
+- [Selective isolation exclusions](isolation-exclusions.md): Define which processes and network destinations remain accessible on an isolated device. Use these to preserve critical communications (for example, management tools or business applications) while the device is isolated. Selective isolation exclusions are available for devices running on Windows 11, Windows 10 version 1703 or later, Windows Server 2012 R2 and later, Azure Stack HCI OS, version 23H2 and later, and macOS.
 - [Automatic attack disruption exclusions](/defender-xdr/automatic-attack-disruption-exclusions): Define which devices or entities are excluded from automatic disruption actions entirely. Use these to prevent business-critical devices from being isolated in the first place.
 
 > [!NOTE]
@@ -301,7 +304,7 @@ For more information about releasing devices, see [Isolate devices from the netw
 
 The device isolation feature is an invaluable tool for safeguarding devices against external threats. However, there are instances when isolated devices become unresponsive.
 
-There's a downloadable script for these instances that you can run to forcibly release devices from isolation. The script is available through a link in the UI.
+There's a downloadable script for these instances that you can run to forcibly release devices from isolation. The script is available through a link on the device page in the Microsoft Defender portal.
 
 > [!NOTE]
 >
@@ -342,7 +345,7 @@ You can identify critical assets by the **critical asset** tag on the device or 
 
 ## Contain devices from the network
 
-When you have identified an unmanaged device that is compromised or potentially compromised, you might want to contain that device from the network to prevent the potential attack from moving laterally across the network. When you contain a device any Microsoft Defender for Endpoint onboarded device blocks incoming and outgoing communication with that device. This action can help prevent neighboring devices from becoming compromised while the security operations analyst locates, identifies, and remediates the threat on the compromised device.
+When you have identified an unmanaged device that is compromised or potentially compromised, you might want to contain that device from the network to prevent the potential attack from moving laterally across the network. When you contain a device any Microsoft Defender for Endpoint onboarded device blocks incoming and outgoing communication with that device. Containing a device can help prevent neighboring devices from becoming compromised while the security operations analyst locates, identifies, and remediates the threat on the compromised device.
 
 > [!NOTE]
 > Blocking incoming and outgoing communication with a 'contained' device is supported on onboarded Microsoft Defender for Endpoint Windows 10 and Windows Server 2019+ devices.
@@ -387,7 +390,7 @@ You can stop containing a device at any time.
 
 1. Select the device from the **Device inventory** or open the device page.
 
-1. Select **Release from containment** from the action menu. This action restores the device's connection to the network.
+1. Select **Release from containment** from the action menu. Releasing from containment restores the device's connection to the network.
 
 ## Contain IP addresses of undiscovered devices
 
@@ -417,7 +420,7 @@ You can stop an IP address' containment at any time. To stop containment, select
 
 ## Contain user from the network
 
-When an identity in your network might be compromised, you must prevent that identity from accessing the network and different endpoints. Defender for Endpoint can contain an identity, blocking it from access, and helping prevent attacks, specifically, ransomware. When an identity is contained, any supported Microsoft Defender for Endpoint onboarded device blocks incoming traffic in specific protocols related to attacks (deny network logons, RPC, SMB, RDP), terminate ongoing remote sessions and logoff existing RDP connections (terminating the session itself including all its related processes), while enabling legitimate traffic. This action can significantly help to reduce the impact of an attack. When an identity is contained, security operations analysts have extra time to locate, identify, and remediate the threat to the compromised identity. Once contained by automatic attack disruption, a user is automatically removed from containment in the next five days.
+When an identity in your network might be compromised, you must prevent that identity from accessing the network and different endpoints. Defender for Endpoint can contain an identity, blocking it from access, and helping prevent attacks, specifically, ransomware. When an identity is contained, any supported Microsoft Defender for Endpoint onboarded device blocks incoming traffic in specific protocols related to attacks (deny network logons, RPC, SMB, RDP), terminate ongoing remote sessions and logoff existing RDP connections (terminating the session itself including all its related processes), while enabling legitimate traffic. Containing an identity can significantly help to reduce the impact of an attack. When an identity is contained, security operations analysts have extra time to locate, identify, and remediate the threat to the compromised identity. Once contained by automatic attack disruption, a user is automatically removed from containment in the next five days.
 
 ### Contain user important notes
 
@@ -494,7 +497,7 @@ To view the current status of the Safeboot hardening action and other actions, s
 
 ## Consult a threat expert
 
-You can consult a Microsoft threat expert for more insights regarding a potentially compromised device or already compromised ones. Microsoft Threat Experts can be engaged directly from within the Microsoft Defender XDR for timely and accurate response. Experts provide insights not just regarding a potentially compromised device, but also to better understand complex threats, targeted attack notifications that you get, or if you need more information about the alerts, or a threat intelligence context that you see on your portal dashboard.
+You can consult a Microsoft threat expert for more insights regarding a potentially compromised device or already compromised ones. Microsoft Threat Experts can be engaged directly from within the Defender portal for timely and accurate response. Experts provide insights not just regarding a potentially compromised device, but also to better understand complex threats, targeted attack notifications that you get, or if you need more information about the alerts, or a threat intelligence context that you see on your portal dashboard.
 
 See [Configure and manage Endpoint Attack Notifications](configure-microsoft-threat-experts.md) for details.
 

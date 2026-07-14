@@ -1,5 +1,5 @@
 ---
-title: Schemas for Microsoft Sentinel watchlist templates | Microsoft Docs
+title: Schemas for Microsoft Sentinel watchlist templates
 description: Learn about the schemas used in each built-in watchlist template in Microsoft Sentinel.
 author: EdB-MSFT
 ms.author: edbaynash

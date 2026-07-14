@@ -242,7 +242,7 @@ From the **Detection details** section of many threat analytics reports, you can
 
 ### Microsoft Defender XDR APIs
 
-You can also use the Microsoft Defender XDR APIs to query the Microsoft Defender XDR incidents and alerts data in your tenant. A custom app can filter the data, filter it based on custom settings, and then provide a filtered list of links to alerts and incidents that you can easily select to go right to that alert or incident. See [List incidents API in Microsoft Defender XDR| Microsoft Docs](./api-list-incidents.md). You can also integrate your SIEM with Microsoft Defender, see [Integrate your SIEM tools with Microsoft Defender XDR](./configure-siem-defender.md).
+You can also use the Microsoft Defender XDR APIs to query the Microsoft Defender XDR incidents and alerts data in your tenant. A custom app can filter the data, filter it based on custom settings, and then provide a filtered list of links to alerts and incidents that you can easily select to go right to that alert or incident. See [List incidents API in Microsoft Defender XDR](./api-list-incidents.md). You can also integrate your SIEM with Microsoft Defender, see [Integrate your SIEM tools with Microsoft Defender XDR](./configure-siem-defender.md).
 
 <a name='microsoft-365-defender-sentinel-integration'></a>
 

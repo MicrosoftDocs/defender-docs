@@ -26,6 +26,6 @@ The following table lists activities that we recommend you perform regularly wit
 
 ## Related content
 
-- [Integrating Microsoft Defender XDR into your security operations](/microsoft-365/security/defender/integrate-microsoft-365-defender-secops?bc=%2Fsecurity%2Foperations%2Fbreadcrumb%2Ftoc.json&toc=%2Fsecurity%2Foperations%2Ftoc.json)
+- [Integrating Microsoft Defender into your security operations](/microsoft-365/security/defender/integrate-microsoft-365-defender-secops?bc=%2Fsecurity%2Foperations%2Fbreadcrumb%2Ftoc.json&toc=%2Fsecurity%2Foperations%2Ftoc.json)
 - [Microsoft Defender for Office 365 Security Operations Guide](/microsoft-365/security/office-365-security/mdo-sec-ops-guide?bc=%2Fsecurity%2Foperations%2Fbreadcrumb%2Ftoc.json&toc=%2Fsecurity%2Foperations%2Ftoc.json)
 - [Microsoft Entra security operations guide](/entra/architecture/security-operations-introduction?bc=%2Fsecurity%2Foperations%2Fbreadcrumb%2Ftoc.json&toc=%2Fsecurity%2Foperations%2Ftoc.json)

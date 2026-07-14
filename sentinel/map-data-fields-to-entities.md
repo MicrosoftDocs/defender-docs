@@ -1,15 +1,17 @@
 ---
-title: Map data fields to Microsoft Sentinel entities | Microsoft Docs
-description: Map data fields in tables to Microsoft Sentinel entities in analytics rules, for better incident information
+title: Map data fields to Microsoft Sentinel entities
+description: Map table data fields to Microsoft Sentinel entities in scheduled analytics rules to enrich alerts and incidents with structured investigation data. Includes guidance for adding or updating entity mappings in existing rules.
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 04/26/2022
+ms.date: 06/15/2026
 ms.collection: usx-security
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security analyst, I want to map data fields to entities in analytics rules so that I can enrich alerts and incidents with essential information for effective investigation and remediation.
 
@@ -19,14 +21,16 @@ appliesto:
 
 Entity mapping is an integral part of the configuration of [scheduled analytics rules](scheduled-rules-overview.md). It enriches the rules' output (alerts and incidents) with essential information that serves as the building blocks of any investigative processes and remedial actions that follow.
 
-The procedure detailed below is part of the analytics rule creation wizard. It's treated here independently to address the scenario of adding or changing entity mappings in an existing analytics rule.
+The following procedure is part of the analytics rule creation wizard. It's treated here independently to address the scenario of adding or changing entity mappings in an existing analytics rule.
 
 > [!IMPORTANT]
 >
-> - See "[Notes on the new version](#notes-on-the-new-version)" at the end of this document for important information about backward compatibility and differences between the new and old versions of entity mapping.
+> - See [Notes on the new version](#notes-on-the-new-version) for important information about backward compatibility and differences between the new and old versions of entity mapping.
 > - [!INCLUDE [unified-soc-preview-without-alert](includes/unified-soc-preview-without-alert.md)]
 
 ## How to map entities
+
+To map entities in an analytics rule, perform the following steps:
 
 1. Enter the **Analytics** page in the portal through which you access Microsoft Sentinel:
 
@@ -78,6 +82,8 @@ The procedure detailed below is part of the analytics rule creation wizard. It's
 >   - *Entities* fields that grow larger than 64 KB will be truncated. As entities are identified, they are added to the alert one by one until the field size reaches 64 KB, and any entities yet unidentified are dropped from the alert.
 
 ## Notes on the new version
+
+The entity mapping experience was updated from an older version. Keep the following backward-compatibility details in mind:
 
 - As the new version is now generally available (GA), the feature-flag workaround to use the old version is no longer available. 
 
