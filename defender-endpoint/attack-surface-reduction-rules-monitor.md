@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.reviewer: sugamar, yongrhee
-ms.custom: asr, msecd-doc-authoring-1014
+ms.custom: asr, msecd-doc-authoring-1016
 ms.topic: how-to
 ms.collection:
 - m365-security
@@ -15,7 +15,7 @@ ms.collection:
 - highpri
 - tier1
 - mde-asr
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 #customer intent: As an IT admin, I want to monitor ASR rule events so I can identify false positives and maintain effective threat protection.
 appliesto:
@@ -25,7 +25,7 @@ appliesto:
 
 # Monitor attack surface reduction (ASR) rule activity
 
-A critical part of any deployment of attack surface reduction (ASR) rules is monitoring the effect of rules on devices. The following sections describe the available methods to view ASR rule events in your Microsoft Defender for Endpoint organization. For more information about ASR rules, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
+A critical part of any deployment of attack surface reduction (ASR) rules is monitoring the effect of rules on devices. You can view ASR rule events in your Microsoft Defender for Endpoint organization by using the ASR rules report, Advanced Hunting queries, the device timeline, or Windows Event Viewer. For more information about ASR rules, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
 
 <a name="asr-rules-report"></a>
 ## View the ASR rules report

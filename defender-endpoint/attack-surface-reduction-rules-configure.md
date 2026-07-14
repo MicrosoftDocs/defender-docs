@@ -11,8 +11,8 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
-ms.date: 06/16/2026
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to configure attack surface reduction rules on devices so that I can block risky software behaviors that attackers exploit.
 appliesto:
@@ -228,7 +228,7 @@ When you're finished on the **Add row** flyout, select **Save**.
 
 Back on the **Configuration settings** tab, select **Next**.
 
-The rest of the steps are the same as configuring ASR rules.
+Complete the remaining steps in [Configure ASR rules in Intune using custom profiles with OMA-URIs and CSPs](#configure-asr-rules-in-intune-using-custom-profiles-with-oma-uris-and-csps), starting with the **Assignments** tab.
 
 <a name="mdm"></a>
 

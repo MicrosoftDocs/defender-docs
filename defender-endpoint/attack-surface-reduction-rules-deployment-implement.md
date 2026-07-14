@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.reviewer: sugamar
-ms.custom: asr, msecd-doc-authoring-1014
+ms.custom: asr, msecd-doc-authoring-1016
 ms.topic: how-to
 ms.collection:
  - m365-security
@@ -15,7 +15,7 @@ ms.collection:
  - highpri
  - tier1
  - mde-asr
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 search.appverid: met150
 ai-usage: ai-assisted
 #customer intent: As an IT admin, I want to enable ASR rules in Block mode after testing in Audit mode so I can protect my organization from attack surface reduction threats.
@@ -28,7 +28,7 @@ appliesto:
 
 This article is part of the [Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
-After testing ASR rules in Audit mode, transition them to **Block** or **Warn** mode, starting with your first deployment ring.
+After testing ASR rules in Audit mode, transition them to **Block** or **Warn** mode, starting with your first deployment ring. This article covers how to move ASR rules from Audit to Block or Warn mode in your first deployment ring, and then safely broaden your deployment across additional rings.
 
 > :::image type="content" source="media/asr-rules-implementation-steps.png" alt-text="Diagram of the steps to implement ASR rules: transition from Audit to Block mode, then expand to additional rings." lightbox="media/asr-rules-implementation-steps.png":::
 
