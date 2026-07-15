@@ -30,10 +30,6 @@ For updates about versions and features released six months ago or earlier, see 
 
 Automatic Windows event auditing now also configures auditing for the Active Directory Federation Services (AD FS), Active Directory Certificate Services (AD CS), and Microsoft Entra Connect roles on domain controllers that run the Defender for Identity sensor v3.x. For more information, see [Configure Defender for Identity to collect Windows events automatically](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically).
 
-### Migrate Windows Server 2025 domain controllers to sensor v3.x
-
-You can now migrate domain controllers running Windows Server 2025 from sensor v2.x to sensor v3.x. For more information, see [Migrate to Defender for Identity sensor v3.x](deploy/migrate-to-sensor-v3.md).
-
 ### Expanded SaaS app support in Password protection (Preview)
 
 The Password protection page now includes password risks from SaaS apps connected through Microsoft Defender for Cloud Apps, in addition to Active Directory, Microsoft Entra ID, and Okta. SaaS apps that support SaaS Security Posture Management (SSPM), such as Salesforce and ServiceNow, appear on the Password Hygiene and Password Policies tabs. Each SaaS app requires a Defender for Cloud Apps app connector. For more information, see [Investigate identity password protection](password-protection.md).
