@@ -26,6 +26,10 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## July 2026
 
+### Migrate Windows Server 2025 domain controllers to sensor v3.x
+
+You can now migrate domain controllers running Windows Server 2025 from sensor v2.x to sensor v3.x. For more information, see [Migrate to Defender for Identity sensor v3.x](deploy/migrate-to-sensor-v3.md).
+
 ### Expanded automatic auditing for identity role servers
 
 Automatic Windows event auditing now also configures auditing for the Active Directory Federation Services (AD FS), Active Directory Certificate Services (AD CS), and Microsoft Entra Connect roles on domain controllers that run the Defender for Identity sensor v3.x. For more information, see [Configure Defender for Identity to collect Windows events automatically](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically).
