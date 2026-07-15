@@ -226,6 +226,7 @@ Depending on the severity of the attack and the sensitivity of the device, you m
 - Exclusions, such as e-mail, messaging application, and other applications for both macOS and Linux isolation aren't supported.
 - An isolated device is removed from isolation when an administrator modifies or adds a new `iptable` rule to the isolated device.
 - Isolating a server running on Microsoft Hyper-V blocks network traffic to all child virtual machines of the server.
+- Device isolation is automatically lifted after seven days.
 
 The device isolation feature disconnects the compromised device from the network while retaining connectivity to the Defender for Endpoint service, which continues to monitor the device. On Windows 10, version 1709 or later, you can use selective isolation for more control over the network isolation level. You can also choose to enable Outlook and Microsoft Teams connectivity.
 

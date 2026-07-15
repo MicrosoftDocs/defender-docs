@@ -1,5 +1,5 @@
 ---
-title: Migrate from sensor v2.x to sensor v3.x (Preview)
+title: Migrate from sensor v2.x to sensor v3.x
 description: Learn how to migrate from the Defender for Identity sensor v2.x to the sensor v3.x with no downtime using the Sensors page in the Microsoft Defender portal.
 author: AbbyMSFT
 ms.author: abbyweisberg
@@ -12,7 +12,7 @@ ai-usage: ai-assisted
 #customer intent: As a security admin, I want to migrate my Defender for Identity sensors from v2.x to v3.x so that I can use the latest sensor without downtime or data loss.
 ---
 
-# Migrate from Defender for Identity sensor v2 to sensor v3.x (Preview)
+# Migrate from Defender for Identity sensor v2 to sensor v3.x
 
 You can migrate your Defender for Identity sensors from v2.x to v3.x directly from the Microsoft Defender portal. The migration automatically completes the switchover and maintains your server configurations and security monitoring, with no downtime or data duplication.
 
@@ -28,10 +28,6 @@ To migrate, each server must meet the following requirements:
 - Microsoft Defender for Endpoint deployed, with the [March 10, 2026 Windows Server update (KB5078766)](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) or later cumulative update installed.
 
 For the full list of v3.x requirements, see [Defender for Identity sensor v3.x prerequisites](deploy-sensor-v3.md).
-
-## Known limitations
-
-- **Windows Server 2025 domain controllers:** Migrating domain controllers running Windows Server 2025 to sensor v3.x isn't currently supported.
 
 ## Start the migration
 

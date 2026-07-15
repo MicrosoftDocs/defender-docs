@@ -10,13 +10,13 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Access the Microsoft Defender MSSP customer portal
 
@@ -36,7 +36,7 @@ MSSPs however, will need to use a tenant-specific URL in the following format: `
 
 In general, MSSPs will need to be added to each of the MSSP customer's Microsoft Entra ID that they intend to manage.
 
-Use the following steps to obtain the MSSP customer tenant ID and then use the ID to access the tenant-specific URL:
+Use the following steps to obtain the MSSP customer tenant ID and then use the tenant ID to access the tenant-specific URL:
 
 1. As an MSSP, log in to Microsoft Entra ID with your credentials.
 1. Switch directory to the MSSP customer's tenant.
@@ -46,6 +46,8 @@ Use the following steps to obtain the MSSP customer tenant ID and then use the I
 
 <a name="related-topics"></a>
 ## Related content
+
+For more information, see the following articles:
 
 - [Grant MSSP access to the portal](grant-mssp-access.md)
 - [Configure alert notifications](configure-mssp-notifications.md)

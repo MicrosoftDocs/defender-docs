@@ -1,18 +1,18 @@
 ---
 title: Use automated investigations to investigate and remediate threats
-description: Understand the automated investigation flow in Microsoft Defender for Endpoint.
+description: Learn how automated investigations in Microsoft Defender for Endpoint analyze alerts, take remediation actions, and help security teams respond to threats.
 ms.service: defender-endpoint
 ms.subservice: edr
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ms.collection: 
 - m365-security
 - tier3
 - mde-edr
 ms.topic: how-to
-ms.custom: AIR, msecd-doc-authoring-1014
+ms.custom: AIR, msecd-doc-authoring-1016
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
@@ -21,14 +21,18 @@ ai-usage: ai-assisted
 
 # Overview of automated investigations
 
+Automated investigation and response (AIR) in Microsoft Defender for Endpoint automatically examines alerts and takes immediate action to resolve breaches. This article provides an overview of AIR capabilities, prerequisites, and how the process works.
+
 ## Prerequisites
 
-Your subscription must include [Defender for Endpoint](microsoft-defender-endpoint.md) or [Defender for Business](/defender-business/mdb-overview).
+To use automated investigation and response (AIR), your subscription must include [Defender for Endpoint](microsoft-defender-endpoint.md) or [Defender for Business](/defender-business/mdb-overview).
+
+[!INCLUDE [AIR deprecation note](includes/air-deprecation-note.md)]
 
 [!INCLUDE [AIR deprecation note](includes/air-deprecation-note.md)]
 
 > [!NOTE]
-> - Automated investigation and response requires Microsoft Defender Antivirus for running in passive mode or active mode. If Microsoft Defender Antivirus is disabled or uninstalled, Automated Investigation and Response will not function correctly.
+> - Automated investigation and response (AIR) requires Microsoft Defender Antivirus for running in passive mode or active mode. If Microsoft Defender Antivirus is disabled or uninstalled, Automated Investigation and Response will not function correctly.
 > - Automated investigation and response on Windows Server 2012 R2 and Windows Server 2016 requires the [Unified Agent](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) to be installed.
 
 ### Supported operating systems
@@ -50,7 +54,7 @@ Want to see how automated investigation and response works? Watch the following 
 
 The technology in automated investigation uses various inspection algorithms and is based on processes that are used by security analysts. AIR capabilities are designed to examine alerts and take immediate action to resolve breaches. AIR capabilities significantly reduce alert volume, allowing security operations to focus on more sophisticated threats and other high-value initiatives. All remediation actions, whether pending or completed, are tracked in the [Action center](auto-investigation-action-center.md). In the Action center, pending actions are approved (or rejected), and completed actions can be undone if needed.
 
-This section provides an overview of automated investigation and response (AIR) and includes links to next steps and additional resources.
+This article provides an overview of automated investigation and response (AIR) and includes links to next steps and additional resources.
 
 ## How the automated investigation starts
 
@@ -58,7 +62,7 @@ An automated investigation can start when an alert is triggered or when a securi
 
 |Situation|What happens|
 |---|---|
-|An alert is triggered|In general, an automated investigation starts when an [alert](review-alerts.md) is triggered, and an [incident](view-incidents-queue.md) is created. For example, suppose a malicious file resides on a device. When that file is detected, an alert is triggered, and incident is created. An automated investigation process begins on the device. As other alerts are generated because of the same file on other devices, they are added to the associated incident and to the automated investigation.|
+|An alert is triggered|In general, an automated investigation starts when an [alert is triggered](review-alerts.md), and an [incident is created](view-incidents-queue.md). For example, suppose a malicious file resides on a device. When that file is detected, an alert is triggered, and incident is created. An automated investigation process begins on the device. As other alerts are generated because of the same file on other devices, they are added to the associated incident and to the automated investigation.|
 |An investigation is started manually|An automated investigation can be started manually by your security operations team. For example, suppose a security operator is reviewing a list of devices and notices that a device has a high risk level. The security operator can select the device in the list to open its flyout, and then select **Initiate Automated Investigation**.|
 
 ## How an automated investigation expands its scope

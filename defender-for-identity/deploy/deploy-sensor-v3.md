@@ -23,7 +23,6 @@ Before you activate the Defender for Identity sensor v3.x, note that v3.x:
 - Doesn't support VPN integration.
 - Doesn't support [syslog notifications](../notifications.md#configure-syslog-notifications).
 - Has limitations working with Azure ExpressRoute. For more information, see [Azure ExpressRoute for Microsoft 365](/microsoft-365/enterprise/azure-expressroute).
-- Doesn't support the migration of domain controllers running Windows Server 2025 from sensor v2.x to sensor v3.x. For more information, see [known limitations for migrating to sensor v3](migrate-to-sensor-v3.md#known-limitations).
 
 ### Server requirements
 
@@ -131,12 +130,11 @@ If automatic auditing isn't available or you opted out, [configure auditing manu
 
 ### Configure RPC auditing
 
-To improve security visibility and enable additional identity detections, apply the **Unified Sensor RPC Audit** tag to your devices. Once applied, the configuration is enforced on all existing and future devices that match the rule criteria. The tag is visible in the Device inventory for auditing purposes.
+To improve security visibility and enable additional identity detections, apply the **Sensor Extended RPC Audit** tag to your devices. Once applied, the configuration is enforced on all existing and future devices that match the rule criteria. The tag is visible in the Device inventory for auditing purposes.
 
 #### Prerequisites
 
-- Devices must run Defender for Identity sensor version 3.0.4 or later. 
-  Devices running earlier versions don’t support this feature and won’t generate RPC auditing health alerts.
+- Devices must run Defender for Identity sensor version 3.0.7 or later. Devices running earlier versions that receive the tag don't get the configuration and don't generate RPC auditing health alerts.
 
 To apply the tag:
 
@@ -147,14 +145,14 @@ To apply the tag:
 
 1. In the side panel:
 
-    1. Enter a **Rule name** and **Description**.   
+    1. Enter a **Rule name** and **Description**.
     1. Set **rule conditions** using `Device name`, `Domain`, or `Device tag` to target the desired machines. Target domain controllers with the sensor v3.x installed.
     1. Make sure that the **Defender for Identity sensor v3.x** is already deployed on the selected devices.
 
-1. Add the **Unified Sensor RPC Audit** tag to the selected devices.
+1. Add the **Sensor Extended RPC Audit** tag to the selected devices. When you combine multiple conditions in a rule, choose the correct operator (AND or OR) for your intended targeting.
 
-    :::image type="content" source="media/prerequisites-sensor-version-3/tag.png" alt-text="Screenshot that shows the Unified Sensor RPC Audit tag applied to a device in Asset Rule Management." lightbox="media/prerequisites-sensor-version-3/tag.png":::
-   
+    :::image type="content" source="media/prerequisites-sensor-version-3/extended-rpc-audit-tag.png" alt-text="Screenshot that shows the Sensor Extended RPC Audit tag applied to a device in Asset Rule Management." lightbox="media/prerequisites-sensor-version-3/extended-rpc-audit-tag.png":::
+
 1. Select **Next** to review and finish creating the rule, and then select **Submit**. The rule might take up to one hour to take effect.
 
 Learn more about [asset management rules](/defender-xdr/configure-asset-rules).

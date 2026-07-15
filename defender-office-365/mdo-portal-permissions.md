@@ -14,7 +14,7 @@ ms.custom:
   - seo-marvel-apr2020
   - sfi-ga-nochange
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/10/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -27,6 +27,9 @@ ai-usage: ai-assisted
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 Global roles in Microsoft Entra ID allow you to manage permissions and access to capabilities in all of Microsoft 365, which also includes Microsoft Defender for Office 365. But, if you need to limit permissions and capabilities to security features in Defender for Office 365 only, you can assign **Email & collaboration** permissions in the Microsoft Defender portal.
+
+> [!IMPORTANT]
+> Microsoft Defender unified role-based access control (Unified RBAC) is the recommended permission model for Microsoft Defender for Office 365 in the Microsoft Defender portal, and it's the default for new Plan 2 organizations starting July 2026. The Email & collaboration roles described on this page are the legacy model and aren't available for new Plan 2 organizations. Existing organizations can activate Unified RBAC at any time and are encouraged to move to Unified RBAC. Currently, Unified RBAC is available for Microsoft Defender for Office 365 Plan 2. For more information, see [Unified RBAC permissions for Microsoft Defender for Office 365](defender-office-365-unified-rbac-permissions.md) and [MC1246006](https://admin.microsoft.com/Adminportal/Home#/MessageCenter/:/messages/MC1246006).
 
 To manage Defender for Office 365 permissions in the Microsoft Defender portal, go to **Permissions** \> **Email & collaboration roles** \> **Roles** or go directly to <https://security.microsoft.com/emailandcollabpermissions>.
 

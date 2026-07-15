@@ -32,7 +32,7 @@ You can also use [Microsoft Defender unified role-based access control (RBAC)](/
     - **Exposure Management (manage)** for full access to manage Exposure Management experiences
     - **Core security settings (manage)** for connecting or changing vendor configurations (located under Authorization and settings category)
 
-You can find more details about the permission levels here, [Prerequisites, and support](prerequisites.md).
+You can find more details about the permission levels in [Prerequisites and support](prerequisites.md) and the full list of available permissions in [Permissions in Microsoft Defender unified RBAC](/defender-xdr/custom-permissions-details).
 
 ## Establish a connection
 

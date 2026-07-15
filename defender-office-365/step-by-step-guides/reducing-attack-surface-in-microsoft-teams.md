@@ -1,6 +1,6 @@
 ---
 title: Reduce the attack surface for Microsoft Teams
-description: Configuration which can be used to reduce the attack surface in Microsoft Teams, including enabling Microsoft Defender for Office 365.
+description: Learn how to reduce the attack surface in Microsoft Teams by configuring security controls such as Safe Links, Safe Attachments, external access restrictions, and app permissions. Use this guidance to balance collaboration security with your organization's risk profile.
 ms.service: defender-office-365
 author: MSFTBen
 ms.author: chrisda
@@ -10,9 +10,9 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Reduce the attack surface for Microsoft Teams
@@ -37,7 +37,7 @@ Make sure you have the following before you begin:
 
 ## Turn on Microsoft Defender for Office 365 in Teams
 
-If licensed for Microsoft Defender for Office 365 (free 90-day evaluation available at aka.ms/trymdo) you can ensure seamless protection from zero-day malware and time of click protection within Microsoft Teams.
+If your organization is licensed for Microsoft Defender for Office 365 (free 90-day evaluation available at aka.ms/trymdo), you can ensure seamless protection from zero-day malware and time-of-click protection within Microsoft Teams.
 
 [Safe Links settings for Microsoft Teams](../safe-links-about.md#safe-links-settings-for-microsoft-teams) & [Configure Safe Attachments for SharePoint, OneDrive, and Teams](../safe-attachments-for-spo-odfb-teams-configure.md) (Detailed Documentation)
 
@@ -82,7 +82,7 @@ Applications are a very useful part of Microsoft Teams, but it's recommended to 
 
 1. **Login** to the Teams admin center at: <https://admin.teams.microsoft.com/>.
 2. On the left-hand navigation, expand **Teams apps** and then choose **Permission Policies**.
-3. If you have custom permission policies, you'll need to do these steps for each of them if appropriate, otherwise select **Global (Org-wide default)**.
+3. If you have custom permission policies, you'll need to complete this procedure for each of them if appropriate, otherwise select **Global (Org-wide default)**.
 4. Select the appropriate settings for your organization, a recommended starting point is:
    - Microsoft apps – set to **Allow all apps** (default).
    - Non-Microsoft apps – set to **Allow specific apps and block all others** (if you already have non-Microsoft apps to then select for allowing) otherwise select **Block all apps**.
@@ -97,13 +97,13 @@ You can reduce the attack surface by ensuring people outside your organization c
 
 1. **Login** to the Teams admin center at: <https://admin.teams.microsoft.com/>.
 2. On the left-hand navigation, expand **Meetings** and then choose **Meeting Policies**.
-3. If you've assigned any custom or built-in policies to users, you'll need to do these steps for each of them if appropriate, otherwise select **Global (Org-wide default)**.
+3. If you've assigned any custom or built-in policies to users, you'll need to complete this meeting policy procedure for each of them if appropriate, otherwise select **Global (Org-wide default)**.
 4. Under the **Content sharing** heading, ensure **External participants can give or request control** is set to **off**.
 6. Under the **Meeting join & lobby** heading, ensure **People dialing in can bypass the lobby** is set to **off**.
 7. Ensure **Anonymous users can join a meeting** is set to **off**.
 8. Under the **Meeting engagement** heading, Set **Meeting chat** to **"On for everyone but anonymous users"**.
 9. Select **Save**.
-10. Repeat these steps to apply these meeting policy settings for each policy.
+10. Repeat this procedure for each policy to apply the external participant, lobby, anonymous join, and meeting chat settings.
 
 <a name="configure-meeting-settings-restrict-presenters"></a>
 ## Restrict presenters in Teams meetings
@@ -112,10 +112,10 @@ You can reduce the risk of unwanted or inappropriate content being shared during
 
 1. **Login** to the Teams admin center at: <https://admin.teams.microsoft.com/>.
 2. On the left-hand navigation, expand **Meetings** and then choose **Meeting Policies**.
-3. If you've assigned any custom or built-in policies to users, you'll need to do these steps for each of them if appropriate, otherwise select **Global (Org-wide default)**.
+3. If you've assigned any custom or built-in policies to users, you'll need to complete this presenter restriction procedure for each of them if appropriate, otherwise select **Global (Org-wide default)**.
 4. Under the **Content sharing** heading, set **Who can present** to **Only organizers and co-organizers**.
 5. Select **Save**.
-6. Repeat these steps to set **Who can present** for each policy.
+6. Repeat this procedure for each policy to set **Who can present**.
 
 ## Limit domains for external access
 

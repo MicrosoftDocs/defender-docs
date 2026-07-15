@@ -7,13 +7,13 @@ ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.topic: how-to
-ms.custom: nextgen, msecd-doc-authoring-1014
+ms.custom: nextgen, msecd-doc-authoring-1016
 ms.reviewer: yongrhee
 ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -27,7 +27,7 @@ You can exclude files that are opened by specific processes from Microsoft Defen
 
 See [Important points about exclusions](configure-exclusions-microsoft-defender-antivirus.md#important-points-about-exclusions) and review the information in [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md) before defining your exclusion lists.
 
-This article describes how to configure exclusion lists.
+This section explains how to configure process exclusions for files opened by specified processes.
 
 ## Prerequisites
 
@@ -37,7 +37,13 @@ Process exclusions as described in this article are supported on the following o
 
 - Windows
 
+### Permissions
+
+Configuring and reviewing process exclusions with PowerShell or WMI requires an elevated PowerShell window (opened by selecting **Run as administrator**).
+
 ## Examples of process exclusions
+
+The following table shows common process exclusion patterns and what each one matches.
 
 |Exclusion|Example|
 |---|---|
@@ -60,7 +66,7 @@ By default, local changes made to the lists (by users with administrator privile
 You can [configure how locally and globally defined exclusions lists are merged](configure-local-policy-overrides-microsoft-defender-antivirus.md#merge-lists) to allow local changes to override managed deployment settings.
 
 > [!NOTE]
-> **Network Protection** and [attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md) are directly affected by process exclusions on all platforms. A process exclusion on any OS (Windows, macOS, or Linux) means Network Protection or ASR rules can't inspect traffic or enforce rules for that specific process.
+> **Network Protection** and [attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md) are directly affected by process exclusions on all platforms. A process exclusion on any OS (Windows, macOS, or Linux) means that Network Protection and ASR rules can't inspect traffic or enforce rules for that specific process.
 
 ### Image name vs full path for process exclusions
 
@@ -72,9 +78,9 @@ Image name exclusions are much more broad - an exclusion on `MyProcess.exe` excl
 
 ### Use wildcards in the process exclusion list
 
-The use of wildcards in the process exclusion list is different from their use in other exclusion lists. When the process exclusion is defined as an image name only, wildcard usage isn't allowed. However when a full path is used, wildcards are supported and the wildcard behavior follows the rules described in the "Use wildcards in the file name and folder path or extension exclusion lists" section of [Configure and validate exclusions based on file name, extension, and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists)
+The use of wildcards in the process exclusion list is different from their use in other exclusion lists. When the process exclusion is defined as an image name only, wildcard usage isn't allowed. However when a full path is used, wildcards are supported and the wildcard matching behavior for full-path process exclusions follows the rules described in the "Use wildcards in the file name and folder path or extension exclusion lists" section of [Configure and validate exclusions based on file name, extension, and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists)
 
-The use of environment variables (such as `%ALLUSERSPROFILE%`) as wildcards when defining items in the process exclusion list is also supported. Details and a full list of supported environment variables are described in the "System environment variables" section of [Configure and validate exclusions based on file name, extension, and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md#system-environment-variables).
+The use of environment variables (such as `%ALLUSERSPROFILE%`) as wildcards when defining items in the process exclusion list is also supported. Details about supported environment-variable syntax and a full list of supported environment variables are described in the "System environment variables" section of [Configure and validate exclusions based on file name, extension, and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md#system-environment-variables).
 
 The following table describes how the wildcards can be used in the process exclusion list, when a path is supplied:
 
@@ -162,7 +168,7 @@ For more information and allowed parameters, see  [Windows Defender WMIv2 APIs](
 
 ## Use the Windows Security app to exclude files that have been opened by specified processes from scans
 
-Follow the instructions in [Add exclusions in the Windows Security app](microsoft-defender-security-center-antivirus.md).
+Follow the instructions for adding process exclusions in the [Windows Security app](microsoft-defender-security-center-antivirus.md).
 
 ## Review the list of exclusions
 
@@ -202,6 +208,8 @@ For more information on how to use PowerShell with Microsoft Defender Antivirus,
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 ## Related articles
+
+The following articles provide additional information about configuring exclusions in Microsoft Defender Antivirus:
 
 - [Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md)
 - [Configure and validate exclusions based on file name, extension, and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md)

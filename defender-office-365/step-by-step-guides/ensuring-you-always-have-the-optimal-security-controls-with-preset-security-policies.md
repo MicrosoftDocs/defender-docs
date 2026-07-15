@@ -10,9 +10,9 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Set up steps for the Standard or Strict preset security policies in Microsoft Defender for Office 365
@@ -21,14 +21,14 @@ When a best practice for a security control changes due to the evolving threat l
 
 Standard and Strict preset security policies apply predefined security control settings that reflect recommended best practices and are maintained by the service.
 
-Use the steps below to assign accounts to a Standard or Strict preset security policy and allow Defender for Office 365 to manage ongoing security control updates.
+To assign accounts to a Standard or Strict preset security policy and let Defender for Office 365 manage ongoing security control updates, follow this procedure.
 
 <a name="what-you-will-need"></a>
 ## Prerequisites
 
 - Microsoft Defender for Office 365 Plan 1 or higher (Included in E5)
 - Sufficient permissions (Security Administrator role)
-- 5 minutes to perform the steps below.
+- 5 minutes to complete this procedure.
 
 ## Choose between Standard and Strict policies
 
@@ -45,7 +45,7 @@ Our Strict preset security policy has more aggressive limits and settings for se
 
 ## Enable Security Presets in Microsoft Defender for Office 365
 
-Once you've chosen between the Standard and Strict security preset policies for your users, it takes a few further steps to assign users to each preset.
+Once you've chosen between the Standard and Strict security preset policies for your users, complete the following steps to assign users to each preset.
 
 1. Identify the users, groups, or domains you would like to include in Standard and Strict security presets.
 1. Sign in to the Microsoft Security portal at <https://security.microsoft.com>.

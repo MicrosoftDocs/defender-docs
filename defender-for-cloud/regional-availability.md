@@ -113,10 +113,10 @@ Asia Southeast, Belgium Central, Chile Central, China East 2, China North, China
 ### Defender for AI
 
 **Supported regions:**  
-East US, East US 2, West EU, North EU 
+East US, Central US, West EU, UK South 
 
 **Unsupported regions:**  
-Asia East, Asia Southeast, Asia Northeast, Australia Central 2, Australia East, Australia Southeast, Austria East, Belgium Central, Brazil South, Brazil Southeast, Canada Central, Canada East, Central US, Central US (EU Access Program), Chile Central, China East, China East 2, China East 3, China North, China North 2, China North 3, East US 2 (EU Access Program), EU SSLV, France Central, France South, Germany North, Germany West Central, India Central, India South, India West, Indonesia Central, Israel Central, Israel North West, Italy North, Japan East, Japan West, Jio India Central, Jio India West, Korea Central, Korea South, Malaysia South, Mexico Central, New Zealand North, North Central US, Norway East, Norway West, Poland Central, Qatar, South Africa North, South Africa West, South Central US, South East US, South East US 3, South US 2, Spain Central, Sweden Central, Sweden South, Switzerland North, Switzerland West, Taiwan North, Taiwan North West, UAE Central, UAE North, UK South, UK West, West Central US, West US, West US 2, West US 3US DoD Central, US DoD East, US Gov East, US Gov South Central, US Gov Southwest
+Asia East, Asia Southeast, Asia Northeast, Australia Central 2, Australia East, Australia Southeast, Austria East, Belgium Central, Brazil South, Brazil Southeast, Canada Central, Canada East, East US 2, Central US (EU Access Program), North Europe, Chile Central, China East, China East 2, China East 3, China North, China North 2, China North 3, East US 2 (EU Access Program), EU SSLV, France Central, France South, Germany North, Germany West Central, India Central, India South, India West, Indonesia Central, Israel Central, Israel North West, Italy North, Japan East, Japan West, Jio India Central, Jio India West, Korea Central, Korea South, Malaysia South, Mexico Central, New Zealand North, North Central US, Norway East, Norway West, Poland Central, Qatar, South Africa North, South Africa West, South Central US, South East US, South East US 3, South US 2, Spain Central, Sweden Central, Sweden South, Switzerland North, Switzerland West, Taiwan North, Taiwan North West, UAE Central, UAE North, UK West, West Central US, West US, West US 2, West US 3US DoD Central, US DoD East, US Gov East, US Gov South Central, US Gov Southwest
 
 ### Defender for Containers
 

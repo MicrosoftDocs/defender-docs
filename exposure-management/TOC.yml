@@ -18,6 +18,69 @@
         href: prerequisites.md
       - name: Start using Security Exposure Management
         href: get-started-exposure-management.md
+    - name: Secure now
+      items:
+      - name: Overview
+        href: /security/zero-trust/prioritizing-defense/prioritizing-defense-overview
+        maintainContext: true
+      - name: Stay current on Microsoft software
+        href: /security/zero-trust/prioritizing-defense/stay-current-microsoft-software
+        maintainContext: true
+      - name: Scan and secure your source code
+        href: /security/zero-trust/prioritizing-defense/scan-secure-source-code
+        maintainContext: true
+      - name: Adopt updates for open-source software components
+        href: /security/zero-trust/prioritizing-defense/adopt-open-source-updates
+        maintainContext: true
+      - name: Minimize internet-facing exposure
+        href: /security/zero-trust/prioritizing-defense/minimize-internet-exposure
+        maintainContext: true
+      - name: Implement baseline security measures
+        href: /security/zero-trust/prioritizing-defense/baseline-security-measures
+        maintainContext: true
+    - name: Codename MDASH
+      items:
+      - name: Overview
+        href: ai-code-security-overview.md
+      - name: Get started
+        items:
+        - name: Getting Started with Codename MDASH
+          href: ai-code-security-onboarding.md
+        - name: Connect Microsoft Foundry
+          href: mdash-foundry-integration.md
+        - name: Create a GitHub connector
+          href: create-github-connector.md
+        - name: Defender CLI setup
+          href: defender-cli-authentication.md
+        - name: Codename MDASH FAQ
+          href: codename-mdash-faq.md  
+      - name: Run scans
+        items:
+        - name: Trigger an on-demand agentic scan
+          href: trigger-on-demand-scan.md
+        - name: Install and run
+          href: defender-cli.md
+          items:
+          - name: Auto-fix agentic code vulnerabilities
+            href: auto-fix-ai-vulnerabilities.md
+        - name: CI/CD Example
+          href: defender-cli-cicd.md
+      - name: Use in a coding agent
+        items:
+        - name: Defender Code Security skills
+          href: defender-code-security-plugin.md
+      - name: Review scan results
+        items:
+        - name: Review terminal results
+          href: review-terminal-results.md
+        - name: Review Exposure Management in Defender portal
+          href: review-portal-results.md
+      - name: Reference
+        items:
+        - name: Audit log events
+          href: mdash-audit-log-events.md
+        - name: Microsoft Defender Code admin consent script
+          href: microsoft-defender-code-admin-consent-script.md
     - name: Explore cross-workload attack surfaces
       items:
       - name: Overview
@@ -93,6 +156,8 @@
         - name: Security initiatives catalog
           href: initiatives-list.md
           items:
+           - name: Codename MDASH - Agentic code scanner initiative
+             href: mdash-initiative.md
            - name: External attack surface management initiative
              href: external-attack-surface-management-initiative.md
         - name: Investigate security initiative metrics

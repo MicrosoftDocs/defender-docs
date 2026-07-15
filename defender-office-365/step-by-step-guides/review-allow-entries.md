@@ -10,9 +10,9 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Review and remove unnecessary allowlist entries with Advanced Hunting
@@ -22,13 +22,15 @@ Allowlists let Microsoft 365 organizations with cloud mailboxes ignore signals t
 <a name="what-you-need"></a>
 ## Prerequisites
 
+Before you run these queries, make sure you meet the following prerequisites:
+
 - Microsoft Defender for Office 365 Plan 2 (Included in E5 plans, or trial available at aka.ms/trymdo)
 - Sufficient permissions (Security reader role)
 - 5-10 minutes to do the following procedures.
 
 ## Common steps for all the below queries
 
-Use the following steps for each query in this article.
+Use the following steps to run each query in this section.
 
 1. [Sign in to the security portal and navigate to advanced hunting](https://security.microsoft.com/advanced-hunting)
 2. Enter the KQL query into the query box, and press **Run Query**.

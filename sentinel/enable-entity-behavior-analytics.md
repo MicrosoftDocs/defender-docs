@@ -69,7 +69,7 @@ To configure UEBA on the **Entity behavior configuration** page, complete the fo
 
 1. Select the directory services from which you want to synchronize user entities with Microsoft Sentinel.
 
-    - **Active Directory** on-premises (Preview)
+    - **Active Directory** on-premises
     - **Microsoft Entra ID**
 
     To sync user entities from on-premises Active Directory, you must onboard your Azure tenant to Microsoft Defender for Identity (either standalone or as part of Microsoft Defender XDR) and you must have the MDI sensor installed on your Active Directory domain controller. For more information, see [Microsoft Defender for Identity prerequisites](/defender-for-identity/prerequisites).
@@ -112,7 +112,7 @@ Install the solution to get started quickly with threat hunting and investigatio
 
 For more information, see [Install or update Microsoft Sentinel solutions](sentinel-solutions-deploy.md#install-or-update-content).
 
-## Enable the UEBA behaviors layer (Preview)
+## Enable the UEBA behaviors layer
 
 The UEBA behaviors layer generates enriched summaries of activity observed across multiple data sources. Unlike alerts or anomalies, behaviors don’t necessarily indicate risk - they create an abstraction layer that optimizes your data for investigations, hunting, and detection by enhancing clarity, context, and correlation.
 

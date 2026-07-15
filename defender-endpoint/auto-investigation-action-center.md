@@ -10,12 +10,12 @@ ms.collection:
 - m365-security
 - tier3
 - mde-edr
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
   - admindeeplinkDEFENDER
   - sfi-image-nochange
 ms.topic: how-to
 ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
@@ -85,6 +85,8 @@ To get to the unified Action center in the improved Microsoft Defender portal:
 <a name="next-steps"></a>
 <a name="see-also"></a>
 ## Related content
+
+For more information, see the following resources:
 
 - [View and approve remediation actions](manage-auto-investigation.md)
 - [See the interactive guide: Investigate and remediate threats with Microsoft Defender for Endpoint](https://aka.ms/MDATP-IR-Interactive-Guide)

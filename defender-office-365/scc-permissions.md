@@ -14,7 +14,7 @@ ms.custom:
   - seo-marvel-apr2020
   - sfi-ga-nochange
 ms.service: defender-office-365
-ms.date: 03/27/2026
+ms.date: 07/10/2026
 ---
 
 # Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview
@@ -28,7 +28,7 @@ Permissions in these products are based on role-based access control (RBAC). Use
 The Security Dashboard for AI at `ai.security.microsoft.com` is also available to eligible tenants and provides a unified, real-time view of AI-related risk signals from Microsoft Defender, Microsoft Entra, and Microsoft Purview.
 
 > [!NOTE]
-> Microsoft Defender XDR unified RBAC is a separate permissions model that's also available. The permissions in this RBAC model are different from the Defender for Office 365 permissions as described in this article. For more information, see [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).
+> Microsoft Defender unified role-based access control (Unified RBAC) is a separate permissions model that's also available. It's also the recommended permission model for Microsoft Defender for Office 365 Plan 2, and it's the default for new Defender for Office 365 Plan 2 organizations starting July 2026. The permissions in this RBAC model are different from the Defender for Office 365 permissions as described in this article. For more information, see [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).
 >
 > **If you activate Defender XDR RBAC for Email & collaboration, the permissions page at <https://security.microsoft.com/emailandcollabpermissions> is no longer available in the Defender portal, so you need to ensure that you configure or import your roles _before_ you activate Defender unified RBAC.**
 >

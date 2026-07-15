@@ -10,8 +10,8 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 06/12/2026
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ms.date: 07/02/2026
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -19,13 +19,15 @@ ai-usage: ai-assisted
 
 Best practice for domain email security protection is to protect yourself from spoofing using Domain-based Message Authentication, Reporting, and Conformance (DMARC). Enabling DMARC for your domains should be the first step. For instructions, see [Set up DMARC to validate the From address domain for cloud senders](../email-authentication-dmarc-configure.md).
 
-This article explains how to configure DMARC for your `onmicrosoft.com` (MOERA) domain and parked custom domains, which aren't covered in [Set up DMARC to validate the From address domain for cloud senders](../email-authentication-dmarc-configure.md). These domains aren't used for email, but could be exploited by attackers if they remain unprotected:
+This article explains how to configure DMARC for your `onmicrosoft.com` (MOERA) domain and parked custom domains, which aren't covered in [Set up DMARC to validate the From address domain for cloud senders](../email-authentication-dmarc-configure.md). These domains aren't used for email, but could be exploited by attackers if the domains remain unprotected:
 
 - Your `onmicrosoft.com` domain, also known as the Microsoft Online Email Routing Address (MOERA) domain.
 - Parked custom domains that you're currently not using for email yet.
 
 <a name="what-you-need"></a>
 ## Prerequisites
+
+Before you begin, make sure you have the following items:
 
 - Microsoft 365 admin center and access to your DNS provider hosting your domains.
 - Sufficient permissions as a Global Administrator<sup>\*</sup> to make the appropriate changes in the Microsoft 365 admin center.
@@ -61,7 +63,7 @@ Use the following steps to add a DMARC TXT record for your parked custom domains
 
 ## Next Steps
 
-Wait until the DNS changes propagate, and then try to spoof the MOERA domain or the parked custom domains that you configured. Check whether the spoofing attempt is blocked based on the DMARC record you added for that domain, and verify that you receive a DMARC report.
+Wait until the DNS changes propagate, and then try to spoof the MOERA domain or any parked custom domain where you added the DMARC record. Check whether the spoofing attempt is blocked based on the DMARC record you added for the domain you tested, and verify that you receive a DMARC report.
 
 <a name="more-information"></a>
 ## Related content
