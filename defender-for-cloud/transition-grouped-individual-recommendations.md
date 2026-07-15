@@ -76,7 +76,7 @@ The new individual recommendations are now the best‑practice posture model in 
 ### Where to start
 
 - Begin reviewing and triaging **individual recommendations** for day-to-day security work
-- Use individual recommendations to drive investigation, remediation, ownership, and exemptions
+- Use individual recommendations to drive investigation, remediation, ownership, and [exemptions](transition-disable-rules-exemptions.md)
 - Expect a more detailed and actionable queue compared to grouped recommendations
 
 ---
@@ -205,11 +205,11 @@ Choose the aggregation that matches the task:
 
 ## How to manage the new individual recommendations
 
-With the transition to **individual recommendations**, all Microsoft Defender for Cloud experiences continue to support **Governance rules**, **Continuous export**, and **Exemptions**. The main change is how these actions are scoped.
+With the transition to **individual recommendations**, all Microsoft Defender for Cloud experiences continue to support **Governance rules**, **Continuous export**, and **[Exemptions](transition-disable-rules-exemptions.md)**. The main change is how these actions are scoped.
 
 Individual recommendations are created per software update, secret, or issue type. Because they are generated according to your resources' current state, actions are no longer applied to a single static recommendation. Instead, management actions are now applied at the **recommendation category** level.
 
-Governance rules, Continuous export, and Exemptions continue to work as they do today, but instead of targeting a grouped recommendation key, you now target a **recommendation category**. Each category automatically includes all current and future individual recommendations of that type.
+Governance rules, Continuous export, and [Exemptions](transition-disable-rules-exemptions.md) continue to work as they do today, but instead of targeting a grouped recommendation key, you now target a **recommendation category**. Each category automatically includes all current and future individual recommendations of that type.
 
 The updated management experience is available in **Environment settings**, under **Governance rules** and **Exemption rules**, where you can apply ownership, automation, or exemptions consistently across an entire category of individual recommendations.
 
@@ -226,6 +226,7 @@ The updated management experience is available in **Environment settings**, unde
 - Prioritize **Critical** and **High** risk individual recommendations in daily operations
 - Use aggregation views to scale remediation and investigation efficiently
 - Review your existing scripts and queries that target sub-assessments and update them using the [recommendation transition reference](#recommendation-transition-reference) and query examples in this article
+- Completing your [migration from disable rules to exemptions](transition-disable-rules-exemptions.md)
 
 ## Recommendation transition reference
 
@@ -350,6 +351,8 @@ The following grouped recommendations transition under Microsoft Defender for De
 | Guest accounts with owner permissions on Azure resources should be removed | `20606e75-05c4-48c0-9d97-add6daa2109a` | `f2864482-b329-4310-8c06-3cf74fe880c5` |
 | Disabled accounts with read and write permissions on Azure resources should be removed | `1ff0b4c9-ed56-4de6-be9c-d7ab39645926` | `9b4f4dd4-24fc-42ba-9978-2a1cf575d36d` |
 | Disabled accounts with owner permissions on Azure resources should be removed | `050ac097-3dda-4d24-ab6d-82568e7a50cf` | `a4899b81-b689-4e0d-aa29-45983ab8b7fc` |
+
+**Important**: Exemption rules for these replacement recommendations are available only to paid customers. Non-paying customers will lose exemption capabilities for these recommendations when the original assessments are retired.
 
 ## Next steps
 
