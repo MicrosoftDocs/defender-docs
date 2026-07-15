@@ -71,8 +71,8 @@ Select **Group** to group by **Attack path name**, **Entry point**,**Entry point
 
 1. Review recommendation details, and then select **Manage** to remediate the recommendation in the correct workload interface.
 
->[!NOTE]
->For on-premises attack paths, you might occasionally see an attack path highlighted without a directly associated recommendation in the same view. In these scenarios, the attack paths are still generated based on observed risk signals, while device-related vulnerabilities and security recommendations remain available under the Devices Experience for the specific device involved in the attack path.
+> [!NOTE]
+> For on-premises and Hybrid attack paths, you might occasionally see an attack path highlighted without a directly associated recommendation in the same view. In these scenarios, the attack paths are still generated based on observed risk signals, while device-related vulnerabilities and security recommendations remain available under the Devices Experience for the specific device involved in the attack path.
 
 ## View an attack path asset in the exposure map
 
