@@ -69,7 +69,7 @@ items:
             displayName: standalone
     - name: Configure Windows event auditing
       href: deploy/configure-windows-event-collection.md
-  - name: Migrate from sensor v2 to sensor v3 (Preview)
+  - name: Migrate from sensor v2 to sensor v3
     href: deploy/migrate-to-sensor-v3.md
   - name: Validate the sensor deployment
     href: deploy/test-sensor.md
