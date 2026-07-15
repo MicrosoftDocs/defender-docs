@@ -41,10 +41,15 @@ The repository size and tokens consumed signals can help your security team pred
 1. Select **Start scan**.
 1. Confirm in the dialog that appears.
 
+*If your tenant already has 10 queued scans from the portal and the CLI combined, a warning appears. You can still submit the scan. Queued scans that don't start running within 72 hours of submission are automatically cleaned up, so some queued scans might not run.*
+
 A notification appears confirming the scan was started. The new scan appears in the **Scans** tab and progresses through its lifecycle.
 
 ## Related content
 
 - [Create a GitHub connector](create-github-connector.md)
+
 - [Codename MDASH - Agentic code scanner initiative](mdash-initiative.md)
+
 - [Review agentic code scan results in the Microsoft Defender portal](review-portal-results.md)
+
