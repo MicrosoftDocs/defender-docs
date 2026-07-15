@@ -55,7 +55,7 @@ Select **Fix it** to invoke `fix-security-issues`, which posts a diff preview. A
 Run this command in your terminal:
 
 ```bash
-copilot plugin install microsoft/security-devops-commonplugin/defender-code-security
+copilot plugin install microsoft/security-devops-common:plugin/defender-code-security
 ```
 
 > [!NOTE]
