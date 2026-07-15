@@ -52,6 +52,8 @@ The following security data types are supported for this benefit:
 - [Update](/azure/azure-monitor/reference/tables/update) and [UpdateSummary](/azure/azure-monitor/reference/tables/updatesummary) when the Update Management solution isn't running in the workspace or solution targeting is enabled.
 - [MDCFileIntegrityMonitoringEvents](/azure/azure-monitor/reference/tables/mdcfileintegritymonitoringevents)
 - [WindowsEvent](/azure/azure-monitor/reference/tables/windowsevent?branch=main)
+- [DeviceCustomFileEvents](/azure/azure-monitor/reference/tables/devicecustomfileevents)
+- [DeviceCustomRegistryEvents](/azure/azure-monitor/reference/tables/devicecustomregistryevents)
 
 > [!NOTE]
 > Although `WindowsEvent` is listed, only security events from the `Microsoft-SecurityEvent` stream that go to the `SecurityEvent` table qualify for the 500 MB/day allowance. Application, System, or other event log channels are not covered and are billed as regular ingestion.
