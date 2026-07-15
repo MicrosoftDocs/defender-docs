@@ -36,11 +36,10 @@ If the tenant hasn't used Cloud Security in the Defender portal:
 
 ## Step 2: Open the connector wizard
 
-1. In the Defender portal, go to **System** > **Settings** > **Defender for Cloud** > **Connectors**.
+1. In the Defender portal, go to MDASH Initiative > **Settings**. For information about accessing the MDASH Initiative, see [Entry points](/security-exposure-management/ai-code-security-onboarding).
 
-   > [!NOTE]
-   > You can also access the Connectors page from the MDASH Initiative > **Settings**.
-
+   Click the button to Create Connector. You will be redirected to the Cloud Security Connectors page.
+   
 1. On the **Connectors** tab, select the GitHub connector from the list.
 1. Optionally, enter a connector name. If you leave it blank, a default name is assigned automatically.
 1. Select **Next**.
