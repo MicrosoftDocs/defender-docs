@@ -1,5 +1,5 @@
 ---
-title: Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies)
+title: Evaluate Microsoft Defender Antivirus and Exploit Guard with Endpoint security policies
 ms.reviewer: yongrhee
 description: Configure, activate, and test Microsoft Defender Antivirus protection features using Endpoint security policies in Security Settings Management on Windows 10, Windows 11, and Windows Server.
 ms.service: defender-endpoint
@@ -11,23 +11,23 @@ ms.collection:
 - tier2
 ms.topic: how-to
 ms.subservice: edr
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Evaluate Microsoft Defender Antivirus by using Microsoft Defender for Endpoint security settings management
 
-In Windows 10 or later, and in Windows Server 2016 or later, you can use next-generation protection features offered by Microsoft Defender Antivirus (MDAV) and Microsoft Defender Exploit Guard (Microsoft Defender EG).
+This article explains how to use [Microsoft Defender for Endpoint Security Settings Management (Endpoint security policies)](/intune/intune-service/protect/mde-security-integration) to configure, activate, and test key protection features in Microsoft Defender Antivirus (MDAV) and Microsoft Defender Exploit Guard (Microsoft Defender EG). The features covered include real-time protection, cloud-delivered protection, network protection, attack surface reduction (ASR) rules, and tamper protection.
 
-The following configuration options are available in Windows 10 and later versions, as well as in Windows Server 2016 and later versions. Use the step-by-step guidance to activate and test the key protection features in Microsoft Defender Antivirus (MDAV) and Microsoft Defender for Endpoint (EG).
+These procedures require Windows 10 or later, or Windows Server 2016 or later, and devices must be onboarded to Microsoft Defender for Endpoint.
 
 If you have any questions about a detection that MDAV makes, or you discover a missed detection, you can submit a file to us at our [sample submission help site](/unified-secops-platform/submission-guide).
 
 <a name="use-microsoft-defender-endpoint-security-settings-management-endpoint-security-policies-to-enable-the-features"></a>
 ## Use Endpoint security policies to evaluate Microsoft Defender Antivirus features
 
-The following guidance describes the [Microsoft Defender for Endpoint Security Settings Management (Endpoint security policies)](/intune/intune-service/protect/mde-security-integration) settings that configure the features you should use to evaluate Microsoft Defender Antivirus protection.
+The following guidance describes the [Microsoft Defender for Endpoint Security Settings Management (Endpoint security policies)](/intune/intune-service/protect/mde-security-integration) settings that configure the Microsoft Defender Antivirus protection features you should use during your evaluation.
 
 MDAV indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also review detections in the MDAV app. To review scan results in the MDAV app, see [Review Microsoft Defender Antivirus scan results](review-scan-results-microsoft-defender-antivirus.md).
 
@@ -70,7 +70,7 @@ To configure the options that you must use to test the protection features, do t
      |Cloud Extended Time-out|Configured, 50|
      |Submit Samples Consent|Send all samples automatically|
 
-     Standard security intelligence updates can take hours to prepare and deliver. Our cloud-delivered protection service can deliver this protection in seconds. For more information, see [Use next-gen technologies in Microsoft Defender Antivirus through cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md).
+     Standard security intelligence updates can take hours to prepare and deliver. Our cloud-delivered protection service can deliver updated protection against emerging threats in seconds. For more information, see [Use next-gen technologies in Microsoft Defender Antivirus through cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md).
 
    - **Scans**:
 
@@ -186,7 +186,7 @@ To enable attack surface reduction (ASR) rules using the endpoint security polic
    |Enable Controlled Folder Access|Enabled|
 
 > [!TIP]
-> Any of the rules might block behavior you find acceptable in your organization. In these cases, add the per-rule exclusions named "Attack Surface Reduction Only Exclusions." Additionally, change the rule from **Enabled** to **Audit** to prevent unwanted blocks.
+> If a rule blocks behavior that is acceptable in your organization, add the per-rule exclusions named "Attack Surface Reduction Only Exclusions." Additionally, change the rule from **Enabled** to **Audit** to prevent unwanted blocks.
 
 1. On the **Assignments** page, click in the box and select from the following values:
    - **All users** or **All devices**.
@@ -213,8 +213,7 @@ To enable Tamper Protection by using endpoint security policies, complete the fo
 1. Select **Create policy**. The **Create a new policy** page appears.
 1. On the **Basics** page, enter a name and description for the profile in the **Name** and **Description** fields, respectively.
 1. Select **Next**.
-1. On the **Configuration settings** page, expand the groups of settings.
-1. From these groups, select the settings that you want to manage with this profile.
+1. On the **Configuration settings** page, expand the groups of settings, and then select the settings that you want to manage with this profile.
 1. Set the policies for the chosen groups of settings by configuring them as described in the following table:
 
    |Description|Setting|
@@ -223,7 +222,9 @@ To enable Tamper Protection by using endpoint security policies, complete the fo
 
 #### Check the Cloud Protection network connectivity
 
-It's important to verify that Cloud Protection network connectivity is working during your penetration testing.
+Cloud Protection (also known as the Microsoft Active Protection Service, or MAPS) is a feature of Microsoft Defender Antivirus that uses cloud-based machine learning and analysis to provide faster threat detection. The device must be able to reach the cloud protection service over the network for this feature to work correctly.
+
+Verify that Cloud Protection network connectivity is working during your penetration testing.
 
 **Prerequisite:** Open Command Prompt as an administrator (select **Run as administrator**) before running the following commands.
 
@@ -272,7 +273,9 @@ If you find that your settings aren't taking effect, you might have a conflict. 
 
 #### For False Negatives (FNs) submissions
 
-For information on how to make False Negatives (FNs) submissions, see:
+A false negative (FN) occurs when Microsoft Defender Antivirus doesn't detect a file or activity that is actually malicious. If you encounter a missed detection during your evaluation, submit the undetected file to Microsoft for analysis so that protection can be updated.
+
+For information on how to make FN submissions, see:
 
 - [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md) if you have Microsoft Defender, Microsoft Defender for Endpoint P2/P1, or Microsoft Defender for Business.
 - [Submit files for analysis](/unified-secops-platform/submission-guide) if you have Microsoft Defender Antivirus.

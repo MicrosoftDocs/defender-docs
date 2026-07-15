@@ -9,9 +9,9 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Manage profiles and approve extensions using Intune
@@ -86,7 +86,7 @@ Do the following procedures to approve the required system extensions using the 
 
    When you're finished on the **Configuration settings** tab, select **Next**.
 
-7. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing [scope tags](/intune/intune-service/fundamentals/scope-tags).
+7. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing [scope tags for role-based access control](/intune/intune-service/fundamentals/scope-tags).
 
    When you're finished on the **Scope tags** tab, select **Next**.
 

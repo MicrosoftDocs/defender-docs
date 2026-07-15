@@ -24,9 +24,9 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 
 ## July 2026
 
-### Codename MDASH - Agentic code scanner public preview
+### Codename MDASH - Agentic code scanner private preview
 
-Codename MDASH - Agentic code scanner is now available in public preview in Microsoft Security Exposure Management.
+Codename MDASH - Agentic code scanner is now available in private preview in Microsoft Security Exposure Management.
 
 Codename MDASH uses a multi-model agentic AI system to detect code vulnerabilities with greater depth and accuracy than traditional static analysis. Security teams can run scans from Defender CLI or through a GitHub connector, review findings in the Defender portal, and use results to help prioritize code security risks.
 

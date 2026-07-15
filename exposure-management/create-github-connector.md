@@ -6,7 +6,7 @@ ms.date: 07/06/2026
 ai-usage: ai-assisted
 ---
 
-# Create a GitHub connector (preview)
+# Create a GitHub connector (private preview)
 
 The GitHub connector is the recommended onboarding path for agentic code security. It lets you connect your GitHub organization and onboard its repositories through a simple flow. After onboarding your repositories, you can trigger a remote on-demand agentic scan for any onboarded repository.
 

@@ -6,8 +6,8 @@ ms.localizationpriority: medium
 ms.topic: how-to
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1014
-ms.date: 06/16/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.reviewer: yongrhee
 ms.subservice: ngp
 ms.collection:
@@ -23,7 +23,7 @@ ai-usage: ai-assisted
 
 # Evaluate Microsoft Defender Antivirus using Group Policy
 
-This article explains how to enable and test the key protection features in Microsoft Defender Antivirus and Microsoft Defender Exploit Guard in current versions of Microsoft Windows and Windows Server. The features covered include real-time protection, cloud-delivered protection, scan settings, network protection, attack surface reduction rules, and controlled folder access. Use the Group Policy settings in this guide to configure these features for evaluation in domain-joined or workgroup environments.
+This guide helps you turn on and test key protection features in Microsoft Defender Antivirus and Microsoft Defender Exploit Guard. These features include real-time protection, cloud-delivered protection, scan settings, network protection, attack surface reduction rules, and controlled folder access. This guide applies to current versions of Windows and Windows Server. Use the Group Policy settings in this guide to set up these features for evaluation in domain-joined or workgroup environments.
 
 ## Prerequisites
 
@@ -37,9 +37,11 @@ The following operating systems are supported for this evaluation:
 <a name="use-microsoft-defender-antivirus-using-group-policy-to-enable-the-features"></a>
 ## Use Group Policy to enable Microsoft Defender Antivirus features
 
-Use a [Group Policy Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) to configure Microsoft Defender Antivirus for evaluation.
+A [Group Policy Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) is a shared folder on a domain controller that holds Administrative Template files (.admx and .adml). It lets all Group Policy administrators use the same policy definitions. For domain environments, set up a Central Store before you begin. For workgroups, the templates are stored locally and no Central Store is needed.
 
-1. Download the latest Administrative Template files from [Links to download the Administrative Templates files based on the operating system version](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#links-to-download-the-administrative-templates-files-based-on-the-operating-system-version).
+Use the following steps to configure Microsoft Defender Antivirus for evaluation.
+
+1. Download the latest Administrative Template files. For download links, see [Administrative Templates files by operating system version](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#links-to-download-the-administrative-templates-files-based-on-the-operating-system-version).
 
    > [!TIP]
    > Check the **System Requirements** section on the individual download pages:
@@ -84,11 +86,11 @@ For more information about creating and managing a Group Policy Central Store, s
 
 ## Cloud protection features
 
-Standard security intelligence updates can take hours to prepare and deliver; our cloud-delivered protection service can deliver this protection in seconds.
+Standard security intelligence updates can take hours to prepare and deliver. Cloud-delivered protection can provide the same coverage in seconds.
 
 For more information, see [Use next-gen technologies in Microsoft Defender Antivirus through cloud-delivered protection](/windows/threat-protection/windows-defender-antivirus/utilize-microsoft-cloud-protection-windows-defender-antivirus).
 
-**MAPS**:
+Configure the following settings under **MAPS** (Microsoft Active Protection Service), which is the cloud-based service that sends threat data to Microsoft and receives rapid protection updates:
 
 |Description|Setting|
 |---|---|
@@ -106,7 +108,7 @@ For more information, see [Use next-gen technologies in Microsoft Defender Antiv
 <a name="scans"></a>
 ## Configure and evaluate scan settings
 
-Configure the following scan settings in Group Policy to enable comprehensive file and script scanning:
+These scan settings control how files and scripts are checked. Turn on each setting in Group Policy:
 
 |Description|Setting|
 |---|---|
@@ -122,7 +124,7 @@ Configure the following scan settings in Group Policy to enable comprehensive fi
 
 ## Security Intelligence updates
 
-Configure the following settings to manage how security intelligence updates are downloaded and applied:
+Use these settings to control how the device downloads and applies security updates:
 
 |Description|Setting|
 |---|---|
@@ -131,7 +133,7 @@ Configure the following settings to manage how security intelligence updates are
 
 ## Disable local administrator AV settings
 
-Disable local administrator AV settings such as exclusions, and enforce the policies from the Microsoft Defender for Endpoint Security Settings Management.
+Use these settings to block local admin changes like exclusions. The policies are enforced through Microsoft Defender for Endpoint Security Settings Management.
 
 **Root**:
 
@@ -143,7 +145,7 @@ Disable local administrator AV settings such as exclusions, and enforce the poli
 <a name="threat-severity-default-action"></a>
 ## Configure threat severity default actions
 
-Use the following settings to configure the action that Microsoft Defender Antivirus takes when it detects threats at each severity level. These settings override the default remediation action for detected threats and ensure that all threat levels are quarantined.
+These settings control what happens when Microsoft Defender Antivirus finds a threat. They replace the default action at each threat level and quarantine all threats.
 
 **Threats**:
 
@@ -170,14 +172,14 @@ Use the following settings to configure the action that Microsoft Defender Antiv
 <a name="network-protection"></a>
 ## Configure network protection
 
-**Microsoft Defender Exploit Guard\\Network Protection**:
+Network protection blocks connections to dangerous websites and IP addresses. It helps prevent phishing attacks and malware downloads. Configure the following settings under **Microsoft Defender Exploit Guard\\Network Protection** in Group Policy:
 
 |Description|Setting|
 |---|---|
 |Prevent users and apps from accessing dangerous websites|Enabled, Block|
 |Allow Network Protection on Windows Server|Enabled|
 
-To enable Network Protection for Windows Servers, for now, please use PowerShell:
+On Windows Server, use PowerShell to turn on Network Protection:
 
 |OS|PowerShell command|
 |---|---|
@@ -186,6 +188,8 @@ To enable Network Protection for Windows Servers, for now, please use PowerShell
 
 <a name="attack-surface-reduction-rules"></a>
 ## Configure attack surface reduction rules
+
+Attack surface reduction (ASR) rules block specific behaviors that malware often uses, such as running scripts or launching executable content from email. Use the following steps to enable ASR rules in Group Policy:
 
 1. In the Group Policy Editor, go to **Computer Configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **Microsoft Defender Exploit Guard** \> **Attack Surface Reduction**.
 
@@ -221,7 +225,7 @@ To enable Network Protection for Windows Servers, for now, please use PowerShell
 <a name="controlled-folder-access"></a>
 ## Configure Controlled Folder Access
 
-Controlled Folder Access helps protect valuable data from malicious apps and threats such as ransomware. To enable Controlled Folder Access, navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Microsoft Defender Exploit Guard** > **Attack Surface Reduction**.
+Controlled Folder Access guards your data from harmful apps and ransomware. To turn it on, go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Microsoft Defender Exploit Guard** > **Attack Surface Reduction**.
 
 |Description|Setting|
 |---|---|
@@ -231,7 +235,7 @@ Assign the policies to the OU where the test machines are located.
 
 ### Enable Tamper Protection
 
-In the Microsoft Defender portal at [https://security.microsoft.com](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Advanced features** > **Tamper Protection** > **On**.
+In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Advanced features** > **Tamper Protection** > **On**.
 
 For more information, see [How do I configure or manage tamper protection?](prevent-changes-to-security-settings-with-tamper-protection.md).
 
@@ -239,7 +243,7 @@ For more information, see [How do I configure or manage tamper protection?](prev
 
 Verify that Microsoft Defender Antivirus cloud protection network connectivity is working before you test detections or protections.
 
-To test connectivity to Microsoft Defender cloud protection services, change to the latest platform folder and run the MAPS validation command. In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
+To test connectivity to Microsoft Defender cloud protection services, run the following commands in an elevated Command Prompt (right-click Command Prompt and select **Run as administrator**). The first command changes to the latest Defender platform folder, and the second command validates the MAPS cloud connection. A successful result displays `ValidateMapsConnection successfully established a connection to MAPS`:
 
 > [!TIP]
 > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
@@ -250,15 +254,17 @@ To test connectivity to Microsoft Defender cloud protection services, change to 
 MpCmdRun.exe -ValidateMapsConnection
 ```
 
-For more information, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
+The first command finds the newest antimalware platform folder under `%ProgramData%\Microsoft\Windows Defender\Platform\` and changes to that directory. If that path doesn't exist, it falls back to `%ProgramFiles%\Windows Defender`. The second command validates cloud protection connectivity.
+
+For more information about MpCmdRun.exe and the `-ValidateMapsConnection` option, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
 
 ## Check the Platform Update version
 
-The latest 'Platform Update' version Production channel (GA) is available here:
+Check the latest 'Platform Update' version for the Production channel (GA) in the Microsoft Update Catalog, then compare it with the version on your device:
 
 [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623+update)
 
-To verify the Microsoft Defender Antivirus platform version installed on the device, run the following command in an elevated PowerShell session (a PowerShell window you opened by selecting **Run as administrator**):
+To check the platform version on your device, run this command in an elevated PowerShell session (open PowerShell by selecting **Run as administrator**). The `AMProductVersion` value in the output is the installed platform version:
 
 ```powershell
 Get-MpComputerStatus | Format-Table AMProductVersion
@@ -266,11 +272,11 @@ Get-MpComputerStatus | Format-Table AMProductVersion
 
 ## Check the Security Intelligence Update version
 
-The latest 'Security Intelligence Update' version is available here:
+Check the latest 'Security Intelligence Update' version on the Microsoft Security Intelligence updates page, then compare it with the version on your device:
 
 [Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware - Microsoft Security Intelligence](https://www.microsoft.com/wdsi/defenderupdates)
 
-To confirm that the latest security intelligence update is installed, check the antivirus signature version by running the following command in an elevated PowerShell session:
+To verify the installed security intelligence version, run this command in an elevated PowerShell session. Compare the `AntivirusSignatureVersion` value in the output with the latest version on the page above:
 
 ```powershell
 Get-MpComputerStatus | Format-Table AntivirusSignatureVersion
@@ -278,11 +284,11 @@ Get-MpComputerStatus | Format-Table AntivirusSignatureVersion
 
 ## Check the Engine Update version
 
-The latest scan 'engine update' version is available here:
+Check the latest scan 'engine update' version on the Microsoft Security Intelligence updates page, then compare it with the version on your device:
 
 [Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware - Microsoft Security Intelligence](https://www.microsoft.com/wdsi/defenderupdates)
 
-To determine which Microsoft Defender Antivirus engine version is running on the device, run the following command in an elevated PowerShell session:
+The scan engine is updated separately from the platform. To check the installed engine version, run this command in an elevated PowerShell session:
 
 ```powershell
 Get-MpComputerStatus | Format-Table AMEngineVersion

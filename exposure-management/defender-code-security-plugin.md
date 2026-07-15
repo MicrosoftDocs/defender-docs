@@ -8,7 +8,7 @@ ms.date: 06/28/2026
 ai-usage: ai-assisted
 ---
 
-# Defender Code Security skills overview (preview)
+# Defender Code Security skills overview (private preview)
 
 Defender Code Security skills extend your coding agent with capabilities that surface Microsoft Defender agentic (Codename MDASH) scan results and run local security scans inline in chat. Developers can fetch the latest scan findings for their repo, run SAST, SCA, IaC, and secrets scans on their working tree, and accept AI-generated fixes - all without leaving the terminal or opening the portal.
 

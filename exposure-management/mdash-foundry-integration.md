@@ -6,7 +6,7 @@ ms.date: 06/03/2026
 ai-usage: ai-assisted
 ---
 
-# Connect Microsoft Foundry (preview)
+# Connect Microsoft Foundry (private preview)
 
 Create an Microsoft Foundry resource to use as part of the agentic code security setup.
 
