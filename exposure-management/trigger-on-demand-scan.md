@@ -6,7 +6,7 @@ ms.date: 07/06/2026
 ai-usage: ai-assisted
 ---
 
-# Trigger an on-demand agentic scan (preview)
+# Trigger an on-demand agentic scan (private preview)
 
 After activating the GitHub connector, the ability to trigger an on-demand agentic scan for onboarded repositories becomes available within up to one hour.
 

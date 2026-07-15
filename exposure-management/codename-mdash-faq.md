@@ -88,7 +88,7 @@ Yes. Scan locally with the Defender CLI using an interactive login, or integrate
 
 ## How much effort and expertise is needed to set up Codename MDASH correctly?
 
-Customers accept the preview terms and conditions for Codename MDASH, configure Foundry for inference, download the CLI to run scans, or connect their GitHub repository and initiate a scan from Defender portal. This requires some expertise across security admins, developers, and DevOps teams.
+Customers accept the private preview terms and conditions for Codename MDASH, configure Foundry for inference, download the CLI to run scans, or connect their GitHub repository and initiate a scan from Defender portal. This requires some expertise across security admins, developers, and DevOps teams.
 
 ## Is Codename MDASH suitable for continuous usage or only for periodic/batch analysis?
 
@@ -104,7 +104,7 @@ Yes.
 
 ## What are the current scale limits?
 
-Approximately 256 MB per repo (subject to change). One concurrent scan per tenant at this stage (subject to change; might vary by environment). Capacity is the primary constraint in preview; scans are deliberately rate-limited to protect quality.
+Approximately 256 MB per repo (subject to change). One concurrent scan per tenant at this stage (subject to change; might vary by environment). Capacity is the primary constraint in private preview; scans are deliberately rate-limited to protect quality.
 
 ## How is the confidentiality of submitted code ensured?
 

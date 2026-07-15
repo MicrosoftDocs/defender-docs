@@ -8,7 +8,7 @@ ms.date: 06/28/2026
 ai-usage: ai-assisted
 ---
 
-# Agentic code security audit log reference (preview)
+# Agentic code security audit log reference (private preview)
 
 Agentic code security logs user and system actions to the Microsoft Purview unified audit log. Use these events to monitor activity, investigate incidents, and meet compliance requirements.
 

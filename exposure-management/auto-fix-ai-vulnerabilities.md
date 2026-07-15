@@ -6,7 +6,7 @@ ms.date: 05/27/2026
 ai-usage: ai-assisted
 ---
 
-# Autofix agentic code vulnerabilities (preview)
+# Autofix agentic code vulnerabilities (private preview)
 
 After running an agentic code scan, use `defender fix` to generate AI-powered code fixes from your scan results.
 
