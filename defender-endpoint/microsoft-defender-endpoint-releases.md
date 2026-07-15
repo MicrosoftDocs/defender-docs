@@ -29,6 +29,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|Windows Antivirus |Platform 4.18.26070.x / Engine 1.1.26070.x |July 2026 |- Platform: 4.18.26070.x<br>- Engine: 1.1.26070.x<br>- Security intelligence: 1.xxx.x.0 |[Release details and updates](#windows-antivirus--july-2026--platform-41826070x--engine-1126070x) |
 |iOS |1.1.78290102|July 2026|- Build: 1.1.78290102<br>- Release: July 3, 2026|[Release details and updates](#ios--july-2026--platform-version-1178290102)|
 |Android |1.0.9029.0101|June 2026|- Build: 1.0.9029.0101<br>- Release: June 30, 2026|[Release details and updates](#android--june-2026--platform-1090290101)| 
 |macOS |101.26042.0020  |June 2026 |- Release version: 20.126042.20.0<br>- Engine version: 1.1.26040.3000<br>- Signature version: 1.453.151.0 |[Release details and updates](#macos--june-2026--101260420020) |
@@ -1038,6 +1039,24 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 ## Microsoft Defender Antivirus releases
 
 For more information about Microsoft Defender Antivirus updates, see [Microsoft Defender Antivirus security intelligence product updates and support](microsoft-defender-antivirus-updates.md).
+
+### Windows Antivirus | July 2026 | Platform 4.18.26070.x | Engine 1.1.26070.x
+
+#### Release details
+
+| Component | Version | Date |
+| -------- | -------- | -------- |
+| Platform | 4.18.26070.x | June 30, 2026 |
+| Engine | 1.1.26070.x | June 30, 2026 |
+| Security intelligence<sup>1</sup> | 1.xxx.x.0 | June 30, 2026 |
+| Support phase | Security and Critical Updates | - | 
+
+<sup>1</sup>The security intelligence version listed here is relevant to the listed engine release. Newer versions of security intelligence are released regularly. For more information, see
+[Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/wdsi/defenderupdates).
+
+### Enhancements and features
+- test PR
+- test PR
 
 ### Windows Antivirus | May 2026 | Platform 4.18.26050.15 | Engine 1.1.26050.11
 
