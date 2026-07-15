@@ -52,6 +52,8 @@
           href: create-github-connector.md
         - name: Defender CLI setup
           href: defender-cli-authentication.md
+        - name: Codename MDASH FAQ
+          href: codename-mdash-faq.md  
       - name: Run scans
         items:
         - name: Trigger an on-demand agentic scan
