@@ -9,13 +9,13 @@ ms.collection:
   - tier2
 description: Admins can learn how to configure the junk email settings in Exchange Online mailboxes. Many of these settings are available to users in Outlook or Outlook on the web.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Configure junk email settings on Exchange Online mailboxes
@@ -91,7 +91,7 @@ The following example configures the following settings for the safelist collect
 Set-MailboxJunkEmailConfiguration "Ori Epstein" -BlockedSendersAndDomains @{Add="shopping@fabrikam.com"} -TrustedSendersAndDomains @{Remove="chris@fourthcoffee.com"} -ContactsTrusted $true
 ```
 
-The following example removes the domain contoso.com from the Blocked Senders list in all user mailboxes in the organization:
+To remove a blocked domain from the Blocked Senders list of every user mailbox in the organization, run the following bulk update command:
 
 ```PowerShell
 $All = Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize Unlimited; $All | foreach {Set-MailboxJunkEmailConfiguration $_.Name -BlockedSendersAndDomains @{Remove="contoso.com"}}
@@ -176,7 +176,7 @@ The safelist collection (the Safe Senders list, the Safe Recipients list, and th
       2. The Safe Senders list and the Safe Recipient list are combined, deduplicated, and sorted alphabetically whenever a change is made for the first 1,024 entries.
     - The first 1,024 entries are used, and relevant information is stamped in the message headers.
     - For remaining entries over 1,024, Outlook processes unsynchronized entries, but no information is stamped in the message headers. This behavior doesn't occur in Outlook on the web.
-    - As you can see, enabling the **Trust email from my contacts** setting reduces the number of Safe Senders and Safe Recipients that can be synchronized. If this reduction is a concern, we recommend using Group Policy to turn off this feature:
+    - Enabling the **Trust email from my contacts** setting reduces the number of Safe Senders and Safe Recipients that can be synchronized. If this reduction is a concern, we recommend using Group Policy to turn off this feature:
       - File name: outlk16.opax
       - Policy setting: **Trust e-mail from contacts**
 

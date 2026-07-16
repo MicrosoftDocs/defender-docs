@@ -9,10 +9,10 @@ ms.collection:
   - m365-security
   - tier2
 description: Admins can learn how to create automated simulations that contain specific techniques and payloads that launch when the specified conditions are met in Microsoft Defender for Office 365 Plan 2.
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -165,7 +165,7 @@ Use one of the following procedures to change the login page that's used in the 
 
   On the **Select login page** flyout that opens, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create new**.
 
-  The creation steps are the same as at **Attack simulation training** \> **Content library** tab \> **Login pages** \> **Tenant login pages** tab. For instructions, see [Create login pages](attack-simulation-training-login-pages.md#create-login-pages).
+  To create a login page, follow the steps in [Create login pages](attack-simulation-training-login-pages.md#create-login-pages).
 
   Back on the **Select login page** flyout, select the check box next to the name of the login page to use, and then select **Save**. Back on the **Login page** tab of the payload details flyout, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: **Close** to return to the **Select payloads and login page** page.
 
@@ -177,7 +177,7 @@ When you're finished on the **Select a payload and login page** page, select **N
 ### Configure OAuth payloads
 
 > [!NOTE]
-> This page is available only if you selected **OAuth Consent Grant** on the [Select social engineering techniques](#select-one-or-more-social-engineering-techniques) page and a corresponding payload.
+> The **Configure OAuth payload** page is available only if you selected **OAuth Consent Grant** on the [Select social engineering techniques](#select-one-or-more-social-engineering-techniques) page and a corresponding payload.
 
 On the **Configure OAuth payload** page, configure the following settings:
 
@@ -194,7 +194,8 @@ On the **Configure OAuth payload** page, configure the following settings:
 
 When you're finished on  the **Configure OAuth payload** page, select **Next**.
 
-## Target users
+<a name="target-users"></a>
+## Select target users
 
 On the **Target users** page, select who receives the simulation. Use the following options to select users:
 
@@ -282,7 +283,8 @@ On the **Target users** page, select who receives the simulation. Use the follow
 
 When you're finished on the **Target users** page, select **Next**.
 
-## Assign training
+<a name="assign-training"></a>
+## Configure training assignments
 
 On the **Assign training** page, you can assign trainings for the simulation. We recommend that you assign training for each simulation, as employees who go through training are less susceptible to similar attacks.
 
@@ -317,7 +319,7 @@ When you're finished on the **Assign training** page, select **Next**.
 ### Select training courses
 
 > [!NOTE]
-> This page is available only if you selected **Select training courses and modules myself** on the **Assign training** page.
+> The **Training assignment** page is available only if you selected **Select training courses and modules myself** on the **Assign training** page.
 
 On the **Training assignment** page, select the trainings that you want to add to the simulation by selecting :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add trainings**.
 
@@ -375,7 +377,7 @@ Select one of the following options:
     - **Add logo**: Select **Browse logo image** to find and select a .png, .jpeg, or .gif file. The logo size should be a maximum of 210 x 70 to avoid distortion. To remove the logo, select **Remove uploaded logo image**.
     - **Select default language**: This setting is required. Select one of the following values: **Chinese (Simplified)**, **Chinese (Traditional, Taiwan)**, **Dutch**, **English**, **Spanish**, **French**, **German**, **Italian**, **Japanese**, **Korean**, **Portuguese, or **Russian**.
 
-  - **Tenant landing pages** tab: Contains any custom landing pages that you created. To create a new landing page, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create new**. The creation steps are the same as at **Attack simulation training** \> **Content library** tab \> **Phish landing pages** \> **Tenant landing pages** tab. For instructions, see [Create landing pages](attack-simulation-training-landing-pages.md#create-landing-pages).
+  - **Tenant landing pages** tab: Contains any custom landing pages that you created. To create a new landing page, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create new**. To create a landing page, follow the steps in [Create landing pages](attack-simulation-training-landing-pages.md#create-landing-pages).
 
   On both tabs, the following information is shown for each landing page. You can sort the landing pages by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. The default columns are marked with an asterisk (<sup>\*</sup>):
 
@@ -459,7 +461,7 @@ When you're finished on the **Select end user notification** page, select **Next
 ### Select a training assignment notification
 
 > [!NOTE]
-> This page is available only if you selected **Customized end user notifications** on the [Select end user notifications](#select-end-user-notifications) page.
+> The **Training assignment notification** page is available only if you selected **Customized end user notifications** on the [Select end user notifications](#select-end-user-notifications) page.
 
 The **Training assignment notification** page shows the following notifications and their configured languages:
 
@@ -498,7 +500,7 @@ When you're finished on the **Training assignment notification** page, select **
 ### Select a training reminder notification
 
 > [!NOTE]
-> This page is available only if you selected **Customized end user notifications** on the [Select end user notifications](#select-end-user-notifications) page.
+> The **Training reminder notification** page is available only if you selected **Customized end user notifications** on the [Select end user notifications](#select-end-user-notifications) page.
 
 The **Training reminder notification** page shows the following notifications and their configured languages:
 
@@ -537,7 +539,7 @@ When you're finished on the **Training reminder notification** page, select **Ne
 ### Select a positive reinforcement notification
 
 > [!NOTE]
-> This page is available only if you selected **Customized end user notifications** on the [Select end user notifications](#select-end-user-notifications) page.
+> The **Positive reinforcement notification** page is available only if you selected **Customized end user notifications** on the [Select end user notifications](#select-end-user-notifications) page.
 
 You have the following options in the **Delivery preferences** section for positive reinforcement notifications:
 
@@ -579,7 +581,8 @@ You have the following options in the **Delivery preferences** section for posit
 
 When you're finished on the **Positive reinforcement notification** page, select **Next**.
 
-## Simulation schedule
+<a name="simulation-schedule"></a>
+## Configure the simulation schedule
 
 On the **Simulation schedule** page, select one of the following values:
 
@@ -588,7 +591,8 @@ On the **Simulation schedule** page, select one of the following values:
 
 When you're finished, select **Next**.
 
-## Schedule details
+<a name="schedule-details"></a>
+## Configure schedule details
 
 What you see on the **Schedule details** page depends on whether you selected **Randomized** or **Fixed** for the simulation schedule on the previous page.
 
@@ -620,7 +624,8 @@ What you see on the **Schedule details** page depends on whether you selected **
 
 When you're finished on the **Schedule details** page, select **Next**.
 
-## Launch details
+<a name="launch-details"></a>
+## Configure launch details
 
 On the **Launch details** page, configure the following additional settings for the automation:
 
@@ -662,7 +667,7 @@ To turn off an **Active** simulation automation, select it from the list by clic
 
 ## Remove simulation automations
 
-To remove a simulation automation, select it from the list by clicking the check box next to the name. Select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears. Select **Confirm** in the dialog.
+To remove a simulation automation, select the check box next to its name. Select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears, and then select **Confirm** in the dialog.
 
 ## View simulation automation details
 

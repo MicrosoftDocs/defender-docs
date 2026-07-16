@@ -9,11 +9,11 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - sfi-image-nochange
 description: Learn how to recognize and respond to a compromised connector in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -29,7 +29,7 @@ Connectors are used for enabling mail flow between Microsoft 365 and email serve
 
 An inbound connector with the **Type** value `OnPremises` is considered compromised when an attacker creates a new connector or modifies and existing connector to send spam or phishing email.
 
-This article explains the symptoms of a compromised connector and how to regain control of it.
+This article explains the symptoms of a compromised connector and how to regain control of the connector.
 
 ## Symptoms of a compromised connector
 
@@ -47,13 +47,16 @@ If you see any of the preceding signs of connector compromise or other unusual s
 
 ## Secure and restore email function to a suspected compromised connector
 
-Do **all** of the following steps to regain control of the connector. Go through the steps as soon as you suspect a problem and as quickly as possible to make sure that the attacker doesn't resume control of the connector. These steps also help you remove any back-door entries that the attacker might have added to the connector.
+Do **all** of the following steps to regain control of a compromised inbound connector. Go through the steps as soon as you suspect a problem and as quickly as possible to make sure that the attacker doesn't resume control of the connector. These steps also help you remove any back-door entries that the attacker might have added to the connector.
 
 ### Step 1: Identify if an inbound connector has been compromised
 
-Use the following subsections to review suspicious connector traffic and audit connector-related admin activity to confirm whether a connector is compromised.
+To confirm whether a connector is compromised, [review recent suspicious connector traffic or related messages](#review-recent-suspicious-connector-traffic-or-related-messages) and [investigate and validate connector-related activity](#investigate-and-validate-connector-related-activity).
 
 #### Review recent suspicious connector traffic or related messages
+
+> [!TIP]
+> The Explorer view in the following procedure requires [Microsoft Defender for Office 365 Plan 2](mdo-about.md). If you don't have Plan 2, skip to the **Alerts** and **Message trace** procedure later in this section.
 
 In [Microsoft Defender for Office 365 Plan 2](mdo-about.md), open the Microsoft Defender portal at <https://security.microsoft.com> and go to **Explorer**. Or, to go directly to the **Explorer** page, use <https://security.microsoft.com/threatexplorer>.
 
@@ -102,7 +105,7 @@ In [Microsoft Defender for Office 365](mdo-about.md) or [the built-in security f
 
 #### Investigate and validate connector-related activity
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), replace \<StartDate\> and \<EndDate\> with your values, and then run the following command to find and validate admin-related connector activity in the audit log. For more information, see [Use a PowerShell script to search the audit log](/purview/audit-log-search-script).
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), replace \<StartDate\> and \<EndDate\> with your values, and then run the following command to search the audit log for inbound connector creation, modification, and removal events. For more information, see [Use a PowerShell script to search the audit log](/purview/audit-log-search-script).
 
 ```powershell
 Search-UnifiedAuditLog -StartDate "<StartDate>" -EndDate "<EndDate>" -Operations "New-InboundConnector","Set-InboundConnector","Remove-InboundConnector"

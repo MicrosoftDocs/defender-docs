@@ -9,11 +9,11 @@ ms.collection:
   - m365-security
   - tier2
 description: Admins can learn how to create Training campaigns in Attack simulation training in Microsoft Defender for Office 365 Plan 2.
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Training campaigns in Attack simulation training
@@ -100,7 +100,9 @@ On the **Name campaign** page, configure the following settings:
 
 When you're finished on the **Name Training campaign** page, select **Next**.
 
-### Target users
+<a name="target-users"></a>
+
+### Select target users
 
 On the **Target users** page, select who receives the Training campaign. Use the following options to select users:
 
@@ -191,11 +193,13 @@ On the **Target users** page, select who receives the Training campaign. Use the
 
 When you're finished on the **Target users** page, select **Next**.
 
-### Exclude users
+<a name="exclude-users"></a>
+
+### Exclude target users
 
 On the **Exclude users** page, you can exclude some of the previously selected users from the Training campaign by selecting **Exclude some of the target users from this simulation**.
 
-The selection options are identical to the previous step when you select :::image type="icon" source="media/defender-portal-icon-filter.png"::: **Add users to exclude** or :::image type="icon" source="media/defender-portal-icon-import.png"::: **Import**.
+The selection options are identical to the [Target users](#target-users) step when you select :::image type="icon" source="media/defender-portal-icon-filter.png"::: **Add users to exclude** or :::image type="icon" source="media/defender-portal-icon-import.png"::: **Import**.
 
 When you're finished on the **Exclude users** page, select **Next**.
 
@@ -440,15 +444,19 @@ A details page for the Training campaign opens with the following tabs:
 - **Users**
 - **Details**
 
-These tabs are described in the following subsections.
+For more information about each tab, see [Report tab](#report-tab), [Users tab](#users-tab), and [Details tab](#details-tab).
 
 To close the Training campaign report, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: **Close**.
 
-### Report tab
+<a name="report-tab"></a>
+
+### View training metrics on the Report tab
 
 For a description of what's on the **Report** tab for Training campaigns, see [Simulation report for Training campaigns](attack-simulation-training-insights.md#simulation-report-for-training-campaigns).
 
-### Users tab
+<a name="users-tab"></a>
+
+### Review learner status on the Users tab
 
 The **Users** tab contains the following information for each user in the campaign. You can sort the users by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. The default columns are marked with an asterisk (<sup>\*</sup>):
 
@@ -484,7 +492,9 @@ If you select a user from the list by clicking anywhere in the row other than th
 > [!TIP]
 > To see details about other users in the Training campaign without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
-### Details tab
+<a name="details-tab"></a>
+
+### View campaign settings on the Details tab
 
 The **Details** tab the following information:
 
