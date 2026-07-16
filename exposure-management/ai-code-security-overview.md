@@ -7,7 +7,7 @@ ms.custom: references_regions
 ai-usage: ai-assisted
 ---
 
-# Codename MDASH overview (preview)
+# Codename MDASH overview (private preview)
 
 Codename MDASH - Agentic code scanner is a capability in Microsoft Defender that uses a multi-model agentic AI system to detect code vulnerabilities with unprecedented depth and accuracy. It extends the Defender CLI with agentic code scanning that goes beyond traditional static analysis.
 

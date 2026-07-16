@@ -1,18 +1,18 @@
 ---
 title: Define how mobile devices are updated by Microsoft Defender Antivirus
-description: Manage how mobile devices, such as laptops, should be updated with Microsoft Defender Antivirus protection updates.
+description: Configure Microsoft Defender Antivirus protection update behavior for mobile devices and VMs, including Microsoft Update fallback and battery-power settings.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1014
+ms.custom: nextgen, msecd-doc-authoring-1016
 ms.reviewer: yongrhee
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -23,9 +23,9 @@ ai-usage: ai-assisted
 
 # Manage updates for mobile devices and virtual machines (VMs)
 
-Mobile devices and VMs may require more configuration to ensure performance is not impacted by updates.
+This article explains how to configure Microsoft Defender Antivirus update settings for mobile devices and virtual machines (VMs) to reduce performance impact during updates. Mobile devices and VMs may require more configuration to ensure performance is not impacted by updates.
 
-There are two settings that are useful for mobile devices and VMs:
+For Microsoft Defender Antivirus, two update-related settings are especially useful for mobile devices and VMs:
 
 - Opt in to Microsoft Update on mobile computers without a WSUS connection
 - Prevent Security intelligence updates when running on battery power
@@ -38,6 +38,7 @@ The following articles may also be useful in these situations:
 
 ## Prerequisites
 
+Before you configure the update settings described in this article, make sure your environment meets the following requirements.
 
 ### Supported operating systems
 

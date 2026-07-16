@@ -7,8 +7,8 @@ ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.topic: how-to
-ms.custom: nextgen, msecd-doc-authoring-1014
-ms.date: 06/16/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 ms.reviewer: yongrhee
 ms.collection: 
@@ -37,7 +37,7 @@ When Microsoft Defender Antivirus runs a scan, it attempts to remediate or remov
 >
 > If you are certain Microsoft Defender Antivirus quarantined a file based on a false positive, you can restore the file from quarantine after the device reboots. See [Restore quarantined files in Microsoft Defender Antivirus](restore-quarantined-files-microsoft-defender-antivirus.md). To avoid false-positive quarantines in the future, you can exclude files from the scans. See [Configure and validate exclusions for Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md).
 
-Also see [About regular quick and full scans with Microsoft Defender Antivirus](schedule-antivirus-scans.md) for more remediation-related settings.
+For scan scheduling and related remediation settings, see [About regular quick and full scans with Microsoft Defender Antivirus](schedule-antivirus-scans.md).
 
 ## Prerequisites
 
@@ -114,6 +114,8 @@ Use the following steps to configure remediation options in Group Policy:
 You can also use the [`Set-MpPreference` PowerShell cmdlet](/powershell/module/defender/set-mppreference) or [`MSFT_MpPreference` WMI class](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal) to configure the threat default-action and remediation settings.
 
 ## See also
+
+For platform-specific Defender for Endpoint configuration guidance, see the following articles:
 
 - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)

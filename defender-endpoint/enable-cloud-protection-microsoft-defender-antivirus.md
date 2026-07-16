@@ -6,9 +6,9 @@ ms.localizationpriority: medium
 ms.topic: how-to
 author: chrisda
 ms.author: chrisda
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ms.reviewer: pahuijbr
-ms.custom: nextgen, msecd-doc-authoring-1014
+ms.custom: nextgen, msecd-doc-authoring-1016
 ms.subservice: asr
 ms.collection:
 - m365-security
@@ -41,7 +41,7 @@ The following operating systems support cloud protection:
 
 Microsoft Defender Antivirus cloud protection helps protect against malware on your endpoints and across your network. We recommend keeping cloud protection turned on, because certain security features and capabilities in Microsoft Defender for Endpoint only work when cloud protection is enabled.
 
-[![Diagram showing Microsoft Defender features and protections that rely on cloud protection, including tamper protection, block at first sight, ASR rules, EDR in block mode, and emergency signature updates.](media/mde-cloud-protection.png#lightbox)](enable-cloud-protection-microsoft-defender-antivirus.md)
+[![Diagram of Defender for Endpoint features that depend on cloud protection, such as tamper protection, block at first sight, and ASR rules.](media/mde-cloud-protection.png#lightbox)](enable-cloud-protection-microsoft-defender-antivirus.md)
 
 
 The following table summarizes the features and capabilities that depend on cloud protection: <br/><br/>
@@ -60,7 +60,7 @@ The following table summarizes the features and capabilities that depend on clou
 
 ## Methods to configure cloud protection
 
-You can turn Microsoft Defender Antivirus cloud protection on or off by using one of several methods, such as:
+You can turn Microsoft Defender Antivirus cloud protection on or off by using one of the following methods:
 
 - [Turn on cloud protection in Microsoft Defender Antivirus](#turn-on-cloud-protection-in-microsoft-defender-antivirus)
   - [Why cloud protection should be turned on](#why-cloud-protection-should-be-turned-on)
@@ -83,7 +83,7 @@ For more information about the specific network-connectivity requirements to ens
 
 To enable cloud protection by using Microsoft Intune, you first select an existing policy or create a new policy.
 
-To create a new policy and enable cloud protection in Intune, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
+To create a new policy and enable cloud protection in Intune, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the endpoint security policy, use these settings:
 
 - **Policy type**: Antivirus
 - **Platform**: Windows
@@ -94,7 +94,7 @@ To create a new policy and enable cloud protection in Intune, see <a href="/intu
 - **Scope tags**: If your organization is using [scope tags](/intune/intune-service/fundamentals/scope-tags), select the tags you want to use
 - **Assignments**: Select the groups, users, or devices to whicj that you want to apply this policy
 
-When modifying an existing policy, see <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (opens in a new tab in the Intune documentation). Select the policy you want to edit and choose the following options:
+When modifying an existing policy, see <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (opens in a new tab in the Intune documentation). Select the antivirus policy you want to edit and choose the following options:
 
 - **Defender**: Find **Allow Cloud Protection** and set it to **Allowed**.
 - **Submit Samples Consent**: Select **Send all samples automatically** or **Send safe samples automatically**
@@ -138,7 +138,7 @@ To enable cloud protection by using Group Policy, perform the following steps:
 
 ## Use PowerShell cmdlets to turn on cloud protection
 
-The following cmdlets enable advanced cloud-delivered protection (MAPS) reporting and configure automatic sample submission for all file types:
+The following cmdlets enable advanced cloud-delivered protection (Microsoft Active Protection Service (MAPS)) reporting and configure automatic sample submission for all file types:
 
 ```PowerShell
 Set-MpPreference -MAPSReporting Advanced
@@ -168,7 +168,7 @@ For more information about allowed parameters, see [Windows Defender WMIv2 APIs]
 ## Turn on cloud protection on individual clients with the Windows Security app
 
 > [!NOTE]
-> If the **Configure local setting override for reporting Microsoft MAPS** Group Policy setting is set to **Disabled**, then the **Cloud-based protection** setting in Windows Settings are greyed out and unavailable. Changes made through a Group Policy Object must first be deployed to individual endpoints before the setting is updated in Windows Settings.
+> If the **Configure local setting override for reporting Microsoft MAPS** Group Policy setting is set to **Disabled**, then the **Cloud-based protection** setting in **Windows Security > Virus & threat protection settings** is greyed out and unavailable. Changes made through a Group Policy Object must first be deployed to individual endpoints before the setting is updated in **Windows Security > Virus & threat protection settings**.
 
 1. Open the Windows Security app by selecting the shield icon in the task bar, or by searching the start menu for **Windows Security**.
 

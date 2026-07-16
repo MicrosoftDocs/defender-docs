@@ -6,7 +6,7 @@ ms.date: 05/31/2026
 ai-usage: ai-assisted
 ---
 
-# Review agentic code scan results in the Microsoft Defender portal (preview)
+# Review agentic code scan results in the Microsoft Defender portal (private preview)
 
 Agentic code scan findings are surfaced in the Microsoft Defender portal through Microsoft Security Exposure Management (MSEM). The Codename MDASH - Agentic code scanner initiative aggregates findings for all scanned repositories, giving security teams a centralized view for vulnerability tracking and remediation.
 

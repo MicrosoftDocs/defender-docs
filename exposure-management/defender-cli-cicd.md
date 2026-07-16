@@ -6,7 +6,7 @@ ms.date: 06/01/2026
 ai-usage: ai-assisted
 ---
 
-# CI/CD example for Defender CLI (preview)
+# CI/CD example for Defender CLI (private preview)
 
 This sample GitHub Actions workflow downloads Defender CLI at runtime, passes credentials as environment variables, and runs both a file system scan and an AI scan submission. Use it as a baseline and adapt the trigger, path scope, and secret names to match your repository standards.
 

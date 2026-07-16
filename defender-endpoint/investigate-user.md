@@ -1,6 +1,6 @@
 ---
 title: Investigate a user account in Microsoft Defender for Endpoint
-description: Investigate a user account for potential compromised credentials or pivot on the associated user account during an investigation.
+description: Investigate a user account in Microsoft Defender for Endpoint to assess possible credential compromise, review related activity, and pivot to associated investigation data.
 ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
@@ -10,14 +10,14 @@ ms.collection:
 - tier2
 - mde-edr
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ms.subservice: edr
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Investigate a user account in Microsoft Defender for Endpoint
 
@@ -46,7 +46,7 @@ When you investigate a user account entity, you can see:
 <a name="user-details"></a>
 ### Review user details
 
-The **User details** pane on left provides information about the user, such as related open incidents, active alerts, SAM name, SID, Microsoft Defender for Identity alerts, number of devices the user is logged on to, when the user was first and last seen, role, and logon types. Depending on the integration features you've enabled, you can see other details. For example, if you enable the Skype for business integration, you're able to contact the user from the portal. The **Azure ATP alerts** section contains a link that takes you to the Microsoft Defender for Identity page, if you've enabled the Microsoft Defender for Identity feature, and there are alerts related to the user. The Microsoft Defender for Identity page provides more information about the alerts.
+The **User details** pane on left provides information about the user, such as related open incidents, active alerts, Security Account Manager (SAM) name, security identifier (SID), Microsoft Defender for Identity alerts, number of devices the user is logged on to, when the user was first and last seen, role, and logon types. Depending on the integration features you've enabled, you can see other details. For example, if you enable the Skype for business integration, you're able to contact the user from the portal. The **Azure ATP alerts** section contains a link to the user's alerts page in Microsoft Defender for Identity, if you've enabled the Microsoft Defender for Identity feature and there are alerts related to the user. The user's alerts page in Microsoft Defender for Identity provides more information about the alerts.
 
 > [!NOTE]
 > You'll need to enable the integration on both Microsoft Defender for Identity and Defender for Endpoint to use this feature. In Defender for Endpoint, you can enable this feature in advanced features. For more information on how to enable advanced features, see [Turn on advanced features](advanced-features.md).
@@ -57,7 +57,7 @@ On the user account details page, the Overview, Alerts, and Observed in organiza
 > For Linux devices, information about logged in users isn't displayed.
 
 > [!NOTE]
-> Microsoft Defender for Business doesn't include Microsoft Defender for Identity (MDI) by default. In SMB-based environments, Logon User data won't be available unless MDI sensors are installed. To ensure visibility into logon events, customers must deploy MDI sensors.
+> Microsoft Defender for Business doesn't include Microsoft Defender for Identity (MDI) by default. In SMB-based environments, Logon User data won't be available unless MDI sensors (installed on domain controllers to collect identity-related signals) are deployed. To ensure visibility into logon events, customers must deploy MDI sensors.
 
 ### Overview
 

@@ -6,7 +6,7 @@ ms.date: 05/31/2026
 ai-usage: ai-assisted
 ---
 
-# Install and run Defender CLI (preview)
+# Install and run Defender CLI (private preview)
 
 Download Defender CLI and run agentic code scans from your terminal.
 

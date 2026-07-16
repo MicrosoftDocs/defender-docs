@@ -6,8 +6,8 @@ ms.localizationpriority: medium
 ms.topic: how-to
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1014
-ms.date: 06/16/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.reviewer: yongrhee
 ms.subservice: ngp
 ms.collection:
@@ -25,7 +25,7 @@ ai-usage: ai-assisted
 
 In Windows 10 or later and Windows Server 2016 or later, you can use the next-generation protection features in Microsoft Defender Antivirus with exploit protection.
 
-This article explains how to enable and test the key protection features in Microsoft Defender Antivirus with exploit protection.
+The following sections explain how to enable and test the key protection features in Microsoft Defender Antivirus with exploit protection.
 
 We recommend you use our [evaluation PowerShell script](https://aka.ms/wdeppscript) to configure these features, but you can individually enable each feature as described in this article.
 
@@ -53,7 +53,8 @@ Microsoft Defender Antivirus uses [standard Windows notifications](configure-not
 
 The Windows Event Log also records detection and engine events. For more information, see [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](troubleshoot-microsoft-defender-antivirus.yml).
 
-## Cloud protection features
+<a name="cloud-protection-features"></a>
+## Use PowerShell to configure cloud protection features
 
 Standard definition updates can take hours to prepare and deliver. Our cloud-delivered protection service can deliver updated malware protection in seconds. For more information, see [Cloud protection and Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md).
 
@@ -93,9 +94,10 @@ Standard definition updates can take hours to prepare and deliver. Our cloud-del
   Set-MpPreference -CloudExtendedTimeout 50
   ```
 
-## Always-on protection (real-time scanning)
+<a name="always-on-protection-real-time-scanning"></a>
+## Use PowerShell to enable always-on protection (real-time scanning)
 
-Microsoft Defender Antivirus scans files as Windows sees them, and monitors running processes for malicious behavior (known or suspected). If the antivirus engine discovers malicious activity, the engine immediately blocks the process or file from running. For more information on these options, see [Configure behavioral, heuristic, and real-time protection](configure-protection-features-microsoft-defender-antivirus.md).
+Microsoft Defender Antivirus scans files as Windows sees them, and monitors running processes for malicious behavior (known or suspected). If the antivirus engine discovers malicious activity, the engine immediately blocks the process or file from running. For more information on behavioral, heuristic, and real-time protection options, see [Configure behavioral, heuristic, and real-time protection](configure-protection-features-microsoft-defender-antivirus.md).
 
 - **Constantly monitor files and processes for known malware activity**:
 
@@ -121,7 +123,8 @@ Microsoft Defender Antivirus scans files as Windows sees them, and monitors runn
   Set-MpPreference -DisableRemovableDriveScanning 0
   ```
 
-## Potentially unwanted application protection
+<a name="potentially-unwanted-application-protection"></a>
+## Use PowerShell to enable potentially unwanted application protection
 
 [Potentially unwanted applications](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md) are files and apps that aren't traditionally classified as malicious. These types of apps include:
 
@@ -135,7 +138,8 @@ Microsoft Defender Antivirus scans files as Windows sees them, and monitors runn
 Set-MpPreference -PUAProtection Enabled
 ```
 
-## Email and archive scanning
+<a name="email-and-archive-scanning"></a>
+## Use PowerShell to configure email and archive scanning
 
 You can set Microsoft Defender Antivirus to automatically scan certain types of email files and archive files (such as .zip files) when Windows see them. For more information, see [Managed email scans in Microsoft Defender](configure-advanced-scan-types-microsoft-defender-antivirus.md).
 
@@ -163,9 +167,10 @@ Typically, you get Microsoft Defender Antivirus updates from Windows update once
 
 <a name="advanced-threat-and-exploit-mitigation-and-prevention-controlled-folder-access"></a>
 
-## Advanced threat mitigation and prevention
+<a name="advanced-threat-mitigation-and-prevention"></a>
+## Use PowerShell to configure advanced threat mitigation features
 
-Exploit protection provides features that help protect devices from known malicious behaviors and attacks on vulnerable technologies. Controlled folder access protects sensitive data in specific folders by preventing untrusted apps from writing to those locations.
+Exploit protection provides features that help protect devices from known malicious behaviors and attacks on vulnerable technologies. Controlled folder access (CFA) protects sensitive data in specific folders by preventing untrusted apps from writing to those locations.
 
 - **Prevent malicious and suspicious apps (such as ransomware) from making changes to protected folders with [controlled folder access (CFA)](controlled-folder-access-overview.md)**:
 
@@ -204,7 +209,7 @@ Tamper protection prevents unauthorized changes to your security settings. For m
 
 #### Check the Cloud Protection network connectivity
 
-It's important to verify that Cloud Protection network connectivity is working during your penetration testing by doing the following steps:
+Cloud Protection is the cloud-delivered protection service in Microsoft Defender Antivirus. It's important to verify that Cloud Protection network connectivity is working during your penetration testing by doing the following steps:
 
 In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
 

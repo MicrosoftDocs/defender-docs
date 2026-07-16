@@ -46,17 +46,14 @@ When enabled, the sensor automatically:
     - **Directory services advanced auditing**: Adds audit entries to the domain root object's System Access Control List (SACL) to enable required directory service auditing.
     - **NTLM auditing**: Uses standard Windows Registry APIs to configure the required NTLM auditing registry values.
     - **Domain object auditing**: Modifies the SACL on the Configuration partition to capture changes to directory service configuration objects.
-    - **AD FS auditing**: Automatically configures both of the following:
-        - **Object-level auditing on the AD FS configuration container**: Adds audit entries to the object's System Access Control List (SACL) of the AD FS configuration container, to enable auditing of AD FS-related directory objects.
-        - **Group Policy for event auditing**: Configures the **Audit Application Generated** advanced audit policy (Success and Failure) on the local system by using the Windows Local Security Authority (LSA) audit policy APIs under the sensor's local system account. Other AD FS auditing settings aren't included in automatic auditing and remain manual, such as AD FS event auditing in AD FS Management and verbose logging for AD FS events.
-    - **AD CS auditing**: Writes the required value to the certificate authority (CA) audit filter in the CA's registry configuration. Automatic auditing modifies an audit filter that's already set to some value; it doesn't create one, so the CA must already have an audit filter configured. The new value takes effect only after the Certificate Services (certsvc) service restarts. Until the service is restarted, Defender for Identity raises a health alert that prompts you to restart it.
-    - **Microsoft Entra Connect auditing**: Configures the **Audit Logon** advanced audit policy (Success and Failure) on Microsoft Entra Connect servers by using the Windows LSA audit policy APIs.
-    - **Windows audit policy**: Configures the local Windows audit policies using the Windows LSA audit policy APIs.
+    - **ADFS auditing**: Adds audit entries to the object's System Access Control List (SACL) of the AD FS configuration container, to enable auditing of AD FS-related directory objects.
+    - **Windows audit policy**: Configures the local Windows audit policies using the Windows Local Security Authority (LSA) audit policy APIs.
 - Applies auditing settings directly to the local system policy of the domain controller.
+- Sends health alerts about the configuration state.
 - Runs once every 24 hours.
 
 > [!NOTE]
-> - Automatic Windows event auditing is supported for domain controllers, or AD FS, AD CS, and Microsoft Entra Connect servers, that use the Defender for Identity sensor version 3.x only. It doesn't apply to v2.x domain controllers. For those servers, [configure Windows event auditing manually](#configure-windows-event-collection-manually).
+> - Automatic Windows event auditing is supported for domain controllers that use the Defender for Identity sensor version 3.x only. It doesn't apply to v2.x domain controllers or to AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers. For those servers, [configure Windows event auditing manually](#configure-windows-event-collection-manually).
 > - If you don't turn on automatic Windows auditing, you **must** [configure Windows event auditing manually](#configure-windows-event-collection-manually) or by [configuring Windows event collection using PowerShell](#configure-windows-event-collection-using-powershell).
 > - GPO settings can conflict with local settings set by the sensor.
 
