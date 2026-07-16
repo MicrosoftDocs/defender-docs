@@ -7,8 +7,8 @@ ms.localizationpriority: medium
 ms.topic: how-to
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1014
-ms.date: 06/16/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.reviewer: joshbregman
 ms.collection:
 - m365-security
@@ -27,7 +27,7 @@ ai-usage: ai-assisted
 - **Performance issues**: Systems experience an unexpected performance impact when running with Defender for Endpoint
 - **Application compatibility issues**: Applications experience unexpected behavior when running with Defender for Endpoint
 
-Creating an exclusion is one possible approach for addressing these types of issues. But often there are other steps you can take. In addition to providing an overview of indicators and exclusions, this article includes [Alternatives to creating exclusions and allow indicators](#alternatives-to-creating-exclusions-and-allow-indicators).
+Creating an exclusion is one possible approach for addressing false positives, performance issues, and application compatibility issues. But often there are other steps you can take. In addition to providing an overview of indicators and exclusions, this article includes [Alternatives to creating exclusions and allow indicators](#alternatives-to-creating-exclusions-and-allow-indicators).
 
 > [!NOTE]
 > Creating an indicator or an exclusion should only be considered after thoroughly understanding the root cause of the unexpected behavior.
@@ -45,7 +45,7 @@ The following table lists common scenarios and the steps to consider before crea
 
 ## Alternatives to creating exclusions and allow indicators
 
-Creating an exclusion or an allow indicator creates a protection gap. These techniques should only be used after determining the root cause of the issue. Until that determination is made, consider these alternatives:
+Creating an exclusion or an allow indicator creates a protection gap. Exclusions and allow indicators should only be used after determining the root cause of the issue. Until the root cause of the issue has been determined, consider the following alternatives:
 
 - Submit a file to Microsoft for analysis
 - Suppress an alert
@@ -73,7 +73,7 @@ To learn more, see the following articles:
 There are several different types of exclusions to consider. Some types of exclusions affect multiple capabilities in Defender for Endpoint, whereas other types are specific to Microsoft Defender Antivirus.
 
 - **[Custom exclusions](#custom-exclusions)**: These are exclusions that you define for specific use cases or scenarios, and for certain operating systems, such as [Mac](#exclusions-on-mac), [Linux](#exclusions-on-linux), and [Windows](#exclusions-on-windows).
-- **[Preconfigured antivirus exclusions](#antivirus-preconfigured-exclusions)**: These are exclusions that you don't have to define, such as [automatic server role exclusions](#automatic-server-role-exclusions) and [built-in antivirus exclusions](#built-in-antivirus-exclusions). Even though you don't have to define these, it's helpful to know what they are and how they work.
+- **[Preconfigured antivirus exclusions](#antivirus-preconfigured-exclusions)**: These are exclusions that you don't have to define, such as [automatic server role exclusions](#automatic-server-role-exclusions) and [built-in antivirus exclusions](#built-in-antivirus-exclusions). Even though you don't have to define preconfigured antivirus exclusions, it's helpful to know what those exclusions are and how they work.
 - **[Attack surface reduction exclusions](#attack-surface-reduction-exclusions)**: These are exclusions to prevent attack surface reduction capabilities from blocking legitimate applications that your organization might be using.
 - **[Automation folder exclusions](#automation-folder-exclusions)**: These are exclusions that you define to prevent automated investigation and remediation capabilities from applying to specific files or folders.
 - **[Controlled folder access exclusions](#controlled-folder-access-exclusions)**: These are exclusions to allow certain apps or executables to access protected folders.
@@ -113,10 +113,10 @@ For more information, see [Configure and validate exclusions for Microsoft Defen
 
 #### Exclusions on Linux
 
-On Linux, you can configure both antivirus and global exclusions.
+On Linux, you can configure both antivirus and global exclusions. These exclusions can apply to on-demand scans, real-time protection (RTP), behavior monitoring (BM), and endpoint detection and response (EDR).
 
-- **Antivirus exclusions**: Apply to on-demand scans, real-time protection (RTP), and behavior monitoring (BM).
-- **Global exclusions**: Apply to real-time protection (RTP), behavior monitoring (BM), and endpoint detection and response (EDR), stopping all associated antivirus detections and EDR alerts.
+- **Antivirus exclusions**: Apply to on-demand scans, RTP, and BM.
+- **Global exclusions**: Apply to RTP, BM, and EDR, stopping all associated antivirus detections and EDR alerts.
 
 For more information, see [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](linux-exclusions.md).
 
@@ -128,7 +128,7 @@ For more granular control that helps minimize protection gaps, consider using [C
 
 ### Antivirus preconfigured exclusions
 
-These exclusion types are preconfigured in Microsoft Defender for Endpoint for Microsoft Defender Antivirus.
+Automatic server role exclusions and built-in antivirus exclusions are preconfigured in Microsoft Defender for Endpoint for Microsoft Defender Antivirus.
 
 | Exclusion types | Configuration | Description |
 |---|----|----|
@@ -137,7 +137,7 @@ These exclusion types are preconfigured in Microsoft Defender for Endpoint for M
 
 #### Automatic server role exclusions
 
-[Automatic server role exclusions](configure-server-exclusions-microsoft-defender-antivirus.md#automatic-server-role-exclusions) include exclusions for server roles and features in Windows Server 2016 and later. These exclusions aren't scanned by [real-time protection](configure-protection-features-microsoft-defender-antivirus.md) but are still subject to [quick, full, or on-demand antivirus scans](schedule-antivirus-scans.md#comparing-the-quick-scan-full-scan-and-custom-scan).
+[Automatic server role exclusions](configure-server-exclusions-microsoft-defender-antivirus.md#automatic-server-role-exclusions) include exclusions for server roles and features in Windows Server 2016 and later. Automatic server role exclusions aren't scanned by [real-time protection](configure-protection-features-microsoft-defender-antivirus.md) but are still subject to [quick, full, or on-demand antivirus scans](schedule-antivirus-scans.md#comparing-the-quick-scan-full-scan-and-custom-scan).
 
 Examples include:
 
@@ -168,7 +168,7 @@ Examples include:
 - Windows Security files
 - ... and more.
 
-The list of built-in exclusions in Windows is kept up to date as the threat landscape changes. To learn more about these exclusions, see [Microsoft Defender Antivirus exclusions on Windows Server: Built-in exclusions](configure-server-exclusions-microsoft-defender-antivirus.md#built-in-exclusions).
+The list of built-in exclusions in Windows is kept up to date as the threat landscape changes. To learn more about built-in antivirus exclusions, see [Microsoft Defender Antivirus exclusions on Windows Server: Built-in exclusions](configure-server-exclusions-microsoft-defender-antivirus.md#built-in-exclusions).
 
 ### Attack surface reduction exclusions
 
@@ -178,7 +178,7 @@ The list of built-in exclusions in Windows is kept up to date as the threat land
 
 Automation folder exclusions apply to [automated investigation and remediation](automated-investigations.md) in Defender for Endpoint, which is designed to examine alerts and take immediate action to resolve detected breaches. As alerts are triggered, and an automated investigation runs, a verdict (Malicious, Suspicious, or No threats found) is reached for each piece of evidence investigated. Depending on the [automation level](automation-levels.md) and other security settings, remediation actions can occur automatically or only upon approval by your security operations team.
 
-You can specify folders, file extensions in a specific directory, and file names to be excluded from automated investigation and remediation capabilities. Such automation folder exclusions apply to all devices onboarded to Defender for Endpoint. These exclusions are still subject to antivirus scans.
+You can specify folders, file extensions in a specific directory, and file names to be excluded from automated investigation and remediation capabilities. Automation folder exclusions for specified folders, file extensions, and file names apply to all devices onboarded to Defender for Endpoint. These exclusions are still subject to antivirus scans.
 
 For more information, see [Manage automation folder exclusions](manage-automation-folder-exclusions.md).
 
@@ -198,7 +198,7 @@ For more information, see [Configure remediation actions for Microsoft Defender 
 
 Most organizations have several different types of exclusions and indicators to determine whether users should be able to access and use a file or process. Exclusions and indicators are processed in a particular order so that [policy conflicts are handled systematically](indicator-file.md#policy-conflict-handling).
 
-Here's how it works:
+Here's how it works. Windows Defender Application Control and AppLocker are application control technologies that can block unapproved files and processes before antivirus evaluation begins.
 
 1. If a detected file/process isn't allowed by Windows Defender Application Control and AppLocker, it's blocked. Otherwise, it proceeds to Microsoft Defender Antivirus.
 
@@ -236,7 +236,7 @@ Here are some examples of technical documentation to identify and implement the 
 - [Folders to exclude from antivirus scans on SharePoint Server](https://support.microsoft.com/office/certain-folders-may-have-to-be-excluded-from-antivirus-scanning-when-you-use-file-level-antivirus-software-in-sharepoint-01cbc532-a24e-4bba-8d67-0b1ed733a3d9)
 - [Choosing antivirus software for SQL Server](https://support.microsoft.com/topic/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server-feda079b-3e24-186b-945a-3051f6f3a95b)
 
-Depending on what you're using, you might need to refer to the documentation for that server workload.
+Depending on what you're using, you might need to refer to the documentation for your specific server workload, such as Exchange Server, SharePoint Server, or SQL Server.
 
 ## See also
 

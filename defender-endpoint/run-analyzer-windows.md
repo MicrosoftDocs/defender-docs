@@ -12,13 +12,13 @@ ms.collection:
 - mde-ngp
 ms.topic: how-to
 ms.subservice: ngp
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Run the client analyzer on Windows
 
@@ -66,7 +66,7 @@ In addition to running the client analyzer locally on the device, you can also [
 > [!NOTE]
 > On Windows 10 and 11, Windows Server 2019 and 2022, or Windows Server 2012R2 and 2016 with the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) installed, the client analyzer script calls into an executable file called `MDEClientAnalyzer.exe` to run the connectivity tests to cloud service URLs.
 >
-> On Windows 8.1, Windows Server 2016 or any previous OS edition where Microsoft Monitoring Agent (MMA) is used for onboarding, the client analyzer script calls into an executable file called `MDEClientAnalyzerPreviousVersion.exe` to run connectivity tests for Command and Control (CnC) URLs while also calling into Microsoft Monitoring Agent connectivity tool `TestCloudConnection.exe` for Cyber Data channel URLs.
+> On Windows 8.1, Windows Server 2016 or any previous OS edition where Microsoft Monitoring Agent (MMA) is used for onboarding, the client analyzer script calls into an executable file called `MDEClientAnalyzerPreviousVersion.exe` to run connectivity tests for Command and Control (CnC) URLs while also calling into the MMA connectivity tool `TestCloudConnection.exe` for Cyber Data channel URLs.
 
 > [!TIP]
 > Watch this video to learn more about onboarding issues: [Defender for Endpoint client analyzer onboarding issues](https://www.youtube.com/watch?v=HdhePgMBqs8)
@@ -123,7 +123,7 @@ By default, the unpacked `MDEClientAnalyzerResult.zip` file contains the items l
 | `MdeConfigMgrLogs` | `report_xxx.json` | Corresponding enforcement results |
 
 
-## See also
+## Related content
 
 - [Client analyzer overview](overview-client-analyzer.md)
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)

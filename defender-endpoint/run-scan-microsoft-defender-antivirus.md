@@ -7,8 +7,8 @@ ms.topic: how-to
 author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
-ms.custom: nextgen, msecd-doc-authoring-1014
-ms.date: 06/16/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.subservice: ngp
 ms.collection: 
 - m365-security
@@ -27,10 +27,10 @@ ai-usage: ai-assisted
 
 You can run an on-demand scan on individual endpoints. These scans will start immediately, and you can define parameters for the scan, such as the location or type. When you run a scan, you can choose from among three types: Quick scan, full scan, and custom scan. In most cases, use a quick scan. A quick scan looks at all the locations where there could be malware registered to start with the system, such as registry keys and known Windows startup folders.
 
-Combined with always-on, real-time protection, which reviews files when they are opened and closed, and whenever a user navigates to a folder, a quick scan helps provide strong protection against malware that starts with the system and kernel-level malware. In most cases, a quick scan is sufficient and is the recommended option for scheduled or on-demand scans. [Learn more about scan types](schedule-antivirus-scans.md#comparing-the-quick-scan-full-scan-and-custom-scan).
+Combined with always-on, real-time protection, which reviews files when they are opened and closed, and whenever a user navigates to a folder, a quick scan helps provide strong protection against malware that starts with the system and kernel-level malware. In most cases, a quick scan is sufficient and is the recommended option for scheduled or on-demand scans. [Compare quick, full, and custom scan types](schedule-antivirus-scans.md#comparing-the-quick-scan-full-scan-and-custom-scan).
 
 > [!IMPORTANT]
-> Microsoft Defender Antivirus runs in the context of the [LocalSystem](/windows/win32/services/localsystem-account) account when performing a local scan. For network scans, it uses the context of the device account. If the domain device account doesn't have appropriate permissions to access the share, the scan won't work. Ensure that the device has permissions to access the network share.
+> Microsoft Defender Antivirus runs in the context of the [LocalSystem account](/windows/win32/services/localsystem-account) when performing a local scan. For network scans, it uses the context of the device account. If the domain device account doesn't have appropriate permissions to access the share, the scan won't work. Ensure that the device has permissions to access the network share.
 
 ## Use Microsoft Defender portal to run a scan
 
@@ -73,7 +73,7 @@ To run a scan on a single device, complete the following steps:
 
 ## Use the Windows Security app to run a scan
 
-For instructions on running a scan on individual endpoints, see [Run a scan in the Windows Security app](microsoft-defender-security-center-antivirus.md).
+For instructions on running a scan on individual Windows devices, see [Run a scan in the Windows Security app](microsoft-defender-security-center-antivirus.md).
 
 <a name="use-powershell-cmdlets-to-run-a-scan"></a>
 
@@ -91,6 +91,9 @@ For detailed syntax and parameter information, see [Start-MpScan](/powershell/mo
 
 ## Use PowerShell to run a quick scan without exclusions
 
+> [!IMPORTANT]
+> Including very large directories in quick scans might significantly increase the time it takes for the quick scan to complete.
+
 Run the following command:
 
 ```PowerShell
@@ -100,9 +103,6 @@ Set-MpPreference -QuickScanIncludeExclusions ScanRtpExclusions
 The value ScanRtpExclusions or 1 includes paths that are excluded from antivirus using contextual exclusions with the following restrictions: `ScanTrigger:OnAccess`, `ScanTrigger:BM`, and `Process:`. For more information on how to set these exclusions, see [Contextual file and folder exclusions](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md).
 
 The default value Disabled or 0 disables the inclusion of the contextually excluded paths.
-
-> [!IMPORTANT]
-> Including very large directories in quick scans might significantly increase the time it takes for the quick scan to complete.
 
 For more information on how to use PowerShell with Microsoft Defender Antivirus, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/).
 
