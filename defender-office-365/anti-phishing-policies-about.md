@@ -9,12 +9,12 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - seo-marvel-apr2020
   - sfi-image-nochange
 description: Admins can learn about the anti-phishing policies that are available in the built-in security features for all cloud mailboxes and in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 06/30/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -39,7 +39,7 @@ Anti-phishing policies protect against phishing attacks by detecting spoofed sen
 - **Additional reporting and insights**:
   - Advanced reporting features and visibility into phishing attempts beyond basic logging.
 
-In Microsoft Defender, anti-phishing policies are available on the [**Email & Collaboration** > **Policies & rules** > **Threat policies** > **Anti-phishing**](https://security.microsoft.com/antiphishing) page. While a default anti-phishing policy automatically applies to all recipients, you can also create custom policies for specific users, groups, or domains. The following sections describe the settings that are available in anti-phishing policies for all cloud mailboxes and in anti-phishing policies in Defender for Office 365.
+In Microsoft Defender, anti-phishing policies are available on the [**Email & Collaboration** > **Policies & rules** > **Threat policies** > **Anti-phishing**](https://security.microsoft.com/antiphishing) page. While a default anti-phishing policy automatically applies to all recipients, you can also create custom policies for specific users, groups, or domains. This article describes the settings that are available in anti-phishing policies for all cloud mailboxes and in anti-phishing policies in Defender for Office 365.
 
 ## Configure anti-phishing policies
 
@@ -56,7 +56,7 @@ To configure anti-phishing policies, see the following articles:
 
 ## Comparison of anti-phishing policies for all cloud mailboxes and in Defender for Office 365
 
-The high-level differences between the anti-phishing policies for all cloud mailboxes and anti-phishing policies in Defender for Office 365 are described in the following table:
+The anti-phishing policies for all cloud mailboxes and anti-phishing policies in Defender for Office 365 share several features (default policy, custom policies, common policy settings, spoof settings, and first contact safety tip), but only Defender for Office 365 includes impersonation settings and phishing email thresholds. The specific feature comparison is:
 
 |Feature|Anti-phishing policies<br>for all cloud mailboxes|Anti-phishing policies<br>in Defender for Office 365|
 |---|:---:|:---:|
@@ -125,7 +125,7 @@ The following spoof settings are available in anti-phishing policies for all clo
   > - You don't need to disable anti-spoofing protection if your MX record doesn't point to Microsoft 365; you enable Enhanced Filtering for Connectors instead. For instructions, see [Enhanced Filtering for Connectors in Exchange Online](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
   > - Disabling anti-spoofing protection only disables _implicit_ spoofing protection from [composite authentication](email-authentication-about.md#composite-authentication) checks. For information about how anti-spoofing protection and the source domains's domain's DMARC policy (`p=quarantine` or `p=reject` in the DMARC TXT record) affect _explicit_ [DMARC](email-authentication-dmarc-configure.md) checks, see the [Spoof protection and sender DMARC policies](#spoof-protection-and-sender-dmarc-policies) section.
 
-- **Unauthenticated sender indicators**: Available in the **Safety tips & indicators** section only when spoof intelligence is turned on. See the details in the next section.
+- **Unauthenticated sender indicators**: Available in the **Safety tips & indicators** section only when spoof intelligence is turned on. For details, see [Unauthenticated sender indicators](#unauthenticated-sender-indicators).
 - **Actions**: For messages from blocked spoofed senders (automatically blocked by spoof intelligence ([composite authentication](email-authentication-about.md#composite-authentication) failure plus malicious intent) or manually blocked in the Tenant Allow/Block list), you can also specify the action to take on the messages:
   - **Move messages to the recipients' Junk Email folders**: The default value. The message is delivered to the mailbox and moved to the Junk Email folder. For more information, see [Configure junk email settings on cloud mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).
   - **Quarantine the message**: Sends the message to quarantine instead of the intended recipients. For information about quarantine, see the following articles:
@@ -151,7 +151,7 @@ In anti-phishing policies, you can control whether `p=quarantine` or `p=reject` 
 
 :::image type="content" source="media/anti-phishing-policies-honor-dmarc-settings.png" alt-text="DMARC settings in an anti-phishing policy." lightbox="media/anti-phishing-policies-honor-dmarc-settings.png":::
 
-The relationship between spoof intelligence and whether sender DMARC policies are honored is described in the following table:
+The action taken on a spoofed message depends on whether spoof intelligence is enabled and whether the **Honor DMARC policy** setting is turned on. The combinations and their resulting behaviors are:
 
 > [!TIP]
 > It's important to understand that a [composite authentication](email-authentication-about.md#composite-authentication) failure doesn't directly result in a message being blocked. Our system uses a holistic evaluation strategy that considers the overall suspicious nature of a message along with composite authentication results. This method mitigates the risk of incorrectly blocking legitimate email from domains that might not strictly adhere to email authentication protocols. This balanced approach helps distinguish genuinely malicious email from legitimate message senders who fail to conform to standard email authentication practices.
@@ -241,7 +241,7 @@ Impersonation is where the sender or the sender's email domain in a message look
 
 An impersonated domain might otherwise be considered legitimate (the domain is registered, email authentication DNS records are configured, etc.), except the intent of the domain is to deceive recipients.
 
-The impersonation settings described in the following sections are available only in anti-phishing policies in Defender for Office 365.
+The impersonation settings for [user impersonation protection](#user-impersonation-protection), [domain impersonation protection](#domain-impersonation-protection), [mailbox intelligence](#mailbox-intelligence-impersonation-protection), [impersonation safety tips](#impersonation-safety-tips), and [trusted senders and domains](#trusted-senders-and-domains) are available only in anti-phishing policies in Defender for Office 365.
 
 > [!TIP]
 > Details about detected impersonation attempts are available in the impersonation insight. For more information, see [Impersonation insight in Defender for Office 365](anti-phishing-mdo-impersonation-insight.md).

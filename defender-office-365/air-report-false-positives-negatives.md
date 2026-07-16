@@ -4,14 +4,14 @@ description: Was something missed or wrongly detected by AIR in Microsoft Defend
 author: chrisda
 ms.author: chrisda
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 ms.localizationpriority: medium
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
 ms.custom:
-- msecd-doc-authoring-1014
+- msecd-doc-authoring-1016
 - autoir
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
@@ -38,10 +38,11 @@ The instructions depend on the available subscriptions in your organization:
 - **Microsoft Defender XDR**: [Tune an alert](/defender-xdr/investigate-alerts#tune-an-alert)
 - **Defender for Endpoint**: Create **Allow** actions for files, IP addresses URLs or domains that are misidentified as malware on devices. For instructions, see [Create indicators](/defender-endpoint/manage-indicators).
 
-## Undo remediation actions
+## Prerequisites
 
-> [!TIP]
-> For permission and licensing requirements, see [Required permissions and licensing for AIR](air-about.md#required-permissions-and-licensing-for-air).
+Before you undo remediation actions, verify that you have the required permissions and licensing. For details, see [Required permissions and licensing for AIR](air-about.md#required-permissions-and-licensing-for-air).
+
+## Undo remediation actions
 
 SecOps personnel can often use :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** to undo the remediation action that AIR applied to the item. For example:
 
