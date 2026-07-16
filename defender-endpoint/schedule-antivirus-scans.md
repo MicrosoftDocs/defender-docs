@@ -119,7 +119,7 @@ The scheduled quick-scan optimization applies to machines running Windows 10 Ann
 ## Related articles
 
 - [Microsoft Defender Antivirus scan considerations and best practices](mdav-scan-best-practices.md)
-- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md)
 
 
 

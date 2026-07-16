@@ -240,7 +240,7 @@ The following examples show how component enforcement interacts with file indica
 
 - [Manage indicators](indicator-manage.md)
 
-- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md)
 
 
 

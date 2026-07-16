@@ -92,4 +92,4 @@ Your submission is immediately scanned by our systems to give you the latest det
 
 ## See also
 
-[Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](/defender-endpoint/defender-endpoint-antivirus-exclusions)
+[Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](/defender-endpoint/defender-endpoint-exclusions-overview)

@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 06/09/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 #customer intent: As an IT admin, I want to understand attack surface reduction rules so I can protect Windows devices from common malware attack vectors.
 appliesto:
@@ -188,6 +188,7 @@ The following table summarizes the available methods. For detailed configuration
 |Method|Description|
 |---|---|
 |[Microsoft Intune endpoint security policies](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies)|The recommended method for configuring and distributing ASR rule policies to devices. Requires Microsoft Intune Plan 1 (included in subscriptions like Microsoft 365 E3 or available as a standalone add-on).|
+|[Microsoft Defender portal](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-the-microsoft-defender-portal)|Configure ASR rules and exclusions with endpoint security policies in the Microsoft Defender portal, using the same policies as Intune. Useful when you manage endpoint security policies from the Defender portal.|
 |[Microsoft Intune custom profiles with OMA-URIs](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-intune-using-custom-profiles-with-oma-uris-and-csps)|An alternative method for configuring ASR rules in Intune using Open Mobile Alliance – Uniform Resource (OMA-URI) profiles.|
 |[Any MDM solution using the Policy CSP](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-any-mdm-solution-using-the-policy-csp)|Use the Windows [Policy configuration service provider (CSP)](/windows/client-management/mdm/policy-configuration-service-provider) with any MDM solution.|
 |[Microsoft Configuration Manager](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-global-asr-rule-exclusions-in-microsoft-configuration-manager)|Uses the Microsoft Defender Antivirus policy in the **Assets and compliance** workspace.|
@@ -203,7 +204,7 @@ You can exclude specific **files** and **folders** from being evaluated by ASR r
 
 You can use the following methods to exclude files and folders from ASR rules:
 
-- **Microsoft Defender Antivirus exclusions**: Not all ASR rules honor these exclusions. For more information about Microsoft Defender Antivirus exclusions, see [Configure custom exclusions for Microsoft Defender Antivirus](configure-exclusions-microsoft-defender-antivirus.md).
+- **Microsoft Defender Antivirus exclusions**: Not all ASR rules honor these exclusions. For more information about Microsoft Defender Antivirus exclusions, see [Exclusions in Microsoft Defender Antivirus](microsoft-defender-antivirus-exclusions-overview.md).
 
   > [!TIP]
   > All ASR rules honor **process** exclusions in Microsoft Defender Antivirus.
@@ -212,6 +213,7 @@ You can use the following methods to exclude files and folders from ASR rules:
 - **Per-ASR rule exclusions**: Assign different exclusions selectively to different ASR rules. Only the following ASR rule configuration methods also support configuring per-ASR rule exclusions:
   - [Group Policy](attack-surface-reduction-rules-configure.md#configure-per-asr-rule-exclusions-in-group-policy) (and the corresponding registry settings)
   - [Endpoint security policies in Microsoft Intune](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies).
+  - [Endpoint security policies in the Microsoft Defender portal](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-the-microsoft-defender-portal)
 - **Indicators of compromise (IoCs)**: Most ASR rules honor IoCs for blocked files and blocked certificates. For more information about IoCs, see [Overview of indicators in Microsoft Defender for Endpoint](indicators-overview.md).
 
 The enforcement of different types of exclusions for ASR rules is summarized in the following table:
@@ -242,7 +244,7 @@ The enforcement of different types of exclusions for ASR rules is summarized in 
 
 When you add exclusions, keep these points in mind:
 
-- Exclusion paths can use environment variables and wildcards. For more information, see [Use wildcards in the file name and folder path or extension exclusion lists](configure-extension-file-exclusions-microsoft-defender-antivirus.md#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists).
+- Exclusion paths can use environment variables and wildcards. For more information, see [Wildcards in Microsoft Defender Antivirus exclusions](microsoft-defender-antivirus-exclusions-overview.md#wildcards-in-microsoft-defender-antivirus-exclusions).
 
   > [!TIP]
   > Don't use **user** environment variables as wildcards in folder and process exclusions. Only use the following types of environment variables as wildcards:
@@ -250,7 +252,7 @@ When you add exclusions, keep these points in mind:
   > - System environment variables.
   > - Environment variables that apply to processes running as the NT AUTHORITY\SYSTEM account.
   >
-  > For a list of system environment variables, see [System environment variables](configure-extension-file-exclusions-microsoft-defender-antivirus.md#system-environment-variables).
+  > For a list of system environment variables, see [System environment variables](microsoft-defender-antivirus-exclusions-overview.md#system-environment-variables).
 
   - Wildcards can't define a drive letter.
   - To exclude more than one folder in a path, use multiple instances of `\*\` to indicate multiple nested folders. For example, `c:\Folder\*\*\Test`.
@@ -299,4 +301,4 @@ For complete information, see [Monitor attack surface reduction (ASR) rule activ
 - [Manage and monitor your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-operationalize.md)
 - [Monitor attack surface reduction (ASR) rule activity](attack-surface-reduction-rules-monitor.md)
 - [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md)
-- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md)

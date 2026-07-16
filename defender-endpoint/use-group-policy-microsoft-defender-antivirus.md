@@ -75,11 +75,11 @@ The following table lists commonly used Group Policy settings that are available
 | Client interface| Display more text to clients when they need to perform an action | [Configure the notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
 | Client interface| Suppress all notifications | [Configure the notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
 | Client interface| Suppresses reboot notifications| [Configure the notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md) |
-| Exclusions| Extension Exclusions| [Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md) |
+| Exclusions| Extension Exclusions| [Configure and validate exclusions in Microsoft Defender Antivirus scans](microsoft-defender-antivirus-exclusions-configure.md) |
 | Exclusions | IP Address Exclusions | [Add network protection exclusions](troubleshoot-np.md#add-exclusions) |
-| Exclusions|Path Exclusions | [Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md) |
-| Exclusions|Process Exclusions | [Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md) |
-| Exclusions| Turn off Auto Exclusions | [Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md) |
+| Exclusions|Path Exclusions | [Configure and validate exclusions in Microsoft Defender Antivirus scans](microsoft-defender-antivirus-exclusions-configure.md) |
+| Exclusions|Process Exclusions | [Configure and validate exclusions in Microsoft Defender Antivirus scans](microsoft-defender-antivirus-exclusions-configure.md) |
+| Exclusions| Turn off Auto Exclusions | [Configure and validate exclusions in Microsoft Defender Antivirus scans](microsoft-defender-antivirus-exclusions-configure.md) |
 | Features | Device Control | [Deploy and manage device control in Microsoft Defender for Endpoint using Group Policy](device-control-deploy-manage-gpo.md) |
 | Features | Enable EDR in Block Mode | [EDR in block mode: Group Policy](edr-in-block-mode.md#group-policy) |
 | MAPS |  Configure the "Block at First Sight" feature| [Enable block at first sight](configure-block-at-first-sight-microsoft-defender-antivirus.md) |

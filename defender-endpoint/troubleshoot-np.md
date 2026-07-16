@@ -83,7 +83,7 @@ The current exclusion options are:
 
 1. Using IP exclusions: `Add-MpPreference -ExclusionIpAddress 192.168.1.1`.
 
-1. Excluding an entire process. For more information, see [Microsoft Defender Antivirus exclusions](configure-exclusions-microsoft-defender-antivirus.md).
+1. Excluding an entire process. For more information, see [Microsoft Defender Antivirus exclusions](microsoft-defender-antivirus-exclusions-configure.md).
 
 <a name="network-performance-issues"></a>
 ## Troubleshoot network performance issues

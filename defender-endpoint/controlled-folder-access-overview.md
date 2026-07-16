@@ -3,7 +3,7 @@ title: Protect folders from ransomware with controlled folder access
 description: Controlled folder access in Microsoft Defender Antivirus protects your important folders from ransomware by allowing only trusted apps to change files.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 author: chrisda
 ms.author: chrisda
 ms.reviewer: sugamar
@@ -107,13 +107,15 @@ Use **Audit disk modification only** first to confirm that no legitimate softwar
 
 Not every configuration method for CFA supports every mode. The following table shows which modes each [deployment and configuration method](#deployment-and-configuration-methods-for-cfa) supports.
 
-|Mode|Intune|Configuration Manager|MDM CSP|Group Policy|PowerShell|Windows Security app|
+|Mode|Intune|Configuration Manager|Policy CSP|Group Policy|PowerShell|Windows Security app|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 |**Disabled**|Yes|Yes|Yes|Yes|Yes|Yes|
 |**Enabled** (Block)|Yes|Yes|Yes|Yes|Yes|Yes|
 |**Audit Mode**|Yes|Yes|Yes|Yes|Yes|No|
 |**Block disk modification only**|Yes|No|Yes|Yes|Yes|No|
 |**Audit disk modification only**|Yes|No|Yes|Yes|Yes|No|
+
+The Microsoft Defender portal uses the [same endpoint security policies as Intune](endpoint-security-policies-configure.md), so it supports the same modes shown in the **Intune** column.
 
 ## Deployment and configuration methods for CFA
 
@@ -124,6 +126,7 @@ The following table summarizes the available methods. For detailed configuration
 |Method|Description|
 |---|---|
 |[Microsoft Intune](controlled-folder-access-configure.md#configure-cfa-in-intune-using-endpoint-security-policies)|The recommended method. Configure and deploy CFA to devices by using endpoint security policies. Requires [Microsoft Intune](/intune/intune-service/fundamentals/licenses).|
+|[Microsoft Defender portal](controlled-folder-access-configure.md#configure-cfa-in-the-microsoft-defender-portal)|Configure CFA with endpoint security policies in the Microsoft Defender portal, using the same policies as Intune. Useful when you manage endpoint security policies from the Defender portal.|
 |[Any MDM solution using the Policy CSP](controlled-folder-access-configure.md#configure-cfa-in-any-mdm-solution-using-the-policy-csp)|Use the Windows [Policy configuration service provider (CSP)](/windows/client-management/mdm/policy-configuration-service-provider) with any mobile device management (MDM) solution.|
 |[Microsoft Configuration Manager](controlled-folder-access-configure.md#configure-cfa-in-microsoft-configuration-manager)|Configure CFA in a Windows Defender Exploit Guard policy.|
 |[Group Policy](controlled-folder-access-configure.md#configure-cfa-in-group-policy)|Use centralized Group Policy to configure and deploy CFA to domain-joined devices, or configure Group Policy locally on individual devices.|

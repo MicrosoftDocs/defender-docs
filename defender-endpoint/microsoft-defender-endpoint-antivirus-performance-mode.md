@@ -69,7 +69,7 @@ To give the best possible performance, creating a Dev Drive automatically grants
 > Using performance mode doesn't apply to high cpu or high memory usage scenarios with Microsoft Defender Antivirus services (`MsMpEng.exe`, `WinDefend`, or Antimalware Service Executable). If you're troubleshooting a high cpu usage, instead use the Microsoft Defender Antivirus [Performance Analyzer](tune-performance-defender-antivirus.md) to narrow down to the hot processes/paths and add them to the exclusions.  
 
 > [!TIP]
-> Use [Contextual exclusions](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md) to target real-time protection (RTP).
+> Use [Contextual exclusions](microsoft-defender-antivirus-exclusions-overview.md#contextual-exclusions) to target real-time protection (RTP).
 The following table summarizes performance mode synchronous and asynchronous scan behavior.
 
 | Performance mode state | Scan type | Description | Summary |

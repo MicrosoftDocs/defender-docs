@@ -387,7 +387,7 @@ Enable tamper protection to prevent Microsoft Defender Antivirus from being disa
 <a name="exclusions"></a>
 ### Configure antivirus exclusions for VDI environments
 
-If you think you need to add exclusions, see [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
+If you think you need to add exclusions, see [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md).
 
 <a name="next-step"></a>
 ## Next steps

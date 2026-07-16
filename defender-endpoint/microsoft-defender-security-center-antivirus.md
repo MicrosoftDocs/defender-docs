@@ -60,9 +60,9 @@ Use this section to review the current security intelligence version and check f
 :::image type="content" source="/defender/media/wdav-wdsc-defs.png" alt-text="Security intelligence version number" lightbox="/defender/media/wdav-wdsc-defs.png":::
 
 > [!NOTE]
-> The *security intelligence version* (previously called the *definition version*) is the version number of the antimalware definitions that Microsoft Defender Antivirus uses. To check your version, follow the steps below and navigate to **Virus & threat protection updates**.
+> The _security intelligence version_ (previously called the _definition version_) is the version number of the antimalware definitions that Microsoft Defender Antivirus uses. To check your version, use the following steps:
 
-1. Open the Windows Security app by searching the start menu for *Security*, and then selecting **Windows Security**.
+1. Open the Windows Security app by searching the start menu for _Security_, and then selecting **Windows Security**.
 
 1. Select the **Virus & threat protection** tile (or the shield icon on the left menu bar).
 
@@ -77,7 +77,7 @@ Use this section to review the current security intelligence version and check f
 
 Use the following steps to verify that Microsoft Defender Antivirus real-time protection is enabled.
 
-1. Open the Windows Security app by searching the start menu for *Security*, and then selecting **Windows Security**.
+1. Open the Windows Security app by searching the start menu for _Security_, and then selecting **Windows Security**.
 
 1. Select the **Virus & threat protection** tile (or the shield icon on the left menu bar).
 
@@ -91,31 +91,15 @@ Use the following steps to verify that Microsoft Defender Antivirus real-time pr
 
 ## Add exclusions for Microsoft Defender Antivirus in the Windows Security app
 
-Use the following steps to add exclusions for Microsoft Defender Antivirus in the Windows Security app.
+Use the following steps to add exclusions for Microsoft Defender Antivirus in the Windows Security app. For more information, see [Exclusions in Microsoft Defender Antivirus](microsoft-defender-antivirus-exclusions-overview.md).
 
-1. Open the Windows Security app by searching the start menu for *Security*, and then selecting **Windows Security**.
-
-1. Select the **Virus & threat protection** tile (or the shield icon on the left menu bar).
-
-1. Under **Virus & threat protection settings**, select **Manage settings**.
-
-1. Under **Exclusions**, select **Add or remove exclusions**.
-
-1. Select the plus icon (**+**) to choose the type and set the options for each exclusion.
-
-The following table summarizes exclusion types and what happens:
-
-|Exclusion type|Defined by|What happens|
-|---|---|---|
-|**File**|Location <br/>Example: `c:\sample\sample.test`|The specific file is skipped by Microsoft Defender Antivirus.|
-|**Folder**|Location <br/>Example: `c:\test\sample`|All items in the specified folder are skipped by Microsoft Defender Antivirus.|
-|**File type**|File extension <br/>Example: `.test`|All files with the `.test` extension anywhere on your device are skipped by Microsoft Defender Antivirus.|
-|**Process**|Executable file path <br>Example: `c:\test\process.exe`|The specific process and any files that are opened by that process are skipped by Microsoft Defender Antivirus.|
-
-To learn more, see the following resources:
-
-- [Configure and validate exclusions based on file extension and folder location](./configure-extension-file-exclusions-microsoft-defender-antivirus.md)
-- [Configure exclusions for files opened by processes](./configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
+1. In the **Windows security** app on the device, go to **Virus & threat protection**.
+1. In the **Virus & threat protection** pane, in the **Virus & threat protection settings** section, select **Manage settings**.
+1. In the **Virus & threat protection settings** pane, in the **Exclusions** section, select **Add or remove exclusions**.
+1. In the **Exclusions** pane, select **+ Add an exclusion** and then select one of the following values that appear:
+   - **File** or **Folder**: Also known as _path exclusions_. For more information, see [File and folder exclusions](microsoft-defender-antivirus-exclusions-overview.md#file-and-folder-exclusions).
+   - **File type**: Exclusions by file type extension. The exclusion applies to any files with that extension, regardless of location. For more information, see [File extension exclusions](microsoft-defender-antivirus-exclusions-overview.md#file-extension-exclusions).
+   - **Process**: Exclusions for files opened by specified processes. The processes themselves aren't excluded. To exclude the processes, use **File** or **Folder** exclusions. For more information, see [Process exclusions](microsoft-defender-antivirus-exclusions-overview.md#process-exclusions).
 
 <a name="review-threat-detection-history-in-the-windows-defender-app"></a>
 
@@ -123,7 +107,7 @@ To learn more, see the following resources:
 
 Use the following steps to review threat detection history in the Windows Security app.
 
-1. Open the Windows Security app by searching the start menu for *Security*, and then selecting **Windows Security**.
+1. Open the Windows Security app by searching the start menu for _Security_, and then selecting **Windows Security**.
 
 1. Select the **Virus & threat protection** tile (or the shield icon on the left menu bar).
 
@@ -133,7 +117,7 @@ Use the following steps to review threat detection history in the Windows Securi
 
 Use the following steps to configure ransomware protection and recovery options in the Windows Security app.
 
-1. Open the Windows Security app by searching the start menu for *Security*, and then selecting **Windows Security**.
+1. Open the Windows Security app by searching the start menu for _Security_, and then selecting **Windows Security**.
 
 1. Select the **Virus & threat protection** tile (or the shield icon on the left menu bar).
 

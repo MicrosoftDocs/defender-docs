@@ -100,7 +100,7 @@ Run the following command:
 Set-MpPreference -QuickScanIncludeExclusions ScanRtpExclusions
 ```
 
-The value ScanRtpExclusions or 1 includes paths that are excluded from antivirus using contextual exclusions with the following restrictions: `ScanTrigger:OnAccess`, `ScanTrigger:BM`, and `Process:`. For more information on how to set these exclusions, see [Contextual file and folder exclusions](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md).
+The value ScanRtpExclusions or 1 includes paths that are excluded from antivirus using contextual exclusions with the following restrictions: `ScanTrigger:OnAccess`, `ScanTrigger:BM`, and `Process:`. For more information on how to set these exclusions, see [Contextual file and folder exclusions](microsoft-defender-antivirus-exclusions-overview.md#contextual-exclusions).
 
 The default value Disabled or 0 disables the inclusion of the contextually excluded paths.
 

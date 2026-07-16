@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-asr
-ms.date: 06/16/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to enable controlled folder access on devices so that I can protect important files and folders from ransomware and other malicious apps.
 appliesto:
@@ -82,6 +82,16 @@ To configure CFA using a Microsoft Intune Endpoint Security **Attack surface red
     The path of each app can include environment variables and wildcards, as described in [Allow apps to modify files in protected folders](controlled-folder-access-overview.md#allow-apps-to-modify-files-in-protected-folders).
 
 For more information about attack surface reduction profiles in Microsoft Intune, see [Manage attack surface reduction settings with Microsoft Intune](/intune/intune-service/protect/endpoint-security-asr-policy#attack-surface-reduction-profiles).
+
+## Configure CFA in the Microsoft Defender portal
+
+If your organization [manages endpoint security policies in the Microsoft Defender portal](endpoint-security-policies-configure.md), you can configure CFA with the same endpoint security policies that Intune uses.
+
+On the **Windows** tab of the **Endpoint security policies** page of the Defender portal at <https://security.microsoft.com/policy-inventory>, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create new policy** and then create an **Attack surface reduction** policy. For the full procedure, see [Create an endpoint security policy](endpoint-security-policies-configure.md#create-an-endpoint-security-policy).
+
+Use the same **Attack Surface Reduction Rules** profile and CFA settings described in [Configure CFA in Intune using endpoint security policies](#configure-cfa-in-intune-using-endpoint-security-policies).
+
+When you assign the policy, note that assignment group limitations apply to devices managed through security settings management. For details, see the [Assignments step](endpoint-security-policies-configure.md#create-an-endpoint-security-policy).
 
 <a name="mobile-device-management-mdm"></a>
 
