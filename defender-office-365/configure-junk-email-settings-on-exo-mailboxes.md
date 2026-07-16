@@ -1,5 +1,5 @@
 ---
-title: Configure junk email settings on Exchange Online mailboxes
+title: Configure Junk Email Settings on Exchange Online Mailboxes
 author: chrisda
 ms.author: chrisda
 ms.topic: how-to
@@ -182,7 +182,9 @@ The safelist collection (the Safe Senders list, the Safe Recipients list, and th
 
 > [!IMPORTANT]
 > The following button helps identify and resolve issues with the safelist collection in user mailboxes (the Safe Senders list and Blocked Senders list) which includes individual senders and domains:
->
+
+## Next step
+
 <div class="nextstepaction">
 <p><a href="https://aka.ms/safeblockdiag" data-linktype="external">Run Tests: Mailbox safe/blocked sender list</a></p>
 </div>

@@ -23,10 +23,10 @@ SharePoint in Microsoft 365 is a widely used user collaboration and file storage
 ## Prerequisites
 
 - Microsoft Defender for Office 365 Plan 1
-- Sufficient permissions (SharePoint administrator/security administrator).
-- Microsoft SharePoint (part of Microsoft 365).
-- [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) installed and configured.
-- Five to 10 minutes to perform these steps.
+- Sufficient permissions (SharePoint administrator/security administrator)
+- Microsoft SharePoint (part of Microsoft 365)
+- [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) installed and configured
+- Five to 10 minutes to perform these steps
 
 ## Turn on Microsoft Defender for Office 365 in SharePoint
 
@@ -48,7 +48,7 @@ To learn more, read [Step 2: (*Recommended*) Use SharePoint Online PowerShell to
 1. Open and connect to [SharePoint Online PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 1. Run the following command: **Set-SPOTenant -DisallowInfectedFileDownload $true**.
 
-### Further reading
+## Related content
 
 For more guidance on securing your environment, see the following resource:
 
