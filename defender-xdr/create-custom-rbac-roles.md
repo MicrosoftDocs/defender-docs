@@ -38,7 +38,7 @@ Creating custom roles for [Microsoft Sentinel data lake](https://aka.ms/data-lak
 
 To create custom roles in Microsoft Defender unified RBAC, you must be assigned one of the following roles or permissions:
 
-- At leastSecurity Administrator in Microsoft Entra ID.
+- At least Security Administrator in Microsoft Entra ID.
 - All **Authorization** permissions assigned in Microsoft Defender Unified RBAC.
 
 For more information on permissions, see [Permission prerequisites](manage-rbac.md#permissions-prerequisites).
