@@ -6,7 +6,7 @@ ms.author: chrisda
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 06/11/2026
+ms.date: 07/03/2026
 ms.reviewer: nehabha
 ms.collection:
 - SMB
@@ -14,7 +14,7 @@ ms.collection:
 - m365-initiative-defender-business
 - tier1
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1013
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # View and manage incidents in Microsoft Defender for Business
@@ -27,14 +27,15 @@ As threats are detected and alerts are triggered, incidents are created. Your co
 - [Understand alert severity levels](#alert-severity)
 - [Next steps](#next-steps)
 
-## Monitor your incidents & alerts
+<a name="monitor-your-incidents--alerts"></a>
+## Monitor your incidents and alerts
 
 Use the following steps to view and manage incidents in the Microsoft Defender portal:
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, go to **Incidents & alerts**, and then select **Incidents**. Any incidents that were created are listed on the page.
+> [!IMPORTANT]
+> If you see an incident tagged with `Attack disruption`, it means an advanced attack was detected. See [Automatic attack disruption](mdb-attack-disruption.md).
 
-   > [!IMPORTANT]
-   > If you see an incident tagged with `Attack disruption`, it means an advanced attack was detected. See [Automatic attack disruption](mdb-attack-disruption.md).
+1. In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, go to **Incidents & alerts**, and then select **Incidents**. Any incidents that were created are listed on the page.
 
 2. Select an alert to open its flyout pane, where you can learn more about the alert.
 
