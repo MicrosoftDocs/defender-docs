@@ -8,12 +8,12 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - seo-marvel-apr2020
   - sfi-image-nochange
 description: "Admins can learn how to use the Submissions page in the Microsoft Defender portal to submit messages, URLs, and email attachments to Microsoft for analysis. Reasons for submission include: legitimate messages that were blocked, suspicious messages that were allowed, suspected phishing email, spam, malware, and other potentially harmful messages."
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -57,6 +57,8 @@ For other ways that **admins** can report messages to Microsoft in the Defender 
 
 ## What do you need to know before you begin?
 
+Before you use the **Submissions** page, review the following requirements and considerations:
+
 - You open the Microsoft Defender portal at <https://security.microsoft.com/>. To go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
@@ -81,6 +83,8 @@ For other ways that **admins** can report messages to Microsoft in the Defender 
 > The tab where you select select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Submit to Microsoft for analysis** doesn't particularly matter, as long as you set **Select the submission type** to the correct value.
 
 ### Report questionable email to Microsoft
+
+To report a questionable email message to Microsoft for analysis, perform the following steps:
 
 1. In the Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
@@ -145,6 +149,8 @@ After a few moments, the block entry is available on the **Domains & addresses**
 
 ### Report questionable email attachments to Microsoft
 
+To submit a questionable email attachment to Microsoft for analysis, perform the following steps:
+
 1. In the Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 2. On the **Submissions** page, select the **Email attachments** tab.
@@ -196,6 +202,8 @@ After a few moments, the block entry is available on the **Domains & addresses**
 After a few moments, the block entry is available on the **Files** tab on the **Tenant Allow/Block Lists** page at <https://security.microsoft.com/tenantAllowBlockList?viewid=FileHash>.
 
 ### Report questionable URLs to Microsoft
+
+To report a questionable URL to Microsoft for analysis, perform the following steps:
 
 1. In the Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
@@ -318,6 +326,8 @@ After a few moments, the associated allow entries appear on the **Domains & addr
 > - If you allow at least 7 email addresses in the same domain in the Tenant Allow/Block List, submissions automatically roll up the email addresses into a domain allow entry. This action happens when submission is trying to add an email address allow for that domain.
 
 ### Report good email attachments to Microsoft
+
+To report a good email attachment to Microsoft for analysis, perform the following steps:
 
 1. In the Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
@@ -846,7 +856,7 @@ The analysis results of the reported item are shown in the details flyout that o
 - Current detonation results to see if the URLs or files in the message were malicious or not.
 - Feedback from graders.
 
-For more information about how Microsoft processes submissions, see [Learn more how submissions are processed behind-the-scenes to generate the result](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/how-your-submissions-to-defender-for-office-365-are-processed-behind-the-scenes/4231551).
+For more information about how Microsoft processes submissions, see [How submissions are processed behind the scenes](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/how-your-submissions-to-defender-for-office-365-are-processed-behind-the-scenes/4231551).
 
 If an override or policy configuration was found, the result should be available in several minutes. If there wasn't a problem in email authentication or delivery wasn't affected by an override or policy, the detonation and feedback from graders could take up to a day.
 
@@ -964,7 +974,7 @@ In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Ac
 
 On the **Submissions** page, select the **User reported** tab.
 
-The **User reported** tab provides information and actions including [viewing user reported messages](#view-user-reported-messages-to-microsoft), [viewing message details](#view-user-reported-email-message-details), and [admin actions for user reported messages](#admin-actions-for-user-reported-messages).
+The **User reported** tab provides information and actions including [viewing user reported messages](#view-user-reported-messages-to-microsoft), [viewing user reported email message details](#view-user-reported-email-message-details), and [admin actions for user reported messages](#admin-actions-for-user-reported-messages).
 
 ### View user reported messages to Microsoft
 
@@ -1249,6 +1259,8 @@ In the **Submit to Microsoft for analysis** flyout that opens, do the following 
 After you submit a user reported message to Microsoft from the **User reported** tab, the value of **Converted to admin submission** turns from **No** to **Yes**, and a corresponding admin submission entry is created on the appropriate tab on the **Submissions** page (for example, the **Emails** tab).
 
 #### Trigger an investigation in Defender for Office 365 Plan 2
+
+To trigger an automated investigation for a user reported message, use the following action:
 
 - **On the User reported tab**, select **Trigger investigation** in the dropdown list on :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Submit to Microsoft for analysis**.
 

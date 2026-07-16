@@ -8,11 +8,11 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - sfi-ga-nochange
 description: Admins can learn how to review messages that were reported by users and give them feedback.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -39,9 +39,9 @@ Before you begin, review the following requirements and access details:
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>. To go directly to the **User reported settings** page, use <https://security.microsoft.com/securitysettings/userSubmission>.
 
-- If the [User reported settings](submissions-user-reported-messages-custom-mailbox.md) in the organization send user reported messages (email and [Microsoft Teams](submissions-teams.md)) to Microsoft (exclusively or in addition to the reporting mailbox), we do the same checks as when admins submit messages to Microsoft for analysis from the **Submissions** page:
+- If the [User reported settings](submissions-user-reported-messages-custom-mailbox.md) in the organization send user reported messages (email and [Microsoft Teams](submissions-teams.md)) to Microsoft (exclusively or in addition to the reporting mailbox), Microsoft Defender for Office 365 does the same checks as when admins submit messages to Microsoft for analysis from the **Submissions** page:
   - **Email authentication check** (email messages only): Whether email authentication passed or failed when it was delivered.
-  - **Policy hits**: Information about any policies or overrides that might have allowed or blocked the incoming email into the organization, thus overriding our filtering verdicts.
+  - **Policy hits**: Information about any policies or overrides that might have allowed or blocked the incoming email into the organization, thus overriding filtering verdicts.
   - **Payload reputation/detonation**: Up-to-date examination of any URLs and attachments in the message.
   - **Grader analysis**: Review done by human graders to confirm whether or not messages are malicious.
 
@@ -108,6 +108,6 @@ Use the following steps to customize the notification messages that are sent to 
 
    - **Customize sender and branding** section:
      - **Specify a Microsoft 365 mailbox to use ads the From address of email notifications**: Select this option and enter the sender's email address in the box that appears. If you don't select this option, the default sender is `submissions@messaging.microsoft.com`.
-     - **Replace the Microsoft logo with my organization's logo across all reporting experiences**: Select this option to replace the default Microsoft logo that's used in notifications. Before you do this step, follow the instructions in [Customize the Microsoft 365 theme for your organization](/microsoft-365/admin/setup/customize-your-organization-theme) to upload your custom logo.
+     - **Replace the Microsoft logo with my organization's logo across all reporting experiences**: Select this option to replace the default Microsoft logo that's used in notifications. Before you select this option, follow the instructions in [Customize the Microsoft 365 theme for your organization](/microsoft-365/admin/setup/customize-your-organization-theme) to upload your custom logo.
 
 4. When you're finished on the **User reported settings** page, select **Save**.
