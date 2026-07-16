@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1014
-ms.date: 06/16/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.reviewer: pauhijbr, ksarens, yongrhee, bsabetghadam
 ms.subservice: ngp
 ms.topic: how-to
@@ -35,6 +35,8 @@ For scheduled scan instructions, see the following articles:
 - [Schedule antivirus scans using Microsoft Intune](schedule-antivirus-scans-intune.md)
 
 ## Prerequisites
+
+Before you configure scheduled scans, make sure your device meets the following requirements.
 
 ### Supported operating systems
 
@@ -95,15 +97,15 @@ Keep the following points in mind when configuring scheduled scans:
 
 ## Scheduled quick scan performance optimization 
 
-As a performance optimization, Microsoft Defender Antivirus skips running scheduled quick scans in some situations. This optimization only applies to a quick scan when initiated by a schedule – this optimization doesn't affect a quick scan initiated by an [on-demand antivirus](run-scan-microsoft-defender-antivirus.md) scan. This optimization reduces performance degradation by avoiding a scheduled quick scan when that scan isn't necessary and skipping the scan won't affect protection.
+As a performance optimization, Microsoft Defender Antivirus skips running scheduled quick scans in some situations. This optimization only applies to a quick scan when initiated by a schedule – this optimization doesn't affect a quick scan initiated by an [on-demand antivirus](run-scan-microsoft-defender-antivirus.md) scan. The scheduled quick-scan optimization reduces performance degradation by avoiding a scheduled quick scan when that scan isn't necessary and skipping the scan won't affect protection.
 
-With this optimization enabled, Microsoft Defender Antivirus skips a newly scheduled quick scan if a qualified quick scan ran within the last seven days. A quick scan is considered to be *qualified* if:
+With the scheduled quick-scan optimization enabled, Microsoft Defender Antivirus skips a newly scheduled quick scan if a qualified quick scan ran within the last seven days. A quick scan is considered to be *qualified* if:
 
 - The scan occurs after the last [Microsoft Defender Antivirus security intelligence update](microsoft-defender-antivirus-updates.md) was installed; 
 - [Real-time protection](configure-protection-features-microsoft-defender-antivirus.md) wasn't disabled during that time period; and, 
 - The machine was rebooted.  
 
-This optimization *doesn't* apply to the following conditions: 
+The scheduled quick-scan optimization *doesn't* apply to the following conditions: 
 
 - If Microsoft Defender for Endpoint is [managed by a configuration tool such as Intune or Group Policy](configuration-management-reference-microsoft-defender-antivirus.md)  
 - If Microsoft Defender [Endpoint Detection and Response (EDR)](overview-endpoint-detection-response.md) is installed 
@@ -111,9 +113,10 @@ This optimization *doesn't* apply to the following conditions:
 - If [real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md) is disabled after the last quick scan occurred 
 - If the last initiated quick scan wasn't completed
 
-This optimization applies to machines running Windows 10 Anniversary Update (version 1607) and all subsequent Windows releases, as well as Windows Server 2016 (version 1607) and subsequent Windows Server releases, but doesn't apply to Core Server installations.  
+The scheduled quick-scan optimization applies to machines running Windows 10 Anniversary Update (version 1607) and all subsequent Windows releases, as well as Windows Server 2016 (version 1607) and subsequent Windows Server releases, but doesn't apply to Core Server installations.  
 
-## See also
+<a name="see-also"></a>
+## Related articles
 
 - [Microsoft Defender Antivirus scan considerations and best practices](mdav-scan-best-practices.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)

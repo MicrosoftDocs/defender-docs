@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1014
-ms.date: 06/16/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.reviewer: phuijbr, yongrhee
 ms.subservice: ngp
 ms.topic: how-to
@@ -23,7 +23,8 @@ ai-usage: ai-assisted
 # Use Microsoft Intune to configure and manage Microsoft Defender Antivirus
 
 
-## Compatibility
+<a name="compatibility"></a>
+## Supported platforms and Intune compatibility
 
 Microsoft Defender Antivirus management through Intune is supported on the following platforms:
 
@@ -53,7 +54,7 @@ The following CSP settings can be configured in a **Microsoft Defender Antivirus
 
 ## Policies and settings
 
-The following sections describe the available Microsoft Defender Antivirus policy settings that you can configure in Intune.
+This section lists each Microsoft Defender Antivirus policy setting that you can configure in Intune, along with its CSP reference and available options.
 
 ### Allow Archive Scanning
 
@@ -101,6 +102,8 @@ The following sections describe the available Microsoft Defender Antivirus polic
 
 <a name="settings"></a>
 #### Cloud-delivered protection options
+
+  The following options are available for cloud-delivered protection:
 
   - **Not configured** - The setting reverts to the system default (cloud-delivered protection is turned off).
   - **Not allowed** - Cloud-delivered protection is turned off.
@@ -366,7 +369,7 @@ This policy setting controls the level of intensity that Microsoft Defender Anti
 
    CSP: [ScheduleScanDay](/windows/client-management/mdm/policy-csp-defender#schedulescanday)
 
-  This policy setting allows you to specify the day of the week to perform a scheduled scan. The scan can also be configured to run every day or to never run at all. This setting interacts with the settings **Scan Parameter** and **Schedule Scan Time**.
+  This policy setting allows you to specify the day of the week to perform a scheduled scan. The scan can also be configured to run every day or to never run at all. This setting interacts with the [**Scan Parameter**](#scan-parameter) setting (which controls whether the scan is a quick scan or full scan) and **Schedule Scan Time**.
 
   - **Not configured** - The setting reverts to the system default.
   - **Every day (default)** - A scheduled scan runs daily.

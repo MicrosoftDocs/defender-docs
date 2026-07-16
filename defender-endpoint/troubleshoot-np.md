@@ -12,13 +12,13 @@ ms.collection:
 - m365-security
 - tier3
 - mde-asr
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Troubleshoot network protection
@@ -28,7 +28,7 @@ This article provides troubleshooting information for [network protection](netwo
 - Network protection blocks a website that is safe (false positive)
 - Network protection fails to block a suspicious or known malicious website (false negative)
 
-There are four steps to troubleshooting these problems:
+There are four steps to troubleshoot false positives and false negatives in network protection:
 
 1. Confirm prerequisites
 1. Use audit mode to test the rule
@@ -53,7 +53,7 @@ Network protection works on devices with the following conditions:
 
 You can enable network protection in audit mode and then visit the [network protection demo site](https://smartscreentestratings2.net) to test the feature. All website connections are allowed by network protection but an event is logged to indicate any connection that would be blocked if network protection were enabled.
 
-1. Set network protection to **Audit mode**.
+1. Set network protection to **Audit mode**. Audit mode allows all connections but logs any connection that would be blocked, so you can test whether blocking is causing the issue.
 
    ```PowerShell
    Set-MpPreference -EnableNetworkProtection AuditMode
@@ -63,7 +63,7 @@ You can enable network protection in audit mode and then visit the [network prot
 
 1. [Review the network protection event logs](network-protection.md#review-network-protection-events-in-windows-event-viewer) to see if the feature would block the connection if it were set to **Enabled**.
 
-   If network protection isn't blocking a connection that you're expecting it should block, re-enable the feature to restore enforcement:
+   If network protection isn't blocking a connection that you're expecting it should block, run the following command to re-enable Network Protection in block mode and restore enforcement:
 
    ```PowerShell
    Set-MpPreference -EnableNetworkProtection Enabled
@@ -71,7 +71,7 @@ You can enable network protection in audit mode and then visit the [network prot
 
 ## Report a false positive or false negative
 
-If you've tested the feature with the demo site and with audit mode, and network protection is working on preconfigured scenarios, but isn't working as expected for a specific connection, use the [Windows Defender Security Intelligence web-based submission form](https://www.microsoft.com/wdsi/filesubmission) to report a false negative or false positive for network protection. With an E5 subscription, you can also provide a link to any associated alert from the [Alerts queue](alerts-queue.md).
+If you tested the feature with the demo site and audit mode, network protection might work on preset scenarios but not for a specific connection. To report this issue, use the [Windows Defender Security Intelligence web-based submission form](https://www.microsoft.com/wdsi/filesubmission) to submit a false negative or false positive. With an E5 subscription, you can also link to any related alert from the [Alerts queue](alerts-queue.md).
 
 See [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md).
 
@@ -88,11 +88,11 @@ The current exclusion options are:
 <a name="network-performance-issues"></a>
 ## Troubleshoot network performance issues
 
-In certain circumstances, a network protections component might contribute to slow network connections to Domain Controllers and/or Exchange servers. You might also notice Event ID 5783 NETLOGON errors, which indicate authentication-related connectivity failures between the device and a Domain Controller.
+A network protection component might slow down connections to Domain Controllers or Exchange servers. You might also see Event ID 5783 NETLOGON errors. These errors mean the device can't connect to a Domain Controller.
 
-To attempt to solve these issues, change Network Protection from 'block mode' to either '[audit mode](troubleshoot-np.md)' or 'disabled'. If your network issues are fixed, use the following component-isolation procedure to find out which component in Network Protection is contributing to the behavior.
+To fix slow network connections or Event ID 5783 NETLOGON errors, switch Network Protection from 'block mode' to '[audit mode](troubleshoot-np.md)' or 'disabled'. If that resolves the problem, disable Network Protection components one at a time to isolate which component causes the issue.
 
-Disable the following components in order and test your network connectivity performance after disabling each one:
+Disable the following components one at a time and test your network speed after each change:
 
 1. [Disable Datagram Processing on Windows Server](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true)
 1. [Disable Network Protection Perf Telemetry](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true)
@@ -106,19 +106,19 @@ Disable the following components in order and test your network connectivity per
 1. [Disable inbound connection filtering](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true)
 1. [Disable TLS parsing](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true)
 
-If your network performance issues persist after following these troubleshooting steps, then they're probably not related to network protection and you should look for other causes of your network performance issues.
+If your network performance issues persist after disabling each Network Protection component listed earlier, then the issues are probably not related to network protection. Look for other causes of your network performance issues.
 
 ## Collect diagnostic data for file submissions
 
-When you report a problem with network protection, you're asked to collect and submit diagnostic data for Microsoft support and engineering teams to help troubleshoot issues. You complete this step by running `MpCmdrun.exe -GetFiles`, which saves the diagnostic data at `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`.
+When you report a problem with network protection, you're asked to collect and submit diagnostic data for Microsoft support and engineering teams to help troubleshoot issues. You collect and submit the diagnostic data by running `MpCmdrun.exe -GetFiles`, which saves the data at `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`.
 
 For detailed instructions, see [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md).
 
 ## Resolve connectivity issues with network protection (for E5 customers)
 
-Because network protection can't see your operating system proxy settings, network protection clients might be unable to reach the cloud service in some environments. To resolve these connectivity issues, configure one of the following registry keys so that network protection becomes aware of the proxy configuration:
+Because network protection can't see your operating system proxy settings, network protection clients might be unable to reach the cloud service in some environments. To resolve these connectivity issues, configure one of the following registry keys so that network protection becomes aware of the proxy configuration. You can configure the registry key by using PowerShell, Microsoft Configuration Manager, or Group Policy.
 
-To configure a static proxy server, set the proxy address and port:
+If your environment uses a fixed proxy endpoint, configure Microsoft Defender to route traffic through that proxy server by setting the address and port:
 
 ```powershell
 Set-MpPreference -ProxyServer <proxy IP address: Port>
@@ -126,7 +126,7 @@ Set-MpPreference -ProxyServer <proxy IP address: Port>
 
 ---OR---
 
-If your environment uses a proxy auto-configuration (PAC) file instead of a static proxy, specify the PAC URL:
+If your network routes traffic dynamically through a PAC file instead of a static proxy, use the following command to configure Microsoft Defender to use that PAC URL:
 
 ```powershell
 Set-MpPreference -ProxyPacUrl <Proxy PAC url>

@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1014
-ms.date: 06/16/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.reviewer: ksarens, jtoole, pahuijbr, yongrhee
 ms.subservice: ngp
 ms.topic: how-to
@@ -24,20 +24,24 @@ ai-usage: ai-assisted
 
 # Use Group Policy settings to configure and manage Microsoft Defender Antivirus
 
-We recommend using [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune) to manage Microsoft Defender Antivirus settings for your organization. However, you can use [Group Policy](/windows/win32/srvnodes/group-policy) to configure and manage some settings for Microsoft Defender Antivirus.
+## Overview
+
+This article describes how to use [Group Policy](/windows/win32/srvnodes/group-policy) to configure and manage Microsoft Defender Antivirus settings, including step-by-step instructions and a reference table of commonly used Group Policy settings. Before you begin, review the [prerequisites](#prerequisites).
+
+We recommend [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune) to manage Microsoft Defender Antivirus settings. You can also use Group Policy to set up and manage some of these settings.
 
 > [!IMPORTANT]
-> If [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) is enabled in your organization, any changes made to [tamper-protected settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on) are ignored. In addition, you can't turn off tamper protection by using Group Policy. 
+> If your organization uses [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md), changes to [tamper-protected settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on) are ignored. You also can't turn off tamper protection with Group Policy.
 >
-> If you must make changes to a device and those changes are blocked by tamper protection, we recommend using [troubleshooting mode](enable-troubleshooting-mode.md) to temporarily disable tamper protection on the device. After troubleshooting mode ends, any changes made to tamper-protected settings are reverted to their configured state.
+> If tamper protection blocks changes on a device, use [troubleshooting mode](enable-troubleshooting-mode.md) to turn it off on that device. When troubleshooting mode ends, tamper-protected settings go back to their set values.
 
 ## Prerequisites
 
-To configure Microsoft Defender Antivirus using Group Policy, your environment must meet the following requirements.
+To use Group Policy to set up Microsoft Defender Antivirus, make sure your environment meets these requirements.
 
 ### Supported operating systems
 
-Group Policy configuration for Microsoft Defender Antivirus is supported on the following operating systems:
+You can use Group Policy to set up Microsoft Defender Antivirus on these operating systems:
 
 - Windows
 - Windows Server
@@ -54,7 +58,7 @@ In general, you can use the following procedure to configure or change some sett
 
 1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus**.
 
-1. Expand the section (referred to as **Location** in the following table) that contains the setting you want to configure, double-click the setting to open it, and make configuration changes.
+1. Find the section that contains the setting you want to change. These sections are listed as **Location** in the [Group Policy settings and resources](#group-policy-settings-and-resources) table. Double-click the setting to open it, and then make your changes.
 
 1. Deploy the updated GPO as you normally do. For more information, see [Group Policy](/windows/win32/srvnodes/group-policy).
 
