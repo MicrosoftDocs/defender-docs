@@ -11,13 +11,15 @@ ms.collection:
 ms.custom:
   - seo-marvel-apr2020
   - sfi-ga-nochange
+  - msecd-doc-authoring-1016
 description: View, create, modify, and delete outbound spam policies in Microsoft Defender for Office 365 and Exchange Online PowerShell.
 ms.service: defender-office-365
-ms.date: 05/22/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Configure outbound spam policies for cloud mailboxes
@@ -57,6 +59,8 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 - The default [alert policies](/defender-xdr/alert-policies#threat-management-alert-policies) named **Email sending limit exceeded**, **Suspicious email sending patterns detected**, and **User restricted from sending email** already send email notifications to members of the **TenantAdmins** group (**Global Administrator** members) about unusual outbound email activity and blocked users due to outbound spam. For more information, see [Verify the alert settings for restricted users](outbound-spam-restore-restricted-users.md#verify-the-alert-settings-for-restricted-users). We recommend that you use these alert policies instead of the notification options in outbound spam policies.
 
 ## Use the Microsoft Defender portal to create outbound spam policies
+
+To create an outbound spam policy in the Microsoft Defender portal, perform the following steps:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
 
@@ -126,7 +130,7 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
      Select one of the following actions from the **Automatic forwarding rules** dropdown list:
 
-     - **Automatic - System-controlled**: This value is the default. This value is now the same as **Off - Forwarding is disabled**. When this value was originally introduced, it was equivalent to **On - Forwarding is enabled**. Over time, thanks to the principles of [secure by default](secure-by-default.md), the effect of this value was eventually changed to **Off - Forwarding is disabled** for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/blog/exchange/all-you-need-to-know-about-automatic-email-forwarding-in-exchange-online/2074888).
+     - **Automatic - System-controlled**: This value is the default. This value is now the same as **Off - Forwarding is disabled**. When this value was originally introduced, it was equivalent to **On - Forwarding is enabled**. Over time, thanks to the principles of [secure by default](secure-by-default.md), the effect of this value was eventually changed to **Off - Forwarding is disabled** for all customers. For more information, see [All you need to know about automatic email forwarding in Exchange Online](https://techcommunity.microsoft.com/blog/exchange/all-you-need-to-know-about-automatic-email-forwarding-in-exchange-online/2074888).
      - **On - Forwarding is enabled**: Automatic external email forwarding isn't disabled by the policy.
      - **Off - Forwarding is disabled**: All automatic external email forwarding is disabled by the policy.
 
@@ -206,11 +210,11 @@ On the **Anti-spam policies** page, select the outbound spam policy from the lis
 
 :::image type="content" source="media/anti-phishing-policies-details-flyout.png" alt-text="The details flyout of a custom outbound spam policy." lightbox="media/anti-phishing-policies-details-flyout.png":::
 
-The actions are described in the following subsections.
+These actions are described in [Modify outbound spam policies](#use-the-microsoft-defender-portal-to-modify-outbound-spam-policies), [Enable or disable custom outbound spam policies](#use-the-microsoft-defender-portal-to-enable-or-disable-custom-outbound-spam-policies), [Set the priority of custom outbound spam policies](#use-the-microsoft-defender-portal-to-set-the-priority-of-custom-outbound-spam-policies), and [Remove custom outbound spam policies](#use-the-microsoft-defender-portal-to-remove-custom-outbound-spam-policies).
 
 ### Use the Microsoft Defender portal to modify outbound spam policies
 
-After you select the default outbound spam policy or a custom policy by clicking anywhere in the row other than the check box next to the name, the policy settings are shown in the details flyout that opens. Select **Edit** in each section to modify the settings within the section. For more information about the settings, see the [Create outbound spam policies](#use-the-microsoft-defender-portal-to-create-outbound-spam-policies) section earlier in this article.
+After you select the default outbound spam policy or a custom policy by clicking anywhere in the row other than the check box next to the name, the policy settings are shown in the details flyout that opens. Select **Edit** in each section to modify the settings within the section. For more information about the settings, see [Create outbound spam policies](#use-the-microsoft-defender-portal-to-create-outbound-spam-policies).
 
 For the default policy, you can't modify the name of the policy, and there are no sender filters to configure (the policy applies to all senders). But, you can modify all other settings in the policy.
 
@@ -391,7 +395,7 @@ For detailed syntax and parameter information, see [Get-HostedOutboundSpamFilter
 
 ### Use PowerShell to modify outbound spam filter policies
 
-The same settings are available when you modify an outbound spam filter policy in PowerShell as when you create the policy as described in the [Step 1: Use PowerShell to create an outbound spam filter policy](#step-1-use-powershell-to-create-an-outbound-spam-filter-policy) section earlier in this article.
+The same settings are available when you modify an outbound spam filter policy in PowerShell as when you create the policy as described in [Step 1: Use PowerShell to create an outbound spam filter policy](#step-1-use-powershell-to-create-an-outbound-spam-filter-policy).
 
 > [!NOTE]
 > You can't rename an outbound spam filter policy (the **Set-HostedOutboundSpamFilterPolicy** cmdlet has no _Name_ parameter). When you rename an outbound spam policy in the Microsoft Defender portal, you're only renaming the outbound spam filter _rule_.
@@ -408,7 +412,7 @@ For detailed syntax and parameter information, see [Set-HostedOutboundSpamFilter
 
 The only setting that isn't available when you modify an outbound spam filter rule in PowerShell is the _Enabled_ parameter that allows you to create a disabled rule. To enable or disable existing outbound spam filter rules, see the next section.
 
-Otherwise, no other settings are available when you modify an outbound spam filter rule in PowerShell. The same settings are available when you create a rule as described in the [Step 2: Use PowerShell to create an outbound spam filter rule](#step-2-use-powershell-to-create-an-outbound-spam-filter-rule) section earlier in this article.
+Otherwise, no other settings are available when you modify an outbound spam filter rule in PowerShell. The same settings are available when you create a rule as described in [Step 2: Use PowerShell to create an outbound spam filter rule](#step-2-use-powershell-to-create-an-outbound-spam-filter-rule).
 
 To modify an outbound spam filter rule, use this syntax:
 
