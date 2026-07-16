@@ -29,6 +29,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|macOS |101.26052.0016  |July 2026 |- Release version: 20.126052.16.0<br>- Engine version: 1.1.26060.12000<br>- Signature version: 1.455.47.0 |[Release details and updates](#macos--july-2026--101260520016) |
 |Windows Antivirus |Platform 4.18.26060.3008 / Engine 1.1.26060.3008 |June 2026 |- Platform: 4.18.26060.3008<br>- Engine: 1.1.26060.3008<br>- Security intelligence: 1.455.25.0 |[Release details and updates](#windows-antivirus--june-2026--platform-418260603008--engine-11260603008) |
 |iOS |1.1.78290102|July 2026|- Build: 1.1.78290102<br>- Release: July 3, 2026|[Release details and updates](#ios--july-2026--platform-version-1178290102)|
 |Android |1.0.9029.0101|June 2026|- Build: 1.0.9029.0101<br>- Release: June 30, 2026|[Release details and updates](#android--june-2026--platform-1090290101)| 
