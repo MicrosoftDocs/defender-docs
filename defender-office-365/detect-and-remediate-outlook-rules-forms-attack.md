@@ -1,8 +1,8 @@
 ---
-title: Detect and remediate the Outlook rules and custom forms injections attacks.
+title: Detect and remediate Outlook rules and custom forms injection attacks
 author: chrisda
 ms.author: chrisda
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.collection:
   - tier2
@@ -10,7 +10,7 @@ ms.collection:
 ms.localizationpriority: medium
 description: Identify indicators of compromise for Outlook rules and custom forms injection attacks in Office 365 and follow step-by-step remediation guidance to investigate affected mailboxes and remove malicious rules or forms.
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - seo-marvel-apr2020
   - sfi-ga-nochange
 ms.service: defender-office-365
@@ -36,7 +36,7 @@ After an attacker gains access to your organization, they try to establish a foo
 
 Reinstalling Outlook, or even giving the affected person a new computer doesn't help. When the fresh installation of Outlook connects to the mailbox, all rules and forms are synchronized from the cloud. The rules or forms are typically designed to run remote code and install malware on the local machine. The malware steals credentials or performs other illicit activity.
 
-The good news is: if you keep Outlook clients patched to the latest version, you aren't vulnerable to the threat as current Outlook client defaults block both mechanisms.
+The good news is: if you keep Outlook clients patched to the latest version, you aren't vulnerable to these attacks, as current Outlook client defaults block both mechanisms.
 
 The attacks typically follow these patterns:
 
@@ -63,7 +63,7 @@ The attacks typically follow these patterns:
 <a name="what-a-rules-and-custom-forms-injection-attack-might-look-like-office-365"></a>
 ## What a rules and custom forms injection attack might look like in Office 365
 
-Users are unlikely to notice these persistence mechanisms and they might even be invisible to them. The following list describes the signs (Indicators of Compromise) that indicate remediation steps are required:
+Users are unlikely to notice these persistence mechanisms, which might even be invisible to the affected users. The following list describes the signs (Indicators of Compromise) that indicate remediation steps are required:
 
 - **Indicators of the Rules compromise**:
   - Rule Action is to start an application.
@@ -78,7 +78,7 @@ Users are unlikely to notice these persistence mechanisms and they might even be
 
 ## Steps for finding signs of this attack and confirming it
 
-You can use either of the following methods to confirm the attack:
+You can use either of the following methods to confirm either of these attacks:
 
 - Manually examine the rules and forms for each mailbox using the Outlook client. This method is thorough, but you can only check one mailbox at a time. This method can be very time consuming if you have many users to check, and might also infect the computer that you're using.
 
@@ -120,7 +120,7 @@ Use the following steps to inspect Outlook custom forms for suspicious activity.
 
 ### Steps to confirm the Rules and Forms attack using PowerShell
 
-The simplest way to verify a rules or custom forms attack is to run the [Get-AllTenantRulesAndForms.ps1](https://github.com/OfficeDev/O365-InvestigationTooling/blob/master/Get-AllTenantRulesAndForms.ps1) PowerShell script. This script connects to every mailbox in your organization and dumps all the rules and forms into two .csv files.
+The simplest way to verify a rules or custom forms attack is to run the [Get-AllTenantRulesAndForms.ps1](https://github.com/OfficeDev/O365-InvestigationTooling/blob/master/Get-AllTenantRulesAndForms.ps1) PowerShell script. The **Get-AllTenantRulesAndForms.ps1** script connects to every mailbox in your organization and dumps all the rules and forms into two .csv files.
 
 #### Prerequisites
 
@@ -137,7 +137,7 @@ You need to be a member of the Global Administrator<sup>\*</sup> role in [Micros
 
 3. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-4. Navigate in PowerShell to the folder where you saved the script, and then run the following command to export all tenant inbox rules and custom forms for investigation:
+4. Navigate in PowerShell to the folder where you saved the script, and then run the following command. The script enumerates all inbox rules and custom forms across every mailbox in the tenant and exports them to CSV files so you can identify suspicious or malicious rule-based persistence:
 
    ```powershell
    .\Get-AllTenantRulesAndForms.ps1
@@ -177,7 +177,7 @@ Use the following steps to remove malicious rules or forms and clean affected de
    - Reset the user's password using a high quality value (length and complexity).
    - If multi-factor authentication (MFA) isn't turned on for the user, follow the steps in [Setup multi-factor authentication for users](/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication)
 
-   These steps ensure that the user's credentials aren't exposed via other means (for example, phishing or password reuse).
+   Resetting the password and enabling MFA help ensure that the user's credentials aren't exposed via other means (for example, phishing or password reuse).
 
 <a name="using-powershell"></a>
 ### Use PowerShell to stop and remediate the attack
