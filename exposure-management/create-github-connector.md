@@ -17,9 +17,8 @@ The GitHub connector is the recommended onboarding path for agentic code securit
 
 > [!NOTE]
 > If the same GitHub organization is already connected through the Azure portal's GitHub connector and you want to connect it through the Defender portal, disconnect the Azure portal connector first.
->
-> After the Azure portal's GitHub connector is disconnected, the Microsoft Defender for Cloud DevOps Security capabilities associated with that connector are no longer available.
->
+> > After the Azure portal's GitHub connector is disconnected, the Microsoft Defender for DevOps Security capabilities associated with that connector are no longer available.
+> 
 > For information about Defender for DevOps Security support and prerequisites, see [Support and prerequisites](/azure/defender-for-cloud/devops-support).
 
 ## Step 1: Prepare your tenant
@@ -38,7 +37,7 @@ If the tenant hasn't used Cloud Security in the Defender portal:
 
 1. In the Defender portal, go to MDASH Initiative > **Settings**. For information about accessing the MDASH Initiative, see [Entry points](/security-exposure-management/ai-code-security-onboarding).
 
-   Click the button to Create Connector. You will be redirected to the Cloud Security Connectors page.
+   *Select **Create and Manage connectors**. You'll be redirected to the **Cloud Security Connectors** page.*
    
 1. On the **Connectors** tab, select the GitHub connector from the list.
 1. Optionally, enter a connector name. If you leave it blank, a default name is assigned automatically.
