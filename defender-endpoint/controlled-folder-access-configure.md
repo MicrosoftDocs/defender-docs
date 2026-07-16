@@ -106,7 +106,7 @@ Use the [EnableControlledFolderAccess](/windows/client-management/mdm/policy-csp
 
 ### Add folders to protected folders using the Policy CSP
 
-CFA protects [an unmodifiable list of common system folders](controlled-folder-access-overview.md#default-folders-protected-by-cfa). To add more folders that get CFA protection, use the [ControlledFolderAccessProtectedFolders](/windows/client-management/mdm/policy-csp-defender#controlledfolderaccessprotectedfolders) CSP:
+CFA protects [an unmodifiable list of common folders](controlled-folder-access-overview.md#default-folders-protected-by-cfa). To add more folders that get CFA protection, use the [ControlledFolderAccessProtectedFolders](/windows/client-management/mdm/policy-csp-defender#controlledfolderaccessprotectedfolders) CSP:
 
 **OMA-URI path**: `./Device/Vendor/MSFT/Policy/Config/Defender/ControlledFolderAccessProtectedFolders`<br/>
 **Value**: Enter one or more folder paths separated by the pipe (`|`) character.
