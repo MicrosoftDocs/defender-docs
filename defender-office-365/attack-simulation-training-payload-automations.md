@@ -9,10 +9,10 @@ ms.collection:
   - m365-security
   - tier2
 description: Admins can learn how to use payload automations (payload harvesting) to collect and launch automated simulations for Attack simulation training in Microsoft Defender for Office 365 Plan 2.
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -128,22 +128,22 @@ The payload automation wizard opens with the settings and values of the selected
 ## Remove payload automations
 
 > [!WARNING]
-> Deleting a payload automation is permanent and can't be undone. Any collected payloads and run history associated with the automation are also removed.
+> You can't undo this action. When you delete a payload automation, all collected payloads and run history for that automation are also deleted.
 
-To remove a payload automation, select the payload automation from the list by clicking the check box. Select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears, and then select **Confirm** in the dialog.
+To remove a payload automation, select it from the list by clicking the check box. Select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears, and then select **Confirm** in the dialog.
 
 ## View payload automation details
 
-For payload automations with the **Status** value **Ready**, select the payload from the **Payload automations** page by clicking anywhere in the row other than the check box next to the name. The details flyout that opens contains the following information:
+To view details, the payload automation must have the **Status** value **Ready**. On the **Payload automations** page, click anywhere in the row other than the check box. A details flyout opens with the following information:
 
-- The payload automation name and the number of items collected.
+- The automation name and the number of items collected.
 - **General** tab:
   - **Last modified**
   - **Type**: The value is **Payload**.
-  - **Name**, **Description**, and **Run conditions** sections: Select **Edit** to open the payload automation wizard on the related page.
-- **Run history** tab: This tab is available only for payload automations with the **Status** value **Ready**.
+  - **Name**, **Description**, and **Run conditions** sections: Select **Edit** to open the wizard for that page.
+- **Run history** tab: Available only when **Status** is **Ready**.
 
-  Shows information about the run history of simulations that used the payload automation.
+  Shows the run history of simulations that used this automation.
 
   :::image type="content" source="media/attack-sim-training-payload-automations-details-run-history.png" alt-text="The Run history tab in the details flyout of a payload automation." lightbox="media/attack-sim-training-payload-automations-details-run-history.png":::
 
@@ -157,12 +157,12 @@ Payload automation relies on email messages that are identified as campaigns by 
 
 - Admins [marking messages as phishing](submissions-admin.md#notify-users-about-admin-submitted-messages-to-microsoft) doesn't result in payload harvesting.
 
-- Payload automation requires access to the raw payload (the original, unmodified email message content, including headers, body, links, and attachments). Sources for raw payloads can include user reported messages that meet the following criteria:
+- Payload automation needs access to the raw payload. The raw payload is the original email content, including headers, body, links, and attachments. Raw payloads come from user reported messages that meet the following criteria:
   - The message was delivered to the Inbox (false negative).
   - The user reported the message as phishing.
-  - The reported message was submitted to Microsoft (directly by the user or [by an admin from the Submissions portal](submissions-admin.md#submit-user-reported-messages-to-microsoft-for-analysis)), and Microsoft determined that the message was phishing.
+  - The message was sent to Microsoft (by the user or [by an admin from the Submissions portal](submissions-admin.md#submit-user-reported-messages-to-microsoft-for-analysis)). Microsoft then confirmed the message was phishing.
 
-- Eligible payloads are harvested if the messages meet the run conditions configured for the payload automation (for example, number of targeted users, phishing technique, sender domain, or specific recipients). For details about configuring run conditions, see Step 4 in [Create payload automations](#create-payload-automations).
+- Payloads are harvested when messages meet the run conditions set for the automation. Examples include number of targeted users, phishing technique, sender domain, or specific recipients. For details, see Step 4 in [Create payload automations](#create-payload-automations).
 
 <a name="related-links"></a>
 ## Related content
