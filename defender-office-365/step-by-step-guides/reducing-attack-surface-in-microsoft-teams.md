@@ -1,6 +1,6 @@
 ---
-title: Reduce the attack surface for Microsoft Teams
-description: Learn how to reduce the attack surface in Microsoft Teams by configuring security controls such as Safe Links, Safe Attachments, external access restrictions, and app permissions. Use this guidance to balance collaboration security with your organization's risk profile.
+title: Reduce the Attack Surface for Microsoft Teams
+description: Configuration to reduce the attack surface in Microsoft Teams, including enabling Microsoft Defender for Office 365.
 ms.service: defender-office-365
 author: MSFTBen
 ms.author: chrisda
@@ -134,7 +134,7 @@ Note that external organizations must also allow your organization's domain for 
 > You can also create external access policies with domain allow/deny lists and assign them to specific users or groups for more granular control. For more information, see [Manage external access](/microsoftteams/manage-external-access).
 
 <a name="learn-more"></a>
-## Next steps
+## Related content
 
 You can set up Zero Trust access policies to help protect Teams chats, groups, files, and calendars.
 

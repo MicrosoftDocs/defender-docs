@@ -97,7 +97,7 @@ To configure these settings:
 
 You can also configure how locally defined lists are combined or merged with globally defined lists. This setting applies to the following features:
 
-- [Exclusion lists](configure-exclusions-microsoft-defender-antivirus.md)
+- [Exclusion lists](microsoft-defender-antivirus-exclusions-configure.md)
 - [Specified remediation lists](configure-remediation-microsoft-defender-antivirus.md)
 - [File and folder exclusions for attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules)
 

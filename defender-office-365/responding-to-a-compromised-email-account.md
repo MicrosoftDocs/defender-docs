@@ -1,5 +1,5 @@
 ---
-title: Responding to a Compromised Email Account
+title: Respond to a compromised email account in Microsoft 365
 author: chrisda
 ms.author: chrisda
 ms.topic: how-to
@@ -10,13 +10,13 @@ ms.collection:
   - highpri
   - tier1
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - TopSMBIssues
   - seo-marvel-apr2020
 ms.localizationpriority: high
 description: Learn how to recognize and respond to a compromised email account using tools available in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -66,6 +66,8 @@ After the attacker gains access to an account, you need to block access to the a
 The following steps address known methods that might allow the attacker to maintain persistence and regain control of the account later. Be sure to address each step.
 
 ### Step 1: Disable the affected user account
+
+Use the following guidance to disable the affected user account during the investigation.
 
 - Disabling the compromised account is preferred and highly recommended until you complete the investigation.
 
@@ -120,13 +122,13 @@ The following steps address known methods that might allow the attacker to maint
 
 Revoking active sessions immediately invalidates any active access using the stolen credentials, and prevents the attacker from accessing more sensitive data or doing unauthorized actions on the compromised account.
 
-1. Run the following command in an elevated PowerShell window (a PowerShell window you open by selecting **Run as administrator**):
+1. If your environment blocks local script execution, set the PowerShell execution policy to `RemoteSigned` so you can install and run the required Microsoft Graph modules. Run the following command in an elevated PowerShell window (a PowerShell window you open by selecting **Run as administrator**):
 
    ```powershell
    Set-ExecutionPolicy RemoteSigned
    ```
 
-2. If necessary, run the following commands to install the required modules for Microsoft Graph PowerShell:
+2. If necessary, install the Microsoft Graph PowerShell modules required to authenticate and revoke active user sessions:
 
    ```powershell
    Install-Module Microsoft.Graph.Authentication
@@ -134,19 +136,19 @@ Revoking active sessions immediately invalidates any active access using the sto
    Install-Module Microsoft.Graph.Users.Actions
    ```
 
-3. Connect to Microsoft Graph by running the following command:
+3. Connect to Microsoft Graph with the `User.RevokeSessions.All` permission scope so you can invalidate the user's active sign-in sessions:
 
    ```powershell
    Connect-MgGraph -Scopes User.RevokeSessions.All
    ```
 
-4. Replace \<UPN\> with the user's account (user principal name or UPN), and then run the following command:
+4. To revoke all active sign-in sessions and invalidate existing refresh tokens for the affected user, replace \<UPN\> with the user's account (user principal name or UPN), and then run the following command:
 
    ```powershell
    Revoke-MgUserSignInSession -UserId <UPN>
    ```
 
-   For example:
+   For example, the following command revokes all active sessions for the user `jason@contoso.onmicrosoft.com`:
 
    ```powershell
    Revoke-MgUserSignInSession -UserId jason@contoso.onmicrosoft.com
@@ -183,13 +185,13 @@ Remove any suspicious mailbox forwarding that the attacker added.
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-2. To see if mailbox forwarding (also known as *SMTP forwarding*) is configured on the mailbox, replace \<Identity\> with the name, email address, or account name of the mailbox, and then run the following command:
+2. To check whether the mailbox has forwarding settings that redirect messages to another recipient (also known as *SMTP forwarding*), replace \<Identity\> with the name, email address, or account name of the mailbox, and then run the following command:
 
    ```powershell
    Get-Mailbox -Identity \<Identity\> | Format-List Forwarding*Address,DeliverTo*
    ```
 
-   For example:
+   For example, the following command inspects the forwarding settings on Jason's mailbox:
 
    ```powershell
    Get-Mailbox -Identity jason@contoso.com | Format-List Forwarding*Address,DeliverTo*
@@ -203,13 +205,13 @@ Remove any suspicious mailbox forwarding that the attacker added.
      - True: Messages are delivered to this mailbox and forwarded to the specified recipient.
      - False: Messages are forwarded to the specified recipient. Messages aren't delivered to this mailbox.
 
-3. To see if any Inbox rules are forwarding email from the mailbox, replace \<Identity\> with the name, email address, or account name of the mailbox, and then run the following command:
+3. To review all Inbox rules (including hidden ones) for rules that redirect or forward messages without the user's knowledge, replace \<Identity\> with the name, email address, or account name of the mailbox, and then run the following command:
 
    ```powershell
    Get-InboxRule -Mailbox <Identity> -IncludeHidden | Format-List Name,Enabled,RedirectTo,Forward*,Identity
    ```
 
-   For example:
+   For example, the following command inspects Inbox rules on Jason's mailbox for suspicious forwarding behavior:
 
    ```powershell
    Get-InboxRule -Mailbox jason@contoso.com -IncludeHidden | Format-List Name,Enabled,RedirectTo,Forward*,Identity
@@ -277,7 +279,5 @@ Complete the following tasks after you finish the investigation:
 For related guidance, see the following resources:
 
 - [Detect and Remediate Outlook Rules and Custom Forms Injections Attacks](detect-and-remediate-outlook-rules-forms-attack.md)
-
-[Detect and Remediate Illicit Consent Grants](detect-and-remediate-illicit-consent-grants.md)
-
-[Report spam, nonspam, phishing, suspicious email, and files to Microsoft](submissions-report-messages-files-to-microsoft.md)
+- [Detect and Remediate Illicit Consent Grants](detect-and-remediate-illicit-consent-grants.md)
+- [Report spam, nonspam, phishing, suspicious email, and files to Microsoft](submissions-report-messages-files-to-microsoft.md)

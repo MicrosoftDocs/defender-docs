@@ -147,7 +147,7 @@ The IoC API schema and the threat IDs in Advanced Hunting are updated to align w
 > [!NOTE]
 > There's a limit of 15,000 indicators per tenant. Increases to this limit aren't supported.
 > 
-> File and certificate indicators don't block [exclusions defined for Microsoft Defender Antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/configure-exclusions-microsoft-defender-antivirus). Indicators aren't supported in Microsoft Defender Antivirus when it is in passive mode.
+> File and certificate indicators don't block [exclusions defined for Microsoft Defender Antivirus](/defender-endpoint/microsoft-defender-antivirus-exclusions-overview). Indicators aren't supported in Microsoft Defender Antivirus when it is in passive mode.
 > 
 > The format for importing new indicators (IoCs) has changed according to the new updated actions and alerts settings. We recommend downloading the new CSV format that can be found at the bottom of the import panel.
 >
@@ -166,7 +166,7 @@ Customers might experience issues with alerts for IoCs. The following scenarios 
 
 ## Related articles
 
-- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md)
 - [Create contextual IoC](respond-file-alerts.md#add-indicator-to-block-or-allow-a-file)
 - [Use the Microsoft Defender for Endpoint indicators API](api/ti-indicator.md)
 - [Use partner integrated solutions](partner-applications.md)

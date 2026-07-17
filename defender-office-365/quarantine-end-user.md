@@ -9,13 +9,13 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - seo-marvel-apr2020
   - sfi-image-nochange
 description: Users can learn how to view and manage quarantined email messages in Microsoft 365 that were meant to be delivered to them.
 ms.service: defender-office-365
 adobe-target: true
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
@@ -53,7 +53,7 @@ As an ordinary user (not an admin), the **default** capabilities that are availa
 |**Mail flow rules (transport rules)**||||
 |&nbsp;&nbsp;&nbsp;Mail flow rules that quarantine email messages (directly, not by marking them as spam).||||
 
-In [supported protection features](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features), _quarantine policies_ define what users are allowed to do to quarantined messages based on why the message was quarantined. Default quarantine policies enforce the historical capabilities for messages as described in the default user quarantine capabilities table at the beginning of this article. Admins can create and apply custom quarantine policies that define less restrictive or more restrictive capabilities for users. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
+In [supported protection features](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features), _quarantine policies_ define what users are allowed to do to quarantined messages based on why the message was quarantined. Default quarantine policies enforce the historical capabilities for messages as described in the preceding default user quarantine capabilities table. Admins can create and apply custom quarantine policies that define less restrictive or more restrictive capabilities for users. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
 You view and manage your quarantined messages in the Microsoft Defender portal or (if an admin set it up) quarantine notifications from quarantine policies.
 
@@ -209,7 +209,7 @@ In the details flyout that opens, the following information is available:
 
 :::image type="content" source="media/quarantine-user-message-details-with-actions.png" alt-text="Screenshot of the details flyout of a quarantined message." lightbox="media/quarantine-user-message-details-with-actions.png":::
 
-To take action on the message, see the next section.
+To take action on the message, see [Take action on quarantined email](#take-action-on-quarantined-email).
 
 > [!TIP]
 > To see details about other quarantined messages without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
@@ -355,7 +355,7 @@ After you select the message, use either of the following methods to add the mes
 - **On the Email tab**: Select :::image type="icon" source="media/defender-portal-icon-allow-sender.png" border="false"::: **More** \> :::image type="icon" source="media/defender-portal-icon-block-sender.png" border="false"::: **Allow sender**.
 - **In the details flyout of the selected message**: Select :::image type="icon" source="media/defender-portal-icon-allow-sender.png" border="false"::: **More options** \> :::image type="icon" source="media/defender-portal-icon-block-sender.png" border="false"::: **Allow sender**.
 
-The flyout that opens indicates when the sender was successfully added to your Safe Senders list. Select **Done**.
+In the confirmation flyout, verify that the sender was successfully added to your Safe Senders list, and then select **Done**.
 
 #### Block email senders from quarantine
 
@@ -385,7 +385,7 @@ After you select the message, use either of the following methods to remove the 
 - **On the Email tab**: Select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More** \> :::image type="icon" source="media/defender-portal-icon-remove-sender.png" border="false"::: **Remove sender from user block list**.
 - **In the details flyout of the selected message**: Select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** \> :::image type="icon" source="media/defender-portal-icon-remove-sender.png" border="false"::: **Remove sender from user block list**.
 
-The flyout that opens indicates when the sender was successfully removed from your Blocked Senders list. Select **Done**.
+In the confirmation flyout, verify that the sender was successfully removed from your Blocked Senders list, and then select **Done**.
 
 #### Take action on multiple quarantined email messages
 
@@ -400,7 +400,7 @@ When you select multiple quarantined messages on the **Email** tab by selecting 
 > [!NOTE]
 > Currently, the quarantine policy for Teams is set to AdminOnlyAccess, which means users can't access quarantined Teams messages. We're actively working to update quarantine policy configurations.
 
-When a potentially malicious chat message is detected in Microsoft Teams, zero-hour auto purge (ZAP) removes the message and quarantines it. Users can now view and manage these quarantined Teams messages in the Microsoft Defender portal. Quarantine notifications aren't supported for quarantined Teams messages.
+Zero-hour auto purge (ZAP) is a protection feature that automatically removes potentially malicious chat messages in Microsoft Teams and places them in quarantine. Users can now view and manage these quarantined Teams messages in the Microsoft Defender portal. Quarantine notifications aren't supported for quarantined Teams messages.
 
 ### View your quarantined messages in Microsoft Teams
 

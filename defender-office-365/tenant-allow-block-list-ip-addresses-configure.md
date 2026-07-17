@@ -9,12 +9,12 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block IPv6 addresses in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -31,6 +31,8 @@ This article describes how admins can manage entries for IPv6 addresses in the M
 > To allow or block IPv4 addresses, use the [default connection filter policy](connection-filter-policies-configure.md) instead.
 
 ## What do you need to know before you begin?
+
+Before you work with IPv6 entries in the Tenant Allow/Block List, review the following requirements and limitations.
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>. To go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
@@ -85,7 +87,7 @@ This article describes how admins can manage entries for IPv6 addresses in the M
 
 The allow entry overrides only the IP filters for the specified sending IP address.
 
-You can create allow entries for IPv6 addresses directly in the Tenant Allow/Block List as described in this section.
+You can create allow entries for IPv6 addresses directly in the Tenant Allow/Block List by using the Microsoft Defender portal or PowerShell as described in the following procedures.
 
 ### Use the Microsoft Defender portal to create allow entries for IPv6 addresses in the Tenant Allow/Block List
 
@@ -132,7 +134,7 @@ For detailed syntax and parameter information, see [New-TenantAllowBlockListItem
 
 ## Create block entries for IPv6 addresses
 
-You can create block entries for IPv6 addresses directly in the Tenant Allow/Block List as described in this section.
+You can create block entries for IPv6 addresses directly in the Tenant Allow/Block List by using the Microsoft Defender portal or PowerShell as described in the following procedures.
 
 Incoming email messages from IPv6 addresses in block entries are blocked at the edge of the service.
 
@@ -180,6 +182,8 @@ New-TenantAllowBlockListItems -ListType IP -Block -Entries "2001:db8:3333:4444:5
 For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchangepowershell/new-tenantallowblocklistitems).
 
 ## View entries for IPv6 addresses in the Tenant Allow/Block List
+
+You can view existing IPv6 allow and block entries by using the Microsoft Defender portal or Exchange Online PowerShell.
 
 ### Use the Microsoft Defender portal to view entries for IPv6 addresses in the Tenant Allow/Block List
 
@@ -246,6 +250,8 @@ For existing IP addresses entries, you can change the expiration date and note.
 
 ### Use the Microsoft Defender portal to modify entries for IPv6 addresses in the Tenant Allow/Block List
 
+Perform the following steps to modify an existing IPv6 address entry in the Microsoft Defender portal.
+
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. Select the **IP addresses** tab
@@ -290,6 +296,8 @@ Set-TenantAllowBlockListItems -ListType IP -Entries "2001:db8:3333:4444:5555:666
 For detailed syntax and parameter information, see [Set-TenantAllowBlockListItems](/powershell/module/exchangepowershell/set-tenantallowblocklistitems).
 
 ## Remove entries for IPv6 addresses from the Tenant Allow/Block List
+
+You can remove IPv6 address entries from the Tenant Allow/Block List by using the Microsoft Defender portal or Exchange Online PowerShell.
 
 ### Use the Microsoft Defender portal to remove entries for IPv6 addresses from the Tenant Allow/Block List
 

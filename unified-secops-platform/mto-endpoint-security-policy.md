@@ -21,7 +21,7 @@ ai-usage: ai-assisted
 
 Microsoft Defender for Endpoint security policies help you manage security settings across your devices. In the multitenant management portal, go to **Endpoints > Configuration management > Endpoint security policies** to manage these settings across multiple tenants.
 
-For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/defender-endpoint/manage-security-policies).
+For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/defender-endpoint/endpoint-security-policies-configure).
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ For more information, see [Manage endpoint security policies in Microsoft Defend
 
 ## Create a new or edit an existing security policy
 
-You create endpoint security policies the same way in the multitenant portal as in the single tenant portal. For steps, see [Create an endpoint security policy](/defender-endpoint/manage-security-policies#create-an-endpoint-security-policy).
+You create endpoint security policies the same way in the multitenant portal as in the single tenant portal. For steps, see [Create an endpoint security policy](/defender-endpoint/endpoint-security-policies-configure#create-an-endpoint-security-policy).
 
 Differences include:
 

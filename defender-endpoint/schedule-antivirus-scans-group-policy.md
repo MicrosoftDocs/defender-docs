@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1014
-ms.date: 06/16/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.reviewer: pauhijbr, ksarens
 ms.subservice: ngp
 ms.topic: how-to
@@ -27,11 +27,18 @@ This article describes how to configure scheduled scans using Group Policy. Use 
 
 ## Prerequisites
 
+Before you configure scheduled scans, make sure your environment meets the following requirements.
+
 ### Supported operating systems
 
 This feature is supported on the following operating systems:
 
 - Windows
+
+### Additional requirements
+
+- A Group Policy management machine with the Group Policy Editor installed.
+- Permission to create or edit Group Policy Objects for the target organizational units.
 
 ## Configure antivirus scans using Group Policy
 
@@ -49,7 +56,7 @@ To configure scheduled antivirus scans using Group Policy, follow these steps:
 
 > [!NOTE]
 > When configuring scheduled scans, the setting **Start the scheduled scan only when computer is on but not in use** (which is enabled by default) can affect the expected scheduled time by requiring the machine to be idle first.
-> For weekly scans, the default behavior on Windows Server and Windows 10 and later, is to scan outside of the automatic maintenance when the machine is idle. To change this behavior, modify the settings by disabling "Start the scheduled scan only when computer is on but not in use" (**ScanOnlyIfIdle**), and then define a schedule.
+> For weekly scans, the default behavior on Windows Server and Windows 10 and later, is to scan outside of the automatic maintenance when the machine is idle. To stop weekly scans from waiting for the machine to be idle, disable "Start the scheduled scan only when computer is on but not in use" (**ScanOnlyIfIdle**), and then define a schedule.
 
 For more information, see the [Manage when protection updates should be downloaded and applied](manage-protection-update-schedule-microsoft-defender-antivirus.md) and [Prevent or allow users to locally modify policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md) articles.
 
@@ -88,34 +95,35 @@ The following table describes general Group Policy settings for scan scheduling:
 | Location | Setting | Description | Default setting (if not configured) |
 |:---|:---|:---|:---|
 | Root | Randomize scheduled task times |In Microsoft Defender Antivirus, randomize the start time of the scan to any interval from **0 to 23 hours**. By default, scheduled tasks begin at a random time within four hours of the time specified in Task Scheduler. | Enabled |
-| Root | Configure scheduled task times randomization window |- This setting lets you set the start time for scheduled task scans and security updates. <br> - When enabled, you can choose a randomization window between **1 and 23 hours**. <br> - The Randomize Scheduled Task Times uses the specified window. <br> - If disabled or not configured, it randomizes times between **0 and 4 hours**. | Not configured (Disabled)|
+| Root | Configure scheduled task times randomization window |- This setting lets you set the start time for scheduled task scans and security updates. <br> - When enabled, you can choose a randomization window between **1 and 23 hours**. <br> - When the **Randomize scheduled task times** setting is enabled, scheduled scans use the specified window. <br> - If disabled or not configured, it randomizes times between **0 and 4 hours**. | Not configured (Disabled)|
 
 > [!TIP]
-> Enable randomization for Virtual Machines (VMs), Virtual Desktop Infrastructure (VDI), and Azure Virtual Desktop (AVD) devices to ensure that scheduled scans don't run simultaneously. This helps prevent CPU and disk I/O bottlenecks on the parent partition (also known as the Host).
+> Enable randomization for Virtual Machines (VMs), Virtual Desktop Infrastructure (VDI), and Azure Virtual Desktop (AVD) devices to ensure that scheduled scans don't run simultaneously. Randomizing scan times helps prevent CPU and disk I/O bottlenecks on the parent partition (also known as the Host).
 
-## Group Policy settings for scheduling scans for specifying the maximum percentage of CPU utilization during a scan
+<a name="group-policy-settings-for-scheduling-scans-for-specifying-the-maximum-percentage-of-cpu-utilization-during-a-scan"></a>
+## Group Policy settings for maximum CPU usage during scans
 
-The following table describes the Group Policy setting for controlling maximum CPU utilization during scans:
+The following table describes the Group Policy setting for maximum CPU usage during scans:
 
 | Location | Setting |Description |Default setting (if not configured) |
 | -------- | -------- | -------- | -------- |
-| Scan |Specify the maximum percentage of CPU utilization during a scan|Configure the maximum percentage CPU utilization permitted during a scan.  Valid values for this setting are a percentage represented by integers 5 to 100.  A value of 0 indicates that there should be no throttling of CPU utilization.|Enabled - 50|
+| Scan |Specify the maximum percentage of CPU utilization during a scan|Set the maximum CPU usage allowed during a scan. Enter a value from 5 to 100 (percent). A value of 0 means no CPU limit is applied.|Enabled - 50|
 
 > [!NOTE]
-> Reducing the maximum CPU utilization during a scan to between 5% and 30% will extend the duration of the scheduled scan. For environments with a maintenance window, please take this into consideration.
+> Setting the maximum CPU usage to between 5% and 30% makes scans take longer. Keep this in mind if you have a maintenance window.
 
 ## Group Policy settings for scheduling scans for lowering the CPU priority
 
-The following table lists the setting that controls whether scans run only when the computer is idle, which lowers CPU priority for other tasks:
+This setting controls whether scans run only when the computer is idle. When enabled, it lowers CPU use for other tasks:
 
 | Location | Setting | Description | Default setting (if not configured) |
 |:---|:---|:---|:---|
-| Scan | Start the scheduled scan only when computer is on but not in use | Scheduled scans won't run, unless the computer is on but not in use | Enabled |
+| Scan | Start the scheduled scan only when computer is on but not in use | Scans run only when the computer is on and idle. | Enabled |
 
 <a name="group-policy-settings-for-scheduling-scans-for-when-an-endpoint-isnt-in-use"></a>
 
 > [!NOTE]
-> When you schedule scans for times when endpoints aren't in use, scans don't honor the CPU throttling configuration and takes full advantage of the resources available to complete the scan as fast as possible.
+> When endpoints aren't in use at scan time, the scan skips CPU throttling. It uses all available resources to finish as fast as possible.
 
 ## Group Policy settings for scheduling remediation-required scans
 
@@ -128,25 +136,22 @@ The following table lists the Group Policy settings for scheduling remediation-r
 
 ## Group Policy settings for scheduling scans after protection updates
 
-The following table describes the setting for running scans after protection updates are downloaded:
+The following table describes the setting for running scans after protection updates:
 
 |Location |Setting |Description |Default setting (if not configured)|
 |:---|:---|:---|:---|
-|Signature updates |Turn on scan after Security intelligence update |A process scan will occur immediately after a new protection update is downloaded |Enabled |
+|Signature updates |Turn on scan after Security intelligence update |Runs a scan right after a new protection update is downloaded. |Enabled |
 
 ## See also
 
-[Troubleshoot Microsoft Defender Antivirus scan issues](troubleshoot-mdav-scan-issues.md)
+The following articles provide more information about Microsoft Defender Antivirus configuration and troubleshooting:
 
-[Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
-
-[Use PowerShell cmdlets to configure and manage Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md)
-
-[Set the PowerShell cmdlet to configure and manage Microsoft Defender Antivirus](/powershell/module/defender/set-mppreference)
-
-[Defender Antivirus specific PowerShell functions](/powershell/module/defender)
-
-[Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md)
+- [Troubleshoot Microsoft Defender Antivirus scan issues](troubleshoot-mdav-scan-issues.md)
+- [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
+- [Use PowerShell cmdlets to configure and manage Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md)
+- [Set the PowerShell cmdlet to configure and manage Microsoft Defender Antivirus](/powershell/module/defender/set-mppreference)
+- [Defender Antivirus specific PowerShell functions](/powershell/module/defender)
+- [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md)
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:

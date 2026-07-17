@@ -2,7 +2,7 @@
 title: How to use DKIM for email in your custom domain
 author: chrisda
 ms.author: chrisda
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 
 ms.localizationpriority: high
@@ -11,7 +11,7 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - seo-marvel-apr2020
   - sfi-ga-nochange
   - sfi-image-nochange
@@ -52,9 +52,9 @@ Before you get started, here's what you need to know about DKIM in Microsoft 365
 
 - **If you use only the Microsoft Online Email Routing Address (MOERA) domain for email (for example, contoso.onmicrosoft.com)**: You don't need to do anything. Outbound messages from senders in the contoso.onmicrosoft.com domain are automatically DKIM signed by the contoso.onmicrosoft.com domain.
 
-  However, you can also manually configure DKIM signing using the \*.onmicrosoft.com domain. For instructions, see the [Use the Defender portal to customize DKIM signing of outbound messages using the \*.onmicrosoft.com domain](#use-the-defender-portal-to-customize-dkim-signing-of-outbound-messages-using-the-onmicrosoftcom-domain) section later in this article.
+  However, you can also manually configure DKIM signing using the \*.onmicrosoft.com domain. For instructions, see [Use the Defender portal to customize DKIM signing of outbound messages using the \*.onmicrosoft.com domain](#use-the-defender-portal-to-customize-dkim-signing-of-outbound-messages-using-the-onmicrosoftcom-domain).
 
-  To verify outbound messages from senders in the initial \*.onmicrosoft.com domain are DKIM signed, see the [Verify DKIM signing of outbound mail from Microsoft 365](#verify-dkim-signing-of-outbound-mail-from-microsoft-365) section later in this article.
+  To verify outbound messages from senders in the initial \*.onmicrosoft.com domain are DKIM signed, see [Verify DKIM signing of outbound mail from Microsoft 365](#verify-dkim-signing-of-outbound-mail-from-microsoft-365).
 
   For more information about \*.onmicrosoft.com domains, see [Why do I have an "onmicrosoft.com" domain?](/microsoft-365/admin/setup/domains-faq#why-do-i-have-an--onmicrosoft-com--domain).
 
@@ -127,6 +127,8 @@ Points to address or value: selector2-<CustomDomainWithDashes>._domainkey.<Initi
 
 - **v1**: The current CNAME format version that's used for both selectors.
 - **dkim.mail.microsoft**: The parent DNS zone that's the same for both selectors.
+
+The following example shows the DNS CNAME values that Microsoft 365 expects for DKIM selectors when an organization has multiple custom domains. Use this example to map the placeholders in the syntax above to your own domain values.
 
 For example, your organization has the following domains in Microsoft 365:
 
@@ -482,6 +484,8 @@ For detailed syntax and parameter information, see the following articles:
 
 ## Disable DKIM signing of outbound messages using a custom domain
 
+Disabling DKIM signing for a custom domain stops Microsoft 365 from adding a DKIM signature to outbound messages from that domain. You can disable DKIM signing in the Defender portal or in Exchange Online PowerShell.
+
 ### Use the Defender portal to disable DKIM signing of outbound messages using a custom domain
 
 Use the following steps to disable DKIM signing for a custom domain in the Defender portal.
@@ -784,6 +788,9 @@ Use the following steps to create the DKIM CNAME records in GoDaddy.
 
 Use the following steps to create the DKIM CNAME records in Cloudflare.
 
+> [!CAUTION]
+> **Disable the Cloudflare proxy (orange cloud) for DKIM CNAME records.** DKIM CNAME records must resolve directly to the Microsoft DKIM infrastructure. If the proxy is enabled, DNS lookups return Cloudflare's IP addresses instead of the CNAME target, and DKIM verification fails. Set the proxy status to **DNS only** (gray cloud icon).
+
 1. Sign in to the [Cloudflare dashboard](https://dash.cloudflare.com).
 1. Select your domain (**contoso.com**) \> **DNS** \> **Records**.
 1. Select **Add record**.
@@ -803,6 +810,9 @@ Use the following steps to create the DKIM CNAME records in Cloudflare.
 ### Amazon Route 53 CNAME example
 
 Use the following steps to create the DKIM CNAME records in Amazon Route 53.
+
+> [!NOTE]
+> Route 53 requires a **trailing dot** (`.`) at the end of the CNAME target value to indicate a fully qualified domain name. If you omit the trailing dot, Route 53 appends the hosted zone name to the target, which creates an incorrect value. The example values in the following table include the required trailing dot.
 
 1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/route53/).
 1. Go to **Hosted zones** \> select **contoso.com**.
@@ -841,7 +851,7 @@ Use the following steps to create the DKIM CNAME records in Azure DNS.
 
 #### Azure DNS via CLI
 
-Use the following Azure CLI commands to create both DKIM selector CNAME records and set the TTL to 3600 seconds for your custom domain in Azure DNS:
+As an alternative to the Azure portal, you can use the Azure CLI to automate creation of the DKIM selector CNAME records in Azure DNS. The following commands create both selector CNAME records and set the TTL to 3600 seconds for your custom domain:
 
 ```azurecli
 # Create selector1 CNAME

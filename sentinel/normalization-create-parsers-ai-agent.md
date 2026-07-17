@@ -15,7 +15,7 @@ ms.custom: msecd-doc-authoring-1012
 
 # Get started with creating ASIM parsers using AI Skills
 
-Use [Agent skills](https://learn.microsoft.com/agent-framework/agents/skills) to create, validate, deploy, and package Advanced Security Information Model (ASIM) parsers. These skills are available in GitHub Copilot CLI and in the [Microsoft Sentinel VS Code extension](https://marketplace.visualstudio.com/items?itemName=ms-security.ms-sentinel). They automate the parser workflow from source data collection and Kusto Query Language (KQL) parser generation to validation, Log Analytics deployment, and pull request packaging. By the end of this guide, you'll have a working ASIM parser in your workspace, ready for production use.
+Use [Agent skills](/agent-framework/agents/skills) to create, validate, deploy, and package Advanced Security Information Model (ASIM) parsers. These skills are available in GitHub Copilot CLI and in the [Microsoft Sentinel VS Code extension](https://marketplace.visualstudio.com/items?itemName=ms-security.ms-sentinel). They automate the parser workflow from source data collection and Kusto Query Language (KQL) parser generation to validation, Log Analytics deployment, and pull request packaging. By the end of this guide, you'll have a working ASIM parser in your workspace, ready for production use.
 
 ## Prerequisites
 
@@ -27,9 +27,9 @@ Before you begin, make sure you have the following items in place:
     - [GitHub Copilot](https://github.com/features/copilot/cli/)
     - [Microsoft Sentinel VS Code extension](https://marketplace.visualstudio.com/items?itemName=ms-security.ms-sentinel)
 
-- [PowerShell 7](https://learn.microsoft.com/powershell/scripting/install/install-powershell-on-windows)
+- [PowerShell 7](/powershell/scripting/install/install-powershell-on-windows)
 
-- [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli)
+- [Azure CLI](/cli/azure/install-azure-cli)
     - You should have query access to your Sentinel Log Analytics workspace.
 
 - A local clone of the [Azure-Sentinel](https://github.com/Azure/Azure-Sentinel) repository. [Fork the repository](https://github.com/Azure/Azure-Sentinel/fork) so that you can submit pull requests with your parsers for Microsoft review.

@@ -11,10 +11,10 @@ ms.collection:
 - mde-edr
 ms.topic: how-to
 ms.subservice: edr
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -24,7 +24,7 @@ ai-usage: ai-assisted
 
 Quickly respond to detected attacks by stopping and quarantining files or blocking a file. After taking action on files, you can check on activity details in the Action center.
 
-Response actions are available on a file's detailed profile page. Once on this page, you can switch between the new and old page layouts by toggling **new File page**. The rest of this article describes the newer page layout.
+Response actions are available on a file's detailed profile page. Once on this page, you can switch between the new and old page layouts by toggling **new File page**. The following sections describe the newer page layout.
 
 Response actions run along the top of the file page, and include:
 
@@ -61,7 +61,7 @@ For more information on roles, see [Create and manage roles for role-based acces
 You can contain an attack in your organization by stopping the malicious process and quarantining the file where it was observed.
 
 > [!IMPORTANT]
-> You can only take this action if:
+> You can only take the **Stop and Quarantine File** action if:
 >
 > - The device you're taking the action on is running Windows 10, version 1703 or later, Windows 11, and Windows Server 2012 R2+
 > - The file does not belong to trusted non-Microsoft publishers or is not signed by Microsoft
@@ -213,14 +213,14 @@ If a file hasn't been seen in the organization in the past 30 days, **Collect fi
 
 ## Add indicator to block or allow a file
 
-Prevent further propagation of an attack in your organization by banning potentially malicious files or suspected malware. If you know a potentially malicious portable executable (PE) file, you can block it. This operation prevents it from being read, written, or executed on devices in your organization.
+Prevent further propagation of an attack in your organization by banning potentially malicious files or suspected malware. If you know a potentially malicious portable executable (PE) file, you can block it. Blocking the file prevents it from being read, written, or executed on devices in your organization.
 
 > [!IMPORTANT]
 >
 > - The **Block or allow** feature is available if your organization uses Microsoft Defender Antivirus and Cloud-delivered protection is enabled. For more information, see [Manage cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
 >
 > - The Anti-malware client version must be 4.18.1901.x or later.
-> - The **Block or allow** feature is designed to prevent suspected malware (or potentially malicious files) from being downloaded from the web. It supports portable executable (PE) files, including _.exe_ and _.dll_ files. The coverage will be extended over time.
+> - The **Block or allow** feature is designed to prevent suspected malware (or potentially malicious files) from being downloaded from the web. It supports portable executable (PE) files, including _.exe_ and _.dll_ files. Support for additional file types will be extended over time.
 > - The **Block or allow** response action is available for devices on Windows 10, version 1703 or later, and Windows 11.
 > - The allow or block function cannot be done on files if the file's classification exists on the device's cache prior to the allow or block action.
 
@@ -241,9 +241,9 @@ Files automatically blocked by an indicator don't show up in the file's Action c
 
 See [Overview of indicators](indicators-overview.md) for more details on blocking and raising alerts on files.
 
-To stop blocking a file, remove the indicator. You can do so via the **Edit Indicator** action on the file's profile page. The **Edit Indicator** action is visible in the same position as the **Add Indicator** action, before you added the indicator.
+To stop blocking a file, remove the indicator. You can remove the indicator via the **Edit Indicator** action on the file's profile page. The **Edit Indicator** action is visible in the same position as the **Add Indicator** action, before you added the indicator.
 
-You can also edit indicators from  the **Settings** page, under **Rules** \> **Indicators**. Indicators are listed in this area by their file's hash.
+You can also edit indicators from  the **Settings** page, under **Rules** \> **Indicators**. Indicators are listed on the **Rules** \> **Indicators** page by their file's hash.
 
 ## Check activity details in Action center
 
@@ -267,7 +267,7 @@ Deep analysis supports extensive analysis of portable executable (PE) files (inc
 
 Deep analysis of a file takes several minutes. Once the file analysis is complete, the Deep Analysis tab updates to display a summary and the date and time of the latest available results.
 
-The deep analysis summary includes a list of observed *behaviors*, some of which can indicate malicious activity, and *observables*, including contacted IPs and files created on the disk. If nothing was found, these sections display a brief message.
+The deep analysis summary includes a list of observed *behaviors*, some of which can indicate malicious activity, and *observables*, including contacted IPs and files created on the disk. If nothing was found, the Behaviors and Observables sections display a brief message.
 
 Results of deep analysis are matched against threat intelligence and any matches generate appropriate alerts.
 
@@ -308,7 +308,7 @@ To submit a file for deep analysis, use the following steps:
       A progress bar is displayed and provides information on the different stages of the analysis. You can then view the report when the analysis is done.
 
 > [!NOTE]
-> Depending on device availability, sample collection time can vary. There is a 3-hour timeout for sample collection. The collection will fail and the operation will abort if there is no online Windows 10 device (or Windows 11 or Windows Server 2012 R2+) reporting at that time. You can re-submit files for deep analysis to get fresh data on the file.
+> Depending on device availability, sample collection time can vary. There is a 3-hour timeout for sample collection. The collection will fail and the deep analysis submission will abort if there is no online Windows 10 device (or Windows 11 or Windows Server 2012 R2+) reporting at that time. You can re-submit files for deep analysis to get fresh data on the file.
 
 ### View deep analysis reports
 

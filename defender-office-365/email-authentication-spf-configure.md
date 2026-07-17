@@ -2,7 +2,7 @@
 title: Set up SPF to identify valid email sources for your Microsoft 365 domain
 author: chrisda
 ms.author: chrisda
-ms.date: 05/27/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 
 ms.localizationpriority: high
@@ -12,12 +12,14 @@ ms.collection:
   - tier2
 ms.custom:
   - seo-marvel-apr2020
+  - msecd-doc-authoring-1016
 description: Learn how to update a Domain Name Service (DNS) record to use Sender Policy Framework (SPF) with your custom domain in Office 365.
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 #customer intent: As an IT administrator responsible for email deliverability and security, I want to understand how SPF works and how to configure it to protect my organization's email reputation.
 ---
 
@@ -43,7 +45,7 @@ Before you get started, here's what you need to know about SPF in Microsoft 365 
       > [!TIP]
       > Email authentication protection for _undefined_ subdomains is covered by DMARC. Any subdomains (defined or not) inherit the DMARC settings of the parent domain (which can be overridden per subdomain). For more information, see [Set up DMARC to validate the From address domain for cloud senders](email-authentication-dmarc-configure.md).
 
-  - **If you own registered but unused domains**: If you own registered domains that aren't used for email or anything at all (also known as _parked domains_), configure SPF TXT records to indicate that no email should ever come from those domains as described [later in this article](#scenario-parked-domains).
+  - **If you own registered but unused domains**: If you own registered domains that aren't used for email or anything at all (also known as _parked domains_), configure SPF TXT records to indicate that no email should ever come from those domains as described in [Scenario: Parked domains](#scenario-parked-domains).
 
 - **SPF alone is not enough**. For the best level of email protection for your custom domains, you also need to configure DKIM and DMARC as part of your overall [email authentication](email-authentication-about.md) strategy. For more information, see the [Next steps](#next-steps) section at the end of this article.
 
@@ -115,7 +117,7 @@ Important points to remember:
 
 - Each defined domain or subdomain in DNS requires an SPF TXT record, and only one SPF record is allowed per domain or subdomain. Email authentication protection for _undefined_ subdomains is best handled by DMARC.
 - You can't modify the existing SPF TXT record for the \*.onmicrosoft.com domain.
-- When the destination email system checks the valid email sources in the SPF record, SPF validation fails if the check requires too many DNS lookups. For more information, see the [Troubleshooting SPF TXT records](#troubleshooting-spf-txt-records) section later in this article.
+- When the destination email system checks the valid email sources in the SPF record, SPF validation fails if the check requires too many DNS lookups. For more information, see [Troubleshooting SPF TXT records](#troubleshooting-spf-txt-records).
 
 ## SPF TXT records for custom domains in Microsoft 365
 

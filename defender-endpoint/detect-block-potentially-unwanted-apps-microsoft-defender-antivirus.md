@@ -275,7 +275,7 @@ To learn more about advanced hunting, see [Proactively hunt for threats with adv
 
 Sometimes a file is erroneously blocked by PUA protection, or a feature of a PUA is required to complete a task. In these cases, a file can be added to an exclusion list.
 
-For more information, see [Configure and validate exclusions based on file extension and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md).
+For more information, see [Configure and validate exclusions based on file extension and folder location](microsoft-defender-antivirus-exclusions-configure.md).
 
 ## See also
 

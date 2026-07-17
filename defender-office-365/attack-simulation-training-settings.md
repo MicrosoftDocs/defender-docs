@@ -9,11 +9,11 @@ ms.collection:
   - m365-security
   - tier2
 description: Admins can learn how to configure global settings in Attack simulation training in Microsoft Defender for Office 365 Plan 2.
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Global settings in Attack simulation training
@@ -50,7 +50,7 @@ To configure the training threshold, use the box in the **Training threshold** s
 
 The training threshold starts from the time that modules are assigned to users.
 
-We recommend that this value is greater than the number of days users have to complete a training module.
+We recommend that the training threshold is greater than the number of days users have to complete a training module.
 
 To remove the training threshold and always assign training, regardless of whether a user has already completed or been assigned a training, set value to 0.
 

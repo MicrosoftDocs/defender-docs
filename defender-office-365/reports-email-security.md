@@ -13,12 +13,14 @@ ms.custom:
   - seo-marvel-apr2020
   - sfi-ga-nochange
   - sfi-image-nochange
+  - msecd-doc-authoring-1016
 ms.service: defender-office-365
-ms.date: 07/08/2025
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # View email security reports in the Microsoft Defender portal
@@ -33,7 +35,7 @@ The reports are available in the Microsoft Defender portal at <https://security.
 
 Summary information for each report is available on the page. Identify the report you want to view, and then select **View details** for that report.
 
-The rest of this article describes the email security reports that are available in all Microsoft 365 organizations with Exchange Online mailboxes.
+The following sections describe the email security reports available in all Microsoft 365 organizations with Exchange Online mailboxes.
 
 > [!NOTE]
 >
@@ -102,7 +104,7 @@ On the **Compromised users** page, the :::image type="icon" source="media/defend
 ## Forwarding report
 
 > [!NOTE]
-> This report is now available in the EAC. For more information, see [Auto forwarded messages report in the new EAC](/exchange/monitoring/mail-flow-reports/mfr-auto-forwarded-messages-report).
+> The **Forwarding report** is now available in the EAC. For more information, see [Auto forwarded messages report in the new EAC](/exchange/monitoring/mail-flow-reports/mfr-auto-forwarded-messages-report).
 
 ## Mailflow status report
 
@@ -283,7 +285,7 @@ On the **Mailflow** tab, the :::image type="icon" source="media/defender-portal-
 ## Malware detections report
 
 > [!NOTE]
-> This report is deprecated. The same information is available in the [Threat protection status report](#threat-protection-status-report).
+> The **Malware detections** report is deprecated. The same information is available in the [Threat protection status report](#threat-protection-status-report).
 
 ## Mail latency report
 
@@ -296,7 +298,7 @@ The **Post-delivery activities** report is available only in organizations with 
 ## Spam detections report
 
 > [!NOTE]
-> This report is deprecated. The same information is available in the [Threat protection status report](#threat-protection-status-report).
+> The **Spam detections** report is deprecated. The same information is available in the [Threat protection status report](#threat-protection-status-report).
 
 ## Spoof detections report
 
@@ -1165,7 +1167,7 @@ If you don't see data in the reports, check the report filters and double-check 
 
 ## Download and export report information
 
-Depending on the report and the specific view in the report, one or more of the following actions might be available on the main report page as previously described:
+Depending on the report and the specific view in the report, one or more of the following actions might be available on the main report page:
 
 - :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](#export-report-data)**
 - :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**
@@ -1250,7 +1252,7 @@ The scheduled report entry is available on the **Managed schedules** page as des
 
 #### Manage existing scheduled reports
 
-After you create a scheduled report as described in the previous section, the scheduled report entry is available on the **Manage schedules** page in the Defender portal.
+After you create a scheduled report as described in [Schedule recurring reports](#schedule-recurring-reports), the scheduled report entry is available on the **Manage schedules** page in the Defender portal.
 
 In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Reports** \> **Email & collaboration** \> select **Manage schedules**. Or, to go directly to the **Manage schedules** page, use <https://security.microsoft.com/ManageSubscription>.
 
@@ -1274,7 +1276,7 @@ To modify the scheduled report settings, do the following steps:
    - Select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit name** to change the name of the scheduled report.
    - Select the **Edit** link in the section to modify the corresponding settings.
 
-   The settings and configuration steps are the same as described in [Schedule report](#schedule-recurring-reports).
+   The settings and configuration steps are the same as described in [Schedule recurring reports](#schedule-recurring-reports).
 
 To delete a scheduled report entry, use either of the following methods:
 
@@ -1327,7 +1329,7 @@ To download on-demand reports, you need to be a member of the **Organization man
 > [!IMPORTANT]
 > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
-After you request an on-demand report as described in the previous section, you check the status of the report and eventually download the report on the **Reports for download** page in the Defender portal.
+After you request an on-demand report as described in [Request on-demand reports for download](#request-on-demand-reports-for-download), you check the status of the report and eventually download the report on the **Reports for download** page in the Defender portal.
 
 In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Reports** \> **Email & collaboration** \> select **Reports for download**. Or, to go directly to the **Reports for download** page, use <https://security.microsoft.com/ReportsForDownload>.
 

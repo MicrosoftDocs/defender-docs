@@ -46,7 +46,7 @@ It's common for penetration testers to disable features of Microsoft Defender An
 
 - [Behavior monitoring](behavior-monitor.md) is enabled.
 
-- Adding [antivirus exclusions](configure-exclusions-microsoft-defender-antivirus.md) for the folder where you copied the payload. After you copy the payload to the device, remove the antivirus exclusion so that Microsoft Defender Antivirus can block detections during pen testing.
+- Adding [antivirus exclusions](microsoft-defender-antivirus-exclusions-configure.md) for the folder where you copied the payload. After you copy the payload to the device, remove the antivirus exclusion so that Microsoft Defender Antivirus can block detections during pen testing.
 
 - Make sure that you don't have antivirus exclusions for your BAS tools, such as AttackIQ, Cymulate, SafeBreach, and others.
 

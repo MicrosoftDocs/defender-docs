@@ -2,7 +2,7 @@
 title: Configure Azure PIM for Microsoft Defender for Office 365 admin access
 author: chrisda
 ms.author: chrisda
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.localizationpriority: high
 ms.assetid: 56fee1c7-dc37-470e-9b09-33fff6d94617
@@ -10,7 +10,7 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - seo-marvel-apr2020
   - sfi-image-nochange
 description: Learn to integrate Azure PIM in order to grant just-in-time, time limited access to users to do elevated privilege tasks in Microsoft Defender for Office 365, lowering risk to your data.
@@ -35,7 +35,7 @@ This article uses the scenario for a user named Alex on the security team. We ca
 - A temporary higher-level of privilege for less frequent, sensitive operations (for example, [remediating malicious delivered email](remediate-malicious-email-delivered-office-365.md)).
 
 > [!TIP]
-> Although article includes specific steps for the scenario as described, you can do the same steps for other permissions. For example, when an information worker requires day-to-day access in eDiscovery to perform searches and case work, but occasionally needs the elevated permissions to export data from the organization.
+> Although this article includes specific steps for Alex on the security team, you can do the same steps for other permissions. For example, when an information worker requires day-to-day access in eDiscovery to perform searches and case work, but occasionally needs the elevated permissions to export data from the organization.
 
 ***Step 1***. In the Azure PIM console for your subscription, add the user (Alex) to the Azure Security Reader role and configure the security settings related to activation.
 
@@ -46,7 +46,7 @@ This article uses the scenario for a user named Alex on the security team. We ca
 5. Select **Add Assignments** \> **No member selected** \> select or type the name to search for the correct member.
 6. Select the **Select** button to choose the member you need to add for PIM privileges \> select **Next** \> make no changes on the Add Assignment page (both assignment type _Eligible_ and duration _Permanently Eligible_ are defaults) and **Assign**.
 
-The name of the user (Alex in this scenario) appears under Eligible assignments on the next page. The user's appearance under Eligible assignments means they can activate the role in PIM with the settings configured earlier.
+The name of the user (Alex in this scenario) appears under Eligible assignments on the next page. The user's appearance under Eligible assignments means they can activate the role in PIM using the activation settings you configured for the Security Reader role.
 
 > [!NOTE]
 > For a quick review of Privileged Identity Management see [Privileged Identity Management overview](https://www.youtube.com/watch?v=VQMAg0sa_lE).
@@ -88,7 +88,7 @@ Create a Microsoft Entra security group to hold the elevated permissions and ena
 ### Nest the newly created security group into the role group
 
 > [!NOTE]
-> This step is required only if you used an Email & collaboration role group in [Create a role or role group with the required permissions](#create-a-role-or-role-group-with-the-required-permissions). Defender unified RBAC supports direct permissions assignments to Microsoft Entra groups, and you can add members to the group for PIM.
+> Nesting the security group into the role group is required only if you used an Email & collaboration role group in [Create a role or role group with the required permissions](#create-a-role-or-role-group-with-the-required-permissions). Defender unified RBAC supports direct permissions assignments to Microsoft Entra groups, and you can add members to the group for PIM.
 
 1. [Connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) and run the following command to add the Azure security group as a member of the role group, which grants the group's members the permissions assigned to that role group:
 

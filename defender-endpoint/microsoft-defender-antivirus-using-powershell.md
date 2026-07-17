@@ -33,7 +33,7 @@ For more information about our endpoint protection products and services, see th
 
 - [Next-generation protection overview](next-generation-protection.md)
 - [Microsoft Defender Antivirus in Windows](microsoft-defender-antivirus-windows.md)
-- [Microsoft Defender Antivirus on Windows Server](microsoft-defender-antivirus-on-windows-server.md)
+- [Microsoft Defender Antivirus on Windows Server](microsoft-defender-antivirus-windows-server-configure.md)
 - [Protect devices from exploits](exploit-protection.md)
 
 If you have any questions about a detection by Microsoft Defender Antivirus, or you discover a missed detection, you can submit the file to us. For more information, see [Submit files for analysis](/unified-secops/submission-guide).

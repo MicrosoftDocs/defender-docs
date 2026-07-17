@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: ngp
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Performance analyzer for Microsoft Defender Antivirus
@@ -44,7 +44,11 @@ Some options to analyze include:
 
 ## Prerequisites 
 
+Before you run the performance analyzer, make sure your device meets the following version and operating system requirements.
+
 ### Required versions
+
+The performance analyzer requires the following platform and PowerShell versions:
 
 - Platform Version: `4.18.2108.7` or later
 - PowerShell Version: PowerShell Version 5.1, PowerShell ISE, remote PowerShell (4.18.2201.10+), PowerShell 7.x (4.18.2201.10+)
@@ -53,10 +57,12 @@ Some options to analyze include:
 
 ### Supported operating systems 
 
+The performance analyzer is supported on the following operating systems:
+
    - Windows 10
    - Windows 11
    - Windows Server 2016 and later
-   - Windows Server 2012 R2 (when onboarded using [the modern unified solution for Windows Server 2016 and Windows Server 2012 R2](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2))
+   - Windows Server 2012 R2 (when onboarded using [Functionality in the modern unified solution for Windows Server 2016 and Windows Server 2012 R2](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2))
 
 <a name="running-performance-analyzer"></a>
 ## Run the Microsoft Defender Antivirus performance analyzer
@@ -102,7 +108,7 @@ Based on the query, the user is able to view data for scan counts, duration (tot
 
 ## Exporting and converting to CSV and JSON
 
-The results of the performance analyzer can also be exported and converted to a CSV or JSON file. This article includes examples that describe the process of "export" and "convert" through sample code.
+The results of the performance analyzer can also be exported and converted to a CSV or JSON file. The following examples describe how to export and convert performance analyzer results through sample code.
 
 Starting with Defender version `4.18.2206.X`, users are able to view scan skip reason information under `SkipReason` column. The possible values for the `SkipReason` column are:
 
@@ -132,14 +138,15 @@ Use the following commands to export or convert performance analyzer results to 
 
 Use the following command to convert performance analyzer results to JSON.
 
-- **To convert**:
+- **Convert the top 1000 scans to JSON with a depth of one level**:
     ```powershell
     (Get-MpPerformanceReport -Path .\Repro-Install.etl -Topscans 1000).TopScans | ConvertTo-Json -Depth 1
     ```
 
-To ensure machine-readable output for exporting with other data processing systems, it's recommended to use `-Raw` parameter for `Get-MpPerformanceReport`. For more details, see [For CSV](#for-csv) and [For JSON](#for-json).
+To ensure machine-readable output for exporting with other data processing systems, it's recommended to use `-Raw` parameter for `Get-MpPerformanceReport`. For more details, see [Export or convert results to CSV](#for-csv) and [Convert results to JSON](#for-json) earlier in this section.
 
-## Reference
+<a name="reference"></a>
+## Performance analyzer reference
 
 For detailed information about performance analyzer cmdlet parameters, options, and output fields, see [Microsoft Defender Antivirus Performance Analyzer reference](performance-analyzer-reference.md).
 

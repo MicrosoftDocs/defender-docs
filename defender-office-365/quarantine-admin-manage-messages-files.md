@@ -9,13 +9,13 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - seo-marvel-apr2020
   - sfi-ga-nochange
   - sfi-image-nochange
 description: Admins can learn how to view and manage quarantined messages for all users in Microsoft 365 organizations with cloud mailboxes. Admins in organizations with Microsoft Defender for Office 365 can also manage quarantined files in SharePoint, OneDrive, and Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
@@ -50,6 +50,8 @@ Watch this short video to learn how to manage quarantined messages as an admin.
 [!INCLUDE [MDO Setup guide](../includes/mdo-setup-guide.md)]
 
 ## What do you need to know before you begin?
+
+Before you begin, review the following portal access, permissions, and retention information:
 
 - To open the Microsoft Defender portal, go to <https://security.microsoft.com>. To go directly to the **Quarantine** page, use <https://security.microsoft.com/quarantine>.
 
@@ -284,7 +286,7 @@ After you select the quarantined message, the available actions are described in
 
 #### Release quarantined email
 
-This action isn't available for email messages already released (the **Release status** value is **Released**).
+The **Release** action isn't available for email messages already released (the **Release status** value is **Released**).
 
 Messages are automatically deleted from quarantine after the date shown in the **Expires** column if you don't release or manually remove the messages.
 
@@ -640,7 +642,7 @@ In the details flyout that opens, the following information is available:
   - **Last modified By**: The user who last modified the file.
   - **Secure Hash Algorithm 256-bit (SHA-256) value**: You can use this hash value to identify the file in other reputation stores or in other locations in your environment.
 
-To take action on the file, see the next section.
+To take action on the file, see [Take action on quarantined files](#take-action-on-quarantined-files).
 
 > [!TIP]
 > To see details about other quarantined files without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
@@ -659,7 +661,7 @@ After you select the quarantined file, the available actions in the file details
 
 #### Release quarantined files from quarantine
 
-This action isn't available for files already released (the **Released status** value is **Released**).
+The **Release file** action isn't available for files already released (the **Released status** value is **Released**).
 
 Messages are automatically deleted from quarantine after the date shown in the **Expires** column if you don't release or manually remove the messages, but the blocked file remains in SharePoint or OneDrive in the blocked state.
 
@@ -822,7 +824,7 @@ After you select the quarantined Teams message, the available actions are descri
 
 #### Release quarantined Teams messages
 
-This action isn't available for Teams messages already released (the **Release status** value is **Released**).
+The **Release** action isn't available for Teams messages already released (the **Release status** value is **Released**).
 
 Teams messages are automatically deleted from quarantine after the date shown in the **Expires** column if you don't release or manually remove the messages.
 
@@ -913,11 +915,11 @@ When you select multiple quarantined messages on the **Teams messages** tab by s
 
 When a user requests the release of a quarantined Teams message, the **Release status** value changes to **Release requested**, and an admin can approve or deny the request.
 
-For more information, see [Approve or deny release requests from users](#approve-or-deny-release-requests-from-users-for-quarantined-email).
+For more information, see [Approve or deny release requests from users for quarantined email](#approve-or-deny-release-requests-from-users-for-quarantined-email).
 
 ## Use PowerShell to manage quarantined messages
 
-The [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) cmdlets that you use to view and manage messages and files in quarantine are described in this section.
+As an alternative to the Microsoft Defender portal, you can use the following [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) cmdlets to view and manage quarantined messages and files:
 
 - [Delete-QuarantineMessage](/powershell/module/exchangepowershell/delete-quarantinemessage)
 - [Export-QuarantineMessage](/powershell/module/exchangepowershell/export-quarantinemessage)
@@ -925,6 +927,7 @@ The [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online
 - [Preview-QuarantineMessage](/powershell/module/exchangepowershell/preview-quarantinemessage): This cmdlet is for messages only, not quarantined files.
 - [Release-QuarantineMessage](/powershell/module/exchangepowershell/release-quarantinemessage)
 
-## For more information
+<a name="for-more-information"></a>
+## Related content
 
 For additional background and answers to common questions, see [Quarantined messages FAQ](quarantine-faq.yml).

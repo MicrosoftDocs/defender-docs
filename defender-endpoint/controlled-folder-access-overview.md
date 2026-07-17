@@ -3,7 +3,7 @@ title: Protect folders from ransomware with controlled folder access
 description: Controlled folder access in Microsoft Defender Antivirus protects your important folders from ransomware by allowing only trusted apps to change files.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 author: chrisda
 ms.author: chrisda
 ms.reviewer: sugamar
@@ -27,13 +27,13 @@ appliesto:
 
 # Controlled folder access (CFA) overview
 
-Controlled folder access (CFA) in Microsoft Defender Antivirus helps protect your valuable data from malicious apps and threats, such as ransomware. It's one of the [attack surface reduction](attack-surface-reduction-overview.md) capabilities in Microsoft Defender for Endpoint.
+Controlled folder access (CFA) in Microsoft Defender Antivirus helps protect your files from ransomware threats. It's one of the [attack surface reduction](attack-surface-reduction-overview.md) capabilities in Microsoft Defender for Endpoint.
 
 Ransomware encrypts your files and holds them hostage. CFA counters this threat by allowing only trusted apps to change files in protected folders. When an untrusted app tries to change a file in a protected folder, CFA blocks the attempt and notifies you.
 
 CFA is based on the following elements:
 
-- **Protected folders**: The folders that CFA guards. Untrusted apps can't modify or delete files in these folders. CFA protects an [unmodifiable set of default system folders](#default-folders-protected-by-cfa), and you can [add other folders](#add-other-folders-to-cfa).
+- **Protected folders**: The folders that CFA guards. Untrusted apps can't modify or delete files in these folders. CFA protects an [unmodifiable set of default folders](#default-folders-protected-by-cfa), and you can [add other folders](#add-other-folders-to-cfa).
 - **Trusted apps**: The apps that are allowed to change files in protected folders. Microsoft Defender Antivirus assesses every type of executable file (including `.exe`, `.scr`, and `.dll` files) and automatically trusts most apps based on their prevalence and reputation. You can [allow other apps](#allow-apps-to-modify-files-in-protected-folders) that you trust if CFA blocks them.
 - **Disk sectors**: The low-level disk sectors that store the boot record on protected devices. Untrusted apps can't write directly to these sectors. This protection helps block boot-level threats such as bootkits and disk-wiper malware that try to overwrite the boot record. Unlike protected folders and trusted apps, disk sector protection rarely conflicts with everyday apps, so you can apply it on its own. For more information, see [Modes for CFA](#modes-for-cfa).
 
@@ -49,7 +49,7 @@ CFA works best with [Microsoft Defender for Endpoint](microsoft-defender-endpoin
 
 CFA requires Microsoft Defender Antivirus as the primary antivirus app on Windows devices:
 
-- Microsoft Defender Antivirus must be enabled and in Active mode. Specifically, it can't be in any of the following modes:
+- Microsoft Defender Antivirus must be enabled and in Active mode. CFA doesn't work in any other modes, including:
   - Passive
   - Passive Mode with Endpoint Detection and Response (EDR) in Block Mode
   - Limited periodic scanning (LPS)
@@ -107,13 +107,15 @@ Use **Audit disk modification only** first to confirm that no legitimate softwar
 
 Not every configuration method for CFA supports every mode. The following table shows which modes each [deployment and configuration method](#deployment-and-configuration-methods-for-cfa) supports.
 
-|Mode|Intune|Configuration Manager|MDM CSP|Group Policy|PowerShell|Windows Security app|
+|Mode|Intune|Configuration Manager|Policy CSP|Group Policy|PowerShell|Windows Security app|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 |**Disabled**|Yes|Yes|Yes|Yes|Yes|Yes|
 |**Enabled** (Block)|Yes|Yes|Yes|Yes|Yes|Yes|
 |**Audit Mode**|Yes|Yes|Yes|Yes|Yes|No|
 |**Block disk modification only**|Yes|No|Yes|Yes|Yes|No|
 |**Audit disk modification only**|Yes|No|Yes|Yes|Yes|No|
+
+The Microsoft Defender portal uses the [same endpoint security policies as Intune](endpoint-security-policies-configure.md), so it supports the same modes shown in the **Intune** column.
 
 ## Deployment and configuration methods for CFA
 
@@ -124,6 +126,7 @@ The following table summarizes the available methods. For detailed configuration
 |Method|Description|
 |---|---|
 |[Microsoft Intune](controlled-folder-access-configure.md#configure-cfa-in-intune-using-endpoint-security-policies)|The recommended method. Configure and deploy CFA to devices by using endpoint security policies. Requires [Microsoft Intune](/intune/intune-service/fundamentals/licenses).|
+|[Microsoft Defender portal](controlled-folder-access-configure.md#configure-cfa-in-the-microsoft-defender-portal)|Configure CFA with endpoint security policies in the Microsoft Defender portal, using the same policies as Intune. Useful when you manage endpoint security policies from the Defender portal.|
 |[Any MDM solution using the Policy CSP](controlled-folder-access-configure.md#configure-cfa-in-any-mdm-solution-using-the-policy-csp)|Use the Windows [Policy configuration service provider (CSP)](/windows/client-management/mdm/policy-configuration-service-provider) with any mobile device management (MDM) solution.|
 |[Microsoft Configuration Manager](controlled-folder-access-configure.md#configure-cfa-in-microsoft-configuration-manager)|Configure CFA in a Windows Defender Exploit Guard policy.|
 |[Group Policy](controlled-folder-access-configure.md#configure-cfa-in-group-policy)|Use centralized Group Policy to configure and deploy CFA to domain-joined devices, or configure Group Policy locally on individual devices.|
@@ -137,8 +140,7 @@ The following table summarizes the available methods. For detailed configuration
 By default, CFA protects the following locations on Windows devices:
 
 - Hard drive boot sectors
-- Windows system folders
-- The following folders for system accounts (for example, `LocalService`, `NetworkService`, and `systemprofile`) and user accounts:
+- The following folders for user accounts and system accounts (for example, `LocalService`, `NetworkService`, and `systemprofile`):
   - `C:\Users\<username>\Documents`
   - `C:\Users\<username>\Favorites`
   - `C:\Users\<username>\Music`
@@ -149,21 +151,21 @@ By default, CFA protects the following locations on Windows devices:
   - `C:\Users\Public\Pictures`
   - `C:\Users\Public\Videos`
 
-  > [!NOTE]
-  > The previous paths are the default locations. If a folder is redirected, CFA protects the folder in its redirected location. For example, when OneDrive Known Folder Move backs up your Documents, Pictures, or Desktop folder to `C:\Users\<username>\OneDrive - <organization>\`, CFA protects the folder in OneDrive.
-  >
-  > You can't modify the list of default protected folders.
+> [!NOTE]
+> The previous paths are the default locations. If a folder is redirected, CFA protects the folder in its redirected location. For example, when OneDrive Known Folder Move backs up your Documents, Pictures, or Desktop folder to `C:\Users\<username>\OneDrive - <organization>\`, CFA protects the folder in OneDrive.
+>
+> You can't modify the list of default protected folders.
 
-  You can use either of the following methods to see the actual list of default protected folders on a Windows device:
+You can use either of the following methods to see the actual list of default protected folders on a Windows device:
 
-  - Open the Windows Security app as described in [Configure CFA in the Windows Security app](controlled-folder-access-configure.md#configure-cfa-in-the-windows-security-app). When CFA is turned on, the default folders appear at the bottom of the list.
-  - In an elevated PowerShell session (a PowerShell window you opened by selecting **Run as administrator**), run the following command.
+- Open the Windows Security app as described in [Configure CFA in the Windows Security app](controlled-folder-access-configure.md#configure-cfa-in-the-windows-security-app). When CFA is turned on, the default folders appear at the bottom of the list.
+- In an elevated PowerShell session (a PowerShell window you opened by selecting **Run as administrator**), run the following command.
 
-    ```powershell
-    (Get-MpPreference).ControlledFolderAccessDefaultProtectedFolders
-    ```
+  ```powershell
+  (Get-MpPreference).ControlledFolderAccessDefaultProtectedFolders
+  ```
 
-    The command returns the list of default protected folders only when CFA is turned on.
+  The command returns the list of default protected folders only when CFA is turned on.
 
 <a name="view-or-change-the-list-of-protected-folders"></a>
 
