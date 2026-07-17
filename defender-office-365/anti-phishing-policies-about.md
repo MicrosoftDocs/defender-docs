@@ -14,7 +14,7 @@ ms.custom:
   - sfi-image-nochange
 description: Admins can learn about the anti-phishing policies that are available in the built-in security features for all cloud mailboxes and in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 07/03/2026
+ms.date: 07/17/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -398,7 +398,7 @@ The chance of false positives (good messages marked as bad) increases as you inc
 **Impersonation** is an attacker mimicking a trusted user, domain, or brand to trick the recipient into believing the email is genuine. The attacker often uses subtle variations of the actual user or domain name (for example, `mithun@ćóntoso.com` instead of `mithun@contoso.com`).
 
 - Anti-phishing protection for all cloud mailboxes doesn't include impersonation protection.
-- Defender for Office 365 includes impersonation protection for users, domains, and brands, allowing admins to define trusted entities and thresholds for detection.
+- Defender for Office 365 includes impersonation protection for users and domains, allowing admins to define trusted entities and thresholds for detection.
 
 Impersonation can pass email authentication checks (SPF, DKIM, and DMARC) if the attacker created a lookalike domain and published valid DNS records. Despite passing authentication, the attacker is still impersonating a trusted domain or user to deceive recipients. This behavior highlights the importance of the advanced impersonation protection provided by Defender for Office 365.
 
