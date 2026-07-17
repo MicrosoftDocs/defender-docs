@@ -53,7 +53,7 @@ If you have specific needs that require increased CMK coverage, contact your acc
 
 Review the following limitations and considerations before enabling CMK for Microsoft Sentinel:
 
-- Onboarding a CMK workspace to Microsoft Sentinel is supported only via REST API and the [Azure CLI](/cli/azure/sentinel/onboarding-state?view=azure-cli-latest#az-sentinel-onboarding-state-create), and not via the Azure portal. Azure Resource Manager templates (ARM templates) currently aren't supported for CMK onboarding.
+- Onboarding a CMK workspace to Microsoft Sentinel is supported only via REST API and the [Azure CLI](/cli/azure/sentinel/onboarding-state#az-sentinel-onboarding-state-create), and not via the Azure portal. Azure Resource Manager templates (ARM templates) currently aren't supported for CMK onboarding.
 
 - In the following cases, only ingested data in Log Analytics tables are encrypted with CMK, while all other data is encrypted with Microsoft-managed keys: 
     - Enabling CMK on a workspace that's already onboarded to Microsoft Sentinel.
