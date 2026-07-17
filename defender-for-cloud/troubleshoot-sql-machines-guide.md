@@ -34,10 +34,10 @@ When you enable Defender for SQL Server on a subscription or specified SQL Serve
 
 - **Subscription permissions**: To deploy the plan on a subscription, including Azure Policy, you need **Subscription Owner** permissions.
 
-- **SQL Server instance permissions**: SQL Server service accounts must have the **sysadmin** fixed server role on each SQL Server instance, which is the default setting. Learn more about the [SQL Server service account requirement](/sql/sql-server/azure-arc/configure-least-privilege?view=sql-server-ver16).
+- **SQL Server instance permissions**: SQL Server service accounts must have the **sysadmin** fixed server role on each SQL Server instance, which is the default setting. Learn more about the [SQL Server service account requirement](/sql/sql-server/azure-arc/configure-least-privilege).
 
 - **Supported Resources**:
-  - [SQL virtual machines](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview?view=azuresql), and [Azure Arc SQL Server instances](/sql/sql-server/azure-arc/overview?view=sql-server-ver16) are supported.
+  - [SQL virtual machines](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview), and [Azure Arc SQL Server instances](/sql/sql-server/azure-arc/overview) are supported.
   - On-premises machines must be [onboarded to Arc and registered as Azure Arc SQL Server instances](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 
 **Communication**: Allow outbound HTTPS traffic over Transmission Control Protocol (TCP) port 443 using Transport Layer Security (TLS) to `*.<region>.arcdataservices.com` URL. Learn more about [URL requirements](/azure/azure-arc/servers/network-requirements#urls?tabs=azure-cloud).
@@ -75,7 +75,7 @@ Use the corresponding unhealthy reason and recommended actions to resolve the mi
 | **Defender for SQL extension should be up-to-date** | Update the extension in the Extensions page in the virtual machine/Arc-enabled server resource. |
 | **Error during the installation of the Defender for SQL extension** | Check the Defender for SQL extension status in the portal for additional information to troubleshoot the issue. |
 | **SQL Server instance is inactive** | Defender for SQL server on Machines can only protect active (running) SQL server instances. |
-| **Lack of permissions** | Ensure that the SQL Server service account is a member of the sysadmin fixed server role on each SQL Server instance (default setting). Learn more about [SQL Server service permissions](/sql/sql-server/azure-arc/configure-least-privilege?view=sql-server-ver16). |
+| **Lack of permissions** | Ensure that the SQL Server service account is a member of the sysadmin fixed server role on each SQL Server instance (default setting). Learn more about [SQL Server service permissions](/sql/sql-server/azure-arc/configure-least-privilege). |
 | **Lack of communication** | Ensure outbound HTTPS traffic on TCP port 443 using Transport Layer Security (TLS) is allowed from the virtual machine/Arc-enabled server to the `*.<region>.arcdataservices.com` URL. Learn more about [URL requirements](/azure/azure-arc/servers/network-requirements#urls?tabs=azure-cloud) |
 | **SQL server restart is needed** | Restart the SQL Server instance so that the Defender for SQL Server installation takes effect. |
 | **Internal error** | Please contact support. |
