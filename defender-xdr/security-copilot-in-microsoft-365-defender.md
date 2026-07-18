@@ -12,7 +12,7 @@ ms.collection:
 - magic-ai-copilot 
 ms.topic: article
 ms.update-cycle: 180-days
-ms.date: 05/08/2026
+ms.date: 07/17/2026
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1012
 appliesto:
@@ -162,6 +162,10 @@ Quickly assess a user's risk by generating an [identity summary](security-copilo
 
 :::image type="content" source="media/copilot-in-defender/identity-summary/identity-incident-graph-small.png" alt-text="Screenshot showing the Summarize option in the user details pane." lightbox="media/copilot-in-defender/identity-summary/identity-incident-graph.png":::
 
+#### Summarize emails in the Email entity page
+
+For Defender for Office 365 email investigations, open the Security Copilot pane on the [Email entity page](/defender-office-365/mdo-email-entity-page) to generate an AI-authored summary of the selected message. The summary consolidates email metadata, timeline events, URLs, and attachments into an overview, event timeline, and indicators breakdown. The experience is user-triggered from the Copilot pane and available to users with Security Copilot access.
+
 #### Write incident reports efficiently
 
 Security operations teams usually write reports to record important information. These reports include response actions taken, their results, the team members involved, and other information to aid future security decisions. Documenting incidents can be time-consuming because an effective incident report must contain the incident summary, actions taken, and who took what actions and when. Copilot [generates an incident report](security-copilot-m365d-create-incident-report.md) by consolidating the incident summary, response actions, and team involvement.
@@ -234,6 +238,7 @@ You can extend your investigation in the Security Copilot standalone portal usin
 
 - Type **Summarize incident {incident number} and conclude with a set of recommendations** to generate the incident summary and recommendations.
 - Type **What can you tell me about the reputation of the indicators in the script? Are they malicious? If so, why?** to analyze the script and generate details about the script.
+- Type **Summarize this email and list its key indicators, including URLs, senders, and attachments** to generate a summary of the selected email entity.
 
 Prompting in Copilot helps you navigate and use the capabilities effectively. You can also use the prompt bar to generate KQL queries, summarize incidents, and analyze files. See [tips for effective prompting](/copilot/security/prompting-tips). You can also use prebuilt promptbooks to get started with Copilot. To learn more, see [use prebuilt promptbooks in Copilot](/copilot/security/using-promptbooks).
 
