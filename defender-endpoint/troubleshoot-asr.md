@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 audience: ITPro
 author: chrisda
 ms.author: chrisda
-ms.date: 07/02/2026
+ms.date: 07/17/2026
 ms.reviewer:
 ms.custom: asr, msecd-doc-authoring-1016
 ms.subservice: asr
@@ -75,6 +75,9 @@ In this example, the [ASR rules listed in the overview](attack-surface-reduction
 
 > [!NOTE]
 > If you used [Group Policy to configure ASR rules](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-group-policy), verify there are no extra characters like quotation marks or spaces in the ASR rule GUID value.
+
+> [!TIP]
+> To see the actual value of each ASR rule setting on a device and the source that configured it, use the **Effective settings** tab on the device page. For more information, see [Configuration management - Effective settings](investigate-machines.md#configuration-management---effective-settings).
 
 <a name="use-audit-mode-to-test-the-rule"></a>
 

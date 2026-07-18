@@ -133,7 +133,7 @@ To create an allow entry for a domain or email address directly in the Tenant Al
 
    - **Optional note**: Enter descriptive text for why you're allowing the email addresses or domains.
 
-5. When you're finished in the **Block domains & addresses** flyout, select **Add**.
+5. When you're finished in the **Allow domains & addresses** flyout, select **Add**.
 
 Back on the **Domains & email addresses** tab, the entry is listed.
 
@@ -539,7 +539,7 @@ Set-TenantAllowBlockListSpoofItems -Identity Default -Ids <Identity value> -Acti
 This example changes the specified spoofed sender entry from an allow entry to a block entry.
 
 ```powershell
-Set-TenantAllowBlockListItems -Identity Default -Ids 3429424b-781a-53c3-17f9-c0b5faa02847 -Action Block
+Set-TenantAllowBlockListSpoofItems -Identity Default -Ids 3429424b-781a-53c3-17f9-c0b5faa02847 -Action Block
 ```
 
 For detailed syntax and parameter information, see [Set-TenantAllowBlockListSpoofItems](/powershell/module/exchangepowershell/set-tenantallowblocklistspoofitems).
