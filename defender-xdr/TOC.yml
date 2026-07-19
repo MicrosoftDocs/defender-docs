@@ -76,6 +76,8 @@
             href: security-for-ai/ai-agent-real-time-protection.md
           - name: Discover AI agents and manage posture
             href: security-for-ai/ai-agent-inventory.md
+          - name: AI agent risk posture (Preview)
+            href: security-for-ai/ai-agent-risk-assessment.md
           - name: Detect and investigate threats to AI agents
             href: security-for-ai/ai-agent-detection-protection.md
           - name: Data privacy as part of Agent 365
