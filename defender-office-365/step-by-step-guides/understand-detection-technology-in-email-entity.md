@@ -1,5 +1,5 @@
 ---
-title:       Understanding detection technology within the email entity page in Microsoft Defender for Office 365
+title:       Understand detection technology within the email entity page in Microsoft Defender for Office 365
 description: Guide to understanding the detection technology shown on the Email entity page in Microsoft Defender for Office 365. What the detection technologies mean, how they're triggered, and how to resolve false positives (see the admin submission video).
 author: chrisda
 ms.author: chrisda
@@ -14,7 +14,7 @@ ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1016
 ---
 
-# Understanding detection technology in the email entity page of Microsoft Defender for Office 365
+# Understand detection technology in the email entity page of Microsoft Defender for Office 365
 
 If a threat is detected on the Microsoft Defender for Office 365 [*email entity page in Microsoft Defender for Office 365*](../mdo-email-entity-page.md), threat information displays on the left-hand flyout. The threat-information flyout also shows you the **detection technology** that produced the threat verdict.
 

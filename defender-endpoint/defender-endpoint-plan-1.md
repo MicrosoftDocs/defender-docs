@@ -177,7 +177,7 @@ To learn more, see [Defender for Endpoint APIs](api/management-apis.md).
 
 - [Get started with Defender for Endpoint Plan 1](mde-plan1-getting-started.md)
 - [Manage Defender for Endpoint Plan 1](preferences-setup.md)
-- [Learn about exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+- [Learn about exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md)
 - [Onboard client devices running Windows or macOS to Microsoft Defender for Endpoint](onboard-client.md)
 - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
 - [Microsoft Defender for Endpoint - Mobile Threat Defense](mtd.md) (for iOS and Android devices)

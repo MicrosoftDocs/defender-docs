@@ -9,12 +9,12 @@ ms.collection:
 ms.localizationpriority: medium
 ms.assetid:
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - seo-marvel-apr2020
   - sfi-ga-nochange
 description: Admins can use the Audit page in the Microsoft Defender portal to search the unified audit log for user and admin actions in the organization.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -26,9 +26,11 @@ ai-usage: ai-assisted
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
+## Overview
+
 In all organizations with cloud mailboxes, the unified audit log records supported user and admin operations. Audit records for these events are searchable by security ops, IT admins, insider risk teams, and compliance and legal investigators in the organization. This capability provides visibility into the activities performed across your Microsoft 365 organization.
 
-This article describes how to open and start an audit log search in the Microsoft Defender portal, including the required permissions and links to detailed search instructions.
+This article describes how to open and start an audit log search in the Microsoft Defender portal, including the required permissions and links to detailed search instructions. Before you begin, review the [prerequisites](#what-do-you-need-to-know-before-you-begin) to verify that you have the necessary permissions.
 
 > [!TIP]
 > Audit log search in Microsoft Defender portal is identical to audit log search in the Microsoft Purview portal at <https://purview.microsoft.com/auditlogsearch>.
@@ -46,6 +48,5 @@ Review the following prerequisites before you search the audit log.
 
 ## Open audit log search
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Audit**. Or, to go directly to the **Audit** page, use <https://security.microsoft.com/auditlogsearch>.
-
-On the **Audit** page, create the audit log search. For instructions, see [Audit New Search](/purview/audit-new-search) or [Use a PowerShell script to search the audit log](/purview/audit-log-search-script).
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Audit**. Or, to go directly to the **Audit** page, use <https://security.microsoft.com/auditlogsearch>.
+2. On the **Audit** page, create the audit log search. For instructions, see [Audit New Search](/purview/audit-new-search) or [Use a PowerShell script to search the audit log](/purview/audit-log-search-script).

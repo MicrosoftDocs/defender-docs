@@ -132,7 +132,7 @@ Detections related to behavior monitoring start with "[Behavior](/unified-secops
 
 When investigating high CPU usage in `MsMpEng.exe`, you can temporarily disable behavior monitoring to see if the issues continue.
 
-You can use Performance analyzer for Microsoft Defender Antivirus to find **\path\process**, **process** and/or **file extensions** that are contributing to the high cpu utilization. You can then add these items to [Contextual Exclusion](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md).
+You can use Performance analyzer for Microsoft Defender Antivirus to find **\path\process**, **process** and/or **file extensions** that are contributing to the high cpu utilization. You can then add these items to [Contextual Exclusion](microsoft-defender-antivirus-exclusions-overview.md#contextual-exclusions).
 
 For more information, see [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 

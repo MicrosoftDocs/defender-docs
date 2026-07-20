@@ -92,7 +92,7 @@ After you determine that an app is suspicious and you want to investigate it, we
 After you determine that an OAuth app is risky, Defender for Cloud Apps provides the following remediation options:
 
 - **Manual remediation**:
-You can easily [ban revoke an app from the OAuth apps page](manage-app-permissions.md#ban-or-approve-an-app)
+You can easily [ban or revoke an app from the OAuth apps page](manage-app-permissions.md#ban-or-approve-an-app)
 
 - **Automatic remediation**: You can create a policy that [automatically revokes an app or revokes a specific user from an app](app-permission-policy.md).
 

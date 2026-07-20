@@ -293,7 +293,7 @@ What's new
 - Improved performance in specific scenarios where network files were accessed.
 - Fixed an issue with [Azure Virtual Desktop](/azure/virtual-desktop/overview) where the Intune policy wasn't being honored.
 - Fixed potential deadlock for [custom detection rules](/defender-xdr/custom-detection-rules) on the Windows client
-- Resolved an issue where [antivirus exclusions](configure-exclusions-microsoft-defender-antivirus.md) weren't being honored with [AMSI](/windows/win32/amsi/antimalware-scan-interface-portal).
+- Resolved an issue where [antivirus exclusions](microsoft-defender-antivirus-exclusions-configure.md) weren't being honored with [AMSI](/windows/win32/amsi/antimalware-scan-interface-portal).
 - Fixed issue impacting a subset of devices where [antivirus exclusions configured through SCCM](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings) weren't honored
 
 > [!IMPORTANT]
@@ -381,7 +381,7 @@ What's new
 - Fixed an issue where occasionally exclusions deployed via Intune were not being honored when tamper protection was enabled.
 - After a new engine version is released, support for older versions (N-2) will now reduce to technical support only. Engine versions older than N-2 are no longer supported.
 - Improved health monitoring and telemetry for [attack surface reduction rules](attack-surface-reduction-rules-overview.md) exclusions.
-- Updated inaccurate information in [Configure exclusions for files opened by processes](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md) regarding wildcard usage with contextual exclusions.
+- Updated inaccurate information in [Exclusions in Microsoft Defender Antivirus](microsoft-defender-antivirus-exclusions-overview.md) regarding wildcard usage with contextual exclusions.
 
 ### March-2024 (Engine: 1.1.24030.4 | Platform: 4.18.24030.9)
 
@@ -530,7 +530,7 @@ What's new
 #### What's new
 
 - Fixed an issue where Microsoft Defender Antivirus switched from [passive mode to active mode](microsoft-defender-antivirus-windows.md#comparing-active-mode-passive-mode-and-disabled-mode) following an update on Windows Server 2016 and Windows Server 2012 R2 [onboarded using the modern, unified client](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)
-- Fixed an issue where [exclusions](defender-endpoint-antivirus-exclusions.md) weren't applied correctly using [gpupdate](/windows-server/administration/windows-commands/gpupdate) when registry policy processing was set to process even if Group Policy Objects didn't change
+- Fixed an issue where [exclusions](defender-endpoint-exclusions-overview.md) weren't applied correctly using [gpupdate](/windows-server/administration/windows-commands/gpupdate) when registry policy processing was set to process even if Group Policy Objects didn't change
 - Excluded IP addresses can now be configured using [Intune](/windows/client-management/mdm/defender-csp#configurationexcludedipaddresses)
 - Improved [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) on Windows Server 2016
 - [DisableFtpParsing](/windows/client-management/mdm/defender-csp#configurationdisableftpparsing) can now be configured through [Set-MpPreference](/powershell/module/defender/set-mppreference)
@@ -636,7 +636,7 @@ What's new
 - New version format for Platform and Engine (see the [April-2023 update](#whats-new))
 - Improved processing of SmartLockerMode
 - Fixed input parameters for DefinitionUpdateChannel cmdlet in [Set-MpPreference](/powershell/module/defender/set-mppreference)
-- Improved installation experience for [Windows Server 2012 R2 and Windows Server 2016](microsoft-defender-antivirus-on-windows-server.md)
+- Improved installation experience for [Windows Server 2012 R2 and Windows Server 2016](microsoft-defender-antivirus-windows-server-configure.md)
 - Added ability to disable Defender task maintenance tasks programmatically
 - Fixed WDFilter 0x50 bug check
 - Fixed print enforcement issue for device control
@@ -724,7 +724,7 @@ What's new
 - Improved [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) hardening for temporary exclusions
 - Fixed time zone calculation in [Defender PowerShell](/powershell/module/defender) module
 - Fixed merging logic for exclusions in Defender PowerShell module
-- Improvements in the [contextual exclusions](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md) syntax
+- Improvements in the [contextual exclusions](microsoft-defender-antivirus-exclusions-overview.md#contextual-exclusions) syntax
 - Improved scheduled scan robustness
 - Improved serviceability for internal database files
 - Enhanced certificate indicators determination logic
@@ -814,7 +814,7 @@ What's new
 - Improved processing of Defender fallback order on Server SKU
 - Fixed Defender updates during OOBE process
 - Fixed Trusted Installer security descriptor vulnerability
-- Fixed [Microsoft Defender Antivirus exclusions](configure-exclusions-microsoft-defender-antivirus.md) visibility
+- Fixed [Microsoft Defender Antivirus exclusions](microsoft-defender-antivirus-exclusions-configure.md) visibility
 - Fixed output of fallback order of the PowerShell cmdlet
 - Fixed Defender Platform update failure on Server Core 2019 SKUs
 - Improved hardening support for Defender disablement configurations on Server SKUs
@@ -1303,7 +1303,7 @@ What's new
 
 #### What's new
 
-- Possibility to specify the [location of the support logs](./collect-diagnostic-data.md)
+- Possibility to specify the [location of the support logs](collect-diagnostic-data.md)
 - Skipping aggressive catchup scan in Passive mode.
 - Allow Defender to update on metered connections
 - Fixed performance tuning when caching is disabled
@@ -1367,7 +1367,7 @@ What's new
 
 #### What's new
 
-- CPU Throttling option added to [MpCmdRun](./command-line-arguments-microsoft-defender-antivirus.md)
+- CPU Throttling option added to [MpCmdRun](command-line-arguments-microsoft-defender-antivirus.md)
 - Improve diagnostic capability
 - reduce Security intelligence timeout (5 min)
 - Extend AMSI engine internal log capability
@@ -1406,7 +1406,7 @@ What's new
 - Fixed BSOD on WS2016 with Exchange
 - Support platform updates when TMP is redirected to network path
 - Platform and engine versions are added to [WDSI](https://www.microsoft.com/en-us/wdsi/defenderupdates) <!-- The preceding URL must include "/en-us" -->
-- extend Emergency signature update to [passive mode](./microsoft-defender-antivirus-compatibility.md)
+- extend Emergency signature update to [passive mode](microsoft-defender-antivirus-compatibility.md)
 - Fix 4.18.1911.3 hang
 
 #### Known issues

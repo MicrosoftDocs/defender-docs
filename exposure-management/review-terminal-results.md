@@ -6,7 +6,7 @@ ms.date: 05/31/2026
 ai-usage: ai-assisted
 ---
 
-# Review agentic code scan results from the terminal (preview)
+# Review agentic code scan results from the terminal (private preview)
 
 After a scan completes, Defender CLI automatically generates result files in the directory where the scan was initiated. Two output formats are available: an interactive HTML report for human review and a SARIF file for programmatic processing and tool integration.
 

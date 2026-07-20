@@ -10,14 +10,14 @@ ms.collection:
 - tier2
 - mde-edr
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ms.subservice: edr
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Investigate an IP address associated with a Microsoft Defender for Endpoint alert
 
@@ -79,6 +79,8 @@ Clicking any of the device names will take you to that device's view, where you 
 
 <a name="related-topics"></a>
 ## Related content
+
+For more information, see the following articles:
 
 - [View and organize the Microsoft Defender for Endpoint Alerts queue](alerts-queue.md)
 - [Manage Microsoft Defender for Endpoint alerts](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#manage-alerts)

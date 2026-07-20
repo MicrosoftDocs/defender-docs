@@ -110,7 +110,7 @@ If you're using a non-Microsoft antivirus/antimalware solution on Windows Server
      ```
 
      > [!TIP]
-     > You can also use [Server Manager or PowerShell to install the Microsoft Defender Antivirus feature](microsoft-defender-antivirus-on-windows-server.md#install-microsoft-defender-antivirus-on-windows-server).
+     > You can also use [Server Manager or PowerShell to install the Microsoft Defender Antivirus feature](microsoft-defender-antivirus-windows-server-configure.md#install-microsoft-defender-antivirus-on-windows-server).
 
   1. Reboot the system.
 

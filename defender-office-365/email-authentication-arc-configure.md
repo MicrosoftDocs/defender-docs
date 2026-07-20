@@ -8,13 +8,13 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - seo-marvel-apr2020
   - sfi-ga-nochange
   - sfi-image-nochange
 description: Configure trusted ARC sealers in Microsoft 365 so messages modified by legitimate intermediary services retain original authentication results and avoid unnecessary SPF, DKIM, and DMARC failures.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
@@ -418,6 +418,6 @@ The following table summarizes the composite authentication (CompAuth) reason co
 
 Check your ARC headers with Message Header Analyzer at <https://mha.azurewebsites.net>.
 
-Review the [SPF](email-authentication-spf-configure.md), [DKIM](email-authentication-dkim-configure.md), [DMARC](email-authentication-dmarc-configure.md) configuration procedures.
+Set up [SPF](email-authentication-spf-configure.md), [DKIM](email-authentication-dkim-configure.md), and [DMARC](email-authentication-dmarc-configure.md) for your domain.
 
 To diagnose and fix email authentication failures, see [Troubleshoot email authentication in Microsoft 365](email-authentication-troubleshoot.md).

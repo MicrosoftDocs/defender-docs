@@ -33,7 +33,7 @@ Defender for Endpoint also integrates with the broader Microsoft security ecosys
 * [Microsoft Defender for Cloud](/azure/defender-for-cloud/)
 * [Microsoft Defender for Cloud Apps](/defender-cloud-apps/)
 * [Microsoft Defender for Identity](/defender-for-identity/)
-* [Microsoft Defender for Office](/defender-office-365/)
+* [Microsoft Defender for Office 365](/defender-office-365/)
 * [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 * [Microsoft Sentinel](/azure/sentinel/)
 * [Microsoft threat intelligence](threat-protection-integration.md)

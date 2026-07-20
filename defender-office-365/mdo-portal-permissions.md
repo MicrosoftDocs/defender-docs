@@ -10,7 +10,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to manage Microsoft Defender for Office 365 (Email & collaboration) permissions in the Microsoft Defender portal.
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - seo-marvel-apr2020
   - sfi-ga-nochange
 ms.service: defender-office-365
@@ -33,13 +33,13 @@ Global roles in Microsoft Entra ID allow you to manage permissions and access to
 
 To manage Defender for Office 365 permissions in the Microsoft Defender portal, go to **Permissions** \> **Email & collaboration roles** \> **Roles** or go directly to <https://security.microsoft.com/emailandcollabpermissions>.
 
-You need to be member of the **Global Administrator**<sup>\*</sup> role in Microsoft Entra ID or a member of the **Organization Management** role group in Defender for Office 365 permissions. Specifically, the **Role Management** role in Defender for Office 365 allows users to view, create, and modify Defender for Office 365 role groups. By default, that role is assigned only to the **Organization Management** role group (and by extension, global administrators).
+You need to be member of the **Global Administrator**<sup>\*</sup> role in Microsoft Entra ID or a member of the **Organization Management** role group in Defender for Office 365 permissions. Specifically, the **Role Management** role in Defender for Office 365 allows users to view, create, and modify Defender for Office 365 role groups. By default, the **Role Management** role is assigned only to the **Organization Management** role group (and by extension, global administrators).
 
 - Some Defender for Office 365 features require additional permissions in Exchange Online. For more information, see [Permissions in Exchange Online](/exchange/permissions-exo/permissions-exo).
 - Microsoft Defender has its own Unified role-based access control (RBAC). This model provides a single permissions management experience in one central location where admins can control permissions for different security solutions. These permissions are different from the permissions described in this article. For more information, see [Microsoft Defender role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
   > [!IMPORTANT]
-  > Unified RBAC will become the default permission model for new Microsoft Defender for Office 365 Plan 2 organizations. For more information, see [MC1246006](https://admin.microsoft.com/Adminportal/Home#/MessageCenter/:/messages/MC1246006). For a complete list of Unified RBAC permissions mapped to Defender for Office 365 features, see [Unified RBAC permissions for Defender for Office 365](defender-office-365-unified-rbac-permissions.md). For step-by-step configuration guidance, see [How to configure Unified RBAC for Defender for Office 365](step-by-step-guides/configure-unified-rbac-defender-office-365.md).
+  > Unified RBAC will become the default permission model for new Microsoft Defender for Office 365 Plan 2 organizations. For more information, see [Message Center post MC1246006: Unified RBAC as the default for Defender for Office 365](https://admin.microsoft.com/Adminportal/Home#/MessageCenter/:/messages/MC1246006). For a complete list of Unified RBAC permissions mapped to Defender for Office 365 features, see [Unified RBAC permissions for Defender for Office 365](defender-office-365-unified-rbac-permissions.md). For step-by-step configuration guidance, see [How to configure Unified RBAC for Defender for Office 365](step-by-step-guides/configure-unified-rbac-defender-office-365.md).
   >
   > If you activate Defender unified RBAC for Email & collaboration, the permissions page at <https://security.microsoft.com/emailandcollabpermissions> is no longer available in the Defender portal, so you need to ensure that you configure or import your roles _before_ you activate Defender unified RBAC.
 
@@ -96,12 +96,12 @@ For more information, see [Assign Microsoft Entra roles to users](/entra/identit
 
 ### Email & collaboration roles in the Microsoft Defender portal
 
-The same role groups and roles are available in the Defender portal and in the Purview compliance portal:
+The Email & collaboration role groups and roles are available in both the Defender portal and the Purview compliance portal:
 
 - [Microsoft Defender portal](https://security.microsoft.com): **Permissions** \> **Email & collaboration roles** \> **Roles** or directly at <https://security.microsoft.com/emailandcollabpermissions>
 - [Microsoft Purview compliance portal](https://purview.microsoft.com): **Roles & Scopes** \> **Permissions** \> **Microsoft Purview solutions** \> **Roles** or directly at <https://purview.microsoft.com/compliancecenterpermissions>
 
-For complete information about these role groups, see [Roles and role groups in the Microsoft Defender XDR and Microsoft Purview compliance portals](scc-permissions.md)
+For complete information about the Email & collaboration role groups, see [Roles and role groups in the Microsoft Defender XDR and Microsoft Purview compliance portals](scc-permissions.md)
 
 > [!NOTE]
 > Defender for Office 365 data that's available in the Microsoft Defender portal isn't affected by adaptive scopes that are configured in the Microsoft Purview portal. For more information about adaptive scopes, see [Adaptive scopes](/purview/purview-adaptive-scopes).
@@ -184,7 +184,7 @@ The new role group wizard opens. For instructions, see [Create Email & collabora
 
 The default name of the new role group is **Copy of \<original role group name\>**, but you can change it.
 
-The roles and members are populated with the values from the role you're copying, but you can change them.
+The roles and members are populated with the values from the role group you're copying, but you can change them.
 
 #### Modify Email & collaboration role group membership in the Microsoft Defender portal
 

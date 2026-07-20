@@ -38,8 +38,8 @@ Before you enable Defender for Cloud, it's important to know how to manage antiv
 
 - <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus</a>
 - [Manage Microsoft Defender Antivirus in your business](configuration-management-reference-microsoft-defender-antivirus.md)
-- [Defender for Endpoint exclusions](navigate-defender-endpoint-antivirus-exclusions.md)
-- [Managing exclusions reference](managing-exclusions.md)
+- [Defender for Endpoint exclusions](defender-endpoint-exclusions-overview.md)
+- [Managing exclusions reference](defender-endpoint-exclusions-configuration-reference.md)
 - [Troubleshoot performance issues related to real-time protection](troubleshoot-performance-issues.md)
 - [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](troubleshoot-microsoft-defender-antivirus.yml)
 

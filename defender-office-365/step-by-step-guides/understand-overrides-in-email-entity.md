@@ -1,5 +1,5 @@
 ---
-title: Understanding overrides within the email entity page in Microsoft Defender for Office 365
+title: Understand Overrides Within the Email Entity Page in Microsoft Defender for Office 365
 description: Shows the different overrides in the email entity page in Microsoft Defender for Office 365 to help admins troubleshoot configurations.
 author: MSFTBen
 ms.author: benharri
@@ -15,7 +15,7 @@ ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1014
 ---
 
-# Understanding overrides within the email entity page in Microsoft Defender for Office 365
+# Understand overrides within the email entity page in Microsoft Defender for Office 365
 
 Within the Microsoft Defender for Office 365 *[email entity page](../mdo-email-entity-page.md)*, there's a wealth of useful information about an email, including if applicable the **overrides** which affected that message, and potentially the location that the message was delivered or moved to post delivery.
 
@@ -53,6 +53,6 @@ The following table lists all overrides, a description of what that override mea
 |Trusted recipient (User override)|The recipient has added this sender to their safe recipients list within Outlook, emails sent to this sender aren't treated as junk email.|The recipient has likely configured "Safe Recipients" within Outlook's Junk email options. [Learn more](https://support.microsoft.com/office/block-or-allow-junk-email-settings-48c9f6f7-2309-4f95-9a4d-de987e880e46).|
 |Trusted senders only (User override)|This override marks all messages as spam unless they're received from a sender in the recipient's trusted contact list, primarily used in outlook.com. This behavior is the same as Exclusive mode (User override).|The recipient has likely configured: "Don't trust email unless it comes from someone in my Safe Senders and Recipients list" within the Junk email settings. [Learn more](/powershell/module/exchangepowershell/set-mailboxjunkemailconfiguration).|
 
-## Next steps
+## Next step
 
-You can find a similar detailed table covering all the different detection technologies at [Understanding detection technology in the email entity](understand-detection-technology-in-email-entity.md).
+You can find a similar detailed table covering all the different detection technologies at [Understand detection technology in the email entity](understand-detection-technology-in-email-entity.md).

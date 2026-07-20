@@ -7,7 +7,7 @@ ms.topic: how-to
 author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ms.subservice: ngp
 ms.collection:
 - m365-security
@@ -19,7 +19,7 @@ appliesto:
   - Microsoft Defender for Business
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Run Microsoft Defender Antivirus in a sandbox
 
@@ -93,20 +93,20 @@ Microsoft Defender Antivirus performs an in-proc fallback that hosts content sca
 
 The content processes, which run with low privileges, also aggressively use all available mitigation policies to reduce the surface attack. They enable and prevent runtime changes for modern exploit mitigation techniques such as Data Execution Prevention (DEP), Address space layout randomization (ASLR), and Control Flow Guard (CFG). They also disable Win32K system calls and all extensibility points, as well as enforce that only signed and trusted code is loaded.
 
-**Performance of MDAV with sandbox enabled**
+### Performance of MDAV with sandbox enabled
 
 Performance is a common concern with sandboxing. Anti-malware products sit in many critical paths, such as inspecting file operations and matching runtime events. To keep performance stable, the design minimizes interactions between the sandbox and the privileged process. These interactions only happen at key moments when their cost is low, such as during I/O operations.
 
 Microsoft Defender Antivirus makes an orchestrated effort to avoid unnecessary I/O, for example, minimizing the amount of data read for every inspected file is paramount in maintaining good performance, especially on older hardware (rotational disk, remote resources). Thus, it was crucial to maintain a model where the sandbox can request data for inspection as needed, instead of passing the entire content.  
 
-**Reliability of MDAV with sandbox enabled**
+### Reliability of MDAV with sandbox enabled
 
 > [!NOTE]
 > Passing handles to the sandbox (to avoid the cost of passing the actual content) isn't an option because there are many scenarios, such as real-time inspection, AMSI, etc., where there's no 'sharable' handle that can be used by the sandbox without granting significant privileges, which decreases the security.
 
 Another key concern is the inter-process communication (IPC) mechanism. The IPC design must avoid deadlocks and priority inversions. It must not create bottlenecks by throttling the caller or limiting concurrent requests. The sandbox process must not trigger scans on its own. All inspections must occur without starting more scans. Low-privilege AppContainers help enforce these rules. Their capabilities-based model provides fine-grained control over what the sandbox process can do. 
 
-**Remediation of MDAV with sandbox enabled**
+### Remediation of MDAV with sandbox enabled
 
 Lastly, a significant challenge from the security perspective is related to content remediation or disinfection. Remediation attempts to restore a binary to its original preinfection content. Given the sensitive nature of this operation, remediation must run with high privileges to mitigate cases where the content process (sandbox) could be compromised and used to modify the detected binary in unexpected ways.
 

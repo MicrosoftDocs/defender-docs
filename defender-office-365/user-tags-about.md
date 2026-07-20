@@ -2,14 +2,14 @@
 title: User tags in Microsoft Defender for Office 365
 author: chrisda
 ms.author: chrisda
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.collection:
   - m365-security
   - tier2
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - sfi-ga-nochange
 description: Admins can learn how to identify specific groups of users with user tags in Microsoft Defender for Office 365. Tag filtering is available across alerts, reports, and investigations in Microsoft Defender for Office 365 to quickly identify the tagged users.
 ms.service: defender-office-365
@@ -65,6 +65,8 @@ Before you begin, make sure you can access the Microsoft Defender portal and tha
 - For information about securing _privileged accounts_ (admin accounts), see [Privileged access management](/purview/privileged-access-management).
 
 ## Use the Microsoft Defender portal to create user tags
+
+Use the following steps to create a custom user tag in the Microsoft Defender portal:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Settings** \> **Email & collaboration** \> **User tags**. Or, to go directly to the **User tags** page, use <https://security.microsoft.com/securitysettings/userTags>.
 
@@ -148,6 +150,9 @@ The modify tag wizard uses the same **Define tag**, **Assign members**, and **Re
 ## Use the Microsoft Defender portal to remove user tags
 
 You can't remove the built-in Priority account tag.
+
+> [!WARNING]
+> Removing a custom user tag is permanent and can't be undone. The tag is removed from all users and groups it's assigned to, and it's no longer available in reports and features. Make sure you want to delete the tag before you proceed.
 
 After you select the custom tag, use either of the following methods to remove it:
 

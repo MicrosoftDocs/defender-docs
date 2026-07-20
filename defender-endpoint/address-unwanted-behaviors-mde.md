@@ -49,7 +49,7 @@ At a high level, the process for addressing an unwanted behavior in Defender for
    - [Suppress alerts in the Microsoft Defender portal](manage-suppression-rules.md)
    - [Define custom remediation actions](configure-remediation-microsoft-defender-antivirus.md)
    - [Submit a file to Microsoft for analysis](admin-submissions-mde.md)
-   - [Define exclusions for Microsoft Defender Antivirus](configure-exclusions-microsoft-defender-antivirus.md)
+   - [Define exclusions for Microsoft Defender Antivirus](microsoft-defender-antivirus-exclusions-configure.md)
    - [Create indicators for Defender for Endpoint](indicator-manage.md)
 
    Tamper protection affects whether exclusions can be modified or added. See [What happens when tamper protection is turned on](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on).
@@ -58,7 +58,7 @@ At a high level, the process for addressing an unwanted behavior in Defender for
 
 ## Examples of unwanted behaviors
 
-The following example scenarios show cases that can be addressed by using exclusions and indicators. For more information about exclusions, see [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md).
+The following example scenarios show cases that can be addressed by using exclusions and indicators. For more information about exclusions, see [Exclusions overview](defender-endpoint-exclusions-overview.md).
 
 ### An app is detected by Microsoft Defender Antivirus when the application runs
 
@@ -86,7 +86,7 @@ In this scenario, a custom app accesses a set of file types, and the set is dete
 **How to address**: Define exclusions for Microsoft Defender Antivirus, such as a file or path exclusion that might include wildcards. Or define a custom file path exclusion. See the following articles:
 
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
-- [Configure and validate exclusions based on file extension and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
+- [Configure and validate exclusions based on file extension and folder location](microsoft-defender-antivirus-exclusions-configure.md)
 
 ### An application is detected by Microsoft Defender Antivirus as a "behavior" detection
 
@@ -94,8 +94,8 @@ In this scenario, Microsoft Defender Antivirus detects an application because of
 
 **How to address**: Define a process exclusion. See the following articles:
 
-- [Configure and validate exclusions based on file extension and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
-- [Configure exclusions for files opened by processes](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
+- [Configure and validate exclusions based on file extension and folder location](microsoft-defender-antivirus-exclusions-configure.md)
+- [Configure exclusions for files opened by processes](microsoft-defender-antivirus-exclusions-configure.md)
 
 ### An app is considered a potentially unwanted application (PUA)
 
@@ -104,7 +104,7 @@ In this scenario, an app is detected as PUA, and you want to allow it to run.
 **How to address**: Define an exclusion for the app. See the following articles:
 
 - [Exclude files from PUA protection](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md#exclude-files-from-pua-protection)
-- [Configure and validate exclusions based on file extension and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
+- [Configure and validate exclusions based on file extension and folder location](microsoft-defender-antivirus-exclusions-configure.md)
 
 ### An app is blocked from writing to a protected folder
 
@@ -144,5 +144,5 @@ For the available methods to configure ASR rule exclusions, see [File and folder
 
 ## See also
 
-- [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md)
-- [Managing exclusions reference](managing-exclusions.md)
+- [Exclusions overview](defender-endpoint-exclusions-overview.md)
+- [Managing exclusions reference](defender-endpoint-exclusions-configuration-reference.md)

@@ -105,7 +105,7 @@ You can configure scheduled antivirus scans on Linux using one of the following 
    1. On the **Assignments** page, select the groups that receive this profile. Then select **Next**.
    1. On the **Review + create** page, when you're done, select **Save**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
-   For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](./manage-security-policies.md).
+   For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](endpoint-security-policies-configure.md).
 
    :::image type="content" source="media/schedule-antivirus-scans-linux/schedule-antivirus-scans-linux.png" alt-text="Screenshot of Endpoint security policies option.":::
 

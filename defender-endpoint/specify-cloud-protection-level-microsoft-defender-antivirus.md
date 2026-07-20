@@ -7,8 +7,8 @@ ms.topic: how-to
 author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
-ms.date: 06/16/2026
-ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 07/02/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
 ms.subservice: ngp
 ms.collection: 
 - m365-security
@@ -30,11 +30,13 @@ Cloud protection works together with Microsoft Defender Antivirus to deliver pro
 
 ### Supported operating systems 
 
+Cloud protection level configuration is supported on the following operating systems:
+
 - Windows
 
 ## Use Microsoft Intune to specify the level of cloud protection
 
-To specify the level of cloud protection for an existing policy in Microsoft Intune, see <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (opens in a new tab in the Intune documentation). Choose the following options:
+To specify the level of cloud protection for an existing policy in Microsoft Intune, see <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (opens in a new tab in the Intune documentation). When you edit the policy, use the following settings:
 
 - **Policy type**: Antivirus
 - Configuration settings: Choose **Edit** and scroll down to **Cloud Block Level**. Select one of the following options:
@@ -76,12 +78,14 @@ Perform the following steps to specify the level of cloud protection by using Gr
 
 1. Select **OK**.
 
-1. Deploy your updated Group Policy Object. See [Group Policy Management Console](/windows/win32/srvnodes/group-policy)
+1. Deploy your updated Group Policy Object. For deployment steps, see [Group Policy Management Console](/windows/win32/srvnodes/group-policy).
 
 > [!TIP]
 > Are you using Group Policy Objects on premises? See how they translate in the cloud. [Analyze your on-premises group policy objects using Group Policy analytics in Microsoft Intune](/intune/intune-service/configuration/group-policy-analytics).
 
-## See also
+## Related content
+
+For more information about cloud protection, see the following resource:
 
 - [Turn on cloud protection in Microsoft Defender Antivirus](enable-cloud-protection-microsoft-defender-antivirus.md)
 

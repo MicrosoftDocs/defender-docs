@@ -1,5 +1,5 @@
 ---
-title: Get started with custom graphs in Microsoft Sentinel (preview)
+title: Get Started with Custom Graphs in Microsoft Sentinel (Preview)
 description: Learn how to create and manage custom graphs in Microsoft Sentinel to model attack patterns, investigate threats, and run advanced graph algorithms.
 ms.author: edbaynash
 author: EdB-MSFT
@@ -24,9 +24,9 @@ This article focuses on manually authoring custom graphs using code. For an AI�
 
 The following are required to create custom graphs in Microsoft Sentinel:
 
-+ Microsoft Sentinel extension for Visual Studio Code. For more information, see [Run notebooks on the Microsoft Sentinel data lake](notebooks.md).
-+ Jupyter extension for Visual Studio Code. 
-+ Microsoft Sentinel data lake configured with appropriate permissions. For more information, see [Onboard to Microsoft Sentinel data lake](sentinel-lake-onboard-defender.md).
+- Microsoft Sentinel extension for Visual Studio Code. For more information, see [Run notebooks on the Microsoft Sentinel data lake](notebooks.md).
+- Jupyter extension for Visual Studio Code. 
+- Microsoft Sentinel data lake configured with appropriate permissions. For more information, see [Onboard to Microsoft Sentinel data lake](sentinel-lake-onboard-defender.md).
 
 Enable the Microsoft Entra ID connector to ingest the Microsoft Entra asset tables used in this article's sample code. For more information, see [Asset data ingestion in the Microsoft Sentinel data lake](enable-data-connectors.md).
 
@@ -50,23 +50,19 @@ Microsoft Entra ID roles provide broad access across all workspaces in the data 
 
 Create custom graphs by using Jupyter notebooks in the Microsoft Sentinel Visual Studio Code extension. For more information, see [Install Visual Studio Code and the Microsoft Sentinel extension ](notebooks.md#install-visual-studio-code-and-the-microsoft-sentinel-extension)
   
-
-## Create a custom graph 
+## Create a custom graph
 
 To create and work with custom graphs, complete the following steps:
 
 1. Model a custom graph
 1. Persist the custom graph by scheduling a graph job
-1. View and manage custom graphs 
-
-
+1. View and manage custom graphs
 
 ## Model a custom graph
 
 Create a custom graph by using a Jupyter notebook in the Microsoft Sentinel Visual Studio Code extension. 
 
 The following steps walk you through creating your first custom graph by using a sample notebook.
-
 
 ### Set up your notebook and connect to the data lake
 
@@ -95,12 +91,11 @@ Use the following steps to create a notebook and connect to the Microsoft Sentin
 
    :::image type="content" source="media/create-custom-graphs/run-first-cell.png" lightbox="media/create-custom-graphs/run-first-cell.png" alt-text="A screenshot showing the running of the first cell in Visual Studio Code.":::
 
-	
-### Create a graph 
+### Create a graph
 
 The following sample creates a graph to traverse Microsoft Entra group memberships and understand nested group relationships. The sample code helps you get started with a simple use case to learn the custom graph capability and leverage the power of graph traversal for your investigations. You can create a graph from any table available in the Sentinel data lake.
 
-1.	Connect to your workspace and read Entra assets tables to begin building the graph.
+1. Connect to your workspace and read Entra assets tables to begin building the graph.
 
     ```python
     from pyspark.sql import functions as F
@@ -167,7 +162,7 @@ The following sample creates a graph to traverse Microsoft Entra group membershi
     spark.conf.set("spark.sql.parquet.int96RebaseModeInWrite", "CORRECTED")
     ```
 
-1.	Prepare the node and edge DataFrames required for building the graph
+1. Prepare the node and edge DataFrames required for building the graph
 
     ```python
     # ============================================================
@@ -316,7 +311,8 @@ The following sample creates a graph to traverse Microsoft Entra group membershi
     ).done()
     ```
 
-1.	Validate the graph schema
+1. Validate the graph schema
+
     ```python
     # Check the schema of the graph spec to ensure it's correct
     entra_group_graph_spec.show_schema()
@@ -336,8 +332,7 @@ The following sample creates a graph to traverse Microsoft Entra group membershi
     > [!NOTE] 
     > Graphs created during interactive notebook sessions are removed when the notebook session is closed. To persist the graph for reuse and sharing, see [Persist your custom graph](#persist-your-custom-graph)
 
-
-You have now created a graph in the notebook.
+You've now created a graph in the notebook.
 
 To show a visual representation of the graph, in a new cell paste and run the following sample Graph Query Language (GQL) query. This query traverses nested Microsoft Entra group memberships up to eight levels deep and displays the resulting relationships:
 
@@ -356,38 +351,34 @@ This code runs a sample Graph Query Language (GQL) query to retrieve all nested 
 
 :::image type="content" source="media/create-custom-graphs/graph-visualization.png" lightbox="media/create-custom-graphs/graph-visualization.png" alt-text="A screenshot showing the visualization of a graph in Visual Studio Code.":::
 
+### Persist your custom graph
 
-
-
-### Persist your custom graph 
 Once you create the graph code in notebook, you can run the notebook in an interactive session or schedule a graph job. Graphs created during the interactive notebook session are temporary and are available only in the context of the notebook session. To save your graph and share with your team, schedule a graph job to rebuild your graph frequently. Once the graph is saved, it's accessible from: the graph experience in Microsoft Defender portal under Sentinel, Visual Studio Code Notebooks, and Graph query APIs.  
-
 
 1. From your graph notebook, select **Create Scheduled Job**, then select **Create a graph job**.
 
     :::image type="content" source="media/create-custom-graphs/create-scheduled-job.png" lightbox="media/create-custom-graphs/create-scheduled-job.png" alt-text="A screenshot showing the create scheduled job button in a graph notebook.":::
 
-1.  In the **Create graph job** form, enter the **Graph name** and **Description**, and verify the correct graph notebook is included in **Path**.
+1. In the **Create graph job** form, enter the **Graph name** and **Description**, and verify the correct graph notebook is included in **Path**.
 
-1.  To build the graph without configuring a refresh schedule, select **On demand** in the **Schedule** section, then select **Submit** to create the graph.
+1. To build the graph without configuring a refresh schedule, select **On demand** in the **Schedule** section, then select **Submit** to create the graph.
 
     > [!NOTE]
     > Graphs created using on demand schedule have default retention of 30 days and are deleted on expiration.
 
-1.  To build the graph where the graph data is refreshed regularly, select **Scheduled** in the **Schedule** section.
+1. To build the graph where the graph data is refreshed regularly, select **Scheduled** in the **Schedule** section.
 
-    1.  Select a **Repeat frequency** for the job. You can choose from **By the minute**, **Hourly**, **Weekly**, **Daily**, or **Monthly**.
+    1. Select a **Repeat frequency** for the job. You can choose from **By the minute**, **Hourly**, **Weekly**, **Daily**, or **Monthly**.
 
-    1.  More options are displayed to configure the schedule, depending on the frequency you select. For example day of the week, time of day, or day of the month.
+    1. More options are displayed to configure the schedule, depending on the frequency you select. For example day of the week, time of day, or day of the month.
 
-    1.  Select a **Start on** time for the schedule to start running.
+    1. Select a **Start on** time for the schedule to start running.
 
-    1.  Select an **End on** time for the schedule to stop running. If you don't want to set an end time for the schedule, select **Set job to run indefinitely**. Dates and times are in your timezone.
+    1. Select an **End on** time for the schedule to stop running. If you don't want to set an end time for the schedule, select **Set job to run indefinitely**. Dates and times are in your timezone.
 
-    1.  Select **Submit** to save the job configuration and publish the job. The graph building process starts in your tenant. View the newly created graph and its latest status in the Sentinel extension.
+    1. Select **Submit** to save the job configuration and publish the job. The graph building process starts in your tenant. View the newly created graph and its latest status in the Sentinel extension.
 
     :::image type="content" source="media/create-custom-graphs/configure-graph-job.png" lightbox="media/create-custom-graphs/configure-graph-job.png" alt-text="A screenshot of the create graph job page.":::
-
 
 ### View and manage custom graphs
 
@@ -404,7 +395,6 @@ After you create a graph job, you can view and manage the graph in your tenant f
     :::image type="content" source="media/create-custom-graphs/graph-details.png" lightbox="media/create-custom-graphs/graph-details.png" alt-text="A screenshot of the graph details tab.":::
 
 1. You can now query and visualize your graph from the graph visualization in Microsoft Sentinel in the Defender portal. For more information, see [Visualize graphs in Microsoft Sentinel graph (preview)](./graph-visualization.md).
-
 
 ## Update custom graphs
 
@@ -443,7 +433,7 @@ Use this workflow when you want to recreate a graph and overwrite an existing gr
 
 :::image type="content" source="media/create-custom-graphs/overwrite-graph-job.png" lightbox="media/create-custom-graphs/overwrite-graph-job.png" alt-text="A screenshot showing the Create graph form used to overwrite an existing custom graph in Visual Studio Code.":::
 
-## Related articles
+## Related content
 
 - [AI-assisted custom graph authoring in Microsoft Sentinel](create-graphs-with-ai.md)
 - [Microsoft Sentinel graph provider library reference](./sentinel-graph-provider-reference.md)

@@ -1,7 +1,7 @@
 ---
 title: Deploy the Defender for Identity sensor v3.x
 description: Learn the requirements and configuration steps to deploy the Defender for Identity sensor v3.x on domain controllers running Windows Server 2019 or later.
-ms.date: 06/15/2026
+ms.date: 07/15/2026
 ms.topic: how-to
 ms.custom: msecd-doc-authoring-1014
 ms.reviewer: rlitinsky
@@ -31,8 +31,7 @@ Make sure that the server on which you're activating the sensor:
 - Has Defender for Endpoint deployed on the server. The Microsoft Defender Antivirus component can be in either active or passive mode. Defender for Endpoint must be onboarded on the server where the sensor runs; endpoint-only deployment isn't sufficient.
 - Doesn't have a Defender for Identity sensor v2.x already deployed.
 - Is running Windows Server 2019 or later.
-- Includes the [Windows Server cumulative update KB5078766 (March 2026 or later)](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea).
-
+- Includes the Windows Server July 2026 or later cumulative update.
 
 #### Supported server types
 
@@ -130,32 +129,10 @@ If automatic auditing isn't available or you opted out, [configure auditing manu
 
 ### Configure RPC auditing
 
-To improve security visibility and enable additional identity detections, apply the **Sensor Extended RPC Audit** tag to your devices. Once applied, the configuration is enforced on all existing and future devices that match the rule criteria. The tag is visible in the Device inventory for auditing purposes.
+Starting with the July 2026 Defender for Identity sensor release (sensor version 3.0.8), RPC auditing is automatically enabled on domain controllers when you upgrade the sensor to the latest version. You no longer need to apply a tag manually to enable RPC auditing, and the related health alert clears shortly after the upgrade.
 
-#### Prerequisites
-
-- Devices must run Defender for Identity sensor version 3.0.7 or later. Devices running earlier versions that receive the tag don't get the configuration and don't generate RPC auditing health alerts.
-
-To apply the tag:
-
-1. In the **Microsoft Defender portal**, navigate to: **System > Settings > Microsoft Defender XDR > Asset Rule Management**.
-1. Select **Create a new rule**.
-
-    :::image type="content" source="media/prerequisites-sensor-version-3/new-rule.png" alt-text="Screenshot that shows how to add a new rule." lightbox="media/prerequisites-sensor-version-3/new-rule.png":::
-
-1. In the side panel:
-
-    1. Enter a **Rule name** and **Description**.
-    1. Set **rule conditions** using `Device name`, `Domain`, or `Device tag` to target the desired machines. Target domain controllers with the sensor v3.x installed.
-    1. Make sure that the **Defender for Identity sensor v3.x** is already deployed on the selected devices.
-
-1. Add the **Sensor Extended RPC Audit** tag to the selected devices. When you combine multiple conditions in a rule, choose the correct operator (AND or OR) for your intended targeting.
-
-    :::image type="content" source="media/prerequisites-sensor-version-3/extended-rpc-audit-tag.png" alt-text="Screenshot that shows the Sensor Extended RPC Audit tag applied to a device in Asset Rule Management." lightbox="media/prerequisites-sensor-version-3/extended-rpc-audit-tag.png":::
-
-1. Select **Next** to review and finish creating the rule, and then select **Submit**. The rule might take up to one hour to take effect.
-
-Learn more about [asset management rules](/defender-xdr/configure-asset-rules).
+> [!NOTE]
+> If you're on sensor version 3.0.8 and you already applied the **Unified Sensor RPC Audit** or **Sensor Extended RPC Audit** tag, no additional action is needed. You can leave the tag in place.
 
 ### Recommended settings
 

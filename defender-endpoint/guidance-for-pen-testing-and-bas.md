@@ -7,8 +7,8 @@ ms.topic: how-to
 author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
-ms.custom: nextgen, msecd-doc-authoring-1014
-ms.date: 06/16/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.subservice: ngp
 ms.collection: 
 - m365-security
@@ -30,7 +30,7 @@ Common challenges during pen testing include:
 - Concerns about enabling [cloud protection](cloud-protection-microsoft-defender-antivirus.md), as it might proceed to cloud protection detonation if it doesn't find metadata. For more information about Microsoft Defender Antivirus and cloud protection, see [hybrid detection and protection](adv-tech-of-mdav.md).
 
 > [!NOTE]
-> If you're downloading multiple payloads and notice that Microsoft Defender Antivirus doesn't remediate some of the payloads, keep in mind that the missed remediation might not be a true positive, and a non-Microsoft vendor might be showing a false positive. See the "How to submit possible false negatives for investigation" section later in this article for guidance on reporting undetected payloads to Microsoft.
+> If you're downloading multiple payloads and notice that Microsoft Defender Antivirus doesn't remediate some of the payloads, keep in mind that the missed remediation might not be a true positive, and a non-Microsoft vendor might be showing a false positive. See [How to submit possible false negatives for investigation](#how-to-submit-possible-false-negatives-for-investigation) for guidance on reporting undetected payloads to Microsoft.
 
 ## Common misconfigurations of Microsoft Defender Antivirus during pen testing
 
@@ -46,7 +46,7 @@ It's common for penetration testers to disable features of Microsoft Defender An
 
 - [Behavior monitoring](behavior-monitor.md) is enabled.
 
-- Adding [antivirus exclusions](configure-exclusions-microsoft-defender-antivirus.md) for the folder where you copied the payload. After you copy the payload to the device, remove the antivirus exclusion so that Microsoft Defender Antivirus can block detections during pen testing.
+- Adding [antivirus exclusions](microsoft-defender-antivirus-exclusions-configure.md) for the folder where you copied the payload. After you copy the payload to the device, remove the antivirus exclusion so that Microsoft Defender Antivirus can block detections during pen testing.
 
 - Make sure that you don't have antivirus exclusions for your BAS tools, such as AttackIQ, Cymulate, SafeBreach, and others.
 
@@ -80,7 +80,7 @@ Use the following steps to submit possible false negatives to Microsoft for inve
 
 ### Step 1: Gather the Microsoft Defender for Endpoint diagnostic logs
 
-Choose one of the following methods to gather Microsoft Defender for Endpoint diagnostic logs.
+Gather Microsoft Defender for Endpoint diagnostic logs by using either the MDE Client Analyzer log or the Microsoft Defender Antivirus diagnostic package (MpSupport.cab).
 
 <a name="use-the-mde-client-analyzer-log"></a>
 #### Use the Microsoft Defender for Endpoint (MDE) Client Analyzer log
@@ -135,4 +135,4 @@ It's crucial to report to Microsoft as soon as possible. The advanced hunting te
 
 1. Wait for an update. After Microsoft receives the sample, the file is investigated, and a determination is made. If Microsoft determines that the sample file is malicious, we take corrective action to prevent the malware from going undetected.
 
-   If you have questions, [contact support](contact-support.md).
+   If you have questions, [contact Microsoft Defender for Endpoint support](contact-support.md).

@@ -55,7 +55,7 @@ Before you do anything else, you should design and build a query in Kusto Query 
 For more information, see:
 
 - [Best practices for analytics rule queries](scheduled-rules-overview.md#best-practices-for-analytics-rule-queries).
-- [Kusto Query Language in Microsoft Sentinel](/kusto/query/?view=microsoft-sentinel&toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json)
+- [Kusto Query Language in Microsoft Sentinel](/kusto/query/?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json)
 - [Best practices for Kusto Query Language queries](/kusto/query/best-practices?view=microsoft-sentinel&preserve-view=true&toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json)
 
 ## Create your analytics rule

@@ -14,7 +14,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 05/28/2026
+ms.date: 07/02/2026
 search.appverid: met150
 ai-usage: ai-assisted
 #customer intent: As an IT admin, I want detailed per-rule reference information for ASR rules so I can understand OS support, deployment methods, and alert behavior for each rule.
@@ -114,7 +114,9 @@ Although Defender for Endpoint supports ASR rules, you need a separate service t
 |Use advanced protection against ransomware|Y|1802 or later|Y|Y|
 
 > [!TIP]
-> You can also configure ASR rules locally on individual devices using Group Policy or [PowerShell](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-powershell). All ASR rules are supported by both methods on local devices.
+> The Microsoft Defender portal uses the [same endpoint security policies as Intune](endpoint-security-policies-configure.md), so it supports the same rules shown in the **Intune** column.
+>
+> You can also configure ASR rules locally on individual devices using [Group Policy](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-group-policy) or [PowerShell](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-powershell). All ASR rules are supported by both methods on local devices.
 
 <a name='per-asr-rule-alert-and-notification-details'></a>
 
@@ -563,5 +565,5 @@ If blocks on benign, unknown files don't resolve in a timely manner, you can con
 - [Enable attack surface reduction (ASR) rules](attack-surface-reduction-rules-deployment-implement.md)
 - [Manage and monitor your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-operationalize.md)
 - [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md)
-- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md)
 - [Troubleshoot ASR rules](troubleshoot-asr.md)

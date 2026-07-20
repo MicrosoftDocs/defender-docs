@@ -49,8 +49,6 @@ For more information, see [Requirements for ASR rules](attack-surface-reduction-
 
 [!INCLUDE [Intune is recommended but is a separate product](includes/intune-recommended-separate-product.md)]
 
-Microsoft Intune is the recommended tool for configuring and distributing ASR rule policies to devices.
-
 In Intune, endpoint security policies are the recommended method to deploy ASR rules, although other methods are also available in Intune (for example, [custom profiles with OMA-URIs and CSPs](#configure-asr-rules-in-intune-using-custom-profiles-with-oma-uris-and-csps)).
 
 ### Configure ASR rules and exclusions in Intune using endpoint security policies
@@ -229,6 +227,16 @@ When you're finished on the **Add row** flyout, select **Save**.
 Back on the **Configuration settings** tab, select **Next**.
 
 Complete the remaining steps in [Configure ASR rules in Intune using custom profiles with OMA-URIs and CSPs](#configure-asr-rules-in-intune-using-custom-profiles-with-oma-uris-and-csps), starting with the **Assignments** tab.
+
+## Configure ASR rules and exclusions in the Microsoft Defender portal
+
+If your organization [manages endpoint security policies in the Microsoft Defender portal](endpoint-security-policies-configure.md), you can configure ASR rules and their exclusions with the same endpoint security policies that Intune uses.
+
+On the **Windows** tab of the **Endpoint security policies** page of the Defender portal at <https://security.microsoft.com/policy-inventory>, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create new policy** and then create an **Attack surface reduction** policy. For the full procedure, see [Create an endpoint security policy](endpoint-security-policies-configure.md#create-an-endpoint-security-policy).
+
+Use the same **Attack Surface Reduction Rules** profile and settings described in [Configure ASR rules and exclusions in Intune using endpoint security policies](#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies). These settings include global attack surface reduction only exclusions and per-ASR rule exclusions.
+
+When you assign the policy, note that assignment group limitations apply to devices managed through security settings management. For details, see the [Assignments step](endpoint-security-policies-configure.md#create-an-endpoint-security-policy).
 
 <a name="mdm"></a>
 

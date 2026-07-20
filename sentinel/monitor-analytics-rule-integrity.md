@@ -209,7 +209,7 @@ For either **Scheduled analytics rule run** or **NRT analytics rule run**, you m
     | A function called by the query is named with a reserved word.   | Remove or rename the function.   |
     | A syntax error occurred while running the query.   | Try resetting the analytics rule by editing and saving it (without changing any settings). |
     | The workspace doesn't exist.   |   |
-    | This query uses too many system resources and was prevented from running. | Review and tune the analytics rule. Consult our Kusto Query Language [Kusto Query Language overview](/kusto/query/?view=microsoft-sentinel&toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json) and [Kusto Query Language best practices](/kusto/query/best-practices?view=microsoft-sentinel&preserve-view=true&toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json) documentation. |
+    | This query uses too many system resources and was prevented from running. | Review and tune the analytics rule. Consult our Kusto Query Language [Kusto Query Language overview](/kusto/query/?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json) and [Kusto Query Language best practices](/kusto/query/best-practices?view=microsoft-sentinel&preserve-view=true&toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json) documentation. |
     | A function called by the query wasn't found.   | Verify the existence in your workspace of all functions called by the query.   |
     | The workspace used in the query wasn't found.   | Verify that all workspaces in the query exist.   |
     | You don't have permissions to run this query.   | Try resetting the analytics rule by editing and saving it (without changing any settings).   |

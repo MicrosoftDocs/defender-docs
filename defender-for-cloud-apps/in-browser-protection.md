@@ -62,7 +62,7 @@ To access a work resource in *contoso.com* with in-browser protection, you must 
 
 If you decide to create a new work profile, you'll see a prompt with the **Allow my organization to manage my device** option. In such cases, you don't need to select this option to create the work profile or benefit from in-browser protection.
 
-For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business) and [How to add new profiles to Microsoft Edge](https://www.microsoft.com/edge/learning-center/how-to-add-new-profiles).
+For more information, see [Microsoft Edge for Business](/deployedge/microsoft-edge-for-business) and [Sign in and create multiple profiles in Microsoft Edge](https://support.microsoft.com/en-us/microsoft-edge/sign-in-and-create-multiple-profiles-in-microsoft-edge-df94e622-2061-49ae-ad1d-6f0e43ce6435).
 
 ## Configure in-browser protection settings
 

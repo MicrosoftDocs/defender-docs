@@ -9,13 +9,15 @@ ms.collection:
   - tier1
 ms.custom:
   - sfi-ga-nochange
+  - msecd-doc-authoring-1016
 description: Configure where user reported messages go for analysis in Microsoft Defender for Office 365. Set up a reporting mailbox and choose Microsoft, mailbox-only, or both.
 ms.service: defender-office-365
-ms.date: 05/19/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # User reported settings
@@ -49,6 +51,8 @@ After you verify the reporting mailbox meets all of these requirements, use the 
 
 ## Before you begin
 
+Make sure you have portal access, PowerShell connectivity, and the required permissions before you configure user reported settings.
+
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **User reported settings** page, use <https://security.microsoft.com/securitysettings/userSubmission>.
 
 - To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
@@ -63,7 +67,7 @@ After you verify the reporting mailbox meets all of these requirements, use the 
 
 - You need access to Exchange Online PowerShell. If your account doesn't have access to Exchange Online PowerShell, you get the following error: _Specify an email address in your domain_. For more information about enabling or disabling access to Exchange Online PowerShell, see the following articles:
   - [Enable or disable access to Exchange Online PowerShell](/powershell/exchange/disable-access-to-exchange-online-powershell)
-  - [Client Access Rules in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/client-access-rules/client-access-rules) ([deprecated](https://techcommunity.microsoft.com/blog/exchange/deprecation-of-client-access-rules-in-exchange-online/3638563))
+  - [Client Access Rules in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/client-access-rules/client-access-rules) ([Deprecation of Client Access Rules in Exchange Online](https://techcommunity.microsoft.com/blog/exchange/deprecation-of-client-access-rules-in-exchange-online/3638563))
 
 - For more information about how Microsoft stores and handles your submissions, see [Report suspicious email messages to Microsoft](submissions-report-messages-files-to-microsoft.md#report-suspicious-email-messages-to-microsoft).
 
@@ -329,7 +333,7 @@ The [Phishing Triage Agent](/defender-xdr/phishing-triage-agent) in Microsoft De
 
 - **Requirements**:
   - Microsoft Defender for Office 365 Plan 2
-  - Provisioned capacity in Security Compute Units (SCUs) in Security Copilot. For more information, see [Get started with Security Copilot](/copilot/security/get-started-security-copilot).
+  - Provisioned capacity in Security Copilot, measured in Security Compute Units (SCUs). For more information, see [Get started with Security Copilot](/copilot/security/get-started-security-copilot).
   - The reported message must be delivered to an Exchange Online mailbox in the same organization.
   - **User reported settings**: Select **Use a non-Microsoft add-in button**, specify the reporting mailbox, and set **Send reported items to** \> **Microsoft and my reporting mailbox**.
   - Configure the reporting mailbox as a SecOps mailbox so reports aren't filtered. For instructions, see [Use the Microsoft Defender portal to configure SecOps mailboxes in the advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy).
@@ -378,19 +382,19 @@ The difference between these two elements isn't obvious when you manage the user
 
 ### Use PowerShell to view the report submission policy and the report submission rule
 
-To view the report submission policy, run the following command in Exchange Online PowerShell:
+To view the report submission policy and verify which reporting mailbox settings are configured, run the following command in Exchange Online PowerShell:
 
 ```powershell
 Get-ReportSubmissionPolicy
 ```
 
-To view the report submission rule, run the following command:
+To view the report submission rule, including the reporting mailbox configured in the _SentTo_ parameter, run the following command:
 
 ```powershell
 Get-ReportSubmissionRule
 ```
 
-To view both the policy and the rule at the same time, run the following commands:
+To view both the policy and the rule together in a single formatted output so you can compare the current settings, run the following commands:
 
 ```powershell
 Write-Output -InputObject `r`n,"Report Submission Policy",("-"*79); Get-ReportSubmissionPolicy; Write-Output -InputObject `r`n,"Report Submission Rule",("-"*79); Get-ReportSubmissionRule
@@ -624,7 +628,7 @@ Turning off reporting in Outlook has the following consequences:
 - Non-Microsoft reporting tools still work, but reported messages don't appear on the **User reported** tab on the **Submissions** page in the Defender portal.
 - **Allow reporting for quarantined items** (_DisableQuarantineReportingOption_) is unaffected, and can be enabled or disabled when reporting in Outlook is turned off.
 
-This example creates the report submission policy with reporting in Outlook turned off (**Outlook** section \> **Monitor reported messages in Outlook** not selected): `-EnableThirdPartyAddress $false` is the default value, so you don't need to use the parameter. `-EnableReportToMicrosoft $false`, `-EnableThirdPartyAddress $false, -ReportJunkToCustomizedAddress $false, -ReportNotJunkToCustomizedAddress $false, and -ReportPhishToCustomizedAddress $false` are required.
+This example creates the report submission policy with reporting in Outlook turned off, which disables the built-in **Report** button and stops reported messages from appearing on the **Submissions** page. No reporting mailbox is configured in this scenario (**Outlook** section \> **Monitor reported messages in Outlook** not selected): `-EnableThirdPartyAddress $false` is the default value, so you don't need to use the parameter. `-EnableReportToMicrosoft $false`, `-EnableThirdPartyAddress $false, -ReportJunkToCustomizedAddress $false, -ReportNotJunkToCustomizedAddress $false, and -ReportPhishToCustomizedAddress $false` are required.
 
 > [!TIP]
 > The values `-PreSubmitMessageEnabled $true` and `-PostSubmitMessageEnabled $true` are required to achieve **Monitor reported messages in Outlook** not selected.
@@ -637,7 +641,7 @@ Because a reporting mailbox isn't used, the report submission rule isn't needed 
 
 ### Use PowerShell to modify the report submission policy and the report submission rule
 
-The same settings are available when you modify the report submission policy in PowerShell as when you created the policy as described in [the previous section](#use-powershell-to-create-the-report-submission-policy-and-the-report-submission-rule).
+The same settings are available when you modify the report submission policy in PowerShell as when you created the policy as described in [Use PowerShell to create the report submission policy and the report submission rule](#use-powershell-to-create-the-report-submission-policy-and-the-report-submission-rule).
 
 When you modify the existing settings in the report submission policy, you might need to undo or nullify other settings that might or might not be configured. And, you might need to create or delete the report submission rule to allow or prevent message reporting to a reporting mailbox.
 
@@ -667,7 +671,7 @@ The following examples show how to change the user reporting experience without 
     New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SentTo $usersub
     ```
 
-- Turn on reporting in Outlook if necessary, select **Use the built-in Report button in Outlook**, and change **Send reported items to** to **My reporting mailbox only** with `userreportedmessages@fabrikam.com` as the reporting mailbox:
+- Turn on reporting in Outlook if necessary, select **Use the built-in Report button in Outlook**, and change **Send reported items to** to **My reporting mailbox only** with `userreportedmessages@fabrikam.com` as the reporting mailbox. User reported messages go only to the custom reporting mailbox and aren't sent to Microsoft for analysis:
 
   ```powershell
   $usersub = "userreportedmessages@fabrikam.com"
@@ -689,7 +693,7 @@ The following examples show how to change the user reporting experience without 
     New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SentTo $usersub
     ```
 
-- Turn on reporting in Outlook if necessary, select **Use the built-in Report button in Outlook**, and change **Send reported items to** to **Microsoft only**:
+- Turn on reporting in Outlook if necessary, select **Use the built-in Report button in Outlook**, and change **Send reported items to** to **Microsoft only**. This command clears any previously configured reporting mailbox addresses and sends user reported messages directly to Microsoft for analysis:
 
   ```powershell
   Set-ReportSubmissionPolicy -Identity DefaultReportSubmissionPolicy -EnableReportToMicrosoft $true -EnableThirdPartyAddress $false -ThirdPartyReportAddresses $null -ReportJunkToCustomizedAddress $false -ReportJunkAddresses $null -ReportNotJunkToCustomizedAddress $false -ReportNotJunkAddresses $null -ReportPhishToCustomizedAddress $false -ReportPhishAddresses $null -PreSubmitMessageEnabled $false -PostSubmitMessageEnabled $false -EnableUserEmailNotification $true -ReportChatMessageToCustomizedAddressEnabled $false -ReportChatMessageEnabled $false
@@ -723,19 +727,19 @@ The following examples show how to change the user reporting experience without 
     New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SentTo $usersub
     ```
 
-- Turn off reporting in Outlook (**Monitor reported messages in Outlook** isn't selected):
+- Turn off reporting in Outlook (**Monitor reported messages in Outlook** isn't selected). This command disables the Microsoft-integrated reporting experience, clears all custom mailbox addresses, and hides the built-in **Report** button in Outlook:
 
   ```powershell
   Set-ReportSubmissionPolicy -Identity DefaultReportSubmissionPolicy -EnableReportToMicrosoft $false -EnableThirdPartyAddress $false -ThirdPartyReportAddresses $null -ReportJunkToCustomizedAddress $false -ReportJunkAddresses $null -ReportNotJunkToCustomizedAddress $false -ReportNotJunkAddresses $null -ReportPhishToCustomizedAddress $false -ReportPhishAddresses $null -PreSubmitMessageEnabled $true -PostSubmitMessageEnabled $true
   ```
 
-  And then run the following command if the report submission rule already exists:
+  Because no reporting mailbox is used when reporting is turned off, remove the report submission rule if it already exists:
 
   ```powershell
   Get-ReportSubmissionRule | Remove-ReportSubmissionRule
   ```
 
-The only meaningful setting that you can modify in the report submission rule is the email address of the reporting mailbox (the _SentTo_ parameter value). For example:
+The only meaningful setting that you can modify in the report submission rule is the email address of the reporting mailbox (the _SentTo_ parameter value). Use the following command to change the mailbox that receives user-reported messages in the existing report submission rule:
 
 ```powershell
 Set-ReportSubmissionRule -Identity DefaultReportSubmissionRule -SentTo newemailaddress@contoso.com
@@ -749,13 +753,13 @@ Set-ReportSubmissionRule -Identity DefaultReportSubmissionRule -SentTo newemaila
 
 For detailed syntax and parameter information, see [Set-ReportSubmissionRule](/powershell/module/exchangepowershell/set-reportsubmissionrule).
 
-To temporarily disable sending email messages to the reporting mailbox without deleting the report submission rule, use [Disable-ReportSubmissionRule](/powershell/module/exchangepowershell/disable-reportsubmissionrule). For example:
+To temporarily stop forwarding user reported messages to the reporting mailbox while preserving the rule and its mailbox configuration for later use, disable the report submission rule by using [Disable-ReportSubmissionRule](/powershell/module/exchangepowershell/disable-reportsubmissionrule). For example:
 
 ```powershell
 Get-ReportSubmissionRule | Disable-ReportSubmissionRule -Confirm:$false
 ```
 
-To enable the report submission rule, use [Enable-ReportSubmissionRule](/powershell/module/exchangepowershell/enable-reportsubmissionrule). For example:
+To re-enable a previously disabled report submission rule and resume forwarding user reported messages to the reporting mailbox, use [Enable-ReportSubmissionRule](/powershell/module/exchangepowershell/enable-reportsubmissionrule). For example:
 
 ```powershell
 Get-ReportSubmissionRule | Enable-ReportSubmissionRule -Confirm:$false
@@ -765,19 +769,19 @@ Get-ReportSubmissionRule | Enable-ReportSubmissionRule -Confirm:$false
 
 To start over with the default settings of the report submission policy, you can delete it and recreate it. Removing the report submission policy doesn't remove the report submission rule, and vice-versa.
 
-To remove the report submission policy, run the following command in Exchange Online PowerShell:
+To discard the current reporting configuration so you can recreate it from scratch with different settings, remove the report submission policy by running the following command in Exchange Online PowerShell:
 
 ```powershell
 Remove-ReportSubmissionPolicy -Identity DefaultReportSubmissionPolicy
 ```
 
-To remove the report submission rule, run the following command:
+To remove the report submission rule so that user reported messages are no longer forwarded to a custom reporting mailbox, run the following command:
 
 ```powershell
 Get-ReportSubmissionRule | Remove-ReportSubmissionRule
 ```
 
-To remove both the report submission policy and report submission rule in the same command without a confirmation, run the following command:
+To fully reset the user reported message configuration by removing both the policy and the rule in a single operation without a confirmation prompt, run the following command. This command is destructive — user reported messages stop being forwarded to the reporting mailbox, and all custom reporting settings are discarded:
 
 ```powershell
 Remove-ReportSubmissionPolicy -Identity DefaultReportSubmissionPolicy; Get-ReportSubmissionRule | Remove-ReportSubmissionRule -Confirm:$false

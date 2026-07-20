@@ -6,8 +6,8 @@ ms.localizationpriority: medium
 ms.topic: how-to
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1014
-ms.date: 06/16/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.reviewer: pahuijbr
 ms.subservice: ngp
 ms.collection: 
@@ -25,10 +25,11 @@ ai-usage: ai-assisted
 
 # Manage event-based forced updates
 
-Microsoft Defender Antivirus allows you to determine if updates should (or shouldn't) occur after certain events, such as at startup or after receiving specific reports from the cloud-delivered protection service.
+Microsoft Defender Antivirus lets you control whether updates occur after certain events. For example, you can trigger updates at startup or after receiving reports from the cloud protection service. This article shows how to configure event-based protection updates by using Group Policy, PowerShell, WMI, Microsoft Intune, and Microsoft Configuration Manager.
 
 ## Prerequisites
 
+Before you configure event-based forced updates, make sure your environment meets the following requirements.
 
 ### Supported operating systems
 
@@ -102,7 +103,7 @@ To configure protection update checks before scans in Group Policy, perform the 
 
 ### Use PowerShell cmdlets to check for protection updates before running a scan
 
-Use the following cmdlets:
+To require Microsoft Defender Antivirus to check for updated signatures before starting a scheduled scan, run the following cmdlet:
 
 ```PowerShell
 Set-MpPreference -CheckForSignaturesBeforeRunningScan 1
@@ -112,7 +113,7 @@ For more information, see [Use PowerShell cmdlets to configure and run Microsoft
 
 ### Use Windows Management Instrumentation (WMI) to check for protection updates before running a scan
 
-Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
+To configure Microsoft Defender Antivirus to check for updated signatures before running a scan, use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class with the following property:
 
 ```WMI
 CheckForSignaturesBeforeRunningScan
@@ -156,7 +157,7 @@ To configure Group Policy to download updates when Microsoft Defender Antivirus 
 
 ### Use PowerShell cmdlets to download updates when Microsoft Defender Antivirus is not present
 
-Use the following cmdlets:
+To control whether Microsoft Defender Antivirus downloads signature updates at startup when the antimalware engine isn't running, run the following cmdlet:
 
 ```PowerShell
 Set-MpPreference -SignatureDisableUpdateOnStartupWithoutEngine
@@ -166,7 +167,7 @@ For more information, see [Use PowerShell cmdlets to manage Microsoft Defender A
 
 ### Use Windows Management Instrumentation (WMI) to download updates when Microsoft Defender Antivirus is not present
 
-Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
+To configure whether signature updates occur at startup when the antimalware engine isn't running, use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class with the following property:
 
 ```WMI
 SignatureDisableUpdateOnStartupWithoutEngine
@@ -175,12 +176,11 @@ SignatureDisableUpdateOnStartupWithoutEngine
 For more information, see [Windows Defender WMIv2 APIs](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal).
 
 <a id="cloud-report-updates"></a>
-
 ## Allow ad hoc changes to protection based on cloud-delivered protection
 
-Microsoft Defender Antivirus can make changes to its protection based on cloud-delivered protection. Such changes can occur outside of normal or scheduled protection updates.
+Microsoft Defender Antivirus can update its protection based on cloud-delivered protection. These updates can happen outside of normal or scheduled updates.
 
-If you have enabled cloud-delivered protection, Microsoft Defender Antivirus sends files it's suspicious about to the Windows Defender cloud. If the cloud service reports that the file is malicious, and the file is detected in a recent protection update, you can use Group Policy to configure Microsoft Defender Antivirus to automatically receive that protection update. Other important protection updates can also be applied.
+When cloud-delivered protection is turned on, Microsoft Defender Antivirus sends suspicious files to the cloud for analysis. If the cloud reports that a file is malicious, you can use Group Policy to get that protection update right away. Microsoft Defender Antivirus can also automatically apply other critical protection updates identified by the cloud service.
 
 ### Use Group Policy to automatically download recent updates based on cloud-delivered protection
 
@@ -212,6 +212,8 @@ To configure Group Policy to automatically download recent updates based on clou
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 ## See also
+
+For more information about managing Microsoft Defender Antivirus updates, see the following articles:
 
 - [Deploy Microsoft Defender Antivirus](deploy-manage-report-microsoft-defender-antivirus.md)
 - [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md)

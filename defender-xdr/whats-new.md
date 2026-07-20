@@ -31,7 +31,7 @@ You can also get product updates and important notifications through the [messag
 
 ## July 2026
 
-- (GA) The **Domain investigation** page allows you to investigate an Active Directory domain. It shows Active Directory domain security, including domain properties, deployment health, identity summary, service account breakdown, sensitive entities, active recommendations, group policies, and trust relationships. For more information, see [Investigate a domain](/defender-for-identity/investigate-domain.md).
+- (GA) The **Domain investigation** page allows you to investigate an Active Directory domain. It shows Active Directory domain security, including domain properties, deployment health, identity summary, service account breakdown, sensitive entities, active recommendations, group policies, and trust relationships. For more information, see [Investigate a domain](/defender-for-identity/investigate-domain).
 
 - (GA) **Security for Microsoft Agent 365 with Defender**: With a Microsoft Agent 365 license, Microsoft Defender provides discovery, security posture, threat detection and investigation, and real-time protection for the AI agents in your tenant. Onboarding includes enabling data collection, connecting the Microsoft 365 app connector, and connecting Copilot Studio for real-time protection of Copilot Studio agents. For more information, see [Protect AI agents using Microsoft Defender](security-for-ai/defender-security-for-ai.md#protect-ai-agents-using-microsoft-defender) and [Enable security for AI agents using Microsoft Defender](security-for-ai/get-started-defender-security-for-ai.md).
 

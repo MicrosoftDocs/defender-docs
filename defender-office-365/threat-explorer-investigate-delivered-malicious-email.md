@@ -3,7 +3,7 @@ title: Investigate malicious email delivered in Microsoft 365
 keywords: TIMailData-Inline, Security Incident, incident, Microsoft Defender for Endpoint PowerShell, email malware, compromised users, email phish, email malware, read email headers, read headers, open email headers,special actions
 author: chrisda
 ms.author: chrisda
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 
 ms.localizationpriority: medium
@@ -13,7 +13,7 @@ ms.collection:
   - tier1
 description: Learn how to use threat investigation and response capabilities to find and investigate malicious email.
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - seo-marvel-apr2020
   - sfi-image-nochange
 ms.service: defender-office-365
@@ -46,6 +46,8 @@ This article explains how to use Threat Explorer and Real-time detections to fin
 > - [Email security with Threat Explorer and Real-time detections in Microsoft Defender for Office 365](threat-explorer-email-security.md)
 
 ## What do you need to know before you begin?
+
+Review the following licensing, permissions, and filtering considerations before you begin.
 
 - Threat Explorer is included in Defender for Office 365 Plan 2. Real-time detections is included in Defender for Office Plan 1:
   - The differences between Threat Explorer and Real-time detections are described in [About Threat Explorer and Real-time detections in Microsoft Defender for Office 365](threat-explorer-real-time-detections-about.md).
@@ -88,7 +90,7 @@ Use the following steps to locate suspicious delivered email in Threat Explorer 
      - **Quarantine**
      - **Unknown**: For example, after delivery, an Inbox rule moved the message to a default folder (for example, Draft or Archive) instead of to the Inbox or Junk Email folder.
 
-   - **Last delivery location**: Where email ended-up after any automatic or manual post-delivery actions by the system or admins. The same values are available from **Original delivery location**.
+   - **Last delivery location**: Where email ended-up after any automatic or manual post-delivery actions by the system or admins. The available values are the same as **Original delivery location**: Deleted items folder, Dropped, Failed, Inbox/folder, Junk folder, On-prem/external, Quarantine, and Unknown.
 
    - **Directionality**: Valid values are:
      - **Inbound**
@@ -168,8 +170,8 @@ After you identify the malicious email messages that were delivered, you can rem
 
 ## Related articles
 
-[Remediate malicious email delivered in Office 365](remediate-malicious-email-delivered-office-365.md)
+For more information, see the following articles:
 
-[Microsoft Defender for Office 365](office-365-ti.md)
-
-[View reports for Defender for Office 365](reports-defender-for-office-365.md)
+- [Remediate malicious email delivered in Office 365](remediate-malicious-email-delivered-office-365.md)
+- [Microsoft Defender for Office 365](office-365-ti.md)
+- [View reports for Defender for Office 365](reports-defender-for-office-365.md)

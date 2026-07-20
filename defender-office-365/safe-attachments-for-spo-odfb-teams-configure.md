@@ -11,11 +11,11 @@ ms.collection:
   - tier2
 description: Admins can learn how to turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, including how to set alerts for detected files.
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - seo-marvel-apr2020
   - sfi-ga-nochange
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -70,7 +70,7 @@ Perform the following steps to turn on Safe Attachments for SharePoint, OneDrive
 
 ### Use Exchange Online PowerShell to turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams
 
-If you'd rather use PowerShell to turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and run the following command:
+If you'd rather use PowerShell to enable Defender for Office 365 protection for SharePoint, OneDrive, and Microsoft Teams so that malicious files in those services can be detected and acted on, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and run the following command:
 
 ```powershell
 Set-AtpPolicyForO365 -EnableATPForSPOTeamsODB $true
@@ -84,7 +84,7 @@ By default, users can't open, move, copy, or share<sup>\*</sup> malicious files 
 
 <sup>\*</sup> If users go to **Manage access**, the **Share** option is still available.
 
-To prevent users from downloading malicious files, [connect to SharePoint Online PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) and run the following command:
+To configure the SharePoint tenant to block users from downloading files that have been identified as malicious, [connect to SharePoint Online PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) and run the following command:
 
 ```powershell
 Set-SPOTenant -DisallowInfectedFileDownload $true
@@ -139,7 +139,7 @@ You can create an alert policy that notifies admins when Safe Attachments for Sh
 
 ### Use Security & Compliance PowerShell to create an alert policy for detected files
 
-If you'd rather use PowerShell to create the same alert policy as described in [Step 3: Use the Microsoft Defender portal to create an alert policy for detected files](#step-3-recommended-use-the-microsoft-defender-portal-to-create-an-alert-policy-for-detected-files), [connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) and run the following command:
+If you'd rather use PowerShell to create an alert policy that notifies administrators whenever malware is detected in SharePoint, OneDrive, or Microsoft Teams libraries, [connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) and run the following command:
 
 ```powershell
 New-ProtectionAlert -Name "Malicious Files in Libraries" -Description "Notifies admins when malicious files are detected in SharePoint, OneDrive, or Microsoft Teams" -AggregationType None -Category ThreatManagement -ThreatType Activity -Operation FileMalwareDetected -NotifyUser "admin1@contoso.com","admin2@contoso.com"
@@ -165,7 +165,7 @@ Use the following methods to confirm that each procedure completed successfully:
 
     For detailed syntax and parameter information, see [Get-AtpPolicyForO365](/powershell/module/exchangepowershell/get-atppolicyforo365).
 
-- To verify you successfully blocked people from downloading malicious files, open SharePoint Online PowerShell, and run the following command to verify the property value:
+- To verify you successfully blocked people from downloading malicious files, open SharePoint Online PowerShell, and run the following command to check whether downloads of infected files are blocked:
 
   ```powershell
   Get-SPOTenant | Format-List DisallowInfectedFileDownload

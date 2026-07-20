@@ -9,11 +9,11 @@ ms.collection:
   - m365-security
   - tier2
 description: Admins can learn how to create and manage login pages for simulated phishing attacks in Microsoft Defender for Office 365 Plan 2.
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Login pages in Attack simulation training
@@ -129,7 +129,7 @@ To create a custom login page, follow these steps:
        > <input id="input-field-loginPage" type="password" placeholder="Password">
        > ```
 
-   You can preview the results by clicking the **Preview email** button at the top of the page.
+   You can preview the results by clicking the **Preview login page** button at the top of the page.
 
    When you're finished on the **Configure login page** page, select **Next**.
 
@@ -171,7 +171,7 @@ The login page wizard opens with the settings and values of the selected login p
 >
 > The **Use from default** control on the **Configure login page** page in the login page wizard allows you to copy the contents of a built-in login page.
 >
-> When you're creating or editing a login page, the **Use from default** control on the **Text** tab of the **Configure login page** step in the login page wizard also allows you to copy the contents of a built-in notification.
+> When you're creating or editing a login page, the **Use from default** control on the **Text** tab of the **Configure login page** step in the login page wizard also allows you to copy the contents of a built-in login page.
 
 ## Remove login pages
 
@@ -190,7 +190,7 @@ To make a login page the default on the **Tenant login pages** or **Global login
 
 - Select **⋮** (**Actions**) next to the **Name** value of the login page, and then select :::image type="icon" source="media/defender-portal-icon-set-as-default.png" border="false"::: **Mark as default**.
 - Select the login page from the list by clicking anywhere in the row other than the check box next to the name. In the details flyout that opens, select :::image type="icon" source="media/defender-portal-icon-set-as-default.png" border="false"::: **Mark as default**.
-- Select **Make this the default login page** on the **Configure login page** page in the wizard when you [create or modify a login page](#create-login-pages).
+- Select **Make this the default login page** on the **Configure login page** page in the wizard when you [create a login page](#create-login-pages) or [modify a login page](#modify-login-pages).
 
 > [!NOTE]
 > The options for setting a default login page that are described in this section aren't available if the login page is already the default.

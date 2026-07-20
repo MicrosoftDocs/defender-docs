@@ -10,14 +10,14 @@ ms.collection:
 - tier2
 - mde-edr
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ms.subservice: edr
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Microsoft Defender for Endpoint Antivirus and Intune integration
@@ -46,7 +46,7 @@ In the Microsoft Defender portal, you can view and manage threat detections usin
 
     You can select **View Details** for more information.
 
-1. Once remediated, you see the following text being displayed:
+1. After the malware detection is remediated, you see the following text:
 
     *Malware found on your devices have been remediated successfully*.
 
@@ -62,7 +62,7 @@ The following questions address common issues with malware detection reporting a
 
 To see when the malware was detected, you can take the following steps:
 
-1. Since this is an integration with Intune, visit [**Intune portal**](https://intune.microsoft.com) and select **Antivirus** and then select **Active malware** tab.
+1. Since the malware detection data is managed through the Intune integration, visit the [**Intune portal**](https://intune.microsoft.com) and select **Antivirus**, and then select the **Active malware** tab.
 
 1. Select **Export**.
 
@@ -72,7 +72,7 @@ To see when the malware was detected, you can take the following steps:
 
 ### In the devices with malware detections report, why can't I see any information about which malware was detected on the device?
 
-To see the malware name, visit the [Intune portal](https://intune.microsoft.com) as this is an integration with Intune, select **Antivirus**,  and select **Active malware** tab and you see a column named **Malware name**.
+To see the malware name, visit the [Intune portal](https://intune.microsoft.com). Because Microsoft Defender for Endpoint Antivirus is integrated with Intune, select **Antivirus**, and then select the **Active malware** tab to view the **Malware name** column.
 
 ### I see a different number for active malware in Devices with active malware report, when compared to numbers I see using Reports > Detected malware, and Intune > Antivirus > Active malware
 
@@ -97,7 +97,7 @@ on DeviceName
 
 ### I searched the computer name in the top search bar and got two devices with the same name. I don't know which one of those two devices the report is referring to?
 
-To identify the correct device, use the following Advanced Hunting query to retrieve details such as the unique DeviceID, Title, AlertID, and timestamp. The query joins onboarded active devices with antivirus alert evidence from the last 15 days, returning distinct entries per device:
+To identify the correct device, use the following [Advanced Hunting](/defender-xdr/advanced-hunting-overview) query (a query-based threat-hunting tool in the Microsoft Defender portal) to retrieve details such as the unique DeviceID, Title, AlertID, and timestamp. The query joins onboarded active devices with antivirus alert evidence from the last 15 days, returning distinct entries per device:
 
 ```kusto
 DeviceInfo
@@ -137,7 +137,7 @@ For more information about MpCmdRun, see [Configure and manage Microsoft Defende
 
 ### I see a device that has been inactive for 180+ days but still showing up on the report for 'Devices with active malware'.  The device doesn't show in the "Device inventory", can't be turned on and can't be offboarded from Microsoft Defender for Endpoint
 
-The device has not been [retired](/intune/intune-service/remote-actions/devices-wipe) from Intune.
+The device has not been [retired or wiped using Intune remote actions](/intune/intune-service/remote-actions/devices-wipe).
 
 <a name="related-articles"></a>
 ## Related content

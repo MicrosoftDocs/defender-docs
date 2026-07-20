@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 07/02/2026
+ms.date: 07/15/2026
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality.
 ms.reviewer: AbbyMSFT
@@ -26,13 +26,9 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## July 2026
 
-### Migrate Windows Server 2025 domain controllers to sensor v3.x
+### Sensor v2.x to v3.x migration is now generally available
 
-You can now migrate domain controllers running Windows Server 2025 from sensor v2.x to sensor v3.x. For more information, see [Migrate to Defender for Identity sensor v3.x](deploy/migrate-to-sensor-v3.md).
-
-### Expanded automatic auditing for identity role servers
-
-Automatic Windows event auditing now also configures auditing for the Active Directory Federation Services (AD FS), Active Directory Certificate Services (AD CS), and Microsoft Entra Connect roles on domain controllers that run the Defender for Identity sensor v3.x. For more information, see [Configure Defender for Identity to collect Windows events automatically](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically).
+Migration of Defender for Identity sensors from v2.x to v3.x is now generally available. For more information, see [Migrate to Defender for Identity sensor v3.x](deploy/migrate-to-sensor-v3.md).
 
 ### Expanded SaaS app support in Password protection (Preview)
 
@@ -42,9 +38,9 @@ The Password protection page now includes password risks from SaaS apps connecte
 
  The **Domain investigation** page allows you to investigate an Active Directory domain. It shows Active Directory domain security, including domain properties, deployment health, identity summary, service account breakdown, sensitive entities, active recommendations, group policies, and trust relationships. For more information, see [Investigate a domain](investigate-domain.md).
 
-### Apply the Sensor Extended RPC Audit tag for more identity detections
+### Automatic RPC auditing on domain controllers
 
-You can now apply the **Sensor Extended RPC Audit** tag to enable additional RPC-based identity detections and capabilities. The tag requires Defender for Identity sensor version 3.0.7 or later. For more information, see [Configure RPC auditing](deploy/deploy-sensor-v3.md#configure-rpc-auditing).
+Defender for Identity now automatically enables RPC auditing on domain controllers when you upgrade to sensor version 3.0.8 or later. You no longer need to apply a tag manually to enable RPC auditing. For more information, see [Configure RPC auditing](deploy/deploy-sensor-v3.md#configure-rpc-auditing).
 
 ## June 2026
 
@@ -107,11 +103,11 @@ These new alerts were added to the Defender for Identity security alerts:
 - [Possible use of a stolen session cookie](alerts-xdr.md#possible-use-of-a-stolen-session-cookie)
 - [Stolen session cookie replay detected](alerts-xdr.md#stolen-session-cookie-replay-detected)
 - [Suspected Conditional Access bypass via non-compliant device](alerts-xdr.md#suspected-conditional-access-bypass-via-non-compliant-device)
-- [Suspicious addition of default third‑party MFA method to user account](alerts-xdr.md#suspicious-addition-of-default-thirdparty-mfa-method-to-user-account)
+- [Suspicious addition of default third-party MFA method to user account](alerts-xdr.md#suspicious-addition-of-default-thirdparty-mfa-method-to-user-account)
 
 ### Known limitation: Migration of domain controllers with Windows Server 2025 from sensor v2.x to sensor v3.x is not supported
 
-Migrating domain controllers running Windows Server 2025 to sensor v3.x isn't currently supported. Continue using the v2.x sensor on Windows Server 2025 domain controllers should until support for migration to v3.x is available.
+Migrating domain controllers running Windows Server 2025 to sensor v3.x isn't currently supported. Continue using the v2.x sensor on Windows Server 2025 domain controllers until support for migration to v3.x is available.
 
 ### Defender for Identity sensor updates
 
@@ -226,7 +222,7 @@ These new alerts were added to the Defender for Identity security alerts:
 - [Suspicious Entra account enablement after disruption](alerts-xdr.md#suspicious-entra-account-enablement-after-disruption)
 - [Suspicious Intune device registration activity](alerts-xdr.md#suspicious-intune-device-registration-activity)
 - [Suspicious OS switch sign-in](alerts-xdr.md#suspicious-os-switch-sign-in)
-- [User sign‑in from shared client infrastructure exhibiting anomalous activity](alerts-xdr.md#user-signin-from-shared-client-infrastructure-exhibiting-anomalous-activity)
+- [User sign-in from shared client infrastructure exhibiting anomalous activity](alerts-xdr.md#user-signin-from-shared-client-infrastructure-exhibiting-anomalous-activity)
 - [Suspicious sign-in from an unusual user agent and IP address using PowerShell](alerts-xdr.md#suspicious-sign-in-from-an-unusual-user-agent-and-ip-address-using-powershell)
 - [Suspicious sign-in from an unusual user agent and IP address using device code flow](alerts-xdr.md#suspicious-sign-in-from-an-unusual-user-agent-and-ip-address-using-device-code-flow)
 
@@ -242,7 +238,7 @@ The [Suspected pass-the-ticket attack](alerts-xdr.md#suspected-pass-the-ticket-a
 
 ### Updates to Secure Score category calculations for increased accuracy
 
-To improve accuracy and better protect organizational identities, some security recommendations categorized as **Cloud apps** recommendations are now considered identity‑related and grouped under the **Identity** category. While the total Secure Score remains unchanged, individual identity and app scores may change.
+To improve accuracy and better protect organizational identities, some security recommendations categorized as **Cloud apps** recommendations are now considered identity-related and grouped under the **Identity** category. While the total Secure Score remains unchanged, individual identity and app scores may change.
 
 ### Continued rollout of new health alert: Sensor v3.x RPC audit misconfigured
 
@@ -314,7 +310,7 @@ Enhanced RPC auditing is required for some Microsoft Defender for Identity advan
 
 ### New Entra ID user roles to support remediation actions
 
-For some [remediation actions](remediation-actions.md), Defender for Identity creates an enterprise application in Microsoft Entra ID. The Microsoft Defender for Identity enterprise application is created automatically in the tenant and is used only to execute remediation actions. When a user initiates an action from the Defender portal, the request is authorized based on the user’s Entra ID roles and executed by the Defender for Identity application, enforcing Entra ID role‑based access control (RBAC) and audit logging. These new Entra ID roles are supported:
+For some [remediation actions](remediation-actions.md), Defender for Identity creates an enterprise application in Microsoft Entra ID. The Microsoft Defender for Identity enterprise application is created automatically in the tenant and is used only to execute remediation actions. When a user initiates an action from the Defender portal, the request is authorized based on the user's Entra ID roles and executed by the Defender for Identity application, enforcing Entra ID role-based access control (RBAC) and audit logging. These new Entra ID roles are supported:
 
 - User Administrator
 - Authentication Administrator
@@ -325,7 +321,7 @@ For some [remediation actions](remediation-actions.md), Defender for Identity cr
 
 ### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x
 
-Weâ€™re gradually rolling out automatic Windows event-auditing configuration for sensors v3.x, along with related health alerts. Automatic Windows event-auditing streamlines deployment by automatically applying the required auditing settings to new sensors and correcting misconfigurations on existing ones.
+We're gradually rolling out automatic Windows event-auditing configuration for sensors v3.x, along with related health alerts. Automatic Windows event-auditing streamlines deployment by automatically applying the required auditing settings to new sensors and correcting misconfigurations on existing ones.
 This update might identify existing auditing configuration gaps that weren't previously detected.
 To ensure consistent protection, we recommend that you make sure all servers with the v3 sensors are configured with:
 
@@ -343,7 +339,7 @@ For more information, see [Configure automatic windows auditing](deploy/configur
 
 This identity security posture assessment lists Active Directory service accounts with direct or nested membership in privileged groups.
 
-You can use this assessment to identify service accounts with elevated permissions and take action when privileged access isnâ€™t required.
+You can use this assessment to identify service accounts with elevated permissions and take action when privileged access isn't required.
 
 For more information, see:[Security posture assessment: Identify service accounts in privileged groups](security-posture-assessments/accounts.md#identify-service-accounts-in-privileged-groups)
 
