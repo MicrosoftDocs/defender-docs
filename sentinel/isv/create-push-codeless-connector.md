@@ -1151,7 +1151,7 @@ Your application sends the event structure:
     | summarize Count=count() by EventSeverity
     ```
 
-## Next steps
+## Related content
 
 Now that you understand CCF Push connectors, take the following steps:
 
@@ -1196,7 +1196,7 @@ Now that you understand CCF Push connectors, take the following steps:
 - [Monitor the health of your data connectors](/azure/sentinel/monitor-data-connector-health) - Health monitoring.
 - [ARM template reference for data connectors](/rest/api/securityinsights/data-connectors) - Complete API reference.
 
-## Getting help
+## Get help
 
 - For ISV partners building integrations, contact: azuresentinelpartner@microsoft.com
 - For technical questions, use [Microsoft Q&A](/answers/topics/azure-sentinel.html) with the tag 'azure-sentinel'.

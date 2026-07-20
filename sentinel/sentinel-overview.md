@@ -110,7 +110,7 @@ For example, partners can create, package, and publish:
 - Microsoft Sentinel SIEM content such as connectors, analytic rules, hunting queries, and playbooks. 
 - Microsoft Sentinel platform content, such as connectors, Jupyter notebook jobs to analyze the data, and agents that correlate that data with existing lake content. The agent can then interact with other endpoints and external applications to provide customers with a powerful unified experience. 
 
-For more information, see [Build and publish Microsoft Sentinel solutions](isv/partner-integrations.md).
+For more information, see [Build and publish Microsoft Sentinel SIEM solutions](isv/sentinel-integration-guide.md).
 
 ## Get started
 
@@ -123,4 +123,5 @@ To get started with the Microsoft Sentinel platform and SIEM, see:
 - [Manage data tiers and retention in Microsoft Defender Portal (preview)](./manage-data-overview.md)
 - [Manage and monitor costs for Microsoft Sentinel](./billing-monitor-costs.md)
 - [Jupyter notebooks in the Microsoft Sentinel data lake](../sentinel/datalake/notebooks-overview.md)
-- [Build and publish Microsoft Sentinel solutions](isv/partner-integrations.md)
+- [Build and publish Microsoft Sentinel SIEM solutions](isv/sentinel-integration-guide.md).
+- 

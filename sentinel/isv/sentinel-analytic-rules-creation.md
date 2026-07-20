@@ -6,7 +6,8 @@ author: mberdugo
 ms.reviewer: tbeerthuis
 ms.service: microsoft-sentinel
 ms.topic: how-to
-ms.date: 1/27/2025
+ms.date: 06/25/2026
+ai-usage: ai-assisted
 
 #CustomerIntent: As an ISV partner, I want to create and publish analytics rules to my Microsoft Sentinel solution so that I can provide inbuilt detection use cases to my customers.
 ---
@@ -36,9 +37,61 @@ Microsoft Sentinel analytics rules can be applied to a wide range of scenarios t
 
 ## Create and publish analytics rules
 
-You create analytics rules in [YAML](https://yaml.org/) format. You can use this example of an analytics rule as a reference to create your own queries: [Sample analytics rule in GitHub](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Microsoft%20Entra%20ID/Analytic%20Rules/FailedLogonToAzurePortal.yaml).
+You create analytics rules in [YAML](https://yaml.org/) format. Use these examples of analytics rules as references to create your own:
+
+* [Microsoft Entra ID — FailedLogonToAzurePortal.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Microsoft%20Entra%20ID/Analytic%20Rules/FailedLogonToAzurePortal.yaml)
+* [CrowdStrike Falcon — CriticalOrHighSeverityDetectionsByUser.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/CrowdStrike%20Falcon%20Endpoint%20Protection/Analytic%20Rules/CriticalOrHighSeverityDetectionsByUser.yaml)
+* [XBOW — XbowCriticalHighFindings.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/XBOW/Analytic%20Rules/XbowCriticalHighFindings.yaml)
+
+
+
 
 The following sections provide a detailed walkthrough of various attributes of an analytics rule.
+
+### Sample analytics rule
+
+The following is a sample analytics rule in YAML format.
+
+```yaml
+id: aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
+name: Anomalous login from unknown IP
+description: |
+  Identifies login attempts from IP addresses not seen in the past 14 days.
+severity: Medium
+requiredDataConnectors:
+  - connectorId: ContosoMyProduct
+    dataTypes:
+      - ContosoMyProduct_CL
+queryFrequency: 1h
+queryPeriod: 14d
+triggerOperator: gt
+triggerThreshold: 0
+tactics:
+  - InitialAccess
+relevantTechniques:
+  - T1078
+status: Available
+query: |
+  ContosoMyProduct_CL
+  | where TimeGenerated > ago(1h)
+  | where EventType == "Login"
+  | summarize count() by SrcIpAddr, UserName
+  | extend Name = tostring(split(UserName, '@', 0)[0])
+  | extend UPNSuffix = tostring(split(UserName, '@', 1)[0])
+entityMappings:
+  - entityType: Account
+    fieldMappings:
+      - identifier: Name
+        columnName: Name
+      - identifier: UPNSuffix
+        columnName: UPNSuffix
+  - entityType: IP
+    fieldMappings:
+      - identifier: Address
+        columnName: SrcIpAddr
+version: 1.0.0
+kind: Scheduled
+```
 
 ### ID
 
@@ -50,7 +103,7 @@ This field is mandatory.
 
 The `kind` attribute represents the type of rule.
 
-There are two accepted values: `scheduled` and `NRT` (near-real time). The `scheduled` value requires that you define other properties, including `queryFrequency`, `queryPeriod`, `triggerThreshold`, and `triggerOperator`.
+There are two accepted values: `scheduled` and `NRT` (near-real time). The `scheduled` value requires that you define other properties, including `queryFrequency`, `queryPeriod`, `triggerThreshold`, and `triggerOperator`. For `NRT` rules, omit `queryFrequency`, `queryPeriod`, `triggerOperator`, and `triggerThreshold`.
 
 This field is mandatory.
 
@@ -60,7 +113,8 @@ The `name` attribute provides a brief label that summarizes the detection. Make 
 
 * Uses sentence-case capitalization.
 * Doesn't end in a period.
-* Has a maximum length of 50 characters (whenever possible).
+* Has a recommended length of less than 50 characters, and a hard maximum of 100 characters.
+* Avoids the words "Suspicious" and "Suspect". Use "Unexpected", "Anomalous", or "Rare" instead.
 
 This field is mandatory.
 
@@ -75,6 +129,7 @@ The `description` attribute provides a detailed description of the detection. Th
 * Is five sentences or less.
 * Doesn't describe the data source (connector or data type).
 * Doesn't provide a technical explanation for the query language.
+* Uses ASCII characters only. Em dashes, smart quotes, and other non-ASCII characters fail validation.
 
 This field is mandatory.
 
@@ -89,6 +144,14 @@ The `severity` attribute defines the severity level of the detection. Severity r
 
 > [!NOTE]
 > Severity level defaults aren't a guarantee of the current or environment impact level. Severity level applies only to Microsoft Sentinel analytics templates. Otherwise, the security service that issued the alert controls the `severity` attribute in the Alerts table. You can use `alertDetailsOverride` to provide a dynamic `severity` attribute that depends on the actual outcome of the query.
+
+### Status
+
+The `status` attribute indicates the production readiness of the rule:
+
+* `Available`: Production-ready rules.
+* `InPreview`: Beta rules.
+* `Deprecated`: Rules being phased out.
 
 ### Required data connectors
 
@@ -138,20 +201,23 @@ This field is mandatory for scheduled analytics rules.
 
 ### Tactics
 
-The `tactics` attribute defines the [`MITRE ATT&CK tactics`](https://attack.mitre.org/versions/v13/matrices/enterprise/) that the detection relates to. When you define the tactics, it helps users understand the context of the detection and how it fits into the overall threat landscape. For this attribute:
+The `tactics` attribute defines the [`MITRE ATT&CK tactics`](https://attack.mitre.org/versions/v16/matrices/enterprise/) that the detection relates to. When you define the tactics, it helps users understand the context of the detection and how it fits into the overall threat landscape. For this attribute:
 
-* `ATT&CK Framework v13` is supported.
-* Names can't include spaces. For example: `InitialAccess` or `LateralMovement`.
+* `ATT&CK Framework v16` is supported.
+* Names use PascalCase and can't include spaces. For example: `InitialAccess` or `LateralMovement`.
+* A maximum of five tactics can be defined per rule.
+* Valid values are: `Reconnaissance`, `ResourceDevelopment`, `InitialAccess`, `Execution`, `Persistence`, `PrivilegeEscalation`, `DefenseEvasion`, `CredentialAccess`, `Discovery`, `LateralMovement`, `Collection`, `CommandAndControl`, `Exfiltration`, and `Impact`.
 
 This field is mandatory.
 
 ### Relevant techniques
 
-The `relevantTechniques` attribute defines the [`MITRE ATT&CK techniques`](https://attack.mitre.org/versions/v13/matrices/enterprise/) that the detection relates to. When you define the techniques, it helps users understand the context of the detection and how it fits into the overall threat landscape. For this attribute:
+The `relevantTechniques` attribute defines the [`MITRE ATT&CK techniques`](https://attack.mitre.org/versions/v16/matrices/enterprise/) that the detection relates to. When you define the techniques, it helps users understand the context of the detection and how it fits into the overall threat landscape. For this attribute:
 
-* `ATT&CK Framework v13` is supported.
-* Attribute matches `MITRE` tactics.
+* `ATT&CK Framework v16` is supported.
+* Each technique must belong to at least one of the listed `tactics`.
 * Names can't include spaces. For example: `T1078` or `T1078.001`.
+* A maximum of 10 techniques can be defined per rule.
 
 This field is mandatory.
 
@@ -190,6 +256,8 @@ Summarize when necessary. Ensure that you include the time field (usually `TimeG
 
 Additionally, include as many fields as possible to help the user understand the context of the alert. We recommend that you include at least one of the primary entities: `Host`, `Account`, or `IP`.
 
+Column names in your custom table must use camelCase (for example, `SrcIpAddr` or `UserName`).
+
 This field is mandatory.
 
 ### Event grouping settings
@@ -214,7 +282,7 @@ The `eventGroupingSettings` attribute relates to alerts. An alert rule can gener
 
 The `entityMappings` attribute is integral when you configure scheduled analytics rules. It enriches the query's output (alerts and incidents) with essential information that serves as the building blocks of any investigative processes and remedial actions that follow.
 
-The `entityType` represents the standard list of entities recognized by Microsoft Sentinel. See allowed values in the Entity type column in the [Entity mapping table](/azure/sentinel/entities-reference#entity-types-and-identifiers).
+The `entityType` represents the standard list of entities recognized by Microsoft Sentinel. Supported types include `Account`, `Host`, `IP`, `URL`, `File`, `Process`, `DNS`, `AzureResource`, `FileHash`, `RegistryKey`, `RegistryValue`, `SecurityGroup`, `Mailbox`, and `MailMessage`. See allowed values in the Entity type column in the [Entity mapping table](/azure/sentinel/entities-reference#entity-types-and-identifiers).
 
 This field is mandatory.
 
@@ -248,7 +316,7 @@ The `fieldMappings` attribute represents the identifier of the field in the quer
 
 ### Custom details
 
-The `customDetails` attribute integrates event data into alerts, making it visible in security incidents for faster triaging, investigation, and response. Custom details are key/value pairs of property and column names. For more information, see [Surface custom event details in alerts in Microsoft Sentinel](/azure/sentinel/surface-custom-details-in-alerts). Up to 20 custom details (that is, key/value pairs) can be defined per template.
+The `customDetails` attribute integrates event data into alerts, making it visible in security incidents for faster triaging, investigation, and response. Custom details are key/value pairs of property and column names. For more information, see [Surface custom event details in alerts in Microsoft Sentinel](/azure/sentinel/surface-custom-details-in-alerts). Up to 20 custom details (that is, key/value pairs) can be defined per template. Key names must be 20 characters or fewer.
 
 ```json
     customDetails:
@@ -280,6 +348,10 @@ The `alertDetailsOverride` attribute is a dynamic field that you can use to over
         alertTacticsColumnName: dynamicTactic
         alertSeverityColumnName: dynamicSeverity
   ```
+
+### Incident configuration
+
+The `incidentConfiguration` attribute controls incident creation and the grouping of alerts into incidents. Use it to define how alerts that this rule generates are aggregated into incidents.
 
 ### Version
 
