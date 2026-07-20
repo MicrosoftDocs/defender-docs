@@ -1,37 +1,39 @@
 ---
-title: Create a codeless connector for Microsoft Sentinel
-description: Learn how to create a codeless connector in Microsoft Sentinel using the Codeless Connector Framework (CCF).
+title: Create a pull codeless connector for Microsoft Sentinel
+description: Learn how to create a pull codeless connector in Microsoft Sentinel using the Codeless Connector Framework (CCF). Build, deploy, and connect your data source without writing code.
 ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: krishsa
 ms.topic: how-to
-ms.date: 09/26/2024
+ms.date: 06/11/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1012
 
 
 #Customer intent: As a security engineer, I want to create custom data connectors for Microsoft Sentinel so that I can ingest and analyze data from various sources without writing code.
 
 ---
-# Create a codeless connector for Microsoft Sentinel
+# Create a pull codeless connector for Microsoft Sentinel
 
 The Codeless Connector Framework (CCF) provides partners, advanced users, and developers the ability to create custom connectors for ingesting data to Microsoft Sentinel.
 
+Connectors can be pull/polling connectors or push connectors, depending on the data source and the preference of the builder. This article focuses on pull connectors, which are polling-based and periodically fetch data via APIs. For information on push connectors, see [Create a push codeless connector for Microsoft Sentinel](create-push-codeless-connector.md).
+
 Connectors created using the CCF are fully SaaS, with no requirements for service installations. They also include [health monitoring](../monitor-data-connector-health.md) and full support from Microsoft Sentinel.
 
-**Use the following steps to create your CCF connector and connect your data source to Microsoft Sentinel**
+Use the following steps to create your CCF connector and connect your data source to Microsoft Sentinel:
+ - Build the data connector
+ - Create the ARM template
+ - Deploy the connector
+ - Connect Microsoft Sentinel to your data source and start ingesting data
 
-> [!div class="checklist"]
-> * Build the data connector
-> * Create the ARM template
-> * Deploy the connector
-> * Connect Microsoft Sentinel to your data source and start ingesting data
-
-This article will show you how to complete each step and provide an [example codeless connector](#example) to build along the way.
+Each step includes an [example codeless connector](#example) to build along the way.
 
 If you're a software development partner and need support to build a CCF data connector, contact Microsoft Sentinel Partners at [AzureSentinelPartner@microsoft.com](mailto:AzureSentinelPartner@microsoft.com) for assistance.
 
-## How is this CCF different from the previous version?
+## Improvements over the previous CCF version
 
-The initial version of the CCF was [announced](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/the-codeless-connector-platform/ba-p/3095455) in January of 2022. Since then, we've improved upon the platform and the [legacy release](../create-codeless-connector-legacy.md) is no longer recommended. This new version of the CCF has the following key improvements:
+The initial version of the CCF was [announced on the Microsoft Tech Community blog](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/the-codeless-connector-platform/ba-p/3095455) in January of 2022. Since then, the platform has been improved and the [legacy release](/previous-versions/azure/sentinel/create-codeless-connector-legacy) is no longer recommended. This new version of the CCF has the following key improvements:
 
 1. Better support for various authentication and pagination types.
 
@@ -61,7 +63,7 @@ Research the following components and verify support for them in the [Data Conne
 
 ### Testing APIs
 
-We recommend testing your components with an API testing tool like one of the following:
+Test your components with an API testing tool like one of the following:
 
   - [Visual Studio Code](https://code.visualstudio.com/download) with an [extension from Visual Studio Marketplace](https://marketplace.visualstudio.com/vscode)
   - [PowerShell Invoke-RestMethod](/powershell/module/microsoft.powershell.utility/invoke-restmethod)
@@ -78,8 +80,8 @@ We recommend testing your components with an API testing tool like one of the fo
 
 ## Build the data connector
 
->[!TIP]
->If you're an Independent Software Vendor (ISV) and need support when building a Microsoft Sentinel integration using the Microsoft Sentinel Codeless Connector Framework, the Microsoft App Assure team may be able to assist. To engage the App Assure team, send an email to azuresentinelpartner@microsoft.com.
+> [!TIP]
+> If you're an Independent Software Vendor (ISV) and need support when building a Microsoft Sentinel integration using the Microsoft Sentinel Codeless Connector Framework, the Microsoft App Assure team may be able to assist. To engage the App Assure team, send an email to azuresentinelpartner@microsoft.com.
 
 There are four components required to build the CCF data connector.
 
@@ -92,15 +94,15 @@ Each component has a section detailing the process to create and validate. Take 
 
 ### Output table definition
 
->[!TIP]
->Skip this step if your data is only ingested to standard Log Analytics tables. Examples of standard tables include *CommonSecurityLog* and *ASimDnsActivityLogs*. For more information about the full list of supported standard data types, see [Data transformation support for custom data connectors](../data-transformation.md#data-ingestion-flow-in-microsoft-sentinel).
+> [!TIP]
+> Skip this step if your data is only ingested to standard Log Analytics tables. Examples of standard tables include *CommonSecurityLog* and *ASimDnsActivityLogs*. For more information about the full list of supported standard data types, see [Data transformation support for custom data connectors](../data-transformation.md#data-ingestion-flow-in-microsoft-sentinel).
 
 If your data source doesn't conform to the schema of a standard table, you have two options:
 
 - Create a custom table for all the data
 - Create a custom table for some data and split conforming data out to a standard table
 
-Use the Log Analytics UI for a straight forward method to create a custom table together with a DCR. If you create the custom table using the [Tables API](/rest/api/loganalytics/tables/create-or-update) or another programmatic method, add the `_CL` suffix manually to the table name. For more information, see [Create a custom table](/azure/azure-monitor/logs/create-custom-table#create-a-custom-table).
+Use the Log Analytics UI for a straightforward method to create a custom table together with a DCR. If you create the custom table using the [Tables API](/rest/api/loganalytics/tables/create-or-update) or another programmatic method, add the `_CL` suffix manually to the table name. For more information, see [Create a custom table](/azure/azure-monitor/logs/create-custom-table#create-a-custom-table).
 
 For more information on splitting your data to more than one table, see the [example data](#example-data) and the [example custom table](#example-custom-table) created for that data.
 
@@ -127,11 +129,11 @@ This component renders the UI for the data connector in the Microsoft Sentinel d
 Build the data connector user interface with the [**Data Connector Definition** API](/rest/api/securityinsights/data-connector-definitions). Use the [Data connector definitions reference](../data-connector-ui-definitions-reference.md) as a supplement to explain the API elements in greater detail.
 
 Notes: 
-1)	The `kind` property for API polling connector should always be `Customizable`.
-2)	Since this is a type of API polling connector, set the `connectivityCriteria` type to `hasDataConnectors`
-3)	The example `instructionSteps` include a button of type `ConnectionToggleButton`. This button helps trigger the deployment of data connector rules based on the connection parameters specified.
+1. The `kind` property for API polling connector should always be `Customizable`.
+1. Since this is a type of API polling connector, set the `connectivityCriteria` type to `hasDataConnectors`.
+1. The example `instructionSteps` include a button of type `ConnectionToggleButton`. This button helps trigger the deployment of data connector rules based on the connection parameters specified.
 
-Use an [API testing tool](#testing-apis) to call the data connector definitions API to create the data connector UI in order to validate it in the data connectors gallery.
+Use an [API testing tool](#testing-apis) to call the data connector definitions API to create the data connector UI and validate it in the data connectors gallery.
 
 To learn from an example, see the [Data connector definitions reference example section](../data-connector-ui-definitions-reference.md#example-data-connector-definition).
 
@@ -140,8 +142,8 @@ To learn from an example, see the [Data connector definitions reference example 
 There are currently three kinds of data connection rules possible for defining your CCF data connector.
 
 - `RestApiPoller` kind allows you to customize paging, authorization and expected request/response payloads for your data source. For more information, see [RestApiPoller data connector connection rules reference](../data-connector-connection-rules-reference.md).
-- `GCP` kind allows you to decrease your development time by automatically configuring paging and expected response payloads for your Google Cloud Platform (GCP) data source. For more information, see [GCP data connector connection rules reference](../data-connection-rules-reference-gcp.md)
-- `StorageAccountBlobContainer` kind allows you to ingest from an Azure Storage Blob data source. For more information, see [Azure Storage Blob connectors API reference](../data-connection-rules-reference-azure-storage.md).
+- `GCP` kind allows you to decrease your development time by automatically configuring paging and expected response payloads for your Google Cloud Platform (GCP) data source. For more information, see [GCP data connector connection rules reference](../data-connection-rules-reference-gcp.md).
+- `StorageAccountBlobContainer` kind allows you to ingest from an Azure Storage Blob data source. For more information, see [Azure Storage Blob connectors API reference](../data-connection-rules-reference-azure-storage.md), and [Azure Storage Blob connector example](../data-connection-rules-reference-azure-storage.md#authentication-configuration).
 
 Use an [API testing tool](#testing-apis) to call the data connector API to create the data connector which combines the connection rules and previous components. Verify the connector is now connected in the UI.
 
@@ -149,7 +151,7 @@ Use an [API testing tool](#testing-apis) to call the data connector API to creat
 
 Whatever authentication is used by your CCF data connector, take these steps to ensure confidential information is kept secure. The goal is to pass along credentials from the ARM template to the CCF without leaving readable confidential objects in your deployments history.
 
-### Create label
+### Create the credential label in the connector UI
 
 The data connector definition creates a UI element to prompt for security credentials. For example, if your data connector authenticates to a log source with OAuth, your data connector definition section includes the `OAuthForm` type in the instructions. This sets up the ARM template to prompt for the credentials.  
 
@@ -189,14 +191,13 @@ A section of the ARM deployment template provides a place for the administrator 
                 "description": "Enter the API key, client secret or password required to connect."
             }
         },
-    // more deployment template information
     }
 }
 ```
 
 ### Use the securestring objects
 
-Finally, the CCF utilizes the credential objects in the data connector section. 
+Finally, the CCF uses the credential objects in the data connector section. 
 
 ```json
 "auth": {
@@ -211,12 +212,12 @@ Finally, the CCF utilizes the credential objects in the data connector section.
     "TokenEndpointQueryParameters": {
         "grant_type": "client_credentials"
     }
-},
+}
 ```
 
->[!Note]
-> The strange syntax for the credential object, `"ClientSecret": "[[parameters('Password')]",` isn't a typo! 
-> In order to create the deployment template which also uses parameters, you need to escape the parameters in that section with an extra starting`[`. This allows the parameters to assign a value based on the user interaction with the connector.
+> [!NOTE]
+> The strange syntax for the credential object, `"ClientSecret": "[[parameters('Password')]",` isn't a typo.
+> To create the deployment template, which also uses parameters, escape the parameters in that section with an extra starting`[`. This allows the parameters to assign a value based on the user interaction with the connector.
 >
 > For more information, see [Template expressions escape characters](/azure/azure-resource-manager/templates/template-expressions#escape-characters).
   
@@ -245,8 +246,8 @@ In addition to the example templates, published solutions available in the Micro
 
 Deploy your codeless connector as a custom template. 
 
->[!TIP]
->Delete resources you created in previous steps. The DCR and custom table is created with the deployment. If you don't remove those resources before deploying, it's more difficult to verify your template.
+> [!TIP]
+> Delete resources you created in previous steps. The DCR and custom table is created with the deployment. If you don't remove those resources before deploying, it's more difficult to verify your template.
 
 1. Copy the contents of the ARM [deployment template](#create-the-deployment-template).
 1. Follow the **Edit and deploy the template** instructions from the article, [Quickstart: Create and deploy ARM templates by using the Azure portal](/azure/azure-resource-manager/templates/quickstart-create-templates-use-the-portal#edit-and-deploy-the-template).
@@ -263,8 +264,8 @@ To find the current IP range associated with the **Scuba** service tag, see [Use
 
 View your codeless connector in the data connector gallery. Open the data connector and complete any authentication parameters required to connect. Once successfully connected, the DCR and custom tables are created. View the DCR resource in your resource group and any custom tables from the logs analytics workspace.
 
->[!NOTE]
->It may take up to 30 minutes to see data begin ingesting.
+> [!NOTE]
+> It may take up to 30 minutes to see data begin ingesting.
 
 
 ## Example
@@ -352,7 +353,7 @@ For more information on the structure of this table, see [Tables API](/rest/api/
 The following DCR defines a single stream `Custom-ExampleConnectorInput` using the example data source and transforms the output into two tables.
 
 1. The first dataflow directs `eventType` = **Alert** to the custom `ExampleConnectorAlerts_CL` table.
-1. the second dataflow directs `eventType` = **File** to the normalized standard table,`ASimFileEventLogs`.
+1. The second dataflow directs `eventType` = **File** to the normalized standard table,`ASimFileEventLogs`.
 
 For more information on the structure of this example, see [Structure of a data collection rule](/azure/azure-monitor/essentials/data-collection-rule-structure).
 
@@ -474,7 +475,7 @@ Build the ARM deployment template with the following structure, which includes t
 }
 ```
 
-Stitch the sections together with a JSON-aware editor like Visual Code to minimize syntax errors like commas and closing brackets and parentheses.
+Stitch the sections together with a JSON-aware editor like Visual Studio Code to minimize syntax errors like commas and closing brackets and parentheses.
 
 To guide the template building process, comments appear in the **metadata** `description` or inline with `//` comment notation. For more information, see [ARM template best practices - comments](/azure/azure-resource-manager/templates/best-practices#comments).
 
@@ -484,7 +485,7 @@ Consider using the ARM template test toolkit (arm-ttk) to validate the template 
 
 For more information, see [Parameters in ARM templates](/azure/azure-resource-manager/templates/parameters).
 
->[!Warning]
+> [!WARNING]
 > Use `securestring` for all passwords and secrets in objects readable after resource deployment.
 > For more information, see [Secure confidential input](#secure-confidential-input) and [Security recommendations for parameters](/azure/azure-resource-manager/templates/best-practices#security-recommendations-for-parameters).
 
@@ -559,6 +560,7 @@ These recommended variables help simplify the template. Use more or less as need
     },
     // Next is the resources sections here
 ```
+
 #### Example ARM template - resources
 
 There are 5 ARM deployment resources in this template guide which house the 4 CCF data connector building components. 
@@ -910,13 +912,15 @@ There are 5 ARM deployment resources in this template guide which house the 4 CC
                 "icon": "[variables('_packageIcon')]"
             }
         }
-        // that's the end!
+        
     ]
 }
 ```
 
 ## Related content
 
-For more information, see 
-- [About Microsoft Sentinel solutions](../sentinel-solutions.md)
+- [About Microsoft Sentinel solutions](../sentinel-solutions.md).
 - [Data connector ARM template reference](/azure/templates/microsoft.securityinsights/dataconnectors#dataconnectors-objects-1)
+- [Data connector user interface definitions reference](/azure/sentinel/data-connector-ui-definitions-reference)
+- [Data connector connection rules reference](/azure/sentinel/data-connector-connection-rules-reference)
+- [Data transformation support for custom data connectors](../data-transformation.md#data-ingestion-flow-in-microsoft-sentinel)

@@ -266,14 +266,13 @@ To create a workspace:
 1. Locate and select **IdentityDrift-Investigation-Agent**.
 1. Select **Setup** and complete the sign-in to finish the agent setup.
 
-
-
    :::image type="content" source="./media/build-agent-security-copilot/agent-ready-for-setup.png" alt-text="Screenshot of the Security Copilot Agents page showing the IdentityDrift-Investigation-Agent ready for setup." lightbox="./media/build-agent-security-copilot/agent-ready-for-setup.png":::
 
 
 ### Run the IdentityDrift Investigation Agent
 
 To run the agent, select **Run**, then select **One time**, and enter the **UserPrincipalName** to investigate.
+
 Based on sample data from [Ingest Data to Microsoft Sentinel Data Lake](./ingest-sample-data.md), enter the username: *u1291@contoso.onmicrosoft.com* to run the agent.
 
 :::image type="content" source="./media/build-agent-security-copilot/agent-run-one-time.png" alt-text="Screenshot of the agent page with the Run dropdown open and the One time option highlighted." lightbox="./media/build-agent-security-copilot/agent-run-one-time.png":::

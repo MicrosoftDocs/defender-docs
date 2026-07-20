@@ -431,9 +431,9 @@ Before proceeding to building Security Copilot Agent for IdentityDrift use case,
 
 Sample prompts for Sentinel MCP via VS Code Chat:
 
-•	Search for tables related to "identity" or "signin" in my workspace.
-•	Show me process execution events for user u1291 in DeviceProcessEvents_KQL_CL — what commands did they run?
-•	Correlate activity for u1291@contoso.onmicrosoft.com: check their sign-in risk in SigninLogs_KQL_CL, their access in CommonSecurity_ID_KQL_CL, and any process execution in DeviceProcessEvents_KQL_CL. Summarize the attack chain.
+- Search for tables related to "identity" or "signin" in my workspace.
+- Show me process execution events for user u1291 in DeviceProcessEvents_KQL_CL — what commands did they run?
+- Correlate activity for u1291@contoso.onmicrosoft.com: check their sign-in risk in SigninLogs_KQL_CL, their access in CommonSecurity_ID_KQL_CL, and any process execution in DeviceProcessEvents_KQL_CL. Summarize the attack chain.
 
 > [!div class="nextstepaction"]
 > Continue to [Build a Security Copilot agent](build-agent-security-copilot.md) 

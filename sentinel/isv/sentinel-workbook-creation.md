@@ -6,7 +6,8 @@ author: mberdugo
 ms.reviewer: tbeerthuis
 ms.service: microsoft-sentinel
 ms.topic: how-to
-ms.date: 1/22/2025
+ms.date: 06/25/2026
+ai-usage: ai-assisted
 
 #CustomerIntent: As an ISV partner, I want to create and publish workbooks for my Microsoft Sentinel solution so that I can provide insights to my customers.
 ---
@@ -91,6 +92,62 @@ This article walks you through the process of creating and publishing workbooks 
     "provider": "Your company name" //Name of the company/author who owns the workbook and is responsible for providing support
     }
    ```
+
+## Workbook attributes
+
+The following sections provide a detailed walkthrough of the gallery template properties and the `WorkbooksMetadata.json` entry attributes.
+
+> [!NOTE]
+> `WorkbooksMetadata.json` is a shared JSON array that covers all solutions. A trailing comma, duplicate key, or mismatched bracket causes an immediate build failure, so validate the file with a JSON linter after editing.
+
+### Template ID
+
+The `fromTemplateId` attribute identifies the workbook template. It must start with `sentinel-` and be unique in the repository. It should match the `workbookKey` in `WorkbooksMetadata.json` minus the `Workbook` suffix. For example, `workbookKey: "ContosoWorkbook"` maps to `fromTemplateId: "sentinel-Contoso"`.
+
+### Schema
+
+The `$schema` attribute defines the workbook schema. Set it to `https://github.com/Microsoft/Application-Insights-Workbooks/blob/master/schema/workbook.json`.
+
+### Workbook key
+
+The `workbookKey` attribute is the unique key for the workbook entry in `WorkbooksMetadata.json`. It must be unique among all entries and use the format `<Name>Workbook`.
+
+### Logo file name
+
+The `logoFileName` attribute must match the logo file in your solution's `Logos/` folder.
+
+### Description
+
+The `description` attribute is a brief description shown on the Workbooks blade.
+
+### Data types dependencies
+
+The `dataTypesDependencies` attribute lists the table names that your workbook queries.
+
+### Data connectors dependencies
+
+The `dataConnectorsDependencies` attribute must match the `id` field in your connector JSON exactly. A mismatch is a common pull request (PR) review finding.
+
+### Preview image file names
+
+The `previewImagesFileNames` attribute lists the preview image filenames only, without a folder path. Place the files in `Solutions/<YourSolutionName>/Workbooks/Images/Preview/`, named `<WorkbookName>Black.png` for the dark theme and `<WorkbookName>White.png` for the light theme. Add a number suffix for each additional tab, such as `<WorkbookName>Black1.png` and `<WorkbookName>Black2.png`.
+
+### Version
+
+The `version` attribute is a string, not a number. Use `"1.0"` for a new workbook.
+
+### Title
+
+The `title` attribute is the display name shown in the Workbooks gallery.
+
+### Template relative path
+
+The `templateRelativePath` attribute is the workbook JSON filename only, without a folder path. For example, `CiscoISE.json`, not `Workbooks/CiscoISE.json`.
+
+### Provider
+
+The `provider` attribute is your company name.
+
 
 ## Related content
 

@@ -1,19 +1,33 @@
 ---
-title: 'Guide to build and publish Microsoft Sentinel solutions'
+title: 'Guide to build and publish Microsoft Sentinel SIEM solutions'
 description: This article walks you through the entire lifecycle of how to build and publish solutions to Microsoft Sentinel.
-ms.author: monaberdugo
-author: mberdugo
-ms.reviewer: tbeerthuis
+ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: jesko
 ms.service: microsoft-sentinel
-ms.topic: how-to
-ms.date: 09/16/2025
+ms.subservice: sentinel-siem
+ms.topic: concept-article
+ms.date: 06/29/2026
+ai-usage: ai-assisted
 
-#CustomerIntent: As an ISV interested to build solutions for Microsoft Sentinel, I should be able to know all the details that will help me get started and guide me through the entire lifecycle of developing and publishing Microsoft Sentinel solutions.
+#CustomerIntent: As an ISV interested to build solutions for Microsoft Sentinel SIEM, I should be able to know all the details that will help me get started and guide me through the entire lifecycle of developing and publishing Microsoft Sentinel SIEM solutions.
 ---
 
-# Build and publish Microsoft Sentinel solutions
+# Build and publish Microsoft Sentinel SIEM solutions
 
- Microsoft Sentinel SIEM and platform includes a range of capabilities that partners can use to create impactful solutions they can publish through the Microsoft Security Store or the Sentinel SIEM Content Hub. By building on top of Sentinel, partners can enable new scenarios that use a wide breadth of security data, processing capabilities, and AI experiences, without needing new pipelines, processing capabilities or storage infrastructure.
+Microsoft Sentinel SIEM includes a range of capabilities that partners can use to create impactful solutions they can publish through Sentinel SIEM Content Hub. By building on top of Sentinel, partners can enable new scenarios that use security data and analytics capabilities to help customers detect and respond to threats.
+
+This article provides an overview of the lifecycle of building and publishing Microsoft Sentinel SIEM solutions, from learning about Sentinel and planning your solution, to building, testing, and publishing it to customers. Each section includes links to more detailed documentation to help you through each step of the process.
+
+:::image type="content" source="media/sentinel-integration-guide/sentinel-integration-timeline.png" lightbox="media/sentinel-integration-guide/sentinel-integration-timeline.png" alt-text="Diagram that shows high-level phases for the Microsoft Sentinel SIEM solution lifecycle from learn through go-to-market.":::
+
+
+## Prerequisites
+
+Before you create and publish a SIEM solution to Azure Commercial Marketplace, join the Microsoft Cloud Partner Program and create an account in Partner Center. See the following resources for more information:
+
+Join the [Microsoft Cloud Partner Program](https://partner.microsoft.com/).
+Create a [Commercial Marketplace account](/partner-center/marketplace/create-account) in Partner Center.
 
 For example, you can create a connector to bring new data into Sentinel, analyze that data with Sentinel Jupyter notebook jobs, and create an agent that uses MCP tools to analyze the new data along with other data already in the lake. The agent can then interact with other endpoints and external applications to deliver a powerful unified experience to your customers.
 
@@ -23,8 +37,8 @@ To get started, learn about Microsoft Sentinel, identify the data and functional
 
 |Step| Description|
 |--|--|
-|**Learn about Sentinel**| The Sentinel platform includes a data lake, graph, and MCP server.<br><br> The SIEM is a scalable, cloud-native security information and event management (SIEM) application that delivers an intelligent and comprehensive solution for SIEM and security orchestration, automation, and response (SOAR). It provides cyberthreat detection, investigation, response, and proactive hunting, with a bird's-eye view across your enterprise.<br><br> Data lake, graph, and MCP capabilities give developers the ability to create solutions that can use tools from Sentinel’s Model Context Protocol (MCP) server to extract insights from any Sentinel data.<br><br> For more information, see:<br>[What is Microsoft Sentinel?](/azure/sentinel/overview)|
-|**Identify what to build**|The most important step to a great integration is deciding which types of content to include in your solution. Explore the following resources to understand Microsoft Sentinel. <br><br> For more information, see:<br> [Technology Integration Scenarios with Microsoft Sentinel](/azure/sentinel/partner-integrations) <br>[Building Microsoft Sentinel Integrations - Part 1: Onboarding](https://www.youtube.com/watch?v=eK5bmKhy2iI)|
+|**Learn about Sentinel**| Microsoft Sentinel SIEM is a scalable, cloud-native security information and event management (SIEM) application that delivers an intelligent and comprehensive solution for SIEM and security orchestration, automation, and response (SOAR). It provides cyberthreat detection, investigation, response, and proactive hunting, with a bird's-eye view across your enterprise.<br><br> For more information, see:<br>[What is Microsoft Sentinel?](/azure/sentinel/overview)|
+|**Identify what to build**|The most important step to a successful integration is deciding which types of content to include in your solution. Explore the following resources to understand Microsoft Sentinel. <br><br> For more information, see:<br> [Technology Integration Scenarios with Microsoft Sentinel](./siem-components-to-include.md) <br>[Building Microsoft Sentinel Integrations - Part 1: Onboarding](https://www.youtube.com/watch?v=eK5bmKhy2iI) <br>[Decide which components to include in your solution](./siem-components-to-include.md)|
 |**Review the docs**|There is a rich collection of documentation to support with your journey. Here are some key resources to get you started. <br><br> For more information, see:<br> [Guide to understand Microsoft Sentinel solution repository in GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Solutions) <br>[Guide to understand ASIM (Advanced Security Information Model) Schema](/azure/sentinel/normalization-content) <br>[Guide to understand Kusto query language](/archive/blogs/msdn/ben/getting-started-with-the-kusto-query-language)|
 |**Become a Cloud Partner and create a Publisher Account**|Microsoft Sentinel solutions are published on the Azure Commercial Marketplace. To publish to the marketplace, join the cloud partner program. <br><br> For more information, see:<br> [Guide to understand Microsoft commercial marketplace](/partner-center/marketplace-offers/overview) <br>[Guide to create a commercial marketplace account in Microsoft Partner Center](/partner-center/account-settings/create-account) <br>[Join ISV Success program](https://www.microsoft.com/isv/offer-benefits) <br>[Sign up for Microsoft for Startups program, if applicable](https://www.microsoft.com/startups)|
 
@@ -44,12 +58,14 @@ Once you have a good understanding of Microsoft Sentinel and the solution you wa
 
 ## Test your solution
 
-Once the solution is built, you need to test it to ensure that it meets the quality standards and is ready for publishing. The Microsoft Sentinel engineering staff reviews your solution and provides feedback.
+Once your solution is built, you need to package and test it. After testing, validate your solution locally, submit a pull request (PR), address feedback, and have your PR approved and merged.
 
 |Step| Description|
 |--|--|
-|**Microsoft merges PR & generates package**|Upon the successful completion of all technical feedback, Microsoft Sentinel engineering staff merges the pull request into the main branch, and generates the final package you need to submit with your offer.|
-|**Submit a pull request for SIEM content to get feedback and receive a package**|For SIEM content, raise a pull request (PR) in the Microsoft Sentinel solutions repository so the Microsoft Sentinel engineering staff can review it and provide feedback. Once the technical feedback is provided and any outstanding issues are resolved, the Microsoft Sentinel engineering staff merges the pull request into the main branch, and generates the final package you need to submit with your offer. For more information, see [Microsoft Sentinel and Microsoft 365 Defender- Pull request](https://github.com/Azure/Azure-Sentinel?tab=readme-ov-file#pull-request)|
+|**Package and test your SIEM solution**|Once your solution is built, package it and test it to ensure that it meets SIEM solution quality standards and is ready for publishing. <br><br>For more information, see [Develop SIEM solutions](develop-siem-solutions-overview.md) and [Microsoft Sentinel SIEM solution quality guidelines](sentinel-siem-solution-quality-guidance.md).|
+|**Run local validation**|Run validation scripts against your packaged solution to check whether your solution passes CI validation checks before you submit a PR. For more information, see [Local validation scripts](https://github.com/Azure/Azure-Sentinel/tree/master/.script/local-validation).|
+|**Open a GitHub pull request**|Raise a pull request (PR) in the Microsoft Sentinel solutions repository so the Microsoft Sentinel engineering staff can review it and provide feedback.|
+|**Resolve technical feedback, merge PR, and generate package**|The Microsoft Sentinel engineering staff reviews your solution and provides feedback. After you address all technical feedback, the engineering staff merges the pull request into the main branch and generates the final package that you submit with your offer. For more information, see [Develop SIEM solutions](./develop-siem-solutions-overview.md).|
 
 ## Publish
 
@@ -59,20 +75,12 @@ Once your solution is built, tested, and certified, you can publish it to the Az
 |--|--|
 |**Create an offer**|Once you have a solution package, you’re ready to create an offer in the Security Store or Marketplace. For more information on how to publish your solution, see the following resources. <br><br> For more information, see:<br> [Publish Solutions to Microsoft Sentinel](/azure/sentinel/publish-sentinel-solutions)|
 |**Test Offer Preview**| We create a version of your offer that is accessible only to the preview audience you specified. Creating a preview offer ensures that specific audiences test your solution before your solution is broadly shared with all customers. We recommend keeping your solution in preview for at least four weeks to gather feedback from customers and address any issues that arise.   <br><br> For more information, see:<br> [Status of Microsoft Sentinel solution after publishing in the Microsoft Partner center](/azure/sentinel/sentinel-solutions-post-publish-tracking)|
-|**Fix certification issues**|Offers submitted to the commercial marketplace must be certified before being published. If your offer fails any of the checks or if you aren't eligible to submit an offer of that type, a certification failure report is sent to your email address. The errors also show up within Action Center in Partner Center. For more information, see [Certification issues](/azure/sentinel/sentinel-solutions-post-publish-tracking#step-4-certification). After the issues are fixed, you can resubmit the offer for certification. This triggers the review process again and once the offer passes certification. Your solution is published to the marketplace and available for customers in Microsoft Sentinel content hub within two working days.|
-|**Make the offer broadly available**|Ensure that you validated all aspects of your solution in preview phase before you make the offer live. Ensure that you validate all aspects of your solution in preview phase before you make the offer live.<br><br>For more information, see: <br>[Publisher approval](/azure/sentinel/sentinel-solutions-post-publish-tracking#step-3-publisher-approval)|
+|**Fix certification issues**|Offers submitted to the commercial marketplace must be certified before being published. If your offer fails any of the checks or if you aren't eligible to submit an offer of that type, a certification failure report is sent to your email address. The errors also show up within Action Center in Partner Center. For more information, see [Certification issues](/azure/sentinel/sentinel-solutions-post-publish-tracking#certification). After the issues are fixed, you can resubmit the offer for certification. This triggers the review process again and once the offer passes certification. Your solution is published to the marketplace and available for customers in Microsoft Sentinel content hub within two working days.|
+|**Make the offer broadly available**|Ensure that you validate all aspects of your solution in the test offer preview phase before you make the offer live.<br><br>For more information, see:<br>[Publisher approval](/azure/sentinel/sentinel-solutions-post-publish-tracking#publisher-approval)|
 
-## Preview
-After your solution is published to the Azure Commercial Marketplace, you can make it available to customers in preview mode. This section provides guidance on how to make your solution available to customers in preview mode.
-
-|Step| Description|
-|--|--|
-|**Inform customers**|Socialize the availability of your solution with your customers so that they can test and provide feedback on the solution.|
-|**Resolve support issues**|As customers use the preview version of your solution, they might encounter issues. Be prepared to address these issues as they arise. In addition to issues, customers might also request new features or enhancements. Depending on the feedback, you need to iterate on your solution before making it generally available.|
-|**Continue for four weeks**|We recommend keeping your solution in preview for at least four weeks to gather feedback from customers and address any issues that arise.|
 
 ## Go to Market (GTM)
-After your solution is in preview for at least four weeks and you address any issues that customers encounter, you can make your solution generally available to all customers.
+After your solution has been published, you can make your solution generally available to all customers.
 
 |Step| Description|
 |--|--|
@@ -80,6 +88,19 @@ After your solution is in preview for at least four weeks and you address any is
 |**Listen for customer feedback**|Continue to monitor feedback and support requests as your solution gains traction.|
 |**Enhance solution**|Based on customer feedback, you might need to enhance your solution to meet customer needs. Customer feedback might require the addition of new features, improving performance, or addressing any issues that customers encounter.|
 
-## Related content
+Microsoft offers the following programs to help partners approach Microsoft customers:
 
-[Publish solutions to Microsoft Sentinel](/azure/sentinel/publish-sentinel-solutions)
+- **Microsoft Partner Network (MPN)**. The primary program for partnering with Microsoft is the Microsoft Partner Network. Membership in MPN is required to become an Azure Marketplace publisher, which is where all Microsoft Sentinel solutions are published.
+- **Azure Marketplace**. Microsoft Sentinel solutions are delivered via Azure Marketplace, where customers discover and deploy both Microsoft and partner-supplied Azure integrations. Microsoft Sentinel solutions are one of many types of offers found in Marketplace. You can also find solution offerings embedded in Microsoft Sentinel content hub.
+- **Microsoft Intelligent Security Association (MISA)**. MISA helps Microsoft Security partners create awareness about partner-created integrations with Microsoft customers and improve discoverability for Microsoft Security product integrations. Joining the MISA program requires a nomination from a participating Microsoft Security product team. Building any of the following integrations can qualify partners for nomination:
+  - A Microsoft Sentinel data connector and associated content, such as workbooks, sample queries, and analytics rules.
+  - Published Logic Apps connector and Microsoft Sentinel playbooks.
+  - API integrations, on a case-by-case basis.
+
+To request a MISA nomination review or ask questions, contact `AzureSentinelPartner@microsoft.com`.
+
+##	Related content
++ [Decide what components to include in your Microsoft Sentinel SIEM solution](siem-components-to-include.md)
++ [Microsoft Sentinel SIEM solution quality guidelines](sentinel-siem-solution-quality-guidance.md)
++ [Develop SIEM solutions](develop-siem-solutions-overview.md)
++ [Publish solutions to Microsoft Sentinel](publish-sentinel-solutions.md)

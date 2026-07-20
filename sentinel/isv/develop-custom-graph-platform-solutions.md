@@ -175,6 +175,7 @@ To author a graph with AI assistance, follow these steps:
    EntraUsers, EntraServicePrincipals, and EntraMembers from the
    "System tables" workspace.
    ```
+
    :::image type="content" source="media/develop-custom-graph-platform-solutions/ai-assisted-graph.png" lightbox="media/develop-custom-graph-platform-solutions/ai-assisted-graph.png" alt-text="A screenshot showing AI-assisted graph authoring in VS Code.":::
 
    Copilot generates the following cells for the graph authoring lifecycle:

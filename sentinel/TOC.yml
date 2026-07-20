@@ -939,19 +939,12 @@
     - name: Audit Microsoft Sentinel data lake and graph in Microsoft Purview portal
       href: datalake/auditing-lake-activities.md
       displayName: data lake
-    - name: Remove Microsoft Sentinel from your workspaces
-      href: offboard.md
+
 - name: Build and publish Microsoft Sentinel solutions
   items:
-    - name: Overview
-      href: isv/sentinel-integration-guide.md
-    - name: Partner integrations best practices
-      href: isv/partner-integrations.md
-    - name: Sentinel solution quality guidelines
-      href: isv/sentinel-solution-quality-guidance.md
-    - name: Microsoft Sentinel solution setup essentials
-      href: isv/solution-setup-essentials.md      
-    - name: Sentinel SIEM content 
+    - name: Microsoft Sentinel SIEM and platform solution introduction
+      href: isv/sentinel-siem-platform-solution-introduction.md
+    - name: Microsoft Sentinel SIEM content development
       items:
       - name: Create custom connectors using AI agent in Microsoft Sentinel
         href: isv/create-custom-connector-builder-agent.md
@@ -970,13 +963,10 @@
         href: isv/sentinel-workbook-creation.md
       - name: Creating playbooks
         href: isv/sentinel-playbook-creation.md
-
     - name: Publish solutions
       href: isv/publish-sentinel-solutions.md
     - name: Sentinel SIEM solution lifecycle post publish
       href: isv/sentinel-solutions-post-publish-tracking.md
-    - name: Packaging and publishing a Sentinel platform solution
-      href: isv/package-platform-solution.md
     - name: Managing Platform Solutions
       href: manage-platform-solutions.md
     - name: Platform solutions
@@ -1003,12 +993,12 @@
           href: isv/publish-agent-to-security-store.md
     - name: Troubleshoot solutions in Microsoft Sentinel
       href: isv/troubleshoot-sentinel-solutions.md
-    - name: Remove Microsoft Sentinel from your workspace
-      items:
-        - name: Overview
-          href: offboard-implications.md
-        - name: Remove Microsoft Sentinel
-          href: offboard.md
+- name: Remove Microsoft Sentinel from your workspace
+  items:
+    - name: Overview
+      href: offboard-implications.md
+    - name: Remove Microsoft Sentinel
+      href: offboard.md
 - name: Reference
   items:
     - name: Microsoft Sentinel REST-API
