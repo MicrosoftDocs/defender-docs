@@ -5,12 +5,12 @@ ms.service: defender-endpoint
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ms.collection: 
 - m365-security
 - tier2
 - mde-edr
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
 ms.topic: how-to
 ms.subservice: edr
 appliesto:
@@ -133,7 +133,7 @@ Use the following steps to remove a quarantined file from multiple devices at on
 
 ## Automation levels, automated investigation results, and resulting actions
 
-Automation levels affect whether certain remediation actions are taken automatically or only upon approval. Sometimes your security operations team has more steps to take, depending on the results of an automated investigation. The following table summarizes automation levels, results of automated investigations, and what to do in each case.
+Automation levels control whether remediation actions run automatically or need approval. Your security operations team might need to take extra steps based on the investigation results. The following table lists each automation level, its results, and what to do.
 
 |Device group setting|Automated investigation results|What to do|
 |---|---|---|

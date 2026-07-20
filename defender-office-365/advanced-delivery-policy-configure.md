@@ -8,11 +8,11 @@ ms.collection:
   - m365-security
   - tier3
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - sfi-ga-nochange
 description: Admins can learn how to use the advanced delivery policy in Microsoft 365 to identify messages that shouldn't be filtered in specific supported scenarios. For example, non-Microsoft phishing simulations and messages delivered to security operations (SecOps) mailboxes.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -29,7 +29,7 @@ To keep your organization [secure by default](secure-by-default.md), Microsoft 3
 - **Non-Microsoft phishing simulations**: Simulated attacks can help you identify and train vulnerable users before a real attack impacts your organization.
 - **Security operations (SecOps) mailboxes**: Dedicated mailboxes that are used by security teams to collect and analyze unfiltered messages (both good and bad).
 
-Use the _advanced delivery policy_ in Microsoft 365 to prevent filtering of inbound messages _in non-Microsoft phishing simulations, SecOps mailboxes, and [other supported scenarios](#other-scenarios-that-require-filtering-bypass)_. The advanced delivery policy ensures that messages in the non-Microsoft phishing simulation and SecOps mailbox scenarios achieve the following results:
+Use the _advanced delivery policy_ in Microsoft 365 to prevent filtering of inbound messages _in non-Microsoft phishing simulations, SecOps mailboxes, and [Other scenarios that require filtering bypass](#other-scenarios-that-require-filtering-bypass)_. The advanced delivery policy ensures that messages in the non-Microsoft phishing simulation and SecOps mailbox scenarios achieve the following results:
 
 - Filters in Microsoft 365 take no action on these messages. Malware filtering is bypassed for SecOps mailboxes only.
 - [Zero-hour auto purge (ZAP)](zero-hour-auto-purge.md) for spam and phishing take no action on these messages. ZAP for malware is bypassed for SecOps mailboxes only.
@@ -68,6 +68,8 @@ Messages identified by the advanced delivery policy aren't security threats, so 
 
 ## Use the Microsoft Defender portal to configure SecOps mailboxes in the advanced delivery policy
 
+Use the following steps to add SecOps mailboxes to the advanced delivery policy in the Microsoft Defender portal.
+
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
 
    On the **Advanced delivery** page, verify that the **SecOps mailbox** tab is selected.
@@ -95,6 +97,8 @@ Back on the **SecOps mailbox** tab, the SecOps mailbox entries that you configur
 - To change the list of entries from normal to compact spacing, select :::image type="icon" source="media/defender-portal-icon-standard.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/defender-portal-icon-compact.png" border="false"::: **Compact list**.
 
 ## Use the Microsoft Defender portal to modify or remove SecOps mailboxes in the advanced delivery policy
+
+Use the following steps to modify or remove SecOps mailboxes in the Microsoft Defender portal.
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Advanced delivery** in the **Rules** section. Or, to go directly to the **Advanced delivery** page, use <https://security.microsoft.com/advanceddelivery>.
 
@@ -172,7 +176,7 @@ If your MX record doesn't point to Microsoft 365, the IP address in the `Authent
 
    To remove an existing domain, IP, or URL value, select remove :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the value.
 
-   Consider the following example email header, which shows the authentication results you can use to identify the sending IP address, MAIL FROM domain, and DKIM domain for the advanced delivery policy configuration:
+   The following example shows a sample authentication header from a non-Microsoft phishing simulation message. Inspect the header values to identify the sending IP address, MAIL FROM domain, and DKIM domain that you need for the advanced delivery policy configuration:
 
    ```text
    Authentication-Results: spf=pass (sender IP is 172.17.17.7)
@@ -257,7 +261,7 @@ Configuring a SecOps mailbox in the advanced delivery policy in PowerShell is a 
 
 #### Step 1: Use PowerShell to create the SecOps override policy
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), create a SecOps override policy to designate the mailboxes whose messages should bypass filtering for SecOps review:
 
 ```powershell
 New-SecOpsOverridePolicy -Name SecOpsOverridePolicy -SentTo <EmailAddress1>,<EmailAddress2>,...<EmailAddressN>
@@ -317,7 +321,7 @@ For detailed syntax and parameter information, see [Get-ExoSecOpsOverrideRule](/
 
 ### Use PowerShell to modify the SecOps override policy
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), add or remove SecOps mailbox email addresses on an existing override policy:
 
 ```powershell
 Set-SecOpsOverridePolicy -Identity SecOpsOverridePolicy [-AddSentTo <EmailAddress1>,<EmailAddress2>,...<EmailAddressN>] [-RemoveSentTo <EmailAddress1>,<EmailAddress2>,...<EmailAddressN>]
@@ -480,13 +484,13 @@ This example identifies the valid rule (one) and any invalid rules.
 Get-ExoPhishSimOverrideRule | Format-Table Name,Mode
 ```
 
-After you identify the invalid rules, you can remove them by using the **Remove-ExoPhishSimOverrideRule** cmdlet as described [later in this article](#use-powershell-to-remove-phishing-simulation-override-rules).
+After you identify the invalid rules, you can remove them by using the **Remove-ExoPhishSimOverrideRule** cmdlet as described in [Use PowerShell to remove phishing simulation override rules](#use-powershell-to-remove-phishing-simulation-override-rules).
 
 For detailed syntax and parameter information, see [Get-ExoPhishSimOverrideRule](/powershell/module/exchangepowershell/get-exophishsimoverriderule).
 
 ### Use PowerShell to view the allowed phishing simulation URL entries
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), run the following command:
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), list the current URL allow entries that are configured for advanced delivery phishing simulations so you can review or identify items to modify or remove:
 
 ```powershell
 Get-TenantAllowBlockListItems -ListType Url -ListSubType AdvancedDelivery
@@ -496,7 +500,7 @@ For detailed syntax and parameter information, see [Get-TenantAllowBlockListItem
 
 ### Use PowerShell to modify the phishing simulation override policy
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), update the comment or enabled state of an existing phishing simulation override policy:
 
 ```powershell
 Set-PhishSimOverridePolicy -Identity PhishSimOverridePolicy [-Comment "<DescriptiveText>"] [-Enabled <$true | $false>]
@@ -512,13 +516,13 @@ For detailed syntax and parameter information, see [Set-PhishSimOverridePolicy](
 
 ### Use PowerShell to modify phishing simulation override rules
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), add or remove sender domains and IP address ranges on an existing phishing simulation override rule. Use the pipeline form to update the rule retrieved by **Get-ExoPhishSimOverrideRule**:
 
 ```powershell
 Get-ExoPhishSimOverrideRule | Set-ExoPhishSimOverrideRule [-Comment "<DescriptiveText>"] [-AddSenderDomainIs <DomainEntry1>,<DomainEntry2>,...<DomainEntryN>] [-RemoveSenderDomainIs <DomainEntry1>,<DomainEntry2>,...<DomainEntryN>] [-AddSenderIpRanges <IPAddressEntry1>,<IPAddressEntry2>,...<IPAddressEntryN>] [-RemoveSenderIpRanges <IPAddressEntry1>,<IPAddressEntry2>,...<IPAddressEntryN>]
 ```
 
-Or
+Alternatively, you can update a specific phishing simulation override rule by its identity value:
 
 ```powershell
 Set-ExoPhishSimOverrideRule -Identity <PhishSimOverrideRuleIdentity> [-Comment "<DescriptiveText>"] [-AddSenderDomainIs <DomainEntry1>,<DomainEntry2>,...<DomainEntryN>] [-RemoveSenderDomainIs <DomainEntry1>,<DomainEntry2>,...<DomainEntryN>] [-AddSenderIpRanges <IPAddressEntry1>,<IPAddressEntry2>,...<IPAddressEntryN>] [-RemoveSenderIpRanges <IPAddressEntry1>,<IPAddressEntry2>,...<IPAddressEntryN>]
@@ -584,7 +588,7 @@ For detailed syntax and parameter information, see [Remove-ExoPhishSimOverrideRu
 
 ### Use PowerShell to remove the allowed phishing simulation URL entries
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), remove Advanced Delivery URL allow entries by specifying the URL values (the _Entries_ parameter) or the identity value (the _Ids_ parameter):
 
 ```powershell
 Remove-TenantAllowBlockListItems <-Entries "<URL1>","<URL2>",..."<URLN>" | -Ids <Identity> -ListType URL -ListSubType AdvancedDelivery
@@ -592,7 +596,7 @@ Remove-TenantAllowBlockListItems <-Entries "<URL1>","<URL2>",..."<URLN>" | -Ids 
 
 You identify the entry to modify by its URL values (the _Entries_ parameter) or the Identity value from the output of the **Get-TenantAllowBlockListItems** cmdlet (the _Ids_ parameter).
 
-This example modified the expiration date of the specified entry.
+This example removes the specified Advanced Delivery URL allow entry from the Tenant Allow/Block List.
 
 ```powershell
 Remove-TenantAllowBlockListItems -ListType Url -ListSubType AdvancedDelivery -Entries "*.fabrikam.com" -ExpirationDate 9/11/2021

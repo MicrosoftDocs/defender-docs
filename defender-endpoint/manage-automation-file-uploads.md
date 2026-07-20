@@ -55,7 +55,7 @@ Use the following steps to add file extension names and attachment extension nam
 <a name="related-topics"></a>
 ## Related content
 
-- [Manage automation folder exclusions](manage-automation-folder-exclusions.md)
+- [Manage automation folder exclusions](automation-folder-exclusions-configure.md)
 
 
 

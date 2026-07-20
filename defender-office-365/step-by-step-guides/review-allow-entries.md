@@ -1,5 +1,5 @@
 ---
-title: Review and remove unnecessary allowlist entries with Advanced Hunting in Microsoft Defender for Office 365
+title: Review and Remove Unnecessary Allowlist Entries with Advanced Hunting in Microsoft Defender for Office 365
 description: Steps and sample queries for advanced hunting to start reviewing your security configuration and removing unnecessary allowlist entries.
 ms.service: defender-office-365
 ms.author: chrisda
@@ -99,7 +99,7 @@ EmailEvents
 ```
 
 <a name="learn-more"></a>
-## Related resources
+## Related content
 
 - [Overview - Advanced hunting](/defender-xdr/advanced-hunting-overview)
 - [Email authentication](../email-authentication-about.md)

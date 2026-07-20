@@ -8,10 +8,10 @@ ms.collection:
 - tier1
 - essentials-get-started
 ms.localizationpriority: high
-ms.date: 06/11/2026
+ms.date: 07/03/2026
 ms.service: defender-business
 description: "Make the most of your Defender for Business trial with this guide. Get set up quickly and get started using your new security capabilities."
-ms.custom: trial-playbook, msecd-doc-authoring-1013
+ms.custom: trial-playbook, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -19,11 +19,11 @@ ai-usage: ai-assisted
 
 **Welcome to the Defender for Business trial user guide!**
 
-This guide helps you set up and use key features of your free trial. Using recommendations in this article from the Microsoft Defender team, learn how Defender for Business can help elevate your security from traditional antivirus protection to next-generation protection, endpoint detection and response, and vulnerability management.
+This guide walks you through setting up your trial subscription, onboarding devices, configuring security policies, and using key features like next-generation protection, endpoint detection and response, and vulnerability management.
 
 ## What is Defender for Business?
 
-Defender for Business is a new endpoint security solution designed especially for small and medium-sized businesses with up to 300 users. With this endpoint security solution, your organization's devices are well-protected from ransomware, malware, phishing, and other threats.
+Defender for Business is an endpoint security solution for small and medium-sized businesses with up to 300 users. It helps protect your devices from ransomware, malware, phishing, and other threats.
 
 :::image type="content" source="media/mdb-offering-overview.png" alt-text="Defender for Business features and capabilities.":::
 
@@ -71,7 +71,7 @@ Defender for Business was designed to save small and medium-sized businesses tim
 
 ### Step 3: Set up and configure Defender for Business
 
-If you choose not to use the setup wizard, see the following diagram that depicts the [overall setup and configuration process](mdb-setup-configuration.md) for Defender for Business.
+If you choose not to use the setup wizard, the [overall setup and configuration process](mdb-setup-configuration.md) for Defender for Business is shown in the setup and configuration diagram:
 
 [:::image type="content" source="media/mdb-setup-process-2.png" alt-text="Setup and configuration process for Defender for Business.":::](mdb-setup-configuration.md)
 

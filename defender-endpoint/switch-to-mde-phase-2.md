@@ -160,11 +160,11 @@ When configuring Microsoft Defender Antivirus exclusions, you add your existing 
 |Local group policy object|1. On the endpoint or device, open the Local Group Policy Editor.<br/><br/>2. Go to **Computer Configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **Exclusions**. (You might see *Windows Defender Antivirus* instead of *Microsoft Defender Antivirus* in some versions of Windows.)<br/><br/>3. Specify your path and process exclusions.|
 |Registry key|1. Export the following registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\exclusions`.<br/><br/>2. Import the registry key. Here are two examples:<br/>- Local path: `regedit.exe /s c:\temp\MDAV_Exclusion.reg`<br/>- Network share: `regedit.exe /s \\FileServer\ShareName\MDAV_Exclusion.reg`|
 
-[Learn more about exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
+[Learn more about exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md).
 
 ### Keep the following points about exclusions in mind
 
-When you add [exclusions to Microsoft Defender Antivirus scans](/windows/security/threat-protection/microsoft-defender-antivirus/configure-exclusions-microsoft-defender-antivirus), you should add path and process exclusions.
+When you add [exclusions to Microsoft Defender Antivirus scans](/defender-endpoint/microsoft-defender-antivirus-exclusions-configure), you should add path and process exclusions.
 
 - *Path exclusions* exclude specific files and whatever those files access.
 - *Process exclusions* exclude whatever a process touches, but doesn't exclude the process itself.

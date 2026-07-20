@@ -9,12 +9,12 @@ ms.collection:
 ms.localizationpriority: medium
 ms.assetid: 3e64f99d-ac33-4aba-91c5-9cb4ca476803
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - seo-marvel-apr2020
   - sfi-ga-nochange
 description: Admins can use the Message trace link in the Microsoft Defender portal to find out what happened to messages.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -26,11 +26,11 @@ ai-usage: ai-assisted
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In all organizations with cloud mailboxes, message trace follows email messages as they travel through your Microsoft 365 organization. You can determine if a message was received, rejected, deferred, or delivered by the service. It also shows what actions were taken on the message before it reached its final status.
+In all organizations with cloud mailboxes, message trace follows email messages as they travel through your Microsoft 365 organization. You can determine if a message was received, rejected, deferred, or delivered by the service. Message trace also shows what actions were taken on the message before it reached its final status.
 
 You can use the information from message trace to efficiently answer user questions about what happened to messages, troubleshoot mail flow issues, and validate policy changes.
 
-The **Summary report** in the message trace contains the information that helps you answer user questions and troubleshoot mail flow issues. This **Summary report** enables you to view the report in a file that can be opened in Windows Explorer (also known as File Explorer).
+The **Summary report** in the message trace contains the information that helps you answer user questions and troubleshoot mail flow issues. The **Summary report** can be exported as a file that can be opened in Windows Explorer (also known as File Explorer).
 
 You can use the **View in Explorer** option in the **Message trace search results** page in [Exchange admin center](https://admin.exchange.microsoft.com/). However, to use this option, you must fulfill the following prerequisite:
 

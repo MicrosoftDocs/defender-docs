@@ -3,7 +3,7 @@ title: What's new in Microsoft Defender for Business
 description: Learn about new features and capabilities in Microsoft Defender for Business.
 author: chrisda
 ms.author: chrisda
-ms.date: 06/11/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier1
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1013
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # What's new in Microsoft Defender for Business
@@ -45,6 +45,8 @@ The following announcements and updates were released in October 2023:
 
 ## July 2023
 
+The following updates were announced in July 2023:
+
 > [!TIP]
 > **Read all about the exciting, new capabilities releasing in July 2023 in the [Tech Community blog: New SMB security innovations from Microsoft Inspire 2023](https://aka.ms/SMBSecurityJulyBlog)**.
 
@@ -66,7 +68,7 @@ The following announcements and updates were released in October 2023:
 
 The following preview features and updates were added in March 2023:
 
-- **Mobile threat defense (preview) is added to Defender for Business**. The ability to [onboard iOS and Android devices](mdb-onboard-devices.md) to the standalone version of Defender for Business is now in preview! These capabilities provide OS-level threat and vulnerability management, web protection, and app security to help you and employees stay more secure on the go. See [Mobile threat defense capabilities in Microsoft Defender for Business](mdb-mtd.md).
+- **Mobile threat defense (preview) is added to Defender for Business**. The ability to [onboard iOS and Android devices to Defender for Business](mdb-onboard-devices.md) is now in preview! These capabilities provide OS-level threat and vulnerability management, web protection, and app security to help you and employees stay more secure on the go. See [Mobile threat defense capabilities in Microsoft Defender for Business](mdb-mtd.md).
 
 - **Monthly security summary report (preview) is added to Defender for Business** (preview). The new monthly security summary report shows how secure your organization is across identity, devices, information, and apps. You can view threats detected (and blocked) by Defender for Business together with your current status from Microsoft Secure Score. Recommendations to improve your security are also provided. See [Reports in Microsoft Defender for Business](mdb-reports.md).
 

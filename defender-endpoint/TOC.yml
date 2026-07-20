@@ -387,8 +387,8 @@
             href: machine-tags.md
         - name: Rules and exclusions
           items:
-          - name: Exclusions overview
-            href: navigate-defender-endpoint-antivirus-exclusions.md
+          - name: Exclusions and indicators overview
+            href: defender-endpoint-exclusions-overview.md
           - name: Manage suppression rules
             href: manage-suppression-rules.md
           - name: Indicators
@@ -406,7 +406,7 @@
             - name: Manage automation file uploads
               href: manage-automation-file-uploads.md
             - name: Manage automation folder exclusions
-              href: manage-automation-folder-exclusions.md
+              href: automation-folder-exclusions-configure.md
 
         - name: Device management
           items:
@@ -426,8 +426,8 @@
 
       - name: Safeguard and manage your environment
         items:
-          - name: Managing exclusions reference
-            href: managing-exclusions.md
+          - name: Exclusions reference
+            href: defender-endpoint-exclusions-configuration-reference.md
           - name: Address unwanted behaviors with exclusions, indicators, and other techniques
             href: address-unwanted-behaviors-mde.md
           - name: Safe deployment practices
@@ -764,8 +764,8 @@
         items:
         - name: Overview of Microsoft Defender Antivirus
           href: microsoft-defender-antivirus-windows.md
-        - name: Microsoft Defender Antivirus on Windows Server
-          href: microsoft-defender-antivirus-on-windows-server.md
+        - name: Configure Microsoft Defender Antivirus on Windows Server
+          href: microsoft-defender-antivirus-windows-server-configure.md
         - name: Enable and update Microsoft Defender Antivirus on Windows Server
           href: enable-update-mdav-to-latest-ws.md
         - name: Microsoft Defender Antivirus in the Windows Security app
@@ -937,18 +937,14 @@
 
       - name: Microsoft Defender Antivirus exclusions
         items:
+        - name: Exclusions overview
+          href: microsoft-defender-antivirus-exclusions-overview.md
         - name: Configure custom exclusions
-          href: configure-exclusions-microsoft-defender-antivirus.md
-        - name: Exclusions based on file extension and folder location
-          href: configure-extension-file-exclusions-microsoft-defender-antivirus.md
-        - name: Exclusions for files opened by processes
-          href: configure-process-opened-file-exclusions-microsoft-defender-antivirus.md
-        - name: Contextual file and folder exclusions
-          href: configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md
+          href: microsoft-defender-antivirus-exclusions-configure.md
         - name: Exclusions for Windows Server
-          href: configure-server-exclusions-microsoft-defender-antivirus.md
-        - name: Common mistakes to avoid
-          href: common-exclusion-mistakes-microsoft-defender-antivirus.md
+          href: microsoft-defender-antivirus-exclusions-windows-server.md
+        - name: Exclusions to avoid
+          href: defender-endpoint-exclusions-common-mistakes.md
 
       - name: Troubleshooting mode for Defender for Endpoint
         items:
@@ -1010,7 +1006,7 @@
       items:
 
       - name: Manage endpoint security policies
-        href: manage-security-policies.md
+        href: endpoint-security-policies-configure.md
       - name: Deploy endpoint security policies from Intune
         href: /intune/intune-service/protect/mde-security-integration?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
       - name: Increase compliance with the security baseline
@@ -1082,8 +1078,8 @@
             href: respond-machine-alerts.md#restrict-app-execution
           - name: Isolate devices from the network
             href: respond-machine-alerts.md#isolate-devices-from-the-network
-          - name: Isolation exclusions
-            href: isolation-exclusions.md
+          - name: Network isolation exclusions
+            href: network-isolation-exclusions.md
           - name: Contain devices from the network
             href: respond-machine-alerts.md#contain-devices-from-the-network
           - name: Contain user from the network

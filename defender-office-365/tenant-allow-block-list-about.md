@@ -4,11 +4,11 @@ author: chrisda
 ms.author: chrisda
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 ms.collection:
 - m365-security
 - tier1
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 description: Learn how to manage allow and block entries in the Tenant Allow/Block List to override filtering verdicts for email, Teams, and Office app content in Microsoft Defender for Office 365.
 ms.service: defender-office-365
 appliesto:
@@ -41,7 +41,7 @@ For usage and configuration instructions, see the following articles:
 - **IP addresses**: [Allow or block IPv6 addresses using the Tenant Allow/Block List](tenant-allow-block-list-ip-addresses-configure.md).
 - **Teams domains and email addresses**: [Block domains and addresses in Microsoft Teams using the Tenant Allow/Block List](tenant-allow-block-list-teams-domains-configure.md).
 
-These articles contain procedures in the Microsoft Defender portal and in PowerShell.
+The Tenant Allow/Block List configuration articles linked in this section contain procedures in the Microsoft Defender portal and in PowerShell.
 
 ## Block entries in the Tenant Allow/Block List
 
@@ -53,15 +53,15 @@ These articles contain procedures in the Microsoft Defender portal and in PowerS
 Use the **Submissions** page (also known as *admin submission*) at <https://security.microsoft.com/reportsubmission> to create block entries for the following types of items as you submit them as false negatives to Microsoft:
 
 - **[Domains and email addresses](submissions-admin.md#report-questionable-email-to-microsoft)**:
-  - Email messages from these senders are marked as *high confidence phishing* and then moved to quarantine.
+  - Email messages from blocked domains and email addresses are marked as *high confidence phishing* and then moved to quarantine.
   - Users in the organization can't send email to these blocked domains and addresses. They receive the following non-delivery report (also known as an NDR or bounce message): `550 5.7.703 Your message can't be delivered because messages to XXX, YYY are blocked by your organization using Tenant Allow Block List.` The entire message is blocked for all internal and external recipients of the message, even if only one recipient email address or domain is defined in a block entry.
 
   > [!TIP]
   > Blocking a specific sender or domain in the Tenant Allow/Block List treats those messages as high confidence phishing. To treat those messages as spam, add the sender to the blocked senders list or blocked domains list in [anti-spam policies](anti-spam-policies-configure.md).
 
-- **[Files](submissions-admin.md#report-questionable-email-attachments-to-microsoft)**: Email messages that contain these blocked files are blocked as *malware*. Messages containing the blocked files are quarantined.
+- **[Files](submissions-admin.md#report-questionable-email-attachments-to-microsoft)**: Email messages that contain file block entries are blocked as *malware*. Messages containing blocked file entries are quarantined.
 
-- **[URLs](submissions-admin.md#report-questionable-urls-to-microsoft)**: Email messages that contain these blocked URLs are blocked as *high confidence phishing*. Messages containing the blocked URLs are quarantined.
+- **[URLs](submissions-admin.md#report-questionable-urls-to-microsoft)**: Email messages that contain URL block entries are blocked as *high confidence phishing*. Messages containing URL block entries are quarantined.
 
 In the Tenant Allow/Block List, you can also directly create block entries for the following types of items:
 
@@ -126,6 +126,6 @@ The following list describes what happens in the Tenant Allow/Block List when yo
 
 ## What to expect after you add an allow or block entry
 
-After you add an allow entry on the **Submissions** page or a block entry in the Tenant Allow/Block List, the entry should start working immediately (within 5 minutes).
+After you add an allow entry on the **Submissions** page or a block entry in the Tenant Allow/Block List, the entry starts working within 5 minutes.
 
-If Microsoft learned from the allow entry, the built-in [threat management alert policy](/defender-xdr/alert-policies#threat-management-alert-policies) named **Removed an entry in Tenant Allow/Block List** generates an alert when the (now unnecessary) allow entry is removed.
+If Microsoft determines that a Tenant Allow/Block List allow entry is no longer needed, the entry is automatically removed and the built-in [threat management alert policy](/defender-xdr/alert-policies#threat-management-alert-policies) named **Removed an entry in Tenant Allow/Block List** creates an alert.

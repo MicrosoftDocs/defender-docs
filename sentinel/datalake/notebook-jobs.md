@@ -1,5 +1,5 @@
 ---  
-title: Create and manage Jupyter notebook jobs
+title: Create and Manage Jupyter Notebook Jobs
 titleSuffix: Microsoft Security  
 description: Create and schedule Jupyter notebook jobs in the Microsoft Sentinel extension for Visual Studio Code to automate data processing, analysis, and writing results to custom tables.
 ms.author: edbaynash  
@@ -14,7 +14,7 @@ ms.date: 06/25/2026
 ---
 
 # Create and manage Jupyter notebook jobs
- 
+
 You can create scheduled jobs to run at specific times or intervals using the Microsoft Sentinel extension for Visual Studio Code. Jobs allow you to automate data processing tasks to summarize, transform, or analyze data in the Microsoft Sentinel data lake and federated tables. Jobs are also used to process data and write results to custom tables in the lake tier or analytics tier.
 
 This article shows you how to create, schedule, edit, and manage notebook jobs, including configuring job schedules, viewing job details and run history, and monitoring jobs in the Microsoft Defender portal.
@@ -38,7 +38,7 @@ To assign the role, follow the steps below:
 
 For more information on assigning roles to managed identities, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 
-## Create and schedule a job 
+## Create and schedule a job
 
 You can create a job in one of three ways:
 
@@ -46,18 +46,19 @@ You can create a job in one of three ways:
 1. In the **Explorer** pane, right-click the notebook file and select **Microsoft Sentinel**, then select **Create schedule Job**.
 
     :::image type="content" source="./media/notebook-jobs/create-job.png" lightbox="./media/notebook-jobs/create-job.png" alt-text="A screenshot showing how to create a new job in Visual Studio Code."  :::
+
 1. From the list of jobs, select the **+** icon to create a new job.
 
     :::image type="content" source="./media/notebook-jobs/create-job-from-toolbar.png" lightbox="./media/notebook-jobs/create-job-from-toolbar.png" alt-text="A screenshot showing how to create a new job from the jobs list in Visual Studio Code."  :::
+
 1. Select **Use existing notebook** to select an existing notebook file, or select **Create new notebook** to create a new notebook file for the job.
 
     :::image type="content" source="./media/notebook-jobs/new-or-existing-workbook.png" lightbox="./media/notebook-jobs/new-or-existing-workbook.png" alt-text="A screenshot showing how to select an existing notebook for the job."  :::
 
-
 1. On the **Job configuration** page, in the **Job details** section enter a **name** and **description** for the job.
 1. Select the spark pool size to run the job according to your jobs compute needs.
 1. To run a job manually without a schedule, select **On demand** in the  **Schedule** section, then select **Submit** to save the job configuration and publish the job.
-    
+
 1. To specify a schedule for the job, select **Scheduled** in the **Schedule** section.  
     1. Select a **Repeat frequency** for the job. You can choose from **By the minute**, **Hourly**, **Weekly**, **Daily**, or **Monthly**.
     1. Additional schedule options, such as day of the week, time of day, or day of the month, are displayed depending on the frequency you select.
@@ -72,7 +73,8 @@ You can create a job in one of three ways:
 
 1. To view your jobs, select the Microsoft Sentinel ![The Microsoft Sentinel icon in the VS Code left toolbar](./media/notebook-jobs/sentinel-icon.png) icon in the left toolbar. Jobs are displayed on the **Jobs** panel.
 
-1. Select a job to see the job details. 
+1. Select a job to see the job details.
+
 1. You can run the job immediately by selecting **Run now**, disable and enable the job schedule, or delete the job.
 
     :::image type="content" source="./media/notebook-jobs/job-details.png" lightbox="./media/notebook-jobs/job-details.png" alt-text="A screenshot showing the job details page."  :::
@@ -82,6 +84,7 @@ You can create a job in one of three ways:
     :::image type="content" source="./media/notebook-jobs/run-history.png" lightbox="./media/notebook-jobs/run-history.png" alt-text="A screenshot showing the job runs page."  :::
 
 1. Select an activity to see more details.
+
     :::image type="content" source="./media/notebook-jobs/run-details.png" lightbox="./media/notebook-jobs/run-details.png" alt-text="A screenshot showing the job run details page.":::
 
 ## Create and manage parameterized notebook jobs
@@ -190,8 +193,6 @@ To edit a submitted job follow the steps below:
 
     :::image type="content" source="./media/notebook-jobs/edit-job.png" lightbox="./media/notebook-jobs/edit-job.png" alt-text="A screenshot showing the edit jib page in VS Code.":::
 
-
-
 ## View jobs in the Microsoft Defender portal
 
 In addition to viewing jobs in VS Code, you can also view your notebook jobs in the Defender portal. To view your jobs in the Defender portal, Select **Microsoft Sentinel** > **Data lake exploration** > **Jobs** .
@@ -202,13 +203,11 @@ The page shows a list of jobs and their types. Select a notebook job to view its
 
 1. Select a job to view the job details.
 
-:::image type="content" source="media/notebook-jobs/portal-job-details.png" lightbox="media/notebook-jobs/portal-job-details.png" alt-text="A screenshot showing the job details in the Defender portal.":::
+    :::image type="content" source="media/notebook-jobs/portal-job-details.png" lightbox="media/notebook-jobs/portal-job-details.png" alt-text="A screenshot showing the job details in the Defender portal.":::
 
 1. Select **View history** to see the history of job runs.
 
-:::image type="content" source="media/notebook-jobs/portal-job-history.png" lightbox="media/notebook-jobs/portal-job-history.png" alt-text="A screenshot showing the jobs history page in the Defender portal.":::
-
-
+    :::image type="content" source="media/notebook-jobs/portal-job-history.png" lightbox="media/notebook-jobs/portal-job-history.png" alt-text="A screenshot showing the jobs history page in the Defender portal.":::
 
 ## Service parameters and limits and troubleshooting
 
@@ -218,26 +217,27 @@ The following sections summarize column naming rules, service limits, and troubl
 
 The following rules apply to column names when using the save_as method to write data from a notebook to the Microsoft Sentinel data lake.
 
-+ Column names must start with a letter.
+- Column names must start with a letter.
 
-+ The following standard columns aren't supported for export. The ingestion process overwrites these columns in the destination tier:
+- The following standard columns aren't supported for export. The ingestion process overwrites these columns in the destination tier:
 
-    + TenantId
-    + _TimeReceived
-    + Type
-    + SourceSystem
-    + _ResourceId
-    + _SubscriptionId
-    + _ItemId
-    + _BilledSize
-    + _IsBillable
-    + _WorkspaceId
+  - TenantId
+  - _TimeReceived
+  - Type
+  - SourceSystem
+  - _ResourceId
+  - _SubscriptionId
+  - _ItemId
+  - _BilledSize
+  - _IsBillable
+  - _WorkspaceId
 
-+ `TimeGenerated` is overwritten if it's older than two days. To preserve the original event time, write the source timestamp to a separate column.
+- `TimeGenerated` is overwritten if it's older than two days. To preserve the original event time, write the source timestamp to a separate column.
 
 For a list of service limits for the Microsoft Sentinel data lake, see [Microsoft Sentinel data lake service limits](notebooks.md#service-parameters-and-limits-for-vs-code-notebooks).  
 
 ### Troubleshooting
+
 For troubleshooting notebook jobs and data lake operations, see [Troubleshoot notebooks on the Microsoft Sentinel data lake](notebooks-troubleshooting.md).
 
 ## Related content

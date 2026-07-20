@@ -79,7 +79,7 @@ To create an antivirus policy in Microsoft Intune that turns tamper protection o
 
 ## Tamper protection for antivirus exclusions
 
-Your organization can define [exclusions for Microsoft Defender Antivirus](configure-exclusions-microsoft-defender-antivirus.md). Tamper protection can protect those exclusions too, if the following conditions are all met:
+Your organization can define [exclusions for Microsoft Defender Antivirus](microsoft-defender-antivirus-exclusions-configure.md). Tamper protection can protect those exclusions too, if the following conditions are all met:
 
 |Condition|Criteria|
 |---|---|
@@ -91,7 +91,7 @@ Your organization can define [exclusions for Microsoft Defender Antivirus](confi
 > [!NOTE]
 > If Configuration Manager is the sole tool managing exclusions and all conditions are met, those exclusions are tamper protected. You don't need to also push exclusions through Intune.
 
-To learn more about antivirus exclusions, see [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
+To learn more about antivirus exclusions, see [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md).
 
 ## How to determine whether antivirus exclusions are tamper protected on a Windows device
 

@@ -10,13 +10,13 @@ ms.collection:
   - tier1
 description: Admins and end-users can learn about submitting undetected malware or mis-identified malware attachments to Microsoft for analysis.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Submit malware, non-malware, and other suspicious files to Microsoft for analysis
@@ -32,7 +32,7 @@ You've probably heard the following best practices for years:
 - Avoid opening files downloaded from the internet unless they're from a verified source.
 - Don't use anonymous USB drives.
 
-But what can you do if you receive a message with a suspicious attachment or have a suspicious file on your system? In these cases, you should submit the suspicious attachment or file to Microsoft. Conversely, if an attachment in an email message or file was incorrectly identified as malware or some other threat, you can submit that, too.
+But what can you do if you receive a message with a suspicious attachment or have a suspicious file on your system? In these cases, you should submit the suspicious attachment or file to Microsoft. Conversely, if an attachment in an email message or file was incorrectly identified as malware or some other threat, you can submit the attachment or file, too.
 
 ## What do you need to know before you begin?
 
@@ -40,7 +40,7 @@ Before you begin, review the following information about what qualifies as malwa
 
 - All Microsoft 365 organizations that send or receive email include anti-malware protection that's automatically enabled. For more information, see [Anti-malware protection](anti-malware-protection-about.md).
 
-- Messages with attachments that contain scripts or other malicious executables are considered malware, and you can use the procedures in this article to report them.
+- Messages with attachments that contain scripts or other malicious executables are considered malware, and you can use the submission options described in this section to report them.
 
 - Messages with links to malicious sites are considered phishing. For more information about reporting phishing and good messages, see [Report messages and files to Microsoft](submissions-report-messages-files-to-microsoft.md).
 
@@ -56,7 +56,7 @@ After you've uploaded the file or files, note the **Submission ID** that's creat
 
 :::image type="content" source="media/EOP-Malware-Protection-Center.png" alt-text="The submission details in the Windows Defender Security Intelligence website" lightbox="media/EOP-Malware-Protection-Center.png":::
 
-After we receive the sample, we'll investigate. If we determine that the sample file is malicious, we take corrective action to prevent the malware from going undetected.
+After we receive the submitted file, we'll investigate. If we determine that the sample file is malicious, we take corrective action to prevent the malware from going undetected.
 
 If you continue receiving infected messages or attachments, then you should copy the message headers from the email message, and contact Microsoft Customer Service and Support for further assistance. Be sure to have your **Submission ID** ready as well.
 
@@ -68,4 +68,4 @@ Or, you can go to the Microsoft Security Intelligence page at <https://www.micro
 
 You can also submit a file that you believe was incorrectly identified as malware to the website. (Just select **No** for the question **Do you believe this file contains malware?**)
 
-After we receive the sample, we'll investigate. If we determine that the sample file is clean, we take corrective action to prevent the file from being detected as malware.
+After we receive the submitted file, we'll investigate. If we determine that the submitted file is clean, we take corrective action to prevent the file from being detected as malware.

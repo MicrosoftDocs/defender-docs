@@ -1,9 +1,9 @@
 ---
 title: Manage custom content with repository connections
 titleSuffix: Microsoft Sentinel
-description: This article explains custom Microsoft Sentinel content like GitHub or Azure DevOps repositories that can utilize source control features. 
-author: mberdugo 
-ms.author: monaberdugo 
+description: This article explains custom Microsoft Sentinel content like GitHub or Azure DevOps repositories that can utilize source control features.
+author: mberdugo
+ms.author: monaberdugo
 ms.service: microsoft-sentinel
 ms.topic: article
 ms.date: 3/30/2026
@@ -72,14 +72,14 @@ We provided a sample repository with templates for each of the content types lis
 
 Although you can build templates from scratch, it's often easier to start from either the Sentinel Public GitHub repository YAML files or from out-of-the-box Microsoft Sentinel content. This table outlines how to convert an ARM template for use with Microsoft Sentinel Repositories.
 
-| Content Type      | Convert from Sentinel Public YAML                                                                                     | Export from Sentinel                                                                                                   | Template Reference                                                                                      | Sample Templates                                                                                       |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| **Analytic rules**| [PowerShell script](https://github.com/Azure/Azure-Sentinel/blob/master/Tools/ConvertYamlToJson/ConvertSentinelRuleFrom-Yaml.ps1) | [Export feature](/azure/sentinel/import-export-analytics-rules#export-rules) or [PowerShell script](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Az.SecurityInsights-Samples/Alert%20Rules/Export%20Analytics%20Rules) | [Reference](/azure/templates/microsoft.securityinsights/2025-03-01/alertrules) | [ARM Templates](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/ARM-Templates/AnalyticsRules) |
-| **Automation rules**| N/A                                                                                                                | [Export feature](/azure/sentinel/import-export-automation-rules#export-rules) or [PowerShell scripts](https://github.com/garybushey/MicrosoftSentinelAutomation/tree/main) | [Reference](/azure/templates/microsoft.securityinsights/2025-03-01/automationrules) | N/A                                                                                                    |
-| **Hunting queries**| [PowerShell script](https://github.com/SentinelCICD/RepositoriesSampleContent/blob/main/Hunting/ConvertHuntingQueryFromYamlToArm.ps1) | [Azure CLI commands](/cli/azure/monitor/log-analytics/workspace/saved-search?view=azure-cli-latest) | [Reference](/azure/templates/microsoft.operationalinsights/2020-08-01/workspaces/savedsearches) | [Sample Content](https://github.com/SentinelCICD/RepositoriesSampleContent)                           |
-| **Parsers**       | [ASIM PowerShell script](https://github.com/Azure/Azure-Sentinel/tree/master/ASIM/dev/ASimYaml2ARM)                 | [Azure CLI commands](/cli/azure/monitor/log-analytics/workspace/saved-search?view=azure-cli-latest) | [Reference](/azure/templates/microsoft.operationalinsights/2020-08-01/workspaces/savedsearches) | [Templates](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/ARM-Templates/ParserQuery)      |
-| **Playbooks**     | N/A                                                                                                                 | [PowerShell utility](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Playbook-ARM-Template-Generator)       | [Reference](/azure/logic-apps/logic-apps-azure-resource-manager-templates-overview) | N/A                                                                                                    |
-| **Workbooks**     | N/A                                                                                                                 | [Exporting workbooks as ARM templates](/azure/azure-monitor/visualize/workbooks-automate#arm-template-for-deploying-a-workbook-template) | [Reference](/azure/azure-monitor/visualize/workbooks-automate#arm-template-for-deploying-a-workbook-template) | N/A                    |                                                                                
+|Content Type|Convert from Sentinel Public YAML|Export from Sentinel|Template Reference|Sample Templates|
+|---|---|---|---|---|
+|**Analytic rules**|[PowerShell script](https://github.com/Azure/Azure-Sentinel/blob/master/Tools/ConvertYamlToJson/ConvertSentinelRuleFrom-Yaml.ps1)|[Export feature](/azure/sentinel/import-export-analytics-rules#export-rules) or [PowerShell script](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Az.SecurityInsights-Samples/Alert%20Rules/Export%20Analytics%20Rules)|[Reference](/azure/templates/microsoft.securityinsights/2025-03-01/alertrules)|[ARM Templates](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/ARM-Templates/AnalyticsRules)|
+|**Automation rules**|N/A|[Export feature](/azure/sentinel/import-export-automation-rules#export-rules) or [PowerShell scripts](https://github.com/garybushey/MicrosoftSentinelAutomation/tree/main)|[Reference](/azure/templates/microsoft.securityinsights/2025-03-01/automationrules)|N/A|
+|**Hunting queries**|[PowerShell script](https://github.com/SentinelCICD/RepositoriesSampleContent/blob/main/Hunting/ConvertHuntingQueryFromYamlToArm.ps1)|[Azure CLI commands](/cli/azure/monitor/log-analytics/workspace/saved-search)|[Reference](/azure/templates/microsoft.operationalinsights/2020-08-01/workspaces/savedsearches)|[Sample Content](https://github.com/SentinelCICD/RepositoriesSampleContent)|
+|**Parsers**|[ASIM PowerShell script](https://github.com/Azure/Azure-Sentinel/tree/master/ASIM/dev/ASimYaml2ARM)|[Azure CLI commands](/cli/azure/monitor/log-analytics/workspace/saved-search)|[Reference](/azure/templates/microsoft.operationalinsights/2020-08-01/workspaces/savedsearches)|[Templates](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/ARM-Templates/ParserQuery)|
+|**Playbooks**|N/A|[PowerShell utility](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Playbook-ARM-Template-Generator)|[Reference](/azure/logic-apps/logic-apps-azure-resource-manager-templates-overview)|N/A|
+|**Workbooks**|N/A|[Exporting workbooks as ARM templates](/azure/azure-monitor/visualize/workbooks-automate#arm-template-for-deploying-a-workbook-template)|[Reference](/azure/azure-monitor/visualize/workbooks-automate#arm-template-for-deploying-a-workbook-template)|N/A|
 
 > [!IMPORTANT]
 > Bicep considerations:
@@ -87,9 +87,7 @@ Although you can build templates from scratch, it's often easier to start from e
 > - To use Bicep files, your repositories connection needs to be updated if your connection was created before November 1, 2024. Repositories connections must be [removed](ci-cd.md#remove-a-repository-connection) and recreated in order to update.
 > - Bicep files don't support the `id` property. When decompiling ARM JSON to Bicep, make sure you don't have this property. For example, analytic rule templates exported from Microsoft Sentinel have the `id` property that needs removal.
 > - Change the ARM JSON schema to version `2019-04-01` for best results when decompiling.
-
-
-> [!IMPORTANT]
+>
 > Analytic rules deployed using the Microsoft Sentinel **Repositories** feature can use cross-workspace queries only if the destination workspace is in the same Resource Group as the workspace connected to the repository.
 
 For information on creating custom content from scratch, see the relevant [Microsoft Sentinel GitHub wiki](https://github.com/Azure/Azure-Sentinel/wiki#get-started) for each content type.
@@ -173,10 +171,10 @@ Rules are uniquely identified by their **ID**, which must be provided in the tem
 
 You can deploy custom detection rules using one of the following methods.
 
-| Deployment method | Description | Who runs the deployment |
+|Deployment method|Description|Who runs the deployment|
 |---|---|---|
-| **Microsoft Sentinel Repositories (sync)** | Automatic sync from your GitHub or Azure DevOps repository to Microsoft Sentinel. | Sentinel runs the deployment automatically on each commit. |
-| **BICEP CLI (direct)** | Deploy using `az deployment group create` from Azure CLI. | You run the deployment manually or from a custom pipeline. |
+|**Microsoft Sentinel Repositories (sync)**|Automatic sync from your GitHub or Azure DevOps repository to Microsoft Sentinel.|Sentinel runs the deployment automatically on each commit.|
+|**BICEP CLI (direct)**|Deploy using `az deployment group create` from Azure CLI.|You run the deployment manually or from a custom pipeline.|
 
 #### Option 1: Deploy using Microsoft Sentinel Repositories
 

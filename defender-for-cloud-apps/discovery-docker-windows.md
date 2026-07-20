@@ -35,7 +35,7 @@ You can configure automatic log upload for continuous reports in Microsoft Defen
 > * Enterprise customers with more than 250 users or more than $10 million USD in annual revenue require a paid subscription to use Docker Desktop for Windows. For more information, see [Docker subscription overview](https://docs.docker.com/subscription/).
 > * A user must be signed in for Docker to collect logs. We recommend advising your Docker users to disconnect without signing out.
 > * Docker for Windows isn't officially supported in VMWare virtualization scenarios.
-> * Docker for Windows isn't officially supported in nested virtualization scenarios. If you still plan to use nested virtualization, refer to [Running Docker Desktop in nested virtualization scenarios](https://docs.docker.com/docker-for-windows/troubleshoot/#running-docker-desktop-in-nested-virtualization-scenarios).
+> * Docker for Windows isn't officially supported in nested virtualization scenarios. If you still plan to use nested virtualization, refer to [Docker Desktop for Windows on a VM or VDI environment](https://docs.docker.com/desktop/setup/vm-vdi/).
 > * For information about additional configuration and implementation considerations for Docker for Windows, see [Install Docker Desktop on Windows](https://docs.docker.com/desktop/windows/install/).
 
 

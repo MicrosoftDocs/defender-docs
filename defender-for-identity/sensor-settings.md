@@ -1,7 +1,7 @@
 ---
 title: Manage and update sensors
 description: Learn how to view, manage, and update Microsoft Defender for Identity sensors in the Microsoft Defender portal, including sensor health, migration state, and delayed updates.
-ms.date: 06/15/2026
+ms.date: 07/15/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ms.custom: msecd-doc-authoring-1014
@@ -77,7 +77,7 @@ For a server to be eligible for migration, it must be:
 - A domain controller without additional identity roles (AD FS, AD CS, or Microsoft Entra Connect) running. Domain controllers with identity roles support v3.x for new deployments, but in-place migration isn't currently supported for these servers.
 - Running a Defender for Identity sensor v2.x.
 - Running Windows Server 2019 or later.
-- Includes the [March 2026 or later](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) cumulative update.
+- Includes the July 2026 or later cumulative update.
 - Have Microsoft Defender for Endpoint deployed.
 
 For the full list of v3.x requirements, see [Defender for Identity sensor v3.x prerequisites](./deploy/deploy-sensor-v3.md).
@@ -230,7 +230,9 @@ The following example runs the sensor installer silently from the command line w
 
 ## Remove RPC auditing from a device
 
-If you configured RPC auditing for a v3.x sensor using the **Unified Sensor RPC Audit** tag, you can remove it by deleting the asset rule or modifying the rule conditions so the device no longer matches.
+From sensor version 3.0.8, RPC auditing is enabled automatically when the sensor is upgraded and no longer requires a tag.
+
+If you configured RPC auditing for an earlier v3.x sensor using the **Unified Sensor RPC Audit** tag, you can remove it by deleting the asset rule or modifying the rule conditions so the device no longer matches.
 
 To manage asset rules, in the [Microsoft Defender portal](https://security.microsoft.com), go to **System > Settings > Microsoft Defender XDR > Asset Rule Management**.
 

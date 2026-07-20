@@ -1,18 +1,18 @@
 ---
 title: Protect Dev Drive using performance mode
-description: Learn how to manage, configure, Microsoft Defender Antivirus performance mode for developers who use Dev Drive.
+description: Learn how to configure and manage Microsoft Defender Antivirus performance mode to help protect Dev Drive for developer workloads.
 ms.service: defender-endpoint
 ms.localizationpriority: high
 ms.topic: how-to
 author: chrisda
 ms.author: chrisda
 ms.reviewer: pricci, yongrhee
-ms.custom: nextgen02, msecd-doc-authoring-1014
+ms.custom: nextgen02, msecd-doc-authoring-1016
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Business
 ai-usage: ai-assisted
@@ -20,6 +20,8 @@ ai-usage: ai-assisted
 
 ---
 # Protect Dev Drive using performance mode
+
+## Overview
 
 > [!NOTE]
 > Want to experience Microsoft Defender XDR? Learn more about how you can [Pilot and deploy Microsoft Defender XDR](/defender-xdr/pilot-deploy-overview).
@@ -30,7 +32,7 @@ ai-usage: ai-assisted
 
 Performance mode is now available on Windows 11 as a new Microsoft Defender Antivirus capability. Performance mode reduces the performance impact of Microsoft Defender Antivirus scans for files stored on designated Dev Drive. The goal of performance mode is to improve functional performance for developers who use Windows 11 devices.
 
-It's important to note that performance mode can run only on Dev Drive. Additionally, real-time protection must be turned on for performance mode to function. Enabling this feature on a Dev Drive doesn't change standard real-time protection running on volumes with operating systems or other volumes formatted as `FAT32` or `NTFS`.
+It's important to note that performance mode can run only on Dev Drive. Additionally, real-time protection must be turned on for performance mode to function. Enabling performance mode on a Dev Drive doesn't change standard real-time protection running on volumes with operating systems or other volumes formatted as `FAT32` or `NTFS`.
 
 ## Prerequisites
 
@@ -41,6 +43,8 @@ Performance mode is supported on the following operating systems:
 - Windows 11
 
 ### Microsoft Defender Antivirus requirements for performance mode
+
+Ensure the following Microsoft Defender Antivirus requirements are met before you enable performance mode:
 
 1. Review the requirements that are specific to Dev Drive. See [Set up a Dev Drive on Windows 11](/windows/dev-drive).
 
@@ -59,13 +63,13 @@ For more information about Dev Drive, see: [Set up a Dev Drive on Windows 11](/w
 
 ### Performance mode compared to real-time protection
 
-To give the best possible performance, creating a Dev Drive automatically grants trust in the new volume by default. A trusted Dev Drive volume causes real-time protection to run in a special asynchronous performance mode for that volume. Running performance mode provides a balance between threat protection and performance. The balance is achieved by deferring security scans until after the open file operation has completed, instead of performing the security scan synchronously while the file operation is being processed. Deferring scans until after file open completes inherently provides faster performance, but with less protection. However, enabling performance mode provides significantly better protection than other performance tuning methods, such as using folder exclusions, which block security scans altogether.
+To give the best possible performance, creating a Dev Drive automatically grants trust in the new volume by default. A trusted Dev Drive volume causes real-time protection to run in a special asynchronous performance mode for that volume. Running performance mode provides a balance between threat protection and performance. The balance between threat protection and performance is achieved by deferring security scans until after the open file operation has completed, instead of performing the security scan synchronously while the file operation is being processed. Deferring scans until after file open completes inherently provides faster performance, but with less protection. However, enabling performance mode provides significantly better protection than other performance tuning methods, such as using folder exclusions, which block security scans altogether.
 
 > [!NOTE]
 > Using performance mode doesn't apply to high cpu or high memory usage scenarios with Microsoft Defender Antivirus services (`MsMpEng.exe`, `WinDefend`, or Antimalware Service Executable). If you're troubleshooting a high cpu usage, instead use the Microsoft Defender Antivirus [Performance Analyzer](tune-performance-defender-antivirus.md) to narrow down to the hot processes/paths and add them to the exclusions.  
 
 > [!TIP]
-> Use [Contextual exclusions](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md) to target real-time protection (RTP).
+> Use [Contextual exclusions](microsoft-defender-antivirus-exclusions-overview.md#contextual-exclusions) to target real-time protection (RTP).
 The following table summarizes performance mode synchronous and asynchronous scan behavior.
 
 | Performance mode state | Scan type | Description | Summary |
@@ -79,7 +83,7 @@ An untrusted Dev Drive doesn't have the same benefits as a trusted Dev Drive. Se
 
 Use one of the following methods to manage performance mode:
 
-- Performance mode can only run on a *trusted* Dev Drive and is enabled by default when a new Dev Drive is created. For more information, see [Understanding security risks and trust in relation to Dev Drive](/windows/dev-drive#understanding-security-risks-and-trust-in-relation-to-dev-drive).
+- Performance mode can only run on a *trusted* Dev Drive and is enabled by default when a new Dev Drive is created. For more information about security risks and trust for Dev Drive, see [Understanding security risks and trust in relation to Dev Drive](/windows/dev-drive#understanding-security-risks-and-trust-in-relation-to-dev-drive).
 
 - Enforce the Microsoft Defender Antivirus Performance Mode by using Intune, Group Policy, or PowerShell.
 
@@ -118,6 +122,8 @@ Enable performance mode status via the OMA-URI settings shown in the following t
 <a name="powershell"></a>
 ### Manage performance mode with PowerShell
 
+Use PowerShell to enable performance mode on the device:
+
 1. Open PowerShell as an administrator on the device.
 
 1. Type `set-MpPreference -PerformanceModeStatus Enabled` and press **Enter**.
@@ -144,4 +150,4 @@ To verify that Dev Drive and Defender Performance Mode is enabled, follow these 
 
 ## Related content
 
-[Set up a Dev Drive on Windows 11](/windows/dev-drive)
+- [Set up a Dev Drive on Windows 11](/windows/dev-drive)

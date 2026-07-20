@@ -12,11 +12,13 @@ description: Learn about how to define Safe Attachments policies to protect your
 ms.custom:
   - seo-marvel-apr2020
   - sfi-ga-nochange
+  - msecd-doc-authoring-1016
 ms.service: defender-office-365
-ms.date: 05/22/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Set up Safe Attachments policies in Microsoft Defender for Office 365
@@ -45,6 +47,8 @@ You configure Safe Attachments policies in the Microsoft Defender portal or in E
 > In the global settings of Safe Attachments settings, you configure features that aren't dependent on Safe Attachments policies. For instructions see [Turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-configure.md) and [Safe Documents in Microsoft 365 E5](safe-documents-in-e5-plus-security-about.md).
 
 ## What do you need to know before you begin?
+
+Verify the following prerequisites before you configure Safe Attachments policies:
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Safe Attachments** page, use <https://security.microsoft.com/safeattachmentv2>.
 
@@ -144,7 +148,7 @@ You configure Safe Attachments policies in the Microsoft Defender portal or in E
    - **Redirect messages with detected attachments**: If you select **Enable redirect**, you can specify an email address in the **Send messages that contain monitored attachments to the specified email address** box to send messages that contain detected attachments for analysis and investigation.
 
      > [!NOTE]
-     > Redirection is available only for the **Monitor** action. For more information, see [MC424899](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC424899).
+     > Redirection is available only for the **Monitor** action. For more information, see [Safe Attachments redirection changes (MC424899)](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC424899).
 
    When you're finished on the **Settings** page, select **Next**.
 
@@ -202,11 +206,11 @@ On the **Safe Attachments** page, select the Safe Attachments policy by using ei
 
   :::image type="content" source="media/anti-phishing-policies-details-flyout.png" alt-text="The details flyout of a custom Safe Attachments policy." lightbox="media/anti-phishing-policies-details-flyout.png":::
 
-The actions are described in the following subsections.
+These actions are described in [Modify custom Safe Attachments policies](#use-the-microsoft-defender-portal-to-modify-custom-safe-attachments-policies), [Enable or disable custom Safe Attachments policies](#use-the-microsoft-defender-portal-to-enable-or-disable-custom-safe-attachments-policies), [Set the priority of custom Safe Attachments policies](#use-the-microsoft-defender-portal-to-set-the-priority-of-custom-safe-attachments-policies), and [Remove custom Safe Attachments policies](#use-the-microsoft-defender-portal-to-remove-custom-safe-attachments-policies).
 
 ### Use the Microsoft Defender portal to modify custom Safe Attachments policies
 
-After you select a custom Safe Attachments policy by clicking anywhere in the row other than the check box next to the name, the policy settings are shown in the details flyout that opens. Select **Edit** in each section to modify the settings within the section. For more information about the settings, see the [Create Safe Attachments policies](#use-the-microsoft-defender-portal-to-create-safe-attachments-policies) section earlier in this article.
+After you select a custom Safe Attachments policy by clicking anywhere in the row other than the check box next to the name, the policy settings are shown in the details flyout that opens. Select **Edit** in each section to modify the settings within the section. For more information about the settings, see [Create Safe Attachments policies](#use-the-microsoft-defender-portal-to-create-safe-attachments-policies).
 
 You can't modify the Safe Attachments policies named **Standard Preset Security Policy**, **Strict Preset Security Policy**, or **Built-in protection (Microsoft)** that are associated with [preset security policies](preset-security-policies.md) in the policy details flyout. Instead, you select :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **View preset security policies** in the details flyout to go to the **Preset security policies** page at <https://security.microsoft.com/presetSecurityPolicies> to modify the preset security policies.
 
@@ -230,7 +234,7 @@ On the **Safe Attachments** page, the **Status** value of the policy is now **On
 
 Safe Attachments policies are processed in the order they're displayed on the **Safe Attachments** page:
 
-- The Safe Attachments policy named **Strict Preset Security Policy** that's associated with the Strict preset security policy is always applied first (if the Strict preset security policy is [enabled](preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users)).
+- The Safe Attachments policy named **Strict Preset Security Policy** that's associated with the Strict preset security policy is always applied first (if the Strict preset security policy is [assigned to users](preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users)).
 - The Safe Attachments policy named **Standard Preset Security Policy** that's associated with the Standard preset security policy is always applied next (if the Standard preset security policy is enabled).
 - Custom Safe Attachments policies are applied next in priority order (if they're enabled):
   - A lower priority value indicates a higher priority (0 is the highest).
@@ -400,7 +404,7 @@ For detailed syntax and parameter information, see [Get-SafeAttachmentRule](/pow
 
 You can't rename a safe attachment policy in PowerShell (the **Set-SafeAttachmentPolicy** cmdlet has no _Name_ parameter). When you rename a Safe Attachments policy in the Microsoft Defender portal, you're only renaming the safe attachment _rule_.
 
-Otherwise, the same settings are available when you create a safe attachment policy as described in the [Step 1: Use PowerShell to create a safe attachment policy](#step-1-use-powershell-to-create-a-safe-attachment-policy) section earlier in this article.
+Otherwise, the same settings are available when you create a safe attachment policy as described in [Step 1: Use PowerShell to create a safe attachment policy](#step-1-use-powershell-to-create-a-safe-attachment-policy).
 
 To modify a safe attachment policy, use this syntax:
 
@@ -417,7 +421,7 @@ For detailed syntax and parameter information, see [Set-SafeAttachmentPolicy](/p
 
 The only setting that's not available when you modify a safe attachment rule in PowerShell is the _Enabled_ parameter that allows you to create a disabled rule. To enable or disable existing safe attachment rules, see the next section.
 
-Otherwise, the same settings are available when you create a rule as described in the [Step 2: Use PowerShell to create a safe attachment rule](#step-2-use-powershell-to-create-a-safe-attachment-rule) section earlier in this article.
+Otherwise, the same settings are available when you create a rule as described in [Step 2: Use PowerShell to create a safe attachment rule](#step-2-use-powershell-to-create-a-safe-attachment-rule).
 
 To modify a safe attachment rule, use this syntax:
 

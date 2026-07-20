@@ -160,8 +160,8 @@ sudo azsecd status
 
 The following articles detail how to configure antivirus exclusions for processes, files, and folders per individual VM:
 
-- [Set up exclusions for Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md)
-- [Common mistakes to avoid when defining exclusions](common-exclusion-mistakes-microsoft-defender-antivirus.md)
+- [Set up exclusions for Microsoft Defender Antivirus scans](microsoft-defender-antivirus-exclusions-configure.md)
+- [Exclusions to avoid in Microsoft Defender Antivirus and Defender for Endpoint](defender-endpoint-exclusions-common-mistakes.md)
 
 ## Scheduling a daily antivirus scan (optional)
 

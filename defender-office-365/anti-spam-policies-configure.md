@@ -8,11 +8,11 @@ ms.assetid: 316544cb-db1d-4c25-a5b9-c73bbcf53047
 ms.collection:
   - m365-security
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - sfi-ga-nochange
 description: Admins can learn how to view, create, modify, and delete anti-spam policies in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -274,7 +274,7 @@ On the **Anti-spam policies** page, select the anti-spam policy from the list by
 
 :::image type="content" source="media/anti-phishing-policies-details-flyout.png" alt-text="The details flyout of a custom anti-spam policy." lightbox="media/anti-phishing-policies-details-flyout.png":::
 
-These actions are described in the following sections: [Modify anti-spam policies](#use-the-microsoft-defender-portal-to-modify-anti-spam-policies), [Enable or disable anti-spam policies](#use-the-microsoft-defender-portal-to-enable-or-disable-anti-spam-policies), [Set the priority of custom anti-spam policies](#use-the-microsoft-defender-portal-to-set-the-priority-of-custom-anti-spam-policies), and [Remove custom anti-spam policies](#use-the-microsoft-defender-portal-to-remove-custom-anti-spam-policies).
+These actions are described in: [Modify anti-spam policies](#use-the-microsoft-defender-portal-to-modify-anti-spam-policies), [Enable or disable anti-spam policies](#use-the-microsoft-defender-portal-to-enable-or-disable-anti-spam-policies), [Set the priority of custom anti-spam policies](#use-the-microsoft-defender-portal-to-set-the-priority-of-custom-anti-spam-policies), and [Remove custom anti-spam policies](#use-the-microsoft-defender-portal-to-remove-custom-anti-spam-policies).
 
 ### Use the Microsoft Defender portal to modify anti-spam policies
 
@@ -561,9 +561,10 @@ Set-HostedContentFilterRule -Identity "Marketing Department" -Priority 2
 
 ### Use PowerShell to remove spam filter policies
 
-When you use PowerShell to remove a spam filter policy, the corresponding spam filter rule isn't removed.
-
 To remove a spam filter policy, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and use this syntax:
+
+> [!WARNING]
+> Removing a spam filter policy doesn't remove the corresponding spam filter rule. Remove the orphaned spam filter rule separately if it's no longer needed.
 
 ```PowerShell
 Remove-HostedContentFilterPolicy -Identity "<PolicyName>"
@@ -579,9 +580,10 @@ For detailed syntax and parameter information, see [Remove-HostedContentFilterPo
 
 ### Use PowerShell to remove spam filter rules
 
-When you use PowerShell to remove a spam filter rule, the corresponding spam filter policy isn't removed.
-
 To remove a spam filter rule, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and use this syntax:
+
+> [!WARNING]
+> Removing a spam filter rule doesn't remove the corresponding spam filter policy. Remove the unused spam filter policy separately if it's no longer needed.
 
 ```PowerShell
 Remove-HostedContentFilterRule -Identity "<PolicyName>"
@@ -601,7 +603,7 @@ If you encounter issues with anti-spam policy configuration, such as policy prec
 
 ## How do you know these procedures worked?
 
-To verify that your anti-spam policy configuration is working correctly, you can send a GTUBE test message to confirm that spam filtering applies the expected actions.
+To verify that your anti-spam policy configuration is working correctly, you can send a GTUBE test message to confirm that spam filtering applies the expected actions. GTUBE testing requires that the source email organization doesn't scan for outbound spam.
 
 ### Send a GTUBE message to test your spam policy settings
 

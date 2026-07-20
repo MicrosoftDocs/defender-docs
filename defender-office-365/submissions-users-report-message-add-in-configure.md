@@ -4,7 +4,7 @@ author: chrisda
 ms.author: chrisda
 ms.reviewer: dhagarwal
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 ms.localizationpriority: medium
 ms.assetid: 4250c4bc-6102-420b-9e0a-a95064837676
 ms.collection:
@@ -16,7 +16,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -55,7 +55,7 @@ The following table describes the advantages of the built-in **Report** button o
 
 <sup>\*</sup>User reporting from shared and delegate mailboxes is available in [select supported clients](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
 
-The following sections describe how to remove or scope the Report Message and Report Phishing add-ins.
+To transition away from the add-ins, you can [remove the Report Message or Report Phishing add-ins](#remove-the-report-message-or-report-phishing-add-ins) entirely, or [scope the add-ins to a set of users](#scope-the-report-message-or-report-phishing-add-ins-to-a-set-of-users) during the migration.
 
 ## What do you need to know before you begin?
 
@@ -79,7 +79,7 @@ Verify the following permissions and prerequisites before you remove or scope th
 ## Remove the Report Message or Report Phishing add-ins
 
 > [!TIP]
-> If you delete the app registration for the add-in in Microsoft Entra ID, the add-in is also deleted from the organization.
+> If you delete the app registration for the add-in in Microsoft Entra ID (formerly Azure Active Directory), the add-in is also deleted from the organization.
 
 1. In the Microsoft 365 admin center at <https://admin.microsoft.com>, expand **Show all** if necessary, and then go to **Settings** \> **Integrated apps**. Or, to go directly to the **Integrated apps** page, use <https://admin.microsoft.com/Adminportal/Home#/Settings/IntegratedApps>.
 
@@ -194,7 +194,7 @@ A: Raise a design change request (DCR) via Microsoft support.
 
 ### Q: Is there a way to keep the add-in but remove the built-in Report button?
 
-A: No. Unfortunately, due to the previously stated reasons, the add-ins will be deprecated. There's no way to keep the add-in and remove the built-in **Report** button. To remove the add-in, go to **Settings** \> **Integrated apps** in the Microsoft 365 admin center, select the add-in on the **Deployed apps** tab, and then select **Remove app**.
+A: No. Because of the security issues and architectural limitations described in [Why are the add-ins being deprecated?](#q-why-are-the-add-ins-being-deprecated), the add-ins will be deprecated. There's no way to keep the add-in and remove the built-in **Report** button. To remove the add-in, go to **Settings** \> **Integrated apps** in the Microsoft 365 admin center, select the add-in on the **Deployed apps** tab, and then select **Remove app**.
 
 ### Q: What is the recommendation for moving from the add-ins to a non-Microsoft reporting add-in?
 

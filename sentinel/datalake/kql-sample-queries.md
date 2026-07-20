@@ -1,5 +1,5 @@
 ---
-title: Sample KQL queries for Microsoft Sentinel data lake
+title: Sample KQL Queries for Microsoft Sentinel Data Lake
 titleSuffix: Microsoft Security
 description: Use KQL queries to explore and analyze data in the Microsoft Sentinel data lake.
 ms.author: edbaynash
@@ -844,7 +844,6 @@ IP_Indicators
 
 ```
 
-
 ### Suspicious travel activity
 
 Look for successful sign-ins from countries or regions not previously seen for a given user, which may signal account compromise or suspicious travel activity in the last 180 days.
@@ -856,8 +855,6 @@ SigninLogs
 | summarize CountriesAccessed = make_set(Location) by UserPrincipalName
 | where array_length(CountriesAccessed) > 3  // Adjust threshold
 ```
-
-
 
 ### Daily sign-in baseline
 
@@ -879,8 +876,6 @@ SigninLogs
 | where array_length(NewLocations) > 0
 ```
 
-
-
 ### Daily location trend per user and application
 
 A daily job to summarize sign-in activity by user and application, showing the list and count of distinct geographic locations and IPs used in the last 24 hours.
@@ -894,7 +889,6 @@ SigninLogs
   | summarize LocationList = make_set(locationString), LocationCount=dcount(locationString), 
   DistinctSourceIp = dcount(IPAddress), LogonCount = count() by Day, AppDisplayName, UserPrincipalName
 ```
-
 
 ### Daily process execution trend
 
@@ -911,3 +905,7 @@ A daily job to track process creation events (Event ID 4688) from `SecurityEvent
   DistinctParent = dcount(ParentProcessName), NoofCommandLines = dcount(CommandLine) by Day, NewProcessName
 ```
 
+## Related content
+
+- [KQL and the Microsoft Sentinel data lake](kql-overview.md)
+- [Run KQL queries on the Microsoft Sentinel data lake](kql-queries.md)

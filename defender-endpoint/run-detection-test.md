@@ -48,7 +48,7 @@ Run the following PowerShell script on a newly onboarded device to verify that t
    The Command Prompt window closes automatically. If the script runs successfully, a new alert appears in the Microsoft Defender portal for the onboarded device in about 10 minutes.
 
     > [!NOTE]
-    > You can also [Configure extension file exclusions for Microsoft Defender Antivirus](configure-extension-file-exclusions-microsoft-defender-antivirus.md) to perform this test. You'll receive a notification on the endpoint and an alert in the Microsoft Defender portal.
+    > You can also [Configure extension file exclusions for Microsoft Defender Antivirus](microsoft-defender-antivirus-exclusions-configure.md) to perform this test. You'll receive a notification on the endpoint and an alert in the Microsoft Defender portal.
 
 ## Related articles
 

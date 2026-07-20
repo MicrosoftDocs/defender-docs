@@ -9,11 +9,11 @@ ms.collection:
   - m365-security
   - tier2
 description: Admins can learn how to create end-user notification email messages for Attack simulation training in Microsoft Defender for Office 365 Plan 2.
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # End-user notifications for Attack simulation training
@@ -224,7 +224,5 @@ In the confirmation dialog that opens, select **Delete**.
 For more information about Attack simulation training, see the following articles:
 
 - [Get started using Attack simulation training](attack-simulation-training-get-started.md)
-
-[Create a phishing attack simulation](attack-simulation-training-simulations.md)
-
-[Simulation automations for Attack simulation training](attack-simulation-training-simulation-automations.md)
+- [Create a phishing attack simulation](attack-simulation-training-simulations.md)
+- [Simulation automations for Attack simulation training](attack-simulation-training-simulation-automations.md)

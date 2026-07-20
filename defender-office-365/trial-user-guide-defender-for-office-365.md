@@ -246,4 +246,4 @@ Equip your users with the right knowledge to identify threats and report suspici
 - **Fast Track Get Started Guide**: [Microsoft Defender for Office 365](https://go.microsoft.com/fwlink/p/?linkid=2197415)
 - **Microsoft Defender for Office 365 documentation**: Get detailed information on how Defender for Office 365 works and how to best implement it for your organization. Visit the [Microsoft Defender for Office 365 documentation](mdo-about.md).
 - **What's included**: For a full list of Office 365 email security features listed by product tier, view the [Feature Matrix](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability).
-- **Why Defender for Office 365**: The [Defender for Office 365 Datasheet](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FCiy) shows the top 10 reasons customers choose Microsoft.
+- **Why Defender for Office 365**: The [Defender for Office 365 Datasheet](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Defender-For-Office-365-Datasheet.pdf) shows the top 10 reasons customers choose Microsoft.

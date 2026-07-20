@@ -15,7 +15,7 @@ ms.date: 09/16/2025
 
  Microsoft Sentinel SIEM and platform includes a range of capabilities that partners can use to create impactful solutions they can publish through the Microsoft Security Store or the Sentinel SIEM Content Hub. By building on top of Sentinel, partners can enable new scenarios that use a wide breadth of security data, processing capabilities, and AI experiences, without needing new pipelines, processing capabilities or storage infrastructure.
 
-For example, you can create a connector to bring new data into Sentinel, analyze that data with Sentinel Jupyter notebook jobs, and create an agent that uses MCP tools to analyze the new data along with other data already in the lake. The agent can then interact with other endpoints and external applications to deliver a powerful unified experience to your customers.  
+For example, you can create a connector to bring new data into Sentinel, analyze that data with Sentinel Jupyter notebook jobs, and create an agent that uses MCP tools to analyze the new data along with other data already in the lake. The agent can then interact with other endpoints and external applications to deliver a powerful unified experience to your customers.
 
 ## Learn about Microsoft Sentinel
 
@@ -29,12 +29,13 @@ To get started, learn about Microsoft Sentinel, identify the data and functional
 |**Become a Cloud Partner and create a Publisher Account**|Microsoft Sentinel solutions are published on the Azure Commercial Marketplace. To publish to the marketplace, join the cloud partner program. <br><br> For more information, see:<br> [Guide to understand Microsoft commercial marketplace](/partner-center/marketplace-offers/overview) <br>[Guide to create a commercial marketplace account in Microsoft Partner Center](/partner-center/account-settings/create-account) <br>[Join ISV Success program](https://www.microsoft.com/isv/offer-benefits) <br>[Sign up for Microsoft for Startups program, if applicable](https://www.microsoft.com/startups)|
 
 ## Build your solution
+
 Once you have a good understanding of Microsoft Sentinel and the solution you want to building.
 
-|Step| Description|  
+|Step| Description|
 |--|--|
 |**Provisioning environment**|To help you get started with building and testing your solution, we recommend you sign up for an Azure Free Trial and a Microsoft Sentinel Free Trial. <br><br> For more information, see:<br> [Sign up for an Azure Free Trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) <br> [Then sign up for a Microsoft Sentinel Free Trial (Scroll down to 'Free trial')](https://azure.microsoft.com/pricing/details/microsoft-sentinel/)|
-|**Complete the training lab**|We highly recommend the training lab to get fully ramped up with Microsoft Sentinel. This lab provides hands-on practical experience for product features, capabilities, and scenarios. <br><br> For more information, see:<br> [Complete the Microsoft Sentinel Training Lab](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/azuresentinel.azure-sentinel-solution-azuretraininglab)|
+|**Complete the training lab**|We highly recommend the training lab to get fully ramped up with Microsoft Sentinel. This lab provides hands-on practical experience for product features, capabilities, and scenarios. <br><br> For more information, see:<br> [Complete the Microsoft Sentinel Training Lab](/azure/sentinel/skill-up-resources)|
 |**Build a connector**|Microsoft Sentinel is built on data. Most solutions start with bringing the data from a customer’s environment into Microsoft Sentinel. To understand how to build a connector, refer to the following resources. <br><br> For more information, see:<br> [Guide to Building Microsoft Sentinel Data Experiences](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/ReadMe.md) <br>[Webinar: Creating Data Connectors](https://www.youtube.com/watch?v=wXCh17rgtLU)|
 |**Build your SIEM content**|In addition to data, your solution can offer a rich array of other components to help customers get the most out of your data. For example, you can offer detections, workbooks, playbooks, and hunting queries to make your offering readily usable by customers. <br><br> For more information, see:<br> [What can you contribute and how can you create contributions?](https://github.com/Azure/Azure-Sentinel/wiki)|
 |**Create Jupyter notebook jobs and Security Copilot agents**|Security Copilot agents and Sentinel data lake jobs allow you to create powerful solutions that can reason over data in the Sentinel data lake and identify threats and surface insights. The following resources explain how to use those capabilities.<br><br> [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot)<br> [Create and manage Jupyter notebook jobs](/azure/sentinel/datalake/notebook-jobs)<br>[Running notebooks on the Microsoft Sentinel data lake](/azure/sentinel/datalake/notebooks)|

@@ -270,7 +270,7 @@ The following table lists which behavior tables to use in each environment:
 
 For more practical examples of using behaviors, see [Use cases and examples](#use-cases-and-examples).
 
-For more information about Kusto Query Language (KQL), see [Kusto query language overview](/kusto/query/?view=microsoft-sentinel).
+For more information about Kusto Query Language (KQL), see [Kusto query language overview](/kusto/query/?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json).
 
 - **Filter for UEBA behaviors in the Defender portal**
 

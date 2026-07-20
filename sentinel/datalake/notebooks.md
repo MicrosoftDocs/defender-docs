@@ -1,5 +1,5 @@
 ---  
-title: Running notebooks on the Microsoft Sentinel data lake
+title: Running Notebooks on the Microsoft Sentinel Data Lake
 titleSuffix: Microsoft Security  
 description: This article describes how to explore and interact with data lake data using Jupyter notebooks in Visual Studio Code.
 ms.author: edbaynash 
@@ -129,7 +129,8 @@ For information on Jobs, see [Jobs and scheduling](#jobs-and-scheduling). For mo
    # Save to a new table
    data_provider.save_as_table(df_transformed, "EntraGroups_Processed_SPRK", write_options=write_options)
    ```  
-  The editor provides intellisense code completion for both the `MicrosoftSentinelProvider` class and the table names in the data lake.
+
+    The editor provides intellisense code completion for both the `MicrosoftSentinelProvider` class and the table names in the data lake.
 
 1. Select the **Run** triangle to execute the code in the notebook. The results are displayed in the output pane below the code cell.  
   :::image type="content" source="./media/notebooks/run-notebook.png" lightbox="./media/notebooks/run-notebook.png" alt-text="A screenshot showing how to run a notebook cell.":::

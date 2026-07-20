@@ -2,11 +2,11 @@
 title: Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment
 description: Get an overview of how to configure Microsoft Defender Antivirus in a remote desktop or non-persistent virtual desktop environment.
 ms.localizationpriority: medium
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1014
+ms.custom: nextgen, msecd-doc-authoring-1016
 ms.reviewer: jesquive
 ms.subservice: ngp
 ms.service: defender-endpoint
@@ -50,7 +50,7 @@ Microsoft Defender Antivirus VDI configuration is supported on the following ope
 
 ## Set up a dedicated VDI file share for security intelligence
 
-In Windows 10, version 1903, Microsoft introduced the shared security intelligence feature, which offloads the unpackaging of downloaded security intelligence updates onto a host machine. This method reduces the usage of CPU, disk, and memory resources on individual machines. Shared security intelligence now works on Windows 10, version 1703 and later. You can set up this capability by using Group Policy or PowerShell.
+In Windows 10, version 1903, Microsoft introduced the shared security intelligence feature, which offloads the unpackaging of downloaded security intelligence updates onto a host machine. Offloading unpackaging to a host machine reduces the usage of CPU, disk, and memory resources on individual machines. Shared security intelligence now works on Windows 10, version 1703 and later. You can set up the shared security intelligence feature by using Group Policy or PowerShell.
 
 <a name="group-policy"></a>
 ### Configure the VDI file share by using Group Policy
@@ -82,7 +82,7 @@ Use PowerShell to configure the shared security intelligence path on each device
 
 ## Download and unpackage the latest updates
 
-Use the following sample PowerShell script to download and unpack security intelligence updates for your VMs. This script is the easiest way to download new updates and get them ready for your VMs. You should then set the script to run at a certain time on the management machine by using a scheduled task. Or, if you're familiar with using PowerShell scripts in Azure, Intune, or Configuration Manager, you could use those scripts instead.
+Use the following sample PowerShell script to download and unpack security intelligence updates for your VMs. The sample script is the easiest way to download new updates and get them ready for your VMs. You should then schedule the security intelligence download script to run at a certain time on the management machine by using a scheduled task. Or, if you're familiar with using PowerShell scripts in Azure, Intune, or Configuration Manager, you could deploy the sample script through those tools instead.
 
 ```powershell
 $vdmpathbase = "$env:systemdrive\wdav-update\{00000000-0000-0000-0000-"
@@ -101,7 +101,7 @@ You can set a scheduled task to run once a day so that whenever the package is d
 
 Security intelligence packages are typically published once every three to four hours. Setting a frequency shorter than four hours isn't advisable because it increases the network overhead on your management machine for no benefit.
 
-You can also set up your single server or machine to fetch the updates on behalf of the VMs at an interval and place them in the file share for consumption. This configuration is possible when the devices have share and read access (NTFS permissions) to the share so they can grab the updates. To set up this configuration, follow these steps:
+You can also set up your single server or machine to fetch the updates on behalf of the VMs at an interval and place them in the file share for consumption. File-share-based update distribution is possible when the devices have share and read access (NTFS permissions) to the share so they can grab the updates. To set up this configuration, follow these steps:
 
 1. Create an SMB/CIFS file share.
 
@@ -120,7 +120,7 @@ You can also set up your single server or machine to fetch the updates on behalf
    > [!NOTE]
    > An NTFS permission is added for **Authenticated Users:Read:**.
 
-   For this example, the file share is `\\FileServer.fqdn\mdatp$\wdav-update`.
+   In the preceding sample configuration, the file share is `\\FileServer.fqdn\mdatp$\wdav-update`.
 
 ### Set a scheduled task to run the PowerShell script
 
@@ -155,7 +155,7 @@ If you would prefer to do everything manually, here's what to do to replicate th
    Here's an example: `c:\wdav_update\{00000000-0000-0000-0000-000000000000}`
 
    > [!NOTE]
-   > We set the script so that the last 12 digits of the GUID are the year, month, day, and time when the file was downloaded so that a new folder is created each time. You can change this so that the file is downloaded to the same folder each time.
+   > We set the script so that the last 12 digits of the GUID are the year, month, day, and time when the file was downloaded so that a new folder is created each time. You can change the GUID-based folder naming behavior so that the file is downloaded to the same folder each time.
 
 1. Download a security intelligence package from [Microsoft Defender security intelligence updates](https://www.microsoft.com/wdsi/defenderupdates) into the GUID folder. The file should be named `mpam-fe.exe`.
 
@@ -181,7 +181,7 @@ Configure the following root-level policy settings:
 - Configure local administrator merge behavior for lists: `Disabled` — Set this policy to **Disabled** to prevent locally defined exclusions and lists from being merged with centrally managed policies. When disabled, only centrally managed policies (for example, Group Policy) are applied.
 
 > [!NOTE]
-> This setting ensures that local administrators cannot override centrally managed exclusion lists and policy configurations on VDI VMs.
+> Disabling local administrator merge behavior for lists ensures that local administrators cannot override centrally managed exclusion lists and policy configurations on VDI VMs.
 
 - Control whether or not exclusions are visible to Local Admins: `Enabled`
 
@@ -197,7 +197,7 @@ Use the following client interface settings:
 - Enable headless UI mode: `Enabled`
 
    > [!NOTE]
-   > This policy hides the entire Microsoft Defender Antivirus user interface from end users in your organization.
+   > The Enable headless UI mode policy hides the entire Microsoft Defender Antivirus user interface from end users in your organization.
 
 - Suppress all notifications: `Enabled`
 
@@ -321,7 +321,7 @@ Use the following security intelligence update settings:
 - Turn on scan after security intelligence update (Disable scans after an update): `Disabled`
 
    > [!NOTE]
-   > Disabling a scan after a security intelligence update prevents a scan from occurring after receiving an update. You can apply this setting when creating the base image if you have also run a quick scan. This way, you can prevent the newly updated VM from performing a scan again (as you've already scanned it when you created the base image).
+   > Disabling a scan after a security intelligence update prevents a scan from occurring after receiving an update. You can apply this setting when creating the base image if you have also run a quick scan. By disabling scans after a security intelligence update, you can prevent the newly updated VM from performing a scan again (as you've already scanned it when you created the base image).
 
    > [!IMPORTANT]
    > Running scans after an update helps ensure your VMs are protected with the latest security intelligence updates. Disabling this option reduces the protection level of your VMs and should only be used when first creating or deploying the base image.
@@ -387,7 +387,7 @@ Enable tamper protection to prevent Microsoft Defender Antivirus from being disa
 <a name="exclusions"></a>
 ### Configure antivirus exclusions for VDI environments
 
-If you think you need to add exclusions, see [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
+If you think you need to add exclusions, see [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md).
 
 <a name="next-step"></a>
 ## Next steps

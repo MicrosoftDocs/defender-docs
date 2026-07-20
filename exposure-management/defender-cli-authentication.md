@@ -6,7 +6,7 @@ ms.date: 07/08/2026
 ai-usage: ai-assisted
 ---
 
-# Defender CLI setup for agentic code security (preview)
+# Defender CLI setup for agentic code security (private preview)
 
 Use Defender CLI authentication to run agentic code scans locally or in CI/CD pipelines.
 

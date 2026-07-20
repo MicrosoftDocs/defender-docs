@@ -69,7 +69,7 @@ The commands and their available options are described in the following table.
 |`-?` or `-h`||Displays all available commands and their options.|
 |`-AddDynamicSignature -Path <path>`||Loads dynamic security intelligence from the specified location.|
 |`-CaptureNetworkTrace -Path <path>`||Captures network input from the Network Protection service, and saves it to the specified location. To stop tracing, use `-Path` without a value. <br/><br/>**Note**: NT AUTHORITY\LocalService must have write access to the specified path (for example, `C:\Windows\Temp\MpCmdRun`).|
-|`-CheckExclusion -Path <PathAndFilename or Path>`||Verifies whether the specified file or path is excluded from scanning. For more information, see [Verify whether a specified path is excluded using MpCmdRun](configure-extension-file-exclusions-microsoft-defender-antivirus.md#verify-whether-a-specified-path-is-excluded-using-mpcmdrun).|
+|`-CheckExclusion -Path <PathAndFilename or Path>`||Verifies whether the specified file or path is excluded from scanning. For more information, see [Verify whether a file or folder is excluded by using MpCmdRun](microsoft-defender-antivirus-exclusions-configure.md#verify-whether-a-file-or-folder-is-excluded-by-using-mpcmdrun).|
 |`-DeviceControl -TestPolicyXml <PathAndFilename> -Groups or -Rules`||Validates the specified Device Control rules XML policy file.|
 ||`-Groups`|Identifies the specified file as a groups policy file.|
 ||`-Rules`|Identifies the specified file as a rules policy file.|
