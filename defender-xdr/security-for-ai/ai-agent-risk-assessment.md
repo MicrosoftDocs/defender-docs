@@ -64,6 +64,7 @@ Examples of enterprise-agent risk indicators include:
 
 - **High Autonomy**: Indicates that an agent can perform actions with limited human approval.
 - **Privileged Data Access**: Indicates that an agent can access or modify sensitive data.
+- **Privileged Business-system Access**: Indicates that the agent has write access to key business systems.
 - **Active Threat**: Indicates that active security alerts are associated with the agent.
 
 ## Local-agent risk indicators
