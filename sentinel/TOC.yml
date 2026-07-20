@@ -978,7 +978,29 @@
     - name: Packaging and publishing a Sentinel platform solution
       href: isv/package-platform-solution.md
     - name: Managing Platform Solutions
-      href: isv/manage-platform-solutions.md
+      href: manage-platform-solutions.md
+    - name: Platform solutions
+      items:
+        - name: Decide what platform solutions to build
+          href: isv/which-platform-components-to-build.md
+        - name: Platform solution quality guidelines
+          href: isv/platform-solution-quality-guidance.md
+        - name: How to onboard to Microsoft Sentinel data lake
+          href: isv/sentinel-data-lake-onboarding.md 
+        - name: Ingest sample data into data lake
+          href: isv/ingest-sample-data.md
+        - name: Develop Security Copilot agent platform solutions
+          href: isv/build-agent-security-copilot.md
+        - name: Develop custom Graph platform solutions
+          href: isv/develop-custom-graph-platform-solutions.md
+        - name: Develop Notebook platform solutions
+          href: isv/develop-notebook-platform-solutions.md
+        - name: Publish platform solutions overview
+          href: /security/store/partners/publish-a-security-copilot-agent-or-analytics-solution-in-security-store?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json
+        - name: Package and publish notebook and graph solutions
+          href: isv/package-publish-notebook-graph-solutions.md  
+        - name: How to publish a Microsoft Security Copilot agent
+          href: isv/publish-agent-to-security-store.md
     - name: Troubleshoot solutions in Microsoft Sentinel
       href: isv/troubleshoot-sentinel-solutions.md
     - name: Remove Microsoft Sentinel from your workspace
