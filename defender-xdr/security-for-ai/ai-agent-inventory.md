@@ -18,7 +18,7 @@ Microsoft Defender provides a centralized inventory of AI agents in your organiz
 
 The inventory includes:
 
-- Enterprise agents, including agents built with Microsoft Copilot Studio, Microsoft Foundry, Microsoft 365, and [supported non-Microsoft platforms](/microsoft-agent-365/admin/agent-registry).
+- Agents built with Microsoft Copilot Studio, Microsoft Foundry, Microsoft 365, and [supported non-Microsoft platforms](/microsoft-agent-365/admin/agent-registry).
 - [Local AI agents](/defender-endpoint/local-agent-discovery-overview) discovered on endpoint devices.
 
 Use the **AI Agents** page in the Microsoft Defender portal to review agent configuration, risk levels, risk indicators, recommendations, alerts, tools, identities, and related security context. You can also query agent inventory and configuration data by using Advanced Hunting.
@@ -26,13 +26,13 @@ Use the **AI Agents** page in the Microsoft Defender portal to review agent conf
 ## Prerequisites
 
 - Enable security for AI agents, including the Microsoft 365 connector. See [Enable security for AI agents using Microsoft Defender](get-started-defender-security-for-ai.md).
-- To discover local AI agents that run on endpoints, set up [AI agent runtime protection in Microsoft Defender for Endpoint](/defender-endpoint/configure-ai-agent-runtime-protection). Discovery requires Microsoft Defender for Endpoint and Microsoft Defender Antivirus in active mode. Local agents are onboarded separately from enterprise agents.
+- To discover local AI agents that run on endpoints, set up [AI agent runtime protection in Microsoft Defender for Endpoint](/defender-endpoint/configure-ai-agent-runtime-protection). Discovery requires Microsoft Defender for Endpoint and Microsoft Defender Antivirus in active mode. Local agents are onboarded separately.
 
 ## Review AI agent risk and security posture
 
 Microsoft Defender calculates an agent's risk level from its active risk indicators. Security recommendations identify available actions for improving the agent's posture but are calculated separately from the risk level.
 
-The available risk indicators, recommendations, tabs, and supporting evidence depend on whether the agent is an enterprise agent or a local agent.
+The available risk indicators, recommendations, tabs, and supporting evidence depend on the agent type and the security information available for that agent.
 
 To review the risk and security posture of AI agents:
 
@@ -84,7 +84,7 @@ For more information about investigating agent threats, see [Detect and investig
 
 ## Discover and assess AI agents using Advanced Hunting
 
-The [AgentsInfo table](/defender-xdr/advanced-hunting-agentsinfo-table) in Advanced Hunting provides an inventory of AI agents, including enterprise agents and local agents, and their security-relevant properties.
+The [AgentsInfo table](/defender-xdr/advanced-hunting-agentsinfo-table) in Advanced Hunting provides an inventory of AI agents and their security-relevant properties.
 
 Use the table to:
 
