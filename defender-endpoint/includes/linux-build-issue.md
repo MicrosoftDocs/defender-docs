@@ -28,4 +28,4 @@ Affected devices may be unable to complete the platform update and may remain on
 
 **Current status**
 
-Fixed in platform version 101.26052.0010 and later. FIPS-enabled RHEL 8/9 devices that were affected by this issue can now install/update to 101.26052.0010 or later successfully.
+Fixed in platform version 101.26052.0011 and later. FIPS-enabled RHEL 8/9 devices that were affected by this issue can now install/update to 101.26052.0011 or later successfully.

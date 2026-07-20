@@ -14,7 +14,11 @@ ai-usage: ai-assisted
 
 # AI agent posture risk in Microsoft Defender (preview)
 
-Microsoft Defender assesses posture risk for AI agents in your organization, including enterprise agents registered with [Microsoft Agent 365](/microsoft-agent-365/overview) and local agents discovered on endpoint devices. Each agent is evaluated against a set of risk indicators and assigned an overall risk level. Defender also shows security recommendations when it identifies actionable posture issues.
+Microsoft Defender assesses posture risk for AI agents in your organization, including agents registered with [Microsoft Agent 365](/microsoft-agent-365/overview) and local agents discovered on endpoint devices. Each agent is evaluated against risk indicators and assigned an overall risk level based on the likelihood of compromise and the potential impact if compromised.
+
+## How AI agent posture risk is assessed
+
+A risk indicator represents a security condition associated with an agent. For example, an indicator might show that an agent is published, can run without human approval, has privileged access, or has active security alerts.
 
 Risk indicators can be based on:
 
@@ -23,37 +27,7 @@ Risk indicators can be based on:
 - Endpoint and user context for local agents.
 - Active security alerts associated with the agent.
 
-For steps to review risk information and recommendations in the Microsoft Defender portal, see [Discover AI agents and assess security posture using Microsoft Defender](ai-agent-inventory.md).
-
-## How AI agent posture risk is assessed
-
-A risk indicator represents a security condition associated with an agent. For example, an indicator might show that an agent is published, can run without human approval, has privileged access, or has active security alerts.
-
-### Risk indicator states
-
-Each risk indicator has one of the following states:
-
-| State | Description |
-|---|---|
-| Active | Defender assessed the condition and determined that the risk is present. |
-| Not active | Defender assessed the condition and determined that the risk isn't present. |
-| Not assessed | Defender couldn't assess the condition because the required information wasn't available. |
-
-Only active indicators contribute to the agent's risk level.
-
-### Likelihood, impact, and severity
-
-Each risk indicator affects one or both of the following risk dimensions:
-
-- **Likelihood**: How easily the agent could be misused or compromised.
-- **Impact**: The potential damage if the agent is misused or compromised.
-
-Each indicator also has a severity of Low, Medium, High, or Critical. Most indicators have a fixed severity.
-
-The severity of the following indicators is calculated separately for each agent:
-
-- **Critical Resource**, based on the agent's criticality.
-- **Active Threat**, based on the number and severity of qualifying active alerts.
+A risk indicator isn't always something that can be remediated. It might reflect the agent's intended purpose or design. For example, a chatbot might be intentionally accessible without authentication, or an agent might require access to critical business systems to perform its function. Even when not directly actionable, these indicators provide important security context that can help organizations prioritize risk and make informed decisions.
 
 ### How the risk level is determined
 
@@ -62,7 +36,6 @@ Microsoft Defender combines all active risk indicators to determine the agent's 
 The result depends on:
 
 - The severity of each active indicator.
-- Whether each indicator affects likelihood, impact, or both.
 - The combination of active indicators associated with the agent.
 
 Indicators that are inactive or not assessed don't affect the risk level.
@@ -77,72 +50,50 @@ The resulting risk level can be:
 | No known risk | Defender assessed the agent and found no active risk indicators. |
 | Not evaluated | Defender didn't have enough information to assess the agent. |
 
-## Enterprise-agent risk indicators
+## Agent risk indicators
 
-Enterprise-agent risk indicators are derived from the agent's configuration, runtime activity, and active alerts.
+Agent risk indicators are derived from the agent's configuration, runtime activity, access, tools, settings, and active alerts.
 
 > [!NOTE]
 > Not all risk indicators apply to all agent platforms. Microsoft Defender assesses an indicator only when the required platform support and data are available.
 
-The following risk indicators can apply to enterprise agents:
+Risk indicators can reflect security conditions such as how users access an agent, what level of autonomy it has, what tools and systems it can use, whether it can access or modify sensitive data, and whether active alerts are associated with the agent.
 
-| Risk indicator | Affects | Severity | Active when |
-|---|---|---|---|
-| Published Agent | Likelihood and impact | Low | The agent is published and has at least one channel. |
-| Weak Instructions | Likelihood | Medium | The agent has instructions that contain fewer than 30 characters. |
-| High Autonomy | Likelihood | Low | The agent has triggers and either has a tool or an MCP server that can run without human approval. |
-| Indirect Prompt Injection Exposure | Likelihood | High | The agent has tools, connectors, or capabilities that allow untrusted input to reach an action that reads data, performs an external action, or sends data outside the agent. |
-| Privileged Data Access | Impact | Medium | The agent has a tool, MCP server, or capability that can write, delete, or modify data. |
-| Data Exfiltration Exposure | Likelihood | Medium | The agent has an action that can read or retrieve data and another action that can send data outside the agent, creating a potential data-exfiltration path. |
-| Privileged Business System Access | Impact | Medium | The agent can write to a recognized business system, such as a customer relationship management, enterprise resource planning, human resources, or financial system. |
-| Privileged Software Development Access | Impact | Medium | The agent can write to a recognized software development system, such as source control, continuous integration and delivery systems, or cloud infrastructure. |
-| No Authentication | Likelihood | High | Users can access the agent without signing in. |
-| Production Environment | Impact | Medium | The agent is deployed in an environment identified as a production environment. |
-| Coordinator Agent | Impact | Medium | The agent has at least one connected agent and can orchestrate actions across other agents. |
-| Cross-tenant Access | Likelihood and impact | High | The agent supports multitenant authentication and can be accessed by users from other tenants. |
-| Critical Resource | Impact | Based on the agent's criticality, from Low through Critical | The agent is classified as a critical resource. |
-| Active Threat | Likelihood | Based on the number and severity of qualifying active alerts, from Low through Critical | The agent has qualifying active alerts. |
+Examples of agent risk indicators include:
 
-### Active Threat indicator
-
-The **Active Threat** indicator reflects qualifying active security alerts associated with an enterprise agent.
-
-An alert contributes to the indicator when:
-
-- Its status is **New** or **In Progress**.
-- Its severity is Low, Medium, or High.
-- Its severity isn't Informational.
-
-Microsoft Defender determines the severity of the **Active Threat** indicator based on the number and severity of qualifying active alerts. The indicator severity can be Low, Medium, High, or Critical.
-
-As the number or severity of qualifying alerts increases, the severity of the indicator can increase. When the agent has no qualifying active alerts, the indicator isn't active.
+- **Weak Instructions**: Indicates that an agent's instructions don't contain sufficient guidance to help ensure safe and predictable behavior.
+- **High-usage Agent**: Indicates that an agent is used by multiple users and might be important to business operations.
+- **Indirect Prompt Injection Exposure**: Indicates that an agent might be exposed to indirect prompt injection risks.
+- **Privileged Business-system Access**: Indicates that the agent has write access to key business systems.
+- **Active Threat**: Indicates that active security alerts are associated with the agent.
 
 ## Local-agent risk indicators
 
-Local-agent risk indicators are based on endpoint context, user context, and the local agent's access to sensitive systems. Local agents are assessed using local-agent-specific signals, so their available indicators and supporting evidence can differ from enterprise agents.
+Effective evaluation of local agents depends on the device and user context in which they operate. Local agents often run with broad permissions on the device and can execute under the user's identity, inheriting the user's access rights and privileges. Because of this, Microsoft Defender considers device and user context when assessing local-agent posture risk.
 
-The following risk indicators can apply to local agents:
+Examples of local-agent risk indicators include:
 
-| Risk indicator | Description |
-|---|---|
-| Critical Resource | The agent is classified as a critical resource. If the agent is compromised, attackers might gain access to a high-value organizational asset. |
-| Used by a critical user | The agent is used by a user with a criticality classification. If the agent is compromised, attackers might be able to act on behalf of a highly privileged account. |
-| Used by a user with risk detection | The agent is used by a user with a leaked credential risk detection. If the user account is compromised, attackers might be able to access or misuse the agent and its connected resources. |
-| Running on a critical device | The agent is running on a device with a criticality classification. Because agents often have broad access to host resources, compromising the agent could provide attackers with access to a high-value organizational asset. |
-| Running on a device with vulnerabilities | The agent is running on a device with high-severity vulnerabilities. If the device is compromised, attackers might be able to gain control of the agent. |
-| Privileged Business System Access | The agent has write access to business systems such as CRM, ERP, finance, and HR platforms, increasing the potential business impact of a compromise. |
-| Privileged Software Development Access | The agent has write access to software development resources, such as source code repositories, CI/CD pipelines, or development platforms. |
+- **Used by a critical user**: Indicates that the agent is associated with a critical user.
+- **Running on a critical device**: Indicates that the agent is running on a critical device.
+- **Running on a device with vulnerabilities**: Indicates that the agent is running on a device with vulnerabilities.
+- **Privileged Software Development Access**: Indicates that the agent has access to software development systems.
 
 ## Security recommendations
 
 Security recommendations identify actionable changes that can reduce an agent's exposure or address an unsafe configuration.
 
-Recommendations are shown when Microsoft Defender identifies an actionable posture issue for an affected agent. Some recommendations apply only when the agent can take actions, such as when the agent has at least one tool, knowledge source, capability, or MCP server.
+Recommendations are shown when Microsoft Defender identifies an actionable posture issue for an affected agent.
 
-Recommendations are calculated separately from the agent's risk level. A high-risk agent might have no recommendations when none of its active indicators match an available recommendation. A lower-risk agent might still receive a recommendation when Defender identifies an actionable configuration issue.
+Each recommendation is mapped to the risk indicators it helps address. This mapping helps show how implementing the recommended control can reduce the agent's overall risk.
+
+:::image type="content" source="media/ai-agent-risk-assessment/ai-agent-recommendation-risk-indicators.png" alt-text="Screenshot of an AI agent security recommendation in Microsoft Defender showing the risk indicators associated with the recommendation." lightbox="media/ai-agent-risk-assessment/ai-agent-recommendation-risk-indicators.png":::
+
+Recommendations are determined separately from the agent's risk level. A high-risk agent might have no recommendations when none of its active indicators match an available recommendation. A lower-risk agent might receive a recommendation when Defender identifies an actionable configuration issue.
 
 > [!IMPORTANT]
 > Review an agent's risk level and recommendations together. The risk level represents the agent's overall exposure, while recommendations identify available actions to improve its security posture.
+
+For steps to review risk information and recommendations in the Microsoft Defender portal, see [Discover AI agents and assess security posture using Microsoft Defender](ai-agent-inventory.md).
 
 ## Related content
 
