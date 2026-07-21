@@ -61,6 +61,9 @@ For optimal protection and monitoring, complete the configuration steps describe
 - [Understand DSA and gMSA health alerts in environments with both v2 and v3 sensors](deploy-sensor-v3.md#dsa-and-gmsa-health-alerts-in-environments-with-both-v2-and-v3-sensors). If your workspace still has a Directory Service Account (DSA) or group Managed Service Account (gMSA) configured for v2 sensors, DSA and gMSA credentials continue to be validated on all sensors, including v3 sensors. This is by design. V3 sensors ignore the DSA and gMSA for auditing and response actions, but credential validation occurs at the workspace level. To stop receiving the **Directory services user credentials are incorrect** health alert, remove the DSA or gMSA after all sensors are migrated to v3.
 - [Configure RPC auditing](deploy-sensor-v3.md#configure-rpc-auditing). Starting with sensor version 3.0.8 (July 2026 release), RPC auditing is enabled automatically when you upgrade the sensor, so no manual configuration is required.
 
+> [!IMPORTANT]
+> The v3.x sensor updates through Windows Update as part of the server's operating system update process. The per-sensor **Delayed update** option available for v2.x sensors doesn't apply to v3.x. For more information, see [Manage and update sensors](../sensor-settings.md#update-sensors).
+
 ## Troubleshoot "Not ready for migration" status
 
 When a server is marked **Not ready for migration**, hover over the status on the **Sensors** page to see a tooltip that lists the reasons the server doesn't meet the migration prerequisites.
