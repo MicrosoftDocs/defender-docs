@@ -24,17 +24,19 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
-## August 2026
-
-### New health alert for reverted auditing configuration
-
-Defender for Identity added a new health alert that notifies you when a conflicting policy, such as a Group Policy Object (GPO), repeatedly reverts the auditing configuration that the v3.x sensor requires on a domain controller. For more information, see [Microsoft Defender for Identity health issues](health-alerts.md).
-
 ## July 2026
 
 ### Sensor v2.x to v3.x migration is now generally available
 
 Migration of Defender for Identity sensors from v2.x to v3.x is now generally available. For more information, see [Migrate to Defender for Identity sensor v3.x](deploy/migrate-to-sensor-v3.md).
+
+### Migrate Windows Server 2025 domain controllers to sensor v3.x
+
+You can now migrate domain controllers running Windows Server 2025 from sensor v2.x to sensor v3.x. For more information, see [Migrate to Defender for Identity sensor v3.x](deploy/migrate-to-sensor-v3.md).
+
+### Migration readiness reasons on the Sensors page
+
+When a server is marked **Not ready for migration** on the **Sensors** page, you can now hover over the status to see a tooltip that lists the specific reasons the server doesn't meet the migration prerequisites. For more information, see [Troubleshoot "Not ready for migration" status](deploy/migrate-to-sensor-v3.md#troubleshoot-not-ready-for-migration-status).
 
 ### Expanded SaaS app support in Password protection (Preview)
 
