@@ -1,7 +1,7 @@
 ---
 title: Configure Windows event auditing
 description: Configure Windows event auditing for Defender for Identity sensors. Learn automatic, manual, and PowerShell methods to enable required audit policies.
-ms.date: 07/20/2026
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.custom:
   - msecd-doc-authoring-1014
@@ -56,31 +56,6 @@ When enabled, the sensor automatically:
 > - Automatic Windows event auditing is supported for domain controllers that use the Defender for Identity sensor version 3.x only. It doesn't apply to v2.x domain controllers or to AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers. For those servers, [configure Windows event auditing manually](#configure-windows-event-collection-manually).
 > - If you don't turn on automatic Windows auditing, you **must** [configure Windows event auditing manually](#configure-windows-event-collection-manually) or by [configuring Windows event collection using PowerShell](#configure-windows-event-collection-using-powershell).
 > - GPO settings can conflict with local settings set by the sensor.
-
-### Find GPO conflicts that revert automatic auditing
-
-The auditing configuration that automatic Windows auditing applies can be reverted by a conflicting Group Policy Object (GPO), local policy, or another configuration tool. For example, a conflicting GPO can reapply its own values during a Group Policy refresh and override the settings. When this happens, the auditing state changes repeatedly, and Defender for Identity raises the **Auditing configuration is being reverted on a domain controller** health issue.
-
-To find the conflicting GPOs, run the `Find-MdiAuditingGpoConflicts.ps1` script as an Administrator on the affected domain controller. The script is read-only. It checks the current auditing and Group Policy configuration but doesn't change any settings.
-
-```powershell
-.\Find-MdiAuditingGpoConflicts.ps1
-```
-
-The script compares the domain controller's current effective auditing configuration (the advanced audit policy subcategories and the NTLM and AD CS registry values) against Group Policy, and reports:
-
-- GPOs that manage the same NTLM auditing or advanced audit policy settings and override the Defender for Identity configuration.
-- GPOs that define relevant auditing settings but aren't linked to the domain controller. These GPOs could cause a conflict if you link them later.
-
-The script identifies conflicting GPOs. If a setting is applied outside Group Policy, the script reports that it's configured outside Group Policy but can't identify the source.
-
-Review the listed GPOs, then do one of the following:
-
-- Remove the auditing settings from the GPOs.
-- Unlink the GPOs from the affected domain controller.
-- Update the GPOs to match the Defender for Identity auditing requirements.
-
-After you make the change, run `gpupdate /force` and confirm that the required auditing settings remain stable.
 
 ## Required Windows events
 

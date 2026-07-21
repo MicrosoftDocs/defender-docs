@@ -136,6 +136,9 @@ The health status column indicates the overall health of the sensor based on the
 
 Defender for Identity sensor v3.x is delivered as a component of Microsoft Defender for Endpoint and is updated automatically through Windows Updates. No manual sensor update process is required for v3.x sensors.
 
+> [!IMPORTANT]
+> The v3.x sensor updates through Windows Update as part of the server's operating system update process. The per-sensor **Delayed update** option available for v2.x sensors doesn't apply to v3.x.
+
 The following sensor update information applies only to Defender for Identity sensor v2.x.
 
 ### Defender for Identity sensor v2.x update types
