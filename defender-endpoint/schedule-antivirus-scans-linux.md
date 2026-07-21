@@ -12,7 +12,7 @@ ai-usage: ai-generated
 ms.custom: msecd-doc-authoring-1014
 ---
 
-# Schedule antivirus scans on Linux (preview)
+# Schedule antivirus scans on Linux
 
 This article describes how to configure scheduled antivirus scans on Microsoft Defender for Endpoint on Linux. It's intended for IT and security administrators who manage Linux devices and want to ensure continuous antivirus protection through centralized scan scheduling. Before you begin, review the [prerequisites](#prerequisites) to ensure your environment meets the necessary requirements.
 
