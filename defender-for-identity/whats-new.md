@@ -24,6 +24,12 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## August 2026
+
+### New health alert for reverted auditing configuration
+
+Defender for Identity added a new health alert that notifies you when a conflicting policy, such as a Group Policy Object (GPO), repeatedly reverts the auditing configuration that the v3.x sensor requires on a domain controller. For more information, see [Microsoft Defender for Identity health issues](health-alerts.md).
+
 ## July 2026
 
 ### Sensor v2.x to v3.x migration is now generally available
