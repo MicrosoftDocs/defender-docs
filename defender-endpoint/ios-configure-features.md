@@ -11,7 +11,7 @@ ms.collection:
 - mde-ios
 ms.topic: how-to
 ms.subservice: ios
-ms.date: 06/19/2026
+ms.date: 07/21/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -534,6 +534,12 @@ Use the following steps to configure the option to send feedback data to Microso
 ## Report unsafe sites
 
 Phishing websites impersonate trustworthy websites by obtaining your personal or financial information. Visit the [Provide feedback about network protection](https://www.microsoft.com/wdsi/filesubmission/exploitguard/networkprotection) page to report a website that could be a phishing site.
+
+## Related content
+
+- [Microsoft Defender for Endpoint on iOS](mtd.md)
+
+- [Configure Dynamic Preview Rings for Microsoft Defender on mobile](mobile-dynamic-preview-rings-configure.md)
 
 
 
