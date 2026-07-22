@@ -36,7 +36,7 @@ The Identity page is organized into a top section and a set of tabs. The top sec
 
 ## Identity actions
 
-From the **Overview** page, use the **Actions** menu to trigger remediation actions on the identity. Actions apply to the accounts associated with the identity and depend on which connectors are enabled, spanning on-premises Active Directory, Microsoft Entra ID, identity and access management (IAM) systems, and SaaS apps. Available actions can include disabling or enabling accounts, revoking sessions, forcing a password change, and marking the user as compromised. You can also view the identity's account settings, related governance, and owned or shared files.
+From the **Overview** page, use the **Actions** menu to trigger remediation actions on the identity. Actions apply to the accounts associated with the identity and depend on which connectors are enabled, spanning on-premises Active Directory, Microsoft Entra ID, identity and access management (IAM) systems, and SaaS apps. Available actions can include disabling or enabling accounts, revoking sessions, forcing a password change, and marking the user as compromised. You can also view the identity's account settings.
 
 For the full list of remediation actions and the identity providers and connected apps that support them, see [Remediation actions in Microsoft Defender for Identity](/defender-for-identity/remediation-actions#supported-actions).
 
