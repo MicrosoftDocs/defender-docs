@@ -52,11 +52,11 @@ Depending on your Microsoft Entra ID roles, you might see additional Microsoft E
 
 | Remediation action | Description | Supported identity sources |
 | ------------------ | ----------- | ------ |
-| Disable | Disables all accounts linked to an identity or a specific account. Disabling prevents sign-in and access to network resources until the accounts are re-enabled. This action doesn't delete the identity profile or associated data such as documents, calendar events, or email messages. | Active Directory, Microsoft Entra ID, Okta, CyberArk Identity, SailPoint Identity Security Cloud, Google Workspace, Salesforce, Box, SOC Identity Responder | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) 
-| Enable | Re-enables accounts that were previously disabled for the selected identity. | Active Directory, Microsoft Entra ID, Okta, CyberArk Identity, SailPoint Identity Security Cloud, Salesforce, SOC Identity Responder | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) 
-| Revoke session | Revokes active sessions for the selected identity. | Microsoft Entra ID, Okta, SOC Identity Responder | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) 
+| Disable | Disables all accounts linked to an identity or a specific account. Disabling prevents sign-in and access to network resources until the accounts are re-enabled. This action doesn't delete the identity profile or associated data such as documents, calendar events, or email messages. | Active Directory, Microsoft Entra ID, Okta, CyberArk Identity, SailPoint Identity Security Cloud, Google Workspace, Salesforce, Box |
+| Enable | Re-enables accounts that were previously disabled for the selected identity. | Active Directory, Microsoft Entra ID, Okta, CyberArk Identity, SailPoint Identity Security Cloud, Salesforce |
+| Revoke session | Revokes active sessions for the selected identity. | Microsoft Entra ID, Okta |
 | Mark as compromised | Marks all accounts linked to the selected identity as compromised in Microsoft Entra ID. | Microsoft Entra ID |
-| Force password change | Forces a password change for one or more accounts linked to the selected identity. The user must change their password at next sign-in, which prevents further use of compromised credentials. | Active Directory, Microsoft Entra ID, SOC Identity Responder |
+| Force password change | Forces a password change for one or more accounts linked to the selected identity. The user must change their password at next sign-in, which prevents further use of compromised credentials. | Active Directory, Microsoft Entra ID |
 
 ## Roles and permissions
 
