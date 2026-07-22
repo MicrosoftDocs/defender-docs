@@ -52,11 +52,11 @@ Depending on your Microsoft Entra ID roles, you might see additional Microsoft E
 
 | Remediation action | Description | Supported identity sources |
 | ------------------ | ----------- | ------ |
-| Disable | Disables all accounts linked to an identity or a specific account. Disabling prevents sign-in and access to network resources until the accounts are re-enabled. This action doesn't delete the identity profile or associated data such as documents, calendar events, or email messages. | <ul><li>Active Directory</li><li>Microsoft Entra ID</li><li>Okta</li><li>CyberArk Identity</li><li>SailPoint Identity Security Cloud</li><li>Google Workspace</li><li>Salesforce</li><li>Box</li></ul> |
-| Enable | Re-enables accounts that were previously disabled for the selected identity. | <ul><li>Active Directory</li><li>Microsoft Entra ID</li><li>Okta</li><li>CyberArk Identity</li><li>SailPoint Identity Security Cloud</li><li>Salesforce</li></ul> |
-| Revoke session | Revokes active sessions for the selected identity. | <ul><li>Microsoft Entra ID</li><li>Okta</li></ul> |
+| Disable | Disables all accounts linked to an identity or a specific account. Disabling prevents sign-in and access to network resources until the accounts are re-enabled. This action doesn't delete the identity profile or associated data such as documents, calendar events, or email messages. | Active Directory, Microsoft Entra ID, Okta, CyberArk Identity, SailPoint Identity Security Cloud, Google Workspace, Salesforce, Box |
+| Enable | Re-enables accounts that were previously disabled for the selected identity. | Active Directory, Microsoft Entra ID, Okta, CyberArk Identity, SailPoint Identity Security Cloud, Salesforce |
+| Revoke session | Revokes active sessions for the selected identity. | Microsoft Entra ID, Okta |
 | Mark as compromised | Marks all accounts linked to the selected identity as compromised in Microsoft Entra ID. | Microsoft Entra ID |
-| Force password change | Forces a password change for one or more accounts linked to the selected identity. The user must change their password at next sign-in, which prevents further use of compromised credentials. | <ul><li>Active Directory</li><li>Microsoft Entra ID</li></ul> |
+| Force password change | Forces a password change for one or more accounts linked to the selected identity. The user must change their password at next sign-in, which prevents further use of compromised credentials. | Active Directory, Microsoft Entra ID |
 | Deactivate | Permanently deactivates a non-legitimate malicious account. | Okta |
 | Set account risk to High/Medium/Low | Sets account risk scoring to one of the defined levels. Available only when the [Risk Scoring](https://help.okta.com/en-us/Content/Topics/Security/Security_Risk_Scoring.htm) feature is enabled in Okta. | Okta |
 
@@ -66,13 +66,13 @@ The following table lists the remediation actions supported by Defender for Iden
 
 | Remediation Action | Active Directory |Microsoft Entra ID | Okta |
 | ---- | ---- | ---- | ---- |
-| Disable | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | <ul><li>Global Administrator</li><li>User Administrator</li><li>Authentication Administrator</li><li>Privileged Authentication Administrator</li><li>Directory Writers</li></ul> | <ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
-| Enable | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) |<ul><li>Global Administrator</li><li>User Administrator</li><li>Authentication Administrator</li><li>Privileged Authentication Administrator</li><li>Directory Writers</li></ul> |<ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
-| Revoke session | N/A |<ul><li>Global Administrator</li><li>User Administrator</li><li>Authentication Administrator</li><li>Privileged Authentication Administrator</li><li>Directory Writers</li><li>Helpdesk Administrator</li></ul> |<ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
-| Mark as compromised | N/A |<ul><li>Global Administrator</li><li>Security Administrator</li><li>Security Operator</li></ul> | N/A |
+| Disable | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | Global Administrator, User Administrator, Authentication Administrator, Privileged Authentication Administrator, Directory Writers | Security Operator, Security Administrator, Global Administrator |
+| Enable | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) |Global Administrator, User Administrator, Authentication Administrator, Privileged Authentication Administrator, Directory Writers |Security Operator, Security Administrator, Global Administrator |
+| Revoke session | N/A |Global Administrator, User Administrator, Authentication Administrator, Privileged Authentication Administrator, Directory Writers, Helpdesk Administrator |Security Operator, Security Administrator, Global Administrator |
+| Mark as compromised | N/A |Global Administrator, Security Administrator, Security Operator | N/A |
 | Force password change | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | N/A | N/A |
-| Deactivate | N/A | N/A |<ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
-| Set identity risk to High/Medium/Low | N/A | N/A |<ul><li>Security Operator</li><li>Security Administrator</li><li>Global Administrator</li></ul> |
+| Deactivate | N/A | N/A |Security Operator, Security Administrator, Global Administrator |
+| Set identity risk to High/Medium/Low | N/A | N/A |Security Operator, Security Administrator, Global Administrator |
 
 > [!NOTE]
 > There are some limitations for Microsoft Entra ID when performing certain actions on other roles. For more information, see the [Graph API documentation](/graph/api/resources/users?view=graph-rest-1.0&preserve-view=true).
