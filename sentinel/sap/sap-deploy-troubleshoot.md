@@ -132,7 +132,9 @@ Selecting audit logs from SAP HANA database often provides the best performance.
 To remediate:
 
 1. Confirm with your SAP administrator whether Security Audit Log recording targets include filesystem storage.
-1. Implement SAP note **3726943 - RSAU_API_GET_LOG_DATA \| Dataselection only from Filesystem details** (applies to **SAP_BASIS 750+**) by using **SNOTE** or by importing the referenced support package.
+1. Implement following SAP notes by using **SNOTE** or by importing the referenced support package (applies to **SAP_BASIS 750+**):
+    - **3726943 - RSAU_API_GET_LOG_DATA | Dataselection only from Filesystem details**
+    - **3407647 - RSAU_READ_LOG | Optimization of reading audit log files**
 1. After implementing the correction, use filesystem-only selection with required parameters `ID_FILESYSTEM_SEL_ONLY` and `ID_FILE_SEL_SIMPLE` for faster retrieval. For behavior details and explanation, see SAP note **3500090**.
 1. Re-run connector validation.
 
