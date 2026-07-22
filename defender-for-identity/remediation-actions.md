@@ -1,7 +1,7 @@
 ---
 title: Remediation actions for compromised users in Microsoft Defender for Identity
 description: Learn how to respond to compromised users with remediation actions in Microsoft Defender for Identity
-ms.date: 06/15/2026
+ms.date: 07/22/2026
 ms.topic: how-to
 ms.custom: sfi-ga-blocked, msecd-doc-authoring-1014
 ai-usage: ai-assisted
@@ -14,9 +14,9 @@ Applies to:
 - Microsoft Defender for Identity
 - Microsoft Defender
 
-Microsoft Defender for Identity allows you to respond to compromised users by disabling their accounts or resetting their password. After taking action on users, you can check on the activity details in the action center.
+Microsoft Defender for Identity lets you respond to compromised users with remediation actions that work consistently across your connected identity sources. The actions available for an identity depend on the connector that manages the account, and they span on-premises Active Directory and Microsoft Entra ID, identity providers such as Okta, CyberArk Identity, and SailPoint Identity Security Cloud, and applications connected through Microsoft Defender for Cloud Apps such as Google Workspace, Salesforce, and Box.
 
-The response actions on users are available directly from the user page, the user side panel, the advanced hunting page, or in the action center.
+The response actions on users are available directly from the identity page, the identity side panel, the advanced hunting page, or in the action center. After you take action on a user, you can review the activity details in the action center.
 
 ## How remediation actions work
 
@@ -35,8 +35,8 @@ After authorization, the action is executed by the identity system that manages 
   - **Application name:** *Microsoft Defender for Identity*. In older tenants, the application might appear with the name *Radius Aad Syncer*.
   - **Application ID:** `60ca1954-583c-4d1f-86de-39d835f3e452`
 
-- **Supported non‑Microsoft identity providers (IdPs)**
-  Actions are executed using the source IdP’s APIs based on the credentials configured for the integration.
+- **Supported non‑Microsoft identity sources and connected apps**
+  Actions are executed through the source's connector — including identity provider connectors and Microsoft Defender for Cloud Apps app connectors — using the credentials configured for the integration.
 
 Remediation actions are recorded by the identity system where the action is executed and are visible in Microsoft Defender audit logs.
 
@@ -50,13 +50,13 @@ The following Defender for Identity actions can be performed on Identities.
 
 Depending on your Microsoft Entra ID roles, you might see additional Microsoft Entra ID actions, such as requiring users to sign in again and confirming a user as compromised. For more information, see [Remediate risks and unblock users](/entra/id-protection/howto-identity-protection-remediate-unblock).
 
-| Remediation Action | Description | Supported Identity systems |
+| Remediation action | Description | Supported identity sources |
 | ------------------ | ----------- | ------ |
-| Disable | Disables all accounts linked to an identity or a specific account. Disabling prevents sign-in and access to network resources until the accounts are re-enabled. This action doesn't delete the identity profile or associated data such as documents, calendar events, or email messages. | <ul><li>Active Directory</li><li>Microsoft Entra ID</li><li>Okta</li></ul> |
-| Enable | Re-enables accounts that were previously disabled for the selected identity. | <ul><li>Active Directory</li><li>Microsoft Entra ID</li><li>Okta</li></ul> |
+| Disable | Disables all accounts linked to an identity or a specific account. Disabling prevents sign-in and access to network resources until the accounts are re-enabled. This action doesn't delete the identity profile or associated data such as documents, calendar events, or email messages. | <ul><li>Active Directory</li><li>Microsoft Entra ID</li><li>Okta</li><li>CyberArk Identity</li><li>SailPoint Identity Security Cloud</li><li>Google Workspace</li><li>Salesforce</li><li>Box</li></ul> |
+| Enable | Re-enables accounts that were previously disabled for the selected identity. | <ul><li>Active Directory</li><li>Microsoft Entra ID</li><li>Okta</li><li>CyberArk Identity</li><li>SailPoint Identity Security Cloud</li><li>Salesforce</li></ul> |
 | Revoke session | Revokes active sessions for the selected identity. | <ul><li>Microsoft Entra ID</li><li>Okta</li></ul> |
 | Mark as compromised | Marks all accounts linked to the selected identity as compromised in Microsoft Entra ID. | Microsoft Entra ID |
-| Force password change | Forces a password change for one or more accounts linked to the selected identity. The user must change their password at next sign-in, which prevents further use of compromised credentials. | Active Directory |
+| Force password change | Forces a password change for one or more accounts linked to the selected identity. The user must change their password at next sign-in, which prevents further use of compromised credentials. | <ul><li>Active Directory</li><li>Microsoft Entra ID</li></ul> |
 | Deactivate | Permanently deactivates a non-legitimate malicious account. | Okta |
 | Set account risk to High/Medium/Low | Sets account risk scoring to one of the defined levels. Available only when the [Risk Scoring](https://help.okta.com/en-us/Content/Topics/Security/Security_Risk_Scoring.htm) feature is enabled in Okta. | Okta |
 
