@@ -36,11 +36,9 @@ The Identity page is organized into a top section and a set of tabs. The top sec
 
 ## Identity actions
 
-From the **Overview** page, use the **Actions** menu to trigger [remediation actions](/defender-for-identity/remediation-actions#supported-actions). Available actions include:
+From the **Overview** page, use the **Actions** menu to trigger remediation actions on the identity. The actions available for an identity depend on the connector that manages the account, and can include disabling or enabling accounts, revoking sessions, forcing a password change, and marking the user as compromised. You can also view the identity's account settings, related governance, and owned or shared files.
 
-- Enable, disable, or suspend the user in Microsoft Entra ID
-- Require the user to sign in again or force a password reset
-- View Microsoft Entra account settings, related governance, the user's owned files, or shared files
+For the full list of remediation actions and the identity providers and connected apps that support them, see [Remediation actions in Microsoft Defender for Identity](/defender-for-identity/remediation-actions#supported-actions).
 
 :::image type="content" source="media/investigate-users/identity-actions.png" alt-text="Screenshot of the identity page with the identity actions menu showing." lightbox="media/investigate-users/identity-actions.png":::
 
