@@ -29,6 +29,8 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|Android |1.0.9107.0101|July 2026|- Build: 1.0.9107.0101<br>- Release: July 21, 2026|[Release details and updates](#android--july-2026--platform-1091070101)|
+|iOS |1.1.79080103|July 2026|- Build: 1.1.79080103<br>- Release: July 20, 2026|[Release details and updates](#ios--july-2026--platform-version-1179080103)|
 |Linux  |101.26052.0011  |July 2026 |- Release version: 30.126052.0011.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates](#linux--july-2026--101260520011) |
 |Windows Antivirus |Platform 4.18.26060.3008 / Engine 1.1.26060.3008 |June 2026 |- Platform: 4.18.26060.3008<br>- Engine: 1.1.26060.3008<br>- Security intelligence: 1.455.25.0 |[Release details and updates](#windows-antivirus--june-2026--platform-418260603008--engine-11260603008) |
 |iOS |1.1.78290102|July 2026|- Build: 1.1.78290102<br>- Release: July 3, 2026|[Release details and updates](#ios--july-2026--platform-version-1178290102)|
@@ -725,6 +727,20 @@ Fixed an issue in the January 2026 release, where real-time scanning of the /dev
 
 See the full list of [Android UX improvements](android-new-ux.md).
 
+### Android | July 2026 | Platform: 1.0.9107.0101
+
+#### Release details
+
+| Platform version| Release Date |
+| -------- | -------- |
+|1.0.9107.0101|July 21, 2026|
+
+#### Enhancements and features
+
+|__Feature Area__| __Update Summary__|
+| -------- | -------- |
+|General|Performance improvements and general bug fixes. |
+
 ### Android | June 2026 | Platform: 1.0.9029.0101
 
 #### Release details
@@ -934,6 +950,20 @@ See the full list of [Android UX improvements](android-new-ux.md).
 ## iOS releases
 
 For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
+
+### iOS | July 2026 | Platform Version: 1.1.79080103
+
+#### Release details
+
+| Platform version | Release Date |
+| -------- | -------- |
+| 1.1.79080103| July 20, 2026 |
+
+#### Enhancements and features
+
+|__Feature Area__| __Update Summary__|
+| -------- | -------- |
+|Improvements|Performance improvements and general bug fixes.|
 
 ### iOS | July 2026 | Platform Version: 1.1.78290102
 
