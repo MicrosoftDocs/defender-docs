@@ -4,7 +4,7 @@ description: Learn how to troubleshoot specific issues that might occur in your 
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: troubleshooting
-ms.date: 07/03/2026
+ms.date: 07/22/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
@@ -139,6 +139,18 @@ To remediate:
 1. Re-run connector validation.
 
 Applying these SAP notes often improves retrieval performance significantly. If delays continue, they're typically related to SAP-side factors such as log shipping between application servers and network latency.
+
+## SAP Cloud Connector sizing, throughput, and isolation guidance
+
+If timeout or throughput issues persist, validate SAP Cloud Connector sizing and runtime health by using [Optimize SAP Cloud Connector sizing, throughput, and isolation](preparing-sap.md#optimize-sap-cloud-connector-sizing-throughput-and-isolation).
+
+Use the following symptom-to-SAP-note mapping for incident triage:
+
+| Symptom | Reference |
+|---|---|
+| CPI logs `IOError on tunnel socket during connect attempt`; ingestion stalls under parallel load | SAP note [3403815](https://me.sap.com/notes/0003403815) |
+| SAP Cloud Connector sessions appear stale or unresponsive | SAP note [2485510](https://me.sap.com/notes/0002485510) |
+| Repeated shared-connector saturation from other integrations | Isolate Microsoft Sentinel traffic on a dedicated SAP Cloud Connector instance |
 
 :::zone-end
 

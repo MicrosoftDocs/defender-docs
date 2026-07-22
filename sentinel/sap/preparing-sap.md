@@ -5,7 +5,7 @@ description: Learn about extra preparations required in your SAP system to insta
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/22/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
@@ -279,6 +279,19 @@ Configure SAP Cloud Connector to enable communication between your SAP backend s
 
    - **Location**: Only required when you connect multiple Cloud Connectors to the same BTP subaccount. For more information, see the SAP documentation on [parameters influencing communication behavior](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/parameters-influencing-communication-behavior).
 
+## Optimize SAP Cloud Connector sizing, throughput, and isolation
+
+Default SAP Cloud Connector settings suit most environments. Tune it before you go live when Microsoft Sentinel ingestion is high volume, bursty, or shares an SAP Cloud Connector with other integrations.
+
+1. Confirm sizing for the Cloud Connector master instance: [Sizing for master instance](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/sizing-for-master-instance).
+1. If SAP Cloud Integration (CPI) reports `IOError on tunnel socket during connect attempt`, use SAP note [3403815](https://me.sap.com/notes/0003403815) to tune throughput and request limits.
+1. Enable runtime monitoring: [Cloud Connector monitoring](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/cloud-connector-monitoring).
+1. Recover stale or stuck SAP Cloud Connector sessions by following SAP note [2485510](https://me.sap.com/notes/0002485510).
+
+> [!TIP]
+> Dedicate an SAP Cloud Connector instance to Microsoft Sentinel traffic when the shared connector runs close to saturation, when other integrations cause volatile load patterns, or when security or regulatory requirements mandate isolation. A dedicated instance protects ingestion from noisy-neighbor incidents and simplifies capacity planning, change control, and audit scope.
+
+
 ## Run the prerequisite checker
 
 Run the prerequisite checker to validate that your SAP system is ready for integration with Microsoft Sentinel.
@@ -299,4 +312,3 @@ Run the prerequisite checker to validate that your SAP system is ready for integ
 
 > [!div class="nextstepaction"]
 > [Connect your SAP system to Microsoft Sentinel](deploy-data-connector-agent-container.md)
-
