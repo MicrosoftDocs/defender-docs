@@ -64,15 +64,15 @@ Depending on your Microsoft Entra ID roles, you might see additional Microsoft E
 
 The following table lists the remediation actions supported by Defender for Identity and the roles required to initiate each action.
 
-| Remediation Action | Active Directory |Microsoft Entra ID | Okta |
-| ---- | ---- | ---- | ---- |
-| Disable | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | Global Administrator, User Administrator, Authentication Administrator, Privileged Authentication Administrator, Directory Writers | Security Operator, Security Administrator, Global Administrator |
-| Enable | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) |Global Administrator, User Administrator, Authentication Administrator, Privileged Authentication Administrator, Directory Writers |Security Operator, Security Administrator, Global Administrator |
-| Revoke session | N/A |Global Administrator, User Administrator, Authentication Administrator, Privileged Authentication Administrator, Directory Writers, Helpdesk Administrator |Security Operator, Security Administrator, Global Administrator |
-| Mark as compromised | N/A |Global Administrator, Security Administrator, Security Operator | N/A |
-| Force password change | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | N/A | N/A |
-| Deactivate | N/A | N/A |Security Operator, Security Administrator, Global Administrator |
-| Set identity risk to High/Medium/Low | N/A | N/A |Security Operator, Security Administrator, Global Administrator |
+| Remediation Action | Active Directory | Microsoft Entra ID | Okta, SailPoint, CyberArk | Supported SaaS apps |
+| ---- | ---- | ---- | ---- | ---- |
+| Disable | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | Global Administrator, User Administrator, Authentication Administrator, Privileged Authentication Administrator, Directory Writers | Security Operator, Security Administrator, Global Administrator | Security Operator, Security Administrator, Global Administrator |
+| Enable | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | Global Administrator, User Administrator, Authentication Administrator, Privileged Authentication Administrator, Directory Writers | Security Operator, Security Administrator, Global Administrator | Security Operator, Security Administrator, Global Administrator |
+| Revoke session | N/A | Global Administrator, User Administrator, Authentication Administrator, Privileged Authentication Administrator, Directory Writers, Helpdesk Administrator | Security Operator, Security Administrator, Global Administrator | N/A |
+| Mark as compromised | N/A | Global Administrator, Security Administrator, Security Operator | N/A | N/A |
+| Force password change | See [Required permissions Defender for Identity in Microsoft Defender XDR](/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr) | N/A | N/A | N/A |
+| Deactivate | N/A | N/A | Security Operator, Security Administrator, Global Administrator | N/A |
+| Set account risk to High/Medium/Low | N/A | N/A | Security Operator, Security Administrator, Global Administrator | N/A |
 
 > [!NOTE]
 > There are some limitations for Microsoft Entra ID when performing certain actions on other roles. For more information, see the [Graph API documentation](/graph/api/resources/users?view=graph-rest-1.0&preserve-view=true).
