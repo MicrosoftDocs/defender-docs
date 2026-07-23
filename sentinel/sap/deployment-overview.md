@@ -122,7 +122,6 @@ We recommend that you involve all relevant teams when planning your deployment t
 **Extra options include:**
 
 - [Collect SAP HANA audit logs](collect-sap-hana-audit-logs.md)
-- [Deploy an SAP data connector agent manually](sap-solution-deploy-alternate.md)
 
 ## Stop SAP data collection
 

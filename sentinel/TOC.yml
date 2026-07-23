@@ -142,10 +142,6 @@
                               href: sap/collect-sap-hana-audit-logs.md
                             - name: Update the data connector agent
                               href: sap/update-sap-data-connector.md
-                            - name: Deploy the agent from the command line
-                              href: sap/deploy-command-line.md
-                            - name: Deploy the agent with expert options
-                              href: sap/sap-solution-deploy-alternate.md
                         - name: SAP deployment reference (advanced)
                           items:
                             - name: Required ABAP permissions

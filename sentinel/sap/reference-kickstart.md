@@ -167,7 +167,7 @@ If set to `cfgf`, the configuration file stored locally is used to store secrets
 
 **Required:** Yes, if [Secret storage location](#secret-storage-location) is set to `kvsi`.
 
-**Description:** When Azure Key Vault authentication mode is set to `kvsi`, authentication to key vault is done using an [enterprise application (service principal) identity](deploy-data-connector-agent-container.md?tabs=registered-application#create-a-virtual-machine-and-configure-access-to-your-credentials). This parameter specifies the application ID.
+**Description:** When Azure Key Vault authentication mode is set to `kvsi`, authentication to key vault is done using an enterprise application (service principal) identity. This parameter specifies the application ID.
 
 ## Enterprise Application secret
 
@@ -177,7 +177,7 @@ If set to `cfgf`, the configuration file stored locally is used to store secrets
 
 **Required:** Yes, if [Secret storage location](#secret-storage-location) is set to `kvsi`.
 
-**Description:** When Azure Key Vault authentication mode is set to `kvsi`, authentication to key vault is done using an [enterprise application (service principal) identity](deploy-data-connector-agent-container.md?tabs=registered-application#create-a-virtual-machine-and-configure-access-to-your-credentials). This parameter specifies the application secret.
+**Description:** When Azure Key Vault authentication mode is set to `kvsi`, authentication to key vault is done using an enterprise application (service principal) identity. This parameter specifies the application secret.
 
 ## Tenant ID
 
@@ -187,7 +187,7 @@ If set to `cfgf`, the configuration file stored locally is used to store secrets
 
 **Required:** Yes, if [Secret storage location](#secret-storage-location) is set to `kvsi`.
 
-**Description:** When Azure Key Vault authentication mode is set to `kvsi`, authentication to key vault is done using an [enterprise application (service principal) identity](deploy-data-connector-agent-container.md?tabs=registered-application#create-a-virtual-machine-and-configure-access-to-your-credentials). This parameter specifies the Microsoft Entra tenant ID.
+**Description:** When Azure Key Vault authentication mode is set to `kvsi`, authentication to key vault is done using an enterprise application (service principal) identity. This parameter specifies the Microsoft Entra tenant ID.
  
 ## Key Vault Name
 

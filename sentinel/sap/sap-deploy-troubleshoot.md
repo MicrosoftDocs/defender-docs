@@ -103,7 +103,7 @@ To recover and prevent recurrence:
 
 :::zone pivot="connection-agent"
 
-Selected troubleshooting procedures are only relevant when your data connector agent is [deployed via the command line](deploy-command-line.md). If you used the recommended procedure to [deploy the agent from the portal](deploy-data-connector-agent-container.md), use the portal to make any configuration changes.
+Selected troubleshooting procedures are only relevant when your data connector agent is deployed via the command line. If you used the recommended procedure to [deploy the agent from the portal](deploy-data-connector-agent-container.md), use the portal to make any configuration changes.
 
 ## Useful Docker commands
 
@@ -131,7 +131,7 @@ docker logs -f sapcon-[SID]
 
 ## Enable/disable debug mode printing
 
-This procedure is only supported if you've deployed the [data connector agent from the command line](deploy-command-line.md). 
+This procedure is only supported if you've deployed the data connector agent from the command line. 
 
 1. On your data collector agent container virtual machine, edit the [**/opt/sapcon/[SID]/systemconfig.json**](reference-systemconfig-json.md) file.
 
@@ -154,7 +154,7 @@ Connector execution logs for your Microsoft Sentinel solution for SAP applicatio
 
 ## Review and update the Microsoft Sentinel for SAP agent connector configuration file
 
-This procedure is only supported if you've deployed the [data connector agent from the command line](deploy-command-line.md).  If you [deployed your agent via the portal](deploy-data-connector-agent-container.md#deploy-the-data-connector-agent-from-the-portal-preview), continue to maintain and change configuration settings via the portal.
+This procedure is only supported if you've deployed the data connector agent from the command line.  If you deployed your agent via the portal, continue to maintain and change configuration settings via the portal.
 
 If you deployed via the command line, perform the following steps:
 
@@ -213,7 +213,7 @@ docker cp nwrfc750P_8-70002752.zip /sapcon-app/inst/
 
 ### ABAP runtime errors appear on a large system
 
-This procedure is only supported if you've deployed the [data connector agent from the command line](deploy-command-line.md).  
+This procedure is only supported if you've deployed the data connector agent from the command line.  
 
 If ABAP runtime errors appear on large systems, try setting a smaller chunk size:
 
@@ -262,7 +262,7 @@ docker restart sapcon-[SID]
 
 ### Incorrect SAP ABAP user credentials in a fixed configuration
 
-This section is only supported if you've deployed the [data connector agent from the command line](deploy-command-line.md). 
+This section is only supported if you've deployed the data connector agent from the command line. 
 
 A fixed configuration is when the password is stored directly in the [**systemconfig.json**](reference-systemconfig-json.md) configuration file.
 
@@ -326,7 +326,7 @@ Common issues include:
 
 ### Retrieving an audit log fails with warnings
 
-This section is only supported if you've deployed the [data connector agent from the command line](deploy-command-line.md). 
+This section is only supported if you've deployed the data connector agent from the command line. 
 
 If you attempt to retrieve an audit log without the [required configurations](preparing-sap.md#configure-sap-auditing) and the process fails with warnings, verify that the SAP Auditlog can be retrieved using one of the following methods:
 
