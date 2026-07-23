@@ -19,7 +19,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 ---
 
-# Deploy Microsoft Defender endpoint security to Linux devices using the Defender deployment tool (preview)
+# Deploy Microsoft Defender endpoint security to Linux devices using the Defender deployment tool
 
 The Defender deployment tool provides an efficient, user-friendly onboarding process for Microsoft Defender for Endpoint on Linux devices. It allows users to install and onboard Microsoft Defender for Endpoint using a single package that can be downloaded from the Microsoft Defender portal. This eliminates the need to install Defender using installer script/cli commands and then, separately, to onboard the device using the onboarding package from the portal.
 
@@ -52,8 +52,8 @@ The deployment tool enforces the following set of prerequisites checks, which if
 
     1. Under **Download and apply onboarding packages or files**, select the **Download package** button under **Defender deployment tool**.
     
-      >[!NOTE]
-      >Since this package installs and onboards the agent, it's a tenant specific package and must not be used across tenants.
+      > [!NOTE]
+      > Since this package installs and onboards the agent, it's a tenant specific package and must not be used across tenants.
 
       :::image type="content" source="./media/linux-install-with-defender-deployment-tool/deployment-tool-download-package.png" alt-text="Screenshot showing the download package button." lightbox="./media/linux-install-with-defender-deployment-tool/deployment-tool-download-package.png":::
 
@@ -117,6 +117,8 @@ As the Defender deployment tool runs, it sends a progress event to the Defender 
 Check the onboarding status for a device in **Device inventory**. To check fleet-wide onboarding status, use an advanced hunting query. To see the stepwise progress, see the device timeline. Go to **Device inventory**, select the device, and then select **Timeline**.
 
 To filter deployment events on the timeline, enter `DefenderDeployment` in the timeline search box. Each event reads `Defender deployment tool: <step> succeeded` or `Defender deployment tool: <step> failed`, and includes any extra details the tool reports for that step. The following screenshot shows a successful install run.
+
+:::image type="content" source="./media/linux-install-with-defender-deployment-tool/deployment-tool-successful-install-timeline.png" alt-text="Screenshot of the device timeline filtered to show successful Defender deployment tool events." lightbox="./media/linux-install-with-defender-deployment-tool/deployment-tool-successful-install-timeline.png":::
 
 ### Deployment timeline
 

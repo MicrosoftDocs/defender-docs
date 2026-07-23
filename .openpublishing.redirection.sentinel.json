@@ -1187,7 +1187,17 @@
     },
     {
       "source_path_from_root": "/sentinel/sap-solution-deploy-alternate.md",
-      "redirect_url": "/azure/sentinel/sap/sap-solution-deploy-alternate",
+      "redirect_url": "/azure/sentinel/sap/deploy-data-connector-agent-container",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/sap/sap-solution-deploy-alternate.md",
+      "redirect_url": "/azure/sentinel/sap/deploy-data-connector-agent-container",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/sap/deploy-command-line.md",
+      "redirect_url": "/azure/sentinel/sap/deploy-data-connector-agent-container",
       "redirect_document_id": false
     },
     {

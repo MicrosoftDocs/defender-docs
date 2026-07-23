@@ -17,7 +17,7 @@ ms.custom:
 ---
 # Microsoft Sentinel solution for SAP applications data connector agent `systemconfig.json` file reference
 
-The *systemconfig.json* file is used to configure the behavior of the Microsoft Sentinel for SAP applications data connector agent when [deployed from the command line](deploy-command-line.md). This article describes the options available in each section of the configuration file.
+The *systemconfig.json* file is used to configure the behavior of the Microsoft Sentinel for SAP applications data connector agent when deployed from the command line. This article describes the options available in each section of the configuration file.
 
 Content in this article is intended for your **SAP BASIS** teams, and is only relevant when your data connector agent is deployed from the command line. We recommend [deploying your data connector agent from the portal](deploy-data-connector-agent-container.md) instead.
 

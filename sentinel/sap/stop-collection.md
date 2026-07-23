@@ -46,7 +46,7 @@ If you need to reenable the Docker container, sign into the data connector agent
 docker start sapcon-[SID]
 ```
 
-To stop ingesting a specific SID for a multi-SID container, make sure that you also delete the SID from the connector page UI in Microsoft Sentinel. Deleting the SID from the connector page UI is relevant only if you [deployed the agent via the portal](deploy-data-connector-agent-container.md#deploy-the-data-connector-agent-from-the-portal-preview).
+To stop ingesting a specific SID for a multi-SID container, make sure that you also delete the SID from the connector page UI in Microsoft Sentinel. Deleting the SID from the connector page UI is relevant only if you deployed the agent via the portal.
 
 1. In Microsoft Sentinel, select **Configuration > Data connectors** and search for **Microsoft Sentinel for SAP**.
 1. Select the data connector row and then select **Open connector page** in the side pane.
