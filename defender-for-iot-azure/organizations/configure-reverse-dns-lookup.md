@@ -25,7 +25,6 @@ Before configuring reverse DNS lookup, make sure you have:
 
 - Completed the prerequisites outlined in [Configure active monitoring for OT networks](configure-active-monitoring.md), and confirmed that active monitoring is right for your network.
 
-
 ## Define DNS servers
 
 1. On your OT sensor console, select **System settings** > **Network monitoring** and under **Active Discovery**, select **Reverse DNS Lookup**.
@@ -55,9 +54,7 @@ Use a test device to verify that the reverse DNS lookup schedule, DNS server, an
 
 1. In the **DNS reverse lookup test for server** dialog, enter an address in the **Lookup Address** and then select **Test**.
 
-## Next steps
-
-After configuring reverse DNS lookup, you can review resolved host names in:
+## Related content
 
 - [View your device inventory from a sensor console](how-to-investigate-sensor-detections-in-a-device-inventory.md)
 - [View your device inventory from the Azure portal](how-to-manage-device-inventory-for-organizations.md)

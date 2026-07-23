@@ -39,7 +39,7 @@ This section describes how to configure settings for an existing proxy on your O
 - [Connect via proxy chaining](#connect-via-proxy-chaining)
 - [Set up connectivity for multicloud environments](#set-up-connectivity-for-multicloud-environments)
 
-**To define proxy settings on your OT sensor:**
+To define proxy settings on your OT sensor:
 
 1. Sign into your OT sensor and select **System settings > Sensor Network Settings**.
 
@@ -87,7 +87,6 @@ Before you start, make sure that you have:
 
 > [!IMPORTANT]
 > Microsoft Defender for IoT does not offer support for Squid or any other proxy services. It is the customer's responsibility to set up and maintain the proxy service.
->
 
 ### Configure sensor proxy settings
 
@@ -392,10 +391,10 @@ Use the following flow chart to determine which connectivity method to use:
 
 - **Use site-to-site VPN over the internet** only if you don't* require any of the following:
 
-    - Predictable throughput
-    - SLA
-    - High data volume transfers
-    - Avoid connections over the public internet
+  - Predictable throughput
+  - SLA
+  - High data volume transfers
+  - Avoid connections over the public internet
 
 - **Use ExpressRoute** if you require predictable throughput, SLA, high data volume transfers, or to avoid connections over the public internet.
 

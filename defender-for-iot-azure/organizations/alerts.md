@@ -158,9 +158,9 @@ After you triage and investigate an alert, you can take remediation actions to r
 
 For more information, see [Investigate and respond to an OT network alert](respond-ot-alert.md).
 
-## Next steps
-
 Review alert types and messages to help you understand and plan remediation actions and playbook integrations. For more information, see [OT monitoring alert types and descriptions](alert-engine-messages.md).
+
+## Next steps
 
 > [!div class="nextstepaction"]
 > [View and manage alerts from the Azure portal](how-to-manage-cloud-alerts.md)

@@ -23,8 +23,8 @@ Before performing the procedures in this article, you must have:
 
 - An understanding of the extra device data you want to import. Use that understanding to choose one of the following import methods:
 
-    - **Import data from the device map** to import device names, operating systems, groups, or Purdue layer
-    - **Import data from system settings** to import device IP addresses, operating systems, patch levels, or authorization statuses
+  - **Import data from the device map** to import device names, operating systems, groups, or Purdue layer
+  - **Import data from system settings** to import device IP addresses, operating systems, patch levels, or authorization statuses
 
 > [!TIP]
 > A device's authorization status affects the alerts that are triggered by the OT sensor for the selected device. You'll receive alerts for any devices *not* listed as authorized devices, as they'll be considered to be unauthorized.
@@ -75,7 +75,6 @@ The following table shows an example of correctly formatted device information i
 |---------|---------|---------|
 |192.168.19.200   |  Windows 7  |  2017-11-01  |
 
-
 ### Supported values for Device operating system
 
 The following table lists the supported values you can enter in the **Device OS** column.
@@ -103,12 +102,11 @@ The following table lists the supported values you can enter in the **Device OS*
 | Windows Vista 64 |  |  |
 | Windows XP |  |  |
 
+1. Sign into your OT sensor and select **System settings > Import settings > Device information**.
 
-3. Sign into your OT sensor and select **System settings > Import settings > Device information**.
+1. In the **Device information** pane, select **+ Import file** and then select your edited .csv file.
 
-4. In the **Device information** pane, select **+ Import file** and then select your edited .csv file.
-
-5. Select **Close** to save your changes.
+1. Select **Close** to save your changes.
 
 ### Import device authorization status
 
@@ -126,7 +124,7 @@ After importing device authorization status, any devices *not* included in the i
 
 1. Select **Close** to save your changes.
 
-## Next steps
+## Related content
 
 - [Detect Windows workstations and servers with a local script](detect-windows-endpoints-script.md) 
 - [Manage your OT device inventory from a sensor console](how-to-investigate-sensor-detections-in-a-device-inventory.md).

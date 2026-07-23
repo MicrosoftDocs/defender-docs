@@ -156,9 +156,7 @@ All devices detected within the range of the filter will be deleted. If you dele
 
 For more information, see [Default privileged on-premises users](roles-on-premises.md#default-privileged-on-premises-users).
 
-## Next steps
-
-For more information, see:
+## Related content
 
 - [Defender for IoT device inventory](device-inventory.md)
 - [Control what traffic is monitored](how-to-control-what-traffic-is-monitored.md)

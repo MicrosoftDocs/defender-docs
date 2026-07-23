@@ -66,7 +66,7 @@ Import firewall rules to your OT sensor for analysis in **Risk assessment** repo
 | **Fortinet** | Configuration backup | .CONF|
 |**Juniper** | ScreenOS CLI configuration | .TXT |
 
-**To import firewall rules**:
+To import firewall rules:
 
 1. Sign in to your sensor as an **Admin** user and elect **System Settings** > **Import settings** > **Firewall rules**.
 1. In the **Firewall rules** pane:
@@ -82,7 +82,7 @@ For example:
 
 Backup and anti-virus servers aren't set up on your sensor by default. Define these addresses on your sensor to keep your risk assessment score low.
 
-**To add backup and anti-virus server addresses**:
+To add backup and anti-virus server addresses:
 
 1. Sign into your OT sensor and select **System Settings** > **System Properties** > **Vulnerability Assessment**.
 1. Add your backup and anti-virus server addresses to the **backup_servers** and **AV_addresses** fields, respectively. Use commas to separate multiple addresses.
@@ -92,7 +92,7 @@ Backup and anti-virus servers aren't set up on your sensor by default. Define th
 
 Use an OT sensor to view risk assessment reports for all connected sensors.
 
-**To generate a report**:
+To generate a report:
 
 1. Sign in to your OT sensor and select **Risk assessment**.
 
@@ -106,17 +106,11 @@ Use an OT sensor to view risk assessment reports for all connected sensors.
 
 1. Select **Download** to download a report and open it in your browser.
 
-## Next steps
+## Related content
 
-- Use the report tips to improve your network security score. For example, install the latest security or firmware updates, or check for PLCs in unsecure states.
-
-    For more information, see [Enhance security posture with security recommendations](recommendations.md).
+- Use the report tips to improve your network security score. For example, install the latest security or firmware updates, or check for PLCs in unsecure states. For more information, see [Enhance security posture with security recommendations](recommendations.md).
 
 - Continue creating other reports for more security data from your OT sensor. For more information, see:
-
-    - [Attack vector reporting](how-to-create-attack-vector-reports.md)
-    
-    - [Sensor data mining queries](how-to-create-data-mining-queries.md)
-    
-    - [Create trends and statistics dashboards](how-to-create-trends-and-statistics-reports.md)
-    
+  - [Attack vector reporting](how-to-create-attack-vector-reports.md)
+  - [Sensor data mining queries](how-to-create-data-mining-queries.md)
+  - [Create trends and statistics dashboards](how-to-create-trends-and-statistics-reports.md)

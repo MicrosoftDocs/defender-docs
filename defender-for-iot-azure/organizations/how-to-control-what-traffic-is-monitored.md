@@ -92,7 +92,6 @@ While the OT network sensor automatically learns the subnets in your network, we
 
 > [!TIP]
 > Once the **Auto subnet learning** setting is disabled and the subnet list has been edited to include only the locally monitored subnets that are in your IoT/OT scope, you can filter the Azure device inventory by *Network location* to view only the devices defined as *local*. For more information, see [View the device inventory](legacy-central-management/how-to-investigate-all-enterprise-sensor-detections-in-a-device-inventory.md#view-the-device-inventory).
->
 
 ### Manually define a subnet as ICS
 
@@ -128,7 +127,7 @@ Defender for IoT automatically assigns names to most universally reserved ports,
 
 Port names are shown in Defender for IoT when viewing device groups from the [OT sensor device map](how-to-work-with-the-sensor-device-map.md), or when you create OT sensor reports that include port information.
 
-**To customize a port name:**
+To customize a port name:
 
 1. Sign into your OT sensor as an **Admin** user.
 
@@ -144,7 +143,7 @@ VLANs are either discovered automatically by the OT network sensor or added manu
 
 VLAN's support is based on 802.1q (up to VLAN ID 4094).
 
-**To configure VLAN names on an OT network sensor:**
+To configure VLAN names on an OT network sensor:
 
 1. Sign in to your OT sensor as an **Admin** user.
 
@@ -160,7 +159,7 @@ VLAN's support is based on 802.1q (up to VLAN ID 4094).
 
 Enhance device data enrichment by configuring multiple DNS servers to carryout reverse lookups and resolve host names or FQDNs associated with the IP addresses detected in network subnets. For example, if a sensor discovers an IP address, it might query multiple DNS servers to resolve the host name. You need the DNS server address, server port and the subnet addresses.
 
-**To define the DNS server lookup**:
+To define the DNS server lookup:
 
 1. On your OT sensor console, select **System settings** > **Network monitoring** and under **Active Discovery**, select **Reverse DNS Lookup**.
 
@@ -200,7 +199,7 @@ Your OT network might consist of both static and dynamic IP addresses.
 
 If you're working with dynamic networks, you need to handle IP addresses changes as they occur, by defining DHCP address ranges on each OT network sensor. When an IP address is defined as a DHCP address, Defender for IoT identifies any activity happening on the same device, regardless of IP address changes.
 
-**To define DHCP address ranges**:
+To define DHCP address ranges:
 
 1. Sign into your OT sensor and select **System settings** > **Network monitoring** > **DHCP Ranges**.
 
