@@ -64,7 +64,7 @@ Defender for Storage continuously analyzes data and control plane logs from prot
 
 ### Malware scanning (powered by Microsoft Defender Antivirus)
 
-Malware scanning in Defender for Storage protects storage accounts from malicious objects by performing a full malware scan on uploaded objects or via on-demand malware scanning, applying Microsoft Defender Antivirus capabilities. It fulfills security and compliance requirements to handle untrusted content. Once a file is scanned, results are returned using a variety of methods. Malware scanning is an agentless SaaS solution that allows simple setup at scale, with zero maintenance, and supports remediating malicious files at scale. Malware scanning is a configurable feature in the new Defender for Storage plan that is priced per GB scanned. Learn more about [Malware scanning](defender-for-storage-malware-scan.md).
+Malware scanning in Defender for Storage protects storage accounts from malicious objects by performing a full malware scan on uploaded objects or via on-demand malware scanning - including targeted scans of specific blobs, files, containers, or file shares - applying Microsoft Defender Antivirus capabilities. It fulfills security and compliance requirements to handle untrusted content. Once a file is scanned, results are returned using a variety of methods. Malware scanning is an agentless SaaS solution that allows simple setup at scale, with zero maintenance, and supports remediating malicious files at scale. Malware scanning is a configurable feature in the new Defender for Storage plan that is priced per GB scanned. Learn more about [Malware scanning](defender-for-storage-malware-scan.md).
 
 ### Sensitive data threat detection (powered by Sensitive Data Discovery)
 
