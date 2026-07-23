@@ -17,6 +17,8 @@ ai-usage: ai-assisted
 
 Custom account correlation rules are a Microsoft Defender for Identity setting for accounts that don't share strong identifiers. These identifiers include account ID, SID, object ID, or UPN. The rules are especially useful for privileged accounts with unique naming conventions. By defining custom rules, you get full visibility and better protection for all accounts.
 
+:::image type="content" source="media/account-correlation-rules-settings.png" alt-text="Screenshot of the Account Correlation Rules settings page with rule management actions and configured rules." lightbox="media/account-correlation-rules-settings.png":::
+
 Before you begin, review the license and role requirements in [Prerequisites](#prerequisites).
 
 ## Prerequisites
