@@ -200,14 +200,13 @@ You can see the run history for playbooks on an alert by selecting the **Runs** 
 
 The procedure for manually running a playbook on an incident differs, depending on whether you're working in the Azure portal or in the Defender portal. Select the relevant tab for your environment:
 
-
 #### [Run a playbook on an incident in the Azure portal](#tab/azure)
 
 In the Azure portal, use the following steps to run a playbook on an incident:
 
 1. In the **Incidents** page, select an incident.
 
-1. From the incident details pane that appears on the side, select **Actions > Run playbook**. 
+1. From the incident details pane that appears on the side, select **Actions > Run playbook**.
 
     Selecting the three dots at the end of the incident's line on the grid or right-clicking the incident displays the same list as the **Action** button.
 
@@ -284,7 +283,7 @@ In the **Entities** widget in the **Overview** tab, locate your entity, and do o
     For some entity types, you might have to select the **Entity actions** button and from the resulting menu select **Run playbook**.
 
 1. Locate the playbook you want to run, and select **Run** in that playbook's row.
-    
+
 #### [Run a playbook on an entity from proactive hunting](#tab/hunting)
 
 **If you're proactively hunting for threats:**
@@ -292,15 +291,14 @@ In the **Entities** widget in the **Overview** tab, locate your entity, and do o
 1. From the **Entity behavior** screen, select an entity from the lists on the page, or search for and select another entity.
 1. In the [entity page](../entity-pages.md), select the **Run playbook** button in the left-hand panel.
 1. Locate the playbook you want to run, and select **Run** in that playbook's row.
+
 ---
 
 Regardless of the context you came from, the last step in this procedure is from the **Run playbook on *\<entity type>*** panel. This panel shows list of all playbooks that you have access to that were configured with the **Microsoft Sentinel Entity** Logic Apps trigger for the selected entity type.
 
-On the **Run playbook on *\<entity type>** pane, select the **Runs** tab to see the playbook run history for a given entity. It might take a few seconds for any just-completed run to appear in the list. Selecting a specific run opens the full run log in Logic Apps.
+On the __Run playbook on *\<entity type>__ pane, select the **Runs** tab to see the playbook run history for a given entity. It might take a few seconds for any just-completed run to appear in the list. Selecting a specific run opens the full run log in Logic Apps.
 
 ## Related content
-
-For more information, see:
 
 - [Create and manage Microsoft Sentinel playbooks](create-playbooks.md)
 - [Automate threat response in Microsoft Sentinel with automation rules](../automate-incident-handling-with-automation-rules.md)

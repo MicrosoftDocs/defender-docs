@@ -131,9 +131,9 @@ Choose the instructions for your portal — Microsoft Defender portal or Azure p
 
 1. Scroll down to the bottom of the details pane for a link to where you can take the recommended actions. For example:
 
-- If an optimization includes recommendations to add analytics rules, select **Go to Content Hub**.
-- If an optimization includes recommendations to move a table to basic logs, select **Change plan**.
-- For threat-based coverage optimizations, select **View full threat scenario** to see the full list of relevant threats, active and recommended detections, and coverage levels. From there you can jump directly to the **Content hub** to activate any recommended detections, or to the **MITRE ATT&CK** page to view the [full MITRE ATT&CK coverage for the selected scenario](../mitre-coverage.md?tabs=defender-portal#view-current-mitre-coverage). For example:
+    - If an optimization includes recommendations to add analytics rules, select **Go to Content Hub**.
+    - If an optimization includes recommendations to move a table to basic logs, select **Change plan**.
+    - For threat-based coverage optimizations, select **View full threat scenario** to see the full list of relevant threats, active and recommended detections, and coverage levels. From there you can jump directly to the **Content hub** to activate any recommended detections, or to the **MITRE ATT&CK** page to view the [full MITRE ATT&CK coverage for the selected scenario](../mitre-coverage.md?tabs=defender-portal#view-current-mitre-coverage). For example:
 
     :::image type="content" source="media/soc-optimization-access/threat-scenario-page.png" alt-text="Screenshot of the SOC optimization threat scenario page." lightbox="media/soc-optimization-access/threat-scenario-page.png":::
 
@@ -154,7 +154,7 @@ Install the full solution to see all available content items from the selected s
 
 ### Manage optimizations
 
-By default, optimization statuses are **Active**. Change their statuses as your teams progress through triaging and implementing recommendations. 
+By default, optimization statuses are **Active**. Change their statuses as your teams progress through triaging and implementing recommendations.
 
 Either select the options menu or select **View details** to take one of the following actions:
 

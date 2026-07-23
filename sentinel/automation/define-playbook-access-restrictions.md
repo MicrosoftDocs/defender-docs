@@ -90,8 +90,6 @@ After following the procedure in this article,  your policy should look as follo
 
 ## Related content
 
-For more information, see:
-
 - [Automate threat response with Microsoft Sentinel playbooks](automate-responses-with-playbooks.md)
 - [Use playbooks with automation rules in Microsoft Sentinel](tutorial-respond-threats-playbook.md)
 - [Set up Azure App Service access restrictions](/azure/app-service/app-service-ip-restrictions)

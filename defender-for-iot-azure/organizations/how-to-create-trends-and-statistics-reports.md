@@ -67,14 +67,11 @@ The following table summarizes common use cases for dashboard widgets.
 | **Number of devices per VLAN** | Displays a pie chart showing the number of discovered devices per VLAN. The size of each slice of the pie reflects the relative number of discovered device compared to the other slices. Each VLAN appears with the VLAN tag assigned by the sensor or the name that you've manually added. |
 | **Top bandwidth by VLAN** | Displays the bandwidth consumption by VLAN. By default, the widget shows five VLANs with the highest bandwidth usage. You can filter the data by the period presented in the widget. Select the down arrow to show more results. |
 
-## Next steps
+## Related content
 
 - View additional reports based on cloud-connected sensors in the Azure portal. For more information, see [Visualize Microsoft Defender for IoT data with Azure Monitor workbooks](workbooks.md)
 
 - Continue creating other reports for more security data from your OT sensor. For more information, see:
-
-    - [Risk assessment reporting](how-to-create-risk-assessment-reports.md)
-    
-    - [Sensor data mining queries](how-to-create-data-mining-queries.md)
-    
-    - [Attack vector reporting](how-to-create-attack-vector-reports.md)
+  - [Risk assessment reporting](how-to-create-risk-assessment-reports.md)
+  - [Sensor data mining queries](how-to-create-data-mining-queries.md)
+  - [Attack vector reporting](how-to-create-attack-vector-reports.md)

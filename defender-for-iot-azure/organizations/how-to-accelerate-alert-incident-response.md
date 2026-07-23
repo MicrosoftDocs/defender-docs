@@ -26,7 +26,7 @@ This article describes the following methods for reducing OT network alert fatig
 
 Before you use the procedures on this page, note the following prerequisites:
 
-|To ...  |You must have ...  |
+|To   |You must have  |
 |---------|---------|
 |[Create alert suppression rules on the Azure portal](#create-alert-suppression-rules-on-the-azure-portal-public-preview)     | A Defender for IoT subscription with at least one cloud-connected OT sensor and  access as a [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner).       |
 |[Create a DNS allowlist on an OT sensor](#allow-internet-connections-on-an-ot-network)     |   An OT network sensor installed and access to the sensor as the default *Admin* user.      |
@@ -211,7 +211,7 @@ Use the [maintenanceWindow (Create alert exclusions)](api/management-alert-apis.
 
 For more information, see [Defender for IoT API reference](references-work-with-defender-for-iot-apis.md).
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Microsoft Defender for IoT alerts](alerts.md)

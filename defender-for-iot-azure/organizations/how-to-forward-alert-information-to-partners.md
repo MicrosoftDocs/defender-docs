@@ -63,7 +63,6 @@ This article describes how to configure your OT sensor to forward alerts to part
 
 ### Edit or delete forwarding rules on an OT sensor
 
-
 > [!WARNING]
 > Deleting a forwarding rule is irreversible.
 
@@ -238,7 +237,7 @@ If your forwarding alert rules aren't working as expected, check the following d
 
     In these cases, the sensor is the session's client and initiator. Certificates are typically received from the server or use asymmetric encryption, where a specific certificate is provided to set up the integration.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Microsoft Defender for IoT alerts](alerts.md)

@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-ms.date: 06/30/2026
+ms.date: 07/23/2026
 ms.collection:
 - m365-security
 - tier2
@@ -83,6 +83,9 @@ Live response is a capability that gives you instantaneous access to a device by
 Live response is designed to enhance investigations by enabling you to collect forensic data, run scripts, send suspicious entities for analysis, remediate threats, and proactively hunt for emerging threats.
 
 For more information on live response, see [Investigate entities on devices using live response](live-response.md).
+
+> [!NOTE]
+> Live response can be restricted on devices onboarded as [high-value assets](restrict-response-actions-high-value-assets.md), based on the selective response actions defined when the device was onboarded. If live response isn't available for a device, review the device's selective response actions configuration.
 
 ## Collect investigation package from devices
 

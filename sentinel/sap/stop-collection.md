@@ -60,7 +60,5 @@ To do so, import the deletion CR *NPLK900259* into your ABAP system. For more in
 
 ## Related content
 
-For more information, see:
-
 - [Configure your SAP system for the Microsoft Sentinel solution](preparing-sap.md)
 - [Connect your SAP system by deploying your data connector agent container](deploy-data-connector-agent-container.md)

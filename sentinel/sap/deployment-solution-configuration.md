@@ -88,14 +88,7 @@ For more information, see [Check compliance for your SAP security controls with 
 
 ## Related content
 
-The SAP solution for Microsoft Sentinel includes more content, such as functions, playbooks, and workbooks. Use the links below as starting points. Add more content over time to get the most from your SAP security monitoring.
-
-Explore SAP solution reference content:
-
 - [Microsoft Sentinel solution for SAP applications - functions reference](sap-solution-function-reference.md)
 - [Microsoft Sentinel solution for SAP applications: security content reference](sap-solution-security-content.md).
-
-Monitor and maintain your SAP integration:
-
 - [Monitor the health of your SAP system](../monitor-sap-system-health.md)
 - [Update Microsoft Sentinel's SAP data connector agent](update-sap-data-connector.md)

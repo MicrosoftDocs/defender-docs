@@ -1,5 +1,5 @@
 ---
-title: Best practices and troubleshooting for Microsoft Sentinel MCP tool collection
+title: Best Practices and Troubleshooting for Microsoft Sentinel MCP Tool Collection
 titleSuffix: Microsoft Security  
 description: Learn about the best practices for using Microsoft Sentinel's collection of MCP tools and how to troubleshoot them 
 ms.author: pauloliveria
@@ -15,7 +15,7 @@ ms.custom: msecd-doc-authoring-1014
 #customer intent: As a security analyst, I want to understand how to troubleshoot issues when using Microsoft Sentinel's collection of MCP tools 
 ---
 
-# Microsoft Sentinel MCP tool collection best practices and troubleshooting 
+# Microsoft Sentinel MCP tool collection best practices and troubleshooting
 
 This article outlines best practices to using Microsoft Sentinel's collection of Model Context Protocol (MCP) tools. It also provides steps you can take to troubleshoot common issues you might experience while using them.
 
@@ -69,4 +69,5 @@ To collect the HAR file, follow these steps:
 1. Select **Export HAR** at the top of the Network tab to save the HAR file. Share it together with the information on what you did.
 
 ## Related content
+
 - [Troubleshoot KQL queries for the Microsoft Sentinel data lake](kql-troubleshoot.md)

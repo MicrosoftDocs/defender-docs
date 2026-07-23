@@ -23,7 +23,7 @@ For more information, see [On-premises users and roles for OT monitoring with De
 
 Generate an attack vector simulation so that you can view the resulting report.
 
-**To generate an attack vector simulation:**
+To generate an attack vector simulation:
 
 1. Sign into the sensor console and select **Attack vector** on the left.
 1. Select **Add simulation** and enter the following values:
@@ -62,7 +62,7 @@ The Device map provides a graphical representation of vulnerable devices detecte
 
 For more information, see [Investigate sensor detections in the Device map](how-to-work-with-the-sensor-device-map.md).
 
-## Next steps
+## Related content
 
 - Enhance security posture with Azure [security recommendations](recommendations.md).
 
@@ -70,8 +70,8 @@ For more information, see [Investigate sensor detections in the Device map](how-
 
 - Continue creating other reports for more security data from your OT sensor. For more information, see:
 
-    - [Risk assessment reporting](how-to-create-risk-assessment-reports.md)
-    
-    - [Sensor data mining queries](how-to-create-data-mining-queries.md)
-    
-    - [Create trends and statistics dashboards](how-to-create-trends-and-statistics-reports.md)
+  - [Risk assessment reporting](how-to-create-risk-assessment-reports.md)
+
+  - [Sensor data mining queries](how-to-create-data-mining-queries.md)
+
+  - [Create trends and statistics dashboards](how-to-create-trends-and-statistics-reports.md)

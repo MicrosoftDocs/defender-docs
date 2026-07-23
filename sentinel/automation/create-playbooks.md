@@ -15,7 +15,7 @@ ms.custom: msecd-doc-authoring-1014
 
 ---
 
-# Create and manage Microsoft Sentinel playbooks 
+# Create and manage Microsoft Sentinel playbooks
 
 Playbooks are collections of procedures that can be run from Microsoft Sentinel in response to an entire incident, to an individual alert, or to a specific entity. A playbook can help automate and orchestrate your response and can be attached to an automation rule to run automatically when specific alerts are generated or when incidents are created or updated. Playbooks can also be run manually on-demand on specific incidents, alerts, or entities.
 
@@ -428,10 +428,6 @@ Select a playbook to open its Azure Logic Apps page, which shows more details ab
 <a name="related-content"></a>
 
 ## Related content
-
-After you create your playbook, attach it to rules to be triggered by events in your environment, or run your playbooks manually on specific incidents, alerts, or entities.
-
-For more information, see:
 
 - [Automate and run Microsoft Sentinel playbooks](run-playbooks.md)
 - [Authenticate playbooks to Microsoft Sentinel](authenticate-playbooks-to-sentinel.md)

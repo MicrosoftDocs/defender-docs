@@ -46,7 +46,7 @@ When [onboarding a new OT sensor](onboard-sensors.md) to the Defender for IoT, y
 
 Enterprise IoT sensors are all automatically added to the same site, named **Enterprise network**.
 
-**To edit a site from the Azure portal**:
+To edit a site from the Azure portal:
 
 1. Select the site's name on the **Sites and sensors** page. In the **Edit site** pane that opens on the right, modify any of the following values:
 
@@ -124,7 +124,7 @@ You may need to reactivate an OT sensor because you want to:
 
 - **Work in locally managed mode instead of cloud-connected mode**: After reactivation, sensor detection information is displayed only in the sensor console.
 
-- **Associate the sensor to a new site**:  Re-register the sensor with new site definitions and use the new activation file to activate.
+- **Associate the sensor to a new site**: Re-register the sensor with new site definitions and use the new activation file to activate.
 
 - **Change your plan commitment**: If you make changes to your plan, such as changing your price plan to a monthly commitment, you need to reactivate your sensors to reflect the new changes.
 
@@ -180,19 +180,17 @@ When you open a support ticket for a locally managed sensor, upload a diagnostic
 > For cloud-connected sensors, the diagnostics log is sent to your support team automatically.
 >
 
-**To upload a diagnostics report**:
+To upload a diagnostics report:
 
 1. Get the diagnostics report ready. For more information, see [Download a diagnostics log for support](how-to-troubleshoot-sensor.md#download-a-diagnostics-log-for-support).
 
 1. In the Azure portal, go to **Sites and sensors** in Defender for IoT. Select the locally managed sensor for your support ticket.
 
-1. Select the **...** options menu on the right > **Send diagnostic files to support**. For example:
+1. Select the **...** options menu on the right, then select **Send diagnostic files to support**. For example:
 
     :::image type="content" source="media/how-to-manage-sensors-on-the-cloud/upload-diagnostics-log.png" alt-text="Screenshot of the send diagnostic files to support option." lightbox="media/how-to-manage-sensors-on-the-cloud/upload-diagnostics-log.png":::
 
 ## Next steps
-
-For more information, see the following articles:
 
 > [!div class="nextstepaction"]
 > [Define and view OT sensor settings from the Azure portal (Public preview)](configure-sensor-settings-portal.md)

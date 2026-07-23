@@ -43,7 +43,7 @@ Select a report to view today’s data. Use the :::image type="icon" source="med
 
 Create your own custom data mining report if you have reporting needs not covered by the out-of-the-box reports. Once created, custom data mining reports are visible to all users.
 
-**To create a custom data mining report**:
+To create a custom data mining report:
 
 1. Sign into the OT sensor and select **Data Mining** > **Create report**.
 
@@ -75,7 +75,7 @@ Each data mining report on an OT sensor has the following options for managing y
 
 For example, select **Manage report** to update the data your report includes by editing the **Name**, **Choose category**, **Order by**, **Filter by**, and **Add filter type** fields.
 
-## Next steps
+## Related content
 
 - View additional reports based on cloud-connected sensors in the Azure portal. For more information, see [Visualize Microsoft Defender for IoT data with Azure Monitor workbooks](workbooks.md)
 

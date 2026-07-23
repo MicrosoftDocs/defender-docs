@@ -89,6 +89,7 @@ T_Syslog | union isfuzzy= true (D_Syslog | where TimeGenerated != '1000-01-01T00
 ```
 
 See more information on the Kusto operators and functions used in the sample query, in the Kusto documentation:
+
 - [***let*** statement](/kusto/query/let-statement?view=microsoft-sentinel&preserve-view=true)
 - [***datatable*** operator](/kusto/query/datatable-operator?view=microsoft-sentinel&preserve-view=true)
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
@@ -115,8 +116,6 @@ Use the following built-in analytics rules to have Microsoft Sentinel start trig
 For more information, see [Microsoft Sentinel solution for SAP applications: security content reference](sap-solution-security-content.md).
 
 ## Related content
-
-Learn more about the Microsoft Sentinel solution for SAP applications:
 
 - [Deploy Microsoft Sentinel solution for SAP applications](deployment-overview.md)
 - [Deploy the Microsoft Sentinel solution for SAP BTP](deploy-sap-btp-solution.md)

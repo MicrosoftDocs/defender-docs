@@ -138,7 +138,6 @@ If you'll be using a non-admin account to run your WEM scans, this procedure is 
 
     > [!NOTE]
     > You must apply permissions recursively to the entire tree.
-    >
 
 1. Select **OK** until all dialog boxes you'd opened in this procedure are closed.
 
@@ -153,7 +152,6 @@ Perform the following steps to add the **wmiuser** account to the local **Perfor
 1. In the **Computer Management** dialog, select **Computer Management (Local) > System Tools > Local Users and Groups > Groups** and double-click **Performance Log Users**.
 
 1. Select **Add** and then, in the **Enter the object names to select**, enter **wmiuser** to add the **wmiuser** to the group. Select **Check Names** and then **OK** until all dialog boxes you'd opened in this procedure are closed.
-
 
 ## Configure a WEM scan on your sensor console
 
@@ -183,9 +181,7 @@ Perform the following steps to add the **wmiuser** account to the local **Perfor
 
 1. Select **View Scan Results**. A .csv file with the scan results is downloaded to your computer.
 
-## Next steps
-
-For more information, see:
+## Related content
 
 - [Detect Windows workstations and servers with a local script](detect-windows-endpoints-script.md)
 - [View your device inventory from a sensor console](how-to-investigate-sensor-detections-in-a-device-inventory.md)

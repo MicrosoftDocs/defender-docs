@@ -11,7 +11,6 @@ ms.custom: msecd-doc-authoring-1014
 
 > [!NOTE]
 > This feature is in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include other legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
->
 
 In addition to detecting OT devices on your network, use Defender for IoT to discover Microsoft Windows workstations and servers and enrich workstation and server data for devices already detected. Same as other detected devices, detected Windows workstations and servers are displayed in the Device inventory. The **Device inventory** pages on the sensor show enriched data about Windows devices, including data about the Windows operating system and applications installed, patch-level data, open ports, and more.
 
@@ -95,9 +94,9 @@ After running the script as described in [Download and run the script](#download
 <a name="view-devices-applications-report"></a>
 ## View the device applications report
 
-After you [download and run the script](#download-and-run-the-script), then [import the device details](#import-device-details) to your sensor, you can view your devices applications with a custom data mining report.
+After you [download and run the script](#download-and-run-the-script), then [import the device details](#import-device-details) to your sensor, you can view your devices' applications with a custom data mining report.
 
-**To view the devices applications:**
+To view the devices' applications:
 
 1. Sign into your OT sensor console, and select **Data mining**.
 
@@ -107,6 +106,7 @@ After you [download and run the script](#download-and-run-the-script), then [imp
 
 1. Your devices applications report is shown in the **My reports** area.
 
-## Next steps
+## Related content
 
-For more information, see [Detect Windows workstations and servers with a local script](detect-windows-endpoints-script.md) and [Import extra data for detected OT devices](how-to-import-device-information.md).
+- [Detect Windows workstations and servers with a local script](detect-windows-endpoints-script.md) 
+- [Import extra data for detected OT devices](how-to-import-device-information.md).

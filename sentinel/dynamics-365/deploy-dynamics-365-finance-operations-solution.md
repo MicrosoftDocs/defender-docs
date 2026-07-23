@@ -23,26 +23,26 @@ Before you start, make sure you meet the [prerequisites](#prerequisites), includ
 
 Before you begin, verify that:
 
-- The Microsoft Sentinel solution for Microsoft Business Applications solution is enabled. 
+- The Microsoft Sentinel solution for Microsoft Business Applications solution is enabled.
 
 - You have a defined Microsoft Sentinel workspace and have read and write permissions to the workspace.
 - [Microsoft Dynamics 365 Finance version 10.0.33 or above](/dynamics365/finance/get-started/whats-new-changed-changed-10-0-33) is enabled and you have administrative access to the monitored environments.  
 - You can create [Data Collection Rules/Endpoints](/azure/azure-monitor/essentials/data-collection-rule-overview) with the permissions:
   - `Microsoft.Insights/DataCollectionEndpoints`, and `Microsoft.Insights/DataCollectionRules`
-    
+
 ## Collect the environment URL from your Finance and Operations cloud environment
 
 To find and confirm the environment URL and version information for your Finance and Operations environment, complete the following steps:
 
-1. Open your Dynamics 365 project in [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com) and select the specific Finance and Operations environment you want to monitor with Microsoft Sentinel. 
-1. In the **Environment version information** section, make sure that you're using application release version 10.0.33 or above. 
+1. Open your Dynamics 365 project in [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com) and select the specific Finance and Operations environment you want to monitor with Microsoft Sentinel.
+1. In the **Environment version information** section, make sure that you're using application release version 10.0.33 or above.
 
     :::image type="content" source="media/deploy-dynamics-365-finance-operations-solution/environment-version-information.png" alt-text="Screenshot of the Finance and Operations environment version information." lightbox="media/deploy-dynamics-365-finance-operations-solution/environment-version-information.png":::
 
-1. To collect your environment URL, select **Log on to environment** and save the URL in the browser to use in the [Deploy the data connector](#deploy-the-data-connector) step. For example: `https://sentineldevc055b257489f70f5devaos.axcloud.dynamics.com`. 
+1. To collect your environment URL, select **Log on to environment** and save the URL in the browser to use in the [Deploy the data connector](#deploy-the-data-connector) step; for example, `https://sentineldevc055b257489f70f5devaos.axcloud.dynamics.com`.
 
     > [!NOTE]
-    > The URL may look different, depending on the environment you use, for example, you could be using a sandbox, or a cloud hosted environment. Remove any trailing slashes: `/`. 
+    > The URL may look different, depending on the environment you use, for example, you could be using a sandbox, or a cloud hosted environment. Remove any trailing slashes: `/`.
 
     :::image type="content" source="media/deploy-dynamics-365-finance-operations-solution/environment-details-new.png" alt-text="Screenshot of the Finance and Operations environment details.":::
 
@@ -57,20 +57,19 @@ To install the Microsoft Business Applications solution from Content hub, comple
 
     For more information about how to manage the solution components, see [Discover and deploy out-of-the-box content](../sentinel-solutions-deploy.md).
 
-## Deploy the data connector 
+## Deploy the data connector
 
 After installing the solution, use the following steps to open the Dynamics 365 Finance and Operations data connector:
 
-1. Once the solution deployment is complete, return to your Sentinel workspace and select **Data connectors**. 
+1. Once the solution deployment is complete, return to your Sentinel workspace and select **Data connectors**.
 
-1. In the search bar, type *Dynamics 365,* and select **Dynamics 365 Finance and Operations**. 
+1. In the search bar, type *Dynamics 365,* and select **Dynamics 365 Finance and Operations**.
 
 1. Select **Open connector page**.
 
 In the connector page, make sure that you meet the required prerequisites and complete the steps to [configure the data connector](#configure-the-data-connector).
 
 ## Configure the data connector
-
 
 To enable data collection, you create a new role in Finance and Operations with permissions to view the Database Log entity. The role is then assigned to a dedicated Finance and Operations user, mapped to the Microsoft Entra client ID of an app registration.
 
@@ -91,7 +90,7 @@ To collect the managed identity application ID from Microsoft Entra ID:
 
 1. Store the **client secret** in a secure location for use in the next steps.
 
-### Create a role for data collection in Finance and Operations 
+### Create a role for data collection in Finance and Operations
 
 1. In the Finance and Operations portal, navigate to **Workspaces > System administration**, and select **Security Configuration**.
 
@@ -99,15 +98,15 @@ To collect the managed identity application ID from Microsoft Entra ID:
 
 1. Select the new role from the list of roles, and select **Privileges** > **Add references**.
 
-1. Select **Database log Entity View** from the list of privileges. 
+1. Select **Database log Entity View** from the list of privileges.
 
-1. Select **Unpublished objects**, and select **Publish all** to publish the role. 
+1. Select **Unpublished objects**, and select **Publish all** to publish the role.
 
-#### Create a user for data collection in Finance and Operations 
+#### Create a user for data collection in Finance and Operations
 
 1. In the Finance and Operations portal, navigate to **Modules > System administration**, and select **Users**.
 
-1. Create a new user and assign the role you created in the [Create a role for data collection in Finance and Operations](#create-a-role-for-data-collection-in-finance-and-operations) step to the user. 
+1. Create a new user and assign the role you created in the [Create a role for data collection in Finance and Operations](#create-a-role-for-data-collection-in-finance-and-operations) step to the user.
 
 #### Register the app registration in Finance and Operations
 
@@ -115,8 +114,8 @@ To collect the managed identity application ID from Microsoft Entra ID:
 
 1. Create a new entry in the table:
     - For the **Client Id**, type the application ID of the app registration.
-    - For the **Name**, type a name for the application. 
-    - For the **User ID**, type the user ID created in [Create a user for data collection in Finance and Operations](#create-a-user-for-data-collection-in-finance-and-operations). 
+    - For the **Name**, type a name for the application.
+    - For the **User ID**, type the user ID created in [Create a user for data collection in Finance and Operations](#create-a-user-for-data-collection-in-finance-and-operations).
 
 ### Enable auditing on the relevant Dynamics 365 Finance and Operations data tables
 
@@ -133,14 +132,13 @@ If you're planning to use the analytics rules provided in this solution, enable 
 |Bank     |    `BankAccountTable`     |
 |Not specified     | `SysAADClientTable`        |
 
-Enable auditing on tables using the **Database log setup** wizard in the Finance and Operations portal. 
+Enable auditing on tables using the **Database log setup** wizard in the Finance and Operations portal.
 
 - In the **Tables and fields** page, you might want to select the **Show table names** checkbox to make it easier to find your tables.
 - To enable auditing of all fields in the selected tables, in the **Types of change** page, select all four check boxes for any relevant table names with empty field labels. Sort the table list by the **Field label** column in ascending order (A-Z).
 - Select **Yes** for all warning messages.
 
 For more information, see [Set up database logging](/dynamics365/fin-ops-core/dev-itpro/sysadmin/configure-manage-database-log#set-up-database-logging).
-
 
 <a name="enable-data-collection"></a>
 ### Enable data collection in the connector
@@ -157,15 +155,12 @@ To verify that log ingestion is working:
 
 1. Run activities (create, update, delete) on any of the tables you enabled for monitoring in [Enable auditing on the relevant Dynamics 365 Finance and Operations data tables](#enable-auditing-on-the-relevant-dynamics-365-finance-and-operations-data-tables). 
 1. Wait up to 15 minutes for Microsoft Sentinel to ingest the logs to the logs table in the workspace.
-1. Query the `FinanceOperationsActivity_CL` table in the Microsoft Sentinel workspace under **Logs**. 
-1. Check that the table shows new logs that reflect the activities you executed in step 1 of this procedure. 
+1. Query the `FinanceOperationsActivity_CL` table in the Microsoft Sentinel workspace under **Logs**.
+1. Check that the table shows new logs that reflect the activities you executed in step 1 of this procedure.
 
     :::image type="content" source="media/deploy-dynamics-365-finance-operations-solution/query-finance-operations-table.png" alt-text="Screenshot of viewing a new Finance and Operations incident in Microsoft Sentinel.":::
 
 ## Related content
 
-In this article, you learned how to deploy Dynamics 365 Finance and Operations features included in the Microsoft Sentinel solution for Microsoft Business Applications.
-
 - [Enable the security content](../sentinel-solutions-deploy.md#analytics-rule)
 - [Review the solution's security content](dynamics-365-finance-operations-security-content.md)
-

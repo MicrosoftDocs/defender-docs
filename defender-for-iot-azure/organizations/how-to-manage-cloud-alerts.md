@@ -179,9 +179,7 @@ To reduce alert fatigue, Defender for IoT combines multiple instances of the sam
 > [!NOTE]
 > After you learn an alert, the same alert might be triggered again if the new alert has different violation parameters. To check why the alert was triggered, review the list of violations in the CSV file you downloaded in step 3.
 
-## Next steps
-
-For more information about alert types and triage states, see the following article:
+## Next step
 
 > [!div class="nextstepaction"]
 > [Microsoft Defender for IoT alerts](alerts.md)

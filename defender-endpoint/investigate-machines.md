@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: concept-article
 ms.subservice: edr
 search.appverid: met150
-ms.date: 02/25/2026
+ms.date: 07/23/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
@@ -83,6 +83,9 @@ Response actions run along the top of a specific device page and include:
 - Action center
 
 You can take response actions in the Action center, in a specific device page, or in a specific file page.
+
+> [!NOTE]
+> On devices onboarded as [high-value assets](restrict-response-actions-high-value-assets.md), some response actions might be unavailable or appear grayed out. The permitted actions are defined when the device is onboarded and can't be changed remotely. If an action you expect is missing, review the device's selective response actions configuration.
 
 For more information on how to take action on a device, see [Take response action on a device](respond-machine-alerts.md).
 
