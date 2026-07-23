@@ -88,7 +88,7 @@ If you don't already have a dedicated Security Copilot workspace for AI-generate
 
    1. Select **Create**.
 
-:::image type="content" source="./media/generate-playbook/create-capacity.png" alt-text="Screenshot of the new capacity details." lightbox="./media/generate-playbook/create-capacity.png":::
+    :::image type="content" source="./media/generate-playbook/create-capacity.png" alt-text="Screenshot of the new capacity details." lightbox="./media/generate-playbook/create-capacity.png":::
 
 Generated playbooks automatically use the dedicated Security Copilot workspace you created.
 
@@ -213,7 +213,7 @@ Create the generated playbook in the Microsoft Defender portal by completing the
 
    An embedded Visual Studio Code environment opens with Cline.
 
-:::image type="content" source="./media/generate-playbook/playbook-name.png" alt-text="Screenshot of the embedded Visual Studio Code environment with the playbook generator." lightbox="./media/generate-playbook/playbook-name.png":::
+    :::image type="content" source="./media/generate-playbook/playbook-name.png" alt-text="Screenshot of the embedded Visual Studio Code environment with the playbook generator." lightbox="./media/generate-playbook/playbook-name.png":::
 
 #### Work in Plan mode
 
@@ -230,7 +230,7 @@ When the editor opens, the playbook generator session starts in **Plan mode**. I
 
 1. If the playbook generator requests approval to fetch documentation URLs, approve the request. This approval allows the playbook generator to access relevant API documentation to generate accurate code.
 
-:::image type="content" source="./media/generate-playbook/approval-request.png" alt-text="Screenshot of the approval request dialog in the embedded Visual Studio Code environment." lightbox="./media/generate-playbook/approval-request.png":::
+    :::image type="content" source="./media/generate-playbook/approval-request.png" alt-text="Screenshot of the approval request dialog in the embedded Visual Studio Code environment." lightbox="./media/generate-playbook/approval-request.png":::
 
 1. The playbook generator analyzes your request and might:
    - Ask clarifying questions
@@ -258,7 +258,7 @@ After the playbook generator produces a plan, review and approve it before proce
 
 1. When satisfied with the plan, follow instructions and switch to **Act mode**.
 
-:::image type="content" source="./media/generate-playbook/act-mode.png" alt-text="Screenshot of the embedded Visual Studio Code environment in Act mode with the playbook generator." lightbox="./media/generate-playbook/act-mode.png":::
+    :::image type="content" source="./media/generate-playbook/act-mode.png" alt-text="Screenshot of the embedded Visual Studio Code environment in Act mode with the playbook generator." lightbox="./media/generate-playbook/act-mode.png":::
 
 #### Generate the playbook in Act mode
 
@@ -271,7 +271,7 @@ After the playbook generator produces a plan, review and approve it before proce
 
 1. The tool might request approval for code generation. To enable automatic generation without approval prompts, select the **Edit** checkbox under **Auto-approve**.
 
-:::image type="content" source="./media/generate-playbook/auto-approve.png" alt-text="Screenshot of the Autoapprove checkbox in the embedded Visual Studio Code environment." lightbox="./media/generate-playbook/auto-approve.png":::
+    :::image type="content" source="./media/generate-playbook/auto-approve.png" alt-text="Screenshot of the Autoapprove checkbox in the embedded Visual Studio Code environment." lightbox="./media/generate-playbook/auto-approve.png":::
 
    > [!TIP]
    > When you select **Save** in the chat, it saves the current step and confirms your approval. **It doesn't save the entire playbook**.
@@ -290,7 +290,7 @@ After the playbook generator produces a plan, review and approve it before proce
 
 1. Close the editor when finished.
 
-:::image type="content" source="./media/generate-playbook/preview.png" alt-text="Screenshot of the preview of an alert notification created with the playbook generator." lightbox="./media/generate-playbook/preview.png":::
+    :::image type="content" source="./media/generate-playbook/preview.png" alt-text="Screenshot of the preview of an alert notification created with the playbook generator." lightbox="./media/generate-playbook/preview.png":::
 
 ## Enable and deploy your playbook
 

@@ -1,5 +1,5 @@
 ---
-title: Connect your SAP system to Microsoft Sentinel | Microsoft Sentinel
+title: Connect Your SAP System to Microsoft Sentinel
 description: Connect your SAP system to Microsoft Sentinel by deploying the SAP data connector agent or by configuring the agentless SAP data connector. Choose the option that matches your environment.
 ms.author: monaberdugo
 author: mberdugo
@@ -78,18 +78,17 @@ Use the onboarding video to support the deployment and configuration of the Micr
 
     > [!IMPORTANT]
     > If you don't have the **Entra ID Application Developer** role or higher, and you select **deploy required Azure resources**, an error message is displayed, for example: "Deploy required Azure resources" (errors may vary). This means that the data collection rule (DCR) and data collection endpoint (DCE) were created, but you need to ensure that your Entra ID app registration is authorized. Continue to set up the correct authorization.
-    
+
     > [!NOTE]
     > When deploying the required Azure resources for the Microsoft Sentinel solution for SAP applications (agentless), Azure Resource Manager (ARM) may take up to **45 seconds** to complete resource provider operations. During this time, the deployment might appear delayed. This behavior is expected. Wait for the operation to complete before retrying or redeploying.
-    
-1. Do one of the following: 
+
+1. Do one of the following:
     - If you have the **Entra ID Application Developer** role or higher, continue to the next step.
     - If you don't have the **Entra ID Application Developer** role or higher:
         - Share the DCR ID with your Entra ID administrator or colleague with the required permissions. 
-        - Ensure that the **Monitoring Metrics Publisher** role is assigned on the DCR, with the service principal assignment, using the client ID from the Entra ID app registration.                      
-        - Retrieve the client ID and client secret from the Entra ID app registration to use for authorization on the DCR. 
-        
-        The SAP admin uses the client ID and client secret information to post to the DCR.              
+        - Ensure that the **Monitoring Metrics Publisher** role is assigned on the DCR, with the service principal assignment, using the client ID from the Entra ID app registration.
+        - Retrieve the client ID and client secret from the Entra ID app registration to use for authorization on the DCR.
+          The SAP admin uses the client ID and client secret information to post to the DCR.
 
 1. Scroll down and select **Add SAP client**.
 
@@ -228,7 +227,7 @@ The following parameters control Role Authorization data collection.
 | **max-roles-authz-individual** | Acts as a safeguard that limits the number of authorization records fetched for an individual role. Roles that exceed this limit are skipped. | Integer, between **1**-**1000000** | **5000** |
 | **role-authz-batch-size** | Number of records fetched per batch when retrieving role authorization data. Reduce this value if RFC calls time out. | Integer, between **1**-**1000** | **100** |
 
-#### Truncation behaviour of the safeguards
+#### Truncation behavior of the safeguards
 
 When either limit is reached, a marker record is written to the output with a descriptive message indicating which limit was hit, the actual record count, and the collection time window. The two limits produce distinct markers (TRUNCATED_HEADERS and TRUNCATED_DETAILS) so they can be distinguished in Sentinel.
 
@@ -238,9 +237,9 @@ When either limit is reached, a marker record is written to the output with a de
 
 After you deploy the SAP data connector, check your agent's health and connectivity. For more information, see [Monitor the health and role of your SAP systems](../monitor-sap-system-health.md).
 
-## Next step
-
 Once the connector is deployed, proceed to configure the Microsoft Sentinel solution for SAP applications content. Specifically, configuring details in the watchlists is an essential step in enabling detections and threat protection.
+
+## Next step
 
 > [!div class="nextstepaction"]
 > [Enable SAP detections and threat protection](deployment-solution-configuration.md)

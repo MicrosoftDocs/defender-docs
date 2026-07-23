@@ -25,7 +25,7 @@ The following tables group the required authorizations by purpose. You only need
 - If needed, you can [remove the user role and optional CRs](stop-collection.md#remove-the-user-role-and-any-optional-cr-installed-on-your-abap-system).
 
 <a name="abap-application-log"></a>
-## Required authorizations for the ABAP application log
+## ABAP application log
 
 The following table lists the authorization objects required for the ABAP application log.
 
@@ -44,7 +44,7 @@ The following table lists the authorization objects required for the ABAP applic
 | S_APPL_LOG | ACTVT | Display |
 
 <a name="abap-change-documents-log"></a>
-## Required authorizations for the ABAP change documents log
+## ABAP change documents log
 
 The following table lists the required authorizations for the ABAP change documents log.
 
@@ -54,7 +54,7 @@ The following table lists the required authorizations for the ABAP change docume
 | S_TABU_NAM | TABLE | CDPOS |
 
 <a name="abap-cr-log"></a>
-## Required authorizations for the ABAP CR log
+## ABAP CR log
 
 Use the following authorization objects for the ABAP CR log.
 
@@ -66,7 +66,7 @@ Use the following authorization objects for the ABAP CR log.
 | S_TRANSPRT | ACTVT | Display |
 
 <a name="abap-db-table-data-log"></a>
-## Required authorizations for the ABAP DB table data log
+## ABAP DB table data log
 
 The following table lists the authorization objects required for the ABAP DB table data log.
 
@@ -79,9 +79,9 @@ The following table lists the authorization objects required for the ABAP DB tab
 | S_TABU_NAM | TABLE | TMSQAFILTER |
 
 <a name="abap-job-log"></a>
-## Required authorizations for the ABAP job log
+## ABAP job log
 
-The following table shows the required authorizations for the ABAP job log.
+The following table shows the ABAP job log.
 
 | Authorization object | Field | Value |
 | -------------------- | ----- | ----- |
@@ -95,7 +95,7 @@ The following table shows the required authorizations for the ABAP job log.
 | S_XMI_PROD | INTERFACE | XBP |
 
 <a name="abap-security-audit-log"></a>
-## Required authorizations for the ABAP security audit log
+## ABAP security audit log
 
 The following table lists the authorization objects needed for the ABAP security audit log.
 
@@ -125,7 +125,7 @@ The following table lists the authorization objects needed for the ABAP security
 | S_XMI_PROD | INTERFACE | XAL |
 
 <a name="abap-spool-logs"></a>
-## Required authorizations for ABAP spool logs
+## ABAP spool logs
 
 Use the following authorizations for ABAP spool logs.
 
@@ -135,7 +135,7 @@ Use the following authorizations for ABAP spool logs.
 | S_ADMI_FCD | S_ADMI_FCD | SPOS (Use of Transaction SP01 (all systems)) |
 
 <a name="abap-workflow-log"></a>
-## Required authorizations for the ABAP workflow log
+## ABAP workflow log
 
 The following table lists the required authorizations for the ABAP workflow log.
 
@@ -145,7 +145,7 @@ The following table lists the required authorizations for the ABAP workflow log.
 | S_TABU_NAM | TABLE | SWWWIHEAD |
 
 <a name="all-logs"></a>
-## Required authorizations for all logs
+## All logs
 
 The following authorization objects are required for all log types.
 
@@ -166,7 +166,7 @@ The following authorization objects are required for all log types.
 | S_TABU_NAM | TABLE | T000 |
 
 <a name="configuration-history"></a>
-## Required authorizations for configuration history
+## Configuration history
 
 The following table lists the authorization objects required for configuration history.
 
@@ -175,7 +175,7 @@ The following table lists the authorization objects required for configuration h
 | S_TABU_NAM | TABLE | PAHI |
 
 <a name="optional-logs-if-the-microsoft-sentinel-solution-cr-is-implemented"></a>
-## Required authorizations for optional logs when the Microsoft Sentinel solution CR is implemented
+## optional logs when the Microsoft Sentinel solution CR is implemented
 
 If the Microsoft Sentinel solution CR is implemented, use the following additional authorization.
 
@@ -184,7 +184,7 @@ If the Microsoft Sentinel solution CR is implemented, use the following addition
 | S_RFC | RFC_NAME | /MSFTSEN/* |
 
 <a name="snc-data"></a>
-## Required authorizations for SNC data
+## SNC data
 
 The following table lists the authorization objects required for SNC data.
 
@@ -194,7 +194,7 @@ The following table lists the authorization objects required for SNC data.
 | S_TABU_NAM | TABLE | USRACL |
 
 <a name="user-data"></a>
-## Required authorizations for user data
+## User data
 
 The following table shows the authorization objects required for user data.
 
@@ -219,7 +219,6 @@ The following table shows the authorization objects required for user data.
 | S_TABU_NAM | TABLE | USRSTAMP |
 | S_TABU_NAM | TABLE | UST04 |
 
-
 ## Related content
 
-For more information, see [Configure your SAP system for the Microsoft Sentinel solution](preparing-sap.md).
+[Configure your SAP system for the Microsoft Sentinel solution](preparing-sap.md).

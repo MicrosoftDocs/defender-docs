@@ -57,7 +57,6 @@ For more information, see [Roles and permissions in Microsoft Sentinel](../roles
 
 <a name='authenticate-as-an-azure-ad-user'></a>
 
-
 ## Authenticate with a managed identity
 
 Authenticating as a managed identity allows you to give permissions directly to the playbook, which is a Logic App workflow resource. Microsoft Sentinel connector actions taken by the playbook then operate on the playbook's behalf, as if it were an independent object with its own permissions on Microsoft Sentinel.
@@ -101,7 +100,6 @@ Authenticating as a managed identity allows you to give permissions directly to 
         ![Screenshot of the Microsoft Sentinel connector showing the connection name and system-assigned managed identity options.](../media/authenticate-playbooks-to-sentinel/auth-methods-msi.png)
 
     1. Select **Create** to finish creating your connection.
-
 
 <a name='authenticate-as-a-service-principal-azure-ad-application'></a>
 
@@ -176,17 +174,15 @@ API connections are used to connect Azure Logic Apps to other services, includin
 
 - In the Azure portal, search for *API connections*. Locate the API connection for your playbook using the following data:
 
-    - **Display name**: The friendly name you give the connection every time you create one. 
-    - **Status**: The API connection's status.
-    - **Resource group**: API connections for Microsoft playbooks are created in the playbook (Azure Logic Apps) resource's resource group.
+  - **Display name**: The friendly name you give the connection every time you create one. 
+  - **Status**: The API connection's status.
+  - **Resource group**: API connections for Microsoft playbooks are created in the playbook (Azure Logic Apps) resource's resource group.
 
 - In the Azure portal, view all resources and filter the view by **Type** = **API connector**. This method allows you to select, tag, and delete multiple connections at once.
 
 **To change the authorization of an existing connection**, enter the connection resource, and select **Edit API connection**.
 
 ## Related content
-
-For more information, see:
 
 - [Automate threat response with playbooks in Microsoft Sentinel](automate-responses-with-playbooks.md)
 - [Create and manage Microsoft Sentinel playbooks](create-playbooks.md)
