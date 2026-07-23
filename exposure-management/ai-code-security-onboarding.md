@@ -20,7 +20,7 @@ To complete this setup, you need:
 
 - An Azure subscription and resource group in which to create a dedicated Microsoft Foundry resource for codename MDASH. For full details, see [Connect Microsoft Foundry](mdash-foundry-integration.md).
 
-- Permission to deploy the following models with the Global Standard deployment type (all three are required):
+- Permission to deploy the following models (all three are required):
   - `gpt-5.4`
   - `gpt-5.3-codex`
   - `gpt-5.4-mini`

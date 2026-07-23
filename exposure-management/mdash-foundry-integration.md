@@ -39,7 +39,7 @@ Deploy the models required for the agentic code security integration.
 1. Go to **Build** from the upper navigation menu.
 1. Open **Deployments**.
 1. Select **Deploy a base model**.
-1. Choose and deploy each of the following models with default settings:
+1. Choose and deploy each of the following models with default settings or custom settings:
    - `gpt-5.4`
    - `gpt-5.3-codex`
    - `gpt-5.4-mini`
@@ -47,8 +47,6 @@ Deploy the models required for the agentic code security integration.
 
 > [!NOTE]
 > A predefined list of model deployments is required for the integration to work. You must deploy all three models: `gpt-5.4`, `gpt-5.3-codex`, and `gpt-5.4-mini`.
->
-> If you use custom settings, ensure that the deployment type is set to **Global Standard**.
 
 ## Configure the TPM rate limit
 
