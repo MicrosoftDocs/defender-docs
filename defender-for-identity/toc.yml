@@ -160,8 +160,6 @@ items:
     items:
     - name: Manage related identities and accounts
       href: manage-related-identities-accounts.md
-    - name: Create custom account correlation rules
-      href: custom-account-correlation-rules.md
   - name: View and manage health issues
     href: health-alerts.md
   - name: Best practices for security testing
@@ -172,6 +170,8 @@ items:
     items:
     - name: About page
       href: settings-about.md
+    - name: Account correlation rules
+      href: custom-account-correlation-rules.md
     - name: Manage and update sensors
       href: sensor-settings.md
     - name: Uninstall a sensor

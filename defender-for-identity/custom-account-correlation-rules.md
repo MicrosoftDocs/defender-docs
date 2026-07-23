@@ -1,25 +1,27 @@
 ---
-title: Custom account correlation rules in Defender for Identity (Preview)
-description: Learn how to create custom account correlation rules in Defender for Identity to automatically correlate accounts that don't share strong identifiers.
+title: Account correlation rules in Microsoft Defender for Identity (Preview)
+description: Learn how to add, edit, and remove account correlation rules in Microsoft Defender for Identity for accounts that don't share strong identifiers.
 author: AbbyMSFT
 ms.author: abbyweisberg
 ms.service: microsoft-defender-for-identity
 ms.topic: how-to
-ms.custom: msecd-doc-authoring-106
-ms.date: 03/17/2026
+ms.custom: msecd-doc-authoring-1017
+ms.date: 07/23/2026
 ai-usage: ai-assisted
 
-#customer intent: As a security admin using Microsoft Defender for Identity, I want to create custom account correlation rules so that I can automatically correlate accounts that don't share strong identifiers and get full identity visibility.
+#customer intent: As a security admin using Microsoft Defender for Identity, I want to manage custom account correlation rules so that I can automatically correlate accounts that don't share strong identifiers and get full identity visibility.
 
 ---
 
-# Create custom account correlation rules (Preview)
+# Manage account correlation rules in Microsoft Defender for Identity (Preview)
 
-Custom account correlation rules allow you to correlate accounts that don't share strong identifiers such as account ID, SID, object ID, or UPN. This is especially useful for privileged accounts with unique naming conventions. By defining custom policies, you get full visibility and better protection for all accounts.
+Custom account correlation rules are a Microsoft Defender for Identity setting for accounts that don't share strong identifiers. These identifiers include account ID, SID, object ID, or UPN. The rules are especially useful for privileged accounts with unique naming conventions. By defining custom rules, you get full visibility and better protection for all accounts.
+
+Before you begin, review the license and role requirements in [Prerequisites](#prerequisites).
 
 ## Prerequisites
 
-- An active Microsoft Defender for Identity (MDI) license, or another license that includes MDI (such as E5). Without the required license, the policies page is read-only.
+- An active Microsoft Defender for Identity license, or another license that includes Defender for Identity (such as E5). Without the required license, the policies page is read-only.
 - At least one of the following roles to **view** policies:
   - **Microsoft Entra ID roles**: Security Reader, Security Operator, or Security Administrator
   - **Defender roles**: Security operations, Security data, Alerts (manage)
@@ -42,7 +44,9 @@ Before you create a rule, decide which correlation type fits your scenario. The 
 
 ## Add a correlation rule
 
-1. In the Microsoft Defender portal at [https://security.microsoft.com](https://security.microsoft.com), go to **Settings** > **Identities**.
+To add an account correlation rule, follow these steps:
+
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Identities**.
 1. Select **Account Correlation Rules**.
 1. Select **Add Rule**.
 1. In the wizard, enter a **Rule Name** (up to 50 characters). You can use letters, numbers, and the following special characters: `. - _ ! # ^ ~`.
@@ -53,12 +57,16 @@ Before you create a rule, decide which correlation type fits your scenario. The 
 
 ## Edit a correlation rule
 
+To change an existing account correlation rule, follow these steps:
+
 1. On the **Account Correlation Rules** page, select the checkbox next to the rule you want to edit. You can select only one rule at a time.
 1. Select **Edit**.
 1. In the wizard, update the rule configuration as needed.
 1. Review your changes, and then select **Save**. Changes take effect within 12 hours.
 
 ## Remove a correlation rule
+
+To remove an account correlation rule, follow these steps:
 
 1. On the **Account Correlation Rules** page, select the checkbox next to the rule you want to remove.
 1. Select **Delete**.
