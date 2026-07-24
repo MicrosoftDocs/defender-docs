@@ -11,11 +11,11 @@ ms.collection:
 - mde-ios
 ms.topic: how-to
 ms.subservice: ios
-ms.date: 07/21/2026
+ms.date: 07/22/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1015
 
 ai-usage: ai-assisted
 ---
@@ -472,7 +472,10 @@ Device tag configuration is available for both enrolled (MDM) devices and unenro
 
 ## Suppress OS update notifications
 
-A configuration is available for customers to suppress OS update notification in Defender for Endpoint on iOS. Once the config key is set in the Intune App configuration policies, Defender for Endpoint won't send any notifications on the device for OS updates. However, when you open the Microsoft Defender app, the Device Health card is visible and show the state of your OS. 
+> [!NOTE]
+> OS update notifications are discontinued as of mid-July 2026. Starting late July 2026, you no longer need to configure anything to suppress them, and the settings in this section no longer apply.
+
+A configuration is available for customers to suppress OS update notification in Defender for Endpoint on iOS. Once the config key is set in the Intune App configuration policies, Defender for Endpoint won't send any notifications on the device for OS updates. However, when you open the Microsoft Defender app, the Device Health card is visible and show the state of your OS.
 
 The OS update notification suppression configuration is available for both enrolled (MDM) devices and unenrolled (MAM) devices. Admins can use the following steps to suppress OS update notifications.
 
