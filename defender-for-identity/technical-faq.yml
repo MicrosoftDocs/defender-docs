@@ -54,11 +54,11 @@ sections:
 
       - question: What is the difference between Advanced Threat Analytics (ATA) and Defender for Identity?
         answer: |
+          ATA is end of life. ATA ended Mainstream Support on January 12, 2021, and Extended Support ended in January 2026. No further updates, including security fixes, will be provided. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
+
           ATA is a standalone on-premises solution with multiple components, such as the ATA Center that requires dedicated hardware on-premises.
 
           Defender for Identity is a cloud-based security solution that uses your on-premises Active Directory signals. The solution is highly scalable and is frequently updated.
-          
-          The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA ended Mainstream Support on January 12, 2021. Extended Support continues until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
           
           In contrast to the ATA sensor, the Defender for Identity sensor also uses data sources such as Event Tracing for Windows (ETW) enabling Defender for Identity to deliver extra detections.
           
