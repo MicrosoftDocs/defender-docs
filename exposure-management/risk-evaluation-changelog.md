@@ -36,4 +36,6 @@ MSEM initiates REF changes, not customer actions. They might include:
 
 | Date | Change type | Description | More information |
 | -------- | -------- | -------- | -------- |
-| 30 June 2026 | New recommendations added |200+ multi-cloud recommendations are now generally available.|[What's new in Defender for Cloud](/azure/defender-for-cloud/release-notes#expanded-multicloud-security-coverage-is-now-generally-available)|
+| 30 June 2026 | New recommendations added | 200+ multi-cloud recommendations are now generally available.| [What's new in Defender for Cloud](/azure/defender-for-cloud/release-notes#expanded-multicloud-security-coverage-is-now-generally-available) |
+| 26 July 2026 | New recommendations added | 80+ Defender for SQL Vulnerability Assessment recommendations are now generally available | [Database-level recommendations experience for SQL Vulnerability Assessment](https://aka.ms/SQLVARecommendations) |
+

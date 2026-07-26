@@ -33,11 +33,28 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| July 26, 2026 | GA | [Database-level recommendations for SQL Vulnerability Assessment (GA)](#database-level-recommendations-for-sql-vulnerability-assessment-ga) |
 | July 5, 2026 | Deprecation | [Plan enablement API now blocks onboarding to five deprecated Defender plans](#plan-enablement-api-now-blocks-onboarding-to-five-deprecated-defender-plans) |
 | July 1, 2026 | GA | [New container security capabilities are now generally available](#new-container-security-capabilities-are-now-generally-available) |
 | July 1, 2026 | GA | [Kubernetes misconfiguration enforcement in Defender for Containers is now generally available](#kubernetes-misconfiguration-enforcement-in-defender-for-containers-is-now-generally-available) |
 | July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
 | July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
+
+### Database-level recommendations for SQL Vulnerability Assessment (GA)
+
+July 26, 2026
+
+The SQL vulnerability assessment recommendations created as part of the transition from grouped to individual recommendations are now generally available. Each SQL vulnerability assessment rule is surfaced as its own recommendation, reported directly on the affected SQL database resource. For a deeper explanation of this change, see [Transition from grouped to individual recommendations](transition-grouped-individual-recommendations.md#microsoft-defender-for-databases). For the mapping between the SQL VA rule ID and the new recommendations' GUID, see [SQL vulnerability assessment rules and recommendations mapping](sql-azure-vulnerability-assessment-rules.md).
+
+These recommendations affect the risk-based **Cloud Score**. They don't affect the classic **Secure Score**.
+
+If you're new to SQL Vulnerability Assessment, it scans your databases against Microsoft security best practices and common regulatory requirements, then reports each check as a recommendation on the scanned database. An unhealthy result flags a deviation from a best practice, which might be an unintended misconfiguration or a configuration that's intentional and acceptable for your environment, so review each finding in context before you act. You have three ways to remediate a finding:
+
+- **Fix the misconfiguration**: apply the remediation steps or run the provided remediation script to bring the resource back to the recommended configuration.
+- **Approve it as a baseline**: if the current state is by design, add the result to the baseline. Baselines are set per rule and per resource, so the finding is then reported as passed until a future scan detects a deviation.
+- **Exempt the recommendation**: if the check isn't relevant to your organization, create an exemption at the subscription or management group level so it no longer affects your score or compliance for that scope.
+
+For the full walkthrough, see [Ways to remediate a finding](sql-azure-vulnerability-assessment-find.md?tabs=database-level#ways-to-remediate-a-finding).
 
 ### Plan enablement API now blocks onboarding to five deprecated Defender plans
 

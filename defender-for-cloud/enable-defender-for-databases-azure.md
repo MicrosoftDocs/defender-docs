@@ -44,13 +44,13 @@ To enable Defender for open-source relational databases on your Azure subscripti
  
 1. Select **Microsoft Defender for Cloud**.
 
-1. If Defender for open-source relational databases isn't enabled, select **Enable Microsoft Defender for [Database type]** (for example, "Microsoft Defender for MySQL").
+1. If Defender for open-source relational databases isn't enabled, select **Enable Microsoft Defender for [Database type]** (for example, "Microsoft Defender for PostgreSQL").
 
-    :::image type="content" source="media/defender-for-databases-usage/enable-defender-for-mysql.png" alt-text="Screenshot of the Azure Database for MySQL server page with the Enable Microsoft Defender for MySQL button highlighted." lightbox="media/defender-for-databases-usage/enable-defender-for-mysql.png":::
-
-    > [!TIP]
-    > This page in the portal is the same for PostgreSQL and MySQL.
-
+   :::image type="content" source="media/enable-defender-for-databases-azure/enable-defender-open-source-relational-databases.png" alt-text="Screenshot of the Microsoft Defender for open-source relational databases page with the Enable button highlighted." lightbox="media/enable-defender-for-databases-azure/enable-defender-open-source-relational-databases.png":::
+   
+   > [!TIP]
+   > This page in the portal is the same for PostgreSQL and MySQL.
+   
 1. Select **Save**.
 
 ## Related content
