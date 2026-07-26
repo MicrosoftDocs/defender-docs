@@ -14,8 +14,7 @@ ms.topic: install-set-up-deploy
 ms.subservice: linux
 appliesto:
   - Microsoft Defender for Servers
-ms.date: 07/25/2026
-ai-usage: ai-assisted
+ms.date: 07/26/2026
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux manually
@@ -32,14 +31,14 @@ A successful deployment requires the completion of all of the following tasks:
 
 - [Prerequisites and system requirements](#prerequisites-and-system-requirements)
 - [Configure the Linux software repository](#configure-the-linux-software-repository)
-  - [RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux, Rocky, and Alma)](#rhel-and-variants-centos-fedora-oracle-linux-amazon-linux-rocky-and-alma)
+  - [RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)](#rhel-and-variants-centos-fedora-oracle-linux-amazon-linux-2-rocky-and-alma-1)
   - [SLES and variants](#sles-and-variants-1)
   - [Ubuntu and Debian systems](#ubuntu-and-debian-systems)
   - [Mariner](#mariner)
   - [Azure Linux](#azure-linux)
 - [Preinstall setup for custom location installation](#preinstall-setup-for-custom-location-installation)
 - [Application installation](#application-installation)
-  - [RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux, Rocky, and Alma)](#rhel-and-variants-centos-fedora-oracle-linux-amazon-linux-rocky-and-alma-1)
+  - [RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)](#rhel-and-variants-centos-fedora-oracle-linux-amazon-linux-2-rocky-and-alma)
   - [SLES and variants](#sles-and-variants)
   - [Ubuntu and Debian systems](#ubuntu-and-debian-systems-1)
   - [Mariner](#mariner-1)
@@ -65,7 +64,7 @@ In order to preview new features and provide early feedback, it's recommended th
 > [!WARNING]
 > Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, reconfigure your device to use the new channel, and follow the steps in this document to install the package from the new location.
 
-### RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux, Rocky, and Alma)
+### RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)
 
 You can use either the `dnf` or the `yum` package manager to deploy Defender for Endpoint on Linux on RHEL and its variants. The instructions in the following sections include commands for both package managers; use just the relevant one.
 
@@ -85,8 +84,8 @@ You can use either the `dnf` or the `yum` package manager to deploy Defender for
    |---|---|
    | Alma 8.4 and higher|[https://packages.microsoft.com/config/alma/8/prod.repo](https://packages.microsoft.com/config/alma/8/prod.repo)|
    | Alma 9.2 and higher|[https://packages.microsoft.com/config/alma/9/prod.repo](https://packages.microsoft.com/config/alma/9/prod.repo)|
-   | Alma 10|<https://packages.microsoft.com/config/alma/10/prod.repo>|
-   | RHEL 10 and Oracle Linux 10|<https://packages.microsoft.com/config/rhel/10/prod.repo>|
+   | Alma 10|[https://packages.microsoft.com/config/alma/10/prod.repo](https://packages.microsoft.com/config/alma/10/prod.repo)|
+   | RHEL/Centos/Oracle 10|[https://packages.microsoft.com/config/rhel/10/prod.repo](https://packages.microsoft.com/config/rhel/10/prod.repo)|
    | RHEL/Centos/Oracle 9.0-9.8|[https://packages.microsoft.com/config/rhel/9/prod.repo](https://packages.microsoft.com/config/rhel/9/prod.repo)|
    | RHEL/Centos/Oracle 8.0-8.10|[https://packages.microsoft.com/config/rhel/8/prod.repo](https://packages.microsoft.com/config/rhel/8/prod.repo)|
    | RHEL/Centos/Oracle 7.2-7.9|[https://packages.microsoft.com/config/rhel/7.2/prod.repo](https://packages.microsoft.com/config/rhel/7.2/prod.repo)|
@@ -94,38 +93,34 @@ You can use either the `dnf` or the `yum` package manager to deploy Defender for
    | Amazon Linux 2023 |[https://packages.microsoft.com/config/amazonlinux/2023/prod.repo](https://packages.microsoft.com/config/amazonlinux/2023/prod.repo)|
    | Fedora 33|[https://packages.microsoft.com/config/fedora/33/prod.repo](https://packages.microsoft.com/config/fedora/33/prod.repo)|
    | Fedora 34|[https://packages.microsoft.com/config/fedora/34/prod.repo](https://packages.microsoft.com/config/fedora/34/prod.repo)|
-   | Fedora 43|<https://packages.microsoft.com/config/fedora/43/prod.repo>|
+   | Fedora 43|[https://packages.microsoft.com/config/fedora/43/prod.repo](https://packages.microsoft.com/config/fedora/43/prod.repo)|
    | Rocky 8.7 and higher|[https://packages.microsoft.com/config/rocky/8/prod.repo](https://packages.microsoft.com/config/rocky/8/prod.repo)|
    | Rocky 9.2 and higher|[https://packages.microsoft.com/config/rocky/9/prod.repo](https://packages.microsoft.com/config/rocky/9/prod.repo)|
-   | Rocky 10|<https://packages.microsoft.com/config/rocky/10/prod.repo>|
+   | Rocky 10|[https://packages.microsoft.com/config/rocky/10/prod.repo](https://packages.microsoft.com/config/rocky/10/prod.repo)|
 
    > [!NOTE]
-   > For your distribution and version, identify the closest entry by major version, then minor version, under `https://packages.microsoft.com/config/rhel/`.
-   >
-   > ARM64 packages are available for AlmaLinux 8.4 and later, AlmaLinux 9.2 and later, AlmaLinux 10, Rocky Linux 8.7 and later, Rocky Linux 9.2 and later, Rocky Linux 10, and Fedora 43.
+   > For your distribution and version, identify the closest entry for it (by major, then minor) in the preceding table.
 
    > [!TIP]
    > Online Kernel patching tools, such as Ksplice or similar, can lead to unpredictable OS stability if Defender for Endpoint is running. It's recommended to temporarily stop the Defender for Endpoint daemon before performing online Kernel patching. After the Kernel is updated, Defender for Endpoint on Linux can be safely restarted. This action is especially important for systems running Oracle Linux.
 
-3. Use the repository URL for your distribution from the preceding table and replace `prod` with the channel you want to use.
-
-   For distributions that use DNF 4:
+3. In the following commands, replace *[distro]*, *[version]*, and *[channel]* with the information you've identified:
 
    ```bash
    sudo dnf config-manager --add-repo https://packages.microsoft.com/config/[distro]/[version]/[channel].repo
    ```
-
-   For Fedora 43, which uses DNF 5:
-
-   ```bash
-   sudo dnf config-manager addrepo --from-repofile=https://packages.microsoft.com/config/fedora/43/[channel].repo
-   ```
-
-   For distributions that use `yum`:
-
+   or
    ```bash
    sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/[distro]/[version]/[channel].repo
    ```
+
+   > [!NOTE]
+   > Fedora 43 uses DNF 5. On Fedora 43, use the following command:
+   >
+   > ```bash
+   > sudo dnf config-manager addrepo --from-repofile=https://packages.microsoft.com/config/fedora/43/[channel].repo
+   > ```
+
    > [!TIP]
    > Use hostnamectl command to identify system related information including release *[version]*.
 
@@ -149,15 +144,13 @@ You can use either the `dnf` or the `yum` package manager to deploy Defender for
    sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/8/insiders-fast.repo
    ```
 
-4. Install the Microsoft GPG public key.
-
-   For AlmaLinux 10, Fedora 43, RHEL 10, Oracle Linux 10, and Rocky Linux 10:
+4. Install the Microsoft GPG public key. For Alma 10, Fedora 43, RHEL/Centos/Oracle 10, and Rocky 10, use:
 
    ```bash
    sudo rpm --import https://packages.microsoft.com/keys/microsoft-2025.asc
    ```
 
-   For earlier distribution versions:
+   For other versions, use:
 
    ```bash
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
@@ -167,8 +160,6 @@ You can use either the `dnf` or the `yum` package manager to deploy Defender for
 
 > [!NOTE]
 > For your distribution and version, identify the closest entry for it (by major, then minor) under `https://packages.microsoft.com/config/sles/`.
->
-> SLES 16 is available on x86_64 and ARM64. For SLES 16, use `https://packages.microsoft.com/config/sles/16/[channel].repo`.
 
 1. In the following commands, replace *[distro]* and *[version]* with the information you've identified:
 
@@ -185,15 +176,19 @@ You can use either the `dnf` or the `yum` package manager to deploy Defender for
    sudo zypper addrepo -c -f -n microsoft-prod https://packages.microsoft.com/config/sles/12/prod.repo
    ```
 
-2. Install the Microsoft GPG public key.
-
    For SLES 16:
+
+   ```bash
+   sudo zypper addrepo -c -f -n microsoft-prod https://packages.microsoft.com/config/sles/16/prod.repo
+   ```
+
+2. Install the Microsoft GPG public key. For SLES 16, use:
 
    ```bash
    sudo rpm --import https://packages.microsoft.com/keys/microsoft-2025.asc
    ```
 
-   For SLES 15 and earlier:
+   For other versions, use:
 
    ```bash
    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
@@ -320,23 +315,28 @@ You can use either the `dnf` or the `yum` package manager to deploy Defender for
 ### Azure Linux
 
 > [!IMPORTANT]
-> Azure Linux 4.0 packages are currently available only from the `insiders-slow` channel. The repository is architecture-specific and is available for x86_64 and ARM64.
+> Azure Linux 4.0 packages are currently available only from the *insiders-slow* channel.
 
-Configure the Azure Linux 4.0 repository:
+1. Identify the system architecture and configure the repository:
 
-```bash
-architecture=$(uname -m)
-repo_name="azurelinux-4.0-beta-microsoft-${architecture}"
-sudo tee "/etc/yum.repos.d/${repo_name}.repo" > /dev/null <<EOF
-[${repo_name}]
-name=Azure Linux 4.0 Beta Microsoft (insiders-slow)
-baseurl=https://packages.microsoft.com/yumrepos/${repo_name}/
-enabled=1
-gpgcheck=1
-gpgkey=https://packages.microsoft.com/keys/microsoft.asc
-EOF
-sudo dnf makecache
-```
+   ```bash
+   architecture=$(uname -m)
+   repo_name="azurelinux-4.0-beta-microsoft-${architecture}"
+   sudo tee "/etc/yum.repos.d/${repo_name}.repo" > /dev/null <<EOF
+   [${repo_name}]
+   name=Azure Linux 4.0 Beta Microsoft
+   baseurl=https://packages.microsoft.com/yumrepos/${repo_name}/
+   enabled=1
+   gpgcheck=1
+   gpgkey=https://packages.microsoft.com/keys/microsoft.asc
+   EOF
+   ```
+
+2. Update the repository metadata:
+
+   ```bash
+   sudo dnf makecache
+   ```
 
 ## Preinstall setup for custom location installation
 
@@ -349,7 +349,7 @@ For details on installing to a custom location, refer: [Enabling deployment of D
 
 Use the commands in the following sections to install Defender for Endpoint on your Linux distribution.
 
-### RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux, Rocky, and Alma)
+### RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)
 
 ```bash
 sudo dnf install mdatp
