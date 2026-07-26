@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 
 # Simulate alerts for SQL servers on machines
 
-Microsoft Defender for Cloud provides a SQL simulated alert feature that helps organizations and security teams validate deployment and test the preparedness of security teams detection, response, and automation workflows without creating actual security risks. 
+Microsoft Defender for Cloud provides a SQL alert simulation feature that helps organizations and security teams validate deployments and test detection, response, and automation workflows without creating actual security risks.
 
 The simulation injects telemetry records on target machines (Azure Virtual Machines (VMs) or Arc-connected machines) through a custom script extension named `Sql-SimulateAlert`. The simulated alerts include full runtime context such as host, SQL instance, database, and process information, so you can validate your end-to-end security response flows. This process is safe and non-intrusive, ensuring your resources remain secure.
 
@@ -29,7 +29,7 @@ The simulation runs locally on the machine through the Custom Script Extension w
 - [Enable SQL Servers on Machines plan for Defender for Databases](defender-for-sql-usage.md).
 - [Ensure that the target machine, whether a SQL VM or Arc‑connected machine, is successfully protected](verify-machine-protection.md).
 - Must have the following role and permission: 
-    - **Create an ARM deployment and to write VM extensions**: Security Admin or Contributor in the target subscription.
+    - **Create an ARM deployment and write VM extensions**: Security Admin or Contributor in the target subscription.
     - Contributor permission and Resource Policy contributor to the resource `Microsoft.Compute/virtualMachines/write` and `Microsoft.Resources/deployments/*`.
 - The SQL Server instance must be configured to allow SQL Authentication for simulation scenarios that require a username and password (some simulation types accept user credentials). 
 
@@ -54,9 +54,9 @@ The `SqlAlertSimulationClient` extracts template parameters from the target reso
 
 1. Select **Security** > **Microsoft Defender for Cloud**.  
 
-1. Select **Simulate alert**.
+1. Select the **Security Alerts** tab, and then select **Simulate Alerts**.
 
-    :::image type="content" source="media/simulate-alerts-sql-machines/simulate-alert.png" alt-text="Screenshot that shows where the simulate alert button is located." lightbox="media/simulate-alerts-sql-machines/simulate-alert.png":::
+    :::image type="content" source="media/simulate-alerts-sql-machines/simulate-sql-alert.png" alt-text="Screenshot of the Microsoft Defender for SQL page with the Security Alerts tab and Simulate Alerts button highlighted." lightbox="media/simulate-alerts-sql-machines/simulate-sql-alert.png":::
 
 1. Select an alert type.
 
@@ -64,7 +64,7 @@ The `SqlAlertSimulationClient` extracts template parameters from the target reso
 
 1. Enter the required information for the selected alert type. For example, username and password for authentication attacks.
 
-1. Select **Simulate Alert**.
+1. Select **Simulate Alerts**.
 
 The alert appears after a few minutes and you can use it to validate your security monitoring setup.
 
@@ -80,10 +80,12 @@ After you simulate an alert, verify that the alert is generated.
 
 1. Select **Security** > **Microsoft Defender for Cloud**.
 
+1. Select the **Security Alerts** tab.
+
 1. Select **Check for alerts on this resource in Microsoft Defender for Cloud**.
 
-    :::image type="content" source="media/simulate-alerts-sql-machines/check-alerts.png" alt-text="Screenshot that shows where to locate the Check for alerts on this resource in Microsoft Defender for Cloud button is located." lightbox="media/simulate-alerts-sql-machines/check-alerts.png":::
-
+    :::image type="content" source="media/simulate-alerts-sql-machines/check-resource-alerts-in-defender-for-cloud.png" alt-text="Screenshot of the Microsoft Defender for SQL page with the Security Alerts tab and the link to check the resource's alerts in Defender for Cloud highlighted." lightbox="media/simulate-alerts-sql-machines/check-resource-alerts-in-defender-for-cloud.png":::
+   
 Verify that the simulated alert appears in the list of alerts for the resource and [manage and respond to the security alert](manage-respond-alerts.md).
 
 ## Next step
