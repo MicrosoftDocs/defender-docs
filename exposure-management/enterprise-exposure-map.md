@@ -2,6 +2,8 @@
 title: Explore with the attack surface map in Microsoft Security Exposure Management
 description: Learn how to use the attack surface map in Microsoft Security Exposure Management.
 ms.topic: overview
+ms.author: dlanger
+author: dlanger
 ms.date: 09/09/2025
 
 ---
@@ -20,7 +22,7 @@ To visualize exposure data, use the attack surface map in [Microsoft Security Ex
 1. In the device inventory, select a device.
 1. Select **View Map**.
 
-You can also search for an asset from **Attack surface -> Map**, from **Identities**, or from the **Overview** dashboard.
+You can also search for an asset from **Attack surface > Map**, from **Identities**, or from the **Overview** dashboard.
 
 ## Explore the map
 
@@ -33,7 +35,7 @@ The exposure map gives you visibility into asset connections.
     - **Hovering**: Hover over nodes and edges to get additional information.
     - **Explore assets and their edges**. To explore assets and edge, select the plus sign. Or select the option to explore connected assets from the contextual menu.
     - **Asset details**: To view details, select the asset icon.
-    - **Focus on asset**: Provides a way to refocus the graph visualization on the specific node you want to explore, similar to the **Graph** view when selecting an individual [attack path](review-attack-paths.md). The Cloud attack paths focus on real, externally-driven and exploitable threats rather than broad potential attack path scenarios.
+    - **Focus on asset**: Provides a way to refocus the graph visualization on the specific node you want to explore, similar to the **Graph** view when selecting an individual [attack path](work-attack-paths-overview.md). The Cloud attack paths focus on real, externally-driven and exploitable threats rather than broad potential attack path scenarios.
     - **Search**: Helps you to discover items by node type. By selecting **all results**, search the particular type for specific results. You can also filter your search by devices, identity, or cloud assets from the initial screen.
     - **Discovery source**: Use the layer option to show or hide the origin of the data directly on the attack surface map.
 

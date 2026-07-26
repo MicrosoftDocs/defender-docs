@@ -5,7 +5,7 @@ ms.topic: reference
 ms.date: 07/01/2026
 ---
 
-# Risk Evaluation Framework changelog
+# Risk evaluation framework changelog
 
 The Risk Evaluation Framework (REF) changelog documents MSEM-initiated changes that affect how security risk is evaluated in your environment. Changes reflect updates to **inputs and components** of the REF - such as scope, weights, and coverage - not the underlying scoring formula.
 

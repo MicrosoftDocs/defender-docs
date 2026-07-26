@@ -1,7 +1,9 @@
 ---
-title: Working with the data connectors in Microsoft Security Exposure Management
+title: Getting value from your data connectors in Microsoft Security Exposure Management
 description: Learn about using the data connectors in Microsoft Security Exposure Management.
 ms.topic: overview
+ms.author: dlanger
+author: dlanger
 ms.date: 09/21/2025
 ---
 

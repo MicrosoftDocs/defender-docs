@@ -2,6 +2,8 @@
 title: Overview of attack surface management in Microsoft Security Exposure Management
 description: Learn about attack surface management in Microsoft Security Exposure Management. s
 ms.topic: overview
+ms.author: dlanger
+author: dlanger
 ms.date: 10/26/2025
 ---
 
@@ -47,7 +49,7 @@ For example, you can check whether a particular asset has unwanted connections a
 
 ## Next steps
 
+- Explore the [attack surface map](enterprise-exposure-map.md).
+- [Work with attack paths](work-attack-paths-overview.md).
 - Review [enterprise exposure schemas and operators](schemas-operators.md).
 - [Query the enterprise exposure graph](query-enterprise-exposure-graph.md).
-- Explore the [attack surface map](enterprise-exposure-map.md).
-- Read the blog [Microsoft Security Exposure Management Graph: unveiling the power](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-security-exposure-management-graph-unveiling-the-power/ba-p/4148546).

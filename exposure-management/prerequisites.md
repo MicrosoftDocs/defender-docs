@@ -2,8 +2,11 @@
 title: Prerequisites and support in Microsoft Security Exposure Management
 description: Review the prerequisites for Microsoft Security Exposure Management.
 ms.topic: overview
-ms.date: 07/30/2025
+ms.author: dlanger
+author: dlanger
+ms.date: 06/18/2026
 ms.custom: sfi-ga-nochange
+ai-usage: ai-assisted
 
 ---
 
@@ -23,10 +26,20 @@ Microsoft Security Exposure Management features are available with the following
 - Microsoft Defender suite licenses
 - Other qualifying licenses as specified in the integration and licensing documentation
 
+### Environmental requirements
+
+The following products must be enabled to get full value from the dashboard:
+
+- **Defender for Cloud** with CSPM (Cloud Security Posture Management) capabilities enabled.
+- **Microsoft Defender Vulnerability Management (MDVM)** — standalone or as part of Defender for Endpoint P2.
+
 ### External data connectors (Preview)
 External data connectors are currently in public preview with separate consumption-based pricing. During the preview phase, use of data connectors is free. Once generally available, there will be consumption-based costs for each non-Microsoft data connector based on the number of assets retrieved from connected security tools.
 
 ### Regional and tenant requirements
+
+Microsoft Security Exposure Management is available in Public Cloud only. It's not available in national/sovereign clouds (US Gov, China Gov, or other sovereign clouds).
+
 All data is processed within the Microsoft Defender XDR portal infrastructure. Ensure your tenant meets the standard requirements for Defender portal access.
 
 ## Permissions

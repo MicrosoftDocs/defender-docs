@@ -1,7 +1,9 @@
 ---
-title: Integrate Palo Alto Prisma data connector in Microsoft Security Exposure Management
+title: Palo Alto Prisma data connector in Microsoft Security Exposure Management
 description: Learn how to integrate the Palo Alto Prisma data connector in Microsoft Security Exposure Management.
 ms.topic: overview
+ms.author: dlanger
+author: dlanger
 ms.date: 09/09/2025
 ---
 
