@@ -35,14 +35,12 @@ A successful deployment requires the completion of all of the following tasks:
   - [SLES and variants](#sles-and-variants-1)
   - [Ubuntu and Debian systems](#ubuntu-and-debian-systems)
   - [Mariner](#mariner)
-  - [Azure Linux](#azure-linux)
 - [Preinstall setup for custom location installation](#preinstall-setup-for-custom-location-installation)
 - [Application installation](#application-installation)
   - [RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)](#rhel-and-variants-centos-fedora-oracle-linux-amazon-linux-2-rocky-and-alma)
   - [SLES and variants](#sles-and-variants)
   - [Ubuntu and Debian systems](#ubuntu-and-debian-systems-1)
   - [Mariner](#mariner-1)
-  - [Azure Linux](#azure-linux-1)
 - [Download the onboarding package](#download-the-onboarding-package)
 - [Client configuration](#client-configuration)
 
@@ -312,32 +310,6 @@ You can use either the `dnf` or the `yum` package manager to deploy Defender for
    sudo dnf config-manager --enable mariner-official-extras-preview
    ```
 
-### Azure Linux
-
-> [!IMPORTANT]
-> Azure Linux 4.0 packages are currently available only from the *insiders-slow* channel.
-
-1. Identify the system architecture and configure the repository:
-
-   ```bash
-   architecture=$(uname -m)
-   repo_name="azurelinux-4.0-beta-microsoft-${architecture}"
-   sudo tee "/etc/yum.repos.d/${repo_name}.repo" > /dev/null <<EOF
-   [${repo_name}]
-   name=Azure Linux 4.0 Beta Microsoft
-   baseurl=https://packages.microsoft.com/yumrepos/${repo_name}/
-   enabled=1
-   gpgcheck=1
-   gpgkey=https://packages.microsoft.com/keys/microsoft.asc
-   EOF
-   ```
-
-2. Update the repository metadata:
-
-   ```bash
-   sudo dnf makecache
-   ```
-
 ## Preinstall setup for custom location installation
 
 These steps are applicable only if Defender is to be installed in a custom location.
@@ -451,12 +423,6 @@ sudo dnf install mdatp
 ```bash
 sudo dnf config-manager --disable mariner-official-extras-preview
 sudo dnf config-manager --enable mariner-official-extras
-```
-
-### Azure Linux
-
-```bash
-sudo dnf install mdatp
 ```
 
 ## Download the onboarding package
@@ -648,7 +614,7 @@ For manual uninstallation, execute the following command for your Linux distribu
 - `sudo dnf remove mdatp` or `sudo yum remove mdatp` (depending on your package manager) for RHEL and variants(CentOS and Oracle Linux).
 - `sudo zypper remove mdatp` for SLES and variants.
 - `sudo apt purge mdatp` for Ubuntu and Debian systems.
-- `sudo dnf remove mdatp` for Mariner and Azure Linux.
+- `sudo dnf remove mdatp` for Mariner
 
 ## Related content
 
