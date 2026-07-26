@@ -1,6 +1,6 @@
 ---
-title: Criticality Levels for Classifications
-description: Lists of all the current criticality levels for classifications in Microsoft Security Exposure Management.
+title: Predefined classifications in Microsoft Security Exposure Management
+description: Lists of all the current predefined classifications in Microsoft Security Exposure Management.
 ms.topic: reference
 ms.author: dlanger
 author: dlanger
@@ -10,7 +10,7 @@ ms.custom: sfi-ga-nochange
 ai-usage: ai-assisted
 ---
 
-# Predefined classifications - Microsoft Security Research
+# Predefined classifications
 
 Microsoft Security Exposure Management keeps your business-critical assets secure and available. Critical assets help the SOC team  prioritize efforts to maximize the impact on improving the organization's security posture. This article outlines the built-in critical asset classifiers provided by default, which are automatically updated by Microsoft Security Research teams.
 

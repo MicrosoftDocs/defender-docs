@@ -1,13 +1,16 @@
 ---
 title: Review security recommendations in Microsoft Security Exposure Management
 description: Learn how to review security recommendations in Microsoft Security Exposure Management.
-ms.topic: overview
+ms.topic: how-to
+ms.author: dlanger
+author: dlanger
 ms.date: 07/30/2025
+ai-usage: ai-assisted
 ---
 
 # Review security recommendations
 
-This article describes how to work with security recommendations in the new unified recommendations experience in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md).
+Work with security recommendations in the unified recommendations experience in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md).
 
 ## Before you start
 
@@ -87,8 +90,9 @@ For each view you will view the **Cloud secure score**, **Score history**, **Rec
 > - The old grouped recommendations still appear side by side with the new format for now, but they will eventually be deprecated.
 > - These recommendations are marked as Preview. This tag indicates that the recommendation is in an early state and does not affect Secure Score yet.
 > - Secure Score currently applies to the parent recommendation only, not to each individual item.
->
- **Tip**: If you see both formats or recommendations with a Preview tag, this is expected during the transition. The goal is to improve clarity and allow customers to act on specific recommendations more easily.
+
+> [!TIP]
+> If you see both formats or recommendations with a Preview tag, this is expected during the transition. The goal is to improve clarity and allow customers to act on specific recommendations more easily.
 
 With the integration of Defender for Cloud in the Defender portal, you can also access enhanced cloud recommendations through the unified interface:
 

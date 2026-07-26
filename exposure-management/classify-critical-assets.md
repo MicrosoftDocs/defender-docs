@@ -2,6 +2,8 @@
 title: Review and classify critical assets in Microsoft Security Exposure Management
 description: Learn how to manage critical assets in Microsoft Security Exposure Management.
 ms.topic: overview
+ms.author: dlanger
+author: dlanger
 ms.date: 09/08/2025
 ---
 
@@ -58,7 +60,7 @@ Review critical assets as follows.
    :::image type="content" source="./media/classify-critical-assets/critical-asset-management-window.png" alt-text="Screenshot of the Critical asset management window.":::
 
 > [!NOTE]
-> You can also see critical assets in **Assets > Devices** > **Classify critical asset**. In addition, you can view the **Critical Asset Protection** initiative in **Exposure insights -> Initiatives**.
+> You can also see critical assets in **Assets > Devices** > **Classify critical asset**. In addition, you can view the **Critical Asset Protection** initiative in **Exposure insights > Initiatives**.
 
 ## Request a new predefined classification
 

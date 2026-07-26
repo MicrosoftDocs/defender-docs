@@ -1,6 +1,6 @@
 ---
-title: Configuring the data connectors in Microsoft Security Exposure Management
-description: Learn about configuring the data connectors in Microsoft Security Exposure Management.
+title: Configure your data connectors in Microsoft Security Exposure Management
+description: Learn about Configure your data connectors in Microsoft Security Exposure Management.
 ms.topic: overview
 ms.date: 06/30/2026
 ms.custom: sfi-ga-nochange

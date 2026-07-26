@@ -1,8 +1,10 @@
 ---
-title: External Attack Surface Management Initiative
+title: External attack surface management initiative in Microsoft Security Exposure Management
 description: Learn how to get MDEASM insights into your corporate attack surface with the initiative in Microsoft Security Exposure Management.
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.author: dlanger
+author: dlanger
+ms.date: 05/27/2025
 ms.custom:
   - msecd-doc-authoring-1014
   - sfi-ga-nochange
@@ -11,9 +13,9 @@ ai-usage: ai-assisted
 ---
 
 
-# External Attack Surface Management initiative in Exposure Management
+# External attack surface management initiative
 
-Explore how to integrate Microsoft Defender External Attack Surface Management (MDEASM) with Microsoft Security Exposure Management (MSEM) to enhance visibility and control over your organization's external exposures. By connecting MDEASM insights to MSEM using the External Attack Surface Management initiative, you can assess the risk associated with your organization's or vendor's external attack surface and manage your security posture more effectively within the Exposure Management portal.
+Explore how to integrate Microsoft Defender External Attack Surface Management (MDEASM) with Microsoft Security Exposure Management (MSEM) to enhance visibility and control over your organization's external exposures. By connecting MDEASM insights to MSEM using the External attack surface management initiative in Microsoft Security Exposure Management, you can assess the risk associated with your organization's or vendor's external attack surface and manage your security posture more effectively within the Exposure Management portal.
 
 There are two ways to use this initiative:
 - **Pre-built footprint**: Provides high-level insights using a predefined set of external assets, without requiring a full MDEASM subscription.

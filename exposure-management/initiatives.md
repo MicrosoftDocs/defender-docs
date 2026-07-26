@@ -1,11 +1,13 @@
 ---
-title: Review security initiatives in Security Exposure Management
+title: Review security initiatives in Microsoft Security Exposure Management
 description: Learn how to effectively manage and track security initiatives using Microsoft Security Exposure Management to improve your organization's security posture.
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to understand and manage security initiatives so that I can improve my organization's security posture.
 ms.topic: how-to
-ms.date: 06/15/2026
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.author: dlanger
+author: dlanger
+ms.date: 07/30/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Review security initiatives
@@ -30,30 +32,30 @@ The initiatives page provides detailed insights into your security initiatives a
 
 1. Navigate to the [Microsoft Defender portal](https://security.microsoft.com/).
 
-2. From the Exposure management section on the navigation bar, select **Exposure insights -> Initiatives** to open the [Exposure insights initiatives](https://security.microsoft.com/exposure-initiatives) page.
+1. From the Exposure management section on the navigation bar, select **Exposure insights -> Initiatives** to open the [Exposure insights initiatives](https://security.microsoft.com/exposure-initiatives) page.
 
     :::image type="content" source="./media/initiatives/initiatives-window.png" alt-text="Screenshot of the Security Exposure Management Initiatives window.":::
 
-3. Use the **Filter by device groups** positioned at the top right corner to refine the filter.
+1. Use the **Filter by device groups** positioned at the top right corner to refine the filter.
 
-:::image type="content" source="media/initiatives/filter-by-dg.png" alt-text="Screenshot of device group filter":::
+    :::image type="content" source="media/initiatives/filter-by-dg.png" alt-text="Screenshot of device group filter":::
 
-4. Choose the device groups relevant for you, and the initiatives data are recalculated (only when related to Endpoints data).
+1. Choose the device groups relevant for you, and the initiatives data are recalculated (only when related to Endpoints data).
 
-:::image type="content" source="media/initiatives/filter-by-dg-pane.png" alt-text="Screenshot of the filter by device groups side pane.":::
+    :::image type="content" source="media/initiatives/filter-by-dg-pane.png" alt-text="Screenshot of the filter by device groups side pane.":::
 
-5. At the top of the initiatives page, review the highlighted key initiatives by scrolling and drilling down per your needs.
+1. Review the initiatives listed on the page by scrolling and drilling down per your needs.
 
-6. To set an initiative to appear in the top initiative bar in the dashboard or on the initiatives page, select the **star** icon in the initiatives window or **Mark as favorite** in the individual initiative.
+1. To mark an initiative as a favorite on the initiatives page, select the **star** icon in the initiatives window or **Mark as favorite** in the individual initiative.
 
-7. You can review the following information for all initiatives:
+1. You can review the following information for all initiatives:
     - **14 day change trend graph** highlighting how the initiative score changes over the past 14 days
     - **Initiative name**
-    - **Favorite** indicator (toggle on/off) to display in the key initiatives banner
+    - **Favorite** indicator (toggle on/off)
     - **Current score** of the initiative
     - **Programs** or workloads contributing to or required by this initiative
 
-8. Select an initiative to open the small overview and then select **Open initiative page** to review or remediate issues. The initiative page includes additional information including:
+1. Select an initiative to open the small overview and then select **Open initiative page** to review or remediate issues. The initiative page includes additional information including:
     - Your target score for the initiative
     - A means to set a custom target score appropriate to your organization's needs
     - Description
@@ -62,7 +64,8 @@ The initiatives page provides detailed insights into your security initiatives a
     - A metric trends graph and drift change, if applicable.
     - History of score changes
     - Related threats
-:::image type="content" source="./media/initiatives/initiatives-ransomware.png" alt-text="Screenshot of the ransomware initiative.":::
+
+    :::image type="content" source="./media/initiatives/initiatives-ransomware.png" alt-text="Screenshot of the ransomware initiative.":::
 
 ## Set target score
 
@@ -102,9 +105,10 @@ Use the History view to examine how an initiative score changed over time:
 Use the following views to review initiative metrics and related recommendations:
 
 1. To review metrics associated with your initiative, select **Exposure insights -> Initiatives-> Security metrics**.
+
 1. Sort by heading, as needed.
 
-1. Select **Exposure insights -> Initiatives-> Security recommendations** to view recommendations related to your initiative.
+1. Select **Exposure insights > Initiatives >  Security recommendations** to view recommendations related to your initiative.
 
     You only see those recommendations that are *currently* applied to assets and active in Microsoft Secure Score or Microsoft Defender for Cloud.
 
@@ -113,6 +117,15 @@ Use the following views to review initiative metrics and related recommendations
 1. Select a recommendation, such as a *not compliant* one, and then select **Manage** to remediate the recommendation in the originating workload, such as Microsoft Defender Vulnerability Management.
 
     :::image type="content" source="media/initiatives/initiatives-security-recommendations.png" alt-text="Screenshot of the initiative's security recommendation tab.":::
+
+## Review security events
+
+Security events track initiative and metric score drops to help you understand how they affect your organization's security posture.
+
+1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Exposure management** > **Exposure insights** > **Events** to open the [Events](https://security.microsoft.com/exposure-events) page.
+1. Select the time range you need in the calendar drop-down.
+1. To filter by initiative score drop events or metric score drop events, select **Filter** or the score drop event quantity.
+1. Select a specific event to open it in **Initiatives** or **Metrics**.
 
 ## Next steps
 

@@ -1,13 +1,15 @@
 ---
-title: Security initiatives in Microsoft Security Exposure Management
-description: Catalog of security Initiatives in Microsoft Security Exposure Management.
+title: Security initiatives catalog in Microsoft Security Exposure Management
+description: Catalog of Security initiatives catalog in Microsoft Security Exposure Management.
 ms.topic: reference
+ms.author: dlanger
+author: dlanger
 ms.date: 05/26/2025
 ---
 
-# Security Initiatives
+# Security initiatives catalog
 
-This is a catalog of security initiatives in Microsoft Security Exposure Management. Each initiative is designed to help you manage and improve the security posture of your organization.
+This is a catalog of Security initiatives catalog in Microsoft Security Exposure Management. Each initiative is designed to help you manage and improve the security posture of your organization.
 
 ## Business Email Compromise - Financial fraud
 
