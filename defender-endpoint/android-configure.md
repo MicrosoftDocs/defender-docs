@@ -266,9 +266,6 @@ Use the following steps to configure the Device tags:
 ## Related content
 
 - [Overview of Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md)
-
 - [Configure Dynamic Preview Rings for Microsoft Defender on mobile](mobile-dynamic-preview-rings-configure.md)
-
+- [Android Mobile Threat Defense (MTD) Role for Microsoft Defender for Endpoint](android-mobile-threat-defense-role.md)
 - <a href="/intune/intune-service/protect/microsoft-defender-deploy-android" target="_blank" rel="noopener noreferrer">Microsoft Intune: Deploy and configure Microsoft Defender for Endpoint on Android</a>
-
-

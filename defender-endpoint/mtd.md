@@ -1,13 +1,13 @@
 ---
 title: Microsoft Defender for Endpoint - Mobile Threat Defense
 ms.reviewer: tdoucette, sunasing, denishdonga
-description: Overview of Mobile Threat Defense in Microsoft Defender for Endpoint
+description: Learn how the Microsoft Defender for Endpoint mobile threat defense solution protects Android and iOS devices against web, network, and app-based threats.
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-ms.date: 03/19/2026
+ms.date: 07/20/2026
 ms.collection:
 - m365-security
 - tier2
@@ -20,6 +20,9 @@ appliesto:
 # Microsoft Defender for Endpoint mobile threat defense on Android and iOS
 
 Microsoft Defender for Endpoint on Android and iOS is our **mobile threat defense (MTD)** solution. Companies are often proactive in protecting computers from vulnerabilities and attacks, but mobile devices often go unmonitored and unprotected. Although mobile platforms have some built-in protection (for example, app isolation and vetted consumer app stores), these platforms remain vulnerable to web-based or other sophisticated attacks. As more people use devices to access sensitive work information, it's imperative that companies deploy an MTD solution to protect devices and resources.
+
+> [!NOTE]
+> This overview covers the Microsoft Defender for Endpoint mobile threat defense solution. Don't confuse it with the Android Mobile Threat Defense (MTD) Role, which is an Android Enterprise platform role that you assign to Defender for Endpoint for additional platform-level protections. For more information, see [Android Mobile Threat Defense (MTD) Role for Microsoft Defender for Endpoint](android-mobile-threat-defense-role.md).
 
 Microsoft Defender for Endpoint on Android and iOS provides the following key capabilities:
 
@@ -165,6 +168,7 @@ Need help with deploying or configuring Defender for Endpoint on Android & iOS? 
 
 ## Resources
 
+- [Android Mobile Threat Defense (MTD) Role for Microsoft Defender for Endpoint](android-mobile-threat-defense-role.md)
 - [Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md)
 - [Microsoft Defender for Endpoint on iOS](microsoft-defender-endpoint-ios.md)
 - Stay informed about upcoming releases by reading our [announcements](https://aka.ms/mdeblog).
