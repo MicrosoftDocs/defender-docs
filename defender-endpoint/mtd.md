@@ -29,7 +29,7 @@ Microsoft Defender for Endpoint on Android and iOS provides the following key ca
 |Capability|Description|
 |---|---|
 |Web Protection|Anti-phishing, blocking unsafe network connections, and support for custom indicators for URLs and domains. (File and IP indicators aren't currently supported.)|
-|Malware Protection (Android-only)|Scanning for malicious apps and APK Files.|
+|Malware Protection (Android-only)|Scanning for malicious apps, APK files, and non-APK files, such as documents, archives, and scripts. For more information, see [Configure non-APK file scanning](android-configure.md#configure-non-apk-file-scanning).|
 |Jailbreak Detection (iOS-only)|Detection of jailbroken devices.|
 |Root Detection (Android - Preview)|Detection of rooted devices.|
 |Microsoft Defender Vulnerability Management (MDVM)|Vulnerability assessment of onboarded mobile devices. Includes OS and Apps vulnerabilities assessment for both Android and iOS. For more information, see [What is Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management).|
