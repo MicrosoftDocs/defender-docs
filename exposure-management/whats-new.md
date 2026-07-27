@@ -24,6 +24,15 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 
 ## July 2026
 
+### Codename MDASH - MAI-Augmented scan profile private preview
+
+The MAI-Augmented scan profile is now available in preview as part of Codename MDASH. The MAI-Augmented profile can be used when triggering a scan through the Defender CLI.  
+It includes MAI-Cyber-1-Flash, a new cyber-specialized model that extends the current agentic scanner in addition to the existing required models. 
+
+Security teams can choose this profile when triggering a scan from Defender CLI or continue using a scan profile based on the existing models.
+
+For more information, see [Scan with a scan profile (Preview)](defender-cli.md#scan-with-a-model-profile-preview).
+
 ### Codename MDASH - Agentic code scanner private preview
 
 Codename MDASH - Agentic code scanner is now available in private preview in Microsoft Security Exposure Management.
