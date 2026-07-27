@@ -1,16 +1,16 @@
 ---
-title: Manually link an account to an identity
-description: This article explains how to link or unlink accounts to and from identities in Microsoft Defender for Identity, including legacy, orphaned, or unused accounts.
-ms.date: 06/15/2026
+title: Manage related identities and accounts in Microsoft Defender for Identity
+description: Learn how to correlate accounts manually or with account correlation rules in Microsoft Defender for Identity, and unlink accounts that are no longer needed.
+ms.date: 07/23/2026
 ms.topic: how-to
 ms.service: microsoft-defender-for-identity
 ms.reviewer: Almog Omrad
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
-#customer intent: As a SOC analyst, I want to view all accounts linked to an identity so that I can gain a complete and accurate understanding of the identity's footprint across the organization, validate accounts correlated are correct, and remove any unused, legacy, or orphaned accounts from the identity.
+ms.custom: msecd-doc-authoring-1017
+#customer intent: As a SOC analyst, I want to correlate accounts manually or with rules so that I can get a complete view of an identity, validate correlated accounts, and remove unused, legacy, or orphaned accounts.
 ---
 
-# Manage related identities and accounts in Microsoft Defender for Identity 
+# Manage related identities and accounts in Microsoft Defender for Identity
 
 In enterprise environments, identities are often fragmented. A single user might have multiple accounts across systems, including personal, privileged, legacy, cloud-based, or orphaned accounts. These accounts can cover on-premises Active Directory, Microsoft Entra ID, or non-Microsoft identity providers such as Okta and Ping.
 
@@ -19,6 +19,11 @@ Fragmentation makes it difficult to maintain a unified view of identity across t
 - Correlate identity components across different systems.
 - Improve protection by creating a complete identity context.
 - Support investigations and response actions with unified identity views.
+
+You can correlate accounts in either of the following ways:
+
+- **Manual correlation**: Link individual accounts to an identity by using the procedures in this article.
+- **Rule-based correlation**: Use account correlation rules to automatically correlate accounts. In the Microsoft Defender portal, go to **Settings** > **Identities** > **Account Correlation Rules**. For details, see [Manage account correlation rules](custom-account-correlation-rules.md).
 
 For example:
 
@@ -36,7 +41,7 @@ For example:
   - `glaureano@contosolegacy.local`
 - **Accounts in multiple services**: A user might have a Microsoft Entra ID account, an Okta account, and a Ping account. Manually linking these accounts to the user's identity creates a consolidated view that supports identity-centric protection and investigation.
 
-Use the procedures in this article to manually link accounts to identities, and to manually unlink unused, legacy, or orphaned accounts from identities in Defender for Identity.
+Use the procedures in this article to manually link accounts to identities and to manually unlink unused, legacy, or orphaned accounts from identities in Defender for Identity.
 
 > [!NOTE]
 > As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate from the Identity inventory. Manual and policy-based identity correlations defined in the Identity inventory don't currently affect the following Defender for Cloud Apps features:
@@ -51,9 +56,6 @@ Use the procedures in this article to manually link accounts to identities, and 
 > - RBAC scoping
 >
 > The preceding features continue to use the Cloud Application Accounts inventory.
-
-> [!TIP]
-> To automatically correlate accounts using naming conventions, see [Create custom account correlation rules](custom-account-correlation-rules.md).
 
 ## Prerequisites
 
