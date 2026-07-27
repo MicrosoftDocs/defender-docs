@@ -31,7 +31,7 @@ It includes MAI-Cyber-1-Flash, a new cyber-specialized model that extends the cu
 
 Security teams can choose this profile when triggering a scan from Defender CLI or continue using a scan profile based on the existing models.
 
-For more information, see [Scan with a scan profile (Preview)](defender-cli.md#scan-with-a-model-profile-preview).
+For more information, see [Scan with a scan profile (Preview)](defender-cli.md#scan-with-a-scan-profile-preview).
 
 ### Codename MDASH - Agentic code scanner private preview
 
