@@ -160,8 +160,6 @@ items:
     items:
     - name: Manage related identities and accounts
       href: manage-related-identities-accounts.md
-    - name: Create custom account correlation rules
-      href: custom-account-correlation-rules.md
   - name: View and manage health issues
     href: health-alerts.md
   - name: Best practices for security testing
@@ -184,6 +182,8 @@ items:
       href: vpn-integration.md
     - name: Set entity tags
       href: entity-tags.md
+    - name: Account correlation rules
+      href: custom-account-correlation-rules.md
     - name: Configure detection exclusions
       href: exclusions.md
     - name: Email and syslog notifications
