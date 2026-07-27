@@ -18,32 +18,18 @@ To complete this setup, you need:
 
 - Authority to accept the codename MDASH terms and conditions on behalf of your organization during onboarding.
 
-- An Azure subscription and resource group in which to create a dedicated Microsoft Foundry resource for codename MDASH. For full details, see [Connect Microsoft Foundry](mdash-foundry-integration.md).
+- An Azure subscription and resource group in which to create a dedicated Microsoft Foundry resource used exclusively for codename MDASH. For full details, see [Connect Microsoft Foundry](mdash-foundry-integration.md).
 
 - Permission to deploy the models required. For list of models, see [Deploy the required models](mdash-foundry-integration.md#deploy-the-required-models).
-
-- A dedicated Foundry endpoint used exclusively for codename MDASH.
 
 - If the Foundry resource's networking is set to **Selected networks and private endpoints**, action is required to allow Codename MDASH access. For more information, see [Allow Codename MDASH to access your Microsoft Foundry resource](mdash-foundry-integration.md#allow-codename-mdash-to-access-your-microsoft-foundry-resource).
 
 - At least one of the following AI scanning paths. You can add the other later:
 
-  **Option 1 — Remote scan (GitHub connector, recommended).** For full details, see [Create a GitHub connector](create-github-connector.md). You need:
-  - Access to the Microsoft Defender portal with permission to create and manage connectors.
-    - To create and manage connectors, you need the **Global Administrator** or **Security Administrator** role in Microsoft Entra ID.
-  - **Owner** of the GitHub organization you want to connect.
-  - Cloud Security prepared in the tenant (**Cloud security** > **Overview** > **Prepare my tenant**).
-- If the target GitHub organization is already connected through the Azure portal's GitHub connector, see the note in [Create a GitHub connector](create-github-connector.md).  
-
-  **Option 2 — Defender CLI.** For full details, see [Defender CLI setup](defender-cli-authentication.md). You need:
-  - Azure CLI installed.
-  - The Microsoft Defender Code enterprise application installed in your tenant (automatic on E5 tenants; otherwise run the provided consent script).
-  - The Defender CLI binary for your platform (Windows, macOS, or Linux). For more information, see [Install Defender CLI](defender-cli.md).
-  - To handle onboarding for app-based (client secret) authentication: **Application Administrator** in Microsoft Entra ID and a **Global Administrator** available to grant admin consent.
-  - To handle onboarding for interactive authentication: **Security Administrator** in Microsoft Entra ID.
-  - Users who perform local interactive scans require the **Run scan (Manage)** permission.
-  - The **Upload results (Manage)** permission is required only for scenarios that involve uploading scan results.
-    
+  **Option 1 — Remote scan (GitHub connector, recommended).** For full details, see [Create a GitHub connector](create-github-connector.md).
+  
+  **Option 2 — Defender CLI.** For full details, see [Defender CLI setup](defender-cli-authentication.md). 
+  
 - If outbound traffic is restricted, allow the required domains. For more information, see [Allow list](ai-code-security-overview.md#allow-list).
 
 - Access to the [Microsoft Defender portal](https://security.microsoft.com) with permission to open **Exposure Management** and **Initiatives**.
