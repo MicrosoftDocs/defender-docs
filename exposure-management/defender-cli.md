@@ -63,15 +63,14 @@ defender.exe scan ai-scan submit <TARGET_SOURCE_DIRECTORY>
 
 This submits your code and **waits** for results. When it finishes, results are downloaded to the <TARGET_SOURCE_DIRECTORY> and are available in the [Microsoft Defender portal](https://security.microsoft.com).
 
-### Scan with a model profile (Preview)
+### Scan with a scan profile (Preview)
 
-A **model profile** selects which AI models run your scan. Two profiles are available:
-
+A **scan profile** selects which AI models run your scan. Two profiles are available:
 
 | Profile | Models | Use when |
 | -------- | -------- | -------- |
 | `gpt-general-profile` | GPT-5.4, GPT-5.3-Codex, GPT-5.4-Mini | General-purpose agentic code scanning (the baseline model set). |
-| `mai-augmented-profile` | GPT-5.4, GPT-5.3-Codex, GPT-5.4-Mini + MAI-Cyber-1-Flash | You want the baseline models augmented with the cyber-specialized MAI-Cyber-1-Flashmodel. |
+| `mai-augmented-profile` (preview)| GPT-5.4, GPT-5.3-Codex, GPT-5.4-Mini + MAI-Cyber-1-Flash | You want the baseline models augmented with the cyber-specialized MAI-Cyber-1-Flash model. |
 
 See available profiles and the current default:
 
@@ -136,4 +135,3 @@ defender.exe status cancel <JOB_ID>         # Cancel a running job
 - [Review terminal results](review-terminal-results.md)
 - [Review results in the Microsoft Defender portal](review-portal-results.md)
 - [Auto-fix agentic code vulnerabilities](auto-fix-ai-vulnerabilities.md)
-
