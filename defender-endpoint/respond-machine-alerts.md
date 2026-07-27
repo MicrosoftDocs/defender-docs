@@ -244,7 +244,7 @@ Once you have selected **Isolate device** on the device page, type a comment and
 
 <a id="isolate-device-automatic-attack-disruption"></a>
 
-## Isolate device - automatic attack disruption (Preview)
+## Isolate device - automatic attack disruption
 
 When a device in your organization is suspected to be compromised, Microsoft Defender for Endpoint can automatically isolate the device as part of [automatic attack disruption](/defender-xdr/automatic-attack-disruption). Automatic isolation helps reduce the risk of further impact on the organization, limit attacker lateral movement, and prevent impacts such as data exfiltration and ransomware propagation.
 
