@@ -1,7 +1,7 @@
 ---
 title: Submit files in Microsoft Defender for Endpoint
-description: Learn how to use the unified submissions feature in Microsoft Defender XDR to submit suspicious emails, URLs, email attachments, and files to Microsoft for scanning.
-ms.date: 06/17/2026
+description: Learn how to submit suspicious files and file hashes from Microsoft Defender for Endpoint to Microsoft for analysis using the unified submissions experience.
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint
 ms.service: defender-endpoint
@@ -12,7 +12,7 @@ ms.topic: how-to
 ms.collection:
 - m365-security
 - tier3
-ms.custom: FPFN, msecd-doc-authoring-1014
+ms.custom: FPFN, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 

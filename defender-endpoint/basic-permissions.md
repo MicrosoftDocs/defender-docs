@@ -7,14 +7,14 @@ ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - has-azure-ad-ps-ref
   - azure-ad-ref-level-one-done 
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -24,7 +24,7 @@ ai-usage: ai-assisted
 # Use basic permissions to access the portal
 
 
-This article explains how to set up basic permissions management in the Microsoft Defender portal, including how to assign full access or read-only access using Microsoft Graph PowerShell. If you want to use basic permissions management for the Microsoft Defender portal, keep in mind that permissions are set to either full access or read only. For granular control over permissions, [use role-based access control](rbac.md).
+This article explains how to set up basic permissions management in the Microsoft Defender portal, including how to assign full access or read-only access using Microsoft Graph PowerShell. Before you follow the steps in this article, make sure you complete the [prerequisites](#before-you-begin). If you want to use basic permissions management for the Microsoft Defender portal, keep in mind that permissions are set to either full access or read only. For granular control over permissions, [use role-based access control](rbac.md).
 
 ## Assign user access using Microsoft Graph PowerShell
 
@@ -80,7 +80,7 @@ Use the following steps to assign security roles:
   New-MgDirectoryRoleMemberByRef -DirectoryRoleId $Role.Id -BodyParameter $DirObject
   ```
 
-For more information, see [Add or remove group members using Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-groups-members-azure-portal).
+For information about managing Microsoft Entra group membership, see [Add or remove group members using Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-groups-members-azure-portal).
 
 
 ## Related articles
