@@ -316,6 +316,9 @@ To create an alert tuning rule from an alert details page, follow these steps:
 > The **alert title (Name)** is based on the **alert type (IoaDefinitionId)**, which decides the alert title. Two alerts that have the same alert type can change to a different alert title. 
 > The *Hide alert* feature is only available in Defender for Endpoint alerts.
 
+> [!NOTE]
+> Alert suppression is not compatible for custom detections. Make sure to fine-tune your custom detections to avoid false positives.
+
 After creating your alert tuning rule from an alert details page, in the **Successful rule creation** page that appears, add any of the alert-related IOCs as indicators to an *allow list* to prevent them from being blocked in the future. IOCs that are configured as part of the alert tuning rule are selected by default. For example:
 
 1. Add a file to the **Select evidence (IOC) to allow** list. By default, the file that triggered the alert is already selected.
