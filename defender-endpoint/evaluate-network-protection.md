@@ -12,11 +12,11 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 
 ai-usage: ai-assisted
 ---
@@ -57,7 +57,7 @@ To verify audit mode behavior, visit a simulated malicious site and confirm that
 
 ## Review network protection events in Windows Event Viewer
 
-To review apps that would have been blocked, open Event Viewer and filter for Event ID 1125 in the Microsoft-Windows-Windows Defender/Operational log. The following table lists all network protection events.
+To review blocked apps, open Event Viewer. Filter for Event ID 1125 in the Microsoft-Windows-Windows Defender/Operational log. The following table lists all network protection events.
 
 | Event ID | Provide/Source | Description |
 |---|---|---|
@@ -67,7 +67,7 @@ To review apps that would have been blocked, open Event Viewer and filter for Ev
 
 ### Troubleshooting Network Protection
 
-If network protection fails to detect, make sure that the following prerequisites are enabled:
+If network protection fails to detect malicious sites, make sure that the following prerequisites are enabled:
 
 1. Microsoft Defender Antivirus is the primary antivirus app (active mode)
 
