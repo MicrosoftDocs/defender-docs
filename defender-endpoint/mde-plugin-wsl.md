@@ -12,10 +12,10 @@ ms.collection:
 - m365-security
 - tier2
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - partner-contribution
   - sfi-image-nochange
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
@@ -23,12 +23,15 @@ ai-usage: ai-assisted
 ---
 # Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)
 
+This article explains how to install, configure, and troubleshoot the Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL) 2. The plug-in extends Defender for Endpoint visibility into WSL containers running on Windows 10 and Windows 11 devices that are onboarded to Microsoft Defender for Endpoint Plan 2.
 
 ## Overview
 
 Windows Subsystem for Linux (WSL) 2, which replaces the previous version of WSL (supported by Microsoft Defender for Endpoint without a plug-in), provides a Linux environment that is seamlessly integrated with Windows, yet is isolated using virtualization technology. The Defender for Endpoint for WSL plug-in enables Defender for Endpoint to provide more visibility into all running WSL containers by plugging into the isolated subsystem.
 
 ## Prerequisites
+
+Before you install the Defender for Endpoint WSL plug-in, make sure the following prerequisites are met:
 
 - WSL version `2.0.7.0` or later must be running with at least one active distro. Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than `2.0.7.0`, run `wsl --update --pre-release` to get the latest update.
 
@@ -60,7 +63,7 @@ Be aware of the following considerations before you start:
 
 ## Software components and installer file names
 
-Installer: `DefenderPlugin-x64-0.24.426.1.msi`. You can download it from the onboarding page in the [Microsoft Defender portal](https://security.microsoft.com). (Go to **Settings** > **Endpoints** > **Onboarding**.)
+Installer: `DefenderPlugin-x64-0.24.426.1.msi`. You can download the installer from the onboarding page in the [Microsoft Defender portal](https://security.microsoft.com). (Go to **Settings** > **Endpoints** > **Onboarding**.)
 
 Installation directories:
 
@@ -102,6 +105,8 @@ If your Windows Subsystem for Linux isn't installed yet, follow these steps:
 > Microsoft Defender for Endpoint update for plug-in for WSL [KB Update](https://support.microsoft.com/en-us/topic/microsoft-defender-for-endpoint-update-for-plug-in-for-wsl-9f4b2ddc-c47f-4c59-bd02-a3456c667966).
 
 ## Installation validation checklist
+
+Use the following checklist to verify that the plug-in installed correctly and is running as expected:
 
 1. After update or installation, wait for at least five minutes for the plug-in to fully initialize and write log output.
 
@@ -168,7 +173,7 @@ After installing the plug-in, the subsystem and all its running containers are o
 
    You can see all WSL instances in your environment with an active Defender for Endpoint plug-in for WSL. These instances represent all distributions running inside WSL on a given host. The hostname of a *device* matches that of the Windows host. However, it's represented as a Linux device.
 
-1. Open the device page. In the **Overview** pane, there's a link for where the device is hosted. The link enables you to understand that the device is running on a Windows host. You can then pivot to the Windows host for further investigation and/or response.
+1. Open the device page. In the **Overview** pane, the hosting link shows that the device is running on a Windows host. You can select this link to pivot to the Windows host for further investigation and/or response.
 
    :::image type="content" source="media/mdeplugin-wsl/wsl-ui-overview.png" alt-text="Screenshot showing device overview." lightbox="media/mdeplugin-wsl/wsl-ui-overview.png":::  
 
@@ -176,7 +181,7 @@ The timeline is populated, similar to Defender for Endpoint on Linux, with event
 
 ## Setting up custom tag for your WSL machine
 
-The plug-in onboards the WSL machine with the tag `WSL2`. Should you or your organization need a custom tag, please follow the steps outlined below:
+The plug-in onboards the WSL machine with the tag `WSL2`. If you or your organization need a custom tag, follow these steps to configure one:
 
 1. Open Registry Editor as an administrator.
 
@@ -312,13 +317,15 @@ If the connectivity test reports `invalid`, use the following checks to diagnose
 
 - If your machine has a proxy setup, run the command `healthCheck --extendedProxy`. This will provide information on which proxy(s) is set on your machine and whether these configurations are invalid for WSL defender.
 
-   ![Screenshot of the extended proxy health check output showing proxy configurations detected on the machine for WSL Defender](media/mde-plugin-wsl/extend-healthcheck-proxy-doc.png)
+   ![Screenshot of the healthCheck --extendedProxy command output showing proxy configurations detected on the machine for the WSL Defender plug-in.](media/mde-plugin-wsl/extend-healthcheck-proxy-doc.png)
   
-- If running `healthCheck --extendedProxy` does not resolve the issue, include the following configuration settings in the `.wslconfig` located in your `%UserProfile%` and restart WSL. Details about settings can be found in [WSL Settings](/windows/wsl/wsl-config#main-wsl-settings).
+- If running `healthCheck --extendedProxy` does not resolve the connectivity test failure, include the following configuration settings in the `.wslconfig` file located in your `%UserProfile%` and restart WSL. Details about settings can be found in [WSL Settings](/windows/wsl/wsl-config#main-wsl-settings).
 
    **In Windows 11**
 
-   ```
+   Add the following settings to your `.wslconfig` file to enable DNS tunneling and mirrored networking:
+
+   ```ini
 
    # Settings apply across all Linux distros running on WSL 2
    [wsl2]
@@ -330,7 +337,9 @@ If the connectivity test reports `invalid`, use the following checks to diagnose
 
    **In Windows 10**
 
-   ```bash
+   Add the following setting to your `.wslconfig` file to disable the DNS proxy:
+
+   ```ini
    # Settings apply across all Linux distros running on WSL 2
    [wsl2]
    
@@ -369,11 +378,13 @@ Collect the networking logs by following these steps:
 
 To collect diagnostic information for support, generate a support bundle using the following steps:
 
-1. If you run into any other challenges or issues, open Terminal, and run the following commands to generate a support bundle:
+1. If you run into any other challenges or issues, open Terminal. First, navigate to the Defender for Endpoint WSL plug-in tools directory, and then run the `healthcheck.exe` tool to generate a support bundle:
 
    ```powershell
    cd "%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools"
    ```
+
+   Then, run the following command to generate a support bundle that collects diagnostic information for troubleshooting:
 
    ```powershell
    .\healthcheck.exe --supportBundle 
@@ -397,19 +408,20 @@ Microsoft Defender Endpoint plug-in for WSL supports Linux distributions running
 
 1. Set the **Allow WSL1** setting to **Disabled**, to ensure that only WSL 2 distributions can be used.
 
-   Alternately, if you want to keep using WSL 1, or not use the Intune Policy, you can selectively associate your installed distributions to run on WSL 2, by running the command in PowerShell:
+   Alternately, if you want to keep using WSL 1, or not use the Intune Policy, you can selectively upgrade a specific installed distribution from WSL 1 to WSL 2 by running the following command in PowerShell:
 
    ```powershell
    wsl --set-version <YourDistroName> 2
    ```
 
-   To have WSL 2 as your default WSL version for new distributions to be installed in the system, run the following command in PowerShell:
+   To ensure that all future distributions are created with WSL 2 by default, run the following command in PowerShell to set WSL 2 as the default version:
 
    ```powershell
    wsl --set-default-version 2
    ```
 
-### Override Release ring
+<a name="override-release-ring"></a>
+### Override the release ring for the WSL plug-in
 
 You can override the default release ring for the plug-in by configuring a registry setting.
 

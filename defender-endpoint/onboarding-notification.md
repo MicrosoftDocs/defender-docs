@@ -10,11 +10,11 @@ ms.collection:
 - tier2
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 
 ai-usage: ai-assisted
 ---
@@ -38,6 +38,8 @@ You need to have access to:
 
 ## Create the notification flow
 
+Perform the following steps to create the notification flow in Power Automate:
+
 1. Go to the [Power Automate portal](https://make.powerautomate.com/) and sign in.
 
 1. Navigate to **My flows > New > Scheduled - from blank**.
@@ -52,7 +54,7 @@ You need to have access to:
 
    :::image type="content" source="media/build-flow.png" alt-text="The notification flow" lightbox="media/build-flow.png":::
 
-1. Select the + button to add a new action. The new action is an HTTP request to the Defender for Endpoint devices API. You can also replace it with the out-of-the-box **WDATP Connector** (action: **Machines - Get list of machines**).
+1. Select the + button to add a new action. This action adds an HTTP request to the Defender for Endpoint devices API. You can also replace it with the out-of-the-box **WDATP Connector** (action: **Machines - Get list of machines**).
 
    :::image type="content" source="media/recurrence-add.png" alt-text="The recurrence and add action" lightbox="media/recurrence-add.png":::
 
@@ -191,7 +193,7 @@ The following image is an example of an email notification.
 
 Use the following tips when configuring the notification flow:
 
-- You can filter here using lastSeen only:
+- In the device query, you can filter by using the lastSeen property only:
   - Every 60 min:
     - Take all devices last seen in the past seven days.
 
@@ -199,15 +201,15 @@ Use the following tips when configuring the notification flow:
   - If last seen property is on the one hour interval of [-7 days, -7days + 60 minutes] -> Alert for offboarding possibility.
   - If first seen is on the past hour -> Alert for onboarding.
 
-In this solution, you don't have duplicate alerts.
+With this filtering approach, duplicate alerts are not generated.
 
 There are tenants that have numerous devices. Getting all those devices might require paging.
 
 You can split the device lookup into two queries:
 
-1. For offboarding take only this interval using the OData $filter and only notify if the conditions are met.
+1. For offboarding, take only the one-hour interval of [-7 days, -7 days + 60 minutes] using the OData $filter and only notify if the conditions are met.
 
-1. Take all devices last seen in the past hour and check first seen property for them (if the first seen property is on the past hour, the last seen must be there too).
+1. Take all devices last seen in the past hour and check first seen property for them (if the first seen property is within the past hour, the last seen must also be within the same past-hour window).
 
 
 
