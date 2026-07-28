@@ -9,9 +9,9 @@ ms.localizationpriority: medium
 ms.collection: 
 - m365-security
 - tier1
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
@@ -64,14 +64,12 @@ FIPS compliant algorithms are only used in relation to departments and agencies 
 <a name="required-defender-vulnerability-management-user-permission"></a>
 ## Registration error: insufficient permissions to add a new agent
 
-Registration finished with an error: "It looks like you don't have sufficient permissions for adding a new agent. The required permission is 'Manage security settings in Defender'."
+Registration finished with an error: "It looks like you don't have sufficient permissions for adding a new agent. The required permission is 'Manage security settings in Defender'." Press any key to exit.
 
-Press any key to exit.
-
-To resolve this issue:
+To resolve this issue, take one of the following actions:
 
 - Ask your system administrator to assign you the required permissions.
-- Alternately, ask another relevant member to help you with the sign-in process by providing them with the sign-in code and link.
+- Ask another relevant member to help you with the sign-in process by providing them with the sign-in code and link.
 
 ## Registration process fails using provided link in the command line in registration process
 

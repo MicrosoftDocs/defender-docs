@@ -11,10 +11,10 @@ ms.collection:
 - m365-security
 - tier1
 ms.reviewer: pahuijbr
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Microsoft Defender for Endpoint streamlined connectivity URLs - US government environments (Preview)
@@ -30,6 +30,8 @@ This article includes a list of the streamlined connectivity URLs required to on
 Before using the streamlined connectivity URLs listed in this article, ensure your devices meet the required OS versions, have up-to-date antimalware platform and EDR sensor components, and are onboarded using a supported method. For full details, see the prerequisites for [streamlined connectivity](configure-device-connectivity.md#prerequisites).
 
 ### Notes
+
+The following notes describe device versions that still require legacy or expanded URL lists.
 
 - Devices running Defender for Endpoint delivered via the Microsoft Monitoring Agent (MMA, also known as the Log Analytics Agent - specifically, Windows 7 SP1, Windows 8.1, Windows Server 2008 R2 and those Windows Server 2012 R2, 2016 devices not upgraded to the modern unified solution) will continue using the associated legacy method. For the list of additional URLs, refer to the Windows 7, 8.1, 2008R2 (MMA) tab in [Onboard devices using streamlined connectivity for Microsoft Defender for Endpoint](configure-device-connectivity.md).
 
@@ -121,7 +123,7 @@ The following tables list the required streamlined connectivity endpoints for US
 <a name="client-processes"></a>
 ## Client processes that require network connectivity
 
-The following Microsoft Defender for Endpoint client processes generate network communications. Make sure that communications from each of these processes are not blocked.
+The following Microsoft Defender for Endpoint client processes generate network communications. Make sure that communications from each of these processes are not blocked. The included list identifies specific executable processes (such as `MsSense.exe` and `MsMpEng.exe`) that must be permitted through firewalls and proxies for Defender for Endpoint to function correctly.
 
 [!INCLUDE [Microsoft Defender for Endpoint processes](includes/streamlined-connectivity-processes.md)]
 
