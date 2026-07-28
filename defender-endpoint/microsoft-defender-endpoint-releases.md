@@ -29,6 +29,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|macOS |101.26062.0009  |July 2026 |- Release version: 20.126062.9.0<br>- Engine version: 1.1.26050.3000<br>- Signature version: 1.455.265.0 |[Release details and updates](#macos--july-2026--101260620009) |
 |Android |1.0.9107.0101|July 2026|- Build: 1.0.9107.0101<br>- Release: July 21, 2026|[Release details and updates](#android--july-2026--platform-1091070101)|
 |iOS |1.1.79080103|July 2026|- Build: 1.1.79080103<br>- Release: July 20, 2026|[Release details and updates](#ios--july-2026--platform-version-1179080103)|
 |Linux  |101.26052.0011  |July 2026 |- Release version: 30.126052.0011.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates](#linux--july-2026--101260520011) |
@@ -221,6 +222,21 @@ To share feedback, open Defender for Endpoint on macOS and go to **Help > Send f
 To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device.
 
 For known issues, see [macOS known issues](#macos-known-issues).
+
+### macOS | July-2026 | 101.26062.0009
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 20.126062.9.0   | 1.1.26050.3000 | 1.455.265.0       |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|----------------|
+| General      | Bug and performance fixes |
+| General      | Extend network diagnostics with `mdatp health --details network_configuration` |
 
 ### macOS | July-2026 | 101.26052.0016
 
