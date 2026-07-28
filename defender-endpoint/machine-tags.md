@@ -75,13 +75,15 @@ To add device tags using API, see [Add or remove device tags API](api/add-or-rem
 
 ### Add device tags using the portal
 
+To add tags to a device in the Defender portal, follow these steps:
+
 1. Select the device that you want to manage tags on. You can select or search for a device from any of the following views:
 
    - **Alerts queue** - Select the device name beside the device icon from the alerts queue.
    - **Devices inventory** - Select the device name from the list of devices.
    - **Search box** - Select Device from the drop-down menu and enter the device name.
 
-     You can also get to the alert page through the file and IP views.
+     You can also select a device from the file and IP address views.
 
 1. Select **Manage tags** from the row of Response actions.
 
@@ -98,7 +100,7 @@ Tags are added to the device view and are also reflected on the **Devices invent
 >
 > When you create a new tag, a list of existing tags is displayed. The list only shows tags created through the portal. Existing tags created from client devices aren't displayed.
 
-You can also delete tags from this view.
+You can also delete tags from the device page.
 
 :::image type="content" source="media/new-tag-label-display.png" alt-text="Adding tags on device2" lightbox="media/new-tag-label-display.png":::
 
