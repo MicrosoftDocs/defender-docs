@@ -9,9 +9,9 @@ ms.localizationpriority: medium
 ms.collection: 
 - m365-security
 - tier1
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -21,7 +21,9 @@ ai-usage: ai-assisted
 ---
 # Set up authenticated network scans in Microsoft Defender for Endpoint
 
-Authenticated network scans provide an agentless way to discover and assess network infrastructure devices, such as switches, routers, WLAN controllers, firewalls, and VPN gateways.
+## Overview
+
+Authenticated network scans provide an agentless way to discover and assess network infrastructure devices, such as switches, routers, WLAN controllers, firewalls, and VPN gateways. This article walks you through the prerequisites, scanner installation and registration, and configuration steps needed to set up authenticated network scans and view discovered devices in the device inventory.
 
 For more information, see [Authenticated network scans](device-discovery.md#authenticated-network-scans).
 
@@ -148,7 +150,7 @@ Each scanning device can support up to 1,500 successful IP addresses scan. For e
 
 If there are multiple IP address ranges/subnets to scan, the test scan results take several minutes to show up. A test scan is available for up to 1,024 addresses.
 
-When the results are displayed, you can choose which devices to include in the periodic scan. If you skip viewing the scan results, all configured IP addresses are added to the network device authenticated scan (regardless of the device's response). The scan results can also be exported.
+When the test scan results are displayed, you can choose which devices to include in the periodic scan. If you skip viewing the scan results, all configured IP addresses are added to the network device authenticated scan (regardless of the device's response). The scan results can also be exported.
 
 ## View network devices in the device inventory
 

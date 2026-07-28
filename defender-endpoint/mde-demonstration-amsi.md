@@ -10,9 +10,9 @@ ms.subservice: ngp
 ms.collection: 
 - m365-security
 ms.topic: how-to
-ms.date: 06/17/2026
+ms.date: 07/03/2026
 ms.custom:
-- msecd-doc-authoring-1014
+- msecd-doc-authoring-1016
 - partner-contribution
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -28,6 +28,8 @@ Microsoft Defender for Endpoint uses the [Antimalware Scan Interface (AMSI)](ams
 
 ## Prerequisites
 
+Before you begin, make sure the following prerequisites are met:
+
 - Microsoft Defender Antivirus (as primary) must be enabled, along with the following capabilities:
   - Real-Time Protection (RTP) 
   - Behavior Monitoring (BM)  
@@ -42,7 +44,7 @@ The following operating systems support this AMSI test scenario:
 
 ## Testing AMSI with Defender for Endpoint
 
-In this demonstration article, you can choose from three engines to test AMSI:
+In this article, you can choose from three engines to test AMSI:
 
 - PowerShell
 - VBScript
@@ -57,7 +59,7 @@ Perform the following steps to test AMSI by using PowerShell:
    ```powershell
    $testString = "AMSI Test Sample: " + "7e72c3ce-861b-4339-8740-0ac1484c1386"
    Invoke-Expression $testString
-   ```powershell
+   ```
    
 1. On your device, open PowerShell as an administrator.
 
@@ -144,7 +146,7 @@ The expected JavaScript output is as follows:
 
 ### Verifying the test results
 
-In your protection history, you should see the following information:
+In your protection history, the following sample output confirms that AMSI detected and blocked the test payload:
 
 
 ```text

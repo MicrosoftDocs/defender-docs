@@ -11,11 +11,11 @@ ms.collection:
 - m365-security
 - tier1
 ms.reviewer: pahuijbr
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Microsoft Defender for Endpoint standard connectivity URLs - US government
@@ -123,6 +123,8 @@ The following Defender for Endpoint-related client processes generate network co
 
 <a name="change-log"></a>
 ## Changelog
+
+The following table summarizes recent changes to this article.
 
 |Date|Change log|
 |---|---|
