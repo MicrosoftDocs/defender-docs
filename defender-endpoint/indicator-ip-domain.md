@@ -185,7 +185,7 @@ To create an indicator for IPs, URLs, or domains from the Microsoft Defender por
 1. Review the details in the **Summary** tab, then select **Save**.
 
 > [!IMPORTANT]
-> It can take up to 48 hours after a policy is created for a URL or IP address to be blocked on a device. In most cases, blocks take effect in under two hours.
+> After you create a policy for a URL or IP address, it can take up to 48 hours for the policy to take effect. In most cases, policy changes take effect in under two hours.
 
 <a name="related-articles"></a>
 ## Related content

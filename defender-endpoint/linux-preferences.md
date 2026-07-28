@@ -486,6 +486,7 @@ When you add or remove a filesystem from the unmonitored list, Microsoft validat
   - `ramfs`
   - `reiserfs`
   - `tmpfs`
+  - `udf`
   - `vfat`
   - `xfs`
 - By default, the following filesystems are unmonitored by RTP:

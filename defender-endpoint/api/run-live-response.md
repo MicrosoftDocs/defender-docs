@@ -166,7 +166,7 @@ Here's an example of the response.
 Possible values for each command status are "Created", "Completed", and "Failed".
 
 ```HTTP
-HTTP/1.1 200 Ok
+HTTP/1.1 201 Created
 ```
 
 Content-type: application/json

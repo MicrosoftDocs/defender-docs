@@ -26,10 +26,11 @@ For recent releases of Microsoft Defender for Endpoint, including build numbers,
 
 Learn more about [Preview features](/defender-xdr/preview).
 
-## July
+## July 2026
 
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
+|Release - macOS |Build 101.26062.0009 |GA |Release version 20.126062.9.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--july-2026--101260620009).|
 |Release - iOS |Build 1.1.78290102 |GA |Release version 1.1.78290102 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#ios--july-2026--platform-version-1178290102). |
 | Feature | [AI agent runtime protection updates](ai-agent-runtime-protection-overview.md) | Preview | AI agent runtime protection includes these enhancements:<br><br>- Vendor-supported agent event interfaces now work with standard platform and engine update channels, so no Beta channel configuration is required. Agent-native event inspection now supports Codex CLI and the GitHub Copilot app.<br>- Network inspection is now supported for agents that don't expose vendor-supported event interfaces, including OpenClaw and similar Node.js-based Claw agents.<br><br>For more information, see [AI agent runtime protection with Microsoft Defender for Endpoint](ai-agent-runtime-protection-overview.md). |
 |Release - macOS |Build 101.26052.0016 |GA |Release version 20.126052.16.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--july-2026--101260520016).|
