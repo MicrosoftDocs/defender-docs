@@ -10,6 +10,7 @@ ms.localizationpriority: medium
 ms.date: 07/03/2026
 ai-usage: ai-assisted
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
+ai-usage: ai-assisted
 ---
 
 # Microsoft Defender for Endpoint release notes
@@ -493,6 +494,16 @@ If an end user encounters a prompt for Defender for Endpoint on macOS processes 
 Defender for Endpoint on Linux is updated regularly. While security fixes are included as part of monthly releases, the fixes aren't always listed as a separate **Security Patch** item in these notes. If a release contains security-related updates, the updates are listed in this article in the specific version section.
 
 For detailed information on Microsoft security updates, see the [Microsoft Security Update Guide](https://msrc.microsoft.com/update-guide).
+
+> [!NOTE]
+>
+> Each Defender for Endpoint on Linux version expires automatically after nine months. Expired versions continue to receive security intelligence updates, but you should install the latest version to receive all available fixes and enhancements.
+>
+> To check your client expiration date, run the following command:
+>
+> `mdatp health --field product_expiration`
+>
+> The previous RHEL 6 exception for version `101.23082.0011` was time-bound through June 30, 2024 and is no longer active.
 
 
 > [!IMPORTANT]
