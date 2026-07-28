@@ -23,7 +23,7 @@ appliesto:
 # Deploy Defender for Endpoint prerelease builds on Android devices using Google Play preproduction tracks
 
 
-Learn how to setup a secure environment to safely test prerelease versions of Microsoft Defender for Endpoint on Android using Google Play preproduction tracks. This guide is useful for deploying prerelease builds or custom Defender for Endpoint .APK files to a limited number of users before fully deploying them to all users in your organization. 
+Learn how to setup a secure environment to safely test prerelease versions of Microsoft Defender for Endpoint on Android using Google Play preproduction tracks. This guide is useful for deploying prerelease builds or custom Defender for Endpoint Android Package Kit (APK) files to a limited number of users before fully deploying them to all users in your organization. 
 
 This article provides step-by-step instructions on how to set up your environment for prerelease testing or custom APK deployment. These steps are for Android devices that are onboarded to Microsoft Defender for Endpoint through the following methods:
 
