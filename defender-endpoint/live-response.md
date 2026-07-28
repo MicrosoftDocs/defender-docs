@@ -11,7 +11,7 @@ ms.collection:
 - mde-edr
 ms.topic: how-to
 ms.subservice: edr
-ms.date: 06/16/2026
+ms.date: 07/28/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 ai-usage: ai-assisted
@@ -204,6 +204,7 @@ For scenarios when you'd like get a file from a device you're investigating, you
 > - `getfile` limit: 3 GB
 > - `fileinfo` limit: 30 GB
 > - `library` limit: 250 MB
+> - `library` limit in US Government cloud environments: 5 MB (default). To request a higher limit, open a support ticket.
 
 ### Download a file in the background
 
