@@ -12,13 +12,13 @@ ms.collection:
 - mde-macos
 ms.topic: how-to
 ms.subservice: macos
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Configure and validate exclusions for Microsoft Defender for Endpoint on macOS
 
@@ -27,7 +27,7 @@ This article provides information on how to define exclusions that apply to on-d
 
 You can exclude certain files, folders, processes, and process-opened files from Defender for Endpoint on macOS scans. Exclusions can help avoid incorrect detections on files and software that are unique to your organization. Exclusions can also be useful for mitigating performance issues caused by Defender for Endpoint on macOS.
 
-To narrow down which process and/or path and/or extension you need to exclude, use [real-time-protection-statistics](mac-support-perf.md).
+To narrow down which process and/or path and/or extension you need to exclude, use [real-time protection statistics](mac-support-perf.md).
 
 > [!WARNING]
 > Defining exclusions lowers the protection offered by Defender for Endpoint on macOS. You should always evaluate the risks that are associated with implementing exclusions, and you should only exclude files that you're confident aren't malicious.
@@ -138,13 +138,15 @@ You can validate that your exclusion lists are working by using `curl` to downlo
 
 In the following Bash snippet, replace `test.txt` with a file that conforms to your exclusion rules. For example, if you have excluded the `.testing` extension, replace `test.txt` with `test.testing`. If you're testing a path, ensure that you run the command within that path.
 
+To download the standard EICAR test file and verify whether Defender detects it, run the following command:
+
 ```bash
 curl -o test.txt https://secure.eicar.org/eicar.com.txt
 ```
 
-If Defender for Endpoint on macOS reports malware, then the rule isn't working. If there's no report of malware, and the downloaded file exists, then the exclusion is working. You can open the file to confirm that the contents are the same as what is described on the [EICAR test file website](https://www.eicar.org/download-anti-malware-testfile/).
+If Defender for Endpoint on macOS reports malware, then the exclusion rule you are testing isn't working. If there's no report of malware, and the downloaded file exists, then the exclusion is working. You can open the file to confirm that the contents are the same as what is described on the [EICAR test file website](https://www.eicar.org/download-anti-malware-testfile/).
 
-If you don't have Internet access, you can create your own EICAR test file. Write the EICAR string to a new text file with the following Bash command:
+If you don't have Internet access, you can create the EICAR test file locally instead. Use the following Bash command to write the standard EICAR test string to a new text file:
 
 ```bash
 echo 'X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*' > test.txt
@@ -159,19 +161,19 @@ In addition to excluding certain content from being scanned, you can also config
 
 ### Allow a threat by name
 
-To add a threat name to the allowed list, execute the following command:
+To allow a specific detected threat by name so that Defender for Endpoint no longer blocks it, add the threat name to the allowed list by running the following command:
 
 ```bash
 mdatp threat allowed add --name [threat-name]
 ```
 
-To obtain the threat name associated with a detection on your device, run `mdatp threat list`:
+To find the exact threat name you need to allow, list all current detections on your device by running the following command:
 
 ```bash
 mdatp threat list
 ```
 
-For example, to add `EICAR-Test-File (not a virus)` (the threat name associated with the EICAR detection) to the allowed list, execute the following command:
+For example, to allow the EICAR test detection so that Defender for Endpoint no longer blocks it, add `EICAR-Test-File (not a virus)` to the allowed list by running the following command:
 
 ```bash
 mdatp threat allowed add --name "EICAR-Test-File (not a virus)"

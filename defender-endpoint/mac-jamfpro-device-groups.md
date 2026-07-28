@@ -12,12 +12,12 @@ ms.collection:
 - mde-macos
 ms.topic: how-to
 ms.subservice: macos
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Set up Microsoft Defender for Endpoint on macOS device groups in Jamf Pro
@@ -25,7 +25,9 @@ ms.custom: msecd-doc-authoring-1014
 > [!NOTE]
 > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
 
-Set up Jamf Pro device groups similar to Group Policy organizational units (OUs), Microsoft Configuration Manager device collections, and Intune device groups.
+## Create device groups in Jamf Pro
+
+This article explains how to create device groups in Jamf Pro for organizing macOS devices that run Microsoft Defender for Endpoint. Device groups let you target specific sets of machines when deploying Defender for Endpoint configurations and policies. Set up Jamf Pro device groups similar to Group Policy organizational units (OUs), Microsoft Configuration Manager device collections, and Intune device groups.
 
 1. Navigate to **Static Computer Groups**.
 
