@@ -68,9 +68,9 @@ The [ExposureGraphNodes](/defender-xdr/advanced-hunting-exposuregraphnodes-table
 > [!NOTE]
 > The following queries use the `ExposureGraphEdges` table to query the device associated with the AI agent. You can also use the `ExposureGraphNodes` table to query the actual agent.
 
-### Get an inventory of AI agents across endpoints
+### Get an inventory of local AI agents across devices
 
-This query lists all discovered local AI agents and the devices they run on:
+This query lists all discovered local AI agents, the devices they run on, and how widely each is deployed:
 
 ```kusto
 ExposureGraphEdges

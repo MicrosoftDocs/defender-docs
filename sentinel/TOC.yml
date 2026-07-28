@@ -65,8 +65,9 @@
       items:
         - name: Microsoft Sentinel platform deployment overview
           href: datalake/sentinel-lake-onboarding.md
-        - name: Onboard to data lake and graph from Defender portal
-          href: datalake/sentinel-lake-onboard-defender.md
+          items:
+          - name: Onboard to data lake and graph from Defender portal
+            href: datalake/sentinel-lake-onboard-defender.md
         - name: Onboard to data lake and graph from Microsoft Purview Insider Risk Management
           href: /purview/insider-risk-management-data-risk-graph?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json
         - name: Onboard to data lake and graph from Microsoft Purview Data Security Investigations
@@ -652,7 +653,7 @@
             href: datalake/sentinel-mcp-use-tool-security-copilot.md
           - name: Use Sentinel MCP tools in Copilot Studio
             href: datalake/sentinel-mcp-use-tool-copilot-studio.md
-          - name: Use Sentinel MCP tools in Microsoft Foundry
+          - name: Use Sentinel MCP tools in Microsoft Foundry (preview)
             href: datalake/sentinel-mcp-use-tool-azure-ai-foundry.md
           - name: Use Sentinel MCP tools in Visual Studio Code
             href: datalake/sentinel-mcp-use-tool-visual-studio-code.md
@@ -940,40 +941,57 @@
   items:
     - name: Microsoft Sentinel SIEM and platform solution introduction
       href: isv/sentinel-siem-platform-solution-introduction.md
-    - name: Microsoft Sentinel SIEM content development
+    - name: Microsoft Sentinel SIEM solutions
       items:
+      - name: Develop a SIEM solution for Microsoft Sentinel
+        href: isv/develop-siem-solutions-overview.md
+      - name: Microsoft Sentinel SIEM solution quality guidelines
+        href: isv/sentinel-siem-solution-quality-guidance.md
+      - name: Develop a SIEM solution for Microsoft Sentinel
+        href: isv/develop-siem-solutions-overview.md
       - name: Create custom connectors using AI agent in Microsoft Sentinel
         href: isv/create-custom-connector-builder-agent.md
         displayName: custom sentinel connector agent
-      - name: Creating codeless data connectors (CCF)
-        href: isv/create-codeless-connector.md
-      - name: Creating pull codeless data connectors with nested API polling
-        href: isv/custom-connector-nested-api-polling.md
-      - name: Creating push codeless data connectors (CCF)
+      - name: Pull codeless data connectiors (CCF)
+        items:
+        - name: Create a pull codeless connector for Microsoft Sentinel
+          href: isv/create-codeless-connector.md
+        - name: Create pull codeless data connectors with nested API polling
+          href: isv/custom-connector-nested-api-polling.md
+        - name: Azure Storage Blob data connector reference
+          href: data-connection-rules-reference-azure-storage.md
+          items:
+          - name: Enable network security for Azure Storage Blob data connector
+            href: enable-storage-network-security.md
+          - name: Troubleshoot Azure Storage Blob connector issues
+            href: azure-storage-blob-connector-troubleshoot.md  
+      - name: Create push codeless data connectors (CCF)
         href: isv/create-push-codeless-connector.md
-      - name: Creating analytics rules
+      - name: Create analytics rules
         href: isv/sentinel-analytic-rules-creation.md
-      - name: Creating hunting queries
+      - name: Create hunting queries
         href: isv/sentinel-hunting-rules-creation.md
-      - name: Creating summary rules
+      - name: Create summary rules
         href: isv/sentinel-summary-rules-creation.md
-      - name: Creating workbooks
+      - name: Create workbooks
         href: isv/sentinel-workbook-creation.md
-      - name: Creating playbooks
+      - name: Create playbooks
         href: isv/sentinel-playbook-creation.md
-    - name: Publish solutions
-      href: isv/publish-sentinel-solutions.md
-    - name: Sentinel SIEM solution lifecycle post publish
-      href: isv/sentinel-solutions-post-publish-tracking.md
-    - name: Managing Platform Solutions
-      href: manage-platform-solutions.md
-    - name: Platform solutions
+      - name: Create Parsers for Microsoft Sentinel Solutions
+        href: isv/sentinel-parsers-creation.md
+      - name: Publish SIEM solutions to Microsoft Sentinel
+        href: isv/publish-sentinel-solutions.md
+      - name: Sentinel SIEM solution lifecycle post publish
+        href: isv/sentinel-solutions-post-publish-tracking.md
+      - name: Manage Platform Solutions
+        href: manage-platform-solutions.md
+    - name: Microsoft Sentinel Platform content
       items:
         - name: Decide what platform solutions to build
           href: isv/which-platform-components-to-build.md
         - name: Platform solution quality guidelines
           href: isv/platform-solution-quality-guidance.md
-        - name: How to onboard to Microsoft Sentinel data lake
+        - name: How to onboard to the Microsoft Sentinel data lake
           href: isv/sentinel-data-lake-onboarding.md 
         - name: Ingest sample data into data lake
           href: isv/ingest-sample-data.md
@@ -1101,14 +1119,6 @@
           href: data-connector-connection-rules-reference.md
         - name: GCP data connectors API reference
           href: data-connection-rules-reference-gcp.md
-        - name: Azure Storage Blob data connectors
-          items:
-            - name: Azure Storage Blob data connector reference
-              href: data-connection-rules-reference-azure-storage.md
-            - name: Enable network security for Azure Storage Blob data connector
-              href: enable-storage-network-security.md
-            - name: Troubleshoot Azure Storage Blob connector issues
-              href: azure-storage-blob-connector-troubleshoot.md  
         - name: Sample API requests for creating Data Collection Rules (DCRs)
           href: api-dcr-reference.md
         - name: Microsoft Purview Information Protection reference
