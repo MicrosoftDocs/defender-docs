@@ -11,7 +11,7 @@ ms.collection:
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 06/17/2026
+ms.date: 07/28/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -23,7 +23,9 @@ ms.custom: msecd-doc-authoring-1014
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
-Before you onboard devices to Defender for Endpoint, make sure your network is configured to connect to the service, by allowing outbound connection and bypassings HTTPS inspection for the service URLs. The first step of the device onboarding process involves adding URLs to the allowed domains list if your proxy server or firewall rules prevent access to Defender for Endpoint. This article also includes information about proxy and firewall requirements for older versions of Windows client and Windows Server.
+Before you onboard devices to Defender for Endpoint, make sure your network is configured to connect to the service by allowing outbound connections and bypassing HTTPS inspection for the service URLs. The first step of the device onboarding process involves adding URLs to the allowed domains list if your proxy server or firewall rules prevent access to Defender for Endpoint. This article also includes information about proxy and firewall requirements for older versions of Windows client and Windows Server.
+
+[!INCLUDE [Streamlined connectivity SSL inspection requirement](./includes/streamlined-connectivity-no-ssl-inspection.md)]
 
 > [!NOTE]
 >
@@ -44,7 +46,7 @@ The URL lists in the following table specify the services and their associated U
 
 > [!IMPORTANT]
 >
-> - Connections are made from the context of the operating system or the Defender client services and as such, proxies shouldn't require authentication for these destinations or perform inspection (HTTPS scanning / SSL inspection) that breaks the secure channel.
+> - Connections are made from the context of the operating system or the Defender client services, so proxies shouldn't require authentication for these destinations. For streamlined connectivity, configure your proxy and network security policies to bypass inspection for `*.endpoint.security.microsoft.com` traffic. Don't inspect (HTTPS scanning / SSL inspection), intercept, or man-in-the-middle (MITM) proxy this traffic.
 > - Microsoft doesn't provide a proxy server. These URLs are accessible via the proxy server that you configure.
 > - In compliance with Defender for Endpoint security and compliance standards, your data is processed in accordance with your tenant's physical location. Based on client location, traffic may flow through any of the associated IP regions (which correspond to Azure datacenter regions). For more information, see [Data storage and privacy](data-storage-privacy.md).
  
