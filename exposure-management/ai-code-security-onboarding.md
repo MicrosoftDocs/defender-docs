@@ -36,14 +36,8 @@ To complete this setup, you need:
 
 - The Foundry project endpoint and API key from the Foundry setup step.
 
-- Defender unified RBAC permissions assigned. Grant each user only the permissions they need:
-  - **Run scan (Manage)** — required to trigger on-demand or CLI scans.
-  - **Upload results (Manage)** — required to upload CLI scan results to Defender.
-  - **Scan results (Read)** — required to view findings in the Defender portal and the initiative.
-  - **Scan results (Manage)** — required to triage, dismiss, or otherwise manage findings.
-    
-  For more information, see [Assign permissions to users using Defender RBAC](#assign-permissions-to-users-using-defender-rbac).
-  
+- Defender unified RBAC permissions assigned. For the required permissions and how to assign them, see [Assign permissions to users using Defender RBAC](#assign-permissions-to-users-using-defender-rbac).
+
 ## Assign permissions to users using Defender RBAC
 
 Use Microsoft Defender unified role-based access control (RBAC) to grant users the agentic code security permissions they need.
@@ -54,18 +48,23 @@ Use Microsoft Defender unified role-based access control (RBAC) to grant users t
 1. On the **Basics** tab, enter a role name and description.
 1. On **Choose permissions**, expand **Agentic code security**.
 1. Under **AI Scan Security**, set the permission levels you need:
-   - To allow users to run AI scans, select **Run scan (Manage)**.
-   - To allow users to upload AI scan results to Defender, select **Upload results (Manage)**.
-   - To allow users to read scan results, select **Scan results (Read)**.
-   - To allow users to manage scan results, select **Scan results (Manage)**.
-
+   - **Run scan (Manage)** — required to trigger on-demand or CLI scans.
+   
+   - **Upload results (Manage)** — required to upload CLI scan results to Defender.
+   
+   - **Scan results (Read)** — required to view findings in the Defender portal and the initiative.
+   
+   - **Scan results (Manage)** — required to triage, dismiss, or otherwise manage findings.
+   
    For more information, see [Security posture – AI code scan](/defender-xdr/custom-permissions-details#security-posture--ai-code-scan).
-
+   
 1. Review the permissions, and select **Apply**.
 1. Select **Next** to go to **Assign users and data sources**. Assign the users who should receive this role.
 1. Select **Add assignment**, and configure users, groups, and data sources.
+- Under **Data sources**, keep both **Microsoft Defender for Cloud** and **Microsoft Security Exposure Management** selected.
+    
 1. Select **Add**, review the assignments, and select **Next**.
-1. Review the role details, and select **Submit**.
+1. Review the role details and select **Submit**.
 
 For more information, see [Create custom roles with Microsoft Defender unified RBAC](/defender-xdr/create-custom-rbac-roles).
 

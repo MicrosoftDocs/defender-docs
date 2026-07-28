@@ -947,6 +947,8 @@
         displayName: custom sentinel connector agent
       - name: Creating codeless data connectors (CCF)
         href: isv/create-codeless-connector.md
+      - name: Creating pull codeless data connectors with nested API polling
+        href: isv/custom-connector-nested-api-polling.md
       - name: Creating push codeless data connectors (CCF)
         href: isv/create-push-codeless-connector.md
       - name: Creating analytics rules
