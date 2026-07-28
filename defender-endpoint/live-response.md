@@ -209,7 +209,7 @@ For scenarios when you'd like get a file from a device you're investigating, you
 
 To enable your security operations team to continue investigating an impacted device, files can now be downloaded in the background.
 
-- To download a file in the background, in the live response command console, type `download <file_path> &`.
+- To download a file in the background, in the live response command console, type `getfile <file_path> &`.
 - If you are waiting for a file to be downloaded, you can move it to the background by using Ctrl + Z.
 - To bring a file download to the foreground, in the live response command console, type `fg <command_id>`.
 
@@ -296,13 +296,13 @@ Use the following approaches to view and apply command parameters.
 - When using commands that have prerequisite commands, you can use flags:
 
   ```powershell
-  <command name> -type file -id <file path> - auto
+  <command name> -type file -id <file path> -auto
   ```
 
   or
 
   ```powershell
-  remediate file <file path> - auto`
+  remediate file <file path> -auto
   ```
 
 ## Supported output types
