@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: paulinbar
 ms.author: painbar
-ms.custom: nextgen, msecd-doc-authoring-1014
-ms.date: 06/17/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.reviewer: pahuijbr
 ms.subservice: ngp
 ms.topic: how-to
@@ -50,7 +50,7 @@ With the setting set to **Disabled** or not configured:
 > [!NOTE]
 > Hiding the interface will also prevent Microsoft Defender Antivirus notifications from appearing on the endpoint. Microsoft Defender for Endpoint notifications will still appear. You can also individually [configure the notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md)
 
-In earlier versions of Windows 10, the setting hides the Windows Defender client interface. If the user attempts to open the Windows Defender client interface, they'll receive a warning that says, "Your system administrator has restricted access to this app."
+In earlier versions of Windows 10, the **Enable headless UI mode** setting hides the Windows Defender client interface. If the user attempts to open the Windows Defender client interface, they'll receive a warning that says, "Your system administrator has restricted access to this app."
 
 :::image type="content" source="/defender/media/wdav-headless-mode-1607.png" alt-text="The warning message when headless mode is enabled in Windows 10, versions earlier than 1703" lightbox="/defender/media/wdav-headless-mode-1607.png":::
 
@@ -68,14 +68,14 @@ To hide the Microsoft Defender Antivirus interface by using Group Policy, perfor
 
 1. Double-click the **Enable headless UI mode** setting and set the option to **Enabled**. Select **OK**.
 
-See [Prevent users from locally modifying policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md) for additional policy settings that prevent users from modifying protection on their PCs.
+See [Prevent users from locally modifying policy settings](configure-local-policy-overrides-microsoft-defender-antivirus.md) for other Microsoft Defender Antivirus policy settings that prevent users from modifying protection on their PCs.
 
 ## Prevent users from pausing a scan
 
 You can prevent users from pausing scans, which can be helpful to ensure scheduled or on-demand scans aren't interrupted by users.
 
 > [!NOTE]
-> This setting is not supported on Windows 10.
+> The **Allow users to pause scan** setting is not supported on Windows 10.
 
 ### Use Group Policy to prevent users from pausing a scan
 
@@ -96,11 +96,13 @@ To prevent users from pausing a scan by using Group Policy, perform the followin
 
 The `UILockdown` parameter indicates whether to disable UI Lockdown mode. If you specify a value of `$True`, Microsoft Defender Antivirus disables UI Lockdown mode. If you specify a value of `$False` or don't specify a value, UI Lockdown mode is enabled.
 
-```
+```powershell
 PS C:\>Set-MpPreference -UILockdown $true
 ```
 
 ## Related articles
+
+For more information, see the following articles:
 
 - [Configure the notifications that appear on endpoints](configure-notifications-microsoft-defender-antivirus.md)
 - [Configure end-user interaction with Microsoft Defender Antivirus](configure-local-policy-overrides-microsoft-defender-antivirus.md)
