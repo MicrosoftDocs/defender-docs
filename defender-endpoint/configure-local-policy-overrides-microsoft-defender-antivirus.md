@@ -7,8 +7,8 @@ ms.localizationpriority: medium
 author: paulinbar
 ms.author: painbar
 ms.topic: how-to
-ms.custom: nextgen, msecd-doc-authoring-1014
-ms.date: 06/17/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.reviewer: yongrhee
 ms.collection:
 - m365-security
@@ -23,9 +23,9 @@ ai-usage: ai-assisted
 
 # Prevent or allow users to locally modify Microsoft Defender Antivirus policy settings
 
-By default, Microsoft Defender Antivirus settings deployed via a Group Policy Object (GPO) to the endpoints in your organization prevents users from locally changing the settings. You might want to allow some users to change these settings. For example, security researchers and threat investigators might need more control over individual settings on the endpoints they use.
+By default, Microsoft Defender Antivirus settings that you deploy through a Group Policy Object (GPO) prevent users from changing those settings locally. However, some users might need to change settings on their own devices. For example, security researchers and threat investigators often need more control over individual settings.
 
-This article explains how to configure local overrides and merge behavior of local and global exclusion lists.
+This article explains how to configure local overrides. It also covers how to merge local and global exclusion lists.
 
 > [!TIP]
 > If you're looking for antivirus-related information for other platforms, see the following articles:
@@ -46,7 +46,7 @@ This article explains how to configure local overrides and merge behavior of loc
 
 ## Configure local overrides for Microsoft Defender Antivirus settings
 
-The default setting for these local override policies is **Disabled**. When you change the policies to **Enabled**, users can make changes to the associated settings on their devices by using the following methods:
+By default, these local override policies are set to **Disabled**. If you set a policy to **Enabled**, users can change the related settings on their devices. They can use the following methods:
 
 - The [Windows Security](microsoft-defender-security-center-antivirus.md) app.
 - Local group policy settings.
@@ -80,7 +80,7 @@ To configure these settings:
    |Scan|Configure local setting override for scheduled scan time|[About scheduled scans](schedule-antivirus-scans.md)|
    |Scan|Configure local setting override for the scan type to use for a scheduled scan|[About scheduled scans](schedule-antivirus-scans.md)|
 
-1. In the details pane of the **Location** you selected, open the setting you want to configure as identified by the **Setting** value in the previous table (for example, **Configure local setting override for reporting to Microsoft MAPS**). You can use any of the following methods to open the setting:
+1. In the details pane for the **Location** you selected, find the setting listed in the **Setting** column of the previous table. For example, select **Configure local setting override for reporting to Microsoft MAPS**. Open the setting by using any of the following methods:
    - Double-click on the setting.
    - Right-click on the setting, and then select **Edit**
    - Select the setting, and then select **Action** \> **Edit**.
@@ -95,13 +95,13 @@ To configure these settings:
 
 ## Configure how locally and globally defined threat remediation and exclusions lists are merged
 
-You can also configure how locally defined lists are combined or merged with globally defined lists. This setting applies to the following features:
+You can also configure how locally defined lists are combined or merged with globally defined lists. The local administrator merge behavior setting applies to the following features:
 
 - [Exclusion lists](microsoft-defender-antivirus-exclusions-configure.md)
 - [Specified remediation lists](configure-remediation-microsoft-defender-antivirus.md)
 - [File and folder exclusions for attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules)
 
-By default, lists configured in local group policy and the Windows Security app are merged with lists defined by the appropriate GPO you deployed. Where there are conflicts, the globally defined list takes precedence. You can disable this setting to ensure that only globally defined lists (for example, from any deployed GPOs) are used.
+By default, lists set in local group policy and the Windows Security app merge with lists from your deployed GPO. When there are conflicts, the global list wins. You can turn off this setting so that only global lists (such as those from deployed GPOs) are used.
 
 ### Use Group Policy to disable local list merging
 
@@ -147,6 +147,8 @@ For more information about antivirus policy profiles available in Microsoft Intu
 
 
 ## Related articles
+
+See the following related articles:
 
 - [Microsoft Intune](/intune/intune-service/protect/advanced-threat-protection-configure)
 - [Microsoft Defender Antivirus in Windows](microsoft-defender-antivirus-windows.md)

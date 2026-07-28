@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Step 1: Configure your network environment for connectivity to the Defender for Endpoint service
@@ -68,7 +68,7 @@ To determine the exact destinations in use for your subscription within the Log 
 
 ## For devices without Internet access / without a proxy
 
-For devices with no direct internet connection, the use of a proxy solution is the recommended approach. In specific cases, you can use firewall or gateway devices that allow access to IP ranges. For more information, see: [Streamlined device connectivity](configure-device-connectivity.md).
+For devices with no direct internet connection, the use of a proxy solution is the recommended approach. For networks that only permit IP-based allowlists instead of domain-based rules, you can use firewall or gateway devices that allow access to IP ranges. For more information, see: [Streamlined device connectivity](configure-device-connectivity.md).
 
 > [!IMPORTANT]
 >
@@ -79,4 +79,4 @@ For devices with no direct internet connection, the use of a proxy solution is t
 <a name="next-step"></a>
 ## Next steps
 
-[STEP 2: Configure your devices to connect to the Defender for Endpoint service using a proxy](configure-proxy-internet.md).
+[Configure your devices to connect to the Defender for Endpoint service using a proxy](configure-proxy-internet.md).
