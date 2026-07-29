@@ -83,7 +83,7 @@ The following table describes memory requirements on the server running the Defe
 > [!IMPORTANT]
 > When running as a virtual machine, always allocate all memory to the virtual machine.
 
-Version 3 of the sensor prevents the sensor from overusing CPU or memory by limiting CPU utilization at 30%, and memory usage to 1.5 GB. However, if any other service uses substantial system resources, the domain controller might still experience performance strain.
+Version 3 of the sensor prevents the sensor from overusing CPU or memory by limiting CPU utilization at 30%, and memory usage to 1.5 GB. However, if any other service uses substantial system resources, the domain controller might still experience performance strain. If the sensor reaches the CPU limit, it throttles some event processing. If the sensor reaches the memory limit, the sensor service might restart.
 
 Refer to the [Defender for Identity Capacity Planning documentation](/defender-for-identity/deploy/capacity-planning) to determine whether your domain controller servers have enough resources for a Microsoft Defender for Identity sensor. 
 
