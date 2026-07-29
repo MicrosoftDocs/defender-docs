@@ -32,13 +32,13 @@ This table includes supported releases for all supported platforms in the past s
 |macOS |101.26062.0009  |July 2026 |- Release version: 20.126062.9.0<br>- Engine version: 1.1.26050.3000<br>- Signature version: 1.455.265.0 |[Release details and updates](#macos--july-2026--101260620009) |
 |Android |1.0.9107.0101|July 2026|- Build: 1.0.9107.0101<br>- Release: July 21, 2026|[Release details and updates](#android--july-2026--platform-1091070101)|
 |iOS |1.1.79080103|July 2026|- Build: 1.1.79080103<br>- Release: July 20, 2026|[Release details and updates](#ios--july-2026--platform-version-1179080103)|
-|Linux  |101.26052.0011  |July 2026 |- Release version: 30.126052.0011.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates](#linux--july-2026--101260520011) |
+|Linux  |101.26052.0012  |July 2026 |- Release version: 30.126052.0012.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates](#linux--july-2026--101260520012) |
 |Windows Antivirus |Platform 4.18.26060.3008 / Engine 1.1.26060.3008 |June 2026 |- Platform: 4.18.26060.3008<br>- Engine: 1.1.26060.3008<br>- Security intelligence: 1.455.25.0 |[Release details and updates](#windows-antivirus--june-2026--platform-418260603008--engine-11260603008) |
 |iOS |1.1.78290102|July 2026|- Build: 1.1.78290102<br>- Release: July 3, 2026|[Release details and updates](#ios--july-2026--platform-version-1178290102)|
-|Android |1.0.9029.0101|June 2026|- Build: 1.0.9029.0101<br>- Release: June 30, 2026|[Release details and updates](#android--june-2026--platform-1090290101)| 
+|Android |1.0.9029.0101|June 2026|- Build: 1.0.9029.0101<br>- Release: June 30, 2026|[Release details and updates](#android--june-2026--platform-1090290101)|
 |macOS |101.26042.0020  |June 2026 |- Release version: 20.126042.20.0<br>- Engine version: 1.1.26040.3000<br>- Signature version: 1.453.151.0 |[Release details and updates](#macos--june-2026--101260420020) |
 |Linux  |101.26042.0011  |June 2026 |- Release version: 30.126042.0011.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates](#linux--june-2026--101260420011). |
-|Android |1.0.9014.0101|June 2026|- Build: 1.0.9014.0101<br>- Release: June 19, 2026|[Release details and updates](#android--june-2026--platform-1090140101)| 
+|Android |1.0.9014.0101|June 2026|- Build: 1.0.9014.0101<br>- Release: June 19, 2026|[Release details and updates](#android--june-2026--platform-1090140101)|
 |iOS |1.1.78020101|June 2026|- Build: 1.1.78020101<br>- Release: June 11, 2026|[Release details and updates](#ios--june-2026--platform-version-1178020101)|
 |Android |1.0.9003.0101|June 2026|- Build: 1.0.9003.0101<br>- Release: June 8, 2026|[Release details and updates](#android--june-2026--platform-1090030101)|
 |iOS |1.1.77280101|June 2026|- Build: 1.1.77280101<br>- Release: June 1, 2026|[Release details and updates](#ios--june-2026--platform-version-1177280101)|
@@ -519,13 +519,13 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 [!INCLUDE [Linux 101.26012.0007 known issue](includes/linux-build-issue.md)]
 
-### Linux | July 2026 | 101.26052.0011
+### Linux | July 2026 | 101.26052.0012
 
 #### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
-|30.126052.0011.0 |1.1.26040.3001 |1.449.136.0 |
+|30.126052.0012.0 |1.1.26040.3001 |1.449.136.0 |
 
 #### Enhancements and features
 
@@ -534,6 +534,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 |Visibility |**Improved antivirus enforcement visibility.**<br> The `mdatp health` command now includes a new `antivirus_enforcement_level` field that shows whether antivirus is running in `real_time`, `passive`, `on_demand`, or `audit` mode. This helps administrators quickly verify device protection status without additional checks.|
 | Visibility |**More accurate and informative connectivity tests.**<br> Connectivity tests now validate the same update paths used for offline security intelligence updates on supported x64 and ARM64 platforms, and surface inline diagnostics (failure type, affected feature, proxy detection status) when a check fails. Fixed URL validation mismatches that could cause false failures.|
 |Bug fix |  FIPS-enabled RHEL 8/9 devices that failed to update to 101.26042.x will now install successfully. |
+|Bug fix |  Fixed an issue where WordPress Core installations were not reflected in the Linux device software inventory. |
 
 ### Linux | June 2026 | 101.26042.0011
 
