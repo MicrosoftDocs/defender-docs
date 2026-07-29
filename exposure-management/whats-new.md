@@ -28,7 +28,7 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 
 Expanding on the previously released Defender CLI support, the MAI-Augmented scan profile is now also available in preview for on-demand scans triggered from the Microsoft Defender portal. Security teams can select this profile when starting an on-demand scan from the Scans tab.
 
-For more information, see [Trigger an on-demand agentic scan - Microsoft Security Exposure Management | Microsoft Learn](/security-exposure-management/trigger-on-demand-scan).
+For more information, see [Trigger an on-demand agentic scan](/security-exposure-management/trigger-on-demand-scan).
 
 ### Codename MDASH - MAI-Augmented scan profile private preview
 
