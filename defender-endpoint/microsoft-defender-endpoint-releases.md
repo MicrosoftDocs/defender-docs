@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 ms.date: 07/03/2026
 ai-usage: ai-assisted
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
-ai-usage: ai-assisted
 ---
 
 # Microsoft Defender for Endpoint release notes
