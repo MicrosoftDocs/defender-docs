@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 ms.date: 07/03/2026
 ai-usage: ai-assisted
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
-ai-usage: ai-assisted
 ---
 
 # Microsoft Defender for Endpoint release notes
@@ -216,7 +215,7 @@ This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. 
 
 ## macOS releases
 
-Defender for Endpoint supports macOS version 15.0.1 or newer. macOS 11 (Big Sur) and 12 (Monterey) are no longer supported.
+Defender for Endpoint supports macOS version 14 (Sonoma) or newer. macOS 11 (Big Sur), 12 (Monterey), and 13 (Ventura) are no longer supported.
 
 To share feedback, open Defender for Endpoint on macOS and go to **Help > Send feedback**.
 

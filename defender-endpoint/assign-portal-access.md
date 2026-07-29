@@ -1,6 +1,6 @@
 ---
 title: Manage portal access permissions in Microsoft Defender for Endpoint
-description: Assign read and write or read only access to the Microsoft Defender for Endpoint portal.
+description: Compare basic permissions and role-based access control for Microsoft Defender for Endpoint portal access, and learn how to choose or switch between them.
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: painbar
@@ -10,11 +10,11 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 
 ai-usage: ai-assisted
 ---

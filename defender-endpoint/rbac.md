@@ -13,7 +13,7 @@ ms.date: 07/28/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 
 ai-usage: ai-assisted
 ---
@@ -54,7 +54,7 @@ To implement role-based access, you need to define admin roles, assign correspon
 
 ## Before you begin
 
-Before using RBAC, it's important that you understand the roles that can grant permissions and the consequences of turning on RBAC.
+Before using RBAC, it's important that you understand which Microsoft Entra roles can grant Defender for Endpoint permissions and the consequences of turning on RBAC.
 
 > [!WARNING]
 > Before enabling RBAC, it's important that you have an appropriate role, such as Security Administrator assigned in Microsoft Entra ID, and that you have your Microsoft Entra groups ready to reduce the risk of being locked out of the Microsoft Defender portal.

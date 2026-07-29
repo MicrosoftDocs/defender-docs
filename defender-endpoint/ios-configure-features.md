@@ -15,7 +15,7 @@ ms.date: 07/22/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1015
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 
 ai-usage: ai-assisted
 ---
@@ -39,7 +39,7 @@ By default, Defender for Endpoint on iOS includes and enables [web protection](w
 
 Defender for Endpoint on iOS uses a VPN in order to provide web protection. The VPN is local, and unlike traditional VPN, network traffic isn't sent outside the device.
 
-While enabled by default, there might be some cases that require you to disable VPN. For example, you want to run some apps that don't work when a VPN is configured. In such cases, you can choose to disable VPN from the app on the device by following these steps:
+While the Defender for Endpoint local VPN is enabled by default, there might be some cases that require you to disable it. For example, if you need to run apps that don't work when a VPN is configured, you can disable the Defender for Endpoint VPN on the device by following these steps:
 
 1. On your iOS device, open the **Settings** app, select **General** and then **VPN**.
 
@@ -54,7 +54,7 @@ While enabled by default, there might be some cases that require you to disable 
 
 ## Disable web protection
 
-Web protection is one of the key features of Defender for Endpoint and it requires a VPN to provide web protection. The VPN used is a local/loopback VPN and not a traditional VPN, however there are several reasons for which customers might not prefer the VPN. If you don't want to set up a VPN, you can disable web protection and deploy Defender for Endpoint without that feature. Other Defender for Endpoint features continues to work.
+Web protection is one of the key features of Defender for Endpoint and it requires a VPN to provide web protection. The VPN used is a local/loopback VPN and not a traditional VPN, however there are several reasons for which customers might not prefer the VPN. If you don't want to set up a VPN, you can disable web protection and deploy Defender for Endpoint without web protection. Other Defender for Endpoint features continues to work.
 
 The web protection configuration is available for both enrolled (MDM) devices and unenrolled (MAM) devices. For customers with MDM, admins can configure web protection through managed devices in the App Config. For customers without enrollment, using MAM, admins can configure the web protection through managed apps in the App Config.
 
@@ -162,14 +162,15 @@ Use the following procedure to set up MAM config for unenrolled devices for netw
 1. Review and create the configuration policy.
 
 > [!IMPORTANT]
-> Starting May 19, 2025, alerts in the Microsoft Defender portal are no longer generated when users connect to an open wireless network. Instead, this activity now generates events and are viewable in the device timeline. With this change, security operations center (SOC) analysts can now view connection/disconnection to open wireless networks as events. If auto-remediation key is enabled, old alerts are resolved automatically after the changes take effect.</br></br>
+> Starting May 19, 2025, alerts in the Microsoft Defender portal are no longer generated when users connect to an open wireless network. Instead, this activity now generates events and are viewable in the device timeline. With this change, security operations center (SOC) analysts can now view connection/disconnection to open wireless networks as events. If the `DefenderNetworkProtectionAutoRemediation` key is enabled, old alerts are resolved automatically after the changes take effect.</br></br>
 > Here are key points about this change:</br>
-> - For these changes to take effect, end-users must update to the latest version of Defender for Endpoint on iOS available on May 2025. Otherwise, the previous experience of generating alerts is still in place. If auto-remediation key is enabled by the admin, old alerts are resolved automatically after the changes take effect.</br>
+> - For the open-network alert-to-event change to take effect, end-users must update to the latest version of Defender for Endpoint on iOS available on May 2025. Otherwise, the previous experience of generating alerts is still in place. If auto-remediation key is enabled by the admin, old alerts are resolved automatically after the changes take effect.</br>
 > - When an end-user connects or disconnects to an open wireless network multiple times within the same 24-hour period, only one event each for the connection and disconnection is generated in that 24-hour period and sent to the device timeline.</br>
 > - Enable Users to Trust Networks: After the update, connection and disconnection events to open wireless networks, including to user trusted networks, are sent to the device timeline as events.</br>
 > - This change doesn't impact GCC customers. The previous experience of receiving alerts while connecting to open wireless networks still apply to them.
 
-## Coexistence of multiple VPN profiles
+<a name="coexistence-of-multiple-vpn-profiles"></a>
+## Understand coexistence of multiple VPN profiles on iOS
 
 Apple iOS doesn't support multiple device-wide VPNs to be active simultaneously. While multiple VPN profiles can exist on the device, only one VPN can be active at a time.
 
@@ -229,7 +230,7 @@ Use the following steps to enable privacy and not collect the domain name as par
 
 #### Configure end-user privacy controls in the Microsoft Defender app
 
-These controls help the end user to configure the information shared to their organization.
+The end-user privacy controls in the Microsoft Defender app help the end user configure the information shared to their organization.
 
 For supervised devices, end-user controls aren't visible. Your admin decides and controls the settings. However, for unsupervised devices, the control is displayed under the **Settings \> Privacy**.
 
@@ -245,7 +246,7 @@ Turning privacy controls on or off doesn't affect the device compliance check or
 
 ## Optional permissions
 
-Microsoft Defender for Endpoint on iOS enables optional permissions in the onboarding flow. Currently the permissions required by Defender for Endpoint are mandatory in the onboarding flow. With this feature, admins can deploy Defender for Endpoint on BYOD devices without enforcing the mandatory VPN permission during onboarding. End users can onboard the app without the mandatory permissions and can later review these permissions. This feature is currently present only for enrolled devices (MDM).
+Microsoft Defender for Endpoint on iOS enables optional permissions in the onboarding flow. Currently the permissions required by Defender for Endpoint are mandatory in the onboarding flow. With optional VPN permissions, admins can deploy Defender for Endpoint on BYOD devices without enforcing the mandatory VPN permission during onboarding. End users can onboard the app without the mandatory permissions and can later review these permissions. This feature is currently present only for enrolled devices (MDM).
 
 ### Configure optional permissions using MDM
 
@@ -278,7 +279,7 @@ End users install and open the Microsoft Defender app to start onboarding.
 
 ## Jailbreak detection
 
-Microsoft Defender for Endpoint has the capability of detecting unmanaged and managed devices that are jailbroken. These jailbreak checks are done periodically. If a device is detected as jailbroken, these events occur:
+Microsoft Defender for Endpoint has the capability of detecting unmanaged and managed devices that are jailbroken. These jailbreak checks are done periodically. If a device is detected as jailbroken, the following actions occur:
 
 - A high-risk alert is reported to the Microsoft Defender portal. If device Compliance and Conditional Access are set up based on device risk score, then the device is blocked from accessing corporate data.
 - User data on app is cleared. When user opens the app after jailbreaking, the VPN profile (only Defender for Endpoint loopback VPN Profile) also is deleted, and no web protection is offered. VPN profiles delivered by Intune aren't removed.
@@ -290,7 +291,7 @@ To protect corporate data from being accessed on jailbroken iOS devices, we reco
 > [!NOTE]
 > Jailbreak detection is a capability provided by Microsoft Defender for Endpoint on iOS. However, we recommend that you set up this policy as an extra layer of defense against jailbreak scenarios.
 
-Follow the steps below to create a compliance policy against jailbroken devices.
+To create a compliance policy against jailbroken devices, follow these steps:
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** \> **Compliance policies** \> **Create Policy**. Select "iOS/iPadOS" as platform and select **Create**.
 
@@ -390,6 +391,8 @@ The disable sign-out configuration is available for both enrolled (MDM) devices 
 
 ### Configure disable sign out using MDM
 
+Use the following steps to disable sign out for enrolled devices.
+
 **For enrolled devices (MDM)**
 
 1. In the Microsoft Intune admin center, go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
@@ -407,6 +410,8 @@ The disable sign-out configuration is available for both enrolled (MDM) devices 
 
 ### Configure disable sign out using MAM
 
+Use the following steps to disable sign out for unenrolled devices.
+
 **For unenrolled devices (MAM)**
 
 1. In the Microsoft Intune admin center, navigate to **Apps** > **App configuration policies** > **Add** > **Managed apps**.
@@ -422,7 +427,8 @@ The disable sign-out configuration is available for both enrolled (MDM) devices 
 
 1. Select **Next**, and then assign this policy to targeted devices/users.
 
-## Device tagging
+<a name="device-tagging"></a>
+## Configure device tags on iOS
 
 Defender for Endpoint on iOS enables bulk tagging the mobile devices during onboarding by allowing the admins to set up tags via Intune. Admin can configure the device tags through Intune via configuration policies and push them to user's devices. Once the User installs and activates Defender, the client app passes the device tags to the Microsoft Defender portal. The Device tags appear against the devices in the Device Inventory. 
 
@@ -432,6 +438,8 @@ Device tag configuration is available for both enrolled (MDM) devices and unenro
 > Configuring more than one device tags from Intune isn't supported as only one device tag reflects when configured. However, multiple device tags can be added manually in the Microsoft Defender portal.
 
 ### Configure device tags using MDM
+
+Use the following steps to configure device tags for enrolled devices.
 
 **For enrolled devices (MDM)**
 
@@ -450,6 +458,8 @@ Device tag configuration is available for both enrolled (MDM) devices and unenro
 1. Select **Next**, and then assign this policy to targeted devices/users.
 
 ### Configure device tags using MAM
+
+Use the following steps to configure device tags for unenrolled devices.
 
 **For unenrolled devices (MAM)**
 
@@ -481,6 +491,8 @@ The OS update notification suppression configuration is available for both enrol
 
 ### Configure OS update notifications using MDM
 
+Use the following steps to suppress OS update notifications for enrolled devices.
+
 **For enrolled devices (MDM)**
 
 1. In the Microsoft Intune admin center, go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
@@ -496,6 +508,8 @@ The OS update notification suppression configuration is available for both enrol
    - Select **Next** and assign this policy to targeted devices/users.
 
 ### Configure OS update notifications using MAM
+
+Use the following steps to suppress OS update notifications for unenrolled devices.
 
 **For unenrolled devices (MAM)**
 

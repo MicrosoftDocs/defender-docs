@@ -10,18 +10,18 @@ ms.collection:
   - tier1
   - usx-security
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Create and manage custom data collection rules in Microsoft Defender for Endpoint
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
-This article shows you how to create and manage custom data collection rules in the Microsoft Defender portal.
+Custom data collection rules let you capture specific endpoint events beyond default telemetry and send them to Microsoft Sentinel for advanced hunting and investigation. This article walks you through creating, editing, monitoring, and deleting these rules in the Microsoft Defender portal.
 
 > [!TIP]
 > Before creating custom collection rules, review [Custom data collection](custom-data-collection.md) to understand when and why to use this feature.
@@ -105,11 +105,11 @@ It can take up to an hour for the rule to be deployed to the targeted devices.
 
 ## Monitor and troubleshoot
 
-After deploying custom data collection rules, monitor their performance and troubleshoot any issues.
+After you deploy custom data collection rules, check how they perform and fix any issues.
 
 ### Verify rule deployment
 
-To check if a rule is collecting data from a specific device, query the custom event tables in advanced hunting:
+To check if a rule is collecting data from a specific device, use the following KQL query to search all custom event tables in [advanced hunting](/defender-xdr/advanced-hunting-overview), the query-based tool in Microsoft Defender for investigating device data, and verify that the rule is generating events:
 
 ```kusto
 search in (DeviceCustomFileEvents, DeviceCustomScriptEvents, DeviceCustomNetworkEvents, DeviceCustomProcessEvents, DeviceCustomImageLoadEvents) "your_device_id"
@@ -134,6 +134,8 @@ The following table lists common issues with custom data collection rules and ho
 
 ### Monitor rule performance
 
+Use the following checks to monitor rule performance:
+
 - **Check event volume**: Query custom event tables to see how many events each rule is collecting
 - **Review collection status**: Monitor whether devices are approaching the 75,000 event per rule per day limit
 - **Validate targeting**: Ensure rules are deploying to the correct devices based on your dynamic tags
@@ -157,6 +159,8 @@ To collect all events from a specific table (for testing or comprehensive monito
 
 ### Edit a rule
 
+To edit an existing custom data collection rule:
+
 1. Navigate to **Settings** > **Endpoints** > **Rules** > **Custom Data Collection**
 2. Select the rule you want to edit
 3. Select **Edit**
@@ -166,6 +170,8 @@ To collect all events from a specific table (for testing or comprehensive monito
 Changes take effect on targeted devices within 20 minutes to 1 hour.
 
 ### Enable or disable a rule
+
+To enable or disable a custom data collection rule:
 
 1. In **Custom Data Collection**, select the rule
 2. Select or clear the **Enable** checkbox under the rule description

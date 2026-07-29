@@ -12,13 +12,13 @@ ms.collection:
 - -asr
 ms.topic: how-to
 ms.subservice: 
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Create indicators for IPs and URLs/domains
 
@@ -107,11 +107,11 @@ In non-Microsoft Edge processes, Network Protection determines the fully qualifi
 
 The determination of whether to allow or block access to a site is made after the completion of the [three-way handshake via TCP/IP](/troubleshoot/windows-server/networking/three-way-handshake-via-tcpip) and any TLS handshake. Thus, when a site is blocked by network protection, you might see an action type of `ConnectionSuccess` under `NetworkConnectionEvents` in the Microsoft Defender portal, even though the site was blocked. `NetworkConnectionEvents` are reported from the TCP layer, and not from network protection. After the three-way handshake has completed, access to the site is allowed or blocked by network protection.
 
-Here's an example of how that works:
+Here's an example of how network protection blocking is logged:
 
 1. Suppose that a user attempts to access a website on their device. The site happens to be hosted on a dangerous domain, and it should be blocked by network protection.  
 
-1. The TCP/IP handshake commences. Before it completes, a `NetworkConnectionEvents` action is logged, and its `ActionType` is listed as `ConnectionSuccess`. However, as soon as the TCP/IP handshake process completes, network protection blocks access to the site. All of this happens quickly. A similar process occurs with [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview); it's after the handshake completes that a determination is made, and access to a site is either blocked or allowed.
+1. The TCP/IP handshake commences. Before it completes, a `NetworkConnectionEvents` action is logged, and its `ActionType` is listed as `ConnectionSuccess`. However, as soon as the TCP/IP handshake process completes, network protection blocks access to the site. The handshake, logging, and blocking sequence happens quickly. A similar process occurs with [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview); it's after the handshake completes that a determination is made, and access to a site is either blocked or allowed.
 
 1. In the Microsoft Defender portal, an alert is listed in the [alerts queue](alerts-queue.md). Details of that alert include both `NetworkConnectionEvents` and `AlertEvents`. You can see that the site was blocked, even though you also have a `NetworkConnectionEvents` item with the ActionType of `ConnectionSuccess`.
 
@@ -167,6 +167,9 @@ The result is that categories 1-4 are all blocked. This scenario is illustrated 
 :::image type="content" source="media/web-content-filtering-policies-mode-precedence.png" alt-text="Diagram that shows the precedence of web content filtering policy block mode over audit mode.":::
 
 ## Create an indicator for IPs, URLs, or domains from the settings page
+
+> [!IMPORTANT]
+> It can take up to 48 hours after a policy is created for a URL or IP address to be blocked on a device. In most cases, blocks take effect in under two hours.
 
 To create an indicator for IPs, URLs, or domains from the Microsoft Defender portal, perform the following steps:
 

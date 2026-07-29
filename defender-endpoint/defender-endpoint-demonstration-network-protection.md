@@ -11,7 +11,7 @@ ms.collection:
 - demo
 ms.topic: how-to
 ms.subservice: asr
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -19,7 +19,7 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Network protection demonstrations
 
@@ -35,7 +35,7 @@ This article walks you through how to demonstrate and test Network Protection on
 
 ## Windows
 
-Run the following PowerShell command:
+To enable Network Protection in block mode on Windows so that connections to dangerous domains are blocked, run the following PowerShell command:
 
 ```powershell
 Set-MpPreference -EnableNetworkProtection Enabled
@@ -49,7 +49,7 @@ Following are the Rule states:
 | Enabled | = Block mode | 1 |
 | Audit | = Audit mode | 2 |
 
-Verify the configuration using the following PowerShell command:
+To verify that Network Protection is enabled, run the following PowerShell command and confirm that the `EnableNetworkProtection` value is set to `1` (block mode):
 
 ```powershell
 Get-MpPreference
@@ -57,19 +57,19 @@ Get-MpPreference
 
 **Consider the following scenario**:
 
-1. Turn on Network Protection using PowerShell command:
+1. Enable Network Protection in block mode so that connections to dangerous domains are blocked during the following validation steps:
 
    ```powershell
    Set-MpPreference -EnableNetworkProtection Enabled
    ```
 
-1. Using the browser of your choice (not Microsoft Edge*), navigate to the [Network Protection website test](https://smartscreentestratings2.net/). Microsoft Edge has other security measures in place to protect from this vulnerability (SmartScreen).
+1. Using the browser of your choice (not Microsoft Edge*), navigate to the [Network Protection website test](https://smartscreentestratings2.net/). Microsoft Edge has other security measures in place to protect from malicious or phishing websites (SmartScreen).
 
 Following are the expected results:
 
 Navigation to the website should be blocked and you should see a **Connection blocked** notification.
 
-Run the following command to Clean-up:
+After testing, restore your device to its pre-test configuration by disabling Network Protection with the following command:
 
 ```powershell
 Set-MpPreference -EnableNetworkProtection Disabled
@@ -77,21 +77,21 @@ Set-MpPreference -EnableNetworkProtection Disabled
 
 ## macOS/Linux
 
-To configure the Network Protection enforcement level, run the following command from the Terminal:
+On macOS and Linux, you use the `mdatp` command-line tool to set the Network Protection enforcement level. Replace `[enforcement-level]` with `block` to actively block dangerous connections, or `audit` to log them without blocking. Run the following command from the Terminal:
 
 
 ```bash
 mdatp config network-protection enforcement-level --value [enforcement-level]
 ```
 
-For example, to configure network protection to run in blocking mode, execute the following command:
+For example, to set Network Protection to block mode so that connections to malicious or test destinations are actively prevented, run the following command:
 
 
 ```bash
 mdatp config network-protection enforcement-level --value block
 ```
 
-To confirm that network protection has started successfully, run the following command from the Terminal, and verify that it prints "started":
+To verify that Network Protection is running, query the Defender health status by running the following command from the Terminal. The `network_protection_status` field should display `started`:
 
 
 ```bash
@@ -111,7 +111,7 @@ Following are the expected results:
 
 Navigation to the website should be blocked and you should see a **Connection blocked** notification.
 
-Run the following command to Clean-up:
+After testing, restore your device to its pre-test configuration by switching Network Protection back to audit mode. In audit mode, Network Protection logs connections to dangerous domains without blocking them:
 
 ```bash
 mdatp config network-protection enforcement-level --value audit

@@ -1,6 +1,6 @@
 ---
 title: Manage system extensions using Jamf
-description: Manage system extensions using Jamf for Microsoft Defender for Endpoint to work properly on macOS.
+description: Configure Jamf policies to approve system extensions, grant Full Disk Access, and enable network extensions for Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
@@ -12,16 +12,17 @@ ms.collection:
 - mde-macos
 ms.topic: how-to
 ms.subservice: macos
-ms.date: 06/17/2026
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.date: 07/02/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
 # Manage system extensions using Jamf
 
-This article describes the procedures to implement in the process of managing the system extensions to ensure Microsoft Defender for Endpoint works properly on macOS.
+This article describes how to use Jamf to approve system extensions, grant Full Disk Access through Privacy Preferences Policy Control, and configure the network extension policy for Microsoft Defender for Endpoint on macOS. Complete the prerequisites for deploying Microsoft Defender for Endpoint before you follow these procedures.
 
-## Jamf
+<a name="jamf"></a>
+## Configure system extensions in Jamf
 
 <a name="jamf-system-extensions-policy"></a>
 ### Configure the Jamf system extensions policy
@@ -44,13 +45,17 @@ To approve the system extensions, perform the following steps:
 <a name="privacy-preferences-policy-control-also-known-as-full-disk-access"></a>
 ### Configure Privacy Preferences Policy Control for Full Disk Access
 
-Add the following Jamf payload to grant Full Disk Access to the Microsoft Defender for Endpoint Security Extension. This policy is a prerequisite for running the extension on your device.
+Add the following Jamf payload to grant Full Disk Access to the Microsoft Defender for Endpoint Security Extension. The Privacy Preferences Policy Control payload is a prerequisite for running the extension on your device.
 
 1. Select **Options > Privacy Preferences Policy Control**.
 
 1. Use **com.microsoft.wdav.epsext** as the Identifier and **Bundle ID** as Bundle type.
 
-1. Set Code Requirement to **identifier com.microsoft.wdav.epsext and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9**.
+1. Set Code Requirement to the following value:
+
+   ```text
+   identifier com.microsoft.wdav.epsext and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9
+   ```
 
 1. Set **App or service** to **SystemPolicyAllFiles** and access to **Allow**.
 
@@ -59,14 +64,14 @@ Add the following Jamf payload to grant Full Disk Access to the Microsoft Defend
 <a name="network-extension-policy"></a>
 ### Configure the Network Extension policy in Jamf
 
-As part of the Endpoint Detection and Response capabilities, Microsoft Defender for Endpoint on macOS inspects socket traffic and reports this information to the Microsoft Defender portal. The following policy allows the network extension to perform this functionality:
+As part of the Endpoint Detection and Response capabilities, Microsoft Defender for Endpoint on macOS inspects socket traffic and reports this information to the Microsoft Defender portal. The following policy allows the network extension to inspect socket traffic and report this information to the Microsoft Defender portal:
 
 > [!NOTE]
 > Jamf doesn't have built-in support for content filtering policies, which are a prerequisite for enabling the network extensions that Microsoft Defender for Endpoint on macOS installs on the device. Furthermore, Jamf sometimes changes the content of the policies being deployed. Because of these limitations, the following steps provide a workaround that involves signing the configuration profile.
 
 1. Save the following content to your device as **com.microsoft.network-extension.mobileconfig** using a text editor:
 
-```powershell
+```xml
    <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1">
     <dict>
@@ -127,19 +132,19 @@ As part of the Endpoint Detection and Response capabilities, Microsoft Defender 
 </plist>
 ```
 
-1. Verify that the XML configuration profile content was copied correctly into the **com.microsoft.network-extension.mobileconfig** file by running the **plutil** utility in terminal:
+1. Verify that the XML configuration profile content was copied correctly into the **com.microsoft.network-extension.mobileconfig** file by running the **plutil** utility in terminal. This command checks whether the mobileconfig file is a valid property list (plist):
 
 ```BashCopy
 $ plutil -lint <PathToFile>/com.microsoft.network-extension.mobileconfig
 ```
 
-For example, if the file was stored in *Documents*:
+For example, the following command validates a profile stored in the *Documents* folder:
 
 ```BashCopy
 $ plutil -lint ~/Documents/com.microsoft.network-extension.mobileconfig
 ```
 
-1. Verify that the **plutil -lint** command outputs **OK**
+1. Verify that the **plutil -lint** command outputs **OK**. The following sample output confirms the profile file is valid:
 
 ```BashCopy
 <PathToFile>/com.microsoft.network-extension.mobileconfig: OK
@@ -147,13 +152,13 @@ $ plutil -lint ~/Documents/com.microsoft.network-extension.mobileconfig
 
 1. Follow the instructions in [Jamf technical articles](https://learn.jamf.com/bundle/technical-articles/page/Welcome.html) to create a signing certificate using Jamf's built-in certificate authority.
 
-1. After the Jamf signing certificate is created and installed on your device, run the following command from terminal to sign the configuration profile:
+1. After the Jamf signing certificate is created and installed on your device, run the following command from terminal to sign the configuration profile. Replace `<CertificateName>` with the name of your signing certificate, `<PathToFile>` with the path to the unsigned mobileconfig file, and `<PathToSignedFile>` with the desired output path for the signed file:
 
 ```BashCopy
 $ security cms -S -N "<CertificateName>" -i <PathToFile>/com.microsoft.network-extension.mobileconfig -o <PathToSignedFile>/com.microsoft.network-extension.signed.mobileconfig
 ```
 
-For example, if the certificate name is *SigningCertificate* and the signed file is going to be stored in *Documents*:
+For example, the following command signs a profile stored in the *Documents* folder using a certificate named *SigningCertificate* and saves the signed output to the same folder:
 
 ```BashCopy
 $ security cms -S -N "SigningCertificate" -i ~/Documents/com.microsoft.network-extension.mobileconfig -o ~/Documents/com.microsoft.network-extension.signed.mobileconfig

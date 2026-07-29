@@ -1,6 +1,6 @@
 ---
 title: Configure Microsoft Defender for Endpoint on Android risk signals using App Protection Policies (MAM)
-description: Describes how to configure Microsoft Defender for Endpoint risk signals using App Protection policies
+description: Configure Microsoft Defender for Endpoint on Android risk signals with Intune App Protection Policies (MAM), including support for enrolled and unenrolled devices.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
@@ -15,17 +15,17 @@ ms.date: 07/20/2026
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1015
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
 # Configure Microsoft Defender for Endpoint on Android risk signals using App Protection Policies (MAM)
 
-Microsoft Defender for Endpoint on Android, which already protects enterprise users on Mobile Device Management (MDM) scenarios, now extends support to Mobile App Management (MAM), for devices that aren't enrolled using Intune mobile device management (MDM). It also extends this support to customers who use other enterprise mobility management solutions, while still using Intune for mobile application management (MAM). Microsoft Defender for Endpoint support for MAM allows you to manage and protect your organization's data within an application.
+Microsoft Defender for Endpoint on Android, which already protects enterprise users on Mobile Device Management (MDM) scenarios, now extends support to Mobile App Management (MAM), for devices that aren't enrolled using Intune mobile device management (MDM). It also extends MAM support to customers who use other enterprise mobility management solutions, while still using Intune for mobile application management (MAM). Microsoft Defender for Endpoint support for MAM allows you to manage and protect your organization's data within an application.
 
 Microsoft Defender for Endpoint on Android threat information is applied by Intune App Protection Policies to protect these apps. App protection policies (APP) are rules that ensure an organization's data remains safe or contained in a managed app. A managed application has app protection policies applied to it and can be managed by Intune.
 
-Microsoft Defender for Endpoint on Android supports both the configurations of MAM.
+Microsoft Defender for Endpoint on Android supports both MAM configurations: Intune MDM + MAM and MAM without device enrollment.
 
 - **Intune MDM + MAM**: IT administrators can only manage apps using App Protection Policies on devices that are enrolled with Intune mobile device management (MDM).
 - **MAM without device enrollment**: MAM without device enrollment, or MAM-WE, allows IT administrators to manage apps using [App Protection Policies](/intune/intune-service/apps/app-protection-policy) on devices not enrolled with Intune MDM. MAM without device enrollment means that apps can be managed by Intune on devices enrolled with third-party EMM providers.
@@ -85,7 +85,7 @@ Before you begin, complete the following configuration steps to connect Microsof
 
         Use this option to specify whether this policy applies to unmanaged devices. In Android, you can specify the policy applies to Android Enterprise, Device Admin, or Unmanaged devices. You can also choose to target your policy to apps on devices of any management state.
 
-        Because mobile app management doesn't require device management, you can protect company data on both managed and unmanaged devices. The management is centered on the user identity, which removes the requirement for device management. Companies can use app protection policies with or without MDM at the same time. For example, consider an employee that uses both a phone issued by the company, and their own personal tablet. The company phone is enrolled in MDM and protected by app protection policies while the personal device is protected by app protection policies only.
+        Because MAM without device enrollment doesn't require device management, organizations can protect company data on both managed and unmanaged devices. The management is centered on the user identity, which removes the requirement for device management. Companies can use app protection policies with or without MDM at the same time. For example, consider an employee that uses both a phone issued by the company, and their own personal tablet. The company phone is enrolled in MDM and protected by app protection policies while the personal device is protected by app protection policies only.
 
      1. Select Apps.
 
@@ -250,7 +250,8 @@ Use the following steps to enable Optional permissions for devices.
 
 1. Select **Next** and assign this profile to targeted devices/users.
 
-### User flow
+<a name="user-flow"></a>
+### User flow for optional permissions during onboarding
 
 Users can install and open the app to start the onboarding process.
 
@@ -267,7 +268,7 @@ Users can install and open the app to start the onboarding process.
 
 ## Disable sign out
 
-Defender for Endpoint allows you to deploy the app and disabling the sign out button. By hiding the sign out button, users are prevented from signing out of the Defender app. This action helps prevent tampering with the device when Defender for Endpoint isn't running.
+Defender for Endpoint allows you to deploy the app and disabling the sign out button. By hiding the sign out button, users are prevented from signing out of the Defender app. Hiding the sign-out button helps prevent tampering with the device when Defender for Endpoint isn't running.
 
 Use the following steps to configure the Disable sign out:
 

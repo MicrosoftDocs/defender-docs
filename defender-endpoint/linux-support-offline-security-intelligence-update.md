@@ -12,17 +12,19 @@ ms.collection:
 - tier3
 - mde-linux
 ms.topic: how-to
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Configure offline security intelligence updates for Microsoft Defender for Endpoint on Linux 
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
+
+This article walks you through setting up offline security intelligence updates for Microsoft Defender for Endpoint on Linux. Use this approach to keep antivirus definitions current on Linux devices that have limited or no internet connectivity, by downloading updates to a local mirror server and distributing them across your fleet. Before you begin, review the [Prerequisites](#prerequisites) to ensure your environment meets the requirements.
 
 ## How offline security intelligence updates work
 
@@ -121,7 +123,7 @@ To use the zip package instead of cloning the repository, follow these steps:
 
 #### Local directory structure after cloning the repo or downloading the zipped file
 
-After cloning the repo or downloading the zipped file, the local directory structure should be as follows:
+Use the following example directory listing to verify that your local copy contains the expected `linux/definition_downloader` structure and scripts:
 
 ```console
 user@vm:~/mdatp-xplat$ tree linux/definition_downloader/
@@ -153,13 +155,13 @@ The `settings.json` file consists of a few variables that the user can configure
 
 To manually execute the downloader script, configure the parameters in the `settings.json` file as per the description in the previous section, and use one of the following commands based on the OS of the mirror server:
 
-- Bash:
+- Bash: Run the following command to fetch the latest offline definition updates into the configured download folder:
 
   ```bash
   ./xplat_offline_updates_download.sh
   ```
 
-- PowerShell:
+- PowerShell: If your mirror server runs Windows, use the PowerShell downloader script to retrieve the offline definition package:
 
   ```powershell
   ./xplat_offline_updates_download.ps1
@@ -209,7 +211,7 @@ In the **Configuration settings** step, you can find the configuration settings 
 
 # [Managed JSON](#tab/managed-json)
 
-Use the following sample `mdatp_managed.json` and update the parameters as per the configuration and copy the file to the location `/etc/opt/microsoft/mdatp/managed/mdatp_managed.json`.
+The `mdatp_managed.json` file is the managed configuration file that Defender for Endpoint on Linux reads at startup to apply policy settings. Use the following sample `mdatp_managed.json`, update the parameters as per your configuration, and copy the file to the location `/etc/opt/microsoft/mdatp/managed/mdatp_managed.json`.
 
 ```json
 {
@@ -247,7 +249,7 @@ To test if the settings are applied correctly on the Linux endpoints, run the fo
 mdatp health --details definitions
 ```
 
-A sample output would look like the following code snippet:
+The following example output shows the fields that confirm definitions were updated successfully and the offline update configuration is applied:
 
 ```console
 user@vm:~$ mdatp health --details definitions
@@ -272,12 +274,12 @@ You can trigger offline security intelligence updates automatically or manually.
 
 Automatic updates occur under the following conditions:
 
-- If the [enforcement level for the antivirus engine](linux-preferences.md#enforcement-level-for-microsoft-defender-antivirus) is set to `real_time`, and the fields `automaticDefinitionUpdateEnabled` and `offline_definition_update` in the managed json are set to `true`, then the offline security intelligence updates are triggered automatically at periodic intervals.
-- By default, this periodic interval is **8 hours**. But it can be configured by setting the `definitionUpdatesInterval` parameter in the managed json.
+- If the [enforcement level for the antivirus engine](linux-preferences.md#enforcement-level-for-microsoft-defender-antivirus) is set to `real_time`, and the fields `automaticDefinitionUpdateEnabled` and `offline_definition_update` in the `mdatp_managed.json` managed configuration file are set to `true`, then the offline security intelligence updates are triggered automatically at periodic intervals.
+- By default, this periodic interval is **8 hours**. But it can be configured by setting the `definitionUpdatesInterval` parameter in the `mdatp_managed.json` file.
 
 ### Manual update
 
-To trigger the offline security intelligence update manually to download the signatures from the mirror server on the Linux endpoints, run the following command:
+To trigger the offline security intelligence update manually to download the signatures from the mirror server on the Linux endpoints, run the following command to force an immediate definition update from the configured source:
 
   ```bash
   mdatp definitions update
@@ -289,7 +291,7 @@ After triggering an update, use the following checks to confirm success:
 
 1. Verify that the update was successful by running the command: `mdatp health --details --definitions`.
 
-1. Verify the following fields:
+1. Verify the following fields. The following sample output shows the definition health fields that indicate a successful update:
 
   ```console
   user@vm:~$ mdatp health --details definitions
@@ -304,7 +306,7 @@ After triggering an update, use the following checks to confirm success:
 
 If updates fail, are stuck, or don't start, follow these steps to troubleshoot:
 
-1. Check the status of offline security intelligence updates by using the following command:
+1. Check the status of offline security intelligence updates. Use the following command to review the current definition state and update source:
 
    ```bash
    mdatp health --details definitions
@@ -319,13 +321,13 @@ If updates fail, are stuck, or don't start, follow these steps to troubleshoot:
    - `definitions_update_source_uri` is the source from where the signatures were downloaded.
    - `offline_definition_url_configured` is the source from where signatures should be downloaded, the one mentioned in the managed config file.
 
-1. Try performing the connectivity test to check if mirror server is reachable from the host:
+1. Run a connectivity test to confirm the endpoint can reach the mirror server and required Defender services:
 
    ```bash
    mdatp connectivity test
    ```
 
-1. Try to initiate a manual update using the following command:
+1. If connectivity succeeds, manually retry the definition update with the following command:
 
    ```bash
    mdatp definitions update

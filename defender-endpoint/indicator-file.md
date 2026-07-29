@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-ms.date: 06/17/2026
+ms.date: 07/03/2026
 ms.collection: 
 - m365-security
 - tier2
@@ -19,19 +19,19 @@ appliesto:
   - Microsoft Defender for Business
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
-# Create indicators for files
+# Create file indicators in Microsoft Defender for Endpoint
 
 
 > [!IMPORTANT]
 > In Defender for Endpoint Plan 1 and Defender for Business, you can create an indicator to block or allow a file. In Defender for Business, your indicator is applied across your environment and cannot be scoped to specific devices.
 
 > [!NOTE]
-> For this feature to work on Windows Server 2016 and Windows Server 2012 R2, those devices must be onboarded using the [modern unified solution for Windows Server 2016 and Windows Server 2012 R2](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2). 
+> For file indicators to work on Windows Server 2016 and Windows Server 2012 R2, those devices must be onboarded using the [modern unified solution for Windows Server 2016 and Windows Server 2012 R2](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2). 
 > Custom file indicators with the Allow, Block and Remediate actions are now also available in the [enhanced anti-malware engine capabilities for macOS and Linux](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/enhanced-antimalware-engine-capabilities-for-linux-and-macos/ba-p/3292003).
 
-File indicators prevent further propagation of an attack in your organization by banning potentially malicious files or suspected malware. If you know a potentially malicious portable executable (PE) file, you can block it. Blocking the file prevents it from being read, written, or executed on devices in your organization.
+File indicators prevent further propagation of an attack in your organization by banning potentially malicious files or suspected malware. If you know a potentially malicious portable executable (PE) file, you can block it. Blocking the file prevents it from being read, written, or executed on devices in your organization. Before you begin, review the [prerequisites](#prerequisites) for supported operating systems and platform-specific requirements.
 
 There are three ways you can create indicators for files:
 
@@ -85,7 +85,7 @@ Before creating file indicators on Linux, ensure the following prerequisites are
 
 - Available in Defender for Endpoint version `101.85.27` or later.
 - [Configure file hash computation on Linux](linux-preferences.md#configure-file-hash-computation-feature) in the Microsoft Defender portal or in the managed JSON
-- Behavior monitoring enabled is preferred, but this feature works with any other scan (RTP or Custom).
+- Behavior monitoring enabled is preferred, but file indicators work with any other scan (RTP or Custom).
 
 > [!NOTE]
 > On Linux, file indicators support script files (.sh files) and ELF files.
@@ -151,12 +151,13 @@ The current supported actions for file IOC are allow, audit and block, and remed
    > For more information about the EnableFileHashComputation group policy, see [Defender CSP](/windows/client-management/mdm/defender-csp).
    > For more information on configuring this feature on Defender for Endpoint on Linux and macOS, see [Configure file hash computation feature on Linux](linux-preferences.md#configure-file-hash-computation-feature) and [Configure file hash computation feature on macOS](mac-preferences.md#configure-file-hash-computation-feature).
 
-## Advanced hunting capabilities (preview)
+<a name="advanced-hunting-capabilities-preview"></a>
+## Advanced hunting capabilities for file indicators (preview)
 
 > [!IMPORTANT]
-> Information in this section (**Public Preview for Automated investigation and remediation engine**) relates to prerelease product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+> The following advanced hunting capabilities information relates to the **Automated investigation and remediation engine** public preview, which is a prerelease product that might be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-Currently in preview, you can query the response action activity in advance hunting. Below is a sample advance hunting query:
+Currently in preview, you can query the response action activity in advanced hunting. The following sample advanced hunting query shows how to query response action activity:
 
 ```console
 search in (DeviceFileEvents, DeviceProcessEvents, DeviceEvents, DeviceRegistryEvents, DeviceNetworkEvents, DeviceImageLoadEvents, DeviceLogonEvents)
@@ -179,7 +180,8 @@ Certificates:
 
 The response action activity can also be viewable in the device timeline.
 
-## Policy conflict handling
+<a name="policy-conflict-handling"></a>
+## Policy conflict handling for file indicators
 
 Cert and File IoC policy handling conflicts follow this order:
 
@@ -230,7 +232,8 @@ The following examples show how component enforcement interacts with file indica
 |Windows Defender Application Control|Block|Allow|Block|
 |Microsoft Defender Antivirus exclusion|Allow|Block|Allow|
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 - [Create indicators](indicators-overview.md)
 

@@ -9,9 +9,9 @@ ms.localizationpriority: medium
 ms.collection: 
 - m365-security
 - tier1
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
@@ -24,6 +24,12 @@ ai-usage: ai-assisted
 This article describes how to review and assess devices discovered by device discovery in Microsoft Defender for Endpoint. You also learn how to get data on devices that aren't onboarded to Microsoft Defender for Endpoint, and how to query data on discovered devices.
 
 ## Prerequisites
+
+Before you can review and assess discovered devices, make sure the following requirements are met:
+
+- Your organization has a Microsoft Defender for Endpoint Plan 2 license.
+- You have at least one device onboarded to Defender for Endpoint. Onboarded devices act as network sensors and data sources for discovering non-onboarded devices.
+- You have access to the Microsoft Defender portal with appropriate permissions to view the device inventory and run advanced hunting queries.
 
 ### Supported operating systems
 
@@ -64,7 +70,7 @@ You can use advanced hunting queries to gain visibility on discovered devices. F
 
 ### Explore devices in the network
 
-You can use the following advanced hunting query to get more context about each network name described in the networks list. The query lists all the onboarded devices that were connected to a certain network within the last seven days.
+Use the following advanced hunting query to identify onboarded devices connected to a specific network. The query retrieves devices with connected network data from the last seven days, filtered by network name from the networks list in the device discovery settings.
 
 ```kusto
 DeviceNetworkInfo
@@ -77,7 +83,8 @@ DeviceNetworkInfo
 | summarize arg_max(Timestamp, *) by DeviceId
 ```
 
-### Get information on device
+<a name="get-information-on-device"></a>
+### Get device information
 
 You can use the following advanced hunting query to get the latest complete information on a specific device.
 
@@ -90,7 +97,7 @@ DeviceInfo
 <a name="query-discovered-devices-details"></a>
 ### Query details for discovered devices
 
-Run this query on the DeviceInfo table to return all discovered devices along with the most up-to-date details for each device:
+The following query retrieves the latest known record for each discovered device that isn't onboarded, excluding invalidated or merged entries. Use it to identify unmanaged devices and review their most up-to-date details:
 
 ```query
 DeviceInfo
@@ -100,6 +107,8 @@ DeviceInfo
 ```
 
 By invoking the **SeenBy** function, in your advanced hunting query, you can get detail on which onboarded device a discovered device was seen by. This information can help determine the network location of each discovered device and subsequently, help to identify it in the network.
+
+The following query retrieves the latest record for each non-onboarded device, excludes merged entries, and invokes the **SeenBy** function to show which onboarded device discovered it:
 
 ```query
 DeviceInfo
@@ -120,11 +129,11 @@ Device discovery leverages Defender for Endpoint onboarded devices as a network 
 - ConnectionAttempt - An attempt to establish a TCP connection (syn)
 - ConnectionAcknowledged - An acknowledgment that a TCP connection was accepted (syn\ack)
 
-This means that when a non-onboarded device attempts to communicate with an onboarded Defender for Endpoint device, the attempt generates a DeviceNetworkEvent and the  non-onboarded device activities can be seen on the onboarded device timeline, and through the Advanced hunting DeviceNetworkEvents table.
+These connection types mean that when a non-onboarded device attempts to communicate with an onboarded Defender for Endpoint device, the attempt generates a DeviceNetworkEvent and the  non-onboarded device activities can be seen on the onboarded device timeline, and through the Advanced hunting DeviceNetworkEvents table.
 
-You can try this example query:
+The following query returns the 10 most recent connection attempts and acknowledged connections, so you can verify which non-onboarded devices are communicating with onboarded endpoints:
 
-```text
+```kusto
 DeviceNetworkEvents
 | where ActionType == "ConnectionAcknowledged" or ActionType == "ConnectionAttempt"
 | take 10

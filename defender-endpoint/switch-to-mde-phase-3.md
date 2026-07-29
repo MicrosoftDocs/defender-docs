@@ -1,6 +1,6 @@
 ---
 title: Migrate to Microsoft Defender for Endpoint - Onboard
-description: Move to Microsoft Defender for Endpoint. Onboard devices and then uninstall your non-Microsoft solution.
+description: Onboard devices to Microsoft Defender for Endpoint, run a detection test, confirm Microsoft Defender Antivirus passive mode, get antivirus updates, and uninstall your non-Microsoft solution.
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: painbar
@@ -12,11 +12,11 @@ ms.collection:
   - highpri
   - tier1
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - migrationguides
   - admindeeplinkDEFENDER
 ms.topic: how-to
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho, yongrhee
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -31,7 +31,7 @@ ai-usage: ai-assisted
 |--|--|--|
 || |*You're here!* |
 
-**Welcome to Phase 3 of [migrating to Defender for Endpoint](switch-to-mde-overview.md#the-migration-process)**. This migration phase includes the following steps:
+**Welcome to Phase 3 of [migrating to Defender for Endpoint](switch-to-mde-overview.md#the-migration-process)**. Before you begin, make sure you've completed [Phase 1: Prepare](switch-to-mde-phase-1.md) and [Phase 2: Set up](switch-to-mde-phase-2.md). This migration phase includes the following steps:
 
 1. Onboard devices to Defender for Endpoint.
 1. Run a detection test.
@@ -80,7 +80,7 @@ Deployment methods vary, depending on operating system and preferred methods. Th
 
 ## Step 2: Run a detection test
 
-To verify that your onboarded devices are properly connected to Defender for Endpoint, you can run a detection test.
+To verify that your onboarded devices are properly connected to Defender for Endpoint, you can run a detection test. Before running a detection test on macOS or Linux, make sure the device meets the system requirements for [macOS](microsoft-defender-endpoint-mac.md) or [Linux](mde-linux-prerequisites.md).
 
 |Operating system|Guidance|
 |---|---|
@@ -103,7 +103,7 @@ Now that your endpoints have been onboarded to Defender for Endpoint, your next 
 
 ### Set Microsoft Defender Antivirus on Windows Server to passive mode manually
 
-To set Microsoft Defender Antivirus to passive mode on Windows Server 2019 and later, Windows Server, version 1803 or later and Azure Stack HCI OS, version 23H2 and later, follow these steps:
+The **ForceDefenderPassiveMode** registry value controls whether Microsoft Defender Antivirus stays in passive mode on supported Windows Server versions. To set this value on Windows Server 2019 and later, Windows Server, version 1803 or later and Azure Stack HCI OS, version 23H2 and later, follow these steps:
 
 1. Open Registry Editor, and then navigate to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
 
@@ -128,7 +128,7 @@ If you're using Windows Server 2016, you might need to start Microsoft Defender 
    > [!TIP]
    > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
 
-   To enable Windows Defender from the correct installation folder, first change to the latest Defender platform directory and then run MpCmdRun with the enable switch:
+   Run the following batch commands to switch to the latest Windows Defender platform folder and then enable Windows Defender:
 
    ```dos
    (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
@@ -140,7 +140,7 @@ If you're using Windows Server 2016, you might need to start Microsoft Defender 
 
 ## Step 4: Get updates for Microsoft Defender Antivirus
 
-Keeping Microsoft Defender Antivirus up to date is critical to assure your devices have the latest technology and features needed to protect against new malware and attack techniques, even if Microsoft Defender Antivirus is running in passive mode. (See [Microsoft Defender Antivirus compatibility](microsoft-defender-antivirus-compatibility.md).)
+Keep Microsoft Defender Antivirus up to date so your devices can protect against new malware and attack methods. Updates are important even when Microsoft Defender Antivirus runs in passive mode. For more information, see [Microsoft Defender Antivirus compatibility](microsoft-defender-antivirus-compatibility.md).
 
 There are two types of updates related to keeping Microsoft Defender Antivirus up to date:
 
@@ -151,6 +151,9 @@ There are two types of updates related to keeping Microsoft Defender Antivirus u
 To get your updates, follow the guidance in [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md).
 
 ## Step 5: Uninstall your non-Microsoft solution
+
+> [!IMPORTANT]
+> If, for some reason, Microsoft Defender Antivirus does not go into active mode after you uninstall your non-Microsoft antivirus/antimalware solution, see [Microsoft Defender Antivirus seems to be stuck in passive mode](switch-to-mde-troubleshooting.md#microsoft-defender-antivirus-seems-to-be-stuck-in-passive-mode).
 
 If, at this point you have onboarded your organization's devices to Defender for Endpoint, and Microsoft Defender Antivirus is installed and enabled, then your next step is to uninstall your non-Microsoft antivirus, antimalware, and endpoint protection solution. When you uninstall your non-Microsoft solution, Microsoft Defender Antivirus changes from passive mode to active mode. In most cases, this happens automatically.
 

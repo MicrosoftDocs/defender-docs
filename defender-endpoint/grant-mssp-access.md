@@ -10,11 +10,11 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -23,7 +23,7 @@ ai-usage: ai-assisted
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 >
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> Microsoft recommends that you use roles with the fewest permissions. Using roles with the fewest permissions helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 To implement a multitenant delegated access solution, take the following steps:
 
@@ -35,11 +35,11 @@ To implement a multitenant delegated access solution, take the following steps:
 
 ## Enable role-based access controls in Microsoft Defender for Endpoint
 
-Complete the following steps to enable role-based access controls and connect them with Microsoft Entra ID groups.
+Complete the following steps to enable role-based access controls and connect RBAC roles with Microsoft Entra ID groups.
 
 1. **Create access groups for MSSP resources in Customer Entra ID: Groups**
 
-    These groups are linked to the Roles you create in Defender for Endpoint. To create these access groups, in the customer Entra ID tenant, create three groups. In our example approach, we create the following groups:
+    The access groups are linked to the roles you create in Defender for Endpoint. To create the access groups, in the customer Entra ID tenant, create three groups. In our example approach, we create the following groups:
 
     - Tier 1 Analyst
     - Tier 2 Analyst
@@ -49,13 +49,13 @@ Complete the following steps to enable role-based access controls and connect th
 
     To enable RBAC in the customer [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Permissions** > **Roles**, and then select **Turn on roles**. 
 
-    Then, create RBAC roles to meet MSSP SOC Tier needs. Link these roles to the created user groups via assigned user groups. There are two possible roles: Tier 1 Analysts, and Tier 2 Analysts.
+    Then, create RBAC roles to meet MSSP SOC Tier needs. Link these roles to the Tier 1 Analyst, Tier 2 Analyst, and MSSP Analyst Approvers Microsoft Entra ID groups via assigned user groups. There are two possible roles: Tier 1 Analysts, and Tier 2 Analysts.
 
     - **Tier 1 Analysts** - Perform all actions except for live response and manage security settings.
 
     - **Tier 2 Analysts** - Tier 1 capabilities with the addition to [live response](live-response.md)
 
-    For more information, see [Use role-based access control](rbac.md).
+    For details about role assignments and permissions, see [Role-based access control in Defender for Endpoint](rbac.md).
 
 ## Configure Governance Access Packages
 
@@ -104,6 +104,8 @@ Use the following steps to configure Governance Access Packages for MSSP access.
 
 <a name="manage-access"></a>
 ## Manage MSSP access in Microsoft Defender for Endpoint
+
+Use the following steps to review and manage MSSP access requests in My Access.
 
 1. Review and authorize access requests in Customer and/or MSSP MyAccess.
 
