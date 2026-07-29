@@ -20,7 +20,7 @@ Make sure you meet these requirements before you start:
 
 - The IdentityNow Admin role is required only to create an application.
 
-**Microsoft Entra and Defender XDR role-based access options**
+**Microsoft Entra and Defender role-based access options**
 
 Your account needs one of these access options to set up the connector:
 
@@ -30,7 +30,7 @@ Your account needs one of these access options to set up the connector:
 
     - Security Admin 
 
-- **Defender XDR Unified RBAC permission:** 
+- **Defender Unified RBAC permission:**
     - Core security settings (manage)
 
 ## Connect SailPoint Identity Security Cloud to Microsoft Defender for Identity 

@@ -8,9 +8,9 @@ ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
 ai-usage: ai-assisted
 ---
 
-# Configure Defender for Identity detection exclusions in Microsoft Defender XDR
+# Configure Defender for Identity detection exclusions in Microsoft Defender
 
-This article explains how to configure [Microsoft Defender for Identity](/defender-for-identity) detection exclusions in [Microsoft Defender XDR](/microsoft-365/security/defender/overview-security-center).
+This article explains how to configure [Microsoft Defender for Identity](/defender-for-identity) detection exclusions in [Microsoft Defender](/microsoft-365/security/defender/overview-security-center).
 
 Microsoft Defender for Identity enables the exclusion of specific IP addresses, computers, domains, or users from a number of detections.
 

@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1014
 ---
 
-# Defender for Identity entity tags in Microsoft Defender XDR
+# Defender for Identity entity tags in Microsoft Defender
 
 This article describes how to apply Microsoft Defender for Identity entity tags, for sensitive, Exchange server, or honeytoken accounts.
 
@@ -21,7 +21,7 @@ This article describes how to apply Microsoft Defender for Identity entity tags,
 
 ## Prerequisites
 
-To set Defender for Identity entity tags in Microsoft Defender XDR, you'll need Defender for Identity [deployed in your environment, as described in the Defender for Identity deployment guide](deploy-defender-identity.md), and administrator or user access to Microsoft Defender XDR.
+To set Defender for Identity entity tags in Microsoft Defender, you'll need Defender for Identity [deployed in your environment](deploy-defender-identity.md), and administrator or user access to Microsoft Defender.
 
 For more information, see [Microsoft Defender for Identity role groups](role-groups.md).
 
@@ -152,4 +152,4 @@ The following SailPoint Identity Security Cloud role is designated as Sensitive 
 
 ## Related content
 
-For more information, see [Investigate Defender for Identity security alerts in Microsoft Defender XDR](manage-security-alerts.md).
+For more information, see [Investigate Defender for Identity security alerts in Microsoft Defender](manage-security-alerts.md).
