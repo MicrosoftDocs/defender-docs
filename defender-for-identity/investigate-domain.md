@@ -50,10 +50,6 @@ The **Overview** tab provides a domain summary.
 | **Active Recommendations** | Lists security recommendations that affect the health score, with links to remediation guidance. For example, the **Unsecure Domain Configurations** recommendation links to the corresponding security posture assessment. |
 | **Group Policies** | Lists Group Policy Objects (GPOs) applied in the domain. Use this section to verify active policies and identify domains with no GPOs configured. |
 
-## Security recommendations
-
-For scoped users, the domain page shows security recommendations for the domains included in their assigned scope. This view helps scoped users focus on the identity risks that are relevant to the domains they're responsible for. Customers can use this experience to provide domain-level recommendation context without granting broader access across the environment. Each recommendation includes relevant risk information, affected assets, and suggested remediation actions to help scoped users understand what needs attention. By making the right recommendations available to the right users, organizations can improve ownership and move more quickly from visibility to action while maintaining appropriate access boundaries.
-
 ## Incidents and alerts tab
 
 Shows all incidents and alerts connected to the domain. Data on this tab includes only incidents and alerts created on or after February 1, 2026.
@@ -129,6 +125,10 @@ Lists the computer accounts in the domain. You can filter by tags. You can mark 
 | **SID** | The Security Identifier of the computer account. |
 | **Canonical Name** | The full canonical name path of the computer in Active Directory. |
 | **Description** | The description of the computer account. |
+
+## Security recommendations
+
+For scoped users, the domain page shows security recommendations for the domains included in their assigned scope. This view helps scoped users focus on the identity risks that are relevant to the domains they're responsible for. Customers can use this experience to provide domain-level recommendation context without granting broader access across the environment. Each recommendation includes relevant risk information, affected assets, and suggested remediation actions to help scoped users understand what needs attention. By making the right recommendations available to the right users, organizations can improve ownership and move more quickly from visibility to action while maintaining appropriate access boundaries.
 
 ## Related content
 
