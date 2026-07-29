@@ -1,12 +1,12 @@
 ---
 title: Address false positives/negatives in Microsoft Defender for Endpoint
-description: Learn how to handle false positives or false negatives in Microsoft Defender for Endpoint.
+description: Learn how to identify, investigate, and resolve false positives and false negatives in Microsoft Defender for Endpoint, including submissions and exclusions.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-ms.date: 10/20/2025
+ms.date: 07/29/2026
 ms.collection:
 - m365-security
 - m365initiative-defender-endpoint
@@ -20,6 +20,8 @@ ms.custom:
   - FPFN
   - admindeeplinkDEFENDER
   - sfi-image-nochange
+  - msecd-doc-authoring-1015
+ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -380,6 +382,99 @@ Depending on the [level of automation](automation-levels.md) set for your organi
 
 > [!IMPORTANT]
 > We recommend using *Full automation* for automated investigation and remediation. Don't turn these capabilities off because of a false positive. Instead, use ["allow" indicators to define exceptions](#indicators-for-defender-for-endpoint), and keep automated investigation and remediation set to take appropriate actions automatically. Following [this guidance](automation-levels.md#levels-of-automation) helps reduce the number of alerts your security operations team must handle.
+
+## False negatives and how to address them
+
+A false negative occurs when a malicious entity (such as a file, process, or network connection) isn't detected by Defender for Endpoint. False negatives can result from outdated security intelligence, misconfigured features, or threats that evade existing signatures.
+
+> [!NOTE]
+> Some capabilities in this section depend on your plan. Advanced hunting, collecting an investigation package, and [EDR in block mode](edr-in-block-mode.md) require [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md). The device timeline requires Defender for Endpoint Plan 2 or [Microsoft Defender for Business](/defender-business/mdb-overview). These capabilities aren't available in Defender for Endpoint Plan 1.
+
+### Verify a suspected false negative
+
+Before you report a false negative, confirm that the suspicious activity occurred and wasn't detected. Use the device timeline and advanced hunting in the Microsoft Defender portal to cross-verify endpoint behavior.
+
+1. On the **Device inventory** page of the Defender portal at <https://security.microsoft.com/machines>, select the affected device.
+
+1. On the device entity page that opens, select the **Timeline** tab and look for events that correspond to the suspicious activity (for example, file creation, process execution, or network connections during the expected time frame).
+
+1. To search your entire environment, go to the **Advanced hunting** page of the Defender portal at <https://security.microsoft.com/v2/advanced-hunting> and run queries against relevant tables. For example, use the following query to find events related to a specific file hash:
+
+   ```kusto
+   DeviceFileEvents
+   | where SHA1 == "<hash>"
+   | where ActionType == "FileCreated"
+   ```
+
+   You can also check network activity with a query like the following example:
+
+   ```kusto
+   DeviceNetworkEvents
+   | where RemoteUrl has "<suspicious-domain>"
+   ```
+
+1. If the activity is present in the logs but no alert was generated, the detection was likely missed, and you should proceed with evidence gathering.
+
+### Collect evidence for false negative escalation
+
+Before you submit a false negative to Microsoft, gather the following forensic artifacts to support the analysis:
+
+- **Endpoint support files**: Generate the diagnostic package `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab` by running `MpCmdRun.exe -GetFiles` in an elevated Command Prompt. For instructions, see [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md).
+
+- **Process execution details**: Document the process tree, command-line parameters, and parent processes associated with the suspicious activity. You can find process execution details in the device timeline or by using advanced hunting queries against the [`DeviceProcessEvents`](/defender-xdr/advanced-hunting-deviceprocessevents-table) table.
+
+- **Network flow data**: If the threat involves network connections, capture relevant connection details (remote IPs, domains, ports) from the [`DeviceNetworkEvents`](/defender-xdr/advanced-hunting-devicenetworkevents-table) table.
+
+- **Memory dumps or sandbox traces**: If possible, capture memory dumps or sandbox execution traces from the affected device to help Microsoft analyze the threat behavior. You can also [collect an investigation package from the device](respond-machine-alerts.md#collect-investigation-package-from-devices) directly in the Defender portal.
+
+- **Raw event data**: [Export relevant events](/defender-xdr/advanced-hunting-query-results#export-tables-and-charts) from advanced hunting in the Microsoft Defender portal for inclusion in your submission.
+
+### Submit false negatives for analysis
+
+After you gather evidence, submit the false negative to Microsoft for analysis using either of the following methods:
+
+- On the **Submissions** page in the Defender portal at <https://security.microsoft.com/reportsubmission>:
+  - **Files** tab: For complete instructions, see [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md).
+  - **URLs** tab: For complete instructions, see [Report questionable URLs to Microsoft](/defender-office-365/submissions-admin#report-questionable-urls-to-microsoft).
+
+- Submit hashes and files directly at the [Microsoft Security Intelligence submission site](https://www.microsoft.com/wdsi/filesubmission/). For more information, see [Submit files for analysis](/unified-secops-platform/submission-guide).
+
+### Mitigate threats while awaiting analysis
+
+After you submit a false negative, the affected threat might still be active in your environment. Use [custom indicators](indicator-file.md) in Defender for Endpoint to immediately block known malicious entities until Microsoft updates detection signatures:
+
+- **File hashes**: Create block indicators for malicious file hashes. See [Create indicators for files](indicator-file.md).
+- **IP addresses and domains**: Create block indicators for malicious IPs or domains. See [Create indicators for IPs and URLs/domains](indicator-ip-domain.md).
+
+Custom indicators take effect throughout your organization and provide immediate protection while Microsoft analyzes the submission.
+
+### Check endpoint health and configuration
+
+False negatives can also result from outdated security intelligence or disabled protection features on the endpoint. To check endpoint health on the affected device, use the following steps:
+
+1. Run the following command in an elevated PowerShell window on the affected device to check engine and signature versions:
+
+   ```powershell
+   Get-MpComputerStatus | Select-Object AMServiceVersion, AMProductVersion, AMEngineVersion, AntispywareSignatureVersion, AntivirusSignatureVersion
+   ```
+
+1. Confirm that security intelligence updates are current. If the versions are outdated, run the following command to update them:
+
+   ```powershell
+   Update-MpSignature
+   ```
+
+   > [!NOTE]
+   > You can also check for security intelligence updates from an elevated Command Prompt by running `MpCmdRun.exe -SignatureUpdate`. For more information, see [Use the command line to manage Microsoft Defender Antivirus](command-line-arguments-microsoft-defender-antivirus.md).
+
+1. Verify that key protection features are enabled. False negatives can occur if the following features are disabled or misconfigured:
+
+   - [Cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md)
+   - [Real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md)
+   - [EDR in block mode](edr-in-block-mode.md)
+   - [Attack surface reduction (ASR) rules](attack-surface-reduction-overview.md)
+
+1. Check that the device platform and OS are up to date, because older builds might lack detection capabilities that are available in newer versions.
 
 ## Still need help?
 

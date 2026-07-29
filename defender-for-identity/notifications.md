@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1014
 ---
 
-# Defender for Identity notifications in Microsoft Defender XDR
+# Defender for Identity notifications in Microsoft Defender
 
 >[!NOTE]
 >Defender for Identity notifications are currently supported only by the Defender for Identity sensor version 2.x.
@@ -27,7 +27,7 @@ This article describes how to configure Defender for Identity notifications so t
 
 Use the following procedure to configure email notifications for Defender for Identity health issues.
 
-1. In [Microsoft Defender XDR](https://security.microsoft.com), select **Settings** > **Identities**. 
+1. In [Microsoft Defender](https://security.microsoft.com), select **Settings** > **Identities**. 
 
 1. Under **Notifications**, select **Health issues notifications**.
 

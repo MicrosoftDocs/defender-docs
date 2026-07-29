@@ -33,7 +33,7 @@ Before you view SaaS Security Initiative recommendations, ensure that the follow
 
 To view SaaS Security Initiative recommendations, perform the following steps:
 
-1. In Microsoft Defender XDR, go to **Exposure Management** and select **Initiatives**.
+1. In the Defender portal, go to **Exposure Management** and select **Initiatives**.
 1. Select the  **SaaS Security** initiative, and then select **Open Initiative Page**.
 
 The page that appears lists the 12 metrics that categorize hundreds of best-practice recommendations.

@@ -17,7 +17,7 @@ The information monitored by Defender for Identity is presented in the form of a
 > [!NOTE]
 > - This article is relevant for all Defender for Identity sensor types.
 > - Defender for Identity monitored activities appear on both the user and machine profile page.
-> - Defender for Identity monitored activities are also available in [Microsoft Defender XDR's Advanced Hunting](/defender-xdr/advanced-hunting-overview) page.
+> - Defender for Identity monitored activities are also available in [Microsoft Defender's Advanced Hunting](/defender-xdr/advanced-hunting-overview) page.
 
 > [!TIP]
 > For detailed information on all supported event types (`ActionType` values) in Advanced Hunting Identity-related tables, use the built-in schema reference available in Microsoft Defender XDR.

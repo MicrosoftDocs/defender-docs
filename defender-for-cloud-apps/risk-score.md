@@ -55,7 +55,7 @@ Risk scores are kept up to date using the following sources:
 
 Check the cloud app catalog to ensure that the apps used by the organization fit into your organization's security requirements. For example, you might want to periodically check that CRM apps used in your organization are adequately secure. To identify CRM apps in your organization that meet these security criteria, use the following steps:
 
-1. Sign into Microsoft Defender XDR and select **Cloud apps** > **Cloud app catalog**.
+1. Sign into the Defender portal and select **Cloud apps** > **Cloud app catalog**.
 
 1. In the **Browse by category** list, select **CRM**. Use the search box to find a category if needed.
 
@@ -98,7 +98,7 @@ You might want to override the risk score for a specific app without changing th
 
 **To override the risk score for a specific app**:
 
-1. Sign into Microsoft Defender XDR. In the **Cloud discovery** or **Cloud app catalog** page, locate the app you want to override.
+1. Sign into the Defender portal. In the **Cloud discovery** or **Cloud app catalog** page, locate the app you want to override.
 
 1. Select the three dot menu and then select **Override app score**. 
 

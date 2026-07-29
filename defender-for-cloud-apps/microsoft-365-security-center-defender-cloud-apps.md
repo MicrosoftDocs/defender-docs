@@ -21,7 +21,7 @@ ms.custom: sfi-image-nochange
 
 Microsoft Defender for Cloud Apps is available inside the Microsoft Defender portal. The Defender portal is the home for monitoring and managing security across your Microsoft identities, data, devices, apps, and infrastructure, allowing security admins to perform their security tasks in one location, across multiple Microsoft Defender services.
 
-SOC analysts can triage, investigate, and hunt across all Microsoft Defender XDR workloads, including cloud apps.
+SOC analysts can triage, investigate, and hunt in all Microsoft Defender XDR workloads, including cloud apps.
 
 Take a look in the Microsoft Defender portal at <https://security.microsoft.com>.
 
@@ -53,7 +53,7 @@ Use the **Assets > Identities** page to find comprehensive details about entitie
 
 ## Related videos
 
-Learn how to protect your cloud apps in Microsoft Defender XDR:
+Learn how to protect your cloud apps in Microsoft Defender:
 
 **Protecting cloud apps in Microsoft Defender XDR**:<br>
 

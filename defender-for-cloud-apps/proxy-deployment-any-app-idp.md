@@ -30,7 +30,7 @@ This section explains how to configure your IdP to work with Defender for Cloud 
 
 Add the admins who will onboard and maintain your apps for Conditional Access app control.
 
-1. In Microsoft Defender XDR, select **Settings > Cloud Apps > Conditional Access App Control > App onboarding/maintenance**.
+1. In the Defender portal, select **Settings > Cloud Apps > Conditional Access App Control > App onboarding/maintenance**.
 
 1. Enter the usernames or emails of any users who will be onboarding your app, and then select **Save**.
 
