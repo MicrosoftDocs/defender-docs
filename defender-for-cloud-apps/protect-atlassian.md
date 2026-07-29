@@ -141,7 +141,7 @@ You can connect Microsoft Defender for Cloud Apps to your existing Atlassian pro
 
 ## Rate limits and limitations
 
-- **Rate limits** include 1,000 requests per minute (per API key/connector instance).
+- **Rate limits** include 1,000 requests and 8,000 events per minute (per API key/connector instance).
 
     For more information about the Atlassian API limitation, see [Atlassian admin REST APIs](https://developer.atlassian.com/cloud/admin/about/#about-the-cloud-admin-rest-apis).
 
