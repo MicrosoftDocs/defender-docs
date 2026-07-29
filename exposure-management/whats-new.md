@@ -24,6 +24,12 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 
 ## July 2026
 
+### Codename MDASH - MAI-Augmented scan profile now available for on-demand scans private preview
+
+Expanding on the previously released Defender CLI support, the MAI-Augmented scan profile is now also available in preview for on-demand scans triggered from the Microsoft Defender portal. Security teams can select this profile when starting an on-demand scan from the Scans tab.
+
+For more information, see [Trigger an on-demand agentic scan - Microsoft Security Exposure Management | Microsoft Learn](/security-exposure-management/trigger-on-demand-scan).
+
 ### Codename MDASH - MAI-Augmented scan profile private preview
 
 The MAI-Augmented scan profile is now available in preview as part of Codename MDASH. The MAI-Augmented profile can be used when triggering a scan through the Defender CLI.  
