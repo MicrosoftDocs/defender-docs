@@ -153,7 +153,7 @@ Following proper investigation, all Defender for Identity security alerts can be
 
 ### Tuning alerts
 
-Tune your alerts to adjust and optimize them, reducing false positives. Alert tuning allows your SOC teams to focus on high-priority alerts and improve threat detection coverage across your system. In Microsoft Defender XDR, create rule conditions based on evidence types, and then apply your rule on any rule type that matches your conditions. 
+Tune your alerts to adjust and optimize them, reducing false positives. Alert tuning allows your SOC teams to focus on high-priority alerts and improve threat detection coverage in your system. In Microsoft Defender, create rule conditions based on evidence types, and then apply your rule on any rule type that matches your conditions. 
 
 For more information, see [Tune an alert](/microsoft-365/security/defender/investigate-alerts#tune-an-alert).
 
