@@ -470,9 +470,9 @@ Use the following steps to verify that traffic is received by log collectors:
 
         1. Install *netcat* and *wget*.
 
-        1. Download a sample log file from Microsoft Defender XDR. If needed, unzip the log file.
+        1. Download a sample log file from the Defender portal. If needed, unzip the log file.
 
-            1. In Microsoft Defender XDR, under **Cloud Apps** select **Cloud Discovery** > **Actions** > **Create Cloud Discovery snapshot report**.
+            1. In the Defender portal, under **Cloud Apps** select **Cloud Discovery** > **Actions** > **Create Cloud Discovery snapshot report**.
 
             1. Select the **Data source** from which you want to upload the log files.
 
