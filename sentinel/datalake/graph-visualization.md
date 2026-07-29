@@ -4,12 +4,12 @@ description: Learn how to use Microsoft Sentinel graph to query, visualize, and 
 ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: dandennis
-ms.date: 06/12/2026
+ms.date: 07/29/2026
 ms.topic: how-to
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-graph
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1015
 
 #Customer intent: As a security analyst, I want to use Microsoft Sentinel graph to query and visualize custom security graphs so that I can gain new insights into entity relationships and threats in my environment.
 ---
@@ -61,6 +61,9 @@ View the schema to understand the graph ontology – nodes, edges, and their pro
     LIMIT 100
     ```
     For more information on using GQL, see [Graph Query Language (GQL) reference](./gql-reference-for-sentinel-custom-graph.md).
+
+    > [!NOTE]
+    > Predefined queries include a default `LIMIT` clause (for example, `LIMIT 100`) that caps the number of results returned. This default keeps initial visualizations responsive, but you see only a subset of your graph data. To see all matching results, edit the query to increase the value or remove the `LIMIT` clause before you run it. Returning large result sets can affect performance, so increase the limit incrementally to find the right balance for your graph.
 
 1. Select **Run GQL query** to view your results. You can cancel a query mid-execution. Copy the content of your query editor cell to share or save the query elsewhere. 
 
