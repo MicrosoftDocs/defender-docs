@@ -70,6 +70,10 @@ The tab includes default filters for **Status** (New, In progress) and **Alert s
 | **Impacted assets** | The assets affected by the incident. |
 | **Active alerts** | The number of active alerts in the incident. |
 
+## Security recommendations
+
+For scoped users, the domain page shows security recommendations for the domains included in their assigned scope. This view helps scoped users focus on the identity risks that are relevant to the domains they're responsible for. Customers can use this experience to provide domain-level recommendation context without granting broader access across the environment. Each recommendation includes relevant risk information, affected assets, and suggested remediation actions to help scoped users understand what needs attention. By making the right recommendations available to the right users, organizations can improve ownership and move more quickly from visibility to action while maintaining appropriate access boundaries.
+
 ## Security Policies tab
 
 Provides human-readable summaries of key Active Directory security policies in four cards. Use this tab to review critical Active Directory configurations and check whether they meet current security standards.
@@ -125,10 +129,6 @@ Lists the computer accounts in the domain. You can filter by tags. You can mark 
 | **SID** | The Security Identifier of the computer account. |
 | **Canonical Name** | The full canonical name path of the computer in Active Directory. |
 | **Description** | The description of the computer account. |
-
-## Security recommendations
-
-For scoped users, the domain page shows security recommendations for the domains included in their assigned scope. This view helps scoped users focus on the identity risks that are relevant to the domains they're responsible for. Customers can use this experience to provide domain-level recommendation context without granting broader access across the environment. Each recommendation includes relevant risk information, affected assets, and suggested remediation actions to help scoped users understand what needs attention. By making the right recommendations available to the right users, organizations can improve ownership and move more quickly from visibility to action while maintaining appropriate access boundaries.
 
 ## Related content
 
