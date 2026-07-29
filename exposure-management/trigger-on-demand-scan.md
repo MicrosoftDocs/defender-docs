@@ -39,7 +39,7 @@ The repository size and tokens consumed signals can help your security team pred
 
 1. Select the repository you want to scan.
 1. Select **Start scan**.
-1. Confirm in the dialog that appears.
+1. In the confirmation dialog, keep the tenant default scan profile or choose a different available profile for this scan only, then select **Scan repo**. A profile whose required models aren't deployed shows an inline error and can't be selected. For details on the models required per each profile a, see [Deploy the required models](/security-exposure-management/mdash-foundry-integration).
 
 *If your tenant already has 10 queued scans from the portal and the CLI combined, a warning appears. You can still submit the scan. Queued scans that don't start running within 72 hours of submission are automatically cleaned up, so some queued scans might not run.*
 
