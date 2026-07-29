@@ -943,8 +943,10 @@
       href: isv/sentinel-siem-platform-solution-introduction.md
     - name: Microsoft Sentinel SIEM solutions
       items:
-      - name: Develop a SIEM solution for Microsoft Sentinel
-        href: isv/develop-siem-solutions-overview.md
+      - name: Build and publish Microsoft Sentinel SIEM solutions
+        href: manage-platform-solutions.md
+      - name: Decide what SIEM solutions to build
+        href: isv/siem-components-to-include.md  
       - name: Microsoft Sentinel SIEM solution quality guidelines
         href: isv/sentinel-siem-solution-quality-guidance.md
       - name: Develop a SIEM solution for Microsoft Sentinel
@@ -983,8 +985,6 @@
         href: isv/publish-sentinel-solutions.md
       - name: Sentinel SIEM solution lifecycle post publish
         href: isv/sentinel-solutions-post-publish-tracking.md
-      - name: Manage Platform Solutions
-        href: manage-platform-solutions.md
     - name: Microsoft Sentinel Platform content
       items:
         - name: Decide what platform solutions to build
