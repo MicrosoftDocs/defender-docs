@@ -25,7 +25,7 @@ This article describes the Microsoft Defender for Office 365 experience in the M
 
 The Defender portal combines security capabilities from existing Microsoft 365 security portals. This improved portal helps security teams protect their organization from threats more effectively and efficiently.
 
-For more information about the benefits of the unified Microsoft Defender XDR, see [Overview of Defender XDR](microsoft-365-defender.md).
+For more information about the benefits of Microsoft Defender, see [Overview of Defender](microsoft-365-defender.md).
 
 If you're looking for compliance-related items, see [Microsoft Purview portal](/purview/purview-compliance-portal).
 
@@ -106,7 +106,7 @@ Get threat intelligence from expert Microsoft security researchers. Threat Analy
 
 You can access Threat analytics either from the left navigation pane in the Defender portal, or from a dedicated dashboard card that shows the top threats for your organization.
 
-For more information, see [Threat analytics in Microsoft Defender XDR](threat-analytics.md).
+For more information, see [Threat analytics in Microsoft Defender](threat-analytics.md).
 
 ### Email & collaboration
 
@@ -164,7 +164,7 @@ For more information, see the following articles:
 
 ### Learning hub
 
-Redirects to the [Microsoft Defender XDR learning paths](/training/defender/).
+Redirects to the [Microsoft Defender learning paths](/training/defender/).
 
 ### Trials
 
@@ -184,7 +184,7 @@ The following subsections describe the features that are available in the **Syst
 
 #### Permissions
 
-- [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md)
+- [Microsoft Defender Unified role-based access control (RBAC)](manage-rbac.md)
 - **Microsoft Entra ID**. You can view information about the roles that are shown, but you can't manage role membership here. The details flyout of each role contains a link to the **Users** page in Microsoft Entra where you can add users to roles.
 - [Email & collaboration roles](/defender-office-365/scc-permissions)
 
