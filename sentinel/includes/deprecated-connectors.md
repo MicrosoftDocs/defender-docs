@@ -2,7 +2,7 @@
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: include
-ms.date: 05/28/2026
+ms.date: 07/27/2026
 
 # This file is auto-generated. Do not edit manually. Changes will be overwritten.
 ---
@@ -17,9 +17,9 @@ The [Auth0 Logs (using Azure Function)](https://auth0.com/access-management) dat
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`Auth0AM_CL`|Yes|Yes|
+|`Auth0AM_CL`|No|No|
 
-**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+**Data collection rule support:** Not currently supported
 
 **Prerequisites:**
 
@@ -110,6 +110,86 @@ If you're already signed in, go to the next step.
 
  ---
    
+<a name="deprecated-box-events-using-azure-function-using-azure-functions"></a><details><summary>**[Deprecated] Box Events (using Azure Function) (using Azure Functions)**</summary>
+
+**Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
+
+The Box data connector provides the capability to ingest [Box enterprise's events](https://developer.box.com/guides/events/#admin-events) into Microsoft Sentinel using the Box REST API. Refer to [Box  documentation](https://developer.box.com/guides/events/enterprise-events/for-enterprise/) for more information.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`BoxEvents_CL`|No|No|
+
+**Data collection rule support:** Not currently supported
+
+**Prerequisites:**
+
+- **Microsoft.Web/sites permissions**: Read and write permissions to Azure Functions to create a Function App is required. For more information, see [Azure Functions](/azure/azure-functions/).
+- **Box API Credentials**: Box config JSON file is required for Box REST API JWT authentication. For more information, see [JWT authentication](https://developer.box.com/guides/authentication/jwt/).
+
+**Setup Instructions:**
+
+ >**NOTE:** This connector uses Azure Functions to connect to the Box REST API to pull logs into Microsoft Sentinel. This might result in additional data ingestion costs. Check the [Azure Functions pricing page](https://azure.microsoft.com/pricing/details/functions/) for details.
+
+**(Optional Step)** Securely store workspace and API authorization key(s) or token(s) in Azure Key Vault. Azure Key Vault provides a secure mechanism to store and retrieve key values. [Follow these instructions](/azure/app-service/app-service-key-vault-references) to use Azure Key Vault with an Azure Function App.
+
+>**NOTE:** This connector depends on a parser based on Kusto Function to work as expected [**BoxEvents**](https://aka.ms/sentinel-BoxDataConnector-parser) which is deployed with the Microsoft Sentinel Solution.
+
+STEP 1 - Configuration of the Box events collection
+
+See documentation to [setup JWT authentication](https://developer.box.com/guides/authentication/jwt/jwt-setup/) and [obtain JSON file with credentials](https://developer.box.com/guides/authentication/jwt/with-sdk/#prerequisites).
+
+STEP 2 - Choose ONE from the following two deployment options to deploy the connector and the associated Azure Function
+
+>**IMPORTANT:** Before deploying the Box data connector, have the Workspace ID and Workspace Primary Key (can be copied from the following), as well as the Box JSON configuration file, readily available.
+
+  - **Workspace ID**: <variable value provided at install time>
+  - **Primary Key**: <variable value provided at install time>
+
+**Option 1 - Azure Resource Manager (ARM) Template**
+
+Use this method for automated deployment of the Box data connector using an ARM Tempate.
+
+1. Click the **Deploy to Azure** button below. 
+
+	[aka.ms](https://aka.ms/sentinel-BoxDataConnector-azuredeploy)
+2. Select the preferred **Subscription, Resource Group and Location**. 
+3. Enter the **AzureSentinelWorkspaceId, AzureSentinelSharedKey, BoxConfigJSON**
+4. Mark the checkbox labeled **I agree to the terms and conditions stated above**.
+5. Click **Purchase** to deploy.
+
+**Option 2 - Manual Deployment of Azure Functions**
+
+Use the following step-by-step instructions to deploy the Box data connector manually with Azure Functions (Deployment via Visual Studio Code).
+
+**Step 1 - Deploy a Function App**
+
+1. Download the [Azure Function App](https://aka.ms/sentinel-BoxDataConnector-functionapp) file. Extract archive to your local development computer.
+2. Follow the [function app manual deployment instructions](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/AzureFunctionsManualDeployment.md#function-app-manual-deployment-instructions) to deploy the Azure Functions app using VSCode.
+3. After successful deployment of the function app, follow next steps for configuring it.
+
+**Step 2 - Configure the Function App**
+
+1. Go to Azure Portal for the Function App configuration.
+2. In the Function App, select the Function App Name and select **Configuration**.
+3. In the **Application settings tab, select + New application setting**.
+4. Add each of the following application settings individually, with their respective string values (case-sensitive): 
+		AzureSentinelWorkspaceId
+		AzureSentinelSharedKey
+		BOX_CONFIG_JSON
+		logAnalyticsUri (optional)
+ - Use logAnalyticsUri to override the log analytics API endpoint for dedicated cloud. For example, for public cloud, leave the value empty; for Azure GovUS cloud environment, specify the value in the following format: `https://<CustomerId>.ods.opinsights.azure.us`.
+5. Once all application settings have been entered, click **Save**.
+
+
+
+<br><br>
+</details> 
+
+ ---
+   
 <a name="deprecated-github-enterprise-audit-log"></a><details><summary>**[Deprecated] GitHub Enterprise Audit Log**</summary>
 
 **Supported by:** [Microsoft Corporation](https://azure.microsoft.com/support/options/)
@@ -124,9 +204,9 @@ The GitHub audit log connector provides the capability to ingest GitHub logs int
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`GitHubAuditLogPolling_CL`|Yes|Yes|
+|`GitHubAuditLogPolling_CL`|No|No|
 
-**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+**Data collection rule support:** Not currently supported
 
 **Prerequisites:**
 
@@ -366,8 +446,8 @@ Deprecated, use the 'ESI-Opt' dataconnectors. You can stream all Exchange Audit 
 |[`Event`](/azure/azure-monitor/reference/tables/Event)|Yes|No|
 |[`SecurityEvent`](/azure/azure-monitor/reference/tables/SecurityEvent)|Yes|Yes|
 |[`W3CIISLog`](/azure/azure-monitor/reference/tables/W3CIISLog)|Yes|No|
-|`MessageTrackingLog_CL`|Yes|Yes|
-|`ExchangeHttpProxy_CL`|Yes|Yes|
+|`MessageTrackingLog_CL`|No|No|
+|`ExchangeHttpProxy_CL`|No|No|
 
 **Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
 
@@ -961,9 +1041,9 @@ The [Okta Single Sign-On (SSO) (using Azure Function)](https://www.okta.com/prod
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`Okta_CL`|Yes|Yes|
+|`Okta_CL`|No|No|
 
-**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+**Data collection rule support:** Not currently supported
 
 **Prerequisites:**
 
@@ -1048,9 +1128,9 @@ The [SentinelOne](https://www.sentinelone.com/) data connector provides the capa
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`SentinelOne_CL`|Yes|Yes|
+|`SentinelOne_CL`|No|No|
 
-**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+**Data collection rule support:** Not currently supported
 
 **Prerequisites:**
 
@@ -1163,9 +1243,9 @@ The [Sophos Endpoint Protection](https://www.sophos.com/en-us/products/endpoint-
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`SophosEP_CL`|Yes|Yes|
+|`SophosEP_CL`|No|No|
 
-**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+**Data collection rule support:** Not currently supported
 
 **Prerequisites:**
 
@@ -1351,6 +1431,154 @@ Use the following step-by-step instructions to deploy the VMware Carbon Black co
 
  ---
    
+<a name="deprecated-zoom-reports-using-azure-functions"></a><details><summary>**[Deprecated] Zoom Reports (using Azure Functions)**</summary>
+
+**Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
+
+The [Zoom](https://zoom.us/) Reports data connector provides the capability to ingest [Zoom Reports](https://developers.zoom.us/docs/api/rest/reference/zoom-api/methods/#tag/Reports) events into Microsoft Sentinel through the REST API. Refer to [API documentation](https://developers.zoom.us/docs/api/) for more information. The connector enables event retrieval to assess potential security risks, monitor collaboration, and diagnose and troubleshoot configuration issues.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`Zoom_CL`|No|No|
+
+**Data collection rule support:** Not currently supported
+
+**Prerequisites:**
+
+- **Microsoft.Web/sites permissions**: Read and write permissions to Azure Functions to create a Function App is required. For more information, see [Azure Functions](/azure/azure-functions/).
+- **REST API Credentials/permissions**: **AccountID**, **ClientID** and **ClientSecret** are required for Zoom API. For more information, see [Zoom API](https://developers.zoom.us/docs/internal-apps/create/). [Follow the instructions for Zoom API configurations](https://aka.ms/sentinel-zoomreports-readme).
+
+**Setup Instructions:**
+
+ >**NOTE:** This connector uses Azure Functions to connect to the Zoom API to pull its logs into Microsoft Sentinel. This might result in additional data ingestion costs. Check the [Azure Functions pricing page](https://azure.microsoft.com/pricing/details/functions/) for details.
+
+**(Optional Step)** Securely store workspace and API authorization key(s) or token(s) in Azure Key Vault. Azure Key Vault provides a secure mechanism to store and retrieve key values. [Follow these instructions](/azure/app-service/app-service-key-vault-references) to use Azure Key Vault with an Azure Function App.
+
+**NOTE:** This data connector depends on a parser based on a Kusto Function to work as expected which is deployed as part of the solution. To view the function code in Log Analytics, open Log Analytics/Microsoft Sentinel Logs blade, click Functions and search for the alias Zoom and load the function code or click [here](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/ZoomReports/Parsers/Zoom.yaml). The function usually takes 10-15 minutes to activate after solution installation/update.
+
+STEP 1 - Configuration steps for the Zoom API
+
+ [Follow the instructions](https://developers.zoom.us/docs/internal-apps/create/) to obtain the credentials. 
+
+
+STEP 2 - Choose ONE from the following two deployment options to deploy the connector and the associated Azure Function
+
+>**IMPORTANT:** Before deploying the Zoom Reports data connector, have the Workspace ID and Workspace Primary Key (can be copied from the following).
+
+  - **Workspace ID**: <variable value provided at install time>
+  - **Primary Key**: <variable value provided at install time>
+
+**Option 1 - Azure Resource Manager (ARM) Template**
+
+Use this method for automated deployment of the Zoom Audit data connector using an ARM Tempate.
+
+1. Click the **Deploy to Azure** button below. 
+
+	[aka.ms](https://aka.ms/sentinel-ZoomAPI-azuredeployV2) [aka.ms](https://aka.ms/sentinel-ZoomAPI-azuredeployV2-gov)
+2. Select the preferred **Subscription, Resource Group and Region**. 
+> **NOTE:** Within the same resource group, you can't mix Windows and Linux apps in the same region. Select existing resource group without Windows apps in it or create new resource group.
+3. Enter the **AccountID, ClientID, ClientSecret, WorkspaceID, WorkspaceKey, Function Name**  and click Review + create. 
+4. Finally click **Create** to deploy.
+
+**Option 2 - Manual Deployment of Azure Functions**
+
+Use the following step-by-step instructions to deploy the Zoom Reports data connector manually with Azure Functions (Deployment via Visual Studio Code).
+
+**Step 1 - Deploy a Function App**
+
+**NOTE:** You will need to [prepare VS code](/azure/azure-functions/functions-create-first-function-python#prerequisites) for Azure function development.
+
+1. Download the [Azure Function App](https://aka.ms/sentinel-ZoomAPI-functionapp) file. Extract archive to your local development computer.
+2. Start VS Code. Choose File in the main menu and select Open Folder.
+3. Select the top level folder from extracted files.
+4. Choose the Azure icon in the Activity bar, then in the **Azure: Functions area, choose the Deploy to function app** button.
+If you aren't already signed in, choose the Azure icon in the Activity bar, then in the **Azure: Functions area, choose Sign in to Azure**
+If you're already signed in, go to the next step.
+5. Provide the following information at the prompts:
+
+	a. **Select folder:** Choose a folder from your workspace or browse to one that contains your function app.
+
+	b. **Select Subscription:** Choose the subscription to use.
+
+	c. Select **Create new Function App in Azure** (Don't choose the Advanced option)
+
+	d. **Enter a globally unique name for the function app:** Type a name that is valid in a URL path. The name you type is validated to make sure that it's unique in Azure Functions. (e.g. ZoomXXXXX).
+
+	e. **Select a runtime:** Choose Python 3.11.
+
+	f. Select a location for new resources. For better performance and lower costs choose the same [region](https://azure.microsoft.com/regions/) where Microsoft Sentinel is located.
+
+6. Deployment will begin. A notification is displayed after your function app is created and the deployment package is applied.
+7. Go to Azure Portal for the Function App configuration
+
+**Step 2 - Configure the Function App**
+
+1. In the Function App, select the Function App Name and select **Configuration**.
+2. In the **Application settings tab, select  New application setting**.
+3. Add each of the following application settings individually, with their respective string values (case-sensitive): 
+		AccountID
+		ClientID
+		ClientSecret
+		WorkspaceID
+		WorkspaceKey
+		logAnalyticsUri (optional)
+  Use logAnalyticsUri to override the log analytics API endpoint for dedicated cloud. For example, for public cloud, leave the value empty; for Azure GovUS cloud environment, specify the value in the following format: `https://<CustomerId>.ods.opinsights.azure.us`.
+4. Once all application settings have been entered, click **Save**.
+
+
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="darktrace-connector-for-microsoft-sentinel-rest-api-legacy"></a><details><summary>**Darktrace Connector for Microsoft Sentinel REST API (Legacy)**</summary>
+
+**Supported by:** [Darktrace](https://darktrace.com/contact)
+
+The Darktrace REST API connector pushes real-time events from Darktrace to Microsoft Sentinel and is designed to be used with the Darktrace Solution for Microsoft Sentinel. The connector writes logs to a custom log table titled "darktrace_model_alerts_CL"; Model Breaches, AI Analyst Incidents, System Alerts and Email Alerts can be ingested - additional filters can be set up on the Darktrace System Configuration page. Data is pushed to Microsoft Sentinel from Darktrace masters.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`darktrace_model_alerts_CL`|No|No|
+
+**Data collection rule support:** Not currently supported
+
+**Prerequisites:**
+
+- **Darktrace Prerequisites**: To use this Data Connector a Darktrace master running v5.2+ is required.
+ Data is sent to the [Azure Monitor HTTP Data Collector API](/azure/azure-monitor/logs/data-collector-api) over HTTPs from Darktrace masters, therefore outbound connectivity from the Darktrace master to Microsoft Sentinel REST API is required.
+- **Filter Darktrace Data**: During configuration it is possible to set up additional filtering on the Darktrace System Configuration page to constrain the amount or types of data sent.
+- **Try the Darktrace Sentinel Solution**: You can get the most out of this connector by installing the Darktrace Solution for Microsoft Sentinel. This will provide workbooks to visualise alert data and analytics rules to automatically create alerts and incidents from Darktrace Model Breaches and AI Analyst incidents.
+
+**Setup Instructions:**
+
+ 1. Detailed setup instructions can be found on the Darktrace Customer Portal: https://customerportal.darktrace.com/product-guides/main/microsoft-sentinel-introduction
+ 2. Take note of the Workspace ID and the Primary key. You will need to enter these details on your Darktrace System Configuration page.
+ 
+
+  - **Workspace ID**: <variable value provided at install time>
+  - **Primary Key**: <variable value provided at install time>
+
+**Darktrace Configuration**
+
+1. Perform the following steps on the Darktrace System Configuration page:
+ 2. Navigate to the System Configuration Page (Main Menu > Admin > System Config)
+ 3. Go into Modules configuration and click on the "Microsoft Sentinel" configuration card
+ 4. Select "HTTPS (JSON)" and hit "New"
+ 5. Fill in the required details and select appropriate filters
+ 6. Click "Verify Alert Settings" to attempt authentication and send out a test alert
+ 7. Run a "Look for Test Alerts" sample query to validate that the test alert has been received
+
+<br><br>
+</details> 
+
+ ---
+   
 <a name="island-enterprise-browser-admin-events-legacy"></a><details><summary>**Island Enterprise Browser Admin Events (Legacy)**</summary>
 
 **Supported by:** [Island](https://www.island.io/contact-us)
@@ -1361,9 +1589,9 @@ This is a legacy connector and is no longer recommended. Please use the **Island
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`Island_Admin_CL`|Yes|Yes|
+|`Island_Admin_CL`|No|No|
 
-**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+**Data collection rule support:** Not currently supported
 
 **Prerequisites:**
 
@@ -1391,9 +1619,9 @@ This is a legacy connector and is no longer recommended. Please use the **Island
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`Island_User_CL`|Yes|Yes|
+|`Island_User_CL`|No|No|
 
-**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+**Data collection rule support:** Not currently supported
 
 **Prerequisites:**
 
