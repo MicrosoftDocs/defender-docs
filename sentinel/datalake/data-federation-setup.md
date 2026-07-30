@@ -244,7 +244,7 @@ Before creating the connector, configure access in your Databricks environment a
 
 After selecting **Connect**, the wizard closes and the instance count for Databricks increases.
 
-# [](#end)
+#(#end)
 
 ## Verify tables from your connector instance
 
