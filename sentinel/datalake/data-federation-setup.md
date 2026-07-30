@@ -143,9 +143,6 @@ To configure the Fabric connector instance:
 
 1. Select **Connect** to create the connection instance.
 
-> [!NOTE]
-> For Microsoft Fabric federation, the files in the target data source must be in delta parquet format to be read from the Sentinel data lake.
-
 # [Azure Data Lake Storage Gen 2](#tab/adls)
 
 Use this tab to create a federated connector instance for Azure Data Lake Storage (ADLS) Gen 2.
@@ -263,6 +260,8 @@ After creating a connector instance check that the tables you federated are avai
 
 :::image type="content" source="./media/data-federation-setup/verify-tables.png" lightbox="./media/data-federation-setup/verify-tables.png" alt-text="Screenshot showing the federated table schema.":::
 
+ 
+
 ## Manage connector instances
 
 To modify or delete a connector instance:
@@ -287,6 +286,8 @@ Use the following checks to diagnose common issues with federated data connector
 
 - Verify the Sentinel platform managed identity prefixed by `msg-resources-` has the correct permissions on Azure Key Vault.
 - If your connection source is Azure Databricks or Azure Data Lake Storage Gen2, ensure the Key Vault secret contains the correct client secret for your service principal.
+- If your connection source is Azure Databricks, confirm the target uses hybrid workspace type and that external data access has been enabled for the workspace.
+
 - The Key Vault networking must be set to **Allow public access from all networks** during the connector configuration, which is the default configuration of Key Vault. It can be changed after connector creation or editing.
 - Confirm the external data source is publicly accessible.
 - Check that the service principal has appropriate permissions on the target data source for Azure Databricks and ADLS.
@@ -299,6 +300,8 @@ Use the following checks to diagnose common issues with federated data connector
 ### Tables don't appear
 
 - Verify the service principal has read access to the target tables for ADLS and Azure Databricks, and the service principal is in the same tenant as these data sources.
+
+- Verify the target tables are in delta parquet format.
 
 - For Databricks, ensure you granted both the built-in Data Reader privilege preset plus the External Use Schema permission to the service principal.
 - For ADLS Gen 2, confirm the Storage Blob Data Reader role is assigned to the service principal.
