@@ -4,7 +4,7 @@ description: Learn how to investigate an Active Directory domain in Microsoft De
 #customer intent: As a security admin, I want to view the security posture of my Active Directory domains so that I can identify coverage gaps, review security policies, and act on recommendations.
 author: AbbyMSFT
 ms.author: abbyweisberg
-ms.date: 07/05/2026
+ms.date: 07/30/2026
 ms.topic: concept-article
 ms.service: microsoft-defender-for-identity
 ms.custom: msecd-doc-authoring-106
@@ -69,6 +69,10 @@ The tab includes default filters for **Status** (New, In progress) and **Alert s
 | **Categories** | The threat categories associated with the incident. |
 | **Impacted assets** | The assets affected by the incident. |
 | **Active alerts** | The number of active alerts in the incident. |
+
+## Security recommendations
+
+For scoped users, the domain page shows security recommendations for the domains included in their assigned scope. This view helps scoped users focus on the identity risks that are relevant to the domains they're responsible for. Customers can use this experience to provide domain-level recommendation context without granting broader access across the environment. Each recommendation includes relevant risk information, affected assets, and suggested remediation actions to help scoped users understand what needs attention. By making the right recommendations available to the right users, organizations can improve ownership and move more quickly from visibility to action while maintaining appropriate access boundaries.
 
 ## Security Policies tab
 
