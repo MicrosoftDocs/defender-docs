@@ -219,6 +219,9 @@ The following naming and scheduling limitations apply to KQL jobs:
 + Job names can't contain a `#` or a `-`.
 + Job start time must be at least 30 minutes after job creation or editing.
 
+## Source workspaces deletion
+
+If a source workspace referenced by a scheduled KQL job is deleted, the job might continue to run and fail on each scheduled execution until the schedule expires or the job is modified. To prevent repeated failures and unnecessary resource consumption, jobs that reference deleted source workspaces are automatically placed in a **Disabled** state and require user action before they can resume.
 
 ## Data lake ingestion latency
 
