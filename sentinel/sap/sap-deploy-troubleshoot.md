@@ -74,7 +74,7 @@ Note that log filters on NetWeaver impact what is written to the audit log on th
 
 ## Timeouts during connector registration or log polling
 
-The Microsoft Sentinel agentless poller enforces two timeouts when calling the SAP Cloud Integration **Data Collector** iflow. Exceeding either limit causes incomplete ingestion or repeated retries.
+The Microsoft Sentinel agentless poller enforces two timeouts when calling the SAP Cloud Integration **Data Collector** iflow. Exceeding either limit causes incomplete ingestion or repeated retries. Error messages on SAP Cloud Integration may vary based on which part of the data extraction pipeline fails first.
 
 ### Initial connect (45-second limit) – partial data and failed connector registration
 
@@ -98,6 +98,18 @@ To recover and prevent recurrence:
 1. Run the [Prerequisite checker](preparing-sap.md#run-the-prerequisite-checker) iflow to identify the root cause of the slow audit log read response times on SAP (for example, missing indexes, oversized audit log, expensive user master reads on legacy releases).
 1. Apply the relevant remediation — audit log filter tuning ([SM19/RSAU best practices](https://community.sap.com/t5/application-development-and-automation-blog-posts/analysis-and-recommended-settings-of-the-security-audit-log-sm19-rsau/ba-p/13297094)) and Data Collector parameter overrides such as `max-rows` and `offset-in-seconds` (see [Customize data connector behavior](deploy-data-connector-agent-container.md?tabs=managed-identity&pivots=connection-agentless#customize-data-connector-behavior-optional)) — before reconnecting the data connector in Microsoft Sentinel.
 1. If response times still can't be reduced below the 180-second limit, deploy the **Data Collector Scheduler** iflow from the [Microsoft Sentinel for SAP community repository](https://github.com/Azure-Samples/Sentinel-For-SAP-Community). Switching to the SAP CPI–internal scheduler compromises real-time threat protection but avoids the retry pattern enforced by the Microsoft Sentinel poller.
+
+### Connection reset error
+
+If the Data Collector iFlow fails with an error such as `java.lang.Exception: Connection reset`, the connection to the SAP backend was unexpectedly closed before processing completed. This is typically caused by network interruptions in the log extraction chain between SAP Cloud Integration <-> SAP Cloud Connector <-> SAP backend, connectivity issues, timeouts, or SAP backend issues.
+
+Resolution:
+
+- The Sentinel log poller handles small interruptions gracefully through limited retries - no action needed. Longer down times result in abandoned time slices in favor of stable operations.
+- Use SAP's application health monitors to verify connectivity between SAP Cloud Integration, SAP Cloud Connector, and the SAP system in case investigation is needed.
+- Isolate the problematic SID log data flow and consult the other timeout related guidance in this section.
+
+Consult [Configure SAP Cloud Connector settings](preparing-sap.md#configure-sap-cloud-connector-settings) and [Optimize SAP Cloud Connector sizing, throughput, and isolation](preparing-sap.md#optimize-sap-cloud-connector-sizing-throughput-and-isolation) for further guidance.
 
 :::zone-end
 
