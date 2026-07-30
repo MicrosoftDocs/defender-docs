@@ -12072,7 +12072,7 @@ The [LastPass Enterprise](https://www.lastpass.com/products/enterprise-password-
 
 **Prerequisites:**
 
-- **LastPass API Key and CID:** A LastPass API key and CID are required. For more information, see [LastPass API](https://support.lastpass.com/s/document-item?bundleId=lastpass&topicId=LastPass%2Fuse-provisioning-api.html).
+- **LastPass API Key and CID**: A LastPass API key and CID are required. For more information, see [LastPass API](https://support.lastpass.com/s/document-item?bundleId=lastpass&topicId=LastPass%2Fuse-provisioning-api.html).
 
 **Setup Instructions:**
 

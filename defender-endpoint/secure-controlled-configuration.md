@@ -3,7 +3,7 @@ title: Controlled configuration in Microsoft Defender for Endpoint
 description: Controlled configuration makes cloud policy the single source of truth for Defender Antivirus settings, overriding Group Policy, scripts, and local changes to eliminate configuration drift.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 07/08/2026
+ms.date: 07/30/2026
 ms.topic: concept-article
 author: chrisda
 ms.author: chrisda
@@ -51,7 +51,7 @@ Controlled configuration is a superset of tamper protection that provides policy
 - Devices must be managed through Microsoft Intune or Defender for Endpoint security settings management.
 - Devices must run Windows 10, Windows 11, or Windows Server 2019.
 - Devices must run Microsoft Defender for Endpoint EDR Sensor version later than 10.8804 (September 2025).
-- Devices must run Microsoft Defender Antivirus platform version 4.18.26060.3006 or later (June 2026).
+- Devices must run Microsoft Defender Antivirus platform version 4.18.26060.3004 or later (June 2026).
 
 Controlled configuration doesn't currently support:
 
@@ -104,6 +104,14 @@ Because controlled configuration and tamper protection use the same policy setti
 1. Locate the **Controlled Configuration (Device)** setting (formerly **Tamper Protection**).
 1. Set the value to **Controlled Configuration (On)** to enable controlled configuration.
 1. Assign the policy to the appropriate device groups.
+
+## Minimum client version and rollback
+
+Before you assign **Controlled Configuration (On)**, update devices to Microsoft Defender Antivirus platform version 4.18.26060.3004 or later, and validate the deployment with a pilot group.
+
+On devices with earlier platform versions, Intune might send **Controlled Configuration (On)** and **Tamper Protection (Off)**, but the device might apply only the tamper protection setting. This behavior leaves both controlled configuration and tamper protection turned off.
+
+To roll back, change the Windows Security Experience policy from **Controlled Configuration (On)** to **Tamper Protection (On)**, redeploy the policy, sync the affected devices, and verify that tamper protection is enabled. Normal policy delivery latency applies.
 
 ## Reporting and monitoring
 
