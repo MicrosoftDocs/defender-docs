@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 
 # Assign a recommendation to an active user
 
-Microsoft Defender for Cloud has an active user feature that helps security administrators identify the most active users who handle remediation recommendations. To secure cloud resources, security administrators must monitor and address potential threats and their associated recommendations.
+Microsoft Defender for Cloud has an active user feature that helps security administrators identify the most active users who handle remediation recommendations. To secure cloud resources, security administrators must monitor and address potential threats and their associated recommendations. test pr
 
 The active user feature suggests up to three potential active users. Defender for Cloud makes suggestions based on the users' control plane activities on the specific resource, its related resource group, or the associated subscription. This feature improves the speed and efficiency of the remediation process and strengthens overall security posture.
 
