@@ -244,7 +244,7 @@ Before creating the connector, configure access in your Databricks environment a
 
 After selecting **Connect**, the wizard closes and the instance count for Databricks increases.
 
-(#tab/end)
+#[end]
 
 ## Verify tables from your connector instance
 
@@ -302,9 +302,7 @@ Use the following checks to diagnose common issues with federated data connector
 ### Tables don't appear
 
 - Verify the service principal has read access to the target tables for ADLS and Azure Databricks, and the service principal is in the same tenant as these data sources.
-
 - Verify the target tables are in delta parquet format.
-
 - For Databricks, ensure you granted both the built-in Data Reader privilege preset plus the External Use Schema permission to the service principal.
 - For ADLS Gen 2, confirm the Storage Blob Data Reader role is assigned to the service principal.
 
