@@ -75,9 +75,9 @@ The tab includes default filters for **Status** (New, In progress) and **Alert s
 
 ## Security recommendations (Preview)
 
-For scoped users, the domain page shows security recommendations for the domains included in their assigned scope. This view helps scoped users focus on the identity risks that are relevant to the domains they're responsible for. Customers can use this experience to provide domain-level recommendation context without granting broader access across the environment. Each recommendation includes relevant risk information, affected assets, and suggested remediation actions to help scoped users understand what needs attention.
-
 :::image type="content" source="media/investigate-domain/domain-page-security-recommendations.png" alt-text="Screenshot that shows the Security recommendations tab of the domain page in Microsoft Defender." lightbox="media/investigate-domain/domain-page-security-recommendations.png":::
+
+For scoped users, the domain page shows security recommendations for the domains included in their assigned scope. This view helps scoped users focus on the identity risks that are relevant to the domains they're responsible for. Customers can use this experience to provide domain-level recommendation context without granting broader access across the environment. Each recommendation includes relevant risk information, affected assets, and suggested remediation actions to help scoped users understand what needs attention.
 
 | Column | Description |
 |---|---|
