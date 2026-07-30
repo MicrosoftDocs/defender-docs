@@ -142,6 +142,8 @@ If your MX record doesn't point to Microsoft 365, the IP address in the `Authent
 >
 >   Microsoft 365 can't identify the true IP address of the message source. Don't try to work around this limitation by adding the IP addresses of the on-premises or non-Microsoft sending infrastructure to the non-Microsoft phishing simulation. Doing so effectively bypasses spam filtering for any internet sender who impersonates the domain specified in the non-Microsoft phishing simulation.
 >
+> - Advanced Delivery policy for non-Microsoft phishing simulations requires the message to traverse the transport pipeline. Direct Injection emails bypass transport, so Advanced Delivery policy does not apply to them.
+> 
 > - Currently, the advanced delivery policy for non-Microsoft phishing simulations doesn't support simulations within the same organization (`DIR:INT`), especially when email is routed through an Exchange Server gateway before Microsoft 365 in Hybrid mail flow. To work around this issue, you have the following options:
 >   - Create a dedicated [Receive connector](/exchange/mail-flow/connectors/receive-connectors#receive-connector-authentication-mechanisms) that doesn't authenticate the phishing simulation messages as internal.
 >   - Configure the phishing simulation to bypass the Exchange Server infrastructure and route mail directly to your Microsoft 365 MX record (for example, `contoso-com.mail.protection.outlook.com`).
