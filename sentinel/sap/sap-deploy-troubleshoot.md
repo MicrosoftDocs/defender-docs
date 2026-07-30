@@ -111,6 +111,17 @@ Resolution:
 
 Consult [Configure SAP Cloud Connector settings](preparing-sap.md#configure-sap-cloud-connector-settings) and [Optimize SAP Cloud Connector sizing, throughput, and isolation](preparing-sap.md#optimize-sap-cloud-connector-sizing-throughput-and-isolation) for further guidance.
 
+### "Memory Exhaustions" reported by SAP Cloud Integration
+
+The **System** > **Memory** > **Usage** tile in SAP Cloud Integration may report memory exhaustions with the **Data collector** iflow as major contributor across several intervals. A considerable based-load allocation on its own is expected for a log-reading integration flow for multiple SIDs and isn't an error by default. Investigate when memory exhaustions are counted alongside it, when message processing times increase, a new system onboarding attempt, or recent SAP upgrade is happening.
+
+Two patterns typically cause this:
+
+- **Growing request backlog for a single SAP system (SID).** The SAP system responds more slowly than the requested log time slice, so requests accumulate and each subsequent poll adds load on top of the unfinished one. This is commonly a downstream effect of the retry pattern described in the [Timeouts during connector registration or log polling section](#timeouts-during-connector-registration-or-log-polling) or too large polling interval configurations. It is recommended to keep the 1 min default setting for heavily used SAP systems.
+- **Resource saturation on a shared tenant.** High parallel loads from other integration flows or SAP systems on the same SAP Cloud Integration tenant reduce the resources available to the Data Collector iflow, extending processing times across all flows.
+
+To recover, first apply the remediation in the timeouts section to break the retry pattern and reduce the volume returned per message. If memory exhaustions continue, use SAP Cloud Integration monitoring to determine whether the pressure originates from one SAP system or from overall tenant load. Sustained saturation may require additional SAP Cloud Integration capacity, or distributing SAP systems across multiple Cloud Integration instances.
+
 :::zone-end
 
 :::zone pivot="connection-agent"
