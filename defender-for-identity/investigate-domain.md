@@ -1,6 +1,6 @@
 ---
 title: Investigate an Active Directory domain
-description: Learn how to investigate an Active Directory domain in Microsoft Defender, including how to access the domain page from the Active Directory protected domains list in the Identity dashboard.
+description: Learn how to investigate an Active Directory domain in Microsoft Defender. Review domain health scores, security policies, trust relationships, and recommendations.
 #customer intent: As a security admin, I want to view the security posture of my Active Directory domains so that I can identify coverage gaps, review security policies, and act on recommendations.
 author: AbbyMSFT
 ms.author: abbyweisberg
