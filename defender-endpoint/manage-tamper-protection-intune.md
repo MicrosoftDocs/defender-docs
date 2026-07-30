@@ -128,6 +128,7 @@ You can use a registry key to determine whether the functionality to protect Mic
 
 ## Related content
 
+- [Controlled configuration in Microsoft Defender for Endpoint](secure-controlled-configuration.md)
 - [Frequently asked questions (FAQs) on tamper protection](faqs-on-tamper-protection.yml)
 - [Troubleshoot problems with tamper protection](troubleshoot-problems-with-tamper-protection.yml)
 - [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](/intune/intune-service/protect/mde-security-integration)

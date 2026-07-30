@@ -115,101 +115,8 @@ If you'd rather use PowerShell to view, add, or remove trusted ARC sealers, conn
 
   To add or remove ARC sealers without affecting the other entries, see the examples in [Set-ArcConfig](/powershell/module/exchangepowershell/set-arcconfig#examples).
 
-## Vendor-specific ARC sealer configuration
-
-When you add a trusted ARC sealer in Microsoft 365, you enter the domain shown in the **d** value of the **ARC-Seal** header. The following table lists the ARC sealer domains for common email security vendors:
-
-|Vendor|ARC sealer domain (`d=` value)|Typical selector (`s=` value)|Notes|
-|---|---|---|---|
-|**Proofpoint**|`pphosted.com`|`arcselector`|Used by Proofpoint Protection Server (PPS) and Proofpoint Essentials.|
-|**Mimecast**|`mimecast.com`|`arc-2018`|Used by all Mimecast Email Security gateway deployments.|
-|**Barracuda**|`barracudanetworks.com`|`arc1`|Used by Barracuda Email Gateway Defense and Email Security Gateway.|
-|**Sophos**|`sophos.com`|`arc`|Used by Sophos Central Email Security.|
-
 > [!IMPORTANT]
 > The ARC sealer domain is **not** your organization's domain. It's the vendor's signing domain that appears in the `d=` field of the ARC-Seal header. Always verify the actual `d=` value from a message header before you configure the trusted sealer.
-
-<a name="proofpoint"></a>
-### Configure trusted ARC sealers for Proofpoint
-
-Proofpoint Protection Server (PPS) adds ARC headers when messages are processed through the gateway. The ARC-Seal header uses `d=pphosted.com`.
-
-1. **Verify the ARC sealer domain from a message header**: Locate the `d=` value in the `ARC-Seal` header to identify the ARC sealer domain. For Proofpoint, look for the following pattern in message headers:
-
-   ```text
-   ARC-Seal: i=1; a=rsa-sha256; d=pphosted.com; s=arcselector;
-     t=1657920000; cv=none;
-     b=<signature>
-   ```
-
-1. **Add the trusted ARC sealer in Microsoft 365**: [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and run the following command:
-
-   ```powershell
-   Set-ArcConfig -Identity Default -ArcTrustedSealers "pphosted.com"
-   ```
-
-   > [!NOTE]
-   > Some Proofpoint deployments use a custom domain for ARC sealing (for example, `proofpoint.com` or a customer-specific domain). Always check actual message headers to confirm the `d=` value before you configure trusted sealers.
-
-<a name="mimecast"></a>
-### Configure trusted ARC sealers for Mimecast
-
-Mimecast Email Security adds ARC headers when it processes inbound and outbound mail. The ARC-Seal header uses `d=mimecast.com`.
-
-1. **Verify the ARC sealer domain from a message header**: Look for the following pattern in message headers:
-
-   ```text
-   ARC-Seal: i=1; a=rsa-sha256; t=1623745127; cv=none;
-     d=mimecast.com; s=arc-2018;
-     b=<signature>
-   ```
-
-1. **Add the trusted ARC sealer in Microsoft 365**: [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and run the following command:
-
-   ```powershell
-   Set-ArcConfig -Identity Default -ArcTrustedSealers "mimecast.com"
-   ```
-
-   > [!TIP]
-   > If you're migrating from Mimecast to Microsoft 365 native protection, keep the Mimecast trusted ARC sealer configured until you fully cut over MX records and all queued messages are delivered.
-
-<a name="barracuda"></a>
-### Configure trusted ARC sealers for Barracuda
-
-Barracuda Email Gateway Defense and Email Security Gateway add ARC headers using `d=barracudanetworks.com`.
-
-1. **Verify the ARC sealer domain from a message header**: Locate the `d=` value in the `ARC-Seal` header to confirm the Barracuda sealing domain. Look for the following pattern in message headers:
-
-   ```text
-   ARC-Seal: i=1; a=rsa-sha256; d=barracudanetworks.com; s=arc1;
-     t=1680000000; cv=none;
-     b=<signature>
-   ```
-
-1. **Add the trusted ARC sealer in Microsoft 365**: [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and run the following command:
-
-   ```powershell
-   Set-ArcConfig -Identity Default -ArcTrustedSealers "barracudanetworks.com"
-   ```
-
-<a name="sophos"></a>
-### Configure trusted ARC sealers for Sophos
-
-Sophos Central Email Security adds ARC headers using `d=sophos.com`.
-
-1. **Verify the ARC sealer domain from a message header**: Locate the `d=` value in the `ARC-Seal` header to confirm the Sophos sealing domain. Look for the following pattern in message headers:
-
-   ```text
-   ARC-Seal: i=1; a=rsa-sha256; t=1686324586; cv=none;
-     d=sophos.com; s=arc;
-     b=<signature>
-   ```
-
-1. **Add the trusted ARC sealer in Microsoft 365**: [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and run the following command:
-
-   ```powershell
-   Set-ArcConfig -Identity Default -ArcTrustedSealers "sophos.com"
-   ```
 
 <a name="multiple-vendors"></a>
 ### Configure trusted ARC sealers for multiple vendors
@@ -223,12 +130,12 @@ If your organization uses multiple email services that add ARC seals, [connect t
 > Only add vendors that you actively use and trust. Adding unnecessary ARC sealers increases your attack surface because a compromised vendor could pass spoofed messages through your authentication checks.
 
 ```powershell
-Set-ArcConfig -Identity Default -ArcTrustedSealers "pphosted.com","mimecast.com","barracudanetworks.com","sophos.com"
+Set-ArcConfig -Identity Default -ArcTrustedSealers "Domain1.com","Domain2.com","Domain3.com","Domain4.com"
 ```
 
 ### Find your vendor's ARC sealer domain
 
-If your vendor isn't listed in the vendor ARC sealer domain table, use the following steps to identify the correct ARC sealer domain:
+Use the following steps to identify the correct ARC sealer domain:
 
 1. Send a test email through the intermediary service to a Microsoft 365 mailbox.
 1. Open the message headers (in Outlook: **File** \> **Properties** \> **Internet Headers**, or use the [Message Header Analyzer](https://mha.azurewebsites.net)).

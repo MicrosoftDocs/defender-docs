@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 07/02/2026
+ms.date: 07/08/2026
 ai-usage: ai-assisted
 #customer intent: As an IT admin, I want to understand attack surface reduction rules so I can protect Windows devices from common malware attack vectors.
 appliesto:
@@ -270,9 +270,7 @@ If the same device is assigned two different ASR rule policies, potential confli
 
 Nonconflicting ASR rules don't result in errors. The first rule is applied, and subsequent nonconflicting rules are merged into the policy.
 
-If a [mobile device management (MDM) solution](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-any-mdm-solution-using-the-policy-csp) and [Group Policy](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-group-policy) apply different ASR rule settings to the same device, the Group Policy settings take precedence.
-
-<!-- TODO: SME verification needed. This claim contradicts the configure article (attack-surface-reduction-rules-configure.md) which states "ASR rule settings from Intune or Configuration Manager overwrite any conflicting settings from group policy or PowerShell on startup" (lines 29, 288, 396). The general MDAV configuration reference (configuration-management-reference-microsoft-defender-antivirus.md) supports GP-wins, but it's unclear if ASR rules behave differently. -->
+If a [mobile device management (MDM) solution](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-any-mdm-solution-using-the-policy-csp) and [Group Policy](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-group-policy) apply different ASR rule settings to the same device, Group Policy takes precedence by default. You can change this behavior with the [MDMWinsOverGP Policy CSP setting](/windows/client-management/mdm/policy-csp-controlpolicyconflict), or avoid the conflict entirely by using [controlled configuration](secure-controlled-configuration.md). For more information, see [How policy conflicts are handled](attack-surface-reduction-rules-configure.md#how-policy-conflicts-are-handled).
 
 For information about how ASR rule setting conflicts are handled for the available deployment methods in Microsoft Intune, see [Devices managed by Intune](/intune/intune-service/protect/endpoint-security-asr-policy#devices-managed-by-intune).
 
