@@ -4,7 +4,7 @@ ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov, gberecz, ksarens
 description: Use tamper protection to prevent malicious apps from changing important security settings.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 07/03/2026
+ms.date: 07/08/2026
 ms.topic: how-to
 author: limwainstein
 ms.author: lwainstein
@@ -34,6 +34,9 @@ This article describes tamper protection in Microsoft Defender for Endpoint, how
 Tamper protection is a capability in Microsoft Defender for Endpoint that helps protect certain security settings, such as virus and threat protection, from being disabled or changed. During some kinds of cyber attacks, bad actors try to disable security features on devices. Disabling security features provides bad actors with easier access to your data, the ability to install malware, and the ability to exploit your data, identity, and devices. Tamper protection helps guard against attempts to disable or change security features during cyberattacks.
 
 Tamper protection is part of anti-tampering capabilities that include [standard protection attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md#asr-rules). Tamper protection is an important part of [built-in protection](built-in-protection.md).
+
+> [!NOTE]
+> Microsoft is introducing controlled configuration, a new capability that builds on the protections that tamper protection provides. As part of this change, the existing tamper protection setting in management experiences is renamed to controlled configuration. The current tamper protection functionality and behavior remain unchanged for existing deployments. Organizations don't automatically receive controlled configuration protections as a result of this setting rename. You must explicitly enable controlled configuration by deploying a controlled configuration policy through Microsoft Intune or Microsoft Defender for Endpoint security settings management. For more information, see [Controlled configuration in Microsoft Defender for Endpoint](secure-controlled-configuration.md).
 
 ## Prerequisites
 
@@ -134,6 +137,7 @@ To learn more about Microsoft Defender Vulnerability Management, see [Dashboard 
 <a name="see-also"></a>
 ## Related content
 
+- [Controlled configuration in Microsoft Defender for Endpoint](secure-controlled-configuration.md)
 - [Built-in protection helps guard against ransomware](built-in-protection.md)
 - [Frequently asked questions on tamper protection](faqs-on-tamper-protection.yml)
 - [Troubleshoot problems with tamper protection](troubleshoot-problems-with-tamper-protection.yml)

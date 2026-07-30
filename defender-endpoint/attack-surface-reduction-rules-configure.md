@@ -11,8 +11,8 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
-ms.date: 07/02/2026
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
+ms.date: 07/08/2026
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to configure attack surface reduction rules on devices so that I can block risky software behaviors that attackers exploit.
 appliesto:
@@ -25,17 +25,38 @@ appliesto:
 
 [Attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md) target risky software behavior on Windows devices that attackers commonly exploit through malware (for example, launching scripts that download files, running obfuscated scripts, and injecting code into other processes). This article describes how to enable and configure ASR rules.
 
-For best results, use enterprise-level management solutions like Microsoft Intune or Microsoft Configuration Manager to manage ASR rules. ASR rule settings from Intune or Configuration Manager overwrite any conflicting settings from group policy or PowerShell on startup.
+For best results, use enterprise-level management solutions like Microsoft Intune or Microsoft Configuration Manager to manage ASR rules. ASR rule settings from Intune or Configuration Manager overwrite conflicting PowerShell settings on startup. To learn how conflicts between MDM and Group Policy settings are resolved, see [How policy conflicts are handled](#how-policy-conflicts-are-handled).
 
 ## Prerequisites
 
 For more information, see [Requirements for ASR rules](attack-surface-reduction-rules-overview.md#requirements-for-asr-rules).
 
+## How policy conflicts are handled
+
+When the same ASR rule is configured through more than one method, precedence is resolved as described in the following list:
+
+- **Local device settings (Set-MpPreference)**: These settings have the lowest precedence. Any policy-based method overwrites them on startup.
+
+- **Group Policy**: Overwrites conflicting local device settings on startup. When both Group Policy and a mobile device management (MDM) solution configure the same ASR rule, Group Policy takes precedence by default, unless _MDMWinsOverGP_ is enabled (see the next item). To avoid conflicts, don't configure the same ASR rules in both Group Policy and MDM.
+
+- **MDM**: Microsoft Intune or another MDM solution overwrites conflicting local device settings on startup. Whether MDM also overwrites Group Policy depends on the _MDMWinsOverGP_ setting in the [ControlPolicyConflict Policy CSP](/windows/client-management/mdm/policy-csp-controlpolicyconflict):
+  - A value of `0` (the default) means the Group Policy setting takes precedence.
+  - A value of `1` means the MDM setting applies and the conflicting Group Policy setting is blocked.
+
+  You can configure _MDMWinsOverGP_ **only** through Policy CSP, for example, by using an [Intune custom profile with an OMA-URI](#configure-asr-rules-in-intune-using-custom-profiles-with-oma-uris-and-csps) or [in another MDM solution](#configure-asr-rules-in-any-mdm-solution-using-the-policy-csp). There's no Group Policy setting or PowerShell cmdlet for it. In an Intune custom profile, use the following setting:
+
+  **OMA-URI**: `./Device/Vendor/MSFT/Policy/Config/ControlPolicyConflict/MDMWinsOverGP`<br/>
+  **Data type**: Integer<br/>
+  **Value**: `1`
+
+  > [!NOTE]
+  > [Controlled configuration](secure-controlled-configuration.md) enforces settings from Intune or Microsoft Defender for Endpoint security settings management only and ignores conflicting Group Policy, Configuration Manager, and local device settings.
+
+- **Microsoft Configuration Manager**: Applies ASR rules through the Policy CSP in both classic Exploit Guard policy mode and tenant attach mode, so it follows the same MDM precedence and _MDMWinsOverGP_ behavior.
+
 <a name="exclude-files-and-folders-from-attack-surface-reduction-rules"></a>
 
 <a name='file-and-folder-exclusions-for-asr-rules'></a>
-
-<a name='how-policy-conflicts-are-handled'></a>
 
 <a name="configuration-methods"></a>
 
@@ -294,10 +315,10 @@ For instructions, see the attack surface reduction information in [Create and de
 
 <a name="group-policy"></a>
 
-## Configure ASR rules and exclusions in group policy
+## Configure ASR rules and exclusions in Group Policy
 
 > [!WARNING]
-> If you manage your computers and devices with Intune, Microsoft Configuration Manager, or other enterprise-level management software, the management software overwrites any conflicting group policy settings on startup.
+> If you manage your computers and devices with Intune, Microsoft Configuration Manager, or other enterprise-level management software, the management software can overwrite conflicting Group Policy settings. To learn how these conflicts are resolved, see [How policy conflicts are handled](#how-policy-conflicts-are-handled).
 
 1. In Centralized Group Policy, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
@@ -320,16 +341,16 @@ For instructions, see the attack surface reduction information in [Create and de
 > [!TIP]
 > You can also configure Group Policy locally on individual devices by using the Local Group Policy Editor (`gpedit.msc`). Navigate to the same path: **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Microsoft Defender Exploit Guard** \> **Attack Surface Reduction**.
 
-The available settings are described in [Configure ASR rules in group policy](#configure-asr-rules-in-group-policy), [Configure global ASR rule exclusions in group policy](#configure-global-asr-rule-exclusions-in-group-policy), and [Configure per-ASR rule exclusions in group policy](#configure-per-asr-rule-exclusions-in-group-policy).
+The available settings are described in [Configure ASR rules in Group Policy](#configure-asr-rules-in-group-policy), [Configure global ASR rule exclusions in Group Policy](#configure-global-asr-rule-exclusions-in-group-policy), and [Configure per-ASR rule exclusions in Group Policy](#configure-per-asr-rule-exclusions-in-group-policy).
 
 > [!IMPORTANT]
-> Quotation marks, leading spaces, trailing spaces, and extra characters aren't supported in any of the ASR rule-related values in group policy.
+> Quotation marks, leading spaces, trailing spaces, and extra characters aren't supported in any of the ASR rule-related values in Group Policy.
 >
 > Group Policy paths before Windows 10 version 2004 (May 2020) might use _Windows_ Defender Antivirus instead of _Microsoft_ Defender Antivirus. Both names refer to the same policy location.
 
 <a name="enable-asr-rules"></a>
 
-### Configure ASR rules in group policy
+### Configure ASR rules in Group Policy
 
 Use the following steps to configure ASR rules and their modes in the Group Policy **Attack Surface Reduction** settings:
 
@@ -357,7 +378,7 @@ Use the following steps to configure ASR rules and their modes in the Group Poli
 
 <a name="enable-exclusions-for-all-asr-rules-in-group-policy"></a>
 
-### Configure global ASR rule exclusions in group policy
+### Configure global ASR rule exclusions in Group Policy
 
 The paths or filenames with paths you specify are used as exclusions for all ASR rules.
 
@@ -381,7 +402,7 @@ The paths or filenames with paths you specify are used as exclusions for all ASR
 
 <a name="enable-per-rule-exclusions-in-group-policy"></a>
 
-### Configure per-ASR rule exclusions in group policy
+### Configure per-ASR rule exclusions in Group Policy
 
 The paths or filenames with paths you specify are used as exclusions for specific ASR rules.
 
