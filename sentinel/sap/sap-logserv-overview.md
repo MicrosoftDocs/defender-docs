@@ -116,15 +116,13 @@ For more information on how to customize and use the workbook, see [Tutorial: Vi
 
 The SAP LogServ solution and the Microsoft Sentinel Solution for SAP applications each provide analytics rules that target different layers of the SAP RISE stack:
 
-- **SAP LogServ analytics rules**: Focus on **infrastructure-layer detections**, including SAP HANA audit trail deactivation, operating system anomalies, network activity, and firewall events from SAP-managed infrastructure. Through ASIM normalization, SAP LogServ data can immediately benefit from existing Microsoft Sentinel detections and SOC content. Customers can reuse the [Microsoft Advanced Security Information Model (ASIM) security content](../normalization-content.md) and investments they already have in place, without creating SAP-specific analytics rules or altering existing security operations processes.
-
-SAP LogServ analytics rules focus on infrastructure-layer detections, including SAP HANA audit trail deactivation, operating system anomalies, network activity, and firewall events from SAP-managed infrastructure. Through ASIM normalization, SAP LogServ data can immediately benefit from existing Microsoft Sentinel detections and SOC content. Customers can reuse the security content and investments they already have in place, without creating SAP-specific analytics rules or altering existing security operations processes.
+- **SAP LogServ analytics rules**: Focus on **infrastructure-layer detections**, including SAP HANA audit trail deactivation, operating system anomalies, network activity, and firewall events from SAP-managed infrastructure. Through ASIM normalization, customers can benefit from existing [Microsoft Advanced Security Information Model (ASIM) security content](../normalization-content.md) and investments they already have in place, without creating SAP RISE-specific analytics rules or altering existing security operations processes.
 
 - **Microsoft Sentinel Solution for SAP applications analytics rules**: Cover the **application layer**, including [60+ built-in rules](sap-solution-security-content.md#built-in-analytics-rules) for detecting privilege escalation, sensitive transactions, data exfiltration, and unauthorized user activity within the SAP business logic.
 
 Deploy both solutions together for cross-layer detection coverage spanning from SAP HANA database and OS infrastructure up through the SAP application layer.
 
-The following example shows a SAP LogServ infrastructure-layer detection for a HANA database audit trail deactivation in Microsoft Sentinel, surfaced as an incident in Microsoft Defender portal:
+The following example shows an isolated SAP LogServ infrastructure-layer detection for a HANA database audit trail deactivation in Microsoft Sentinel, surfaced as an incident in Microsoft Defender portal. Find a end-to-end scenario in this [social engineering attack replay](https://aka.ms/sentinel-for-sap-hero-demo).
 
 :::image type="content" source="./media/partner/logserv-hana-db-detection.png" alt-text="Screenshot of a SAP LogServ HANA DB - Deactivation of Audit Trail incident in Microsoft Defender." lightbox="./media/partner/logserv-hana-db-detection.png":::
 
