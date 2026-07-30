@@ -75,7 +75,13 @@ The tab includes default filters for **Status** (New, In progress) and **Alert s
 
 ## Security recommendations (Preview)
 
-For scoped users, the domain page shows security recommendations for the domains included in their assigned scope. This view helps scoped users focus on the identity risks that are relevant to the domains they're responsible for. Customers can use this experience to provide domain-level recommendation context without granting broader access across the environment. Each recommendation includes relevant risk information, affected assets, and suggested remediation actions to help scoped users understand what needs attention. By making the right recommendations available to the right users, organizations can improve ownership and move more quickly from visibility to action while maintaining appropriate access boundaries.
+For scoped users, the domain page shows security recommendations for the domains included in their assigned scope. This view helps scoped users focus on the identity risks that are relevant to the domains they're responsible for. Customers can use this experience to provide domain-level recommendation context without granting broader access across the environment. Each recommendation includes relevant risk information, affected assets, and suggested remediation actions to help scoped users understand what needs attention.
+
+| Column | Description |
+|---|---|
+| **Recommendation name** | The name of the security recommendation. Select a recommendation to view more details and remediation guidance. |
+| **Status** | The current status of the recommendation. |
+| **Last sync** | The date and time when the recommendation was last updated. |
 
 ## Security Policies tab
 
