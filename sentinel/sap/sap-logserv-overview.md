@@ -124,6 +124,35 @@ The following example shows a SAP LogServ infrastructure-layer detection for a H
 
 :::image type="content" source="./media/partner/logserv-hana-db-detection.png" alt-text="Screenshot of a SAP LogServ HANA DB - Deactivation of Audit Trail incident in Microsoft Defender." lightbox="./media/partner/logserv-hana-db-detection.png":::
 
+## Filter LogServ logs before ingestion
+
+Not every log type that SAP LogServ forwards needs to land in your Analytics tier. Filtering happens in the Data Collection Rule (DCR) that the connector deploys, so excluded records are dropped before ingestion and don't incur ingestion cost.
+
+Since the ASIM update (solution version 3.0.5 and later), the DCR no longer writes everything into a single custom table. Instead, it routes records to several streams based on the `clz_dir` and `clz_subdir` attributes supplied by LogServ:
+
+| Source (`clz_dir` / `clz_subdir`) | Destination |
+|---|---|
+| `windows` / `security` | `SecurityEvent` |
+| `windows` / anything else | `WindowsEvent` |
+| `linux` (selected sublogs), `hana` / `hanaaudit` | `Syslog` |
+| `dns` | `ASimDnsActivityLogs` |
+| `webdispatcher` / `accesslog`, `denylog` | `ASimWebSessionLogs` |
+| everything else | `SAPLogServ_CL` (catch-all) |
+
+For filtering, identify and remove or narrow the data flow that selects the log type you want to exclude.
+
+For example, to exclude SAP HANA database logs, delete the data flow that selects `clz_dir == "hana"`. For the current data flow definitions, see the
+[SAPLogServ_DCR.json](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/SAP%20LogServ/Data%20Connectors/SAPLogServ_PUSH_CCP/SAPLogServ_DCR.json) in the Microsoft Sentinel GitHub repository.
+
+Edit the DCR with the transformation editor in the Azure portal, the ARM template export, or the [Data Connectors REST API](/rest/api/securityinsights/data-connectors/list). We recommend that you export the current configuration first and use it as your working template, so you only replace the `dataFlows` section.
+
+> [!NOTE]
+> Upgrading the solution from the Content Hub doesn't change DCRs that are already deployed, by design, to avoid unintended interruptions to log ingestion. Allow about 15 minutes for a DCR change to take effect before you verify the results.
+
+> [!TIP]
+> If your goal is cost optimization rather than dropping data outright, use the [filter and split capability](../transformation-filter-split.md) to keep high-value log types
+> in the Analytics tier and route lower-value, compliance-relevant LogServ data to the Microsoft Sentinel data lake.
+
 ## Related content
 
 - [Learn more from Microsoft Sentinel and SAP LogServ co-engineering blog series](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-members/ultimate-blog-series-sap-logserv-integration-with-microsoft-sentinel/ba-p/14126401)
