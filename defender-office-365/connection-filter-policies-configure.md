@@ -85,14 +85,14 @@ Use the following steps to modify the default connection filter policy in the Mi
 
    - **Connection filtering** section: Select **Edit connection filter policy**. In the flyout that opens, configure the following settings:
 
-     - **Always allow messages from the following IP addresses or address range**: This setting is the IP Allow List. Click in the box, enter a value, and then press the ENTER key or select the complete value displayed below the box. Valid values are:
+     - **Always allow messages from the following IP addresses or address range**: This setting is the IP Allow List. In the IP Allow List box, enter the IP address or address range and press **Enter**. The entry is added as a separate item (displayed as a gray box with an **X** icon). After confirming the entry appears, select **Save**. Valid values are:
        - Single IP: For example, 192.168.1.1.
        - IP range: For example, 192.168.0.1-192.168.0.254.
        - CIDR IP: For example, 192.168.0.1/25. Valid subnet mask values are /24 through /32. To skip spam filtering for /1 to /23, see [Skip spam filtering for a CIDR IP outside of the available range](#skip-spam-filtering-for-a-cidr-ip-outside-of-the-available-range).
 
        Repeat this step as many times as necessary. To remove an existing entry, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the entry.
 
-   - **Always block messages from the following IP addresses or address range**: This setting is the IP Block List. Enter a single IP (for example, 192.168.1.1), IP range (for example, 192.168.0.1-192.168.0.254), or CIDR IP (for example, 192.168.0.1/25) in the box.
+   - **Always block messages from the following IP addresses or address range**: This setting is the IP Block List. Enter a single IP (for example, 192.168.1.1), IP range (for example, 192.168.0.1-192.168.0.254), or CIDR IP (for example, 192.168.0.1/25) in the box and press **Enter**. The entry is added as a separate item (displayed as a gray box with an **X** icon). After confirming the entry appears, select **Save**.
 
    - **Turn on safe list**: Enable or disable the use of the safe list that specifies known, good senders to skip spam filtering. To use the safe list, select the check box.
 
