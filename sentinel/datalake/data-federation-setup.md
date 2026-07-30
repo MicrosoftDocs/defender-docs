@@ -105,11 +105,11 @@ Federated connectors are managed on the Data connectors page in Microsoft Sentin
 
 The process for creating a connector instance varies depending on whether you're connecting to Microsoft Fabric, Azure Data Lake Storage Gen 2, or Azure Databricks. Follow the instructions for your specific data source type.
 
-# [Microsoft Fabric](#tab/fabric)
+### [Microsoft Fabric](#tab/fabric)
 
 Use this tab to create a federated connector instance for Microsoft Fabric.
 
-## Create a Microsoft Fabric connector instance
+#### Create a Microsoft Fabric connector instance
 
 Before configuring the Fabric connector instance, you must set up permissions within the Microsoft Fabric environment to allow Microsoft Sentinel to access the data.
 
@@ -143,14 +143,11 @@ To configure the Fabric connector instance:
 
 1. Select **Connect** to create the connection instance.
 
-> [!NOTE]
-> For Microsoft Fabric federation, the files in the target data source must be in delta parquet format to be read from the Sentinel data lake.
-
-# [Azure Data Lake Storage Gen 2](#tab/adls)
+### [Azure Data Lake Storage Gen 2](#tab/adls)
 
 Use this tab to create a federated connector instance for Azure Data Lake Storage (ADLS) Gen 2.
 
-## Create an ADLS Gen 2 connector instance
+#### Create an ADLS Gen 2 connector instance
 
 Before creating the connector, prepare your storage account:
 
@@ -190,11 +187,11 @@ Before creating the connector, prepare your storage account:
 
 Select **Connect**, to complete the setup for the ADLS Gen 2 connector instance. The wizard closes and the instance count for Azure Data Lake Storage Gen2 increases.
 
-# [Azure Databricks](#tab/databricks)
+### [Azure Databricks](#tab/databricks)
 
 Use this tab to create a federated connector instance for Azure Databricks.
 
-## Create an Azure Databricks connector instance
+#### Prepare the Azure Databricks environment
 
 Before creating the connector, configure access in your Databricks environment as follows:
 
@@ -212,7 +209,7 @@ Before creating the connector, configure access in your Databricks environment a
 1. Select the service principal you created earlier and select Add.
 
 <a name="create-the-connector-instance"></a>
-### Create the Azure Databricks connector instance
+#### Create the Azure Databricks connector instance
 
 1. On the **Data federation** > **Catalog** page, select the **Azure Databricks** row.
 1. In the side panel, select **Connect a connector**.
@@ -247,6 +244,8 @@ Before creating the connector, configure access in your Databricks environment a
 
 After selecting **Connect**, the wizard closes and the instance count for Databricks increases.
 
+---
+
 ## Verify tables from your connector instance
 
 After creating a connector instance check that the tables you federated are available in Microsoft Sentinel.
@@ -262,6 +261,8 @@ After creating a connector instance check that the tables you federated are avai
 1. On the **Schema** tab, select **Refresh** to refresh the table schema associated with the federated table.
 
 :::image type="content" source="./media/data-federation-setup/verify-tables.png" lightbox="./media/data-federation-setup/verify-tables.png" alt-text="Screenshot showing the federated table schema.":::
+
+ 
 
 ## Manage connector instances
 
@@ -287,6 +288,8 @@ Use the following checks to diagnose common issues with federated data connector
 
 - Verify the Sentinel platform managed identity prefixed by `msg-resources-` has the correct permissions on Azure Key Vault.
 - If your connection source is Azure Databricks or Azure Data Lake Storage Gen2, ensure the Key Vault secret contains the correct client secret for your service principal.
+- If your connection source is Azure Databricks, confirm the target uses hybrid workspace type and that external data access has been enabled for the workspace.
+
 - The Key Vault networking must be set to **Allow public access from all networks** during the connector configuration, which is the default configuration of Key Vault. It can be changed after connector creation or editing.
 - Confirm the external data source is publicly accessible.
 - Check that the service principal has appropriate permissions on the target data source for Azure Databricks and ADLS.
@@ -299,7 +302,7 @@ Use the following checks to diagnose common issues with federated data connector
 ### Tables don't appear
 
 - Verify the service principal has read access to the target tables for ADLS and Azure Databricks, and the service principal is in the same tenant as these data sources.
-
+- Verify the target tables are in delta parquet format.
 - For Databricks, ensure you granted both the built-in Data Reader privilege preset plus the External Use Schema permission to the service principal.
 - For ADLS Gen 2, confirm the Storage Blob Data Reader role is assigned to the service principal.
 
