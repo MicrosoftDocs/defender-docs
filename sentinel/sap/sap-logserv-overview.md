@@ -23,6 +23,9 @@ SAP LogServ bridges that gap. It's an SAP Enterprise Cloud Services (ECS) servic
 > [!IMPORTANT]
 > SAP LogServ is an optional service within your SAP Cloud ERP private (RISE) package. A purchase order for SAP LogServ must be completed before you can use this integration. Contact your SAP account team for details.
 
+> [!TIP]
+> For latest updates and guidance, see the [SAP LogServ blog series](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-members/ultimate-blog-series-sap-logserv-integration-with-microsoft-sentinel/ba-p/14126401).
+
 ## What logs does SAP LogServ provide?
 
 LogServ extends your monitoring scope beyond the SAP application layer to include logs that SAP ECS owns as the system provider. The available log types include:
@@ -66,7 +69,7 @@ Together, these solutions give your security team visibility from business logic
 - The SAP LogServ (RISE), S/4HANA Cloud private edition solution installed from the [Microsoft Sentinel Content Hub](https://marketplace.microsoft.com/en-us/product/sap_jasondau.azure-sentinel-solution-saplogserv?tab=Overview).
 
 > [!NOTE]
-> Only **Azure-hosted SAP RISE** customers have the option for fully integrated deployment. For SAP RISE on other platforms, [SAP's self-hosted log forwarder](https://pypi.org/project/sap-ecs-log-forwarder/) needs to be installed on a customer-hosted component with network connectivity to the SAP LogServ service and the Microsoft Sentinel Data Collection Endpoint. The forwarder has dedicated configuration options for Microsoft Sentinel for SAP.
+> Only **Azure-hosted SAP RISE** customers have the option for fully integrated deployment. For SAP RISE on other platforms, [SAP's self-hosted log forwarder](https://pypi.org/project/sap-ecs-log-forwarder/) needs to be installed on a customer-hosted component with network connectivity to the SAP LogServ service and the Microsoft Sentinel Data Collection Endpoint. The forwarder has dedicated configuration options for Microsoft Sentinel for SAP. See SAP's [announcement blog](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-sap/enhancing-the-support-for-rise-on-aws-amp-gcp-logserv-with-sentinel-for-sap/ba-p/14428222) for more details.
 
 ## Deploy the solution
 
@@ -123,6 +126,7 @@ The following example shows a SAP LogServ infrastructure-layer detection for a H
 
 ## Related content
 
+- [Learn more from Microsoft Sentinel and SAP LogServ co-engineering blog series](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-members/ultimate-blog-series-sap-logserv-integration-with-microsoft-sentinel/ba-p/14126401)
 - [Microsoft Sentinel Solution for SAP applications overview](solution-overview.md)
 - [Deploy the Microsoft Sentinel solution for SAP applications](deployment-overview.md)
 - [Microsoft Sentinel Solution for SAP BTP overview](sap-btp-solution-overview.md)
