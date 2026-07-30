@@ -369,6 +369,9 @@
         - name: Overview Cloud Security Posture Management (CSPM)
           displayName: CSPM, Cloud security posture management, overview
           href: concept-cloud-security-posture-management.md
+        - name: Opt in to Foundational CSPM
+          displayName: foundational CSPM, free CSPM, opt in, enable, Azure subscriptions
+          href: foundational-cspm-opt-in.md
         - name: Protect resources with Defender CSPM
           displayName: CSPM, Cloud security posture management, enable
           href: tutorial-enable-cspm-plan.md

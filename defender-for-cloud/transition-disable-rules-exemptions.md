@@ -75,6 +75,73 @@ Use this table to translate your existing disable rules into exemption condition
     :::image type="content" source="./media/transition-disable-rules-exemptions/create-new-exemption.png" alt-text="Screenshot showing how to create a new exemption in Defender for Cloud." lightbox="./media/transition-disable-rules-exemptions/create-new-exemption.png":::
 1. **Prefer reusable rules**: Where possible, use broader exemption conditions that apply across multiple recommendations to reduce duplication.
 
+#### Recreate a vulnerability-based exemption by using the REST API
+
+When you migrate vulnerability assessment disable rules, you can use the Standard Assignments REST API to create an equivalent vulnerability-based exemption.
+
+The following example exempts vulnerability findings that match all the specified conditions: CVE ID, severity, and CVSS score.
+
+Replace `{subscriptionId}` with your Azure subscription ID and `{standardAssignmentName}` with a unique GUID for the exemption.
+
+```http
+PUT https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/standardAssignments/{standardAssignmentName}?api-version=2024-08-01
+```
+
+Use the following request body:
+
+```json
+{
+  "properties": {
+    "description": "Exempts vulnerability findings that match the specified conditions.",
+    "displayName": "Vulnerability assessment exemption",
+    "excludedScopes": [],
+    "effect": "Exempt",
+    "assignedStandard": null,
+    "exemptionData": {
+      "exemptionCategory": "Waiver",
+      "assignedAssessment": {
+        "assessmentKey": "122e0164-4019-4126-8c64-b0816b49505f"
+      },
+      "subAssessmentExemptionRule": {
+        "if": {
+          "allOf": [
+            {
+              "field": "va.cve.cveId",
+              "operationType": "ContainedInOperation",
+              "operation": {
+                "values": [
+                  {
+                    "title": "CVE-2020-1347"
+                  }
+                ]
+              }
+            },
+            {
+              "field": "va.cve.severity",
+              "operationType": "LessThanFilterOperation",
+              "operation": {
+                "value": "Low"
+              }
+            },
+            {
+              "field": "va.cve.cvss",
+              "operationType": "LessThanFilterOperation",
+              "operation": {
+                "value": "8.0"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+```
+
+The `allOf` operator applies the exemption only to vulnerability findings that match all three conditions. Change the assessment key and condition values to match the disable rule that you're recreating.
+
+For more information, see [Standard Assignments - Create](/rest/api/defenderforcloud/standard-assignments/create?view=rest-defenderforcloud-2024-08-01).
+
 ## Next steps
 
 - [Transition from grouped to individual recommendations](transition-grouped-individual-recommendations.md) — Learn about the broader recommendation model change that this transition is part of.
