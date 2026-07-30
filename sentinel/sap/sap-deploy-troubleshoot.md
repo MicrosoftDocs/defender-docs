@@ -112,7 +112,7 @@ Resolution:
 - Enable runtime monitoring: [Cloud Connector monitoring](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/cloud-connector-monitoring).
 - Isolate the problematic SID log data flow and consult the other timeout related guidance in this section.
 
-### "Memory Exhaustions" reported by SAP Cloud Integration
+## "Memory Exhaustions" reported by SAP Cloud Integration
 
 The **System** > **Memory** > **Usage** tile in SAP Cloud Integration may report memory exhaustions with the **Data collector** iflow as major contributor across several intervals. A considerable based-load allocation on its own is expected for a log-reading integration flow for multiple SIDs and isn't an error by default. Investigate when memory exhaustions are counted alongside it, when message processing times increase, a new system onboarding attempt, or recent SAP upgrade is happening.
 
