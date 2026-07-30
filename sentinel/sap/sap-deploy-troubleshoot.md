@@ -106,10 +106,11 @@ If the Data Collector iFlow fails with an error such as `java.lang.Exception: Co
 Resolution:
 
 - The Sentinel log poller handles small interruptions gracefully through limited retries - no action needed. Longer down times result in abandoned time slices in favor of stable operations.
-- Use SAP's application health monitors to verify connectivity between SAP Cloud Integration, SAP Cloud Connector, and the SAP system in case investigation is needed.
+- Confirm sizing for the SAP Cloud Connector master instance: [Sizing for master instance](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/sizing-for-master-instance).
+- Be aware of SAP Cloud Connector connection limits. Use SAP note [3403815](https://me.sap.com/notes/0003403815) to tune limits.
+- Use SAP's application health monitors to verify connectivity between SAP Cloud Integration, SAP Cloud Connector, and the SAP system in case investigation is needed. 
+- Enable runtime monitoring: [Cloud Connector monitoring](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/cloud-connector-monitoring).
 - Isolate the problematic SID log data flow and consult the other timeout related guidance in this section.
-
-Consult [Configure SAP Cloud Connector settings](preparing-sap.md#configure-sap-cloud-connector-settings) and [Optimize SAP Cloud Connector sizing, throughput, and isolation](preparing-sap.md#optimize-sap-cloud-connector-sizing-throughput-and-isolation) for further guidance.
 
 ### "Memory Exhaustions" reported by SAP Cloud Integration
 
