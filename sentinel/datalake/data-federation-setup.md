@@ -243,9 +243,7 @@ Before creating the connector, configure access in your Databricks environment a
 :::image type="content" source="./media/data-federation-setup/databricks-review.png" alt-text="Screenshot of the Azure Databricks configuration review page." lightbox="./media/data-federation-setup/databricks-review.png":::
 
 After selecting **Connect**, the wizard closes and the instance count for Databricks increases.
-
-#(#end)
-
+#
 ## Verify tables from your connector instance
 
 After creating a connector instance check that the tables you federated are available in Microsoft Sentinel.
