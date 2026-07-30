@@ -26,11 +26,14 @@ The Active Directory domain page in Microsoft Defender brings together domain he
 
 You can reach the Active Directory domain page through multiple entry points in Microsoft Defender:
 
+- On the **Identity dashboard**, select a domain from the **Active Directory protected domains** widget.
 - Select a domain name from the **Domain** column in the identity inventory.
 - Select a domain from a domain-related security alert or incident.
 - Search for a domain by name using the global search bar.
 
 To switch between domains when you're on the domain page, use the domain selector at the top right of the page.
+
+:::image type="content" source="media/investigate-domain/domain-page-identity-dashboard.png" alt-text="Screenshot that shows the Identity dashboard with the Active Directory protected domains widget." lightbox="media/investigate-domain/domain-page-identity-dashboard.png":::
 
 ## Overview tab
 
