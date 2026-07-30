@@ -57,6 +57,7 @@ Together, these solutions give your security team visibility from business logic
 
 - **Near real-time log collection** with agentless integration into Microsoft Sentinel via the SAP LogServ data connector.
 - **Built-in security content** including analytics rules and workbooks provided by SAP for LogServ-specific log types.
+- **Activation** **and reuse** of [Microsoft Advanced Security Information Model (ASIM) security content](../normalization-content.md)
 - **Long-term retention** configurable per data source with up to 12 years retention using [Microsoft Sentinel Data Lake](../datalake/sentinel-lake-overview.md).
 - **SOAR integration** with Microsoft Sentinel's security orchestration, automation, and response capabilities, including and [SAP user blocking via Microsoft Teams](https://blogs.sap.com/2023/05/22/from-zero-to-hero-security-coverage-with-microsoft-sentinel-for-your-critical-sap-security-signals-blog-series/).
 - **Cross-signal correlation** across endpoints, Microsoft Entra ID data, and other data sources in your Microsoft Sentinel workspace.
@@ -115,7 +116,9 @@ For more information on how to customize and use the workbook, see [Tutorial: Vi
 
 The SAP LogServ solution and the Microsoft Sentinel Solution for SAP applications each provide analytics rules that target different layers of the SAP RISE stack:
 
-- **SAP LogServ analytics rules**: Focus on **infrastructure-layer detections**, such as SAP HANA database audit trail deactivation, OS-level anomalies, network and firewall events, and other logs from SAP-managed infrastructure. The solution feeds the [Microsoft Advanced Security Information Model (ASIM) security content](../normalization-content.md).
+- **SAP LogServ analytics rules**: Focus on **infrastructure-layer detections**, including SAP HANA audit trail deactivation, operating system anomalies, network activity, and firewall events from SAP-managed infrastructure. Through ASIM normalization, SAP LogServ data can immediately benefit from existing Microsoft Sentinel detections and SOC content. Customers can reuse the [Microsoft Advanced Security Information Model (ASIM) security content](../normalization-content.md) and investments they already have in place, without creating SAP-specific analytics rules or altering existing security operations processes.
+
+SAP LogServ analytics rules focus on infrastructure-layer detections, including SAP HANA audit trail deactivation, operating system anomalies, network activity, and firewall events from SAP-managed infrastructure. Through ASIM normalization, SAP LogServ data can immediately benefit from existing Microsoft Sentinel detections and SOC content. Customers can reuse the security content and investments they already have in place, without creating SAP-specific analytics rules or altering existing security operations processes.
 
 - **Microsoft Sentinel Solution for SAP applications analytics rules**: Cover the **application layer**, including [60+ built-in rules](sap-solution-security-content.md#built-in-analytics-rules) for detecting privilege escalation, sensitive transactions, data exfiltration, and unauthorized user activity within the SAP business logic.
 
