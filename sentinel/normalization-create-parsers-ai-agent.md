@@ -4,7 +4,7 @@ description: Use GitHub Copilot or the Microsoft Sentinel VS Code extension skil
 ms.author: derricklee
 author: derricklee
 ms.topic: how-to
-ms.date: 07/15/2026
+ms.date: 07/30/2026
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1012
 
@@ -90,6 +90,9 @@ The `asim-parser-create-parser` skill generates the initial parameter-less ASIM 
 1. **Samples your data** - Queries the source table to get the schema (`getschema`) and up to 2,000 sample rows to understand the data structure.
 1. **Builds the parser** - Creates a KQL function that transforms source data into the target ASIM schema, mapping source columns to ASIM fields using high-performance parsing operators (`split`, `parse-kv`, `parse`).
 1. **Saves the parser** - Outputs a file named `ASim<Schema><Vendor><Product>.kql` and verifies it runs without syntax errors.
+
+> [!IMPORTANT]
+> The parser creation skills normalize each source record independently and preserve record cardinality. They don't use same-table or cross-table enrichment, one-to-many fan-out, `mv-*` operators, or aggregation and reaggregation operators such as `summarize`. If a field requires one of these patterns, correct the connector or source event shape, or leave a nonmandatory field unmapped. For detailed guidance, see [Develop ASIM parsers](/azure/sentinel/normalization-develop-parsers#keep-parser-operations-record-local).
 
 ### Validation
 
