@@ -111,11 +111,12 @@ The workbook shows:
 
 For more information on how to customize and use the workbook, see [Tutorial: Visualize and monitor your data](../monitor-your-data.md).
 
-### Built-in analytics rules
+### Built-in analytic rules
 
 The SAP LogServ solution and the Microsoft Sentinel Solution for SAP applications each provide analytics rules that target different layers of the SAP RISE stack:
 
-- **SAP LogServ analytics rules**: Focus on **infrastructure-layer detections**, such as SAP HANA database audit trail deactivation, OS-level anomalies, network and firewall events, and other logs from SAP-managed infrastructure. These rules are installed with the SAP LogServ solution from the Content Hub.
+- **SAP LogServ analytics rules**: Focus on **infrastructure-layer detections**, such as SAP HANA database audit trail deactivation, OS-level anomalies, network and firewall events, and other logs from SAP-managed infrastructure. The solution feeds the [Microsoft Advanced Security Information Model (ASIM) security content](../normalization-content.md).
+
 - **Microsoft Sentinel Solution for SAP applications analytics rules**: Cover the **application layer**, including [60+ built-in rules](sap-solution-security-content.md#built-in-analytics-rules) for detecting privilege escalation, sensitive transactions, data exfiltration, and unauthorized user activity within the SAP business logic.
 
 Deploy both solutions together for cross-layer detection coverage spanning from SAP HANA database and OS infrastructure up through the SAP application layer.
@@ -128,7 +129,7 @@ The following example shows a SAP LogServ infrastructure-layer detection for a H
 
 Not every log type that SAP LogServ forwards needs to land in your Analytics tier. Filtering happens in the Data Collection Rule (DCR) that the connector deploys, so excluded records are dropped before ingestion and don't incur ingestion cost.
 
-Since the ASIM update (solution version 3.0.5 and later), the DCR no longer writes everything into a single custom table. Instead, it routes records to several streams based on the `clz_dir` and `clz_subdir` attributes supplied by LogServ:
+The DCR routes records to several streams based on the `clz_dir` and `clz_subdir` attributes supplied by LogServ. For example:
 
 | Source (`clz_dir` / `clz_subdir`) | Destination |
 |---|---|
