@@ -244,6 +244,8 @@ Before creating the connector, configure access in your Databricks environment a
 
 After selecting **Connect**, the wizard closes and the instance count for Databricks increases.
 
+(#tab/end)
+
 ## Verify tables from your connector instance
 
 After creating a connector instance check that the tables you federated are available in Microsoft Sentinel.
