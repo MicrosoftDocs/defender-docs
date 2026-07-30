@@ -105,11 +105,11 @@ Federated connectors are managed on the Data connectors page in Microsoft Sentin
 
 The process for creating a connector instance varies depending on whether you're connecting to Microsoft Fabric, Azure Data Lake Storage Gen 2, or Azure Databricks. Follow the instructions for your specific data source type.
 
-# [Microsoft Fabric](#tab/fabric)
+### [Microsoft Fabric](#tab/fabric)
 
 Use this tab to create a federated connector instance for Microsoft Fabric.
 
-## Create a Microsoft Fabric connector instance
+#### Create a Microsoft Fabric connector instance
 
 Before configuring the Fabric connector instance, you must set up permissions within the Microsoft Fabric environment to allow Microsoft Sentinel to access the data.
 
@@ -143,11 +143,11 @@ To configure the Fabric connector instance:
 
 1. Select **Connect** to create the connection instance.
 
-# [Azure Data Lake Storage Gen 2](#tab/adls)
+### [Azure Data Lake Storage Gen 2](#tab/adls)
 
 Use this tab to create a federated connector instance for Azure Data Lake Storage (ADLS) Gen 2.
 
-## Create an ADLS Gen 2 connector instance
+#### Create an ADLS Gen 2 connector instance
 
 Before creating the connector, prepare your storage account:
 
@@ -187,11 +187,11 @@ Before creating the connector, prepare your storage account:
 
 Select **Connect**, to complete the setup for the ADLS Gen 2 connector instance. The wizard closes and the instance count for Azure Data Lake Storage Gen2 increases.
 
-# [Azure Databricks](#tab/databricks)
+### [Azure Databricks](#tab/databricks)
 
 Use this tab to create a federated connector instance for Azure Databricks.
 
-## Create an Azure Databricks connector instance
+#### Prepare the Azure Databricks environment
 
 Before creating the connector, configure access in your Databricks environment as follows:
 
@@ -209,7 +209,7 @@ Before creating the connector, configure access in your Databricks environment a
 1. Select the service principal you created earlier and select Add.
 
 <a name="create-the-connector-instance"></a>
-### Create the Azure Databricks connector instance
+#### Create the Azure Databricks connector instance
 
 1. On the **Data federation** > **Catalog** page, select the **Azure Databricks** row.
 1. In the side panel, select **Connect a connector**.
@@ -243,7 +243,9 @@ Before creating the connector, configure access in your Databricks environment a
 :::image type="content" source="./media/data-federation-setup/databricks-review.png" alt-text="Screenshot of the Azure Databricks configuration review page." lightbox="./media/data-federation-setup/databricks-review.png":::
 
 After selecting **Connect**, the wizard closes and the instance count for Databricks increases.
-#
+
+---
+
 ## Verify tables from your connector instance
 
 After creating a connector instance check that the tables you federated are available in Microsoft Sentinel.
