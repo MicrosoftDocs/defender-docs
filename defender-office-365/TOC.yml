@@ -225,6 +225,10 @@
              href: outbound-spam-protection-about.md
            - name: Configure outbound spam policies
              href: outbound-spam-policies-configure.md
+           - name: Outbound spam limits with Send As and Send on behalf permissions
+             href: outbound-spam-policies-send-as-send-on-behalf.md
+           - name: Inventory delegated From addresses
+             href: outbound-spam-delegated-from-addresses-inventory.md
            - name: Control automatic external email forwarding
              href: outbound-spam-policies-external-email-forwarding.md
            - name: Outbound delivery pools

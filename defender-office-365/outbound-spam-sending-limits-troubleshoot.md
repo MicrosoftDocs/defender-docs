@@ -164,6 +164,8 @@ To prevent future blocks, take the following actions:
 
 ## Related content
 
+- [How outbound spam policy limits apply to Send As and Send on behalf permissions](outbound-spam-policies-send-as-send-on-behalf.md)
+- [Inventory delegated From addresses for outbound spam policies](outbound-spam-delegated-from-addresses-inventory.md)
 - [Outbound spam protection](outbound-spam-protection-about.md)
 - [Configure outbound spam policies](outbound-spam-policies-configure.md)
 - [Remove blocked users from the Restricted entities page](outbound-spam-restore-restricted-users.md)
