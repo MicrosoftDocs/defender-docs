@@ -4,7 +4,7 @@ author: chrisda
 ms.author: chrisda
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 07/03/2026
+ms.date: 07/31/2026
 ms.collection:
 - m365-security
 - tier1
@@ -33,9 +33,11 @@ For usage and configuration instructions, see the following articles:
 
 - **Domains and email addresses** and **spoofed senders**: [Allow or block emails using the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md)
   - Entries apply to the From address (also known as the `5322.From` address or P2 sender), not the MAIL FROM address (also known as the `5321.MailFrom` address, P1 sender, or envelope sender). For more information about these addresses, see [Why internet email needs authentication](email-authentication-about.md#why-internet-email-needs-authentication).
-  - Entries apply to messages **only** from external senders.
-> [!Important]
-> If you use a Hybrid Exchange environment and external emails are tagged with the header `X-MS-Exchange-Organization-AuthAs: Internal`, then block entries will not apply to inbound mail.
+  - Entries apply to messages from external senders only .
+
+    > [!IMPORTANT]
+    > If you use a Hybrid Exchange environment and external email is tagged with the header `X-MS-Exchange-Organization-AuthAs: Internal`, then block entries don't apply to inbound mail.
+
   - Block entries for **Domains and email addresses** also prevent users in the organization from *sending* email to those blocked domains and addresses.
 - **Files**: [Allow or block files using the Tenant Allow/Block List](tenant-allow-block-list-files-configure.md)
 - **URLs**: [Allow or block URLs using the Tenant Allow/Block List](tenant-allow-block-list-urls-configure.md).
