@@ -33,13 +33,20 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| July 31, 2026 | Deprecation | [Deprecation completed: Legacy grouped recommendations removed from Azure portal](#deprecation-completed-legacy-grouped-recommendations-removed-from-azure-portal) |
 | July 30, 2026 | Upcoming change | [Foundational CSPM moves to opt-in model for new Azure subscriptions](#foundational-cspm-moves-to-opt-in-model-for-new-azure-subscriptions) |
 | July 26, 2026 | GA | [Database-level recommendations for SQL Vulnerability Assessment (GA)](#database-level-recommendations-for-sql-vulnerability-assessment-ga) |
 | July 5, 2026 | Deprecation | [Plan enablement API now blocks onboarding to five deprecated Defender plans](#plan-enablement-api-now-blocks-onboarding-to-five-deprecated-defender-plans) |
 | July 1, 2026 | GA | [New container security capabilities are now generally available](#new-container-security-capabilities-are-now-generally-available) |
 | July 1, 2026 | GA | [Kubernetes misconfiguration enforcement in Defender for Containers is now generally available](#kubernetes-misconfiguration-enforcement-in-defender-for-containers-is-now-generally-available) |
 | July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
-| July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
+
+### Deprecation completed: Legacy grouped recommendations removed from Azure portal
+
+July 31, 2026
+
+Retirement of legacy grouped recommendations (sub-assessments) has started. Customers can no longer access the deprecated data through the API. The Azure portal and Azure Resource Graph might take a few days to reflect the change. Individual recommendations replace the legacy grouped recommendations, as [announced in May 2026](#general-availability-of-individual-recommendations-for-defender-for-cloud-in-azure-portal-and-deprecation-of-legacy-grouped-recommendations).
+Customers who previously relied on grouped recommendations should validate existing automation, reporting, governance workflows, and queries, and migrate any remaining disable rules to exemptions. For more information, see [Transition from grouped to individual recommendations](transition-grouped-individual-recommendations.md)
 
 ### Foundational CSPM moves to opt-in model for new Azure subscriptions
 
