@@ -9,7 +9,7 @@ ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
 ai-usage: ai-assisted
 ---
 
-# Defender for Identity VPN integration in Microsoft Defender XDR
+# Defender for Identity VPN integration in Microsoft Defender
 
 >[!NOTE]
 >VPN integration is currently supported only by the Defender for Identity sensor version 2.x.
@@ -32,7 +32,7 @@ Defender for Identity's VPN integration supports both primary UPNs and alternate
 Before you start, make sure that you have:
 
 - [Microsoft Defender for Identity deployed](deploy-defender-identity.md)
-- Access to the **Settings** area in Microsoft Defender XDR. For more information, see [Microsoft Defender for Identity role groups](role-groups.md).
+- Access to the **Settings** area in Microsoft Defender. For more information, see [Microsoft Defender for Identity role groups](role-groups.md).
 - The ability to configure RADIUS on your VPN system. 
 
     The following procedure provides an example of how to configure Microsoft Defender for Identity to collect accounting information from VPN solutions, using Microsoft Routing and Remote Access Server (RRAS). If you're using a third-party VPN solution, consult their documentation for instructions on how to enable RADIUS Accounting.
@@ -65,9 +65,9 @@ This procedure describes how to configure RADIUS accounting on an RRAS server fo
 
 ## Configure VPN in Defender for Identity
 
-This procedure describes how to configure Defender for Identity's VPN integration in Microsoft Defender XDR.
+This procedure describes how to configure Defender for Identity's VPN integration in Microsoft Defender.
 
-1. Sign into [Microsoft Defender XDR](https://security.microsoft.com) and select **Settings** > **Identities** > **VPN**.
+1. Sign into [Microsoft Defender](https://security.microsoft.com) and select **Settings** > **Identities** > **VPN**.
 
 1. Select **Enable radius accounting** and enter the **Shared Secret** you'd previously configured on your RRAS VPN server. For example:
 

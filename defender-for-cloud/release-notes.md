@@ -34,6 +34,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | Date | Category | Update |
 | -------- | -------- | -------- |
 | July 31, 2026 | Deprecation | [Deprecation completed: Legacy grouped recommendations removed from Azure portal](#deprecation-completed-legacy-grouped-recommendations-removed-from-azure-portal) |
+| July 30, 2026 | Upcoming change | [Foundational CSPM moves to opt-in model for new Azure subscriptions](#foundational-cspm-moves-to-opt-in-model-for-new-azure-subscriptions) |
 | July 26, 2026 | GA | [Database-level recommendations for SQL Vulnerability Assessment (GA)](#database-level-recommendations-for-sql-vulnerability-assessment-ga) |
 | July 5, 2026 | Deprecation | [Plan enablement API now blocks onboarding to five deprecated Defender plans](#plan-enablement-api-now-blocks-onboarding-to-five-deprecated-defender-plans) |
 | July 1, 2026 | GA | [New container security capabilities are now generally available](#new-container-security-capabilities-are-now-generally-available) |
@@ -46,6 +47,18 @@ July 31, 2026
 
 Legacy grouped recommendations (sub-assessments) have been removed from the Azure portal recommendation experiences and replaced by individual recommendations, as [announced in May 2026](#general-availability-of-individual-recommendations-for-defender-for-cloud-in-azure-portal-and-deprecation-of-legacy-grouped-recommendations).
 Customers who previously relied on grouped recommendations should validate existing automation, reporting, governance workflows, and queries, and migrate any remaining disable rules to exemptions. For more information, see [Transition from grouped to individual recommendations](transition-grouped-individual-recommendations.md)
+
+### Foundational CSPM moves to opt-in model for new Azure subscriptions
+
+July 30, 2026
+
+Starting October 27, 2026, Foundational CSPM will move to an opt-in model and will no longer be enabled by default for new Azure subscriptions. This change gives you more control over how security posture management is configured for each new Azure subscription and is part of the transition of cloud security posture management to the Microsoft Defender portal.
+
+Foundational CSPM will continue to be available at no cost and can be enabled at any time based on your organization's needs.
+
+This change applies only to new Azure subscriptions. Existing Azure subscriptions keep their current configuration, and AWS and GCP environments aren't affected.
+
+For more information, see [Opt in to Foundational CSPM](foundational-cspm-opt-in.md).
 
 ### Database-level recommendations for SQL Vulnerability Assessment (GA)
 

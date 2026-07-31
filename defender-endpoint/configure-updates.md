@@ -10,14 +10,14 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Create a custom gradual rollout process for Microsoft Defender updates
@@ -40,6 +40,7 @@ Custom gradual rollout configuration is supported on the following operating sys
 
 To create your own custom gradual rollout process for Defender updates, you can use Group Policy, Intune, and PowerShell.
 
+<a name="group-policy-settings"></a>
 The following table lists the available group policy settings for configuring update channels:
 
 |Setting title|Description|Location|
@@ -66,7 +67,7 @@ You can use [Group Policy](/windows/win32/srvnodes/group-policy?redirectedfrom=M
 
 1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus**.
 
-1. Expand the section listed in the **Location** column of the preceding policy settings table (for example, **Windows Components\Microsoft Defender Antivirus**) that contains the setting you want to configure, double-click the setting to open it, and make configuration changes.
+1. Expand the section listed in the **Location** column of the [Group Policy settings table](#group-policy-settings) earlier in this article (for example, **Windows Components\Microsoft Defender Antivirus**) that contains the setting you want to configure, double-click the setting to open it, and make configuration changes.
 
 1. Deploy the updated GPO as you normally do. For guidance, see [Deploying Group Policy Objects](https://msdn.microsoft.com/library/ee663280(v=vs.85).aspx).
 
@@ -80,7 +81,7 @@ For more information on the Defender CSP used for the gradual rollout process, s
 <a name="powershell"></a>
 ## Configure a gradual rollout by using PowerShell
 
-Use the `Set-MpPreference` cmdlet to configure roll out of the gradual updates.
+The `Set-MpPreference` cmdlet is the Microsoft Defender Antivirus PowerShell cmdlet used to configure update and protection preferences. Use `Set-MpPreference` to configure the gradual rollout of updates.
 
 Use the following parameters:
 
@@ -100,7 +101,7 @@ For more information on the parameters and how to configure them, see [Set-MpPre
 <a name="registry"></a>
 ## Verify gradual rollout configuration in the registry
 
-These settings can be confirmed in the registry under `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender`:
+The gradual rollout channel settings can be confirmed in the registry under `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender`:
 
 - `EngineRing`
 - `PlatformRing`

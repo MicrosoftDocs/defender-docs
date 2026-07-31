@@ -12,18 +12,19 @@ ms.collection:
 - tier3
 - mde-macos
 ms.topic: how-to
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
+## Overview
 
 This document describes the Offline Security Intelligence Update feature of Microsoft Defender for Endpoint on macOS.
 
@@ -31,7 +32,7 @@ This feature makes it possible for an organization to use a local hosting server
 
 A mirror server is any server in the customer's environment that can connect to the Microsoft cloud to download the signatures. Other macOS endpoints pull the signatures from the mirror server at a predefined interval.
 
-Before you begin, review the [Prerequisites](#prerequisites) for both the mirror server and the macOS endpoints.
+Before you begin, make sure Defender for Endpoint version 101.25012.0003 or later is installed on the macOS endpoints, the endpoints can reach the mirror server, and the mirror server has internet access to download signatures. For the full list, see the [prerequisites for offline security intelligence updates](#prerequisites) section later in this article.
 
 ## Key benefits
 
@@ -63,11 +64,11 @@ To trigger and configure the update process, update the managed config json file
 
 The status of the offline security intelligence update can be seen on the mdatp CLI.
 
-The process flow for downloading security intelligence updates to the mirror server is illustrated in the following diagram.
+The following diagram shows how security intelligence updates are downloaded from the Microsoft cloud to the mirror server.
 
 :::image type="content" source="./media/offline-update-diag-1.png" alt-text="Process flow diagram on the Mirror Server for downloading the security intelligence updates" lightbox="./media/offline-update-diag-1.png":::
 
-The process flow for security intelligence updates on the macOS endpoint is illustrated in the following diagram.
+The following diagram shows how macOS endpoints pull and verify security intelligence updates from the mirror server.
 
 :::image type="content" source="./media/offline-update-diag-2.png" alt-text="Process flow diagram on the macOS endpoint for security intelligence updates" lightbox="./media/offline-update-diag-2.png":::
 
@@ -110,14 +111,14 @@ The mirror server can run any of the following operating systems:
 
 Any HTTP server can be used as a mirror server. The mirror server doesn't need to have Defender for Endpoint installed.
 
-While management and ownership of the mirror server lies solely with the customer, this section presents two sample Bash scripts that demonstrate how to use Python 3 and Caddy to set up a basic HTTP file server on macOS. These scripts are given for purposes of illustration only and should be adapted to your own specific needs and environment.
+While management and ownership of the mirror server lies solely with the customer, the following two sample Bash scripts demonstrate how to use Python 3 and Caddy to set up a basic HTTP file server on macOS. These scripts are given for purposes of illustration only and should be adapted to your own specific needs and environment.
 
-- [`python_http_server.sh`](#python3): Uses Python 3's built-in HTTP server module to serve files from a specified directory.
-- [`caddy_http_server.sh`](#caddy): Installs and configures the Caddy web server to serve files from a specified directory.
+- [Sample Python HTTP server script (`python_http_server.sh`)](#python3): Uses Python 3's built-in HTTP server module to serve files from a specified directory.
+- [Sample Caddy HTTP server script (`caddy_http_server.sh`)](#caddy): Installs and configures the Caddy web server to serve files from a specified directory.
 
 To check that the HTTP file server is set up correctly, navigate to "https://localhost:8080".
 
-For production or advanced use cases, refer to the official documentation for each server:
+For production or advanced use cases, refer to the official Python HTTP server and Caddy documentation:
 
 - [Python HTTP server documentation](https://docs.python.org/3/library/http.server.html)
 - [Caddy documentation](https://caddyserver.com/docs/)
@@ -125,6 +126,8 @@ For production or advanced use cases, refer to the official documentation for ea
 Always review and adapt scripts to your environment and security requirements.
 
 <a id="python3"></a>**Sample script: Setting up a basic HTTP file server on macOS using Python 3**
+
+The following script starts a lightweight Python 3 HTTP server that can host the downloaded offline update files from a specified directory.
 
 ```bash
 #!/bin/bash
@@ -153,6 +156,8 @@ python3 -m http.server "$PORT" --bind 127.0.0.1 --directory "$FOLDER"
 ```
 
 <a id="caddy"></a>**Sample script: Setting up a basic HTTP file server on macOS using using Caddy**
+
+The following script installs and configures the Caddy web server on macOS to host the downloaded offline update files.
 
 ```bash
 #!/bin/bash
@@ -222,7 +227,7 @@ Perform the following steps to get the downloader script:
 
 ### Option 1: Clone the repo (preferred)
 
-[Install git](https://kinsta.com/knowledgebase/install-git/) on the mirror server.
+[Install Git on your mirror server](https://kinsta.com/knowledgebase/install-git/).
 
 Navigate to the directory where you want to clone the repo.
 
@@ -239,7 +244,7 @@ Extract the zipped folder.
 > [!NOTE]
 > Schedule a **cron job** or a **launchd job** to keep the repo/downloaded zip file updated to the latest version at regular intervals.
 
-After cloning the repo or downloading the zipped file, the local directory structure should be as follows:
+After cloning the repo or downloading the zipped file, the local directory structure should match the following example, which shows the downloader script and its configuration files:
 
 ```Console
 user@vm:~/mdatp-xplat$ tree linux/definition_downloader/
@@ -269,14 +274,14 @@ The settings.json file consists of a few variables that the user can configure t
 
 ## Execute the offline security intelligence downloader script
 
-To manually execute the downloader script, configure the parameters in the settings.json file (such as `downloadFolder`, `downloadMacUpdates`, and `backupPreviousUpdates`) using the field descriptions in the [settings.json field table](#get-the-offline-security-intelligence-downloader-script), and use one of the following commands based on the OS of the mirror server:
+To manually execute the downloader script, configure the parameters in the settings.json file (such as `downloadFolder`, `downloadMacUpdates`, and `backupPreviousUpdates`) using the field descriptions in the [downloader script settings.json field descriptions](#get-the-offline-security-intelligence-downloader-script), and use one of the following commands based on the OS of the mirror server:
 
-Bash:
+On a Bash-based mirror server (Linux or macOS), run the shell script to download the latest offline definition package:
 ```bash
 ./xplat_offline_updates_download.sh
 ```
 
-PowerShell:
+On a Windows-based mirror server, use the PowerShell version of the script to download the offline definition package:
 ```powershell
 ./xplat_offline_updates_download.ps1
 ```
@@ -296,7 +301,7 @@ For example, if the script is executed with `downloadFolder=/tmp/wdav-update`, a
 
 We can also use the absolute path of directory (local/remote mount point) like /tmp/wdav-update/mac/production.
 
-Once the mirror server is set up, propagate this URL to the Mac endpoints by setting it as the `offlineDefinitionUpdateUrl` value in the managed configuration file (mdatp_managed.json) as described in [Configure the endpoints](#configure-the-endpoints).
+Once the mirror server is set up, propagate this URL to the Mac endpoints by setting it as the `offlineDefinitionUpdateUrl` value in the managed configuration file (mdatp_managed.json) as described in [Configure the macOS endpoints for offline updates](#configure-the-endpoints).
 
 ## Configure the endpoints
 
@@ -333,12 +338,12 @@ Use the following sample mdatp_managed.json file and update the parameters as pe
 
 ## Verify the configuration
 
-To test if the settings are applied correctly on the macOS endpoints, run the following command:
+To test if the settings are applied correctly on the macOS endpoints, use the following command to display the definition update status fields, including the configured offline URL and update source:
 
 ```bash
 mdatp health --details definitions
 ```
-A sample output would look like the following code snippet:
+A sample output would look like the following code snippet. Verify that `definitions_status` shows `up_to_date` and `definitions_update_fail_reason` is empty, which indicates the offline update configuration is working correctly:
 
 ```Console
 user@vm:~$ mdatp health --details definitions
@@ -359,7 +364,7 @@ offline_definition_update_fallback_to_cloud : false[managed]
 
 * **Automatic update**
 
-   If the fields `automaticDefinitionUpdateEnabled` and `offline_definition_update` in the managed json are set to `true`, then the "offline security intelligence updates" are triggered automatically at periodic intervals.
+   If the `automaticDefinitionUpdateEnabled` field (which controls whether Defender for Endpoint attempts automatic definition updates, as configured in the [managed JSON file](#configure-the-endpoints)) and the `offline_definition_update` (the reported status name for the `offlineDefinitionUpdate` managed config field) in the managed json are set to `true`, then the "offline security intelligence updates" are triggered automatically at periodic intervals.
 
    By default, this periodic interval is **8 hours**. It can be configured by setting the `definitionUpdatesInterval` parameter in the managed json.
 
@@ -374,7 +379,7 @@ offline_definition_update_fallback_to_cloud : false[managed]
 
 After triggering the "offline security intelligence update" by either the automatic or manual method, verify that the update was successful by running the command: `mdatp health --details --definitions`.
 
-Verify the following fields:
+The following sample output shows the key definition health fields. Confirm that `definitions_status` is `up_to_date` and `definitions_update_fail_reason` is empty:
 
 ```Console
 user@vm:~$ mdatp health --details definitions
@@ -385,6 +390,8 @@ definitions_update_fail_reason              : ""
 ...
 ```
 ## Common troubleshooting steps
+
+If offline security intelligence updates aren't working as expected, use the following steps to diagnose and resolve the issue.
 
 * Check the status of the "offline security intelligence update" feature by using the following command:
 
@@ -400,19 +407,21 @@ definitions_update_fail_reason              : ""
    * `definitions_update_source_uri` is the source from where the signatures were downloaded.
    * `offline_definition_url_configured` is the source from where signatures should be downloaded, the one mentioned in the managed config file.
 
-* Try performing the connectivity test to check if mirror server is reachable from the host:
+* Run a connectivity test to confirm the endpoint can reach the configured mirror server and other required services:
 
    ```bash
    mdatp connectivity test
    ```
 
-* Try to trigger a manual update using the following command:
+* If connectivity succeeds but definitions are still outdated, retry the definition update manually:
 
    ```bash
    mdatp definitions update
    ```
 
 ## See also
+
+For more details, see the following articles.
 
 * [Microsoft Defender for Endpoint on macOS prerequisites](./microsoft-defender-endpoint-mac-prerequisites.md)
 * [Set preferences for Microsoft Defender for Endpoint on macOS](./mac-preferences.md)

@@ -35,9 +35,9 @@ Microsoft Defender for Identity currently supports integration with the followin
 
 ### Reset password
 
-Once PAM integration is enabled, Microsoft Defender XDR automatically tags identities managed by your PAM solution, providing critical context during investigations.
+Once PAM integration is enabled, Microsoft Defender automatically tags identities managed by your PAM solution, providing critical context during investigations.
 
-Additionally, you can initiate a password reset for high-risk privileged accounts directly from the Microsoft Defender XDR console. This action uses the connected PAM system.
+Additionally, you can initiate a password reset for high-risk privileged accounts directly from the Microsoft Defender console. This action uses the connected PAM system.
 
 To reset a password:
 

@@ -9,11 +9,11 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -45,7 +45,7 @@ It's important to note the required roles to access these portals and implement 
 
 You need a Microsoft Intune environment with Intune managed and Microsoft Entra joined Windows 10 and Windows 11 devices.
 
-Take the following steps to enable this Conditional Access configuration:
+Take the following steps to enable Conditional Access for Microsoft Defender for Endpoint with Microsoft Intune and Microsoft Entra ID:
 
 1. Turn on the Microsoft Intune connection in the Microsoft Defender portal.
 2. Turn on the Defender for Endpoint integration in the Microsoft Intune admin center.
@@ -60,7 +60,7 @@ On the **Advanced features** page, verify the **Microsoft Intune connection** se
 
 ### Step 2: Turn on the Defender for Endpoint integration in Intune
 
-Perform the following steps to enable the Defender for Endpoint integration in the Microsoft Intune admin center.
+Perform the following steps to enable the Microsoft Defender for Endpoint compliance policy evaluation integration in the Microsoft Intune admin center.
 
 1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, select **Endpoint security** \> **Setup** section \> **Microsoft Defender for Endpoint**. Or, to go directly to the **Endpoint security \| Microsoft Defender for Endpoint** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/SecurityManagementMenu/~/atp>.
 

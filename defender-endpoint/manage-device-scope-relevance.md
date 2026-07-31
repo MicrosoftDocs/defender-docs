@@ -13,12 +13,12 @@ ms.collection:
 - tier2
 ms.topic: how-to
 search.appverid: met150
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Manage device scope and relevance with tags and exclusions
@@ -92,6 +92,9 @@ To exclude a single device from vulnerability management visibility, follow thes
 
 ### Exclude multiple devices
 
+> [!NOTE]
+> It can take up to 10 hours for devices to be fully excluded from vulnerability management views and data.
+
 To exclude multiple devices at once, complete the following steps:
 
 1. In the **Device inventory**, select multiple devices using the checkboxes.
@@ -102,9 +105,6 @@ To exclude multiple devices at once, complete the following steps:
 If you select devices with mixed exclusion statuses, the dialog shows how many are already excluded. You can re-exclude devices, but the new justification overrides previous values.
 
 :::image type="content" source="media/exclude-device-bulk.png" alt-text="Screenshot of bulk device exclusion showing multiple selected devices.":::
-
-> [!NOTE]
-> It can take up to 10 hours for devices to be fully excluded from vulnerability management views and data.
 
 ### View and manage excluded devices
 
@@ -119,6 +119,9 @@ You can also add the **Exclusion state** column to your inventory view.
 
 ### Stop excluding a device
 
+> [!NOTE]
+> After you stop excluding a device, vulnerability data reappears in vulnerability management pages, reports, and advanced hunting. Changes can take up to 8 hours to take effect.
+
 To restore a device to active vulnerability management:
 
 1. In the **Device inventory**, select the excluded device.
@@ -126,8 +129,6 @@ To restore a device to active vulnerability management:
 1. Select **Stop exclusion**.
 
 :::image type="content" source="media/exclusion-details.png" alt-text="Screenshot showing exclusion details with option to stop exclusion.":::
-
-Once you stop exclusion, vulnerability data reappears in vulnerability management pages, reports, and advanced hunting. Changes can take up to 8 hours to take effect.
 
 ## Next steps
 

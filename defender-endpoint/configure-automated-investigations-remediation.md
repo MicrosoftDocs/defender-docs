@@ -12,27 +12,29 @@ ms.collection:
 - mde-edr
 ms.topic: how-to
 ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Configure automated investigation and remediation capabilities in Microsoft Defender for Endpoint
 
 
-If your organization is using [Defender for Endpoint](/windows/security/threat-protection/) (or [Defender for Business](/defender-business/mdb-overview)), [automated investigation and remediation capabilities](automated-investigations.md) can save your security operations team time and effort. As outlined in [Enhance your SOC with Microsoft Defender for Endpoint automatic investigation and remediation](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/enhance-your-soc-with-microsoft-defender-atp-automatic/ba-p/848946), these capabilities mimic the ideal steps that a security analyst takes to investigate and remediate threats. [Automated investigation and remediation](automated-investigations.md).
+If your organization is using [Defender for Endpoint](/windows/security/threat-protection/) (or [Defender for Business](/defender-business/mdb-overview)), [automated investigation and remediation capabilities](automated-investigations.md) can save your security operations team time and effort. As outlined in [Enhance your SOC with Microsoft Defender for Endpoint automatic investigation and remediation](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/enhance-your-soc-with-microsoft-defender-atp-automatic/ba-p/848946), these capabilities mimic the ideal steps that a security analyst takes to investigate and remediate threats. For more information, see [Automated investigation and remediation](automated-investigations.md).
 
 [!INCLUDE [AIR deprecation note](includes/air-deprecation-note.md)]
 
-If you're using Defender for Endpoint, you can specify an automation level so that when a threat is detected on a device, the entity can be remediated automatically or only upon approval by your security team. You can configure automated investigation and remediation with device groups. 
+If you're using Defender for Endpoint, you can specify an automation level so that when a threat is detected on a device, the detected threat can be remediated automatically or only upon approval by your security team. You can configure automated investigation and remediation with device groups. 
 
 > [!NOTE]
 > In Defender for Business, automated investigation is configured automatically. See [Review settings for advanced features in Defender for Business](/defender-business/mdb-configure-security-settings#review-settings-for-advanced-features).
 
 ## Set up device groups
+
+To create device groups and configure automation levels in the Microsoft Defender portal, follow these steps:
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), on the **Settings** page, under **Permissions**, select **Device groups**.
 

@@ -6,7 +6,7 @@ ms.subservice: onboard
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 ms.collection: 
 - m365-security
 - tier2
@@ -17,7 +17,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Updating MMA on Windows devices for Microsoft Defender for Endpoint
 
@@ -66,14 +66,17 @@ A new agent was released in April 2022 for Windows Server 2012 R2 and Windows Se
 
 - If you've determined that you aren't using the MMA for Defender for Endpoint, or you've already updated your agent, no other steps are needed. 
 
-- If you are, however, still using MMA for other purposes (such as Log Analytics), MMA has been retired. See [We're retiring the Log Analytics agent in Azure Monitor on 31 August 2024](https://azure.microsoft.com/updates/were-retiring-the-log-analytics-agent-in-azure-monitor-on-31-august-2024/). Depending on your particular scenario, now might be a good time to upgrade to [Azure Monitoring Agent, the successor of MMA](/azure/azure-monitor/agents/azure-monitor-agent-migration). 
-
 > [!IMPORTANT]
 > Defender for Endpoint devices running Windows 8.1 are still supported and remain dependent on MMA.
 > 
-> [Azure Monitor Agent](/azure/azure-monitor/agents/agents-overview) cannot be used as a substitute for Defender for Endpoint. 
+> [Azure Monitor Agent](/azure/azure-monitor/agents/agents-overview) cannot be used as a substitute for Defender for Endpoint.
 
-## See also
+- If you are, however, still using MMA for other purposes (such as Log Analytics), MMA has been retired. See [We're retiring the Log Analytics agent in Azure Monitor on 31 August 2024](https://azure.microsoft.com/updates/were-retiring-the-log-analytics-agent-in-azure-monitor-on-31-august-2024/). Depending on your particular scenario, now might be a good time to upgrade to [Azure Monitoring Agent, the successor of MMA](/azure/azure-monitor/agents/azure-monitor-agent-migration). 
+
+<a name="see-also"></a>
+## Related content
+
+The following resources can help you plan and execute your migration to Microsoft Defender for Endpoint:
 
 - [Make the switch from non-Microsoft endpoint protection to Microsoft Defender for Endpoint](switch-to-mde-overview.md)
 

@@ -20,7 +20,7 @@ Before connecting your CyberArk Identity to Microsoft Defender for Identity, mak
 
 - The System Admin role is required to create an application.
 
-**Microsoft Entra and Defender XDR role-based access options**
+**Microsoft Entra and Defender role-based access options**
 
 To configure the CyberArk Identity connector in Microsoft Defender for Identity, your account must have either of the following access configurations assigned:
 
@@ -30,7 +30,7 @@ To configure the CyberArk Identity connector in Microsoft Defender for Identity,
 
     - Security Admin 
 
-- **Defender XDR Unified RBAC permission:** 
+- **Defender Unified RBAC permission:**
     - Core security settings (manage)
 
 ## Connect CyberArk Identity to Microsoft Defender for Identity 

@@ -10,8 +10,8 @@ ms.collection:
 - tier3
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 06/17/2026
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.date: 07/02/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -49,7 +49,7 @@ You might see the prompt that's shown in the following screenshot:
 
    :::image type="content" source="media/virus-and-threat-protection-screen.png" alt-text="The Virus & threat protection screen containing the Fix button." lightbox="media/virus-and-threat-protection-screen.png":::
 
-1. Select **Fix** on the top-right corner of this screen. You get a prompt, as shown in the following screenshot:
+1. Select **Fix** in the upper-right corner of the **Virus & threat protection** screen. You get a prompt, as shown in the following screenshot:
 
    :::image type="content" source="media/prompt-on-virus-and-threat-protection-screen.png" alt-text="The prompt dialog box on the Virus & threat protection screen." lightbox="media/prompt-on-virus-and-threat-protection-screen.png":::
 
@@ -102,11 +102,11 @@ Perform the following steps to grant Accessibility access to Microsoft Defender:
 
    :::image type="content" source="media/accessibility-and-plus-icon.png" alt-text="The Accessibility menu item and the Plus icon." lightbox="media/accessibility-and-plus-icon.png":::
 
-1. From the resultant screen, select **Applications** from the **Favorites** pane in the left-side of the screen; select **Microsoft Defender**; and then select **Open** at the bottom-right of the screen.
+1. In the file selection dialog, select **Applications** from the **Favorites** pane in the left-side of the screen; select **Microsoft Defender**; and then select **Open** at the bottom-right of the screen.
 
    :::image type="content" source="media/applications-md-options.png" alt-text="The process of selecting Applications and Microsoft Defender." lightbox="media/applications-md-options.png":::
    
-1. From the resultant screen, check the **Microsoft Defender** checkbox.
+1. In the **Accessibility** list, check the **Microsoft Defender** checkbox.
 
    :::image type="content" source="media/checking-md-checkbox.png" alt-text="Checking the Microsoft Defender checkbox." lightbox="media/checking-md-checkbox.png":::
 
@@ -144,7 +144,8 @@ Use the following steps to enable notifications for Microsoft Defender:
 <a name="what-a-healthy-system-looks-like"></a>
 ### Verify a healthy system state
 
-#### Mdatp health output
+<a name="mdatp-health-output"></a>
+#### Review mdatp health output
 
 After completing the manual deployment steps, run `mdatp health` in Terminal to confirm that Microsoft Defender for Endpoint is running correctly. The following screenshot shows an example of healthy output. In a healthy system, real-time protection is enabled, definitions are up to date, and the system extensions are active.
 

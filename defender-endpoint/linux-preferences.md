@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 ms.collection:
 - m365-security
 - tier3
@@ -17,7 +17,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Configure security settings in Microsoft Defender for Endpoint on Linux
@@ -49,17 +49,19 @@ To configure your security settings in Defender for Endpoint on Linux, you have 
 
 You can use the command line to configure specific settings, gather diagnostics, run scans, and more. For more information, see [Linux resources: Configure using command line](linux-resources.md#configure-from-the-command-line).
 
-### Defender for Endpoint Security Settings Management
+<a name="defender-for-endpoint-security-settings-management"></a>
+### Configure settings with Defender for Endpoint Security Settings Management
 
 You can configure Defender for Endpoint on Linux in the Microsoft Defender portal at ([Microsoft Defender portal](https://security.microsoft.com)) using Defender for Endpoint Security Settings Management. For more information, including how to create, edit, and verify security policies, see <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus</a>.
 
-### Configuration profile
+<a name="configuration-profile"></a>
+### Use a configuration profile to manage security settings
 
 You can configure settings in Defender for Endpoint on Linux through a configuration profile that uses a `.json` file. After you set up your profile, you can deploy it by using your management tool of choice. Preferences managed by the enterprise take precedence over preferences set locally on the device.
 
 In other words, users in your enterprise aren't able to change preferences that are set through this configuration profile. If exclusions were added through the managed configuration profile, they can only be removed through the managed configuration profile. The command line works for exclusions added locally.
 
-This section describes the structure of the Defender for Endpoint on Linux configuration profile, includes a recommended starter profile, and explains how to deploy it.
+The following configuration profile guidance describes the structure of the Defender for Endpoint on Linux configuration profile, includes a recommended starter profile, and explains how to deploy it.
 
 #### Configuration profile structure
 
@@ -71,7 +73,7 @@ The top level of the configuration profile includes product-wide preferences and
 
 #### Recommended configuration profile
 
-This section includes two configuration profile examples:
+The following recommended configuration profile guidance includes two configuration profile examples:
 
 - **Sample profile** to help you get started with recommended settings.
 - **Full configuration profile example** for organizations who want more granular control over security settings.
@@ -116,7 +118,7 @@ The following configuration profile helps you take advantage of important protec
 
 ##### Full configuration profile example
 
-The following configuration profile contains entries for all settings described in this article and can be used for more advanced scenarios where you want more control.
+The following complete managed configuration example contains entries for all settings described in this article, including antivirus engine, scheduled scan, cloud service, advanced feature, network protection, EDR, and exclusion settings. You can use this profile for advanced scenarios where you want granular control over each setting.
 
 ```json
 {
@@ -288,7 +290,7 @@ Specifies the enforcement preference of the antivirus engine. There are three va
   - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true`.
   - [Endpoint detection and response (EDR)](overview-endpoint-detection-response.md) is on. The output of the `mdatp health` command on the device shows `engine not loaded` for the `engine_load_version` property. The engine is related to antivirus, not EDR.
 
-To verify whether real-time protection is enabled on the device, run:
+To check whether real-time protection is active after applying an enforcement level configuration, run the following command. The command returns `true` if real-time protection is enabled or `false` if it's disabled:
 
 ```bash
 mdatp health --field real_time_protection_enabled
@@ -379,7 +381,8 @@ Specifies whether to use user-defined exclusions on the device. Valid values are
 > [!NOTE]
 > Available in Defender for Endpoint version `100.83.73` or later.
 
-### Scan exclusions
+<a name="scan-exclusions"></a>
+### Configure scan exclusions
 
 Entities excluded from scans. You specify exclusions as an array of items. Admins can specify as many elements as necessary, in any order. You specify exclusions using full paths, extensions, or file names.
 
@@ -486,6 +489,7 @@ When you add or remove a filesystem from the unmonitored list, Microsoft validat
   - `ramfs`
   - `reiserfs`
   - `tmpfs`
+  - `udf`
   - `vfat`
   - `xfs`
 - By default, the following filesystems are unmonitored by RTP:
@@ -499,7 +503,7 @@ When you add or remove a filesystem from the unmonitored list, Microsoft validat
 
   <sup>\*</sup> Currently, RTP monitoring of this filesystem is in Preview.
 
-For example, to remove `nfs` and `nfs4` from the list of unmonitored filesystems (which means `nfs` and `nfs4` are monitored by RTP after validation), update the managed config file with the following entry:
+To configure the `unmonitoredFilesystems` setting, add it to the `antivirusEngine` section of your managed configuration file. Filesystems included in this array are excluded from real-time protection (RTP) monitoring. For example, to remove `nfs` and `nfs4` from the unmonitored list so that RTP monitors them after validation, update the managed config file with the following entry:
 
 ```json
 {
@@ -509,7 +513,7 @@ For example, to remove `nfs` and `nfs4` from the list of unmonitored filesystems
 }
 ```
 
-To remove all entries from the list of unmonitored filesystems, use the following entry:
+To clear the unmonitored filesystems list so that RTP monitors all supported filesystem types, set `unmonitoredFilesystems` to an empty array. This configuration ensures that no filesystems are excluded from real-time protection monitoring:
 
 ```json
 {
@@ -532,7 +536,8 @@ Enables or disables file hash computation for files scanned by Defender for Endp
 > [!NOTE]
 > Available in Defender for Endpoint version `101.85.27` or later.
 
-### Allowed threats
+<a name="allowed-threats"></a>
+### Configure allowed threats
 
 Specifies the names of threats that aren't blocked by Defender for Endpoint. Instead, these threats are allowed to run.
 
@@ -541,7 +546,8 @@ Specifies the names of threats that aren't blocked by Defender for Endpoint. Ins
 |**Key**|`allowedThreats`|Allowed threats|
 |**Data type**|Array of strings|Dynamic String List|
 
-### Disallowed threat actions
+<a name="disallowed-threat-actions"></a>
+### Configure disallowed threat actions
 
 Restricts the allowed actions by the device user when threats are detected. The actions included in this list aren't displayed in the user interface.
 
@@ -682,7 +688,7 @@ Entities excluded from scans. You specify exclusions as an array of items. Admin
 |**Key**|`exclusions`|
 |**Data type**|Dictionary (nested preference)|
 
-See the following subsections for a description of the dictionary contents.
+The exclusion dictionary includes entries for type of exclusion, scope of exclusion, path to excluded content, path type (file or directory), file extension, and process name.
 
 #### Type of exclusion
 
@@ -837,7 +843,7 @@ The `scheduledScan` section of the configuration profile configures built-in sch
 |**Key**|`scheduledScan`|
 |**Data type**|Dictionary (nested preference)|
 
-See the following subsections for a description of the dictionary contents.
+For a description of the scheduled scan dictionary contents, see [Enable scheduled scans](#enable-scheduled-scans), [Weekly scan configuration](#weekly-scan-configuration), [Daily scan configuration](#daily-scan-configuration), and [Advanced scheduled scan settings](#advanced-scheduled-scan-settings).
 
 For the full details on scheduled scan configuration, including how to use Security Settings Management policies and the command line, see [Schedule antivirus scans on Linux (preview)](schedule-antivirus-scans-linux.md).
 
@@ -976,7 +982,8 @@ Randomizes the scan start time within a defined window (in hours) to avoid simul
 |**Data type**|Integer|
 |**Possible values**|`0`–`23`. Default: `0` (no randomization)|
 
-### Cloud-delivered protection preferences
+<a name="cloud-delivered-protection-preferences"></a>
+### Configure cloud-delivered protection preferences
 
 The *cloudService* entry in the configuration profile configures the cloud-driven protection feature.
 
@@ -1106,7 +1113,8 @@ Specifies whether infected processes that open or load infected files get remedi
 > [!NOTE]
 > Available in Defender for Endpoint version `101.24122.0001` or later.
 
-### Supplementary sensor configurations
+<a name="supplementary-sensor-configurations"></a>
+### Configure supplementary sensor settings
 
 Use the following settings to configure certain advanced supplementary sensor features.
 
@@ -1286,7 +1294,8 @@ Specifies whether suspicious events from Antivirus are reported to EDR.
 > [!NOTE]
 > Available in Defender for Endpoint version `101.23062.0010` or later.
 
-### Network protection configurations
+<a name="network-protection-configurations"></a>
+### Configure network protection settings
 
 > [!NOTE]
 >
@@ -1368,9 +1377,11 @@ When you first run the `mdatp health` command, the tag and group ID values are b
 
 ## Configuration profile validation
 
+Before you deploy the configuration profile, validate that the managed JSON file is correctly formatted and confirm that Defender for Endpoint applies the settings as expected.
+
 ### Validate the managed JSON file
 
-The configuration profile must be a valid JSON-formatted file. Many tools are available for you to verify the configuration profile. For example, run the following command if you have `python` installed on your device:
+The configuration profile must be a valid JSON-formatted file. Before you deploy the profile, verify that the JSON syntax is correct and the file can be parsed without errors. Many tools are available for this validation. For example, the following command uses the Python `json.tool` module to check the file for valid JSON syntax and pretty-print its contents for inspection. Run this command if you have `python` installed on your device:
 
 ```bash
 python -m json.tool mdatp_managed.json

@@ -3,7 +3,7 @@ title: Turn on network protection
 description: Enable network protection with Group Policy, PowerShell, or Mobile Device Management and Configuration Manager.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 author: paulinbar
 ms.author: painbar
@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Turn on network protection
@@ -28,7 +28,7 @@ ms.custom: msecd-doc-authoring-1014
    > [!IMPORTANT]
    > On Windows Server, Network Protection is an opt-in capability. Before any policy from Defender, Intune, or SCCM can enable it, the operating system must explicitly allow the feature using the **AllowNetworkProtectionOnWinServer** setting. Without this prerequisite, the Defender agent ignores any Network Protection configuration, even if it is successfully deployed, resulting in the feature appearing as not applied.
 
-For details, see [Network filtering configuration options](/intune/intune-service/protect/endpoint-protection-windows-10#network-filtering).
+For details about network filtering settings, see [Network filtering configuration options](/intune/intune-service/protect/endpoint-protection-windows-10#network-filtering).
 
 ## Prerequisites
 
@@ -42,14 +42,17 @@ Network protection is supported on the following operating systems:
 
 ## Enable network protection
 
-To enable network protection, you can use any of the methods described in this article.
+To enable network protection, you can use Microsoft Defender for Endpoint Security Settings Management, Microsoft Intune, Group Policy, PowerShell, Microsoft Configuration Manager, or mobile device management (MDM).
 
-### Microsoft Defender for Endpoint Security Settings Management
+<a name="microsoft-defender-for-endpoint-security-settings-management"></a>
+### Enable network protection with Defender for Endpoint security settings management
 
 > [!TIP]
 > This method requires the **Security Administrator** role in Microsoft Entra ID.
 
 #### Create an endpoint security policy
+
+Use the following steps to create an endpoint security policy that enables network protection:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Endpoints** \> **Configuration management** \> **Endpoint security policies**. Or, to go directly to the **Endpoint Security Policies** page, use <https://security.microsoft.com/policy-inventory>.
 
@@ -126,7 +129,8 @@ To enable network protection, you can use any of the methods described in this a
 
 7. On the **Review + create** tab, review your settings, and then select **Save**.
 
-### Microsoft Intune
+<a name="microsoft-intune"></a>
+### Enable network protection with Microsoft Intune
 
 You can enable network protection in Microsoft Intune using any of the following methods: a security baseline, an Antivirus policy, or a Device configuration profile.
 
@@ -142,7 +146,7 @@ To configure network protection as part of a security baseline in Microsoft Intu
 
 For more information about security baselines in Microsoft Intune, see [Learn about Intune security baselines for Windows devices](/intune/intune-service/protect/security-baselines).
 
-After your security baseline profile is created and assigned, return to this article to continue with [Check if network protection is enabled](#check-if-network-protection-is-enabled).
+After your security baseline profile is created and assigned, verify the deployment by [checking if network protection is enabled](#check-if-network-protection-is-enabled) using Registry Editor to confirm the **EnableNetworkProtection** value is set to **1** (On) or **2** (Audit).
 
 #### Antivirus policy method
 
@@ -155,7 +159,7 @@ To configure network protection using a Microsoft Intune Endpoint Security **Ant
 
 For more information about Microsoft Defender Antivirus profiles in Microsoft Intune, see [Antivirus policy for endpoint security](/intune/intune-service/protect/endpoint-security-antivirus-policy).
 
-After your Antivirus policy is created and assigned, return to this article to continue with [Check if network protection is enabled](#check-if-network-protection-is-enabled).
+After your Antivirus policy is created and assigned, verify the deployment by [checking if network protection is enabled](#check-if-network-protection-is-enabled) using Registry Editor to confirm the **EnableNetworkProtection** value is set to **1** (On) or **2** (Audit).
 
 #### Device configuration profile method
 
@@ -167,15 +171,17 @@ To configure network protection using a Microsoft Intune **Device configuration*
 
 For more information about the Network protection setting and available values, see [Network filtering settings for endpoint protection](/intune/intune-service/protect/endpoint-protection-windows-10#network-filtering).
 
-After your Device configuration profile is created and assigned, return to this article to continue with [Check if network protection is enabled](#check-if-network-protection-is-enabled) and alternative deployment methods.
+After your Device configuration profile is created and assigned, verify the deployment by [checking if network protection is enabled](#check-if-network-protection-is-enabled) using Registry Editor to confirm the **EnableNetworkProtection** value is set to **1** (On) or **2** (Audit). For other deployment options, see the [Group Policy](#group-policy), [PowerShell](#powershell), or [MDM](#mobile-device-management-mdm) sections.
 
-### Mobile device management (MDM)
+<a name="mobile-device-management-mdm"></a>
+### Enable network protection with mobile device management (MDM)
 
 1. [Update Microsoft Defender anti-malware platform to the latest version](https://support.microsoft.com/topic/update-for-microsoft-defender-antimalware-platform-92e21611-8cf1-8e0e-56d6-561a07d144cc) before you turn network protection on or off.
 
 2. Use the [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#enablenetworkprotection) configuration service provider (CSP) to turn network protection on or off, or to enable audit mode.
 
-### Group Policy
+<a name="group-policy"></a>
+### Enable network protection with Group Policy
 
 Use the following procedure to enable network protection on domain-joined computers or on a standalone computer.
 
@@ -202,7 +208,8 @@ Use the following procedure to enable network protection on domain-joined comput
 
 5. (This step is optional.) Follow the steps in [Check if network protection is enabled](#check-if-network-protection-is-enabled) to verify that your Group Policy settings are correct.
 
-### Microsoft Configuration Manager
+<a name="microsoft-configuration-manager"></a>
+### Enable network protection with Microsoft Configuration Manager
 
 Use the following steps to create and deploy an Exploit Guard policy that enables network protection in Configuration Manager.
 
@@ -221,11 +228,12 @@ Use the following steps to create and deploy an Exploit Guard policy that enable
    - **Audit**
    - **Disabled**
 
-1. Complete the rest of the steps, and save the policy.
+1. On the **Summary** page, review the settings and select **Next** to create the policy. Select **Close** when the wizard finishes.
 
 1. From the ribbon, select **Deploy** to deploy the policy to a collection.
 
-### PowerShell
+<a name="powershell"></a>
+### Enable network protection with PowerShell
 
 Use PowerShell to enable, audit, or disable network protection on a device.
 
@@ -242,7 +250,7 @@ Use PowerShell to enable, audit, or disable network protection on a device.
    |Windows Server version|Commands|
    |---|---|
    |Windows Server 2019 and later|`Set-MpPreference -AllowNetworkProtectionOnWinServer $true`|
-   |Windows Server 2016 <br/> Windows Server 2012 R2 with the [unified agent for Microsoft Defender for Endpoint](enable-network-protection.md)|`Set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `Set-MpPreference -AllowNetworkProtectionOnWinServer $true`|
+   |Windows Server 2016 <br/> Windows Server 2012 R2 with the [unified agent for Microsoft Defender for Endpoint](configure-server-endpoints.md#functionality-in-the-modern-unified-solution)|`Set-MpPreference -AllowNetworkProtectionDownLevel $true` <br/> `Set-MpPreference -AllowNetworkProtectionOnWinServer $true`|
 
   > [!IMPORTANT]
   > Disable the "AllowDatagramProcessingOnWinServer" setting. Disabling this setting is important for any roles that generate high volumes of UDP traffic such as Domain Controllers, Windows DNS servers, Windows File Servers, Microsoft SQL servers, Microsoft Exchange servers, and others. Enabling datagram processing in these cases can reduce network performance and reliability. Disabling it helps keep the network stable and ensures better use of system resources in high-demand environments.

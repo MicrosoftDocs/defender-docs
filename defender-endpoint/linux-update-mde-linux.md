@@ -12,13 +12,13 @@ ms.collection:
 - mde-linux
 ms.topic: how-to
 ms.subservice: linux
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Schedule security intelligence updates for Microsoft Defender for Endpoint on Linux
 
@@ -85,7 +85,7 @@ For instructions on creating a scheduled antivirus scan job, see [Schedule scans
 
 Press "Insert"
 
-Add the following entries:
+Add the following entries. Use the `CRON_TZ` setting to ensure the scheduled cron jobs run in the intended time zone:
 
 ```bash
 CRON_TZ=America/Los_Angeles
@@ -112,7 +112,7 @@ CRON_TZ=America/Los_Angeles
 > [!NOTE]
 > In the RHEL, SLES, Ubuntu, and Debian cron entries, `0 6 * * sun` specifies 00 minutes, 6 a.m. (hour using the 24-hour format), any day of the month, any month, on Sundays. 
 > `[$(date +\%d) -le 15]` doesn't run unless it's equal or less than the 15th day (third week). 
-> This cron schedule means the job runs at 6 a.m. every Sunday, but only if the day of the month is the 15th or earlier.
+> The full cron entry means the job runs at 6 a.m. every Sunday, but only if the day of the month is the 15th or earlier.
 
 Press "Esc"
 
@@ -125,13 +125,13 @@ To view your cron jobs, type `sudo crontab -l`
 
 :::image type="content" source="media/update-MDE-linux-4634577.jpg" alt-text="update Defender for Endpoint on Linux.":::
 
-To inspect cron job runs:
+To verify that Defender-related cron jobs have run, search the cron log for `mdatp` entries:
 
 ```bash
 sudo grep mdatp /var/log/cron
 ```
 
-To inspect the mdatp_cron_job.log
+To open the log file and review output from scheduled Defender update tasks:
 
 ```bash
 sudo nano mdatp_cron_job.log
@@ -146,7 +146,7 @@ Use the following commands:
 
 Use Ansible's cron module to manage cron jobs:
 
-```bash
+```text
 cron - Manage cron.d and crontab entries
 ```
 
@@ -154,7 +154,9 @@ See <https://docs.ansible.com/ansible/latest> for more information.
 
 ### To set crontabs in Chef
 
-```bash
+Use Chef's cron resource to manage cron jobs:
+
+```text
 cron resource
 ```
 
@@ -172,6 +174,8 @@ See <https://puppet.com/blog/automating-puppet-cron-jobs-and-scheduled-tasks/> f
 
 <a name="additional-information"></a>
 ## Common crontab commands and examples
+
+The following commands cover common crontab tasks such as listing, backing up, editing, and removing cron entries.
 
 ### To get help with crontab
 
@@ -242,6 +246,9 @@ crontab -u username -e
 
 ### To remove all crontab entries
 
+> [!WARNING]
+> This command removes all crontab entries for the current user without prompting for confirmation. Back up your crontab first with `crontab -l > /var/tmp/cron_backup.dat` if you might need to restore it.
+
 Use the following command to remove all crontab entries for the current user:
 
 ```bash
@@ -250,7 +257,10 @@ crontab -r
 
 ### To remove other user's crontab entries
 
-Use the following command to remove another user's crontab entries:
+> [!WARNING]
+> This command permanently removes all crontab entries for the specified user without prompting for confirmation. Back up the user's crontab before running this command.
+
+Use the following command to remove all scheduled tasks for a specific user by deleting that user's crontab entries:
 
 ```bash
 crontab -u username -r

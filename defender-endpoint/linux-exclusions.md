@@ -12,13 +12,13 @@ ms.collection:
 - mde-linux
 ms.topic: how-to
 ms.subservice: linux
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Configure and validate exclusions for Microsoft Defender for Endpoint on Linux
 
@@ -26,7 +26,7 @@ ms.custom: msecd-doc-authoring-1014
 This article provides information on how to define antivirus and global exclusions for Microsoft Defender for Endpoint. Antivirus exclusions apply to on-demand scans, real-time protection (RTP), and behavior monitoring (BM). Global exclusions apply to real-time protection (RTP), behavior monitoring (BM), and endpoint detection and response (EDR), thus stopping all the associated antivirus detections, EDR alerts, and visibility for the excluded item.
 
 > [!IMPORTANT]
-> The antivirus exclusions described in this article apply to only antivirus capabilities, and not to endpoint detection and response (EDR). Files that you exclude by using the antivirus exclusions described in this article can still result in EDR alerts and other detections. Global exclusions described in this section apply to antivirus and EDR capabilities, thus stopping all associated antivirus protection, EDR alerts, and detections. Global exclusions are available in production for Defender for Endpoint on Linux, version `101.23092.0012` or later. For EDR-only exclusions, [get help and support in the Microsoft 365 admin center](/microsoft-365/admin/get-help-support).
+> The antivirus exclusions described in this article apply to only antivirus capabilities, and not to endpoint detection and response (EDR). Files that you exclude by using the antivirus exclusions described in this article can still result in EDR alerts and other detections. Global exclusions apply to antivirus and EDR capabilities, stopping all associated antivirus protection, EDR alerts, and detections. Global exclusions are available in production for Defender for Endpoint on Linux, version `101.23092.0012` or later. For EDR-only exclusions, [get help and support in the Microsoft 365 admin center](/microsoft-365/admin/get-help-support).
 
 You can exclude certain files, folders, processes, and process-opened files from Defender for Endpoint on Linux.
 
@@ -90,7 +90,9 @@ You can configure exclusions using a management JSON configuration, Defender for
 <a name="using-the-management-console"></a>
 ### Configure exclusions using a management console
 
-In enterprise environments, exclusions can also be managed through a configuration profile. Typically, you would use a configuration management tool like Puppet, Ansible, or another management console to push a file with the name `mdatp_managed.json` at the location `/etc/opt/microsoft/mdatp/managed/`. For more information, see [Set preferences for Defender for Endpoint on Linux](linux-preferences.md). The following `mdatp_managed.json` example shows how to configure antivirus and global exclusions for files, folders, extensions, and processes: 
+In enterprise environments, exclusions can also be managed through a configuration profile. Typically, you would use a configuration management tool like Puppet, Ansible, or another management console to push a file with the name `mdatp_managed.json` at the location `/etc/opt/microsoft/mdatp/managed/`. For more information, see [Set preferences for Defender for Endpoint on Linux](linux-preferences.md).
+
+The following `mdatp_managed.json` example shows how to configure antivirus and global exclusions for files, folders, extensions, and processes:
 
 ```JSON
 {
@@ -153,7 +155,7 @@ You can use the Microsoft Intune admin center or the Microsoft Defender portal t
 
 #### 2. Create a Microsoft Entra group
 
-Create a dynamic Microsoft Entra group based on the operating system type to ensure that all devices onboarded to Defender for Endpoint receive the appropriate policies. This dynamic group automatically includes devices managed by Defender for Endpoint, eliminating the need for admins to manually create new policies. For more information, see the following article: [Create Microsoft Entra Groups](/intune/intune-service/protect/mde-security-integration#create-microsoft-entra-groups) 
+Create a dynamic Microsoft Entra group based on the operating system type to ensure that all devices onboarded to Defender for Endpoint receive the appropriate policies. This dynamic group automatically includes devices managed by Defender for Endpoint, eliminating the need for admins to manually create new policies. For more information, see [Create Microsoft Entra Groups](/intune/intune-service/protect/mde-security-integration#create-microsoft-entra-groups).
 
 #### 3. Create an endpoint security policy 
 
@@ -178,7 +180,7 @@ For more information about creating endpoint security policies, see [Manage endp
 <a name="using-the-command-line"></a>
 ### Configure exclusions using the command line
 
-Run the following command to see the available switches for managing exclusions:
+To view the available subcommands and switches for managing exclusions, run the `mdatp exclusion` command:
 
 ```bash
 mdatp exclusion
@@ -191,59 +193,83 @@ mdatp exclusion
 > [!TIP]
 > When configuring exclusions with wildcards, enclose the parameter in double-quotes to prevent globbing.
 
-This section includes several examples.
+The following examples show how to configure exclusions by using the command line.
 
 #### Example 1: Add an exclusion for a file extension
 
 You can add an exclusion for a file extension. Keep in mind that extension exclusions aren't supported for the global exclusion scope.
 
+To add an antivirus exclusion for the `.txt` file extension, run the following command:
+
 ```bash
 mdatp exclusion extension add --name .txt
 ```
 
+If the command succeeds, the output confirms the exclusion was added:
+
 ```console
 Extension exclusion configured successfully
 ```
-    
+
+To remove the `.txt` extension exclusion, run the following command:
+
 ```bash
 mdatp exclusion extension remove --name .txt
 ```
 
+If the exclusion is removed successfully, you see the following output:
+
 ```console
 Extension exclusion removed successfully
-  ```
+```
 
 #### Example 2: Add or remove a file exclusion
 
 You can add or remove an exclusion for a file. The file path should already be present if you're adding or removing an exclusion with the global scope.
 
+To add a file exclusion with the antivirus (`epp`) scope, which excludes the file from on-demand scans, real-time protection, and behavior monitoring, run the following command:
+
 ```bash
 mdatp exclusion file add --path /var/log/dummy.log --scope epp
 ```
 
+If the command succeeds, you see the following output:
+
 ```console
 File exclusion configured successfully
 ```
+
+To remove the antivirus file exclusion, run the following command:
 
 ```bash
 mdatp exclusion file remove --path /var/log/dummy.log --scope epp
 ```
-    
+
+On success, the CLI returns output similar to the following:
+
 ```console
 File exclusion removed successfully"
 ```
-    
+
+To add the same file exclusion with the global scope, which excludes the file from both antivirus and EDR processing, run the following command:
+
 ```bash
 mdatp exclusion file add --path /var/log/dummy.log --scope global
 ```
+
+On success, the CLI returns output similar to the following:
 
 ```console
 File exclusion configured successfully
 ```
 
+To remove the global file exclusion, run the following command:
+
 ```bash
 mdatp exclusion file remove --path /var/log/dummy.log --scope global
 ```
+
+If the exclusion is removed successfully, you see the following output:
 
 ```console
 File exclusion removed successfully"
@@ -251,35 +277,49 @@ File exclusion removed successfully"
 
 #### Example 3: Add or remove a folder exclusion
 
-You can add or remove an exclusion for a folder.
+You can add or remove an exclusion for a folder. The following command adds a folder exclusion with the antivirus (`epp`) scope:
 
 ```bash
 mdatp exclusion folder add --path /var/log/ --scope epp
 ```
 
+If the command succeeds, you see the following output:
+
 ```console
 Folder exclusion configured successfully
 ```
-    
+
+To remove the antivirus folder exclusion, run the following command:
+
 ```bash
 mdatp exclusion folder remove --path /var/log/ --scope epp
 ```
+
+If the exclusion is removed successfully, you see the following output:
 
 ```console
 Folder exclusion removed successfully
 ```
 
+To add the same folder exclusion with the global scope, run the following command:
+
 ```bash
 mdatp exclusion folder add --path /var/log/ --scope global
 ```
+
+On success, the CLI returns output similar to the following:
 
 ```console
 Folder exclusion configured successfully
 ```
 
+To remove the global folder exclusion, run the following command:
+
 ```bash
 mdatp exclusion folder remove --path /var/log/ --scope global
 ```
+
+If the exclusion is removed successfully, you see the following output:
 
 ```console
 Folder exclusion removed successfully
@@ -306,7 +346,7 @@ You can add an exclusion for a folder with a wildcard. Keep in mind that Wildcar
 mdatp exclusion folder add --path "/var/*/tmp"
 ```
 
-The previous command excludes paths under `*/var/*/tmp/*`, but not folders that are siblings of `*tmp*`. For example, `*/var/this-subfolder/tmp*` is excluded, but `*/var/this-subfolder/log*` isn't excluded.
+Using the path `"/var/*/tmp"` excludes paths under `*/var/*/tmp/*`, but not folders that are siblings of `*tmp*`. For example, `*/var/this-subfolder/tmp*` is excluded, but `*/var/this-subfolder/log*` isn't excluded.
 
 ```bash
 mdatp exclusion folder add --path "/var/" --scope epp
@@ -318,7 +358,7 @@ OR
 mdatp exclusion folder add --path "/var/*/" --scope epp
 ```
 
-The previous command excludes all paths whose parent is `*/var/*`, such as `*/var/this-subfolder/and-this-subfolder-as-well*`.
+Either of these commands excludes all paths whose parent is `*/var/*`, such as `*/var/this-subfolder/and-this-subfolder-as-well*`.
 
 ```console
 Folder exclusion configured successfully
@@ -348,17 +388,25 @@ mdatp exclusion process remove --path /usr/bin/cat  --scope global
 Process exclusion removed successfully
 ```
 
+For antivirus exclusions, you can also use just the process name instead of the full path with the `--name` flag. The following command adds an antivirus process exclusion by name:
+
 ```bash
 mdatp exclusion process add --name cat --scope epp 
 ```
+
+If the command succeeds, you see the following output:
 
 ```console
 Process exclusion configured successfully
 ```
 
+To remove the antivirus process exclusion by name, run the following command:
+
 ```bash
 mdatp exclusion process remove --name cat --scope epp
 ```
+
+If the exclusion is removed successfully, you see the following output:
 
 ```console
 Process exclusion removed successfully
@@ -366,12 +414,14 @@ Process exclusion removed successfully
 
 #### Example 7: Add an exclusion for a second process
 
-You can add an exclusion for a second process.
+You can add exclusions for multiple processes with different scopes. The following commands add an antivirus (`epp`) exclusion by process name and a global exclusion by full path:
 
 ```bash
 mdatp exclusion process add --name cat --scope epp
 mdatp exclusion process add --path /usr/bin/dog --scope global
 ```
+
+If the commands succeed, you see the following output:
 
 ```console
 Process exclusion configured successfully
@@ -422,7 +472,10 @@ For example, to add `EICAR-Test-File (not a virus)` to the allowlist, run the fo
 mdatp threat allowed add --name "EICAR-Test-File (not a virus)"
 ```
 
-## See also
+<a name="see-also"></a>
+## Related content
+
+The following articles provide more information about configuring and managing Defender for Endpoint on Linux:
 
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)

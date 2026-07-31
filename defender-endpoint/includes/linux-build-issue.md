@@ -17,7 +17,6 @@ If you use Defender for Servers (Plan 1 or 2) with Defender for Cloud and have t
 
 - If you haven't upgraded yet, we recommend upgrading to the following build version: 101.26042.0011.
 
-
 #### Update may fail on FIPS-enabled RHEL 8/9 devices
 
 We are investigating an issue where some devices running Red Hat Enterprise Linux (RHEL) 8 or 9 with FIPS mode enabled may fail to install Microsoft Defender for Endpoint on Linux platform version 101.26042.x.

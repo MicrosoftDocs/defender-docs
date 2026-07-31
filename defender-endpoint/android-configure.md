@@ -12,12 +12,12 @@ ms.collection:
 - mde-android
 ms.topic: how-to
 ms.subservice: android
-ms.date: 07/21/2026
+ms.date: 07/28/2026
 appliesto:
    - Microsoft Defender for Endpoint Plan 1
    - Microsoft Defender for Endpoint Plan 2
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1015
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Configure Defender for Endpoint on Android features
@@ -30,6 +30,8 @@ For more information about how to set up Defender for Endpoint on Android and Co
 
 ## Configure custom indicators
 
+Defender for Endpoint on Android enables admins to configure custom indicators to support Android devices, with some platform-specific limitations.
+
 > [!NOTE]
 > Defender for Endpoint on Android supports creating custom indicators only for URLs and domains. IP-based custom indicators aren't supported on Android.
 >
@@ -40,20 +42,20 @@ Defender for Endpoint on Android enables admins to configure custom indicators t
 
 ## Configure web protection
 
-Defender for Endpoint on Android allows IT Administrators the ability to configure the web protection feature. This capability is available within the Microsoft Intune admin center.
-
-[Web protection](web-protection-overview.md) helps to secure devices against web threats and protect users from phishing attacks. Anti-phishing and custom indicators (URL and IP addresses) are supported as part of web protection. Web content filtering is currently not supported on mobile platforms.
-
 > [!NOTE]
 > Defender for Endpoint on Android would use a VPN in order to provide the Web Protection feature. This VPN isn't a regular VPN. Instead, it's a local/self-looping VPN that doesn't take traffic outside the device.
 >
 > For more information, see [Configure web protection on devices that run Android](/intune/intune-service/protect/advanced-threat-protection-manage-android).
 
+Defender for Endpoint on Android allows IT Administrators the ability to configure the web protection feature. This capability is available within the Microsoft Intune admin center.
+
+[Web protection](web-protection-overview.md) helps to secure devices against web threats and protect users from phishing attacks. Anti-phishing and custom indicators (URL and IP addresses) are supported as part of web protection. Web content filtering is currently not supported on mobile platforms.
+
 <a name="network-protection"></a>
 
 ## Configure network protection
 
-Network protection provides protection against rogue Wi-Fi related threats and rogue certificates, which are the primary attack vector for Wi-Fi networks. Admins can list the root Certificate Authority (CA) and private root CA certificates in Microsoft Intune admin center and establish trust with endpoints. It provides the user a guided experience to connect to secure networks and also notifies them if a related threat is detected.
+Network protection provides protection against rogue Wi-Fi related threats and rogue certificates, which are the primary attack vector for Wi-Fi networks. Admins can list the root Certificate Authority (CA) and private root CA certificates in Microsoft Intune admin center and establish trust with endpoints. Network protection provides the user a guided experience to connect to secure networks and also notifies them if a related threat is detected.
 
 Network protection includes several admin controls to offer flexibility, such as the ability to configure the feature from within the Microsoft Intune admin center and add trusted certificates. Admins can enable [privacy controls](android-configure.md#privacy-controls) to configure the data sent to Defender for Endpoint from Android devices.
 
@@ -171,7 +173,7 @@ From version 1.0.3425.0303 of Microsoft Defender for Endpoint on Android, you're
 **Notes about privacy related to apps from personal devices (BYOD):**
 
 - For Android Enterprise with a work profile, only apps installed on the work profile are supported.
-- For other BYOD modes, by default, vulnerability assessment of apps will **not** be enabled. However, when the device is on administrator mode, admins can explicitly enable this feature through Microsoft Intune to get the list of apps installed on the device. For more information, see details below.
+- For other BYOD modes, by default, vulnerability assessment of apps will **not** be enabled. However, when the device is on administrator mode, admins can explicitly enable this feature through Microsoft Intune to get the list of apps installed on the device. For more information, see [Configure privacy for Android Enterprise work profile](#configure-privacy-for-android-enterprise-work-profile).
 
 ### Configure privacy for Android Enterprise work profile
 

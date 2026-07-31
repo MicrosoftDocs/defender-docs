@@ -11,12 +11,12 @@ ms.collection:
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # STEP 3: Verify client connectivity to Microsoft Defender for Endpoint service URLs
@@ -34,7 +34,7 @@ For more information on the Defender for Endpoint Client Analyzer, see [Troubles
 
 Verify that the proxy configuration is completed successfully. The WinHTTP can then discover and communicate through the proxy server in your environment, and then the proxy server allows traffic to the Defender for Endpoint service URLs.
 
-1. Download the [Microsoft Defender for Endpoint Client Analyzer tool](https://aka.ms/mdeanalyzer) where Defender for Endpoint sensor is running on.
+1. Download the [Microsoft Defender for Endpoint Client Analyzer tool](https://aka.ms/mdeanalyzer) on the device where the Defender for Endpoint sensor is running.
 
 1. Extract the contents of MDEClientAnalyzer.zip on the device.
 
@@ -55,7 +55,7 @@ Verify that the proxy configuration is completed successfully. The WinHTTP can t
     C:\Work\tools\MDEClientAnalyzer\MDEClientAnalyzer.cmd
     ```
 
-1. The tool creates and extracts the *MDEClientAnalyzerResult.zip* file in the folder to use in the *HardDrivePath*.
+1. The tool creates and extracts the *MDEClientAnalyzerResult.zip* file in the folder specified by *HardDrivePath*.
 
 1. Open *MDEClientAnalyzerResult.txt* and verify that you've performed the proxy configuration steps to enable server discovery and access to the service URLs.
 
@@ -72,14 +72,14 @@ Verify that the proxy configuration is completed successfully. The WinHTTP can t
 
 If any one of the connectivity options returns a (200) status, then the Defender for Endpoint client can communicate with the tested URL properly using this connectivity method.
 
-However, if the connectivity check results indicate a failure, an HTTP error is displayed (see HTTP Status Codes). You can then use the URLs in the table shown in [Enable access to Defender for Endpoint service URLs in the proxy server](configure-environment.md#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server). The URLs available for use depend on the region selected in the Defender for Endpoint onboarding package or onboarding script used for the device.
+However, if the connectivity check results indicate a failure, an HTTP error is displayed (see [HTTP Status Codes](/troubleshoot/developer/webapps/iis/www-administration-management/http-status-code)). You can then use the URLs listed in [Enable access to Defender for Endpoint service URLs in the proxy server](configure-environment.md#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server), which provides the required service URLs to allow through your proxy server. The URLs available for use depend on the region selected in the Defender for Endpoint onboarding package or onboarding script used for the device.
 
 > [!NOTE]
 >
 > - Cloud connectivity checks in the Connectivity Analyzer tool are incompatible with the attack surface reduction (ASR) rule [Block process creations originating from PSExec and WMI commands](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands). To run the connectivity tool, you need to do one of the following steps:
 >   - Temporarily disable the **Block process creations originating from PSExec and WMI commands** rule.
 >   - Temporarily add a global or per-rule ASR exclusion for the analyzer. For more information, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
-> - When the TelemetryProxyServer is set in Registry or via Group Policy, Defender for Endpoint will fall back, it fails to access the defined proxy.
+> - When the TelemetryProxyServer is set in the registry or via Group Policy, Defender for Endpoint falls back to direct connectivity if Defender for Endpoint fails to access the defined proxy.
 
 ## Testing connectivity to the streamlined onboarding method
 

@@ -16,7 +16,6 @@ ms.custom: msecd-doc-authoring-1012
 
 Microsoft Sentinel solutions let independent software vendors (ISVs) and partners bundle a data connector with related security content such as workbooks, analytic rules, hunting queries, playbooks, and parsers into a single, installable package. Customers can then discover and deploy these solutions from the Microsoft Sentinel content hub and Azure Marketplace.
 
-
 > [!NOTE]
 > If you're an ISV building a Microsoft Sentinel integration, the Microsoft App Assure team might be able to assist throughout the process. To engage the team, send an email to [azuresentinelpartner@microsoft.com](mailto:azuresentinelpartner@microsoft.com).
 
@@ -269,13 +268,13 @@ The SVG file must meet the following requirements:
 
 > [!CAUTION]
 > SVG files exported directly from Adobe Illustrator, Figma, or Inkscape without cleanup almost always fail validation. Common export artifacts that must be removed include the following:
-> - `style="stroke: none; fill: rgb(0,0,0); ..."` on every element—replace with direct `fill` and `stroke` attributes, or remove if default
-> - `data-name="Layer 1"` — Illustrator layer name attribute; remove from every `<g>` element
-> - `xmlns:xlink="http://www.w3.org/1999/xlink"` — on the `<svg>` root; remove the entire attribute
-> - `<title>Layer 1</title>` — inside the first `<g>`; remove the tag
-> - Non-GUID IDs like `id="Layer_1"` or `id="cls-1"` — replace with a UUID or remove the `id` attribute entirely if it isn't referenced
+> - `style="stroke: none; fill: rgb(0,0,0); ..."` on every element: replace with direct `fill` and `stroke` attributes, or remove if default
+> - `data-name="Layer 1"`: Illustrator layer name attribute; remove from every `<g>` element
+> - `xmlns:xlink="http://www.w3.org/1999/xlink"`: On the `<svg>` root; remove the entire attribute
+> - `<title>Layer 1</title>`: Inside the first `<g>`; remove the tag
+> - Non-GUID IDs like `id="Layer_1"` or `id="cls-1"`: Replace with a UUID or remove the `id` attribute entirely if it isn't referenced
 
-A clean logo uses only `fill` and `stroke` attributes directly on path elements, with no `id` attributes unless referencing a `<defs>` element. For a minimal valid example, see [`Logos/XBOW.svg`](https://github.com/Azure/Azure-Sentinel/blob/master/Logos/XBOW.svg) 
+A clean logo uses only `fill` and `stroke` attributes directly on path elements, with no `id` attributes unless referencing a `<defs>` element. For a minimal valid example, see [`Logos/XBOW.svg`](https://github.com/Azure/Azure-Sentinel/blob/master/Logos/XBOW.svg).
 
 #### Build a data connector
 
@@ -302,11 +301,6 @@ For advanced CCF polling scenarios such as chaining sequential API calls, see [U
 
 Detailed build steps are specific to each connector type. Detailed build steps are specific to each connector type.  Follow the guidance for your chosen type from the [connector type table](#choose-your-connector-type). . 
 
->[!NOTE]
-> While the [DataConnectors/Templates/](https://github.com/Azure/Azure-Sentinel/tree/master/DataConnectors/Templates) folder in the Azure-Sentinel repository contains legacy starter templates, these templates might not reflect the current connector schema. Use an existing solution of the same connector type as your reference.
-
-
-
 Use the following solutions in the Azure-Sentinel repository as references for each connector type.
 
 | Connector type | Reference example |
@@ -318,8 +312,6 @@ Use the following solutions in the Azure-Sentinel repository as references for e
 | CEF / Syslog | [Cisco ISE CEF and Syslog connectors](https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Cisco%20ISE/Data%20Connectors) |
 
 When your connector JSON is complete, place it in the `Data Connectors/` subfolder of your solution folder and name it `ProviderNameApplianceName.json` (no spaces).
-
-
 
 ##### Test your connector
 
@@ -345,9 +337,9 @@ Workbooks are dashboards and visualizations that help customers understand their
 
 See the following reference examples in the Azure-Sentinel repository for guidance on workbook design and layout:
 
-- [Microsoft Entra ID — AzureActiveDirectorySignins.json](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Microsoft%20Entra%20ID/Workbooks/AzureActiveDirectorySignins.json)
-- [XBOW — XBOW.json](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/XBOW/Workbooks/XBOW.json)
-- [PaloAlto-PAN-OS — PaloAltoOverview.json](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/PaloAlto-PAN-OS/Workbooks/PaloAltoOverview.json)
+- [Microsoft Entra ID - AzureActiveDirectorySignins.json](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Microsoft%20Entra%20ID/Workbooks/AzureActiveDirectorySignins.json)
+- [XBOW - XBOW.json](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/XBOW/Workbooks/XBOW.json)
+- [PaloAlto-PAN-OS - PaloAltoOverview.json](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/PaloAlto-PAN-OS/Workbooks/PaloAltoOverview.json)
 
 
 #### Create analytic rules
@@ -356,20 +348,20 @@ Analytic rules are templates that detect threats in your data. Each rule is a YA
 
 See the following reference examples in the Azure-Sentinel repository for guidance on analytic rule design and layout:
 
-- [Microsoft Entra ID — FailedLogonToAzurePortal.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Microsoft%20Entra%20ID/Analytic%20Rules/FailedLogonToAzurePortal.yaml)
-- [CrowdStrike Falcon — CriticalOrHighSeverityDetectionsByUser.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/CrowdStrike%20Falcon%20Endpoint%20Protection/Analytic%20Rules/CriticalOrHighSeverityDetectionsByUser.yaml)
-- [XBOW — XbowCriticalHighFindings.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/XBOW/Analytic%20Rules/XbowCriticalHighFindings.yaml)
+- [Microsoft Entra ID - FailedLogonToAzurePortal.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Microsoft%20Entra%20ID/Analytic%20Rules/FailedLogonToAzurePortal.yaml)
+- [CrowdStrike Falcon - CriticalOrHighSeverityDetectionsByUser.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/CrowdStrike%20Falcon%20Endpoint%20Protection/Analytic%20Rules/CriticalOrHighSeverityDetectionsByUser.yaml)
+- [XBOW - XbowCriticalHighFindings.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/XBOW/Analytic%20Rules/XbowCriticalHighFindings.yaml)
 
 
 #### Create hunting queries
 
-Hunting queries are templates that help customers proactively search for threats in their data. They appear in the **Hunting** blade for analysts to run manually. They share the same YAML structure as analytic rules but are not automated — scheduled execution fields don't apply and cause a review failure if included. To create a hunting query, see [Create hunting queries for Microsoft Sentinel](sentinel-hunting-rules-creation.md).
+Hunting queries are templates that help customers proactively search for threats in their data. They appear in the **Hunting** blade for analysts to run manually. They share the same YAML structure as analytic rules, but are not automated; scheduled execution fields don't apply and cause a review failure if included. To create a hunting query, see [Create hunting queries for Microsoft Sentinel](sentinel-hunting-rules-creation.md).
 
 See the following reference examples in the Azure-Sentinel repository for guidance on hunting query design and layout:
 
-- [Okta Single Sign-On — AdminPrivilegeGrant.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Okta%20Single%20Sign-On/Hunting%20Queries/AdminPrivilegeGrant.yaml)
-- [PaloAlto-PAN-OS — Palo Alto - potential beaconing detected.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/PaloAlto-PAN-OS/Hunting%20Queries/Palo%20Alto%20-%20potential%20beaconing%20detected.yaml)
-- [Azure Firewall — Azure Firewall - First Time Source IP to Destination Using Port.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Firewall/Hunting%20Queries/Azure%20Firewall%20-%20First%20Time%20Source%20IP%20to%20Destination%20Using%20Port.yaml)
+- [Okta Single Sign-On - AdminPrivilegeGrant.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Okta%20Single%20Sign-On/Hunting%20Queries/AdminPrivilegeGrant.yaml)
+- [PaloAlto-PAN-OS - Palo Alto - potential beaconing detected.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/PaloAlto-PAN-OS/Hunting%20Queries/Palo%20Alto%20-%20potential%20beaconing%20detected.yaml)
+- [Azure Firewall - Azure Firewall - First Time Source IP to Destination Using Port.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Firewall/Hunting%20Queries/Azure%20Firewall%20-%20First%20Time%20Source%20IP%20to%20Destination%20Using%20Port.yaml)
 
 #### Create playbooks
 
@@ -377,9 +369,9 @@ Playbooks are automated response workflows that help customers respond to threat
 
 See the following reference examples in the Azure-Sentinel repository for guidance on playbook design and layout:
 
-- [Microsoft Entra ID — Block-AADUser (incident + alert + entity triggers)](https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Microsoft%20Entra%20ID/Playbooks/Block-AADUser)
-- [CrowdStrike Falcon — CrowdStrike_Base (Key Vault + base playbook pattern)](https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/CrowdStrike%20Falcon%20Endpoint%20Protection/Playbooks/CrowdStrike_Base)
-- [Okta Single Sign-On — OktaCustomConnector (custom connector ARM template)](https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Okta%20Single%20Sign-On/Playbooks/OktaCustomConnector)
+- [Microsoft Entra ID - Block-AADUser (incident + alert + entity triggers)](https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Microsoft%20Entra%20ID/Playbooks/Block-AADUser)
+- [CrowdStrike Falcon - CrowdStrike_Base (Key Vault + base playbook pattern)](https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/CrowdStrike%20Falcon%20Endpoint%20Protection/Playbooks/CrowdStrike_Base)
+- [Okta Single Sign-On - OktaCustomConnector (custom connector ARM template)](https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Okta%20Single%20Sign-On/Playbooks/OktaCustomConnector)
 
 
 #### Create parsers
@@ -388,8 +380,8 @@ A parser is a Kusto function saved to your Log Analytics workspace that sits in 
 
 See the following reference examples in the Azure-Sentinel repository for guidance on parser design and layout:
 
-- [Cloudflare CCF — Cloudflare.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Cloudflare%20CCF/Parsers/Cloudflare.yaml)
-- [CrowdStrike Falcon — CrowdStrikeReplicatorV2.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/CrowdStrike%20Falcon%20Endpoint%20Protection/Parsers/CrowdStrikeReplicatorV2.yaml)
+- [Cloudflare CCF - Cloudflare.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Cloudflare%20CCF/Parsers/Cloudflare.yaml)
+- [CrowdStrike Falcon - CrowdStrikeReplicatorV2.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/CrowdStrike%20Falcon%20Endpoint%20Protection/Parsers/CrowdStrikeReplicatorV2.yaml)
 
 
 ## Test your package
@@ -409,7 +401,7 @@ After you've developed and tested your Microsoft Sentinel solution components, p
 
 ## Go to market
 
-When you select **Go live**, the solution goes through a final certification check before becoming publicly available. After certification, the solution is listed in the **Microsoft Sentinel content hub** and visible in every customer tenant's Sentinel workspace under **Content hub**. IT is also discoverable in the **Azure Marketplace**. The solution is now available to all Microsoft Sentinel customers.
+When you select **Go live**, the solution goes through a final certification check before becoming publicly available. After certification, the solution is listed in the **Microsoft Sentinel content hub** and visible in every customer tenant's Sentinel workspace under **Content hub**. It'ss also discoverable in the **Azure Marketplace**. The solution is now available to all Microsoft Sentinel customers. For more information, see [Publish SIEM solutions to Microsoft Sentinel](publish-sentinel-solutions.md).
 
 From this point, any update to the solution, such as content changes, bug fixes, and version bumps requires a new GitHub PR, a new package version, and a new Partner Center submission with the updated zip. For tracking post-publish status and support issues, see [Track your solution after publishing in Partner Center](sentinel-solutions-post-publish-tracking.md).
 

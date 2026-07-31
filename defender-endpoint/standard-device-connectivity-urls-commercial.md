@@ -11,19 +11,19 @@ ms.collection:
 - m365-security
 - tier1
 ms.reviewer: pahuijbr
-ms.date: 06/17/2026
+ms.date: 07/03/2026
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Microsoft Defender for Endpoint standard connectivity URLs - commercial
 
-This article includes a list of the standard connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in commercial cloud environments. Use this list to configure your network firewall or proxy allow rules so that devices can communicate with the required Microsoft Defender for Endpoint services.
+This article lists the URLs needed to onboard and maintain devices in Microsoft Defender for Endpoint in commercial cloud environments. Use this list to set up firewall or proxy allow rules so devices can reach the required services.
 
 ## Microsoft Defender URLs
 
-The following table lists the Microsoft Defender service URLs organized by geography and category. Allow these endpoints in your firewall or proxy to ensure proper device connectivity.
+This section lists the Microsoft Defender service URLs organized by geography and category. Allow these endpoints in your firewall or proxy to ensure proper device connectivity.
 
 |Service|Geography|Category|Port|Endpoint/URL|Endpoint/URL Description|Required or Optional|Windows 10, 11; Server 2022, 2019, 2016 (Unified Agent); Server 2012 R2 (Unified Agent)|Windows 7, 8.1|Windows Server 2008 R2, 2012 R2, 2016 (MMA Based)|Mac|Linux|Comments|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -38,7 +38,7 @@ The following table lists the Microsoft Defender service URLs organized by geogr
 |Microsoft Defender for Endpoint|WW|Common|443|`settings-win.data.microsoft.com`|Connected User Experiences and Telemetry Channel|Optional|Yes|||||Only required for Windows 10 1703 and below. Not required on Windows Server.|
 |Microsoft Defender for Endpoint|WW|Common (Mac/Linux)|443|`x.cp.wd.microsoft.com`|Used by Microsoft Defender Antivirus to provide cloud-delivered protection and security intelligence updates|Required||||Yes|Yes||
 |Microsoft Defender for Endpoint|WW|Common (Mac/Linux)|443|`cdn.x.cp.wd.microsoft.com`|Microsoft Defender Antivirus Content Delivery Network (CDN) - Security Intelligence updates|Required||||Yes|Yes||
-|Microsoft Defender for Endpoint|WW|Common (Mac/Linux)|443|Root URL for public Microsoft CDN endpoints (referred to as ChannelURL) - for the updated URL, see [Using Custom channel and ManifestServer to control updates](/microsoft-365-apps/mac/mau-configure-organization-specific-updates)|Microsoft Office Content Delivery Network (CDN) - Product Updates|Required||||Yes|Yes|New CDN endpoint starting with macOS build 101.26012.0012|
+|Microsoft Defender for Endpoint|WW|Mac|443|Root URL for public Microsoft CDN endpoints (referred to as ChannelURL) - for the updated URL, see [Using Custom channel and ManifestServer to control updates](/microsoft-365-apps/mac/mau-configure-organization-specific-updates)|Microsoft Office Content Delivery Network (CDN) - Product Updates|Required||||Yes||New CDN endpoint starting with macOS build 101.26012.0012|
 |Microsoft Defender for Endpoint|WW|Common (Linux)|443|`packages.microsoft.com`|Required to download and update the MDE Linux agent|Required|||||Yes||
 |Microsoft Defender for Endpoint|WW|Microsoft Defender for Endpoint|443|`login.windows.net`|Microsoft Defender for Endpoint Vulnerability assessment for network devices (network scanner)|Optional|Yes|Yes|Yes|||Supported on Windows 8 and above and Windows Server 2012 and above|
 |Microsoft Defender for Endpoint|WW|Microsoft Defender for Endpoint|443|`*.security.microsoft.com`|Microsoft Defender for Endpoint Vulnerability assessment for network devices (network scanner)|Optional|Yes|Yes|Yes|||Supported on Windows 8 and above and Windows Server 2012 and above|
@@ -133,10 +133,10 @@ The following table lists the Microsoft Defender service URLs organized by geogr
 
 ## Defender portal URLs
 
-The following table lists the URLs required to access the Microsoft Defender portal from a browser.
+This section lists the URLs needed to open the Microsoft Defender portal in a browser.
 
 > [!NOTE]
-> All URLs in this table are required to have access to the Microsoft Defender Security Center Portal URL.
+> All URLs in this table are required for access to the Microsoft Defender portal.
 
 |Service|Geography|URL|
 |---|---|---|
@@ -153,14 +153,14 @@ The following table lists the URLs required to access the Microsoft Defender por
 <a name="client-processes"></a>
 ## Required client processes for network connectivity
 
-Because the Microsoft Defender for Endpoint client processes listed below generate network communications, make sure that traffic from those processes is not blocked.
+Because the Microsoft Defender for Endpoint client processes in this section generate network communications, make sure that traffic from those processes is not blocked.
 
 [!INCLUDE [Microsoft Defender for Endpoint processes](includes/streamlined-connectivity-processes.md)]
 
 <a name="change-log"></a>
 ## Changelog
 
-The following table summarizes recent changes to this article and its endpoint listings.
+This section summarizes recent changes to this article and its endpoint listings.
 
 |Date|Change Log|
 |---|---|

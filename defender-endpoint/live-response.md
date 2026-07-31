@@ -11,11 +11,11 @@ ms.collection:
 - mde-edr
 ms.topic: how-to
 ms.subservice: edr
-ms.date: 06/16/2026
+ms.date: 07/28/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Investigate entities on devices using live response
@@ -204,12 +204,13 @@ For scenarios when you'd like get a file from a device you're investigating, you
 > - `getfile` limit: 3 GB
 > - `fileinfo` limit: 30 GB
 > - `library` limit: 250 MB
+> - `library` limit in US Government cloud environments: 5 MB (default). To request a higher limit, open a support ticket.
 
 ### Download a file in the background
 
 To enable your security operations team to continue investigating an impacted device, files can now be downloaded in the background.
 
-- To download a file in the background, in the live response command console, type `download <file_path> &`.
+- To download a file in the background, in the live response command console, type `getfile <file_path> &`.
 - If you are waiting for a file to be downloaded, you can move it to the background by using Ctrl + Z.
 - To bring a file download to the foreground, in the live response command console, type `fg <command_id>`.
 
@@ -224,9 +225,9 @@ Here are some examples:
 
 Live response has a library where you can put files into. The library stores files (such as scripts) that can be run in a live response session at the tenant level.
 
-Live response allows PowerShell and Bash scripts to run; however, you must first put the files into the library before you can run them.
+Live response allows PowerShell and Bash scripts to run; however, you must first upload the script files to the library before you can run the scripts.
 
-You can have a collection of PowerShell and Bash scripts that can run on devices that you initiate live response sessions with.
+You can maintain a collection of PowerShell and Bash scripts that you can run on devices during live response sessions.
 
 #### To upload a file in the library
 
@@ -253,10 +254,10 @@ To upload a file to the library from the live response session console:
 
 ### Cancel a command
 
-Anytime during a session, you can cancel a command by pressing CTRL + C.
-
 > [!WARNING]
-> Using this shortcut doesn't stop the command in the agent side. It only cancels the command in the Microsoft Defender portal. So, changing operations such as "remediate" may continue, even if the command is canceled.
+> Pressing CTRL + C only cancels the command in the Microsoft Defender portal. It doesn't stop the command on the agent side. Changing operations such as "remediate" may continue even if the command is canceled.
+
+To cancel a command in the portal during a session, press CTRL + C.
 
 ## Run a script
 
@@ -264,45 +265,45 @@ Before you can run a PowerShell/Bash script, you must first upload it to the lib
 
 You can upload a script to the library from the live response session console or from the [Library management](configure-libraries-live-response.md) page.
 
-After uploading the script to the library, use the `run` command to run the script.
-
 If you plan to use an unsigned PowerShell script in the session, you'll need to enable the setting in the [Advanced features settings](advanced-features.md) page.
 
 > [!WARNING]
 > Allowing the use of unsigned scripts may increase your exposure to threats.
 
+After uploading the script to the library, use the `run` command to run the script.
+
 ## Apply command parameters
 
 Use the following approaches to view and apply command parameters.
 
-- View the console help to learn about command parameters. To learn about an individual command, run:
+- To view syntax and available parameters for a specific command, use the built-in help command:
 
   ```powershell
   help <command name>
   ```
 
-- When applying parameters to commands, note that parameters are handled based on a fixed order:
+- When applying parameters to commands, note that parameters are handled based on a fixed order. The following example shows the basic syntax for invoking a command with positional parameters:
 
   ```powershell
   <command name> param1 param2
   ```
 
-- When specifying parameters outside of the fixed order, specify the name of the parameter with a hyphen before providing the value:
+- When specifying parameters outside of the fixed order, specify the name of the parameter with a hyphen before providing the value. The following example shows named parameter usage:
 
   ```powershell
   <command name> -param2_name param2
   ```
 
-- When using commands that have prerequisite commands, you can use flags:
+- When using commands that have prerequisite commands, you can use flags. The following example shows how to target a file by path and run the prerequisite command automatically:
 
   ```powershell
-  <command name> -type file -id <file path> - auto
+  <command name> -type file -id <file path> -auto
   ```
 
-  or
+  Or, to automatically remediate a detected file, run:
 
   ```powershell
-  remediate file <file path> - auto`
+  remediate file <file path> -auto
   ```
 
 ## Supported output types
@@ -319,7 +320,7 @@ Live response supports table and JSON format output types. For each command, the
 
 Live response supports output piping to CLI and file. CLI is the default output behavior. You can pipe the output to a file using the following command: `[command] > [filename].txt`.
 
-Example:
+For example, to save the process list to a text file instead of displaying it on screen, redirect the output as shown here:
 
 ```console
 processes > output.txt

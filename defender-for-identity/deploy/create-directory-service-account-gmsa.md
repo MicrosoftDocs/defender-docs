@@ -25,22 +25,30 @@ Before you create the gMSA account, make sure the following prerequisites are me
 
 - Choose how to configure password retrieval:
 
-    - Assign the gMSA account directly to each of the sensors.
-
-    - Use a group that contains all the sensors that need to use the gMSA account.
-
+  - Assign the gMSA account directly to each of the sensors.
+    
+  - Use a group that contains all the sensors that need to use the gMSA account.
+    
 - Choose the appropriate group based on your deployment:
 
-    - **Single-forest, single-domain deployment**: Use the built-in Domain Controllers security group if you're not installing sensors on Active Directory Federation Services (AD FS) or Active Directory Certificate Services (AD CS) servers.
-
-    - **Forest with multiple domains**: If you use a single Directory service account (DSA), we recommend creating a universal group and adding each of the domain controllers and AD FS or AD CS servers to the universal group.
-
-- In multi-forest or multi-domain environments, make sure the domain where you create the gMSA trusts the sensors’ computer accounts.
-
-- Create a universal group in each domain that contains sensor computer accounts so that all sensors can retrieve the gMSAs' passwords and perform cross-domain authentications.
-
-
+  - **Single-forest, single-domain deployment**: 
+    
+    - Use the built-in Domain Controllers security group if you're not installing sensors on Active Directory Federation Services (AD FS) or Active Directory Certificate Services (AD CS) servers.
+        
+  - **Forest with multiple domains**: 
+  
+    - If you use a single Directory service account (DSA), we recommend creating a universal group and adding each of the domain controllers and AD FS or AD CS servers to the universal group.
+        
+    - In multi-forest or multi-domain environments, make sure the domain where you create the gMSA trusts the sensors’ computer accounts.
+    
+    - **Option 1**: Use a gMSA per domain. Create a Domain Local group in each domain that includes only the sensors computer accounts from that domain so that only those sensors can retrieve the gMSAs' passwords and perform the local domain authentications.
+        
+    - **Option 2**: Use ashared gMSA across all domains. Create a Universal group at forest root that includes all sensors computer accounts so that all sensors can retrieve the gMSAs' password and perform the cross-domain authentications.
+        
 ## Create the gMSA account
+
+> [!IMPORTANT]
+> If you are working in a single forest with multiple domains or sub domains and you intend to use a single gMSA account and single group at the root level, then the steps in this section must be performed with an account that has Enterprise Admin permissions.
 
 1. If you've never used a gMSA account before, you might need to generate a new root key for the Microsoft Group Key Distribution Service (KdsSvc) within Active Directory. This step is required only once per forest.
     To generate a new root key for immediate use, run the following command:
@@ -77,6 +85,7 @@ Import-Module ActiveDirectory
 if ($gMSA_HostsGroupName -eq 'Domain Controllers') {
     $gMSA_HostsGroup = Get-ADGroup -Identity 'Domain Controllers'
 } else {
+	# If this group is being created at the root of a forest and will be used across multiple domains or subdomains then the -GroupScope parameter should be changed to Universal
     $gMSA_HostsGroup = New-ADGroup -Name $gMSA_HostsGroupName -GroupScope DomainLocal -PassThru
     $gMSA_HostNames | ForEach-Object { Get-ADComputer -Identity $_ } |
         ForEach-Object { Add-ADGroupMember -Identity $gMSA_HostsGroupName -Members $_ }

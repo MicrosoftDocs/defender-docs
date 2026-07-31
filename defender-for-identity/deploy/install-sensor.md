@@ -64,9 +64,9 @@ Before you start, make sure that you have:
    > [!Note]
    > To download the installation package behind a firewall or proxy server, make sure you allow network traffic to the following FQDNs through TCP/443.
    > 
-   > sensorpackage-prd.mdi.securitycenter.microsoft.com
-   > sensorpackage-fm.mdi.securitycenter.microsoft.us
-   > sensorpackage-ff.mdi.securitycenter.microsoft.us
+   > - sensorpackage-prd.mdi.securitycenter.microsoft.com
+   > - sensorpackage-fm.mdi.securitycenter.microsoft.us
+   > - sensorpackage-ff.mdi.securitycenter.microsoft.us
 
 ## Install the v2.x sensor in the Defender portal
 
