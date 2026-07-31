@@ -45,7 +45,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 July 31, 2026
 
-Legacy grouped recommendations (sub-assessments) have been removed from the Azure portal recommendation experiences and replaced by individual recommendations, as [announced in May 2026](#general-availability-of-individual-recommendations-for-defender-for-cloud-in-azure-portal-and-deprecation-of-legacy-grouped-recommendations).
+Retirement of legacy grouped recommendations (sub-assessments) has started. Customers can no longer access the deprecated data through the API. The Azure portal and Azure Resource Graph might take a few days to reflect the change. Individual recommendations replace the legacy grouped recommendations, as [announced in May 2026](#general-availability-of-individual-recommendations-for-defender-for-cloud-in-azure-portal-and-deprecation-of-legacy-grouped-recommendations).
 Customers who previously relied on grouped recommendations should validate existing automation, reporting, governance workflows, and queries, and migrate any remaining disable rules to exemptions. For more information, see [Transition from grouped to individual recommendations](transition-grouped-individual-recommendations.md)
 
 ### Foundational CSPM moves to opt-in model for new Azure subscriptions
