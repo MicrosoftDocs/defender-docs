@@ -112,18 +112,27 @@ For more information, see [Analysis and recommended settings of the Security Aud
 
 ## Configure your system to use SNC for secure connections
 
-By default, the SAP data connector agent connects to an SAP server using a remote function call (RFC) connection and a username and password for authentication.
+By default, the SAP data connectors use a remote function call (RFC) connection and a username and password to authenticate to the SAP system.
 
-However, you might need to make the connection on an encrypted channel or use client certificates for authentication. In these cases, use Smart Network Communications (SNC) from SAP to secure your data connections, as described in this section.
+To encrypt the RFC connection or use certificate-based authentication, configure SAP Smart Network Communications (SNC). Work with your SAP administrators and your organization's public key infrastructure (PKI) team to plan the SNC configuration. Follow SAP guidance for the SAP components, certificates, and trust relationships in your environment.
 
-In a production environment, we strongly recommend that your consult with SAP administrators to create a deployment plan for configuring SNC. For more information, see the SAP documentation on [configuring SNC](https://help.sap.com/docs/ABAP_PLATFORM_NEW/e73bba71770e4c0ca5fb2a3c17e8e229/e656f466e99a11d1a5b00000e835363f.html). 
+Before you configure the Microsoft Sentinel connection:
 
-When configuring SNC:
+- Configure SNC for SAP NetWeaver Application Server for ABAP (AS ABAP). For an example that uses CommonCryptoLib, see [SAP Note 2979858: Example SNC Configuration for AS ABAP with COMMONCRYPTOLIB](https://me.sap.com/notes/2979858/E).
+- Decide whether to use certificates signed by your organization's certification authority (CA) or self-signed certificates. Establish trust between the SAP system and the component that initiates the RFC connection. For SAP certificate guidance, see [SAP Note 2970934: How to create the CSR and how to import the certificate response for ABAP system](https://me.sap.com/notes/2970934/E).
+- Validate the SNC connection according to SAP guidance before you connect Microsoft Sentinel.
 
-- If the client certificate was issued by an enterprise certification authority, transfer the issuing CA and root CA certificates to the system where you plan to create the data connector agent.
-- If you're using the data connector agent, make sure to also enter the relevant values and use the relevant procedures when [configuring the SAP data connector agent container](deploy-data-connector-agent-container.md). If you're using the agentless data connector, the SNC configuration is done in the SAP Cloud Connector.
+:::zone pivot="connection-agent"
+For the containerized data connector agent, make the required certificates available on the agent host and enter the SNC settings when you [configure the SAP data connector agent container](deploy-data-connector-agent-container.md).
+:::zone-end
 
-For more information about SNC, see [Getting started with SAP SNC for RFC integrations - SAP blog](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-members/getting-started-with-sap-snc-for-rfc-integrations/ba-p/13983462).
+:::zone pivot="connection-agentless"
+For the agentless data connector, configure SNC in SAP Cloud Connector. For more information, see [SAP KBA 3536285: SAP Cloud Connector - How to set up general SNC settings for SAP Cloud Connector](https://me.sap.com/notes/3536285/E).
+
+If you use SAP Cloud Connector high availability, also validate SNC after switching to the shadow instance.
+:::zone-end
+
+For more information, see the SAP documentation on [configuring SNC](https://help.sap.com/docs/ABAP_PLATFORM_NEW/e73bba71770e4c0ca5fb2a3c17e8e229/e656f466e99a11d1a5b00000e835363f.html) and [Getting started with SAP SNC for RFC integrations](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-members/getting-started-with-sap-snc-for-rfc-integrations/ba-p/13983462).
 
 :::zone pivot="connection-agent"
 
