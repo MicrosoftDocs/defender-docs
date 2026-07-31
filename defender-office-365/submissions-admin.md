@@ -13,7 +13,7 @@ ms.custom:
   - sfi-image-nochange
 description: "Admins can learn how to use the Submissions page in the Microsoft Defender portal to submit messages, URLs, and email attachments to Microsoft for analysis. Reasons for submission include: legitimate messages that were blocked, suspicious messages that were allowed, suspected phishing email, spam, malware, and other potentially harmful messages."
 ms.service: defender-office-365
-ms.date: 07/03/2026
+ms.date: 07/30/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -1271,6 +1271,8 @@ For more information, see [A security administrator triggers an investigation fr
 #### Notify users about admin submitted messages to Microsoft
 
 After an admin submits a user reported message to Microsoft from the **User reported** tab, admins can use the :::image type="icon" source="media/defender-portal-icon-mark-and-notify.png" border="false"::: **Mark as and notify** action to mark the message with a verdict and send a templated notification message to the user who reported the message.
+
+When automatic notifications use the default notification template, users receive the notification in their preferred language based on their Outlook language settings. Custom notification templates configured by admins aren't affected.
 
 - Available verdicts for email messages:
   - **No threats found**
