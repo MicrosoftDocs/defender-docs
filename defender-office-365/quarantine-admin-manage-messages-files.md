@@ -66,7 +66,8 @@ Before you begin, review the following portal access, permissions, and retention
     - _Take action on quarantined messages for all users_: Membership in the **Quarantine Administrator**, **Security Administrator**, or **Organization Management** role groups.
       - _Submit messages from quarantine to Microsoft_: Membership in the **Security Administrator** role groups.
       - _Use **Block sender** to [add senders to your own Blocked Senders list](#block-email-senders-from-quarantine)_: Admins see **Block sender** only if they filter the quarantine results by **Recipient** \> **Only me** instead of the default value **All users**. Assigning any permission that gives admin access to quarantine (for example, **Security Reader** or **Global Reader**) gives access to **Block sender** in quarantine if the user filters the quarantine results by **Recipient** \> **Only me**.
-    - _Read-only access to quarantined messages for all users_: Membership in the **Security Reader** or **Global Reader** role groups.
+    - _Read-only access to quarantined messages for all users_: Membership in the **Global Reader**, **Security Reader**, or **Security Operator** role groups.
+    - _Preview and download quarantined messages for all users_: Membership in the **Global Reader**, **Security Reader**, or **Security Operator** role groups.
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
     - _Take action on quarantined messages for all users_: Membership in the **Security Administrator** or **Global Administrator**<sup>\*</sup> roles.
 
@@ -75,7 +76,8 @@ Before you begin, review the following portal access, permissions, and retention
 
       - _Submit messages from quarantine to Microsoft_:  Membership in the **Security Administrator** role.
       - _Use **Block sender** to [add senders to your own Blocked Senders list](#block-email-senders-from-quarantine)_: Admins see **Block sender** only if they filter the quarantine results by **Recipient** \> **Only me** instead of the default value **All users**. Assigning any permission that gives admin access to quarantine (for example, **Security Reader** or **Global Reader**) gives access to **Block sender** in quarantine if the user filters the quarantine results by **Recipient** \> **Only me**.
-    - _Read-only access to quarantined messages for all users_: Membership in the **Global Reader** or **Security Reader** roles.
+    - _Read-only access to quarantined messages for all users_: Membership in the **Global Reader**, **Security Reader**, or **Security Operator** roles.
+    - _Preview and download quarantined messages for all users_: Membership in the **Global Reader**, **Security Reader**, or **Security Operator** roles.
 
   > [!NOTE]
   > Currently, roles assigned through Azure Privileged Identity Management aren't supported in quarantine. For more information about PIM, see [Privileged Identity Management (PIM) and why to use it with Microsoft Defender for Office 365](/defender-office-365/pim-in-mdo-configure).

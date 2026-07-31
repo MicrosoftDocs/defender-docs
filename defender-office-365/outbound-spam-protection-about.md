@@ -74,6 +74,7 @@ Use the following resources outside of Microsoft 365 to send bulk email:
 
 ## Related content
 
+- [How outbound spam policy limits apply to Send As and Send on behalf permissions](outbound-spam-policies-send-as-send-on-behalf.md)
 - [Troubleshoot outbound sending limits in Exchange Online](outbound-spam-sending-limits-troubleshoot.md)
 - [Troubleshoot email delivery issues with error codes (NDR)](/troubleshoot/exchange/email-delivery/ndr/fix-error-code-550-4-4-7-in-exchange-online)
 - [External sender delivery troubleshooting](external-senders-mail-flow-troubleshooting.md)

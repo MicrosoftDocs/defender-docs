@@ -505,6 +505,10 @@ For detailed syntax and parameter information, see [Remove-HostedOutboundSpamFil
 
 ## Related content
 
+[How outbound spam policy limits apply to Send As and Send on behalf permissions](outbound-spam-policies-send-as-send-on-behalf.md)
+
+[Inventory delegated From addresses for outbound spam policies](outbound-spam-delegated-from-addresses-inventory.md)
+
 [Troubleshoot outbound sending limits in Exchange Online](outbound-spam-sending-limits-troubleshoot.md)
 
 [Remove blocked users from the Restricted entities page](outbound-spam-restore-restricted-users.md)
