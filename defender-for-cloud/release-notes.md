@@ -33,12 +33,11 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| July 31, 2026 | Deprecation | [Deprecation completed: Legacy grouped recommendations removed from Azure portal]() |
-| July 26, 2026 | GA | [Database-level recommendations for SQL Vulnerability Assessment (GA)](#deprecation-completed-legacy-grouped-recommendations) |
+| July 31, 2026 | Deprecation | [Deprecation completed: Legacy grouped recommendations removed from Azure portal](#deprecation-completed-legacy-grouped-recommendations-removed-from-azure-portal) |
+| July 26, 2026 | GA | [Database-level recommendations for SQL Vulnerability Assessment (GA)](#database-level-recommendations-for-sql-vulnerability-assessment-ga) |
 | July 5, 2026 | Deprecation | [Plan enablement API now blocks onboarding to five deprecated Defender plans](#plan-enablement-api-now-blocks-onboarding-to-five-deprecated-defender-plans) |
 | July 1, 2026 | GA | [New container security capabilities are now generally available](#new-container-security-capabilities-are-now-generally-available) |
 | July 1, 2026 | GA | [Kubernetes misconfiguration enforcement in Defender for Containers is now generally available](#kubernetes-misconfiguration-enforcement-in-defender-for-containers-is-now-generally-available) |
-| July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
 | July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
 
 ### Deprecation completed: Legacy grouped recommendations removed from Azure portal
