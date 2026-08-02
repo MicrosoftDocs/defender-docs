@@ -196,8 +196,8 @@
           items:
           - name: Overview
             href: advanced-hunting-security-copilot.md
-          - name: Use the Threat Hunting Agent
-            href: advanced-hunting-security-copilot-threat-hunting-agent.md
+          - name: Use the Threat Hunting Assistant
+            href: advanced-hunting-security-copilot-threat-hunting-assistant.md
           - name: Generate KQL queries
             href: advanced-hunting-security-copilot-query-assistant.md
         - name: Hunt over Microsoft Sentinel data
@@ -456,8 +456,8 @@
             href: security-alert-triage-agent.md
           - name: Threat Intelligence Briefing Agent
             href: threat-intel-briefing-agent-defender.md
-          - name: Threat Hunting Agent
-            href: advanced-hunting-security-copilot-threat-hunting-agent.md
+          - name: Threat Hunting Assistant
+            href: advanced-hunting-security-copilot-threat-hunting-assistant.md
           - name: Dynamic Threat Detection Agent
             href: dynamic-threat-detection-agent.md
           - name: Security Analyst Agent
