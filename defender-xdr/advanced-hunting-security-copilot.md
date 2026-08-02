@@ -35,17 +35,17 @@ The following table describes these capabilities, where they're best used, and t
 
 | Capability | Description |Output |Experience |
 | ------------- | ------------- |------------- |------------- |
-| [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md) (preview) | AI-powered conversational threat hunting agent that's best used for complete investigations, multistep hunting, exploratory analysis, and getting direct answers |Conversational answers, Kusto query language (KQL) queries, results, insights, and recommendations|Investigation-focused |
+| [Threat Hunting Assistant](advanced-hunting-security-copilot-threat-hunting-assistant.md) | AI-powered conversational Threat Hunting Assistant that's best used for complete investigations, multistep hunting, exploratory analysis, and getting direct answers |Conversational answers, Kusto query language (KQL) queries, results, insights, and recommendations|Investigation-focused |
 | [Query assistant](advanced-hunting-security-copilot-query-assistant.md) | Natural language to KQL query generation that's best used for generating queries |KQL query with explanation|Query-focused |
 
-The Threat Hunting Agent and Query assistant empower you to hunt threats faster, more accurately, and with greater confidence without needing to write KQL queries.
+The Threat Hunting Assistant and Query assistant empower you to hunt threats faster, more accurately, and with greater confidence without needing to write KQL queries.
 
 ## Get access
 Users with access to Security Copilot can use these capabilities in advanced hunting.
 
-You can only use one capability at a time. By default, the Threat Hunting Agent is the active mode. To switch to Query assistant mode, in the Security Copilot side pane, select the three-dot menu, then toggle the **Threat Hunting Agent** switch off.
+You can only use one capability at a time. By default, the Threat Hunting Assistant is the active mode. To switch to Query assistant mode, in the Security Copilot side pane, select the three-dot menu, then toggle the **Threat Hunting Assistant** switch off.
 
-![Screenshot of Security Copilot in advanced hunting showing the Threat Hunting Agent mode is active.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-access.png)
+![Screenshot of Security Copilot in advanced hunting showing the Threat Hunting Assistant mode is active.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-access.png)
 
 >[!NOTE]
 >- Switching between modes is only available in specific user environments. 
@@ -55,17 +55,17 @@ You can only use one capability at a time. By default, the Threat Hunting Agent 
 ## Scope of Security Copilot in advanced hunting
 
 ### Use case support
-The Threat Hunting Agent and Query assistant both fully support generation of simple to medium complexity queries, which includes filter operation, and/or aggregation. Complex use cases (queries with joins, filtering, and aggregation) are supported, but we recommend validating their accuracy. Help us improve by [providing feedback on Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md#provide-feedback) with incorrect queries or response examples. 
+The Threat Hunting Assistant and Query assistant both fully support generation of simple to medium complexity queries, which includes filter operation, and/or aggregation. Complex use cases (queries with joins, filtering, and aggregation) are supported, but we recommend validating their accuracy. Help us improve by [providing feedback on Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md#provide-feedback) with incorrect queries or response examples. 
 
 ### Best practices
-Use the following best practices when prompting the Threat Hunting Agent or Query assistant:
+Use the following best practices when prompting the Threat Hunting Assistant or Query assistant:
 
 - **Be unambiguous.** Ask questions with a clear subject. For example, "logins" could mean device logins or cloud logins.
 - **Ask one question at a time.** Ask for a single task or type of information at a time. Don't expect the AI model to perform several unrelated tasks at once. You can always ask follow-up questions instead of combining unrelated asks into a single prompt.
 - **Be specific.** If you know anything about the data you're looking for, provide that information in your question.
 
 ### Supported tables
-The Threat Hunting Agent and Query assistant support the following tables in advanced hunting:
+The Threat Hunting Assistant and Query assistant support the following tables in advanced hunting:
 
 | Microsoft Defender tables | Microsoft Sentinel tables |
 | ------------- | ------------- |
