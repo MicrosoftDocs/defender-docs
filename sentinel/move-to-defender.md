@@ -279,9 +279,9 @@ For Microsoft Sentinel customers moving from the Azure portal to the Defender po
 | Feature          | Description         |
 |-------------------|------------|
 | **Threat analytics** | Supported for [Microsoft Defender XDR](/defender-xdr/) customers. An in-product solution provided by Microsoft security researchers, designed to help security teams by offering insights on emerging threats, active threats, and their impacts. The data is presented in an intuitive dashboard with cards, rows of data, filters, and more.  |
-| **Intel Profiles**   | Supported for [Microsoft Defender Threat Intelligence](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti) customers. Categorize threats and behaviors by a Threat Actor Profile, making it easier to track and correlate. These profiles include any Indicators of Compromise (IoC) related to tactics, techniques, and tools used in attacks. |
-| **Intel Explorer**   | Supported for [Microsoft Defender Threat Intelligence](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti) customers.  Consolidates available IoCs and provides threat-related articles as they are posted, enabling security teams to stay updated on emerging threats.                                                        |
-| **Intel Projects**    | Supported for [Microsoft Defender Threat Intelligence](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti) customers. Allows teams to consolidate threat intelligence into a 'project' for reviewing all artifacts related to a specific scenario of interest.            |
+| **Intel Profiles**   | Supported for [Microsoft Defender Threat Intelligence](/defender-xdr/defender-threat-intelligence) customers. Categorize threats and behaviors by a Threat Actor Profile, making it easier to track and correlate. These profiles include any Indicators of Compromise (IoC) related to tactics, techniques, and tools used in attacks. |
+| **Intel Explorer**   | Supported for [Microsoft Defender Threat Intelligence](/defender-xdr/defender-threat-intelligence) customers.  Consolidates available IoCs and provides threat-related articles as they are posted, enabling security teams to stay updated on emerging threats.                                                        |
+| **Intel projects** | Deprecated. To organize and investigate threat indicators, [link indicators to a case](/unified-secops/cases-overview#link-indicators-preview). |
 
 In the Defender portal, use the `ThreatIntelOjbects` and `ThreatIntelIndicators` together with Indicators for Compromise for threat hunting, incident response, Copilot, reporting, and to create relational graphs showing connections between indicators and entities.
 
@@ -291,7 +291,7 @@ For more information about threat management, threat analytics, intelligence pro
 
 - [Threat management](microsoft-sentinel-defender-portal.md#threat-management)
 - [Threat analytics in Microsoft Defender XDR](/defender-xdr/threat-analytics)
-- [Using projects](/defender/threat-intelligence/using-projects)
+- [Link indicators to a case](/unified-secops-platform/cases-overview#link-indicators-preview)
 - [Threat intelligence in Microsoft Sentinel](/azure/sentinel/understand-threat-intelligence)
 
 ### Use workbooks to visualize and report on Microsoft Defender data

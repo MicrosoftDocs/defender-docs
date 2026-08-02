@@ -138,6 +138,10 @@
             href: entity-page-ip.md
           - name: View threat intelligence in entity pages
             href: entity-page-threat-intelligence.md
+          - name: Gather threat intelligence and perform infrastructure chaining
+            href: gathering-threat-intelligence-and-infrastructure-chaining.md
+          - name: Gather vulnerability intelligence
+            href: gathering-vulnerability-intelligence.md
         - name: Investigate data loss prevention alerts with Microsoft Defender XDR
           href: dlp-investigate-alerts-defender.md
         - name: Investigate data loss prevention alerts with Microsoft Sentinel
@@ -422,6 +426,8 @@
             href: threat-analytics-indicators.md
         - name: Microsoft Threat Intelligence in Defender XDR
           href: defender-threat-intelligence.md
+        - name: Use Security Copilot for threat intelligence
+          href: security-copilot-and-defender-threat-intelligence.md
       - name: Investigate and respond with Microsoft Copilot in Microsoft Defender
         items:
         - name: Overview

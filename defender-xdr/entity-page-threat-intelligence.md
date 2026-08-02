@@ -13,7 +13,7 @@ ms.collection:
 ms.custom:
   - cx-ti
 ms.topic: concept-article
-ms.date: 06/12/2026
+ms.date: 07/30/2026
 ai-usage: ai-assisted
 appliesto:
     - Microsoft Defender XDR
@@ -67,7 +67,16 @@ The **Threat Intelligence Insights** tab on entity pages is the primary surface 
 
 ### Reputation
 
-The reputation section provides a risk assessment for the entity based on Microsoft's detection rules and intelligence. Reputation scores help analysts quickly determine whether an entity is known to be malicious, suspicious, or benign.
+The reputation section provides a risk assessment for the entity based on Microsoft's detection rules and intelligence. Reputation scores help analysts quickly determine whether an entity is categorized as malicious, suspicious, neutral, or unknown and surface any prior malicious or suspicious activity tied to the entity.
+
+Reputation appears as a numerical score from 0 to 100. Microsoft derives the score from proprietary data and machine learning rules—each assigned a High, Medium, or Low severity—that assess factors such as the top-level domain, hosting provider, name server, registrar, and TLS certificate characteristics. Assess these factors holistically: the combination of indicators, rather than any single one, predicts whether an entity is likely malicious. Hosts, domains, and IP addresses fall into the following categories based on their score:
+
+| Score | Category | Description |
+|---|---|---|
+| 75–100 | Malicious | Confirmed associations to known malicious infrastructure on Microsoft's blocklist, with matches to machine learning rules that detect suspicious activity. |
+| 50–74 | Suspicious | Likely associated with suspicious infrastructure based on matches to three or more machine learning rules. |
+| 25–49 | Neutral | Matches at least two machine learning rules. |
+| 0–24 | Unknown | Returned one or zero rule matches. |
 
 ### Attributed threat reports
 
@@ -75,9 +84,9 @@ When Microsoft links an entity to a known threat actor or campaign, the attribut
 
 ### Infrastructure relationships (IP addresses and domains)
 
-For IP address and domain entities, the infrastructure relationships section includes:
+For IP address and domain entities, the infrastructure relationships section draws on Microsoft's internet data—collected through passive DNS (PDNS), port scans, and web-crawling infrastructure—to reveal connected infrastructure and support infrastructure analysis. This section includes:
 
-- **DNS records** - Historical and current DNS resolution data.
+- **DNS records** - Historical and current DNS resolution data, including reverse DNS, that shows which domains resolved to an IP address and the reverse over time.
 - **WHOIS information** - Domain registration details including registrant, dates, and registrar.
 - **Host pairs** - Relationships between hosts based on observed connections in web content.
 - **Subdomains** - Known subdomains associated with a domain.

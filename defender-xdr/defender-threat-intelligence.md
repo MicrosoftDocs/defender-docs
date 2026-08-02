@@ -14,7 +14,7 @@ ms.custom:
   - cx-ti
   - cx-ta
 ms.topic: overview
-ms.date: 06/12/2026
+ms.date: 07/30/2026
 ai-usage: ai-assisted
 appliesto:
     - Microsoft Defender XDR
@@ -63,6 +63,29 @@ Access the Intelligence explorer from the **Threat intelligence** navigation men
 
 For more information, see [Threat analytics in Microsoft Defender XDR](threat-analytics.md).
 
+## Use Microsoft Copilot in Defender for threat intelligence
+
+Microsoft Copilot in Microsoft Defender brings [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) capabilities directly into the Defender portal, so you can look up threat intelligence about threat actors, tools, and vulnerabilities without leaving your investigation. Copilot draws on threat analytics reports, intel profiles, and other Microsoft Threat Intelligence content to summarize the latest threats affecting your organization, help you prioritize threats based on your exposure, and expand your knowledge of the global threat landscape.
+
+This embedded Copilot experience is available on the **Threat analytics**, **Intel profiles**, and **Intel explorer** pages. To use the standalone Security Copilot experience with the Microsoft Threat Intelligence plugin instead, see [Use Microsoft Security Copilot for threat intelligence](security-copilot-and-defender-threat-intelligence.md).
+
+### Try your first request
+
+1. Open **Threat analytics**, **Intel profiles**, or **Intel explorer** from the Defender portal navigation. If Copilot isn't already open, select **Copilot** in the top navigation bar. Copilot opens on the right side of the page.
+1. In the prompt bar, ask about a threat actor, attack campaign, or other threat intelligence, then select the **Send message** icon or press **Enter**.
+1. Review the generated response. Copilot typically returns a summary with links to related intel profiles and articles. To start a new session, select the **New chat** icon.
+
+### Use the built-in prompts
+
+When you open a threat intelligence page, Copilot in Defender offers built-in prompts to get you started:
+
+- **Summarize** - Get an overview of the latest threats in your environment, with links to related threat analytics reports and intel profiles.
+- **Prioritize** - Find out which threats are most likely to affect your organization based on your highest exposure levels.
+- **Ask** - Summarize the latest threat articles about threat actors targeting a specific industry, such as communications infrastructure.
+
+> [!NOTE]
+> Copilot in Defender starts a new chat session each time you move to a different threat intelligence page. Your sessions are saved in the [Security Copilot standalone portal](https://go.microsoft.com/fwlink/?linkid=2247989).
+
 ## Get started
 
 Publicly available Microsoft Threat Intelligence data—including entity enrichments on entity pages—is accessible to all Microsoft Defender XDR customers at no extra cost.
@@ -78,6 +101,6 @@ To access threat intelligence in the Microsoft Defender portal:
 - [View threat intelligence in entity pages](entity-page-threat-intelligence.md)
 - [Threat analytics in Microsoft Defender XDR](threat-analytics.md)
 - [IP address entity page](entity-page-ip.md)
-- [What is Microsoft Threat Intelligence?](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti)
+- [Use Microsoft Security Copilot for threat intelligence](security-copilot-and-defender-threat-intelligence.md)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
