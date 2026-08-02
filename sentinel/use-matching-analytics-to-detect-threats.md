@@ -114,7 +114,7 @@ Along with high-fidelity alerts and incidents, some Microsoft Defender Threat In
 
 :::image type="content" source="media/use-matching-analytics-to-detect-threats/mdti-article-link.png" alt-text="Screenshot that shows an incident with a link to the Microsoft Defender Threat Intelligence reference article.":::
 
-For more information, see [Searching and pivoting with Intel Explorer](/defender/threat-intelligence/searching-and-pivoting).
+For more information, see [Threat analytics in Microsoft Defender XDR](/defender-xdr/threat-analytics).
 
 ## Related content
 

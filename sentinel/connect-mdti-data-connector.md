@@ -76,6 +76,6 @@ Find the new intelligence in the management interface or directly in **Logs** by
 
 After you connect the Defender Threat Intelligence data connector, explore these resources to learn more:
 
-- Learn about [What is Defender Threat Intelligence?](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti)
-- Get started with the [Defender Threat Intelligence portal](/defender/threat-intelligence/learn-how-to-access-microsoft-defender-threat-intelligence-and-make-customizations-in-your-portal).
+- Learn about [What is Defender Threat Intelligence?](/defender-xdr/defender-threat-intelligence)
+- Get started with [Microsoft Threat Intelligence in Microsoft Defender XDR](/defender-xdr/defender-threat-intelligence).
 - [Use matching analytics to detect threats](use-matching-analytics-to-detect-threats.md)
