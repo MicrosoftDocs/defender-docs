@@ -85,10 +85,13 @@ To start using the Query assistant, follow these steps:
 > Providing feedback is an important way to let the Security Copilot team know how well the query assistant was able to help in generating a useful KQL query. Feel free to articulate what could make the query better, what adjustments you had to make before running the generated KQL query, or share the KQL query that you eventually used.
 
 
-## Modify settings
+## Run or add the generated query
 
-Select the three-dot menu in the Copilot side pane to choose whether to automatically add and run the generated query in advanced hunting.
+When the Threat Hunting Assistant generates a KQL query, select **Run query** to run it in advanced hunting.
 
-   ![Screenshot of Security Copilot in advanced hunting showing the settings three-dot menu icon.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-settings.png)
+To review or edit the query before running it, select the arrow next to **Run query**, then select **Add to editor**. The query is added to the query editor without running.
 
-If you deselect the **Run generated query automatically** setting, you can choose to run the generated query automatically (**Add and run**) or add the generated query to the query editor for further modification (**Add to editor**).
+   ![Screenshot of the Run query split button in the Security Copilot side pane, showing the Add to editor option.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-settings.png)
+
+To see how the query was constructed, select **See the logic behind the query**.
+
