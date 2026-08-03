@@ -14,7 +14,9 @@ description: Lists all Microsoft Defender for Identity security posture assessme
 > While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status might still take time until it's marked as **Completed**.
 
 
-## Remove stale Active Directory accounts (Preview)
+<a name='remove-stale-active-directory-accounts-preview'></a>
+
+## Remove stale Active Directory accounts
 
 **Description**
 
@@ -41,7 +43,9 @@ Stale accounts pose a security risk because they provide potential targets for a
 1. Remove accounts for former employees to prevent unauthorized access.
 
 
-##  Microsoft Entra ID privileged user accounts that are also privileged in Active Directory (Preview)
+<a name='microsoft-entra-id-privileged-user-accounts-that-are-also-privileged-in-active-directory-preview'></a>
+
+##  Microsoft Entra ID privileged user accounts that are also privileged in Active Directory
 
 
 **Description**
@@ -229,7 +233,9 @@ If the KRBTGT account's password is compromised, an attacker can use its hash to
 > For the official and supported procedure, see [Reset the krbtgt password](/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-the-krbtgt-password).
 
 
-## Change password for on-premises account with potentially leaked credentials (Preview)
+<a name='change-password-for-on-premises-account-with-potentially-leaked-credentials-preview'></a>
+
+## Change password for on-premises account with potentially leaked credentials
 
 **Description**
 
@@ -456,7 +462,9 @@ LAPS simplifies password management while helping customers implement more recom
    :::image type="content" source="../media/laps-unprotected-devices.png" alt-text="Screenshot that shows the remediation steps for devices unprotected by LAPS." lightbox="../media/laps-unprotected-devices.png":::
 
 
-## Remove discoverable passwords in Active Directory account attributes (Preview)
+<a name='remove-discoverable-passwords-in-active-directory-account-attributes-preview'></a>
+
+## Remove discoverable passwords in Active Directory account attributes
 
 **Description**
 
@@ -505,7 +513,9 @@ To address this security assessment, follow these steps:
 1. Remove sensitive information from the listed attribute fields using standard directory management tools (for example, PowerShell or ADSI Edit).
 1. Fully remove the sensitive information. Don’t just mask the value. Partial obfuscation (for example, P@ssw***) can still offer useful clues to attackers.
 
-## Remove Stale Service Accounts (Preview)
+<a name='remove-stale-service-accounts-preview'></a>
+
+## Remove Stale Service Accounts
 
 **Description**
 

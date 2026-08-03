@@ -1,6 +1,6 @@
 ---
 title: Take action on advanced hunting results in Microsoft Defender XDR
-description: Learn how to take response actions on devices and emails directly from advanced hunting query results in Microsoft Defender XDR, including quarantine, delete, and investigation options.
+description: Learn how to take response actions on devices, identities, files, and emails directly from advanced hunting query results in Microsoft Defender XDR.
 ms.service: defender-xdr
 ms.subservice: adv-hunting
 ms.author: pauloliveria
@@ -12,18 +12,17 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1018
   - sfi-ga-nochange
   - cx-ti
   - cx-ah
-  - msecd-doc-authoring-1012
-  - sfi-image-nochange
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/27/2026
 ai-usage: ai-assisted
+#customer intent: As a security analyst, I want to take response actions on advanced hunting query results so that I can remediate affected devices, identities, files, and emails.
 ---
 
 # Take action on advanced hunting query results
@@ -32,7 +31,7 @@ ai-usage: ai-assisted
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
-You can quickly contain threats or address compromised assets found in [advanced hunting](advanced-hunting-overview.md). You can take actions on devices and emails, and quarantine files.
+You can quickly contain threats or address compromised assets found in [advanced hunting](advanced-hunting-overview.md). You can take actions on devices, identities, files, and emails.
 
 ## Required permissions
 
@@ -59,6 +58,21 @@ You can take the following actions on devices identified by the `DeviceId` colum
 - Restrict app execution to only Microsoft-signed executable files, preventing subsequent threat activity through malware or other untrusted executables.
 
 To learn more about how Microsoft Defender for Endpoint performs these response actions, see [Response actions on devices](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts).
+
+## Take actions on identities
+
+You can take the following actions on identities in your query results:
+
+- Select **Disable user** to temporarily prevent a user from signing in.
+- Select **Reset user authentication** to prompt the user to either change their password on their next sign-in session (for on-premises identities) or require them to sign in again (for Microsoft Entra identities).
+
+:::image type="content" source="media/advanced-hunting-take-action/take-actions-user-actions.png" alt-text="Screenshot of the Take actions wizard with the Users section highlighted, including Disable user and Reset user authentication." lightbox="media/advanced-hunting-take-action/take-actions-user-actions.png":::
+
+Both the **Disable user** and **Reset user authentication** options require the user security identifier (SID), which is available in the `AccountSid`, `InitiatingProcessAccountSid`, `RequestAccountSid`, and `OnPremSid` columns.
+
+For Microsoft Entra identities, the `AccountObjectId` parameter is required for all actions.
+
+For more information on identity actions, see [Remediation actions in Microsoft Defender for Identity](/defender-for-identity/remediation-actions) and [Remediation actions in Microsoft Defender for Cloud Apps](/defender-cloud-apps/governance-actions).
 
 ## Quarantine files
 
