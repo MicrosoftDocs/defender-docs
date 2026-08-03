@@ -161,7 +161,8 @@ The **Promotions** folder in user mailboxes has the following characteristics:
   - If you rename or move the **Promotions** folder, it continues to work (the name or location of the folder doesn't matter).
 - Bulk mail that would normally be delivered to the **Promotions** folder is delivered to the Inbox in the following scenarios:
   - The bulk sender is in the user's [Safe Senders list](create-safe-sender-lists-in-office-365.md#use-outlook-safe-senders).
-  - The bulk sender is in an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) of the organization.
+  - The bulk sender is in an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) of the organization. Messages from senders in accepted domains aren't tagged with **Promotions**.
 - If you turn off **Bulk moves enabled** in an existing anti-spam policy, the affected users still have a **Promotions** folder in their mailboxes, but bulk mail is no longer delivered to the **Promotions** folder. You can use Inbox rules with the **Marked with** \> **Promotions** condition as shown in the previous table to move bulk messages to the **Promotions** folder.
 - The system learns from user activity in the **Promotions** folder (moving messages in or out), and remembers the action for future messages.
 - Existing user-defined Inbox rules that act on messages identified as bulk take precedence over **Promotions** folder placement by the **Bulk moves enabled** feature. User-defined rules are honored and not overridden.
+- The **Promotions** tag always takes precedence over the **External** tag.
