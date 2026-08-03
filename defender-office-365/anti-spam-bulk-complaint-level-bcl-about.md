@@ -10,7 +10,7 @@ ms.collection:
   - tier2
 description: Admins can learn about bulk email detection, including the bulk complain level (BCL) values that are used in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 05/08/2026
+ms.date: 08/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -21,7 +21,7 @@ appliesto:
 
 Microsoft 365 assigns a bulk complaint level (BCL) value to inbound messages from bulk senders. The BCL value is added to the message in an X-header and is similar to the [spam confidence level (SCL)](anti-spam-spam-confidence-level-scl-about.md) that identifies messages as spam. A higher BCL value indicates a bulk message is more likely to exhibit undesirable spam-like behavior. Microsoft uses both internal and external sources to identify bulk mail and determine the appropriate BCL value.
 
-Bulk senders vary in their sending patterns, content creation, and recipient acquisition practices. Good bulk senders send desired messages with relevant content to their subscribers. These messages generate few complaints from recipients. Other bulk senders send unsolicited messages that closely resemble spam and generate many complaints from recipients. Messages from a bulk sender are known as _bulk mail_ or _gray mail_.
+Bulk senders vary in their sending patterns, content, and recipient acquisition practices. Good bulk senders send desired messages with relevant content to their subscribers. These messages generate few complaints from recipients. Other bulk senders send unsolicited messages that closely resemble spam and generate many complaints from recipients. Messages from a bulk sender are known as _bulk mail_ or _gray mail_.
 
 Spam filtering marks messages as **Bulk email** based on the BCL threshold in anti-spam policies and takes the specified action on the message. For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md) and [What's the difference between junk email and bulk email?](anti-spam-spam-vs-bulk-about.md).
 
@@ -73,54 +73,54 @@ For more information, see [Bulk senders insight](anti-spam-bulk-senders-insight.
 ## Deliver bulk mail below the BCL threshold to the Promotions folder
 
 > [!NOTE]
-> The features described in this section are currently in Preview, aren't available to all organizations, and are subject to change.
+> The features described in this section are rolling out, and should be available in all organizations by mid-September.
 
 As previously described, the action for bulk mail that meets or exceeds the BCL threshold is defined in anti-spam policies. For example, deliver to the Junk Email folder or quarantine.
 
-But you can configure anti-spam policies to deliver bulk mail below the BCL threshold (even messages with the BCL value 0 identified as bulk) to the **Promotions** folder in supported versions of Outlook.
+But you can configure anti-spam policies to deliver bulk mail below the BCL threshold (even messages with the BCL value 0 identified as bulk) to a **Promotions** folder in supported versions of Outlook by using the **Bulk moves enabled** setting in anti-spam policies.
 
-_Currently_, this feature has the following requirements:
+As of July 2026, all messages identified as bulk (regardless of BCL value) automatically receive the **Promotions** tag. When you turn on the **Bulk moves enabled** setting in anti-spam policies, bulk mail that would normally be delivered to the Inbox is delivered to the **Promotions** folder instead.
 
-- An Exchange mail flow rule (also known as a transport rule) that adds a message header to all mail identified as bulk. The resulting **Bulk** tag is visible in supported versions of Outlook.
-- The **Bulk moves enabled** setting is turned on in anti-spam policies. Turning on this setting results in a **Promotions** folder in affected user mailboxes.
+The system learns from user activity in the **Promotions** folder (moving messages in or out), and remembers the action for future messages.
 
 > [!NOTE]
-> By default, this feature is inactive. An admin needs to complete both of the previous steps to enable the feature.
+> To prevent mail _from specific senders_ or _to specific recipients_ from receiving the **Promotions** tag, you need to [create a mail flow rule (transport rule)](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#create-a-mail-flow-rule) with the following settings:
+>
+> - **Set rule conditions** page:
+>   - **Name**: For example, **Prevent Promotions tag**.
+>   - **Apply this rule if...**: Prevent mail from the specified senders or to the specified recipients from being tagged as **Promotions**. For example:
+>     - **The sender** \> **is external/internal**: Select **Outside the organization**.
+>     - **The sender** \> **address includes any of these words**: Enter text from the sender's email address.
+>     - **The recipient** \> **is this person** \> select one or more recipients.
+>
+>     For more information, see [Sender conditions in mail flow rules](/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions#senders).
+>
+>   - **Do the following...**: Select **Modify the message properties** \> **set a message header**.
+>     - **Set the message header**: Enter the value `X-MS-Exchange-Organization-BulkStamping`.
+>     - **to the value**: Enter the value `0`.
+>   - **Except if...**: Optionally, you can use exceptions to tag specific messages from the senders or to the recipients as **Promotions**.
+>   - **Set rule settings** page: Verify **Stop processing more rules** isn't selected.
+>
+> For previous Preview customers, the rule that set `X-MS-Exchange-Organization-BulkStamping` to the value `1` to tag messages as **Bulk** is no longer required.
 
-If a user is affected by the mail flow rule and the anti-spam policy, bulk mail that would normally be delivered to the Inbox is delivered to the **Promotions** folder instead.
-
-To enable this feature, do the following steps:
+To enable bulk mail delivery to the **Promotions** folder, do the following steps:
 
 > [!TIP]
-> The following procedures use different mail-enabled security groups to identify users who should and shouldn't get bulk mail delivered to the **Promotions** folder. Group membership is the only way for users to opt-in or opt-out of the feature themselves, provided the users are allowed join or leave the groups themselves.
+> The following procedures use different mail-enabled security groups to identify users who should and shouldn't get bulk mail delivered to the **Promotions** folder. Group membership is the only way for _users_ to opt-in or opt-out of the feature _themselves_, provided the users are allowed join or leave the groups themselves.
 >
-> If you aren't interested in giving users opt-in or opt-out control, you can configure the feature using admin controls only. For example, don't restrict the required mail flow rule to a specific group of opt-in users, and turn on **Bulk moves enabled** in all your current anti-spam policies (no need to create new opt-in or opt-out anti-spam policies).
+> If you aren't interested in giving users opt-in or opt-out control, you can configure the feature using admin controls only. For example, turn on **Bulk moves enabled** in all your current anti-spam policies (no need to create new opt-in or opt-out anti-spam policies).
 >
-> The only scenario where an opt-in group is probably required is if all users in the organization are assigned the [Standard and Strict preset security policies](preset-security-policies.md) only. _Currently_, the **Bulk moves enabled** setting is **Off** in the Standard and Strict preset security policies. The only way for users to get the **Promotions** folder feature is to exclude them from the Standard and Strict preset security policies, and an opt-in group is the easiest way to exclude them. You can then turn on the **Bulk moves enabled** setting in the default anti-spam policy (which effectively becomes the opt-in policy), or create a custom anti-spam policy that's assigned only to the opt-in group.
+> The only scenario that requires an opt-in group is if all users are included in the [Standard and Strict preset security policies](preset-security-policies.md) only. _Currently_, the **Bulk moves enabled** setting is **Off** in the Standard and Strict preset security policies. The only way for users to get bulk mail moved to the **Promotions** folder is to exclude them from the Standard and Strict preset security policies, and an opt-in group is the easiest way to exclude them. You can then turn on the **Bulk moves enabled** setting in the default anti-spam policy (which effectively becomes the opt-in policy), or create a custom anti-spam policy that's assigned only to the opt-in group.
 
 1. Create (or identify) two mail-enabled security groups for the following purposes:
-   - **Opt-in**: Users who get bulk mail tagged as **Bulk** and delivered to the **Promotions** folder in supported Outlook clients.
-   - **Opt-out**: Users who don't get bulk mail tagged as **Bulk** and don't get a **Promotions** folder.
+   - **Opt-in**: Bulk mail tagged as **Promotions** that's below the BCL threshold is delivered to the **Promotions** folder in supported Outlook clients.
+   - **Opt-out**: Users don't get a **Promotions** folder. Bulk mail tagged as **Promotions** that's below the BCL threshold is delivered to the Inbox.
 
    By leaving one group and joining the other, admins or the users themselves can control whether the **Promotions** folder is used.
 
    For group creation instructions, see [Manage mail-enabled security groups in Exchange Online](/exchange/recipients-in-exchange-online/manage-mail-enabled-security-groups).
 
-2. [Create a mail flow rule](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#create-a-mail-flow-rule) for the members of the **opt-in** group that applies the **Bulk** tag to all bulk mail. Create the rule with the following settings:
-   - **Set rule conditions** page:
-     - **Name**: For example, **Bulk mail ID**.
-     - **Apply this rule if...**: Configure the following conditions:
-       - **The recipient** \> **is a member of this group**: Select the **opt-in** mail-enabled security group.
-       - **The sender** \> **is external/internal**: Select **Outside the organization**.
-     - **Do the following...**: Select **Modify the message properties** \> **set a message header**.
-       - **Set the message header**: Enter the value `X-MS-Exchange-Organization-BulkStamping`.
-       - **to the value**: Enter the value `1`.
-     - **Except if...**: Optionally, you can use exceptions to prevent specific bulk senders from being tagged as **Bulk**. For example:
-        - **The sender** \> **is this person**
-        - **The sender** \> **domain is**
-   - **Set rule settings** page: Verify **Stop processing more rules** isn't selected.
-
-3. Create new **opt-in** and **opt-out** anti-spam policies to identify users who should and shouldn't get bulk mail delivered to the **Promotions** folder (members of the **opt-in** and **opt-out** groups). For anti-spam policy creation instructions, see [Use the Microsoft Defender portal to create anti-spam policies](anti-spam-policies-configure.md#use-the-microsoft-defender-portal-to-create-anti-spam-policies).
+2. Create new **opt-in** and **opt-out** anti-spam policies to identify users who should and shouldn't get bulk mail delivered to the **Promotions** folder (members of the **opt-in** and **opt-out** groups). For anti-spam policy creation instructions, see [Use the Microsoft Defender portal to create anti-spam policies](anti-spam-policies-configure.md#use-the-microsoft-defender-portal-to-create-anti-spam-policies).
    - For **both** anti-spam policies, do the following steps:
      - Verify the members of both groups are excluded from the [Standard and Strict preset security policies](preset-security-policies.md). For more information, see [Order of precedence for preset security policies and other threat policies](preset-security-policies.md#order-of-precedence-for-preset-security-policies-and-other-threat-policies)
      - Recreate the settings from the old anti-spam policy that the members of the **opt-in** group left for the new opt-in policy. For example, the BCL threshold (although we recommend a minimum value of 5 for the opt-in policy) and bulk action, other detection actions and the corresponding quarantine policies, allow list settings, block list settings, etc.
@@ -145,9 +145,9 @@ After you complete the previous steps, members of the **opt-in** group (users wh
 
 |Feature|Outlook on<br>the web|Outlook for Windows|Outlook for<br>iOS and Android|Classic Outlook|
 |---|:---:|:---:|:---:|:---:|
-|All messages identified as bulk have the **Bulk** tag applied, regardless of the message location.|✔|✔|||
-|The **Bulk** tag is available as a condition in [Inbox rules](https://support.microsoft.com/office/8400435c-f14e-4272-9004-1548bb1848f2). For example: <br/> :::image type="content" source="media/promotions-folder-inbox-rules.png" alt-text="Screenshot of the Inbox rule creation steps in Outlook on the web to use the Bulk tag as a condition to move messages into the Promotions folder." lightbox="media/promotions-folder-inbox-rules.png":::|✔|✔|||
-|Bulk mail below the BCL threshold that invokes the bulk action in the anti-spam policy is delivered to the **Promotions** folder.|✔|✔|✔|✔|
+|All messages identified as bulk have the **Promotions** tag applied, regardless of the message location.|✔|✔|||
+|The **Promotions** tag is available as a condition in [Inbox rules](https://support.microsoft.com/office/8400435c-f14e-4272-9004-1548bb1848f2). For example: <br/> :::image type="content" source="media/promotions-folder-inbox-rules.png" alt-text="Screenshot of the Inbox rule creation steps in Outlook on the web to use the Bulk tag as a condition to move messages into the Promotions folder." lightbox="media/promotions-folder-inbox-rules.png":::|✔|✔|||
+|Bulk mail below the BCL threshold that invokes the bulk action in the anti-spam policy is delivered to the **Promotions** folder, and the system learns as the users moves messages into and out of the folder.|✔|✔|✔|✔|
 
 ### About the Promotions folder
 
@@ -156,12 +156,13 @@ The **Promotions** folder in user mailboxes has the following characteristics:
 - **Promotions** is a regular folder, not a system folder.
   - After the anti-spam policy is applied to a user, the **Promotions** folder is created in the mailbox when the first bulk message is delivered to the mailbox.
   - If you soft delete the folder (available in **Deleted items**), bulk messages are delivered to the folder in **Deleted items**.
-  - Currently, if you hard delete the folder (available in Recoverable items), the folder is recreated and used within approximately 5 minutes.
+  - Currently, if you hard delete the folder (available in **Recoverable items**), future bulk messages are delivered to the Inbox.
   - If an unrelated **Promotions** folder already exists in the mailbox, a new folder named **Promotions(1)** is created and used.
   - If you rename or move the **Promotions** folder, it continues to work (the name or location of the folder doesn't matter).
 - Bulk mail that would normally be delivered to the **Promotions** folder is delivered to the Inbox in the following scenarios:
   - The bulk sender is in the user's [Safe Senders list](create-safe-sender-lists-in-office-365.md#use-outlook-safe-senders).
-  - The bulk sender is in an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) of the organization.
-- If you turn off **Bulk moves enabled** in an existing anti-spam policy, the affected users still have a **Promotions** folder in their mailboxes, but bulk mail is no longer delivered to the **Promotions** folder. You can use Inbox rules with the **Marked with** \> **Bulk** condition as shown in the previous table to move bulk messages to the **Promotions** folder.
-- Microsoft 365 learns from user activity in the **Promotions** folder (moving messages in or out), and remembers the action for future messages.
+  - The bulk sender is in an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) of the organization. Messages from senders in accepted domains aren't tagged with **Promotions**.
+- If you turn off **Bulk moves enabled** in an existing anti-spam policy, the affected users still have a **Promotions** folder in their mailboxes, but bulk mail is no longer delivered to the **Promotions** folder. You can use Inbox rules with the **Marked with** \> **Promotions** condition as shown in the previous table to move bulk messages to the **Promotions** folder.
+- The system learns from user activity in the **Promotions** folder (moving messages in or out), and remembers the action for future messages.
 - Existing user-defined Inbox rules that act on messages identified as bulk take precedence over **Promotions** folder placement by the **Bulk moves enabled** feature. User-defined rules are honored and not overridden.
+- The **Promotions** tag always takes precedence over the **External** tag.

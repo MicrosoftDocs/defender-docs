@@ -14,7 +14,8 @@ ms.topic: concept-article
 ms.custom: 
 - cx-ti
 - cx-dex
-ms.date: 03/16/2026
+ms.date: 07/29/2026
+ai-usage: ai-assisted
 ---
 
 # Communicating with experts in the Microsoft Defender Experts service
@@ -88,7 +89,7 @@ While the previous scenarios involve the experts initiating communication with y
 The Security Delivery Expert (SDX) is responsible for managing the overall relationship for your organization with the Defender Experts MDR service. They are your trusted advisor working along with XDR experts' team to help you protect your organization.
 
 > [!NOTE]
-> Security Delivery Experts are included if your Defender Experts service is licensed for 500 or more devices.
+> Security Delivery Experts are included if your Defender Experts service is licensed for 1,500 or more seats.
 
 The SDX provides the following services:
 

@@ -72,12 +72,12 @@ Follow these steps:
 
 ## Step 1. Gather threat intelligence to identify adversaries and their infrastructure
 
-Microsoft Defender Threat Intelligence (Defender TI) provides threat intelligence information such as specific indicators of compromise (IOCs) and research and analyses straight from Microsoft experts and other sources. You can read articles or search for threat actors, vulnerabilities, and other IOCs to gain insight on the types of threats that you might want to investigate.
+Microsoft Threat Intelligence in Microsoft Defender XDR provides indicators of compromise (IOCs), threat research, and analysis from Microsoft experts and other sources. You can review threat intelligence articles or search for threat actors, vulnerabilities, and other indicators to support your investigations. You can read articles or search for threat actors, vulnerabilities, and other IOCs to gain insight on the types of threats that you might want to investigate.
 
-- For a tutorial on how to perform indicator searches and gather threat and adversary intelligence using Defender TI, see: [Tutorial: Gathering threat intelligence and infrastructure chaining](/defender/threat-intelligence/gathering-threat-intelligence-and-infrastructure-chaining)
-- For a tutorial on how to perform indicator searches to gather vulnerability intelligence using Defender TI, see: [Tutorial: Gathering vulnerability intelligence](/defender/threat-intelligence/gathering-vulnerability-intelligence)
+- For a tutorial on how to perform indicator searches and gather threat and adversary intelligence, see: [Tutorial: Gather threat intelligence and perform infrastructure chaining](gathering-threat-intelligence-and-infrastructure-chaining.md)
+- For a tutorial on how to perform indicator searches to gather vulnerability intelligence, see: [Tutorial: Gather vulnerability intelligence](gathering-vulnerability-intelligence.md)
 
-For more information, see [What is Microsoft Defender Threat Intelligence (Defender TI)?](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti)
+For more information, see [Microsoft Threat Intelligence in Microsoft Defender XDR](defender-threat-intelligence.md)
 
 ## Step 2. Simulate attacks with the Microsoft Defender portal
 
@@ -97,15 +97,15 @@ Defender for Office 365 with Microsoft 365 E5 or Microsoft Defender for Office 3
 
 1. Create a simulation
 
-   For step by step instructions on how to create and launch a new simulation, see [Simulate a phishing attack](/defender-office-365/attack-simulation-training-simulations).
+   For step-by-step instructions on how to create and launch a new simulation, see [Simulate a phishing attack](/defender-office-365/attack-simulation-training-simulations).
 
 2. Create a payload
 
-   For step by step instructions on how to create a payload for use within a simulation, see [Create a custom payload for attack simulation training](/defender-office-365/attack-simulation-training-payloads).
+   For step-by-step instructions on how to create a payload for use within a simulation, see [Create a custom payload for attack simulation training](/defender-office-365/attack-simulation-training-payloads).
 
 3. Gaining insights
 
-   For step by step instructions on how to gain insights with reporting, see [Gain insights through attack simulation training](/defender-office-365/attack-simulation-training-insights).
+   For step-by-step instructions on how to gain insights with reporting, see [Gain insights through attack simulation training](/defender-office-365/attack-simulation-training-insights).
 
    > [!VIDEO https://learn-video.azurefd.net/vod/player?id=37f13948-e44b-4d1a-ac3b-a13ce02dabec]
 
@@ -170,7 +170,7 @@ In this simulation, our sample scenario starts with a PowerShell script. In the 
 
 :::image type="content" source="media/pilot-deploy-investigate-respond/mtpdiydiagram.png" alt-text="A screenshot of the Fileless PowerShell attack with process injection and SMB reconnaissance attack." lightbox="media/pilot-deploy-investigate-respond/mtpdiydiagram.png":::
 
-During the simulation, the attack injects shellcode into a seemingly innocent process. The scenario requires the use of notepad.exe. We chose this process for the simulation, but attackers would more likely target a long-running system process, such as svchost.exe. The shellcode then goes on to contact the attacker's command-and-control (C2) server to receive instructions on how to proceed. The script attempts executing reconnaissance queries against the domain controller (DC). Reconnaissance allows an attacker to get information about recent user login information. Once attackers have this information, they can move laterally in the network to get to a specific sensitive account
+During the simulation, the attack injects shellcode into a seemingly innocent process. The scenario requires the use of notepad.exe. We chose this process for the simulation, but attackers would more likely target a long-running system process, such as svchost.exe. The shellcode then goes on to contact the attacker's command-and-control (C2) server to receive instructions on how to proceed. The script attempts executing reconnaissance queries against the domain controller (DC). Reconnaissance allows an attacker to get information about recent user login information. Once attackers have this information, they can move laterally in the network to get to a specific sensitive account.
 
 > [!IMPORTANT]
 > For optimum results, follow the attack simulation instructions as closely as possible.
@@ -213,7 +213,7 @@ You'll see this message displayed on the PowerShell console when this script com
 ran NetSessionEnum against [DC Name] with return code result 0
 ```
 
-To see the Automated Incident and Response feature in action, keep the notepad.exe process open. You'll see Automated Incident and Response stop the Notepad process.
+To see the Automated Incident and Response feature in action, keep the `notepad.exe` process open. You'll see Automated Incident and Response stop the Notepad process.
 
 ### Investigate the incident for the simulated attack
 
@@ -244,7 +244,7 @@ To view the incident:
 
 2. From the navigation pane, select **Incidents & Alerts > Incidents**.
 
-3. Select the newest item by clicking on the circle located left of the incident name. A side panel displays additional information about the incident, including all the related alerts. Each incident has a unique name that describes it based on the attributes of the alerts it includes.
+3. Select the newest item by selecting the circle to the left of the incident name. A side panel displays additional information about the incident, including all the related alerts. Each incident has a unique name that describes it based on the attributes of the alerts it includes.
 
    The alerts that are shown in the dashboard can be filtered based on service resources: Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, Microsoft Defender for Endpoint, Microsoft Defender XDR, and Microsoft Defender for Office 365.
 
@@ -294,7 +294,7 @@ When you select an IP address in the alert process tree, the IP address details 
 
 ##### Alert: User and IP address reconnaissance (SMB) (Source: Microsoft Defender for Identity)
 
-Enumeration using Server Message Block (SMB) protocol enables attackers to get recent user logon information that helps them move laterally through the network to access a specific sensitive account.
+Enumeration using Server Message Block (SMB) protocol enables attackers to get recent user sign-in information that helps them move laterally through the network to access a specific sensitive account.
 
 In this detection, an alert is triggered when the SMB session enumeration runs against a domain controller.
 
@@ -593,7 +593,7 @@ Custom detections will run the query according to the frequency you set, and the
 
    :::image type="content" source="media/pilot-deploy-investigate-respond/fig23.png" alt-text="A screenshot of the Alert details page in the Microsoft Defender portal." lightbox="media/pilot-deploy-investigate-respond/fig23.png":::
 
-   Ensure that you fill out the fields with clarity to help give the next user an informed decision about this detection rule alert
+   Ensure that you fill out the fields with clarity to help give the next user an informed decision about this detection rule alert.
 
 3. Select what entities are impacted in this alert. In this case, select **Device** and **Mailbox**.
 

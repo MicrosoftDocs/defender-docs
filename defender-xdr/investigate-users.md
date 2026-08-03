@@ -5,10 +5,11 @@ description: Learn how to use the Identity page in Microsoft Defender. Investiga
 ms.author: abbyweisberg
 author: AbbyMSFT
 ms.reviewer: maelgami
-ms.date: 06/22/2026
+ms.date: 08/02/2026
 ms.topic: article
 ms.service: microsoft-defender
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1018
+ai-usage: ai-assisted
 ---
 
 # Investigate an identity
@@ -83,6 +84,8 @@ The **Incidents and alerts** tab lists all alerts and incidents involving the id
 
 The **Observed in organization** tab shows where and how the identity appears across the environment, helping analysts understand blast radius and potential lateral movement.
 
+:::image type="content" source="media/investigate-users/identity-observed-in-organization.png" alt-text="Screenshot of the Observed in organization tab on the Identity page in Microsoft Defender." lightbox="media/investigate-users/identity-observed-in-organization.png":::
+
 This tab can include:
 
 | Section | Description |
@@ -98,7 +101,7 @@ Each identity can include multiple related accounts from different identity prov
 
 Microsoft Defender uses internal correlation logic to determine the primary account.
 
-:::image type="content" source="media/investigate-users/identity-observed-in-organization.png" alt-text="Screenshot of the Observed in organization tab on the Identity page in Microsoft Defender." lightbox="media/investigate-users/identity-observed-in-organization.png":::
+In the **Accounts** table, the primary account is identified by the primary account icon next to the account's display name.
 
 ## Risk score tab
 
@@ -112,16 +115,16 @@ The **Risk score** tab summarizes the identity's risk level by combining alert a
 | **Risk Trend** | A line chart that shows how the risk score changed over a configurable time period (for example, 30 days). Select **Go to timeline** to view the full activity timeline. |
 | **Likelihood of Compromise Details** | A bar chart that shows alert distribution across MITRE ATT&CK categories, with a filterable alert table. Use the **Active alerts only** toggle to focus on unresolved alerts. Filter by account set, status, or kill chain stage. |
 
-Select **Reset risk** at the top of the tab to manually reset the identity's risk score, for example after completing remediation.
+The **Confirm safe** action now includes **Reset risk** for both the identity risk score and the Microsoft Entra risk level. For more information, see [Remediation actions in Microsoft Defender for Identity](/defender-for-identity/remediation-actions#supported-actions).
 
 > [!NOTE]
 > Identity risk in Microsoft Defender for Identity uses automated decay logic to allow SOC prioritization. If no new risk factors are detected, the identity risk score decreases over time. Microsoft Entra ID maintains its own risk level independently and doesn't apply decay. As a result, you might see an Entra risk level with no corresponding identity risk score when the Entra risk update time is older than 30 days.
 
 ## Timeline tab
 
-The **Timeline** tab provides a chronological view of identity related activity and alerts aggregated from integrated Microsoft security products, such as Microsoft Defender for Identity, Microsoft Defender for Endpoint, Microsoft Defender for Cloud Apps, and Microsoft Sentinel.
+The **Timeline** tab provides a chronological, identity-centric view of activity and alerts correlated to the identity across your environment: on-premises Active Directory, Microsoft Entra ID, IAM and other identity providers, SaaS applications, cloud, and endpoints. It aggregates data from integrated Microsoft security products, such as Microsoft Defender for Identity, Microsoft Defender for Endpoint, Microsoft Defender for Cloud Apps, and Microsoft Sentinel.
 
-The timeline helps reconstruct sequences of activity and correlate events during investigations.
+The timeline brings together sign-ins, audit events, risk signals, applied controls, and Conditional Access evaluations alongside all workload activity, so you can reconstruct sequences of activity and correlate events during an investigation. Because activity is correlated at the identity level, the timeline includes events where the identity is the actor or the target. It covers every account linked to the identity, including manually and policy-based (custom) correlated accounts. Duplicate events are removed so the same activity isn't shown twice; for example, when a sign-in appears in both the Entra ID and cloud app data, the timeline favors the Entra ID source.
 
 :::image type="content" source="media/investigate-users/identity-timeline.png" alt-text="Screenshot of the Timeline tab on the Identity page in Microsoft Defender." lightbox="media/investigate-users/identity-timeline.png":::
 
@@ -130,40 +133,61 @@ The timeline helps reconstruct sequences of activity and correlate events during
 The following data types are available in the timeline:
 
 - A user's impacted alerts
-- Active Directory and Microsoft Entra activities
+- Active Directory and Microsoft Entra ID activities, including Microsoft Entra sign-ins and Microsoft Graph activity (audit) events
+- Microsoft Entra ID risk signals and Conditional Access evaluation results, shown inline
 - Cloud apps events
 - Device logon events
 - Directory services changes
+- Activities associated with custom (manually or policy-based) correlated accounts
 
-### Information shown for each activity in the timeline
+### Tables aggregated into the timeline
 
-The following information is displayed in the timeline:
+The timeline draws from multiple advanced hunting tables and normalizes them into a single schema. The following tables are used to build the identity timeline:
 
-- Date and time of the activity
-- Activity/alert description
-- Application that performed the activity
-- Source device/IP address
-- [MITRE ATT&CK](https://attack.mitre.org/) techniques
-- Alert severity and status
-- Country/region where the client IP address is geolocated
-- Protocol used during the communication
-- Target device (optional, viewable by customizing columns)
-- Number of times the activity happened (optional, viewable by customizing columns)
+- AlertInfo
+- IdentityLogonEvents
+- IdentityQueryEvents
+- IdentityDirectoryEvents
+- CloudAppEvents
+- DeviceLogonEvents
+- EntraIdSignInEvents
+- GraphApiAuditEvents
 
-### Working with the timeline
+<!-- TODO: Confirm the public advanced hunting table names and reference links for each entry above. The spec also lists "AppIdentityEvents (IdentityEvents)" and "BehaviorInfo (P1)"—verify whether these are shipped and publicly documented before including them. -->
+
+### Timeline schema
+
+The timeline normalizes events from the different source tables into a unified schema. Some columns are shown by default; others can be added from **Customize columns**. The following columns are available:
 
 > [!NOTE]
-> Microsoft Defender XDR can display date and time information using either your local time zone or UTC. The selected time zone applies to all date and time information shown in the Identity timeline.
->
-> To set the time zone for these features, go to **Settings** \> **Security center** \> **Time zone**.
+> A field is populated only if it exists in the source table for that event. If the source table doesn't provide a value for a column, that column is empty for the event.
 
-- **Custom time range picker:** Choose a timeframe to focus your investigation on the last 24 hours, the last 3 days, and so on. Or choose a specific timeframe by selecting **Custom range**. Filtered data older than 30 days is displayed in seven-day intervals.
+| Column | Type | Shown by default | Filterable by default |
+|---|---|---|---|
+| Time | DateTime | Yes | Yes |
+| Type | Enum (Event or Alert) | Yes | Yes |
+| Title | String | Yes | Yes |
+| Source provider account ID | String | Yes | Yes |
+| Account display name | String | Yes | Yes |
+| Source provider | String | Yes | Yes |
+| IP address | String | Yes | Yes |
+| Device | String | Yes | Yes |
+| Risk/Severity | String | Yes | Yes |
+| Location | String | Yes | Yes |
+| Conditional Access policies | Dynamic | Yes | No |
+| Source table | String | Yes | No |
+| Sentinel workspace | String | No | No |
+| Target | Dynamic | No | Not filterable |
+| Session ID | String | No | No |
+| Unique token identifier | String | No | No |
+| Additional information | Dynamic | No | Not filterable |
+| ReportId | String | No | No |
 
-- **Timeline filters:** Use the timeline filters to narrow results by Type (alerts and/or user's related activities), Alert severity, Activity type, App, Location, or Protocol. Each filter depends on the others, and the options in each filter only contain data that's relevant for the specific user.
+### Event details pane
 
-- **Customized columns:** Select the **Customize columns** button to choose which columns to expose in the timeline.
+Select an event in the timeline to open a side pane with the event details. The pane organizes the information into tabs. For Microsoft Entra ID sign-in events, the pane includes a **Conditional Access** tab that shows the Conditional Access policies evaluated during the sign-in, including each policy's name, grant controls, and result (for example, **Success**, **Not applied**, or **Block**). Reviewing these evaluation results helps analysts understand which controls applied during an investigation.
 
-- **Export:** Export the timeline to a CSV file. Export is limited to the first 5,000 records and contains the data as displayed in the UI (same filters and columns).
+:::image type="content" source="media/investigate-users/identity-timeline-conditional-access.png" alt-text="Screenshot of the sign-in event details pane on the Identity timeline showing Conditional Access policy evaluation results." lightbox="media/investigate-users/identity-timeline-conditional-access.png":::
 
 ## Security recommendations tab
 

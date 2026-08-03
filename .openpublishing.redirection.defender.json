@@ -2,12 +2,82 @@
   "redirections": [
     {
       "source_path": "defender/threat-intelligence/index-backup.md",
-      "redirect_url": "/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti",
+      "redirect_url": "/defender-xdr/defender-threat-intelligence",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender/threat-intelligence/data-sets.md",
+      "redirect_url": "/defender-xdr/entity-page-threat-intelligence",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender/threat-intelligence/reputation-scoring.md",
+      "redirect_url": "/defender-xdr/entity-page-threat-intelligence",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender/threat-intelligence/analyst-insights.md",
+      "redirect_url": "/defender-xdr/threat-analytics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender/threat-intelligence/security-copilot-and-defender-threat-intelligence.md",
+      "redirect_url": "/defender-xdr/security-copilot-and-defender-threat-intelligence",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender/threat-intelligence/infrastructure-chaining.md",
+      "redirect_url": "/defender-xdr/threat-analytics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender/threat-intelligence/searching-and-pivoting.md",
+      "redirect_url": "/defender-xdr/threat-analytics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender/threat-intelligence/sorting-filtering-and-downloading-data.md",
+      "redirect_url": "/defender-xdr/threat-analytics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender/threat-intelligence/using-tags.md",
+      "redirect_url": "/defender-xdr/threat-analytics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti.md",
+      "redirect_url": "/defender-xdr/defender-threat-intelligence",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender/threat-intelligence/using-copilot-threat-intelligence-defender-xdr.md",
+      "redirect_url": "/defender-xdr/defender-threat-intelligence",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender/threat-intelligence/learn-how-to-access-microsoft-defender-threat-intelligence-and-make-customizations-in-your-portal.md",
+      "redirect_url": "/defender-xdr/defender-threat-intelligence",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender/threat-intelligence/gathering-threat-intelligence-and-infrastructure-chaining.md",
+      "redirect_url": "/defender-xdr/gathering-threat-intelligence-and-infrastructure-chaining",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender/threat-intelligence/gathering-vulnerability-intelligence.md",
+      "redirect_url": "/defender-xdr/gathering-vulnerability-intelligence",
       "redirect_document_id": false
     },
     {
       "source_path": "defender/advanced-hunting-overview.md",
       "redirect_url": "/defender-xdr/advanced-hunting-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender/threat-intelligence/using-projects.md",
+      "redirect_url": "/unified-secops/cases-overview#link-indicators-preview",
       "redirect_document_id": false
     }
   ]

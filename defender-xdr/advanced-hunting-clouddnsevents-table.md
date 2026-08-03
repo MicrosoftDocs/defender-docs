@@ -58,6 +58,9 @@ For information on other tables in the advanced hunting schema, see [advanced hu
 | `DnsResponseCodeName` | `string` | The DNS response code name as defined by the Internet Assigned Numbers Authority (IANA). |
 | `DnsNetworkDuration` | `long` | The DNS request duration in milliseconds |
 | `TransactionIdHex` | `string` | The DNS unique hex transaction ID |
+| `ImageDigest` | `string` | The container's image digest |
+| `Region` | `string` | The geographical region where the cluster is located |
+| `HostName` | `string` | The node's hostname |
 | `AdditionalFields` | `dynamic` | Additional information about the entity or event |
 
 ## Sample query
