@@ -125,7 +125,7 @@ For advanced hunting in multitenant organizations, see [Quotas in advanced hunti
 
 ### Queries
 
-Advanced hunting uses UTC (Universal Time Coordinated) for all data.
+Advanced hunting uses UTC (Coordinated Universal Time) for all data.
 
 ![Screenshot of the custom time range option in advanced hunting query settings.](media/advanced-hunting-overview/custom-time-range.png)
 
