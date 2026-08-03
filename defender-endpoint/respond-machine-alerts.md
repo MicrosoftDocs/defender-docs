@@ -314,6 +314,21 @@ For more information about releasing devices, see [Isolate devices from the netw
 > [!NOTE]
 > If isolation is removed unexpectedly, check whether a time-limited undo window applies in your environment and review the action history for the release event.
 
+### Exclude devices from automatic device isolation
+
+You can exclude specific devices from automatic device isolation by using policy applications and exclusions. Create a new device tag or use an existing tag, assign the tag to the devices you want to exclude, and configure the policy application to exclude the **Isolate device** action for that tag.
+
+For detailed instructions, see [Policy applications and exclusions (Preview)](/defender-xdr/automatic-attack-disruption-exclusions#policy-applications-and-exclusions-preview).
+
+:::image type="content" source="media/policy-application-isolate-device-exclusion.png" alt-text="Screenshot of the Configure exclusions step with the Isolate device action excluded." lightbox="media/policy-application-isolate-device-exclusion.png":::
+
+When automatic attack disruption identifies an excluded device as compromised, the **Isolate device** action isn't performed. The action appears with a **Skipped** status in the Action center, and the device continues to operate normally.
+
+:::image type="content" source="media/isolate-device-action-skipped.png" alt-text="Screenshot of a skipped Isolate device action in the Action center." lightbox="media/isolate-device-action-skipped.png":::
+
+> [!IMPORTANT]
+> If you're running a breach and attack simulation (BAS) or another security validation exercise, you might want to temporarily exclude the **Isolate device** action. This exclusion allows the simulated attack to proceed without automatically isolating the affected devices.
+
 ### Forcibly release device from isolation
 
 The device isolation feature is an invaluable tool for safeguarding devices against external threats. However, there are instances when isolated devices become unresponsive.
