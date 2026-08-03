@@ -166,7 +166,7 @@ To create block entries for *spoofed senders*, see [Create block entries for spo
 Email from these blocked senders is marked as *high confidence phishing* and quarantined.
 
 > [!NOTE]
-> Currently, if the block entry doesn't use the syntax `*.TLD`, subdomains of the specified domain aren't blocked. For example, if you create a block entry for contoso.com, mail from marketing.contoso.com isn't also blocked. You need to create a separate block entry for marketing.contoso.com or use the `*.TLD` syntax, where TLD can be any top-level domain, internal domain, or email address domain.
+> Currently, a block entry for contoso.com blocks only contoso.com; it doesn’t block subdomains such as marketing.contoso.com. Similarly, a wildcard entry such as *.contoso.com blocks subdomains such as marketing.contoso.com, but it doesn’t block the specified domain contoso.com itself. To block both the specified domain and its subdomains, you need separate block entries for both values: contoso.com and *.contoso.com. The wildcard syntax *.TLD is supported, where TLD can be any top-level domain, internal domain, or email address domain.
 >
 > Users in the organization also can't *send* email to these blocked domains and addresses. The message is returned in the following non-delivery report (also known as an NDR or bounce message): `550 5.7.703 Your message can't be delivered because messages to XXX, YYY are blocked by your organization using Tenant Allow Block List.` The entire message is blocked for all internal and external recipients of the message, even if only one recipient email address or domain is defined in a block entry.
 
