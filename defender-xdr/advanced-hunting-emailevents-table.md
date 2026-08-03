@@ -12,11 +12,12 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+- msecd-doc-authoring-1015
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 07/03/2026
+ms.date: 08/03/2026
 ai-usage: ai-assisted
 ---
 
@@ -92,7 +93,9 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `IsFirstContact` | `int` | Whether the email was the first contact between the sender and recipient (1 if yes, 0 if no) |
 
 > [!NOTE]
->\* The `LatestDeliveryLocation` and `LatestDeliveryAction` columns are **not** available in the Streaming API. 
+> \* The `LatestDeliveryLocation` and `LatestDeliveryAction` columns are **not** available in the Streaming API.
+>
+> The Streaming API streams a new record whenever an email's verdict or delivery location changes. To return only the latest record for each email and recipient in a security information and event management (SIEM) solution, use `summarize arg_max(TimeGenerated, *) by NetworkMessageId, RecipientEmailAddress`.
 
 ## Related topics
 

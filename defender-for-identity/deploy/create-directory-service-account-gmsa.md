@@ -1,10 +1,10 @@
 ---
 title: Configure a gMSA directory service account for Defender for Identity
 description: Create and configure a group managed service account (gMSA) for use as the Directory service account in Microsoft Defender for Identity.
-ms.date: 06/15/2026
+ms.date: 08/03/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1015
 ai-usage: ai-assisted
 ---
 
@@ -57,12 +57,26 @@ Before you create the gMSA account, make sure the following prerequisites are me
     Add-KdsRootKey -EffectiveImmediately
     ```
 
-1. Run the PowerShell commands as an administrator. This script will: 
+    Although the command name suggests that the key takes effect immediately, wait 10 hours for the KDS root key to replicate and become available on all domain controllers.
+
+    If your test domain has only one domain controller, you can expedite the process by setting the key's effective time to 10 hours earlier.
+
+    > [!IMPORTANT]
+    > Don't use this technique in a production environment.
+
+    ```powershell
+    # For single-DC test environments only
+    Add-KdsRootKey -EffectiveTime (Get-Date).AddHours(-10)
+    ```
+
+1. Run the PowerShell commands as an administrator. This script will:
+
     - Create a gMSA account.
     - Create a group for the gMSA account.
     - Add the specified computer accounts to that group.
+    - Configure the gMSA to use AES128 and AES256 Kerberos encryption.
 
-1. Before running the script: 
+1. Before running the script:
 
     - Update the variable values to match your environment.
     - Make sure to give each gMSA a unique name for each forest or domain.
@@ -91,9 +105,12 @@ if ($gMSA_HostsGroupName -eq 'Domain Controllers') {
         ForEach-Object { Add-ADGroupMember -Identity $gMSA_HostsGroupName -Members $_ }
 }
 
+# Specify the Kerberos encryption type as AES.
+$kerberosEncType = ('AES128','AES256')
+
 # Create the gMSA:
 New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$env:USERDNSDOMAIN" `
- -PrincipalsAllowedToRetrieveManagedPassword $gMSA_HostsGroup
+ -PrincipalsAllowedToRetrieveManagedPassword $gMSA_HostsGroup -KerberosEncryptionType $kerberosEncType
 ```
 
 
@@ -189,5 +206,3 @@ To connect your sensors with your Active Directory domains, configure Directory 
 ## Troubleshooting
 
 For more information, see [Sensor failed to retrieve the gMSA credentials](../troubleshooting-known-issues.md#sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials).
-
-

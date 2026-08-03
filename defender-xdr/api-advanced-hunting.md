@@ -10,10 +10,12 @@ ms.collection:
  - tier3
  - must-keep
 ms.topic: reference
-ms.custom: api
-ms.date: 04/18/2025
+ms.custom: api, msecd-doc-authoring-1015
+ms.date: 08/03/2026
+ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender XDR
+#customer intent: As a security operations analyst, I want to run advanced hunting queries through an API so that I can automate threat hunting.
 ---
 
 # Microsoft Defender XDR Advanced hunting API
@@ -21,7 +23,9 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 > [!WARNING]
-> This advanced hunting API is an older version with limited capabilities. A more comprehensive version of the advanced hunting API is already available in the **[Microsoft Graph security API](/graph/api/resources/security-api-overview)**. See **[Advanced hunting using Microsoft Graph security API](/graph/api/resources/security-api-overview#advanced-hunting)**
+> This advanced hunting API is an older version with limited capabilities. A more comprehensive version of the advanced hunting API is available in the **[Microsoft Graph security API](/graph/api/resources/security-api-overview)**. For more information, see **[Advanced hunting using Microsoft Graph security API](/graph/api/resources/security-api-overview#advanced-hunting)**.
+>
+> The Microsoft Defender XDR advanced hunting API is transitioning to the Microsoft Graph security API, which provides broader data coverage, improved consistency, and better scalability for automation and security workflows. Retirement began in January 2026. After retirement completes, the Microsoft Defender XDR advanced hunting API no longer functions. For the retirement timeline, see [MC1220762](https://admin.microsoft.com/Adminportal/Home#/MessageCenter/:/messages/MC1220762). For migration guidance, see [Use the Microsoft Graph security API](/graph/api/resources/security-api-overview).
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
