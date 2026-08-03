@@ -77,10 +77,7 @@ When looking at using unified RBAC in managing your Microsoft Defender for Offic
 
 Azure B2B invited guests aren't supported by experiences that were previously under Microsoft Exchange Online RBAC. Since Defender for Office 365 unified RBAC leans on Exchange Online Admin APIs, actions performed in Defender for Office 365 have limitations. B2B guest admins might get errors when attempting to perform certain actions, such as:
 
-- Managing spam and phishing policies
-- Managing TABL
-- Can't release emails from quarantine
-- Missing Threat Explorer in navigation pane
+- Releasing email messages from quarantine.
 
 ### Manage entitlement
 
