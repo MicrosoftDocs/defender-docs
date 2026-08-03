@@ -1,6 +1,7 @@
 ---
 title: Microsoft Safety Scanner Download
 description: Download Microsoft Safety Scanner to run a manual malware scan on Windows and reverse changes made by identified threats. See requirements and how to scan.
+ms.reviewer: 
 keywords: security, malware
 ms.service: defender-endpoint
 ms.subservice: reference
