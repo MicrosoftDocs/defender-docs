@@ -47,8 +47,9 @@ Deploy the models required for the agentic code security integration.
 
      Deploy each model only once.
 
-   - **MAI-Augmented profile (Preview)**: This profile is currently available only for scans triggered through the Defender CLI. To use this profile, deploy the three models listed previously and:
-     - `MAI-Cyber-1-Flash`
+   - **MAI-Augmented profile (Preview)**:  To use this profile, deploy the three models listed previously and:
+   
+   - `MAI-Cyber-1-Flash`
             
 > [!NOTE]
 > A predefined list of model deployments is required for the integration to work. You must deploy all three models: `gpt-5.4`, `gpt-5.3-codex`, and `gpt-5.4-mini`.
