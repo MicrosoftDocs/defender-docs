@@ -10,7 +10,7 @@ ms.collection:
   - tier2
 description: Admins can learn about bulk email detection, including the bulk complain level (BCL) values that are used in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 07/31/2026
+ms.date: 08/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -21,7 +21,7 @@ appliesto:
 
 Microsoft 365 assigns a bulk complaint level (BCL) value to inbound messages from bulk senders. The BCL value is added to the message in an X-header and is similar to the [spam confidence level (SCL)](anti-spam-spam-confidence-level-scl-about.md) that identifies messages as spam. A higher BCL value indicates a bulk message is more likely to exhibit undesirable spam-like behavior. Microsoft uses both internal and external sources to identify bulk mail and determine the appropriate BCL value.
 
-Bulk senders vary in their sending patterns, content creation, and recipient acquisition practices. Good bulk senders send desired messages with relevant content to their subscribers. These messages generate few complaints from recipients. Other bulk senders send unsolicited messages that closely resemble spam and generate many complaints from recipients. Messages from a bulk sender are known as _bulk mail_ or _gray mail_.
+Bulk senders vary in their sending patterns, content, and recipient acquisition practices. Good bulk senders send desired messages with relevant content to their subscribers. These messages generate few complaints from recipients. Other bulk senders send unsolicited messages that closely resemble spam and generate many complaints from recipients. Messages from a bulk sender are known as _bulk mail_ or _gray mail_.
 
 Spam filtering marks messages as **Bulk email** based on the BCL threshold in anti-spam policies and takes the specified action on the message. For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md) and [What's the difference between junk email and bulk email?](anti-spam-spam-vs-bulk-about.md).
 
@@ -72,6 +72,9 @@ For more information, see [Bulk senders insight](anti-spam-bulk-senders-insight.
 
 ## Deliver bulk mail below the BCL threshold to the Promotions folder
 
+> [!NOTE]
+> The features described in this section are rolling out, and should be available in all organizations by mid-September.
+
 As previously described, the action for bulk mail that meets or exceeds the BCL threshold is defined in anti-spam policies. For example, deliver to the Junk Email folder or quarantine.
 
 But you can configure anti-spam policies to deliver bulk mail below the BCL threshold (even messages with the BCL value 0 identified as bulk) to a **Promotions** folder in supported versions of Outlook by using the **Bulk moves enabled** setting in anti-spam policies.
@@ -84,11 +87,11 @@ The system learns from user activity in the **Promotions** folder (moving messag
 > To prevent mail _from specific senders_ or _to specific recipients_ from receiving the **Promotions** tag, you need to [create a mail flow rule (transport rule)](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#create-a-mail-flow-rule) with the following settings:
 >
 > - **Set rule conditions** page:
->   - **Name**: For example, **Bulk mail ID**.
+>   - **Name**: For example, **Prevent Promotions tag**.
 >   - **Apply this rule if...**: Prevent mail from the specified senders or to the specified recipients from being tagged as **Promotions**. For example:
 >     - **The sender** \> **is external/internal**: Select **Outside the organization**.
 >     - **The sender** \> **address includes any of these words**: Enter text from the sender's email address.
->     - **The recipient** \> **is this person**> select one or more recipients.
+>     - **The recipient** \> **is this person** \> select one or more recipients.
 >
 >     For more information, see [Sender conditions in mail flow rules](/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions#senders).
 >
@@ -98,12 +101,12 @@ The system learns from user activity in the **Promotions** folder (moving messag
 >   - **Except if...**: Optionally, you can use exceptions to tag specific messages from the senders or to the recipients as **Promotions**.
 >   - **Set rule settings** page: Verify **Stop processing more rules** isn't selected.
 >
-> For Preview customers, the rule that set `X-MS-Exchange-Organization-BulkStamping` to the value`1` to tag messages as **Bulk** is no longer required.
+> For previous Preview customers, the rule that set `X-MS-Exchange-Organization-BulkStamping` to the value `1` to tag messages as **Bulk** is no longer required.
 
 To enable bulk mail delivery to the **Promotions** folder, do the following steps:
 
 > [!TIP]
-> The following procedures use different mail-enabled security groups to identify users who should and shouldn't get bulk mail delivered to the **Promotions** folder. Group membership is the only way for users to opt-in or opt-out of the feature _themselves_, provided the users are allowed join or leave the groups themselves.
+> The following procedures use different mail-enabled security groups to identify users who should and shouldn't get bulk mail delivered to the **Promotions** folder. Group membership is the only way for _users_ to opt-in or opt-out of the feature _themselves_, provided the users are allowed join or leave the groups themselves.
 >
 > If you aren't interested in giving users opt-in or opt-out control, you can configure the feature using admin controls only. For example, turn on **Bulk moves enabled** in all your current anti-spam policies (no need to create new opt-in or opt-out anti-spam policies).
 >
