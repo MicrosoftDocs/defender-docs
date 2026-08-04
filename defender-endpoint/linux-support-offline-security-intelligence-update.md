@@ -239,7 +239,7 @@ The `mdatp_managed.json` file is the managed configuration file that Defender fo
 
 ## Engine signature verification
 
-Starting with release `101.26062.xxxx`, Defender for Endpoint on Linux verifies the antivirus engine's digital signature before loading it. This default-on behavior helps protect your devices against tampered or unsigned engine files.
+Starting with release `101.26062.0005`, Defender for Endpoint on Linux verifies the antivirus engine's digital signature before loading it. This default-on behavior helps protect your devices against tampered or unsigned engine files.
 
 ### What you need to know
 
