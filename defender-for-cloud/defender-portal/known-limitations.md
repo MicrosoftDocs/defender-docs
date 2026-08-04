@@ -2,8 +2,9 @@
 title: Known limitations in the Defender portal
 description: Understand current limitations and known issues when using Microsoft Defender for Cloud in the Defender portal.
 ms.topic: reference
-ms.date: 04/28/2026
+ms.date: 08/04/2026
 ms.service: defender-for-cloud
+ms.custom: msecd-doc-authoring-1018
 ai-usage: ai-assisted
 ---
 
@@ -43,6 +44,7 @@ Restores your previous setup and permissions.
 
 - Cloud Secure Score history might show less than six months if tenant was recently onboarded.
 - The new Cloud Secure Score is only available in the Defender portal. The Azure portal continues to show the previous secure score model.
+- For the best experience and performance in the Azure portal, we recommend limiting each portal view to 10,000 resources or fewer. For larger environments, distribute AWS and GCP connectors among multiple Azure subscriptions. Use the Azure portal global filter to select the subscriptions you want to view. This recommendation doesn't apply to the Defender portal.
 
 ## Cloud scopes (preview)
 
