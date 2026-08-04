@@ -92,7 +92,7 @@ The `asim-parser-create-parser` skill generates the initial parameter-less ASIM 
 1. **Saves the parser** - Outputs a file named `ASim<Schema><Vendor><Product>.kql` and verifies it runs without syntax errors.
 
 > [!IMPORTANT]
-> The parser creation skills normalize each source record independently and preserve record cardinality. They don't use same-table or cross-table enrichment, one-to-many fan-out, `mv-*` operators, or aggregation and reaggregation operators such as `summarize`. If a field requires one of these patterns, correct the connector or source event shape, or leave a nonmandatory field unmapped. For detailed guidance, see [Develop ASIM parsers](/azure/sentinel/normalization-develop-parsers#keep-parser-operations-record-local).
+> The parser creation skills normalize each source record independently and preserve record cardinality. Query-local static mappings created with `datatable` and applied with `lookup` are allowed when each lookup key is unique. The skills don't use same-table or cross-table event enrichment, one-to-many fan-out, `mv-*` operators, or event-record aggregation and reaggregation operators such as `summarize`. If a field requires one of these prohibited patterns, correct the connector or source event shape, or leave a nonmandatory field unmapped. For detailed guidance, see [Develop ASIM parsers](/azure/sentinel/normalization-develop-parsers#keep-parser-operations-record-local).
 
 ### Validation
 

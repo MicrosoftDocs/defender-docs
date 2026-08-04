@@ -89,12 +89,12 @@ A custom parser is a KQL query developed in the Microsoft Sentinel **Logs** page
 
 Normalize each source record independently. A source record can produce zero records after filtering or one normalized record.
 
-- Read only the declared source table. Don't perform same-table or cross-table enrichment with a second table read, `join`, `lookup`, a secondary `union` branch, `externaldata`, a watchlist function, or an inline `datatable` mapping.
+- Read event records from only the declared source table. Don't perform same-table or cross-table event enrichment with a second table read, event-record `join`, workspace-table or watchlist reference, `externaldata`, or another external tabular source.
 - Preserve record cardinality. Don't turn one source record into multiple normalized records. If the source combines multiple logical events in one record, correct the connector or source event format.
 - Don't use any `mv-*` operator, including `mv-expand` and `mv-apply`.
-- Don't correlate, deduplicate, aggregate, or reaggregate records with `summarize`, `distinct`, `arg_min`, `arg_max`, or an equivalent operation.
+- Don't correlate, deduplicate, aggregate, or reaggregate event records with `summarize`, `distinct`, `arg_min`, `arg_max`, or an equivalent operation.
 
-Use scalar expressions, direct access to dynamic values, and values available in the current row. If a field can't be mapped without a prohibited pattern, correct the connector or source event shape, or leave a nonmandatory field unmapped.
+Query-local static mappings created with `datatable` and applied with `lookup` are allowed when each lookup key is unique. Use scalar expressions, direct access to dynamic values, and values available in the current row. If a field can't be mapped without a prohibited pattern, correct the connector or source event shape, or leave a nonmandatory field unmapped.
 
 ### Filtering
 
@@ -207,7 +207,7 @@ For example, the original unique event ID may be sent as an integer, but ASIM re
 
 #### Derived fields and values
 
-The value of the source field, once extracted, might need to be mapped to the set of values specified for the target schema field. Use scalar expressions such as `iff` and `case` to map available data to target values. Don't use the `lookup` operator or an inline `datatable` mapping.
+The value of the source field, once extracted, might need to be mapped to the set of values specified for the target schema field. Use scalar expressions such as `iff` and `case`, or a query-local static `datatable` with `lookup`, to map available data to target values.
 
 For example, the Microsoft DNS parser derives a normalized success or failure outcome from source-specific event and response codes. The parser assigns the `EventResult` field based on the Event ID and Response Code using an `iff` statement, as follows:
 
@@ -223,6 +223,18 @@ Use `case` when a source value can map to several normalized values. For example
     Proto == 17, "UDP",
     ""
 )
+```
+
+For larger static mappings, define a query-local dimension table and apply it with `lookup`. The right side of the lookup must be a locally defined static `datatable`, not a workspace table, watchlist, or external data source. Define only one row for each lookup key so one source record can't produce multiple normalized records. For example:
+
+```kusto
+let NetworkProtocolLookup = datatable(Proto:real, NetworkProtocol:string)
+[
+    6, "TCP",
+    17, "UDP"
+];
+...
+| lookup NetworkProtocolLookup on Proto
 ```
 
 #### Enrichment fields
