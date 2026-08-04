@@ -35,7 +35,7 @@ The page includes a left panel where you select the identity source you want to 
 
 - **Active Directory**: Available on all four tabs.
 - **Microsoft Entra ID**: Available on the Leaked Credentials tab.
-- **Okta**: Available on the Password Hygiene and Password Policies tabs.
+- **Okta (preview)**: Available on the Password Hygiene and Password Policies tabs.
 - **SaaS apps (Preview)**: Available on the Password Hygiene and Password Policies tabs for SaaS apps connected to Microsoft Defender for Cloud Apps that support SaaS Security Posture Management (SSPM), such as Salesforce and ServiceNow. For the full list, see [security configuration visibility per connected app](/defender-cloud-apps/enable-instant-visibility-protection-and-governance-actions-for-your-apps#user-app-governance-and-security-configuration-visibility).
 
 The page has four tabs:
