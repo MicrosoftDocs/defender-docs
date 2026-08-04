@@ -45,7 +45,7 @@ Before you connect your AWS account, make sure you have:
 Additional requirements apply when enabling specific Defender plans. Review the [native connector plan requirements](#native-connector-plan-requirements).
 
 > [!NOTE]
-> For the best experience and performance in the Azure portal, we recommend limiting each portal view to 50,000 resources or fewer. For larger AWS environments, distribute AWS connectors among multiple Azure subscriptions. Use the Azure portal global filter to select the subscriptions you want to view. This recommendation doesn't apply to the Defender portal.
+> For the best experience and performance in the Azure portal, we recommend limiting each portal view to 10,000 resources or fewer. For larger AWS environments, distribute AWS connectors among multiple Azure subscriptions. Use the Azure portal global filter to select the subscriptions you want to view. This recommendation doesn't apply to the Defender portal.
 
 > [!NOTE]
 > The AWS connector isn't available on the national government clouds (Azure Government, Microsoft Azure operated by 21Vianet).

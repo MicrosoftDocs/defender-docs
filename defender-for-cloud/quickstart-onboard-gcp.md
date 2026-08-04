@@ -52,7 +52,7 @@ When connecting GCP projects to Azure subscriptions, consider the following:
 - You can connect multiple GCP projects across multiple Azure subscriptions.
 
 > [!NOTE]
-> For the best experience and performance in the Azure portal, we recommend limiting each portal view to 50,000 resources or fewer. For larger GCP environments, distribute GCP connectors among multiple Azure subscriptions. Use the Azure portal global filter to select the subscriptions you want to view. This recommendation doesn't apply to the Defender portal.
+> For the best experience and performance in the Azure portal, we recommend limiting each portal view to 10,000 resources or fewer. For larger GCP environments, distribute GCP connectors among multiple Azure subscriptions. Use the Azure portal global filter to select the subscriptions you want to view. This recommendation doesn't apply to the Defender portal.
 
 Learn more about the [Google Cloud resource hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy#resource-hierarchy-detail).
 
