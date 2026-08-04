@@ -2,7 +2,7 @@
 title: Connect your AWS Account
 description: Defend your AWS resources with Microsoft Defender for Cloud, a guide to set up and configure Defender for Cloud to protect your workloads in AWS.
 ms.topic: install-set-up-deploy
-ms.date: 08/03/2026
+ms.date: 08/04/2026
 ms.custom: msecd-doc-authoring-1018
 ai-usage: ai-assisted
 ---
@@ -45,7 +45,7 @@ Before you connect your AWS account, make sure you have:
 Additional requirements apply when enabling specific Defender plans. Review the [native connector plan requirements](#native-connector-plan-requirements).
 
 > [!NOTE]
-> For the best experience and performance in the Azure portal, we recommend limiting each portal view to 100,000 resources or fewer. For larger AWS environments, distribute AWS connectors among multiple Azure subscriptions. Use the Azure portal global filter to select the subscriptions you want to view. This recommendation doesn't apply to the Defender portal.
+> For the best experience and performance in the Azure portal, we recommend limiting each portal view to 50,000 resources or fewer. For larger AWS environments, distribute AWS connectors among multiple Azure subscriptions. Use the Azure portal global filter to select the subscriptions you want to view. This recommendation doesn't apply to the Defender portal.
 
 > [!NOTE]
 > The AWS connector isn't available on the national government clouds (Azure Government, Microsoft Azure operated by 21Vianet).
