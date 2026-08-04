@@ -1,9 +1,8 @@
 ---
 title: Deploying Microsoft Defender for Endpoint on macOS with Iru
-Description: Deploying Microsoft Defender for Endpoint on macOS with Iru
+description: Deploying Microsoft Defender for Endpoint on macOS with Iru
 ms.service: defender-endpoint
 author: Paul Edmondson-Jones
-ms.author: N/A
 ms.reviewer: N/A
 ms.localizationpriority: medium
 ms.collection:
@@ -31,4 +30,3 @@ Learn how to deploy Microsoft Defender for Endpoint on macOS with Iru.
 - [Build the Config MobileConfig file](./mac-iru-build-config-mobileconfig.md)
 - [Assign the items to a blueprint](./mac-iru-blueprint-assignment.md)
 - [(Optional) Configure Iru to install Defender during Onboarding](./mac-iru-install-during-onboarding-ade.md)
-- [(Optional) IruCtl deployment](./mac-iru-iructl-deployment.md)

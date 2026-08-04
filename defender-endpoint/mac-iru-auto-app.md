@@ -2,8 +2,7 @@
 title: Configure the Microsoft Defender Auto App for Iru
 description: Prepare the Microsoft Defender Auto App to deploy to Mac endpoints using Iru
 ms.service: defender-endpoint
-author: Paul Edmondson-Jones
-ms.author: N/A
+author: paul-ej
 ms.reviewer: N/A
 ms.localizationpriority: medium
 ms.collection:
@@ -17,7 +16,6 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
-ai-usage: N/A
 ---
 
 # Set up Microsoft Defender as an Auto App

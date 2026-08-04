@@ -2,8 +2,7 @@
 title: Configure the Microsoft Defender permissions profile for Iru
 description: Prepare the combined macOS permissions profile required to run Microsoft Defender for Endpoint on devices managed with Iru.
 ms.service: defender-endpoint
-author: Paul Edmondson-Jones
-ms.author: N/A
+author: paul-ej
 ms.reviewer: N/A
 ms.localizationpriority: medium
 ms.collection:

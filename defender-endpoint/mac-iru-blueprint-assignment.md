@@ -2,7 +2,7 @@
 title: Assign Microsoft Defender to a blueprint
 description: Assign Microsoft Defender for installation to Mac devices
 ms.service: defender-endpoint
-author: Paul Edmondson-Jones
+author: paul-ej
 ms.author: N/A
 ms.reviewer: N/A
 ms.localizationpriority: medium
@@ -17,14 +17,13 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
-ai-usage: N/A
 ---
 
 # Pre-requisites
 
 - Access to Iru console
 
-# Assigning the items to a blueprint
+## Assigning the items to a blueprint
 
 1. Log into your Iru console
 
