@@ -223,9 +223,6 @@ The `mdatp_managed.json` file is the managed configuration file that Defender fo
     "offlineDefinitionUpdateUrl": "http://172.22.199.67:8000/linux/production/",
     "offlineDefinitionUpdateFallbackToCloud":false,
     "offlineDefinitionUpdate": "enabled"
-  },
-  "features": {
-    "offlineDefinitionUpdateVerifySig": "enabled"
   }
 }
 ```
@@ -237,9 +234,34 @@ The `mdatp_managed.json` file is the managed configuration file that Defender fo
 | `offlineDefinitionUpdateUrl`              | String               | URL value generated as part of the mirror server setup. This can be either in terms of the remote server URL or a directory (local/remote mount point). See [Host the offline security intelligence updates on the mirror server](#host-the-offline-security-intelligence-updates-on-the-mirror-server) for information about how to specify this path.|
 | `offlineDefinitionUpdate`                 | `enabled`/`disabled`   | When set to `enabled`, the offline security intelligence update feature is enabled, and vice versa. |
 | `offlineDefinitionUpdateFallbackToCloud`  | `True`/`False`         | Determine Defender for Endpoint security intelligence update approach when offline mirror server fails to serve the update request. If set to `true`, the update is retried via the Microsoft cloud when offline security intelligence update failed; else, vice versa. |
-| `offlineDefinitionUpdateVerifySig`        | `enabled`/`disabled`     | When set to `enabled`, downloaded definitions are verified on the endpoints; else, vice versa. **This setting is enabled by default starting from version 101.25092.0005, and therefore is not available for configuration in the Defender portal**. |
 
 ---
+
+## Engine signature verification
+
+Starting with release `101.26062.xxxx`, Defender for Endpoint on Linux verifies the antivirus engine's digital signature before loading it. This default-on behavior helps protect your devices against tampered or unsigned engine files.
+
+### What you need to know
+
+- Signature verification is enabled automatically on new installations and upgrades. No separate action is required.
+- If an engine file fails signature verification, Defender for Endpoint doesn't load it.
+- The `offlineDefinitionUpdateVerifySig` setting is deprecated and no longer has any effect. If your managed configuration uses this setting, no replacement action is required because engine signature verification is enabled by default.
+
+Run the following commands to view the signature verification state:
+
+```bash
+mdatp health --details definitions
+mdatp health --details features
+```
+
+The relevant fields appear in both command outputs:
+
+```console
+offline_definition_update_verify_sig : "DEPRECATED"
+engine_signature_verification        : "enabled"
+```
+
+Values such as the definitions version, timestamps, and update source URI vary by device.
 
 ### Verify the configuration
 
@@ -262,7 +284,8 @@ definitions_update_source_uri               : "https://go.microsoft.com/fwlink/?
 definitions_update_fail_reason              : ""
 offline_definition_url_configured           : "http://172.XX.XXX.XX:8000/linux/production/" [managed]
 offline_definition_update                   : "enabled" [managed]
-offline_definition_update_verify_sig        : "enabled"
+offline_definition_update_verify_sig        : "DEPRECATED"
+engine_signature_verification               : "enabled"
 offline_definition_update_fallback_to_cloud : false[managed]
 ```
 
@@ -314,7 +337,7 @@ If updates fail, are stuck, or don't start, follow these steps to troubleshoot:
 
    Look for information in the `definitions_update_fail_reason` section.
 
-1. Make sure that `offline_definition_update` and `offline_definition_update_verify_sig` are enabled.
+1. Make sure that `offline_definition_update` and `engine_signature_verification` are enabled.
 
 1. Make sure that `definitions_update_source_uri` is equal to `offline_definition_url_configured`.
 
@@ -339,4 +362,3 @@ If updates fail, are stuck, or don't start, follow these steps to troubleshoot:
 - [Linux resources](linux-resources.md)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Configure security settings and policies for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
-

@@ -29,6 +29,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|Linux  |101.26062.0005  |August 2026 |- Release version: 30.126052.0012.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates](#linux--aug-2026--101260620005) |
 |macOS |101.26062.0009  |July 2026 |- Release version: 20.126062.9.0<br>- Engine version: 1.1.26050.3000<br>- Signature version: 1.455.265.0 |[Release details and updates](#macos--july-2026--101260620009) |
 |Android |1.0.9107.0101|July 2026|- Build: 1.0.9107.0101<br>- Release: July 21, 2026|[Release details and updates](#android--july-2026--platform-1091070101)|
 |iOS |1.1.79080103|July 2026|- Build: 1.1.79080103<br>- Release: July 20, 2026|[Release details and updates](#ios--july-2026--platform-version-1179080103)|
@@ -518,6 +519,22 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 ### Linux known issues
 
 [!INCLUDE [Linux 101.26012.0007 known issue](includes/linux-build-issue.md)]
+
+### Linux | Aug 2026 | 101.26062.0005
+
+#### Release details
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|30.126052.0012.0 |1.1.26040.3001 |1.449.136.0 |
+
+#### Enhancements and features
+
+|Feature area | Update summary |
+|--------------|---------------|
+|Bug fix | We identified an issue in Microsoft Defender for Endpoint on Linux where on-demand scans (quick, full, and custom) could take longer than expected or appear to stall. This was caused by a regression introduced in a recent update that, under certain configurations, delayed scan completion. Although protection was not impacted, the fix is included in the current release version. |
+| Visibility | **Engine signature verification is now enabled by default.** Starting with release `101.26062.xxxx`, Defender for Endpoint on Linux verifies the antivirus engine's digital signature before loading it, protecting against tampered or unsigned engine files. It's enabled automatically on new installations and upgrades, and an engine that fails verification isn't loaded. `mdatp health` adds an `engine_signature_verification` field and now reports the retired `offline_definition_update_verify_sig` as `DEPRECATED`. |
+| Visibility | Fixed an issue where `mdatp health status` showed a device as healthy after it was offboarded. |
 
 ### Linux | July 2026 | 101.26052.0012
 
@@ -1222,6 +1239,4 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 - Fixed NisSrv self-healing when the service crosses memory thresholds.
 - Improved encrypted PDF scanning.
 - Fixed `Get-MpPerformanceReport` JSON parsing failures.
-
-
 
