@@ -15,7 +15,7 @@ ms.custom:
 appliesto:
     - Microsoft Defender XDR
 ms.topic: reference
-ms.date: 02/19/2026
+ms.date: 08/04/2026
 ---
 
 # OAuthAppInfo (Preview)
@@ -25,7 +25,7 @@ ms.date: 02/19/2026
 
 The `OAuthAppInfo` table in the advanced hunting schema contains information about Microsoft 365-connected OAuth applications in the organization that are registered with Microsoft Entra ID and available in the Microsoft Defender for Cloud Apps app governance capability. 
 
-The `OAuthAppInfo` table might not include all the app or service principal-related properties that are available on Entra ID. It also doesn't include data related to Microsoft first-party apps or apps without any OAuth consents. The coverage of the table is based on the existing scope of Microsoft 365-connected apps covered by app governance. 
+The `OAuthAppInfo` table might not include all the app or service principal-related properties that are available on Entra ID. It also doesn't include data related to Microsoft first-party apps or Entra managed identities. The coverage of the table is based on the existing scope of Microsoft 365-connected apps covered by app governance. 
 
 ## Prerequisites
 
@@ -55,6 +55,8 @@ For information on other tables in the advanced hunting schema, see [the advance
 | `AppOrigin` | `string` | Specifies whether the app is internal to the organization or registered in an external tenant|
 | `LastUsedTime` | `datetime` | Date and time when the app last signed in. Tracking of this data goes back to June, 2022| 
 | `AppOwnerTenantId` | `string` |Specifies the ID of the tenant where the app was registered|
+| `RiskScore` | `integer` | The risk score of the app as calculated by Microsoft Defender|
+| `AssignedRoles` | `dynamic` | Active roles assigned to the service principal. This currently covers only Entra roles.|
 
 
 The `OAuthAppInfo` table updates information on an hourly basis to record any changes in metadata or insights for OAuth apps based on data from Defender for Cloud Apps app governance. 
