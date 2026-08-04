@@ -192,6 +192,7 @@ The following parameters control Audit Log collection behavior.
 | Parameter | Description | Allowed values | Default value |
 |-----------|-------------|----------------|---------------|
 | **force-audit-log-to-read-from-all-clients** | Determines whether the Audit Log is read from all clients. | **true**: Read from all clients, **false**: Not read from all clients | **false** |
+| **force-sal-filesystem** | Enables Security Audit Log filesystem-only optimization. When set to **true**, the connector uses both `ID_FILESYSTEM_SEL_ONLY` and `ID_FILE_SEL_SIMPLE` for retrieval. | **true**: Enabled, **false**: Disabled | **false** |
 | **max-rows** | Acts as a safeguard that limits the number of Audit Log records processed in a single data collection window. This parameter no longer applies to Change Docs collection. | Integer, between **1**-**1000000** | **150000** |
 
 #### Change Docs parameters
