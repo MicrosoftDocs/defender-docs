@@ -70,7 +70,7 @@ This section details the Microsoft Security Copilot agents that are available in
 
 - [Security Alert Triage Agent (Preview)](#security-alert-triage-agent-preview)
 - [Threat Intelligence Briefing Agent](#threat-intelligence-briefing-agent)
-- [Threat Hunting Assistant](#threat-hunting-agent)
+- [Threat Hunting Assistant](#threat-hunting-assistant)
 - [Security Analyst Agent](#security-analyst-agent)
 - [Dynamic Threat Detection Agent](#dynamic-threat-detection-agent)
 
