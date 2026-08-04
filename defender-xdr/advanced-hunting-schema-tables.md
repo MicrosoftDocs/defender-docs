@@ -104,7 +104,7 @@ The following reference lists all the tables in the schema. Each table name link
 | **[EntraIdSpnSignInEvents](advanced-hunting-entraidspnsigninevents-table.md)** | Microsoft Entra service principal and managed identity sign-ins |	
 | **[ExposureGraphEdges](advanced-hunting-exposuregraphedges-table.md)** | Microsoft Security Exposure Management exposure graph edge information provides visibility into relationships between entities and assets in the graph |	
 | **[ExposureGraphNodes](advanced-hunting-exposuregraphnodes-table.md)** | Microsoft Security Exposure Management exposure graph node information, about organizational entities and their properties |	
-| **[FileMaliciousContentInfo](advanced-hunting-emailurlinfo-table.md)** (Preview) | Files that were processed by Microsoft Defender for Office 365 in SharePoint Online, OneDrive, and Microsoft Teams.  |	
+| **[FileMaliciousContentInfo](advanced-hunting-filemaliciouscontentinfo-table.md)** (Preview) | Files that were processed by Microsoft Defender for Office 365 in SharePoint Online, OneDrive, and Microsoft Teams. |
 | **[GraphAPIAuditEvents](advanced-hunting-graphapiauditevents-table.md)** | Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant |
 | **[IdentityAccountInfo](advanced-hunting-identityaccountinfo-table.md)** | Account information from various sources, including Microsoft Entra ID. This table also includes information and link to the identity that owns the account. |	
 | **[IdentityDirectoryEvents](advanced-hunting-identitydirectoryevents-table.md)** | Events involving an on-premises domain controller running Active Directory (AD). This table covers a range of identity-related events and system events on the domain controller. |	

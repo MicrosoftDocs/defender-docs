@@ -3,8 +3,11 @@ title: Microsoft Defender portal implementation guide for Managed Security Servi
 description: Implementation guide for partners and SOC architects implementing Microsoft Defender portal with multitenant management capabilities.
 author: guywi-ms
 ms.author: guywild
-ms.date: 12/20/2025
+ms.date: 08/03/2026
 ms.topic: concept-article
+ms.custom: msecd-doc-authoring-1015
+ai-usage: ai-assisted
+#customer intent: As an MSSP security architect, I want to implement multitenant management in the Microsoft Defender portal so that I can manage customer security operations.
 ---
 
 # Microsoft Defender portal implementation guide for MSSPs
@@ -74,10 +77,7 @@ When looking at using unified RBAC in managing your Microsoft Defender for Offic
 
 Azure B2B invited guests aren't supported by experiences that were previously under Microsoft Exchange Online RBAC. Since Defender for Office 365 unified RBAC leans on Exchange Online Admin APIs, actions performed in Defender for Office 365 have limitations. B2B guest admins might get errors when attempting to perform certain actions, such as:
 
-- Managing spam and phishing policies
-- Managing TABL
-- Can't release emails from quarantine
-- Missing Threat Explorer in navigation pane
+- Releasing email messages from quarantine.
 
 ### Manage entitlement
 
@@ -307,7 +307,11 @@ Once the tenants are onboarded to multitenant management in Defender (MTO), endp
 
 #### Email and collaboration tools 
 
-When managing email and collaboration tools in the unified portal, there are some important distinctions to note around capabilities as they relate to managing customers through B2B and Granular Delegated Admin Privileges (GDAP).
+When you manage email and collaboration workloads in customer tenants, available capabilities depend on whether you use Microsoft Entra B2B or granular delegated admin privileges (GDAP).
+
+> [!NOTE]
+> - **Microsoft Entra B2B**: Invited guests might encounter limitations in Microsoft Defender for Office 365 actions that depend on Exchange Online role-based access control (RBAC). For examples, see [Azure B2B](#azure-b2b).
+> - **GDAP**: Access depends on the workloads and Microsoft Entra roles configured in the GDAP relationship. Review [workloads supported by GDAP](/partner-center/customers/gdap-supported-workloads) and [GDAP role guidance](/partner-center/customers/gdap-least-privileged-roles-by-task).
 
 #### Identities
 

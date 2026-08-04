@@ -2,7 +2,7 @@
 title: Alert policies in the Microsoft Defender portal
 ms.author: guywild
 author: guywi-ms
-ms.date: 05/21/2026
+ms.date: 08/03/2026
 ms.topic: article
 ms.service: defender-xdr
 ms.localizationpriority: medium
@@ -14,7 +14,10 @@ ms.custom:
   - admindeeplinkCOMPLIANCE
   - admindeeplinkDEFENDER
   - sfi-image-nochange
+  - msecd-doc-authoring-1015
+ai-usage: ai-assisted
 description: "Create alert policies in the Microsoft Defender portal to monitor potential threats."
+#customer intent: As a security administrator, I want to understand alert policy settings and conditions so that I can monitor activities and investigate alerts in my organization.
 ---
 
 # Alert policies in the Microsoft Defender portal
@@ -129,6 +132,13 @@ The tables also indicate the Office 365 Enterprise and Office 365 US Government 
 
 > [!NOTE]
 > The unusual activity monitored by some of the built-in policies is based on the same process as the alert threshold setting that was previously described. Microsoft establishes a baseline value that defines the normal frequency for "usual" activity. Alerts are then triggered when the frequency of activities tracked by the built-in alert policy greatly exceeds the baseline value.
+
+> [!IMPORTANT]
+> Some default alert policies include filters that aren't visible in the Microsoft Defender portal. These filters can affect whether activities match the policy conditions and trigger an alert. To view the properties of a default alert policy that aren't displayed in the portal, use the [**Get-ProtectionAlert**](/powershell/module/exchangepowershell/get-protectionalert) cmdlet in [Security & Compliance PowerShell](/powershell/exchange/scc-powershell). Use the _IncludeRuleXml_ switch if you also need the underlying rule definition. The following example returns all default output properties for a policy:
+>
+> ```powershell
+> Get-ProtectionAlert -Identity "<PolicyName>" | Format-List
+> ```
 
 ### Information governance alert policies
 
