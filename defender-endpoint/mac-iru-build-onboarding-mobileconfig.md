@@ -2,8 +2,8 @@
 title: Configure the tenant onboarding profile for Microsoft Defender for Endpoint
 description: Prepare a tenant-specific mobileconfig profile to onboard Microsoft Defender for Endpoint on macOS devices managed with Iru.
 ms.service: defender-endpoint
-author: Paul Edmondson-Jones
-ms.author: N/A
+author: paul-ej
+ms.author: 
 ms.reviewer: N/A
 ms.localizationpriority: medium
 ms.collection:
@@ -124,4 +124,4 @@ mdatp health --field org_id
 
 A successful onboarding returns the identifier for your Microsoft Defender for Endpoint organization. If the value is blank or `unavailable`, confirm that the profile is assigned to the device and that the nested `PayloadType` is exactly `com.microsoft.wdav.atp`. For more troubleshooting guidance, see [Deployment with a different Mobile Device Management system](mac-install-with-other-mdm.md#check-that-all-profiles-are-deployed).
 
-Once complete, proceed to [mac-iru-build-config-mobileconfig](./mac-iru-build-config-mobileconfig.md)
+Once complete, proceed to [Configure the Microsoft Defender permissions profile for Iru](./mac-iru-build-config-mobile-config.md).

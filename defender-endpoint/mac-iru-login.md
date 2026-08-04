@@ -2,8 +2,8 @@
 title: Sign in to Iru
 description: Sign in to the Iru console and navigate to Devices to configure Microsoft Defender for Endpoint on macOS
 ms.service: defender-endpoint
-author: Paul Edmondson-Jones
-ms.author: N/A
+author: paul-ej
+ms.author: 
 ms.reviewer: N/A
 ms.localizationpriority: medium
 ms.collection:
@@ -17,8 +17,6 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 ms.custon: sfi-image-nochange, msecd-doc-authoring-1014
-
-ai-usage: none
 ---
 
 # Sign in to Iru to set up Microsoft Defender for Endpoint on macOS

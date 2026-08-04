@@ -3,7 +3,7 @@ title: Assign Microsoft Defender to a blueprint
 description: Assign Microsoft Defender for installation to Mac devices
 ms.service: defender-endpoint
 author: paul-ej
-ms.author: N/A
+ms.author: 
 ms.reviewer: N/A
 ms.localizationpriority: medium
 ms.collection:

@@ -1,9 +1,9 @@
 ---
 title: Deploying Microsoft Defender for Endpoint on macOS with Iru during Automated Device Enrolment (ADE)
-Description: Deploying Microsoft Defender for Endpoint on macOS with Iru utilising Automated Device Enrolment (ADE), to install during device setup
+description: Deploying Microsoft Defender for Endpoint on macOS with Iru utilising Automated Device Enrolment (ADE), to install during device setup
 ms.service: defender-endpoint
 author: paul-ej
-ms.author: N/A
+ms.author: 
 ms.reviewer: N/A
 ms.localizationpriority: medium
 ms.collection:
@@ -16,7 +16,6 @@ ms.date: 07/30/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
 
 # Overview

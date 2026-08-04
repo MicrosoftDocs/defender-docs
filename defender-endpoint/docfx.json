@@ -76,6 +76,18 @@
       }
     },
     "template": [],
-    "dest": "defender-endpoint"
+    "dest": "defender-endpoint",
+    "rules": {
+      "filename-incomplete": {
+        "exclude": [
+          "*-iru-*.md",
+          "*-iru.md",
+          "iru-*.md",
+          "*-kandji-*.md",
+          "*-kandji.md",
+          "kandji-*.md"
+        ]
+      }
+    }
   }
 }
