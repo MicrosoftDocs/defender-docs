@@ -1,17 +1,17 @@
 ---
-title: Password protection in Microsoft Defender (Preview)
+title: Password protection in Microsoft Defender
 description: Learn how the Password protection page in Microsoft Defender helps you find leaked credentials, exposed passwords, and weak password policies across your identity sources.
 #customer intent: As a security admin, I want to see password-related risks across my identity sources so that I can find exposed credentials, weak policies, and configuration issues and take action to reduce risk.
 author: AbbyMSFT
 ms.author: abbyweisberg
-ms.date: 07/02/2026
+ms.date: 08/04/2026
 ms.topic: concept-article
 ms.service: defender-xdr
 ms.custom: msecd-doc-authoring-106
 ai-usage: ai-assisted
 ---
 
-# Investigate identity password protection (Preview)
+# Investigate identity password protection
 
 Compromised credentials remain one of the most common ways attackers gain initial access, even in environments that use multifactor authentication and modern authentication protocols. Password risks are often spread between different tools and identity providers, which can make it difficult for security teams to assess exposure and prioritize remediation.
 
@@ -35,8 +35,8 @@ The page includes a left panel where you select the identity source you want to 
 
 - **Active Directory**: Available on all four tabs.
 - **Microsoft Entra ID**: Available on the Leaked Credentials tab.
-- **Okta**: Available on the Password Hygiene and Password Policies tabs.
-- **SaaS apps**: Available on the Password Hygiene and Password Policies tabs for SaaS apps connected to Microsoft Defender for Cloud Apps that support SaaS Security Posture Management (SSPM), such as Salesforce and ServiceNow. For the full list, see [security configuration visibility per connected app](/defender-cloud-apps/enable-instant-visibility-protection-and-governance-actions-for-your-apps#user-app-governance-and-security-configuration-visibility).
+- **Okta (preview)**: Available on the Password Hygiene and Password Policies tabs.
+- **SaaS apps (Preview)**: Available on the Password Hygiene and Password Policies tabs for SaaS apps connected to Microsoft Defender for Cloud Apps that support SaaS Security Posture Management (SSPM), such as Salesforce and ServiceNow. For the full list, see [security configuration visibility per connected app](/defender-cloud-apps/enable-instant-visibility-protection-and-governance-actions-for-your-apps#user-app-governance-and-security-configuration-visibility).
 
 The page has four tabs:
 
