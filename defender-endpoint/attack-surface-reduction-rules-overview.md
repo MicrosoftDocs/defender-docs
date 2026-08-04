@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 07/08/2026
+ms.date: 08/04/2026
 ai-usage: ai-assisted
 #customer intent: As an IT admin, I want to understand attack surface reduction rules so I can protect Windows devices from common malware attack vectors.
 appliesto:
@@ -170,6 +170,11 @@ An ASR rule can be in one of the following modes as described in the following t
 |**Audit** or <br/> **Audit mode**|2|The ASR rule is enabled as if in **Block** mode, but without taking action. <br/><br/> Detections for ASR rules in **Audit** mode are available in the following locations: <ul><li>Event IDs 1122, 1125, 1132, and 1134 in [Windows Event Viewer](attack-surface-reduction-windows-events.md#browse-attack-surface-reduction-events-in-windows-event-viewer).</li><li>[Advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview): <br><code>DeviceEvents<br>&#124; where ActionType startswith "Asr"<br>&#124; where ActionType endswith "Audited"</code></li><li>The [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md).</li></ul>|
 |**Not configured**|5|The ASR rule isn't explicitly enabled. <br/><br/> This value is functionally equivalent to **Disabled** or **Off**, but without the potential for rule conflicts.|
 |**Warn** or <br/> **Warning**|6|The ASR rule is enabled as if in **Block** mode, but users can select **Unblock** in the warning notification pop-up to bypass the block for 24 hours. After 24 hours, the user needs to bypass the block again. <br/><br/> **Warn** mode is supported in Windows 10 version 1809 (November 2018) or later. ASR rules in **Warn** mode on unsupported versions of Windows are effectively in **Block** mode (bypass isn't available). <br/><br/> **Warn** mode isn't available in Microsoft Configuration Manager. <br/><br/> **Warn** mode has the following Microsoft Defender Antivirus version requirements: <ul><li>**Platform release**: 4.18.2008.9 (August 2020) or later.</li><li>**Engine release**: 1.1.17400.5 (August 2020) or later.</li></ul> <br/> The following ASR rules don't support **Warn** mode: <ul><li>[Block credential stealing from the Windows local security authority subsystem](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem)</li><li>[Block Office applications from injecting code into other processes](attack-surface-reduction-rules-reference.md#block-office-applications-from-injecting-code-into-other-processes)</li></ul>|
+
+> [!IMPORTANT]
+> Administrator approval is now required to use the **Unblock** option when overriding an ASR rule configured in **Warn** mode. This change was introduced in platform version 4.18.26060.
+>
+> If you require a persistent exclusion, configure a [per-ASR rule exclusion](#file-and-folder-exclusions-for-asr-rules). The **Unblock** option is intended for temporary suppression only and isn't a durable exclusion mechanism.
 
 Microsoft recommends **Block** mode for the standard protection rules, and initial testing in **Audit** mode for other ASR rules before activating them in **Block** or **Warn** mode.
 
