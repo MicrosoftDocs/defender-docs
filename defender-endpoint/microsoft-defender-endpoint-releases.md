@@ -532,9 +532,9 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 |Feature area | Update summary |
 |--------------|---------------|
-|Bug fix | We identified an issue in Microsoft Defender for Endpoint on Linux where on-demand scans (quick, full, and custom) could take longer than expected or appear to stall. This was caused by a regression introduced in a recent update that, under certain configurations, delayed scan completion. Although protection was not impacted, the fix is included in the current release version. |
-| Visibility | **Engine signature verification is now enabled by default.** Starting with release `101.26062.0005`, Defender for Endpoint on Linux verifies the antivirus engine's digital signature before loading it, protecting against tampered or unsigned engine files. It's enabled automatically on new installations and upgrades, and an engine that fails verification isn't loaded. `mdatp health` adds an `engine_signature_verification` field and now reports the retired `offline_definition_update_verify_sig` as `DEPRECATED`. |
-| Visibility | Fixed an issue where `mdatp health` status incorrectly showed a device as healthy after it was offboarded. |
+|Bug fix | Resolved an issue that could cause on-demand antivirus scans (quick, full, and custom) to take longer than expected or appear unresponsive in certain environments. Protection capabilities remained unaffected while scans were in progress. |
+|Security | Engine signature verification is now enabled by default. Microsoft Defender for Endpoint on Linux verifies the digital signature of the antivirus engine before loading it, helping ensure that only trusted engine components are used. This behavior is automatically enabled for new installations and upgrades. If signature verification fails, the engine isn't loaded. Legacy engine signature verification settings have been deprecated. |
+|Visibility | Resolved an issue where the `mdatp health` status could incorrectly show a device as healthy after it was offboarded. |
 
 ### Linux | July 2026 | 101.26052.0012
 
