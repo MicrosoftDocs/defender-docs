@@ -78,6 +78,8 @@
           href: mdash-foundry-integration.md
         - name: Create a GitHub connector
           href: create-github-connector.md
+        - name: Create an Azure DevOps connector
+          href: create-azure-devops-connector.md
         - name: Defender CLI setup
           href: defender-cli-authentication.md
         - name: Codename MDASH FAQ
@@ -109,6 +111,8 @@
           href: mdash-audit-log-events.md
         - name: Microsoft Defender Code admin consent script
           href: microsoft-defender-code-admin-consent-script.md
+        - name: Microsoft Defender Code script for Azure DevOps connector
+          href: microsoft-defender-code-script-azure-devops-connector.md
     - name: Explore cross-workload attack surfaces
       items:
       - name: Overview
