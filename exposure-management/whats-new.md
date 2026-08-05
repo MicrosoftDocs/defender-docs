@@ -22,13 +22,19 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 >
 > `https://aka.ms/msem/rss`
 
+### Codename MDASH - Azure DevOps connector preview
+
+The Azure DevOps connector is now available in preview for Codename MDASH - Agentic code scanner. Security teams can connect Azure DevOps organizations from the Microsoft Defender portal, onboard repositories, and trigger remote on-demand agentic code scans for the onboarded repositories.
+
+For more information, see [Create an Azure DevOps connector](/security-exposure-management/create-azure-devops-connector).
+
 ## July 2026
 
-### Codename MDASH - MAI-Augmented scan profile now available for on-demand scans private preview
+### Codename MDASH - MAI-Augmented scan profile now available for on-demand scans preview
 
-Expanding on the previously released Defender CLI support, the MAI-Augmented scan profile is now also available in preview for on-demand scans triggered from the Microsoft Defender portal. Security teams can select this profile when starting an on-demand scan from the Manage scans. For more information, see [Trigger an on-demand agentic scan](/security-exposure-management/trigger-on-demand-scan).
+Expanding on the previously released Defender CLI support, the MAI-Augmented scan profile is now also available in preview for on-demand scans triggered from the Microsoft Defender portal. Security teams can select this profile when starting an on-demand scan from the Manage scans. For more information, see [Trigger an on-demand agentic scan](/security-exposure-management/create-azure-devops-connector).
 
-### Codename MDASH - MAI-Augmented scan profile private preview
+### Codename MDASH - MAI-Augmented scan profile preview
 
 The MAI-Augmented scan profile is now available in preview as part of Codename MDASH. The MAI-Augmented profile can be used when triggering a scan through the Defender CLI.  
 It includes MAI-Cyber-1-Flash, a new cyber-specialized model that extends the current agentic scanner in addition to the existing required models. 
