@@ -121,7 +121,7 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
 
 **Sensor v0.9.65— GA**
 
-- **Released:** July 2026
+- **Released:** August 2026
 
 - **What's included:**
   - Improved pod inventory reliability by preventing failures when processing Kubernetes pod deletion events.
