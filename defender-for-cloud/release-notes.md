@@ -29,6 +29,36 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## August 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+|Aug 8, 2026 |CIEM Updates|[Breaking change: Unused actions no longer included in AWS and GCP overprovisioned identity assessments]()|
+
+### Breaking change: Unused actions no longer included in AWS and GCP overprovisioned identity assessments
+
+Aug 8, 2026
+
+To improve the performance and scalability of overprovisioned identity recommendation generation, Microsoft Defender for Cloud will no longer use the **unused actions** when computing overprovisioned identity assessments for **AWS and GCP** environments.
+
+As a result of this change:
+
+- The **Unused actions** list will no longer be displayed as part of overprovisioned identity recommendations for AWS and GCP identities.
+
+- Any workflows or processes that rely on the Unused actions list within Defender for Cloud CIEM will no longer be available for AWS and GCP recommendations.
+
+**Recommended action:**
+
+If you need to validate whether permissions have been used or remain unused, use the native tools and documentation provided by your cloud provider:
+
+- **AWS**: Review IAM access activity and last accessed information in AWS Identity and Access Management (IAM).
+
+- **Google Cloud**: Review IAM usage and access insights through Google Cloud IAM tools and Cloud Asset Inventory.
+
+These permission usage signals are owned and maintained by the respective cloud providers. Defender for Cloud no longer retrieves or presents this information as part of AWS and GCP overprovisioned identity assessments. 
+
+For more information, see [Enable cloud infrastructure entitlement management (CIEM)](/azure/defender-for-cloud/enable-permissions-management)
+
 ## July 2026
 
 | Date | Category | Update |
