@@ -63,6 +63,19 @@ List of Azure recommendations:
 
 ## Enable CIEM for AWS
 
+> [!NOTE]
+> Starting August 6, 2026, to improve performance and scalability, Microsoft Defender for Cloud will no longer publish unused permission action details for the **AWS overprovisioned identities should have only the necessary permissions** recommendation.
+> The recommendation will continue to identify overprovisioned identities, but the detailed list of unused AWS permission actions won't be calculated or shown in Defender for Cloud. This change helps reduce assessment payload size and improve recommendation performance, especially for environments with a large number of identities, permissions, or multi-cloud connectors.
+> If you need to review unused AWS permissions, use AWS IAM last accessed information directly in AWS. AWS IAM provides last accessed details for users, roles, groups, and policies to help you identify permissions that haven't been used and right-size access.
+> To review unused permissions in AWS:
+> 1. Sign in to the AWS Management Console.
+> 1. Open the IAM console.
+> 1. In the navigation pane, select **Users**, **Roles**, **User groups**, or **Policies**.
+> 1. Select the relevant identity or policy.
+> 1. Open the **Last Accessed** tab.
+> 1. Review services and supported actions that were not accessed during the AWS tracking period.
+> For more information, see [View last accessed information for IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_last-accessed-view-data.html) and [Refine permissions in AWS using last accessed information.](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_last-accessed.html)
+
 When you enable the Defender CSPM plan on your AWS account, the **AWS CSPM** [regulatory compliance standard](concept-regulatory-compliance-standards.md) is automatically assigned to your subscription. The AWS CSPM standard provides CIEM recommendations.
 When Permissions Management is disabled, the CIEM recommendations in the AWS CSPM standard aren't calculated.
 
@@ -107,6 +120,18 @@ List of AWS recommendations:
 - Permissions of inactive identities in your AWS account should be revoked
 
 ## Enable CIEM for GCP
+
+> [!NOTE]
+> Starting August 6, 2026, to improve performance and scalability, Microsoft Defender for Cloud will no longer publish unused permission action details for the **GCP overprovisioned identities should have only necessary permissions** recommendation.
+> The recommendation will continue to identify overprovisioned identities, but the detailed list of unused GCP permission actions won't be calculated or shown in Defender for Cloud. This change helps reduce assessment payload size and improve recommendation performance, especially for environments with a large number of identities, permissions, or multi-cloud connectors.
+> If you need to review unused GCP permissions, use Google Cloud Policy Intelligence and IAM role recommendations directly in Google Cloud. Google Cloud policy insights can help identify principals with permissions they don't need, and role recommendations can help right-size access.
+> To review unused permissions in GCP:
+> 1. Sign in to the Google Cloud console.
+> 1. Go to the **IAM** page.
+> 1. Select the relevant project, folder, or organization.
+> 1. Review the **Security insights** column for policy insights about excess or unused permissions.
+> 1. Review IAM role recommendations to determine whether a role should be removed or replaced with a more appropriate role.
+> For more information, see [Manage policy insights for projects, folders, and organizations](https://docs.cloud.google.com/policy-intelligence/docs/policy-insights) and [IAM role recommendations overview](https://docs.cloud.google.com/policy-intelligence/docs/role-recommendations-overview).
 
 When you enable the Defender CSPM plan on your GCP project, the **GCP CSPM** [regulatory compliance standard](concept-regulatory-compliance-standards.md) is automatically assigned to your subscription. The GCP CSPM standard provides CIEM recommendations.
 
