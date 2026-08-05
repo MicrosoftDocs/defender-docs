@@ -29,6 +29,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|Windows Antivirus |Platform 4.18.26070.9 / Engine 1.1.26070.7|July 2026|- Platform: 4.18.26070.9<br>- Engine: 1.1.26070.7<br>- Security intelligence: 1.457.11.0|[Release details and updates](#windows-antivirus--july-2026--platform-418260709--engine-11260707)|
 |Linux  |101.26052.0011  |July 2026 |- Release version: 30.126052.0011.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates](#linux--july-2026--101260520011) |
 |Windows Antivirus |Platform 4.18.26060.3008 / Engine 1.1.26060.3008 |June 2026 |- Platform: 4.18.26060.3008<br>- Engine: 1.1.26060.3008<br>- Security intelligence: 1.455.25.0 |[Release details and updates](#windows-antivirus--june-2026--platform-418260603008--engine-11260603008) |
 |iOS |1.1.78290102|July 2026|- Build: 1.1.78290102<br>- Release: July 3, 2026|[Release details and updates](#ios--july-2026--platform-version-1178290102)|
@@ -1070,6 +1071,27 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 ## Microsoft Defender Antivirus releases
 
 For more information about Microsoft Defender Antivirus updates, see [Microsoft Defender Antivirus security intelligence product updates and support](microsoft-defender-antivirus-updates.md).
+
+### Windows Antivirus | July 2026 | Platform 4.18.26070.9 | Engine 1.1.26070.7
+
+#### Release details
+
+| Component | Version | Date |
+| -------- | -------- | -------- |
+| Platform | 4.18.26070.9 | August 5, 2026 |
+| Engine | 1.1.26070.7 | August 5, 2026 |
+| Security intelligence<sup>1</sup> | 1.457.11.0 | August 5, 2026 |
+| Support phase | Security and Critical Updates | - |
+
+<sup>1</sup>The security intelligence version listed here is relevant to the listed engine release. Newer versions of security intelligence are released regularly. For more information, see
+[Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/wdsi/defenderupdates).
+
+#### Enhancements and features
+
+- Improved archive scanning performance to scale service memory limits dynamically based on the number of logical cores.
+- Improved cache builds on devices with Lunar Lake CPU's using TrustedImageIdentifier
+- Fixed an issue where files that were already excluded were still being submitted to the cloud protection service for rescanning, only to return the same result.
+- Fixed HTTPS connection stalls under Network Protection Block mode caused by dropped TCP FIN segments.
 
 ### Windows Antivirus | June 2026 | Platform 4.18.26060.3008 | Engine 1.1.26060.3008
 
