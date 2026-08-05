@@ -138,10 +138,6 @@
             href: entity-page-ip.md
           - name: View threat intelligence in entity pages
             href: entity-page-threat-intelligence.md
-          - name: Gather threat intelligence and perform infrastructure chaining
-            href: gathering-threat-intelligence-and-infrastructure-chaining.md
-          - name: Gather vulnerability intelligence
-            href: gathering-vulnerability-intelligence.md
         - name: Investigate data loss prevention alerts with Microsoft Defender XDR
           href: dlp-investigate-alerts-defender.md
         - name: Investigate data loss prevention alerts with Microsoft Sentinel
@@ -200,8 +196,8 @@
           items:
           - name: Overview
             href: advanced-hunting-security-copilot.md
-          - name: Use the Threat Hunting Agent
-            href: advanced-hunting-security-copilot-threat-hunting-agent.md
+          - name: Use the Threat Hunting Assistant
+            href: advanced-hunting-security-copilot-threat-hunting-assistant.md
           - name: Generate KQL queries
             href: advanced-hunting-security-copilot-query-assistant.md
         - name: Hunt over Microsoft Sentinel data
@@ -440,8 +436,6 @@
             href: threat-analytics-indicators.md
         - name: Microsoft Threat Intelligence in Defender XDR
           href: defender-threat-intelligence.md
-        - name: Use Security Copilot for threat intelligence
-          href: security-copilot-and-defender-threat-intelligence.md
       - name: Investigate and respond with Microsoft Copilot in Microsoft Defender
         items:
         - name: Overview
@@ -476,8 +470,8 @@
             href: security-alert-triage-agent.md
           - name: Threat Intelligence Briefing Agent
             href: threat-intel-briefing-agent-defender.md
-          - name: Threat Hunting Agent
-            href: advanced-hunting-security-copilot-threat-hunting-agent.md
+          - name: Threat Hunting Assistant
+            href: advanced-hunting-security-copilot-threat-hunting-assistant.md
           - name: Dynamic Threat Detection Agent
             href: dynamic-threat-detection-agent.md
           - name: Security Analyst Agent
