@@ -18,6 +18,36 @@ The listed features were released in the last six months. For information about 
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 
+## August 2026
+
+- [New data sources for UEBA behaviors and anomaly detection (Preview)](#new-data-sources-for-ueba-behaviors-and-anomaly-detection-preview)
+- [UEBA anomalies on behaviors (Preview)](#ueba-anomalies-on-behaviors-preview)
+
+### New data sources for UEBA behaviors and anomaly detection (Preview)
+
+Microsoft Sentinel UEBA expands coverage with new data sources for both the behaviors layer and anomaly detection.
+
+**Fortinet FortiGate behaviors**
+
+The UEBA behaviors layer now supports Fortinet FortiGate firewall events from the `CommonSecurityLog` table. More than 40 new behaviors identify administrative activity on FortiGate appliances, including rapid system reconfigurations, configuration backups, certificate changes, and security service disruptions. These behaviors are mapped to MITRE ATT&CK techniques including T1685, T1070, T1078, and T1602.002.
+
+**Check Point, Fortinet, Zscaler, and AWS GuardDuty anomalies**
+
+UEBA anomaly detection now supports Check Point, Fortinet FortiGate, and Zscaler firewall, VPN, and web proxy events from the `CommonSecurityLog` table. Ten new anomaly rules compare each user and device against its own history and organization-wide activity to identify:
+
+- Anomalous and failed VPN sign-ins
+- Unusual access to high-risk web categories
+- Bursts of security detections on a potentially compromised device
+- Suspicious administrative changes
+
+The new anomaly rules are mapped to MITRE ATT&CK techniques including T1078, T1133, T1110, T1071, T1562, and T1567. Events are enriched with source IP geolocation, ISP, and threat intelligence context.
+
+UEBA anomaly detection also supports identity-linked AWS GuardDuty findings from the `AWSGuardDuty` table, mapped to MITRE ATT&CK techniques including T1078, T1078.004, T1110, T1087.004, and T1567.002.
+
+### UEBA anomalies on behaviors (Preview)
+
+Microsoft Sentinel now adds contextual anomaly insights directly to UEBA behavior records. These insights help analysts identify first-seen activity, unusually high behavior volumes, uncommon values, and threat intelligence matches without manually correlating raw events. For more information, see [Investigate anomalies on UEBA behaviors](ueba-anomalies-on-behaviors.md).
+
 ## July 2026
 
 - [Custom detection rules support in Microsoft Sentinel Repositories (Preview)](#custom-detection-rules-support-in-microsoft-sentinel-repositories-preview)

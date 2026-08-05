@@ -252,6 +252,20 @@
               href: advanced-hunting-fileprofile-function.md
             - name: SeenBy()
               href: advanced-hunting-seenby-function.md
+            - name: UEBA behavior insights
+              items:
+              - name: GetFirstSeenBehaviors()
+                href: advanced-hunting-getfirstseenbehaviors-function.md
+              - name: GetUncommonValueBehaviors()
+                href: advanced-hunting-getuncommonvaluebehaviors-function.md
+              - name: GetHighVolumeAnomalyBehaviors()
+                href: advanced-hunting-gethighvolumeanomalybehaviors-function.md
+              - name: GetAnomalousBehaviorsByKind()
+                href: advanced-hunting-getanomalousbehaviorsbykind-function.md
+              - name: GetAnomalousBehaviorsByValue()
+                href: advanced-hunting-getanomalousbehaviorsbyvalue-function.md
+              - name: GetAnomalousBehaviorsAbout()
+                href: advanced-hunting-getanomalousbehaviorsabout-function.md
           - name: Optimize & handle errors
             items:
             - name: Apply query best practices
