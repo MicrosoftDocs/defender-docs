@@ -26,6 +26,12 @@ For recent releases of Microsoft Defender for Endpoint, including build numbers,
 
 Learn more about [Preview features](/defender-xdr/preview).
 
+## August 2026
+
+|Type  |Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|-------------|
+|Feature |[Vulnerability assessment for Microsoft Store applications](/defender-vulnerability-management/tvm-software-inventory#microsoft-store-applications) |Preview |You can now monitor vulnerabilities on devices running Microsoft Store applications, including Microsoft Teams, Mozilla Firefox, WhatsApp, Slack, Dropbox, DuckDuckGo, Dell Command, HP Smart, HP Support Assistant, Dell SupportAssist for Home PCs, and NVIDIA Control Panel (see [Microsoft Store applications](/defender-vulnerability-management/tvm-software-inventory#microsoft-store-applications) for the full list). Use the **Software evidence** area in the software page to view the file path for the vulnerable application, along with a suggested query showing the vulnerable app, version, and file location. |
+
 ## July 2026
 
 |Type  |Feature  |Preview/GA  |Description  |
