@@ -1,6 +1,6 @@
 ---
-title: Microsoft Security Copilot Threat Hunting Agent in advanced hunting
-description: Learn how Microsoft Security Copilot threat hunting agent can help you investigate threats using natural language.
+title: Microsoft Security Copilot Threat Hunting Assistant in advanced hunting
+description: Learn how Microsoft Security Copilot Threat Hunting Assistant can help you investigate threats using natural language.
 ms.service: defender-xdr
 ms.subservice: adv-hunting
 ms.author: pauloliveria
@@ -24,25 +24,27 @@ appliesto:
 ai-usage: ai-assisted
 ---
 
-# Microsoft Security Copilot Threat Hunting Agent in advanced hunting (preview)
+# Microsoft Security Copilot Threat Hunting Assistant in advanced hunting
 
-[!INCLUDE [Prerelease](../includes/prerelease.md)]
+The Microsoft Security Copilot Threat Hunting Assistant is an AI-powered agent that revolutionizes threat hunting by enabling you to investigate threats using natural language from start to finish. Unlike traditional hunting methods that rely heavily on Kusto query language (KQL) expertise, the Threat Hunting Assistant transforms complex data into actionable insights quickly and intuitively, helping you drive the investigation into actions.
 
-The Microsoft Security Copilot Threat Hunting Agent is an AI-powered agent that revolutionizes threat hunting by enabling you to investigate threats using natural language from start to finish. Unlike traditional hunting methods that rely heavily on Kusto query language (KQL) expertise, the Threat Hunting Agent transforms complex data into actionable insights quickly and intuitively, helping you drive the investigation into actions.
+The Threat Hunting Assistant goes beyond query generation by delivering a complete, conversational threat hunting experience. It not only generates queries but also interprets results, surfaces insights, and guides you through full hunting sessions. These capabilities empower analysts of all levels to hunt threats faster, more accurately, and with greater confidence.
 
-The Threat Hunting Agent goes beyond query generation by delivering a complete, conversational threat hunting experience. It not only generates queries but also interprets results, surfaces insights, and guides you through full hunting sessions. These capabilities empower analysts of all levels to hunt threats faster, more accurately, and with greater confidence.
-
-Watch this video to get an overview of the Threat Hunting Agent:
+Watch this video to get an overview of the Threat Hunting Assistant:
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=74ef2c98-5dc7-406b-9b30-25e158ced334]
 
 ## Key capabilities
 
-The Threat Hunting Agent provides the following key capabilities:
+The Threat Hunting Assistant provides the following key capabilities:
 
 - **Natural language question to natural language answer.** Ask any data-related question in natural language (for example, *Which devices communicated with IPs in France in the last 24 hours?*) and receive direct conversational answers backed by KQL queries and tabular results. 
 
 - **Conversational flow.** The agent keeps track of context throughout your hunting session, enabling you to ask follow-up questions that build on previous ones and ensuring continuity across the entire session.
+
+- **Schema-aware data discovery.** The assistant checks which tables are available to you and reads their schemas before it writes a query, so queries are grounded in your environment's actual data rather than assumed table names. This includes custom tables in your Microsoft Sentinel workspace.
+
+- **Iterative refinement.** The assistant evaluates the results it gets back and adjusts its approach if they don't answer your question, for example by bringing in an additional table. You can follow its progress in the Copilot side pane as it works.
 
 - **Observations.** The agent provides natural language observations and charts (pie, timeline, or vertical bar) to simplify result analysis. It selects relevant chart fields automatically, but you can change the chart type or grouping afterward.
 
@@ -53,10 +55,10 @@ The Threat Hunting Agent provides the following key capabilities:
 - **Integrated experience.** The agent's outputs are directly added to Advanced hunting components, with generated KQL placed in the editor and results displayed as usual. This gives users full access to all advanced hunting features during investigations, ensuring maximum flexibility.
 
 ## Try your first request
-To start using the Threat Hunting Agent, follow these steps:
+To start using the Threat Hunting Assistant, follow these steps:
 
 >[!NOTE]
-> Make sure that the Threat Hunting Agent mode is active. [Get access to Security Copilot in advanced hunting](advanced-hunting-security-copilot.md#get-access)
+> Make sure that the Threat Hunting Assistant mode is active. [Get access to Security Copilot in advanced hunting](advanced-hunting-security-copilot.md#get-access)
 
 1. Open the **Advanced hunting** page from the navigation bar in Microsoft Defender portal. The Security Copilot side pane for advanced hunting appears at the right hand side.
 
@@ -79,7 +81,7 @@ The agent supports all types of hunting scenarios, including:
 - Proactively validating a security hypothesis
 
 ## Understand the response
-When the Threat Hunting Agent responds to your question, you get a comprehensive answer that includes:
+When the Threat Hunting Assistant responds to your question, you get a comprehensive answer that includes:
 
 - **Direct conversational answer:** A natural language response to your question is displayed in the Copilot side pane.
 
@@ -129,9 +131,9 @@ After receiving a response, you can continue your hunting session in several way
 To start a new hunting session, select the **New chat (+)** icon at the top of the Copilot side pane.
 
 ## Provide feedback
-You can provide feedback directly in the portal by selecting the feedback icon and choosing your response. Your feedback helps improve the Threat Hunting Agent's capabilities and accuracy.
+You can provide feedback directly in the portal by selecting the feedback icon and choosing your response. Your feedback helps improve the Threat Hunting Assistant's capabilities and accuracy.
 
 :::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-feedback.png" alt-text="Screenshot of the advanced hunting page with Copilot feedback buttons highlighted." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-feedback.png":::
 
 >[!TIP]
-> Providing detailed feedback about what worked well or what could be improved helps us continuously enhance the Threat Hunting Agent experience.
+> Providing detailed feedback about what worked well or what could be improved helps us continuously enhance the Threat Hunting Assistant experience.

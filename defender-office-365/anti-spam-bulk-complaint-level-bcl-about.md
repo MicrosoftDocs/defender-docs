@@ -10,7 +10,7 @@ ms.collection:
   - tier2
 description: Admins can learn about bulk email detection, including the bulk complain level (BCL) values that are used in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 08/03/2026
+ms.date: 08/05/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -73,7 +73,7 @@ For more information, see [Bulk senders insight](anti-spam-bulk-senders-insight.
 ## Deliver bulk mail below the BCL threshold to the Promotions folder
 
 > [!NOTE]
-> The features described in this section are rolling out, and should be available in all organizations by mid-September.
+> The features described in this section are rolling out, and should be available in all organizations by mid-September, including security operations center (SOC) experiences.
 
 As previously described, the action for bulk mail that meets or exceeds the BCL threshold is defined in anti-spam policies. For example, deliver to the Junk Email folder or quarantine.
 

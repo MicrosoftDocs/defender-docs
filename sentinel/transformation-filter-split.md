@@ -6,7 +6,7 @@ ms.author: edbaynash
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/20/2026
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1014
 
@@ -42,11 +42,13 @@ Before you configure filter or split transformation rules, verify the following 
 
 - In the Microsoft Defender portal with unified role-based access control (RBAC), **Data (manage)** permissions under the **Data operations** permissions group.
 
-- For the Microsoft Sentinel workspace, you need the following permissions: 
-- **Log Analytics Contributor** role to provide:
-    - **Microsoft.OperationalInsights/workspaces/write** 
-    - **Microsoft.OperationalInsights/workspaces/tables/write** permissions to the Log Analytics workspace. 
- 
+- For the Microsoft Sentinel workspace, you need the **Log Analytics Contributor** role, which provides:
+  - **Microsoft.OperationalInsights/workspaces/write**
+  - **Microsoft.OperationalInsights/workspaces/tables/write** permissions to the Log Analytics workspace.
+
+- To configure a split transformation:
+    - [Onboard the workspace to the Microsoft Sentinel data lake](datalake/sentinel-lake-onboarding.md).
+    - Ensure that the table is currently in the Analytics tier.
 
 ### Supported tables
 
