@@ -18,7 +18,6 @@ ms.collection: usx-security
 
 This article outlines the steps required to migrate from the containerized SAP agent to the agentless data connector for Microsoft Sentinel Solution for SAP applications.
 
-[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
 
 ## Why move to the agentless data connector?
 
@@ -37,7 +36,7 @@ Your existing investment in the Microsoft Sentinel Solution for SAP analytic rul
 
 1. **Assess**: Review your existing containerized SAP agent deployment to identify monitored SAP systems, log types collected, and any custom configurations.
 1. **Review**: Familiarize yourself with the approaches for feature parity between the containerized agent and the agentless data connector, including configuration options and capabilities.
-1. **Deploy**: Set up the agentless data connector following the [deployment guide](deploy-sap-security-content.md?pivots=connection-agentless).
+1. **Deploy**: Set up the agentless data connector following the [deployment guide](deploy-sap-security-content.md).
 1. **Validate**: Ensure that logs are being collected correctly from your SAP systems using the agentless data connector. Use kql queries to verify log ingestion.
     ```kql
     let startTime = ago(1h);
@@ -54,7 +53,7 @@ Your existing investment in the Microsoft Sentinel Solution for SAP analytic rul
 > Follow the [agentless migration video playlist](https://www.youtube.com/playlist?list=PLmAptfqzxVEV69k9hwfI4zVOb_o6LgfDV) for latest insights for a smooth transition.
 
 > [!IMPORTANT]
-> Review the authorizations of the Sentinel user and role on your SAP systems used with the containerized agent. The agentless data connector requires less but different authorizations compared to the containerized SAP agent. Refer to the [configuration guide](/azure/sentinel/sap/preparing-sap?pivots=connection-agentless#configure-the-microsoft-sentinel-role) for details and SAP role sample for minimum authorizations.
+> Review the authorizations of the Sentinel user and role on your SAP systems used with the containerized agent. The agentless data connector requires less but different authorizations compared to the containerized SAP agent. Refer to the [configuration guide](/azure/sentinel/sap/preparing-sap#configure-the-microsoft-sentinel-role) for details and SAP role sample for minimum authorizations.
 
 > [!WARNING]
 > Billing exclusions for selected SAP SIDs need to be revisited. Agentless data connector uses different means for identification than the Agent data connector does. Reach out to your account representative ahead of time.
@@ -74,6 +73,9 @@ These sources include but are not limited to the following [logs](sap-solution-s
 The solution scope can be extended through [extensions patterns](https://github.com/Azure-Samples/Sentinel-For-SAP-Community) available for the agentless data connector. Watchlists and Playbooks remain fully functional without any changes.
 
 SAP HANA database or OS-level detections are out of scope for the comparison because they are covered by their own connectors in Microsoft Sentinel.
+
+> [!NOTE]
+> The cross-workspace deployment option (installing SAP data and SOC data on separate workspaces) is no longer needed with the unified workspace in the Microsoft Defender portal and has been removed from the portal experience. If you still need a split deployment, the underlying ARM APIs continue to support it - the option is only removed from the UI.
 
 ## Next steps
 

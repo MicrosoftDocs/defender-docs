@@ -4,12 +4,11 @@ description: This article shows you how to configure initial security content fo
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 08/04/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-zone_pivot_groups: sentinel-sap-connection
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1014
 
@@ -22,19 +21,10 @@ ms.custom: msecd-doc-authoring-1014
 
 Deploying the Microsoft Sentinel data collector and solution for SAP lets you monitor SAP systems for suspicious activities and identify threats. However, extra configuration steps are needed to optimize the solution for your SAP deployment. Configure the security content delivered with the Microsoft Sentinel solution for SAP applications as the final step in deploying the SAP integration.
 
-:::zone pivot="connection-agent"
 
-[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
-
-:::image type="content" source="media/deployment-steps/settings.png" alt-text="Diagram of the SAP solution deployment flow, highlighting the Configure solution settings step." border="false":::
-
-:::zone-end
-
-:::zone pivot="connection-agentless"
 
 :::image type="content" source="media/deployment-steps/settings-agentless.png" alt-text="Diagram of the SAP solution deployment flow, highlighting the Configure solution settings step." border="false":::
 
-:::zone-end
 
 Content in this article is relevant for your **security** team.
 
@@ -91,4 +81,3 @@ For more information, see [Check compliance for your SAP security controls with 
 - [Microsoft Sentinel solution for SAP applications - functions reference](sap-solution-function-reference.md)
 - [Microsoft Sentinel solution for SAP applications: security content reference](sap-solution-security-content.md).
 - [Monitor the health of your SAP system](../monitor-sap-system-health.md)
-- [Update Microsoft Sentinel's SAP data connector agent](update-sap-data-connector.md)

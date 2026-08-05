@@ -1,15 +1,14 @@
 ---
 title: Connect Your SAP System to Microsoft Sentinel
-description: Connect your SAP system to Microsoft Sentinel by deploying the SAP data connector agent or by configuring the agentless SAP data connector. Choose the option that matches your environment.
+description: Connect your SAP system to Microsoft Sentinel by configuring the agentless SAP data connector.
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 08/04/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-zone_pivot_groups: sentinel-sap-connection
 ms.custom: msecd-doc-authoring-1014
   - devx-track-azurecli
   - sfi-image-nochange
@@ -21,27 +20,14 @@ ai-usage: ai-assisted
 
 # Connect your SAP system to Microsoft Sentinel
 
-For the Microsoft Sentinel solution for SAP applications to operate correctly, you must first get your SAP data into Microsoft Sentinel. Do this by either deploying the Microsoft Sentinel SAP data connector agent, or by connecting the Microsoft Sentinel agentless data connector for SAP. Use the agent-based procedure if you deploy the SAP data connector agent, or use the agentless procedure if you connect through the agentless data connector.
+For the Microsoft Sentinel solution for SAP applications to operate correctly, you must first get your SAP data into Microsoft Sentinel. Do this by connecting the Microsoft Sentinel agentless data connector for SAP.
+
 
 Before following this article, make sure you've completed the earlier deployment steps: [installing the SAP solution in your workspace](deploy-sap-security-content.md) and [preparing your SAP system](preparing-sap.md). For the full list of prerequisites, see the [Prerequisites](#prerequisites) section.
-
-:::zone pivot="connection-agent"
-
-[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
-
-:::image type="content" source="media/deployment-steps/deploy-data-connector.png" alt-text="Diagram of the SAP solution deployment flow, highlighting the Connect your SAP system step." border="false" :::
-
-Content in this article is relevant for your **security**, **infrastructure**, and  **SAP BASIS** teams. Make sure to perform the steps in this article in the order that they're presented.
-
-:::zone-end
-
-:::zone pivot="connection-agentless"
 
 :::image type="content" source="media/deployment-steps/deploy-data-connector-agentless.png" alt-text="Diagram of the SAP solution deployment flow, highlighting the Connect your SAP system step." border="false":::
 
 Content in this article is relevant for your **security** team.
-
-:::zone-end
 
 ## Prerequisites
 
@@ -50,19 +36,11 @@ Before you connect your SAP system to Microsoft Sentinel:
 - Make sure that all of the deployment prerequisites are in place. For more information, see [Prerequisites for deploying Microsoft Sentinel solution for SAP applications](prerequisites-for-deploying-sap-continuous-threat-monitoring.md).
 
     > [!IMPORTANT]
-    > If you're working with the agentless data connector, you need the **Entra ID Application Developer** role or higher to successfully deploy the relevant Azure resources. If you don't have this permission, work with a colleague that has the permission to complete the process. For the full procedure, see the [Connect your agentless data connector](#connect-your-agentless-data-connector) section.
+    > You need the **Entra ID Application Developer** role or higher to successfully deploy the relevant Azure resources. If you don't have this permission, work with a colleague that has the permission to complete the process. For the full procedure, see the [Connect your agentless data connector](#connect-your-agentless-data-connector) section.
 
 - Make sure that you have the Microsoft Sentinel solution for **SAP applications** [deployed in your Microsoft Sentinel workspace](deploy-sap-security-content.md). For more information, see [Deploy the Microsoft Sentinel solution for SAP applications](deploy-sap-security-content.md)
 
 - Make sure that your SAP system is fully prepared. For more information, see [Prepare your SAP system for the Microsoft Sentinel solution](preparing-sap.md).
-
-- If you're deploying the data connector agent to communicate with Microsoft Sentinel over SNC, make sure that you completed [Configure your system to use SNC for secure connections](preparing-sap.md#configure-your-system-to-use-snc-for-secure-connections).
-
-:::zone pivot="connection-agent"
-
-:::zone-end
-
-:::zone pivot="connection-agentless"
 
 ## Watch the connector onboarding video
 
@@ -180,7 +158,7 @@ The following parameters control overall data collection behavior for the agentl
 | **collect-audit-logs** | Determines whether Audit Log data is ingested or not to the table `ABAPAuditLog`. | **true**: Ingested<br>**false**: Not ingested | **true** |
 | **collect-changedocs-logs** | Determines whether Change Docs logs are ingested or not into the table `ABAPChangeDocsLog`. | **true**: Ingested<br>**false**: Not ingested | **true** |
 | **force-audit-log-to-read-from-all-clients** | Determines whether the Audit Log is read from all clients. | **true**: Read from all clients<br>**false**: Not read from all clients | **false** |
-| **ingestion-cycle-days** | Time, in days, given to ingest the full User Master data, including all roles and users. This parameter doesn't affect the ingestion of changes to User Master data. | Integer, between **1**-**14** | **1** |
+| **ingestion-cycle-days** | Time, in days, given to ingest the full User Master data, including all roles and users. This parameter doesn't affect the ingestion of changes to User Master data. | Integer, between **1**-**14** | **7** |
 | **collect-user-master-data-users** | Determines whether User Details data is ingested or not to the tables `ABAPUserDetails`. | **true**: Ingested, **false**: Not ingested | **true** |
 | **collect-user-master-data-roles** | Determines whether Role Authorization data is ingested or not to the tables `ABAPAuthorizationDetails`. | **true**: Ingested, **false**: Not ingested | **true** |
 | **offset-in-seconds** | Determines the offset, in seconds, for both the start and end times of a data collection window. Use this parameter to delay data collection by the configured number of seconds. | Integer, between **1**-**600** | **60** |
@@ -232,11 +210,9 @@ The following parameters control Role Authorization data collection.
 
 When either limit is reached, a marker record is written to the output with a descriptive message indicating which limit was hit, the actual record count, and the collection time window. The two limits produce distinct markers (TRUNCATED_HEADERS and TRUNCATED_DETAILS) so they can be distinguished in Sentinel.
 
-:::zone-end
-
 ## Check connectivity and health
 
-After you deploy the SAP data connector, check your agent's health and connectivity. For more information, see [Monitor the health and role of your SAP systems](../monitor-sap-system-health.md).
+After you deploy the SAP data connector, check the connector's health and connectivity. For more information, see [Monitor the health and role of your SAP systems](../monitor-sap-system-health.md).
 
 Once the connector is deployed, proceed to configure the Microsoft Sentinel solution for SAP applications content. Specifically, configuring details in the watchlists is an essential step in enabling detections and threat protection.
 

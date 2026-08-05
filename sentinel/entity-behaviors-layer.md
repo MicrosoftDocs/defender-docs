@@ -42,6 +42,8 @@ The following table shows how behaviors differ from anomalies and alerts:
 | **Alerts**    | Signal a potential security issue requiring attention | Trigger incident response workflows |
 | **Behaviors** | Neutral, structured summaries of activity - normal or abnormal- based on time windows or triggers, enriched with MITRE ATT&CK mappings and entity roles | Provide context and clarity for investigations, hunting, and detection |
 
+Microsoft Sentinel can also add anomaly insights directly to behavior records, including first-seen activity, unusually high behavior volumes, uncommon values, and threat intelligence matches. For more information, see [Investigate anomalies on UEBA behaviors](ueba-anomalies-on-behaviors.md).
+
 ### Behavior types and records
 
 When you [enable the UEBA behaviors layer](#enable-the-ueba-behaviors-layer), Microsoft Sentinel processes supported security logs you collect into your Sentinel workspace in near real-time and summarizes two types of behavioral patterns:
