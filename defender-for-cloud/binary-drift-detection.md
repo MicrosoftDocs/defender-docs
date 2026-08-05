@@ -17,15 +17,12 @@ Binary drift blocking prevents unauthorized external processes from running in c
 
 Review [binary drift and blocking availability](support-matrix-defender-for-containers.md#runtime-protection-features).
 
-> [!NOTE]
-> Binary drift blocking is currently in preview.
-
 ## Prerequisites
 
 - Run the Defender for Container sensor.
-- **Binary drift blocking (Preview) only**:
-  - AKS: Helm provisioning with sensor version **0.10.2**.
-  - Multicloud: Helm provisioning with sensor version **0.10.2** or the ARC extension using `release train=preview`.
+- **Binary drift blocking only**:
+  - AKS: Helm provisioning with sensor version **0.10.2** or above.
+  - Multicloud: Helm provisioning with sensor version **0.10.2** or above, or the ARC extension.
 - [Enable the Defender for Container sensor](defender-for-containers-azure-enable-portal.md#configure-plan-components) on the subscriptions and connectors.
 - The following roles and permissions:
     - **To create and modify drift policies**: Security Admin or higher permissions on the tenant. 
