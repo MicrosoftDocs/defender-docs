@@ -155,6 +155,11 @@ The timeline draws from multiple advanced hunting tables and normalizes them int
 
 <!-- TODO: Confirm the public advanced hunting table names and reference links for each entry above. The spec also lists "AppIdentityEvents (IdentityEvents)" and "BehaviorInfo (P1)"—verify whether these are shipped and publicly documented before including them. -->
 
+> [!NOTE]
+> Microsoft Defender can display date and time information using either your local time zone or UTC. The selected time zone applies to all date and time information shown in the Identity timeline.
+>
+> To set the time zone for these features, go to **Settings** \> **Security center** \> **Time zone**.
+
 ### Timeline schema
 
 The timeline normalizes events from the different source tables into a unified schema. Some columns are shown by default; others can be added from **Customize columns**. The following columns are available:

@@ -303,7 +303,7 @@ The **Investigation graph** tab shows:
 
 The investigation graph helps you quickly understand the full scope of the attack by connecting the different suspicious entities that are part of the attack with their related assets such as users, devices, and mailboxes.
 
-For more information, see [Automated investigation and response in Microsoft Defender XDR](m365d-autoir.md).
+For more information, see [Automated investigation and response in Microsoft Defender](m365d-autoir.md).
 
 ## Evidence and Response
 

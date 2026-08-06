@@ -33,13 +33,13 @@ ai-usage: ai-assisted
 
 Alerts are signals that result from various threat detection activities. These signals are produced by the many security services that reside in the Microsoft Defender portal, and they indicate the occurrence of malicious or suspicious events in your environment.
 
-These suspicious events are typically part of a broader attack story. In the Microsoft Defender portal, alerts represent individual pieces of evidence that Defender XDR correlates together to form [incidents](incidents-overview.md) (see [Incidents overview](incidents-overview.md)). Incidents tell the whole attack story; however, analyzing alerts can be valuable when deeper analysis is required.
+These suspicious events are typically part of a broader attack story. In the Microsoft Defender portal, alerts represent individual pieces of evidence that Defender correlates together to form [incidents](incidents-overview.md). Incidents tell the whole attack story; however, analyzing alerts can be valuable when deeper analysis is required.
 
 The **Alerts queue** shows the current set of alerts. You can view the entire alerts queue from **Incidents & alerts > Alerts** on the quick launch of the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139). You can also see the alerts for each incident on the [Incidents queue](incidents-overview.md), and on each individual incident's page, on the **Alerts** tab.
 
 :::image type="content" source="media/investigate-alerts/alerts-page-defender-small.png" alt-text="The Alerts section in the Microsoft Defender portal" lightbox="media/investigate-alerts/alerts-page-defender.png":::
 
-Alerts from different Microsoft security solutions like Microsoft Defender for Endpoint, Defender for Office 365, Microsoft Sentinel, Defender for Cloud, Defender for Identity, Defender for Cloud Apps, Defender XDR, App Governance, Microsoft Entra ID Protection, and Microsoft Data Loss Prevention appear here.
+Alerts from different Microsoft security solutions like Microsoft Defender for Endpoint, Defender for Office 365, Microsoft Sentinel, Defender for Cloud, Defender for Identity, Defender for Cloud Apps, Defender, App Governance, Microsoft Entra ID Protection, and Microsoft Data Loss Prevention appear here.
 
 By default, the alerts queue in the Microsoft Defender portal displays the new and in progress alerts from the last seven days. The most recent alert is at the top of the list so you can see it first. You can also find the **total number of alerts** in the queue indicated beside the Search bar. The total number of alerts varies depending on the filters used in the queue.
 
@@ -65,7 +65,7 @@ You can filter alerts according to these criteria:
 - Sensitivity label
 
 > [!NOTE]
-> Microsoft Defender XDR customers can now filter incidents with alerts where a compromised device communicated with operational technology (OT) devices connected to the enterprise network through the [device discovery integration of Microsoft Defender for IoT and Microsoft Defender for Endpoint](/defender-endpoint/device-discovery#device-discovery-integration). To filter these incidents, select **Any** in the Service/detection sources, then select **Microsoft Defender for IoT** in the Product name or see [Investigate incidents and alerts in Microsoft Defender for IoT in the Defender portal](/defender-for-iot/investigate-threats/). You can also use device groups to filter for site-specific alerts. For more information about Defender for IoT prerequisites, see [Get started with enterprise IoT monitoring in Microsoft Defender XDR](/azure/defender-for-iot/organizations/eiot-defender-for-endpoint/).
+> Microsoft Defender customers can now filter incidents with alerts where a compromised device communicated with operational technology (OT) devices connected to the enterprise network through the [device discovery integration of Microsoft Defender for IoT and Microsoft Defender for Endpoint](/defender-endpoint/device-discovery#device-discovery-integration). To filter these incidents, select **Any** in the Service/detection sources, then select **Microsoft Defender for IoT** in the Product name or see [Investigate incidents and alerts in Microsoft Defender for IoT in the Defender portal](/defender-for-iot/investigate-threats/). You can also use device groups to filter for site-specific alerts. For more information about Defender for IoT prerequisites, see [Get started with enterprise IoT monitoring in Microsoft Defender](/azure/defender-for-iot/organizations/eiot-defender-for-endpoint/).
 
 An alert can have system tags and/or custom tags with certain color backgrounds. Custom tags use the white background while system tags typically use red or black background colors. System tags identify the following in an incident: 
 
@@ -121,7 +121,7 @@ Throughout an alert page, you can select the ellipses (**...**) beside any entit
 
 ### Alert sources
 
-Microsoft Defender XDR alerts come from solutions like Microsoft Defender for Endpoint, Defender for Office 365, Defender for Identity, Defender for Cloud Apps, the app governance add-on for Microsoft Defender for Cloud Apps, Microsoft Entra ID Protection, and Microsoft Data Loss Prevention. You might notice alerts with prepended characters in the alert. The following table provides guidance to help you understand the mapping of alert sources based on the prepended character on the alert.
+Microsoft Defender alerts come from solutions like Microsoft Defender for Endpoint, Defender for Office 365, Defender for Identity, Defender for Cloud Apps, the app governance add-on for Microsoft Defender for Cloud Apps, Microsoft Entra ID Protection, and Microsoft Data Loss Prevention. You might notice alerts with prepended characters in the alert. The following table provides guidance to help you understand the mapping of alert sources based on the prepended character on the alert.
 
 > [!NOTE]
 >
@@ -199,7 +199,7 @@ The **Manage alert** pane allows you to view or specify:
   - **Not Set** (default).
   - **True positive** with a type of threat. Use this classification for alerts that accurately indicate a real threat. Specifying this threat type alerts your security team see threat patterns and act to defend your organization from them.
   - **Informational, expected activity** with a type of activity. Use this option for alerts that are technically accurate, but represent normal behavior or simulated threat activity. You generally want to ignore these alerts but expect them for similar activities in the future where the activities are triggered by actual attackers or malware. Use the options in this category to classify alerts for security tests, red team activity, and expected unusual behavior from trusted apps and users.
-  - **False positive** for types of alerts that were created even when there's no malicious activity or for a false alarm. Use the options in this category to classify alerts that are mistakenly identified as normal events or activities as malicious or suspicious. Unlike alerts for 'Informational, expected activity', which can also be useful for catching real threats, you generally don't want to see these alerts again. Classifying alerts as false positive helps Microsoft Defender XDR improve its detection quality.
+  - **False positive** for types of alerts that were created even when there's no malicious activity or for a false alarm. Use the options in this category to classify alerts that are mistakenly identified as normal events or activities as malicious or suspicious. Unlike alerts for 'Informational, expected activity', which can also be useful for catching real threats, you generally don't want to see these alerts again. Classifying alerts as false positive helps Microsoft Defender improve its detection quality.
 - A comment on the alert.
 
 > [!NOTE]
@@ -245,14 +245,14 @@ This action is only applicable for Defender for Endpoint alerts.
 - **Resolve alert**: Automatically resolves the alert and related incidents. Matching alerts and their associated incidents are triggered with resolved status.
 - **Set as behavior**: Converts matching signals into behaviors. They won’t appear in the alert queue or trigger incidents. Data remains in *BehaviorInfo* and *BehaviorEntities* tables for hunting. This action isn't supported for Defender for Cloud or Microsoft Defender for Office 365 alerts.
 
-Microsoft Defender XDR also includes built-in alert tuning rules that suppress alerts from common benign activity without affecting Automated Investigation and Response (AIR) investigations and email notifications.
+Microsoft Defender also includes built-in alert tuning rules that suppress alerts from common benign activity without affecting Automated Investigation and Response (AIR) investigations and email notifications.
 
 > [!CAUTION]
 > Use alert tuning with caution, for scenarios where known, internal business applications or security tests trigger expected activity.
 
 ### Create rule conditions to tune alerts
 
-Create alert tuning rules from the Microsoft Defender XDR **Settings** area or from an alert details page. Select one of the following tabs to continue.
+Create alert tuning rules from the Microsoft Defender **Settings** area or from an alert details page. Select one of the following tabs to continue.
 
 #### [Create a rule from the Settings page](#tab/settings)
 
