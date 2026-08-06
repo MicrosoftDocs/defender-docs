@@ -59,6 +59,7 @@ For example, to get the first 10 rows of data from the `StormEvents` table store
 > [!NOTE]
 > - The `adx()` operator isn't supported for custom detections.
 > - Cross-query between Defender and Microsoft Sentinel tables using `adx()` isn't supported in GCC environments.
+> - The `adx()` operator isn't supported with [granular delegated admin privileges (GDAP)](/partner-center/gdap-introduction). Use [Microsoft Entra B2B authentication](/entra/external-id/what-is-b2b) instead.
 
 ### Use arg() operator for Azure Resource Graph queries
 
