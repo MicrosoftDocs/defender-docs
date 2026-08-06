@@ -283,9 +283,9 @@ The following grouped recommendations transition under Microsoft Defender for Se
 
 ### Microsoft Defender for Databases
 
-The following grouped SQL recommendations transition under Microsoft Defender for Databases. After the transition, each SQL vulnerability assessment rule appears as an individual recommendation reported on the database resource instead of the server resource. To analyze findings for an Azure SQL database, open the resource in the Azure portal, go to **Microsoft Defender for Cloud**, and select the specific finding to see the rule description, severity, and remediation guidance. For SQL servers on machines, open the **Recommendations** page in Defender for Cloud, find the relevant individual recommendation, and follow the same remediation steps.
+The following grouped SQL recommendations transition under Microsoft Defender for Databases. After the transition, each SQL vulnerability assessment rule appears as an individual recommendation. To analyze findings for an Azure SQL database, open the resource in the Azure portal, go to **Microsoft Defender for Cloud**, and select the specific finding to see the rule description, severity, and remediation guidance. For SQL servers on machines, open the **Recommendations** page in Defender for Cloud, find the relevant individual recommendation, and follow the same remediation steps.
 
-Learn about [remediation approaches](sql-azure-vulnerability-assessment-find.md#ways-to-remediate-a-finding) and [how to review findings](sql-azure-vulnerability-assessment-find.md#review-and-remediate-vulnerabilities-azure-portal).
+**How to review findings**: [Review and remediate SQL vulnerability assessment findings](sql-azure-vulnerability-assessment-find.md#review-and-remediate-vulnerabilities-azure-portal)
 
 **Deprecated recommendations** — the following grouped recommendations are deprecated and don't have a single direct replacement. They are replaced by the new individual SQL vulnerability assessment recommendations now available in Defender for Cloud. For the full list, see [SQL vulnerability assessment rules and recommendations mapping](sql-azure-vulnerability-assessment-rules.md).
 

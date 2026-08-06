@@ -22,26 +22,7 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 >
 > `https://aka.ms/msem/rss`
 
-### Codename MDASH - Azure DevOps connector preview
-
-The Azure DevOps connector is now available in preview for Codename MDASH - Agentic code scanner. Security teams can connect Azure DevOps organizations from the Microsoft Defender portal, onboard repositories, and trigger remote on-demand agentic code scans for the onboarded repositories.
-
-For more information, see [Create an Azure DevOps connector](/security-exposure-management/create-azure-devops-connector).
-
 ## July 2026
-
-### Codename MDASH - MAI-Augmented scan profile now available for on-demand scans preview
-
-Expanding on the previously released Defender CLI support, the MAI-Augmented scan profile is now also available in preview for on-demand scans triggered from the Microsoft Defender portal. Security teams can select this profile when starting an on-demand scan from the Manage scans. For more information, see [Trigger an on-demand agentic scan](/security-exposure-management/create-azure-devops-connector).
-
-### Codename MDASH - MAI-Augmented scan profile preview
-
-The MAI-Augmented scan profile is now available in preview as part of Codename MDASH. The MAI-Augmented profile can be used when triggering a scan through the Defender CLI.  
-It includes MAI-Cyber-1-Flash, a new cyber-specialized model that extends the current agentic scanner in addition to the existing required models. 
-
-Security teams can choose this profile when triggering a scan from Defender CLI or continue using a scan profile based on the existing models.
-
-For more information, see [Scan with a scan profile (Preview)](defender-cli.md#scan-with-a-scan-profile-preview).
 
 ### Codename MDASH - Agentic code scanner private preview
 
@@ -68,7 +49,7 @@ The following predefined **AI agent** classification rules were added to the cri
 | Classification | Description |
 | -------------- | ----------- |
 | Executive-Sponsored AI Agent | This rule applies to AI agents that are created or owned by senior executives in the organization. As such, these agents may be granted access to sensitive data and act on the executive's behalf. Compromise could lead to unauthorized actions performed under executive authority, and exposure of sensitive executive-level data - without the executive's identity being directly compromised. |
-
+| AI Agent with Privileged Business System Write Access | This rule applies to AI agents configured with tools that can perform high-risk write operations on business-critical systems. These operations include creating, modifying, and deleting records such as sales orders, customer data, financial transactions, and legal agreements. Compromise could lead to significant business impact. |
 
 For more information, see [Predefined classifications](predefined-classification-rules-and-levels.md).
 
@@ -83,12 +64,6 @@ The following predefined **Identity** classification rules were added to the cri
 | Widespread Local Admin on Servers and Workstations | This rule applies to identities that are configured as local administrators on a high number of both servers and workstations in the environment. **Note**: This rule logic relies on the predefined critical identity classifications "Widespread Local Admin on Servers" and "Widespread Local Admin on Workstations". |
 
 For more information, see [Predefined classifications](predefined-classification-rules-and-levels.md).
-
-### Overview dashboard (preview)
-
-The updated Microsoft Security Exposure Management overview dashboard is now in preview. The dashboard consolidates signals from cloud resources and devices into a single, action-oriented view of exposure risk, organized around two core actions: **Resolve Now** and **Monitor Exposure**.
-
-For more information, see [Start using Microsoft Security Exposure Management](get-started-exposure-management.md).
 
 ### New predefined classifications
 

@@ -22,8 +22,6 @@ ms.custom: msecd-doc-authoring-1016
 
 The **Library management** page in the Microsoft Defender portal allows you to manage files used during Microsoft Defender for Endpoint live response sessions. You can also add, view, and delete files in the library, instead of uploading them during a live response session.
 
-The **Library management** page describes how to view, add, and manage files in the live response library.
-
 For more information about live response, see [Investigate entities on devices using live response](live-response.md).
 
 ## View the list of files

@@ -10,7 +10,7 @@ ms.custom: msecd-doc-authoring-1014
 
 # View information on the Defender for Identity About page
 
-This article explains how to use the About page to collect important details about your Defender for Identity workspace in Microsoft Defender. Before you begin, make sure you meet the [Defender for Identity prerequisites](prerequisites.md).
+This article explains how to use the About page to collect important details about your Defender for Identity workspace in Microsoft Defender XDR. Before you begin, make sure you meet the [Defender for Identity prerequisites](prerequisites.md).
 
 <a name="details-on-about-page"></a>
 ## Information shown on the Defender for Identity About page

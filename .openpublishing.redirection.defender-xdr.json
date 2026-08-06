@@ -469,10 +469,6 @@
       "source_path": "defender-xdr/faq-cloud-coverage-defender-experts.md",
       "redirect_url": "/defender-xdr/defender-experts/defender-experts-faq-cloud-coverage",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "defender-xdr/advanced-hunting-security-copilot-threat-hunting-agent.md",
-      "redirect_url": "/defender-xdr/advanced-hunting-security-copilot-threat-hunting-assistant"
     }
   ]
 }

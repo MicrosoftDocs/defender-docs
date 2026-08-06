@@ -10,6 +10,11 @@ ms.custom: msecd-doc-authoring-1014
 
 # Migrate from Advanced Threat Analytics (ATA) to Microsoft Defender for Identity
 
+> [!IMPORTANT]
+> ATA is end of life. ATA ended Mainstream Support on January 12, 2021, and Extended Support ended in January 2026. No further updates, including security fixes, will be provided. For more information, read [End of mainstream support for Advanced Threat Analytics](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
+>
+> We strongly recommend migrating to Defender for Identity as soon as possible using the steps in this article.
+
 This article describes how to migrate from an existing ATA installation to a Microsoft Defender for Identity sensor, and includes the following steps:
 
 > [!div class="checklist"]
@@ -40,8 +45,6 @@ Defender for Identity also uses the Microsoft 365 security portfolio to automati
 > While you can migrate to Defender for Identity from any ATA version, your ATA data isn't migrated. Therefore, we recommend that you plan to retain your ATA Data Center and any alerts required for ongoing investigations until all ATA alerts are closed or remediated.
 >
 
-> [!NOTE]
-> The final release of ATA is [Update 3 for Microsoft Advanced Threat Analytics 1.9](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA ended Mainstream Support on January 12, 2021. Extended Support will continue until January 2026. For more information, read [End of mainstream support for Advanced Threat Analytics](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
 ## Prerequisites
 
@@ -110,7 +113,7 @@ After completing your migration to Defender for Identity, do the following to cl
 <a name="related-information"></a>
 ## Related content
 
-After migrating to Defender for Identity, learn more about investigating alerts in Microsoft Defender. For more information, see:
+After migrating to Defender for Identity, learn more about investigating alerts in Microsoft Defender XDR:
 
 - [Understanding security alerts](understanding-security-alerts.md)
 - [Investigate Defender for Identity security alerts in Microsoft Defender](manage-security-alerts.md)

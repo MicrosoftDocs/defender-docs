@@ -4,10 +4,8 @@ description: Learn how to effectively manage and track security initiatives usin
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to understand and manage security initiatives so that I can improve my organization's security posture.
 ms.topic: how-to
-ms.author: dlanger
-author: dlanger
-ms.date: 07/30/2025
-ms.custom: sfi-image-nochange
+ms.date: 06/15/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
 ---
 
 # Review security initiatives
@@ -32,7 +30,7 @@ The initiatives page provides detailed insights into your security initiatives a
 
 1. Navigate to the [Microsoft Defender portal](https://security.microsoft.com/).
 
-1. From the Exposure management section on the navigation bar, select **Exposure insights -> Initiatives** to open the [Exposure insights initiatives](https://security.microsoft.com/exposure-initiatives) page.
+2. From the Exposure management section on the navigation bar, select **Exposure insights -> Initiatives** to open the [Exposure insights initiatives](https://security.microsoft.com/exposure-initiatives) page.
 
     :::image type="content" source="./media/initiatives/initiatives-window.png" alt-text="Screenshot of the Security Exposure Management Initiatives window.":::
 

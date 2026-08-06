@@ -1,41 +1,6 @@
 {
   "redirections": [
     {
-      "source_path_from_root": "/sentinel/sap/cross-workspace.md",
-      "redirect_url": "/azure/sentinel/sap/deployment-overview",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/sentinel/sap/deploy-data-connector-agent-container.md",
-      "redirect_url": "/azure/sentinel/sap/deploy-data-connector-agentless",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/sentinel/sap/update-sap-data-connector.md",
-      "redirect_url": "/azure/sentinel/sap/deploy-data-connector-agentless",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/sentinel/sap/reference-update.md",
-      "redirect_url": "/azure/sentinel/sap/deploy-data-connector-agentless",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/sentinel/sap/reference-kickstart.md",
-      "redirect_url": "/azure/sentinel/sap/deploy-data-connector-agentless",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/sentinel/sap/reference-systemconfig.md",
-      "redirect_url": "/azure/sentinel/sap/deploy-data-connector-agentless",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/sentinel/sap/reference-systemconfig-json.md",
-      "redirect_url": "/azure/sentinel/sap/deploy-data-connector-agentless",
-      "redirect_document_id": false
-    },
-    {
       "source_path_from_root": "/sentinel/datalake/sentinel-mcp-graph-tool.md",
       "redirect_url": "/azure/sentinel/datalake/sentinel-mcp-data-exploration-tool#graph-tools-preview",
       "redirect_document_id": false
@@ -3533,11 +3498,6 @@
     {
       "source_path_from_root": "/sentinel/sentinel-playbook-creation.md",
       "redirect_url": "/azure/sentinel/isv/sentinel-playbook-creation",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/sentinel/normalization-develop-parsers.md",
-      "redirect_url": "/azure/sentinel/isv/normalization-develop-parsers",
       "redirect_document_id": false
     },
     {

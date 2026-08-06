@@ -25,9 +25,9 @@ Read responses to the most commonly asked questions about [Microsoft Defender XD
 
 For instructions on how to turn on the service, [read Turn on Microsoft Defender XDR](m365d-enable.md).
 
-## I don't have a Microsoft 365 E5 license. Can I still use Microsoft Defender XDR?
+## I don't have a Microsoft 365 E5 license. Can I still use Microsoft Defender?
 
-Customers with the following non-E5 licenses can use Microsoft Defender XDR:
+Customers with the following non-E5 licenses can use Microsoft Defender:
 
 - Microsoft Defender for Endpoint
 - Microsoft Defender for Identity
@@ -38,34 +38,34 @@ For a full list of supported licenses, [read the licensing requirements](prerequ
 
 <a name='do-i-need-to-install-or-deploy-anything-to-start-using-microsoft-365-defender'></a>
 
-## Do I need to install or deploy anything to start using Microsoft Defender XDR?
+## Do I need to install or deploy anything to start using Microsoft Defender?
 
-No, Microsoft Defender XDR consolidates data from Microsoft 365 security services that you have already deployed. Once you turn it on, incident, automation, and hunting experiences will start working within the scope of the deployed products. If none of these products are properly deployed, Microsoft Defender XDR will not display any data and is unable to take any action.
+No, Microsoft Defender consolidates data from Microsoft 365 security services that you have already deployed. Once you turn it on, incident, automation, and hunting experiences will start working within the scope of the deployed products. If none of these products are properly deployed, Microsoft Defender will not display any data and is unable to take any action.
 
-To optimize your Microsoft Defender XDR experiences, we recommend deploying *all* supported [Microsoft 365 security products and services](deploy-supported-services.md).
+To optimize your Microsoft Defender experiences, we recommend deploying *all* supported [Microsoft 365 security products and services](deploy-supported-services.md).
 
 <a name='where-does-microsoft-365-defender-process-and-store-my-data'></a>
 
 ## Where does Microsoft Defender XDR process and store my data?
 
-Microsoft Defender XDR automatically selects an optimal location for the data center where consolidated data is processed and stored. If you have Microsoft Defender for Endpoint, it selects the same location used by Defender for Endpoint.
+Microsoft Defender automatically selects an optimal location for the data center where consolidated data is processed and stored. If you have Microsoft Defender for Endpoint, it selects the same location used by Defender for Endpoint.
 
 > [!NOTE]
 > Microsoft Defender for Endpoint automatically provisions in European Union (EU) data centers when turned on through Microsoft Defender for Cloud. Microsoft Defender XDR will automatically provision in the same EU data center for customers who have provisioned Microsoft Defender for Endpoint in this manner.
 
-The data center location is shown before and after the service is provisioned in the settings page for Microsoft Defender XDR (**Settings > Microsoft Defender XDR**). If you prefer to use another data center location, select **Need help?** in the Microsoft Defender portal to contact Microsoft support.
+The data center location is shown before and after the service is provisioned in the settings page for Microsoft Defender (**Settings > Microsoft Defender XDR**). If you prefer to use another data center location, select **Need help?** in the Microsoft Defender portal to contact Microsoft support.
 
 <a name='where-can-i-access-microsoft-365-defender'></a>
 
 ## Where can I access Microsoft Defender XDR?
 
-Microsoft Defender XDR is available at: <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank"><https://security.microsoft.com></a>.
+Microsoft Defender is available at: <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank"><https://security.microsoft.com></a>.
 
 <a name='what-permissions-do-i-need-to-access-microsoft-365-defender'></a>
 
-## What permissions do I need to access Microsoft Defender XDR?
+## What permissions do I need to access Microsoft Defender?
 
-Accounts assigned the following Microsoft Entra roles can access Microsoft Defender XDR functionality and data:
+Accounts assigned the following Microsoft Entra roles can access Microsoft Defender functionality and data:
 
 - [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator)
 - [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator)
@@ -78,15 +78,15 @@ Accounts assigned the following Microsoft Entra roles can access Microsoft Defen
 - [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator)
 
 > [!NOTE]
-> Role-based access control settings in Microsoft Defender for Endpoint influence access to data. For more information, read about [managing access to Microsoft Defender XDR](m365d-permissions.md).
+> Role-based access control settings in Microsoft Defender for Endpoint influence access to data. For more information, read about [managing access to Microsoft Defender](m365d-permissions.md).
 >
-> If you are running the Microsoft Defender XDR preview program you can now also experience the new Microsoft Defender 365 role-based access control (RBAC) model. For more information, see [Microsoft Defender XDR role-based access control (RBAC) model](./manage-rbac.md).
+> If you are running the Microsoft Defender preview program you can now also experience the new Microsoft Defender 365 role-based access control (RBAC) model. For more information, see [Microsoft Defender role-based access control (RBAC) model](./manage-rbac.md).
 
 <a name='what-time-zone-does-microsoft-365-defender-default-to'></a>
 
-## What time zone does Microsoft Defender XDR default to?
+## What time zone does Microsoft Defender default to?
 
-By default, Microsoft Defender XDR displays time information in the UTC time zone. You can also change this setting to use your local time zone.
+By default, Microsoft Defender displays time information in the UTC time zone. You can also change this setting to use your local time zone.
 
 To change time zone, sign in to the Microsoft Defender portal then go to **System > Settings > Microsoft Defender portal** and select your preferred time zone. Refresh your browser to ensure that changes are applied immediately.
 
@@ -94,7 +94,7 @@ The time zone settings is applied to the dates and times displayed in incidents,
 
 <a name='how-can-i-learn-about-new-microsoft-365-defender-feature-and-ui-updates'></a>
 
-## How can I learn about new Microsoft Defender XDR feature and UI updates?
+## How can I learn about new Microsoft Defender feature and UI updates?
 
 Microsoft regularly provides information through the various channels, including:
 
@@ -106,7 +106,7 @@ Get the latest publicly available experiences by turning on [preview features](p
 
 <a name='how-can-i-provide-feedback-or-suggestions-for-microsoft-365-defender'></a>
 
-## How can I provide feedback or suggestions for Microsoft Defender XDR?
+## How can I provide feedback or suggestions for Microsoft Defender?
 
 Your feedback helps us get better at protecting your environment from advanced attacks. Share your experience, impressions, and requests by providing feedback.
 
@@ -118,7 +118,7 @@ Rate your experience and provide details on what you liked or where improvements
 
 ## Related topics
 
-- [Microsoft Defender XDR overview](microsoft-365-defender.md)
+- [Microsoft Defender overview](microsoft-365-defender.md)
 - [Turn on Microsoft Defender XDR](m365d-enable.md).
 - [Licensing requirements and other prerequisites](prerequisites.md)
 - [Deploy supported services](deploy-supported-services.md)

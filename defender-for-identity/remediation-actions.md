@@ -1,7 +1,7 @@
 ---
 title: Remediation actions for compromised users in Microsoft Defender for Identity
 description: Learn how to respond to compromised users with remediation actions in Microsoft Defender for Identity
-ms.date: 07/22/2026
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.custom: sfi-ga-blocked, msecd-doc-authoring-1014
 ai-usage: ai-assisted

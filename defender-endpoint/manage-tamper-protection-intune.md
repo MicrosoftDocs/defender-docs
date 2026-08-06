@@ -67,7 +67,7 @@ Tamper protection helps protect certain [security settings](prevent-changes-to-s
 
 ## Turn tamper protection on (or off) in Microsoft Intune
 
-To create an antivirus policy in Microsoft Intune that turns tamper protection on or off for your devices, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the antivirus policy, use these settings:
+To create an antivirus policy in Microsoft Intune that turns tamper protection on or off for your devices, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings::
 
 - **Policy type**": Antivirus
 - **Platform**: Windows
@@ -96,9 +96,6 @@ To learn more about antivirus exclusions, see [Exclusions for Microsoft Defender
 ## How to determine whether antivirus exclusions are tamper protected on a Windows device
 
 You can use a registry key to determine whether the functionality to protect Microsoft Defender Antivirus exclusions is enabled. Use this procedure to view, but not change, tamper protection status.
-
-> [!CAUTION]
-> **Do not change the value of the registry keys**. This procedure is for viewing registry values only. Changing keys has no effect on whether tamper protection applies to exclusions.
 
 1. On a Windows device open Registry Editor. (Read-only mode is fine; you're not editing the registry key.)
 
@@ -132,5 +129,4 @@ You can use a registry key to determine whether the functionality to protect Mic
 - [Frequently asked questions (FAQs) on tamper protection](faqs-on-tamper-protection.yml)
 - [Troubleshoot problems with tamper protection](troubleshoot-problems-with-tamper-protection.yml)
 - [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](/intune/intune-service/protect/mde-security-integration)
-
 

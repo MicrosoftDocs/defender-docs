@@ -58,6 +58,9 @@ Your existing investment in the Microsoft Sentinel Solution for SAP analytic rul
 > [!WARNING]
 > Billing exclusions for selected SAP SIDs need to be revisited. Agentless data connector uses different means for identification than the Agent data connector does. Reach out to your account representative ahead of time.
 
+> [!WARNING]
+> Billing exclusions for selected SAP SIDs need to be revisited. Agentless data connector uses different means for identification than the Agent data connector does. Reach out to your account representative ahead of time.
+
 ## Feature parity
 
 The agentless data connector provides built-in feature parity with the containerized SAP agent for most important use cases regarding analytic rules and workbooks. See the [content reference](sap-solution-security-content.md) for details. 

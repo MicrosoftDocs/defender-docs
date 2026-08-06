@@ -1,6 +1,6 @@
 ---
-title: Address false positives or false negatives in Microsoft Defender XDR
-description: Was something missed or wrongly detected by AIR in Microsoft Defender XDR? Learn how to submit false positives or false negatives to Microsoft for analysis.
+title: Address false positives or false negatives in Microsoft Defender
+description: Was something missed or wrongly detected by AIR in Microsoft Defender? Learn how to submit false positives or false negatives to Microsoft for analysis.
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms

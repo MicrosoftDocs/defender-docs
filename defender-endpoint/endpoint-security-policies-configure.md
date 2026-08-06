@@ -9,7 +9,7 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
-ms.date: 08/03/2026
+ms.date: 07/06/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -31,11 +31,6 @@ To manage settings on devices that aren't enrolled in Intune, first enable secur
 The **Endpoint security policies** page is available in the [Microsoft Defender portal](https://security.microsoft.com) at **Endpoints** \> **Configuration management** \> **Endpoint security policies**, or directly at <https://security.microsoft.com/policy-inventory>.
 
 The following table lists the endpoint security policy types you can manage and the platforms that each type supports:
-
-> [!NOTE]
-> You can't use Endpoint security policy management on devices that are running a sensor delivered by the Microsoft Monitoring Agent (MMA). For more information on how to upgrade these devices, see [Use the Defender deployment tool to deploy Defender endpoint security](/defender-endpoint/onboard-downlevel#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security).
->
-> Also, only the **Microsoft Defender Antivirus** policy is supported on Windows 7 SP1 and Windows Server 2008 R2 SP1.
 
 |Policy|Windows|macOS|Linux|
 |---|:---:|:---:|:---:|
