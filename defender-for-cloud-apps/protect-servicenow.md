@@ -184,7 +184,7 @@ To complete the connection in the Microsoft Defender Portal, follow these steps:
 
 After connecting ServiceNow, you'll receive events for 1 hour prior to connection.
 
-### Optional: Create a non-admin user
+### Optional: Create a non-admin user in ServiceNow
 
 #### Step 1: Create custom access control lists (ACLs) in ServiceNow
 
