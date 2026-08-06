@@ -176,7 +176,7 @@ To complete the connection in the Microsoft Defender Portal, follow these steps:
 
     :::image type="content" source="media/servicenow-app-connector-details-screenshot.png" alt-text="Screenshot of the ServiceNow App Connector Details Dialog.":::
    
-1. To find your ServiceNow User ID, in the ServiceNow portal, go to **Users** and then locate your name in the table. (Optional) To use a non-admin user for this step, follow the steps in the below section to create a non-admin user.
+1. To find your ServiceNow user name, in the ServiceNow portal, go to **Users** and then locate your name in the table. (Optional) To use a non-admin user for this step, create a non-admin user by following the steps in the below section.
      
 1. In the **OAuth Details** page, enter your **Client ID** and **Client Secret**. Select **Next**.
 
