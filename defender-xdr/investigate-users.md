@@ -5,7 +5,7 @@ description: Learn how to use the Identity page in Microsoft Defender. Investiga
 ms.author: abbyweisberg
 author: AbbyMSFT
 ms.reviewer: maelgami
-ms.date: 08/02/2026
+ms.date: 06/22/2026
 ms.topic: article
 ms.service: microsoft-defender
 ms.custom: sfi-image-nochange, msecd-doc-authoring-1018
@@ -116,6 +116,9 @@ The **Risk score** tab summarizes the identity's risk level by combining alert a
 | **Likelihood of Compromise Details** | A bar chart that shows alert distribution across MITRE ATT&CK categories, with a filterable alert table. Use the **Active alerts only** toggle to focus on unresolved alerts. Filter by account set, status, or kill chain stage. |
 
 The **Confirm safe** action now includes **Reset risk** for both the identity risk score and the Microsoft Entra risk level. For more information, see [Remediation actions in Microsoft Defender for Identity](/defender-for-identity/remediation-actions#supported-actions).
+
+> [!NOTE]
+> Identity risk in Microsoft Defender for Identity uses automated decay logic to allow SOC prioritization. If no new risk factors are detected, the identity risk score decreases over time. Microsoft Entra ID maintains its own risk level independently and doesn't apply decay. As a result, you might see an Entra risk level with no corresponding identity risk score when the Entra risk update time is older than 30 days.
 
 > [!NOTE]
 > Identity risk in Microsoft Defender for Identity uses automated decay logic to allow SOC prioritization. If no new risk factors are detected, the identity risk score decreases over time. Microsoft Entra ID maintains its own risk level independently and doesn't apply decay. As a result, you might see an Entra risk level with no corresponding identity risk score when the Entra risk update time is older than 30 days.

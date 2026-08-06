@@ -1,5 +1,5 @@
 ---
-title: Test controlled folder access with an untrusted app
+title: Demonstrate how controlled folder access (CFA) blocks an untrusted app
 description: Use the controlled folder access (CFA) test tool to see how Microsoft Defender Antivirus blocks an untrusted app from writing to a protected folder.
 ms.service: defender-endpoint
 ms.author: chrisda
@@ -11,9 +11,8 @@ ms.collection:
 - tier2
 - demo
 ms.topic: how-to
-ms.custom: msecd-doc-authoring-1015
 ms.subservice: asr
-ms.date: 08/03/2026
+ms.date: 06/16/2026
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to use the CFA test tool to confirm that controlled folder access blocks an untrusted app from writing to a protected folder so that I can verify CFA before I deploy it in my environment.
 appliesto:
@@ -55,9 +54,7 @@ For the full list of requirements, supported operating systems, and protection m
    - Downloads the CFA test tool (<https://demo.wd.microsoft.com/Content/CFAtool.exe>) to `c:\demo\CFATestFiles`.
    - Turns on CFA in **Enabled** (block) mode and adds `c:\demo` to the protected folders list (without affecting your other protected folders).
 
-   > [!IMPORTANT]
-   > The setup script adds `c:\demo` to the Microsoft Defender Antivirus exclusion list. Don't run `CFAtool.exe` from `c:\demo` or one of its subfolders. Processes that run from an antivirus-excluded path might be treated as trusted and might not generate the expected CFA block or detection. Before you run the demonstration, copy `CFAtool.exe` to a folder that isn't excluded from Microsoft Defender Antivirus.
-   >
+   > [!NOTE]
    > Because `WindowsDefender_CFA_SetupScript.ps1` is shared with the [ransomware demonstration](defender-endpoint-demonstration-controlled-folder-access-ransomware.md), it also downloads a ransomware test file (`ransomware_testfile_unsigned.exe`) and a clean test file (`testfile_safe.txt`). These files aren't used in this CFA demonstration.
 
 1. Before you run the script, allow it to run by setting the execution policy to `RemoteSigned` for the current session. Run the following command in an elevated PowerShell session:
@@ -91,8 +88,7 @@ Or, if you prefer not to run the script, do the following minimal steps instead.
 
 If you ran the setup script, use the test tool that the script downloaded:
 
-1. In File Explorer, go to `c:\demo\CFATestFiles`, and copy `CFAtool.exe` to a folder that isn't excluded from Microsoft Defender Antivirus. Don't run the tool from `c:\demo` or one of its subfolders.
-1. Run `CFAtool.exe` from the folder that isn't excluded from Microsoft Defender Antivirus.
+1. In File Explorer, go to `c:\demo\CFATestFiles`, and then run the CFA test tool (`CFAtool.exe`).
 1. In the CFA test tool, configure the following settings:
    - **File name**: By default, `TestFile.txt` is selected, but you can change the filename and type.
    - **Save file to**: Select **Custom path** and then enter `c:\demo` (which the setup script added to the protected folders list).

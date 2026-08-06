@@ -17,16 +17,7 @@ ai-usage: ai-assisted
 
 Microsoft Sentinel SIEM includes a range of capabilities that partners can use to create impactful solutions they can publish through Sentinel SIEM Content Hub. By building on top of Sentinel, partners can enable new scenarios that use security data and analytics capabilities to help customers detect and respond to threats.
 
-This article provides an overview of the lifecycle of building and publishing Microsoft Sentinel SIEM solutions, from learning about Sentinel and planning your solution, to building, testing, and publishing it to customers. Each section includes links to more detailed documentation to help you through each step of the process.
-
-:::image type="content" source="media/sentinel-integration-guide/sentinel-integration-timeline.png" lightbox="media/sentinel-integration-guide/sentinel-integration-timeline.png" alt-text="Diagram that shows high-level phases for the Microsoft Sentinel SIEM solution lifecycle from learn through go-to-market.":::
-
-## Prerequisites
-
-Before you create and publish a SIEM solution to Azure Commercial Marketplace, join the Microsoft Cloud Partner Program and create an account in Partner Center. See the following resources for more information:
-
-- Join the [Microsoft Cloud Partner Program](https://partner.microsoft.com/).
-- Create a [Commercial Marketplace account](/partner-center/marketplace/create-account) in Partner Center.
+For example, you can create a connector to bring new data into Sentinel, analyze that data with Sentinel Jupyter notebook jobs, and create an agent that uses MCP tools to analyze the new data along with other data already in the lake. The agent can then interact with other endpoints and external applications to deliver a powerful unified experience to your customers.
 
 ## Learn about Microsoft Sentinel
 
@@ -41,14 +32,16 @@ To get started, learn about Microsoft Sentinel, identify the data and functional
 
 ## Build your solution
 
-Once you have a good understanding of Microsoft Sentinel and the solution you want to building, follow these steps:
+Once you have a good understanding of Microsoft Sentinel and the solution you want to building.
 
 |Step| Description|
 |--|--|
 |**Provisioning environment**|To help you get started with building and testing your solution, we recommend you sign up for an Azure Free Trial and a Microsoft Sentinel Free Trial. <br><br> For more information, see:<br> [Sign up for an Azure Free Trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) <br> [Then sign up for a Microsoft Sentinel Free Trial (Scroll down to 'Free trial')](https://azure.microsoft.com/pricing/details/microsoft-sentinel/)|
 |**Complete the training lab**|We highly recommend the training lab to get fully ramped up with Microsoft Sentinel. This lab provides hands-on practical experience for product features, capabilities, and scenarios. <br><br> For more information, see:<br> [Complete the Microsoft Sentinel Training Lab](/azure/sentinel/skill-up-resources)|
-|**Build a connector**|Microsoft Sentinel is built on data. Most solutions start with bringing the data from a customer's environment into Microsoft Sentinel. To understand how to build a connector, refer to the following resources. <br><br> For more information, see:<br> [Develop a SIEM solution for Microsoft Sentinel](develop-siem-solutions-overview.md) <br>[Build custom connectors with AI in Microsoft Sentinel](create-custom-connector-builder-agent.md)<br> [Create a pull codeless connector for Microsoft Sentinel](create-codeless-connector.md) <br>[Webinar: Creating Data Connectors](https://www.youtube.com/watch?v=wXCh17rgtLU)|
-|**Build your SIEM content**|In addition to data, your solution can offer a rich array of other components to help customers get the most out of your data. For example, you can offer detections, workbooks, playbooks, and hunting queries to make your offering readily usable by customers. <br><br> For more information, see:<br> [Microsoft Sentinel components and patterns](siem-components-to-include.md)|
+|**Build a connector**|Microsoft Sentinel is built on data. Most solutions start with bringing the data from a customer’s environment into Microsoft Sentinel. To understand how to build a connector, refer to the following resources. <br><br> For more information, see:<br> [Guide to Building Microsoft Sentinel Data Experiences](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/ReadMe.md) <br>[Webinar: Creating Data Connectors](https://www.youtube.com/watch?v=wXCh17rgtLU)|
+|**Build your SIEM content**|In addition to data, your solution can offer a rich array of other components to help customers get the most out of your data. For example, you can offer detections, workbooks, playbooks, and hunting queries to make your offering readily usable by customers. <br><br> For more information, see:<br> [What can you contribute and how can you create contributions?](https://github.com/Azure/Azure-Sentinel/wiki)|
+|**Create Jupyter notebook jobs and Security Copilot agents**|Security Copilot agents and Sentinel data lake jobs allow you to create powerful solutions that can reason over data in the Sentinel data lake and identify threats and surface insights. The following resources explain how to use those capabilities.<br><br> [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot)<br> [Create and manage Jupyter notebook jobs](/azure/sentinel/datalake/notebook-jobs)<br>[Running notebooks on the Microsoft Sentinel data lake](/azure/sentinel/datalake/notebooks)|
+|**Using AI with Sentinel data lake**|Microsoft Sentinel’s security data lake unifies long‑term, cost‑effective retention with rich, security‑specific context. That foundation pairs naturally with Model Context Protocol (MCP) tools and Microsoft Copilot for Security to deliver agentic (tool‑using, goal‑directed) workflows for Security Operations Center (SOC) teams.<br><br> For more information, see:<br>[What is MCP?](../../sentinel/datalake/sentinel-mcp-overview.md)<br>[Microsoft Security Copilot documentation](/copilot/security/)|
 |**Security, privacy and compliance**|For details on Secure Future Initiative (SFI) requirements, see https://aka.ms/securefutureinitiative <br>Follow the Security Development Lifecycle (SDL) practices for:<br>- Threat modeling<br>- Secure configuration<br>- Dependency hygiene<br>- Penetration testing in coordination with your security team<br> - Use only approved tools for vulnerability tracking and patch management. For more information, see [Microsoft Security Development Lifecycle](https://www.microsoft.com/securityengineering/sdl/)|
 
 ## Test your solution

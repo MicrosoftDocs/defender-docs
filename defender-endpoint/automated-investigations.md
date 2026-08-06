@@ -29,6 +29,8 @@ To use automated investigation and response (AIR), your subscription must includ
 
 [!INCLUDE [AIR deprecation note](includes/air-deprecation-note.md)]
 
+[!INCLUDE [AIR deprecation note](includes/air-deprecation-note.md)]
+
 > [!NOTE]
 > - Automated investigation and response (AIR) requires Microsoft Defender Antivirus for running in passive mode or active mode. If Microsoft Defender Antivirus is disabled or uninstalled, Automated Investigation and Response will not function correctly.
 > - Automated investigation and response on Windows Server 2012 R2 and Windows Server 2016 requires the [Unified Agent](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) to be installed.

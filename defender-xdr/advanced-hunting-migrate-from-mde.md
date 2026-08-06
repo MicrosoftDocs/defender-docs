@@ -184,7 +184,7 @@ AlertInfo
 
 For more information about advanced hunting and Microsoft Defender XDR, see the following articles:
 
-- [Turn on Microsoft Defender XDR](m365d-enable.md)
+- [Turn on Microsoft Defender](advanced-hunting-query-language.md)
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Understand the schema](advanced-hunting-schema-tables.md)
 - [Advanced hunting in Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-overview)

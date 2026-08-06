@@ -158,7 +158,7 @@ Use the following scenarios to verify how the demonstration ASR rules behave in 
 
 ### Scenario 1: All demonstration ASR rules block the test files
 
-Do the following steps to confirm that all demonstration ASR rules block their corresponding test files:
+Perform the following steps to confirm that all demonstration ASR rules block their corresponding test files:
 
 1. Enable the [demonstration ASR rules](#asr-rules-in-this-demonstration) in **Block** mode. Run the `WindowsDefender_ASR_Block.ps1` script (see [Set up the demonstration](#set-up-the-demonstration)), or use the [PowerShell command](#set-up-the-demonstration).
 1. Download and open the test files. If prompted, enable editing and content.
@@ -183,7 +183,7 @@ You should immediately see an "Action blocked" notification.
 
 ### Scenario 3: An ASR rule blocks an unsigned file that runs from a USB drive
 
-Do the following steps to verify that the USB execution rule blocks an unsigned file.
+Perform the following steps to verify that the USB execution rule blocks an unsigned file.
 
 1. Enable the **Block untrusted and unsigned processes that run from USB** ASR rule by running the following command in an elevated PowerShell window:
 
@@ -198,7 +198,7 @@ You should immediately see an "Action blocked" notification.
 
 ### Scenario 4: Without ASR rules, the ransomware test file encrypts files
 
-Turn off the demonstration ASR rules to observe how the ransomware test file behaves when ASR rules are disabled.
+Perform the following steps to observe how the ransomware test file behaves when ASR rules are disabled.
 
 1. Do either of the following steps to disable the ASR rules:
    - Run the `WindowsDefender_ASR_Disabled.ps1` script (see [Set up the demonstration](#set-up-the-demonstration)).

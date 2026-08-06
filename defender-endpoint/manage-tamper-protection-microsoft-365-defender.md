@@ -29,7 +29,7 @@ ai-usage: ai-assisted
 
 
 
-This article explains how to turn [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) on or off tenant wide by using the [Microsoft Defender portal](https://security.microsoft.com). Tamper protection helps protect certain [security settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on), such as virus and threat protection, from being disabled or changed. Before you begin, review the [prerequisites](#prerequisites) to ensure your environment meets the requirements.
+Turn [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) on or off tenant wide by using the [Microsoft Defender portal](https://security.microsoft.com). Tamper protection helps protect certain [security settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on), such as virus and threat protection, from being disabled or changed. Before you begin, review the [prerequisites](#prerequisites) to ensure your environment meets the requirements.
 
 > [!IMPORTANT]
 > If tamper protection is [deployed and managed through Intune](manage-tamper-protection-intune.md), turning tamper protection on or off in the Microsoft Defender portal doesn't impact the state of tamper protection. Instead, the Microsoft Defender portal restricts tamper-protected settings to their secure default values. For more information, see [What happens when tamper protection is turned on](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on)?
@@ -91,6 +91,5 @@ Use the following steps to turn tamper protection on or off in the Microsoft Def
 - [Built-in protection helps guard against ransomware](built-in-protection.md)
 - [What happens when tamper protection is turned on?](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on)
 - [Troubleshoot problems with tamper protection](troubleshoot-problems-with-tamper-protection.yml)
-
 
 

@@ -118,8 +118,6 @@ Check the onboarding status for a device in **Device inventory**. To check fleet
 
 To filter deployment events on the timeline, enter `DefenderDeployment` in the timeline search box. Each event reads `Defender deployment tool: <step> succeeded` or `Defender deployment tool: <step> failed`, and includes any extra details the tool reports for that step. The following screenshot shows a successful install run.
 
-:::image type="content" source="./media/linux-install-with-defender-deployment-tool/deployment-tool-successful-install-timeline.png" alt-text="Screenshot of the device timeline filtered to show successful Defender deployment tool events." lightbox="./media/linux-install-with-defender-deployment-tool/deployment-tool-successful-install-timeline.png":::
-
 ### Deployment timeline
 
 A successful install-and-onboard run produces the following sequence of events:

@@ -135,6 +135,15 @@ Apart from device-focused remediation steps, you can also take actions on emails
 
   **Initiate automated investigation** might be disabled if mandatory columns are missing. To resolve this issue, select **Show empty columns** before you select **Take actions**.
 
+  Use the following query as a reference to enable **Submit to Microsoft** and **Initiate automated investigation**.
+
+   ```kusto
+   EmailEvents
+  | where ThreatTypes contains "spam"
+  | project  Timestamp, NetworkMessageId,RecipientEmailAddress,SenderFromAddress,SenderMailFromAddress,Subject,SenderFromDomain,TimeGenerated,SenderIPv4,SenderIPv6
+  | join EmailUrlInfo on NetworkMessageId
+   ```
+  
   :::image type="content" source="media/advanced-hunting-take-action/advanced-hunting-take-actions-choose-actions.png" alt-text="Screenshot of the Choose actions page of the Take actions wizard with Initiate automated investigation selected." lightbox="media/advanced-hunting-take-action/advanced-hunting-take-actions-choose-actions.png":::
 
 You can provide a remediation name and a short description of the action to track it in the action center history. Use the Approval ID provided at the end of the wizard to filter for these actions in the action center:

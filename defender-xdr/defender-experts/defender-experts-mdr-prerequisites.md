@@ -14,9 +14,7 @@ ms.topic: concept-article
 ms.custom: 
 - cx-ti
 - cx-dex
-- msecd-doc-authoring-1018
-ms.date: 07/29/2026
-ai-usage: ai-assisted
+ms.date: 05/18/2026
 ---
 
 # Before you begin using Defender Experts MDR
@@ -77,26 +75,9 @@ As part of the service's built-in [Microsoft Defender Experts Hunting](defender-
 
 [Learn more about Microsoft's commercial licensing terms](https://www.microsoft.com/licensing/terms/productoffering/Microsoft365/MCA).
 
-## Plan 2 prerequisites
-
-Defender Experts MDR Plan 2 operates on the telemetry you collect in Microsoft Sentinel, so it has onboarding prerequisites and baseline criteria in addition to the requirements described earlier in this article. These prerequisites let the service detect and investigate reliably in the sources you want covered.
-
-Plan 2 requires the following:
-
-- A supported endpoint detection and response (EDR) product deployed on all endpoints.
-- Supported email security and identity protection products deployed for all users. A basic identity and access management solution isn't sufficient. Assets without these products are considered uncovered.
-- A supported cloud-native application protection platform (CNAPP) or cloud workload protection platform (CWPP) solution deployed for any cloud or on-premises infrastructure to be monitored.
-- Data ingested through the built-in Microsoft Sentinel connectors into the standard Microsoft Sentinel tables.
-- Appropriate access granted to Defender Experts for the Microsoft Sentinel workspaces to be monitored.
-- Microsoft Sentinel connected to the Microsoft Defender portal. For more information, see [Connect Microsoft Sentinel to the Microsoft Defender portal](/azure/sentinel/move-to-defender).
-- Baseline data configuration, including a 90-day Log Analytics retention period for data sources that require real-time detection and monitoring.
-- User and Entity Behavior Analytics (UEBA) enabled for supported data sources.
-
-For the non-Microsoft sources that Plan 2 covers, see [Third-party source coverage for Plan 2](defender-experts-mdr-overview.md#third-party-source-coverage-for-plan-2).
-
-<!-- TODO: Product and engineering to verify this Plan 2 prerequisite list before the PR leaves draft. Specifically confirm: the 90-day Log Analytics retention requirement and which data sources it applies to; which data sources require UEBA; the least-privileged Azure role a customer needs to grant expert access to the primary workspace or resource group; and whether onboarding is limited to the primary Microsoft Sentinel workspace. -->
-
 ## Access requirements
+
+Work with your Commercial Executive to transact the Defender Experts MDR and Defender Experts for Servers SKUs.
 
 Defender Experts MDR and Defender Experts for Servers request for certain roles and permissions for you to fully access the service capabilities. [Learn more](defender-experts-mdr-permissions.md)
 

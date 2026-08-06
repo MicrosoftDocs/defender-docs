@@ -23,7 +23,7 @@ In this article, you learn how to view discovered agents in the inventory, revie
 Before you can discover local AI agents on endpoints, make sure you meet the following requirements:
 
 - Your environment is in the commercial cloud. Sovereign and national clouds aren't supported.
-- Your organization has a Microsoft Defender for Endpoint Plan 2 license. For more information, see [Licensing](#licensing).
+- Your organization has a Microsoft Defender for Endpoint Plan 2, Microsoft 365 E5, Microsoft Agent 365, or Microsoft 365 E7 license.
 - Your devices are [onboarded to Microsoft Defender for Endpoint](onboard-configure.md).
 - Your devices run a supported version of Windows or macOS, and Microsoft Defender Antivirus is updated with current monthly platform and engine updates.
 - Microsoft Defender Antivirus is running in active mode on your devices, with real-time protection enabled.
@@ -400,52 +400,35 @@ let userReach =
     );
 let sensitiveAssets =
     ExposureGraphNodes
-    | where NodeProperties has "criticalityLevel"
-         or NodeProperties has "containsSensitiveData"
-    | extend
-        CriticalityLevel =
-            toint(NodeProperties.rawData.criticalityLevel.criticalityLevel),
-        SensitiveDataRaw = tostring(NodeProperties.rawData.containsSensitiveData)
-    | extend HasSensitiveData =
-        iff(isnotempty(SensitiveDataRaw) and SensitiveDataRaw !~ "false", "Yes", "No")
-    | where CriticalityLevel between (0 .. 3) or HasSensitiveData == "Yes"
-    | extend CriticalityRank =
-        iff(CriticalityLevel between (0 .. 3), CriticalityLevel, 4)
-    | project AssetId = NodeId, AssetName = NodeName,
-              CriticalityRank, HasSensitiveData;
-let agentUsers =
-    localAgents
-    | join kind=inner agentDeviceEdges on AgentNodeId
-    | join kind=inner agentUserEdges on AgentNodeId
-    | project AIAgent, Device, UserId, User;
-agentUsers
-| join kind=inner userReach on UserId
-| join kind=inner sensitiveAssets on AssetId
-| summarize AIAgents = make_set(AIAgent, 20),
-            Devices = make_set(Device, 20),
-            ReachableAssets = dcountif(AssetId, AssetId != UserId),
-            SensitiveAssets = dcountif(AssetId,
-                AssetId != UserId and HasSensitiveData == "Yes"),
-            Assets = make_set_if(AssetName, AssetId != UserId, 50),
-            UserRank = minif(CriticalityRank, AssetId == UserId),
-            AssetRank = minif(CriticalityRank, AssetId != UserId)
-    by User
-| extend UserCriticality = case(
-             UserRank == 0, "Very high",
-             UserRank == 1, "High",
-             UserRank == 2, "Medium",
-             UserRank == 3, "Low",
-             "Not classified"),
-         HighestAssetCriticality = case(
-             AssetRank == 0, "Very high",
-             AssetRank == 1, "High",
-             AssetRank == 2, "Medium",
-             AssetRank == 3, "Low",
-             AssetRank == 4, "Sensitive data",
-             "None")
-| extend SortRank = coalesce(AssetRank, 99)
-| project User, UserCriticality, ReachableAssets, SensitiveAssets,
-          HighestAssetCriticality, AIAgents, Devices, Assets, SortRank
-| sort by SortRank asc, ReachableAssets desc
-| project-away SortRank
+    | extend CriticalityLevel = toint(NodeProperties.rawData.criticalityLevel.criticalityLevel)
+    | extend HasSensitiveData = iff(isnotempty(NodeProperties.rawData.containsSensitiveData),
+        "Yes", "No")
+    | extend CriticalityReason = tostring(NodeProperties.rawData.criticalityLevel.ruleNames)
+    | where CriticalityLevel > 0 or HasSensitiveData == "Yes"
+    | extend Criticality = case(
+        CriticalityLevel == 1, "Critical",
+        CriticalityLevel == 2, "High",
+        CriticalityLevel == 3, "Medium",
+        CriticalityLevel == 4, "Low",
+        "Sensitive Data"
+    )
+    | project AssetId = NodeId, AssetName = NodeName, AssetType = NodeLabel,
+              Criticality, HasSensitiveData, CriticalityReason;
+ExposureGraphEdges
+| where SourceNodeLabel == "endpointAiAgent"
+| project AIAgent = SourceNodeName, n1 = TargetNodeId, Device = TargetNodeName
+| join kind=inner (
+    biEdges | project n1 = src, n2 = tgt, Hop1 = tgtName, Via1 = edge
+) on n1
+| join kind=inner (
+    biEdges | project n2 = src, n3 = tgt, Via2 = edge
+) on n2
+| join kind=inner (
+    sensitiveAssets | project n3 = AssetId, AssetName, AssetType,
+                             Criticality, HasSensitiveData, CriticalityReason
+) on n3
+| summarize ExposedVia = make_set(Hop1) by
+    AIAgent, Device, AssetName, AssetType,
+    Criticality, HasSensitiveData, CriticalityReason
+| sort by Criticality asc, HasSensitiveData desc
 ```
