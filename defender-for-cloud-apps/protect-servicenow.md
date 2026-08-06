@@ -120,6 +120,7 @@ Defender for Cloud Apps supports the following ServiceNow versions:
 - Xanadu
 - Yokohama
 - Zurich
+- Australia
 
 For more information, see [ServiceNow OAuth applications documentation](https://docs.servicenow.com/bundle/paris-platform-administration/page/administer/security/concept/c_OAuthApplications.html#c_OAuthApplications).
 
@@ -148,7 +149,8 @@ Perform the following steps to create an OAuth profile in ServiceNow and connect
       
    1. Increase the **Access Token Lifespan** to at least 3,600.
       
- 
+   1. Change the **Scope Restriction** value to **Broadly Scoped**.
+      
 1. Select the name of the OAuth that was defined, and change the **Refresh Token Lifespan** to **7,776,000 seconds** (90 days).
    
 1. Establish an internal procedure to ensure that the connection remains active.
@@ -174,13 +176,46 @@ To complete the connection in the Microsoft Defender Portal, follow these steps:
 
     :::image type="content" source="media/servicenow-app-connector-details-screenshot.png" alt-text="Screenshot of the ServiceNow App Connector Details Dialog.":::
    
-1. To find your ServiceNow User ID, in the ServiceNow portal, go to **Users** and then locate your name in the table.
+1. To find your ServiceNow User ID, in the ServiceNow portal, go to **Users** and then locate your name in the table. (Optional) To use a non-admin user for this step, follow the steps in the below section to create a non-admin user.
      
 1. In the **OAuth Details** page, enter your **Client ID** and **Client Secret**. Select **Next**.
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**. Make sure the status of the connected App Connector is **Connected**.
 
 After connecting ServiceNow, you'll receive events for 1 hour prior to connection.
+
+### Optional: Create a non-admin user
+
+#### Step 1: Create custom access control lists (ACLs) in ServiceNow
+
+1. Sign in to ServiceNow with an administrator account.
+1. Open the **Elevate Roles** menu and enable both **admin** and **security_admin**. These elevated roles are required to create ACLs for certain tables.
+1. Navigate to **Access Control (ACL)** configuration.
+1. Create a **Read** ACL for each of the following tables:
+   - sys_user
+   - sys_user_group
+   - sys_user_grmember
+   - sys_user_has_role
+   - sys_properties
+   - v_plugin
+   - sysevent_script_action
+   - sys_attachment
+   - sys_attachment_doc
+   - sysevent
+   - syslog_transaction
+   - incident
+   - sys_user_role_contains
+1. For each ACL, set **Type** = **record**, **Operation** = **read**, **Name** = the table name, and **Required Role** = a custom role such as **custom_table_access**.
+1. Use the same custom role across all ACLs to simplify management.
+
+#### Step 2: Create a non-admin user
+
+1. In ServiceNow, go to **User Administration** > **Users**.
+1. Create a new user account.
+1. Record the username and password for later use in the integration setup.
+1. Open the newly created user profile.
+1. Scroll to the **Roles** section.
+1. Assign the custom role created in Step 1 (for example, **custom_table_access**) to the user.
 
 ### Legacy ServiceNow connection
 
