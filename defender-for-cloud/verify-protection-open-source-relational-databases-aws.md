@@ -3,8 +3,9 @@ title: Verify protection for open-source relational databases on AWS
 description: Learn how to verify that Microsoft Defender for Cloud is configured to protect open-source relational databases on Amazon RDS and Aurora.
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 05/27/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Verify protection for open-source relational databases on AWS
@@ -14,6 +15,8 @@ This article shows you how to verify that Microsoft Defender for Cloud is config
 Use this article to check plan enablement, connector health, regional configuration, discovery status, and resource-level protection status for supported PostgreSQL, MySQL, MariaDB, Aurora PostgreSQL, and Aurora MySQL resources.
 
 ## Verify plan enablement
+
+To verify that the Databases plan is enabled for the AWS connector:
 
 1. In the Azure portal, go to **Microsoft Defender for Cloud**.
 
@@ -28,6 +31,8 @@ Use this article to check plan enablement, connector health, regional configurat
 If the plan or component is turned off, turn it on and save the connector configuration.
 
 ## Verify connector health
+
+To verify that the AWS connector is healthy:
 
 1. In Defender for Cloud, go to **Environment settings**.
 
@@ -68,9 +73,11 @@ If a supported resource doesn't appear after one full discovery cycle, verify th
 
 ## Verify resource support
 
-Defender for Cloud protection applies only to supported database engines and configurations.
+Defender for Cloud protects only certain database engines and configurations. Check the following tables to confirm that your resources are supported.
 
 ### Supported database engines
+
+The following table lists the database engines that Defender for Cloud supports on AWS.
 
 | Engine | Supported |
 |---|---|
@@ -83,6 +90,8 @@ Defender for Cloud protection applies only to supported database engines and con
 | SQL Server | No |
 
 ### Supported configurations
+
+The following table lists the supported deployment configurations and any important notes.
 
 | Configuration | Supported | Notes |
 |---|---|---|
@@ -97,9 +106,11 @@ If the database engine, region, or configuration isn't supported, Defender for C
 
 The recommendation **The status of open-source relational databases on AWS RDS should be protected** lists resources that aren't fully protected. Each unhealthy resource includes a reason that explains what needs to be fixed.
 
-Use the following tables to review the reason and recommended action.
+Use the [Open-source relational database protection errors](#open-source-relational-database-protection-errors) and [Sensitive data discovery errors](#sensitive-data-discovery-errors) tables to review the reason and recommended action.
 
 ### Open-source relational database protection errors
+
+The following table lists common protection errors, what they mean, and how to resolve them.
 
 | Unhealthy reason | Description | Recommended action |
 |---|---|---|
@@ -125,6 +136,8 @@ Sensitive data discovery for Amazon RDS is also available through Defender CSPM.
 | **This region isn't supported for RDS Data Sensitivity Scan** | RDS Data Sensitivity Scan isn't currently deployed in the region where this resource is located. | Review the [list of supported regions](quickstart-onboard-aws.md?tabs=Defender-for-open-source-databases-Preview). If the region is listed as supported and the issue persists, contact Microsoft support. |
 
 ## Common verification results
+
+The following scenarios describe common results you might see during verification and how to resolve them.
 
 ### The plan is enabled, but the resource shows as not applicable or has no data
 
