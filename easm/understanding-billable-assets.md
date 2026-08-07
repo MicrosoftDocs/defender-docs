@@ -1,17 +1,17 @@
 ---
-title: Understand Billable Assets
+title: Understand billable assets in Microsoft Defender EASM
 titleSuffix: Microsoft Defender EASM 
 description: This article describes how users are billed for their Defender EASM resource usage, and guides them to the dashboard that displays their counts. 
 author: danielledennis
 ms.author: dandennis
 ms.service: defender-easm
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
-# Understand billable assets
+# Understand billable assets in Microsoft Defender External Attack Surface Management
 
 When customers create their first Microsoft Defender External Attack Surface Management (Defender EASM) resource, they're automatically granted a 30-day free trial. Once the trial completes, customers are automatically charged based on their count of billable assets. The charged amount appears on their core Azure billing, with *Defender EASM* appearing as separate line item on their invoice.
 
@@ -38,11 +38,11 @@ For example: if www.contoso.com resolved to 1.2.3.4 and 5.6.7.8 in the past 30 d
 - www.contoso.com / 1.2.3.4
 - www.contoso.com / 5.6.7.8
 
-The list is then analyzed to identify duplicate entries and eliminate duplicate hosts. If a host is a subdomain of a parent host that resolves to the same IP address, we exclude the child from the billable host count. For example, if both www.contoso.com and contoso.com resolve to 1.2.3.4, then we exclude www.contoso.com 1.2.3.4 from our Host Count list.
+The host:IP combination list is then analyzed to identify duplicate entries and eliminate duplicate hosts. If a host is a subdomain of a parent host that resolves to the same IP address, we exclude the child from the billable host count. For example, if both www.contoso.com and contoso.com resolve to 1.2.3.4, then we exclude www.contoso.com 1.2.3.4 from our Host Count list.
 
 ### Approved IP addresses
 
-A billable resolving host is any host already counted as a billable host:IP combination. Excluding the IP addresses that resolve to a billable resolving host, all active IP addresses in the Approved Inventory state are part of the billable IP address count.
+A *billable resolving host* is any host already counted as a billable host:IP combination. IP addresses that resolve to a billable resolving host are excluded from the billable IP address count. All other active IP addresses in the Approved Inventory state are part of the billable IP address count.
 
 For an IP address to be considered active and therefore billable, it must have one of the following:
 
@@ -53,9 +53,9 @@ An open port or SSL certificate is considered *recent* if observed within the la
 
 ### Approved domains
 
-A billable resolving host is a host already counted as a billable host:IP combination. Excluding the domains associated with a billable resolving host, all domains in the Approved Inventory state are part of the billable domain count. If a billable host is registered to the domain in question, the domain isn't included in the billable asset count.
+Hosts already counted as billable host:IP combinations are considered *billable resolving hosts*. Domains associated with those hosts are excluded from the billable domain count. All other domains in the Approved Inventory state are part of the billable domain count. If a billable host is registered to the domain in question, the domain isn't included in the billable asset count.
 
-For example: if server1.contoso.com recently resolved to an IP address and is therefore included in your billable asset count, then contoso.com isn't added to this count.
+For example: if server1.contoso.com recently resolved to an IP address and is therefore included in your billable asset count, then contoso.com isn't added to the billable domain count.
 
 <a name="viewing-billable-asset-data"></a>
 ## View billable asset data
