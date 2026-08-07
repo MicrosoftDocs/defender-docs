@@ -29,7 +29,7 @@ Microsoft Defender XDR includes powerful [automated attack disruption](automatic
 
 Configure automatic attack disruption capabilities in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a>. After you're all set up, you can view and manage containment actions in Incidents and the Action center. And, if necessary, you can make changes to automatic attack disruption settings.
 
-When Microsoft Defender for Endpoint is deployed, automatic attack disruption can contain unmanaged devices and users, or automatically isolate a compromised workstation from the network. Automatic device isolation is currently in preview. For details about each response action, see [Automatic attack disruption response actions](automatic-attack-disruption.md#automatic-attack-disruption-response-actions).
+When Microsoft Defender for Endpoint is deployed, automatic attack disruption can contain unmanaged devices and users or automatically isolate a compromised workstation from the network. Automatic device isolation is currently in preview. For details about each response action, see [Automated response actions](automatic-attack-disruption.md#automated-response-actions).
 
 ## Prerequisites
 
