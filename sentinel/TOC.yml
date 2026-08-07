@@ -950,6 +950,8 @@
           href: isv/create-codeless-connector.md
         - name: Create pull codeless data connectors with nested API polling
           href: isv/custom-connector-nested-api-polling.md
+        - name: Support multiple connections in a codeless connector
+          href: isv/multi-account-ccf-connector.md  
         - name: Azure Storage Blob data connector reference
           href: data-connection-rules-reference-azure-storage.md
           items:
