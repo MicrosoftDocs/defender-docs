@@ -6,12 +6,12 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: yoninave
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 
@@ -21,17 +21,17 @@ ai-usage: ai-assisted
 
 # Use threat indicators in analytics rules
 
-After importing threat intelligence indicators into Microsoft Sentinel, you can use TI map analytics rules to automatically generate alerts and incidents when your threat indicators match events from connected data sources.
+You can use TI map analytics rules in Microsoft Sentinel to detect threats. These rules match your imported threat indicators against events from connected data sources. When a match is found, the rules generate alerts and incidents for your team to review.
 
 ## Prerequisites
 
 - Threat indicators. These indicators can be from threat intelligence feeds, threat intelligence platforms, bulk import from a flat file, or manual input.
 - Data sources. Events from your data connectors must be flowing to your Microsoft Sentinel workspace.
-- An analytics rule of the format `TI map...`. It must use this format so that it can map the threat indicators you have with the events you ingested.
+- An analytics rule of the format `TI map...`. The analytics rule must use this format so that it can map your threat indicators to the events you ingested.
 
 ## Configure a rule to generate security alerts
 
-The following example shows how to enable and configure a rule to generate security alerts by using the threat indicators that you imported into Microsoft Sentinel. For this example, use the rule template called **TI map IP entity to AzureActivity**. This rule matches any IP address-type threat indicator with all your Azure Activity events. When a match is found, an alert is generated along with a corresponding incident for investigation by your security operations team.
+The following example shows how to enable and configure a rule that generates security alerts from your imported threat indicators. This example uses the rule template called **TI map IP entity to AzureActivity**. This rule matches any IP address threat indicator with your Azure Activity events. When a match is found, it generates an alert and a related incident for your security operations team to investigate.
 
 This particular analytics rule requires the Azure Activity data connector (to import your Azure subscription-level events). It also requires one or both of the Threat Intelligence data connectors (to import threat indicators). The **TI map IP entity to AzureActivity** rule also triggers from imported indicators or manually created ones.
 
@@ -84,7 +84,7 @@ In Microsoft Sentinel, the alerts generated from analytics rules also generate s
 
 ## Related content
 
-In this article, you learned how to use threat intelligence indicators to detect threats. For more about threat intelligence in Microsoft Sentinel, see the following articles:
+For more about threat intelligence in Microsoft Sentinel, see the following articles:
 
 - [Work with threat indicators in Microsoft Sentinel](work-with-threat-indicators.md)
 - Connect Microsoft Sentinel to [STIX/TAXII threat intelligence feeds](./connect-threat-intelligence-taxii.md).
