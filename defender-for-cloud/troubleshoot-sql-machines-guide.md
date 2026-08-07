@@ -1,19 +1,21 @@
 ---
 title: Troubleshoot Defender for SQL on Machines configuration
-description: Troubleshoot configuration issues for SQL Servers on Machines
-ms.date: 04/22/2025
+description: Troubleshoot Defender for SQL on Machines configuration issues in commercial clouds after enabling protection at the subscription or SQL resource level.
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: references_regions
+ms.custom: references_regions, msecd-doc-authoring-1013
 #customer intent: As a security professional, I want to ensure that my configuration of SQL servers on Machines is correct and protects my resources.
 ai-usage: ai-assisted
 ---
 
 # Troubleshoot Defender for SQL on Machines configuration
 
+This article helps you identify and resolve configuration and protection issues with Microsoft Defender for SQL on Machines in commercial cloud environments.
+
 > [!IMPORTANT]
 > This article applies to commercial clouds. If you're using Government clouds, see the [Troubleshoot Defender for SQL on Machines configuration government](troubleshoot-sql-machines-guide-gov.md) article.
 
-Before starting the troubleshooting steps, you must [enable Defender for SQL server on Machines](defender-for-sql-usage.md) at the [subscription](defender-for-sql-usage.md#enable-the-plan-on-an-azure-subscription) or [SQL resource level.](defender-for-sql-usage.md#enable-the-plan-at-the-sql-server-resource-level).
+Before starting the troubleshooting steps, you must [enable Defender for SQL server on Machines](defender-for-sql-usage.md) at the [Azure subscription level](defender-for-sql-usage.md#enable-the-plan-on-an-azure-subscription) or [SQL Server resource level](defender-for-sql-usage.md#enable-the-plan-at-the-sql-server-resource-level).
 
 ## Step 1: Required resources and enablement process
 
@@ -31,6 +33,8 @@ When you enable Defender for SQL Server on a subscription or specified SQL Serve
 - Impersonates the Windows user running the SQL Server service (default sysadmin role) to access the SQL Server instance.
 
 ## Step 2: Ensure that you fulfilled the prerequisites
+
+Before troubleshooting, ensure the following prerequisites are met:
 
 - **Subscription permissions**: To deploy the plan on a subscription, including Azure Policy, you need **Subscription Owner** permissions.
 
@@ -100,7 +104,7 @@ If you have multiple SQL Server instances installed on the same virtual machine,
 
     :::image type="content" source="media/troubleshoot-sql-machines-guide/extension-status.png" alt-text="Screenshot that shows the information screen for the selected extension." lightbox="media/troubleshoot-sql-machines-guide/extension-status.png":::
 
-Based on the [unhealthy reason listed, take the appropriate action](#step-3-identify-and-resolve-protection-misconfigurations-at-the-sql-server-instance-level) to remediate the issue.
+Based on the unhealthy reason listed, take the appropriate action described in [Step 3: Identify and resolve protection misconfigurations](#step-3-identify-and-resolve-protection-misconfigurations-at-the-sql-server-instance-level) to remediate the misconfiguration for that SQL Server instance.
 
 ## Step 4: Reverify protection status
 
