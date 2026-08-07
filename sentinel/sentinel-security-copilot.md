@@ -15,7 +15,8 @@ appliesto:
     - Microsoft Sentinel in the Azure portal
     - Security Copilot
 ms.date: 08/07/2026
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1015
+ai-usage: ai-assisted
 #Customer intent: As a security analyst, I want to integrate Security Copilot with Microsoft Sentinel data so that I can investigate incidents and generate advanced hunting queries at machine speed and scale.
 ---
 
@@ -36,7 +37,7 @@ If you're new to Security Copilot, you should familiarize yourself with it by re
 
 ## Security Copilot integration with Microsoft Sentinel
 
-Use Microsoft Sentinel data with Security Copilot in both the standalone experience at [https://securitycopilot.microsoft.com](https://securitycopilot.microsoft.com) and the embedded experience in the Microsoft Defender portal after you onboard Microsoft Sentinel. For more information, see [Microsoft Security Copilot experiences](/security-copilot/experiences-security-copilot#standalone-and-embedded-experiences).
+Use Microsoft Sentinel data with Security Copilot in both the standalone [Security Copilot portal](https://securitycopilot.microsoft.com) and the embedded experience in the Microsoft Defender portal after you onboard Microsoft Sentinel. For more information, see [Microsoft Security Copilot experiences](/security-copilot/experiences-security-copilot#standalone-and-embedded-experiences).
 
 ## Key features
 

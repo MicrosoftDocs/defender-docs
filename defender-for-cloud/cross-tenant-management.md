@@ -4,6 +4,8 @@ description: Learn how to set up cross-tenant management to manage the security 
 ms.topic: concept-article
 ms.date: 08/07/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1015
+#customer intent: As a security administrator, I want to manage the security posture of multiple tenants from one location so that I can efficiently monitor and protect delegated Azure resources.
 ---
 
 # Cross-tenant management in Defender for Cloud
@@ -20,9 +22,9 @@ Cross-tenant management enables you to view and manage the security posture of m
 
 ## Security and access considerations
 
-Azure Lighthouse projects access from identities in the managing tenant to delegated Azure resources. It doesn't create those users or their Azure role assignments as local objects in the managed tenant, so they don't appear in the subscription's **Access control (IAM)** page. Customers review and remove delegations from the [**Service providers** page](/azure/lighthouse/how-to/view-manage-service-providers).
+Azure Lighthouse grants identities in the managing tenant access to delegated Azure resources. The users and their Azure role assignments aren't created as local objects in the managed tenant. As a result, the users and assignments don't appear on the subscription's **Access control (IAM)** page. To review or remove delegations, use the [**Service providers** page](/azure/lighthouse/how-to/view-manage-service-providers).
 
-Actions performed through Azure Lighthouse are recorded in the managed tenant's Azure Activity Log. The **Event initiated by** field identifies the acting user from either the managing tenant or the managed tenant. For more information, see [Monitor service provider activity](/azure/lighthouse/how-to/view-service-provider-activity).
+The managed tenant's Azure Activity Log records actions performed through Azure Lighthouse. The **Event initiated by** field identifies the acting user, whether the user is from the managing tenant or the managed tenant. For more information, see [Monitor service provider activity](/azure/lighthouse/how-to/view-service-provider-activity).
 
 ## How cross-tenant management works in Defender for Cloud
 

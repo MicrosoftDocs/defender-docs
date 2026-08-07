@@ -4,7 +4,8 @@ description: This article describes how to troubleshoot common access and sessio
 ms.date: 08/07/2026
 ms.topic: troubleshooting
 ai-usage: ai-assisted
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1015
+#customer intent: As a security administrator, I want to troubleshoot access and session control issues so that users can securely access protected cloud apps.
 ---
 
 # Troubleshooting access and session controls for admin users
@@ -53,7 +54,7 @@ Use the following table to find the issue you're trying to troubleshoot:
 
 ## Troubleshoot an unexpected website block
 
-When a user sees **This website is blocked by your organisation**, first determine whether Conditional Access App Control enforced the block:
+When a user sees **This website is blocked by your organization**, first determine whether Conditional Access App Control enforced the block:
 
 - In a reverse proxy session, the app URL has an `*.mcas.ms`, `*.mcas-gov.us`, or `*.mcas-gov.ms` suffix. For more information, see [Troubleshooting proxy URLs](troubleshooting-proxy-url.md).
 - With in-browser protection, Microsoft Edge shows a lock icon in the address bar instead of changing the URL. For more information, see [In-browser protection with Microsoft Edge for Business](in-browser-protection.md).
@@ -70,7 +71,7 @@ To identify the Conditional Access App Control policy that caused the block:
 
 1. If no policy explains the block, review the **Default behavior** setting for service disruptions. A setting of **Block access** can block sessions when normal policy enforcement isn't available.
 
-1. To confirm that the proxy caused the problem, use the [Admin View toolbar](#diagnose-and-troubleshoot-with-the-admin-view-toolbar) and select **Bypass experience**. If bypassing restores access, review the policy conditions before you re-enable enforcement. You can also [record the session](#record-a-session) to provide diagnostic information to Microsoft support.
+1. To confirm that the proxy caused the problem, use the [Admin View toolbar](#diagnose-and-troubleshoot-with-the-admin-view-toolbar) and select **Bypass experience**. If bypassing restores access, review the policy conditions before you re-enable enforcement. You can also [record the session](#record-a-session) to provide diagnostic information to Microsoft Support.
 
 ## Network condition issues
 

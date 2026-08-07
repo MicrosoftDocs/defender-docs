@@ -11,7 +11,7 @@ ms.collection:
 - m365-security
 - tier2
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1015
   - autoir
   - admindeeplinkDEFENDER
   - sfi-ga-nochange
@@ -29,7 +29,7 @@ Microsoft Defender XDR includes powerful [automated attack disruption](automatic
 
 Configure automatic attack disruption capabilities in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a>. After you're all set up, you can view and manage containment actions in Incidents and the Action center. And, if necessary, you can make changes to automatic attack disruption settings.
 
-When Microsoft Defender for Endpoint is deployed, automatic attack disruption can contain unmanaged devices and users or automatically isolate a compromised workstation from the network. Automatic device isolation is currently in preview. For details about each response action, see [Automatic attack disruption response actions](automatic-attack-disruption.md#automatic-attack-disruption-response-actions).
+When Microsoft Defender for Endpoint is deployed, automatic attack disruption can contain unmanaged devices and users, or automatically isolate a compromised workstation from the network. Automatic device isolation is currently in preview. For details about each response action, see [Automatic attack disruption response actions](automatic-attack-disruption.md#automatic-attack-disruption-response-actions).
 
 ## Prerequisites
 
@@ -45,7 +45,7 @@ The following are prerequisites for configuring automatic attack disruption in M
 
 To support automatic attack disruption, Microsoft Defender for Endpoint requires a minimum Sense client version and proper automation settings for your device groups.
 
-#### Automatic device isolation prerequisites and safeguards (Preview)
+#### Automatic device isolation prerequisites and safeguards (preview)
 
 Automatic device isolation works only on end-user workstations that are onboarded and managed by Microsoft Defender for Endpoint. Isolation blocks most network traffic while maintaining connectivity to required Defender for Endpoint security services. The action is scoped to devices involved in the incident and is automatically undone after a defined time window. Security operators can release the device earlier.
 

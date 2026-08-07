@@ -10,6 +10,7 @@ ms.date: 08/07/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1015
 
 #customer intent: As a security analyst, I want to understand Microsoft Sentinel graph capabilities so that I can detect complex attack paths and relationships that are difficult to identify with traditional tabular queries.
 ---
@@ -56,7 +57,7 @@ Microsoft Sentinel graph powers new advanced capabilities across Microsoft's sec
 
 ## Custom graphs in Microsoft Sentinel (preview)
 
-Custom graphs let you build tailored security graphs tuned to your unique security scenarios using data from Sentinel data lake and non-Microsoft sources. With custom graph, you can build, query, and visualize connected data, uncover hidden patterns and attack paths, and help surface risks that are hard to detect when data is analyzed in isolation. These graphs provide the knowledge context that enables AI-powered agent experiences to work more effectively, speeding investigations, revealing blast radius, and helping you move from noisy, disconnected alerts to confident decisions at scale.
+Custom graphs let you model security scenarios by using connected data from the Microsoft Sentinel data lake and non-Microsoft sources. Build, query, and visualize graphs to uncover relationships, attack paths, and risks that are difficult to detect when data is analyzed in isolation. These graphs give AI-powered agents more context to accelerate investigations, show the scope of an attack, and help analysts make informed decisions.
 
 Author a custom graph in a Jupyter notebook by using the Microsoft Sentinel extension for Visual Studio Code, and then publish and materialize the graph by using a graph job. After publication, query and visualize the graph with Graph Query Language (GQL) on the **Graphs** page in the Defender portal. On-demand graph jobs retain a graph for 30 days, while scheduled graph jobs rebuild the graph on the refresh schedule you configure. Custom graph creation and queries are billed under the Microsoft Sentinel graph meter. For more information, see [Custom graph overview](custom-graphs-overview.md), [Create custom graphs](create-custom-graphs.md), and [Graph charges](../billing.md#graph-charges).
 

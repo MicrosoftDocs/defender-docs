@@ -1,10 +1,10 @@
 ---
 title: Microsoft Defender for Identity security posture assessments
 description: Learn how Microsoft Defender for Identity security posture assessments identify misconfigurations and legacy components in Active Directory and provide recommended remediation actions.
-ms.date: 06/15/2026
+ms.date: 08/07/2026
 ms.topic: how-to
 ms.reviewer: LiorShapiraa
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1015
 ai-usage: ai-assisted
 ---
 

@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.date: 08/07/2026
 #customer intent: As a security administrator, I want to configure Kubernetes data plane hardening in Defender for Cloud so that I can enforce secure workload policies across clusters.
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1015
 ---
 
 # Configure Kubernetes data plane hardening in Defender for Cloud
@@ -107,7 +108,7 @@ To view data plane hardening recommendations for a specific cluster:
 
 ## Configure policy parameters
 
-Some recommendations support parameters that limit which Kubernetes resources the underlying Azure Policy evaluates. For example, the policy for **Immutable (read-only) root filesystem should be enforced for containers** supports the `excludedContainers`, `excludedImages`, and `excludedNamespaces` parameters. Container exclusions use the container name. Image exclusions support prefix matching when the value ends in `*`, such as `myregistry.azurecr.io/istio:*`. Use a fully qualified image name to avoid unintentionally excluding an image from an untrusted registry.
+Some recommendations include parameters that limit the Kubernetes resources evaluated by the underlying Azure Policy. For example, the policy for **Immutable (read-only) root filesystem should be enforced for containers** includes the `excludedContainers`, `excludedImages`, and `excludedNamespaces` parameters. Container exclusions match container names. Image exclusions support prefix matching when the value ends in `*`, such as `myregistry.azurecr.io/istio:*`. Use a fully qualified image name to avoid unintentionally excluding an image from an untrusted registry.
 
 Other recommendations require parameter configuration to be effective. For example, the recommendation **Container images should be deployed from trusted registries only** requires you to define a list of trusted registries.
 

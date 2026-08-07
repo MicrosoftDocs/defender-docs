@@ -5,6 +5,7 @@ ms.date: 08/07/2026
 ms.topic: overview
 #customer intent: As a reader, I want to understand the Microsoft Defender for Databases plan types so that I can make informed decisions about their usage.
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1015
 ---
 
 # Overview of Microsoft Defender for Databases
@@ -27,7 +28,7 @@ Each of these database protection plans is priced separately. For more informati
 
 Defender for Databases detects anomalous activities that indicate unusual and harmful attempts to access or exploit databases. Defender for Databases offers multicloud alerts for suspicious database activities, so you can respond to threats as they happen.
 
-Defender Cloud Security Posture Management (CSPM) continuously evaluates server-level and database-level configurations for Azure Database for PostgreSQL flexible server. PostgreSQL-specific recommendations identify potential vulnerabilities and misconfigurations and provide remediation guidance. For more information, see [Microsoft Defender for Cloud in Azure Database for PostgreSQL flexible server](/azure/postgresql/security/security-defender-for-cloud).
+Defender CSPM continuously evaluates server-level and database-level configurations for Azure Database for PostgreSQL flexible server. PostgreSQL-specific recommendations identify potential vulnerabilities and misconfigurations and provide remediation guidance. For more information, see [Microsoft Defender for Cloud in Azure Database for PostgreSQL flexible server](/azure/postgresql/security/security-defender-for-cloud).
 
 The solution supports a wide range of database types, including:
 

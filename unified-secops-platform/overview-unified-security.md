@@ -3,13 +3,14 @@ title: "What Are Unified Security Operations in the Microsoft Defender Portal?"
 description: Provides an overview of features and functionality in the Microsoft Defender portal for unified security operations.
 author: guywi-ms
 ms.author: guywild
-ms.date: 11/15/2024
+ms.date: 08/07/2026
 ms.collection:
 - M365-security-compliance
 - tier1
 - usx-security
 ms.topic: overview
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1015
+ai-usage: ai-assisted
 
 # customer intent: As a security operations center leader, I want to learn about the services and features available in the Microsoft Defender portal for unified security operations to help me determine whether it meets my organization's requirements.
 ---
@@ -81,7 +82,7 @@ The following image shows the overview page for exposure management in the Defen
 
 Standard cybersecurity metrics focus on the time to detect (TTD) and time to respond (TTR). Time to detect (TTD) measures how long it takes security teams to discover an incident. Time to respond (TTR) measures the amount of time it takes to respond after a threat is detected. The shorter the TTD and TTR, the more effective your detection, and response strategy is.
 
-The Microsoft Defender portal correlates millions of signals from Defender products, Microsoft Sentinel, Microsoft security research, and threat intelligence to identify attacks in progress. It initiates automatic attack disruption to automatically contain attacks, limiting lateral movement early and reducing attack impact. Automatic attack disruption helps to reduce costs associated with loss of productivity and provides control to the SecOps team to investigate and remediate compromised assets.
+The Microsoft Defender portal correlates millions of signals from Defender products, Microsoft Sentinel, Microsoft security research, and threat intelligence to identify attacks in progress. Automatic attack disruption contains attacks to limit lateral movement and reduce their impact. This response helps reduce productivity loss and gives the security operations team time to investigate and remediate compromised assets.
 
 Automatic attack disruption responds to threats by containing devices and containing or disabling users to mitigate attacks. 
 

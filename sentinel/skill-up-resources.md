@@ -6,7 +6,7 @@ author: guywi-ms
 ms.reviewer: noak
 ms.topic: tutorial
 ms.date: 08/07/2026
-ms.custom: fasttrack-edit
+ms.custom: fasttrack-edit, msecd-doc-authoring-1015
 
 
 #Customer intent: As a security operations team member, I want to complete advanced training on Microsoft Sentinel so that I can enhance my skills in threat detection, incident response, and security automation.
@@ -63,7 +63,7 @@ This skill-up training is a level-400 training that's based on the [Microsoft Se
 - Do you have a feature idea to share with us? Let us know on the [Microsoft Sentinel user voice page](https://feedback.azure.com/d365community/forum/37638d17-0625-ec11-b6e6-000d3a4f07b8).
 - Are you a premier customer? You might want the on-site or remote, four-day _Microsoft Sentinel Fundamentals Workshop_. Contact your Customer Success Account Manager for more details.
 - Do you have a specific issue? Ask (or answer others) on the [Microsoft Sentinel Tech Community](https://techcommunity.microsoft.com/t5/microsoft-sentinel/bd-p/MicrosoftSentinel). Or you can email your question or issue to us at <MicrosoftSentinel@microsoft.com>.
-- For hands-on practice, use the [Microsoft Sentinel Training Lab](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-microsoft-sentinel-training-lab-hands-on/ba-p/4513274), an open-source lab with guided exercises for hunting, detection engineering, incident investigation, cost monitoring, and data lake workflows.
+- For hands-on practice, use the [Microsoft Sentinel Training Lab](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-microsoft-sentinel-training-lab-hands-on/ba-p/4513274), an open source lab with guided exercises for hunting, detection engineering, incident investigation, cost monitoring, and data lake workflows.
 
 
 ### Module 1: Get started with Microsoft Sentinel

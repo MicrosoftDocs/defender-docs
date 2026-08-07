@@ -5,6 +5,7 @@ ms.topic: concept-article
 ms.date: 08/07/2026
 #customer intent: As a reader, I want to understand the concept of Cloud Security Posture Management (CSPM) in Microsoft Defender for Cloud.
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1015
 ---
 
 # What is Cloud Security Posture Management (CSPM)
@@ -13,7 +14,7 @@ Cloud Security Posture Management (CSPM) is a core feature of Microsoft Defender
 
 Defender for Cloud continually assesses your cloud infrastructure against security standards defined for your Azure subscriptions, Amazon Web Service (AWS) accounts, and Google Cloud Platform (GCP) projects. Defender for Cloud issues security recommendations to help you identify and reduce cloud misconfigurations and security risks.
 
-For Azure Database for PostgreSQL flexible server, Defender CSPM continuously evaluates server-level and database-level configurations against PostgreSQL security best practices. The assessments identify network security, auditing, and operational resilience issues and surface risk-prioritized recommendations without more configuration when Defender CSPM is already enabled.
+For Azure Database for PostgreSQL flexible server, Defender CSPM continuously evaluates server-level and database-level configurations against PostgreSQL security best practices. The assessments identify network security, auditing, and operational resilience issues. If Defender CSPM is already enabled, the assessments provide risk-prioritized recommendations without requiring other configuration.
 
 When Foundational CSPM is enabled, the [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md) standard provides recommendations to help secure your multicloud environment. The [secure score](secure-score-security-controls.md) based on some of the MCSB recommendations helps you monitor cloud compliance. A higher score indicates a lower identified risk level.
 

@@ -12,6 +12,7 @@ ms.collection:
 ms.custom: 
 - cx-ti
 - cx-ah
+- msecd-doc-authoring-1015
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
@@ -25,7 +26,7 @@ ms.date: 08/07/2026
 
 
 
-The `AlertEvidence` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about entities, such as files, IP addresses, URLs, users, or devices, associated with alerts from Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, Microsoft Defender for Identity, and onboarded Microsoft Sentinel workspaces. Use this reference to construct queries that return information from this table.
+The `AlertEvidence` table in the [advanced hunting](advanced-hunting-overview.md) schema contains entities associated with alerts from Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, Microsoft Defender for Identity, and onboarded Microsoft Sentinel workspaces. Entities can include files, IP addresses, URLs, users, and devices. Use this reference to construct queries that return information from this table.
 
 Data availability depends on the Microsoft Defender services deployed and the Microsoft Sentinel workspaces you can access in the Defender portal. Join `AlertEvidence` with [`AlertInfo`](advanced-hunting-alertinfo-table.md) on the `AlertId` column to retrieve alert metadata with its related entities and evidence. For more information, see [Deploy supported services](deploy-supported-services.md) and [Transition your Microsoft Sentinel environment to the Defender portal](/azure/sentinel/move-to-defender).
 

@@ -13,7 +13,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 - seo-marvel-apr2020
-- msecd-doc-authoring-1012
+- msecd-doc-authoring-1015
 ms.topic: overview
 appliesto:
     - Microsoft Defender XDR
@@ -134,6 +134,8 @@ Write queries in UTC.
 ### Results
 
 Microsoft Defender converts advanced hunting results to the [timezone](m365d-time-zone.md) you set.
+
+<a name='extend-data-retention-with-streaming-apis'></a>
 
 ## Extend data retention
 

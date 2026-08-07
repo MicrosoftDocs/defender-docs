@@ -6,6 +6,7 @@ ms.author: monaberdugo
 ms.topic: concept-article
 ms.date: 08/07/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1015
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
@@ -18,7 +19,7 @@ ms.collection: usx-security
 
 # Detection lifecycle management recommendations
 
-This article provides recommendations for managing detections and other content types in Microsoft Sentinel. Use these recommendations to identify the right approach, depending on your organization's scale, complexity, and tooling preferences.
+Choose a Microsoft Sentinel capability for managing detections and other content based on your organization's scale, complexity, and tooling preferences.
 
 ## Choose your capability
 

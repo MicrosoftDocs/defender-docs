@@ -15,7 +15,7 @@ ms.date: 08/07/2026
 appliesto:
 - Microsoft Defender XDR
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1015
 
 #customer intent: As a security administrator, I want to learn how to exclude specific assets from being automatically contained by automatic attack disruption in Microsoft Defender XDR, so that I can prevent disruptions to critical assets while still maintaining security.
 ---
@@ -24,9 +24,9 @@ ms.custom: msecd-doc-authoring-1014
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-This article provides information on how to exclude assets from being automatically contained by [automatic attack disruption](automatic-attack-disruption.md) in Microsoft Defender XDR.
+Use exclusion policies to prevent [automatic attack disruption](automatic-attack-disruption.md) in Microsoft Defender XDR from applying selected responses to specific assets.
 
-Automatic attack disruption and exclusion policies work together to help contain and control active cyber threats. Automatic attack disruption is a built-in, AI-powered capability that analyzes attacker intent and identifies compromised assets before automatically isolating devices or disabling user accounts to stop an ongoing attack. Exclusion policies let security teams exempt specific assets or actions from these automated responses. For example, you can prevent critical servers or accounts from being automatically shut down or isolated to avoid unintended business disruption. You can [remove exclusions](#remove-exclusions) at any time to allow assets to be included in automated responses again.
+Automatic attack disruption and exclusion policies work together to contain active cyber threats. Automatic attack disruption is a built-in, AI-powered capability that analyzes attacker intent and identifies compromised assets. It can isolate devices or disable user accounts to stop an ongoing attack. Exclusion policies let security teams exempt specific assets or actions from these responses. For example, you can prevent critical servers from being isolated or critical accounts from being disabled to avoid unintended business disruption. You can [remove exclusions](#remove-exclusions) at any time to include assets in automated responses again.
 
 > [!CAUTION]
 > Excluding assets from automated responses isn't recommended. It can reduce the effectiveness of automatic attack disruption in protecting your environment from sophisticated, high-impact attacks.

@@ -10,7 +10,7 @@ appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1015
 ai-usage: ai-assisted
 
 
@@ -87,8 +87,8 @@ To configure UEBA on the **Entity behavior configuration** page, complete the fo
     - AAD Managed Identity Signin logs (Microsoft Entra ID)
     - AAD Service Principal Signin logs (Microsoft Entra ID)
     - AWS CloudTrail
-    - AWS GuardDuty
-    - CommonSecurityLog for supported Check Point, Fortinet, and Zscaler events
+    - Amazon GuardDuty
+    - `CommonSecurityLog` for supported Check Point, Fortinet, and Zscaler events
     - Device Logon Events
     - Okta CL
     - GCP Audit Logs

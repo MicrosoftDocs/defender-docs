@@ -10,7 +10,7 @@ appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1015
 #Customer intent: As a security analyst, I want to generate playbooks using AI so that I can quickly create automation workflows without extensive coding knowledge.
 
 ---
@@ -41,7 +41,7 @@ You also must meet the following requirements:
 
 ### Environment requirements
 
-- **Microsoft Sentinel workspace**: Your tenant must have a Microsoft Sentinel workspace onboarded to the Microsoft Defender portal.
+- **Microsoft Sentinel workspace**: You must have a Microsoft Sentinel workspace onboarded to the Microsoft Defender portal.
 
 ### Required roles and permissions
  
