@@ -4,9 +4,9 @@ description: Learn how to update your SOC and analyst processes as part of your 
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security operations manager, I want to update our SOC processes and analyst workflows for Microsoft Sentinel so that we can effectively manage and respond to cybersecurity incidents using the new toolsets and features.
@@ -35,7 +35,7 @@ This table describes the key stages in the analyst workflow, and highlights the 
 
 |Assign  |Triage  |Investigate  |Respond  |
 |---------|---------|---------|---------|
-|**[Assign incidents](#assign)**:<br>• Manually, in the **Incidents** page <br>• Automatically, using playbooks or automation rules  |**[Triage incidents](#triage)** using:<br>• The incident details in the **Incident** page<br>• Entity information in the **Incident page**, under the **Entities** tab<br>• Jupyter Notebooks     |**[Investigate incidents](#investigate)** using:<br>• The investigation graph<br>• Microsoft Sentinel Workbooks<br>• The Log Analytics query window      |**[Respond to incidents](#respond)** using:<br>• Playbooks and automation rules<br>• Microsoft Teams War Room  |
+|**[Assign incidents](#assign)**:<br>• Manually, in the **Incidents** page <br>• Automatically, using playbooks or automation rules  |**[Triage incidents](#triage)** using:<br>• The incident details in the **Incident** page<br>• Entity information in the **Incident page**, under the **Entities** tab<br>• [Microsoft Sentinel notebooks](notebooks.md)     |**[Investigate incidents](#investigate)** using:<br>• The investigation graph<br>• Microsoft Sentinel Workbooks<br>• The Log Analytics query window      |**[Respond to incidents](#respond)** using:<br>• Playbooks and automation rules<br>• Microsoft Teams War Room  |
 
 The following workflow stages map analyst activities and SIEM terminology to specific Microsoft Sentinel features.
 
@@ -96,7 +96,7 @@ From the investigation graph, you can also open workbooks to further support you
 <a name="respond"></a>
 #### Respond to incidents
 
-Use Microsoft Sentinel automated response capabilities to respond to complex threats and reduce alert fatigue. Microsoft Sentinel provides automated response using [Logic Apps playbooks and automation rules](automate-responses-with-playbooks.md). 
+Use Microsoft Sentinel automated response capabilities to respond to complex threats and reduce alert fatigue. Playbooks are Logic Apps-based workflows that automate response actions in Microsoft Sentinel. Microsoft Sentinel provides automated response using [playbooks and automation rules](automate-responses-with-playbooks.md). 
 
 :::image type="content" source="media/migration-soc-processes/analyst-workflow-playbooks.png" alt-text="Screenshot of Playbook templates tab in Automation blade." lightbox="media/migration-soc-processes/analyst-workflow-playbooks.png":::
 
@@ -109,9 +109,10 @@ These sources include a wide range of security-oriented playbooks to cover a sub
 
 See the [SOC Process Framework](https://github.com/Azure/Azure-Sentinel/wiki/SOC-Process-Framework) to map your SOC process to Microsoft Sentinel capabilities.
 
-## Compare SIEM concepts
+<a name="compare-siem-concepts"></a>
+## Compare SIEM concepts with Microsoft Sentinel
 
-Use this table to compare the main concepts of your legacy SIEM to Microsoft Sentinel concepts. 
+Use the following SIEM concept comparison table to compare the main concepts of your legacy SIEM to Microsoft Sentinel concepts. 
 
 | ArcSight | QRadar | Splunk | Microsoft Sentinel |
 |--|--|--|--|

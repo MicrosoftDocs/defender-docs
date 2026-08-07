@@ -4,13 +4,13 @@ description: Review, plan, and convert your existing dashboards to Azure Workboo
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security analyst, I want to convert my SIEM dashboards to Azure Workbooks so that I can use advanced visualization and interactivity features in Microsoft Sentinel.
@@ -85,7 +85,7 @@ After defining the workbook structure, you should have identified the required p
 
 Workbooks allow you to control how your parameter controls are presented to consumers. For example, you select whether the controls are presented as a text box vs. drop down, or single- vs. multi-select. You can also select which values to use, from text, JSON, KQL, or Azure Resource Graph, and more.
 
-Review the [supported workbook parameters](/azure/azure-monitor/visualize/workbooks-parameters). You can reference these parameter values in other parts of workbooks either via bindings or value expansions.
+Review the [supported workbook parameters](/azure/azure-monitor/visualize/workbooks-parameters). You can reference these parameter values in other parts of the same workbook by using bindings or value expansions.
 
 ### 5. Create or update visualizations
 

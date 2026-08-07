@@ -4,9 +4,9 @@ description: Select a tool to transfer your historical data to the selected targ
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a data engineer, I want to select the appropriate data ingestion tool so that I can efficiently transfer historical data to my target platform.
@@ -33,11 +33,13 @@ To learn more, see [What is Microsoft Sentinel data lake?](/azure/sentinel/datal
 
 The [Azure Monitor Custom Log Ingestion Tool on GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/CustomLogsIngestion-DCE-DCR) is a PowerShell script that sends custom data to an Azure Monitor Logs workspace. You can point the script to the folder where all your log files reside, and the script pushes the files to that folder. The script accepts a CSV or JSON format for log files. 
 
-### Direct API 
+<a name="direct-api"></a>
+### Use the direct ingestion API
 
 With this option, you ingest your custom logs into Azure Monitor Logs. For more information, see [Tutorial: Send data to Azure Monitor Logs with Logs ingestion API](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal). You ingest the logs with a PowerShell script that uses a REST API. Alternatively, you can use any other programming language to perform the ingestion, and you can use other Azure services to abstract the compute layer, such as Azure Functions or Azure Logic Apps. 
 
-## Azure Data Explorer 
+<a name="azure-data-explorer"></a>
+## Ingest data into Azure Data Explorer
 
 Azure Data Explorer (ADX) supports several data ingestion methods. For more information, see [Azure Data Explorer data ingestion overview](/azure/data-explorer/ingest-data-overview).
 
@@ -49,7 +51,8 @@ The ingestion methods that ADX accepts are based on different components:
 
 Review the [LightIngest](#lightingest) and [Logstash](#logstash), two methods that are better tailored to the data migration use case.
 
-### LightIngest
+<a name="lightingest"></a>
+### Use LightIngest for data ingestion
 
 ADX has developed the [LightIngest utility](/azure/data-explorer/lightingest) specifically for the historical data migration use case. You can use LightIngest to copy data from a local file system or Azure Blob Storage to ADX.
 
@@ -65,13 +68,15 @@ If you choose LightIngest, review these tips and best practices.
 - For more efficient queries after you ingest the data to ADX, ensure that the copied data uses the timestamp for the original events. The data shouldn't use the timestamp from when the data is copied to ADX. You provide the timestamp to LightIngest as the path of file name as part of the [CreationTime property](/azure/data-explorer/lightingest#how-to-ingest-data-using-creationtime). 
 - If your path or file names don't include a timestamp, you can still instruct ADX to organize the data using a [partitioning policy](/kusto/management/partitioning-policy?view=azure-data-explorer&preserve-view=true).
 
-### Logstash 
+<a name="logstash"></a>
+### Use Logstash for data ingestion
 
 [Logstash](https://www.elastic.co/products/logstash) is an open source, server-side data processing pipeline that ingests data from many sources simultaneously, transforms the data, and then sends the data to your favorite "stash". Learn how to [ingest data from Logstash to Azure Data Explorer](/azure/data-explorer/ingest-data-logstash). Logstash runs  on Windows, Linux and macOS Machines.
 
 To optimize performance, [configure the Logstash tier size](https://www.elastic.co/guide/en/logstash/current/deploying-and-scaling.html) according to the events per second. We recommend that you use [LightIngest](#lightingest) wherever possible, because LightIngest relies on the ADX cluster computing to perform the copy. 
 
-## Azure Blob Storage
+<a name="azure-blob-storage"></a>
+## Ingest data into Azure Blob Storage
 
 You can ingest data to Azure Blob Storage in several ways. 
 - [Azure Data Factory or Azure Synapse](/azure/data-factory/connector-azure-blob-storage)
@@ -82,14 +87,16 @@ You can ingest data to Azure Blob Storage in several ways.
 
 Review [Azure Data Factory or Azure Synapse](#azure-data-factory-or-azure-synapse), which are better tailored to the data migration use case.
 
-### Azure Data Factory or Azure Synapse
+<a name="azure-data-factory-or-azure-synapse"></a>
+### Use Azure Data Factory or Azure Synapse to copy data
 
 To use the Copy activity in Azure Data Factory (ADF) or Synapse pipelines:
 1. Create and configure a self-hosted integration runtime. This component is responsible for copying the data from your on-premises host.
 1. Create linked services for the source data store ([filesystem](/azure/data-factory/connector-file-system?tabs=data-factory#create-a-file-system-linked-service-using-ui) and the sink data store [blob storage](/azure/data-factory/connector-azure-blob-storage?tabs=data-factory#create-an-azure-blob-storage-linked-service-using-ui).
 3. To copy the data, use the [Copy data tool](/azure/data-factory/quickstart-hello-world-copy-data-tool). Alternatively, you can use method such as PowerShell, Azure portal, a .NET SDK, and so on.
 
-### AzCopy
+<a name="azcopy"></a>
+### Use AzCopy to copy data
 
 [AzCopy](/azure/storage/common/storage-use-azcopy-v10) is a simple command-line utility that copies files to or from storage accounts. AzCopy is available for Windows, Linux, and macOS. Learn how to [copy on-premises data to Azure Blob storage with AzCopy](/azure/storage/common/storage-use-azcopy-v10). 
 
@@ -114,7 +121,7 @@ After you complete the migration, the data is available in a storage account und
 <a name="siem-data-migration-accelerator"></a>
 ## Use the SIEM data migration accelerator
 
-In addition to selecting an ingestion tool, your team needs to invest time in setting up the foundation environment. To ease this process, you can use the [SIEM data migration accelerator](https://aka.ms/siemdatamigration), which automates the following tasks:
+In addition to selecting an ingestion tool, your team needs to invest time in setting up the foundation environment. To ease environment setup, you can use the [SIEM data migration accelerator](https://aka.ms/siemdatamigration), which automates the following tasks:
 
 - Deploys a Windows virtual machine that will be used to move the logs from the source to the target platform
 - Downloads and extracts the following tools into the virtual machine desktop:
