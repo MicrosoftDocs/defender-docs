@@ -5,7 +5,7 @@ description: Learn how to use the Identity page in Microsoft Defender. Investiga
 ms.author: abbyweisberg
 author: AbbyMSFT
 ms.reviewer: maelgami
-ms.date: 06/22/2026
+ms.date: 08/02/2026
 ms.topic: article
 ms.service: microsoft-defender
 ms.custom: sfi-image-nochange, msecd-doc-authoring-1018
@@ -120,9 +120,6 @@ The **Confirm safe** action now includes **Reset risk** for both the identity ri
 > [!NOTE]
 > Identity risk in Microsoft Defender for Identity uses automated decay logic to allow SOC prioritization. If no new risk factors are detected, the identity risk score decreases over time. Microsoft Entra ID maintains its own risk level independently and doesn't apply decay. As a result, you might see an Entra risk level with no corresponding identity risk score when the Entra risk update time is older than 30 days.
 
-> [!NOTE]
-> Identity risk in Microsoft Defender for Identity uses automated decay logic to allow SOC prioritization. If no new risk factors are detected, the identity risk score decreases over time. Microsoft Entra ID maintains its own risk level independently and doesn't apply decay. As a result, you might see an Entra risk level with no corresponding identity risk score when the Entra risk update time is older than 30 days.
-
 ## Timeline tab
 
 The **Timeline** tab provides a chronological, identity-centric view of activity and alerts correlated to the identity across your environment: on-premises Active Directory, Microsoft Entra ID, IAM and other identity providers, SaaS applications, cloud, and endpoints. It aggregates data from integrated Microsoft security products, such as Microsoft Defender for Identity, Microsoft Defender for Endpoint, Microsoft Defender for Cloud Apps, and Microsoft Sentinel.
@@ -157,11 +154,6 @@ The timeline draws from multiple advanced hunting tables and normalizes them int
 - GraphApiAuditEvents
 
 <!-- TODO: Confirm the public advanced hunting table names and reference links for each entry above. The spec also lists "AppIdentityEvents (IdentityEvents)" and "BehaviorInfo (P1)"—verify whether these are shipped and publicly documented before including them. -->
-
-> [!NOTE]
-> Microsoft Defender can display date and time information using either your local time zone or UTC. The selected time zone applies to all date and time information shown in the Identity timeline.
->
-> To set the time zone for these features, go to **Settings** \> **Security center** \> **Time zone**.
 
 ### Timeline schema
 

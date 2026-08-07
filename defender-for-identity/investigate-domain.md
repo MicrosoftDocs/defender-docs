@@ -4,7 +4,7 @@ description: Learn how to investigate an Active Directory domain in Microsoft De
 #customer intent: As a security admin, I want to view the security posture of my Active Directory domains so that I can identify coverage gaps, review security policies, and act on recommendations.
 author: AbbyMSFT
 ms.author: abbyweisberg
-ms.date: 07/05/2026
+ms.date: 07/30/2026
 ms.topic: concept-article
 ms.service: microsoft-defender-for-identity
 ms.custom: msecd-doc-authoring-106

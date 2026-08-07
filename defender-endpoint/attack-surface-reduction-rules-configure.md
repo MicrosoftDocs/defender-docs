@@ -11,8 +11,8 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
-ms.date: 07/02/2026
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
+ms.date: 07/08/2026
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to configure attack surface reduction rules on devices so that I can block risky software behaviors that attackers exploit.
 appliesto:

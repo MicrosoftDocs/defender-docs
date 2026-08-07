@@ -6,7 +6,7 @@ ms.date: 06/03/2026
 ai-usage: ai-assisted
 ---
 
-# Connect Microsoft Foundry (private preview)
+# Connect Microsoft Foundry (Preview)
 
 Create an Microsoft Foundry resource to use as part of the agentic code security setup.
 
@@ -39,16 +39,20 @@ Deploy the models required for the agentic code security integration.
 1. Go to **Build** from the upper navigation menu.
 1. Open **Deployments**.
 1. Select **Deploy a base model**.
-1. Choose and deploy each of the following models with default settings:
-   - `gpt-5.4`
-   - `gpt-5.3-codex`
-   - `gpt-5.4-mini`
-1. Repeat the deployment for each model until all three models are deployed. Each model should be deployed only once.
+1. Choose and deploy the following models with default or custom settings:
+   - **GPT-General profile**: Deploy all three models:
+     - `gpt-5.4`
+     - `gpt-5.3-codex`
+     - `gpt-5.4-mini`
 
+     Deploy each model only once.
+
+   - **MAI-Augmented profile (Preview)**:  To use this profile, deploy the three models listed previously and:
+   
+   - `MAI-Cyber-1-Flash`
+            
 > [!NOTE]
 > A predefined list of model deployments is required for the integration to work. You must deploy all three models: `gpt-5.4`, `gpt-5.3-codex`, and `gpt-5.4-mini`.
->
-> If you use custom settings, ensure that the deployment type is set to **Global Standard**.
 
 ## Configure the TPM rate limit
 
@@ -77,7 +81,11 @@ Configure a content filter to ensure the deployed models can operate without res
 > [!NOTE]
 > Configure content filtering is intentionally permissive for MDASH scanning scenarios. Create and use a dedicated Microsoft Foundry endpoint for MDASH only. Do not use this endpoint for any other workload.
 
-**Prerequisites:** An Microsoft Foundry resource is created, and three model deployments are completed.
+**Prerequisites:** 
+
+- A Microsoft Foundry resource is created, and three model deployments are completed. 
+
+- The same setup applies to the new MAI-Cyber-1-Flash model, which is part of the MAI-Augmented profile (Preview) - currently available only for scans triggered through the CLI.
 
 1. Turn off the **New Foundry** toggle.
 1. Navigate to **Guardrails + Controls** > **Content Filters**, and select **Create a content filter**.
@@ -309,6 +317,9 @@ Once disconnected, you can leave it as is, or reconnect at any time to the same 
 - [Agentic code security overview](ai-code-security-overview.md)
 - [Set up agentic code security](ai-code-security-onboarding.md)
 - [Install and run Defender CLI](defender-cli.md)
+
 - [Trigger an on-demand agentic scan](trigger-on-demand-scan.md)
 - [View results in the initiative](mdash-initiative.md)
+
 - [Scan and secure your source code](/security/zero-trust/prioritizing-defense/scan-secure-source-code)
+

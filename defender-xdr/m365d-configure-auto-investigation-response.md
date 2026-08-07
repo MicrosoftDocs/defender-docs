@@ -35,7 +35,7 @@ Then, after you're all set up, you can [view and manage remediation actions in t
 
 <a name='prerequisites-for-automated-investigation-and-response-in-microsoft-365-defender'></a>
 
-## Prerequisites for automated investigation and response in Microsoft Defender
+## Prerequisites for automated investigation and response in Microsoft Defender XDR
 
 The following table lists the requirements for automated investigation and response in Microsoft Defender XDR.
 

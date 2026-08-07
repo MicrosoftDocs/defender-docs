@@ -30,6 +30,14 @@ For updates about versions and features released six months ago or earlier, see 
 
 Migration of Defender for Identity sensors from v2.x to v3.x is now generally available. For more information, see [Migrate to Defender for Identity sensor v3.x](deploy/migrate-to-sensor-v3.md).
 
+### Migrate Windows Server 2025 domain controllers to sensor v3.x
+
+You can now migrate domain controllers running Windows Server 2025 from sensor v2.x to sensor v3.x. For more information, see [Migrate to Defender for Identity sensor v3.x](deploy/migrate-to-sensor-v3.md).
+
+### Migration readiness reasons on the Sensors page
+
+When a server is marked **Not ready for migration** on the **Sensors** page, you can now hover over the status to see a tooltip that lists the specific reasons the server doesn't meet the migration prerequisites. For more information, see [Troubleshoot "Not ready for migration" status](deploy/migrate-to-sensor-v3.md#troubleshoot-not-ready-for-migration-status).
+
 ### Expanded SaaS app support in Password protection (Preview)
 
 The Password protection page now includes password risks from SaaS apps connected through Microsoft Defender for Cloud Apps, in addition to Active Directory, Microsoft Entra ID, and Okta. SaaS apps that support SaaS Security Posture Management (SSPM), such as Salesforce and ServiceNow, appear on the Password Hygiene and Password Policies tabs. Each SaaS app requires a Defender for Cloud Apps app connector. For more information, see [Investigate identity password protection](password-protection.md).

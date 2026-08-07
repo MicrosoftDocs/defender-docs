@@ -23,7 +23,7 @@ ai-usage: ai-assisted
 ---
 # Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)
 
-Install, configure, and troubleshoot the Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL) 2. The plug-in extends Defender for Endpoint visibility into WSL containers running on Windows 10 and Windows 11 devices that are onboarded to Microsoft Defender for Endpoint Plan 2.
+This article explains how to install, configure, and troubleshoot the Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL) 2. The plug-in extends Defender for Endpoint visibility into WSL containers running on Windows 10 and Windows 11 devices that are onboarded to Microsoft Defender for Endpoint Plan 2.
 
 ## Overview
 
@@ -431,5 +431,6 @@ You can override the default release ring for the plug-in by configuring a regis
    - **Type**: `REG_SZ`
    - **Value**: `Dogfood or External or InsiderFast or Production`
    - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`
+
 
 

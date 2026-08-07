@@ -92,7 +92,7 @@ Use the following steps to modify the default connection filter policy in the Mi
 
        Repeat this step as many times as necessary. To remove an existing entry, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the entry.
 
-   - **Always block messages from the following IP addresses or address range**: This setting is the IP Block List. Enter a single IP (for example, 192.168.1.1), IP range (for example, 192.168.0.1-192.168.0.254), or CIDR IP (for example, 192.168.0.1/25) in the box.
+   - **Always block messages from the following IP addresses or address range**: This setting is the IP Block List. Enter a single IP (for example, 192.168.1.1), IP range (for example, 192.168.0.1-192.168.0.254), or CIDR IP (for example, 192.168.0.1/25) in the box and press **Enter**. The entry is added as a separate item (displayed as a gray box with an **X** icon). After confirming the entry appears, select **Save**.
 
    - **Turn on safe list**: Enable or disable the use of the safe list that specifies known, good senders to skip spam filtering. To use the safe list, select the check box.
 

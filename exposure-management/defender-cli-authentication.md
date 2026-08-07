@@ -142,7 +142,7 @@ Run the following command to start a device code sign-in flow for Defender inter
 ```bash
 az login \
   --tenant <DEFENDER_DFD_TENANT_ID> \
-  --scope b1a78a13-a596-4366-b37d-406048fa4a23/Defender.InteractiveLogin \
+  --scope c2fd607e-fe6e-41bd-ae58-08e2f24014aa/Defender.InteractiveLogin \
   --allow-no-subscriptions \
   --use-device-code
 ```

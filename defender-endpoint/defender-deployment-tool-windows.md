@@ -210,7 +210,7 @@ The following examples illustrate how to use the tool.
       DefenderDT.exe -MakeConfig
       ```
 
-  2. Use Notepad to open the *DefenderDTconfig.txt* file that was created in the directory. Specify parameters you want to use.
+  2. Use Notepad to open the *MdeConfig.txt* file that was created in the directory. Specify parameters you want to use.
 
      For example:
 
@@ -276,13 +276,13 @@ The following examples illustrate how to use the tool.
       DefenderDT.exe -File:\\server\DDT\Defenderconfig.txt
       ```
 
-      If the *DefenderDTconfig.txt* file is stored in the same directory as the tool, you don't need to specify a path.
+      If the *MdeConfig.txt* file is stored in the same directory as the tool, you don't need to specify a path.
 
 ## Using Group Policy for deployment
 
 The following steps show how to create a scheduled task to run the tool using Group Policy:
 
-1. Place the files *DefenderDT.exe* and *WindowsDefenderATP.onboarding* on a shared location that can be accessed by the device. If you've previously created an *DefenderDTconfig.txt* configuration file, place it in the same location.
+1. Place the files *DefenderDT.exe* and *WindowsDefenderATP.onboarding* on a shared location that can be accessed by the device. If you've previously created an *MDEConfig.txt* configuration file, place it in the same location.
 
 1. To create a new Group Policy Object (GPO), open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click Group Policy Objects you want to configure and select **New**. Enter the name of the new GPO in the dialogue box that is displayed and select **OK**.
 

@@ -5,7 +5,7 @@ keywords: what's new in Microsoft Defender for Office 365, ga, generally availab
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
-ms.date: 07/10/2026
+ms.date: 07/30/2026
 ms.collection:
   - m365-security
   - tier1
@@ -40,6 +40,8 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Cloud Apps](/defender-cloud-apps/release-notes)
 
 ## July 2026
+
+- **Localized default Mark as and notify email templates**: When automatic notifications use the default template, users receive notification emails in their preferred language based on their Outlook language settings. Custom notification templates configured by admins aren't affected. For more information, see [Admin review for user reported messages](submissions-admin-review-user-reported-messages.md#notify-users-from-within-the-portal).
 
 - **Unified RBAC is the default permission model for new Defender for Office 365 Plan 2 organizations**: Starting July 2026, new Microsoft Defender for Office 365 Plan 2 organizations use the Microsoft Defender unified role-based access control (Unified RBAC) model by default. For more information, see [Configure Unified RBAC for Microsoft Defender for Office 365](step-by-step-guides/configure-unified-rbac-defender-office-365.md) and [MC1246006](https://admin.microsoft.com/Adminportal/Home#/MessageCenter/:/messages/MC1246006).
 

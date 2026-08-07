@@ -12,7 +12,7 @@ ms.custom:
   - sfi-ga-nochange
 description: Admins can learn how to review messages that were reported by users and give them feedback.
 ms.service: defender-office-365
-ms.date: 07/03/2026
+ms.date: 07/30/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -86,7 +86,12 @@ Before you begin, review the following requirements and access details:
 
 The reported message is marked with the selected verdict, and an email message is automatically sent to notify the user who reported the message.
 
+When automatic notifications use the default template, users receive notification emails in their preferred language based on their Outlook language settings. Localized default templates are enabled automatically when automatic notifications are turned on. Localized templates don't change message verdicts, classification logic, or automated investigation behavior.
+
 To customize the notification email, see [Customize the messages used to notify users](#customize-the-messages-used-to-notify-users).
+
+> [!NOTE]
+> The feature doesn't affect custom notification templates configured by admins.
 
 ## Customize the messages used to notify users
 

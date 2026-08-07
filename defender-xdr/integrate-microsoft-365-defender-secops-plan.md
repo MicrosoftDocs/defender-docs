@@ -1,5 +1,5 @@
 ---
-title: Step 1. Plan for Microsoft Defender operations readiness
+title: Step 1. Plan for Microsoft Defender XDR operations readiness
 description: The basics of planning for Microsoft Defender XDR operations readiness when integrating Microsoft Defender XDR into your security operations.
 ms.service: defender-xdr
 ms.author: guywild

@@ -11,7 +11,7 @@ ms.collection:
 ms.custom:
   - sfi-ga-nochange
 ms.topic: concept-article
-ms.date: 07/10/2026
+ms.date: 07/30/2026
 ms.reviewer:
 appliesto:
 - Microsoft Defender for Endpoint Plan 2

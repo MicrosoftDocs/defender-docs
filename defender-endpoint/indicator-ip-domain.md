@@ -187,6 +187,9 @@ To create an indicator for IPs, URLs, or domains from the Microsoft Defender por
 
 1. Review the details in the **Summary** tab, then select **Save**.
 
+> [!IMPORTANT]
+> After you create a policy for a URL or IP address, it can take up to 48 hours for the policy to take effect. In most cases, policy changes take effect in under two hours.
+
 <a name="related-articles"></a>
 ## Related content
 
@@ -195,5 +198,6 @@ To create an indicator for IPs, URLs, or domains from the Microsoft Defender por
 - [Create indicators based on certificates](indicator-certificates.md)
 - [Manage indicators](indicator-manage.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md)
+
 
 

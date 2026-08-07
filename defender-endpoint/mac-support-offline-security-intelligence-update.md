@@ -155,7 +155,7 @@ python3 -m http.server "$PORT" --bind 127.0.0.1 --directory "$FOLDER"
 
 ```
 
-<a id="caddy"></a>**Sample script: Setting up a basic HTTP file server on macOS using Caddy**
+<a id="caddy"></a>**Sample script: Setting up a basic HTTP file server on macOS using using Caddy**
 
 The following script installs and configures the Caddy web server on macOS to host the downloaded offline update files.
 
@@ -427,3 +427,4 @@ For more details, see the following articles.
 * [Set preferences for Microsoft Defender for Endpoint on macOS](./mac-preferences.md)
 * [Microsoft Defender for Endpoint on macOS](./microsoft-defender-endpoint-mac.md)
 * [Resources for Microsoft Defender for Endpoint on macOS](./mac-resources.md)
+

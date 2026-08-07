@@ -32,7 +32,7 @@ The Action center provides a "single pane of glass" experience for incident and 
 - Viewing an audit log of already approved remediation actions.
 - Reviewing completed remediation actions.
 
-Because the Action center provides a comprehensive view of Microsoft Defender at work, your security operations team can operate more effectively and efficiently.
+Because the Action center provides a comprehensive view of Microsoft Defender XDR at work, your security operations team can operate more effectively and efficiently.
 
 <a name="the-unified-action-center"></a>
 ## How the unified Action center works
@@ -47,7 +47,7 @@ You can use the unified Action center if you have appropriate permissions and on
 
 - [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender for Office 365](/defender-office-365/mdo-about)
-- [Microsoft Defender](microsoft-365-defender.md)
+- [Microsoft Defender XDR](microsoft-365-defender.md)
 
 > [!TIP]
 > To learn more, see [Microsoft Defender XDR prerequisites](./prerequisites.md).
@@ -97,7 +97,7 @@ All actions, whether they're pending approval or were already taken, are tracked
 - Stop and quarantine
 - Contain devices from the network
 
-In addition to remediation actions that are taken automatically as a result of [automated investigations](m365d-autoir.md), the Action center also tracks actions your security team has taken to address detected threats, and actions that were taken as a result of threat protection features in Microsoft Defender. For more information about automatic and manual remediation actions, see [Remediation actions](m365d-remediation-actions.md).
+In addition to remediation actions that are taken automatically as a result of [automated investigations](m365d-autoir.md), the Action center also tracks actions your security team has taken to address detected threats, and actions that were taken as a result of threat protection features in Microsoft Defender XDR. For more information about automatic and manual remediation actions, see [Remediation actions](m365d-remediation-actions.md).
 
 ## Viewing action source details
 
@@ -143,7 +143,7 @@ You have the following options:
     - _Remediate malicious email_: **Security operations/Security data/Email & collaboration advanced actions (manage)**. 
 
   > [!TIP]
-  > Membership in the **Security Administrator** role group Email & collaboration permissions doesn't grant access to the Action center or Microsoft Defender capabilities. For those, you need to be a member of the **Security Administrator** role in [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal).
+  > Membership in the **Security Administrator** role group Email & collaboration permissions doesn't grant access to the Action center or Microsoft Defender XDR capabilities. For those, you need to be a member of the **Security Administrator** role in [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal).
 
 - [Defender for Endpoint permissions](/defender-endpoint/rbac):
   - _Microsoft Defender for Endpoint remediation (devices)_: Membership in the **Active remediation actions** role.

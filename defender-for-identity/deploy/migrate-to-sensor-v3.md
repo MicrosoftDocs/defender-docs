@@ -72,14 +72,14 @@ The following table lists each reason that can appear in the tooltip, how to ver
 
 | Reason shown in the tooltip | How to verify | Resolution |
 |---|---|---|
-| Defender for Endpoint sensor is running | Client Analyzer report shows **Sense service Status** is **Running**. | Verify Microsoft Defender for Endpoint onboarding is complete. |
-| Defender for Endpoint onboarding info exists | Client Analyzer: Check `RegOnboardingInfoPolicy.Json` in the results ZIP. If empty, the policy key is missing. The connectivity log also shows *"OnboardingInfo could not be found in the registry"* if missing. | Re-onboard the server to Microsoft Defender for Endpoint. |
-| Device has a registered Defender for Endpoint device ID | Client Analyzer report shows **Device ID** field contains a valid GUID. | Verify Microsoft Defender for Endpoint onboarding completed successfully. Re-onboard the server if `SenseMachineId` is empty. |
-| Defender for Identity v2.x sensor is running | Go to the **Sensors** page in the portal and validate the **Service status** column shows **Running**, or run `sc query AATPSensorUpdater` and confirm the service state is **Running**. | Start the `AATPSensorUpdater` service. If the service fails to start, reinstall the v2.x sensor. |
-| Defender for Identity v2.x sensor version is 2.254 or later | Check the installed sensor version in **Programs and Features** or on the **Sensors** page in the portal. | Update the Defender for Identity v2 sensor to version 2.254.19112.470 or later. Ensure delayed updates aren't blocking the update. |
-| Defender for Endpoint sensor version is 10.8735 or later | Client Analyzer report: the **Sense version** field displays the installed version. | Update the Defender for Endpoint sensor to the latest version. |
-| Windows Server 2019 or later with July 2026 or later cumulative update | Run `winver` to confirm the OS version and build number. | Upgrade the operating system to Windows Server 2019 or later and install the July 2026 or later cumulative update. |
-| Domain controller without additional identity roles | Verify the server is a pure domain controller and doesn't run AD FS, AD CS, or Entra Connect alongside the DC role. | Migration is only supported on pure domain controllers. Use the v2.x sensor for servers with additional roles. |
+| Device isn't properly onboarded to Microsoft Defender for Endpoint. | Run the Microsoft Defender for Endpoint Client Analyzer and check `RegOnboardingInfoPolicy.Json` in the results ZIP. The connectivity log shows *"OnboardingInfo could not be found in the registry"* if the onboarding info is missing. | Re-onboard the server to Microsoft Defender for Endpoint. |
+| Operating system version isn't supported. Requires Windows Server 2019 or later. | Run `winver` to confirm the operating system version and build number. | Upgrade the operating system to Windows Server 2019 or later and install the July 2026 or later cumulative update. |
+| Microsoft Defender for Endpoint sensor version is outdated or unsupported. | In the Client Analyzer report, check the **Sense version** field. | Update the Microsoft Defender for Endpoint sensor to the latest version. |
+| Microsoft Defender for Endpoint (Sense) service isn't running. | In the Client Analyzer report, confirm the **Sense service Status** is **Running**. | Start the Sense service and verify Microsoft Defender for Endpoint onboarding is complete. |
+| Migration is currently supported only for domain controllers. | Confirm the server is a domain controller. | In-place migration is available only for domain controllers. |
+| Microsoft Defender for Endpoint device ID is missing or not registered. | In the Client Analyzer report, confirm the **Device ID** field contains a valid GUID. | Verify Microsoft Defender for Endpoint onboarding completed successfully, and re-onboard the server if the device ID is empty. |
+| Sensor v2.x status is unreachable or disconnected. | On the **Sensors** page, check the sensor's status. | Verify network connectivity between the server and the Defender for Identity service, and confirm the sensor v2.x is running. |
+| Sensor v2.x service status is not running. | On the **Sensors** page, confirm the **Service status** column shows **Running**, or run `sc query AATPSensorUpdater` to confirm the service state. | Start the `AATPSensorUpdater` service. If the service fails to start, reinstall the sensor v2.x. |
 
 ## Troubleshoot migration failures
 

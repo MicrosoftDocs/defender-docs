@@ -17,7 +17,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 07/03/2026
+ms.date: 08/03/2026
 ai-usage: ai-assisted
 ---
 

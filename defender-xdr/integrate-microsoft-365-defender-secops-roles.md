@@ -31,11 +31,11 @@ Many modern SOCs assign its team members to categories based on their skillsets 
 - A monitoring team comprised of SOC analysts responsible for maintaining logs, alerts, events, and monitoring functions.
 - An engineering & operations team assigned to engineer and optimize security devices.
 
-SOC team roles and responsibilities for Microsoft Defender would naturally integrate into these teams.
+SOC team roles and responsibilities for Microsoft Defender XDR would naturally integrate into these teams.
 
-The following table breaks out each SOC team's roles and responsibilities and how their roles integrate with Microsoft Defender.
+The following table breaks out each SOC team's roles and responsibilities and how their roles integrate with Microsoft Defender XDR.
 
-| SOC team | Roles and responsibilities | Microsoft Defender tasks  |
+| SOC team | Roles and responsibilities | Microsoft Defender XDR tasks  |
 |:-------|:-----|:-------|
 | SOC Oversight | <ul><li>Performs SOC governance</li><li>Establishes daily, weekly, monthly processes</li><li>Provides training and awareness</li><li>Hires staff, participates in peer groups and meetings</li><li>Conducts Blue, Red, Purple team exercises</ul>  | <ul><li>Microsoft Defender portal access controls</li><li>Maintains feature/URL and licensing update register</li><li>Maintains communication with IT, legal, compliance, and privacy stakeholders</li><li>Participates in change control meetings for new Microsoft 365 or Microsoft Azure initiatives</ul> |
 | Threat Intelligence & Analytics  | <ul><li>Threat intel feed management</li><li>Virus and malware attribution</li><li>Threat modeling & threat event categorizations</li><li>Insider threat Attribute development </li><li>Threat Intel Integration with Risk Management program</li><li>Integrates data insights with data science, BI, and analytics across HR, legal, IT, and security teams<ul> | <ul><li>Maintains Microsoft Defender for Identity threat modeling</li><li>Maintains Microsoft Defender for Office 365 threat modeling</li><li>Maintains Microsoft Defender for Endpoint threat modeling</ul> |

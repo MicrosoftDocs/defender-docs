@@ -21,7 +21,7 @@ ms.custom: msecd-doc-authoring-1014
 **Applies to:**
 - Microsoft Defender XDR
 
-To prepare for Microsoft Defender adoption, organizations should assess readiness using a [Zero Trust approach](/security/zero-trust/). Adoption can help you determine the requirements needed for deploying Microsoft Defender using modern industry-leading practices, while evaluating Microsoft Defender XDR's capabilities against your environment.
+To prepare for Microsoft Defender XDR adoption, organizations should assess readiness using a [Zero Trust approach](/security/zero-trust/). Adoption can help you determine the requirements needed for deploying Microsoft Defender XDR using modern industry-leading practices, while evaluating Microsoft Defender XDR's capabilities against your environment.
 
 The Zero Trust approach is based on a strong foundation of protections and includes key areas such as identity, endpoints (devices), data, apps, infrastructure, and networking. The Readiness Assessment team determines the areas where a foundational requirement for enabling Microsoft Defender XDR hasn't yet been met and what needs remediation.
 
@@ -33,11 +33,11 @@ The following list provides some examples of things that must be remediated in o
 - **Infrastructure:** Large number of unsanctioned SaaS licenses, no container security, and others.
 - **Networking:** Performance issues due to low bandwidth, flat network, wireless security issues, and others.
 
-Use the guidance in [turning on Microsoft Defender](m365d-enable.md) to capture the baseline set of configuration requirements. Capturing the baseline configuration requirements helps determine remediation activities the SOC teams have to carry out to effectively develop use cases. 
+Use the guidance in [turning on Microsoft Defender XDR](m365d-enable.md) to capture the baseline set of configuration requirements. Capturing the baseline configuration requirements helps determine remediation activities the SOC teams have to carry out to effectively develop use cases. 
 
 For next steps, see [Plan for Microsoft Defender XDR integration with your SOC catalog of services](integrate-microsoft-365-defender-secops-services.md) and [Use Microsoft Defender XDR incident response in your SOC](integrate-microsoft-365-defender-secops-use-cases.md).
 
 ## Next step
 
-[Step 3. Plan for Microsoft Defender integration with your SOC catalog of services](integrate-microsoft-365-defender-secops-services.md)
+[Step 3. Plan for Microsoft Defender XDR integration with your SOC catalog of services](integrate-microsoft-365-defender-secops-services.md)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

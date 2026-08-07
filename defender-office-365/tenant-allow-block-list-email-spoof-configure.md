@@ -9,7 +9,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block email and spoofed sender entries in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 08/03/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -166,7 +166,7 @@ To create block entries for *spoofed senders*, see [Create block entries for spo
 Email from these blocked senders is marked as *high confidence phishing* and quarantined.
 
 > [!NOTE]
-> Currently, a block entry for contoso.com blocks only contoso.com; it doesn't block subdomains (for example, marketing.contoso.com). Similarly, a wildcard entry for \*.contoso.com blocks subdomains, but it doesn't block contoso.com itself. To block the specified domain and its subdomains, you need separate block entries for both values: one entry for contoso.com and another entry for \*.contoso.com. The wildcard syntax `*.TLD` is supported, where TLD can be any top-level domain, internal domain, or email address domain.
+> Currently, if the block entry doesn't use the syntax `*.TLD`, subdomains of the specified domain aren't blocked. For example, if you create a block entry for contoso.com, mail from marketing.contoso.com isn't also blocked. You need to create a separate block entry for marketing.contoso.com or use the `*.TLD` syntax, where TLD can be any top-level domain, internal domain, or email address domain.
 >
 > Users in the organization also can't *send* email to these blocked domains and addresses. The message is returned in the following non-delivery report (also known as an NDR or bounce message): `550 5.7.703 Your message can't be delivered because messages to XXX, YYY are blocked by your organization using Tenant Allow Block List.` The entire message is blocked for all internal and external recipients of the message, even if only one recipient email address or domain is defined in a block entry.
 
