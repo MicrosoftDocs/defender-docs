@@ -1,5 +1,5 @@
 ---
-title: Create and manage users on an on-premises management console - Microsoft Defender for IoT
+title: Create and Manage Users on an On-premises Management Console
 description: Create and manage users on a Microsoft Defender for IoT on-premises management console.
 ms.date: 06/12/2026
 ms.topic: how-to
@@ -27,9 +27,10 @@ For more information, see [Install OT monitoring software on an on-premises mana
 
 This procedure describes how to create new users for an on-premises management console.
 
-**Prerequisites**: This procedure is available for the *support* and *cyberx* users, and any user with the **Admin** role.
+> [!NOTE]
+> This procedure is available for the *support* and *cyberx* users, and any user with the **Admin** role.
 
-**To add a user**:
+To add a user:
 
 1. Sign in to the on-premises management console and select **Users** > **+ Add user**.
 
@@ -53,12 +54,12 @@ This procedure describes how to create new users for an on-premises management c
 
 Your new user is added and is listed on the on-premises management console **Users** page.
 
-**To edit a user**, select the **Edit** :::image type="icon" source="../media/manage-users-on-premises-management-console/icon-edit.png" border="false"::: button for the user you want to edit, and change any values as needed.
+To edit a user, select the **Edit** :::image type="icon" source="../media/manage-users-on-premises-management-console/icon-edit.png" border="false"::: button for the user you want to edit, and change any values as needed.
 
 > [!WARNING]
 > Deleting a user is irreversible and cannot be undone.
 
-**To delete a user**, select the **Delete**  :::image type="icon" source="../media/manage-users-on-premises-management-console/icon-delete.png" border="false"::: button for the user you want to delete.
+To delete a user, select the **Delete**  :::image type="icon" source="../media/manage-users-on-premises-management-console/icon-delete.png" border="false"::: button for the user you want to delete.
 
 ### Change a user's password
 
@@ -67,9 +68,10 @@ This procedure describes how **Admin** users can change local user passwords. **
 > [!TIP]
 > If you need to recover access to a privileged user account, see [Recover privileged access to an on-premises management console](#recover-privileged-access-to-an-on-premises-management-console).
 
-**Prerequisites**: This procedure is available only for the *support* or *cyberx* users, or for users with the **Admin** role.
+> [!NOTE]
+> This procedure is available only for the *support* or *cyberx* users, or for users with the **Admin** role.
 
-**To reset a user's password on the on-premises management console**:
+To reset a user's password on the on-premises management console:
 
 1. Sign into the on-premises management console and select **Users**.
 
@@ -87,15 +89,16 @@ This procedure describes how **Admin** users can change local user passwords. **
 
 This procedure describes how to recover either the *support* or *cyberx* user password on an on-premises management console. For more information, see [Default privileged on-premises users](../roles-on-premises.md#default-privileged-on-premises-users).
 
-**Prerequisites**: This procedure is available for the *support* and *cyberx* users only.
+> [!NOTE]
+> This procedure is available for the *support* and *cyberx* users only.
 
-**To recover privileged access to an on-premises management console**:
+To recover privileged access to an on-premises management console:
 
 1. Start signing in to your on-premises management console. On the sign-in screen, under the **Username** and **Password** fields, select **Password recovery**.
 
 1. In the **Password Recovery** dialog, select either **CyberX** or **Support** from the drop-down menu, and copy the unique identifier code that's displayed to the clipboard.
 
-1. Go the Defender for IoT **Sites and sensors** page in the Azure portal. You may want to open the Azure portal in a new browser tab or window, keeping your on-premises management console open.
+1. Go the Defender for IoT **Sites and sensors** page in the Azure portal. You might want to open the Azure portal in a new browser tab or window, keeping your on-premises management console open.
 
     In your Azure portal settings > **Directories + subscriptions**, make sure that you've selected the subscription where your sensors were onboarded to Defender for IoT.
 
@@ -110,7 +113,7 @@ This procedure describes how to recover either the *support* or *cyberx* user pa
 1. Back on the on-premises management console tab, on the **Password recovery** dialog, select **Upload**. Browse to an upload the **password_recovery.zip** file you downloaded from the Azure portal.
 
     > [!NOTE]
-    > If an error message appears, indicating that the file is invalid, you may have had an incorrect subscription selected in your Azure portal settings.
+    > If an error message appears, indicating that the file is invalid, you might have had an incorrect subscription selected in your Azure portal settings.
     >
     > Return to Azure, and select the settings icon in the top toolbar. On the **Directories + subscriptions** page, make sure that you've selected the subscription where your sensors were onboarded to Defender for IoT. Then repeat the steps in Azure to download the **password_recovery.zip** file and upload it on the on-premises management console again.
 
@@ -129,9 +132,10 @@ For example, use Active Directory when you have a large number of users that you
 
 For more information, see [Microsoft Entra ID support on sensors and on-premises management consoles](../manage-users-overview.md#microsoft-entra-id-support-on-sensors).
 
-**Prerequisites**: This procedure is available for the *support* and *cyberx* users only, or any user with an **Admin** role.
+> [!NOTE]
+> This procedure is available for the *support* and *cyberx* users only, or any user with an **Admin** role.
 
-**To integrate with Active Directory**:
+To integrate with Active Directory:
 
 1. Sign in to your on-premises management console and select **System Settings**.
 
@@ -174,9 +178,8 @@ Create *user access groups* to establish global access control across Defender f
 
 For more information, see [On-premises global access groups](../manage-users-overview.md#on-premises-global-access-groups).
 
-**Prerequisites**:
-
-This procedure is available for the *support* and *cyberx* users, and any user with the **Admin** role.
+> [!NOTE]
+> This procedure is available for the *support* and *cyberx* users, and any user with the **Admin** role.
 
 Before you create access groups, we also recommend that you:
 
@@ -190,7 +193,7 @@ Before you create access groups, we also recommend that you:
 
 - Carefully set up your business topology. For a rule to be successfully applied, you must assign sensors to zones in the **Site Management** window. For more information, see [Create OT sites and zones on an on-premises management console](sites-and-zones-on-premises.md).
 
-**To create access groups**:
+To create access groups:
 
 1. Sign in to the on-premises management console as user with an **Admin** role.
 
@@ -235,9 +238,10 @@ For more information, see [Work with Defender for IoT CLI commands](../reference
 > [!NOTE]
 > Any changes made to user session timeouts are reset to defaults when you update the software. For more information, see [Update OT monitoring software](../update-ot-software.md).
 
-**Prerequisites**: This procedure is available for the *support* and *cyberx* users only.
+> [!NOTE]
+> This procedure is available for the *support* and *cyberx* users only.
 
-**To control on-premises management console user session timeouts**:
+To control on-premises management console user session timeouts:
 
 1. Sign in to your sensor via a terminal and run:
 
@@ -262,18 +266,16 @@ For more information, see [Work with Defender for IoT CLI commands](../reference
 
 1. Do one of the following:
 
-    - **To turn off user session timeouts entirely**, change `infinity_session_expiration = true` to `infinity_session_expiration = false`. Change it back to turn it back on again.
+    - To turn off user session timeouts entirely, change `infinity_session_expiration = true` to `infinity_session_expiration = false`. Change it back to turn it back on again.
 
-    - **To adjust an inactivity timeout period**, adjust one of the following values to the required time, in seconds:
+    - To adjust an inactivity timeout period, adjust one of the following values to the required time, in seconds:
 
         - `session_expiration_default_seconds` for all users
         - `session_expiration_admin_seconds` for *Admin* users only
         - `session_expiration_security_analyst_seconds` for *Security Analyst* users only
         - `session_expiration_read_only_users_seconds` for *Read Only* users only
 
-## Next steps
-
-For more information, see:
+## Related content
 
 - [Create and manage users on an OT network sensor](../manage-users-sensor.md)
 - [Audit user activity](../track-user-activity.md)

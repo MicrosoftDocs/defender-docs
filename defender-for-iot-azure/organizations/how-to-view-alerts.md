@@ -1,5 +1,5 @@
 ---
-title: View and manage alerts on your OT sensor - Microsoft Defender for IoT
+title: View and Manage Alerts on your OT Sensor
 description: Learn about viewing and managing alerts on an OT network sensor.
 ms.date: 06/12/2026
 ms.topic: how-to
@@ -30,9 +30,7 @@ For more information, see [On-premises users and roles for OT monitoring with De
 > [!NOTE]
 > When you view alerts in the Azure portal **Alerts** page, some alerts may not correlate with alerts on specific sensors. For more information, see [Investigate alerts that don't correlate with specific sensors](respond-ot-alert.md#investigate-alerts-that-dont-correlate-with-a-specific-sensor).
 
-1. Sign into your OT sensor console and select the **Alerts** page on the left.
-
-    By default, the following details are shown in the grid:
+1. Sign into your OT sensor console and select the **Alerts** page on the left. By default, the following details are shown in the grid:
 
     | Name | Description |
     |--|--|
@@ -44,16 +42,16 @@ For more information, see [On-premises users and roles for OT monitoring with De
     | **Source Device** | The source device IP address, MAC, or device name. |
     | **Id** | The unique alert ID, aligned with the ID on the Azure portal.<br><br> **Note:** If the [alert was merged with other alerts](alerts.md#alert-management-options) from sensors that detected the same alert, the Azure portal displays the alert ID of the first sensor that generated the alerts. |
 
-    1. To view more details, select the :::image type="icon" source="media/how-to-manage-device-inventory-on-the-cloud/edit-columns-icon.png" border="false"::: **Edit Columns** button.
+    To view more details, select the :::image type="icon" source="media/how-to-manage-device-inventory-on-the-cloud/edit-columns-icon.png" border="false"::: **Edit Columns** button.
 
-        In the **Edit Columns** pane on the right, select **Add Column** and any of the following extra columns:
+1. In the **Edit Columns** pane on the right, select **Add Column** and any of the following extra columns:
 
-        | Name | Description |
-        |--|--|
-        | **Destination Device** | The destination device IP address. |
-        | **First detection** | The first time the alert activity was detected.   |
-        | **ID** | The alert ID. |
-        | **Last activity** | The last time the alert was changed, including manual updates for severity or status, or automated changes for device updates or device/alert de-duplication   |
+   | Name | Description |
+   |--|--|
+   | **Destination Device** | The destination device IP address. |
+   | **First detection** | The first time the alert activity was detected.   |
+   | **ID** | The alert ID. |
+   | **Last activity** | The last time the alert was changed, including manual updates for severity or status, or automated changes for device updates or device/alert de-duplication   |
 
 ### Filter alerts displayed
 
@@ -97,7 +95,7 @@ Make sure to update your alert status once you've taken remediation steps so tha
 
 For more information, see [Alert statuses and triaging options](alerts.md#alert-statuses-and-triaging-options).
 
-- **To manage alert status**:
+- To manage alert status:
 
     1. Sign into your OT sensor console and select the **Alerts** page on the left.
 
@@ -107,20 +105,20 @@ For more information, see [Alert statuses and triaging options](alerts.md#alert-
 
         The :::image type="icon" source="media/how-to-manage-sensors-on-the-cloud/status-icon.png" border="false"::: **Status** option is also available on the alert details page.
 
-- **To learn one or more alerts**:
+- To learn one or more alerts:
 
     Sign into your OT sensor console and select the **Alerts** page on the left, and then do one of the following:
 
   - Select one or more learnable alerts in the grid and then select :::image type="icon" source="media/how-to-manage-sensors-on-the-cloud/learn-icon.png" border="false"::: **Learn** in the toolbar.
   - On an alert details page, in the **Take Action** tab, select **Learn**.
 
-- **To mute an alert**:
+- To mute an alert:
 
     1. Sign into your OT sensor console and select the **Alerts** page on the left.
     1. Locate the alert you want to mute and open its alert details page.
     1. On the **Take action** tab, toggle on the **Alert mute** option.
 
-- **To unlearn or unmute an alert**:
+- To unlearn or unmute an alert:
 
     1. Sign into your OT sensor console and select the **Alerts** page on the left.
     1. Locate the alert you've learned or muted and open its alert details page.
@@ -147,7 +145,7 @@ You may want to export a selection of alerts to a CSV or PDF file for offline sh
 - Export alerts to a CSV file from the main **Alerts** page. Export alerts one at a time or in bulk.
 - Export alerts to a PDF file one at a time only, either from the main **Alerts** page or an alert details page.
 
-**To export alerts to a CSV file**:
+To export alerts to a CSV file:
 
 1. Sign into your OT sensor console and select the **Alerts** page on the left.
 
@@ -157,7 +155,7 @@ You may want to export a selection of alerts to a CSV or PDF file for offline sh
 
 The file is generated, and you're prompted to open or save it locally.
 
-**To export an alert to a PDF file**:
+To export an alert to a PDF file:
 
 Sign into your OT sensor console and select the **Alerts** page on the left, and then do one of the following:
 
@@ -203,7 +201,7 @@ To reduce alert fatigue, multiple versions of the same alert violation with iden
 > [!NOTE]
 > An alert with specific violations does not prevent new alerts with different violations from appearing. After you learn an alert, the same alert might be triggered again if the new alert has different violation parameters. To check why the alert was triggered, review the list of violations in the alert list (for the first 10 alerts) or the CSV file you downloaded in step 3.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Data retention across Microsoft Defender for IoT](references-data-retention.md)

@@ -1,5 +1,5 @@
 ---
-title: Verify and update detected device inventory - Microsoft Defender for IoT
+title: Verify and Update Detected Device Inventory
 description: Learn how to fine-tune your newly detected device inventory on an OT sensor, such as updating device types and properties, merging devices as needed, and more.
 ms.date: 06/12/2026
 ms.topic: how-to

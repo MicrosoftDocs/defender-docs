@@ -1,5 +1,5 @@
 ---
-title: Enhance security posture with security recommendations - Microsoft Defender for IoT
+title: Enhance Security Psture with Security Recommendations - Microsoft Defender for IoT
 description: Learn about how to find security recommendations for devices detected by Microsoft Defender for IoT.
 ms.date: 06/12/2026
 ms.topic: how-to
@@ -96,7 +96,7 @@ The following Defender for Endpoint recommendations apply to Enterprise IoT cust
 
 For more information, see [Security recommendations](/microsoft-365/security/defender-vulnerability-management/tvm-security-recommendation).
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [View the device inventory](how-to-manage-device-inventory-for-organizations.md#view-the-device-inventory)

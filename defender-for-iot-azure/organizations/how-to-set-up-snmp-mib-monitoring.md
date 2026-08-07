@@ -1,5 +1,5 @@
 ---
-title: Set up SNMP MIB monitoring on an OT sensor
+title: Set Up SNMP MIB Monitoring on an OT Sensor
 description: Learn how to set up your OT sensor for health monitoring via SNMP. 
 ms.date: 06/12/2026
 ms.topic: how-to
@@ -63,7 +63,7 @@ To download a predefined SNMP MIB file from the Azure portal, you need access to
 
 Defender for IoT in the Azure portal provides a downloadable SNMP MIB file. Load this SNMP MIB file into your SNMP monitoring system to predefine Defender for IoT sensors.
 
-**To download the SNMP MIB file** from [Defender for IoT](https://portal.azure.com/#view/Microsoft_Azure_IoT_Defender/IoTDefenderDashboard/~/Getting_started) on the Azure portal, select **Sites and sensors** > **More actions** > **Download SNMP MIB file**.
+To download the SNMP MIB file from [Defender for IoT](https://portal.azure.com/#view/Microsoft_Azure_IoT_Defender/IoTDefenderDashboard/~/Getting_started) on the Azure portal, select **Sites and sensors** > **More actions** > **Download SNMP MIB file**.
 
 ## Query SNMP configuration on the sensor
 
@@ -75,8 +75,8 @@ To validate and query the SNMP MIB monitoring configuration in the OT sensor:
 1. In the OT sensor, go to **System settings > Sensor management**
 1. To [access the Defender for IoT CLI](references-work-with-defender-for-iot-cli-commands.md#defender-for-iot-cli-access), sign in to your OT or Enterprise IoT sensor as the *cyberx* user, using a terminal emulator and SSH.
 1. Run the appropriate query for the SNMP version you configured, and update the variables accordingly:
-- For version 2 type: `snmpwalk -v 2c -c<community-string> <sensor-ip> isa`
-- For version 3 type: `snmpwalk -v 3 -aMD5|SHA -xDES|AES -A<password> -X<secret-key> -u<username> -|autoPriv <sensor-ip> isa`
+  - For version 2 type: `snmpwalk -v 2c -c<community-string> <sensor-ip> isa`
+  - For version 3 type: `snmpwalk -v 3 -aMD5|SHA -xDES|AES -A<password> -X<secret-key> -u<username> -|autoPriv <sensor-ip> isa`
 
 ## OT sensor OIDs for manual SNMP configurations
 
@@ -110,10 +110,10 @@ If you're configuring Defender for IoT sensors on your SNMP monitoring system ma
 | **License status** | 1.3.6.1.4.1.53313.7  |STRING | Activation period of this appliance: Active / Expiration Date / Expired |
 
 > [!NOTE]
+>
 > - Nonexisting keys respond with null, HTTP 200.
-> - Hardware-related MIBs (CPU usage, CPU temperature, memory usage, disk usage) should be tested on all architectures and physical sensors. CPU temperature on virtual machines is expected to be non applicable.
+> - You should test Hardware-related MIBs (CPU usage, CPU temperature, memory usage, disk usage) on all architectures and physical sensors. CPU temperature on virtual machines is expected to be non applicable.
 
-
-## Next steps
+## Related content
 
 For more information about managing OT sensors from the web interface, see [Maintain OT network sensors from the GUI](how-to-manage-individual-sensors.md).
