@@ -5,10 +5,10 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: mshechter
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 #Customer intent: As a security analyst, I want to use User and Entity Behavior Analytics (UEBA) data to investigate incidents so that I can identify and respond to potential security threats more effectively.
 ---
@@ -42,7 +42,7 @@ To investigate a user in an incident, select **Go Hunt > All user anomalies** fr
 
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-incident-investigations.png" alt-text="Screenshot that shows an incident graph, highlighting the Go hunt All user anomalies option, which allows analysts to quickly find all anomalies related to the user." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-incident-investigations.png":::
 
-For more information, see [Investigate incidents in the Microsoft Defender portal](https://aka.ms/ueba-go-hunt) and [User entity page in Microsoft Defender](https://aka.ms/ueba-entity-details).
+For more information about investigating user anomalies and the user entity page, see [Investigate incidents in the Microsoft Defender portal](https://aka.ms/ueba-go-hunt) and [User entity page in Microsoft Defender](https://aka.ms/ueba-entity-details).
 
 
 ## Run proactive, routine searches on entity data
@@ -58,7 +58,7 @@ Capture non-routine actions in the UEBA workbook, and use them to find anomalous
 
 ### Investigate an anomalous sign-in
 
-For example, the following steps follow the investigation of a user who connected to a VPN that they'd never used before, which is an anomalous activity.
+For example, the following steps follow the investigation of a user who connected to a VPN that they'd never used before. This unfamiliar VPN connection is an anomalous activity.
 
 1. In the Sentinel **Workbooks** area, search for and open the **User and Entity Behavior Analytics** workbook.
 1. Search for a specific user name to investigate and select their name in the **Top users to investigate** table.
@@ -83,7 +83,7 @@ A common example of a false positive is when impossible travel activity is detec
 
 ### Analyze a false positive
 
-For example, for an **Impossible travel** incident, after confirming with the user that a VPN was used, navigate from the incident to the user entity page. Use the data displayed there to determine whether the locations captured are included in the user's commonly known locations.
+For example, for an **Impossible travel** incident, after confirming with the user that a VPN was used, navigate from the incident to the user entity page. Use the data displayed on the user entity page to determine whether the locations captured are included in the user's commonly known locations.
 
 For example:
 
@@ -130,7 +130,7 @@ For example:
 
 The **IdentityInfo** table synchronizes with your Microsoft Entra workspace to create a snapshot of your user profile data, such as user metadata, group information, and Microsoft Entra roles assigned to each user. For more information, see [IdentityInfo table](ueba-reference.md#identityinfo-table) in the UEBA enrichments reference.
 
-See more information on the following operators and functions used in the SecurityEvent and SigninLogs query examples, in the Kusto documentation:
+For details about the operators and functions used in the SecurityEvent and SigninLogs query examples, see the following Kusto documentation:
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
 - [***join*** operator](/kusto/query/join-operator?view=microsoft-sentinel&preserve-view=true)
 - [***summarize*** operator](/kusto/query/summarize-operator?view=microsoft-sentinel&preserve-view=true)
@@ -165,7 +165,7 @@ For example, to investigate a password spray incident with UEBA insights, you mi
     For example, note whether this is the user's first Potential Password spray incident, or watch the user's sign-in history to understand whether the failures were anomalous.
 
 > [!TIP]
-> You can also run the **Anomalous Failed Logon** [hunting query](hunting.md) to monitor all of an organization's anomalous failed logins. Use the results from the query to start investigations into possible password spray attacks.
+> You can also run the **Anomalous Failed Logon** [threat hunting query in Microsoft Sentinel](hunting.md) to monitor all of an organization's anomalous failed logins. Use the results from the query to start investigations into possible password spray attacks.
 >
 
 ## URL detonation (Public preview)

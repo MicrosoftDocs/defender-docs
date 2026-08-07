@@ -5,13 +5,13 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.collection: usx-security
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security analyst, I want to map data fields to entities in analytics rules so that I can enrich alerts and incidents with essential information for effective investigation and remediation.
 
@@ -21,7 +21,7 @@ ms.custom: msecd-doc-authoring-1014
 
 Entity mapping is an integral part of the configuration of [scheduled analytics rules](scheduled-rules-overview.md). It enriches the rules' output (alerts and incidents) with essential information that serves as the building blocks of any investigative processes and remedial actions that follow.
 
-The following procedure is part of the analytics rule creation wizard. It's treated here independently to address the scenario of adding or changing entity mappings in an existing analytics rule.
+Use the following procedure to add or change entity mappings in an existing analytics rule, or while creating a new scheduled analytics rule.
 
 > [!IMPORTANT]
 >
@@ -66,7 +66,7 @@ To map entities in an analytics rule, perform the following steps:
 
     :::image type="content" source="media/map-data-fields-to-entities/map-entities.png" alt-text="Map fields to entities":::
 
-1. Select **Add new entity** to map more entities. You can define **up to ten entity mappings** in a single analytics rule. You can also map more than one of the same type. For example, you can map two **IP** entities, one from a *source IP address* field and one from a *destination IP address* field. This way you can track them both.
+1. Select **Add new entity** to map more entities. You can define **up to ten entity mappings** in a single analytics rule. You can also map more than one of the same type. For example, you can map two **IP** entities, one from a *source IP address* field and one from a *destination IP address* field. By mapping both fields, you can track both IP entities.
 
     If you change your mind, or if you made a mistake, you can remove an entity mapping by clicking the trash can icon next to the entity drop-down list.
 

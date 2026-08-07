@@ -5,10 +5,10 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: idpelleg
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 #Customer intent: As a security analyst, I want to investigate and manage security incidents using advanced analytics and visualization tools so that I can effectively identify, understand, and respond to potential threats.
 ---
@@ -17,7 +17,7 @@ ai-usage: ai-assisted
 
 This article helps you use Microsoft Sentinel's legacy incident investigation experience. If you're using the newer version of the interface, see [Navigate and investigate incidents in Microsoft Sentinel](investigate-incidents.md) for instructions that match that experience.
 
-After connecting your data sources to Microsoft Sentinel, you want to be notified when something suspicious happens. To enable you to do this, Microsoft Sentinel lets you create advanced analytics rules that generate incidents that you can assign and investigate.
+After connecting your data sources to Microsoft Sentinel, you want to be notified when something suspicious happens. To enable you to receive these notifications, Microsoft Sentinel lets you create advanced analytics rules that generate incidents that you can assign and investigate.
 
 An incident can include multiple alerts. It's an aggregation of all the relevant evidence for a specific investigation. An incident is created based on analytics rules that you created in the **Analytics** page. The properties related to the alerts, such as severity and status, are set at the incident level. After you let Microsoft Sentinel know what kinds of threats you're looking for and how to find them, you can monitor detected threats by investigating incidents.
 
@@ -59,7 +59,7 @@ Perform the following steps to review and investigate incidents:
 
     - In the **Bookmarks** tab, you see any bookmarks you or other investigators have linked to this incident. For more information, see [Bookmarks in Microsoft Sentinel](./bookmarks.md).
 
-    - In the **Entities** tab, you can see all the [entities](entities.md) that you [mapped to data fields](./map-data-fields-to-entities.md) as part of the alert rule definition. These are the objects that played a role in the incident, whether they be users, devices, addresses, files, or [other supported entity types](./entities-reference.md).
+    - In the **Entities** tab, you can see all the [entities](entities.md) that you [map data fields to entities](./map-data-fields-to-entities.md) as part of the alert rule definition. These are the objects that played a role in the incident, whether they be users, devices, addresses, files, or [other supported entity types](./entities-reference.md).
 
     - Finally, in the **Comments** tab, you can add your comments on the investigation and view any comments made by other analysts and investigators. For more information, see [Comment on incidents](#comment-on-incidents).
 
@@ -141,7 +141,8 @@ The **similar incidents** tab in the incident details page, now in preview, pres
 
 :::image type="content" source="media/investigate-cases/similar-incidents.png" alt-text="Screenshot of the Similar incidents tab listing related incidents ranked by similarity to the current incident." lightbox="media/investigate-cases/similar-incidents.png":::
 
-### Similarity calculation
+<a name="similarity-calculation"></a>
+### How similarity is calculated
 
 There are three criteria by which similarity is determined:
 
@@ -155,7 +156,8 @@ The reasons an incident appears in the similar incidents list are displayed in t
 
 :::image type="content" source="media/investigate-cases/similarity-popup.png" alt-text="Screenshot of pop-up display of similar incident details.":::
 
-#### Similarity time frame
+<a name="similarity-time-frame"></a>
+#### How the similarity time frame works
 
 Incident similarity is calculated based on data from the 14 days before the incident's last activity, defined as the end time of the most recent alert in the incident.
 
@@ -173,7 +175,7 @@ Comments are simple to use. You access them through the **Comments** tab on the 
 
 ### Frequently asked questions about incident comments
 
-The following frequently asked questions describe key considerations for using incident comments.
+These frequently asked questions describe key considerations for using incident comments.
 
 #### What kinds of input are supported?
 
@@ -192,7 +194,7 @@ Yes. The following limits apply to incident comments:
 - **Per incident:** A single incident can contain up to **100 comments**.  
 
     > [!NOTE]
-    > The size limit of a single incident record in the *SecurityIncident* table in Log Analytics is 64 KB. If this limit is exceeded, comments (starting with the earliest) will be truncated, which may affect the comments that will appear in [advanced incident search](#search-for-incidents) results.
+    > The size limit of a single incident record in the *SecurityIncident* table in Log Analytics is 64 KB. If the 64 KB record size limit is exceeded, comments (starting with the earliest) will be truncated, which may affect the comments that will appear in [advanced incident search](#search-for-incidents) results.
     >
     > The actual incident records in the incidents database will not be affected.
 
