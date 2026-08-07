@@ -1,8 +1,9 @@
 ---
 title: Troubleshoot access and session controls for admins | Microsoft Defender for Cloud Apps
 description: This article describes how to troubleshoot common access and session control issues experienced by admins with Microsoft Defender for Cloud Apps.
-ms.date: 06/18/2024
+ms.date: 08/07/2026
 ms.topic: troubleshooting
+ai-usage: ai-assisted
 ms.custom: sfi-image-nochange
 ---
 
@@ -43,11 +44,33 @@ Use the following table to find the issue you're trying to troubleshoot:
 
 |Issue type  |Issues  |
 |---------|---------|
+|[Unexpected website blocks](#troubleshoot-an-unexpected-website-block)|Identify the policy or control that blocked access|
 |[Network condition issues](#network-condition-issues)     |  [Network errors when navigating to a browser page](#network-errors-when-navigating-to-a-browser-page) <br><br>[Slow sign-ins](#slow-sign-ins) <br><br> [More considerations for network conditions](#more-considerations-for-network-conditions)       |
 |[Device identification issues](#device-identification-issues)    | [Misidentified Intune Compliant or Microsoft Entra hybrid joined devices](#misidentified-intune-compliant-or-hybrid-azure-ad-joined-devices) <br><br>[Client certificates aren't prompting when expected](#client-certificates-arent-prompting-when-expected)  <br><br> [Client certificates aren't prompting when expected](#client-certificates-arent-prompting-when-expected) <br> [Client certificates are prompting at every sign-in](#client-certificates-are-prompting-at-every-sign-in) <br><br>[More considerations for device identification](#more-considerations-for-device-identification)      |
 |[Issues when onboarding an app](#issues-when-onboarding-an-app)     |  [App doesn't appear on the conditional access app control apps page](#app-doesnt-appear-on-the-conditional-access-app-control-apps-page) <br><br> [App status: Continue Setup](#app-status-continue-setup)   [Can't configure controls for native apps](#cant-configure-controls-for-built-in-apps) <br><br> [Request session control option appears](#request-session-control-option-appears)    |
 |[Issues when creating access and session policies](#issues-when-creating-access-and-session-policies)     | [In Conditional Access policies, you can't see the conditional access app control option](#in-conditional-access-policies-you-cant-see-the-conditional-access-app-control-option) <br><br> [Error message when creating a policy: You don't have any apps deployed with conditional access app control](#error-message-when-creating-a-policy-you-dont-have-any-apps-deployed-with-conditional-access-app-control) <br><br> [Can't create session policies for an app](#cant-create-session-policies-for-an-app) <br><br>[Can't choose Inspection Method: Data Classification Service](#cant-choose-inspection-method-data-classification-service) <br><br> [Can't choose Action: Protect](#cant-choose-action-protect) <br><br> [More considerations for onboarding apps](#more-considerations-for-onboarding-apps)        |
 | [Diagnose and troubleshoot with the Admin View toolbar](#diagnose-and-troubleshoot-with-the-admin-view-toolbar) | [Bypass proxy session](#bypass-proxy-session) <br><br> [Record a session](#record-a-session)  <br><br> [Add domains for your app](#add-domains-for-your-app)|
+
+## Troubleshoot an unexpected website block
+
+When a user sees **This website is blocked by your organisation**, first determine whether Conditional Access App Control enforced the block:
+
+- In a reverse proxy session, the app URL has an `*.mcas.ms`, `*.mcas-gov.us`, or `*.mcas-gov.ms` suffix. For more information, see [Troubleshooting proxy URLs](troubleshooting-proxy-url.md).
+- With in-browser protection, Microsoft Edge shows a lock icon in the address bar instead of changing the URL. For more information, see [In-browser protection with Microsoft Edge for Business](in-browser-protection.md).
+
+If neither indicator is present and the entire website or domain is blocked, the block might come from an app marked as **Unsanctioned** and enforced by Defender for Endpoint. For more information, see [Govern discovered apps using Defender for Endpoint](mde-govern.md).
+
+To identify the Conditional Access App Control policy that caused the block:
+
+1. In the Microsoft Entra sign-in logs, open the affected sign-in and review the **Conditional Access** details. Identify the Conditional Access policy that applied the **Use Conditional Access App Control** session control. For more information, see [View applied Conditional Access policies in sign-in logs](/entra/identity/monitoring-health/how-to-view-applied-conditional-access-policies).
+
+1. On the **Activity log** page in the Microsoft Defender portal at <https://security.microsoft.com/cloudapps/activity-log>, filter by the affected user, app, and time of the block. Open the blocked activity to identify the access or session policy that matched. For more information, see [Investigate activities in Defender for Cloud Apps](activity-filters.md).
+
+1. Review the matched policy's users, apps, device tags, locations, and other conditions. An access or session policy with no app filter applies to all apps enabled for Conditional Access App Control.
+
+1. If no policy explains the block, review the **Default behavior** setting for service disruptions. A setting of **Block access** can block sessions when normal policy enforcement isn't available.
+
+1. To confirm that the proxy caused the problem, use the [Admin View toolbar](#diagnose-and-troubleshoot-with-the-admin-view-toolbar) and select **Bypass experience**. If bypassing restores access, review the policy conditions before you re-enable enforcement. You can also [record the session](#record-a-session) to provide diagnostic information to Microsoft support.
 
 ## Network condition issues
 

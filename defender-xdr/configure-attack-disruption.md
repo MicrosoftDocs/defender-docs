@@ -6,7 +6,7 @@ author: guywi-ms
 ms.topic: how-to
 ms.service: defender-xdr
 ms.localizationpriority: medium
-ms.date: 06/15/2026
+ms.date: 08/07/2026
 ms.collection:
 - m365-security
 - tier2
@@ -29,6 +29,8 @@ Microsoft Defender XDR includes powerful [automated attack disruption](automatic
 
 Configure automatic attack disruption capabilities in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a>. After you're all set up, you can view and manage containment actions in Incidents and the Action center. And, if necessary, you can make changes to automatic attack disruption settings.
 
+When Microsoft Defender for Endpoint is deployed, automatic attack disruption can contain unmanaged devices and users or automatically isolate a compromised workstation from the network. Automatic device isolation is currently in preview. For details about each response action, see [Automatic attack disruption response actions](automatic-attack-disruption.md#automatic-attack-disruption-response-actions).
+
 ## Prerequisites
 
 The following are prerequisites for configuring automatic attack disruption in Microsoft Defender:
@@ -36,12 +38,18 @@ The following are prerequisites for configuring automatic attack disruption in M
 |Requirement|Details|
 |---|---|
 |Subscription requirements|One of these subscriptions: <ul><li>Microsoft 365 E5 or A5</li><li>Microsoft 365 E3 with the Microsoft Defender Suite add-on</li><li>Microsoft 365 E3 with the Enterprise Mobility + Security E5 add-on</li><li>Microsoft 365 A3 with the Microsoft 365 A5 Security add-on</li><li>Windows 10 Enterprise E5 or A5</li><li>Windows 11 Enterprise E5 or A5</li><li>Enterprise Mobility + Security (EMS) E5 or A5</li><li>Office 365 E5 or A5</li><li>Microsoft Defender for Endpoint (Plan 2)</li><li>Microsoft Defender for Identity</li><li>Microsoft Defender for Cloud Apps</li><li>Defender for Office 365 (Plan 2)</li><li>Microsoft Defender for Business</li></ul> <p> See [Microsoft Defender XDR licensing requirements](./prerequisites.md#licensing-requirements).|
-|Deployment requirements|<ul><li>Deployment of Defender products (for example, Defender for Endpoint, Defender for Office 365, Defender for Identity, and Defender for Cloud Apps)</li><ul><li>The wider the deployment, the greater the protection coverage is. For example, if a Microsoft Defender for Cloud Apps signal is used in a certain detection, then this product is required to detect the relevant specific attack scenario.</li><li>Similarly, each Defender product must be deployed to execute its automated response actions. For example, Microsoft Defender for Endpoint is required to automatically contain a device. </li></ul><li>Microsoft Defender for Endpoint's device discovery is set to 'standard discovery' (prerequisite for the automatic initiation of the "Contain Device" action)</li><li>For attack disruption actions in [external platforms](#microsoft-sentinel-prerequisites-for-external-platforms-preview) such as Okta or AWS (preview): Microsoft Sentinel analytic workspace connected to the unified security operations portal with the relevant provider connector deployed.</li></ul>|
+|Deployment requirements|<ul><li>Deployment of Defender products (for example, Defender for Endpoint, Defender for Office 365, Defender for Identity, and Defender for Cloud Apps)</li><ul><li>The wider the deployment, the greater the protection coverage is. For example, if a Microsoft Defender for Cloud Apps signal is used in a certain detection, then this product is required to detect the relevant specific attack scenario.</li><li>Similarly, each Defender product must be deployed to execute its automated response actions. For example, Microsoft Defender for Endpoint is required to contain an unmanaged device or isolate an onboarded workstation.</li></ul><li>Microsoft Defender for Endpoint device discovery is set to **Standard discovery** for the automatic **Contain device** action.</li><li>For attack disruption actions in [external platforms](#microsoft-sentinel-prerequisites-for-external-platforms-preview) such as Okta or AWS (preview): Microsoft Sentinel analytic workspace connected to the unified security operations portal with the relevant provider connector deployed.</li></ul>|
 |Permissions|To configure automatic attack disruption capabilities, you must have one of the following roles assigned in either Microsoft Entra ID (<https://portal.azure.com>) or in the Microsoft 365 admin center (<https://admin.microsoft.com>): <ul><li>Global Administrator</li><li>Security Administrator</li><li>User Administrator</li><li>Authentication Administrator</li><li>Privileged Authentication Administrator</li><li>Directory Writers</li> <li>Helpdesk Administrator</li><li>Security Operator</li></ul>To work with automated investigation and response capabilities, such as by reviewing, approving, or rejecting pending actions, see [Required permissions for Action center tasks](m365d-action-center.md#required-permissions-for-action-center-tasks).|
 
 ### Microsoft Defender for Endpoint prerequisites
 
 To support automatic attack disruption, Microsoft Defender for Endpoint requires a minimum Sense client version and proper automation settings for your device groups.
+
+#### Automatic device isolation prerequisites and safeguards (Preview)
+
+Automatic device isolation works only on end-user workstations that are onboarded and managed by Microsoft Defender for Endpoint. Isolation blocks most network traffic while maintaining connectivity to required Defender for Endpoint security services. The action is scoped to devices involved in the incident and is automatically undone after a defined time window. Security operators can release the device earlier.
+
+If isolated devices need access to specific processes or destinations, configure [selective isolation exclusions](/defender-endpoint/network-isolation-exclusions). To prevent automatic attack disruption from isolating selected devices, configure [automatic attack disruption exclusions](automatic-attack-disruption-exclusions.md).
 
 #### Minimum Sense Client version (MDE client)
 

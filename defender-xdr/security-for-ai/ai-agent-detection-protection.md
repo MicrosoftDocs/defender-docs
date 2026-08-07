@@ -6,7 +6,7 @@ author: guywi-ms
 ms.reviewer: itaicohen
 ms.service: microsoft-defender
 ms.update-cycle: 180-days
-ms.date: 06/28/2026
+ms.date: 08/07/2026
 audience: Admin
 ms.topic: concept-article
 ai-usage: ai-assisted
@@ -33,7 +33,7 @@ Microsoft Defender detects and enables security teams to investigate threats to 
 
 ## Detect AI agent threats in near-real-time
 
-Microsoft Defender continuously monitors AI agent activity and detects suspicious and malicious behavior for all Agent 365‑managed agents. Defender analyzes agent telemetry, tool usage, and execution patterns to identify threats such as *jailbreak attempts*, *XPIA attempts*, *malicious content propagation*, *secrets and credentials leak*, *evasion techniques*, *suspicious user access*, and more.
+Microsoft Defender continuously monitors AI agent activity and detects suspicious and malicious behavior for all Agent 365-managed agents. Defender analyzes agent telemetry, tool usage, and execution patterns to identify threats such as _jailbreak attempts_, _indirect prompt injection and XPIA attempts_, _malicious content propagation_, _secrets and credentials leak_, _evasion techniques_, _LLM reconnaissance_, _suspicious user or IP access_, and more.
 
 Microsoft Defender surfaces detections as near‑real‑time alerts in the Defender portal and enables security teams to investigate them using familiar security operations workflows, including alert triage, incident correlation, and Advanced Hunting.
 

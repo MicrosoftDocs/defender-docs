@@ -7,7 +7,7 @@ author: poliveria
 ms.reviewer: noriordan
 audience:                  ITPro
 ms.topic:                  article
-ms.date:                   05/30/2022 
+ms.date:                   08/07/2026
 ms.service: defender-xdr
 ms.localizationpriority:   medium
 ms.collection: 
@@ -173,7 +173,8 @@ Attacker is downloading sensitive information, encrypting files, or otherwise co
 |Malware spread to multiple devices|Defender for Endpoint|
 |Resource scanning|Defender for Endpoint, Defender for Identity|
 |Changes in mailbox forwarding rules|Defender for Office 365|
-|Data exfiltration and encryption|Defender for Office 365|
+|Data exfiltration through email or cloud apps|Defender for Office 365, Defender for Cloud Apps|
+|File encryption on endpoints|Defender for Endpoint|
 
 -*Monitor for Adversary Disabling Security** – as this is often part of human-operated ransomware (HumOR) attack chain
 

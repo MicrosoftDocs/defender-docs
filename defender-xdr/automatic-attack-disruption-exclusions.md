@@ -11,7 +11,7 @@ ms.collection:
   - usx-security
   - usx-security
 ms.topic: how-to
-ms.date: 06/25/2026
+ms.date: 08/07/2026
 appliesto:
 - Microsoft Defender XDR
 ai-usage: ai-assisted
@@ -26,7 +26,7 @@ ms.custom: msecd-doc-authoring-1014
 
 This article provides information on how to exclude assets from being automatically contained by [automatic attack disruption](automatic-attack-disruption.md) in Microsoft Defender XDR.
 
-Automatic attack disruption and exclusion policies work together to help contain and control active cyber threats. Attack disruption is a built-in extended capability that automatically contains ongoing attacks by isolating compromised assets (like devices or user accounts) in real time, thereby halting an attacker’s progress. Exclusion policies allow security teams to designate certain assets or actions to be exempt from these automated responses – for example, ensuring that specific critical servers or accounts are not automatically shut down or isolated – to avoid unintended business disruption. You can [remove exclusions](#remove-exclusions) at any time to allow assets to be included in automated responses again.
+Automatic attack disruption and exclusion policies work together to help contain and control active cyber threats. Automatic attack disruption is a built-in, AI-powered capability that analyzes attacker intent and identifies compromised assets before automatically isolating devices or disabling user accounts to stop an ongoing attack. Exclusion policies let security teams exempt specific assets or actions from these automated responses. For example, you can prevent critical servers or accounts from being automatically shut down or isolated to avoid unintended business disruption. You can [remove exclusions](#remove-exclusions) at any time to allow assets to be included in automated responses again.
 
 > [!CAUTION]
 > Excluding assets from automated responses isn't recommended. It can reduce the effectiveness of automatic attack disruption in protecting your environment from sophisticated, high-impact attacks.
@@ -134,7 +134,7 @@ To exclude an IP address from automated responses:
 
    :::image type="content" source="media/automatic-attack-disruption-exclusions/attack-disrupt-devices-tab.png" alt-text="Screenshot of the Devices page in automated response settings for attack disruption" lightbox="media/automatic-attack-disruption-exclusions/attack-disrupt-devices-tab.png":::
 
-1. In the **Poloicy application** tab, select **Exclude IP** to exclude an IP address.
+1. In the **Policy application** tab, select **Exclude IP** to exclude an IP address.
 
    :::image type="content" source="media/automatic-attack-disruption-exclusions/attack-disrupt-exclude-ip-add.png" alt-text="Screenshot of the IPs tab in automated response settings for attack disruption" lightbox="media/automatic-attack-disruption-exclusions/attack-disrupt-exclude-ip-add-big.png":::
 
@@ -148,7 +148,7 @@ To exclude an IP address from automated responses:
 
 When automatic attack disruption detects with high confidence that a user or device is compromised, it automatically applies containment policies to managed devices in your organization. These policies help contain the threat and stop it from spreading across your environment.
 
-Policy application exclusions give you granular control over how the automatic Attack disruption enforcement policies are applied across your environment. It allows customers to define devices that shouldn't receive specific disruption policies. This provides organizations with the flexibility to protect sensitive, operationally critical, or exception-based systems without fully disabling Automatic Attack Disruption.
+Policy application exclusions give you granular control over how automatic attack disruption enforcement policies are applied in your environment. They let you define devices that shouldn't receive specific disruption policies. This flexibility protects sensitive, operationally critical, or exception-based systems without fully disabling automatic attack disruption.
 
 Policy applications and exclusions allow you to:
 
@@ -156,7 +156,7 @@ Policy applications and exclusions allow you to:
 - Keep most disruption controls active while selectively disabling specific protections
 - Maintain centralized control over which disruption policy controls are enabled or excluded for each tagged group of devices
 
-First create a tag or use an existing tag to define the device or devices. Then create a rule that applies to that tag. For example, you might create a tag for all servers in a specific department and then create a policy application that applies to that tag. By default, all policy controls are enabled. By configuring a policy application for a tagged devices, you can keep disruption enabled and exclude only specific controls for that group.
+First create a tag or use an existing tag to define the devices. Then create a rule that applies to that tag. For example, you might create a tag for all servers in a specific department and then create a policy application that applies to that tag. By default, all policy controls are enabled. By configuring a policy application for tagged devices, you can keep disruption enabled and exclude only specific controls for that group.
 
 #### Create a tag
 
@@ -164,13 +164,13 @@ Create a tag to group devices together for a policy application.
 
 To create a tag go to Asset rule management in the Microsoft Defender portal and select **Create tag**. Provide a name and description for the tag, then define dynamic rules to automatically include devices in the tag based on device properties such as device type, operating system, or other attributes.
 
-#### Create a policy application:
+#### Create a policy application
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
 1. Go to **Settings** > **Microsoft Defender XDR**.
 
-To exclude IP addresses from automated responses, follow these steps:
+To create a policy application rule for tagged devices, follow these steps:
 
 1. Under **Automated responses**, select **Devices**.
 
@@ -184,9 +184,9 @@ To exclude IP addresses from automated responses, follow these steps:
 
    :::image type="content" source="media/automatic-attack-disruption-exclusions/create-new-exclusion.png" alt-text="Screenshot of the policy application creation page in automated response settings" lightbox="media/automatic-attack-disruption-exclusions/create-new-exclusion.png":::
 
-1. Select a tag to apply the policy to then select **Next**.
+1. Select a tag to apply the policy to, and then select **Next**.
 
-1. Configure the exclusion policy you want to disable for the tagged device. then select **Next**.
+1. Configure the disruption controls you want to disable for the tagged devices, and then select **Next**.
 
    :::image type="content" source="media/automatic-attack-disruption-exclusions/policy-application-select-controls.png" alt-text="Screenshot of selecting controls to disable for a policy application rule" lightbox="media/automatic-attack-disruption-exclusions/policy-application-select-controls.png":::
 

@@ -4,7 +4,7 @@ description: Learn how to choose the right capability for managing detections an
 author: mberdugo
 ms.author: monaberdugo
 ms.topic: concept-article
-ms.date: 05/07/2026
+ms.date: 08/07/2026
 ai-usage: ai-assisted
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
@@ -18,7 +18,7 @@ ms.collection: usx-security
 
 # Detection lifecycle management recommendations
 
-This article provides recommendations for managing detections and other content types in Microsoft Sentinel. Use these recommendations to identiy the right approach, depending on your organization's scale, complexity, and tooling preferences.
+This article provides recommendations for managing detections and other content types in Microsoft Sentinel. Use these recommendations to identify the right approach, depending on your organization's scale, complexity, and tooling preferences.
 
 ## Choose your capability
 
@@ -77,7 +77,7 @@ The following table shows the content types supported by each capability.
 
 | Content type | Portal | Content distribution | Repositories | Content Hub | APIs | Terraform |
 |---|---|---|---|---|---|---|
-| Custom detection rules | Yes | Yes | No | No | Yes | No |
+| Custom detection rules | Yes | Yes | Yes (Preview) | No | Yes | No |
 | Analytics rules | Yes | Yes | Yes | Yes | Yes | Yes |
 | Playbooks | Yes | Yes | Yes | Yes | Yes | Yes |
 | Workbooks | Yes | Yes | Yes | Yes | Yes | Yes |

@@ -16,7 +16,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/28/2025
+ms.date: 08/07/2026
 ---
 
 # AlertEvidence
@@ -25,9 +25,9 @@ ms.date: 03/28/2025
 
 
 
-The `AlertEvidence` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about various entities—files, IP addresses, URLs, users, or devices—associated with alerts from Microsoft  Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, and Microsoft Defender for Identity. Use this reference to construct queries that return information from this table.
+The `AlertEvidence` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about entities, such as files, IP addresses, URLs, users, or devices, associated with alerts from Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, Microsoft Defender for Identity, and onboarded Microsoft Sentinel workspaces. Use this reference to construct queries that return information from this table.
 
-This advanced hunting table is populated by records from various Microsoft Defender services. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy services in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+Data availability depends on the Microsoft Defender services deployed and the Microsoft Sentinel workspaces you can access in the Defender portal. Join `AlertEvidence` with [`AlertInfo`](advanced-hunting-alertinfo-table.md) on the `AlertId` column to retrieve alert metadata with its related entities and evidence. For more information, see [Deploy supported services](deploy-supported-services.md) and [Transition your Microsoft Sentinel environment to the Defender portal](/azure/sentinel/move-to-defender).
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 

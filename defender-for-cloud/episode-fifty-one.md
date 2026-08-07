@@ -14,7 +14,7 @@ ai-usage: ai-assisted
 > [!VIDEO https://aka.ms/docs/player?id=b500f9ce-ef69-4c97-8205-c167138ddb68]
 
 - [02:13](/shows/mdc-in-the-field/open-source-relational-databases-multicloud#time=02m13s) - Understanding the new additions for database protection in multicloud environments.
-- [05:52](/shows/mdc-in-the-field/open-source-relational-databases-multicloud#time=05m52s) - RDS protection in public preview
+- [05:52](/shows/mdc-in-the-field/open-source-relational-databases-multicloud#time=05m52s) - RDS protection, which is now generally available
 - [07:00](/shows/mdc-in-the-field/open-source-relational-databases-multicloud#time=07m00s) - Threat detection alerts for databases in multicloud environment.
 - [08:53](/shows/mdc-in-the-field/open-source-relational-databases-multicloud#time=08m53s) - Demonstration
 

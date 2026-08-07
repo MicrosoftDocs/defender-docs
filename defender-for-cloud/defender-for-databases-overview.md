@@ -1,7 +1,7 @@
 ---
 title: Overview of Defender for Databases
 description: Discover the advantages and capabilities of Microsoft Defender for Databases, including support for PostgreSQL and MySQL.
-ms.date: 04/20/2026
+ms.date: 08/07/2026
 ms.topic: overview
 #customer intent: As a reader, I want to understand the Microsoft Defender for Databases plan types so that I can make informed decisions about their usage.
 ai-usage: ai-assisted
@@ -17,7 +17,7 @@ Defender for Databases includes four offerings that relate to database types:
 
 - [Microsoft Defender for SQL Servers on Machines](defender-for-sql-usage.md): Offers security for SQL servers running on virtual machines or physical servers. You can also [enable it on a Log Analytics workspace](enable-plan-workspace.md) for enhanced monitoring and threat detection.
 
-- [Microsoft Defender for Open-Source Relational Databases](defender-for-databases-introduction.md): Offers security for open-source relational databases such as PostgreSQL and MySQL by providing continuous monitoring and threat detection.
+- [Microsoft Defender for Open-Source Relational Databases](defender-for-databases-introduction.md): Offers threat protection and sensitive data discovery for supported open-source relational databases in Azure and Amazon Web Services (AWS).
 
 - [Microsoft Defender for Azure Cosmos DB](concept-defender-for-cosmos.md): Offers security for Azure Cosmos DB by providing threat protection and real-time alerts to help safeguard your data.
 
@@ -27,10 +27,12 @@ Each of these database protection plans is priced separately. For more informati
 
 Defender for Databases detects anomalous activities that indicate unusual and harmful attempts to access or exploit databases. Defender for Databases offers multicloud alerts for suspicious database activities, so you can respond to threats as they happen.
 
+Defender Cloud Security Posture Management (CSPM) continuously evaluates server-level and database-level configurations for Azure Database for PostgreSQL flexible server. PostgreSQL-specific recommendations identify potential vulnerabilities and misconfigurations and provide remediation guidance. For more information, see [Microsoft Defender for Cloud in Azure Database for PostgreSQL flexible server](/azure/postgresql/security/security-defender-for-cloud).
+
 The solution supports a wide range of database types, including:
 
 - Azure database services for PostgreSQL and MySQL.
-- Amazon Relational Database Service (RDS) instances for PostgreSQL, MySQL, and MariaDB.
+- Amazon Relational Database Service (RDS) instances for Aurora PostgreSQL, Aurora MySQL, PostgreSQL, MySQL, and MariaDB.
 
 Defender for Databases simplifies the process of addressing threats without requiring users to be security experts or manage advanced security monitoring systems. The alerts that Defender for Databases generates are enriched with threat intelligence to provide a seamless security management experience.
 

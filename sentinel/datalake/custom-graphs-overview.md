@@ -4,7 +4,7 @@ description: Learn how custom graphs in Microsoft Sentinel help you model connec
 ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: sourinpaul
-ms.date: 06/12/2026
+ms.date: 08/07/2026
 ms.topic: how-to
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
@@ -37,13 +37,15 @@ Use the Jupyter notebooks in Microsoft Visual Studio Code to interactively creat
 
 You can author custom graphs using either AI‑assisted graph authoring or by writing your own code using the Microsoft Sentinel graph provider reference to define your graph model (nodes and edges), transform your data from the Sentinel data lake, and use Graph Query Language (GQL) to query and analyze your graphs. For more information, see [AI-assisted custom graph authoring in Microsoft Sentinel](./create-graphs-with-ai.md),  [Microsoft Sentinel graph provider reference](./sentinel-graph-provider-reference.md) and [Graph Query Language (GQL) reference for Sentinel custom graph](./gql-reference-for-sentinel-custom-graph.md).
 
-Once you author the graph code in notebook, your can run the notebook in an interactive session or schedule a graph job. Graphs created during the interactive notebook session are ephemeral and are available only in the context of the notebook session. To materialize your graph and share with your team, schedule a graph job to rebuild your graph frequently. Once materialized, the graph is accessible from: the graph experience in Microsoft Defender portal under Sentinel, Visual Studio Code Notebooks, and Graph query APIs.
+Once you author the graph code in a notebook, you can run the notebook in an interactive session or publish a graph job. Graphs created during an interactive notebook session are temporary and are available only in that session. An on-demand graph job materializes the graph for 30 days, after which the graph is deleted. A scheduled graph job rebuilds the graph on the refresh schedule you configure. Once materialized, the graph is accessible from the graph experience in the Defender portal under Microsoft Sentinel, Visual Studio Code notebooks, and graph query APIs.
+
+Creating and querying custom graphs is billed under the Microsoft Sentinel graph meter. For more information, see [Graph charges](../billing.md#graph-charges).
 
 The following table summarizes the steps to build custom graphs in Microsoft Sentinel:
 
 | Step | Description |
 |------|-------------|
-| **1. Create and investigate a graph in interactive notebook session** | - Jupyter notebooks in Sentinel provide an interactive environment for exploring and analyzing data in Sentinel Lake.<br>- The Microsoft Sentinel extension includes a graph builder Python library.<br>- Use the Jupyter notebook in Sentinel to define nodes and edges with Lake data, and create graphs.<br>- The graph builder library allows you to query a graph using Graph Query Language (GQL) in the Jupyter graph notebook. |
+| **1. Create and investigate a graph in interactive notebook session** | - Jupyter notebooks in Sentinel provide an interactive environment for exploring and analyzing data in Sentinel Lake.<br>- The Microsoft Sentinel extension includes the `sentinel_graph` Python library.<br>- Use the Jupyter notebook in Sentinel to define nodes and edges with Lake data, and create graphs.<br>- The `sentinel_graph` library allows you to query a graph using Graph Query Language (GQL) in the Jupyter graph notebook. |
 | **2. Schedule a graph job to materialize your graph** |- Materialize your graph in your tenant for continued access and collaboration.<br>- Use Sentinel jobs to tailor how often you want to refresh a materialized graph with Lake data.<br>- Query and visualize materialized graphs in graph experience in Microsoft Sentinel.|
 | **3. Run advanced graph algorithms** |- Use Jupyter notebooks for accessing built-in support for GraphFrames analytics and graph traversal functions.<br>- Use purpose-built Sentinel graph algorithms for common security use cases.|
 

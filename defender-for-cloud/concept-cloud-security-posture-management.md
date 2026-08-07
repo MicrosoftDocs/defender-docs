@@ -2,7 +2,7 @@
 title: What is Cloud Security Posture Management (CSPM)
 description: Learn more about Cloud Security Posture Management (CSPM) in Microsoft Defender for Cloud and how it helps improve your security posture.
 ms.topic: concept-article
-ms.date: 07/01/2026
+ms.date: 08/07/2026
 #customer intent: As a reader, I want to understand the concept of Cloud Security Posture Management (CSPM) in Microsoft Defender for Cloud.
 ai-usage: ai-assisted
 ---
@@ -12,6 +12,8 @@ ai-usage: ai-assisted
 Cloud Security Posture Management (CSPM) is a core feature of Microsoft Defender for Cloud. CSPM provides continuous visibility into the security state of your cloud assets and workloads, offering actionable guidance to improve your security posture across Azure, AWS, and GCP.
 
 Defender for Cloud continually assesses your cloud infrastructure against security standards defined for your Azure subscriptions, Amazon Web Service (AWS) accounts, and Google Cloud Platform (GCP) projects. Defender for Cloud issues security recommendations to help you identify and reduce cloud misconfigurations and security risks.
+
+For Azure Database for PostgreSQL flexible server, Defender CSPM continuously evaluates server-level and database-level configurations against PostgreSQL security best practices. The assessments identify network security, auditing, and operational resilience issues and surface risk-prioritized recommendations without more configuration when Defender CSPM is already enabled.
 
 When Foundational CSPM is enabled, the [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md) standard provides recommendations to help secure your multicloud environment. The [secure score](secure-score-security-controls.md) based on some of the MCSB recommendations helps you monitor cloud compliance. A higher score indicates a lower identified risk level.
 
@@ -98,7 +100,7 @@ Defender for Cloud supports integrations with partner systems for incident manag
 |---|---|---|
 | Compute | Virtual machines, Virtual Machine scale sets, classic VMs | Deallocated VMs, Databricks VMs |
 | Storage | Storage accounts | Accounts without blob containers or file shares |
-| Databases | SQL servers, PostgreSQL/MySQL servers, Synapse workspaces | – |
+| Databases | SQL servers, Azure Database for PostgreSQL flexible servers, Azure Database for MySQL flexible servers, Synapse workspaces | - |
 
 ### AWS
 

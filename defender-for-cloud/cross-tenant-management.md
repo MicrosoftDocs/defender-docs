@@ -2,7 +2,7 @@
 title: Cross-tenant management 
 description: Learn how to set up cross-tenant management to manage the security posture of multiple tenants in Defender for Cloud using Azure Lighthouse.
 ms.topic: concept-article
-ms.date: 06/30/2025
+ms.date: 08/07/2026
 ai-usage: ai-assisted
 ---
 
@@ -17,6 +17,12 @@ Cross-tenant management enables you to view and manage the security posture of m
 ## Set up cross-tenant management
 
 [Azure delegated resource management](/azure/lighthouse/concepts/architecture) is one of the key components of Azure Lighthouse. Set up cross-tenant management by delegating access to resources of managed tenants to your own tenant using these instructions from Azure Lighthouse's documentation: [Onboard a customer to Azure Lighthouse](/azure/lighthouse/how-to/onboard-customer).
+
+## Security and access considerations
+
+Azure Lighthouse projects access from identities in the managing tenant to delegated Azure resources. It doesn't create those users or their Azure role assignments as local objects in the managed tenant, so they don't appear in the subscription's **Access control (IAM)** page. Customers review and remove delegations from the [**Service providers** page](/azure/lighthouse/how-to/view-manage-service-providers).
+
+Actions performed through Azure Lighthouse are recorded in the managed tenant's Azure Activity Log. The **Event initiated by** field identifies the acting user from either the managing tenant or the managed tenant. For more information, see [Monitor service provider activity](/azure/lighthouse/how-to/view-service-provider-activity).
 
 ## How cross-tenant management works in Defender for Cloud
 
