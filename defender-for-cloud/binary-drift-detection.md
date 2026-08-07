@@ -2,7 +2,8 @@
 title: Binary drift detection and blocking
 description: Learn how binary drift detecting and blocking can help you detect unauthorized external processes within containers.
 ms.topic: how-to
-ms.date: 05/26/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a user, I want to understand how binary drift detection and blocking can help me detect unauthorized external processes within containers.
 ai-usage: ai-assisted
 ---
@@ -19,6 +20,8 @@ Review [binary drift and blocking availability](support-matrix-defender-for-cont
 
 ## Prerequisites
 
+Meet the following requirements before you create or manage binary drift detection and blocking policies.
+
 - Run the Defender for Container sensor.
 - **Binary drift blocking only**:
   - AKS: Helm provisioning with sensor version **0.10.2** or above.
@@ -30,7 +33,7 @@ Review [binary drift and blocking availability](support-matrix-defender-for-cont
 
 ## Configure drift and block policies
 
-Create drift and block policies to define when alerts should be generated. Each policy consists of rules that define the conditions for generating alerts. This structure lets you tailor the feature to your specific needs and reduce false positives. You can create exclusions by setting higher priority rules for specific scopes or clusters, images, pods, Kubernetes labels, or namespaces.
+Create drift and block policies to define when alerts should be generated. Each policy consists of rules that define the conditions for generating alerts. This policy-and-rule structure lets you tailor the feature to your specific needs and reduce false positives. You can create exclusions by setting higher priority rules for specific scopes or clusters, images, pods, Kubernetes labels, or namespaces.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -93,9 +96,9 @@ Within 30 minutes, the sensors on the protected clusters update by using the new
 
 Binary drift policies are flexible and customizable, allowing you to manage and adjust them as needed. You can edit rules to refine their conditions or actions, duplicate rules to create similar ones with minor changes, or delete rules that are no longer necessary. Regularly reviewing and managing your rules ensures that your binary drift detection and blocking policies remain effective and aligned with your security needs.
 
-### [Edit rule](#tab/edit-rule)
+### [Edit an existing drift detection rule](#tab/edit-rule)
 
-Rules can be edited to refine their conditions or actions. This flexibility allows you to adjust your policies based on the alerts you receive and your review of them, ensuring that they effectively balance security needs with operational efficiency.
+Rules can be edited to refine their conditions or actions. The ability to edit rule conditions or actions allows you to adjust your policies based on the alerts you receive and your review of them, ensuring that they effectively balance security needs with operational efficiency.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -111,9 +114,9 @@ Rules can be edited to refine their conditions or actions. This flexibility allo
 
 Within 30 minutes, the sensors on the protected clusters update by using the new policy.
 
-### [Duplicate rule](#tab/duplicate-rule)
+### [Duplicate an existing drift detection rule](#tab/duplicate-rule)
 
-Rules can be duplicated to create similar ones with minor changes. This option is useful if you want to create a new rule that is similar to an existing one, allowing you to save time and maintain consistency in your policies.
+Rules can be duplicated to create similar ones with minor changes. Duplicating a rule is useful if you want to create a new rule that is similar to an existing one, allowing you to save time and maintain consistency in your policies.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -129,9 +132,12 @@ Rules can be duplicated to create similar ones with minor changes. This option i
 
 Within 30 minutes, the sensors on the protected clusters update by using the new policy.
 
-### [Delete rule](#tab/delete-rule) 
+### [Delete a drift detection rule](#tab/delete-rule) 
 
 Rules can be deleted when they are no longer necessary or if they generate too many false positives. Regularly reviewing and cleaning up your rules helps maintain the effectiveness of your binary drift detection and blocking policies.
+
+> [!WARNING]
+> Deleting a rule removes its enforcement conditions and can change alerting or blocking behavior for matching workloads. Make sure the rule is no longer needed before you proceed.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -153,7 +159,7 @@ Within 30 minutes, the sensors on the protected clusters update by using the new
 
 Defender for Cloud's alerts notify you of any binary drifts, so you can maintain the integrity of your container images. If the system detects an unauthorized external process that matches your defined policy conditions, it generates a high-severity alert for you to review. If you configure blocking rules, the system blocks the execution of those unauthorized processes.
 
-Based on the alerts generated and your review of them, you might need to adjust your rules in the binary drift or blocking policy. This adjustment could involve refining conditions, adding new rules, or removing ones that generate too many false positives. The goal is to ensure that the defined binary drift and blocking policies with their rules effectively balance security needs with operational efficiency.
+Based on the alerts generated and your review of them, you might need to adjust your rules in the binary drift or blocking policy. Adjusting the binary drift or blocking policy could involve refining conditions, adding new rules, or removing ones that generate too many false positives. The goal is to ensure that the defined binary drift and blocking policies with their rules effectively balance security needs with operational efficiency.
 
 The effectiveness of binary drift detection and blocking relies on your active engagement in configuring, monitoring, and adjusting policies to suit your environment's unique requirements.
 
