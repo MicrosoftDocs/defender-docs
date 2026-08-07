@@ -29,7 +29,7 @@ ai-usage: ai-assisted
 **Applies to:**
 - Microsoft Defender XDR
 
-This article contains information about alert grading for Session Cookie theft alerts in Microsoft Defender XDR:
+This article contains information about alert grading for Session Cookie theft alerts in Microsoft Defender:
 
 - **Stolen session cookie was used**
 - **Authentication request from AiTM-related phishing page**

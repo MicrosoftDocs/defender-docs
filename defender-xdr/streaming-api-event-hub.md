@@ -28,7 +28,7 @@ ai-usage: ai-assisted
 
 ## Prerequisites
 
-Before you configure Microsoft Defender XDR to stream data to Event Hubs, ensure the following prerequisites are fulfilled:
+Before you configure Microsoft Defender to stream data to Event Hubs, ensure the following prerequisites are fulfilled:
 
 1. Create an Event Hubs (for information, see [Set up Event Hubs](configure-event-hub.md#set-up-event-hubs)).
 
@@ -82,9 +82,9 @@ Before you configure Microsoft Defender XDR to stream data to Event Hubs, ensure
 
 - Each Event Hubs message in Azure Event Hubs contains list of records.
 
-- Each record contains the event name, the time Microsoft Defender XDR received the event, the tenant it belongs (you only get events from your tenant), and the event in JSON format in a property called "**properties**".
+- Each record contains the event name, the time Microsoft Defender received the event, the tenant it belongs (you only get events from your tenant), and the event in JSON format in a property called "**properties**".
 
-- For more information about the schema of Microsoft Defender XDR events, see [Advanced Hunting overview](advanced-hunting-overview.md).
+- For more information about the schema of Microsoft Defender events, see [Advanced Hunting overview](advanced-hunting-overview.md).
 
 - In Advanced Hunting, the **DeviceInfo** table has a column named **MachineGroup** which contains the group of the device. Here, every event is decorated with this column as well.
 
@@ -137,7 +137,7 @@ To learn how to export log data for analyzing streaming API resources, see [Log 
 
 - [Overview of Advanced Hunting](advanced-hunting-overview.md)
 - [Microsoft Defender XDR streaming API](streaming-api.md)
-- [Supported Microsoft Defender XDR event types in event streaming API](supported-event-types.md)
+- [Supported Microsoft Defender event types in event streaming API](supported-event-types.md)
 - [Stream Microsoft Defender XDR events to your Azure storage account](streaming-api-storage.md)
 - [Azure Event Hubs documentation](/azure/event-hubs/)
 - [Troubleshoot connectivity issues - Azure Event Hubs](/azure/event-hubs/troubleshooting-guide)

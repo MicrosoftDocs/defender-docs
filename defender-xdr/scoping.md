@@ -30,7 +30,7 @@ Microsoft Sentinel scoping extends permissions management in the Defender portal
 - [Restrict access by scope](#step-4-access-scoped-data): Limit user access to alerts, incidents, hunting queries, and data lake exploration based on their assigned scope
 
 > [!NOTE]
-> Scopes are additive. Users assigned multiple roles get the broadest permissions available to them from all their assignments. For example, if you hold both an Entra global reader role and a Defender XDR URBAC role that provides scoped permissions on *System tables*, you're unrestricted by scopes on System tables due to the Entra role. Another example is if you hold the same role permissions in Microsoft Defender XDR for a workspace, with two different scopes, you have those permissions for both scopes.
+> Scopes are additive. Users assigned multiple roles get the broadest permissions available to them from all their assignments. For example, if you hold both an Entra global reader role and a Defender URBAC role that provides scoped permissions on *System tables*, you're unrestricted by scopes on System tables due to the Entra role. Another example is if you hold the same role permissions in Microsoft Defender for a workspace, with two different scopes, you have that permission for both scopes.
 
 Scopes apply to Sentinel tables that support ingestion-time transformations.
 
@@ -244,4 +244,4 @@ Use the following resources to continue planning your scoping deployment:
 - Review the list of [tables that support ingestion-time transformations](/azure/azure-monitor/logs/tables-feature-support)
 - Plan scope names and logic before tagging data
 - Start with a pilot scope for a small team or data subset
-- Learn more about [Unified RBAC in Microsoft Defender XDR](/defender-xdr/manage-rbac)
+- Learn more about [Unified RBAC in Microsoft Defender](/defender-xdr/manage-rbac)

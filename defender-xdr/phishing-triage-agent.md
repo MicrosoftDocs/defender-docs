@@ -83,7 +83,7 @@ Enable **Monitor reported messages in Outlook** to define how users report poten
 
 For more information, see [Use the Microsoft Defender portal to configure user reported settings](/defender-office-365/submissions-user-reported-messages-custom-mailbox).
 
-If you’re using a third-party email reporting tool, review [Options for third-party reporting tools](/defender-office-365/submissions-user-reported-messages-custom-mailbox) and view your vendor’s options to integrate reported messages with Microsoft Defender XDR.
+If you’re using a third-party email reporting tool, review [Options for third-party reporting tools](/defender-office-365/submissions-user-reported-messages-custom-mailbox) and view your vendor’s options to integrate reported messages with Microsoft Defender.
 
 ### Enable alert policy
 
@@ -104,7 +104,7 @@ This table outlines the permissions required to perform various actions related 
 | Manage  agent settings (set up, pause, remove the agent, and manage agent identity) | **Security  Administrator** in Microsoft Entra ID            |
 | Reject  feedback                                             | **Security  Administrator** in Microsoft Entra ID            |
 
-For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
+For more information about unified RBAC in the Defender portal, see [Microsoft Defender Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
 ## Set up the Phishing Triage Agent
 

@@ -26,7 +26,7 @@ ai-usage: ai-assisted
 **Applies to:**
 - Microsoft Defender XDR
 
-This article guides you to set up a dedicated lab environment. For information on setting up a trial in production, see the new [Pilot and deploy Microsoft Defender XDR](pilot-deploy-overview.md) guide.
+This article guides you to set up a dedicated lab environment. For information on setting up a trial in production, see the new [Pilot and deploy Microsoft Defender](pilot-deploy-overview.md) guide.
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
@@ -97,7 +97,7 @@ Perform the following steps to enable your Microsoft 365 trial subscription.
 <a name="next-step"></a>
 ## Next steps
 
-|[Phase 3: Configure & Onboard](pilot-deploy-overview.md) | Configure each Microsoft Defender XDR pillar for your Microsoft Defender XDR trial lab or pilot environment and onboard your endpoints.
+|[Phase 3: Configure & Onboard](pilot-deploy-overview.md) | Configure each Microsoft Defender pillar for your Microsoft Defender trial lab or pilot environment and onboard your endpoints.
 |:-------|:-----|
 
 

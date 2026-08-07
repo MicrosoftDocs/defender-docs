@@ -136,7 +136,7 @@ Identity alert triage requires the following products and licenses:
 
 ##### Unified RBAC requirements
 
-Activate **Microsoft Defender for Identity** and **Microsoft Defender for Cloud Apps** in Microsoft Defender XDR unified RBAC settings. For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
+Activate **Microsoft Defender for Identity** and **Microsoft Defender for Cloud Apps** in Microsoft Defender unified RBAC settings. For more information, see [Activate workloads in Microsoft Defender settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
 
 :::image type="content" source="media/security-alert-triage-agent/rbac-settings-defender-identity.png" alt-text="Screenshot of Microsoft Defender XDR Permissions and roles page showing unified RBAC activation with Identity and Cloud Apps settings." lightbox="media/security-alert-triage-agent/rbac-settings-defender-identity.png":::
 
@@ -155,7 +155,7 @@ Users who interact with the Security Alert Triage Agent need these permissions:
 | **View feedback page** | **Security Copilot (read)**, **Security data basics (read)**, and **Email & collaboration metadata (read)** under the **Security operations** permissions group in the Defender portal.<br><br>**OR**<br><br>**Security Administrator** in **Microsoft Entra ID**. |
 | **Reject feedback** | **Security Administrator** in **Microsoft Entra ID**. |
 
-For more information about unified RBAC in the Defender portal, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
+For more information about unified RBAC in the Defender portal, see [Microsoft Defender Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
 ## Set up the Security Alert Triage Agent
 

@@ -33,7 +33,7 @@ ms.reviewer: Tomas Beerthuis
 - [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
 - [Microsoft Sentinel](/azure/sentinel/sentinel-overview)
 
-Microsoft Defender XDR provides integrated threat protection, detection, and response across endpoints, email, identities, applications, and data within a single portal. Controlling a user's permissions around their access to view data or complete tasks is essential for organizations to minimize the risks associated with unauthorized access.
+Microsoft Defender provides integrated threat protection, detection, and response across endpoints, email, identities, applications, and data within a single portal. Controlling a user's permissions around their access to view data or complete tasks is essential for organizations to minimize the risks associated with unauthorized access.
 
 The Microsoft Defender unified role-based access control (RBAC) model provides a single permissions management experience that provides one central location for administrators to control user permissions across different security solutions.
 
@@ -50,10 +50,10 @@ Centralized permissions management is supported for the following services:
 
 |Service name  |Unified RBAC support  |
 |---------|---------|
-|**Microsoft Defender XDR**|Centralized permissions management for Microsoft Defender XDR experiences.|
+|**Microsoft Defender**|Centralized permissions management for Microsoft Defender experiences.|
 |**Microsoft Defender for Endpoint**|Full support for all endpoint data and actions. All roles are compatible with the device group's scope as defined on the device groups page. Limiting permissions to different device groups is accomplished in the Devices Groups page.|
 |**Microsoft Defender Vulnerability Management**|Centralized permissions management for all  Defender Vulnerability Management capabilities.|
-|**Microsoft Defender for Office 365**|Full support for all data and actions. </br></br> **Note**: <ul><li>Initially, the Microsoft Defender XDR RBAC model is available only for organizations with Microsoft Defender for Office 365 Plan 2 licenses (trial licenses aren't supported).</li><li>Exchange Online PowerShell and Security & Compliance PowerShell continue to use [Exchange Online roles](/exchange/permissions-exo/permissions-exo) and [Email & Collaboration roles](/defender-office-365/mdo-portal-permissions). Microsoft Defender unified RBAC doesn't affect Exchange Online PowerShell or Security & Compliance PowerShell.</li></ul>|
+|**Microsoft Defender for Office 365**|Full support for all data and actions. </br></br> **Note**: <ul><li>Initially, the Microsoft Defender RBAC model is available only for organizations with Microsoft Defender for Office 365 Plan 2 licenses (trial licenses aren't supported).</li><li>Exchange Online PowerShell and Security & Compliance PowerShell continue to use [Exchange Online roles](/exchange/permissions-exo/permissions-exo) and [Email & Collaboration roles](/defender-office-365/mdo-portal-permissions). Microsoft Defender unified RBAC doesn't affect Exchange Online PowerShell or Security & Compliance PowerShell.</li></ul>|
 |**Microsoft Defender for Identity**|Full support for all identity data and actions. All roles are compatible with [Microsoft Defender for Identity scoped access](/defender-for-identity/configure-scoped-access).</br></br> **Note:** Defender for Identity experiences also adhere to permissions granted from [Microsoft Defender for Cloud Apps](https://security.microsoft.com/cloudapps/permissions/roles). For more information, see [Microsoft Defender for Identity role groups](https://go.microsoft.com/fwlink/?linkid=2202729).|
 |**Microsoft Defender for Cloud**|Support access management for all Defender for Cloud data that is available in Microsoft Defender portal.|
 |**Microsoft Security Exposure Management**|Full support for all Exposure Management data and actions, including Microsoft Secure Score data.|
@@ -76,7 +76,7 @@ This section provides useful information on what you need to know before you sta
 
   - Create a custom role that can grant access to security groups or individual users to manage roles and permissions in Microsoft Defender unified RBAC. This removes the need for Microsoft Entra global roles to manage permissions. To do this, you need to assign the **Authorization** permission in Microsoft Defender unified RBAC. For details on how to assign the Authorization permission, see [Create a role to access and manage roles and permissions](create-custom-rbac-roles.md#create-a-role-to-access-and-manage-roles-and-permissions).
 
-- The Microsoft Defender XDR security solution continues to respect existing Microsoft Entra global roles when you activate the Microsoft Defender unified RBAC model for some or all of your workloads, that is, Security Administrators retain assigned administrator privileges.
+- The Microsoft Defender security solution continues to respect existing Microsoft Entra global roles when you activate the Microsoft Defender unified RBAC model for some or all of your workloads, that is, Security Administrators retain assigned administrator privileges.
 
 - To activate a Microsoft Sentinel workspace in unified RBAC, you need:
   - Security Administrator role in Microsoft Entra ID
@@ -98,7 +98,7 @@ All permissions listed within the Microsoft Defender unified RBAC model align to
 
 ### Activation of the Microsoft Defender unified RBAC model
 
-You must activate the workloads in Microsoft Defender XDR to use the Microsoft Defender unified RBAC model. Until activated, Microsoft Defender XDR continues to respect the existing RBAC models. Microsoft Sentinel must be activated on a per-workspace basis. For more information, see [Activate Microsoft Defender unified RBAC](activate-defender-rbac.md).
+You must activate the workloads in Microsoft Defender to use the Microsoft Defender unified RBAC model. Until activated, Microsoft Defender continues to respect the existing RBAC models. Microsoft Sentinel must be activated on a per-workspace basis. For more information, see [Activate Microsoft Defender unified RBAC](activate-defender-rbac.md).
 
 When you activate some or all of your workloads to use the new permission model, the roles and permissions for these workloads are fully controlled by the Microsoft Defender unified RBAC model in the Microsoft Defender portal.
 
