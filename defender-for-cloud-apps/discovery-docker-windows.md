@@ -1,16 +1,18 @@
 ---
 title: Configure automatic log upload using on-premises Docker on Windows | Microsoft Defender for Cloud Apps
 description: Configure automatic log upload for continuous reports in Microsoft Defender for Cloud Apps using Docker on an on-premises Windows server.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Configure automatic log upload using on-premises Docker on Windows
 
 You can configure automatic log upload for continuous reports in Microsoft Defender for Cloud Apps using a Docker container on an on-premises Windows server. This article walks you through setting up data sources in the Microsoft Defender portal, deploying the Docker-based log collector, configuring your network appliances to forward logs, and verifying the deployment.
 
 ## Prerequisites
+
+Before you deploy the log collector, make sure the following prerequisites are met:
 
 - Firewall log forwarding must be configured to send logs to the log collector host machine.
 
@@ -77,7 +79,7 @@ Use the following steps to define your data sources and link them to a log colle
 
     1. **Name** your proxy or firewall.  
 
-        ![Screenshot of the Add data source dialog](media/ubuntu1.png)
+        ![Screenshot of the Add data source dialog with fields for name, source, and receiver type.](media/ubuntu1.png)
 
     1. Select the appliance from the **Source** list. If you select **Custom log format** to work with a network appliance that isn't listed, see [Working with the custom log parser](custom-log-parser.md) for configuration instructions.
 
@@ -103,18 +105,18 @@ Use the following steps to define your data sources and link them to a log colle
 
     1. Select all **Data sources** that you want to connect to the collector, and select **Update** to save the configuration.
 
-        Further deployment information appears in the dialog's **Next steps** section, including a command you'll use later in [Step 2 – On-premises deployment of your machine](#step-2--on-premises-deployment-of-your-machine) to import the collector configuration. If you selected Syslog, this information also includes data about which port the Syslog listener is listening on.
+        Further deployment information appears in the dialog's **Next steps** section, including a command used in [Step 2 – On-premises deployment of your machine](#step-2--on-premises-deployment-of-your-machine) to import the collector configuration. If you selected Syslog, this information also includes data about which port the Syslog listener is listening on.
 
-    1. Use the ![Copy the command to clipboard icon.](media/copy-icon.png) **Copy** button to copy the command to the clipboard and save it to a separate location.
+    1. Use the ![Copy command to clipboard](media/copy-icon.png) **Copy** button to copy the command to the clipboard and save it to a separate location.
 
-    1. Use the ![Export expected data source configuration icon.](media/export-icon.png) **Export** button to export the expected data source configuration. This configuration describes how you should set the log export in your appliances.
+    1. Use the ![Export data source configuration](media/export-icon.png) **Export** button to export the expected data source configuration. This configuration describes how you should set the log export in your appliances.
 
 For users sending log data via FTP for the first time, we recommend changing the password for the FTP user. For more information, see [Changing the FTP password](log-collector-advanced-management.md#change-the-ftp-password).
 
 
 ## Step 2 – On-premises deployment of your machine
 
-The following steps describe the deployment in Windows. The deployment steps for other platforms are slightly different.
+The following steps describe deployment of the Docker-based log collector on Windows. The deployment steps for other platforms are slightly different.
 
 1. Open a PowerShell terminal as an administrator on your Windows machine.
 
@@ -140,7 +142,7 @@ The following steps describe the deployment in Windows. The deployment steps for
 
     The machine automatically restarts after you run the command.
 
-1. When the machine is up and running again, run the same command again:
+1. When the machine is up and running again, run the `LogCollectorInstaller.ps1` script again:
 
     ```powershell
     & (Join-Path $Env:Temp LogCollectorInstaller.ps1)`
@@ -152,7 +154,7 @@ The following steps describe the deployment in Windows. The deployment steps for
 
 1. After the restart is completed, open the Docker client and accept the Docker subscription agreement.
 
-1. If the WSL2 installation isn't completed, a message shows to indicate that the WSL 2 Linux kernel is installed using a separate MSI update package. 
+1. If the WSL 2 installation isn't completed, Docker Desktop displays a message indicating that the WSL 2 Linux kernel must be installed using a separate MSI update package. 
 
 1. Complete the installation by downloading the package. For more information, see [Download the Linux kernel update package](/windows/wsl/install-manual).
 
@@ -178,7 +180,7 @@ The following steps describe the deployment in Windows. The deployment steps for
 
 ## Step 3 - On-premises configuration of your network appliances
 
-Configure your network firewalls and proxies to periodically export logs to the dedicated Syslog port of the FTP directory according to the directions in the **Create log collector** dialog. For example:
+Configure your network firewalls and proxies to periodically export logs to the log collector according to the directions in the **Create log collector** dialog. For Syslog data sources, forward logs to the collector's assigned Syslog port. For FTP data sources, export logs to the collector's FTP destination directory. For example:
 
 ```console
 BlueCoat_HQ - Destination path: \<<machine_name>>\BlueCoat_HQ\
@@ -221,7 +223,7 @@ Verify that the logs are being uploaded to Defender for Cloud Apps and that repo
     >[!NOTE]
     >When applying filters on continuous reports, the selection will be included, not excluded. For example, if you apply a filter on a certain user group, only that user group will be included in the report.
 
-    ![Screenshot of the custom continuous report configuration page with filter options.](media/custom-continuous-report.png)
+    ![Screenshot of the custom continuous report configuration page showing filters for data source, user groups, and IP address tags or ranges.](media/custom-continuous-report.png)
 
 ## Optional - Validate installer signature
 
@@ -231,11 +233,11 @@ To make sure that the docker installer is signed by Microsoft:
 1. Select **Digital Signatures** and make sure that it says **This digital signature is OK**.
 1. Make sure that **Microsoft Corporation** is listed as the sole entry under **Name of signer**.
 
-    ![Screenshot showing a valid digital signature from Microsoft Corporation.](media/digital-signature-successful.png)
+    ![Screenshot of digital signature details confirming the file is validly signed by Microsoft Corporation.](media/digital-signature-successful.png)
 
     If the digital signature isn't valid, it will say **This digital signature is not valid**:
 
-    ![Screenshot showing an invalid digital signature verification result.](media/digital-signature-unsuccessful.png)
+    ![Screenshot of digital signature details indicating the signature verification failed.](media/digital-signature-unsuccessful.png)
 
 ## Next steps
 
