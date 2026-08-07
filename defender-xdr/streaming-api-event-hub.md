@@ -8,15 +8,19 @@ ms.localizationpriority: medium
 ms.collection: 
 - m365-security
 - tier3
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 ---
 
 # Configure Microsoft Defender XDR to stream Advanced Hunting events to your Azure event hub
 
+Learn how to configure Microsoft Defender XDR to stream Advanced Hunting events to Azure Event Hubs for downstream processing, integration, and long-term storage.
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
+This article explains how to configure the Microsoft Defender XDR streaming API to forward Advanced Hunting events to Azure Event Hubs for downstream processing, integration, and long-term storage. Security administrators can use this guide to set up streaming, understand the event schema, and estimate the required Event Hub capacity. Before you begin, review the prerequisites to ensure your Event Hubs environment and permissions are in place.
 
 **Applies to:**
 - [Microsoft Defender XDR](microsoft-365-defender.md)
@@ -40,6 +44,8 @@ Before you configure Microsoft Defender to stream data to Event Hubs, ensure the
 > The Streaming API can be integrated either via Event Hubs or Azure Storage Account.
 
 ## Enable raw data streaming
+
+To enable raw data streaming to your Azure event hub, complete the following steps in the Microsoft Defender portal:
 
 1. Sign in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> as a ***Security Administrator*** or higher.
 
@@ -66,6 +72,8 @@ Before you configure Microsoft Defender to stream data to Event Hubs, ensure the
 <a name="the-schema-of-the-events-in-azure-event-hub"></a>
 ## Event schema in Azure Event Hub
 
+The following JSON sample shows the structure of an event payload delivered to Azure Event Hubs by the streaming API:
+
 ```JSON
 {
    "records": [
@@ -91,7 +99,7 @@ Before you configure Microsoft Defender to stream data to Event Hubs, ensure the
 <a name="data-types-mapping"></a>
 ## Data type mappings
 
-To get the data types for event properties, do the following steps:
+To get the data types for event properties:
 
 1. Sign in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> and go to [Advanced Hunting page](https://security.microsoft.com/hunting-package).
 
