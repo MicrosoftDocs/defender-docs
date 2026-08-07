@@ -65,11 +65,7 @@ chmod +x defender
 
 By default, scans run asynchronously. This means that when you submit a scan, the scanner doesn't wait around for it to finish. It exits immediately and hands you back a **Job ID**. The Job ID serves as a persistent reference that can subsequently be used to download scan result artifacts, cancel the job, wait for job completion, or query its current status.
 
-In the following commands, replace the `<TARGET_SOURCE>` placeholder with one of the following:
-
-- **A local path** - The path to your target source code directory, for example `my-code\project1`. If you're running the Defender CLI from within your code's directory, use `.` to refer to the current directory. 
-- **A repository URL** - The URL to your target source repository, for example `https://github.com/your-org/your-repo`.
-
+In the following commands, replace the `<TARGET_SOURCE>` placeholder with one of the path to your target source code directory, for example `my-code\project1`. If you're running the Defender CLI from within your code's directory, use `.` to refer to the current directory. 
 
 # [Windows](#tab/windows)
 
