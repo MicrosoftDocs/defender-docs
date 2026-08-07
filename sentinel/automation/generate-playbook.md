@@ -4,13 +4,13 @@ description: Generate playbooks through natural language conversations directly 
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 08/07/2026
 ms.service: microsoft-sentinel
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1015
 #Customer intent: As a security analyst, I want to generate playbooks using AI so that I can quickly create automation workflows without extensive coding knowledge.
 
 ---
@@ -20,6 +20,8 @@ ms.custom: msecd-doc-authoring-1014
 The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. You describe automation logic in natural language, and the system generates validated, code-based playbooks with complete documentation and visual flow diagrams. This experience is powered by an embedded VS Code environment within the Defender portal, so you can author and refine playbooks without leaving the portal. Generated playbooks use alert data as input and dynamically generate the required API calls, as long as you configure the integration for the target provider.
 
 This article describes how to generate playbooks by using AI, configure required integrations, and deploy your automation workflows.
+
+The AI-powered playbook generator is available to Microsoft Sentinel customers in the Microsoft Defender portal. It doesn't require a separate Microsoft Security Copilot license or Security Compute Units.
 
 Playbook generation provides the following capabilities:
 
@@ -39,58 +41,20 @@ You also must meet the following requirements:
 
 ### Environment requirements
 
-- **Security Copilot**: Your tenant must be [Security Copilot enabled with Security Compute Units (SCUs) available](/copilot/security/get-started-security-copilot#option-1-recommended-provision-capacity-through-security-copilot). You aren't billed for SCUs, but their availability is a technical requirement.
-
-- **Microsoft Sentinel workspace**: Your tenant must have a Microsoft Sentinel workspace onboarded to Microsoft Defender. To create a new workspace, see [Create a workspace](/copilot/security/manage-workspaces#create-a-workspace).
-
-- **Recommended Data sharing preferences**: In Security Copilot, enable the first slider, *Allow Microsoft to capture data from Security Copilot to validate product performance using human review*, in Customer Data Sharing preferences. For more information, see [Privacy and data security in Microsoft Security Copilot](/security-copilot/privacy-data-security).
+- **Microsoft Sentinel workspace**: You must have a Microsoft Sentinel workspace onboarded to the Microsoft Defender portal.
 
 ### Required roles and permissions
  
 You need the following permissions in [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/custom-permissions-details):
  
-- **To use the playbook generator**:
-  - Authorization and settings: **Detection tuning (manage)**
-  - Security operations: **Security Copilot (read)**
+- **To generate and deploy playbooks**:
+  - Automation: **Automation Playbooks (Read and Write)**
  
 - **To author automation rules**:
   - **Microsoft Sentinel Contributor** role on the relevant Workspaces or Resource Groups containing them in Defender.
 
 > [!NOTE]
 > Permissions might take up to two hours to take effect after assignment.
-
-### Required: Configure a dedicated Security Copilot workspace
-
-If you don't already have a dedicated Security Copilot workspace for AI-generated playbooks that's set in geo **US** or **Europe**, or allowing cross-region evaluation, you need to [create a Security Copilot workspace](/copilot/security/manage-workspaces#create-a-workspace).
-
-1. In the **Create a new workspace** dialog:
-
-   1. Enable the following privacy flags:
-
-      - **Allow Microsoft to capture data to validate product performance**
-      - **Allow Microsoft to capture and review data to build and validate Microsoft's security AI model**
-
-   1. Accept the Terms and Conditions.
-
-   1. Under **Capacity**, select **Create a new capacity**.
-
-      :::image type="content" source="./media/generate-playbook/create-new-capacity.png" alt-text="Screenshot of Create new workspace dialog with Create a new capacity link highlighted." lightbox="./media/generate-playbook/create-new-capacity.png":::
-
-1. Configure the new capacity:
-
-   In the **Create a Security capacity** dialog:
-
-   1. Choose your Azure subscription, resource group, and capacity name.
-
-   1. Set **Prompt evaluation location** to **United States** or **Europe**. If you select a different location, check the box: **If this location has too much traffic, allow Copilot to evaluate prompts anywhere in the world**.
-
-   1. Adjust compute units and allow overage settings. The playbook generator doesn't consume Security Compute Units (SCUs), but you need to configure the capacity to meet these technical requirements for playbook generation.
-
-   1. Select **Create**.
-
-    :::image type="content" source="./media/generate-playbook/create-capacity.png" alt-text="Screenshot of the new capacity details." lightbox="./media/generate-playbook/create-capacity.png":::
-
-Generated playbooks automatically use the dedicated Security Copilot workspace you created.
 
 ## Key concepts
 
@@ -395,4 +359,3 @@ Enhanced alert trigger rules have the following limitations:
 - [Create and manage Microsoft Sentinel playbooks](create-playbooks.md)
 - [Automate and run Microsoft Sentinel playbooks](run-playbooks.md)
 - [Authenticate playbooks to Microsoft Sentinel](authenticate-playbooks-to-sentinel.md)
-- [Privacy and data security in Microsoft Security Copilot](/security-copilot/privacy-data-security)

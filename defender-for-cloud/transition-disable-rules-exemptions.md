@@ -143,7 +143,7 @@ Use the following request body:
 
 The `allOf` operator applies the exemption only to vulnerability findings that match all three conditions. Change the assessment key and condition values to match the disable rule that you're recreating.
 
-For more information, see [Standard Assignments - Create](/rest/api/defenderforcloud/standard-assignments/create?view=rest-defenderforcloud-2024-08-01).
+For more information, see [Standard Assignments - Create](/rest/api/defenderforcloud/standard-assignments/create).
 
 ## Next steps
 

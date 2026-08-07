@@ -5,7 +5,7 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: ofshezaf
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 08/07/2026
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1014
 
@@ -44,6 +44,10 @@ The [Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-overvi
 
     - You must have Windows Event Collection (WEC) enabled and running, with the Azure Monitor Agent installed on the WEC machine.
     - We recommend installing the [Advanced Security Information Model (ASIM)](normalization.md) parsers to ensure full support for data normalization. You can deploy these parsers from the [`Azure-Sentinel` GitHub repository](https://github.com/Azure/Azure-Sentinel/tree/master/Parsers/ASim%20WindowsEvent) using the **Deploy to Azure** button there.
+    - Events collected through Windows Event Forwarding are written to the `WindowsEvent` table, including events forwarded from the Windows Security log. They aren't written to the `SecurityEvent` table.
+
+> [!IMPORTANT]
+> Microsoft Sentinel analytics rules and solution content can be table-specific. Many built-in Windows Security Events rules, including some near-real-time rules, query `SecurityEvent` and don't match data stored only in `WindowsEvent`. If you need those rules without modification, use the Windows Security Events via AMA connector. Otherwise, adapt the rule queries to use `WindowsEvent` or supported ASIM parsers.
 
  - Install the related Microsoft Sentinel solution from the Content Hub in Microsoft Sentinel. For more information, see [Discover and manage Microsoft Sentinel out-of-the-box content](sentinel-solutions-deploy.md).
 

@@ -4,7 +4,7 @@ description: Learn how to set up governance relationships for managing multiple 
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 08/07/2026
 
 #customer-intent: As a security administrator for a managed security service provider (MSSP), I want to configure delegated access to my customers' tenants through governance relationships, so that I can manage their security operations without needing full administrative access.
 ai-usage: ai-assisted
@@ -23,6 +23,8 @@ This article explains how to configure governance relationships for multitenant 
 Governance relationships enable governing tenants (the home tenants that manage access) to manage security operations across multiple customer tenants (the tenants that grant delegated access) with fine-grained role assignments. This capability supports multitenant organizations (MTOs) and managed security service providers (MSSPs) that need to provide security services across multiple Microsoft Entra tenants.
 
 Governance relationships for Microsoft Defender use the same model as [Microsoft Entra ID](/entra/id-governance/tenant-governance/governance-relationships) for delegating administrative access, but extended to support Microsoft Defender XDR workloads. By configuring governance relationships for Microsoft Defender, you can assign specific security roles to groups in the governing tenant, allowing them to manage security incidents, alerts, and configurations in the governed tenant without granting full administrative access.
+
+Administrators continue to use their accounts in the governing tenant. Tenant Governance doesn't create local administrator accounts or Microsoft Entra B2B guest accounts in the governed tenant. Instead, security groups selected in the governance policy template are represented in the governed tenant as remote tenant groups. You can automate governance relationships and templates by using the [Tenant Governance APIs in Microsoft Graph](/graph/api/resources/tenantgovernanceservices-tenantgovernance-overview).
 
 ### Key concepts
 
@@ -163,6 +165,8 @@ After the approval is complete, users in the specified security groups receive p
 
 Security groups used in the relationship template are synchronized to the governed tenant as "remote tenant groups." You can assign these groups to Microsoft Sentinel roles in the governed tenant to enable multitenant management capabilities.
 You can assign these groups to Azure Resource Manager (ARM) resources to enable Microsoft Sentinel management capabilities.
+
+The Microsoft Sentinel Azure RBAC assignments described in this section grant management-plane access to the selected resources. They don't automatically grant data-plane access, such as permission to read Azure Storage blob data or Azure Key Vault secrets. Assign any required data-plane roles separately and follow least-privilege principles.
 
 Assigning Microsoft Sentinel roles enables multitenant management features including:
 

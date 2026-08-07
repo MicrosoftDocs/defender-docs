@@ -1,7 +1,7 @@
 ---
 title: Overview of Defender for Open-Source Relational Databases
 description: Learn about the benefits and features of Microsoft Defender for Open-Source Relational Databases such as PostgreSQL and MySQL.
-ms.date: 04/20/2026
+ms.date: 08/07/2026
 ms.topic: overview
 ms.custom: sfi-image-nochange
 #customer intent: As a reader, I want to understand the purpose and features of Microsoft Defender for Open-Source Relational Databases so that I can make informed decisions about its usage.
@@ -34,7 +34,7 @@ Protected versions of [Azure Database for MySQL](/azure/mysql/) include:
 
 ### Amazon RDS
 
-Amazon Relational Database Service (RDS) instances on AWS (preview) support:
+Amazon Relational Database Service (RDS) instances on AWS support:
 
 - Aurora PostgreSQL
 - Aurora MySQL
@@ -44,7 +44,7 @@ Amazon Relational Database Service (RDS) instances on AWS (preview) support:
 
 ## Benefits
 
-Defender for Cloud provides multicloud alerts on anomalous activities so that you can detect potential threats and respond to them as they occur.
+Defender for Cloud provides multicloud alerts on anomalous activities so that you can detect potential threats and respond to them as they occur. For supported Amazon RDS databases, the plan also includes sensitive data discovery. For more information, see [Enable Defender for open-source relational databases on Amazon Web Services](enable-defender-for-databases-aws.md).
 
 When you enable this plan, Defender for Cloud provides alerts when it detects anomalous database access and query patterns, along with suspicious database activities. The alerts include:
 

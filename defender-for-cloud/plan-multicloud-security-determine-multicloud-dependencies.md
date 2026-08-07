@@ -1,24 +1,28 @@
 ---
-title: Planning multicloud security determine multicloud dependencies CSPM CWPP guidance cloud workload protection
+title: Determine multicloud CSPM and CWPP dependencies - Microsoft Defender for Cloud
 description: Learn about determining multicloud dependencies when planning multicloud deployment with Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 05/31/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Determine multicloud dependencies
 
-This article is one of a series providing guidance as you design a cloud security posture management (CSPM) and cloud workload protection platform (CWPP) solution across multicloud resources with Microsoft Defender for Cloud.
+This article describes the dependencies and components you need to deploy cloud security posture management (CSPM) and cloud workload protection platform (CWPP) across Amazon Web Services (AWS) and Google Cloud Platform (GCP) resources with Microsoft Defender for Cloud. Use this guidance to identify agents, extensions, and networking requirements before you onboard multicloud connectors.
 
-## Goal
+<a name="goal"></a>
+## Multicloud dependency planning goals
 
-Figure out dependencies that might influence your multicloud design.
+Identify dependencies that might influence the design of your multicloud security solution.
 
-## Get started
+<a name="get-started"></a>
+## Identify required multicloud components
 
 As you design your multicloud solution, it’s important to have a clear picture of the components needed to use all multicloud features in Defender for Cloud.
 
-## CSPM
+<a name="cspm"></a>
+## CSPM dependencies and requirements
 
 Defender for Cloud provides cloud security posture management (CSPM) features for your Amazon Web Services (AWS) and Google Cloud Platform (GCP) workloads.
 
@@ -27,7 +31,8 @@ Defender for Cloud provides cloud security posture management (CSPM) features fo
 - It’s important to note that the Security Posture Management plan is turned on by default and can’t be turned off.
 - Learn about the [identity and access management (IAM) permissions](./quickstart-onboard-aws.md?pivots=env-settings) needed to discover AWS resources for CSPM.
 
-## CWPP
+<a name="cwpp"></a>
+## CWPP dependencies and requirements
 
 > [!NOTE]
 > As the Log Analytics agent retired in August 2024, Defender for Cloud **Defender for Servers** features and capabilities are provided through Microsoft Defender for Endpoint integration or agentless scanning, without dependency on the Log Analytics agent (MMA) or Azure Monitor agent (AMA). For details, see the [Defender for Cloud strategy for Log Analytics agent deprecation](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation).
@@ -54,7 +59,8 @@ The following table summarizes extension requirements for CWPP.
 | SQL Servers on machines | No | No | Yes |
 | Automatic SQL Server discovery and registration | No | No | Yes |
 
-### Defender for Servers
+<a name="defender-for-servers"></a>
+### Defender for Servers dependencies
 
 Enabling Defender for Servers on your AWS or GCP connector allows Defender for Cloud to provide server protection to your Google Compute Engine VMs and AWS EC2 instances.
 
@@ -63,7 +69,7 @@ Enabling Defender for Servers on your AWS or GCP connector allows Defender for C
 Defender for Servers offers two different plans:
 
 - **Plan 1:**
-  - **MDE integration:** Plan 1 integrates with [Microsoft Defender for Endpoint Plan 2](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1-2) to provide a full endpoint detection and response (EDR) solution for machines running a [range of operating systems](/microsoft-365/security/defender-endpoint/minimum-requirements). Defender for Endpoint features include:
+  - **Microsoft Defender for Endpoint (MDE) integration:** Plan 1 integrates with [Microsoft Defender for Endpoint Plan 2](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1-2) to provide a full endpoint detection and response (EDR) solution for machines running a [range of operating systems](/microsoft-365/security/defender-endpoint/minimum-requirements). Defender for Endpoint features include:
     - [Reducing the attack surface](/microsoft-365/security/defender-endpoint/overview-attack-surface-reduction) for machines.
     - Providing [antivirus](/microsoft-365/security/defender-endpoint/next-generation-protection) capabilities.
     - Threat management, including [threat hunting](/microsoft-365/security/defender-endpoint/advanced-hunting-overview), [detection](/microsoft-365/security/defender-endpoint/overview-endpoint-detection-response), [analytics](/microsoft-365/security/defender-endpoint/threat-analytics), and [automated investigation and response](/microsoft-365/security/defender-endpoint/overview-endpoint-detection-response).
@@ -87,7 +93,8 @@ The following components and requirements are needed to receive full protection 
 
 Machines must meet [network requirements](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud) before onboarding the agents. Autoprovisioning is enabled by default.
 
-### Defender for Containers
+<a name="defender-for-containers"></a>
+### Defender for Containers dependencies
 
 Enabling Defender for Containers provides GKE and EKS clusters and underlying hosts with [agentless security capabilities](defender-for-containers-introduction.md#agentless-capabilities).
 
@@ -97,14 +104,15 @@ The [required Defender for Containers components](./defender-for-containers-intr
 
 - **Azure Arc agent**: Connects your GKE and EKS clusters to Azure and onboards the Defender sensor.
 - **[Defender sensor](defender-for-cloud-glossary.md#defender-sensor)**: Provides host-level runtime threat protection.  
-- **Azure Policy for Kubernetes**: Extends the Gatekeeper v3 to monitor every request to the Kubernetes API server, and ensures that security best practices are being followed on clusters and workloads.
+- **Azure Policy for Kubernetes**: Extends Gatekeeper v3, an admission controller that enforces policies on Kubernetes clusters, to monitor every request to the Kubernetes API server, and ensures that security best practices are being followed on clusters and workloads.
 - **Kubernetes audit logs**: Audit logs from the Kubernetes API server allow Defender for Containers to identify suspicious activity in your multicloud servers and provide deeper insights during alert investigation. Enable Kubernetes audit log collection at the connector level.
 
 #### Check networking requirements for Defender for Containers
 
 Make sure to check that your clusters meet network requirements so that the Defender sensor can connect with Defender for Cloud.
 
-### Defender for SQL
+<a name="defender-for-sql"></a>
+### Defender for SQL dependencies
 
 Defender for SQL provides threat detection for Google Compute Engine and AWS workloads. Enable the Defender for SQL Servers on Machines plan on the subscription where the connector is located.
 
@@ -118,7 +126,8 @@ To receive the full benefits of Defender for SQL on your multicloud workload, yo
 - **[Azure Monitor agent (AMA)](/azure/azure-monitor/agents/agents-overview)**: Collects security-related configuration information and event logs from machines.
 - **Automatic SQL Server discovery and registration**: Supports automatic discovery and registration of SQL Servers.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Automate connector deployment](plan-multicloud-security-automate-connector-deployment.md)

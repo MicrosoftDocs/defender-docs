@@ -2,7 +2,8 @@
 title: Simulate alerts for SQL servers on machines
 description: Learn how to simulate alerts for SQL servers on machines in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 02/09/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to simulate alerts for SQL servers on machines to test my security monitoring setup.
 ai-usage: ai-assisted
 ---
@@ -11,7 +12,7 @@ ai-usage: ai-assisted
 
 Microsoft Defender for Cloud provides a SQL alert simulation feature that helps organizations and security teams validate deployments and test detection, response, and automation workflows without creating actual security risks.
 
-The simulation injects telemetry records on target machines (Azure Virtual Machines (VMs) or Arc-connected machines) through a custom script extension named `Sql-SimulateAlert`. The simulated alerts include full runtime context such as host, SQL instance, database, and process information, so you can validate your end-to-end security response flows. This process is safe and non-intrusive, ensuring your resources remain secure.
+The simulation uses a custom script extension named `Sql-SimulateAlert` to inject telemetry records on target machines. Target machines include Azure Virtual Machines (VMs) or Arc-connected machines. Each simulated alert includes runtime context such as host, SQL instance, database, and process information. You can use these alerts to validate your end-to-end security response flows. This process is safe and doesn't affect your resources.
 
 You can simulate the following security scenarios:
 
@@ -38,9 +39,9 @@ The simulation runs locally on the machine through the Custom Script Extension w
 
 ## Simulate alerts
 
-The `SqlAlertSimulationClient` extracts template parameters from the target resource, including subscription, resource group, machine name, location, and the presence of the Defender extension. 
+The `SqlAlertSimulationClient` reads details from the target resource, such as subscription, resource group, machine name, and location.
 
-`SqlAlertSimulationClient` builds an Azure Resource Manager (ARM) template that deploys or re-uses a custom script extension on the machine. The extension runs a PowerShell command that invokes the Defender for SQL simulate helper with the requested attack parameters. The helper generates alert telemetry that flows into Defender for Cloud, triggering alerts that downstream automation and mobilization connectors can consume.
+It then builds an Azure Resource Manager (ARM) template that deploys a custom script extension on the machine. The extension runs a PowerShell command that starts the Defender for SQL simulate helper with the chosen attack settings. The helper creates alert data and sends it to Defender for Cloud. These alerts can then trigger your automation and response connectors.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -66,7 +67,7 @@ The `SqlAlertSimulationClient` extracts template parameters from the target reso
 
 1. Select **Simulate Alerts**.
 
-The alert appears after a few minutes and you can use it to validate your security monitoring setup.
+The alert appears after a few minutes. You can use the alert to validate your security monitoring setup.
 
 ## Verify that the alert is generated
 

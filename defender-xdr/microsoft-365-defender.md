@@ -13,7 +13,7 @@ ms.collection:
 - tier1
 ms.topic: overview
 adobe-target: true
-ms.date: 07/17/2026
+ms.date: 08/07/2026
 appliesto:
 - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -76,9 +76,9 @@ Microsoft Defender XDR cross-product features include:
 
 - **Combined incidents queue** - To help security professionals focus on what is critical by ensuring the full attack scope, impacted assets and automated remediation actions are grouped together and surfaced in a timely manner. 
 
-- **Automatic response to threats** - Critical threat information is shared in real time between the Microsoft Defender products to help stop the progression of an attack. 
+- **[Automatic attack disruption](automatic-attack-disruption.md)** - Microsoft Defender XDR correlates high-confidence signals from multiple workloads and automatically applies containment actions to stop in-progress attacks and limit lateral movement.
 
-   For example, if a malicious file is detected on an endpoint protected by Defender for Endpoint, it instructs Defender for Office 365 to scan and remove the file from all e-mail messages. The file is blocked on sight by the entire Microsoft 365 security suite.
+   For example, if a malicious file is detected on an endpoint protected by Defender for Endpoint, it instructs Defender for Office 365 to scan and remove the file from all email messages. The file is blocked on sight by the entire Microsoft 365 security suite.
 
 - **Self-healing for compromised devices, user identities, and mailboxes** - Microsoft Defender uses AI-powered automatic actions and playbooks to remediate impacted assets back to a secure state. Microsoft Defender leverages automatic remediation capabilities of the suite products to ensure all impacted assets related to an incident are automatically remediated where possible.
 

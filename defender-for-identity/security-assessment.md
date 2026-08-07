@@ -1,10 +1,10 @@
 ---
 title: Microsoft Defender for Identity security posture assessments
 description: Learn how Microsoft Defender for Identity security posture assessments identify misconfigurations and legacy components in Active Directory and provide recommended remediation actions.
-ms.date: 06/15/2026
+ms.date: 08/07/2026
 ms.topic: how-to
 ms.reviewer: LiorShapiraa
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1015
 ai-usage: ai-assisted
 ---
 
@@ -30,7 +30,7 @@ Microsoft Secure Score is a measurement of an organization's security posture, w
 
 ### Categorization of Defender for Identity security posture assessments
 
-Defender for Identity security posture assessments have five key categories. Each category addresses specific identity security risks and provides remediation guidance.
+Defender for Identity security posture assessments have six key categories. Each category addresses specific identity security risks and provides remediation guidance.
 
 - **Hybrid security**: Identifies misconfigurations in environments that integrate on-premises (e.g., Active Directory) and cloud-based identity providers (e.g., Microsoft Entra ID, Okta). Assesses risks related to synchronization, authentication, and authorization across platforms.
 - **Identity infrastructure**: Detects misconfigurations and vulnerabilities in core identity components, including domain controllers.
@@ -70,4 +70,3 @@ You can view Defender for Identity security posture assessments in the Microsoft
 
 - [Microsoft Secure Score overview](/microsoft-365/security/defender/microsoft-secure-score)
 - [Microsoft Defender for Identity community forum](https://aka.ms/MDIcommunity)
-

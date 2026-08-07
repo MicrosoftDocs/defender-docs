@@ -1,7 +1,7 @@
 ---
 title: VPN integration | Microsoft Defender for Identity
 description: Learn how to collect accounting information by integrating a VPN for Microsoft Defender for Identity in Microsoft Defender XDR.
-ms.date: 06/15/2026
+ms.date: 08/07/2026
 ms.topic: how-to
 #CustomerIntent: As a Defender for Identity user, I want to learn how to collect accounting information from VPN solutions. 
 ms.reviewer: martin77s
@@ -32,6 +32,7 @@ Defender for Identity's VPN integration supports both primary UPNs and alternate
 Before you start, make sure that you have:
 
 - [Microsoft Defender for Identity deployed](deploy-defender-identity.md)
+- At least one connected and healthy Defender for Identity sensor version 2.x to receive RADIUS accounting events.
 - Access to the **Settings** area in Microsoft Defender. For more information, see [Microsoft Defender for Identity role groups](role-groups.md).
 - The ability to configure RADIUS on your VPN system. 
 
