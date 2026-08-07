@@ -41,7 +41,7 @@ If you're new to Security Copilot, you should familiarize yourself with it by re
 
 A comprehensive and clear incident report is an essential reference for security teams and security operations management. However, writing a comprehensive report with the important details present can be a time-consuming task for security operations teams. Collecting, organizing, and summarizing incident information from multiple sources requires focus and detailed analysis to create an information-rich report. With Copilot in Defender, security teams can now instantly create an extensive incident report within the portal.
 
-While an [incident summary](security-copilot-m365d-incident-summary.md) provides an overview of an incident and how it happened, an incident report consolidates incident information from various data sources available in Microsoft Sentinel and Defender XDR. The Copilot-generated incident report also includes all analyst-driven steps and automated actions, the analysts involved in incident response, and the comments from the analysts. Whether security teams are using Microsoft Sentinel, Defender XDR, or both, all relevant incident data are added into the generated incident report.
+While an [incident summary](security-copilot-m365d-incident-summary.md) provides an overview of an incident and how it happened, an incident report consolidates incident information from various data sources available in Microsoft Sentinel and Defender. The Copilot-generated incident report also includes all analyst-driven steps and automated actions, the analysts involved in incident response, and the comments from the analysts. Whether security teams are using Microsoft Sentinel, Defender, or both, all relevant incident data are added into the generated incident report.
 
 Copilot generates the incident report based on the automatic and manual actions implemented, and the analysts' comments and notes posted in the incident. You can review and follow the [recommendations for incident report creation](security-copilot-m365d-create-incident-report.md#recommendations-for-incident-report-creation) to ensure that Copilot creates a comprehensive incident report.
 
@@ -101,7 +101,7 @@ You can follow the steps in [export incident data to PDF](manage-incidents.md#ex
 Here are some recommendations to consider to ensure that Copilot generates a comprehensive and complete incident report:
 
 - Classify and resolve the incident before generating the incident report.
-- Ensure that you write and save comments in the Microsoft Sentinel activity log or in the [Microsoft Defender XDR incident activity log](manage-incidents.md#view-the-activity-log-of-an-incident) to include the comments in the incident report.
+- Ensure that you write and save comments in the Microsoft Sentinel activity log or in the [Microsoft Defender incident activity log](manage-incidents.md#view-the-activity-log-of-an-incident) to include the comments in the incident report.
 - Write comments using comprehensive and clear language. In-depth and clear comments provide better context about the response actions. See the following steps to know how to access the comments field:
   - [Add comments to incidents in the Microsoft Defender portal](manage-incidents.md#add-comments-to-an-incident)
   - Add comments to incidents in Microsoft Sentinel
