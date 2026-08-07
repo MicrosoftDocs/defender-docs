@@ -82,7 +82,7 @@ To create the integration in the Defender portal, follow these steps:
 
 ## Related content
 
-- [Automatic attack disruption in Microsoft Defender XDR](automatic-attack-disruption.md)
+- [Automatic attack disruption in Microsoft Defender](automatic-attack-disruption.md)
 - [Configure automatic attack disruption](configure-attack-disruption.md)
 - [Enable attack disruption actions on AWS with Microsoft Sentinel](/azure/sentinel/aws-disruption?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json)
 - [How Microsoft Defender for Identity protects your Okta accounts](/defender-for-identity/okta-defender-for-identity-overview)

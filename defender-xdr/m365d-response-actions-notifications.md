@@ -28,7 +28,7 @@ You can set up email notifications in the Microsoft Defender portal to notify yo
 
 Manual response actions are actions that security teams can use to stop threats or aid in investigation of attacks. These actions vary depending on the Defender workload enabled in your environment.
 
-Automated response actions are capabilities in Microsoft Defender XDR that scale investigation and resolution to threats automatically. Automated remediation capabilities consist of [automatic attack disruption](automatic-attack-disruption.md) and [automated investigation and response](m365d-autoir.md).
+Automated response actions are capabilities in Microsoft Defender that scale investigation and resolution to threats automatically. Automated remediation capabilities consist of [automatic attack disruption](automatic-attack-disruption.md) and [automated investigation and response](m365d-autoir.md).
 
 > [!NOTE]
 > You need the **Manage security settings** permission to configure email notification settings. If you use basic permissions management, users with Security Administrator or higher roles can configure email notifications. Likewise, if your organization is using [role-based access control (RBAC)](manage-rbac.md), you can only create, edit, delete, and receive notifications based on device groups that you're allowed to manage.
