@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for IoT feature support and retirement
+title: Microsoft Defender for IoT Feature Support and Retirement
 description: Review Microsoft Defender for IoT feature support status and retirement timelines for different capabilities.
 ms.date: 06/12/2026
 ms.topic: how-to
@@ -35,16 +35,16 @@ The new micro agent development is based on the knowledge, and experience gather
 
 - **Plug and play**: The new micro agent has no kernel level dependencies anymore, and all of its software dependencies are provided as part of its package. The micro agent supports common CPU architecture.
 
-- **Easy to deploy**: The micro agent supports different distribution models, through source code, and as a binary package. 
+- **Easy to deploy**: The micro agent supports different distribution models, through source code, and as a binary package.
 
 ### Timeline 
 
-Defender for IoT will continue to support C, C#, and Edge until March 1, 2022. 
+Defender for IoT will continue to support C, C#, and Edge until March 1, 2022.
 
 ## Micro agent preview support
 
 During the preview the micro agent may experience breaking changes without notice.
 
-## Next steps
+## Related content
 
-Check out [Microsoft Defender for IoT agent frequently asked questions](resources-agent-frequently-asked-questions.md).
+[Microsoft Defender for IoT agent frequently asked questions](resources-agent-frequently-asked-questions.md).

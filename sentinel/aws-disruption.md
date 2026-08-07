@@ -20,9 +20,8 @@ Before you begin, you need the following prerequisites in place:
 
 - You have an active AWS account with administrative privileges.
 - Your Microsoft Sentinel analytic workspace is connected to the unified security operations portal.
-- The AWS Connector for Microsoft Sentinel is deployed and enabled
-- AWS CloudTrail logs are being ingested into Microsoft Sentinel
-  See: [Connect Microsoft Sentinel to Amazon Web Services to ingest AWS service log data](./connect-aws.md)
+- The AWS Connector for Microsoft Sentinel is deployed and enabled.
+- AWS CloudTrail logs are being ingested into Microsoft Sentinel; see [Connect Microsoft Sentinel to Amazon Web Services to ingest AWS service log data](./connect-aws.md).
 - Appropriate IAM roles and permissions are configured in AWS to allow Microsoft Sentinel to perform actions on IAM accounts.
 
 ## Step 1: Prepare AWS for integration
@@ -31,11 +30,11 @@ Complete the following tasks to prepare your AWS environment for Microsoft Senti
 
 ### 1.1 Create a dedicated IAM role for Microsoft Sentinel
 
-1. [Create a new IAM role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html) in the AWS Management Console.
+[Create a new IAM role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html) in the AWS Management Console.
 
-- Select **AWS service** as the trusted entity and choose **EC2** as a temporary placeholder. You replace this trust relationship with the correct Microsoft Sentinel principal in [Configure trust relationship](#12-configure-trust-relationship).
+1. Select **AWS service** as the trusted entity and choose **EC2** as a temporary placeholder. You replace this trust relationship with the correct Microsoft Sentinel principal in [Configure trust relationship](#12-configure-trust-relationship).
 
-- Attach the following IAM policy to the role. This policy grants Microsoft Sentinel the permissions needed to manage IAM user and role policies for attack disruption actions. Replace \<YOUR_ACCOUNT_ID\> as needed:
+1. Attach the following IAM policy to the role. This policy grants Microsoft Sentinel the permissions needed to manage IAM user and role policies for attack disruption actions. Replace \<YOUR_ACCOUNT_ID\> as needed:
 
     ```json
     {

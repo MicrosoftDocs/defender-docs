@@ -1,5 +1,5 @@
 ---
-title: Add advanced conditions to Microsoft Sentinel automation rules
+title: Add Advanced Conditions to Microsoft Sentinel Automation Rules
 description: This article explains how to add complex, advanced "Or" conditions to automation rules in Microsoft Sentinel, for more effective triage of incidents.
 ms.topic: how-to
 ms.author: monaberdugo
@@ -29,19 +29,19 @@ Condition groups can contain two levels of conditions:
 
 - [**Simple conditions**](#example-1-simple-conditions): At least two conditions, each separated by an `OR` operator: 
 
-    - **A `OR` B**
-    - **A `OR` B `OR` C** ([Example 1B: Add more OR conditions](#example-1b-add-more-or-conditions).)
-    - and so on.
+  - **A `OR` B**
+  - **A `OR` B `OR` C** ([Example 1B: Add more OR conditions](#example-1b-add-more-or-conditions))
+  - and so on.
 
 - [**Compound conditions**](#example-2-compound-conditions): More than two conditions, with at least two conditions on at least one side of an `OR` operator:
 
-    - **(A `and` B) `OR` C**
-    - **(A `and` B) `OR` (C `and` D)**
-    - **(A `and` B) `OR` (C `and` D `and` E)**
-    - **(A `and` B) `OR` (C `and` D) `OR` (E `and` F)**
-    - and so on.
+  - **(A `and` B) `OR` C**
+  - **(A `and` B) `OR` (C `and` D)**
+  - **(A `and` B) `OR` (C `and` D `and` E)**
+  - **(A `and` B) `OR` (C `and` D) `OR` (E `and` F)**
+  - and so on.
 
-Using condition groups with OR logic affords you great power and flexibility in determining when rules will run. It can also greatly increase your efficiency by enabling you to combine many old automation rules into one new rule.
+Using condition groups with OR logic affords you great power and flexibility in determining when rules will run. It can also greatly increase your efficiency by letting you combine many old automation rules into one new rule.
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
@@ -57,7 +57,7 @@ Let's create a rule that will change the severity of an incoming incident from w
 
     See the [general instructions for creating an automation rule](create-manage-use-automation-rules.md) for details.
 
-1. Give the rule a name: "Triage: Change Severity to High"
+1. Name the rule *Triage: Change Severity to High*.
 
 1. Select the trigger **When incident is created**.
 
@@ -82,6 +82,7 @@ The following example shows the automation rule creation experience for workspac
 :::image type="content" source="media/add-advanced-conditions-to-automation-rules/create-automation-rule-no-conditions.png" alt-text="Screenshot of creating new automation rule without adding conditions.":::
 
 ---
+
 ## Example 1: simple conditions
 
 In this first example, we'll create a simple condition group: If either condition A **or** condition B is true, the rule will run and the incident's severity will be set to *High*.
@@ -95,7 +96,7 @@ In this first example, we'll create a simple condition group: If either conditio
 
     :::image type="content" source="media/add-advanced-conditions-to-automation-rules/empty-condition-group.png" alt-text="Screenshot of empty condition group fields.":::
 
-1. Let's decide what these conditions will be. That is, what two *different* conditions will cause the incident severity to be changed to *High*? Let's suggest the following:
+1. Decide what these conditions will be. That is, what two *different* conditions will cause the incident severity to be changed to *High*? We suggest the following:
 
     - If the incident's associated MITRE ATT&CK **Tactics** include any of the four we've selected from the drop-down (see the image below), the severity should be raised to High.
 
@@ -103,7 +104,7 @@ In this first example, we'll create a simple condition group: If either conditio
 
     :::image type="content" source="media/add-advanced-conditions-to-automation-rules/add-simple-or-condition.png" alt-text="Screenshot of adding simple OR conditions to an automation rule.":::
 
-    As long as at least ONE of these conditions is true, the actions we define in the rule will run, changing the severity of the incident to High. 
+    As long as at least ONE of these conditions is true, the actions we define in the rule will run, changing the severity of the incident to High.
 
 ### Example 1A: Add an OR value within a single condition
 
@@ -116,7 +117,7 @@ We can add another value to an existing condition (for any conditions based on e
 
 Let's say we want to have this rule run if one of THREE (or more) conditions is true. If A *or* B *or* C is true, the rule will run.
 
-1. Remember all those "Add" links? To add another OR condition, select the **+ Add** connected by a line to the `OR` operator.
+1. Remember all those **Add** links? To add another OR condition, select the **+ Add** connected by a line to the `OR` operator.
 
     :::image type="content" source="media/add-advanced-conditions-to-automation-rules/add-another-or-condition.png" alt-text="Screenshot of adding another OR condition to an automation rule.":::
 
@@ -147,11 +148,9 @@ In this example, we add multiple conditions to each side of an OR condition grou
 
 That's it! You can use what you've learned here to add more conditions and condition groups, using different combinations of `AND` and `OR` operators, to create powerful, flexible, and efficient automation rules to really help your SOC run smoothly and lower your response and resolution times.
 
-## Next steps
+## Related content
 
-For more information about automation rules and related capabilities, see the following resources:
-
-- For instructions on creating basic automation rules, see [Create and use Microsoft Sentinel automation rules to manage response](create-manage-use-automation-rules.md).
-- To learn more about automation rules, see [Automate incident handling in Microsoft Sentinel with automation rules](automate-incident-handling-with-automation-rules.md)
-- To learn more about advanced automation options, see [Automate threat response with playbooks in Microsoft Sentinel](automate-responses-with-playbooks.md).
-- For help with implementing automation rules and playbooks, see [Tutorial: Use playbooks to automate threat responses in Microsoft Sentinel](tutorial-respond-threats-playbook.md).
+- [Create and use Microsoft Sentinel automation rules to manage response](create-manage-use-automation-rules.md)
+- [Automate incident handling in Microsoft Sentinel with automation rules](automate-incident-handling-with-automation-rules.md)
+- [Automate threat response with playbooks in Microsoft Sentinel](automate-responses-with-playbooks.md).
+- [Tutorial: Use playbooks to automate threat responses in Microsoft Sentinel](tutorial-respond-threats-playbook.md).

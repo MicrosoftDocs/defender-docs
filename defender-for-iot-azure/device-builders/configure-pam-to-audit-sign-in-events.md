@@ -1,5 +1,5 @@
 ---
-title: Configure Pluggable Authentication Modules (PAM) to audit sign-in events (Preview)
+title: Configure Pluggable Authentication Modules (PAM) to Audit Sign-in Events (Preview)
 description: Learn how to configure Pluggable Authentication Modules (PAM) to audit sign-in events when syslog isn't configured for your device. 
 ms.date: 06/12/2026
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.custom: msecd-doc-authoring-1014
 
 This article provides a sample process for configuring Pluggable Authentication Modules (PAM) to audit SSH, Telnet, and terminal sign-in events on an unmodified Ubuntu 20.04 or 18.04 installation.
 
-PAM configurations may vary between devices and Linux distributions.
+PAM configurations might vary between devices and Linux distributions.
 
 For more information, see [Login collector (event-based collector)](concept-event-aggregation.md#login-collector-event-based-collector).
 
@@ -29,7 +29,7 @@ For more information, see [Tutorial: Install the Defender for IoT micro agent](t
 
 This procedure provides a sample process for configuring the collection of successful sign-in events.
 
-Our example is based on an unmodified Ubuntu 20.04 or 18.04 installation, and the steps in this process may differ for your system.
+Our example is based on an unmodified Ubuntu 20.04 or 18.04 installation, and the steps in this process might differ for your system.
 
 1. Locate the following files:
 
@@ -50,7 +50,7 @@ Our example is based on an unmodified Ubuntu 20.04 or 18.04 installation, and th
 
 This procedure provides a sample process for configuring the collection of failed sign-in attempts.
 
-This example in this procedure is based on an unmodified Ubuntu 18.04 or 20.04 installation. The files and commands listed below may differ per configuration or as a result of modifications.
+This example in this procedure is based on an unmodified Ubuntu 18.04 or 20.04 installation. The following files and commands might differ per configuration or as a result of modifications.
 
 1. Locate the `/etc/pam.d/common-auth` file and look for the following lines:
 
@@ -61,7 +61,7 @@ This example in this procedure is based on an unmodified Ubuntu 18.04 or 20.04 i
     auth    requisite           pam_deny.so
     ```
 
-    The `common-auth` configuration shown above authenticates via the `pam_unix.so` module. In case of authentication failure, the configuration continues to the `pam_deny.so` module to prevent access.
+    The `common-auth` configuration shown here authenticates via the `pam_unix.so` module. In case of authentication failure, the configuration continues to the `pam_deny.so` module to prevent access.
 
 1. Replace the indicated lines of code with the following:
 
@@ -74,7 +74,7 @@ This example in this procedure is based on an unmodified Ubuntu 18.04 or 20.04 i
     auth	requisite			pam_deny.so
     ```
 
-    In the modified `/etc/pam.d/common-auth` configuration shown above, PAM skips one module to the `pam_echo.so` module, and then skips the `pam_deny.so` module and authenticates successfully.
+    In the modified `/etc/pam.d/common-auth` configuration shown here, PAM skips one module to the `pam_echo.so` module, and then skips the `pam_deny.so` module and authenticates successfully.
 
     In case of failure, PAM continues to report the sign-in failure to the agent log file, and then skips one module to the `pam_deny.so` module, which blocks access.
 
@@ -102,6 +102,6 @@ This procedure describes how to verify that you've configured PAM correctly to a
 
 1. Repeat the verification procedure with Telnet and terminal connections.
 
-## Next steps
+## Related content
 
-For more information, see [Micro agent event collection](concept-event-aggregation.md).
+[Micro agent event collection](concept-event-aggregation.md).

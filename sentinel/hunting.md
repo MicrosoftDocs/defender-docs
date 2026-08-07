@@ -1,5 +1,5 @@
 ---
-title: Hunting capabilities in Microsoft Sentinel
+title: Hunting Capabilities in Microsoft Sentinel
 description: Use Microsoft Sentinel's built-in hunting queries to guide you into asking the right questions to find issues in your data.
 ms.topic: how-to
 ms.date: 06/15/2026
@@ -171,7 +171,6 @@ The following table describes some methods of using Jupyter notebooks to help yo
 |**Links to external data**     | While Microsoft Sentinel tables have most telemetry and event data, Jupyter Notebooks can link to any data that's accessible over your network or from a file. Using Jupyter Notebooks allows you to include data such as: <br><br>- Data in external services that you don't own, such as geolocation data or threat intelligence sources<br>- Sensitive data that's stored only within your organization, such as human resource databases or lists of high-value assets<br>- Data that you haven't yet migrated to the cloud.        |
 |**Specialized data processing, machine learning, and visualization tools**     | Jupyter Notebooks provides more visualizations, machine learning libraries, and data processing and transformation features. <br><br>For example, use Jupyter Notebooks with the following [Python](https://python.org) capabilities:<br>- [pandas](https://pandas.pydata.org/) for data processing, cleanup, and engineering<br>- [Matplotlib](https://matplotlib.org), [HoloViews](https://holoviews.org), and [Plotly](https://plot.ly) for visualization<br>- [NumPy](https://www.numpy.org) and [SciPy](https://www.scipy.org) for advanced numerical and scientific processing<br>- [scikit-learn](https://scikit-learn.org/stable/index.html) for machine learning<br>- [TensorFlow](https://www.tensorflow.org/), [PyTorch](https://pytorch.org), and [Keras](https://keras.io/) for deep learning<br><br>**Tip**: Jupyter Notebooks supports multiple language kernels. Use *magics* to mix languages within the same notebook, by allowing the execution of individual cells using another language. For example, you can retrieve data using a PowerShell script cell, process the data in Python, and use JavaScript to render a visualization.        |
 
-
 ### MSTIC, Jupyter, and Python security tools
 
 The [Microsoft Threat Intelligence Center (MSTIC)](https://www.microsoft.com/security/blog/topic/threat-intelligence) is a team of Microsoft security analysts and engineers who author security detections for several Microsoft platforms and work on threat identification and investigation.
@@ -230,4 +229,5 @@ For more information about threat hunting in Microsoft Sentinel, see the followi
 
 - [Jupyter notebooks with Microsoft Sentinel hunting capabilities](notebooks.md)
 - [Keep track of data during hunting with Microsoft Sentinel](bookmarks.md)
-- Learn from an example of using custom analytics rules when [monitoring Zoom](https://techcommunity.microsoft.com/t5/azure-sentinel/monitoring-zoom-with-azure-sentinel/ba-p/1341516) with a [custom Microsoft Sentinel connector](create-custom-connector.md).
+- [Monitoring Zoom with Azure Sentinel](https://techcommunity.microsoft.com/t5/azure-sentinel/monitoring-zoom-with-azure-sentinel/ba-p/1341516)
+- [Resources for creating Microsoft Sentinel custom connectors](create-custom-connector.md)
