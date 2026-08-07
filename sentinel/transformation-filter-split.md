@@ -6,7 +6,7 @@ ms.author: edbaynash
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/20/2026
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1014
 

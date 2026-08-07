@@ -389,7 +389,7 @@ This policy setting controls the level of intensity that Microsoft Defender Anti
 
    CSP: [SignatureUpdateFallbackOrder](/windows/client-management/mdm/policy-csp-defender#signatureupdatefallbackorder)
 
-  This policy setting allows you to specify the order in which different security intelligence update sources are contacted. Although the underlying policy is stored as a pipe-separated string, Intune presents this setting as a prioritized list of update sources. Administrators should configure the desired order using the Intune UI, where sources are evaluated from top to bottom. Possible values include: "InternalDefinitionUpdateServer," "MicrosoftUpdateServer," "MMPC," and "FileShares."
+  This policy setting allows you to specify the order in which different security intelligence update sources are contacted. Enter the value as a pipe-separated string, listing the security intelligence update sources in the desired order. Possible values include: "InternalDefinitionUpdateServer," "MicrosoftUpdateServer," "MMPC," and "FileShares."
 
   - **Not configured** - The setting reverts to the system default. Meaning, security intelligence update sources are contacted in a default order.
   - **Enabled** - Security intelligence update sources are contacted in the order specified.

@@ -1,5 +1,5 @@
 ---
-title: Set up single sign-on for Microsoft Defender for IoT sensor console
+title: Set up Single Sign-on for Microsoft Defender for IoT Sensor Console
 description: Configure single sign-on (SSO) for the Microsoft Defender for IoT sensor console using Microsoft Entra ID in the Azure portal.
 ms.date: 06/12/2026
 ms.topic: how-to
@@ -25,8 +25,8 @@ Before you begin:
 - Add outbound allow rules to your firewall, proxy server, and so on. You can access the list of required endpoints from the [Sites and sensors page](how-to-manage-sensors-on-the-cloud.md#endpoint).
 - If you don't have existing Microsoft Entra ID user groups to use for SSO authorization, work with your organization's identity manager to create relevant user groups.
 - Verify that you have the following permissions:
-    - A Member user on Microsoft Entra ID. 
-    - Admin, Contributor, or Security Admin permissions on the Defender for IoT subscription.
+  - A Member user on Microsoft Entra ID. 
+  - Admin, Contributor, or Security Admin permissions on the Defender for IoT subscription.
 - Ensure that each user has a **First name**, **Last name**, and **User principal name**.
 - If needed, set up [Multifactor authentication (MFA)](/entra/identity/authentication/tutorial-enable-azure-mfa).
 
@@ -44,10 +44,10 @@ To create an application ID in Microsoft Entra ID, perform the following steps:
     - Under **Name**, type a name for your application.
     - Under **Supported account types**, select **Accounts in this organizational directory only (Microsoft only - single tenant)**.
     - Under **Redirect URI**, add an IP or hostname for the first sensor on which you want to enable SSO. You continue to add URIs for the other sensors in the next step, [Add your sensor URIs](#add-your-sensor-uris).
-    
+
     > [!NOTE]
     > Adding the URI at this stage is required for SSO to work. 
-    
+
     :::image type="content" source="media/set-up-sso/register-application.png" alt-text="Screenshot of registering an application on Microsoft Entra ID." lightbox="media/set-up-sso/register-application.png":::
 
 1. Select **Register**.
@@ -61,7 +61,7 @@ Add the redirect URIs for each sensor to your registered application:
 1. Under **Redirect URIs**, the URI for the first sensor, added in [Create application ID on Microsoft Entra ID](#create-application-id-on-microsoft-entra-id), is displayed under **Redirect URIs**. To add the rest of the URIs: 
     1. Select **Add URI** to add another row, and type an IP or hostname. 
     1. Repeat this step for the rest of the connected sensors. 
-    
+
         When Microsoft Entra ID adds the URIs successfully, a "Your redirect URI is eligible for the Authorization Code Flow with PKCE" message is displayed.
 
         :::image type="content" source="media/set-up-sso/authentication.png" alt-text="Screenshot of setting up URIs for your application on the Microsoft Entra ID Authentication page." lightbox="media/set-up-sso/authentication.png":::        
@@ -114,7 +114,7 @@ Create the SSO configuration in Defender for IoT to enable single sign-on for yo
 ## Test sign-in with SSO
 
 To test signing in with SSO:
-​
+
 1. Open [Defender for IoT](https://portal.azure.com/#view/Microsoft_Azure_IoT_Defender/IoTDefenderDashboard/%7E/Getting_started) on the Azure portal, and select **SSO Sign-in**.
 
     :::image type="content" source="media/set-up-sso/sso-sign-in.png" alt-text="Screenshot of the sensor console login screen with SSO.":::
@@ -122,12 +122,10 @@ To test signing in with SSO:
 1. For the first sign in, in the **Sign in** page, type your personal credentials (your work email and password). 
 
    :::image type="content" source="media/set-up-sso/sso-first-sign-in-credentials.png" alt-text="Screenshot of the Sign in screen when signing in to Defender for IoT on the Azure portal via SSO.":::
- 
-The Defender for IoT **Overview** page is displayed.   ​
-​
-## Next steps
 
-For more information, see:
+The Defender for IoT **Overview** page is displayed.
+
+## Related content
 
 - [Azure user roles for OT and Enterprise IoT monitoring with Defender for IoT](roles-azure.md)
 - [Create and manage on-premises users for OT monitoring](how-to-create-and-manage-users.md)

@@ -1,5 +1,5 @@
 ---
-title: Manage Azure users for Microsoft Defender for IoT
+title: Manage Azure Users for Microsoft Defender for IoT
 description: Learn how to manage user permissions in the Azure portal for Microsoft Defender for IoT services.
 ms.date: 06/12/2026
 ms.topic: how-to
@@ -45,7 +45,7 @@ Site-based access control activities also allow you to check the following detai
 > Sites and site-based access control is relevant only for OT monitoring sites, and isn't supported for default sites or Enterprise IoT monitoring.
 >
 
-**To manage site-based access control**:
+To manage site-based access control:
 
 1. In the Azure portal, go to the **Defender for IoT** > **Sites and sensors** page, and select the OT site where you want to assign permissions.
 
@@ -67,8 +67,6 @@ For more information about site-based access control and user roles, see:
 - [Check access for a user to Azure resources](/azure/role-based-access-control/check-access)
 
 ## Related content
-
-For more information about Defender for IoT user roles and on-premises user management, see:
 
 - [Azure user roles for OT and Enterprise IoT monitoring with Defender for IoT](roles-azure.md)
 - [Create and manage on-premises users for OT monitoring](how-to-create-and-manage-users.md)

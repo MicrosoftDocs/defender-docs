@@ -27,7 +27,7 @@ If your organization is using [Defender for Endpoint](/windows/security/threat-p
 
 [!INCLUDE [AIR deprecation note](includes/air-deprecation-note.md)]
 
-If you're using Defender for Endpoint, you can specify an automation level so that when a threat is detected on a device, the entity can be remediated automatically or only upon approval by your security team. You can configure automated investigation and remediation with device groups. 
+If you're using Defender for Endpoint, you can specify an automation level so that when a threat is detected on a device, the detected threat can be remediated automatically or only upon approval by your security team. You can configure automated investigation and remediation with device groups. 
 
 > [!NOTE]
 > In Defender for Business, automated investigation is configured automatically. See [Review settings for advanced features in Defender for Business](/defender-business/mdb-configure-security-settings#review-settings-for-advanced-features).

@@ -1,5 +1,5 @@
 ---
-title: Investigate devices in the OT sensor device map
+title: Investigate Devices in the OT Sensor Device Map
 description: Learn how to use the device map on an OT sensor which provides a graphical representation of devices and the connections between them.
 ms.date: 06/12/2026
 ms.topic: how-to
@@ -79,7 +79,7 @@ To see device details, select a device and expand the device details pane on the
 
 By default, IT devices are automatically aggregated by [OT and IoT subnet definitions](../how-to-control-what-traffic-is-monitored.md#define-ot-and-iot-subnets), so that the map focuses on your local OT and IoT networks.
 
-**To expand an IT subnet**:
+To expand an IT subnet:
 
 1. Sign into your OT sensor and select **Device map**.
 1. Locate your subnet on the map. You might need to zoom in on the map to view a subnet icon, which looks like several machines inside a box. For example: 
@@ -90,14 +90,14 @@ By default, IT devices are automatically aggregated by [OT and IoT subnet defini
 
 1. In the confirmation message that appears above the map, select **OK**.
 
-**To collapse an IT subnet:**
+To collapse an IT subnet:
 
 1. Sign into your OT sensor and select **Device map**. 
 1. Select one or more expanded subnets and then select **Collapse All**.
 
 ### View traffic details between connected devices
 
-**To view traffic details between connected devices**:
+To view traffic details between connected devices:
 
 1. Sign into your OT sensor and select **Device map**.
 1. Locate two connected devices on the map. You might need to zoom in on the map to view a device icon, which looks like a monitor.
@@ -156,14 +156,14 @@ To edit device properties or perform other actions on a device from the device m
 
 ## Merge devices
 
-You may want to merge devices if the OT sensor detected multiple network entities associated with a unique device, such as a PLC with four network cards, or a single laptop with both WiFi and a physical network card.
+You might want to merge devices if the OT sensor detected multiple network entities associated with a unique device, such as a PLC with four network cards, or a single laptop with both WiFi and a physical network card.
 
 You can only merge authorized devices. For more information, see [Unauthorized devices in Device inventory](device-inventory.md#unauthorized-devices). 
 
 > [!IMPORTANT]
 > You can't undo a device merge. If you mistakenly merged two devices, delete the devices and then wait for the sensor to rediscover both.
 
-**To merge multiple devices**:
+To merge multiple devices:
 
 1. Sign into your OT sensor and select **Device map**.
 
@@ -179,7 +179,7 @@ As opposed to alerts, which provide details about changes in your traffic that m
 
 For example, you might receive a notification about an inactive device that needs to be reconnected, or removed if it's no longer part of the network.
 
-**To view and handle device notifications**:
+To view and handle device notifications:
 
 1. Sign into the OT sensor and select **Device map** > **Notifications**.
 
@@ -189,7 +189,7 @@ For example, you might receive a notification about an inactive device that need
 
     :::image type="content" source="media/how-to-work-with-maps/device-notifications.png" alt-text="Screenshot of device notifications on an OT sensor's Device map page." lightbox="media/how-to-work-with-maps/device-notifications.png":::
 
-1. Each notification may have different mitigation options. Do one of the following:
+1. Each notification might have different mitigation options. Do one of the following:
 
     - Handle one notification at a time, selecting a specific mitigation action, or selecting **Dismiss** to close the notification with no activity.
     - Select **Select All** to show which notifications can be [handling multiple notifications together](#handling-multiple-notifications-together). Clear selections for specific notifications, and then select **Accept All** or **Dismiss All** to handle any remaining selected notifications together.
@@ -201,13 +201,13 @@ For example, you might receive a notification about an inactive device that need
 <a name="handling-multiple-notifications-together"></a>
 ### Handle multiple notifications together
 
-You may have situations where you'd want to handle multiple notifications together, such as:
+You might have situations where you'd want to handle multiple notifications together, such as:
 
 - IT upgraded the OS across multiple network servers and you want to learn all of the new server versions.
 
 - A group of devices is no longer active, and you want to instruct the OT sensor to remove the devices from the OT sensor.
 
-When you handle multiple notifications together, you may still have remaining notifications that need to be handled manually, such as for new IP addresses or no subnets detected.
+When you handle multiple notifications together, you might still have remaining notifications that need to be handled manually, such as for new IP addresses or no subnets detected.
 
 <a name="device-notification-responses"></a>
 ### Respond to device notifications
@@ -216,7 +216,7 @@ Each device notification type has specific available responses. Use the recommen
 
 | Type | Description | Available responses | Auto-resolve|
 |--|--|--|--|
-| **New IP detected** | A new IP address is associated with the device. This may occur in the following scenarios: <br><br>- A new or additional IP address was associated with a device already detected, with an existing MAC address.<br><br> - A new IP address was detected for a device that's using a NetBIOS name. <br /><br /> - An IP address was detected as the management interface for a device associated with a MAC address. <br /><br /> - A new IP address was detected for a device that's using a virtual IP address. | - **Set Additional IP to Device**: Merge the devices <br />- **Replace Existing IP**: Replaces any existing IP address with the new address <br /> - **Dismiss**: Remove the notification. |**Dismiss** |
+| **New IP detected** | A new IP address is associated with the device. This might occur in the following scenarios: <br><br>- A new or additional IP address was associated with a device already detected, with an existing MAC address.<br><br> - A new IP address was detected for a device that's using a NetBIOS name. <br /><br /> - An IP address was detected as the management interface for a device associated with a MAC address. <br /><br /> - A new IP address was detected for a device that's using a virtual IP address. | - **Set Additional IP to Device**: Merge the devices <br />- **Replace Existing IP**: Replaces any existing IP address with the new address <br /> - **Dismiss**: Remove the notification. |**Dismiss** |
 | **No subnets configured** | No subnets are currently configured in your network. <br /><br /> We recommend configuring subnets for the ability to differentiate between OT and IT devices on the map. | - **Open Subnet Configuration** and [configure subnets](how-to-manage-individual-sensors.md#update-the-ot-sensor-network-configuration). <br />- **Dismiss**: Remove the notification. |**Dismiss** |
 | **Operating system changes** | One or more new operating systems have been associated with the device. | - Select the name of the new OS that you want to associate with the device.<br /> - **Dismiss**:  Remove the notification. | Set with new operating system only if not already configured manually. <br><br>If the operating system has already been configured: **Dismiss**. |
 | **New subnets** | New subnets were discovered. |-  **Learn**: Automatically add the subnet.<br />- **Open Subnet Configuration**: Add all missing subnet information.<br />- **Dismiss**: <br />Remove the notification. |**Dismiss** |
@@ -227,7 +227,7 @@ If you're working with an OT sensor with sites and zones configured, device maps
 
 On the OT sensor console, zone maps show all network elements related to a selected zone, including OT sensors, detected devices, and more.
 
-**To view a zone map**:
+To view a zone map:
 
 1. Sign into an OT sensor and select **Site Management** > **View Zone Map** for the zone you want to view. For example:
 
@@ -272,6 +272,6 @@ The following table lists the device groups available out-of-the-box on the OT s
 | **Subnets** | Devices that belong to a specific subnet. |
 | **VLAN** | Devices associated with a specific VLAN ID. |
 
-## Next steps
+## Related content
 
 For more information, see [Investigate sensor detections in a Device Inventory](how-to-investigate-sensor-detections-in-a-device-inventory.md).

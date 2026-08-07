@@ -1,5 +1,5 @@
 ---
-title: Create incident tasks in Microsoft Sentinel using automation rules
+title: Create Incident Tasks in Microsoft Sentinel using Automation Rules
 description: Use automation rules to automatically add incident task lists in Microsoft Sentinel and standardize analyst response workflows across incidents.
 ms.topic: how-to
 ms.author: monaberdugo
@@ -46,7 +46,6 @@ Another article, at the following links, addresses scenarios that apply more to 
 ## Prerequisites
 
 The **Microsoft Sentinel Responder** role is required to create automation rules and to view and edit incidents, both of which are necessary to add, view, and edit tasks.
-
 
 ## View automation rules with incident task actions
 
@@ -117,10 +116,11 @@ Give your automation rule a name that describes what it does.
     1. The order of execution of the automation rules, as determined by the number in the **Order** setting, and...
     1. The order of the **Add task** actions defined within each automation rule.
 
-## Next steps
+## Related content
 
-- Learn more about [incident tasks](incident-tasks.md).
-- Learn how to [investigate incidents](investigate-cases.md).
-- Learn how to add tasks to groups of incidents automatically using [playbooks](create-tasks-playbook.md).
-- Learn how to [use tasks to handle incident workflow in Microsoft Sentinel](work-with-tasks.md).
-- Learn more about [automation rules](automate-incident-handling-with-automation-rules.md) and how to [create and manage automation rules](./create-manage-use-automation-rules.md).
+- [Use tasks to manage incidents in Microsoft Sentinel in the Azure portal](incident-tasks.md)
+- [Investigate incidents with Microsoft Sentinel (legacy)](investigate-cases.md)
+- [Create and perform incident tasks in Microsoft Sentinel using playbooks](/azure/sentinel/automation/create-tasks-playbook)
+- [Work with incident tasks in Microsoft Sentinel in the Azure portal](work-with-tasks.md).
+- [Automate threat response in Microsoft Sentinel with automation rules](automate-incident-handling-with-automation-rules.md)
+- [Create and use Microsoft Sentinel automation rules to manage response](create-manage-use-automation-rules.md).

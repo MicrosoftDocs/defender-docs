@@ -244,6 +244,8 @@ Before creating the connector, configure access in your Databricks environment a
 
 After selecting **Connect**, the wizard closes and the instance count for Databricks increases.
 
+---
+
 ## Verify tables from your connector instance
 
 After creating a connector instance check that the tables you federated are available in Microsoft Sentinel.
@@ -259,6 +261,8 @@ After creating a connector instance check that the tables you federated are avai
 1. On the **Schema** tab, select **Refresh** to refresh the table schema associated with the federated table.
 
 :::image type="content" source="./media/data-federation-setup/verify-tables.png" lightbox="./media/data-federation-setup/verify-tables.png" alt-text="Screenshot showing the federated table schema.":::
+
+ 
 
 ## Manage connector instances
 
@@ -284,6 +288,8 @@ Use the following checks to diagnose common issues with federated data connector
 
 - Verify the Sentinel platform managed identity prefixed by `msg-resources-` has the correct permissions on Azure Key Vault.
 - If your connection source is Azure Databricks or Azure Data Lake Storage Gen2, ensure the Key Vault secret contains the correct client secret for your service principal.
+- If your connection source is Azure Databricks, confirm the target uses hybrid workspace type and that external data access has been enabled for the workspace.
+
 - The Key Vault networking must be set to **Allow public access from all networks** during the connector configuration, which is the default configuration of Key Vault. It can be changed after connector creation or editing.
 - Confirm the external data source is publicly accessible.
 - Check that the service principal has appropriate permissions on the target data source for Azure Databricks and ADLS.

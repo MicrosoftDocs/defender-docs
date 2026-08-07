@@ -1,5 +1,5 @@
 ---
-title: Provision OT sensors for cloud management
+title: Provision OT Sensors for Cloud Management
 description: Learn how to ensure that your OT sensor can connect to Azure by accessing a list of required endpoints to define in your firewalls rules.
 ms.topic: how-to
 ms.date: 06/12/2026
@@ -29,7 +29,7 @@ This procedure is also used to configure [direct connections](../architecture-co
 
 For more information, see [Methods for connecting sensors to Azure](../architecture-connections.md).
 
-**To download required endpoint details**:
+To download required endpoint details:
 
 1. On the Azure portal, go to Defender for IoT > **Sites and sensors**.
 

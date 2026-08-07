@@ -37,7 +37,7 @@ sections:
         answer: |
           Devices must meet all of the following requirements:
 
-          - Devices must be running certain versions of Windows or macOS. See [On what devices can tamper protection be enabled])(prevent-changes-to-security-settings-with-tamper-protection.md).
+          - Devices must be running certain versions of Windows or macOS. (See [On what devices can tamper protection be enabled])(prevent-changes-to-security-settings-with-tamper-protection.md).
           - Devices must be [onboarded to Microsoft Defender for Endpoint](onboarding.md).
           - Devices must be using anti-malware platform version `4.18.2010.7` (or later) and anti-malware engine version `1.1.17600.5` (or later). ([Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md).)
           - [Cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) must be turned on.

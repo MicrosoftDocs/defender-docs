@@ -24,9 +24,9 @@ Hunting bookmarks in Microsoft Sentinel helps you preserve the queries and query
 This article explains how to create, view, and manage hunting bookmarks in Microsoft Sentinel and how to use them during investigations.
 
 >[!NOTE]
-> **Microsoft Sentinel hunting bookmarks:** Bookmarks can only be created in the Azure portal, under **Microsoft Sentinel** > **Threat management** > **Hunting**. In the Microsoft Defender portal, you can view bookmarks that were already created, but you can't add new ones.
+> **Microsoft Sentinel hunting bookmarks**: You can only create bookmarks in the Azure portal, under **Microsoft Sentinel** > **Threat management** > **Hunting**. In the Microsoft Defender portal, you can view bookmarks that were already created, but you can't add new ones.
 >
-> **Advanced hunting bookmarks:** Bookmarks aren't available in Advanced hunting, which provides a unified query experience across Microsoft Defender and Microsoft Sentinel data. However, bookmarks are still available in **Microsoft Sentinel** > **Threat management** > **Hunting**, which provides the Microsoft Sentinel-specific hunting experience. You can also use alternatives such as incident tags, saved queries, or custom hunting tables to preserve and track investigation context.
+> **Advanced hunting bookmarks**: Bookmarks aren't available in Advanced hunting, which provides a unified query experience across Microsoft Defender and Microsoft Sentinel data. However, bookmarks are still available in **Microsoft Sentinel** > **Threat management** > **Hunting**, which provides the Microsoft Sentinel-specific hunting experience. You can also use alternatives such as incident tags, saved queries, or custom hunting tables to preserve and track investigation context.
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
@@ -52,7 +52,7 @@ Create a bookmark to preserve the queries, results, your observations, and findi
 
 1. On the right, in the **Add bookmark** pane, optionally, update the bookmark name, add tags, and notes to help you identify what was interesting about the item.
 
-1. Bookmarks can be optionally mapped to MITRE ATT&CK techniques or sub-techniques. MITRE ATT&CK mappings are inherited from mapped values in hunting queries, but you can also create them manually. Select the MITRE ATT&CK tactic associated with the desired technique from the drop-down menu in the **Tactics & Techniques** section of the **Add bookmark** pane. The menu expands to show all the MITRE ATT&CK techniques, and you can select multiple techniques and sub-techniques in this menu.
+1. You can optionally map bookmarks to MITRE ATT&CK techniques or sub-techniques. MITRE ATT&CK mappings are inherited from mapped values in hunting queries, but you can also create them manually. Select the MITRE ATT&CK tactic associated with the desired technique from the drop-down menu in the **Tactics & Techniques** section of the **Add bookmark** pane. The menu expands to show all the MITRE ATT&CK techniques, and you can select multiple techniques and sub-techniques in this menu.
 
     :::image type="content" source="media/bookmarks/mitre-attack-mapping.png" alt-text="Screenshot of how to map Mitre Attack tactics and techniques to bookmarks.":::
 
@@ -111,7 +111,7 @@ Add bookmarks to an incident from the bookmarks tab on the **Hunting** page.
     - For a new incident: Optionally update the details for the incident, and then select **Create**.
     - For adding a bookmark to an existing incident: Select one incident, and then select **Add**.
 
-1. To view the bookmark within the incident, 
+1. To view the bookmark within the incident:
    1. Go to **Microsoft Sentinel** > **Threat management** > **Incidents**.
    1. Select the incident with your bookmark and **View full details**.
    1. On the incident page, in the left pane, select the **Bookmarks**.

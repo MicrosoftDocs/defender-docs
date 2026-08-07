@@ -1,5 +1,5 @@
 ---
-title: Configure and customize Defender-IoT-micro-agent for Eclipse ThreadX
+title: Configure and Customize Defender-IoT-micro-agent for Eclipse ThreadX
 description: Learn about how to configure and customize your Defender-IoT-micro-agent for Eclipse ThreadX.
 ms.topic: how-to
 ms.date: 06/12/2026
@@ -9,18 +9,18 @@ ms.custom: msecd-doc-authoring-1014
 
 # Configure and customize Defender-IoT-micro-agent for Eclipse ThreadX
 
-This article describes how to configure the Defender-IoT-micro-agent for your Eclipse ThreadX device, to meet your network, bandwidth, and memory requirements. You learn how to select a target distribution, tune device behavior settings, adjust data collection intervals, and enable or disable individual collectors for resource-constrained devices.
+This article describes how to configure the Defender-IoT-micro-agent for your Eclipse ThreadX device to meet your network, bandwidth, and memory requirements. You learn how to select a target distribution, tune device behavior settings, adjust data collection intervals, and enable or disable individual collectors for resource-constrained devices.
 
 [!INCLUDE [device-agents-note](../includes/device-agents-note.md)]
 
 <a name="configuration-steps"></a>
 ## Configure the Defender-IoT-micro-agent
 
-You must select a target distribution file that has a `*.dist` extension, from the `netxduo/addons/azure_iot/azure_iot_security_module/configs` directory.  
+You must select a target distribution file that has a `*.dist` extension from the `netxduo/addons/azure_iot/azure_iot_security_module/configs` directory.  
 
-When using a CMake compilation environment, you must set a command line parameter to `IOT_SECURITY_MODULE_DIST_TARGET` for the chosen value. For example, `-DIOT_SECURITY_MODULE_DIST_TARGET=RTOS_BASE`.
+When using a CMake compilation environment, you must set a command line parameter to `IOT_SECURITY_MODULE_DIST_TARGET` for the chosen value. For example: `-DIOT_SECURITY_MODULE_DIST_TARGET=RTOS_BASE`.
 
-In an IAR, or other non CMake compilation environment, you must add the `netxduo/addons/azure_iot/azure_iot_security_module/inc/configs/<target distribution>/` path to any known included paths. For example, `netxduo/addons/azure_iot/azure_iot_security_module/inc/configs/RTOS_BASE`.
+In an IAR, or other non CMake compilation environment, you must add the `netxduo/addons/azure_iot/azure_iot_security_module/inc/configs/<target distribution>/` path to any known included paths. For example: `netxduo/addons/azure_iot/azure_iot_security_module/inc/configs/RTOS_BASE`.
 
 <a name="device-behavior"></a>
 ## Configure device behavior settings
@@ -36,7 +36,7 @@ The default behavior of each configuration is provided in the following tables:
 <a name="general-configuration"></a>
 ## Configure general micro agent settings
 
-The following table lists the general configuration settings and their default values.
+The following table lists the general configuration settings and their default values:
 
 | Name | Type | Default | Details |
 | - | - | - | - |
@@ -48,7 +48,7 @@ The following table lists the general configuration settings and their default v
 <a name="collection-configuration"></a>
 ## Configure data collection settings
 
-The following table lists the data collection configuration settings and their default values.
+The following table lists the data collection configuration settings and their default values:
 
 | Name | Type | Default | Details |
 | - | - | - | - |
@@ -74,7 +74,7 @@ To customize your collector network activity configuration, use the following:
 <a name="collectors"></a>
 ### Available collectors
 
-The following table lists the available collector enablement flags.
+The following table lists the available collector enablement flags:
 
 | Name | Type | Default | Details |
 | - | - | - | - |
@@ -82,18 +82,17 @@ The following table lists the available collector enablement flags.
 | ASC_COLLECTOR_NETWORK_ACTIVITY_ENABLED  | Boolean | ON | Enables the network activity collector. |
 | ASC_COLLECTOR_SYSTEM_INFORMATION_ENABLED | Boolean | ON | Enables the system information collector. |
 
-Other configurations flags are advanced, and have unsupported features. Contact support to change these advanced configuration flags, or for more information.
- 
+Other configurations flags are advanced and have unsupported features. Contact support to change these advanced configuration flags, or for more information.
+
 ## Supported security alerts and recommendations
 
 The Defender-IoT-micro-agent for Eclipse ThreadX supports specific security alerts and recommendations. Make sure to [customize the security alert and recommendation values for Eclipse ThreadX](concept-threadx-security-alerts-recommendations.md) for your service.
 
 ## Log Analytics (optional)
 
-You can enable and configure Log Analytics to investigate device events and activities. Read about how to setup, and use [Log Analytics with the Defender for IoT service](how-to-security-data-access.md#log-analytics) to learn more. 
+You can enable and configure Log Analytics to investigate device events and activities. Learn about how to set up and use [Log Analytics with the Defender for IoT service](how-to-security-data-access.md#log-analytics).
 
-## Next steps
+## Related content
 
-
-- Review and customize Defender-IoT-micro-agent for Eclipse ThreadX [security alerts and recommendations](concept-threadx-security-alerts-recommendations.md)
-- Refer to the [Defender-IoT-micro-agent for Eclipse ThreadX API](threadx-security-module-api.md) as needed.
+- [Defender-IoT-micro-agent for Eclipse ThreadX security alerts and recommendations (preview)](concept-threadx-security-alerts-recommendations.md)
+- [Defender-IoT-micro-agent for Eclipse ThreadX API (preview)](threadx-security-module-api.md)

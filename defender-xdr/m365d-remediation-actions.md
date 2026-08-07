@@ -28,12 +28,12 @@ During and after an automated investigation, remediation actions are identified 
 > [!IMPORTANT]
 > Whether remediation actions are taken automatically or only upon approval depends on certain settings, such as automation levels. To learn more, see the following articles:
 >
-> - [Configure your automated investigation and response capabilities in Microsoft Defender](m365d-configure-auto-investigation-response.md)
+> - [Configure your automated investigation and response capabilities in Microsoft Defender XDR](m365d-configure-auto-investigation-response.md)
 > - [Configure action accounts in Microsoft Defender for Identity](/defender-for-identity/manage-action-accounts)
 > - [How threats are remediated on devices](/defender-endpoint/automated-investigations)
 > - [Threats and remediation actions on email & collaboration content](/defender-office-365/air-remediation-actions#threats-and-remediation-actions)
 
-The following table summarizes remediation actions that are currently supported in Microsoft Defender.
+The following table summarizes remediation actions that are currently supported in Microsoft Defender XDR.
 
 |Device (endpoint) remediation actions  |Email remediation actions  |Users (accounts)  |
 |:---------|:---------|----------|

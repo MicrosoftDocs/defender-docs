@@ -1,6 +1,6 @@
 ---
-title: Step 3. Plan for Microsoft Defender integration with your SOC catalog of services
-description: Evaluate your SOC catalog of services and learn how Microsoft Defender components map to service areas such as threat intelligence, incident response, and endpoint detection.
+title: Step 3. Plan for Microsoft Defender XDR integration with your SOC catalog of services
+description: Evaluate your SOC catalog of services and learn how Microsoft Defender XDR components map to service areas such as threat intelligence, incident response, and endpoint detection.
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
@@ -44,7 +44,7 @@ An established Security Operations Center (SOC) should have a catalog of service
 - Data loss prevention
 - Brand monitoring
 
-The components of Microsoft Defender are:
+The components of Microsoft Defender XDR are:
 
 - **Microsoft Defender for Identity** (formerly Azure Advanced Threat Protection, also known as Azure ATP) is a cloud-based security solution that uses Active Directory Domain Services (AD DS) signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at organizations.
 
@@ -56,7 +56,7 @@ The components of Microsoft Defender are:
 
 Because Microsoft Defender XDR components and technologies span various functions, your SOC team will need to determine which roles and responsibilities are best suited to manage each component of Microsoft Defender XDR and align to service function.
 
-To integrate the capabilities of Microsoft Defender, you will need to refine the SOC services. For more information about the capabilities of Microsoft Defender, see the following articles:
+To integrate the capabilities of Microsoft Defender XDR, you will need to refine your SOC catalog of services. For more information about the capabilities of Microsoft Defender XDR, see the following articles:
 
 - [What is Microsoft Defender for Endpoint?](/defender-endpoint/microsoft-defender-endpoint)
 - [What is Microsoft Defender for Identity?](/defender-for-identity/what-is)
@@ -65,7 +65,5 @@ To integrate the capabilities of Microsoft Defender, you will need to refine the
 
 ## Next step
 
-<<<<<<< HEAD
-[Next: Define Microsoft Defender roles, responsibilities, and oversight](integrate-microsoft-365-defender-secops-roles.md)
-
+[Next: Define Microsoft Defender XDR roles, responsibilities, and oversight](integrate-microsoft-365-defender-secops-roles.md)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

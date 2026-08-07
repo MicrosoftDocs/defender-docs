@@ -169,6 +169,12 @@ With the Defender for Endpoint APIs, you can automate workflows and integrate wi
 
 To learn more, see [Defender for Endpoint APIs](api/management-apis.md).
 
+## Licensing
+
+Defender for Endpoint Plan 1 is available as a standalone subscription or as part of Microsoft 365 E3. For server deployments, you can license Defender for Endpoint Plan 1 for servers separately.
+
+If you're also using [Microsoft Defender for Servers](/azure/defender-for-cloud/defender-for-servers-overview) as part of Defender for Cloud, check if you're eligible for a [licensing discount when you have both Defender for Endpoint and Defender for Servers](/azure/defender-for-cloud/faq-defender-for-servers#can-i-get-a-discount-if-i-already-have-a-microsoft-defender-for-endpoint-license-).
+
 ## Next steps
 
 - [Set up and configure Defender for Endpoint Plan 1](mde-p1-setup-configuration.md)

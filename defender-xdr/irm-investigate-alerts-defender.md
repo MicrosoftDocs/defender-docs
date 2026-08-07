@@ -49,7 +49,7 @@ If you're new to Microsoft Purview and insider risk management, consider reading
 To investigate insider risk management alerts in the Microsoft Defender portal, you need to do the following:
 
 - Confirm your Microsoft 365 subscription supports insider risk management access. Know more about [subscription and licensing](/purview/insider-risk-management-configure#subscriptions-and-licensing).
-- Confirm your access to Microsoft Defender. See [Microsoft Defender licensing requirements](prerequisites.md#licensing-requirements).
+- Confirm your access to Microsoft Defender XDR. See [Microsoft Defender XDR licensing requirements](prerequisites.md#licensing-requirements).
 
 Data sharing with other security solutions must be turned on in the **Data sharing** settings in Microsoft Purview Insider Risk Management. Turning on **Share user risk details with other security solutions** in the Microsoft Purview portal enables users with the correct permissions to review user risk details in the user entity pages in the Microsoft Defender portal. 
 
@@ -128,7 +128,7 @@ The following alert classification mapping is used to sync the alert classificat
 |Information, expected activity (benign positive) </br> Includes security testing, confirmed activity, etc.|Dismissed|
 |False positive </br> Includes not malicious, not enough data to validate, etc.|Dismissed|
 
-For more information about alert statuses and classifications in Microsoft Defender, see [Manage alerts in Microsoft Defender](investigate-alerts.md#manage-alerts).
+For more information about alert statuses and classifications in Microsoft Defender XDR, see [Manage alerts in Microsoft Defender](investigate-alerts.md#manage-alerts).
 
 Any updates made to an insider risk management alert in the Microsoft Purview or the Microsoft Defender portals are automatically reflected in both portals. These updates might include:
 

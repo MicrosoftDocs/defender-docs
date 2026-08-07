@@ -1,5 +1,5 @@
 ---
-title: Configure a micro agent twin
+title: Configure a Micro Agent T#### win
 description: Learn how to view and update Microsoft Defender for IoT micro agent twin configuration properties, such as message frequency and collector settings, through the Azure portal.
 ms.topic: how-to
 ms.date: 06/12/2026
@@ -25,7 +25,7 @@ Before you configure the micro agent twin, make sure you have the following prer
 
 ## Micro agent configuration
 
-**To view and update the micro agent twin configuration**:
+To view and update the micro agent twin configuration:
 
 1. Navigate to the [Azure portal](https://portal.azure.com).
 
@@ -95,8 +95,5 @@ Before you configure the micro agent twin, make sure you have the following prer
 <a name="next-steps"></a>
 ## Related content
 
-For more information about micro agent configurations and event aggregation, see:
-
 - [Micro agent configurations](concept-micro-agent-configuration.md)
-
 - [Micro agent event collection](concept-event-aggregation.md)
