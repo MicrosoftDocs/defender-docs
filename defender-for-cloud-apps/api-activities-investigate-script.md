@@ -1,11 +1,11 @@
 ---
 title: Investigate activities using the API 
-description: This article provides information on how to use the API to investigate user activity in Defender for Cloud Apps.
-ms.date: 06/16/2026
+description: Use the Activities API in Defender for Cloud Apps to scan and retrieve large volumes of user activity data across connected cloud apps.
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Naama-Goldbart
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Investigate activities using the API
 
@@ -24,7 +24,7 @@ The activities API mode is optimized for scanning and retrieval of large quantit
 To scan activity data, send a POST request to the activities endpoint with scan mode enabled:
 
 1. Run the query on your data.
-1. If there are more records than could be listed in a single scan, the response includes `nextQueryFilters`. Use `nextQueryFilters` as the filter parameter in each subsequent query until the response returns all the results.
+1. If there are more records than could be listed in a single scan, the response includes `nextQueryFilters`. Use `nextQueryFilters` as the filter parameter in each subsequent query until all matching activity records have been returned.
 
 ## Request body parameters
 
@@ -81,9 +81,8 @@ while has_next:
 print('Got {} records in total'.format(len(records)))
 ```
 
-## Next steps
+<a name="next-steps"></a>
+## Related content
 
-> [!div class="nextstepaction"]
-> [Best practices for protecting your organization](best-practices.md)
-
-If you run into any problems, we're here to help. To get assistance or support for your product issue, please [contact Defender XDR support](/defender-xdr/contact-defender-support).
+- [Best practices for protecting your organization](best-practices.md)
+- [Contact Defender XDR support](/defender-xdr/contact-defender-support)
