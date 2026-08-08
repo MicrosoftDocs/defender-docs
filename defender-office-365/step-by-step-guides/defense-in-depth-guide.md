@@ -14,9 +14,9 @@ ms.collection:
 - tier3
 ms.topic: how-to
 search.appverid: met150
-ms.date: 06/12/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Get the best security value from Microsoft Defender for Office 365 when you have non-Microsoft email filtering
@@ -26,10 +26,12 @@ This guide is for you if:
 - You're licensed for Microsoft Defender for Office 365 and host your mailboxes in Office 365
 - You're also using a non-Microsoft solution for your email security
 
-The following information details how to get the most out of your investment, broken down into easy to follow steps.
+The following information explains how to get the most out of Microsoft Defender for Office 365 in a dual-use deployment, broken down into easy to follow steps.
 
 <a name="what-you-need"></a>
 ## Prerequisites
+
+Before you begin, make sure you have the following requirements in place:
 
 - Mailboxes hosted in Office 365
 - One or more of:
@@ -40,12 +42,14 @@ The following information details how to get the most out of your investment, br
 
 ## Step 1: Understand the value you already have
 
+Start by reviewing the protection and investigation capabilities already included with Microsoft Defender for Office 365.
+
 <a name="built-in-protection-features"></a>
 ### Review built-in protection features
 
 Built-in protection features provide a baseline layer of security that's included with Microsoft Defender for Office 365.
 
-- Built-in protection offers a base level of unobtrusive protection, and includes malware, zero day (Safe Attachments), and URL protection (Safe Links) in email (including internal email), SharePoint, OneDrive, and Microsoft Teams. URL protection provided in this state is via API call only. It doesn't wrap or rewrite URLs but does require a supported Outlook client. You can create your own custom Safe Links policies and Safe Attachments policies to expand your protection.
+- Built-in protection offers a base level of unobtrusive protection, and includes malware, zero day (Safe Attachments), and URL protection (Safe Links) in email (including internal email), SharePoint, OneDrive, and Microsoft Teams. URL protection provided by built-in protection is via API call only. It doesn't wrap or rewrite URLs but does require a supported Outlook client. You can create your own custom Safe Links policies and Safe Attachments policies to expand your protection.
 
   To learn more and watch an overview video on Safe Links, see [Complete Safe Links overview](../safe-links-about.md)
 
@@ -74,6 +78,8 @@ To learn more, watch an overview video, and get started, see [Overview - Advance
 
 ## Step 2: Enhance the value further with these simple steps
 
+After reviewing your existing protections, enable additional features and user education tools to close gaps and strengthen coverage.
+
 <a name="additional-protection-features"></a>
 ### Enable additional protection features
 
@@ -87,7 +93,7 @@ To learn more, see [Anti-phishing policies](../anti-phishing-policies-about.md)
 
   To learn more, see [Configure trusted ARC sealers](../email-authentication-arc-configure.md)
 
-- Enhanced Filtering for connectors allows IP address and sender information to be preserved through the non-Microsoft service. Enhanced Filtering for connectors improves accuracy for the filtering (protection) stack, post breach capabilities & authentication improvements.
+- Enhanced Filtering for connectors allows IP address and sender information to be preserved through the non-Microsoft service. Enhanced Filtering for connectors improves the accuracy of Microsoft Defender for Office 365 filtering, post-breach capabilities, and authentication analysis.
 
   To learn more, see [Enhanced filtering for connectors in Exchange Online](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors)
 
@@ -119,9 +125,9 @@ To get started delivering a simulation, see [How to setup automated attacks and 
 
 ## Step 3 and beyond: Become a dual-use hero
 
-After the initial setup, continue maturing your dual-use approach with ongoing operational practices.
+For dual-use Defender for Office 365 deployments alongside non-Microsoft email filtering, continue with these ongoing operational practices.
 
-- Your security teams should repeat many of the detection, investigation, response, and hunting activities described in the [Security Operations Guide for Defender for Office 365](../mdo-sec-ops-guide.md). This guidance offers a detailed description of tasks, cadence, and team assignments we would recommend.
+- Your security teams should repeat many of the detection, investigation, response, and hunting activities described in the [Security Operations Guide for Defender for Office 365](../mdo-sec-ops-guide.md). The Security Operations Guide offers a detailed description of recommended tasks, cadence, and team assignments.
 
   To learn more, see [Security Operations Guide for Defender for Office 365](../mdo-sec-ops-guide.md)
 
@@ -129,7 +135,7 @@ After the initial setup, continue maturing your dual-use approach with ongoing o
 
   *To learn more, see [How to configure quarantine permissions and policies](how-to-configure-quarantine-permissions-with-quarantine-policies.md)
 
-- The Migration guide contains lots of useful guidance on preparing and tuning your environment to ready it for a migration. But many of the steps in the Migration guide are *also* applicable to a dual-use scenario. Ignore the MX switch guidance in the final steps.
+- The [Migrate from a non-Microsoft protection service to Microsoft Defender for Office 365](../migrate-to-defender-for-office-365.md) guide contains useful guidance on preparing and tuning your environment for a migration. Many of the steps in that guide are *also* applicable to a dual-use scenario. Ignore the MX switch guidance in that guide, because you're maintaining a dual-use configuration rather than fully migrating.
 
   To learn more, see [Migrate from a non-Microsoft protection service to Microsoft Defender for Office 365](../migrate-to-defender-for-office-365.md)
 
