@@ -1,18 +1,18 @@
 ---
 title: Set up Single Sign-on for Microsoft Defender for IoT Sensor Console
 description: Configure single sign-on (SSO) for the Microsoft Defender for IoT sensor console using Microsoft Entra ID in the Azure portal.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #customer intent: As a security operator, I want to set up SSO for my users so that they can log in to the sensor console easily to multiple applications.
 ---
 
 # Set up single sign-on for the sensor console
 
-In this article, you learn how to set up single sign-on (SSO) for the Defender for IoT sensor console using Microsoft Entra ID. With SSO, your organization's users can simply sign into the sensor console, and don't need multiple login credentials across different sensors and sites. 
+This article shows how to set up single sign-on (SSO) for the Defender for IoT sensor console. SSO uses Microsoft Entra ID so your users can sign in once. They don't need separate credentials for each sensor or site. 
 
-Using Microsoft Entra ID simplifies the onboarding and offboarding processes, reduces administrative overhead, and ensures consistent access controls across the organization.
+Microsoft Entra ID makes it easier to add or remove users, reduces admin work, and keeps access controls consistent across your organization.
 
 > [!NOTE]
 > Signing in via SSO is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include other legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
@@ -69,12 +69,13 @@ Add the redirect URIs for each sensor to your registered application:
 1. Select **Save**.
 
 <a name="grant-access-to-application"></a>
-## Grant the application required permissions
+<a name="grant-the-application-required-permissions"></a>
+## Grant API permissions
 
-Grant the required API permissions for your application:
+Your registered application needs the default Microsoft Graph `User.Read` permission to sign in users. An admin must grant tenant-wide consent so that all users can use SSO without individual approval prompts.
 
 1. In your new application, select **API permissions​**.
-1. Next to **Add a permission**, select **Grant admin consent for \<Directory name\>**.
+1. Select **Grant admin consent for \<Directory name\>**.
 
     :::image type="content" source="media/set-up-sso/api-permissions.png" alt-text="Screenshot of setting up API permissions in Microsoft Entra ID." lightbox="media/set-up-sso/api-permissions.png":::
 

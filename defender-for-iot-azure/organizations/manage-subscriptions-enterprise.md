@@ -1,7 +1,7 @@
 ---
 title: Manage EIoT monitoring support | Microsoft Defender for IoT
-description: Learn how to manage your EIoT monitoring support with Microsoft Defender for IoT.
-ms.date: 06/12/2026
+description: Calculate detected enterprise IoT devices to assess standalone licensing needs and learn how to cancel EIoT monitoring support in Microsoft Defender for IoT.
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.custom:
     - msecd-doc-authoring-1014
@@ -81,7 +81,7 @@ To calculate the number of devices you're monitoring::
 
     :::image type="content" source="media/how-to-manage-subscriptions/device-inventory-iot.png" alt-text="Screenshot of network device and IoT devices in the device inventory in Microsoft Defender for Endpoint." lightbox="media/how-to-manage-subscriptions/device-inventory-iot.png":::
 
-1. Round your total to a multiple of 100 and compare it against the number of licenses you have.
+1. Round your total to a multiple of 100 and compare the rounded total against the number of licenses you have.
 
 For example:
 
@@ -120,7 +120,10 @@ For more information, see the [Microsoft 365 admin center help](/microsoft-365/a
 
 This procedure describes how to turn off enterprise IoT monitoring in the Defender portal, and is supported only for customers who don't have any standalone, per-device licenses added on to Microsoft Defender.
 
-Turn off the **Enterprise IoT security** option if you're no longer using the service. 
+Turn off the **Enterprise IoT security** option if you're no longer using the service.
+
+> [!WARNING]
+> Turning off Enterprise IoT security stops all purpose-built alerts, vulnerabilities, and recommendations in Microsoft Defender.
 
 To turn off enterprise IoT monitoring:
 
@@ -136,7 +139,7 @@ If you have a legacy Enterprise IoT plan, are *not* an ME5/E5 Security customer,
 
 1. In the [Defender portal](https://security.microsoft.com/), select **Settings** \> **Device discovery** \> **Enterprise IoT**.
 
-1. Select **Cancel plan**. This page is available only for legacy Enterprise IoT plan customers.
+1. Select **Cancel plan**. The **Cancel plan** page is available only for legacy Enterprise IoT plan customers.
 
 After you cancel your plan, the integration stops and you'll no longer get added security value in Microsoft Defender, or detect new Enterprise IoT devices in Defender for IoT.
 

@@ -6,10 +6,10 @@ ms.topic: how-to
 ms.collection:
   -       zerotrust-extra
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
-# Manage users on the Azure portal
+# Manage Defender for IoT users in the Azure portal
 
 ## Manage user access
 
@@ -33,7 +33,7 @@ Use Azure RBAC to manage user access for Defender for IoT. Assign roles to users
 
 ## Manage site-based access control (Public preview)
 
-Define [specified permissions](roles-azure.md#roles-and-permissions-reference) per Defender for IoT site as part of a [Zero Trust security strategy](concept-zero-trust.md) to add a level of granularity to your Azure access policies. Defender for IoT sites generally reflect many devices grouped in a specific geographical location, such as the devices in an office building at a specific address.
+Define [Defender for IoT roles and permissions](roles-azure.md#roles-and-permissions-reference) per Defender for IoT site as part of a [Zero Trust security strategy](concept-zero-trust.md) to add a level of granularity to your Azure access policies. Defender for IoT sites generally reflect many devices grouped in a specific geographical location, such as the devices in an office building at a specific address.
 
 Site-based access control activities also allow you to check the following details:
 
