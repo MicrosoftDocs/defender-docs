@@ -1,10 +1,10 @@
 ---
 title: Maintain Threat Intelligence Packages on OT Network Sensors
 description: Learn how to maintain threat intelligence packages on OT network sensors.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 
@@ -21,14 +21,14 @@ CVE scores shown are aligned with the [National Vulnerability Database (NVD)](ht
 > [!TIP]
 > We recommend ensuring that your OT network sensors always have the latest threat intelligence package installed so that you always have the full context of a threat before an environment is affected, and increased relevancy, accuracy, and actionable recommendations.
 >
-> Announcements about new packages are available from our [TechCommunity blog](https://techcommunity.microsoft.com/t5/azure-defender-for-iot/bd-p/AzureDefenderIoT).
+> Announcements about new packages are available from the [Defender for IoT TechCommunity blog](https://techcommunity.microsoft.com/t5/azure-defender-for-iot/bd-p/AzureDefenderIoT).
 
 <a name="permissions"></a>
 ## Permissions required to manage threat intelligence packages
 
 To manage threat intelligence packages on OT network sensors, make sure that you have:
 
-- One or more OT sensors [onboarded to Defender for IoT](onboard-sensors.md).
+- One or more OT sensors onboarded to Defender for IoT. For onboarding steps, see [Onboard OT sensors to Defender for IoT](onboard-sensors.md).
 
 - Relevant permissions on the Azure portal and any OT network sensors you want to update.
 
@@ -44,11 +44,13 @@ For more information, see [Azure user roles and permissions for Defender for IoT
 
 **To view the most recent package available from Defender for IoT**:
 
-In the Azure portal, select **Sites and sensors** > **Threat intelligence update (Preview)** > **Local update**. Details about the most recent package available are shown in the **Sensor TI update** pane. For example:
+In the Azure portal, select **Sites and sensors** > **Threat intelligence update (Preview)** > **Local update**. The **Sensor TI update** pane shows details about the most recent package. For example:
 
 :::image type="content" source="media/how-to-work-with-threat-intelligence-packages/ti-local-update.png" alt-text="Screenshot of the Sensor TI update pane with the most recent threat intelligence package." lightbox="media/how-to-work-with-threat-intelligence-packages/ti-local-update.png":::
 
 ## Update threat intelligence packages
+
+Defender for IoT supports two update modes: *Automatic* (packages install on sensors as soon as they're released) and *Manual* (you push packages to sensors when needed).
 
 Update threat intelligence packages on your OT sensors using any of the following methods:
 
@@ -58,7 +60,7 @@ Update threat intelligence packages on your OT sensors using any of the followin
 
 ### Automatically push updates to cloud-connected sensors
 
-Threat intelligence packages can be automatically updated to cloud-connected sensors as they're released by Defender for IoT.
+Threat intelligence packages can be automatically updated to cloud-connected sensors as the packages are released by Defender for IoT.
 
 Ensure automatic threat intelligence package updates by onboarding your cloud-connected sensor with the **Automatic Threat Intelligence Updates** option enabled. For more information, see [Onboard OT sensors to Defender for IoT](onboard-sensors.md).
 
@@ -116,7 +118,7 @@ To download threat intelligence packages:
 
 On each OT sensor, the threat intelligence update status and version information are shown in the sensor's **System settings > Threat intelligence** settings.
 
-For cloud-connected OT sensors, threat intelligence data is also shown in the **Sites and sensors** page. To view threat intelligence statues from the Azure portal:
+For cloud-connected OT sensors, threat intelligence data is also shown on the [**Sites and sensors** page](https://portal.azure.com/#view/Microsoft_Azure_IoT_Defender/IoTDefenderDashboard/~/Getting_started) in the Azure portal. To view threat intelligence statuses from the Azure portal:
 
 1. In [Defender for IoT](https://portal.azure.com/#view/Microsoft_Azure_IoT_Defender/IoTDefenderDashboard/~/Getting_started) on the Azure portal, select **Site and sensors**.
 

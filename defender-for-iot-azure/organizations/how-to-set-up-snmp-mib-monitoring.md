@@ -1,10 +1,10 @@
 ---
 title: Set Up SNMP MIB Monitoring on an OT Sensor
 description: Learn how to set up your OT sensor for health monitoring via SNMP. 
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Set up SNMP MIB health monitoring on an OT sensor
@@ -54,7 +54,7 @@ To download a predefined SNMP MIB file from the Azure portal, you need access to
         |---------|---------|
         |**Username** and **Password**     |  Enter the SNMP v3 credentials used to access the SNMP server. Both usernames and passwords must be configured on both the OT sensor and the SNMP server.<br><br>Usernames can include up to 32 alphanumeric characters, and no spaces.  <br><br>Passwords are case-sensitive, and can include 8-12 alphanumeric characters.    |
         |**Auth Type**     |Select the authentication type used to access the SNMP server: **MD5** or **SHA**         |
-        |**Encryption**     | Select the encryption used when communicating with the SNMP server: <br>- **DES** (56-bit key size):  RFC3414 User-based Security Model (USM) for version 3 of the Simple Network Management Protocol (SNMPv3). <br>- **AES** (AES 128 bits supported): RFC3826 The Advanced Encryption Standard (AES) Cipher Algorithm in the SNMP User-based Security Model.        |
+        |**Encryption**     | Select the encryption used when communicating with the SNMP server: <br>- **DES (Data Encryption Standard)** (56-bit key size):  RFC3414 User-based Security Model (USM) for version 3 of the Simple Network Management Protocol (SNMPv3). <br>- **AES (Advanced Encryption Standard)** (128 bits supported): RFC3826 The AES Cipher Algorithm in the SNMP User-based Security Model.        |
         |**Secret Key**     |   Enter a secret key used when communicating with the SNMP server. The secret key must have exactly eight alphanumeric characters.      |
 
 1. Select **Save** to save your changes.
@@ -69,6 +69,8 @@ To download the SNMP MIB file from [Defender for IoT](https://portal.azure.com/#
 
 > [!NOTE]
 > - You can query the SNMP configuration on the sensor in version **25.2.1 or later.**
+
+Before you begin, make sure you can [access the Defender for IoT CLI](references-work-with-defender-for-iot-cli-commands.md#defender-for-iot-cli-access) over SSH as the *cyberx* user, using a terminal emulator.
 
 To validate and query the SNMP MIB monitoring configuration in the OT sensor:
 

@@ -1,9 +1,9 @@
 ---
 title: View and Manage Alerts on your OT Sensor
 description: Learn about viewing and managing alerts on an OT network sensor.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -37,7 +37,7 @@ For more information, see [On-premises users and roles for OT monitoring with De
     | **Severity** | A predefined alert severity assigned by the sensor that you can modify as needed, including: *Critical*, *Major*, *Minor*, *Warning*. |
     | **Name** | The alert title |
     | **Engine** | The [Defender for IoT detection engine](architecture.md#defender-for-iot-analytics-engines) that detected the activity and triggered the alert. |
-    | **Last detection** | The last time the alert was detected. <br><br>- If an alert's status is **New**, and the same traffic is seen again, the **Last detection** time is updated for the same alert. <br>- If the alert's status is **Closed** and traffic is seen again, the **Last detection** time is *not* updated, and a new alert is triggered.<br><br>**Note**: While the sensor console displays an alert's **Last detection** field in real-time, Defender for IoT in the Azure portal may take up to one hour to display the updated time. This delay explains a scenario where the last detection time in the sensor console isn't the same as the last detection time in the Azure portal.  |
+    | **Last detection** | The last time the alert was detected. <br><br>- If an alert's status is **New**, and the same traffic is seen again, the **Last detection** time is updated for the same alert. <br>- If the alert's status is **Closed** and traffic is seen again, the **Last detection** time is *not* updated, and a new alert is triggered.<br><br>**Note**: While the sensor console displays an alert's **Last detection** field in real-time, Defender for IoT in the Azure portal may take up to one hour to display the updated time. This display delay explains a scenario where the last detection time in the sensor console isn't the same as the last detection time in the Azure portal.  |
     | **Status** |The alert status: *New*, *Active*, *Closed*<br><br>For more information, see [Alert statuses and triaging options](alerts.md#alert-statuses-and-triaging-options).|
     | **Source Device** | The source device IP address, MAC, or device name. |
     | **Id** | The unique alert ID, aligned with the ID on the Azure portal.<br><br> **Note:** If the [alert was merged with other alerts](alerts.md#alert-management-options) from sensors that detected the same alert, the Azure portal displays the alert ID of the first sensor that generated the alerts. |
@@ -153,7 +153,7 @@ To export alerts to a CSV file:
 
 1. In the toolbar above the grid, select **Export to CSV**.
 
-The file is generated, and you're prompted to open or save it locally.
+The file is generated, and you're prompted to open or save the file locally.
 
 To export an alert to a PDF file:
 
@@ -162,7 +162,7 @@ Sign into your OT sensor console and select the **Alerts** page on the left, and
 - On the **Alerts** page, select an alert and then select **Export to PDF** from the toolbar above the grid.
 - On an alerts details page, select **Export to PDF**.
 
-The file is generated, and you're prompted to save it locally.
+The file is generated, and you're prompted to save the file locally.
 
 ## Add alert comments
 
