@@ -4,7 +4,7 @@ description: Learn how to view, manage, and update Microsoft Defender for Identi
 ms.date: 07/15/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
   - msecd-doc-authoring-106
   - sfi-image-nochange
 ai-usage: ai-assisted
@@ -14,7 +14,7 @@ ai-usage: ai-assisted
 
 # Manage and update Microsoft Defender for Identity sensors
 
-This article explains how to view, manage, and update Defender for Identity sensors in the Microsoft Defender portal.
+This article explains how to view, manage, and update Defender for Identity sensors in the Microsoft Defender portal. It covers sensor status and health monitoring, sensor property details, update processes for both v2.x and v3.x sensors, and proxy configuration. This guidance is intended for security administrators who manage Defender for Identity deployments. Some tasks described in this article require specific permissions or configuration prerequisites, such as proxy settings or sensor installation prerequisites, which are referenced in the relevant sections.
 
 ## View sensor settings and status
 
@@ -43,15 +43,15 @@ Select a sensor row to open a details pane with information about the sensor and
 The **Sensors** tab shows the following columns. For columns with multiple possible values, see the tables below.
 
 - **Sensor**: The sensor's NetBIOS computer name.
-- **Type**: The sensor type. For possible values, see [Type](#type).
+- **Type**: The sensor type. For possible values, see [Sensor type](#type).
 - **Domain**: The fully qualified domain name of the Active Directory domain where the sensor is installed.
-- **Migration state**: Indicates if sensors are eligible for [migration from v2.x to v3.x](deploy/migrate-to-sensor-v3.md). For possible values, see [Migration state](#migration-state).
-- **Service status**: The current state of the sensor service on the server. For possible values, see [Service status](#service-status).
-- **Sensor status**: The current update and configuration state of the sensor software. For possible values, see [Sensor status](#sensor-status).
+- **Migration state**: Indicates if sensors are eligible for [migration from v2.x to v3.x](deploy/migrate-to-sensor-v3.md). For possible values, see [Sensor migration state](#migration-state).
+- **Service status**: The current state of the sensor service on the server. For possible values, see [Sensor service status](#service-status).
+- **Sensor status**: The current update and configuration state of the sensor software. For possible values, see [Sensor status values](#sensor-status).
 - **Version**: The sensor version installed.
-- **Delayed update**: Whether delayed updates are enabled or disabled. Delayed updates are supported by version 2 of the sensor. For more information, see [Delayed sensor update](#delayed-update-for-sensor-v2x). 
+- **Delayed update**: Whether delayed updates are enabled or disabled. Delayed updates are supported by version 2 of the sensor. For more information, see [Delayed update for sensor v2.x](#delayed-update-for-sensor-v2x). 
 - **Health issues**: The count of open health issues on the sensor.
-- **Health status**: The overall health of the sensor based on the highest severity open health issue. For possible values, see [Health status](#health-status).
+- **Health status**: The overall health of the sensor based on the highest severity open health issue. For possible values, see [Sensor health status](#health-status).
 - **Created**: The date the sensor was installed.
 
 <a name="type"></a>
@@ -70,7 +70,7 @@ The type column indicates the sensor type based on the server role where the sen
 <a name="migration-state"></a>
 ### Sensor migration state
 
-The migration state column shows if the sensor is eligible for [migration from v2.x to v3.x](deploy/migrate-to-sensor-v3.md).
+The migration state column indicates whether a Defender for Identity sensor running v2.x can be upgraded in place to v3.x. Possible values include **Ready for migration**, **Not ready for migration**, **Migrating**, **Up to date**, and **Migration failed**, as described in the table later in this section. For more information about the migration process, see [migration from v2.x to v3.x](deploy/migrate-to-sensor-v3.md).
 
 For a server to be eligible for migration, it must be:
 
@@ -246,7 +246,7 @@ Learn more about [asset management rules](/defender-xdr/configure-asset-rules).
 
 ## Configure proxy settings
 
-We recommend that you configure initial proxy settings during silent installation [using command line switches](deploy/install-sensor.md#perform-a-defender-for-identity-silent-installation). If you need to update your proxy settings later on, use either the [CLI](deploy/configure-proxy.md#change-proxy-configuration-using-the-cli) or [PowerShell](deploy/configure-proxy.md#change-proxy-configuration-using-powershell).
+We recommend that you configure initial proxy settings during silent installation [using command line switches](deploy/install-sensor.md#perform-a-defender-for-identity-silent-installation). If you need to update your proxy settings later on, use either the [CLI method](deploy/configure-proxy.md#change-proxy-configuration-using-the-cli) or [PowerShell method](deploy/configure-proxy.md#change-proxy-configuration-using-powershell).
 
 If you'd previously configured your proxy settings via either WinINet or a registry key and need to update them, you'll need to [use the legacy proxy configuration method](deploy/configure-proxy.md#change-proxy-configuration-using-legacy-methods) you used originally.
 

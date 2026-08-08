@@ -1,16 +1,16 @@
 ---
 title: Start your Defender for Identity deployment security assessment
 description: Learn how the Start your Defender for Identity deployment assessment helps identify missing sensor installations on domain controllers and other eligible servers.
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Security assessment: Start your Defender for Identity deployment
 
-This article describes the **Start your Defender for Identity deployment** security assessment, which encourages you to install sensors on domain controllers and other eligible servers.
+This article describes the **Start your Defender for Identity deployment** security assessment, which encourages you to install sensors on domain controllers and other eligible servers. This assessment identifies servers in your environment that lack a Defender for Identity sensor and helps you understand the security risks of incomplete deployment. Use this guide to review the assessment findings in Microsoft Secure Score and take action to deploy sensors across your infrastructure.
 
 ## Why is not having Defender for Identity deployed considered a risk?
 
