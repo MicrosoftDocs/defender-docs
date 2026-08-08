@@ -1,17 +1,20 @@
 ---
 title: Cloud asset inventory
-description: Learn about the cloud asset inventory in Microsoft Defender for Cloud and Security Exposure Management
-ms.date: 05/25/2026
+description: Use the cloud asset inventory in Microsoft Defender for Cloud to view connected resources across Azure, AWS, and GCP, grouped by workload, criticality, coverage status, and risk signals.
+ms.date: 07/03/2026
 ms.topic: how-to
 zone_pivot_groups: defender-portal-experience
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to use cloud asset inventory so that I can review the security posture of connected resources across my multicloud environment.
 ai-usage: ai-assisted
 ---
-# Cloud asset inventory
+# Use cloud asset inventory
 
 The asset inventory page of Microsoft Defender for Cloud shows the [security posture](concept-cloud-security-posture-management.md) of your connected resources. It gives you one view of cloud infrastructure across Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP). It groups assets by workload, criticality, and coverage status. It also combines health data, device actions, and risk signals in one place.
 
 Defender for Cloud periodically analyzes the security state of connected resources. When resources have active [security recommendations](security-policy-concept.md) or [security alerts](alerts-overview.md), they appear in the inventory.
+
+This article explains how to use the asset inventory page to review connected resources, filter and export inventory data, investigate security recommendations and alerts, and query software inventory using Azure Resource Graph.
 
 ::: zone pivot="azure-portal"
 
@@ -45,6 +48,8 @@ The Inventory uses [Azure Resource Graph (ARG)](/azure/governance/resource-graph
 
 ## Review software inventory
 
+Use the software inventory to review installed applications across your connected resources and identify machines that run specific software.
+
 :::image type="content" source="media/asset-inventory/asset-inventory-features.png" alt-text="Screenshot that shows the main features of the asset inventory page in Microsoft Defender for Cloud." lightbox="media/asset-inventory/asset-inventory-features.png":::
 
 To review software inventory details:
@@ -59,9 +64,12 @@ To review software inventory details:
 
 ## Filter the inventory
 
-As soon as you apply filters, the summary values are updated to relate to the query results.
+As soon as you apply filters, the summary metrics (such as **Total resources**, **Unhealthy resources**, and **Resource count by environment**) update to reflect the query results.
 
-### Export tools
+<a name="export-tools"></a>
+### Export tools for asset inventory
+
+The Defender for Cloud **Inventory** page provides the following export options:
 
 **Download CSV report** - Export the results of your selected filter options to a CSV file.
 
@@ -134,9 +142,12 @@ To query software inventory data in Azure Resource Graph Explorer:
 
 1. Enter any of the following queries (or customize them or write your own!) and select **Run query**.
 
-### Query examples
+<a name="query-examples"></a>
+### Software inventory query examples for Azure Resource Graph
 
-To generate a basic list of installed software:
+Use the following Kusto Query Language (KQL) queries in Azure Resource Graph Explorer to explore Defender for Cloud software inventory data.
+
+The following query lists all discovered software inventory records from the `securityresources` table, returning the vendor, software name, and version for each asset:
 
 ```kusto
 securityresources
@@ -144,7 +155,7 @@ securityresources
 | project id, Vendor=properties.vendor, Software=properties.softwareName, Version=properties.version
 ```
 
-To filter by version numbers:
+Use the following query to retrieve software inventory records and filter by version number. This example finds Windows Server 2019 machines running a version at or below a specific build:
 
 ```kusto
 securityresources
@@ -153,7 +164,7 @@ securityresources
 | where Software=="windows_server_2019" and parse_version(Version)<=parse_version("10.0.17763.1999")
 ```
 
-To find machines with a combination of software products:
+Use the following query to identify Azure virtual machines that have more than one specific software product installed. The query correlates software inventory entries with Azure VM identifiers and returns only machines with multiple matches:
 
 ```kusto
 securityresources
@@ -164,9 +175,7 @@ securityresources
 | where count_ > 1
 ```
 
-To combine a software product with another security recommendation:
-
-(In this example: machines that have MySQL installed and exposed management ports.)
+Use the following query to join software inventory data with security assessments and find machines that have a specific software product installed alongside an unhealthy security recommendation. This example finds machines that have MySQL installed and exposed management ports by normalizing Azure VM IDs to lowercase for accurate joins:
 
 ```kusto
 securityresources
@@ -205,7 +214,11 @@ The cloud asset inventory gives you one view of cloud infrastructure across Azur
 
 ## Key capabilities
 
+The unified cloud asset inventory provides the following core capabilities for managing and monitoring your multicloud infrastructure.
+
 ### Unified multicloud visibility
+
+The cloud asset inventory helps you monitor and manage assets consistently across cloud providers.
 
 - **Comprehensive coverage**: View assets across Azure, AWS, GCP, and other supported platforms.
 - **Consistent interface**: Use one interface to manage multicloud assets.
@@ -227,12 +240,16 @@ The inventory is organized by workload types, each providing tailored visibility
 
 ### Advanced filtering and scoping
 
+Filtering and scoping features help you narrow inventory views to the assets that matter most.
+
 - **Persistent scoping**: Use cloud scopes for consistent filtering across experiences.
 - **Multi-dimensional filtering**: Filter by environment, workload, risk level, and compliance status.
 - **Search capabilities**: Find assets quickly with built-in search.
 - **Saved views**: Save filtered views for repeated operational tasks.
 
 ## Asset categorization and metadata
+
+The asset inventory enriches each resource with classification and coverage metadata to help you prioritize security efforts.
 
 ### Asset criticality classification
 
@@ -263,6 +280,8 @@ Integrated risk indicators provide comprehensive asset context:
 
 ## Navigation and filtering
 
+Use the following navigation and filtering features to find and scope cloud assets in the Defender portal.
+
 ### Accessing the cloud inventory
 
 To open the cloud inventory in the Microsoft Defender portal:
@@ -282,6 +301,8 @@ To open the cloud inventory in the Microsoft Defender portal:
 
 ### Using filters effectively
 
+Use filters to narrow the inventory to the assets and risks you want to investigate.
+
 - **Environment filtering**: Select specific cloud providers or view all environments.
 - **Scope filtering**: Apply cloud scopes to match organizational boundaries.
 - **Risk-based filtering**: Focus on high-risk or exposed assets.
@@ -290,12 +311,16 @@ To open the cloud inventory in the Microsoft Defender portal:
 
 ### Search and discovery
 
+Search and discovery tools help you quickly locate relevant assets in large environments.
+
 - **Text search**: Find assets by name, resource ID, or metadata.
 - **Tag-based search**: Locate assets by cloud provider tags and labels.
 - **Advanced queries**: Combine filters for precise asset discovery.
 - **Export capabilities**: Export filtered results for reporting and analysis.
 
 ## Asset details and insights
+
+Selecting an asset in the inventory reveals detailed configuration, security, and relationship information.
 
 ### Comprehensive asset information
 
@@ -385,7 +410,7 @@ Cloud assets connect seamlessly with vulnerability management:
 
 ### Scoping limitations
 
-Some assets may appear outside defined cloud scopes:
+Some assets may appear outside the cloud scopes configured in Defender for Cloud:
 
 - **Cross-scope dependencies**: Assets with relationships that span multiple scopes.
 - **Floating assets**: Some asset types don't support fine-grained scoping.

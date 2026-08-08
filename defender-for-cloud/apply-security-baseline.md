@@ -2,8 +2,9 @@
 title: Review and remediate OS misconfigurations in Microsoft Defender for Cloud
 description: Learn how Microsoft Defender for Cloud uses the guest configuration to compare machine OS settings with baselines in Microsoft Cloud Security Benchmark.
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security admin, I want to review and remediate OS misconfigurations so that I can reduce machine hardening risks in Microsoft Defender for Cloud.
-ms.date: 05/25/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
 ---
 
@@ -13,16 +14,18 @@ Microsoft Defender for Cloud provides security recommendations to improve organi
 
 Defender for Cloud assesses operating system settings against compute security baselines provided by the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction). Machine information is gathered for assessment by using the Azure Policy machine configuration extension (formerly known as guest configuration) on the machine. For more information, see [Operating system misconfigurations in Defender for Cloud](operating-system-misconfiguration.md).
 
-This article explains how to review and remediate recommendations from the assessment.
+This article explains how to review and remediate recommendations from the OS baseline assessment.
 
 ## Prerequisites
+
+Before you review and remediate OS baseline recommendations, make sure the following prerequisites are met.
 
 **Requirements** | **Details**
 --- | ---
 **Plan** | [Defender for Servers Plan 2 must be enabled](tutorial-enable-servers-plan.md)
 **Extension** | The [Azure Policy machine configuration must be installed on machines](security-baseline-guest-configuration.md).
 
-This feature previously used the Log Analytics agent, also called the Microsoft Monitoring agent (MMA), to collect information. If MMA is still in use, you might receive duplicate recommendations for the same machine. To avoid duplicate recommendations, [disable the MMA on the machine](prepare-deprecation-log-analytics-mma-agent.md#duplicate-recommendations).
+This feature previously used the Microsoft Monitoring Agent (MMA) to collect data. If MMA is still in use, you might see duplicate recommendations. To avoid duplicates, [disable the MMA on the machine](prepare-deprecation-log-analytics-mma-agent.md#duplicate-recommendations).
 
 ## Review and remediate OS baseline recommendations
 
@@ -40,7 +43,7 @@ To review and remediate OS baseline recommendations:
 
 ## Query recommendations
 
-Defender for Cloud uses [Azure Resource Graph](/azure/governance/resource-graph/overview?branch=main) for application programming interface (API) and portal queries. You can use these resources to create your own queries and retrieve recommendation information.
+Defender for Cloud uses [Azure Resource Graph](/azure/governance/resource-graph/overview?branch=main) for application programming interface (API) and portal queries. You can use Azure Resource Graph and its query interfaces to create your own queries and retrieve recommendation information.
 
 You can learn how to [review recommendations in Azure Resource Graph](review-security-recommendations.md#review-recommendations-in-azure-resource-graph).
 
