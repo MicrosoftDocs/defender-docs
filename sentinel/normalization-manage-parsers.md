@@ -4,9 +4,9 @@ description: This article explains how to manage Advanced Security Information M
 ms.author: edbaynash
 author: EdB-MSFT
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security analyst, I want to manage and customize ASIM parsers so that I can normalize and analyze security data from various sources effectively.
@@ -17,7 +17,7 @@ ms.custom: msecd-doc-authoring-1014
 
 Advanced Security Information Model (ASIM) users use *unifying parsers* instead of table names in their queries, to view data in a normalized format and get all the data relevant to the schema in a single query. Each unifying parser uses multiple source-specific parsers that handle each source's specific details. 
 
-To understand how parsers fit within the ASIM architecture, refer to the [ASIM architecture diagram](normalization.md#asim-components).
+To understand how parsers fit within the ASIM architecture, refer to the [ASIM components section in the ASIM architecture diagram](normalization.md#asim-components).
 
 You may need to manage the source-specific parsers used by each unifying parser to:
 
@@ -39,7 +39,7 @@ This article guides you through managing the source-specific parsers used by uni
 
 The procedures in this article assume that all source-specific parsers have already been deployed to your Microsoft Sentinel workspace. 
 
-For more information, see [Develop ASIM parsers](normalization-develop-parsers.md#deploy-parsers).
+For deployment instructions, see the [Deploy parsers section in Develop ASIM parsers](normalization-develop-parsers.md#deploy-parsers).
 
 ## Manage built-in unifying parsers
 
@@ -55,13 +55,13 @@ Microsoft Sentinel users cannot edit built-in unifying parsers. Instead, use the
 
 - **To support excluding built-in source-specific parsers**, ASIM uses a watchlist. Deploy the watchlist to your Microsoft Sentinel workspace from the Microsoft Sentinel [ASIM watchlist deployment template](https://aka.ms/DeployASimWatchlists) on GitHub.
 
-- **To define source type for built-in and custom parsers**, ASIM uses a watchlist. Deploy the watchlist to your Microsoft Sentinel workspace from the Microsoft Sentinel [GitHub](https://aka.ms/DeployASimWatchlists) repository.
+- **To define source type for built-in and custom parsers**, ASIM uses a watchlist. Deploy the watchlist to your Microsoft Sentinel workspace from the Microsoft Sentinel [ASIM watchlist deployment template](https://aka.ms/DeployASimWatchlists) on GitHub.
 
 ### Add a custom parser to a built-in unifying parser
 
 To add a custom parser, insert a line to the custom unifying parser to reference the new, custom parser. 
 
-Make sure to add both a filtering custom parser and a parameter-less custom parser. To learn more about how to edit parsers, refer to the document [Functions in Azure Monitor log queries](/azure/azure-monitor/logs/functions#edit-a-function).
+Make sure to add both a filtering custom parser (one that accepts filtering parameters to optimize performance) and a parameter-less custom parser (one that returns all results without filtering parameters). To learn more about how to edit parsers, refer to the document [Functions in Azure Monitor log queries](/azure/azure-monitor/logs/functions#edit-a-function).
 
 The syntax of the line to add is different for each schema:
 
@@ -81,7 +81,7 @@ The syntax of the line to add is different for each schema:
 
 When adding an additional parser to a unifying custom parser that already references parsers, make sure you add a comma at the end of the previous line. 
 
-For example, the following code shows a custom unifying parser after adding `added_parser`. The `union isfuzzy=true` statement combines results from both the existing and the new custom parser, tolerating minor schema differences between them:
+For example, the following code shows a custom unifying parser after adding `added_parser`. The `union isfuzzy=true` statement combines results from both the existing and the new custom parser so that both contribute to the normalized output, tolerating minor schema differences between them:
 
 ```kusto
 union isfuzzy=true
@@ -119,7 +119,7 @@ To pin a built-in, source-specific parser to a specific version and prevent auto
   - A record with `Any` as the `SourceSpecificParser` field, to exclude all parsers for the `CallerContext`.
   - A record for  `Any` in the CallerContext and the `SourceSpecificParser` fields to exclude all built-in parsers.
  
-  For more information, see [Use a modified version of a built-in parser](#use-a-modified-version-of-a-built-in-parser).
+  For details on excluding built-in parsers using the watchlist, see the [Use a modified version of a built-in parser](#use-a-modified-version-of-a-built-in-parser) section.
 
 ## Configure the sources relevant to a source-specific parser
 

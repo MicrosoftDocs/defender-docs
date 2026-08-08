@@ -4,12 +4,12 @@ description: Learn how to track your migration with a workbook, how to customize
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 
@@ -44,7 +44,7 @@ To get the workbook, first install the standalone item from the **Content hub** 
 
 ## Deploy the watchlist 
 
-The next step is to deploy the related watchlist from the Microsoft Sentinel GitHub repository.
+The **DeploymentandMigration** watchlist stores the deployment and migration actions that the workbook uses to track your progress. Deploy this watchlist from the Microsoft Sentinel GitHub repository.
 
 1. In the [Microsoft Sentinel GitHub repository](https://github.com/Azure/Azure-Sentinel/tree/master/Watchlists), select the **DeploymentandMigration** folder, and select **Deploy to Azure** to begin the template deployment in Azure.
 1. Provide the Microsoft Sentinel resource group and workspace name. 
@@ -108,7 +108,7 @@ When the data is reported in the workspace, configure and monitor analytics rule
 
 :::image type="content" source="media/migration-track/migration-track-analytics.png" alt-text="Screenshot of the workbook's Analytics tab." lightbox="media/migration-track/migration-track-analytics.png":::
 
-If you need more coverage, select **Review MITRE coverage** below the table on the left. Use the **Review MITRE coverage** option to define which areas receive more coverage and which rules are deployed, at any stage of the migration project.
+The MITRE coverage view maps your deployed analytics rules to the MITRE ATT&CK framework, so you can identify gaps in threat detection. If you need more coverage, select **Review MITRE coverage** below the table on the left. Use this option to define which areas receive more coverage and which rules are deployed, at any stage of the migration project.
 
 :::image type="content" source="media/migration-track/migration-track-mitre.png" alt-text="Screenshot of the workbook's MITRE Coverage view." lightbox="media/migration-track/migration-track-mitre.png":::
 
@@ -142,7 +142,7 @@ When you configure data ingestion, detections, and visualizations, you can now l
 
 To view, deploy, and test automation in the **Automation** section of the workbook, select **Deploy automation resources** on the bottom left.
 
-Learn about Microsoft Sentinel SOAR capabilities: [Automate responses with playbooks](automate-responses-with-playbooks.md) and [Automate incident handling with automation rules](automate-incident-handling-with-automation-rules.md). 
+Learn about Microsoft Sentinel SOAR capabilities for playbooks and automation rules: [Automate responses with playbooks](automate-responses-with-playbooks.md) and [Automate incident handling with automation rules](automate-incident-handling-with-automation-rules.md). 
 
 :::image type="content" source="media/migration-track/migration-track-automation.png" alt-text="Screenshot of the workbook's Automation tab." lightbox="media/migration-track/migration-track-automation.png":::
 
@@ -166,7 +166,7 @@ To customize the timeline:
 1. Create a custom item, or select one of the out-of-the-box templates.
 1. To deploy the template and complete the wizard, select **Create**.
 
-Learn more about [U E B A](identify-threats-with-entity-behavior-analytics.md) or learn how to [customize the timeline](customize-entity-activities.md).
+Learn more about [entity behavior analytics](identify-threats-with-entity-behavior-analytics.md) or learn how to [customize the entity activities timeline](customize-entity-activities.md).
 
 ## Configure and manage the data lifecycle
 
@@ -194,7 +194,7 @@ The **ArchiveRetention** value is calculated by subtracting the **TotalRetention
 
 If you prefer to make changes in the UI, select **Update Retention in UI** to open the relevant page.
 
-Learn about [data lifecycle management](/azure/azure-monitor/logs/data-retention-configure). 
+Learn how to [configure log data retention and archive policies](/azure/azure-monitor/logs/data-retention-configure). 
 
 ## Enable migration tips and instructions
 
