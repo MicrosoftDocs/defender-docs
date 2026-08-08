@@ -4,12 +4,12 @@ description: Use watchlists in KQL search queries or detection rules with built-
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 
@@ -53,7 +53,7 @@ To use a watchlist in a search query, write a Kusto Query Language (KQL) query t
      on $left.RemoteIPCountry == $right.SearchKey
     ```
 
-    The following image shows the results of this example query in Log Analytics.
+    The results of this example query appear in Log Analytics as shown in the following screenshot.
  
     :::image type="content" source="./media/watchlists-queries/sentinel-watchlist-queries-join.png" alt-text="Screenshot of queries against watchlist as lookup." lightbox="./media/watchlists-queries/sentinel-watchlist-queries-join.png":::
 
@@ -109,7 +109,7 @@ The _GetWatchlist('watchlist-name') function returns the contents of a specified
 
 1. Complete the rest of the tabs in the **Analytics rule wizard**.
 
-Watchlists are refreshed in your workspace every 12 days, updating the `TimeGenerated` field. For more information, see [Create custom analytics rules to detect threats](detect-threats-custom.md).
+Watchlists are refreshed in your workspace every 12 days, updating the `TimeGenerated` field. For information about creating custom analytics rules that use watchlists, see [Create custom analytics rules to detect threats](detect-threats-custom.md).
 
 <a name="view-list-of-watchlist-aliases"></a>
 ## View the list of watchlist aliases
