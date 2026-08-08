@@ -5,8 +5,8 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: soulisabag
 ms.topic: how-to
-ms.date: 06/15/2026
-ms.custom: references_regions, mode-other, msecd-doc-authoring-1014
+ms.date: 07/02/2026
+ms.custom: references_regions, mode-other, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 #Customer intent: As a security operator, set up data connectors in one place so I can monitor and protect my environment.
 
@@ -85,7 +85,7 @@ To add Microsoft Sentinel to an existing Log Analytics workspace, perform the fo
 > [!NOTE]
 > If your workspace isn't automatically onboarded to the Defender portal, we recommend onboarding for a unified experience in managing security operations (SecOps) across both Microsoft Sentinel and other Microsoft security services. For more information, see [Onboard Microsoft Sentinel to the Defender portal](/unified-secops-platform/microsoft-sentinel-onboard).
 >
-> If your workspace is automatically onboarded, or if you decide to onboard your workspace now, you can continue the procedures in this article from the Defender portal. If this is your first time using the Defender portal, there will be a delay of a few minutes while the process completes.
+> If your workspace is automatically onboarded, or if you decide to onboard your workspace now, you can continue with [Install a solution from the content hub](#install-a-solution-from-the-content-hub) and [Set up the data connector](#set-up-the-data-connector) from the Defender portal. If this is your first time using the Defender portal, there will be a delay of a few minutes while the process completes.
 
 ## Access Microsoft Sentinel in the Defender portal
 
@@ -119,7 +119,8 @@ The content hub in Microsoft Sentinel is the centralized location to discover an
 
 1. On the solution details pane on the side, select **Install**. 
 
-## Set up the data connector
+<a name="set-up-the-data-connector"></a>
+## Set up the Azure Activity data connector
 
 Microsoft Sentinel ingests data from services and apps by connecting to the service and forwarding the events and logs to Microsoft Sentinel. For this quickstart, install the data connector to forward data for Azure Activity to Microsoft Sentinel.
 
@@ -145,7 +146,7 @@ Let's generate some activity data by enabling a rule that was included in the Az
 
 1. In the **Analytics rule wizard - Create a new Scheduled rule** page, change the **Status** to **Enabled**. 
 
-    On this tab and all other tabs in the wizard, leave the default values as they are.
+    On the **General**, **Set rule logic**, **Incident settings**, and **Automated response** tabs, leave the default values as they are.
 
 1. On the **Review and create** tab, select **Create**.
 

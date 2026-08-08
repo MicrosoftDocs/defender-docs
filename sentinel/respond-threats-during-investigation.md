@@ -5,10 +5,10 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 #Customer intent: As a security analyst, I want to run playbooks on identified threats during investigations or threat hunts so that I can take immediate remediation actions without disrupting my workflow.
 ---
@@ -18,12 +18,12 @@ ai-usage: ai-assisted
 This article shows you how to take response actions against threat actors on the spot, during the course of an incident investigation or threat hunt, without pivoting or context switching out of the investigation or hunt. You accomplish this using playbooks based on the new entity trigger.
 
 The entity trigger currently supports the following entity types:
-- [Account](entities-reference.md#account)
-- [Host](entities-reference.md#host)
-- [IP](entities-reference.md#ip)
-- [URL](entities-reference.md#url)
-- [DNS](entities-reference.md#dns-resolution)
-- [FileHash](entities-reference.md#file-hash)
+- [Account entity reference](entities-reference.md#account)
+- [Host entity reference](entities-reference.md#host)
+- [IP address entity reference](entities-reference.md#ip)
+- [URL entity reference](entities-reference.md#url)
+- [DNS entity reference](entities-reference.md#dns-resolution)
+- [File hash entity reference](entities-reference.md#file-hash)
 
 > [!IMPORTANT]
 >
@@ -54,7 +54,7 @@ When you're investigating an incident, and you determine that a given entity - a
 
         :::image type="content" source="media/respond-threats-during-investigation/entity-page.png" alt-text="Screenshot of the selected entity page to run a playbook on an entity.":::
 
-1. Each of these actions opens the **Run playbook on *\<entity type>*** panel.    
+1. Selecting **Run playbook (Preview)** from any of the views described in step 1 opens the **Run playbook on *\<entity type>*** panel.    
 
     :::image type="content" source="media/respond-threats-during-investigation/run-playbook-on-entity.png" alt-text="Screenshot of Run playbook on entity panel.":::
 

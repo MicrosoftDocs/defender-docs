@@ -1,12 +1,12 @@
 ---
 title: Monitor the health and audit the integrity of your Microsoft Sentinel analytics rules
-description: Use the SentinelHealth data table to keep track of your analytics rules' execution and performance.
+description: Monitor analytics rule health and audit integrity in Microsoft Sentinel by using health and audit logs, querying SentinelHealth data, and setting notifications for rule issues.
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.date: 07/02/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 
@@ -54,14 +54,14 @@ Microsoft Sentinel provides two types of logs for monitoring analytics rules: he
 
 To get audit and health data from the *SentinelHealth* and *SentinelAudit* tables, you must first turn on the Microsoft Sentinel health feature for your workspace. For more information, see [Turn on auditing and health monitoring for Microsoft Sentinel](enable-monitoring.md).
 
-Once the health feature is turned on, the *SentinelHealth* data table is created at the first success or failure event generated for your automation rules and playbooks.
+Once the health feature is turned on, the *SentinelHealth* data table is created at the first success or failure event generated for your analytics rules.
 
 ### Understanding SentinelHealth and SentinelAudit table events
 
 The *SentinelHealth* table logs the following types of analytics rule health events:
 
 - **Scheduled analytics rule run**.
-- **NRT analytics rule run**.
+- **Near-real-time (NRT) analytics rule run**.
 
 For more information, see [SentinelHealth table columns schema](health-table-reference.md#sentinelhealth-table-columns-schema).
 
@@ -303,7 +303,7 @@ The **Audit** tab lets you drill down to particular audit events.
 
 :::image type="content" source="media/monitor-analytics-rule-integrity/analytics-health-workbook-audit-tab.png" alt-text="Screenshot of selection of audit tab in analytics health workbook.":::
 
-- Filter the whole page data by **audit rule type** (scheduled/Fusion).
+- Filter the whole page data by **audit rule type** (scheduled or Fusion, which are correlation-based rules that detect multistage attacks).
 - See the trends of audited activity on analytics rules over the selected time period. You can "time brush" the trend graph to see a subset of the original time range.
     :::image type="content" source="media/monitor-analytics-rule-integrity/audit-trending-by-activity.png" alt-text="Screenshot of trending audit activity in analytics health workbook.":::
 - See the numbers of audited events, broken down by **activity** and **rule type**.
