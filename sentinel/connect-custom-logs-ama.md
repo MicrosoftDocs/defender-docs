@@ -5,8 +5,8 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.custom: linux-related-content, msecd-doc-authoring-1014
-ms.date: 06/15/2026
+ms.custom: linux-related-content, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
@@ -17,9 +17,9 @@ ai-usage: ai-assisted
 
 # Collect logs from text files with the Azure Monitor Agent and ingest to Microsoft Sentinel
 
-This article describes how to use the **Custom Logs via AMA** connector to quickly filter and ingest logs in text-file format from network or security applications installed on Windows or Linux machines. Before you configure the connector, review the [Prerequisites](#prerequisites) section for required permissions, supported machines, and agent installation requirements.
+This article describes how to use the **Custom Logs via AMA** connector to filter and ingest text-file logs. These logs come from network or security applications installed on Windows or Linux machines. Before you set up the connector, review the [Prerequisites](#prerequisites) section. That section covers required permissions, supported machines, and agent installation.
 
-Many applications log data to text files instead of standard logging services like Windows Event log or Syslog. You can use the Azure Monitor Agent (AMA) to collect data in text files of nonstandard formats from both Windows and Linux computers. The AMA can also effect transformations on the data at the time of collection, to parse it into different fields.
+Many applications log data to text files instead of standard logging services like Windows Event log or Syslog. You can use the Azure Monitor Agent (AMA) to collect data from text files on both Windows and Linux computers. The AMA can also transform the data during collection to parse it into different fields.
 
 For more information about the applications for which Microsoft Sentinel has solutions to support log collection, see [Custom Logs via AMA data connector - Configure data ingestion to Microsoft Sentinel from specific applications](unified-connector-custom-device.md).
 
@@ -98,6 +98,8 @@ Select the appropriate tab for instructions.
 
 # [Azure or Defender portal](#tab/portal)
 
+Use the following steps in the Azure or Defender portal to create and configure the data collection rule.
+
 ### Create data collection rule (DCR)
 
 To get started, open either the **Custom Logs via AMA** data connector in Microsoft Sentinel and create a data collection rule (DCR).
@@ -139,6 +141,9 @@ In the **Resources** tab, select the machines from which you want to collect the
 
 ### Configure the DCR for your application
 
+> [!IMPORTANT]
+> If you select a listed application or device type, the **Transform** field is populated automatically. Do not edit the auto-populated transformation.
+
 1. In the **Collect** tab, select your application or device type from the **Select device type (optional)** drop-down box, or leave it as **Custom new table** if your application or device isn't listed.
 
 1. If you chose one of the listed applications or devices, the **Table name** field is automatically populated with the right table name. If you chose **Custom new table**, enter a table name under **Table name**. The name must end with the `_CL` suffix.
@@ -147,7 +152,7 @@ In the **Resources** tab, select the machines from which you want to collect the
 
 1. In the **Transform** field, if you chose a custom new table in step 1, enter a Kusto query that applies a transformation of your choice to the data.
 
-    If you chose one of the listed applications or devices in step 1, the **Transform** field is automatically populated with the proper transformation. DO NOT edit the transformation that appears there. Depending on the chosen type, this value should be one of the following:  
+    If you chose one of the listed applications or devices in step 1, the **Transform** field is automatically populated with the proper transformation. DO NOT edit the transformation that appears there. Depending on the chosen type, the **Transform** field value should be one of the following:  
     - `source` (the default&mdash;no transformation)
     - `source | project-rename Message=RawData` (for devices that send logs to a forwarder)
 
@@ -168,6 +173,8 @@ After you complete all the tabs, review what you entered and create the data col
 1. Select **Refresh** on the connector page to see the DCR displayed in the list.
 
 # [Resource Manager template](#tab/arm)
+
+Use this option to install the agent and create the data collection rule with ARM-based tooling.
 
 ### Install the Azure Monitor Agent
 
@@ -291,9 +298,9 @@ If you're collecting logs from an appliance using a log forwarder, configure the
 
 ## Configure the security device or appliance
 
-For specific instructions to configure your security application or appliance, see [Custom Logs via AMA data connector - Configure data ingestion to Microsoft Sentinel from specific applications](unified-connector-custom-device.md)
+To set up your security application or appliance, see [Custom Logs via AMA data connector - Configure data ingestion to Microsoft Sentinel from specific applications](unified-connector-custom-device.md).
 
-Contact the solution provider for more information, or if the product documentation doesn't include instructions for your appliance or device.
+If the product docs don't cover your device, contact the solution provider for help.
 
 ## Related content
 
