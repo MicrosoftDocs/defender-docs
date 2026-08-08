@@ -5,13 +5,13 @@ ms.topic: how-to
 ms.author: monaberdugo
 author: mberdugo
 ms.reviewer: sshuster
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 
@@ -61,21 +61,21 @@ Let's create a rule that will change the severity of an incoming incident from w
 
 1. Select the trigger **When incident is created**.
 
-1. Under **Conditions**, if you see the **Incident provider** and **Analytics rule name** conditions, leave them as they are. These conditions aren't available if your workspace is onboarded to the Microsoft Defender portal. In either case, we'll add more conditions later in this process.
+1. Under **Conditions**, if you see the **Incident provider** and **Analytics rule name** conditions, leave them as they are. The **Incident provider** and **Analytics rule name** conditions aren't available if your workspace is onboarded to the Microsoft Defender portal. In either case, you add more conditions in the following examples.
 
 1. Under **Actions**, select **Change severity** from the drop-down list.
 
 1. Select **High** from the drop-down list that appears below **Change severity**.
 
-For example, the **Onboarded workspaces** and **Workspaces that aren't onboarded** tabs show samples from a workspace that's onboarded to the Defender portal, in either the Azure or Defender portals, and a workspace that isn't:
+For example, the **Onboarded workspaces** and **Workspaces that aren't onboarded** tabs show samples from a workspace that's onboarded to the Defender portal, in either the Azure or Defender portals, and a workspace that isn't onboarded:
 
-### [Onboarded workspaces](#tab/after-onboarding)
+### [Add a condition group for onboarded workspaces](#tab/after-onboarding)
 
 The following example shows the automation rule creation experience for workspaces onboarded to the Defender portal.
 
 :::image type="content" source="media/add-advanced-conditions-to-automation-rules/create-automation-rule-no-conditions-onboarded.png" alt-text="Screenshot of creating new automation rule without adding conditions.":::
 
-### [Workspaces that aren't onboarded](#tab/before-onboarding)
+### [Add a condition group for workspaces that aren't onboarded](#tab/before-onboarding)
 
 The following example shows the automation rule creation experience for workspaces that aren't onboarded to the Defender portal.
 
@@ -91,8 +91,8 @@ In this first example, we'll create a simple condition group: If either conditio
 
     :::image type="content" source="media/add-advanced-conditions-to-automation-rules/add-condition-group.png" alt-text="Screenshot of adding a condition group to an automation rule's condition set.":::
 
-1. See that two sets of condition fields are displayed, separated by an `OR` operator. These are conditions A and B, representing the two sides of a simple OR condition group: If A or B is true, the rule will run.  
-    (Don't be confused by all the different layers of "Add" links - these will all be explained.)
+1. See that two sets of condition fields are displayed, separated by an `OR` operator. The two sets of condition fields are conditions A and B, representing the two sides of a simple OR condition group: If A or B is true, the rule will run.  
+    (Don't be confused by all the different **Add** links—each one is explained in the following steps.)
 
     :::image type="content" source="media/add-advanced-conditions-to-automation-rules/empty-condition-group.png" alt-text="Screenshot of empty condition group fields.":::
 
@@ -109,7 +109,7 @@ In this first example, we'll create a simple condition group: If either conditio
 ### Example 1A: Add an OR value within a single condition
 
 Let's say we have not one, but two super-sensitive workstations whose incidents we want to make high-severity.
-We can add another value to an existing condition (for any conditions based on entity properties) by selecting the dice icon to the right of the existing value and adding the new value below.
+To add another value to an entity-property condition, select the dice icon to the right of the current condition value, and then enter an additional value below it.
 
 :::image type="content" source="media/add-advanced-conditions-to-automation-rules/add-value-to-condition.png" alt-text="Screenshot of adding more values to a single condition.":::
 
@@ -121,7 +121,7 @@ Let's say we want to have this rule run if one of THREE (or more) conditions is 
 
     :::image type="content" source="media/add-advanced-conditions-to-automation-rules/add-another-or-condition.png" alt-text="Screenshot of adding another OR condition to an automation rule.":::
 
-1. Now, select the field, operator, and value for the new condition, as you did for conditions A and B.
+1. Now, select the field, operator, and value for the new condition by choosing a property from the drop-down list, selecting a comparison operator, and entering the target value.
 
     :::image type="content" source="media/add-advanced-conditions-to-automation-rules/added-another-or-condition.png" alt-text="Screenshot of another OR condition added to an automation rule.":::
 
@@ -138,7 +138,7 @@ In this example, we add multiple conditions to each side of an OR condition grou
 
     :::image type="content" source="media/add-advanced-conditions-to-automation-rules/empty-new-condition.png" alt-text="Screenshot of empty new condition row in automation rules.":::
 
-1. Fill in the parameters and values of this condition the same way you did the previously added conditions in the group.
+1. Fill in the parameters and values for the new condition row by selecting a property, operator, and value from the drop-down lists, using the same method you used for the earlier conditions in this condition group.
 
     :::image type="content" source="media/add-advanced-conditions-to-automation-rules/fill-in-new-condition.png" alt-text="Screenshot of new condition fields to fill in to add to automation rules.":::
 

@@ -4,15 +4,15 @@ description: Configure your AWS environment so Microsoft Sentinel can take autom
 ms.author: monaberdugo
 author: mberdugo
 ms.reviewer: eyalhaik
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Enable attack disruption actions on AWS with Microsoft Sentinel (preview)
 
-This article describes how to configure your AWS environment so that Microsoft Sentinel can take automated actions on a user that assumes a SAML role, or on an AWS IAM account when an alert is triggered. [Attack disruption](/defender-xdr/automatic-attack-disruption) uses high-confidence signals to contain compromised assets and limit the damage from attacks, including actions on identities in AWS. Before you begin, make sure the required [AWS and Microsoft Sentinel prerequisites](#prerequisites) are in place.
+This article describes how to configure your AWS environment so that Microsoft Sentinel can take automated actions on a user that assumes a SAML role, or on an AWS IAM account when an alert is triggered. [Automatic attack disruption in Microsoft Defender XDR](/defender-xdr/automatic-attack-disruption) uses high-confidence signals to contain compromised assets and limit the damage from attacks, including actions on identities in AWS. Before you begin, make sure the required [AWS and Microsoft Sentinel prerequisites](#prerequisites) are in place.
 
 ## Prerequisites
 
@@ -23,6 +23,7 @@ Before you begin, you need the following prerequisites in place:
 - The AWS Connector for Microsoft Sentinel is deployed and enabled.
 - AWS CloudTrail logs are being ingested into Microsoft Sentinel; see [Connect Microsoft Sentinel to Amazon Web Services to ingest AWS service log data](./connect-aws.md).
 - Appropriate IAM roles and permissions are configured in AWS to allow Microsoft Sentinel to perform actions on IAM accounts.
+- The Amazon Web Services solution is installed from Content Hub in Microsoft Sentinel so that the **Amazon Web Services S3** connector appears in the data connectors gallery.
 
 ## Step 1: Prepare AWS for integration
 
@@ -100,7 +101,7 @@ Deploy and enable the AWS S3 data connector in Microsoft Sentinel so that it can
 
 1. Follow the instructions in [Connect Microsoft Sentinel to Amazon Web Services to ingest AWS service log data](./connect-aws.md) to set up your AWS environment and connect it to Microsoft Sentinel.
 
-1. Provide the IAM role ARN and the Amazon SQS queue URL that receives S3 log notifications from your AWS environment. These values are created during the connector setup described in the previous step.
+1. Provide the IAM role ARN and the Amazon SQS queue URL that receives S3 log notifications from your AWS environment. These values are created when you set up the connector by following [Connect Microsoft Sentinel to Amazon Web Services to ingest AWS service log data](./connect-aws.md).
 
 ## Step 4: Validate integration
 

@@ -17,7 +17,7 @@ ms.custom: msecd-doc-authoring-1015
 
 # Generate playbooks using AI in Microsoft Sentinel
 
-The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. You describe automation logic in natural language, and the system generates validated, code-based playbooks with complete documentation and visual flow diagrams. This experience is powered by an embedded VS Code environment within the Defender portal, so you can author and refine playbooks without leaving the portal. Generated playbooks use alert data as input and dynamically generate the required API calls, as long as you configure the integration for the target provider.
+The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. You describe automation logic in natural language, and the system generates validated, code-based playbooks with complete documentation and visual flow diagrams. The playbook generation experience is powered by an embedded VS Code environment within the Defender portal, so you can author and refine playbooks without leaving the portal. Generated playbooks use alert data as input and dynamically generate the required API calls, as long as you configure the integration for the target provider.
 
 This article describes how to generate playbooks by using AI, configure required integrations, and deploy your automation workflows.
 
@@ -81,7 +81,7 @@ The Enhanced Alert Trigger extends automation capabilities beyond the standard a
 - **Tenant-level application**: Ensure consistency across multiple workspaces
 - **Advanced conditions**: Define granular criteria for triggering automation
 
-This trigger mechanism enables automatic execution of generated playbooks across your security ecosystem.
+The Enhanced Alert Trigger enables automatic execution of generated playbooks across your security ecosystem.
 
 ## Generate a new playbook
 
@@ -226,21 +226,24 @@ After the playbook generator produces a plan, review and approve it before proce
 
 #### Generate the playbook in Act mode
 
-1. After you switch to Act mode, the playbook generator delivers:
+1. After you switch the playbook generator session to Act mode, the playbook generator delivers:
    - The complete playbook code in Python
    - Code validation
    - Comprehensive documentation, including a visual flow diagram and description of the playbook in natural language
 
 1. The playbook generator asks the user for an Alert ID to run a test of the playbook. Before it executes the test, the playbook generator outlines the changes that will be applied to the environment and requests the user’s approval to proceed.
 
-1. The tool might request approval for code generation. To enable automatic generation without approval prompts, select the **Edit** checkbox under **Auto-approve**.
+1. The playbook generator might request approval for code generation. To enable automatic generation without approval prompts, select the **Edit** checkbox under **Auto-approve**.
 
     :::image type="content" source="./media/generate-playbook/auto-approve.png" alt-text="Screenshot of the Autoapprove checkbox in the embedded Visual Studio Code environment." lightbox="./media/generate-playbook/auto-approve.png":::
 
    > [!TIP]
-   > When you select **Save** in the chat, it saves the current step and confirms your approval. **It doesn't save the entire playbook**.
+   > When you select **Save** in the chat, the playbook generator saves the current step and confirms your approval. **It doesn't save the entire playbook**.
 
 #### Validate and save your playbook
+
+> [!IMPORTANT]
+> Newly created playbooks are disabled by default. After you validate and save your playbook, you must enable it before it can run.
 
 1. To ensure correctness, manually review the generated code and documentation.
 
@@ -314,7 +317,8 @@ The following are examples of prompts you can use to generate playbooks for comm
       data and adds the results as a comment to the related incident.
 - Create a playbook that blocks an AWS IAM user, assigns the alert to John, and adds a remediation comment when a high severity alert includes an IAM user entity.
 
-## Limitations
+<a name="limitations"></a>
+## Limitations of AI-generated playbooks
 
 Be aware of the following limitations when working with generated playbooks:
 
