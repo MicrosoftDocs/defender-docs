@@ -5,11 +5,11 @@ description: Learn how to search tables, run KQL queries, analyze entities, and 
 author: poliveria
 ms.reviewer: macasgra
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 #customer intent: As a security analyst, I want to know the different tools available to explore security data in Microsoft Sentinel data lake so that I can investigate threats and make data-driven decisions.
@@ -20,7 +20,7 @@ ai-usage: ai-assisted
 > [!IMPORTANT]
 > Some information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-The data exploration tool collection in the Microsoft Sentinel Model Context Protocol (MCP) server lets you search for relevant tables and retrieve data from Microsoft Sentinel's data lake by using natural language. It also includes graph tools that let you reason over multiple Microsoft Sentinel graphs, including exposure, hunting, and data risk graphs.
+The data exploration tools in the Microsoft Sentinel Model Context Protocol (MCP) server let you search for tables and pull data from your data lake with natural language. These tools also include graph features that help you reason over Microsoft Sentinel graphs, such as exposure, hunting, and data risk graphs.
 
 ## Prerequisites
 
@@ -41,11 +41,11 @@ To access the data exploration tool collection, you need the following prerequis
 > - Security Operator
 > - Security Reader
 
-To access the graph data in Defender portal, at least [read-only access](/security-exposure-management/prerequisites) in Microsoft Security Exposure Management is required.
+To access the graph data in Defender portal, at least [read-only access in Microsoft Security Exposure Management](/security-exposure-management/prerequisites) is required.
 
 ## Add the data exploration collection
 
-To add the data exploration collection, first set up Microsoft Sentinel's unified MCP server interface. Follow the step-by-step instructions for compatible [AI-powered code editors and agent-building platforms](sentinel-mcp-get-started.md#add-microsoft-sentinels-collection-of-mcp-tools).
+First, set up the Microsoft Sentinel MCP server. Then follow the setup steps for your [code editor or agent-building platform](sentinel-mcp-get-started.md#add-microsoft-sentinels-collection-of-mcp-tools).
 
 The data exploration collection is hosted at `https://sentinel.microsoft.com/mcp/data-exploration`.
 
@@ -274,7 +274,7 @@ Keep the following limits and data requirements in mind when using the entity an
 
     If you don't have any of these tables, `analyze_url_entity` generates a response with a disclaimer that lists the tables you didn't onboard, along with links to their corresponding onboarding documentation.
 
-- Running multiple instances of the entity analyzer at the same time can increase latency for each run. To prevent timeouts and avoid hitting the entity analyzer's [preview thresholds](sentinel-mcp-billing.md#microsoft-sentinel-entity-analyzer-tool-1), start by running a maximum of five analyses at once and then adjust it as needed based on how often the logic app is triggered in your organization. 
+- Running multiple instances of the entity analyzer at the same time can increase latency for each run. To prevent timeouts and avoid hitting the entity analyzer's [entity analyzer preview thresholds](sentinel-mcp-billing.md#microsoft-sentinel-entity-analyzer-tool-1), start by running a maximum of five analyses at once and then adjust it as needed based on how often the logic app is triggered in your organization. 
 
 ### Graph tools (preview)
 
@@ -285,7 +285,7 @@ The graph tools let you reason over multiple Microsoft Sentinel graphs, includin
 
 #### Blast radius finder (`find_blastradius`)
 
-This tool evaluates the blast radius of a node by exploring propagation paths towards an organization's critical assets. It details the paths that start at the entity you provide, evaluates the risk, and specifies recommendations to reduce it.
+The `find_blastradius` tool evaluates the blast radius of a node by exploring propagation paths towards an organization's critical assets. It details the paths that start at the entity you provide, evaluates the risk, and specifies recommendations to reduce it.
 
 | Parameters | Required? | Description | 
 |----------|----------|----------|
@@ -313,7 +313,7 @@ This tool lists the incoming connections from other entities to the specified en
 
 #### Path between two entities (`find_connected_nodes`)
 
-This tool lists traversable paths between two entities that match a criteria or characteristic that describes those entities. 
+The `find_connected_nodes` tool lists traversable paths between two entities that match a criteria or characteristic that describes those entities. 
 
 | Parameters | Required? | Description | 
 |----------|----------|----------|
@@ -325,7 +325,7 @@ This tool lists traversable paths between two entities that match a criteria or 
 
 #### Nodes match (`find_nodes`)
 
-This tool finds and matches entities that the graph represents as nodes based on given criteria or characteristics. It returns a list of nodes that match the defined criteria.
+The `find_nodes` tool finds and matches entities that the graph represents as nodes based on given criteria or characteristics. It returns a list of nodes that match the defined criteria.
 
 | Parameters | Required? | Description | 
 |----------|----------|----------|
@@ -335,9 +335,11 @@ This tool finds and matches entities that the graph represents as nodes based on
 
 #### General information and context for graph (`get_graph_context`)
 
-This tool provides context for the parameters and serves as a reference to help you understand which tools, functionalities, or parameters you can use. Use it as a helper to get the graph context so you can better use the other graph MCP tools in the collection. 
+The `get_graph_context` tool provides context for the parameters and serves as a reference to help you understand which tools, functionalities, or parameters you can use. Use it as a helper to get the graph context so you can better use the other graph MCP tools in the collection. 
 
 #### Additional information for graph tools
+
+Keep the following usage notes in mind when working with graph tools:
 
 - To scope results to graph only, add `in my graph` to prompts. 
 - Querying for identities doesn't support user principal names (UPNs).  
@@ -380,11 +382,11 @@ The following example shows how an agent answers a prompt by dynamically orchest
  
      :::image type="content" source="media/sentinel-mcp/mcp-tool-search-table.png" alt-text="Screenshot of the agent searching for relevant tables that contain user risk and security information." lightbox="media/sentinel-mcp/mcp-tool-search-table.png"::: 
 
-- The agent does another search by using the **Semantic search on table catalog** (`search_tables`) tool, this time with broader terms, to find other tables that it should query data from to influence its reasoning.
+- The agent runs a broader search with the **Semantic search on table catalog** (`search_tables`) tool. This step finds more tables to help shape its reasoning.
 
     :::image type="content" source="media/sentinel-mcp/mcp-tool-semantic-search.png" alt-text="Screenshot of the agent searching using broader terms." lightbox="media/sentinel-mcp/mcp-tool-semantic-search.png"::: 
  
-- The agent identifies the relevant tables and then uses the **Execute KQL (Kusto Query Language) query on Microsoft Sentinel data lake** (`query_lake`) tool to query for data and find the top three users at risk. The first attempt fails because the KQL query has a semantic error.
+- After finding the right tables, the agent uses the **Execute KQL (Kusto Query Language) query on Microsoft Sentinel data lake** (`query_lake`) tool to look up the top three users at risk. The first query fails due to a semantic error.
 
      :::image type="content" source="media/sentinel-mcp/mcp-tool-run-kql.png" alt-text="Screenshot of the agent attempting to run a KQL query with a semantic error." lightbox="media/sentinel-mcp/mcp-tool-run-kql.png":::
 
