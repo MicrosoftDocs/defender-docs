@@ -4,7 +4,7 @@ titleSuffix: Microsoft Sentinel
 description: This article describes how to create connections with a GitHub or Azure DevOps repository where you can manage your custom content and deploy it to Microsoft Sentinel.
 author: mberdugo 
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ms.author: monaberdugo 
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
@@ -12,7 +12,7 @@ appliesto:
 ms.collection: usx-security
 ai-usage: ai-assisted
 #Customer intent: As a security administrator or MSSP analyst, I want to manage dynamic Microsoft Sentinel content as code based on source control repositories using CI/CD pipelines. I want to automate updates and ensure consistent configurations across workspaces in my security monitoring environment. As an MSSP content manager, I want to deploy one solution to many customer workspaces and still be able to tailor custom content for their environments.
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
   - build-2025
 ---
 
@@ -147,7 +147,7 @@ Deleting content from your repository doesn't delete it from your Microsoft Sent
 
 ## Remove a repository connection
 
-This procedure describes how to remove the connection to a source control repository from Microsoft Sentinel. In order to use Bicep files, your repository connection must be newer than November 1, 2024. Use this procedure to remove the connection and recreate it in order to update the connection.
+The following steps describe how to remove the connection to a source control repository from Microsoft Sentinel. In order to use Bicep files, your repository connection must be newer than November 1, 2024. Use this procedure to remove the connection and recreate it in order to update the connection.
 
 To remove your connection:
 

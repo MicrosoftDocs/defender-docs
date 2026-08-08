@@ -5,13 +5,13 @@ ms.author: monaberdugo
 author: mberdugo 
 ms.reviewer: efratka
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ms.collection: usx-security
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security analyst, I want to create and manage hunting bookmarks so that I can preserve and collaborate on relevant threat investigation data.
 
@@ -68,7 +68,7 @@ The log query results support bookmarks whenever the **Logs** pane is opened fro
 
 ## View and update bookmarks
 
-Find and update a bookmark from the bookmark tab.
+Find and update a bookmark from the **Bookmarks** tab.
 
 1. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), under **Threat management**  select **Hunting**.<br> For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Microsoft Sentinel** > **Threat management** > **Hunting**.
 
@@ -81,7 +81,7 @@ Find and update a bookmark from the bookmark tab.
 5. Make your changes as needed. Your changes are automatically saved.
 
 > [!NOTE]
-> You can only view up to 1,000 bookmarks in the bookmark tab. You can view the rest of your bookmarked data in your logs. [View bookmarked data in logs](#view-bookmarked-data-in-logs)
+> You can only view up to 1,000 bookmarks in the **Bookmarks** tab. You can view the rest of your bookmarked data in your logs. [View bookmarked data in logs](#view-bookmarked-data-in-logs)
 
 ## Exploring bookmarks in the investigation graph
 
@@ -137,7 +137,7 @@ There can be a significant delay (measured in minutes) between the time you crea
 
 ## Delete a bookmark
 
-Deleting the bookmark removes the bookmark from the list in the **Bookmark** tab. The **HuntingBookmark** table for your Log Analytics workspace continues to contain previous bookmark entries, but the latest entry changes the **SoftDelete** value to **true**, which marks the bookmark as deleted so you can filter out old bookmarks. Deleting a bookmark doesn't remove any entities from the investigation experience that are associated with other bookmarks or alerts.
+Deleting the bookmark removes the bookmark from the list in the **Bookmarks** tab. The **HuntingBookmark** table for your Log Analytics workspace continues to contain previous bookmark entries, but the latest entry changes the **SoftDelete** value to **true**, which marks the bookmark as deleted so you can filter out old bookmarks. Deleting a bookmark doesn't remove any entities from the investigation experience that are associated with other bookmarks or alerts.
 
 To delete a bookmark, complete the following steps.
 
