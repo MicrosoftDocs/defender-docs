@@ -8,7 +8,9 @@ ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to  
-ms.date: 06/25/2026
+ms.date: 07/01/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 
 # Customer intent: As a security engineer or data scientist, I want to explore and analyze security data in the Microsoft Sentinel data lake using Jupyter notebooks, so that I can gain insights and build advanced analytics solutions.
 ---
@@ -17,7 +19,7 @@ ms.date: 06/25/2026
 
 You can create scheduled jobs to run at specific times or intervals using the Microsoft Sentinel extension for Visual Studio Code. Jobs allow you to automate data processing tasks to summarize, transform, or analyze data in the Microsoft Sentinel data lake and federated tables. Jobs are also used to process data and write results to custom tables in the lake tier or analytics tier.
 
-This article shows you how to create, schedule, edit, and manage notebook jobs, including configuring job schedules, viewing job details and run history, and monitoring jobs in the Microsoft Defender portal.
+The following sections explain how to create, schedule, edit, and manage notebook jobs, including configuring job schedules, viewing job details and run history, and monitoring jobs in the Microsoft Defender portal.
 
 <a name="permissions"></a>
 ## Required permissions for notebook jobs
@@ -39,6 +41,8 @@ To assign the role, follow the steps below:
 For more information on assigning roles to managed identities, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 
 ## Create and schedule a job
+
+Before you create or schedule a job, make sure you have one of the [supported Microsoft Entra ID roles](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake). If the job creates custom tables in the analytics tier, assign the data lake managed identity the **Log Analytics Contributor** role first. For more information, see [Required permissions for notebook jobs](#permissions).
 
 You can create a job in one of three ways:
 
@@ -71,7 +75,7 @@ You can create a job in one of three ways:
 
     :::image type="content" source="./media/notebook-jobs/job-configuration.png" lightbox="./media/notebook-jobs/job-configuration.png" alt-text="A screenshot showing the job configuration page."  :::
 
-1. To view your jobs, select the Microsoft Sentinel ![The Microsoft Sentinel icon in the VS Code left toolbar](./media/notebook-jobs/sentinel-icon.png) icon in the left toolbar. Jobs are displayed on the **Jobs** panel.
+1. To view your jobs, select the Microsoft Sentinel ![Screenshot of the Microsoft Sentinel icon in the VS Code activity bar, used to open the Microsoft Sentinel extension.](./media/notebook-jobs/sentinel-icon.png) icon in the left toolbar. Jobs are displayed on the **Jobs** panel.
 
 1. Select a job to see the job details.
 
@@ -197,7 +201,7 @@ To edit a submitted job follow the steps below:
 
 In addition to viewing jobs in VS Code, you can also view your notebook jobs in the Defender portal. To view your jobs in the Defender portal, Select **Microsoft Sentinel** > **Data lake exploration** > **Jobs** .
 
-The page shows a list of jobs and their types. Select a notebook job to view its details. You can enable and disable the job's schedule but you can't edit a notebook job in the Defender portal.
+The **Jobs** page shows a list of jobs and their types. Select a notebook job to view its details. You can enable and disable the job's schedule but you can't edit a notebook job in the Defender portal.
 
 :::image type="content" source="media/notebook-jobs/view-jobs-in-defender-portal.png" lightbox="media/notebook-jobs/view-jobs-in-defender-portal.png" alt-text="A screenshot showing the jobs page in the Defender portal.":::
 
@@ -209,13 +213,15 @@ The page shows a list of jobs and their types. Select a notebook job to view its
 
     :::image type="content" source="media/notebook-jobs/portal-job-history.png" lightbox="media/notebook-jobs/portal-job-history.png" alt-text="A screenshot showing the jobs history page in the Defender portal.":::
 
-## Service parameters and limits and troubleshooting
+<a name="service-parameters-and-limits-and-troubleshooting"></a>
+## Service parameters and limits
 
-The following sections summarize column naming rules, service limits, and troubleshooting resources for notebook jobs in the Microsoft Sentinel data lake.
+The following sections summarize column naming rules and service limits for notebook jobs in the Microsoft Sentinel data lake.
 
-### Column names
+<a name="column-names"></a>
+### Column name requirements for the save_as method
 
-The following rules apply to column names when using the save_as method to write data from a notebook to the Microsoft Sentinel data lake.
+The `save_as` method writes notebook output to a destination table in the Microsoft Sentinel data lake. The following column-naming rules apply when you use this method.
 
 - Column names must start with a letter.
 

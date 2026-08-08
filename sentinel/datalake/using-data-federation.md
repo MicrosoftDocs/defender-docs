@@ -8,10 +8,10 @@ ms.reviewer: amyhari
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ms.collection: ms-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security analyst, I want to use federated data sources so that I can query external data alongside my Sentinel security data for comprehensive investigations.
 ---
@@ -149,6 +149,8 @@ You can create scheduled Jupyter notebook jobs that utilize federated tables in 
 
 ## Best practices
 
+Follow these query optimization, join strategy, and error handling guidelines to get the best performance from federated tables.
+
 ### Query optimization
 
 Use the following practices to improve federated query performance.
@@ -171,7 +173,7 @@ large_dataset_adls_connector
 
 ### Join strategies
 
-Use these practices when joining federated and native tables.
+Use the following query performance practices when joining federated and native tables.
 
 - **Use appropriate join kinds**: Choose `inner`, `leftouter`, or `rightouter` based on your needs.
 - **Filter before joining**: Reduce the data volume before join operations.
