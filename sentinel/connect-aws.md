@@ -5,7 +5,9 @@ ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: krishsa
 ms.topic: how-to
-ms.date: 06/09/2025
+ms.date: 07/01/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security engineer, I want to connect AWS service logs to Microsoft Sentinel so that analysts can centralize log management and enhance threat detection capabilities.
@@ -24,7 +26,7 @@ The Amazon Web Services (AWS) service log connector is available in two versions
 
 # [S3 connector (new)](#tab/s3)
 
-This tab explains how to configure the AWS S3 connector using one of two methods: 
+The **S3 connector** tab explains how to configure the AWS S3 connector using one of two methods: 
 
 - [Automatic setup](#automatic-setup) (Recommended) 
 - [Manual setup](#manual-setup)
@@ -56,11 +58,11 @@ The script:
 
 - Enables specified AWS services to send logs to that S3 bucket, and notification messages to that SQS queue.
 
-- If necessary, creates that S3 bucket and that SQS queue for this purpose.
+- If necessary, creates the S3 bucket for log storage and the SQS queue for notifications.
 
 - Configures any necessary IAM permissions policies and applies them to the IAM role created above.
 
-For Azure Government clouds, a specialized script creates a different OIDC web identity provider, to which it assigns the IAM assumed role.
+For Azure Government clouds, a specialized script creates a different OIDC web identity provider and assigns the IAM assumed role to that provider.
 
 ### Instructions
 
@@ -89,7 +91,7 @@ To run the script to set up the connector, use the following steps:
 
    :::image type="content" source="media/connect-aws/aws-run-script.png" alt-text="Screenshot of command to run setup script and workspace ID." lightbox="media/connect-aws/aws-run-script.png":::
 
-1. When the script finishes running, copy the **Role ARN** and the **SQS URL** from the script's output (see example in first screenshot below) and paste them in their respective fields in the connector page under **2. Add connection** (see second screenshot below).
+1. When the script finishes running, copy the **Role ARN** and the **SQS URL** from the script's output and paste them in their respective fields in the connector page under **2. Add connection**.
 
    :::image type="content" source="media/connect-aws/aws-script-output.png" alt-text="Screenshot of output of A W S connector setup script." lightbox="media/connect-aws/aws-script-output.png":::
 
@@ -123,8 +125,8 @@ We recommend using the automatic setup script to deploy this connector. If for w
 1. In the details pane for the connector, select **Open connector page**.
 
 1. Under **2. Add connection**:
-    1. Paste the IAM role ARN you copied two steps ago into the **Role to add** field.
-    1. Paste the URL of the SQS queue you copied in the last step into the **SQS URL** field.
+    1. Paste the IAM role ARN you copied from the AWS IAM console into the **Role to add** field.
+    1. Paste the SQS queue URL you copied from the AWS Simple Queue Service console into the **SQS URL** field.
     1. Select a data type from the **Destination table** drop-down list. This tells the connector which AWS service's logs this connection is being established to collect, and into which Log Analytics table it stores the ingested data.
     1. Select **Add connection**.
 
@@ -142,11 +144,11 @@ We recommend using the automatic setup script to deploy this connector. If for w
 
 ### Troubleshooting
 
-Learn how to [troubleshoot Amazon Web Services S3 connector issues](aws-s3-troubleshoot.md).
+For troubleshooting steps, see [Troubleshoot Amazon Web Services S3 connector issues](aws-s3-troubleshoot.md).
 
 # [CloudTrail connector (legacy)](#tab/ct)
 
-This tab explains how to configure the AWS CloudTrail connector. The process of setting it up has two parts: the AWS side and the Microsoft Sentinel side. Each side's process produces information used by the other side. This two-way authentication creates secure communication.
+The **CloudTrail connector (legacy)** tab explains how to configure the AWS CloudTrail connector. The process of setting it up has two parts: the AWS side and the Microsoft Sentinel side. Each side's process produces information used by the other side. This two-way authentication creates secure communication.
 
 > [!NOTE]
 > AWS CloudTrail has [built-in limitations](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) in its LookupEvents API. It allows no more than two transactions per second (TPS) per account, and each query can return a maximum of 50 records. If a single tenant constantly generates more than 100 records per second in one region, backlogs and delays in data ingestion will result.
@@ -173,7 +175,7 @@ Setting up this connector has two steps:
 
 1. Select **Amazon Web Services** from the data connectors gallery.
 
-   If you don't see the connector, install the Amazon Web Services solution from the **Content Hub** in Microsoft Sentinel. For more information, see [Discover and manage Microsoft Sentinel out-of-the-box content](sentinel-solutions-deploy.md).
+   If you don't see the connector, verify that you installed the Amazon Web Services solution as described in the [Prerequisites](#prerequisites-1).
 
 1. In the details pane for the connector, select **Open connector page**.
 
@@ -210,7 +212,7 @@ Setting up this connector has two steps:
 
 ## Send formatted CloudWatch events to S3 using a lambda function (optional)
 
-If your CloudWatch logs aren't in the format accepted by Microsoft Sentinel - .csv file in a GZIP format without a header - use a lambda function [view the source code](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/AWS-S3/CloudWatchLambdaFunction.py) within AWS to send CloudWatch events to an S3 bucket in the accepted format.
+If your CloudWatch logs aren't in the format accepted by Microsoft Sentinel - .csv file in a GZIP format without a header - use a lambda function [view the source code](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/AWS-S3/CloudWatchLambdaFunction.py) within AWS to send CloudWatch events to an S3 bucket in .csv GZIP format without a header.
 
 The lambda function uses Python 3.12 runtime and x86_64 architecture.
 
