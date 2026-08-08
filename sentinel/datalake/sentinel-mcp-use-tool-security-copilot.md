@@ -6,16 +6,16 @@ ms.author: pauloliveria
 author: poliveria
 ms.reviewer: macasgra
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #customer intent: As a security analyst, I want to add Sentinel MCP tools in Microsoft Security Copilot.
 ---
 
-# Use an MCP tool in Microsoft Security Copilot
+# Use Microsoft Sentinel MCP tools in Microsoft Security Copilot
 
 This article shows you how to add Microsoft Sentinel's Model Context Protocol (MCP) [collection of security tools](sentinel-mcp-tools-overview.md#available-collections) or your own custom tools to your AI agents in [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot).
 
@@ -44,6 +44,8 @@ Custom MCP tools let you build deterministic workflows by prescribing exactly wh
 ### Step 1: Create a YAML file for your tool collection
 
 Use the following YAML file template to create and save your plugin. This YAML defines the collection descriptor for your custom plugin, including its metadata and connection settings. Replace each placeholder value (enclosed in angle brackets) with your collection-specific information, such as the collection name, endpoint URL, and the tools you want to add.
+
+The following YAML is the plugin descriptor template. Customize it with your collection details before uploading it to Security Copilot as a custom plugin.
 
 ```yaml
 Descriptor:
@@ -86,7 +88,7 @@ For more information about all the parameters you can add and configure in your 
 ### Step 3: Build an agent using the saved plugin
 
 1. In the Security Copilot portal, go to **Build** and select **Start from Scratch** or open an existing custom agent.
-1. In your agent skill, select **Add a tool** and find the custom plugin you added in the **Custom** section in step 2.
+1. In your agent skill, select **Add a tool** and find the custom plugin you added earlier in the **Custom** section of **Manage sources**.
 
     :::image type="content" source="media/sentinel-mcp/custom-copilot-add-tool.png" alt-text="Screenshot of Add a tool option in Security Copilot." lightbox="media/sentinel-mcp/custom-copilot-add-tool.png":::
 

@@ -6,11 +6,11 @@ ms.author: pauloliveria
 author: poliveria
 ms.reviewer: macasgra
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #customer intent: As a security analyst, I want to add Sentiel MCP tool in Visual Studio Code.
 ---
@@ -47,7 +47,7 @@ To add a Microsoft Sentinel tool collection or your own custom tools in Visual S
 
 1. **Open Visual Studio Code's chat.** Select **View** > **Chat**, select the **Toggle Chat** icon :::image type="icon" source="media/sentinel-mcp/mcp-chat-icon.png"::: beside the search bar, or press **Ctrl** + **Alt** + **I**.
     
-1. **Verify connection.** Set the chat to Agent mode then confirm by selecting the **Configure Tools** icon :::image type="icon" source="media/sentinel-mcp/mcp-tools-icon.png"::: that you see added under the MCP server.
+1. **Verify connection.** Set the chat to Agent mode then confirm by selecting the **Configure Tools** icon :::image type="icon" source="media/sentinel-mcp/mcp-tools-icon.png"::: that you see added under the MCP server you added.
 
     :::image type="content" source="media/sentinel-mcp/mcp-get-started-04.png" alt-text="Screenshot of a Visual Studio Code Agent menu with the Agent mode and tool icon highlighted." lightbox="media/sentinel-mcp/mcp-get-started-04.png":::
 
