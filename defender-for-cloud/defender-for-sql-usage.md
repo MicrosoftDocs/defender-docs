@@ -2,7 +2,8 @@
 title: Enable Microsoft Defender for SQL Servers on Machines
 description: Learn how to protect your Microsoft SQL Servers on Azure VMs, on-premises, and in hybrid and multicloud environments with Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 09/21/2025
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to enable Defender for SQL servers on machines so that I can protect my SQL servers in various environments.
 ai-usage: ai-assisted
 ---
@@ -18,6 +19,8 @@ The Defender for SQL Servers on Machines plan is one of the Defender for Databas
 > The Defender for SQL Servers on Machines plan is undergoing a transition to the new agent architecture. For more information, see [Defender for SQL Servers on Machines plan transition](release-notes-archive.md#update-to-defender-for-sql-servers-on-machines-plan).
 
 ## Prerequisites
+
+Before you enable the plan, make sure the following prerequisites are met:
 
 - **Subscription permissions**: To deploy the plan on a subscription, including Azure Policy, you need **Subscription Owner** permissions.
 
@@ -114,11 +117,12 @@ To enable the plan on specific machines, you need to [disable the plan on the su
 ## Verify that your machines are protected
 
 > [!IMPORTANT]
->Don't skip this step, as it's important to verify your deployment is protected.
+>Don't skip verifying that all machines are protected, as it's important to confirm your deployment is secure.
 
 Depending on your environment, it can take a few hours to discover and protect SQL instances. As a final step, you should [verify that all machines are protected](verify-machine-protection.md).
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Verify that all machines are protected](verify-machine-protection.md)
