@@ -26,6 +26,12 @@ For recent releases of Microsoft Defender for Endpoint, including build numbers,
 
 Learn more about [Preview features](/defender-xdr/preview).
 
+## August 2026
+
+|Type  |Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|-------------|
+|Release - macOS |Build 101.26062.0011 |GA |Release version 20.126062.11.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--august-2026--101260620011).|
+
 ## July 2026
 
 |Type  |Feature  |Preview/GA  |Description  |
