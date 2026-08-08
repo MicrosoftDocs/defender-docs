@@ -1,10 +1,10 @@
 ---
 title: Manage OT Plans and Licenses
 description: Manage Microsoft Defender for IoT plans and licenses for OT monitoring.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Manage OT plans and licenses
@@ -98,7 +98,7 @@ For more information, see the [Cancel a purchase or trial subscription in Micros
 
 ## Migrate from a legacy OT plan
 
-If you're an existing customer with a legacy OT plan, we recommend migrating your plan to a site-based Microsoft 365 plan. After you've edited your plan, make sure to update your site details with a site size that matches your Microsoft 365 license.
+If you're an existing customer with a legacy OT plan, we recommend migrating your plan to a site-based Microsoft 365 plan. After you select **Microsoft 365** in the **Price plan** field and save your changes, make sure to update your site details with a site size that matches your Microsoft 365 license.
 
 After migrating your plan to a site-based Microsoft 365 plan, edits are supported only in the Microsoft 365 admin center.
 

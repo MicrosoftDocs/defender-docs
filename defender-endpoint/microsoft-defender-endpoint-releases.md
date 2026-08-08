@@ -29,6 +29,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|macOS |101.26062.0011  |August 2026 |- Release version: 20.126062.11.0<br>- Engine version: 1.1.26040.3000<br>- Signature version: 1.449.26.0 |[Release details and updates](#macos--august-2026--101260620011) |
 |Linux  |101.26062.0005  |August 2026 |- Release version: 30.126052.0012.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates](#linux--aug-2026--101260620005) |
 |Windows Antivirus |Platform 4.18.26070.9 / Engine 1.1.26070.7|July 2026|- Platform: 4.18.26070.9<br>- Engine: 1.1.26070.7<br>- Security intelligence: 1.457.11.0|[Release details and updates](#windows-antivirus--july-2026--platform-418260709--engine-11260707)|
 |macOS |101.26062.0009  |July 2026 |- Release version: 20.126062.9.0<br>- Engine version: 1.1.26050.3000<br>- Signature version: 1.455.265.0 |[Release details and updates](#macos--july-2026--101260620009) |
@@ -224,6 +225,21 @@ To share feedback, open Defender for Endpoint on macOS and go to **Help > Send f
 To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device.
 
 For known issues, see [macOS known issues](#macos-known-issues).
+
+### macOS | August-2026 | 101.26062.0011
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 20.126062.11.0  | 1.1.26040.3000 | 1.449.26.0        |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|----------------|
+| Security for AI | Expanded [local AI agent discovery (Preview)](local-agent-discovery-overview.md) on macOS to include visibility into Model Context Protocol (MCP) server configurations. |
+| General      | Performance improvements and bug fixes. |
 
 ### macOS | July-2026 | 101.26062.0009
 

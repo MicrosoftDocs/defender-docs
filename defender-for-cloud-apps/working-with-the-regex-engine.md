@@ -1,17 +1,19 @@
 ---
-title: Working with the RegEx engine
-description: This article provides instructions for using RegEx for pattern matching in Defender for Cloud Apps policies.
-ms.date: 01/29/2023
+title: Work with the regular expression engine in Defender for Cloud Apps
+description: Use regular expressions in Microsoft Defender for Cloud Apps policies to match text patterns, understand syntax limitations, and refine content inspection conditions.
+ms.date: 07/03/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
-# Working with the RegEx engine
+# Work with the regular expression engine in Defender for Cloud Apps
 
 > [!IMPORTANT]
 > File policies retire on January 6, 2027. To maintain file-based data protection, [migrate to Microsoft Purview DLP or auto-labeling policies](migrate-file-policies-to-purview.md).
 
 
 
-This article provides instructions for using RegEx for pattern matching in Defender for Cloud Apps policies.
+Microsoft Defender for Cloud Apps supports regular expressions (RegEx) for pattern matching in content inspection and file policies. This article covers the supported RegEx syntax, known limitations, and provides examples to help you build effective expressions for your policies.
 
 ## Regular expressions in Defender for Cloud Apps
 
@@ -21,9 +23,9 @@ The Microsoft Defender for Cloud Apps content inspection policies use RegEx for 
 
 To test regular expressions, you can use the following websites:
 
-- [https://regexpal.com/](https://www.regexpal.com/) - Make sure you select **Case insensitive**.
+- [RegexPal regular expression tester](https://www.regexpal.com/) - Make sure you select **Case insensitive**.
 
-- [https://regex101.com/](https://regex101.com/) - Provides detailed analysis of the RegEx.
+- [Regex101 regular expression tester](https://regex101.com/) - Provides detailed analysis of the RegEx.
 
 ### Limitations of regular expressions in Defender for Cloud Apps
 
@@ -45,7 +47,8 @@ The following limitations are imposed on custom regular expressions:
 
 - Disallowed back-references: \\<number\> or \k\<name>
 
-### Example expressions
+<a name="example-expressions"></a>
+### Regular expression examples
 
 The following table gives you example expressions and if they would match or not.
 

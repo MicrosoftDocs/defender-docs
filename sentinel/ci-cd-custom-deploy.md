@@ -4,14 +4,14 @@ titleSuffix: Microsoft Sentinel
 description: This article describes how to customize repository deployments for the repositories feature in Microsoft Sentinel.
 author: mberdugo 
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ms.author: monaberdugo 
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a SOC collaborator or MSSP analyst, I want to customize repository deployment workflows and pipelines so that I can control deployment triggers, paths, and parameter mappings for efficient and tailored content deployment to cloud workspaces.
 
@@ -39,7 +39,7 @@ For more information on deployable content types, see [Plan your repository cont
 
 ## Customize the workflow or pipeline
 
-The default workflow only deploys content modified since the last deployment, based on commits to the repository. Customize to configure different deployment triggers, or to deploy content exclusively from a specific root folder.
+The default workflow only deploys content modified since the last deployment, based on commits to the repository. Customize the workflow or pipeline to configure different deployment triggers, or to deploy content exclusively from a specific root folder.
 
 Select one of the following tabs depending on your connection type:
 
@@ -71,7 +71,7 @@ To customize your GitHub deployment workflow:
 
         Change these settings, for example, to schedule the workflow to run periodically, or to combine different workflow events together.
 
-        For more information, see the [GitHub documentation](https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#configuring-workflow-events) on configuring workflow events.
+        For more information, see [Configuring workflow events](https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#configuring-workflow-events) in the GitHub documentation.
 
     - To disable smart deployments:
 
@@ -81,9 +81,9 @@ To customize your GitHub deployment workflow:
 
         In the default configuration shown for the `on` section, the wildcards (`**`) in the first line in the `paths` section indicate that the entire branch is in the path for the deployment triggers.
 
-        This default configuration means that a deployment workflow is triggered anytime that content is pushed to any part of the branch.
+        This default configuration means that a deployment workflow is triggered anytime that content is pushed to any part of the connected branch.
 
-        Later on in the file, the `jobs` section includes the following default configuration: `directory: '${{ github.workspace }}'`. This line indicates that the entire GitHub branch is in the path for the content deployment, without filtering for any folder paths.
+        In the `jobs` section, the default configuration includes `directory: '${{ github.workspace }}'`. The `directory` setting indicates that the entire GitHub branch is in the path for the content deployment, without filtering for any folder paths.
 
         To deploy content from a specific folder path only, add it to both the `paths` and the `directory` configuration. For example, to deploy content only from a root folder named `SentinelContent`, update your code as follows:
 
@@ -97,7 +97,7 @@ To customize your GitHub deployment workflow:
             directory: '${{ github.workspace }}/SentinelContent'
         ```
 
-For more information, see the [GitHub documentation](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#onpushpull_requestpaths) on GitHub Actions and editing GitHub workflows.
+For more information, see [GitHub Actions workflow syntax for path filters](https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#onpushpull_requestpaths) in the GitHub documentation.
 
 # [Azure DevOps](#tab/azure-devops)
 
@@ -115,7 +115,7 @@ To customize your Azure DevOps deployment pipeline:
 
         By default, this configuration is set to detect any push to the connected branch, including both modifications to existing content and additions of new content to the repository.
 
-        Modify this trigger to any available Azure DevOps Triggers, such as a scheduling trigger or a pull request triggers. For more information, see the [Azure DevOps trigger documentation](/azure/devops/pipelines/yaml-schema).
+        Modify this trigger to any available Azure DevOps Triggers, such as a scheduling trigger or a pull request triggers. For more information, see the [Azure DevOps YAML pipeline schema](/azure/devops/pipelines/yaml-schema).
 
     - To disable smart deployments:
         Smart deployment behavior is configured separately from the pipeline trigger in the `trigger` section. Navigate to the `ScriptArguments` section of your pipeline. Switch the `smartDeployment` default value from `true` to `false`. Once this change is committed, smart deployment functionality is turned off, and all future deployments for this connection redeploy all the repository's relevant content files to the connected workspaces. 
@@ -131,7 +131,7 @@ To customize your Azure DevOps deployment pipeline:
                 - main
         ```
 
-        This default configuration means that a deployment pipeline is triggered anytime that content is pushed to any part of the `main` branch.
+        The default `trigger` configuration means that a deployment pipeline is triggered anytime that content is pushed to any part of the `main` branch.
 
         To deploy content from a specific folder path only, add the folder name to the `include` section for the trigger and the deployment path to the `steps` section.
 
@@ -152,7 +152,7 @@ To customize your Azure DevOps deployment pipeline:
             workingDirectory: `SentinelContent`
         ```
 
-For more information, see the [Azure DevOps documentation](/azure/devops/pipelines/yaml-schema) on the Azure DevOps YAML schema.
+For more information, see the [Azure DevOps YAML pipeline schema](/azure/devops/pipelines/yaml-schema).
 
 ---
 

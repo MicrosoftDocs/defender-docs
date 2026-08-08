@@ -2,9 +2,9 @@
 title: Provision OT Sensors for Cloud Management
 description: Learn how to ensure that your OT sensor can connect to Azure by accessing a list of required endpoints to define in your firewalls rules.
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Provision sensors for cloud management
@@ -17,15 +17,15 @@ If you're working with air-gapped environment and locally-managed sensors, you c
 
 ## Prerequisites
 
-To perform the steps described in this article, you need access to the Azure portal as a [Security Reader](/azure/role-based-access-control/built-in-roles#security-reader), [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner) user.
+You need access to the Azure portal with one of these roles: [Security Reader](/azure/role-based-access-control/built-in-roles#security-reader), [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner).
 
-Downloading endpoint details and configuring firewall rules is performed by your connectivity teams.
+Your connectivity teams download endpoint details and configure firewall rules.
 
 ## Allow connectivity to Azure
 
 This section describes how to download a list of required endpoints to define in firewall rules, ensuring that your OT sensors can connect to Azure.
 
-This procedure is also used to configure [direct connections](../architecture-connections.md#direct-connections) to Azure. If you're planning to use a proxy configuration instead, you'll [configure proxy settings](../connect-sensors.md) after installing and activating your sensor.
+This endpoint-download procedure is also used to configure [direct connections](../architecture-connections.md#direct-connections) to Azure. If you're planning to use a proxy configuration instead, you'll [configure proxy settings](../connect-sensors.md) after installing and activating your sensor.
 
 For more information, see [Methods for connecting sensors to Azure](../architecture-connections.md).
 

@@ -1,9 +1,9 @@
 ---
 title: Enhance Security Psture with Security Recommendations - Microsoft Defender for IoT
 description: Learn about how to find security recommendations for devices detected by Microsoft Defender for IoT.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
   - enterprise-iot
   - sfi-image-nochange
 ai-usage: ai-assisted
@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 
 # Enhance security posture with security recommendations
 
-Microsoft Defender for IoT provides security recommendations to help you improve your network security posture. Use these recommendations to find unhealthy devices in your network. Then create prioritized mitigation plans to lower your attack surface and address the unique challenges in OT/IoT networks.
+Microsoft Defender for IoT provides security recommendations for your network. Use these recommendations to find unhealthy devices. Then build mitigation plans to lower your attack surface and reduce risk in OT/IoT networks.
 
 > [!IMPORTANT]
 > The **Recommendations** page is currently in **PREVIEW**. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
@@ -22,7 +22,7 @@ To see all current recommendations for your organization, go to the Defender for
 
 :::image type="content" source="media/recommendations/recommendations.png" alt-text="Screenshot of the Recommendations page on the Azure portal." lightbox="media/recommendations/recommendations.png":::
 
-The **Active recommendations** widget shows how many recommendations need action on unhealthy devices. Review unhealthy devices regularly, take the recommended actions, and keep the number of active recommendations as low as possible.
+The **Active recommendations** widget shows how many recommendations need action. Review unhealthy devices regularly and take the suggested actions. Try to keep the number of active recommendations as low as possible.
 
 > [!NOTE]
 > Only recommendations that are relevant to your environment are shown in the grid, with at least one healthy or unhealthy device found. You won't see recommendations that aren't related to any devices in your network.
@@ -40,13 +40,13 @@ Recommendations are shown in a grid with details in the following columns:
 Do either of the following to modify the recommendation data listed:
 
 - Select :::image type="icon" source="media/how-to-manage-device-inventory-on-the-cloud/edit-columns-icon.png" border="false"::: **Edit columns** to add or remove columns from the grid.
-- Filter the list by entering a keyword from the recommendation name in the **Search** box, or select **Add filter** to filter the grid by any of the recommendation columns.
+- Filter the list by entering a keyword in the **Search** box. You can also select **Add filter** to filter by any column.
 
 To export a CSV file of all recommendations for your network, select :::image type="icon" source="media/how-to-manage-device-inventory-on-the-cloud/export-button.png" border="false" :::**Export**.
 
 ## View recommendation details
 
-Select a recommendation in the grid to see more details. The recommendation name appears as the page title. The left side shows the severity, the number of unhealthy devices detected, and the last update date and time.
+Select a recommendation in the grid to see more details. The recommendation name is shown as the page title. The left side shows the severity, the number of unhealthy devices, and the last update time.
 
 On the recommendation details page, the left pane also shows the following information:
 
@@ -63,7 +63,7 @@ For example:
 
 You might want to review all recommendations for a specific device in order to handle them all together.
 
-You can also find recommendations on the **Device details** page for each detected device. To open this page, go to the [**Device inventory** page](how-to-manage-device-inventory-for-organizations.md#view-the-device-inventory), or select a device from the list of healthy or unhealthy devices on a recommendation details page.
+You can also find recommendations on the **Device details** page for each detected device. To open this page, go to the [**Device inventory** page](how-to-manage-device-inventory-for-organizations.md#view-the-device-inventory). You can also select a device from the healthy or unhealthy devices list on a recommendation details page.
 
 On a device details page, select the **Recommendations** tab to view a list of security recommendations specific for the selected device.
 
@@ -73,7 +73,7 @@ For example:
 
 ## Supported security recommendations
 
-The following recommendations are displayed for OT devices in the Azure portal. Recommendations are grouped by detection source, starting with those reported by OT network sensors:
+The following recommendations appear for OT devices in the Azure portal. They are grouped by detection source, starting with OT network sensors:
 
 |Name  |Description  |
 |---------|---------|

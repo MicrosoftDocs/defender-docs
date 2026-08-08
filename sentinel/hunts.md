@@ -6,12 +6,12 @@ ms.author: monaberdugo
 author: mberdugo 
 ms.reviewer: efratka
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 
@@ -62,11 +62,11 @@ Microsoft Sentinel gives you flexibility as you zero in on the right set of hunt
 1. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), under **Threat management**, select **Hunting**.<br> For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Microsoft Sentinel** > **Threat management** > **Hunting**.
 
 1. Select the **Queries** tab. To identify potentially malicious behaviors, run all the queries.
-1. Select **Run All queries** > wait for the queries to execute. This process might take a while.
+1. Select **Run All queries** > wait for the queries to execute. Running all queries might take a while.
 1. Select **Add filter** > **Results** > unselect the checkboxes "!", "N/A", "-", and "0" values > **Apply**
     :::image type="content" source="media/hunts/all-queries-with-results.png" alt-text="Screenshot shows the filter described in step 3.":::
 
-1. Sort these results by the **Results Delta** column to see what changed most recently. These results provide initial guidance on the hunt.
+1. Sort the filtered query results by the **Results Delta** column to see what changed most recently. The filtered query results provide initial guidance on the hunt.
 
 ### Hypothesis - New threat campaign
 
@@ -77,7 +77,7 @@ The content hub offers threat campaign and domain-based solutions to hunt for sp
 
     :::image type="content" source="media/hunts/content-hub-solutions.png" alt-text="Screenshot shows the content hub in grid view with the Log4J and Apache solutions selected." lightbox="media/hunts/content-hub-solutions.png":::
 
-1. After the solution is installed, in Microsoft Sentinel, go to **Hunting**.
+1. After your selected solution is installed, in Microsoft Sentinel, go to **Hunting**.
 1. Select the **Queries** tab. 
 1. Search by solution name, or filtering by **Source Name** of the solution.
 1. Select the query and **Run query**.
@@ -93,7 +93,7 @@ The MITRE ATT&CK map helps you identify specific gaps in your detection coverage
     :::image type="content" source="media/hunts/mitre-hunting-queries.png" alt-text="Screenshot shows the MITRE ATT&CK page with the option for simulated Hunting queries selected." lightbox="media/hunts/mitre-hunting-queries.png"::: 
 
 1. Select the card with your desired technique.
-1. Select the **View** link next to **Hunting queries** at the bottom of the details pane. This link takes you to a filtered view of the **Queries** tab on the **Hunting** page based on the technique you selected. 
+1. Select the **View** link next to **Hunting queries** at the bottom of the details pane. The **View** link opens a filtered view of the **Queries** tab on the **Hunting** page for the selected technique. 
 
     :::image type="content" source="media/hunts/mitre-card-view.png" alt-text="Screenshot shows the MITRE ATT&CK card view with the Hunting queries view link.":::
 
@@ -163,7 +163,7 @@ You can manage individual hunt queries from the context menu in the **Queries** 
 
     :::image type="content" source="media/hunts/queries-tab.png" alt-text="Screenshot shows right-click context menu options in the Queries tab of a hunt.":::
 
-    These options behave just like the existing queries table in the **Hunting** page, except the actions only apply within this hunt. When you choose to create an analytics rule, the name, description, and KQL query is prepopulated in the new rule creation. A link is created to view the new analytics rule found under **Related analytics rules**.
+    The context-menu options behave just like the options in the existing queries table on the **Hunting** page, except the actions only apply within this hunt. When you choose to create an analytics rule, the name, description, and KQL query is prepopulated in the new rule creation. A link is created to view the new analytics rule found under **Related analytics rules**.
 
     :::image type="content" source="media/hunts/analytics-rule-from-query-tab.png" alt-text="Screenshot showing hunt details with related analytics rule."::: 
 
@@ -214,8 +214,8 @@ Use the **Bookmarks** tab to review saved findings and take follow-up actions.
 Use the **Entities** tab to investigate the entities collected from bookmarks in the hunt.
 
 1. Navigate to your hunt's **Entities** tab to view, search, and filter the entities contained in your hunt. This list is generated from the list of entities in the bookmarks. The Entities tab automatically resolves duplicated entries. 
-1. Select entity names to visit the corresponding UEBA entity page. 
-1. Right-click on the entity to take actions appropriate to the entity types, such as adding an IP address to TI or running an entity type specific playbook.
+1. Select entity names to visit the corresponding User and Entity Behavior Analytics (UEBA) entity page. 
+1. Right-click on the entity to take actions appropriate to the entity types, such as adding an IP address to Threat Intelligence (TI) or running an entity type specific playbook.
 
     :::image type="content" source="media/hunts/entities-add-ti.png" alt-text="Screenshot showing context menu for entities.":::
 
@@ -270,7 +270,7 @@ The hypothesis state and hunt status are visible on the main Hunting page and co
 
 ## Track metrics
 
-Use the metrics bar at the top of the **Hunts** tab to track tangible results from hunting activity. Metrics show the number of validated hypotheses, new incidents created, and new analytic rules created. Use these results to set goals or celebrate milestones of your hunting program.
+Use the metrics bar at the top of the **Hunts** tab to track tangible results from hunting activity. Metrics show the number of validated hypotheses, new incidents created, and new analytic rules created. Use the hunting metrics to set goals or celebrate milestones of your hunting program.
 
 :::image type="content" source="media/hunts/track-metrics.png" alt-text="Screenshot shows hunting metrics.":::
 

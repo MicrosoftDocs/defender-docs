@@ -2,8 +2,9 @@
 title: Cloud overview dashboard in Microsoft Defender for Cloud
 description: Learn how to use the Cloud overview dashboard to monitor security posture, threat protection, and exposure management across your multicloud environment.
 ms.topic: how-to
-ms.date: 05/26/2026
+ms.date: 07/03/2026
 zone_pivot_groups: defender-portal-experience
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security analyst, I want to use the Cloud overview dashboard to get unified visibility into my cloud security posture across Azure, AWS, and GCP.
 ai-usage: ai-assisted
 ---
@@ -11,6 +12,8 @@ ai-usage: ai-assisted
 # Cloud overview dashboard
 
 ::: zone pivot="defender-portal"
+
+## Cloud overview dashboard in the Defender portal
 
 The Cloud Overview dashboard is the landing page for Microsoft Defender for Cloud in the unified security portal (Defender portal). It gives security teams a clear view of cloud security status before and after a breach. Use it to prioritize work, track progress over time, and take action quickly. You can review data at tenant level or by selected scope.
 
@@ -39,7 +42,8 @@ You can access the Cloud Overview dashboard from the navigation bar in the Micro
 1. Sign in to the [Defender portal](https://security.microsoft.com).
 1. Go to **Cloud security** > **Overview**
 
-## Top controls
+<a name="top-controls"></a>
+## Filter the dashboard with top controls
 
 At the top of the dashboard, you find key filters:
 
@@ -49,11 +53,14 @@ At the top of the dashboard, you find key filters:
 
 :::image type="content" source="media/defender-portal-dashboard/top-controls.png" alt-text="Screenshot of filters on cloud overview dashboard.":::
 
-## Dashboard sections
+<a name="dashboard-sections"></a>
+## Understand the dashboard sections
+
+The dashboard is organized into the following sections, each highlighting a different aspect of your security posture.
 
 ### Security at a glance
 
-This section gives you a quick snapshot of your current security status:
+The **Security at a glance** section gives you a quick snapshot of your current security status:
 
 - **Cloud Secure Score** (preview): Your overall cloud security risk score with a trend indicator.
 - **Threat Protection**: Number of alerts by severity.
@@ -68,7 +75,7 @@ In addition, all cloud and code environments that are currently connected to Def
 
 ### Top Actions
 
-This section helps you decide where to start. It guides next steps that reduce attack surface efficiently. It highlights:
+The **Top Actions** section helps you decide where to start. The Top Actions section guides next steps that reduce attack surface efficiently. The Top Actions section highlights:
 
 **Critical Recommendations**: Help you focus on the most critical recommendations found in your environment.
 **High-Severity Incidents**: Investigate active alerts.
@@ -88,11 +95,11 @@ Track how your security posture and threat detection evolve.
 
 :::image type="content" source="media/defender-portal-dashboard/threat-detection.png" alt-text="Screenshot of cloud overview dashboard threat detection trends.":::
 
-Each graph updates daily and reflects the selected time range. Hover over data points to see daily breakdowns.
+The Security Posture and Threat Detection graphs update daily and reflect the selected time range. Hover over data points to see daily breakdowns.
 
 ### Workload Insights
 
-Each tile in this section surfaces insights from Microsoft Cloud-native application protection platform (CNAPP).
+Each tile in the **Workload Insights** section surfaces insights from Microsoft Cloud-native application protection platform (CNAPP).
 
 Workloads include:
 
@@ -110,6 +117,8 @@ Each tile acts as a mini dashboard, showing top issues, protection coverage, and
 
 ## Next steps
 
+Use the following resources to continue exploring and configuring your cloud security environment:
+
 - [Identify and remediate attack paths](how-to-manage-attack-path.md?pivots=defender-portal)
 - [Review cloud assets](asset-inventory.md?pivots=defender-portal)
 - [Configure cloud scopes for filtering](cloud-scopes-unified-rbac.md?pivots=defender-portal)
@@ -118,11 +127,14 @@ Each tile acts as a mini dashboard, showing top issues, protection coverage, and
 
 ::: zone pivot="azure-portal"
 
+## Overview dashboard in the Azure portal
+
 Microsoft Defender for Cloud gives a unified view of the security posture of hybrid cloud workloads with the interactive **Overview** dashboard. Select any element on the dashboard to get more information.
 
 :::image type="content" source="./media/overview-page/overview-07-2023.png" alt-text="Screenshot of Defender for Cloud's overview page." lightbox="./media/overview-page/overview-07-2023.png":::
 
-## Metrics
+<a name="metrics"></a>
+## View metrics on the dashboard
 
 The **top menu bar** offers:
 
@@ -132,16 +144,18 @@ The **top menu bar** offers:
 
 :::image type="content" source="./media/overview-page/top-bar-of-overview-new.png" alt-text="Screenshot of Defender for Cloud's overview page's top bar." lightbox="media/overview-page/top-bar-of-overview-new.png":::
 
-## Feature tiles
+<a name="feature-tiles"></a>
+## Explore the feature tiles
 
-The center of the page displays the feature tiles, each linking to a high-profile feature or dedicated dashboard:
+The center of the page shows the feature tiles. Each tile links to a key feature or a dedicated dashboard:
 
 - **Security posture** - Defender for Cloud continually assesses your resources, subscriptions, and organization for security issues. It aggregates findings into one score so you can quickly evaluate current risk: the higher the score, the lower the identified risk level. For details, see [Secure Score and security controls](secure-score-security-controls.md).
 - **Workload protections** - The cloud workload protection platform (CWPP) in Defender for Cloud provides advanced protection for workloads on Azure, on-premises machines, and other cloud providers. Each resource type has a related Microsoft Defender plan. The tile shows coverage for connected resources in selected subscriptions and recent alerts by severity. For plan details, see [Defender plans and CWPP coverage](defender-for-cloud-introduction.md#cloud-workload-protection-platform-cwpp).
 - **Regulatory compliance** - Defender for Cloud continuously assesses hybrid and multicloud resources and maps findings to supported compliance standards. This mapping helps you track compliance status against the standards that matter to your organization. For guidance, see [Regulatory compliance dashboard](regulatory-compliance-dashboard.md).
 - **Inventory** - Asset inventory gives you a unified view of the security posture for connected resources. It includes resources with unresolved recommendations. If you enable integration with Microsoft Defender for Endpoint and Microsoft Defender for Servers, you also get software inventory. The overview tile shows healthy and unhealthy resource counts for selected subscriptions. To explore this view, see [Asset inventory in Defender for Cloud](asset-inventory.md).
 
-## Insights
+<a name="insights"></a>
+## Review dashboard insights
 
 The Insights pane offers customized items for your environment including:
 
@@ -151,6 +165,8 @@ The Insights pane offers customized items for your environment including:
 - **Recent blog posts by Microsoft Defender for Cloud experts.**
 
 ## Next steps
+
+For related tasks and follow-up guidance, see the following articles:
 
 - [Explore attack paths and security insights](concept-attack-path.md)
 - [Review cloud infrastructure assets](asset-inventory.md?pivots=azure-portal)

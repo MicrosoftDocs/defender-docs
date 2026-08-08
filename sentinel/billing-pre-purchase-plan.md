@@ -6,9 +6,11 @@ ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: daniha
 ms.topic: how-to
-ms.date: 07/07/2025
+ms.date: 07/01/2026
 
 #customerintent: As a SOC administrator or a billing specialist, I want to know how to buy a prepurchase plan and whether commit units will benefit us financially.
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Optimize Microsoft Sentinel costs with a pre-purchase plan
@@ -32,13 +34,13 @@ To buy a pre-purchase plan, you must have one of the following Azure subscriptio
 
 ## Determine the right size to buy
 
-Pre-purchase plans work well alongside Microsoft Sentinel commitment tiers. To get started, estimate your expected analytics tier ingestion volume and select the right commitment tier. This helps you determine the appropriate size for your pre-purchase plan. Each pre-purchase plan has a one-year term.
+Pre-purchase plans work well alongside Microsoft Sentinel commitment tiers. To get started, estimate your expected analytics tier ingestion volume and select the right commitment tier. Estimating your expected volume and selecting the right commitment tier helps you determine the appropriate size for your pre-purchase plan. Each pre-purchase plan has a one-year term.
 
 For example, suppose you choose a 200 GB/day commitment tier. With simplified pricing, the estimated monthly cost for both data ingestion and analysis is $20,000 USD—a 39% savings compared to the pay-as-you-go rate for the same volume.
 
-A $100,000 USD pre-purchase plan covers five months of that commitment tier but is valid for paying Microsoft Sentinel costs for 12 months. The pre-purchase plan is bought at a 22% discount for $78,000 USD. 
+A $100,000 USD pre-purchase plan covers five months of the 200 GB/day commitment tier but is valid for paying Microsoft Sentinel costs for 12 months. The pre-purchase plan is bought at a 22% discount for $78,000 USD. 
 
-The savings for the commitment tier and the pre-purchase plan combine. The original pay-as-you-go price for five months of 200 GB/day ingestion and analysis costs is, for example, about $160,000 USD. With an accurate commitment tier and a pre-purchase plan, the cost is reduced to $78,000 USD for a combined savings of over 51%. Since the example plan is depleted after just five months, the best way to ensure continued savings is to purchase more SCUs with another plan.
+The savings from the 200 GB/day commitment tier and the pre-purchase plan combine. The original pay-as-you-go price for five months of 200 GB/day ingestion and analysis costs is, for example, about $160,000 USD. With an accurate commitment tier and a pre-purchase plan, the cost is reduced to $78,000 USD for a combined savings of over 51%. Since the example plan is depleted after just five months, the best way to ensure continued savings is to purchase more SCUs with another plan.
 
 For more information, see the following articles:
 - [Switch to simplified pricing](enroll-simplified-pricing-tier.md)
@@ -55,9 +57,12 @@ Keep in mind, Microsoft Sentinel integrates with many other Azure services that 
 
 ## Purchase Microsoft Sentinel commit units
 
+> [!WARNING]
+> Microsoft Sentinel Pre-Purchase Plan purchases are final. Cancellations and exchanges aren't supported.
+
 Purchase Microsoft Sentinel pre-purchase plans in the [Azure portal reservations](https://portal.azure.com/#view/Microsoft_Azure_Reservations/ReservationsBrowseBlade/productType/Reservations). 
 
-1. Go to the [Azure portal](https://portal.azure.com)
+1. Go to the [Azure portal home page](https://portal.azure.com).
 1. Navigate to the **Reservations** service.
 1. On the **Purchase reservations page**, select **Microsoft Sentinel Pre-Purchase Plan**.  
    :::image type="content" source="media/sentinel-plan.png" alt-text="Screenshot showing Microsoft Sentinel pre-purchase plan." lightbox="media/sentinel-plan.png":::

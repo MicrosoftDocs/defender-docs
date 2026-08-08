@@ -2,13 +2,13 @@
 title: Hunting Capabilities in Microsoft Sentinel
 description: Use Microsoft Sentinel's built-in hunting queries to guide you into asking the right questions to find issues in your data.
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ms.author: monaberdugo
 author: mberdugo
 ms.reviewer: efratka
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security analyst, I want to use advanced threat hunting tools and queries so that I can proactively identify and mitigate security threats across my organization's data sources.
 
@@ -18,7 +18,7 @@ ms.custom: msecd-doc-authoring-1014
 
 As security analysts and investigators, you want to be proactive about looking for security threats, but your various systems and security appliances generate mountains of data that can be difficult to parse and filter into meaningful events. Microsoft Sentinel has powerful hunting search and query tools to hunt for security threats across your organization's data sources. To help security analysts look proactively for new anomalies that aren't detected by your security apps or even by your scheduled analytics rules, hunting queries guide you into asking the right questions to find issues in the data you already have on your network.
 
-For example, one out of the box query provides data about the most uncommon processes running on your infrastructure. You wouldn't want an alert each time those uncommon processes run. Those processes could be entirely innocent. But you might want to take a look at the query on occasion to see if there's anything unusual.
+For example, one out of the box query provides data about the most uncommon processes running on your infrastructure. You wouldn't want an alert each time those uncommon processes run. Those processes could be entirely innocent. But you might want to take a look at the uncommon-processes query on occasion to see if there's anything unusual.
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
@@ -43,7 +43,7 @@ To get started, see [Conduct end-to-end proactive threat hunting in Microsoft Se
 
 ## Hunting queries
 
-In Microsoft Sentinel in Defender, select **Threat management** > **Hunting**, then the **Queries** tab to run all your queries, or a selected subset. The **Queries** tab lists all the hunting queries installed with security solutions from the **Content hub**, and any extra query you created or modified. Each query provides a description of what it hunts for, and what kind of data it runs on. These queries are grouped by their MITRE ATT&CK **tactics**. The icons at the top of the **Queries** tab categorize the type of threat, such as initial access, persistence, and exfiltration. MITRE ATT&CK **techniques** are shown in the **Techniques** column and describe the specific behavior identified by the hunting query.
+In Microsoft Sentinel in Defender, select **Threat management** > **Hunting**, then the **Queries** tab to run all your queries, or a selected subset. The **Queries** tab lists all the hunting queries installed with security solutions from the **Content hub**, and any extra query you created or modified. Each query provides a description of what it hunts for, and what kind of data it runs on. All hunting queries on the **Queries** tab are grouped by their MITRE ATT&CK **tactics**. The icons at the top of the **Queries** tab categorize the type of threat, such as initial access, persistence, and exfiltration. MITRE ATT&CK **techniques** are shown in the **Techniques** column and describe the specific behavior identified by the hunting query.
 
 :::image type="content" source="media/hunting/hunting-start.png" alt-text="Microsoft Sentinel starts hunting" lightbox="media/hunting/hunting-start.png":::
 
@@ -55,7 +55,7 @@ The following table describes detailed actions available from the hunting dashbo
 | --------- | --------- |
 | **See how queries apply to your environment**      | Select the **Run all queries** button, or select a subset of queries using the check boxes to the left of each row and select the **Run selected queries** button. <br><br>Running your queries can take anywhere from a few seconds to many minutes, depending on how many queries are selected, the time range, and the amount of data that is being queried.      |
 | **View the queries that returned results**         | After your queries are done running, view the queries that returned results using the **Results** filter: <br>- Sort to see which queries had the most or fewest results. <br>- View the queries that aren't at all active in your environment by selecting *N/A* in the **Results** filter. <br>- Hover over the info icon (**i**) next to the *N/A* to see which data sources are required to make this query active.  |
-| **Identify spikes in your data**                   | Identify spikes in the data by sorting or filtering on **Results delta** or **Results delta percentage**. <br><br>These metrics compare the results of the last 24 hours against the results of the previous 24-48 hours, highlighting any large differences or relative difference in volume.   |
+| **Identify spikes in your data**                   | Identify spikes in the data by sorting or filtering on **Results delta** or **Results delta percentage**. <br><br>The **Results delta** and **Results delta percentage** metrics compare the results of the last 24 hours against the results of the previous 24-48 hours, highlighting any large differences or relative difference in volume.   |
 | **View queries mapped to the MITRE ATT&CK tactic** | The **MITRE ATT&CK tactic bar**, at the top of the table, lists how many queries are mapped to each MITRE ATT&CK tactic. The tactic bar gets dynamically updated based on the current set of filters applied. <br><br>Enables you to see which MITRE ATT&CK tactics show up when you filter by a given result count, a high result delta, *N/A* results, or any other set of filters.        |
 | **View queries mapped to MITRE ATT&CK techniques** | Queries can also be mapped to MITRE ATT&CK techniques. You can filter or sort by MITRE ATT&CK techniques using the **Technique** filter. By opening a query, you're able to select the technique to see the MITRE ATT&CK description of the technique.        |
 | **Save a query to your favorites**                 |   Queries saved to your favorites automatically run each time the **Hunting** page is accessed. You can create your own hunting query or clone and customize an existing hunting query template.      |
@@ -84,7 +84,7 @@ Use queries before, during, and after a compromise to take the following actions
 
   - [Export findings](/defender-xdr/manage-incidents#incident-logging-and-reporting) and link them to specific cases for improved SOC collaboration.
 
-You can also create hunting queries over data stored in Azure Data Explorer. For more information, see details of [constructing cross-resource queries](/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy) in the Azure Monitor documentation.
+You can also create hunting queries over data stored in Azure Data Explorer. For more information, see [Construct cross-resource queries](/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy) in the Azure Monitor documentation.
 
 To find more queries and data sources, go to the **Content hub** in Microsoft Sentinel or refer to community resources like [Microsoft Sentinel GitHub repository](https://github.com/Azure/Azure-Sentinel/tree/master/Hunting%20Queries). 
 

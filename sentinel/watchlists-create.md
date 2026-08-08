@@ -6,12 +6,12 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 
@@ -120,14 +120,14 @@ To upload a large watchlist file to your Azure Storage account, use AzCopy or th
 
 Upload files and directories to Blob storage by using the AzCopy v10 command-line utility. To learn more, see [Upload files to Azure Blob storage by using AzCopy](/azure/storage/common/storage-use-azcopy-blobs-upload).
 
-1. If you don't already have a storage container, create the destination blob container by running the following command.
+1. If you don't already have a storage container, create the destination blob container in your storage account to hold the watchlist file. Run the following command.
 
    ```azcopy
    azcopy make 
    https://<storage-account-name>.<blob or dfs>.core.windows.net/<container-name>
    ```
 
-1. Upload the local watchlist CSV file to the blob container by running the following command.
+1. Upload the local watchlist CSV file to the blob container so it can be referenced by a SAS URL. Run the following command.
 
    ```azcopy
    azcopy copy '<local-file-path>' 'https://<storage-account-name>.<blob or dfs>.core.windows.net/<container-name>/<blob-name>'
@@ -135,7 +135,7 @@ Upload files and directories to Blob storage by using the AzCopy v10 command-lin
 
 #### Upload your file in Azure portal
 
-If you don't use AzCopy, upload your file by using the Azure portal. Go to your storage account in Azure portal to upload the CSV file with your watchlist data.
+If you don't use AzCopy, upload your watchlist CSV file by using the Azure portal. Go to your storage account in Azure portal to upload the CSV file with your watchlist data.
 
 1. If you don't already have an existing storage container, [create a container](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container). For the level of public access to the container, use the default which is set to **Private (no anonymous access)**.
 1. [Upload a block blob](/azure/storage/blobs/storage-quickstart-blobs-portal#upload-a-block-blob) to upload your CSV file to the storage account.
@@ -163,6 +163,8 @@ Before you use a SAS URI, add the Azure portal to the Cross-Origin Resource Shar
 For more information, see [CORS support for Azure Storage](/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services).
 
 ### Step 4: Add the watchlist to a workspace
+
+To add the watchlist from Azure Storage to your Microsoft Sentinel workspace, complete the following steps:
 
 1. In the [Defender portal](https://security.microsoft.com/), go to **Microsoft Sentinel** > **Configuration** > **Watchlist**.
 

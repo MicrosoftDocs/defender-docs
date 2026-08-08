@@ -5,17 +5,17 @@ ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 06/11/2026
+ms.date: 07/02/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
-# Manage sites
+# Manage sites in Microsoft Defender for IoT
 
 Microsoft Defender for IoT in the Microsoft Defender portal includes the **Site security** page, which allows you to see the up-to-date security state of your production sites. Learn more about the [site security benefits and use cases](site-security-overview.md) or how to [monitor site security](monitor-site-security.md).
 
-When you manage a site, you might need to edit or delete the site information listed in the **Site security** page. This article shows you how to update device site associations, edit or delete a site, and add a device group from the **Site security** page in the Microsoft Defender portal.
+When you manage a site, you might need to edit or delete the site information listed in the **Site security** page. Use the **Site security** page to update device site associations, edit or delete a site, and add a device group in the Microsoft Defender portal.
 
 [!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 
@@ -41,7 +41,7 @@ To quickly update a group of devices, select multiple devices from the inventory
 
 1. Select **Save and close**.
 
-1. The Set site confirmation box appears. Select **Confirm** to finalize the change. Finalizing the change prevents automatic site reassignment based on existing site security rules. This change remains until the device is reset manually.
+1. The Set site confirmation box appears. Select **Confirm** to finalize the change. Finalizing the change prevents automatic site reassignment based on existing site security rules. The manual site assignment remains until the device is reset manually.
 
 >[!Note]
 >

@@ -1,13 +1,15 @@
 ---
 title: Monitor Zero Trust (TIC 3.0) security architectures with Microsoft Sentinel
 description: Install and learn how to use the Microsoft Sentinel Zero Trust (TIC3.0) solution for an automated visualization of Zero Trust principles, cross-walked to the Trusted Internet Connections framework.
-ms.date: 05/21/2024
+ms.date: 07/01/2026
 ms.author: monaberdugo
 author: mberdugo
 ms.reviewer: tbeerthuis
 ms.topic: how-to
 ms.collection:
   -       zerotrust-services
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security analyst, I want to monitor and respond to Zero Trust (TIC 3.0) requirements using automated tools, so that I can ensure compliance and improve our security posture.
@@ -27,7 +29,7 @@ This article describes how to use the Microsoft Sentinel **Zero Trust (TIC 3.0)*
 
 ## The Zero Trust solution and the TIC 3.0 framework
 
-Zero Trust and TIC 3.0 aren't the same, but they share many common themes and together provide a common story. The Microsoft Sentinel solution for **Zero Trust (TIC 3.0)** offers detailed crosswalks between Microsoft Sentinel and the Zero Trust model with the TIC 3.0 framework. These crosswalks help users to better understand the overlaps between the two.
+Zero Trust and TIC 3.0 aren't the same, but they share many common themes and together provide a common story. The Microsoft Sentinel solution for **Zero Trust (TIC 3.0)** offers detailed crosswalks between Microsoft Sentinel and the Zero Trust model with the TIC 3.0 framework. These crosswalks help users to better understand the overlaps between the Zero Trust model and the TIC 3.0 framework.
 
 While the Microsoft Sentinel solution for **Zero Trust (TIC 3.0)** provides best practice guidance, Microsoft doesn't guarantee nor imply compliance. All Trusted Internet Connection (TIC) requirements, validations, and controls are governed by the [Cybersecurity & Infrastructure Security Agency](https://www.cisa.gov/resources-tools/programs/trusted-internet-connections-tic).
 
@@ -78,15 +80,17 @@ The **Zero Trust (TIC 3.0)** solution is also enhanced by integrations with othe
 
     When you're done, select **Review + Create** to install the solution.
 
-For more information, see [Deploy out-of-the-box content and solutions](sentinel-solutions-deploy.md).
+For more information about deploying Microsoft Sentinel solutions, see [Deploy out-of-the-box content and solutions](sentinel-solutions-deploy.md).
 
 ## Sample usage scenario
 
-The following sections show how a security operations analyst could use the resources deployed with the **Zero Trust (TIC 3.0)** solution to review requirements, explore queries, configure alerts, and implement automation.
+This scenario shows how a security operations analyst could use the resources deployed with the **Zero Trust (TIC 3.0)** solution to [visualize Zero Trust data](#visualize-zero-trust-data), [configure Zero Trust-related alerts](#configure-zero-trust-related-alerts), and [respond with SOAR](#respond-with-soar).
 
-After [installing](#install-the-zero-trust-tic-30-solution) the **Zero Trust (TIC 3.0)** solution, use the workbook, analytics rules, and playbook deployed to your Microsoft Sentinel workspace to manage Zero Trust in your network.
+After you [install the Zero Trust (TIC 3.0) solution](#install-the-zero-trust-tic-30-solution), use the workbook, analytics rules, and playbook deployed to your Microsoft Sentinel workspace to manage Zero Trust in your network.
 
 ### Visualize Zero Trust data
+
+Use the **Zero Trust (TIC 3.0)** workbook to view Zero Trust data and explore queries:
 
 1. Navigate to the Microsoft Sentinel **Workbooks** > **Zero Trust (TIC 3.0)** workbook, and select **View saved workbook**.
 
@@ -136,6 +140,8 @@ For more information, see [Use triggers and actions in Microsoft Sentinel playbo
 
 ## Frequently asked questions
 
+The following questions address common scenarios and requirements for the **Zero Trust (TIC 3.0)** solution.
+
 ### Are custom views and reports supported?
 
 Yes. You can customize your **Zero Trust (TIC 3.0)** workbook to view data by subscription, workspace, time, control family, or maturity level parameters, and you can export and print your workbook.
@@ -144,7 +150,7 @@ For more information, see [Use Azure Monitor workbooks to visualize and monitor 
 
 ### Are additional products required?
 
-Both Microsoft Sentinel and Microsoft Defender for Cloud are [required](#prerequisites).
+Both Microsoft Sentinel and Microsoft Defender for Cloud are required prerequisites for this solution. For details, see the [Prerequisites](#prerequisites) section.
 
 Aside from these services, each control card is based on data from multiple services, depending on the types of data and visualizations being shown in the card. Over 25 Microsoft services provide enrichment for the **Zero Trust (TIC 3.0)** solution.
 
@@ -169,6 +175,8 @@ For more information, see [Use Azure Monitor workbooks to visualize and monitor 
 Yes. The **Zero Trust (TIC 3.0)** solution is in Public Preview and deployable to Commercial/Government regions. For more information, see [Cloud feature availability for commercial and US Government customers](/azure/security/fundamentals/feature-availability).
 
 ### Which permissions are required to use this content?
+
+The following Microsoft Sentinel roles determine what users can do with this content:
 
 - [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) users can create and edit workbooks, analytics rules, and other Microsoft Sentinel resources.
 

@@ -7,7 +7,7 @@ ms.reviewer: ofshezaf
 ms.topic: how-to
 ms.date: 08/07/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security engineer, I want to connect Microsoft Sentinel to various data sources using Windows agent-based connectors so that I can efficiently ingest and manage security event data for comprehensive threat detection and response.
 
@@ -55,7 +55,7 @@ The [Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-overvi
 
 Perform the following steps to create a data collection rule in the Microsoft Sentinel portal.
 
-1. From Microsoft Sentinel, select **Configuration**> **Data connectors**. Select your connector from the list, and then select **Open connector page** on the details pane. Then follow the on-screen instructions under the **Instructions** tab, as described in the steps that follow.
+1. From Microsoft Sentinel, select **Configuration**> **Data connectors**. Select your connector from the list, and then select **Open connector page** on the details pane. Then follow the on-screen instructions under the **Instructions** tab and complete the remaining steps in this procedure.
 
 1. Verify that you have the appropriate permissions as described under the **Prerequisites** section on the connector page. At minimum, you need read and write permissions on the Microsoft Sentinel workspace.
 
@@ -94,7 +94,7 @@ You'll see all your data collection rules, including those you [create using the
 
 ## Create data collection rules using the API
 
-You can also create data collection rules using the API, which can make life easier if you're creating many rules, such as if you're an MSSP. Here's an example (for the [Windows Security Events via AMA](./data-connectors-reference.md#windows-security-events-via-ama) connector) that you can use as a template for creating a rule:
+You can also create data collection rules using the API, which can make life easier if you're creating many rules, such as if you're a managed security service provider (MSSP). Here's an example (for the [Windows Security Events via AMA](./data-connectors-reference.md#windows-security-events-via-ama) connector) that you can use as a template for creating a rule:
 
 Send the following PUT request to create or update a data collection rule that defines the event sources, the destination Log Analytics workspace, and the data flow between them.
 

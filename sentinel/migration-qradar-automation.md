@@ -4,9 +4,9 @@ description: Learn how to identify SOAR use cases, and how to migrate your QRada
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security engineer, I want to migrate my SOAR automation from IBM Security QRadar to Microsoft Sentinel so that I can streamline incident response and enhance threat remediation using Microsoft Sentinel's advanced automation capabilities.
@@ -34,9 +34,12 @@ Here’s what you need to think about when migrating SOAR use cases from IBM Sec
 - **Accurate alerts or data**. Response actions are dependent on the accuracy of signals such as alerts. Alerts and enrichment sources should be reliable. Microsoft Sentinel resources such as watchlists and reliable threat intelligence can enhance reliability.
 - **Analyst role**. While automation where possible is great, reserve more complex tasks for analysts, and provide them with the opportunity for input into workflows that require validation. In short, response automation should augment and extend analyst capabilities.
 
-## Migrate SOAR workflow
+<a name="migrate-soar-workflow"></a>
+## Migrate SOAR workflows to Microsoft Sentinel
 
-This section shows how key SOAR concepts in IBM Security QRadar SOAR translate to Microsoft Sentinel components. The section also provides general guidelines for how to migrate each step or component in the SOAR workflow.
+This section shows how key SOAR concepts in IBM Security QRadar SOAR translate to Microsoft Sentinel components. This section also provides general guidelines for how to migrate each step or component in the SOAR workflow.
+
+The following diagram labels four numbered workflow stages. The table after the diagram maps each numbered stage from QRadar SOAR to its Microsoft Sentinel equivalent.
 
 :::image type="content" source="media/migration-qradar-automation/qradar-sentinel-soar-workflow.png" alt-text="Diagram displaying the QRadar and Microsoft Sentinel SOAR workflows." lightbox="media/migration-qradar-automation/qradar-sentinel-soar-workflow.png" border="false":::
 
@@ -47,7 +50,8 @@ This section shows how key SOAR concepts in IBM Security QRadar SOAR translate t
 |3 |Execute selected workflows. |Execute other playbooks according to tags applied by playbooks that were executed previously.   |
 |4 |Post data to message destinations. |Execute code snippets using inline actions in Logic Apps. |
 
-## Map SOAR components 
+<a name="map-soar-components"></a>
+## Map QRadar SOAR components to Microsoft Sentinel capabilities
 
 Review which Microsoft Sentinel or Azure Logic Apps features map to the main QRadar SOAR components.
 
@@ -65,16 +69,17 @@ Review which Microsoft Sentinel or Azure Logic Apps features map to the main QRa
 
 Most of the playbooks that you use with Microsoft Sentinel are available in either the [Automation > Templates tab](use-playbook-templates.md), the [Content hub catalog](sentinel-solutions-catalog.md), or [Microsoft Sentinel playbooks on GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/Block-OnPremADUser). In some cases, however, you might need to create playbooks from scratch or from existing templates.
 
-You typically build your custom logic app using the Azure Logic App Designer feature. The logic apps code is based on [Azure Resource Manager (ARM) templates](/azure/azure-resource-manager/templates/overview), which facilitate development, deployment and portability of Azure Logic Apps across multiple environments. To convert your custom playbook into a portable ARM template, you can use the [ARM template generator](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/export-microsoft-sentinel-playbooks-or-azure-logic-apps-with/ba-p/3275898).
+You typically build your custom logic app using the Azure Logic App Designer feature. The logic apps code is based on [Azure Resource Manager (ARM) templates](/azure/azure-resource-manager/templates/overview). ARM templates are deployment files that package and move Azure resources across multiple environments. To convert your custom playbook into a portable ARM template, you can use the [ARM template generator](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/export-microsoft-sentinel-playbooks-or-azure-logic-apps-with/ba-p/3275898).
 
-Use the following articles and blog posts for cases where you need to build your own playbooks either from scratch or from existing templates.
+Use these articles and blog posts for cases where you need to build your own playbooks either from scratch or from existing templates.
 - [Automate incident handling in Microsoft Sentinel](automate-incident-handling-with-automation-rules.md)
 - [Automate threat response with playbooks in Microsoft Sentinel](automate-responses-with-playbooks.md)
 - [Tutorial: Use playbooks with automation rules in Microsoft Sentinel](tutorial-respond-threats-playbook.md)
 - [How to use Microsoft Sentinel for Incident Response, Orchestration and Automation](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/how-to-use-azure-sentinel-for-incident-response-orchestration/ba-p/2242397)
 - [Adaptive Cards to enhance incident response in Microsoft Sentinel](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/using-microsoft-teams-adaptive-cards-to-enhance-incident/ba-p/3330941)
 
-## SOAR post migration best practices
+<a name="soar-post-migration-best-practices"></a>
+## Post-migration best practices for SOAR in Microsoft Sentinel
 
 Here are best practices you should take into account after your SOAR migration:
 

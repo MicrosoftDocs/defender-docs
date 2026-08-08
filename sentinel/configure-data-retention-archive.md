@@ -5,7 +5,9 @@ ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: krishsa
 ms.topic: how-to
-ms.date: 07/21/2024
+ms.date: 07/01/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security architect or SOC manager, I want to configure data retention and archiving policies so that I can ensure long-term storage of important data at a reduced cost.
@@ -14,7 +16,7 @@ ms.date: 07/21/2024
 
 # Configure interactive and long-term data retention in Microsoft Sentinel
 
-In the previous deployment step, you enabled the User and Entity Behavior Analytics (UEBA) feature to streamline your analysis process. In this article, you learn how to set up interactive and long-term data retention, to make sure your organization retains the data that's important in the long term. This article is part of the [Deployment guide for Microsoft Sentinel](deploy-overview.md).
+In the [Enable UEBA](enable-entity-behavior-analytics.md) step of the deployment guide, you enabled the User and Entity Behavior Analytics (UEBA) feature to streamline your analysis process. In this article, you learn how to set up interactive and long-term data retention, to make sure your organization retains the data that's important in the long term. This article is part of the [Deployment guide for Microsoft Sentinel](deploy-overview.md).
 
 ## Configure data retention
 

@@ -1,10 +1,10 @@
 ---
 title: Uninstall the sensor
 description: Remove the Microsoft Defender for Identity sensor from domain controllers by deleting, uninstalling, or cleaning up orphaned and duplicate entries in the Microsoft Defender portal.
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -26,15 +26,15 @@ Deactivating Defender for Identity capabilities from your domain controller does
 
 ### For sensor v3.x
 
+> [!IMPORTANT]
+> Deleting the sensor removes the v3.x sensor software and stops monitoring on that domain controller.
+
 To delete a v3.x sensor from the Microsoft Defender portal, follow these steps:
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Identities** > **Sensors**.
 2. Select the domain controller where you want to deactivate Defender for Identity capabilities, select **Delete**, and confirm your selection.
 
-   :::image type="content" source="media/screenshot-that-shows-how-to-delete-a-sensor.png" alt-text="Screenshot that shows how to delete a sensor." lightbox="media/screenshot-that-shows-how-to-delete-a-sensor.png":::
-
-    >[!NOTE]
-    >Deleting the sensor removes the v3.x sensor software and stops monitoring on that domain controller.   
+   :::image type="content" source="media/screenshot-that-shows-how-to-delete-a-sensor.png" alt-text="Screenshot that shows how to delete a sensor." lightbox="media/screenshot-that-shows-how-to-delete-a-sensor.png":::   
 
 ## Delete and uninstall a sensor v2.x from a domain controller
 

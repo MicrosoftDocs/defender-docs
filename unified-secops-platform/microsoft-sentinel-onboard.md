@@ -35,7 +35,7 @@ For more information, see:
 
 ## Prerequisites
 
-Before you begin, review the feature documentation to understand the product changes and limitations.
+Before you begin, review the following feature documentation to understand the product changes and limitations.
 
 - [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
 - [Advanced hunting in the Microsoft Defender portal](/defender-xdr/advanced-hunting-microsoft-defender)
@@ -85,7 +85,7 @@ To unify Microsoft Defender XDR and Microsoft Sentinel security operations in th
 - Account for Defender XDR is a member of the same Microsoft Entra tenant with which Microsoft Sentinel is associated
 - Access to Microsoft Defender XDR in the Defender portal, as described in [Microsoft Defender XDR prerequisites](/microsoft-365/security/mtp/prerequisites#required-permissions)
 
-If applicable, complete these prerequisites:
+If applicable, complete these service-specific prerequisites for unified security operations:
 
 |Service  |Prerequisite  |
 |---------|---------|

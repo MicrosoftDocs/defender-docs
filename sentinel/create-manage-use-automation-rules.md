@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.author: monaberdugo
 author: mberdugo
 ms.reviewer: sshuster
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 
@@ -47,7 +47,7 @@ You also want to determine your use case. What are you trying to accomplish with
 
 ### Determine the trigger
 
-Do you want this automation to be activated when new incidents or alerts are created? Or anytime an incident gets updated?
+Do you want this automation rule to be activated when new incidents or alerts are created? Or anytime an incident gets updated?
 
 Automation rules are triggered **when an incident is created or updated** or **when an alert is created**. Recall that incidents include alerts, and that both alerts and incidents can be created by analytics rules, of which there are several types, as explained in [Threat detection in Microsoft Sentinel](threat-detection.md).
 
@@ -64,7 +64,7 @@ The following table shows the different possible scenarios that cause an automat
 
 ## Create your automation rule
 
-The steps in this section apply to most automation rule scenarios.
+The following steps apply to most automation rule creation scenarios.
 
 If you're looking to suppress noisy incidents and are working in the Azure portal, try [handling false positives](false-positives.md#add-exceptions-with-automation-rules-azure-portal-only).
 
@@ -88,7 +88,7 @@ To create your automation rule:
 
 ### Choose your trigger
 
-From the **Trigger** drop-down, select the appropriate trigger according to the circumstance for which you're creating the automation rule&mdash;**When incident is created**, **When incident is updated**, or **When alert is created**.
+From the **Trigger** drop-down, select the trigger that matches when you want the automation rule to run&mdash;**When incident is created**, **When incident is updated**, or **When alert is created**.
 
 > [!NOTE]
 > If your workspace is onboarded to the Microsoft Defender portal, the trigger drop-down also includes the **Case created** and **Case updated** triggers from [Simple Flows](automation/create-basic-automation-rules-simple-flows.md) (preview).

@@ -1,9 +1,9 @@
 ---
 title: Investigate Devices in the OT Sensor Device Map
 description: Learn how to use the device map on an OT sensor which provides a graphical representation of devices and the connections between them.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -13,11 +13,13 @@ OT device maps provide a graphic representation of the network devices detected 
 
 Use a device map to retrieve, analyze, and manage device information, either all at once or by network segment, such as specific interest groups or Purdue layers. If you're working in an air-gapped environment with an OT sensor, use a *zone map* to view devices across all connected OT sensors in a specific zone.
 
+Before you start, make sure you meet the [prerequisites](#prerequisites), including a deployed and activated OT sensor and the required user permissions.
+
 ## Prerequisites
 
 To perform the procedures in this article, make sure that you have:
 
-- An OT network sensor [Install OT sensor software](ot-deploy/install-software-ot-sensor.md), [configured and activated](ot-deploy/activate-deploy-sensor.md), with network traffic ingested.
+- An OT network sensor [Install OT sensor software](ot-deploy/install-software-ot-sensor.md), [configure and activate your OT sensor](ot-deploy/activate-deploy-sensor.md), with network traffic ingested.
 
 - Access to your OT sensor. Users with the **Viewer** role can view data on the map. To import or export data or edit the map view, you need access as a **Security Analyst** or **Admin** user. For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](roles-on-premises.md).
 
@@ -56,13 +58,13 @@ Use any of the following map tools to modify the data shown and how it's display
 |Name  |Description  |
 |---------|---------|
 |**Refresh map**     | Select to refresh the map with updated data.        |
-| **Notifications** | Select to view and [manage device notifications](#manage-device-notifications). |
+| **Notifications** | Select to view and [Manage device notifications](#manage-device-notifications). |
 |**Search by IP / MAC**     | Filter the map to display only devices connected to a specific IP or MAC address.       |
 |**Multicast/broadcast**     | Select to edit the filter that shows or hides multicast and broadcast devices.    By default, multicast and broadcast traffic is hidden.      |
 |**Add filter**  (Last seen)   | Select to filter devices displayed by those shown in a specific time period, from the last five minutes to the last seven days.       |
 |**Reset filters**     |   Select to reset the *Last seen* filter.      |
-|**Highlight**     | Select to highlight the devices in a specific [built-in device map group](#built-in-device-map-groups). Highlighted devices are shown on the map in blue. <br><br>Use the **Search groups** box to search for device groups to highlight, or expand your group options, and then select the group you want to highlight.       |
-|**Filter**     |  Select to filter the map to show only the devices in a specific [built-in device map group](#built-in-device-map-groups). <br><br>Use the **Search groups** box to search for device groups, or expand your group options, and then select the group you want to filter by.        |
+|**Highlight**     | Select to highlight the devices in a specific [built-in device map groups](#built-in-device-map-groups) category. Highlighted devices are shown on the map in blue. <br><br>Use the **Search groups** box to search for device groups to highlight, or expand your group options, and then select the group you want to highlight.       |
+|**Filter**     |  Select to filter the map to show only the devices in a specific [built-in device map groups](#built-in-device-map-groups) category. <br><br>Use the **Search groups** box to search for device groups, or expand your group options, and then select the group you want to filter by.        |
 | **Zoom** <br>:::image type="icon" source="media/how-to-work-with-maps/zoom-in-icon-v2.png" border="false"::: / :::image type="icon" source="media/how-to-work-with-maps/zoom-out-icon-v2.png"  border="false"::: | Zoom in on the map to view the connections between each device, either using the mouse or the **+**/**-** buttons on the right of the map. |
 | **Fit to screen** <br>:::image type="icon" source="media/how-to-work-with-maps/fit-to-screen-icon.png" border="false":::    |  Zooms out to fit all devices on the screen      |
 |**Fit to selection**<br>:::image type="icon" source="media/how-to-work-with-maps/fit-to-selection-icon.png" border="false":::     |  Zooms out enough to fit all selected devices on the screen      |
@@ -152,7 +154,7 @@ To edit device properties or perform other actions on a device from the device m
     |  **Activity Report**   | Generates an activity report for the device for the selected timespan.        |
     | **Simulate Attack Vectors**    |   Generates an attack vector simulation for the selected device. For more information, see [Create attack vector reports](how-to-create-attack-vector-reports.md).      |
     | **Add to custom group**    | Creates a new [custom group](#create-a-custom-device-group) with the selected device.        |
-    |  **Delete**   | Deletes the device from the inventory.     |
+    |  **Delete**   | Deletes the device from the inventory. **Warning:** Deleting a device permanently removes it from the inventory. Make sure you no longer need the device record before proceeding.     |
 
 ## Merge devices
 
@@ -192,7 +194,7 @@ To view and handle device notifications:
 1. Each notification might have different mitigation options. Do one of the following:
 
     - Handle one notification at a time, selecting a specific mitigation action, or selecting **Dismiss** to close the notification with no activity.
-    - Select **Select All** to show which notifications can be [handling multiple notifications together](#handling-multiple-notifications-together). Clear selections for specific notifications, and then select **Accept All** or **Dismiss All** to handle any remaining selected notifications together.
+    - Select **Select All** to show which notifications can be [handled together](#handling-multiple-notifications-together). Clear selections for specific notifications, and then select **Accept All** or **Dismiss All** to handle any remaining selected notifications together.
 
 > [!NOTE]
 > Selected notifications are automatically resolved if they aren't dismissed or otherwise handled within 14 days. For more information, see the **Auto-resolve** column in [Respond to device notifications](#device-notification-responses).

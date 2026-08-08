@@ -2,7 +2,8 @@
 title: Set up continuous export in the Azure portal
 description: Learn how to set up continuous export of Microsoft Defender for Cloud security alerts and recommendations.
 ms.topic: how-to
-ms.date: 05/24/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security analyst, I want to learn how to set up continuous export of alerts and recommendations in Microsoft Defender for Cloud so that I can analyze the data in Log Analytics or Azure Event Hubs.
 ai-usage: ai-assisted
 ---
@@ -34,7 +35,8 @@ Required roles and permissions:
 
     Learn more about [Azure Monitor and Log Analytics workspace solutions](/previous-versions/azure/azure-monitor/insights/solutions).
 
-## Set up continuous export in the Azure portal
+<a name="set-up-continuous-export-in-the-azure-portal"></a>
+## Create a continuous export configuration
 
 You can set up continuous export in the Microsoft Defender for Cloud pages in the Azure portal, by using the REST API, or at scale by using Azure Policy templates.
 
@@ -57,7 +59,7 @@ You can set up continuous export in the Microsoft Defender for Cloud pages in th
     - **Streaming**. Assessments are sent when a resource’s health state is updated (if no updates occur, no data is sent).
     - **Snapshots**. A snapshot of the current state of the selected data types that are sent once a week per subscription. To identify snapshot data, look for the field **IsSnapshot**.
 
-    If your selection includes one of these recommendations, you can include the vulnerability assessment findings with them:
+    If your selection includes one of these recommendations, you can include the vulnerability assessment findings with those recommendations:
 
     - [SQL databases should have vulnerability findings resolved](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/82e20e14-edc5-4373-bfc4-f13121257c37)
     - [SQL servers on machines should have vulnerability findings resolved](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/f97aa83c-9b63-4f9a-99f6-b22c4398f936)
@@ -65,7 +67,7 @@ You can set up continuous export in the Microsoft Defender for Cloud pages in th
     - [Machines should have vulnerability findings resolved](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/1195afff-c881-495e-9bc5-1486211ae03f)
     - [System updates should be installed on your machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/4ab6e3c5-74dd-8b35-9ab9-f61b30875b27)
 
-    To include the findings with these recommendations, set **Include security findings** to **Yes**.
+    To include vulnerability assessment findings with the preceding vulnerability-related recommendations, set **Include security findings** to **Yes**.
 
     :::image type="content" source="./media/continuous-export/include-security-findings-toggle.png" alt-text="Screenshot that shows the Include security findings toggle in a continuous export configuration." :::
 
@@ -80,7 +82,7 @@ You can set up continuous export in the Microsoft Defender for Cloud pages in th
 
 ## Related content
 
-In this article, you learned how to configure continuous exports of your recommendations and alerts. You also learned how to download your alerts data as a CSV file.
+The preceding steps showed how to configure continuous export of Defender for Cloud recommendations and alerts to a Log Analytics workspace or an event hub. For one-time CSV export of alerts, see [download a CSV file](export-alerts-to-csv.md).
 
 To see related content:
 
@@ -90,5 +92,5 @@ To see related content:
 - Learn more about [Microsoft Sentinel](/azure/sentinel/).
 - Review the [Azure Monitor documentation](/azure/azure-monitor/).
 - Learn how to [export data types schemas](https://aka.ms/ASCAutomationSchemas).
-- Check out [common questions](faq-general.yml) about continuous export.
+- Check out [common questions about continuous export](faq-general.yml).
 

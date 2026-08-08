@@ -4,13 +4,13 @@ description: Understand the ABAP authorizations required for the SAP user accoun
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #Customer intent: As an SAP BASIS team member, I want to manually configure SAP authorizations based on the specific log files that I want to ingest to Microsoft Sentinel.
 
 ---

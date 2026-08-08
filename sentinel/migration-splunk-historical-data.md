@@ -5,9 +5,9 @@ description: Learn how to export your historical data from Splunk for a Microsof
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security engineer, I want to export historical data from Splunk so that I can migrate it to Microsoft Sentinel for analysis and storage.
@@ -16,7 +16,7 @@ ms.custom: msecd-doc-authoring-1014
 
 # Export historical data from Splunk
 
-This article describes how to export your historical data from Splunk. After you complete the steps in this article, you can [select a target Azure platform for your exported historical data](migration-ingestion-target-platform.md), and then [select a data ingestion tool for migrating historical data](migration-ingestion-tool.md).
+Use these methods to export historical data from Splunk in CSV format before migrating it to Azure. After you export your data, you can [select a target Azure platform for your exported historical data](migration-ingestion-target-platform.md), and then [select a data ingestion tool for migrating historical data](migration-ingestion-tool.md).
 
 :::image type="content" source="media/migration-export-ingest/export-data.png" alt-text="Diagram illustrating steps involved in export and ingestion." border="false":::
 
@@ -32,7 +32,7 @@ This CLI example searches for events from the `_internal` index that occur durin
 
 This CLI command exports data recorded between 23:59 and 01:00 on September 14, 2021 to a CSV file: 
 
-```
+```bash
 splunk search "index=_internal earliest=09/14/2021:23:59:00 latest=09/16/2021:01:00:00 " -output csv > c:/data.csv  
 ```
 ## dump example

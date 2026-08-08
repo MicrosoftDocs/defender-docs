@@ -3,14 +3,14 @@ title: Visualize your data using workbooks in Microsoft Sentinel
 description: Create and customize Microsoft Sentinel workbooks to visualize and monitor security data using built-in templates or custom designs, with access managed through Azure RBAC.
 author: EdB-MSFT
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ms.author: edbaynash
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security analyst, I want to create and customize workbooks in Microsoft Sentinel so that I can visualize and monitor security data effectively.
@@ -57,7 +57,7 @@ Use a template installed from the content hub to create a workbook.
 
     ---
 
-1. From the details pane, select **Save**, and then select the location where you want to save the workbook. This action creates an Azure resource in the selected location based on the relevant template. Only the workbook's JSON file is saved in this location, and no data.
+1. From the details pane, select **Save**, and then select the location where you want to save the workbook. Saving the workbook creates an Azure resource in the selected location based on the relevant template. Only the workbook's JSON file is saved in this location, and no data.
 
 1. From the details pane, select **View saved workbook** to open it for editing.
 
@@ -101,11 +101,11 @@ Create a workbook from scratch in Microsoft Sentinel.
 
 1. When building a query, set the **Data source** to **Logs** and **Resource type** to **Log Analytics**, and then choose one or more workspaces.
 
-   We recommend that your query uses an [Advanced Security Information Model (ASIM) parser](normalization-about-parsers.md) and not a built-in table. The query will then support any current or future relevant data source rather than a single data source.
+   We recommend that your query uses an [Advanced Security Information Model (ASIM) parser](normalization-about-parsers.md) and not a built-in table. A query that uses an ASIM parser supports any current or future relevant data source rather than a single data source.
  
 1. When you're done with your edits, select **Done editing** and then **Save**. In the side pane, enter a meaningful name for your workbook, and select the subscription and resource group for your workspace.
 
-1. When working in the Azure portal, switch between workbooks in your workspace by selecting **Open** ![Icon for the Open button used to switch between saved workbooks in your workspace.](./media/monitor-your-data/switch.png) in the toolbar of any workbook. The screen switches to a list of other workbooks you can switch to.
+1. When working in the Azure portal, switch between workbooks in your workspace by selecting **Open** ![Screenshot of the Open button used to switch between saved workbooks in your workspace.](./media/monitor-your-data/switch.png) in the toolbar of any workbook. The workbook view switches to a list of other saved workbooks you can open.
 
     Select the workbook you want to open:
 
@@ -135,7 +135,7 @@ Refresh your workbook to display updated data. In the toolbar, select one of the
 
 ## Print a workbook or save as PDF (Azure portal only)
 
-To print a workbook, or save it as a PDF, use the options menu to the right of the workbook title. These options are available only in the Azure portal. If you're working in the Defender portal, select **Open in Azure** to open the workbook in the Azure portal.
+To print a workbook, or save it as a PDF, use the options menu to the right of the workbook title. The print and Save as PDF options are available only in the Azure portal. If you're working in the Defender portal, select **Open in Azure** to open the workbook in the Azure portal.
 
 1. Select options > :::image type="icon" source="media/monitor-your-data/print-icon.png" border="false"::: **Print content**.
 
@@ -150,7 +150,7 @@ To print a workbook, or save it as a PDF, use the options menu to the right of t
 You can delete both saved templates and customized workbooks from the **My workbooks** tab. Templates themselves can't be deleted.
 
 > [!WARNING]
-> Deleting a workbook permanently removes the workbook resource and any customizations you made to the template. This action can't be undone. The original template remains available.
+> Deleting a workbook permanently removes the workbook resource and any customizations you made to the template. This action can't be undone. The workbook template that the deleted workbook was based on remains available.
 
 To delete a workbook, select the workbook in the **My workbooks** tab, and then select **Delete**.
 
@@ -169,7 +169,7 @@ If you use Microsoft Entra ID with Microsoft Sentinel, we recommend that you ins
 
 We recommend that you install the appropriate solution from the **Content hub** to add a workbook for your firewall.
 
-For example, install the Palo Alto firewall solution for Microsoft Sentinel to add the Palo Alto workbooks. The workbooks analyze your firewall traffic, providing you with correlations between your firewall data and threat events, and highlight suspicious events across entities.
+For example, install the Palo Alto firewall solution for Microsoft Sentinel to add the Palo Alto workbooks. The Palo Alto workbooks analyze your firewall traffic, providing you with correlations between your firewall data and threat events, and highlight suspicious events across entities.
 
 :::image type="content" source="media/qs-get-visibility/palo-alto-week-query.png" alt-text="Screenshot of the Palo Alto workbook.":::
 
@@ -211,7 +211,7 @@ AuditLogs
 | project-away user1
 ```
 
-See more information on the following items used in the preceding examples, in the Kusto documentation:
+See more information on the following items used in the sample queries above, in the Kusto documentation:
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
 - [***extend*** operator](/kusto/query/extend-operator?view=microsoft-sentinel&preserve-view=true)
 - [***project*** operator](/kusto/query/project-operator?view=microsoft-sentinel&preserve-view=true)

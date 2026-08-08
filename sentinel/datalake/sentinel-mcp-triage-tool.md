@@ -10,14 +10,14 @@ ms.date: 06/18/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #customer intent: As a security analyst, I want to know the different tools available to triage incidents and hunt for threats 
 ---
 
 # Prioritize incidents and hunt for threats with triage collection
 
-The triage collection in the Microsoft Sentinel Model Context Protocol (MCP) server integrates your AI models with APIs that support incident triage and hunting. This integration lets you prioritize incidents quickly and hunt over your own data easily, reducing mean time to resolution, risk exposure, and dwell time.
+The triage collection in the Microsoft Sentinel Model Context Protocol (MCP) server integrates your AI models with APIs that support incident triage and hunting. This integration lets you prioritize incidents quickly and hunt over your own data easily, reducing mean time to resolution, risk exposure, and dwell time. This article describes how to add the triage collection, lists the available tools and their parameters, and provides sample prompts. Before you begin, make sure you meet the [prerequisites](#prerequisites).
 
 Use the tool for the following scenarios:
 
@@ -34,9 +34,9 @@ To access the triage tool collection, you must have the following prerequisites:
 
 ## Add the triage collection
 
-To add the triage collection, first set up Microsoft Sentinel's unified MCP server interface. Follow the instructions for compatible platforms listed in the **Prerequisites** section.
+To add the triage collection, first set up Microsoft Sentinel's unified MCP server interface. Follow the instructions for compatible platforms listed in the [Prerequisites](#prerequisites) section.
 
-Use the following endpoint URL to connect your code editor or agent platform to the triage collection:
+Use the following MCP endpoint URL for the triage collection to connect your code editor or agent platform and retrieve incident triage and hunting data:
 
 ```text
 https://sentinel.microsoft.com/mcp/triage
@@ -113,7 +113,7 @@ This tool retrieves complete column schemas with descriptions for specified adva
 
 ### Run hunting query (`RunAdvancedHuntingQuery`)
 
-Run an advanced hunting query by using KQL across supported Microsoft Defender tables to proactively search for threats. To understand data sources, first run `FetchAdvancedHuntingTablesOverview`. For error-free KQL, first run `FetchAdvancedHuntingTablesDetailedSchema`.
+Run an advanced hunting query by using Kusto Query Language (KQL) across supported Microsoft Defender tables to proactively search for threats. To understand data sources, first run `FetchAdvancedHuntingTablesOverview`. For error-free KQL, first run `FetchAdvancedHuntingTablesDetailedSchema`.
 
 | Parameters | Required? | Description |
 |---|---|---|

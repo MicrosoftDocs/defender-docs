@@ -1,12 +1,12 @@
 ---
 title: Quarterly or ad hoc operational guide - Microsoft Defender for Identity
-description: Learn about the Microsoft Defender for Identity activities that we recommend for your team on a quarterly or ad-hoc basis.
-ms.date: 06/15/2026
+description: Review quarterly and ad hoc Microsoft Defender for Identity tasks, including checking service health, verifying sensor deployment in server setup processes, and validating domain controller audit policies.
+ms.date: 07/02/2026
 ms.topic: how-to
 #customerIntent: As a Microsoft Defender for Identity customer, I want to know the recommended activities for my team on a quarterly or ad-hoc basis.
 ms.reviewer: martin77s
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Quarterly / ad hoc operational guide - Microsoft Defender for Identity
@@ -47,7 +47,7 @@ For more information, see [Deploy Microsoft Defender for Identity with Microsoft
 
 **Persona**: Security administrators
 
-We recommend that you periodically run the **Test-MDIConfiguration** PowerShell command. This command tests whether your domain controller Advanced Audit Policy settings are configured correctly. Misconfigured settings can cause gaps in the Event Log and incomplete Defender for Identity coverage.
+We recommend that you periodically run the **Test-MDIConfiguration** PowerShell command. It checks whether your domain controller audit policy settings are correct. Wrong settings can cause gaps in the Event Log and reduce Defender for Identity coverage.
 
 For more information, see:
 

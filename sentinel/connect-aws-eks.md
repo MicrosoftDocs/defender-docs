@@ -5,11 +5,13 @@ ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: krishsa
 ms.topic: how-to
-ms.date: 04/15/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 #Customer intent: As a security operator, I want to ingest Elastic Kubernetes Service (EKS) audit logs from my Amazon Web Services S3 bucket to my Microsoft Sentinel workspace, so that security analysts can monitor Kubernetes cluster activities and detect security threats.
 ---
 
@@ -34,7 +36,7 @@ The **Amazon Web Services S3 EKS** data connector serves the following use cases
 
 - **DevSecOps and cluster governance:** Monitor developer activities, resource access patterns, and configuration changes within your EKS clusters to ensure proper governance and security practices in your DevSecOps workflows.
 
-This article explains how to configure the Amazon Web Services S3 EKS connector. The process of setting it up has two parts: the AWS side and the Microsoft Sentinel side. Each side's process produces information used by the other side. This two-way authentication creates secure communication.
+This article explains how to configure the Amazon Web Services S3 EKS connector. The process of setting it up has two parts: the AWS side and the Microsoft Sentinel side. Each side's process produces information used by the other side. The exchange of configuration details between the AWS setup and the Microsoft Sentinel setup creates secure communication.
 
 ## Prerequisites
 
@@ -79,7 +81,7 @@ To enable and configure the connector, complete the following tasks:
 
 - **In Microsoft Sentinel:**
 
-    - Configure the **Amazon Web Services S3 EKS Connector** in the Microsoft Sentinel portal by adding **log collectors** that poll the SQS queue and retrieve log data from the S3 bucket. [See the instructions below](#add-log-collectors).
+    - Configure the **Amazon Web Services S3 EKS Connector** in the Microsoft Sentinel portal by adding **log collectors** that poll the SQS queue and retrieve log data from the S3 bucket. For more information, see [Add log collectors](#add-log-collectors).
 
 ## Set up the AWS environment
 
@@ -192,6 +194,8 @@ When you create the resource stacks and configure EKS audit logging, return to t
 
 ## Verify data ingestion
 
+Use the following steps to verify that EKS audit log data is being ingested into your Microsoft Sentinel workspace.
+
 1. After setting up the connector, go to the **Logs** page (or the **Advanced hunting** page in the Defender portal) and run the following query. If you get any results, the connector is working properly.
 
     ```kusto
@@ -251,6 +255,8 @@ The EKS audit logs ingest into the **AWSEKSLogs_CL** table with the following sc
 
 ### Common issues and solutions
 
+The following common issues and solutions can help you troubleshoot connector setup problems.
+
 - **No data appears in AWSEKSLogs_CL table:**
   - Verify that EKS audit logging is enabled on your cluster.
   - Check that the CloudWatch Logs subscription filter is correctly configured.
@@ -273,7 +279,7 @@ If you haven't already done so, implement data connector health monitoring so th
 
 ## Next steps
 
-In this document, you learned how to connect AWS EKS audit logs to Microsoft Sentinel for comprehensive Kubernetes security monitoring. To learn more about Microsoft Sentinel, see the following articles:
+For more information about Microsoft Sentinel and container security monitoring, see the following articles:
 
 - Learn how to [get visibility into your data, and potential threats](get-visibility.md).
 - Get started [detecting threats with Microsoft Sentinel](detect-threats-built-in.md).

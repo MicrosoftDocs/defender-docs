@@ -8,18 +8,18 @@ ms.collection:
 - highpri
 - tier1
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 # customer intent: To learn how to create, delete, import, and edit roles in the unified role-based access control in Microsoft Defender multitenant management.
 ---
 
 # Manage unified role-based access control in multitenant management
 
-Use the Microsoft Defender multitenant management portal to manage unified role-based access control (URBAC) across multiple tenants. You can view permissions and access for all your tenants in one place. You can also manage these permissions from a central location. This article covers how to view custom roles, create or edit roles, delete roles, and import roles from tenant workloads.
+Use the Microsoft Defender multitenant management portal to manage unified role-based access control (URBAC) across multiple tenants. You can view permissions and access for all your tenants in one place. You can also manage these permissions from a central location. The following sections explain how to view custom roles, create or edit roles, delete roles, and import roles from tenant workloads.
 
 ## View custom roles
 
@@ -27,7 +27,7 @@ In the multitenant portal, navigate to the **Permissions & roles page** by selec
 
 :::image type="content" source="media/mto-urbac/urbac-main.png" alt-text="Screenshot of main Permissions and roles page":::
 
-From this page, you can create or edit a custom role. You can also import and delete roles. Use the **Search** function to find a specific role. To narrow results, filter roles by data source, permissions category, assignee type, or tenant name.
+From the **Permissions & roles** page, you can create or edit a custom role. You can also import and delete roles. Use the **Search** function to find a specific role. To narrow results, filter roles by data source, permissions category, assignee type, or tenant name.
 
 ## Create or edit a custom role (Preview)
 
@@ -57,7 +57,7 @@ You can create a custom role to provide flexibility and control over access to s
 
 8. In the **Assignments** page, select **Add assignment** or **Create assignment** to assign users and data sources.
 
-9. In the **Add assignments** pane, enter the assignment name. Add the team members you want to assign. Select the data sources they can access and the identity scopes they need. Then select **Add**. Here's an example.
+9. In the **Add assignments** pane, enter the assignment name. Add the team members you want to assign. Select the data sources they can access and the identity scopes they need. Then select **Add**. The following screenshot shows an example of the **Add assignments** pane.
 
    :::image type="content" source="media/mto-urbac/urbac-create-assignment.png" alt-text="Screenshot of the options in the Add Assignments pane":::
 
@@ -102,7 +102,7 @@ To import roles, follow these steps:
 
    :::image type="content" source="media/mto-urbac/urbac-import-workload.png" alt-text="Screenshot of the Workloads page in the Import role scenario":::
 
-5. In the **Roles** page, select all or some of the roles that you want to import from the Eligible roles list. To review the permissions and assignments for a role, select the role name. Here's an example.
+5. In the **Roles** page, select all or some of the roles that you want to import from the Eligible roles list. To review the permissions and assignments for a role, select the role name. The following screenshot shows an example of the role review pane.
 
    :::image type="content" source="media/mto-urbac/urbac-import-review-role.png" alt-text="Screenshot of the role review pane in the Import role scenario":::
 

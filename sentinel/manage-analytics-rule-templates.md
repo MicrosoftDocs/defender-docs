@@ -5,8 +5,8 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.date: 07/02/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 #Customer intent: As a security analyst, I want to manage and update analytics rule templates so that I can ensure my threat detection rules are current and effective.
@@ -56,7 +56,7 @@ With the implementation of template version control, you can see and track the v
 
     :::image type="content" source="media/manage-analytics-rule-templates/see-template-versions.png" alt-text="Screenshot of details pane. Scroll down to see template version numbers." border="false":::
 
-    The number is in a "1.0.0" format – major version, minor version, and build.  
+    Each version number is in a "1.0.0" format – major version, minor version, and build.  
 
     - A difference in the *major version* number indicates that something essential in the template was changed, that could affect how the rule detects threats or even its ability to function altogether. You want to include this change in your rules.
 
@@ -80,7 +80,7 @@ Any automation step or logic that refers to the existing rule should be verified
 
 Having selected a rule and determined that you want to consider updating it, select **Review and update** in the rule details pane. You see that the **Analytics rule wizard** now has a **Compare to latest version** tab.
 
-On this tab, you see a side-by-side comparison between the YAML representations of the existing rule and the latest version of the template. 
+On the **Compare to latest version** tab, you see a side-by-side comparison between the YAML representations of the existing rule and the latest version of the template. 
 
 :::image type="content" source="media/manage-analytics-rule-templates/compare-template-versions.png" alt-text="Screenshot of 'Compare to latest version' tab in Analytics rule wizard.":::
 
@@ -103,7 +103,7 @@ Any automation step or logic that refers to the existing rule should be verified
 
 Having selected a rule and determined that you want to revert to its original version, select **Compare with template** in the rule details pane. You see that the **Analytics rule wizard** now has a **Compare to latest version** tab.
 
-On this tab, you see a side-by-side comparison between the YAML representations of the existing rule and the latest version of the template. These two version numbers might be the same, but the right side shows the original, unchanged template, and the left side shows the active rule, including any changes from the original template.
+On the **Compare to latest version** tab, you see a side-by-side comparison between the YAML representations of the existing rule and the latest version of the template. These two version numbers might be the same, but the right side shows the original, unchanged template, and the left side shows the active rule, including any changes from the original template.
 
 :::image type="content" source="media/manage-analytics-rule-templates/compare-template-versions-2.png" alt-text="Screenshot of 'Compare to latest version' tab in Analytics rule wizard.":::
 

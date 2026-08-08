@@ -1,36 +1,38 @@
 ---
-title: Identify and remediate attack paths
+title: Identify and remediate attack paths in Microsoft Defender for Cloud
 description: Learn how to identify and remediate attack paths in Microsoft Defender for Cloud and enhance the security of your environment.
 ms.topic: how-to
-ms.date: 05/28/2026
-ms.custom: sfi-image-nochange
+ms.date: 07/03/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security analyst, I want to learn how to identify and remediate attack paths in Microsoft Defender for Cloud so that I can enhance the security of my environment.
 ai-usage: ai-assisted
 ---
 
-# Identify and remediate attack paths
+# Identify and remediate attack paths in Microsoft Defender for Cloud
 
-Defender for Cloud uses a [proprietary algorithm to locate potential attack paths](concept-attack-path.md#what-is-an-attack-path) specific to your multicloud environment. Defender for Cloud focuses on real, externally driven and exploitable threats rather than broad scenarios. The algorithm detects attack paths that begin outside your organization and progress to business-critical targets, helping you cut through the noise and act faster.
+Defender for Cloud uses a [proprietary algorithm to locate potential attack paths](concept-attack-path.md#what-is-an-attack-path) in your multicloud environment. It focuses on real, external threats that attackers can exploit, not broad scenarios. The algorithm finds attack paths that start outside your organization and lead to critical targets. This helps you cut through the noise and act faster.
 
-You can use attack path analysis to address security issues that pose immediate threats and have the greatest potential for exploitation in your environment. Defender for Cloud analyzes which security issues are part of externally exposed attack paths that attackers could use to breach your environment. It also highlights the security recommendations you need to resolve to mitigate these issues.
+You can use attack path analysis to find and fix the security issues that pose the biggest risk. Defender for Cloud shows which issues are part of exposed attack paths that attackers could use to breach your environment. Defender for Cloud also highlights the recommendations you need to resolve.
 
-By default attack paths are organized by risk level. The risk level is determined by a context-aware risk-prioritization engine that considers the risk factors of each resource. Learn more about how Defender for Cloud [prioritizes security recommendations](risk-prioritization.md).
+By default, attack paths are sorted by risk level. A risk engine reviews the risk factors of each resource to set its priority. For details on how Defender for Cloud ranks recommendations, see [Risk prioritization](risk-prioritization.md).
 
 ## Prerequisites
 
-- You must [enable Defender Cloud Security Posture Management (CSPM)](connect-azure-subscription.md) and have [agentless scanning](enable-agentless-scanning-vms.md) enabled.
+Before you begin, make sure your environment meets these requirements:
+
+- [Enable Defender Cloud Security Posture Management (CSPM)](connect-azure-subscription.md) and turn on [agentless scanning](enable-agentless-scanning-vms.md).
 
 - **Required roles and permissions**: Security Reader, Security Admin, Reader, Contributor, or Owner.
 
 > [!NOTE]
-> You may see an empty Attack Path page, as attack paths now focus on real, externally driven and exploitable threats rather than broad scenarios. This helps reduce noise and prioritize imminent risks.
+> You might see an empty Attack Path page. Attack paths now focus on real, external threats that can be exploited. This focus helps reduce noise and highlight urgent risks.
 
-**To view attack paths that are related to containers**:
+**To view attack paths related to containers**:
 
-- Complete one of the following options:
+To see container-related attack paths, complete one of the following setup options:
     - [Enable agentless container posture extension](tutorial-enable-cspm-plan.md) in Defender CSPM.
-    - [Enable Defender for Containers](defender-for-containers-enable-plan.md) and install the relevant agents to view attack paths related to containers. This option also gives you the ability to [query](how-to-manage-cloud-security-explorer.md#build-a-query) container data plane workloads in security explorer.
+    - [Enable Defender for Containers](defender-for-containers-enable-plan.md) and install the relevant agents. This option also lets you [query container data plane workloads in cloud security explorer](how-to-manage-cloud-security-explorer.md#build-a-query).
 
 - **Required roles and permissions**: Security Reader, Security Admin, Reader, Contributor, or Owner.
 
@@ -132,10 +134,6 @@ The attack path page shows you an overview of all of your attack paths. You can 
 
 1. [Remediate the recommendation](implement-security-recommendations.md).
 
-   Once you're done with your investigation of an attack path and you review all of the associated findings and recommendations, you can start to remediate the attack path.
-
-1. [Remediate the recommendation](implement-security-recommendations.md).
-
 Once an attack path is resolved, it can take up to 24 hours for an attack path to be removed from the list.
 
 ::: zone-end
@@ -146,7 +144,7 @@ Once an attack path is resolved, it can take up to 24 hours for an attack path t
 
 ## Remediate attack paths
 
-Once you're done with your investigation of an attack path and you review all of the associated findings and recommendations, you can start to remediate the attack path.
+After you investigate an attack path and review its findings and recommendations, you can start to fix it.
 
 **To remediate an attack path in the Azure portal**:
 
@@ -166,14 +164,15 @@ Once an attack path is resolved, it can take up to 24 hours for an attack path t
 
 ::: zone-end
 
-## Remediate all recommendations within an attack path
+<a name="remediate-all-recommendations-within-an-attack-path"></a>
+## Remediate all recommendations for an attack path
 
-Attack path analysis grants you the ability to see all recommendations by attack path without having to check each node individually. You can resolve all recommendations without having to view each node individually.
+Attack path analysis lets you see all recommendations for an attack path in one place. You don't need to check each node one by one.
 
-The remediation path contains two types of recommendation:
+There are two types of recommendations:
 
-- **Recommendations** - Recommendations that mitigate the attack path.
-- **Additional recommendations** - Recommendations that reduce exploitation risks, but don't mitigate the attack path.
+- **Recommendations** - Steps that fix the attack path.
+- **Additional recommendations** - Steps that lower risk but don't fully fix the attack path.
 
 ::: zone pivot="azure-portal"
 
@@ -246,7 +245,8 @@ Learn more about [attack paths](concept-attack-path.md) in Defender for Cloud.
 
 ---
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Build queries with cloud security explorer](how-to-manage-cloud-security-explorer.md)

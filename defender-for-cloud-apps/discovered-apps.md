@@ -1,10 +1,10 @@
 ---
 title: View discovered apps on the Cloud discovery dashboard | Microsoft Defender for Cloud Apps
 description: Learn how to view cloud discovery insights, app risk levels, top users, and filter dashboard data in Microsoft Defender for Cloud Apps.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Mravela
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -48,7 +48,7 @@ This procedure describes how to get an initial, general picture of your cloud di
 
 To dive deeper in to cloud discovery data, use the filters to check for risky or commonly used apps.
 
-For example, if you want to identify commonly used, risky cloud storage and collaboration apps, use the **Discovered apps** page to filter for the apps you want. Then, [unsanction or block](governance-discovery.md) those apps as follows:
+For example, if you want to identify commonly used, risky cloud storage and collaboration apps, use the **Discovered apps** page to filter for the apps you want. Then, [unsanction or block discovered apps](governance-discovery.md) as follows:
 
 1. In the Microsoft Defender portal, under **Cloud Apps**, select **Cloud discovery**. Then choose the  **Discovered apps** tab.
 
@@ -63,14 +63,14 @@ For example, if you want to identify commonly used, risky cloud storage and coll
 
     :::image type="content" source="media/discovered-app-filters.png" alt-text="Screenshot of discovered app filters." lightbox="media/discovered-app-filters.png":::
 
-After the results are filtered, [unsanction and block](governance-discovery.md) the filtered apps by using the bulk action checkbox to unsanction all of those apps in one action. Once the apps are unsanctioned, use a blocking script to block those apps from being used in your environment.
+After the results are filtered, [unsanction and block discovered apps](governance-discovery.md) by using the bulk action checkbox to unsanction all of those apps in one action. Once the apps are unsanctioned, use a blocking script to block those apps from being used in your environment.
 
 You also might want to identify specific app instances that are in use by investigating the discovered subdomains. For example, differentiate between different SharePoint sites:
 
 :::image type="content" source="media/discovered-apps/subdomains-image.png" alt-text="Subdomain filter.":::
 
 > [!NOTE]
-> The feature of discovered subdomains will be deprecated by Dec 31st, 2025. Post this, no support for discovery subdomains will be provided.
+> The feature of discovered subdomains will be deprecated by Dec 31st, 2025. After this deprecation date, no support for discovery subdomains will be provided.
 > 
 >  Deep dives into discovered apps are supported only in firewalls and proxies that contain target URL data. For more information, see [Supported firewalls and proxies](set-up-cloud-discovery.md#supported-firewalls-and-proxies).
 >
@@ -159,7 +159,8 @@ Custom continuous reports provide you with more granularity when monitoring your
 > [!NOTE]
 > All custom reports are limited to a maximum of 1 GB of uncompressed data. If there's more than 1 GB of data, the first 1 GB of data will be exported into the report.
 
-## Deleting cloud discovery data
+<a name="deleting-cloud-discovery-data"></a>
+## Delete cloud discovery data
 
 We recommend deleting cloud discovery data in the following cases:
 
@@ -186,14 +187,7 @@ We recommend deleting cloud discovery data in the following cases:
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Create snapshot cloud discovery reports](create-snapshot-cloud-discovery-reports.md)
-
-> [!div class="nextstepaction"]
-> [Configure automatic log upload for continuous reports](discovery-docker.md)
-
-> [!div class="nextstepaction"]
-> [Working with cloud discovery data](working-with-cloud-discovery-data.md)
-
-> [!div class="nextstepaction"]
-> [Discover apps using Microsoft Defender for Endpoint's integration](mde-integration.md)
+- [Create snapshot cloud discovery reports](create-snapshot-cloud-discovery-reports.md)
+- [Configure automatic log upload for continuous reports](discovery-docker.md)
+- [Work with cloud discovery data](working-with-cloud-discovery-data.md)
+- [Discover apps with Defender for Endpoint integration](mde-integration.md)

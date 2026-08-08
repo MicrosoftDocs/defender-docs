@@ -1,8 +1,9 @@
 ---
 title: Respond to Defender for Resource Manager alerts
 description: Investigate and remediate security alerts from Defender for Resource Manager. Covers connected Azure resources, subscriptions, and user activity.
-ms.date: 05/25/2026
+ms.date: 07/03/2026
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to respond to alerts so that I can mitigate threats effectively.
 ai-usage: ai-assisted
 ---
@@ -68,7 +69,8 @@ To contain the threat and prevent further damage, perform these steps immediatel
     - Run a full antimalware scan on each machine.
     - Reimage machines from a verified malware-free source.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Overview of Microsoft Defender for Resource Manager](defender-for-resource-manager-introduction.md)

@@ -3,7 +3,7 @@ title: Remediation actions for compromised users in Microsoft Defender for Ident
 description: Learn how to respond to compromised users with remediation actions in Microsoft Defender for Identity
 ms.date: 07/22/2026
 ms.topic: how-to
-ms.custom: sfi-ga-blocked, msecd-doc-authoring-1014
+ms.custom: sfi-ga-blocked, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -97,6 +97,8 @@ The action is submitted and executed by the relevant identity system. You can tr
 
 <a name="related-video"></a>
 ## Video: Defender for Identity remediation actions
+
+Watch the following video for an overview of Defender for Identity remediation actions:
 
 - [Remediation actions in Microsoft Defender for Identity](https://learn-video.azurefd.net/vod/id/adc6068b-225c-457d-b053-db6b64dedb79)
 

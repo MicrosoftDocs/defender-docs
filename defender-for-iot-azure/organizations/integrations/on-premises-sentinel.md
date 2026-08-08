@@ -2,8 +2,8 @@
 title: Connect Defender for IoT On-premises Resources to Microsoft Sentinel (Legacy)
 description: This article describes the legacy method for connecting your OT sensor to Microsoft Sentinel.
 ms.topic: how-to
-ms.date: 06/12/2026
-ms.custom: template-how-to-pattern, msecd-doc-authoring-1014
+ms.date: 07/03/2026
+ms.custom: template-how-to-pattern, msecd-doc-authoring-1016
 #CustomerIntent: As an admin user for my locally-managed OT sensor, I want to learn how to connect my sensor to Microsoft Sentinel so that I can view alerts generated together with other Microsoft Sentinel data.
 ai-usage: ai-assisted
 ---
@@ -54,6 +54,7 @@ After you finish configuring the forwarding rule, select **Save**. Make sure to 
 > [!div class="nextstepaction"]
 > [Investigate in Microsoft Sentinel](/azure/sentinel/investigate-cases)
 
-For more information, see:
+## Related content
+
 > [!div class="nextstepaction"]
 > [Integrations with Microsoft and partner services](../integrate-overview.md)
