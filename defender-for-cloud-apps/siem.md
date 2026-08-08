@@ -1,9 +1,9 @@
 ---
 title: Generic SIEM integration 
 description: Learn how to set up generic SIEM integration with Microsoft Defender for Cloud Apps, including SIEM agent deprecation details and supported API alternatives.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 # Integrate Defender for Cloud Apps with a generic SIEM
@@ -15,7 +15,7 @@ ai-usage: ai-assisted
 > As part of our ongoing convergence process across Microsoft Defender workloads, Microsoft Defender for Cloud Apps SIEM agents will be deprecated starting **November 2025**. 
 >
 >
-> Existing Microsoft Defender for Cloud Apps SIEM agents will continue to function as is until that time. As of June 19, 2025, **no new SIEM agents can be configured**, but [Microsoft Sentinel](siem-sentinel.md) agent integration (Preview), will remain supported and can still be added.
+> Existing Microsoft Defender for Cloud Apps SIEM agents will continue to function as is until November 2025. As of June 19, 2025, **no new SIEM agents can be configured**, but [Microsoft Sentinel](siem-sentinel.md) agent integration (Preview), will remain supported and can still be added.
 >
 > We recommend transitioning to APIs that support the management of activities and alerts data from multiple workloads.
 > These APIs enhance security monitoring and management and offer additional capabilities using data from multiple Microsoft Defender workloads.
@@ -28,9 +28,9 @@ ai-usage: ai-assisted
 > - To view Microsoft Defender for Cloud Apps alerts data in the Microsoft Defender XDR incidents API, see [Microsoft Defender XDR incidents APIs and the incidents resource type](/graph/api/security-list-alerts_v2?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
 
-You can integrate Microsoft Defender for Cloud Apps with your generic SIEM server to enable centralized monitoring of alerts and activities from connected apps. As new activities and events are supported by connected apps, visibility into them is then rolled out into Microsoft Defender for Cloud Apps. Integrating with a SIEM service allows you to better protect your cloud applications while maintaining your usual security workflow, automating security procedures, and correlating between cloud-based and on-premises events. The Microsoft Defender for Cloud Apps SIEM agent runs on your server and pulls alerts and activities from Microsoft Defender for Cloud Apps and streams them into the SIEM server.
+You can integrate Microsoft Defender for Cloud Apps with your generic SIEM server to enable centralized monitoring of alerts and activities from connected apps. As new activities and events are supported by connected apps, visibility into those activities and events is then rolled out into Microsoft Defender for Cloud Apps. Integrating with a SIEM service allows you to better protect your cloud applications while maintaining your usual security workflow, automating security procedures, and correlating between cloud-based and on-premises events. The Microsoft Defender for Cloud Apps SIEM agent runs on your server and pulls alerts and activities from Microsoft Defender for Cloud Apps and streams them into the SIEM server.
 
-When you first integrate your SIEM with Defender for Cloud Apps, activities and alerts from the last two days will be forwarded to the SIEM and all activities and alerts (based on the alerts and activities filters you configure during SIEM setup) from then on. If you disable this feature for an extended period, then re-enable, the past two days of alerts and activities are forwarded and then all alerts and activities from then on.
+When you first integrate your SIEM with Defender for Cloud Apps, activities and alerts from the last two days will be forwarded to the SIEM and all activities and alerts (based on the alerts and activities filters you configure during SIEM setup) from then on. If you disable SIEM integration for an extended period and then re-enable it, the past two days of alerts and activities are forwarded and then all alerts and activities from then on.
 
 Additional integration solutions include:
 
@@ -39,8 +39,8 @@ Additional integration solutions include:
 
 ## Generic SIEM integration architecture
 
-The SIEM agent is deployed in your organization's network. When deployed and configured, it pulls the data types that were configured (alerts and activities) using Defender for Cloud Apps RESTful APIs.
-The alerts and activities data is then sent over an encrypted HTTPS channel on port 443.
+The SIEM agent is deployed in your organization's network. When deployed and configured, the SIEM agent pulls the data types that were configured (alerts and activities) using Defender for Cloud Apps RESTful APIs.
+The SIEM agent then sends the alerts and activities data over an encrypted HTTPS channel on port 443.
 
 Once the SIEM agent retrieves the data from Defender for Cloud Apps, it sends the Syslog messages to your local SIEM. Defender for Cloud Apps uses the network configurations you provided during the setup (TCP or UDP with a custom port).
 
@@ -195,19 +195,22 @@ The following table describes the CEF fields used in Defender for Cloud Apps ale
 
 1. In your Syslog/SIEM server, make sure you see activities and alerts arriving from Defender for Cloud Apps.
 
-## Regenerating your token
+<a name="regenerating-your-token"></a>
+## Regenerate your token
 
 If you lose the token, you can always regenerate it by selecting the three dots at the end of the row for the SIEM agent in the table. Select **Regenerate token** to get a new token.
 
 ![Screenshot of SIEM settings option to regenerate the agent token.](media/siem-regenerate-token.png)
 
-## Editing your SIEM agent
+<a name="editing-your-siem-agent"></a>
+## Edit your SIEM agent
 
 To edit the SIEM agent, select the three dots at the end of the row for the SIEM agent in the table, and select **Edit**. If you edit the SIEM agent, you don't need to rerun the .jar file, it updates automatically.
 
 ![Screenshot of SIEM settings option to edit the integration configuration.](media/siem-edit.png)
 
-## Deleting your SIEM agent
+<a name="deleting-your-siem-agent"></a>
+## Delete your SIEM agent
 
 To delete the SIEM agent, select the three dots at the end of the row for the SIEM agent in the table, and select **Delete**.
 
