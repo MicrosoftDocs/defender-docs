@@ -6,10 +6,11 @@ ms.author: monaberdugo
 author: mberdugo
 ms.reviewer: yohasson
 ms.topic: how-to
-ms.date: 06/17/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As an security operations administrator, I want to use the SIEM migration so I can streamline a migration to Microsoft Sentinel to enhance my security monitoring capabilities.
 ---
@@ -30,11 +31,13 @@ The SIEM Migration experience includes the following features:
 - <a href="/copilot/security/get-started-security-copilot" target="_blank">[Security Copilot](/defender-xdr/security-copilot-in-microsoft-365-defender)</a> enabled in your tenant with at least a [workspace operator role](/copilot/security/authentication#assign-security-copilot-access) assigned
 
 > [!NOTE]
->The SIEM Migration tool is powered by [Security Copilot](https://securitycopilot.microsoft.com/), so you need Security Copilot enabled in your tenant to use it. However, it doesn't consume SCUs or generate any SCU‑based charges not matter how you configure it. You can optimize your Security Copilot setup based on your preferences for access and cost management, and workflow remains completely SCU‑free. Any SCU usage would apply only to other Security Copilot features you intentionally use.
+>The SIEM Migration tool is powered by [Security Copilot](https://securitycopilot.microsoft.com/), so you need Security Copilot enabled in your tenant to use the SIEM Migration tool. However, the SIEM Migration tool doesn't consume SCUs or generate any SCU‑based charges no matter how you configure Security Copilot. You can optimize your Security Copilot setup based on your preferences for access and cost management, and workflow remains completely SCU‑free. Any SCU usage would apply only to other Security Copilot features you intentionally use.
 >
 > :::image type="content" source="./media/siem-migration/monitor-usage.png" alt-text="Screenshot of the Security Copilot usage monitoring settings.":::
 
 ## Export detection rules from your current SIEM
+
+Export your existing detection rules from your current SIEM so the SIEM migration experience can analyze them.
 
 ### [Splunk](#tab/splunk)
 
@@ -69,7 +72,7 @@ Before you start, make sure you have:
 1. When prompted, enter your QRadar authorized service token. The token input is hidden. Don't include the token in the command line.
 1. When the script finishes, upload the generated `qradar_rules_YYYYMMDDHHMMSS.csv` file in the SIEM migration experience, then select **Next**.
 
-For more information about the script and its parameters, see the [QRadar migration data collector README](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/QRadarMigration).
+For more information about the QRadar migration data collector script and its parameters, see the [QRadar migration data collector README](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/QRadarMigration).
 
 #### Troubleshoot QRadar exports
 
@@ -105,7 +108,7 @@ After exporting the rules, do the following:
 
     :::image type="content" source="./media/siem-migration/select-siem.png" alt-text="Screenshot of the UI asking the user to select the SIEM they're migrating from.":::
 
-1. Upload the configuration data that [you exported from your current SIEM](#export-detection-rules-from-your-current-siem) and select **Next**.
+1. Upload the configuration data that you exported (see [Export detection rules from your current SIEM](#export-detection-rules-from-your-current-siem)) and select **Next**.
 
     The migration tool analyzes the export and identifies the number of data sources and detection rules in the file you provided. Use this information to confirm that you have the right export.
 
@@ -117,7 +120,7 @@ After exporting the rules, do the following:
 
     :::image type="content" source="./media/siem-migration/select-workspace.png" alt-text="Screenshot of the UI asking the user to select a workspace.":::
 
-    The migration tool maps the detection rules to Microsoft Sentinel data sources and detection rules. If there are no recommendations in the workspace, recommendations are created. If there are existing recommendations, the tool deletes and replaces them with new ones.
+    The migration tool maps the detection rules to Microsoft Sentinel data sources and detection rules. If there are no recommendations in the workspace, recommendations are created. If there are existing recommendations, the SIEM migration tool deletes and replaces them with new ones.
 
     :::image type="content" source="./media/siem-migration/getting-ready.png" alt-text="Screenshot of the migration tool getting ready to analyze the rules.":::
 
@@ -125,13 +128,13 @@ After exporting the rules, do the following:
 
     :::image type="content" source="./media/siem-migration/setup-analysis-status.png" alt-text="Screenshot of the SIEM Set-up analysis status showing the progress of the analysis.":::
 
-    This page doesn't refresh automatically. To see the latest status, close and reopen the page.
+    The SIEM setup analysis status page doesn't refresh automatically. To see the latest status, close and reopen the page.
 
     The analysis is complete when all three check marks are green. If the three checkmarks are green but there are no recommendations, it means that no matches were found for your rules.
 
     :::image type="content" source="./media/siem-migration/status-complete.png" alt-text="Screenshot showing all three check marks green indicating analysis is complete.":::
 
-    When the analysis completes, the migration tool generates use-case-based recommendations, grouped by Content Hub solutions. You can also download a detailed report of the analysis. The report contains a detailed analysis of recommended migration jobs, including Splunk and QRadar rules that don't have a good match, weren't detected, or aren't applicable.
+    When the SIEM migration analysis completes, the migration tool generates use-case-based recommendations, grouped by Content Hub solutions. You can also download a detailed report of the analysis. The report contains a detailed analysis of recommended migration jobs, including Splunk and QRadar rules that don't have a good match, weren't detected, or aren't applicable.
 
     :::image type="content" source="./media/siem-migration/recommendations.png" alt-text="A screenshot of recommendations generated by the migration tool." lightbox="./media/siem-migration/recommendations.png":::
 
@@ -141,8 +144,8 @@ After exporting the rules, do the following:
 
     :::image type="content" source="./media/siem-migration/recommendation-card.png" alt-text="A screenshot of a recommendation card." lightbox="./media/siem-migration/recommendation-card.png":::
 
-    The tool matches Splunk and QRadar rules to out-of-box Microsoft Sentinel data connectors, out-of-box Microsoft Sentinel detection rules, and Defender XDR native detections.
-    The *connectors* tab shows the data connectors matched to the rules from your SIEM and the status (connected or not disconnected). If the connector you want to use isn't already connected, you can connect from the connector tab. If a connector isn't installed, go to the Content hub and install the solution that contains the connector you want to use.
+    The SIEM migration tool matches Splunk and QRadar rules to out-of-box Microsoft Sentinel data connectors, out-of-box Microsoft Sentinel detection rules, and Defender XDR native detections.
+    The *connectors* tab shows the data connectors matched to the rules from your SIEM and the status (connected or not disconnected). If the connector you want to use isn't already connected, you can connect from the connector tab. If a connector isn't installed, go to the Microsoft Sentinel Content hub and install the solution that contains the connector you want to use.
 
     :::image type="content" source="./media/siem-migration/connectors.png" alt-text="Screenshot of Microsoft Sentinel data connectors matched to Splunk or QRadar rules.":::
 
@@ -162,9 +165,11 @@ After exporting the rules, do the following:
 
 ## Enable detection rules
 
+After reviewing the matched results, you can enable the recommended Microsoft Sentinel detection rules or review Defender XDR native detections.
+
 ### [Microsoft Sentinel detection rules](#tab/sentinel-detection-rules)
 
-When you select a rule, the rules details side panel opens and you can view the rules template details.
+When you select a recommended detection rule, the rule details side panel opens and you can view the rule template details.
 
 :::image type="content" source="./media/siem-migration/rule-details.png" alt-text="Screenshot of the rule details side panel." lightbox="./media/siem-migration/rule-details.png":::
 
@@ -182,7 +187,7 @@ When you select a rule, the rules details side panel opens and you can view the 
     :::image type="content" source="./media/siem-migration/compare-rules.png" alt-text="Screenshot of the comparison between Splunk SPL rule and Microsoft Sentinel KQL.":::
 
 > [!TIP]
-> Instead of creating rules manually from scratch, it can be faster and simpler to enable the rule from the template and then edit it as needed.
+> Instead of creating rules manually from scratch, consider enabling the rule from the template and then editing the rule as needed.
 
 *Enable detection* is only enabled if the data connector is installed and configured to stream logs.
 
@@ -194,7 +199,7 @@ The SIEM migration tool doesn't explicitly install any connectors or enable dete
 
 ### [Defender XDR native detections](#tab/defender-xdr-native-detections)
 
-Defender XDR native detections are built-in detection logic that generate alerts, which are then correlated into incidents. The SIEM migration tool maps Splunk and QRadar rules to these native detections. Matched Defender XDR native detections are in active status. This type of detection doesn't require Microsoft Sentinel data connectors to be installed, configured, and connected.
+Defender XDR native detections are built-in detection logic that generate alerts, which are then correlated into incidents. The SIEM migration tool maps Splunk and QRadar rules to these native detections. Matched Defender XDR native detections are in active status. Defender XDR native detections don't require Microsoft Sentinel data connectors to be installed, configured, and connected.
 
 :::image type="content" source="./media/siem-migration/defender-detections.png" alt-text="Screenshot of the list of matched Defender XDR native detections." lightbox="./media/siem-migration/defender-detections.png":::
 

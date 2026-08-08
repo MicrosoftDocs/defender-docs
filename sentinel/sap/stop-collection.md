@@ -12,7 +12,7 @@ appliesto:
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 #customerIntent: As an SAP admin, I want to stop Microsoft Sentinel from collecting data from our SAP applications.
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Stop SAP data collection in Microsoft Sentinel for SAP applications

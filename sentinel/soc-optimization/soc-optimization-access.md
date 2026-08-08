@@ -6,11 +6,11 @@ author: mberdugo
 ms.collection:
   - usx-security
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 appliesto:
   - Microsoft Sentinel in the Microsoft Defender portal
   - Microsoft Sentinel in the Azure portal
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 
@@ -66,6 +66,8 @@ Supported metrics at the top of the **Overview** tab include:
 
 ### [Defender portal](#tab/defender-portal)
 
+In the Defender portal, the **Overview** tab shows the following optimization metrics:
+
 |Title  | Description |
 |---------|---------|
 |**Recent optimization value**    | Shows value gained based on recommendations you recently implemented |
@@ -74,6 +76,8 @@ Supported metrics at the top of the **Overview** tab include:
 |**Optimization status**     | Shows the number of recommended optimizations that are currently active, completed, and dismissed.        |
 
 ### [Azure portal](#tab/azure-portal)
+
+In the Azure portal, the **Overview** tab includes the following optimization metrics:
 
 |Title  |Description |
 |---------|---------|
@@ -129,7 +133,7 @@ Choose the instructions for your portal — Microsoft Defender portal or Azure p
     - Toggle between the spider charts to understand your coverage across different tactics and techniques, based on the user-defined and out-of-the-box detections active in your environment.
     - Select **View threat scenario in MITRE ATT&CK** to jump to the [**MITRE ATT&CK** page in Microsoft Sentinel](../mitre-coverage.md?tabs=defender-portal), prefiltered for your threat scenario. For more information, see [Understand security coverage by the MITRE ATT&CK® framework](../mitre-coverage.md).
 
-1. Scroll down to the bottom of the details pane for a link to where you can take the recommended actions. For example:
+1. Scroll down to the bottom of the optimization details pane for a link to where you can take the recommended actions. For example:
 
     - If an optimization includes recommendations to add analytics rules, select **Go to Content Hub**.
     - If an optimization includes recommendations to move a table to basic logs, select **Change plan**.
@@ -160,7 +164,7 @@ Either select the options menu or select **View details** to take one of the fol
 
 |Action |Description  |
 |---------|---------|
-|**Complete**     | Complete an optimization when you completed each recommended action. <br><br>If a change in your environment is detected that makes the recommendation irrelevant, the optimization is automatically completed and moved to the **Completed** tab. <br><br>For example, you might have an optimization related to a previously unused table. If your table is now used in a new analytics rule, the optimization recommendation is now irrelevant. <br><br>In such cases, a banner shows in the **Overview** tab with the number of automatically completed optimizations since your last visit.        |
+|**Complete**     | Complete an optimization when you completed each recommended action. <br><br>If a change in your environment is detected that makes the recommendation irrelevant, the optimization is automatically completed and moved to the **Completed** tab. <br><br>For example, you might have an optimization related to a previously unused table. If your table is now used in a new analytics rule, the optimization recommendation is now irrelevant. <br><br>When an environment change makes a recommendation irrelevant, a banner shows in the **Overview** tab with the number of automatically completed optimizations since your last visit.        |
 | **Mark as in progress** / **Mark as active**| Mark an optimization as in progress or active to notify other team members that you're actively working on it. <br><br>Use these two statuses flexibly, but consistently, as needed for your organization. |
 |**Dismiss**     |  Dismiss an optimization if you're not planning to take the recommended action and no longer want to see it in the list.       |
 |**Provide feedback**     | We invite you to share your thoughts on the recommended actions with the Microsoft team! <br><br>When sharing your feedback, be careful not to share any confidential data. For more information, see  [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).      |
