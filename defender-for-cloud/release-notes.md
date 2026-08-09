@@ -29,6 +29,20 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## August 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| August 6, 2026 | Public preview | [On-demand malware scanning now supports scanning specific blobs, files, containers, and file shares](#on-demand-malware-scanning-now-supports-scanning-specific-blobs-files-containers-and-file-shares) |
+
+August 6, 2026
+
+On-demand malware scanning in Microsoft Defender for Storage now supports targeted scanning of specific items. Instead of scanning an entire storage account, you can scope scans to a single blob or file, a specific container or file share, or all objects matching a path prefix.
+
+You can use filters in the REST API request body to specify which items to scan. When no filters are provided, the scan covers the entire storage account.
+
+Learn more about [on-demand malware scanning](on-demand-malware-scanning.md).
+
 ## July 2026
 
 | Date | Category | Update |
