@@ -10,12 +10,12 @@ ms.collection:
   - m365-security
   - tier2
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto: 
 - Microsoft Defender XDR 
 - Microsoft Sentinel in the Microsoft Defender portal
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Manage analytics rule correlation settings in Microsoft Defender XDR
@@ -39,7 +39,7 @@ For more information about how correlation works in Microsoft Defender, see [Ale
 
 To manage analytics rule exclusions from correlation, you need the following permissions:
 
-**Microsoft Sentinel Contributor** Users with this [Azure role](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor) can manage Microsoft Sentinel SIEM workspace data, including alerts and detections.
+**Microsoft Sentinel Contributor** This [Azure role](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor) lets you manage Microsoft Sentinel workspace data, including alerts and detections.
 
 ## How exclusion works
 
@@ -61,9 +61,9 @@ To configure your tenant's default incident correlation behavior, in the Defende
 :::image type="content" source="./media/exclude-analytics-rules-correlation/correlation-default-setting.png" alt-text="Screenshot of the Incident correlation default setting toggle switch." lightbox="./media/exclude-analytics-rules-correlation/correlation-default-setting.png":::
 
 >[!IMPORTANT]
->This setting is turned off by default.
+>The **Incident correlation default setting** is turned off by default.
 
-When you turn off the incident correlation behavior default setting, Microsoft Defender excludes all analytics rules from correlation unless you explicitly configure to include them by adding the `#INC_CORR#` tag. When you turn on the default setting, Defender correlates all analytics rules unless you explicitly configure to exclude them by adding the `#DONT_CORR#` tag.
+You can override the default behavior for individual rules by adding a description tag. When you turn off the incident correlation behavior default setting, Microsoft Defender excludes all analytics rules from correlation unless you explicitly include a rule by adding the `#INC_CORR#` (include correlation) tag to its description. When you turn on the **Incident correlation default setting**, Defender correlates all analytics rules unless you explicitly configure to exclude them by adding the `#DONT_CORR#` tag.
 
 ## Manage a rule's correlation behavior using the UI
 

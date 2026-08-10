@@ -21,7 +21,7 @@ appliesto:
 - Microsoft Security Exposure Management
 - Microsoft Sentinel
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #customer intent: As a security administrator, I want to activate Microsoft Defender unified RBAC so that I can enforce permissions and assignments configured in my new custom roles or imported roles.
 ---
 
@@ -114,7 +114,16 @@ Follow these steps to activate your workloads directly in Microsoft Defender XDR
 
 You can deactivate Microsoft Defender unified RBAC and revert to the individual RBAC models from Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft Sentinel, and Microsoft Defender for Office 365 (which includes [the built-in security features for all cloud mailboxes](/defender-office-365/eop-about)).
 
-To deactivate the workloads, repeat the steps in [Activate Microsoft Defender unified RBAC](#activate-microsoft-defender-unified-rbac) and select the workloads you want to deactivate. The status is set to **Not Active**.
+To deactivate workloads:
+
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
+1. In the navigation pane, select **System** > **Permissions**.
+1. Under **Microsoft Defender XDR**, select **Roles**.
+1. Select **Workload settings** at the top of the page.
+1. Turn off the toggle for each workload you want to deactivate.
+1. Select **Activate** on the confirmation message.
+
+The status for deactivated workloads is set to **Not Active**.
 
 If you deactivate a workload, the roles created and edited within Microsoft Defender unified RBAC are no longer in effect, and the previous permissions model is used instead.
 
