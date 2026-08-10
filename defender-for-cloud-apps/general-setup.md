@@ -57,7 +57,7 @@ Review the following important considerations before enabling this setting:
   - Cloud discovery user enrichment and anonymization
   - RBAC scoping
 
-  These features continue to use the Cloud Application Accounts inventory. For more information, see [Cloud app accounts](manage-app-accounts.md).
+  These features continue to use the Cloud Application Accounts inventory. For more information, see [Cloud app accounts](accounts.md).
 - The existing **Cloud Apps Accounts view remains available** to ensure backward compatibility.
 
 <!-- TODO: Confirm with Itai whether the fwlink (https://go.microsoft.com/fwlink/?LinkId=2359589) is live and what it points to. -->
