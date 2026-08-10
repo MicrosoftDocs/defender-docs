@@ -2,12 +2,13 @@
 title: Integrate AWS CloudTrail logs
 description: Learn how to enable and validate AWS CloudTrail management event ingestion in Microsoft Defender for Cloud to enhance CIEM, configuration insights, and identity risk detection.
 ms.topic: how-to
-ms.date: 05/28/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a cloud security administrator, I want to integrate AWS CloudTrail logs with Microsoft Defender for Cloud so that I can improve identity and permission risk visibility.
 ai-usage: ai-assisted
 ---
 
-# Integrate AWS CloudTrail logs (Preview)
+# Integrate AWS CloudTrail logs with Microsoft Defender for Cloud (Preview)
 
 Microsoft Defender for Cloud can collect AWS CloudTrail management events to increase visibility into identity operations, permission changes, and other control-plane activity across your AWS environments.
 
@@ -62,7 +63,7 @@ To enable CloudTrail ingestion for your AWS connector, perform the following ste
 
         > [!NOTE]
         > When you select an existing trail, Defender for Cloud performs a one-time collection of up to 90 days of historical CloudTrail management events.
-        > If CloudTrail ingestion is disabled, the historical data collected during this process is removed. Re-enabling CloudTrail ingestion triggers a new historical data collection.
+        > If CloudTrail ingestion is disabled, the historical data collected during the one-time historical data collection is removed. Re-enabling CloudTrail ingestion triggers a new historical data collection.
 
     - Select **Create a new AWS CloudTrail** to provision a new trail.
         1. Deploy the CloudFormation or Terraform template provided by Defender for Cloud when prompted.
@@ -94,7 +95,8 @@ To confirm CloudTrail telemetry is flowing into Defender for Cloud:
 
 Signals may take time to appear depending on CloudTrail delivery frequency and event volume.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md)
