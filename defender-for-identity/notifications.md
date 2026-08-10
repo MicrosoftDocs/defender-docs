@@ -1,12 +1,12 @@
 ---
 title: Microsoft Defender for Identity notifications
 description: Learn how to use and configure Microsoft Defender for Identity notifications in Microsoft Defender XDR.
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 #CustomerIntent: As a Defender for Identity user, I want to learn how to work with Defender for Identity notifications to make sure I'm up to date about events detected by Defender for Identity.
 ms.reviewer: LiorShapiraa
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Defender for Identity notifications in Microsoft Defender
@@ -72,15 +72,10 @@ Events aren't sent from the Defender for Identity service to your Syslog server 
     - An existing security alert is updated
     - A new health issue is detected
 
-> [!TIP]
-> When working with Syslog in TLS mode, make sure to install the required certificates on the designated sensor.
-
 ## Creating automation scripts for Defender for Identity SIEM logs
 
-If you're creating automation scripts for Defender for Identity SIEM logs, we recommend using the **externalId** field to identify the alert type instead of using the alert name. 
-
-While alert names may occasionally be modified, the **externalId** of each alert is permanent. For more information, see [Defender for Identity SIEM log reference](cef-format-sa.md).
+When you create automation scripts for Defender for Identity SIEM logs, use the **externalId** field to identify the alert type. Alert names might change over time, but the **externalId** for each alert stays the same. For more information, see [Defender for Identity SIEM log reference](cef-format-sa.md).
 
 ## Related content
 
-For more information, see [Configure event collection](deploy/configure-event-collection.md).
+To set up Windows event forwarding and other event sources for Defender for Identity sensors, see [Configure event collection](deploy/configure-event-collection.md).
