@@ -11,7 +11,7 @@ appliesto:
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #Customer intent: As an SAP BASIS team member, I want to configure SAP authorizations and deploy optional SAP Change Requests so that I can ensure proper connectivity and log retrieval from SAP systems for security monitoring.
 
 ---
@@ -44,7 +44,8 @@ Create a role using the [**MSFTSEN_SENTINEL_READER**](https://raw.githubusercont
 
 For more information, see the SAP documentation on [creating roles](https://help.sap.com/docs/ABAP_PLATFORM_NEW/ad77b44570314f6d8c3a8a807273084c/4c93141f5c153c91e10000000a42189c.html).
 
-### Create a user
+<a name="create-a-user"></a>
+### Create an SAP user for the Microsoft Sentinel role
 
 The Microsoft Sentinel solution for SAP applications requires a user account to connect to your SAP system. When creating your user:
 
@@ -52,7 +53,7 @@ The Microsoft Sentinel solution for SAP applications requires a user account to 
 - Make sure to create a system user.
 - Assign the **MSFTSEN_SENTINEL_READER** role to the user, which you created when you [configured the Microsoft Sentinel role](#configure-the-microsoft-sentinel-role).
 
-For more information, see the [SAP documentation](https://help.sap.com/docs/ABAP_PLATFORM_NEW/ad77b44570314f6d8c3a8a807273084c/4cb5f7ac9cb33c94e10000000a42189c.html?version=LATEST).
+For more information, see the SAP documentation on [creating user accounts](https://help.sap.com/docs/ABAP_PLATFORM_NEW/ad77b44570314f6d8c3a8a807273084c/4cb5f7ac9cb33c94e10000000a42189c.html?version=LATEST).
 
 ## Configure SAP auditing
 
@@ -122,7 +123,7 @@ To prepare SAP Business Technology Platform (BTP) for the agentless data connect
 
 1. Create an instance of the SAP Process Integration Runtime in your subaccount using service plan **integration-flow** (not API!).
 
-1. Create a service key for the SAP Process Integration Runtime and save the JSON contents to a secure location. You must activate the cloud integration capability before creating a service key for SAP Process Integration Runtime.
+1. After verifying that the cloud integration capability is activated, create a service key for the SAP Process Integration Runtime and save the JSON contents to a secure location.
 
 For more information, see the SAP documentation on [Initial Setup of SAP Integration Suite](https://help.sap.com/docs/integration-suite/sap-integration-suite/initial-setup).
 
