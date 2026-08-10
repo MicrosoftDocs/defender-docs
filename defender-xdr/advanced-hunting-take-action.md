@@ -76,7 +76,7 @@ For more information on identity actions, see [Remediation actions in Microsoft 
 
 ## Quarantine files
 
-You can deploy the *quarantine* action on files so that the files are automatically quarantined when encountered. When you select this action, you can choose between the following columns to identify which files in your query results to quarantine:
+You can deploy the *quarantine* action on files so that the files are automatically quarantined when encountered. When you select the **quarantine** action, you can choose between the following columns to identify which files in your query results to quarantine:
 
 - `SHA1`: In most advanced hunting tables, this column refers to the SHA-1 of the file that's affected by the recorded action. For example, if a file was copied, this affected file is the copied file.
 - `InitiatingProcessSHA1`: In most advanced hunting tables, this column refers to the file responsible for initiating the recorded action. For example, if a child process was launched, this initiator file is part of the parent process.
@@ -110,9 +110,9 @@ Apart from device-focused remediation steps, you can also take actions on emails
 
    :::image type="content" source="media/advanced-hunting-take-action/soft-delete-sender-copy.png" alt-text="Screenshot of the Take actions pane with the Soft delete option and the automatic sender copy deletion setting." lightbox="media/advanced-hunting-take-action/soft-delete-sender-copy.png":::
 
-   Automatic soft-deletion of the sender's copy is available for results using the [`EmailEvents`](advanced-hunting-emailevents-table.md) and [`EmailPostDeliveryEvents`](advanced-hunting-emailpostdeliveryevents-table.md) tables but not the [`UrlClickEvents`](advanced-hunting-urlclickevents-table.md) table. Also, the result should contain the `EmailDirection` and `SenderFromAddress` columns for this action option to show up in the **Take actions** wizard. Sender's copy clean-up applies to intra-organization emails and outbound emails, ensuring that only the sender's copy is soft-deleted for these email messages. Inbound messages are out of scope.
+   Automatic soft-deletion of the sender's copy is available for results using the [`EmailEvents`](advanced-hunting-emailevents-table.md) and [`EmailPostDeliveryEvents`](advanced-hunting-emailpostdeliveryevents-table.md) tables but not the [`UrlClickEvents`](advanced-hunting-urlclickevents-table.md) table. Also, the result should contain the `EmailDirection` and `SenderFromAddress` columns for the **Delete email** option to show up in the **Take actions** wizard. Sender's copy clean-up applies to intra-organization emails and outbound emails, ensuring that only the sender's copy is soft-deleted for these email messages. Inbound messages are out of scope.
 
-   See the following query as reference:
+   The following query lists email events classified as spam and returns key message and delivery details:
 
    ```kusto
    EmailEvents
@@ -127,13 +127,13 @@ Apart from device-focused remediation steps, you can also take actions on emails
     > [!IMPORTANT]
     > To block a URL or URL domain, join the [`EmailUrlInfo`](advanced-hunting-emailurlinfo-table.md) table with `NetworkMessageId` to get the required details. To block an attachment (file), join the [`EmailAttachmentInfo`](advanced-hunting-emailattachmentinfo-table.md) table with `NetworkMessageId` to get the file's hash.
 
-  **Submit to Microsoft** might be disabled if mandatory columns are missing. To resolve this issue, select **Show empty columns** before you select **Take actions**.
+  **Submit to Microsoft** might be disabled if mandatory columns are missing. To resolve missing mandatory columns, select **Show empty columns** before you select **Take actions**.
 
   :::image type="content" source="media/advanced-hunting-take-action/advanced-hunting-take-actions-submit-to-microsoft.png" alt-text="Screenshot of Choose actions page of the Take actions wizard with Submit to Microsoft selected and the Selected entities to block details flyout." lightbox="media/advanced-hunting-take-action/advanced-hunting-take-actions-submit-to-microsoft.png":::
 
 - **Initiate automated investigation** - select this action to trigger [Automated investigation](/defender-office-365/air-about) on email, sender, recipient, or contact recipients.
 
-  **Initiate automated investigation** might be disabled if mandatory columns are missing. To resolve this issue, select **Show empty columns** before you select **Take actions**.
+  **Initiate automated investigation** might be disabled if mandatory columns are missing. To resolve missing mandatory columns, select **Show empty columns** before you select **Take actions**.
 
   :::image type="content" source="media/advanced-hunting-take-action/advanced-hunting-take-actions-choose-actions.png" alt-text="Screenshot of the Choose actions page of the Take actions wizard with Initiate automated investigation selected." lightbox="media/advanced-hunting-take-action/advanced-hunting-take-actions-choose-actions.png":::
 
@@ -141,13 +141,11 @@ You can provide a remediation name and a short description of the action to trac
 
 :::image type="content" source="media/advanced-hunting-take-action/choose-email-actions-entities.png" alt-text="Screenshot of the Take actions wizard showing the Choose actions step for selected entities." lightbox="media/advanced-hunting-take-action/choose-email-actions-entities.png":::
 
-These email actions also apply to [custom detections](custom-detections-overview.md).
+The email remediation actions described in this section also apply to [custom detections](custom-detections-overview.md).
 
 ## Review actions taken
 
-The [action center](m365d-action-center.md) under **Action center** \
-
-> **History** ([Action center history](https://security.microsoft.com/action-center/history)) records each action individually. To check the status of each action, go to the action center.
+The [Action center history](https://security.microsoft.com/action-center/history) page (**Action center** > **History**) records each action individually. To check the status of each action, go to the [action center](m365d-action-center.md).
 
 > [!NOTE]
 > Some tables in this article might not be available in Microsoft Defender for Endpoint. [Turn on Microsoft Defender](m365d-enable.md) to hunt for threats by using more data sources. To move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender, see [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).

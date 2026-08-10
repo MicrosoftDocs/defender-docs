@@ -7,7 +7,7 @@ ms.pagetype: security
 ms.localizationpriority: medium
 author: poliveria
 ms.author: pauloliveria
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.collection:
 - m365-security
@@ -15,7 +15,7 @@ ms.collection:
 appliesto:
 - Microsoft Defender XDR
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #customer intent: As a SOC analyst, I want to know how to create custom reports using Microsoft Graph security API and Power BI so that I can visualize my data and make informed decisions.
 ---
 # Create custom Microsoft Defender XDR reports using Microsoft Graph security API and Power BI
@@ -31,7 +31,7 @@ There are multiple ways to visualize Microsoft Defender security data:
 - Applying the render function in Advanced Hunting.
 - Using Power BI to expand existing reporting capabilities.
 
-In this article, we create a sample Security Operations Center (SOC) efficiency dashboard in Power BI using Microsoft Graph security API. We access the Microsoft Graph security API in user context, therefore the user must have [corresponding permissions](manage-rbac.md) to be able to view alerts and incidents data.
+In this article, we create a sample Security Operations Center (SOC) efficiency dashboard in Power BI using Microsoft Graph security API. We access the Microsoft Graph security API in user context, therefore the user must have [the required RBAC permissions](manage-rbac.md) to be able to view alerts and incidents data.
 
 > [!NOTE]
 > **Example below is based on our new MS Graph security API**. Find out more at: [Use the Microsoft Graph security API](/graph/api/resources/security-api-overview).
@@ -75,11 +75,11 @@ Now the results of your query appear as a table, and you can start building visu
 <a name="filtering-data"></a>
 ## Filter Microsoft Defender XDR report data in Power BI
 
-Microsoft Graph API supports the OData (Open Data Protocol) query protocol for filtering and pagination, so users don't have to worry about pagination - or requesting the next page of results. However, filtering data is essential to improving load times in a busy environment.
+Microsoft Graph API supports the Open Data Protocol (OData) query protocol for filtering and pagination, so users don't have to worry about pagination - or requesting the next page of results. However, filtering data is essential to improving load times in a busy environment.
 
 Microsoft Graph API supports [query parameters](/graph/filter-query-parameter). Here are few examples of filters used in the report:
 
-- The following query returns the list of alerts generated over the past three days. Using this query in environments with high volumes of data might result in hundreds of megabytes of data that could take a moment to load. By using this hardcoded approach, you're able to quickly see your most recent alerts over the last three days as soon as you open the report.
+- The following query calculates a relative lookback date and retrieves recent alerts from Microsoft Graph for the past three days. Using this query in environments with high volumes of data might result in hundreds of megabytes of data that could take a moment to load. By using this hardcoded approach, you're able to quickly see your most recent alerts over the last three days as soon as you open the report.
 
   ```console
   let
@@ -101,7 +101,7 @@ Microsoft Graph API supports [query parameters](/graph/filter-query-parameter). 
       Source
   ```
 
-- When historical data is required (for example, comparing the number of incidents per month), filtering by date isn't an option (since we want to go as far back as possible). In this case, pull only selected fields such as id, title, severity, and createdDateTime:
+- When historical data is required (for example, comparing the number of incidents per month), filtering by date isn't an option (since we want to go as far back as possible). In this case, the following query uses date parameters to retrieve alerts from Microsoft Graph and selects only key fields such as id, title, severity, and createdDateTime to reduce the data volume:
 
   ```console
   let
@@ -124,7 +124,7 @@ Instead of constantly querying the code to adjust the timeframe, use parameters 
 
    :::image type="content" source="media/defender-xdr-custom-reports/manage-parameters.png" alt-text="Screenshot of how to manage Parameters in Power BI." lightbox="media/defender-xdr-custom-reports/manage-parameters.png":::
 
-4. Remove hardcoded values from the queries and make sure that StartDate and EndDate variable names correspond to parameter names:
+4. Remove hardcoded values from the queries and make sure that StartDate and EndDate variable names correspond to parameter names. The following parameterized query retrieves incidents created within the date range defined by the StartDate and EndDate parameters:
 
     ```console
     let
@@ -136,15 +136,15 @@ Instead of constantly querying the code to adjust the timeframe, use parameters 
 <a name="reviewing-the-report"></a>
 ## Review the custom Microsoft Defender XDR report
 
-Once the data has been queried and the parameters are set, now we can review the report. During the first launch of the Power BI template (.pbit) file, you're prompted to provide the StartDate and EndDate parameters:
+Once Microsoft Defender alert and incident data has been queried and the parameters are set, you can review the report. During the first launch of the Power BI template (.pbit) file, you're prompted to provide the StartDate and EndDate parameters:
 
 :::image type="content" source="media/defender-xdr-custom-reports/soc-overview-dashboard.png" alt-text="Screenshot of the Power BI template parameter prompt window." lightbox="media/defender-xdr-custom-reports/soc-overview-dashboard.png":::
 
-The dashboard offers three tabs intended to provide SOC insights. The first tab provides a summary of all recent alerts (depending on the selected timeframe). This tab helps analysts clearly understand the security state over their environment using alert details broken down by detection source, severity, total number of alerts and mean-time-to-resolution.
+The dashboard offers three tabs intended to provide SOC insights. The first tab provides a summary of all recent alerts (depending on the selected timeframe). The first tab helps analysts clearly understand the security state over their environment using alert details broken down by detection source, severity, total number of alerts and mean-time-to-resolution.
 
 :::image type="content" source="media/defender-xdr-custom-reports/alert-tab-powerbi.png" alt-text="Screenshot of the alerts tab of resulting Power BI report." lightbox="media/defender-xdr-custom-reports/alert-tab-powerbi.png":::
 
-The second tab offers more insight into the attack data collected across the incidents and alerts. This view can provide analysts with greater perspective into the types of attacks executed and how they map to the [MITRE ATT&CK framework](https://attack.mitre.org/), a knowledge base that categorizes adversary tactics and techniques.
+The second tab offers more insight into the attack data collected across the incidents and alerts. The second tab can provide analysts with greater perspective into the types of attacks executed and how they map to the [MITRE ATT&CK framework](https://attack.mitre.org/), a knowledge base that categorizes adversary tactics and techniques.
 
 :::image type="content" source="media/defender-xdr-custom-reports/insights-tab-powerbi.png" alt-text="Screenshot of the insights tab of resulting Power BI report." lightbox="media/defender-xdr-custom-reports/insights-tab-powerbi.png":::
 
