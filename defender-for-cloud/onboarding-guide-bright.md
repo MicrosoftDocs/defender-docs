@@ -1,8 +1,9 @@
 ---
 title: Technical onboarding guide for Bright Security (preview)
 description: Learn how to use Bright Security with Microsoft Defender for Cloud to enhance your application security testing.
-ms.date: 05/28/2026
+ms.date: 07/03/2026
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As an API security engineer, I want to onboard Bright Security with Defender for Cloud so that API security test findings are unified in Defender recommendations.
 ai-usage: ai-assisted
 ---
@@ -23,21 +24,22 @@ Bright API security validation is based on three main phases:
 1. Conduct an attack simulation on the discovered APIs. Once the baseline of the API behavior is known (in step 1), Bright manipulates the requests (payloads, endpoint parameters, and so on) and automatically analyzes the response, verifying the correct response code and the content of the response payload to ensure no vulnerability exists. The attack simulations include OWASP API top 10, NIST, business logic tests, and more.
 1. Bright provides a clear indication of any found vulnerability, including screenshots to ease the triage and investigation of the issue and suggestions on how to remediate that vulnerability.
 
-## Enablement
+<a name="enablement"></a>
+## Purchase Bright Security from Azure Marketplace
 
-Bright’s solutions can be purchased via Azure Marketplace by following [this link](https://azuremarketplace.microsoft.com/marketplace/apps/brightsec.bright-dast?tab=Overview).
+Bright’s solutions can be purchased via Azure Marketplace from the [Bright Security DAST listing on Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/brightsec.bright-dast?tab=Overview).
 
 ## Connect your DevOps environments to Microsoft Defender for Cloud
 
-This feature requires connecting your DevOps environment to Defender for Cloud.
+Bright Security integration requires connecting your DevOps environment to Defender for Cloud. Follow the onboarding guide for your environment to connect your DevOps organization before configuring the Bright Security scan:
 
-See [how to onboard your GitHub organizations](quickstart-onboard-github.md).
-
-See [how to onboard your Azure DevOps organizations](quickstart-onboard-devops.md).
+- [Onboard your GitHub organizations](quickstart-onboard-github.md)
+- [Onboard your Azure DevOps organizations](quickstart-onboard-devops.md)
 
 ## Configure Bright Security API security testing scan
 
-### For GitHub environments
+<a name="for-github-environments"></a>
+### Configure Bright Security scans for GitHub environments
 
 > [!NOTE]
 > For more information on how to configure Bright Security for GitHub Actions along with links to sample GitHub Action workflows, see [GitHub Actions](https://docs.brightsec.com/docs/github-actions). This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. If you don't have GitHub Code Scanning enabled, set **upload-to-code-scanning** to **false** and use the steps in [Enable Defender for Cloud integration without GitHub Code Scanning](#enable-defender-for-cloud-integration-without-github-code-scanning).
@@ -58,11 +60,11 @@ Install the Bright Security plugin within your CI/CD pipeline by completing the 
 1. After the workflow completes, select **Security**, then select **Code scanning** to view the results.
 1. Select a Code Scanning alert detected by Neuralegion. You can also filter by tool in the Code scanning tab. Filter on *Neuralegion*.
 
-You now verified that the Bright Security (Neuralegion GitHub workflow) security scan results are showing in GitHub Code Scanning. Next, verify that these scan results are available within Defender for Cloud. It might take up to 30 minutes for results to show in Defender for Cloud.
+The Bright Security (NeuraLegion GitHub workflow) scan results should now appear in GitHub Code Scanning. Next, verify that the Bright Security GitHub scan results are available within Defender for Cloud. It might take up to 30 minutes for results to show in Defender for Cloud.
 
 #### Enable Defender for Cloud integration without GitHub Code Scanning
 
-If you don't have GitHub Code Scanning for your environment and wish to integrate security scan results from Bright Security into Defender for Cloud, you can follow these steps. After adding in the Bright Security workflow step, add the following steps to your GitHub workflow to send scan results directly to Defender for Cloud using the Microsoft Security DevOps GitHub Action.
+If you don't have GitHub Code Scanning for your environment and wish to integrate security scan results from Bright Security into Defender for Cloud, use the following GitHub workflow steps to send scan results directly to Defender for Cloud. After adding the Bright Security scan step (NeuraLegion workflow) to your GitHub workflow, add the following steps to send scan results directly to Defender for Cloud using the Microsoft Security DevOps GitHub Action.
 
 ```yml
       - name: Download SARIF file
@@ -91,13 +93,16 @@ After running the workflow, it might take up to 30 minutes for the results to sh
 
 #### Navigate to Defender for Cloud
 
+To verify that Bright Security scan findings appear in Defender for Cloud, perform the following steps:
+
 1. Select **Recommendations**.
 1. Filter by searching for **API security testing**.
 1. Select the recommendation **GitHub repositories should have API security testing findings resolved**.
 
 :::image type="content" source="media/onboarding-guide-stackhawk/github-recommendations-result.png" alt-text="Screenshot of GitHub repositories should have API security testing findings resolved recommendation." lightbox="media/onboarding-guide-stackhawk/github-recommendations-result.png":::
 
-### For Azure DevOps environments
+<a name="for-azure-devops-environments"></a>
+### Configure Bright Security scans for Azure DevOps environments
 
 > [!NOTE]
 > For more information on how to configure Bright Security for Azure DevOps along with links to sample Azure DevOps workflows, see [Azure Pipelines](https://docs.brightsec.com/docs/azure-pipelines).
@@ -120,7 +125,8 @@ After running the workflow, it might take up to 30 minutes for the results to sh
 
 :::image type="content" source="media/onboarding-guide-42crunch/azure-devops-recommendation.png" alt-text="Screenshot of Azure DevOps repositories should have API security testing findings resolved recommendation." lightbox="media/onboarding-guide-42crunch/azure-devops-recommendation.png":::
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Review Microsoft Defender for APIs overview](defender-for-apis-introduction.md)

@@ -2,8 +2,9 @@
 title: Set up the required Azure resources to export security alerts to IBM QRadar and Splunk
 description: Learn how to configure the required Azure resources in the Azure portal to stream security alerts to IBM QRadar and Splunk
 ms.topic: how-to
-ms.date: 07/15/2025
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Prepare Azure resources for exporting to Splunk and QRadar
@@ -13,6 +14,8 @@ In order to stream Microsoft Defender for Cloud security alerts to IBM QRadar an
 To configure the Azure resources for QRadar and Splunk in the Azure portal:
 
 ## Step 1: Create an Event Hubs namespace and event hub with send permissions
+
+Create an Event Hubs namespace, an event hub, and a shared access policy with send permissions.
 
 1. In the [Event Hubs service](/azure/event-hubs/event-hubs-create), create an Event Hubs namespace:
     1. Select **Create**.
@@ -34,6 +37,8 @@ To configure the Azure resources for QRadar and Splunk in the Azure portal:
 
 ## Step 2: **For streaming to QRadar SIEM** - Create a Listen policy
 
+If you're streaming to QRadar, create a Listen policy on the same event hub.
+
 1. Select **Add**, enter a unique policy name, and select **Listen**.
 1. Select **Create** to create the policy.
 1. After the listen policy is created, copy the **Connection string primary key** and save it to use later.
@@ -41,6 +46,8 @@ To configure the Azure resources for QRadar and Splunk in the Azure portal:
     :::image type="content" source="media/export-to-siem/create-shared-listen-policy.png" alt-text="Screenshot of creating a listen policy in Microsoft Event Hubs." lightbox="media/export-to-siem/create-shared-listen-policy.png":::
 
 ## Step 3: Create a consumer group, then copy and save the name to use in the SIEM platform
+
+Create a consumer group for your event hub and save its name for later use when you configure your SIEM platform.
 
 1. In the Entities section of the Event Hubs event hub menu, select **Event Hubs** and select the event hub you created.
 
@@ -50,15 +57,20 @@ To configure the Azure resources for QRadar and Splunk in the Azure portal:
 
 ## Step 4: Enable continuous export for the scope of the alerts
 
+Use Azure Policy to enable continuous export of security alerts to your event hub.
+
+> [!TIP]
+> If you assign this policy at the tenant (root management group) level, it automatically streams alerts from any **new** subscription created under that tenant.
+
 1. In the Azure search box, search for "policy" and go to the Policy.
 1. In the Policy menu, select **Definitions**.
 1. Search for "deploy export" and select the **Deploy export to Event Hub for Microsoft Defender for Cloud data** built-in policy.
 1. Select **Assign**.
 1. Define the basic policy options:
-    1. In Scope, select the **...** to select the scope to apply the policy to.
-    1. Find the root management group (for tenant scope), management group, subscription, or resource group in the scope and select **Select**.
-        - To select a tenant root management group level, you need to have permissions on tenant level.
-    1. (Optional) In Exclusions you can define specific subscriptions to exclude from the export.
+    1. In Scope, select **...** to choose where the policy applies.
+    1. Find the root management group (for tenant scope), management group, subscription, or resource group. Then select **Select**.
+        - You need tenant-level permissions to select the root management group.
+    1. (Optional) In Exclusions, select subscriptions to exclude from the export.
     1. Enter an assignment name.
     1. Make sure policy enforcement is enabled.
 
@@ -66,19 +78,21 @@ To configure the Azure resources for QRadar and Splunk in the Azure portal:
 
 1. In the policy parameters:
     1. Enter the resource group where the automation resource is saved.
-    1. Select resource group location.
-    1. Select the **...** next to the **Event Hub details** and enter the details for the event hub, including:
+    1. Select the resource group location.
+    1. Select **...** next to **Event Hub details** and enter these details:
         - Subscription.
         - The Event Hubs namespace you created.
         - The event hub you created.
-        - In **authorizationrules**, select the shared access policy that you created to send alerts.
+        - In **authorizationrules**, select the shared access policy you created for sending alerts.
 
     :::image type="content" source="media/export-to-siem/create-export-policy-parameters.png" alt-text="Screenshot of parameters for the export policy." lightbox="media/export-to-siem/create-export-policy-parameters.png":::
 
-1. Select **Review and Create** and **Create** to finish the process of defining the continuous export to Event Hubs.
-    - Notice that when you activate continuous export policy on the tenant (root management group level), it automatically streams your alerts on any **new** subscription that will be created under this tenant.
+1. Select **Review and Create**, then select **Create** to finish defining continuous export to Event Hubs.
+    - When you activate this policy at the tenant (root management group) level, it streams alerts from any **new** subscription created under that tenant.
 
 ## Step 5: **For streaming alerts to QRadar SIEM** - Create a storage account
+
+If you're streaming alerts to QRadar, create a storage account that QRadar uses to consume events.
 
 1. Go to the Azure portal, select **Create a resource**, and select **Storage account**. If that option isn't shown, search for "storage account".
 1. Select **Create**.
@@ -94,6 +108,8 @@ To configure the Azure resources for QRadar and Splunk in the Azure portal:
 <a name='step-6-for-streaming-alerts-to-splunk-siem---create-an-azure-ad-application'></a>
 
 ## Step 6: **For streaming alerts to Splunk SIEM** - Create a Microsoft Entra application
+
+If you're streaming alerts to Splunk, register a Microsoft Entra application that Splunk uses to authenticate with the event hub.
 
 1. In the menu search box, search for "Microsoft Entra ID" and go to Microsoft Entra ID.
 1. Go to the Azure portal, select **Create a resource**, and select **Microsoft Entra ID**. If that option isn't shown, search for "active directory".
@@ -112,11 +128,13 @@ To configure the Azure resources for QRadar and Splunk in the Azure portal:
 
     :::image type="content" source="media/export-to-siem/create-client-secret.png" alt-text="Screenshot of creating client secret." lightbox="media/export-to-siem/create-client-secret.png":::
 
-1. After the secret is created, copy the Secret ID and save it for later use together with the Application ID and Directory (tenant) ID.
+1. After the client secret is created, copy the secret **Value** and save it for later use together with the **Application (client) ID** and **Directory (tenant) ID**.
 
 <a name='step-7-for-streaming-alerts-to-splunk-siem---allow-azure-ad-to-read-from-the-event-hub'></a>
 
 ## Step 7: **For streaming alerts to Splunk SIEM** - Allow Microsoft Entra ID to read from the event hub
+
+Grant your Microsoft Entra application the Data Receiver role on the Event Hubs namespace so Splunk can read events.
 
 1. Go to the Event Hubs namespace you created.
 1. In the menu, go to **Access control**.
@@ -128,7 +146,12 @@ To configure the Azure resources for QRadar and Splunk in the Azure portal:
 1. In the Roles tab, search for **Azure Event Hubs Data Receiver**.
 1. Select **Next**.
 1. Select **Select Members**.
-1. Search for the Microsoft Entra application you created before and select it.
+1. Search for the Microsoft Entra application you registered in Step 6. Select it.
 1. Select **Close**.
 
-To continue setting up export of alerts, [install the built-in connectors](export-to-siem.md#connect-the-event-hub-to-your-preferred-solution-using-the-built-in-connectors) for the SIEM you're using.
+Your Azure resources are now configured to stream security alerts to your SIEM platform.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Install the built-in connectors](export-to-siem.md#connect-the-event-hub-to-your-preferred-solution-using-the-built-in-connectors) for your SIEM.

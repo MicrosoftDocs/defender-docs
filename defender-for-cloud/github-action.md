@@ -1,9 +1,10 @@
 ---
 title: Configure the Microsoft Security DevOps GitHub action
-description: Learn how to configure the Microsoft Security DevOps GitHub action to enhance your project's security and DevOps processes.
-ms.date: 05/28/2026
+description: Configure the Microsoft Security DevOps GitHub action to run static analysis and security tools in your GitHub workflow. Includes setup guidance for integrating supported scanners into your development pipeline.
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Configure the Microsoft Security DevOps GitHub action
@@ -25,7 +26,9 @@ Microsoft Security DevOps uses the following Open Source tools:
 
 ## Prerequisites
 
-- An Azure subscription. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
+Before you configure the Microsoft Security DevOps GitHub action, make sure you have the following prerequisites:
+
+- An Azure subscription. If you don't have an Azure subscription, [create a free Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
 
 - [Connect your GitHub repositories](quickstart-onboard-github.md).
 
@@ -33,11 +36,12 @@ Microsoft Security DevOps uses the following Open Source tools:
 
 - Ensure that [Workflow permissions are set to Read and Write](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#setting-the-permissions-of-the-github_token-for-your-repository) on the GitHub repository. This includes setting the "ID-token: write" permission in the GitHub workflow for federation with Defender for Cloud.
 
-## Configure the Microsoft Security DevOps GitHub action
+<a name="configure-the-microsoft-security-devops-github-action"></a>
+## Set up the GitHub action workflow
 
 To set up the GitHub action:
 
-1. Sign in to [GitHub](https://www.github.com).
+1. Sign in to the [GitHub sign-in page](https://www.github.com).
 
 1. Select a repository you want to configure the GitHub action to.
 
@@ -132,7 +136,8 @@ To set up the GitHub action:
 
 1. From the DevOps security blade, you can see the same Microsoft Security DevOps (MSDO) security results that developers see in their CI logs within minutes for the associated repository. Customers with GitHub Advanced Security also see the findings ingested from these tools.
 
-## Learn more
+<a name="learn-more"></a>
+## Related content
 
 - Learn about GitHub actions for Azure in [GitHub actions for Azure](/azure/developer/github/github-actions).
 

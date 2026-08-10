@@ -14,7 +14,7 @@ ms.collection:
 description: What are best practices for email and collaboration security settings in Microsoft 365? What are the current recommendations for standard protection? What should you use to be more strict? And what extras do you get if you also use Microsoft Defender for Office 365?
 ai-usage: ai-assisted
 ms.service: defender-office-365
-ms.date: 03/30/2026
+ms.date: 07/17/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -345,6 +345,10 @@ Users can't release their own messages quarantined as malware or phishing by Saf
 > |**Safe Attachments unknown malware response** (_Enable_ and _Action_)|<details><summary>Show details</summary><br>**Default in custom**: **Off** (`-Enable $false` and `-Action Block`)<br>**Built-in protection**: **Block** (`-Enable $true` and `-Action Block`)<br>**Standard**: **Block** (`-Enable $true` and `-Action Block`)<br>**Strict**: **Block** (`-Enable $true` and `-Action Block`)<br>**Comment**: When the _Enable_ parameter is $false, the value of the _Action_ parameter doesn't matter.</details>|
 > |**Quarantine policy** (_QuarantineTag_)|<details><summary>Show details</summary><br>**Default in custom**: AdminOnlyAccessPolicy<br>**Built-in protection**: AdminOnlyAccessPolicy<br>**Standard**: AdminOnlyAccessPolicy<br>**Strict**: AdminOnlyAccessPolicy</details>|
 > |**Redirect attachment with detected attachments** : **Enable redirect** (_Redirect_ and _RedirectAddress_)|<details><summary>Show details</summary><br>**Default in custom**: Not selected and no email address specified. (`-Redirect $false` and _RedirectAddress_ is blank)<br>**Built-in protection**: Not selected and no email address specified. (`-Redirect $false` and _RedirectAddress_ is blank)<br>**Standard**: Not selected and no email address specified. (`-Redirect $false` and _RedirectAddress_ is blank)<br>**Strict**: Not selected and no email address specified. (`-Redirect $false` and _RedirectAddress_ is blank)<br>**Comment**: Redirection of messages is available only when the **Safe Attachments unknown malware response** value is **Monitor** (`-Enable $true` and `-Action Allow`).</details>|
+> |**Block messages containing encrypted attachments that could not be scanned**|This section and the following settings are available only when the **Safe Attachments unknown malware response** value is **Block** (`-Enable $true` and `-Action Block`).|
+> |**Block unscanned attachments** (_EnableBlockingEncryptedAttachments_)|<details><summary>Show details</summary><br>**Default in custom**: Not selected (`$false`)<br>**Built-in protection**: Not selected (`$false`)<br>**Standard**: Not selected (`$false`)<br>**Strict**: Not selected (`$false`)</details>|
+> |**Exclude these attachment types** (_ExcludedTypesFromBlockingEncryptedAttachments_)|<details><summary>Show details</summary><br>**Default in custom**: None selected (`{}`)<br>**Built-in protection**: None selected (`{}`)<br>**Standard**: None selected (`{}`)<br>**Strict**: None selected (`{}`)</details>|
+> |**Quarantine policy** (_QuarantineTagForBlockingEncryptedAttachments_)|<details><summary>Show details</summary><br>**Default in custom**: DefaultFullAccessWithNotificationPolicy<br>**Built-in protection**: DefaultFullAccessWithNotificationPolicy<br>**Standard**: DefaultFullAccessWithNotificationPolicy<br>**Strict**: DefaultFullAccessWithNotificationPolicy<br>**Comment**: This quarantine policy applies only to messages quarantined by Safe Attachments because they contain encrypted (password-protected) attachments that can't be scanned.</details>|
 
 ### Safe Links policy settings
 

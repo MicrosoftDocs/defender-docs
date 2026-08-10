@@ -31,7 +31,7 @@ To set up an action and view scan results in GitHub:
 
 1. In the file directory, select **.github** > **workflows** > **msdevopssec.yml**.
 
-   For more information about working with an action in GitHub, see [Prerequisites](github-action.md#configure-the-microsoft-security-devops-github-action-1).
+   For more information about working with an action in GitHub, see [Prerequisites](github-action.md#configure-the-microsoft-security-devops-github-action).
 
 1. Select the **Edit this file** (pencil) icon.
 
