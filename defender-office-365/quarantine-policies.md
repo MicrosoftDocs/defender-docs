@@ -15,7 +15,7 @@ ms.custom:
   - msecd-doc-authoring-1016
 description: Learn how to create and assign quarantine policies to control what users can do to quarantined messages and configure quarantine notifications.
 ms.service: defender-office-365
-ms.date: 07/03/2026
+ms.date: 07/17/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -410,9 +410,13 @@ For detailed syntax and parameter information, see [Set-MalwareFilterPolicy](/po
    - Select an existing Safe Attachments policy by clicking anywhere in the row other than the check box next to the name. In the policy details flyout that opens, select the **Edit settings** link in **Settings** section.
    - Select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create** to start the new Safe Attachments policy wizard and get to the **Settings** page.
 
-3. On the **Settings** page or flyout, view or select a quarantine policy in the **Quarantine policy** box.
+3. On the **Settings** page or flyout, view or select a quarantine policy in the following boxes:
 
-   Users can't release their own messages quarantined as malware or phishing by Safe Attachments policies, regardless of how the quarantine policy is configured. If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
+   - **Quarantine policy** in the **Safe Attachments unknown malware response** section: This quarantine policy applies to messages quarantined by Safe Attachments scanning.
+
+     Users can't release their own messages quarantined as malware or phishing by Safe Attachments policies, regardless of how the quarantine policy is configured. If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
+
+   - **Quarantine policy** in the **Block messages containing encrypted attachments that could not be scanned** section (available when you select **Block unscanned attachments**): This quarantine policy applies to messages quarantined because they contain encrypted (password-protected) attachments that can't be scanned.
 
    :::image type="content" source="media/quarantine-tags-in-safe-attachments-policies.png" alt-text="The Quarantine policy selections in a Safe Attachments policy." lightbox="media/quarantine-tags-in-safe-attachments-policies.png":::
 
@@ -420,10 +424,10 @@ Full instructions for creating and modifying Safe Attachments policies are descr
 
 #### Safe Attachments policies in PowerShell
 
-If you'd rather use [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) to assign quarantine policies in Safe Attachments policies, use the following syntax to create or update a Safe Attachments policy and optionally assign a custom quarantine policy when messages are blocked or dynamically delivered:
+If you'd rather use [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) to assign quarantine policies in Safe Attachments policies, use the following syntax to create or update a Safe Attachments policy and optionally assign a custom quarantine policy when messages are blocked or dynamically delivered, or when messages contain encrypted (password-protected) attachments that can't be scanned:
 
 ```powershell
-<New-SafeAttachmentPolicy -Name "<Unique name>" | Set-SafeAttachmentPolicy -Identity "<Policy name>"> -Enable $true -Action <Block | DynamicDelivery> [-QuarantineTag <QuarantineTagName>]
+<New-SafeAttachmentPolicy -Name "<Unique name>" | Set-SafeAttachmentPolicy -Identity "<Policy name>"> -Enable $true -Action <Block | DynamicDelivery> [-QuarantineTag <QuarantineTagName>] [-EnableBlockingEncryptedAttachments $true] [-QuarantineTagForBlockingEncryptedAttachments <QuarantineTagName>]
 ```
 
 - The _Action_ parameter values Block or DynamicDelivery can result in quarantined messages (the value Allow doesn't quarantine messages). The value of the _Action_ parameter is meaningful only when the value of the _Enable_ parameter is `$true`.
@@ -437,6 +441,8 @@ If you'd rather use [Exchange Online PowerShell](/powershell/exchange/connect-to
   ```powershell
   Get-SafeAttachmentPolicy | Format-List Name,Enable,Action,QuarantineTag
   ```
+
+- When you use the _EnableBlockingEncryptedAttachments_ parameter value `$true` (the **Block unscanned attachments** setting) without using the _QuarantineTagForBlockingEncryptedAttachments_ parameter, the default quarantine policy named DefaultFullAccessWithNotificationPolicy is used for messages that are quarantined because they contain encrypted (password-protected) attachments that can't be scanned. This setting is meaningful only when the value of the _Action_ parameter is `Block`.
 
 - A new Safe Attachments policy in PowerShell requires a safe attachment policy using the **New-SafeAttachmentPolicy** cmdlet (settings), and an exclusive safe attachment rule using the **New-SafeAttachmentRule** cmdlet (recipient filters). For instructions, see [Use Exchange Online PowerShell to configure Safe Attachments policies](safe-attachments-policies-configure.md#use-exchange-online-powershell-to-configure-safe-attachments-policies).
 

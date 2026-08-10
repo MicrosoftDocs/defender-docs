@@ -10,10 +10,11 @@ ms.collection:
   - tier1
 ms.custom:
   - seo-marvel-apr2020
-  - msecd-doc-authoring-1012
+  - msecd-doc-authoring-1015
 description: Learn about email quarantine in Microsoft 365, including which detections quarantine messages, how retention works, and how admins and users manage quarantined items.
 ms.service: defender-office-365
-ms.date: 02/02/2026
+ms.date: 07/17/2026
+ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -101,6 +102,7 @@ How long quarantined messages or files are held in quarantine before they expire
 |Messages quarantined by anti-malware policies (malware messages).|30 days|No|If you turn on the _common attachments filter_ in anti-malware policies (in the default policy or in custom policies), file attachments in email messages to the affected recipients are treated as malware based solely on the file extension using true type matching. A predefined list of mostly executable file types is used by default, but you can customize the list. For more information, see [Common attachments filter in anti-malware policies](anti-malware-protection-about.md#common-attachments-filter-in-anti-malware-policies).|
 |Messages quarantined by mail flow rules where the action is **Deliver the message to the hosted quarantine** (_Quarantine_).|30 days|No||
 |Messages quarantined by Safe Attachments policies in Defender for Office 365 (malware or phishing messages).|30 days|No||
+|Messages quarantined by Safe Attachments policies in Defender for Office 365 that contain encrypted (password-protected) attachments that can't be scanned.|30 days|No|Admins can release these messages without a password. Users can supply the attachment password to have their own messages rescanned and possibly released, if the quarantine policy allows it. For more information, see [Encrypted (password-protected) attachments in Safe Attachments policies](safe-attachments-about.md#encrypted-password-protected-attachments-in-safe-attachments-policies).|
 |Files quarantined by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams (malware files).|30 days|No|Files quarantined in SharePoint or OneDrive are removed from quarantine after 30 days, but the blocked files remain in SharePoint or OneDrive in the blocked state.|
 |Messages in chats and channels quarantined by zero-hour auto protection (ZAP) for Microsoft Teams in Defender for Office 365|30 days|No||
 
