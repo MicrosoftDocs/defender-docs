@@ -21,7 +21,7 @@ Custom graphs let you build tailored security graphs tuned to your unique securi
 
 ## Common scenarios
 
-These scenarios represent a sample of what’s possible with custom graphs. You can model any entities, relationships, and data from the Sentinel data lake, enabling graphs tailored to your specific security workflows and investigative needs.
+These scenarios show a sample of what’s possible with custom graphs. You can model any entities, relationships, and data from the Sentinel data lake. Build graphs tailored to your security workflows and investigative needs.
 
 | Scenario |Key questions that graph can help answer |
 |----------|---------------|
@@ -35,7 +35,7 @@ These scenarios represent a sample of what’s possible with custom graphs. You 
 
 Use the Jupyter notebooks in Microsoft Visual Studio Code to interactively create and analyze custom graphs with your data in the Microsoft Sentinel data lake. The notebooks are provided by the Microsoft Sentinel Visual Studio Code extension that allows you to interact with the Microsoft Sentinel data lake using Python for Spark (PySpark). For more information on the Microsoft Sentinel Visual Studio Code extension, see [Install Visual Studio Code and the Microsoft Sentinel extension](./notebooks.md#install-visual-studio-code-and-the-microsoft-sentinel-extension).
 
-You can author custom graphs using either AI‑assisted graph authoring or by writing your own code using the Microsoft Sentinel graph provider reference to define your graph model (nodes and edges), transform your data from the Sentinel data lake, and use Graph Query Language (GQL) to query and analyze your graphs. For more information, see [AI-assisted custom graph authoring in Microsoft Sentinel](./create-graphs-with-ai.md),  [Microsoft Sentinel graph provider reference](./sentinel-graph-provider-reference.md) and [Graph Query Language (GQL) reference for Sentinel custom graph](./gql-reference-for-sentinel-custom-graph.md).
+You can author custom graphs using either AI‑assisted graph authoring or by writing your own code. Use the Microsoft Sentinel graph provider reference to define the nodes and edges in your graph model, transform your data from the Sentinel data lake, and query your graphs with Graph Query Language (GQL). For more information, see [AI-assisted custom graph authoring in Microsoft Sentinel](./create-graphs-with-ai.md),  [Microsoft Sentinel graph provider reference](./sentinel-graph-provider-reference.md) and [Graph Query Language (GQL) reference for Sentinel custom graph](./gql-reference-for-sentinel-custom-graph.md).
 
 After you author the graph code in a notebook, run the notebook in an interactive session or publish a graph job. Graphs created during an interactive notebook session are temporary and available only in that session. An on-demand graph job materializes the graph for 30 days and then deletes it. A scheduled graph job rebuilds the graph on the refresh schedule you configure. You can access a materialized graph from the graph experience under Microsoft Sentinel in the Defender portal, Visual Studio Code notebooks, and graph query APIs.
 
@@ -53,7 +53,7 @@ For detailed instructions on how to build custom graphs in Microsoft Sentinel, s
 
 ## Visualizing graphs in Microsoft Sentinel
 
-Microsoft Sentinel provides multiple options for visualizing graphs, including the graphs experience Microsoft Sentinel, Jupyter notebooks in the Sentinel Visual Studio Code extension. The graph experience lets you run Graph Query Language (GQL) queries, view the graph schema, visualize the graph, view graph results in tabular format, and interactively traverse the graph to the next hop with a simple click. 
+Microsoft Sentinel provides multiple options for visualizing graphs, including the graphs experience Microsoft Sentinel, Jupyter notebooks in the Sentinel Visual Studio Code extension. The graph experience lets you run Graph Query Language (GQL) queries, view the graph schema (the defined node and edge types), visualize the graph, view graph results in tabular format, and interactively traverse the graph to the next hop with a simple click. 
 
 :::image type="content" source="./media/custom-graphs-overview/graph-exploration-phishing-query.png"    alt-text="Screenshot of the Sentinel graph in Microsoft Sentinel showing a graph visualization." lightbox="./media/custom-graphs-overview/graph-exploration-phishing-query.png":::
 
