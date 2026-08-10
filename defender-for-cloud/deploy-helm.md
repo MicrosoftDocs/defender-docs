@@ -2,14 +2,15 @@
 title: Install Defender for Containers sensor using Helm
 description: Install the Defender for Containers sensor on AKS, EKS, and GKE clusters by using Helm, including prerequisites, deployment steps, and upgrade guidance.
 ms.topic: how-to
-ms.date: 05/28/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to install Defender for Containers sensor by using Helm so that I can control deployment and upgrade timing across my clusters.
 ai-usage: ai-assisted
 ---
 
 # Install Defender for Containers sensor using Helm
 
-To control deployment and upgrade timing across your Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE) clusters, install and configure the Microsoft Defender for Containers sensor by using Helm.
+To control deployment and upgrade timing across your Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE) clusters, install and configure the Microsoft Defender for Containers sensor by using Helm. Before you begin, make sure you meet the [prerequisites](#prerequisites), including Helm availability, Defender for Containers plan enablement, and cluster access.
 
 Defender for Containers supports multiple sensor deployment models, including automatic provisioning and Helm-based installation. Helm-based deployment gives you more control over versioning and upgrade timing, but you manage some of the operational work. When you use Helm-based deployment, consider:
 
@@ -23,11 +24,12 @@ Before you install the sensor by using Helm, complete the following prerequisite
 
 - Make sure [`helm`](https://helm.sh/docs/intro/install/) and `curl` are installed and available in your command-line environment.
 
-  To check whether the tools are available, run:
+  To confirm that Helm and curl are installed and available before you deploy Defender for Containers, run the following commands:
 
   ```bash
   helm version
   curl --version
+  ```
 
 - Implement all prerequisite requirements for the Defender for Containers sensor as described in the [Defender sensor network requirements](defender-for-containers-enable.md?tabs=aks-deploy-portal%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-arc%2Caks-removeprofile-api&pivots=defender-for-container-aks%23network-requirements).
 
