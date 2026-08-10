@@ -1,11 +1,11 @@
 ---
 title: Governing connected apps
 description: This article lists and describes all the governance actions that can be taken in Defender for Cloud Apps and the log messages that track them.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Ronen-Refaeli
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Govern actions for connected apps in Defender for Cloud Apps
@@ -74,7 +74,7 @@ The following governance actions can be taken for connected apps either on a spe
 
   - **Trash** – Move the file to the trash folder. (Box, Dropbox, Google Drive, OneDrive, SharePoint)
 
-The malware governance actions in this section are restricted to users with specific administrative roles. If the malware governance action options in this section are not visible or accessible, confirm with your system administrator that your account has one of the following roles assigned:
+The malware governance actions listed in [Available malware governance actions (Preview)](#malware-governance-actions-preview) are restricted to users with specific administrative roles. If the malware governance action options listed earlier are not visible or accessible, confirm with your system administrator that your account has one of the following roles assigned:
 
 - Security Operator
 - Security administrator
@@ -87,7 +87,7 @@ The malware governance actions in this section are restricted to users with spec
 >
 > Microsoft Defender for Office 365 customers can control detected malware files in SharePoint and OneDrive on the **Files** tab of the **Quarantine** page in the Microsoft Defender portal at <https://security.microsoft.com/quarantine?viewid=Files>. For example, supported activities include recovering files, deleting files, and downloading files in password-protected ZIP files. These activities are limited to files that were not already quarantined by Microsoft Defender for Cloud Apps.
 >
-> Actions show only for connected apps.
+> Malware governance actions show only for connected apps.
 
 <a name="activity-governance-actions"></a>
 ## Available activity governance actions
@@ -104,17 +104,17 @@ The following governance actions are available for activities in connected apps.
 - **Suspend user** – Suspend the user from the application.
 
     > [!NOTE]
-    > If your Microsoft Entra ID is set to automatically sync with the users in your Active Directory on-premises environment, the settings in the on-premises environment override the Microsoft Entra settings and this governance action is reverted.
+    > If your Microsoft Entra ID is set to automatically sync with the users in your Active Directory on-premises environment, the settings in the on-premises environment override the Microsoft Entra settings and the **Suspend user** governance action is reverted.
 
   - **Require user to sign in again** – Signs the user out and requires them to sign in again.
 
-  - **Confirm user compromised** - Set the user's risk level to high. This causes the relevant policy actions defined in Microsoft Entra ID to be enforced. For more information How Microsoft Entra ID works with risk levels, see [How does Microsoft Entra ID use my risk feedback](/azure/active-directory/identity-protection/howto-identity-protection-risk-feedback#how-does-azure-ad-use-my-risk-feedback).
+  - **Confirm user compromised** - Set the user's risk level to high. This causes the relevant policy actions defined in Microsoft Entra ID to be enforced. For more information about how Microsoft Entra ID works with risk levels, see [How does Microsoft Entra ID use my risk feedback](/azure/active-directory/identity-protection/howto-identity-protection-risk-feedback#how-does-azure-ad-use-my-risk-feedback).
 
-  ![Screenshot of the available activity policy governance actions in Defender for Cloud Apps, including suspend user, require sign-in, and confirm compromised options.](media/activity-policy-ref6.png)
+  ![Screenshot of activity governance actions showing suspend user, require sign-in, and confirm user compromised options.](media/activity-policy-ref6.png)
   
 ## Revoke an OAuth app and notify user
 
-For Google Workspace and Salesforce, it's possible to revoke permission to an OAuth app or to notify the user that they should change the permission. When you revoke permission it removes all permissions that were granted to the application under "Enterprise Applications" in Microsoft Entra ID.
+As part of governing connected apps, you can also manage OAuth app permissions. For Google Workspace and Salesforce, it's possible to revoke permission to an OAuth app or to notify the user that they should change the permission. When you revoke permission it removes all permissions that were granted to the application under "Enterprise Applications" in Microsoft Entra ID.
 
 1. On the **Google** or **Salesforce** tabs on the **App governance** page, select the three dots at the end of the app row and select **Notify user**. By default, the user is notified as follows: *You authorized the app to access your Google Workspace account. This app conflicts with your organization's security policy. Reconsider giving or revoking the permissions you gave this app in your Google Workspace account. To revoke app access, go to: <https://security.google.com/settings/security/permissions?hl=en&pli=1>  Select the app and select 'Revoke access' on the right menu bar.* You can customize the message that is sent.
 2. You can also revoke permissions to use the app for the user. Select the icon at the end of the app row in the table and selecting **Revoke app**. For example:
@@ -137,7 +137,7 @@ Defender for Cloud Apps handles overlapping governance actions between policies 
 
 User sync between on-premises Active Directory and Microsoft Entra ID can affect how governance actions are applied:
 
-- If your Microsoft Entra ID is set to automatically sync with the users in your Active Directory on-premises environment, the settings in the on-premises environment override the Microsoft Entra settings and this governance action are reverted.
+- If your Microsoft Entra ID is set to automatically sync with the users in your Active Directory on-premises environment, the settings in the on-premises environment override the Microsoft Entra settings and the affected governance actions are reverted.
 
 <a name="governance-log"></a>
 ## Review the governance log
