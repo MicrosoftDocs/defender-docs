@@ -4,12 +4,12 @@ description: "Learn when to use the Microsoft Sentinel connectors for Cisco Secu
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.service: microsoft-sentinel
 ms.topic: how-to
 ms.collection: sentinel-data-connector
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Collect data from Cisco firewall devices
@@ -31,6 +31,7 @@ To collect CEF logs from a Cisco FTD device:
 
 1. Install [CEF via AMA connector](connect-cef-syslog-ama.md). 
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 Learn more about [Microsoft Sentinel data connectors](connect-data-sources.md).
