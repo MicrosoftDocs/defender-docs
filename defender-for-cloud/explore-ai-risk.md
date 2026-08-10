@@ -56,7 +56,7 @@ Use the cloud security explorer to find containers that run generative AI images
 
 1. Select **Open the vulnerability page**.
 
-1. [Remediate the recommendation](implement-security-recommendations.md#remediate-recommendations).
+1. [Remediate the recommendation](implement-security-recommendations.md#remediate-a-recommendation).
 
 ## Identify vulnerable generative AI code repositories
 
@@ -84,7 +84,7 @@ Use the cloud security explorer to find vulnerable generative AI code repositori
 
 1. Select **Open the vulnerability page**.
 
-1. [Remediate the recommendation](implement-security-recommendations.md#remediate-recommendations).
+1. [Remediate the recommendation](implement-security-recommendations.md#remediate-a-recommendation).
 
 ## Related content
 

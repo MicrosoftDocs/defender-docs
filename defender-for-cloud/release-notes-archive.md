@@ -2330,7 +2330,7 @@ Defender for Cloud now includes a business criticality feature, using Microsoft 
 March 12, 2024
 
 We're enhancing the AWS and GCP recommendations with automated remediation scripts that allow you to remediate them programmatically and at scale.
-Learn more about [automated remediation scripts](implement-security-recommendations.md#use-the-automated-remediation-scripts).
+Learn more about [automated remediation scripts](implement-security-recommendations.md#use-automated-remediation-scripts).
 
 ### Preview: Compliance standards added to compliance dashboard
 
