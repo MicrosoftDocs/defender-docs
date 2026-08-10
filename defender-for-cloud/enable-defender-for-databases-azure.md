@@ -1,8 +1,9 @@
 ---
 title: Enable Defender for open-source relational databases on Azure
 description: Detect anomalous activity and unusual attempts to access or exploit Azure Database for PostgreSQL and MySQL with Microsoft Defender for open-source relational databases.
-ms.date: 06/02/2026
+ms.date: 07/03/2026
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a reader, I want to learn how to configure Microsoft Defender for open-source relational databases to enhance the security of my Azure databases.
 ai-usage: ai-assisted
 ---
@@ -18,7 +19,7 @@ Microsoft Defender for Cloud detects anomalous activities indicating unusual and
 
 To get alerts from this Microsoft Defender plan, enable Defender for open-source relational databases in Azure by following these steps.
 
-Learn more about this Microsoft Defender plan in [Overview of Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md).
+Learn more about Microsoft Defender for open-source relational databases in [Overview of Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md).
 
 ## Prerequisites
 
@@ -57,7 +58,8 @@ To enable Defender for open-source relational databases on your Azure subscripti
 
 - [Optional configurations after in-place migration from Azure Database for MySQL Single Server to Flexible Server](/azure/mysql/migrate/whats-happening-to-mysql-single-server#configure-microsoft-defender-for-cloud-properties-in-flexible-server).
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Respond to Defender OSS alerts](defender-for-databases-usage.md)
