@@ -4,9 +4,9 @@ description: Learn how to modify Defender EASM inventory assets by changing asse
 ms.author: dandennis
 author: dandennis
 ms.service: defender-easm
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -58,7 +58,7 @@ You can modify assets from both the inventory list and asset details pages. You 
 <a name="inventory-list-page"></a>
 ### Modify assets from the inventory list page
 
-You should modify assets from the inventory list page if you want to update numerous assets at once. You can refine your asset list based on filter parameters. This process helps you to identify assets that should be categorized with the label, external ID or state change that you want. To modify assets from this page:
+You should modify assets from the inventory list page if you want to update numerous assets at once. You can refine your asset list based on filter parameters. Filtering the asset list helps you to identify assets that should be categorized with the label, external ID or state change that you want. To modify assets from this page:
 
 1. On the leftmost pane of your Microsoft Defender External Attack Surface Management (Defender EASM) resource, select **Inventory**.
 
@@ -72,13 +72,13 @@ You should modify assets from the inventory list page if you want to update nume
 
 4. Select **Modify assets**.
 
-  ![Screenshot that shows the Modify Assets pane with options to change state, add labels, and apply external IDs.](media/cves-2.png)
+  ![Screenshot of the Modify Assets pane with Add labels field used to select labels before updating assets.](media/cves-2.png)
 
 5. On the **Modify Assets** pane that opens on the right side of your screen, you can quickly change various fields for the selected assets. For this example, you create a new label. Select **Create a new label**.
 
 6. Determine the label name and display text values. You can't change the label name after you initially create the label, but the display text can be edited at a later time. The label name is used to query for the label in the product interface or via API, so edits are disabled to ensure these queries work properly. To edit a label name, you need to delete the original label and create a new one.
 
-  Select a color for your new label and select **Add**. This action takes you back to the **Modify Assets** screen.
+  Select a color for your new label and select **Add**. Selecting **Add** takes you back to the **Modify Assets** screen.
 
   ![Screenshot of the Add label pane with fields to enter a label name, display text, and select a color.](media/labels-4.png)
 
@@ -101,7 +101,7 @@ You can also modify a single asset from the asset details page. This option is i
 
 3. On this page, select **Modify asset**.
 
-  ![Screenshot that shows the asset details page with the Modify asset button highlighted.](media/labels-7a.png)
+  ![Screenshot of the asset details page with the Modify asset button highlighted.](media/labels-7a.png)
 
 4. On the **Modify Assets** pane that opens on the right side of your screen, make your desired changes. You can change the asset state, apply an external ID, or add or remove labels. If you need to create a new label, select **Create a new label**, enter the label name and display text, select a color, and select **Add**. After you configure your changes, select **Update**.
 
@@ -129,7 +129,7 @@ The **Labels** page automatically refreshes. The label is removed from the list 
 
 ## Mark observations as non-applicable
 
-While observations can be marked as non-applicable from the same **Modify assets** screens for other manual changes, you can also make these updates from the **Observations** tab in **Asset details**. The **Observations** tab features two tables: **Observations** and **Non-applicable observations**. All active observations determined to be *recent* within your attack surface are in the **Observations** table, whereas the **Non-applicable observations** table lists any observations that were manually marked as non-applicable or determined by the system to no longer be applicable. To mark observations as non-applicable and therefore exclude that particular observation from dashboard counts, simply select the desired observations and select **Set as non-applicable**. These observations immediately disappear from the active **Observations** table and instead appear on the **Non-applicable observations** table. You can revert this change at any time by selecting the relevant observations from this table and selecting **Set as applicable**.
+While observations can be marked as non-applicable from the same **Modify assets** screens for other manual changes, you can also make these updates from the **Observations** tab in **Asset details**. The **Observations** tab features two tables: **Observations** and **Non-applicable observations**. All active observations determined to be *recent* within your attack surface are in the **Observations** table, whereas the **Non-applicable observations** table lists any observations that were manually marked as non-applicable or determined by the system to no longer be applicable. To mark observations as non-applicable and therefore exclude that particular observation from dashboard counts, simply select the desired observations and select **Set as non-applicable**. The selected observations immediately disappear from the active **Observations** table and instead appear on the **Non-applicable observations** table. You can revert this change at any time by selecting the relevant observations from this table and selecting **Set as applicable**.
 
   ![Screenshot that shows the Observations tab with multiple CVEs selected to be marked as non-applicable.](media/cves-3.png)
 
