@@ -180,7 +180,7 @@ Use multiple configuration files, with multiple environment variables, if you wa
 
 1. Set the **MSTICPYCONFIG** environment variable to point to that location.
 
-Select one of the following tabs to define the **MSTICPYCONFIG** environment variable on [Windows](#tab/windows), [Linux](#tab/linux), or [Azure Machine Learning](#tab/azure-ml).
+Select one of the following tabs to define the **MSTICPYCONFIG** environment variable on [Windows](#windows), [Linux](#linux), or [Azure Machine Learning](#azure-machine-learning-options).
 
 ## [Windows](#tab/windows)
 
