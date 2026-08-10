@@ -1,10 +1,10 @@
 ---
 title: Forward on-premises OT alert information to partners - Microsoft Defender for IoT
 description: Configure your OT sensor to forward alert details to partner services, syslog servers, email recipients, and other external destinations.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Forward on-premises OT alert information
@@ -32,6 +32,8 @@ This article describes how to configure your OT sensor to forward alerts to part
 > Forwarding alert rules run only on alerts triggered after the forwarding rule is created. Alerts already in the system from before the forwarding rule was created are not affected by the rule.
 
 ## Prerequisites
+
+Before you create forwarding rules, make sure the following prerequisites are met:
 
 - Depending on where you want to create your forwarding alert rules, you need to have either an [OT network sensor installed](how-to-install-software.md), with access as an **Admin** user.
 
@@ -78,7 +80,7 @@ To edit or delete an existing rule:
 
 ## Configure alert forwarding rule actions
 
-The following action types are supported for OT sensor alert forwarding rules.
+OT sensor alert forwarding rules support these action types: Email, Syslog server, and NetWitness.
 
 <a name="email-address-action"></a>
 ### Configure the email address action
@@ -229,13 +231,15 @@ For more information and to create custom alert groups, contact [Microsoft Suppo
 
 ## Troubleshoot forwarding rules
 
-If your forwarding alert rules aren't working as expected, check the following details:
+If your forwarding alert rules aren't working as expected, check the following details.
 
-- **Certificate validation**. Forwarding rules for [Syslog CEF](#syslog-server-actions), [Microsoft Sentinel](integrate-overview.md#microsoft-sentinel), and [QRadar](tutorial-qradar.md) support encryption and certificate validation.
+### Troubleshoot certificate validation for forwarded alerts
 
-    If your OT sensors are configured to [verify CRL server access for SSL certificates](ot-deploy/create-ssl-certificates.md#verify-crl-server-access) and the certificate can't be verified, the alerts aren't forwarded.
+**Certificate validation**. Forwarding rules for [Syslog CEF](#syslog-server-actions), [Microsoft Sentinel](integrate-overview.md#microsoft-sentinel), and [QRadar](tutorial-qradar.md) support encryption and certificate validation.
 
-    In these cases, the sensor is the session's client and initiator. Certificates are typically received from the server or use asymmetric encryption, where a specific certificate is provided to set up the integration.
+If your OT sensors are configured to [verify CRL server access for SSL certificates](ot-deploy/create-ssl-certificates.md#verify-crl-server-access) and the certificate can't be verified, the alerts aren't forwarded.
+
+In these cases, the sensor is the session's client and initiator. Certificates are typically received from the server or use asymmetric encryption, where a specific certificate is provided to set up the integration.
 
 ## Next step
 
