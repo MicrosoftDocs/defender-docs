@@ -5,7 +5,7 @@ author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
 ms.custom: devx-track-python, msecd-doc-authoring-1016
-ms.date: 07/01/2026
+ms.date: 08/10/2026
 ai-usage: ai-assisted
 
 
@@ -180,9 +180,9 @@ Use multiple configuration files, with multiple environment variables, if you wa
 
 1. Set the **MSTICPYCONFIG** environment variable to point to that location.
 
-Select one of the following tabs to define the **MSTICPYCONFIG** environment variable on [Windows](#windows), [Linux](#linux), or [Azure Machine Learning](#azure-machine-learning-options).
+Select one of the following tabs to define the **MSTICPYCONFIG** environment variable on [Windows](?tabs=windows), [Linux](?tabs=linux), or [Azure Machine Learning](?tabs=azure-ml).
 
-## [Windows](#tab/windows)
+# [Windows](#tab/windows)
 
 For example, to set the **MSTICPYCONFIG** environment variable on Windows systems:
 
@@ -194,7 +194,7 @@ For example, to set the **MSTICPYCONFIG** environment variable on Windows system
     - **Variable name**: Define as `MSTICPYCONFIG`
     - **Variable value**: Enter the path to your **msticpyconfig.yaml** file
 
-## [Linux](#tab/linux)
+# [Linux](#tab/linux)
 
 Update the **.bashrc** file to set the **MSTICPYCONFIG** environment variable on Linux systems by using the following steps.
 
@@ -231,7 +231,7 @@ Update the **.bashrc** file to set the **MSTICPYCONFIG** environment variable on
     - If you moved the **msticpyconfig.yaml** file, run `export MSTICPYCONFIG=~/msticpyconfig.yaml`.
     - If you didn't move the **msticpyconfig.yaml** file, run `export MSTICPYCONFIG=~/cloudfiles/code/Users/<YOURNAME>/msticpyconfig.yaml`.
 
-## [Azure Machine Learning options](#tab/azure-ml)
+# [Azure Machine Learning options](#tab/azure-ml)
 
 If you need to store your **msticpyconfig.yaml**  file somewhere other than your Azure Machine Learning user folder, use either an **nbuser_settings.py** file or the **kernel.json** file:
 
