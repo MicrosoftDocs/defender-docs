@@ -1,11 +1,12 @@
 ---
 title: Detection exclusions in Microsoft Defender XDR
 description: Learn how to configure Microsoft Defender for Identity detection exclusions in Microsoft Defender XDR.
-ms.date: 07/02/2026
+ms.date: 08/10/2026
 ms.topic: how-to
 ms.reviewer: LiorShapiraa
 ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
+#customer intent: As a security administrator, I want to configure and migrate Defender for Identity detection exclusions so that I can reduce false positives and preserve tuning as detections move to Defender XDR.
 ---
 
 # Configure Defender for Identity detection exclusions in Microsoft Defender
@@ -20,6 +21,9 @@ For example, a **DNS Reconnaissance** alert could be triggered by a security sca
 > - We recommend that you [tune an alert in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-alerts#tune-an-alert) instead of using exclusions. Alert tuning rules allow more granular conditions than exclusions, and allow you to review the alerts, which were tuned.
 > 
 >- Among the most common domains with [Suspicious communication over DNS](other-alerts.md#suspicious-communication-over-dns-external-id-2031) alerts, we observed the domains that were most frequently excluded from the alert. These domains are added to the exclusions list by default, but you have the option to remove them.
+
+> [!IMPORTANT]
+> As Defender for Identity detections move to the Microsoft Defender XDR detection engine, existing detection exclusions don't automatically carry over. After a detection moves, previously configured exclusions stop applying, and alerts that were previously suppressed can reappear. To preserve your tuning, re-create equivalent tuning by using [alert tuning rules](/microsoft-365/security/defender/investigate-alerts#tune-an-alert) in the Microsoft Defender portal.
 
 ## How to add detection exclusions
 
