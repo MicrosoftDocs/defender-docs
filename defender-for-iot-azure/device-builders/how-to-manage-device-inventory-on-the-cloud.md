@@ -1,9 +1,9 @@
 ---
 title: Manage IoT and OT Devices with the Cloud Device Inventory
 description: Learn how to manage your IoT and OT devices with the device inventory.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -99,7 +99,7 @@ To filter the device inventory:
 
     :::image type="content" source="media/how-to-manage-device-inventory-on-the-cloud/add-filter-window.png" alt-text="Select which column you want to filter in the device inventory.":::
 
-1. Enter a value in the filter field to filter by.
+1. Enter a value to filter by.
 
 1. Select the **Apply** button.
 
@@ -115,7 +115,7 @@ To view a specific devices information, select the device and the device informa
 
 You can export your device inventory to a CSV file. Any filters that you apply to the device inventory table are exported when you export the table.
 
-Select the :::image type="icon" source="media/how-to-manage-device-inventory-on-the-cloud/export-button.png" border="false"::: button to export your current device inventory to a CSV file.
+Select the :::image type="icon" source="media/how-to-manage-device-inventory-on-the-cloud/export-button.png" border="false"::: button to export the device inventory.
 
 ## How to identify devices that haven't recently communicated with the Azure cloud
 

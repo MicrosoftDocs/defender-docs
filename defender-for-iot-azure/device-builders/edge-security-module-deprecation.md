@@ -4,18 +4,21 @@ description: Review Microsoft Defender for IoT feature support status and retire
 ms.date: 06/12/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
-# Microsoft Defender for IoT feature support and retirement
+# Microsoft Defender for IoT micro agent support and retirement
 
-This article covers the support status and retirement timelines for Microsoft Defender for IoT micro agent capabilities. It includes information about the legacy Defender-IoT-micro-agent, the deprecation of C, C#, and Edge Defender-IoT-micro-agent variants, and the transition to the newer micro agent experience.
+This article lists support status and retirement dates for Microsoft Defender for IoT micro agent features. Learn about the legacy Defender-IoT-micro-agent and its replacement. Find details on the end of support for C, C#, and Edge micro agent types.
 
 ## Legacy Defender for IoT micro-agent
 
-The Defender-IoT-micro-agent has been replaced by our newer micro-agent experience.
+The legacy Defender-IoT-micro-agent has been replaced by the new Defender for IoT micro agent.
 
-For more information, see [Tutorial: Create a DefenderIotMicroAgent module twin (Preview)](tutorial-create-micro-agent-module-twin.md) and [Tutorial: Install the Defender for IoT micro agent (Preview)](tutorial-standalone-agent-binary-installation.md).
+To get started, see these tutorials:
+
+- [Tutorial: Create a DefenderIotMicroAgent module twin (Preview)](tutorial-create-micro-agent-module-twin.md)
+- [Tutorial: Install the Defender for IoT micro agent (Preview)](tutorial-standalone-agent-binary-installation.md)
 
 [!INCLUDE [device-agents-note](../includes/device-agents-note.md)]
 

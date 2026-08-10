@@ -1,8 +1,10 @@
 ---
 title: How to configure the DMI Decoder
 description: Learn how to configure your DMI decoder on your device, or use other alternatives. 
-ms.date: 12/22/2022
+ms.date: 07/03/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # DMI Decoder configurations
@@ -29,17 +31,19 @@ For more information on the DMI Decoder, see [dmidecode(8): DMI table decoder - 
 
 ## Populate SMBIOS tables for dmidecode
 
-To support dmidecode(8), SMBIOS tables needs to be present and valid.
-To implement, please refer to the [System Management BIOS specifications](https://lwn.net/Articles/451967/).
+The dmidecode(8) utility reads System Management BIOS (SMBIOS) tables to extract hardware and firmware information from the device. To support dmidecode(8), SMBIOS tables need to be present and valid.
+To implement SMBIOS support for dmidecode(8), refer to the [System Management BIOS specifications](https://lwn.net/Articles/451967/).
 
-## Alternative configurations
+<a name="alternative-configurations"></a>
+## Choose an alternative configuration method
 
 For devices that do not support the DMI decoder, there are two alternative options for retrieving and setting the firmware and hardware fields:
 
-- [JSON file](#json-file)
-- [Module twin configurations](#module-twin-configurations)
+- [Configure by using a JSON file](#json-file)
+- [Configure by using module twin settings](#module-twin-configurations)
 
-### JSON file
+<a name="json-file"></a>
+### Configure DMI Decoder by using a JSON file
 
 To manually set the values on the device, create a JSON file. The micro agent will read the values from the JSON file and send them to the cloud.
 
@@ -61,24 +65,26 @@ To configure the file, use the following path and format details:
         "FirmwareVersion": "<firmware version>"
     ```
 
-### Module twin configurations
+<a name="module-twin-configurations"></a>
+### Configure DMI Decoder by using module twin settings
 
-To manually set the values on the cloud, use the module twin configuration by setting the following properties:
+To manually set the values on the cloud, use the module twin configuration. Set the following desired properties in the module twin JSON payload:
 
-```bash
-    “properties”:{
-        “desired”:{
-                    “SystemInformation_HardwareVendor”: ”<data>”,
-                    “SystemInformation_HardwareModel”: ”<data>”,
-                    “SystemInformation_FirmwareVendor”: ”<data>”,
-                    “SystemInformation_ FirmwareVersion”: ”<data>”,
-                    “SystemInformation_HardwareSerialNumber”: ”<data>”
-        }
-    }              
+```json
+{
+  "properties": {
+    "desired": {
+      "SystemInformation_HardwareVendor": "<data>",
+      "SystemInformation_HardwareModel": "<data>",
+      "SystemInformation_FirmwareVendor": "<data>",
+      "SystemInformation_FirmwareVersion": "<data>",
+      "SystemInformation_HardwareSerialNumber": "<data>"
+    }
+  }
+}
 ```
 
-## Next steps
+## Related content
 
-> [Configure Microsoft Defender for IoT agent-based solution](tutorial-configure-agent-based-solution.md)
-
-> [Configure pluggable Authentication Modules (PAM) to audit sign-in events (Preview)](configure-pam-to-audit-sign-in-events.md)
+- [Configure Microsoft Defender for IoT agent-based solution](tutorial-configure-agent-based-solution.md)
+- [Configure pluggable Authentication Modules (PAM) to audit sign-in events (Preview)](configure-pam-to-audit-sign-in-events.md)
