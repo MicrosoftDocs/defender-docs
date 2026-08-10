@@ -27,7 +27,7 @@ ai-usage: ai-assisted
 
 Microsoft Defender XDR includes powerful [automated attack disruption](automatic-attack-disruption.md) capabilities that can protect your environment from sophisticated, high-impact attacks.
 
-Configure automatic attack disruption capabilities in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a>. After you're all set up, you can view and manage containment actions in Incidents and the Action center. And, if necessary, you can make changes to automatic attack disruption settings.
+Configure automatic attack disruption capabilities in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a>. Before you begin, review the [prerequisites](#prerequisites) for licensing, permissions, and product-specific setup requirements. After you're all set up, you can view and manage containment actions in Incidents and the Action center. And, if necessary, you can make changes to automatic attack disruption settings.
 
 When Microsoft Defender for Endpoint is deployed, automatic attack disruption can contain unmanaged devices and users or automatically isolate a compromised workstation from the network. Automatic device isolation is currently in preview. For details about each response action, see [Automated response actions](automatic-attack-disruption.md#automated-response-actions).
 
@@ -53,13 +53,15 @@ If isolated devices need access to specific processes or destinations, configure
 
 #### Minimum Sense Client version (MDE client)
 
-The Minimum Sense Agent version required for the **Contain User** action to work is v10.8470. You can identify the Sense Agent version on a device by running the following PowerShell command: 
+The Sense Agent is the Microsoft Defender for Endpoint sensor component that runs on each device. The minimum Sense Agent version required for the **Contain User** action to work is v10.8470. You can identify the Sense Agent version on a device by running the following PowerShell commands.
+
+To verify that Microsoft Defender for Endpoint is installed and determine its installation path, query the registry:
 
 ```powershell
 Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Advanced Threat Protection\' -Name "InstallLocation"
 ```
 
-Or
+Alternatively, to confirm the installed sensor version by reading the MsSense DLL version from the registry, run the following command:
 
 ```powershell
 Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Advanced Threat Protection\Status' -Name "MsSenseDllVersion"
@@ -109,7 +111,7 @@ Microsoft Defender for Cloud Apps must be connected to Microsoft Office 365 thro
 
 
 > [!IMPORTANT]
-> To ensure full functionality of the capability, it is mandatory to properly configure the Microsoft 365 connector. As part of the setup process, all checkboxes within the Microsoft 365 connector must be selected, including the option to enable Microsoft Entra ID apps. Failure to select all required options may result in:
+> To ensure full functionality of the capability, it is mandatory to properly configure the Microsoft 365 connector. When configuring the Microsoft 365 connector in Defender for Cloud Apps, all checkboxes must be selected, including the option to enable Microsoft Entra ID apps. Failure to select all required options may result in:
 > - Partial or degraded functionality
 > - Inability to perform critical actions (such as app governance or disruption flows)
 > - Increased likelihood of operation failures 

@@ -1,5 +1,5 @@
 ---
-title: Alert classification playbooks
+title: Alert classification playbooks in Microsoft Defender XDR
 description: Review the alerts for well-known attacks and take recommended actions to remediate the attack and protect your network.
 ms.service: defender-xdr
 ms.author: guywild
@@ -14,16 +14,18 @@ ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender XDR
 ai-usage: ai-assisted
 #customer intent: As a SOC analyst, I want to know how to review and classify alerts by using alert classification playbooks so that I can take the necessary actions to remediate the attack and protect my network.
 ---
 
-# Alert classification playbooks
+# Alert classification playbooks for Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
+## Overview
 
 Alert classification playbooks allow you to methodically review and quickly classify the alerts for well-known attacks and take recommended actions to remediate the attack and protect your network. Alert classification will also help in properly classifying the overall incident.
 
@@ -80,7 +82,8 @@ Defender for Cloud Apps alerts can be classified as:
 - FP for confirmed non-malicious activity.
 
 <a name="alert-classification-playbooks"></a>
-## Available playbooks
+<a name="available-playbooks"></a>
+## Available alert classification playbooks
 
 See these playbooks for steps to more quickly classify alerts for the following threats:
 
