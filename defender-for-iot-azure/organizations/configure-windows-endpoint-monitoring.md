@@ -1,17 +1,17 @@
 ---
 title: Configure Windows Endpoint Monitoring for OT active monitoring - Microsoft Defender for IoT
-description: This article describes how to configure Windows Endpoint Monitoring with active monitoring with Microsoft Defender for IoT.
-ms.date: 06/12/2026
+description: Configure Windows Endpoint Monitoring so Microsoft Defender for IoT can actively probe Windows devices and collect detailed information such as service pack levels.
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Configure Windows Endpoint monitoring
 
 This article describes how to configure Windows Endpoint Monitoring (WEM) to have Microsoft Defender for IoT selectively and actively probe Windows systems. 
 
-WEM can provide more focused and accurate information about your Windows devices, such as service pack levels.
+WEM can provide more focused and accurate information about your Windows devices, such as service pack levels. Before you begin, make sure you meet the [prerequisites](#prerequisites), including a configured OT sensor and active monitoring setup.
 
 ## Supported protocols
 
@@ -21,7 +21,7 @@ Currently the only protocol supported for Windows Endpoint Monitoring with Defen
 
 Before performing the procedures in this article, you must have:
 
-- An OT network sensor with software [installed on the OT sensor](ot-deploy/install-software-ot-sensor.md) and [configured and activated on the OT sensor](ot-deploy/activate-deploy-sensor.md).
+- An OT network sensor with software [installed](ot-deploy/install-software-ot-sensor.md), [configured, and activated](ot-deploy/activate-deploy-sensor.md).
 
 - Access to your OT network sensor as an **Admin** user. For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](roles-on-premises.md).
 
@@ -110,9 +110,9 @@ Perform the following steps to create an inbound firewall rule that allows WMI t
 
 ### Configure permissions for your WMI namespace
 
-This procedure describes how to define permissions for your WMI namespace, and can't be completed with a regular GPO.
+The following steps define permissions for your WMI namespace. You can't complete this configuration with a regular GPO.
 
-If you'll be using a non-admin account to run your WEM scans, this procedure is critical and must be performed exactly as instructed to allow sign-in attempts using WMI.
+If you'll be using a non-admin account to run your WEM scans, configuring WMI namespace permissions is critical and must be performed exactly as instructed to allow sign-in attempts using WMI.
 
 1. On your Windows machine, open a **Run** dialog and enter **wmimgmt.msc**.
 
