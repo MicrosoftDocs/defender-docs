@@ -11,11 +11,11 @@ ms.collection:
 - usx-security
 - sentinel-only
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -23,7 +23,7 @@ ai-usage: ai-assisted
 
 Incidents are automatically created in the Microsoft Defender portal when suspicious activities are detected. When two incidents describe parts of the same attack story, Defender usually merges those incidents into a single incident automatically to help you investigate incidents more efficiently and effectively and resolve them more quickly and accurately.
 
-Sometimes, however, automatic incident merging doesn't happen, due to certain conditions that prevent incidents from being merged. To learn more about when incidents are or aren't merged, see [Incident correlation and merging](alerts-incidents-correlation.md#incident-correlation-and-merging). When automatic incident merging doesn't occur, or if you decide independently that two (unmerged) incidents are related and should be investigated as a single unit, you can merge them manually. This article explains how to merge incidents manually.
+Sometimes, however, automatic incident merging doesn't happen, due to certain conditions that prevent incidents from being merged. To learn more about when incidents are or aren't merged, see [Incident correlation and merging](alerts-incidents-correlation.md#incident-correlation-and-merging). When automatic incident merging doesn't occur, or if you decide independently that two (unmerged) incidents are related and should be investigated as a single unit, you can merge them manually. The following sections explain how to merge incidents manually.
 
 ## Prerequisites
 
@@ -45,7 +45,7 @@ To merge incidents from the incident queue page, perform the following steps:
 
 1. In the **Reason for merging** text box, type a description of the reason why you want to merge the incidents.
 
-1. Provide feedback explaining why you are merging the incidents by selecting one of the predefined options. This step helps Microsoft improve alert correlation in the future.
+1. Provide feedback explaining why you are merging the incidents by selecting one of the predefined options. Providing this feedback helps Microsoft improve alert correlation in the future.
 
 1. Select **Merge incidents** at the bottom of the flyout to execute the merge.
 

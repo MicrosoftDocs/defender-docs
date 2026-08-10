@@ -17,11 +17,11 @@ ms.topic: how-to
 search.appverid:
 - MOE150
 - MET150
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender XDR
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #customer intent: As a security analyst, I want to learn about the Security Alert Triage Agent in Microsoft Defender so that I can triage and classify security incidents efficiently at scale.
 ---
 
@@ -36,7 +36,7 @@ Security Operations Centers (SOCs) process large volumes of alerts across multip
 
 The Microsoft Security Copilot Security Alert Triage Agent is an autonomous agent embedded in Microsoft Defender that helps security teams triage alerts at scale. It applies AI-driven, dynamic reasoning across evidence to deliver clear verdicts for supported security workloads. By identifying which alerts represent real attacks and which are false positives, the agent enables analysts to focus on investigating real threats, with transparent, step-by-step reasoning to support every decision.
 
-This article provides an overview of the Security Alert Triage Agent, how it works, and its alert triage capabilities. Before you set up the agent, make sure you meet the [prerequisites](#prerequisites), including Security Copilot provisioning, unified RBAC activation, and workload-specific licensing. Watch this video to see a quick demo:
+This article provides an overview of the Security Alert Triage Agent, how it works, and its alert triage capabilities. Before you set up the agent, make sure you meet the [Security Alert Triage Agent prerequisites](#prerequisites), including Security Copilot provisioning, unified RBAC activation, and workload-specific licensing. Watch this video to see a quick demo:
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=868ecb6a-6545-4703-b58e-d3130e0c2eaa]
 
@@ -48,7 +48,8 @@ The Security Alert Triage Agent is a [Security Copilot agent](/copilot/security/
 - **Transparent rationale:** Records classification verdicts and provides supporting reasoning in natural language and visual graphs, including the evidence used to reach each conclusion.
 - **Learning based on feedback:** For supported alert types, the agent can incorporate analyst feedback when explicitly provided and approved to tune its verdict analysis. This capability is currently available for email and collaboration alerts only.
 
-## Supported alerts
+<a name="supported-alerts"></a>
+## Supported alert types for the Security Alert Triage Agent
 
 The Security Alert Triage Agent currently supports the following subset of alert types in Microsoft Defender. The set of supported alerts is expected to grow over time.
 
@@ -75,6 +76,8 @@ These prerequisites apply regardless of the alert types you want the agent to tr
 The following prerequisites depend on the alert types you want the agent to triage.
 
 #### [Email and collaboration alerts](#tab/email-alerts)
+
+The following prerequisites apply when you want the agent to triage email and collaboration alerts.
 
 ##### Product and license requirements
 
@@ -111,6 +114,8 @@ For more information, see [Alert policies in the Microsoft Defender portal](aler
 
 #### [Cloud alerts](#tab/cloud-alerts)
 
+The following prerequisites apply when you enable cloud alert triage.
+
 ##### Product and license requirements
 
 Cloud alert triage requires the following products and licenses:
@@ -125,6 +130,8 @@ Unified RBAC for cloud alerts is enabled automatically. No additional activation
 No additional configuration is required beyond the general prerequisites.
 
 #### [Identity alerts](#tab/identity-alerts)
+
+The following prerequisites apply when you enable identity alert triage.
 
 ##### Product and license requirements
 
@@ -159,7 +166,7 @@ For more information about unified RBAC in the Defender portal, see [Microsoft D
 
 ## Set up the Security Alert Triage Agent
 
-Make sure you have the [required user permissions](#required-user-permissions) and that all [prerequisites](#prerequisites) are met before setting up the agent.
+Make sure you have the [required user permissions](#required-user-permissions) and that all [agent prerequisites](#prerequisites) are met before setting up the agent.
 
 ### Begin setup
 
@@ -313,7 +320,7 @@ To provide feedback and teach the agent, follow these steps:
 
    :::image type="content" source="media/security-alert-triage-agent/manage-alert-why.png" alt-text="Screenshot highlighting the classification and feedback fields in the Manage alert pane" lightbox="media/security-alert-triage-agent/manage-alert-why.png":::
 
-1. To apply your feedback, select **Use this feedback to teach the agent**. You can use the [guide to writing feedback](#best-practices-for-writing-feedback) to help you craft effective input, and then choose **Evaluate feedback** to allow you to preview how the agent translates your feedback into a lesson and assess whether the outcome aligns with your intent. Additionally, the feedback evaluation performs basic safety checks to ensure that the applied feedback is relevant for the agent to use and doesn't conflict with previous feedback.
+1. To apply your feedback, select **Use this feedback to teach the agent**. You can use the [best practices for writing agent feedback](#best-practices-for-writing-feedback) to help you craft effective input, and then choose **Evaluate feedback** to allow you to preview how the agent translates your feedback into a lesson and assess whether the outcome aligns with your intent. Additionally, the feedback evaluation performs basic safety checks to ensure that the applied feedback is relevant for the agent to use and doesn't conflict with previous feedback.
 
    > [!NOTE]
    > You can only provide feedback to the agent once per alert, and it can only be used to teach the agent how to classify email and collaboration alerts, specifically by selecting either True Positive (phishing) or False Positive (not malicious).
@@ -330,7 +337,7 @@ Lessons provide systematic guidelines that help the agent determine whether an a
 1. **Ensure feedback is relevant and contextual.** Feedback should pertain only to the email currently under review. It must also align with the updated classification you've assigned.
 1. **Be descriptive and specific.** Clearly explain the characteristics of the email. Provide relevant details like the email subject, message body, sender, or recipients to help the agent understand the context. Specific feedback with multiple details enhances effectiveness.
 1. **Ensure clarity and decisiveness.** Avoid vague or universal statements. Give feedback that's clear and actionable. Use decisive and clear identification terms.
-1. **Be consistent with previous feedback.** Ensure that new feedback aligns with what was previously provided to avoid contradictions that could confuse the agent or reduce the accuracy of its decisions. You can review all previously submitted input on the [Feedback](#view-and-manage-feedback-to-the-agent) management page.
+1. **Be consistent with previous feedback.** Ensure that new feedback aligns with what was previously provided to avoid contradictions that could confuse the agent or reduce the accuracy of its decisions. You can review all previously submitted input on the [agent feedback management](#view-and-manage-feedback-to-the-agent) page.
 1. **Review the agent's interpretation of your feedback.** When you submit feedback, always verify that the feedback is accurately translated into a lesson. Confirm that the lesson reflects your intent and maintains consistency with your original input. Checking the validity of AI-generated responses to ensure they're applicable to the scenario.
 
 Here are examples of how you can write your feedback to the agent.
@@ -481,7 +488,7 @@ To remove the agent:
 
 ## Frequently asked questions
 
-Following are responses to commonly asked questions about the Security Alert Triage Agent. For information about the agent's capabilities and requirements, see [How the Security Alert Triage Agent works](#how-the-security-alert-triage-agent-works) and [Prerequisites](#prerequisites).
+This section answers commonly asked questions about the Security Alert Triage Agent. For information about the agent's capabilities and requirements, see [How the Security Alert Triage Agent works](#how-the-security-alert-triage-agent-works) and [Prerequisites](#prerequisites).
 
 
 ### What is the Security Alert Triage Agent, how does it differ from the Phishing Triage Agent, and how do I onboard if I’m already using the agent to triage phishing alerts?
@@ -490,7 +497,7 @@ The **Security Alert Triage Agent** is an autonomous Microsoft Security Copilot 
 
 The Security Alert Triage Agent is the same agent as the [Phishing Triage Agent](phishing-triage-agent.md), extended to triage additional alert types beyond email and collaboration. The Security Alert Triage Agent is modular - you choose which alert types you want the agent to triage. The agent now extends to identity and cloud alerts, starting with containers, which are currently in preview. Email and collaboration alert triage capabilities are already generally available (GA). The set of supported alerts is expected to grow over time.
 
-If you’re already using the Phishing Triage Agent, you don’t need to install a new agent. Your existing agent will continue to operate, and you can enable the additional alert types through configuration. To onboard to the expanded capabilities, review the [prerequisites](#prerequisites) for the additional alert types and [edit the agent settings](#edit-agent-settings) to select the alert types you want to enable.
+If you’re already using the Phishing Triage Agent, you don’t need to install a new agent. Your existing agent will continue to operate, and you can enable the additional alert types through configuration. To onboard to the expanded capabilities, review the [Security Alert Triage Agent prerequisites](#prerequisites) for the additional alert types and [edit the Security Alert Triage Agent settings](#edit-agent-settings) to select the alert types you want to enable.
 
 Your existing phishing triage configuration and feedback carry over automatically. For more information, see [How the Security Alert Triage Agent works](#how-the-security-alert-triage-agent-works) and [Set up the Security Alert Triage Agent](#set-up-the-security-alert-triage-agent).
 
