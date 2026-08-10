@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 
 Apps can be a valuable entry point for attackers, so we recommend monitoring anomalies and suspicious behaviors that use apps. While investigating an app governance alert or reviewing the app behavior in the environment, it becomes important to quickly get visibility into details of activities done by such suspicious apps and take remediation actions to protect assets in your organization.
 
-Using app governance and advanced hunting capabilities, you can get complete visibility into activities done by the apps and the resources it has accessed.
+Using app governance and advanced hunting capabilities, you can get complete visibility into activities done by the apps and the resources the app has accessed.
 
 This article describes how you can simplify app-based threat hunting using app governance in Microsoft Defender for Cloud Apps.
 
@@ -72,10 +72,12 @@ When using the **Advanced hunting** page to investigate data from app governance
 
 - App governance and advanced hunting process data separately. Any problems encountered by either solution during processing can result in a discrepancy.
 
-- App governance data processing can take several hours longer to complete. Because of this delay, it might not cover recent app activity that is available on Advanced Hunting.
+- App governance data processing can take several hours longer to complete. Because of this delay, app governance data might not cover recent app activity that is available on Advanced Hunting.
 
 - The advanced hunting queries return up to 1,000 results by default. You can edit the queries to return up to 100,000 rows, the advanced hunting limit. If the results exceed 64 MB, advanced hunting returns partial results and displays a notification. These limits don't apply to app governance.
 
 ## Next steps
 
-[Investigate and remediate risky OAuth apps](investigate-risky-oauth.md)
+Learn how to investigate and take action on suspicious OAuth apps in your environment:
+
+- [Investigate and remediate risky OAuth apps](investigate-risky-oauth.md)
