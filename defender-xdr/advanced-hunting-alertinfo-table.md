@@ -1,24 +1,23 @@
 ---
 title: AlertInfo table in the advanced hunting schema
 description: Learn about alert generation events in the AlertInfo table of the advanced hunting schema
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.custom: 
 - cx-ti
 - cx-ah
+- msecd-doc-authoring-1015
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 04/03/2024
+ms.date: 08/07/2026
 ---
 
 # AlertInfo
@@ -26,18 +25,18 @@ ms.date: 04/03/2024
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- Microsoft Defender XDR
 
 
 ## Get access
-To use advanced hunting or other [Microsoft Defender XDR](microsoft-365-defender.md) capabilities, you need an appropriate role in Microsoft Entra ID. [Read about required roles and permissions for advanced hunting](custom-roles.md).
+To use advanced hunting or other [Microsoft Defender](microsoft-365-defender.md) capabilities, you need an appropriate role in Microsoft Entra ID. [Read about required roles and permissions for advanced hunting](custom-roles.md).
 
-Also, your access to endpoint data is determined by role-based access control (RBAC) settings in Microsoft Defender for Endpoint. [Read about managing access to Microsoft Defender XDR](m365d-permissions.md).
+The `AlertInfo` table contains records from Microsoft Defender services. When Microsoft Sentinel is onboarded to the Defender portal, the table also contains Microsoft Sentinel alerts associated with incidents. Data availability depends on the services deployed and the Sentinel workspaces you can access. For more information, see [Deploy supported services](deploy-supported-services.md) and [Transition your Microsoft Sentinel environment to the Defender portal](/azure/sentinel/move-to-defender).
+
+Also, your access to endpoint data is determined by role-based access control (RBAC) settings in Microsoft Defender for Endpoint. [Read about managing access to Microsoft Defender](m365d-permissions.md).
 
 ## AlertInfo
 
-The `AlertInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about alerts from Microsoft  Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, and Microsoft Defender for Identity. Use this reference to construct queries that return information from this table.
+The `AlertInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains alert information from Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, Microsoft Defender for Identity, and onboarded Microsoft Sentinel workspaces. Use this reference to construct queries that return information from this table. Join `AlertInfo` with [`AlertEvidence`](advanced-hunting-alertevidence-table.md) on the `AlertId` column to retrieve the entities and evidence associated with each alert.
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 

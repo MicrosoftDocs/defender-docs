@@ -1,32 +1,26 @@
 ---
 title: Monitoring web browsing security in Microsoft Defender for Endpoint
-description: Use web protection in Microsoft Defender for Endpoint to monitor web browsing security
-search.appverid: met150
+description: Monitor web browsing security in Microsoft Defender for Endpoint by using web protection reports in the Microsoft Defender portal. Learn about available threat detection metrics and summary views.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: asr
-ms.date: 12/18/2020
+ms.date: 07/03/2026
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
+# Monitor web browsing security in Microsoft Defender for Endpoint
 
-# Monitor web browsing security
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink&rtc=1)
 
 Web protection lets you monitor your organization's web browsing security through reports under **Reports > Web protection** in the Microsoft Defender portal. The report contains cards that provide web threat detection statistics.
 
@@ -51,7 +45,7 @@ Web protection categorizes malicious and unwanted websites as:
 
 ## View the domain list
 
-Select a specific web threat category in the **Web threat protection summary** card to open the **Domains** page. This page displays the list of the domains under that threat category. The page provides the following information for each domain:
+Select a specific web threat category in the **Web threat protection summary** card to open the **Domains** page. The **Domains** page displays the list of the domains under that threat category. The **Domains** page provides the following information for each domain:
 
 - **Access count** - number of requests for URLs in the domain
 - **Blocks** - number of times requests were blocked
@@ -61,10 +55,12 @@ Select a specific web threat category in the **Web threat protection summary** c
 
 Select a domain to view the list of devices that have attempted to access URLs in that domain and the list of URLs.
 
-## Related topics
+<a name="related-topics"></a>
+## Related content
 
 - [Web protection overview](web-protection-overview.md)
 - [Web content filtering](web-content-filtering.md)
 - [Web threat protection](web-threat-protection.md)
 - [Respond to web threats](web-protection-response.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

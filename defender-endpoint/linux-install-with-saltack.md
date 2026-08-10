@@ -1,83 +1,63 @@
 ---
 title: Deploy Microsoft Defender for Endpoint on Linux with SaltStack
 ms.reviewer: dmcwee, gopkr
-description: Describes how to deploy Microsoft Defender for Endpoint on Linux using Saltstack.
+description: Describes how to deploy Microsoft Defender for Endpoint on Linux using SaltStack.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: linux
-search.appverid: met150
-ms.date: 12/24/2024
+ms.date: 05/21/2026
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
 ---
-
-# Deploy Microsoft Defender for Endpoint on Linux with Saltstack
-
-**Applies to**:
-
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+# Deploy Microsoft Defender for Endpoint on Linux with SaltStack
 
 
-This article describes how to deploy Defender for Endpoint on Linux using Saltstack. A successful deployment requires the completion of all of the steps in this article.
+
+
+You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to deploy Defender for Endpoint on Linux using SaltStack. A successful deployment requires the completion of all of the steps in this article. (To use another method, refer to the [Related content section](#related-content).)
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 [!INCLUDE [Microsoft Defender for Endpoint third-party tool support](../includes/support.md)]
 
 ## Prerequisites and system requirements
 
-Before you get started, see [the main Defender for Endpoint on Linux page](microsoft-defender-endpoint-linux.md) for a description of prerequisites and system requirements for the current software version.
+Before you get started, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements.
 
-In addition, for Saltstack deployment, you need to be familiar with Saltstack administration, have Saltstack installed, configure the Master and Minions, and know how to apply states. Saltstack has many ways to complete the same task. These instructions assume availability of supported Saltstack modules, such as *apt* and *unarchive* to help deploy the package. Your organization might use a different workflow. For more information, see [Saltstack documentation](https://docs.saltproject.io/).
+In addition, for SaltStack deployment, you need to be familiar with SaltStack administration, have SaltStack installed, configure the Master and Minions, and know how to apply states. SaltStack has many ways to complete the same task. These instructions assume availability of supported SaltStack modules, such as *apt* and *unarchive* to help deploy the package. Your organization might use a different workflow. For more information, see [SaltStack documentation](https://docs.saltproject.io/).
 
 Here are a few important points:
 
-- Saltstack is installed on at least one computer (Saltstack calls the computer as the master).
-- The Saltstack master accepted the managed nodes (Saltstack calls the nodes as minions) connections.
-- The Saltstack minions are able to resolve communication to the Saltstack master (by default the minions try to communicate with a machine named *salt*).
+- SaltStack is installed on at least one computer (SaltStack calls the computer as the master).
+- The SaltStack master accepted the managed nodes (SaltStack calls the nodes as minions) connections.
+- The SaltStack minions are able to resolve communication to the SaltStack master (by default the minions try to communicate with a machine named *salt*).
 - Run the following ping test: `sudo salt '*' test.ping`
-- The Saltstack master has a file server location where the Microsoft Defender for Endpoint files can be distributed from (by default Saltstack uses the `/srv/salt` folder as the default distribution point)
+- The SaltStack master has a file server location where the Microsoft Defender for Endpoint files can be distributed from (by default SaltStack uses the `/srv/salt` folder as the default distribution point)
 
 ## Download the onboarding package
 
 [!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
-1. In Microsoft Defender portal, go to **Settings** > **Endpoints** > **Device management** > **Onboarding**.
+[!INCLUDE [linux-get-deployment-package-third-party-tools](includes/linux-get-deployment-package-third-party-tools.md)]
 
-2. In the first drop-down menu, select **Linux Server** as the operating system. In the second drop-down menu, select **Your preferred Linux configuration management tool** as the deployment method.
+## Create SaltStack state files
 
-3. Select **Download onboarding package**. Save the file as `WindowsDefenderATPOnboardingPackage.zip`.
-
-   :::image type="content" source="media/portal-onboarding-linux-2.png" alt-text="The Download onboarding package option":::
-
-4. On the SaltStack Master, extract the contents of the archive to the SaltStack Server's folder (typically `/srv/salt`):
-
-   ```bash
-   unzip WindowsDefenderATPOnboardingPackage.zip -d /srv/salt/mde
-   ```
-
-   ```console
-   Archive:  WindowsDefenderATPOnboardingPackage.zip
-   inflating: /srv/salt/mde/mdatp_onboard.json
-   ```
-
-## Create Saltstack state files
-
-There are two ways you can create the Saltstack state files:
+There are two ways you can create the SaltStack state files:
 
 - **Use the installer Script (recommended):** With this method, the script automates deployment by installing the agent, onboarding the device to the [Microsoft Defender portal](https://security.microsoft.com), and configuring the repositories to pick the correct agent compatible with your Linux distribution.
 
 - **Manually configure the repositories:** With this method, repositories must be configured manually along with selecting agent version compatible with your Linux distribution. This method gives you more granular control over the deployment process.
 
-### Create Saltstack state files using the installer script
+### Create SaltStack state files using the installer script
 
 1. Pull the [installer bash script](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/mde_installer.sh) from Microsoft GitHub Repository, or use the following command to download it:
 
@@ -86,7 +66,7 @@ There are two ways you can create the Saltstack state files:
    ```
 
 
-2. Create the state file `/srv/salt/install_mdatp.sls` with the following content. The same can be downloaded from [GitHub](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/third_party_installation_playbooks/salt.install_mdatp_simplified.sls)
+1. Create the state file `/srv/salt/install_mdatp.sls` with the following content. The same can be downloaded from [GitHub](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/third_party_installation_playbooks/salt.install_mdatp_simplified.sls)
 
    ```bash
    #Download the mde_installer.sh: https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/mde_installer.sh
@@ -98,10 +78,9 @@ There are two ways you can create the Saltstack state files:
    ```
   
 > [!NOTE]
-> The installer script also supports other parameters such as channel (insiders-fast, insiders-slow, prod (default) ), realtime protection, version, etc. To select from the list of available options, check help through the following command:
->```./mde_installer.sh --help```
+> The installer script also supports other parameters such as channel (insiders-fast, insiders-slow, prod (default)), real-time protection, version, custom location installation, etc. To select from the list of available options, check help through the following command: `./mde_installer.sh --help`
 
-### Create Saltstack state files by manually configuring repositories
+### Create SaltStack state files by manually configuring repositories
 
 In this step, you create a SaltState state file in your configuration repository (typically `/srv/salt`) that applies the necessary states to deploy and onboard Defender for Endpoint. Then, you add the Defender for Endpoint repository and key: `install_mdatp.sls`.
 
@@ -116,14 +95,14 @@ In this step, you create a SaltState state file in your configuration repository
 > In order to preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to use either *insiders-fast* or *insiders-slow*.
 
 > [!WARNING]
-> Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, re-configure your device to use the new channel, and follow the steps in this document to install the package from the new location.
+> Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, reconfigure your device to use the new channel, and follow the steps in this document to install the package from the new location.
 
 1. Note your distribution and version and identify the closest entry for it under `https://packages.microsoft.com/config/[distro]/`.
 
-2. In the following commands, replace *[distro]* and *[version]* with your information.
+1. In the following commands, replace `[distro]` and `[version]` with your information.
 
    > [!NOTE]
-   > In case of Oracle Linux and Amazon Linux 2, replace *[distro]* with "rhel". For Amazon Linux 2, replace *[version]* with "7". For Oracle utilize, replace *[version]* with the version of Oracle Linux.
+   > For Oracle Linux and Amazon Linux 2, replace `[distro]` with "rhel." For Amazon Linux 2, replace `[version]` with "7". For Oracle utilize, replace `[version]` with the version of Oracle Linux.
 
    ```bash
    cat /srv/salt/install_mdatp.sls
@@ -148,16 +127,16 @@ In this step, you create a SaltState state file in your configuration repository
        {% endif %}
    ```
 
-3. Add the package installed state to `install_mdatp.sls` after the `add_ms_repo` state as previously defined.
+1. Add the package installed state to `install_mdatp.sls` after the `add_ms_repo` state as previously defined.
 
    ```console
    install_mdatp_package:
      pkg.installed:
-       - name: matp
+       - name: mdatp
        - required: add_ms_repo
    ```
 
-4. Add the onboarding file deployment to `install_mdatp.sls` after the `install_mdatp_package` as previously defined.
+1. Add the onboarding file deployment to `install_mdatp.sls` after the `install_mdatp_package` as previously defined.
 
    ```console
    copy_mde_onboarding_file:
@@ -199,9 +178,9 @@ In this step, you create a SaltState state file in your configuration repository
    - required: install_mdatp_package
    ```
 
-5. Create a SaltState state file in your configuration repository (typically `/srv/salt`) that applies the necessary states to offboard and remove Defender for Endpoint. Before using the offboarding state file, you need to download the offboarding package from the [Microsoft Defender portal](https://security.microsoft.com) and extract it in the same way you did the onboarding package. The downloaded offboarding package is only valid for a limited period of time.
+1. Create a SaltState state file in your configuration repository (typically `/srv/salt`) that applies the necessary states to offboard and remove Defender for Endpoint. Before using the offboarding state file, you need to download the offboarding package from the [Microsoft Defender portal](https://security.microsoft.com) and extract it in the same way you did the onboarding package. The downloaded offboarding package is only valid for a limited period of time.
 
-6. Create an Uninstall state file `uninstall_mdapt.sls` and add the state to remove the `mdatp_onboard.json` file.
+1. Create an Uninstall state file `uninstall_mdapt.sls` and add the state to remove the `mdatp_onboard.json` file.
 
    ```bash
    cat /srv/salt/uninstall_mdatp.sls
@@ -213,7 +192,7 @@ In this step, you create a SaltState state file in your configuration repository
        - name: /etc/opt/microsoft/mdatp/mdatp_onboard.json
    ```
 
-7. Add the offboarding file deployment to the `uninstall_mdatp.sls` file after the `remove_mde_onboarding_file` state defined in the previous section.
+1. Add the offboarding file deployment to the `uninstall_mdatp.sls` file after the `remove_mde_onboarding_file` state defined in the previous section.
 
    ```console
     offboard_mde:
@@ -222,7 +201,7 @@ In this step, you create a SaltState state file in your configuration repository
        - source: salt://mde/mdatp_offboard.json
    ```
 
-8. Add the removal of the MDATP package to the `uninstall_mdatp.sls` file after the `offboard_mde` state defined in the previous section.
+1. Add the removal of the MDATP package to the `uninstall_mdatp.sls` file after the `offboard_mde` state defined in the previous section.
 
    ```console
    remove_mde_packages:
@@ -258,9 +237,9 @@ This step applies to both the installer script or manual configuration method. I
    ```
 
    > [!IMPORTANT]
-   > When the product starts for the first time, it downloads the latest antimalware definitions. Depending on your Internet connection, this can take up to a few minutes.
+   > When the product starts for the first time, it downloads the latest anti-malware definitions. Depending on your Internet connection, this process can take a few minutes.
 
-2. Validation/configuration:
+1. Validation/configuration:
 
    ```bash
    salt 'mdetest*' cmd.run 'mdatp connectivity test'
@@ -270,7 +249,7 @@ This step applies to both the installer script or manual configuration method. I
    salt 'mdetest*' cmd.run 'mdatp health'
    ```
 
-3. Uninstallation:
+1. Uninstallation:
 
    ```bash
    salt 'mdetest*' state.apply uninstall_mdatp
@@ -282,29 +261,40 @@ To troubleshoot issues:
 
 1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](linux-resources.md#log-installation-issues).
 
-2. For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install).
+1. For information about common installation issues, see [Installation issues](linux-support-install.md).
 
-3. If the health of the device is `false`, see [Defender for Endpoint agent health issues](/defender-endpoint/health-status).
+1. If the health of the device is `false`, see [Defender for Endpoint agent health issues](health-status.md).
 
-4. For product performance issues, see [Troubleshoot performance issues](/defender-endpoint/linux-support-perf).
+1. For product performance issues, see [Troubleshoot performance issues](linux-support-perf.md).
 
-5. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
+1. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](linux-support-connectivity.md).
 
-To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/run-analyzer-macos-linux).
+To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](overview-client-analyzer.md).
 
 ## How to configure policies for Microsoft Defender on Linux
 
 You can configure antivirus or EDR settings on your endpoints using any of the following methods:
 
-- See [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
-- See [security settings management](/mem/intune/protect/mde-security-integration) to configure settings in the Microsoft Defender portal.
+- See [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md).
+- See [security settings management](/intune/intune-service/protect/mde-security-integration) to configure settings in the Microsoft Defender portal.
 
 ## Operating system upgrades
 
 When upgrading your operating system to a new major version, you must first uninstall Defender for Endpoint on Linux, install the upgrade, and finally reconfigure Defender for Endpoint on your Linux device.
 
-## Reference
+## Related content
 
 - [SALT Project documentation](https://docs.saltproject.io/en/latest/topics/about_salt_project.html)
+- [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
+- [Use installer script based deployment to deploy Defender for Endpoint on Linux](linux-installer-script.md) 
+- [Deploy Defender for Endpoint on Linux with Ansible](linux-install-with-ansible.md)
+- [Deploy Defender for Endpoint on Linux with Chef](linux-deploy-defender-for-endpoint-with-chef.md)
+- [Deploy Defender for Endpoint on Linux with Puppet](linux-install-with-puppet.md)
+- [Deploy Defender for Endpoint on Linux manually](linux-install-manually.md)
+- [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
+- [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
+- [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+
+

@@ -1,11 +1,9 @@
 ---
-title: Integrate Rapid7 data connector in Microsoft Security Exposure Management
+title: Rapid7 data connector in Microsoft Security Exposure Management
 description: Learn how to the Rapid7 data connector in Microsoft Security Exposure Management.
+ms.topic: overview
 ms.author: dlanger
 author: dlanger
-manager: rayne-wiselman
-ms.topic: overview
-ms.service: exposure-management
 ms.date: 11/06/2024
 ---
 
@@ -31,8 +29,6 @@ To establish a connection with Rapid7 in Exposure Management, follow these steps
 
 Exposure Management retrieves data on compute devices from Rapid7, including machines and virtual machines. It also retrieves vulnerabilities reported by Rapid7 on those devices.
 
-Only devices that were actively scanned in the last 90 days are retrieved, based on assessing the "last_scan_end" field in the Rapid7 asset.
-
 | Category               | Properties                                                                 |
 |------------------------|----------------------------------------------------------------------------|
 | **Assets/devices, and data per each identifier** | - Rapid7 ID<br>- Hostname<br>- IP address<br>- mac Address<br>- OS information<br>- Rapid7 risk score<br>- Tags<br>- Rapid7 criticality data<br>- Cloud platform |
@@ -54,4 +50,14 @@ Here are some common issues that might arise when configuring the Rapid7 Connect
 
 ## Next steps
 
-[Getting value from your data connectors](value-data-connectors.md).
+After configuring the Rapid7 data connector:
+
+- [Review your attack surface map](enterprise-exposure-map.md) to see Rapid7 data
+- [Explore security recommendations](security-recommendations.md)
+- [Set up security initiatives](initiatives.md) to track remediation progress
+
+## Related articles
+
+- [Data connectors overview](overview-data-connectors.md)
+- [Configure data connectors](configure-data-connectors.md)
+- [Getting value from your data connectors](value-data-connectors.md)

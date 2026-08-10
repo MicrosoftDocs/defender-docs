@@ -2,44 +2,41 @@
 title: Pilot ring deployment using Group Policy and Windows Server Update Services
 description: Microsoft Defender Antivirus is an enterprise endpoint security platform that helps defend against advanced persistent threats. This article provides information about how to use a ring deployment method to update your Microsoft Defender Antivirus pilot clients using Group Policy and Windows Server Update Services (WSUS).
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: chrisda
+author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: high
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 - mde-ngp
-ms.custom: intro-overview
-ms.topic: conceptual
+ms.custom:
+  - intro-overview
+  - sfi-image-nochange
+ms.topic: install-set-up-deploy
 ms.subservice: ngp
-search.appverid: met150
-ms.date: 07/21/2023
----
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Microsoft Defender Antivirus pilot ring deployment using Group Policy and Windows Server Update Services
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows
-- Windows Server
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.
 
 > [!TIP]
 > Microsoft Defender for Endpoint is available in two plans, Defender for Endpoint Plan 1 and Plan 2. A new Microsoft Defender Vulnerability Management add-on is now available for Plan 2.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+- Windows Server
+
 
 ### Resources
 
@@ -93,11 +90,11 @@ On about 10-500* Windows and/or Windows Server systems, depending on how many to
 
 1. On the **What's next** page, select **Finish**.
 
-The Windows Server Update Services Configuration Wizard is complete. 
+   The Windows Server Update Services Configuration Wizard is complete. 
 
 1. Open the **Update Services** snap-in console, and navigate to **YR2K19**. The console is shown in the following figure.
 
-   :::image type="content" source="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-update-service-synch.png" alt-text="Screenshot that shows a screen capture of the Update Services snap-in console with YR2K19 shown." lightbox="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-update-service-synch.png":::
+    :::image type="content" source="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-update-service-synch.png" alt-text="Screenshot that shows a screen capture of the Update Services snap-in console with YR2K19 shown." lightbox="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-update-service-synch.png":::
 
 1. When synchronization is complete, you can see how many products and classifications have been added in the last 30 days. Check to ensure the status for **Last synchronization result** indicates _Succeeded_. You may see a warning indicating **"Your WSUS server currently shows that no computers are registered to receive updates"**. This warning is normal at this point of the deployment configuration process. 
 
@@ -118,9 +115,9 @@ The Windows Server Update Services Configuration Wizard is complete.
 
      Follow the link in the error message to install the Microsoft Report Viewer 2012 Redistributable before proceeding to the next numbered step of this procedure.
 
-    - If **Microsoft Report Viewer 2012 Redistributable** installed, **Update Report for YR2k19** opens, presenting a report with information related to the KB you previously selected.  An example report is shown in the following image. 
+    - If **Microsoft Report Viewer 2012 Redistributable** is installed, the **Update Report for YR2k19** opens, presenting a report with information related to the KB you previously selected. An example report is shown in the following image: 
 
-     :::image type="content" source="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-report-viewer-kb-update-info.png" alt-text="Screenshot that shows a screen capture with details about a KB update reported in **Update Report for Yr2k19**." lightbox="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-report-viewer-kb-update-info.png":::
+      :::image type="content" source="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-report-viewer-kb-update-info.png" alt-text="Screenshot that shows a screen capture with details about a KB update reported in Update Report for Yr2k19." lightbox="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-report-viewer-kb-update-info.png":::
 
     To learn more about the different Microsoft Defender Antivirus Update channels, see [Manage the gradual rollout process for Microsoft Defender updates](manage-gradual-rollout.md)
 
@@ -136,7 +133,7 @@ The Windows Server Update Services Configuration Wizard is complete.
 #### To determine if updates are synchronized
 
 1. In the **Update Services** console, go > **Update Services** > **YR2K19** > **Updates** > **All Updates**.
-1. In **Approval**, select **Any Except Declined**, and the select **Refresh**.
+1. In **Approval**, select **Any Except Declined**, and then select **Refresh**.
 
    The **All Updates** view lists "Platform Updates" and "Security Intelligence Updates" (also known as signatures/definitions). For example, KB4052623 platform updates. KB4052623 platform update is shown in the following figure:
 
@@ -151,11 +148,11 @@ The Windows Server Update Services Configuration Wizard is complete.
 
 #### Approve and deploy updates in WSUS
 
-1. In the **Update Services** console, go > **Update Services** > **YR2K19** > **Computers** > **Options**. The **Options** window opens
+1. In the **Update Services** console, go to **Update Services** > **YR2K19** > **Computers** > **Options**. The **Options** window opens.
 1. Select **Automatic Approvals** to launch the **Automatic Approvals** configuration wizard. 
 1. In **Automatic Approvals** page, on the **Update Rules** tab, select **OK**.
 1. On the **Add Rule** page, is **Step 1**, select **When an update is in a specific classification** and **When an update is in a specific product**.
-1. In **Choose Products**, scroll to **Forefront**, and then select **Forefront Client Security**.  Scroll to **Windows**, and then select **Microsoft Defender Antivirus**, and then select **OK**. The workflow returns you to the **Add Rule** page.
+1. In **Choose Products**, scroll to **Forefront**, and then select **Forefront Client Security**. Scroll to **Windows**, and then select **Microsoft Defender Antivirus**, and then select **OK**. The workflow returns you to the **Add Rule** page.
 1. On the **Add Rule** page, in **Step 1: Select Properties**, ensure the following are selected:
    - **When an update is in a specific classification**
    - **When an updates is in a specific product**
@@ -176,7 +173,7 @@ The Windows Server Update Services Configuration Wizard is complete.
 
 1. On your Group Policy management computer, open the **Group Policy Management Console**, right-click the _Group Policy Object_ you want to configure and select **Edit**.
 
-1. In the **Group Policy Management Editor** go to **Computer configuration**, select **Policies**, then select **Administrative templates**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration**, select **Policies**, then select **Administrative templates**.
 
 1. Expand the tree to **Windows components** > **Windows Defender** > **Signature updates**.
 
@@ -193,3 +190,4 @@ For more information, see [Manage how and where Microsoft Defender Antivirus rec
 [Microsoft Defender Antivirus ring deployment](microsoft-defender-antivirus-ring-deployment.md)
 
 [Microsoft Defender Antivirus production ring deployment using Group Policy and Windows Server Update Services](microsoft-defender-antivirus-production-ring-deployment-group-policy-wsus.md)
+

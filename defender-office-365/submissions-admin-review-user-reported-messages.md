@@ -1,25 +1,23 @@
 ---
 title: Admin review for user reported messages
-f1.keywords:
-- NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-audience: Admin
+ms.author: chrisda
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.collection:
   - m365-security
   - tier2
 ms.custom:
+  - msecd-doc-authoring-1016
+  - sfi-ga-nochange
 description: Admins can learn how to review messages that were reported by users and give them feedback.
 ms.service: defender-office-365
-search.appverid: met150
-ms.date: 4/26/2024
+ms.date: 07/30/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Admin review for user reported messages
@@ -28,21 +26,30 @@ appliesto:
 
 In Microsoft 365 organizations with Exchange Online mailboxes and Microsoft Defender for Office 365, admins can send templated result messages back to users after they review the user reported messages. Admins can customize the notification message template that's used for the organization.
 
+> [!TIP]
+> In organizations with Defender for Office 365 Plan 2 and Security Copilot, the [Phishing Triage Agent](/defender-xdr/phishing-triage-agent) can autonomously triage and classify user-reported phishing emails, reducing manual review work for security teams.
+
 The feature is designed to give feedback to users without changing the message verdicts in the system. To help Microsoft update and improve its filters, admins need to [submit user reported messages to Microsoft for analysis](submissions-admin.md#submit-user-reported-messages-to-microsoft-for-analysis) when the user reported settings are configured to send user reported messages to the reporting mailbox only. For more information, see [User reported settings](submissions-user-reported-messages-custom-mailbox.md).
 
 Admins can mark messages and notify users of review results only if the user [reported the message as a false positive or a false negative](submissions-outlook-report-messages.md).
 
 ## What do you need to know before you begin?
 
+Before you begin, review the following requirements and access details:
+
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>. To go directly to the **User reported settings** page, use <https://security.microsoft.com/securitysettings/userSubmission>.
 
-- If the [User reported settings](submissions-user-reported-messages-custom-mailbox.md) in the organization send user reported messages (email and [Microsoft Teams](submissions-teams.md)) to Microsoft (exclusively or in addition to the reporting mailbox), we do the same checks as when admins submit messages to Microsoft for analysis from the **Submissions** page:
+- If the [User reported settings](submissions-user-reported-messages-custom-mailbox.md) in the organization send user reported messages (email and [Microsoft Teams](submissions-teams.md)) to Microsoft (exclusively or in addition to the reporting mailbox), Microsoft Defender for Office 365 does the same checks as when admins submit messages to Microsoft for analysis from the **Submissions** page:
   - **Email authentication check** (email messages only): Whether email authentication passed or failed when it was delivered.
-  - **Policy hits**: Information about any policies or overrides that might have allowed or blocked the incoming email into the organization, thus overriding our filtering verdicts.
+  - **Policy hits**: Information about any policies or overrides that might have allowed or blocked the incoming email into the organization, thus overriding filtering verdicts.
   - **Payload reputation/detonation**: Up-to-date examination of any URLs and attachments in the message.
   - **Grader analysis**: Review done by human graders to confirm whether or not messages are malicious.
 
-  So, submitting or resubmitting messages to Microsoft is useful to admins only for messages that have never been submitted to Microsoft, or when you disagree with the original verdict.
+  For more information, see [How submissions are processed behind the scenes](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/how-your-submissions-to-defender-for-office-365-are-processed-behind-the-scenes/4231551).
+
+  Unless you disagree with the original verdict, submitting a user reported message that was already sent to Microsoft isn't useful.
+
+  If user reported messages are sent only to the reporting mailbox, admins should submit these messages to Microsoft.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/System settings/manage** or **Authorization and settings/System settings/Read-only**.
@@ -51,22 +58,20 @@ Admins can mark messages and notify users of review results only if the user [re
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, or **Global Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
-- You need access to Exchange Online PowerShell. If your account doesn't have access to Exchange Online PowerShell, you get the following error: _Specify an email address in your domain_. For more information about enabling or disabling access to Exchange Online PowerShell, see the following articles:
-  - [Enable or disable access to Exchange Online PowerShell](/powershell/exchange/disable-access-to-exchange-online-powershell)
-  - [Client Access Rules in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/client-access-rules/client-access-rules) ([until October 2023](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-client-access-rules-in-exchange-online/ba-p/3638563))
+- You need access to Exchange Online PowerShell. If your account doesn't have access to Exchange Online PowerShell, you get the following error: _Specify an email address in your domain_. For more information about enabling or disabling access to Exchange Online PowerShell, see [Enable or disable access to Exchange Online PowerShell](/powershell/exchange/disable-access-to-exchange-online-powershell).
 
 ## Notify users from within the portal
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to the **Submissions** page at **Email & collaboration** \> **Submissions**. Or, to go directly to the **Submissions** tab, use <https://security.microsoft.com/reportsubmission>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to the **Submissions** page at **Actions & Submissions** \> **Submissions**. Or, to go directly to the **Submissions** tab, use <https://security.microsoft.com/reportsubmission>.
 
 2. On the **Submissions** page, select the **User reported** tab.
 
 3. On the **User reported** tab, select the user reported message by using either of the following methods:
 
-   - Select the message from the list by selecting the check box next to the first column, and then select :::image type="icon" source="media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify**.
-   - Select the message from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select :::image type="icon" source="media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify** or :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify**.
+   - Select the message from the list by selecting the check box next to the first column, and then select :::image type="icon" source="media/defender-portal-icon-mark-and-notify.png" border="false"::: **Mark as and notify**.
+   - Select the message from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select :::image type="icon" source="media/defender-portal-icon-mark-and-notify.png" border="false"::: **Mark as and notify** or :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** \> :::image type="icon" source="media/defender-portal-icon-mark-and-notify.png" border="false"::: **Mark as and notify**.
 
 4. In the **Mark as and notify** dropdown list, select one of the following values:
 
@@ -81,9 +86,16 @@ Admins can mark messages and notify users of review results only if the user [re
 
 The reported message is marked with the selected verdict, and an email message is automatically sent to notify the user who reported the message.
 
-To customize the notification email, see the next section.
+When automatic notifications use the default template, users receive notification emails in their preferred language based on their Outlook language settings. Localized default templates are enabled automatically when automatic notifications are turned on. Localized templates don't change message verdicts, classification logic, or automated investigation behavior.
+
+To customize the notification email, see [Customize the messages used to notify users](#customize-the-messages-used-to-notify-users).
+
+> [!NOTE]
+> The feature doesn't affect custom notification templates configured by admins.
 
 ## Customize the messages used to notify users
+
+Use the following steps to customize the notification messages that are sent to users after an admin review:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to the **User reported** page at **Settings** \> **Email & collaboration** \> **User reported settings** tab. Or, to go directly to the **User reported settings** page, use <https://security.microsoft.com/securitysettings/userSubmission>.
 
@@ -101,6 +113,6 @@ To customize the notification email, see the next section.
 
    - **Customize sender and branding** section:
      - **Specify a Microsoft 365 mailbox to use ads the From address of email notifications**: Select this option and enter the sender's email address in the box that appears. If you don't select this option, the default sender is `submissions@messaging.microsoft.com`.
-     - **Replace the Microsoft logo with my organization's logo across all reporting experiences**: Select this option to replace the default Microsoft logo that's used in notifications. Before you do this step, follow the instructions in [Customize the Microsoft 365 theme for your organization](/microsoft-365/admin/setup/customize-your-organization-theme) to upload your custom logo.
+     - **Replace the Microsoft logo with my organization's logo across all reporting experiences**: Select this option to replace the default Microsoft logo that's used in notifications. Before you select this option, follow the instructions in [Customize the Microsoft 365 theme for your organization](/microsoft-365/admin/setup/customize-your-organization-theme) to upload your custom logo.
 
 4. When you're finished on the **User reported settings** page, select **Save**.

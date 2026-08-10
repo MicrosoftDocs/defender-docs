@@ -1,37 +1,38 @@
 ---
 title:  Provide feedback on the Microsoft Defender for Endpoint Client Analyzer tool
-description: Provide feedback on the Microsoft Defender for Endpoint client analyzer tool
+description: Learn how to submit feedback or suggestions for the Microsoft Defender for Endpoint Client Analyzer through the Defender portal or the centralized feedback platform.
 ms.service: defender-endpoint
-f1.keywords:
-- NOCSH
-ms.author: ewalsh
-author: emmwalshh
+ms.author: chrisda
+author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: ngp
-search.appverid: met150
-ms.date: 02/15/2024
+appliesto:
+   - Microsoft Defender for Endpoint Plan 1
+   - Microsoft Defender for Endpoint Plan 2
+ms.date: 07/02/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Provide feedback on the Microsoft Defender for Endpoint client analyzer tool
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+## Submit feedback for the client analyzer
 
 If you have feedback or suggestions that would help us improve the Microsoft Defender for Endpoint client analyzer, use either of these options to submit feedback:
 
-1. Microsoft Defender portal (security.microsoft.com):
+- In the Microsoft Defender portal at <https://security.microsoft.com>, select **Feedback** at the top of the page, and then fill out the information in the **Submit feedback to Microsoft** flyout that opens:
 
-:::image type="content" source="media/3e2db5015cd4f47436b4765b2303f4f5.png" alt-text="The smiley feedback icon" lightbox="media/3e2db5015cd4f47436b4765b2303f4f5.png":::
+  :::image type="content" source="media/defender-portal-feedback.png" alt-text="Screenshot of the Feedback icon at the top of the Microsoft Defender portal." lightbox="media/defender-portal-feedback.png":::
 
-2. Microsoft Defender portal (security.microsoft.com):
+  :::image type="content" source="media/defender-portal-submit-feedback.png" alt-text="Screenshot of the Submit feedback to Microsoft flyout in the Microsoft Defender portal." lightbox="media/defender-portal-submit-feedback.png":::
 
-:::image type="content" source="media/1d5b3c010b4b5c0e9d5eb43f71fa95e3.png" alt-text="The Give feedback button" lightbox="media/1d5b3c010b4b5c0e9d5eb43f71fa95e3.png":::
+- Select **Send feedback** on the centralized feedback platform for Microsoft Defender XDR and related services at <https://aka.ms/M365Defender/Feedback> and fill out the information in the **Post public feedback** page that opens:
+
+  :::image type="content" source="media/defender-feedback.png" alt-text="Screenshot of the Post public feedback page from the Microsoft Defender XDR feedback page." lightbox="media/defender-feedback.png":::
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

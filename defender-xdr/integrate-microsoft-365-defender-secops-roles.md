@@ -1,22 +1,17 @@
 ---
 title: Step 4. Define Microsoft Defender XDR roles, responsibilities, and oversight
-description: The basics of defining roles, responsibilities, and oversight when integrating Microsoft Defender XDR into your security operations.
+description: Establish ownership, accountability, and SOC team oversight for Microsoft Defender XDR licenses, configurations, and administration as part of your security operations integration.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
   - msftsolution-secops
   - tier2
-ms.topic: conceptual
-search.appverid: 
-  - MOE150
-  - MET150
-ms.date: 07/15/2021
+ms.topic: how-to
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Step 4. Define Microsoft Defender XDR roles, responsibilities, and oversight
@@ -26,7 +21,9 @@ ms.date: 07/15/2021
 **Applies to:**
 - Microsoft Defender XDR
 
-Your organization must establish ownership and accountability of the Microsoft Defender XDR licenses, configurations, and administration as initial tasks before any operational roles can be defined. Typically, the ownership of the licenses, subscription costs, and administration of Microsoft 365 and Enterprise Security + Mobility (EMS) services (which may include Microsoft Defender XDR) fall outside the Security Operations Center (SOC) teams. SOC teams should work with those individuals to ensure proper oversight of Microsoft Defender XDR. 
+This article maps Security Operations Center (SOC) team roles and responsibilities to Microsoft Defender XDR tasks so you can integrate the service into your existing security operations structure.
+
+Your organization must establish ownership and accountability of the Microsoft Defender XDR licenses, configurations, and administration as initial tasks before any operational roles can be defined. Typically, the ownership of the licenses, subscription costs, and administration of Microsoft 365 and Enterprise Security + Mobility (EMS) services (which may include Microsoft Defender XDR) fall outside the SOC teams. SOC teams should work with those individuals to ensure proper oversight of Microsoft Defender XDR.
 
 Many modern SOCs assign its team members to categories based on their skillsets and functions. For example:
 
@@ -50,5 +47,5 @@ The following table breaks out each SOC team's roles and responsibilities and ho
 
 ## Next step
 
-[Step 5. Develop and test use cases](integrate-microsoft-365-defender-secops-use-cases.md)
+Continue with [Develop and test use cases](integrate-microsoft-365-defender-secops-use-cases.md).
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

@@ -1,0 +1,53 @@
+---
+title: Resolve agentless scan errors for GCP VMs in Microsoft Defender for Cloud
+description: Troubleshoot missing agentless scan results for GCP VMs in Microsoft Defender for Cloud when the Compute Storage resource use restrictions policy blocks access to required disk, image, or snapshot resources.
+ms.date: 07/03/2026
+ms.topic: how-to
+ms.custom: msecd-doc-authoring-1013
+#customer intent: As a security professional, I want to resolve the disk scan errors in Microsoft Defender for Cloud's GCP connector to ensure my resources are connected and protected.
+ai-usage: ai-assisted
+---
+
+# Resolve agentless scan error
+
+After you connect your Google Cloud Platform (GCP) project to Microsoft Defender for Cloud, Defender for Cloud uses agentless machine scanning to identify vulnerabilities in your virtual machines (VMs). Defender for Cloud then provides security recommendations and alerts, along with guidance for remediation.
+
+If no agentless scan results appear within 24 hours after you connect your GCP project, it’s possible that the GCP organizational policy `Compute Storage resource use restrictions (Compute Engine disks, images, and snapshots)` is preventing Defender for Cloud from accessing the necessary resources.
+
+This article explains how to identify and resolve this issue so Defender for Cloud can successfully scan your VMs.
+
+## Prerequisites
+
+- You must have a [GCP project onboarded to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
+
+- Access to a GCP project.
+
+- Contributor level permission for the relevant Azure subscription.
+
+## Manage your organization's policies
+
+By configuring your organization policies, you can control the resources that Defender for Cloud can access in your GCP project.
+
+1. Sign in to your GCP project.
+
+1. Navigate to **your organization** > **relevant GCP project**.
+
+1. Navigate to **IAM & Admin** > **Organization Policies**
+
+1. Search for the `Compute Storage resource use restrictions (Compute Engine disks, images, and snapshots)` policy.
+
+1. Select **Manage policy**.
+
+1. Change the policy type to **Allow**.
+
+1. In the allowlist, add `under:organizations/517615557103`.
+
+1. Select **Save**.
+
+Defender for Cloud triggers agentless disk scanning with API calls. You'll know this policy change worked after the next scheduled scan API call, which can take up to 24 hours.
+
+<a name="next-step"></a>
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Common GCP questions](faq-general.yml)

@@ -42,6 +42,10 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "author": "deblanger",
+      "ms.author": "dlanger",
+      "manager": "orspodek",
+      "ms.service": "exposure-management",
       "breadcrumb_path": "/security-exposure-management/breadcrumb/toc.json",
       "permissioned-type": "public",
       "feedback_system": "Standard",
@@ -61,7 +65,10 @@
         "garycentric",
         "dstrome",
         "alekyaj",
-        "beccarobins"
+        "beccarobins",
+        "padmagit77",
+        "aditisrivastava07",
+        "Ruchika-mittal01"
       ]
 
     },

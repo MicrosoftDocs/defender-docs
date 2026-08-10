@@ -2,21 +2,16 @@
 title: Step 1. Plan for Microsoft Defender XDR operations readiness
 description: The basics of planning for Microsoft Defender XDR operations readiness when integrating Microsoft Defender XDR into your security operations.
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
   - msftsolution-secops
   - tier2
-ms.topic: conceptual
-search.appverid:
-  - MOE150
-  - MET150
-ms.date: 07/15/2021
+ms.topic: how-to
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Step 1. Plan for Microsoft Defender XDR operations readiness
@@ -44,9 +39,9 @@ Usually, the SOC team's core function is to make sure all security devices such 
 
 ## Establish Red, Blue, and Purple team operational readiness
 
-Every SOC team should test its preparedness in responding to a cyber incident. Testing can be done via training exercises, such as table-tops and practice runs with various individuals in IT, security, and at the business level. Individual training exercise teams are created based on representative roles and are either playing the role of a defender (Blue Team), an attacker (Red Team), or as observers seeking to improve methods and techniques of both the Blue and Red teams through strengths and weakness that is uncovered during the exercise (Purple Team).
+Every SOC team should test its preparedness in responding to a cyber incident. Testing can be done via training exercises, such as table-tops and practice runs with various individuals in IT, security, and at the business level. Individual training exercise teams are created based on representative roles. Each team plays a specific role: a defender (Blue Team), an attacker (Red Team), or an observer (Purple Team). The Purple Team seeks to improve the methods of both the Blue and Red teams by reviewing strengths and weaknesses uncovered during the exercise.
 
 ## Next step
 
-[Step 2. Perform a SOC integration readiness assessment using the Zero Trust Framework](integrate-microsoft-365-defender-secops-readiness.md)
+As the next step in this series, [Perform a SOC integration readiness assessment using the Zero Trust Framework](integrate-microsoft-365-defender-secops-readiness.md).
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

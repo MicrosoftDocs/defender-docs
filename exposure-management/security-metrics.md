@@ -1,16 +1,15 @@
 ---
-title: Investigate security metrics in Microsoft Security Exposure Management
+title: Review security metrics in Microsoft Security Exposure Management
 description: Learn how to investigate metrics in Microsoft Security Exposure Management.
+ms.topic: overview
 ms.author: dlanger
 author: dlanger
-manager: rayne-wiselman
-ms.topic: overview
-ms.service: exposure-management
 ms.date: 11/18/2024
+ms.custom: sfi-image-nochange
 
 ---
 
-# Investigate security initiative metrics
+# Review security metrics
 
 Security initiative metrics in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) measure security exposure for a specific scope of assets or resources within a [security initiative](exposure-insights-overview.md). Most security initiatives (but not all) have metrics associated with them.
 

@@ -1,11 +1,11 @@
 ---
-title: Microsoft Defender XDR tech community
-description: Microsoft Defender XDR tech community engagement.
+title: Microsoft Defender tech community
+description: Microsoft Defender tech community engagement.
 ms.date: 07/21/2023
 ms.reviewer: 
-manager: dansimp
-ms.author: dansimp
-author: dansimp
+manager: orspodek
+ms.author: guywild
+author: guywi-ms
 ms.service: microsoft-365-security
 ms.topic: include
 ---

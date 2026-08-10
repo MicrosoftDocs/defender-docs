@@ -2,50 +2,47 @@
 title: How to schedule scans with Microsoft Defender for Endpoint on macOS
 description: Learn how to schedule an automatic scanning time for Microsoft Defender for Endpoint in macOS to better protect your organization's assets.
 ms.service: defender-endpoint
-author: emmwalshh
-ms.author: ewalsh
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
-manager: deniseb
 ms.localizationpriority: medium
-ms.date: 10/23/2024
-audience: ITPro
+ms.date: 07/02/2026
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: macos
-search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 
+ai-usage: ai-assisted
+---
 # Schedule scans with Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+This article explains how to configure scheduled scans in Microsoft Defender for Endpoint on macOS using the built-in scheduled scan settings, plist configuration profiles, or the mdatp command-line tool. Review the prerequisites before you begin.
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
-
-## Schedule a scan built into Microsoft Defender for Endpoint on macOS
+<a name="schedule-a-scan-built-into-microsoft-defender-for-endpoint-on-macos"></a>
+## Use the built-in scheduled scan settings in Microsoft Defender for Endpoint on macOS
 
 While you can start a threat scan at any time with Microsoft Defender for Endpoint, your enterprise might benefit from scheduled or timed scans. For example, you can schedule a scan to run at the beginning of every workday or week. 
 
-There are three types of scheduled scans that are configurable: hourly, daily, and weekly scans. Hourly and daily scheduled scans are always run as quick scans, weekly scans can be configured to be either quick or full scans. It's possible to have all three types of scheduled scans at the same time. See the samples in this article. 
+There are three types of scheduled scans that are configurable: hourly, daily, and weekly scans. Hourly and daily scheduled scans are always run as quick scans, weekly scans can be configured to be either quick or full scans. It's possible to have all three types of scheduled scans at the same time. See the [daily and weekly scan example](#example-1-schedule-a-daily-quick-scan-and-weekly-full-scan-using-a-plist) and the [hourly, daily, and weekly scan example](#example-2-schedule-an-hourly-quick-scan-a-daily-quick-scan-and-weekly-full-scan-using-a-plist). 
 
 **Prerequisites**:
 
-- Platform Update version: [101.23122.0005](mac-whatsnew.md#jan-2024-build-101231220005---release-version-2012312250) or newer
+- Platform Update version: 101.23122.0005 or newer.
 
-## Schedule a scan with Microsoft Defender for Endpoint on macOS
+<a name="schedule-a-scan-with-microsoft-defender-for-endpoint-on-macos"></a>
+## Schedule scans by deploying a plist in Microsoft Defender for Endpoint on macOS
 
 You can create a scheduled scan for your macOS, which is built in to *Microsoft Defender for Endpoint on macOS*.
 
-For more information on the `.plist` file format used here, see [About Information Property List Files](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) at the official Apple developer website.
+For more information on the `.plist` file format used in these examples, see the [Apple Information Property List file reference](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html), which describes the XML key-value structure used to define configuration profiles on macOS.
 
-The following sample shows the daily and/or weekly configuration for the scheduled scan on macOS.
+The daily and weekly scheduled scan plist configuration for macOS uses the parameters described in the following table.
 
 > [!TIP] 
 > Schedules are based on the local time zone of the device.
@@ -67,11 +64,13 @@ Your scheduled scan runs at the date, time, and frequency you defined in your `p
 
 In the following example, the daily quick scan configuration is set to run at 885 minutes after midnight (2:45 p.m.). The weekly configuration is set to run a full scan on Wednesday at 880 minutes after midnight (2:40 p.m.). And it's set to ignore exclusions and run a low-priority scan.
 
-The following code shows the schema you need to use to schedule scans according to the requirements mentioned earlier.
+Use the plist schema shown here to configure a daily quick scan and a weekly full scan with the scheduled scan parameters described in the [scheduled scan parameter table](#schedule-scans-by-deploying-a-plist-in-microsoft-defender-for-endpoint-on-macos) in this article.
 
-1. Open a text editor and use this example as a guide for your own scheduled scan file.
+Open a text editor and use the [Intune mobileconfig](#for-intune) and [JamF plist](#for-jamf-and-other-third-party-mdms) examples that follow as a guide for your own scheduled scan file.
 
 #### For Intune
+
+The following mobileconfig plist sample defines a complete Intune configuration profile that enables scheduled scanning with a daily quick scan and a weekly full scan.
 
 ``` XML
 <?xml version="1.0" encoding="UTF-8"?> 
@@ -149,9 +148,11 @@ The following code shows the schema you need to use to schedule scans according 
 </plist>
 ```
 
-2. Save the file as `com.microsoft.wdav.mobileconfig`.
+- Save the file as `com.microsoft.wdav.mobileconfig`.
 
-#### For JamF and other 3rd-party MDMs
+#### For JamF and other third-party MDMs
+
+The following plist sample configures the same daily quick scan and weekly full scan settings for JamF and other third-party MDM solutions. Save this content as `com.microsoft.wdav.plist`.
 
 ``` XML
 <?xml version="1.0" encoding="UTF-8"?> 
@@ -188,21 +189,26 @@ The following code shows the schema you need to use to schedule scans according 
 </plist> 
 ```
 
-2. Save the file as `com.microsoft.wdav.plist`.
+1. Save the file as `com.microsoft.wdav.plist`.
 
-3. Check that the scheduled scan is configured via a "Set Preference"
+1. Check that the scheduled scan is configured via a "Set Preference"
      
      ```
      mdatp health --details scheduled_scan
      ```
 
-     In the results, you should be able to see [managed].
+In the results, you should be able to see [managed].
 
 ### Example 2: Schedule an hourly quick scan, a daily quick scan, and weekly full scan using a plist
 
-In the following example, an hourly quick scan will run every 6 hours, a daily quick scan configuration is set to run at 885 minutes after midnight (2:45 p.m.), and a weekly full scan will run on Wednesdays at 880 minutes after midnight (2:40 p.m).
+In this hourly, daily, and weekly scheduled scan example, an hourly quick scan runs every 6 hours, a daily quick scan is set to run at 885 minutes after midnight (2:45 p.m.), and a weekly full scan runs on Wednesdays at 880 minutes after midnight (2:40 p.m.).
+
+Open a text editor and use the [Intune mobileconfig](#for-intune-1) and [JamF plist](#for-jamf-and-other-third-party-mdms-1) examples that follow as a guide for your own scheduled scan file.
 
 #### For Intune:
+
+The following mobileconfig plist sample packages the hourly, daily, and weekly Defender scheduled scan settings into a complete Intune configuration profile. Use this sample to deploy the scheduled scan configuration through Intune.
+
 ```XML
 <?xml version="1.0" encoding="UTF-8"?> 
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"> 
@@ -281,62 +287,79 @@ In the following example, an hourly quick scan will run every 6 hours, a daily q
 </plist> 
 ```
 
-2. Save the file as `com.microsoft.wdav.mobileconfig`.
+- Save the file as `com.microsoft.wdav.mobileconfig`.
 
-#### For JamF and other 3rd-party MDMs
+#### For JamF and other third-party MDMs
 
-1. Open a text editor and use this example.
+The following plist sample configures the same hourly, daily, and weekly scheduled scan settings for JamF and other third-party MDM solutions. Save this content as `com.microsoft.wdav.plist`.
 
 ```XML
-<?xml version="1.0" encoding="UTF-8"?> 
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"> 
-<plist version="1.0"> 
-<dict> 
-    <key>features</key> 
+    <?xml version="1.0" encoding="UTF-8"?> 
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.  dtd"> 
+    <plist version="1.0"> 
     <dict> 
-        <key>scheduledScan</key> 
-        <string>enabled</string> 
-    </dict> 
-<key>scheduledScan</key> 
-<dict> 
-    <key>ignoreExclusions</key> 
-    <true/> 
-    <key>lowPriorityScheduledScan</key> 
-    <true/> 
-    <key>dailyConfiguration</key> 
-    <dict> 
-        <key>timeOfDay</key> 
-        <integer>885</integer> 
-        <key>interval</key> 
-        <string>1</string> 
-    </dict> 
-    <key>weeklyConfiguration</key> 
-    <dict> 
-        <key>dayOfWeek</key> 
-        <integer>4</integer> 
-        <key>timeOfDay</key> 
-        <integer>880</integer> 
-        <key>scanType</key> 
-        <string>full</string> 
+        <key>features</key> 
+        <dict> 
+            <key>scheduledScan</key> 
+            <string>enabled</string> 
         </dict> 
+    <key>scheduledScan</key> 
+    <dict> 
+        <key>ignoreExclusions</key> 
+        <true/> 
+        <key>lowPriorityScheduledScan</key> 
+        <true/> 
+        <key>dailyConfiguration</key> 
+        <dict> 
+            <key>timeOfDay</key> 
+            <integer>885</integer> 
+            <key>interval</key> 
+            <string>1</string> 
         </dict> 
-    </dict> 
-</plist> 
+        <key>weeklyConfiguration</key> 
+        <dict> 
+            <key>dayOfWeek</key> 
+            <integer>4</integer> 
+            <key>timeOfDay</key> 
+            <integer>880</integer> 
+            <key>scanType</key> 
+            <string>full</string> 
+            </dict> 
+            </dict> 
+        </dict> 
+    </plist> 
 ```
 
-2. Save the file as `com.microsoft.wdav.plist`.
+1. Save the file as `com.microsoft.wdav.plist`.
 
-3. Check that the scheduled scan is configured via a "Set Preference"
+### Upload the plist file to Jamf Pro
+
+Use these steps to upload either of the JamF plist examples from [Example 1](#example-1-schedule-a-daily-quick-scan-and-weekly-full-scan-using-a-plist) or [Example 2](#example-2-schedule-an-hourly-quick-scan-a-daily-quick-scan-and-weekly-full-scan-using-a-plist) to Jamf Pro:
+
+1. Go to **Computers > Configuration Profiles.**
+
+1. Create a new profile.
+
+1. Add **Application & Custom Settings.**
+
+1. Set the **Preference Domain** to `com.microsoft.wdav`.
+
+1. Paste the contents of the `.plist` file into the configuration field.
+
+1. Check that the scheduled scan is configured via a "Set Preference"
      
-     ```
-     mdatp health --details scheduled_scan
-     ```
+    ```
+    mdatp health --details scheduled_scan
+    ```
 
      In the results, you should be able to see [managed].
 
-### Option 3: Configure scheduled scans through CLI tool
+<a name="option-3-configure-scheduled-scans-through-cli-tool"></a>
+### Configure scheduled scans using the mdatp CLI
 
-To enable scheduled scan feature:
+The Microsoft Defender for Endpoint command-line tool (`mdatp`) provides commands to configure scheduled scans directly from the terminal.
+
+To enable the scheduled scan feature:
 
 |Version|Command|
 |---|---|
@@ -366,7 +389,7 @@ To schedule weekly scans:
 
 :::image type="content" source="media/schedule-scans-mac/schedule-scan-pic3.png" alt-text="Screenshot of schedule weekly scan.":::
 
-For other configuration options:
+You can also configure definition updates and low-priority threading for scheduled scans:
 
 - To check for definitions update before scheduled scans:
 
@@ -377,17 +400,13 @@ For other configuration options:
   `sudo mdatp config scheduled-scan settings low-priority --value true`
 
 ### Check that the scheduled scan ran
-Use the following command:
 
-`mdatp scan list`
+To list completed scheduled scans and their results, run `mdatp scan list`:
 
 :::image type="content" source="media/schedule-scans-mac/schedule-scan-pic4.png" alt-text="Screenshot of schedule ran.":::`\<snip\>`
 
 :::image type="content" source="media/schedule-scans-mac/schedule-scan-pic5.png" alt-text="Screenshot of schedule ran successfully.":::  
 
 > [!IMPORTANT]
-> Scheduled scans do not run at the scheduled time while the device is asleep. Instead, scheduled scans run when the device resumes from sleep mode.
+> Scheduled scans don't run at the scheduled time while the device is asleep. Instead, scheduled scans run when the device resumes from sleep mode.
 > If the device is turned off, the scan runs at the next scheduled scan time.
-
-> [!TIP]
-> Do you want to learn more? Engage with the Microsoft Security community in our Tech Community: [**Microsoft Defender for Endpoint Tech Community**](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/bd-p/MicrosoftDefenderATP).

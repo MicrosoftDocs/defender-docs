@@ -1,26 +1,26 @@
 ---
 title: Create custom Microsoft Defender XDR reports using Microsoft Graph security API and Power BI
-description: How to create custom Microsoft Defender XDR reports using Microsoft Graph security API and Power BI.
+description: Build custom Microsoft Defender XDR reports in Power BI by using Microsoft Graph security API data. Learn how to import, filter, and parameterize security data to create a SOC efficiency dashboard.
 ms.service: defender-xdr
 ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: medium
-author: dansimp
-ms.author: dansimp
-ms.date: 01/03/2023
-manager: dansimp
-ms.topic: conceptual
+author: poliveria
+ms.author: pauloliveria
+ms.date: 06/16/2026
+ms.topic: how-to
 ms.collection:
 - m365-security
 - tier2
-search.appverid: met150
+appliesto:
+- Microsoft Defender XDR
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
+#customer intent: As a SOC analyst, I want to know how to create custom reports using Microsoft Graph security API and Power BI so that I can visualize my data and make informed decisions.
 ---
 # Create custom Microsoft Defender XDR reports using Microsoft Graph security API and Power BI
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender XDR](microsoft-365-defender.md)
 
 Empowering security professionals to visualize their data enables them to quickly recognize complex patterns, anomalies, and trends that might otherwise be lurking underneath the noise. With visualizations, SOC teams can rapidly identify threats, make informed decisions, and communicate insights effectively across the organization.
 
@@ -31,20 +31,20 @@ There are multiple ways to visualize Microsoft Defender security data:
 - Applying the render function in Advanced Hunting.
 - Using Power BI to expand existing reporting capabilities.
 
-In this article, we create a sample Security Operations Center (SOC) efficiency dashboard in Power BI using Microsoft Graph security API. We access it in user context, therefore user must have [corresponding permissions](manage-rbac.md) to be able to view alerts and incidents data.
+In this article, we create a sample Security Operations Center (SOC) efficiency dashboard in Power BI using Microsoft Graph security API. We access the Microsoft Graph security API in user context, therefore the user must have [corresponding permissions](manage-rbac.md) to be able to view alerts and incidents data.
 
 > [!NOTE]
 > **Example below is based on our new MS Graph security API**. Find out more at: [Use the Microsoft Graph security API](/graph/api/resources/security-api-overview).
 
 ## Importing data into Power BI
 
-In this section, we go through the steps required to get Microsoft Defender XDR data into Power BI, using Alerts data as an example.
+The following steps show how to get Microsoft Defender alerts data into Power BI.
 
 1. Open Microsoft Power BI Desktop.
 2. Select **Get Data > Blank Query**.
 3. Select **Advanced Editor**.
 
-   :::image type="content" source="/defender/media/defender/power-bi/manage-parameters.png" alt-text="Screenshot that shows how to create a new data query in Power BI Desktop." lightbox="/defender/media/defender/power-bi/manage-parameters.png":::
+   :::image type="content" source="media/defender-xdr-custom-reports/manage-parameters.png" alt-text="Screenshot that shows how to create a new data query in Power BI Desktop." lightbox="media/defender-xdr-custom-reports/manage-parameters.png":::
 
 4. Paste in Query:
 
@@ -58,11 +58,11 @@ In this section, we go through the steps required to get Microsoft Defender XDR 
 5. Select **Done**.
 6. When you're prompted for credentials, select **Edit Credentials**:
 
-   :::image type="content" source="/defender/media/defender/power-bi/edit-credentials-api.png" alt-text="Screenshot of how to edit credentials for API connection." lightbox="/defender/media/defender/power-bi/edit-credentials-api.png":::
+   :::image type="content" source="media/defender-xdr-custom-reports/edit-credentials-api.png" alt-text="Screenshot of how to edit credentials for API connection." lightbox="media/defender-xdr-custom-reports/edit-credentials-api.png":::
 
 7. Select **Organizational account > Sign in**.
 
-    :::image type="content" source="/defender/media/defender/power-bi/sign-in-org-account.png" alt-text="Screenshot of the organizational account authentication window." lightbox="/defender/media/defender/power-bi/sign-in-org-account.png":::
+    :::image type="content" source="media/defender-xdr-custom-reports/sign-in-org-account.png" alt-text="Screenshot of the organizational account authentication window." lightbox="media/defender-xdr-custom-reports/sign-in-org-account.png":::
 
 8. Enter credentials for account with access to Microsoft Defender XDR incidents data.
 9. Select **Connect**.
@@ -72,9 +72,10 @@ Now the results of your query appear as a table, and you can start building visu
 > [!TIP]
 > If you are looking to visualize other forms of Microsoft Graph security data like Incidents, Advanced Hunting, Secure Score, etc., see [Microsoft Graph security API Overview](/graph/api/resources/security-api-overview).
 
-## Filtering data
+<a name="filtering-data"></a>
+## Filter Microsoft Defender XDR report data in Power BI
 
-Microsoft Graph API supports OData protocol so that users don't have to worry about pagination - or requesting the next set of data. However, filtering data is essential to improving load times in a busy environment.
+Microsoft Graph API supports the OData (Open Data Protocol) query protocol for filtering and pagination, so users don't have to worry about pagination - or requesting the next page of results. However, filtering data is essential to improving load times in a busy environment.
 
 Microsoft Graph API supports [query parameters](/graph/filter-query-parameter). Here are few examples of filters used in the report:
 
@@ -100,7 +101,7 @@ Microsoft Graph API supports [query parameters](/graph/filter-query-parameter). 
       Source
   ```
 
-- When historical data is required (for example, comparing the number of incidents per month), filtering by date isn't an option (since we want to go as far back as possible). In this case, we need to pull a few selected fields as shown in the following example:
+- When historical data is required (for example, comparing the number of incidents per month), filtering by date isn't an option (since we want to go as far back as possible). In this case, pull only selected fields such as id, title, severity, and createdDateTime:
 
   ```console
   let
@@ -110,7 +111,8 @@ Microsoft Graph API supports [query parameters](/graph/filter-query-parameter). 
       Source
   ```
 
-## Introducing parameters
+<a name="introducing-parameters"></a>
+## Create report parameters in Power BI
 
 Instead of constantly querying the code to adjust the timeframe, use parameters to set a Start and End Date each time you open the report.
 
@@ -120,7 +122,7 @@ Instead of constantly querying the code to adjust the timeframe, use parameters 
 
    In the following example, we use two different time frames, Start and End dates.
 
-   :::image type="content" source="/defender/media/defender/power-bi/manage-parameters.png" alt-text="Screenshot of how to manage Parameters in Power BI." lightbox="/defender/media/defender/power-bi/manage-parameters.png":::
+   :::image type="content" source="media/defender-xdr-custom-reports/manage-parameters.png" alt-text="Screenshot of how to manage Parameters in Power BI." lightbox="media/defender-xdr-custom-reports/manage-parameters.png":::
 
 4. Remove hardcoded values from the queries and make sure that StartDate and EndDate variable names correspond to parameter names:
 
@@ -131,19 +133,20 @@ Instead of constantly querying the code to adjust the timeframe, use parameters 
         Source
     ```
 
-## Reviewing the report
+<a name="reviewing-the-report"></a>
+## Review the custom Microsoft Defender XDR report
 
-Once the data has been queried and the parameters are set, now we can review the report. During the first launch of the PBIT report file, you're prompted to provide the parameters that we specified earlier:
+Once the data has been queried and the parameters are set, now we can review the report. During the first launch of the Power BI template (.pbit) file, you're prompted to provide the StartDate and EndDate parameters:
 
-:::image type="content" source="/defender/media/defender/power-bi/soc-overview-dashboard.png" alt-text="Screenshot of the Power BI template parameter prompt window." lightbox="/defender/media/defender/power-bi/soc-overview-dashboard.png":::
+:::image type="content" source="media/defender-xdr-custom-reports/soc-overview-dashboard.png" alt-text="Screenshot of the Power BI template parameter prompt window." lightbox="media/defender-xdr-custom-reports/soc-overview-dashboard.png":::
 
 The dashboard offers three tabs intended to provide SOC insights. The first tab provides a summary of all recent alerts (depending on the selected timeframe). This tab helps analysts clearly understand the security state over their environment using alert details broken down by detection source, severity, total number of alerts and mean-time-to-resolution.
 
-:::image type="content" source="/defender/media/defender/power-bi/alert-tab-powerbi.png" alt-text="Screenshot of the alerts tab of resulting Power BI report." lightbox="/defender/media/defender/power-bi/alert-tab-powerbi.png":::
+:::image type="content" source="media/defender-xdr-custom-reports/alert-tab-powerbi.png" alt-text="Screenshot of the alerts tab of resulting Power BI report." lightbox="media/defender-xdr-custom-reports/alert-tab-powerbi.png":::
 
-The second tab offers more insight into the attack data collected across the incidents and alerts. This view can provide analysts with greater perspective into the types of attacks executed and how they map to the MITRE ATT&CK framework.
+The second tab offers more insight into the attack data collected across the incidents and alerts. This view can provide analysts with greater perspective into the types of attacks executed and how they map to the [MITRE ATT&CK framework](https://attack.mitre.org/), a knowledge base that categorizes adversary tactics and techniques.
 
-:::image type="content" source="/defender/media/defender/power-bi/insights-tab-powerbi.png" alt-text="Screenshot of the insights tab of resulting Power BI report." lightbox="/defender/media/defender/power-bi/insights-tab-powerbi.png":::
+:::image type="content" source="media/defender-xdr-custom-reports/insights-tab-powerbi.png" alt-text="Screenshot of the insights tab of resulting Power BI report." lightbox="media/defender-xdr-custom-reports/insights-tab-powerbi.png":::
 
 ## Power BI dashboard samples
 

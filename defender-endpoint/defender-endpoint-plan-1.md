@@ -1,19 +1,17 @@
 ---
 title: Overview of Microsoft Defender for Endpoint Plan 1
 description: Get an overview of Defender for Endpoint Plan 1. Learn about the features and capabilities included in this endpoint protection subscription.
-search.appverid: MET150 
-author: denisebmsft
-ms.author: deniseb
-manager: deniseb 
-audience: ITPro
+author: paulinbar
+ms.author: painbar
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
-ms.date: 11/30/2023
+ms.date: 07/28/2026
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
 ms.reviewer: shlomiakirav
-f1.keywords: NOCSH
-ms.collection: 
+ms.collection:
 - m365-security
 - tier1
 ms.custom: intro-overview
@@ -21,13 +19,9 @@ ms.custom: intro-overview
 
 # Overview of Microsoft Defender for Endpoint Plan 1
 
-**Applies to**
+Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help organizations to prevent, detect, investigate, and respond to advanced threats. Defender for Endpoint is now available in two plans:
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-
-Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help organizations like yours to prevent, detect, investigate, and respond to advanced threats. We are pleased to announce that Defender for Endpoint is now available in two plans: 
-
-- **Defender for Endpoint Plan 1**, described in this article; and 
+- **Defender for Endpoint Plan 1**, described in this article; and
 - **[Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)**, generally available, and formerly known as [Defender for Endpoint](microsoft-defender-endpoint.md).
 
 The green boxes in the following image depict what's included in Defender for Endpoint Plan 1:
@@ -41,6 +35,8 @@ Use this guide to:
 - [Get started using the Microsoft Defender portal, where you can view incidents and alerts, manage devices, and use reports about detected threats](mde-plan1-getting-started.md)
 - [Get an overview of maintenance and operations](preferences-setup.md)
 
+For minimum requirements for Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint requirements](minimum-requirements.md).
+
 ## Defender for Endpoint Plan 1 capabilities
 
 Defender for Endpoint Plan 1 includes the following capabilities:
@@ -49,17 +45,16 @@ Defender for Endpoint Plan 1 includes the following capabilities:
 - **[Manual response actions](#manual-response-actions)**, such as sending a file to quarantine, that your security team can take on devices or files when threats are detected
 - **[Attack surface reduction capabilities](#attack-surface-reduction)** that harden devices, prevent zero-day attacks, and offer granular control over endpoint access and behaviors
 - **[Centralized configuration and management](#centralized-management)** with the Microsoft Defender portal and integration with Microsoft Intune
-- **[Protection for a variety of platforms](#cross-platform-support)**, including Windows, macOS, iOS, and Android devices
 
-The following sections provide more details about these capabilities. 
+The following sections provide more details about these capabilities.
 
 ## Next-generation protection
 
-Next-generation protection includes robust antivirus and antimalware protection. With next-generation protection, you get: 
+Next-generation protection includes robust antivirus and antimalware protection. With next-generation protection, you get:
 
-- Behavior-based, heuristic, and real-time antivirus protection 
-- Cloud-delivered protection, which includes near-instant detection and blocking of new and emerging threats 
-- Dedicated protection and product updates, including updates related to Microsoft Defender Antivirus 
+- Behavior-based, heuristic, and real-time antivirus protection
+- Cloud-delivered protection, which includes near-instant detection and blocking of new and emerging threats
+- Dedicated protection and product updates, including updates related to Microsoft Defender Antivirus
 
 To learn more, see [Next-generation protection overview](next-generation-protection.md).
 
@@ -75,44 +70,38 @@ Manual response actions are actions that your security team can take when threat
 
 To learn more, see the following articles:
 
-- [Take response actions on devices](respond-machine-alerts.md) 
+- [Take response actions on devices](respond-machine-alerts.md)
 - [Take response actions on files](respond-file-alerts.md)
 
 ## Attack surface reduction
 
 Your organization's attack surfaces are all the places where you're vulnerable to cyberattacks. With Defender for Endpoint Plan 1, you can reduce your attack surfaces by protecting the devices and applications that your organization uses. The attack surface reduction capabilities that are included in Defender for Endpoint Plan 1 are described in the following sections.
 
-- [Attack surface reduction rules](#attack-surface-reduction-rules)
+- [Attack surface reduction (ASR) rules](#attack-surface-reduction-rules)
 - [Ransomware mitigation](#ransomware-mitigation)
 - [Device control](#device-control)
 - [Web protection](#web-protection)
-- [Network protection](#web-protection)
+- [Network protection](#network-protection)
 - [Network firewall](#network-firewall)
 - [Application control](#application-control)
 
-To learn more about attack surface reduction capabilities in Defender for Endpoint, see [Overview of attack surface reduction](overview-attack-surface-reduction.md).
+To learn more about attack surface reduction capabilities in Defender for Endpoint, see [Overview of attack surface reduction](attack-surface-reduction-overview.md).
 
 ### Attack surface reduction rules
 
-Attack surface reduction rules target certain software behaviors that are considered risky. Such behaviors include:
+Attack surface reduction (ASR) rules target risky software behavior, because software used by attackers exhibit similar behavior.
 
-- Launching executable files and scripts that attempt to download or run other files
-- Running obfuscated or otherwise suspicious scripts
-- Initiating behaviors that apps don't usually initiate during normal work
-
-Legitimate business applications can exhibit such software behaviors; however, these behaviors are often considered risky because they are commonly abused by attackers through malware. Attack surface reduction rules can constrain risky behaviors and help keep your organization safe.
-
-To learn more, see [Use attack surface reduction rules to prevent malware infection](attack-surface-reduction.md).
+To learn more, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
 
 ### Ransomware mitigation
 
-With controlled folder access, you get ransomware mitigation. Controlled folder access allows only trusted apps to access protected folders on your endpoints. Apps are added to the trusted apps list based on their prevalence and reputation. Your security operations team can add or remove apps from the trusted apps list, too.
+With controlled folder access (CFA), you get ransomware mitigation. Controlled folder access allows only trusted apps to access protected folders on your endpoints. Apps are added to the trusted apps list based on their prevalence and reputation. Your security operations team can add or remove apps from the trusted apps list, too.
 
-To learn more, see [Protect important folders with controlled folder access](controlled-folders.md).
+To learn more, see [Controlled folder access (CFA) overview](controlled-folder-access-overview.md).
 
 ### Device control
 
-Sometimes threats to your organization's devices come in the form of files on removable drives, such as USB drives. Defender for Endpoint includes capabilities to help prevent threats from unauthorized peripherals from compromising your devices. You can configure Defender for Endpoint to block or allow removable devices and files on removable devices. 
+Sometimes threats to your organization's devices come in the form of files on removable drives, such as USB drives. Defender for Endpoint includes capabilities to help prevent threats from unauthorized peripherals from compromising your devices. You can configure Defender for Endpoint to block or allow removable devices and files on removable devices.
 
 To learn more, see [Control USB devices and removable media](device-control-overview.md).
 
@@ -127,7 +116,7 @@ To learn more, see [web protection](web-protection-overview.md).
 
 ### Network protection
 
-With network protection, you can prevent your organization from accessing dangerous domains that might host phishing scams, exploits, and other malicious content on the Internet. 
+With network protection, you can prevent your organization from accessing dangerous domains that might host phishing scams, exploits, and other malicious content on the Internet.
 
 To learn more, see [Protect your network](network-protection.md).
 
@@ -155,50 +144,48 @@ To learn more, see [Microsoft Defender portal overview](/defender-xdr/microsoft-
 
 ### Role-based access control
 
-Using role-based access control (RBAC), your security administrator can create roles and groups to grant appropriate access to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). With RBAC, you have fine-grained control over who can access the Defender for Cloud, and what they can see and do. 
+Using role-based access control (RBAC), your security administrator can create roles and groups to grant appropriate access to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). With RBAC, you have fine-grained control over who can access the Defender for Cloud, and what they can see and do.
 
 To learn more, see [Manage portal access using role-based access control](rbac.md).
 
+> [!IMPORTANT]
+> Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
+> Existing customers keep their current roles and permissions. For more information, see URBAC [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac)
+
 ### Reporting
 
-The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) provides easy access to information about detected threats and actions to address those threats. 
+The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) provides easy access to information about detected threats and actions to address those threats.
 
 - The **Home** page includes cards to show at a glance which users or devices are at risk, how many threats were detected, and what alerts/incidents were created.
 - The **Incidents & alerts** section lists any incidents that were created as a result of triggered alerts. Alerts and incidents are generated as threats are detected across devices.
 - The **Action center** lists remediation actions that were taken. For example, if a file is sent to quarantine, or a URL is blocked, each action is listed in the Action center on the **History** tab.
-- The **Reports** section includes reports that show threats detected and their status. 
+- The **Reports** section includes reports that show threats detected and their status.
 
 To learn more, see [Get started with Microsoft Defender for Endpoint Plan 1](mde-plan1-getting-started.md).
 
 ### APIs
 
-With the Defender for Endpoint APIs, you can automate workflows and integrate with your organization's custom solutions. 
+With the Defender for Endpoint APIs, you can automate workflows and integrate with your organization's custom solutions.
 
-To learn more, see [Defender for Endpoint APIs](api/management-apis.md). 
+To learn more, see [Defender for Endpoint APIs](api/management-apis.md).
 
-## Cross-platform support
+## Licensing
 
-Most organizations use various devices and operating systems. Defender for Endpoint Plan 1 supports the following operating systems:
+Defender for Endpoint Plan 1 is available as a standalone subscription or as part of Microsoft 365 E3. For server deployments, you can license Defender for Endpoint Plan 1 for servers separately.
 
-- Windows 10 and 11
-- Windows 7 ([ESU required](/troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq)) Pro or Enterprise 
-- Windows 8.1 Pro, Enterprise, and Pro Education 
-- macOS (the three most recent releases are supported)
-- iOS
-- Android OS
-
-Servers require an additional license, such as:
-
-- **Microsoft Defender for Servers Plan 1 or Plan 2** (*recommended for enterprise customers*) as part of the [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) offering. To learn more. see [Overview of Microsoft Defender for Servers](/azure/defender-for-cloud/defender-for-servers-introduction).
-- **Microsoft Defender for Endpoint Server** (*recommended for enterprise customers*). To learn more, see [Defender for Endpoint onboarding Windows Server](onboard-windows-server.md).
-- **Microsoft Defender for Business servers** (*for small and medium-sized businesses who have [Microsoft Defender for Business](/defender-business/mdb-overview)*). To learn more, see [How to get Microsoft Defender for Business servers](/defender-business/get-defender-business#how-to-get-microsoft-defender-for-business-servers).
-
-See [Microsoft licensing and product terms](https://www.microsoft.com/en-us/licensing/product-licensing/products).
+If you're also using [Microsoft Defender for Servers](/azure/defender-for-cloud/defender-for-servers-overview) as part of Defender for Cloud, check if you're eligible for a [licensing discount when you have both Defender for Endpoint and Defender for Servers](/azure/defender-for-cloud/faq-defender-for-servers#can-i-get-a-discount-if-i-already-have-a-microsoft-defender-for-endpoint-license-).
 
 ## Next steps
 
 - [Set up and configure Defender for Endpoint Plan 1](mde-p1-setup-configuration.md)
+
+## Related content
+
 - [Get started with Defender for Endpoint Plan 1](mde-plan1-getting-started.md)
 - [Manage Defender for Endpoint Plan 1](preferences-setup.md)
-- [Learn about exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+- [Learn about exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md)
+- [Onboard client devices running Windows or macOS to Microsoft Defender for Endpoint](onboard-client.md)
+- [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
+- [Microsoft Defender for Endpoint - Mobile Threat Defense](mtd.md) (for iOS and Android devices)
+
+

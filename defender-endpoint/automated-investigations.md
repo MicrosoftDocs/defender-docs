@@ -1,45 +1,58 @@
 ---
 title: Use automated investigations to investigate and remediate threats
-description: Understand the automated investigation flow in Microsoft Defender for Endpoint.
+description: Learn how automated investigations in Microsoft Defender for Endpoint analyze alerts, take remediation actions, and help security teams respond to threats.
 ms.service: defender-endpoint
 ms.subservice: edr
-author: denisebmsft
-ms.author: deniseb
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-ms.date: 08/31/2022
-manager: deniseb
-audience: ITPro
+ms.date: 07/02/2026
 ms.collection: 
 - m365-security
 - tier3
 - mde-edr
 ms.topic: how-to
-ms.custom: AIR
-search.appverid: met150
+ms.custom: AIR, msecd-doc-authoring-1016
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+ai-usage: ai-assisted
 ---
 
 # Overview of automated investigations
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+Automated investigation and response (AIR) in Microsoft Defender for Endpoint automatically examines alerts and takes immediate action to resolve breaches. This article provides an overview of AIR capabilities, prerequisites, and how the process works.
 
-**Applies to:**
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business/mdb-overview)
+## Prerequisites
 
-**Platforms**
-- Windows
+To use automated investigation and response (AIR), your subscription must include [Defender for Endpoint](microsoft-defender-endpoint.md) or [Defender for Business](/defender-business/mdb-overview).
 
-Want to see how it works? Watch the following video:
+[!INCLUDE [AIR deprecation note](includes/air-deprecation-note.md)]
+
+> [!NOTE]
+> - Automated investigation and response (AIR) requires Microsoft Defender Antivirus for running in passive mode or active mode. If Microsoft Defender Antivirus is disabled or uninstalled, Automated Investigation and Response will not function correctly.
+> - Automated investigation and response on Windows Server 2012 R2 and Windows Server 2016 requires the [Unified Agent](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) to be installed.
+
+### Supported operating systems
+
+Automated investigation and response is supported on the following operating systems:
+
+- Windows Server 2012 R2 (Preview)
+- Windows Server 2016 (Preview)
+- Windows Server 2019 and later
+- Windows 10, version 1709 (OS Build 16299.1085 with [KB4493441](https://support.microsoft.com/help/4493441/windows-10-update-kb4493441)) or later
+- Windows 10, version 1803 (OS Build 17134.704 with [KB4493464](https://support.microsoft.com/help/4493464/windows-10-update-kb4493464)) or later
+- Windows 10, version [1803 release information](/windows/release-information/status-windows-10-1809-and-windows-server-2019) or later
+- Windows 11
+- Azure Stack HCI OS, version 23H2 and later
+
+Want to see how automated investigation and response works? Watch the following video:
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=f7299926-ec86-40f6-9188-372304ab80f9]
 
 The technology in automated investigation uses various inspection algorithms and is based on processes that are used by security analysts. AIR capabilities are designed to examine alerts and take immediate action to resolve breaches. AIR capabilities significantly reduce alert volume, allowing security operations to focus on more sophisticated threats and other high-value initiatives. All remediation actions, whether pending or completed, are tracked in the [Action center](auto-investigation-action-center.md). In the Action center, pending actions are approved (or rejected), and completed actions can be undone if needed.
 
-This article provides an overview of AIR and includes links to next steps and additional resources.
-
-> [!TIP]
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-automated-investigations-abovefoldlink)
+This article provides an overview of automated investigation and response (AIR) and includes links to next steps and additional resources.
 
 ## How the automated investigation starts
 
@@ -47,7 +60,7 @@ An automated investigation can start when an alert is triggered or when a securi
 
 |Situation|What happens|
 |---|---|
-|An alert is triggered|In general, an automated investigation starts when an [alert](review-alerts.md) is triggered, and an [incident](view-incidents-queue.md) is created. For example, suppose a malicious file resides on a device. When that file is detected, an alert is triggered, and incident is created. An automated investigation process begins on the device. As other alerts are generated because of the same file on other devices, they are added to the associated incident and to the automated investigation.|
+|An alert is triggered|In general, an automated investigation starts when an [alert is triggered](review-alerts.md), and an [incident is created](view-incidents-queue.md). For example, suppose a malicious file resides on a device. When that file is detected, an alert is triggered, and incident is created. An automated investigation process begins on the device. As other alerts are generated because of the same file on other devices, they are added to the associated incident and to the automated investigation.|
 |An investigation is started manually|An automated investigation can be started manually by your security operations team. For example, suppose a security operator is reviewing a list of devices and notices that a device has a high risk level. The security operator can select the device in the list to open its flyout, and then select **Initiate Automated Investigation**.|
 
 ## How an automated investigation expands its scope
@@ -64,7 +77,7 @@ As alerts are triggered, and an automated investigation runs, a verdict is gener
 - *Suspicious*; or
 - *No threats found*.
 
-As verdicts are reached, automated investigations can result in one or more remediation actions. Examples of remediation actions include sending a file to quarantine, stopping a service, removing a scheduled task, and more. To learn more, see [Remediation actions](manage-auto-investigation.md#remediation-actions).
+As verdicts are reached, automated investigations can result in one or more remediation actions. Examples of remediation actions include sending a file to quarantine, stopping a service, removing a scheduled task, and more. For a complete list, see [Remediation actions](manage-auto-investigation.md#remediation-actions).
 
 Depending on the [level of automation](automation-levels.md) set for your organization, as well as other security settings, remediation actions can occur automatically or only upon approval by your security operations team. Additional security settings that can affect automatic remediation include [protection from potentially unwanted applications](/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus) (PUA).
 
@@ -73,36 +86,21 @@ All remediation actions, whether pending or completed, are tracked in the [Actio
 > [!TIP]
 > Check out the new, unified investigation page in the Microsoft Defender portal. To learn more, see [Unified investigation page](/defender-xdr/m365d-autoir-results#new-unified-investigation-page).
 
-## Requirements for AIR
-
-Your subscription must include [Defender for Endpoint](microsoft-defender-endpoint.md) or [Defender for Business](/defender-business/mdb-overview).
-
-> [!NOTE]
-> Automated investigation and response requires Microsoft Defender Antivirus for running in passive mode or active mode. If Microsoft Defender Antivirus is disabled or uninstalled, Automated Investigation and Response will not function correctly.
-
-Currently, AIR only supports the following OS versions:
-
-- Windows Server 2012 R2 (Preview)
-- Windows Server 2016 (Preview)
-- Windows Server 2019
-- Windows Server 2022
-- Windows 10, version 1709 (OS Build 16299.1085 with [KB4493441](https://support.microsoft.com/help/4493441/windows-10-update-kb4493441)) or later
-- Windows 10, version 1803 (OS Build 17134.704 with [KB4493464](https://support.microsoft.com/help/4493464/windows-10-update-kb4493464)) or later
-- Windows 10, version [1803](/windows/release-information/status-windows-10-1809-and-windows-server-2019) or later
-- Windows 11
-
-> [!NOTE]
-> Automated investigation and response on Windows Server 2012 R2 and Windows Server 2016 requires the [Unified Agent](configure-server-endpoints.md#functionality-in-the-modern-unified-solution) to be installed. 
 
 ## Next steps
 
-- [Learn more about automation levels](automation-levels.md)
+Use the following resources to continue configuring and learning about automated investigation and response:
+
+- [Automation levels](automation-levels.md)
 - [See the interactive guide: Investigate and remediate threats with Microsoft Defender for Endpoint](https://aka.ms/MDATP-IR-Interactive-Guide)
 - [Configure automated investigation and remediation capabilities in Microsoft Defender for Endpoint](configure-automated-investigations-remediation.md)
 
 ## See also
 
+For related information, see the following articles:
+
 - [PUA protection](/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus)
 - [Automated investigation and response in Microsoft Defender for Office 365](/defender-office-365/air-about)
 - [Automated investigation and response in Microsoft Defender XDR](/defender-xdr/m365d-autoir)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

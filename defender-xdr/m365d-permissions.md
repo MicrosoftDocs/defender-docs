@@ -1,33 +1,25 @@
 ---
-title: Manage access to Microsoft Defender XDR data in the Microsoft Defender portal
-description: Learn how to manage permissions to data in Microsoft Defender XDR
+title: Manage access to Microsoft Defender XDR with Microsoft Entra global roles
+description: Learn how to manage access to Microsoft Defender XDR capabilities with Microsoft Entra global roles.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 - essentials-manage
-ms.topic: conceptual
-search.appverid: 
-  - MOE150
-  - MET150
-ms.date: 03/04/2024
+ms.topic: concept-article
+ms.date: 05/08/2024
+appliesto:
+  - Microsoft Defender XDR
+ms.custom: sfi-ga-nochange
 ---
 
 # Manage access to Microsoft Defender XDR with Microsoft Entra global roles
 
 > [!NOTE]
-> Microsoft Defender XDR users can now take advantage of a centralized permissions management solution to control user access and permissions across different Microsoft security solutions. Learn more about the [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md).
-
-**Applies to:**
-
-- Microsoft Defender XDR
+> Microsoft Defender XDR users can now take advantage of a centralized permissions management solution to control user access and permissions across different Microsoft security solutions. Learn more about the [Microsoft Defender unified role-based access control (RBAC)](manage-rbac.md).
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -38,8 +30,8 @@ There are two ways to manage access to Microsoft Defender XDR:
 
 Accounts assigned the following **Global Microsoft Entra roles** can access Microsoft Defender XDR functionality and data:
 
-- Global administrator
-- Security administrator
+- Global Administrator
+- Security Administrator
 - Security Operator
 - Global Reader
 - Security Reader
@@ -56,7 +48,7 @@ To review accounts with these roles, [view Permissions in the Microsoft Defender
 
 ## Access to functionality
 
-Access to specific functionality is determined by your [Microsoft Entra role](/azure/active-directory/roles/permissions-reference). Contact a global administrator if you need access to specific functionality that requires you or your user group be assigned a new role.
+Access to specific functionality is determined by your [Microsoft Entra role](/azure/active-directory/roles/permissions-reference). Contact a Global Administrator if you need access to specific functionality that requires you or your user group be assigned a new role.
 
 ### Approve pending automated tasks
 

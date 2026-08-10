@@ -5,18 +5,18 @@ ms.localizationpriority: medium
 f1.keywords:
   - NOCSH
 ms.service: defender-xdr
-ms.author: dansimp
-author: dansimp
-manager: dansimp
+ms.author: guywild
+author: guywi-ms
 audience: ITPro
 ms.collection: 
   - m365-security
   - tier2
-ms.topic: conceptual
+ms.topic: whats-new
 search.appverid: 
   - MOE150
   - MET150
 ms.date: 02/19/2024
+ms.custom: sfi-ga-nochange
 ---
 
 # What's new in Microsoft Secure Score
@@ -25,7 +25,7 @@ ms.date: 02/19/2024
 
 To make Microsoft Secure Score a better representative of your security posture, we continue to add new features and improvement actions.
 
-The more improvement actions you take, the higher your Secure Score will be. For more information, see [Microsoft Secure Score](microsoft-secure-score.md).
+The more improvement actions you take, the higher your Secure Score is. For more information, see [Microsoft Secure Score](microsoft-secure-score.md).
 
 Microsoft Secure Score can be found at <https://security.microsoft.com/securescore> in the [Microsoft Defender portal](microsoft-365-defender-portal.md).
 
@@ -35,21 +35,21 @@ The following recommendation is added as a Microsoft Secure Score improvement ac
 
 **Microsoft Defender for Identity:**
 
-- Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)
+- Edit insecure ADCS certificate enrollment IIS endpoints (ESC11)
 
 ## January 2024
 
-The following recommendations have been added as Microsoft Secure Score improvement actions: 
+The following recommendations were added as Microsoft Secure Score improvement actions: 
 
 **Microsoft Entra (AAD):**
 
-- Ensure 'Phishing-resistant MFA strength' is required for Administrators. 
+- Ensure "Phishing-resistant MFA strength" is required for Administrators. 
 - Ensure custom banned passwords lists are used. 
-- Ensure 'Windows Azure Service Management API' is limited to administrative roles.
+- Ensure "Windows Azure Service Management API" is limited to administrative roles.
 
 **Admin Center:**
 
-- Ensure 'User owned apps and services' is restricted. 
+- Ensure "User owned apps and services" is restricted. 
 
 **Microsoft Forms:** 
 
@@ -57,7 +57,7 @@ The following recommendations have been added as Microsoft Secure Score improvem
  
 **Microsoft Share Point:** 
 
-- Ensure that SharePoint guest users cannot share items they don't own.
+- Ensure that SharePoint guests can't share items they don't own.
 
 ### Defender for Cloud Apps support for multiple instances of an app
 
@@ -67,19 +67,19 @@ For more information, see [Turn on and manage SaaS security posture management (
 
 ## December 2023
 
-The following recommendations have been added as Microsoft Secure Score improvement actions:
+The following recommendations were added as Microsoft Secure Score improvement actions:
 
 **Microsoft Entra (AAD):**
 
-- Ensure 'Microsoft Azure Management' is limited to administrative roles.
+- Ensure "Microsoft Azure Management" is limited to administrative roles.
 
 **Microsoft Sway:**
 
-- Ensure that Sways cannot be shared with people outside of your organization.
+- Ensure that Sways can't be shared with people outside of your organization.
 
 **Microsoft Exchange Online:**
 
-- Ensure users installing Outlook add-ins is not allowed.
+- Ensure users installing Outlook add-ins isn't allowed.
 
 **Zendesk:**
 
@@ -87,12 +87,12 @@ The following recommendations have been added as Microsoft Secure Score improvem
 - Send a notification on password change for admins, agents, and end users.
 - Enable IP restrictions.
 - Block customers to bypass IP restrictions.
-- Admins and agents can use the Zendesk Support mobile app.
+- Use the Zendesk Support mobile app (admins and agents).
 - Enable Zendesk authentication.
 - Enable session timeout for users.
 - Block account assumption.
 - Block admins to set passwords.
-- Automatic redaction.
+- Enable automatic redaction.
 
 **Net Document:**
 
@@ -135,31 +135,31 @@ For more information, see [Microsoft Defender for Identity's security posture as
 
 ## October 2023:
 
-The following recommendations have been added as Microsoft Secure Score improvement actions:
+The following recommendations were added as Microsoft Secure Score improvement actions:
 
 **Microsoft Entra (AAD):**
 
-- Ensure 'Phishing-resistant MFA strength' is required for administrators.
+- Ensure "Phishing-resistant MFA strength" is required for administrators.
 - Ensure custom banned passwords lists are used.
 
 **Microsoft Sway:**
 
-- Ensure that Sways cannot be shared with people outside of your organization.
+- Ensure that Sways can't be shared with people outside of your organization.
 
 **Atlassian:**
 
-- Enable multi-factor authentication (MFA).
+- Enable multifactor authentication (MFA).
 - Enable Single Sign On (SSO).
 - Enable strong Password Policies.
-- Enable session timeout for web users.
+- Enable session time out for web users.
 - Enable Password expiration policies.
-- Atlassian mobile app security - Users that are affected by policies.
+- Atlassian mobile app security - Users who are affected by policies.
 - Atlassian mobile app security - App data protection.
 - Atlassian mobile app security - App access requirement.
 
 ## September 2023:
 
-The following recommendations have been added as Microsoft Secure Score improvement actions:
+The following recommendations were added as Microsoft Secure Score improvement actions:
 
 **Microsoft Information Protection:**
 
@@ -172,7 +172,7 @@ The following recommendations have been added as Microsoft Secure Score improvem
 - Ensure modern authentication for Exchange Online is enabled.
 - Ensure MailTips are enabled for end users.
 - Ensure mailbox auditing for all users is enabled.
-- Ensure additional storage providers are restricted in Outlook on the web.
+- Ensure other storage providers are restricted in Outlook on the web.
 
 **Microsoft Defender for Cloud Apps:**
 
@@ -184,11 +184,11 @@ The following recommendations have been added as Microsoft Secure Score improvem
 - Ensure all forms of mail forwarding are blocked and/or disabled.
 - Ensure Safe Links for Office Applications is enabled.
 - Ensure Safe Attachments policy is enabled.
-- Ensure that an anti-phishing policy has been created. 
+- Ensure that an anti-phishing policy was created. 
 
 ## August 2023
 
-The following recommendations have been added as Microsoft Secure Score improvement actions:
+The following recommendations were added as Microsoft Secure Score improvement actions:
 
 **Microsoft Information Protection:**
 
@@ -201,20 +201,20 @@ The following recommendations have been added as Microsoft Secure Score improvem
 - Ensure all forms of mail forwarding are blocked and/or disabled.
 - Ensure MailTips are enabled for end users.
 - Ensure mailbox auditing for all users is enabled.
-- Ensure additional storage providers are restricted in Outlook on the web.
+- Ensure other storage providers are restricted in Outlook on the web.
 
 **Microsoft Entra ID:**
 
 To see the following new Microsoft Entra controls in the Office 365 connector, you need to turn on Microsoft Defender for Cloud Apps in the App connectors settings page:
 
 - Ensure password protection is enabled for on-premises Active Directory.
-- Ensure 'LinkedIn account connections' is disabled.
+- Ensure "LinkedIn account connections" is disabled.
 
 **SharePoint:**
 
 - Ensure Safe Links for Office Applications is enabled.
 - Ensure Safe Attachments for SharePoint, OneDrive, and Microsoft Teams is enabled.
-- Ensure that an anti-phishing policy has been created.
+- Ensure that an anti-phishing policy was created.
 
 To see the following new SharePoint controls in the Office 365 connector, you need to turn on Microsoft Defender for Cloud Apps in the App connectors settings page:
 
@@ -232,11 +232,11 @@ We've integrated Microsoft Secure Score into Microsoft 365 Lighthouse. This inte
 
 <a name='microsoft-secure-score-permissions-integration-with-microsoft-365-defender-unified-role-based-access-control-rbac-is-now-in-public-preview'></a>
 
-### Microsoft Secure Score permissions integration with Microsoft Defender XDR Unified role-based access control (RBAC) is now in Public Preview
+### Microsoft Secure Score permissions integration with Microsoft Defender unified role-based access control (RBAC) is now in Public Preview
 
-Previously, only Microsoft Entra global roles (such as Global Administrators) could access Microsoft Secure Score. Now, you can control access and grant granular permissions for the Microsoft Secure Score experience as part of the Microsoft Defender XDR Unified RBAC model.
+Previously, only Microsoft Entra global roles could access Microsoft Secure Score. Now, you can control access and grant granular permissions for the Microsoft Secure Score experience as part of the Microsoft Defender XDR Unified RBAC model.
 
-You can add the new permission and choose the data sources the user has access to by selecting the **Security posture** permissions group when creating the role. For more information, see [Create custom roles with Microsoft Defender XDR Unified RBAC](create-custom-rbac-roles.md). Users see Secure Score data for the data sources they have permissions to.
+You can add the new permission and choose the data sources the user has access to by selecting the **Security posture** permissions group when creating the role. For more information, see [Create custom roles with Microsoft Defender unified RBAC](create-custom-rbac-roles.md). Users see Secure Score data for the data sources they have permissions to.
 
 A new data source **Secure Score – Additional data source** is also available. Users with permissions to this data source have access to additional data within the Secure score dashboard. For more information on additional data sources, see [Products included in Secure Score](./microsoft-secure-score.md#products-included-in-secure-score).
 
@@ -244,14 +244,14 @@ A new data source **Secure Score – Additional data source** is also available.
 
 The following Microsoft Defender for Identity recommendations were added as Microsoft Secure Score improvement actions:
 
-- Remove the attribute 'password never expires' from accounts in your domain.
+- Remove the attribute "password never expires" from accounts in your domain.
 - Remove access rights on suspicious accounts with the Admin SDHolder permission.
 - Manage accounts with passwords more than 180 days old.
 - Remove local admins on identity assets.
 - Remove non-admin accounts with DCSync permissions.
 - Start your Defender for Identity deployment, installing Sensors on Domain Controllers and other eligible servers.
 
-The following Google workspace recommendation were added as a Microsoft Secure Score improvement action:
+The following Google workspace recommendations were added as a Microsoft Secure Score improvement action:
 
 - Enable multifactor authentication (MFA)
 
@@ -309,7 +309,7 @@ New Microsoft Defender for Office 365 recommendations for anti-phishing policies
 - Quarantine messages that are detected from impersonated users.
 - Quarantine messages that are detected from impersonated domains.
 - Move messages that are detected as impersonated users by mailbox intelligence.
-- Enable the 'show first contact safety tip' option.
+- Enable the "show first contact safety tip" option.
 - Enable the user impersonation safety tip.
 - Enable the domain impersonation safety tip.
 - Enable the user impersonation unusual characters safety tip.
@@ -395,11 +395,12 @@ New Microsoft Defender for Office 365 recommendations are now available as Secur
 
 ## We want to hear from you
 
-If you have any issues, let us know by posting in the [Security, Privacy & Compliance](https://techcommunity.microsoft.com/t5/Security-Privacy-Compliance/bd-p/security_privacy) community. We're monitoring the community to provide help.
+If you have any issues, let us know by posting in the [Defender XDR community](https://techcommunity.microsoft.com/category/microsoft-defender-xdr/discussions/microsoftthreatprotection). We're monitoring the community to provide help.
 
 ## Related resources
 
 - [Assess your security posture](microsoft-secure-score-improvement-actions.md)
 - [Track your Microsoft Secure Score history and meet goals](microsoft-secure-score-history-metrics-trends.md)
 - [What's coming](whats-new.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

@@ -5,8 +5,7 @@ ms.service: defender-for-iot
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: rayne-wiselman
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 06/11/2024
 ---
 
@@ -58,7 +57,7 @@ Defender for IoT in the Defender portal uses the following combination of techno
 |**[Get an overview of your productions sites (site security)](site-security-overview.md)**|Get an overview of your production sites to gain insights into OT risks, make better-informed security investment decisions, and streamline communication between stakeholders.|
 |**[Prioritize and remediate vulnerabilities](prioritize-vulnerabilities.md)**|Proactively manage OT network risks based on vulnerability details and recommended remediation advice.|
 |**[Analyze incidents](investigate-threats.md) and respond to threats**|Review incidents and alerts with real-time details about events logged in your OT network and take recommended remediation actions.|
-|**Extend Microsoft Defender XDR**|Microsoft Defender XDR and Defender for IoT form a unified pre- and post-breach enterprise defense suite. This suite natively integrates across endpoint, IoT/OT, identity, email, and applications to detect, prevent, investigate, and automatically respond to sophisticated attacks.|
+|**Extend Microsoft Defender**|Microsoft Defender and Defender for IoT form a unified pre- and post-breach enterprise defense suite. This suite natively integrates with endpoint, IoT/OT, identity, email, and applications to detect, prevent, investigate, and automatically respond to sophisticated attacks.|
 
 ## Next steps
 

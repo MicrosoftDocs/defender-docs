@@ -48,6 +48,7 @@
       "feedback_product_url": "https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance",
       "uhfHeaderId": "MSDocsHeader-MicrosoftDefender",
       "titleSuffix": "Microsoft Defender for IoT",
+      "manager": "bagol",
       "searchScope": [
         "Microsoft Defender for IoT"
       ],
@@ -62,7 +63,10 @@
         "Stacyrch140",
         "garycentric",
         "alekyaj",
-        "beccarobins"
+        "beccarobins",
+        "aditisrivastava07",
+        "padmagit77",
+        "Ruchika-mittal01"
       ]
     },
     "fileMetadata": {},

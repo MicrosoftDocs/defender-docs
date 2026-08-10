@@ -1,33 +1,24 @@
 ---
 title: Common Microsoft Defender XDR REST API error codes
-description: Learn about the common Microsoft Defender XDR REST API error codes.
+description: Learn about the common Microsoft Defender XDRREST API error codes.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
-ms.author: macapara
-author: mjcaparas
+ms.author: edbaynash
+author: EdB-MSFT
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
  - m365-security
  - tier3
  - must-keep
 ms.topic: reference
-search.appverid: 
-  - MOE150
-  - MET150
 ms.custom: api
-ms.date: 02/08/2024
+ms.date: 04/18/2025
+appliesto:
+ - Microsoft Defender XDR
 ---
 
 # Common Microsoft Defender XDR REST API error codes
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender XDR
 
 > [!NOTE]
 > **Try our new APIs using MS Graph security API**. Find out more at: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
@@ -35,7 +26,7 @@ ms.date: 02/08/2024
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-Error codes can be returned by an operation on any of the Microsoft Defender XDR APIs. Every error response contains an error message, which can help resolve the problem. The error message column in the table section provides some sample messages. The content of actual messages varies based on the factors that triggered the response. Variable content is indicated by angle brackets (`< >`) in the following table:
+Error codes can be returned by an operation on any of the Microsoft Defender APIs. Every error response contains an error message, which can help resolve the problem. The error message column in the table section provides some sample messages. The content of actual messages varies based on the factors that triggered the response. Variable content is indicated by angle brackets (`< >`) in the following table:
 
 ## Error codes
 

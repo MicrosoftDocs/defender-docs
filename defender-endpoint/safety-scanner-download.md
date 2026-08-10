@@ -1,29 +1,26 @@
 ---
 title: Microsoft Safety Scanner Download
+description: Download Microsoft Safety Scanner to run a manual malware scan on Windows and reverse changes made by identified threats. See requirements and how to scan.
 ms.reviewer: 
-description: Get the Microsoft Safety Scanner tool to find and remove malware from Windows computers.
 keywords: security, malware
 ms.service: defender-endpoint
 ms.subservice: reference
 ms.mktglfcycl: secure
 ms.sitesec: library
 ms.localizationpriority: medium
-ms.author: deniseb
-author: denisebmsft
-manager: deniseb
-audience: ITPro
+ms.author: painbar
+author: paulinbar
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
-search.appverid: met150
-ms.date: 03/08/2024
-
+ms.topic: get-started
+ms.date: 04/04/2025
+#customer intent: As an IT or security operations engineer responsible for endpoint recovery, I want a simple, trusted tool I can download and run to detect and removemalware so I can quickly restore infected devices and validate remediation.
 ---
 
 # Microsoft Safety Scanner Download
 
-Microsoft Safety Scanner is a scan tool designed to find and remove malware from Windows computers. Simply download it and run a scan to find malware and try to reverse changes made by identified threats.
+Microsoft Safety Scanner is a scan tool designed to find and remove malware from Windows computers. Download it and run a scan to find malware and try to reverse changes made by identified threats.
 
 - **[Download Microsoft Safety Scanner (32-bit)](https://go.microsoft.com/fwlink/?LinkId=212733)**
 
@@ -34,13 +31,13 @@ Microsoft Safety Scanner is a scan tool designed to find and remove malware from
 
 ## Important information
 
-- The security intelligence update version of the Microsoft Safety Scanner matches the version described [in this web page](https://www.microsoft.com/wdsi/definitions).
+- The security intelligence update version of the Microsoft Safety Scanner matches the version described [in this web page](https://www.microsoft.com/wdsi/defenderupdates).
 
 - Microsoft Safety Scanner only scans when manually triggered. Safety Scanner expires 10 days after being downloaded. To rerun a scan with the latest anti-malware definitions, download and run Safety Scanner again. We recommend that you always download the latest version of this tool before each scan.
 
 - Safety Scanner is a portable executable and doesn't appear in the Windows Start menu or as an icon on the desktop. Note where you saved this download.
 
-- This tool doesn't replace your antimalware product. For real-time protection with automatic updates, use [Microsoft Defender Antivirus on Windows 11, Windows 10, and Windows 8](https://www.microsoft.com/windows/comprehensive-security). These antimalware products also provide powerful malware removal capabilities. If you're having difficulties removing malware with these products, you can refer to our help on [removing difficult threats](https://www.microsoft.com/wdsi/help/troubleshooting-infection).
+- This tool doesn't replace your anti-malware product. For real-time protection with automatic updates, use [Microsoft Defender Antivirus on Windows 11, Windows 10, and Windows 8](https://www.microsoft.com/windows/comprehensive-security). These anti-malware products also provide powerful malware removal capabilities. If you're having difficulties removing malware with these products, you can refer to our help on [removing difficult threats](https://www.microsoft.com/wdsi/help/troubleshooting-infection).
 
 ## System requirements
 
@@ -49,8 +46,8 @@ Safety Scanner helps remove malicious software from computers running Windows 11
 ## How to run a scan
 
 1. Download this tool and open it.
-2. Select the type of scan that you want to run and start the scan.
-3. Review the scan results displayed on screen. For detailed detection results, view the log at **%SYSTEMROOT%\debug\msert.log**.
+1. Select the type of scan that you want to run and start the scan.
+1. Review the scan results displayed on screen. For detailed detection results, view the log at **%SYSTEMROOT%\debug\msert.log**.
 
 To remove this tool, delete the executable file (msert.exe by default).
 
@@ -62,4 +59,4 @@ For more information about the Safety Scanner, see the support article on [how t
 - [Microsoft Defender Antivirus](https://www.microsoft.com/windows/comprehensive-security)
 - [Removing difficult threats](https://support.microsoft.com/help/4466982/windows-10-troubleshoot-problems-with-detecting-and-removing-malware)
 - [Submit file for malware analysis](https://www.microsoft.com/wdsi/filesubmission)
-- [Microsoft antimalware and threat protection solutions](microsoft-defender-endpoint.md)
+- [Microsoft anti-malware and threat protection solutions](microsoft-defender-endpoint.md)

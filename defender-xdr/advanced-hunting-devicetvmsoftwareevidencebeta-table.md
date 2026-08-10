@@ -1,41 +1,38 @@
 ---
 title: DeviceTvmSoftwareEvidenceBeta table in the advanced hunting schema
 description: Learn how to use the DeviceTvmSoftwareEvidenceBeta table in the advanced hunting schema.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 01/16/2024
+ms.date: 06/14/2026
 ---
 
 # DeviceTvmSoftwareEvidenceBeta
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
-**Applies to:**
-- Microsoft Defender XDR
-- Microsoft Defender for Endpoint
-
 > [!IMPORTANT]
-> The `DeviceTvmSoftwareEvidenceBeta` table is currently in beta. Once it leaves beta, the final table name will change and column names may also change. The modifications will then likely break queries that are still using previous names. Users are advised to review and adjust their queries when this table is finalized. 
+> The `DeviceTvmSoftwareEvidenceBeta` table is currently in beta. Once it leaves beta, the final table name changes and column names might also change. The modifications are likely to break queries that are still using previous names. Users are advised to review and adjust their queries when this table is finalized. 
 
 The `DeviceTvmSoftwareEvidenceBeta` table in the advanced hunting schema contains data from [Microsoft Defender Vulnerability Management](/windows/security/threat-protection/microsoft-defender-atp/next-gen-threat-and-vuln-mgt) related to the [software evidence section](/defender-vulnerability-management/tvm-software-inventory#software-evidence). This table allows you to view evidence of where a specific software was detected on a device. You can use this table, for example, to identify the file paths of specific software. Use this reference to construct queries that return information from the table.
 
+Microsoft Defender for Endpoint data populates this advanced hunting table. If your organization didn't deploy the service in Microsoft Defender, queries that use the table aren't going to work or return any results. For more information about how to deploy Defender for Endpoint in the Defender portal, read [Deploy supported services](deploy-supported-services.md).
+
 For information on other tables in the advanced hunting schema, see [the advanced hunting reference](advanced-hunting-schema-tables.md).
+
+[!INCLUDE [TVM Sentinel schema visibility note](../includes/tvm-sentinel-schema-visibility-note.md)]
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
@@ -47,13 +44,13 @@ For information on other tables in the advanced hunting schema, see [the advance
 | `DiskPaths` | `dynamic` | Disk paths where file-level evidence indicating the existence of the software on a device was detected |
 | `LastSeenTime` | `string` | Date and time when the device was last seen by this service |
 
-## Related topics
+## Read more
 
-- [Overview of Microsoft Defender Vulnerability Management](/windows/security/threat-protection/microsoft-defender-atp/next-gen-threat-and-vuln-mgt)
+- [Microsoft Defender Vulnerability Management](/windows/security/threat-protection/microsoft-defender-atp/next-gen-threat-and-vuln-mgt)
 - [Proactively hunt for threats](advanced-hunting-overview.md)
 - [Learn the query language](advanced-hunting-query-language.md)
 - [Use shared queries](advanced-hunting-shared-queries.md)
 - [Hunt across devices, emails, apps, and identities](advanced-hunting-query-emails-devices.md)
 - [Understand the schema](advanced-hunting-schema-tables.md)
 - [Apply query best practices](advanced-hunting-best-practices.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+

@@ -1,12 +1,10 @@
 ---
 title: Explore with the attack surface map in Microsoft Security Exposure Management
 description: Learn how to use the attack surface map in Microsoft Security Exposure Management.
+ms.topic: overview
 ms.author: dlanger
 author: dlanger
-manager: rayne-wiselman
-ms.topic: overview
-ms.service: exposure-management
-ms.date: 11/18/2024
+ms.date: 09/09/2025
 
 ---
 
@@ -24,7 +22,7 @@ To visualize exposure data, use the attack surface map in [Microsoft Security Ex
 1. In the device inventory, select a device.
 1. Select **View Map**.
 
-You can also search for an asset from **Attack surface -> Map**, from **Identities**, or from the **Overview** dashboard.
+You can also search for an asset from **Attack surface > Map**, from **Identities**, or from the **Overview** dashboard.
 
 ## Explore the map
 
@@ -37,11 +35,11 @@ The exposure map gives you visibility into asset connections.
     - **Hovering**: Hover over nodes and edges to get additional information.
     - **Explore assets and their edges**. To explore assets and edge, select the plus sign. Or select the option to explore connected assets from the contextual menu.
     - **Asset details**: To view details, select the asset icon.
-    - **Focus on asset**: Provides a way to refocus the graph visualization on the specific node you want to explore, similar to the **Graph** view when selecting an individual [attack path](review-attack-paths.md).
+    - **Focus on asset**: Provides a way to refocus the graph visualization on the specific node you want to explore, similar to the **Graph** view when selecting an individual [attack path](work-attack-paths-overview.md). The Cloud attack paths focus on real, externally-driven and exploitable threats rather than broad potential attack path scenarios.
     - **Search**: Helps you to discover items by node type. By selecting **all results**, search the particular type for specific results. You can also filter your search by devices, identity, or cloud assets from the initial screen.
     - **Discovery source**: Use the layer option to show or hide the origin of the data directly on the attack surface map.
 
-:::image type="content" source="media/value-data-connectors/attack map data connectors.png" alt-text="Screenshot of the attack surface exposure map." lightbox="media/value-data-connectors/attack map data connectors.png":::
+    :::image type="content" source="media/value-data-connectors/attack map data connectors.png" alt-text="Screenshot of the attack surface exposure map." lightbox="media/value-data-connectors/attack map data connectors.png":::
 
 1. Open the side panel to view asset details.
    - **General**: View general information about the asset, including **Type**, **IDs**, and **Discovery source**.
@@ -49,7 +47,7 @@ The exposure map gives you visibility into asset connections.
    - **Top Vulnerabilities**: View up to the top 100 CVEs (by severity) on the asset.
    - **Findings**: View all the security findings on the asset.
 
-    :::image type="content" source="media/enterprise-exposure-map/attack-surface-exposure-map-sidepane.png" alt-text="Screenshot of attack surface map side pane" lightbox="media/enterprise-exposure-map/attack-surface-exposure-map-sidepane.png":::
+    :::image type="content" source="media/enterprise-exposure-map/attack-surface-exposure-map-sidepane.png" alt-text="Screenshot of attack surface map side pane." lightbox="media/enterprise-exposure-map/attack-surface-exposure-map-sidepane.png":::
 
 ## Next steps
 

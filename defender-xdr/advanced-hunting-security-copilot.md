@@ -1,106 +1,83 @@
 ---
 title: Microsoft Security Copilot in advanced hunting
-description: Learn how Microsoft Security Copilot advanced hunting (NL2KQL) plugin can generate a KQL query for you.
-search.appverid: met150
+description: Learn about the different Microsoft Security Copilot advanced hunting capabilities in Microsoft Defender.
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
-  - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
   - security-copilot
   - magic-ai-copilot
 ms.custom:
+- msecd-doc-authoring-1014
 - cx-ti
 - cx-ah
 ms.topic: how-to
-ms.date: 10/17/2024
+ms.update-cycle: 180-days
+ms.date: 06/16/2026
 appliesto:
 - Microsoft Defender
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
+ai-usage: ai-assisted
 ---
 
 # Microsoft Security Copilot in advanced hunting
 
+[!INCLUDE [Prerelease](../includes/prerelease.md)]
 
-**Applies to:**
+[Microsoft Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md) provides the Threat Hunting Assistant in advanced hunting to enhance threat hunting and security analysis. The Threat Hunting Assistant runs in one of two modes, depending on how much help you want.
 
-- Microsoft Defender
-- Microsoft Defender XDR
+The following table describes these capabilities, where they're best used, and the expected output:
 
-## Security Copilot in advanced hunting
+| Mode | Description |Output |Experience |
+| ------------- | ------------- |------------- |------------- |
+| **Rich insights**<br>[Threat Hunting Assistant](advanced-hunting-security-copilot-threat-hunting-assistant.md) | AI-powered conversational threat hunting experience that's best used for complete investigations, multistep hunting, exploratory analysis, and getting direct answers |Conversational answers, Kusto query language (KQL) queries, results, insights, and recommendations|Investigation-focused |
+| **Query only**<br>[Query assistant](advanced-hunting-security-copilot-query-assistant.md) | Natural language to KQL query generation that's best used for generating queries |KQL query with explanation|Query-focused |
 
-[Microsoft Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md) comes with a query assistant capability in advanced hunting.
+The Threat Hunting Assistant and Query assistant empower you to hunt threats faster, more accurately, and with greater confidence without needing to write KQL queries.
 
-Threat hunters or security analysts who aren't yet familiar with or have yet to learn KQL can make a request or ask a question in natural language (for instance, *Get all alerts involving user admin123*). Security Copilot then generates a KQL query that corresponds to the request using the advanced hunting data schema.
+## Get access
+Users with access to Security Copilot can use these capabilities in advanced hunting.
 
-This feature reduces the time  it takes to write a hunting query from scratch so that threat hunters and security analysts can focus on hunting and investigating threats.
+You can use one mode at a time. **Rich insights** is the default mode. The active mode appears as a badge next to **Threat hunting assistant** at the top of the Security Copilot side pane.
 
-Users with access to Security Copilot have access to this capability in advanced hunting.
+To change modes, select the three-dot menu (**More actions**) in the Security Copilot side pane, point to **Threat hunting assistant mode**, then select **Rich insights** or **Query only**.
 
-> [!NOTE]
-> The advanced hunting capability is also available in the Security Copilot standalone experience through the Microsoft Defender XDR plugin. Know more about [preinstalled plugins in Security Copilot](/security-copilot/manage-plugins#preinstalled-plugins).
+![Screenshot of the Threat hunting assistant mode submenu in the Security Copilot side pane, showing Rich insights selected and Query only available.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-access.png)
 
-## Try your first request
+To use the Security Analyst Agent instead, select **Switch to Security Analyst Agent** from the same menu.
 
-1. Open the **advanced hunting** page from the navigation bar in Microsoft Defender XDR. The Security Copilot side pane for advanced hunting appears at the right hand side.
-
-    :::image type="content" source="/defender/media/advanced-hunting-security-copilot-pane.png" alt-text="Screenshot of the Copilot pane in advanced hunting." lightbox="/defender/media/advanced-hunting-security-copilot-pane-big.png":::
-
-    You can also reopen Copilot by selecting **Copilot** at the top of the query editor.
-1. In the Copilot prompt bar, ask any threat hunting query that you want to run and press :::image type="icon" source="media/Send.png" border="false"::: or **Enter** .
-
-
-
-    :::image type="content" source="/defender/media/advanced-hunting-security-copilot-query.png" alt-text="Screenshot that shows prompt bar in the Security Copilot for advanced hunting." lightbox="/defender/media/advanced-hunting-security-copilot-query-big.png":::
-
-1. Copilot generates a KQL query from your text instruction or question. While Copilot is generating, you can cancel the query generation by selecting **Stop generating**.
-
-    ![Screenshot of Security Copilot in advanced hunting generating a response.](/defender/media/advanced-hunting-security-copilot-generate.png)
+>[!NOTE]
+>- Mode selection isn't available on non-primary workspaces.
+>- Switching modes starts a new chat and clears your current conversation. You're asked to confirm before the switch happens.
 
 
-1. Review the generated query. You can then choose to run the query by selecting **Add and run**.
+## Scope of Security Copilot in advanced hunting
 
-   ![Screenshot of Copilot button showing Add the query to query editor and run.](/defender/media/advanced-hunting-security-copilot-run-query.png)
+### Use case support
+The Threat Hunting Assistant handles questions ranging from simple filters and aggregations to queries that span several tables. When a question needs data from more than one table, the assistant selects the relevant tables and joins them.
 
-    The generated query then appears as the last query in the query editor and runs automatically.
+As with any AI-generated content, review the generated query and its results before you act on them. Help us improve by [providing feedback on Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md#provide-feedback) with incorrect queries or response examples. 
 
-    If you need to make further tweaks, select **Add to editor**.
+### Best practices
+Use the following best practices when prompting the Threat Hunting Assistant or Query assistant:
 
-   ![Screenshot of Security Copilot in advanced hunting showing the Add to editor option.](/defender/media/advanced-hunting-security-copilot-add-editor.png)
+- **Be unambiguous.** Ask questions with a clear subject. For example, "logins" could mean device logins or cloud logins.
+- **Ask one question at a time.** Ask for a single task or type of information at a time. Don't expect the AI model to perform several unrelated tasks at once. You can always ask follow-up questions instead of combining unrelated asks into a single prompt.
+- **Be specific.** If you know anything about the data you're looking for, provide that information in your question.
 
-    The generated query appears in the query editor as the last query, where you can edit it before running using the regular **Run query** above the query editor.
+### How the assistant finds your data
 
+The Threat Hunting Assistant discovers the data available in your environment as it works, instead of using a fixed list of tables. For each question, it:
 
-1. You can provide feedback about the generated response by selecting the feedback icon ![Screenshot of feedback icon.](/defender/media/advanced-hunting-security-copilot-feedback-icon.png) and choosing **Confirm**, **Off-target**, or **Potentially harmful**.
+1. Lists the tables you have access to.
+1. Inspects the schema of the tables that look relevant.
+1. Selects the tables needed to answer the question, and joins them when more than one is required.
 
+This includes custom tables in your Microsoft Sentinel workspace.
 
-> [!TIP]
-> Providing feedback is an important way to let the Security Copilot team know how well the query assistant was able to help in generating a useful KQL query. Feel free to articulate what could have made the query better, what adjustments you had to make before running the generated KQL query, or share the KQL query that you eventually used.
-
-
-> [!NOTE]
-> In the [unified Microsoft Defender portal](advanced-hunting-microsoft-defender.md), you can prompt Security Copilot to generate advanced hunting queries for both Defender XDR and Microsoft Sentinel tables. Not all Microsoft Sentinel tables are currently supported, but support for these tables can be expected in the future.
-
-## Query sessions
-
-You can start your first session anytime by asking a question in the Copilot side pane in advanced hunting. Your session contains the requests you made using your user account. Closing the side pane or refreshing the advanced hunting page doesn't discard the session. You can still access the generated queries should you need them.
-
-Select the chat bubble icon (**New chat**) to discard the current session.
-
-   ![Screenshot of Security Copilot in advanced hunting showing the new chat icon.](/defender/media/advanced-hunting-security-copilot-clear-session.png)
-
-## Modify settings
-
-Select the ellipses in the Copilot side pane to choose whether or not to automatically add and run the generated query in advanced hunting.
-
-   ![Screenshot of Security Copilot in advanced hunting showing the settings ellipses icon.](/defender/media/advanced-hunting-security-copilot-settings.png)
-
-Deselecting the **Run generated query automatically** setting gives you the option of running the generated query automatically (**Add and run**) or adding the generated query to the query editor for further modification (**Add to editor**).
+Discovery follows your own permissions, so the assistant only reaches data that you can already query in advanced hunting. It runs read-only queries and can't run commands that change data or configuration.

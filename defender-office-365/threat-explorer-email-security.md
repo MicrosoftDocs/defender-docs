@@ -1,13 +1,9 @@
 ---
 title: Email security with Threat Explorer and Real-time detections in Microsoft Defender for Office 365
-f1.keywords:
-  - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-audience: ITPro
-ms.topic: conceptual
-ms.date: 2/27/2024
+ms.author: chrisda
+ms.topic: how-to
+ms.date: 07/03/2026
 ms.localizationpriority: medium
 ms.collection:
   - m365-security
@@ -15,11 +11,12 @@ ms.collection:
 description: Use Threat Explorer (Explorer) or Real-time detections to view and investigate malware and phishing attempts in email.
 ms.custom:
 - seo-marvel-apr2020
+- msecd-doc-authoring-1016
 ms.service: defender-office-365
-search.appverid: met150
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Email security with Threat Explorer and Real-time detections in Microsoft Defender for Office 365
@@ -34,9 +31,11 @@ This article explains how to view and investigate detected malware and phishing 
 > For other email scenarios using Threat Explorer and Real-time detections, see the following articles:
 >
 > - [Threat hunting in Threat Explorer and Real-time detections in Microsoft Defender for Office 365](threat-explorer-threat-hunting.md)
-> - [Investigate malicious email that was delivered in Microsoft 365](threat-explorer-investigate-delivered-malicious-email.md)
+> - [Investigate malicious email that was delivered](threat-explorer-investigate-delivered-malicious-email.md)
 
 ## What do you need to know before you begin?
+
+Before you begin, review the following licensing and permission requirements for Threat Explorer and Real-time detections.
 
 - Threat Explorer is included in Defender for Office 365 Plan 2. Real-time detections is included in Defender for Office Plan 1:
   - The differences between Threat Explorer and Real-time detections are described in [About Threat Explorer and Real-time detections in Microsoft Defender for Office 365](threat-explorer-real-time-detections-about.md).
@@ -50,7 +49,7 @@ For more information about user and domain impersonation protection in anti-phis
 
 In the default or custom anti-phishing policies, you need to specify the users and domains to protect from impersonation, including domains you own ([accepted domains](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)). In the Standard or Strict preset security policies, domains that you own automatically receive impersonation protection, but you need to specify any users or custom domains for impersonation protection. For instructions, see the following articles:
 
-- [Preset security policies in EOP and Microsoft Defender for Office 365](preset-security-policies.md)
+- [Preset security policies](preset-security-policies.md)
 - [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md)
 
 Use the following steps to review phishing messages and search for impersonated users or domains.
@@ -109,8 +108,9 @@ You can export URL click data to a CSV file to view the **Network Message ID** a
 
 4. In the details area, select the **Top URLs** or **Top clicks** tab (view).
 
-5. In the **Top URLs** or **Top clicks** view, select one or more entries from the table by selecting the check box next to the first column, and then select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export**.
-**Explorer** \> **Phish** \> **Clicks** \> **Top URLs** or **URL Top Clicks** \> select any record to open the URL flyout.
+5. In the **Top URLs** or **Top clicks** view, select one or more entries from the table by selecting the check box next to the first column, and then select :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export**.
+
+   To open the URL flyout instead of exporting, go to **Explorer** \> **Phish** \> **Clicks** \> **Top URLs** or **URL Top Clicks**, and then select any record.
 
 You can use the Network Message ID value to search for specific messages in Threat Explorer or Real-time detections or external tools. These searches identify the email message that's associated with a click result. Having the correlated Network Message ID makes for quicker and more powerful analysis.
 
@@ -122,7 +122,7 @@ Use the following steps in Threat Explorer or Real-time detections to see the ma
    - **Threat Explorer**: In the Defender portal at <https://security.microsoft.com>, go to **Email & Security** \> **Explorer**. Or, to go directly to the **Explorer** page, use <https://security.microsoft.com/threatexplorerv3>.
    - **Real-time detections**: In the Defender portal at <https://security.microsoft.com>, go to **Email & Security** \> **Real-time detections**. Or, to go directly to the **Real-time detections** page, use <https://security.microsoft.com/realtimereportsv3>.
 
-2. On the **Explorer** or **Real-time detections** page, select the **Malware** view. For more information about the **Phish** view, see [Malware view in Threat Explorer and Real-time detections](threat-explorer-real-time-detections-about.md#malware-view-in-threat-explorer-and-real-time-detections).
+2. On the **Explorer** or **Real-time detections** page, select the **Malware** view. For more information about the **Malware** view, see [Malware view in Threat Explorer and Real-time detections](threat-explorer-real-time-detections-about.md#malware-view-in-threat-explorer-and-real-time-detections).
 
 3. Select the date/time range. The default is yesterday and today.
 
@@ -143,13 +143,13 @@ The report shows the results that malware detected in email, using the technolog
 
 ## Report messages as clean
 
-You can use the **Submissions** page in the Defender portal at <https://security.microsoft.com/reportsubmission> to [report messages as clean (false positives) to Microsoft](submissions-admin.md#report-good-email-to-microsoft). But you can also submit messages as clean to Microsoft from :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** in Threat Explorer or the Email entity page.
+You can use the **Submissions** page in the Defender portal at <https://security.microsoft.com/reportsubmission> to [report messages as clean (false positives) to Microsoft](submissions-admin.md#report-good-email-to-microsoft). But you can also submit messages as clean to Microsoft from :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** in Threat Explorer or the Email entity page.
 
 For instructions, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
 To summarize:
 
-- Select :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** using one of the following methods:
+- Select :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** using one of the following methods:
   - Select one or more messages from the details table in the **Email** tab (view) in the **All email**, **Malware**, or **Phish** views by selecting the check boxes for the entries.
 
   Or
@@ -188,7 +188,7 @@ The **Top URLs** tab (view) in the details area below the chart shows the count 
 
 The **Top clicks** tab (view) in the details area below the chart shows the top five clicked links that were wrapped by Safe Links. URL clicks on unwrapped links don't show up here. For more information, see [Top clicks view for the details area of the Phish view in Threat Explorer and Real-time detections](threat-explorer-real-time-detections-about.md#top-clicks-view-for-the-details-area-of-the-phish-view-in-threat-explorer-and-real-time-detections).
 
-These URL tables show URLs that were blocked or visited despite a warning. This information shows the potential bad links that were presented to users. From here, you can conduct further analysis.
+The **Top URLs** and **Top clicks** tables show URLs that were blocked or visited despite a warning. The data in these tables highlights the potential bad links that were presented to users. From the **Top URLs** or **Top clicks** results, you can conduct further analysis.
 
 Select a URL from an entry in the view for details. For more information, see [URL details for the Top URLs and Top clicks tabs in Phish view](threat-explorer-real-time-detections-about.md#top-urls-details-for-the-phish-view).
 
@@ -219,6 +219,9 @@ The verdict values are described in the following list:
 
 [Automated investigation and response (AIR)](air-about.md) in Defender for Office 365 Plan 2 can save time and effort as you investigate and mitigate cyberattacks. You can configure alerts that trigger a security playbook, and you can start AIR in Threat Explorer. For details, see [Example: A security administrator triggers an investigation from Explorer](air-examples.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).
 
-## Other articles
+<a name="other-articles"></a>
+## Related articles
 
-[Investigate email with the Email entity page](mdo-email-entity-page.md)
+For related guidance, see the following article:
+
+- [Investigate email with the Email entity page](mdo-email-entity-page.md)

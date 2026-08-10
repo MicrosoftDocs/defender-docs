@@ -1,17 +1,14 @@
 ---
 title: Microsoft Defender XDR streaming event types supported in Event Streaming API
 description: Learn which streaming event types (tables) are supported by the streaming API
-search.appverid: met150
 ms.service: defender-xdr
-ms.author: macapara
-author: mjcaparas
+ms.author: edbaynash
+author: EdB-MSFT
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 09/09/2021
 ---
 
@@ -37,7 +34,7 @@ The following table includes that status of support for tables in the streaming 
 
 
 > [!NOTE]
-> Streaming data is only available for columns or fields that are in general availability in Microsoft Defender XDR. 
+> Streaming data is only available for columns or fields that are in general availability in Microsoft Defender. 
 
 | Table name | Status<br>(Commercial) | GCC | GCC High | DoD |
 |----|----|----|----|----|

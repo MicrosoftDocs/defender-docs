@@ -1,41 +1,37 @@
 ---
 title: Device health reporting in Microsoft Defender for Endpoint
 description: Use the device health report to track device health, antivirus status and versions, OS platforms, and Windows 10 versions.
-search.appverid: met150
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-ms.date: 06/25/2024
-manager: deniseb
-audience: ITPro
+ms.date: 07/03/2026
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: ngp
 ms.reviewer: mkaminska
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 
+ai-usage: ai-assisted
+---
 # Device health reports in Microsoft Defender for Endpoint
 
-**Applies to:**
 
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](/defender-business/mdb-overview)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-The Device Health report provides information about the devices in your organization. The report includes trending information showing the sensor health state, antivirus status, OS platforms, Windows 10 versions, and Microsoft Defender Antivirus update versions.
+
+The Device Health report provides information about the devices in your organization. The Device Health report includes trending information showing the sensor health state, antivirus status, OS platforms, Windows 10 versions, and Microsoft Defender Antivirus update versions.
 
 > [!IMPORTANT]
-> For Windows Server 2012 R2 and Windows Server 2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
+> For Windows Server 2012 R2 and Windows Server 2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 
 In the Microsoft Defender portal navigation panel, select **Reports**, and then open **Device health and compliance**.
-The Device health and compliance dashboard is structured in two tabs:
+The **Device health and compliance** dashboard in the Microsoft Defender portal is structured in two tabs:
 
 - The [**Sensor health & OS** tab](device-health-sensor-health-os.md#sensor-health--os-tab) provides general operating system information, divided into three cards that display the following device attributes:
   - [Sensor health card](device-health-sensor-health-os.md#sensor-health-card)
@@ -54,7 +50,7 @@ The Device health and compliance dashboard is structured in two tabs:
 
 ## Report access permissions
 
-To access the Device health and antivirus compliance report in the Microsoft Defender portal, the following permissions are required:
+To access the Device Health report (the **Device health and compliance** dashboard) in the Microsoft Defender portal, the following permissions are required:
 
 | Permission name | Permission type |
 |:---|:---|
@@ -64,9 +60,9 @@ To access the Device health and antivirus compliance report in the Microsoft Def
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 
-To Assign these permissions:
+To assign the View Data - Threat and vulnerability management (TVM) permission for the Device health and antivirus compliance report:
 
-1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with Security administrator or Global administrator role assigned.
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) using account with Security administrator or Global administrator role assigned.
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 
@@ -80,7 +76,8 @@ To Assign these permissions:
 
 1. In **Permissions**, select **View Data**, and under **View Data** select **Threat and vulnerability management** (TVM).
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 > [!TIP]
 > **Performance tip** Due to a variety of factors (examples listed below) Microsoft Defender Antivirus, like other antivirus software, can cause performance issues on endpoint devices. In some cases, you might need to tune the performance of Microsoft Defender Antivirus to alleviate those performance issues. Microsoft's **Performance analyzer** is a PowerShell command-line tool that helps determine which files, file paths, processes, and file extensions might be causing performance issues; some examples are:
@@ -100,7 +97,10 @@ To Assign these permissions:
 > See: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 >
 
+### See also
+
 - [Create and manage roles for role-based access control](user-roles.md).
 - [Export device antivirus health details API methods and properties](api/device-health-api-methods-properties.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

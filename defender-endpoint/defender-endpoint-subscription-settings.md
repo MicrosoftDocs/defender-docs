@@ -1,21 +1,18 @@
 ---
 title: Manage your Microsoft Defender for Endpoint subscription settings across client devices
 description: Learn about your options for managing your Defender for Endpoint subscription settings. Choose Plan 1, Plan 2, or mixed mode.
-search.appverid: MET150  
-author: denisebmsft
-ms.author: deniseb
-manager: deniseb 
-audience: ITPro
+author: limwainstein
+ms.author: lwainstein
 ms.topic: overview
-ms.date: 06/25/2024
+ms.date: 03/05/2025
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
 ms.reviewer: shlomiakirav, efratka
-f1.keywords: NOCSH  
 ms.collection: 
 - M365-security-compliance
 - m365initiative-defender-endpoint
+ms.custom: sfi-ga-nochange
 ---
 
 # Manage Microsoft Defender for Endpoint subscription settings across client devices
@@ -28,19 +25,16 @@ In Defender for Endpoint, a mixed-licensing scenario is a situation in which an 
 | *Mixed trial* | Try a premium level subscription for some users. Examples include: <br/>- Defender for Endpoint Plan 1 (purchased for all users), and Defender for Endpoint Plan 2 (a trial subscription has been started for some users)<br/>- Microsoft 365 E3 (purchased for all users), and Microsoft 365 E5 (a trial subscription has been started for some users) |
 | *Phased upgrades* | Upgrade user licenses in phases. Examples include:<br/>- Moving groups of users from Defender for Endpoint Plan 1 to Plan 2<br/>- Moving groups of users from Microsoft 365 E3 to E5  |
 
- Until recently, mixed-licensing scenarios weren't supported; in cases of multiple subscriptions, the highest functional subscription would take precedence for your tenant. Now, you can manage your subscription settings to accommodate mixed licensing scenarios across client devices. These capabilities enable you to:
+You can manage your subscription settings to accommodate mixed licensing scenarios across client devices. These capabilities enable you to:
 
 - **Set your tenant to mixed mode and tag devices** to determine which client devices will receive features and capabilities from each plan (we call this option *mixed mode*); **OR**,
 - **Use the features and capabilities from one plan across all your client devices**. 
 
 You can also use a newly added license usage report to track status.
 
-> [!NOTE]
-> If you're using Microsoft Defender for Business and you want to switch to Defender for Endpoint Plan 2, see [Change your endpoint security subscription](/defender-business/mdb-manage-subscription).
-
 ## [**Use mixed mode**](#tab/mixed)
 
-## Set your tenant to mixed mode and tag devices
+To set your tenant to mixed mode and tag devices, follow the guidance on this tab.
 
 > [!IMPORTANT]
 > - **Mixed-mode settings apply to client endpoints only**. Tagging server devices won't change their subscription state. All server devices running Windows Server or Linux should have appropriate licenses, such as [Defender for Servers](/azure/defender-for-cloud/plan-defender-for-servers-select-plan). See [Options for onboarding servers](onboard-windows-server.md).
@@ -52,22 +46,22 @@ You can also use a newly added license usage report to track status.
 
 1. As an admin, go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
-2. Go to **Settings** > **Endpoints** > **Licenses**. Your usage report opens and displays information about your organization's Defender for Endpoint licenses.
+1. Go to **Settings** > **Endpoints** > **Licenses**. Your usage report opens and displays information about your organization's Defender for Endpoint licenses.
 
-3. Under **Subscription state**, select **Manage subscription settings**. 
+1. Under **Subscription state**, select **Manage subscription settings**. 
 
    > [!NOTE]
    > If you don't see **Manage subscription settings**, at least one of the following conditions is true:
    > - You have Defender for Endpoint Plan 1 or Plan 2 (but not both); or 
    > - Mixed-license capabilities haven't rolled out to your tenant yet.
 
-4. A **Subscription settings** flyout opens. Choose the option to use Defender for Endpoint Plan 1 and Plan 2. (No changes will occur until devices are tagged as per the next step.)
+1. A **Subscription settings** flyout opens. Choose the option to use Defender for Endpoint Plan 1 and Plan 2. (No changes will occur until devices are tagged as per the next step.)
 
-5. Tag the devices that should receive either Defender for Endpoint Plan 1 or Plan 2 capabilities. You can choose to tag your devices manually or by using a dynamic rule. [Learn more about device tagging](#more-details-about-device-tagging).
+1. Tag the devices that should receive either Defender for Endpoint Plan 1 or Plan 2 capabilities. You can choose to tag your devices manually or by using a dynamic rule. [Learn more about device tagging](#more-details-about-device-tagging).
 
    | Method | Details |
    |:---|:---|
-   | Tag devices manually | To tag devices manually, create a tag called `License MDE P1` and apply it to devices. To get help with this step, see [Create and manage device tags](machine-tags.md).<br/><br/>Note that devices that are tagged with the `License MDE P1` tag using the [registry key method](machine-tags.md#add-device-tags-by-setting-a-registry-key-value) will not receive downgraded functionality. If you want to tag devices by using the registry key method, use a dynamic rule instead of manual tagging.  |
+   | Tag devices manually | To tag devices manually, create a tag called `License MDE P1` and apply it to devices. To get help with this step, see [Create and manage device tags](machine-tags.md).<br/><br/>Note that devices that are tagged with the `License MDE P1` tag using the [registry key method](machine-tags.md#create-tags) will not receive downgraded functionality. If you want to tag devices by using the registry key method, use a dynamic rule instead of manual tagging.  |
    | Tag devices automatically by using a dynamic rule | *Dynamic rule functionality is new for mixed-license scenarios! It allows you to apply a dynamic and granular level of control over how you manage devices*. <br/><br/>To use a dynamic rule, you specify a set of criteria based on device name, domain, operating system platform, and/or device tags. Devices that meet the specified criteria will receive the Defender for Endpoint Plan 1 or Plan 2 capabilities according to your rule. <br/><br/>As you define your criteria, you can use the following condition operators: <br/>- `Equals` / `Not equals`<br/>- `Starts with`<br/>- `Contains` / `Does not contain` <br/><br/>For **Device name**, you can use freeform text.<br/><br/>For **Domain**, select from a list of domains.<br/><br/>For **OS platform**, select from a list of operating systems.<br/><br/>For **Tag**, use the freeform text option. Type the tag value that corresponds to the devices that should receive either Defender for Endpoint Plan 1 or Plan 2 capabilities. See the example in [More details about device tagging](#more-details-about-device-tagging). |
  
    Device tags are visible in the **Device inventory** view and in the [Defender for Endpoint APIs](/defender-vulnerability-management/tvm-supported-os).
@@ -75,7 +69,7 @@ You can also use a newly added license usage report to track status.
    > [!NOTE]
    > Dynamically added Defender for Endpoint P1 tags are not currently filterable in the Device inventory view. 
 
-6. Save your rule and wait for up to three (3) hours for tags to be applied. Then, proceed to [Validate that a device is receiving only Defender for Endpoint Plan 1 capabilities](#validate-that-a-device-is-receiving-only-defender-for-endpoint-plan-1-capabilities).
+1. Save your rule and wait for up to three (3) hours for tags to be applied. Then, proceed to [Validate that a device is receiving only Defender for Endpoint Plan 1 capabilities](#validate-that-a-device-is-receiving-only-defender-for-endpoint-plan-1-capabilities).
 
 ### More details about device tagging
 
@@ -90,16 +84,15 @@ For example, suppose that you want to use a tag called `VIP` for all the devices
 1. Create a device tag called `VIP`, and apply it to all the devices that should receive Defender for Endpoint Plan 2 capabilities. Use one of the following methods to create your device tag:
 
    - [Add device tags using the portal](machine-tags.md#add-device-tags-using-the-portal).
-   - [Add device tags by setting a registry key value](machine-tags.md#add-device-tags-by-setting-a-registry-key-value).
+   - [Add device tags by setting a registry key value](machine-tags.md#create-tags).
    - [Add or remove machine tags by using the Defender for Endpoint API](api/add-or-remove-machine-tags.md).
-   - [Add device tags by creating a custom profile in Microsoft Intune](machine-tags.md#add-device-tags-by-creating-a-custom-profile-in-microsoft-intune).
+   - [Add device tags by creating a custom profile in Microsoft Intune](machine-tags.md#create-tags).
 
-2. Set up a dynamic rule using the condition operator `Tag Does not contain VIP`. In this case, all devices that do not have the `VIP` tag will receive the `License MDE P1` tag and Defender for Endpoint Plan 1 capabilities. 
-
+1. Set up a dynamic rule using the condition operator `Tag Does not contain VIP`. In this case, all devices that do not have the `VIP` tag will receive the `License MDE P1` tag and Defender for Endpoint Plan 1 capabilities. 
 
 ## [**Use one plan**](#tab/oneplan)
 
-## Use the features and capabilities from one plan across all your devices
+To use the features and capabilities from one plan across all your devices, follow the guidance on this tab.
 
 > [!IMPORTANT]
 > To access license information, you must have one of the following roles assigned in Microsoft Entra ID:
@@ -108,20 +101,24 @@ For example, suppose that you want to use a tag called `VIP` for all the devices
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in as a Security Administrator.
 
-2. Go to **Settings** > **Endpoints** > **Licenses**.
+1. Go to **Settings** > **Endpoints** > **Licenses**.
 
-3. Under **Subscription state**, select **Manage subscription settings**. 
+1. Under **Subscription state**, select **Manage subscription settings**. 
 
    > [!NOTE]
    > If you don't see **Manage subscription settings**, at least one of the following conditions is true:
    > - You have Defender for Endpoint Plan 1 or Plan 2 (but not both); or 
    > - Mixed-license capabilities haven't rolled out to your tenant yet.
 
-4. A **Subscription settings** flyout opens. Choose one plan for all users and devices, and then select **Done**. It can take up to three hours for your changes to be applied.
+1. A **Subscription settings** flyout opens. Choose one plan for all users and devices, and then select **Done**. It can take up to three hours for your changes to be applied.
 
    If you chose to apply Defender for Endpoint Plan 1 to all devices, proceed to [Validate that devices are receiving only Defender for Endpoint Plan 1 capabilities](#validate-that-a-device-is-receiving-only-defender-for-endpoint-plan-1-capabilities).
 
 ---
+
+Microsoft Defender for Business isn't supported for mixed-license scenarios. If you're using Defender for Business and you want to switch to Defender for Endpoint Plan 2, contact support. For more information, see [Change your endpoint security subscription](/defender-business/mdb-manage-subscription).
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
@@ -132,7 +129,7 @@ After you have assigned Defender for Endpoint Plan 1 capabilities to some or all
 
 1. In the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), go to **Assets** > **Devices**.
 
-2. Select a device that is tagged with `License MDE P1`. You should see that Defender for Endpoint Plan 1 is assigned to the device.
+1. Select a device that is tagged with `License MDE P1`. You should see that Defender for Endpoint Plan 1 is assigned to the device.
 
 > [!NOTE]
 > Devices that are assigned Defender for Endpoint Plan 1 capabilities don't have any vulnerabilities or security recommendations listed.
@@ -150,9 +147,9 @@ To reduce management overhead, there's no requirement for device-to-user mapping
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
-2. Choose **Settings** > **Endpoints** > **Licenses**.
+1. Choose **Settings** > **Endpoints** > **Licenses**.
 
-3. Review your available and assigned licenses. The calculation is based on detected users who have accessed devices that are onboarded to Defender for Endpoint.
+1. Review your available and assigned licenses. The calculation is based on detected users who have accessed devices that are onboarded to Defender for Endpoint.
 
 ## More resources
 
@@ -162,4 +159,3 @@ To reduce management overhead, there's no requirement for device-to-user mapping
 - [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](/defender-business/mdb-overview) (endpoint protection for small and medium-sized businesses)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -1,21 +1,21 @@
 ---
 title: What is Microsoft Security Exposure Management?
 description: Learn how Microsoft Security Exposure Management enhances and extends security posture management.
-author: dlanger
-ms.author: dlanger
-manager: rayne-wiselman
 ms.topic: overview
-ms.service: exposure-management
-ms.date: 11/04/2024
+ms.author: dlanger
+author: dlanger
+ms.date: 07/30/2025
+ai-usage: ai-assisted
 ---
-
 
 # What is Microsoft Security Exposure Management?
 
-Microsoft Security Exposure Management is a security solution that provides a unified view of security posture across company assets and workloads. Security Exposure Management enriches asset information with security context that helps you to proactively manage attack surfaces, protect critical assets, and explore and mitigate exposure risk.
+Microsoft Security Exposure Management is a security solution that provides a unified view of security posture across company assets and workloads spanning endpoints, cloud resources, and external attack surfaces. Security Exposure Management enriches asset information with security context that helps you to proactively manage attack surfaces, protect critical assets, and explore and mitigate exposure risk across your entire digital estate.
+
+With the integration of Defender for Cloud in the Defender portal, MSEM now provides comprehensive exposure management across endpoints and cloud environments, aggregating signals from Azure, AWS, and GCP (via Defender for Cloud integration) alongside traditional on-premises signals. This unified exposure graph covers devices, identities, cloud assets, and external attack surfaces, aligning with Gartner's Continuous Threat Exposure Management (CTEM) approach to provide end-to-end visibility and risk management.
 
 > [!NOTE]
-> Microsoft Security Exposure Management data and capabilities are currently unavailable in U.S Government clouds - GCC, GCC High and DoD.
+> Microsoft Security Exposure Management is available in Public Cloud only. It's not available in national/sovereign clouds (US Gov, China Gov, or other sovereign clouds).
 
 ## Who uses Security Exposure Management?
 
@@ -30,87 +30,35 @@ Security Exposure Management is aimed at:
 
 With Security Exposure Management you can:
 
-- **Get a unified view across the organization**: Security Exposure Management continuously discovers assets and workloads, and gathers discovered data into a unified and up-to-date view of your inventory and attack surface.
+- **Get a unified view across the organization**: Security Exposure Management continuously discovers assets and workloads across endpoints, cloud environments, and external attack surfaces, gathering discovered data into a unified and up-to-date view of your inventory and attack surface.
 
-- **Manage and investigate attack surfaces**: Visualize, analyze, and manage cross-workload attack surfaces.
-  - The enterprise exposure graph gathers information to provide a comprehensive view of security posture and exposure across the business.
-  - Graph schemas provide contextual information about specific organizational entities such as devices, identities, machines, and storage.
-  - Query the enterprise exposure graph to explore assets, assess risk, and hunt for threats across on-premises, hybrid, and multicloud environments.
-  - Visualize your environment and graph queries with the attack surface map.
+- **Manage and investigate attack surfaces**: Visualize, analyze, and manage cross-workload attack surfaces spanning on-premises, cloud, and hybrid environments.
+  - The enterprise exposure graph gathers information from multiple sources including cloud misconfigurations, multi-cloud assets, and external attack surface data to provide a comprehensive view of security posture and exposure across the business.
+  - Graph schemas provide contextual information about specific organizational entities such as devices, identities, machines, cloud resources, and storage across all environments.
+  - Query the enterprise exposure graph to explore assets, assess risk, and hunt for threats across on-premises, hybrid, and multicloud environments including Azure, AWS, and GCP.
+  - Visualize your environment and graph queries with the attack surface map, which now includes cloud resources and their relationships.
 
-- **Discover and safeguard critical assets**: Security Exposure Management marks predefined assets and assets you customize, as critical. This enables you to focus and prioritize on those critical assets to ensure security and business continuity.
+- **Discover and safeguard critical assets**: Security Exposure Management marks predefined assets and assets you customize as critical across all domains including devices, identities, and cloud resources. This enables you to focus and prioritize on those critical assets to ensure security and business continuity.
 
 - **Manage exposure**: Security Exposure Management provides tools to manage security exposure, and mitigate exposure risk.
+  - The **Overview** dashboard organizes work around two core actions:
+    - **Resolve Now** — Prioritized, actionable items across Patch, Mitigate, and Fix categories, focused on internet-exposed and business-critical assets.
+    - **Monitor Exposure** — A real-time view of internet-exposed resources (cloud assets, devices, shadow resources) and domain initiative scores across Code, Endpoint, Cloud, Identity, and SaaS.
   - Exposure insights aggregate security posture data, and provide rich context around the security posture state of your asset inventory.
-  - You leverage these insights to prioritize security efforts and investments.
+  - Use these insights to prioritize security efforts and investments.
   - Insights include security events, recommendations, metrics, and security initiatives.
-  - As you manage exposure risk, attack paths show you how an attacker might breach your attack surface.
-    - Security Exposure Management generates attack paths based on data collected across assets and workloads. It simulates attack scenarios, and identifies weaknesses that an attacker could exploit.
-    - You can use the enterprise exposure graph and attack surface map to visualize and understand potential threats.
-    - You can also focus on choke points through which many attack paths flow.
-    - Actionable recommendations help you to mitigate identified attack paths.
+  - As you manage exposure risk, attack paths show you how an attacker might breach your attack surface, including hybrid attack paths that span on-premises and cloud contexts.
+    - Security Exposure Management generates attack paths based on data collected across assets and workloads from multiple environments. It simulates attack scenarios, and identifies weaknesses that an attacker could exploit across endpoints and cloud resources.
+    - You can use the enterprise exposure graph and attack surface map to visualize and understand potential threats across your hybrid infrastructure.
+    - You can also focus on choke points through which many attack paths flow, including those that bridge on-premises and cloud environments.
+    - Actionable recommendations help you to mitigate identified attack paths across all domains.
+  - You can assess, prioritize, and remediate vulnerabilities across devices and cloud resources through [Microsoft Defender Vulnerability Management integration in Security Exposure Management](vulnerability-management-integration.md).
 
-- **Connect your data**: Security Exposure Management supports a variety of data connectors to integrate with different security solutions and data sources.
-  - Consolidate security data from multiple sources into a single, unified view.
-  - Gain deeper insights into your security posture by integrating data from various environments.
-  - Simplify the management of security data across different platforms and solutions.
-
-## What's integrated into Security Exposure Management?
-
-Currently, Security Exposure Management consolidates security posture information and insights from workloads that include:
-
-- Microsoft Defender for Endpoint
-- Microsoft Defender for Identity
-- Microsoft Defender for Cloud Apps
-- Microsoft Defender for Office
-- Microsoft Defender for IoT
-- Microsoft Secure Score  
-- Microsoft Defender Vulnerability Management  
-- Microsoft Defender for Cloud
-- Microsoft Entra ID  
-- Microsoft Defender External Attack Surface Management (EASM)
-
-In addition to Microsoft services, Security Exposure Management allows you to connect to external data sources to further enrich and extend your security posture management.
-For more information on data connectors, see [Data connectors overview](overview-data-connectors.md).
-
-## How do I buy Microsoft Security Exposure Management?
-
-Exposure Management is available in the Microsoft Defender portal at [https://security.microsoft.com](https://security.microsoft.com)
-
-Access to the exposure management blade and features in the Microsoft Defender portal is available with any of these licenses:
-
-- Microsoft 365 E5 o*r A5*
-- Microsoft 365 E3
-- Microsoft 365 E3 with the Microsoft Enterprise Mobility + Security E5 add-on
-- Microsoft 365 A3 with the Microsoft 365 A5 security add-on
-- Microsoft Enterprise Mobility + Security E5 or A5
-- Microsoft Defender for Endpoint (Plan 1 and 2)
-- Microsoft Defender for Identity
-- Microsoft Defender for Cloud Apps
-- Microsoft Defender for Office 365 (Plans 1 and 2)
-- Microsoft Defender Vulnerability Management
-
-Integration of data from the above tools and other Microsoft Security tools like Microsoft Defender for Cloud, Microsoft Defender Cloud Security Posture Management and Microsoft Defender External Attack Surface Management is available with those licenses.
-
-Integration of non-Microsoft security tools will be a consumption-based cost based on number of assets in the connected security tool. The external connectors are free during public preview, and pricing will be announced before starting to bill for external connectors at GA.
-
-### Data freshness, retention, and related functionality
-
-We currently ingest and process supported data from first-party Microsoft products, making it available within the enterprise exposure graph and applicable Microsoft Security Exposure Management experiences built on top of graph data within 72 hours of its production at the source product.
-
-Microsoft product data is retained for no less than 14 days in the enterprise exposure graph and/or Microsoft Security Exposure Management. Only the latest data snapshot received from Microsoft products is retained; we do not store historical data.
-
-Some enterprise exposure graph and/or Microsoft Security Exposure Management experiences data is available for querying via Advanced Hunting and is subject to Advanced Hunting service limitations.
-
-We reserve the right to modify some or all of these parameters in the future, including:
-
-- Data ingestion frequency and freshness: We may increase the current 72-hour latency (decrease the frequency of data ingestion) for some or all Microsoft data sources.
-- Data retention period: We may decrease the current 14-day data retention period.
-- Service features and functionality: We may alter, limit, or discontinue specific features, capabilities, or functionalities of the service built on top of the enterprise exposure graph and/or Microsoft Security Exposure Management data.
-- Data query limits: We may impose limitations on the number, frequency, or type of data queries that can be performed against enterprise exposure graph or Microsoft Security Exposure Management data.
-
- We will make reasonable efforts to provide advance notice of any significant changes to the service. However, you acknowledge and agree that you are solely responsible for monitoring any such notifications.
+- **Connect your data**: Security Exposure Management supports a variety of data connectors to integrate with different security solutions and data sources, including external vendors and cloud platforms.
+  - Consolidate security data from multiple sources including third-party tools (ServiceNow CMDB, Tenable, Qualys, Rapid7) into a single, unified view within the Exposure Management platform.
+  - Gain deeper insights into your security posture by integrating data from various environments and external sources.
+  - Simplify the management of security data across different platforms and solutions through unified exposure management connectors.
 
 ## Next steps
 
-Review [prerequisites](prerequisites.md) to get started with Security Exposure Management.
+Review [integration and licensing](integration-licensing.md) for Microsoft Security Exposure Management to understand how to access and use the service.

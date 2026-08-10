@@ -5,20 +5,21 @@ search.appverid: met150
 ms.service: defender-xdr
 f1.keywords: 
 - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: how-to
-ms.custom: 
+ms.custom:
+- msecd-doc-authoring-1014
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-ms.date: 10/18/2022
+ms.date: 06/15/2026
+ai-usage: ai-assisted
 ---
 
 # Alert grading for session cookie theft alert
@@ -28,7 +29,7 @@ ms.date: 10/18/2022
 **Applies to:**
 - Microsoft Defender XDR
 
-This article contains information about alert grading for Session Cookie theft alerts in Microsoft Defender XDR:
+This article contains information about alert grading for Session Cookie theft alerts in Microsoft Defender:
 
 - **Stolen session cookie was used**
 - **Authentication request from AiTM-related phishing page**
@@ -37,14 +38,15 @@ Threat actors use innovative ways to infiltrate their target environments. Takin
 
 This attack works by setting up an intermediate (phishing) site, effectively working as a proxy connection between the user and the legitimate website that the attacker is impersonating. By acting as an intermediary (proxy), the attacker is able to steal the target's password and session cookie. The attacker is therefore able to authenticate to a legitimate session as they're authenticating on behalf of the user.
 
-This playbook helps in investigating cases where suspicious behavior is observed indicative of an Attack-in-the-middle (AiTM) type of attack for cookie theft. This helps security teams like security operations center (SOC) and IT administrators to review, manage, and grade the alerts as True Positive (TP) or False Positive (FP), and if it's TP, take recommended actions to remediate the attack and mitigate the security risks arising because of it.
+This playbook helps in investigating cases where suspicious behavior is observed indicative of an adversary-in-the-middle (AiTM) type of attack for cookie theft. This playbook helps security teams like security operations center (SOC) and IT administrators to review, manage, and grade the alerts as True Positive (TP) or False Positive (FP), and if it's TP, take recommended actions to remediate the attack and mitigate the security risks arising because of it.
 
 The results of using this playbook are:
 
 - You have identified the alerts associated with AiTM as malicious (TP) or benign (FP) activities.
 - If identified as malicious, you've taken the necessary action to remediate the attack.
 
-## Investigating steps
+<a name="investigating-steps"></a>
+## Investigation steps for session cookie theft alerts
 
 1. Investigate whether the affected user has triggered any other security alerts.
 
@@ -80,9 +82,8 @@ The results of using this playbook are:
 ## Advanced hunting queries
 
 [Advanced hunting](advanced-hunting-overview.md) is a query-based threat hunting tool that lets you inspect events in your network and locate threat indicators.
-Use these queries to gather more information related to the alert and determine whether the activity is suspicious.
 
-Ensure you have access to the following tables:
+Before running these queries, ensure you have access to the following tables:
 
 - AadSignInEventsBeta - contains sign-in information for users.
 - IdentityLogonEvents - contains sign-in information for users.
@@ -92,7 +93,7 @@ Ensure you have access to the following tables:
 - UrlClickEvents - contains Url click logs for Urls that were clicked in the emails.
 - DeviceEvents - contains device activity audit events.
 
-Use the query below to identify suspicious sign-in behavior:
+Use the following query to identify suspicious sign-in behavior:
 
 ```kusto
 let OfficeHomeSessionIds = 
@@ -112,7 +113,7 @@ AADSignInEventsBeta
 | where OtherTimestamp > Timestamp and OtherCountry != Country
 ```
 
-Use the below query for identifying uncommon countries/regions: 
+Use the following query to identify uncommon countries/regions: 
 
 ```kusto
 AADSignInEventsBeta 
@@ -123,7 +124,7 @@ AADSignInEventsBeta
 | summarize Countries = make_set(Country) by AccountObjectId, AccountDisplayName
 ```
 
-Use this query to find new email Inbox rules created during a suspicious sign-in session: 
+Use the following query to find new email Inbox rules created during a suspicious sign-in session. This query first identifies suspicious session IDs associated with Microsoft Entra ID "Anomalous Token" alerts, then checks whether any Inbox rules were created during those sessions:
 
 ```kusto
 //Find suspicious tokens tagged by AAD "Anomalous Token" alert
@@ -151,7 +152,10 @@ Once you determine that the alert activities are malicious, classify those alert
   - Domains that are typo-squatted might either clear DMARC, DKIM, SPF policies (since the domain is different altogether) or they might return "null results (as it's probably not configured by the threat actor).
 - Block URLs or IP addresses (on the network protection platforms) that were identified as malicious during the investigation.
 
-## See also
+<a name="see-also"></a>
+## Related content
 
-[From cookie theft to BEC](https://www.microsoft.com/security/blog/2022/07/12/from-cookie-theft-to-bec-attackers-use-aitm-phishing-sites-as-entry-point-to-further-financial-fraud/)
+For more background on AiTM phishing attacks and session cookie theft, see the following resource:
+
+- [From cookie theft to BEC](https://www.microsoft.com/security/blog/2022/07/12/from-cookie-theft-to-bec-attackers-use-aitm-phishing-sites-as-entry-point-to-further-financial-fraud/)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

@@ -2,39 +2,25 @@
 title: Microsoft Defender Antivirus ring deployment guide overview
 description: Microsoft Defender Antivirus is an enterprise endpoint security platform that helps defend against advanced persistent threats. This article provides an overview about how to use ring deployment methods to update your Microsoft Defender Antivirus clients.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: chrisda
+author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: high
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 - mde-ngp
 ms.custom: intro-overview
-ms.topic: conceptual
+ms.topic: concept-article
 ms.subservice: ngp
-search.appverid: met150
-ms.date: 07/21/2023
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
+
 ---
 
 # Deploy Microsoft Defender Antivirus in rings
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
-
-**Platforms**
-
-- Windows
-- Windows Server
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.
 
@@ -43,6 +29,13 @@ Microsoft Defender for Endpoint is an enterprise endpoint security platform desi
 
 Deploying Microsoft Defender for Endpoint can be done using a ring-based deployment approach and updating using the gradual rollout process.
 
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
+- Windows Server
+
 ## Ring deployment overview
 
 It's important to ensure that client components are up to date to deliver critical protection capabilities and prevent attacks.
@@ -50,7 +43,7 @@ Capabilities are provided through several components:
 
 - [Endpoint Detection & Response](overview-endpoint-detection-response.md)
 - [Next-generation protection](microsoft-defender-antivirus-windows.md) with [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md)
-- [Attack Surface Reduction](overview-attack-surface-reduction.md)
+- [Attack Surface Reduction](attack-surface-reduction-overview.md)
 
 Updates are released monthly using a gradual release process. This process helps to enable early failure detection to identify problematic results in your unique environment as it occurs and address it quickly before a larger rollout.
 
@@ -82,3 +75,4 @@ Customers that prioritize availability over security, should take a crawl, walk,
 - Ring deployment using Group Policy and Windows Server Update Services
    - [Pilot ring deployment using Group Policy and Windows Server Update Services](microsoft-defender-antivirus-pilot-ring-deployment-group-policy-wsus.md)
    - [Production ring deployment using Group Policy and Windows Server Update Services](microsoft-defender-antivirus-production-ring-deployment-group-policy-wsus.md)
+

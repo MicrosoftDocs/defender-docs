@@ -2,17 +2,16 @@
 title: SIEM server integration with Microsoft 365 services and applications
 f1.keywords: 
   - NOCSH
-ms.author: deniseb
-author: denisebmsft
-manager: deniseb
+ms.author: guywild
+author: guywi-ms
 audience: ITPro
-ms.topic: conceptual
-ms.date: 6/20/2023
+ms.topic: how-to
+ms.date: 07/03/2026
 ms.localizationpriority: medium
 ms.collection: 
   - m365-security
   - tier2
-ms.custom: 
+ms.custom: msecd-doc-authoring-1016
   - Ent_Solutions
   - SIEM
   - seo-marvel-apr2020
@@ -20,14 +19,17 @@ description: Get an overview of Security Information and Event Management (SIEM)
 ms.service: defender-office-365
 search.appverid: met150
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Security Information and Event Management (SIEM) server integration with Microsoft 365 services and applications
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
+
+This article explains how to integrate a Security Information and Event Management (SIEM) server with Microsoft 365 services and applications. It covers available integration methods, audit logging prerequisites, and step-by-step instructions for connecting Microsoft Sentinel to Microsoft 365 Defender data.
 
 ## Summary
 
@@ -51,7 +53,7 @@ A SIEM server can receive data from a wide variety of Microsoft 365 services and
 |---|---|---|
 |[Microsoft Defender for Office 365](mdo-about.md)|Audit logs|[SIEM integration with Microsoft Defender for Office 365](siem-integration-with-office-365-ti.md)|
 |[Microsoft Defender for Endpoint](/windows/security/threat-protection/)|HTTPS endpoint hosted in Azure <p> REST API|[Pull alerts to your SIEM tools](/defender-endpoint/configure-siem)|
-|[Microsoft Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security)|Log integration|[SIEM integration with Microsoft Defender for Cloud Apps](/cloud-app-security/siem)|
+|[Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)|Log integration|[SIEM integration with Microsoft Defender for Cloud Apps](/defender-cloud-apps/siem)|
 
 > [!TIP]
 > Take a look at [Microsoft Sentinel](/azure/sentinel/overview). Microsoft Sentinel comes with connectors for Microsoft solutions. These connectors are available "out of the box" and provide for real-time integration. You can use Microsoft Sentinel with your Microsoft Defender XDR solutions and Microsoft 365 services, including Office 365, Microsoft Entra ID, Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and more.
@@ -68,11 +70,15 @@ Make sure that audit logging is turned on before you configure SIEM server integ
 Verify the following requirements:
 
 - Your current Microsoft 365 subscription (for example, Microsoft Defender for Office 365 Plan 2) allows for Microsoft Sentinel integration.
-- Your account in Microsoft Defender for Office 365 or Microsoft Defender XDR is a *Security Administrator*.
+- Your account in Microsoft Defender for Office 365 or Microsoft Defender is a *Security Administrator*.
 - Verify that you have *Write permissions in Microsoft Sentinel*.
 
+### Connect Microsoft Sentinel to Microsoft Defender for Office 365 data
+
+Use the following steps to connect the Microsoft Defender XDR connector in Microsoft Sentinel and stream email event data from Microsoft Defender for Office 365 into your SIEM.
+
 1. Navigate to Microsoft Sentinel.
-1. On the navigation to the left of the screen **Configuration** \> **Data connectors**.
+1. In the left navigation pane, select **Configuration** \> **Data connectors**.
 1. **Search for** Microsoft Defender XDR and select the **Microsoft Defender XDR (preview) connector**.
 1. On the right of your screen select **Open Connector Page**.
 1. Under **Configuration** \> select **Connect incidents & alerts**
@@ -81,12 +87,15 @@ Verify the following requirements:
 
 1. Scroll to **Microsoft Defender for Office 365** in the **Connect events** section of the page.
 
-   You can choose tables from *any other Microsoft Defender product* you find helpful and applicable while completing the following final step:
+   You can also choose tables from *any other Microsoft Defender product* you find helpful and applicable before you select **Apply Changes**:
 
 1. Select **EmailEvents**, **EmailUrlInfo**, **EmailAttachmentInfo**, and **EmailPostDeliveryEvents** > and **Apply Changes**.
 
-## More resources
+<a name="more-resources"></a>
+## Related content
 
-[Integrate security solutions in Microsoft Defender for Cloud](/azure/defender-for-cloud/partner-integration)
+The following articles provide additional guidance on integrating security solutions and alerts with your SIEM server:
 
-[Integrate Microsoft Graph Security API alerts with a SIEM](/graph/security-integration)
+- [Integrate security solutions in Microsoft Defender for Cloud](/azure/defender-for-cloud/partner-integration)
+
+- [Integrate Microsoft Graph Security API alerts with a SIEM](/graph/security-integration)

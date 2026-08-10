@@ -1,26 +1,21 @@
 ---
 title: Outbound delivery pools
-f1.keywords: 
-  - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-audience: ITPro
-ms.topic: conceptual
+ms.author: chrisda
+ms.topic: concept-article
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: ac11edd9-2da3-462d-8ea3-bbf9dbc6f948
 ms.collection: 
   - m365-security
   - tier2
 description: Learn how the delivery pools are used to protect the reputation of email servers in the Microsoft 365 datacenters.
 ms.service: defender-office-365
-ms.date: 11/3/2023
+ms.date: 06/25/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ms.custom: sfi-ga-nochange
 ---
 
 # Outbound delivery pools
@@ -29,7 +24,7 @@ appliesto:
 
 Email servers in the Microsoft 365 datacenters might be temporarily guilty of sending spam. For example, a malware or malicious spam attack in an on-premises email organization that sends outbound mail through Microsoft 365, or compromised Microsoft 365 accounts. Attackers also try to avoid detection by relaying messages through Microsoft 365 forwarding.
 
-These scenarios can result in the IP address of the affected Microsoft 365 datacenter servers appearing on third-party blocklists. Destination email organizations that use these blocklists will reject email from those Microsoft 365 messages sources.
+These scenarios can result in the IP address of the affected Microsoft 365 datacenter servers appearing on non-Microsoft blocklists. Destination email organizations that use these blocklists will reject email from those Microsoft 365 messages sources.
 
 ## High-risk delivery pool
 
@@ -39,7 +34,7 @@ The high risk delivery pool is a separate IP address pool for outbound email tha
 
 The possibility that IP addresses in the high-risk delivery pool are placed on IP blocklists remains, but this behavior is by design. Delivery to the intended recipients isn't guaranteed, because many email organizations don't accept messages from the high risk delivery pool.
 
-For more information, see [Control outbound spam](outbound-spam-protection-about.md).
+For more information, see [Control outbound spam](outbound-spam-protection-about.md) and [Troubleshoot outbound sending limits in Exchange Online](outbound-spam-sending-limits-troubleshoot.md).
 
 > [!NOTE]
 > Messages where the source email domain has no A record and no MX record defined in public DNS are always routed through the high-risk delivery pool, regardless of their spam or sending limit disposition.
@@ -66,25 +61,24 @@ In certain scenarios, messages that are forwarded or relayed via Microsoft 365 a
 
 Microsoft 365 needs to verify that the original sender is legitimate so we can confidently deliver the forwarded message.
 
-The forwarded or relayed message should meet one of the following criteria to avoid using the relay pool:
+To avoid using the relay pool, a forwarded or relayed message must meet at least one of the following criteria when it arrives at Microsoft 365:
 
-- The outbound sender is in an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
-- SPF passes when the message comes to Microsoft 365.
-- DKIM on the sender domain passes when the message comes to Microsoft 365.
+- The outbound sender is in an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) of the organization.
+- SPF passes for the sending domain when the message arrives at Microsoft 365.
 
 In cases where we can authenticate the sender, we use Sender Rewriting Scheme (SRS) to help the recipient email system know that the forwarded message is from a trusted source. You can read more about how that works and what you can do to help make sure the sending domain passes authentication in [Sender Rewriting Scheme (SRS) in Office 365](/office365/troubleshoot/antispam/sender-rewriting-scheme).
 
-For DKIM to work, make sure you enable DKIM for sending domain. For example, fabrikam.com is part of contoso.com and is defined in the accepted domains of the organization. If the message sender is sender@fabrikam.com, DKIM needs to be enabled for fabrikam.com. you can read on how to enable at [Use DKIM to validate outbound email sent from your custom domain](email-authentication-dkim-configure.md).
+To improve authentication of forwarded mail, make sure DKIM is enabled for the sending domain. For example, if fabrikam.com is part of contoso.com and is defined in the accepted domains of the organization, and the sender is `sender@fabrikam.com`, enable DKIM for fabrikam.com. This improvement helps authentication, but by itself it doesn't prevent routing through the relay pool, as described in the criteria above. To enable DKIM, see [Set up DKIM to sign mail from your cloud domain](email-authentication-dkim-configure.md).
 
 To add a custom domain, follow the steps in [Add a domain to Microsoft 365](/microsoft-365/admin/setup/add-domain).
 
-If the MX record for your domain points to a third party service or an on-premises email server, you should use [Enhanced Filtering for Connectors](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors). Enhanced Filtering ensures SPF validation is correct for inbound mail and avoids sending email through the relay pool.
+If the MX record for your domain points to a non-Microsoft service or an on-premises email server, you should use [Enhanced Filtering for Connectors](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors). Enhanced Filtering ensures SPF validation is correct for inbound mail and avoids sending email through the relay pool.
 
 ### Find out which outbound pool was used
 
 As an Exchange Service Administrator or Global Administrator<sup>\*</sup>, you might want to find out which outbound pool was used to send a message from Microsoft 365 to an external recipient.
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 To do so, you can [use Message trace](/exchange/monitoring/trace-an-email-message/message-trace-modern-eac) and look for the `OutboundIpPoolName` property in the output. This property contains a friendly name value for the outbound pool that was used.

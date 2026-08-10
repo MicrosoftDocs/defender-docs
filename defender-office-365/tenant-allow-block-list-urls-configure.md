@@ -1,35 +1,31 @@
 ---
 title: Allow or block URLs using the Tenant Allow/Block List
-f1.keywords:
-  - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-audience: ITPro
+ms.author: chrisda
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150manage-tenant-allows.md
 ms.collection:
   - m365-security
   - tier1
 description: Admins can learn how to allow or block URLs in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 10/09/2024
+ms.date: 07/03/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
+ai-usage: ai-assisted
 ---
 
 # Allow or block URLs using the Tenant Allow/Block List
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, admins can create and manage entries for URLs in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
+In all organizations with cloud mailboxes, admins can create and manage entries for URLs in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
 
 > [!NOTE]
-> To allow phishing URLs from third-party phishing simulations, use the [advanced delivery configuration](advanced-delivery-policy-configure.md) to specify the URLs. Don't use the Tenant Allow/Block List.
+> To allow phishing URLs from non-Microsoft phishing simulations, use the [advanced delivery policy configuration](advanced-delivery-policy-configure.md) to specify the URLs. Don't use the Tenant Allow/Block List.
 
 This article describes how admins can manage entries for URLs in the Microsoft Defender portal and in Exchange Online PowerShell.
 
@@ -37,24 +33,30 @@ This article describes how admins can manage entries for URLs in the Microsoft D
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Tenant Allow/Block List** page, use <https://security.microsoft.com/tenantAllowBlockList>. To go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
-- To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). To connect to standalone EOP PowerShell, see [Connect to Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-- For URL entry syntax, see the [URL syntax for the Tenant Allow/Block List](#url-syntax-for-the-tenant-allowblock-list) section later in this article.
+- For URL entry syntax, see [URL syntax for the Tenant Allow/Block List](#url-syntax-for-the-tenant-allowblock-list).
 
 - - Entry limits for URLs:
-  - **Exchange Online Protection**: The maximum number of allow entries is 500, and the maximum number of block entries is 500 (1000 URL entries in total).
-  - **Defender for Office 365 Plan 1**: The maximum number of allow entries is 1000, and the maximum number of block entries is 1000 (2000 URL entries in total).
-  - **Defender for Office 365 Plan 2**: The maximum number of allow entries is 5000, and the maximum number of block entries is 10000 (15000 URL entries in total).
+  - **Microsoft 365 organizations without Defender for Office 365**: A maximum of 1000 total URL entries:
+    - Allow entries: 500 maximum.
+    - Block entries: 500 maximum.
+  - **Microsoft 365 organizations with Defender for Office 365 Plan 1 (included or in an add-on subscription)**: A maximum of 2000 total URL entries:
+    - Allow entries: 1000 maximum.
+    - Block entries: 1000 maximum.
+  - **Microsoft 365 organizations with Defender for Office 365 Plan 2 (included or in an add-on subscription)**: A maximum of 15000 total URL entries:
+    - Allow entries: 5000 maximum.
+    - Block entries: 10000 maximum.
 
 - You can enter a maximum of 250 characters in a URL entry.
 
 - An entry should be active within 5 minutes.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): 
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell):
     - *Add and remove entries from the Tenant Allow/Block List*: Membership assigned with the following permissions:
       - **Authorization and settings/Security settings/Detection tuning (manage)**
-    - *Read-only access to the Tenant Allow/Block List*: 
+    - *Read-only access to the Tenant Allow/Block List*:
       - **Authorization and settings/Security settings/Read-only**.
       - **Authorization and settings/Security settings/Core Security settings (read)**.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
@@ -66,16 +68,29 @@ This article describes how admins can manage entries for URLs in the Microsoft D
       - **Security Reader**
       - **View-Only Configuration**
       - **View-Only Organization Management**
-  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions *and* permissions for other features in Microsoft 365.
+  - [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions *and* permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Create allow entries for URLs
 
-You can't create allow entries for URLs directly in the Tenant Allow/Block List. Unnecessary allow entries expose your organization to malicious email that would have been filtered by the system.
+Unnecessary allow entries expose your organization to malicious email that the system would otherwise filter, so there are limitations for creating allow entries directly in the Tenant Allow/Block List.
 
-Instead, you use the **URLs** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=url>. When you submit a blocked URL as **I've confirmed it's clean**, you can select **Allow this URL** to add and allow entry for the URL on the **URLs** tab on the **Tenant Allow/Block Lists** page. For instructions, see [Report good URLs to Microsoft](submissions-admin.md#report-good-urls-to-microsoft).
+To create allow entries for URLs, use either of the following methods:
+
+- From the **URLs** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=url>. When you submit a blocked URL as **I've confirmed it's clean**, you can select **Allow this URL** to add and allow entry for the URL on the **URLs** tab on the **Tenant Allow/Block Lists** page. For instructions, see [Report good URLs to Microsoft](submissions-admin.md#report-good-urls-to-microsoft).
+
+  This method is required to override malware and high confidence phishing verdicts.
+
+- From the **URLs** tab on the **Tenant Allow/Block Lists** page or in PowerShell, as described in the following procedures.
+
+  This method is available to override the following verdicts only:
+
+  - Bulk
+  - Spam
+  - High confidence spam
+  - Phishing (not high confidence phishing)
 
 [!INCLUDE [Allow entry facts](../includes/allow-entry-facts.md)]
 >
@@ -83,29 +98,69 @@ Instead, you use the **URLs** tab on the **Submissions** page at <https://securi
 >
 > A URL allow entry doesn't prevent the URL from being wrapped by Safe Links protection in Defender for Office 365. For more information, see [Do not rewrite list in SafeLinks](safe-links-about.md#do-not-rewrite-the-following-urls-lists-in-safe-links-policies).
 
-## Create block entries for URLs
+### Use the Microsoft Defender portal to create allow entries for URLs in the Tenant Allow/Block List
 
-Email messages that contain these blocked URLs are blocked as *high confidence phishing*. Messages that contain the blocked URLs are quarantined.
-
-To create block entries for URLs, use either of the following methods:
-
-You have the following options to create block entries for URLs:
-
-- From the **URLs** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=url>. When you submit a message as **I've confirmed it's a threat**, you can select **Block this URL** to add a block entry to the **URLs** tab on the **Tenant Allow/Block Lists** page. For instructions, see [Report questionable URLs to Microsoft](submissions-admin.md#report-questionable-urls-to-microsoft).
-
-- From the **URLs** tab on the **Tenant Allow/Block Lists** page or in PowerShell as described in this section.
-
-### Use the Microsoft Defender portal to create block entries for URLs in the Tenant Allow/Block List
-
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block List** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block List** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. On the **Tenant Allow/Block List** page, select the **URLs** tab.
 
-3. On the **URLs** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Block**.
+3. On the **URLs** tab, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add**, and then select **Allow**.
+
+4. In the **Allow URLs** flyout that opens, configure the following settings:
+
+   - **Add URLs with wildcards**: Enter one URL per line, up to a maximum of 20. For details about the syntax for URL entries, see [URL syntax for the Tenant Allow/Block List](#url-syntax-for-the-tenant-allowblock-list).
+
+   - **Remove allow entry after**: Select from the following values:
+     - **45 days after last used date**  (default)
+     - **1 day**
+     - **7 days**
+     - **Specific date**: The maximum value is 30 days from today.
+
+   - **Optional note**: Enter descriptive text for why you're allowing the URLs.
+
+   When you're finished in the **Allow URLs** flyout, select **Add**.
+
+Back on the **URLs** tab, the entry is listed.
+
+#### Use PowerShell to create allow entries for URLs in the Tenant Allow/Block List
+
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax to create allow entries for URLs in the Tenant Allow/Block List:
+
+```powershell
+New-TenantAllowBlockListItems -ListType Url -Allow -Entries "Value1","Value2",..."ValueN" [-RemoveAfter 45]  [-Notes <String>]
+```
+
+This example adds an allow entry for the URL abc.contoso.com and all email addresses (for example, xyz@abc.contoso.com). Because we didn't use the ExpirationDate or RemoverAfter parameters, the entry expires after 45 days from last used date.
+
+```powershell
+New-TenantAllowBlockListItems -ListType Url -Allow -Entries abc.contoso.com
+```
+
+For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchangepowershell/new-tenantallowblocklistitems).
+
+## Create block entries for URLs
+
+Email messages that contain URLs from block entries in the Tenant Allow/Block List are blocked as *high confidence phishing*. Messages that contain the blocked URLs are quarantined.
+
+To create block entries for URLs, use either of the following methods:
+
+- From the **URLs** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=url>. When you submit a message as **I've confirmed it's a threat**, you can select **Block this URL** to add a block entry to the **URLs** tab on the **Tenant Allow/Block Lists** page. For instructions, see [Report questionable URLs to Microsoft](submissions-admin.md#report-questionable-urls-to-microsoft).
+
+- From the **URLs** tab on the **Tenant Allow/Block Lists** page or in PowerShell, as described in the following procedures.
+
+### Use the Microsoft Defender portal to create block entries for URLs in the Tenant Allow/Block List
+
+Perform the following steps to create block entries for URLs in the Microsoft Defender portal.
+
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block List** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+
+2. On the **Tenant Allow/Block List** page, select the **URLs** tab.
+
+3. On the **URLs** tab, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add**, and then select **Block**.
 
 4. In the **Block URLs** flyout that opens, configure the following settings:
 
-   - **Add URLs with wildcards**: Enter one URL per line, up to a maximum of 20. For details about the syntax for URL entries, see the [URL syntax for the Tenant Allow/Block List](#url-syntax-for-the-tenant-allowblock-list) section later in this article.
+   - **Add URLs with wildcards**: Enter one URL per line, up to a maximum of 20. For details about the syntax for URL entries, see [URL syntax for the Tenant Allow/Block List](#url-syntax-for-the-tenant-allowblock-list).
 
    - **Remove block entry after**: Select from the following values:
      - **Never expire**
@@ -122,7 +177,7 @@ Back on the **URLs** tab, the entry is listed.
 
 #### Use PowerShell to create block entries for URLs in the Tenant Allow/Block List
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax to create block entries for URLs in the Tenant Allow/Block List with either an expiration date or no expiration:
 
 ```powershell
 New-TenantAllowBlockListItems -ListType Url -Block -Entries "Value1","Value2",..."ValueN" <-ExpirationDate <Date> | -NoExpiration> [-Notes <String>]
@@ -134,11 +189,11 @@ This example adds a block entry for the URL contoso.com and all subdomains (for 
 New-TenantAllowBlockListItems -ListType Url -Block -Entries *contoso.com
 ```
 
-For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchange/new-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchangepowershell/new-tenantallowblocklistitems).
 
 ## Use the Microsoft Defender portal to view entries for URLs in the Tenant Allow/Block List
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Tenant Allow/Block Lists** in the **Rules** section. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Tenant Allow/Block Lists** in the **Rules** section. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 Select the **URLs** tab.
 
@@ -146,30 +201,34 @@ On the **URLs** tab, you can sort the entries by clicking on an available column
 
 - **Value**: The URL.
 - **Action**: The available values are **Allow** or **Block**.
+- **Override verdicts**: The available values are:
+    - **Up to malware** for block entries.
+    - **Up to regular confidence phishing** for allow entries created directly from Tenant Allow/Block List.
+    - **Up to malware** for allow entries created via submissions. Allow entries created via submissions automatically update directly created allow entries.
 - **Modified by**
 - **Last updated**
 - **Last used date**: The date the entry was last used in the filtering system to override the verdict.
 - **Remove on**: The expiration date.
 - **Notes**
 
-To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
 
 - **Action**: The available values are **Allow** and **Block**.
 - **Never expire**: :::image type="icon" source="media/scc-toggle-on.png" border="false"::: or :::image type="icon" source="media/scc-toggle-off.png" border="false":::
 - **Last updated**: Select **From** and **To** dates.
 - **Last used date**: Select **From** and **To** dates.
 - **Remove on**: Select **From** and **To** dates.
-- **Modified by**: Provide an incomplete or complete email address to search by it. 
+- **Modified by**: Provide an incomplete or complete email address to search by it.
 
-When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific entries.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific entries.
 
-To group the entries, select :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select **Action**. To ungroup the entries, select **None**.
+To group the entries, select :::image type="icon" source="media/defender-portal-icon-group.png" border="false"::: **Group** and then select **Action**. To ungroup the entries, select **None**.
 
 ### Use PowerShell to view entries for URLs in the Tenant Allow/Block List
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax to retrieve URL entries from the Tenant Allow/Block List, optionally filtered by action, URL value, or expiration:
 
 ```powershell
 Get-TenantAllowBlockListItems -ListType Url [-Allow] [-Block] [-Entry <URLValue>] [<-ExpirationDate <Date> | -NoExpiration>]
@@ -187,17 +246,17 @@ This example filters the results by blocked URLs.
 Get-TenantAllowBlockListItems -ListType Url -Block
 ```
 
-For detailed syntax and parameter information, see [Get-TenantAllowBlockListItems](/powershell/module/exchange/get-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Get-TenantAllowBlockListItems](/powershell/module/exchangepowershell/get-tenantallowblocklistitems).
 
 ## Use the Microsoft Defender portal to modify entries for URLs in the Tenant Allow/Block List
 
 In existing URL entries, you can change the expiration date and note.
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. Select the **URLs** tab
 
-3. On the **URLs** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
+3. On the **URLs** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** action that appears.
 
 4. In the **Edit URL** flyout that opens, the following settings are available:
    - **Block entries**:
@@ -220,11 +279,11 @@ In existing URL entries, you can change the expiration date and note.
    When you're finished in the **Edit URL** flyout, select **Save**.
 
 > [!TIP]
-> In the details flyout of an entry on the **URLs** tab, use :::image type="icon" source="media/m365-cc-sc-view-submission-icon.png" border="false"::: **View submission** at the top of the flyout to go to the details of the corresponding entry on the **Submissions** page. This action is available if a submission was responsible for creating the entry in the Tenant Allow/Block List.
+> In the details flyout of an entry on the **URLs** tab, use :::image type="icon" source="media/defender-portal-icon-view-submission.png" border="false"::: **View submission** at the top of the flyout to go to the details of the corresponding entry on the **Submissions** page. This action is available if a submission was responsible for creating the entry in the Tenant Allow/Block List.
 
 ### Use PowerShell to modify entries for URLs in the Tenant Allow/Block List
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax to modify existing URL entries in the Tenant Allow/Block List (for example, to change expiration dates or notes):
 
 ```powershell
 Set-TenantAllowBlockListItems -ListType Url <-Ids <Identity value> | -Entries <Value>> [<-ExpirationDate Date | -NoExpiration>] [-Notes <String>]
@@ -236,18 +295,18 @@ This example changes the expiration date of the block entry for the specified UR
 Set-TenantAllowBlockListItems -ListType Url -Entries "~contoso.com" -ExpirationDate "9/1/2022"
 ```
 
-For detailed syntax and parameter information, see [Set-TenantAllowBlockListItems](/powershell/module/exchange/set-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Set-TenantAllowBlockListItems](/powershell/module/exchangepowershell/set-tenantallowblocklistitems).
 
 ## Use the Microsoft Defender portal to remove entries for URLs from the Tenant Allow/Block List
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block List** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block List** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. Select the **URLs** tab.
 
 3. On the **URLs** tab, do one of the following steps:
 
-   - Select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
-   - Select the entry from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** at the top of the flyout.
+   - Select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears.
+   - Select the entry from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** at the top of the flyout.
 
      > [!TIP]
      > To see details about other entries without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
@@ -261,7 +320,7 @@ Back on the **URLs** tab, the entry is no longer listed.
 
 ### Use PowerShell to remove entries for URLs from the Tenant Allow/Block List
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax to remove URL entries from the Tenant Allow/Block List by entry ID or URL value:
 
 ```powershell
 Remove-TenantAllowBlockListItems -ListType Url <-Ids <Identity value> | -Entries <Value>>
@@ -273,7 +332,7 @@ This example removes the block entry for the specified URL from the Tenant Allow
 Remove-TenantAllowBlockListItems -ListType Url -Entries "*cohovineyard.com
 ```
 
-For detailed syntax and parameter information, see [Remove-TenantAllowBlockListItems](/powershell/module/exchange/remove-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Remove-TenantAllowBlockListItems](/powershell/module/exchangepowershell/remove-tenantallowblocklistitems).
 
 ## URL syntax for the Tenant Allow/Block List
 
@@ -290,13 +349,13 @@ For detailed syntax and parameter information, see [Remove-TenantAllowBlockListI
 
   For example, `t.co` is allowed; `.com` or `contoso.` aren't allowed.
 
-- Subpaths aren't implied for allows.
+- Subpaths aren't implied for allow entries.
 
   For example, `contoso.com` doesn't include `contoso.com/a`.
 
 - Wildcards (*) are allowed in the following scenarios:
 
-  - A left wildcard must be followed by a period to specify a subdomain. (applicable only for blocks)
+  - A period must follow a left wildcard to specify a subdomain. (applicable only for block entries)
 
     For example, `*.contoso.com` is allowed; `*contoso.com` isn't allowed.
 
@@ -322,18 +381,18 @@ For detailed syntax and parameter information, see [Remove-TenantAllowBlockListI
 
 ### URL entry scenarios
 
-Valid URL entries and their results are described in the following subsections.
+The following scenarios describe valid URL entries and their matching results for allow and block actions.
 
 #### Scenario: Top-level domain blocking
 
 **Entry**: `*.<TLD>/*`
 
 - **Block match**:
-  - a.TLD
-  - TLD/abcd
-  - b.abcd.TLD
-  - TLD/contoso.com
-  - TLD/q=contoso.com
+  - `a.TLD`
+  - `TLD/abcd`
+  - `b.abcd.TLD`
+  - `TLD/contoso.com`
+  - `TLD/q=contoso.com`
   - `www.abcd.com\xyz.TLD`
   - `www.abcd.com\xyz.TLD?q=1234`
   - `www.abcd.TLD`
@@ -346,42 +405,42 @@ Valid URL entries and their results are described in the following subsections.
 - **Allow match**: contoso.com
 
 - **Allow not matched**:
-  - abc-contoso.com
-  - contoso.com/a
-  - abc.xyz.contoso.com/a/b/c
-  - payroll.contoso.com
-  - test.com/contoso.com
-  - test.com/q=contoso.com
+  - `abc-contoso.com`
+  - `contoso.com/a`
+  - `abc.xyz.contoso.com/a/b/c`
+  - `payroll.contoso.com`
+  - `fabrikam.com.com/contoso.com`
+  - `fabirkam.com/q=contoso.com`
   - `www.contoso.com`
   - `www.contoso.com/q=a@contoso.com`
 
 - **Block match**:
-  - contoso.com
-  - contoso.com/a
-  - abc.xyz.contoso.com/a/b/c
-  - payroll.contoso.com
-  - test.com/contoso.com
-  - test.com/q=contoso.com
+  - `contoso.com`
+  - `contoso.com/a`
+  - `abc.xyz.contoso.com/a/b/c`
+  - `payroll.contoso.com`
+  - `fabrikam.com/contoso.com`
+  - `fabrikam.com/q=contoso.com`
   - `www.contoso.com`
   - `www.contoso.com/q=a@contoso.com`
 
-- **Block not matched**: abc-contoso.com
+- **Block not matched**: `abc-contoso.com`
 
 #### Scenario: Left wildcard (subdomain)
 
 > [!TIP]
-> Allow entries of this pattern are supported only from [advanced delivery configuration](advanced-delivery-policy-configure.md).
+> Allow entries of this pattern are supported only from [advanced delivery policy configuration](advanced-delivery-policy-configure.md).
 
 **Entry**: `*.contoso.com`
 
 - **Allow match** and **Block match**:
   - `www.contoso.com`
-  - xyz.abc.contoso.com
+  - `xyz.abc.contoso.com`
 
 - **Allow not matched** and **Block not matched**:
-  - 123contoso.com
-  - contoso.com
-  - test.com/contoso.com
+  - `123contoso.com`
+  - `contoso.com`
+  - `fabrikam.com/contoso.com`
   - `www.contoso.com/abc`
 
 #### Scenario: Right wildcard at top of path
@@ -389,31 +448,31 @@ Valid URL entries and their results are described in the following subsections.
 **Entry**: `contoso.com/a/*`
 
 - **Allow match** and **Block match**:
-  - contoso.com/a/b
-  - contoso.com/a/b/c
-  - contoso.com/a/?q=joe@t.com
+  - `contoso.com/a/b`
+  - `contoso.com/a/b/c`
+  - `contoso.com/a/?q=joe@t.com`
 
 - **Allow not matched** and **Block not matched**:
-  - contoso.com
-  - contoso.com/a
+  - `contoso.com`
+  - `contoso.com/a`
   - `www.contoso.com`
   - `www.contoso.com/q=a@contoso.com`
 
 #### Scenario: Left tilde
 
 > [!TIP]
-> Allow entries of this pattern are supported only from [advanced delivery configuration](advanced-delivery-policy-configure.md).
+> Allow entries of this pattern are supported only from [advanced delivery policy configuration](advanced-delivery-policy-configure.md).
 
 **Entry**: `~contoso.com`
 
 - **Allow match** and **Block match**:
-  - contoso.com
+  - `contoso.com`
   - `www.contoso.com`
-  - xyz.abc.contoso.com
+  - `xyz.abc.contoso.com`
 
 - **Allow not matched** and **Block not matched**:
-  - 123contoso.com
-  - contoso.com/abc
+  - `123contoso.com`
+  - `contoso.com/abc`
   - `www.contoso.com/abc`
 
 #### Scenario: Right wildcard suffix
@@ -421,105 +480,105 @@ Valid URL entries and their results are described in the following subsections.
 **Entry**: `contoso.com/*`
 
 - **Allow match** and **Block match**:
-  - contoso.com/?q=whatever@fabrikam.com
-  - contoso.com/a
-  - contoso.com/a/b/c
-  - contoso.com/ab
-  - contoso.com/b
-  - contoso.com/b/a/c
-  - contoso.com/ba
+  - `contoso.com/?q=whatever@fabrikam.com`
+  - `contoso.com/a`
+  - `contoso.com/a/b/c`
+  - `contoso.com/ab`
+  - `contoso.com/b`
+  - `contoso.com/b/a/c`
+  - `contoso.com/ba`
 
 - **Allow not matched** and **Block not matched**: contoso.com
 
 #### Scenario: Left wildcard subdomain and right wildcard suffix
 
 > [!TIP]
-> Allow entries of this pattern are supported only from [advanced delivery configuration](advanced-delivery-policy-configure.md).
+> Allow entries of this pattern are supported only from [advanced delivery policy configuration](advanced-delivery-policy-configure.md).
 
 **Entry**: `*.contoso.com/*`
 
 - **Allow match** and **Block match**:
-  - abc.contoso.com/ab
-  - abc.xyz.contoso.com/a/b/c
+  - `abc.contoso.com/ab`
+  - `abc.xyz.contoso.com/a/b/c`
   - `www.contoso.com/a`
   - `www.contoso.com/b/a/c`
-  - xyz.contoso.com/ba
+  - `xyz.contoso.com/ba`
 
-- **Allow not matched** and **Block not matched**: contoso.com/b
+- **Allow not matched** and **Block not matched**: `contoso.com/b`
 
 #### Scenario: Left and right tilde
 
 > [!TIP]
-> Allow entries of this pattern are supported only from [advanced delivery configuration](advanced-delivery-policy-configure.md).
+> Allow entries of this pattern are supported only from [advanced delivery policy configuration](advanced-delivery-policy-configure.md).
 
 **Entry**: `~contoso.com~`
 
 - **Allow match** and **Block match**:
-  - contoso.com
-  - contoso.com/a
+  - `contoso.com`
+  - `contoso.com/a`
   - `www.contoso.com`
   - `www.contoso.com/b`
-  - xyz.abc.contoso.com
-  - abc.xyz.contoso.com/a/b/c
-  - contoso.com/b/a/c
-  - test.com/contoso.com
+  - `xyz.abc.contoso.com`
+  - `abc.xyz.contoso.com/a/b/c`
+  - `contoso.com/b/a/c`
+  - `fabrikam.com/contoso.com`
 
 - **Allow not matched** and **Block not matched**:
-  - 123contoso.com
-  - contoso.org
-  - test.com/q=contoso.com
+  - `123contoso.com`
+  - `contoso.org`
+  - `fabrikam.com/q=contoso.com`
 
 #### Scenario: IP address
 
 **Entry**: `1.2.3.4`
 
-- **Allow match** and **Block match**: 1.2.3.4
+- **Allow match** and **Block match**: `1.2.3.4`
 
 - **Allow not matched** and **Block not matched**:
-  - 1.2.3.4/a
-  - 11.2.3.4/a
+  - `1.2.3.4/a`
+  - `11.2.3.4/a`
 
 #### IP address with right wildcard
 
 **Entry**: `1.2.3.4/*`
 
 - **Allow match** and **Block match**:
-  - 1.2.3.4/b
-  - 1.2.3.4/baaaa
+  - `1.2.3.4/b`
+  - `1.2.3.4/baaaa`
 
 ### Examples of invalid entries
 
 The following entries are invalid:
 
 - **Missing or invalid domain values**:
-  - contoso
-  - \*.contoso.\*
-  - \*.com
-  - \*.pdf
+  - `contoso`
+  - `*.contoso.*`
+  - `*.com`
+  - `*.pdf`
 
 - **Wildcard on text or without spacing characters**:
-  - \*contoso.com
-  - contoso.com\*
-  - \*1.2.3.4
-  - 1.2.3.4\*
-  - contoso.com/a\*
-  - contoso.com/ab\*
+  - `*contoso.com`
+  - `contoso.com*`
+  - `*1.2.3.4`
+  - `1.2.3.4*`
+  - `contoso.com/a*`
+  - `contoso.com/ab*`
 
 - **IP addresses with ports**:
-  - contoso.com:443
-  - abc.contoso.com:25
+  - `contoso.com:443`
+  - `abc.contoso.com:25`
 
 - **Non-descriptive wildcards**:
-  - \*
-  - \*.\*
+  - `*`
+  - `*.*`
 
 - **Middle wildcards**:
-  - conto\*so.com
-  - conto~so.com
+  - `conto\*so.com`
+  - `conto~so.com`
 
 - **Double wildcards**
-  - contoso.com/\*\*
-  - contoso.com/\*/\*
+  - `contoso.com/**`
+  - `contoso.com/*/*`
 
 ## Related articles
 

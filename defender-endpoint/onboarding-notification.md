@@ -1,32 +1,26 @@
 ---
 title: Create an onboarding or offboarding notification rule
 description: Get a notification when a local onboarding or offboarding script is used.
-search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: onboard
-ms.date: 12/18/2020
----
+ms.date: 07/02/2026
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 
+ai-usage: ai-assisted
+---
 # Create a notification rule when a local onboarding or offboarding script is used
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../includes/microsoft-defender-api-usgov.md)]
 
@@ -44,25 +38,27 @@ You need to have access to:
 
 ## Create the notification flow
 
-1. In [make.powerautomate.com](https://make.powerautomate.com/).
+Perform the following steps to create the notification flow in Power Automate:
 
-2. Navigate to **My flows > New > Scheduled - from blank**.
+1. Go to the [Power Automate portal](https://make.powerautomate.com/) and sign in.
+
+1. Navigate to **My flows > New > Scheduled - from blank**.
 
    :::image type="content" source="media/new-flow.png" alt-text="The flow" lightbox="media/new-flow.png":::
 
 
-3. Build a scheduled flow.
+1. Build a scheduled flow.
    1. Enter a flow name.
    2. Specify the start and time.
    3. Specify the frequency. For example, every 5 minutes.
 
    :::image type="content" source="media/build-flow.png" alt-text="The notification flow" lightbox="media/build-flow.png":::
 
-4. Select the + button to add a new action. The new action is an HTTP request to the Defender for Endpoint devices API. You can also replace it with the out-of-the-box **WDATP Connector** (action: **Machines - Get list of machines**).
+1. Select the + button to add a new action. This action adds an HTTP request to the Defender for Endpoint devices API. You can also replace it with the out-of-the-box **WDATP Connector** (action: **Machines - Get list of machines**).
 
    :::image type="content" source="media/recurrence-add.png" alt-text="The recurrence and add action" lightbox="media/recurrence-add.png":::
 
-5. Enter the following HTTP fields:
+1. Enter the following HTTP fields:
 
    - Method: **GET** as a value to get the list of devices.
    - URI: Enter `https://api.securitycenter.microsoft.com/api/machines`.
@@ -75,20 +71,19 @@ You need to have access to:
 
     :::image type="content" source="media/http-conditions.png" alt-text="The HTTP conditions" lightbox="media/http-conditions.png":::
 
-6. Add a new step by selecting **Add new action** then search for **Data Operations** and select
+1. Add a new step by selecting **Add new action** then search for **Data Operations** and select
 **Parse JSON**.
 
    :::image type="content" source="media/data-operations.png" alt-text="The data operations entry" lightbox="media/data-operations.png":::
 
-7. Add Body in the **Content** field.
+1. Add Body in the **Content** field.
 
    :::image type="content" source="media/parse-json.png" alt-text="The parse JSON section" lightbox="media/parse-json.png":::
 
-8. Select the **Use sample payload to generate schema** link.
-
+1. Select the **Use sample payload to generate schema** link.
    :::image type="content" source="media/parse-json-schema.png" alt-text="The parse JSON with payload" lightbox="media/parse-json-schema.png":::
 
-9. Copy and paste the following JSON snippet:
+1. Copy and paste the following JSON snippet:
 
     ```json
     {
@@ -170,7 +165,7 @@ You need to have access to:
 
     ```
 
-10. Extract the values from the JSON call and check if the onboarded devices is / are already registered at the SharePoint list as an example:
+1. Extract the values from the JSON call and check if the onboarded devices is / are already registered at the SharePoint list as an example:
 
     - If yes, no notification is triggered
     - If no, will register the newly onboarded devices in the SharePoint list and a notification is sent to the Defender for Endpoint admin
@@ -179,22 +174,26 @@ You need to have access to:
 
     :::image type="content" source="media/apply-to-each.png" alt-text="The application of the flow to the Get items element" lightbox="media/apply-to-each.png":::
 
-11. Under **Condition**, add the following expression: "length(body('Get_items')?['value'])" and set the condition to equal to 0.
+1. Under **Condition**, add the following expression: "length(body('Get_items')?['value'])" and set the condition to equal to 0.
 
     :::image type="content" source="media/apply-to-each-value.png" alt-text="The application of the flow to each condition" lightbox="media/apply-to-each-value.png":::
     :::image type="content" source="media/conditions-2.png" alt-text="The condition-1" lightbox="media/conditions-2.png":::
     :::image type="content" source="media/condition3.png" alt-text="The condition-2" lightbox="media/condition3.png":::
     :::image type="content" source="media/send-email.png" alt-text="The Send an email section" lightbox="media/send-email.png":::
 
-## Alert notification
+<a name="alert-notification"></a>
+## Review the alert notification email
 
 The following image is an example of an email notification.
 
 :::image type="content" source="media/alert-notification.png" alt-text="The email notification screen" lightbox="media/alert-notification.png":::
 
-## Tips
+<a name="tips"></a>
+## Tips for filtering and reducing duplicate alerts
 
-- You can filter here using lastSeen only:
+Use the following tips when configuring the notification flow:
+
+- In the device query, you can filter by using the lastSeen property only:
   - Every 60 min:
     - Take all devices last seen in the past seven days.
 
@@ -202,15 +201,16 @@ The following image is an example of an email notification.
   - If last seen property is on the one hour interval of [-7 days, -7days + 60 minutes] -> Alert for offboarding possibility.
   - If first seen is on the past hour -> Alert for onboarding.
 
-In this solution, you don't have duplicate alerts.
+With this filtering approach, duplicate alerts are not generated.
 
 There are tenants that have numerous devices. Getting all those devices might require paging.
 
-You can split it to two queries:
+You can split the device lookup into two queries:
 
-1. For offboarding take only this interval using the OData $filter and only notify if the conditions are met.
+1. For offboarding, take only the one-hour interval of [-7 days, -7 days + 60 minutes] using the OData $filter and only notify if the conditions are met.
 
-2. Take all devices last seen in the past hour and check first seen property for them (if the first seen property is on the past hour, the last seen must be there too).
+1. Take all devices last seen in the past hour and check first seen property for them (if the first seen property is within the past hour, the last seen must also be within the same past-hour window).
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

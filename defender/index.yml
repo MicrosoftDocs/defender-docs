@@ -11,8 +11,8 @@ metadata:
   ms.topic: hub-page 
   ms.collection: m365-security-compliance
   ms.custom: intro-hub-or-landing
-  author: dansimp 
-  ms.author: dansimp 
+  author: guywi-ms
+  ms.author: guywild
   ms.date: 03/20/2024 
   ms.localizationpriority: high
 
@@ -185,8 +185,8 @@ conceptualContent:
            text: See more
            url: /defender-for-iot/    
 
-        - title: Microsoft's unified security operations platform
-          summary: End-to-end SecOps with Microsoft Sentinel
+        - title: Microsoft Sentinel
+          summary: End-to-end security operations
           links:
           - url: /unified-secops-platform/overview-unified-security
             itemType: overview

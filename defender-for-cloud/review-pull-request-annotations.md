@@ -1,0 +1,67 @@
+---
+title: Review pull request annotations in GitHub and Azure DevOps
+description: Learn how to review and act on Defender for Cloud pull request annotations in GitHub and Azure DevOps to identify and resolve security issues before merging code.
+ms.topic: how-to
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
+#customer intent: As a developer or security reviewer, I want to review pull request annotations so I can address security issues before merge.
+ai-usage: ai-assisted
+---
+
+# Review pull request annotations in GitHub and Azure DevOps
+
+This article shows how to review and act on Defender for Cloud pull request annotations in GitHub and Azure DevOps. Use these annotations to resolve security issues before you merge code.
+
+## Resolve security issues in GitHub
+
+**To resolve security issues in GitHub**:
+
+1. Navigate through the page and locate an affected file with an annotation.
+
+1. Follow the remediation steps in the annotation. If you choose not to remediate the annotation, select **Dismiss alert**.
+
+1. Select a reason to dismiss:
+
+    - **Won't fix** - The alert is noted but won't be fixed.
+    - **False positive** - The alert isn't valid.
+    - **Used in tests** - The alert isn't in the production code.
+  
+## Resolve security issues in Azure DevOps
+
+After you configure Defender for Cloud pull request annotations, you can view all detected issues.
+
+**To resolve security issues in Azure DevOps**:
+
+1. Sign in to the [Azure DevOps](https://azure.microsoft.com/products/devops).
+
+1. Navigate to **Pull requests**.
+
+    :::image type="content" source="media/tutorial-enable-pr-annotations/pull-requests.png" alt-text="Screenshot showing where to go to navigate to pull requests.":::
+
+1. On the Overview, or files page, locate an affected line with an annotation.
+
+1. Follow the remediation steps in the annotation.
+
+1. Select **Active** to change the status of the annotation and access the dropdown menu.
+
+1. Select an action to take:
+
+    - **Active** - The default status for new annotations.
+    - **Pending** - The finding is being worked on.
+    - **Resolved** - The finding is addressed.
+    - **Won't fix** - The finding is noted but won't be fixed.
+    - **Closed** - The discussion in this annotation is closed.
+
+DevOps security in Defender for Cloud reactivates an annotation if the security issue isn't fixed in a new iteration.
+
+<a name="learn-more"></a>
+## Related content
+
+Learn more about [DevOps security in Defender for Cloud](defender-for-devops-introduction.md).
+
+Learn how to [discover misconfigurations in Infrastructure as Code](iac-vulnerabilities.md).
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [DevOps security in Defender for Cloud](defender-for-devops-introduction.md)

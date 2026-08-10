@@ -1,24 +1,22 @@
 ---
 title: EmailPostDeliveryEvents table in the advanced hunting schema
 description: Learn about post-delivery actions taken on Microsoft 365 emails in the EmailPostDeliveryEvents table of the advanced hunting schema
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 01/16/2024
+ms.date: 06/29/2026
 ---
 
 # EmailPostDeliveryEvents
@@ -26,13 +24,13 @@ ms.date: 01/16/2024
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- Microsoft Defender XDR
 
 The `EmailPostDeliveryEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about post-delivery actions taken on email messages processed by Microsoft 365. Use this reference to construct queries that return information from this table.
 
 > [!TIP]
-> For detailed information about the events types (`ActionType` values) supported by a table, use the built-in schema reference available in Microsoft Defender XDR.
+> For detailed information about the events types (`ActionType` values) supported by a table, use the built-in schema reference available in the Defender portal.
+
+This advanced hunting table is populated by records from Defender for Office 365. If your organization hasn't deployed the service in Microsoft Defender, queries that use the table aren't going to work or return any results. For more information about how to deploy Defender for Office 365 in the Defender portal, read [Deploy supported services](deploy-supported-services.md).
 
 To get more information about individual email messages, you can also use the [`EmailEvents`](advanced-hunting-emailevents-table.md), [`EmailAttachmentInfo`](advanced-hunting-emailattachmentinfo-table.md), and the [`EmailUrlInfo`](advanced-hunting-emailurlinfo-table.md) tables. For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
@@ -53,6 +51,9 @@ To get more information about individual email messages, you can also use the [`
 | `ThreatTypes` | `string` | Verdict from the email filtering stack on whether the email contains malware, phishing, or other threats |
 | `DetectionMethods` | `string` | Methods used to detect malware, phishing, or other threats found in the email |
 | `ReportId` | `string` | Event identifier based on a repeating counter. To identify unique events, this column must be used in conjunction with the DeviceName and Timestamp columns. |
+| `SenderFromAddress` | `string` | Sender email address in the FROM header, which is visible to email recipients on their email clients |
+| `EmailDirection` | `string` | Direction of the email relative to your network: Inbound, Outbound, Intra-org |
+| `SourceLocation` | `string` | Location where the email triggered zero-hour auto purge (ZAP) |
 
 ## Supported event types
 

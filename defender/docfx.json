@@ -42,6 +42,11 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "author": "poliveria",
+      "ms.author": "pauloliveria",
+      "manager": "orspodek",
+      "ms.reviewer": "aroland",
+      "ms.service": "defender-threat-intelligence",
       "breadcrumb_path": "/defender/breadcrumb/toc.json",
       "feedback_system": "Standard",
       "permissioned-type": "public",
@@ -62,7 +67,8 @@
         "alekyaj",
         "padmagit77",
         "aditisrivastava07",
-        "beccarobins"
+        "beccarobins",
+        "Ruchika-mittal01"
       ]
     },
     "fileMetadata": {},

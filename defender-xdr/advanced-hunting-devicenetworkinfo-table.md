@@ -1,24 +1,22 @@
 ---
 title: DeviceNetworkInfo table in the advanced hunting schema
 description: Learn about network configuration information in the DeviceNetworkInfo table of the advanced hunting schema
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.custom: 
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 01/16/2024
+ms.date: 04/03/2025
 ---
 
 # DeviceNetworkInfo
@@ -26,16 +24,12 @@ ms.date: 01/16/2024
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- Microsoft Defender XDR
-- Microsoft Defender for Endpoint
-
-
-
 The `DeviceNetworkInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about networking configuration of machines, including network adapters, IP and MAC addresses, and connected networks or domains. Use this reference to construct queries that return information from this table.
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+
+This advanced hunting table is populated by records from Microsoft Defender for Endpoint. If your organization hasn't deployed the service in Microsoft Defender, queries that use the table aren't going to work or return any results. For more information about how to deploy Defender for Endpoint in the Defender portal, read [Deploy supported services](deploy-supported-services.md).
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
@@ -57,6 +51,8 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `IPAddresses` | `string` | JSON array containing all the IP addresses assigned to the adapter, along with their respective subnet prefix and IP address space, such as public, private, or link-local |
 | `ReportId` | `long` | Event identifier based on a repeating counter. To identify unique events, this column must be used in conjunction with the DeviceName and Timestamp columns. |
 | `NetworkAdapterVendor` | `string` | Name of the manufacturer or vendor of the network adapter |
+| `OnboardingStatus` | `string` | Indicates whether the device is currently onboarded to Microsoft Defender for Endpoint or if the device is not supported |
+| `NetworkAdapterDnsSuffix` | `string` | Domain suffix assigned to the device’s network adapter, indicating the network environment the network adapter is connected to |
 
 ## Related topics
 - [Advanced hunting overview](advanced-hunting-overview.md)

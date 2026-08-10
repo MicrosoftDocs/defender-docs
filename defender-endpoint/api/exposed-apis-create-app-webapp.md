@@ -1,134 +1,106 @@
 ---
 title: Create an app to access Microsoft Defender for Endpoint without a user
-ms.reviewer: 
-description: Learn how to design a web app to get programmatic access to Microsoft Defender for Endpoint without a user.
+description: Learn how to grant a web app access to Microsoft Defender for Endpoint without a user.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
-ms.localizationpriority: medium
-ms.date: 08/29/2024
-manager: deniseb
-audience: ITPro
-ms.collection: 
-- m365-security
-- tier3
-- must-keep
-ms.topic: reference
+ms.author: painbar
+author: paulinbar
+ms.date: 07/28/2026
+ms.topic: how-to
 ms.subservice: reference
-ms.custom: api
-search.appverid: met150
+ms.appliesTo: Microsoft Defender for Business and Microsoft Defender for Endpoint Plans 1 and 2
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Create an app to access Microsoft Defender for Endpoint without a user
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+When [using Microsoft Defender for Endpoint APIs](apis-intro.md), you might need access to Microsoft Defender for Endpoint without a user. For example, you might want to create a service that runs in the background and interacts with Defender for Endpoint on behalf of your organization. If you need background service access without a signed-in user, create an application that can access Defender for Endpoint without a user.
 
+This article shows how to register an application in Microsoft Entra ID, grant it app-only permissions, and obtain an access token for Defender for Endpoint API access. API access requires [OAuth 2.0 client credentials flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
 
-**Applies to:** 
+## Prerequisites
 
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/defender-business)
+To create an app registration in Azure, you need a [Microsoft Entra role with app registration permissions](/entra/identity/role-based-access-control/manage-roles-portal?tabs=admin-center) that allows app creation, such as *Application Administrator*.
 
-> [!IMPORTANT]
-> Advanced hunting capabilities are not included in Defender for Business.
+## Step 1: Create an app in Azure
 
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
-This page describes how to create an application to get programmatic access to Defender for Endpoint without a user. If you need programmatic access to Defender for Endpoint on behalf of a user, see [Get access with user context](exposed-apis-create-app-nativeapp.md). If you are not sure which access you need, see [Get started](apis-intro.md).
-
-Microsoft Defender for Endpoint exposes much of its data and actions through a set of programmatic APIs. Those APIs will help you automate work flows and innovate based on Defender for Endpoint capabilities. The API access requires OAuth2.0 authentication. For more information, see [OAuth 2.0 Authorization Code Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
-
-In general, you'll need to take the following steps to use the APIs:
-- Create a Microsoft Entra application.
-- Get an access token using this application.
-- Use the token to access Defender for Endpoint API.
-
-This article explains how to create a Microsoft Entra application, get an access token to Microsoft Defender for Endpoint, and validate the token.
-
-> [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
-
-## Create an app
+Perform the following steps to register an app and grant it API permissions in Azure:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-2. Navigate to **Microsoft Entra ID** \> **App registrations** \> **New registration**. 
+2. Search for **App registrations** and navigate to *App registrations*.
 
-    :::image type="content" source="../media/atp-azure-new-app2.png" alt-text="The application registration pane" lightbox="../media/atp-azure-new-app2.png":::
+3. Select **New registration**.
 
-3. In the registration form, choose a name for your application, and then select **Register**.
+4. Choose a name for your application, and then select **Register**.
 
-4. To enable your app to access Defender for Endpoint and assign it **'Read all alerts'** permission, on your application page, select **API Permissions** \> **Add permission** \> **APIs my organization uses** >, type **WindowsDefenderATP**, and then select **WindowsDefenderATP**.
+5. In your application page, go to *Manage > Api Permissions > Add permission > APIs my organization uses*.
 
-   > [!NOTE]
-   > `WindowsDefenderATP` does not appear in the original list. Start writing its name in the text box to see it appear.
+6. In the *Request API permissions* page, search for **WindowsDefenderATP** and select it.
 
-   :::image type="content" source="../media/add-permission.png" alt-text="The API permissions pane" lightbox="../media/add-permission.png":::
+7. Select the type of permissions you require, and then select **Add permissions**.
 
-   Select **Application permissions** \> **Alert.Read.All**, and then select **Add permissions**.
+   * **Delegated permissions** - Sign in with your app as if you were a user.
 
-   :::image type="content" source="../media/application-permissions.png" alt-text="The application permission information pane" lightbox="../media/application-permissions.png":::
+   * **Application permissions** - Access the API as a service.
 
-5. Select appropriate permissions. `Read All Alerts` is only an example. Here are some examples:
+8. Select the appropriate permissions for your app. To determine which permission you need, look at the *Permissions* section in the API you're calling. Here are two examples:
 
-   - To [run advanced queries](run-advanced-query-api.md), select the `Run advanced queries` permission.
-   - To [isolate a device](isolate-machine.md), select the `Isolate machine` permission.
-   - To determine which permission you need, look at the **Permissions** section in the API you are interested to call.
+   * To [run advanced queries](run-advanced-query-api.md), select *Run advanced queries*.
 
-5. Select **Grant consent**.
+   * To [isolate a device](isolate-machine.md), select *Isolate machine*.
+9. Select **Add permission**.
 
-   > [!NOTE]
-   > Every time you add a permission, you must select **Grant consent** for the new permission to take effect.
+## Step 2: Add a secret to your app
 
-   :::image type="content" source="../media/grant-consent.png" alt-text="The grant permissions page" lightbox="../media/grant-consent.png":::
+The following steps describe how to authenticate your app using an app secret. To authenticate your app using a certificate, see [Create a self-signed public certificate to authenticate your application](/entra/identity-platform/howto-create-self-signed-certificate).
 
-6. To add a secret to the application, select **Certificates & secrets**, add a description to the secret, and then select **Add**.
+1. From the application page, select *Certificates & secrets* > *New client secret*.
 
-   > [!NOTE]
-   > After you select **Add**, select **copy the generated secret value**. You won't be able to retrieve this value after you leave.
+2. In the *Add a client secret* pane, add a description and expiration date.
 
-   :::image type="content" source="../media/webapp-create-key2.png" alt-text="The create application option" lightbox="../media/webapp-create-key2.png":::
+3. Select **Add**.
+
+4. Copy the **Value** of the secret you created. You won't be able to retrieve this value after you leave the page.
+
+5. From your app's *overview* page, copy the **Application (client) ID** and **Directory (tenant) ID**. You need this ID to authenticate your app.
 
 7. Write down your application ID and your tenant ID. On your application page, go to **Overview** and copy the following.
 
-   :::image type="content" source="../media/app-and-tenant-ids.png" alt-text="The created app and tenant IDs" lightbox="../media/app-and-tenant-ids.png":::
+## Multitenant apps
 
-8. **For Microsoft Defender for Endpoint Partners only**. Set your app to be multi-tenanted (available in all tenants after consent). This is **required** for third-party apps (for example, if you create an app that is intended to run in multiple customers' tenant). This is **not required** if you create a service that you want to run in your tenant only (for example, if you create an application for your own usage that will only interact with your own data). To set your app to be multi-tenanted, follow these steps:
+Microsoft Defender for Endpoint partners need to set their apps to be multi-tenanted. Set your app to be a multitenant app if you're planning to create an app that will run in multiple customers' tenants.
 
-   1. Go to **Authentication**, and add `https://portal.azure.com` as the **Redirect URI**.
+1. In your Azure app page, go to **Manage > Authentication**.
 
-   2. On the bottom of the page, under **Supported account types**, select the **Accounts in any organizational directory** application consent for your multi-tenant app.
+2. **Add a platform**.
 
-      You need your application to be approved in each tenant where you intend to use it. This is because your application interacts Defender for Endpoint on behalf of your customer.
+3. From the *Configure platforms* pane, select **Web**.
 
-       You (or your customer if you are writing a third-party app) need to select the consent link and approve your app. The consent should be done with a user who has administrative privileges in Active Directory.
+4. Add `https://portal.azure.com` to **Redirect URIs** and select **Configure**.
 
-       The consent link is formed as follows: 
+3. From the *Supported account types* options, select **Accounts in any organizational directory** and select **Save**.
 
-       ```https
-       https://login.microsoftonline.com/common/oauth2/authorize?prompt=consent&client_id=00000000-0000-0000-0000-000000000000&response_type=code&sso_reload=true
-       ```
+Once you run your app, you need it to be approved in each tenant where you intend to use it. This is because your application interacts with Defender for Endpoint on behalf of your customer. You or your customer, will need to select the consent link and approve your app. Give consent with a user who has admin privileges.
 
-       Where `00000000-0000-0000-0000-000000000000` is replaced with your application ID.
+Here's how to form the consent link. When a tenant admin visits this URL, the Microsoft identity platform consent flow opens so the customer tenant can authorize the app. Replace `00000000-0000-0000-0000-000000000000` with your app ID.
 
-
-**Done!** You have successfully registered an application! See examples below for token acquisition and validation.
+```https
+https://login.microsoftonline.com/common/oauth2/authorize?prompt=consent&client_id=00000000-0000-0000-0000-000000000000&response_type=code&sso_reload=true
+```
 
 ## Get an access token
 
-For more information on Microsoft Entra tokens, see the [Microsoft Entra tutorial](/azure/active-directory/develop/active-directory-v2-protocols-oauth-client-creds).
+The following methods show how to get your app's [access token](/entra/identity-platform/v2-oauth2-client-creds-grant-flow#get-a-token).
 
-### Use PowerShell
+> [!TIP]
+> Some Microsoft Defender for Endpoint APIs continue to require access tokens issued for the legacy resource `https://api.securitycenter.microsoft.com`. If the token audience doesn't match the resource expected by the API, requests fail with `403 Forbidden`, even if the API endpoint uses `https://api.security.microsoft.com`. Use `https://api.securitycenter.microsoft.com` as the resource or scope when acquiring tokens.
+
+# [PowerShell](#tab/PowerShell)
 
 ```powershell
-# This script acquires the App Context Token and stores it in the variable $token for later use in the script.
-# Paste your Tenant ID, App ID, and App Secret (App key) into the indicated quotes below.
+# This script acquires the App Context Token and stores it in the variable $token for later use.
+# Paste your Tenant ID, App ID, and App Secret (App key) into the quotes below.
 
 $tenantId = '' ### Paste your tenant ID here
 $appId = '' ### Paste your Application ID here
@@ -147,105 +119,55 @@ $token = $authResponse.access_token
 $token
 ```
 
-### Use C#:
+# [Python](#tab/Python)
 
-The following code was tested with NuGet Microsoft.Identity.Client 3.19.8.
+[Get token using Python](run-advanced-query-sample-python.md#get-token).
 
-> [!IMPORTANT]
-> The [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) NuGet package and Azure AD Authentication Library (ADAL) have been deprecated. No new features have been added since June 30, 2020.   We strongly encourage you to upgrade, see the [migration guide](/azure/active-directory/develop/msal-migration) for more details.
+# [Curl](#tab/Curl)
 
-1. Create a new console application.
-
-1. Install NuGet [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/).
-
-1. Add the following:
-
-    ```csharp
-    using Microsoft.Identity.Client;
-    ```
-
-1. Copy and paste the following code in your app (don't forget to update the three variables: ```tenantId, appId, appSecret```):
-
-    ```csharp
-    string tenantId = "00000000-0000-0000-0000-000000000000"; // Paste your own tenant ID here
-    string appId = "11111111-1111-1111-1111-111111111111"; // Paste your own app ID here
-    string appSecret = "22222222-2222-2222-2222-222222222222"; // Paste your own app secret here for a test, and then store it in a safe place! 
-    const string authority = "https://login.microsoftonline.com";
-    const string audience = "https://api.securitycenter.microsoft.com";
-
-    IConfidentialClientApplication myApp = ConfidentialClientApplicationBuilder.Create(appId).WithClientSecret(appSecret).WithAuthority($"{authority}/{tenantId}").Build();
-
-    List<string> scopes = new List<string>() { $"{audience}/.default" };
-
-    AuthenticationResult authResult = myApp.AcquireTokenForClient(scopes).ExecuteAsync().GetAwaiter().GetResult();
-
-    string token = authResult.AccessToken;
-    ```
-
-### Use Python
-
-See [Get token using Python](run-advanced-query-sample-python.md#get-token).
-
-### Use Curl
-
-> [!NOTE]
-> The following procedure assumes that Curl for Windows is already installed on your computer.
+The following procedure assumes that Curl for Windows is already installed on your computer.
 
 1. Open a command prompt, and set `CLIENT_ID` to your Azure application ID.
 
-1. Set `CLIENT_SECRET` to your Azure application secret.
+2. Set `CLIENT_SECRET` to your Azure application secret.
 
-1. Set `TENANT_ID` to the Azure tenant ID of the customer that wants to use your app to access Defender for Endpoint.
+3. Set `TENANT_ID` to the Azure tenant ID of the customer that wants to use your app to access Defender for Endpoint.
 
-1. Run the following command:
+4. Run the following command to request an app-only access token from the Microsoft identity platform and return it for use in subsequent API calls:
 
-    ```console
-    curl -i -X POST -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=%CLIENT_ID%" -d "scope=https://securitycenter.onmicrosoft.com/windowsatpservice/.default" -d "client_secret=%CLIENT_SECRET%" "https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token" -k
-    ```
-    
-    You get an answer that resembles the following code snippet:
-    
-    ```console
+   ```console
+   curl -i -X POST -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=%CLIENT_ID%" -d "scope=https://api.securitycenter.microsoft.com/.default" -d "client_secret=%CLIENT_SECRET%" "https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token" -k
+   ```
+
+   A successful response returns a JSON object that contains the bearer token type, expiration time (in seconds), and the `access_token` value you use for API calls. The response resembles the following example:
+
+   ```console
     {"token_type":"Bearer","expires_in":3599,"ext_expires_in":0,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIn <truncated> aWReH7P0s0tjTBX8wGWqJUdDA"}
-    ```
-    
+   ```
+
 ## Validate the token
 
-Ensure that you got the correct token:
+Follow the token-validation steps below to ensure that you got the correct token. You can send more than one request with the same token. The token expires in an hour.
 
-1. Copy and paste the token you got in the previous step into [JWT](https://jwt.ms) in order to decode it.
+1. Copy and paste [the access token you obtained in the previous step](#get-an-access-token) into [JWT decoder (jwt.ms)](https://jwt.ms) to decode it.
 
-1. Validate that you get a roles claim with the desired permissions.
-
-   In the following image, you can see a decoded token acquired from an app with permissions to all of  Microsoft Defender for Endpoint's roles:
-
-   :::image type="content" source="../media/webapp-decoded-token.png" alt-text="The token details portion" lightbox="../media/webapp-decoded-token.png":::
+2. Validate that you get a roles claim with the desired permissions.
 
 ## Use the token to access Microsoft Defender for Endpoint API
 
-1. Choose the API you want to use. For more information, see [Supported Defender for Endpoint APIs](exposed-apis-list.md).
+After you obtain a valid token, use it in your API requests as follows:
 
-1. Set the authorization header in the `http` request you send to `Bearer {token}` (Bearer is the authorization scheme).
+1. Choose the [supported Defender for Endpoint API](exposed-apis-list.md) you want to use.
 
-1. The expiration time of the token is one hour. You can send more than one request with the same token.
+2. Set the authorization header in the `http` request you send to `Bearer {token}`. *Bearer* is the authorization scheme.
 
-The following is an example of sending a request to get a list of alerts **using C#**:
+### Example
+
+The following C# snippet sends an authenticated GET request to the Defender for Endpoint alerts endpoint, using the bearer token obtained earlier, and retrieves the list of alerts.
 
 ```csharp
 var httpClient = new HttpClient();
-
-var request = new HttpRequestMessage(HttpMethod.Get, "https://api.securitycenter.microsoft.com/api/alerts");
-
+var request = new HttpRequestMessage(HttpMethod.Get, "https://api.security.microsoft.com/api/alerts");
 request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
-
 var response = httpClient.SendAsync(request).GetAwaiter().GetResult();
-
-// Do something useful with the response
 ```
-
-## See also
-
-- [Supported Microsoft Defender for Endpoint APIs](exposed-apis-list.md)
-- [Access Microsoft Defender for Endpoint on behalf of a user](exposed-apis-create-app-nativeapp.md)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

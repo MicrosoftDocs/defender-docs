@@ -3,29 +3,21 @@ title: Troubleshoot Microsoft Defender for Endpoint service issues
 description: Find solutions and workarounds to known issues such as server errors when trying to access the service.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: deniseb
-author: denisebmsft
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: troubleshooting
-search.appverid: met150
-ms.date: 12/18/2020
----
+ms.date: 02/24/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Troubleshoot service issues
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink)
 
 This section addresses issues that might arise as you use the Microsoft Defender for Endpoint service.
 
@@ -36,9 +28,9 @@ Configure your browser to allow cookies.
 
 ## Elements or data missing on the portal
 
-If some elements or data is missing on Microsoft Defender XDR, it's possible that proxy settings are blocking it.
+If some elements or data is missing in the Defender portal, it's possible that proxy settings are blocking it.
 
-Make sure that `*.security.microsoft.com` is included the proxy allowlist.
+Make sure that `*.security.microsoft.com` is included in the proxy allow list.
 
 > [!NOTE]
 > You must use the HTTPS protocol when adding the following endpoints.
@@ -49,9 +41,9 @@ See [Review events and errors using Event Viewer](event-error-codes.md) for a li
 
 ## Microsoft Defender for Endpoint service fails to start after a reboot and shows error 577
 
-If onboarding devices successfully completes but Microsoft Defender for Endpoint doesn't start after a reboot and shows error 577, check that Windows Defender isn't disabled by a policy.
+If onboarding devices successfully completes, but Microsoft Defender for Endpoint doesn't start after a reboot and shows error 577, check that Windows Defender isn't disabled by a policy.
 
-For more information, see [Ensure that Microsoft Defender Antivirus is not disabled by policy](troubleshoot-onboarding.md#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy).
+For more information, see [Ensure that Microsoft Defender Antivirus isn't disabled by policy](troubleshoot-onboarding.md#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy).
 
 ## Known issues with regional formats
 
@@ -68,21 +60,22 @@ The following date and time formats are currently not supported:
 
 - Date format yyyy/MM/dd
 - Date format dd/MM/yy
-- Date format with yy. Will only show yyyy.
+- Date format with yy. Only shows yyyy.
 - Time format HH:mm:ss isn't supported (the 12 hour AM/PM format isn't supported). Only the 24-hour format is supported.
 
 ### Use of comma to indicate thousand
 
 Support of use of comma as a separator in numbers aren't supported. Regions where a number is separated with a comma to indicate a thousand, will only see the use of a dot as a separator. For example, 15,5 K is displayed as 15.5 K.
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-troubleshoot-belowfoldlink)
+
 
 ## Microsoft Defender for Endpoint tenant was automatically created in Europe
 
 When you use Microsoft Defender for Cloud to monitor servers, a Microsoft Defender for Endpoint tenant is automatically created. The Microsoft Defender for Endpoint data is stored in Europe by default.
 
-## Related topics
+## Related content
 
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
 - [Review events and errors using Event Viewer](event-error-codes.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

@@ -1,23 +1,19 @@
 ---
 title: Run the client analyzer on macOS
 description: Learn how to use the Defender for Endpoint Client Analyzer on Mac to identify health or performance issue causes.
-ms.author: ewalsh
-author: emmwalshh
-manager: ewalsh
+ms.author: chrisda
+author: chrisda
 ms.reviewer: joshbregman
 ms.service: defender-endpoint
 ms.subservice: macos
 ms.localizationpriority: medium
 ms.topic: troubleshooting-general
-ms.date: 01/08/2025
+ms.date: 02/05/2026
 ms.custom: partner-contribution
 ms.collection:
 - m365-security
 - tier3
 - mde-macos
-search.appverid: met150
-audience: ITPro
-f1.keywords: NOCSH 
 ---
 
 # Run the client analyzer on macOS
@@ -25,25 +21,28 @@ f1.keywords: NOCSH
 If you're experiencing reliability or device health issues with Microsoft Defender for Endpoint on macOS, you can use the XMDE Client Analyzer to diagnose these issues. This article describes two ways to use the client analyzer tool:
 
 1. Using a binary version (no external Python dependency)
-2. Using a Python-based solution
+1. Using a Python-based solution
+
+> [!TIP]
+> Watch this video to get an overview of the client analyzer: [Defender for Endpoint client analyzer overview](https://www.youtube.com/watch?v=GnqDsvYYL6w)
 
 ## Use the binary version of the client analyzer
 
-1. Download the [XMDE Client Analyzer Binary](https://go.microsoft.com/fwlink/?linkid=2297517) tool to the macOS machine you need to investigate. 
+1. Download the [XMDE Client Analyzer Binary](https://aka.ms/XMDEClientAnalyzerBinary) tool to the macOS machine you need to investigate.
 
    If you're using a terminal, download the tool by running the following command:
 
    ```bash
-   wget --quiet -O XMDEClientAnalyzerBinary.zip https://go.microsoft.com/fwlink/?linkid=2297517
+   curl -s -L -o XMDEClientAnalyzerBinary.zip "https://aka.ms/XMDEClientAnalyzerBinary"
    ```
 
-2. Verify the download.
+1. Verify the download.
 
    ```bash
-   echo '4E96E75B16244BB25BDBF34CBB3EB596BC2E9CE368BC4E532E8AE12DF2A1E19D  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
+   echo '8707A2327A0B3D7AE6734D9CA34E116FC628DA23FDCA61C7BA7C7A9965F0BE34  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
    ```
 
-2. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine. 
+1. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine.
 
    If you're using a terminal, extract the files by running the following command:
 
@@ -51,27 +50,27 @@ If you're experiencing reliability or device health issues with Microsoft Defend
    unzip -q XMDEClientAnalyzerBinary.zip -d XMDEClientAnalyzerBinary
    ```
 
-3. Change to the tool's directory by running the following command:
+1. Change to the tool's directory by running the following command:
 
    ```bash
-   cd XMDEClientAnalyzerBinary
+   cd XMDEClientAnalyzerBinary/XMDEClientAnalyzer
    ```
 
-4. Notice that the following two zipped files are produced:
+1. Notice that the following two zipped files are produced:
 
    - `SupportToolLinuxBinary.zip`: For all Linux devices
    - `SupportToolMacOSBinary.zip`: For Mac devices
 
-5. Unzip the SupportToolMacOSBinary.zip. 
+1. Unzip the SupportToolMacOSBinary.zip.
 
    ```bash
     unzip -q SupportToolMacOSBinary.zip
    ```
-   
-6. Run the tool as root to generate your diagnostic package:
+
+1. Run the tool as root to generate your diagnostic package:
 
    ```bash
-   sudo ./MDESupportTool -d
+   sudo ./MDESupportTool -d --mdatp-log debug
    ```
 
 ## Use the Python-based client analyzer
@@ -81,50 +80,56 @@ The client analyzer depends on few extra PIP packages (`decorator`, `sh`, `distr
 The tool currently requires Python version 3 or later to be installed on your device. If your device is behind a proxy, then you can pass the proxy server as an environment variable to the `mde_support_tool.sh` script. For example: `https_proxy=https://myproxy.contoso.com:8080 ./mde_support_tool.sh"`.
 
 > [!WARNING]
-> Running the Python-based client analyzer requires the installation of PIP packages which could cause some issues in your environment. To avoid issues from occurring, it is recommended that you install the packages into a user PIP environment.
+> Running the Python-based client analyzer requires the installation of PIP packages which could cause some issues in your environment. To avoid issues from occurring, it's recommended that you install the packages into a user PIP environment.
 
 1. Download the [XMDE Client Analyzer](https://aka.ms/XMDEClientAnalyzer) tool to the Mac machine you're investigating.
 
    If you're using a terminal, download the tool by running the following command:
-   
-      ```bash
-   wget --quiet -O XMDEClientAnalyzer.zip https://aka.ms/XMDEClientAnalyzer
-      ```
-      
-2. Verify the download. 
 
-   | OS | Command |
-   |--|--|
-   | Linux | `echo '84C9718FF3D29DA0EEE650FB2FC0625549A05CD1228AC253DBB92C8B1D9F1D11 XMDEClientAnalyzer.zip'| sha256sum -c` |
-   | macOS | `echo '84C9718FF3D29DA0EEE650FB2FC0625549A05CD1228AC253DBB92C8B1D9F1D11  XMDEClientAnalyzer.zip'| shasum -a 256 -c` |
-   
-3. Extract the contents of `XMDEClientAnalyzer.zip` on the machine. 
+   ```bash
+   curl -L -o XMDEClientAnalyzer.zip https://aka.ms/XMDEClientAnalyzer
+   ```
+
+1. Verify the download by running one of the following commands:
+   - **Linux**:
+
+     ```bash
+     echo 'CCADC17FDE907E63FBAF0A5F9D0FAA2FC6D03C49CBA62276BDE427D0F512167F  XMDEClientAnalyzer.zip' | sha256sum -c
+     ```
+
+   - **macOS**:
+
+     ```bash
+     echo 'CCADC17FDE907E63FBAF0A5F9D0FAA2FC6D03C49CBA62276BDE427D0F512167F  XMDEClientAnalyzer.zip' | shasum -a 256 -c
+     ```
+
+3. Extract the contents of `XMDEClientAnalyzer.zip` on the machine.
 
    If you're using a terminal, extract the files by using the following command:
-   
+
    ```bash
    unzip -q XMDEClientAnalyzer.zip -d XMDEClientAnalyzer
    ```
-   
-4. Change directory to the extracted location.
+
+1. Change directory to the extracted location.
 
    ```bash
    cd XMDEClientAnalyzer
    ```
-   
-5. Give the tool executable permission:
+
+1. Give the tool executable permission:
 
    ```bash
    chmod a+x mde_support_tool.sh
    ```
-   
-6. Run as a nonroot user to install required dependencies:
+
+1. Run as a nonroot user to install required dependencies:
 
    ```bash
    ./mde_support_tool.sh
    ```
-   
-7. When you download files on macOS, it automatically adds a new extended attribute called com.apple.quarantine which is scanned by Gatekeeper.  Before running, you will want to remove this extended attribute:
+
+1. When you download files on macOS, it automatically adds a new extended attribute called com.apple.quarantine which is scanned by Gatekeeper.  Before running, you'll want to remove this extended attribute:
 
    ```bash
    xattr -c MDESupportTools
@@ -132,16 +137,19 @@ The tool currently requires Python version 3 or later to be installed on your de
 
    Otherwise you might get the following warning:
 
-      "You might get a "MDESupportTool" Not Opened
+   "You might get a "MDESupportTool" Not Opened
 
-      Apple could not verify "MDESupportTool" is free of malware that may harm your Mac or compromise your privacy"
+   Apple couldn't verify "MDESupportTool" is free of malware that might harm your Mac or compromise your privacy"
 
-8. To collect actual diagnostic package and generate the result archive file, run again as root:
+1. To collect actual diagnostic package and generate the result archive file, run again as root:
 
    ```bash
-   sudo ./mde_support_tool.sh -d
+   sudo ./mde_support_tool.sh -d --mdatp-log debug
    ```
-      
+
+> [!TIP]
+> Watch this video to learn more about onboarding issues: [Defender for Endpoint client analyzer onboarding issues](https://www.youtube.com/watch?v=HdhePgMBqs8)
+
 ## Command line options
 
 ### Primary command lines
@@ -166,7 +174,7 @@ Use the following command to get the machine diagnostic.
                       Maximum log file size in MB before rotating(Will restart mdatp)
 ```
 
-Usage example: `sudo ./MDESupportTool -d`
+Usage example: `sudo ./MDESupportTool -d --mdatp-log debug`
 
 > [!NOTE]
 > The log level autoreset feature is only available in 2405 or newer client version.
@@ -207,34 +215,34 @@ Usage example `./mde_support_tool.sh trace --length 5`
 
 ## Result package contents on macOS
 
-| File | Description |
+|File|Description|
 |---|---|
-| `report.html` | The main HTML output file that contains the findings and guidance from running the client analyzer tool on the device. This file is only generated when running the Python-based version of the client analyzer tool. |
-| `mde_diagnostic.zip` | Same diagnostic output that gets generated when running `mdatp diagnostic create` on [macOS](mac-resources.md#collecting-diagnostic-information). |
-| `mde.xml` | XML output that is generated while running and is used to build the html report file. |
-| `Processes_information.txt` | Contains the details of the running Microsoft Defender for Endpoint related processes on the system. |
-| `Log.txt` | Contains the same log messages written on screen during the data collection. |
-| `Health.txt` | The same basic health output that is shown when running *mdatp health* command. |
-| `Events.xml` | Another XML file used by the analyzer when building the HTML report. |
-| `Audited_info.txt` | Details on audited service and related components for [Linux](linux-resources.md) OS. |
-| `perf_benchmark.tar.gz` | The performance test reports. You see this file only if you're using the performance parameter. |
+|`report.html`|The main HTML output file that contains the findings and guidance from running the client analyzer tool on the device. This file is only generated when running the Python-based version of the client analyzer tool.|
+|`mde_diagnostic.zip`|Same diagnostic output that gets generated when running `mdatp diagnostic create` on [macOS](mac-resources.md#collecting-diagnostic-information).|
+|`mde.xml`|XML output that is generated while running and is used to build the html report file.|
+|`Processes_information.txt`|Contains the details of the running Microsoft Defender for Endpoint related processes on the system.|
+|`Log.txt`|Contains the same log messages written on screen during the data collection.|
+|`Health.txt`|The same basic health output that is shown when running *mdatp health* command.|
+|`Events.xml`|Another XML file used by the analyzer when building the HTML report.|
+|`Audited_info.txt`|Details on audited service and related components for [Linux](linux-resources.md) OS.|
+|`perf_benchmark.tar.gz`|The performance test reports. You see this file only if you're using the performance parameter.|
 
 ## See also
 
 ### Defender for Endpoint on macOS troubleshooting
 
-[Troubleshooting mode in Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-troubleshoot-mode)
+[Troubleshooting mode in Microsoft Defender for Endpoint on macOS](mac-troubleshoot-mode.md)
 
-[Troubleshoot installation issues for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-support-install)
+[Troubleshoot installation issues for Microsoft Defender for Endpoint on macOS](mac-support-install.md)
 
-[Troubleshoot license issues for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-support-license)
+[Troubleshoot license issues for Microsoft Defender for Endpoint on macOS](mac-support-license.md)
 
-[Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-support-sys-ext)
+[Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS](mac-support-sys-ext.md)
 
-[Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on macOS](/defender-endpoint/troubleshoot-cloud-connect-mdemac)
+[Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on macOS](troubleshoot-cloud-connect-mdemac.md)
 
-[Overview for how to troubleshoot performance issues for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-support-perf-overview)
+[Overview for how to troubleshoot performance issues for Microsoft Defender for Endpoint on macOS](mac-support-perf-overview.md)
 
-[Address false positives/negatives in Microsoft Defender for Endpoint](/defender-endpoint/defender-endpoint-false-positives-negatives)
+[Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

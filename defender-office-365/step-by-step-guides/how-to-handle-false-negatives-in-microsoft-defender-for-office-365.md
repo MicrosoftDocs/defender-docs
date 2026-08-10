@@ -1,58 +1,76 @@
 ---
-title: (False Negatives) How to handle malicious emails that are delivered to recipients using Microsoft Defender for Office 365
-description: The steps to handle malicious emails coming through to end users and inboxes (as False Negatives) with Microsoft Defender for Office 365 in order to prevent loss of business.
+title: Investigate and remediate false negative malicious emails in Microsoft Defender for Office 365
+description: Learn how to investigate false negative email, remove malicious messages delivered to users, and reduce the chance of similar deliveries in the future.
 ms.service: defender-office-365
-f1.keywords: 
- - NOCSH
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
-manager: jarogers
-audience: ITPro
 ms.collection:
 - m365-guidance-templates
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
-ms.date: 01/31/2023
+ms.date: 07/02/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
-# How to handle malicious emails that are delivered to recipients (False Negatives), using Microsoft Defender for Office 365
+# How to handle malicious emails that are delivered to recipients (false negatives) using Microsoft Defender for Office 365
 
-Microsoft Defender for Office 365 helps deal with malicious emails (False Negative) that are delivered to recipients and that put your organizational productivity at risk.
-Defender for Office 365 can help you understand why emails are getting delivered, how to resolve the situation quickly, and how to prevent similar situations from happening in the future.
+Microsoft Defender for Office 365 helps deal with undetected malicious email delivered to recipients (known as false negatives) that put your organizational productivity at risk.
 
-## What you'll need
+Defender for Office 365 can help admins understand *why* malicious emails were delivered, how to quickly resolve the issue, and how to prevent similar issues from happening in the future.
 
-- Microsoft Defender for Office 365 Plan 1 and 2 (included as part of E5). Exchange Online customers can also leverage this.
-- Sufficient permissions (Security Administrator role).
-- 5-10 minutes to perform the steps below.
+<a name="what-you-need"></a>
+## Prerequisites
+
+Before you begin, make sure you meet the following requirements:
+
+- Microsoft Defender for Office 365 Plan 1 or Plan 2. Microsoft 365 A5/E5/G5 includes Plan 2.
+- Sufficient permissions. For example, membership in the **Security Administrator** role in [Microsoft Entra ID](/entra/identity/role-based-access-control/manage-roles-portal).
+- 5-10 minutes to perform the following steps.
 
 ## Handling malicious emails in the Inbox folder of end users
 
-1. Ask end users to report the email as **phishing** or **junk** using Microsoft Message Add-in or Microsoft Phish add-in or the Outlook buttons.
-2. End users can also add the sender to the [block senders list](https://support.microsoft.com/office/block-a-mail-sender-b29fd867-cac9-40d8-aed1-659e06a706e4#:~:text=1%20On%20the%20Home%20tab%2C%20in%20the%20Delete,4%20Click%20OK%20in%20both%20open%20dialog%20boxes..) in Outlook to prevent emails from this sender from being delivered to their inbox.
+Perform the following steps to handle malicious emails that reached end users' Inbox folders:
+
+1. Ask end users to report the email as **Phishing** or **Junk** using the [built-in **Report** button in supported versions of Outlook](../submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
+2. End users can also add senders to their **[Blocked Senders List](https://support.microsoft.com/office/block-or-unblock-senders-in-outlook-9bf812d4-6995-4d19-901a-76d6e26939b0#picktab=classic_outlook)** in Outlook to prevent emails from this sender from being delivered to their inbox.
 3. Admins can triage the user reported messages from [User reported tab on the Submissions page](../submissions-admin.md#view-user-reported-messages-to-microsoft).
-4. From those reported messages, admins can **submit to** [Microsoft for analysis](../submissions-admin-review-user-reported-messages.md#notify-users-from-within-the-portal) to learn why that email was allowed in the first place.
+
+   > [!TIP]
+   > In organizations with Defender for Office 365 Plan 2 and Security Copilot, the [Phishing Triage Agent](/defender-xdr/phishing-triage-agent) can autonomously triage and classify user-reported phishing emails, reducing manual investigation work for security teams.
+
+4. From the user-reported messages on the Submissions page, admins can **submit to** [notify users about admin-submitted messages to Microsoft](../submissions-admin-review-user-reported-messages.md#notify-users-from-within-the-portal) to learn why the reported message was allowed in the first place.
 5. If needed, while submitting to Microsoft for analysis, admins can [create a block entry for the sender](../tenant-allow-block-list-email-spoof-configure.md#create-block-entries-for-domains-and-email-addresses) to mitigate the problem.
-6. Once the results for submissions are available, read the verdict to understand why emails were allowed, and how your tenant setup could be improved to prevent similar situations from happening in the future.
+6. Once the results for submissions are available, read the verdict to understand why emails were allowed, and how your organization setup could be improved to prevent similar issues from happening in the future.
 
-## Handling malicious emails in junk folder of end users
+<a name="handling-malicious-emails-in-junk-folder-of-end-users"></a>
+## Handling malicious emails in the Junk Email folder of end users
 
-1. Ask end users to report the email as **phishing** using Microsoft Message Add-in, or Microsoft Phish Add-in, or the Outlook buttons.
+Perform the following steps to handle malicious emails that were delivered to end users' Junk Email folders:
+
+1. Ask end users to report the email as **phishing** using the [built-in **Report** button in supported versions of Outlook](../submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
 2. Admins can triage the user reported messages from the [User reported tab on the Submissions page](../submissions-admin.md#view-user-reported-messages-to-microsoft).
-3. From those reported messages admins can **submit to** [Microsoft for analysis](../submissions-admin.md#notify-users-about-admin-submitted-messages-to-microsoft) and learn why that email was allowed in the first place.
+
+   > [!TIP]
+   > In organizations with Defender for Office 365 Plan 2 and Security Copilot, the [Phishing Triage Agent](/defender-xdr/phishing-triage-agent) can autonomously triage and classify user-reported phishing emails, reducing manual investigation work for security teams.
+
+3. From the user-reported messages on the Submissions page, admins can **submit to** [notify users about admin-submitted messages to Microsoft](../submissions-admin.md#notify-users-about-admin-submitted-messages-to-microsoft) and learn why the reported message was allowed in the first place.
 4. If needed, while submitting to Microsoft for analysis, admins can [create a block entry for the sender](../tenant-allow-block-list-email-spoof-configure.md#create-block-entries-for-domains-and-email-addresses) to mitigate the problem.
-5. Once the results for submissions are available, read the verdict to understand why emails were allowed, and how your tenant setup could be improved to prevent similar situations from happening in the future.
+5. Once the results for submissions are available, read the verdict to understand why emails were allowed, and how your organization setup could be improved to prevent similar issues from happening in the future.
 
 ## Handling malicious emails landing in the quarantine folder of end users
+
+Use the following workflow for malicious emails that were quarantined for end users:
 
 1. End users receive an [email digest](../quarantine-quarantine-notifications.md) about quarantined messages as per the settings enabled by admins.
 2. End users can preview the messages in quarantine, block the sender, and submit those messages to Microsoft for analysis.
 
 ## Handling malicious emails landing in the quarantine folder of admins
 
-1. Admins can view the quarantined emails (including the ones asking permission to request release) from the [review page](../quarantine-admin-manage-messages-files.md).
-2. Admins can submit any malicious, or suspicious messages to Microsoft for analysis, and create a block to mitigate the situation while waiting for verdict.
-3. Once the results for submissions are available, read the verdict to learn why the emails were allowed, and how your tenant setup could be improved to prevent similar situations from happening in the future.
+Perform the following steps for malicious emails that appear in the admin quarantine:
+
+1. Admins can view the quarantined emails (including the ones asking permission to request release) from the [Manage quarantined messages and files](../quarantine-admin-manage-messages-files.md) page.
+2. Admins can submit any malicious, or suspicious messages to Microsoft for analysis, and create a block to mitigate the issue while waiting for a verdict.
+3. Once the results for submissions are available, read the verdict to learn why the emails were allowed, and how your organization setup could be improved to prevent similar issues from happening in the future.

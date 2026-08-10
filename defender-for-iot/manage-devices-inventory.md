@@ -1,17 +1,19 @@
 ---
 title: Discover and manage devices in the device inventory for Microsoft Defender for IoT in the Defender portal
-description: This article describes how to discover and manage devices in the device inventory for Microsoft Defender for IoT in the Defender portal.
+description: Use the device inventory in Microsoft Defender for IoT to find OT devices, filter and explore inventory data, investigate device details, and manage device site associations in the Defender portal.
 ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 05/19/2024
+ms.date: 07/02/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Discover and manage devices
-<!-- possibly add to h1 in the device inventory-->
-Microsoft Defender for IoT in the Microsoft Defender portal includes the device inventory, which helps you identify details about specific OT devices. Gathering details about your devices helps your teams proactively investigate vulnerabilities that can compromise your most critical assets. This article describes how to discover and manage your devices in the device inventory. You can filter data in the inventory, explore the inventory, investigate device details, and more.
+
+Microsoft Defender for IoT in the Microsoft Defender portal includes the device inventory, which helps you identify details about specific OT devices. Gathering details about your devices helps your teams proactively investigate vulnerabilities that can compromise your most critical assets. This article describes how to discover and manage your devices in the device inventory. You can filter data in the inventory, explore the inventory, investigate device details, and more. Before you start, review the [prerequisites](#prerequisites).
 
 Learn more about the benefits of OT [device discovery](device-discovery.md).
 
@@ -37,20 +39,28 @@ View OT devices as part of the [device inventory](/defender-endpoint/machines-vi
 
 To customize the device inventory views:
 
-- [Use filters](/defender-endpoint/machines-view-overview#use-filters-to-customize-the-device-inventory-views)
+- [Use filters](/defender-endpoint/machines-view-overview#sort-and-filter-the-device-list)
 - [Use columns](/defender-endpoint/machines-view-overview#use-columns-to-customize-the-device-inventory-views)
 
 [!INCLUDE [defender-iot-site-association](includes/site-association.md)]
 
+### OT network tag
+
+When a Defender for Endpoint agent is associated with a site, all devices discovered by that agent automatically receive the **Network type: OT** tag in the **Tags** column to show that these devices are part of the site. This tag helps users focus on devices that belong to their OT network.
+
 ## Manage OT devices
+
+Use the following options to manage OT devices from the device inventory:
 
 - [Explore the device inventory](/defender-endpoint/machines-view-overview#explore-the-device-inventory) including search, export to CSV, and more.
 - [Onboard devices](/defender-endpoint/onboarding#onboard-devices-using-any-of-the-supported-management-tools).
 - [Offboard devices](/defender-endpoint/offboard-machines).
-- [Investigate the device details](/defender-endpoint/investigate-machines) to identify behaviors or events that might be related to the alert.
+- [Investigate the device details](/defender-endpoint/investigate-machines) to identify behaviors or events that might be related to a specific alert.
 - In the device details pane, select the ellipsis on the top right to [take response actions on a device](/defender-endpoint/respond-machine-alerts).
 - [Manually update the site associated with a device](manage-sites.md#manually-update-device-site-association) to maintain accurate monitoring of the network traffic.<!-- Devices can be manually updated[Update the site associated with a device.-->
 
 ## Next steps
 
-[Prioritize and remediate vulnerabilities](prioritize-vulnerabilities.md)
+After you set up and manage your device inventory, prioritize and address security gaps:
+
+- [Prioritize and remediate vulnerabilities](prioritize-vulnerabilities.md)

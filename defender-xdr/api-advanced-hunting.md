@@ -2,40 +2,35 @@
 title: Microsoft Defender XDR advanced hunting API
 description: Learn how to run advanced hunting queries using Microsoft Defender XDR's advanced hunting API
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
-ms.author: macapara
-author: mjcaparas
+ms.author: edbaynash
+author: EdB-MSFT
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
  - m365-security
  - tier3
  - must-keep
 ms.topic: reference
-search.appverid: 
-  - MOE150
-  - MET150
-ms.custom: api
-ms.date: 04/01/2024
+ms.custom: api, msecd-doc-authoring-1015
+ms.date: 08/03/2026
+ai-usage: ai-assisted
+appliesto:
+  - Microsoft Defender XDR
+#customer intent: As a security operations analyst, I want to run advanced hunting queries through an API so that I can automate threat hunting.
 ---
 
 # Microsoft Defender XDR Advanced hunting API
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- Microsoft Defender XDR
-
 > [!WARNING]
-> This advanced hunting API is an older version with limited capabilities. A more comprehensive version of the advanced hunting API is already available in the **[Microsoft Graph security API](/graph/api/resources/security-api-overview)**. See **[Advanced hunting using Microsoft Graph security API](/graph/api/resources/security-api-overview#advanced-hunting)**
+> This advanced hunting API is an older version with limited capabilities. A more comprehensive version of the advanced hunting API is available in the **[Microsoft Graph security API](/graph/api/resources/security-api-overview)**. For more information, see **[Advanced hunting using Microsoft Graph security API](/graph/api/resources/security-api-overview#advanced-hunting)**.
+>
+> The Microsoft Defender XDR advanced hunting API is transitioning to the Microsoft Graph security API, which provides broader data coverage, improved consistency, and better scalability for automation and security workflows. Retirement began in January 2026. After retirement completes, the Microsoft Defender XDR advanced hunting API no longer functions. For the retirement timeline, see [MC1220762](https://admin.microsoft.com/Adminportal/Home#/MessageCenter/:/messages/MC1220762). For migration guidance, see [Use the Microsoft Graph security API](/graph/api/resources/security-api-overview).
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-[Advanced hunting](advanced-hunting-overview.md) is a threat-hunting tool that uses [specially constructed queries](advanced-hunting-query-language.md) to examine the past 30 days of event data in Microsoft Defender XDR. You can use advanced hunting queries to inspect unusual activity, detect possible threats, and even respond to attacks. The advanced hunting API allows you to programmatically query event data.
+[Advanced hunting](advanced-hunting-overview.md) is a threat-hunting tool that uses [specially constructed queries](advanced-hunting-query-language.md) to examine the past 30 days of event data in Microsoft Defender. You can use advanced hunting queries to inspect unusual activity, detect possible threats, and even respond to attacks. The advanced hunting API allows you to programmatically query event data.
 
 ## Quotas and resource allocation
 
@@ -51,7 +46,7 @@ The following conditions relate to all queries.
 
 ## Permissions
 
-One of the following permissions is required to call the advanced hunting API. To learn more, including how to choose permissions, see [Access the Microsoft Defender XDR Protection APIs](api-access.md).
+One of the following permissions is required to call the advanced hunting API. To learn more, including how to choose permissions, see [Access the Microsoft Defender Protection APIs](api-access.md).
 
 Permission type | Permission | Permission display name
 -|-|-

@@ -4,43 +4,41 @@ description: You can configure Microsoft Defender Antivirus features with Intune
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: emmwalshh
-ms.author: ewalsh
-ms.topic: conceptual
+author: chrisda
+ms.author: chrisda
+ms.topic: install-set-up-deploy
 ms.custom: nextgen
 ms.reviewer: yongrhee
-manager: deniseb
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
-ms.date: 02/18/2024
----
+ms.date: 10/20/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Configure Microsoft Defender Antivirus features
 
+## Prerequisites
 
-**Applies to:**
+### Supported operating systems
 
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-- Microsoft Defender Antivirus
-
-**Platforms**
 - Windows
 
 You can configure Microsoft Defender Antivirus with a number of tools, such as:
 
-- [Microsoft Defender for Endpoint Security Policy Management](/mem/intune/protect/mde-security-integration)
+- [Microsoft Defender for Endpoint Security Policy Management](/intune/intune-service/protect/mde-security-integration)
 - [Microsoft Intune](use-intune-config-manager-microsoft-defender-antivirus.md)
 - [Microsoft Configuration Manager](preferences-setup.md)
-- Microsoft Configuration Manager [Tenant attach](/mem/configmgr/tenant-attach/)
+- Microsoft Configuration Manager [Tenant attach](/intune/configmgr/tenant-attach/)
 
 - [Group Policy](use-group-policy-microsoft-defender-antivirus.md)
 - [PowerShell cmdlets](use-powershell-cmdlets-microsoft-defender-antivirus.md)
 - [Windows Management Instrumentation (WMI)](use-wmi-microsoft-defender-antivirus.md)
+
 The following broad categories of features can be configured:
 
 - Cloud-delivered protection. See [Cloud-delivered protection and Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md)
@@ -56,7 +54,7 @@ The following broad categories of features can be configured:
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
@@ -76,8 +74,7 @@ The following broad categories of features can be configured:
 >   - top scans per file
 >   - top scans per file per process
 >
-> You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions. 
-> See: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
->
+> You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions. See: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

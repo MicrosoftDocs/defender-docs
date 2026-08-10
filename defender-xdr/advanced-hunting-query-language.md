@@ -1,28 +1,25 @@
 ---
 title: Learn the advanced hunting query language in Microsoft Defender
 description: Create your first threat hunting query and learn about common operators and other aspects of the advanced hunting query language
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
-  - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
   - m365-security
   - m365initiative-m365-defender
   - tier1
 ms.custom:
+- msecd-doc-authoring-1014
 - cx-ti
 - cx-ah
-ms.topic: how-to
-ms.date: 10/18/2024
 appliesto:
-- Microsoft Defender XDR
-- Microsoft Sentinel in the Microsoft Defender portal
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
+ms.topic: how-to
+ms.date: 06/16/2026
+ai-usage: ai-assisted
 ---
 
 # Learn the advanced hunting query language
@@ -35,7 +32,7 @@ Watch this short video to learn some handy Kusto query language basics.
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=5cb7c7bc-a3ad-4509-ae80-285b4711f16f]
 
-To understand these concepts better, run your first query.
+To understand Kusto query language basics in advanced hunting, run your first query.
 
 ## Try your first query
 
@@ -61,11 +58,11 @@ FileName, ProcessCommandLine, RemoteIP, RemoteUrl, RemotePort, RemoteIPType
 | top 100 by Timestamp
 ```
 
-**[Run this query in advanced hunting](https://security.microsoft.com/hunting?query=H4sIAAAAAAAEAI2TW0sCURSF93PQfxh8Moisp956yYIgQtLoMaYczJpbzkkTpN_et_dcdPQkcpjbmrXXWftyetKTQG5lKqmMpeB9IJksJJKZDOWdZ8wKeP5wvcm3OLgZbMXmXCmIxjnYIfcAVgYvRi8w3TnfsXEDGAG47pCCZXyP5ViO4KeNbt-Up-hEuJmB6lvButnY8XSL-cDl0M2I-GwxVX8Fe2H5zMzHiKjEVB0eEsnBrszfBIWuXOLrxCJ7VqEBfM3DWUYTkNKrv1p5y3X0jwetemzOQ_NSVuuXZ1c6aNTKRaN8VvWhY9n7OS-o6J5r7mYeQypdEKc1m1qfiqpjCSuspsDntt2J61bEvTlXls5AgQfFl5bHM_gr_BhO2RF1rztoBv2tWahrso_TtzkL93KGMGZVr2pe7eWR-xeZl91f_113UOsx3nDR4Y9j5R6kaCq8ajr_YWfFeedsd27L7it-Z6dAZyxsJq1d9-2ZOSzK3y2NVd8-zUPjtZaJnYsIH4Md7AmdeAcd2Cl1XoURc5PzXlfU8U9P54WcswL6t_TW9Q__qX-xygQAAA&runQuery=true&timeRangeId=week)**
+**[Run the suspicious PowerShell download commands query in advanced hunting](https://security.microsoft.com/hunting?query=H4sIAAAAAAAEAI2TW0sCURSF93PQfxh8Moisp956yYIgQtLoMaYczJpbzkkTpN_et_dcdPQkcpjbmrXXWftyetKTQG5lKqmMpeB9IJksJJKZDOWdZ8wKeP5wvcm3OLgZbMXmXCmIxjnYIfcAVgYvRi8w3TnfsXEDGAG47pCCZXyP5ViO4KeNbt-Up-hEuJmB6lvButnY8XSL-cDl0M2I-GwxVX8Fe2H5zMzHiKjEVB0eEsnBrszfBIWuXOLrxCJ7VqEBfM3DWUYTkNKrv1p5y3X0jwetemzOQ_NSVuuXZ1c6aNTKRaN8VvWhY9n7OS-o6J5r7mYeQypdEKc1m1qfiqpjCSuspsDntt2J61bEvTlXls5AgQfFl5bHM_gr_BhO2RF1rztoBv2tWahrso_TtzkL93KGMGZVr2pe7eWR-xeZl91f_113UOsx3nDR4Y9j5R6kaCq8ajr_YWfFeedsd27L7it-Z6dAZyxsJq1d9-2ZOSzK3y2NVd8-zUPjtZaJnYsIH4Md7AmdeAcd2Cl1XoURc5PzXlfU8U9P54WcswL6t_TW9Q__qX-xygQAAA&runQuery=true&timeRangeId=week)**
 
 ### Describe the query and specify the tables to search
 
-A short comment has been added to the beginning of the query to describe what it is for. This comment helps if you later decide to save the query and share it with others in your organization.
+A short comment has been added to the beginning of the query to describe the query's purpose. This comment helps if you later decide to save the query and share it with others in your organization.
 
 ```kusto
 // Finds PowerShell execution events that could involve a download
@@ -126,7 +123,7 @@ FileName, ProcessCommandLine, RemoteIP, RemoteUrl, RemotePort, RemoteIPType
 Select **Run query** to see the results.
 
 > [!TIP]
-> You can view query results as charts and quickly adjust filters. For guidance, [read about working with query results](advanced-hunting-query-results.md)
+> You can view query results as charts and quickly adjust filters. For guidance, see [Work with query results](advanced-hunting-query-results.md)
 
 ## Learn common query operators
 
@@ -153,13 +150,13 @@ Advanced hunting supports Kusto data types, including the following common types
 
 | Data type | Description and query implications |
 |--|--|
-| `datetime` | Data and time information typically representing event timestamps. [See supported datetime formats](/azure/data-explorer/kusto/query/scalar-data-types/datetime) |
-| `string` | Character string in UTF-8 enclosed in single quotes (`'`) or double quotes (`"`). [Read more about strings](/azure/data-explorer/kusto/query/scalar-data-types/string) |
-| `bool` | This data type supports `true` or `false` states. [See supported literals and operators](/azure/data-explorer/kusto/query/scalar-data-types/bool) |
+| `datetime` | Data and time information typically representing event timestamps. [Supported datetime formats](/azure/data-explorer/kusto/query/scalar-data-types/datetime) |
+| `string` | Character string in UTF-8 enclosed in single quotes (`'`) or double quotes (`"`). [String data type](/azure/data-explorer/kusto/query/scalar-data-types/string) |
+| `bool` | This data type supports `true` or `false` states. [Supported Boolean literals and operators](/azure/data-explorer/kusto/query/scalar-data-types/bool) |
 | `int` | 32-bit integer  |
 | `long` | 64-bit integer |
 
-To learn more about these data types, [read about Kusto scalar data types](/azure/data-explorer/kusto/query/scalar-data-types/).
+To learn more about Kusto scalar data types, [Kusto scalar data types](/azure/data-explorer/kusto/query/scalar-data-types/).
 
 ## Get help as you write queries
 
@@ -176,24 +173,24 @@ You can use the query editor to experiment with multiple queries. To use multipl
 - Separate each query with an empty line.
 - Place the cursor on any part of a query to select that query before running it. This will run only the selected query. To run another query, move the cursor accordingly and select **Run query**.
 
-  :::image type="content" source="/defender/media/multiple-queries.png" alt-text="An example of multiple queries execution in the **New query** page in the Microsoft Defender portal" lightbox="/defender/media/multiple-queries.png":::
+  :::image type="content" source="media/advanced-hunting-query-language/multiple-queries.png" alt-text="An example of multiple queries execution in the **New query** page in the Microsoft Defender portal" lightbox="media/advanced-hunting-query-language/multiple-queries.png":::
 
   For a more efficient workspace, you can also use multiple tabs in the same hunting page. Select **New query** to open a tab for your new query.
 
-  :::image type="content" source="/defender/media/multitab.png" alt-text="Opening a new tab by selecting Create new in advanced hunting in the Microsoft Defender portal" lightbox="/defender/media/multitab.png":::
+  :::image type="content" source="media/advanced-hunting-query-language/multitab.png" alt-text="Opening a new tab by selecting Create new in advanced hunting in the Microsoft Defender portal" lightbox="media/advanced-hunting-query-language/multitab.png":::
 
   You can then run different queries without ever opening a new browser tab.
 
-  :::image type="content" source="/defender/media/multitab-examples.png" alt-text="Run different queries without ever leaving the advanced hunting page in the Microsoft Defender portal" lightbox="/defender/media/multitab-examples.png":::
+  :::image type="content" source="media/advanced-hunting-query-language/multitab-examples.png" alt-text="Run different queries without ever leaving the advanced hunting page in the Microsoft Defender portal" lightbox="media/advanced-hunting-query-language/multitab-examples.png":::
 
 > [!NOTE]
 > Using multiple browser tabs with advanced hunting might cause you to lose your unsaved queries. To prevent this from happening, use the tab feature within advanced hunting instead of separate browser tabs.
 
 ## Use sample queries
 
-The **Get started** section provides a few simple queries using commonly used operators. Try running these queries and making small modifications to them.
+The **Get started** section provides a few simple queries using commonly used operators. Try running the sample queries in the **Get started** section and making small modifications to them.
 
-:::image type="content" source="/defender/media/get-started-section.png" alt-text="The **Getting started** section in the **Advanced hunting** page in the Microsoft Defender portal" lightbox="/defender/media/get-started-section.png":::
+:::image type="content" source="media/advanced-hunting-query-language/get-started-section.png" alt-text="The **Getting started** section in the **Advanced hunting** page in the Microsoft Defender portal" lightbox="media/advanced-hunting-query-language/get-started-section.png":::
 
 > [!NOTE]
 > Apart from the basic query samples, you can also access [shared queries](advanced-hunting-shared-queries.md) for specific threat hunting scenarios. Explore the shared queries on the left side of the page or the [GitHub query repository](https://aka.ms/hunting-queries).
@@ -203,9 +200,10 @@ The **Get started** section provides a few simple queries using commonly used op
 For more information on Kusto query language and supported operators, see [Kusto query language documentation](/azure/kusto/query/).
 
 > [!NOTE]
-> Some tables in this article might not be available in Microsoft Defender for Endpoint. [Turn on Microsoft Defender XDR](m365d-enable.md) to hunt for threats using more data sources. You can move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender XDR by following the steps in [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
+> Some tables in this article might not be available in Microsoft Defender for Endpoint. [Turn on Microsoft Defender](m365d-enable.md) to hunt for threats using more data sources. You can move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender by following the steps in [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
 
-## Related topics
+<a name="related-topics"></a>
+## Related content
 
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Work with query results](advanced-hunting-query-results.md)

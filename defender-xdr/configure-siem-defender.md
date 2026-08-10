@@ -1,43 +1,45 @@
 ---
 title: Integrate your SIEM tools with Microsoft Defender XDR
-description: Learn how to use REST API and configure supported security information and events management tools to receive and pull detections.
-search.appverid: met150
+description: Integrate supported SIEM tools with Microsoft Defender XDR by using REST APIs and connectors to pull incidents and stream event data.
 ms.service: defender-xdr
-ms.author: macapara
-author: mjcaparas
+ms.author: edbaynash
+author: EdB-MSFT
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
-ms.topic: conceptual
-ms.date: 06/27/2024
+ms.topic: how-to
+ms.date: 07/02/2026
+appliesto:
+- Microsoft Defender for Endpoint   
+- Microsoft Defender XDR
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Integrate your SIEM tools with Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender XDR](microsoft-365-defender.md)
+This article describes how to integrate supported security information and event management (SIEM) tools with Microsoft Defender XDR. You can pull incidents through the REST API or stream event data through Azure Event Hubs to platforms such as Splunk, ArcSight, Elastic, and IBM QRadar.
 
 <a name='pull-microsoft-365-defender-incidents-and-streaming-event-data-using-security-information-and-events-management-siem-tools'></a>
 
-## Pull Microsoft Defender XDR incidents and streaming event data using security information and events management (SIEM) tools
+<a name="pull-microsoft-defender-incidents-and-streaming-event-data-using-security-information-and-events-management-siem-tools"></a>
+
+## Use SIEM tools to pull Microsoft Defender incidents and streaming event data
 
 > [!NOTE]
 >
-> - [Microsoft Defender XDR Incidents](incident-queue.md) consists of collections of correlated alerts and their evidence.
-> - [Microsoft Defender XDR Streaming API](streaming-api.md) streams event data from Microsoft Defender XDR to event hubs or Azure storage accounts.
+> - [Microsoft Defender Incidents](incident-queue.md) consists of collections of correlated alerts and their evidence.
+> - [Microsoft Defender Streaming API](streaming-api.md) streams event data from Microsoft Defender to event hubs or Azure storage accounts.
 
-Microsoft Defender XDR supports security information and event management (SIEM) tools ingesting information from your enterprise tenant in Microsoft Entra ID using the OAuth 2.0 authentication protocol for a registered Microsoft Entra application representing the specific SIEM solution or connector installed in your environment.
+Microsoft Defender supports security information and event management (SIEM) tools ingesting information from your enterprise tenant in Microsoft Entra ID using the OAuth 2.0 authentication protocol for a registered Microsoft Entra application representing the specific SIEM solution or connector installed in your environment.
 
 For more information, see:
 
-- [Microsoft Defender XDR APIs license and terms of use](/legal/microsoft-365/api-terms)
-- [Access the Microsoft Defender XDR APIs](api-access.md)
+- [Microsoft Defender APIs license and terms of use](/legal/microsoft-365/api-terms)
+- [Access the Microsoft Defender APIs](api-access.md)
 - [Hello World example](api-hello-world.md)
 - [Get access with application context](api-create-app-web.md)
 
@@ -47,31 +49,34 @@ There are two primary models to ingest security information:
 
 2. Ingesting streaming event data either through Azure Event Hubs or Azure Storage Accounts.
 
-Microsoft Defender XDR currently supports the following SIEM solution integrations:
+Microsoft Defender currently supports the following SIEM solution integrations:
 
 - [Ingesting incidents from the incidents REST API](#ingesting-incidents-from-the-incidents-rest-api)
 - [Ingesting streaming event data via Event Hubs](#ingesting-streaming-event-data-via-event-hubs)
 
 ## Ingesting incidents from the incidents REST API
 
+The following SIEM solutions support ingesting Microsoft Defender XDR incidents and their contained alerts from the incidents REST API.
+
 ### Incident schema
 
-For more information on Microsoft Defender XDR incident properties including contained alert and evidence entities metadata, see [Schema mapping](api-list-incidents.md#schema-mapping).
+For more information on Microsoft Defender incident properties including contained alert and evidence entities metadata, see [Schema mapping](api-list-incidents.md#schema-mapping).
 
-### Splunk
+<a name="splunk"></a>
+### Ingest incidents into Splunk
 
 Using the new, fully supported Splunk Add-on for Microsoft Security that supports:
 
-- Ingesting incidents that contain alerts from the following products, which are mapped onto Splunk's Common Information Model (CIM):
+- Ingesting incidents that contain alerts from the following products, which are mapped onto Splunk's Common Information Model (CIM), a standard schema for normalizing event data:
 
-  - Microsoft Defender XDR
+  - Microsoft Defender
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Identity and Microsoft Entra ID Protection
   - Microsoft Defender for Cloud Apps
 
 - Ingesting Defender for Endpoint alerts (from the Defender for Endpoint's Azure endpoint) and updating these alerts
 
-- Support for updating Microsoft Defender XDR Incidents and/or Microsoft Defender for Endpoint Alerts and the respective dashboards has moved to the Microsoft 365 App for Splunk.
+- Support for updating Microsoft Defender Incidents and/or Microsoft Defender for Endpoint Alerts and the respective dashboards has moved to the Microsoft 365 App for Splunk.
 
 For more information on:
 
@@ -79,43 +84,50 @@ For more information on:
 
 - The Microsoft 365 App for Splunk, see the [Microsoft 365 App on Splunkbase](https://splunkbase.splunk.com/app/3786/)
 
-### Micro Focus ArcSight
+<a name="micro-focus-arcsight"></a>
+### Ingest incidents into Micro Focus ArcSight
 
-The new SmartConnector for Microsoft Defender XDR ingests incidents into ArcSight and maps these onto its Common Event
+The new SmartConnector for Microsoft Defender XDR ingests incidents into ArcSight and maps the incident data onto its Common Event
 Framework (CEF).
 
-For more information on the new ArcSight SmartConnector for Microsoft Defender XDR, see [ArcSight Product Documentation](https://community.microfocus.com/cyberres/productdocs/w/connector-documentation/39246/smartconnector-for-microsoft-365-defender).
+For more information on the new ArcSight SmartConnector for Microsoft Defender XDR, see [ArcSight Product Documentation](https://www.microfocus.com/documentation/arcsight/arcsight-smartconnectors-8.4/microsoft-365-defender/index.html).
 
-The SmartConnector replaces the previous FlexConnector for Microsoft Defender for Endpoint that's now retired.
+The SmartConnector replaces the previous FlexConnector for Microsoft Defender for Endpoint, which is now retired.
 
-### Elastic
+<a name="elastic"></a>
+### Ingest incidents into Elastic
 
 Elastic Security combines SIEM threat detection features with endpoint prevention and response capabilities in one solution.
+
 The Elastic integration for Microsoft Defender XDR and Defender for Endpoint enables organizations to leverage incidents and alerts from Defender within Elastic Security to perform investigations and incident response. Elastic correlates this data with other data sources, including cloud, network, and endpoint sources using robust detection rules to find threats quickly.
+
 For more information on the Elastic connector, see: [Microsoft M365 Defender | Elastic docs](https://docs.elastic.co/integrations/m365_defender)
 
 ## Ingesting streaming event data via Event Hubs
 
-First you need to stream events from your Microsoft Entra tenant to your Event Hubs or Azure Storage Account. For more information, see [Streaming API](streaming-api.md).
+For streaming event data integrations, you must first stream events from your Microsoft Entra tenant to your Event Hubs or Azure Storage Account. For more information, see [Microsoft Defender XDR Streaming API](streaming-api.md).
 
-For more information on the event types supported by the Streaming API, see [Supported streaming event types](supported-event-types.md).
+For more information on the event types supported by the Streaming API, see [Microsoft Defender XDR supported streaming event types](supported-event-types.md).
 
-### Splunk
+<a name="splunk-1"></a>
+### Stream event data to Splunk
 
 Use the Splunk Add-on for Microsoft Cloud Services to ingest events from Azure Event Hubs.
 
 For more information on the Splunk Add-on for Microsoft Cloud Services, see the [Microsoft Cloud Services Add-on on Splunkbase](https://splunkbase.splunk.com/app/3110/).
 
-### IBM QRadar
+<a name="ibm-qradar"></a>
+### Stream event data to IBM QRadar
 
-Use the new IBM QRadar Microsoft Defender XDR Device Support Module (DSM) that calls the [Microsoft Defender XDR Streaming API](streaming-api.md) that allows ingesting streaming event data from Microsoft Defender XDR products via Event Hubs or Azure Storage Account. For more information on supported event types, see [Supported event types](supported-event-types.md).
+Use the new IBM QRadar Microsoft Defender XDR Device Support Module (DSM) that calls the [Microsoft Defender Streaming API](streaming-api.md) that allows ingesting streaming event data from Microsoft Defender products via Event Hubs or Azure Storage Account. For more information on supported event types, see [Supported event types](supported-event-types.md).
 
-### Elastic
+<a name="elastic-1"></a>
+### Stream event data to Elastic
 
 For more information on the Elastic streaming API integration, see [Microsoft M365 Defender | Elastic docs](https://docs.elastic.co/integrations/m365_defender).
 
-## Related articles
+## Related content
 
-[Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
+- [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

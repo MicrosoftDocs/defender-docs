@@ -1,17 +1,14 @@
 ---
 title: Stream Microsoft Defender XDR events
 description: Learn how to configure Microsoft Defender XDR to stream Advanced Hunting events to Event Hubs or Azure storage account
-search.appverid: met150
 ms.service: defender-xdr
-ms.author: macapara
-author: mjcaparas
+ms.author: edbaynash
+author: EdB-MSFT
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 07/25/2023
 ---
 
@@ -38,8 +35,8 @@ For more information on Microsoft Defender XDR streaming API, see the [video](ht
 
 Topic | Description
 :---|:---
-[Stream events to Azure Event Hubs](streaming-api-event-hub.md)| Learn about enabling the streaming API in your tenant and configure Microsoft Defender XDR to stream [Advanced Hunting](advanced-hunting-overview.md) to Event Hubs.
-[Stream events to your Azure storage account](streaming-api-storage.md)| Learn about enabling the streaming API in your tenant and configure Microsoft Defender XDR to stream [Advanced Hunting](advanced-hunting-overview.md) to your Azure storage account.
+[Stream events to Azure Event Hubs](streaming-api-event-hub.md)| Learn about enabling the streaming API in your tenant and configure Microsoft Defender to stream [Advanced Hunting](advanced-hunting-overview.md) to Event Hubs.
+[Stream events to your Azure storage account](streaming-api-storage.md)| Learn about enabling the streaming API in your tenant and configure Microsoft Defender to stream [Advanced Hunting](advanced-hunting-overview.md) to your Azure storage account.
 [Supported event types](supported-event-types.md) | Learn which Advanced Hunting event types the Streaming API supports.
 
 Watch this short video to learn how to set up the streaming API to ship event information directly to Azure Event hubs for consumption by visualization services, data processing engines, or Azure storage for long-term data retention.  

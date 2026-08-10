@@ -1,24 +1,23 @@
 ---
 title: DeviceProcessEvents table in the advanced hunting schema
-description: Learn about the process spawning or creation events in the DeviceProcessEventstable of the advanced hunting schema
-search.appverid: met150
+description: Learn about the process spawning or creation events in the DeviceProcessEvents table of the advanced hunting schema
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.custom: 
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 09/06/2024
+ms.date: 08/07/2026
+ai-usage: ai-assisted
 ---
 
 # DeviceProcessEvents
@@ -26,18 +25,17 @@ ms.date: 09/06/2024
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- Microsoft Defender XDR
-- Microsoft Defender for Endpoint
-
-
-
 The `DeviceProcessEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about process creation and related events. Use this reference to construct queries that return information from this table.
 
 > [!TIP]
-> For detailed information about the events types (`ActionType` values) supported by a table, use the built-in schema reference available in Microsoft Defender XDR.
+> For detailed information about the events types (`ActionType` values) supported by a table, use the built-in schema reference available in the Defender portal.
+
+This advanced hunting table is populated by records from Microsoft Defender for Endpoint. If your organization hasn't deployed the service in Microsoft Defender, queries that use the table aren't going to work or return any results. For more information about how to deploy Defender for Endpoint in the Defender portal, read [Deploy supported services](deploy-supported-services.md).
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
+
+> [!NOTE]
+> `InitiatingProcessSignerType` and `InitiatingProcessSignatureStatus` describe the initiating process, not the newly created process. The `ProcessVersionInfo*` columns contain file version metadata and don't indicate whether the created process is digitally signed. To retrieve signing information for the created process, join its `SHA1` value with the [DeviceFileCertificateInfo](advanced-hunting-devicefilecertificateinfo-table.md) table.
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
@@ -107,7 +105,25 @@ For information on other tables in the advanced hunting schema, [see the advance
 |`IsProcessRemoteSession` | `bool` | Indicates whether the created process was run under a remote desktop protocol (RDP) session (true) or locally (false) |
 | `ProcessRemoteSessionDeviceName` | `string` | Device name of the remote device from which the created process's RDP session was initiated |
 | `ProcessRemoteSessionIP` | `string` | IP address of the remote device from which the created process's RDP session was initiated |
+| `ProcessUniqueId` | `string` | Unique identifier of the process; this is equal to the Process Start Key in Windows devices |
+| `InitiatingProcessUniqueId` | `string` | Unique identifier of the initiating process; this is equal to the Process Start Key in Windows devices |
+| `LogonID`|`long` |A unique identifier for the user initiating the event, enabling attribution of process activity to the originating interactive user across privilege escalation and session transitions. This field is located inside AdditionalFields/InitiatingProcessPosixEffectiveUser|
 
+## Retrieve signature information for created processes
+
+The following query returns process creation events and adds available signing certificate information for the created process:
+
+```kusto
+DeviceProcessEvents
+| where isnotempty(SHA1)
+| join kind=leftouter (
+    DeviceFileCertificateInfo
+    | project SHA1, IsSigned, IsTrusted, Signer, Issuer
+) on SHA1
+| project Timestamp, DeviceName, FileName, FolderPath, ProcessCommandLine,
+    InitiatingProcessFileName, InitiatingProcessSignatureStatus,
+    IsSigned, IsTrusted, Signer, Issuer
+```
 
 ## Related topics
 - [Advanced hunting overview](advanced-hunting-overview.md)

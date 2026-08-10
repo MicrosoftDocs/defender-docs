@@ -4,71 +4,68 @@ description: Set your level of cloud protection for Microsoft Defender Antivirus
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: emmwalshh
-ms.author: ewalsh
+author: chrisda
+ms.author: chrisda
 ms.reviewer: yongrhee
-ms.date: 11/10/2024
-manager: deniseb
-ms.custom: nextgen
+ms.date: 07/02/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
+---
 # Specify the cloud protection level
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
 
 Cloud protection works together with Microsoft Defender Antivirus to deliver protection to your devices faster than through traditional security intelligence updates. You can configure your level of cloud protection by using Microsoft Intune (recommended) or Group Policy.
 
+## Prerequisites
+
+### Supported operating systems 
+
+Cloud protection level configuration is supported on the following operating systems:
+
+- Windows
+
 ## Use Microsoft Intune to specify the level of cloud protection
 
-1. Go to the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)) and sign in.
+To specify the level of cloud protection for an existing policy in Microsoft Intune, see <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (opens in a new tab in the Intune documentation). When you edit the policy, use the following settings:
 
-2. Choose **Endpoint security** \> **Antivirus**.
-
-3. Select an antivirus profile. If you don't have one yet, or if you want to create a new profile, see [Configure device restriction settings in Microsoft Intune](/mem/intune/configuration/device-restrictions-configure).
-
-4. Next to **Configuration settings**, choose **Edit**.
-
-5. Scroll down to **Cloud Block Level**, and select one of the following:
-
-    - **Not configured**: Default state.
-    - **High**: Applies a strong level of detection.
-    - **High Plus**: Uses the **High** level and applies extra protection measures (might affect client performance).
-    - **Zero Tolerance**: Blocks all unknown executables.
-
-6. Choose **Next**, and then choose **Save**.
+- **Policy type**: Antivirus
+- Configuration settings: Choose **Edit** and scroll down to **Cloud Block Level**. Select one of the following options:
+  - **Not configured**: Default state.
+  - **High**: Applies a strong level of detection.
+  - **High Plus**: Uses the **High** level and applies extra protection measures (might affect client performance).
+  - **Zero Tolerance**: Blocks all unknown executables.
 
 > [!TIP]
 > Need some help? See the following resources:
 >
-> - [Manage device security with endpoint security policies in Microsoft Intune](/mem/intune/protect/endpoint-security-policy)
-> - [Configure Endpoint Protection](/mem/configmgr/protect/deploy-use/endpoint-protection-configure) (Configuration Manager)
+> - [Manage device security with endpoint security policies in Microsoft Intune](/intune/intune-service/protect/endpoint-security-policy)
+> - [Configure Endpoint Protection](/intune/configmgr/protect/deploy-use/endpoint-protection-configure) (Configuration Manager)
 
 ## Use Group Policy to specify the level of cloud protection
 
+Perform the following steps to specify the level of cloud protection by using Group Policy:
+
 1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 
-2. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
 
-3. In the **Group Policy Management Editor**, go to **Computer Configuration** \> **Administrative templates**.
+1. In the **Group Policy Management Editor**, go to **Computer Configuration** \> **Administrative templates**.
 
-4. Expand the tree to **Windows Components** \> **Microsoft Defender Antivirus** \> **MpEngine**.
+1. Expand the tree to **Windows Components** \> **Microsoft Defender Antivirus** \> **MpEngine**.
 
-5. Double-click the **Select cloud protection level** setting, and set it to **Enabled**. 
+1. Double-click the **Select cloud protection level** setting, and set it to **Enabled**. 
 
-6. Under **Select cloud blocking level**, set the level of protection:
+1. Under **Select cloud blocking level**, set the level of protection:
 
     - **Default blocking level** provides strong detection without increasing the risk of detecting legitimate files.
     - **Moderate blocking level** provides moderate only for high confidence detections
@@ -79,15 +76,18 @@ Cloud protection works together with Microsoft Defender Antivirus to deliver pro
     > [!CAUTION]
     > If you're using [Resultant Set of Policy with Group Policy](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn789183(v=ws.11)) (RSOP), and **Default blocking level** is selected, it can produce misleading results, as a setting with a `0` value is read as disabled by RSOP. You can instead confirm the registry key is present in `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\MpEngine` or use [GPresult](/windows-server/administration/windows-commands/gpresult).
 
-7. Select **OK**.
+1. Select **OK**.
 
-8. Deploy your updated Group Policy Object. See [Group Policy Management Console](/windows/win32/srvnodes/group-policy)
+1. Deploy your updated Group Policy Object. For deployment steps, see [Group Policy Management Console](/windows/win32/srvnodes/group-policy).
 
 > [!TIP]
-> Are you using Group Policy Objects on premises? See how they translate in the cloud. [Analyze your on-premises group policy objects using Group Policy analytics in Microsoft Intune](/mem/intune/configuration/group-policy-analytics).
+> Are you using Group Policy Objects on premises? See how they translate in the cloud. [Analyze your on-premises group policy objects using Group Policy analytics in Microsoft Intune](/intune/intune-service/configuration/group-policy-analytics).
 
-## See also
+## Related content
 
-- [Onboard non-Windows devices to Defender for Endpoint](configure-endpoints-non-windows.md)
+For more information about cloud protection, see the following resource:
+
 - [Turn on cloud protection in Microsoft Defender Antivirus](enable-cloud-protection-microsoft-defender-antivirus.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+
+

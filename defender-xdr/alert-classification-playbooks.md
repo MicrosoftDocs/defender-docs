@@ -1,32 +1,29 @@
 ---
 title: Alert classification playbooks
 description: Review the alerts for well-known attacks and take recommended actions to remediate the attack and protect your network.
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords:
-- NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
 ms.custom:
+- msecd-doc-authoring-1014
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-ms.date: 02/11/2024
+ms.date: 06/15/2026
+appliesto:
+  - Microsoft Defender XDR
+ai-usage: ai-assisted
+#customer intent: As a SOC analyst, I want to know how to review and classify alerts by using alert classification playbooks so that I can take the necessary actions to remediate the attack and protect my network.
 ---
 
 # Alert classification playbooks
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- Microsoft Defender XDR
 
 Alert classification playbooks allow you to methodically review and quickly classify the alerts for well-known attacks and take recommended actions to remediate the attack and protect your network. Alert classification will also help in properly classifying the overall incident.
 
@@ -38,7 +35,8 @@ As a security researcher or security operations center (SOC) analyst, you must h
 > [!NOTE]
 > You can provide feedback to Microsoft about true positive and false positives alerts, not only at the end of the investigation, but also during the investigation process. This can help Microsoft with future analysis and classification of security events.
 
-## Microsoft Defender for Office 365
+<a name="microsoft-defender-for-office-365"></a>
+## Alert classification for Microsoft Defender for Office 365
 
 [Microsoft Defender for Office 365](/defender-office-365/mdo-about) safeguards your organization against malicious threats posed by email messages, links (URLs), and collaboration tools. Defender for Office 365 includes:
 
@@ -64,9 +62,10 @@ Defender for Office 365 alerts can be classified as:
 - False positive (FP) for confirmed non-malicious activity.
 
 > [!NOTE]
-> Microsoft Defender portal [https://security.microsoft.com](https://security.microsoft.com) brings together functionality from existing Microsoft security portals. The Microsoft Defender portal emphasizes quick access to information, simpler layouts, and bringing related information together for easier use.
+> Microsoft Defender portal ([Microsoft Defender portal](https://security.microsoft.com)) brings together functionality from existing Microsoft security portals. The Microsoft Defender portal emphasizes quick access to information, simpler layouts, and bringing related information together for easier use.
 
-## Microsoft Defender for Cloud Apps
+<a name="microsoft-defender-for-cloud-apps"></a>
+## Alert classification for Microsoft Defender for Cloud Apps
 
 [Microsoft Defender for Cloud Apps](/defender-cloud-apps) is a Cloud Access Security Broker (CASB) that supports various deployment modes including log collection, API connectors, and reverse proxy. It provides rich visibility, control over data travel, and sophisticated analytics to identify and combat cyberthreats across all your Microsoft and third-party cloud services.
 
@@ -80,7 +79,8 @@ Defender for Cloud Apps alerts can be classified as:
 - Benign true positive (B-TP) for suspicious but not malicious activity, such as a penetration test or other authorized suspicious action.
 - FP for confirmed non-malicious activity.
 
-## Alert classification playbooks
+<a name="alert-classification-playbooks"></a>
+## Available playbooks
 
 See these playbooks for steps to more quickly classify alerts for the following threats:
 
@@ -89,6 +89,7 @@ See these playbooks for steps to more quickly classify alerts for the following 
 - [Suspicious inbox forwarding rules](alert-grading-playbook-inbox-forwarding-rules.md)
 - [Suspicious IP addresses related to password spray activity](alert-classification-suspicious-ip-password-spray.md)
 - [Password spray attacks](alert-classification-password-spray-attack.md)
+- [Malicious Exchange connectors](alert-classification-malicious-exchange-connectors.md)
 
 See [Investigate alerts](investigate-alerts.md) for information on how to examine alerts with the Microsoft Defender portal.
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

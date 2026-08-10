@@ -1,49 +1,49 @@
 ---
 title: Sign in to Jamf Pro
-description: Sign in to Jamf Pro.
+description: Sign in to the Jamf Pro console and navigate to the Computers area to begin configuring devices for Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
-author: emmwalshh
-ms.author: ewalsh
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
-manager: deniseb
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: macos
-search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 07/02/2026
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
+
+ai-usage: ai-assisted
 ---
+# Sign in to Jamf Pro to set up Microsoft Defender for Endpoint on macOS
 
-# Sign in to Jamf Pro
+## Sign in and open Computer settings in Jamf Pro
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+To begin configuring devices for Microsoft Defender for Endpoint on macOS, sign in to Jamf Pro and navigate to the Computers area.
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
-
-1. Enter your credentials.
+1. Sign in to the Jamf Pro portal with your administrator credentials.
 
    :::image type="content" source="media/jamf-pro-portal1.png" alt-text="The Jamf Pro dashboard1" lightbox="media/jamf-pro-portal1.png":::
 
-2. Select **Computers**.
+1. Select **Computers**.
 
    :::image type="content" source="media/jamf-pro-dashboard.png" alt-text="The Jamf Pro dashboard2" lightbox="media/jamf-pro-dashboard.png":::
 
-3. You see the settings that are available.
+1. The **Computer settings** page appears.
 
    :::image type="content" source="media/jamfpro-settings.png" alt-text="The Jamf Pro dashboard3" lightbox="media/jamfpro-settings.png":::
 
 
 ## Next step
 
-[Setup the device groups in Jamf Pro](mac-jamfpro-device-groups.md)
+After you open Computer settings in Jamf Pro, continue with device group configuration:
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+> [Set up the device groups in Jamf Pro](mac-jamfpro-device-groups.md)
+
+
+

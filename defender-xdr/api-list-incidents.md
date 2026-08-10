@@ -2,33 +2,23 @@
 title: List incidents API in Microsoft Defender XDR
 description: Learn how to list incidents API in Microsoft Defender XDR
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
-ms.author: macapara
-author: mjcaparas
+ms.author: edbaynash
+author: EdB-MSFT
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
  - m365-security
  - tier3
  - must-keep
 ms.topic: reference
-search.appverid: 
-  - MOE150
-  - MET150
 ms.custom: api
-ms.date: 02/08/2024
+ms.date: 08/07/2026
+appliesto:
+  - Microsoft Defender XDR
 ---
 
 # List incidents API in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-
-- [Microsoft Defender XDR](microsoft-365-defender.md)
 
 > [!NOTE]
 > **Try our new APIs using MS Graph security API**. Find out more at: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
@@ -45,6 +35,8 @@ The API supports the following **OData** operators:
 - `$top`, with a maximum value of **100**
 - `$skip`
 
+Incident properties, including severity, can change after an incident is created. To detect updates, poll by using the `lastUpdateTime` property and compare the current values with the values retained by your application. Because this endpoint doesn't support server-side filtering by severity, evaluate severity after retrieving the updated incidents.
+
 ## Limitations
 
 1. Maximum page size is **100 incidents**.
@@ -52,7 +44,7 @@ The API supports the following **OData** operators:
 
 ## Permissions
 
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Access Microsoft Defender XDR APIs](api-access.md)
+One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Access Microsoft Defender APIs](api-access.md)
 
 Permission type|Permission|Permission display name
 ---|---|---
@@ -103,7 +95,7 @@ classification|The specification for the incident. The property values are: *Unk
 determination|Specifies the determination of the incident. The property values are: *NotAvailable*, *Apt*, *Malware*, *SecurityPersonnel*, *SecurityTesting*, *UnwantedSoftware*, *Other*|NotAvailable
 detectionSource|Specifies source of detection.|Defender for Cloud Apps
 status|Categorize incidents (as *Active*, or *Resolved*). It can help you organize and manage your response to incidents.|Active
-severity|Indicates the possible impact on assets. The higher the severity the bigger the impact. Typically higher severity items require the most immediate attention. <p> One of the following values: *Informational*, *Low*, *Medium, and *High*.|Medium
+severity|Indicates the possible impact on assets. The higher the severity, the bigger the impact. Typically, higher-severity items require the most immediate attention. Severity can change as alerts are added to or removed from the incident. <p> One of the following values: *Informational*, *Low*, *Medium*, and *High*.|Medium
 tags|Array of custom tags associated with an incident, for example to flag a group of incidents with a common characteristic.|\[\]
 comments|Array of comments created by secops when managing the incident, for example additional information about the classification selection.|\[\]
 alerts|Array containing all of the alerts related to the incident, plus other information, such as severity, entities that were involved in the alert, and the source of the alerts.|\[\] (see details on alert fields below)

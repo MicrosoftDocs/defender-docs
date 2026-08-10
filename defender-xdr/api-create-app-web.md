@@ -2,52 +2,43 @@
 title: Create an app to access Microsoft Defender XDR without a user
 description: Learn how to create an app to access Microsoft Defender XDR without a user.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
-ms.author: macapara
-author: mjcaparas
+ms.author: edbaynash
+author: EdB-MSFT
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
  - m365-security
  - tier3
  - must-keep
 ms.topic: reference
-search.appverid: 
-  - MOE150
-  - MET150
 ms.custom: api
-ms.date: 08/29/2024
+ms.date: 04/18/2025
+appliesto:
+  - Microsoft Defender XDR
 ---
 
 # Create an app to access Microsoft Defender XDR without a user
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- Microsoft Defender XDR
-
 > [!IMPORTANT]
-> Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+> Some information relates to prereleased product which may be substantially modified before its general availability. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-This page describes how to create an application to get programmatic access to Microsoft Defender XDR without a defined user—for example, if you're creating a daemon or background service.
+Create an application to get programmatic access to Microsoft Defender without a defined user—for example, if you're creating a daemon or background service.
 
-If you need programmatic access to Microsoft Defender XDR on behalf of one or more users, see [Create an app to access Microsoft Defender XDR APIs on behalf of a user](api-create-app-user-context.md) and [Create an app with partner access to Microsoft Defender XDR APIs](api-partner-access.md). If you're not sure which kind of access you need, see [Get started](api-access.md).
+If you need programmatic access to Microsoft Defender on behalf of one or more users, see [Create an app to access Microsoft Defender APIs on behalf of a user](api-create-app-user-context.md) and [Create an app with partner access to Microsoft Defender APIs](api-partner-access.md). If you're not sure which kind of access you need, see [Get started](api-access.md).
 
-Microsoft Defender XDR exposes much of its data and actions through a set of programmatic APIs. Those APIs help you automate workflows and make use of Microsoft Defender XDR's capabilities. This API access requires OAuth2.0 authentication. For more information, see [OAuth 2.0 Authorization Code Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
+Microsoft Defender exposes much of its data and actions through a set of programmatic APIs. Those APIs help you automate workflows and make use of Microsoft Defender's capabilities. This API access requires OAuth2.0 authentication. For more information, see [OAuth 2.0 Authorization Code Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
 
-In general, you'll need to take the following steps to use these APIs:
+In general, you need to take the following steps to use these APIs:
 
 - Create a Microsoft Entra application.
 - Get an access token using this application.
-- Use the token to access Microsoft Defender XDR API.
+- Use the token to access Microsoft Defender API.
 
 This article explains how to:
 
 - Create a Microsoft Entra application
-- Get an access token to Microsoft Defender XDR
+- Get an access token to Microsoft Defender
 - Validate the token.
 
 ## Create an app
@@ -62,8 +53,10 @@ This article explains how to:
 
 4. On your application page, select **API Permissions** > **Add permission** > **APIs my organization uses** >, type **Microsoft Threat Protection**, and select **Microsoft Threat Protection**. Your app can now access Microsoft Defender XDR.
 
+   Your app can now access Microsoft Defender.
+
    > [!TIP]
-   > *Microsoft Threat Protection* is a former name for Microsoft Defender XDR, and will not appear in the original list. You need to start writing its name in the text box to see it appear.
+   > *Microsoft Threat Protection* is a former name for Microsoft Defender XDR, and doesn't appear in the original list. You need to start writing its name in the text box to see it appear.
 
    :::image type="content" source="/defender/media/apis-in-my-org-tab.PNG" alt-text="The organization's APIs usage tab in the Microsoft Defender portal" lightbox="/defender/media/apis-in-my-org-tab.PNG":::
 
@@ -72,7 +65,7 @@ This article explains how to:
    :::image type="content" source="/defender/media/request-api-permissions.PNG" alt-text="The application permission pane in the Microsoft Defender portal" lightbox="/defender/media/request-api-permissions.PNG":::
 
     > [!NOTE]
-    > You need to select the relevant permissions for your scenario. *Read all incidents* is just an example. To determine which permission you need, please look at the **Permissions** section in the API you want to call.
+    > You need to select the relevant permissions for your scenario. *Read all incidents* is just an example. To determine which permission you need, check the **Permissions** section in the API you want to call.
     >
     > For instance, to [run advanced queries](api-advanced-hunting.md), select the 'Run advanced queries' permission; to [isolate a device](/windows/security/threat-protection/microsoft-defender-atp/isolate-machine), select the 'Isolate machine' permission.
 
@@ -91,13 +84,13 @@ This article explains how to:
 
    :::image type="content" source="/defender/media/app-and-tenant-ids.png" alt-text="The Overview pane in the Microsoft Defender portal" lightbox="/defender/media/app-and-tenant-ids.png":::
 
-9. **For Microsoft Defender XDR Partners only**: [Follow these instructions](./api-partner-access.md) for partner access through the Microsoft Defender XDR APIs, set your app to be multi-tenant, so it can be available in all tenants once you receive admin consent. Partner access is **required** for third-party apps—for example, if you create an app that is intended to run in multiple customers' tenants. It is **not required** if you create a service that you want to run in your tenant only, such as an application for your own usage that will only interact with your own data. To set your app to be multi-tenant:
+9. **For Microsoft Defender partners only**: [Follow these instructions](./api-partner-access.md) for partner access through the Microsoft Defender XDR APIs, set your app to be multitenant, so it can be available in all tenants once you receive admin consent. Partner access is **required** for third-party apps—for example, if you create an app that is intended to run in multiple customers' tenants. It is **not required** if you create a service that you want to run in your tenant only, like an application for your own use that only interacts with your own data. To set your app to be multitenant:
 
     - Go to **Authentication**, and add https://portal.azure.com as the **Redirect URI**.
 
-    - On the bottom of the page, under **Supported account types**, select the **Accounts in any organizational directory** application consent for your multi-tenant app.
+    - On the bottom of the page, under **Supported account types**, select the **Accounts in any organizational directory** application consent for your multitenant app.
 
-    Since your application interacts with Microsoft Defender XDR on behalf of your users, it needs be approved for every tenant on which you intend to use it.
+    Since your application interacts with Microsoft Defender XDR on behalf of your users, it needs to be approved for every tenant on which you intend to use it.
 
     The Active Directory administrator for each tenant needs to select the consent link and approve your app.
 
@@ -109,7 +102,7 @@ This article explains how to:
 
     The digits `00000000-0000-0000-0000-000000000000` should be replaced with your Application ID.  
 
-**Done!** You've successfully registered an application! See examples below for token acquisition and validation.
+**Done!** You've successfully registered an application! See the following examples for token acquisition and validation.
 
 ## Get an access token
 
@@ -151,7 +144,7 @@ return $token
 > The following code was tested with Nuget Microsoft.Identity.Client 3.19.8.
 
 > [!IMPORTANT]
-> The [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) NuGet package and Azure AD Authentication Library (ADAL) have been deprecated. No new features have been added since June 30, 2020.   We strongly encourage you to upgrade, see the [migration guide](/azure/active-directory/develop/msal-migration) for more details.
+> The [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) NuGet package and Azure AD Authentication Library (ADAL) were deprecated. No new features were added since June 30, 2020. We strongly encourage you to upgrade, see the [migration guide](/azure/active-directory/develop/msal-migration) for more details.
 
 1. Create a new console application.
 
@@ -221,7 +214,7 @@ aadToken = jsonResponse["access_token"]
 
 1. Set CLIENT_SECRET to your Azure application secret.
 
-1. Set TENANT_ID to the Azure tenant ID of the customer that wants to use your app to access Microsoft Defender XDR.
+1. Set TENANT_ID to the Azure tenant ID of the customer that wants to use your app to access Microsoft Defender.
 
 1. Run the following command:
 
@@ -229,7 +222,7 @@ aadToken = jsonResponse["access_token"]
    curl -i -X POST -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=%CLIENT_ID%" -d "scope=https://api.security.microsoft.com/.default" -d "client_secret=%CLIENT_SECRET%" "https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token" -k
    ```
 
-   A successful response will look like this:
+   A successful response looks like this:
 
    ```bash
    {"token_type":"Bearer","expires_in":3599,"ext_expires_in":0,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIn <truncated> aWReH7P0s0tjTBX8wGWqJUdDA"}
@@ -249,11 +242,11 @@ aadToken = jsonResponse["access_token"]
 
 ## Use the token to access the Microsoft Defender XDR API
 
-1. Choose the API you want to use (incidents, or advanced hunting). For more information, see [Supported Microsoft Defender XDR APIs](api-supported.md).
+1. Choose the API you want to use (incidents, or advanced hunting). For more information, see [Supported Microsoft Defender APIs](api-supported.md).
 
-2. In the http request you are about to send, set the authorization header to `"Bearer" <token>`, *Bearer* being the authorization scheme, and *token* being your validated token.
+2. In the HTTP-based request you're about to send, set the authorization header to `"Bearer" <token>`, *Bearer* being the authorization scheme, and *token* being your validated token.
 
-3. The token will expire within one hour. You can send more than one request during this time with the same token.
+3. The token expires within one hour. You can send more than one request during this time with the same token.
 
 The following example shows how to send a request to get a list of incidents **using C#**.
 
@@ -268,11 +261,11 @@ The following example shows how to send a request to get a list of incidents **u
 
 ## Related articles
 
-- [Microsoft Defender XDR APIs overview](api-overview.md)
-- [Access the Microsoft Defender XDR APIs](api-access.md)
+- [Microsoft Defender APIs overview](api-overview.md)
+- [Access the Microsoft Defender APIs](api-access.md)
 - [Create a 'Hello world' application](api-hello-world.md)
 - [Create an app to access Microsoft Defender XDR APIs on behalf of a user](api-create-app-user-context.md)
-- [Create an app with multi-tenant partner access to Microsoft Defender XDR APIs](api-partner-access.md)
+- [Create an app with multitenant partner access to Microsoft Defender XDR APIs](api-partner-access.md)
 - [Learn about API limits and licensing](/legal/microsoft-365/api-terms)
 - [Understand error codes](api-error-codes.md)
 - [Manage secrets in your server apps with Azure Key Vault](/training/modules/manage-secrets-with-azure-key-vault/)

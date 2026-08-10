@@ -12,9 +12,9 @@ metadata:
   - m365-security
   - tier1
   ms.custom: intro-hub-or-landing
-  author: dlanger
+  author: deblanger
   ms.author: dlanger
-  ms.date: 06/19/2024
+  ms.date: 06/23/2026
 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -37,66 +37,65 @@ landingContent:
     linkLists:
       - linkListType: get-started
         links:
-          - text: Start using Microsoft Security Exposure Management
-            url: get-started-exposure-management.md
-          - text: Review prerequisites
+          - text: Prerequisites and support
             url: prerequisites.md
-          - text: Import data from external data connectors
-            url: overview-data-connectors.md  
-
+          - text: Start using Security Exposure Management
+            url: get-started-exposure-management.md
 
   # Card
-  - title: Manage critical assets
+  - title: Connect your data
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Data connectors overview
+            url: overview-data-connectors.md
+      - linkListType: how-to-guide
+        links:
+          - text: Configure your data connectors
+            url: configure-data-connectors.md
+
+  # Card
+  - title: Explore your attack surface
     linkLists:
       - linkListType: concept
         links:
-          - text: Learn about critical asset management
+          - text: Attack surface management overview
+            url: cross-workload-attack-surfaces.md
+          - text: Work with attack paths
+            url: work-attack-paths-overview.md
+      - linkListType: how-to-guide
+        links:
+          - text: Explore with the attack surface map
+            url: enterprise-exposure-map.md
+          - text: Query the enterprise exposure graph
+            url: query-enterprise-exposure-graph.md
+
+  # Card
+  - title: Prioritize risks
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Critical asset management overview
             url: critical-asset-management.md
       - linkListType: how-to-guide
         links:
           - text: Review and classify critical assets
-            url: classify-critical-assets.md 
+            url: classify-critical-assets.md
+          - text: Review security recommendations
+            url: security-recommendations.md
 
   # Card
-  - title: Investigate & remediate attack surfaces
-    linkLists:
-    - linkListType: concept
-      links:
-        - text: Learn about attack surface management
-          url: cross-workload-attack-surfaces.md
-    - linkListType: how-to-guide
-      links:
-      - text: Query the enterprise exposure graph
-        url: query-enterprise-exposure-graph.md
-      - text: Explore with the attack surface map
-        url: enterprise-exposure-map.md 
-
-  # Card
-  - title: Get insights into exposure risk
+  - title: Investigate & act
     linkLists:
       - linkListType: concept
         links:
-        - text: Learn about exposure insights
-          url: exposure-insights-overview.md
+          - text: Exposure insights overview
+            url: exposure-insights-overview.md
       - linkListType: how-to-guide
         links:
-        - text: Review security initiatives
-          url: initiatives.md
-        - text: Investigate security metrics
-          url: security-metrics.md
-        - text: Review security recommendations
-          url: security-recommendations.md
+          - text: Review security initiatives
+            url: initiatives.md
+          - text: Review security metrics
+            url: security-metrics.md
 
-  # Card
-  - title: Investigate attack paths 
-    linkLists:
-      - linkListType: concept
-        links:
-        - text: Learn about attack paths
-          url: work-attack-paths-overview.md
-      - linkListType: how-to-guide
-        links:
-        - text: Review potential attack paths
-          url: review-attack-paths.md 
-          
           

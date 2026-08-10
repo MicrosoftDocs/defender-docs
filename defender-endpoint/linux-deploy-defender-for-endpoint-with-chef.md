@@ -2,66 +2,47 @@
 title: How to Deploy Defender for Endpoint on Linux with Chef
 description: Learn how to deploy Defender for Endpoint on Linux with Chef.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: linux
-search.appverid: met150
-ms.date: 12/20/2024
----
+ms.date: 05/21/2026
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Deploy Defender for Endpoint on Linux with Chef
 
 [!INCLUDE [Microsoft Defender for Endpoint third-party tool support](../includes/support.md)]
 
-**Applies to**:
-
-- Microsoft Defender for Endpoint Server
-- [Microsoft Defender for Servers](/azure/defender-for-cloud/integration-defender-for-endpoint)
 
 ## Introduction
 
-This article talks about how to deploy Defender for Endpoint on Linux at scale with Chef using two methods:
+You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to deploy Defender for Endpoint on Linux at scale with Chef using two methods:
 
-1. Install using installer script
-2. Manually configuring the repositories for more granular control over the deployment
+- Install using installer script
+- Manually configure the repositories for more granular control over the deployment
+
+To use another method, refer to the [See also](#see-also) section.
+
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Prerequisites
 
-For a description of prerequisites and system requirements, see [Microsoft Defender for Endpoint on Linux](/defender-endpoint/microsoft-defender-endpoint-linux).
+Before you get started, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements.
 
 ## Download the onboarding package
 
-1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/) then navigate to **Settings** > **Endpoints** > **Device management** > **Onboarding**.
+[!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
-2. In the first drop-down menu, select **Linux Server** as the operating system. In the second drop-down menu, select **Your preferred Linux configuration management tool** as the deployment method.
-
-3. Select **Download onboarding package** and save the file as `WindowsDefenderATPOnboardingPackage.zip`.
-
-   ![The option to download the onboarded package.](/defender-endpoint/media/portal-onboarding-linux-2.png)
-   
-4. Extract the contents of the archive using the following command:
-
-   Command:
-   
-   ```
-   unzip WindowsDefenderATPOnboardingPackage.zip
-   ```
-   
-   The expected output is:
-   
-   ```
-   Archive:  WindowsDefenderATPOnboardingPackage.zip
-   inflating: mdatp_onboard.json
-   ```
+[!INCLUDE [linux-get-deployment-package-third-party-tools](includes/linux-get-deployment-package-third-party-tools.md)]
    
 ## Create a directory structure
 
@@ -81,9 +62,7 @@ mkdir mdatp/files
 
 Copy `mdatp_onboard.json` to the `/tmp` folder.
 
-On the Chef Workstation, navigate to the **mdatp/recipes** folder, which is automatically created when the cookbook is generated. Use your preferred text editor (like vi or nano) to add the following instructions to the end of the **default.rb** file then save and close the file:
-
-- include_recipe '::install_mdatp'
+On the Chef Workstation, navigate to the **mdatp/recipes** folder, which is automatically created when the cookbook is generated. Use your preferred text editor (like vi or nano) to add the following instructions to the end of the **default.rb** file, and then save and close the file: `include_recipe '::install_mdatp'`.
 
 ## Create a cookbook 
 
@@ -100,7 +79,7 @@ A cookbook can be created through any of the following methods:
    wget https://raw.githubusercontent.com/microsoft/mdatp-xplat/refs/heads/master/linux/installation/mde_installer.sh /tmp
    ```
 
-2. Create a new recipe file named **install_mdatp.rb** in the recipes folder `~/cookbooks/mdatp/recipes/install_mdatp.rb` and add the following text to the file. You can also download the file directly from [GitHub](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/third_party_installation_playbooks/chef.install_mdatp_simplified.rb).
+1. Create a new recipe file named **install_mdatp.rb** in the recipes folder `~/cookbooks/mdatp/recipes/install_mdatp.rb` and add the following text to the file. You can also download the file directly from [GitHub](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/third_party_installation_playbooks/chef.install_mdatp_simplified.rb).
 
    ```bash
    mdatp = "/etc/opt/microsoft/mdatp"
@@ -183,7 +162,7 @@ file "#{mdatp}/mdatp_onboard.json" do
 end
 ```
 
->[!NOTE]
+> [!NOTE]
 > You can modify the os distribution, distribution version number, channel (prod/insider-fast, insiders-slow) and repo name to match the version you're deploying to and the channel you'd like to deploy to. Run `chef-client --local-mode --runlist  'recipe[mdatp]'` to test the cookbook on the Chef workstation.
 
 ## Troubleshoot installation issues
@@ -192,22 +171,21 @@ To troubleshoot issues:
 
 1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](linux-resources.md#log-installation-issues).
 
-2. For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install).
+1. For information about common installation issues, see [Installation issues](linux-support-install.md).
 
-3. If the health of the device is `false`, see [Defender for Endpoint agent health issues](/defender-endpoint/health-status).
+1. If the health of the device is `false`, see [Defender for Endpoint agent health issues](health-status.md).
 
-4. For product performance issues, see [Troubleshoot performance issues](/defender-endpoint/linux-support-perf).
+1. For product performance issues, see [Troubleshoot performance issues](linux-support-perf.md).
 
-5. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
-
-To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/run-analyzer-macos-linux).
+1. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](linux-support-connectivity.md).
+To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](overview-client-analyzer.md).
 
 ## How to configure policies for Microsoft Defender on Linux
 
 You can configure antivirus or EDR settings on your endpoints using any of the following methods:
 
-- See [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
-- See [security settings management](/mem/intune/protect/mde-security-integration) to configure settings in the Microsoft Defender portal.
+- See [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md).
+- See [security settings management](/intune/intune-service/protect/mde-security-integration) to configure settings in the Microsoft Defender portal.
 
 ## Uninstall MDATP cookbook
 
@@ -236,4 +214,16 @@ end
 
 To include this step as part of the recipe, add `include_recipe ':: uninstall_mdatp` to your `default.rb` file within the recipe folder. Ensure that you have removed the `include_recipe '::install_mdatp'` from the `default.rb` file.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+## See also
+
+- [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
+- [Use installer script based deployment to deploy Defender for Endpoint on Linux](linux-installer-script.md) 
+- [Deploy Defender for Endpoint on Linux with Ansible](linux-install-with-ansible.md)
+- [Deploy Defender for Endpoint on Linux with Puppet](linux-install-with-puppet.md)
+- [Deploy Defender for Endpoint on Linux with Saltstack](linux-install-with-saltack.md)
+- [Deploy Defender for Endpoint on Linux manually](linux-install-manually.md)
+- [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
+- [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
+
+
+

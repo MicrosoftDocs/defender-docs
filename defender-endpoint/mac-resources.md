@@ -1,34 +1,26 @@
 ---
-title: Resources for Microsoft Defender for Endpoint on Mac
-description: Resources for Microsoft Defender for Endpoint on Mac, including how to uninstall it, how to collect diagnostic logs, CLI commands, and known issues with the product.
+title: Resources for Microsoft Defender for Endpoint on macOS
+description: Resources for Microsoft Defender for Endpoint on macOS, including how to uninstall it, how to collect diagnostic logs, CLI commands, and known issues with the product.
 ms.service: defender-endpoint
-author: emmwalshh
-ms.author: ewalsh
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
-manager: deniseb
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.subservice: macos
-search.appverid: met150
-ms.date: 09/13/2024
----
+ms.date: 04/16/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Resources for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 ## Collecting diagnostic information
 
@@ -44,9 +36,9 @@ If you can reproduce a problem, increase the logging level, run the system for s
    Log level configured successfully
    ```
 
-2. Reproduce the problem.
+1. Reproduce the problem.
 
-3. Run `sudo mdatp diagnostic create` to back up the Microsoft Defender for Endpoint logs. The files are stored inside a `.zip` archive. This command also prints the file path to the backup after the operation succeeds.
+1. Run `sudo mdatp diagnostic create` to back up the Microsoft Defender for Endpoint logs. The files are stored inside a `.zip` archive. This command also prints the file path to the backup after the operation succeeds.
 
    > [!TIP]
    > By default, diagnostic logs are saved to `/Library/Application Support/Microsoft/Defender/wdavdiag/`. To change the directory where diagnostic logs are saved, pass `--path [directory]` to the below command, replacing `[directory]` with the desired directory.
@@ -59,7 +51,7 @@ If you can reproduce a problem, increase the logging level, run the system for s
    Diagnostic file created: "/Library/Application Support/Microsoft/Defender/wdavdiag/932e68a8-8f2e-4ad0-a7f2-65eb97c0de01.zip"
    ```
 
-4. Restore logging level.
+1. Restore logging level.
 
    ```bash
    mdatp log level set --level info
@@ -119,9 +111,9 @@ Important tasks, such as controlling product settings and triggering on-demand s
 |Quarantine management|Remove all files from the quarantine|`mdatp threat quarantine remove-all`|
 |Quarantine management|Add a file detected as a threat to the quarantine|`mdatp threat quarantine add --id [threat-id]`|
 |Quarantine management|Remove a file detected as a threat from the quarantine|`mdatp threat quarantine remove --id [threat-id]`|
-|Quarantine management|Restore a file from the quarantine. Available in Defender for Endpoint version before [101.23092.0012](mac-whatsnew.md#nov-2023-build-101230920007--release-version-2012309270).|`mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`|
-|Quarantine management|Restore a file from the quarantine with Threat ID. Available in Defender for Endpoint version [101.23092.0012](mac-whatsnew.md#nov-2023-build-101230920007--release-version-2012309270) or later.|`mdatp threat restore threat-id --id [threat-id] --destination-path [destination-folder]`|
-|Quarantine management|Restore a file from the quarantine with Threat Original Path. Available in Defender for Endpoint version [101.23092.0012](mac-whatsnew.md#nov-2023-build-101230920007--release-version-2012309270) or later.|`mdatp threat restore threat-path --path [threat-original-path] --destination-path [destination-folder]`|
+|Quarantine management|Restore a file from the quarantine. Available in Defender for Endpoint version before 101.23092.0012.|`mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`|
+|Quarantine management|Restore a file from the quarantine with Threat ID. Available in Defender for Endpoint version 101.23092.0012 or later.|`mdatp threat restore threat-id --id [threat-id] --destination-path [destination-folder]`|
+|Quarantine management|Restore a file from the quarantine with Threat Original Path. Available in Defender for Endpoint version 101.23092.0012 or later.|`mdatp threat restore threat-path --path [threat-original-path] --destination-path [destination-folder]`|
 |Network Protection Configuration|Configure the Network Protection enforcement level|`mdatp config network-protection enforcement-level --value [Block/Audit/Disabled]`|
 |Network Protection management|Check Network protection was started successfully|`mdatp health --field network_protection_status`|
 |Device Control management|Is Device Control enabled, and what is the Default Enforcement?|`mdatp device-control policy preferences list`|
@@ -132,7 +124,6 @@ Important tasks, such as controlling product settings and triggering on-demand s
 |Diagnostics|Generate diagnostic logs|`mdatp diagnostic create --path [directory]`|
 |Health|Check the product's health|`mdatp health`|
 |Health|Check for a specific product attribute|`mdatp health --field [attribute: healthy/licensed/engine_version...]`|
-|EDR|EDR list exclusions (root)| `mdatp edr exclusion list [processes|paths|extensions|all]` |
 |EDR|Set/Remove tag, only GROUP supported|`mdatp edr tag set --name GROUP --value [name]`|
 |EDR|Remove group tag from device|`mdatp edr tag remove --tag-name [name]`|
 |EDR|Add Group ID|`mdatp edr group-ids --group-id [group]`|
@@ -177,23 +168,23 @@ There are several ways to uninstall Microsoft Defender for Endpoint on macOS. Al
 
 All of the uninstall of Microsoft Defender for Endpoint on macOS require the following:
 
-1. Create a [device tag](/defender-endpoint/machine-tags), and name the tag *decommissioned* and assign it to the macOS where Microsoft Defender for macOS is being uninstalled.
+1. Create a [device tag](machine-tags.md), and name the tag *decommissioned* and assign it to the macOS where Microsoft Defender for macOS is being uninstalled.
 
-1. Create a [Device group](/defender-endpoint/machine-groups) and name it (e.g. *Decommissioned macOS*) and assign a user *group* that should be able to see them.
+1. Create a [Device group](machine-groups.md) and name it (for example, *Decommissioned macOS*) and assign a user *group* that should be able to see them.
 
-   Note: Steps 1 and 2 are optional if you do not want to see these devices that are retired in the "Device inventory" for 180 days.
+   Note: Steps 1 and 2 are optional if you don't want to see these devices that are retired in the "Device inventory" for 180 days.
    
-1. Remove the "Set Preferences" policies that contain [Tamper Protection](/defender-endpoint/tamperprotection-macos) or through the manual configuration.
+1. Remove the "Set Preferences" policies that contain [Tamper Protection](tamperprotection-macos.md) or through the manual configuration.
 
-1. Offboard each device per [Offboard non-Windows devices](configure-endpoints-non-windows.md).
+1. In the Microsoft Defender portal, in the navigation pane, select **Settings** > **Offboard**, and then select the operating system to start the process.
 
-1. Uninstall the Microsoft Defender for Endpoint for macOS apps
+1. Uninstall the Microsoft Defender for Endpoint app.
 
 1. Remove the device from the *group* for *system extension* policies if an MDM was used to set them.
 
 ### Interactive uninstallation
 
-- Open **Finder > Applications**. Right click on **Microsoft Defender for Endpoint**, and then select **Move to Trash**.
+- Open **Finder** > **Applications**. Right select on **Microsoft Defender for Endpoint**, and then select **Move to Trash**.
 
 ### From the command line
 
@@ -219,9 +210,10 @@ The offboarding profile should be uploaded without any modifications, and with P
 
 When threats are detected, your security team can view detections and if necessary, take response actions on a device in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). The Microsoft Defender combines protection, detection, investigation, and response to threats in a central location. For more information, see the following resources:
 
-- [Overview of endpoint detection and response](/defender-endpoint/overview-endpoint-detection-response)
+- [Overview of endpoint detection and response](overview-endpoint-detection-response.md)
 - [Tech Community blog: EDR capabilities for macOS have now arrived](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/edr-capabilities-for-macos-have-now-arrived/ba-p/1047801)
 - [Microsoft Defender portal overview](/defender-xdr/microsoft-365-defender-portal)
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

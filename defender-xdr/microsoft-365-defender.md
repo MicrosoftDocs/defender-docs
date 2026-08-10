@@ -1,26 +1,21 @@
 ---
 title: What is Microsoft Defender XDR?
 description: Microsoft Defender XDR is a coordinated threat protection solution designed to protect devices, identity, data, and applications.
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords:
-- NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.custom: 
 - admindeeplinkDEFENDER
 - intro-overview
 ms.collection:
 - essentials-overview
 - tier1
-ms.topic: conceptual
+ms.topic: overview
 adobe-target: true
-ms.date: 08/19/2024
+ms.date: 08/07/2026
 appliesto:
 - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
-manager: deniseb
 ---
 
 # What is Microsoft Defender XDR?
@@ -29,7 +24,7 @@ manager: deniseb
 
 Microsoft Defender XDR is a unified pre- and post-breach enterprise defense suite that natively coordinates detection, prevention, investigation, and response across endpoints, identities, email, and applications to provide integrated protection against sophisticated attacks.
 
-Microsoft Defender XDR helps security teams protect and detect their organizations by using information from other Microsoft security products, including:
+Microsoft Defender helps security teams protect their organizations and detect threats by using information from other Microsoft security products, including:
 
 - [**Microsoft Defender for Endpoint**](/defender-endpoint/microsoft-defender-endpoint)
 - [**Microsoft Defender for Office 365**](/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet)
@@ -41,17 +36,19 @@ Microsoft Defender XDR helps security teams protect and detect their organizatio
 - [**Microsoft Data Loss Prevention**](/microsoft-365/compliance/dlp-learn-about-dlp)
 - [**App Governance**](/defender-cloud-apps/app-governance-manage-app-governance)
 - [**Microsoft Purview Insider Risk Management**](/purview/insider-risk-management-solution-overview)
+- [**Microsoft Security Exposure Management**](/security-exposure-management)
 
-With the integrated Microsoft Defender XDR solution, security professionals can stitch together the threat signals that each of these products receive and determine the full scope and impact of the threat; how it entered the environment, what it's affected, and how it's currently impacting the organization. Microsoft Defender XDR takes automatic action to prevent or stop the attack and self-heal affected mailboxes, endpoints, and user identities.
+
+With the integrated Microsoft Defender solution, security professionals can stitch together the threat signals that each of these products receive and determine the full scope and impact of the threat; how it entered the environment, what it's affected, and how it's currently impacting the organization. Microsoft Defender takes automatic action to prevent or stop the attack and self-heal affected mailboxes, endpoints, and user identities.
 
 > [!NOTE]
-> Microsoft Defender XDR correlates signals from Microsoft security products that you have licensed and provisioned access to.
+> Microsoft Defender correlates signals from Microsoft security products that you have licensed and provisioned access to.
 
 <a name='microsoft-365-defender-protection'></a>
 
-## Microsoft Defender XDR protection
+## Microsoft Defender protection
 
-Microsoft Defender XDR services protect:
+Microsoft Defender services protect:
 
 - **Endpoints with Defender for Endpoint** - Microsoft Defender for Endpoint is a unified endpoint platform for preventative protection, post-breach detection, automated investigation, and response.
 
@@ -63,7 +60,7 @@ Microsoft Defender XDR services protect:
 
 - **Applications with Defender for Cloud Apps** - Microsoft Defender for Cloud Apps is a comprehensive cross-SaaS solution bringing deep visibility, strong data controls, and enhanced threat protection to your cloud apps.
 
-Microsoft Defender XDR's unique cross-product layer augments the individual service components to:
+Microsoft Defender's unique cross-product layer augments the individual service components to:
 
 - Help protect against attacks and coordinate defensive responses across the services through signal sharing and automated actions.
 
@@ -71,7 +68,7 @@ Microsoft Defender XDR's unique cross-product layer augments the individual serv
 
 - Automate response to compromise by triggering self-healing for impacted assets through automated remediation.
 
-- Enable security teams to perform detailed and effective threat hunting across endpoint and Office data.
+- Enable security teams to perform detailed and effective threat hunting over endpoint, identity, email, and cloud app data.
 
 Microsoft Defender XDR cross-product features include:
 
@@ -79,17 +76,17 @@ Microsoft Defender XDR cross-product features include:
 
 - **Combined incidents queue** - To help security professionals focus on what is critical by ensuring the full attack scope, impacted assets and automated remediation actions are grouped together and surfaced in a timely manner. 
 
-- **Automatic response to threats** - Critical threat information is shared in real time between the Microsoft Defender XDR products to help stop the progression of an attack. 
+- **[Automatic attack disruption](automatic-attack-disruption.md)** - Microsoft Defender XDR correlates high-confidence signals from multiple workloads and automatically applies containment actions to stop in-progress attacks and limit lateral movement.
 
-   For example, if a malicious file is detected on an endpoint protected by Defender for Endpoint, it instructs Defender for Office 365 to scan and remove the file from all e-mail messages. The file is blocked on sight by the entire Microsoft 365 security suite.
+   For example, if a malicious file is detected on an endpoint protected by Defender for Endpoint, it instructs Defender for Office 365 to scan and remove the file from all email messages. The file is blocked on sight by the entire Microsoft 365 security suite.
 
-- **Self-healing for compromised devices, user identities, and mailboxes** - Microsoft Defender XDR uses AI-powered automatic actions and playbooks to remediate impacted assets back to a secure state. Microsoft Defender XDR leverages automatic remediation capabilities of the suite products to ensure all impacted assets related to an incident are automatically remediated where possible.
+- **Self-healing for compromised devices, user identities, and mailboxes** - Microsoft Defender uses AI-powered automatic actions and playbooks to remediate impacted assets back to a secure state. Microsoft Defender leverages automatic remediation capabilities of the suite products to ensure all impacted assets related to an incident are automatically remediated where possible.
 
-- **Cross-product threat hunting** - Security teams can leverage their unique organizational knowledge to hunt for signs of compromise by creating their own custom queries over the raw data collected by the various protection products. Microsoft Defender XDR provides query-based access to 30 days of historic raw signals and alert data across endpoint and Defender for Office 365 data.
+- **Cross-product threat hunting** - Security teams can leverage their unique organizational knowledge to hunt for signs of compromise by creating their own custom queries over the raw data collected by the various protection products. Microsoft Defender XDR provides query-based access to 30 days of historic raw signals and alert data from Defender for Endpoint, Defender for Office 365, Defender for Identity, and Defender for Cloud Apps.
 
 ## Get started
 
-Microsoft Defender XDR licensing requirements must be met before you can enable the service in the Microsoft Defender portal at <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank"><https://security.microsoft.com></a> For more information, see:
+Microsoft Defender XDR licensing requirements must be met before you can enable the service in the Microsoft Defender portal at <https://security.microsoft.com>. For more information, see:
 
 - [Licensing requirements](prerequisites.md#licensing-requirements)
 - [Turn on Microsoft Defender XDR](m365d-enable.md)

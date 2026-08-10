@@ -1,19 +1,18 @@
 ---
 title: Query the enterprise exposure graph in Microsoft Security Exposure Management
 description: Learn how to query the enterprise exposure graph to understand security risk in Microsoft Security Exposure Management.
-author: dlanger
+ms.topic: reference
 ms.author: dlanger
-manager: rayne-wiselman
-ms.topic: overview
-ms.service: exposure-management
-ms.date: 11/04/2024
+author: dlanger
+ms.date: 07/30/2025
+ai-usage: ai-assisted
 ---
 
 # Query the enterprise exposure graph
 
-Use the enterprise exposure graph in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) to proactively hunt for enterprise exposure threats in [advanced hunting](https://security.microsoft.com/v2/advanced-hunting)  in the Microsoft Defender portal.
+Use the enterprise exposure graph in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) to proactively hunt for enterprise exposure threats across endpoints, cloud environments, and hybrid infrastructures in [advanced hunting](https://security.microsoft.com/v2/advanced-hunting) in the Microsoft Defender portal. With the integration of Defender for Cloud in the Defender portal, the exposure graph now includes cloud node types and entities from Azure, AWS, and GCP environments.
 
-This article provides some examples, tips, and hints for constructing queries in the enterprise exposure graph.
+The following sections provide examples, tips, and hints for constructing queries in the enterprise exposure graph.
 
 ## Prerequisites
 
@@ -86,7 +85,7 @@ ExposureGraphEdges
 
 ### List all connections from a specified node label
 
-The following query groups the data in the `ExposureGraphEdges` table, and where the source node label is `microsoft.compute/virtualmachines`, it summarizes the virtual machine's by `EdgeLabel`. It summarizes the edges that connect assets to virtual machines in your security exposure graph.
+The following query groups the data in the `ExposureGraphEdges` table, and where the source node label is `microsoft.compute/virtualmachines`, it summarizes the virtual machine's by `EdgeLabel`. It summarizes the edges that connect assets to virtual machines in your security exposure graph. With the integration of Defender for Cloud in the Defender portal, this now includes cloud resources from multiple environments.
 
 ```kusto
 ExposureGraphEdges
@@ -106,7 +105,7 @@ ExposureGraphEdges
 
 ### List properties of a specific node label
 
-The following query lists properties of the virtual machine node label. It groups the data in the `ExposureGraphNodes` table, filtered to show the node label "microsoft.compute/virtualmachines" results only. With the `project-keep` operator, the query keeps the `NodeProperties` column. The data returned is limited to one row.
+The following query lists properties of the virtual machine node label. It groups the data in the `ExposureGraphNodes` table, filtered to show the node label "microsoft.compute/virtualmachines" results only. With the `project-keep` operator, the query keeps the `NodeProperties` column. The data returned is limited to one row. With the integration of Defender for Cloud in the Defender portal, the NodeProperties now include additional cloud-specific attributes and relationships.
 
 ```kusto
 ExposureGraphNodes
@@ -115,15 +114,26 @@ ExposureGraphNodes
 | take 1
 ```
 
+### Example: Query cloud resources across multiple environments
+
+The following query shows how to query cloud resources from different environments now available with the integration of Defender for Cloud in the Defender portal:
+
+```kusto
+ExposureGraphNodes
+| where NodeLabel contains "microsoft.compute" or NodeLabel contains "aws." or NodeLabel contains "gcp."
+| summarize count() by NodeLabel
+| order by count_ desc
+```
+
 ## Query the exposure graph
 
 To query the exposure graph:
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com/), select **hunting -> advanced hunting**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com/), select **Hunting > Advanced hunting**.
 
 1. In the Query area, type your query. Use the graph schema, functions, and operator tables or the following examples to help you build your query.
 
-1. Select **run query**.
+1. Select **Run query**.
 
 ## Graph-oriented query examples
 
@@ -165,16 +175,37 @@ on NodeId
 
 ### Discover VMs exposed to the internet with an RCE vulnerability
 
-The following query allows you to discover virtual machines exposed to the internet and to a Remote Code Execution (RCE) vulnerability.
+The following query allows you to discover virtual machines exposed to the internet and to a Remote Code Execution (RCE) vulnerability across cloud environments.
 
 - It uses the `ExposureGraphNodes` schema table.
 - When both `NodeProperties` `exposedToInternet` and `vulnerableToRCE` are true, it checks that the category  (`Categories`) is virtual machines (`virtual_machine`).
+- With the integration of Defender for Cloud in the Defender portal, this now includes VMs from Azure, AWS, and GCP environments.
 
 ```kusto
 ExposureGraphNodes
 | where isnotnull(NodeProperties.rawData.exposedToInternet)
 | where isnotnull(NodeProperties.rawData.vulnerableToRCE)
 | where Categories has "virtual_machine" and set_has_element(Categories, "virtual_machine")
+```
+
+### Example: Find hybrid attack paths between cloud and on-premises assets
+
+The following query demonstrates how to identify potential hybrid attack paths with the integration of Defender for Cloud in the Defender portal:
+
+```kusto
+let CloudAssets = ExposureGraphNodes
+| where Categories has "virtual_machine" and (NodeLabel contains "microsoft.compute" or NodeLabel contains "aws." or NodeLabel contains "gcp.");
+let OnPremAssets = ExposureGraphNodes
+| where Categories has "device" and not(NodeLabel contains "microsoft.compute" or NodeLabel contains "aws." or NodeLabel contains "gcp.");
+ExposureGraphEdges
+| make-graph SourceNodeId --> TargetNodeId with ExposureGraphNodes on NodeId
+| graph-match (CloudVM)-[edge1]->(Identity)-[edge2]->(OnPremDevice)
+       where set_has_element(CloudVM.Categories, "virtual_machine") and 
+             (CloudVM.NodeLabel contains "microsoft.compute" or CloudVM.NodeLabel contains "aws." or CloudVM.NodeLabel contains "gcp.") and
+             set_has_element(Identity.Categories, "identity") and
+             set_has_element(OnPremDevice.Categories, "device") and
+             not(OnPremDevice.NodeLabel contains "microsoft.compute" or OnPremDevice.NodeLabel contains "aws." or OnPremDevice.NodeLabel contains "gcp.")
+       project CloudVMName=CloudVM.NodeName, IdentityName=Identity.NodeName, OnPremDeviceName=OnPremDevice.NodeName
 ```
 
 ### Discover internet facing devices with a privilege escalation vulnerability
@@ -205,7 +236,7 @@ This query results in a list of users logged into more than one critical device,
 let IdentitiesAndCriticalDevices = ExposureGraphNodes
 | where
  // Critical Device
- (set_has_element(Categories, "device") and isnotnull(NodeProperties.rawData.criticalityLevel) and NodeProperties.rawData.criticalityLevel.criticalityLevel < 4)
+ (set_has_element(Categories, "device") and isnotnull(NodeProperties.rawData.criticalityLevel) and NodeProperties.rawData.criticalityLevel.criticalityLevel > 4)
  // or identity
  or set_has_element(Categories, "identity");
 ExposureGraphEdges

@@ -1,24 +1,22 @@
 ---
 title: FileProfile() function in advanced hunting for Microsoft Defender XDR
-description: Learn how to use the FileProfile() to enrich information about files in your advanced hunting query results
-search.appverid: met150
+description: Learn how to use the FileProfile() to enrich information about files in your advanced hunting query results.
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 02/16/2024
+ms.date: 08/05/2025
 ---
 
 # FileProfile()
@@ -26,8 +24,6 @@ ms.date: 02/16/2024
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- Microsoft Defender XDR
 
 The `FileProfile()` function is an enrichment function in [advanced hunting](advanced-hunting-overview.md) that adds the following data to files found by the query.
 
@@ -50,7 +46,7 @@ The `FileProfile()` function is an enrichment function in [advanced hunting](adv
 | `ThreatName` | `string` | Detection name for any malware or other threats found |
 | `Publisher` | `string` | Name of the organization that published the file |
 | `SoftwareName` | `string` | Name of the software product |
-| `ProfileAvailability` | `string` | Indicates the availability status of the profile data for the file: Available - profile was successfully queried and file data returned, Missing - profile was successfully queried but no file info was found, Error - error in querying the file info or maximum allotted time was exceeded before query could be completed, or an empty value - if file ID is invalid or the maximum number of files was reached |
+| `ProfileAvailability` | `string` | Indicates the availability status of the profile data for the file: Available - profile was successfully queried and file data returned, Missing - profile was successfully queried but no file info was found, Error - error in querying the file info or maximum allotted time was exceeded before query could be completed, or an empty value - if file ID is invalid or the maximum number of files was reached<br><br>If this column's value is Missing or is empty, the value of the `GlobalPrevalance` column would be null. |
 
 
 
@@ -68,7 +64,7 @@ invoke FileProfile(x,y)
 
 
 > [!TIP]
-> Enrichment functions will show supplemental information only when they are available. Availability of information is varied and depends on a lot of factors. Make sure to consider this when using FileProfile() in your queries or in creating custom detections. For best results, we recommend using the FileProfile() function with SHA1.
+> Enrichment functions will show supplemental information only when they're available. Availability of information is varied and depends on numerous factors. Make sure to consider this when using FileProfile() in your queries or in creating custom detections. For best results, we recommend using the FileProfile() function with SHA1.
 
 ## Examples
 

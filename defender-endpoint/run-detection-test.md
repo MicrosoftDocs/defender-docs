@@ -1,65 +1,61 @@
 ---
 title: Run a detection test on a device recently onboarded to Microsoft Defender for Endpoint
 description: Run the detection test script on a device recently onboarded to the Microsoft Defender for Endpoint service to verify that it's properly added.
-search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-ms.date: 04/03/2024
-manager: deniseb
-audience: ITPro
+ms.date: 07/02/2026
 ms.collection: 
 - m365-security
 - tier1
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: onboard
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1 and 2
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Run a detection test on a device recently onboarded to Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+When you add a device to the Microsoft Defender for Endpoint service for management, it's referred to as onboarding. Onboarding allows devices to report signals about their health status to Microsoft Defender for Endpoint.
 
+Verifying that a device is added to the service successfully is a critical step in the entire deployment process. It helps ensure that all the devices expected are being managed.
 
-**Applies to:**
-- Windows 11
-- Supported Windows 10 versions
+This article explains how to run a PowerShell detection test on a recently onboarded device to confirm that it's properly reporting to the Defender for Endpoint service. 
+
+## Prerequisites
+
+### Supported operating systems
+
+The following operating systems are supported for the onboarding verification detection test:
+
 - Windows Server 2012 R2
-- Windows Server 2016
-- Windows Server, version 1803
-- Windows Server 2019
-- Windows Server 2022
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
-
-When you add a device to the Microsoft Defender for Endpoint service for management, it's referred to as onboarding. Onboarding allows devices to report signals about their health status to the service.
-
-Verifying that a device is added to the service successfully is a critical step in the entire deployment process. It helps ensure that all the devices expected are being managed. 
+- Windows Server 2016 and later
+- Azure Stack HCI OS, version 23H2 and later
 
 ## Verify Microsoft Defender for Endpoint onboarding of a device using a PowerShell detection test
 
-Run the following PowerShell script on a newly onboarded device to verify that it's properly reporting to the Defender for Endpoint service.
+Run the following PowerShell script on a newly onboarded device to verify that the device is properly reporting to the Defender for Endpoint service.
 
 1. On the device, open Command Prompt as an administrator. 
 
-2. At the prompt, copy and run the following command:
+1. At the prompt, copy and run the following command. This command simulates a malicious download-and-execute pattern so that Microsoft Defender for Endpoint can detect it and confirm that the device is reporting correctly:
 
    ```powershell
    powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference = 'silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-MDATP-test\\invoice.exe');Start-Process 'C:\\test-MDATP-test\\invoice.exe'
    ```
 
-The Command Prompt window closes automatically. If successful, a new alert appears in the portal for the onboarded device in about 10 minutes.
+   The Command Prompt window closes automatically. If the script runs successfully, a new alert appears in the Microsoft Defender portal for the onboarded device in about 10 minutes.
 
-> [!NOTE]
-> You can also use the EICAR test string to perform this test. Create a text file, paste the EICAR line, and save the file as an executable file to your endpoint's local drive. You will receive a test endpoint notification and an alert in the Microsoft Defender portal.
+    > [!NOTE]
+    > You can also [Configure extension file exclusions for Microsoft Defender Antivirus](microsoft-defender-antivirus-exclusions-configure.md) to perform this test. You'll receive a notification on the endpoint and an alert in the Microsoft Defender portal.
 
 ## Related articles
 
-- [Onboard Windows devices](onboard-windows-client.md)
-- [Onboard servers](configure-server-endpoints.md)
+- [Onboard client devices to Microsoft Defender for Endpoint](onboard-client.md)
+- [Onboard servers to Microsoft Defender for Endpoint](onboard-server.md)
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

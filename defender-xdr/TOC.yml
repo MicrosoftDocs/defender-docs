@@ -26,8 +26,6 @@
           href: prerequisites.md
         - name: Data security and privacy
           href: data-privacy.md
-        - name: Microsoft security portals
-          href: portals.md
     - name: Pilot and deploy Microsoft Defender XDR
       items:
         - name: Overview
@@ -57,13 +55,35 @@
     - name: Protect against threats
       items:
       - name: Protect your endpoints
-        href: /defender-endpoint
+        href: /defender-endpoint/microsoft-defender-endpoint?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Protect your identities
-        href: /defender-for-identity
+        href: /defender-for-identity/what-is?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Protect your Office 365 workloads
-        href: /defender-office-365
+        href: /defender-office-365/mdo-about?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Protect your cloud apps
-        href: /defender-cloud-apps
+        href: /defender-cloud-apps/what-is-defender-for-cloud-apps?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+      - name: Protect your IoT/OT assets
+        href: protect-against-iot-ot-threats.md
+      - name: Protect your AI assets
+        items:
+        - name: Secure AI using Microsoft Defender
+          href: security-for-ai/defender-security-for-ai.md
+        - name: Protect AI agents
+          items:
+          - name: Enable security for AI agents using Microsoft Defender
+            href: security-for-ai/get-started-defender-security-for-ai.md
+          - name: Configure real-time agent protection and prompt evidence
+            href: security-for-ai/ai-agent-real-time-protection.md
+          - name: Discover AI agents and manage posture
+            href: security-for-ai/ai-agent-inventory.md
+          - name: AI agent risk posture (Preview)
+            href: security-for-ai/ai-agent-risk-assessment.md
+          - name: Detect and investigate threats to AI agents
+            href: security-for-ai/ai-agent-detection-protection.md
+          - name: Data privacy as part of Agent 365
+            href: security-for-ai/privacy-defender-agent-365.md
+          - name: Transition agent security to Agent 365
+            href: security-for-ai/transition-agent-security-to-agent-365.md
       - name: Microsoft Secure Score
         items:
           - name: Overview
@@ -75,33 +95,49 @@
           - name: Track your score history and meet goals
             href: microsoft-secure-score-history-metrics-trends.md
           - name: Data storage and privacy
-            href: secure-score-data-storage-privacy.md      
+            href: secure-score-data-storage-privacy.md     
     - name: Investigate and respond to threats
       items:
       - name: Overview
-        href: incidents-overview.md
+        href: incidents-overview.md      
       - name: Correlation and merging
         href: alerts-incidents-correlation.md
+      - name: Manage analytics rule correlation settings
+        href: exclude-analytics-rules-correlation.md
       - name: Prioritize incidents
         href: incident-queue.md
       - name: Manage incidents
         href: manage-incidents.md
-      - name: Investigate incidents
+      - name: Manually create an incident or alert
+        href: manually-create-incident.md
+      - name: Use tasks to handle incident workflow
+        href: split-incidents-into-tasks.md
+      - name: Investigate and respond to incidents
         items:
-        - name: Incidents
+        - name: Plan incident response
+          href: /unified-secops-platform/plan-incident-response
+        - name: Investigate incidents  
           href: investigate-incidents.md
-        - name: Unlink alerts from incidents
-          href: unlink-alert-from-incident.md
-        - name: Alerts
+        - name: Understand graph icons and visualizations
+          href: understand-graph-icons.md
+        - name: Move alerts to another incident
+          href: move-alert-to-another-incident.md
+        - name: Merge incidents manually
+          href: merge-incidents-manually.md
+        - name: Investigate alerts
           href: investigate-alerts.md
-        - name: Entity pages
+        - name: Use Dynamic Threat Detection Agent
+          href: dynamic-threat-detection-agent.md
+        - name: Investigate entity pages
           items:
-          - name: User
+          - name: Identity
             href: investigate-users.md
           - name: Device
             href: entity-page-device.md
           - name: IP
             href: entity-page-ip.md
+          - name: View threat intelligence in entity pages
+            href: entity-page-threat-intelligence.md
         - name: Investigate data loss prevention alerts with Microsoft Defender XDR
           href: dlp-investigate-alerts-defender.md
         - name: Investigate data loss prevention alerts with Microsoft Sentinel
@@ -109,7 +145,9 @@
         - name: Investigate and respond to container threats
           href: investigate-respond-container-threats.md
         - name: Investigate insider risk threats
-          href: irm-investigate-alerts-defender.md                         
+          href: irm-investigate-alerts-defender.md
+        - name: Create data security investigations
+          href: create-dsi-in-defender.md                                    
       - name: Configure and manage automated investigation and response
         items:
         - name: Overview
@@ -126,28 +164,42 @@
           href: m365d-autoir-results.md
         - name: Address false positives and negatives
           href: m365d-autoir-report-false-positives-negatives.md
-      - name: Manage attack disruption
+      - name: Attack disruption
         items:
         - name: Overview
           href: automatic-attack-disruption.md
-        - name: Configure capabilities
+        - name: Manage
           href: configure-attack-disruption.md
         - name: View details and results
           href: autoad-results.md
-      - name: Manage the deception capability
+        - name: Exclude assets from automated responses
+          href: automatic-attack-disruption-exclusions.md
+        - name: External disruptions
+          items:
+          - name: Enable attack disruption actions in Okta with Microsoft Sentinel (preview)
+            href: okta-attack-disruption.md
+          - name: Enable attack disruption actions in AWS with Microsoft Sentinel (preview)
+            href: /azure/sentinel/aws-disruption?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+      - name: Predictive shielding
         items:
         - name: Overview
-          href: deception-overview.md
-        - name: Configure capabilities
-          href: configure-deception.md
+          href: shield-predict-threats.md        
+        - name: Manage and view details
+          href: shield-predict-threats-manage.md         
       - name: Search for threats with advanced hunting
         items:
         - name: Overview
           href: advanced-hunting-overview.md
         - name: Guided and advanced modes
           href: advanced-hunting-modes.md
-        - name: Generate KQL queries with Security Copilot
-          href: advanced-hunting-security-copilot.md
+        - name: Hunt for threats with Security Copilot
+          items:
+          - name: Overview
+            href: advanced-hunting-security-copilot.md
+          - name: Use the Threat Hunting Assistant
+            href: advanced-hunting-security-copilot-threat-hunting-assistant.md
+          - name: Generate KQL queries
+            href: advanced-hunting-security-copilot-query-assistant.md
         - name: Hunt over Microsoft Sentinel data
           items:
           - name: Microsoft Sentinel data in advanced hunting
@@ -196,6 +248,20 @@
               href: advanced-hunting-fileprofile-function.md
             - name: SeenBy()
               href: advanced-hunting-seenby-function.md
+            - name: UEBA behavior insights
+              items:
+              - name: GetFirstSeenBehaviors()
+                href: advanced-hunting-getfirstseenbehaviors-function.md
+              - name: GetUncommonValueBehaviors()
+                href: advanced-hunting-getuncommonvaluebehaviors-function.md
+              - name: GetHighVolumeAnomalyBehaviors()
+                href: advanced-hunting-gethighvolumeanomalybehaviors-function.md
+              - name: GetAnomalousBehaviorsByKind()
+                href: advanced-hunting-getanomalousbehaviorsbykind-function.md
+              - name: GetAnomalousBehaviorsByValue()
+                href: advanced-hunting-getanomalousbehaviorsbyvalue-function.md
+              - name: GetAnomalousBehaviorsAbout()
+                href: advanced-hunting-getanomalousbehaviorsabout-function.md
           - name: Optimize & handle errors
             items:
             - name: Apply query best practices
@@ -216,6 +282,10 @@
             href: advanced-hunting-aadsignineventsbeta-table.md
           - name: AADSpnSignInEventsBeta
             href: advanced-hunting-aadspnsignineventsbeta-table.md
+          - name: AgentsInfo
+            href: advanced-hunting-agentsinfo-table.md
+          - name: AIAgentsInfo
+            href: advanced-hunting-aiagentsinfo-table.md
           - name: AlertEvidence
             href: advanced-hunting-alertevidence-table.md
           - name: AlertInfo
@@ -224,12 +294,24 @@
             href: advanced-hunting-behaviorentities-table.md
           - name: BehaviorInfo
             href: advanced-hunting-behaviorinfo-table.md
+          - name: CampaignInfo
+            href: advanced-hunting-campaigninfo-table.md            
           - name: CloudAppEvents
             href: advanced-hunting-cloudappevents-table.md
           - name: CloudAuditEvents
             href: advanced-hunting-cloudauditevents-table.md
+          - name: CloudDnsEvents
+            href: advanced-hunting-clouddnsevents-table.md
+          - name: CloudPolicyEnforcementEvents
+            href: advanced-hunting-cloudpolicyenforcementevents-table.md
           - name: CloudProcessEvents
-            href: advanced-hunting-cloudprocessevents-table.md                     
+            href: advanced-hunting-cloudprocessevents-table.md
+          - name: CloudStorageAggregatedEvents
+            href: advanced-hunting-cloudstorageaggregatedevents-table.md
+          - name: DataSecurityBehaviors
+            href: advanced-hunting-datasecuritybehaviors-table.md  
+          - name: DataSecurityEvents
+            href: advanced-hunting-datasecurityevents-table.md                                               
           - name: DeviceBaselineComplianceAssessment
             href: advanced-hunting-devicebaselinecomplianceassessment-table.md
           - name: DeviceBaselineComplianceAssessmentKB
@@ -280,6 +362,8 @@
             href: advanced-hunting-devicetvmsoftwarevulnerabilities-table.md
           - name: DeviceTvmSoftwareVulnerabilitiesKB
             href: advanced-hunting-devicetvmsoftwarevulnerabilitieskb-table.md
+          - name: DisruptionAndResponseEvents
+            href: advanced-hunting-disruptionandresponseevents-table.md            
           - name: EmailAttachmentInfo
             href: advanced-hunting-emailattachmentinfo-table.md
           - name: EmailEvents
@@ -288,26 +372,48 @@
             href: advanced-hunting-emailpostdeliveryevents-table.md
           - name: EmailUrlInfo
             href: advanced-hunting-emailurlinfo-table.md
+          - name: EntraIdSignInEvents
+            href: advanced-hunting-entraidsigninevents-table.md
+          - name: EntraIdSpnSignInEvents
+            href: advanced-hunting-entraidspnsigninevents-table.md
           - name: ExposureGraphEdges
             href: advanced-hunting-exposuregraphedges-table.md
           - name: ExposureGraphNodes
             href: advanced-hunting-exposuregraphnodes-table.md
+          - name: FileMaliciousContentInfo
+            href: advanced-hunting-filemaliciouscontentinfo-table.md            
+          - name: GraphApiAuditEvents
+            href: advanced-hunting-graphapiauditevents-table.md            
+          - name: IdentityAccountInfo
+            href: advanced-hunting-identityaccountinfo-table.md
           - name: IdentityDirectoryEvents
             href: advanced-hunting-identitydirectoryevents-table.md
+          - name: IdentityEvents
+            href: advanced-hunting-identityevents-table.md
           - name: IdentityInfo
             href: advanced-hunting-identityinfo-table.md
           - name: IdentityLogonEvents
             href: advanced-hunting-identitylogonevents-table.md
           - name: IdentityQueryEvents
             href: advanced-hunting-identityqueryevents-table.md
+          - name: MessageEvents
+            href: advanced-hunting-messageevents-table.md
+          - name: MessagePostDeliveryEvents
+            href: advanced-hunting-messagepostdeliveryevents-table.md
+          - name: MessageUrlInfo
+            href: advanced-hunting-messageurlinfo-table.md                                    
+          - name: OAuthAppInfo
+            href: advanced-hunting-oauthappinfo-table.md            
           - name: UrlClickEvents
             href: advanced-hunting-urlclickevents-table.md
         - name: Custom detections
           items:
           - name: Custom detections overview
             href: custom-detections-overview.md
-          - name: Create & manage detection rules
+          - name: Create detection rules
             href: custom-detection-rules.md
+          - name: Manage detection rules
+            href: custom-detection-manage.md            
         - name: Take action on query results
           href: advanced-hunting-take-action.md
         - name: Link query results to an incident
@@ -316,70 +422,20 @@
           href: advanced-hunting-limits.md
         - name: Extend data coverage
           href: advanced-hunting-extend-data.md
+        - name: Hunt using hunting graph
+          href: advanced-hunting-graph.md
       - name: Track and respond to emerging threats
         items:
-        - name: Threat analytics overview
-          href: threat-analytics.md
-        - name: Understand the analyst report
-          href: threat-analytics-analyst-reports.md
-        - name: Defender Threat Intelligence in Microsoft Defender XDR
+        - name: Threat analytics
+          items:
+          - name: Overview
+            href: threat-analytics.md
+          - name: Understand the analyst report
+            href: threat-analytics-analyst-reports.md
+          - name: Get access to indicators
+            href: threat-analytics-indicators.md
+        - name: Microsoft Threat Intelligence in Defender XDR
           href: defender-threat-intelligence.md
-      - name: Collaborate with Microsoft Defender Experts for Hunting
-        items:
-        - name: Overview
-          href: defender-experts-for-hunting.md
-        - name: Before you begin
-          href: before-you-begin-defender-experts.md
-        - name: Start using Defender Experts for Hunting
-          items:
-          - name: Onboarding and setting up Defender Experts Notifications
-            href: onboarding-defender-experts-for-hunting.md
-          - name: Access Defender Experts Notifications using Graph security API
-            href: access-den-graph-api.md
-          - name: Ask Defender Experts
-            href: experts-on-demand.md
-        - name: Frequently asked questions
-          href: faq-defender-experts-hunting.md    
-        - name: Understand Defender Experts for Hunting reports
-          href: defender-experts-report.md
-      - name: Collaborate with Microsoft Defender Experts for XDR
-        items:
-        - name: Overview
-          href: dex-xdr-overview.md
-        - name: Before you begin
-          href: before-you-begin-xdr.md
-        - name: Get started with Microsoft Defender Experts for XDR service
-          href: get-started-xdr.md
-        - name: Start using Microsoft Defender Experts for XDR service
-          items:
-          - name: Managed detection and response
-            href: managed-detection-and-response-xdr.md
-          - name: Scoped coverage
-            href: defender-experts-scoped-coverage.md  
-          - name: Communicate with Defender Experts for XDR
-            href: communicate-defender-experts-xdr.md
-          - name: Reports
-            href: reports-xdr.md
-          - name: Defender Experts for Hunting
-            href: defender-experts-for-hunting.md
-          - name: Auditing
-            href: auditing.md
-        - name: Frequently asked questions
-          items:
-          - name: General information
-            href: frequently-asked-questions.md
-          - name: Defender Experts for XDR Incident notifications
-            href: faq-incident-notifications-xdr.md
-          - name: Managed response
-            href: faq-managed-response.md
-        - name: Additional information on Defender Experts for XDR
-          items:
-          - name: Important considerations
-            href: additional-information-xdr.md
-          - name: How Defender Experts for XDR permissions work
-            href: dex-xdr-permissions.md
-          - name: Troubleshooting Defender Experts app permissions in Microsoft Teams
-            href: teams-restrictions-dexapp.md
       - name: Investigate and respond with Microsoft Copilot in Microsoft Defender
         items:
         - name: Overview
@@ -397,9 +453,133 @@
         - name: Use guided responses
           href: security-copilot-m365d-guided-response.md
         - name: Generate KQL queries
-          href: advanced-hunting-security-copilot.md
+          href: advanced-hunting-security-copilot-query-assistant.md
         - name: Create incident reports
           href: security-copilot-m365d-create-incident-report.md
+        - name: Application card
+          href: application-card-copilot-defender.md
+        - name: Responsible AI FAQs
+          href: responsible-ai-copilot-defender.md        
+        - name: Security Copilot agents in Microsoft Defender
+          items:
+          - name: Overview
+            href: security-copilot-agents-defender.md          
+          - name: Phishing Triage Agent
+            href: phishing-triage-agent.md
+          - name: Security Alert Triage Agent (Preview)
+            href: security-alert-triage-agent.md
+          - name: Threat Intelligence Briefing Agent
+            href: threat-intel-briefing-agent-defender.md
+          - name: Threat Hunting Assistant
+            href: advanced-hunting-security-copilot-threat-hunting-assistant.md
+          - name: Dynamic Threat Detection Agent
+            href: dynamic-threat-detection-agent.md
+          - name: Security Analyst Agent
+            href: security-analyst-agent.md
+    - name: Identity Security
+      items:
+      - name: Identity Security overview
+        href: ./identity-security/identity-security-overview.md
+      - name: View your identity coverage and maturity 
+        href: ./identity-security/coverage-maturity.md  
+      - name: View your identities
+        items:
+        - name: The identity security dashboard
+          href: /defender-for-identity/dashboard?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+        - name: View the identity inventory
+          href: /defender-for-identity/identity-inventory?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+        - name: Investigate a human identity
+          href: investigate-users.md
+        - name: Investigate a non-human identity
+          href: investigate-non-human-identities.md
+        - name: Investigate an Active Directory domain
+          href: /defender-for-identity/investigate-domain?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+      - name: Security recommendations
+        items:
+        - name: Identity security initiative (Preview)
+          href: /defender-for-identity/identity-security-initiative?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+        - name: Unified identity security recommendations
+          href: ./identity-security/identity-security-recommendations.md
+    - name: Collaborate with Microsoft Defender Experts
+      items:
+      - name: Overview
+        href: defender-experts/defender-experts-overview.md
+      - name: Defender Experts Hunting
+        items:
+        - name: Overview
+          href: defender-experts/defender-experts-hunting-overview.md
+        - name: Before you begin
+          href: defender-experts/defender-experts-hunting-prerequisites.md
+        - name: Start using Defender Experts Hunting
+          items:
+          - name: Onboard and set up Defender Experts Notifications
+            href: defender-experts/defender-experts-hunting-onboarding.md
+          - name: Access Defender Experts Notifications using Graph security API
+            href: defender-experts/defender-experts-hunting-graph-api.md
+          - name: Ask Defender Experts
+            href: defender-experts/defender-experts-hunting-ask-experts.md
+          - name: Understand Defender Experts Hunting reports
+            href: defender-experts/defender-experts-hunting-report.md
+          - name: Work with MSSPs
+            href: defender-experts/defender-experts-mssp-guide.md
+        - name: Frequently asked questions
+          items:
+          - name: Troubleshooting Defender Experts app permissions in Microsoft Teams
+            href: defender-experts/defender-experts-teams-app-permissions.md
+          - name: General information
+            href: defender-experts/defender-experts-hunting-faq.md
+          - name: Server and cloud workload coverage
+            href: defender-experts/defender-experts-faq-cloud-coverage.md
+      - name: Defender Experts MDR
+        items:
+        - name: Overview
+          href: defender-experts/defender-experts-mdr-overview.md
+        - name: Before you begin
+          href: defender-experts/defender-experts-mdr-prerequisites.md
+        - name: Get started with Defender Experts MDR
+          href: defender-experts/defender-experts-mdr-get-started.md
+        - name: Start using Defender Experts MDR
+          items:
+          - name: Overview
+            href: defender-experts/defender-experts-mdr-start-using.md
+          - name: Managed detection and response
+            href: defender-experts/defender-experts-mdr-managed-response.md
+          - name: Scoped coverage
+            href: defender-experts/defender-experts-mdr-scoped-coverage.md  
+          - name: Communicate with Defender Experts
+            href: defender-experts/defender-experts-mdr-communication.md
+          - name: Reports
+            href: defender-experts/defender-experts-mdr-reports.md
+          - name: Third-party enrichment
+            href: defender-experts/defender-experts-mdr-third-party-enrichment.md
+          - name: Defender Experts Hunting
+            href: defender-experts/defender-experts-hunting-overview.md
+          - name: Auditing
+            href: defender-experts/defender-experts-mdr-auditing.md
+          - name: Work with MSSPs
+            href: defender-experts/defender-experts-mssp-guide.md
+        - name: Additional information on Defender Experts MDR
+          items:
+          - name: Frequently asked questions
+            items:
+            - name: General information
+              href: defender-experts/defender-experts-mdr-faq.md
+            - name: Managed response
+              href: defender-experts/defender-experts-mdr-faq-managed-response.md
+          - name: Important considerations
+            href: defender-experts/defender-experts-mdr-considerations.md
+          - name: How Defender Experts MDR permissions work
+            href: defender-experts/defender-experts-mdr-permissions.md
+          - name: Troubleshooting Defender Experts app permissions in Microsoft Teams
+            href: defender-experts/defender-experts-teams-app-permissions.md
+      - name: Defender Experts for Servers
+        items:
+        - name: Overview
+          href: defender-experts/defender-experts-servers-overview.md
+        - name: Get started with Defender Experts for Servers
+          href: defender-experts/defender-experts-servers-get-started.md
+        - name: Frequently asked questions
+          href: defender-experts/defender-experts-faq-cloud-coverage.md
     - name: Enhance security operations
       items:
       - name: Security operations guide
@@ -421,23 +601,9 @@
     - name: Manage multitenant environments
       items:
         - name: Overview
-          href: mto-overview.md
+          href: /unified-secops-platform/mto-overview?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json&tabs=defender-portal
         - name: Set up multitenant management
-          href: mto-requirements.md
-        - name: View and manage incidents and alerts
-          href: mto-incidents-alerts.md
-        - name: Advanced hunting
-          href: mto-advanced-hunting.md
-        - name: Multitenant devices
-          href: mto-tenant-devices.md
-        - name: Vulnerability management
-          href: mto-dashboard.md
-        - name: Manage tenants
-          href: mto-tenants.md
-        - name: Create and manage endpoint security policies
-          href: mto-endpoint-security-policy.md
-        - name: Manage content distribution with tenant groups
-          href: mto-tenantgroups.md
+          href: /unified-secops-platform/mto-requirements?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json&tabs=defender-portal
     - name: Manage roles and permissions
       items:
         - name: Manage access and roles in Microsoft Defender XDR
@@ -446,28 +612,32 @@
               href: m365d-permissions.md
             - name: Custom roles in role-based access
               href: custom-roles.md
-        - name: Manage permissions with Defender XDR Unified RBAC
+        - name: Manage permissions with Defender unified RBAC
           items:
             - name: Overview
               href: manage-rbac.md
             - name: What's new
               href: whats-new-in-microsoft-defender-urbac.md
+            - name: Configure Microsoft Sentinel scoping (row-level RBAC)
+              href: scoping.md
             - name: Create custom roles
               href: create-custom-rbac-roles.md
             - name: Import roles
-              href: Import-rbac-roles.md
-            - name: Activate Defender XDR Unified RBAC
+              href: import-rbac-roles.md
+            - name: Activate Defender unified RBAC
               href: activate-defender-rbac.md
             - name: Edit, delete and export roles
               href: edit-delete-rbac-roles.md
-            - name: Map Defender XDR Unified RBAC permissions
+            - name: Map Defender unified RBAC permissions
               href: compare-rbac-roles.md
-            - name: About Defender XDR Unified RBAC custom permissions
+            - name: About Defender unified RBAC custom permissions
               href: custom-permissions-details.md
     - name: Reference
       items:
         - name: Microsoft Defender XDR FAQs
           href: m365d-enable-faq.md      
+        - name: Alert policies
+          href: alert-policies.md
         - name: Audit activities and events
           href: microsoft-xdr-auditing.md
         - name: Configure email notifications
@@ -480,6 +650,8 @@
             href: m365d-threat-analytics-notifications.md
           - name: Configure alert notifications
             href: configure-email-notifications.md
+        - name: Contact Microsoft Defender support
+          href: contact-defender-support.md
         - name: Manage devices through dynamic rules
           href: configure-asset-rules.md
         - name: Provide managed service provider (MSSP) access
@@ -487,7 +659,9 @@
         - name: Troubleshoot service issues
           href: troubleshoot.md
         - name: Create Custom Defender XDR reports
-          href: defender-xdr-custom-reports.md                        
+          href: defender-xdr-custom-reports.md
+        - name: Visualize impact with the unified security summary
+          href: security-summary-report.md                                   
         - name: Microsoft Defender XDR APIs
           items:
             - name: Overview
@@ -574,6 +748,10 @@
           href: alert-classification-password-spray-attack.md
       - name: Incident response playbooks
         href: /security/operations/incident-response-playbooks
+      - name: Customize incident responses
+        href: security-upload-guide.md
+      - name: SOP template - Compromised identity
+        href: sop-documentation-template.md
       - name: Ransomware playbooks
         items:
         - name: Detecting human-operated ransomware attacks with Microsoft Defender XDR
@@ -581,17 +759,9 @@
         - name: Responding to ransomware attacks
           href: playbook-responding-ransomware-m365-defender.md
       - name: Threat actor naming
-        href: microsoft-threat-actor-naming.md
-      - name: Malware names
-        href: malware-naming.md
-      - name: How Microsoft identifies malware and PUA
-        href: criteria.md
-      - name: Submit files for analysis
-        href: submission-guide.md
+        href: /unified-secops-platform/microsoft-threat-actor-naming?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json&tabs=defender-portal
       - name: Understand threat intelligence concepts
         href: /defender-endpoint/threat-indicator-concepts          
-      - name: Microsoft virus initiative
-        href: virus-initiative-criteria.md
       - name: Software developer FAQ
         href: developer-faq.yml                                    
     - name: Microsoft Defender XDR docs

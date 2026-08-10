@@ -1,85 +1,74 @@
 ---
-title: Onboard Windows devices to Microsoft Defender for Endpoint via Group Policy
-description: Use Group Policy to deploy the configuration package on Windows devices so that they are onboarded to the service.
+title: Onboard Windows Servers to Microsoft Defender for Endpoint via Group Policy
+description: Use Group Policy to deploy the configuration package on Windows devices so that they're onboarded to the service.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier1
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
-ms.date: 09/15/2023
+ms.topic: install-set-up-deploy
+ms.date: 11/17/2025
 ms.subservice: onboard
-search.appverid: met150
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
 ---
 
-# Onboard Windows devices using Group Policy 
+# Onboard Windows devices using Group Policy
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender deployment tool preview](./includes/defender-deployment-tool-preview.md)]
 
-[!include[Prerelease information](../includes/prerelease.md)]
+## Prerequisites
 
-**Applies to:**
+- To use Group Policy (GP) updates to deploy the package, you must be on Windows Server 2008 R2 or later.
+- For Windows Server 2019 and newer, you may need to replace `NT AUTHORITY\Well-Known-System-Account` with `NT AUTHORITY\SYSTEM` of the XML file that the Group Policy preference creates.
 
-- Group Policy
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configureendpointsgp-abovefoldlink)
-
-> [!NOTE]
-> To use Group Policy (GP) updates to deploy the package, you must be on Windows Server 2008 R2 or later.
->
-> For Windows Server 2019 and Windows Server 2022, you may need to replace NT AUTHORITY\Well-Known-System-Account with NT AUTHORITY\SYSTEM of the XML file that the Group Policy preference creates.
-
-> [!NOTE]
-> If you're using the new, unified Microsoft Defender for Endpoint solution for Windows Server 2012 R2 and 2016, please ensure you are using the latest ADMX files in your central store to get access to the correct Microsoft Defender for Endpoint policy options. Please reference [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) and download the latest files **for use with Windows 10**.
+- If you're using the new, unified Microsoft Defender for Endpoint solution for Windows Server 2012 R2 and Windows Server 2016, make sure to use the latest ADMX files in your central store to get access to the correct Microsoft Defender for Endpoint policy options. See [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) and download the latest files **for use with Windows 10**.
 
 Check out [Identify Defender for Endpoint architecture and deployment method](deployment-strategy.md) to see the various paths in deploying Defender for Endpoint.
 
-1. Open the GP configuration package file (`WindowsDefenderATPOnboardingPackage.zip`) that you downloaded from the service onboarding wizard. You can also get the package from the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>:
+1. Open the GP configuration package file (`WindowsDefenderATPOnboardingPackage.zip`) that you downloaded from the service onboarding wizard. You can also get the package from the [Microsoft Defender portal](https://security.microsoft.com):
 
-    1. In the navigation pane, select **Settings** > **Endpoints** > **Device management**  > **Onboarding**.
+   1. In the navigation pane, select **System** > **Settings** > **Endpoints** > **Device management**  > **Onboarding**.
 
-    1. Select the operating system.
+   1. Select the operating system.
 
-    1. In the **Deployment method** field, select **Group policy**.
+   1. In the **Deployment method** field, select **Group policy**.
 
-    1. Click **Download package** and save the .zip file.
+   1. Select **Download package** and save the .zip file.
 
-2. Extract the contents of the .zip file to a shared, read-only location that can be accessed by the device. You should have a folder called *OptionalParamsPolicy* and the file *WindowsDefenderATPOnboardingScript.cmd*.
+1. Extract the contents of the .zip file to a shared, read-only location that can be accessed by the device. You should have a folder called *OptionalParamsPolicy* and the file *WindowsDefenderATPOnboardingScript.cmd*.
 
-3. To create a new GPO, open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click **Group Policy Objects** you want to configure and click **New**. Enter the name of the new GPO in the dialogue box that is displayed and click **OK**.
+1. To create a new GPO, open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click **Group Policy Objects** you want to configure and click **New**. Enter the name of the new GPO in the dialog box that is displayed and click **OK**.
 
-4. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click the Group Policy Object (GPO) you want to configure and click **Edit**.
+1. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click the Group Policy Object (GPO) you want to configure and click **Edit**.
 
-5. In the **Group Policy Management Editor**, go to **Computer configuration**, then **Preferences**, and then **Control panel settings**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration**, then **Preferences**, and then **Control panel settings**.
 
-6. Right-click **Scheduled tasks**, point to **New**, and then click **Immediate Task (At least Windows 7)**.
+1. Right-click **Scheduled tasks**, point to **New**, and then click **Immediate Task (At least Windows 7)**.
 
-7. In the **Task** window that opens, go to the **General** tab. Under **Security options** click **Change User or Group** and type SYSTEM and then click **Check Names** then **OK**. NT AUTHORITY\SYSTEM appears as the user account the task will run as.
+1. In the **Task** window that opens, go to the **General** tab. Under **Security options** click **Change User or Group** and type SYSTEM and then click **Check Names** then **OK**. NT AUTHORITY\SYSTEM appears as the user account the task will run as.
 
-8. Select **Run whether user is logged on or not** and check the **Run with highest privileges** check box.
+1. Select **Run whether user is logged on or not** and check the **Run with highest privileges** check box.
 
-9. In the Name field, type an appropriate name for the scheduled task (for example, Defender for Endpoint Deployment).
+1. In the Name field, type an appropriate name for the scheduled task (for example, Defender for Endpoint Deployment).
 
-10. Go to the **Actions** tab and select **New...** Ensure that **Start a program** is selected in the **Action** field. Enter the UNC path, using the file server's fully qualified domain name (FQDN), of the shared *WindowsDefenderATPOnboardingScript.cmd* file.
+1. Go to the **Actions** tab and select **New...** Ensure that **Start a program** is selected in the **Action** field. Enter the UNC path, using the file server's fully qualified domain name (FQDN), of the shared *WindowsDefenderATPOnboardingScript.cmd* file.
 
-11. Select **OK** and close any open GPMC windows.
+1. Select **OK** and close any open GPMC windows.
 
-12. To link the GPO to an Organization Unit (OU), right-click and select **Link an existing GPO**. In the dialogue box that is displayed, select the Group Policy Object that you wish to link. Click **OK**.
+1. To link the GPO to an Organization Unit (OU), right-click and select **Link an existing GPO**. In the dialog box that is displayed, select the Group Policy Object that you wish to link. Click **OK**.
 
 > [!TIP]
 > After onboarding the device, you can choose to run a detection test to verify that the device is properly onboarded to the service. For more information, see [Run a detection test on a newly onboarded Defender for Endpoint device](run-detection-test.md).
 
 ## Additional Defender for Endpoint configuration settings
 
-For each device, you can state whether samples can be collected from the device when a request is made through Microsoft Defender XDR to submit a file for deep analysis.
+For each device, you can state whether samples can be collected from the device when a request is made through the Defender portal to submit a file for deep analysis.
 
 You can use Group Policy (GP) to configure settings, such as settings for the sample sharing used in the deep analysis feature.
 
@@ -88,26 +77,26 @@ You can use Group Policy (GP) to configure settings, such as settings for the sa
 1. On your GP management device, copy the following files from the
     configuration package:
 
-    - Copy _AtpConfiguration.admx_ into _C:\\Windows\\PolicyDefinitions_
+   - Copy `AtpConfiguration.admx` into `C:\Windows\PolicyDefinitions`.
 
-    - Copy _AtpConfiguration.adml_ into _C:\\Windows\\PolicyDefinitions\\en-US_
+   - Copy `AtpConfiguration.adml` into `C:\Windows\PolicyDefinitions\en-US`.
 
-    If you're using a [Central Store for Group Policy Administrative Templates](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra), copy the following files from the
+   If you're using a [Central Store for Group Policy Administrative Templates](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra), copy the following files from the
     configuration package:
 
-    - Copy _AtpConfiguration.admx_ into _\\\\\<forest.root\>\\SysVol\\\<forest.root\>\\Policies\\PolicyDefinitions_
+   - Copy `AtpConfiguration.admx` into `\\<forest.root>\SysVol\<forest.root>\Policies\PolicyDefinitions`.
 
-    - Copy _AtpConfiguration.adml_ into _\\\\\<forest.root\>\\SysVol\\\<forest.root\>\\Policies\\PolicyDefinitions\\en-US_
+   - Copy `AtpConfiguration.adml` into `\\<forest.root>\SysVol\<forest.root>\Policies\PolicyDefinitions\en-US`.
 
-2. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11), right-click the GPO you want to configure and click **Edit**.
+1. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11), right-click the GPO you want to configure and click **Edit**.
 
-3. In the **Group Policy Management Editor**, go to **Computer configuration**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration**.
 
-4. Click **Policies**, then **Administrative templates**.
+1. Click **Policies**, then **Administrative templates**.
 
-5. Click **Windows components** and then **Windows Defender ATP**.
+1. Click **Windows components** and then **Windows Defender ATP**.
 
-6. Choose to enable or disable sample sharing from your devices.
+1. Choose to enable or disable sample sharing from your devices.
 
 > [!NOTE]
 > If you don't set a value, the default value is to enable sample collection.
@@ -116,59 +105,49 @@ You can use Group Policy (GP) to configure settings, such as settings for the sa
 
 ### Update endpoint protection configuration
 
-After configuring the onboarding script, continue editing the same group policy to add endpoint protection configurations. Perform group policy edits from a system running Windows 10 or Server 2019, Windows 11, or Windows Server 2022 to ensure you have all of the required Microsoft Defender Antivirus capabilities. You may need to close and reopen the group policy object to register the Defender ATP configuration settings.
+After configuring the onboarding script, continue editing the same group policy to add endpoint protection configurations. Perform group policy edits from a system running Windows 10, Windows 11, or Windows Server 2019 and later to ensure you have all of the required Microsoft Defender Antivirus capabilities. You may need to close and reopen the group policy object to register the Defender ATP configuration settings.
 
 All policies are located under `Computer Configuration\Policies\Administrative Templates`.
 
-**Policy location:** \Windows Components\Windows Defender ATP
+**Policy location:** `\Windows Components\Windows Defender ATP`
 
-Policy|Setting
----|---
-Enable\Disable Sample collection|Enabled - "Enable sample collection on machines" checked
+|Policy|Setting|
+|---|---|
+|Enable\Disable Sample collection|Enabled - "Enable sample collection on machines" checked |
 
-<br>
+**Policy location:**  `\Windows Components\Microsoft Defender Antivirus`
 
-**Policy location:**  \Windows Components\Microsoft Defender Antivirus
+|Policy|Setting|
+|---|---|
+|Configure detection for potentially unwanted applications|Enabled, Block|
 
-Policy|Setting
----|---
-Configure detection for potentially unwanted applications|Enabled, Block
+**Policy location:** `\Windows Components\Microsoft Defender Antivirus\MAPS`
 
-<br>
+|Policy|Setting|
+|---|---|
+|Join Microsoft MAPS|Enabled, Advanced MAPS|
+|Send file samples when further analysis is required | Enabled, Send safe samples|
 
-**Policy location:** \Windows Components\Microsoft Defender Antivirus\MAPS
+**Policy location:** `\Windows Components\Microsoft Defender Antivirus\Real-time Protection`
 
-Policy|Setting
----|---
-Join Microsoft MAPS|Enabled, Advanced MAPS
-Send file samples when further analysis is required | Enabled, Send safe samples
+|Policy|Setting|
+|---|---|
+|Turn off real-time protection|Disabled|
+|Turn on behavior monitoring|Enabled|
+|Scan all downloaded files and attachments|Enabled|
+|Monitor file and program activity on your computer|Enabled|
 
-<br>
-
-**Policy location:** \Windows Components\Microsoft Defender Antivirus\Real-time Protection
-
-Policy|Setting
----|---
-Turn off real-time protection|Disabled
-Turn on behavior monitoring|Enabled
-Scan all downloaded files and attachments|Enabled
-Monitor file and program activity on your computer|Enabled
-
-<br>
-
-**Policy location:**  \Windows Components\Microsoft Defender Antivirus\Scan
+**Policy location:** `\Windows Components\Microsoft Defender Antivirus\Scan`
 
 These settings configure periodic scans of the endpoint. We recommend performing a weekly quick scan, performance permitting.
 
-Policy|Setting
----|---
-Check for the latest virus and spyware security intelligence before running a scheduled scan |Enabled
+|Policy|Setting|
+|---|---|
+|Check for the latest virus and spyware security intelligence before running a scheduled scan|Enabled|
 
-<br>
+**Policy location:** `\Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard\Attack Surface Reduction`
 
-**Policy location:** \Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard\Attack Surface Reduction
-
-Get the current list of attack surface reduction rules GUIDs from [Attack surface reduction rules deployment Step 3: Implement ASR rules](attack-surface-reduction-rules-deployment-implement.md). For additional, per rules details, see [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
+Get the list of attack surface reduction (ASR) rule GUIDs from [ASR rules](attack-surface-reduction-rules-overview.md#asr-rules). For additional details about each ASR rule, see [ASR rule details](attack-surface-reduction-rules-reference.md#asr-rule-details).
 
 1. Open the **Configure Attack Surface Reduction** policy.
 
@@ -176,15 +155,13 @@ Get the current list of attack surface reduction rules GUIDs from [Attack surfac
 
 1. Select the **Show** button.
 
-1. Add each GUID in the **Value Name** field with a Value of 2.
-
-   This will set each up for audit only.
+1. Add each GUID in the **Value Name** field with a value of `2`. This sets each up for audit only.
 
    :::image type="content" source="media/asr-guid.png" alt-text="The Attack surface reduction configuration" lightbox="media/asr-guid.png":::
 
-Policy|Location|Setting
----|---|---
-Configure Controlled folder access| \Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard\Controlled Folder Access| Enabled, Audit Mode
+|Policy|Location|Setting|
+|---|---|---|
+|Configure Controlled folder access| \Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard<br/>Controlled Folder Access| Enabled, Audit Mode |
 
 ## Run a detection test to verify onboarding
 
@@ -192,20 +169,20 @@ After onboarding the device, you can choose to run a detection test to verify th
 
 ## Offboard devices using Group Policy
 
-For security reasons, the package used to Offboard devices will expire 7 days after the date it was downloaded. Expired offboarding packages sent to a device will be rejected. When downloading an offboarding package you'll be notified of the packages expiry date and it will also be included in the package name.
+For security reasons, the package used to Offboard devices will expire 7 days after the date it was downloaded. Expired offboarding packages sent to a device will be rejected. When downloading an offboarding package, you'll be notified of the packages expiry date and it will also be included in the package name.
 
 > [!NOTE]
 > Onboarding and offboarding policies must not be deployed on the same device at the same time, otherwise this will cause unpredictable collisions.
 
-1. Get the offboarding package from the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>:
+1. Get the offboarding package from the [Microsoft Defender portal](https://security.microsoft.com):
 
-    1. In the navigation pane, select **Settings** > **Endpoints** > **Device management** > **Offboarding**.
+   1. In the navigation pane, select **System** > **Settings** > **Endpoints** > **Device management** > **Offboarding**.
 
-    1. Select the operating system.
-    
-    1. In the **Deployment method** field, select **Group policy**.
+   1. Select the operating system.
 
-    1. Click **Download package** and save the .zip file.
+   1. In the **Deployment method** field, select **Group policy**.
+
+   1. Click **Download package** and save the .zip file.
 
 2. Extract the contents of the .zip file to a shared, read-only location that can be accessed by the device. You should have a file named *WindowsDefenderATPOffboardingScript_valid_until_YYYY-MM-DD.cmd*.
 
@@ -221,7 +198,7 @@ For security reasons, the package used to Offboard devices will expire 7 days af
 
 8. In the Name field, type an appropriate name for the scheduled task (for example, Defender for Endpoint Deployment).
 
-9. Go to the **Actions** tab and select **New...**. Ensure that **Start a program** is selected in the **Action** field. Enter the UNC path, using the file server's fully qualified domain name (FQDN), of the shared *WindowsDefenderATPOffboardingScript_valid_until_YYYY-MM-DD.cmd* file.
+9. Go to the **Actions** tab and select **New...**. Ensure that **Start a program** is selected in the **Action** field. Enter the UNC path, using the file server's fully qualified domain name (FQDN), of the shared `WindowsDefenderATPOffboardingScript_valid_until_YYYY-MM-DD.cmd` file.
 
 10. Select **OK** and close any open GPMC windows.
 
@@ -234,8 +211,10 @@ With Group Policy there isn't an option to monitor deployment of policies on the
 
 ## Monitor devices using the portal
 
-1. Go to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>.
-2. Click **Devices inventory**.
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com).
+
+2. Select **Devices inventory**.
+
 3. Verify that devices are appearing.
 
 > [!NOTE]
@@ -249,17 +228,17 @@ Create a new Group Policy or group these settings in with the other policies. Th
 
 2. Browse to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Real-time Protection**.
 
-    :::image type="content" source="media/realtime-protect.png" alt-text="Real-time protection" lightbox="media/realtime-protect.png":::
+   :::image type="content" source="media/realtime-protect.png" alt-text="Real-time protection" lightbox="media/realtime-protect.png":::
 
-1. In the Quarantine folder, configure removal of items from Quarantine folder.
+1. In the **Quarantine** folder, configure removal of items from Quarantine folder.
 
-    :::image type="content" source="media/removal-items-quarantine1.png" alt-text="Removal items quarantine folder" lightbox="media/removal-items-quarantine1.png":::
+   :::image type="content" source="media/removal-items-quarantine1.png" alt-text="Removal items quarantine folder" lightbox="media/removal-items-quarantine1.png":::
 
-    :::image type="content" source="media/config-removal-items-quarantine2.png" alt-text="config-removal quarantine" lightbox="media/config-removal-items-quarantine2.png":::
+   :::image type="content" source="media/config-removal-items-quarantine2.png" alt-text="config-removal quarantine" lightbox="media/config-removal-items-quarantine2.png":::
 
-4. In the Scan folder, configure the scan settings.
+4. In the **Scan** folder, configure the scan settings.
 
-    :::image type="content" source="media/gpo-scans.png" alt-text="gpo scans" lightbox="media/gpo-scans.png":::
+   :::image type="content" source="media/gpo-scans.png" alt-text="gpo scans" lightbox="media/gpo-scans.png":::
 
 ### Monitor all files in Real time protection
 
@@ -272,10 +251,10 @@ Browse to **Computer Configuration** \> **Policies** \> **Administrative Templat
 1. Browse to **Computer Configuration** \> **Policies** \> **Administrative Templates** \> **Windows Components** \> **Windows Defender SmartScreen** \> **Explorer**.
 
    :::image type="content" source="media/config-windows-def-smartscr-explorer.png" alt-text="Configure windows defender smart screen explorer" lightbox="media/config-windows-def-smartscr-explorer.png":::
- 
+
 2. Browse to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Windows Defender SmartScreen** > **Microsoft Edge**.
 
-    :::image type="content" source="media/configure-windows-defender-smartscreen.png" alt-text="Configure windows defender smart screen on Microsoft Edge" lightbox="media/configure-windows-defender-smartscreen.png":::
+   :::image type="content" source="media/configure-windows-defender-smartscreen.png" alt-text="Configure windows defender smart screen on Microsoft Edge" lightbox="media/configure-windows-defender-smartscreen.png":::
 
 ### Configure Potentially Unwanted Applications
 
@@ -299,7 +278,7 @@ Browse to **Computer Configuration** \> **Policies** \> **Administrative Templat
 
 > [!NOTE]
 > The **Send all samples** option will provide the most analysis of binaries/scripts/docs which increases security posture.
-The **Send safe samples** option limits the type of binaries/scripts/docs being analyzed, and decreases security posture. 
+The **Send safe samples** option limits the type of binaries/scripts/docs being analyzed, and decreases security posture.
 
 For more information, see [Turn on cloud protection in Microsoft Defender Antivirus](enable-cloud-protection-microsoft-defender-antivirus.md), and [Cloud protection and sample submission in Microsoft Defender Antivirus.](cloud-protection-microsoft-antivirus-sample-submission.md)
 
@@ -314,17 +293,18 @@ Browse to **Computer Configuration** \> **Policies** \> **Administrative Templat
 ### Configure cloud deliver timeout and protection level
 
 Browse to **Computer Configuration** \> **Policies** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **MpEngine**.
+
 When you configure cloud protection level policy to **Default Microsoft Defender Antivirus blocking policy** this will disable the policy. This is what is required to set the protection level to the windows default.
 
 :::image type="content" source="media/config-extended-cloud-check.png" alt-text="config extended cloud check" lightbox="media/config-extended-cloud-check.png":::
 
 :::image type="content" source="media/cloud-protection-level.png" alt-text="config cloud protection level" lightbox="media/cloud-protection-level.png":::
 
-## Related topics
-- [Onboard Windows devices using Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md)
+## Related articles
+
+- [Onboard Windows devices using Microsoft Configuration Manager](configure-endpoints-sccm.md)
 - [Onboard Windows devices using Mobile Device Management tools](configure-endpoints-mdm.md)
 - [Onboard Windows devices using a local script](configure-endpoints-script.md)
 - [Onboard non-persistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md)
 - [Run a detection test on a newly onboarded Microsoft Defender for Endpoint devices](run-detection-test.md)
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -1,56 +1,47 @@
 ---
 title: Microsoft Defender Antivirus export device antivirus health details API methods and properties
-description: "Learn how to export a list of Microsoft Defender Antivirus device health details." 
+description: "Learn how to export a list of Microsoft Defender Antivirus device health details."
 ms.service: defender-endpoint
-ms.author: deniseb 
-author: denisebmsft
-ms.localizationpriority: medium 
-ms.date: 06/25/2024
-manager: deniseb 
+ms.author: painbar
+author: paulinbar
+ms.localizationpriority: medium
+ms.date: 11/11/2025
 ms.reviewr: mkaminska
-audience: ITPro 
 ms.collection:
  - m365-security
  - must-keep
  - tier3
-ms.topic: reference 
+ms.topic: reference
 ms.subservice: reference
-ms.custom: api 
-search.appverid: met150
+ms.custom: api
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
 ---
 
 # Export device antivirus health details API methods and properties
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 ## Export device antivirus health details API description
 
 Retrieves a list of Microsoft Defender Antivirus device health details. This API has different API calls (methods) to get different types of data. Because the amount of data can be large, there are two ways it can be retrieved:
 
-- **JSON response**  The API pulls all data in your organization as JSON responses. This method is best for _small organizations with less than 100-K devices_. The response is paginated, so you can use the \@odata.nextLink field from the response to fetch the next results.
+- **JSON**  The API pulls all data in your organization as JSON responses. This method is best for _small organizations with less than 100-K devices_. The response is paginated, so you can use the \@odata.nextLink field from the response to fetch the next results.
 
-- **via files** This API solution enables pulling larger amounts of data faster and more reliably. So, it's recommended for large organizations, with more than 100-K devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. This API enables you to download all your data from Azure Storage as follows:
-  - Call the API to get a list of download URLs with all your organization data.
-  - Download all the files using the download URLs and process the data as you like.
+- **Files** This API solution enables pulling larger amounts of data faster and more reliably, and is recommended for large organizations who have more than 100,000 devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. This API enables you to download all your data from Azure Storage as follows:
 
-Data that is collected using either '_JSON response_ or _via files_' is the current snapshot of the current state. It doesn't contain historic data. To collect historic data, customers must save the data in their own data storages.
+   1. Call the API to get a list of download URLs with all your organization data.
 
-> [!IMPORTANT]
-> For Windows Server 2012 R2 and Windows Server 2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](../configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
->
-> For information about using the **Device health and antivirus compliance** reporting tool in the Microsoft Defender portal, see: [Device health and antivirus report in Microsoft Defender for Endpoint](../device-health-reports.md).
+   2. Download all the files using the download URLs and process the data as you like.
+
+Data that is collected using either `JSON response` or by using files is a snapshot of the current state. This data doesn't contain historical data. To collect historical data, you must save the data in your own data storage.
+
+For information about using the **Device health and antivirus compliance** reporting tool in the Microsoft Defender portal, see: [Device health and antivirus report in Microsoft Defender for Endpoint](../device-health-reports.md).
+
+### Prerequisites
+
+- For Windows Server 2012 R2 and Windows Server 2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](../onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 
 ### 1.1 Export device antivirus health details API methods
 
@@ -66,67 +57,54 @@ Data that is collected using either '_JSON response_ or _via files_' is the curr
 
 ### 1.3 Export device antivirus health details API properties (JSON response)
 
-> [!NOTE]
->
-> - The properties defined in the following table are listed alphabetically, by property ID. When running this API, the resulting output will not necessarily be returned in the same order listed in this table.
-> - Note that **rbacgroupname** and **Id** are not supported filter operators.
-> - Some additional columns might be returned in the response. These columns can be temporary and might be removed; use only the documented columns.
+- The properties defined in the following table are listed alphabetically, by property ID. When you use this API, the resulting output won't necessarily be returned in the same order listed in this table.
+- Note that **rbacgroupname** and **Id** aren't supported filter operators.
+- Some more columns might be returned in the response. These columns can be temporary and might be removed; use only the documented columns.
 
 | Property (ID) | Data type | Description | Example of a returned value |
 |---|---|---|---|
-| avEngineUpdateTime | DateTimeOffset | Datetime when AV engine was last updated on device | "2022-08-04T12:44:02Z" |
-| avEngineVersion | String | Antivirus engine version | "1.1.19400.3" |
-| avIsEngineUpToDate | String | Up-to-date status of AV engine | "True", "False", "Unknown" |
-| avIsPlatformUpToDate | String | Up-to-date status of AV platform | "True", "False", "Unknown" |
-| avIsSignatureUpToDate | String | Up-to-date status of AV signature | "True", "False", "Unknown" |
-| avMode | String | Antivirus mode. | Each mode will be a string typed integer value ranging from 0 to 5. Refer to the mapping below to see its value's meaning: <ul><li>'' = Other</li><li> '0' = Active</li><li> '1' = Passive</li><li> '2' = Disabled</li><li> '3' = Other</li><li> '4' = EDRBlocked</li><li>'5' = PassiveAudit</li></ul> |
-| avPlatformUpdateTime | DateTimeOffset | Datetime when AV platform was last updated on device | "2022-08-04T12:44:02Z" |
-| avPlatformVersion | String | Antivirus platform version | "4.18.2203.5" |
-| avSignaturePublishTime | DateTimeOffset | Datetime when AV security intelligence build was released | "2022-08-04T12:44:02Z" |
-| avSignatureUpdateTime | DateTimeOffset | Datetime when AV security intelligence was last updated on device | "2022-08-04T12:44:02Z" |
-| avSignatureVersion | String | Antivirus security intelligence version | "1.371.1323.0" |
-| computerDnsName | String | DNS name | "SampleDns" |
-| dataRefreshTimestamp | DateTimeOffset | Datetime when data is refreshed for this report | "2022-08-04T12:44:02Z" |
-| fullScanError | String | Error codes from full scan | "0x80508023" |
-| fullScanResult | String | Full scan result of this device | "Completed" <br> "Canceled" <br>"Failed" |
-| fullScanTime | DateTimeOffset | Datetime when full scan has completed | "2022-08-04T12:44:02Z" |
-| id | String | Machine GUID | "30a8fa2826abf24d24379b23f8a44d471f00feab" |
-| lastSeenTime | DateTimeOffset | Last seen datetime of this machine | "2022-08-04T12:44:02Z" |
-| machineId | String | Machine GUID | "30a8fa2826abf24d24379b23f8a44d471f00feab" |
-| osKind | String | Operating system kind | "windows", "mac", "linux" |
-| osPlatform | String | Operating system major version name | Windows 10, macOs |
-| osVersion | String | Operating system version | 10.0.18363.1440, 12.4.0.0 |
-| quickScanError | String | Error codes from quick scan | "0x80508023" |
-| quickScanResult | String | Quick scan result of this device | "Completed" <br>"Canceled" <br>"Failed" |
-| quickScanTime | DateTimeOffset | Datetime when quick scan has completed | "2022-08-04T12:44:02Z" |
-| rbacGroupId | Long | Device group ID that this machine belongs to | 712 |
-| rbacGroupName | String | Name of device group that this machine belongs to | "SampleGroup" |
+| `avEngineUpdateTime` | DateTimeOffset | Datetime when the antivirus engine was last updated on device | "2022-08-04T12:44:02Z" |
+| `avEngineVersion` | String | Antivirus engine version | `1.1.19400.3` |
+| `avIsEngineUpToDate` | String | Up-to-date status of antivirus engine | `True`, `False`, or `Unknown` |
+| `avIsPlatformUpToDate` | String | Up-to-date status of antivirus platform | `True`, `False`, or `Unknown` |
+| `avIsSignatureUpToDate` | String | Up-to-date status of antivirus signature | `True`, `False`, or `Unknown` |
+| `avMode` | String | Antivirus mode. | Each mode is a string typed integer value ranging from 0 to 5. <br/>`''` = `Other`<br/>`0` = `Active`<br/>`1` = `Passive`<br/>`2` = `Disabled`<br/>`3` = `Other`<br/>`4` = `EDRBlocked`<br/>`5` = `PassiveAudit` |
+| `avPlatformUpdateTime` | DateTimeOffset | Datetime when antivirus platform was last updated on device | "2022-08-04T12:44:02Z" |
+| `avPlatformVersion` | String | Antivirus platform version | `4.18.2203.5` |
+| `avSignaturePublishTime` | DateTimeOffset | Datetime when antivirus security intelligence build was released | "2022-08-04T12:44:02Z" |
+| `avSignatureUpdateTime` | DateTimeOffset | Datetime when antivirus security intelligence was last updated on device | "2022-08-04T12:44:02Z" |
+| `avSignatureVersion` | String | Antivirus security intelligence version | `1.371.1323.0` |
+| `computerDnsName` | String | DNS name | `SampleDns` |
+| `dataRefreshTimestamp` | DateTimeOffset | Datetime when data is refreshed for this report | `2022-08-04T12:44:02Z` |
+| `fullScanError` | String | Error codes from the full scan | "0x80508023" |
+| `fullScanResult` | String | Full scan result of the device | `Completed`, `Canceled`, or `Failed` |
+| `fullScanTime` | DateTimeOffset | Datetime when the full scan completed | `2022-08-04T12:44:02Z` |
+| `id` | String | Machine GUID | `30a8fa2826abf24d24379b23f8a44d471f00feab` |
+| `lastSeenTime` | DateTimeOffset | Last seen datetime of this machine | `2022-08-04T12:44:02Z` |
+| `machineId` | String | Machine GUID | `30a8fa2826abf24d24379b23f8a44d471f00feab` |
+| `osKind` | String | Operating system kind | `windows`, `mac`, or `linux` |
+| `osPlatform` | String | Operating system major version name | `Windows 10` or `macOS` |
+| `osVersion` | String | Operating system version | `10.0.18363.1440, 12.4.0.0` |
+| `quickScanError` | String | Error codes from quick scan | `0x80508023` |
+| `quickScanResult` | String | Quick scan result of this device | `Completed`, `Canceled`, or `Failed` |
+| `quickScanTime` | DateTimeOffset | Datetime when quick scan completed | `2022-08-04T12:44:02Z` |
+| `rbacGroupId` | Long | Device group ID that this machine belongs to | `712` |
+| `rbacGroupName` | String | Name of device group that this machine belongs to | `SampleGroup` |
 
 ### 1.4 Export device antivirus health details API properties (via files)
 
 > [!IMPORTANT]
-> Information in this section relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+> Information in this section relates to prereleased product which can be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-> [!NOTE]
->
-> - The files are gzip compressed & in multiline Json format.
-> - The download URLs are only valid for 3 hours; otherwise you can use the parameter.
-> - For maximum download speed of your data, you can make sure you are downloading from the same Azure region that your data resides.
-> - Each record is approximately 1KB of data. You should take this into account when choosing the correct pageSize parameter for you.
-> - Some additional columns might be returned in the response. These columns are temporary and might be removed, please use only the documented columns.
+In each of the export files, there's a property called `DeviceGatheredInfo`, which contains antivirus data. Each of its attributes can provide you with information on the device's health and its status.
+
+- The files are gzip-compressed and in multiline `.json` format.
+- The download URLs are only valid for 3 hours; otherwise you can use the parameter.
+- For maximum download speed of your data, you can make sure you're downloading from the same Azure region that your data resides.
+- Each record uses approximately 1KB of data. You should take this into account when choosing the correct `pageSize` parameter.
+- More columns might be returned in the response. These columns are temporary and might be removed, so use only the documented columns.
 
 | Property (ID) | Data type | Description | Example of a returned value |
 |---|---|---|---|
 | Export files | array[string] | A list of download URLs for files holding the current snapshot of the organization. | ["https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"] |
 | GeneratedTime | String | The time that the export was generated. | 2022-05-20T08:00:00Z |
-
-> [!NOTE]
-> In each of the Export files a property "DeviceGatheredInfo" containing the data about Antivirus information can be found. Each of its attributes can provide you with information on the device's health and its status.
-
-## See also
-
-[Export device antivirus health report](device-health-export-antivirus-health-report-api.md)
-
-[Device health and compliance reporting](../device-health-reports.md)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

@@ -1,16 +1,11 @@
 ---
 title: IdentityInfo table in the advanced hunting schema
 description: Learn about user account information in the IdentityInfo table of the advanced hunting schema
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - usx-security
@@ -19,7 +14,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: reference
-ms.date: 04/22/2024
+ms.date: 12/22/2025
 appliesto: 
 - Microsoft Defender XDR 
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -29,11 +24,17 @@ appliesto:
 
 The `IdentityInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about user accounts obtained from various services, including Microsoft Entra ID. Use this reference to construct queries that return information from this table.
 
-This table was renamed from `AccountInfo`. During renames, all queries saved in the portal are automatically updated. Check queries you have saved elsewhere.
+This table was renamed from `AccountInfo`. During renames, all queries saved in the portal are automatically updated. Check queries you saved elsewhere.
 
-Microsoft Sentinel uses a slightly expanded version of this table in Log Analytics. For more information, see [Microsoft Sentinel UEBA reference | IdentityInfo table](/azure/sentinel/ueba-reference)
+Microsoft Sentinel uses a slightly expanded version of this table in Log Analytics. For more information, see [Microsoft Sentinel UEBA reference](/azure/sentinel/ueba-reference#identityinfo-table).
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
+
+The following schema is the unified `IdentityInfo` schema that streamlines a similar table in Microsoft Sentinel's log analytics and in Microsoft Defender advanced hunting. The complete set of columns is available for Defender portal users who onboarded Microsoft Sentinel and turned on the User and Entity Behavior Analytics (UEBA) service. 
+
+Defender portal users who don't onboard a Microsoft Sentinel workspace that has the UEBA service turned on can't view UEBA-specific columns. Read [UEBA-specific columns](#ueba-specific-columns).
+
+This advanced hunting table is populated by records from Microsoft Defender for Identity or Microsoft Sentinel and Microsoft Entra ID. If your organization doesn't deploy the service in Microsoft Defender, queries that use the table don't work or return any results. For more information about how to deploy Defender for Identity in the Defender portal, read [Deploy supported services](deploy-supported-services.md).
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
@@ -45,7 +46,8 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `AccountDisplayName` | `string` | Name of the account user displayed in the address book. Typically a combination of a given or first name, a middle initial, and a last name or surname. |
 | `AccountName` | `string` | User name of the account |
 | `AccountDomain` [*](#mdi-only) | `string` | Domain of the account |
-| `Type` [*](#mdi-only) | `string` | Type of record |
+| `CriticalityLevel` | `int` | The criticality score of the account |
+| `Type` [*](#mdi-only) | `string` | Type of identity; possible values: User, ServiceAccount |
 | `DistinguishedName` [*](#mdi-only) | string | The user's [distinguished name](/previous-versions/windows/desktop/ldap/distinguished-names) |
 | `CloudSid` | `string` | Cloud security identifier of the account |
 | `GivenName` | `string` | Given name or first name of the account user |
@@ -61,16 +63,51 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `Manager` [*](#mdi-only)  | `string` | The listed manager of the account user |
 | `Phone` [*](#mdi-only)  | `string` | The listed phone number of the account user|
 | `CreatedDateTime` [*](#mdi-only)  | `datetime` | Date and time when the account user was created |
-| `SourceProvider` [*](#mdi-only)  | `string` |The identity's source, such as Microsoft Entra ID, Active Directory, or a [hybrid identity](/azure/active-directory/hybrid/what-is-provisioning) synchronized from Active Directory to Azure Active Directory |
 | `ChangeSource` [*](#mdi-only)  | `string` |Identifies which identity provider or process triggered the addition of the new row. For example, the `System-UserPersistence` value is used for any rows added by an automated process.|
+| `BlastRadius` [**](#sentinel)| `string` | A calculation based on the position of the user in the org tree and the user's Microsoft Entra roles and permissions; possible values: Low, Medium, High|
+| `CompanyName` [**](#sentinel)| `string` | Name of the company for which the user works |
+| `DeletedDateTime` [**](#sentinel)| `datetime` | Date and time when the user account was deleted |
+| `EmployeeId` [**](#sentinel)| `string` | Employee identifier assigned to the user by the organization |
+| `OtherMailAddresses` [**](#sentinel)| `dynamic` | Additional email addresses of the user account |
+| `RiskLevel` | `string` | Microsoft Entra ID risk level of the user account; possible values: Low, Medium, High |
+| `RiskLevelDetails` | `string` | Details regarding the Microsoft Entra ID risk level |
+| `State` [**](#sentinel)| `string` | State where the sign-in occurred, if available |
 | `Tags` [*](#mdi-only)  | `dynamic` | Tags assigned to the account user by Defender for Identity |
 | `AssignedRoles` [*](#mdi-only) | `dynamic` | For identities from Microsoft Entra-only, the roles assigned to the account user|
+| `PrivilegedEntraPimRoles` (Preview)  [***](#mdi) | `dynamic` | A snapshot of privileged role assignment schedules and eligibility schedules for the account as maintained by Microsoft Entra Privileged Identity Management (excluding activated assignments) |
 | `TenantId` | `string` | Unique identifier representing your organization's instance of Microsoft Entra ID |
 | `SourceSystem` [*](#mdi-only) | `string` | The source system for the record|
+| `OnPremObjectId` | `string` | Active Directory object ID of the user |
+| `TenantMembershipType` | `string` | User type in Microsoft Entra ID; possible values: Guest, Member|
+| `RiskStatus` [**](#sentinel)| `string` | Status of the user's risk; possible values: None, ConfirmedSafe, Remediated, Dismissed, AtRisk, ConfirmedCompromised, UnknownFutureValue|
+| `UserAccountControl` | `string` | Security attributes of the user account in the Active Directory domain |
+| `IdentityEnvironment` | `string` | Environment where the identity is used; possible values: CloudOnly, Hybrid, On-premises |
+| `SourceProviders` | `dynamic` | Source providers of the accounts for the identity; possible values: ActiveDirectory, EntraID, Okta |
+| `GroupMembership` [**](#sentinel)	| `dynamic` |	Microsoft Entra ID groups where the user account is a member |
 
-<a name="mdi-only"></a>* Available only for tenants with Microsoft Defender for Identity, Microsoft Defender for Cloud Apps or Microsoft Defender for Endpoint P2 licensing.
 
-## Related topics
+<a name="mdi-only"></a>* Available only for tenants with Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, or Microsoft Defender for Endpoint P2 licensing.<br>
+<a name="sentinel"></a>** Available only for tenants with Microsoft Sentinel. For more information about the freshness and limitations of these columns, see [Microsoft Sentinel UEBA reference](/azure/sentinel/ueba-reference#identityinfo-table)<br>
+<a name="mdi"></a>*** Available only for tenants with Microsoft Defender for Identity.
+
+## UEBA-specific columns
+If you use the Microsoft Defender portal but don't onboard a Microsoft Sentinel workspace with the UEBA service turned on, the following columns aren't available in your `IdentityInfo` table:
+
+- `BlastRadius`
+- `CompanyName`
+- `DeletedDateTime`
+- `EmployeeId`
+- `OtherMailAddresses`
+- `Tags`
+- `State`
+- `GroupMembership`
+- `RiskStatus`
+
+
+For more information about UEBA, see [Advanced threat detection with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](/azure/sentinel/identify-threats-with-entity-behavior-analytics). For more information about the different data sources in UEBA, see [Microsoft Sentinel UEBA reference](/azure/sentinel/ueba-reference).
+
+
+## Related articles
 
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Learn the query language](advanced-hunting-query-language.md)

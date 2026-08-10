@@ -1,0 +1,95 @@
+---
+title: Build Cloud Security Explorer queries to identify vulnerabilities in Kubernetes clusters
+description: Learn how to build queries with Cloud Security Explorer in Microsoft Defender for Cloud to investigate vulnerabilities in Kubernetes clusters.
+ms.topic: how-to
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
+#customer intent: As a security professional, I want to build Cloud Security Explorer queries in Microsoft Defender for Cloud to identify vulnerabilities in Kubernetes clusters.
+ai-usage: ai-assisted
+---
+
+# Build Cloud Security Explorer queries to identify vulnerabilities in Kubernetes clusters
+
+Use Cloud Security Explorer to find vulnerabilities in your Kubernetes clusters. The following examples show how to build queries that check container images and cluster nodes. You can adapt these queries to filter results based on your needs.
+
+For an introduction to Cloud Security Explorer queries, see [Build queries with Cloud Security Explorer](how-to-manage-cloud-security-explorer.md).
+
+## Create a query to identify software vulnerabilities in container images
+
+To create a query that finds software vulnerabilities in container images:
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Go to **Microsoft Defender for Cloud** > **Cloud Security Explorer**.
+
+1. In **Query builder**, select **Select resource types**.
+
+1. Select **Container Images**.
+
+1. Select **+**.
+
+1. Select **Select condition**.
+
+1. In **Application**, select **Has installed software**.
+
+   :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/software-vulnerabilities-in-container-images.png" alt-text="Screenshot of query for identifying software vulnerabilities in container images." lightbox="./media/cloud-security-explorer-kubernetes-clusters/software-vulnerabilities-in-container-images.png":::
+
+1. Select **Search**.
+
+1. Select **View details >** for the relevant container image.
+
+1. In the **Result details** pane, review **Insights - Has installed software**.
+
+    :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/security-explorer-containers-query-result-details.png" alt-text="Screenshot shows results of Cloud Security Explorer query to retrieve container images with software installed." lightbox="./media/cloud-security-explorer-kubernetes-clusters/security-explorer-containers-query-result-details.png":::
+
+## Create a query to identify vulnerabilities in cluster nodes
+
+To create a query that finds vulnerabilities in cluster nodes:
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Go to **Microsoft Defender for Cloud** > **Cloud Security Explorer**.
+
+1. In **Query builder**, select **Select resource types**.
+
+1. Under **Kubernetes clusters**, select **Azure Kubernetes Service**.
+
+1. Select **Done**.
+
+1. Select **+**.
+
+1. Select **Select condition**.
+
+1. In **Application**, select **Maintains**.
+
+1. Select **Select resource types** > **Kubernetes Node Pools**.
+
+1. Select **Done**.
+
+1. Select **+**.
+
+1. Select **Select condition**.
+
+1. Select **Maintains**.
+
+1. Select **Select resource types** > **Virtual machines clusters**.
+
+1. Select **Done**.
+
+1. Select **+**.
+
+1. **Select condition**.
+
+1. In **Vulnerabilities**, select **All vulnerabilities**.
+
+   :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/vulnerabilities-in-cluster-nodes.png" alt-text="Screenshot of query for identifying vulnerabilities in cluster nodes." lightbox="./media/cloud-security-explorer-kubernetes-clusters/vulnerabilities-in-cluster-nodes.png":::
+
+1. Select **Search**.
+
+1. Select **View details >** for the relevant Kubernetes node pool.
+
+    :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/security-cloud-explorer-kubernetes-nodes-results.png" alt-text="Screenshot of Cloud Security Explorer query options to retrieve list of cluster nodes with vulnerabilities." lightbox="./media/cloud-security-explorer-kubernetes-clusters/security-cloud-explorer-kubernetes-nodes-results.png":::
+
+1. In the **Result details** pane, select the **Virtual machine scale set** icon to view vulnerabilities.
+
+    :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/security-cloud-explorer-kubernetes-nodes-results-details.png" alt-text="Screenshot shows results of Cloud Security Explorer query to retrieve vulnerabilities in cluster nodes." lightbox="./media/cloud-security-explorer-kubernetes-clusters/security-cloud-explorer-kubernetes-nodes-results-details.png":::

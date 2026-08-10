@@ -1,42 +1,37 @@
 ---
 title: Advanced Hunting with PowerShell API Basics
-ms.reviewer: 
+ms.reviewer:
 description: Learn the basics of querying the Microsoft Defender for Endpoint API, using PowerShell.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
-ms.date: 06/19/2024
+ms.date: 01/08/2026
+appliesto:
+  - Microsoft Defender for Endpoint
 ---
 
 # Advanced Hunting using PowerShell
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:** 
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
+[!INCLUDE [Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
+[!INCLUDE [Improve request performance](../../includes/improve-request-performance.md)]
 
 Run advanced queries using PowerShell. For more information, see [Advanced Hunting API](run-advanced-query-api.md).
 
 In this section, we share PowerShell samples to retrieve a token and use it to run a query.
 
 ## Before you begin
+
 You first need to [create an app](apis-intro.md).
 
 ## Preparation instructions
@@ -72,7 +67,8 @@ $response = Invoke-RestMethod -Method Post -Uri $oAuthUri -Body $body -ErrorActi
 $aadToken = $response.access_token
 ```
 
-Where
+Where:
+
 - $tenantId: ID of the tenant on behalf of which you want to run the query (that is, the query is run on the data of this tenant)
 - $appId: ID of your Microsoft Entra app (the app must have 'Run advanced queries' permission to Defender for Endpoint)
 - $appSecret: Secret of your Microsoft Entra app
@@ -85,11 +81,11 @@ Run the following query:
 $token = $aadToken
 $query = 'DeviceRegistryEvents | limit 10' # Paste your own query here
 
-$url = "https://api.securitycenter.microsoft.com/api/advancedqueries/run"
-$headers = @{ 
+$url = "https://api.security.microsoft.com/api/advancedqueries/run"
+$headers = @{
     'Content-Type' = 'application/json'
     Accept = 'application/json'
-    Authorization = "Bearer $aadToken" 
+    Authorization = "Bearer $aadToken"
 }
 $body = ConvertTo-Json -InputObject @{ 'Query' = $query }
 $webResponse = Invoke-WebRequest -Method Post -Uri $url -Headers $headers -Body $body -ErrorAction Stop
@@ -125,9 +121,10 @@ To output the results of the query in JSON format in file file1.json, run the fo
 $results | ConvertTo-Json | Set-Content file1.json
 ```
 
+## Related articles
 
-## Related article
 - [Microsoft Defender for Endpoint APIs](apis-intro.md)
 - [Advanced Hunting API](run-advanced-query-api.md)
 - [Advanced Hunting using Python](run-advanced-query-sample-python.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

@@ -1,16 +1,9 @@
 ---
 title: Remediation actions from AIR
-f1.keywords: 
-- NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
-audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
-search.appverid: 
-- MET150
-- MOE150
 ms.collection: 
 - m365-security
 - tier2

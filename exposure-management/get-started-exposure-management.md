@@ -1,103 +1,47 @@
 ---
 title: Start using Microsoft Security Exposure Management
-description: This article describes how to start using the Microsoft Security Exposure Management dashboard
+description: Learn how to start using the Microsoft Security Exposure Management dashboard to resolve prioritized exposure risks and monitor internet-facing assets.
+ms.topic: overview
 ms.author: dlanger
 author: dlanger
-manager: rayne-wiselman
-ms.topic: overview
-ms.service: exposure-management
-ms.date: 11/04/2024
+ms.date: 06/28/2026
+ms.custom: sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Start using Microsoft Security Exposure Management
 
-This article describes how to start working with the [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) dashboard.
+The [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) dashboard in the Microsoft Defender portal gives security teams a consolidated, action-oriented view of exposure risk. It consolidates signals from cloud resources and devices, combining internet exposure vulnerabilities, security misconfigurations, and broader risk factors into a single experience, and organizes work around two core actions: **Resolve Now** and **Monitor Exposure**.
 
-## Reviewing security exposure state
+## Access Microsoft Security Exposure Management
 
-On the Exposure Management > **Overview** dashboard, you can review the overall state of your organizational security exposure.
+Microsoft Security Exposure Management is integrated into the Microsoft Defender portal at [security.microsoft.com](https://security.microsoft.com). Navigate to **Exposure Management** > **Overview** to open the dashboard.
 
-Use the dashboard as a starting point for a snapshot of organizational posture and exposure, and drill down to details as needed.
+Before you start, review [Prerequisites and support](prerequisites.md) for licensing, permissions, and environment requirements.
 
-:::image type="content" source="./media/get-started-exposure-management/exposure-management-overview.png" alt-text="Screenshot of the security exposure management overview page." lightbox="./media/get-started-exposure-management/exposure-management-overview.png":::
+:::image type="content" source="./media/get-started-exposure-management/exposure-management-overview.png" alt-text="Screenshot of the Exposure Management Overview dashboard showing Resolve Now and Monitor Exposure sections." lightbox="./media/get-started-exposure-management/exposure-management-overview.png":::
 
-## Connecting your external security and asset management products
+## Resolve Now
 
-To get the most out of Security Exposure Management, connect your external security and asset management products.
+The **Resolve Now** section surfaces prioritized, actionable items across three categories, focused on internet-exposed and business-critical assets:
 
-By integrating these products, you can enhance visibility and gain deeper insights into your security posture. Data connectors allow for seamless data flow and aggregation, providing a more comprehensive view of potential vulnerabilities and threats.
+- **Patch** — Software updates that address known vulnerabilities, prioritized by internet exposure and business criticality.
+- **Mitigate** — Risks you can't immediately patch (primarily zero-day vulnerabilities) with suggested compensating controls.
+- **Fix** — Misconfigurations and security weaknesses, particularly around internet-exposed cloud assets that increase your attack surface.
 
-## Review assets
+Select any item to drill into the details and follow the linked remediation workflows.
 
-Get a quick view of your organization's exposed assets.
+## Monitor Exposure
 
-You can see onboarded devices, discovered devices not yet onboarded, internet facing devices, and cloud resources.
+The **Monitor Exposure** section provides a real-time view of your organization's external attack surface and security posture across domains.
 
-Knowing what is exposed helps you to address asset exposure risks.
+### Internet Exposed Resources
 
-## Review key initiatives
+The **Internet Exposed Resources** table shows the breakdown of your internet-facing assets by type: cloud assets, devices, and shadow resources. Use this view to quickly understand the external attack surface where your assets are visible to the internet.
 
-**Key initiatives** show initiatives that are marked as favorites in the [initiatives](initiatives.md) page, and any newly added recommended initiatives.
+### Domain initiative scores
 
-Select an individual key initiative to drill down. You can also navigate to all initiatives.
-
-:::image type="content" source="./media/get-started-exposure-management/key-initiatives.png" alt-text="Screenshot of Security Exposure Management Overview key initiatives section":::
-
-:::image type="content" source="./media/get-started-exposure-management/key-initiatives-example_summary.png" alt-text="Screenshot of an Overview key initiatives summary window." lightbox="./media/get-started-exposure-management/key-initiatives-example_summary.png":::
-
-## Review top metrics
-
-**Top metrics** identifies the security metrics with the most significant exposure.
-
-You can see the current exposure value, a 14 day change trend, and associated recommendations.
-
-Drilling down into an individual security metric takes you to its metric page. You can also access all metrics.
-
-## Review assets in the map
-
-The **Attack surface map** displays your tenant's total and critical device, identity, and cloud assets.
-
-You can select and search on a specific asset type, and open it in the map.
-
-:::image type="content" source="./media/get-started-exposure-management/attack-surface-map-overview.png" alt-text="Screenshot of the dashboard attack surface exposure map." lightbox="./media/get-started-exposure-management/attack-surface-map-overview.png":::
-
-## Review and manage critical assets
-
-The **Critical asset summary** shows you how many critical assets you have and how many have attack paths that put them at risk.
-
-From here you can view and manage critical assets and devices.
-
-In [Critical asset management](critical-asset-management.md), you can manage the criticality level of assets identified by Security Exposure Management, and create custom classification rules to detect other critical assets.
-
-:::image type="content" source="./media/get-started-exposure-management/critical-asset-management-summary.png" alt-text="Screenshot of critical asset management." lightbox="./media/get-started-exposure-management/attack-surface-map-overview.png":::
-
-### View in device inventory and advanced hunting
-
-You can review critical assets in the context of the Defender XDR device inventory and in Defender XDR [advanced hunting](/defender-xdr/advanced-hunting-overview).
-
-The device inventory provides quick links to devices sorted by:
-
-- Critical devices
-- Critical devices with high risk
-- Highly exposed critical devices
-- Internet-facing critical devices
-
-In advanced hunting, you can quickly access queries for:
-
-- Critical identities
-- Critical cloud resources  
-
-:::image type="content" source="./media/get-started-exposure-management/critical-asset-management-devices-advanced-hunting.png" alt-text="Screenshot of the Security Exposure Management Overview view in device inventory and advanced hunting section":::
-
-## Examine key initiative score over time
-
-The **Key initiative score over time** graph shows each key initiative, color coded, with score changes over time.
-
-You can hover over points on the timeline to see what the score of the key initiative was on that date.
-
-## Review recent security events
-
-**Recent security events** displays security events from the past week sorted by all events or by either initiatives or metrics drop. Select the **View all events** button to view a complete list of all events in the last 30 days occurring in your organization.
+Domain initiative scores show your organization's current security posture as a percentage versus a target score, across five domains: Code, Endpoint, Cloud, Identity, and SaaS. Use these scores to track progress and identify which domains need the most attention to reach your target posture.
 
 ## Next steps
 

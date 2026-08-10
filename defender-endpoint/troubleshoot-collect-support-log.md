@@ -2,28 +2,21 @@
 title: Collect support logs in Microsoft Defender for Endpoint using live response
 description: Learn how to collect logs using live response to troubleshoot Microsoft Defender for Endpoint issues
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-edr
 ms.topic: troubleshooting
 ms.subservice: edr
-search.appverid: met150
-ms.date: 11/18/2024
+ms.date: 07/04/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 ---
 
 # Collect support logs in Microsoft Defender for Endpoint using live response
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink)
 
 When contacting support, you might be asked to provide the output package of the Microsoft Defender for Endpoint Client Analyzer tool.
 
@@ -39,23 +32,22 @@ This article provides instructions on how to run the tool via Live Response on W
    - If you require network and [Windows Filter Platform](/windows-hardware/drivers/network/windows-filtering-platform-architecture-overview) related logs, then use `..\Tools\MDELiveAnalyzerNet.ps1`.
    - If you require [Process Monitor](/sysinternals/downloads/procmon) logs, then use `..\Tools\MDELiveAnalyzerAppCompat.ps1`.
 
-2. Initiate a [Live Response session](live-response.md#initiate-a-live-response-session-on-a-device) on the machine you need to investigate.
+1. Initiate a [Live Response session](live-response.md#initiate-a-live-response-session-on-a-device) on the machine you need to investigate.
 
-3. Select **Upload file to library**.
+1. Select **Upload file to library**.
 
    :::image type="content" source="media/upload-file.png" alt-text="The upload file" lightbox="media/upload-file.png":::
 
-4. Select **Choose file**.
-
+1. Select **Choose file**.
    :::image type="content" source="media/choose-file.png" alt-text="The choose file button-1" lightbox="media/choose-file.png":::
 
-5. Select the downloaded file named `MDELiveAnalyzer.ps1`, and then select on **Confirm**.
+1. Select the downloaded file named `MDELiveAnalyzer.ps1`, and then select on **Confirm**.
 
    :::image type="content" source="media/analyzer-file.png" alt-text="The choose file button-2" lightbox="media/analyzer-file.png":::
 
    Repeat this step for the `MDEClientAnalyzerPreview.zip` file.
 
-6. While still in the LiveResponse session, use the following commands to run the analyzer and collect the resulting file.
+1. While still in the LiveResponse session, use the following commands to run the analyzer and collect the resulting file.
 
    ```console
    Putfile MDEClientAnalyzerPreview.zip
@@ -65,17 +57,10 @@ This article provides instructions on how to run the tool via Live Response on W
 
    [![Image of commands.](media/analyzer-commands.png)](media/analyzer-commands.png#lightbox)
    
+   
 ### Additional information
 
-- The latest preview version of MDEClientAnalyzer can be downloaded here: <https://aka.ms/MDEClientAnalyzerPreview>.
-
-- If you can't allow the machine to reach the above URL, then upload `MDEClientAnalyzerPreview.zip` file to the library before running the LiveAnalyzer script:
-
-   ```console
-   PutFile MDEClientAnalyzerPreview.zip -overwrite
-   Run MDELiveAnalyzer.ps1
-   GetFile "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\MDECA\MDEClientAnalyzerResult.zip"
-   ```
+- The latest *preview* version of MDE Client Analyzer can be downloaded at [https://aka.ms/MDEClientAnalyzerPreview](https://aka.ms/MDEClientAnalyzerPreview).
 
 - For more information on gathering data locally on a machine in case the machine isn't communicating with Microsoft Defender for Endpoint cloud services, or doesn't appear in Microsoft Defender for Endpoint portal as expected, see [Verify client connectivity to Microsoft Defender for Endpoint service URLs](verify-connectivity.md).
 
@@ -100,11 +85,7 @@ The XMDE Client Analyzer tool can be downloaded as a [binary](https://go.microso
 
 ### Installing the XMDE Client Analyzer
 
-Both versions of XMDE Client Analyzer, binary and Python, a self-contained package that must be downloaded and extracted before executing, and the complete set of steps for this process can be found:
-
-- [Running the Binary version of the Client Analyzer](/defender-endpoint/run-analyzer-macos-linux)
-
-- [Running the Python version of the Client Analyzer](/defender-endpoint/run-analyzer-macos-linux)
+Both versions of XMDE Client Analyzer, binary and Python, a self-contained package that must be downloaded and extracted before executing. For more information, see [Troubleshoot sensor health using Microsoft Defender for Endpoint Client Analyzer](overview-client-analyzer.md)
 
 Due to the limited commands available in Live Response the steps detailed must be executed in a bash script, and by splitting the installation and execution portion of these commands it's possible to run the install script once, while running the execution script multiple times.
 
@@ -113,33 +94,33 @@ Due to the limited commands available in Live Response the steps detailed must b
 
 #### Binary Client Analyzer Install Script
 
-The following script performs the first six steps of the [Running the Binary version of the Client Analyzer](/defender-endpoint/run-analyzer-macos-linux). When complete, the XMDE Client Analyzer binary is available from the `/tmp/XMDEClientAnalyzerBinary/ClientAnalyzer` directory.
+The following script performs the first six steps of the [Running the Binary version of the Client Analyzer](overview-client-analyzer.md). When complete, the XMDE Client Analyzer binary is available from the `/tmp/XMDEClientAnalyzerBinary/ClientAnalyzer` directory.
 
 1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
    ```bash
    #! /usr/bin/bash
-
+   
    echo "Starting Client Analyzer Script. Running As:"
    whoami
-
+   
    echo "Getting XMDEClientAnalyzerBinary"
    wget --quiet -O /tmp/XMDEClientAnalyzerBinary.zip https://go.microsoft.com/fwlink/?linkid=2297517
-   echo '9D0552DBBD1693D2E2ED55F36147019CFECFDC009E76BAC4186CF03CD691B469 /tmp/XMDEClientAnalyzerBinary.zip' | sha256sum -c
-
+   echo 'C65A4E4C6851D130942BFACD147A9D18B8A92B4F50FACF519477FD1C41A1C323 /tmp/XMDEClientAnalyzerBinary.zip' | sha256sum -c
+   
    echo "Unzipping XMDEClientAnalyzerBinary.zip"
    unzip -q /tmp/XMDEClientAnalyzerBinary.zip -d /tmp/XMDEClientAnalyzerBinary
-
+   
    echo "Unzipping SupportToolLinuxBinary.zip"
-   unzip -q /tmp/XMDEClientAnalyzerBinary/SupportToolLinuxBinary.zip -d /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer
-
+   unzip -q /tmp/XMDEClientAnalyzerBinary/XMDEClientAnalyzer/SupportToolLinuxBinary.zip -d /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer
+   
    echo "MDESupportTool installed at /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer"
-
+   
    ```
-
+   
 #### Python Client Analyzer Install Script
 
-The following script performs the first six steps of the [Running the Python version of the Client Analyzer](/defender-endpoint/run-analyzer-macos-linux). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
+The following script performs the first six steps of the [Running the Python version of the Client Analyzer](overview-client-analyzer.md). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
 
 1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
@@ -151,7 +132,7 @@ The following script performs the first six steps of the [Running the Python ver
   
    echo "Getting XMDEClientAnalyzer.zip"
    wget --quiet -O XMDEClientAnalyzer.zip https://aka.ms/XMDEClientAnalyzer 
-   echo '36C2B13AE657456119F3DC2A898FD9D354499A33F65015670CE2CD8A937F3C66 XMDEClientAnalyzer.zip' | sha256sum -c  
+   echo '07E6A7B89E28A78309D5B6F1E25E4CDFBA9CA141450E422D76441C03AD3477E7 XMDEClientAnalyzer.zip' | sha256sum -c  
 
    echo "Unzipping XMDEClientAnalyzer.zip"
    unzip -q XMDEClientAnalyzer.zip -d /tmp/XMDEClientAnalyzer  
@@ -169,13 +150,13 @@ The following script performs the first six steps of the [Running the Python ver
 
 1. Initiate a [Live Response session](live-response.md#initiate-a-live-response-session-on-a-device) on the machine you need to investigate.
 
-2. Select **Upload file to library**.
+1. Select **Upload file to library**.
 
-3. Select **Choose file**.
+1. Select **Choose file**.
 
-4. Select the downloaded file named `InstallXMDEClientAnalyzer.sh`, and then select **Confirm**.
+1. Select the downloaded file named `InstallXMDEClientAnalyzer.sh`, and then select **Confirm**.
 
-5. While still in the LiveResponse session, use the following commands to install the analyzer:
+1. While still in the LiveResponse session, use the following commands to install the analyzer:
 
    ```console
    run InstallXMDEClientAnalyzer.sh
@@ -229,13 +210,13 @@ The Python Client Analyzer accepts command line parameters to perform different 
 
 1. Initiate a [Live Response session](live-response.md#initiate-a-live-response-session-on-a-device) on the machine you need to investigate. 
 
-2. Select **Upload file to library**.
+1. Select **Upload file to library**.
 
-3. Select **Choose file**.
+1. Select **Choose file**.
 
-4. Select the downloaded file named `MDESupportTool.sh`, and then select **Confirm**.
+1. Select the downloaded file named `MDESupportTool.sh`, and then select **Confirm**.
 
-5. While still in the Live Response session, use the following commands to run the analyzer and collect the resulting file.
+1. While still in the Live Response session, use the following commands to run the analyzer and collect the resulting file.
 
    ```
    run MDESupportTool.sh -parameters "--bypass-disclaimer -d"
@@ -245,10 +226,8 @@ The Python Client Analyzer accepts command line parameters to perform different 
 ## See also
 
 - [Client analyzer overview](overview-client-analyzer.md)
-- [Download and run the client analyzer](download-client-analyzer.md)
-- [Run the client analyzer on Windows](run-analyzer-windows.md)
-- [Run the client analyzer on macOS or Linux](run-analyzer-macos-linux.md)
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)
 - [Understand the analyzer HTML report](analyzer-report.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

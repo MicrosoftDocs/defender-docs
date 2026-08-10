@@ -1,30 +1,23 @@
 ---
-title: Threat detection features across the Microsoft unified security platform
+title: Threat detection in the Microsoft Defender portal
 description: Learn about the features that help detect threats in the Microsoft unified security platform
-search.appverid: met150
-ms.service: unified-secops-platform
-ms.author: austinmc
-author: austinmccollum
-ms.localizationpriority: medium
+author: mberdugo
+ms.author: monaberdugo
 ms.date: 11/22/2024
-audience: ITPro
 ms.collection:
 - M365-security-compliance
 - tier1
 - usx-security
-ms.topic: conceptual
+ms.topic: article
+ms.custom: sfi-image-nochange
 # customer intent: As a security operations center business decision maker, I want to learn about the tools available to detect threats in Microsoft's unified security platform to help me determine whether it meets my organization's requirements.
 ---
 
-# Threat detection in Microsoft's unified SecOps platform
+# Threat detection in the Microsoft Defender portal
 
-Cybersecurity threats abound in the current technology landscape. A lot of noise is created by the constant specter of breach and an abundance of signals available to security operation centers. Microsoft's unified SecOps platform separates actionable threats from the noise. Each service in Microsoft's unified SecOps platform adds its own finely tuned detections to match the complexion of the solution it provides and puts it all together into a single dashboard.
+Cybersecurity threats abound in the current technology landscape. A lot of noise is created by the constant specter of breach and an abundance of signals available to security operation centers. The Defender portal separates actionable threats from the noise, where each service adds its own finely tuned detections to match the complexion of the solution it provides and puts it all together into a single dashboard. The Microsoft Defender portal pulls detections together in the form of alerts and incidents from Microsoft Defender XDR, Microsoft Sentinel, and Microsoft Defender for Cloud.
 
-Microsoft's unified SecOps platform in the Microsoft Defender portal pulls detections together in the form of alerts and incidents from Microsoft Defender XDR, Microsoft Sentinel, and Microsoft Defender for Cloud.
-
-## Threat detection in the Microsoft Defender portal
-
-Security teams need focus and clarity to eliminate false positives. The Microsoft Defender portal correlates and merges alerts and incidents from all supported Microsoft security and compliance solutions, and unifies threat detection from external solutions through Microsoft Sentinel and Microsoft Defender for Cloud. The correlation and merging of these signals brings rich context and prioritization. For example, an Adversary-in-The-Middle (AiTM) phishing attack might have pieces of the threat puzzle scattered across multiple sources. The Defender portal puts those pieces together into an attack story while providing attack disrupt and guided response to remediate the threat.
+Security teams also need focus and clarity to eliminate false positives. The Microsoft Defender portal correlates and merges alerts and incidents from all supported Microsoft security and compliance solutions, and unifies threat detection from external solutions through Microsoft Sentinel and Microsoft Defender for Cloud. The correlation and merging of these signals brings rich context and prioritization. For example, an Adversary-in-The-Middle (AiTM) phishing attack might have pieces of the threat puzzle scattered across multiple sources. The Defender portal puts those pieces together into an attack story while providing attack disrupt and guided response to remediate the threat.
 
 The following image shows the incidents dashboard correlating signals from multiple services, including the individual detection sources for a complete AiTM attack story.
 
@@ -62,7 +55,7 @@ Microsoft Sentinel connected to the Defender portal enables data collection from
 | Workbooks | Detect threats with visual insights, especially to monitor the health of your data collection and understand gaps that prevent proper threat detection. | [Visualize your data with workbooks](/azure/sentinel/monitor-your-data?tabs=defender-portal) |
 | Summary rules | Optimizes noisy, high volume logs to detect threat in low-security value data. | [Generate alerts on threat intelligence matches against network data](/azure/sentinel/summary-rules#generate-alerts-on-threat-intelligence-matches-against-network-data) |
 
-For more information, see [Connect Microsoft Sentinel to the Microsoft Defender portal](/defender-xdr/microsoft-sentinel-onboard).
+For more information, see [Connect Microsoft Sentinel to the Microsoft Defender portal](microsoft-sentinel-onboard.md).
 
 ## Microsoft Defender for Cloud threat detection
 

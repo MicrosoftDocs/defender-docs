@@ -1,24 +1,24 @@
 ---
 title: Hunt for threats across devices, emails, apps, and identities with advanced hunting
 description: Study common hunting scenarios and sample queries that cover devices, emails, apps, and identities.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
-  - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
 ms.custom:
+- msecd-doc-authoring-1014
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 04/22/2024
+ms.date: 06/16/2026
+ai-usage: ai-assisted
 ---
 
 # Hunt for threats across devices, emails, apps, and identities
@@ -26,20 +26,19 @@ ms.date: 04/22/2024
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- Microsoft Defender XDR
 
-[Advanced hunting](advanced-hunting-overview.md) in Microsoft Defender XDR allows you to proactively hunt for threats across:
+[Advanced hunting](advanced-hunting-overview.md) in Microsoft Defender allows you to proactively hunt for threats in:
 
 - Devices managed by Microsoft Defender for Endpoint
 - Emails processed by Microsoft 365
 - Cloud app activities, authentication events, and domain controller activities tracked by Microsoft Defender for Cloud Apps and Microsoft Defender for Identity
 
-With this level of visibility, you can quickly hunt for threats that traverse sections of your network, including sophisticated intrusions that arrive on email or the web, elevate local privileges, acquire privileged domain credentials, and move laterally to across your devices.
+With visibility across devices, email, cloud apps, authentication events, and domain controller activities, you can quickly hunt for threats that traverse sections of your network, including sophisticated intrusions that arrive on email or the web, elevate local privileges, acquire privileged domain credentials, and move laterally across your devices.
 
 Here are general techniques and sample queries based on various hunting scenarios that can help you explore how you might construct queries when hunting for such sophisticated threats.
 
-## Get entity info
+<a name="get-entity-info"></a>
+## Get entity information
 
 Use these queries to learn how you can quickly get information about user accounts, devices, and files.
 
@@ -54,7 +53,7 @@ In the snippet below, we use the [tostring()](/azure/data-explorer/kusto/query/t
 AccountName = tostring(split(RecipientEmailAddress, "@")[0])
 ```
 
-The query below shows how this snippet can be used:
+The following example query uses this account-name extraction snippet in an `EmailEvents` query:
 
 ```kusto
 EmailEvents
@@ -80,7 +79,7 @@ SenderFromAddress, RecipientEmailAddress, AccountDisplayName, JobTitle,
 Department, City, Country
 ```
 
-Watch this [short video](https://www.youtube.com/watch?v=8qZx7Pp5XgM) to learn how you can use Kusto Query Language to join tables.
+Watch this [video on joining tables with Kusto Query Language](https://www.youtube.com/watch?v=8qZx7Pp5XgM) to learn more.
 
 ### Get device information
 
@@ -168,7 +167,7 @@ DeviceInfo
 
 ### Get device status info
 
-Use the following query to get status of a device. In the following example, the query checks to see if the device is onboarded.
+Use the following query to check whether a device is onboarded by querying the `DeviceInfo` table and filtering on `OnboardingStatus`.
 
 ```kusto
 DeviceInfo
@@ -183,6 +182,8 @@ DeviceInfo
 ```
 
 ## Hunting scenarios
+
+The following example queries address common threat-hunting investigations that span email, identity, and device data.
 
 ### List logon activities of users that received emails that were not zapped successfully
 
@@ -284,7 +285,8 @@ DeviceProcessEvents
 | where (TimeProc - TimeEmail) between (0min.. 30min)
 ```
 
-## Related topics
+<a name="related-topics"></a>
+## Related content
 
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Learn the query language](advanced-hunting-query-language.md)

@@ -1,23 +1,26 @@
 ---
 title: Manage licenses for Microsoft Defender for IoT in the Microsoft Defender portal
-description: Read this article to learn about the managing of your license for Defender for IoT in the Microsoft Defender portal.
+description: Learn how to size, purchase, and update Defender for IoT licenses in the Microsoft Defender portal, including upgrading from a trial to a permanent license.
 ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 06/25/2024
+ms.date: 07/02/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
-# Manage your license
+# Manage your Microsoft Defender for IoT license
 
-After using a trial license, and deciding to use Microsoft Defender for IoT permanently, you must purchase a full license. To purchase the correct license, you need to know the total number of devices within your network so that you can choose the correct sized license for your network.
+After setting up a license for Microsoft Defender for IoT, you can manage and update it as needed. To purchase the correct license, you need to know the total number of devices within your network so that you can choose the correct sized license for your network.
 
-This article shows how to make changes to your license, including the steps to choose the best size license to purchase, and upgrading from a trial to permanent license.
+This article shows how to make changes to your license, including the steps to choose the best size license to purchase.
 
 [!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 
-## Calculate number of devices
+<a name="calculate-number-of-devices"></a>
+## Calculate the number of IoT devices for licensing
 
 To calculate the number of devices in your network:
 
@@ -26,11 +29,12 @@ To calculate the number of devices in your network:
 
     :::image type="content" source="media/manage-licenses/calculate-ot-devices.png" alt-text="Screenshot showing the list of OT devices in the device inventory for caluculating the total number of devices at the site." lightbox="media/manage-licenses/calculate-ot-devices.png":::
 
-## Select license size in the admin center
+<a name="select-license-size-in-the-admin-center"></a>
+## Select a Defender for IoT license size in the Microsoft 365 admin center
 
 Purchase the license for your network from the [Microsoft 365 admin center](/microsoft-365/commerce/licenses/buy-licenses), ensuring it covers enough devices for your site needs.
 
-1. Go to the Microsoft 365 admin center **Billing > Purchase services**. If you don't have this option select **Marketplace** instead.
+1. Go to the Microsoft 365 admin center **Billing > Purchase services**. If **Purchase services** isn't available, select **Marketplace** instead.
 
 1. Search for Defender for IoT.
 

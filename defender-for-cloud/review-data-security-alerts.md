@@ -1,0 +1,44 @@
+---
+title: Review data security alerts
+description: Learn how to review data security alerts in the Data and AI security dashboard in Microsoft Defender for Cloud.
+ms.topic: how-to
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
+#customer intent: As a security analyst, I want to review data security alerts so that I can identify and mitigate potential threats in my environments.
+ai-usage: ai-assisted
+---
+
+# Review data security alerts
+
+This article explains how to review and triage data security alerts in Microsoft Defender for Cloud. Use these alerts to identify threats and take remediation actions faster.
+
+## Prerequisites
+
+Before you review data security alerts, make sure these components are enabled:
+
+- Enable [Defender cloud security posture management (Defender CSPM)](tutorial-enable-cspm-plan.md).
+- Enable [sensitive data discovery](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan).
+- Enable [Defender for Storage](tutorial-enable-storage-plan.md).
+- Enable [Defender for Databases](tutorial-enable-databases-plan.md).
+
+## View data security alerts
+
+Data security alerts in Defender for Cloud help you identify threats and vulnerabilities in your data environments.
+
+To view data security alerts:
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Go to **Defender for Cloud** > **Data and AI security dashboard**.
+
+1. Locate the **Data closer look** section and select either **View all managed databases alerts** or **View all storage alerts**.
+
+    :::image type="content" source="media/review-data-security-alerts/databases-storage-alerts.png" alt-text="Screenshot that shows where the view all managed databases alerts and view all storage alerts buttons are located." lightbox="media/review-data-security-alerts/databases-storage-alerts.png":::
+
+Once you navigate to the alerts page, you can then [investigate each security alert](manage-respond-alerts.md#investigate-a-security-alert), and [respond to the alerts](manage-respond-alerts.md#respond-to-a-security-alert).
+
+<a name="next-step"></a>
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Manage and respond to security alerts](manage-respond-alerts.md)

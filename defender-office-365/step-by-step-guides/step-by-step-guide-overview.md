@@ -2,19 +2,14 @@
 title: Microsoft Defender for Office 365 step-by-step guides and how to use them
 description: What are the step-by-step-guides for Microsoft Defender XDR for Office 365? See *only the steps needed to complete a task* and set up features. Information for use in trial subscriptions and production. Guidance designed to minimize information overload and speed up your configuration and use.
 ms.service: defender-office-365
-f1.keywords: 
- - NOCSH
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection:
 - m365-guidance-templates
 - m365-security
 - tier3
 ms.topic: overview
-search.appverid: met150
 ms.date: 04/04/2024
 ---
 
@@ -42,9 +37,9 @@ Instead, these guides are streamlined for **learning by doing**, **testing**, an
 
 ## Examples
 
-- If you recently got Microsoft Defender for Office 365, and you want to get protected as quickly as possible use [Preset security policies](ensuring-you-always-have-the-optimal-security-controls-with-preset-security-policies.md).
+- If you recently got Microsoft Defender for Office 365, and you want to get protected as quickly as possible use [preset security policies](ensuring-you-always-have-the-optimal-security-controls-with-preset-security-policies.md).
 
-- Take advantage of other protections designed for [members of your c-suite](protect-your-c-suite-with-priority-account-protection.md).
+- Take advantage of other protections designed for [members of your c-suite](/microsoft-365/admin/security-and-compliance/priority-accounts).
 
 - How do you [setup](how-to-run-attack-simulations-for-your-team.md) or [automate](how-to-setup-attack-simulation-training-for-automated-attacks-and-training.md) a new simulation quickly and easily?
 

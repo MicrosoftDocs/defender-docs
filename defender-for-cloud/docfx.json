@@ -7,18 +7,18 @@
           "**/*.yml"
         ],
         "exclude": [
-          "**/obj/**",
+          "**/_themes/**",
           "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**",
-          "**/docfx.json",
-          "_repo.en-us/**",
-          "README.md",
-          "LICENSE",
-          "LICENSE-CODE",
-          "ThirdPartyNotices.md",
-          "SECURITY.md"
-        ]
+          "**/obj/**"
+        ],
+        "dest": "defender-for-cloud"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "breadcrumb/defender-for-cloud",
+        "dest": "breadcrumb/defender-for-cloud"
       }
     ],
     "resource": [
@@ -30,40 +30,91 @@
           "**/*.svg"
         ],
         "exclude": [
-          "**/obj/**",
-          "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**",
-          "**/docfx.json",
-          "_repo.en-us/**"
-        ]
+          "**/_themes/**",
+          "**/obj/**"
+        ],
+        "dest": "defender-for-cloud"
       }
     ],
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/defender-for-cloud/breadcrumb/toc.json",
-      "feedback_system": "Standard",
+      "contributors_to_exclude": [
+        "alexbuckgit",
+        "American-Dipper",
+        "AnnaMHuff",
+        "cdpark",
+        "Court72",
+        "damabe",
+        "denrea",
+        "dksimpson",
+        "garycentric",
+        "GitHubber17",
+        "Jak-MS",
+        "JamesJBarnett",
+        "JasonWHowell",
+        "JillGrant615",
+        "JKirsch1",
+        "Jmart1428",
+        "JustPies",
+        "ktoliver",
+        "LizCasey1",
+        "MeeraDi",
+        "meganbradley",
+        "mohitp930",
+        "mSarts",
+        "ms-robkni",
+        "openpublishingbuild",
+        "paulth1",
+        "PMEds28",
+        "PRmerger",
+        "PRMerger17",
+        "PRMerger-2",
+        "PRMerger3",
+        "PRMerger4",
+        "PRMerger5",
+        "PRMerger9",
+        "rjagiewich",
+        "rmca14",
+        "Saisang",
+        "sdwheeler",
+        "ShannonLeavitt",
+        "ShawnJackson",
+        "ShawnKupfer",
+        "tfosmark",
+        "TimShererWithAquent",
+        "ttorble",
+        "tysonn",
+        "v-albemi",
+        "v-ccolin",
+        "v-dirichards",
+        "v-emilypr",
+        "v-lmcdonald",
+        "v-regandowner",
+        "v-savila",
+        "v-shils",
+        "v-stsavell",
+        "v-thepet",
+        "v-thpra"
+      ],
+      "breadcrumb_path": "/azure/breadcrumb/defender-for-cloud/toc.json",
+      "brand": "azure",
+      "feedback_github_repo": "MicrosoftDocs/defender-docs",
+      "feedback_help_link_url": "https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/bd-p/MicrosoftDefenderCloud",
+      "feedback_help_link_type": "ask-the-community",
       "permissioned-type": "public",
-      "feedback_product_url": "https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance",
+      "feedback_product_url": "https://feedback.azure.com/d365community/forum/0f853254-0425-ec11-b6e6-000d3a4f07b8",
       "uhfHeaderId": "MSDocsHeader-MicrosoftDefender",
-      "titleSuffix": "Microsoft Defender for Cloud",
       "searchScope": [
         "Microsoft Defender for Cloud"
       ],
-      "contributors_to_exclude": [
-        "dstrome",
-        "shdyas",
-        "rjagiewich",
-        "American-Dipper",
-        "claydetels19",
-        "jborsecnik",
-        "v-stchambers",
-        "Stacyrch140",
-        "garycentric",
-        "alekyaj",
-        "beccarobins"
-      ]
+      "zone_pivot_group_filename": "defender-for-cloud/zone-pivots/zone-pivot-groups.yml",
+      "adobe-target": true,
+      "author": "elazark",
+      "ms.author": "elkrieger",
+      "manager": "orspodek",
+      "ms.service": "defender-for-cloud",
+      "titleSuffix": "Microsoft Defender for Cloud"
     },
     "fileMetadata": {},
     "template": [],

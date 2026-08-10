@@ -1,20 +1,17 @@
 ---
 title: Microsoft Defender portal overview
 description: Learn about the Microsoft services and features available in the Microsoft Defender portal.
-search.appverid: met150
-ms.service: unified-secops-platform
-ms.author: cwatson
-author: cwatson-cat
-ms.localizationpriority: medium
+author: guywi-ms
+ms.author: guywild
 ms.date: 11/14/2024
-audience: ITPro
 ms.collection:
 - M365-security-compliance
 - tier1
 - usx-security
 ms.topic: concept-article
+ms.custom: sfi-image-nochange
 
-# customer intent: As a security operations center leader, I want to learn about the services and features available in the Defender portal to help me determine whether Microsoft's unified SecOps platform meets my organization's requirements.
+# customer intent: As a security operations center leader, I want to learn about the services and features available in the Defender portal to help me determine whether they meet my organization's requirements.
 ---
 
 # Microsoft Defender portal
@@ -36,7 +33,7 @@ Service | Details
 --- | ---
 **Microsoft Defender XDR**<br/><br/> Detect and respond to cybersecurity threats. | [Defender XDR includes a suite of services](/defender-xdr/microsoft-365-defender) that come together in the Defender portal to provide unified threat protection across the enterprise.<br/><br/> Defender XDR services collect, correlate, and analyze threat data and signals across endpoints and devices, identities, email, apps, and OT/IoT assets. In the portal you can review, investigate, and respond to security alerts and incidents, automatically disrupt attacks, and proactively hunt for threats.<br/><br/>[Learn more](defender-xdr-portal.md) about Defender XDR in the Defender portal.
 **Microsoft Sentinel**<br/><br/> Collect, analyze, and manage security data at scale using automation and orchestration.| Microsoft Sentinel fully integrates with Defender XDR in the Defender portal, providing additional threat protection capabilities such as attack disruption, unified entities and incidents, and SOC optimization.<br/><br/> For more information, see [Microsoft Sentinel in the Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal).
-**Microsoft Defender Threat Intelligence**<br/><br/> Integrate threat intelligence into SOC operations. | The [Defender Threat Intelligence](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti) platform extends the threat intelligence capabilities that are included in Defender XDR and Microsoft Sentinel.<br/><br/> Gather data from multiple sources to provide a pool of threat intelligence signals and data. Security teams use this data to understand adversary activities, analyze attacks, and hunt for security threats.  
+**Microsoft Threat Intelligence**<br/><br/> Integrate threat intelligence into SOC operations. | Microsoft Threat Intelligence capabilities in Microsoft Defender XDR and Microsoft Sentinel aggregate and enrich threat data from multiple sources. Security teams use this data to understand adversary activity, analyze attacks, investigate indicators of compromise, and hunt for threats.<br/><br/>For more information, see [Microsoft Threat Intelligence in Microsoft Defender XDR](/defender-xdr/defender-threat-intelligence).  
 **Microsoft Security Exposure Management**<br/><br/> Proactively reduce security risk.| Use [Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management) to reduce organizational attack surfaces and remediate security posture.<br/><br/> Continuously discover assets and data to get a comprehensive view of security across business assets. With the additional data context that Security Exposure Management provides, you can clearly visualize, analyze, and remediate weak areas of security.
 **Microsoft Defender for Cloud**<br/><br/> Protect cloud workloads. | [Defender for Cloud](/defender-xdr/microsoft-365-security-center-defender-cloud) improves multicloud security posture, and protects cloud workloads against threats.<br/><br/> Defender for Cloud integrates into the Defender portal to provide a unified view of cloud security alerts, and a single location for investigations.
 
@@ -46,13 +43,13 @@ In the Defender portal **Permissions** page, use the following methods to config
 
 Methods | Details
 --- | ---
-[Global Microsoft Entra roles](/defender-xdr/m365d-permissions) | Accounts with the following Global Microsoft Entra roles can access Microsoft Defender XDR functionality and data: <ul><li>Global administrator</li><li>Security administrator</li><li>Security Operator</li><li>Global Reader</li><li>Security Reader</li>
+[Global Microsoft Entra roles](/defender-xdr/m365d-permissions) | Accounts with the following Global Microsoft Entra roles can access Microsoft Defender XDR functionality and data: <ul><li>Security administrator or higher</li><li>Security Operator</li><li>Global Reader</li><li>Security Reader</li>
 [Custom roles](/defender-xdr/custom-roles) | Allow access to specific data, tasks, and features using custom roles. Custom roles control granular access, and can be used together with Microsoft Entra global roles.
 [Unified RBAC](/defender-xdr/manage-rbac) | Unified role-based access control (RBAC) provides a permissions management model for controlling user permissions in the Defender portal, and across services within the portal.
 
 ### Microsoft Sentinel permissions
 
-When you're onboarded to Microsoft's unified SecOps platform, existing Azure RBAC permissions are used to work with Microsoft Sentinel features in the Defender portal.
+When you're onboarded to the Microsoft Defender portal, existing Azure RBAC permissions are used to work with Microsoft Sentinel features in the Defender portal.
 
 - Manage roles and permissions for Microsoft Sentinel users in the Azure portal.
 - Any Azure RBAC changes are reflected in the Defender portal.
@@ -198,7 +195,7 @@ In the **Identities** section of the Defender portal, monitor user and account h
 
 Feature | Details
 --- | ---
-**ITDR dashboard** | On the [Identity threat detection and response (ITDR) dashboard](/defender-for-identity/dashboard), get insights and real-time data about the security state of users and accounts.<br/><br/> The dashboard includes information about Defender for Identity deployment, information about highly privileged identities, and information about identity-related incidents.<br/><br/> If there's a problem with a Defender for Identity workspace, it's raised on the [Health issues page](/defender-for-identity/health-alerts).
+**Identity Security dashboard** | On the [Identity Security dashboard](/defender-for-identity/dashboard), get insights and real-time data about the security state of users and accounts.<br/><br/> The dashboard includes information about Defender for Identity deployment, information about highly privileged identities, and information about identity-related incidents.<br/><br/> If there's a problem with a Defender for Identity workspace, it's raised on the [Health issues page](/defender-for-identity/health-alerts).
 **Health issues** | Any Defender for Identity global or sensor-based health issues are displayed on this page.
 **Tools** | Access common tools to help you manage Defender for Identity.
 
@@ -221,8 +218,6 @@ For more information, see [Microsoft Defender Vulnerability Management](/defende
 ## Email and collaboration
 
 In the **Email & collaboration** section, monitor, investigate, and manage security threats and responses to email and collaboration apps with Microsoft Defender for Office 365.
-
-<!--can we get a better screenshot here?-->
 
 :::image type="content" source="./media/overview-defender-portal/email-investigations.png" alt-text="Screenshot of the Email Investigations page in the Microsoft Defender portal" lightbox="./media/overview-defender-portal/email-investigations.png":::
 

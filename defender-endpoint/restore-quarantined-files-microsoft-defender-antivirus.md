@@ -3,62 +3,92 @@ title: Restore quarantined files in Microsoft Defender Antivirus
 description: You can restore quarantined files and folders in Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: emmwalshh
-ms.author: ewalsh
-ms.custom: nextgen
-ms.date: 08/28/2023
-ms.reviewer: pahuijbr
-manager: deniseb
+author: chrisda
+ms.author: chrisda
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
+ms.reviewer: yongrhee, pahuijbr
 ms.subservice: ngp
-ms.topic: conceptual
-ms.collection: 
+ms.topic: how-to
+ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
+
+ai-usage: ai-assisted
 ---
 
 # Restore quarantined files in Microsoft Defender Antivirus
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+Depending on how Microsoft Defender Antivirus is configured, it quarantines suspicious files. If you're certain a quarantined file isn't a threat, you can restore it on your Windows device. This article describes how to restore quarantined files by using the Windows Security app, the MpCmdRun command-line utility, or the Microsoft Defender for Endpoint portal.
 
+## Prerequisites
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
+Before you restore quarantined files, verify that your environment meets the following requirements.
 
-**Platforms**
+### Supported operating systems
+
+The following operating systems support restoring quarantined files:
+
 - Windows
 
-Depending on how Microsoft Defender Antivirus is configured, it quarantines suspicious files. If you're certain a quarantined file isn't a threat, you can restore it on your Windows device.
+<a name="using-the-windows-security-app"></a>
+## Restore quarantined files using the Windows Security app
+
+To restore a quarantined file by using the Windows Security app, perform the following steps:
 
 1. On your Windows device, open **Windows Security**.
 
-2. Select **Virus & threat protection** and then, under **Current threats**, select **Protection history**.
+1. Select **Virus & threat protection** and then, under **Current threats**, select **Protection history**.
 
-3. If you have a list of items, you can filter on **Quarantined Items**.
+1. If you have a list of items, you can filter on **Quarantined Items**.
 
-4. Select an item you want to keep, and choose an action, such as **Restore**.
+1. Select an item you want to keep, and choose an action, such as **Restore**.
 
-> [!TIP]
-> You can also restore a file from quarantine by using Command Prompt. See [Restore file from quarantine](respond-file-alerts.md#restore-file-from-quarantine). 
+<a name="using-the-mpcmdrun-command-line"></a>
+## Restore quarantined files using MpCmdRun
 
+Use the following steps to restore quarantined files from the command line using the MpCmdRun utility:
 
-## See also
+1. **Show all quarantined files**:
+
+   In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
+
+   > [!TIP]
+   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, the command changes the directory to `%ProgramFiles%\Windows Defender`.
+
+   ```dos
+   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+
+   MpCmdRun.exe -Restore -ListAll
+   ```
+
+2. **Restore a quarantined file**: After identifying the quarantined item from the list, you can restore a specific file by name. Replace \<filename\> with the name of the quarantined file you want to restore (as shown in the previous command's output), and then run the following command:
+
+   ```dos
+   MpCmdRun.exe -Restore -Name <filename>
+   ```
+
+For more information about MpCmdRun, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
+
+## Download or collect the file
+
+In the Microsoft Defender for Endpoint portal, you can download or collect a quarantined file from a device's file page. Selecting **Download file** from the response actions allows you to download a local, password-protected .zip archive containing your file. A flyout appears where you can record a reason for downloading the file, and set a password. By default, you should be able to download quarantined files using this response action.
+
+The **Download file** button can have the following states:
+
+- **Active** - You're able to collect the file.
+- **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate permissions to collect files.
+
+For more information, see [Download or collect file](respond-file-alerts.md#download-or-collect-file).
+
+<a name="see-also"></a>
+## Related content
 
 - [Configure remediation for scans](configure-remediation-microsoft-defender-antivirus.md)
 - [Review scan results](review-scan-results-microsoft-defender-antivirus.md)
-
-> [!TIP]
-> If you're looking for Antivirus related information for other platforms, see:
-> - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
-> - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
-> - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
-> - [Configure Defender for Endpoint on Android features](android-configure.md)
-> - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-
+- [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)

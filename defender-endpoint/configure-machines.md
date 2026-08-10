@@ -2,31 +2,25 @@
 title: Ensure your devices are configured properly
 description: Properly configure devices to boost overall resilience against threats and enhance your capability to detect and respond to attacks.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
+ms.custom:
+  - admindeeplinkDEFENDER
+  - sfi-ga-nochange
+ms.topic: install-set-up-deploy
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 08/29/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Ensure your devices are configured properly
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-onboardconfigure-abovefoldlink)
 
 With properly configured devices, you can boost overall resilience against threats and enhance your capability to detect and respond to attacks. Security configuration management helps ensure that your devices:
 
@@ -40,7 +34,7 @@ In the [Microsoft Defender portal](https://security.microsoft.com), go to **Endp
 
 *The device configuration management page*
 
-You can track configuration status at an organizational level and quickly take action in response to poor onboarding coverage, compliance issues, and poorly optimized attack surface mitigations through direct, deep links to device management pages on Microsoft Intune and <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>.
+You can track configuration status at an organizational level and quickly take action in response to poor onboarding coverage, compliance issues, and poorly optimized attack surface mitigations through direct, deep links to device management pages on Microsoft Intune and [Microsoft Defender portal](https://security.microsoft.com).
 
 In doing so, you benefit from:
 
@@ -53,13 +47,13 @@ In doing so, you benefit from:
 
 Device configuration management works closely with Intune device management to establish the inventory of the devices in your organization and the baseline security configuration. You will be able to track and manage configuration issues on Intune-managed Windows devices.
 
-Before you can ensure your devices are configured properly, enroll them to Intune management. Intune enrollment is robust and has several enrollment options for Windows devices. For more information about Intune enrollment options, read about [setting up enrollment for Windows devices](/mem/intune/enrollment/windows-enroll).
+Before you can ensure your devices are configured properly, enroll them to Intune management. Intune enrollment is robust and has several enrollment options for Windows devices. For more information about Intune enrollment options, read about [setting up enrollment for Windows devices](/intune/intune-service/enrollment/windows-enroll).
 
 > [!NOTE]
-> To enroll Windows devices to Intune, administrators must have already been assigned licenses. [Read about assigning licenses for device enrollment](/mem/intune/fundamentals/licenses-assign).
+> To enroll Windows devices to Intune, administrators must have already been assigned licenses. [Read about assigning licenses for device enrollment](/intune/intune-service/fundamentals/licenses-assign).
 
 > [!TIP]
-> To optimize device management through Intune, [connect Intune to Defender for Endpoint](/mem/intune/protect/advanced-threat-protection-configure#connect-microsoft-defender-for-endpoint-to-intune).
+> To optimize device management through Intune, [connect Intune to Defender for Endpoint](/intune/intune-service/protect/advanced-threat-protection-configure#connect-microsoft-defender-for-endpoint-to-intune).
 
 ## Obtain required permissions
 
@@ -80,7 +74,7 @@ If you have been assigned other roles, ensure you have the necessary permissions
 *Device configuration permissions on Intune*
 
 > [!TIP]
-> To learn more about assigning permissions on Intune, [read about creating custom roles](/mem/intune/fundamentals/create-custom-role#to-create-a-custom-role).
+> To learn more about assigning permissions on Intune, [read about creating custom roles](/intune/intune-service/fundamentals/create-custom-role#to-create-a-custom-role).
 
 ## More information
 
@@ -88,6 +82,4 @@ If you have been assigned other roles, ensure you have the necessary permissions
 |:---|:---
 |[Get devices onboarded to Defender for Endpoint](configure-machines-onboarding.md)|Track onboarding status of Intune-managed devices and onboard more devices through Intune. |
 |[Increase compliance to the Defender for Endpoint security baseline](configure-machines-security-baseline.md)|Track baseline compliance and noncompliance. Deploy the security baseline to more Intune-managed devices. |
-| [Optimize ASR rule deployment and detections](configure-machines-asr.md)|Review rule deployment and tweak detections using impact analysis tools in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>. |
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+|[Monitor ASR rule activity](attack-surface-reduction-rules-monitor.md)|Monitor ASR rule events using advanced hunting and the ASR rules report in the [Microsoft Defender portal](https://security.microsoft.com).|

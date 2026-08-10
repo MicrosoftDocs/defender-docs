@@ -3,36 +3,27 @@ title: View and organize the Incidents queue
 ms.reviewer: 
 description: See the list of incidents and learn how to apply filters to limit the list and get a more focused view.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-edr
-ms.topic: conceptual
+ms.topic: article
 ms.subservice: edr
-search.appverid: met150
 ms.date: 01/06/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # View and organize the Microsoft Defender for Endpoint Incidents queue
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink)
 
 The **Incidents queue** shows a collection of incidents that were flagged from devices in your network. It helps you sort through incidents to prioritize and create an informed cybersecurity response decision.
 
-By default, the queue displays incidents seen in the last six months, with the most recent incident showing at the top of the list, helping you see the most recent incidents first.
+By default, the queue displays incidents seen in the last week, with the most recent incident showing at the top of the list, helping you see the most recent incidents first.
 
 There are several options you can choose from to customize the Incidents queue view. 
 
@@ -95,4 +86,5 @@ For example: *Multi-stage incident on multiple endpoints reported by multiple so
 - [Manage incidents](manage-incidents.md)
 - [Investigate incidents](investigate-incidents.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

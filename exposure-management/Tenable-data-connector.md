@@ -1,11 +1,9 @@
 ---
-title: Integrate Tenable data connector in Microsoft Security Exposure Management
+title: Tenable data connector in Microsoft Security Exposure Management
 description: Learn how to the Tenable data connector in Microsoft Security Exposure Management.
+ms.topic: overview
 ms.author: dlanger
 author: dlanger
-manager: rayne-wiselman
-ms.topic: overview
-ms.service: exposure-management
 ms.date: 09/24/2024
 ---
 
@@ -44,8 +42,6 @@ To establish a connection with Tenable in Exposure Management, follow these step
 
 Exposure Management retrieves data on compute devices from Tenable, including machines and virtual machines. It also retrieves some networking data to identify those devices.
 
-Only devices that were modified in the last 90 days are retrieved, based on assessing the "updated_at" field in the Tenable asset.
-
 Exposure Management also retrieves vulnerability findings from Tenable on those assets.
 
 The vulnerability data retrieved for Tenable is applicable to CVEs only, and not other types of vulnerabilities or misconfigurations. Tenable shows total vulnerability counts that include other non-CVE misconfigurations as well, so these counts aren't applicable to the numbers of vulnerabilities ingested to Exposure Management.
@@ -77,4 +73,14 @@ Here are some common issues that might arise when configuring the Tenable Connec
 
 ## Next steps
 
-[Getting value from your data connectors](value-data-connectors.md).
+After configuring the Tenable data connector:
+
+- [Review your attack surface map](enterprise-exposure-map.md) to see Tenable data
+- [Explore security recommendations](security-recommendations.md)
+- [Set up security initiatives](initiatives.md) to track remediation progress
+
+## Related articles
+
+- [Data connectors overview](overview-data-connectors.md)
+- [Configure data connectors](configure-data-connectors.md)
+- [Getting value from your data connectors](value-data-connectors.md)

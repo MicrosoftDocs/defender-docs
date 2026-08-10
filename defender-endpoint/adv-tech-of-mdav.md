@@ -1,30 +1,23 @@
 ---
 title: Advanced technologies at the core of Microsoft Defender Antivirus
 description: Microsoft Defender Antivirus engines and advanced technologies
-author: emmwalshh
-ms.author: ewalsh
+author: chrisda
+ms.author: chrisda
 ms.reviewer: yongrhee
-manager: deniseb
 ms.service: defender-endpoint
 ms.topic: overview
 ms.date: 01/24/2025
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.custom: partner-contribution
-f1.keyboards: NOSCH
-audience: ITPro
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
 ---
-
 # Advanced technologies at the core of Microsoft Defender Antivirus
 
-**Applies to:**
-
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 
 Microsoft Defender Antivirus and the multiple engines that lead to the advanced detection and prevention technologies under the hood to detect and stop a wide range of threats and attacker techniques at multiple points, as depicted in the following diagram:
 
@@ -59,7 +52,7 @@ For more information, see [Microsoft 365 Defender demonstrates 100 percent prote
 
 ## How next-generation protection works with other Defender for Endpoint capabilities
 
-Together with [attack surface reduction](overview-attack-surface-reduction.md), which includes advanced capabilities like hardware-based isolation, application control, exploit protection, network protection, controlled folder access, attack surface reduction rules, and network firewall, [next-generation protection](microsoft-defender-antivirus-windows.md) engines deliver Microsoft Defender for Endpoint's prebreach capabilities, stopping attacks before they can infiltrate devices and compromise networks.
+Together with [attack surface reduction](attack-surface-reduction-overview.md), which includes advanced capabilities like hardware-based isolation, application control, exploit protection, network protection, controlled folder access, [attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md), and network firewall, [next-generation protection](microsoft-defender-antivirus-windows.md) engines deliver Microsoft Defender for Endpoint's prebreach capabilities, stopping attacks before they can infiltrate devices and compromise networks.
 
 As part of Microsoft's defense-in-depth solution, the superior performance of these engines accrues to the [Microsoft Defender for Endpoint](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-endpoint) unified endpoint protection, where antivirus detections and other next-generation protection capabilities enrich endpoint detection and response, automated investigation and remediation, advanced hunting, threat and vulnerability management, managed threat hunting service, and other capabilities.
 
@@ -76,13 +69,13 @@ Microsoft Defender Antivirus (MDAV) provides memory protection with different en
 |Emulation|Detonation-based Machine Learning|
 |Memory scanning|N/A|
 
-An additional layer to help prevent memory-based attacks is to use the Attack Surface Reduction (ASR) rule – **Block Office applications from injecting code into other processes**. For more information see, [Block Office applications from injecting code into other processes](attack-surface-reduction-rules-reference.md#block-office-applications-from-injecting-code-into-other-processes).
+An additional layer to help prevent memory-based attacks is to use the ASR rule [Block Office applications from injecting code into other processes](attack-surface-reduction-rules-reference.md#block-office-applications-from-injecting-code-into-other-processes).
 
 ## Frequently asked questions
 
 ### How many malware threats does Microsoft Defender Antivirus block per month?
 
-[Five billion threats on devices every month](https://www.microsoft.com/en-us/security/blog/2019/05/14/executing-vision-microsoft-threat-protection/).
+[Five billion threats on devices every month](https://www.microsoft.com/security/blog/2019/05/14/executing-vision-microsoft-threat-protection/).
 
 ### How does Microsoft Defender Antivirus memory protection help?
 
@@ -101,3 +94,4 @@ We focus on every industry.
 When you're pen-testing, you should demand where no human analysts are engaged on detect/protect, to see how the actual antivirus engine (prebreach) efficacy truly is, and a separate one where human analysts are engaged. You can add [Microsoft Defender Experts for XDR](/defender-xdr/dex-xdr-overview) a managed extended detection and response service to augment your SOC.
 
 The ***continuous iterative enhancement*** each of these engines to be increasingly effective at catching the latest strains of malware and attack methods. These enhancements show up in consistent [top scores in industry tests](/defender-xdr/top-scoring-industry-tests), but more importantly, translate to [threats and malware outbreaks](https://www.microsoft.com/security/blog/2018/03/07/behavior-monitoring-combined-with-machine-learning-spoils-a-massive-dofoil-coin-mining-campaign/) stopped and [more customers protected](https://www.microsoft.com/security/blog/2018/03/22/why-windows-defender-antivirus-is-the-most-deployed-in-the-enterprise/).
+

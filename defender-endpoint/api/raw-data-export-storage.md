@@ -2,35 +2,31 @@
 title: Stream Microsoft Defender for Endpoint events to your Storage account
 description: Learn how to configure Microsoft Defender for Endpoint to stream Advanced Hunting events to your Storage account.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
-ms.custom: api
-search.appverid: met150
+ms.custom:
+  - api
+  - sfi-ga-nochange
+  - sfi-image-nochange
 ms.date: 06/28/2024
+appliesto:
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Endpoint Plan 1
 ---
 
 # Configure Microsoft Defender for Endpoint to stream Advanced Hunting events to your Storage account
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
-
 > [!NOTE]
 > For the full data streaming experience available, please visit [Stream Microsoft Defender XDR events | Microsoft Learn](/defender-xdr/streaming-api).
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configuresiem-abovefoldlink)
 
 ## Before you begin
 
@@ -63,7 +59,7 @@ ms.date: 06/28/2024
 
 - A blob container is created for each event type:
 
-  :::image type="content" source="../media/storage-account-event-schema.png" alt-text="The Event Hubs with resource ID2" lightbox="../media/storage-account-event-schema.png":::
+  :::image type="content" source="/defender-xdr/media/streaming-api-storage/storage-account-event-schema.png" alt-text="The Event Hubs with resource ID2" lightbox="/defender-xdr/media/streaming-api-storage/storage-account-event-schema.png":::
 
 - The schema of each row in a blob is the following JSON:
 
@@ -84,7 +80,7 @@ ms.date: 06/28/2024
 
 - In Advanced Hunting, the **DeviceInfo** table has a column named **MachineGroup** which contains the group of the device. Here, every event is decorated with this column as well. For more information, see [Device Groups](../machine-groups.md).
     > [!NOTE]
-    > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
+    > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
 ## Data types mapping
 

@@ -1,66 +1,61 @@
 ---
-title: Manage indicators
+title: Manage indicators in Microsoft Defender for Endpoint
 ms.reviewer:
-description: Manage indicators for a file hash, IP address, URLs, or domains that define the detection, prevention, and exclusion of entities.
+description: Edit, delete, or import file hash, IP address, URL/domain, and certificate indicators in Microsoft Defender for Endpoint from the Settings > Endpoints > Indicators page.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: asr
-search.appverid: met150
-ms.date: 10/28/2024
+ms.date: 07/03/2026
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
+# Manage indicators in Microsoft Defender for Endpoint
 
-# Manage indicators
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-automationexclusionlist-abovefoldlink)
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
 
-2. Select the tab of the entity type you'd like to manage.
+1. Select the tab for the indicator type you want to manage, such as **File hashes**, **IP addresses**, **URLs/domains**, or **Certificates**.
 
-3. Update the details of the indicator and select **Save** or select the **Delete** button if you'd like to remove the entity from the list.
+1. Update the indicator details, and then select **Save**. To remove the indicator from the list, select **Delete**.
 
 ## Import a list of IoCs
 
-You can also choose to upload a CSV file that defines the attributes of indicators, the action to be taken, and other details.
+You can upload indicators from a CSV file that defines indicator attributes, actions, and other details.
 
-Download the sample CSV to know the supported column attributes.
+Download the sample indicators CSV file from the **Indicators** import page (under **Settings** > **Endpoints** > **Indicators**) to review the supported column attributes.
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
 
-2. Select the tab of the entity type you'd like to import indicators for.
+1. Select the tab of the entity type you'd like to import indicators for.
 
-3. Select **Import** \> **Choose file**.
+1. Select **Import** \> **Choose file**.
 
-4. Select **Import**. Repeat for all the files you'd like to import.
+1. Select **Import**. Repeat for all the files you'd like to import.
 
-5. Select **Done**.
+1. Select **Done**.
 
 > [!NOTE]
 > Only 500 indicators can be uploaded for each batch. 
-> Attempting to import indicators with specific categories requires the string to be written in Pascal case convention and only accepts the category list available at the portal.
+> Attempting to import indicators with specific categories requires the string to be written in Pascal case convention and only accepts the category list available in the Microsoft Defender portal.
 
 The following table shows the supported parameters.
 
 | Parameter|Type|Description |
 | ---| ---| --- |
 | indicatorType|Enum|Type of the indicator. Possible values are: `FileSha1`, `FileSha256`, `IpAddress`, `DomainName`, and `Url`. <br/> **Required** |
-| indicatorValue|String|Identity of the [Indicator](api/ti-indicator.md) entity. <br/> **Required** |
+| indicatorValue|String|Identity of the [Indicator API resource](api/ti-indicator.md) entity. <br/> **Required** |
 | action|Enum|The action that is taken if the indicator is discovered in the organization. Possible values are: `Allowed`, `Audit`, `BlockAndRemediate`, `Warn`, and `Block`. <br/> **Required** |
 | title|String|Indicator alert title.<br/> **Required** |
 | description|String| Description of the indicator.<br/> **Required** |
@@ -69,7 +64,7 @@ The following table shows the supported parameters.
 | recommendedActions|String|TI indicator alert recommended actions. <br/>**Optional** |
 | rbacGroups|String|Comma-separated list of RBAC groups the indicator would be applied to. <br/>**Optional** |
 | category|String|Category of the alert. Examples include: Execution and credential access. <br/>**Optional** |
-| mitretechniques|String|MITRE techniques code/id (comma separated). For more information, see [Enterprise tactics](https://attack.mitre.org/tactics/enterprise/). <br/> **Optional** <br/>It's recommended to add a value in category when a MITRE technique. |
+| mitretechniques|String|MITRE techniques code/id (comma separated). For more information, see [Enterprise tactics](https://attack.mitre.org/tactics/enterprise/). <br/> **Optional** <br/>It's recommended to provide a value in the category field when you specify a MITRE technique in the mitretechniques field. |
 | GenerateAlert|String|Whether the alert should be generated. Possible Values are: `True` or `False`. <br/>**Optional** |
 
 > [!NOTE]
@@ -86,6 +81,7 @@ Watch this video to learn how Microsoft Defender for Endpoint provides multiple 
 - [Create indicators for files](indicator-file.md)
 - [Create indicators for IPs and URLs/domains](indicator-ip-domain.md)
 - [Create indicators based on certificates](indicator-certificates.md)
-- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

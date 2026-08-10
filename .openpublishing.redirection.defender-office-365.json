@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "defender-office-365/step-by-step-guides/protect-your-c-suite-with-priority-account-protection.md",
+      "redirect_url": "/microsoft-365/admin/security-and-compliance/priority-accounts",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-office-365/zero-trust-continuous-access-evaluation-microsoft-365.md",
       "redirect_url": "/security/zero-trust/zero-trust-continuous-access-evaluation-microsoft-365",
       "redirect_document_id": false
@@ -41,6 +46,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "defender-office-365/attack-simulation-training-teams.md",
+      "redirect_url": "/defender-office-365/attack-simulation-training-get-started",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-office-365/zero-trust-identity-device-access-policies-teams.md",
       "redirect_url": "/security/zero-trust/zero-trust-identity-device-access-policies-teams",
       "redirect_document_id": false
@@ -48,6 +58,21 @@
     {
       "source_path": "defender-office-365/pilot-deploy-defender-office-365.md",
       "redirect_url": "/defender-xdr/pilot-deploy-defender-office-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-office-365/submissions-error-messages.md",
+      "redirect_url": "/defender-office-365/submissions-result-definitions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-office-365/step-by-step-guides/deploy-and-configure-the-report-message-add-in.md",
+      "redirect_url": "/defender-office-365/submissions-outlook-report-messages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-office-365/tenant-wide-setup-for-increased-security.md",
+      "redirect_url": "/security/zero-trust/zero-trust-identity-device-access-policies-overview",
       "redirect_document_id": false
     }
   ]

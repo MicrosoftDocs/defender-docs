@@ -1,25 +1,21 @@
 ---
-title: Threat hunting features across Microsoft's unified security operations platform
-description: Learn about threat hunting features across Microsoft's unified security operations (SecOps) platform.
-search.appverid: met150
-ms.service: unified-secops-platform
-ms.author: austinmc
-author: austinmccollum
-ms.localizationpriority: medium
+title: Threat hunting features across the Microsoft Defender portal
+description: Learn about threat hunting features across the Microsoft Defender portal
+author: mberdugo
+ms.author: monaberdugo
 ms.date: 11/23/2024
-audience: ITPro
 ms.collection:
 - M365-security-compliance
 - tier1
 - usx-security
-ms.topic: conceptual
+ms.topic: concept-article
 
-# customer intent: As a security operations center business decision maker, I want to learn about threat hunting tools available in Microsoft's unified SecOps platform so I can get visibility into, and disrupt attacks in real time across identities, endpoints, email, cloud apps, data in hybrid and multicloud environments.
+# customer intent: As a security operations center business decision maker, I want to learn about threat hunting tools available in the Microsoft Defender portal so I can get visibility into, and disrupt attacks in real time across identities, endpoints, email, cloud apps, data in hybrid and multicloud environments.
 ---
 
-# Hunting in Microsoft's unified SecOps platform
+# Hunting in the Microsoft Defender portal
 
-Hunting for security threats is a highly customizable activity that is most effective when accomplished across all stages of threat hunting: proactive, reactive, and post incident. Microsoft's unified security operations (SecOps) platform provides effective hunting tools for every stage of threat hunting. These tools are well fit for analysts who are just starting out in their career, or experienced threat hunters using advanced hunting methods. Threat hunters of all levels benefit from hunting tool features that allow them to share their techniques, queries, and findings with their team along the way.
+Hunting for security threats is a highly customizable activity that is most effective when accomplished across all stages of threat hunting: proactive, reactive, and post incident. The Defender portal provides effective hunting tools for every stage of threat hunting with unified security operations services. These tools are well fit for analysts who are just starting out in their career, or experienced threat hunters using advanced hunting methods. Threat hunters of all levels benefit from hunting tool features that allow them to share their techniques, queries, and findings with their team along the way.
 
 ## Hunting tools
 
@@ -35,7 +31,7 @@ Maximize the full extent of your team's hunting prowess with the following hunti
 
 | Hunting tool | Description |
 |---|---|
-|[**Advanced hunting**](/defender-xdr/advanced-hunting-microsoft-defender) | View and query data sources available within Microsoft's unified SecOps platform and share queries with your team. Use all your existing Microsoft Sentinel workspace content, including queries and functions. |
+|[**Advanced hunting**](/defender-xdr/advanced-hunting-microsoft-defender) | View and query data sources available from Defender portal services and share queries with your team. Use all your existing Microsoft Sentinel workspace content, including queries and functions. |
 |[**Microsoft Sentinel hunting**](/azure/sentinel/hunting) | Hunt for security threats across data sources. Use specialized search and query tools like **hunts**, **bookmarks** and **livestream**. |
 |[**Go hunt**](/defender-xdr/advanced-hunting-go-hunt) | Quickly pivot an investigation to entities found within an incident. |
 |[**Hunts**](/azure/sentinel/hunts) | An end-to-end, proactive threat hunting process with collaboration features. |
@@ -45,7 +41,7 @@ Maximize the full extent of your team's hunting prowess with the following hunti
 |[**MITRE ATT&CK map**](/azure/sentinel/mitre-coverage#use-the-mitre-attck-framework-in-analytics-rules-and-incidents) | When creating a new hunting query, select specific tactics and techniques to apply.|
 |[**Restore historical data**](/azure/sentinel/restore) | Restore data from archived logs to use in high performing queries. |
 |[**Search large data sets**](/azure/sentinel/search-jobs?tabs=defender-portal) | Search for specific events in logs up to seven years ago using KQL. |
-|[**Infrastructure chaining**](/defender/threat-intelligence/infrastructure-chaining) | Hunt for new connections between threat actors, group similar attack activity and substantiate assumptions.|
+| [**Threat analytics**](/defender-xdr/threat-analytics) | Track emerging threats and review Microsoft threat research and insights. |
 |[**Threat explorer**](/defender-office-365/threat-explorer-threat-hunting) | Hunt for specialized threats related to email. |
 
 ## Hunting stages
@@ -55,12 +51,12 @@ The following table describes how you can make the most of the Defender portal's
 | Hunting stage | Hunting tools |
 | --- | --- |
 | **Proactive** - Find the weak areas in your environment before threat actors do. Detect suspicious activity extra early. | - Regularly conduct end-to-end [hunts](/azure/sentinel/hunts) to proactively seek out undetected threats and malicious behaviors, validate hypotheses, and act on findings by creating new detections, incidents, or threat intelligence.<br><br> - Use the [MITRE ATT&CK map](/azure/sentinel/mitre-coverage#use-the-mitre-attck-framework-in-analytics-rules-and-incidents) to identify detection gaps, and then run predefined hunting queries for highlighted techniques.<br><br> - Insert new threat intelligence into proven queries to tune detections and confirm if a compromise is in process.<br><br> - Take proactive steps to build and test queries against data from new or updated sources.<br><br> - Use [advanced hunting](/defender-xdr/advanced-hunting-microsoft-defender) to find early-stage attacks or threats that don't have alerts. |
-| **Reactive** - Use hunting tools during an active investigation. | - Use [livestream](/azure/sentinel/livestream) to run specific queries at consistent intervals to actively monitor events.<br><br> - Quickly pivot on incidents with the [**Go hunt**](/defender-xdr/advanced-hunting-go-hunt) button to search broadly for suspicious entities found during an investigation.<br><br> - Hunt through threat intelligence to perform [infrastructure chaining](/defender/threat-intelligence/infrastructure-chaining).<br><br> - Use [Security Copilot in advanced hunting](/defender-xdr/advanced-hunting-security-copilot) to generate queries at machine speed and scale. |
+| **Reactive** - Use hunting tools during an active investigation. | - Use [livestream](/azure/sentinel/livestream) to run specific queries at consistent intervals to actively monitor events.<br><br> - Quickly pivot on incidents with the [**Go hunt**](/defender-xdr/advanced-hunting-go-hunt) button to search broadly for suspicious entities found during an investigation.<br><br> - Use [threat analytics](/defender-xdr/threat-analytics) to investigate emerging threats and assess their potential impact.<br><br> - Use [Security Copilot in advanced hunting](/defender-xdr/advanced-hunting-security-copilot) to generate queries at machine speed and scale. |
 | **Post incident** - Improve coverage and insights to prevent similar incidents from recurring. | - Turn successful hunting queries into new [analytics and detection rules](/azure/sentinel/threat-detection), or refine existing ones.<br><br> - [Restore historical data](/azure/sentinel/restore) and [search large datasets](/azure/sentinel/search-jobs?tabs=defender-portal) for specialized hunting as part of full incident investigations. |
 
 
 ## Related content
 
-- [Threat detection in Microsoft's unified SecOps platform](/unified-secops-platform/detect-threats-overview)
+- [Threat detection in the Microsoft Defender portal](/unified-secops-platform/detect-threats-overview)
 - [Security posture management and risk reduction](/unified-secops-platform/reduce-risk-overview)
 - [Service integration](/unified-secops-platform/overview-defender-portal)
