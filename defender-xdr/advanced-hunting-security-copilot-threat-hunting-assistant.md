@@ -16,7 +16,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender
 - Microsoft Defender XDR
@@ -34,7 +34,8 @@ Watch this video to get an overview of the Threat Hunting Assistant:
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=74ef2c98-5dc7-406b-9b30-25e158ced334]
 
-## Key capabilities
+<a name="key-capabilities"></a>
+## Key capabilities of the Threat Hunting Agent
 
 The Threat Hunting Assistant provides the following key capabilities:
 
@@ -50,9 +51,9 @@ The Threat Hunting Assistant provides the following key capabilities:
 
 - **Insight generation.** The agent surfaces additional contextual insights from related data sources to enrich your investigation, helping you discover connections and patterns that might otherwise be missed.
 
-- **Smart suggestions.** The agent provides dynamic follow-up questions and remediation actions recommendations, in the context of the investigation, to drive your hunting session forward. These suggestions are available for selection only after the response generation. They're not available for selection when you ask a new question.
+- **Smart suggestions.** The agent suggests follow-up questions and remediation actions based on your investigation. These suggestions appear only after a response is generated. These suggestions reset when you ask a new question.
 
-- **Integrated experience.** The agent's outputs are directly added to Advanced hunting components, with generated KQL placed in the editor and results displayed as usual. This gives users full access to all advanced hunting features during investigations, ensuring maximum flexibility.
+- **Integrated experience.** The agent's outputs are directly added to Advanced hunting components, with generated KQL placed in the editor and results displayed as usual. This integration gives users full access to all advanced hunting features during investigations, ensuring maximum flexibility.
 
 ## Try your first request
 To start using the Threat Hunting Assistant, follow these steps:
@@ -60,7 +61,7 @@ To start using the Threat Hunting Assistant, follow these steps:
 >[!NOTE]
 > Make sure that the Threat Hunting Assistant mode is active. [Get access to Security Copilot in advanced hunting](advanced-hunting-security-copilot.md#get-access)
 
-1. Open the **Advanced hunting** page from the navigation bar in Microsoft Defender portal. The Security Copilot side pane for advanced hunting appears at the right hand side.
+1. Open the **Advanced hunting** page from the navigation bar in the Microsoft Defender portal. The Copilot side pane appears on the right.
 
     :::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-pane-big.png" alt-text="Screenshot of the Copilot pane in advanced hunting." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-pane-big.png":::
 
@@ -77,8 +78,8 @@ To start using the Threat Hunting Assistant, follow these steps:
 The agent supports all types of hunting scenarios, including:
 - Investigating an alert or incident
 - Investigating a suspicious indicator of compromise (IOC)
-- Investigating the impact of an attack reviewed in a threat intelligence report
-- Proactively validating a security hypothesis
+- Reviewing the impact of an attack from a threat intelligence report
+- Testing a security hypothesis
 
 ## Understand the response
 When the Threat Hunting Assistant responds to your question, you get a comprehensive answer that includes:
