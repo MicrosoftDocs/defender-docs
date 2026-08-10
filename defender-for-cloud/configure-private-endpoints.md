@@ -2,7 +2,8 @@
 title: Configure private endpoints with Microsoft Security Private Link
 description: Configure private endpoints with Microsoft Security Private Link to securely connect your virtual network to Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 05/26/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to configure a private endpoint for Microsoft Defender for Cloud so that Defender traffic stays within my private network.
 
 ai-usage: ai-assisted
@@ -10,7 +11,7 @@ ai-usage: ai-assisted
 
 # Configure private endpoints with Microsoft Security Private Link
 
-Use a [private endpoint in Azure Private Link](/azure/private-link/private-endpoint-overview) with Microsoft Security Private Link. This setup connects workloads in your private network to Microsoft Defender for Cloud over [Azure Private Link](/azure/private-link/private-link-overview).
+Use a [private endpoint in Azure Private Link](/azure/private-link/private-endpoint-overview) with Microsoft Security Private Link. This private endpoint configuration connects workloads in your private network to Microsoft Defender for Cloud over [Azure Private Link](/azure/private-link/private-link-overview).
 
 > [!NOTE]
 > Microsoft Security Private Link isn't supported in sovereign cloud regions, such as Azure Government and Azure operated by 21Vianet.
@@ -19,17 +20,17 @@ Use a [private endpoint in Azure Private Link](/azure/private-link/private-endpo
 
 Before you begin, make sure that:
 
-- Defender for Cloud is enabled on your Azure subscription. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
+- Defender for Cloud is enabled on your Azure subscription. If you don't have an Azure subscription, create an [Azure free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
-- A [virtual network and subnet](/azure/virtual-network/quick-create-portal) where your workloads are deployed. This is where the private endpoint is created.
+- A virtual network and subnet where your workloads are deployed. If you need to create these networking resources first, see [Create a virtual network and subnet](/azure/virtual-network/quick-create-portal). The private endpoint is created in this subnet.
 
-- You reviewed the required [roles and permissions](concept-private-links.md#roles-and-permissions).
+- You reviewed the required [Security Private Link roles and permissions](concept-private-links.md#roles-and-permissions).
 
 ## Create a private endpoint using a Security Private Link resource (Azure portal)
 
 You can create a private endpoint while creating a Security Private Link resource in the Azure portal.
 
-If you already have a Security Private Link resource, [create a private endpoint for an existing Security Private Link resource](#create-a-private-endpoint-for-an-existing-security-private-link-resource-azure-portal).
+If you already have a Security Private Link resource, skip this procedure and follow the "Create a private endpoint for an existing Security Private Link resource (Azure portal)" section later on this page, which walks you through creating a private endpoint separately and connecting it to your existing resource.
 
 To create a private endpoint while creating a Security Private Link resource:
 
@@ -139,7 +140,7 @@ When the private endpoint is created, a connection request is sent to the Securi
 
 To validate private endpoint DNS resolution:
 
-From a workload connected to the virtual network, run:
+From a workload connected to the virtual network, run the following command to verify that the Microsoft Defender for Cloud API hostname resolves to a private IP address through DNS:
 
 ```bash
 nslookup api.cloud.defender.microsoft.com
