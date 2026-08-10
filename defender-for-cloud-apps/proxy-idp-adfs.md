@@ -1,9 +1,9 @@
 ---
 title: Deploy conditional access app control for any web app using AD FS
 description: This article provides information about how to deploy the Microsoft Defender for Cloud Apps conditional access app control for any web app using AD FS as the identity provider.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 # Deploy conditional access app control for any web app using Active Directory Federation Services (AD FS) as the identity provider (IdP)
@@ -16,12 +16,12 @@ For this article, we'll use the Salesforce app as an example of a web app being 
 
 ## Prerequisites
 
-- Your organization must have the following licenses to use conditional access app control:
+- Your organization must have the following for conditional access app control:
 
-  - A pre-configured AD FS environment
-  - Microsoft Defender for Cloud Apps
+  - A pre-configured Active Directory Federation Services (AD FS) environment
+  - A Microsoft Defender for Cloud Apps license
 
-- An existing AD FS single sign-on configuration for the app using the SAML 2.0 authentication protocol
+- An existing AD FS single sign-on setup for the app that uses SAML 2.0
 
 >[!NOTE]
 >The steps here apply to all versions of AD FS that run on supported version of Windows Server.
@@ -130,12 +130,12 @@ Use the AD FS values you collected to complete the identity provider configurati
 1. Back in the Defender for Cloud Apps **IDENTITY PROVIDER** page, click **Next** to proceed.
 
 1. On the **IDENTITY PROVIDER** details page, select **Fill in data manually**, do the following, and then click **Next**.
-    - For the **Single sign-on service URL**, enter the Salesforce **Login URL** you noted earlier.
+    - For the **Single sign-on service URL**, enter the AD FS **SingleSignOnService Location** you noted from the federation metadata file in Step 3.
     - Select **Upload identity provider's SAML certificate** and upload the certificate file you downloaded earlier.
 
     ![Screenshot of the Defender for Cloud Apps identity provider page with fields for the SSO service URL and SAML certificate.](media/proxy-idp-adfs/idp-adfs-cas-sf-app-idp-info.png)
 
-1. On the **EXTERNAL CONFIGURATION** page, make a note of the following information, and then click **Next**. You'll need this information when configuring the AD FS relying party trust and updating the app.
+1. On the **EXTERNAL CONFIGURATION** page, make a note of the following information, and then click **Next**. You'll need the single sign-on URL and the attributes and values when configuring the AD FS relying party trust and updating the app.
 
     - Defender for Cloud Apps single sign-on URL
     - Defender for Cloud Apps attributes and values
@@ -210,7 +210,7 @@ In Salesforce, browse to **Setup** > **Settings** > **Identity** > **Single Sign
 
 Complete the wizard to enable routing through conditional access app control.
 
-- Back in the Defender for Cloud Apps **APP CHANGES** page, click **Finish**. After completing the wizard, all associated login requests to this app will be routed through conditional access app control.
+- Back in the Defender for Cloud Apps **APP CHANGES** page, click **Finish**. After completing the wizard, all associated login requests to the configured app will be routed through conditional access app control.
 
 ## Related content
 

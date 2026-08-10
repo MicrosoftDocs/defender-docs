@@ -1,11 +1,11 @@
 ---
 title: Onboard non-Microsoft IdP custom apps for Conditional Access app control | Microsoft Defender for Cloud Apps
 description: Learn how to deploy Conditional Access app control with Microsoft Defender for Cloud Apps, for custom apps with a non-Microsoft IdP.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Onboard non-Microsoft IdP custom apps for Conditional Access app control
@@ -17,6 +17,8 @@ Access and session controls in Microsoft Defender for Cloud apps work with both 
 This section explains how to configure your IdP to work with Defender for Cloud Apps and how to manually onboard each custom app. In contrast, [catalog apps from a non-Microsoft IdP](proxy-deployment-featured-idp.md) are automatically onboarded when you configure the integration between your IdP and Defender for Cloud Apps.
 
 ## Prerequisites
+
+Before you begin, make sure your environment meets the following requirements:
 
 - Your organization must have the following licenses to use conditional access app control:
 
@@ -73,7 +75,7 @@ The following procedure describes how to route app sessions from other IdP solut
     > - Some identity providers do not allow you to change the SAML attributes or URL properties of a gallery / catalog app.
     > - When you configure a custom app, you can test the app with Defender for Cloud Apps access and session controls, without changing your organization's existing configured behavior.
 
-    Copy your app's single sign-on configuration information. You enter these values in your IdP configuration in a later step. When you're finished, select **Next** to continue.
+    Copy your app's single sign-on configuration information. You enter these values when configuring your IdP's custom app settings in step 8 of this procedure. When you're finished, select **Next** to continue.
 
 1. Continuing on the **IDENTITY PROVIDER** page of the wizard, either upload a metadata file from your IdP or enter app data manually.
 
@@ -82,7 +84,7 @@ The following procedure describes how to route app sessions from other IdP solut
     - The **Single sign-on service URL**. This is the URL that your IdP uses to receive single sign-on requests. 
     - A SAML certificate, if your IdP provides one. In such cases, select the **Use identity provider's SAML certificate** option, and then upload the certificate file.
 
-1. Continuing on the **IDENTITY PROVIDER** page of the wizard, copy both the single sign-on URL and all attributes and values to enter in your IdP's custom app settings in the next step.
+1. Continuing on the **IDENTITY PROVIDER** page of the wizard, copy both the single sign-on URL and all attributes and values to enter when configuring your IdP's custom app settings in step 8 of this procedure.
 
     When you're done, select **Next** to continue.
 
@@ -152,8 +154,11 @@ For more information, see [App doesn't appear on the conditional access app cont
 
 ## Related content
 
+For more information, see the following articles:
+
 - [Protect apps with Microsoft Defender for Cloud Apps Conditional Access app control](proxy-intro-aad.md)
 - [Deploy Conditional Access app control for catalog apps with non-Microsoft IdPs](proxy-deployment-featured-idp.md)
 - [Troubleshooting access and session controls](troubleshooting-proxy.md)
 
-[!INCLUDE [Open support ticket](includes/support.md)]
+> [!TIP]
+> [!INCLUDE [Open support ticket](includes/support.md)]
