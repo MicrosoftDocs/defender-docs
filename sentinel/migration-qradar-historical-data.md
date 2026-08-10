@@ -4,9 +4,9 @@ description: Export historical QRadar data for Microsoft Sentinel migration by u
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security engineer, I want to export historical data from QRadar using AQL queries and the QRadar REST API so that I can migrate it to a new platform for analysis and compliance purposes.
@@ -23,7 +23,7 @@ To export your QRadar data, you use the QRadar REST API to run Ariel Query Langu
 
 ## Create AQL query
 
-Perform the following steps to create or select an AQL query for export.
+To create or select an AQL query for export:
 
 1. In the QRadar Console, select the **Log Activity** tab. 
 1. Create a new AQL search query or select a saved search query to export the data. Ensure that the query includes the `START` and `STOP` functions to set the date and time range. 

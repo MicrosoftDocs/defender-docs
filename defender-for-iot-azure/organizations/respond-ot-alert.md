@@ -1,9 +1,10 @@
 ---
 title: Respond to an alert in the Azure portal - Microsoft Defender for IoT
 description: Learn about how to fully respond to OT network alerts in Microsoft Defender for IoT.
-ms.date: 12/05/2022
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
+ai-usage: ai-assisted
 ---
 
 # Investigate and respond to an OT network alert
@@ -18,7 +19,7 @@ Alternately, you might be an OT engineer watching for operational alerts directl
 
 Before you start, make sure that you have:
 
-- An Azure subscription. If you need to, [sign up for a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
+- An Azure subscription. If you need to, [create a free Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - A cloud-connected [OT network sensor](onboard-sensors.md) onboarded to Defender for IoT, with alerts streaming into the Azure portal.
 
@@ -43,14 +44,14 @@ For example:
 
 After updating the status, check the alert details page for the following details to aid in your investigation:
 
-- **Source and destination device details**. Source and destination devices are listed in **Alert details** tab, and also in the **Entities** area below, as Microsoft Sentinel *entities*, with their own [entity pages](iot-advanced-threat-monitoring.md#investigate-further-with-iot-device-entities). In the **Entities** area, you'll use the links in the **Name** column to open the relevant device details pages for [further investigation](#investigate-related-alerts-on-the-azure-portal).
+- **Source and destination device details**. Source and destination devices are listed in **Alert details** tab, and also in the **Entities** area below, as Microsoft Sentinel *entities*, with their own [entity pages](iot-advanced-threat-monitoring.md#investigate-further-with-iot-device-entities). In the **Entities** area, you'll use the links in the **Name** column to open the relevant device details pages to investigate related alerts, as described in the next section.
 
 - **Site and/or zone**. These values help you understand the geographic and network location of the alert and if there are areas of the network that are now more vulnerable to attack. 
 
 - **Sensor information**. Review the **Sensor**, **SiteDisplayName**, and other sensor information to provide context about the sensor that triggered the alert. 
 
     > [!NOTE] 
-    > In some cases, the alerts displayed in the alert list might not correlate with specific sensors. For more information, see [Investigate alerts that don't correlate with specific sensors](#investigate-alerts-that-dont-correlate-with-a-specific-sensor).
+    > In some cases, the alerts displayed in the Azure portal alert list might not correlate with specific sensors. For more information, see [Investigate alerts that don't correlate with specific sensors](#investigate-alerts-that-dont-correlate-with-a-specific-sensor).
 
 - **MITRE ATT&CK** tactics and techniques. Scroll down in the left pane to view all MITRE ATT&CK details. In addition to descriptions of the tactics and techniques, select the links to the MITRE ATT&CK site to learn more about each one.
 
@@ -102,13 +103,13 @@ On the sensor's alert details page:
 
 The timing for when you take remediation actions may depend on the severity of the alert. For example, for high severity alerts, you might want to take action even before investigating, such as if you need to immediately quarantine an area of your network.
 
-For lower severity alerts, or for operational alerts, you might want to fully investigate before taking action.
+For lower severity alerts, or for operational alerts, you might want to fully investigate before taking remediation steps.
 
 **To remediate an alert**, use the following Defender for IoT resources:
 
 - **On an alert details page** on either the Azure portal or the OT sensor, select the **Take action** tab to view details about recommended steps to mitigate the risk.
 
-- **On a device details page** in the Azure portal, for both the [source and destination devices](#investigate-an-alert-from-the-azure-portal):
+- **On a device details page** in the Azure portal, for both the source and destination devices listed on the alert:
 
     - Select the **Vulnerabilities** tab and check for detected vulnerabilities on each device.
 
@@ -133,7 +134,7 @@ Triage alerts on a regular basis to prevent alert fatigue in your network and en
 
 1. Check the alert details and investigate as needed before you take any alert action. When you're ready, take action on an alert details page for a specific alert, or on the **Alerts** page for bulk actions. 
 
-    For example, update alert status or severity, or [learn](how-to-manage-the-alert-event.md#learn-and-unlearn-alert-traffic) an alert to authorize the detected traffic. *Learned* alerts are not triggered again if the same exact traffic is detected again.
+    For example, update alert status or severity, or [learn and unlearn alert traffic](how-to-manage-the-alert-event.md#learn-and-unlearn-alert-traffic) to authorize the detected traffic. *Learned* alerts are not triggered again if the same exact traffic is detected again.
 
     :::image type="content" source="media/iot-solution/learn-alert.png" alt-text="Screenshot of a Learn button on the alert details page.":::
 

@@ -1,13 +1,14 @@
 ---
-title: Automate connector deployment
+title: Automate Microsoft Defender for Cloud connector deployment
 description: Automate cloud connector deployment for multicloud environments with Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 05/28/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a cloud security architect, I want to automate connector deployment so I can onboard multicloud environments consistently at scale.
 ai-usage: ai-assisted
 ---
 
-# Automate connector deployment
+# Automate Microsoft Defender for Cloud connector deployment
 
 This article is part of a series to guide you in designing a solution for cloud security posture management (CSPM) and cloud workload protection platform (CWPP) across multicloud resources with Microsoft Defender for Cloud.
 It explains how to create AWS and GCP connectors programmatically so you can standardize deployment workflows.

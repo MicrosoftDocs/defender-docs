@@ -4,15 +4,17 @@ description: Learn how to enable network security for Azure Storage connector re
 ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: krishsa
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ms.topic: how-to
 ms.service: microsoft-sentinel
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #customer intent: As a security engineer, I want to configure a Network Security Perimeter for storage accounts used in storage blob connectors
 ---
 
 # Enable Network Security for Azure Storage blob connectors
+
+## Overview
 
 This article provides step-by-step instructions on how to enable network security on the storage resources integrated with your Azure Storage connector. Azure network security perimeter (NSP) is an Azure-native feature that creates a logical isolation boundary for your PaaS resources. By associating resources like storage accounts or databases with an NSP, you can centrally manage network access using a simplified rule set. For more information, see [Network security perimeter concepts](/azure/private-link/network-security-perimeter-concepts).
 
@@ -82,7 +84,7 @@ To enable a system-assigned managed identity on the Event Grid system topic, per
 1. Select **Identity**.
 
 1. On the **System assigned** tab, set the **Status** to **On**.
-1. Select **Save**, then copy the **Object ID** of the managed identity. You need this Object ID when assigning the **Storage Queue Data Message Sender** role in the next section.
+1. Select **Save**, then copy the **Object ID** of the managed identity. You need this Object ID when granting RBAC permissions on the storage queue.
 
    :::image type="content" source="./media/enable-storage-network-security/create-system-assigned-identity.png" lightbox="./media/enable-storage-network-security/create-system-assigned-identity.png" alt-text="A screenshot showing the creation of a managed identity for an Event Grid System Topic in the Azure portal.":::
 
@@ -147,6 +149,7 @@ Event Grid delivery doesn't originate from fixed public IPs. The NSP validates d
 
 #### Rule 2: Allow Scuba service IP ranges
 
+Create an inbound rule that allows the Scuba service IP ranges required for this scenario.
 
 1. Create a second **Inbound access rules**.
 
@@ -207,7 +210,9 @@ Setting the storage account to **Secured by Perimeter** ensures that all traffic
 
 ## Next steps
 
-In this article, you learned how to enable network security on the storage resources integrated with your Azure Storage connector. For more information, see the [Network Security Perimeter](/azure/private-link/network-security-perimeter-concepts) articles.
+For more information about Network Security Perimeters, see [Network security perimeter concepts](/azure/private-link/network-security-perimeter-concepts).
+
+### Related content
 
 - Review data-connection rules in [Azure Storage data connection rules reference](data-connection-rules-reference-azure-storage.md).
 - Troubleshoot connector networking issues in [Troubleshoot the Azure Storage Blob connector](azure-storage-blob-connector-troubleshoot.md).

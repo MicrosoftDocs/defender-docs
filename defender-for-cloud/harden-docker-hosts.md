@@ -2,25 +2,31 @@
 title: Review Docker host hardening recommendations
 description: How to protect your Docker hosts and verify they're compliant with the CIS Docker benchmark with Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 05/28/2026
-ms.custom: sfi-image-nochange
+ms.date: 07/03/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
 ai-usage: ai-assisted
 ---
 # Review Docker host hardening recommendations
 
 The Defender for Servers plan in Microsoft Defender for Cloud identifies unmanaged containers hosted on IaaS Linux VMs, or other Linux machines running Docker containers. Defender for Servers continuously assesses the configuration of these Docker hosts, and compares them with the [Center for Internet Security (CIS) Docker Benchmark](https://www.cisecurity.org/benchmark/docker/).
 
+This article explains how to review Docker host hardening recommendations, identify configuration issues, and remediate findings in Defender for Cloud.
+
 - Defender for Cloud includes the entire ruleset of the CIS Docker Benchmark and alerts you if your containers don't satisfy any of the controls.
-- When it finds misconfigurations, Defender for Servers generates security recommendations to address findings.
+- When Defender for Servers finds misconfigurations, it generates security recommendations to address the findings.
 - When vulnerabilities are found, they're grouped inside a single recommendation.
 
 ## Prerequisites
+
+Before you review Docker host hardening recommendations, make sure the following prerequisites are met:
 
 - You need [Defender for Servers Plan 2](defender-for-servers-overview.md) to use this feature.
 - These CIS benchmark checks will not run on AKS-managed instances or Databricks-managed VMs.
 - You need Reader permissions on the workspace to which the host connects.
 
 ## Identify Docker configuration issues
+
+Use the following steps to find and remediate Docker host misconfigurations in Defender for Cloud.
 
 1. From Defender for Cloud's menu, open the **Recommendations** page.
 

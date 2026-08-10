@@ -4,8 +4,8 @@ description: Learn about advanced configurations available for Jupyter notebooks
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.custom: devx-track-python, msecd-doc-authoring-1014
-ms.date: 06/15/2026
+ms.custom: devx-track-python, msecd-doc-authoring-1016
+ms.date: 07/01/2026
 ai-usage: ai-assisted
 
 
@@ -15,17 +15,17 @@ ai-usage: ai-assisted
 
 # Advanced configurations for Jupyter notebooks and MSTICPy in Microsoft Sentinel
 
-This article describes advanced configurations for working with Jupyter notebooks and MSTICPy in Microsoft Sentinel.
+This article describes how to configure authentication parameters for Azure and Microsoft Sentinel APIs, define autoloading query providers and MSTICPy components, manage Python kernel versions, and set environment variables for your **msticpyconfig.yaml** configuration file when working with Jupyter notebooks and MSTICPy in Microsoft Sentinel.
 
 For more information, see [Use Jupyter notebooks to hunt for security threats](notebooks.md) and [Get started with Jupyter notebooks and MSTICPy in Microsoft Sentinel](notebook-get-started.md).
 
 ## Prerequisites
 
-This article is a continuation on from [Get started with Jupyter notebooks and MSTICPy in Microsoft Sentinel](notebook-get-started.md). We recommend that you perform the tutorial before continuing with the advanced procedures described in this article.
+This article covers advanced MSTICPy configuration tasks, including setting authentication parameters, defining autoloading query providers and components, switching Python kernels, and configuring environment variables for your **msticpyconfig.yaml** file. Before you begin, complete the steps in [Get started with Jupyter notebooks and MSTICPy in Microsoft Sentinel](notebook-get-started.md).
 
 ## Specify authentication parameters for Azure and Microsoft Sentinel APIs
 
-This procedure describes how to configure authentication parameters for Microsoft Sentinel and other Azure API resources in your **msticpyconfig.yaml** file.
+Configure authentication parameters for Microsoft Sentinel and other Azure API resources in your **msticpyconfig.yaml** file by using the following steps.
 
 **To add Azure authentication and Microsoft Sentinel API settings in the MSTICPy settings editor**:
 
@@ -48,7 +48,7 @@ This procedure describes how to configure authentication parameters for Microsof
 
 ## Define autoloading query providers
 
-Define any query providers that you want to MSTICPy to load automatically when you run the `nbinit.init_notebook` function.
+You can configure MSTICPy to automatically load specific query providers when you run the `nbinit.init_notebook` function.
 
 When you frequently author new notebooks, autoloading query providers can save you time by ensuring that required providers are loaded before other components, such as pivot functions and notebooklets.
 
@@ -85,7 +85,7 @@ When you frequently author new notebooks, autoloading query providers can save y
 
 ## Define autoloaded MSTICPy components
 
-This procedure describes how to define other components that are automatically loaded by MSTICPy when you run the `nbinit.init_notebook` function.
+You can define additional components that MSTICPy automatically loads when you run the `nbinit.init_notebook` function.
 
 Supported components include, in the following order:
 
@@ -96,7 +96,7 @@ Supported components include, in the following order:
 1. **Notebooklets:** Notebooklets from the [msticnb package](https://msticnb.readthedocs.io/en/latest/)
 1. **Pivot:** Pivot functions
 
-The components load in this order because the Pivot component needs query and other providers loaded to find the pivot functions that it attaches to entities. For more information, see [MSTICPy documentation](https://msticpy.readthedocs.io/en/latest/data_analysis/PivotFunctions.html). For more information, see the [**Getting Started Guide For Azure Sentinel ML Notebooks** notebook](notebook-get-started.md).
+The components load in the order listed because the Pivot component needs query and other providers loaded to find the pivot functions that it attaches to entities. For more information, see [MSTICPy documentation](https://msticpy.readthedocs.io/en/latest/data_analysis/PivotFunctions.html). For more information, see the [**Getting Started Guide For Azure Sentinel ML Notebooks** notebook](notebook-get-started.md).
 
 **To define auto-loaded MSTICPy components**:
 
@@ -138,7 +138,7 @@ The components load in this order because the Pivot component needs query and ot
 
 If you're switching between Python 3.65 and 3.8 kernels, you might find that MSTICPy and other packages don't get installed as expected.
 
-This might happen when the `!pip install pkg` command installs correctly in the first environment, but then doesn't install correctly in the second. This creates a situation where the second environment can't import or use the package.
+This installation issue might happen when the `!pip install pkg` command installs correctly in the first environment, but then doesn't install correctly in the second. The failed installation in the second environment means that environment can't import or use the package.
 
 We recommend that you don't use `!pip install...` to install packages in Azure Machine Learning notebooks. Instead, use one of the following options:
 
@@ -162,7 +162,7 @@ We recommend that you don't use `!pip install...` to install packages in Azure M
 
 ## Set an environment variable for your msticpyconfig.yaml file
 
-If you're running in Azure Machine Learning and have your **msticpyconfig.yaml** file in the root of your user folder, MSTICPy automatically finds these settings. However, if you're running the notebooks in another environment, follow the instructions in this section to set an environment variable that points to the location of your configuration file.
+If you're running in Azure Machine Learning and have your **msticpyconfig.yaml** file in the root of your user folder, MSTICPy automatically finds these settings. However, if you're running the notebooks in another environment, set an environment variable that points to the location of your configuration file by using the following steps.
 
 Defining the path to your **msticpyconfig.yaml** file in an environment variable allows you to store your file in a known location and make sure that you always load the same settings.
 
@@ -180,9 +180,9 @@ Use multiple configuration files, with multiple environment variables, if you wa
 
 1. Set the **MSTICPYCONFIG** environment variable to point to that location.
 
-Use the Windows System Properties procedure, the Linux .bashrc procedure, or an Azure Machine Learning option to define the **MSTICPYCONFIG** environment variable.
+Select one of the following tabs to define the **MSTICPYCONFIG** environment variable on [Windows](#tab/windows), [Linux](#tab/linux), or [Azure Machine Learning](#tab/azure-ml).
 
-# [Windows](#tab/windows)
+## [Windows](#tab/windows)
 
 For example, to set the **MSTICPYCONFIG** environment variable on Windows systems:
 
@@ -194,9 +194,9 @@ For example, to set the **MSTICPYCONFIG** environment variable on Windows system
     - **Variable name**: Define as `MSTICPYCONFIG`
     - **Variable value**: Enter the path to your **msticpyconfig.yaml** file
 
-# [Linux](#tab/linux)
+## [Linux](#tab/linux)
 
-This procedure describes how to update the **.bashrc** file to set the **MSTICPYCONFIG** environment variable on Linux systems.
+Update the **.bashrc** file to set the **MSTICPYCONFIG** environment variable on Linux systems by using the following steps.
 
 1. Move the **msticpyconfig.yaml** file to the Compute instance as needed.
 
@@ -206,7 +206,7 @@ This procedure describes how to update the **.bashrc** file to set the **MSTICPY
 
    In your Azure Machine Learning terminal, your current directory should be your Azure Machine Learning file store home directory, mounted in the Compute Linux system. The prompt looks similar to the following example:
 
-   ```python
+   ```bash
    azureuser@alicecontoso-azml7:~/cloudfiles/code/Users/alicecontoso$
    ```
 
@@ -214,7 +214,7 @@ This procedure describes how to update the **.bashrc** file to set the **MSTICPY
 
 1. To move the **msticpyconfig.yaml** file to the Compute file store, enter:
 
-   ```python
+   ```bash
    mv msticpyconfig.yaml ~
    ```
 
@@ -231,11 +231,11 @@ This procedure describes how to update the **.bashrc** file to set the **MSTICPY
     - If you moved the **msticpyconfig.yaml** file, run `export MSTICPYCONFIG=~/msticpyconfig.yaml`.
     - If you didn't move the **msticpyconfig.yaml** file, run `export MSTICPYCONFIG=~/cloudfiles/code/Users/<YOURNAME>/msticpyconfig.yaml`.
 
-# [Azure Machine Learning options](#tab/azure-ml)
+## [Azure Machine Learning options](#tab/azure-ml)
 
 If you need to store your **msticpyconfig.yaml**  file somewhere other than your Azure Machine Learning user folder, use either an **nbuser_settings.py** file or the **kernel.json** file:
 
-- **An *nbuser_settings.py* file at the root of your user folder**. While this process is simpler and less intrusive than editing the **kernel.json** file, it's only supported when you run the `init_notebook` function at the start of your notebook code. While this is the default behavior, if you run the notebook code without first running `init_notebook`, MSTICPy mmight not be able to find the configuration file.
+- **An *nbuser_settings.py* file at the root of your user folder**. While using an **nbuser_settings.py** file is simpler and less intrusive than editing the **kernel.json** file, it's only supported when you run the `init_notebook` function at the start of your notebook code. While this is the default behavior, if you run the notebook code without first running `init_notebook`, MSTICPy mmight not be able to find the configuration file.
 
     1. In the Azure Machine Learning terminal, create the **nbuser_settings.py** file in the root of your user folder, which is the folder with your username.
     1. In the **nbuser_settings.py** file, add the following lines:
@@ -245,9 +245,9 @@ If you need to store your **msticpyconfig.yaml**  file somewhere other than your
           os.environ["MSTICPYCONFIG"] = "~/msticpyconfig.yaml"
         ```
 
-    This file is automatically imported by the `init_notebook` function, and sets the `MSTICPYCONFIG` environment variable for the current notebook.
+    The **nbuser_settings.py** file is automatically imported by the `init_notebook` function, and sets the `MSTICPYCONFIG` environment variable for the current notebook.
 
-- **The *kernel.json* file for your Python kernel**. Use this procedure if you plan on running the notebook manually, and possibly without calling the `init_notebook` function at the start.
+- **The *kernel.json* file for your Python kernel**. Use the **kernel.json** option if you plan on running the notebook manually, and possibly without calling the `init_notebook` function at the start.
 
   There are kernels for Python 3.6 and Python 3.8. If you use both kernels, edit both files.
 
@@ -294,7 +294,7 @@ If you need to store your **msticpyconfig.yaml**  file somewhere other than your
 ---
 
 > [!NOTE]
-> For the Linux and Windows options, you need to restart your Jupyter server for it to pick up the environment variable that you defined.
+> For the Linux and Windows options, you need to restart your Jupyter server so that the server picks up the environment variable that you defined.
 
 ## Next steps
 

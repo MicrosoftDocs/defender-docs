@@ -1,8 +1,9 @@
 ---
 title: Enable Defender for Storage by Using Infrastructure as Code
-description: Learn how to enable and configure Microsoft Defender for Storage by using infrastructure as code (IaC) templates.
-ms.date: 06/17/2026
+description: Learn how to enable and configure Microsoft Defender for Storage by using infrastructure as code (IaC) templates, PowerShell, or Azure Policy.
+ms.date: 07/03/2026
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to enable and configure Microsoft Defender for Storage by using IaC templates so that I can help protect all storage accounts.
 ai-usage: ai-assisted
 ---
@@ -50,13 +51,13 @@ By customizing this code, you can:
 - **Turn off the on-upload malware scanning or sensitive-data threat detection feature**: Remove the corresponding extension block from the Terraform code.
 - **Disable the entire Defender for Storage plan**: Set the `tier` property value to `"Free"`, and remove the `subPlan` and `extension` properties.
 
-To learn more about the `azurerm_security_center_subscription_pricing` resource, refer to the [its Terraform documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_subscription_pricing). You can also find comprehensive details on the Terraform provider for Azure in the [Terraform AzureRM documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs).
+To learn more about the `azurerm_security_center_subscription_pricing` resource, refer to the [Terraform documentation for `azurerm_security_center_subscription_pricing`](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_subscription_pricing). You can also find comprehensive details on the Terraform provider for Azure in the [Terraform AzureRM documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs).
 
 ### Bicep template
 
 To enable and configure Defender for Storage at the subscription level by using [Bicep](/azure/azure-resource-manager/bicep/overview?tabs=bicep), make sure your [target scope is set to `subscription`](/azure/azure-resource-manager/bicep/deploy-to-subscription?tabs=azure-cli#scope-to-subscription). Add the following code to your Bicep template:
 
-```terraform
+```bicep
 targetScope = 'subscription'
 
 resource StorageAccounts 'Microsoft.Security/pricings@2023-01-01' = {
@@ -194,7 +195,7 @@ For further customization and control over your storage account's security setti
 
 To enable and configure Defender for Storage at the storage account level by using Bicep, add the following code to your Bicep template:
 
-```terraform
+```bicep
 resource storageAccount 'Microsoft.Storage/storageAccounts@2021-04-01' ...
 
 resource defenderForStorageSettings 'Microsoft.Security/DefenderForStorageSettings@2022-12-01-preview' = {
@@ -229,7 +230,7 @@ For more information, see the [Microsoft.Security/DefenderForStorageSettings API
 
 To enable and configure Defender for Storage at the storage account level by using an Azure Resource Manager template (ARM template), add this JSON snippet to the `resources` section of your ARM template:
 
-```terraform
+```json
 {
     "type": "Microsoft.Security/DefenderForStorageSettings",
     "apiVersion": "2022-12-01-preview",
@@ -338,6 +339,8 @@ After you deploy Defender for Storage, use the following checklist to validate t
 1. For IaC deployments, confirm no configuration drift by rerunning your template and verifying idempotency.
 
 ## Troubleshoot common issues
+
+The following table lists common deployment issues, likely causes, and recommended resolutions.
 
 | Issue | Likely cause | Resolution |
 |---|---|---|

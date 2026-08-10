@@ -208,9 +208,7 @@ After integrating Defender for IoT alerts with a SIEM, we recommend the followin
 
 - Define the appropriate workflow for mitigation, and create automated investigation playbooks for each use case. In Microsoft Sentinel, the Microsoft Defender for IoT solution includes [out-of-the-box playbooks for automated response to Defender for IoT alerts](../iot-advanced-threat-monitoring.md#automate-response-to-defender-for-iot-alerts).
 
-## Next steps
-
-Now that you understand the OT monitoring system deployment steps, you're ready to get started!
+## Next step
 
 > [!div class="step-by-step"]
 > [Plan your OT monitoring system with Defender for IoT »](../best-practices/plan-corporate-monitoring.md)

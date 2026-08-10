@@ -5,7 +5,7 @@ ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: krishsa
 ms.topic: concept-article
-ms.date: 03/01/2024
+ms.date: 08/07/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
@@ -42,7 +42,7 @@ You might consider Microsoft essential solutions for the following reasons:
 
 ## ASIM schemas supported
 
-The essentials solutions are currently spanned across the following different ASIM schemas that Sentinel supports:
+The essential solutions currently use the following ASIM schemas:
 
 - Audit event
 - Authentication event

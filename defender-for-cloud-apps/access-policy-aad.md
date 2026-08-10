@@ -1,11 +1,11 @@
 ---
 title: Create access policies | Microsoft Defender for Cloud Apps
 description: Learn how to configure Microsoft Defender for Cloud Apps access policies with Conditional Access app control to control access to cloud apps.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Adipkmic
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Create Microsoft Defender for Cloud Apps access policies
@@ -15,7 +15,7 @@ Microsoft Defender for Cloud Apps access policies use Conditional Access app con
 Policies created for a host app aren't connected to any related resource apps. For example, access policies that you create for Teams, Exchange, or Gmail aren't connected to SharePoint, OneDrive, or Google Drive. If you need a policy for the resource app in addition to the host app, create a separate policy.
 
 > [!TIP]
-> If you'd prefer to generally allow, access while monitoring sessions or limit specific session activities, create session policies instead. For more information, see [Session policies](session-policy-aad.md).
+> If you'd prefer to generally allow access while monitoring sessions or limit specific session activities, create session policies instead. For more information, see [Create session policies for Conditional Access app control](session-policy-aad.md).
 
 ## Prerequisites
 
@@ -47,7 +47,7 @@ This procedure describes how to create a new access policy in Defender for Cloud
 
 1. Select **Create policy** > **Access policy**. For example:
 
-    ![Screenshot showing how to create a Conditional Access policy in Defender for Cloud Apps.](media/create-policy-from-conditional-access-tab.png)
+    ![Screenshot of the Defender for Cloud Apps Policy management page with the Create policy menu expanded and the Access policy option highlighted.](media/create-policy-from-conditional-access-tab.png)
 
 1. On the **Create access policy** page, enter the following basic information:
 
@@ -135,4 +135,6 @@ For more information, see:
 - [Tutorial: Block download of sensitive information with conditional access app control](use-case-proxy-block-session-aad.md)
 - [Blocking downloads on unmanaged devices using session controls](use-case-proxy-block-session-aad.md)
 
-If you run into any problems, we're here to help. To get assistance or support for your product issue, please [contact Microsoft Defender XDR support](/defender-xdr/contact-defender-support)
+## Get help
+
+If you run into any problems, we're here to help. To get assistance or support for your product issue, please [contact Microsoft Defender XDR support](/defender-xdr/contact-defender-support).

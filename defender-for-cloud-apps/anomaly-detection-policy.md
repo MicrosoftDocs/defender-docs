@@ -12,7 +12,7 @@ ai-usage: ai-assisted
 # Create Defender for Cloud Apps anomaly detection policies
 
 
-The Microsoft Defender for Cloud Apps anomaly detection policies provide out-of-the-box user and entity behavioral analytics (UEBA) and machine learning (ML) so that you're ready from the outset to run advanced threat detection across your cloud environment. Because they're automatically enabled, the new anomaly detection policies immediately start the process of detecting and collating results, targeting numerous behavioral anomalies across your users and the machines and devices connected to your network. In addition, the policies expose more data from the Defender for Cloud Apps detection engine, to help you speed up the investigation process and contain ongoing threats.
+Microsoft Defender for Cloud Apps anomaly detection policies provide built-in user and entity behavioral analytics (UEBA) and machine learning (ML). These policies help you run advanced threat detection across your cloud environment right away. Because the anomaly detection policies are turned on by default, they start detecting and collecting results at once, targeting behavioral anomalies across your users, machines, and devices. The policies also expose more data from the Defender for Cloud Apps detection engine to help you speed up investigations and contain ongoing threats.
 
 The anomaly detection policies are automatically enabled, but Defender for Cloud Apps has an initial learning period of seven days during which not all anomaly detection alerts are raised. After that, as data is collected from your configured API connectors, each session is compared to activity detected over the past month, including when users were active, IP addresses, devices, and the risk scores of these activities. Data from API connectors might take several hours to become available.
 
@@ -89,7 +89,7 @@ Defender for Cloud Apps supports file sandboxing malware detection for the follo
 > [!NOTE]
 >* Proactively sandboxing will be done in third party applications (*Box*, *Dropbox* etc.). **In *OneDrive* and *SharePoint* files are being scanned and sandboxed as part of the service itself**.
 > * In *Box*, *Dropbox*, and *Google Workspace*, Defender for Cloud Apps doesn't automatically block the file, but blocking may be performed according to the app's capabilities and the app's configuration set by the customer.
-> * If you're unsure about whether a detected file is truly malware or a false positive, go to the Microsoft Security Intelligence page at [https://www.microsoft.com/wdsi/filesubmission](https://www.microsoft.com/wdsi/filesubmission) and submit the file for further analysis.
+> * If you're unsure about whether a detected file is truly malware or a false positive, go to the Microsoft Security Intelligence page and [submit the file for further analysis](https://www.microsoft.com/wdsi/filesubmission).
 
 <a name="activity-from-anonymous-ip-addresses"></a>
 ### Activity from anonymous IP addresses
@@ -124,7 +124,7 @@ The detection looks for users whose accounts were deleted in Microsoft Entra ID,
 > [!NOTE]
 > As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model and renamed to **Successful logon from a suspicious IP address** and **Activity from a password-spray associated IP address**.
 
-This detection identifies that users were active from an IP address identified as risky by Microsoft Threat Intelligence. These IP addresses are involved in malicious activities, such as performing password spray, Botnet C&C, and may indicate compromised account. This detection uses a machine-learning algorithm that reduces "false positives", such as mis-tagged IP addresses that are widely used by users in the organization.
+The Activity from suspicious IP addresses detection identifies that users were active from an IP address identified as risky by Microsoft Threat Intelligence. These IP addresses are involved in malicious activities, such as performing password spray, Botnet C&C, and may indicate compromised account. The detection uses a machine-learning algorithm that reduces "false positives", such as mis-tagged IP addresses that are widely used by users in the organization.
 
 <a name="suspicious-inbox-forwarding"></a>
 ### Suspicious inbox forwarding
@@ -132,7 +132,7 @@ This detection identifies that users were active from an IP address identified a
 > [!NOTE]
 > As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model and renamed to **Suspicious email forwarding rule created by third-party app**.
 
-This detection looks for suspicious email forwarding rules, for example, if a user created an inbox rule that forwards a copy of all emails to an external address.
+The Suspicious inbox forwarding detection looks for suspicious email forwarding rules, for example, if a user created an inbox rule that forwards a copy of all emails to an external address.
 
 > [!NOTE]
 > Defender for Cloud Apps only alerts you for each forwarding rule that is identified as suspicious, based on the typical behavior for the user.
@@ -143,7 +143,7 @@ This detection looks for suspicious email forwarding rules, for example, if a us
 > [!NOTE]
 > As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model.
 
-This detection profiles your environment and triggers alerts when suspicious rules that delete or move messages or folders are set on a user's inbox. This may indicate that the user's account is compromised, that messages are being intentionally hidden, and that the mailbox is being used to distribute spam or malware in your organization.
+The Suspicious inbox manipulation rules detection profiles your environment and triggers alerts when suspicious rules that delete or move messages or folders are set on a user's inbox. This may indicate that the user's account is compromised, that messages are being intentionally hidden, and that the mailbox is being used to distribute spam or malware in your organization.
 
 <a name="suspicious-email-deletion-activity-preview"></a>
 ### Suspicious email deletion activity (Preview)
@@ -151,7 +151,7 @@ This detection profiles your environment and triggers alerts when suspicious rul
 > [!NOTE]
 > As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model and renamed to **Suspicious email deletion activity**.
 
-This policy profiles your environment and triggers alerts when a user performs suspicious email deletion activities in a single session. This policy may indicate that a user's mailboxes may be compromised by potential attack vectors such as command-and-control communication (C&C/C2) over email.
+The Suspicious email deletion activity policy profiles your environment and triggers alerts when a user performs suspicious email deletion activities in a single session. An alert from this policy may indicate that a user's mailboxes are compromised by potential attack vectors such as command-and-control communication (C&C/C2) over email.
 
 > [!NOTE]
 > Defender for Cloud Apps integrates with Microsoft Defender XDR to provide protection for Exchange Online, including URL detonation, malware protection, and more. Once Defender for Microsoft 365 is enabled, you'll start seeing alerts in the Defender for Cloud Apps activity log.
@@ -159,7 +159,7 @@ This policy profiles your environment and triggers alerts when a user performs s
 <a name="suspicious-oauth-app-file-download-activities"></a>
 ### Suspicious OAuth app file download activities
 
-Scans the OAuth apps connected to your environment and triggers an alert when an app downloads multiple files from Microsoft SharePoint or Microsoft OneDrive in a manner that is unusual for the user. This may indicate that the user account is compromised.
+Scans the OAuth apps connected to your environment and triggers an alert when an app downloads multiple files from Microsoft SharePoint or Microsoft OneDrive in a manner that is unusual for the user. This unusual download behavior may indicate that the user account is compromised.
 
 <a name="unusual-isp-for-an-oauth-app"></a>
 ### Unusual ISP for an OAuth app
@@ -167,7 +167,7 @@ Scans the OAuth apps connected to your environment and triggers an alert when an
 > [!NOTE]
 > As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model and renamed to **OAuth application activity from an unknown ISP**.
 
-This policy profiles your environment and triggers alerts when an OAuth app connects to your cloud applications from an uncommon ISP. This policy may indicate that an attacker tried to use a legitimate compromised app to perform malicious activities on your cloud applications.
+The Unusual ISP for an OAuth app policy profiles your environment and triggers alerts when an OAuth app connects to your cloud applications from an uncommon ISP. An alert from this policy may indicate that an attacker tried to use a legitimate compromised app to perform malicious activities on your cloud applications.
 
 <a name="unusual-activities-by-user"></a>
 ### Unusual activities (by user)
@@ -201,15 +201,15 @@ This policy profiles your environment and triggers alerts when users delete mult
 
 ## Enable automated governance
 
-You can enable automated remediation actions on alerts generated by anomaly detection policies.
+You can set up automatic fixes for alerts from anomaly detection policies.
 
-1. Select the name of the detection policy in the **Policies** page.
-1. In the **Edit anomaly detection policy** window that opens, under **Governance actions** set the remediation actions you want for each connected app or for all apps.
+1. On the **Policies** page, select the detection policy name.
+1. In the **Edit anomaly detection policy** window, under **Governance actions**, choose the actions you want for each connected app or for all apps.
 1. Select **Update**.
 
 ## Tune anomaly detection policies
 
-To affect the anomaly detection engine to suppress or surface alerts according to your preferences:
+You can tune the detection engine to suppress or show alerts based on your needs.
 
 In the Impossible travel policy, you can set the sensitivity slider to determine the level of anomalous behavior needed before an alert is triggered. For example, a low or medium setting suppresses Impossible travel alerts from a user's common locations, while a high setting surfaces such alerts. You can choose from the following sensitivity levels:
 
@@ -245,7 +245,7 @@ To scope an anomaly detection policy:
    
 ## Triage anomaly detection alerts
 
-You can triage the various alerts triggered by the new anomaly detection policies quickly and decide which ones need to be taken care of first. To do this, you need the context for the alert, so you can see the bigger picture and understand whether something malicious is indeed happening.
+You can triage the various alerts triggered by the new anomaly detection policies quickly and decide which ones need to be taken care of first. To prioritize alerts effectively, you need the context for each alert, so you can see the bigger picture and understand whether something malicious is indeed happening.
 
 1. In the **Activity log**, you can open an activity to display the Activity drawer. Select **User** to view the user insights tab. This tab includes information like number of alerts, activities, and where they've connected from, which is important in an investigation.
 

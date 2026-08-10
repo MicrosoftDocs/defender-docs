@@ -131,7 +131,7 @@
                         - name: Prepare your SAP environment
                           href: sap/preparing-sap.md
                         - name: Connect your SAP system
-                          href: sap/deploy-data-connector-agent-container.md
+                          href: sap/deploy-data-connector-agentless.md
                           displayName: disable, stop ingestion, stop
                         - name: Troubleshoot SAP data connector
                           href: sap/sap-deploy-troubleshoot.md
@@ -141,24 +141,12 @@
                               href: sap/sap-agent-migrate.md
                             - name: Collect SAP HANA audit logs
                               href: sap/collect-sap-hana-audit-logs.md
-                            - name: Update the data connector agent
-                              href: sap/update-sap-data-connector.md
                         - name: SAP deployment reference (advanced)
                           items:
                             - name: Required ABAP permissions
                               href: sap/required-abap-authorizations.md
-                            - name: Data connector agent kickstart script reference
-                              href: sap/reference-kickstart.md
-                            - name: Data connector agent update script reference
-                              href: sap/reference-update.md
-                            - name: Data connector agent systemconfig.json file reference
-                              href: sap/reference-systemconfig-json.md
-                            - name: Data connector agent systemconfig.ini file reference (legacy)
-                              href: sap/reference-systemconfig.md
                     - name: Enable SAP detections and threat protection
                       href: sap/deployment-solution-configuration.md
-                    - name: Integrate SAP across multiple workspaces
-                      href: sap/cross-workspace.md
                     - name: Monitor SAP systems
                       items:
                         - name: Monitor SAP system health and role
@@ -328,6 +316,8 @@
               href: investigate-with-ueba.md
             - name: Aggregate behavioral insights from raw logs
               href: entity-behaviors-layer.md
+            - name: Investigate anomalies on UEBA behaviors (preview)
+              href: ueba-anomalies-on-behaviors.md
             - name: UEBA data sources and table schemas
               href: ueba-reference.md
         - name: Data classification with entities
@@ -960,6 +950,8 @@
           href: isv/create-codeless-connector.md
         - name: Create pull codeless data connectors with nested API polling
           href: isv/custom-connector-nested-api-polling.md
+        - name: Support multiple connections in a codeless connector
+          href: isv/multi-account-ccf-connector.md  
         - name: Azure Storage Blob data connector reference
           href: data-connection-rules-reference-azure-storage.md
           items:

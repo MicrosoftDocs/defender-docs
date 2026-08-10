@@ -2,7 +2,8 @@
 title: Verify SQL machine protection
 description: Verify SQL Server protection on Azure VMs, Azure Arc machines, and multicloud resources with Defender for SQL Servers on Machines.
 ms.topic: how-to
-ms.date: 04/27/2025
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a customer, I want to verify that my SQL VMs are protected with the Defender for SQL Servers on Machines plan as expected.
 ai-usage: ai-assisted
 ---
@@ -12,11 +13,11 @@ ai-usage: ai-assisted
 > [!IMPORTANT]
 > This article applies to commercial clouds. If you're using Government clouds, see the [Verify SQL machine protection government](verify-machine-protection-gov.md) article.
 
-After you enable Defender for SQL Servers on Machines, use this article to verify coverage for SQL Servers on Azure VMs, on-premises machines, and multicloud resources.
+After you enable Defender for SQL Servers on Machines, use the following verification procedures to confirm coverage for SQL Servers on Azure VMs, on-premises machines, and multicloud resources. You can check the protection status across an entire Azure subscription or verify a single SQL server VM or Azure Arc SQL Server instance.
 
 ## Verify protection on an entire Azure subscription
 
-Defender for Cloud presents [The status of Microsoft SQL Servers on Machines should be protected](https://aka.ms/NewStatusRecommendation) recommendation. This recommendation allows you to review the protection status of Defender for SQL Servers on Machines. The recommendation identifies all SQL VMs and Azure Arc SQL Server instances within a specified Azure subscription, and presents the protection status of each SQL Server instance.
+Defender for Cloud presents [The status of Microsoft SQL Servers on Machines should be protected](https://aka.ms/NewStatusRecommendation) recommendation. The **The status of Microsoft SQL Servers on Machines should be protected** recommendation allows you to review the protection status of Defender for SQL Servers on Machines. This recommendation identifies all SQL VMs and Azure Arc SQL Server instances within a specified Azure subscription, and presents the protection status of each SQL Server instance.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -34,9 +35,9 @@ Defender for Cloud presents [The status of Microsoft SQL Servers on Machines sho
 
 1. Select the unhealthy resource.
 
-1. Follow the troubleshooting guide steps starting at [Step 3: Identify and resolve protection misconfigurations at the SQL Server instance Level](troubleshoot-sql-machines-guide.md#step-3-identify-and-resolve-protection-misconfigurations-at-the-sql-server-instance-level).
+1. Follow the steps in the Troubleshoot SQL machines protection guide, starting at [Step 3: Identify and resolve protection misconfigurations at the SQL Server instance Level](troubleshoot-sql-machines-guide.md#step-3-identify-and-resolve-protection-misconfigurations-at-the-sql-server-instance-level).
 
-Defender for Cloud updates the status of the recommendation every 12 hours. Follow the [troubleshooting guide](troubleshoot-sql-machines-guide.md) to fix each unprotected SQL server instance.
+Defender for Cloud updates the **The status of Microsoft SQL Servers on Machines should be protected** recommendation every 12 hours. Follow the [Troubleshoot SQL machines protection](troubleshoot-sql-machines-guide.md) guide to fix each unprotected SQL server instance.
 
 ## Verify protection on a single SQL server VM
 
@@ -57,7 +58,7 @@ You can also verify the protection status of a single SQL server VM or Azure Arc
 
 1. (Optional) Resolve the unprotected server instance status with the [troubleshooting SQL Server on Machines guide](troubleshoot-sql-machines-guide.md).
 
-Defender for Cloud updates the status of the recommendation every 12 hours. Follow the [troubleshooting guide](troubleshoot-sql-machines-guide.md) to fix each unprotected SQL server instance.
+Defender for Cloud updates the **The status of Microsoft SQL Servers on Machines should be protected** recommendation every 12 hours. Follow the [Troubleshoot SQL machines protection](troubleshoot-sql-machines-guide.md) guide to fix each unprotected SQL server instance.
 
 ## Next step
 

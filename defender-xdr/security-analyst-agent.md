@@ -140,9 +140,9 @@ Perform the following steps to use the Security Analyst Agent in Microsoft Defen
 
 1. Go to the [Microsoft Defender portal](https://defender.microsoft.com), and then select **Advanced hunting** under **Investigation and response**.
 
-1. Open Copilot, and then select **Security Analyst Agent**.
+1. Open Copilot, select the three-dot menu (**More actions**) in the side pane, and then select **Switch to Security Analyst Agent**.
 
-    :::image type="content" source="./media/security-analyst-agent/security-analyst-agent-select.png" alt-text="Screenshot of selecting Security Analyst Agent in Microsoft Defender Advanced hunting.":::
+    :::image type="content" source="./media/security-analyst-agent/security-analyst-agent-select.png" alt-text="Screenshot of the More actions menu in the Security Copilot side pane, showing the Switch to Security Analyst Agent option.":::
 
 1. Enter your security analysis prompt in natural language, or select one of the suggested prompts.
 
@@ -166,6 +166,15 @@ Perform the following steps to use the Security Analyst Agent in Microsoft Defen
     :::image type="content" source="./media/security-analyst-agent/security-analyst-agent-sample-analyze.png" alt-text="Screenshot showing the Analyze with Copilot action in Advanced hunting query results.":::
 
 1. Use the feedback buttons on the response to share whether the output was helpful.
+
+## Switch back to the Threat Hunting Assistant
+
+To return to the Threat Hunting Assistant, select the three-dot menu (**More actions**) in the Security Copilot side pane, and then select **Switch to Threat Hunting Assistant**.
+
+:::image type="content" source="./media/security-analyst-agent/security-analyst-agent-switch-back.png" alt-text="Screenshot of the More actions menu in the Security Analyst Agent side pane, showing the Switch to Threat Hunting Assistant option.":::
+
+> [!NOTE]
+> Switching between the Security Analyst Agent and the Threat Hunting Assistant resets your conversation with Security Copilot.
 
 
 

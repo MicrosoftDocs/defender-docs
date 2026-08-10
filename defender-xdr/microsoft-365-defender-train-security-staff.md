@@ -25,7 +25,7 @@ ms.date: 07/09/2024
 **Applies to:**
 - Microsoft Defender XDR
 
-With the urgency of protecting your organization and its data from attackers, you need to quickly onboard your security staff to Microsoft Defender XDR. Microsoft provides multiple types of learning and self-study resources for Microsoft Defender XDR and associated services.
+With the urgency of protecting your organization and its data from attackers, you need to quickly onboard your security staff to Microsoft Defender. Microsoft provides multiple types of learning and self-study resources for Microsoft Defender and associated services.
 
 
 <a name='microsoft-365-defender-ninja-training'></a>
@@ -38,9 +38,9 @@ The content is structured into three different knowledge levels, with multiple m
 
 ## Learning paths
 
-Use these learning paths and their modules to build an understanding of Microsoft Defender XDR and Microsoft Defender for Endpoint, one module and unit at a time.
+Use these learning paths and their modules to build an understanding of Microsoft Defender and Microsoft Defender for Endpoint, one module and unit at a time.
 
- - [Detect and respond to cyber attacks with Microsoft Defender XDR](/training/paths/defender-detect-respond/)
+ - [Detect and respond to cyber attacks with Microsoft Defender](/training/paths/defender-detect-respond/)
 
  - [Secure your organization with Microsoft Defender for Endpoint](/training/paths/defender-endpoint-fundamentals/)  
 
@@ -61,7 +61,7 @@ Browse the [list of learning paths](/training/browse/?products=m365-ems-cloud-ap
 
 ## Hands-on with a trial environment
 
-One of the best ways to learn is by configuring and testing Microsoft Defender XDR and its associated services in a trial environment. See [Pilot and deploy Microsoft Defender XDR](pilot-deploy-overview.md) for the details.
+One of the best ways to learn is by configuring and testing Microsoft Defender and its associated services in a trial environment. See [Pilot and deploy Microsoft Defender](pilot-deploy-overview.md) for the details.
 
 ## Simulating an attack
 

@@ -5,9 +5,9 @@ ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: abhiag
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security operations analyst, I want to enable and configure Microsoft Sentinel and its key features so that I can monitor and secure my organization's environment effectively.
@@ -16,7 +16,7 @@ ms.custom: msecd-doc-authoring-1014
 
 # Enable Microsoft Sentinel SIEM and initial features and content
 
-As part of the [Deployment guide for Microsoft Sentinel](deploy-overview.md), this procedure walks you through enabling Microsoft Sentinel, enabling the health and audit feature, and enabling the solutions and content you've identified according to your organization's needs.
+As part of the [Deployment guide for Microsoft Sentinel](deploy-overview.md), this procedure walks you through enabling Microsoft Sentinel, enabling the health and audit feature, and enabling the solutions and content you've identified according to your organization's needs. This article is intended for security architects and operations teams who have already completed workspace planning and are ready to activate the service. By the end of these steps, you'll have a functioning Microsoft Sentinel instance with health monitoring turned on and the solutions needed for your selected data sources deployed. This procedure covers initial enablement only; configuring data connectors, analytics rules, and other content is handled in subsequent steps of the deployment guide.
 
 ## Enable features and content
 

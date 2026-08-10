@@ -5,13 +5,12 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 07/27/2026
+ms.date: 08/07/2026
 ms.collection:
 - M365-security-compliance
 - tier1
 ms.topic: whats-new
-ms.custom: msecd-doc-authoring-1018
-ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1015
 ---
 
 # What's new in Microsoft Defender XDR
@@ -33,13 +32,13 @@ You can also get product updates and important notifications through the [messag
 
 ## July 2026
 
-- **Advanced hunting sign-in table migration**: On October 19, 2026, the [`AADSignInEventsBeta`](advanced-hunting-aadsignineventsbeta-table.md) and [`AADSpnSignInEventsBeta`](advanced-hunting-aadspnsignineventsbeta-table.md) tables will be deprecated and replaced by [`EntraIdSignInEvents`](advanced-hunting-entraidsigninevents-table.md) and [`EntraIdSpnSignInEvents`](advanced-hunting-entraidspnsigninevents-table.md), respectively. All queries that use the AAD tables will be migrated automatically to the corresponding Entra ID tables. The Entra ID tables are already available.
-
 - (Preview) **AI agent posture risk in Microsoft Defender**: Microsoft Defender now assesses posture risk for AI agents, including enterprise agents and local agents discovered on endpoint devices. Risk levels are based on active risk indicators, such as configuration, access, runtime activity, endpoint and user context, and active alerts. Security teams can use posture risk and recommendations to prioritize risky agents and improve agent security posture. For more information, see [AI agent posture risk in Microsoft Defender](security-for-ai/ai-agent-risk-assessment.md).
 
 - (GA) The **Domain investigation** page allows you to investigate an Active Directory domain. It shows Active Directory domain security, including domain properties, deployment health, identity summary, service account breakdown, sensitive entities, active recommendations, group policies, and trust relationships. For more information, see [Investigate a domain](/defender-for-identity/investigate-domain).
 
-- (GA) **Security for Microsoft Agent 365 with Defender**: With a Microsoft Agent 365 license, Microsoft Defender provides discovery, security posture, threat detection and investigation, and real-time protection for the AI agents in your tenant. Onboarding includes enabling data collection, connecting the Microsoft 365 app connector, and connecting Copilot Studio for real-time protection of Copilot Studio agents. For more information, see [Protect AI agents using Microsoft Defender](security-for-ai/defender-security-for-ai.md#protect-ai-agents-using-microsoft-defender) and [Enable security for AI agents using Microsoft Defender](security-for-ai/get-started-defender-security-for-ai.md).
+- (Preview) **Threat detection for Microsoft Agent 365 agents**: Microsoft Defender analyzes runtime signals from agent interactions, tool usage, and execution patterns to surface alerts in Microsoft Defender XDR. Detection uses observability data from Microsoft Copilot Studio, Microsoft Foundry, Microsoft 365 Copilot Agent Builder, and agents integrated through the Microsoft Agent 365 SDK. Analysts can investigate alerts through incidents and advanced hunting. For more information, see [Detect and investigate threats to AI agents using Microsoft Defender](security-for-ai/ai-agent-detection-protection.md).
+
+- (GA) **Real-time protection for Microsoft Agent 365 tooling servers**: Microsoft Defender evaluates tool invocations and responses against security policies and can allow or block interactions with Work IQ MCP and customer MCP tools onboarded to Agent 365. For more information, see [Protect AI agents in real time using Microsoft Defender](security-for-ai/ai-agent-real-time-protection.md).
 
 ## June 2026
 
@@ -95,7 +94,7 @@ You can also get product updates and important notifications through the [messag
     - The [`IdentityAccountInfo`](advanced-hunting-identityaccountinfo-table.md) table contains information about account information from various sources, including Microsoft Entra ID. It also includes information and link to the identity that owns the account.
     - The [`EntraIdSignInEvents`](advanced-hunting-entraidsigninevents-table.md) table contains information about Microsoft Entra interactive and non-interactive sign-ins.
     - The [`EntraIdSpnSignInEvents`](advanced-hunting-entraidspnsigninevents-table.md) table contains information about Microsoft Entra service principal and managed identity sign-ins.
-    - The [`GraphAPIAuditEvents`](advanced-hunting-graphapiauditevents-table.md) table provides information about Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant.
+    - The [`GraphApiAuditEvents`](advanced-hunting-graphapiauditevents-table.md) table provides information about Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant.
 
 ## January 2026
 - (Preview) Custom detection rules in Microsoft Defender now support Near Real-Time (NRT) configuration on [Microsoft Sentinel data](custom-detection-rules.md#tables-that-support-continuous-nrt-frequency).
@@ -106,7 +105,7 @@ You can also get product updates and important notifications through the [messag
 
 - (Preview) Microsoft Security Copilot in Microsoft Defender now includes the Dynamic Threat Detection Agent, an always-on, adaptive backend service that uncovers hidden threats across Defender and Microsoft Sentinel environments. [Learn more](dynamic-threat-detection-agent.md)
 - (GA) The [Microsoft Security Copilot Threat Intelligence Briefing Agent in Microsoft Defender](threat-intel-briefing-agent-defender.md) is now generally available. It generates threat intelligence briefings based on the latest threat actor activity and both internal and external vulnerability information in a matter of minutes, helping security teams save time by creating customized, relevant reports.
-- (Preview) Microsoft Security Copilot in Microsoft Defender now lets you hunt for threats by using natural language with the [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md). This agent delivers a complete, conversational threat hunting experience by not only generating queries but also interpreting results, surfacing insights, and guiding you through full hunting sessions.
+- (GA) Microsoft Security Copilot in Microsoft Defender now lets you hunt for threats by using natural language with the [Threat Hunting Assistant](advanced-hunting-security-copilot-threat-hunting-assistant.md). This agent delivers a complete, conversational threat hunting experience by not only generating queries but also interpreting results, surfacing insights, and guiding you through full hunting sessions.
 - (Preview) The following advanced hunting schema tables are now available for preview:
     - The [`CampaignInfo`](advanced-hunting-campaigninfo-table.md) table contains information about email campaigns identified by Microsoft Defender for Office 365.
     - The [`FileMaliciousContentInfo`](advanced-hunting-filemaliciouscontentinfo-table.md) table contains information about files that Microsoft Defender for Office 365 processed in SharePoint Online, OneDrive, and Microsoft Teams.
@@ -153,7 +152,7 @@ You can also get product updates and important notifications through the [messag
 
 ## July 2025
 
-- (Preview) The [`GraphAPIAuditEvents`](advanced-hunting-graphapiauditevents-table.md) table in advanced hunting is now available for preview. This table contains information about Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant.
+- (Preview) The [`GraphApiAuditEvents`](advanced-hunting-graphapiauditevents-table.md) table in advanced hunting is now available for preview. This table contains information about Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant.
 - (Preview) The [`DisruptionAndResponseEvents`](advanced-hunting-disruptionandresponseevents-table.md) table, now available in advanced hunting, contains information about [automatic attack disruption](automatic-attack-disruption.md) events in Microsoft Defender XDR. These events include both block and policy application events related to triggered attack disruption policies, and automatic actions that were taken across related workloads. Increase your visibility and awareness of active, complex attacks disrupted by attack disruption to understand the attacks' scope, context, impact, and actions taken.
 
 ## June 2025
@@ -176,3 +175,4 @@ You can also get product updates and important notifications through the [messag
     - The [MessageEvents](advanced-hunting-messageevents-table.md) table contains details about messages sent and received within your organization at the time of delivery
     - The [MessagePostDeliveryEvents](advanced-hunting-messagepostdeliveryevents-table.md) table contains information about security events that occurred after the delivery of a Microsoft Teams message in your organization
     - The [MessageUrlInfo](advanced-hunting-messageurlinfo-table.md) table contains information about URLs sent through Microsoft Teams messages in your organization
+

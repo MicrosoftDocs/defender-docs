@@ -5,7 +5,7 @@ ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: vakohl
 ms.topic: concept-article
-ms.date: 09/26/2024
+ms.date: 08/07/2026
 
 
 #Customer intent: As a security analyst, I want to use the Advanced Security Information Model (ASIM) so that I can normalize and correlate data from diverse sources for more efficient threat detection and investigation.
@@ -61,6 +61,7 @@ Normalized schemas cover standard sets of predictable event types that you can u
 
 ASIM currently defines the following schemas:
 
+- [Agent Event](normalization-schema-agent.md)
 - [Alert Event](normalization-schema-alert.md)
 - [Audit Event](normalization-schema-audit.md)
 - [Authentication Event](normalization-schema-authentication.md)
@@ -72,6 +73,8 @@ ASIM currently defines the following schemas:
 - [Registry Event](normalization-schema-registry-event.md)
 - [User Management](normalization-schema-user-management.md)
 - [Web Session](normalization-schema-web.md)
+
+ASIM also defines the [Asset Entity](normalization-schema-asset.md) schema for normalizing asset inventories and change feeds.
 
 For more information, see [ASIM schemas](normalization-about-schemas.md).
 

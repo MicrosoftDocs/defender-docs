@@ -9,12 +9,12 @@ ms.collection:
 - tier1
 - usx-security
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Set up Microsoft Defender multitenant management
@@ -52,6 +52,8 @@ In order to view and manage the data you have access to in Microsoft Defender mu
 - [Verify your tenant access with GDAP](#verify-your-tenant-access-with-gdap)
 
 ### Verify your tenant access with Microsoft Entra B2B
+
+Perform the following steps to verify your tenant access with Microsoft Entra B2B:
 
 1. Go to [My account](https://myaccount.microsoft.com/organizations).
 2. Under **Organizations > Other organizations you collaborate with** see the list of organizations you have guest access to.
@@ -91,7 +93,7 @@ The features available in multitenant management now appear on the navigation ba
 <a name="next-step"></a>
 ## Related content
 
-Use these articles to get started with Microsoft Defender multitenant management:
+Use the following articles to get started with Microsoft Defender multitenant management:
 
 - [View and manage incidents and alerts](mto-incidents-alerts.md)
 - [Advanced hunting](mto-advanced-hunting.md)

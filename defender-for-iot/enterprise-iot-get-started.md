@@ -5,10 +5,10 @@ ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 06/11/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1013
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Get started with enterprise IoT
@@ -71,6 +71,9 @@ You can also purchase a license using the Microsoft 365 admin center. Before pur
 
 ### Set up a standalone trial license
 
+> [!NOTE]
+> After obtaining your licenses, make sure to [assign your licenses to specific users](/microsoft-365/admin/manage/assign-licenses-to-users) to start using them.
+
 **To start an enterprise IoT trial**:
 
 1. Go to the [Microsoft 365 admin center](https://portal.office.com/AdminPortal/Home#/catalog) > **Marketplace**.
@@ -122,7 +125,7 @@ Use the following procedure to calculate how many devices you need to monitor if
 For more information, see the [Defender for Endpoint Device discovery overview](/microsoft-365/security/defender-endpoint/device-discovery).
 
 > [!NOTE]
-> Devices listed on the **Computers & Mobile** tab, including those managed by Defender for Endpoint or otherwise, are not included in the number of [devices](device-discovery.md#identified-unique-devices) monitored by Defender for IoT.
+> Devices listed on the **Computers & Mobile** tab, including those managed by Defender for Endpoint or otherwise, are not included in the number of [identified unique devices](device-discovery.md#identified-unique-devices) monitored by Defender for IoT.
 
 #### Purchase the standalone license
 

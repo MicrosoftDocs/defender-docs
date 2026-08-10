@@ -1,14 +1,14 @@
 ---
 title: View your identity coverage and maturity (Preview)
 description: Learn how to use the Coverage and maturity page in Microsoft Defender to check your identity protection status and close coverage gaps in your environments.
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.author: abbyweisberg
 author: AbbyMSFT
 ms.reviewer: maelgami
 ai-usage: ai-assisted
 ms.service: defender-xdr
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #customer intent: As a security admin, I want to see how well my identities are protected so that I can find and close coverage gaps in my environments.
 ---
@@ -59,9 +59,7 @@ The maturity level is based on a score ranging from 0 to 100, based on the combi
 <a name="top-setup-tasks"></a>
 ## Review top setup tasks to improve coverage
 
-The **Top setup tasks** section shows up to five cards at the top of the page representing the most important things you can do to improve your coverage. Each card shows the task name, source type (such as Identity provider or SaaS), **impact** level, and **estimated effort**.
-
-Tasks are ranked so that high-impact, low-effort items appear first:
+The **Top setup tasks** section shows up to five cards at the top of the page representing the most important things you can do to improve your coverage. Each card shows the task name, source type (such as Identity provider or SaaS), and two ranking fields: **impact** (the security benefit of completing the task) and **estimated effort** (the work required to complete it). Tasks are ranked so that high-impact, low-effort items appear first:
 
 1. On-premises sensor deployment, Microsoft Entra ID connector, and app governance
 1. SaaS app connectors

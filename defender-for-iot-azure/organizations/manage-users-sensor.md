@@ -1,17 +1,17 @@
 ---
-title: Create and manage users on an OT network sensor - Microsoft Defender for IoT
+title: Create and manage Users on an OT Network Sensor
 description: Create and manage on-premises users on a Microsoft Defender for IoT OT network sensor.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Create and manage users on an OT network sensor
 
-Microsoft Defender for IoT provides tools for managing on-premises user access in the OT network sensor. Azure users are managed [using Azure RBAC at the Azure subscription level](manage-users-overview.md).
+Microsoft Defender for IoT provides tools for managing on-premises user access in the OT network sensor. Azure users are managed at the Azure subscription level. For more information, see [Defender for IoT user management overview](manage-users-overview.md).
 
-This article describes how to manage on-premises users directly on an OT network sensor.
+This article describes how to create, edit, and remove on-premises users directly on an OT network sensor, configure Active Directory integration, and recover privileged access. Some procedures require the **Admin** role or a privileged user account. For details, see the prerequisites listed in each section.
 
 ## Default privileged users
 
@@ -27,14 +27,14 @@ To enable the *cyberx* and *cyberx_host* users in versions 23.1.x and higher, su
 
 ## Configure an Active Directory connection
 
-We recommend configuring on-premises users on your OT sensor with Active Directory, in order to allow Active Directory users to sign in to your sensor and use Active Directory groups, with collective permissions assigned to all users in the group.
+We recommend configuring on-premises users on your OT sensor with Active Directory in order to allow Active Directory users to sign in to your sensor and use Active Directory groups, with collective permissions assigned to all users in the group.
 
 For example, use Active Directory when you have a large number of users that you want to assign Read Only access to, and you want to manage those permissions at the group level.
 
 > [!TIP]
 > When you're ready to start managing your OT sensor settings at scale, define Active Directory settings from the Azure portal. Once you apply settings from the Azure portal, settings on the sensor console are read-only. For more information, see [Configure OT sensor settings from the Azure portal (Public preview)](configure-sensor-settings-portal.md).
 
-**To integrate with Active Directory**:
+To integrate with Active Directory:
 
 1. Sign in to your OT sensor and select **System Settings** > **Integrations** > **Active Directory**.
 
@@ -61,17 +61,18 @@ For example, use Active Directory when you have a large number of users that you
 
 1. When you've added all your Active Directory servers, select **Save**.
 
-    For example: 
-    
+    For example:
+
     :::image type="content" source="media/manage-users-sensor/active-directory-integration-example.png" alt-text="Screenshot of the active directory integration configuration on the sensor.":::
 
 ## Add new OT sensor users
 
 This procedure describes how to create new users for a specific OT network sensor.
 
-**Prerequisites**: This procedure is available for the *admin*, *cyberx*, and *cyberx_host* users, and any user with the **Admin** role.
+> [!NOTE]
+> This procedure is available for the *admin*, *cyberx*, and *cyberx_host* users, and any user with the **Admin** role.
 
-**To add a user**:
+To add a user:
 
 1. Sign in to the sensor console and select **Users** > **+ Add user**.
 
@@ -98,9 +99,8 @@ To edit a user, select the **Edit** :::image type="icon" source="media/manage-us
 
 > [!WARNING]
 > Deleting a user removes that account from the sensor. This action can't be undone. Confirm that the user no longer needs access before you continue.
-
-To delete a user, select the **Delete** button for the user you want to delete.
-
+>
+> To delete a user, select the **Delete** button for the user you want to delete.
 
 ## Change a sensor user's password
 
@@ -109,9 +109,10 @@ This procedure describes how **Admin** users can change local user passwords. **
 > [!TIP]
 > If you need to recover access to a privileged user account, see [Recover privileged access to a sensor](#recover-privileged-access-to-a-sensor).
 
-**Prerequisites**: This procedure is available only for the *cyberx*, *admin*, or *cyberx_host* users, or for users with the **Admin** role.
+> [!NOTE]
+> This procedure is available only for the *cyberx*, *admin*, or *cyberx_host* users, or for users with the **Admin** role.
 
-**To change a user's password on a sensor**:
+To change a user's password on a sensor:
 
 1. Sign into the sensor and select **Users**.
 
@@ -134,9 +135,10 @@ This procedure describes how **Admin** users can change local user passwords. **
 
 This procedure describes how to recover privileged access to a sensor, for the *cyberx*, *admin*, or *cyberx_host* users. For more information, see [Default privileged on-premises users](roles-on-premises.md#default-privileged-on-premises-users).
 
-**Prerequisites**: This procedure is available only for the *cyberx*, *admin*, or *cyberx_host* users.
+> [!NOTE]
+> This procedure is available only for the *cyberx*, *admin*, or *cyberx_host* users.
 
-**To recover privileged access to a sensor**:
+To recover privileged access to a sensor:
 
 1. Start signing in to the OT network sensor. On the sign-in screen, select the **Reset** link. For example:
 
@@ -148,7 +150,7 @@ This procedure describes how to recover privileged access to a sensor, for the *
 
     :::image type="content" source="media/manage-users-sensor/password-recovery-sensor.png" alt-text="Screenshot of the Reset password dialog on the OT sensor.":::
 
-1. Go the Defender for IoT **Sites and sensors** page in the Azure portal. You may want to open the Azure portal in a new browser tab or window, keeping your sensor tab open.
+1. Go the Defender for IoT **Sites and sensors** page in the Azure portal. You might want to open the Azure portal in a new browser tab or window, keeping your sensor tab open.
 
     In your Azure portal settings > **Directories + subscriptions**, make sure that you've selected the subscription where your sensor was onboarded to Defender for IoT.
 
@@ -163,7 +165,7 @@ This procedure describes how to recover privileged access to a sensor, for the *
 1. Back on the sensor tab, on the **Password recovery** screen, select **Select file**. Navigate to and upload the **password_recovery.zip** file you'd downloaded earlier from the Azure portal.
 
     > [!NOTE]
-    > If an error message appears, indicating that the file is invalid, you may have had an incorrect subscription selected in your Azure portal settings.
+    > If an error message appears, indicating that the file is invalid, you might have had an incorrect subscription selected in your Azure portal settings.
     >
     > Return to Azure, and select the settings icon in the top toolbar. On the **Directories + subscriptions** page, make sure that you've selected the subscription where your sensor was onboarded to Defender for IoT. Then repeat the steps in Azure to download the **password_recovery.zip** file and upload it on the sensor again.
 
@@ -177,7 +179,8 @@ Use the OT sensor's CLI access to define the number of maximum failed sign-ins b
 
 For more information, see [Defender for IoT CLI users and access](references-work-with-defender-for-iot-cli-commands.md).
 
-**Prerequisites**: This procedure is available for the *cyberx* user only.
+> [!NOTE]
+> This procedure is available for the *cyberx* user only.
 
 1. Sign into your OT sensor via SSH and run:
 
@@ -189,6 +192,6 @@ For more information, see [Defender for IoT CLI users and access](references-wor
 
 1. Exit the file and run `sudo monit restart all` to apply your changes.
 
-## Next steps
+## Related content
 
-For more information, see [Audit user activity](track-user-activity.md).
+[Audit user activity](track-user-activity.md)

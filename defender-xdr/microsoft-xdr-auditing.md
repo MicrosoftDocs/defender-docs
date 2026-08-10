@@ -33,9 +33,9 @@ The audit log helps you investigate specific activities across Microsoft 365 ser
 - Create\edit custom detection rules
 - Assign user to an incidents
 
-For a complete list of Microsoft Defender XDR activities that are audited, see [Microsoft Defender XDR activities](#microsoft-defender-xdr-activities) and [Microsoft Defender for Endpoint activities](#microsoft-defender-for-endpoint-activities).
+For a complete list of Microsoft Defender activities that are audited, see [Microsoft Defender activities](#microsoft-defender-xdr-activities) and [Microsoft Defender for Endpoint activities](#microsoft-defender-for-endpoint-activities).
 
-Auditing is automatically turned on for Microsoft Defender XDR. Features that are audited are logged in the audit log automatically. Auditing can also collect audit logs from GCC environments.
+Auditing is automatically turned on for Microsoft Defender. Features that are audited are logged in the audit log automatically. Auditing can also collect audit logs from GCC environments.
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ To access the audit log, you need to have the **View-Only Audit Logs** or **Audi
 > [!NOTE]
 > Global administrators in Office 365 and Microsoft 365 are automatically added as members of the Organization Management role group in Exchange Online.
 
-Microsoft Defender XDR uses the [Microsoft Purview auditing solution](/purview/audit-solutions-overview). Before you can look at the audit data in the Microsoft Defender portal, you need to turn on auditing in the Microsoft Purview portal. For more information, see [Turn auditing on or off](/purview/audit-log-enable-disable).
+Microsoft Defender uses the [Microsoft Purview auditing solution](/purview/audit-solutions-overview). Before you can look at the audit data in the Microsoft Defender portal, you need to turn on auditing in the Microsoft Purview portal. For more information, see [Turn auditing on or off](/purview/audit-log-enable-disable).
 
 > [!IMPORTANT]
 > Global Administrator is a highly privileged role that should be limited to scenarios when you can't use an existing role. Microsoft recommends that you use roles with the fewest permissions. Using accounts with lower permissions helps improve security for your organization.
@@ -71,11 +71,11 @@ Audit log record retention is based on Microsoft Purview retention policies. For
 <a name="microsoft-defender-xdr-activities"></a>
 ## Microsoft Defender XDR audit log activity reference
 
-For a list of all events that are logged for user and admin activities in Microsoft Defender XDR in the Microsoft 365 audit log, see:
+For a list of all events that are logged for user and admin activities in Microsoft Defender in the Microsoft 365 audit log, see:
 
-- [Custom detection activities in Microsoft Defender XDR in the audit log](/purview/audit-log-activities#microsoft-defender-xdr-custom-detection-activities)
-- [Incident activities in Microsoft Defender XDR in the audit log](/purview/audit-log-activities#microsoft-defender-xdr-custom-detection-activities)
-- [Suppression rule activities in Microsoft Defender XDR in the audit log](/purview/audit-log-activities#microsoft-defender-xdr-suppression-rule-activities)
+- [Custom detection activities in Microsoft Defender in the audit log](/purview/audit-log-activities#microsoft-defender-xdr-custom-detection-activities)
+- [Incident activities in Microsoft Defender in the audit log](/purview/audit-log-activities#microsoft-defender-xdr-custom-detection-activities)
+- [Suppression rule activities in Microsoft Defender in the audit log](/purview/audit-log-activities#microsoft-defender-xdr-suppression-rule-activities)
 
 <a name="microsoft-defender-for-endpoint-activities"></a>
 ## Microsoft Defender for Endpoint audit log activity reference

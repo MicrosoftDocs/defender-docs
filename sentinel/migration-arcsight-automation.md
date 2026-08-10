@@ -4,9 +4,9 @@ description: Learn how to identify SOAR use cases, and how to migrate your ArcSi
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security engineer, I want to migrate my ArcSight SOAR automation to Microsoft Sentinel so that analysts can leverage advanced incident handling and response capabilities.
@@ -34,7 +34,8 @@ Here’s what you need to think about when migrating SOAR use cases from ArcSigh
 - **Accurate alerts or data**. Response actions are dependent on the accuracy of signals such as alerts. Alerts and enrichment sources should be reliable. Microsoft Sentinel resources such as watchlists and reliable threat intelligence can enhance reliability.
 - **Analyst role**. While automation where possible is great, reserve more complex tasks for analysts, and provide them with the opportunity for input into workflows that require validation. In short, response automation should augment and extend analyst capabilities. 
 
-## Migrate SOAR workflow
+<a name="migrate-soar-workflow"></a>
+## Migrate SOAR workflows to Microsoft Sentinel playbooks
 
 The following mapping shows how key SOAR concepts in ArcSight translate to Microsoft Sentinel components, and provides general guidelines for how to migrate each step or component in the SOAR workflow.
 
@@ -48,9 +49,10 @@ The following mapping shows how key SOAR concepts in ArcSight translate to Micro
 |4 |Consolidate cases. |You can consolidate several alerts to a single incident according to properties such as matching entities, alert details, or creation timeframe, using the alert grouping feature. |
 |5 |Dispatch cases. |Assign incidents to specific analysts using [automated incident assignment with Shifts for Teams](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/automate-incident-assignment-with-shifts-for-teams/ba-p/2297549) between Microsoft Teams, Azure Logic Apps, and Microsoft Sentinel automation rules. |
 
-## Map SOAR components 
+<a name="map-soar-components"></a>
+## Map ArcSight SOAR components to Microsoft Sentinel capabilities
 
-Review which Microsoft Sentinel or Azure Logic Apps features map to the main ArcSight SOAR components.
+Review which Microsoft Sentinel or Azure Logic Apps features map to the main ArcSight SOAR components. In ArcSight, a *trigger* initiates a workflow based on an event or condition, an *action* performs a specific task in response, and *playbooks* define the orchestrated sequence of actions. The following table maps these components to their Microsoft Sentinel equivalents.
 
 |ArcSight  |Microsoft Sentinel/Azure Logic Apps  |
 |---------|---------|
@@ -74,18 +76,19 @@ Use the following Microsoft Sentinel automation and playbook resources for cases
 - [How to use Microsoft Sentinel for Incident Response, Orchestration and Automation](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/how-to-use-azure-sentinel-for-incident-response-orchestration/ba-p/2242397)
 - [Adaptive Cards to enhance incident response in Microsoft Sentinel](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/using-microsoft-teams-adaptive-cards-to-enhance-incident/ba-p/3330941)
 
-## SOAR post migration best practices
+<a name="soar-post-migration-best-practices"></a>
+## Post-migration best practices for SOAR in Microsoft Sentinel
 
 Here are best practices you should take into account after your SOAR migration:
 
 - After you migrate your playbooks, test the playbooks extensively to ensure that the migrated actions work as expected.
 - Periodically review your automations to explore ways to further simplify or enhance your SOAR. Microsoft Sentinel constantly adds new connectors and actions that can help you to further simplify or increase the effectiveness of your current response implementations.
 - Monitor the performance of your playbooks using the [Playbooks health monitoring workbook](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-monitoring-your-logic-apps-playbooks-in-azure/ba-p/1873211).
-- Use managed identities and service principals: Authenticate against various Azure services within your Logic Apps, store the secrets in Azure Key Vault, and obscure the output of the flow execution. We also recommend that you  [monitor the activities of these service principals](https://techcommunity.microsoft.com/t5/azure-sentinel/non-interactive-logins-minimizing-the-blind-spot/ba-p/2287932).
+- Use managed identities and service principals: Authenticate against various Azure services within your Logic Apps, store the secrets in Azure Key Vault, and obscure the output of the flow execution. We also recommend that you [monitor non-interactive service principal logins in Microsoft Sentinel](https://techcommunity.microsoft.com/t5/azure-sentinel/non-interactive-logins-minimizing-the-blind-spot/ba-p/2287932).
 
 ## Next steps
 
-In this article, you learned how to map your SOAR automation from ArcSight to Microsoft Sentinel. 
+After you migrate your SOAR automation from ArcSight to Microsoft Sentinel, export your historical data to preserve past incident records.
 
 > [!div class="nextstepaction"]
 > [Export your historical data](migration-arcsight-historical-data.md)

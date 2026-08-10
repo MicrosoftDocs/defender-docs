@@ -5,9 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security analyst, I want to create and share Power BI reports from Microsoft Sentinel data so that I can provide insights to stakeholders without granting them direct access to Microsoft Sentinel.
@@ -74,7 +74,7 @@ Create, run, and export a KQL query from Microsoft Sentinel.
 
 
 
-1. Select **Run** to run the query and generate results.
+1. Select **Run** to execute the query. The results show a summary of sign-in attempts by application over the last seven days, including failed and successful counts.
    
     :::image type="content" source="media/powerbi/query.png" alt-text="Screenshot showing the KQL query and results.":::
    
@@ -108,7 +108,7 @@ Run the exported M query in Power BI Desktop to get data.
 
 ## Create visualizations from the data
 
-Now that your data is in Power BI, you can create visualizations to provide insights into the data.
+Now that the imported Microsoft Sentinel query results are in Power BI, you can create visualizations to provide insights into the data.
 
 ### Create a table visual
 
@@ -160,7 +160,7 @@ You also want to show what percentage of sign-in attempts failed for each applic
    
 ### Refresh the data and save the report
 
-Refresh the dataset to retrieve the latest Microsoft Sentinel data, and then save the report.
+Refresh the Power BI dataset created from the exported Microsoft Sentinel query to retrieve the latest data, and then save the report.
 
 1. Select **Refresh** to get the latest data from Microsoft Sentinel.
    
@@ -198,7 +198,7 @@ Now you can use Power BI Desktop to publish your Power BI report so other people
    
 ## Import the report to a Microsoft Teams channel
 
-You also want members of the Management Teams channel to be able to see the report. To add the report to a Teams channel:
+You also want members of the Management Teams channel to be able to see the published Power BI report. To add the report to a Teams channel:
 
 1. In the Management Teams channel, select **+** to add a tab, and in the **Add a tab** window, search for and select **Power BI**.
 
@@ -210,7 +210,9 @@ You also want members of the Management Teams channel to be able to see the repo
 
 ## Schedule report refresh
 
-Refresh your Power BI report on a schedule, so updated data always appears in the report.
+Configure a scheduled refresh for the report's dataset in the Power BI service, so updated data always appears in the report. Before you begin, make sure you have credentials for an account with read access to the Log Analytics workspace.
+
+In Power BI, scheduled refresh is configured on the dataset that backs your report. When you publish a report, Power BI automatically creates a corresponding dataset in the workspace.
 
 1. In the Power BI service, select the workspace you published your report to.
    

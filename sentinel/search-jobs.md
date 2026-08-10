@@ -5,12 +5,12 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 
@@ -76,7 +76,7 @@ View the status and results of your search job by going to the **Saved Searches*
 
    :::image type="content" source="media/search-jobs/view-search-results.png" alt-text="Screenshot that shows the link to view search results at the bottom of the search job card." lightbox="media/search-jobs/view-search-results.png":::
 
-   By default, you see all the results that match the criteria used for that search job.
+   By default, you see all the results that match the criteria used for the selected search job.
 
 1. To refine the list of results returned from the search table, select **Add filter**.
 

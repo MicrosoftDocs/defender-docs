@@ -5,10 +5,10 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: idpelleg
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 #Customer intent: As a security operations manager, I want to standardize incident response tasks using automation rules and playbooks so that my team can handle incidents consistently and efficiently.
 ---
@@ -21,6 +21,8 @@ One of the most important factors in running your security operations (SecOps) e
 
 <a name="use-cases"></a>
 ## When to use incident tasks
+
+Incident tasks are useful in the following scenarios:
 
 - Your SOC analysts can use a single central checklist to handle the processes of incident triage, investigation, and response, all without worrying about missing a critical step.
 
@@ -37,8 +39,12 @@ The **Logic Apps Contributor** role is required to create and edit playbooks.
 <a name="scenarios"></a>
 ## Incident task management scenarios
 
+Incident task management scenarios vary depending on whether you are an analyst or a workflow creator.
+
 <a name="analyst"></a>
 ### Analyst scenarios
+
+The following scenarios show how analysts can use incident tasks during investigations.
 
 #### Follow tasks when handling an incident
 
@@ -56,6 +62,8 @@ You can add tasks to an open incident that you're working on, either to give you
 
 <a name="workflow-creator"></a>
 ### Workflow creator scenarios
+
+The following scenarios describe how workflow creators can add and manage tasks automatically.
 
 #### Add tasks to incidents with automation rules
 

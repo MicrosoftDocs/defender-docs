@@ -8,16 +8,16 @@ ms.reviewer: zeinam
 ms.topic: how-to  
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 # Customer intent: As a security engineer or data scientist, I want to explore and analyze security data in the Microsoft Sentinel data lake using Jupyter notebooks, so that I can gain insights and build advanced analytics solutions.
 ---
 
 # Run notebooks on the Microsoft Sentinel data lake
  
-Jupyter notebooks provide an interactive environment for exploring, analyzing, and visualizing data in the Microsoft Sentinel data lake and federated tables. With notebooks, you can write and execute code, document your workflow, and view results—all in one place. This makes it easy to perform data exploration, build advanced analytics solutions, and share insights with others. By leveraging Python and Apache Spark within Visual Studio Code, notebooks help you transform raw security data into actionable intelligence.
+Jupyter notebooks provide an interactive environment for exploring, analyzing, and visualizing data in the Microsoft Sentinel data lake and federated tables. With notebooks, you can write and execute code, document your workflow, and view results—all in one place. This all-in-one notebook environment makes it easy to perform data exploration, build advanced analytics solutions, and share insights with others. By leveraging Python and Apache Spark within Visual Studio Code, notebooks help you transform raw security data into actionable intelligence.
 
 This article shows you how to explore and interact with data lake data using Jupyter notebooks in Visual Studio Code. 
 
@@ -27,7 +27,8 @@ This article shows you how to explore and interact with data lake data using Jup
 
 To use notebooks in the Microsoft Sentinel data lake, you must first onboard to the data lake. If you haven't onboarded to the Sentinel data lake, see [Onboarding to Microsoft Sentinel data lake](./sentinel-lake-onboarding.md). If you have recently onboarded to the data lake, it may take some time until sufficient volume of data is ingested before you can create meaningful analyses using notebooks.
 
-### Permissions
+<a name="permissions"></a>
+### Required permissions for data lake notebooks
 
 Microsoft Entra ID roles provide broad access across all workspaces in the data lake. Alternatively you can grant access to individual workspaces using Azure RBAC roles. Users with Azure RBAC permissions to Microsoft Sentinel workspaces can run notebooks against those workspaces in the data lake tier. For more information, see [Roles and permissions in Microsoft Sentinel](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake).
 
@@ -56,7 +57,7 @@ The Microsoft Sentinel extension for Visual Studio Code (VS Code) is installed f
 1. Select the Extensions Marketplace in the left toolbar.
 1. Search for *Sentinel*.
 1. Select the **Microsoft Sentinel** extension and select **Install**.
-1. After the extension is installed, the Microsoft Sentinel ![Icon used to open the Microsoft Sentinel extension in Visual Studio Code](./media/notebook-jobs/sentinel-icon.png) icon appears in the left toolbar.
+1. After the extension is installed, the Microsoft Sentinel ![Image of the Microsoft Sentinel extension icon in the Visual Studio Code toolbar](./media/notebook-jobs/sentinel-icon.png) icon appears in the left toolbar.
 
   :::image type="content" source="./media/notebooks/install-Sentinel-extension.png" lightbox="./media/notebooks/install-sentinel-extension.png" alt-text="A screenshot showing the extension market place.":::  
 
@@ -73,7 +74,7 @@ After installing the Microsoft Sentinel extension, you can start exploring data 
 
 To sign in to the Microsoft Sentinel extension, follow these steps:
  
-1. Select the Microsoft Sentinel ![Icon used to open the Microsoft Sentinel extension in VS Code](./media/notebook-jobs/sentinel-icon.png) icon in the left toolbar.
+1. Select the Microsoft Sentinel ![Image of the Microsoft Sentinel extension icon used to open the extension in Visual Studio Code](./media/notebook-jobs/sentinel-icon.png) icon in the left toolbar.
 
 1. A dialog appears with the following text **The extension "Microsoft Sentinel" wants to sign in using Microsoft**. Select **Allow**.
 
@@ -95,12 +96,14 @@ To sign in to the Microsoft Sentinel extension, follow these steps:
 
 Once you sign in, the Sentinel extension displays a list of **Lake tables** and **Jobs** in the left pane. The tables are grouped by the database and category. Federated tables are displayed under the **Federated tables** category under **System tables**. Select a table to see the column definitions.
 
-For information on Jobs, see [Jobs and scheduling](#jobs-and-scheduling). For more information on federated tables, see [Using federated tables in the Microsoft Sentinel data lake](using-data-federation.md).
+For information about scheduling notebook jobs, see [Create and manage notebook jobs and schedules](#jobs-and-scheduling) in this article. For more information on federated tables, see [Using federated tables in the Microsoft Sentinel data lake](using-data-federation.md).
 
 :::image type="content" source="./media/notebooks/tables-and-jobs.png" lightbox="./media/notebooks/tables-and-jobs.png" alt-text="Screenshot of the Sentinel extension showing Lake tables and Jobs in the left pane and metadata for the selected table."::: 
 
 ## Create a new notebook
- 
+
+To create a new Jupyter notebook in Visual Studio Code, follow these steps:
+
 1. To create a new notebook, use one of the following methods.
 
   1. Enter *>* in the search box or press **Ctrl+Shift+P** and then enter *Create New Jupyter Notebook*.
@@ -188,10 +191,11 @@ The following example shows GitHub Copilot generating a code review.
 
 
 
-## Microsoft Sentinel Provider class
+<a name="microsoft-sentinel-provider-class"></a>
+## Use the Microsoft Sentinel Provider class
 
 To connect to the Microsoft Sentinel data lake, use the `MicrosoftSentinelProvider` class.
-The `MicrosoftSentinelProvider` class is part of the `sentinel_lake.providers` module and provides methods to interact with the data lake. To connect your Spark notebook to Microsoft Sentinel data lake tables, import the class and create an instance using a `spark` session:
+The `MicrosoftSentinelProvider` class is part of the `sentinel_lake.providers` module and provides methods to interact with the data lake. To connect your Spark notebook to Microsoft Sentinel data lake tables, import the class and create an instance using a `spark` session. The following code initializes the Sentinel Lake data provider so the notebook can query Microsoft Sentinel tables from Spark:
 
 ```python
 from sentinel_lake.providers import MicrosoftSentinelProvider

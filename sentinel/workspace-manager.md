@@ -4,8 +4,8 @@ description: Learn how to centrally manage multiple Microsoft Sentinel workspace
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 06/15/2026
-ms.custom: template-how-to, msecd-doc-authoring-1014
+ms.date: 07/01/2026
+ms.custom: template-how-to, msecd-doc-authoring-1016
 appliesto:
     - Microsoft Sentinel in the Azure portal
 ai-usage: ai-assisted
@@ -68,12 +68,13 @@ Member workspaces are the set of workspaces managed by workspace manager. Onboar
 1. Once successfully onboarded, the **Members** count increases and your member workspaces are reflected in the **Workspaces** tab.
     :::image type="content" source="media/workspace-manager/add-workspace-selected.png" alt-text="Screenshot shows the added workspaces and the Members count incremented to 2.":::
 
-## Create a group
+<a name="create-a-group"></a>
+## Create a workspace manager group
 
 Workspace manager groups allow you to organize workspaces together based on business groups, verticals, geography, etc. Use groups to pair content items relevant to the workspaces. 
 
 > [!TIP]
-> Make sure you have at least one active content item deployed in the central workspace. This allows you to select content items from the central workspace to be published in the member workspace(s) in the subsequent steps.
+> Make sure you have at least one active content item deployed in the central workspace. Having at least one active content item deployed allows you to select content items from the central workspace to be published in the member workspace(s) in the subsequent steps.
 >
 
 1. To create a group:
@@ -95,7 +96,7 @@ Workspace manager groups allow you to organize workspaces together based on busi
 
 <a name="publish-the-group-definition"></a>
 ## Publish the group definition
-At this point, the content items selected haven't been published to the member workspace(s) yet.
+After you create the group, the selected content items haven't been published to the member workspace(s) yet.
 
 > [!NOTE]
 > The publish action will fail if the [maximum publish operations](#known-limitations) are exceeded.
@@ -140,7 +141,8 @@ Be aware of the following limitations when using workspace manager:
 - Currently, deleting content residing in member workspace(s) centrally via workspace manager isn't supported.
 
 <a name="api-references"></a>
-### API reference
+<a name="api-reference"></a>
+### Workspace manager API reference
 - [Workspace Manager Assignment Jobs](/rest/api/securityinsights/workspace-manager-assignment-jobs)
 - [Workspace Manager Assignments](/rest/api/securityinsights/workspace-manager-assignments)
 - [Workspace Manager Configurations](/rest/api/securityinsights/workspace-manager-configurations)

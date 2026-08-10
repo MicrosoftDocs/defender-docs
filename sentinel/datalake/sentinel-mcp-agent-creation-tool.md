@@ -6,18 +6,18 @@ ms.author: pauloliveria
 author: poliveria
 ms.reviewer: macasgra
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #customer intent: As a security analyst, I want to know the different tools available to create AI agents
 ---
 
 # Create AI agents with agent creation collection
 
-The agent creation tool collection in the Microsoft Sentinel Model Context Protocol (MCP) server lets you create effective Microsoft Security Copilot agents. This article explains how to add the tool collection to your code editor and describes each tool and its parameters. Before you start, make sure you meet the prerequisites listed in the next section.
+The agent creation tool collection in the Microsoft Sentinel Model Context Protocol (MCP) server lets you create effective Microsoft Security Copilot agents. This article explains how to add the tool collection to your code editor and describes each tool and its parameters. Before you start, make sure you meet the [prerequisites](#prerequisites).
 
 ## Prerequisites
 
@@ -29,9 +29,9 @@ To access the agent creation tool collection, you must have the following prereq
 
 ## Add the agent creation collection
 
-First, set up the Microsoft Sentinel unified MCP server. Follow the steps for your [code editor or agent-building platform](sentinel-mcp-get-started.md#add-microsoft-sentinels-collection-of-mcp-tools).
+The Microsoft Sentinel unified MCP server exposes Sentinel tool collections, including the agent creation collection, to supported code editors and agent-building platforms. To get started, set up the unified MCP server. Follow the steps in [Get started with Microsoft Sentinel MCP server](sentinel-mcp-get-started.md#add-microsoft-sentinels-collection-of-mcp-tools) for your code editor or agent-building platform.
 
-Use the following endpoint URL to connect to the agent creation collection in your code editor:
+When you configure your code editor's MCP settings, use the following endpoint URL for the Security Copilot agent creation tool collection. Enter this URL as the MCP server endpoint to connect your editor to the agent creation tools:
 
 ```text
 https://sentinel.microsoft.com/mcp/security-copilot-agent-creation

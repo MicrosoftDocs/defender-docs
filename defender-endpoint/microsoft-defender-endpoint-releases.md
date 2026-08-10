@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 07/03/2026
+ms.date: 08/05/2026
 ai-usage: ai-assisted
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
@@ -29,6 +29,9 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|macOS |101.26062.0011  |August 2026 |- Release version: 20.126062.11.0<br>- Engine version: 1.1.26040.3000<br>- Signature version: 1.449.26.0 |[Release details and updates](#macos--august-2026--101260620011) |
+|Linux  |101.26062.0005  |August 2026 |- Release version: 30.126052.0012.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates](#linux--aug-2026--101260620005) |
+|Windows Antivirus |Platform 4.18.26070.9 / Engine 1.1.26070.7|July 2026|- Platform: 4.18.26070.9<br>- Engine: 1.1.26070.7<br>- Security intelligence: 1.457.11.0|[Release details and updates](#windows-antivirus--july-2026--platform-418260709--engine-11260707)|
 |macOS |101.26062.0009  |July 2026 |- Release version: 20.126062.9.0<br>- Engine version: 1.1.26050.3000<br>- Signature version: 1.455.265.0 |[Release details and updates](#macos--july-2026--101260620009) |
 |Android |1.0.9107.0101|July 2026|- Build: 1.0.9107.0101<br>- Release: July 21, 2026|[Release details and updates](#android--july-2026--platform-1091070101)|
 |iOS |1.1.79080103|July 2026|- Build: 1.1.79080103<br>- Release: July 20, 2026|[Release details and updates](#ios--july-2026--platform-version-1179080103)|
@@ -222,6 +225,21 @@ To share feedback, open Defender for Endpoint on macOS and go to **Help > Send f
 To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device.
 
 For known issues, see [macOS known issues](#macos-known-issues).
+
+### macOS | August-2026 | 101.26062.0011
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 20.126062.11.0  | 1.1.26040.3000 | 1.449.26.0        |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|----------------|
+| Security for AI | Expanded [local AI agent discovery (Preview)](local-agent-discovery-overview.md) on macOS to include visibility into Model Context Protocol (MCP) server configurations. |
+| General      | Performance improvements and bug fixes. |
 
 ### macOS | July-2026 | 101.26062.0009
 
@@ -518,6 +536,22 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 ### Linux known issues
 
 [!INCLUDE [Linux 101.26012.0007 known issue](includes/linux-build-issue.md)]
+
+### Linux | Aug 2026 | 101.26062.0005
+
+#### Release details
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|30.126052.0012.0 |1.1.26040.3001 |1.449.136.0 |
+
+#### Enhancements and features
+
+|Feature area | Update summary |
+|--------------|---------------|
+|Bug fix | Resolved an issue that could cause on-demand antivirus scans (quick, full, and custom) to take longer than expected or appear unresponsive in certain environments. Protection capabilities remained unaffected while scans were in progress. |
+|Security | Engine signature verification is now enabled by default for new installations and upgrades. Defender for Endpoint verifies the engine's digital signature before loading it and doesn't load engines that fail verification. Legacy engine signature verification settings are deprecated. |
+|Visibility | Resolved an issue where the `mdatp health` status could incorrectly show a device as healthy after it was offboarded. |
 
 ### Linux | July 2026 | 101.26052.0012
 
@@ -1128,6 +1162,27 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 
 For more information about Microsoft Defender Antivirus updates, see [Microsoft Defender Antivirus security intelligence product updates and support](microsoft-defender-antivirus-updates.md).
 
+### Windows Antivirus | July 2026 | Platform 4.18.26070.9 | Engine 1.1.26070.7
+
+#### Release details
+
+| Component | Version | Date |
+| -------- | -------- | -------- |
+| Platform | 4.18.26070.9 | August 5, 2026 |
+| Engine | 1.1.26070.7 | August 5, 2026 |
+| Security intelligence<sup>1</sup> | 1.457.11.0 | August 5, 2026 |
+| Support phase | Security and Critical Updates | - |
+
+<sup>1</sup>The security intelligence version listed here is relevant to the listed engine release. Newer versions of security intelligence are released regularly. For more information, see
+[Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/wdsi/defenderupdates).
+
+#### Enhancements and features
+
+- Improved archive scanning performance to scale service memory limits dynamically based on the number of logical cores.
+- Improved cache builds on devices with Lunar Lake CPUs by using `TrustedImageIdentifier`.
+- Fixed an issue where files that were already excluded were still submitted to the cloud protection service for rescanning, only to return the same result.
+- Fixed HTTPS connection stalls under Network Protection Block mode caused by dropped TCP FIN segments.
+
 ### Windows Antivirus | June 2026 | Platform 4.18.26060.3008 | Engine 1.1.26060.3008
 
 #### Release details
@@ -1222,6 +1277,3 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 - Fixed NisSrv self-healing when the service crosses memory thresholds.
 - Improved encrypted PDF scanning.
 - Fixed `Get-MpPerformanceReport` JSON parsing failures.
-
-
-

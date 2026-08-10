@@ -15,13 +15,13 @@ ms.collection:
 - m365initiative-defender-office365
 - tier3
 keywords: automated incident response, investigation, remediation, threat protection
-description: See how email analysis in investigations work in Microsoft Defender for Office 365.
+description: Learn how automated investigations in Microsoft Defender for Office 365 analyze original and related emails, cluster suspicious messages, and determine threat status for remediation.
 ms.custom:
-- msecd-doc-authoring-1014
+- msecd-doc-authoring-1016
 - air
 - seo-marvel-mar2020
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -46,14 +46,14 @@ The automated investigation's email analysis identifies email clusters using att
 
 Email clustering analysis via similarity and malicious entity queries ensures that email problems are fully identified and cleaned up, even if only one email from an attack gets identified. You can use links from the email cluster details side panel views to open the queries in Explorer or Advanced Hunting to perform deeper analysis and change the queries if needed. Opening and editing the queries in Explorer or Advanced Hunting enables manual refinement and remediation if you find the email cluster's queries too narrow or too broad (including unrelated email).
 
-Automated investigation email analysis includes the following additional enhancements.
+Email clustering analysis also handles SecOps mailboxes, phishing simulations, pending action updates, and evidence display.
 
 ## AIR investigation ignores advanced delivery items (SecOps mailboxes and phishing simulation messages)
 
-During email clustering analysis, all clustering queries ignore SecOps mailboxes and phishing simulation URLs that are configured in the Advanced delivery policy (the policy that designates SecOps mailboxes and third-party phishing simulations as trusted). These items aren't shown in the query. This approach keeps the clustering attributes simple and easy to read. Messages sent to SecOps mailboxes are skipped during threat analysis. Messages with phishing simulation URLs are also skipped. None of these excluded messages are removed during remediation.
+During email clustering analysis, all clustering queries ignore SecOps mailboxes and phishing simulation URLs that are configured in the Advanced delivery policy (the policy that designates SecOps mailboxes and third-party phishing simulations as trusted). These items aren't shown in the query. Excluding these trusted items keeps the clustering attributes simple and easy to read. Messages sent to SecOps mailboxes are skipped during threat analysis. Messages with phishing simulation URLs are also skipped. None of these excluded messages are removed during remediation.
 
 > [!NOTE]
-> When opening an email cluster to view it in Explorer from the email cluster details, the phishing simulation and SecOps mailbox filters are be applied in Explorer, but aren't shown. If you change the Explorer filters, dates, or refresh the query within the page, then the phishing simulation/SecOps filter exclusions are removed, and matching email messages are shown once again. If you refresh the Explorer page using the browser refresh function, the original query filters are re-loaded, including the phishing simulation/SecOps filters, but removing any subsequent changes you had made.
+> When you open an email cluster in Explorer from the cluster details, the phishing simulation and SecOps mailbox filters are applied but aren't shown. If you change the Explorer filters, dates, or refresh the query within the page, then these filter exclusions are removed. Matching email messages are shown once again. If you refresh the Explorer page by using the browser refresh function, the original query filters reload. The reload includes the phishing simulation/SecOps filters, but removes any later changes you made.
 
 ## AIR updates pending email action status
 
@@ -63,7 +63,7 @@ To ensure investigation actions are up to date, investigations that contain pend
 
 - When the email cluster data changes, it updates the threat and latest delivery location counts.
 - If email or email cluster with pending actions no longer are in the mailbox, then the pending action is canceled, and the malicious email/cluster considered remediated.
-- Once all the investigation's threats have been remediated or canceled as previously described, then the investigation transitions to a remediated state and the original alert resolved.
+- Once all the investigation's threats have been remediated or their pending actions have been canceled, the investigation transitions to a remediated state and the original alert is resolved.
 
 ## The display of incident evidence for email and email clusters
 

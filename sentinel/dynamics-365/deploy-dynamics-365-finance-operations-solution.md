@@ -4,8 +4,8 @@ description: Learn how to deploy the Microsoft Sentinel solution for Business Ap
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 06/12/2026
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.date: 07/02/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 
@@ -15,9 +15,9 @@ ai-usage: ai-assisted
 
 # Deploy for Dynamics 365 Finance and Operations
 
-This article describes how to deploy the Dynamics 365 Finance and Operations content within the Microsoft Sentinel solution for Microsoft Business Applications. The solution monitors and protects your Dynamics 365 Finance and Operations system: It collects audits and activity logs from the Dynamics 365 Finance and Operations environment, and detects threats, suspicious activities, illegitimate activities, and more. [Dynamics 365 Finance and Operations solution overview](dynamics-365-finance-operations-solution-overview.md).
+This article shows how to deploy Dynamics 365 Finance and Operations content in the Microsoft Sentinel solution for Business Applications. The solution helps monitor and protect your Dynamics 365 Finance and Operations system. It collects audit and activity logs and detects threats and suspicious actions. For more details, see the [Dynamics 365 Finance and Operations solution overview](dynamics-365-finance-operations-solution-overview.md).
 
-Before you start, make sure you meet the [prerequisites](#prerequisites), including a configured Microsoft Sentinel workspace and Dynamics 365 Finance version 10.0.33 or above.
+Before you start, review the [prerequisites](#prerequisites). You need a Microsoft Sentinel workspace and Dynamics 365 Finance version 10.0.33 or later.
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ Before you begin, verify that:
 
 ## Collect the environment URL from your Finance and Operations cloud environment
 
-To find and confirm the environment URL and version information for your Finance and Operations environment, complete the following steps:
+To find the environment URL and version for your Finance and Operations environment, follow these steps:
 
 1. Open your Dynamics 365 project in [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com) and select the specific Finance and Operations environment you want to monitor with Microsoft Sentinel.
 1. In the **Environment version information** section, make sure that you're using application release version 10.0.33 or above.
@@ -48,10 +48,10 @@ To find and confirm the environment URL and version information for your Finance
 
 ## Deploy the solution and enable the data connector
 
-To install the Microsoft Business Applications solution from Content hub, complete the following steps:
+To install the Microsoft Business Applications solution from Content hub, follow these steps:
 
-1. Navigate to the **Microsoft Sentinel** service.
-1. Select **Content hub**, and in the search bar, search for *Microsoft Business Applications*.
+1. Go to the **Microsoft Sentinel** service.
+1. Select **Content hub**. In the search bar, search for *Microsoft Business Applications*.
 1. Select **Microsoft Business Applications**.
 1. Select **Install**.
 

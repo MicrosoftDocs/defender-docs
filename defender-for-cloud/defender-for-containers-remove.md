@@ -2,15 +2,16 @@
 title: Disable and remove Defender for Containers
 description: Learn how to disable Microsoft Defender for Containers and remove its components for Kubernetes environments running on Azure, AWS, and Google Cloud.
 ms.topic: how-to
-ms.date: 01/25/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Disable and remove Defender for Containers
 
 This article explains how to disable Microsoft Defender for Containers and remove its components by environment.
 
-Turning off the Defender for Containers plan or disabling automatic provisioning stops future deployments, but doesn't uninstall Defender components that are already deployed to clusters. Those components are removed separately.
+Turning off the Defender for Containers plan or disabling automatic provisioning stops future deployments, but doesn't uninstall Defender components that are already deployed to clusters. Defender components already deployed to clusters are removed separately.
 
 > [!IMPORTANT]
 > Removing Defender for Containers stops protection for your clusters. Make sure you have alternative security measures in place before you proceed.
@@ -34,6 +35,8 @@ After you remove Defender for Containers components from an AKS cluster:
 
 ## Disable Defender for Containers plan
 
+To disable the Defender for Containers plan for the subscription that contains your AKS clusters:
+
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
@@ -46,7 +49,11 @@ After you remove Defender for Containers components from an AKS cluster:
 
 ## Remove Defender extensions from AKS clusters
 
+After disabling the plan, remove the Defender-related components from each AKS cluster.
+
 ### Remove the Defender for Containers profile from the AKS cluster
+
+Run the following command to remove the Defender for Containers profile from the AKS cluster:
 
 ```azurecli
 az aks update \
@@ -57,6 +64,8 @@ az aks update \
 
 ### Disable Azure Policy add-on
 
+If Azure Policy was enabled for this cluster, run the following command to disable the add-on:
+
 ```azurecli
 az aks disable-addons \
   --addons azure-policy \
@@ -66,7 +75,11 @@ az aks disable-addons \
 
 ## Verify removal
 
+Use the following checks to confirm that Defender for Containers has been fully removed from your AKS cluster.
+
 ### Check AKS cluster pods
+
+Run the following command to check all namespaces for remaining Defender pods and confirm that the uninstall completed successfully:
 
 ```bash
 kubectl get pods -A | grep defender
@@ -75,6 +88,8 @@ kubectl get pods -A | grep defender
 No resources should be returned.
 
 ### Verify plan status
+
+Run the following command to confirm that the Containers plan is disabled for the subscription:
 
 ```azurecli
 az security pricing show --name 'Containers'
@@ -104,6 +119,8 @@ Defender for Containers deploys components to EKS clusters by using Azure Arc-en
 
 ### Remove the Defender extension
 
+Run the following command to remove the Defender extension from the connected EKS cluster:
+
 ```azurecli
 az k8s-extension delete \
   --name microsoft.azuredefender.kubernetes \
@@ -114,6 +131,8 @@ az k8s-extension delete \
 ```
 
 ### Remove the Azure Policy extension (if installed)
+
+If the Azure Policy extension is installed on the EKS cluster, run the following command to remove it:
 
 ```azurecli
 az k8s-extension delete \
@@ -137,6 +156,8 @@ az connectedk8s delete \
 ```
 
 ## Disable Defender for Containers plan on the AWS connector
+
+To disable the Defender for Containers plan on the AWS connector:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -168,7 +189,7 @@ If you no longer want Defender for Cloud to monitor your AWS account:
 
 ## Remove AWS resources created for runtime protection (optional)
 
-Remove these resources only if runtime threat protection for EKS was enabled and you no longer use Defender for Containers for that cluster.
+Remove the S3 bucket, SQS queue, and Kinesis Data Firehose delivery stream only if runtime threat protection for EKS was enabled and you no longer use Defender for Containers for that cluster.
 
 - [Delete the S3 bucket created for the cluster](https://docs.aws.amazon.com/AmazonS3/latest/userguide/delete-bucket.html).
 
@@ -177,7 +198,7 @@ Remove these resources only if runtime threat protection for EKS was enabled and
 - [Delete the Kinesis Data Firehose delivery stream created for the cluster](https://docs.aws.amazon.com/firehose/latest/APIReference/API_DeleteDeliveryStream.html).
 
 > [!NOTE]
-> These resources are created per cluster. If you remove them while runtime protection is still enabled, data collection can stop.
+> The S3 bucket, SQS queue, and Kinesis Data Firehose delivery stream are created per cluster. If you remove them while runtime protection is still enabled, data collection can stop.
 
 ## Remove AWS IAM roles and identity providers (optional)
 
@@ -198,6 +219,8 @@ Use the AWS console or CLI to delete the following roles if they exist:
 
 ### Check Azure Arc extensions
 
+Run the following command to list the installed Arc extensions for your cluster and confirm that the Defender extension is no longer present:
+
 ```azurecli
 az k8s-extension list \
   --cluster-type connectedClusters \
@@ -208,6 +231,8 @@ az k8s-extension list \
 Confirm that `microsoft.azuredefender.kubernetes` is not listed.
 
 ### Check EKS cluster pods
+
+Run the following command to verify that no Defender pods remain in the `mdc` namespace on your EKS cluster:
 
 ```bash
 kubectl get pods -n mdc
@@ -231,7 +256,11 @@ After you remove Defender for Containers components from a GKE cluster:
 
 ## Remove Defender extensions from GKE clusters
 
+Use the following steps to remove Defender-related extensions from the GKE cluster.
+
 ### Remove the Defender extension
+
+Run the following command to delete the Microsoft Defender for Containers extension from your Arc-connected GKE cluster:
 
 ```azurecli
 az k8s-extension delete \
@@ -243,6 +272,8 @@ az k8s-extension delete \
 ```
 
 ### Remove the Azure Policy extension (if installed)
+
+Azure Policy is installed as a separate Arc extension on the cluster. If it was deployed, delete it to fully remove Defender-related cluster integrations:
 
 ```azurecli
 az k8s-extension delete \
@@ -267,6 +298,8 @@ az connectedk8s delete \
 
 ## Disable Defender for Containers plan on the GCP connector
 
+To disable the Defender for Containers plan for the GCP connector:
+
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
@@ -281,6 +314,8 @@ az connectedk8s delete \
 
 ## Delete the GCP connector (optional)
 
+If you no longer need the GCP connector, use the following steps to delete it:
+
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
 1. Find your GCP connector.
@@ -293,7 +328,7 @@ az connectedk8s delete \
 
 ## Remove GCP resources created for runtime protection (optional)
 
-Remove these resources only if runtime threat protection for GKE was enabled and you no longer use Defender for Containers for that project.
+Remove the Pub/Sub topic and subscription and the Cloud Logging sink only if runtime threat protection for GKE was enabled and you no longer use Defender for Containers for that project.
 
 - Delete the Pub/Sub topic and subscription that use the `MicrosoftDefender-` prefix.
 
@@ -315,11 +350,13 @@ Delete the following custom roles:
 * `MDCGkeClusterWriteRole`
 
 > [!WARNING]
-> Only delete the `containers` and `containers-streams` OIDC workload identity pool providers if you are removing **all** Defender for Cloud components. These are shared components. Additionally, ensure no other non-Defender services are using the `logging.googleapis.com` API before disabling it.
+> Only delete the `containers` and `containers-streams` OIDC workload identity pool providers if you are removing **all** Defender for Cloud components. The `containers` and `containers-streams` providers are shared components. Additionally, ensure no other non-Defender services are using the `logging.googleapis.com` API before disabling it.
 
 ## Verify removal
 
 ### Check Azure Arc extensions
+
+Run the following command to confirm that the Defender extension is no longer installed on the GKE cluster:
 
 ```azurecli
 az k8s-extension list \
@@ -331,6 +368,8 @@ az k8s-extension list \
 Confirm that `microsoft.azuredefender.kubernetes` is not listed.
 
 ### Check GKE cluster pods
+
+Run the following command to verify that the `mdc` namespace no longer contains any Defender pods on your GKE cluster:
 
 ```bash
 kubectl get pods -n mdc
@@ -424,6 +463,8 @@ az k8s-extension list \
 Confirm that `microsoft.azuredefender.kubernetes` is not listed.
 
 ### Check Arc-enabled cluster pods
+
+Run the following command to verify that no Defender pods remain in the `mdc` namespace on your Arc-enabled cluster:
 
 ```bash
 kubectl get pods -n mdc

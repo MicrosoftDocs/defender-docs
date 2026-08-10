@@ -5,7 +5,7 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: reference
-ms.date: 03/12/2026
+ms.date: 08/07/2026
 
 #Customer intent: As a security analyst, I want to select specific sets of Windows security events to ingest into Microsoft Sentinel, so that I can efficiently monitor and detect potential threats while managing data volume.
 
@@ -14,6 +14,8 @@ ms.date: 03/12/2026
 # Windows security event sets that can be sent to Microsoft Sentinel
 
 When ingesting security events from Windows devices using the [Windows Security Events data connector](data-connectors-reference.md#windows-security-events-via-ama) (including the legacy version), you can choose which events to collect from among the following sets:
+
+The Windows Security Events via AMA connector writes these events to the `SecurityEvent` table, which is queried by many built-in Windows security analytics rules. The Windows Forwarded Events connector writes forwarded events to `WindowsEvent` instead. If forwarded events don't trigger a built-in rule, verify which table the rule queries, and either use the Windows Security Events via AMA connector or adapt the rule for `WindowsEvent`.
 
 - **All events** - Collects the full, unfiltered set of events from the Windows Security event log and the AppLocker event log channels. The Security log (`Windows Logs > Security` in Event Viewer) records auditing events such as logons, privilege use, and policy changes. The AppLocker logs (`Application and Services Logs > Microsoft > Windows > AppLocker`) cover application execution and installation policies. This set does *not* include events from other Windows event logs such as Application, System, or Setup.
 

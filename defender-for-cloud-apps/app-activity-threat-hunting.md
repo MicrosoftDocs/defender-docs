@@ -1,10 +1,12 @@
 ---
 title: Hunt for threats in app activities | Microsoft Defender for Cloud Apps
-ms.date: 08/18/2025
+ms.date: 08/07/2026
 ms.topic: how-to
 description: Learn how app governance in Microsoft Defender for Cloud Apps helps you hunt for resources accessed and activities carried out by apps in your environment.
 ms.reviewer: shragar
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1015
+ai-usage: ai-assisted
+#customer intent: As a security analyst, I want to hunt for suspicious app activities and accessed resources so that I can investigate and remediate risky apps.
 ---
 
 # Hunt for threats in app activities
@@ -72,7 +74,7 @@ When using the **Advanced hunting** page to investigate data from app governance
 
 - App governance data processing can take several hours longer to complete. Because of this delay, it might not cover recent app activity that is available on Advanced Hunting.
 
-- The provided Advanced hunting queries are set to show only 1k results. While you can edit a query to show more results, Advanced Hunting will still apply a maximum limit of 10k results. App governance doesn't have this limit.
+- The advanced hunting queries return up to 1,000 results by default. You can edit the queries to return up to 100,000 rows, the advanced hunting limit. If the results exceed 64 MB, advanced hunting returns partial results and displays a notification. These limits don't apply to app governance.
 
 ## Next steps
 

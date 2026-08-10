@@ -4,7 +4,7 @@ description: Learn how to use Microsoft Sentinel graph to query, visualize, and 
 ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: dandennis
-ms.date: 07/29/2026
+ms.date: 08/07/2026
 ms.topic: how-to
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-graph
@@ -29,9 +29,11 @@ Use Microsoft Sentinel graph to query, visualize, and interact with graphs to ob
 
 To access the graph experience in Microsoft Sentinel, sign in to the Microsoft Defender portal, select **Microsoft Sentinel** > **Graphs** from the navigation pane.
 
-The Sentinel Graph management page lists all custom graphs you created using the Visual Studio Code Sentinel extension. If you haven't created a custom graph, see [Create a custom graph](./create-custom-graphs.md) to get started.
+The Sentinel Graph management page lists custom graphs that you created with the Microsoft Sentinel extension for Visual Studio Code and materialized by publishing a graph job. A graph created only in an interactive notebook session isn't available on this page. If you haven't published a custom graph, see [Create a custom graph](./create-custom-graphs.md) to get started.
 
 If you already created custom graphs, the **Graphs** page in Microsoft Sentinel displays all available custom graphs. View an overview of each custom graph by selecting the **...** menu on any graph tile.
+
+Graphs published by an on-demand graph job are retained for 30 days and then deleted. Scheduled graph jobs rebuild graphs on their configured refresh schedules. If a graph is missing or its data is stale, review the graph job status and schedule in the Microsoft Sentinel extension for Visual Studio Code.
 
 :::image type="content" source="media/graph-visualization/graphs-landing-page.png" alt-text="Screenshot showing how to access Sentinel graph from the Microsoft Sentinel navigation pane." lightbox="media/graph-visualization/graphs-landing-page.png":::
 
@@ -39,6 +41,8 @@ If you already created custom graphs, the **Graphs** page in Microsoft Sentinel 
 ## Query a custom graph
 
 Select **Query graph** on the graph tile to view the graph query page.
+
+Graph queries are billed under the Microsoft Sentinel graph meter. For more information, see [Graph charges](../billing.md#graph-charges).
 
 View the schema to understand the graph ontology – nodes, edges, and their properties available to query.
 

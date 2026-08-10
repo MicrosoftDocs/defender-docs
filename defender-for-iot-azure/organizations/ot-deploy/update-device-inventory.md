@@ -1,9 +1,9 @@
 ---
-title: Verify and update detected device inventory - Microsoft Defender for IoT
+title: Verify and Update Detected Device Inventory
 description: Learn how to fine-tune your newly detected device inventory on an OT sensor, such as updating device types and properties, merging devices as needed, and more.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -17,13 +17,15 @@ This article is one in a series of articles describing the [OT monitoring deploy
 
 Before performing the procedures in this article, make sure that you have:
 
-- An OT sensor with [OT sensor software installed](install-software-ot-sensor.md), [configured, and activated](activate-deploy-sensor.md), with device data detected.
+- An OT sensor with [OT sensor software installed](install-software-ot-sensor.md) and [configured and activated](activate-deploy-sensor.md), with device data detected.
 
 - Access to your OT sensor as **Security Analyst** or **Admin** user. For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](../roles-on-premises.md).
 
 Verifying and updating the device inventory is performed by your deployment teams.
 
 ## View the device inventory on your OT sensor
+
+To view the device inventory on your OT sensor, perform the following steps:
 
 1. Sign into your OT sensor and select the **Device inventory** page.
 
@@ -33,7 +35,8 @@ Verifying and updating the device inventory is performed by your deployment team
 
 1. Review the devices listed in the device inventory, and identify the devices whose device properties must be edited.
 
-## Edit device properties per device
+<a name="edit-device-properties-per-device"></a>
+## Edit properties for individual devices
 
 For each device where you need to edit device properties:
 
@@ -58,7 +61,7 @@ For each device where you need to edit device properties:
 
 ## Enhance device data (optional)
 
-You might want to increase device visibility and enhance device data with more details than the default data detected.
+You might want to increase device visibility and enhance device data with more details than the default device data detected by the OT sensor.
 
 - To increase device visibility to Windows-based devices, use the Defender for IoT [Windows Management Instrumentation (WMI) tool](../detect-windows-endpoints-script.md).
 

@@ -5,11 +5,13 @@ ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: krishsa
 ms.topic: how-to
-ms.date: 07/09/2025
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security analyst, I want to install and configure data connectors in my SIEM platform so that I can ingest and analyze data from various sources for threat detection and response.
@@ -54,7 +56,7 @@ After you or someone in your organization installs the solution that includes th
 
 1. Follow the steps outlined in the **Configurations** section for your data connector.
   
-   For some connectors, find more specific configuration information in the **Collect data** section in the Microsoft Sentinel documentation.
+   For some connectors, find more specific configuration information in the **Collect data** section of the relevant connector article in [Find your Microsoft Sentinel data connector](data-connectors-reference.md).
 
    - [Connect Microsoft Sentinel to Azure, Windows, Microsoft, and Amazon services](connect-azure-windows-microsoft-services.md)
    - [Data connector prerequisites](data-connectors-reference.md#windows-security-events-via-ama)
@@ -102,11 +104,11 @@ After you configure the data connector, it might take some time for the data to 
 After you enable the connector successfully, the connector begins to stream data to the table schemas related to the data types you configured.
 
 In the Defender portal, query data in the **Advanced hunting** page, or in the Azure portal, query data in the **Logs** page.  
-Navigate to **Data lake explorer** , **KQL queries** to query data in the data lake. For more information, see [KQL and the Microsoft Sentinel data lake](datalake/kql-overview.md).
+In the Defender portal, navigate to **Data lake explorer** > **KQL queries** to query data in the data lake. For more information, see [KQL and the Microsoft Sentinel data lake](datalake/kql-overview.md).
 
 ## Find support for a data connector
 
-Both Microsoft and other organizations author Microsoft Sentinel data connectors. Find the support contact from data connector page in Microsoft Sentinel.
+Both Microsoft and other organizations author Microsoft Sentinel data connectors. Find the support contact on the connector's details page in Microsoft Sentinel.
 
 1. In the Microsoft Sentinel **Data connectors** page, select the relevant connector.
 1. To access support and maintenance for the connector, use the support contact link in the **Supported by** field on the side panel for the connector. 

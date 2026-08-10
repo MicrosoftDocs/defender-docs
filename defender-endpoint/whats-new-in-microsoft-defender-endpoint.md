@@ -31,6 +31,7 @@ Learn more about [Preview features](/defender-xdr/preview).
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
 |Feature |[Vulnerability assessment for Microsoft Store applications](/defender-vulnerability-management/tvm-software-inventory#microsoft-store-applications) |Preview |You can now monitor vulnerabilities on devices running Microsoft Store applications, including Microsoft Teams, Mozilla Firefox, WhatsApp, Slack, Dropbox, DuckDuckGo, Dell Command, HP Smart, HP Support Assistant, Dell SupportAssist for Home PCs, and NVIDIA Control Panel (see [Microsoft Store applications](/defender-vulnerability-management/tvm-software-inventory#microsoft-store-applications) for the full list). Use the **Software evidence** area in the software page to view the file path for the vulnerable application, along with a suggested query showing the vulnerable app, version, and file location. |
+|Release - macOS |Build 101.26062.0011 |GA |Release version 20.126062.11.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--august-2026--101260620011).|
 
 ## July 2026
 

@@ -4,8 +4,8 @@ description: Learn how to inventory QRadar detection rules, map them to Microsof
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 06/15/2026
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.date: 07/01/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 #Customer intent: As a security engineer, I want to migrate QRadar detection rules to Microsoft Sentinel so that analysts can leverage machine learning analytics for more efficient threat detection and incident response.
@@ -14,7 +14,7 @@ ai-usage: ai-assisted
 
 # Migrate QRadar detection rules to Microsoft Sentinel
 
-This article describes how to identify, compare, and migrate your QRadar detection rules to Microsoft Sentinel built-in rules.
+This article describes how to identify, compare, and migrate your QRadar detection rules to Microsoft Sentinel built-in rules. It walks you through inventorying your existing detections, comparing rule terminology between QRadar and Microsoft Sentinel, and choosing the right migration path—whether that's adopting built-in analytics templates from the Content Hub, converting queries with an online tool, or writing custom Kusto Query Language (KQL) queries. By the end, you'll have a structured approach for migrating your detection rules while taking advantage of Microsoft Sentinel's machine learning analytics.
 
 ## Identify and migrate rules
 
@@ -29,7 +29,7 @@ Microsoft Sentinel uses machine learning analytics to create high-fidelity and a
 - Confirm connected data sources and review your data connection methods. Revisit data collection conversations to ensure data depth and breadth across the use cases you plan to detect.
 - Explore community resources such as the [SOC Prime Threat Detection Marketplace](https://my.socprime.com/platform-overview/) to check whether your rules are available.
 - Consider whether an online query converter such as Uncoder.io might work for your rules. 
-- If rules aren't available or can't be converted, they need to be created manually, using a KQL query. Review the [rules mapping](#map-and-compare-rule-samples) to create new queries. 
+- If rules aren't available or can't be converted, they need to be created manually, using a KQL query. Review the samples in the [Map and compare rule samples](#map-and-compare-rule-samples) section to create new queries. 
 
 Learn more about [best practices for migrating detection rules](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/best-practices-for-migrating-detection-rules-from-arcsight/ba-p/2216417).
 
@@ -64,7 +64,7 @@ Learn more about [best practices for migrating detection rules](https://techcomm
 
         1. **Identify your rule criteria and logic**. At this stage, you may want to use rule templates as samples for how to construct your KQL queries as samples for how to construct your KQL queries.
 
-            Consider filters, correlation rules, active lists, reference sets, watchlists, detection anomalies, aggregations, and so on. You might use references provided by your legacy SIEM to understand [how to best map your query syntax](#map-and-compare-rule-samples).            
+            Consider filters, correlation rules, active lists, reference sets, watchlists, detection anomalies, aggregations, and so on. You might use references provided by your legacy SIEM to understand how to best map your query syntax. For examples, see the [Map and compare rule samples](#map-and-compare-rule-samples) section.            
 
         1. **Identify the trigger condition and rule action, and then construct and review your KQL query**. When reviewing your query, consider KQL optimization guidance resources.
 
@@ -81,7 +81,7 @@ For more information about Microsoft Sentinel analytics rules and KQL, see the f
 
 ## Compare rule terminology
 
-This table helps you to clarify the concept of a rule in Microsoft Sentinel compared to QRadar. Microsoft Sentinel rule types include scheduled queries, Fusion, Microsoft Security, and Machine Learning (ML) Behavior Analytics.
+This table helps you to clarify the concept of a rule in Microsoft Sentinel compared to QRadar. Microsoft Sentinel rule types include scheduled queries, Fusion (which automatically correlates alerts from multiple data sources into incidents using machine learning), Microsoft Security, and Machine Learning (ML) Behavior Analytics.
 
 | |QRadar |Microsoft Sentinel |
 |---------|---------|---------|
@@ -92,7 +92,7 @@ This table helps you to clarify the concept of a rule in Microsoft Sentinel comp
 
 ## Map and compare rule samples
 
-Use these samples to compare and map rules from QRadar to Microsoft Sentinel in various scenarios.
+Use these samples to compare and map rules from QRadar to Microsoft Sentinel in various scenarios. The sample queries are written in Kusto Query Language (KQL), the query language used by Microsoft Sentinel.
 
 |Rule  |Syntax |Sample detection rule (QRadar)  |Sample KQL query  |Resources  |
 |---------|---------|---------|---------|---------|
@@ -331,7 +331,7 @@ Here's a sample of the negative conditions rule based on the two previously defi
 
 ### Negative conditions example (KQL)
 
-Here's the negative conditions rule with a `rightanti` join in KQL.
+Here's the negative conditions rule in KQL. This query uses a `rightanti` join, which returns only records from the right side (Test6) that have no matching record on the left side (Test2). This approach models a negative condition by surfacing events that occur without a corresponding preceding event.
 
 ```kusto
 let spanoftime = 10m;
@@ -435,6 +435,8 @@ Here's the sample rule in QRadar.
 
 <a name="log-source-example-kql"></a>
 ### Log source example (KQL)
+
+Here's the log source tests rule in KQL.
 
 ```kusto
 OfficeActivity

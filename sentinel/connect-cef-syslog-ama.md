@@ -5,8 +5,8 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.custom: linux-related-content, msecd-doc-authoring-1014
-ms.date: 06/15/2026
+ms.custom: linux-related-content, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
@@ -20,7 +20,7 @@ ai-usage: ai-assisted
 
 # Ingest syslog and CEF messages to Microsoft Sentinel with the Azure Monitor Agent
 
-This article shows you how to use the **Syslog via AMA** and **Common Event Format (CEF) via AMA** connectors to filter and ingest syslog and CEF messages from Linux machines, network devices, and security appliances. Before you begin, review the [Prerequisites](#prerequisites) section for required permissions, agents, and log forwarder setup. To learn more about these data connectors, see [Syslog and Common Event Format (CEF) via AMA connectors for Microsoft Sentinel](cef-syslog-ama-overview.md). 
+This article shows you how to use the **Syslog via AMA** and **Common Event Format (CEF) via AMA** connectors to filter and ingest syslog and CEF messages from Linux machines, network devices, and security appliances. Before you begin, make sure you have the required permissions, agents, and log forwarder setup as described in the [Prerequisites](#prerequisites). To learn more about these data connectors, see [Syslog and Common Event Format (CEF) via AMA connectors for Microsoft Sentinel](cef-syslog-ama-overview.md). 
 
 > [!NOTE]
 > Container Insights supports automatic collection of syslog events from Linux nodes in your AKS clusters. Learn more in [Syslog collection with Container Insights](/azure/azure-monitor/containers/container-insights-syslog).
@@ -97,6 +97,8 @@ Select the appropriate tab for instructions.
 
 # [Azure or Defender portal](#tab/portal)
 
+Use the Azure or Defender portal to create a data collection rule (DCR) and install the Azure Monitor Agent on your log forwarder.
+
 ### Create data collection rule (DCR)
 
 To get started, open either the **Syslog via AMA** or **Common Event Format (CEF) via AMA** data connector in Microsoft Sentinel and create a data collection rule (DCR).
@@ -159,6 +161,8 @@ After you complete all the tabs, review what you entered and create the data col
 1. Select **Refresh** on the connector page to see the DCR displayed in the list.
 
 # [Logs Ingestion API](#tab/api)
+
+Use the Logs Ingestion API to install the Azure Monitor Agent, create the data collection rule, and associate the rule with your log forwarder.
 
 ### Install the Azure Monitor Agent
 

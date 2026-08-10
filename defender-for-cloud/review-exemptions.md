@@ -2,7 +2,8 @@
 title: Review and manage recommendation exemptions
 description: Learn how to review, manage, and delete recommendation exemptions in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 04/29/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a user, I want to review and manage exempted resources in Microsoft Defender for Cloud so that I can keep my security posture accurate.
 ai-usage: ai-assisted
 ---
@@ -13,12 +14,14 @@ In Microsoft Defender for Cloud, you can [exempt protected resources from Defend
 
 ## Review exempted resources in the portal
 
-When you exempt a resource, it doesn't prompt security recommendations. You can review and manage exempted resources in the Defender for Cloud portal.
+When you exempt a resource, the resource no longer triggers security recommendations. You can review and manage exempted resources in the Defender for Cloud portal.
 
 > [!TIP]
 > As of January 2026, exemptions are managed from a central location. Go to **Defender for Cloud** > **Environment settings** > **Exemptions box**, or go to **Azure Policy** > **Exemptions**. If you can't find previously visible exemptions, check that you're viewing the correct subscription or management group scope, and ensure you have `Microsoft.Authorization/policyExemptions/read` permission.
 
 ### Review exempted resources on the Recommendations page
+
+To review exempted resources on the Recommendations page:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -32,9 +35,11 @@ When you exempt a resource, it doesn't prompt security recommendations. You can 
 
     :::image type="content" source="media/review-exemptions/exempted-resources.png" alt-text="Screenshot of the recommendations page that shows Recommendation status, Exempted, and Apply." lightbox="media/review-exemptions/exempted-resources.png":::
 
-1. Select a resource to review it.
+1. Select a resource to review the exemption details.
 
 ### Review exempted resources on the Inventory page
+
+To review exempted resources on the Inventory page:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -52,7 +57,7 @@ When you exempt a resource, it doesn't prompt security recommendations. You can 
 
 ## Review exempted resources with Azure Resource Graph
 
-[Azure Resource Graph (ARG)](/azure/governance/resource-graph/) provides instant access to resource information across your cloud environments with robust filtering, grouping, and sorting capabilities. You can quickly and easily [query information](/azure/governance/resource-graph/first-query-portal) by using [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/).
+[Azure Resource Graph (ARG)](/azure/governance/resource-graph/) provides instant access to resource information across your cloud environments with robust filtering, grouping, and sorting capabilities. You can quickly and easily [run your first Resource Graph query in the Azure portal](/azure/governance/resource-graph/first-query-portal) by using [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/).
 
 To view all recommendations that have exemption rules:
 
@@ -90,7 +95,7 @@ To view all recommendations that have exemption rules:
     | where StatusDescription contains "Exempt"    
     ```
 
-To view all policy exemptions for a specific subscription, run the following query in Azure Resource Graph Explorer:
+To find all policy exemptions in a specific subscription, run the following query in Azure Resource Graph Explorer. You can use this query to locate exemptions before cleanup or to verify exemption state:
 
 ```kusto
 policyresources
@@ -109,7 +114,7 @@ If you receive a "Failed to delete the exemption(s)" error or a deleted exemptio
 
 - **Check permissions.** Verify that you have delete permissions at the scope where the exemption was created, not just at the subscription level.
 
-- **Check exemption state.** Run the following query in Azure Resource Graph Explorer to find exemptions:
+- **Check exemption state.** To verify whether the exemption still exists and inspect its current state, run the following query in Azure Resource Graph Explorer:
 
     ```kusto
     policyresources
@@ -210,6 +215,8 @@ policyresources
 
 ### Clean up duplicate exemptions
 
+To clean up duplicate exemptions in the Azure portal:
+
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Go to **Defender for Cloud** > **Environment settings** > **Exemptions**.
@@ -243,9 +250,10 @@ To keep track of how users exempt resources from recommendations, we created an 
 
 - Learn more about the playbook by reading the blog post [How to keep track of Resource Exemptions in Microsoft Defender for Cloud](https://techcommunity.microsoft.com/t5/azure-security-center/how-to-keep-track-of-resource-exemptions-in-azure-security/ba-p/1770580).
 - Locate the ARM template in the [Microsoft Defender for Cloud GitHub repository](https://github.com/Azure/Azure-Security-Center/tree/master/Workflow%20automation/Notify-ResourceExemption).
-- [Use this automated process](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Security-Center%2Fmaster%2FWorkflow%2520automation%2FNotify-ResourceExemption%2Fazuredeploy.json) to deploy all components.
+- [Deploy the resource exemption notification template](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Security-Center%2Fmaster%2FWorkflow%2520automation%2FNotify-ResourceExemption%2Fazuredeploy.json) to deploy all components.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Review security recommendations](review-security-recommendations.md)

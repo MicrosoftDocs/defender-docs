@@ -1,6 +1,6 @@
 ---
-title: Investigate and respond to incidents in Microsoft Defender XDR
-description: Walk through attack simulations and tutorials, then use Microsoft Defender XDR to investigate and respond to incidents with automated investigation and advanced hunting.
+title: Investigate and respond to incidents in Microsoft Defender
+description: Walk through attack simulations and tutorials, then use Microsoft Defender to investigate and respond to incidents with automated investigation and advanced hunting.
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords: 
@@ -25,17 +25,17 @@ appliesto:
    - Microsoft Defender XDR
 ---
 
-# Investigate and respond using Microsoft Defender XDR
+# Investigate and respond using Microsoft Defender
 
-This article outlines the process to create incidents with attack simulations and tutorials and use Microsoft Defender XDR to investigate and respond. Before starting this process, be sure you've reviewed the overall process for [piloting and deploying Microsoft Defender XDR](pilot-deploy-overview.md) and you have at least piloted some of the components of Microsoft Defender XDR.
+This article outlines the process to create incidents with attack simulations and tutorials and use Microsoft Defender to investigate and respond. Before starting this process, be sure you've reviewed the overall process for [piloting and deploying Microsoft Defender](pilot-deploy-overview.md) and you have at least piloted some of the components of Microsoft Defender.
 
-An incident in Microsoft Defender XDR is a collection of correlated alerts and associated data that make up the story of an attack. Microsoft 365 services and apps create alerts when they detect a suspicious or malicious event or activity. Individual alerts provide valuable clues about a completed or ongoing attack. However, attacks typically employ various techniques against different types of entities, such as devices, users, and mailboxes. The result is multiple alerts for multiple entities in your tenant.
+An incident in Microsoft Defender is a collection of correlated alerts and associated data that make up the story of an attack. Microsoft 365 services and apps create alerts when they detect a suspicious or malicious event or activity. Individual alerts provide valuable clues about a completed or ongoing attack. However, attacks typically employ various techniques against different types of entities, such as devices, users, and mailboxes. The result is multiple alerts for multiple entities in your tenant.
 
 > [!NOTE]
 > If you're brand new to security analysis and incident response, see the [Respond to your first incident walkthrough](respond-first-incident-365-defender.md) to get a guided tour of a typical process of analysis, remediation, and post-incident review.
 
 
-## End-to-end deployment for Microsoft Defender XDR
+## End-to-end deployment for Microsoft Defender
 
 This is article 6 of 6 in a series to help you deploy the components of Microsoft Defender XDR, including investigating and responding to incidents.
 
@@ -46,12 +46,12 @@ The articles in this series correspond to the following phases of end-to-end dep
 | Phase | Link |
 |---|---|
 | A. Start the pilot | [Start the pilot](pilot-deploy-overview.md#start-the-pilot)|
-| B. Pilot and deploy Microsoft Defender XDR components | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
+| B. Pilot and deploy Microsoft Defender components | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
 |C. Investigate and respond to threats | **Practice incident investigation and response** (this article) |
 
-At any time during your pilot and deployment, you can test Microsoft Defender XDR's incident response and automated investigation and remediation capabilities by creating an incident with a simulated attack and using the Microsoft Defender portal to investigate and respond.
+At any time during your pilot and deployment, you can test Microsoft Defender's incident response and automated investigation and remediation capabilities by creating an incident with a simulated attack and using the Microsoft Defender portal to investigate and respond.
 
-## Workflow for incident investigation and response using Microsoft Defender XDR
+## Workflow for incident investigation and response using Microsoft Defender
 
 Here's the workflow for investigating and responding to incidents using Microsoft Defender XDR in your production environment.
 
@@ -140,7 +140,7 @@ First, you need to add endpoints to your pilot environment.
 
 First, you need to add an isolated AD DS domain controller and a Windows device to your pilot environment.
 
-1. Verify your pilot environment tenant has [enabled Microsoft Defender XDR](m365d-enable.md#confirm-that-the-service-is-on).
+1. Verify your pilot environment tenant has [enabled Microsoft Defender](m365d-enable.md#confirm-that-the-service-is-on).
 
 2. Verify that your domain controller:
 
@@ -234,7 +234,7 @@ Switching to the SOC analyst point of view, you can now start to investigate the
 
 #### Investigate the attack as a single incident
 
-Microsoft Defender XDR correlates analytics and aggregates all related alerts and investigations from different products into one incident entity. By doing so, Microsoft Defender XDR shows a broader attack story, allowing the SOC analyst to understand and respond to complex threats.
+Microsoft Defender correlates analytics and aggregates all related alerts and investigations from different products into one incident entity. By doing so, Microsoft Defender shows a broader attack story, allowing the SOC analyst to understand and respond to complex threats.
 
 The alerts generated during this simulation are associated with the same threat, and as a result, are automatically aggregated as a single incident.
 
@@ -259,7 +259,7 @@ To view the incident:
 Let's look at some of the alerts generated during the simulated attack.
 
 > [!NOTE]
-> We'll walk through only a few of the alerts generated during the simulated attack. Depending on the version of Windows and the Microsoft Defender XDR products running on your test device, you might see more alerts that appear in a slightly different order.
+> We'll walk through only a few of the alerts generated during the simulated attack. Depending on the version of Windows and the Microsoft Defender products running on your test device, you might see more alerts that appear in a slightly different order.
 
 :::image type="content" source="media/pilot-deploy-investigate-respond/fig6.png" alt-text="A screenshot of an example of a generated alert." lightbox="media/pilot-deploy-investigate-respond/fig6.png":::
 
@@ -466,7 +466,7 @@ For instance, based on information in the [User and IP address reconnaissance (S
 
 There's a single internal mailbox and device required for this simulation. You'll also need an external email account to send the test message.
 
-1. Verify that your tenant has [enabled Microsoft Defender XDR](m365d-enable.md#confirm-that-the-service-is-on).
+1. Verify that your tenant has [enabled Microsoft Defender](m365d-enable.md#confirm-that-the-service-is-on).
 2. Identify a target mailbox to be used for receiving email.
 
    - This mailbox must be monitored by Microsoft Defender for Office 365
@@ -630,4 +630,4 @@ See [Get expert training on advanced hunting](advanced-hunting-expert-training.m
 <a name="next-step"></a>
 ## Next steps
 
-Incorporate information from [Investigate and respond with Microsoft Defender XDR](incident-response-overview.md) into your SecOps processes.
+Incorporate information from [Investigate and respond with Microsoft Defender](incident-response-overview.md) into your SecOps processes.
