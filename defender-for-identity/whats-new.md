@@ -27,6 +27,14 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## August 2026
 
+### New health alert for reverted auditing configuration
+
+A new Defender for Identity health alert notifies you when a conflicting policy, such as a Group Policy Object (GPO), repeatedly reverts the auditing configuration required by sensor v3.x on a domain controller. For more information, see [Microsoft Defender for Identity health issues](health-alerts.md).
+
+### Script to find GPO conflicts that revert auditing
+
+The new read-only `Find-MdiAuditingGpoConflicts.ps1` PowerShell script identifies GPOs that override automatic auditing settings on a domain controller. You can use the results to update or unlink the conflicting GPOs. For more information, see [Find GPO conflicts that revert automatic auditing](deploy/configure-windows-event-collection.md#find-gpo-conflicts-that-revert-automatic-auditing).
+
 ### Sensor v3.x support for AD FS, AD CS, and Microsoft Entra Connect servers
 
 You can now deploy Defender for Identity sensor v3.x on servers that run Active Directory Federation Services (AD FS), Active Directory Certificate Services (AD CS), or Microsoft Entra Connect. These servers can be domain controllers or standalone servers. For more information, see [Deploy the Defender for Identity sensor v3.x](deploy/deploy-sensor-v3.md#supported-server-types).

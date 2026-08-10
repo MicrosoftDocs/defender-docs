@@ -531,6 +531,31 @@ Windows Registry Editor Version 5.00
 "Search Time Threshold (msecs)"=dword:00000001
 ```
 
+## Find GPO conflicts that revert automatic auditing
+
+Automatic Windows auditing settings can be reverted by a conflicting Group Policy Object (GPO), local policy, or another configuration tool. For example, a conflicting GPO can reapply its own values during a Group Policy refresh and override the settings. When this happens repeatedly, Defender for Identity raises the **Auditing configuration is being reverted on a domain controller** health issue.
+
+To find the conflicting GPOs, run the `Find-MdiAuditingGpoConflicts.ps1` script as an administrator on the affected domain controller. The script is read-only. It checks the current auditing and Group Policy configuration but doesn't change any settings.
+
+```powershell
+.\Find-MdiAuditingGpoConflicts.ps1
+```
+
+The script compares the domain controller's current effective auditing configuration against Group Policy. The comparison includes advanced audit policy subcategories and the NTLM and AD CS registry values. The script reports:
+
+- GPOs that manage the same NTLM auditing or advanced audit policy settings and override the Defender for Identity configuration.
+- GPOs that define relevant auditing settings but aren't linked to the domain controller. These GPOs could cause a conflict if you link them later.
+
+The script identifies conflicting GPOs. If a setting is applied outside Group Policy, the script reports that it's configured outside Group Policy but can't identify the source.
+
+Review the listed GPOs, then do one of the following:
+
+- Remove the auditing settings from the GPOs.
+- Unlink the GPOs from the affected domain controller.
+- Update the GPOs to match the Defender for Identity auditing requirements.
+
+After you make the change, run `gpupdate /force` and confirm that the required auditing settings remain stable.
+
 ## Related content
 
 For more information, see:
