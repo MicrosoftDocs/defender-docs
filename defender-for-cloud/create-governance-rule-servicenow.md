@@ -1,9 +1,10 @@
 ---
 title: Create automatic tickets with governance rules
-description: Learn how to create a governance rule in Defender for Cloud that connects recommendations or severity levels to a specific owner.
+description: Create Defender for Cloud governance rules that automatically open ServiceNow ITSM tickets for selected recommendations or severity levels.
 ms.topic: how-to
-ms.date: 10/13/2024
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a user, I want to learn how to create automatic tickets using governance rules in Defender for Cloud that automatically assigns an owner to specific recommendation or a recommendation with a severity level in Defender for Cloud to my ServiceNow account.
 ---
 
@@ -13,16 +14,17 @@ The integration of ServiceNow's IT Service Management (ITSM) module and Defender
 
 ## Prerequisites
 
+Before you create governance rules, make sure you meet the following requirements:
+
 - Have an [application registry in ServiceNow](https://www.opslogix.com/knowledgebase/servicenow/kb-create-a-servicenow-api-key-and-secret-for-the-scom-servicenow-incident-connector).
 
 - Enable [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md) on your Azure subscription.
 
-- The following roles are required:
-  - To create an assignment:  Admin permissions to ServiceNow.
+- Admin permissions to ServiceNow to create an assignment.
 
 ## Assign an owner with a governance rule
 
-You can create a rule to automatically assign an owner to a recommendation in Defender for Cloud. This rule is based on the recommendation's severity or recommendation.
+You can create a governance rule to automatically assign an owner to a recommendation in Defender for Cloud. The rule can be based on either the recommendation's severity or a specific recommendation.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -60,7 +62,10 @@ You can create a rule to automatically assign an owner to a recommendation in De
 
 1. Select **Create**.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
+
+Learn more about cloud security posture management:
 
 > [!div class="nextstepaction"]
 > [Common questions about cloud security posture management (CSPM)](faq-cspm.yml).

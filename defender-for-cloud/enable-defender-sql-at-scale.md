@@ -2,7 +2,8 @@
 title: Enable Microsoft Defender for SQL Servers on Machines at scale
 description: Enable Defender for SQL Servers on Machines across multiple subscriptions by using PowerShell, including auto-provisioning and custom configuration options.
 ms.topic: how-to
-ms.date: 06/02/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a user, I want to learn how to enable Defender for SQL servers at scale so that I can protect my SQL servers efficiently.
 ai-usage: ai-assisted
 ---
@@ -13,7 +14,7 @@ Microsoft Defender for Cloud's SQL Servers on Machines component of the Defender
 
 When you enable the SQL Servers on Machines component of the Defender for Databases plan, auto-provisioning starts. Auto-provisioning installs and configures the required components, including the Azure Monitor Agent (AMA), SQL IaaS extension, and Defender for SQL extensions. It also configures the workspace, Data Collection Rules (DCRs), and identity when needed.
 
-This article explains how to enable auto-provisioning for Defender for SQL across multiple subscriptions by using a PowerShell script. This process applies to SQL servers hosted on Azure Virtual Machines (VMs), on-premises environments, and Azure Arc-enabled SQL servers. It also covers optional configurations such as:
+This article explains how to enable auto-provisioning for Defender for SQL across multiple subscriptions by using a PowerShell script. This auto-provisioning procedure applies to SQL servers hosted on Azure Virtual Machines (VMs), on-premises environments, and Azure Arc-enabled SQL servers. It also covers optional configurations such as:
 
 - custom data collection rules
 - custom identity management
@@ -27,8 +28,8 @@ Before you begin:
 - Review [SQL Server on Azure VMs](https://azure.microsoft.com/products/virtual-machines/sql-server/), [SQL Server enabled by Azure Arc](/sql/sql-server/azure-arc/overview), and [how to migrate to Azure Monitor Agent from Log Analytics agent](/azure/azure-monitor/agents/azure-monitor-agent-migration).
 - Connect [Amazon Web Services (AWS) accounts to Microsoft Defender for Cloud](quickstart-onboard-aws.md).
 - Connect [Google Cloud Platform (GCP) to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
-- Install PowerShell for your platform: [Windows](/powershell/scripting/install/installing-powershell-on-windows), [Linux](/powershell/scripting/install/installing-powershell-on-linux), [macOS](/powershell/scripting/install/installing-powershell-on-macos), or [ARM](/powershell/scripting/install/powershell-on-arm).
-- Install these PowerShell modules. For installation instructions, see [Install-Module](/powershell/module/powershellget/install-module):
+- Install PowerShell for your platform: [Install PowerShell on Windows](/powershell/scripting/install/installing-powershell-on-windows), [Install PowerShell on Linux](/powershell/scripting/install/installing-powershell-on-linux), [Install PowerShell on macOS](/powershell/scripting/install/installing-powershell-on-macos), or [Install PowerShell on ARM](/powershell/scripting/install/powershell-on-arm).
+- Install these PowerShell modules. For installation instructions, see the [Install-Module cmdlet reference](/powershell/module/powershellget/install-module):
     - `Az.Resources`
     - `Az.OperationalInsights`
     - `Az.Accounts`
@@ -49,7 +50,7 @@ The PowerShell script that enables Microsoft Defender for SQL on Machines on a g
 | `DataCollectionRuleResourceId` | Optional | The resource ID of the data collection rule, if you want to use a custom Data Collection Rule (DCR) instead of the default one. |
 | `UserAssignedIdentityResourceId` | Optional | The resource ID of the user assigned identity, if you want to use a custom user assigned identity instead of the default one. |
 
-The following sample script is applicable when you use a default Log Analytics workspace, data collection rule, and managed identity.
+The following example enables Defender for SQL on Machines with bulk SQL VM Agent registration (`RegisterSqlVmAgnet = $true`) and uses the default Log Analytics workspace, data collection rule, and managed identity.
 
 ```powershell
 Write-Host "------ Enable Defender for SQL on Machines example ------" 
@@ -58,7 +59,7 @@ $RegisterSqlVmAgnet = $true
 .\EnableDefenderForSqlOnMachines.ps1 -SubscriptionId $SubscriptionId -RegisterSqlVmAgnet $RegisterSqlVmAgnet 
 ```
 
-The following sample script is applicable when you use a custom Log Analytics workspace, data collection rule, and managed identity.
+The following example enables Defender for SQL on Machines without bulk SQL VM Agent registration (`RegisterSqlVmAgnet = $false`) and specifies a custom Log Analytics workspace, data collection rule, and managed identity.
 
 ```powershell
 Write-Host "------ Enable Defender for SQL on Machines example ------" 
@@ -84,7 +85,8 @@ To enable Defender for SQL Servers on Machines at scale:
 
 1. Run the script.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Scan your SQL servers for vulnerabilities](defender-for-sql-on-machines-vulnerability-assessment.md)

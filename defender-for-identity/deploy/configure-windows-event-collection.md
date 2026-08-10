@@ -1,14 +1,14 @@
 ---
 title: Configure Windows event auditing
 description: Configure Windows event auditing for Defender for Identity sensors. Learn automatic, manual, and PowerShell methods to enable required audit policies.
-ms.date: 06/15/2026
+ms.date: 08/10/2026
 ms.topic: how-to
 ms.custom:
-  - msecd-doc-authoring-1014
-  - msecd-doc-authoring-106
+  - msecd-doc-authoring-1015
   - sfi-image-nochange
 ms.reviewer: rlitinsky
 ai-usage: ai-assisted
+#customer intent: As a security admin, I want to configure Windows event auditing for Defender for Identity sensors so that required events are available for detections.
 ---
 
 # Configure Windows event auditing
@@ -434,6 +434,8 @@ To configure auditing on Microsoft Entra Connect servers:
 ### Configure auditing on the configuration container<a name="enable-auditing-on-an-exchange-object"></a>
 
 You need the configuration container audit only for environments that currently have or previously had Microsoft Exchange. These environments have an Exchange container located within the domain's Configuration section.
+
+Active Directory replicates the configuration container throughout the forest, so configure auditing once for the entire forest. The health alert might appear for multiple domains because sensors in each domain report the state of the shared configuration container.
 
 1. Open the ADSI Edit tool. 
 1. Select **Start** > **Run**, enter `ADSIEdit.msc`, and then select **OK**.

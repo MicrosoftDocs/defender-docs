@@ -1,20 +1,23 @@
 ---
-title: Code to runtime for recommendations
+title: Use code-to-runtime visibility for security recommendations
 description: Learn how to use code to runtime visibility to trace security issues from runtime back to source code and fix them at the origin to prevent recurrence.
-ms.date: 04/23/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 zone_pivot_groups: defender-portal-experience
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to trace runtime security issues back to their source code origin and understand the blast radius to fix issues effectively at the source.
 ai-usage: ai-assisted
 ---
 
 # Code to runtime enrichment for recommendations
 
+## Overview
+
 Modern cloud applications move through stages that might include source code, pipelines, registries, and runtime environments. A small code change can create many cloud workloads across your environments. When a security issue appears at runtime, you might not know where the issue starts or how many assets it affects.
 
-Code to runtime gives you end-to-end visibility across the software development lifecycle (SDLC). This feature helps you find the origin of an issue, assess its blast radius, and fix the issue at the source.
+Code to runtime gives you end-to-end visibility across the software development lifecycle (SDLC). Code to runtime helps you find the origin of an issue, assess its blast radius, and fix the issue at the source.
 
-Before continuing, take a look at the [prerequisites](container-image-mapping.md).
+Before continuing, take a look at the [container image mapping prerequisites](container-image-mapping.md).
 
 ## Where you see code to runtime
 
@@ -54,6 +57,8 @@ For any recommendation supported by code to runtime, Defender correlates data ac
 
 ## Why this feature matters
 
+Code to runtime matters for several reasons:
+
 - Fixing only at runtime can cause the issue to reappear during the next deployment.
 - Fixing at the source prevents recurring regressions.
 - Understanding impact helps you plan rollouts and coordinate work.
@@ -61,7 +66,7 @@ For any recommendation supported by code to runtime, Defender correlates data ac
 
 ## Walk the SDLC chain from runtime back to source
 
-The SDLC chain provides a clear, linear path that explains how the affected workload was created. Each stage appears as a card. You can expand this card to see metadata and available actions.
+The SDLC chain provides a clear, linear path that explains how the affected workload was created. Each stage appears as a card. You can expand each stage card to see metadata and available actions.
 
 ## Understand the blast radius of the issue
 
@@ -77,7 +82,7 @@ The grid shows:
 - Different metadata items according to the resource type
 - Filtering and navigation options
 
-This helps you:
+The impacted assets grid helps you:
 
 - Prioritize issues
 - Coordinate with owning teams
@@ -86,18 +91,18 @@ This helps you:
 
 ## Handling missing or partial data
 
-Some SDLC stages might not show full data because of missing prerequisites such as:
+Some SDLC stages might not show full data. Common causes include:
 
 - Disabled connectors
 - Missing permissions
 - Absent pipeline signals
-- Unsupported configurations
+- Unsupported setups
 
-For every missing or partial data, Defender provides:
+For each gap, Defender shows:
 
-- Clear explanations for missing data
-- Guidance to enable or configure missing components
-- An actionable path to expand SDLC visibility
+- Why the data is missing
+- How to enable or set up the missing parts
+- Next steps to expand SDLC coverage
 
 ## Act on these insights
 
@@ -115,12 +120,14 @@ If repository integration is enabled, you can:
 - Route it directly to the relevant fixer
 - Provide precise guidance on what needs to change
 
-Learn more about [Defender for cloud and GitHub integration](github-advanced-security-overview.md).
+Learn more about [GitHub Advanced Security integration with Microsoft Defender for Cloud](github-advanced-security-overview.md).
 
 > [!NOTE]
 > This is currently only available in the Azure portal.
 
 ::: zone pivot="azure-portal"
+
+### Apply exemptions
 
 Apply exemptions in a consistent way.
 
@@ -148,14 +155,14 @@ A typical investigation that uses code to runtime includes these steps:
 
 ## Summary
 
-Code to Runtime gives you a unified, contextual view across the SDLC so you can:
+Code to Runtime gives you a unified, contextual view across the software development lifecycle (SDLC) so you can:
 
 - Find the real source of a runtime issue
 - Understand its reach
 - Fix it once in the most effective place
 - Provide engineering teams with actionable, precise context
 
-This streamlined collaboration between security and engineering reduces repeated manual remediation work.
+This helps security and engineering teams work together and cut down on repeated manual fixes.
 
 ## Related content
 

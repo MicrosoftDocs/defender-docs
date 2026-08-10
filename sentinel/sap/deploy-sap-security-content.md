@@ -62,7 +62,7 @@ For more information, see [Discover and manage Microsoft Sentinel out-of-the-box
 
 ## View deployed content
 
-When the SAP applications solution deployment is finished, display your new content by browsing again to the Microsoft Sentinel for SAP applications solution from the **Content hub**. Alternatively:
+When the SAP applications solution deployment is finished, display your new content by browsing again to the Microsoft Sentinel for SAP applications solution from the **Content hub**. Alternatively, to view the deployed content without returning to the Content hub:
 
 - For the [built-in SAP workbooks](sap-solution-security-content.md#built-in-workbooks), in Microsoft Sentinel, go to **Threat Management** > **Workbooks** > **Templates**.
 

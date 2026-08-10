@@ -1,9 +1,10 @@
 ---
 title: Enable Just-in-Time Access
 description: Learn how just-in-time VM access (JIT) in Microsoft Defender for Cloud helps you control access to your Azure virtual machines.
-ms.date: 06/02/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.custom:
+  - msecd-doc-authoring-1013
   - ge-structured-content-pilot
 #customer intent: As a security administrator, I want to enable just-in-time access for VMs so I can reduce exposure to unauthorized network access.
 ai-usage: ai-assisted
@@ -135,7 +136,11 @@ To request access to a JIT-enabled VM from Defender for Cloud:
 
 ## Other ways to work with JIT VM access
 
+You can also manage just-in-time VM access through Azure virtual machines, PowerShell, or the REST API.
+
 ### Azure virtual machines
+
+The following tasks show how to enable and request JIT access from the Azure virtual machines experience in the Azure portal.
 
 #### Enable JIT on your VMs from Azure virtual machines
 
@@ -198,6 +203,8 @@ To request access from Azure virtual machines:
 
 ### PowerShell
 
+You can also enable and request JIT access by using PowerShell cmdlets.
+
 #### Enable JIT on your VMs using PowerShell
 
 To enable just-in-time VM access from PowerShell, use the official Microsoft Defender for Cloud PowerShell cmdlet `Set-AzJitNetworkAccessPolicy`.
@@ -242,7 +249,7 @@ The following PowerShell commands create this JIT configuration:
     Set-AzJitNetworkAccessPolicy -Kind "Basic" -Location "LOCATION" -Name "default" -ResourceGroupName "RESOURCEGROUP" -VirtualMachine $JitPolicyArr
     ```
 
-    Use the -Name parameter to specify a VM. For example, to establish the JIT configuration for two different VMs, VM1 and VM2, use: `Set-AzJitNetworkAccessPolicy -Name VM1` and `Set-AzJitNetworkAccessPolicy -Name VM2`.
+    Use the `-Name` parameter to specify the JIT policy name for each VM. For example, to establish the JIT configuration for two different VMs, VM1 and VM2, use: `Set-AzJitNetworkAccessPolicy -Name VM1` and `Set-AzJitNetworkAccessPolicy -Name VM2`.
 
 #### Request access to a JIT-enabled VM using PowerShell
 
@@ -279,6 +286,8 @@ Learn more in the [PowerShell cmdlet documentation](/powershell/scripting/develo
 
 ### REST API
 
+You can manage JIT VM access programmatically by using the Microsoft Defender for Cloud REST API.
+
 #### Enable JIT on your VMs using the REST API
 
 The just-in-time VM access feature can be used via the Microsoft Defender for Cloud API. Use this API to get information about configured VMs, add new ones, request access to a VM, and more.
@@ -307,7 +316,8 @@ Use log search to review VM activity. To view the logs:
 
 1. To download the log information, select **Download as CSV**.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Understand just-in-time VM access management](just-in-time-access-overview.md)

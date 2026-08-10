@@ -104,7 +104,7 @@ Perform the following steps to connect the initiative to your MDEASM data source
 
 You can review your security initiative data through security metrics that reflect various exposure types as assessed by the External Attack Surface assessment engine. Select a metric to view additional information such as the exposed assets and their types. 
 
-Also explore the data integrated from EASM using the [attack surface map](enterprise-attack-surface-map.md) to uncover insights related to your attack surface. You can search for various assets such as IP addresses, domains, hosts, and more, and review the findings on these assets.
+Also explore the data integrated from EASM using the [attack surface map](enterprise-exposure-map.md) to uncover insights related to your attack surface. You can search for various assets such as IP addresses, domains, hosts, and more, and review the findings on these assets.
 
 <a name="next-steps"></a>
 ## Related content
