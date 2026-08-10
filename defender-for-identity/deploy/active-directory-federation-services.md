@@ -1,11 +1,12 @@
 ---
 title: Configure sensors for AD FS, AD CS, and Microsoft Entra Connect | Microsoft Defender for Identity
 description: Learn how to configure Microsoft Defender for Identity on Active Directory Federation Services (AD FS), Active Directory Certificate Services (AD CS), and Microsoft Entra Connect servers.
-ms.date: 07/02/2026
+ms.date: 08/10/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1016
+#customer intent: As a security administrator, I want to configure Defender for Identity sensors on AD FS, AD CS, and Microsoft Entra Connect servers so that identity activity from these servers is monitored.
 ---
 
 # Configure sensors for AD FS, AD CS, and Microsoft Entra Connect
@@ -15,7 +16,7 @@ ms.custom: msecd-doc-authoring-1016
 Install and configure the Defender for Identity sensor v2.x on Active Directory Federation Services (AD FS), Active Directory Certificate Services (AD CS), and Microsoft Entra Connect servers that aren't domain controllers. Before you begin, make sure you've completed the [sensor installation prerequisites](prerequisites-sensor-version-2.md).
 
 > [!TIP]
-> If your AD FS, AD CS, or Microsoft Entra Connect role runs on a domain controller with Windows Server 2019 or later, deploy the [Defender for Identity sensor v3.x](deploy-sensor-v3.md) instead. This article applies only to servers that aren't domain controllers.
+> If your AD FS, AD CS, or Microsoft Entra Connect server runs Windows Server 2019 or later, deploy the [sensor v3.x](deploy-sensor-v3.md) instead, whether or not the server is a domain controller. The procedures in this article apply to sensor v2.x.
 
 These considerations apply:
 
