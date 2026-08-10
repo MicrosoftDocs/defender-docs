@@ -1,11 +1,12 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 07/15/2026
+ms.date: 08/10/2026
 ms.topic: overview
-#CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality.
+#customer intent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity so that I can take advantage of new features and functionality.
 ms.reviewer: AbbyMSFT
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
+ai-usage: ai-assisted
 ---
 
 # What's new in Microsoft Defender for Identity
@@ -25,6 +26,12 @@ For more information, see also:
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
 ## July 2026
+
+### Defender for Identity sensor updates
+
+|Version number|Updates|
+|---|---|
+|2.255.19295.47272|This sensor update adds support for a new Event Tracing for Windows (ETW) provider and includes other improvements.|
 
 ### Sensor v2.x to v3.x migration is now generally available
 
