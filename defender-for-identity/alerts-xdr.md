@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity XDR security alerts
 description: Learn about security alerts issued by Defender for Identity in the extended detection and response (XDR) format.
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ms.topic: concept-article
 ms.reviewer: yossidahan
 ---
@@ -12,6 +12,9 @@ This article lists all Defender for Identity security alerts in the Defender for
 
 Defender for Identity generates alerts in both the Defender format and the [classic format](alerts-overview.md). The Defender format provides an alert structure that's consistent with other Microsoft Defender products. Both formats are based on the same underlying detections from Defender for Identity sensors, but they differ in structure, naming, and categorization.
 To identify the format of each alert, check the **Detection source** field on the security alerts page.
+
+> [!NOTE]
+> For guidance on Classic vs Defender-format alerts and alert tuning, see [Security alerts in Microsoft Defender for Identity](alerts-overview.md).
 
 ## Alert name mapping
 
@@ -293,6 +296,4 @@ The following alerts indicate that a malicious actor might be attempting to gain
 |<a name="suspicious-spn-was-added-to-a-user"></a><details><summary>Suspicious SPN was added to a user</summary><br>**Description**:<br><br>A suspicious service principal name (SPN) was added to a sensitive user. An attacker might be attempting to gain elevated access for lateral movement within the organization.</details> | High | [T1098](https://attack.mitre.org/techniques/T1098) | xdr_SuspiciousAdditionOfSpnToUser |
 
 <!-- docutune:enable -->
-
-
 

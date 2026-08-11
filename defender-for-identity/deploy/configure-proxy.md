@@ -1,10 +1,10 @@
 ---
 title: Connect to the Defender for Identity service | Microsoft Defender for Identity
 description: Learn how to set up your firewall or proxy to allow communication between the Microsoft Defender for Identity cloud service and Microsoft Defender for Identity sensors.
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
-ms.custom: sfi-ropc-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-ropc-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -12,14 +12,14 @@ ai-usage: ai-assisted
 
 Each Microsoft Defender for Identity sensor requires internet connectivity to the Defender for Identity cloud service to report sensor data and operate successfully.
 
-In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection, and SSL inspection and intercepting proxies are not supported for security reasons. In such cases, your proxy server must allow sensor traffic to pass directly from the Defender for Identity sensors to the relevant URLs without interception.
+In some organizations, the domain controllers aren't directly connected to the internet, but are connected through a web proxy connection, and SSL inspection and intercepting proxies are not supported for security reasons. In such cases, your proxy server must allow sensor traffic to pass directly from the Defender for Identity sensors to the required Defender for Identity service URLs without interception.
 
 > [!IMPORTANT]
 > Microsoft does not provide a proxy server. This article describes how to ensure that the required URLs are accessible via a proxy server that you configure.
 
 ## Enable access to Defender for Identity service URLs in the proxy server
 
-To ensure maximal security and data privacy, Defender for Identity uses certificate-based, mutual authentication between each Defender for Identity sensor and the Defender for Identity cloud back-end. SSL inspection and interception are not supported, because these proxy behaviors interfere in the authentication process.
+To ensure maximal security and data privacy, Defender for Identity uses certificate-based, mutual authentication between each Defender for Identity sensor and the Defender for Identity cloud back-end. SSL inspection and interception are not supported, because these proxy behaviors interfere in the certificate-based mutual authentication process.
 
 To enable access to Defender for Identity, make sure to allow traffic to the sensor URL, using the following syntax: `<your-workspace-name>sensorapi.atp.azure.com`. For example, `contoso-corpsensorapi.atp.azure.com`.
 
@@ -43,7 +43,11 @@ For more information, see [Virtual network service tags](/azure/virtual-network/
 
 ## Change proxy configuration using the CLI
 
+You can use the CLI to set or clear the sensor's proxy configuration by running the deployment executable directly.
+
 **Prerequisites**: Locate the `Microsoft.Tri.Sensor.Deployment.Deployer.exe` file. This file is located together with the sensor installation. By default, this location is `C:\Program Files\Azure Advanced Threat Protection Sensor\version number\`
+
+Use the deployment executable to configure an authenticated proxy for the current Defender for Identity sensor. This approach is useful during installation or when PowerShell cmdlets aren't available.
 
 **To change the current sensor's proxy configuration**:
 
@@ -51,7 +55,17 @@ For more information, see [Virtual network service tags](/azure/virtual-network/
 Microsoft.Tri.Sensor.Deployment.Deployer.exe ProxyUrl="http://myproxy.contoso.local" ProxyUserName="CONTOSO\myProxyUser" ProxyUserPassword="myPr0xyPa55w0rd"
 ```
 
+The command uses the following parameters:
+
+| Parameter | Description |
+|---|---|
+| `ProxyUrl` | The URL of the proxy server, including the protocol and port. For example, `http://myproxy.contoso.local`. |
+| `ProxyUserName` | The user name for authenticating to the proxy server, in `DOMAIN\username` format. |
+| `ProxyUserPassword` | The password for the proxy user account. |
+
 **To remove the current sensor's proxy configuration entirely**:
+
+To remove any proxy settings configured through the deployment tool and return the sensor to direct connectivity, run the following command:
 
 ```cmd
 Microsoft.Tri.Sensor.Deployment.Deployer.exe ClearProxyConfiguration
@@ -132,5 +146,7 @@ To configure your proxy, copy your proxy configuration in user context to the **
 
 ## Next step
 
+After configuring the proxy, test connectivity to verify that the sensor can reach the Defender for Identity service.
+
 > [!div class="step-by-step"]
-> [Test Microsoft Defender for Identity connectivity »](test-connectivity.md)
+> [Test Microsoft Defender for Identity connectivity](test-connectivity.md)

@@ -1,16 +1,16 @@
 ---
 title: Migrate from Advanced Threat Analytics | Microsoft Defender for Identity
 description: Learn how to move an existing Advanced Threat Analytics installation to Microsoft Defender for Identity.
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.reviewer: martin77s
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Migrate from Advanced Threat Analytics (ATA) to Microsoft Defender for Identity
 
-This article describes how to migrate from an existing ATA installation to a Microsoft Defender for Identity sensor, and includes the following steps:
+This article describes how to migrate from an existing ATA installation to a Microsoft Defender for Identity sensor. Before you begin, make sure your environment meets the [Defender for Identity prerequisites](prerequisites.md). The migration includes the following steps:
 
 > [!div class="checklist"]
 >
@@ -25,7 +25,7 @@ ATA is a standalone on-premises solution with multiple components, such as the A
 
 Defender for Identity is a cloud-based security solution that uses your on-premises Active Directory signals. Defender for Identity is highly scalable and is frequently updated.
 
-In contrast to the ATA sensor, the Defender for Identity sensor also uses data sources such as Event Tracing for Windows (ETW) enabling Defender for Identity to deliver extra detections. Defender for Identity also provides:
+In contrast to the ATA Lightweight Gateway, the Defender for Identity sensor also uses data sources such as Event Tracing for Windows (ETW) enabling Defender for Identity to deliver extra detections. Defender for Identity also provides:
 
 - Support for [multi-forest environments](deploy/multi-forest.md)
 - [Microsoft Secure Score posture assessments](/defender-for-identity/security-assessment)
@@ -94,7 +94,7 @@ After the migration is complete, allow two hours for the Defender for Identity s
 
 In Microsoft Defender, check the following areas to validate your migration:
 
-- Review any [health issues](health-alerts.md) for signs of service issues.
+- Review any [Defender for Identity health alerts](health-alerts.md) for signs of service issues.
 - Review Defender for Identity [sensor error logs](troubleshooting-using-logs.md) for any unusual errors.
 
 ## Post-migration activities

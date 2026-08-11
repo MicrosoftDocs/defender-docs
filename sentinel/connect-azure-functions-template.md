@@ -5,9 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: ofshezaf
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security engineer, I want to use Azure Functions to connect Microsoft Sentinel to my data sources so that I can automate the ingestion of logs and enhance threat detection capabilities.
 
@@ -34,7 +34,7 @@ Make sure that you have the following permissions and credentials before using A
 
 - You must have read permissions to shared keys for the workspace. [Learn more about workspace keys](/azure/azure-monitor/agents/agent-windows#workspace-id-and-key).
 
-- You must have read and write permissions on Azure Functions to create a Function App. [Learn more about Azure Functions](/azure/azure-functions/).
+- You must have read and write permissions on Azure Functions to create a Function App. For more information, see the [Azure Functions documentation](/azure/azure-functions/).
 
 - You will also need credentials for accessing the product's API - either a username and password, a token, a key, or some other combination. You may also need other API information such as an endpoint URI.
 
@@ -43,6 +43,8 @@ Make sure that you have the following permissions and credentials before using A
 - Install the solution that contains your Azure Functions-based connector from the **Content Hub** in Microsoft Sentinel. For more information, see [Discover and manage Microsoft Sentinel out-of-the-box content](sentinel-solutions-deploy.md).
 
 ## Configure and connect your data source
+
+Follow these steps to get your API credentials, deploy the connector, and configure the associated Azure Function App.
 
 > [!NOTE]
 > - You can securely store workspace and API authorization keys or tokens in Azure Key Vault. Azure Key Vault provides a secure mechanism to store and retrieve key values. For more information, see [Use Key Vault references for Azure App Service and Azure Functions](/azure/app-service/app-service-key-vault-references).
@@ -59,14 +61,14 @@ Follow your source system's instructions to get its **API credentials / authoriz
 
 You can find details on the exact credentials you'll need, and links to your product's instructions for finding or creating them, on the data connector page in the portal and in the section for your service in the [Microsoft Sentinel data connectors reference](data-connectors-reference.md) page.
 
-You may also need to configure logging or other settings on your source system. You'll find the relevant instructions on the data connector page in the portal and in the section for your service in the [Microsoft Sentinel data connectors reference](data-connectors-reference.md) page.
+You may also need to configure logging or other settings on your source system. For configuration instructions, see the data connector page in the portal and the section for your service in the [Microsoft Sentinel data connectors reference](data-connectors-reference.md) page.
 ### Step 2: Deploy the connector and the associated Azure Function App
 
 #### Choose a deployment option
 
 ## [Azure Resource Manager (ARM) template](#tab/ARM)
 
-This method provides an automated deployment of your Azure Function-based connector using an ARM template.
+The ARM template deployment method provides an automated deployment of your Azure Function-based connector.
 
 1. In the Microsoft Sentinel portal, select **Data connectors**. Select your Azure Functions-based connector from the list, and then **Open connector page**.
 
@@ -77,12 +79,12 @@ This method provides an automated deployment of your Azure Function-based connec
 1. The **Custom deployment** screen will appear.
     - Select a **subscription**, **resource group**, and **region** in which to deploy your Function App.
 
-    - Enter your API credentials / authorization keys / tokens that you saved in [Step 1](#step-1-get-your-source-systems-api-credentials).
+    - Enter your API credentials / authorization keys / tokens that you saved in [Get your source system's API credentials](#step-1-get-your-source-systems-api-credentials).
 
     - Enter your Microsoft Sentinel **Workspace ID** and **Workspace Key** (primary key) that you copied and put aside.
 
         > [!NOTE]
-        > If using Azure Key Vault secrets for any of the values above, use the `@Microsoft.KeyVault(SecretUri={Security Identifier})` schema in place of the string values. Refer to Key Vault references documentation for further details.
+        > If using Azure Key Vault secrets for any of the values above, use the `@Microsoft.KeyVault(SecretUri={Security Identifier})` schema in place of the string values. For more information, see [Use Key Vault references for Azure App Service and Azure Functions](/azure/app-service/app-service-key-vault-references).
 
     - Complete any other fields in the form on the **Custom deployment** screen. See your data connector page in the portal or the section for your service in the [Microsoft Sentinel data connectors reference](data-connectors-reference.md) page.
 
@@ -203,9 +205,10 @@ See the **Next steps** tab in the connector page for some useful sample queries.
 
 It may take up to 20 minutes until your logs start to appear in Log Analytics. 
 
-## Next steps
+<a name="next-steps"></a>
+## Related content
 
-In this document, you learned how to connect Microsoft Sentinel to your data source using Azure Functions-based connectors. To learn more about Microsoft Sentinel, see the following articles:
+In this document, you learned how to connect Microsoft Sentinel to your data source using Azure Functions-based connectors. For more information about Microsoft Sentinel visibility, threat detection, and monitoring, see the following articles:
 
 - Learn how to [get visibility into your data and potential threats](./get-visibility.md).
 - Get started [detecting threats with Microsoft Sentinel](./detect-threats-built-in.md).

@@ -1,11 +1,11 @@
 ---
-title: Configure sensor settings  | Microsoft Defender for Identity
+title: Configure sensor settings in Microsoft Defender for Identity
 description: Configure Microsoft Defender for Identity sensor settings to start collecting data, validate your deployment, and prepare additional integrations for full functionality.
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Configure Microsoft Defender for Identity sensor settings
@@ -113,7 +113,7 @@ The Defender for Identity version is updated frequently. Check for the latest ve
 
 ## Related content
 
-Now that you've configured the Defender for Identity sensor settings, you can configure additional settings. Go to any of the pages below for more information:
+Now that you've configured the Defender for Identity sensor settings, you can configure additional settings. See the following articles for more information:
 
 - [Set entity tags: sensitive, honeytoken, and Exchange server](../entity-tags.md)
 - [Configure detection exclusions](../exclusions.md)

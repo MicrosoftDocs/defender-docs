@@ -17,8 +17,8 @@ Configure Windows event auditing to enable Defender for Identity detections. The
 
 Configure auditing using one of these methods:
 
-- [Automatic configuration](#configure-defender-for-identity-to-collect-windows-events-automatically) for sensor v3.x on domain controllers (recommended)
-- [Manual configuration](#configure-windows-event-collection-manually) for sensor v2.x, servers that aren't domain controllers, or if you opted out of automatic auditing
+- [Automatic configuration](#configure-defender-for-identity-to-collect-windows-events-automatically) for sensor v3.x on domain controllers, AD FS, AD CS, and Microsoft Entra Connect servers (recommended)
+- [Manual configuration](#configure-windows-event-collection-manually) for sensor v2.x or if you opted out of automatic auditing
 - [PowerShell configuration](#configure-windows-event-collection-using-powershell)
 - [Required Windows events](#required-windows-events) for all server types
 
@@ -28,9 +28,11 @@ If you configure auditing properly, Windows event auditing has minimal effect on
 
 ## Configure Defender for Identity to collect Windows events automatically
 
-If you're deploying sensor v3.x on domain controllers, use automatic Windows auditing. This is the recommended approach; it requires no manual configuration and handles all auditing settings for you.
+If you're deploying sensor v3.x, use automatic Windows auditing. This is the recommended approach; it requires no manual configuration and handles all auditing settings for you.
 
 ### Turn on automatic Windows auditing
+
+To enable automatic Windows auditing in the Defender portal, complete the following steps:
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings**, and then **Identities**.
 1. In the **General** section, select **Advanced features**.
@@ -46,14 +48,18 @@ When enabled, the sensor automatically:
     - **Directory services advanced auditing**: Adds audit entries to the domain root object's System Access Control List (SACL) to enable required directory service auditing.
     - **NTLM auditing**: Uses standard Windows Registry APIs to configure the required NTLM auditing registry values.
     - **Domain object auditing**: Modifies the SACL on the Configuration partition to capture changes to directory service configuration objects.
-    - **ADFS auditing**: Adds audit entries to the object's System Access Control List (SACL) of the AD FS configuration container, to enable auditing of AD FS-related directory objects.
-    - **Windows audit policy**: Configures the local Windows audit policies using the Windows Local Security Authority (LSA) audit policy APIs.
-- Applies auditing settings directly to the local system policy of the domain controller.
-- Sends health alerts about the configuration state.
+    - **AD FS auditing**: Automatically configures the following settings:
+        - **Object-level auditing on the AD FS configuration container**: Adds audit entries to the object's System Access Control List (SACL) of the AD FS configuration container, to enable auditing of AD FS-related directory objects.
+        - **Group Policy for event auditing**: Configures the **Audit Application Generated** advanced audit policy (Success and Failure) on the local system by using the Windows Local Security Authority (LSA) audit policy APIs under the sensor's local system account.
+        - Other AD FS auditing settings aren't included in automatic auditing and remain manual, such as AD FS event auditing in AD FS Management and verbose logging for AD FS events.
+    - **AD CS auditing**: Writes the required value to the certificate authority (CA) audit filter in the CA's registry configuration. Automatic auditing modifies an existing audit filter but doesn't create one, so the CA must already have an audit filter configured. The new value takes effect after the Certificate Services (`certsvc`) service restarts. Until the service restarts, Defender for Identity raises a health alert that prompts you to restart it.
+    - **Microsoft Entra Connect auditing**: Configures the **Audit Logon** advanced audit policy (Success and Failure) on Microsoft Entra Connect servers by using the Windows LSA audit policy APIs.
+    - **Windows audit policy**: Configures the local Windows audit policies using the Windows LSA audit policy APIs.
+- Applies auditing settings directly to the local system policy of the server.
 - Runs once every 24 hours.
 
 > [!NOTE]
-> - Automatic Windows event auditing is supported for domain controllers that use the Defender for Identity sensor version 3.x only. It doesn't apply to v2.x domain controllers or to AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers. For those servers, [configure Windows event auditing manually](#configure-windows-event-collection-manually).
+> - Automatic Windows event auditing is supported only for domain controllers and AD FS, AD CS, and Microsoft Entra Connect servers that use Defender for Identity sensor v3.x. For servers that use sensor v2.x, [configure Windows event auditing manually](#configure-windows-event-collection-manually).
 > - If you don't turn on automatic Windows auditing, you **must** [configure Windows event auditing manually](#configure-windows-event-collection-manually) or by [configuring Windows event collection using PowerShell](#configure-windows-event-collection-using-powershell).
 > - GPO settings can conflict with local settings set by the sensor.
 
@@ -160,7 +166,7 @@ Before configuring Windows event collection manually, you can run a PowerShell s
 
 ## Configure Windows event collection manually
 
-This section includes instructions for manually configuring Windows event collection. Use these steps if you're deploying sensor v2.x, deploying on AD FS, AD CS, or Entra Connect servers that aren't domain controllers, or if you opted out of automatic auditing for sensor v3.x.
+This section includes instructions for manually configuring Windows event collection. Use these steps if you're deploying sensor v2.x or if you opted out of automatic auditing for sensor v3.x.
 
 > [!NOTE]
 > **Known issue:** In some v3 sensor environments, health alerts about Windows event auditing might persist even when auditing is correctly configured. This primarily occurs with manual auditing configuration, such as using Group Policy or PowerShell. The sensor remains healthy and detections aren't affected. To resolve, enable **Automatic Windows auditing configuration** in the Defender for Identity portal under **Settings** > **Advanced features**.
@@ -185,7 +191,7 @@ To configure auditing on a domain controller, complete the following steps:
 
 #### Configure Directory Services Advanced Auditing
 
-This section describes how to modify your domain controller's Audit (Premium) Policy settings for Defender for Identity.
+The following procedure describes how to modify your domain controller's Audit (Premium) Policy settings for Defender for Identity.
 
 1. Sign in to the server as **Domain Administrator**.
 1. Open the Group Policy Management Editor from **Server Manager** > **Tools** > **Group Policy Management**.
@@ -208,9 +214,9 @@ This section describes how to modify your domain controller's Audit (Premium) Po
         | Audit policy | Subcategory | Triggers event IDs |
         | --- |---|---|
         | **Account Logon** | **Audit Credential Validation** | 4776 |
-        | **Account Management** | **Audit Computer Account Management**<sup>[See note](#failure)</sup> | 4741, 4743 |
-        | **Account Management** | **Audit Distribution Group Management**<sup>[See note](#failure)</sup> | 4753, 4763 |
-        | **Account Management** | **Audit Security Group Management**<sup>[See note](#failure)</sup> | 4728, 4729, 4730, 4732, 4733, 4756, 4757, 4758 |
+        | **Account Management** | **Audit Computer Account Management**<sup>[Failure auditing note](#failure)</sup> | 4741, 4743 |
+        | **Account Management** | **Audit Distribution Group Management**<sup>[Failure auditing note](#failure)</sup> | 4753, 4763 |
+        | **Account Management** | **Audit Security Group Management**<sup>[Failure auditing note](#failure)</sup> | 4728, 4729, 4730, 4732, 4733, 4756, 4757, 4758 |
         | **Account Management** | **Audit User Account Management** | 4726 |
         | **DS Access** | **Audit Directory Service Changes**<sup>[See note](#failure)</sup> | 5136  |
         | **System** | **Audit Security System Extension**<sup>[See note](#failure)</sup> | 7045 |
@@ -325,6 +331,8 @@ To configure domain object auditing:
 
 #### Configure Object-level auditing on the AD FS configuration folder
 
+To configure object-level auditing on the AD FS configuration folder, complete the following steps:
+
 1. Go to the **Active Directory Users and Computers** console, and select the domain where you want to enable the logs.
 1. Go to **Program Data** > **Microsoft** > **ADFS**.
 
@@ -347,9 +355,11 @@ To configure domain object auditing:
 
 ### Configure auditing on an AD FS server
 
-This section describes how to modify your Active Directory Federation Services (AD FS) audit configurations for Defender for Identity.
+The following procedure describes how to modify your Active Directory Federation Services (AD FS) audit configurations for Defender for Identity.
 
 #### Configure a Group Policy for event auditing
+
+To configure Group Policy-based event auditing for AD FS, complete the following steps:
 
 1. Create a group policy to apply to your Active Directory Federation Services (AD FS).
 1. Configure the following auditing settings:
@@ -362,6 +372,8 @@ This section describes how to modify your Active Directory Federation Services (
 
 
 #### Configure AD FS event auditing in AD FS Management
+
+To enable AD FS event auditing in AD FS Management, complete the following steps:
 
 1. Select **Start** > **Programs** > **Administrative Tools** > **AD FS Management**.
 1. Go to **Actions** > **Edit Federation Service Properties**.
@@ -396,14 +408,12 @@ If you're working with a dedicated server that has Active Directory Certificate 
 
 1. Configure auditing on the certificate authority (CA) using one of the following methods:
 
-   - **To configure CA auditing using PowerShell, run:**
+   - **To configure CA auditing using PowerShell**, set the CA audit filter to enable full auditing and then restart the Certificate Services service for the change to take effect:
 
 ```powershell
 certutil -setreg CA\AuditFilter 127 
 Restart-Service certsvc
 ```
-
-This command updates the CA audit settings and restarts the Certificate Services service so the changes take effect.
 
    - **To configure CA auditing in the Defender portal:**
 
@@ -473,7 +483,7 @@ The following commands show how to modify your domain controller's Audit (Premiu
 
 **To view your audit policies:**
 
-Use the `Get-MDIConfiguration` cmdlet to retrieve the current Defender for Identity configuration values in domain or local machine mode:
+Use the `Get-MDIConfiguration` cmdlet to retrieve the current Defender for Identity configuration values in domain or local machine mode. Use the following syntax to view the current configuration for a specific mode and configuration set:
 
 ```powershell
 Get-MDIConfiguration [-Mode] <String> [-Configuration] <String[]>
@@ -486,7 +496,7 @@ Where:
 
 **To configure your settings:**
 
-Use the following syntax to apply one or more Defender for Identity configurations in domain or local machine mode:
+Use the following syntax to apply Defender for Identity configuration settings and optionally control GPO creation and linking behavior:
 
 ```powershell
 Set-MDIConfiguration [-Mode] <String> [-Configuration] <String[]> [-CreateGpoDisabled] [-SkipGpoLink] [-Force]
@@ -500,7 +510,7 @@ Where:
 - `SkipGpoLink` specifies that GPO links aren't created.
 - `Force` specifies that the configuration is set or GPOs are created without validating the current state.
 
-The following example applies the full recommended Defender for Identity configuration set through Group Policy in domain mode, creates the group policy objects, and links them:
+The following example applies all supported Defender for Identity domain configuration settings in one operation, creating the group policy objects and linking them:
 
 ```powershell
 Set-MDIConfiguration -Mode Domain -Configuration All
@@ -520,6 +530,31 @@ Windows Registry Editor Version 5.00
 "Inefficient Search Results Threshold"=dword:00000001
 "Search Time Threshold (msecs)"=dword:00000001
 ```
+
+## Find GPO conflicts that revert automatic auditing
+
+Automatic Windows auditing settings can be reverted by a conflicting Group Policy Object (GPO), local policy, or another configuration tool. For example, a conflicting GPO can reapply its own values during a Group Policy refresh and override the settings. When this happens repeatedly, Defender for Identity raises the **Auditing configuration is being reverted on a domain controller** health issue.
+
+To find the conflicting GPOs, run the `Find-MdiAuditingGpoConflicts.ps1` script as an administrator on the affected domain controller. The script is read-only. It checks the current auditing and Group Policy configuration but doesn't change any settings.
+
+```powershell
+.\Find-MdiAuditingGpoConflicts.ps1
+```
+
+The script compares the domain controller's current effective auditing configuration against Group Policy. The comparison includes advanced audit policy subcategories and the NTLM and AD CS registry values. The script reports:
+
+- GPOs that manage the same NTLM auditing or advanced audit policy settings and override the Defender for Identity configuration.
+- GPOs that define relevant auditing settings but aren't linked to the domain controller. These GPOs could cause a conflict if you link them later.
+
+The script identifies conflicting GPOs. If a setting is applied outside Group Policy, the script reports that it's configured outside Group Policy but can't identify the source.
+
+Review the listed GPOs, then do one of the following:
+
+- Remove the auditing settings from the GPOs.
+- Unlink the GPOs from the affected domain controller.
+- Update the GPOs to match the Defender for Identity auditing requirements.
+
+After you make the change, run `gpupdate /force` and confirm that the required auditing settings remain stable.
 
 ## Related content
 

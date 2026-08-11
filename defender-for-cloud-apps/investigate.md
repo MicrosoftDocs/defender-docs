@@ -1,11 +1,11 @@
 ---
 title: Investigate cloud app risks and suspicious activity 
 description: This article provides an outline of the process for investigating alerts, issues, and suspicious activities by using Defender for Cloud Apps.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: gayasalomon
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Investigate cloud app risks and suspicious activity
 
@@ -13,7 +13,8 @@ ms.custom: msecd-doc-authoring-1014
 
 After Microsoft Defender for Cloud Apps runs in your cloud environment, you'll need a stage of learning and investigating. Learn to use the Microsoft Defender for Cloud Apps tools to gain a deeper understanding of what's happening in your cloud environment. Based on your particular environment and how it's being used, you can identify the requirements for protecting your organization from risk. This article describes how to do an investigation to get a better understanding of your cloud environment.
 
-## <a name="sanctionapp"></a>Tag apps as sanctioned or unsanctioned
+<a name="sanctionapp"></a>
+## Tag apps as sanctioned or unsanctioned
 
 An important step to understanding your cloud is to tag apps as sanctioned or unsanctioned. After you sanction an app, you can filter for apps that aren't sanctioned and start migration to sanctioned apps of the same app category.
 
@@ -116,11 +117,11 @@ Now that you have the risky-IP policy in place, you discover that you have an al
 
 1. In the Microsoft Defender Portal, go to **Incidents & alerts** -> **Alerts** and view the alert about the policy violation.
 
-2. If you see that the alert looks like a real violation, you want to contain risk or remediate the violation.
+2. If you see that the alert looks like a real policy violation, you want to contain risk or remediate the policy violation.
 
-    To contain risk, you can send the user a notification to ask if the violation was intentional and if the user was aware of it.
+    To contain risk, you can send the user a notification to ask if the policy violation was intentional and if the user was aware of it.
 
-    You can also drill down into the alert and suspend the user until you can figure out what needs to be done.
+    You can also drill down into the alert and suspend the user until you determine the appropriate remediation steps.
 
 3. If the event is allowed and isn't likely to recur, you can dismiss the alert.
 

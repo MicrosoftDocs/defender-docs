@@ -1,9 +1,9 @@
 ---
 title: Analyze programming details and changes on an OT sensor - Microsoft Defender for IoT
 description: Discover suspicious programming activity by investigating programming events occurring on your network devices.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -96,9 +96,10 @@ For example:
 
 :::image type="content" source="media/analyze-programming/programming-timeline-2.png" alt-text="Screenshot of viewing programming details in programming timeline." lightbox="media/analyze-programming/programming-timeline-2.png":::
 
-## Compare programming detail files
+<a name="compare-programming-detail-files"></a>
+## Compare OT device programming files
 
-This procedure describes how to compare multiple programming detail files to identify discrepancies or investigate the files for suspicious activity.
+Compare multiple programming detail files to identify discrepancies or investigate suspicious activity.
 
 **To compare files:**
 

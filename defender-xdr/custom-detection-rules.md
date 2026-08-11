@@ -33,11 +33,14 @@ ai-usage: ai-assisted
 
 Custom detection rules are [advanced hunting](advanced-hunting-overview.md) queries you design and tweak to proactively monitor various events and system states, including suspected breach activity and misconfigured endpoints. You can set them to run at regular intervals, generating alerts and taking response actions whenever there are matches.
 
+This article walks you through creating and configuring a custom detection rule, including preparing the query, setting alert details, specifying automated response actions, and defining the rule scope.
+
 ## Required permissions for managing custom detections
 
-To manage custom detections, you need roles with permissions for the data these detections target. For example, to manage custom detections on multiple data sources (Microsoft Defender and Microsoft Sentinel, or multiple Defender workloads), you need all the applicable Defender and Sentinel roles. For more information, see the following sections.
+To manage custom detections, you need roles with permissions for the data these detections target. For example, to manage custom detections on multiple data sources (Microsoft Defender and Microsoft Sentinel, or multiple Defender workloads), you need all the applicable Defender and Sentinel roles. For more information, see [Microsoft Defender XDR](#microsoft-defender-xdr) and [Microsoft Sentinel](#microsoft-sentinel).
 
-### Microsoft Defender XDR
+<a name="microsoft-defender-xdr"></a>
+### Required permissions in Microsoft Defender XDR
 To manage custom detections on Microsoft Defender data, you need to be assigned one of these roles:
 
 - **Security settings (manage)** - Users with this [Microsoft Defender permission](manage-rbac.md) can manage security settings in the Microsoft Defender portal.
@@ -53,7 +56,8 @@ Likewise, since the `IdentityLogonEvents` table holds authentication activity in
 > [!NOTE]
 > To manage custom detections, Security Operators must have the Manage Security Settings permission in Microsoft Defender for Endpoint if RBAC is turned on.
 
-### Microsoft Sentinel
+<a name="microsoft-sentinel"></a>
+### Required permissions in Microsoft Sentinel
 
 To manage custom detections on Microsoft Sentinel data, you need to be assigned the **Microsoft Sentinel Contributor** role or higher. Users with this [Azure role](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor) can manage Microsoft Sentinel SIEM workspace data, including alerts and detections. You can assign this role on a specific primary workspace, Azure resource group, or an entire subscription.
 
@@ -130,7 +134,7 @@ There are various ways to ensure more complex queries return these columns. For 
 > Avoid filtering custom detections by using the `Timestamp` or `TimeGenerated` column. The service prefilters data for custom detections based on the detection lookback. Filter the results by `Timestamp` or `TimeGenerated` columns only if you want to add additional filtering to ensure a specific sunset of the lookback window is evaluated.  
 
 
-The following sample query counts the number of unique devices (`DeviceId`) with antivirus detections and uses this count to find only the devices with more than five detections. To return the latest `Timestamp` and the corresponding `ReportId`, it uses the `summarize` operator with the `arg_max` function.
+The following sample query shows how to return the recommended columns in a more complex query. It counts the number of unique devices (`DeviceId`) with antivirus detections and finds only devices with more than five detections. To return the latest `Timestamp` and the corresponding `ReportId`, it uses the `summarize` operator with the `arg_max` function. This query references a single table and uses only supported operators, which also makes it compatible with [Continuous (NRT) frequency](#continuous-nrt-frequency).
 
 ```kusto
 DeviceEvents
@@ -347,11 +351,11 @@ If your custom detection rule uses Defender data, it can automatically take acti
 
 Apply these actions to devices in the `DeviceId` column of the query results:
 
-- **Isolate device** - Uses Microsoft Defender for Endpoint to apply full network isolation, preventing the device from connecting to any application or service. [Learn more about Microsoft Defender for Endpoint machine isolation](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts#isolate-devices-from-the-network).
-- **Collect investigation package** - Collects device information in a ZIP file. [Learn more about the Microsoft Defender for Endpoint investigation package](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts#collect-investigation-package-from-devices).
+- **Isolate device** - Uses Microsoft Defender for Endpoint to apply full network isolation, preventing the device from connecting to any application or service. For more information, see [Microsoft Defender for Endpoint machine isolation](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts#isolate-devices-from-the-network).
+- **Collect investigation package** - Collects device information in a ZIP file. For more information, see [Collect investigation package from devices](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts#collect-investigation-package-from-devices).
 - **Run antivirus scan** - Performs a full Microsoft Defender Antivirus scan on the device.
 - **Initiate investigation** - Initiates an [automated investigation](m365d-autoir.md) on the device.
-- **Restrict app execution** - Sets restrictions on device to allow only files that are signed with a Microsoft-issued certificate to run. [Learn more about app restrictions with Microsoft Defender for Endpoint](/defender-endpoint/respond-machine-alerts#restrict-app-execution).
+- **Restrict app execution** - Sets restrictions on device to allow only files that are signed with a Microsoft-issued certificate to run. For more information, see [App restrictions in Microsoft Defender for Endpoint](/defender-endpoint/respond-machine-alerts#restrict-app-execution).
 
 #### Actions on files
 

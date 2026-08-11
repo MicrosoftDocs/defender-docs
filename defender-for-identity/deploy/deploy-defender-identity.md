@@ -14,7 +14,7 @@ Defender for Identity uses sensors to collect signals from your on-premises iden
 
 Defender for Identity detects threats like privilege escalation or high-risk lateral movement, and reports on easily exploited identity issues like unconstrained Kerberos delegation for correction by the security team.
 
-Install Defender for Identity sensors on all domain controllers, including read-only domain controllers (RODCs). If you have AD FS, AD CS, or Microsoft Entra Connect servers in your environment that aren't domain controllers, install the v2.x sensor on each of those servers as well.
+Install Defender for Identity sensors on all domain controllers, including read-only domain controllers (RODCs). Also install sensors on any AD FS, AD CS, or Microsoft Entra Connect servers in your environment, whether or not they're domain controllers.
 
 ## Select your deployment method
 
@@ -26,12 +26,13 @@ The sensor version you deploy depends on the server role and operating system. U
 | --------- | --------- | --------- |
 |Domain controller | Windows Server 2019 or later with the July 2026 or later cumulative update|[Defender for Identity sensor v3.x](deploy-sensor-v3.md)|
 |Domain controller with AD FS, AD CS, or Microsoft Entra Connect identity roles   | Windows Server 2019 or later with the July 2026 or later cumulative update|[Defender for Identity sensor v3.x](deploy-sensor-v3.md)|
+|AD FS, AD CS, or Microsoft Entra Connect server that isn't a domain controller | Windows Server 2019 or later with the July 2026 or later cumulative update|[Defender for Identity sensor v3.x](deploy-sensor-v3.md)|
 |Domain controller | Windows Server 2016 or earlier| [Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md) |
-|[AD FS server that isn't a domain controller](active-directory-federation-services.md)|Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
-|[AD CS server that isn't a domain controller](active-directory-federation-services.md)|Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
-|[Microsoft Entra Connect server that isn't a domain controller](active-directory-federation-services.md)|Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
+|[AD FS server that isn't a domain controller](active-directory-federation-services.md)|Windows Server 2016 or earlier|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
+|[AD CS server that isn't a domain controller](active-directory-federation-services.md)|Windows Server 2016 or earlier|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
+|[Microsoft Entra Connect server that isn't a domain controller](active-directory-federation-services.md)|Windows Server 2016 or earlier|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
 
-Defender for Identity supports mixed environments with both v3.x and v2.x sensors. For example, you might deploy v3.x on domain controllers running Windows Server 2019 or later, and v2.x on older domain controllers or on AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers. Both sensor versions work together and report to the same Defender for Identity workspace.
+Defender for Identity supports mixed environments with both v3.x and v2.x sensors. For example, you might deploy v3.x on servers running Windows Server 2019 or later, and v2.x on servers running Windows Server 2016 or earlier. Both sensor versions work together and report to the same Defender for Identity workspace.
 
 If your organization requires [VPN integration](../vpn-integration.md) or [syslog notifications](../notifications.md#configure-syslog-notifications), use the v2.x sensor on the applicable domain controllers. These features aren't supported by the v3.x sensor.
 
@@ -47,7 +48,7 @@ Before you activate the Defender for Identity sensor v3.x, note that v3.x:
 
 ## Deployment steps for sensor v3.x
 
-Follow these steps to deploy the sensor v3.x on domain controllers running Windows Server 2019 or later, including domain controllers that also run AD FS, AD CS, or Microsoft Entra Connect roles:
+Follow these steps to deploy the sensor v3.x on servers running Windows Server 2019 or later, including domain controllers and AD FS, AD CS, or Microsoft Entra Connect servers, whether or not they're domain controllers:
 
 1. [Verify prerequisites](deploy-sensor-v3.md#before-you-activate)
 1. [Activate the sensor](activate-sensor.md)
@@ -57,7 +58,7 @@ Follow these steps to deploy the sensor v3.x on domain controllers running Windo
 
 ## Deployment steps for sensor v2.x
 
-Follow these steps to deploy the sensor v2.x on domain controllers running Windows Server 2016 or earlier, or on AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers:
+Follow these steps to deploy the sensor v2.x on servers running Windows Server 2016 or earlier:
 
 1. [Verify prerequisites](prerequisites-sensor-version-2.md)
 1. [Plan capacity](capacity-planning.md)

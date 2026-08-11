@@ -2,8 +2,8 @@
 title: Move an iotSecuritySolutions Resource to Another Region by using the Azure Portal
 description: Move an iotSecuritySolutions resource from one Azure region to another by using the Azure portal.
 ms.topic: how-to
-ms.custom: subject-moving-resources, msecd-doc-authoring-1014
-ms.date: 06/12/2026
+ms.custom: subject-moving-resources, msecd-doc-authoring-1016
+ms.date: 07/03/2026
 ai-usage: ai-assisted
 ---
 
@@ -30,11 +30,11 @@ Before you begin the move, make sure the following prerequisites are met:
 
 Prepare the iotSecuritySolutions resource for the region move by locating it and confirming its current region.
 
-Before transitioning the resource to the new region, we recommend that you create a [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) to preserve your existing alerts and raw events. A Log Analytics workspace provides a central location to retain this data so that it remains available after the move.
+Before transitioning the resource to the new region, we recommend that you create a [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) to preserve your existing alerts and raw events. A Log Analytics workspace provides a central location to retain existing alerts and raw events so that they remain available after the move.
 
 To find the resource you want to move:
 
-1. Sign in to the [Azure portal](https://portal.azure.com), and then select **All Resources**.
+1. Sign in to the [Azure portal](https://portal.azure.com) and select **All Resources**.
 
 1. Select **Show hidden types**.
 
@@ -57,7 +57,7 @@ To find the resource you want to move:
 
 The hidden iotSecuritySolutions resource is tied to its associated IoT Hub, so moving the resource to another region requires cloning the IoT Hub to the target region. To clone the IoT Hub and its linked iotSecuritySolutions resource, follow the instructions in [Clone and migrate an IoT Hub to another region](/azure/iot-hub/iot-hub-how-to-clone).
 
-After the IoT Hub move is complete and Defender for IoT is re-enabled on the destination hub, you can reconnect it to the Log Analytics workspace that you configured before the move.
+After the move is complete and Defender for IoT is re-enabled, reconnect the hub to the Log Analytics workspace that you set up earlier.
 
 <a name="resource-verification"></a>
 ## Verify the moved resource in the target region
@@ -66,7 +66,7 @@ After the move, verify that the iotSecuritySolutions resource is in the target r
 
 To verify the resource is in the correct region:
 
-1. Sign in to the [Azure portal](https://portal.azure.com), and then select **All Resources**.
+1. Sign in to the [Azure portal](https://portal.azure.com) and select **All Resources**.
 
 1. Select **Show hidden types**.
 
@@ -94,7 +94,10 @@ The recommendations should have transferred and everything should be working cor
 
 Don't clean up until you've finished verifying that the resource has moved and the recommendations have transferred. When you're ready, clean up the old resources by performing these steps:
 
-- Deleting the old hub removes all active devices from the hub. If you haven't already, delete the old hub.
+> [!WARNING]
+> Deleting the old hub removes all active devices from the hub.
+
+- If you haven't already, delete the old hub.
 
 - If you have routing resources that you moved to the new location, you can delete the old routing resources.
 

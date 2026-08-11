@@ -1,10 +1,10 @@
 ---
 title: Configure OT sensor settings from the Azure portal - Microsoft Defender for IoT
 description: Learn how to configure settings for OT network sensors from Microsoft Defender for IoT on the Azure portal.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Configure OT sensor settings from the Azure portal (Public preview)
@@ -76,6 +76,9 @@ Your new setting is now listed on the **Sensor settings (Preview)** page under i
 
 ### Delete an existing OT sensor setting
 
+> [!WARNING]
+> Deleting a sensor setting permanently removes that configuration from the selected scope. To restore the setting, you must recreate it.
+
 To delete an OT sensor setting altogether:
 
 1. On the **Sensor settings (Preview)** page, locate the setting you want to delete.
@@ -87,7 +90,7 @@ For example:
 
 ## Edit settings for disconnected OT sensors
 
-This procedure describes how to edit OT sensor settings if your OT sensor is currently disconnected from Azure, such as during an ongoing security incident.
+The following procedure describes how to edit OT sensor settings when your OT sensor is currently disconnected from Azure, such as during an ongoing security incident.
 
 By default, if you configure any settings from the Azure portal, all settings that are configurable from both the Azure portal and the OT sensor are set to read-only on the OT sensor itself. For example, if you configure a VLAN from the Azure portal, then bandwidth cap, subnet, and VLAN settings are *all* set to read-only, and blocked from modifications on the OT sensor.
 
@@ -108,11 +111,12 @@ If you're in a situation where the OT sensor is disconnected from Azure, and you
 
     :::image type="content" source="media/how-to-manage-individual-sensors/remote-config-sensor.png" alt-text="Screenshot of the Azure Remote Config option." lightbox="media/how-to-manage-individual-sensors/remote-config-sensor.png":::
 
-Continue by updating the relevant setting directly on the OT network sensor. For more information, see [Manage individual sensors](how-to-manage-individual-sensors.md).
+Continue by updating the unblocked sensor setting directly on the OT network sensor console. For more information, see [Manage individual sensors](how-to-manage-individual-sensors.md).
 
-## Add sensor settings
+<a name="add-sensor-settings"></a>
+## OT sensor setting reference
 
-This section describes the individual OT sensor setting types that you can configure from the Azure portal. Each subsection provides field-level details for one setting type.
+The following subsections describe the individual OT sensor setting types that you can configure from the Azure portal. Each subsection provides field-level details for one setting type.
 
 The available sensor setting types in the **Type** dropdown list are:
 
@@ -170,7 +174,7 @@ To configure an NTP server for your sensor from the Azure portal, define an IP/D
 
 To focus the Azure device inventory on devices that are in your OT scope, you need to manually edit the subnet list to include only the locally monitored subnets that are in your OT scope.
 
-Subnets in the subnet list are automatically configured as ICS subnets, which means that Defender for IoT recognizes these subnets as OT networks. You can edit the ICS subnet setting when you [configure subnets in the Azure portal](#configure-subnets-in-the-azure-portal).
+Defender for IoT marks subnets in the subnet list as ICS (industrial control system) subnets by default, which means it recognizes these subnets as OT networks. You can edit the ICS subnet setting when you [configure subnets in the Azure portal](#configure-subnets-in-the-azure-portal).
 
 Once the subnets are configured, the network location of the devices is shown in the *Network location* (Public preview) column in the Azure device inventory. All of the devices associated with the listed subnets are displayed as *local*, while devices associated with detected subnets not included in the list are displayed as *routed*.
 
@@ -231,9 +235,9 @@ Add the range of IP addresses to configure the DHCP settings that can apply to a
 
 ## Configure a backup server
 
-Your OT sensor can have a backup server setup during its initially deployment or later on. In both cases, follow this procedure to confirm that the backup server is correctly configured once it's setup.
+You can set up a backup server for your OT sensor during its first deployment or later. Use this procedure to confirm the backup server is set up correctly.
 
-A misconfigured backup server might falsely recognize traffic as malware and trigger a [Malware engine alert](alert-engine-messages.md#malware-engine-alerts). If you think a **Suspicion of Malicious Activity** malware alert was triggered falsely, consider following this procedure to check the backup server configuration.
+A misconfigured backup server might flag normal traffic as malware. This can trigger a [Malware engine alert](alert-engine-messages.md#malware-engine-alerts). If you see a false **Suspicion of Malicious Activity** alert, check the backup server setup by using the steps below.
 
 **To configure the backup server:**
 

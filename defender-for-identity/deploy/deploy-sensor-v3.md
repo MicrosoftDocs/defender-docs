@@ -3,7 +3,7 @@ title: Deploy the Defender for Identity sensor v3.x
 description: Learn the requirements and configuration steps to deploy the Defender for Identity sensor v3.x on domain controllers running Windows Server 2019 or later.
 ms.date: 07/15/2026
 ms.topic: how-to
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ms.reviewer: rlitinsky
 ai-usage: ai-assisted
 ---
@@ -35,13 +35,14 @@ Make sure that the server on which you're activating the sensor:
 
 #### Supported server types
 
-The v3.x sensor supports domain controllers, including domain controllers with these identity roles:
+The v3.x sensor supports domain controllers. It also supports servers that run the following identity roles, whether or not they're domain controllers:
 
 - Active Directory Federation Services (AD FS)
 - Active Directory Certificate Services (AD CS)
 - Microsoft Entra Connect
 
-Use the [Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md) for servers that aren't domain controllers and run AD FS, AD CS, or Microsoft Entra Connect.
+> [!IMPORTANT]
+> If you deploy the Defender for Identity sensor v3.x only on AD FS, AD CS, or Microsoft Entra Connect servers, you must also install at least one v3.x sensor on a domain controller.
 
 ### Licensing requirements
 
@@ -103,7 +104,7 @@ If you're migrating from sensor v2.x and previously had a gMSA configured for [a
 
 #### DSA and gMSA health alerts in environments with both v2 and v3 sensors
 
-If your workspace still has a Directory Service Account (DSA) or group Managed Service Account (gMSA) configured because v2 sensors on AD FS, AD CS, or Entra Connect servers still require it, DSA and gMSA credentials continue to be validated on all sensors in the workspace, including v3 sensors. If validation fails, the **Directory services user credentials are incorrect** health alert appears. Workspace-level validation of DSA and gMSA credentials on all sensors is by design. Defender for Identity validates DSA and gMSA credentials at the workspace level for all sensors as long as those accounts exist, regardless of whether individual sensors use them for auditing or response actions.
+If your workspace still has a Directory Service Account (DSA) or group Managed Service Account (gMSA) configured because v2 sensors on AD FS, AD CS, or Entra Connect servers still require it, DSA and gMSA credentials continue to be validated on all sensors in the workspace, including v3 sensors. If DSA or gMSA credential validation fails, the **Directory services user credentials are incorrect** health alert appears. Workspace-level validation of DSA and gMSA credentials on all sensors is by design. Defender for Identity validates DSA and gMSA credentials at the workspace level for all sensors as long as those accounts exist, regardless of whether individual sensors use them for auditing or response actions.
 
 V3 sensors ignore the DSA and gMSA for auditing and response actions, but they're still included in workspace-level credential validation. To stop receiving this health alert on v3 sensors, remove the workspace-level DSA or gMSA after all sensors are fully migrated to v3 and no v2 sensors require it.
 
@@ -117,7 +118,8 @@ The *Test-MdiReadiness.ps1* script is also available from Microsoft Defender XDR
 
 After confirming all prerequisites, [activate the sensor from the Microsoft Defender portal](activate-sensor.md).
 
-## After you activate
+<a name="after-you-activate"></a>
+## Configure settings after activation
 
 Complete these configuration steps after the sensor is activated and running.
 
@@ -125,7 +127,7 @@ Complete these configuration steps after the sensor is activated and running.
 
 Defender for Identity relies on Windows event logs for many detections. For v3.x sensors on domain controllers, [enable automatic auditing](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically), which handles all auditing settings without manual configuration.
 
-If automatic auditing isn't available or you opted out, [configure auditing manually](configure-windows-event-collection.md#configure-windows-event-collection-manually) or [use PowerShell](configure-windows-event-collection.md#configure-windows-event-collection-using-powershell).
+If automatic auditing isn't available or you opted out, [configure auditing manually](configure-windows-event-collection.md#configure-windows-event-collection-manually) or [configure Windows event collection using PowerShell](configure-windows-event-collection.md#configure-windows-event-collection-using-powershell).
 
 ### Configure RPC auditing
 

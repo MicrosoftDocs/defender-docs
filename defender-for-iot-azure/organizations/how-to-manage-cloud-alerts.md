@@ -1,9 +1,9 @@
 ---
 title: View and Manage Alerts on the Azure Portal
 description: Learn about viewing and managing alerts triggered by cloud-connected Microsoft Defender for IoT network sensors on the Azure portal.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: enterprise-iot, msecd-doc-authoring-1014
+ms.custom: enterprise-iot, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -35,6 +35,8 @@ Before you view or manage alerts in the Azure portal, make sure the following pr
 For more information, see [Azure user roles and permissions for Defender for IoT](roles-azure.md).
 
 ## View alerts on the Azure portal
+
+To view alerts in the Azure portal, follow these steps:
 
 1. In [Defender for IoT](https://portal.azure.com/#view/Microsoft_Azure_IoT_Defender/IoTDefenderDashboard/~/Getting_started) on the Azure portal, select the **Alerts** page on the left. By default, the following details are shown in the grid:
 
@@ -69,6 +71,8 @@ For more information, see [Azure user roles and permissions for Defender for IoT
 
 <a name="considerations"></a>
 ### Considerations for viewing alerts
+
+Keep the following considerations in mind when viewing alerts:
 
 - If you're seeing more alerts than expected, you might want to create suppression rules to prevent alerts from being triggered for legitimate network activity. For more information, see [Suppress irrelevant alerts](how-to-accelerate-alert-incident-response.md#suppress-irrelevant-alerts).
 - When you view alerts in the alert list, some alerts might not correlate with alerts on specific sensors. For more information, see [Investigate alerts that don't correlate with specific sensors](respond-ot-alert.md#investigate-alerts-that-dont-correlate-with-a-specific-sensor).
@@ -158,7 +162,7 @@ The file is generated, and you're prompted to save it locally.
 
 ## Remediate aggregated alert violations
 
-To reduce alert fatigue, Defender for IoT combines multiple instances of the same alert violation with identical parameters into a single alert item, called an *aggregated alert*, on the Alerts page. You can identify an aggregated alert by the *Multiple violations* message that appears under the Source device IP. Use the **Violations** tab to investigate further and the **Take action** tab to remediate the alerts.
+To reduce alert fatigue, Defender for IoT combines multiple instances of the same alert violation with identical parameters into a single alert item, called an *aggregated alert*, on the Alerts page. You can identify an aggregated alert by the *Multiple violations* message that appears under the Source device IP. Use the **Violations** tab to investigate further and the **Take action** tab to remediate the underlying alert violations.
 
 1. On the **Alerts** page, select an alert in the grid to display more details in the pane on the right.
 

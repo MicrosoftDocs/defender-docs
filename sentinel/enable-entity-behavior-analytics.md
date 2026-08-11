@@ -24,7 +24,7 @@ User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel analyzes logs an
 
 You can enable UEBA and configure data sources directly from the UEBA tab. See [Access UEBA from the UEBA tab](#access-ueba-from-ueba-tab).
 
-This article explains how to enable UEBA and configure data sources from your Microsoft Sentinel workspace settings and from supported data connectors.
+This article explains how to enable UEBA and configure data sources from your Microsoft Sentinel workspace settings and from supported data connectors. Before you begin, review the [Prerequisites](#prerequisites) section for required roles and permissions.
 
 For more information about UEBA, see [Identify threats with entity behavior analytics](identify-threats-with-entity-behavior-analytics.md).
 
@@ -122,9 +122,8 @@ The UEBA behaviors layer generates enriched summaries of activity observed in mu
 
 For more information about the UEBA behaviors layer and how to enable it, see [Enable the UEBA behaviors layer in Microsoft Sentinel](../sentinel/entity-behaviors-layer.md). 
 
-## Next steps
+<a name="next-steps"></a>
+## Related articles
 
-Learn how to investigate UEBA anomalies and use UEBA data in your investigations:
-
-- [Investigate incidents with UEBA data](investigate-with-ueba.md)
-- [UEBA data sources and table schemas](ueba-reference.md)
+- [Investigate incidents with UEBA data](investigate-with-ueba.md) - Learn how to investigate UEBA anomalies in your incidents.
+- [UEBA data sources and table schemas](ueba-reference.md) - Explore the data sources and schema references for UEBA.

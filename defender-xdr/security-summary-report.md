@@ -5,7 +5,7 @@ ms.service: defender-xdr
 ms.localizationpriority: medium
 author: guywi-ms
 ms.author: guywild
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.collection:
 - m365-security
@@ -13,29 +13,29 @@ ms.collection:
 appliesto:
 - Microsoft Defender XDR
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #customer intent: As a SOC analyst, I want to know how to showcase security achievements and impact using data from the Microsoft Defender portal.
 ---
 # Highlight security impact and achievements with the unified security summary
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Security operations center (SOC) teams can easily showcase their security achievements and the impact of Microsoft Defender using the unified security summary. Having the summary readily available in the Microsoft Defender portal streamlines the process for SOC teams to generate security reports, saving time usually spent on collecting data from various sources and creating reports tailored to their audiences. SOC teams can readily communicate performance and achievements to their stakeholders with the summary.
+Security operations center (SOC) teams can easily showcase their security achievements and the impact of Microsoft Defender using the unified security summary. Having the summary readily available in the Microsoft Defender portal streamlines the process for SOC teams to generate security reports, saving time usually spent on collecting data from various sources and creating reports tailored to their audiences. SOC teams can readily communicate performance and achievements to their stakeholders with the unified security summary.
 
 The unified security summary highlights the following information:
 
 - **Posture**: Your organization’s posture includes data from [Microsoft Secure Score](microsoft-secure-score.md), threat protection information related to ransomware and phishing prevention, [exposure score](/defender-vulnerability-management/tvm-exposure-score) based on Microsoft Defender Vulnerability Management, and the number of onboarded devices to Microsoft Defender for Endpoint
   :::image type="content" source="media/security-summary-report/summary-posture-small.png" alt-text="Screenshot of the Posture section in the security summary report" lightbox="media/security-summary-report/summary-posture.png":::
-- **Detection**: This section contains the number of [alerts and incidents](incidents-overview.md), including how many alerts were consolidated into incidents, the number of alerts grouped into incidents, and information on active detection rules and the corresponding response actions produced by those rules
+- **Detection**: This section contains the number of [incidents and alerts overview](incidents-overview.md), including how many alerts were consolidated into incidents, the number of alerts grouped into incidents, and information on active detection rules and the corresponding response actions produced by those rules
   :::image type="content" source="media/security-summary-report/summary-detection-small.png" alt-text="Screenshot of the Detection section in the security summary report" lightbox="media/security-summary-report/summary-detection.png":::
-- **Protection**: Cards under this section include data from Microsoft’s automatic investigation and response features like the total number of [attacks disrupted](automatic-attack-disruption.md), a list of the disruption incidents, the number of malicious activities blocked by Microsoft Defender Antivirus, and the number of malicious emails and URLs blocked
+- **Protection**: Cards under this section include data from Microsoft’s automatic investigation and response features like the total number of [automatic attack disruptions](automatic-attack-disruption.md), a list of the disruption incidents, the number of malicious activities blocked by Microsoft Defender Antivirus, and the number of malicious emails and URLs blocked
   :::image type="content" source="media/security-summary-report/summary-protection-small.png" alt-text="Screenshot of the Protection section in the security summary report" lightbox="media/security-summary-report/summary-protection.png":::
-- **Investigation and response**: This section contains the number of active and resolved alerts and incidents, top 10 critical incidents with each incident’s status and affected number of assets, the number of [automated investigation and response actions](m365d-autoir.md) taken on impacted assets, and the number of email messages where malicious files were automatically identified and extracted through [Microsoft Defender for Office 365 Zero-hour auto purge (ZAP)](/defender-office-365/zero-hour-auto-purge)
+- **Investigation and response**: This section contains the number of active and resolved alerts and incidents, top 10 critical incidents with each incident’s status and affected number of assets, the number of [automated investigation and response in Microsoft Defender](m365d-autoir.md) actions taken on impacted assets, and the number of email messages where malicious files were automatically identified and extracted through [Microsoft Defender for Office 365 Zero-hour auto purge (ZAP)](/defender-office-365/zero-hour-auto-purge)
   :::image type="content" source="media/security-summary-report/summary-investigation-small.png" alt-text="Screenshot of the Investigation and Response section in the security summary report" lightbox="media/security-summary-report/summary-investigation.png":::
-- **Copilot-powered investigation and response**: This section contains the number of [analyzed files](copilot-in-defender-file-analysis.md) and [analyzed scripts](security-copilot-m365d-script-analysis.md) where Microsoft Copilot in Defender was used.
+- **Copilot-powered investigation and response**: This section contains the number of [file analysis in Copilot in Defender](copilot-in-defender-file-analysis.md) and [script analysis in Copilot in Defender](security-copilot-m365d-script-analysis.md) operations where Microsoft Copilot in Defender was used.
   :::image type="content" source="media/security-summary-report/summary-copilot-small.png" alt-text="Screenshot of the Copilot section in the security summary report" lightbox="media/security-summary-report/summary-copilot.png":::
 
-SOC teams can use the unified security summary to highlight the impact of their day-to-day operations. They can also emphasize how Microsoft’s automated actions impact the efficient protection of their organization with features like automatic attack disruption stopping attacks before it becomes widespread.
+SOC teams can use the unified security summary to highlight the impact of their day-to-day operations. They can also emphasize how Microsoft’s automated actions impact the efficient protection of their organization with features like automatic attack disruption, which stops attacks before they become widespread.
 
 ## Prerequisites
 
@@ -59,7 +59,7 @@ To access and share the unified security summary, follow these steps:
    :::image type="content" source="media/security-summary-report/duration-picker.png" alt-text="Screenshot highlighting the report data duration options in the security summary report":::
 4. Once the summary is generated, you can check the details of each card under each section.
    > [!TIP]
-   > Select a card's title to know more about each card. Selecting the title opens the related Microsoft documentation page.
+   > Select a card's title to learn more about that card. Selecting the title opens the Microsoft documentation page for that card's feature or metric.
 5. You can export the summary as a PDF or CSV file. To export, select the dropdown menu on the upper right corner of the page and choose the format.
    :::image type="content" source="media/security-summary-report/export-picker.png" alt-text="Screenshot highlighting the export options in the security summary report":::
 6. If you choose to export the summary as a PDF, an option to customize by adding a logo of your choice is available. Select **Upload logo** to add a logo to the PDF. Otherwise, you can select **Generate PDF** to proceed exporting the summary to a PDF file.

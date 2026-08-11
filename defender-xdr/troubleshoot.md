@@ -9,10 +9,10 @@ ms.collection:
 - m365-security-compliance
 - tier3
 ms.topic: how-to
-ms.date: 06/18/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender XDR
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 #Customer intent: As a security administrator, I want to troubleshoot known Microsoft Defender XDR service issues so that I can restore functionality and resolve errors quickly.
@@ -22,7 +22,7 @@ ai-usage: ai-assisted
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Issues might arise as you use the Microsoft Defender XDR service. The following sections provide solutions and workarounds. If you encounter a problem that isn't addressed here, contact [Microsoft Support](https://support.microsoft.com/contactus).
+Issues might arise as you use the Microsoft Defender XDR service. The following sections provide solutions and workarounds. Before you begin, verify that your environment meets the [prerequisites](prerequisites.md). If you encounter a problem that isn't addressed here, [contact Microsoft Support](https://support.microsoft.com/contactus).
 
 <a name='i-dont-see-microsoft-365-defender-content'></a>
 
@@ -30,7 +30,7 @@ Issues might arise as you use the Microsoft Defender XDR service. The following 
 
 If you don't see capabilities on the navigation pane such as the Incidents, Action center, or Hunting in your portal, verify that your tenant has the appropriate licenses.
 
-For more information, see [Prerequisites](prerequisites.md).
+For more information, see [Microsoft Defender XDR prerequisites](prerequisites.md).
 
 <a name='microsoft-defender-for-identity-alerts-are-not-showing-up-in-the-microsoft-365-defender-incidents'></a>
 
@@ -56,9 +56,9 @@ In some instances, an administrator block might cause submission issues when you
 
 ### Review your settings
 
-Open your Azure [Enterprise application settings](https://portal.azure.com/#view/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/~/UserSettings). Under **Consent and permissions** > **User consent settings**, check which option is selected under **User consent for applications**.
+Open your Azure [Enterprise application user consent settings](https://portal.azure.com/#view/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/~/UserSettings). Under **Consent and permissions** > **User consent settings**, check which option is selected under **User consent for applications**.
 
-- If **Do not allow user consent** is selected, a Microsoft Entra administrator for the customer tenant needs to provide consent for the organization. Depending on the configuration with Microsoft Entra ID, users might be able to submit a request right from the same dialog box. If there's no option to ask for admin consent, users need to request for these permissions to be added to their Microsoft Entra admin. Go to the following section for more information.
+- If **Do not allow user consent** is selected, a Microsoft Entra administrator for the customer tenant needs to provide consent for the organization. Depending on the configuration with Microsoft Entra ID, users might be able to submit a request right from the same dialog box. If there's no option to ask for admin consent, users need to request for these permissions to be added to their Microsoft Entra admin. For more information, see [Implement required Enterprise Application permissions](#implement-required-enterprise-application-permissions).
 
 - If **Allow user consent for apps from verified publishers, for selected permissions** or **Let Microsoft manage your consent settings** is selected, verify that the Windows Defender Security Intelligence enterprise application is enabled for sign-in. This setting is on the app **Properties** page, not under **User consent settings**.
 
@@ -80,7 +80,7 @@ This process requires an Application Administrator or higher in the tenant.
 
    :::image type="content" source="media/troubleshoot/msi-grant-admin-consent.jpg" alt-text="Screenshot of the admin consent dialog showing API permissions for Windows Defender Security Intelligence." lightbox="media/troubleshoot/msi-grant-admin-consent.jpg":::
 
-1. If the administrator receives an error while attempting to provide consent manually, try either [Option 1](#option-1-approve-enterprise-application-permissions-by-user-request) or [Option 2](#option-2-provide-admin-consent-by-authenticating-the-application-as-an-admin) as possible workarounds.
+1. If the administrator receives an error while attempting to provide consent manually, try either [Approve enterprise application permissions by user request](#option-1-approve-enterprise-application-permissions-by-user-request) or [Provide admin consent by authenticating the application as an admin](#option-2-provide-admin-consent-by-authenticating-the-application-as-an-admin) as possible workarounds.
 
 #### Option 1: Approve enterprise application permissions by user request
 
@@ -114,11 +114,15 @@ Then, admins review the permissions and make sure to select **Consent on behalf 
 
 All users in the tenant can now use this application.
 
-#### Option 3: Delete and read app permissions
+<a name="option-3-delete-and-read-app-permissions"></a>
+#### Option 3: Delete and re-add app permissions
 
-If neither Option 1 (user request) nor Option 2 (admin authentication) resolves the issue, try the following steps (as an admin):
+If neither [Option 1: Approve enterprise application permissions by user request](#option-1-approve-enterprise-application-permissions-by-user-request) nor [Option 2: Provide admin consent by authenticating the application as an admin](#option-2-provide-admin-consent-by-authenticating-the-application-as-an-admin) resolves the issue, try the following steps (as an admin):
 
-1. Remove previous configurations for the application. Go to [Enterprise applications](https://portal.azure.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview).
+> [!WARNING]
+> Removing the existing application configuration temporarily prevents all users in your tenant from submitting files until you complete the remaining steps and reconsent. Review your current permissions before you proceed.
+
+1. Remove previous configurations for the application. Go to the [Enterprise applications page in the Azure portal](https://portal.azure.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview).
 
 1. Search for and select **Windows Defender Security Intelligence**.
 
@@ -128,11 +132,11 @@ If neither Option 1 (user request) nor Option 2 (admin authentication) resolves 
 
    :::image type="content" source="media/troubleshoot/msi-properties.png" alt-text="Screenshot of the enterprise application properties page with the delete option." lightbox="media/troubleshoot/msi-properties.png":::
 
-1. Capture `TenantID` from [Properties](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties).
+1. Capture `TenantID` from the [Microsoft Entra ID Properties page](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties).
 
 1. Replace `{tenant-id}` with the specific tenant that needs to grant consent to this application in the URL below. Copy the following URL into browser: `https://login.microsoftonline.com/{tenant-id}/v2.0/adminconsent?client_id=f0cf43e5-8a9b-451c-b2d5-7285c785684d&state=12345&redirect_uri=https%3a%2f%2fwww.microsoft.com%2fwdsi%2ffilesubmission&scope=openid+profile+email+offline_access`
 
-   The rest of the parameters are already completed.
+   The URL already includes the required `client_id`, `state`, `redirect_uri`, and `scope` parameters.
 
    :::image type="content" source="media/troubleshoot/msi-microsoft-permission-requested-your-organization.png" alt-text="Screenshot of the permissions requested dialog for the organization." lightbox="media/troubleshoot/msi-microsoft-permission-requested-your-organization.png":::
 

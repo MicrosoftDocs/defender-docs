@@ -1,6 +1,6 @@
 ---
 title: Set up your Microsoft Defender XDR trial lab or pilot environment
-description: Access Microsoft Defender portal then set up your Microsoft Defender XDR trial lab environment
+description: Set up a dedicated Microsoft Defender XDR trial lab or pilot environment in the Microsoft Defender portal, including tenant provisioning and subscription activation for a non-production evaluation.
 search.appverid: met150
 ms.service: defender-xdr
 ms.author: guywild
@@ -14,8 +14,8 @@ ms.collection:
   - highpri
   - tier1
 ms.topic: how-to
-ms.date: 06/15/2026
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ms.date: 07/02/2026
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 

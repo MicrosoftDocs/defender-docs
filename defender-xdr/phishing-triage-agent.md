@@ -11,13 +11,13 @@ ms.collection:
 - security-copilot
 - magic-ai-copilot 
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.update-cycle: 180-days
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Defender for Office 365 Plan 2
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #customer intent: As a security analyst, I want to learn about the Phishing Triage Agent in Microsoft Defender so that I can triage and classify user-submitted phishing incidents efficiently.
 ---
 
@@ -322,7 +322,7 @@ To view agent metrics and manage the agent, go to the Phishing Triage Agent card
 
       :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-agent-page.png" alt-text="Screenshot of the Performance tab on the Phishing Triage Agent page." lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-agent-page.png":::
 
-   Select the ellipsis (...) at the top right corner of the page to access management options for the agent, as described in the sections below.
+   Select the ellipsis (...) at the top right corner of the page to access management options for the agent, including [changing the agent's identity and role](#change-the-agents-identity-and-role), [viewing and managing feedback](#view-and-manage-feedback-to-the-agent), and [removing the agent](#remove-the-agent).
 
    Select **Pause** or **Run** to temporarily stop or restart the agent’s activities.
 
@@ -394,7 +394,8 @@ To view and manage user-submitted feedback:
 
 ### Remove the agent
 
-When you remove the agent, triage and classification of new incidents stop, and all feedback is deleted. However, the history of previously triaged incidents is retained for your reference.
+> [!WARNING]
+> Removing the agent deletes all stored feedback and stops triage and classification for new incidents. The history of previously triaged incidents is retained for your reference.
 
 To remove the agent: 
 
@@ -417,9 +418,9 @@ Phishing remains one of the most common methods by which attackers gain initial 
 
 Microsoft AI agents follow strict Responsible AI guidelines and undergo thorough reviews to ensure compliance with all AI standards and safeguards. Security Copilot’s Phishing Triage Agent is fully incorporated into these controls. During setup, you assign the agent an identity and configure it with the minimum permissions required for its operation, ensuring that it doesn’t have unnecessary permissions. All agent activities are logged in detail, with the complete flow available for review by analysts and admins at any time. Feedback provided to the agent to help it adapt to the organization’s environment is logged, reflected in the system, and accessible for review and modification by admins as needed.
 
-### How does the agent differ from a standard SOAR solution?
+### How does the agent differ from a standard security orchestration, automation, and response (SOAR) solution?
 
-While both security orchestration, automation, and response (SOAR) solutions and the Phishing Triage Agent aim to automate aspects of security operations, their approaches are fundamentally different. SOAR tools rely on static, policy- and rule-based workflows that require predefined logic and manual tuning. In contrast, the agent uses recursive reasoning to autonomously complete tasks—learning, adapting, and improving over time.
+While both SOAR solutions and the Phishing Triage Agent aim to automate aspects of security operations, their approaches are fundamentally different. SOAR tools rely on static, policy- and rule-based workflows that require predefined logic and manual tuning. In contrast, the agent uses recursive reasoning to autonomously complete tasks—learning, adapting, and improving over time.
 
 The agent doesn’t need to be reprogrammed for every new situation. Within defined boundaries, it adjusts to the task at hand, making it far more flexible than traditional automation. Rather than being rigid and reactive, it continuously evolves with your environment and threat landscape, guided by analyst feedback and grounded in real data. Purpose-built for security teams, the Phishing Triage Agent helps accelerate responses and reduces manual workloads, freeing up analysts to focus on strategic initiatives.
 

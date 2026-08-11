@@ -17,7 +17,7 @@ ms.custom:
 - cx-ah
 ms.topic: how-to
 ms.update-cycle: 180-days
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender
 - Microsoft Defender XDR
@@ -31,7 +31,7 @@ ai-usage: ai-assisted
 
 [Microsoft Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md) provides the Threat Hunting Assistant in advanced hunting to enhance threat hunting and security analysis. The Threat Hunting Assistant runs in one of two modes, depending on how much help you want.
 
-The following table describes these capabilities, where they're best used, and the expected output:
+The following table describes each capability, where to use it, and the expected output:
 
 | Mode | Description |Output |Experience |
 | ------------- | ------------- |------------- |------------- |
@@ -40,7 +40,8 @@ The following table describes these capabilities, where they're best used, and t
 
 The Threat Hunting Assistant and Query assistant empower you to hunt threats faster, more accurately, and with greater confidence without needing to write KQL queries.
 
-## Get access
+<a name="get-access"></a>
+## Get access to Security Copilot in advanced hunting
 Users with access to Security Copilot can use these capabilities in advanced hunting.
 
 You can use one mode at a time. **Rich insights** is the default mode. The active mode appears as a badge next to **Threat hunting assistant** at the top of the Security Copilot side pane.
@@ -54,6 +55,10 @@ To use the Security Analyst Agent instead, select **Switch to Security Analyst A
 >[!NOTE]
 >- Mode selection isn't available on non-primary workspaces.
 >- Switching modes starts a new chat and clears your current conversation. You're asked to confirm before the switch happens.
+
+To switch to Query assistant mode, in the Security Copilot side pane, select the three-dot menu, then toggle the **Threat Hunting Agent** switch off.
+
+![Screenshot of Security Copilot in advanced hunting showing the Threat Hunting Agent mode is active.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-access.png)
 
 
 ## Scope of Security Copilot in advanced hunting

@@ -16,7 +16,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender
 - Microsoft Defender XDR
@@ -58,16 +58,16 @@ To start using the Query assistant, follow these steps:
 
 1. Copilot generates a KQL query from your text instruction or question. While Copilot is generating, you can cancel the query generation by selecting **Stop generating**.
 
-    ![Screenshot of Security Copilot in advanced hunting generating a response.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-generate.png)
+    ![Screenshot of Security Copilot in advanced hunting showing generated query results with Add and run and Add to editor options.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-generate.png)
 
 
-1. Review the generated query. To check how Copilot came up with the query, you can select **See the logic behind the query** below the query text to expand the explanation behind the query. Select it again to minimize.
+1. Review the generated query. To check how Copilot came up with the query, you can select **See the logic behind the query** below the query text to expand the explanation behind the query. Select **See the logic behind the query** again to minimize the explanation.
 
-   ![Screenshot of Copilot button showing See the logic behind the query.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-see-logic.png)
+   ![Screenshot of Security Copilot option to see the logic behind the query.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-see-logic.png)
 
      You can then choose to run the query by selecting **Run query**.
 
-   ![Screenshot of Copilot button showing Run query option.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-run-query.png)
+   ![Screenshot of Security Copilot showing the Run query option.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-run-query.png)
 
     The generated query appears as the last query in the query editor and runs automatically.
 
@@ -78,7 +78,7 @@ To start using the Query assistant, follow these steps:
     The generated query appears in the query editor as the last query, where you can edit it before running using the regular **Run query** above the query editor.
 
 
-1. You can provide feedback about the generated response by selecting the feedback icon ![Screenshot of the feedback icon in Security Copilot for advanced hunting.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-feedback-icon.png) and choosing **Looks right**, **Needs improvement**, or **Inappropriate**.
+1. You can provide feedback about the generated response by selecting the feedback icon ![Screenshot of Security Copilot feedback option in advanced hunting.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-feedback-icon.png) and choosing **Looks right**, **Needs improvement**, or **Inappropriate**.
 
 
 > [!TIP]
@@ -94,4 +94,3 @@ To review or edit the query before running it, select the arrow next to **Run qu
    ![Screenshot of the Run query split button in the Security Copilot side pane, showing the Add to editor option.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-settings.png)
 
 To see how the query was constructed, select **See the logic behind the query**.
-
