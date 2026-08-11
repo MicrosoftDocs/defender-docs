@@ -137,6 +137,8 @@
                           href: sap/sap-deploy-troubleshoot.md
                         - name: Extra deployment steps
                           items:
+                            - name: Update SAP connector and DCR settings
+                              href: sap/update-sap-connector-data-collection-rule.md
                             - name: Migrate agent to agentless connector
                               href: sap/sap-agent-migrate.md
                             - name: Collect SAP HANA audit logs
