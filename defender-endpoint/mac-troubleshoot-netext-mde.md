@@ -12,7 +12,7 @@ ms.collection:
 - mde-macos
 ms.topic: troubleshooting-general
 ms.subservice: macos
-ms.date: 04/16/2025
+ms.date: 08/11/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -28,13 +28,51 @@ appliesto:
 
 This article provides information on how to troubleshoot issues with the network extension (NetExt) that's installed as part of Microsoft Defender for Endpoint on macOS. 
 
-NetExt is used by [Network Protection](network-protection-macos.md) is enabled on Mac devices.
+NetExt provides network event data used by multiple Defender for Endpoint capabilities. [Network Protection](network-protection-macos.md) depends on NetExt, but disabling Network Protection enforcement isn't the same as disabling NetExt.
 
 **Symptom**: 
 
 You might notice issues with network related latencies when using your browser or copying files over the network or using a chat/meeting application. 
 
-**Temporary solution**:
+## Identify the affected component
+
+Before disabling NetExt, determine whether the issue requires Network Protection enforcement or only the network extension to be running.
+
+1. Check Network Protection and system extension health:
+
+   ```bash
+   mdatp health --field network_protection_status
+   mdatp health --details system_extensions
+   mdatp health --details network_protection
+   ```
+
+1. Test the following states and record whether the issue reproduces:
+
+   | NetExt | Network Protection | Interpretation |
+   |---|---|---|
+   | Enabled | Audit or block | Baseline with both components active |
+   | Enabled | Disabled | If the issue remains, investigate NetExt or another capability that uses network events |
+   | Disabled | Disabled | If the issue stops only here, NetExt is involved |
+
+1. Record the affected application and protocol, browser or client, destination, proxy configuration, VPN product and full-tunnel or split-tunnel mode, and whether other network-filtering security products are installed.
+1. Collect a diagnostic package while reproducing the issue:
+
+   ```bash
+   sudo mdatp diagnostic create
+   ```
+
+   If Microsoft support requests a NetExt log stream, run:
+
+   ```bash
+   log stream --info --debug --style compact --predicate 'process == "netext"' > netextlogstream.txt
+   ```
+
+   Reproduce the issue, and then press **Control+C** to stop the trace.
+
+> [!CAUTION]
+> Disabling NetExt reduces network visibility and disables capabilities that depend on network events. Use the smallest possible pilot group, record the original assignment, and restore the configuration after testing.
+
+## Temporary solution
 
 This article describes how to temporarily disable NetExt which will temporarily disable network protection, and resolve network stack-related issues by using Intune, JamF, or a manual process on macOS.
 

@@ -7,7 +7,7 @@ ms.reviewer: joshbregman
 ms.service: defender-endpoint
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 04/16/2025
+ms.date: 08/11/2026
 ms.subservice: macos
 ms.custom: partner-contribution
 appliesto:
@@ -33,14 +33,16 @@ Depending on the applications that you're running and your device characteristic
 
 > [!TIP]
 > If you're running other non-Microsoft security products, make sure that the Microsoft Defender for Endpoint on macOS processes and paths are excluded from that non-Microsoft security product and that security product is excluded from Microsoft Defender for Endpoint on macOS. And vice-versa.
-When troubleshooting performance issues for Microsoft Defender for Endpoint on macOS, you should review the **Activity Monitor** or run **top** to see which of the three (3) processes is leading the high cpu utilization
+When troubleshooting performance issues for Microsoft Defender for Endpoint on macOS, review **Activity Monitor** or run `top` to identify which Defender process has high CPU or memory usage. Collect the data while the performance issue is occurring.
 
-|Daemon name|Component|Troubleshooting guide|
-| -------- | -------- |-------- |
-|wdavdaemon| Core (privileged)|Open a [Microsoft support case](contact-support.md).|
-|wdavdaemon_unprivileged| Anti-malware (AV, EPP)|Review [Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS](mac-support-perf.md).|
-|wdavdaemon_enterprise| Endpoint Detection and Response (EDR)|Open a [Microsoft support case](contact-support.md).|
+| Daemon name | Component | First troubleshooting step |
+|---|---|---|
+| `wdavdaemon` | Core (privileged) | Collect Client Analyzer performance data and hot event sources. |
+| `wdavdaemon_unprivileged` | Antivirus (AV/EPP) | Use real-time protection statistics to identify files and processes that trigger scans. |
+| `wdavdaemon_enterprise` | Endpoint detection and response (EDR) | Collect Client Analyzer performance data and hot event sources. |
 
-Additionally, gather [Defender for Endpoint Client Analyzer](overview-client-analyzer.md) files while the issue occurs. This is used by the support team to investigate the issue. 
+For all three processes, record the process name, CPU and memory use, duration, device model and processor, Defender version, macOS version, enforcement mode, workload, and other security products. Gather [Defender for Endpoint Client Analyzer](overview-client-analyzer.md) files while the issue occurs.
 
+> [!IMPORTANT]
+> Antivirus exclusions affect antivirus scanning. They don't exclude activity from EDR or other Endpoint Security event processing. If an antivirus exclusion doesn't improve performance, don't broaden the exclusion without first identifying the affected component.
 

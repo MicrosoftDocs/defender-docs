@@ -12,7 +12,7 @@ ms.collection:
 - mde-macos
 ms.topic: troubleshooting-general
 ms.subservice: macos
-ms.date: 06/20/2025
+ms.date: 08/11/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -56,7 +56,7 @@ To troubleshoot and mitigate performance issues, follow these steps:
    | Device isn't managed by organization | **Terminal**: In Terminal, run the following command: `mdatp config real-time-protection --value disabled` |
    | Device is managed by organization | See [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md). |
    
-   If the performance problem persists while real-time protection is off, the origin of the problem could be the endpoint detection and response component. In this case, contact customer support for further instructions and mitigation.
+   If the performance problem persists while real-time protection is off, the issue isn't limited to antivirus scanning. Continue with [Troubleshoot core or EDR performance issues](#troubleshoot-core-or-edr-performance-issues).
    
 1. Open Finder and navigate to **Applications** > **Utilities**. Open **Activity Monitor** and analyze which applications are using the resources on your system. Typical examples include software updaters and compilers.
 
@@ -152,6 +152,26 @@ To troubleshoot and mitigate performance issues, follow these steps:
 
 See the guide on our support page for [Behavior Monitoring](behavior-monitor-macos.md).
 
+## Troubleshoot core or EDR performance issues
+
+Use this workflow when high resource use occurs in `wdavdaemon` or `wdavdaemon_enterprise`, or when the issue continues while real-time protection is disabled.
+
+1. Reproduce the issue and confirm the affected Defender process in Activity Monitor or by running `top`.
+1. Record the workload that is running, the start and end time, CPU and memory use, device model and processor, macOS version, Defender version, enforcement mode, and any other security or monitoring products.
+1. Collect hot event sources during the affected period:
+
+   ```bash
+   sudo mdatp diagnostic hot-event-sources --time=360
+   ```
+
+   The command creates a report that identifies applications and processes producing the most Endpoint Security events. Run the collection only while the issue is occurring.
+1. Run the Microsoft Defender for Endpoint Client Analyzer performance collection as described in [Run the client analyzer on macOS and Linux](overview-client-analyzer.md).
+1. If another endpoint security product is installed, confirm that the products are configured for the intended coexistence mode. See [Microsoft Defender for Endpoint and other security solutions](mde-side-by-side.md).
+1. Contact Microsoft support and provide the process measurements, hot event source report, Client Analyzer output, and exact reproduction window.
+
+> [!IMPORTANT]
+> An antivirus exclusion doesn't suppress EDR or other Endpoint Security events. Don't add broad antivirus exclusions to address `wdavdaemon` or `wdavdaemon_enterprise` resource use unless antivirus scanning is also identified as a contributor.
+
 ## Troubleshoot performance issues using Microsoft Defender for Endpoint Client Analyzer
 
 The Microsoft Defender for Endpoint Client Analyzer (MDECA) can collect traces, logs, and diagnostic information in order to troubleshoot performance issues on [onboarded devices](onboard-configure.md) on macOS.
@@ -160,4 +180,3 @@ To run the client analyzer for troubleshooting performance issues, see [Run the 
 
 > [!NOTE]
 > The Microsoft Defender for Endpoint Client Analyzer tool is regularly used by Microsoft Customer Support Services (CSS) to collect information such as (but not limited    to) IP addresses, PC names that help troubleshoot issues you might be experiencing with Microsoft Defender for Endpoint. For more information about our privacy statement, see [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement).
-
