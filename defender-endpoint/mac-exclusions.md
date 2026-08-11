@@ -23,7 +23,7 @@ ms.custom: msecd-doc-authoring-1015
 # Configure and validate exclusions for Microsoft Defender for Endpoint on macOS
 
 
-This article provides information on how to define exclusions that apply to on-demand scans, and real-time protection and monitoring. The scan exclusions described in this article don't apply to other Defender for Endpoint on macOS capabilities, including endpoint detection and response (EDR). Files that you exclude using the methods described in this article can still trigger EDR alerts and other detections.
+This article provides information on how to define exclusions that apply to on-demand scans, and real-time protection and monitoring. The scan exclusions described in this article don't apply to endpoint detection and response (EDR). Files that you exclude using the methods described in this article can still trigger EDR alerts and other detections. Process exclusions also prevent Network Protection from inspecting traffic or enforcing rules for the excluded process.
 
 You can exclude certain files, folders, processes, and process-opened files from Defender for Endpoint on macOS scans. Exclusions can help avoid incorrect detections on files and software that are unique to your organization. Exclusions can also be useful for mitigating performance issues caused by Defender for Endpoint on macOS.
 
@@ -42,10 +42,12 @@ Use the narrowest mitigation that addresses the identified component.
 |---|---|
 |`wdavdaemon_unprivileged` is affected, and real-time protection statistics identify a file, folder, or process|Consider an antivirus exclusion after reviewing the security impact.|
 |`wdavdaemon` or `wdavdaemon_enterprise` is affected|Collect hot event sources and Client Analyzer performance data. Antivirus exclusions might not address this event-processing load.|
-|Another endpoint security product is installed|Confirm the intended active or passive mode and the coexistence settings for both products before adding workload exclusions.|
+|Another endpoint security product is installed|Identify which product provides active antivirus protection and confirm the intended Defender enforcement mode. Review supported coexistence guidance, and use mutual exclusions only when required for a confirmed interoperability issue.|
 |The affected workload isn't identified|Don't add a broad exclusion. Reproduce the issue and collect performance diagnostics first.|
 
 After applying an exclusion, repeat the same workload and compare CPU usage, memory usage, scan counts, and elapsed time. Remove the exclusion if it doesn't provide a measurable improvement.
+
+Use fully qualified paths when possible so that you exclude only the intended item. Before adding an exclusion, review [Exclusions to avoid in Microsoft Defender Antivirus and Defender for Endpoint](defender-endpoint-exclusions-common-mistakes.md).
 
 ## Supported exclusion types
 

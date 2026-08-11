@@ -30,7 +30,7 @@ This article provides some general steps that can be used to narrow down perform
 Depending on the applications that you're running and your device characteristics, you might experience suboptimal performance when running Microsoft Defender for Endpoint on macOS. In particular, applications or system processes that access many resources over a short timespan can lead to performance issues in Defender for Endpoint on macOS.
 
 > [!WARNING]
-> Before you perform the procedures described in this article, make sure that other security products aren't currently running on the device. Multiple security products can conflict and affect the host performance.
+> Before you perform the procedures described in this article, identify which security product provides active antivirus protection and confirm the intended Defender enforcement mode. Avoid running overlapping active protection capabilities because they can conflict and affect performance. For more information, see [Microsoft Defender for Endpoint alongside other security solutions](mde-side-by-side.md).
 
 ## Troubleshoot performance issues using real-time protection statistics
 
@@ -50,7 +50,7 @@ Prerequisites:
 
 To troubleshoot and mitigate performance issues, follow these steps:
 
-1. Disable real-time protection by using one of the methods in the following table, and then observe whether performance improves. This approach helps narrow down whether Microsoft Defender for Endpoint on macOS is contributing to the performance issues.
+1. Temporarily disable real-time protection by using one of the methods in the following table, and then observe whether performance improves. This approach helps narrow down whether Microsoft Defender Antivirus on macOS is contributing to the performance issues. Record the original setting and restore it immediately after the test.
 
    | Device management | Method |
    |---|--|
@@ -181,7 +181,7 @@ Use this workflow when `wdavdaemon` or `wdavdaemon_enterprise` has high resource
 1. Contact Microsoft Support and provide the process measurements, hot event source report, Client Analyzer output, and exact time window when you reproduced the issue.
 
 > [!IMPORTANT]
-> An antivirus exclusion doesn't suppress EDR or other Endpoint Security events. Don't add broad antivirus exclusions to address `wdavdaemon` or `wdavdaemon_enterprise` resource use unless antivirus scanning is also identified as a contributor.
+> File, folder, and file extension exclusions don't suppress EDR or other Endpoint Security events. Process exclusions also prevent Network Protection from inspecting traffic or enforcing rules for the excluded process. Don't add broad antivirus exclusions to address `wdavdaemon` or `wdavdaemon_enterprise` resource use unless antivirus scanning is also identified as a contributor.
 
 ## Troubleshoot performance issues using Microsoft Defender for Endpoint Client Analyzer
 

@@ -46,7 +46,10 @@ Before disabling NetExt, determine whether the issue occurs only when Network Pr
    mdatp health --field network_protection_status
    mdatp health --details system_extensions
    mdatp health --details network_protection
+   mdatp connectivity test
    ```
+
+   Resolve any connectivity test failures before isolating Network Protection or NetExt.
 
 1. Test the following states and record whether the issue reproduces:
 
@@ -79,8 +82,11 @@ Before disabling NetExt, determine whether the issue occurs only when Network Pr
 
    Reproduce the issue, and then press **Control+C** to stop the trace.
 
+   > [!CAUTION]
+   > NetExt log streams can contain hostnames, URLs, IP addresses, and other environment details. Collect a log stream only when Microsoft support requests it, and transfer it by using the support-approved upload method.
+
 > [!CAUTION]
-> Disabling NetExt reduces network visibility and disables capabilities that depend on network events. Use the smallest possible pilot group, record the original assignment, and restore the configuration after testing.
+> Disabling NetExt reduces network visibility and disables capabilities that depend on network events. Use the smallest possible pilot group and record the original Network Protection and NetExt assignments. At the end of testing, restore both components to their original assignments and verify their health.
 
 ## Temporary solution
 

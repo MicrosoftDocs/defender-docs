@@ -30,10 +30,10 @@ Depending on the applications that you're running and your device characteristic
 > Running other non-Microsoft endpoint protection products alongside Microsoft Defender for Endpoint on macOS is likely to lead to performance problems and unpredictable side effects. If non-Microsoft endpoint protection is an absolute requirement in your environment, you can configure Microsoft Defender Antivirus to run in **[Passive mode](mac-preferences.md)**. After you configure Passive mode, you can use Defender for Endpoint on macOS EDR functionality.
 
 > [!WARNING]
-> Before starting, make sure that other security products aren't currently running on the device. Multiple security products might conflict and affect system performance.
+> Before starting, identify which security product provides active antivirus protection and confirm the intended Defender enforcement mode. Avoid running overlapping active protection capabilities because they can conflict and affect system performance. For more information, see [Microsoft Defender for Endpoint alongside other security solutions](mde-side-by-side.md).
 
 > [!TIP]
-> If you're running other non-Microsoft security products, make sure that the Microsoft Defender for Endpoint on macOS processes and paths are excluded from that non-Microsoft security product and that security product is excluded from Microsoft Defender for Endpoint on macOS. And vice-versa.
+> If you're running other non-Microsoft security products, review the vendor-specific coexistence guidance. Mutual exclusions can help address a confirmed interoperability issue, but they reduce protection. Exclude only trusted processes and paths, and validate that the exclusions provide a measurable improvement.
 
 When troubleshooting performance issues for Microsoft Defender for Endpoint on macOS, review **Activity Monitor** or run `top` to identify which Defender process has high CPU or memory usage. Collect the data while the performance issue is occurring.
 
@@ -46,4 +46,4 @@ When troubleshooting performance issues for Microsoft Defender for Endpoint on m
 For all three processes, record the process name, CPU and memory use, duration, device model and processor, Defender version, macOS version, enforcement mode, workload, and other security products. Gather [Microsoft Defender for Endpoint Client Analyzer](overview-client-analyzer.md) files while the issue occurs.
 
 > [!IMPORTANT]
-> Antivirus exclusions affect antivirus scanning. They don't exclude activity from EDR or other Endpoint Security event processing. If an antivirus exclusion doesn't improve performance, don't broaden the exclusion without first identifying the affected component.
+> File, folder, and file extension exclusions affect antivirus scanning. Process exclusions also prevent Network Protection from inspecting traffic or enforcing rules for the excluded process. These exclusions don't suppress EDR visibility or other Endpoint Security event processing. If an exclusion doesn't improve performance, don't broaden it without first identifying the affected component.
