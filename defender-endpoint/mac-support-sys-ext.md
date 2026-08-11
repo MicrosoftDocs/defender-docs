@@ -16,7 +16,9 @@ ms.date: 08/11/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-image-nochange
+
+ai-usage: ai-assisted
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1015
 ---
 
 # Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS
@@ -165,7 +167,7 @@ The section [Sections that provide guidance on enabling profiles needed for Micr
 Using the recommended naming convention enables you to confirm that the correct profiles are dropping down at the time of checking.
 
 > [!IMPORTANT]
-> Deploy each Defender for Endpoint mobile configuration as the separate payload provided for that setting. Don't combine the onboarding, system extension, network filter, privacy preference, background service, notification, or accessibility payloads into one custom payload. A merged or structurally modified payload can be accepted by the management service but ignored by macOS or Defender for Endpoint.
+> Deploy each Defender for Endpoint mobile configuration as a separate payload provided for that setting. Don't combine the onboarding, system extension, network filter, privacy preferences, background service, notification, or accessibility payloads into one custom payload. The management service might accept a merged or structurally modified payload, but macOS or Defender for Endpoint might ignore it.
 
 > [!TIP]
 > To ensure that the correct profiles are coming down, instead of typing.mobileconfig (plist)**, you can download this profile from GitHub, to avoid typos elongated hyphens.

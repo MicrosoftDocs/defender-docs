@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1015
 ---
 # Configure and validate exclusions for Microsoft Defender for Endpoint on macOS
 
@@ -34,18 +34,18 @@ To narrow down which process and/or path and/or extension you need to exclude, u
 
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
-## Choose the appropriate mitigation
+## Choose the right mitigation
 
 Use the narrowest mitigation that addresses the identified component.
 
-| Finding | Appropriate next step |
+|Finding|Next step|
 |---|---|
-| `wdavdaemon_unprivileged` is affected and real-time protection statistics identify a file, folder, or process | Consider an antivirus exclusion after reviewing the security impact. |
-| `wdavdaemon` or `wdavdaemon_enterprise` is affected | Collect hot event sources and Client Analyzer performance data. Antivirus exclusions might not address this event-processing load. |
-| Another endpoint security product is installed | Confirm the intended active/passive mode and mutual coexistence configuration before adding workload exclusions. |
-| The affected workload isn't identified | Don't add a broad exclusion. Reproduce the issue and collect performance diagnostics first. |
+|`wdavdaemon_unprivileged` is affected, and real-time protection statistics identify a file, folder, or process|Consider an antivirus exclusion after reviewing the security impact.|
+|`wdavdaemon` or `wdavdaemon_enterprise` is affected|Collect hot event sources and Client Analyzer performance data. Antivirus exclusions might not address this event-processing load.|
+|Another endpoint security product is installed|Confirm the intended active or passive mode and the coexistence settings for both products before adding workload exclusions.|
+|The affected workload isn't identified|Don't add a broad exclusion. Reproduce the issue and collect performance diagnostics first.|
 
-After applying an exclusion, repeat the same workload and compare CPU, memory, scan counts, and elapsed time. Remove the exclusion if it doesn't provide a measurable improvement.
+After applying an exclusion, repeat the same workload and compare CPU usage, memory usage, scan counts, and elapsed time. Remove the exclusion if it doesn't provide a measurable improvement.
 
 ## Supported exclusion types
 
@@ -189,4 +189,3 @@ For example, to add `EICAR-Test-File (not a virus)` (the threat name associated 
 ```bash
 mdatp threat allowed add --name "EICAR-Test-File (not a virus)"
 ```
-

@@ -17,6 +17,8 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1015
 ---
 # Troubleshoot Network Extension (NetExt) issues in Defender for Endpoint on Mac 
 
@@ -28,7 +30,7 @@ appliesto:
 
 This article provides information on how to troubleshoot issues with the network extension (NetExt) that's installed as part of Microsoft Defender for Endpoint on macOS. 
 
-NetExt provides network event data used by multiple Defender for Endpoint capabilities. [Network Protection](network-protection-macos.md) depends on NetExt, but disabling Network Protection enforcement isn't the same as disabling NetExt.
+NetExt provides network event data that multiple Defender for Endpoint capabilities use. [Network Protection](network-protection-macos.md) depends on NetExt, but disabling Network Protection enforcement isn't the same as disabling NetExt.
 
 **Symptom**: 
 
@@ -36,9 +38,9 @@ You might notice issues with network related latencies when using your browser o
 
 ## Identify the affected component
 
-Before disabling NetExt, determine whether the issue requires Network Protection enforcement or only the network extension to be running.
+Before disabling NetExt, determine whether the issue occurs only when Network Protection enforcement is enabled or whenever NetExt is running.
 
-1. Check Network Protection and system extension health:
+1. Check Network Protection and system extension health to establish a baseline:
 
    ```bash
    mdatp health --field network_protection_status
@@ -48,20 +50,28 @@ Before disabling NetExt, determine whether the issue requires Network Protection
 
 1. Test the following states and record whether the issue reproduces:
 
-   | NetExt | Network Protection | Interpretation |
+   |NetExt|Network Protection|Interpretation|
    |---|---|---|
-   | Enabled | Audit or block | Baseline with both components active |
-   | Enabled | Disabled | If the issue remains, investigate NetExt or another capability that uses network events |
-   | Disabled | Disabled | If the issue stops only here, NetExt is involved |
+   |Enabled|Audit or block|Baseline with both components active.|
+   |Enabled|Disabled|If the issue remains, investigate NetExt or another capability that uses network events.|
+   |Disabled|Disabled|If the issue stops only here, NetExt is involved.|
 
-1. Record the affected application and protocol, browser or client, destination, proxy configuration, VPN product and full-tunnel or split-tunnel mode, and whether other network-filtering security products are installed.
+1. Record the following information:
+
+   - Affected application and protocol.
+   - Browser or client.
+   - Destination.
+   - Proxy configuration.
+   - Virtual private network (VPN) product and full-tunnel or split-tunnel mode.
+   - Other installed network-filtering security products.
+
 1. Collect a diagnostic package while reproducing the issue:
 
    ```bash
    sudo mdatp diagnostic create
    ```
 
-   If Microsoft support requests a NetExt log stream, run:
+   If Microsoft Support requests a NetExt log stream, run:
 
    ```bash
    log stream --info --debug --style compact --predicate 'process == "netext"' > netextlogstream.txt
