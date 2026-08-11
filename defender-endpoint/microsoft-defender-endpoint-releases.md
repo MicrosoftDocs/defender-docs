@@ -29,8 +29,8 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
-|Android |1.0.9129.0101|Aug 2026|- Build: 1.0.9129.0101<br>- Release: Aug 11, 2026|[Release details and updates](#android--july-2026--platform-1091290101)|
-|iOS |1.1.79210103|Aug 2026|- Build: 1.1.79210103<br>- Release: Aug 04, 2026|[Release details and updates](#ios--july-2026--platform-version-1179210103)|
+|Android |1.0.9129.0101|Aug 2026|- Build: 1.0.9129.0101<br>- Release: Aug 11, 2026|[Release details and updates](#android--aug-2026--platform-1091290101)|
+|iOS |1.1.79210103|Aug 2026|- Build: 1.1.79210103<br>- Release: Aug 04, 2026|[Release details and updates](#ios--aug-2026--platform-version-1179210103)|
 |macOS |101.26062.0011  |August 2026 |- Release version: 20.126062.11.0<br>- Engine version: 1.1.26040.3000<br>- Signature version: 1.449.26.0 |[Release details and updates](#macos--august-2026--101260620011) |
 |Linux  |101.26062.0005  |August 2026 |- Release version: 30.126052.0012.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates](#linux--aug-2026--101260620005) |
 |Windows Antivirus |Platform 4.18.26070.9 / Engine 1.1.26070.7|July 2026|- Platform: 4.18.26070.9<br>- Engine: 1.1.26070.7<br>- Security intelligence: 1.457.11.0|[Release details and updates](#windows-antivirus--july-2026--platform-418260709--engine-11260707)|
