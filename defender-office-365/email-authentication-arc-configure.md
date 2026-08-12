@@ -14,7 +14,7 @@ ms.custom:
   - sfi-image-nochange
 description: Configure trusted ARC sealers in Microsoft 365 so messages modified by legitimate intermediary services retain original authentication results and avoid unnecessary SPF, DKIM, and DMARC failures.
 ms.service: defender-office-365
-ms.date: 07/03/2026
+ms.date: 08/03/2026
 ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
@@ -281,7 +281,7 @@ This failure typically has the following causes:
 
 **Explanation**: ARC overrides DMARC authentication failures only. It doesn't bypass:
 
-- Content-based spam filtering (SCL values from content analysis).
+- Spam filtering (content filtering).
 - Bulk email filtering (BCL threshold).
 - Anti-spam policy actions.
 - Mail flow rule actions.
@@ -290,15 +290,15 @@ This failure typically has the following causes:
 **Diagnosis**: Review the `X-Forefront-Antispam-Report` header to determine whether content-based spam filtering caused the message to go to Junk Email independent of ARC:
 
 ```text
-X-Forefront-Antispam-Report: CIP:10.10.10.10; CTRY:US; LANG:en; SCL:5;
+X-Forefront-Antispam-Report: CIP:10.10.10.10; CTRY:US; LANG:en;
   SFV:SPM; H:mail.fabrikam.com; PTR:mail.fabrikam.com; CAT:SPM;
 ```
 
-If `CAT:SPM` or `SCL:5` or higher, the message was filtered as spam by content filtering, which is independent of ARC.
+If any of the values `CAT:SPM`, `CAT:HSPM`, or `SFV:SPM` appear, spam filtering (content filtering) identified the message as spam or high confidence spam, which is independent of ARC.
 
 **Resolution**: Try the following options to resolve spam filtering:
 
-- [Create a mail flow rule to set SCL to -1](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl) for messages from trusted senders or IP addresses.
+- [Create a mail flow rule bypass spam filtering](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl) for messages from trusted senders or IP addresses.
 - Add the sender domain to an [anti-spam policy allow list](anti-spam-policies-configure.md#use-the-microsoft-defender-portal-to-modify-anti-spam-policies).
 - [Submit the message as a false positive](submissions-admin.md#report-good-email-to-microsoft) via the Microsoft Defender portal.
 

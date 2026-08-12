@@ -14,7 +14,7 @@ ms.collection:
 - tier3
 ms.topic: how-to
 search.appverid: met150
-ms.date: 07/02/2026
+ms.date: 07/24/2026
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1016
 ---
@@ -85,7 +85,7 @@ After reviewing your existing protections, enable additional features and user e
 
 You can increase protection further by enabling additional Defender for Office 365 features.
 
-- Consider enabling policies beyond the built-in Protection. Enabling time-of-click protection, or impersonation protection, for example, to add extra layers or fill gaps missing from your non-Microsoft protection. If you have a mail flow rule (also known as a transport rule) or connection filter that overrides verdicts (also known as an SCL=-1 rule) you need to address any such mail flow rule or connection filter before turning on other protection features.
+- Consider enabling policies beyond the built-in Protection. Enabling time-of-click protection, or impersonation protection, for example, to add extra layers or fill gaps missing from your non-Microsoft protection. If you have [Exchange mail flow rules (transport rules) that bypass spam filtering](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl) (SCL -1) or [IP Allow List entries in the connection filter policy](../connection-filter-policies-configure.md), you need to address these overrides before turning on other protection features.
 
 To learn more, see [Anti-phishing policies](../anti-phishing-policies-about.md)
 

@@ -12,7 +12,7 @@ ms.collection:
 ms.custom: migrationguides
 description: "Take the steps to begin migrating from a non-Microsoft protection service or device to Microsoft Defender for Office 365 protection."
 ms.service: defender-office-365
-ms.date: 02/06/2026
+ms.date: 07/24/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -29,7 +29,7 @@ Welcome to **Phase 2: Setup** of your **[migration to Microsoft Defender for Off
 
 1. [Create distribution groups for pilot users](#step-1-create-distribution-groups-for-pilot-users)
 2. [Configure user reported message settings](#step-2-configure-user-reported-message-settings)
-3. [Maintain or create the SCL=-1 mail flow rule](#step-3-maintain-or-create-the-scl-1-mail-flow-rule)
+3. [Maintain or create the bypass spam filtering mail flow rule](#step-3-maintain-or-create-the-bypass-spam-filtering-mail-flow-rule)
 4. [Configure Enhanced Filtering for Connectors](#step-4-configure-enhanced-filtering-for-connectors)
 5. [Create pilot threat policies](#step-5-create-pilot-threat-policies)
 
@@ -37,7 +37,7 @@ Welcome to **Phase 2: Setup** of your **[migration to Microsoft Defender for Off
 
 Distribution groups are required in Microsoft 365 for the following aspects of your migration:
 
-- **Exceptions for the SCL=-1 mail flow rule**: You want pilot users to get the full effect of Defender for Office 365 protection, so you need Defender for Office 365 to scan their incoming messages. You get this result by defining your pilot users in the appropriate distribution groups in Microsoft 365, and configuring these groups as exceptions to the SCL=-1 mail flow rule.
+- **Exceptions for the bypass spam filtering mail flow rule**: You want pilot users to get the full effect of Defender for Office 365 protection, so you need Defender for Office 365 to scan their incoming messages. You get this result by defining your pilot users in the appropriate distribution groups in Microsoft 365, and configuring these groups as exceptions to the bypass spam filtering mail flow rule.
 
   As we described in [Onboard Step 2: (Optional) Exempt pilot users from filtering by your existing protection service](migrate-to-defender-for-office-365-onboard.md#step-2-optional-exempt-pilot-users-from-filtering-by-your-existing-protection-service), you should consider exempting these same pilot users from scanning by your existing protection service. Eliminating the possibility of filtering by your existing protection service and relying exclusively on Defender for Office 365 is the best and closest representation of what's going to happen after your migration is complete.
 
@@ -49,7 +49,7 @@ Distribution groups are required in Microsoft 365 for the following aspects of y
 
 For clarity, we use these specific group names throughout this article, but you're free to use your own naming convention.
 
-When you're ready to begin testing, add these groups as exceptions to [the SCL=-1 mail flow rule](#step-3-maintain-or-create-the-scl-1-mail-flow-rule). As you create policies for the various protection features in Defender for Office 365, use these groups as conditions that define who the policy applies to.
+When you're ready to begin testing, add these groups as exceptions to [the bypass spam filtering mail flow rule](#step-3-maintain-or-create-the-bypass-spam-filtering-mail-flow-rule). As you create policies for the various protection features in Defender for Office 365, use these groups as conditions that define who the policy applies to.
 
 **Notes**:
 
@@ -81,26 +81,28 @@ Don't underestimate the importance of this step. Data from user reported message
 
 Instead of relying on data that's based on the experience of the entire organization, more than one migration has resulted in emotional speculation based on a single negative user experience. Furthermore, if you've been running phishing simulations, you can use feedback from your users to inform you when they see something risky that might require investigation.
 
-## Step 3: Maintain or create the SCL=-1 mail flow rule
+<a name='step-3-maintain-or-create-the-scl-1-mail-flow-rule'></a>
 
-Because your inbound email is routed through another protection service that sits in front of Microsoft 365, it's likely that you already have a mail flow rule (also known as a transport rule) in Exchange Online that sets the spam confidence level (SCL) of all incoming mail to the value -1 (bypass spam filtering). Most non-Microsoft protection services encourage this SCL=-1 mail flow rule for Microsoft 365 customers who want to use their services.
+## Step 3: Maintain or create the bypass spam filtering mail flow rule
 
-If you're using some other mechanism to override the Microsoft filtering stack (for example, an IP allow list) we recommend that you switch to using an SCL=-1 mail flow rule **as long as** all inbound internet mail into Microsoft 365 comes from the non-Microsoft protection service (no mail flows directly from the internet into Microsoft 365).
+Because your inbound email is routed through another protection service that sits in front of Microsoft 365, it's likely that you already have a mail flow rule (also known as a transport rule) in Exchange Online that bypasses spam filtering for all incoming mail (spam confidence level or SCL -1). Most non-Microsoft protection services encourage this bypass rule rule for Microsoft 365 customers who want to use their services.
 
-The SCL=-1 mail flow rule is important during the migration for the following reasons:
+If you're using some other mechanism to override the Microsoft filtering stack (for example, an IP allow list) we recommend that you switch to using a bypass spam filtering mail flow rule **as long as** all inbound internet mail into Microsoft 365 comes from the non-Microsoft protection service (no mail flows directly from the internet into Microsoft 365).
+
+The bypass spam filtering mail flow rule is important during the migration for the following reasons:
 
 - You can use [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md) to see which features in the Microsoft stack *would have* acted on messages without affecting the results from your existing protection service.
-- You can gradually adjust who is protected by the Microsoft 365 filtering stack by configuring exceptions to the SCL=-1 mail flow rule. The exceptions are the members of the pilot distribution groups that we recommend later in this article.
+- You can gradually adjust who is protected by the Microsoft 365 filtering stack by configuring exceptions to the bypass spam filtering mail flow rule. The exceptions are the members of the pilot distribution groups that we recommend later in this article.
 
   Before or during the cutover of your MX record to Microsoft 365, you disable this rule to turn on the full protection of the Microsoft 365 protection stack for all recipients in your organization.
 
-For more information, see [Use mail flow rules to set the spam confidence level (SCL) in messages in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
+For more information, see [Use mail flow rules to set the SCL in messages](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
 
 **Notes**:
 
-- If you plan to allow internet mail to flow through your existing protection service **and** directly into Microsoft 365 at the same time, you need restrict the SCL=-1 mail flow rule (mail that bypasses spam filtering) to mail that's gone through your existing protection service only. You don't want unfiltered internet mail landing in user mailboxes in Microsoft 365.
+- If you plan to allow internet mail to flow through your existing protection service **and** directly into Microsoft 365 at the same time, you need restrict the bypass spam filtering mail flow rule to mail that's gone through your existing protection service only. You don't want unfiltered internet mail landing in user mailboxes in Microsoft 365.
 
-  To correctly identify mail that's already been scanned by your existing protection service, you can add a condition to the SCL=-1 mail flow rule. For example:
+  To correctly identify mail that's already been scanned by your existing protection service, you can add a condition to the bypass spam filtering mail flow rule. For example:
 
   - **For cloud-based protection services**: You can use a header and header value that's unique to your organization. Messages that have the header aren't scanned by Microsoft 365. Messages without the header are scanned by Microsoft 365
   - **For on-premises protection services or devices**: You can use source IP addresses. Messages from the source IP addresses aren't scanned by Microsoft 365. Messages that aren't from the source IP addresses are scanned by Microsoft 365.
@@ -135,7 +137,7 @@ By creating production policies, even if they aren't applied to all users, you c
 
 - Minimal configuration.
 - Extremely low chance of false positives.
-- Similar behavior to anti-malware protection, which is always on and not affected by the SCL=-1 mail flow rule.
+- Similar behavior to anti-malware protection, which is always on and not affected by the bypass spam filtering mail flow rule.
 
 For the recommended settings, see [Recommended Safe Attachments policy settings](recommended-settings-for-eop-and-office365.md#safe-attachments-policy-settings). The Standard and Strict recommendations are the same. To create the policy, see [Set up Safe Attachments policies](safe-attachments-policies-configure.md). Be sure to use the group **MDOPilot\_SafeAttachments** as the condition of the policy (who the policy applies to).
 
