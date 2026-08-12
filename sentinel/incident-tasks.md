@@ -1,5 +1,5 @@
 ---
-title: Use tasks to manage incidents in Microsoft Sentinel in the Azure portal
+title: Use Tasks to Manage Incidents in Microsoft Sentinel in the Azure Portal
 description: This article describes incident tasks and how to work with them to ensure all required steps are taken in triaging, investigating, and responding to incidents in Microsoft Sentinel.
 ms.author: guywild
 author: guywi-ms
@@ -17,7 +17,7 @@ ai-usage: ai-assisted
 
 This article explains how to use incident tasks in Microsoft Sentinel to standardize and track the steps your team follows when triaging, investigating, and responding to incidents. You can add tasks manually, or automate task creation by using automation rules and playbooks.
 
-One of the most important factors in running your security operations (SecOps) effectively and efficiently is the **standardization of processes**. SecOps analysts are expected to perform a list of steps, or tasks, in the process of triaging, investigating, or remediating an incident. Standardizing and formalizing the list of tasks can help keep your SOC running smoothly, ensuring the same requirements apply to all analysts. With this standardized process, regardless of who is on-shift, an incident will always get the same treatment and SLAs. Analysts won't need to spend time thinking about what to do, or worry about missing a critical step. Those steps are defined by the SOC manager or senior analysts (tier 2/3) based on common security knowledge (such as NIST), their experience with past incidents, or recommendations provided by the security vendor that detected the incident. 
+One of the most important factors in running your security operations (SecOps) effectively and efficiently is the **standardization of processes**. SecOps analysts are expected to perform a list of steps, or tasks, in the process of triaging, investigating, or remediating an incident. Standardizing and formalizing the list of tasks can help keep your SOC running smoothly, ensuring the same requirements apply to all analysts. With this standardized process, regardless of who is on-shift, an incident will always get the same treatment and SLAs. Analysts won't need to spend time thinking about what to do, or worry about missing a critical step. Those steps are defined by the SOC manager or senior analysts (tier 2/3) based on common security knowledge (such as NIST), their experience with past incidents, or recommendations provided by the security vendor that detected the incident.
 
 <a name="use-cases"></a>
 ## When to use incident tasks
@@ -88,28 +88,31 @@ Finally, use the **Mark task as completed** action (again in the Microsoft Senti
 
 Consider the following scenarios as examples:
 
-- **Let playbooks add and complete tasks:** When an incident is created, it will trigger a playbook that does the following:
+- **Let playbooks add and complete tasks:** When an incident is created, it triggers a playbook that does the following:
   1. Adds a task to the incident to reset a user's password.
   1. Performs the task by issuing an API call to the user provisioning system to reset the user's password.
   1. Awaits a response from the system as to the success or failure of the reset.
       - If the password reset succeeded, the playbook then marks the task it just created in the incident as completed.
       - If the password reset failed, the playbook will not mark the task as completed, leaving it to an analyst to perform.
 
-- **Let playbook evaluate if conditional tasks should be added:** When an incident is created, it will trigger a playbook that requests an IP address report from an external threat intelligence source.
-    - If the IP address is malicious, the playbook adds a certain task (say, "Block this IP address").
-    - Otherwise, the playbook takes no further action.
+- **Let playbook evaluate if conditional tasks should be added:** When an incident is created, it triggers a playbook that requests an IP address report from an external threat intelligence source.
+  - If the IP address is malicious, the playbook adds a certain task (say, "Block this IP address").
+  - Otherwise, the playbook takes no further action.
 
 #### Use automation rules or playbooks to add tasks?
 
 What considerations should dictate whether automation rules or playbooks should be used to create incident tasks?
 
 - **Automation rules**: Use whenever possible. Use for plain, static tasks that don't require interactivity.
-- **Playbooks**: Use for advanced use cases&mdash;the creation of tasks based on conditions, or of tasks with integrated automated actions.
+- **Playbooks**: Use for advanced use cases like creating tasks based on conditions or creating tasks with integrated automated actions.
 
-## Next steps
+## Related content
 
-- Learn how analysts can [use tasks to handle incident workflow in Microsoft Sentinel](work-with-tasks.md).
-- Learn more about [investigating incidents in Microsoft Sentinel](investigate-cases.md).
-- Learn how to add tasks to groups of incidents automatically using [automation rules](create-tasks-automation-rule.md) or [playbooks](create-tasks-playbook.md).
-- Learn more about [automation rules](automate-incident-handling-with-automation-rules.md) and how to [create and manage automation rules](./create-manage-use-automation-rules.md).
-- Learn more about [playbooks](automate-responses-with-playbooks.md) and how to [create playbooks](tutorial-respond-threats-playbook.md).
+- [Work with incident tasks in Microsoft Sentinel in the Azure portal](work-with-tasks.md)
+- [Investigate incidents with Microsoft Sentinel (legacy)](investigate-cases.md)
+- [Create incident tasks in Microsoft Sentinel using automation rules](create-tasks-automation-rule.md)
+- [Create and perform incident tasks in Microsoft Sentinel using playbooks](create-tasks-playbook.md)
+- [Automate threat response in Microsoft Sentinel with automation rules](automate-incident-handling-with-automation-rules.md)
+- [Create and use Microsoft Sentinel automation rules to manage response](./create-manage-use-automation-rules.md)
+- [Automate threat response with playbooks in Microsoft Sentinel](automate-responses-with-playbooks.md)
+- [Use a Microsoft Sentinel playbook to stop potentially compromised users](tutorial-respond-threats-playbook.md)

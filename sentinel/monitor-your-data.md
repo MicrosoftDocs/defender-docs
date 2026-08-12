@@ -1,5 +1,5 @@
 ---
-title: Visualize your data using workbooks in Microsoft Sentinel
+title: Visualize your Data by using Workbooks in Microsoft Sentinel
 description: Create and customize Microsoft Sentinel workbooks to visualize and monitor security data using built-in templates or custom designs, with access managed through Azure RBAC.
 author: EdB-MSFT
 ms.topic: how-to
@@ -57,7 +57,7 @@ Use a template installed from the content hub to create a workbook.
 
     ---
 
-1. From the details pane, select **Save**, and then select the location where you want to save the workbook. Saving the workbook creates an Azure resource in the selected location based on the relevant template. Only the workbook's JSON file is saved in this location, and no data.
+1. From the details pane, select **Save**, then select the location where you want to save the workbook. Saving the workbook creates an Azure resource in the selected location based on the relevant template. Only the workbook's JSON file is saved in this location, and no data.
 
 1. From the details pane, select **View saved workbook** to open it for editing.
 
@@ -95,14 +95,14 @@ Create a workbook from scratch in Microsoft Sentinel.
 
 1. To edit the workbook, select **Edit**, and then add text, queries, and parameters as necessary.
 
-    For more information on how to customize the workbook, see how to [Create interactive reports with Azure Monitor Workbooks](/azure/azure-monitor/visualize/workbooks-overview). 
+    For more information on how to customize the workbook, see how to [Create interactive reports with Azure Monitor Workbooks](/azure/azure-monitor/visualize/workbooks-overview).
 
     :::image type="content" source="media/monitor-your-data/create-workbook.png" alt-text="Screenshot that shows a new workbook." lightbox="media/monitor-your-data/create-workbook.png":::
 
-1. When building a query, set the **Data source** to **Logs** and **Resource type** to **Log Analytics**, and then choose one or more workspaces.
+1. When building a query, set the **Data source** to **Logs** and **Resource type** to **Log Analytics**, then choose one or more workspaces.
 
    We recommend that your query uses an [Advanced Security Information Model (ASIM) parser](normalization-about-parsers.md) and not a built-in table. A query that uses an ASIM parser supports any current or future relevant data source rather than a single data source.
- 
+
 1. When you're done with your edits, select **Done editing** and then **Save**. In the side pane, enter a meaningful name for your workbook, and select the subscription and resource group for your workspace.
 
 1. When working in the Azure portal, switch between workbooks in your workspace by selecting **Open** ![Screenshot of the Open button used to switch between saved workbooks in your workspace.](./media/monitor-your-data/switch.png) in the toolbar of any workbook. The workbook view switches to a list of other saved workbooks you can open.
@@ -113,7 +113,7 @@ Create a workbook from scratch in Microsoft Sentinel.
 
 ## Create new tiles for your workbooks
 
-To add a custom tile to a Microsoft Sentinel workbook, first create the tile in Log Analytics. For more information, see [Visual data in Log Analytics](/azure/azure-monitor/visualize/tutorial-logs-dashboards). 
+To add a custom tile to a Microsoft Sentinel workbook, first create the tile in Log Analytics. For more information, see [Visual data in Log Analytics](/azure/azure-monitor/visualize/tutorial-logs-dashboards).
 
 Once you create a tile, select **Pin** and then select the workbook where you want the tile to appear.
 
@@ -125,11 +125,11 @@ Refresh your workbook to display updated data. In the toolbar, select one of the
 
 - :::image type="icon" source="media/monitor-your-data/auto-refresh-workbook.png" border="false"::: **Auto refresh**, to set your workbook to automatically refresh at a configured interval.
 
-    - Supported auto refresh intervals range from **5 minutes** to **1 day**.
+  - Supported auto refresh intervals range from **5 minutes** to **1 day**.
 
-    - Auto refresh is paused while you're editing a workbook, and intervals are restarted each time you switch back to view mode from edit mode.
+  - Auto refresh is paused while you're editing a workbook, and intervals are restarted each time you switch back to view mode from edit mode.
 
-    - Auto refresh intervals are also restarted if you manually refresh your data.
+  - Auto refresh intervals are also restarted if you manually refresh your data.
 
     By default, auto refresh is turned off. If you've turned auto-refresh on, it's turned off again each time you close the notebook to optimize perforamnce and prevent it from running in the background. Turn auto refresh back on as needed the next time you open the workbook.
 
@@ -162,7 +162,7 @@ The following recommendations help you use Microsoft Sentinel workbooks effectiv
 
 If you use Microsoft Entra ID with Microsoft Sentinel, we recommend that you install the Microsoft Entra solution for Microsoft Sentinel and use the following workbooks:
 
-- **Microsoft Entra sign-ins** analyzes sign-ins over time to see if there are anomalies. This workbook provides failed sign-ins by applications, devices, and locations so that you can notice, at a glance if something unusual happens. Pay attention to multiple failed sign-ins. 
+- **Microsoft Entra sign-ins** analyzes sign-ins over time to see if there are anomalies. This workbook provides failed sign-ins by applications, devices, and locations so that you can notice, at a glance if something unusual happens. Pay attention to multiple failed sign-ins.
 - **Microsoft Entra audit logs** analyzes admin activities, such as changes in users (add, remove, etc.), group creation, and modifications.  
 
 ### Add firewall workbooks
@@ -211,7 +211,8 @@ AuditLogs
 | project-away user1
 ```
 
-See more information on the following items used in the sample queries above, in the Kusto documentation:
+See more information on the following items used in the preceding examples in the Kusto documentation:
+
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
 - [***extend*** operator](/kusto/query/extend-operator?view=microsoft-sentinel&preserve-view=true)
 - [***project*** operator](/kusto/query/project-operator?view=microsoft-sentinel&preserve-view=true)
@@ -226,10 +227,7 @@ See more information on the following items used in the sample queries above, in
 
 [!INCLUDE [kusto-reference-general-no-alert](includes/kusto-reference-general-no-alert.md)]
 
-## Related articles
-
-For more information, see:
+## Related content
 
 - [Commonly used Microsoft Sentinel workbooks](top-workbooks.md)
-
 - [Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-overview)

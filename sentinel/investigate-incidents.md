@@ -1,5 +1,5 @@
 ---
-title: Investigate Microsoft Sentinel incidents in depth in the Azure portal
+title: Investigate Microsoft Sentinel Incidents in Depth in the Azure Portal
 description: This article takes you through all the panels and options available on the incident details page in the Azure portal, helping you navigate and investigate your incidents more quickly, effectively, and efficiently, and reducing your mean time to resolve (MTTR).
 ms.author: guywild
 author: guywi-ms
@@ -23,7 +23,6 @@ This article describes how to investigate an incident in depth, helping you navi
 
 :::image type="content" source="media/investigate-incidents/incident-details-overview.png" alt-text="Screenshot of incident details page, featuring the overview tab." lightbox="media/investigate-incidents/incident-details-overview.png":::
 
-
 ## Prerequisites
 
 Before you investigate incidents, make sure you have the following roles and access:
@@ -44,7 +43,7 @@ As you're setting up to investigate an incident, assemble the things you need to
 
 - Select **Tasks** to [see the tasks assigned for this incident](work-with-tasks.md#view-and-follow-incident-tasks), or to [add your own tasks](work-with-tasks.md#manually-add-an-ad-hoc-task-to-an-incident). Tasks can improve process standardization in your security operations center (SOC). For more information, see [Use tasks to manage incidents in Microsoft Sentinel](incident-tasks.md).
 
-- Select **Activity log** to see if any actions have already been taken on this incident&mdash;by automation rules, for example&mdash;and any comments that have been made. You can add your own comments here as well. For more information, see [Audit incident events and add comments](#audit-incident-events-and-add-comments).
+- Select **Activity log** to see if any actions have already been taken on this incident (by automation rules, for example) and any comments that have been made. You can add your own comments here as well. For more information, see [Audit incident events and add comments](#audit-incident-events-and-add-comments).
 
 - Select **Logs** at any time to open a full, blank Log analytics query window *inside* the incident page. Compose and run a query, related or not, without leaving the incident. So, whenever you're struck with sudden inspiration to go chasing a thought, don't worry about interrupting your flow--the logs are there for you. For more information, see [Dive deeper into your data in Logs](#dive-deeper-into-your-data-in-logs).
 
@@ -72,7 +71,7 @@ The left-hand panel of the incident details page contains the same incident deta
 
 Select **Investigate** to open the incident in the [graphical investigation tool](#investigate-incidents-visually-using-the-investigation-graph) that diagrams relationships between all the elements of the incident.
 
-The left-hand incident details panel can also be collapsed into the left margin of the screen by selecting the small, left-pointing double arrow next to the **Owner** drop-down. Even when the left-hand panel is minimized, you can still change the owner, status, and severity.
+You can also collapse this panel into the left margin of the screen by selecting the small, left-pointing double arrow next to the **Owner** drop-down. Even in this minimized state, however, you can still change the owner, status, and severity.
 
 :::image type="content" source="media/investigate-incidents/collapsed-side-panel.png" border="false" alt-text="Screenshot of collapsed side panel on incident details page.":::
 
@@ -87,7 +86,7 @@ The **Overview** tab contains the following widgets, each of which represents an
 | **Entities** | The **Entities** widget shows you all the [Microsoft Sentinel entities](entities.md) that have been identified in the alerts. These are the objects that played a role in the incident, whether they be users, devices, addresses, files, or [other supported entity types](./entities-reference.md). Select an entity to see its full details, which are displayed in the **Entities tab**. For more information, see [Explore the incident's entities](#explore-the-incidents-entities).|
 | **Top insights** | In the **Top insights** widget, you see a collection of results of queries defined by Microsoft security researchers that provide valuable and contextual security information on all the entities in the incident, based on data from a collection of sources. For more information, see [Get the top insights into your incident](#get-the-top-insights-into-your-incident).|
 
-The **Entities** tab shows you the complete list of entities in the incident, which are also shown in the **Entities** widget on the **Overview** tab. When you select an entity in the widget, you're directed here to see the entity's full dossier&mdash;its identifying information, a timeline of its activity (both within and outside the incident), and the full set of insights about the entity, just as you would see in its full entity page, but limited to the time frame appropriate to the incident.
+The **Entities** tab shows you the complete list of entities in the incident, which are also shown in the **Entities** widget on the **Overview** tab. When you select an entity in the widget, you're directed here to see the entity's full dossier; its identifying information, a timeline of its activity (both within and outside the incident), and the full set of insights about the entity, just as you would see in its full entity page, but limited to the time frame appropriate to the incident.
 
 ## Reconstruct the timeline of the attack story
 
@@ -122,7 +121,7 @@ From the incident timeline widget, you can also take the following actions on al
 <a name="similar-incidents-preview"></a>
 ## Check for similar incidents in your environment
 
-As a security operations analyst, when investigating an incident you want to pay attention to its larger context. 
+As a security operations analyst, when investigating an incident you want to pay attention to its larger context.
 
 As with the incident timeline widget, you can hover over any text that's incompletely displayed due to column width to reveal the full text.
 
@@ -154,7 +153,7 @@ The time frame for the **Top insights** widget is from 24 hours before the earli
 
 ## Explore the incident's entities
 
-The **Entities** widget shows you all the [Microsoft Sentinel entities](entities.md) that have been identified in the alerts in the incident. These are the objects that played a role in the incident, whether they be users, devices, addresses, files, or [other supported entity types](./entities-reference.md). 
+The **Entities** widget shows you all the [Microsoft Sentinel entities](entities.md) that have been identified in the alerts in the incident. These are the objects that played a role in the incident, whether they be users, devices, addresses, files, or [other supported entity types](./entities-reference.md).
 
 You can search the list of entities in the entities widget, or filter the list by entity type, to help you find an entity.
 
@@ -214,7 +213,7 @@ You can also call an empty Logs panel inside the incident details page anytime, 
 
 However you end up on the **Logs** panel, if you've run a query whose results you want to save, use the following procedure:
 
-1. Mark the check box next to the row you want to save from among the results. To save all the results, mark the check box at the top of the column. 
+1. Mark the check box next to the row you want to save from among the results. To save all the results, mark the check box at the top of the column.
 
 1. Save the marked results as a bookmark. You have two options to do this:
 
@@ -246,26 +245,24 @@ The investigation graph provides you with:
 |**Full investigation scope discovery** | Expand your investigation scope using built-in exploration queries to surface the full scope of a breach.|
 | **Built-in investigation steps** | Use predefined exploration options to make sure you're asking the right questions in the face of a threat.|
 
-**To use the investigation graph**:
+To use the investigation graph:
 
 1. Select an incident, then select **Investigate**. This takes you to the investigation graph. The graph provides an illustrative map of the entities directly connected to the incident's alerts and each related resource.
 
-
     [![Screenshot of the investigation graph showing an illustrative map of entities connected to the alert.](media/investigate-incidents/investigation-map.png)](media/investigate-incidents/investigation-map.png#lightbox)
 
-   > [!IMPORTANT] 
+   > [!IMPORTANT]
    > - You'll only be able to investigate the incident if the analytics rule or bookmark that generated it contains entity mappings. The investigation graph requires that your original incident includes entities.
    >
    > - The investigation graph currently supports investigation of **incidents up to 30 days old**.
 
-
 1. Select an entity to open the **Entities** pane so you can review information on that entity.
 
-    ![Screenshot of the Entities pane showing entity details in the investigation map.](media/investigate-incidents/map-entities.png)
+    :::image type="content" source="media/investigate-incidents/map-entities.png" alt-text="Screenshot of the Entities pane showing entity details in the investigation map.":::
   
 1. Expand your investigation by hovering over each entity to reveal a list of questions that are designed by our security experts and analysts per entity type to deepen your investigation. We call these options **exploration queries**.
 
-    ![Screenshot of exploration queries list displayed when hovering over an entity in the investigation graph.](media/investigate-incidents/exploration-cases.png)
+    :::image type="content" source="media/investigate-incidents/exploration-cases.png" alt-text="Screenshot of exploration queries list displayed when hovering over an entity in the investigation graph.":::
 
     For example, you can request related alerts. If you select an exploration query, the resulting entitles are added back to the graph. In this example, selecting **Related alerts** returned the following alerts into the graph:
 
@@ -283,7 +280,6 @@ The investigation graph provides you with:
 
     :::image type="content" source="media/investigate-incidents/use-timeline.png" alt-text="Screenshot: use timeline in map to investigate alerts.'" lightbox="media/investigate-incidents/use-timeline.png":::
 
-
 ## Audit incident events and add comments
 
 When investigating an incident, you want to thoroughly document the steps you take, both to ensure accurate reporting to management and to enable seamless cooperation and collaboration among coworkers. You also want to clearly see records of any actions taken on the incident by others, including by automated processes. Microsoft Sentinel gives you the **Activity log**, a rich audit and commenting environment, to help you accomplish this.
@@ -292,13 +288,13 @@ You can also enrich your incidents automatically with comments. For example, whe
 
 The activity log autorefreshes, even while open, so that you can always see changes in real time. You're also notified of any changes made to the activity log while you have it open.
 
-**Prerequisites**
+### Prerequisites
 
 - **Editing:** Only the author of a comment has permission to edit it.
 
 - **Deleting:** Only users with the [Microsoft Sentinel Contributor](roles.md) role have permission to delete comments. Even the comment's author must have this role in order to delete it.
 
-**To view the log of activities and comments, or to add your own comments**:
+To view the log of activities and comments, or to add your own comments:
 
 1. Select **Activity log** at the top of the incident details page.
 1. To filter the log to show either only activities or only comments, select the filter control at the top of the log.
@@ -318,15 +314,8 @@ The following table lists limits for supported inputs in comments:
 | **Images** | Images can't be uploaded directly to comments. Instead, insert links to images in comments to display images inline. Linked images must already be hosted in a publicly accessible location such as Dropbox, OneDrive, Google Drive and so on. |
 | **Size limit** | **Per comment:** A single comment can contain up to **30,000 characters**.<br><br>**Per incident:** A single incident can contain up to **100 comments**.<br><br>The size limit of a single incident record in the *SecurityIncident* table in Log Analytics is 64 KB. If this limit is exceeded, comments (starting with the earliest) are truncated, which may affect the comments that appear in [advanced search](incident-navigate-triage.md#search-for-incidents) results. The actual incident records in the incidents database aren't affected. |
 
-## Next step
-
-To enhance your investigation with behavioral analytics, continue to the following article:
-
-[Investigate incidents with UEBA data](investigate-with-ueba.md)
-
 ## Related content
 
-In this article, you learned how to get started investigating incidents using Microsoft Sentinel. For more information, see:
-
+- [Investigate incidents with UEBA data](investigate-with-ueba.md)
 - [Investigate incidents comprehensively in Microsoft Sentinel](incident-investigation.md)
 - [Tutorial: Use playbooks with automation rules in Microsoft Sentinel](tutorial-respond-threats-playbook.md)
