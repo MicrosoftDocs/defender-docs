@@ -10,7 +10,7 @@ ms.collection:
 - tier2
 ms.topic: article
 ms.subservice: onboard
-ms.date: 06/16/2026
+ms.date: 08/11/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -30,6 +30,7 @@ appliesto:
 - Windows Server 2012 R2 and later
 - Azure Stack HCI OS, version 23H2 and later
 - Mac devices
+- Linux devices
 
 For information about offboarding and uninstalling Microsoft Defender for Endpoint on Linux, see [Offboard Microsoft Defender for Endpoint on Linux](linux-off-board-endpoints.md).
 
@@ -40,6 +41,7 @@ You can also use other methods, such as:
 - [Offboard devices using a local script](configure-endpoints-script.md#offboard-devices-using-a-local-script)
 - [Offboard devices using Group Policy](configure-endpoints-gp.md#offboard-devices-using-group-policy)
 - [Offboard devices using Mobile Device Management tools](configure-endpoints-mdm.md#offboard-devices-using-mobile-device-management-tools)
+- [Offboard devices using the API](api/offboard-machine-api.md)
 
 ## Offboard servers
 
@@ -51,6 +53,7 @@ You can also use other methods, such as:
 - [Offboard devices using Configuration Manager](configure-endpoints-sccm.md#offboard-devices-using-configuration-manager)
 - [Offboard devices using Mobile Device Management tools](configure-endpoints-mdm.md#offboard-devices-using-mobile-device-management-tools)
 - [Offboard devices using a local script](configure-endpoints-script.md#offboard-devices-using-a-local-script)
+- [Offboard devices using the API](api/offboard-machine-api.md)
 
 ## Offboard Mac devices
 
