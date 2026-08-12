@@ -9,7 +9,7 @@ ms.collection:
 ms.localizationpriority: medium
 description: Admins can learn about the available and preferred options to block inbound messages to Microsoft 365.
 ms.service: defender-office-365
-ms.date: 07/03/2026
+ms.date: 07/24/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -29,7 +29,7 @@ The following list contains the available methods to block senders from most rec
 1. Block entries for domains and email addresses (including spoofed senders) in the Tenant Allow/Block List.
 2. Outlook Blocked Senders (the Blocked Senders list in each mailbox that affects only that mailbox).
 3. Blocked sender lists or blocked domain lists in anti-spam policies.
-4. Exchange mail flow rules (also known as transport rules).
+4. Exchange mail flow rules (transport rules).
 5. The IP Block List in the default connection filter policy.
 
 The following sections describe each method in more detail.
@@ -45,7 +45,7 @@ The following sections describe each method in more detail.
 
 Our number one recommended option for blocking mail from specific senders or domains is the Tenant Allow/Block List. For instructions, see [Create block entries for domains and email addresses](tenant-allow-block-list-email-spoof-configure.md#create-block-entries-for-domains-and-email-addresses) and [Create block entries for spoofed senders](tenant-allow-block-list-email-spoof-configure.md#create-block-entries-for-spoofed-senders).
 
-Email messages from senders or domains that you block by using Tenant Allow/Block List entries are marked as _high confidence spam_ (SCL = 9). The [anti-spam policy](anti-spam-policies-configure.md) that detected the message for the recipient determines what happens to the messages. In the [Standard and Strict preset security policies](preset-security-policies.md), high confidence spam messages are quarantined.
+Email messages from senders or domains that you block by using Tenant Allow/Block List entries are marked as **High confidence spam**. The [anti-spam policy](anti-spam-policies-configure.md) that detected the message for the recipient determines what happens to the messages. In the [Standard and Strict preset security policies](preset-security-policies.md), high confidence spam messages are quarantined.
 
 As an added benefit, users in the organization can't _send_ email to these blocked domains and addresses. The message is returned in the following non-delivery report (also known as an NDR or bounce message): `550 5.7.703 Your message can't be delivered because messages to XXX, YYY are blocked by your organization using Tenant Allow Block List.` The entire message is blocked for all internal and external recipients of the message, even if only one recipient email address or domain is defined in a block entry.
 
@@ -71,12 +71,12 @@ The maximum limit for blocked sender lists and blocked domain lists in anti-spam
 
 ## Use mail flow rules
 
-Mail flow rules can also look for keywords or other properties in the unwanted messages.
+Mail flow rules can also look for keywords or other properties in the unwanted messages. For more information about mail flow rules, see [Mail flow rules in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules).
 
 > [!IMPORTANT]
 > It's easy to create rules that block too many messages or that don't block enough messages. Use specific criteria that identify _only_ the messages you want to block. Also, be sure to [monitor the usage of the rule](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#monitor-rule-usage) to ensure everything works as expected.
 
-Regardless of the conditions or exceptions that you use to identify the messages, you configure the action to set the spam confidence level (SCL) of the message to 9, which marks the message as **High confidence spam**. For more information, see [Use mail flow rules to set the SCL in messages](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
+<!--- Regardless of the conditions or exceptions that you use to identify the messages, you configure the action to set the spam confidence level (SCL) of the message to 9, which marks the message as **High confidence spam**. For more information, see [Use mail flow rules to set the SCL in messages](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl). --->
 
 ## Use the IP Block List in the default connection filter policy
 
