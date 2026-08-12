@@ -1,5 +1,5 @@
 ---
-title: Configure interactive and long-term data retention in Microsoft Sentinel
+title: Configure Interactive and Long-term Data Retention in Microsoft Sentinel
 description: Towards the end of your deployment procedure, you set up data retention to suit your organization's needs.
 ms.author: edbaynash
 author: EdB-MSFT
@@ -25,9 +25,7 @@ Retention policies define when to remove data, or mark it for long-term retentio
 - [Configure interactive and long-term data retention for one or more tables](/azure/azure-monitor/logs/data-retention-configure) (one table at a time)
 - [Configure data retention for multiple tables](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Archive-Log-Tool) at once
 
-## Next steps
-
-In this article, you learned how to set up interactive and long-term data retention.
+## Next step
 
 > [!div class="nextstepaction"]
->>[Perform post-deployment steps](review-fine-tune-overview.md)
+> [Perform post-deployment steps](review-fine-tune-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Set up customer-managed keys in Microsoft Sentinel
+title: Set up Customer-managed Keys in Microsoft Sentinel
 description: Configure customer-managed keys (CMK) for Microsoft Sentinel to add an extra encryption layer using a key you create and manage in Azure Key Vault.
 ms.author: edbaynash
 author: EdB-MSFT
@@ -27,9 +27,8 @@ Before you enable CMK for Microsoft Sentinel, complete the following prerequisit
 
 1. Configure a Log Analytics dedicated cluster with at least a 100 GB/day commitment tier. When multiple workspaces are linked to the same dedicated cluster, they share the same customer-managed key. Learn about [Log Analytics Dedicated Cluster Pricing](/azure/azure-monitor/logs/logs-dedicated-clusters#cluster-pricing-model).
 1. Configure CMK on the dedicated cluster and link your workspace to that cluster. Learn about the [CMK provisioning steps in Azure Monitor](/azure/azure-monitor/logs/customer-managed-keys?tabs=portal#customer-managed-key-provisioning-steps).
-   
-<a name="data-protected-by-cmk"></a>
-## Data protected by customer-managed keys
+
+## Data protected by CMK
 
 Once CMK is enabled, the following data is protected:
 
@@ -57,16 +56,15 @@ Review the following limitations and considerations before enabling CMK for Micr
 - Onboarding a CMK workspace to Microsoft Sentinel is supported only via REST API and the [Azure CLI](/cli/azure/sentinel/onboarding-state#az-sentinel-onboarding-state-create), and not via the Azure portal. Azure Resource Manager templates (ARM templates) currently aren't supported for CMK onboarding.
 
 - In the following cases, only ingested data in Log Analytics tables are encrypted with CMK, while all other data is encrypted with Microsoft-managed keys: 
-    - Enabling CMK on a workspace that's already onboarded to Microsoft Sentinel.
-    - Enabling CMK on a cluster that contains Microsoft Sentinel-enabled workspaces.
-    - Linking a Microsoft Sentinel-enabled, non-CMK workspace to a CMK-enabled cluster.
+  - Enabling CMK on a workspace that's already onboarded to Microsoft Sentinel.
+  - Enabling CMK on a cluster that contains Microsoft Sentinel-enabled workspaces.
+  - Linking a Microsoft Sentinel-enabled, non-CMK workspace to a CMK-enabled cluster.
 
 - The following CMK-related changes *are not supported* because they may lead to undefined and problematic behavior:
 
   - Disabling CMK on a workspace already onboarded to Microsoft Sentinel.
   - Setting a Sentinel-onboarded, CMK-enabled workspace as a non-CMK workspace by unlinking it from its CMK-enabled dedicated cluster.
   - Disabling CMK on a CMK-enabled Log Analytics dedicated cluster.
-
 
 - Microsoft Sentinel supports System Assigned Identities in CMK configuration. Therefore, the dedicated Log Analytics cluster's identity should be a **System Assigned** identity. We recommend that you use the identity that's automatically assigned to the Log Analytics cluster when it's created.
 
@@ -80,6 +78,7 @@ Review the following limitations and considerations before enabling CMK for Micr
 The Microsoft Sentinel solution uses a dedicated Log Analytics cluster for log collection and features. As part of the Microsoft Sentinel CMK configuration, you must configure the CMK settings on the related Log Analytics dedicated cluster. 
 
 For more information, see:
+
 - [Azure Monitor customer-managed keys (CMK)](/azure/azure-monitor/logs/customer-managed-keys).
 - [Azure Key Vault](/azure/key-vault/general/overview).
 - [Log Analytics dedicated clusters](/azure/azure-monitor/logs/logs-dedicated-clusters).
@@ -87,8 +86,7 @@ For more information, see:
 > [!NOTE]
 > If you enable CMK on Microsoft Sentinel, any Public Preview features that don't support CMK aren't enabled.
 
-<a name="enable-cmk"></a>
-## Enable customer-managed keys
+## Enable CMK
 
 To provision CMK, follow these steps:
 
@@ -116,7 +114,7 @@ Add an access policy that allows Azure Cosmos DB to access the Azure Key Vault i
 
 Follow the instructions to [add an access policy to your Azure Key Vault instance](/azure/cosmos-db/how-to-setup-cmk#add-access-policy) with an Azure Cosmos DB principal. 
 
-:::image type="content" source="./media/customer-managed-keys/add-access-policy-principal.png" lightbox="./media/customer-managed-keys/add-access-policy-principal.png" alt-text="Screenshot of the Select principal option on the Add access policy page."::: 
+:::image type="content" source="./media/customer-managed-keys/add-access-policy-principal.png" lightbox="./media/customer-managed-keys/add-access-policy-principal.png" alt-text="Screenshot of the Select principal option on the Add access policy page.":::
 
 ### Step 4: Onboard the workspace to Microsoft Sentinel via the onboarding API
 
@@ -126,14 +124,16 @@ For example, the following URI and request body is a valid call to onboard a wor
 
 The following PUT request creates or updates the Microsoft Sentinel onboarding state for the workspace with customer-managed key support enabled.
 
-**URI**
+#### URI
+
 ```http
 PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/onboardingStates/{sentinelOnboardingStateName}?api-version=2021-03-01-preview
 ```
 
 The following request body sets the `customerManagedKey` property to `true`, which enables customer-managed key support for the onboarding state.
 
-**Request body**
+#### Request body
+
 ```json
 { 
 "properties": { 
@@ -176,8 +176,8 @@ After rotating a key, you must explicitly update the dedicated Log Analytics clu
 
 Microsoft Sentinel doesn't support replacing a customer-managed key. You should use the [key rotation capability](#customer-managed-key-rotation) instead.
 
-## Next steps
-To learn more about Microsoft Sentinel, see the following articles:
-- Learn how to [get visibility into your data, and potential threats](get-visibility.md).
-- Get started [detecting threats with Microsoft Sentinel](./detect-threats-built-in.md).
-- [Use workbooks](monitor-your-data.md) to monitor your data.
+## Related content
+
+- [Visualize collected data on the Overview page](get-visibility.md)
+- [Threat detection in Microsoft Sentinel](threat-detection.md)
+- [Visualize and monitor your data by using workbooks in Microsoft Sentinel](monitor-your-data.md)

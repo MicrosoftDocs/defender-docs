@@ -1,5 +1,5 @@
 ---
-title: View MITRE ATT&CK coverage in Microsoft Sentinel
+title: View MITRE ATT&CK Coverage in Microsoft Sentinel
 description: View your organization's MITRE ATT&CK coverage in Microsoft Sentinel. Identify active detections and available rules to strengthen security.
 author: mberdugo 
 ms.topic: how-to
@@ -24,7 +24,7 @@ Microsoft Sentinel analyzes ingested data, not only to [detect threats with buil
 This article describes how to use the **MITRE** page in Microsoft Sentinel to view the analytics rules (detections) already active in your workspace and the detections available for you to configure. Use this page to understand your organization's security coverage based on the tactics and techniques from the MITRE ATT&CK framework.
 
 > [!IMPORTANT]
-> The MITRE page in Microsoft Sentinel is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+> The MITRE page in Microsoft Sentinel is currently in *preview*. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ Before you view the MITRE coverage for your organization in Microsoft Sentinel, 
 
 Microsoft Sentinel is currently aligned to The MITRE ATT&CK framework, version 18.
 
-##  View current MITRE coverage
+## View current MITRE coverage
 
 By default, both currently active scheduled query and near real-time (NRT) rules are indicated in the coverage matrix.
 
@@ -96,8 +96,8 @@ Scheduled rules with MITRE techniques applied that run regularly in your Microso
 
 - **Analytics rules**:
 
-    - When configuring analytics rules, select specific MITRE techniques to apply to your rule.
-    - When searching for analytics rules, filter the rules displayed by technique to find your rules quicker.
+  - When configuring analytics rules, select specific MITRE techniques to apply to your rule.
+  - When searching for analytics rules, filter the rules displayed by technique to find your rules quicker.
 
     For more information, see [Detect threats out-of-the-box](detect-threats-built-in.md) and [Create custom analytics rules to detect threats](detect-threats-custom.md).
 
@@ -109,15 +109,13 @@ Scheduled rules with MITRE techniques applied that run regularly in your Microso
 
 - **Threat hunting**:
 
-    - When you're creating a new hunting query, select the specific tactics and techniques to apply to your query.
-    - When searching for active hunting queries, filter the queries displayed by tactics by selecting a tactic from the tactics filter list. Select a query to see tactic and technique details in the details pane on the side.
-    - When you're creating bookmarks, either use the technique mapping inherited from the hunting query, or create your own mapping.
+  - When you're creating a new hunting query, select the specific tactics and techniques to apply to your query.
+  - When searching for active hunting queries, filter the queries displayed by tactics by selecting an item from the list above the grid. Select a query to see tactic and technique details in the details pane on the side.
+  - When you're creating bookmarks, either use the technique mapping inherited from the hunting query, or create your own mapping.
 
     For more information, see [Hunt for threats with Microsoft Sentinel](hunting.md) and [Keep track of data during hunting with Microsoft Sentinel](bookmarks.md).
 
 ## Related content
-
-For more information, see:
 
 - [MITRE | ATT&CK framework](https://attack.mitre.org/)
 - [MITRE ATT&CK for Industrial Control Systems](https://www.mitre.org/news-insights/news-release/mitre-releases-framework-cyber-attacks-industrial-control-systems)

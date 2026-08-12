@@ -1,5 +1,5 @@
 ---
-title: Enable Microsoft Sentinel SIEM and initial features and content
+title: Enable Microsoft Sentinel SIEM and Initial Features and Content
 description: As the first step of your deployment, you enable Microsoft Sentinel, and then enable the health and audit feature, solutions, and content.
 ms.author: edbaynash
 author: EdB-MSFT
@@ -29,9 +29,7 @@ Use the following steps to enable Microsoft Sentinel features and content for yo
 |3. [Enable solutions and content](sentinel-solutions-deploy.md)     |When you planned your deployment, you identified which data sources you need to ingest into Microsoft Sentinel. Now, you want to enable the relevant solutions and content so that the data you need can start flowing into Microsoft Sentinel.         |
 
 <a name="next-steps"></a>
-## Next step: Configure content
-
-After you enable Microsoft Sentinel, its health and audit feature, and the required content, proceed to configure the content for your environment.
+## Next step
 
 > [!div class="nextstepaction"]
->>[Configure content](configure-content.md)
+> [Configure content](configure-content.md)
