@@ -44,7 +44,7 @@ The Logstash engine is composed of three components:
 
 > [!NOTE]
 > - Microsoft supports only the Microsoft Sentinel-provided Logstash output plugin discussed here. The current plugin is **[microsoft-sentinel-log-analytics-logstash-output-plugin](https://github.com/Azure/Azure-Sentinel/tree/master/DataConnectors/microsoft-sentinel-log-analytics-logstash-output-plugin)**, v2.1.0. You can [open a support ticket](https://portal.azure.com/#create/Microsoft.Support) for any issues regarding the output plugin.
-> - Microsoft does not support third-party Logstash output plugins for Microsoft Sentinel, or any other Logstash plugin or component of any type.
+> - Microsoft doesn't support third-party Logstash output plugins for Microsoft Sentinel, or any other Logstash plugin or component of any type.
 > - See [Logstash plugin prerequisites](#logstash-plugin-prerequisites) for the plugin's supported Logstash versions.
 
 The plugin sends JSON-formatted data to your Log Analytics workspace using the Logs Ingestion API. The data is ingested into custom logs or a standard table.
@@ -68,13 +68,13 @@ To set up the plugin, follow these steps:
 
 - Install a supported version of Logstash. The plugin supports the following Logstash versions:
 
-    - 7.0 - 7.17.13
-    - 8.0 - 8.9
-    - 8.11 - 8.15
-    - 8.19.2
-    - 9.0.8
-    - 9.1.10
-    - 9.2.4 - 9.2.5
+  - 7.0 - 7.17.13
+  - 8.0 - 8.9
+  - 8.11 - 8.15
+  - 8.19.2
+  - 9.0.8
+  - 9.1.10
+  - 9.2.4 - 9.2.5
 
     > [!NOTE]
     > If you use Logstash 8, we recommended that you [disable ECS in the pipeline](https://www.elastic.co/guide/en/logstash/8.4/ecs-ls.html).
@@ -129,6 +129,7 @@ To create the sample file, follow these steps:
         }
     }
     ```
+
 1. Make sure the referenced file path already exists, then start Logstash.
 
     The plugin writes ten records to a sample file named `sampleFile<epoch seconds>.json` in the configured path once there are 10 events to sample or when the Logstash process exits gracefully. For example: *c:\temp\sampleFile1648453501.json*. Here is part of a sample file that the plugin creates:
@@ -176,7 +177,8 @@ In this scenario, you configure the Logstash input plugin to send syslog events 
         }
     }
     ```
-2. Copy the output plugin configuration below to your Logstash configuration file.
+
+1. Copy the output plugin configuration below to your Logstash configuration file.
 
     ```
     output {
@@ -186,6 +188,7 @@ In this scenario, you configure the Logstash input plugin to send syslog events 
         }
     }
     ```
+
 1. Make sure the file path already exists, then start Logstash.
 
     The plugin writes ten records to a sample file named `sampleFile<epoch seconds>.json` in the configured path once there are 10 events to sample or when the Logstash process exits gracefully. For example: *c:\temp\sampleFile1648453501.json*. Here is part of a sample file that the plugin creates:
@@ -230,12 +233,12 @@ In this section, you create resources to use for your DCR, in one of these scena
 
 To ingest the data to a custom table, follow these steps (based on the [Send data to Azure Monitor Logs using REST API (Azure portal) tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal)):
 
-1. Review the [prerequisites for sending data to Azure Monitor Logs via the Azure portal](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#prerequisites).
-2. [Configure the application](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#create-azure-ad-application).
-3. [Add a custom log table](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#create-new-table-in-log-analytics-workspace).
-4. [Parse and filter sample data](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#parse-and-filter-sample-data) using the sample file you created in [Create a sample file](#create-a-sample-file).
-5. [Collect information from the DCR](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#collect-information-from-the-dcr).
-6. [Assign permissions to the DCR](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#assign-permissions-to-the-dcr).
+1. Review the [prerequisites](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#prerequisites).
+1. [Configure the application](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#create-azure-ad-application).
+1. [Add a custom log table](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#create-new-table-in-log-analytics-workspace).
+1. [Parse and filter sample data](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#parse-and-filter-sample-data) using the sample file you created in the previous section.
+1. [Collect information from the DCR](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#collect-information-from-the-dcr).
+1. [Assign permissions to the DCR](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#assign-permissions-to-the-dcr).
 
     Skip the Send sample data step.
 
@@ -245,18 +248,18 @@ If you come across any issues, see the [Logs Ingestion API troubleshooting steps
 
 To ingest the data to a standard table like Syslog or CommonSecurityLog, you use a process based on the [Send data to Azure Monitor Logs using REST API (Resource Manager templates) tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-api). While the tutorial explains how to ingest data into a custom table, you can easily adjust the process to ingest data into a standard table. The steps below indicate relevant changes in the steps.
 
-1. Review the [prerequisites for sending data to Azure Monitor Logs with Resource Manager templates](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#prerequisites).
-2. [Collect workspace details](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#collect-workspace-details).
-3. [Configure an application](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#create-azure-ad-application).
+1. Review the [prerequisites](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#prerequisites).
+1. [Collect workspace details](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#collect-workspace-details).
+1. [Configure an application](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#create-azure-ad-application).
 
     Skip the Create new table in Log Analytics workspace step. This step isn't relevant when ingesting data into a standard table, because the table is already defined in Log Analytics.
-4. [Create the DCR](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#create-data-collection-rule). In this step:
+1. [Create the DCR](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#create-data-collection-rule). In this step:
 
     - Provide the sample file you created in [Create a sample file](#create-a-sample-file).
     - Use the sample file you created to define the `streamDeclarations` property. Each of the fields in the sample file should have a corresponding column with the same name and the appropriate type (see the example below).
     - Configure the value of the `outputStream` property with the name of the standard table instead of the custom table. Unlike custom tables, standard table names don't have the `_CL` suffix.
     - The prefix of the table name should be `Microsoft-` instead of `Custom-`. In this example, the `outputStream` property value is `Microsoft-Syslog`.
-5. [Assign permissions to a DCR](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#assign-permissions-to-a-dcr).
+1. [Assign permissions to a DCR](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#assign-permissions-to-a-dcr).
 
     Skip the Send sample data step.
 
@@ -386,9 +389,9 @@ output {
 
 When `managed_identity` is set to `true`, the plugin authenticates without a client secret. The plugin automatically detects the appropriate identity mechanism at runtime in the following order:
 
-1. **AKS Workload Identity** — If the environment variables `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_FEDERATED_TOKEN_FILE` are present (set automatically by AKS), the plugin performs an OIDC token exchange.
-2. **Azure Arc** — If the Azure Connected Machine Agent (`azcmagent`) is detected on the host, the plugin uses the Azure Arc managed identity endpoint for hybrid and on-premises servers.
-3. **IMDS** — Otherwise, the plugin falls back to the Azure Instance Metadata Service (IMDS) for Azure VMs and VMSS.
+1. **AKS Workload Identity**: If the environment variables `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_FEDERATED_TOKEN_FILE` are present (set automatically by AKS), the plugin performs an OIDC token exchange.
+1. **Azure Arc**: If the Azure Connected Machine Agent (`azcmagent`) is detected on the host, the plugin uses the Azure Arc managed identity endpoint for hybrid and on-premises servers.
+1. **IMDS**: Otherwise, the plugin falls back to the Azure Instance Metadata Service (IMDS) for Azure VMs and VMSS.
 
 Required configuration for managed identity:
 

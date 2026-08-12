@@ -14,7 +14,7 @@ The Defender for Identity sensor v2.x has the following requirements. The v2.x s
 - AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers
 
 > [!TIP]
-> For servers running Windows Server 2019 or later, whether or not they're domain controllers, we recommend deploying the [sensor v3.x](deploy-sensor-v3.md) instead.
+> For domain controllers running Windows Server 2019 or later, we recommend deploying the [sensor v3.x](deploy-sensor-v3.md) instead.
 
 ## Licensing requirements
 

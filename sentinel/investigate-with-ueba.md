@@ -1,5 +1,5 @@
 ---
-title: Investigate incidents with UEBA data
+title: Investigate Incidents with UEBA Data
 description: Learn how to use UEBA data while investigating to gain greater context to potentially malicious activity occurring in your organization.
 ms.author: guywild
 author: guywi-ms
@@ -19,8 +19,7 @@ This article describes common methods and sample procedures for using [user enti
 
 > [!IMPORTANT]
 >
-> Noted features in this article are currently in  **PREVIEW**. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
-
+> Noted features in this article are currently in *preview*. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 ## Prerequisites
 
@@ -32,7 +31,7 @@ Start looking for machine powered insights about one week after enabling UEBA.
 
 In the Defender portal, a **UEBA Anomalies** tag identifies users with anomalies, making it easier to prioritize investigations.
 
-The **Top UEBA anomalies** section - which appears on the User side panel and the **Overview** tab of the User entity page - displays the user's top three anomalies from the last 30 days. Select the links at the bottom of the **Top UEBA anomalies** section to hunt for all of the user's anomalies and view the Sentinel events timeline.
+The **Top UEBA anomalies** section, which appears on the User side panel and the **Overview** tab of the User entity page, displays the user's top three anomalies from the last 30 days. Select the links at the bottom of the **Top UEBA anomalies** section to hunt for all of the user's anomalies and view the Sentinel events timeline.
 
 :::image type="content" source="media/investigate-with-ueba/entity-behavior-analytics-user-investigations.png" alt-text="Screenshot that shows the overview tab of the User page for a user with UEBA anomalies in the last 30 days." lightbox="media/investigate-with-ueba/entity-behavior-analytics-user-investigations.png":::
 
@@ -43,7 +42,6 @@ To investigate a user in an incident, select **Go Hunt > All user anomalies** fr
 :::image type="content" source="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-incident-investigations.png" alt-text="Screenshot that shows an incident graph, highlighting the Go hunt All user anomalies option, which allows analysts to quickly find all anomalies related to the user." lightbox="media/identify-threats-with-entity-behavior-analytics/entity-behavior-analytics-incident-investigations.png":::
 
 For more information about investigating user anomalies and the user entity page, see [Investigate incidents in the Microsoft Defender portal](https://aka.ms/ueba-go-hunt) and [User entity page in Microsoft Defender](https://aka.ms/ueba-entity-details).
-
 
 ## Run proactive, routine searches on entity data
 
@@ -72,7 +70,6 @@ For example, the following steps follow the investigation of a user who connecte
     |**Note the UsersInsights data**     |  Scroll further to the right in the anomaly row to view the user insight data, such as the account display name and the account object ID. Select the text to view the full data on the right.         |
     |**Note the Evidence data**     |  Scroll further to the right in the anomaly row to view the evidence data for the anomaly. Select the text view the full data on the right, such as the following fields: <br><br>-  **ActionUncommonlyPerformedByUser** <br>- **UncommonHighVolumeOfActions** <br>- **FirstTimeUserConnectedFromCountry** <br>- **CountryUncommonlyConnectedFromAmongPeers** <br>- **FirstTimeUserConnectedViaISP** <br>- **ISPUncommonlyUsedAmongPeers** <br>- **CountryUncommonlyConnectedFromInTenant** <br>- **ISPUncommonlyUsedInTenant** |
 
-
 Use the data found in the **User and Entity Behavior Analytics** workbook to determine whether the user activity is suspicious and requires further action.
 
 ## Use UEBA data to analyze false positives
@@ -87,7 +84,7 @@ For example, for an **Impossible travel** incident, after confirming with the us
 
 For example:
 
-[ ![Screenshot of an incident's user entity page showing user details and commonly known locations.](media/ueba/open-entity-pages.png) ](media/ueba/open-entity-pages.png#lightbox)
+:::image type="content" source="media/ueba/open-entity-pages.png" alt-text="Screenshot of an incident's user entity page showing user details and commonly known locations." lightbox="media/ueba/open-entity-pages.png":::
 
 The user entity page is also linked from the [incident page](investigate-cases.md#how-to-investigate-incidents) and from the [investigation graph](investigate-cases.md#use-the-investigation-graph-to-deep-dive).
 
@@ -95,7 +92,6 @@ The user entity page is also linked from the [incident page](investigate-cases.m
 > After confirming the data on the user entity page for the specific user associated with the incident, go to the Microsoft Sentinel **Hunting** area to understand whether the user's peers usually connect from the same locations as well. If so, this knowledge would make an even stronger case for a false positive.
 >
 > In the **Hunting** area, run the **Anomalous Geo Location Logon** query. For more information, see [Hunt for threats with Microsoft Sentinel](hunting.md).
->
 
 ### Embed IdentityInfo data in your analytics rules (Public Preview)
 
@@ -131,6 +127,7 @@ For example:
 The **IdentityInfo** table synchronizes with your Microsoft Entra workspace to create a snapshot of your user profile data, such as user metadata, group information, and Microsoft Entra roles assigned to each user. For more information, see [IdentityInfo table](ueba-reference.md#identityinfo-table) in the UEBA enrichments reference.
 
 For details about the operators and functions used in the SecurityEvent and SigninLogs query examples, see the following Kusto documentation:
+
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
 - [***join*** operator](/kusto/query/join-operator?view=microsoft-sentinel&preserve-view=true)
 - [***summarize*** operator](/kusto/query/summarize-operator?view=microsoft-sentinel&preserve-view=true)
@@ -160,22 +157,21 @@ For example, to investigate a password spray incident with UEBA insights, you mi
 
 1. Select the administrative user entity in the map, and then select **Insights** on the right to find more details, such as the graph of sign-ins over time.
 
-1. Select **Info** on the right, and then select **View full details** to jump to the [user entity page](entity-pages.md) to drill down further. 
+1. Select **Info** on the right, and then select **View full details** to jump to the [user entity page](entity-pages.md) to drill down further.
 
     For example, note whether this is the user's first Potential Password spray incident, or watch the user's sign-in history to understand whether the failures were anomalous.
 
 > [!TIP]
-> You can also run the **Anomalous Failed Logon** [threat hunting query in Microsoft Sentinel](hunting.md) to monitor all of an organization's anomalous failed logins. Use the results from the query to start investigations into possible password spray attacks.
->
+> You can also run the **Anomalous Failed Logon** [hunting query](hunting.md) to monitor all of an organization's anomalous failed logins. Use the results from the query to start investigations into possible password spray attacks.
 
 ## URL detonation (Public preview)
 
-When there are URLs in the logs ingested into Microsoft Sentinel, those URLs are automatically detonated to help accelerate the triage process. 
+When there are URLs in the logs ingested into Microsoft Sentinel, those URLs are automatically detonated to help accelerate the triage process.
 
 The Investigation graph includes a node for the detonated URL, as well as the following details:
 
-- **DetonationVerdict**. The high-level, Boolean determination from detonation. For example, **Bad** means that the side was classified as hosting malware or phishing content.
-- **DetonationFinalURL**. The final, observed landing page URL, after all redirects from the original URL.
+- **DetonationVerdict**: The high-level, Boolean determination from detonation. For example, **Bad** means that the side was classified as hosting malware or phishing content.
+- **DetonationFinalURL**: The final, observed landing page URL, after all redirects from the original URL.
 
 For example:
 
@@ -185,13 +181,10 @@ For example:
 > If you don't see URLs in your logs, check that URL logging, also known as threat logging, is enabled for your secure web gateways, web proxies, firewalls, or legacy IDS/IPS.
 >
 > You can also create custom logs to channel specific URLs of interest into Microsoft Sentinel for further investigation.
->
 
-## Next steps
+## Related content
 
-Learn more about UEBA, investigations, and hunting:
-
-- [Identify advanced threats with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](identify-threats-with-entity-behavior-analytics.md)
-- [Microsoft Sentinel UEBA reference](ueba-reference.md)
-- [Tutorial: Investigate incidents with Microsoft Sentinel](investigate-cases.md)
-- [Hunt for threats with Microsoft Sentinel](hunting.md)
+- [Advanced threat detection with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](identify-threats-with-entity-behavior-analytics.md)
+- [Microsoft Sentinel User and Entity Behavior Analytics (UEBA) data sources and schema enrichments](ueba-reference.md)
+- [Investigate incidents with Microsoft Sentinel (legacy)](investigate-cases.md)
+- [Threat hunting in Microsoft Sentinel](hunting.md)

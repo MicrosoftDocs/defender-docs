@@ -28,7 +28,7 @@ SAP LogServ bridges that gap. It's an SAP Enterprise Cloud Services (ECS) servic
 
 ## What logs does SAP LogServ provide?
 
-LogServ extends your monitoring scope beyond the SAP application layer to include logs that SAP ECS owns as the system provider. The available log types include:
+LogServ extends your monitoring scope beyond the SAP application layer to include logs that SAP ECS owns as the system provider. The available log types include sources such as:
 
 | Log category | Examples |
 |---|---|
@@ -39,7 +39,7 @@ LogServ extends your monitoring scope beyond the SAP application layer to includ
 | **Network and security** | Network, DNS, Proxy, Firewall logs |
 | **Third-party databases** | Non-HANA database logs where applicable |
 
-Check with SAP for the latest available log types and any updates to supported log sources.
+Always check with SAP for the latest available log types and any updates to supported log sources using their **Service Description Document**.
 
 > [!NOTE]
 > The SAP Security Audit Log (AS ABAP) for the application layer is handled by the [Microsoft Sentinel Solution for SAP applications](solution-overview.md) data connector, not by SAP LogServ. Deploy both solutions together for full-stack coverage.

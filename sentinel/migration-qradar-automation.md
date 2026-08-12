@@ -1,5 +1,5 @@
 ---
-title: Migrate IBM Security QRadar SOAR automation to Microsoft Sentinel
+title: Migrate IBM Security QRadar SOAR Automation to Microsoft Sentinel
 description: Learn how to identify SOAR use cases, and how to migrate your QRadar SOAR automation to Microsoft Sentinel.
 author: EdB-MSFT
 ms.author: edbaynash
@@ -17,22 +17,24 @@ ms.custom: msecd-doc-authoring-1016
 
 Microsoft Sentinel provides Security Orchestration, Automation, and Response (SOAR) capabilities with [automation rules](automate-incident-handling-with-automation-rules.md) and [playbooks](tutorial-respond-threats-playbook.md). Automation rules automate incident handling and response, and playbooks run predetermined sequences of actions to response and remediate threats. This article discusses how to identify SOAR use cases, and how to migrate your IBM Security QRadar SOAR automation to Microsoft Sentinel.
 
-Automation rules simplify complex workflows for your incident orchestration processes, and allow you to centrally manage your incident handling automation. 
+Automation rules simplify complex workflows for your incident orchestration processes, and allow you to centrally manage your incident handling automation.
 
-With automation rules, you can: 
-- Perform simple automation tasks without necessarily using playbooks. For example, you can assign, tag incidents, change status, and close incidents. 
-- Automate responses for multiple analytics rules at once. 
-- Control the order of actions that are executed. 
-- Run playbooks for those cases where more complex automation tasks are necessary. 
+With automation rules, you can:
+
+- Perform simple automation tasks without necessarily using playbooks. For example, you can assign, tag incidents, change status, and close incidents.
+- Automate responses for multiple analytics rules at once.
+- Control the order of actions that are executed.
+- Run playbooks for those cases where more complex automation tasks are necessary.
 
 ## Identify SOAR use cases
 
 Here’s what you need to think about when migrating SOAR use cases from IBM Security QRadar SOAR.
-- **Use case quality**. Choose good use cases for automation. Use cases should be based on procedures that are clearly defined, with minimal variation, and a low false-positive rate. Automation should work with efficient use cases.
-- **Manual intervention**. Automated response can have wide ranging effects and high impact automations should have human input to confirm high impact actions before they’re taken.
-- **Binary criteria**. To increase response success, decision points within an automated workflow should be as limited as possible, with binary criteria. Binary criteria reduces the need for human intervention, and enhances outcome predictability.
-- **Accurate alerts or data**. Response actions are dependent on the accuracy of signals such as alerts. Alerts and enrichment sources should be reliable. Microsoft Sentinel resources such as watchlists and reliable threat intelligence can enhance reliability.
-- **Analyst role**. While automation where possible is great, reserve more complex tasks for analysts, and provide them with the opportunity for input into workflows that require validation. In short, response automation should augment and extend analyst capabilities.
+
+- **Use case quality**: Choose good use cases for automation. Use cases should be based on procedures that are clearly defined, with minimal variation, and a low false-positive rate. Automation should work with efficient use cases.
+- **Manual intervention**: Automated response can have wide ranging effects and high impact automations should have human input to confirm high impact actions before they’re taken.
+- **Binary criteria**: To increase response success, decision points within an automated workflow should be as limited as possible, with binary criteria. Binary criteria reduces the need for human intervention, and enhances outcome predictability.
+- **Accurate alerts or data**: Response actions are dependent on the accuracy of signals such as alerts. Alerts and enrichment sources should be reliable. Microsoft Sentinel resources such as watchlists and reliable threat intelligence can enhance reliability.
+- **Analyst role**: While automation where possible is great, reserve more complex tasks for analysts, and provide them with the opportunity for input into workflows that require validation. In short, response automation should augment and extend analyst capabilities.
 
 <a name="migrate-soar-workflow"></a>
 ## Migrate SOAR workflows to Microsoft Sentinel
@@ -72,6 +74,7 @@ Most of the playbooks that you use with Microsoft Sentinel are available in eith
 You typically build your custom logic app using the Azure Logic App Designer feature. The logic apps code is based on [Azure Resource Manager (ARM) templates](/azure/azure-resource-manager/templates/overview). ARM templates are deployment files that package and move Azure resources across multiple environments. To convert your custom playbook into a portable ARM template, you can use the [ARM template generator](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/export-microsoft-sentinel-playbooks-or-azure-logic-apps-with/ba-p/3275898).
 
 Use these articles and blog posts for cases where you need to build your own playbooks either from scratch or from existing templates.
+
 - [Automate incident handling in Microsoft Sentinel](automate-incident-handling-with-automation-rules.md)
 - [Automate threat response with playbooks in Microsoft Sentinel](automate-responses-with-playbooks.md)
 - [Tutorial: Use playbooks with automation rules in Microsoft Sentinel](tutorial-respond-threats-playbook.md)
@@ -88,9 +91,7 @@ Here are best practices you should take into account after your SOAR migration:
 - Monitor the performance of your playbooks using the [Playbooks health monitoring workbook](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-monitoring-your-logic-apps-playbooks-in-azure/ba-p/1873211).
 - Use managed identities and service principals: Authenticate against various Azure services within your Logic Apps, store the secrets in Azure Key Vault, and obscure the output of the flow execution. We also recommend that you [monitor the activities of the service principals used by your Logic Apps](https://techcommunity.microsoft.com/t5/azure-sentinel/non-interactive-logins-minimizing-the-blind-spot/ba-p/2287932).
 
-## Next steps
-
-In this article, you learned how to map your SOAR automation from IBM Security QRadar SOAR to Microsoft Sentinel. 
+## Next step
 
 > [!div class="nextstepaction"]
 > [Export your historical data](migration-qradar-historical-data.md)

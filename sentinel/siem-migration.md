@@ -1,5 +1,5 @@
 ---
-title: Use the SIEM migration experience
+title: Use the SIEM Migration Experience
 titleSuffix: Microsoft Sentinel
 description: Migrate security monitoring use cases from other Security Information and Event Management (SIEM) systems to Microsoft Sentinel.
 ms.author: monaberdugo

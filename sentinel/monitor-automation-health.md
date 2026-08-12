@@ -1,5 +1,5 @@
 ---
-title: Monitor the health of your Microsoft Sentinel automation rules and playbooks
+title: Monitor the Health of your Microsoft Sentinel Automation Rules and Playbooks
 description: Use the SentinelHealth and AzureDiagnostics data tables to keep track of your automation rules' and playbooks' execution and performance.
 ms.author: monaberdugo
 author: mberdugo
@@ -33,14 +33,14 @@ Once the health feature is turned on, the *SentinelHealth* data table is created
 
 The following types of automation health events are logged in the *SentinelHealth* table:
 
-- **Automation rule run**. Logged whenever an automation rule's conditions are met, causing it to run. Besides the fields in the basic *SentinelHealth* table, these events will include [extended properties unique to the running of automation rules](health-table-reference.md#automation-rules), including a list of the playbooks called by the rule. The following sample query will display these events:
+- **Automation rule run**: Logged whenever an automation rule's conditions are met, causing it to run. Besides the fields in the basic *SentinelHealth* table, these events include [extended properties unique to the running of automation rules](health-table-reference.md#automation-rules), including a list of the playbooks called by the rule. The following sample query displays these events:
 
     ```kusto
     SentinelHealth
     | where OperationName == "Automation rule run"
     ```
 
-- **Playbook was triggered**. Logged whenever a playbook is triggered on an incident manually from the portal or through the API. Besides the fields in the basic *SentinelHealth* table, these events will include [extended properties unique to the manual triggering of playbooks](health-table-reference.md#playbooks). The following sample query will display these events:
+- **Playbook was triggered**: Logged whenever a playbook is triggered on an incident manually from the portal or through the API. Besides the fields in the basic *SentinelHealth* table, these events include [extended properties unique to the manual triggering of playbooks](health-table-reference.md#playbooks). The following sample query displays these events:
 
     ```kusto
     SentinelHealth
@@ -51,22 +51,21 @@ For more information, see [SentinelHealth table columns schema](health-table-ref
 
 ### Statuses, errors and suggested steps
 
-For the **Automation rule run** status, you may see the following statuses:
+For the **Automation rule run** status, you might see the following statuses:
 
-- **Success**: rule executed successfully, triggering all actions.
-- **Partial success**: rule executed and triggered at least one action, but some actions failed.
-- **Failure**: automation rule did not run any action due to one of the following reasons:
+- **Success**: Rule executed successfully, triggering all actions.
+- **Partial success**: Rule executed and triggered at least one action, but some actions failed.
+- **Failure**: Automation rule didn't run any action due to one of the following reasons:
 
-    - Conditions evaluation failed.
-    - Conditions met, but the first action failed.
+  - Conditions evaluation failed.
+  - Conditions met, but the first action failed.
 
-For the **Playbook was triggered** status, you may see the following statuses:
+For the **Playbook was triggered** status, you might see the following statuses:
 
-- **Success**: playbook was triggered successfully.
-- **Failure**: playbook could not be triggered.
+- **Success**: Playbook was triggered successfully.
+- **Failure**: Playbook couldn't be triggered.
 
     > [!NOTE]
-    > 
     > **Success** means only that the automation rule successfully triggered a playbook. It doesn't tell you when the playbook started or ended, the results of the actions in the playbook, or the final result of the playbook.
     >
     > To find this information, query the Logic Apps diagnostics logs. For more information, see [Get the complete automation picture](#get-the-complete-automation-picture).
@@ -111,7 +110,7 @@ These added events provide additional insights into the actions being taken in y
 
 ### Turn on Azure Logic Apps diagnostics
 
-For each playbook you are interested in monitoring, [enable Log Analytics for your logic app](/azure/logic-apps/monitor-workflows-collect-diagnostic-data). Make sure to select **Send to Log Analytics workspace** as your log destination, and choose your Microsoft Sentinel workspace.
+For each playbook you're interested in monitoring, [enable Log Analytics for your logic app](/azure/logic-apps/monitor-workflows-collect-diagnostic-data). Make sure to select **Send to Log Analytics workspace** as your log destination, and choose your Microsoft Sentinel workspace.
 
 ### Correlate Microsoft Sentinel and Azure Logic Apps logs
 
@@ -140,7 +139,8 @@ SentinelHealth
     playbookRunStatus
 ```
 
-See more information on the following items used in the preceding examples, in the Kusto documentation:
+See more information on the following items used in the preceding examples in the Kusto documentation:
+
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
 - [***mv-expand*** operator](/kusto/query/mv-expand-operator?view=microsoft-sentinel&preserve-view=true)
 - [***extend*** operator](/kusto/query/extend-operator?view=microsoft-sentinel&preserve-view=true)
@@ -175,10 +175,11 @@ Select a particular run to see the results of the actions in that playbook run.
 
 :::image type="content" source="media/monitor-automation-health/automation-health-monitoring-workbook-playbook-runs.png" alt-text="Screenshot shows the actions taken in a given run of the selected playbook." lightbox="media/monitor-automation-health/automation-health-monitoring-workbook-playbook-runs.png":::
 
-## Next steps
+## Related content
 
-- Learn about [auditing and health monitoring in Microsoft Sentinel](health-audit.md).
+- [Auditing and health monitoring in Microsoft Sentinel](health-audit.md).
 - [Turn on auditing and health monitoring](enable-monitoring.md) in Microsoft Sentinel.
 - [Monitor the health of your data connectors](monitor-data-connector-health.md).
 - [Monitor the health and integrity of your analytics rules](monitor-analytics-rule-integrity.md).
-- See more information about the [*SentinelHealth*](health-table-reference.md) and [*SentinelAudit*](audit-table-reference.md) table schemas.
+- [Microsoft Sentinel health tables reference](health-table-reference.md)
+- [Microsoft Sentinel audit tables reference](audit-table-reference.md)
