@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 08/10/2026
+ms.date: 08/12/2026
 ms.topic: overview
 #customer intent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity so that I can take advantage of new features and functionality.
 ms.reviewer: AbbyMSFT
@@ -24,16 +24,6 @@ For more information, see also:
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
-
-## August 2026
-
-### New health alert for reverted auditing configuration
-
-A new Defender for Identity health alert notifies you when a conflicting policy, such as a Group Policy Object (GPO), repeatedly reverts the auditing configuration required by sensor v3.x on a domain controller. For more information, see [Microsoft Defender for Identity health issues](health-alerts.md).
-
-### Script to find GPO conflicts that revert auditing
-
-The new read-only `Find-MdiAuditingGpoConflicts.ps1` PowerShell script identifies GPOs that override automatic auditing settings on a domain controller. You can use the results to update or unlink the conflicting GPOs. For more information, see [Find GPO conflicts that revert automatic auditing](deploy/configure-windows-event-collection.md#find-gpo-conflicts-that-revert-automatic-auditing).
 
 ## July 2026
 
