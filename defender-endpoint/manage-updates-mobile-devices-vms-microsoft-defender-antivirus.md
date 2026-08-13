@@ -6,19 +6,20 @@ ms.localizationpriority: medium
 ms.topic: how-to
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1016
+ms.custom: nextgen, msecd-doc-authoring-1015
 ms.reviewer: yongrhee
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
-ms.date: 07/02/2026
+ms.date: 08/12/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
 ai-usage: ai-assisted
+#customer intent: As a security administrator, I want to configure protection update behavior for mobile devices and virtual machines so that updates follow my organization's connectivity and battery-power requirements.
 ---
 
 # Manage updates for mobile devices and virtual machines (VMs)
@@ -46,7 +47,6 @@ The following operating systems are supported:
 
 - Windows
 
-
 ## Opt in to Microsoft Update on mobile computers without a WSUS connection
 
 You can use Microsoft Update to keep Security intelligence on mobile devices running Microsoft Defender Antivirus up to date when they are not connected to the corporate network or don't otherwise have a WSUS connection.
@@ -63,15 +63,26 @@ You can opt in to Microsoft Update on the mobile device in one of the following 
 
 Perform the following steps to enable Microsoft Update by using Group Policy:
 
-1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and select **Edit**.
+1. In Centralized Group Policy, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
-1. In the **Group Policy Management Editor** go to **Computer configuration**.
+1. In the GPMC console tree, expand Group Policy Objects in the forest and domain containing the GPO you want to edit.
 
-1. Select **Policies** then **Administrative templates**.
+1. Right-click the GPO, and then select **Edit**.
 
-1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Signature Updates**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Security Intelligence Updates**.
 
-1. Set **Allow security intelligence updates from Microsoft Update** to **Enabled**, and then select  **OK**.
+   > [!NOTE]
+   > Group Policy paths before Windows 10, version 2004 (May 2020) might use _Windows_ Defender Antivirus instead of _Microsoft_ Defender Antivirus. Group Policy paths before Windows 10, version 1909 (November 2019) might use _Signature Updates_ instead of _Security Intelligence Updates_. The older and newer names refer to the same policy locations.
+
+1. In the details pane of **Security Intelligence Updates**, open the **Allow security intelligence updates from Microsoft Update** setting. To open the setting, use any of the following methods:
+   - Double-click the setting.
+   - Right-click the setting, and then select **Edit**.
+   - Select the setting, and then select **Action** \> **Edit**.
+
+1. In the setting window that opens, select **Enabled**, and then select **OK**.
+
+> [!TIP]
+> You can also configure Group Policy locally on individual devices by using the Local Group Policy Editor (`gpedit.msc`). Navigate to the same path: **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Security Intelligence Updates**.
 
 ### Use a VBScript to opt in to Microsoft Update
 
@@ -99,13 +110,26 @@ You can configure Microsoft Defender Antivirus to only download protection updat
 
 Perform the following steps to prevent security intelligence updates when devices are running on battery power:
 
-1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), choose the Group Policy Object you want to configure, and open it for editing.
+1. In Centralized Group Policy, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
-1. In the **Group Policy Management Editor** go to **Computer configuration**.
+1. In the GPMC console tree, expand Group Policy Objects in the forest and domain containing the GPO you want to edit.
 
-1. Select **Policies** then **Administrative templates**.
+1. Right-click the GPO, and then select **Edit**.
 
-1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Signature Updates**, and then set **Allow security intelligence updates when running on battery power** to **Disabled**. Then select **OK**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Security Intelligence Updates**.
+
+   > [!NOTE]
+   > Group Policy paths before Windows 10, version 2004 (May 2020) might use _Windows_ Defender Antivirus instead of _Microsoft_ Defender Antivirus. Group Policy paths before Windows 10, version 1909 (November 2019) might use _Signature Updates_ instead of _Security Intelligence Updates_. The older and newer names refer to the same policy locations.
+
+1. In the details pane of **Security Intelligence Updates**, open the **Allow security intelligence updates when running on battery power** setting. To open the setting, use any of the following methods:
+   - Double-click the setting.
+   - Right-click the setting, and then select **Edit**.
+   - Select the setting, and then select **Action** \> **Edit**.
+
+> [!TIP]
+> You can also configure Group Policy locally on individual devices by using the Local Group Policy Editor (`gpedit.msc`). Navigate to the same path: **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Security Intelligence Updates**.
+
+1. In the setting window that opens, select **Disabled**, and then select **OK**.
 
 Disabling **Allow security intelligence updates when running on battery power** prevents protection updates from downloading when the PC is on battery power.
 
@@ -125,5 +149,3 @@ The following articles provide related guidance:
 
 - [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md)
 - [Update and manage Microsoft Defender Antivirus in Windows 10](deploy-manage-report-microsoft-defender-antivirus.md)
-
-

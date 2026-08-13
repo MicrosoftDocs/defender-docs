@@ -1,13 +1,14 @@
 ---
 title: Use network protection to help prevent connections to malicious or suspicious sites
-description: Protect your network by preventing users from accessing known malicious and suspicious network addresses
+description: Protect your network by preventing users from accessing known malicious and suspicious network addresses.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 10/20/2025
+ms.date: 08/12/2026
 author: paulinbar
 ms.author: painbar
 ms.reviewer: ericlaw
-ms.custom: asr
+ms.custom: asr, msecd-doc-authoring-1015
+ai-usage: ai-assisted
 ms.subservice: asr
 ms.topic: overview
 ms.collection: 
@@ -16,6 +17,7 @@ ms.collection:
 - mde-asr
 appliesto:
   - Microsoft Defender Antivirus
+#customer intent: As a security administrator, I want to configure network protection so that endpoints block connections to malicious or suspicious network destinations.
 ---
 
 # Use network protection to help prevent connections to malicious or suspicious sites
@@ -48,7 +50,7 @@ Watch this video to learn how network protection helps reduce the attack surface
 The following table summarizes network protection areas of coverage:
 
 | Feature | Microsoft Edge | Non-Microsoft browsers | Nonbrowser processes <br/> (for example, PowerShell) |
-|:---|:---|:---|:---|
+| --- | --- | --- | --- |
 | [Web Threat Protection](web-threat-protection.md) | SmartScreen must be enabled | Network protection must be in block mode | Network protection must be in block mode |
 | [Custom Indicators](indicators-overview.md) | SmartScreen must be enabled | Network protection must be in block mode | Network protection must be in block mode |
 | [Web Content Filtering](web-content-filtering.md) | SmartScreen must be enabled | Network protection must be in block mode | Not supported |
@@ -83,7 +85,7 @@ Network protection requires devices running one of the following operating syste
 Network protection also requires Microsoft Defender Antivirus with real-time protection enabled.
 
 | Windows version | Microsoft Defender Antivirus |
-|:---|:---|
+| --- | --- |
 | Windows 10 version 1709 or later, Windows 11, Windows Server 1803 or later | Make sure that [Microsoft Defender Antivirus real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md), [behavior monitoring](behavior-monitor.md), and [cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) are enabled (active) |
 | Windows Server 2012 R2 and Windows Server 2016 using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) | Platform update version `4.18.2001.x.x` or newer |
 
@@ -154,7 +156,7 @@ A user visits a website. If the url has an unknown or uncertain reputation, a to
 
 > [!NOTE]
 >
-> - The images shown in this article for both the `warn` experience and `block` experience use "blocked url" as example placeholder text. In a functioning environment, the actual url or domain is listed.  
+> - The images shown in this article for both the `warn` experience and `block` experience use "blocked url" as example placeholder text. In a functioning environment, the actual url or domain is listed.
 >
 > - To receive this toast notification, make sure the **Files or activities are blocked** option is enabled under **Virus & Threat Protection notifications** by setting the corresponding registry key:
 >
@@ -174,17 +176,23 @@ For Edge browsers, see [Edge Policy: Prevent SmartScreen Prompt Override](/deplo
 
 By enabling this setting, network protection blocks network traffic instead of displaying a warning.
 
-1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+1. In Centralized Group Policy, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
-1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+1. In the GPMC console tree, expand Group Policy Objects in the forest and domain containing the GPO you want to edit.
 
-1. In the **Group Policy Management Editor** go to **Computer configuration** and then select **Administrative templates**.
+1. Right-click the GPO, and then select **Edit**.
 
-1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Network inspection system**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Network inspection system**.
 
-1. Double-click **Convert warn verdict to block** and set the option to **Enabled**.
+1. In the details pane of **Network inspection system**, open the **Convert warn verdict to block** setting. To open the setting, use any of the following methods:
+   - Double-click the setting.
+   - Right-click the setting, and then select **Edit**.
+   - Select the setting, and then select **Action** \> **Edit**.
 
-1. Select **OK**.
+1. In the setting window that opens, select **Enabled**, and then select **OK**.
+
+> [!TIP]
+> You can also configure Group Policy locally on individual devices by using the Local Group Policy Editor (`gpedit.msc`). Navigate to the same path: **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Network inspection system**.
 
 #### Block experience
 
@@ -460,17 +468,23 @@ Network protection includes a performance optimization that allows `block` mode 
 
 This procedure enables network protection to improve performance by switching from real-time inspection to asynchronous inspection.
 
-1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+1. In Centralized Group Policy, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
-1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+1. In the GPMC console tree, expand Group Policy Objects in the forest and domain containing the GPO you want to edit.
 
-1. In the Group Policy Management Editor, go to **Computer configuration**, and then select **Administrative templates**.
+1. Right-click the GPO, and then select **Edit**.
 
-1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Network inspection system**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Network inspection system**.
 
-1. Double-click **Turn on asynchronous inspection**, and then set the option to **Enabled**.
+1. In the details pane of **Network inspection system**, open the **Turn on asynchronous inspection** setting. To open the setting, use any of the following methods:
+   - Double-click the setting.
+   - Right-click the setting, and then select **Edit**.
+   - Select the setting, and then select **Action** \> **Edit**.
 
-1. Select **OK**.
+> [!TIP]
+> You can also configure Group Policy locally on individual devices by using the Local Group Policy Editor (`gpedit.msc`). Navigate to the same path: **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Network inspection system**.
+
+1. In the setting window that opens, select **Enabled**, and then select **OK**.
 
 ### Use Microsoft Defender Antivirus Powershell to enable Turn on asynchronous inspection
 
@@ -487,5 +501,3 @@ Set-MpPreference -AllowSwitchToAsyncInspection $true
 - [Configuring attack surface reduction capabilities in Microsoft Intune](/intune/intune-service/protect/endpoint-security-asr-policy)
 - [Network protection for Linux](network-protection-linux.md) | To learn about using Microsoft Network protection for Linux devices.
 - [Network protection for macOS](network-protection-macos.md) | To learn more about Microsoft Network protection for macOS
-
-
