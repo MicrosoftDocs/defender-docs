@@ -80,9 +80,9 @@ The following table lists the features provided by Defender for Containers for t
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
 | Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | AKS | GA | GA | Requires **Defender sensor** | **Defender for Containers** | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
-| Antimalware | Detection of malware | AKS | GA | - | Requires **Defender sensor via Helm** | **Defender for Containers** | Commercial clouds |
+| Antimalware | Detection of malware | AKS | GA | - | Requires **Defender sensor via Helm** | **Defender for Containers** | Commercial clouds<br/><br/>National clouds: Azure Government |
 | Binary drift detection and blocking | Detects binary of runtime container from container image | AKS | GA | - | Requires **Defender sensor** | **Defender for Containers** | Commercial clouds<br/><br/>National clouds: Azure Government, Azure operated by 21Vianet |
-| DNS Detection | Detects suspicious DNS activity from container workloads | AKS | GA | - | Requires **Defender sensor via Helm** | **Defender for Containers** | Commercial clouds |
+| DNS Detection | Detects suspicious DNS activity from container workloads | AKS | GA | - | Requires **Defender sensor via Helm** | **Defender for Containers** | Commercial clouds<br/><br/>National clouds: Azure Government |
 | Malware detection | Detection of malware | AKS nodes | GA | GA | Requires **Agentless scanning for machines** | **Defender for Containers** or **Defender for Servers Plan 2** | - |
 | Response actions in XDR | Provides automated and manual remediation in Microsoft XDR | AKS  | Preview | - | Requires **Defender sensor** and **K8S access API** | **Defender for Containers** | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
 | Workload detection | Monitors containerized workloads for threats and gives alerts to suspicious activities | AKS | GA | - | Requires **Defender sensor** | **Defender for Containers** | Commercial clouds and National clouds: Azure Government, Azure operated by 21Vianet |
