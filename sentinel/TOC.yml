@@ -116,10 +116,12 @@
           items:
             - name: Integrate SAP systems
               items:
+                - name: Overview
+                  href: sap/solution-overview.md
                 - name: SAP applications
                   items:
                     - name: Overview
-                      href: sap/solution-overview.md
+                      href: sap/sap-applications-overview.md
                     - name: Deploy the SAP integration
                       items:
                         - name: Deployment overview
