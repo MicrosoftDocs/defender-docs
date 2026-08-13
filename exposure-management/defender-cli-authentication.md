@@ -2,7 +2,7 @@
 title: Defender CLI setup for agentic code security
 description: Set up Defender CLI authentication to run agentic code scans locally or in CI/CD pipelines.
 ms.topic: how-to
-ms.date: 07/08/2026
+ms.date: 08/13/2026
 ai-usage: ai-assisted
 ---
 
@@ -123,6 +123,8 @@ To get `DEFENDER_ASPM_CLIENT_SECRET`, create a new client secret in the same app
 Use this approach to let users authenticate with their Defender credentials for local Defender CLI scans. You can also use app-based authentication instead.
 
 ### Prerequisites
+
+Before you can run the Defender CLI commands, make sure your account has been assigned at least one of the following permissions:
 
 - At least **Security Administrator** role in Microsoft Entra ID.
 - Required permissions assigned in Microsoft Defender unified RBAC. For more information, see [Assign permissions to users using Defender RBAC](ai-code-security-onboarding.md#assign-permissions-to-users-using-defender-rbac).
