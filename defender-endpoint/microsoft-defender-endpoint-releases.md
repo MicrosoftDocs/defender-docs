@@ -539,7 +539,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 [!INCLUDE [Linux 101.26012.0007 known issue](includes/linux-build-issue.md)]
 
-### Linux | Aug 2026 | 101.26062.0005
+### Linux | Aug 2026 | 101.26062.0007
 
 #### Release details
 
@@ -554,6 +554,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 |Bug fix | Resolved an issue that could cause on-demand antivirus scans (quick, full, and custom) to take longer than expected or appear unresponsive in certain environments. Protection capabilities remained unaffected while scans were in progress. |
 |Security | Engine signature verification is now enabled by default for new installations and upgrades. Defender for Endpoint verifies the engine's digital signature before loading it and doesn't load engines that fail verification. Legacy engine signature verification settings are deprecated. |
 |Visibility | Resolved an issue where the `mdatp health` status could incorrectly show a device as healthy after it was offboarded. |
+|General | Reliability and quality improvements. |
 
 ### Linux | July 2026 | 101.26052.0012
 
