@@ -8,7 +8,7 @@ ai-usage: ai-assisted
 
 # Connect Microsoft Foundry (Preview)
 
-Create an Microsoft Foundry resource to use as part of the agentic code security setup. Microsoft Foundry hosts and serves the AI models that codename MDASH uses during analysis. 
+Create an Microsoft Foundry resource to use as part of the agentic code security setup. Microsoft Foundry hosts and serves the AI models that codename MDASH uses during agentic scans. 
 
 ## Prerequisites
 
@@ -101,13 +101,12 @@ To create a content filter, follow these steps:
 
 ## Allow Codename MDASH to access your Microsoft Foundry resource
 
-MDASH needs to access your Microsoft Foundry endpoint to validate credentials and run agentic scans.
+Codename MDASH needs to access your Microsoft Foundry endpoint to validate credentials and run agentic scans. When your Foundry resource networking is set to **Selected networks and private endpoints**, all inbound traffic is blocked by default, including requests from MDASH. Without allowing the required IP addresses, validation of the Foundry resource during MDASH onboarding will fail.
 
-If your Foundry resource has public access set to **All networks**, no action is required.
+> [!NOTE]
+> If your Foundry resource has public access set to **All networks**, no action is required and you can continue to the next step.
 
-When your Foundry resource networking is set to **Selected networks and private endpoints**, all inbound traffic is blocked by default, including requests from MDASH. Without allowing the required IP addresses, validation of the Foundry resource during MDASH onboarding will fail.
-
-Choose one of the following options to configure access:
+Allow Codename MDASH to access your Microsoft Foundry resource, choose one of the following options to configure access:
 
 ### Option 1: Run a script (recommended)
 
