@@ -1,117 +1,148 @@
 ---
 title: Create a custom gradual rollout process for Microsoft Defender updates
-description: Learn how to use supported tools to create a custom gradual rollout process for updates
+description: Learn how to control the gradual rollout of Microsoft Defender Antivirus platform, engine, and security intelligence updates by using supported tools.
 ms.service: defender-endpoint
-ms.subservice: onboard
+ms.subservice: ngp
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
-ms.date: 07/02/2026
+ms.date: 08/13/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1016
+ms.custom: msecd-doc-authoring-1015
+#customer intent: As a security administrator, I want to control when devices receive Microsoft Defender Antivirus updates so that I can validate updates before broader deployment.
 ---
 
 # Create a custom gradual rollout process for Microsoft Defender updates
 
-This article describes how to create a custom gradual rollout process for Microsoft Defender updates by using Group Policy, Microsoft Intune, or PowerShell. You can control when devices receive platform, engine, and security intelligence updates by assigning them to specific update channels.
+Create a custom gradual rollout process to control when Windows devices receive Microsoft Defender Antivirus platform, engine, and security intelligence updates. Use Group Policy, Microsoft Intune, or PowerShell to assign update channels based on your validation and production needs. Before you begin, verify the platform version in [Prerequisites](#prerequisites).
 
 ## Prerequisites
 
-Before you configure a custom gradual rollout process, make sure the following requirement is met:
+Before you configure a custom gradual rollout process, make sure your devices meet the following requirements:
 
-- This functionality requires Microsoft Defender Antivirus version 4.18.2106.X or newer. 
+- Windows operating system.
+- Microsoft Defender Antivirus platform version `4.18.2106.6` or later.
 
-
-### Supported operating systems
-
-Custom gradual rollout configuration is supported on the following operating systems:
-
-- Windows
-
-
-To create your own custom gradual rollout process for Defender updates, you can use Group Policy, Intune, and PowerShell.
+> [!IMPORTANT]
+> Use one management authority for these settings. Mobile device management (MDM) and Group Policy settings can conflict, and [ControlPolicyConflict (MDMWinsOverGP)](/windows/client-management/mdm/policy-csp-controlpolicyconflict) doesn't apply to the Defender configuration service provider (CSP). If you use MDM, remove conflicting Defender Group Policy settings.
 
 <a name="group-policy-settings"></a>
-The following table lists the available group policy settings for configuring update channels:
+
+## Review Group Policy settings
+
+The following table lists the Group Policy settings for update channels:
 
 |Setting title|Description|Location|
 |---|---|---|
-|Select gradual Microsoft Defender monthly platform update rollout channel|Enable this policy to specify when devices receive Microsoft Defender platform updates during the monthly gradual rollout. <p> Beta Channel: Devices set to this channel are the first to receive new updates. Select Beta Channel to participate in identifying and reporting issues to Microsoft. Devices in the Windows Insider Program are subscribed to this channel by default. For use in (manual) test environments only and a limited number of devices. <p> Current Channel (Preview): Devices set to this channel are offered updates earliest during the monthly gradual release cycle. Suggested for pre-production/validation environments. <p> Current Channel (Staged): Devices are offered updates after the monthly gradual release cycle. Suggested to apply to a small, representative part of your production population (~10%). <p> Current Channel (Broad): Devices are offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in your production population (~10-100%). <p> Critical- Time Delay: Devices are offered updates with a 48-hour delay. Suggested for critical environments only. <p>If you disable or don't configure this policy, the device stays up to date automatically during the gradual release cycle. Suitable for most devices.|Windows Components\Microsoft Defender Antivirus|
-|Select gradual Microsoft Defender monthly engine update rollout channel|Enable this policy to specify when devices receive Microsoft Defender engine updates during the monthly gradual rollout. <p> Beta Channel: Devices set to this channel are the first to receive new updates. Select Beta Channel to participate in identifying and reporting issues to Microsoft. Devices in the Windows Insider Program are subscribed to this channel by default. For use in (manual) test environments only and a limited number of devices. <p> Current Channel (Preview): Devices set to this channel are offered updates earliest during the monthly gradual release cycle. Suggested for pre-production/validation environments. <p> Current Channel (Staged): Devices are offered updates after the monthly gradual release cycle. Suggested to apply to a small, representative part of your production population (~10%). <p> Current Channel (Broad): Devices are offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in your production population (~10-100%). <p> Critical- Time Delay: Devices are offered updates with a 48-hour delay. Suggested for critical environments only.<p> If you disable or don't configure this policy, the device stays up to date automatically during the gradual release cycle. Suitable for most devices.|Windows Components\Microsoft Defender Antivirus|
-|Select gradual Microsoft Defender daily security intelligence updates rollout channel|Enable this policy to specify when devices receive Microsoft Defender security intelligence updates during the daily gradual rollout. <p> Current Channel (Staged): Devices are offered updates after the release cycle. Suggested to apply to a small, representative part of production population (~10%). <p> Current Channel (Broad): Devices are offered updates only after the gradual release cycle completes. Suggested to apply to a broad set of devices in your production population (~10-100%). <p>  If you disable or don't configure this policy, the device stays up to date automatically during the daily release cycle. Suitable for most devices.|Windows Components\Microsoft Defender Antivirus|
-|Disable gradual rollout of Microsoft Defender updates|Enable this policy to disable gradual rollout of Defender updates. <p> Current Channel (Broad): Devices set to this channel are offered updates last during the gradual release cycle. Best for datacenter machines that only receive limited updates. <p> Note: This setting applies to both monthly and daily Defender updates and overrides any previously configured channel selections for platform and engine updates. <p> If you disable or don't configure this policy, the device remains in Current Channel (Default) unless specified otherwise in specific channels for platform and engine updates. Stay up to date automatically during the gradual release cycle. Suitable for most devices.|Windows Components\Microsoft Defender Antivirus\MpEngine|
+|Select the channel for Microsoft Defender monthly platform updates|Select when devices receive monthly platform updates. Available channels are Beta, Preview, Staged, Broad, Critical: Time Delay, and Not configured.|Windows Components\Microsoft Defender Antivirus|
+|Select the channel for Microsoft Defender monthly engine updates|Select when devices receive monthly engine updates. Available channels are Beta, Preview, Staged, Broad, Critical: Time Delay, and Not configured.|Windows Components\Microsoft Defender Antivirus|
+|Select the channel for Microsoft Defender daily security intelligence updates|Select Staged, Broad, or Not configured for security intelligence rollout cycles, which occur multiple times each day.|Windows Components\Microsoft Defender Antivirus|
+|Disable gradual rollout of Microsoft Defender updates|Disable gradual rollout for monthly and security intelligence updates. This setting overrides configured platform and engine update channels.|Windows Components\Microsoft Defender Antivirus\MpEngine|
 
+For monthly platform and engine updates, use the following channels:
+
+- **Beta Channel**: Receive prerelease updates first. Use this channel only for a limited number of devices in manual test environments. Devices in the Windows Insider Program are subscribed to this channel by default.
+- **Current Channel (Preview)**: Receive updates earliest during gradual release. Use this channel for preproduction or validation environments.
+- **Current Channel (Staged)**: Receive updates later during gradual release. Use this channel for a small, representative group of production devices.
+- **Current Channel (Broad)**: Receive updates after gradual release completes. Use this channel for a broad group of production devices.
+- **Critical: Time Delay**: Receive updates with a 48-hour delay. Use this channel only for critical environments.
+- **Not configured**: Allow Microsoft to assign devices to channels during gradual release. This setting is suitable for most devices.
+
+For security intelligence updates, select Staged, Broad, or Not configured. The Defender CSP currently documents Staged as equivalent to Broad. Don't rely on a timing difference between Staged and Broad without validating the behavior in your environment. For more rollout guidance, see [Manage the gradual rollout process for Microsoft Defender updates](manage-gradual-rollout.md).
 
 <a name="group-policy"></a>
+
 ## Configure a gradual rollout by using Group Policy
 
 > [!NOTE]
-> An updated Defender ADMX template is published together with the 21H2 release of Windows 10. A non-localized version is available for download at [Microsoft Defender update controls repository](https://github.com/microsoft/defender-updatecontrols) on GitHub.
+> Use the latest Windows administrative templates available for your environment. If the templates don't contain these settings, a temporary, English-only template is available from the [Microsoft Defender update controls repository](https://github.com/microsoft/defender-updatecontrols) on GitHub.
 
-You can use [Group Policy](/windows/win32/srvnodes/group-policy?redirectedfrom=MSDN) to configure and manage Microsoft Defender Antivirus on your endpoints. In general, you can use the following procedure to configure or change Microsoft Defender Antivirus group policy settings:
+You can use [Group Policy](/windows/win32/srvnodes/group-policy?redirectedfrom=MSDN) to configure and manage Microsoft Defender Antivirus on your endpoints. To configure an update channel:
 
-1. On your Group Policy management machine, open the **Group Policy Management Console**, right-click the **Group Policy Object** (GPO) you want to configure and select **Edit**.
+1. On your Group Policy management machine, open the **Group Policy Management Console**, right-click the **Group Policy Object** (GPO) you want to configure, and select **Edit**.
 
-1. Using the Group Policy Management Editor go to **Computer configuration**.
+1. In the Group Policy Management Editor, go to **Computer configuration**.
 
 1. Select **Administrative templates**.
 
 1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus**.
 
-1. Expand the section listed in the **Location** column of the [Group Policy settings table](#group-policy-settings) earlier in this article (for example, **Windows Components\Microsoft Defender Antivirus**) that contains the setting you want to configure, double-click the setting to open it, and make configuration changes.
+1. Expand the section in the **Location** column of the [Group Policy settings table](#group-policy-settings), double-click the setting, and configure the update channel.
 
 1. Deploy the updated GPO as you normally do. For guidance, see [Deploying Group Policy Objects](https://msdn.microsoft.com/library/ee663280(v=vs.85).aspx).
 
 <a name="intune"></a>
+
 ## Configure a gradual rollout by using Microsoft Intune
 
-To create a custom policy in Intune, follow the instructions in [Add custom settings for Windows 10 devices in Microsoft Intune](/intune/intune-service/configuration/custom-settings-windows-10).
+Create a Windows [Settings Catalog policy in Microsoft Intune](/intune/device-configuration/settings-catalog/). In the **Defender** category, configure one or more of the following settings:
 
-For more information on the Defender CSP used for the gradual rollout process, see [Defender CSP](/windows/client-management/mdm/defender-csp).
+- **Platform Updates Channel**
+- **Engine Updates Channel**
+- **Security Intelligence Updates Channel**
+- **Disable Gradual Release**
+
+If you need to use a custom Open Mobile Alliance Uniform Resource Identifier (OMA-URI) policy, follow the instructions in [Add custom settings for Windows 10 devices in Microsoft Intune](/intune/intune-service/configuration/custom-settings-windows-10) and use the following values:
+
+|Setting|OMA-URI|Allowed values|
+|---|---|---|
+|Platform updates channel|`./Device/Vendor/MSFT/Defender/Configuration/PlatformUpdatesChannel`|`0` Not configured, `2` Beta, `3` Preview, `4` Staged, `5` Broad, `6` Critical: Time Delay|
+|Engine updates channel|`./Device/Vendor/MSFT/Defender/Configuration/EngineUpdatesChannel`|`0` Not configured, `2` Beta, `3` Preview, `4` Staged, `5` Broad, `6` Critical: Time Delay|
+|Security intelligence updates channel|`./Device/Vendor/MSFT/Defender/Configuration/SecurityIntelligenceUpdatesChannel`|`0` Not configured, `4` Staged, `5` Broad|
+|Disable gradual release|`./Device/Vendor/MSFT/Defender/Configuration/DisableGradualRelease`|`0` False, `1` True|
+
+For more information about the OMA-URI settings and values, see [Defender CSP](/windows/client-management/mdm/defender-csp).
 
 <a name="powershell"></a>
+
 ## Configure a gradual rollout by using PowerShell
 
-The `Set-MpPreference` cmdlet is the Microsoft Defender Antivirus PowerShell cmdlet used to configure update and protection preferences. Use `Set-MpPreference` to configure the gradual rollout of updates.
+Use the **Set-MpPreference** cmdlet to configure Defender Antivirus update and protection preferences.
 
 Use the following parameters:
 
+- _PlatformUpdatesChannel_ (`Beta`, `Preview`, `Staged`, `Broad`, `Delayed`, or `NotConfigured`)
+- _EngineUpdatesChannel_ (`Beta`, `Preview`, `Staged`, `Broad`, `Delayed`, or `NotConfigured`)
+- _DefinitionUpdatesChannel_ (`Staged`, `Broad`, or `NotConfigured`)
+- _DisableGradualRelease_ (`$true` or `$false`)
+
+For example, run the following command in an elevated PowerShell session (a PowerShell window you opened by selecting **Run as administrator**) to configure platform updates to arrive from the Beta Channel:
+
 ```powershell
-Set-MpPreference
--PlatformUpdatesChannel Beta|Preview|Staged|Broad|Delayed|NotConfigured
--EngineUpdatesChannel Beta|Preview|Staged|Broad|Delayed|NotConfigured
--DisableGradualRelease 1|0
--DefinitionUpdatesChannel Staged|Broad|NotConfigured
+Set-MpPreference -PlatformUpdatesChannel Beta
 ```
-Example:
 
-Use `Set-MpPreference -PlatformUpdatesChannel Beta` to configure platform updates to arrive from the Beta Channel.
-
-For more information on the parameters and how to configure them, see [Set-MpPreference](/powershell/module/defender/set-mppreference) (Microsoft Defender Antivirus).
+For more information about these parameters, see [Set-MpPreference](/powershell/module/defender/set-mppreference).
 
 <a name="registry"></a>
+
 ## Verify gradual rollout configuration in the registry
 
-The gradual rollout channel settings can be confirmed in the registry under `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender`:
+To verify the effective PowerShell configuration, run `Get-MpPreference | Select-Object PlatformUpdatesChannel, EngineUpdatesChannel, DefinitionUpdatesChannel, DisableGradualRelease`.
+
+Policy-backed update channel settings can appear under `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender`:
 
 - `EngineRing`
 - `PlatformRing`
 - `SignaturesRing`
 
+The `DisableGradualRelease` value appears under `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\MpEngine`.
+
 > [!NOTE]
 > You can also use a management tool such as Microsoft Configuration Manager to run PowerShell scripts. See [Create and run PowerShell scripts from the Configuration Manager console](/intune/configmgr/apps/deploy-use/create-deploy-scripts).
 
 > [!TIP]
-> If you're looking for Antivirus related information for other platforms, see:
+> For antivirus information for other platforms, see:
+
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
 > - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
@@ -119,6 +150,3 @@ The gradual rollout channel settings can be confirmed in the registry under `HKE
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-
-
-
