@@ -207,9 +207,9 @@ Microsoft Defender Antivirus is a built-in anti-malware solution that provides n
 
     In certain industries or some select enterprise customers might have specific needs on how Antivirus is configured.
 
-    [Quick scan versus full scan and custom scan](/windows/security/threat-protection/microsoft-defender-antivirus/scheduled-catch-up-scans-microsoft-defender-antivirus#quick-scan-versus-full-scan-and-custom-scan)
+    [Quick scan versus full scan and custom scan](schedule-antivirus-scans.md#comparing-the-quick-scan-full-scan-and-custom-scan)
 
-    For more information, see [Windows Security configuration framework](/windows/security/threat-protection/windows-security-configuration-framework/windows-security-configuration-framework).
+    For more information, see [Windows Security configuration framework](https://github.com/microsoft/SecCon-Framework/blob/master/windows-security-configuration-framework.md).
 
     :::image type="content" source="media/cd7daeb392ad5a36f2d3a15d650f1e96.png" alt-text="The next-generation protection pane2" lightbox="media/cd7daeb392ad5a36f2d3a15d650f1e96.png":::
 
@@ -352,5 +352,3 @@ You have now successfully configured Controlled folder access in test mode.
 ## Related article
 
 - [Onboarding using Microsoft Configuration Manager](onboarding-endpoint-manager.md)
-
-

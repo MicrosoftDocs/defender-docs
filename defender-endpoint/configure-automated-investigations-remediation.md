@@ -23,7 +23,7 @@ ms.custom: msecd-doc-authoring-1016
 # Configure automated investigation and remediation capabilities in Microsoft Defender for Endpoint
 
 
-If your organization is using [Defender for Endpoint](/windows/security/threat-protection/) (or [Defender for Business](/defender-business/mdb-overview)), [automated investigation and remediation capabilities](automated-investigations.md) can save your security operations team time and effort. As outlined in [Enhance your SOC with Microsoft Defender for Endpoint automatic investigation and remediation](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/enhance-your-soc-with-microsoft-defender-atp-automatic/ba-p/848946), these capabilities mimic the ideal steps that a security analyst takes to investigate and remediate threats. For more information, see [Automated investigation and remediation](automated-investigations.md).
+If your organization is using [Defender for Endpoint](microsoft-defender-endpoint.md) (or [Defender for Business](/defender-business/mdb-overview)), [automated investigation and remediation capabilities](automated-investigations.md) can save your security operations team time and effort. As outlined in [Enhance your SOC with Microsoft Defender for Endpoint automatic investigation and remediation](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/enhance-your-soc-with-microsoft-defender-atp-automatic/ba-p/848946), these capabilities mimic the ideal steps that a security analyst takes to investigate and remediate threats. For more information, see [Automated investigation and remediation](automated-investigations.md).
 
 [!INCLUDE [AIR deprecation note](includes/air-deprecation-note.md)]
 
@@ -60,5 +60,4 @@ To create device groups and configure automation levels in the Microsoft Defende
 
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 - [Automation levels in automated investigation and remediation](automation-levels.md)
-
 

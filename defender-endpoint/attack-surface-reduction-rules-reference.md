@@ -331,7 +331,7 @@ This ASR rule blocks executable files (for example, .exe, .dll, or .scr, from la
 
 > [!NOTE]
 >
-> - To use this ASR rule, you must [enable cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus).
+> - To use this ASR rule, you must [enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md).
 > - You specify individual files or folders by using folder paths or fully qualified resource names.
 > - This rule has limited exclusion support. For details, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
 
@@ -351,7 +351,7 @@ Script obfuscation is a common technique that both malware authors and legitimat
 
 > [!NOTE]
 >
-> - To use this ASR rule, you must [enable cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus).
+> - To use this ASR rule, you must [enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md).
 > - This ASR rule supports PowerShell scripts.
 
 #### Block JavaScript or VBScript from launching downloaded executable content
@@ -537,7 +537,7 @@ Most organizations don't require Win32 API calls from VBA macros, even if they u
 >
 > - This rule isn't supported when deployed via Microsoft Intune to Windows Server 2012 R2 or Windows Server 2016 using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 > - This rule has limited exclusion support. For details, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
-> - To use this ASR rule, you must [enable cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus).
+> - To use this ASR rule, you must [enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md).
 
 This ASR rule provides an extra layer of protection against ransomware. It uses both client and cloud heuristics to determine whether a file resembles ransomware. This rule doesn't block files that have one or more of the following characteristics:
 
