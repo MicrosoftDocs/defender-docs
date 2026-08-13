@@ -32,7 +32,7 @@ This table includes supported releases for all supported platforms in the past s
 |Android |1.0.9129.0101|Aug 2026|- Build: 1.0.9129.0101<br>- Release: Aug 11, 2026|[Release details and updates](#android--aug-2026--platform-1091290101)|
 |iOS |1.1.79210103|Aug 2026|- Build: 1.1.79210103<br>- Release: Aug 04, 2026|[Release details and updates](#ios--aug-2026--platform-version-1179210103)|
 |macOS |101.26062.0011  |August 2026 |- Release version: 20.126062.11.0<br>- Engine version: 1.1.26040.3000<br>- Signature version: 1.449.26.0 |[Release details and updates](#macos--august-2026--101260620011) |
-|Linux  |101.26062.0005  |August 2026 |- Release version: 30.126052.0012.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates](#linux--aug-2026--101260620005) |
+|Linux  |101.26062.0007  |August 2026 |- Release version: 30.126052.0012.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates](#linux--aug-2026--101260620007) |
 |Windows Antivirus |Platform 4.18.26070.9 / Engine 1.1.26070.7|July 2026|- Platform: 4.18.26070.9<br>- Engine: 1.1.26070.7<br>- Security intelligence: 1.457.11.0|[Release details and updates](#windows-antivirus--july-2026--platform-418260709--engine-11260707)|
 |macOS |101.26062.0009  |July 2026 |- Release version: 20.126062.9.0<br>- Engine version: 1.1.26050.3000<br>- Signature version: 1.455.265.0 |[Release details and updates](#macos--july-2026--101260620009) |
 |Android |1.0.9107.0101|July 2026|- Build: 1.0.9107.0101<br>- Release: July 21, 2026|[Release details and updates](#android--july-2026--platform-1091070101)|
@@ -539,7 +539,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 [!INCLUDE [Linux 101.26012.0007 known issue](includes/linux-build-issue.md)]
 
-### Linux | Aug 2026 | 101.26062.0005
+### Linux | Aug 2026 | 101.26062.0007
 
 #### Release details
 
@@ -554,6 +554,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 |Bug fix | Resolved an issue that could cause on-demand antivirus scans (quick, full, and custom) to take longer than expected or appear unresponsive in certain environments. Protection capabilities remained unaffected while scans were in progress. |
 |Security | Engine signature verification is now enabled by default for new installations and upgrades. Defender for Endpoint verifies the engine's digital signature before loading it and doesn't load engines that fail verification. Legacy engine signature verification settings are deprecated. |
 |Visibility | Resolved an issue where the `mdatp health` status could incorrectly show a device as healthy after it was offboarded. |
+|General | Reliability and quality improvements. |
 
 ### Linux | July 2026 | 101.26052.0012
 
