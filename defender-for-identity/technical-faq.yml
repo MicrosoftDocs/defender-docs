@@ -58,7 +58,7 @@ sections:
 
           Defender for Identity is a cloud-based security solution that uses your on-premises Active Directory signals. The solution is highly scalable and is frequently updated.
           
-          The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA ended Mainstream Support on January 12, 2021. Extended Support continues until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
+          ATA has reached end of life. The final release of ATA is [Update 3 for ATA 1.9](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA ended mainstream support on January 12, 2021, and extended support ended on January 13, 2026. ATA no longer receives updates of any kind, including security updates. For more information, see [Advanced Threat Analytics 1.X lifecycle](/lifecycle/products/advanced-threat-analytics-1x). We strongly recommend migrating to Defender for Identity. For migration guidance, see [Migrate from ATA to Defender for Identity](/defender-for-identity/migrate-from-ata-overview).
           
           In contrast to the ATA sensor, the Defender for Identity sensor also uses data sources such as Event Tracing for Windows (ETW) enabling Defender for Identity to deliver extra detections.
           
