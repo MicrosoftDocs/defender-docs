@@ -2,42 +2,48 @@
 title: Set up Microsoft Foundry for Codename MDASH - Agentic code scanner integration
 description: Connect Codename MDASH - Agentic code scanner to your Microsoft Foundry project by creating a resource, deploying the required models, and providing the project endpoint and API key.
 ms.topic: how-to
-ms.date: 06/03/2026
+ms.date: 08/13/2026
 ai-usage: ai-assisted
 ---
 
 # Connect Microsoft Foundry (Preview)
 
-Create an Microsoft Foundry resource to use as part of the agentic code security setup.
+Create an Microsoft Foundry resource to use as part of the agentic code security setup. Microsoft Foundry hosts and serves the AI models that codename MDASH uses during analysis. 
+
+## Prerequisites
+
+- An Azure account with an active subscription. If you don't have one, create a [free Azure account, which includes a free trial subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn). 
+- Access to a role that allows you to create a Foundry resource, such as **Owner** on the subscription or resource group. For more information about permissions, see [Role-based access control for Microsoft Foundry](/azure/foundry/concepts/rbac-foundry).
 
 ## Create an Microsoft Foundry resource
 
-Before you start, make sure that you can create resources in the target Azure subscription and resource group.
+To create a Microsoft Foundry project, follow these steps.
 
-1. Go to the [Azure portal](https://portal.azure.com).
-1. Search for **Microsoft Foundry**, and then under **Use with Foundry**, select **Foundry**.
-1. Select **Create**, and then create a new Microsoft Foundry resource.
-1. Choose the subscription and resource group.
-1. Enter the resource name, region, and default project name.
-1. Select **Review + create**, and then select **Create**.
-1. After deployment finishes, select **Go to resource**.
+1. Sign in to [Microsoft Foundry](https://ai.azure.com).
+1. In the navigation bar, make sure the **New Foundry** toggle is on.
+1. In the dropdown, select **Create a new project**.
+1. Enter a **Project name**, such as `my-foundry-project`.
+1. Select **Advanced options** to configure the resource group and location.
+    - **Resource group**: Create a new resource group or select an existing one. If you create a new resource group, you can more easily manage the project and all its resources together.
+    - **Location**: Select the region where the project will be created.
+1. Select **Create project**.
 
-## Open your Foundry project
+Wait for the project to be created. When the project overview page appears, your project is ready. 
 
-Open the project that you created so you can deploy the required models and copy the onboarding values.
+## Copy the required values
 
-1. Go to the Microsoft Foundry resource that you created.
-1. Open the project, or select **Go to Foundry portal** to open the Microsoft Foundry experience.
+From the Foundry project's **home** page, copy the values that the service needs to connect to your Foundry project.
 
-> [!NOTE]
-> Make sure the **New Foundry** toggle in the top navigation bar is enabled. If you're using the Legacy Foundry experience, select **Start Building →** at the top.
+1. Locate **Project Endpoint**, and then copy it.
+1. Locate **API Key**, and then copy it.
 
 ## Deploy the required models
 
 Deploy the models required for the agentic code security integration.
 
 1. Go to **Build** from the upper navigation menu.
-1. Open **Deployments**.
+1. From the menu, select **Models**, or **Deployments**.
+1. Select the **Deployments** tab.
 1. Select **Deploy a base model**.
 1. Choose and deploy the following models with default or custom settings:
    - **GPT-General profile**: Deploy all three models:
@@ -51,7 +57,7 @@ Deploy the models required for the agentic code security integration.
    
    - `MAI-Cyber-1-Flash`
             
-> [!NOTE]
+> [!IMPORTANT]
 > A predefined list of model deployments is required for the integration to work. You must deploy all three models: `gpt-5.4`, `gpt-5.3-codex`, and `gpt-5.4-mini`.
 
 ## Configure the TPM rate limit
@@ -64,28 +70,25 @@ For each of the three deployed models, configure the TPM rate limit.
 1. Select **Save**.
 1. Repeat these steps for each deployed model.
 
-> [!NOTE]
+> [!IMPORTANT]
 > A minimum of 1,000,000 tokens per minute (TPM) per deployment is required to support MDASH scan throughput.
 
-## Copy the required values
-
-Copy the values that the service needs to connect to your Foundry project.
-
-1. Locate **Project Endpoint**, and then copy it.
-1. Locate **API Key**, and then copy it.
 
 ## Configure content filtering
 
 Configure a content filter to ensure the deployed models can operate without restrictions. Codename MDASH sends security content that default filters might misclassify as harmful and block, causing missed findings. Minimum filter thresholds are required for reliable scans.
 
-> [!NOTE]
+> [!WARNING]
 > Configure content filtering is intentionally permissive for MDASH scanning scenarios. Create and use a dedicated Microsoft Foundry endpoint for MDASH only. Do not use this endpoint for any other workload.
 
-**Prerequisites:** 
+### Prerequisites 
 
 - A Microsoft Foundry resource is created, and three model deployments are completed. 
-
 - The same setup applies to the new MAI-Cyber-1-Flash model, which is part of the MAI-Augmented profile (Preview) - currently available only for scans triggered through the CLI.
+
+### Create a content filter
+
+To create a content filter, follow these steps:
 
 1. Turn off the **New Foundry** toggle.
 1. Navigate to **Guardrails + Controls** > **Content Filters**, and select **Create a content filter**.
@@ -317,9 +320,7 @@ Once disconnected, you can leave it as is, or reconnect at any time to the same 
 - [Agentic code security overview](ai-code-security-overview.md)
 - [Set up agentic code security](ai-code-security-onboarding.md)
 - [Install and run Defender CLI](defender-cli.md)
-
 - [Trigger an on-demand agentic scan](trigger-on-demand-scan.md)
 - [View results in the initiative](mdash-initiative.md)
-
 - [Scan and secure your source code](/security/zero-trust/prioritizing-defense/scan-secure-source-code)
 
