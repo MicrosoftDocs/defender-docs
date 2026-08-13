@@ -106,7 +106,7 @@ Codename MDASH needs to access your Microsoft Foundry endpoint to validate crede
 > [!NOTE]
 > If your Foundry resource has public access set to **All networks**, no action is required and you can continue to the next step.
 
-Allow Codename MDASH to access your Microsoft Foundry resource, choose one of the following options to configure access:
+To allow Codename MDASH to access your Microsoft Foundry resource, choose one of the following options to configure access:
 
 ### Option 1: Run a script (recommended)
 
