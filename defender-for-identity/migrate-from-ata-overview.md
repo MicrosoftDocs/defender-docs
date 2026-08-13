@@ -10,6 +10,8 @@ ms.custom: msecd-doc-authoring-1016
 
 # Migrate from Advanced Threat Analytics (ATA) to Microsoft Defender for Identity
 
+[!INCLUDE [Advanced Threat Analytics end of life](includes/advanced-threat-analytics-end-of-life.md)]
+
 This article describes how to migrate from an existing ATA installation to a Microsoft Defender for Identity sensor. Before you begin, make sure your environment meets the [Defender for Identity prerequisites](prerequisites.md). The migration includes the following steps:
 
 > [!div class="checklist"]
