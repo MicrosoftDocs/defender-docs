@@ -25,7 +25,7 @@ Before you can perform the procedures in this article, you need to have an SAP d
 
 The agentless data connector page lists the SAP systems (SIDs) you configured, but system role and health are no longer surfaced there as a table. Query them from the workspace instead:
 
-- **System role (production or nonproduction)**. Use the [SAPSystems](sap/sap-solution-function-reference.md#sapsystems) KQL function, which reads the *SAP - Systems* watchlist and returns the `SystemRole` value for each SID. Role also affects billing - see [Solution pricing](sap/solution-overview.md#solution-pricing). Typical values include:
+- **System role (production or nonproduction)**. Use the [SAPSystems](sap/sap-solution-function-reference.md#sapsystems) KQL function, which reads the *SAP - Systems* watchlist and returns the `SystemRole` value for each SID. Role also affects billing - see [Solution pricing](sap/sap-applications-overview.md#solution-pricing). Typical values include:
 
     |Value  |Description  |
     |---------|---------|

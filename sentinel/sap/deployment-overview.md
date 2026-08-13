@@ -90,6 +90,7 @@ For more information, see [Stop SAP data collection](stop-collection.md).
 For more information, see:
 
 - [About Microsoft Sentinel content and solutions](../sentinel-solutions.md)
+- [Microsoft Sentinel solution for SAP applications overview](sap-applications-overview.md)
 - [Monitor the health and role of your SAP systems](../monitor-sap-system-health.md)
 
 ## Next step
