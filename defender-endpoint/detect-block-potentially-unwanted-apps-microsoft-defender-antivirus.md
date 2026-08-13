@@ -5,15 +5,15 @@ ms.service: defender-endpoint
 ms.localizationpriority: high
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1016
+ms.custom: nextgen, msecd-doc-authoring-1015
 ms.reviewer: yongrhee, mimilone, julih
 ms.subservice: ngp
 ms.topic: how-to
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-ms.date: 07/02/2026
+ms.date: 08/12/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -21,6 +21,7 @@ appliesto:
   - Microsoft Defender for Individuals
   - Microsoft Defender Antivirus
 ai-usage: ai-assisted
+#customer intent: As a security administrator, I want to configure potentially unwanted application protection so that unwanted software is blocked or audited on endpoints.
 ---
 
 # Detect and block potentially unwanted applications
@@ -114,7 +115,7 @@ Scenarios and default settings for PUA protection depend on whether devices are 
 
 The following table shows the default PUA protection settings for devices that aren't onboarded to Defender for Endpoint:
 
-|Scenarios| Security intelligence update version |PUA protection default setting|
+| Scenarios | Security intelligence update version |PUA protection default setting|
 | -------- | -------- | -------- |
 | Windows 10 or later<br/>Windows Server 2016 or later | older than 1.329.495.0 | Disabled (0) |
 | Windows 10 or later<br/>Windows Server 2016 or later | 1.329.495.0 or later | Audit mode (2) |
@@ -127,7 +128,7 @@ The following table shows the default PUA protection settings for devices onboar
 | -------- | -------- | -------- | -------- |
 | Windows 10, version 2004 or later<br/>Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution for Windows Server 2016 and 2012 R2](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)<br/>Windows Server 2019 or later |Older than 1.329.495.0 |Feature not available | Audit mode (2)|
 | Windows 11, version 22H2 or later | 1.329.495.0 or later | Available | Audit mode (2)|
-| Windows 10, version 2004 or later<br/>Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution for Windows Server 2016 and 2012 R2](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)<br/>Windows Server 2019 or later | 1.329.495.0 or later |Feature not available | Block mode (1)|
+| Windows 10, version 2004 or later<br/>Windows Server 2012 R2 and Windows Server 2016 with the [modern unified solution for Windows Server 2016 and 2012 R2](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)<br/>Windows Server 2019 or later | 1.329.495.0 or later | Feature not available | Block mode (1)|
 
 > [!TIP]
 > To enforce PUA protection in block mode, use any of the following management methods:
@@ -164,21 +165,35 @@ For System Center 2012 Configuration Manager, see [How to Deploy Potentially Unw
 
 Perform the following steps to configure PUA protection by using Group Policy:
 
-1. Download and install [Administrative Templates (.admx) for Windows 11](https://www.microsoft.com/download/details.aspx?id=104042)
+> [!NOTE]
+> If the **Configure detection for potentially unwanted applications** setting isn't available in your GPMC, update the Administrative Templates files in your Central Store. The setting is included in the Windows 10, version 1809 Administrative Templates and later. For download links and instructions, see [Create and manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
 
-1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+1. In Centralized Group Policy, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
-1. Select the Group Policy Object you want to configure, and then choose **Edit**.
+1. In the GPMC console tree, expand Group Policy Objects in the forest and domain containing the GPO you want to edit.
 
-1. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
+1. Right-click the GPO, and then select **Edit**.
 
-1. Expand the tree to **Windows Components** \> **Microsoft Defender Antivirus**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus**.
 
-1. Double-click **Configure detection for potentially unwanted applications**, and set it to **Enabled**.
+   > [!NOTE]
+   > Group Policy paths before Windows 10, version 2004 (May 2020) might use _Windows_ Defender Antivirus instead of _Microsoft_ Defender Antivirus. Both names refer to the same policy location.
 
-1. In **Options**, select **Block** to block potentially unwanted applications, or select **Audit Mode** to test how the setting works in your environment. Select **OK**.
+1. In the details pane of **Microsoft Defender Antivirus**, open the **Configure detection for potentially unwanted applications** setting. To open the setting, use any of the following methods:
+   - Double-click the setting.
+   - Right-click the setting, and then select **Edit**.
+   - Select the setting, and then select **Action** \> **Edit**.
 
-1. Deploy your Group Policy object as you usually do.
+1. In the setting window that opens, configure the following options:
+   1. Select **Enabled**.
+   1. **Options** section: Select one of the following values:
+      - **Block**: Block potentially unwanted applications.
+      - **Audit Mode**: Test how the setting works in your environment.
+
+   When you're finished, select **OK**.
+
+> [!TIP]
+> You can also configure Group Policy locally on individual devices by using the Local Group Policy Editor (`gpedit.msc`). Navigate to the same path: **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus**.
 
 ### Use PowerShell cmdlets to configure PUA protection
 
