@@ -43,7 +43,7 @@ Use Microsoft Defender unified role-based access control (RBAC) to grant develop
    - **Scan results (Manage)** — required to triage, dismiss, or otherwise manage findings.
 
     > [!NOTE]
-    > A custom role with only **Scan results (Read)** doesn't grant users access to the Defender portal. To allow users access to the Defender portal, also select **Security Posture** > **Exposure Management (Read)** permission.
+    > The **Scan results (Read)** permission grants access to scan results only. It doesn't grant users access to the Defender portal. To enable portal access, also select **Security Posture** > **Select custom permissions** > **Exposure Management (Read)**. This permission provides access to all Exposure Management experiences and read access to all available data (not limited to Codename MDASH).
 
 
 1. Review the permissions, and select **Apply**.
@@ -111,18 +111,11 @@ For details, see [Codename MDASH - Agentic code scanner initiative](mdash-initia
 ## Related content
 
 - [Agentic code security overview](ai-code-security-overview.md)
-
 - [Connect Microsoft Foundry](mdash-foundry-integration.md)
-
 - [Create a GitHub connector](create-github-connector.md)
-
 - [Create an Azure DevOps connector](create-azure-devops-connector.md)
-
 - [Trigger an on-demand agentic scan](trigger-on-demand-scan.md)
-
 - [Defender CLI setup](defender-cli-authentication.md)
-
 - [Install and run Defender CLI](defender-cli.md)
-
 - [Codename MDASH - Agentic code scanner initiative](mdash-initiative.md)
 
