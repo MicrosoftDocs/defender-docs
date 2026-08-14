@@ -34,6 +34,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | Date | Category | Update |
 | -------- | -------- | -------- |
 | August 6, 2026 | Public preview | [On-demand malware scanning now supports scanning specific blobs, files, containers, and file shares](#on-demand-malware-scanning-now-supports-scanning-specific-blobs-files-containers-and-file-shares) |
+| August 6, 2026 | CIEM Updates | [Breaking change: Unused actions no longer included in AWS and GCP overprovisioned identity assessments]()|
 
 ### On-demand malware scanning now supports scanning specific blobs, files, containers, and file shares
 
@@ -44,6 +45,30 @@ On-demand malware scanning in Microsoft Defender for Storage now supports target
 You can use filters in the REST API request body to specify which items to scan. When no filters are provided, the scan covers the entire storage account.
 
 Learn more about [on-demand malware scanning](on-demand-malware-scanning.md).
+
+### Breaking change: Unused actions no longer included in AWS and GCP overprovisioned identity assessments
+
+August 6, 2026
+
+To improve the performance and scalability of overprovisioned identity recommendation generation, Microsoft Defender for Cloud will no longer use the **unused actions** when computing overprovisioned identity assessments for **AWS and GCP** environments.
+
+As a result of this change:
+
+- The **Unused actions** list will no longer be displayed as part of overprovisioned identity recommendations for AWS and GCP identities.
+
+- Any workflows or processes that rely on the Unused actions list within Defender for Cloud CIEM will no longer be available for AWS and GCP recommendations.
+
+**Recommended action:**
+
+If you need to validate whether permissions have been used or remain unused, use the native tools and documentation provided by your cloud provider:
+
+- **AWS**: Review IAM access activity and last accessed information in AWS Identity and Access Management (IAM).
+
+- **Google Cloud**: Review IAM usage and access insights through Google Cloud IAM tools and Cloud Asset Inventory.
+
+These permission usage signals are owned and maintained by the respective cloud providers. Defender for Cloud no longer retrieves or presents this information as part of AWS and GCP overprovisioned identity assessments. 
+
+For more information, see [Enable cloud infrastructure entitlement management (CIEM)](/azure/defender-for-cloud/enable-permissions-management)
 
 ## July 2026
 
