@@ -234,7 +234,7 @@ When you [create an "allow" indicator for a file, such as an executable](indicat
 
 Before you create indicators for files, make sure the following requirements are met:
 
-- Microsoft Defender Antivirus is configured with cloud-based protection enabled (see [Manage cloud-based protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus))
+- Microsoft Defender Antivirus is configured with cloud-based protection enabled (see [Manage cloud-based protection](deploy-manage-report-microsoft-defender-antivirus.md))
 - Antimalware client version is 4.18.1901.x or later
 - Client devices must be running Windows 11 or Windows 10, version 1703 or later
 - Server devices must be running Windows Server 2016 and later
@@ -363,7 +363,7 @@ See [Turn on cloud protection in Microsoft Defender Antivirus](enable-cloud-prot
 
 Potentially unwanted applications (PUA) are a category of software that can cause devices to run slowly, display unexpected ads, or install other software that might be unexpected or unwanted. Examples of PUA include advertising software, bundling software, and evasion software that behaves differently with security products. Although PUA isn't considered malware, some kinds of software are PUA based on their behavior and reputation.
 
-To learn more about PUA, see [Detect and block potentially unwanted applications](/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus).
+To learn more about PUA, see [Detect and block potentially unwanted applications](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md).
 
 Depending on the apps your organization is using, you might be getting false positives as a result of your PUA protection settings. If necessary, consider running PUA protection in audit mode for a while, or apply PUA protection to a subset of devices in your organization. PUA protection can be configured for the Microsoft Edge browser and for Microsoft Defender Antivirus.
 
@@ -493,6 +493,5 @@ If you've worked through all the steps in this article and still need help, cont
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md) 
 - [Configure Defender for Endpoint on Android features](android-configure.md)
-
 
 

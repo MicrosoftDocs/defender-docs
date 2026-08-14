@@ -117,7 +117,7 @@ You can use Group Policy to configure Microsoft Defender Antivirus notifications
 
 Hiding notifications can be useful in situations where you can't hide the entire Microsoft Defender Antivirus interface. See [Prevent users from seeing or interacting with the Microsoft Defender Antivirus user interface](prevent-end-user-interaction-microsoft-defender-antivirus.md) for more information. Hiding notifications will only occur on endpoints to which the policy is deployed. Notifications related to actions that must be taken (such as a reboot) will still appear on the [Microsoft Configuration Manager Endpoint Protection monitoring dashboard and reports](/intune/configmgr/protect/deploy-use/monitor-endpoint-protection).
 
-To add custom contact information to endpoint notifications, see [Customize the Windows Security app for your organization](/windows/security/threat-protection/windows-defender-security-center/windows-defender-security-center).
+To add custom contact information to endpoint notifications, see [Customize the Windows Security app for your organization](/windows/security/operating-system-security/system-security/windows-defender-security-center/windows-defender-security-center).
 
 ### Use Group Policy to hide notifications
 

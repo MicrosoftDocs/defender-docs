@@ -342,7 +342,7 @@ What's new
 
 #### What's new
 
-- Fixed issue where Microsoft Defender Antivirus was not properly changing state when non-Microsoft antivirus/antimalware software was installed and [Windows Defender Application Control](/windows/security/application-security/application-control/windows-defender-application-control/wdac) (WDAC) with [Intelligent Security Graph](/windows/security/application-security/application-control/windows-defender-application-control/design/use-wdac-with-intelligent-security-graph) were enabled.
+- Fixed issue where Microsoft Defender Antivirus was not properly changing state when non-Microsoft antivirus/antimalware software was installed and [Windows Defender Application Control](/windows/security/application-security/application-control/app-control-for-business/appcontrol) (WDAC) with [Intelligent Security Graph](/windows/security/application-security/application-control/app-control-for-business/design/use-appcontrol-with-intelligent-security-graph) were enabled.
 - Fixed deadlock issue on [VDI](deployment-vdi-microsoft-defender-antivirus.md) that occurred when loading corrupted update files from UNC share.
 - Custom scans started with [Start-MpScan](/powershell/module/defender/start-mpscan) are now reported in the event log.
 - Fixed potential deadlock that occurred on volume mount scanning.
@@ -1206,7 +1206,7 @@ What's new
 
 #### What's new
 
-- Improved [SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) status support logging
+- Improved [SmartScreen](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/) status support logging
 
 #### Known issues
 

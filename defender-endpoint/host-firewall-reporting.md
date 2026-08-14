@@ -39,8 +39,8 @@ Firewall reporting in the [Microsoft Defender portal](https://security.microsoft
 - To onboard devices to the Microsoft Defender for Endpoint service, see [onboarding guidance](onboard-configure.md).
 
 - For the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) to start receiving data, you must enable **Audit Events** for Windows Defender Firewall with Advanced Security. See the following articles:
-  - [Audit Filtering Platform Packet Drop](/windows/security/threat-protection/auditing/audit-filtering-platform-packet-drop)
-  - [Audit Filtering Platform Connection](/windows/security/threat-protection/auditing/audit-filtering-platform-connection)
+  - [Audit Filtering Platform Packet Drop](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-filtering-platform-packet-drop)
+  - [Audit Filtering Platform Connection](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-filtering-platform-connection)
 
 - Enable these events by using Group Policy Object Editor, Local Security Policy, or the auditpol.exe commands. For more information, see [documentation about auditing and logging](/windows/win32/fwp/auditing-and-logging). The two PowerShell commands are as follows:
   - `auditpol /set /subcategory:"Filtering Platform Packet Drop" /failure:enable`

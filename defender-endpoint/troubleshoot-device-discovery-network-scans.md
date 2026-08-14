@@ -53,7 +53,7 @@ Validate that the scanner is running properly. Then go to the scan definition (t
 
 ## My scanner is configured but scans aren't running
 
-As the authenticated scanner currently uses an encryption algorithm that isn't compliant with [Federal Information Processing Standards (FIPS)](/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing/), the scanner can't operate when an organization enforces the use of FIPS compliant algorithms.
+As the authenticated scanner currently uses an encryption algorithm that isn't compliant with [Federal Information Processing Standards (FIPS)](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing), the scanner can't operate when an organization enforces the use of FIPS compliant algorithms.
 
 To allow algorithms that aren't compliant with FIPS, set the following value in the registry for the devices where the scanner runs:
 

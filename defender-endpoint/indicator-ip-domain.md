@@ -48,7 +48,7 @@ Integration into Microsoft browsers is controlled by the browser's SmartScreen s
 
 - [Behavior Monitoring](behavior-monitor.md) enabled.
 
-- [Cloud-based protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus) turned on.
+- [Cloud-based protection](deploy-manage-report-microsoft-defender-antivirus.md) turned on.
 
 - [Cloud Protection network connectivity](configure-network-connections-microsoft-defender-antivirus.md).
 
@@ -111,7 +111,7 @@ Here's an example of how network protection blocking is logged:
 
 1. Suppose that a user attempts to access a website on their device. The site happens to be hosted on a dangerous domain, and it should be blocked by network protection.  
 
-1. The TCP/IP handshake commences. Before it completes, a `NetworkConnectionEvents` action is logged, and its `ActionType` is listed as `ConnectionSuccess`. However, as soon as the TCP/IP handshake process completes, network protection blocks access to the site. The handshake, logging, and blocking sequence happens quickly. A similar process occurs with [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview); it's after the handshake completes that a determination is made, and access to a site is either blocked or allowed.
+1. The TCP/IP handshake commences. Before it completes, a `NetworkConnectionEvents` action is logged, and its `ActionType` is listed as `ConnectionSuccess`. However, as soon as the TCP/IP handshake process completes, network protection blocks access to the site. The handshake, logging, and blocking sequence happens quickly. A similar process occurs with [Microsoft Defender SmartScreen](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/); it's after the handshake completes that a determination is made, and access to a site is either blocked or allowed.
 
 1. In the Microsoft Defender portal, an alert is listed in the [alerts queue](alerts-queue.md). Details of that alert include both `NetworkConnectionEvents` and `AlertEvents`. You can see that the site was blocked, even though you also have a `NetworkConnectionEvents` item with the ActionType of `ConnectionSuccess`.
 
@@ -198,6 +198,5 @@ To create an indicator for IPs, URLs, or domains from the Microsoft Defender por
 - [Create indicators based on certificates](indicator-certificates.md)
 - [Manage indicators](indicator-manage.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md)
-
 
 
