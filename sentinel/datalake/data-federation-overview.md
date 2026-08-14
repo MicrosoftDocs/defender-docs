@@ -14,7 +14,7 @@ ms.collection: ms-security
 #Customer intent: As a security analyst or administrator, I want to understand data federation capabilities in Microsoft Sentinel data lake so that I can query external data sources alongside my security data.
 ---
 
-# Data federation overview in Microsoft Sentinel data lake
+# Data federation overview in Microsoft Sentinel data lake (Preview)
 
 Data federation in Microsoft Sentinel enables seamless querying of multiple external data sources from within the Microsoft Sentinel data lake environment. By federating data sources such as Azure Databricks, Azure Data Lake Storage (ADLS) Gen 2, and Microsoft Fabric, organizations can enhance their security analytics and operational insights without moving or duplicating data.
 
