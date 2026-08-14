@@ -42,10 +42,10 @@ Network protection works on devices with the following conditions:
 > [!div class="checklist"]
 >
 > - Endpoints are running Windows 10 Pro or Enterprise edition, version 1709 or higher.
-> - Endpoints are using Microsoft Defender Antivirus as the sole antivirus protection app. [See what happens when you're using a non-Microsoft antivirus solution](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility).
-> - [Real-time protection](/windows/security/threat-protection/microsoft-defender-antivirus/configure-real-time-protection-microsoft-defender-antivirus) is enabled.
+> - Endpoints are using Microsoft Defender Antivirus as the sole antivirus protection app. [See what happens when you're using a non-Microsoft antivirus solution](microsoft-defender-antivirus-compatibility.md).
+> - [Real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md) is enabled.
 > - [Behavior Monitoring](behavior-monitor.md) is enabled.
-> - [Cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) is enabled.
+> - [Cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) is enabled.
 > - [Cloud Protection network connectivity](configure-network-connections-microsoft-defender-antivirus.md) is functional.
 > - Audit mode isn't enabled. Use [Group Policy](enable-network-protection.md#group-policy) to set the rule to **Disabled** (value: **0**).
 

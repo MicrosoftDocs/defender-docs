@@ -12,20 +12,25 @@ ms.custom: sfi-image-nochange
 
 # Review security initiatives
 
+[Microsoft Security Exposure Management](microsoft-security-exposure-management.md) offers a focused, metric-driven way of tracking exposure in specific security areas using security initiatives. This article describes how to view initiatives and their scores, set target scores, check score trends and history, and review associated metrics and recommendations. Before you start, review the [prerequisites for security initiatives](#prerequisites).
+
 ## Work with security initiatives
 
-[Microsoft Security Exposure Management](microsoft-security-exposure-management.md) offers a focused, metric-driven way of tracking exposure in specific security areas using security initiatives. This article describes how to view initiatives and their scores, set target scores, check score trends and history, and review associated metrics and recommendations. Before you start, review the [prerequisites](#prerequisites).
+[Microsoft Security Exposure Management](microsoft-security-exposure-management.md) offers a focused, metric-driven way of tracking exposure in specific security areas using security initiatives. This article describes how to view initiatives and their scores, set target scores, check score trends and history, and review associated metrics and recommendations. Before you start, make sure you understand [security initiatives](exposure-insights-overview.md#security-initiatives) and review the [prerequisites and permissions needed](prerequisites.md) for working with Security Exposure Management.
 
 ## Prerequisites
 
-- Learn about [initiatives](exposure-insights-overview.md#security-initiatives) before you start.
+Before working with security initiatives, review the following prerequisites and notes:
+
+- Learn about [security initiatives in Exposure insights](exposure-insights-overview.md#security-initiatives) before you start.
 - [Review prerequisites and permissions needed](prerequisites.md) for working with Security Exposure Management.
 - Initiatives that are in preview are marked accordingly. These preview initiatives are still in development, and are subject to change.
 - Note that with the integration of Defender for Cloud in the Defender portal, some legacy elements have been updated - for example, threat-based initiatives from the initiative catalog might have been temporarily removed and could return in future releases.
 
-## View initiatives page
+<a name="view-initiatives-page"></a>
+## View the security initiatives page
 
-The initiatives page provides detailed insights into your security initiatives and their progress.
+The [Exposure insights initiatives](https://security.microsoft.com/exposure-initiatives) page provides detailed insights into your security initiatives and their progress.
 
 > [!NOTE]
 > All information shown on the Initiative pages that is related to Endpoints data is based on the user's scope. This includes, initiative scores, metrics progress, and history reasoning.
@@ -67,7 +72,8 @@ The initiatives page provides detailed insights into your security initiatives a
 
     :::image type="content" source="./media/initiatives/initiatives-ransomware.png" alt-text="Screenshot of the ransomware initiative.":::
 
-## Set target score
+<a name="set-target-score"></a>
+## Set a target score for a security initiative
 
 To set a custom target score for an initiative, follow these steps:
 
@@ -79,14 +85,16 @@ To set a custom target score for an initiative, follow these steps:
 
 :::image type="content" source="./media/initiatives/set-initiative-target-score.png" alt-text="Screenshot of the window to set the initiative target.":::
 
-## Check trends
+<a name="check-trends"></a>
+## Review security initiative score trends
 
 The changes in your score provide you with useful feedback about how well you're meeting the goals of your initiatives.
 
-1. From the individual initiative details page, check the overall **14 day change trend graph** and **14 day drift change** to track the changes in your initiative score, visually and as a percentage.
+1. From the initiative page for a specific initiative, check the overall **14 day change trend graph** and **14 day drift change** to track the changes in your initiative score, visually and as a percentage.
 1. For initiatives with metrics, you can examine the trend and drift data per metric as well.
 
-## Check history
+<a name="check-history"></a>
+## Review security initiative history
 
 Use the History view to examine how an initiative score changed over time:
 

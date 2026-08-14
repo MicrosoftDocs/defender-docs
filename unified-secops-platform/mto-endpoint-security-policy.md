@@ -8,12 +8,12 @@ ms.collection:
   - highpri
   - tier1
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
   - Microsoft Defender for Endpoint
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -24,6 +24,8 @@ Microsoft Defender for Endpoint security policies help you manage security setti
 For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/defender-endpoint/endpoint-security-policies-configure).
 
 ## Prerequisites
+
+Before you use endpoint security policies in multitenant management, ensure the following prerequisites are met:
 
 - You must have Microsoft Defender for Endpoint to use endpoint security policies in multitenant management.
 
@@ -64,7 +66,7 @@ The policy page shows the policy status, which devices it applies to, and the as
 
 :::image type="content" source="media/mto-endpoint-security-policy/mto-policy-page-small.png" alt-text="Screenshot of the policy page in multitenant management in Microsoft Defender XDR." lightbox="media/mto-endpoint-security-policy/mto-policy-page.png":::
 
-You can also view the policy in the Microsoft Intune admin center. To do so, select the More actions ellipsis (…) in the policy page, then select **View in Intune**.
+You can also view the policy in the Microsoft Intune admin center. To view the policy in Intune, select the More actions ellipsis (…) in the policy page, then select **View in Intune**.
 
 ## View distributed policies
 

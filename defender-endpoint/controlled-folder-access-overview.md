@@ -39,7 +39,7 @@ CFA is based on the following elements:
 
 When an app with an unknown reputation triggers CFA, the following events happen:
 
-- A pop-up notification appears on the device. For example, `Controlled folder access blocked C:\...\ApplicationName... from making changes to memory.` You can customize the information in the notification. For more information, see [Customize contact information in Windows Security](/windows/security/threat-protection/windows-defender-security-center/wdsc-customize-contact-information).
+- A pop-up notification appears on the device. For example, `Controlled folder access blocked C:\...\ApplicationName... from making changes to memory.` You can customize the information in the notification. For more information, see [Customize contact information in Windows Security](/windows/security/operating-system-security/system-security/windows-defender-security-center/wdsc-customize-contact-information).
 - A `Protected memory access blocked` entry appears on the [Protection History page of the Windows Security app](https://support.microsoft.com/windows/protection-history-f1e5fd95-09b4-46d1-b8c7-1059a1e09708) on the device.
 - The block or audit is recorded as an event that you can [monitor](controlled-folder-access-monitor.md).
 

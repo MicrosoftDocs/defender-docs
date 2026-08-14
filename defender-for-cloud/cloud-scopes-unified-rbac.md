@@ -2,8 +2,9 @@
 title: Manage cloud scopes and unified role-based access control in Microsoft Defender for Cloud
 description: Learn how to configure cloud scopes and unified role-based access control for granular permissions management across your cloud environments.
 ms.topic: how-to
-ms.date: 05/26/2026
+ms.date: 07/03/2026
 zone_pivot_groups: defender-portal-experience
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to configure cloud scopes and unified RBAC to manage access and permissions across my cloud environments.
 ai-usage: ai-assisted
 ---
@@ -16,7 +17,7 @@ ai-usage: ai-assisted
 > This capability is currently in preview.   
 > For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
 
-Cloud scopes and unified role-based access control (unified RBAC) in the Microsoft Defender portal let you segment multicloud resources into meaningful groups and apply least-privilege access consistently. Supported resources include Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and connected DevOps and registry sources. They provide:
+Cloud scopes and unified role-based access control (unified RBAC) in the Microsoft Defender portal let you segment multicloud resources into meaningful groups and apply least-privilege access consistently. Supported resources include Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and connected DevOps and registry sources. Cloud scopes and unified RBAC provide:
 - Centralized, product-wide security permissions management
 - Granular scoping across heterogeneous cloud environments
 - Persistent filtering across inventory, posture, vulnerabilities, and exposure management
@@ -55,7 +56,7 @@ Key properties:
 - Multicloud and multi-data source: A single scope can mix Azure, AWS, GCP, and DevOps or registry sources.
 - Nonhierarchical and flexible: Membership is an explicit list. It doesn't inherit from Azure management groups or AWS organizations.
 - Many-to-many: An environment can belong to multiple scopes, and a scope can contain unlimited environments.
-- Manual membership control: Newly connected environments aren't auto-added. This behavior helps prevent accidental privilege expansion.
+- Manual membership control: Newly connected environments aren't auto-added, which helps prevent accidental privilege expansion.
 - Consistent filter surface: Once selected, a scope persists as you navigate supported Defender portal experiences.
 
 How scopes differ from device groups:
@@ -119,7 +120,7 @@ Navigation: In the [Defender portal](https://security.microsoft.com/), go to **S
 
 ## 2. Activate cloud scopes (one-time)
 
-Before scopes can be used in role assignments, they must be activated using a wizard. Doing so:
+Before scopes can be used in role assignments, they must be activated using a wizard. The activation wizard:
 
 * Enumerates existing unified RBAC roles referencing Microsoft Defender for Cloud data sources
 * Lets you map those roles to chosen cloud scopes
@@ -132,7 +133,7 @@ Guidelines:
 * Review which roles include manage-level permissions (these extend VM-related capabilities)
 * Approve to complete activation
 
-If no device groups or unified RBAC roles exist yet, the wizard may be skipped until needed.
+If no device groups or unified RBAC roles exist yet, the activation wizard may be skipped until needed.
 
 ### Activation & bulk assignment wizard
 
@@ -172,7 +173,8 @@ Navigation: In the [Defender portal](https://security.microsoft.com/), go to **S
 
 ## 4. Use scope and environment filters
 
-### Scope filter (global)
+<a name="scope-filter-global"></a>
+### Use the global scope filter
 
 The scopes filter (cloud scopes + device groups) persists across:
 
@@ -198,9 +200,10 @@ To access the Scope filter:
 1. Apply your desired filters.
    :::image type="content" source="media/cloud-scopes-unified-rbac/scope-filtering-2.png" alt-text="Screenshot of contextual filtering behavior for scopes filter." lightbox="media/cloud-scopes-unified-rbac/scope-filtering-2.png":::
 
-### Environment filter
+<a name="environment-filter"></a>
+### Use the environment filter
 
-Purpose: This filter enables deep investigation, mitigation, and remediation focus.
+Purpose: The Environment filter enables deep investigation, mitigation, and remediation focus.
 
 Characteristics:
 
@@ -272,7 +275,7 @@ Certain asset types remain globally visible (not scope-bound) due to graph model
 - SSH private keys
 - Secrets and Managed Identities (some may become scopable when resource IDs are available)
 
-These appear in inventory, attack paths, maps, and related exposure experiences for all authorized portal users.
+These globally visible asset types appear in inventory, attack paths, maps, and related exposure experiences for all authorized portal users.
 
 ## Known issues & limitations
 
@@ -290,7 +293,7 @@ These appear in inventory, attack paths, maps, and related exposure experiences 
 
 **Q: How do cloud scopes improve operational alignment across business units?**
 
-Cloud scopes improve operational alignment across business units by allowing administrators to group resources according to business value, function, or organizational structure. This targeted grouping enables tailored access control and visibility, ensuring that each business unit receives the specific permissions and oversight it requires. As a result, teams can operate efficiently within their designated environments, while administrators maintain clear boundaries and flexibility when managing multicloud resources. This approach streamlines operations and supports strategic objectives across the organization.
+Cloud scopes improve operational alignment across business units by allowing administrators to group resources according to business value, function, or organizational structure. Grouping resources by business value, function, or organizational structure enables tailored access control and visibility, ensuring that each business unit receives the specific permissions and oversight it requires. With cloud scopes, teams can operate efficiently within their designated environments, while administrators maintain clear boundaries and flexibility when managing multicloud resources. This approach streamlines operations and supports strategic objectives across the organization.
 
 **Q: What is unified RBAC in the Defender portal?**
 
@@ -304,7 +307,7 @@ Cloud scopes are a cloud-aware scoping method that lets administrators group res
 
 Navigate to: Settings → Permissions → Microsoft XDR Roles → Roles → Cloud scopes tab
 
-From there, you can:
+On the Cloud scopes tab, you can:
 - Create unlimited scopes
 - Include multiple environments per scope
 - Assign environments to multiple scopes
@@ -318,7 +321,7 @@ From there, you can:
 
 **Q: Why can't I assign Cloud Scopes in role assignment?**
 
-To enable cloud scopes for the first time, you must configure permissions for roles associated with Defender for Cloud data sources. This step also controls access to shared assets like VMs via Device Groups or Cloud Scope. Begin by completing the activation process, which guides Authorization admins through role-based access control configuration in the unified role-based access control experience. Cloud scopes are effective only after activation.
+To enable cloud scopes for the first time, you must configure permissions for roles associated with Defender for Cloud data sources. Configuring permissions for Defender for Cloud data sources also controls access to shared assets like VMs via Device Groups or Cloud Scope. Begin by completing the activation process, which guides Authorization admins through role-based access control configuration in the unified role-based access control experience. Cloud scopes are effective only after activation.
 
 **Q: Who can manage Cloud Scopes?**
 
@@ -353,7 +356,8 @@ Cloud scopes can be leveraged to reflect your organizational hierarchy and struc
 
 ::: zone pivot="azure-portal"
 
-## Cloud scopes and unified RBAC (Azure portal view)
+<a name="cloud-scopes-and-unified-rbac-azure-portal-view"></a>
+## View cloud scopes and unified RBAC in the Azure portal
 
 Full lifecycle management (creation, membership, advanced filtering, multicloud assignments) is performed in the Microsoft Defender portal. In the Azure portal you can still:
 

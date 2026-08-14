@@ -5,9 +5,9 @@ ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 06/11/2026
+ms.date: 07/02/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -73,7 +73,7 @@ For more information, see [Advanced hunting](/microsoft-365/security/defender/ad
 
 ## Turn off enterprise IoT security
 
-Customers with ME5/E5 Security plans who no longer need the **enterprise IoT security** service, can turn off the feature.
+Customers with Microsoft 365 E5 or E5 Security plans who no longer need the **enterprise IoT security** service can turn off the feature.
 
 **To turn off enterprise IoT security**:
 
@@ -81,6 +81,6 @@ Customers with ME5/E5 Security plans who no longer need the **enterprise IoT sec
 
 1. Toggle the option to **Off**.
 
-When enterprise IoT security is turned off, you stop getting security value in the Defender portal, including purpose-built alerts, vulnerabilities, and recommendations.
+When enterprise IoT security is turned off, you lose access to purpose-built alerts, vulnerabilities, and recommendations in the Defender portal.
 
-Customers with a Microsoft Defender for Endpoint P2 license who don't add a standalone license by the time the trial ends, have the trial automatically canceled, and lose access to enterprise IoT security features. For more information, see [purchase a standalone license](enterprise-iot-get-started.md#purchase-the-standalone-license).
+Customers with a Microsoft Defender for Endpoint P2 license who don't add a standalone license by the time the trial ends, have the trial automatically canceled, and lose access to enterprise IoT security features. For more information, see [Purchase the standalone enterprise IoT security license](enterprise-iot-get-started.md#purchase-the-standalone-license).

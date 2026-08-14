@@ -34,7 +34,7 @@ The following table includes that status of support for tables in the streaming 
 
 
 > [!NOTE]
-> Streaming data is only available for columns or fields that are in general availability in Microsoft Defender XDR. 
+> Streaming data is only available for columns or fields that are in general availability in Microsoft Defender. 
 
 | Table name | Status<br>(Commercial) | GCC | GCC High | DoD |
 |----|----|----|----|----|

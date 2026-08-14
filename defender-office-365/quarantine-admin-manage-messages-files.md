@@ -15,7 +15,7 @@ ms.custom:
   - sfi-image-nochange
 description: Admins can learn how to view and manage quarantined messages for all users in Microsoft 365 organizations with cloud mailboxes. Admins in organizations with Microsoft Defender for Office 365 can also manage quarantined files in SharePoint, OneDrive, and Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 07/03/2026
+ms.date: 07/17/2026
 ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
@@ -164,6 +164,7 @@ To filter the entries, select :::image type="icon" source="media/defender-portal
   - **Admin action - File type block**: Messages blocked as malware by the common attachments filter in anti-malware policies. For more information, see [Anti-malware policies](anti-malware-protection-about.md#anti-malware-policies).
   - **Phishing**: The spam filter verdict was **Phishing** or anti-phishing protection quarantined the message ([spoof settings](anti-phishing-policies-about.md#spoof-settings) or [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)).
   - **High confidence phishing**
+  - **Password protected item**: Safe Attachments quarantined the message because it contains an encrypted (password-protected) attachment that can't be scanned. For more information, see [Encrypted (password-protected) attachments in Safe Attachments policies](safe-attachments-about.md#encrypted-password-protected-attachments-in-safe-attachments-policies).
 - **Recipient**: Select one of the following values:
   - **All users** (the default value, even if it doesn't appear selected)
   - **Only me**: Show messages sent to the currently signed in recipient only. This value is required for admins to see the [Allow sender](#allow-email-senders-from-quarantine) and [Block sender](#block-email-senders-from-quarantine) actions.
@@ -296,6 +297,7 @@ Messages are automatically deleted from quarantine after the date shown in the *
 - You can't choose to release messages only to recipients who didn't receive the released message.
 - Members of the **Security Administrators** role group can see and use the **Submit the message to Microsoft to improve detection** and **Allow email with similar attributes** options.
 - Users can report false positives to Microsoft from quarantine, depending on the value of the **Reporting from quarantine** setting in [user reported settings](submissions-user-reported-messages-custom-mailbox.md).
+- For messages quarantined by Safe Attachments because they contain an encrypted (password-protected) attachment that couldn't be scanned, you release the message with full authority without providing the attachment password. Only end users are prompted for the password when they release these messages themselves. For more information, see [Encrypted (password-protected) attachments in Safe Attachments policies](safe-attachments-about.md#encrypted-password-protected-attachments-in-safe-attachments-policies).
 
 > [!TIP]
 >

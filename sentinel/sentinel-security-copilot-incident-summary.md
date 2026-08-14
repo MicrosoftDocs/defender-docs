@@ -13,17 +13,17 @@ appliesto:
     - Microsoft Sentinel in the Azure portal
     - Microsoft Sentinel in the Defender portal
     - Security Copilot
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #Customer intent: As a security analyst, I want to integrate Security Copilot with Microsoft Sentinel data so that I can investigate incidents and generate advanced hunting queries at machine speed and scale.
 ---
 
 # Summarize Microsoft Sentinel incidents with Security Copilot
 
-Microsoft Sentinel applies the capabilities of [Security Copilot](/security-copilot/microsoft-security-copilot) in the Azure portal to create enriched summaries of incidents, providing a comprehensive overview of security incidents by consolidating information from multiple alerts. This feature enhances incident response efficiency by offering a clear summary that helps your security operations teams quickly understand the scope and impact of an incident. It provides a structured overview, including timelines, assets involved, and indicators of compromise, along with enrichments like user risk, device risk, and watchlist matching. These summaries suggest an investigation path for your analysts to assess the scope and impact of an attack. For more information, see [Navigate, triage, and manage Microsoft Sentinel incidents in the Azure portal](incident-navigate-triage.md).
+Microsoft Sentinel applies the capabilities of [Security Copilot](/security-copilot/microsoft-security-copilot) in the Azure portal to create enriched summaries of incidents, providing a comprehensive overview of security incidents by consolidating information from multiple alerts. The Copilot incident summary feature enhances incident response efficiency by offering a clear summary that helps your security operations teams quickly understand the scope and impact of an incident. The incident summary provides a structured overview, including timelines, assets involved, and indicators of compromise, along with enrichments like user risk, device risk, and watchlist matching. These incident summaries suggest an investigation path for your analysts to assess the scope and impact of an attack. For more information, see [Navigate, triage, and manage Microsoft Sentinel incidents in the Azure portal](incident-navigate-triage.md).
 
-If you onboarded Microsoft Sentinel to the Defender portal, you can move directly to the same incident in the Defender portal and follow the guided investigation procedures there. For more information, see [Triage and investigate incidents with guided responses from Security Copilot in Microsoft Defender](/defender-xdr/security-copilot-m365d-guided-response).
+If you onboarded Microsoft Sentinel to the Defender portal, you can move directly to the same incident in the Defender portal and follow the guided investigation procedures in the Defender portal. For more information, see [Triage and investigate incidents with guided responses from Security Copilot in Microsoft Defender](/defender-xdr/security-copilot-m365d-guided-response).
 
 This guide outlines what to expect and how to access the summarizing capability of Copilot in Microsoft Sentinel, including information on providing feedback.
 
@@ -77,5 +77,5 @@ Review the summary and use the information to guide your investigation and respo
 <a name="see-also"></a>
 ## Related content
 
-- [Learn about other Security Copilot embedded experiences](/security-copilot/experiences-security-copilot)
+- [Other Security Copilot embedded experiences](/security-copilot/experiences-security-copilot)
 - [Privacy and data security in Security Copilot](/copilot/security/privacy-data-security)

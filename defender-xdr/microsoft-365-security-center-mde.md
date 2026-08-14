@@ -123,7 +123,7 @@ Alternately, you can navigate to *Endpoints roles & groups* in the **System > Pe
 
 #### APIs and MSSPs
 
-The Microsoft Defender XDR alerts API is the official API that enables customers to work with alerts across all Defender XDR products using a single integration. For more information, see [Migrate from the MDE SIEM API to the Microsoft Defender XDR alerts API](/defender-endpoint/configure-siem).
+The Microsoft Defender XDR alerts API is the official API that enables customers to work with alerts across all Defender products using a single integration. For more information, see [Migrate from the MDE SIEM API to the Microsoft Defender XDR alerts API](/defender-endpoint/configure-siem).
 
 To authorize a managed security service provider (MSSP) to access receive alerts, you need to provide the application and tenant IDs of the MSSP. For more information, see [MSSP integration](/defender-endpoint/configure-mssp-support#mssp-integration).
 

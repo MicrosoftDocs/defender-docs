@@ -32,7 +32,7 @@ You can only take this action if:
 
 - The device you're taking the action on is running Windows 10, version 1703 or later, or Windows 11
 - The file does not belong to trusted third-party publishers or is not signed by Microsoft
-- Microsoft Defender Antivirus must at least be running on Passive mode. For more information, see: [Microsoft Defender Antivirus compatibility](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility).
+- Microsoft Defender Antivirus must at least be running on Passive mode. For more information, see: [Microsoft Defender Antivirus compatibility](../microsoft-defender-antivirus-compatibility.md).
 
 ## Permissions
 

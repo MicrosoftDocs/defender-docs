@@ -1,11 +1,11 @@
 ---
 title: Daily operational guide - Microsoft Defender for Identity
 description: Learn about the Microsoft Defender for Identity activities that we recommend for your team on a daily basis.
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.reviewer: martin77s
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Daily operational guide - Microsoft Defender for Identity
@@ -89,15 +89,15 @@ For more information, see [Proactively hunt for threats with advanced hunting in
 
 **Persona**: Security administrators, Active Directory administrators
 
-We recommend checking the **Health Issues** page regularly to check for any problems in your Defender for Identity deployment, such as connectivity or sensor issues. Make sure to check both the **Global** and **Sensor** tabs to view both types of issues.
+Check the **Health Issues** page regularly for problems in your Defender for Identity deployment, such as connectivity or sensor issues. Review both the **Global** and **Sensor** tabs.
 
-We also recommend setting up email notifications for service issues so that you can catch issues as they happen.
+We also recommend setting up email notifications for service issues. Notifications help you catch problems as they happen.
 
 For more information, see [Microsoft Defender for Identity health issues](../health-alerts.md) and [Configure email notifications](../notifications.md#configure-email-notifications).
 
 ## Related content
 
-For more information, see:
+The following resources provide broader context and cover weekly, monthly, and quarterly identity security tasks:
 
 - [Microsoft Defender Security operations overview](/security/operations/overview)
 - [Microsoft Defender for Identity operational guide](ops-guide.md)

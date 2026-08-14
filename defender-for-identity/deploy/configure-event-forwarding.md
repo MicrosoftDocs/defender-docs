@@ -1,10 +1,10 @@
 ---
 title: Configure Windows event forwarding  | Microsoft Defender for Identity
 description: Learn about Microsoft Defender for Identity's support for configuring Windows event forwarding.
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -82,9 +82,9 @@ This procedure describes how to create a policy on the domain controllers to set
     gpupdate /force
     ```
 
-### Step 3: Create and select a subscription on your sensor
+## Step 3: Create and select a subscription on your sensor
 
-This procedure describes how to create a subscription for use with Defender for Identity and then select it from your standalone sensor.
+This procedure describes how to create a subscription for use with Defender for Identity and then select the subscription from your standalone sensor.
 
 1. Open an elevated command prompt and enter
 
@@ -125,7 +125,7 @@ This procedure describes how to create a subscription for use with Defender for 
 
     1. Return to the **Event Viewer** console. Right-click the created subscription and select **Runtime Status** to see if there are any issues with the status.
 
-    1. After a few minutes, check to see that the events you set to be forwarded is showing up in the Forwarded Events on the Defender for Identity standalone sensor.
+    1. After a few minutes, verify that the forwarded events appear in the Forwarded Events log on the Defender for Identity standalone sensor.
 
 For more information, see: [Configure the computers to forward and collect events](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc748890(v=ws.11)).
 

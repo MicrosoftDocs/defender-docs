@@ -29,7 +29,10 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
-|Linux  |101.26062.0005  |August 2026 |- Release version: 30.126052.0012.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates](#linux--aug-2026--101260620005) |
+|Android |1.0.9129.0101|Aug 2026|- Build: 1.0.9129.0101<br>- Release: Aug 11, 2026|[Release details and updates](#android--aug-2026--platform-1091290101)|
+|iOS |1.1.79210103|Aug 2026|- Build: 1.1.79210103<br>- Release: Aug 04, 2026|[Release details and updates](#ios--aug-2026--platform-version-1179210103)|
+|macOS |101.26062.0011  |August 2026 |- Release version: 20.126062.11.0<br>- Engine version: 1.1.26040.3000<br>- Signature version: 1.449.26.0 |[Release details and updates](#macos--august-2026--101260620011) |
+|Linux  |101.26062.0007  |August 2026 |- Release version: 30.126052.0012.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates](#linux--aug-2026--101260620007) |
 |Windows Antivirus |Platform 4.18.26070.9 / Engine 1.1.26070.7|July 2026|- Platform: 4.18.26070.9<br>- Engine: 1.1.26070.7<br>- Security intelligence: 1.457.11.0|[Release details and updates](#windows-antivirus--july-2026--platform-418260709--engine-11260707)|
 |macOS |101.26062.0009  |July 2026 |- Release version: 20.126062.9.0<br>- Engine version: 1.1.26050.3000<br>- Signature version: 1.455.265.0 |[Release details and updates](#macos--july-2026--101260620009) |
 |Android |1.0.9107.0101|July 2026|- Build: 1.0.9107.0101<br>- Release: July 21, 2026|[Release details and updates](#android--july-2026--platform-1091070101)|
@@ -224,6 +227,21 @@ To share feedback, open Defender for Endpoint on macOS and go to **Help > Send f
 To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device.
 
 For known issues, see [macOS known issues](#macos-known-issues).
+
+### macOS | August-2026 | 101.26062.0011
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 20.126062.11.0  | 1.1.26040.3000 | 1.449.26.0        |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|----------------|
+| Security for AI | Expanded [local AI agent discovery (Preview)](local-agent-discovery-overview.md) on macOS to include visibility into Model Context Protocol (MCP) server configurations. |
+| General      | Performance improvements and bug fixes. |
 
 ### macOS | July-2026 | 101.26062.0009
 
@@ -521,7 +539,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 [!INCLUDE [Linux 101.26012.0007 known issue](includes/linux-build-issue.md)]
 
-### Linux | Aug 2026 | 101.26062.0005
+### Linux | Aug 2026 | 101.26062.0007
 
 #### Release details
 
@@ -536,6 +554,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 |Bug fix | Resolved an issue that could cause on-demand antivirus scans (quick, full, and custom) to take longer than expected or appear unresponsive in certain environments. Protection capabilities remained unaffected while scans were in progress. |
 |Security | Engine signature verification is now enabled by default for new installations and upgrades. Defender for Endpoint verifies the engine's digital signature before loading it and doesn't load engines that fail verification. Legacy engine signature verification settings are deprecated. |
 |Visibility | Resolved an issue where the `mdatp health` status could incorrectly show a device as healthy after it was offboarded. |
+|General | Reliability and quality improvements. |
 
 ### Linux | July 2026 | 101.26052.0012
 
@@ -772,6 +791,20 @@ Fixed an issue in the January 2026 release, where real-time scanning of the /dev
 
 See the full list of [Android UX improvements](android-new-ux.md).
 
+### Android | Aug 2026 | Platform: 1.0.9129.0101
+
+#### Release details
+
+| Platform version| Release Date |
+| -------- | -------- |
+|1.0.9129.0101|Aug 11, 2026|
+
+#### Enhancements and features
+
+|__Feature Area__| __Update Summary__|
+| -------- | -------- |
+|General|Performance improvements and general bug fixes. |
+
 ### Android | July 2026 | Platform: 1.0.9107.0101
 
 #### Release details
@@ -995,6 +1028,20 @@ See the full list of [Android UX improvements](android-new-ux.md).
 ## iOS releases
 
 For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
+
+### iOS | Aug 2026 | Platform Version: 1.1.79210103
+
+#### Release details
+
+| Platform version | Release Date |
+| -------- | -------- |
+| 1.1.79210103| Aug 4, 2026 |
+
+#### Enhancements and features
+
+|**Feature Area**| **Update Summary**|
+| -------- | -------- |
+|Improvements|Performance improvements and general bug fixes.|
 
 ### iOS | July 2026 | Platform Version: 1.1.79080103
 

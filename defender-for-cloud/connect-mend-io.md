@@ -2,8 +2,9 @@
 title: Connect Mend.io to Defender for Cloud (Preview)
 description: Learn how to connect Mend.io with Microsoft Defender for Cloud to enhance vulnerability analysis and gain visibility of critical vulnerabilities.
 ms.topic: how-to
-ms.date: 05/24/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a user, I want to learn how to connect my Mend.io account with Microsoft Defender for Cloud so that I can enhance vulnerability analysis and gain visibility from code to runtime.
 ---
 
@@ -26,7 +27,7 @@ This article explains the benefits and steps to connect Mend.io to Defender for 
   - [GitHub organizations](quickstart-onboard-github.md)
   - [GitLab groups](quickstart-onboard-devops.md)
 
-- Have an account with [Mend.io](https://www.mend.io/).
+- Have an account with the [Mend.io website](https://www.mend.io/).
 
 - Obtain an activation key from Mend.io. For instructions, see [Mend.io integration activation token Application Programming Interface (API)](https://api-docs.mend.io/1.4/issue-tracker-api#getintegrationactivationtoken).
 
@@ -42,11 +43,12 @@ This article explains the benefits and steps to connect Mend.io to Defender for 
 
 - Ensure repositories monitored by Mend.io are also connected to Defender for Cloud. Findings won't appear if those repositories aren't connected.
 
-## Connect Mend.io
+<a name="connect-mendio"></a>
+## Connect Mend.io to Defender for Cloud
 
 To connect your Mend.io account to Defender for Cloud:
 
-1. Sign in to the Azure portal at [portal.azure.com](https://portal.azure.com/).
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
 

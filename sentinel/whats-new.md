@@ -4,7 +4,8 @@ description: Learn about the latest new features and announcement in Microsoft S
 author: guywi-ms
 ms.author: guywild
 ms.topic: concept-article
-ms.date: 06/23/2026
+ms.date: 08/11/2026
+ai-usage: ai-assisted
 #Customer intent: As a security team member, I want to stay updated on the latest features and enhancements in Microsoft Sentinel so that I can effectively manage and optimize my organization's security posture.
 ms.custom:
   - build-2025
@@ -22,6 +23,7 @@ The listed features were released in the last six months. For information about 
 
 - [New data sources for UEBA behaviors and anomaly detection (Preview)](#new-data-sources-for-ueba-behaviors-and-anomaly-detection-preview)
 - [UEBA anomalies on behaviors (Preview)](#ueba-anomalies-on-behaviors-preview)
+- [SAP solution releases](#sap-solution-releases)
 
 ### New data sources for UEBA behaviors and anomaly detection (Preview)
 
@@ -47,6 +49,10 @@ UEBA anomaly detection also supports identity-linked AWS GuardDuty findings from
 ### UEBA anomalies on behaviors (Preview)
 
 Microsoft Sentinel now adds contextual anomaly insights directly to UEBA behavior records. These insights help analysts identify first-seen activity, unusually high behavior volumes, uncommon values, and threat intelligence matches without manually correlating raw events. For more information, see [Investigate anomalies on UEBA behaviors](ueba-anomalies-on-behaviors.md).
+
+### SAP solution releases
+
+The [SAP agentless solution](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/SAP/Agentless/README.md) version 1.1.12 adds audit log performance enhancements and the `force-sal-filesystem` parameter. The [SAP BTP solution](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/SAP%20BTP/ReleaseNotes.md) version 3.1.1 adds an analytic rule for unaudited custom apps with login-only activity and renames analytic rules with the `SAP BTP` prefix. The [SAP LogServ solution](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/SAP%20LogServ/ReleaseNotes.md) version 3.0.5 lets customers using RISE with SAP activate existing ASIM-based security content for standard SAP LogServ logs; HANA detections now use Syslog instead of the custom log, with updated connector coverage and fallback handling. For more information, see the [SAP LogServ integration blog series](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-members/ultimate-blog-series-sap-logserv-integration-with-microsoft-sentinel/ba-p/14126401).
 
 ## July 2026
 

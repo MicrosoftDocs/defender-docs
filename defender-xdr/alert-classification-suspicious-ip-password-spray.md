@@ -13,7 +13,7 @@ ms.custom:
   - admindeeplinkDEFENDER
   - sfi-ropc-nochange
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender XDR
 ai-usage: ai-assisted
@@ -44,7 +44,7 @@ Here's an example of a password spray alert in the alert queue:
 
 :::image type="content" source="media/alert-grading-playbook-password-spray/fig1-password-spray-alert.png" alt-text="Screenshot of Microsoft Defender 365 alert." lightbox="media/alert-grading-playbook-password-spray/fig1-password-spray-alert.png":::
 
-This alert means there's suspicious user activity originating from an IP address that might be associated with a brute-force or password spray attempt according to threat intelligence sources.
+The password spray alert means there's suspicious user activity originating from an IP address that might be associated with a brute-force or password spray attempt according to threat intelligence sources.
 
 ### 2. Investigate the IP address
 
@@ -58,7 +58,7 @@ Review activity from the suspicious IP address to determine whether the pattern 
 
   - **Are there successful attempts of a user/several users signing in with [multi-factor authentication (MFA)](/microsoft-365/admin/security-and-compliance/multi-factor-authentication-microsoft-365) prompts?** The existence of these attempts might indicate that the IP isn't malicious.
 
-  - **Are legacy protocols used?** Using protocols like POP3, IMAP, and SMTP might indicate an attempt to perform a password spray attack. Finding `Unknown(BAV2ROPC)` in the user agent (Device type) in the [Activity log](/defender-cloud-apps/activity-filters#ip-address-insights) indicates use of legacy protocols. You can refer to Figure 1 when looking at the Activity log. This activity must be further correlated to other activities.
+  - **Are legacy protocols used?** Using protocols like POP3, IMAP, and SMTP might indicate an attempt to perform a password spray attack. Finding `Unknown(BAV2ROPC)` in the user agent (Device type) in the [Activity log](/defender-cloud-apps/activity-filters#ip-address-insights) indicates use of legacy protocols. When looking at the Activity log, look for `Unknown(BAV2ROPC)` in the **Device type** field, as shown in the following screenshot. Legacy-protocol sign-in activity must be further correlated with other suspicious activities.
 
     :::image type="content" source="media/alert-grading-playbook-password-spray/fig2-password-spray-alert.png" alt-text="Screenshot of Microsoft Defender 365 interface showing the Device type." lightbox="media/alert-grading-playbook-password-spray/fig2-password-spray-alert.png":::
 
@@ -93,7 +93,7 @@ Filter all successful attempts to sign in from the IP address around and shortly
 
 [Advanced hunting](advanced-hunting-overview.md) is a query-based threat hunting tool that lets you inspect events in your network and locate threat indicators.
 
-Use this query to find accounts with attempts to sign in with the highest risk scores that came from the malicious IP. This query also filters all successful attempts to sign in with corresponding risk scores.
+Use the following query to find accounts with sign-in attempts that have the highest risk scores from the malicious IP. Before running the query, set the `ip_address` variable to the suspicious IP you want to investigate. The query also filters all successful sign-in attempts with their corresponding risk scores.
 
 ```kusto
 let start_date = now(-7d);
@@ -109,7 +109,7 @@ AADSignInEventsBeta
 | partition by AccountObjectId ( top 1 by RiskLevelDuringSignIn ) // remove line to view all successful logins risk scores
 ```
 
-Use this query to check if the suspicious IP used legacy protocols in attempts to sign in.
+Use the following query to check whether the suspicious IP used legacy protocols in sign-in attempts over the last eight hours. The query summarizes sign-in events by user agent, so you can identify legacy protocol indicators such as `Unknown(BAV2ROPC)`.
 
 ```kusto
 let start_date = now(-8h);
@@ -137,7 +137,7 @@ AlertInfo
 | where AlertId in (ip_alert_ids)
 ```
 
-Use this query to review account activity for suspected compromised accounts.
+Use the following query to review cloud app activity for accounts that successfully signed in from the suspicious IP in the last eight hours. The query identifies compromised accounts by filtering for successful sign-ins from the specified IP, then summarizes their cloud application activity by type.
 
 ```kusto
 let start_date = now(-8h);

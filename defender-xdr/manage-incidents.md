@@ -19,7 +19,7 @@ ms.topic: how-to
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -32,13 +32,13 @@ ai-usage: ai-assisted
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Incident management is critical to ensuring that incidents are named, assigned, and tagged to optimize time in your incident workflow and more quickly contain and address threats.
+Incident management is critical to ensuring that incidents are named, assigned, and tagged to optimize time in your incident workflow and more quickly contain and address threats. To perform these tasks, you need access to the [Microsoft Defender portal](https://security.microsoft.com) with an appropriate role assigned through [Microsoft Defender XDR role-based access control (RBAC)](manage-rbac.md).
 
 To manage your incidents in the [Microsoft Defender portal](https://security.microsoft.com), use the quick launch and go to **Investigation & response > Incidents & alerts > Incidents**.
 
 :::image type="content" source="./media/manage-incidents/incidents-queue.png" alt-text="Screenshot showing the incident queue and quick launch pane in the Microsoft Defender portal." lightbox="./media/manage-incidents/incidents-queue.png":::
 
-This article shows you how to perform various incident management tasks associated with different stages in an incident's lifecycle.
+This section explains how to perform incident management tasks in Microsoft Defender across the incident lifecycle.
 
 To open an incident or alert on demand for an investigation or operational workflow, see [Manually create an incident or alert in Microsoft Defender](manually-create-incident.md).
 
@@ -65,6 +65,7 @@ To open an incident or alert on demand for an investigation or operational workf
 > [!TIP]
 > **Defender Boxed**, a series of cards showcasing your organization's security successes, improvements, and response actions in the past six months/year, appears for a limited time during January and July of each year. Learn how you can share your [Defender Boxed](incident-queue.md#defender-boxed) highlights.
 
+<a name="access-the-manage-incident-pane"></a>
 ## Access the *Manage incident* pane
 
 Most of these tasks are accessible from the **Manage incident** pane for an incident. You can reach this pane from any of several locations.
@@ -316,7 +317,7 @@ When you finish investigating an incident, you can generate an automatic summary
 The analysis includes details such as:
 
 - A high-level summary of the incident and investigation process including actions and activities done by the analyst.
-- Detailed step by step log and KQL queries run during the investigation process.
+- Detailed step-by-step log and Kusto Query Language (KQL) queries run during the investigation process.
 
 Use the generated analyst notes to train new analysts, conduct audits, support investigations, hand off work to teammates, or feed AI models and tools.
 
@@ -393,7 +394,7 @@ If you have the [Copilot for Security](/security-copilot/microsoft-security-copi
 - [Incident summary](security-copilot-m365d-incident-summary.md)
 - [Incident report](security-copilot-m365d-create-incident-report.md)
 
-The export to PDF function is also available in the Copilot side panel. When you select the **More actions** ellipsis (...) on the upper right corner of the incident report results card, you can choose **Export incident as PDF**.
+The export to PDF function is also available in the Copilot side panel. When you select the **More actions** ellipsis (...) on the upper right corner of the **Incident report** results card in the Copilot side panel, you can choose **Export incident as PDF**.
 
    :::image type="content" source="media/manage-incidents/export-incident-more-actions1.png" alt-text="Screenshot of additional actions in the incident report results card.":::
 

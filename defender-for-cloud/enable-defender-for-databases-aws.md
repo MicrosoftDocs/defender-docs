@@ -1,8 +1,9 @@
 ---
 title: Enable Defender for open-source relational databases on Amazon Web Services (AWS)
 description: Enable Defender for open-source relational databases on AWS RDS to detect suspicious activity and protect supported database engines.
-ms.date: 06/02/2026
+ms.date: 07/03/2026
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a reader, I want to learn how to configure Microsoft Defender for open-source relational databases to enhance the security of my AWS databases.
 ai-usage: ai-assisted
 ---
@@ -22,11 +23,13 @@ The Defender for open-source relational databases plan in Microsoft Defender for
 
 This article explains how to enable Defender for open-source relational databases on AWS so that you can start receiving alerts for suspicious activity.
 
-When you enable this plan, Defender for Cloud also discovers sensitive data in your AWS account and enriches security insights with these findings. This capability is also included in Defender Cloud Security Posture Management (CSPM).
+When you enable this plan, Defender for Cloud also discovers sensitive data in your AWS account and enriches security insights with these findings. Sensitive data discovery is also included in Defender Cloud Security Posture Management (CSPM).
 
 Learn more about this Microsoft Defender plan in [Overview of Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md).
 
 ## Prerequisites
+
+Before you enable Defender for open-source relational databases on AWS, make sure you meet the following requirements:
 
 - You need a Microsoft Azure subscription. If you don't have one, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
@@ -67,7 +70,7 @@ To enable Defender for open-source relational databases on AWS:
 
 1. In the deployment method section, select **Download**.
 
-1. Follow the instructions to update the stack in AWS. This process creates or updates the CloudFormation template with the [required permissions](#required-permissions-for-defenderforcloud-datathreatprotectiondb-role).
+1. Follow the instructions to update the stack in AWS. Updating the AWS stack creates or updates the CloudFormation template with the [required permissions](#required-permissions-for-defenderforcloud-datathreatprotectiondb-role).
 
 1. Select the checkbox to confirm that the CloudFormation template was updated in your AWS environment (stack).
 
@@ -104,7 +107,7 @@ The following permissions are required for the role that is created or updated w
 
 ## Affected parameter and option group settings
 
-When you enable Defender for open-source relational databases, Defender for Cloud automatically configures auditing parameters in your RDS instances to consume and analyze access patterns. You don't need to modify these settings manually. They're listed here for reference.
+When you enable Defender for open-source relational databases, Defender for Cloud automatically configures auditing parameters in your RDS instances to consume and analyze access patterns. You don't need to modify these settings manually. The auditing settings are listed here for reference.
 
 | Type | Parameter | Value |
 | -- | -- | -- |
@@ -161,7 +164,8 @@ To disable Defender for open-source relational databases on AWS RDS:
 - [What is supported in sensitive data discovery](concept-data-security-posture-prepare.md#whats-supported)
 - [Discovering sensitive data on AWS RDS instances](concept-data-security-posture-prepare.md#discover-and-scan-aws-rds-instances)
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Respond to Defender open-source database alerts](defender-for-databases-usage.md)

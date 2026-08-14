@@ -5,11 +5,11 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: idpelleg
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #Customer intent: As a security analyst, I want to delete duplicate or erroneous incidents in my incident management system so that I can maintain an accurate and efficient incident queue.
 ---
 
@@ -52,7 +52,7 @@ You can delete one or more incidents directly from the Azure portal incident que
 1. Answer **Yes** to the confirmation prompt that appears.
     :::image type="content" source="media/delete-incident/delete-incident-confirm.png" alt-text="Screenshot of single incident deletion confirmation dialog.":::
 
-Alternatively, you can delete a single incident from the incident queue by selecting only one checkbox and using the multi-delete flow described in the following procedure.
+Alternatively, you can delete a single incident from the incident queue by selecting only one checkbox and using the multi-delete flow described in the "To delete multiple incidents" procedure.
 
 **To delete multiple incidents:**
 
@@ -71,6 +71,8 @@ Alternatively, you can delete a single incident from the incident queue by selec
 The [Incidents](/rest/api/securityinsights/preview/incidents) operation group allows you to delete incidents as well as to [create and update (edit)](/rest/api/securityinsights/preview/incidents/create-or-update), [get (retrieve)](/rest/api/securityinsights/preview/incidents/get), and [list incidents](/rest/api/securityinsights/preview/incidents/list).
 
 You [delete an incident](/rest/api/securityinsights/preview/incidents/delete) by sending a `DELETE` request to the following endpoint, specifying the target incident by its incident ID. After this request is made, the incident will no longer be visible in the incident queue in the portal.
+
+Use this request to delete an existing incident from a Microsoft Sentinel workspace by incident ID:
 
 ```http
 DELETE https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/incidents/{incidentId}?api-version=2022-07-01-preview
@@ -92,7 +94,7 @@ DELETE https://management.azure.com/subscriptions/{subscriptionId}/resourceGroup
 
 ## Next steps
 
-For more information, see:
+Learn more:
 - [Create your own incidents manually in Microsoft Sentinel](create-incident-manually.md)
 - [Relate alerts to incidents in Microsoft Sentinel](relate-alerts-to-incidents.md)
 - [Navigate, triage, and manage Microsoft Sentinel incidents](incident-navigate-triage.md)

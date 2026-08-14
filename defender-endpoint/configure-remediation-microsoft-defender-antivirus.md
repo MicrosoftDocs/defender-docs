@@ -1,17 +1,17 @@
 ---
 title: Configure remediation for Microsoft Defender Antivirus detections
-description: Configure what Microsoft Defender Antivirus should do when it detects a threat, and how long quarantined files should be retained in the quarantine folder
+description: Configure what Microsoft Defender Antivirus should do when it detects a threat, and how long quarantined files should be retained in the quarantine folder.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.topic: how-to
-ms.custom: nextgen, msecd-doc-authoring-1016
-ms.date: 07/02/2026
+ms.custom: nextgen, msecd-doc-authoring-1015
+ms.date: 08/12/2026
 ai-usage: ai-assisted
 ms.reviewer: yongrhee
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 - mde-ngp
@@ -19,6 +19,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
+#customer intent: As a security administrator, I want to configure remediation actions and retention periods so that Microsoft Defender Antivirus handles detected threats according to my organization's requirements.
 ---
 
 # Configure remediation for Microsoft Defender Antivirus detections
@@ -90,24 +91,39 @@ If you're using Configuration Manager, see the following articles:
 
 Use the following steps to configure remediation options in Group Policy:
 
-1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), and edit the Group Policy Object you want to configure.
+1. In Centralized Group Policy, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
-1. In the **Group Policy Management Editor**, go to **Computer configuration** and then select **Administrative templates**.
+1. In the GPMC console tree, expand Group Policy Objects in the forest and domain containing the GPO you want to edit.
 
-1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus**.
+1. Right-click the GPO, and then select **Edit**.
 
-1. Using the following table, edit the policy as needed.
+1. In the **Group Policy Management Editor**, go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus**.
 
-   |Setting|Description|Default setting (if not configured)|
-   |---|---|---|
-   |Scan <br/>Create a system restore point.|A system restore point is created each day before cleaning or scanning is attempted. |Disabled|
-   |Scan<br/>Turn on removal of items from scan history folder.|Specify how many days items should be kept in the scan history.|30 days|
-   |Root<br/>Turn off routine remediation.|Specify whether Microsoft Defender Antivirus automatically remediates threats, or whether to prompt the user.|Disabled. Threats are remediated automatically.|
-   |Quarantine<br/>Configure removal of items from Quarantine folder.|Specify how many days items should be kept in quarantine before being removed.|90 days|
-   |Threats \> Specify threats upon which default action shouldn't be taken when detected.|Specify how specific threats (using their threat ID) should be remediated. You can specify whether the specific threat should be quarantined, removed, or ignored.|Not applicable|
-   |Threats \> Specify threat alert levels at which default action shouldn't be taken when detected.|Every threat that is detected by Microsoft Defender Antivirus is assigned a threat level: <ul><li>`1`: Low</li><li>`2`: Medium</li><li>`4`: High</li><li>`5`: Severe</li></ul> Use this setting to specify how threats for each level are remediated. Valid values are: <ul><li>`2`: Quarantine</li><li>`3`: Remove</li><li>`6`: Ignore</li><li>`11`: None</li></ul> **Warning**: The actions Ignore (`6`) and None (`11`) don't remediate detected threats. Ignore (`6`) suppresses ongoing detection events, while None (`11`) continues to generate alerts and Protection History entries. Don't configure either action when [tamper protection is enabled](prevent-changes-to-security-settings-with-tamper-protection.md). Use these actions only in specialized environments (for example, industrial control systems or critical infrastructure) where Automatic remediation isn't practical for operations, other procedures exist to respond to detected threats, or compensating security controls are deployed. Use standard remediation actions (Quarantine (`2`) or Remove (`3`)) in all other environments.|Not applicable|
+   > [!NOTE]
+   > Group Policy paths before Windows 10, version 2004 (May 2020) might use _Windows_ Defender Antivirus instead of _Microsoft_ Defender Antivirus. Both names refer to the same policy location.
 
-1. Select **OK**.
+1. In the details pane of **Microsoft Defender Antivirus**, use the following table to select the location and setting you want to configure.
+
+   |Subfolder|Setting|Description|Default setting (if not configured)|
+   |---|---|---|---|
+   |n/a|Turn off routine remediation.|Specify whether Microsoft Defender Antivirus automatically remediates threats, or whether to prompt the user.|Disabled. Threats are remediated automatically.|
+   |Quarantine|Configure removal of items from Quarantine folder.|Specify how many days items should be kept in quarantine before being removed.|90 days|
+   |Scan|Create a system restore point.|A system restore point is created each day before cleaning or scanning is attempted. |Disabled|
+   |Scan|Turn on removal of items from scan history folder.|Specify how many days items should be kept in the scan history.|30 days|
+   |Threats|Specify threat alert levels at which default action shouldn't be taken when detected.|Every threat that is detected by Microsoft Defender Antivirus is assigned a threat level: <ul><li>`1`: Low</li><li>`2`: Medium</li><li>`4`: High</li><li>`5`: Severe</li></ul> Use this setting to specify how threats for each level are remediated. Valid values are: <ul><li>`2`: Quarantine</li><li>`3`: Remove</li><li>`6`: Ignore</li><li>`11`: None</li></ul> **Warning**: The actions Ignore (`6`) and None (`11`) don't remediate detected threats. Ignore (`6`) suppresses ongoing detection events, while None (`11`) continues to generate alerts and Protection History entries. Don't configure either action when [tamper protection is enabled](prevent-changes-to-security-settings-with-tamper-protection.md). Use these actions only in specialized environments (for example, industrial control systems or critical infrastructure) where Automatic remediation isn't practical for operations, other procedures exist to respond to detected threats, or compensating security controls are deployed. Use standard remediation actions (Quarantine (`2`) or Remove (`3`)) in all other environments.|n/a|
+   |Threats|Specify threats upon which default action shouldn't be taken when detected.|Specify how specific threats (using their threat ID) should be remediated. You can specify whether the specific threat should be quarantined, removed, or ignored.|n/a|
+
+1. In the details pane of the selected location, open the setting. To open and configure a setting, use any of the following methods:
+   - Double-click the setting.
+   - Right-click the setting, and then select **Edit**.
+   - Select the setting, and then select **Action** \> **Edit**.
+
+1. In the setting window that opens, configure the setting, and then select **OK**.
+
+   Repeat this step as many times as necessary.
+
+> [!TIP]
+> You can also configure Group Policy locally on individual devices by using the Local Group Policy Editor (`gpedit.msc`). Navigate to the same path: **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus**.
 
 ## Configure remediation options using PowerShell or WMI
 

@@ -1,9 +1,11 @@
 ---
 title: Integrate with Open Systems
 description: This article describes how to integrate Microsoft Defender for Cloud Apps with Open Systems for seamless cloud discovery and automated block of unsanctioned apps.
-ms.date: 01/29/2023
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Mravela
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 # Integrate Defender for Cloud Apps with Open Systems
 
@@ -16,10 +18,14 @@ If you work with both Defender for Cloud Apps and Open Systems, you can integrat
 
 ## Prerequisites
 
+Before you begin, make sure you have the following licenses:
+
 - A valid license for Microsoft Defender for Cloud Apps
 - A valid license for Open Systems Secure Web Gateway
 
 ## Deployment
+
+To deploy the integration between Defender for Cloud Apps and Open Systems, follow these steps:
 
 1. Contact your Technical Account Manager in Open Systems to get the *Microsoft Cloud App Security with Secure Web Gateway Configuration Guide* to integrate the products.
 1. Investigate cloud apps discovered on your network. For more information and investigation steps, see [Working with cloud discovery](working-with-cloud-discovery-data.md).

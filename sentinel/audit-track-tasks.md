@@ -5,11 +5,11 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: idpelleg
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #Customer intent: As a SOC manager, I want to audit and track changes to incident tasks so that I can evaluate the effectiveness of task assignments and improve SOC efficiency.
 ---
 
@@ -25,7 +25,7 @@ This article explains how you, as a SOC manager, can audit the history of Micros
 
 The *SecurityIncident* table is an audit table&mdash;it stores not the incidents themselves, but rather records of the life of an incident: its creation and any changes made to it. Any time an incident is created or a change is made to an incident, a record is generated in this table showing the now-current state of the incident.
 
-The addition of tasks details to the schema of the *SecurityIncident* table allows you to audit tasks in greater depth.
+The addition of task-detail fields to the schema of the *SecurityIncident* table allows you to audit tasks in greater depth.
 
 The detailed information added to the **Tasks** field consists of key-value pairs taking the following structure:
 
@@ -42,7 +42,7 @@ The detailed information added to the **Tasks** field consists of key-value pair
 
 ## View incident tasks in the SecurityIncident table
 
-Apart from the **Incident tasks workbook**, you can audit task activity by querying the *SecurityIncident* table in **Logs**. The rest of this article shows you how to do this, as well as how to read and understand the query results to get task activity information.
+Apart from the **Incident tasks workbook**, you can audit task activity by querying the *SecurityIncident* table in **Logs**. This section shows you how to query the table and read and understand the results to get task activity information.
 
 1. In the **Logs** page, enter the following query in the query window and run it. This query will return all the incidents that have any tasks assigned.
 
@@ -80,6 +80,8 @@ Apart from the **Incident tasks workbook**, you can audit task activity by query
 
 ### View tasks added to the list
 
+Perform the following steps to add a task to an incident and observe how the *SecurityIncident* record changes.
+
 1. Let's add a task to the incident, and then we'll come back here, run the query again, and see the changes in the results.
 
     1. On the **Incidents** page, enter the incident ID number in the Search bar.
@@ -88,7 +90,7 @@ Apart from the **Incident tasks workbook**, you can audit task activity by query
 
         :::image type="content" source="media/audit-track-tasks/incident-task-list-task-added.png" alt-text="Screenshot shows incident tasks panel.":::
 
-1. Now let's return to the **Logs** page and run our query again. 
+1. Now let's return to the **Logs** page and run the *SecurityIncident* query again. 
 
     In the results you'll see that there's a **new record in the table** for this same incident (note the timestamps). Expand the record and you'll see that while the record we saw before had two tasks in its *Tasks* array, the new one has three. The newest task is the one we just added, as you can see by its title.
 
@@ -104,13 +106,15 @@ Now, if we go back to the task titled "This task is a test task!" in the inciden
 
 Let's go back to the task list in the incident details page and delete the task titled "This task is a test task!".
 
-When we come back to **Logs** and run the query yet again, we'll see another new record, only this time the status for our task&mdash;the one titled "This task is a test task!"&mdash;will be **Deleted**.
+When we come back to **Logs** and rerun the incident-task query, we'll see another new record, only this time the status for our task&mdash;the one titled "This task is a test task!"&mdash;will be **Deleted**.
 
-**However**&mdash; once the task has appeared one such time in the array (with a **Deleted** status), it will no longer appear in the **Tasks** array in new records for that incident in the **SecurityIncident** table. The existing records, like those we saw above, will continue to preserve the evidence that this task once existed.
+**However**&mdash; once the task has appeared one such time in the array (with a **Deleted** status), it will no longer appear in the **Tasks** array in new records for that incident in the **SecurityIncident** table. Existing earlier records for the incident will continue to preserve the evidence that this task once existed.
 
 ## View active tasks belonging to a closed incident
 
-The following query allows you to see if an incident was closed but not all its assigned tasks were completed. This knowledge can help you verify that any remaining loose ends in your investigation were brought to a conclusion&mdash;all relevant parties were notified, all comments were entered, all responses were verified, and so on.
+The following query allows you to see if an incident was closed but not all its assigned tasks were completed. This knowledge can help you verify that any remaining loose ends in your investigation were brought to a conclusion&mdash;all relevant parties were notified, all comments were entered, all responses were verified, and so on. The query uses the `arg_max` aggregation function to return only the most recent record for each incident and for each task, so the results reflect the latest state.
+
+Run the following query to retrieve the most recent record for each incident, filter for closed incidents, and return any tasks that are not yet completed or deleted:
 
 ```kusto
 SecurityIncident
@@ -124,7 +128,7 @@ SecurityIncident
 | sort by lastModifiedTimeUtc desc
 ```
 
-See more information on the following Kusto operators and functions used in the example queries in this article:
+For more information about the Kusto operators and functions used in the example queries in this article, see:
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
 - [***project*** operator](/kusto/query/project-operator?view=microsoft-sentinel&preserve-view=true)
 - [***sort*** operator](/kusto/query/sort-operator?view=microsoft-sentinel&preserve-view=true)

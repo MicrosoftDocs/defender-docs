@@ -33,11 +33,22 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-|Aug 8, 2026 |CIEM Updates|[Breaking change: Unused actions no longer included in AWS and GCP overprovisioned identity assessments]()|
+| August 6, 2026 | Public preview | [On-demand malware scanning now supports scanning specific blobs, files, containers, and file shares](#on-demand-malware-scanning-now-supports-scanning-specific-blobs-files-containers-and-file-shares) |
+| August 6, 2026 | CIEM Updates | [Breaking change: Unused actions no longer included in AWS and GCP overprovisioned identity assessments]()|
+
+### On-demand malware scanning now supports scanning specific blobs, files, containers, and file shares
+
+August 6, 2026
+
+On-demand malware scanning in Microsoft Defender for Storage now supports targeted scanning of specific items. Instead of scanning an entire storage account, you can scope scans to a single blob or file, a specific container or file share, or all objects matching a path prefix.
+
+You can use filters in the REST API request body to specify which items to scan. When no filters are provided, the scan covers the entire storage account.
+
+Learn more about [on-demand malware scanning](on-demand-malware-scanning.md).
 
 ### Breaking change: Unused actions no longer included in AWS and GCP overprovisioned identity assessments
 
-Aug 8, 2026
+August 6, 2026
 
 To improve the performance and scalability of overprovisioned identity recommendation generation, Microsoft Defender for Cloud will no longer use the **unused actions** when computing overprovisioned identity assessments for **AWS and GCP** environments.
 

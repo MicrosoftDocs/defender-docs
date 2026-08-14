@@ -5,12 +5,12 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
-ms.custom: 
+ms.custom:
 - msecd-doc-authoring-1014
 - autoir
 - admindeeplinkDEFENDER
@@ -85,7 +85,7 @@ To undo a single remediation action:
 
 To undo multiple remediation actions at once:
 
-1. Go to the Action center (https://security.microsoft.com/action-center) and sign in.
+1. Go to the [Microsoft Defender Action center](https://security.microsoft.com/action-center) and sign in.
 
 2. On the **History** tab, select the actions that you want to undo. Make sure to select items that have the same Action type. A flyout pane opens.
 
@@ -94,14 +94,17 @@ To undo multiple remediation actions at once:
 <a name="to-remove-a-file-from-quarantine-across-multiple-devices"></a>
 ### Remove a file from quarantine across multiple devices 
 
+To remove a quarantined file from multiple devices at once, perform the following steps:
+
 1. Go to the Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) and sign in.
 
 2. On the **History** tab, select a file that has a **Quarantine file** Action type.
 
-3. In the pane on the right side of the screen, select **Apply to X more instances of this file**, and then select **Undo**.
+3. In the pane on the right side of the screen, select **Apply to X more instances of the selected quarantined file**, and then select **Undo**.
 
 ## Next steps
 
 - [View the details and results of an automated investigation](m365d-autoir-results.md)
 - [Address false positives or false negatives](m365d-autoir-report-false-positives-negatives.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

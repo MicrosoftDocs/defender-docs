@@ -67,7 +67,7 @@ To enhance your endpoint security experience, Microsoft is releasing the Microso
    - `*.config.ecs.gov.teams.microsoft.us (GCC-H)`
    - `*.config.ecs.dod.teams.microsoft.us (DoD)`
 
-1. If you're using [Application Control for Windows](/windows/security/application-security/application-control/windows-defender-application-control/wdac), or you're running non-Microsoft antivirus or endpoint detection and response software, make sure to add the processes mentioned earlier to your allowlist.
+1. If you're using [Application Control for Windows](/windows/security/application-security/application-control/app-control-for-business/appcontrol), or you're running non-Microsoft antivirus or endpoint detection and response software, make sure to add the processes mentioned earlier to your allowlist.
 
 1. Consumers don't need to take any actions to prepare.
 

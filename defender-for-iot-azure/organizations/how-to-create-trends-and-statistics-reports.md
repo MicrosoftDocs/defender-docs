@@ -1,10 +1,10 @@
 ---
 title: Create trends and statistics reports in Defender for IoT
 description: Gain insight into network activity, statistics, and trends by using Defender for IoT Trends and Statistics widgets.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Create trends and statistics reports
@@ -17,7 +17,7 @@ Create custom dashboards to track specific data needed by your organization, suc
 
 To create trends and statistics dashboards, you must be able to access the OT network sensor you want to generate data for, as an **Administrator** or **Security Analyst** user.
 
-For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](roles-on-premises.md)
+For role requirements, see [On-premises users and roles for OT monitoring with Defender for IoT](roles-on-premises.md)
 
 ## Create custom dashboards
 
@@ -69,7 +69,7 @@ The following table summarizes common use cases for dashboard widgets.
 
 ## Related content
 
-- View additional reports based on cloud-connected sensors in the Azure portal. For more information, see [Visualize Microsoft Defender for IoT data with Azure Monitor workbooks](workbooks.md)
+- To view cloud-connected sensor reports in the Azure portal, see [Visualize Microsoft Defender for IoT data with Azure Monitor workbooks](workbooks.md)
 
 - Continue creating other reports for more security data from your OT sensor. For more information, see:
   - [Risk assessment reporting](how-to-create-risk-assessment-reports.md)

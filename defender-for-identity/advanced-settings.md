@@ -1,12 +1,12 @@
 ---
 title: Adjust alert thresholds | Microsoft Defender for Identity
 description: Learn how to configure the number of Microsoft Defender for Identity alerts triggered of specific alert types by adjusting alert thresholds.
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 #CustomerIntent: As a Microsoft Defender for Identity customer, I want to reduce the number of false positives by adjusting thresholds for specific alerts.
 ms.reviewer: rlitinsky
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Adjust alert thresholds
@@ -34,6 +34,9 @@ We recommend changing alert thresholds from the default (**High**) only after ca
 
 For example, if you have NAT or VPN, we recommend that you consider any changes to relevant detections carefully, including *Suspected DCSync attack (replication of directory services)* and *Suspected identity theft* detections.
 
+> [!WARNING]
+> Reverting to default is irreversible and any changes made to your threshold levels are lost.
+
 **To define your alert thresholds**:
 
 1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** > **Identities** > **Adjust alert thresholds**.
@@ -48,9 +51,6 @@ For example, if you have NAT or VPN, we recommend that you consider any changes 
     When you select **Medium** or **Low**, details are bolded in the **Information** column to help you understand how the change affects the alert behavior.
 
 1. Select **Apply changes** to save changes.
-
-   > [!WARNING]
-   > Reverting to default is irreversible and any changes made to your threshold levels are lost.
 
 1. To reset all alerts to the default threshold (**High**), select **Revert to default** and then **Apply changes**.
 

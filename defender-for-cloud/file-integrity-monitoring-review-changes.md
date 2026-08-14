@@ -2,8 +2,9 @@
 title: Review changes in file integrity monitoring
 description: Learn how to review changes in file integrity monitoring in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 05/28/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Review changes in file integrity monitoring
@@ -15,12 +16,14 @@ File integrity monitoring uses the Microsoft Defender for Endpoint agent to coll
 > [!NOTE]
 > The older method of data collection uses the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)). Support for using the MMA ended in November 2024.
 
-This article shows you how to review file changes.
+Use File Integrity Monitoring in Defender for Cloud to review tracked file and registry changes.
 
 ## Prerequisites
 
+Before you review file changes, make sure the following prerequisites are met:
+
 - Defender for Servers Plan 2 must be enabled.
-- [File integrity monitoring with the Defender for Endpoint agent](file-integrity-monitoring-enable-defender-endpoint.md) must be enabled. If it isn't enabled this message appears - **File Integrity Monitoring is not enabled**. To enable select **Onboard subscriptions**, and then enable the feature.
+- [File integrity monitoring with the Defender for Endpoint agent](file-integrity-monitoring-enable-defender-endpoint.md) must be enabled. If file integrity monitoring with the Defender for Endpoint agent isn't enabled, this message appears: **File Integrity Monitoring is not enabled**. To enable it, select **Onboard subscriptions**, and then enable file integrity monitoring.
 
 ## Monitor entities and files
 
@@ -41,7 +44,7 @@ To monitor entities and files, follow these steps:
 1. If you select the subscription of the resource (under the column **Subscription name**), a query opens with all the tracked files and registries in that subscription.
 
 > [!NOTE]
-> If you previously used File Integrity Monitoring over MMA, you can return to that method by selecting **Change to previous experience**. This will be available until the FIM over MMA feature is deprecated. For information on the deprecation plan, see [Prepare for retirement of the Log Analytics agent](prepare-deprecation-log-analytics-mma-agent.md).
+> If you previously used File Integrity Monitoring over the Log Analytics agent (also known as the Microsoft Monitoring Agent, or MMA), you can return to that method by selecting **Change to previous experience**. The **Change to previous experience** option will be available until the FIM over MMA feature is deprecated. For information on the deprecation plan, see [Prepare for retirement of the Log Analytics agent](prepare-deprecation-log-analytics-mma-agent.md).
 
 ## Retrieve and analyze file integrity monitoring data  
 

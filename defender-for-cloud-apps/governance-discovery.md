@@ -1,25 +1,25 @@
 ---
 title: Govern discovered apps 
 description: Govern discovered apps by sanctioning approved apps or unsanctioning and blocking unwanted apps in your organization.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Mravela
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
 # Govern discovered apps in Microsoft Defender for Cloud Apps
 
 
-After you review the list of discovered apps in your environment, you can secure your environment by approving safe apps (**Sanctioned**) or prohibiting unwanted apps (**Unsanctioned**) in the following ways.
+Microsoft Defender for Cloud Apps lets you govern discovered apps by approving safe apps (**Sanctioned**) or prohibiting unwanted apps (**Unsanctioned**). Sanctioned apps are marked as approved for use, while unsanctioned apps can be monitored or blocked. This article covers how to sanction or unsanction apps, block apps by using built-in streams or block scripts, and resolve governance conflicts.
 
 ## Prerequisites
 
-Before you can block discovered cloud apps, you must meet the following requirements:
+Before you block discovered cloud apps, make sure you meet these requirements:
 
 - [Turn on **Cloud Protection** in Microsoft Defender for Endpoint](/defender-endpoint/enable-cloud-protection-microsoft-defender-antivirus)
-- [Turn on **Network Protection** in Microsoft Defender for Endpoint.](/defender-endpoint/network-protection#required-browser-configuration)
-- Install the **Microsoft Defender Browser Protection** add-on across all non-Microsoft browsers in your organization.
+- [Turn on **Network Protection** in Microsoft Defender for Endpoint](/defender-endpoint/network-protection#required-browser-configuration)
+- Install the **Microsoft Defender Browser Protection** add-on in all non-Microsoft browsers in your organization.
 
 ## Sanctioning/unsanctioning an app
 
@@ -31,13 +31,15 @@ You can mark a specific risky app as unsanctioned by clicking the three dots at 
 > An app that is onboarded to inline proxy or connected via app connector, all such applications would be auto sanctioned state in Cloud Discovery.
 ## Blocking apps with built-in streams
 
-If your tenant uses Microsoft Defender for Endpoint, once you mark an app as unsanctioned, it's automatically blocked. Moreover, you can scope blocking to specific Defender for Endpoint device groups, monitor applications, and use the [warn and educate users when accessing risky apps](mde-govern.md#educate-users-when-accessing-risky-apps) features. For more information, see [Govern discovered apps using Microsoft Defender for Endpoint](mde-govern.md).
+If your organization's Microsoft 365 tenant uses Microsoft Defender for Endpoint, apps you mark as unsanctioned are blocked automatically. You can also scope blocking to specific device groups, monitor apps, and use the [warn and educate users when accessing risky apps](mde-govern.md#educate-users-when-accessing-risky-apps) features. For more information, see [Govern discovered apps using Microsoft Defender for Endpoint](mde-govern.md).
 
-Otherwise, if your tenant uses Zscaler NSS, iboss, Corrata, Menlo, or Open Systems, you can still enjoy seamless blocking capabilities when an app is unsanctioned, but you can't use the scope by device groups or [warn and educate users when accessing risky apps](mde-govern.md#educate-users-when-accessing-risky-apps) features. For more information, see [Integrate with Zscaler](zscaler-integration.md), [Integrate with iboss](iboss-integration.md), [Integrate with Corrata](Corrata-integration.md), [Integrate with Menlo](menlo-integration.md), and [Integrate with Open Systems](open-systems-integration.md).
+If your tenant uses Zscaler NSS, iboss, Corrata, Menlo, or Open Systems, unsanctioned apps are also blocked. However, you can't scope blocking by device groups or use the [warn and educate users when accessing risky apps](mde-govern.md#educate-users-when-accessing-risky-apps) features. For more information, see [Integrate with Zscaler](zscaler-integration.md), [Integrate with iboss](iboss-integration.md), [Integrate with Corrata](Corrata-integration.md), [Integrate with Menlo](menlo-integration.md), and [Integrate with Open Systems](open-systems-integration.md).
 
 ## Block apps by exporting a block script
 
-Defender for Cloud Apps enables you to block access to unsanctioned apps by using your existing on-premises security appliances. You can generate a dedicated block script and import it to your appliance. This solution doesn't require redirection of all of the organization's web traffic to a proxy.
+Defender for Cloud Apps enables you to block access to unsanctioned apps by using your existing on-premises security appliances. You can generate a dedicated block script and import it to your appliance. Using a block script doesn't require redirection of all of the organization's web traffic to a proxy.
+
+Before you begin, make sure you have a supported on-premises security appliance configured and available to import the block script.
 
 1. In the cloud discovery dashboard, tag any apps you want to block as **Unsanctioned**.
 
@@ -59,13 +61,13 @@ Defender for Cloud Apps enables you to block access to unsanctioned apps by usin
 
 ## Blocking unsupported streams
 
-If your tenant doesn't use Microsoft Defender for Endpoint, Zscaler NSS, iboss, Corrata, Menlo, or Open Systems, you can still export a list of all the domains of all unsanctioned apps and configure your third-party nonsupported appliance to block those domains.
+If your tenant doesn't use Microsoft Defender for Endpoint, Zscaler NSS, iboss, Corrata, Menlo, or Open Systems, you can export all domains for unsanctioned apps. Then configure your third-party appliance to block those domains.
 
 In the **Discovered apps** page, filter all *Unsanctioned* apps and then use the export capability to export all the domains.
 
 ## Nonblockable applications
 
-To prevent users from accidentally blocking business-critical services and causing downtime, the following services can't be blocked using Defender for Cloud Apps, via the UI or policies:
+Some services are critical to business operations. To prevent downtime, you can't block these services in Defender for Cloud Apps, whether through the UI or policies:
 
 - Microsoft Defender for Cloud Apps
 - Microsoft Defender Security Center
@@ -85,7 +87,7 @@ To prevent users from accidentally blocking business-critical services and causi
 <a name="governance-conflicts"></a>
 ## Resolve governance conflicts between manual actions and policies
 
-If there's a conflict between [manually sanctioning or unsanctioning an app](#sanctioningunsanctioning-an-app) and [governance actions set by cloud discovery policies](cloud-discovery-policies.md), the last operation applied takes precedence.
+If there's a conflict between a manual sanction or unsanction action and a [governance action set by a cloud discovery policy](cloud-discovery-policies.md), the last operation applied takes precedence.
 
 ## Next steps
 

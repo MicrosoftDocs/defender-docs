@@ -1,5 +1,5 @@
 ---
-title: Visualize Microsoft Defender for IoT data with Azure Monitor workbooks
+title: Visualize Microsoft Defender for IoT Data with Azure Monitor Workbooks
 description: Learn how to view and create Azure Monitor workbooks for Defender for IoT data.
 ms.topic: how-to
 ms.date: 06/12/2026
@@ -89,7 +89,7 @@ The following sample Azure Resource Graph (ARG) queries are commonly used in Def
 
 Use the following sample queries to analyze alert data in your Defender for IoT workbooks.
 
-**Distribution of alerts across sensors**
+#### Distribution of alerts across sensors
 
 ```kusto
 iotsecurityresources
@@ -100,7 +100,7 @@ iotsecurityresources
 | sort by Alerts desc
 ```
 
-**New alerts from the last 24 hours**
+#### New alerts from the last 24 hours
 
 ```kusto
 iotsecurityresources
@@ -112,7 +112,7 @@ iotsecurityresources
 | project AlertTime, Type
 ```
 
-**Alerts by source IP address**
+#### Alerts by source IP address
 
 Use the following query to list alerts associated with a specific source IP address, along with their destination IP and alert type.
 
@@ -130,7 +130,7 @@ iotsecurityresources
 
 The following sample queries help you explore OT device inventory and related device data in your Defender for IoT workbooks.
 
-**OT device inventory by vendor**
+#### OT device inventory by vendor
 
 The following query groups OT device inventory by hardware vendor to help you identify the distribution of vendors in your environment.
 
@@ -142,7 +142,7 @@ iotsecurityresources
 | sort by Devices
 ```
 
-**OT device inventory by sub-type, such as PLC, embedded device, UPS, and so on**
+#### OT device inventory by sub-type, such as PLC, embedded device, UPS, and so on
 
 Use the following query to break down OT devices by sub-type, such as PLCs and UPS devices, for inventory analysis.
 
@@ -154,7 +154,7 @@ iotsecurityresources
 | sort by Devices
 ```
 
-**New OT devices by sensor, site, and IPv4 address**
+#### New OT devices by sensor, site, and IPv4 address
 
 Use the following query to list new OT devices discovered in the last 24 hours, along with their sensor, site, and IPv4 address details.
 
@@ -171,7 +171,7 @@ iotsecurityresources
 | project TimeFirstSeen, Site, Sensor, DeviceName, IPv4
 ```
 
-**Summarize alerts by Purdue level**
+#### Summarize alerts by Purdue level
 
 Use the following query to count alerts by Purdue level, joining alert data with OT device information to help you understand which network layers generate the most alerts.
 
@@ -196,16 +196,11 @@ iotsecurityresources
     | summarize Alerts=count() by tostring(deviceProperties.purdueLevel)
 ```
 
-## Next steps
-
-Learn more about viewing dashboards and reports on the sensor console:
+## Related content
 
 - [Run data mining queries](how-to-create-data-mining-queries.md)
 - [Risk assessment reporting](how-to-create-risk-assessment-reports.md)
 - [Create trends and statistics dashboards](how-to-create-trends-and-statistics-reports.md)
-
-Learn more about Azure Monitor workbooks and Azure Resource Graph:
-
 - [Azure Resource Graph documentation](/azure/governance/resource-graph/)
 - [Azure Monitor workbook documentation](/azure/azure-monitor/visualize/workbooks-overview)
 - [Kusto Query Language (KQL) documentation](/azure/data-explorer/kusto/query/)

@@ -6,7 +6,7 @@ metadata:
   author: chrisda
   ms.author: chrisda
   manager: bagol
-  ms.date: 04/02/2026
+  ms.date: 07/17/2026
   audience: ITPro
   ms.topic: faq
   ms.localizationpriority: medium
@@ -106,7 +106,7 @@ sections:
       - question: |
           How do I find out why a message was quarantined?
         answer: |
-          The **Quarantine reason** column that's available on the **Email** tab of the **Quarantine** page in the Defender portal at <https://security.microsoft.com/quarantine?viewid=Email>. Common reasons are **Transport rule**, **Bulk**, **Spam**, **Malware**, **Phishing**, **High confidence phishing**, or **Admin action - File type block**. For more information, see [View quarantined email](quarantine-admin-manage-messages-files.md#view-quarantined-email).
+          The **Quarantine reason** column that's available on the **Email** tab of the **Quarantine** page in the Defender portal at <https://security.microsoft.com/quarantine?viewid=Email>. Common reasons are **Transport rule**, **Bulk**, **Spam**, **Malware**, **Phishing**, **High confidence phishing**, **Password protected item**, or **Admin action - File type block**. For more information, see [View quarantined email](quarantine-admin-manage-messages-files.md#view-quarantined-email).
 
       - question: |
           Messages are missing from quarantine. What happened to them?

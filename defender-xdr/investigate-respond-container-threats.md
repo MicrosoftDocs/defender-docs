@@ -9,12 +9,12 @@ ms.collection:
   - m365-security
   - tier1
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
 - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 - <a href="https://learn.microsoft.com/unified-secops-platform/" target="_blank">Microsoft Sentinel in the Defender portal</a>
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Investigate and respond to container threats in the Microsoft Defender portal
 
@@ -23,17 +23,17 @@ ms.custom: msecd-doc-authoring-1014
 > [!IMPORTANT]
 > Some information in this article relates to a prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties expressed or implied, with respect to the information provided here
 
-Security operations can now investigate and respond to container-related alerts in near real-time and hunt for related activities with the integration of cloud-native response actions and investigation logs in the Microsoft Defender portal. The availability of attack paths can also help analysts immediately investigate and address critical security issues to prevent a potential breach.
+The Microsoft Defender portal helps security teams investigate and respond to container threats in near real-time. It combines cloud-native response actions, investigation logs, and attack path analysis in one place.
 
-As organizations use containers and Kubernetes on platforms like Azure Kubernetes Service (AKS), Google Kubernetes Engine (GKE), ad Amazon Elastic Kubernetes Service (EKS), the attack surface expands, increasing security challenges. Containers can also be targeted by threat actors and used for malicious purposes.
+Organizations use containers and Kubernetes on platforms like Azure Kubernetes Service (AKS), Google Kubernetes Engine (GKE), and Amazon Elastic Kubernetes Service (EKS). As adoption grows, the attack surface expands. Threat actors can target containers for malicious purposes.
 
-Security operations center (SOC) analysts can now easily track container threats with near real-time alerts and immediately respond to these threats by isolating or terminating container pods. These cloud-native response actions allow analysts to instantly mitigate a container attack from their environment in a click.
+Security operations center (SOC) analysts can track container threats with near real-time alerts. They can respond by isolating or terminating container pods in a single click.
 
-Analysts can then investigate the full scope of the attack with the ability to hunt for related activities within the incident graph. They can also further apply preventive actions with the availability of potential attack paths in the incident graph. Using attack path information from the incident graph allows security teams to inspect vulnerable paths and prevent possible breaches. In addition, Threat analytics reports specific to container threats and attacks are available for analysts to gain more information and apply recommendations for container attack response and prevention.
+Analysts can also hunt for related activities in the incident graph to find the full scope of an attack. Attack paths in the incident graph help security teams spot vulnerable paths and prevent breaches. Threat analytics reports cover active container threats and provide steps for response and prevention.
 
 ## Prerequisites
 
-Users on AKS, EKS, and GKE platforms can use cloud response actions, investigation logs, and attack paths in the Microsoft Defender portal with the following licenses:
+Users on AKS, EKS, and GKE platforms need the following licenses to use cloud response actions, investigation logs, and attack paths in the Microsoft Defender portal:
 
 |Required license|Actions|
 |---|---|
@@ -65,14 +65,14 @@ The **isolate pod** and **restrict pod access** response actions require a netwo
 - Google Kubernetes Engine: [Control communication between Pods and Services using network policies](https://cloud.google.com/kubernetes-engine/docs/how-to/network-policy)
 - Amazon Kubernetes Engine: [Limit pod traffic with Kubernetes network policies](https://docs.aws.amazon.com/eks/latest/userguide/cni-network-policy.html)
 
-To verify your network plugins are supported, follow the steps to access your platform's Cloud Shell and check your network plugins in the [Troubleshoot issues](#troubleshoot-issues) section.
+To verify your network plugins are supported, access your platform's Cloud Shell and run the network plugin check command. For detailed steps, see [Troubleshoot issues](#troubleshoot-issues) later in this article.
 
 The **terminate pod** response action functions regardless of the presence of a network policy.
 
 <a name="permissions"></a>
 ## Required permissions
 
-Response actions require the following permissions for Microsoft Defender for Cloud in Microsoft Defender unified role-based access control (RBAC):
+To use response actions, you need these Microsoft Defender for Cloud permissions in Microsoft Defender unified RBAC:
 
 |Permission name|Level|
 |:---|:---:|
@@ -90,13 +90,13 @@ To investigate container threats in the Microsoft Defender portal:
    :::image type="content" source="media/investigate-respond-container-threats/incident-queue-small.png" alt-text="Incident queue filtered to show container-related incidents." lightbox="media/investigate-respond-container-threats/incident-queue.png":::
 3. In the incident graph, select the pod/service/cluster entity you need to investigate. Select **Kubernetes service details**, **Kubernetes pod details**, **Kubernetes cluster details**, or **Container registry details** to view relevant information about the service, pod, or registry.
 
-Using [Threat analytics](threat-analytics.md) reports, analysts can utilize threat intelligence from expert Microsoft security researchers to learn about active threat actors and campaigns exploiting containers, new attack techniques that might affect containers, and prevalent threats that affect containers.
+[Threat analytics](threat-analytics.md) reports help analysts learn about active threat actors targeting containers, new attack methods, and common container threats. These reports use threat intelligence from Microsoft security researchers.
 
-Access threat analytics reports from **Threat intelligence > Threat analytics**. You can also open a specific report from the incident page by selecting **View threat analytics report** under **Related threats** on the incident side pane.
+To access these reports, go to **Threat intelligence > Threat analytics**. You can also open a report from the incident page. Select **View threat analytics report** under **Related threats** on the incident side pane.
 
 :::image type="content" source="media/investigate-respond-container-threats/view-threat-analytics-small.png" alt-text="Highlighting how to view threat analytics reports from the incident page." lightbox="media/investigate-respond-container-threats/view-threat-analytics.png":::
 
-Threat analytics reports also contain relevant mitigation, recovery, and prevention methods that analysts can assess and apply to their environment. Using the information in threat analytics reports helps SOC teams defend and protect their environment from container attacks. Here's an example of an analyst report about a container attack.
+Each report includes steps for mitigation, recovery, and prevention. SOC teams can use this information to defend their environment from container attacks. Here's an example of a report about a container attack.
 
 :::image type="content" source="media/investigate-respond-container-threats/threat-analytics-sample-small.png" alt-text="Sample page of a container attack threat analytics report." lightbox="media/investigate-respond-container-threats/threat-analytics-sample.png":::
 
@@ -108,33 +108,35 @@ You can **isolate**, **restrict access to**, or **terminate** a pod once you det
 
 You can release a pod from isolation with the **release from isolation** action once your investigation is complete. This option appears on the side pane for isolated pods.
 
-Details of all response actions can be viewed in the [Action center](m365d-action-center.md). In the Action center page, select the response action you want to inspect to view more information about the action like which entity was acted on, when the action was done, and view the comments on the action. For isolated pods, the **release from isolation** action is also available in the Action center details pane.
+You can view all response actions in the [Action center](m365d-action-center.md). Select a response action to see details such as the affected entity, the time of the action, and any comments. For isolated pods, the **release from isolation** action is also available in the Action center details pane.
 
 :::image type="content" source="media/investigate-respond-container-threats/action-center-sample-small.png" alt-text="Sample of cloud response actions listed in the Action center." lightbox="media/investigate-respond-container-threats/action-center-sample.png":::
 
 ## Hunt for container-related activities
 
-To determine the full scope of a container attack, you can deepen your investigation with the **Go hunt** action available in the incident graph. You can immediately view all process events and activities related to container-related incidents from the incident graph.
+Use the **Go hunt** action in the incident graph to find the full scope of a container attack. This action shows all process events and activities linked to the incident.
 
 :::image type="content" source="media/investigate-respond-container-threats/azure-go-hunt-small.png" alt-text="Highlighting the go hunt action in the incident graph." lightbox="media/investigate-respond-container-threats/azure-go-hunt.png":::
 
-In the [Advanced hunting](advanced-hunting-overview.md) page, you can extend your search for container-related activities using the **CloudProcessEvents** and **CloudAuditEvents** tables.
+On the [Advanced hunting](advanced-hunting-overview.md) page, search for container activities using the **CloudProcessEvents** and **CloudAuditEvents** tables.
 
-The [CloudProcessEvents](advanced-hunting-cloudprocessevents-table.md) table contains information about process events in multi-cloud hosted environments such as Azure Kubernetes Service, Amazon Elastic Kubernetes Service, and Google Kubernetes Engine. 
+The [CloudProcessEvents](advanced-hunting-cloudprocessevents-table.md) table lists process events from multi-cloud platforms like Azure Kubernetes Service, Amazon Elastic Kubernetes Service, and Google Kubernetes Engine.
 
-The [CloudAuditEvents](advanced-hunting-cloudauditevents-table.md) table contains cloud audit events from cloud platforms protected by Microsoft Defender for Cloud. It also contains Kubeaudit logs, which holds information about Kubernetes-related events.
+The [CloudAuditEvents](advanced-hunting-cloudauditevents-table.md) table lists cloud audit events from platforms that Microsoft Defender for Cloud protects. It also includes Kubeaudit logs with details about Kubernetes events.
 
 ## Troubleshoot issues
 
-This section addresses issues that you might encounter when investigating and responding to container threats.
+The following troubleshooting guidance addresses issues that you might encounter when investigating and responding to container threats.
 
 ### The isolate pod or restrict pod access response action is not available
 
-If the isolate pod or restrict pod access action is grayed out, verify that you have the necessary permissions to perform the selected action. Refer to the [Permissions](#permissions) section to check and validate that you have the correct permissions.
+If the isolate pod or restrict pod access action is grayed out, verify that you have the necessary permissions to perform the selected action. Refer to [Required permissions for response actions](#permissions) to validate that you have the correct permissions.
 
 See [Permissions in Microsoft Defender unified role-based access control (RBAC)](custom-permissions-details.md) for more information.
 
 ### The isolate pod or restrict pod access action failed
+
+If the isolate pod or restrict pod access action fails, perform the following checks:
 
 1. Check the Kubernetes cluster version. The isolate pod and restrict pod access actions support Kubernetes clusters from version 1.27 and later.
 2. Check that you are using the required network plugins and that it matches the minimum versions supported. To check your plugins, access the Cloud Shell in your platform and run the command to check your network plugins.

@@ -116,10 +116,12 @@
           items:
             - name: Integrate SAP systems
               items:
+                - name: Overview
+                  href: sap/solution-overview.md
                 - name: SAP applications
                   items:
                     - name: Overview
-                      href: sap/solution-overview.md
+                      href: sap/sap-applications-overview.md
                     - name: Deploy the SAP integration
                       items:
                         - name: Deployment overview
@@ -137,6 +139,8 @@
                           href: sap/sap-deploy-troubleshoot.md
                         - name: Extra deployment steps
                           items:
+                            - name: Update SAP connector and DCR settings
+                              href: sap/update-sap-connector-data-collection-rule.md
                             - name: Migrate agent to agentless connector
                               href: sap/sap-agent-migrate.md
                             - name: Collect SAP HANA audit logs
@@ -950,6 +954,8 @@
           href: isv/create-codeless-connector.md
         - name: Create pull codeless data connectors with nested API polling
           href: isv/custom-connector-nested-api-polling.md
+        - name: Support multiple connections in a codeless connector
+          href: isv/multi-account-ccf-connector.md  
         - name: Azure Storage Blob data connector reference
           href: data-connection-rules-reference-azure-storage.md
           items:

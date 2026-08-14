@@ -8,9 +8,9 @@ ms.localizationpriority: medium
 ms.collection:
   - m365-security
   - tier2
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender XDR
 ai-usage: ai-assisted
@@ -21,9 +21,9 @@ ai-usage: ai-assisted
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Threat actors use compromised Microsoft Exchange connectors for sending out spam and phishing emails in bulk to unsuspecting recipients by masquerading legitimate emails. Since the connector is compromised, the emails would usually be trusted by the recipients. These kinds of phishing emails are common vectors for phishing campaigns, and business email compromise (BEC) scenario. Hence, such emails need to be monitored heavily due to the likelihood of successful recipients' compromises being high.
+Threat actors use compromised Microsoft Exchange connectors for sending out spam and phishing emails in bulk to unsuspecting recipients by masquerading legitimate emails. Since the connector is compromised, the emails would usually be trusted by the recipients. These kinds of phishing emails are common vectors for phishing campaigns, and business email compromise (BEC) scenario. Hence, emails sent through compromised connectors need to be monitored heavily due to the likelihood of successful recipients' compromises being high.
 
-This malicious Exchange connector investigation playbook helps in investigating instances where malicious connectors are setup/deployed by malicious actors. Accordingly, they take necessary steps to remediate the attack and mitigate the security risks arising from it. The playbook helps in classifying the alerts as either true positive (TP) or false positive (FP). If alerts are TP, the playbook lists necessary recommended actions for remediating the attack. This playbook is available for security teams who review, handle/manage, and grade the alerts.
+This malicious Exchange connector investigation playbook helps in investigating instances where malicious connectors are setup/deployed by malicious actors. Accordingly, security teams can take the necessary steps to remediate the attack and mitigate the security risks arising from it. The playbook helps in classifying the alerts as either true positive (TP) or false positive (FP). If alerts are TP, the playbook lists necessary recommended actions for remediating the attack. This playbook is available for security teams who review, handle/manage, and grade the alerts.
 
 Following are the results of using a playbook:
 
@@ -40,9 +40,9 @@ Connectors are used to route mail traffic between remote email systems and Offic
 
 Attackers may compromise an existing Exchange connector or compromise an admin, and set up a new connector by sending phish or spam/bulk emails.
 
-The typical indicators of a malicious connector can be found when looking at email traffic and its headers. For example, when email traffic is observed from a connector node with a mismatch in P1 (header sender) and P2 (envelope sender) sender addresses along with no information on Sender's AccountObjectId.
+The typical indicators of a malicious connector can be found when looking at email traffic and its headers. For example, when email traffic is observed from a connector node with a mismatch between the header sender (P1) and envelope sender (P2) addresses, along with no information on the sender's AccountObjectId.
 
-This alert tries to identify such instances of mail flow, wherein the mail sending activity seems suspicious adding to that relevant information on sender is unavailable.
+The malicious Exchange connector alert tries to identify such instances of mail flow where the mail sending activity seems suspicious and relevant information on the sender is unavailable.
 
 ## Playbook workflow
 
@@ -60,7 +60,7 @@ You must follow the sequence to identify malicious Exchange connectors:
 
 ## Investigate malicious connectors
 
-This section describes the steps to investigate an alert and remediate the security risk due to a malicious Exchange connector incident.
+The following steps help investigate a malicious Exchange connector alert and remediate the associated security risk.
 
 - Determine whether the connector demonstrates bad (malicious) behavior.
   - Look for events indicating unusual mail traffic and identify, whether any new and recently added Exchange connector.
@@ -91,7 +91,7 @@ Ensure you have access to the following tables:
 
 ### Sample queries
 
-Use the following sample queries to investigate connector creation and suspicious mail activity.
+Use the sample queries for new connector creation, connector-to-mail-flow correlation, and external domain detection to investigate connector creation and suspicious mail activity.
 
 - Run this KQL to check new connector creation.
 
@@ -174,13 +174,13 @@ Use the following sample queries to investigate connector creation and suspiciou
 
 ### Query considerations
 
-Following are the query considerations for protecting the recipients from malicious attack.
+Consider the following admin logon checks when protecting recipients from malicious attack.
 
 - Check for admin logins for those who frequently manage connectors from unusual locations (generate stats and exclude locations from where most successful logins are observed).
 
 - Look for login failures from unusual locations. The following query correlates failed logon attempts with subsequent successful logons to detect potential brute-force compromises of admin accounts that manage connectors.
 
-  ```
+  ```kusto
   //modify timeWindow to modify the lookback.
   let timeWindow = now(-7d); let timeNow = now();
   let logonFail= materialize (
@@ -232,4 +232,5 @@ Once you determine that the alert activity is a true positive (TP), classify the
 
 - [Overview of alert classification](alert-classification-playbooks.md)
 - [Investigate alerts](investigate-alerts.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

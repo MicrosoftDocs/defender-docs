@@ -13,10 +13,11 @@ ms.collection:
   - tier1
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.date: 06/03/2026
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
+ms.custom: msecd-doc-authoring-1016
 
 #customer intent: As a security operations analyst, I want to manually create an incident or alert in the Microsoft Defender portal so that I can capture observations, drive investigations, and integrate with my ITSM workflows on demand.
 ---
@@ -30,9 +31,11 @@ appliesto:
 
 Manual incident and alert creation lets your security operations center (SOC) team create incidents and alerts as needed in the [Microsoft Defender portal](https://security.microsoft.com). Use it to track investigations, tips from other teams, or operational work in the unified incident queue, even if no automatic detection has triggered.
 
-This article describes how to manually create an incident or alert from the Defender portal. After you create an incident, [manage it](manage-incidents.md) like any other incident in the queue.
+This article describes how to manually create an incident or alert from the Defender portal. After you create an incident, [manage the incident](manage-incidents.md) like any other incident in the queue.
 
 ## What you can do with manual creation
+
+Manual creation supports the following capabilities:
 
 - Create a new incident with an initial alert, or attach an alert to an existing incident.
 - Provide full incident metadata, including title, description, severity, category, MITRE ATT&CK techniques, impacted assets, and evidence.
@@ -108,9 +111,10 @@ You can only add assets that are within your RBAC scope.
 
 Select **Next** to continue.
 
-### Step 5: Related incident
+<a name="step-5-related-incident"></a>
+### Step 5: Link the alert to a related incident
 
-Select if you want to create a new incident or correlate the alert with an existing incident. If you choose to correlate with an existing incident, provide the incident ID.
+On the **Related incident** step, select whether to create a new incident or correlate the alert with an existing incident. If you choose to correlate with an existing incident, provide the incident ID.
 
 :::image type="content" source="./media/manually-create-incident/related-incident.png" alt-text="Screenshot of the Related incident step of the Create new wizard, showing the option to correlate with an existing incident and the incident ID input field." lightbox="./media/manually-create-incident/related-incident.png":::
 
@@ -136,6 +140,8 @@ After creation, manually generated content flows through the same surfaces as au
 All create and update actions on a manually generated incident appear in the incident **Activity log**, the alert comments and history, and the Microsoft 365 audit log, so you can audit who did what and when.
 
 ## Related articles
+
+For more information about incident management and related tasks, see the following articles:
 
 - [Manage incidents in Microsoft Defender](manage-incidents.md)
 - [Move alerts to another incident](move-alert-to-another-incident.md)

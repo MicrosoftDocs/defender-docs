@@ -2,8 +2,8 @@
 title: How to consume and export scan results
 description: Access vulnerability assessment findings in Azure Resource Graph and use multiple methods to query, view, and export scan results for reporting and remediation.
 ms.topic: how-to
-ms.date: 05/27/2026
-ms.custom: sfi-image-nochange
+ms.date: 07/03/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
 #customer intent: As a user, I want to query and export SQL vulnerability scan results so I can investigate findings and report on remediation progress.
 ai-usage: ai-assisted
 ---
@@ -22,7 +22,7 @@ This article describes several ways to consume and export your scan results.
 
 ## Query and export findings in ARG with Defender for Cloud
 
-Use this method to query findings from Defender for Cloud and export results for reporting.
+Use the Defender for Cloud Recommendations page to query findings in Azure Resource Graph (ARG) and export results for reporting.
 
 **To query and export your findings with ARG with Defender for Cloud**:
 
@@ -44,9 +44,10 @@ The query changes based on the recommendations view you've selected.
 
 These queries are editable. You can customize them for a specific resource, a set of findings, or a finding status.
 
-## Query and export findings in ARG
+<a name="query-and-export-findings-in-arg"></a>
+## Query findings directly in Resource Graph Explorer
 
-Use this method to query findings directly in Resource Graph Explorer when you need advanced query customization.
+Use Resource Graph Explorer to query findings directly when you need advanced query customization.
 
 **To query and export your findings with ARG**:
 
@@ -96,11 +97,12 @@ Use this method to query findings directly in Resource Graph Explorer when you n
 
     :::image type="content" source="media/defender-for-sql-scan-results/run-and-download.png" alt-text="Screenshot of Resource Graph Explorer page with Run query and Download as CSV controls highlighted." lightbox="media/defender-for-sql-scan-results/run-and-download.png":::
 
-This query is editable. You can customize it for a specific resource, a set of findings, or a finding status.
+The Resource Graph Explorer query is editable. You can customize it for a specific resource, a set of findings, or a finding status.
 
-## Open a Query from your SQL database
+<a name="open-a-query-from-your-sql-database"></a>
+## Open a query from your SQL database
 
-Use this method to query vulnerability findings for a specific SQL database from the database resource page.
+Use the SQL database resource page to query vulnerability findings for a specific SQL database.
 
 **To open a query from your SQL database**:
 
@@ -122,7 +124,7 @@ Use this method to query vulnerability findings for a specific SQL database from
 
     :::image type="content" source="media/defender-for-sql-scan-results/run-and-download.png" alt-text="Screenshot of Resource Graph Explorer page with Run query and Download as CSV controls highlighted." lightbox="media/defender-for-sql-scan-results/run-and-download.png":::
 
-This query is editable. You can customize it for a specific resource, a set of findings, or a finding status.
+The query opened from the SQL database resource page is editable. You can customize it for a specific resource, a set of findings, or a finding status.
 
 ## Automate email notifications with Logic Apps
 

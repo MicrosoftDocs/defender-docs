@@ -1,10 +1,11 @@
 ---
 title: DLP content inspection
 description: This article describes the process Defender for Cloud Apps follows when performing DLP content inspection on data in your cloud.
-ms.date: 06/26/2025
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: MayaAbelson
-ms.custom: sfi-ga-blocked
+ms.custom: sfi-ga-blocked, msecd-doc-authoring-1016
+ai-usage: ai-assisted
 ---
 # DLP content inspection in Microsoft Defender for Cloud Apps
 
@@ -18,7 +19,7 @@ You can use preset or custom expressions and define a threshold for when a match
 
 Matched text is replaced with "X" characters, and the surrounding context (100 characters before and after the match) is masked. Numbers in the context are replaced with "#" and aren't stored. To expose the final four digits of a match, enable the **Unmask the last four characters of a match** setting in the file policy.
 
-You can also define which file elements are inspected—content, metadata, or file name. By default, inspection applies to both content and metadata. This approach allows inspection of protected files, detection of sensitive data, enforcement of compliance, and application of governance controls, while reducing false positives and aligning enforcement with internal classification standards.
+You can also define which file elements are inspected—content, metadata, or file name. By default, inspection applies to both content and metadata. Inspecting both content and metadata by default allows inspection of protected files, detection of sensitive data, enforcement of compliance, and application of governance controls, while reducing false positives and aligning enforcement with internal classification standards.
 
 ## Prerequisites
 
@@ -28,7 +29,7 @@ To inspect encrypted files, and enable scanning of labels a [Global Administrato
 > [!NOTE]
 > Microsoft recommends that you use roles with the fewest permissions. This strategy helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-To do this, in the Defender portal go to **Settings > Cloud Apps > Microsoft Information Protection > Inspect protected files**, and select **Grant permission**.
+To grant one-time admin consent, in the Defender portal go to **Settings > Cloud Apps > Microsoft Information Protection > Inspect protected files**, and select **Grant permission**.
 
 
 ## Content inspection for protected files
@@ -65,6 +66,8 @@ In order to give Defender for Cloud Apps the necessary permissions:
 
 ## Configure file policies for protected files
 
+To configure a file policy that inspects protected files, complete the following steps:
+
 1. In the Defender portal, go to **Settings > Cloud Apps > Policies > Policy management**.
 1. Follow the steps to [create a new file policy](data-protection-policies.md#create-a-new-file-policy).
 1. Select either **Apply to all files**, or **Apply to selected files** to specify which files to scan. This option is useful if you have an inner classification keyword standard that you want to exclude from the policy.
@@ -74,7 +77,8 @@ In order to give Defender for Cloud Apps the necessary permissions:
    :::image type="content" source="media/content-inspection/inspection-method-data-classification-service.png" alt-text="Screenshot that shows the Data classification service inspection method.":::
 
 
-## Next steps
+<a name="next-steps"></a>
+## Related content
 
 - [Tutorial: Discover and protect sensitive information in your organization](tutorial-dlp.md)
 - [Learn how to control cloud apps using policies](control-cloud-apps-with-policies.md)

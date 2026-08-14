@@ -5,13 +5,13 @@ ms.author: monaberdugo
 author: mberdugo 
 ms.reviewer: efratka
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ms.collection: usx-security
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security analyst, I want to create and manage hunting bookmarks so that I can preserve and collaborate on relevant threat investigation data.
 
@@ -24,9 +24,9 @@ Hunting bookmarks in Microsoft Sentinel helps you preserve the queries and query
 This article explains how to create, view, and manage hunting bookmarks in Microsoft Sentinel and how to use them during investigations.
 
 >[!NOTE]
-> **Microsoft Sentinel hunting bookmarks:** Bookmarks can only be created in the Azure portal, under **Microsoft Sentinel** > **Threat management** > **Hunting**. In the Microsoft Defender portal, you can view bookmarks that were already created, but you can't add new ones.
+> **Microsoft Sentinel hunting bookmarks**: You can only create bookmarks in the Azure portal, under **Microsoft Sentinel** > **Threat management** > **Hunting**. In the Microsoft Defender portal, you can view bookmarks that were already created, but you can't add new ones.
 >
-> **Advanced hunting bookmarks:** Bookmarks aren't available in Advanced hunting, which provides a unified query experience across Microsoft Defender and Microsoft Sentinel data. However, bookmarks are still available in **Microsoft Sentinel** > **Threat management** > **Hunting**, which provides the Microsoft Sentinel-specific hunting experience. You can also use alternatives such as incident tags, saved queries, or custom hunting tables to preserve and track investigation context.
+> **Advanced hunting bookmarks**: Bookmarks aren't available in Advanced hunting, which provides a unified query experience across Microsoft Defender and Microsoft Sentinel data. However, bookmarks are still available in **Microsoft Sentinel** > **Threat management** > **Hunting**, which provides the Microsoft Sentinel-specific hunting experience. You can also use alternatives such as incident tags, saved queries, or custom hunting tables to preserve and track investigation context.
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
@@ -52,7 +52,7 @@ Create a bookmark to preserve the queries, results, your observations, and findi
 
 1. On the right, in the **Add bookmark** pane, optionally, update the bookmark name, add tags, and notes to help you identify what was interesting about the item.
 
-1. Bookmarks can be optionally mapped to MITRE ATT&CK techniques or sub-techniques. MITRE ATT&CK mappings are inherited from mapped values in hunting queries, but you can also create them manually. Select the MITRE ATT&CK tactic associated with the desired technique from the drop-down menu in the **Tactics & Techniques** section of the **Add bookmark** pane. The menu expands to show all the MITRE ATT&CK techniques, and you can select multiple techniques and sub-techniques in this menu.
+1. You can optionally map bookmarks to MITRE ATT&CK techniques or sub-techniques. MITRE ATT&CK mappings are inherited from mapped values in hunting queries, but you can also create them manually. Select the MITRE ATT&CK tactic associated with the desired technique from the drop-down menu in the **Tactics & Techniques** section of the **Add bookmark** pane. The menu expands to show all the MITRE ATT&CK techniques, and you can select multiple techniques and sub-techniques in this menu.
 
     :::image type="content" source="media/bookmarks/mitre-attack-mapping.png" alt-text="Screenshot of how to map Mitre Attack tactics and techniques to bookmarks.":::
 
@@ -68,7 +68,7 @@ The log query results support bookmarks whenever the **Logs** pane is opened fro
 
 ## View and update bookmarks
 
-Find and update a bookmark from the bookmark tab.
+Find and update a bookmark from the **Bookmarks** tab.
 
 1. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), under **Threat management**  select **Hunting**.<br> For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Microsoft Sentinel** > **Threat management** > **Hunting**.
 
@@ -81,7 +81,7 @@ Find and update a bookmark from the bookmark tab.
 5. Make your changes as needed. Your changes are automatically saved.
 
 > [!NOTE]
-> You can only view up to 1,000 bookmarks in the bookmark tab. You can view the rest of your bookmarked data in your logs. [View bookmarked data in logs](#view-bookmarked-data-in-logs)
+> You can only view up to 1,000 bookmarks in the **Bookmarks** tab. You can view the rest of your bookmarked data in your logs. [View bookmarked data in logs](#view-bookmarked-data-in-logs)
 
 ## Exploring bookmarks in the investigation graph
 
@@ -111,7 +111,7 @@ Add bookmarks to an incident from the bookmarks tab on the **Hunting** page.
     - For a new incident: Optionally update the details for the incident, and then select **Create**.
     - For adding a bookmark to an existing incident: Select one incident, and then select **Add**.
 
-1. To view the bookmark within the incident, 
+1. To view the bookmark within the incident:
    1. Go to **Microsoft Sentinel** > **Threat management** > **Incidents**.
    1. Select the incident with your bookmark and **View full details**.
    1. On the incident page, in the left pane, select the **Bookmarks**.
@@ -137,7 +137,7 @@ There can be a significant delay (measured in minutes) between the time you crea
 
 ## Delete a bookmark
 
-Deleting the bookmark removes the bookmark from the list in the **Bookmark** tab. The **HuntingBookmark** table for your Log Analytics workspace continues to contain previous bookmark entries, but the latest entry changes the **SoftDelete** value to **true**, which marks the bookmark as deleted so you can filter out old bookmarks. Deleting a bookmark doesn't remove any entities from the investigation experience that are associated with other bookmarks or alerts.
+Deleting the bookmark removes the bookmark from the list in the **Bookmarks** tab. The **HuntingBookmark** table for your Log Analytics workspace continues to contain previous bookmark entries, but the latest entry changes the **SoftDelete** value to **true**, which marks the bookmark as deleted so you can filter out old bookmarks. Deleting a bookmark doesn't remove any entities from the investigation experience that are associated with other bookmarks or alerts.
 
 To delete a bookmark, complete the following steps.
 

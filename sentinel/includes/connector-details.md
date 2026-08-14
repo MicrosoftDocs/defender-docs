@@ -16406,7 +16406,7 @@ The Orca Security Alerts connector allows you to easily export Alerts logs to Mi
 
 **Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
 
-The [Palo Alto Cortex XDR](https://cortex-panw.stoplight.io/docs/cortex-xdr/branches/main/09agw06t5dpvw-cortex-xdr-rest-api) data connector allows ingesting logs from the Palo Alto Cortex XDR API into Microsoft Sentinel. The data connector is built on Microsoft Sentinel Codeless Connector Framework. It uses the Palo Alto Cortex XDR API to fetch logs and it supports DCR-based [ingestion time transformations](/azure/azure-monitor/logs/custom-logs-overview) that parses the received security data into a custom table so that queries don't need to parse it again, thus resulting in better performance.
+The [Palo Alto Cortex XDR](https://cortex-docs.paloaltonetworks.com/cortex-xdr-docs/readme) data connector allows ingesting logs from the Palo Alto Cortex XDR API into Microsoft Sentinel. The data connector is built on Microsoft Sentinel Codeless Connector Framework. It uses the Palo Alto Cortex XDR API to fetch logs and it supports DCR-based [ingestion time transformations](/azure/azure-monitor/logs/custom-logs-overview) that parses the received security data into a custom table so that queries don't need to parse it again, thus resulting in better performance.
 
 **Log Analytics table(s):**  
 
@@ -16423,7 +16423,7 @@ The [Palo Alto Cortex XDR](https://cortex-panw.stoplight.io/docs/cortex-xdr/bran
 **Setup Instructions:**
 
  Configuration steps for the Palo Alto Cortex XDR API 
- Follow the instructions to obtain the credentials. you can also follow this [guide](https://cortex-panw.stoplight.io/docs/cortex-xdr/branches/main/3u3j0e7hcx8t1-get-started-with-cortex-xdr-ap-is) to generate API key.
+ Follow the instructions to obtain the credentials. You can also review the [Cortex XDR documentation](https://cortex-docs.paloaltonetworks.com/cortex-xdr-docs/readme) to generate an API key.
 
 1. Retrieve API URL
    1.1. Log in to the Palo Alto Cortex XDR [**Management Console**] with Admin user credentials

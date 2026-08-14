@@ -10,7 +10,7 @@ ai-usage: ai-assisted
 
 # Configure a gMSA directory service account for Defender for Identity
 
-Create and configure a [group managed service account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) for the sensor v2.x to use when reading Active Directory data (querying objects, tracking changes, resolving entities). This is separate from the [action account](manage-action-accounts.md) used to perform remediation actions like disabling users or resetting passwords.
+Create and configure a [group managed service account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) for the sensor v2.x to use when reading Active Directory data (querying objects, tracking changes, resolving entities). This is separate from the [action account](manage-action-accounts.md) used to perform remediation actions like disabling users or resetting passwords. Before you begin, review the [prerequisites](#prerequisites) for creating a gMSA for sensor v2.x deployments.
 
 > [!IMPORTANT]
 > This configuration applies to the sensor v2.x only. The sensor v3.x uses LocalSystem for all AD interactions and doesn't require a gMSA or any other Directory Service Account. If all your sensors are v3.x, skip this page.
@@ -81,6 +81,8 @@ Before you create the gMSA account, make sure the following prerequisites are me
     - Update the variable values to match your environment.
     - Make sure to give each gMSA a unique name for each forest or domain.
 
+Define the gMSA creation variables, including the account name, host group, and computer accounts, then run the following script to provision the gMSA:
+
 ```powershell
 # Variables:
 # Specify the name of the gMSA you want to create:
@@ -128,13 +130,15 @@ To refresh the Kerberos ticket, you can:
 
 ## Grant required directory service account permissions
 
+The directory service account requires specific read permissions on Active Directory objects so that the sensor can query directory data. The following include details the required permissions and how to grant them:
+
 [!INCLUDE [dsa-permissions](../includes/dsa-permissions.md)]
 
 ## Verify that the gMSA account has the required rights
 
 The Defender for Identity sensor service, *Azure Advanced Threat Protection Sensor*, runs as a *LocalService* that impersonates the DSA account. If the *Log on as a service* policy is configured but the permission wasn't granted to the gMSA account, the impersonation fails. In that case, you see the following health issue: **Directory services user credentials are incorrect.**
 
-If you see this alert, check to see if the *Log on as a service policy* is configured either in a Group Policy setting or in a Local Security Policy.
+If you see the health issue **Directory services user credentials are incorrect**, check to see if the *Log on as a service policy* is configured either in a Group Policy setting or in a Local Security Policy.
 
 ### Check the Local Security Policy
 

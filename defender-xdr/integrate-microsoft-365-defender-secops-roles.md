@@ -9,9 +9,9 @@ ms.collection:
   - msftsolution-secops
   - tier2
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Step 4. Define Microsoft Defender XDR roles, responsibilities, and oversight
@@ -31,7 +31,7 @@ Many modern SOCs assign its team members to categories based on their skillsets 
 - A monitoring team comprised of SOC analysts responsible for maintaining logs, alerts, events, and monitoring functions.
 - An engineering & operations team assigned to engineer and optimize security devices.
 
-SOC team roles and responsibilities for Microsoft Defender XDR would naturally integrate into these teams.
+SOC team roles and responsibilities for Microsoft Defender XDR would naturally integrate into the threat intelligence, monitoring, and engineering & operations teams.
 
 The following table breaks out each SOC team's roles and responsibilities and how their roles integrate with Microsoft Defender XDR.
 
@@ -48,4 +48,5 @@ The following table breaks out each SOC team's roles and responsibilities and ho
 ## Next step
 
 Continue with [Develop and test use cases](integrate-microsoft-365-defender-secops-use-cases.md).
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

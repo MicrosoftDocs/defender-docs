@@ -1,10 +1,10 @@
 ---
 title: Cloud app catalog and risk scores | Microsoft Defender for Cloud Apps
 description: Learn about the Microsoft Defender for Cloud Apps' cloud app catalog, and how to use and customize your cloud app risk score.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Mravela
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 #CustomerIntent: As a Defender for Cloud Apps user, I want to understand how to use the Cloud app catalog and my cloud app risk scores.
 ai-usage: ai-assisted
 ---
@@ -18,14 +18,14 @@ For example:
 :::image type="content" source="media/cloud-app-catalog.png" alt-text="Screenshot showing the cloud app catalog" lightbox="media/cloud-app-catalog.png":::
 
 
-Apps in the cloud app catalog are scored based on more than 90 risk factors. This article describes how to identify apps covered by the catalog, and how to use and customize the cloud app risk scores.
+Apps in the cloud app catalog are scored based on more than 90 risk factors. The following sections describe how to identify apps covered by the catalog, and how to use and customize the cloud app risk scores.
 
 >[!TIP]
 > By default, Defender for Cloud Apps can't discover apps that aren't in the catalog. To see Defender for Cloud Apps data for an app that's not currently in the catalog, we recommend that you [check the Microsoft 365 roadmap for Defender for Identity](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=Microsoft%20Defender%20for%20Identity), [suggest a change to the cloud app catalog](#suggest-a-change-to-the-cloud-app-catalog), or [create a custom cloud app](cloud-discovery-custom-apps.md).
 
 ## Risk scoring process
 
-Defender for Cloud Apps rates risks based on regulatory certification, industry standards, and best practices. The score represents the Defender for Cloud Apps assessment of this particular app's maturity of use for enterprises.
+Defender for Cloud Apps rates risks based on regulatory certification, industry standards, and best practices. The score represents the Defender for Cloud Apps assessment of each app's maturity of use for enterprises.
 
 The total score of any given app is a weighted average of subscores for the following risk categories, which Defender for Cloud Apps considers when assessing reliability:
 
@@ -82,7 +82,7 @@ Check the cloud app catalog to ensure that the apps used by the organization fit
 
 ## Customize the risk score
 
-By default, all the various parameters evaluated are given equal weight. If there are certain parameters that are more or less important to your organization, it's important to change them as needed.
+By default, all the various parameters evaluated are given equal weight. If there are certain parameters that are more or less important to your organization, it's important to change the parameter weights as needed.
 
 For example:
 
@@ -213,6 +213,8 @@ The following table lists the cloud app catalog's supported categories:
 
 
 ## Next steps
+
+Continue with the following guidance to protect your organization:
 
 > [!div class="nextstepaction"]
 > [Best practices for protecting your organization](best-practices.md)

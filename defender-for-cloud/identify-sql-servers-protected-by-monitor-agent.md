@@ -1,8 +1,9 @@
 ---
 title: Identify SQL Servers protected by Microsoft Monitoring Agent
-description: Learn how to identify SQL servers protected by the Microsoft Monitoring Agent (MMA) in your environment without having Azure Arc installed
+description: Learn how to identify SQL Server instances still using the legacy Microsoft Monitoring Agent (MMA) so you can deploy Azure Arc and migrate to the updated agent.
 ms.topic: how-to
-ms.date: 05/28/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to identify SQL servers protected by Microsoft Monitoring Agent so that I can migrate coverage to the current onboarding model.
 ai-usage: ai-assisted
 ---
@@ -14,7 +15,7 @@ Microsoft Defender for Cloud's Defender for SQL Server on Machines plan provides
 Once Azure Arc is deployed and following the [release on the updated agent](release-notes-archive.md#update-to-defender-for-sql-servers-on-machines-plan), your SQL Server instances migrate automatically to the updated agent. To ensure your SQL servers are correctly protected, install Azure Arc. For setup steps, see [Connect on-premises machines by using Azure Arc](quickstart-onboard-machines.md#connect-on-premises-machines-by-using-azure-arc).
 
 > [!NOTE]
->  This change might affect your pricing. For information regarding the plan pricing, review [Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+>  Migrating to the updated agent might affect your pricing. For information regarding the plan pricing, review [Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 
 ## Determine which SQL servers are protected by the legacy MMA
 

@@ -1,15 +1,15 @@
 ---
 title: Manage OAuth apps | Microsoft Defender for Cloud Apps
 description: Review third-party OAuth app permissions and decide which apps to allow, ban, or monitor across Microsoft 365, Google Workspace, and Salesforce.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.reviewer: anandd512
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 # Manage OAuth apps
 
-Many third-party productivity apps that might be installed by business users in your organization request permission to access user information and data and sign in on behalf of the user in other cloud apps, such as Microsoft 365, Google Workspace and Salesforce. When users install these apps, they often click accept without closely reviewing the details in the prompt, including granting permissions to the app. This problem is compounded by the fact that IT may not have enough insight to weigh the security risk of an application against the productivity benefit that it provides. Because accepting third-party app permissions is a potential security risk to your organization, monitoring the app permissions your users' grant gives you the necessary visibility and control to protect your users and your applications.
+Many third-party productivity apps that might be installed by business users in your organization request permission to access user information and data and sign in on behalf of the user in other cloud apps, such as Microsoft 365, Google Workspace and Salesforce. When users install these apps, they often click accept without closely reviewing the details in the prompt, including granting permissions to the app. This lack of permission review is compounded by the fact that IT may not have enough insight to weigh the security risk of an application against the productivity benefit that it provides. Because accepting third-party app permissions is a potential security risk to your organization, monitoring the app permissions your users' grant gives you the necessary visibility and control to protect your users and your applications.
 
 The Microsoft Defender for Cloud Apps app permissions enable you to see which user-installed OAuth applications have access to Microsoft 365 data, Google Workspace data, and Salesforce data. Defender for Cloud Apps tells you what permissions the apps have and which users granted these apps access to their Microsoft 365, Google Workspace, and Salesforce accounts. App permissions help you decide which apps you allow your users to access and which ones you want to ban.
 
@@ -18,7 +18,7 @@ For more information, see [Investigate risky OAuth apps](investigate-risky-oauth
 > [!NOTE]
 > The following samples and screenshots are from the **OAuth apps** page, which is used when you don't have app governance turned on.
 >
-> If you are using [preview features](/microsoft-365/security/defender/preview) and have app governance turned on, OAuth app permissions management is available from the **App governance** page instead.
+> If you are using [Microsoft Defender preview features](/microsoft-365/security/defender/preview) and have app governance turned on, OAuth app permissions management is available from the **App governance** page instead.
 > 
 > For more information, see [App governance in Microsoft Defender for Cloud Apps](app-governance-manage-app-governance.md).
 >
@@ -48,7 +48,7 @@ The OAuth apps page provides the following information about each OAuth app that
 |Export icon in the app list  |Export a CSV file that contains a list of apps, number of users for each app, permissions associated with the app, permissions level, app state, and community use level.|Microsoft 365, Google Workspace, Salesforce|
 |App|Name of the app. Select the name to view more information, including the description, publisher (for Microsoft 365), app website, and ID.|Microsoft 365, Google Workspace, Salesforce|
 |Authorized by|The number of users who authorized this app to access their app's account, and granted the app permissions. Select the number to view more information, including a list of user emails and whether an admin has consented the app previously.|Microsoft 365, Google Workspace, Salesforce|
-|Permissions Level  |The permissions level icon and text indicating either High, Medium, or Low. The level indicates how much access this app has to app's data. For example, Low might indicate that the OAuth app only accesses the user's profile and name. Select the level to view more information, including permissions granted to the app, community use, or related activity in the [Governance log](governance-actions.md).|Microsoft 365, Google Workspace|
+|Permissions Level  |The permissions level icon and text indicating either High, Medium, or Low. The level indicates how much access the OAuth app has to the connected app's data. For example, Low might indicate that the OAuth app only accesses the user's profile and name. Select the level to view more information, including permissions granted to the app, community use, or related activity in the [Governance log](governance-actions.md).|Microsoft 365, Google Workspace|
 |App state|An admin can mark an app as approved, banned, or leave is as undetermined.|Microsoft 365, Google Workspace, Salesforce|
 |Community use|Shows you how popular the app is across all your users (common, uncommon, rare)|Microsoft 365, Google Workspace, Salesforce|
 |Last authorized|The most recent date on which a user granted permissions to this app.|Microsoft 365, Salesforce|
@@ -81,7 +81,7 @@ To ban or approve an app, perform the following steps:
     ![Screenshot of the approve icon at the end of an app row used to mark an OAuth app as approved.](media/approve-app.png)
 
     - The icon turns green, and the app is approved for all your connected app users.
-    - When you mark an app as approved, there's no effect on the end user. This color change is meant to help you see the apps that you've approved to separate them from ones that you haven't reviewed yet.
+    - When you mark an app as approved, there's no effect on the end user. The green approved icon helps you identify the apps that you've approved and separate them from ones that you haven't reviewed yet.
 
 ## Query OAuth apps
 

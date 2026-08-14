@@ -1,16 +1,16 @@
 ---
 title: Identity-managed devices with Conditional Access app control | Microsoft Defender for Cloud Apps
 description: Configure Conditional Access app control access and session policies to detect whether devices are identity-managed, with guidance for Microsoft Entra and non-Entra scenarios.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Identity-managed devices with Conditional Access app control
 
-You might want to add conditions to your policy about whether a device is managed or not. To identify the state of a device, configure access and session policies to check for specific conditions, depending on whether you have Microsoft Entra or not.
+This article explains how to configure Conditional Access app control access and session policies that use device-management signals. If you have Microsoft Entra, you can use Intune-compliant or Microsoft Entra hybrid joined device conditions. If you don't have Microsoft Entra, you can use client certificates to identify managed devices.
 
 ## Check for device management with Microsoft Entra
 
@@ -27,7 +27,7 @@ If you don't have Microsoft Entra, check for the presence of client certificates
 
 Make sure that the client certificate is installed in the user store and not the computer store. You then use the presence of those certificates to set access and session policies.
 
-Once the certificate is uploaded and a relevant policy is configured, when an applicable session traverses Defender for Cloud Apps and Conditional Access app control,  Defender for Cloud Apps requests the browser to present the SSL/TLS client certificates. The browser serves the SSL/TLS client certificates that are installed with a private key. A certificate and its private key are typically packaged by using the PKCS #12 file format, such as .p12 or .pfx.
+Once the root or intermediate CA certificate is uploaded and a relevant policy is configured, when an applicable session traverses Defender for Cloud Apps and Conditional Access app control,  Defender for Cloud Apps requests the browser to present the SSL/TLS client certificates. The browser serves the SSL/TLS client certificates that are installed with a private key. A certificate and its private key are typically packaged by using the PKCS #12 file format, such as .p12 or .pfx.
 
 When a client certificate check is performed, Defender for Cloud Apps checks for the following conditions:
 
@@ -43,7 +43,7 @@ To request authentication from relevant devices using client certificates, you n
 
 Upload your root or intermediate CA certificates to Defender for Cloud Apps in the **Settings > Cloud Apps > Conditional Access App Control > Device identification** page.
 
-After the certificates are uploaded, you can create access and session policies based on **Device tag** and **Valid client certificate**.
+After the root or intermediate CA certificates are uploaded, you can create access and session policies based on **Device tag** and **Valid client certificate**.
 
 **To test client certificate-based device identification**, use our sample root CA and client certificate, as follows:
 

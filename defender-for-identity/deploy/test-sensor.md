@@ -1,10 +1,10 @@
 ---
 title: Validate sensor deployment on domain controllers
 description: Validate your Microsoft Defender for Identity sensor deployment by checking the Identity Security dashboard, entity pages, advanced hunting, and alert functionality.
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ai-usage: ai-assisted
 #customer intent: As an admin deploying Defender for Identity, I want to validate that my sensors are working correctly so that I can confirm my deployment is complete.
 ---
@@ -53,7 +53,7 @@ For more information, see [Advanced hunting in the Microsoft Defender portal](/m
 
 ## Test Identity Security Posture Management (ISPM) recommendations
 
-We recommend simulating risky behavior in a test environment to trigger supported assessments and verify that they appear as expected. For example:
+We recommend simulating risky behavior in a test environment to trigger supported assessments and verify that the assessments appear as expected. For example:
 
 1. Trigger a new **Resolve unsecure domain configurations** recommendation by setting your Active Directory configuration to a noncompliant state, and then returning it to a compliant state. For example, run the following commands:
 

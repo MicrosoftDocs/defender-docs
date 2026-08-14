@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot the sensor | Microsoft Defender for IoT
+title: Troubleshoot the Sensor
 description: Learn how to troubleshoot your Microsoft Defender for IoT OT sensor.
 ms.date: 10/14/2024
 ms.topic: troubleshooting
@@ -349,7 +349,7 @@ For further troubleshooting, you might want to export logs to send to the suppor
 > [!NOTE]
 > Support ticket diagnostics can be downloaded from the sensor console and then uploaded directly to the support team in the Azure portal. For more information on downloading diagnostic logs, see [Download a diagnostics log for support](how-to-troubleshoot-sensor.md#download-a-diagnostics-log-for-support).
 
-## Next steps
+## Related content
 
 - [View alerts](how-to-view-alerts.md)
 

@@ -7,17 +7,18 @@ ms.topic: how-to
 author: chrisda
 ms.author: chrisda
 ms.reviewer: pahuijbr
-ms.custom: nextgen, msecd-doc-authoring-1016
+ms.custom: nextgen, msecd-doc-authoring-1015
 ms.subservice: ngp
 ms.collection:
 - m365-security
 - tier2
-ms.date: 07/02/2026
+ms.date: 08/12/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 ai-usage: ai-assisted
+#customer intent: As a security administrator, I want to configure protection update sources and their order so that endpoints can retrieve security intelligence updates reliably.
 ---
 
 # Manage the sources for Microsoft Defender Antivirus protection updates
@@ -99,33 +100,52 @@ The procedures in this article first describe how to set the order, and then how
 
 Perform the following steps to configure the update location by using Group Policy:
 
-1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)). Right-click the Group Policy Object you want to configure and then select **Edit**.
+1. In Centralized Group Policy, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
-1. In the **Group Policy Management Editor**, go to **Computer configuration**.
+1. In the GPMC console tree, expand Group Policy Objects in the forest and domain containing the GPO you want to edit.
 
-1. Select **Policies** then **Administrative templates**.
+1. Right-click the GPO, and then select **Edit**.
 
-1. Expand the tree to **Windows components** > **Windows Defender** > **Signature updates**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Security Intelligence Updates**.
 
    > [!NOTE]
-   > - For Windows 10, versions 1703 up to and including 1809, the policy path is **Windows Components > Microsoft Defender Antivirus > Signature Updates**
-   > - For Windows 10, version 1903, the policy path is **Windows Components > Microsoft Defender Antivirus > Security Intelligence Updates**
+   > Group Policy paths before Windows 10, version 2004 (May 2020) might use _Windows_ Defender Antivirus instead of _Microsoft_ Defender Antivirus. Group Policy paths before Windows 10, version 1909 (November 2019) might use _Signature Updates_ instead of _Security Intelligence Updates_. The older and newer names refer to the same policy locations.
 
-1. Edit the **Define the order of sources for downloading security intelligence updates** setting. Set the option to **Enabled**.
+1. In the details pane of **Security Intelligence Updates**, the available settings are:
+   - [Define the order of sources for downloading security intelligence updates](#enable-and-configure-the-security-intelligence-update-source-order)
+   - [Define file shares for downloading security intelligence updates](#enable-and-configure-security-intelligence-update-file-shares)
 
-1. Specify the order of sources, separated by a single pipe, for example: `InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC`, as shown in the following screenshot.
+   To open and configure a security intelligence update source setting, use any of the following methods:
+   - Double-click the setting.
+   - Right-click the setting, and then select **Edit**.
+   - Select the setting, and then select **Action** \> **Edit**.
 
-   :::image type="content" source="/defender/media/wdav-order-update-sources.png" alt-text="Group policy setting listing the order of sources" lightbox="/defender/media/wdav-order-update-sources.png":::
+> [!TIP]
+> You can also configure Group Policy locally on individual devices by using the Local Group Policy Editor (`gpedit.msc`). Navigate to the same path: **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Security Intelligence Updates**.
 
-1. Select **OK**. Selecting **OK** sets the order of protection update sources.
+### Enable and configure the security intelligence update source order
 
-1. Edit the **Define file shares for downloading security intelligence updates** setting and then set the option to **Enabled**.
+1. In the details pane of **Security Intelligence Updates**, open the **Define the order of sources for downloading security intelligence updates** setting.
 
-1. On a Windows Server, specify the file share source. If you have multiple sources, specify each source in the order they should be used, separated by a single pipe. Use [standard UNC notation](/openspecs/windows_protocols/ms-dtyp/62e862f4-2a51-452e-8eeb-dc4ff5ee33cc) for denoting the path. For example: `\\WindowsFileServer\share-name\object-name|\\host-name2\share-name\object-name`.
+1. In the setting window that opens, configure the following options:
+   1. Select **Enabled**.
+   1. **Define the order of sources for downloading security intelligence updates** in the **Options** section: Enter the update sources in the order in which they should be contacted, separated by a single pipe (`|`). The available values are `InternalDefinitionUpdateServer`, `MicrosoftUpdateServer`, `MMPC`, and `FileShares`. For example, `InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC`.
+
+   :::image type="content" source="/defender/media/wdav-order-update-sources.png" alt-text="Screenshot of the Group Policy setting that defines the order of security intelligence update sources." lightbox="/defender/media/wdav-order-update-sources.png":::
+
+   When you're finished, select **OK**.
+
+### Enable and configure security intelligence update file shares
+
+1. In the details pane of **Security Intelligence Updates**, open the **Define file shares for downloading security intelligence updates** setting.
+
+1. In the setting window that opens, configure the following options:
+   1. Select **Enabled**.
+   1. **Define file shares for downloading security intelligence updates** in the **Options** section: Enter the file share sources in the order in which they should be contacted, separated by a single pipe (`|`). Use [standard UNC notation](/openspecs/windows_protocols/ms-dtyp/62e862f4-2a51-452e-8eeb-dc4ff5ee33cc) for each path. For example, `\\WindowsFileServer\share-name\object-name|\\host-name2\share-name\object-name`.
 
    If you don't enter any paths, the file share source is skipped when the VM downloads updates.
 
-1. Select **OK**. Selecting **OK** saves the file share order, which is used when the file share source is referenced in the **Define the order of sources...** group policy setting.
+   When you're finished, select **OK**.
 
 <a name="use-microsoft-endpoint-configuration-manager-to-manage-the-update-location"></a>
 
