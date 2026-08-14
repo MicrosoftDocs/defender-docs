@@ -8,15 +8,15 @@ ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ms.collection: ms-security  
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---  
 
 # Run KQL queries on the Microsoft Sentinel data lake using APIs
 
-Microsoft Sentinel data lake supports running Kusto Query Language (KQL) queries programmatically by using REST APIs. This enables security teams and automation systems to retrieve analytical results without using the Azure portal or interactive query editors.
+Microsoft Sentinel data lake supports running Kusto Query Language (KQL) queries programmatically by using REST APIs. Using the REST APIs enables security teams and automation systems to retrieve analytical results without using the Azure portal or interactive query editors.
 This article explains when to use the API, required permissions, and how to submit a basic query request.
 
 ## When to use the KQL query API
@@ -90,7 +90,7 @@ You can include additional execution options in the request payload, such as:
 - Query consistency
 - Read-only enforcement 
 
-These options are useful when running queries in automated or high-scale environments.
+Server timeout, query consistency, and read-only enforcement options are useful when running queries in automated or high-scale environments.
 
 sample payload:
 ```json
@@ -115,6 +115,8 @@ Query execution is subject to time and result size limits. For current limits, s
  
 
 ## Related content
+
+For more information, see the following resources:
 
 - [Run KQL queries on the Microsoft Sentinel data lake](kql-queries.md)
 - [Microsoft Sentinel data lake overview](sentinel-lake-overview.md)

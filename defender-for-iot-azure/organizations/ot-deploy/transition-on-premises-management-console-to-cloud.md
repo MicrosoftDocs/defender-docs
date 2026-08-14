@@ -1,5 +1,5 @@
 ---
-title: Transition from a legacy on-premises management console to the cloud
+title: Transition from a Legacy On-premises Management Console to the Cloud
 description: Migrate from the legacy on-premises management console to the cloud-based Defender for IoT architecture. Learn the updated architecture approach, key retirement considerations, and planning guidance for the transition.
 ms.topic: how-to
 ms.date: 06/12/2026
@@ -51,7 +51,7 @@ Use the following steps to transition from the legacy on-premises management con
 
 1. After your transition is complete, decommission the on-premises management console.
 
-## Next steps
+## Next step
 
 > [!div class="step-by-step"]
 > [Maintain OT network sensors from the sensor console](../how-to-manage-individual-sensors.md)

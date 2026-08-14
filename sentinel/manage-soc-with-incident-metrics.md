@@ -1,23 +1,23 @@
 ---
-title: Manage your SOC better with incident metrics in Microsoft Sentinel
+title: Manage your SOC Better with Incident Metrics in Microsoft Sentinel
 description: Use information from the Microsoft Sentinel incident metrics screen and workbook to help you manage your Security Operations Center (SOC).
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: idpelleg
 ms.topic: how-to
-ms.custom: mvc, msecd-doc-authoring-1014
-ms.date: 06/15/2026
+ms.custom: mvc, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 
 #Customer intent: As a security operations manager, I want to analyze incident metrics using customizable workbooks and queries so that I can monitor and improve my team's performance and efficiency.
 
 ---
 
-# Manage your SOC better with incident metrics
+# Use incident metrics in Microsoft Sentinel to measure SOC performance
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 
-As a Security Operations Center (SOC) manager, you need to have overall efficiency metrics and measures at your fingertips to gauge the performance of your team. You'll want to see incident operations over time by many different criteria, like severity, MITRE tactics, mean time to triage, mean time to resolve, and more. Microsoft Sentinel now makes this data available to you with the new **SecurityIncident** table and schema in Log Analytics and the accompanying **Security operations efficiency** workbook. You'll be able to visualize your team's performance over time and use this insight to improve efficiency. You can also write and use your own KQL queries against the incident table to create customized workbooks that fit your specific auditing needs and KPIs.
+As a Security Operations Center (SOC) manager, you need to have overall efficiency metrics and measures at your fingertips to gauge the performance of your team. You'll want to see incident operations over time by many different criteria, like severity, MITRE tactics, mean time to triage, mean time to resolve, and more. Microsoft Sentinel now makes this data available to you with the new **SecurityIncident** table and schema in Log Analytics and the accompanying **Security operations efficiency** workbook. You'll be able to visualize your team's performance over time and use these incident metrics to improve efficiency. You can also write and use your own KQL queries against the incident table to create customized workbooks that fit your specific auditing needs and KPIs.
 
 ## Use the security incidents table
 
@@ -25,14 +25,15 @@ The **SecurityIncident** table is built into Microsoft Sentinel. You'll find it 
 
 :::image type="content" source="./media/manage-soc-with-incident-metrics/security-incident-table.png" alt-text="Security incidents table":::
 
-Every time you create or update an incident, a new log entry will be added to the table. This allows you to track the changes made to incidents, and allows for even more powerful SOC metrics, but you need to be mindful that each incident update creates a new log entry when constructing queries for this table, as you may need to remove duplicate entries for an incident (dependent on the exact query you are running). 
+Every time you create or update an incident, a new log entry will be added to the table. This allows you to track the changes made to incidents, and allows for even more powerful SOC metrics, but you need to be mindful that each incident update creates a new log entry when constructing queries for this table, as you may need to remove duplicate entries for an incident (dependent on the exact query you are running).
 
-For example, if you wanted to return a list of all incidents sorted by their incident number but only wanted to return the most recent log per incident, you could do this using the KQL [***summarize*** operator](/kusto/query/summarize-operator?view=microsoft-sentinel&preserve-view=true) with the [***arg_max()*** aggregation function](/kusto/query/arg-max-aggregation-function?view=microsoft-sentinel&preserve-view=true):
+For example, if you wanted to return a list of all incidents sorted by their incident number but only wanted to return the most recent log per incident, you could retrieve the most recent log per incident by using the KQL [***summarize*** operator](/kusto/query/summarize-operator?view=microsoft-sentinel&preserve-view=true) with the [***arg_max()*** aggregation function](/kusto/query/arg-max-aggregation-function?view=microsoft-sentinel&preserve-view=true):
 
 ```Kusto
 SecurityIncident
 | summarize arg_max(LastModifiedTime, *) by IncidentNumber
 ```
+
 <a name="more-sample-queries"></a>
 ### Sample KQL queries for incident metrics
 
@@ -73,16 +74,17 @@ SecurityIncident
 
 ## Security operations efficiency workbook
 
-To complement the **SecurityIncidents** table, we’ve provided you with an out-of-the-box **security operations efficiency** workbook template that you can use to monitor your SOC operations. The workbook contains the following metrics: 
-- Incident created over time 
-- Incidents created by closing classification, severity, owner, and status 
-- Mean time to triage 
-- Mean time to closure 
-- Incidents created by severity, owner, status, product, and tactics over time 
-- Time to triage percentiles 
-- Time to closure percentiles 
-- Mean time to triage per owner 
-- Recent activities 
+To complement the **SecurityIncidents** table, we’ve provided you with an out-of-the-box **security operations efficiency** workbook template that you can use to monitor your SOC operations. The workbook contains the following metrics:
+
+- Incident created over time
+- Incidents created by closing classification, severity, owner, and status
+- Mean time to triage
+- Mean time to closure
+- Incidents created by severity, owner, status, product, and tactics over time
+- Time to triage percentiles
+- Time to closure percentiles
+- Mean time to triage per owner
+- Recent activities
 - Recent closing classifications  
 
 You can find this new workbook template by choosing **Workbooks** from the Microsoft Sentinel navigation menu and selecting the **Templates** tab. Choose **Security operations efficiency** from the gallery and click one of the **View saved workbook** and **View template** buttons.
@@ -100,7 +102,8 @@ The following schema reference describes the fields available in the **SecurityI
 
 [!INCLUDE [SecurityIncidents schema](includes/sentinel-schema-security-incident.md)]
 
-## Next steps
+## Related content
 
-- To get started with Microsoft Sentinel, you need a subscription to Microsoft Azure. If you do not have a subscription, you can sign up for an [Azure free trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
-- Learn how to [onboard your data to Microsoft Sentinel](quickstart-onboard.md), and [get visibility into your data and potential threats in Microsoft Sentinel](get-visibility.md).
+- [Sign up for an Azure free trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn)
+- [Onboard Microsoft Sentinel to a Log Analytics workspace](quickstart-onboard.md)
+- [Visualize collected data on the Overview page](get-visibility.md)

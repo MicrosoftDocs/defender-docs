@@ -8,9 +8,9 @@ ms.localizationpriority: medium
 ms.collection: 
 - m365-security
 - tier3
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 ---
 
@@ -35,16 +35,16 @@ Before you start, complete the following prerequisites:
 
 ### Add contributor permissions
 
-After the storage account is created, assign the Contributor role to the account that will configure the Streaming API settings.
+After the storage account is created, assign the Contributor role to the user account that will configure the Streaming API settings.
 
 1. Go to **Storage Account** > **Access control (IAM)**, and then select **Add**.
 
-2. Verify that the account you assigned the Contributor role to is listed under **Role assignments**.
+2. Verify that the user account or service principal you assigned the Contributor role to is listed under **Role assignments**.
 
 ## Enable raw data streaming
 
 > [!NOTE]
-> When using the Streaming API to an Azure Storage account, ensure the option `Allow trusted Microsoft services to access this storage account` is enabled in the storage account settings to allow for data to be streamed from Microsoft Defender for Endpoint.
+> When using the Streaming API, ensure that the `Allow trusted Microsoft services to access this storage account` option is enabled in the target Azure Storage account settings to allow data to be streamed from Microsoft Defender for Endpoint.
 
 1. Go to the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) and sign in using an account with at least Security Administrator permissions.
 
@@ -72,11 +72,13 @@ After the storage account is created, assign the Contributor role to the account
 <a name="the-schema-of-the-events-in-the-storage-account"></a>
 ## Event schema in the storage account
 
+Exported events are stored in blob containers, and each row follows a defined JSON schema.
+
 - A blob container is created for each event type:
 
   :::image type="content" source="media/streaming-api-storage/storage-account-event-schema.png" alt-text="Example of a blob container" lightbox="media/streaming-api-storage/storage-account-event-schema.png":::
 
-- The schema of each row in a blob is the following JSON:
+- The following JSON sample shows the structure of each row in a blob, so you can identify the fields and data types in a streamed event record:
 
    ```JSON
    {
@@ -91,7 +93,7 @@ After the storage account is created, assign the Contributor role to the account
 
 - Each row contains the event name, the time Defender for Endpoint received the event, the tenant it belongs (you'll only get events from your tenant), and the event in JSON format in a property called "properties".
 
-- For more information about the schema of Microsoft Defender XDR events, see [Advanced Hunting overview](advanced-hunting-overview.md).
+- For more information about the schema of Microsoft Defender events, see [Advanced Hunting overview](advanced-hunting-overview.md).
 
 <a name="data-types-mapping"></a>
 ## Data type mappings
@@ -102,7 +104,7 @@ To get the data types for events properties, follow these steps:
 
 2. Go to **Hunting** \> **Advanced hunting**. To go directly to the **Advanced hunting** page, use the [Advanced hunting page](https://security.microsoft.com/advanced-hunting).
 
-2. On the **Query** tab, run the following Kusto query template to retrieve the schema for a specific event type. Replace `{EventType}` with the Advanced Hunting table name you want to inspect (for example, `DeviceInfo`):
+2. On the **Query** tab, run the following Kusto query to list the column names and data types for a specific event table. This information helps you map streamed event properties to their correct schema. Replace `{EventType}` with the Advanced Hunting table name you want to inspect (for example, `DeviceInfo`):
 
    ```kusto
    {EventType}

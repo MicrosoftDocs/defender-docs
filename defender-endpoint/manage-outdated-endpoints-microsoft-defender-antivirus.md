@@ -6,29 +6,29 @@ ms.localizationpriority: medium
 ms.topic: how-to
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1016
+ms.custom: nextgen, msecd-doc-authoring-1015
 ms.reviewer: yongrhee
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier3
-ms.date: 07/02/2026
+ms.date: 08/12/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
 ai-usage: ai-assisted
+#customer intent: As a security administrator, I want to configure catch-up updates and scans so that endpoints remain protected after missing scheduled security intelligence updates or scans.
 ---
-# Manage Microsoft Defender Antivirus updates and scans for endpoints that are out of date
 
+# Manage Microsoft Defender Antivirus updates and scans for endpoints that are out of date
 
 With Microsoft Defender Antivirus, your security team can define how long an endpoint can avoid an update or how many scans it can miss before it's required to receive the update and run a scan. This article shows how to configure catch-up protection updates, set the out-of-date reporting threshold, and enable catch-up scans for endpoints that have missed scheduled updates or scans. This capability is especially useful in environments where devices aren't often connected to a corporate or external network, or for devices that aren't used on a daily basis.
 
 For example, an employee who uses a particular computer takes three days off of work, and doesn't sign on their computer during that time. When the employee returns to work and signs into their computer, Microsoft Defender Antivirus will immediately check and download the latest protection updates, and then run a scan.
 
 ## Prerequisites
-
 
 ### Supported operating systems
 
@@ -66,17 +66,30 @@ To configure catch-up protection updates in Configuration Manager, use the follo
 
 To enable and configure the catch-up update feature in Group Policy, use the following steps:
 
-1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)). Right-click the Group Policy Object you want to configure and then select **Edit**.
+1. In Centralized Group Policy, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
-1. In the **Group Policy Management Editor** go to **Computer configuration**.
+1. In the GPMC console tree, expand Group Policy Objects in the forest and domain containing the GPO you want to edit.
 
-1. Select **Policies** then **Administrative templates**.
+1. Right-click the GPO, and then select **Edit**.
 
-1. Expand the tree to **Windows components > Microsoft Defender Antivirus > Signature Updates**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Security Intelligence Updates**.
 
-1. Double-click the **Define the number of days after which a catch-up security intelligence update is required** setting and set the option to **Enabled**. Enter the number of days after which you want Microsoft Defender Antivirus to check for and download the latest protection update.
+   > [!NOTE]
+   > Group Policy paths before Windows 10, version 2004 (May 2020) might use _Windows_ Defender Antivirus instead of _Microsoft_ Defender Antivirus. Group Policy paths before Windows 10, version 1909 (November 2019) might use _Signature Updates_ instead of _Security Intelligence Updates_. The older and newer names refer to the same policy locations.
 
-1. Select **OK**.
+1. In the details pane of **Security Intelligence Updates**, open the **Define the number of days after which a catch-up security intelligence update is required** setting. To open the setting, use any of the following methods:
+   - Double-click the setting.
+   - Right-click the setting, and then select **Edit**.
+   - Select the setting, and then select **Action** \> **Edit**.
+
+1. In the setting window that opens, configure the following options:
+   1. Select **Enabled**.
+   1. Enter the number of days after which you want Microsoft Defender Antivirus to check for and download the latest protection update.
+
+   When you're finished, select **OK**.
+
+> [!TIP]
+> You can also configure Group Policy locally on individual devices by using the Local Group Policy Editor (`gpedit.msc`). Navigate to the same path: **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Security Intelligence Updates**.
 
 ### Use PowerShell cmdlets to configure catch-up protection updates
 
@@ -113,21 +126,48 @@ You can use Group Policy to specify the number of days after which endpoint prot
 
 To specify when protection is considered out of date by using Group Policy, use the following steps:
 
-1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and then select **Edit**.
+1. In Centralized Group Policy, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
-1. In the **Group Policy Management Editor** go to **Computer configuration**.
+1. In the GPMC console tree, expand Group Policy Objects in the forest and domain containing the GPO you want to edit.
 
-1. Select **Policies** then **Administrative templates**.
+1. Right-click the GPO, and then select **Edit**.
 
-1. Expand the tree to **Windows components > Microsoft Defender Antivirus > Signature Updates** and configure the following settings:
+1. In the **Group Policy Management Editor**, go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Security Intelligence Updates**.
 
-    1. Double-click **Define the number of days before spyware definitions are considered out of date** and set the option to **Enabled**. Enter the number of days after which you want Microsoft Defender Antivirus to consider spyware Security intelligence to be out of date.
+   > [!NOTE]
+   > Group Policy paths before Windows 10, version 2004 (May 2020) might use _Windows_ Defender Antivirus instead of _Microsoft_ Defender Antivirus. Group Policy paths before Windows 10, version 1909 (November 2019) might use _Signature Updates_ instead of _Security Intelligence Updates_. The older and newer names refer to the same policy locations.
 
-    1. Select **OK**.
+1. In the details pane of **Security Intelligence Updates**, the available settings are:
+   - [Define the number of days before spyware security intelligence is considered out of date](#enable-and-configure-the-spyware-security-intelligence-age-setting)
+   - [Define the number of days before virus security intelligence is considered out of date](#enable-and-configure-the-virus-security-intelligence-age-setting)
 
-    1. Double-click **Define the number of days before virus definitions are considered out of date** and set the option to **Enabled**. Enter the number of days after which you want Microsoft Defender Antivirus to consider virus Security intelligence to be out of date.
+   To open and configure a security intelligence age setting, use any of the following methods:
+   - Double-click the setting.
+   - Right-click the setting, and then select **Edit**.
+   - Select the setting, and then select **Action** \> **Edit**.
 
-    1. Select **OK**.
+> [!TIP]
+> You can also configure Group Policy locally on individual devices by using the Local Group Policy Editor (`gpedit.msc`). Navigate to the same path: **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Security Intelligence Updates**.
+
+#### Enable and configure the spyware security intelligence age setting
+
+1. In the details pane of **Security Intelligence Updates**, open the **Define the number of days before spyware security intelligence is considered out of date** setting.
+
+1. In the setting window that opens, configure the following options:
+   1. Select **Enabled**.
+   1. **Define the number of days before spyware security intelligence is considered out of date** in the **Options** section: Enter the number of days after which you want Microsoft Defender Antivirus to consider spyware security intelligence to be out of date.
+
+   When you're finished, select **OK**.
+
+#### Enable and configure the virus security intelligence age setting
+
+1. In the details pane of **Security Intelligence Updates**, open the **Define the number of days before virus security intelligence is considered out of date** setting.
+
+1. In the setting window that opens, configure the following options:
+   1. Select **Enabled**.
+   1. **Define the number of days before virus security intelligence is considered out of date** in the **Options** section: Enter the number of days after which you want Microsoft Defender Antivirus to consider virus security intelligence to be out of date.
+
+   When you're finished, select **OK**.
 
 ## Set up catch-up scans for endpoints that haven't been scanned for a while
 
@@ -162,18 +202,53 @@ To enable and configure the catch-up scan feature in Group Policy, use the follo
 
 1. Ensure you set up at least one scheduled scan.
 
-1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and select **Edit**.
+1. In Centralized Group Policy, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
-1. In the **Group Policy Management Editor** go to **Computer configuration**.
+1. In the GPMC console tree, expand Group Policy Objects in the forest and domain containing the GPO you want to edit.
 
-1. Select **Policies** then **Administrative templates**.
+1. Right-click the GPO, and then select **Edit**.
 
-1. Expand the tree to **Windows components > Microsoft Defender Antivirus > Scan** and configure the following settings:
+1. In the **Group Policy Management Editor**, go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Scan**.
 
-    - If you have set up scheduled quick scans, double-click the **Turn on catch-up quick scan** setting and set the option to **Enabled**.
-    - If you have set up scheduled full scans, double-click the **Turn on catch-up full scan** setting and set the option to **Enabled**. Select **OK**.
-    - Double-click the **Define the number of days after which a catch-up scan is forced** setting and set the option to **Enabled**.
-    - Enter the number of scans that can be missed before a scan will be automatically run when the user next signs in on the endpoint. The type of scan that is run is determined by the **Specify the scan type to use for a scheduled scan** (see [About schedule scans](schedule-antivirus-scans.md)). Select **OK**.
+   > [!NOTE]
+   > Group Policy paths before Windows 10, version 2004 (May 2020) might use _Windows_ Defender Antivirus instead of _Microsoft_ Defender Antivirus. Both names refer to the same policy location.
+
+1. In the details pane of **Scan**, the available settings are:
+   - [Turn on catch-up quick scan](#enable-and-configure-catch-up-quick-scans)
+   - [Turn on catch-up full scan](#enable-and-configure-catch-up-full-scans)
+   - [Define the number of days after which a catch-up scan is forced](#enable-and-configure-forced-catch-up-scans)
+
+   To open and configure a catch-up scan setting, use any of the following methods:
+   - Double-click the setting.
+   - Right-click the setting, and then select **Edit**.
+   - Select the setting, and then select **Action** \> **Edit**.
+
+> [!TIP]
+> You can also configure Group Policy locally on individual devices by using the Local Group Policy Editor (`gpedit.msc`). Navigate to the same path: **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Scan**.
+
+#### Enable and configure catch-up quick scans
+
+1. In the details pane of **Scan**, open the **Turn on catch-up quick scan** setting.
+
+1. In the setting window that opens, select **Enabled**, and then select **OK**.
+
+#### Enable and configure catch-up full scans
+
+1. In the details pane of **Scan**, open the **Turn on catch-up full scan** setting.
+
+1. In the setting window that opens, select **Enabled**, and then select **OK**.
+
+#### Enable and configure forced catch-up scans
+
+1. In the details pane of **Scan**, open the **Define the number of days after which a catch-up scan is forced** setting.
+
+1. In the setting window that opens, configure the following options:
+   1. Select **Enabled**.
+   1. Enter the number of scans that can be missed before a scan automatically runs when the user next signs in on the endpoint.
+
+   The type of scan that runs is determined by the **Specify the scan type to use for a scheduled scan** setting. For more information, see [About scheduled scans](schedule-antivirus-scans.md).
+
+   When you're finished, select **OK**.
 
 > [!NOTE]
 > The Group Policy setting title refers to the number of days. The setting, however, is applied to the number of scans (not days) before the catch-up scan will be run.
@@ -222,20 +297,27 @@ To configure catch-up scans in Configuration Manager, use the following steps:
 
 To configure security intelligence updates over a metered connection by using Group Policy, use the following steps:
 
-1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and select **Edit**.
+1. In Centralized Group Policy, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
-1. In the **Group Policy Management Editor**, go to **Computer configuration**.
+1. In the GPMC console tree, expand Group Policy Objects in the forest and domain containing the GPO you want to edit.
 
-1. Select **Policies** and then select **Administrative templates**.
+1. Right-click the GPO, and then select **Edit**.
 
-1. Expand the tree to **Windows components > Microsoft Defender Antivirus > Security Intelligence Update** and configure the following settings:
+1. In the **Group Policy Management Editor**, go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Security Intelligence Updates**.
 
-- If you have set up scheduled quick scans, double-click the Allow Microsoft Defender Antivirus to update and communicate over a metered connection setting and set the option to **Enabled**.
-  - Select **OK**.
+1. In the details pane of **Security Intelligence Updates**, open the **Allows Microsoft Defender Antivirus to update and communicate over a metered connection.** setting. To open the setting, use any of the following methods:
+   - Double-click the setting.
+   - Right-click the setting, and then select **Edit**.
+   - Select the setting, and then select **Action** \> **Edit**.
+
+> [!TIP]
+> You can also configure Group Policy locally on individual devices by using the Local Group Policy Editor (`gpedit.msc`). Navigate to the same path: **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Security Intelligence Updates**.
+
+1. In the setting window that opens, select **Enabled**, and then select **OK**.
     
-  |Settings| Description| Default | 
-  | -------- | -------- | -------- |
-  |Allow Microsoft Defender Antivirus to update and communicate over a metered connection.|Enabling this policy will automatically download updates, even over metered data connections (charges may apply)| Disabled |
+|Settings|Description|Default|
+|---|---|---|
+|Allows Microsoft Defender Antivirus to update and communicate over a metered connection.|Enabling this policy automatically downloads updates, even over metered data connections (charges might apply).|Disabled|
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
@@ -255,5 +337,3 @@ To configure security intelligence updates over a metered connection by using Gr
 - [Manage event-based forced updates](manage-event-based-updates-microsoft-defender-antivirus.md)
 - [Manage updates for mobile devices and virtual machines (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
-
-

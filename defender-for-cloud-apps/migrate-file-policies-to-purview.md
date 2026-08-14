@@ -6,7 +6,7 @@ ms.author: abbyweisberg
 ms.service: defender-for-cloud-apps
 ms.topic: how-to
 ms.custom: msecd-doc-authoring-106
-ms.date: 07/02/2026
+ms.date: 08/07/2026
 ai-usage: ai-assisted
 
 #customer intent: As a security admin, I want to migrate my Defender for Cloud Apps file policies to Microsoft Purview so that my data protection continues after file policies are retired.
@@ -54,9 +54,9 @@ The following table compares file policy capabilities with their Microsoft Purvi
 | Architecture | API-based scanning of existing files | API-based for cloud apps, plus proactive scanning for Exchange, Teams, and endpoints | No action needed; protection is equivalent or better |
 | Policy structure | One policy with one set of filters and actions | One policy with multiple rules, each with its own conditions and actions | Recreate each Defender for Cloud Apps file policy as one or more Purview DLP rules |
 | Sensitivity labeling | Governance action inside file policy | Separate auto-labeling policy in Information Protection | Create a Purview auto-labeling policy for each labeling file policy |
-| Sharing remediation | Remove specific collaborators, change link access, remove public access | Block further access only; doesn't change existing sharing | Use Restrict access actions; use Power Automate to remove existing sharing |
-| User quarantine | Dedicated user quarantine folder | No direct equivalent | Use DLP restrict access and a Power Automate flow to move files to a quarantine folder |
-| Admin quarantine | Admin quarantine with review workflow | Admin quarantine | Full parity |
+| Sharing remediation | Remove specific collaborators, change link access, remove public access | Block everyone, people outside the organization, or specific external domains or users; doesn't change existing sharing | Use Restrict access actions; use Power Automate to remove existing sharing |
+| User quarantine | Dedicated user quarantine folder | File quarantine for SharePoint and OneDrive moves the file to an admin-controlled quarantine site and removes user access | Use the native file quarantine action; use Power Automate only for custom destination or workflow requirements |
+| Admin quarantine | Admin quarantine with review workflow | File quarantine in an admin-controlled SharePoint site | Equivalent containment capability |
 | Simulation mode | Not available | Full simulation mode before enforcement | Run policies in simulation mode before enabling enforcement |
 | Policy limit | 50 file policies per tenant | 10,000 information protection and governance policies; 600 DLP rules per tenant | No action needed |
 | Folder scoping | Parent folder filter supported | Site-level scoping only | Scope policies to specific SharePoint sites as the closest equivalent |
@@ -120,18 +120,20 @@ Create equivalent DLP policies in Microsoft Purview for each file policy you cat
    | Remove external users | Restrict access: Block people outside org | Equivalent | |
    | Remove direct shared link | Restrict access: Remove sharing link | Equivalent | |
    | Make private | Restrict access: Block everyone except owner | Equivalent | |
-   | Admin quarantine | Admin quarantine | Equivalent | |
+   | Admin quarantine | File quarantine for SharePoint and OneDrive | Equivalent | Moves the file to an admin-controlled quarantine site, removes permissions and sharing links, and preserves the file for investigation |
    | Apply sensitivity label | Apply sensitivity label (auto-labeling policy) | Equivalent | Purview > Information Protection > Auto-labeling |
    | Remove sensitivity label | Auto-labeling Remove labels only policy | Equivalent | Purview > Information Protection > Auto-labeling > Remove labels |
-   | User quarantine | No direct equivalent | No equivalent | DLP restrict access and Power Automate (move to quarantine folder) |
+   | User quarantine | File quarantine for SharePoint and OneDrive | Partial equivalent | Purview moves the file to an admin-controlled quarantine site rather than a user quarantine folder |
    | Trash or delete file | No direct equivalent | No equivalent | DLP restrict access and Power Automate (delete on alert) |
-   | Remove specific collaborator | No direct equivalent | No equivalent | SharePoint admin or Power Automate |
+   | Remove specific collaborator | Restrict access: Block access for specific external domains or users (Preview) | Partial equivalent | Blocks access for configured external domains or users, but doesn't remove the existing sharing relationship |
    | Expire shared link | No direct equivalent | No equivalent | SharePoint sharing policies and Microsoft Entra Conditional Access |
    | Transfer file ownership | No direct equivalent | No equivalent | Manual process or Power Automate (Google Workspace specific) |
 
 1. Set up user notifications and policy tips to match your file policy's alert settings.
 1. Set the policy to **simulation mode** to confirm it detects the same content as your file policy.
 1. After confirming the results are accurate, turn the policy on.
+
+For SharePoint and OneDrive, configure the Purview DLP file quarantine location before you use the quarantine action. When a rule triggers, Purview removes the file's permissions and sharing links, moves the file to the admin-controlled quarantine site, and leaves a notification file in the original location. For more information, see [Learn about DLP file quarantine for SharePoint and OneDrive](/purview/dlp-spo-odb-quarantine-learn).
 
 ## Migrate auto-labeling file policies to Microsoft Purview
 

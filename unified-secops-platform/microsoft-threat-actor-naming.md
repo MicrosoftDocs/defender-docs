@@ -14,7 +14,7 @@ ms.custom:
 - msecd-doc-authoring-1012
 ms.topic: article
 ai-usage: ai-assisted
-ms.date: 07/16/2026
+ms.date: 08/07/2026
 ---
 
 # How Microsoft names threat actors
@@ -200,6 +200,7 @@ The following table lists publicly disclosed threat actor names with their origi
 |[Storm-2657](https://www.microsoft.com/en-us/security/blog/2025/05/21/lumma-stealer-breaking-down-the-delivery-techniques-and-capabilities-of-a-prolific-infostealer/)|United States, Financially motivated|Payroll Pirates|
 |[Storm-2697](https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/)|Financially motivated||
 |[Storm-2755](https://www.microsoft.com/en-us/security/blog/2026/04/09/investigating-storm-2755-payroll-pirate-attacks-targeting-canadian-employees/)|Financially motivated||
+|[Storm-2945](https://www.microsoft.com/en-us/security/blog/2026/07/31/captivecrunch-midnight-blizzard-targets-travelers-worldwide-for-malware-delivery-and-credential-theft/)||Midnight Blizzard sub-cluster|
 |[Storm-2949](https://www.microsoft.com/en-us/security/blog/2026/05/18/storm-2949-turned-compromised-identity-into-cloud-wide-breach/)|Group in development||
 |Storm-2981|Group in development|Coinbase Cartel|
 |Storm-2999|Group in development|TeamPCP|

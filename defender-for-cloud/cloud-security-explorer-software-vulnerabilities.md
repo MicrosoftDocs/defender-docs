@@ -1,9 +1,9 @@
 ---
-title: Building Cloud Security Explorer software vulnerabilities query
-description: Learn to build queries with cloud security explorer in Microsoft Defender for Cloud to proactively identify software vulnerabilities in VMs and container images
+title: Build Cloud Security Explorer queries for software vulnerabilities in VMs and container images
+description: Learn how to build Cloud Security Explorer queries in Microsoft Defender for Cloud to identify software vulnerabilities in virtual machines and container images.
 ms.topic: how-to
-ms.date: 05/26/2026
-ms.custom: sfi-image-nochange
+ms.date: 07/03/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
 #customer intent: As a security professional, I want to build Cloud Security Explorer queries in Microsoft Defender for Cloud to identify software vulnerabilities in virtual machines and container images.
 ai-usage: ai-assisted
 ---
@@ -18,7 +18,7 @@ For an introduction to Cloud Security Explorer queries, see [Build queries with 
 
 To create a query that finds software vulnerabilities in VMs:
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Sign in to the [Microsoft Defender for Cloud in the Azure portal](https://portal.azure.com).
 
 1. Go to [Microsoft Defender for Cloud > Cloud Security Explorer](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/SecurityGraph).
 
@@ -42,7 +42,7 @@ To create a query that finds software vulnerabilities in VMs:
 
 To create a query that finds software vulnerabilities in container images:
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Sign in to the [Microsoft Defender for Cloud in the Azure portal](https://portal.azure.com).
 
 1. Go to [Microsoft Defender for Cloud > Cloud Security Explorer](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/SecurityGraph).
 

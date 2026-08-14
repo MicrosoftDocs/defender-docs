@@ -2,7 +2,8 @@
 title: Set up continuous export with REST API
 description: Configure continuous export to Log Analytics or Event Hubs by using the REST API, including destination options and automation parameters.
 ms.topic: how-to
-ms.date: 05/24/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 # customer intent: As a reader, I want to learn how to set up continuous export of Microsoft Defender for Cloud security alerts and recommendations using the REST API, so that I can integrate it into my own applications.
 ai-usage: ai-assisted
 ---
@@ -18,7 +19,7 @@ Continuous export of Microsoft Defender for Cloud alerts and recommendations hel
 
 Before setting up continuous export with the REST API, make sure you meet the following requirements:
 
-- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
+- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
@@ -58,7 +59,8 @@ Here are options available only through the API:
     > [!TIP]
     > These API-only options aren't shown in the Azure portal. If you use them, a banner informs you that other configurations exist.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Set up continuous export with Azure Policy](continuous-export-azure-policy.md)

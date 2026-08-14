@@ -1,14 +1,14 @@
 ---
 title: Configure automatic log upload using on-premises Docker on Linux | Microsoft Defender for Cloud Apps
 description: Configure automatic log upload for continuous reports in Defender for Cloud Apps by deploying a Docker-based log collector on an on-premises Ubuntu or CentOS server. For RHEL 7.1 or higher, use Podman instead.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 # Configure automatic log upload using on-premises Docker on Linux
 
-You can configure automatic log upload for continuous reports in Defender for Cloud Apps using a Docker on an on-premises Ubuntu  or CentOS server. This article walks you through defining data sources in the Microsoft Defender portal, deploying a Docker-based log collector on your Linux server, configuring your network appliances to export logs, and verifying the deployment. Before you begin, review the [Prerequisites](#prerequisites) to confirm that your environment meets the minimum requirements.
+You can configure automatic log upload for continuous reports in Defender for Cloud Apps using a Docker on an on-premises Ubuntu  or CentOS server. This article walks you through defining data sources in the Microsoft Defender portal, deploying a Docker-based log collector on your Linux server, configuring your network appliances to export logs, and verifying the deployment. Before you begin, confirm that your environment meets the following [minimum requirements](#prerequisites).
 
 > [!IMPORTANT]
 > If you're using RHEL version 7.1 or higher, you must use Podman for automatic log collection instead of Docker. For more information, see [Configure automatic log upload using Podman](discovery-linux-podman.md).
@@ -29,7 +29,12 @@ Make sure to set your firewall as needed. For more information, see [Network req
 
 ## Remove an existing log collector
 
-If you have an existing log collector and want to remove the log collector before deploying again, or if you simply want to remove the log collector, run the following commands to stop the running container and delete it:
+If you need to redeploy or replace the log collector, stop and remove the existing Docker container first.
+
+> [!WARNING]
+> The following commands permanently remove the existing log collector container. Make sure you no longer need the current deployment before continuing.
+
+Run the following commands to stop the running container and delete it:
 
 ```console
 docker stop <collector_name>
@@ -58,11 +63,11 @@ Perform the following steps in the Microsoft Defender portal to define data sour
 
     1. **Name** your proxy or firewall.  
 
-        ![Screenshot of the Add data source dialog with fields for naming the proxy or firewall.](media/ubuntu1.png)
+        ![Screenshot of the Add data source dialog showing the Name field for entering a proxy or firewall name.](media/ubuntu1.png)
 
     1. Select the appliance from the **Source** list. If you select **Custom log format** to work with a network appliance that isn't listed, see [Working with the custom log parser](custom-log-parser.md) for configuration instructions.
 
-    1. Compare your log with the sample of the expected log format. If your log file format doesn't match this sample, you should add your data source as **Other**.
+    1. Compare your log with the sample of the expected log format. If your log file format doesn't match the expected log format sample shown in the portal, add your data source as **Other**.
 
     1. Set the **Receiver type** to either **FTP**, **FTPS**, **Syslog – UDP**, or **Syslog – TCP**, or **Syslog – TLS**.
 
@@ -84,7 +89,7 @@ Perform the following steps in the Microsoft Defender portal to define data sour
 
     1. Select all **Data sources** that you want to connect to the collector, and select **Update** to save the configuration.
 
-        Further deployment information appears in the **Next steps** section of the dialog, including a command you'll use later in [Step 2](#step-2--on-premises-deployment-of-your-machine) to import the collector configuration. If you selected Syslog, this information also includes data about which port the Syslog listener is listening on.
+        Further deployment information appears in the **Next steps** section of the dialog, including a command you'll use later in [Step 2 – On-premises deployment of your machine](#step-2--on-premises-deployment-of-your-machine) to deploy the collector on your Linux host and import the collector configuration. If you selected Syslog, the **Next steps** section also includes the port that the Syslog listener is listening on.
 
     1. Use the ![Icon for copying the collector configuration command to the clipboard.](media/copy-icon.png) **Copy** button to copy the command to the clipboard and save it to a separate location.
 
@@ -94,7 +99,7 @@ For users sending log data via FTP for the first time, we recommend changing the
 
 ## Step 2 – On-premises deployment of your machine
 
-The following steps describe the deployment in Ubuntu. The deployment steps for other supported platforms might be slightly different.
+This section describes the on-premises Docker deployment procedure for Ubuntu. The deployment steps for other supported platforms might be slightly different.
 
 1. Open a terminal on your Ubuntu machine.
 
@@ -300,13 +305,13 @@ The following steps describe the deployment in Ubuntu. The deployment steps for 
 
     You should see the message: **Finished successfully!** For example:
 
-    ![Screenshot of a command to verify that docker is running properly.](media/ubuntu8.png)
+    ![Screenshot of terminal output showing the Finished successfully message, confirming the log collector container is running.](media/ubuntu8.png)
 
 ## Step 3 - On-premises configuration of your network appliances
 
 Configure your network firewalls and proxies to periodically export logs to the dedicated Syslog port or the FTP directory according to the directions in the **Create log collector** dialog. For example, the following destination path shows the FTP folder structure for a data source named BlueCoat_HQ on the log collector machine:
 
-```bash
+```text
 BlueCoat_HQ - Destination path: \<<machine_name>>\BlueCoat_HQ\
 ```
 

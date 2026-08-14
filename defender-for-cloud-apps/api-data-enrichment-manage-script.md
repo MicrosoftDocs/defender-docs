@@ -1,10 +1,10 @@
 ---
 title: Manage IP address ranges using the API
-description: This article provides information on how to use the API to manage IP address ranges in Defender for Cloud Apps.
-ms.date: 06/16/2026
+description: Use the Data Enrichment APIs in Defender for Cloud Apps to create, update, and delete IP address ranges programmatically, with request and response details and a Python CSV sync example.
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Manage IP address ranges using the API
 
@@ -14,6 +14,8 @@ Use the Data Enrichment APIs in Microsoft Defender for Cloud Apps to create, upd
 
 <a name="to-use-the-manage-ip-address-ranges-script"></a>
 ## Manage IP address ranges with the script
+
+Perform the following steps to use the Python script to manage IP address ranges in your tenant:
 
 1. Create a CSV file with the following expected fields: Name, IP_Address_Ranges, Category, Tag(id), and Override_ISP_Name.  
 Here's an example of the CSV file contents:
@@ -31,7 +33,7 @@ Here's an example of the CSV file contents:
 1. Run the script to create new records and update existing rules with the matching name.
 
     > [!IMPORTANT]
-    > If you set **OPTION_DELETE_ENABLED** to **True**, any IP address ranges that are defined in your tenant but don't exist in the CSV files will be deleted from the tenant by the script. If you use this option, make sure that the CSV file defines all the IP address ranges you want in your tenant.
+    > If you set **OPTION_DELETE_ENABLED** to **True**, any IP address ranges that are defined in your tenant but don't exist in the CSV files will be deleted from the tenant by the script. If you set **OPTION_DELETE_ENABLED** to **True**, make sure that the CSV file defines all the IP address ranges you want in your tenant.
 
 ## Request body parameters
 
@@ -46,7 +48,7 @@ The response includes the following parameters:
 
 - "data": the returned data. Will contain up to "limit" number of records each iteration. If there are more records to be pulled (hasNext=true), the last few records are dropped to ensure that all data is listed only once.
 - "hasNext": Boolean. Denotes whether another iteration on the data is needed.
-- "nextQueryFilters": If another iteration is needed, it contains the consecutive JSON query to be run. Use this as the "filters" parameter in the next request.
+- "nextQueryFilters": If another iteration is needed, it contains the consecutive JSON query to be run. Use the "nextQueryFilters" value as the "filters" parameter in the next request.
 
 This Python example uses the contents of a CSV file to manage (create, update, or delete) IP address ranges in your Defender for Cloud Apps environment.
 
@@ -182,4 +184,4 @@ if __name__ == '__main__':
 
 For guidance on securing your Defender for Cloud Apps deployment, see [Best practices for protecting your organization](best-practices.md).
 
-If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support).
+If you run into any problems, we're here to help. To get assistance or support for your product issue, please [contact Defender for Cloud Apps support](/defender-xdr/contact-defender-support).

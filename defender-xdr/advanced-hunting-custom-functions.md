@@ -1,5 +1,5 @@
 ---
-title: Custom functions in the advanced hunting schema
+title: Use custom functions in advanced hunting
 description: Create reusable custom functions in advanced hunting to simplify and share query logic across hunting queries.
 ms.service: defender-xdr
 ms.subservice: adv-hunting
@@ -17,7 +17,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 ---
 
@@ -40,7 +40,7 @@ This article explains the different types of functions available in advanced hun
 
 Advanced hunting includes three different types of functions:
 
-![Screenshot of the three function types available in advanced hunting.](media/advanced-hunting-custom-functions/function-types.png)
+![Screenshot of advanced hunting functions pane showing Built-in functions, Shared functions, and My functions categories.](media/advanced-hunting-custom-functions/function-types.png)
 
 - **Built-in functions** – Prebuilt functions included with Microsoft Defender advanced hunting. All advanced hunting instances provide these functions, and you can't modify them.
 - **Shared functions** – Custom functions that users create. All users in a specific tenant can access these functions. Users can modify and control these functions.
@@ -61,7 +61,7 @@ For more information about custom detection rules in the Defender portal, see [C
 In the **Advanced hunting** query editor, after composing a query, create a function from it as follows:
 
 1. Select **Save** and then **Save as function**.
-  ![Screenshot of the Save menu with Save as function option highlighted.](media/advanced-hunting-custom-functions/save-as-function.png)
+  ![Screenshot of the Save menu showing where to select Save as function to create a reusable custom function.](media/advanced-hunting-custom-functions/save-as-function.png)
 
 1. In the **Save as function** flyout panel, provide the following information:
 
@@ -70,7 +70,7 @@ In the **Advanced hunting** query editor, after composing a query, create a func
     - **Description** - A description that helps other users understand the purpose of the function and how it works.
     - **Parameters** - Add a parameter for each variable in the function that requires a value when it's used. For more information, see [Add parameters to your custom function](#add-parameters-to-your-custom-function).
 
-    ![Screenshot of the Save as function flyout panel with name, location, description, and parameters fields.](media/advanced-hunting-custom-functions/save-as-function-dialog-box.png)
+    ![Screenshot of the Save as function panel used to define a custom function's name, storage location, description, and parameters.](media/advanced-hunting-custom-functions/save-as-function-dialog-box.png)
 
 1. Select **Save**.
 
@@ -81,7 +81,7 @@ In the **Advanced hunting** query editor, after composing a query, create a func
 
 ### Add parameters to your custom function
 
-Add parameters to a function so you can provide the arguments or values for certain variables when calling the function. By using this feature, you can use the same function in different queries, each with different values for the parameters. 
+Add parameters to a function so you can provide the arguments or values for certain variables when calling the function. By using parameters, you can use the same function in different queries, each with different values for the parameters. 
 
 To add parameters when saving your custom function, select **Add parameter**, and then enter the following properties:
   - **Type** - Data type for the value
@@ -92,7 +92,7 @@ List parameters in the order you create them. List parameters that don't have a 
 
 ### Create custom functions with tabular parameters
 
-Create custom functions that use tabular parameters. By using tabular parameters, you can pass entire tables as inputs. This approach lets you build more modular, reusable, and expressive logic across your hunting queries. This capability is especially useful for complex hunting scenarios that require structured data inputs.
+Create custom functions that use tabular parameters. By using tabular parameters, you can pass entire tables as inputs. This approach lets you build more modular, reusable, and expressive logic across your hunting queries. Using tabular parameters is especially useful for complex hunting scenarios that require structured data inputs.
 
 To create tabular parameters for your custom function:
 1. Select **Add parameter** and then choose **table** as its **Type**.
@@ -141,8 +141,8 @@ You can delete functions from **My functions** and functions you created in **Sh
 
 To delete a function, select the three dots to the right of the function and select **Delete**.
 
-![Screenshot that shows how to delete a custom function.](media/advanced-hunting-custom-functions/delete-function.png)
-## See also
+![Screenshot of the function context menu with the Delete option for a custom function.](media/advanced-hunting-custom-functions/delete-function.png)
+## Related content
 
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Learn the query language](advanced-hunting-query-language.md)

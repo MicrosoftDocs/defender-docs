@@ -17,7 +17,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 ---
 
@@ -46,7 +46,7 @@ Use these queries to learn how you can quickly get information about user accoun
 
 When constructing queries across [tables that cover devices and emails](advanced-hunting-schema-tables.md), you will likely need to obtain user account names from sender or recipient email addresses. You can generally do this for either recipient or sender address using the *local-host* from the email address.
 
-In the snippet below, we use the [tostring()](/azure/data-explorer/kusto/query/tostringfunction) Kusto function to extract the local-host right before the `@` from recipient email addresses in the column `RecipientEmailAddress`.
+In the snippet below, we use the [tostring()](/azure/data-explorer/kusto/query/tostringfunction) Kusto function to extract the local-host right before the `@` from recipient email addresses in the column `RecipientEmailAddress`. This snippet extracts the account name from `RecipientEmailAddress` so you can reuse it in joins with identity or device data:
 
 ```kusto
 //Query snippet showing how to extract the account name from an email address
@@ -83,7 +83,7 @@ Watch this [video on joining tables with Kusto Query Language](https://www.youtu
 
 ### Get device information
 
-The [advanced hunting schema](advanced-hunting-schema-tables.md) provides extensive device information in various tables. For example, the [DeviceInfo table](advanced-hunting-deviceinfo-table.md) provides comprehensive device information based on event data aggregated regularly. This query uses the `DeviceInfo` table to check if a potentially compromised user (`<account-name>`) has logged on to any devices and then lists the alerts that have been triggered on those devices.
+The [advanced hunting schema](advanced-hunting-schema-tables.md) provides extensive device information in various tables. For example, the [DeviceInfo table](advanced-hunting-deviceinfo-table.md) provides comprehensive device information based on event data aggregated regularly. This query uses the `DeviceInfo` table to check if a potentially compromised user (`<account-name>`) has logged on to any devices and then lists the alerts that have been triggered on the devices that the user has logged on to.
 
 > [!TIP]
 > This query uses `kind=inner` to specify an [inner-join](/azure/data-explorer/kusto/query/joinoperator?pivots=azuredataexplorer#inner-join-flavor), which prevents deduplication of left side values for `DeviceId`.
@@ -187,7 +187,7 @@ The following example queries address common threat-hunting investigations that 
 
 ### List logon activities of users that received emails that were not zapped successfully
 
-[Zero-hour auto purge (ZAP)](/defender-office-365/zero-hour-auto-purge) addresses malicious emails after they have been received. If ZAP fails, malicious code might eventually run on the device and leave accounts compromised. This query checks for logon activity made by the recipients of emails that were not successfully addressed by ZAP.
+[Zero-hour auto purge (ZAP)](/defender-office-365/zero-hour-auto-purge) addresses malicious emails after they have been received. If ZAP fails, malicious code might eventually run on a recipient's device and leave accounts compromised. This query checks for logon activity made by the recipients of emails that were not successfully addressed by ZAP.
 
 ```kusto
 EmailPostDeliveryEvents

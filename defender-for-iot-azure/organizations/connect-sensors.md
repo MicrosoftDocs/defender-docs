@@ -2,8 +2,8 @@
 title: Configure proxy connections from your OT sensor to Azure
 description: Learn how to configure proxy settings on your OT sensors to connect to Azure.
 ms.topic: how-to
-ms.date: 06/12/2026
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.date: 07/03/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -69,7 +69,7 @@ You might use an Azure proxy to connect your sensor to Defender for IoT in the f
 - Your site is connected to Azure via ExpressRoute
 - Your site is connected to Azure over a VPN
 
-If you already have a proxy configured, continue directly with  [Configure proxy settings on your OT sensor](#configure-proxy-settings-on-an-ot-sensor).
+If you already have a proxy configured, continue directly with  [Configure proxy settings on your OT sensor](#configure-proxy-settings-on-your-ot-sensor).
 
 If you don't yet have a proxy configured, use the procedures in this section to set one up in your Azure VNET.
 
@@ -317,7 +317,11 @@ For more information, see [Proxy connections with proxy chaining](architecture-c
 
 ### Prerequisites
 
-Before you start, make sure that you have a host server running a proxy process within the site network. The proxy process must be accessible to both the sensor and the next proxy in the chain.
+Before you start, make sure that you have:
+
+- A host server running a proxy process within the site network. The proxy process must be accessible to both the sensor and the next proxy in the chain.
+
+- Outbound HTTPS traffic on port 443 allowed from your sensor to the required endpoints for Defender for IoT. For more information, see [Provision OT sensors for cloud management](ot-deploy/provision-cloud-management.md).
 
 We've validated this procedure using the open-source [Squid](http://www.squid-cache.org/) proxy. This proxy uses HTTP tunneling and the HTTP CONNECT command for connectivity. Any other proxy chaining connection that supports the CONNECT command can be used for this connection method.
 
@@ -371,7 +375,7 @@ This procedure describes how to install and configure a connection between your 
 
     For more information, see [Provision OT sensors for cloud management](ot-deploy/provision-cloud-management.md).
 
-Your proxy is now fully configured. Continue by [configuring proxy settings on your OT sensor](#configure-sensor-proxy-settings).
+Your proxy is now fully configured. Continue by [configuring proxy settings on your OT sensor](#configure-proxy-settings-on-your-ot-sensor).
 
 ## Set up connectivity for multicloud environments
 
@@ -412,7 +416,7 @@ Use the following steps to configure multicloud connectivity and then define pro
 
 1. To enable private connectivity between your VPCs and Defender for IoT, connect your VPC to an Azure VNET over a VPN connection. For example if you're connecting from an AWS VPC, see our TechCommunity blog: [How to create a VPN between Azure and AWS using only managed solutions](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/how-to-create-a-vpn-between-azure-and-aws-using-only-managed/ba-p/2281900).
 
-1. After your VPC and VNET are configured, [configure the sensor proxy settings](#configure-sensor-proxy-settings) on your OT sensor.
+1. After your VPC and VNET are configured, [configure the sensor proxy settings](#configure-proxy-settings-on-your-ot-sensor) on your OT sensor.
 
 ## Next steps
 

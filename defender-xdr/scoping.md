@@ -18,7 +18,7 @@ ms.custom: msecd-doc-authoring-1020
 
 Microsoft Sentinel scoping provides row-level role-based access control (RBAC), enabling granular, row-level access without requiring workspace separation. Microsoft Sentinel scoping allows multiple teams to operate securely within a shared Microsoft Sentinel environment while using consistent and reusable scope definitions across tables and experiences.
 
-Configure scoping in the Microsoft Defender portal. Sentinel in the Azure portal (Ibiza) doesn't support scoping.
+Configure scoping in the Microsoft Defender portal. Sentinel in the Azure portal (Ibiza) doesn't support scoping. Before you begin, make sure you meet the [prerequisites](#prerequisites) for configuring scoping.
 
 ## What is Microsoft Sentinel scoping?
 
@@ -30,7 +30,7 @@ Microsoft Sentinel scoping extends permissions management in the Defender portal
 - [Restrict access by scope](#step-4-access-scoped-data): Limit user access to alerts, incidents, hunting queries, and data lake exploration based on their assigned scope
 
 > [!NOTE]
-> Scopes are additive. Users assigned multiple roles get the broadest permissions available to them from all their assignments. For example, if you hold both an Entra global reader role and a Defender XDR URBAC role that provides scoped permissions on *System tables*, you're unrestricted by scopes on System tables due to the Entra role. Another example is if you hold the same role permissions in Microsoft Defender XDR for a workspace, with two different scopes, you have those permissions for both scopes.
+> Scopes are additive. Users assigned multiple roles get the broadest permissions available to them from all their assignments. For example, if you hold both an Entra global reader role and a Defender URBAC role that provides scoped permissions on *System tables*, you're unrestricted by scopes on System tables due to the Entra role. Another example is if you hold the same role permissions in Microsoft Defender for a workspace, with two different scopes, you have that permission for both scopes.
 
 Scopes apply to Sentinel tables that support ingestion-time transformations.
 
@@ -109,7 +109,7 @@ Keep the following limits in mind before you tag a table:
 
 - Only tables that support ingestion-time transformations can be tagged. Custom tables built on CLv1 aren't supported; CLv2 tables are supported.
 - XDR tables aren't supported, including extended retention of XDR tables into the lake.
-- You can only add transformations in the same subscription as your user subscription.
+- You can only add transformations in the same Azure subscription that contains the target workspace.
 - You can only tag newly ingested data. Previously ingested data isn't included and can't be retroactively scoped.
 - The Log Analytics tables `SecurityAlerts` and `SecurityIncidents` don't automatically inherit scope from the raw tables that generated them, so scoped users can't access them by default. As a workaround, either:
   - Use the XDR `AlertsInfo` and `AlertsEvidence` tables, where scope is inherited automatically, or
@@ -136,7 +136,7 @@ To tag a table:
 1. Select the scope to apply to rows matching the expression.
 1. Save the rule.
 
-You can only tag newly ingested data. Previously ingested data isn't included. After tagging, it can take up to an hour for the new rule to take effect.
+You can only tag newly ingested data. Previously ingested data isn't included. After you save a scope tag rule, it can take up to an hour for that rule to take effect.
 
 > [!TIP]
 > You can create multiple scope tag rules on the same table to tag different rows with different scopes. Records can belong to multiple scopes simultaneously.
@@ -179,7 +179,7 @@ Alerts inherit scope from the underlying data. Incidents are visible if at least
 Use the `SentinelScope_CF` custom field in queries and detection rules to reference scope in your analytics.
 
 > [!NOTE]
-> When you create custom detections and analytics rules, you must project the `SentinelScope_CF` column in their KQL so that alerts inherit scope correctly. If you don't project this column, even scoped rules produce unscoped alerts that aren't visible to scoped users.
+> When you create custom detections and analytics rules, you must project the `SentinelScope_CF` column in the KQL for those rules so that alerts inherit scope correctly. If you don't project this column, even scoped rules produce unscoped alerts that aren't visible to scoped users.
 
 :::image type="content" source="./media/scoping/scoped-alerts-view.png" alt-text="Screenshot of alerts filtered by Sentinel scope." lightbox="./media/scoping/scoped-alerts-view.png":::
 
@@ -188,7 +188,7 @@ Use the `SentinelScope_CF` custom field in queries and detection rules to refere
 
 :::image type="content" source="./media/scoping/select-scopes-detection.png" alt-text="Screenshot of selecting specific scopes for a custom detection rule." lightbox="./media/scoping/select-scopes-detection.png":::
 
-1. If you're an unscoped user, you can also select **All data**. By selecting this option, the rule is unscoped, runs over all data, and is visible and editable only to unscoped users.
+1. If you're an unscoped user, you can also select **All data**. By selecting **All data**, the rule is unscoped, runs over all data, and is visible and editable only to unscoped users.
 
 1. Complete the wizard and save the rule.
 
@@ -196,9 +196,9 @@ Use the `SentinelScope_CF` custom field in queries and detection rules to refere
 
 Keep the following limits in mind for scoped custom detections:
 
-- Custom detections over `AlertInfo` and `AlertEvidence` aren't supported and run over all data, regardless of the defined scope.
-- Don't create scoped detections on unscoped tables. Querying unscoped tables from a scoped detection always returns no results.
-- Scoped detections can't use custom frequency when XDR tables are included in the query. Custom frequency requires data to be fetched from Sentinel, where XDR tables are unscoped. XDR tables can only be queried by unscoped detections.
+- Custom detections over `AlertInfo` and `AlertEvidence` ignore scopes and run over all data.
+- Don't create scoped detections on unscoped tables. These detections always return no results.
+- Scoped detections can't use custom frequency with XDR tables. XDR tables are unscoped in Sentinel, so only unscoped detections can query them.
 
 ### Create scoped automation rules
 
@@ -222,7 +222,7 @@ To create scoped automation rules, follow these steps:
 
 1. Save the rule.
 
-The automation rule applies to the data associated with the selected scope and is only visible to users assigned to that scope.
+The automation rule applies to the data associated with the Sentinel scope you selected for the rule and is only visible to users assigned to that scope.
 
 > [!NOTE]
 > Playbooks and integrations don't yet support Sentinel scoping.
@@ -244,4 +244,4 @@ Use the following resources to continue planning your scoping deployment:
 - Review the list of [tables that support ingestion-time transformations](/azure/azure-monitor/logs/tables-feature-support)
 - Plan scope names and logic before tagging data
 - Start with a pilot scope for a small team or data subset
-- Learn more about [Unified RBAC in Microsoft Defender XDR](/defender-xdr/manage-rbac)
+- Learn more about [Unified RBAC in Microsoft Defender](/defender-xdr/manage-rbac)

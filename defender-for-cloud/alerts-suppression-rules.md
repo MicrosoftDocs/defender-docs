@@ -1,9 +1,9 @@
 ---
 title: Suppress alerts from Microsoft Defender for Cloud
 description: Learn how to create alert suppression rules in Microsoft Defender for Cloud to automatically dismiss false positives and reduce alert noise.
-ms.date: 05/28/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1012
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
 #customer intent: As a security admin, I want to suppress false positive security alerts so that I can focus on genuine threats.
 ai-usage: ai-assisted
 ---
@@ -151,7 +151,7 @@ The relevant methods for suppression rules in the [Alerts Suppression Rules REST
 - **UPDATE** - Create or update a suppression rule in a specified subscription.
 - **GET** - Get the details of a specific suppression rule in a specified subscription.
 - **LIST** - List all suppression rules configured for a specified subscription.
-- **DELETE** - Delete an existing suppression rule. This method doesn't change the status of alerts that the suppression rule already dismissed.
+- **DELETE** - Deleting a suppression rule doesn't change the status of alerts that the rule already dismissed. Use this method to remove an existing suppression rule.
 
 For details and usage examples, see the [Defender for Cloud operation groups API reference](/rest/api/defenderforcloud-composite/operation-groups?view=rest-defenderforcloud-composite-latest&preserve-view=true).
 

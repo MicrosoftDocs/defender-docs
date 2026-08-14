@@ -4,12 +4,12 @@ description: This article shows how to create playbooks from and work with playb
 ms.topic: how-to
 ms.author: monaberdugo
 author: mberdugo
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 
@@ -55,13 +55,13 @@ Access playbook templates from the following sources:
 
 Technically, a playbook template is an [Azure Resource Manager (ARM) template](/azure/azure-resource-manager/templates/), which consists of several resources: an Azure Logic Apps workflow and API connections for each connection involved.
 
-This section focuses on deploying a playbook template from the **Playbook templates** tab under **Automation**.
+The following procedure focuses on deploying a playbook template from the **Playbook templates** tab under **Automation**.
 
 ## Explore playbook templates
 
 For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), select the **Content management** > **Content hub** page. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Microsoft Sentinel** > **Content management** > **Content hub**.
 
-On the **Content hub** page, select **Content type** to filter for **Playbook**. This filtered view lists all the solutions and standalone content that include one or more playbook templates. Install the solution or standalone content to get the template.
+On the **Content hub** page, select **Content type** to filter for **Playbook**. The filtered **Content hub** page lists all the solutions and standalone content that include one or more playbook templates. Install the solution or standalone content to get the template.
 
 To view the installed templates, select **Configuration** > **Automation** > **Playbook templates** tab. For example:
 
@@ -82,7 +82,7 @@ For example:
 
 ## Customize a playbook from a template
 
-This procedure describes how to deploy playbook templates and can be repeated to create multiple playbooks from the same template.
+The following steps describe how to deploy playbook templates and can be repeated to create multiple playbooks from the same template.
 
 While most playbook templates can be used as they are, we recommend that you adjust them as needed to fit your playbook to your SOC needs.
 
@@ -90,7 +90,7 @@ While most playbook templates can be used as they are, we recommend that you adj
 
 1. If the playbook has any prerequisites, make sure to follow the instructions. For example:
 
-    - Some playbooks call other playbooks as actions. This second playbook is referred to as a **nested playbook**. In such a case, one of the prerequisites is to first deploy the nested playbook.
+    - Some playbooks call other playbooks as actions. The called playbook is referred to as a **nested playbook**. In such a case, one of the prerequisites is to first deploy the nested playbook.
 
     - Some playbooks require deploying a custom Logic Apps connector or an Azure Function. In such cases, there's a **Deploy to Azure** link that takes you to the general ARM template deployment process.
 
@@ -110,7 +110,7 @@ While most playbook templates can be used as they are, we recommend that you adj
 
         :::image type="content" source="../media/use-playbook-templates/connections.png" alt-text="Screenshot of the Playbook creation wizard, connections tab.":::
 
-        - To create a new connection, select **Create new connection after deployment**. This option takes you to the Logic Apps designer after the deployment process is completed.
+        - To create a new connection, select **Create new connection after deployment**. The **Create new connection after deployment** option takes you to the Logic Apps designer after the deployment process is completed.
 
         - Custom connectors are listed by the custom connector name entered in the **Parameters** tab.
 

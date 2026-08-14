@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier2 
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Defender for Endpoint
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Provide managed security service provider (MSSP) access 
@@ -38,7 +38,7 @@ To implement a multitenant delegated access solution, take the following steps:
 
 1. **Create access groups for MSSP resources in Customer Microsoft Entra ID: Groups**
 
-    These groups are linked to the Roles you create in Defender for Endpoint in Microsoft Defender portal. To do so, in the customer AD tenant, create three groups. In our example approach, we create the following groups:
+    These groups are linked to the Roles you create in Defender for Endpoint in Microsoft Defender portal. To create these access groups, in the customer AD tenant, create three groups. In our example approach, we create the following groups:
 
     - Tier 1 Analyst
     - Tier 2 Analyst
@@ -68,13 +68,13 @@ To implement a multitenant delegated access solution, take the following steps:
 
     Adding the MSSP as a connected organization allows the MSSP to request and have accesses provisioned. 
 
-    To do so, in the customer AD tenant, access Identity Governance: Connected organization. Add a new organization and search for your MSSP Analyst tenant via Tenant ID or Domain. We suggest creating a separate AD tenant for your MSSP Analysts.
+    To add the MSSP as a connected organization, in the customer AD tenant, access Identity Governance: Connected organization. Add a new organization and search for your MSSP Analyst tenant via Tenant ID or Domain. We suggest creating a separate AD tenant for your MSSP Analysts.
 
 2. **Create a resource catalog in Customer Microsoft Entra ID: Identity Governance**
 
     Resource catalogs are a logical collection of access packages, created in the customer AD tenant.
 
-    To do so, in the customer AD tenant,  access Identity Governance: Catalogs, and add **New Catalog**. In our example, we'll call it **MSSP Accesses**.
+    To create a resource catalog, in the customer AD tenant, access Identity Governance: Catalogs, and add **New Catalog**. In our example, we'll call it **MSSP Accesses**.
 
     :::image type="content" source="media/mssp-access/goverance-catalog.png" alt-text="A new catalog in the Microsoft Defender portal" lightbox="media/mssp-access/goverance-catalog.png":::
 
@@ -85,7 +85,7 @@ To implement a multitenant delegated access solution, take the following steps:
 
     Access packages are the collection of rights and accesses that a requestor grants upon approval. 
 
-    To do so, in the customer AD tenant, access Identity Governance: Access Packages, and add **New Access Package**. Create an access package for the MSSP approvers and each analyst tier. For example, the following Tier 1 Analyst configuration creates an access package that:
+    To create an access package, in the customer AD tenant, access Identity Governance: Access Packages, and add **New Access Package**. Create an access package for the MSSP approvers and each analyst tier. For example, the following Tier 1 Analyst configuration creates an access package that:
 
     - Requires a member of the AD group **MSSP Analyst Approvers** to authorize new requests
     - Has annual access reviews, where the SOC analysts can request an access extension
@@ -111,7 +111,7 @@ To implement a multitenant delegated access solution, take the following steps:
 
     Access requests are managed in the customer My Access, by members of the MSSP Analyst Approvers group.
 
-    To do so, access the customer's myaccess using: `https://myaccess.microsoft.com/@<Customer Domain>`.
+    To review and authorize access requests, access the customer's myaccess using: `https://myaccess.microsoft.com/@<Customer Domain>`.
 
     Example: `https://myaccess.microsoft.com/@M365x440XXX.onmicrosoft.com#/`
 

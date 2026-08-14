@@ -1,10 +1,10 @@
 ---
 title: SaaS Security Posture Management (SSPM) in Microsoft Defender for Cloud Apps
-description: Learn about SaaS security posture management (SSPM) in Microsoft Defender for Cloud Apps.
+description: Understand how Defender for Cloud Apps uses SSPM to assess SaaS security configurations, surface recommendations in Microsoft Security Exposure Management, and provide visibility into OAuth application risks.
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.reviewer: iidogGedanken
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -20,7 +20,7 @@ To learn more about investigating OAuth application attack paths, see [How to in
 >[!NOTE]
 > Microsoft Security Exposure Management data and capabilities are currently unavailable in US government clouds: GCC, GCC High, and DoD. For US government clouds (GCC, GCC High, and DoD), we recommend consuming SaaS security posture recommendations via [Microsoft Secure Score](/microsoft-365/security/defender-endpoint/tvm-security-recommendation). 
 
-The screenshot shows Secure Score recommendations for a Salesforce app.
+The following screenshot shows Secure Score recommendations for a Salesforce app:
 
 :::image type="content" source="media/security-saas-sspm-in-secure-score-salesforce-filter.png" alt-text="Screenshot of Salesforce recommendations in Secure Score." lightbox="media/security-saas-sspm-in-secure-score-salesforce-filter.png" :::
 
@@ -52,7 +52,7 @@ To ensure that your application connector is set to show data in Microsoft Secur
 
 Security recommendations appear automatically in Microsoft Security Exposure Management. Recommendations are based on Microsoft benchmarks, and they might take time to update.
 
-In [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score), filter the **Recommended actions** tab by product to view any recommended actions. If you have multiple instances of an app, you can choose to filter recommendations from specific instances only. The screenshot shows filter options for specific app instances.
+In [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score), filter the **Recommended actions** tab by product to view any recommended actions. If you have multiple instances of an app, you can choose to filter recommendations from specific instances only. The following screenshot shows filter options for specific app instances:
 
 :::image type="content" source="media/secure-score-filter.png" alt-text="Screenshot of a Secure Score filter that shows multiple instances of an app." lightbox="media/secure-score-filter.png":::
 
@@ -62,7 +62,7 @@ For more information, see [Assess your security posture with Microsoft Secure Sc
 
 ## Manage your organization's SaaS security posture
 
-To effectively manage your organization's SaaS security posture, we recommend beginning with the [SaaS Security Initiative](/defender-cloud-apps/saas-security-initiative). The SaaS Security Initiative consolidates best practices and measurable metrics specifically for securing SaaS applications, so that you can prioritize and address the most impactful recommendations for SaaS environments. The screenshot shows security metrics from the SaaS Security Initiative.
+To effectively manage your organization's SaaS security posture, we recommend beginning with the [SaaS Security Initiative](/defender-cloud-apps/saas-security-initiative). The SaaS Security Initiative consolidates best practices and measurable metrics specifically for securing SaaS applications, so that you can prioritize and address the most impactful recommendations for SaaS environments. The following screenshot shows security metrics from the SaaS Security Initiative:
 
 :::image type="content" source="media/posture-overview/screenshot-of-the-saas-security-initiative-home-page.png" alt-text="Screenshot of metrics from the SaaS Security Initiative." lightbox="media/posture-overview/screenshot-of-the-saas-security-initiative-home-page.png":::
 

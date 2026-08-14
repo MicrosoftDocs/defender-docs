@@ -1,9 +1,11 @@
 ---
 title: Overview of Defender for Open-Source Relational Databases
 description: Learn about the benefits and features of Microsoft Defender for Open-Source Relational Databases such as PostgreSQL and MySQL.
-ms.date: 04/20/2026
+ms.date: 08/10/2026
 ms.topic: overview
-ms.custom: sfi-image-nochange
+ms.custom:
+  - sfi-image-nochange
+  - msecd-doc-authoring-1015
 #customer intent: As a reader, I want to understand the purpose and features of Microsoft Defender for Open-Source Relational Databases so that I can make informed decisions about its usage.
 ai-usage: ai-assisted
 ---
@@ -17,6 +19,8 @@ In Microsoft Defender for Cloud, the *Defender for Open-Source Relational Databa
 For pricing information about Defender for Open-Source Relational Databases, see the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 Defender for Open-Source Relational Databases is supported on platform as a service (PaaS) environments for Azure and Amazon Web Services (AWS). It isn't supported on Azure Arc-enabled machines. For more information about availability, see [Defender for Cloud support matrices for Azure commercial/other clouds](support-matrix-defender-for-cloud.md#cloud-support).
+
+For a summary of AWS and GCP workload coverage by plan, see the [multicloud workload protection support matrix](multicloud-support-matrix.md).
 
 This plan brings threat protections for the following open-source relational databases on Azure.
 
@@ -34,7 +38,7 @@ Protected versions of [Azure Database for MySQL](/azure/mysql/) include:
 
 ### Amazon RDS
 
-Amazon Relational Database Service (RDS) instances on AWS (preview) support:
+Amazon Relational Database Service (RDS) instances on AWS support:
 
 - Aurora PostgreSQL
 - Aurora MySQL
@@ -44,7 +48,7 @@ Amazon Relational Database Service (RDS) instances on AWS (preview) support:
 
 ## Benefits
 
-Defender for Cloud provides multicloud alerts on anomalous activities so that you can detect potential threats and respond to them as they occur.
+Defender for Cloud provides multicloud alerts on anomalous activities so that you can detect potential threats and respond to them as they occur. For supported Amazon RDS databases, the plan also includes sensitive data discovery. For more information, see [Enable Defender for open-source relational databases on Amazon Web Services](enable-defender-for-databases-aws.md).
 
 When you enable this plan, Defender for Cloud provides alerts when it detects anomalous database access and query patterns, along with suspicious database activities. The alerts include:
 

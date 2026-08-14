@@ -1,10 +1,10 @@
 ---
 title: Microsoft Defender for Identity security posture assessments
 description: Learn how Microsoft Defender for Identity security posture assessments identify misconfigurations and legacy components in Active Directory and provide recommended remediation actions.
-ms.date: 06/15/2026
+ms.date: 08/07/2026
 ms.topic: how-to
 ms.reviewer: LiorShapiraa
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1015
 ai-usage: ai-assisted
 ---
 
@@ -30,27 +30,26 @@ Microsoft Secure Score is a measurement of an organization's security posture, w
 
 ### Categorization of Defender for Identity security posture assessments
 
-Defender for Identity security posture assessments have five key categories. Each category addresses specific identity security risks and provides remediation guidance.
+Defender for Identity security posture assessments have six key categories. Each category addresses specific identity security risks and provides remediation guidance.
 
 - **Hybrid security**: Identifies misconfigurations in environments that integrate on-premises (e.g., Active Directory) and cloud-based identity providers (e.g., Microsoft Entra ID, Okta). Assesses risks related to synchronization, authentication, and authorization across platforms.
 - **Identity infrastructure**: Detects misconfigurations and vulnerabilities in core identity components, including domain controllers.
-- **Certificates**: Assesses Active Directory Certificate Services (AD CS) for security gaps, such as misconfigured certificate templates or weak certificate authority settings. Identifying and addressing these issues helps prevent unauthorized access that could arise from certificate-related vulnerabilities.
+- **Certificates**: Assesses Active Directory Certificate Services (AD CS), Microsoft's certificate infrastructure service, for security gaps, such as misconfigured certificate templates or weak certificate authority settings. Identifying and addressing these issues helps prevent unauthorized access that could arise from certificate-related vulnerabilities.
 - **Group policy**: Analyzes Group Policy configurations to identify settings that might allow privilege escalation or unauthorized lateral movement within the network. Ensuring secure Group Policy settings helps maintain proper access controls and system configurations.
 - **Accounts**: Reviews users, devices, and groups to pinpoint security risks such as weak passwords, inactive accounts, or improper permissions.
 - **Cloud identities**: Evaluates cloud identity configurations in Okta accounts for security gaps, such as missing MFA settings or privileged Okta accounts, and provides remediation guidance.
 
+## Prerequisites
+
+- You must have a Defender for Identity license to view Defender for Identity security posture assessments in Microsoft Secure Score.
+- While *certificate template* assessments are available to all customers with AD CS installed in their environment, *certificate authority* assessments are available only to customers who have installed a sensor on an AD CS server.
+- Hybrid security recommendations will be available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services.
+
+For more information, see [Configuring sensors for AD FS, AD CS and Microsoft Entra Connect.](https://aka.ms/DeployMdiSensorOnYourIdentityInfrastructure)
+
 ## Access Defender for Identity security posture assessments
 
 You can view Defender for Identity security posture assessments in the Microsoft Secure Score dashboard in the Microsoft Defender portal.
-
-> [!NOTE]
-> You must have a Defender for Identity license to view Defender for Identity security posture assessments in Microsoft Secure Score.
-> 
-> Additionally, while *certificate template* assessments are available to all customers with AD CS installed in their environment, *certificate authority* assessments are available only to customers who have installed a sensor on an AD CS server.   
->
-> Hybrid security recommendations will be available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services.  
->
-> For more information, see [Configuring sensors for AD FS, AD CS and Microsoft Entra Connect.](https://aka.ms/DeployMdiSensorOnYourIdentityInfrastructure)
 
 **To access identity security posture assessments**:
 
@@ -65,9 +64,7 @@ You can view Defender for Identity security posture assessments in the Microsoft
    
 [!INCLUDE [secure-score-note](../includes/secure-score-note.md)]
 
-
-## Next steps
+## Related content
 
 - [Microsoft Secure Score overview](/microsoft-365/security/defender/microsoft-secure-score)
 - [Microsoft Defender for Identity community forum](https://aka.ms/MDIcommunity)
-

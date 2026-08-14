@@ -1,8 +1,8 @@
 ---
 title: Investigate OAuth app threat detection alerts with app governance | Microsoft Defender for Cloud Apps
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, msecd-doc-authoring-1014
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, msecd-doc-authoring-1016
 description: Learn how to investigate threat detection alerts from app governance in Microsoft Defender XDR with Microsoft Defender for Cloud Apps.
 ms.reviewer: shragar
 ai-usage: ai-assisted
@@ -57,7 +57,7 @@ Following proper investigation, all app governance alerts can be classified as o
 
 The [MITRE ATT&CK](https://attack.mitre.org/) framework is an industry-standard knowledge base of adversary tactics and techniques. To make it easier to map the relationship between app governance alerts and the MITRE ATT&CK Matrix, we've categorized the alerts by their corresponding MITRE ATT&CK tactic. This extra reference makes it easier to understand the suspected attacks technique potentially in use when app governance alert is triggered.
 
-This guide provides information about investigating and remediating app governance alerts in the following categories.
+This guide provides information about investigating and remediating app governance alerts for Initial Access, Persistence, Privilege Escalation, Defense Evasion, Credential Access, Discovery, Lateral Movement, Collection, Exfiltration, and Impact.
 
 - [Initial Access alerts](#initial-access-alerts)
 - Execution (no alerts currently defined)
@@ -192,7 +192,7 @@ This detection identifies an OAuth app that was found to have bad URL reputation
 
 **Understand the scope of the breach**
 
-Follow the tutorial on how to [investigate risky OAuth apps](./investigate-risky-oauth.md).
+For more information, see [Investigate risky OAuth apps](./investigate-risky-oauth.md).
 
 ### OAuth App with Read scopes has suspicious Reply URL
 
@@ -385,9 +385,7 @@ This detection identifies an OAuth App that was flagged high-risk by Machine Lea
 
 - **TP**: If you can confirm that inbox rule was created by an OAuth third-party app with suspicious scopes delivered from an unknown source, then a true positive is detected.
 
-  **Recommended action**: Disable and remove the app, reset the password, and remove the inbox rule.
-
-Follow the tutorial on how to Reset a password using Microsoft Entra ID and follow the tutorial on how to remove the inbox rule.
+  **Recommended action**: Disable and remove the app, reset the password, and remove the inbox rule. Reset the password using Microsoft Entra ID and remove the inbox rule.
 
 - **FP**: If you can confirm that app created an inbox rule to a new or personal external email account for legitimate reasons.
 
@@ -411,9 +409,7 @@ This detection identifies an OAuth App that consented to suspicious scopes, crea
 
 - **TP**: If you can confirm that inbox rule was created by an OAuth third-party app with suspicious scopes delivered from an unknown source, then a true positive is indicated.
 
-  **Recommended action**:  Disable and remove the app, reset the password, and remove the inbox rule.
-
-  Follow the tutorial on how to Reset a password using Microsoft Entra ID and follow the tutorial on how to remove the inbox rule.
+  **Recommended action**:  Disable and remove the app, reset the password, and remove the inbox rule. Reset the password using Microsoft Entra ID and remove the inbox rule.
 
 - **FP**: If you can confirm that app created an inbox rule to a new or personal external email account for legitimate reasons.
 
@@ -733,6 +729,8 @@ This detection identifies an application in your tenant that was observed making
 
 ## Discovery alerts
 
+The following discovery alerts indicate that a malicious app may be attempting to map your organization's environment by enumerating resources, accounts, or data.
+
 ### App performed drive enumeration
 
 **Severity**: Medium
@@ -930,7 +928,7 @@ This detection identifies when Line of Business (LOB) OAuth App accesses an unus
 
 - **TP**: If you can confirm that the unusual graph activity was performed by the Line of Business (LOB) OAuth App, then a true positive is indicated.
 
-  **Recommended actions**: Temporarily disable the app and reset the password and then re-enable the app. Follow the tutorial on how to Reset a password using Microsoft Entra ID.
+  **Recommended actions**: Temporarily disable the app and reset the password and then re-enable the app. Reset the password using Microsoft Entra ID.
 
 - **FP**: If you can confirm that the app is intended to do unusually high volume of graph calls.
 
@@ -1249,6 +1247,6 @@ This detection identifies OAuth application that creating bulk of Azure Virtual 
 
 ## Next steps
 
-After investigating alerts, learn how to manage and resolve them:
+After investigating alerts, learn how to manage and resolve app governance alerts:
 
 - [Manage app governance alerts](app-governance-manage-alerts.md)

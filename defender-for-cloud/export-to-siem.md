@@ -2,8 +2,9 @@
 title: Stream alerts to monitoring solutions
 description: Learn how to stream your security alerts to Microsoft Sentinel, SIEMs, SOAR, or ITSM solutions.
 ms.topic: how-to
-ms.date: 07/14/2025
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Stream alerts to monitoring solutions
@@ -48,7 +49,7 @@ Learn how to [connect alerts from Microsoft Defender for Cloud](/azure/sentinel/
 
 ### Configure ingestion of all audit logs into Microsoft Sentinel
 
-Another alternative for investigating Defender for Cloud alerts in Microsoft Sentinel is to stream your audit logs into Microsoft Sentinel:
+You can also investigate Defender for Cloud alerts in Microsoft Sentinel by streaming your audit logs into Microsoft Sentinel:
 
 - [Connect Windows security events](/azure/sentinel/connect-windows-security-events)
 - [Collect data from Linux-based sources using Syslog](/azure/sentinel/connect-syslog)
@@ -59,7 +60,7 @@ Another alternative for investigating Defender for Cloud alerts in Microsoft Sen
 
 ## Stream alerts to QRadar and Splunk
 
-To export security alerts to Splunk and QRadar, you need to use Event Hubs and a built-in connector. You can either use a PowerShell script or the Azure portal to set up the requirements for exporting security alerts for your subscription or tenant. Once the requirements are in place, you need to use the procedure specific to each SIEM to install the solution in the SIEM platform.
+To export security alerts to Splunk and QRadar, you need to use Event Hubs and a built-in connector. You can either use a PowerShell script or the Azure portal to set up the requirements for exporting security alerts for your subscription or tenant. Once the requirements are in place, install the connector in your SIEM platform by following the [QRadar](#connect-the-event-hub-to-your-preferred-solution-using-the-built-in-connectors) or [Splunk](#connect-the-event-hub-to-your-preferred-solution-using-the-built-in-connectors) steps described later in this article.
 
 ### Prerequisites
 
@@ -81,7 +82,9 @@ You can set up your Azure environment to support continuous export using either:
 
 #### PowerShell script (Recommended)
 
-1. Download and run [the PowerShell script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/3rd%20party%20SIEM%20integration).
+To set up the Azure services with a PowerShell script, follow these steps:
+
+1. Download and run the [Defender for Cloud third-party SIEM integration PowerShell scripts](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/3rd%20party%20SIEM%20integration).
 
 1. Enter the required parameters.
 
@@ -90,6 +93,8 @@ You can set up your Azure environment to support continuous export using either:
 The script performs all of the steps for you. When the script finishes, use the output to install the solution in the SIEM platform.
 
 #### Azure portal
+
+To create the required resources in the Azure portal, follow these steps:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -115,7 +120,7 @@ The script performs all of the steps for you. When the script finishes, use the 
 
 1. Copy and save the connection string to the account to use in QRadar.
 
-For more detailed instructions, see [Prepare Azure resources for exporting to Splunk and QRadar](export-to-splunk-or-qradar.md).
+For more detailed instructions about QRadar setup, see [Prepare Azure resources for exporting to Splunk and QRadar](export-to-splunk-or-qradar.md).
 
 **If you're streaming alerts to Splunk**:
 
@@ -125,7 +130,7 @@ For more detailed instructions, see [Prepare Azure resources for exporting to Sp
 
 1. Give permissions to the Microsoft Entra Application to read from the event hub you created before.
 
-For more detailed instructions, see [Prepare Azure resources for exporting to Splunk and QRadar](export-to-splunk-or-qradar.md).
+For more detailed instructions about Splunk setup, see [Prepare Azure resources for exporting to Splunk and QRadar](export-to-splunk-or-qradar.md).
 
 ### Connect the event hub to your preferred solution using the built-in connectors
 
@@ -133,7 +138,7 @@ Each SIEM platform has a tool to enable it to receive alerts from Azure Event Hu
 
 | Tool | Hosted in Azure | Description |
 |:---|:---| :---|
-|  IBM QRadar | No | The Microsoft Azure DSM and Microsoft Azure Event Hubs Protocol are available for download from [the IBM support website](https://www.ibm.com/docs/en/qsip/7.4?topic=microsoft-azure-platform). |
+|  IBM QRadar | No | The Microsoft Azure DSM and Microsoft Azure Event Hubs Protocol are available for download from the [IBM QRadar DSM guide for Microsoft Azure platform](https://www.ibm.com/docs/en/qsip/7.4?topic=microsoft-azure-platform). |
 | Splunk | No | [Splunk Add-on for Microsoft Cloud Services](https://splunkbase.splunk.com/app/3110/) is an open source project available in Splunkbase. <br><br> If you can't install an add-on in your Splunk instance, for example if you're using a proxy or running on Splunk Cloud, you can forward these events to the Splunk HTTP Event Collector using [Azure Function For Splunk](https://github.com/splunk/azure-functions-splunk), which is triggered by new messages in the event hub. |
 
 ## Stream alerts with continuous export
@@ -146,7 +151,7 @@ To stream alerts into **ArcSight**, **SumoLogic**, **Syslog servers**, **LogRhyt
 **To stream alerts with continuous export**:
 
 1. Enable continuous export:
-    - At the [subscription level](continuous-export.md).
+    - At the [subscription level with continuous export](continuous-export.md).
     - At the [Management Group level using Azure Policy](continuous-export-azure-policy.md).
 
 1. Connect the event hub to your preferred solution using the built-in connectors:
@@ -156,7 +161,7 @@ To stream alerts into **ArcSight**, **SumoLogic**, **Syslog servers**, **LogRhyt
     | SumoLogic | No | Instructions for setting up SumoLogic to consume data from an event hub are available at [Collect Logs for the Azure Audit App from Event Hubs](https://help.sumologic.com/docs/send-data/collect-from-other-data-sources/azure-monitoring/collect-logs-azure-monitor/). |
     | ArcSight | No | The ArcSight Azure Event Hubs smart connector is available as part of [the ArcSight smart connector collection](https://community.microfocus.com/cyberres/arcsight/f/arcsight-product-announcements/163662/announcing-general-availability-of-arcsight-smart-connectors-7-10-0-8114-0). |
     | Syslog server | No | If you want to stream Azure Monitor data directly to a syslog server, you can use a [solution based on an Azure function](https://github.com/miguelangelopereira/azuremonitor2syslog/).|
-    | LogRhythm | No| Instructions to set up LogRhythm to collect logs from an event hub are available [here](https://logrhythm.com/six-tips-for-securing-your-azure-cloud-environment/).|
+    | LogRhythm | No| Instructions to set up LogRhythm to collect logs from an event hub are available at [Six tips for securing your Azure cloud environment](https://logrhythm.com/six-tips-for-securing-your-azure-cloud-environment/).|
     |Logz.io | Yes | For more information, see [Getting started with monitoring and logging using Logz.io for Java apps running on Azure](/azure/developer/java/fundamentals/java-get-started-with-logzio)|
     |Dynatrace | No | For instructions to set up the integration in Dynatrace, read [Ingest Microsoft Defender for Cloud security events](https://dt-url.net/ft03w4b)
 
@@ -166,7 +171,7 @@ To view the event schemas of the exported data types, visit the [Event Hubs even
 
 ## Use the Microsoft Graph Security API to stream alerts to non-Microsoft applications
 
-Defender for Cloud's built-in integration with [Microsoft Graph Security API](/graph/security-concept-overview/) without the need of any further configuration requirements.
+Defender for Cloud includes a built-in integration with [Microsoft Graph Security API](/graph/security-concept-overview/) that lets you stream alerts without any further configuration requirements.
 
 You can use this API to stream alerts from your **entire tenant** (and data from many Microsoft Security products) into non-Microsoft SIEMs and other popular platforms:
 
@@ -179,9 +184,10 @@ You can use this API to stream alerts from your **entire tenant** (and data from
 > [!NOTE]
 > The preferred way to export alerts is through [Continuously export Microsoft Defender for Cloud data](continuous-export.md).
 
-## Next steps
+<a name="next-steps"></a>
+## Related content
 
-This page explained how to ensure your Microsoft Defender for Cloud alert data is available in your SIEM, SOAR, or ITSM tool of choice. For related material, see:
+For more information about streaming Defender for Cloud alerts to SIEM, SOAR, and ITSM solutions, see:
 
 - [What is Microsoft Sentinel?](/azure/sentinel/overview)
 - [Alert validation in Microsoft Defender for Cloud](alert-validation.md) - Verify your alerts are correctly configured

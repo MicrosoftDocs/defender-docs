@@ -2,16 +2,21 @@
 title: Explore risks to pre-deployment generative AI artifacts
 description: Learn how to discover potential security risks for your generative AI applications in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 07/15/2025
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 # customer intent: As a user, I want to learn how to identify potential security risks for my generative AI applications in Microsoft Defender for Cloud so that I can enhance their security.
 ai-usage: ai-assisted
 ---
 
 # Explore risks to pre-deployment generative AI artifacts
 
-Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud helps you to improve the security posture of generative AI apps, by identifying vulnerabilities in generative AI libraries that exist in your AI artifacts such as container images and code repositories. This article explains how to explore, identify security risks for those applications.
+The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud helps you secure your generative AI apps. It scans AI artifacts, such as container images and code repositories, to find known vulnerabilities in AI libraries.
+
+In this article, you use the cloud security explorer in Defender for Cloud to find containers running vulnerable generative AI images and to identify vulnerable code repositories that provision Azure OpenAI. After you complete these steps, you can review findings and remediate recommendations.
 
 ## Prerequisites
+
+Before you begin, make sure you meet the following prerequisites:
 
 - Read about [AI security posture management](ai-security-posture.md).
 
@@ -27,7 +32,7 @@ Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for
 
 ## Identify containers running on vulnerable generative AI container images
 
-The cloud security explorer can be used to identify containers that are running generative AI container images with known vulnerabilities.
+Use the cloud security explorer to find containers that run generative AI images with known vulnerabilities.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -51,11 +56,11 @@ The cloud security explorer can be used to identify containers that are running 
 
 1. Select **Open the vulnerability page**.
 
-1. [Remediate the recommendation](implement-security-recommendations.md#remediate-recommendations).
+1. [Remediate the recommendation](implement-security-recommendations.md#remediate-a-recommendation).
 
 ## Identify vulnerable generative AI code repositories
 
-The cloud security explorer can be used to identify vulnerable generative AI code repositories, that provision Azure OpenAI. 
+Use the cloud security explorer to find vulnerable generative AI code repositories that provision Azure OpenAI.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -79,7 +84,7 @@ The cloud security explorer can be used to identify vulnerable generative AI cod
 
 1. Select **Open the vulnerability page**.
 
-1. [Remediate the recommendation](implement-security-recommendations.md#remediate-recommendations).
+1. [Remediate the recommendation](implement-security-recommendations.md#remediate-a-recommendation).
 
 ## Related content
 

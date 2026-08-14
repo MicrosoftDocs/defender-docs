@@ -4,12 +4,12 @@ description: Use the Microsoft Sentinel connector's Add task action in playbooks
 ms.topic: how-to
 ms.author: monaberdugo
 author: mberdugo
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 #Customer intent: As a security analyst, I want to automate incident management tasks using playbooks so that I can streamline and manage complex workflows efficiently.
@@ -91,7 +91,7 @@ To add and configure the task-creation, password-reset, and task-completion acti
 
 The following sample procedure shows how to add a playbook action that researches an IP address appearing in an incident.
 
-- If the results of this research are that the IP address is malicious, the playbook creates a task for the analyst to disable the user using that IP address.
+- If the results of this research are that the IP address is malicious, the playbook creates a task for the analyst to disable the user associated with the researched IP address.
 - If the IP address isn't a known malicious address, the playbook creates a different task, for the analyst to contact the user to verify the activity.
 
 To add and configure the IP-research condition and conditional task-creation actions, take the following steps:

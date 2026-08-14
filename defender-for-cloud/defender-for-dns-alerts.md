@@ -1,8 +1,9 @@
 ---
 title: Respond to Microsoft Defender for DNS alerts
 description: Learn best practices for responding to alerts that indicate security risks in DNS services.
-ms.date: 05/25/2026
+ms.date: 07/03/2026
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to respond to Microsoft Defender for DNS alerts so that I can investigate suspicious DNS activity and contain potential compromises.
 ai-usage: ai-assisted
 ---
@@ -23,7 +24,7 @@ Depending on the alert, the resource owner may be the user, application, or serv
 
 1. Contact the resource owner to determine whether the behavior was expected or intentional.
 1. If the activity is expected, dismiss the alert.
-1. If the activity is unexpected, treat the resource as potentially compromised and follow the mitigation steps in the next section.
+1. If the activity is unexpected, treat the resource as potentially compromised and follow the mitigation steps in [Mitigate the alert](#mitigate-the-alert).
 
 ## Mitigate the alert
 
@@ -41,7 +42,8 @@ If the resource owner confirms that the activity is unexpected, mitigate the ale
 
 - Send alerts in real time to Log Analytics or Event Hubs to build automated response processes. For steps, see [Configure continuous export](continuous-export.md).
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Manage security alerts](manage-respond-alerts.md)

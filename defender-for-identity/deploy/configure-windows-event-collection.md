@@ -1,14 +1,14 @@
 ---
 title: Configure Windows event auditing
 description: Configure Windows event auditing for Defender for Identity sensors. Learn automatic, manual, and PowerShell methods to enable required audit policies.
-ms.date: 06/15/2026
+ms.date: 08/10/2026
 ms.topic: how-to
 ms.custom:
-  - msecd-doc-authoring-1014
-  - msecd-doc-authoring-106
+  - msecd-doc-authoring-1015
   - sfi-image-nochange
 ms.reviewer: rlitinsky
 ai-usage: ai-assisted
+#customer intent: As a security admin, I want to configure Windows event auditing for Defender for Identity sensors so that required events are available for detections.
 ---
 
 # Configure Windows event auditing
@@ -31,6 +31,8 @@ If you configure auditing properly, Windows event auditing has minimal effect on
 If you're deploying sensor v3.x on domain controllers, use automatic Windows auditing. This is the recommended approach; it requires no manual configuration and handles all auditing settings for you.
 
 ### Turn on automatic Windows auditing
+
+To enable automatic Windows auditing in the Defender portal, complete the following steps:
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings**, and then **Identities**.
 1. In the **General** section, select **Advanced features**.
@@ -185,7 +187,7 @@ To configure auditing on a domain controller, complete the following steps:
 
 #### Configure Directory Services Advanced Auditing
 
-This section describes how to modify your domain controller's Audit (Premium) Policy settings for Defender for Identity.
+The following procedure describes how to modify your domain controller's Audit (Premium) Policy settings for Defender for Identity.
 
 1. Sign in to the server as **Domain Administrator**.
 1. Open the Group Policy Management Editor from **Server Manager** > **Tools** > **Group Policy Management**.
@@ -208,9 +210,9 @@ This section describes how to modify your domain controller's Audit (Premium) Po
         | Audit policy | Subcategory | Triggers event IDs |
         | --- |---|---|
         | **Account Logon** | **Audit Credential Validation** | 4776 |
-        | **Account Management** | **Audit Computer Account Management**<sup>[See note](#failure)</sup> | 4741, 4743 |
-        | **Account Management** | **Audit Distribution Group Management**<sup>[See note](#failure)</sup> | 4753, 4763 |
-        | **Account Management** | **Audit Security Group Management**<sup>[See note](#failure)</sup> | 4728, 4729, 4730, 4732, 4733, 4756, 4757, 4758 |
+        | **Account Management** | **Audit Computer Account Management**<sup>[Failure auditing note](#failure)</sup> | 4741, 4743 |
+        | **Account Management** | **Audit Distribution Group Management**<sup>[Failure auditing note](#failure)</sup> | 4753, 4763 |
+        | **Account Management** | **Audit Security Group Management**<sup>[Failure auditing note](#failure)</sup> | 4728, 4729, 4730, 4732, 4733, 4756, 4757, 4758 |
         | **Account Management** | **Audit User Account Management** | 4726 |
         | **DS Access** | **Audit Directory Service Changes**<sup>[See note](#failure)</sup> | 5136  |
         | **System** | **Audit Security System Extension**<sup>[See note](#failure)</sup> | 7045 |
@@ -325,6 +327,8 @@ To configure domain object auditing:
 
 #### Configure Object-level auditing on the AD FS configuration folder
 
+To configure object-level auditing on the AD FS configuration folder, complete the following steps:
+
 1. Go to the **Active Directory Users and Computers** console, and select the domain where you want to enable the logs.
 1. Go to **Program Data** > **Microsoft** > **ADFS**.
 
@@ -347,9 +351,11 @@ To configure domain object auditing:
 
 ### Configure auditing on an AD FS server
 
-This section describes how to modify your Active Directory Federation Services (AD FS) audit configurations for Defender for Identity.
+The following procedure describes how to modify your Active Directory Federation Services (AD FS) audit configurations for Defender for Identity.
 
 #### Configure a Group Policy for event auditing
+
+To configure Group Policy-based event auditing for AD FS, complete the following steps:
 
 1. Create a group policy to apply to your Active Directory Federation Services (AD FS).
 1. Configure the following auditing settings:
@@ -362,6 +368,8 @@ This section describes how to modify your Active Directory Federation Services (
 
 
 #### Configure AD FS event auditing in AD FS Management
+
+To enable AD FS event auditing in AD FS Management, complete the following steps:
 
 1. Select **Start** > **Programs** > **Administrative Tools** > **AD FS Management**.
 1. Go to **Actions** > **Edit Federation Service Properties**.
@@ -396,14 +404,12 @@ If you're working with a dedicated server that has Active Directory Certificate 
 
 1. Configure auditing on the certificate authority (CA) using one of the following methods:
 
-   - **To configure CA auditing using PowerShell, run:**
+   - **To configure CA auditing using PowerShell**, set the CA audit filter to enable full auditing and then restart the Certificate Services service for the change to take effect:
 
 ```powershell
 certutil -setreg CA\AuditFilter 127 
 Restart-Service certsvc
 ```
-
-This command updates the CA audit settings and restarts the Certificate Services service so the changes take effect.
 
    - **To configure CA auditing in the Defender portal:**
 
@@ -434,6 +440,8 @@ To configure auditing on Microsoft Entra Connect servers:
 ### Configure auditing on the configuration container<a name="enable-auditing-on-an-exchange-object"></a>
 
 You need the configuration container audit only for environments that currently have or previously had Microsoft Exchange. These environments have an Exchange container located within the domain's Configuration section.
+
+Active Directory replicates the configuration container throughout the forest, so configure auditing once for the entire forest. The health alert might appear for multiple domains because sensors in each domain report the state of the shared configuration container.
 
 1. Open the ADSI Edit tool. 
 1. Select **Start** > **Run**, enter `ADSIEdit.msc`, and then select **OK**.
@@ -471,7 +479,7 @@ The following commands show how to modify your domain controller's Audit (Premiu
 
 **To view your audit policies:**
 
-Use the `Get-MDIConfiguration` cmdlet to retrieve the current Defender for Identity configuration values in domain or local machine mode:
+Use the `Get-MDIConfiguration` cmdlet to retrieve the current Defender for Identity configuration values in domain or local machine mode. Use the following syntax to view the current configuration for a specific mode and configuration set:
 
 ```powershell
 Get-MDIConfiguration [-Mode] <String> [-Configuration] <String[]>
@@ -484,7 +492,7 @@ Where:
 
 **To configure your settings:**
 
-Use the following syntax to apply one or more Defender for Identity configurations in domain or local machine mode:
+Use the following syntax to apply Defender for Identity configuration settings and optionally control GPO creation and linking behavior:
 
 ```powershell
 Set-MDIConfiguration [-Mode] <String> [-Configuration] <String[]> [-CreateGpoDisabled] [-SkipGpoLink] [-Force]
@@ -498,7 +506,7 @@ Where:
 - `SkipGpoLink` specifies that GPO links aren't created.
 - `Force` specifies that the configuration is set or GPOs are created without validating the current state.
 
-The following example applies the full recommended Defender for Identity configuration set through Group Policy in domain mode, creates the group policy objects, and links them:
+The following example applies all supported Defender for Identity domain configuration settings in one operation, creating the group policy objects and linking them:
 
 ```powershell
 Set-MDIConfiguration -Mode Domain -Configuration All

@@ -1,10 +1,10 @@
 ---
 title: Govern discovered apps using Microsoft Defender for Endpoint
 description: Use the Microsoft Defender for Cloud Apps integration with Defender for Endpoint to govern discovered cloud apps by blocking or warning on unsanctioned apps.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Mravela
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -20,6 +20,8 @@ Apps marked as **Unsanctioned** in Defender for Cloud Apps are automatically syn
 > The time latency to block an app via Defender for Endpoint is up to three hours from the moment you mark the app as unsanctioned in Defender for Cloud Apps to the moment the app is blocked in the device. This latency is due to up to one hour of synchronization of Defender for Cloud Apps sanctioned/unsanctioned apps to Defender for Endpoint, and up to two hours to push the policy to the devices in order to block the app once the indicator was created in Defender for Endpoint.
 
 ## Prerequisites
+
+Before you begin, make sure you meet the following requirements:
 
 - One of the following licenses:
 
@@ -50,16 +52,16 @@ Use the following steps to enable access control for cloud apps:
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Cloud Discovery**, select **Microsoft Defender for Endpoint**, and then select **Enforce app access**.
 
-    ![Screenshot showing how to enable blocking with Defender for Endpoint.](media/mde-integration.png)
+    ![Screenshot of Microsoft Defender for Endpoint settings showing the Enforce app access option under Cloud Discovery.](media/mde-integration.png)
 
     > [!NOTE]
-    > It can take up to 30 minutes for this setting to take effect.
+    > It can take up to 30 minutes for the **Enforce app access** setting to take effect.
 
 1. In Microsoft Defender XDR, go to **Settings** > **Endpoints** > **Advanced features**, and then select **Custom network indicators**. For information about network indicators, see [Create indicators for IPs and URLs/domains](/microsoft-365/security/defender-endpoint/indicator-ip-domain).
 
     Enabling custom network indicators allows you to leverage Microsoft Defender Antivirus network protection capabilities to block access to a predefined set of URLs using Defender for Cloud Apps, either by manually [sanctioning or unsanctioning apps using app tags](governance-discovery.md#sanctioningunsanctioning-an-app) or automatically by [creating an app discovery policy](cloud-discovery-policies.md#creating-an-app-discovery-policy).
 
-    ![Screenshot showing how to enable custom network indicators in Defender for Endpoint.](media/mde-custom-network-indicators.png)
+    ![Screenshot of the Advanced features settings page in Microsoft Defender XDR with the Custom network indicators toggle.](media/mde-custom-network-indicators.png)
 
 ## Educate users when accessing blocked apps & customize the block page
 
@@ -77,7 +79,7 @@ Use the following steps to configure a custom help/support URL pointing to a com
 1. In the **Alerts** dropdown, select **Informational**.
 1. Under **User warnings** > **Notification URL for blocked apps**, enter your URL. For example:
 
-    [ ![Screenshot showing configuration of adding custom URL for blocked apps.](media/mde-govern/mda-custom-block-url-config.png) ](media/mde-govern/mda-custom-block-url-config.png#lightbox)
+    [![Screenshot showing configuration of adding custom URL for blocked apps.](media/mde-govern/mda-custom-block-url-config.png)](media/mde-govern/mda-custom-block-url-config.png#lightbox)
 
 ## Disable informational alerts for unsanctioned app access (Preview)
 
@@ -102,7 +104,7 @@ To block usage for specific device groups, do the following steps:
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**.  Then under **Cloud discovery**, select **Apps tags** and go to the **Scoped profiles** tab.
 
-1. Select **Add profile**. The profile sets the entities scoped for blocking/unblocking apps.
+1. Select **Add profile**. The scoped profile sets which entities are included or excluded for app blocking or unblocking.
 
 1. Provide a descriptive profile name and description.
 
@@ -137,11 +139,11 @@ To block an app, do the following steps:
 > [!NOTE]
 >
 > - The enforcement ability is based on Defender for Endpoint’s custom URL indicators.
-> - Any organizational scoping that was set manually on indicators that were created by Defender for Cloud Apps before the release of this feature will be overridden by Defender for Cloud Apps. The required scoping should be set from the Defender for Cloud Apps experience using the scoped profiles experience.
+> - Any organizational scoping that was set manually on indicators that were created by Defender for Cloud Apps before the release of this feature will be overridden by Defender for Cloud Apps. Any required organizational scoping for app blocking should be set from the Defender for Cloud Apps scoped profiles experience.
 > - To remove a selected scoping profile from an unsanctioned app, remove the unsanctioned tag and then tag the app again with the required scoped profile.
 > - It can take up to two hours for app domains to propagate and be updated in the endpoint devices once they're marked with the relevant tag or/and scoping.
 > - When an app is tagged as *Monitored*, the option to apply a scoped profile shows only if the built-in *Win10 Endpoint Users* data source has consistently received data during the past 30 days.
-> - Device groups in Microsoft Defender for Business(MDB) are managed differently. Due to this- No device groups will appear in MDA device groups for customers with MDB license.
+> - Because device groups in Microsoft Defender for Business (MDB) are managed differently, no device groups appear in MDA device groups for customers with an MDB license.
 
 ## Educate users when accessing risky apps
 
@@ -158,7 +160,7 @@ Use the following steps to configure a custom URL pointing to a company web page
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Cloud Discovery**, select **Microsoft Defender for Endpoint**.
 1. In the **Notification URL** box, enter your URL.
 
-    ![Screenshot showing how to configure notification URL.](media/mde-educate-config-notification-url.png)
+    ![Screenshot of Microsoft Defender for Endpoint Cloud Discovery settings showing the Notification URL field for monitored app warnings.](media/mde-educate-config-notification-url.png)
    
 ### Setting up user bypass duration
 
@@ -167,7 +169,7 @@ Since users can bypass the warning message, you can use the following steps to c
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Cloud Discovery**, select **Microsoft Defender for Endpoint**.
 1. In the **Bypass duration** box, enter the duration (hours) of the user bypass.
 
-    ![Screenshot showing how to configure bypass duration.](media/mde-educate-config-bypass-duration.png)
+    ![Screenshot of Microsoft Defender for Endpoint Cloud Discovery settings showing the Bypass duration field for monitored app warnings.](media/mde-educate-config-bypass-duration.png)
    
 ### Monitor applied app controls
 
@@ -184,7 +186,8 @@ Once access, block, or bypass controls are applied, you can monitor app usage pa
 > [!div class="nextstepaction"]
 > [Control cloud apps with policies](control-cloud-apps-with-policies.md)
 
-## Related videos
+<a name="related-videos"></a>
+## Related content
 
 > [!div class="nextstepaction"]
 > [Discover and block Shadow IT using Defender for Endpoint](https://www.youtube.com/watch?v=MsHkTOoqSQo)

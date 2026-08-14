@@ -3,11 +3,11 @@ title: Encrypt Defender for Cloud Apps data at rest with your own key
 description: This article provides instructions for using your own key to encrypt data at rest stored in Defender for Cloud Apps.
 ms.topic: how-to
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - has-azure-ad-ps-ref
   - azure-ad-ref-level-one-done
   - sfi-image-nochange
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
 ---
 
@@ -20,7 +20,7 @@ Defender for Cloud Apps takes your security and privacy seriously. Therefore, on
 > [!IMPORTANT]
 > If there's a problem accessing your Azure Key Vault key, Defender for Cloud Apps will fail to encrypt your data, and your tenant will be locked down within an hour. When your tenant is locked down, all access to it will be blocked until the cause has been resolved. Once your key is accessible again, full access to your tenant will be restored.
 >
-> This procedure is available only on the Microsoft Defender portal, and can't be performed on the classic Microsoft Defender for Cloud Apps.
+> The procedure to enable customer-managed data encryption is available only on the Microsoft Defender portal, and can't be performed on the classic Microsoft Defender for Cloud Apps.
 
 ## Prerequisites
 
@@ -72,7 +72,7 @@ Use the following steps to create and configure the Azure Key Vault key that Def
         | Key Management Operations | - List |
         | Cryptographic Operations | - Wrap key<br />- Unwrap key |
 
-        ![Screenshot of Azure Key Vault access policy configuration showing the required List, Wrap key, and Unwrap key permissions selected for Defender for Cloud Apps.](media/cloud-app-security-byok/byok-kv-access-policy-key-perms.PNG)
+        ![Screenshot of Key Vault access policy with List, Wrap key, and Unwrap key permissions selected for Defender for Cloud Apps.](media/cloud-app-security-byok/byok-kv-access-policy-key-perms.PNG)
 
     2. Under **Select principal**, choose **Microsoft Defender for Cloud Apps - BYOK** or **Microsoft Cloud App Security - BYOK**.
 
@@ -94,7 +94,7 @@ Use the following steps to create and configure the Azure Key Vault key that Def
 
     1. Copy the **Key Identifier** URI. You'll need it later.
 
-    ![Screenshot showing key settings and permitted operations page.](media/cloud-app-security-byok/byok-kv-key-perms.PNG)
+    ![Screenshot of Azure Key Vault key settings page with Wrap key and Unwrap key permitted operations enabled.](media/cloud-app-security-byok/byok-kv-key-perms.PNG)
 
 1. Optionally, if using a firewall for a selected network, configure the following firewall settings to give Defender for Cloud Apps access to the specified key, and then click **Save**:
     1. Make sure no virtual networks are selected.
@@ -125,12 +125,13 @@ Perform the following steps to enable customer-managed data encryption in Defend
 
 1. Once the URI validation has completed, select **Enable**.
 
-> [!NOTE]
-> When you disable data encryption, Defender for Cloud Apps removes the encryption with your own key from the data at rest. However, your data remains encrypted by Defender for Cloud Apps managed keys.
+> [!WARNING]
+> Disabling data encryption removes encryption with your own key from data at rest. However, your data remains encrypted by Defender for Cloud Apps managed keys.
 >
 > **To disable data encryption:** Go to the **Data encryption** tab and click **Disable data encryption**.
 
-## Key roll handling
+<a name="key-roll-handling"></a>
+## Handle key rotation
 
 Whenever you create new versions of the key configured for data encryption, Defender for Cloud Apps automatically rolls to the latest version of the key.
 

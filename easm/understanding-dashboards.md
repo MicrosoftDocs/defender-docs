@@ -1,18 +1,20 @@
 ---
-title: Understand Dashboards
-description: Microsoft Defender External Attack Surface Management (Defender EASM) offers a series of four dashboards designed to help users quickly surface valuable insights derived from their Attack Surface inventory.
+title: Understand dashboards in Microsoft Defender EASM
+description: Learn about the Defender EASM dashboards that surface inventory, attack surface, security posture, compliance, and risk insights.
 author: danielledennis
 ms.author: dandennis
 ms.service: defender-easm
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
-# Understand dashboards
+# Understand Defender EASM dashboards
 
-Microsoft Defender External Attack Surface Management (Defender EASM) offers a series of four dashboards designed to help users quickly surface valuable insights derived from their Approved inventory. These dashboards help organizations prioritize the vulnerabilities, risks and compliance issues that pose the greatest threat to their Attack Surface, making it easy to quickly mitigate key issues.
+## Dashboards in Defender EASM
+
+Microsoft Defender External Attack Surface Management (Defender EASM) offers a series of eight dashboards designed to help users quickly surface valuable insights derived from their Approved inventory. These dashboards help organizations prioritize the vulnerabilities, risks and compliance issues that pose the greatest threat to their Attack Surface, making it easy to quickly mitigate key issues.
 
 Defender EASM provides eight dashboards:
 
@@ -35,7 +37,7 @@ To access your Defender EASM dashboards, first navigate to your Defender EASM in
 
 The data underlying any dashboard chart can be exported to a CSV file. This export is useful for users who wish to import Defender EASM data into third party tools, or work off a CSV file when remediating any issues. To download chart data, first select the specific chart segment that contains the data you wish to download. Chart exports currently support individual chart segments; to download multiple segments from the same chart, you need to export each individual segment.
 
-Selecting an individual chart segment opens a drill-down view of the data, listing any assets that comprise the segment count. At the top of this page, select **Download CSV report** to begin your export. This action creates a task manager notification where you can track the status of your export.
+Selecting an individual chart segment opens a drill-down view of the data, listing any assets that comprise the segment count. At the top of this page, select **Download CSV report** to begin your export. Selecting **Download CSV report** creates a task manager notification where you can track the status of your export.
 
 Microsoft Excel enforces a character limit of 32,767 characters per cell. Some fields, like the **Last banner** column, might be improperly displayed due to this limitation. If you encounter an issue, try opening the file in another program that supports CSV files.
 
@@ -43,7 +45,7 @@ Microsoft Excel enforces a character limit of 32,767 characters per cell. Some f
 
 ### Marking CVEs as non-applicable
 
-Many Defender EASM dashboards feature CVE data, bringing your attention to potential vulnerabilities based on the web component infrastructure that powers your attack surface. For instance, CVEs are listed on the Attack Surface summary dashboard, categorized by their potential severity. Upon investigating these CVEs, you might determine that some are not relevant to your organization. This may be because you are running an unimpacted version of the web component, or your organization has different technical solutions in place to protect you from that specific vulnerability.
+Many Defender EASM dashboards feature Common Vulnerabilities and Exposures (CVE) data, bringing your attention to potential vulnerabilities based on the web component infrastructure that powers your attack surface. For instance, CVEs are listed on the Attack Surface summary dashboard, categorized by their potential severity. Upon investigating these CVEs, you might determine that some are not relevant to your organization. This may be because you are running an unimpacted version of the web component, or your organization has different technical solutions in place to protect you from that specific vulnerability.
 
 From the drilldown view of any CVE-related chart, next to the **Download CSV report** button, you now have the option to set an observation as non-applicable. Selecting this value will route you to an inventory list of all assets associated to that observation, and you can then elect to mark all observations as non-applicable from this page. For more information on marking observations as non-applicable, see [Modifying inventory assets](modifying-inventory-assets.md).
 
@@ -83,11 +85,11 @@ The **Observations** page features a list of all potential insights in the left-
 
 ![Screenshot of attack surface drilldown for medium severity priorities.](media/dashboards-3.png)
 
-This detailed view for any observation includes the title of the issue, a description, and remediation guidance from the Defender EASM team. In this example, the description explains how expired SSL certificates can lead to critical business functions becoming unavailable, preventing customers or employees from accessing web content and thus damaging your organization’s brand. The Remediation section provides advice on how to swiftly fix the issue; in this example, Microsoft recommends that you review the certificates associated with the impacted host assets, update the coinciding SSL certificates, and update your internal procedures to ensure that SSL certificates are updated in a timely manner.
+The observation details view includes the title of the issue, a description, and remediation guidance from the Defender EASM team. In this example, the description explains how expired SSL certificates can lead to critical business functions becoming unavailable, preventing customers or employees from accessing web content and thus damaging your organization’s brand. The Remediation section provides advice on how to swiftly fix the issue; in this example, Microsoft recommends that you review the certificates associated with the impacted host assets, update the coinciding SSL certificates, and update your internal procedures to ensure that SSL certificates are updated in a timely manner.
 
-Finally, the **Asset** section lists any entities that have been impacted by this specific security concern. In this example, a user wants to investigate the impacted assets to learn more about the expired SSL Certificate. You can select any asset name from this list to view the Asset Details page.
+Finally, the **Asset** section lists any entities impacted by the selected observation. In this example, a user wants to investigate the impacted assets to learn more about the expired SSL Certificate. You can select any asset name from this list to view the Asset Details page.
 
-From the **Asset Details** page, select the **SSL certificates** tab to view more information about the expired certificate. In this example, the listed certificate shows an **Expires** date in the past, indicating that the certificate is currently expired and therefore likely inactive. This section also provides the name of the SSL certificate which you can then send to the appropriate team within your organization for swift remediation.
+From the **Asset Details** page, select the **SSL certificates** tab to view more information about the expired certificate. In this example, the listed certificate shows an **Expires** date in the past, indicating that the certificate is currently expired and therefore likely inactive. The **SSL certificates** tab also provides the name of the SSL certificate, which you can then send to the appropriate team within your organization for swift remediation.
 
 ![Screenshot of the impacted assets list for an expired SSL certificate observation, showing affected host assets.](media/dashboards-4.png)
 
@@ -101,7 +103,7 @@ Each value is selectable, routing users to their inventory list filtered to disp
 
 ### Secure the cloud
 
-This section of the Attack Surface Summary dashboard provides insight on the cloud technologies used across your infrastructure. As most organizations adapt to the cloud gradually, the hybrid nature of your online infrastructure can be difficult to monitor and manage. Defender EASM helps organizations understand the usage of specific cloud technologies across your Attack Surface, mapping cloud host providers to your confirmed assets to inform your cloud adoption program and ensure compliance with your organizations process.
+The **Secure the cloud** section of the Attack Surface Summary dashboard provides insight on the cloud technologies used across your infrastructure. As most organizations adapt to the cloud gradually, the hybrid nature of your online infrastructure can be difficult to monitor and manage. Defender EASM helps organizations understand the usage of specific cloud technologies across your Attack Surface, mapping cloud host providers to your confirmed assets to inform your cloud adoption program and ensure compliance with your organizations process.
 
 ![Screenshot of the cloud infrastructure chart showing confirmed assets grouped by cloud host provider.](media/dashboards-6.png)
 
@@ -109,7 +111,7 @@ For instance, your organization may decide to migrate all cloud infrastructure t
 
 ### Sensitive services
 
-This section displays sensitive services detected on your Attack Surface that should be assessed and potentially adjusted to ensure the security of your organization. This chart highlights any services that are historically vulnerable to attack or are common vectors of information leakage to malicious actors. Any assets in this section should be investigated, and Microsoft recommends that organizations consider alternative services with a better security posture to mitigate risk.
+The **Sensitive services** section displays services detected on your Attack Surface that should be assessed and potentially adjusted to ensure the security of your organization. This chart highlights any services that are historically vulnerable to attack or are common vectors of information leakage to malicious actors. Any assets in this section should be investigated, and Microsoft recommends that organizations consider alternative services with a better security posture to mitigate risk.
 
 ![Screenshot of the Sensitive Services chart showing detected services grouped by name, with no high-risk services found in this example.](media/dashboards-7.png)
 
@@ -139,7 +141,7 @@ The Security Posture dashboard helps organizations measure the maturity of their
 
 ### CVE exposure
 
-The first chart in the Security Posture dashboard relates to the management of an organization’s website portfolio. Microsoft analyzes website components such as frameworks, server software, and third party plugins and then matches them to a current list of Common Vulnerability Exposures (CVEs) to identify vulnerability risks to your organization. The web components that comprise each website are inspected daily to ensure recency and accuracy.
+The first chart in the Security Posture dashboard relates to the management of an organization’s website portfolio. Microsoft analyzes website components such as frameworks, server software, and third party plugins and then matches them to a current list of Common Vulnerabilities and Exposures (CVEs) to identify vulnerability risks to your organization. The web components that comprise each website are inspected daily to ensure recency and accuracy.
 
 ![Screenshot of the CVE exposure chart showing counts of assets affected by detected web component vulnerabilities.](media/dashboards-11.png)
 
@@ -157,13 +159,13 @@ Each bar of the chart is selectable, routing to a list of all assets that compri
 
 This chart provides insight on the security posture related to where an organization’s hosts are located. Risk associated with ownership of Autonomous systems depends on the size, maturity of an organization’s IT department.
 
-![Screenshot of hosting and networking chart.](media/dashboards-13.png)
+![Screenshot of the hosting and networking chart showing host assets grouped by autonomous system ownership.](media/dashboards-13.png)
 
 Each bar of the chart is selectable, routing to a list of all assets that comprise the value.
 
 ### Domains configuration
 
-This section helps organizations understand the configuration of their domain names, surfacing any domains that might be susceptible to unnecessary risk. Extensible Provisioning Protocol (EPP) domain status codes indicate the status of a domain name registration. All domains have at least one code, although multiple codes can apply to a single domain. This section is useful to understanding the policies in place to manage your domains, or missing policies that leave domains vulnerable.
+The **Domains configuration** section helps organizations understand the configuration of their domain names, surfacing any domains that might be susceptible to unnecessary risk. Extensible Provisioning Protocol (EPP) domain status codes indicate the status of a domain name registration. All domains have at least one code, although multiple codes can apply to a single domain. This section is useful to understanding the policies in place to manage your domains, or missing policies that leave domains vulnerable.
 
 ![Screenshot of the domain configuration chart showing domains grouped by EPP status codes to identify missing configuration protections.](media/dashboards-14.png)
 
@@ -171,7 +173,7 @@ For instance, the *clientUpdateProhibited* status code prevents unauthorized upd
 
 ### Open Ports
 
-This section helps users understand how their IP space is managed, detecting services that are exposed on the open internet. Attackers commonly scan ports across the internet to look for known exploits related to service vulnerabilities or misconfigurations. Microsoft identifies these open ports to complement vulnerability assessment tools, flagging observations for review to ensure they are properly managed by your information technology team.
+The **Open Ports** section helps users understand how their IP space is managed, detecting services that are exposed on the open internet. Attackers commonly scan ports across the internet to look for known exploits related to service vulnerabilities or misconfigurations. Microsoft identifies these open ports to complement vulnerability assessment tools, flagging observations for review to ensure they are properly managed by your information technology team.
 
 ![Screenshot of the open ports chart showing assets grouped by internet-exposed port for security review.](media/dashboards-15.png)
 
@@ -181,7 +183,7 @@ By performing basic TCP SYN/ACK scans across all open ports on the addresses in 
 
 The SSL configuration and organization charts display common SSL-related issues that might impact functions of your online infrastructure.
 
-![Screenshot of SSL configuration and organization charts showing detected certificate issues and certificate ownership by organization and business unit.](media/dashboards-16.png)
+![Screenshot of SSL configuration and organization charts showing certificate issues and ownership by organization and business unit.](media/dashboards-16.png)
 
 For instance, the SSL configuration chart displays any detected configuration issues that can disrupt your online services. This includes expired SSL certificates and certificates using outdated signature algorithms like SHA1 and MD5, resulting in unnecessary security risk to your organization.
 
@@ -201,7 +203,7 @@ This chart organizes your website assets by HTTP response status code. These cod
 
 This chart organizes your websites by status code. Options include Active, Inactive, Requires Authorization, Broken, and Browser Error; users can select any component on the bar graph to view a comprehensive list of assets that comprise the value.
 
-![Screenshot of the Websites by status chart showing website assets grouped by HTTP response category including Active, Inactive, Requires Authorization, Broken, and Browser Error.](media/dashboards-19.png)
+![Screenshot of the Websites by status chart showing website assets grouped by HTTP response category.](media/dashboards-19.png)
 
 ### Live sites with cert issues
 
@@ -235,11 +237,11 @@ The protection of personal identifiable information (PII) is a critical componen
 
 This chart displays live PII sites by their usage of SSL certificates. By referencing this chart, you can quickly understand the hashing algorithms used across your sites that contain personal identifiable information. 
 
-![Screenshot of the Live PII sites by certificate posture chart showing sites that collect personal information grouped by SSL certificate hashing algorithm.](media/dashboards-24.png)
+![Screenshot of the Live PII sites by certificate posture chart showing sites with personal information grouped by SSL hashing algorithm.](media/dashboards-24.png)
 
 ### Login websites by protocol
 
-A login page is a page on a website where a user has the option to enter a username and password to gain access to services hosted on that site. Login pages have specific requirements under GDPR, so Defender EASM references the DOM of all scanned pages to search for code that correlates to a login. For instance, login pages must be secure to be compliant. This first chart displays Login websites by protocol (HTTP or HTTPS) and the second by certificate posture.
+A login page is a page on a website where a user has the option to enter a username and password to gain access to services hosted on that site. Login pages have specific requirements under GDPR, so Defender EASM references the DOM of all scanned pages to search for code that correlates to a login. For instance, login pages must be secure to be compliant. The **Login websites by protocol** chart displays login websites by protocol (HTTP or HTTPS), and the **Login websites by certificate posture** chart displays them by certificate posture.
 
 ![Screenshot of the Login websites by protocol chart showing login pages grouped by HTTP versus HTTPS for GDPR compliance review.](media/dashboards-25.png)
 
@@ -270,15 +272,16 @@ The current OWASP Top 10 Critical Securities list includes:
 9. **Security logging and monitoring**: Lack of proper security logging and alerting, or related misconfigurations, that can impact an organization’s visibility and subsequent accountability over their security posture.
 10. **Server-side request forgery**: Web applications that fetch a remote resource without validating the user-supplied URL.
 
-This dashboard provides a description of each critical risk, information on why it matters, and remediation guidance alongside a list of any assets that are potentially impacted. For more information, see the [OWASP website](https://owasp.org/www-project-top-ten/).
+This dashboard provides a description of each critical risk, information on why it matters, and remediation guidance alongside a list of any assets that are potentially impacted. For more information, see the [OWASP Top 10 project](https://owasp.org/www-project-top-ten/).
 
 ## CWE Top 25 Software Weaknesses dashboard
 
 This dashboard is based on the Top 25 Common Weakness Enumeration (CWE) list provided annually by MITRE. These CWEs represent the most common and impactful software weaknesses that are easy to find and exploit. This dashboard displays all CWEs included on the list over the last five years, and lists all of your inventory assets that might be impacted by each CWE. For each CWE, the dashboard provides a description and examples of the vulnerability, and lists related CVEs. The CWEs are organized by year, and each section is expandable or collapsible. Referencing this dashboard helps your vulnerability mediation efforts by helping you identify the greatest risks to your organization based on other observed exploits.
 
-[![Screenshot of the CWE Top 25 Software Weaknesses dashboard showing common software weaknesses, related CVEs, and potentially impacted inventory assets organized by year.](media/dashboards-28.png)](media/dashboards-28-expanded.png#lightbox)
+[![Screenshot of the CWE Top 25 Software Weaknesses dashboard showing weaknesses, related CVEs, and impacted assets organized by year.](media/dashboards-28.png)](media/dashboards-28-expanded.png#lightbox)
 
-## CISA Known Exploits
+<a name="cisa-known-exploits"></a>
+## CISA Known Exploits dashboard
 
 While there are hundreds of thousands of identified CVE vulnerabilities, only a small subset has been identified by the Cybersecurity & Infrastructure Security Agency (CISA) as recently exploited by threat actors. This list includes less than .5% of all identified CVEs; for this reason, it is instrumental to helping security professionals prioritize the remediation of the greatest risks to their organization. Those who remediate threats based on this list operate with the upmost efficiency because they’re prioritizing the vulnerabilities that have resulted in real security incidents. 
 

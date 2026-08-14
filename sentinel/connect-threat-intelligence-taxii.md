@@ -6,12 +6,12 @@ ms.author: pauloliveria
 author: poliveria  
 ms.reviewer: yoninave
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 
@@ -21,13 +21,13 @@ ai-usage: ai-assisted
 
 # Use STIX/TAXII to import and export threat intelligence in Microsoft Sentinel
 
-[The STIX data format and the TAXII protocol](https://oasis-open.github.io/cti-documentation/) are the most widely adopted industry standards for transmitting threat intelligence. Microsoft Sentinel supports integration with threat intelligence platforms using the standards, and provides built-in connectors for importing and exporting threat intelligence.
+[STIX and TAXII](https://oasis-open.github.io/cti-documentation/) are the most common open standards for sharing threat intelligence. Microsoft Sentinel has built-in connectors that use these standards to import and export threat data.
 
-Use the Threat Intelligence – TAXII data connector to import threat indicators from TAXII 2.0 or 2.1 servers into your Sentinel workspace. To share threat intelligence externally, configure the Threat Intelligence – TAXII Export connector, which enables secure, standards-based export to supported TAXII 2.1 platforms.
+Use the Threat Intelligence – TAXII data connector to pull threat indicators from TAXII 2.0 or 2.1 servers. To send threat data to outside platforms, set up the Threat Intelligence – TAXII Export connector for TAXII 2.1 export.
 
-This article walks you through both processes - connecting to STIX/TAXII feeds for import and configuring export to TAXII servers.
+This article shows you how to set up both import and export with TAXII servers.
 
-Learn more about [threat intelligence](understand-threat-intelligence.md) in Microsoft Sentinel, and specifically about the [TAXII threat intelligence feeds](threat-intelligence-integration.md#taxii-threat-intelligence-feeds) that you can integrate with Microsoft Sentinel.
+Learn more about [threat intelligence](understand-threat-intelligence.md) and [TAXII feeds](threat-intelligence-integration.md#taxii-threat-intelligence-feeds) in Microsoft Sentinel.
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 
@@ -51,7 +51,7 @@ TAXII 2.x servers advertise API roots, which are URLs that host collections of t
 
 ## Install the Threat Intelligence solution in Microsoft Sentinel
 
-To import threat indicators into Microsoft Sentinel from a TAXII server or export threat indicators from Microsoft Sentinel, install the Threat Intelligence solution:
+To import or export threat indicators with a TAXII server, install the Threat Intelligence solution:
 
 1. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), under **Content management**, select **Content hub**.
 
@@ -61,7 +61,7 @@ To import threat indicators into Microsoft Sentinel from a TAXII server or expor
 
 1. Select the :::image type="icon" source="media/connect-mdti-data-connector/install-update-button.png"::: **Install/Update** button.
 
-For more information about how to manage the solution components, see [Discover and deploy out-of-the-box content](sentinel-solutions-deploy.md).
+To manage solution parts, see [Discover and deploy out-of-the-box content](sentinel-solutions-deploy.md).
 
 ## Enable the Threat Intelligence - TAXII data connector
 
@@ -73,13 +73,16 @@ To configure the TAXII data connector:
 
     :::image type="content" source="media/connect-threat-intelligence-taxii/taxii-data-connector.png" alt-text="Screenshot that shows the Data connectors page with the TAXII data connector listed." lightbox="media/connect-threat-intelligence-taxii/taxii-data-connector.png":::
 
-1. Enter a name for this TAXII server collection in the **Friendly name** text box. Fill in the text boxes for **API root URL**, **Collection ID**, **Username** (if necessary), and **Password** (if necessary). Choose the group of indicators and the polling frequency you want. Select **Add**.
+1. In the **Friendly name** text box, enter a name for this TAXII server collection.
+1. Fill in **API root URL**, **Collection ID**, **Username** (if needed), and **Password** (if needed).
+1. Choose the group of indicators and the polling frequency.
+1. Select **Add**.
 
     :::image type="content" source="media/connect-threat-intelligence-taxii/threat-intel-configure-taxii-servers.png" alt-text="Screenshot that shows configuring TAXII servers.":::
  
 You should receive confirmation that a connection to the TAXII server was established successfully. Repeat the last step as many times as you want to connect to multiple collections from one or more TAXII servers.
 
-Within a few minutes, threat indicators should begin flowing into this Microsoft Sentinel workspace. Find the new indicators on the **Threat intelligence** pane. You can access it from the Microsoft Sentinel menu.
+Within a few minutes, threat indicators should begin flowing into your Microsoft Sentinel workspace. Find the new indicators on the **Threat intelligence** pane. You can access the **Threat intelligence** pane from the Microsoft Sentinel menu.
 
 ### IP allowlisting for the Microsoft Sentinel TAXII client
 
@@ -118,20 +121,20 @@ When relevant, the following IP addresses are the addresses to include in your a
 
 To configure the Threat Intelligence - TAXII Export connector:
 
-1. Make sure you have the latest version of the Threat Intelligence solution in Microsoft Sentinel. For more information, see [Install the Threat Intelligence solution in Microsoft Sentinel](#install-the-threat-intelligence-solution-in-microsoft-sentinel).
+1. Confirm you have the latest Threat Intelligence solution. For details, see [Install the Threat Intelligence solution in Microsoft Sentinel](#install-the-threat-intelligence-solution-in-microsoft-sentinel).
 
 1. Select the **Data connectors** menu.
 
-1. Select the **Threat intelligence - TAXII Export** data connector and then select **Open connector page** in the side pane.
+1. Select the **Threat intelligence - TAXII Export** data connector. Then select **Open connector page** in the side pane.
 
     :::image type="content" source="media/connect-threat-intelligence-taxii/taxii-export-data-connector.png" alt-text="Screenshot that shows the Data connectors page with the TAXII Export data connector listed." lightbox="media/connect-threat-intelligence-taxii/taxii-export-data-connector.png":::
 
 1. In the **Configuration** area on the **Threat intelligence - TAXII Export** page: 
 
-   - Enter a name for this TAXII server collection in the **Friendly name (for server)** text box. 
-   - Fill in the textboxes for **API root URL**, **Collection ID**. For more information, see [Get the TAXII server API root and collection ID](#get-the-taxii-server-api-root-and-collection-id). 
-   - Select an **Basic authentication** or **API key** from the **Authentication type** dropdown and provide the relevant authentication details.
-   - Select **Enable rules** to apply the rules described on the connector page to all exported threat intelligence.
+   - In the **Friendly name (for server)** text box, enter a name for this server. 
+   - Fill in **API root URL** and **Collection ID**. For details, see [Get the TAXII server API root and collection ID](#get-the-taxii-server-api-root-and-collection-id). 
+   - From the **Authentication type** dropdown, select **Basic authentication** or **API key**. Then enter your credentials.
+   - Select **Enable rules** to apply the connector page rules to all exported threat data.
 
    For example:
 

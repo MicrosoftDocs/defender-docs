@@ -1,11 +1,11 @@
 ---
 title: Weekly operational guide - Microsoft Defender for Identity
 description: Learn about the Microsoft Defender for Identity activities that we recommend for your team on a weekly basis.
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.reviewer: martin77s
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Weekly operational guide - Microsoft Defender for Identity
@@ -33,9 +33,9 @@ For more information, see:
 
 **Persona**: Security and compliance administrators, SOC analysts
 
-We recommend that you configure custom detections in Microsoft Defender to monitor and respond to various events and system states, such as suspected breach activity and misconfigured endpoints.
+Configure custom detections in Microsoft Defender to monitor and respond to events like suspected breach activity and misconfigured endpoints.
 
-Custom detection rules use advanced hunting queries. They can trigger alerts and response actions automatically. Run these rules regularly to stay on top of new alerts and take action.
+Custom detection rules use advanced hunting queries. They can trigger alerts and response actions on their own. Run these rules regularly to stay on top of new alerts and take action.
 
 For more information, see:
 

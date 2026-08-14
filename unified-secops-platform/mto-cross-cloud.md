@@ -8,12 +8,12 @@ ms.collection:
 - highpri
 - tier1
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto: 
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #customer intent: As a security administrator, I want to learn how to manage tenants in other Microsoft cloud environments.
 ---
 
@@ -29,13 +29,15 @@ Cross-cloud visibility allows GCC High and DoD multitenant customers to view and
 
 Cross-cloud visibility is available to government customers who have the applicable [licensing requirements](/defender-xdr/usgov#licensing-requirements).
 
-In addition, ensure that the trust multi-factor authentication (MFA) from Microsoft Entra tenants is properly configured to successfully access tenants in Microsoft Commercial cloud environments. To configure MFA, see [Change inbound trust settings for MFA and device claims](/entra/external-id/cross-tenant-access-settings-b2b-collaboration#to-change-inbound-trust-settings-for-mfa-and-device-claims).
+In addition, ensure that the **Trust multi-factor authentication from Microsoft Entra tenants** setting is properly configured to successfully access tenants in Microsoft Commercial cloud environments. To configure MFA, see [Change inbound trust settings for MFA and device claims](/entra/external-id/cross-tenant-access-settings-b2b-collaboration#to-change-inbound-trust-settings-for-mfa-and-device-claims).
 
-### B2B collaboration settings
+<a name="b2b-collaboration-settings"></a>
+### Configure B2B collaboration settings
 
 Follow these steps to configure B2B collaboration settings.
 
-#### Home tenant settings
+<a name="home-tenant-settings"></a>
+#### Configure home tenant settings
 
 1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com).
 2. Navigate to **Identity > External identities > Cross-tenant access settings**, then select **Cross-tenant access settings**.
@@ -44,7 +46,7 @@ Follow these steps to configure B2B collaboration settings.
 > [!NOTE]
 > By default, a B2B inherits the default settings of your tenant.
 
-Configure your tenant settings to the following:
+Configure the home tenant settings to the following:
 
 1. For the organization you added, select **Inbound access**.
 2. Set B2B collaboration to **Block** for Access and Users.
@@ -52,7 +54,7 @@ Configure your tenant settings to the following:
 4. Select **B2B direct connect**, set access status to **Block** and Applies to **all users**.
 5. On the Application tab, set access to **Block** and Applies to **All applications**, then select **Save**.
 
-No other MFA Trust settings are required for the home tenant.
+No other MFA trust settings are required for the home tenant (the tenant from which you manage cross-cloud access).
 
 Configure outbound access settings for the home tenant by following these steps:
 
@@ -66,7 +68,8 @@ Configure outbound access settings for the home tenant by following these steps:
 8. Select **External applications** and set access status to **Block**.
 9. Set the Applies to to **All external applications**. Select **Save**.
 
-#### Target tenant settings
+<a name="target-tenant-settings"></a>
+#### Configure target tenant settings
 
 Perform the following steps to add the target tenant organization:
 
@@ -83,7 +86,7 @@ Configure the target tenant settings to the following:
 5. On the Application tab, set access to **Block** and Applies to **All applications**, then select **Save**.
 6. Select **Trust settings**, then select **Trust multi-factor authentication from Microsoft Entra tenants**.
 
-You then need to configure outbound access settings for the target tenant by following these steps:
+Configure outbound access settings for the target tenant by following these steps:
 
 1. In the **Cross-tenant access settings** pane, select **Outbound access**.
 2. Configure B2B collaboration by setting access status to **Block**.
@@ -98,6 +101,8 @@ You then need to configure outbound access settings for the target tenant by fol
 <a name="cross-cloud-tenant-management"></a>
 ## Manage tenants across cloud environments
 
+### Add tenants from another cloud
+
 To manage tenants from other Microsoft cloud environments:
 
 1. Go to the [Multitenant management settings page](https://mto.security.microsoft.com/settings) in Microsoft Defender.
@@ -111,7 +116,7 @@ To manage tenants from other Microsoft cloud environments:
 
 4. Once verified, select **Add tenant** to complete the process.
 
-The tenants list now includes the tenants from the other cloud environment. You can now manage these tenants as you would any other tenant in Microsoft Defender.
+The tenants list now includes the tenants from the external cloud environment you added. You can now manage these tenants as you would any other tenant in Microsoft Defender.
 
 If you get an error during the verification process, you can:
 
@@ -120,7 +125,7 @@ If you get an error during the verification process, you can:
 
 To remove tenants from the list, select the tenant, then select **Remove tenants**.
 
-After successfully adding tenants from other clouds, you can view these tenants in other multitenant pages like the incidents and device inventory pages.
+After successfully adding tenants from other clouds, you can view the added cross-cloud tenants in other multitenant pages like the incidents and device inventory pages.
 
 > [!NOTE]
 > When a cross-cloud tenant is added to a distribution profile and subsequently removed from cross-cloud visibility, the tenant's name is removed from the tenant list and won’t be available for content management. This is a recognized limitation of cross-cloud visibility and is currently under review. See [Content assignment failure in cross-cloud tenant management](mto-troubleshoot.md#content-assignment-failure-in-cross-cloud-tenant-management) for more information.

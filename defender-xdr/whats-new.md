@@ -5,11 +5,12 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 07/05/2026
+ms.date: 08/07/2026
 ms.collection:
 - M365-security-compliance
 - tier1
 ms.topic: whats-new
+ms.custom: msecd-doc-authoring-1015
 ---
 
 # What's new in Microsoft Defender XDR
@@ -35,7 +36,9 @@ You can also get product updates and important notifications through the [messag
 
 - (GA) The **Domain investigation** page allows you to investigate an Active Directory domain. It shows Active Directory domain security, including domain properties, deployment health, identity summary, service account breakdown, sensitive entities, active recommendations, group policies, and trust relationships. For more information, see [Investigate a domain](/defender-for-identity/investigate-domain).
 
-- (GA) **Security for Microsoft Agent 365 with Defender**: With a Microsoft Agent 365 license, Microsoft Defender provides discovery, security posture, threat detection and investigation, and real-time protection for the AI agents in your tenant. Onboarding includes enabling data collection, connecting the Microsoft 365 app connector, and connecting Copilot Studio for real-time protection of Copilot Studio agents. For more information, see [Protect AI agents using Microsoft Defender](security-for-ai/defender-security-for-ai.md#protect-ai-agents-using-microsoft-defender) and [Enable security for AI agents using Microsoft Defender](security-for-ai/get-started-defender-security-for-ai.md).
+- (Preview) **Threat detection for Microsoft Agent 365 agents**: Microsoft Defender analyzes runtime signals from agent interactions, tool usage, and execution patterns to surface alerts in Microsoft Defender XDR. Detection uses observability data from Microsoft Copilot Studio, Microsoft Foundry, Microsoft 365 Copilot Agent Builder, and agents integrated through the Microsoft Agent 365 SDK. Analysts can investigate alerts through incidents and advanced hunting. For more information, see [Detect and investigate threats to AI agents using Microsoft Defender](security-for-ai/ai-agent-detection-protection.md).
+
+- (GA) **Real-time protection for Microsoft Agent 365 tooling servers**: Microsoft Defender evaluates tool invocations and responses against security policies and can allow or block interactions with Work IQ MCP and customer MCP tools onboarded to Agent 365. For more information, see [Protect AI agents in real time using Microsoft Defender](security-for-ai/ai-agent-real-time-protection.md).
 
 ## June 2026
 
@@ -172,6 +175,4 @@ You can also get product updates and important notifications through the [messag
     - The [MessageEvents](advanced-hunting-messageevents-table.md) table contains details about messages sent and received within your organization at the time of delivery
     - The [MessagePostDeliveryEvents](advanced-hunting-messagepostdeliveryevents-table.md) table contains information about security events that occurred after the delivery of a Microsoft Teams message in your organization
     - The [MessageUrlInfo](advanced-hunting-messageurlinfo-table.md) table contains information about URLs sent through Microsoft Teams messages in your organization
-
-
 

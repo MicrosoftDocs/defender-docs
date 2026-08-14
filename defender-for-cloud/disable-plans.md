@@ -2,8 +2,8 @@
 title: Disable Microsoft Defender for Cloud plans
 description: Learn how to disable Microsoft Defender for Cloud plans at subscription and resource levels across Azure, AWS, and GCP to prevent unexpected charges.
 ms.topic: how-to
-ms.custom: msecd-doc-authoring-1012
-ms.date: 05/04/2026
+ms.custom: msecd-doc-authoring-1013
+ms.date: 07/03/2026
 #customer intent: As a cloud administrator, I want to disable Defender for Cloud plans so that I can manage my security costs.
 ai-usage: ai-assisted
 ---
@@ -32,7 +32,7 @@ To disable plans at the subscription level:
 
 ### Disable plans by multicloud environment
 
-To continue, select the relevant multicloud environment.
+After selecting the subscription, select the tab for your multicloud environment (Azure, AWS, or GCP) to continue.
 
 ### [Azure](#tab/Azure)
         
@@ -196,7 +196,7 @@ App Service is the most common place where Defender for Cloud stays enabled acci
 
 ### [Storage Accounts](#tab/storage-accounts)
 
-The resource-level setting overrides the subscription setting. Charges stop for that storage account only.
+The Defender for Storage resource-level setting overrides the subscription-level setting. Charges stop for that storage account only.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -229,6 +229,8 @@ If autoprovisioning or an Azure Policy assignment is still active, agents might 
 1. Select **Save**.
 
 ### [SQL / Databases](#tab/sql-databases)
+
+To disable Defender for SQL at the resource level:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -289,7 +291,8 @@ If charges still appear, there's at least one resource with Defender still enabl
 
 After you disable the plans and confirm that you're no longer billed, use the [Coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) to verify your current coverage.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [What is Microsoft Defender for Cloud?](defender-for-cloud-introduction.md)

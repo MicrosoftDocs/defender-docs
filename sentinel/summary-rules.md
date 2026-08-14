@@ -5,13 +5,13 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to #Don't change
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #customer intent: As a SOC engineer, I want to create summary rules in Microsoft Sentinel to aggregate insights from incoming verbose log to optimize costs and query performance.
 
@@ -28,7 +28,7 @@ Use [summary rules](/azure/azure-monitor/logs/summary-rules) in Microsoft Sentin
 
 Microsoft Sentinel stores summary rule results in custom tables with the **Analytics** data plan. For more information on data plans and storage costs, see [Log table plans](/azure/azure-monitor/logs/basic-logs-configure).
 
-This section explains how to create summary rules, deploy pre-built templates, and review common usage scenarios in Microsoft Sentinel.
+This article explains how to create summary rules, deploy pre-built templates, and review common usage scenarios in Microsoft Sentinel.
 
 > [!IMPORTANT]
 > [!INCLUDE [unified-soc-preview-without-alert](includes/unified-soc-preview-without-alert.md)]

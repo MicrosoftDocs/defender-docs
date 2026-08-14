@@ -1,10 +1,10 @@
 ---
 title: Configure reverse DNS lookup for OT active monitoring - Microsoft Defender for IoT
 description: This article describes how to configure reverse DNS lookup for active monitoring with Microsoft Defender for IoT.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Configure DNS servers for reverse lookup resolution for OT monitoring
@@ -19,7 +19,7 @@ All CIDR formats are supported.
 
 Before configuring reverse DNS lookup, make sure you have:
 
-- An OT network sensor with [OT sensor software installed](ot-deploy/install-software-ot-sensor.md) and [configured and activated](ot-deploy/activate-deploy-sensor.md).
+- An OT network sensor with [OT sensor software installed](ot-deploy/install-software-ot-sensor.md) and [configured and activated your OT sensor](ot-deploy/activate-deploy-sensor.md).
 
 - Access to your OT network sensor as an **Admin** user. For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](roles-on-premises.md).
 

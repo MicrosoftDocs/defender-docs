@@ -1,14 +1,14 @@
 ---
 title: Configure table settings in Microsoft Sentinel
-description: Configure Microsoft Sentinel and Defender XDR table settings in the Microsoft Defender portal to optimize security operations and cost efficiency.
+description: Configure retention and data tier settings for Microsoft Sentinel and Defender XDR tables in the Microsoft Defender portal, and use Table insights to monitor ingestion health and optimize costs.
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/24/2026
+ms.date: 07/02/2026
 # Customer intent: As an IT administrator or subscription owner, I want to manage Microsoft Sentinel and Defender XDR table tiers and retention settings in the Microsoft Defender portal to optimize security operations and cost efficiency.
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Configure table settings in Microsoft Sentinel
@@ -29,6 +29,8 @@ For more information about how data tiers and retention work, see [Manage data t
 Microsoft Sentinel workspace permissions let you view or manage tables in specific Microsoft Sentinel workspaces, while unified role-based access control (RBAC) permissions apply to all Microsoft Sentinel workspaces in the Defender portal.
 
 ### Permissions to manage table settings
+
+The following table lists the permissions required to view or configure table settings.
 
 | Action | Unified role-based access control (RBAC) in the Defender portal | Microsoft Sentinel workspace permissions |
 | --- | --- | --- |

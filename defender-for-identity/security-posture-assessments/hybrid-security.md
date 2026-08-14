@@ -3,10 +3,10 @@ title: 'Remediate hybrid security posture assessments in Defender for Identity'
 description: View all hybrid security posture assessments for Microsoft Defender for Identity.
 ms.service: microsoft-defender-for-identity
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.reviewer: LiorShapiraa
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Remediate hybrid security posture assessments in Defender for Identity
@@ -75,7 +75,7 @@ Smart attackers are likely to target Microsoft Entra Connect in on-premises envi
 > - The **Remove unnecessary replication permissions for Microsoft Entra Connect AD DS Connector account** security assessment is available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services.
 > 
 > - If the Password Hash Sync (PHS) sign-on method is set up, AD DS Connector accounts with replication permissions won't be affected because those permissions are necessary.
-> -  For environments with multiple Microsoft Entra Connect servers, it’s crucial to install sensors on each server to ensure Microsoft Defender for Identity can fully monitor your setup. If detected that your Microsoft Entra Connect configuration doesn't utilize Password Hash Sync, which means that replication permissions aren't necessary for the accounts in the Exposed Entities list. Ensure that each exposed MSOL account isn't required for Replication Permissions by any other applications.
+> -  For environments with multiple Microsoft Entra Connect servers, it’s crucial to install sensors on each server to ensure Microsoft Defender for Identity can fully monitor your setup. If Microsoft Defender for Identity detects that your Microsoft Entra Connect configuration doesn't use Password Hash Sync, replication permissions aren't necessary for the accounts in the Exposed Entities list. Ensure that each exposed MSOL account isn't required for Replication Permissions by any other applications.
 
 
 **Implementation**
@@ -142,4 +142,4 @@ Starting with [Entra Connect build 1.4.###.#](/entra/identity/hybrid/connect/ref
 
 ## Next steps
 
-[Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
+- [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)

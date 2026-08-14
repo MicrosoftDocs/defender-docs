@@ -2,8 +2,9 @@
 title: Deploy Defender sensor and Azure Policy to clusters using Azure CLI
 description: Learn how to deploy Microsoft Defender for Containers sensors and Azure Policy components to AKS, Amazon EKS, and Google Kubernetes Engine clusters by using Azure CLI.
 ms.topic: how-to
-ms.date: 11/27/2025
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Deploy Defender sensor and Azure Policy to clusters using Azure CLI
@@ -11,6 +12,8 @@ ai-usage: ai-assisted
 This article explains how to deploy the Microsoft Defender for Containers sensor and Azure Policy for Kubernetes to clusters by using Azure CLI after [enabling the Defender for Containers plan in Microsoft Defender for Cloud](defender-for-containers-enable-plan.md).
 
 For clusters that aren’t running in Azure Kubernetes Service (AKS), Defender for Cloud uses Azure Arc-enabled Kubernetes to deploy the required extensions.
+
+Before you begin, review the prerequisites for your cluster type, including enabling the Defender for Containers plan, installing Azure CLI 2.40.0 or later, and meeting any Azure Arc connectivity requirements.
 
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
@@ -34,25 +37,25 @@ For clusters that aren’t running in Azure Kubernetes Service (AKS), Defender f
 
 If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](defender-for-containers-verify-deployment.md) before running this command.
 
-To deploy the Defender sensor to a specific AKS cluster:
+1. Deploy the Defender sensor to a specific AKS cluster:
 
-```azurecli
-az aks update \
-  --resource-group <resource-group> \
-  --name <aks-cluster-name> \
-  --enable-defender
-```
+   ```azurecli
+   az aks update \
+     --resource-group <resource-group> \
+     --name <aks-cluster-name> \
+     --enable-defender
+   ```
 
-## Deploy the Azure Policy add-on
+<a name="deploy-the-azure-policy-add-on"></a>
 
-Enable Azure Policy for Kubernetes to assess and enforce configuration best practices:
+1. Enable Azure Policy for Kubernetes to assess and enforce configuration best practices:
 
-```azurecli
-az aks enable-addons \
-  --addons azure-policy \
-  --name <aks-cluster-name> \
-  --resource-group <resource-group>
-```
+   ```azurecli
+   az aks enable-addons \
+     --addons azure-policy \
+     --name <aks-cluster-name> \
+     --resource-group <resource-group>
+   ```
 
 # [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
@@ -74,7 +77,9 @@ az aks enable-addons \
 
 For EKS clusters, Defender components are deployed as Azure Arc Kubernetes extensions when you deploy them manually using Azure CLI.
 
-If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](defender-for-containers-verify-deployment.md) before running this command.
+If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](defender-for-containers-verify-deployment.md) before running these commands.
+
+Run the following command to deploy the Defender sensor extension to your Arc-connected EKS cluster:
 
 ```azurecli
 az k8s-extension create \
@@ -86,6 +91,8 @@ az k8s-extension create \
 ```
 
 ## Deploy the Azure Policy extension
+
+Install the Azure Policy extension to enable policy-based security recommendations and compliance assessments for your EKS cluster:
 
 ```azurecli
 az k8s-extension create \
@@ -116,7 +123,7 @@ az k8s-extension create \
 
 Private GKE clusters must allow outbound HTTPS (TCP 443) access to Microsoft Defender for Cloud endpoints.
 
-If required, configure firewall rules to allow egress from cluster nodes:
+If your private cluster blocks outbound traffic, create a firewall rule to allow cluster nodes to reach Microsoft Defender for Cloud endpoints over TCP 443:
 
 ```bash
 gcloud compute firewall-rules create allow-azure-defender \
@@ -127,9 +134,11 @@ gcloud compute firewall-rules create allow-azure-defender \
 
 ## Cluster-specific considerations
 
+Review the following considerations based on your GKE cluster type before deploying the Defender sensor.
+
 ### Standard GKE clusters
 
-No special configuration is required. Follow the default deployment steps.
+No special configuration is required. Follow the deployment steps in the [Deploy the Defender sensor](#deploy-the-defender-sensor) and [Deploy the Azure Policy extension](#deploy-the-azure-policy-extension) sections.
 
 ### GKE Autopilot clusters
 
@@ -147,6 +156,8 @@ For GKE clusters, Defender components are deployed as Azure Arc Kubernetes exten
 
 If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](defender-for-containers-verify-deployment.md) before running this command.
 
+Run the following command to install the Defender sensor extension on your Arc-connected GKE cluster:
+
 ```azurecli
 az k8s-extension create \
   --name microsoft.azuredefender.kubernetes \
@@ -157,6 +168,8 @@ az k8s-extension create \
 ```
 
 ## Deploy the Azure Policy extension
+
+Install the Azure Policy extension on your Arc-connected GKE cluster to enable policy-based security recommendations and compliance assessments:
 
 ```azurecli
 az k8s-extension create \
@@ -189,6 +202,8 @@ For Arc-enabled Kubernetes clusters, Defender components are deployed as Azure A
 
 If automatic provisioning was enabled when you turned on the Defender for Containers plan, the Defender sensor might already be installed. [Verify the deployment](defender-for-containers-verify-deployment.md) before running this command.
 
+Run the following command to install the Defender sensor extension on your Arc-enabled Kubernetes cluster:
+
 ```azurecli
 az k8s-extension create \
   --name microsoft.azuredefender.kubernetes \
@@ -199,6 +214,8 @@ az k8s-extension create \
 ```
 
 ## Deploy the Azure Policy extension
+
+Install the Azure Policy extension on your Arc-enabled Kubernetes cluster to enable policy-based security recommendations and compliance assessments:
 
 ```azurecli
 az k8s-extension create \

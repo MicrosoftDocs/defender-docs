@@ -128,13 +128,13 @@ With network firewall protection, you can set rules that determine which network
 - Safeguard sensitive data and intellectual property
 - Extend your security investment
 
-To learn more, see [Windows Defender Firewall with advanced security](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security).
+To learn more, see [Windows Defender Firewall with advanced security](/windows/security/operating-system-security/network-security/windows-firewall).
 
 ### Application control
 
 Application control protects your Windows endpoints by running only trusted applications and code in the system core (kernel). Your security team can define application control rules that consider an application's attributes, such as its codesigning certificates, reputation, launching process, and more. Application control is available in Windows 10 or later.
 
-To learn more, see [Application control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control).
+To learn more, see [Application control for Windows](/windows/security/application-security/application-control/app-control-for-business/appcontrol).
 
 ## Centralized management
 

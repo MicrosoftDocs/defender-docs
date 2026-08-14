@@ -14,7 +14,8 @@ ms.custom:
   - sfi-image-nochange
 description: Learn about Campaigns in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 06/19/2025
+ms.date: 07/27/2026
+ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -262,7 +263,7 @@ The diagram contains the following information:
   |Value|Spam filter verdict|Description|
   |---|---|---|
   |**Allowed**|`SFV:SKN` <br/><br/ `SFV:SKI`|The message was marked as not spam and/or skipped filtering before being evaluated by spam filtering. For example, the message was marked as not spam by a mail flow rule (also known as a transport rule). <br/><br/ The message skipped spam filtering for other reasons. For example, the sender and recipient appear to be in the same organization.|
-  |**Blocked**|`SFV:SKS`|The message was marked as spam before being evaluated by spam filtering. For example, by a mail flow rule.|
+  |**Blocked**|`SFV:SKS`|The message was marked as spam before spam filtering evaluated it, either by [Exchange mail flow rule (transport rule) that set the SCL](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl), or by a spam decision passed from on-premises Exchange in a [hybrid deployment](/exchange/exchange-hybrid). The request to mark the message as spam is an input to filtering, not a final decision, so `SFV:SKS` appears only when the request is honored.|
   |**Detected**|`SFV:SPM`|The message was marked as spam by spam filtering.|
   |**Not Detected**|`SFV:NSPM`|The message was marked as not spam by spam filtering.|
   |**Released**|`SFV:SKQ`|The message skipped spam filtering because it was released from quarantine.|

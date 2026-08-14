@@ -5,12 +5,12 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 #Customer intent: As a security engineer, I want to create scheduled analytics rules from templates so that I can efficiently monitor and detect anomalies in my data.
@@ -22,7 +22,7 @@ By far the most common type of analytics rule, **Scheduled** rules are based on 
 
 Microsoft makes a vast array of **analytics rule templates** available to you through the many [solutions provided in the Content hub](sentinel-solutions.md), and strongly encourages you to use them to create your rules. The queries in scheduled rule templates are written by security and data science experts, either from Microsoft or from the vendor of the solution providing the template.
 
-This article shows you how to create a scheduled analytics rule using a template.
+The following procedure shows how to create a scheduled analytics rule from a template.
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
@@ -31,6 +31,8 @@ This article shows you how to create a scheduled analytics rule using a template
 To view the installed analytics rules in Microsoft Sentinel, go to the **Analytics** page. The **Rule templates** tab displays all the installed rule templates. To find more rule templates, go to the **Content hub** in Microsoft Sentinel to install product solutions that contain the rule templates you need, or install standalone content.
 
 # [Defender portal](#tab/defender-portal)
+
+Use the following steps to view existing analytics rule templates in the Defender portal.
 
 1. From the Microsoft Defender navigation menu, expand **Microsoft Sentinel**, then **Configuration**. Select **Analytics**.
 
@@ -45,6 +47,8 @@ To view the installed analytics rules in Microsoft Sentinel, go to the **Analyti
     :::image type="content" source="media/create-analytics-rule-from-template/view-detections-defender.png" alt-text="Screenshot of scheduled analytics rule templates in Microsoft Defender portal." lightbox="media/create-analytics-rule-from-template/view-detections-defender.png":::
 
 # [Azure portal](#tab/azure-portal)
+
+Use the following steps to view existing analytics rule templates in the Azure portal.
 
 1. From the **Configuration** section of the Microsoft Sentinel navigation menu, select **Analytics**.
 
@@ -92,7 +96,7 @@ From the **Configuration** section of the Microsoft Sentinel navigation menu, se
 
     When you get to the end of the rule creation wizard, Microsoft Sentinel creates the rule. The new rule appears in the **Active rules** tab.
 
-    Repeat the process to create more rules. For more details on how to customize your rules in the rule creation wizard, see [Create a custom analytics rule from scratch](create-analytics-rules.md).
+    Repeat these rule-creation steps to create more rules. For more details on how to customize your rules in the rule creation wizard, see [Create a custom analytics rule from scratch](create-analytics-rules.md).
 
 > [!TIP]
 > - Make sure that you **enable all rules associated with your connected data sources** in order to ensure full security coverage for your environment. The most efficient way to enable analytics rules is directly from the data connector page, which lists any related rules. For more information, see [Connect data sources](connect-data-sources.md).

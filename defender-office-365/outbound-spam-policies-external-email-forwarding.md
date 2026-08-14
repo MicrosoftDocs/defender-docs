@@ -2,7 +2,7 @@
 title: Configuring and controlling external email forwarding in Microsoft 365
 author: chrisda
 ms.author: chrisda
-ms.date: 10/06/2025
+ms.date: 08/10/2026
 ms.topic: overview
 ms.collection: 
 - m365-security
@@ -12,6 +12,7 @@ ms.assetid:
 ms.custom:
 - seo-marvel-apr2020
 - adminvideo
+- msecd-doc-authoring-1015
 description: This article covers external email forwarding, Automatic forwarding, 5.7.520 Access Denied messages, disabling external forwarding, 'Your administrator has disabled external forwarding' messages, and outbound anti-spam policy.
 ms.service: defender-office-365
 appliesto:
@@ -19,6 +20,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 #customer intent: As an admin, I need concise guidance to configure and control automatic external email forwarding so I can prevent data exfiltration and reduce risk.
+ai-usage: ai-assisted
 ---
 
 # Control automatic external email forwarding from cloud mailboxes
@@ -37,7 +39,7 @@ The following types of automatic forwarding are available in Microsoft 365:
 
 You can use outbound spam filter policies to control automatic forwarding to external recipients. Three settings are available:
 
-- **Automatic - System-controlled**: This value is the default. This value is now the same as **Off - Forwarding is disabled**. When this value was originally introduced, it was equivalent to **On - Forwarding is enabled**. Over time, thanks to the principles of [secure by default](secure-by-default.md), the effect of this value was eventually changed to **Off - Forwarding is disabled** for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/blog/exchange/all-you-need-to-know-about-automatic-email-forwarding-in-exchange-online/2074888).
+- **Automatic - System-controlled**: This value is the default. When this value was introduced, it was equivalent to **On - Forwarding is enabled**. In 2021, the value changed to **Off - Forwarding is disabled** for new organizations and for existing organizations that weren't actively using the **Automatic - System-controlled** value. For existing organizations that were already using the value, it can remain equivalent to **On - Forwarding is enabled**. Because the behavior can differ by organization, configure **On - Forwarding is enabled** or **Off - Forwarding is disabled** instead of **Automatic - System-controlled**. For more information, see [automatic email forwarding in Exchange Online](https://techcommunity.microsoft.com/blog/exchange/all-you-need-to-know-about-automatic-email-forwarding-in-exchange-online/2074888).
 - **On - Forwarding is enabled**: Automatic external forwarding is allowed and not restricted.
 - **Off - Forwarding is disabled**: Automatic external forwarding is disabled and results in a non-delivery report (also known as an NDR or bounce message) to the sender.
 
@@ -66,9 +68,9 @@ When one setting allows external forwarding, but another setting blocks external
 
 |Scenario|Result|
 |---|---|
-|<ul><li>You configure remote domain settings to allow automatic forwarding.</li><li>Automatic forwarding in the outbound spam filter policy is set to **Off**.</li></ul>|Automatically forwarded messages to recipients in the affected domains are blocked.|
-|<ul><li>You configure remote domain settings to allow automatic forwarding.</li><li>Automatic forwarding in the outbound spam filter policy is set to **Automatic - System-controlled**.</li></ul>|Automatically forwarded messages to recipients in the affected domains are blocked. <br/><br/> As described earlier, **Automatic - System-controlled** used to mean **On**, but the setting changed over time to mean **Off** in all organizations. <br/><br/> For absolute clarity, you can configure your outbound spam filter policy to **On** or **Off**.|
-|<ul><li>Automatic forwarding in the outbound spam filter policy is set to **On**</li><li>You use mail flow rules or remote domains to block automatically forwarded email.</li></ul>|Automatically forwarded messages to affected recipients are blocked by mail flow rules or remote domains.|
+|<ul><li>You configure remote domain settings to allow automatic forwarding.</li><li>Automatic forwarding in the outbound spam filter policy is set to ***Off - Forwarding is disabled**.</li></ul>|Automatically forwarded messages to recipients in the affected domains are blocked.|
+|<ul><li>You configure remote domain settings to allow automatic forwarding.</li><li>Automatic forwarding in the outbound spam filter policy is set to **Automatic - System-controlled**.</li></ul>|The result depends on [how **Automatic - System-controlled** works in your organization](#control-automatic-external-email-forwarding-from-cloud-mailboxes). To avoid this ambiguity, configure the outbound spam filter policy to **On - Forwarding is enabled** or ***Off - Forwarding is disabled**.|
+|<ul><li>Automatic forwarding in the outbound spam filter policy is set to **On - Forwarding is enabled**</li><li>You use mail flow rules or remote domains to block automatically forwarded email.</li></ul>|Automatically forwarded messages to affected recipients are blocked by mail flow rules or remote domains.|
 
 You can use this behavior (for example) to allow automatic forwarding in outbound spam filter policies, but use remote domains to control the external domains that users can forward messages to.
 

@@ -2,8 +2,9 @@
 title: Detect internet exposed IP addresses
 description: Learn how to detect exposed IP addresses with cloud security explorer in Microsoft Defender for Cloud to proactively identify security risks.
 ms.topic: how-to
-ms.date: 05/28/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security professional, I want to learn how to detect exposed IP addresses with cloud security explorer in Microsoft Defender for Cloud so that I can proactively identify security risks in my cloud environment and improve my security posture.
 ---
 
@@ -79,7 +80,8 @@ Use attack path analysis to view paths that an attacker could use to reach criti
 
 1. [Remediate the attack path](how-to-manage-attack-path.md#remediate-attack-paths).
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Identify and remediate attack paths](how-to-manage-attack-path.md)

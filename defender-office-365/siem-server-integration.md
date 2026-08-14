@@ -6,12 +6,12 @@ ms.author: guywild
 author: guywi-ms
 audience: ITPro
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 ms.localizationpriority: medium
 ms.collection: 
   - m365-security
   - tier2
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
   - Ent_Solutions
   - SIEM
   - seo-marvel-apr2020
@@ -73,6 +73,10 @@ Verify the following requirements:
 - Your account in Microsoft Defender for Office 365 or Microsoft Defender is a *Security Administrator*.
 - Verify that you have *Write permissions in Microsoft Sentinel*.
 
+### Connect Microsoft Sentinel to Microsoft Defender for Office 365 data
+
+Use the following steps to connect the Microsoft Defender XDR connector in Microsoft Sentinel and stream email event data from Microsoft Defender for Office 365 into your SIEM.
+
 1. Navigate to Microsoft Sentinel.
 1. In the left navigation pane, select **Configuration** \> **Data connectors**.
 1. **Search for** Microsoft Defender XDR and select the **Microsoft Defender XDR (preview) connector**.
@@ -83,7 +87,7 @@ Verify the following requirements:
 
 1. Scroll to **Microsoft Defender for Office 365** in the **Connect events** section of the page.
 
-   You can also choose tables from *any other Microsoft Defender product* you find helpful and applicable before you select **Apply Changes** in the next step:
+   You can also choose tables from *any other Microsoft Defender product* you find helpful and applicable before you select **Apply Changes**:
 
 1. Select **EmailEvents**, **EmailUrlInfo**, **EmailAttachmentInfo**, and **EmailPostDeliveryEvents** > and **Apply Changes**.
 

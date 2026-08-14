@@ -11,13 +11,13 @@ ms.collection:
   - security-copilot
   - magic-ai-copilot
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.update-cycle: 180-days
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Script analysis with Microsoft Copilot in Microsoft Defender
@@ -52,7 +52,7 @@ Script analysis is also available in the Security Copilot standalone experience 
 <a name="key-features"></a>
 ## Key script analysis features
 
-You can access the script analysis capability within the attack story below the incident graph on an incident page and in the [Investigate the device timeline](/defender-endpoint/investigate-machines#investigate-device-timeline).
+You can access the script analysis capability within the attack story below the incident graph on an incident page and in the device timeline view. For more information, see [Investigate the device timeline](/defender-endpoint/investigate-machines#investigate-device-timeline).
 
 To begin analysis, perform the following steps:
 
@@ -90,7 +90,7 @@ In the Security Copilot standalone portal, you can use the following prompt iden
 <a name="provide-feedback"></a>
 ## Provide feedback on script analysis
 
-Microsoft highly encourages you to provide feedback to Copilot, as it's crucial for a capability's continuous improvement. You can provide feedback on the results by selecting the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards.](media/copilot-in-defender/copilot-defender-feedback.png) found at the end of the script analysis card.
+Microsoft highly encourages you to provide feedback to Copilot, as it's crucial for a capability's continuous improvement. You can provide feedback on the results by selecting the feedback icon ![Screenshot of the feedback control used to submit feedback for Copilot responses in Defender cards.](media/copilot-in-defender/copilot-defender-feedback.png) found at the end of the script analysis card.
 
 <a name="see-also"></a>
 ## Related content

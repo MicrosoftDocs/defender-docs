@@ -60,7 +60,7 @@ We recommend that you test your systems to determine the number of logs that eac
 
 For more information, see:
 
-- [Solution pricing](solution-overview.md#solution-pricing)
+- [Solution pricing](sap-applications-overview.md#solution-pricing)
 - [Plan costs and understand Microsoft Sentinel pricing and billing](../billing.md)
 - [Reduce costs for Microsoft Sentinel](../billing-reduce-costs.md)
 - [Manage and monitor costs for Microsoft Sentinel](../billing-monitor-costs.md)

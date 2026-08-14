@@ -4,11 +4,11 @@ description: The Microsoft Sentinel UEBA behaviors layer translates security tel
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: mshechter
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.service: microsoft-sentinel
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #Customer intent: As a security analyst, I want to use the UEBA behaviors layer to translate raw security telemetry into human-readable patterns with MITRE ATT&CK context for faster threat detection and investigation.
 ---
 
@@ -25,7 +25,7 @@ Unlike alerts or anomalies, behaviors don’t necessarily indicate risk - they c
 
 The UEBA behaviors layer enables faster threat detection, investigation, and response across your security operations, without requiring deep familiarity with every log source. 
 
-This article explains how the UEBA behaviors layer works, how to enable the behaviors layer, and how to use behaviors to enhance security operations.  
+This section explains how the UEBA behaviors layer works, how to enable the behaviors layer, and how to use behaviors to enhance security operations.  
 
 Watch the [UEBA behaviors webinar](https://www.youtube.com/watch?v=SqbxmGdMP7c) for a full overview and demo of the UEBA behaviors layer.
 
@@ -53,7 +53,7 @@ When you [enable the UEBA behaviors layer](#enable-the-ueba-behaviors-layer), Mi
 | **Aggregated behaviors** | Detect volume-based patterns by collecting related events over time windows | <ul><li>User accessed 50+ resources in 1 hour</li><li>Login attempts from 10+ different IP addresses</li></ul> | Convert high-volume logs into actionable security insights. This behavior type excels at identifying unusual activity levels. |
 | **Sequenced behaviors** | Identify multi-step patterns or complex attack chains that aren't obvious when you look at individual events | Access key created > used from new IP > privileged API calls | Detect sophisticated attack sequences and multi-stage threats. |
 
-The UEBA behaviors layer summarizes behaviors at tailored time intervals specific to each behavior's logic, creating behavior records immediately when it identifies patterns or when the time windows close.
+The UEBA behaviors layer summarizes behaviors at tailored time intervals specific to each behavior's logic, creating behavior records immediately when the UEBA behaviors layer identifies patterns or when the time windows close.
 
 Each behavior record includes:
 
@@ -64,7 +64,7 @@ Each behavior record includes:
 
 ### The behaviors abstraction layer
 
-This diagram illustrates how the UEBA behaviors layer transforms raw logs into structured behavior records that enhance security operations:
+The following data-flow diagram shows how the UEBA behaviors layer transforms raw logs into structured behavior records that enhance security operations:
 
 :::image type="content" source="media/entity-behaviors-layer/entity-behaviors-data-flow.svg" alt-text="Diagram that shows how the UEBA behaviors layer transforms raw logs into structured behavior records that enhance security operations." lightbox="media/entity-behaviors-layer/entity-behaviors-data-flow.svg" ::: 
 
@@ -146,7 +146,7 @@ Behaviors allow hunters to search on TTPs and activity summaries, rather than wr
     | project TimeGenerated, Title, Description, TableName
     ```
 
-  - Specific user — retrieve all behaviors associated with a particular user over the last 7 days to build a complete activity timeline:
+  - Specific user — join behavior records with entity data to list behaviors for a particular user over the last 7 days, showing each behavior's timestamp, title, description, and category:
 
     ```kusto
     // Find all behaviors for a specific user over last 7 days
@@ -215,7 +215,7 @@ The UEBA behaviors layer currently focuses on these non-Microsoft data sources t
 To use the UEBA behaviors layer, you need:
 
 - A Microsoft Sentinel workspace that's onboarded to the Defender portal.
-- Ingest one or more of the [supported data sources](#supported-data-sources-and-behaviors) into the Analytics tier. For more information about data tiers, see [Manage data tiers and retention in Microsoft Sentinel](../sentinel/manage-data-overview.md#how-data-tiers-and-retention-work).
+- Connect and actively send logs from at least one [supported data source](#supported-data-sources-and-behaviors) into the Analytics tier. The UEBA behaviors layer only generates behaviors when supported data sources are connected and actively sending logs. For more information about data tiers, see [Manage data tiers and retention in Microsoft Sentinel](../sentinel/manage-data-overview.md#how-data-tiers-and-retention-work).
 
 ## Permissions required 
 
@@ -302,7 +302,7 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
 
   Use the `BehaviorId` field to join `BehaviorInfo` with `BehaviorEntities`. 
 
-  The following query correlates recent behavior records with their associated entities, so you can see each behavior alongside the users, hosts, or IP addresses involved:
+  The following query joins `BehaviorInfo` with `BehaviorEntities` to enrich behavior records from the last day with related entity details, so you can see each behavior alongside the users, hosts, or IP addresses involved during an investigation:
 
   ```kusto
   BehaviorInfo

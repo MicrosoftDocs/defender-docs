@@ -1,11 +1,13 @@
 ---
-title: Migrate Splunk SOAR automation to Microsoft Sentinel
+title: Migrate Splunk SOAR Automation to Microsoft Sentinel
 description: Learn how to identify SOAR use cases, and how to migrate your Splunk SOAR automation to Microsoft Sentinel.
 ms.author: monaberdugo
 author: mberdugo
 ms.reviewer: sshuster
 ms.topic: how-to
-ms.date: 09/11/2024
+ms.date: 07/01/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 #Customer intent: As a security engineer, I want to migrate my Splunk SOAR automation to Microsoft Sentinel so that I can leverage Sentinel's advanced orchestration and automation capabilities for incident response.
 ---
 
@@ -14,17 +16,19 @@ ms.date: 09/11/2024
 Microsoft Sentinel provides Security Orchestration, Automation, and Response (SOAR) capabilities with automation rules and playbooks. Automation rules facilitate simple incident handling and response, while playbooks run more complex sequences of actions to respond and remediate threats. This article discusses how to identify SOAR use cases, and how to migrate your Splunk SOAR automation to Microsoft Sentinel automation rules and playbooks.
 
 For more information about the differences between automation rules and playbooks, see the following articles:
+
 - [Automate threat response with automation rules](automate-incident-handling-with-automation-rules.md)
 - [Automate threat response with playbooks](automation/automate-responses-with-playbooks.md)
 
 ## Identify SOAR use cases
 
 Here's what you need to think about when migrating SOAR use cases from Splunk.
-- **Use case quality**. Choose automation use cases based on procedures that are clearly defined, with minimal variation, and a low false-positive rate.
-- **Manual intervention**. Automated responses can have wide ranging effects. High impact automations should have human input to confirm high impact actions before they're taken.
-- **Binary criteria**. To increase response success, decision points within an automated workflow should be as limited as possible, with binary criteria. When there are only two variables in the automated decision making, the need for human intervention is reduced and outcome predictability is enhanced.
-- **Accurate alerts or data**. Response actions are dependent on the accuracy of signals such as alerts. Alerts and enrichment sources should be reliable. Microsoft Sentinel resources such as watchlists and threat intelligence with high confidence ratings enhance reliability.
-- **Analyst role**. While automation is great, reserve the most complex tasks for analysts. Provide them with the opportunity for input into workflows that require validation. In short, response automation should augment and extend analyst capabilities. 
+
+- **Use case quality**: Choose automation use cases based on procedures that are clearly defined, with minimal variation, and a low false-positive rate.
+- **Manual intervention**: Automated responses can have wide ranging effects. High impact automations should have human input to confirm high impact actions before they're taken.
+- **Binary criteria**: To increase response success, decision points within an automated workflow should be as limited as possible, with binary criteria. When there are only two variables in the automated decision making, the need for human intervention is reduced and outcome predictability is enhanced.
+- **Accurate alerts or data**: Response actions are dependent on the accuracy of signals such as alerts. Alerts and enrichment sources should be reliable. Microsoft Sentinel resources such as watchlists and threat intelligence with high confidence ratings enhance reliability.
+- **Analyst role**: While automation is great, reserve the most complex tasks for analysts. Provide them with the opportunity for input into workflows that require validation. In short, response automation should augment and extend analyst capabilities.
 
 ## Migrate SOAR workflow
 
@@ -40,7 +44,7 @@ This section shows how key Splunk SOAR concepts translate to Microsoft Sentinel 
 |4 |Create playbooks. |Azure Logic Apps uses several connectors to orchestrate activities across Microsoft Sentinel, Azure, third party and hybrid cloud environments. |
 |4 |Create workbooks. |Microsoft Sentinel executes playbooks either in isolation or as part of an ordered automation rule. You can also execute playbooks manually against alerts or incidents, according to a predefined Security Operations Center (SOC) procedure. |
 
-## Map SOAR components 
+## Map SOAR components
 
 Review which Microsoft Sentinel or Azure Logic Apps features map to the main Splunk SOAR components.
 
@@ -48,24 +52,25 @@ Review which Microsoft Sentinel or Azure Logic Apps features map to the main Spl
 |---------|---------|
 |Playbook editor |[Logic App designer](/azure/logic-apps/logic-apps-overview) |
 |Trigger     |[Trigger](/azure/logic-apps/logic-apps-overview)         |
-|• Connectors<br>• App<br>• Automation broker |• [Connector](tutorial-respond-threats-playbook.md)<br>• [Hybrid Runbook Worker](/azure/automation/automation-hybrid-runbook-worker) |
+|- Connectors<br>- App<br>- Automation broker |- [Connector](tutorial-respond-threats-playbook.md)<br>- [Hybrid Runbook Worker](/azure/automation/automation-hybrid-runbook-worker) |
 |Action blocks |[Action](/azure/logic-apps/logic-apps-overview) |
 |Connectivity broker |[Hybrid Runbook Worker](/azure/automation/automation-hybrid-runbook-worker) |
-|Community |• [Automation > Templates tab](use-playbook-templates.md)<br>• [Content hub catalog](sentinel-solutions-catalog.md)<br>• [GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/Block-OnPremADUser) | 
+|Community |- [Automation > Templates tab](use-playbook-templates.md)<br>- [Content hub catalog](sentinel-solutions-catalog.md)<br>- [GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/Block-OnPremADUser) | 
 |Decision |[Conditional control](/azure/logic-apps/logic-apps-control-flow-conditional-statement) |
 |Code |[Azure Function connector](/azure/logic-apps/logic-apps-azure-functions) |
 |Prompt |[Send approval email](/azure/logic-apps/tutorial-process-mailing-list-subscriptions-workflow) |
 |Format |[Data operations](/azure/logic-apps/logic-apps-perform-data-operations) |
 |Input playbooks |Obtain variable inputs from results of previously executed steps or explicitly declared [variables](/azure/logic-apps/logic-apps-create-variables-store-values) |
-|Set parameters with Utility block API utility |Manage Incidents with the [API](/rest/api/securityinsights/stable/incidents/get) |
+|Set parameters with Utility block API utility |Manage Incidents with the [Microsoft Sentinel Incidents REST API](/rest/api/securityinsights/stable/incidents/get) |
 
 ## Operationalize playbooks and automation rules in Microsoft Sentinel
 
-Most of the playbooks that you use with Microsoft Sentinel are available in either the [Automation > Templates tab](use-playbook-templates.md), the [Content hub catalog](sentinel-solutions-catalog.md), or [GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/Block-OnPremADUser). In some cases, however, you might need to create playbooks from scratch or from existing templates.
+Most of the playbooks that you use with Microsoft Sentinel are available in either the [Automation > Templates tab](use-playbook-templates.md), the [Content hub catalog](sentinel-solutions-catalog.md), or [Microsoft Sentinel playbook samples on GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/Block-OnPremADUser). In some cases, however, you might need to create playbooks from scratch or from existing templates.
 
 You typically build your custom logic app using the Azure Logic App Designer feature. The logic apps code is based on [Azure Resource Manager (ARM) templates](/azure/azure-resource-manager/templates/overview), which facilitate development, deployment and portability of Azure Logic Apps across multiple environments. To convert your custom playbook into a portable ARM template, you can use the [ARM template generator](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/export-microsoft-sentinel-playbooks-or-azure-logic-apps-with/ba-p/3275898).
 
-Use these resources for cases where you need to build your own playbooks either from scratch or from existing templates.
+Use the following articles and tutorials for cases where you need to build your own playbooks either from scratch or from existing templates:
+
 - [Automate incident handling in Microsoft Sentinel](automate-incident-handling-with-automation-rules.md)
 - [Automate threat response with playbooks in Microsoft Sentinel](automate-responses-with-playbooks.md)
 - [Tutorial: Use playbooks with automation rules in Microsoft Sentinel](tutorial-respond-threats-playbook.md)
@@ -81,9 +86,7 @@ Here are best practices you should take into account after your SOAR migration:
 - Monitor the performance of your playbooks using the [Playbooks health monitoring workbook](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-monitoring-your-logic-apps-playbooks-in-azure/ba-p/1873211).
 - Use managed identities and service principals: Authenticate against various Azure services within your Logic Apps, store the secrets in Azure Key Vault, and obscure the flow execution output. We also recommend that you  [monitor the activities of these service principals](https://techcommunity.microsoft.com/t5/azure-sentinel/non-interactive-logins-minimizing-the-blind-spot/ba-p/2287932).
 
-## Next steps
-
-In this article, you learned how to map your SOAR automation from Splunk to Microsoft Sentinel. 
+## Next step
 
 > [!div class="nextstepaction"]
 > [Export your historical data](migration-splunk-historical-data.md)

@@ -2,8 +2,8 @@
 title: Exempt resources from recommendations
 description: Create exemption rules to remove resources or recommendations from secure score impact in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.custom: ignite-2023
-ms.date: 06/02/2026
+ms.custom: ignite-2023, msecd-doc-authoring-1013
+ms.date: 07/03/2026
 #customer intent: As a security administrator, I want to exempt resources and recommendations when appropriate so I can keep secure score signals accurate.
 ai-usage: ai-assisted
 ---
@@ -81,7 +81,7 @@ You need the following role-based access control (RBAC) actions:
 
 - Kusto Query Language (KQL)-based recommendations use standard assignments and don't use Azure Policy exemption events in the Activity Logs. To determine whether a recommendation is KQL-based or policy-based, open the recommendation in the portal and check the **Assessment key** field. KQL-based recommendations show a standard assessment key format and don't have an associated Azure Policy definition link. Policy-based recommendations display a direct link to the underlying policy definition.
 
-- When you create an exemption from the Defender for Cloud portal, Defender for Cloud identifies all initiatives that contain the recommendation and creates the exemption across all of them automatically. If you create the exemption through the Azure Policy API instead, you must create a separate exemption for each initiative manually. For more information, see [the exemptions FAQ](faq-general.yml).
+- When you create an exemption from the Defender for Cloud portal, Defender for Cloud identifies all initiatives that contain the recommendation and creates the exemption across all of them automatically. If you create the exemption through the Azure Policy API instead, you must create a separate exemption for each initiative manually. For more information, see [Exemptions FAQ](faq-general.yml).
 
 - When you assign a new initiative that contains a recommendation with an existing exemption, the exemption doesn't carry over to the new initiative. Create a new exemption for the recommendation under the newly assigned initiative.
 

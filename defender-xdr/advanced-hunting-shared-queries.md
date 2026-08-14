@@ -14,7 +14,7 @@ ms.custom:
 - cx-ti
 - cx-ah
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -25,9 +25,9 @@ ai-usage: ai-assisted
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-[Advanced hunting](advanced-hunting-overview.md) queries can be shared with users in your organization. You can also save queries that only you can access. Community queries shared on GitHub are available too. These saved queries help you quickly start hunting for threats without writing queries from scratch.
+[Advanced hunting](advanced-hunting-overview.md) queries can be shared with users in your organization. You can also save queries that only you can access. Community queries on GitHub are available too. With saved queries, you can quickly start hunting for threats. You don't need to write queries from scratch.
 
-The **Queries** tab in advanced hunting has drop-down menus for **Shared queries**, **My queries**, and **Community queries**. Select an arrow to expand a menu.
+The **Queries** tab in advanced hunting lists **Shared queries**, **My queries**, and **Community queries**. Select an arrow to expand a group.
 
 :::image type="content" source="media/advanced-hunting-shared-queries/advanced-hunting-shared-queries-1.png" alt-text="Shared queries, My queries, and Community queries in the Microsoft Defender portal" lightbox="media/advanced-hunting-shared-queries/advanced-hunting-shared-queries-1.png":::
 
@@ -50,9 +50,9 @@ You can save a new or existing query so that it is only accessible to you or sha
 
 ## Delete or rename a query
 
-To rename a saved query or delete one you no longer need, follow these steps:
+You can rename or delete a saved query at any time.
 
-1. Find the query you want to change. Select the three dots to its right.
+1. Find the query. Select the three dots next to it.
 
     :::image type="content" source="media/advanced-hunting-shared-queries/advanced-hunting-del-save-query.png" alt-text="Rename or delete a query in the Advanced Hunting page in the Microsoft Defender portal" lightbox="media/advanced-hunting-shared-queries/advanced-hunting-del-save-query.png":::
 
@@ -67,18 +67,19 @@ To generate a link that opens your query directly in the advanced hunting query 
 
 ## Access community queries in the GitHub repo
 
-Microsoft security researchers share advanced hunting queries in a [public GitHub repository](https://github.com/Azure/Azure-Sentinel/tree/master/Hunting%20Queries/Microsoft%20365%20Defender). All contributions are reviewed before they're published. To contribute, [join GitHub for free](https://github.com/).
+Microsoft security researchers share hunting queries in a [public GitHub repository](https://github.com/Azure/Azure-Sentinel/tree/master/Hunting%20Queries/Microsoft%20365%20Defender). All queries are reviewed before they're published. To contribute, [join GitHub for free](https://github.com/).
 
-You can easily find these queries in the **Community queries** drop-down menu as well.
+You can also find these queries in the **Community queries** list.
 
 :::image type="content" source="media/advanced-hunting-shared-queries/advanced-hunting-shared-queries-2.png" alt-text="Community queries organized by folder in the Microsoft Defender portal" lightbox="media/advanced-hunting-shared-queries/advanced-hunting-shared-queries-2.png":::
 
 Community queries are grouped into folders such as *Campaigns*, *Collection*, and *Defense evasion*. Each query includes in-line comments with more details.
 
 > [!TIP]
-> Microsoft security researchers also provide advanced hunting queries that you can use to locate activities and indicators associated with emerging threats. These queries are provided as part of the [threat analytics](/windows/security/threat-protection/microsoft-defender-atp/threat-analytics) reports in the Defender portal.
+> Microsoft security researchers also share queries that help you find activity linked to emerging threats. Look for these queries in the [threat analytics](/windows/security/threat-protection/microsoft-defender-atp/threat-analytics) reports in the Defender portal.
 
 <a name="related-topics"></a>
+
 ## Related content
 
 - [Advanced hunting overview](advanced-hunting-overview.md)

@@ -1,23 +1,25 @@
 ---
 title: Protect your Dropbox environment | Microsoft Defender for Cloud Apps
 description: Connect Dropbox to Microsoft Defender for Cloud Apps by using the API connector to monitor user activity, detect threats and external sharing risks, and enable automated remediation controls.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # How Defender for Cloud Apps helps protect your Dropbox environment
 
-As a cloud file storage and collaboration tool, Dropbox enables your users to share their documents across your organization and partners in a streamlined and efficient way. Using Dropbox may expose your sensitive data not only internally, but also to external collaborators, or even worse make it publicly available via a shared link. These data exposure incidents can be caused by malicious actors or unaware employees.
+Dropbox is a cloud storage and collaboration tool that lets users share documents across your organization and with partners. However, Dropbox can expose sensitive data to external collaborators or make it publicly available through a shared link. Malicious actors or unaware employees can cause these incidents.
 
-Connecting Dropbox to Defender for Cloud Apps gives you improved insights into your users' activities, provide threat detection using machine learning based anomaly detections, information protection detections such as detecting external information sharing, and enabling automated remediation controls.
+Connecting Dropbox to Defender for Cloud Apps gives you better insight into your users' activities. It provides threat detection through machine learning anomaly detections and information protection detections, such as detecting external information sharing. You can also enable automated remediation controls.
 
 > [!NOTE]
 > Dropbox changed the way shared folders are stored, moving them to Team Spaces. The Defender for Cloud Apps file scan will be updated in due course to include Team Spaces.
 
 ## Main threats
+
+Dropbox environments face the following main threats:
 
 - Compromised accounts and insider threats
 - Data leakage
@@ -27,6 +29,8 @@ Connecting Dropbox to Defender for Cloud Apps gives you improved insights into y
 - Unmanaged bring your own device (BYOD)
 
 ## How Defender for Cloud Apps helps to protect your environment
+
+Use the following best practices to protect your Dropbox environment with Defender for Cloud Apps:
 
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 - [Discover, classify, label, and protect regulated and sensitive data stored in the cloud](best-practices.md#discover-classify-label-and-protect-regulated-and-sensitive-data-stored-in-the-cloud)
@@ -51,14 +55,14 @@ For more information about creating policies, see [Create a policy in Defender f
 
 ## Automate governance controls
 
-In addition to monitoring for potential threats, you can apply and automate the following Dropbox governance actions to remediate detected threats:
+You can also apply and automate Dropbox governance actions to fix detected threats:
 
 | Type | Action |
 | ---- | ---- |
 | Data governance | - Remove direct shared link<br />- Send DLP violation digest to file owners<br />- Trash file |
 | User governance | - Notify user on alert (via Microsoft Entra ID)<br /> - Require user to sign in again (via Microsoft Entra ID)<br /> - Suspend user (via Microsoft Entra ID) |
 
-For more information about remediating threats from apps, see [Governing connected apps](governance-actions.md).
+To learn more about fixing threats from apps, see [Governing connected apps](governance-actions.md).
 
 ## Protect Dropbox in real time
 
@@ -76,9 +80,9 @@ For more information, see:
 
 ## Connect Dropbox to Microsoft Defender for Cloud Apps
 
-Use the following instructions to connect Microsoft Defender for Cloud Apps to your existing Dropbox account using the connector APIs. This connection gives you visibility into and control over Dropbox use.
+Use the following instructions to connect Microsoft Defender for Cloud Apps to your existing Dropbox account using the connector APIs. Connector APIs let Defender for Cloud Apps connect directly to supported apps for monitoring and governance. This connection gives you visibility into and control over Dropbox use.
 
-Dropbox enables access to files from shared links without signing in, Defender for Cloud Apps registers these users as Unauthenticated users. If you see unauthenticated Dropbox users, it might indicate users who aren't from your organization, or they might be recognized users from within your organization who didn't sign in.
+Dropbox enables access to files from shared links without signing in. Defender for Cloud Apps registers users who access files without signing in as Unauthenticated users. If you see unauthenticated Dropbox users, it might indicate users who aren't from your organization, or they might be recognized users from within your organization who didn't sign in.
 
 **To connect Dropbox to Defender for Cloud Apps**
 
