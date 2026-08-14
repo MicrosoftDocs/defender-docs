@@ -16,7 +16,7 @@ ms.custom: msecd-doc-authoring-1016
 #Customer intent: As a security analyst, I want to use federated data sources so that I can query external data alongside my Sentinel security data for comprehensive investigations.
 ---
 
-# Use federated data sources in Microsoft Sentinel
+# Use federated data sources in Microsoft Sentinel (Preview)
 
 After setting up federated data connectors, you can access your federated tables through multiple interfaces in Microsoft Sentinel. Federated tables are used in the same way as other data lake tables. This article explains how to view federated tables, query them using KQL (Kusto Query Language), and work with them in Jupyter notebooks.
 
