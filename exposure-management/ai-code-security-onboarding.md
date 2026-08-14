@@ -2,7 +2,7 @@
 title: Getting Started with Codename MDASH
 description: Onboard agentic code security in the Microsoft Defender portal by accepting terms, connecting your Microsoft Foundry resource, and completing agentic code scanning setup.
 ms.topic: how-to
-ms.date: 05/26/2026
+ms.date: 08/14/2026
 ai-usage: ai-assisted
 ---
 
@@ -29,7 +29,7 @@ To complete this setup, you need:
 
 ## Assign permissions to users using Defender RBAC
 
-Use Microsoft Defender unified role-based access control (RBAC) to grant users the agentic code security permissions they need.
+Use Microsoft Defender unified role-based access control (RBAC) to grant developers and security analysts the agentic code security permissions required to run scans, upload results, and review or manage findings. In this setp, you create a custom, feature-scoped role in Microsoft Defender for these specific capabilities, and then assign the role to the users who need access.
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 1. In the navigation pane, select **System** > **Permissions**.
@@ -41,6 +41,11 @@ Use Microsoft Defender unified role-based access control (RBAC) to grant users t
    - **Upload results (Manage)** — required to upload CLI scan results to Defender.
    - **Scan results (Read)** — required to view findings in the Defender portal and the initiative.
    - **Scan results (Manage)** — required to triage, dismiss, or otherwise manage findings.
+
+    > [!NOTE]
+    > A custom role with only **Scan results (Read)** doesn't grant users access to the Defender portal. To allow users access to the Defender portal, also select **Security Posture** > **Exposure Management (Read)** permission.
+
+
 1. Review the permissions, and select **Apply**.
 1. Select **Next** to go to **Assign users and data sources**. Assign the users who should receive this role.
 1. Select **Add assignment**, and configure users, groups, and data sources.
