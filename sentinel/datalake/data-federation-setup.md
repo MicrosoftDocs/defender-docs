@@ -16,7 +16,7 @@ ms.custom: msecd-doc-authoring-1016
 #Customer intent: As a security administrator, I want to set up federated data connectors so that I can query external data sources from the Microsoft Sentinel data lake.
 ---
 
-# Set up federated data connectors in Microsoft Sentinel data lake
+# Set up federated data connectors in Microsoft Sentinel data lake (Preview)
 
 This article explains how to configure federated data connectors to enable querying of external data sources from the Microsoft Sentinel data lake. You can federate with Azure Databricks, Azure Data Lake Storage (ADLS) Gen 2, and Microsoft Fabric. The article walks through creating a service principal, storing credentials in Azure Key Vault, and setting up a connector instance for each supported data source. Use this guide if you're a security administrator who needs to bring external data into Microsoft Sentinel for investigation and analysis.
 
