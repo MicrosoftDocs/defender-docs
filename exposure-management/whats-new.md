@@ -26,9 +26,9 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 
 ### Codename MDASH - Cancel scan
 
-You can now cancel queued or running scans from the Microsoft Defender portal, in addition to the existing Defender CLI option. 
+Scan cancellation, previously available only in Defender CLI, is now also available in the Microsoft Defender portal. 
 
-From the **Scans** tab, open the scan details page and select **Cancel scan**.
+You can cancel queued or running scans from the scan details page in the **Scans** tab.
 
 For more information, see [Cancel scan](mdash-initiative.md#cancel-a-scan).
 
