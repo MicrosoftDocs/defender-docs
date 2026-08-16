@@ -22,6 +22,16 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 >
 > `https://aka.ms/msem/rss`
 
+## August 2026
+
+### Codename MDASH - Cancel scan
+
+You can now cancel queued or running scans from the Microsoft Defender portal, in addition to the existing Defender CLI option. 
+
+From the **Scans** tab, open the scan details page and select **Cancel scan**.
+
+For more information, see [Cancel scan](mdash-initiative.md#cancel-a-scan).
+
 ### Codename MDASH - Azure DevOps connector preview
 
 The Azure DevOps connector is now available in preview for Codename MDASH - Agentic code scanner. Security teams can connect Azure DevOps organizations from the Microsoft Defender portal, onboard repositories, and trigger remote on-demand agentic code scans for the onboarded repositories.
