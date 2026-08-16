@@ -3,7 +3,7 @@ title: Set up DMARC to validate email in Microsoft 365
 author: chrisda
 ms.author: chrisda
 ms.topic: how-to
-ms.date: 07/03/2026
+ms.date: 08/16/2026
 ms.custom: msecd-doc-authoring-1016
 ms.localizationpriority: high
 ms.assetid: 4a05898c-b8e4-4eab-bd70-ee912e349737
@@ -79,22 +79,22 @@ The rest of this article covers DMARC TXT record creation, gradual rollout for c
 
 ## Syntax for DMARC TXT records
 
-DMARC TXT records are exhaustively described in [RFC 7489](https://datatracker.ietf.org/doc/html/rfc7489).
+DMARC TXT records are exhaustively described in [RFC 9989](https://datatracker.ietf.org/doc/html/rfc9989), which obsoletes RFC 7489.
 
 The basic syntax of the DMARC TXT record for a domain in Microsoft 365 is:
 
 **Hostname**: `_dmarc`<br/>
-**TXT value**: `v=DMARC1; <DMARC policy>; <Percentage of DMARC failed mail subject to DMARC policy>; <DMARC reports>`
+**TXT value**: `v=DMARC1; <DMARC policy>; <DMARC reports>`
 
 or
 
 **Hostname**: `_dmarc`<br/>
-**TXT value**: `v=DMARC1; p=<reject | quarantine | none>; pct=<0-100>; rua=mailto:<DMARCAggregateReportURI>; ruf=mailto:<DMARCForensicReportURI>`
+**TXT value**: `v=DMARC1; p=<reject | quarantine | none>; rua=mailto:<DMARCAggregateReportURI>; ruf=mailto:<DMARCForensicReportURI>`
 
 For example:
 
 **Hostname**: `_dmarc`<br/>
-**TXT value**: `v=DMARC1; p=reject; pct=100; rua=mailto:rua@contoso.com; ruf=mailto:ruf@contoso.com`
+**TXT value**: `v=DMARC1; p=reject; rua=mailto:rua@contoso.com; ruf=mailto:ruf@contoso.com`
 
 - The hostname value `_dmarc` is required.
 
@@ -108,12 +108,12 @@ For example:
   > [!TIP]
   > Outbound mail from domains in Microsoft 365 that fail DMARC checks by the destination email service is routed through the [High-risk delivery pool for outbound messages](outbound-spam-high-risk-delivery-pool-about.md) if the DMARC policy for the domain is `p=reject` or `p=quarantine`. There's no override for this behavior.
 
-- **Percentage of failed DMARC mail subject to DMARC policy**: Tells the destination email system how many messages that fail DMARC (percentage) get the DMARC policy applied to them. For example, `pct=100` means all messages that fail DMARC get the DMARC policy applied to them. You use values less than 100 for [testing and tuning of the DMARC policy](#set-up-dmarc-for-active-custom-domains-in-microsoft-365). If you don't use `pct=`, the default value is `pct=100`.
+- **DMARC policy testing**: RFC 9989 removed the legacy `pct` tag because operational experience showed that values other than 0 or 100 weren't applied consistently. Don't use percentage-based policy rollout. Instead, start with `p=none`, review aggregate reports, remediate legitimate mail streams, and then move low-volume domains through `p=quarantine` and `p=reject`. RFC 9989 also defines the optional `t=y` testing tag, which requests policy handling one level lower (`p=quarantine` as `p=none`, or `p=reject` as `p=quarantine`). Receivers that haven't implemented RFC 9989 might ignore the tag, so don't rely on it to prevent delivery impact.
 
 - **DMARC reports**:
   - **DMARC Aggregate report URI**: The `rua=mailto:` value identifies where to send the DMARC Aggregate report. The Aggregate report has the following properties:
     - The email messages that contain the Aggregate report are typically sent once per day (the report contains the DMARC results from the previous day). The Subject line contains the destination domain that sent the report (Submitter) and the source domain for the DMARC results (Report Domain).
-    - The DMARC data is in an XML email attachment that's likely GZIP compressed. The XML schema is defined in [Appendix C of RFC 7489](https://datatracker.ietf.org/doc/html/rfc7489#appendix-C). The report contains the following information:
+    - The DMARC data is in an XML email attachment that's likely GZIP compressed. The current XML schema is defined in [Appendix A of RFC 9990](https://datatracker.ietf.org/doc/html/rfc9990#appendix-A). The report contains the following information:
       - The IP addresses of servers or services that send mail using your domain.
       - Whether the servers or services pass or fail DMARC authentication.
       - The actions that DMARC takes on mail that fails DMARC authentication (based on the DMARC policy).
@@ -176,7 +176,7 @@ Your DMARC roll-out plan should use the following steps. Start with a domain or 
    **DMARC TXT record for marketing.contoso.com**:
 
    **Hostname**: `_dmarc`<br/>
-   **TXT value**: `v=DMARC1; p=none; pct=100; rua=mailto:rua@marketing.contoso.com; ruf=mailto:ruf@marketing.contoso.com`
+   **TXT value**: `v=DMARC1; p=none; rua=mailto:rua@marketing.contoso.com; ruf=mailto:ruf@marketing.contoso.com`
 
    The DMARC Aggregate and DMARC Forensic reports give the numbers and sources of messages that pass and fail DMARC checks. You can see how much of your legitimate mail traffic is or isn't covered by DMARC, and troubleshoot any problems. You can also see how many fraudulent messages are being sent, and where they're sent from.
 
@@ -187,15 +187,9 @@ Your DMARC roll-out plan should use the following steps. Start with a domain or 
    **DMARC TXT record for marketing.contoso.com**:
 
    **Hostname**: `_dmarc`<br/>
-   **TXT value**: `v=DMARC1; p=quarantine; pct=100; rua=mailto:rua@marketing.contoso.com; ruf=mailto:ruf@marketing.contoso.com`
+   **TXT value**: `v=DMARC1; p=quarantine; rua=mailto:rua@marketing.contoso.com; ruf=mailto:ruf@marketing.contoso.com`
 
-   You can also use the `pct=` value to gradually affect more messages and verify the results. For example, you can move in the following increments:
-
-   - `pct=10`
-   - `pct=25`
-   - `pct=50`
-   - `pct=75`
-   - `pct=100`
+   RFC 9989 removed percentage-based policy rollout. Reduce risk by starting with a low-volume domain, reviewing aggregate reports, and fixing all legitimate sources before you publish `p=quarantine`.
 
 3. Increase the DMARC policy to `p=reject` and monitor the results for the domain.
 
@@ -204,9 +198,9 @@ Your DMARC roll-out plan should use the following steps. Start with a domain or 
    **DMARC TXT record for marketing.contoso.com**:
 
    **Hostname**: `_dmarc`<br/>
-   **TXT value**: `v=DMARC1; p=reject; pct=100; rua=mailto:rua@marketing.contoso.com; ruf=mailto:ruf@marketing.contoso.com`
+   **TXT value**: `v=DMARC1; p=reject; rua=mailto:rua@marketing.contoso.com; ruf=mailto:ruf@marketing.contoso.com`
 
-   You can also use the `pct=` value to gradually affect more messages and verify the results.
+   Continue to review aggregate reports after the change. Move to `p=reject` only after results under `p=quarantine` show that legitimate sources consistently pass DMARC.
 
 4. Repeat the previous three steps for the remaining subdomains of increasing volume and/or complexity, saving the parent domain for last.
 
@@ -225,7 +219,7 @@ Your DMARC roll-out plan should use the following steps. Start with a domain or 
    **Hostname**: `_dmarc`<br/>
    **TXT value**: `v=DMARC1; p=reject;`
 
-   - The `pct=` value isn't included, because the default value is `pct=100`.
+   - The retired `pct=` value isn't included. The policy applies to all messages that fail DMARC.
    - The `rua=mailto:` and `ruf=mailto:` values are arguably not needed in this scenario, because no valid mail should ever come from senders in the domain.
 
 2. If you don't use the \*.onmicrosoft.com domain to send mail, you also need to [add the DMARC TXT record for your \*.onmicrosoft.com domain](#use-the-microsoft-365-admin-center-to-add-dmarc-txt-records-for-onmicrosoftcom-domains-in-microsoft-365).
@@ -269,7 +263,7 @@ The `aspf` (SPF) and `adkim` (DKIM) tags in the DMARC TXT record control how str
 
 ```text
 Hostname: _dmarc
-TXT value: v=DMARC1; p=reject; aspf=s; adkim=r; pct=100; rua=mailto:dmarc@contoso.com
+TXT value: v=DMARC1; p=reject; aspf=s; adkim=r; rua=mailto:dmarc@contoso.com
 ```
 
 - **Relaxed** (`r`, default): Organizational domains (root domains) must match. Subdomains are allowed.
@@ -376,8 +370,8 @@ In the **Authentication-Results** header, you might see these DMARC action value
 |`action=none`|Sender published `p=none`; no action taken|
 |`action=quarantine`|Sender published `p=quarantine`; message quarantined or junked|
 |`action=oreject`|Sender published `p=reject`; message rejected ("o" = origin)|
-|`action=pct.quarantine`|Sender published `p=quarantine` with `pct=` less than 100; this message was in the sampled percentage|
-|`action=pct.reject`|Sender published `p=reject` with `pct=` less than 100; this message was in the sampled percentage|
+|`action=pct.quarantine`|Legacy sender record used the retired `pct=` tag with `p=quarantine`; Microsoft 365 applied the sampled policy action|
+|`action=pct.reject`|Legacy sender record used the retired `pct=` tag with `p=reject`; Microsoft 365 applied the sampled policy action|
 
 ### DMARC report interpretation
 
@@ -389,7 +383,8 @@ The following example shows the XML structure of an aggregate report:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<feedback>
+<feedback xmlns="urn:ietf:params:xml:ns:dmarc-2.0">
+  <version>1.0</version>
   <report_metadata>
     <org_name>microsoft.com</org_name>           <!-- Reporting organization -->
     <email>dmarceng@microsoft.com</email>
@@ -402,11 +397,12 @@ The following example shows the XML structure of an aggregate report:
 
   <policy_published>
     <domain>contoso.com</domain>                  <!-- Your domain -->
-    <adkim>r</adkim>                              <!-- DKIM alignment mode -->
-    <aspf>r</aspf>                                <!-- SPF alignment mode -->
+    <discovery_method>treewalk</discovery_method>
     <p>reject</p>                                 <!-- Domain policy -->
     <sp>quarantine</sp>                           <!-- Subdomain policy -->
-    <pct>100</pct>                                <!-- Percentage -->
+    <adkim>r</adkim>                              <!-- DKIM alignment mode -->
+    <aspf>r</aspf>                                <!-- SPF alignment mode -->
+    <testing>n</testing>                          <!-- DMARC testing mode -->
   </policy_published>
 
   <record>
