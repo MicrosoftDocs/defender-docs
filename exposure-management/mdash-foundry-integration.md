@@ -54,9 +54,9 @@ Deploy the models required for the agentic code security integration.
      Deploy each model only once.
 
    - **MAI-Augmented profile (Preview)**:  To use this profile, deploy the three models listed previously and:
-   
-   - `MAI-Cyber-1-Flash`
-            
+      
+    - `MAI-Cyber-1-Flash`
+        
 > [!IMPORTANT]
 > A predefined list of model deployments is required for the integration to work. You must deploy all three models: `gpt-5.4`, `gpt-5.3-codex`, and `gpt-5.4-mini`.
 > > If you use **custom settings** when deploying the required models, avoid selecting **DataZoneBatch**, **GlobalBatch**, or **DeveloperTier**.
