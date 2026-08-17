@@ -33,8 +33,19 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| August 17, 2026 | Upcoming deprecation | [Classic Defender for SQL APIs retirement](#classic-defender-for-sql-apis-retirement) |
 | August 6, 2026 | Public preview | [On-demand malware scanning now supports scanning specific blobs, files, containers, and file shares](#on-demand-malware-scanning-now-supports-scanning-specific-blobs-files-containers-and-file-shares) |
 | August 6, 2026 | CIEM Updates | [Breaking change: Unused actions no longer included in AWS and GCP overprovisioned identity assessments]()|
+
+### Classic Defender for SQL APIs retirement
+
+August 17, 2026
+
+The classic Defender for SQL APIs for Vulnerability Assessment and Advanced Threat Protection will be retired on **August 16, 2027**.
+
+If you use these APIs, migrate to the supported configuration model and update any dependent scripts or automation before the retirement date.
+
+For migration guidance, see [Prepare for the retirement of classic Defender for SQL APIs](migrate-classic-defender-for-sql-apis.md).
 
 ### On-demand malware scanning now supports scanning specific blobs, files, containers, and file shares
 
