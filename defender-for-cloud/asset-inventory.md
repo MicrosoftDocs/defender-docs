@@ -62,6 +62,25 @@ To review software inventory details:
     - **Unregistered subscriptions**: Any subscription in the selected scope that hasn't yet been connected to Microsoft Defender for Cloud.
 1. Resources connected to Defender for Cloud that run those apps are displayed. Blank options show machines where Defender for Servers or Defender for Endpoint isn't available.
 
+### Review installed applications for a resource
+
+To review software details for a specific resource:
+
+1. In **Inventory**, select the resource.
+1. On the **Resource Health** page, select **Installed applications**.
+
+The **Installed applications** tab provides the following information:
+
+| Field | Description |
+|---|---|
+| **Vendor** | The vendor or publisher of the software. |
+| **Software name** | The name of the software product. |
+| **Version** | The detected software version. |
+| **First seen at** | The date and time when the software was first seen on the asset, when available for that software. |
+| **Evidence** | The file paths, registry paths, or both that indicate where the software was detected, when available. |
+| **Number of known vulnerabilities** | The number of known vulnerabilities associated with the detected software version. |
+| **End of support status** | The support lifecycle status of the software or software version, when available. |
+
 ## Filter the inventory
 
 As soon as you apply filters, the summary metrics (such as **Total resources**, **Unhealthy resources**, and **Resource count by environment**) update to reflect the query results.
