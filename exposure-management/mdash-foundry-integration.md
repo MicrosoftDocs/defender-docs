@@ -59,8 +59,7 @@ Deploy the models required for the agentic code security integration.
             
 > [!IMPORTANT]
 > A predefined list of model deployments is required for the integration to work. You must deploy all three models: `gpt-5.4`, `gpt-5.3-codex`, and `gpt-5.4-mini`.
-> 
-> If you use **custom settings** when deploying the required models, don’t select **DataZoneBatch**, **GlobalBatch**, or **DeveloperTier**.
+> > If you use **custom settings** when deploying the required models, avoid selecting **DataZoneBatch**, **GlobalBatch**, or **DeveloperTier**.
 
 ## Configure the TPM rate limit
 
