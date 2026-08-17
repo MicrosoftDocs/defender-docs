@@ -131,6 +131,14 @@ securityresources
 | project DisplayName, Severity, DetectedVersions, FixedVersion, CveId
 ```
 
+> [!NOTE]
+> The `CvesDetails` object continues to provide the `CveId` for each vulnerability. To retrieve additional CVE details, query the `microsoft.security/cvedetails` resource type:
+>
+> ```kusto
+> securityresources
+> | where type =~ "microsoft.security/cvedetails"
+> ```
+
 Key field changes between the two schemas:
 
 | Old field | New field | Note |
