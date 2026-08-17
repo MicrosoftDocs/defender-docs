@@ -45,6 +45,7 @@ The Inventory uses [Azure Resource Graph (ARG)](/azure/governance/resource-graph
 1. On the **Resource Health** page for the resource, review information about the resource.
     - The **Recommendations** tab shows any active security recommendations, in order of risk. You can drill down into each recommendation for more details and remediation options.
     - The **Alerts** tab shows any relevant security alerts.
+    - The **Installed applications** tab shows software detected on the resource, when software inventory is available.
 
 ## Review software inventory
 
@@ -64,10 +65,7 @@ To review software inventory details:
 
 ### Review installed applications for a resource
 
-To review software details for a specific resource:
-
-1. In **Inventory**, select the resource.
-1. On the **Resource Health** page, select **Installed applications**.
+On the **Resource Health** page for a supported resource, select **Installed applications** to review software detected on the asset.
 
 The **Installed applications** tab provides the following information:
 
