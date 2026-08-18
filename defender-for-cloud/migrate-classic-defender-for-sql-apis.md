@@ -26,29 +26,29 @@ This change doesn't affect billing because Microsoft Defender for SQL charges ar
 
 | Service | Operation |
 |---|---|
-| SQL Database | [VA Settings](https://learn.microsoft.com/rest/api/sql/server-vulnerability-assessments?view=rest-sql-2023-08-01) |
-| SQL Database | [VA DB settings](https://learn.microsoft.com/rest/api/sql/database-vulnerability-assessments?view=rest-sql-2023-08-01) |
-| SQL Database | [Baseline operations](https://learn.microsoft.com/rest/api/sql/database-vulnerability-assessment-rule-baselines?view=rest-sql-2023-08-01) |
-| SQL Database | [Scan Operations](https://learn.microsoft.com/rest/api/sql/database-vulnerability-assessment-scans?view=rest-sql-2023-08-01) |
-| Synapse | [VA Settings](https://learn.microsoft.com/rest/api/synapse/resourcemanager/workspace-managed-sql-server-vulnerability-assessments?view=rest-synapse-resourcemanager-2021-06-01) |
-| Synapse | [VA DB settings](https://learn.microsoft.com/rest/api/synapse/resourcemanager/sql-pool-vulnerability-assessments?view=rest-synapse-resourcemanager-2021-06-01) |
-| Synapse | [Baseline operations](https://learn.microsoft.com/rest/api/synapse/resourcemanager/sql-pool-vulnerability-assessment-rule-baselines?view=rest-synapse-resourcemanager-2021-06-01) |
-| Synapse | [Scan Operations](https://learn.microsoft.com/rest/api/synapse/resourcemanager/sql-pool-vulnerability-assessment-scans?view=rest-synapse-resourcemanager-2021-06-01) |
-| Managed Instance | [VA Server settings](https://learn.microsoft.com/rest/api/sql/managed-instance-vulnerability-assessments?view=rest-sql-2023-08-01) |
-| Managed Instance | [VA DB settings](https://learn.microsoft.com/rest/api/sql/managed-database-vulnerability-assessments?view=rest-sql-2023-08-01) |
-| Managed Instance | [Baseline Operations](https://learn.microsoft.com/rest/api/sql/managed-database-vulnerability-assessment-rule-baselines?view=rest-sql-2023-08-01) |
-| Managed Instance | [Scan Operations](https://learn.microsoft.com/rest/api/sql/managed-database-vulnerability-assessment-scans?view=rest-sql-2023-08-01) |
+| SQL Database | [VA Settings](/rest/api/sql/server-vulnerability-assessments?view=rest-sql-2023-08-01&preserve-view=true) |
+| SQL Database | [VA DB settings](/rest/api/sql/database-vulnerability-assessments?view=rest-sql-2023-08-01&preserve-view=true) |
+| SQL Database | [Baseline operations](/rest/api/sql/database-vulnerability-assessment-rule-baselines?view=rest-sql-2023-08-01&preserve-view=true) |
+| SQL Database | [Scan Operations](/rest/api/sql/database-vulnerability-assessment-scans?view=rest-sql-2023-08-01&preserve-view=true) |
+| Synapse | [VA Settings](/rest/api/synapse/resourcemanager/workspace-managed-sql-server-vulnerability-assessments?view=rest-synapse-resourcemanager-2021-06-01&preserve-view=true) |
+| Synapse | [VA DB settings](/rest/api/synapse/resourcemanager/sql-pool-vulnerability-assessments?view=rest-synapse-resourcemanager-2021-06-01&preserve-view=true) |
+| Synapse | [Baseline operations](/rest/api/synapse/resourcemanager/sql-pool-vulnerability-assessment-rule-baselines?view=rest-synapse-resourcemanager-2021-06-01&preserve-view=true) |
+| Synapse | [Scan Operations](/rest/api/synapse/resourcemanager/sql-pool-vulnerability-assessment-scans?view=rest-synapse-resourcemanager-2021-06-01&preserve-view=true) |
+| Managed Instance | [VA Server settings](/rest/api/sql/managed-instance-vulnerability-assessments?view=rest-sql-2023-08-01&preserve-view=true) |
+| Managed Instance | [VA DB settings](/rest/api/sql/managed-database-vulnerability-assessments?view=rest-sql-2023-08-01&preserve-view=true) |
+| Managed Instance | [Baseline Operations](/rest/api/sql/managed-database-vulnerability-assessment-rule-baselines?view=rest-sql-2023-08-01&preserve-view=true) |
+| Managed Instance | [Scan Operations](/rest/api/sql/managed-database-vulnerability-assessment-scans?view=rest-sql-2023-08-01&preserve-view=true) |
 
 ### Advanced Threat Protection APIs
 
 | Service | Operation |
 |---|---|
-| SQL Database | [Server Security Alert Policy](https://learn.microsoft.com/rest/api/sql/server-security-alert-policies?view=rest-sql-2023-08-01) |
-| SQL Database | [DB Security Alert Policy](https://learn.microsoft.com/rest/api/sql/database-security-alert-policies?view=rest-sql-2023-08-01) |
-| Synapse | [SQL Pool Security Alert Policy](https://learn.microsoft.com/rest/api/synapse/resourcemanager/sql-pool-security-alert-policies?view=rest-synapse-resourcemanager-2021-06-01) |
-| Synapse | [Server Security Alert Policy](https://learn.microsoft.com/rest/api/synapse/resourcemanager/workspace-managed-sql-server-security-alert-policy?view=rest-synapse-resourcemanager-2021-06-01) |
-| Managed Instance | [Server Security Alert Policy](https://learn.microsoft.com/rest/api/sql/managed-server-security-alert-policies?view=rest-sql-2023-08-01) |
-| Managed Instance | [DB Security Alert Policy](https://learn.microsoft.com/rest/api/sql/managed-database-security-alert-policies?view=rest-sql-2023-08-01) |
+| SQL Database | [Server Security Alert Policy](/rest/api/sql/server-security-alert-policies?view=rest-sql-2023-08-01&preserve-view=true) |
+| SQL Database | [DB Security Alert Policy](/rest/api/sql/database-security-alert-policies?view=rest-sql-2023-08-01&preserve-view=true) |
+| Synapse | [SQL Pool Security Alert Policy](/rest/api/synapse/resourcemanager/sql-pool-security-alert-policies?view=rest-synapse-resourcemanager-2021-06-01&preserve-view=true) |
+| Synapse | [Server Security Alert Policy](/rest/api/synapse/resourcemanager/workspace-managed-sql-server-security-alert-policy?view=rest-synapse-resourcemanager-2021-06-01&preserve-view=true) |
+| Managed Instance | [Server Security Alert Policy](/rest/api/sql/managed-server-security-alert-policies?view=rest-sql-2023-08-01&preserve-view=true) |
+| Managed Instance | [DB Security Alert Policy](/rest/api/sql/managed-database-security-alert-policies?view=rest-sql-2023-08-01&preserve-view=true) |
 
 ## Identify resources using classic APIs
 
@@ -967,9 +967,9 @@ Some configuration properties available in the classic Advanced Threat Protectio
 
 | Capability | Classic API property | Alternative |
 |---|---|---|
-| Disable specific alerts | `properties.disabledAlerts` | [Suppress alerts from Microsoft Defender for Cloud](https://learn.microsoft.com/azure/defender-for-cloud/alerts-suppression-rules) |
-| Email notifications | `properties.emailAccountAdmins`, `properties.emailAddresses` | [Configure email notifications for security alerts](https://learn.microsoft.com/azure/defender-for-cloud/configure-email-notifications) |
-| Export alerts to storage | `properties.retentionDays`, `properties.storageAccountAccessKey`, `properties.storageEndpoint` | Use [continuous export](https://learn.microsoft.com/azure/defender-for-cloud/continuous-export) and optionally [export Event Hubs data to Azure Storage](https://learn.microsoft.com/azure/event-hubs/event-hubs-capture-enable-through-portal#capture-data-to-azure-storage). |
+| Disable specific alerts | `properties.disabledAlerts` | [Suppress alerts from Microsoft Defender for Cloud](alerts-suppression-rules.md) |
+| Email notifications | `properties.emailAccountAdmins`, `properties.emailAddresses` | [Configure email notifications for security alerts](configure-email-notifications.md) |
+| Export alerts to storage | `properties.retentionDays`, `properties.storageAccountAccessKey`, `properties.storageEndpoint` | Use [continuous export](continuous-export.md) and optionally [export Event Hubs data to Azure Storage](/azure/event-hubs/event-hubs-capture-enable-through-portal#capture-data-to-azure-storage). |
 
 For database-level classic Advanced Threat Protection configuration, the migration scripts in this section enable protection at the server or workspace level before disabling the database-level configuration.
 
@@ -2099,7 +2099,7 @@ When you migrate, note the following differences:
 | Scan export | Excel | CSV |
 | APIs | Separate APIs for each SQL resource type | Unified API across Azure SQL Database, Azure SQL Managed Instance, SQL Server on Azure Virtual Machines, and Azure Synapse Analytics |
 
-Express Configuration supports email reporting through Logic Apps. The built-in scheduling mechanism available with classic configuration isn't supported. For more information, see [Automate email notifications with Logic Apps](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-sql-scan-results#automate-email-notifications-with-logic-apps).
+Express Configuration supports email reporting through Logic Apps. The built-in scheduling mechanism available with classic configuration isn't supported. For more information, see [Automate email notifications with Logic Apps](defender-for-sql-scan-results.md#automate-email-notifications-with-logic-apps).
 
 Express Configuration exports vulnerability assessment results in CSV format instead of Excel.
 

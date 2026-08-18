@@ -1,8 +1,9 @@
 ---
-title: Configuring and controlling external email forwarding in Microsoft 365
+title: Control external email forwarding and fix 5.7.520 errors
+keywords: 5.7.520, Access Denied, external email forwarding, automatic forwarding, outbound spam policy, NDR
 author: chrisda
 ms.author: chrisda
-ms.date: 08/10/2026
+ms.date: 08/18/2026
 ms.topic: overview
 ms.collection: 
 - m365-security
@@ -13,7 +14,7 @@ ms.custom:
 - seo-marvel-apr2020
 - adminvideo
 - msecd-doc-authoring-1015
-description: This article covers external email forwarding, Automatic forwarding, 5.7.520 Access Denied messages, disabling external forwarding, 'Your administrator has disabled external forwarding' messages, and outbound anti-spam policy.
+description: Learn how to control automatic external email forwarding and resolve 5.7.520 Access Denied errors in Microsoft 365.
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
