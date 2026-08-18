@@ -26,29 +26,29 @@ This change doesn't affect billing because Microsoft Defender for SQL charges ar
 
 | Service | Operation |
 |---|---|
-| SQL Database | [VA Settings](/rest/api/sql/server-vulnerability-assessments?view=rest-sql-2023-08-01) |
-| SQL Database | [VA DB settings](/rest/api/sql/database-vulnerability-assessments?view=rest-sql-2023-08-01) |
-| SQL Database | [Baseline operations](/rest/api/sql/database-vulnerability-assessment-rule-baselines?view=rest-sql-2023-08-01) |
-| SQL Database | [Scan Operations](/rest/api/sql/database-vulnerability-assessment-scans?view=rest-sql-2023-08-01) |
-| Synapse | [VA Settings](/rest/api/synapse/resourcemanager/workspace-managed-sql-server-vulnerability-assessments?view=rest-synapse-resourcemanager-2021-06-01) |
-| Synapse | [VA DB settings](/rest/api/synapse/resourcemanager/sql-pool-vulnerability-assessments?view=rest-synapse-resourcemanager-2021-06-01) |
-| Synapse | [Baseline operations](/rest/api/synapse/resourcemanager/sql-pool-vulnerability-assessment-rule-baselines?view=rest-synapse-resourcemanager-2021-06-01) |
-| Synapse | [Scan Operations](/rest/api/synapse/resourcemanager/sql-pool-vulnerability-assessment-scans?view=rest-synapse-resourcemanager-2021-06-01) |
-| Managed Instance | [VA Server settings](/rest/api/sql/managed-instance-vulnerability-assessments?view=rest-sql-2023-08-01) |
-| Managed Instance | [VA DB settings](/rest/api/sql/managed-database-vulnerability-assessments?view=rest-sql-2023-08-01) |
-| Managed Instance | [Baseline Operations](/rest/api/sql/managed-database-vulnerability-assessment-rule-baselines?view=rest-sql-2023-08-01) |
-| Managed Instance | [Scan Operations](/rest/api/sql/managed-database-vulnerability-assessment-scans?view=rest-sql-2023-08-01) |
+| SQL Database | [VA Settings](/rest/api/sql/server-vulnerability-assessments?view=rest-sql-2023-08-01&preserve-view=true) |
+| SQL Database | [VA DB settings](/rest/api/sql/database-vulnerability-assessments?view=rest-sql-2023-08-01&preserve-view=true) |
+| SQL Database | [Baseline operations](/rest/api/sql/database-vulnerability-assessment-rule-baselines?view=rest-sql-2023-08-01&preserve-view=true) |
+| SQL Database | [Scan Operations](/rest/api/sql/database-vulnerability-assessment-scans?view=rest-sql-2023-08-01&preserve-view=true) |
+| Synapse | [VA Settings](/rest/api/synapse/resourcemanager/workspace-managed-sql-server-vulnerability-assessments?view=rest-synapse-resourcemanager-2021-06-01&preserve-view=true) |
+| Synapse | [VA DB settings](/rest/api/synapse/resourcemanager/sql-pool-vulnerability-assessments?view=rest-synapse-resourcemanager-2021-06-01&preserve-view=true) |
+| Synapse | [Baseline operations](/rest/api/synapse/resourcemanager/sql-pool-vulnerability-assessment-rule-baselines?view=rest-synapse-resourcemanager-2021-06-01&preserve-view=true) |
+| Synapse | [Scan Operations](/rest/api/synapse/resourcemanager/sql-pool-vulnerability-assessment-scans?view=rest-synapse-resourcemanager-2021-06-01&preserve-view=true) |
+| Managed Instance | [VA Server settings](/rest/api/sql/managed-instance-vulnerability-assessments?view=rest-sql-2023-08-01&preserve-view=true) |
+| Managed Instance | [VA DB settings](/rest/api/sql/managed-database-vulnerability-assessments?view=rest-sql-2023-08-01&preserve-view=true) |
+| Managed Instance | [Baseline Operations](/rest/api/sql/managed-database-vulnerability-assessment-rule-baselines?view=rest-sql-2023-08-01&preserve-view=true) |
+| Managed Instance | [Scan Operations](/rest/api/sql/managed-database-vulnerability-assessment-scans?view=rest-sql-2023-08-01&preserve-view=true) |
 
 ### Advanced Threat Protection APIs
 
 | Service | Operation |
 |---|---|
-| SQL Database | [Server Security Alert Policy](/rest/api/sql/server-security-alert-policies?view=rest-sql-2023-08-01) |
-| SQL Database | [DB Security Alert Policy](/rest/api/sql/database-security-alert-policies?view=rest-sql-2023-08-01) |
-| Synapse | [SQL Pool Security Alert Policy](/rest/api/synapse/resourcemanager/sql-pool-security-alert-policies?view=rest-synapse-resourcemanager-2021-06-01) |
-| Synapse | [Server Security Alert Policy](/rest/api/synapse/resourcemanager/workspace-managed-sql-server-security-alert-policy?view=rest-synapse-resourcemanager-2021-06-01) |
-| Managed Instance | [Server Security Alert Policy](/rest/api/sql/managed-server-security-alert-policies?view=rest-sql-2023-08-01) |
-| Managed Instance | [DB Security Alert Policy](/rest/api/sql/managed-database-security-alert-policies?view=rest-sql-2023-08-01) |
+| SQL Database | [Server Security Alert Policy](/rest/api/sql/server-security-alert-policies?view=rest-sql-2023-08-01&preserve-view=true) |
+| SQL Database | [DB Security Alert Policy](/rest/api/sql/database-security-alert-policies?view=rest-sql-2023-08-01&preserve-view=true) |
+| Synapse | [SQL Pool Security Alert Policy](/rest/api/synapse/resourcemanager/sql-pool-security-alert-policies?view=rest-synapse-resourcemanager-2021-06-01&preserve-view=true) |
+| Synapse | [Server Security Alert Policy](/rest/api/synapse/resourcemanager/workspace-managed-sql-server-security-alert-policy?view=rest-synapse-resourcemanager-2021-06-01&preserve-view=true) |
+| Managed Instance | [Server Security Alert Policy](/rest/api/sql/managed-server-security-alert-policies?view=rest-sql-2023-08-01&preserve-view=true) |
+| Managed Instance | [DB Security Alert Policy](/rest/api/sql/managed-database-security-alert-policies?view=rest-sql-2023-08-01&preserve-view=true) |
 
 ## Identify resources using classic APIs
 
