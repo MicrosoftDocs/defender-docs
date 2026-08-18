@@ -2,9 +2,11 @@
 title: 'Accounts security posture assessment'
 ms.service: microsoft-defender-for-identity
 ms.topic: article
-ms.date: 11/11/2025
+ms.date: 08/18/2026
 ms.reviewer: LiorShapiraa
 description: Lists all Microsoft Defender for Identity security posture assessments for Active Directory accounts, with detailed impacts and remediation steps to help improve your Secure Score.
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1020
 ---
 
 # Accounts security posture assessments 
@@ -343,6 +345,25 @@ This is required to display the Security tab on domain objects.
     - Replicating Directory Changes All
 
 1. Select Apply, and then select OK.
+
+
+## Ensure non-admin identities cannot have WriteDACL permissions on sensitive groups
+
+**Description**
+
+The **Ensure non-admin identities cannot have WriteDACL permissions on sensitive groups** assessment lists non-admin identities that can modify access control permissions on sensitive groups.
+
+**User impact**
+
+WriteDACL permissions allow an identity to modify an object's access control list. When a non-admin identity has this permission over a sensitive group, that identity can grant itself or another identity privileged control. Attackers often abuse this type of permission to escalate privileges in Active Directory environments.
+
+**Implementation**
+
+1. Review the recommended action in the Microsoft Defender portal for **Ensure non-admin identities cannot have WriteDACL permissions on sensitive groups**.
+2. Review the list of exposed entities to identify non-admin identities with WriteDACL permissions on sensitive groups.
+3. Remove unnecessary WriteDACL permissions from sensitive group objects.
+4. Restrict permission-management capabilities to trusted administrative roles.
+5. Validate that sensitive group permissions match your intended administrative model.
 
 
 ## Ensure privileged accounts are not delegated
