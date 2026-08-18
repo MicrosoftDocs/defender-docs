@@ -347,6 +347,25 @@ This is required to display the Security tab on domain objects.
 1. Select Apply, and then select OK.
 
 
+## Ensure external and guest accounts are not granted privileged roles
+
+**Description**
+
+The **Ensure external and guest accounts are not granted privileged roles** assessment lists external and guest identities that hold privileged roles in the tenant.
+
+**User impact**
+
+Guest and external accounts enable collaboration, but their security posture may depend on another organization's controls. If an external identity with privileged access is compromised, attackers can gain a privileged foothold in your tenant and use it for persistence, escalation, or access to sensitive data.
+
+**Implementation**
+
+1. Review the recommended action in the Microsoft Defender portal for **Ensure external and guest accounts are not granted privileged roles**.
+2. Review the list of exposed entities to identify guest and external accounts assigned privileged or sensitive roles.
+3. Remove privileged access from guest and external accounts unless there is a documented business requirement.
+4. Replace persistent privileged access with time-bound and governed access where possible.
+5. Monitor guest and external accounts that retain sensitive access.
+
+
 ## Ensure non-admin identities cannot have WriteDACL permissions on sensitive groups
 
 **Description**
