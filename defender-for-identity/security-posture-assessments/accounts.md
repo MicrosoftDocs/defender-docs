@@ -419,6 +419,25 @@ The safest approach is to use a PowerShell script to configure the device to pre
     :::image type="content" source="../media/ensure-privileged-accounts-with-sensitive-flag/device-profile.png" alt-text="Screenshot of the device profile.":::
 
 
+## Ensure service accounts in Entra ID are not assigned Domain Admin or Global Admin roles
+
+**Description**
+
+The **Ensure service accounts are not assigned Domain Admin or Global Admin roles** assessment lists service accounts that hold top-tier administrative roles, including Domain Admin or Global Admin.
+
+**User impact**
+
+Service accounts are commonly used by applications, scripts, and integrations. Because these accounts aren't tied to a person, they can be over-provisioned, long-lived, and overlooked. If a service account with top-tier privileges is compromised, attackers can use it as a direct path to broad administrative control across the environment.
+
+**Implementation**
+
+1. Review the recommended action in the Microsoft Defender portal for **Ensure service accounts are not assigned Domain Admin or Global Admin roles**.
+2. Review the list of exposed entities to identify service accounts assigned Domain Admin, Global Admin, or equivalent privileged roles.
+3. Remove unnecessary top-tier administrative roles from service accounts.
+4. Replace broad permissions with the minimum permissions required for the workload.
+5. Monitor remaining privileged service accounts and rotate their credentials according to organizational policy.
+
+
 ## Entities exposing credentials in clear text
 
 **Description**
