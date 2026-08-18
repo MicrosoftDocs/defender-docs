@@ -85,7 +85,7 @@ Configure a content filter to ensure the deployed models can operate without res
 ### Prerequisites 
 
 - A Microsoft Foundry resource is created, and three model deployments are completed. 
-- The same setup applies to the new MAI-Cyber-1-Flash model, which is part of the MAI-Augmented profile (Preview) - currently available only for scans triggered through the CLI.
+- The same setup applies to the new MAI-Cyber-1-Flash model, which is part of the MAI-Augmented profile (Preview).
 
 ### Create a content filter
 
