@@ -3,7 +3,7 @@ title: Set up DMARC to validate email in Microsoft 365
 author: chrisda
 ms.author: chrisda
 ms.topic: how-to
-ms.date: 08/16/2026
+ms.date: 08/18/2026
 ms.custom: msecd-doc-authoring-1016
 ms.localizationpriority: high
 ms.assetid: 4a05898c-b8e4-4eab-bd70-ee912e349737
@@ -79,7 +79,7 @@ The rest of this article covers DMARC TXT record creation, gradual rollout for c
 
 ## Syntax for DMARC TXT records
 
-DMARC TXT records are exhaustively described in [RFC 9989](https://datatracker.ietf.org/doc/html/rfc9989), which obsoletes RFC 7489.
+DMARC TXT record syntax is defined in [RFC 9989](https://datatracker.ietf.org/doc/html/rfc9989), which obsoletes RFC 7489.
 
 The basic syntax of the DMARC TXT record for a domain in Microsoft 365 is:
 
@@ -108,12 +108,12 @@ For example:
   > [!TIP]
   > Outbound mail from domains in Microsoft 365 that fail DMARC checks by the destination email service is routed through the [High-risk delivery pool for outbound messages](outbound-spam-high-risk-delivery-pool-about.md) if the DMARC policy for the domain is `p=reject` or `p=quarantine`. There's no override for this behavior.
 
-- **DMARC policy testing**: RFC 9989 removed the legacy `pct` tag because operational experience showed that values other than 0 or 100 weren't applied consistently. Don't use percentage-based policy rollout. Instead, start with `p=none`, review aggregate reports, remediate legitimate mail streams, and then move low-volume domains through `p=quarantine` and `p=reject`. RFC 9989 also defines the optional `t=y` testing tag, which requests policy handling one level lower (`p=quarantine` as `p=none`, or `p=reject` as `p=quarantine`). Receivers that haven't implemented RFC 9989 might ignore the tag, so don't rely on it to prevent delivery impact.
+- **DMARC policy testing**: RFC 9989 removed the legacy `pct` tag because operational experience showed that values other than 0 or 100 weren't applied consistently. Don't use percentage-based policy rollout. Instead, start with `p=none`, review aggregate reports, fix authentication or alignment issues for legitimate mail sources, and apply `p=quarantine` and then `p=reject` to low-volume domains first. RFC 9989 also defines the optional `t=y` testing tag. This tag requests that receivers don't apply the published policy and instead apply a policy one level lower (`p=quarantine` as `p=none`, or `p=reject` as `p=quarantine`). Receivers that don't support RFC 9989 might ignore the tag, so don't rely on it to prevent delivery impact.
 
 - **DMARC reports**:
   - **DMARC Aggregate report URI**: The `rua=mailto:` value identifies where to send the DMARC Aggregate report. The Aggregate report has the following properties:
     - The email messages that contain the Aggregate report are typically sent once per day (the report contains the DMARC results from the previous day). The Subject line contains the destination domain that sent the report (Submitter) and the source domain for the DMARC results (Report Domain).
-    - The DMARC data is in an XML email attachment that's likely GZIP compressed. The current XML schema is defined in [Appendix A of RFC 9990](https://datatracker.ietf.org/doc/html/rfc9990#appendix-A). The report contains the following information:
+    - The DMARC data is in an XML email attachment that should be GZIP-compressed. The current XML schema is defined in [Appendix A of RFC 9990](https://datatracker.ietf.org/doc/html/rfc9990#appendix-A). The report contains the following information:
       - The IP addresses of servers or services that send mail using your domain.
       - Whether the servers or services pass or fail DMARC authentication.
       - The actions that DMARC takes on mail that fails DMARC authentication (based on the DMARC policy).
@@ -189,7 +189,7 @@ Your DMARC roll-out plan should use the following steps. Start with a domain or 
    **Hostname**: `_dmarc`<br/>
    **TXT value**: `v=DMARC1; p=quarantine; rua=mailto:rua@marketing.contoso.com; ruf=mailto:ruf@marketing.contoso.com`
 
-   RFC 9989 removed percentage-based policy rollout. Reduce risk by starting with a low-volume domain, reviewing aggregate reports, and fixing all legitimate sources before you publish `p=quarantine`.
+   To reduce risk without percentage-based policy rollout, start with a low-volume domain. Review aggregate reports and fix authentication or alignment issues for all legitimate mail sources before you publish `p=quarantine`.
 
 3. Increase the DMARC policy to `p=reject` and monitor the results for the domain.
 
@@ -410,7 +410,7 @@ The following example shows the XML structure of an aggregate report:
       <source_ip>198.51.100.10</source_ip>        <!-- Sending IP -->
       <count>1523</count>                         <!-- Number of messages -->
       <policy_evaluated>
-        <disposition>none</disposition>           <!-- What receiver did -->
+        <disposition>pass</disposition>           <!-- What receiver did -->
         <dkim>pass</dkim>                         <!-- DKIM alignment result -->
         <spf>fail</spf>                           <!-- SPF alignment result -->
       </policy_evaluated>
@@ -442,7 +442,7 @@ Use the following table to interpret the most important fields in a DMARC aggreg
 |---|---|---|
 |`<source_ip>`|The IP address that sent the messages|Identify if this is a legitimate sender or unauthorized|
 |`<count>`|Number of messages from this source|High count from unknown IP = potential spoofing|
-|`<disposition>`|Action the receiver took (`none`, `quarantine`, `reject`)|Verify receiver is honoring your policy|
+|`<disposition>`|Action the receiver took (`none`, `pass`, `quarantine`, `reject`)|Verify receiver is honoring your policy|
 |`<dkim>` under `<policy_evaluated>`|Whether DKIM **aligned** (not just passed)|`fail` = DKIM domain doesn't match From domain|
 |`<spf>` under `<policy_evaluated>`|Whether SPF **aligned** (not just passed)|`fail` = MAIL FROM domain doesn't match From domain|
 |`<domain>` under `<auth_results><spf>`|Domain that SPF was checked against|If different from From domain = alignment issue|
