@@ -45,7 +45,7 @@ Before you onboard, make sure you meet these prerequisites:
 ### Other prerequisites for Microsoft Purview
 
 > [!IMPORTANT]
-> **Data risk graph is being deprecated.** The data risk graph in Microsoft Purview Insider Risk Management and Microsoft Purview Data Security Investigations will be retired on **November 14, 2026**. After that date, the data risk graph experience will no longer be available in either solution. For migration guidance and alternative investigation experiences, see the [deprecation announcement](/azure/sentinel/datalake/sentinel-lake-onboarding#other-prerequisites-for-microsoft-purview).
+> **Data risk graph is being deprecated.** The data risk graph in Microsoft Purview Insider Risk Management will be retired on **November 24, 2026**. After that date, the data risk graph experience will no longer be available in either solution. For migration guidance and alternative investigation experiences, see the [deprecation announcement](/azure/sentinel/datalake/sentinel-lake-onboarding#other-prerequisites-for-microsoft-purview).
 
 For Microsoft Purview scenarios, you must also meet the following prerequisites before onboarding:
 
