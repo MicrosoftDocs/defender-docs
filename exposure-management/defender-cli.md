@@ -2,17 +2,19 @@
 title: Install and run Defender CLI
 description: Download and install Defender CLI, then run agentic code scans from the terminal.
 ms.topic: how-to
-ms.date: 08/06/2026
+ms.date: 08/18/2026
 ai-usage: ai-assisted
 ---
 
 # Install and run Defender CLI (Preview)
 
-Download Defender CLI and run agentic code scans from your terminal.
+The Defender CLI is a command-line tool for MDASH and other security scanners in Microsoft Defender. It uses a multi-model, agentic AI system to help security and engineering teams detect and remediate code vulnerabilities. Through the Defender CLI, you can run agentic code scans and apply fixes locally or in CI/CD pipelines. The Defender CLI is distributed as a standalone executable for Windows, macOS, and Linux.
+
 
 ## Prerequisites
 
-- Defender CLI authenticated. See [Defender CLI setup](defender-cli-authentication.md).
+- The Defender CLI supports two authentication methods: Use **app-based authentication** for CI/CD pipelines and other non-interactive automation, and  **interactive authentication** for local terminal scans by signed-in users. The permissions you need depend on your authentication method. For details, see [Defender CLI setup for agentic code security](./defender-cli-authentication.md).
+- Set the tenant environment variable, such as `DEFENDER_ASPM_TENANT_ID`. The required variables depend on the authentication method you use. For details, see [Defender CLI setup for agentic code security](./defender-cli-authentication.md).
 - A local clone of the repository you want to scan.
 
 
@@ -67,22 +69,6 @@ By default, scans run asynchronously. This means that when you submit a scan, th
 
 In the following commands, replace the `<TARGET_SOURCE>` placeholder with one of the path to your target source code directory, for example `my-code\project1`. If you're running the Defender CLI from within your code's directory, use `.` to refer to the current directory. 
 
-# [Windows](#tab/windows)
-
-```powershell
-# Step 1: Submit and get a job ID
-defender.exe scan ai-scan submit <TARGET_SOURCE>
-# Output: Job submitted: <JOB_ID>
-
-# Step 2: Check job status
-defender.exe status <JOB_ID>
-
-# Step 3: (Optional) Wait for completion and download results
-defender.exe status wait <JOB_ID> -o results.sarif
-```
-
-
-# [macOS](#tab/macos)
 
 ```bash
 # Step 1: Submit and get a job ID
@@ -95,23 +81,6 @@ defender.exe status wait <JOB_ID> -o results.sarif
 # Step 3: (Optional) Wait for completion and download results
 ./defender status wait <JOB_ID> -o results.sarif
 ```
-
-# [Linux](#tab/linux)
-
-```bash
-# Step 1: Submit and get a job ID
-./defender scan ai-scan submit <TARGET_SOURCE>
-# Output: Job submitted: <JOB_ID>
-
-# Step 2: Check job status
-./defender status <JOB_ID>
-
-# Step 3: (Optional) Wait for completion and download results
-./defender status wait <JOB_ID> -o results.sarif
-```
-
----
-
 
 
 ### Scan with a scan profile (Preview)
@@ -125,47 +94,14 @@ A **scan profile** selects which AI models run your scan. Two profiles are avail
 
 See available profiles and the current default:
 
-
-# [Windows](#tab/windows)
-
-```powershell
-defender.exe scan profile model list
-defender.exe scan profile model show-default
-```
-
-
-# [macOS](#tab/macos)
-
 ```bash
 ./defender scan profile model list
 ./defender scan profile model show-default
 ```
-
-# [Linux](#tab/linux)
-
-```bash
-./defender scan profile model list
-./defender scan profile model show-default
-```
-
----
 
 
 Run one scan with a specific profile (overrides the default for this scan only):
 
-# [Windows](#tab/windows)
-
-```powershell
-# Baseline profile:
-defender.exe scan ai-scan submit <TARGET_SOURCE> --model-profile gpt-general-profile
-
-# MAI-augmented profile:
-defender.exe scan ai-scan submit <TARGET_SOURCE> --model-profile mai-augmented-profile
-```
-
-
-# [macOS](#tab/macos)
-
 ```bash
 # Baseline profile:
 ./defender scan ai-scan submit <TARGET_SOURCE> --model-profile gpt-general-profile
@@ -174,128 +110,81 @@ defender.exe scan ai-scan submit <TARGET_SOURCE> --model-profile mai-augmented-p
 ./defender scan ai-scan submit <TARGET_SOURCE> --model-profile mai-augmented-profile
 ```
 
-# [Linux](#tab/linux)
 
-```bash
-# Baseline profile:
-./defender scan ai-scan submit <TARGET_SOURCE> --model-profile gpt-general-profile
+### Filter by severity
 
-# MAI-augmented profile:
-./defender scan ai-scan submit <TARGET_SOURCE> --model-profile mai-augmented-profile
-```
-
----
-
-
-## Filter by severity
-
-Return only high and critical findings:
-
-
-# [Windows](#tab/windows)
-
-```powershell
-defender.exe scan ai-scan submit <TARGET_SOURCE> --severity high
-```
-
-
-# [macOS](#tab/macos)
+When submitting a scan, you can limit the returned results to high and critical severity findings only. This narrows the output to the issues that pose the greatest risk, making triage faster and helping teams prioritize remediation where it matters most. Use the `--severity` flag to set the threshold, with accepted values of `low` (default), `medium`, `high`, or `critical`.
 
 ```bash
 ./defender scan ai-scan submit <TARGET_SOURCE> --severity high
 ```
-
-# [Linux](#tab/linux)
-
-```bash
-./defender scan ai-scan submit <TARGET_SOURCE> --severity high
-```
-
----
 
 
 ## Manage jobs 
 
-# [Windows](#tab/windows)
+The Defender CLI `status` command provides a quick access to a the jobs tracked by Codename MDASH. It allows you to list all jobs currently being tracked, view details for a specific job, block and download SARIF file, re-download the SARIF for a given run, and more.
 
-```powershell
-defender.exe status                         # List all tracked jobs
-defender.exe status result <JOB_ID>         # Download a finished report
-defender.exe status log <JOB_ID>            # Print the path of the auto-saved debug log for a run
-```
-
-
-# [macOS](#tab/macos)
 
 ```bash
 ./defender status                         # List all tracked jobs
+./defender status <JOB_ID>                # Show details of a job
 ./defender status result <JOB_ID>         # Download a finished report
 ./defender status log <JOB_ID>            # Print the path of the auto-saved debug log for a run
 ```
 
-# [Linux](#tab/linux)
+
+## Download the result
+
+Scans run asynchronously by default, and take some time to complete. Instead of repeatedly checking the job status, the `wait` command waits for the job to complete and downloads the results to a SARIF file. For details, see [Review agentic code scan results from the terminal](./review-terminal-results.md). 
+
+The following command waits for scan `<JOB_ID>` to finish, then saves the results to `results.sarif`:
 
 ```bash
-./defender status                         # List all tracked jobs
-./defender status result <JOB_ID>         # Download a finished report
-./defender status log <JOB_ID>            # Print the path of the auto-saved debug log for a run
+./defender status wait <JOB_ID> -o results.sarif
 ```
 
----
-
-
-
-### Download the result
+## Re-download the result
 
 Once a job has reached a terminal state (**completed** or **failed**), download its results using the command below. This command is particularly useful if you've cleared the local SARIF file, the original `wait` command was interrupted before it finished, or you submitted the job from one machine but want to retrieve the results from another. Replace `<JOB_ID>` with your actual job ID. 
 
-# [Windows](#tab/windows)
-
-```powershell
-defender.exe status result <JOB_ID>
-```
-
-
-# [macOS](#tab/macos)
-
 ```bash
 ./defender status result <JOB_ID>
 ```
 
-# [Linux](#tab/linux)
 
-```bash
-./defender status result <JOB_ID>
-```
-
----
-
-
-### Cancel job
+## Cancel job
 
 Canceling a scan does not refund tokens that have already been consumed. During a scan, MDASH makes live LLM calls that consume tokens as work is processed. If you cancel a scan that is already running, MDASH stops scheduling new work, but you are still charged for any tokens consumed before the cancellation takes effect. Canceling a scan can prevent additional token consumption from future work, but it does not refund tokens that have already been used.
 
-# [Windows](#tab/windows)
-
-```powershell
-defender.exe status cancel <JOB_ID>
-```
-
-
-# [macOS](#tab/macos)
 
 ```bash
 ./defender status cancel <JOB_ID>
 ```
 
-# [Linux](#tab/linux)
+## Troubleshooting
+
+When troubleshooting Defender CLI issues, administrators or support teams may ask you to provide the auto-saved log to help diagnose the problem. To find the log path for a specific run, use the following command on the same machine where the scan occurred, replacing `<JOB_ID>` with the scan’s job ID.
+
 
 ```bash
-./defender status cancel <JOB_ID>
+./defender status log <JOB_ID>
 ```
 
----
+When troubleshooting unexpected CLI behavior, one option is to re-run the command with a higher log level, such as debug, which surfaces more detailed diagnostic output than the default info level. This can help you identify the cause. However, this approach only works if you're able to reproduce the issue by re-running the command. To adapt the example below for your scenario:
 
+- Replace the `<failing-command>` placeholder with the command that is failing. For example: `scan ai-scan submit .`
+- Set `--log-level` to the appropriate level. Expected values: `trace`, `debug`, `info` (default), `warn`, `error`.
+- Optionally, set `--log-file` to a file path. When this flag is used, the CLI writes the debug output to the specified file instead of only displaying it in the console.
+
+```bash
+./defender <failing-command> --log-level debug --log-file ./defender-debug.log
+```
+
+For example, if a scan fails, re-run the command and append the `--log-level` flag to the command as follows:
+
+```bash
+./defender scan ai-scan submit <TARGET_SOURCE> --log-level debug
+```
 
 
 ## Related content
