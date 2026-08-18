@@ -54,15 +54,10 @@ Privileged local accounts in SaaS apps can bypass centralized identity controls,
 **Implementation**
 
 1. Review the recommended action in the Microsoft Defender portal for **Ensure no privileged SaaS app accounts exist outside of IdP control**.
-
-1. Review the list of exposed entities to identify privileged SaaS accounts that aren't managed by your identity provider.
-
-1. Migrate required privileged access to identities managed by the identity provider.
-
-1. Disable or remove app-native privileged accounts that are no longer required.
-
-1. Apply single sign-on, multifactor authentication, Conditional Access, and lifecycle governance to remaining privileged SaaS access.
-
+2. Review the list of exposed entities to identify privileged SaaS accounts that aren't managed by your identity provider.
+3. Migrate required privileged access to identities managed by the identity provider.
+4. Disable or remove app-native privileged accounts that are no longer required.
+5. Apply single sign-on, multifactor authentication, Conditional Access, and lifecycle governance to remaining privileged SaaS access.
 
 ## Rotate password for Microsoft Entra Connect AD DS Connector account
 
