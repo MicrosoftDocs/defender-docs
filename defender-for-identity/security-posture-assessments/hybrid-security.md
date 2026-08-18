@@ -3,10 +3,10 @@ title: 'Remediate hybrid security posture assessments in Defender for Identity'
 description: View all hybrid security posture assessments for Microsoft Defender for Identity.
 ms.service: microsoft-defender-for-identity
 ms.topic: how-to
-ms.date: 07/02/2026
+ms.date: 08/18/2026
 ms.reviewer: LiorShapiraa
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1016
+ms.custom: msecd-doc-authoring-1020
 ---
 
 # Remediate hybrid security posture assessments in Defender for Identity
@@ -40,6 +40,24 @@ Microsoft Entra seamless SSO automatically signs in users when they're using the
 > [!NOTE]
 > The **Change password for Microsoft Entra seamless SSO account** security assessment is available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services and Sign on method as part of Microsoft Entra Connect configuration is set to single sign-on and the SSO computer account exists. Learn more about [Microsoft Entra seamless sign-on](/entra/identity/hybrid/connect/how-to-connect-sso).
 
+
+## Ensure no privileged SaaS app accounts exist outside of IdP control
+
+**Description**
+
+The **Ensure no privileged SaaS app accounts exist outside of IdP control** assessment lists privileged accounts that are created and managed directly in SaaS applications instead of through the organization's identity provider.
+
+**User impact**
+
+Privileged local accounts in SaaS apps can bypass centralized identity controls, including single sign-on, multifactor authentication, Conditional Access, lifecycle governance, and security monitoring. If an attacker compromises one of these accounts, they may be able to sign in directly to the SaaS application and access sensitive data without triggering the protections applied to identities managed by the identity provider.
+
+**Implementation**
+
+1. Review the recommended action in the Microsoft Defender portal for **Ensure no privileged SaaS app accounts exist outside of IdP control**.
+2. Review the list of exposed entities to identify privileged SaaS accounts that aren't managed by your identity provider.
+3. Migrate required privileged access to identities managed by the identity provider.
+4. Disable or remove app-native privileged accounts that are no longer required.
+5. Apply single sign-on, multifactor authentication, Conditional Access, and lifecycle governance to remaining privileged SaaS access.
 
 ## Rotate password for Microsoft Entra Connect AD DS Connector account
 
