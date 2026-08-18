@@ -40,7 +40,7 @@ Use Microsoft Defender unified role-based access control (RBAC) to grant users a
    - **Run scan (Manage)** — required to trigger on-demand or CLI scans.
    - **Upload results (Manage)** — required to upload CLI scan results to Defender.
    - **Scan results (Manage)** — required to triage, dismiss, or otherwise manage findings.
-   - **Scan results (Read)** — required to view findings in the Defender portal and the initiative. This permission does not grant access to the Defender portal. To enable portal access, assign additional permissions, such as [Exposure Management (Read)](/defender-xdr/create-custom-rbac-roles#microsoft-defender-for-cloud)). These permissions may also provide access to other data within the assigned scope, beyond codename MDASH data.
+   - **Scan results (Read)** — required to view findings in the Defender portal and the initiative. This permission does not grant access to the Defender portal. To enable portal access, assign additional permissions, such as [Exposure Management (Read)](/defender-xdr/create-custom-rbac-roles#microsoft-defender-for-cloud). These permissions may also provide access to other data within the assigned scope, beyond codename MDASH data.
 
 
 1. Review the permissions, and select **Apply**.
