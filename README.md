@@ -19,7 +19,7 @@ Contributors who make infrequent or small updates can edit the file directly on 
 
 1. Verify that you're signed in to GitHub.com with your GitHub account.
 2. On learn.microsoft.com, find the article that you want to update.
-3. Above the title of the article, find and click the three-dot menu, then select **Edit**. _(The edit option may not be available in all articles.)_
+3. Above the title of the article, open the three-dot menu, then select **Edit**. _(The **Edit** option might not be available on all articles.)_
 
    <img width="1445" height="534" alt="image" src="https://github.com/user-attachments/assets/6be41bc5-7492-4f6f-8bef-ac8ddf974108" />
 
