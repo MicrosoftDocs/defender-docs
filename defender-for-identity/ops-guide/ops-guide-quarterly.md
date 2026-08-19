@@ -1,5 +1,5 @@
 ---
-title: Quarterly or ad hoc operational guide - Microsoft Defender for Identity
+title: Quarterly or Ad-hoc Operational Guide - Microsoft Defender for Identity
 description: Review quarterly and ad hoc Microsoft Defender for Identity tasks, including checking service health, verifying sensor deployment in server setup processes, and validating domain controller audit policies.
 ms.date: 07/02/2026
 ms.topic: how-to
@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1016
 ---
 
-# Quarterly / ad hoc operational guide - Microsoft Defender for Identity
+# Quarterly / ad-hoc operational guide - Microsoft Defender for Identity
 
 This article reviews the Microsoft Defender for Identity activities we recommend for your team on a quarterly or ad-hoc basis, depending on your organization's needs and processes.
 
@@ -54,10 +54,7 @@ For more information, see:
 - [Configure audit policies for Windows event logs](../deploy/configure-windows-event-collection.md)
 - [Test-MDIConfiguration](/powershell/module/defenderforidentity/test-mdiconfiguration) PowerShell documentation
 
-
 ## Related content
-
-For more information, see:
 
 - [Microsoft Defender Security operations overview](/security/operations/overview)
 - [Microsoft Defender for Identity operational guide](ops-guide.md)
