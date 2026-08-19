@@ -246,8 +246,6 @@ View the run history for playbooks on an incident by selecting the **Runs** tab 
 
 ### Run a playbook manually on an entity
 
-Running a playbook manually on an entity isn't supported in the Defender portal.
-
 Select an entity in one of the following ways, depending on your originating context:
 
 #### [Run a playbook on an entity from the new incident details page](#tab/incident-details-new)
