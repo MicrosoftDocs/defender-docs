@@ -276,8 +276,6 @@ Complete the following tasks after you finish the investigation:
 <a name="more-resources"></a>
 ## Related content
 
-For related guidance, see the following resources:
-
 - [Detect and Remediate Outlook Rules and Custom Forms Injections Attacks](detect-and-remediate-outlook-rules-forms-attack.md)
 - [Detect and Remediate Illicit Consent Grants](detect-and-remediate-illicit-consent-grants.md)
 - [Report spam, nonspam, phishing, suspicious email, and files to Microsoft](submissions-report-messages-files-to-microsoft.md)
