@@ -611,4 +611,6 @@ Consider applying the Standard or Strict preset security policies to a subset of
 
 The **Built-in protection** preset security policy doesn't affect recipients in existing Safe Links or Safe Attachments policies. If you already configured **Standard protection**, **Strict protection**, custom Safe Links policies, or custom Safe Attachments policies, those policies are _always_ applied _before_ **Built-in protection**.
 
-For more information, see [Order and precedence of email protection](how-policies-and-protections-are-combined.md).
+## Related content
+
+[Order and precedence of email protection](how-policies-and-protections-are-combined.md).

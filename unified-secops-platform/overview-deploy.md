@@ -1,5 +1,5 @@
 ---
-title: Deploy Microsoft Security Services for Unified Security Operations | Microsoft Defender
+title: Deploy Microsoft Security Services for Unified Security Operations
 description: Deploy Microsoft Defender portal services for unified security operations, including Microsoft Defender XDR, Microsoft Sentinel, and other Microsoft Defender services.
 author: guywi-ms
 ms.author: guywild
@@ -141,4 +141,3 @@ For more information, see [Microsoft incident creation ](/azure/sentinel/microso
 With fusion, anomaly, and threat intelligence analytic rules enabled, conduct a MITRE Att&ck crosswalk to help you decide which remaining analytic rules to enable and to finish implementing a mature XDR (extended detection and response) process. This empowers you to detect and respond throughout the lifecycle of an attack.
 
 For more information, see [Understand security coverage](/azure/sentinel/mitre-coverage).
-
