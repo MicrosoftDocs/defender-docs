@@ -17,6 +17,9 @@ Learn more about the [cloud availability](support-matrix-defender-for-cloud.md#c
 
 ## Serverless protection requirements and availability
 
+> [!NOTE]
+> Starting August 18, stale recommendations will be removed. This change may impact your secure score if the recommendations were present in your subscriptions. To keep serverless coverage for your subscriptions, make sure to enable Serverless protection following the steps shared below (billing applies).
+
 Serverless protection is available as part of the [Defender cloud security posture management (Defender CSPM) plan](concept-cloud-security-posture-management.md#cspm-plans).
 
 To enable serverless protection, you must [enable the Defender CSPM plan](tutorial-enable-cspm-plan.md) on your subscription and [enable the Serverless protection component](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan) of that plan.
@@ -41,16 +44,12 @@ See [limitations](#limitations) for serverless resources.
 Defender for Cloud extends its CSPM capabilities to serverless workloads by providing continuous visibility and risk assessment with the following features:
 
 - **Automatic resource discovery**: Detects all serverless resources (Azure Functions, Web Apps, AWS Lambda) and lists them in a unified inventory.
-
 - **Continuous posture assessment**: Evaluates configurations for risks like public endpoints, weak authentication, and missing encryption.
-
 - **Misconfiguration detection**: Highlights risks in:
     - **Access control**: Restricts network exposure and enforces authentication.
     - **Identity and permissions**: Helps prevent lateral movement, data exfiltration, and privilege abuse.
     - **Code integrity**: Helps protect against unauthorized code changes, such as AWS Lambda code signing bypass risks.
- 
 - **Vulnerability assessment**: Scans function packages for vulnerable dependencies and provides remediation guidance.
-
 - **Attack path analysis**: Maps potential attack chains that involve serverless resources so you can prioritize high-risk issues.
 
 Defender for Cloud uses these features to help organizations secure serverless workloads in dynamic cloud environments.
@@ -67,6 +66,36 @@ Serverless protection in Defender for Cloud works through a combination of autom
 
 After Defender for Cloud discovers the resources, it continuously monitors their configurations and runtime environments. It evaluates these resources against a set of security best practices and compliance standards to identify misconfigurations, vulnerabilities, and insecure dependencies. When it detects a risk, Defender for Cloud generates security recommendations with detailed remediation steps to help you address the issues.
 
+## Enable Serverless protection for your environment
+
+Use the following steps to enable Serverless protection for each environment. You need the appropriate permissions to change Defender CSPM settings.
+
+### Azure
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Select the Azure subscription where you want to enable Serverless protection.
+1. Select **Defender CSPM** and turn on the **Serverless protection** toggle.
+
+    :::image type="content" source="media/serverless-protection/enable-serverless-protection-azure.png" alt-text="Screenshot that shows the Serverless protection component turned on in the Defender CSPM plan settings for an Azure subscription." lightbox="media/serverless-protection/enable-serverless-protection-azure.png":::
+
+1. Select **Save and close**.
+
+Repeat these steps for each Azure subscription that requires serverless coverage.
+
+### AWS
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Select the connected AWS account where you want to enable Serverless protection.
+1. Select **Defender CSPM** and turn on the **Serverless protection** toggle.
+
+    :::image type="content" source="media/serverless-protection/enable-serverless-protection-aws.png" alt-text="Screenshot that shows the Serverless protection component turned on in the Defender CSPM plan configuration for a connected AWS account." lightbox="media/serverless-protection/enable-serverless-protection-aws.png":::
+
+1. Select **Save and close**.
+
+Repeat these steps for each connected AWS account that requires serverless coverage.
+
 ### Inventory
 
 Defender for Cloud provides a unified inventory of all discovered serverless resources, so you can easily view and manage them. The inventory page includes details such as resource names, types, locations, and associated security findings. Simply filter the results based on resource type to focus on Web Apps, Azure Functions, or AWS Lambda functions.
@@ -75,8 +104,7 @@ Defender for Cloud provides a unified inventory of all discovered serverless res
 
 After you filter your results, select a resource to view details about its security posture, including active security recommendations and their severity levels.
 
-:::image type="content" source="media/serverless-protection/resource-health.png" alt-text="Resource details page for a serverless workload showing security health, active recommendations, and severity information." lightbox="media/serverless-protection/resource-health.png":::
-
+:::image type="content" source="media/serverless-protection/resource-health.png" alt-text="Resource details page for a serverless workload showing security health, active recommendations, and severity information." lightbox="media/serverless-protection/resource-health.png":::  
 You can also review the security recommendations associated with each resource to prioritize remediation based on finding severity.
 
 Learn how to [remediate security recommendations](implement-security-recommendations.md).
@@ -113,4 +141,5 @@ Serverless resources that aren't eligible for vulnerability assessment include:
 
 - [Protect your resources with Defender CSPM](tutorial-enable-cspm-plan.md)
 - [Remediate recommendations in Microsoft Defender for Cloud](implement-security-recommendations.md)
+
 - [Build queries with Cloud Security Explorer](how-to-manage-cloud-security-explorer.md)
