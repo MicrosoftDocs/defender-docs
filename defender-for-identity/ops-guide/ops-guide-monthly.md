@@ -1,5 +1,5 @@
 ---
-title: Monthly operational guide - Microsoft Defender for Identity
+title: Monthly Operational Guide - Microsoft Defender for Identity
 description: Learn about the Microsoft Defender for Identity activities that we recommend for your team on a monthly basis.
 ms.date: 07/02/2026
 ms.topic: how-to
@@ -42,10 +42,7 @@ Use the following resources to stay informed about recent changes and new featur
 
 - For details about Defender for Identity updates, see [What's new in Microsoft Defender for Identity](../whats-new.md).
 
-<a name="related-content"></a>
-## Related Defender for Identity operations resources
-
-For more information, see:
+## Related content
 
 - [Microsoft Defender Security operations overview](/security/operations/overview)
 - [Microsoft Defender for Identity operational guide](ops-guide.md)

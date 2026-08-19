@@ -1,5 +1,5 @@
 ---
-title: Uninstall the sensor
+title: Uninstall the Sensor
 description: Remove the Microsoft Defender for Identity sensor from domain controllers by deleting, uninstalling, or cleaning up orphaned and duplicate entries in the Microsoft Defender portal.
 ms.date: 07/02/2026
 ms.topic: how-to
@@ -32,7 +32,7 @@ Deactivating Defender for Identity capabilities from your domain controller does
 To delete a v3.x sensor from the Microsoft Defender portal, follow these steps:
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Identities** > **Sensors**.
-2. Select the domain controller where you want to deactivate Defender for Identity capabilities, select **Delete**, and confirm your selection.
+1. Select the domain controller where you want to deactivate Defender for Identity capabilities, select **Delete**, and confirm your selection.
 
    :::image type="content" source="media/screenshot-that-shows-how-to-delete-a-sensor.png" alt-text="Screenshot that shows how to delete a sensor." lightbox="media/screenshot-that-shows-how-to-delete-a-sensor.png":::   
 
@@ -40,13 +40,13 @@ To delete a v3.x sensor from the Microsoft Defender portal, follow these steps:
 
 > [!IMPORTANT]
 > We recommend removing the sensor from the domain controller before demoting the domain controller.
-> 
+
 1. Sign in to the domain controller with administrative privileges.
-2. From the Windows **Start** menu, select **Settings** > **Control Panel** > **Add/ Remove Programs**.
-3. Select the sensor installation, select **Uninstall**, and follow the instructions to remove the sensor.
-4. After the uninstall finishes, open the [Microsoft Defender portal](https://security.microsoft.com).
-5. Go to **Settings** > **Identities** > **Sensors**.
-6. Select the domain controller, and then select **Delete**.
+1. From the Windows **Start** menu, select **Settings** > **Control Panel** > **Add/ Remove Programs**.
+1. Select the sensor installation, select **Uninstall** and follow the instructions to remove the sensor.
+1. After the uninstall finishes, open the [Microsoft Defender portal](https://security.microsoft.com).
+1. Go to **Settings** > **Identities** > **Sensors**.
+1. Select the domain controller, and then select **Delete**.
 
 ## Remove an orphaned sensor
 
@@ -55,7 +55,7 @@ A sensor can be orphaned when a domain controller was deleted without first unin
 1. In the [Defender portal](https://security.microsoft.com), go to **Settings** and then **Identities**. Select **Sensors** on the left to display all your Defender for Identity sensors.
 1. Locate the orphaned sensor and select **Delete** (trash can icon).
 
-    ![Screenshot of the Defender for Identity sensors page showing the delete option for an orphaned sensor.](media/delete-orphaned-sensor.png)
+    :::image type="content" source="media/delete-orphaned-sensor.png" alt-text="Screenshot of the Defender for Identity sensors page showing the delete option for an orphaned sensor.":::
 
 ## Remove a duplicate sensor
 
@@ -68,7 +68,7 @@ A duplicate sensor entry can appear after an in-place sensor upgrade, where the 
 
 Use the following command to perform a silent uninstall of the Defender for Identity sensor:
 
-**Syntax**:
+### Syntax
 
 The following command shows the available options for removing the sensor from the command line, including optional silent and help switches.
 
@@ -76,7 +76,7 @@ The following command shows the available options for removing the sensor from t
 "Azure ATP sensor Setup.exe" [/quiet] [/Uninstall] [/Help]
 ```
 
-**Installation options**:
+### Installation options
 
 > [!div class="mx-tableFixed"]
 >
@@ -86,7 +86,7 @@ The following command shows the available options for removing the sensor from t
 > |Uninstall|/uninstall|Yes|Runs the silent uninstallation of the Defender for Identity sensor from the server.|
 > |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
 
-**Examples**:
+### Examples
 
 To silently uninstall the Defender for Identity sensor from the server:
 
@@ -94,6 +94,6 @@ To silently uninstall the Defender for Identity sensor from the server:
 "Azure ATP sensor Setup.exe" /quiet /uninstall
 ```
 
-## See also
+## Related content
 
 - [Manage and update Microsoft Defender for Identity sensors](sensor-settings.md)

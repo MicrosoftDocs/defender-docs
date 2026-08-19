@@ -1,5 +1,5 @@
 ---
-title: Configure table settings in Microsoft Sentinel
+title: Configure Table Settings in Microsoft Sentinel
 description: Configure retention and data tier settings for Microsoft Sentinel and Defender XDR tables in the Microsoft Defender portal, and use Table insights to monitor ingestion health and optimize costs.
 ms.author: guywild
 author: guywi-ms
@@ -32,7 +32,7 @@ Microsoft Sentinel workspace permissions let you view or manage tables in specif
 
 The following table lists the permissions required to view or configure table settings.
 
-| Action | Unified role-based access control (RBAC) in the Defender portal | Microsoft Sentinel workspace permissions |
+| Action | Unified RBAC in the Defender portal | Microsoft Sentinel workspace permissions |
 | --- | --- | --- |
 | View table settings | `Security data basics (read)` permissions under the `Security operations` permissions group | `Microsoft.OperationalInsights/workspaces/tables/read` permissions to the Log Analytics workspace, as provided by the [Log Analytics Reader built-in role](/azure/azure-monitor/logs/manage-access#log-analytics-reader), for example. |
 | Configure table settings | `Data (manage)` permissions under the `Data operations` permissions group | `Microsoft.OperationalInsights/workspaces/write` and `Microsoft.OperationalInsights/workspaces/tables/write` permissions to the Log Analytics workspace, as provided by the [Log Analytics Contributor built-in role](/azure/azure-monitor/logs/manage-access#log-analytics-contributor), for example. |
@@ -161,9 +161,7 @@ Keep the following limits in mind when you interpret the **Table insights** data
 | Alerting | **Table insights** is a visualization surface only. To alert on table health, such as when a connector goes silent, create a scheduled analytics rule that uses the `SentinelHealth` table or a Kusto Query Language (KQL) query against `Usage` or a table-specific schema. |
 | Multi-workspace view | **Table insights** shows data for the currently selected workspace only. If you manage multiple workspaces, switch workspaces to review each one separately. |
 
-## Next steps
-
-Learn more about:
+## Related content
 
 - [Microsoft Sentinel data lake](datalake/sentinel-lake-overview.md)
 - [KQL jobs in Microsoft Sentinel](datalake/kql-jobs.md)
