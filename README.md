@@ -19,9 +19,9 @@ Contributors who make infrequent or small updates can edit the file directly on 
 
 1. Verify that you're signed in to GitHub.com with your GitHub account.
 2. On learn.microsoft.com, find the article that you want to update.
-3. Above the title of the article, select ![Edit this document icon.](media/quick-update-learn-edit-icon.png) **Edit this document**.
+3. Above the title of the article, find and click the three-dot menu, then select **Edit**. _(The edit option may not be available in all articles.)_
 
-   ![Screenshot of how to edit this document button on a learn.microsoft.com article.](media/quick-update-edit-button-on-learn-page.png)
+   <img width="1445" height="534" alt="image" src="https://github.com/user-attachments/assets/6be41bc5-7492-4f6f-8bef-ac8ddf974108" />
 
 4. The corresponding article file opens on GitHub. Select ![Fork this repository and edit this file icon.](media/quick-update-github-edit-icon.png) **Fork this repository and edit this file**.
 
