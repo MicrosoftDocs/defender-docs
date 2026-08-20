@@ -28,7 +28,7 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 Starting in August 2026, Microsoft Defender unified role-based access control (RBAC) is automatically enabled for new Defender for Cloud Apps customers. No manual workload activation is required.
 
-Unified RBAC provides a centralized experience for managing roles and permissions across Microsoft Defender products. Existing customers retain their current permissions configuration unless they activate unified RBAC.
+Unified RBAC provides a centralized experience for managing roles and permissions across Microsoft Defender products. 
 
 ## June 2026
 
