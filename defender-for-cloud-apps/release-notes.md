@@ -22,6 +22,14 @@ For more information on what's new with other Microsoft Defender security produc
 
 For news about earlier releases, see [Archive of past updates for Microsoft Defender for Cloud Apps](release-note-archive.md).
 
+## August 2026
+
+### Unified RBAC is enabled by default for new Defender for Cloud Apps customers
+
+Starting in August 2026, Microsoft Defender unified role-based access control (RBAC) is automatically enabled for new Defender for Cloud Apps customers. No manual workload activation is required.
+
+Unified RBAC provides a centralized experience for managing roles and permissions across Microsoft Defender products. Existing customers retain their current permissions configuration unless they activate unified RBAC.
+
 ## June 2026
 
 ### File policies retiring January 6, 2027
