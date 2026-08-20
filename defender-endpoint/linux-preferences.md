@@ -264,43 +264,40 @@ The *antivirusEngine* section of the configuration profile manages the preferenc
 
 |Description|JSON Value|Defender portal value|
 |---|---|---|
-|**Key**|`antivirusEngine`|Antivirus Engine|
-|**Data type**|Dictionary (nested preference)|Collapsed Section|
+|**Key**|`enforcementLevel`|Enforcement level|
+|**Data type**|String|Drop down|
+|**Possible values**|`real_time`<br/>`audit`<br/>`on_demand`<br/>`passive`|Not configured<br/>Real-time<br/>Audit<br/>On-demand<br/>Passive|
 
 For descriptions of the dictionary contents and policy properties, see [Enforcement level for Microsoft Defender Antivirus](#enforcement-level-for-microsoft-defender-antivirus), [Scan exclusions](#scan-exclusions), [Threat type settings](#threat-type-settings), and [Exclusion merge policy](#exclusion-merge-policy).
 
 #### Enforcement level for Microsoft Defender Antivirus
 
-Specifies the enforcement preference of the antivirus engine. There are three values for setting enforcement level:
+Specifies the enforcement preference of the antivirus engine. There are four values for setting enforcement level:
 
 > [!IMPORTANT]
-> Only one enforcement level can be configured at a time. You can configure either `passive` or `real-time` mode, but not both.
+> By default, Microsoft Defender Antivirus is set to `passive`. You can change the enforcement level based on your requirements.
 
-- **Real-time** (`real_time`): Real-time protection (scan files as they're modified) is enabled.
+|Enforcement level|Description|
+|---|---|
+|**Real-time**|Actively monitors, detects, and remediates threats in real time.|
+|**Audit**|Actively monitors and detects threats in real time without automatically remediating them.|
+|**On-demand**|Detects and remediates threats only during manual or scheduled scans.|
+|**Passive**|Doesn't provide real-time threat detection. Threats can still be detected during manual or scheduled scans.|
 
-- **On-demand** (`on_demand`): Files are scanned only on demand:
-  - Real-time protection is off.
-  - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true` in on-demand mode.
+##### Verify the enforcement level
 
-- **Passive** (`passive`): Runs the antivirus engine in passive mode:
-  - Real-time protection is off. Microsoft Defender Antivirus doesn't remediate threats.
-  - On-demand scanning is on. Scan capabilities are still available on the device.
-  - Automatic threat remediation is off. No files are moved and your security administrator is expected to take required action.
-  - Security intelligence updates are on. Alerts are available in the security administrator's organization.
-  - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true`.
-  - [Endpoint detection and response (EDR)](overview-endpoint-detection-response.md) is on. The output of the `mdatp health` command on the device shows `engine not loaded` for the `engine_load_version` property. The engine is related to antivirus, not EDR.
-
-To check whether real-time protection is active after applying an enforcement level configuration, run the following command. The command returns `true` if real-time protection is enabled or `false` if it's disabled:
+To verify the active antivirus enforcement level, run:
 
 ```bash
-mdatp health --field real_time_protection_enabled
+mdatp health --field antivirus_enforcement_level
 ```
+
+The command returns the active enforcement level (`real_time`, `audit`, `on_demand`, or `passive`).
 
 > [!NOTE]
 >
-> - Available in Defender for Endpoint version `101.10.72` or later.
-> - In version `101.23062.0001` or later, the default value is `passive`. In previous versions, the default was `real_time`.
-> - We also recommended using [scheduled scans](schedule-antivirus-scans-linux.md) as per requirement.
+> - Audit mode is available in Defender for Endpoint version `101.26062.0007` or later.
+> - Before enabling real-time protection, we recommend running a full scan to identify and remediate any existing threats. This helps ensure the device is in a clean state before real-time monitoring and protection are enabled. For information about scheduling scans, see [Schedule antivirus scans on Linux (preview)](schedule-antivirus-scans-linux.md).
 
 #### Enable or disable behavior monitoring (if RTP is enabled)
 
