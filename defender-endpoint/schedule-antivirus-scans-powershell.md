@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1016
-ms.date: 07/02/2026
+ms.custom: nextgen, msecd-doc-authoring-1015
+ms.date: 08/20/2026
 ms.reviewer: pauhijbr, ksarens
 ms.subservice: ngp
 ms.topic: how-to
@@ -21,6 +21,7 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ai-usage: ai-assisted
+#customer intent: As a security administrator, I want to schedule Microsoft Defender Antivirus scans with PowerShell so that Windows devices receive scans at the intended times.
 ---
 # Schedule antivirus scans using PowerShell
 
@@ -131,8 +132,8 @@ The following **Set-MpPreference** parameters are also available for scheduled s
   - $false: After two missed scheduled full scans, Windows Defender runs a catch-up scan the next time someone signs in to the computer.
 
 - _DisableCatchupQuickScan_: Specifies whether to disable catch-up scans for missed scheduled quick scans. Valid values are:
-  - $true: Windows Defender doesn't run catch-up scans for missed scheduled quick scans. This value is the default.
-  - $false: After two missed scheduled quick scans, Windows Defender runs a catch-up scan the next time someone signs in to the computer.
+  - $true: Windows Defender doesn't run catch-up scans for missed scheduled quick scans.
+  - $false: After two missed scheduled quick scans, Windows Defender runs a catch-up scan the next time the device powers on or resumes from sleep or hibernation. This value is the default.
 
 - _EnableFullScanOnBatteryPower_: Specifies whether to enable full scans while on battery power. Valid values are:
   - $true: Windows Defender does full scans while on battery power.
@@ -174,4 +175,3 @@ Scheduled full scans to complete remediation use the following parameters:
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-

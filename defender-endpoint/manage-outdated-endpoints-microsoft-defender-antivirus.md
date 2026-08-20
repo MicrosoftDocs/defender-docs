@@ -12,7 +12,7 @@ ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier3
-ms.date: 08/12/2026
+ms.date: 08/20/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -255,7 +255,7 @@ To enable and configure the catch-up scan feature in Group Policy, use the follo
 
 ### Use PowerShell cmdlets to configure catch-up scans
 
-Use the following cmdlets to enable or disable catch-up scans for full and quick scheduled scans. By default, catch-up scans are enabled. Set these values to `$true` to disable catch-up behavior if you don't want a scan to be forced after missed scheduled scans:
+Use the following cmdlets to enable or disable catch-up scans for full and quick scheduled scans. By default, catch-up full scans are disabled, and catch-up quick scans are enabled. Set the corresponding value to `$true` to disable catch-up behavior if you don't want a scan to be forced after missed scheduled scans:
 
 ```PowerShell
 Set-MpPreference -DisableCatchupFullScan
