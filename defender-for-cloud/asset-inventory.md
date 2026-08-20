@@ -74,7 +74,7 @@ The **Installed applications** tab provides the following information:
 | **Vendor** | The vendor or publisher of the software. |
 | **Software name** | The name of the software product. |
 | **Version** | The detected software version. |
-| **First seen at** | The date and time when the software was first seen on the asset, when available for that software. |
+| **First seen at** | The date and time when the software was first seen on the asset. This field is populated only for software detected by agent-based scanning. It remains empty for software detected by agentless scanning. |
 | **Evidence** | The file paths, registry paths, or both that indicate where the software was detected, when available. |
 | **Number of known vulnerabilities** | The number of known vulnerabilities associated with the detected software version. |
 | **End of support status** | The support lifecycle status of the software or software version, when available. |
