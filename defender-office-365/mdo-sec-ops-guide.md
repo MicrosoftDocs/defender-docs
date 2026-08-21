@@ -208,7 +208,7 @@ The following permissions (roles and role groups) are available in Defender for 
 
 - **Exchange Online** and **Email & collaboration**: Roles and role groups that grant permission specific to Microsoft Defender for Office 365. The following roles aren't available in Microsoft Entra ID, but can be important for security teams:
 
-  - **Preview** role (Email & collaboration): Assign this role to team members who need to preview or download email messages as part of investigation activities. Allows users to preview and download email messages from cloud mailboxes using [Threat Explorer (Explorer) or Real-time detections](threat-explorer-real-time-detections-about.md#about-threat-explorer-and-real-time-detections-in-microsoft-defender-for-office-365) and the [Email entity page](mdo-email-entity-page.md).
+  - **Preview** role (**Email & collaboration**): Assign this role to team members who need to preview or download email messages as part of investigation activities. Allows users to preview and download email messages from cloud mailboxes using [Threat Explorer (Explorer) or Real-time detections](threat-explorer-real-time-detections-about.md#about-threat-explorer-and-real-time-detections-in-microsoft-defender-for-office-365) and the [Email entity page](mdo-email-entity-page.md).
 
     By default, the **Preview** role is assigned only to the following role groups:
 
@@ -217,7 +217,7 @@ The following permissions (roles and role groups) are available in Defender for 
 
     You can add users to those role groups, or you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Preview** role assigned, and add the users to the custom role group.
 
-  - **Search and Purge** role (Email & collaboration): Approve the deletion of malicious messages as recommended by AIR or take manual action on messages in hunting experiences like Threat Explorer.
+  - **Search and Purge** role (**Email & collaboration**): Approve the deletion of malicious messages as recommended by AIR or take manual action on messages in hunting experiences like Threat Explorer.
 
     By default, the **Search and Purge** role is assigned only to the following role groups:
 
@@ -226,7 +226,7 @@ The following permissions (roles and role groups) are available in Defender for 
 
     You can add users to those role groups, or you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
 
-  - **Tenant AllowBlockList Manager** (Exchange Online): Manage allow and block entries in the [Tenant Allow/Block List](tenant-allow-block-list-about.md). Blocking URLs, files (using file hash) or senders is a useful response action to take when investigating malicious email that was delivered.
+  - **Tenant AllowBlockList Manager** (**Exchange Online**): Manage allow and block entries in the [Tenant Allow/Block List](tenant-allow-block-list-about.md). Blocking URLs, files (using file hash) or senders is a useful response action to take when investigating malicious email that was delivered.
 
     By default, this role is assigned only to the **Security Operator role group in Exchange Online**, not in Microsoft Entra ID. Membership in the **[Security Operator role in Microsoft Entra ID](/entra/identity/role-based-access-control/permissions-reference#security-operator)** _doesn't_ allow you to manage entries the Tenant Allow/Block List.
 
@@ -334,3 +334,8 @@ Data from alerts and investigations in Defender for Office 365 is automatically 
 - Microsoft Defender for Identity
 
 If a relationship is discovered, the system creates an incident that gives visibility for the entire attack.
+
+## Related content
+
+- [Microsoft Defender for Office 365 overview](mdo-about.md)
+- [Get started with Microsoft Defender for Office 365](mdo-deployment-guide.md)

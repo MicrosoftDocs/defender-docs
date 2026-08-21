@@ -6,12 +6,12 @@ ms.author: chrisda
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: how-to
-ms.custom: nextgen, msecd-doc-authoring-1016
+ms.custom: nextgen, msecd-doc-authoring-1015
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-ms.date: 07/02/2026
+ms.date: 08/20/2026
 ms.subservice: ngp
 ms.localizationpriority: medium
 appliesto:
@@ -20,6 +20,7 @@ appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender Antivirus
 ai-usage: ai-assisted
+#customer intent: As a security administrator, I want to schedule Microsoft Defender Antivirus scans in Intune so that managed Windows devices receive consistent scan coverage.
 ---
 
 # Schedule antivirus scans using Microsoft Intune
@@ -93,6 +94,11 @@ Review the following general scheduled-scan settings when configuring your polic
 |Disable Catchup Full Scan|Enabled (Default)|
 |Disable Catchup Quick Scan|Disabled (Default)|
 
+The catch-up scan settings use negative names, so their values have inverse effects:
+
+- **Disable Catchup Full Scan**: **Enabled** disables catch-up full scans. Catch-up full scans are disabled by default.
+- **Disable Catchup Quick Scan**: **Disabled** enables catch-up quick scans. Catch-up quick scans are enabled by default.
+
 > [!NOTE]
 > When you schedule scans for times when endpoints aren't in use, scans don't honor the CPU throttling configuration and takes full advantage of the resources available to complete the scan as fast as possible.
 
@@ -110,4 +116,3 @@ Review the following general scheduled-scan settings when configuring your polic
 - [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
 
 - [Microsoft Defender Antivirus full scan considerations and best practices](mdav-scan-best-practices.md)
-

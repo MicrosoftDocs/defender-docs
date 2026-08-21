@@ -24,6 +24,7 @@ ai-usage: ai-assisted
 Watchlists in Microsoft Sentinel help you correlate data from a data source you provide with the events in your Microsoft Sentinel environment. For example, you might create a watchlist with a list of high value assets, terminated employees, or service accounts in your environment.
 
 You can create a watchlist by using any of the following methods:
+
 - [Upload a watchlist file from a local folder](#upload-a-watchlist-from-a-local-folder)
 - [Upload a watchlist file from your Azure Storage account](#create-a-large-watchlist-from-file-in-azure-storage-preview)
 - [Create a watchlist manually](#create-a-watchlist-manually-preview)
@@ -258,10 +259,8 @@ If you delete and recreate a watchlist, you might see both the deleted and recre
 
 ## Related content
 
-For more information about watchlists and Microsoft Sentinel, see:
-
-- Learn how to [get visibility into your data and potential threats](get-visibility.md)
-- Get started [detecting threats with Microsoft Sentinel](./detect-threats-built-in.md)
-- [Use workbooks](monitor-your-data.md) to monitor your data.
-- [Manage watchlists](watchlists-manage.md)
-- [Build queries and detection rules with watchlists](watchlists-queries.md)
+- [Visualize collected data on the Microsoft Sentinel Overview page](get-visibility.md)
+- [Threat detection in Microsoft Sentinel](detect-threats-built-in.md)
+- [Visualize and monitor your data by using workbooks in Microsoft Sentinel](monitor-your-data.md)
+- [Manage watchlists in Microsoft Sentinel](watchlists-manage.md)
+- [Build queries or detection rules with watchlists in Microsoft Sentinel](watchlists-queries.md)

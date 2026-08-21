@@ -1,5 +1,5 @@
 ---
-title: Migrate from Advanced Threat Analytics | Microsoft Defender for Identity
+title: Migrate from Advanced Threat Analytics
 description: Learn how to move an existing Advanced Threat Analytics installation to Microsoft Defender for Identity.
 ms.date: 07/02/2026
 ms.topic: how-to
@@ -40,7 +40,6 @@ Defender for Identity also uses the Microsoft 365 security portfolio to automati
 > This migration guide is designed for Defender for Identity sensors only, and not standalone sensors.
 >
 > While you can migrate to Defender for Identity from any ATA version, your ATA data isn't migrated. Therefore, we recommend that you plan to retain your ATA Data Center and any alerts required for ongoing investigations until all ATA alerts are closed or remediated.
->
 
 > [!NOTE]
 > The final release of ATA is [Update 3 for Microsoft Advanced Threat Analytics 1.9](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA ended Mainstream Support on January 12, 2021. Extended Support will continue until January 2026. For more information, read [End of mainstream support for Advanced Threat Analytics](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
@@ -65,16 +64,16 @@ Before starting the migration, gather all of the following information:
 
 - **[VPN integration details](vpn-integration.md)**.
 
-- **Alert exclusions**. Exclusions are not transferable from ATA to Defender for Identity, so details of each exclusion are required to [replicate the exclusions as Defender for Identity](exclusions.md) in Microsoft Defender.
+- **Alert exclusions**: Exclusions are not transferable from ATA to Defender for Identity, so details of each exclusion are required to [replicate the exclusions as Defender for Identity](exclusions.md) in Microsoft Defender.
 
-- **Account details for entity tags**. If you don't already have dedicated entity tags, create new ones for use with Defender for Identity. For more information, see [Defender for Identity entity tags in Microsoft Defender](entity-tags.md).
+- **Account details for entity tags**: If you don't already have dedicated entity tags, create new ones for use with Defender for Identity. For more information, see [Defender for Identity entity tags in Microsoft Defender](entity-tags.md).
 
-- **A complete list of all entities, such as computers, groups, or users, that you want to manually tag as *Sensitive* entities**. For more information, see [Defender for Identity entity tags in Microsoft Defender](entity-tags.md).
+- **A complete list of all entities, such as computers, groups, or users, that you want to manually tag as *Sensitive* entities**: For more information, see [Defender for Identity entity tags in Microsoft Defender](entity-tags.md).
 
-- **[Report scheduling and classic reports](/defender-for-identity/classic-reports)**, including a list of all reports and scheduled timing.
+- **[Report scheduling and classic reports](/defender-for-identity/classic-reports)**: Including a list of all reports and scheduled timing.
 
 > [!CAUTION]
-> Do not uninstall the ATA Center until all ATA Gateways are removed. Uninstalling the ATA Center with ATA Gateways still running leaves your organization exposed with no threat protection.
+> Don't uninstall the ATA Center until all ATA Gateways are removed. Uninstalling the ATA Center with ATA Gateways still running leaves your organization exposed with no threat protection.
 
 ## Move to Defender for Identity
 
@@ -106,13 +105,10 @@ After completing your migration to Defender for Identity, do the following to cl
 1. Make sure that you've recorded or remediated all existing ATA alerts. Existing ATA security alerts aren't imported to Defender for Identity with the migration.
 1. Do one or both of the following:
 
-    - **Decommission the ATA Center**. We recommend keeping ATA data online for a period of time. 
-    - **Back up Mongo DB** if you want to keep the ATA data indefinitely. For more information, see [Backing up the ATA database](/advanced-threat-analytics/ata-database-management#backing-up-the-ata-database).
+    - **Decommission the ATA Center**: We recommend keeping ATA data online for a period of time.
+    - **Back up Mongo DB**: If you want to keep the ATA data indefinitely. For more information, see [Backing up the ATA database](/advanced-threat-analytics/ata-database-management#backing-up-the-ata-database).
 
 <a name="related-information"></a>
 ## Related content
 
-After migrating to Defender for Identity, learn more about investigating alerts in Microsoft Defender. For more information, see:
-
-- [Understanding security alerts](understanding-security-alerts.md)
-- [Investigate Defender for Identity security alerts in Microsoft Defender](manage-security-alerts.md)
+- [View and manage security alerts](understanding-security-alerts.md)

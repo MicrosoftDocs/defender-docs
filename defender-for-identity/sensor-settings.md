@@ -1,5 +1,5 @@
 ---
-title: Manage and update sensors
+title: Manage and Update Sensors
 description: Learn how to view, manage, and update Microsoft Defender for Identity sensors in the Microsoft Defender portal, including sensor health, migration state, and delayed updates.
 ms.date: 07/15/2026
 ms.topic: how-to
@@ -23,7 +23,6 @@ To view sensor settings and status in the Microsoft Defender portal, perform the
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Identities**.
 1. In the left sidebar, under **Deployment**, select **On-premises**.
 1. Select the **Sensors** tab.
-
 
 :::image type="content" source="media/sensor-settings/sensor-settings-page.png" alt-text="Screenshot that shows the Sensors tab on the On-premises page in the Microsoft Defender portal." lightbox="media/sensor-settings/sensor-settings-page.png":::
 
@@ -158,7 +157,6 @@ Defender for Identity sensors v2.x support two kinds of updates:
   - Restarted: Defender for Identity sensor services
   
 > [!NOTE]
->
 > Defender for Identity sensors v2.x always reserve at least 15% of the available memory and CPU on the domain controller where the sensor is installed. If the service consumes too much memory, it's automatically stopped and restarted by the sensor updater service.
 
 ### Delayed update for sensor v2.x
@@ -200,12 +198,11 @@ Every few minutes, v2.x sensors check whether a newer version is available. When
 
     For any sensor that fails to complete the update process, a relevant [health alert](health-alerts.md) is triggered, and is sent as a notification.
 
-
 ### Silently update the Defender for Identity v2.x sensor
 
 Use the following command to silently update the Defender for Identity v2.x sensor:
 
-**Syntax**:
+#### Syntax
 
 The following command shows the basic syntax for running the sensor installer silently or interactively:
 
@@ -213,7 +210,7 @@ The following command shows the basic syntax for running the sensor installer si
 "Azure ATP sensor Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 ```
 
-**Installation options**:
+#### Installation options
 
 > [!div class="mx-tableFixed"]
 >
@@ -223,7 +220,7 @@ The following command shows the basic syntax for running the sensor installer si
 > |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command including a list of all options and behaviors.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Yes|Specifies the parameters for the .Net Framework installation. Must be set to enforce the silent installation of .Net Framework.|
 
-**Examples**:
+#### Examples
 
 The following example runs the sensor installer silently from the command line without user interaction:
 
@@ -252,8 +249,9 @@ If you'd previously configured your proxy settings via either WinINet or a regis
 
 For more information, see [Configure endpoint proxy and internet connectivity settings](deploy/configure-proxy.md).
 
-## Next steps
+## Related content
 
-- [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/deploy-sensor-v3.md) 
-- [Configure event forwarding](deploy/configure-event-forwarding.md)
+- [Microsoft Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md)
+- [Deploy the Defender for Identity sensor v3.x](deploy/deploy-sensor-v3.md)
+- [Configure Windows event forwarding to your Defender for Identity standalone sensor](deploy/configure-event-forwarding.md)
 - [Defender for Identity community forum](<https://aka.ms/MDIcommunity>)

@@ -70,8 +70,6 @@ Review the following limitations and considerations before enabling CMK for Micr
 
 - Changing the customer-managed key to another key (with another URI) currently *isn't supported*. Change the key by using [key rotation](#customer-managed-key-rotation).
 
-- Before you make any CMK changes to a production workspace or to a Log Analytics cluster, contact the [Microsoft Sentinel Product Group](mailto:onboardrecoeng@microsoft.com).
-
 <a name="how-cmk-works"></a>
 ## How customer-managed keys work in Microsoft Sentinel
 

@@ -29,6 +29,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|macOS |101.26062.0012  |August 2026 |- Release version: 20.126062.12.0<br>- Engine version: 1.1.26060.12000<br>- Signature version: 1.457.164.0 |[Release details and updates](#macos--august-2026--101260620012) |
 |Android |1.0.9129.0101|Aug 2026|- Build: 1.0.9129.0101<br>- Release: Aug 11, 2026|[Release details and updates](#android--aug-2026--platform-1091290101)|
 |iOS |1.1.79210103|Aug 2026|- Build: 1.1.79210103<br>- Release: Aug 04, 2026|[Release details and updates](#ios--aug-2026--platform-version-1179210103)|
 |macOS |101.26062.0011  |August 2026 |- Release version: 20.126062.11.0<br>- Engine version: 1.1.26040.3000<br>- Signature version: 1.449.26.0 |[Release details and updates](#macos--august-2026--101260620011) |
@@ -227,6 +228,20 @@ To share feedback, open Defender for Endpoint on macOS and go to **Help > Send f
 To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device.
 
 For known issues, see [macOS known issues](#macos-known-issues).
+
+### macOS | August-2026 | 101.26062.0012
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 20.126062.12.0  | 1.1.26060.12000 | 1.457.164.0       |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|----------------|
+| General      | Bug and performance fixes |
 
 ### macOS | August-2026 | 101.26062.0011
 

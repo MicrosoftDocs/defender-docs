@@ -12,8 +12,8 @@ ms.collection:
 - demo
 ms.topic: how-to
 ms.subservice: asr
-ms.custom: msecd-doc-authoring-1016
-ms.date: 07/02/2026
+ms.custom: msecd-doc-authoring-1015
+ms.date: 08/12/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -83,7 +83,9 @@ For the full list of requirements, supported operating systems, and modes, see [
    - Enables the [demonstration ASR rules](#asr-rules-in-this-demonstration) in **Enabled** (block) mode.
    - Adds `c:\demo` to the CFA protected folders list (without affecting your other protected folders).
 
-   > [!NOTE]
+   > [!IMPORTANT]
+   > The setup script adds `c:\demo` to the Microsoft Defender Antivirus exclusion list. Don't run ASR test files from `c:\demo` or one of its subfolders when you're testing for an ASR block or detection. ASR rules that honor Microsoft Defender Antivirus exclusions, including **Use advanced protection against ransomware**, might not generate the expected block or detection. Before you run a test file, copy it to a folder that isn't excluded from Microsoft Defender Antivirus or ASR rules. For more information, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
+   >
    > The setup and cleanup scripts adjust CFA because they're shared with the [CFA block app](defender-endpoint-demonstration-controlled-folder-access-block-app.md) and [CFA ransomware](defender-endpoint-demonstration-controlled-folder-access-ransomware.md) demonstrations. None of the ASR rule scenarios in this article use CFA. The setup script adds `c:\demo` to the CFA protected folders list but doesn't enable CFA, so the entry has no effect on this demonstration. The cleanup script disables CFA, so before you run the setup script, check your current [CFA mode](controlled-folder-access-overview.md#modes-for-cfa) and note the value so that you can restore it in the [Clean up the demonstration](#clean-up-the-demonstration) section:
    >
    > ```powershell
@@ -94,7 +96,7 @@ For the full list of requirements, supported operating systems, and modes, see [
 
    1. Create the folder `c:\demo`.
 
-   1. Add `c:\demo` to the Microsoft Defender Antivirus exclusion list so that real-time protection doesn't quarantine the test files before the ASR rules evaluate them. Run the following command in an elevated PowerShell window:
+   1. Add `c:\demo` to the Microsoft Defender Antivirus exclusion list so that real-time protection doesn't quarantine the test files while you download and extract them. Run the following command in an elevated PowerShell window:
 
       ```powershell
       Add-MpPreference -ExclusionPath C:\demo
@@ -161,7 +163,7 @@ Use the following scenarios to verify how the demonstration ASR rules behave in 
 Do the following steps to confirm that all demonstration ASR rules block their corresponding test files:
 
 1. Enable the [demonstration ASR rules](#asr-rules-in-this-demonstration) in **Block** mode. Run the `WindowsDefender_ASR_Block.ps1` script (see [Set up the demonstration](#set-up-the-demonstration)), or use the [PowerShell command](#set-up-the-demonstration).
-1. Download and open the test files. If prompted, enable editing and content.
+1. Before you open or run a test file, make sure the file is in a folder that isn't excluded from Microsoft Defender Antivirus or ASR rules. If you use a test file that the setup script extracted to `c:\demo\ASRSamplesAll`, copy it to a folder that isn't excluded. Don't run the test file from `c:\demo` or one of its subfolders. If prompted, enable editing and content.
 
 You should immediately see an "Action blocked" notification.
 
@@ -175,7 +177,9 @@ Use this scenario to test a single ASR rule and verify that it blocks its corres
    Add-MpPreference -AttackSurfaceReductionRules_Ids d4f940ab-401b-4efc-aadc-ad5f3c50688a -AttackSurfaceReductionRules_Actions Enabled
    ```
 
-1. Open the test file for the rule you want to test, as listed in the [ASR rules in this demonstration](#asr-rules-in-this-demonstration) table. Files marked _in `ASRSamplesAll.zip`_ are already extracted to `c:\demo\ASRSamplesAll`. For example, for the **Block all Office applications from creating child processes** rule, open `c:\demo\ASRSamplesAll\TestFile_OfficeChildProcess_D4F940AB-401B-4EFC-AADC-AD5F3C50688A.docm`. If prompted, enable editing and content.
+1. Find the test file for the rule in the [ASR rules in this demonstration](#asr-rules-in-this-demonstration) table. Files marked _in `ASRSamplesAll.zip`_ are already extracted to `c:\demo\ASRSamplesAll`.
+1. Copy the test file to a folder that isn't excluded from Microsoft Defender Antivirus or ASR rules. Don't open or run the test file from `c:\demo` or one of its subfolders. For example, for the **Block all Office applications from creating child processes** rule, copy `TestFile_OfficeChildProcess_D4F940AB-401B-4EFC-AADC-AD5F3C50688A.docm` from `c:\demo\ASRSamplesAll` to a folder that isn't excluded.
+1. Open or run the copied test file. If prompted, enable editing and content.
 
 You should immediately see an "Action blocked" notification.
 
@@ -243,6 +247,8 @@ Or, if you used the manual method, do the following steps:
 1. If Scenario 4 encrypted the files in `c:\demo`, decrypt them by using the [decryption tool](https://demo.wd.microsoft.com/Content/ransomware_cleanup_encrypt_decrypt.exe) (`ransomware_cleanup_encrypt_decrypt.exe`).
 
 Whichever method you used, the cleanup script doesn't delete the test files or remove the `c:\demo` Microsoft Defender Antivirus exclusion that the setup script (or the manual steps) added. To fully revert the changes:
+
+1. Delete any test files that you copied outside `c:\demo`.
 
 1. Delete the `c:\demo` folder and the test files it contains. Do this step _before_ you remove the exclusion in the next step. Otherwise, when real-time protection resumes for the folder, Microsoft Defender Antivirus detects the leftover test files (for example, as `Trojan:Win32/Vigorf.A`) and quarantines them. Run the following command in an elevated PowerShell window:
 

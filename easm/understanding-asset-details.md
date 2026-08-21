@@ -22,7 +22,7 @@ For more information, see [Understanding inventory assets](understanding-invento
 
 You can view the asset details page for any asset by selecting its name from your inventory list. On the left pane of this page, you can view an asset summary that provides key information about that particular asset. The asset summary in the left pane primarily includes data that applies to all asset types, although more fields are available in some cases. For more information on the metadata provided for each asset type in the summary section, see the [General asset information](#general-information) table.
 
-![Screenshot that shows an asset details page with the summary pane highlighted.](media/inventory-1.png)
+:::image type="content" source="media/inventory-1.png" alt-text="Screenshot that shows an asset details page with the summary pane highlighted.":::
 
 <a name="general-information"></a>
 ### General asset information
@@ -117,7 +117,7 @@ On the rightmost pane of the asset details page, users can access more expansive
 
 Certain tabs display a **Recent only** toggle in the upper-right corner. By default, Defender EASM displays all data that we've collected for each asset, including historical observations that may not be actively running on your current attack surface. While this historical context is very valuable for certain use cases, the **Recent only** toggle limits all results on the Asset Details page to those most recently observed on the asset. We recommend that you use the **Recent only** toggle when you only wish to view data that represents the current state of the asset for remediation purposes.
 
-![Screenshot that highlights the Recent only toggle from the Overview page of Asset Details.](media/inventory-1b.png)
+:::image type="content" source="media/inventory-1b.png" alt-text="Screenshot that highlights the Recent only toggle from the Overview page of Asset Details.":::
 
 <a name="overview"></a>
 ### Overview tab
@@ -126,7 +126,7 @@ The **Overview** tab provides more context to ensure that significant insights a
 
 The Overview tab can also include dashboard widgets that visualize insights that are relevant to the asset type in question.
 
-![Screenshot that shows the asset details page Overview pane.](media/inventory-2.png)
+:::image type="content" source="media/inventory-2.png" alt-text="Screenshot that shows the asset details page Overview pane.":::
 
 <a name="discovery-chain"></a>
 ### Discovery chain data
@@ -135,7 +135,7 @@ The discovery chain outlines the observed connections between a discovery seed a
 
 In the example, you can see that the seed domain is tied to this asset through the contact email in its Whois record. That same contact email was used to register the IP block that includes this particular IP address asset.
 
-![Screenshot that shows the discovery chain.](media/inventory-3.png)
+:::image type="content" source="media/inventory-3.png" alt-text="Screenshot that shows the discovery chain.":::
 
 <a name="discovery-information"></a>
 ### Discovery information tab
@@ -157,7 +157,7 @@ The Defender EASM IP reputation data displays instances when the IP address was 
 
 In the IP reputation screenshot, the IP address is present on an abnormally high number of threat feeds. The unusually high number of threat-feed detections indicates that the asset should be thoroughly investigated to prevent malicious activity in the future.
 
-![Screenshot that shows the asset details page IP reputation tab.](media/inventory-4.png)
+:::image type="content" source="media/inventory-4.png" alt-text="Screenshot that shows the asset details page IP reputation tab.":::
 
 <a name="services"></a>
 ### Services tab
@@ -166,28 +166,28 @@ The **Services** tab is available for IP address, domain, and host assets. The S
 
 Defender EASM's services data is key to understanding the infrastructure that powers your asset. It can also alert you to resources that are exposed on the open internet that should be protected.
 
-![Screenshot that shows the asset details page Services tab.](media/inventory-5.png)
+:::image type="content" source="media/inventory-5.png" alt-text="Screenshot that shows the asset details page Services tab.":::
 
 <a name="ip-addresses"></a>
 ### IP addresses section
 
 The IP addresses section provides insight on any IP addresses that are running on the asset's infrastructure. On the **Services** tab, Defender EASM provides the name of the IP address and the **First seen** and **Last seen** dates. The **Recent** column indicates whether the IP address was observed during the most recent scan of the asset. If there's no checkbox in this column, the IP address was seen in prior scans, but it isn't currently running on the asset.
 
-![Screenshot that shows the asset details page IP address section of the Services tab.](media/inventory-6.png)
+:::image type="content" source="media/inventory-6.png" alt-text="Screenshot that shows the asset details page IP address section of the Services tab.":::
 
 <a name="mail-servers"></a>
 ### Mail servers section
 
 The Mail servers section provides a list of any mail servers that are running on the asset. The presence of mail servers indicates that the asset is capable of sending emails. In this section, Defender EASM provides the name of the mail server and the **First seen** and **Last seen** dates. The **Recent** column indicates whether the mail server was detected during the most recent scan of the asset.
 
-![Screenshot that shows the asset details page Mail server section of the Services tab.](media/inventory-7.png)
+:::image type="content" source="media/inventory-7.png" alt-text="Screenshot that shows the asset details page Mail server section of the Services tab.":::
 
 <a name="name-servers"></a>
 ### Name servers section
 
 The Name servers section displays any name servers that are running on the asset to provide resolution for a host. In this section, Defender EASM provides the name of the mail server and the **First seen** and **Last seen** dates. The **Recent** column indicates whether the name server was detected during the most recent scan of the asset.
 
-![Screenshot that shows the asset details page Name server section of the Services tab.](media/inventory-8.png)
+:::image type="content" source="media/inventory-8.png" alt-text="Screenshot that shows the asset details page Name server section of the Services tab.":::
 
 <a name="open-ports"></a>
 ### Open ports section
@@ -196,7 +196,7 @@ The Open ports section lists any open ports detected on the asset. Microsoft reg
 
 In this section, Defender EASM provides the open port number, a description of the port, the last state it was observed in, and the **First seen** and **Last seen** dates. The **Recent** column indicates whether the port was observed as open during the most recent scan. Defender EASM considers a port **open** when our system can successfully complete a syn-ack handshake that results in attributed banners. When we can establish a TCP connection but are unable to complete our service fingerprinting, we mark the port as **filtered**. A **closed** port is still accessible but there is no service listening on the port and thus denies connections.
 
-![Screenshot that shows the asset details page Open ports section of the Services tab.](media/inventory-9.png)
+:::image type="content" source="media/inventory-9.png" alt-text="Screenshot that shows the asset details page Open ports section of the Services tab.":::
 
 <a name="trackers"></a>
 ### Trackers tab
@@ -210,7 +210,7 @@ In the Trackers section, Defender EASM provides the tracker type (for example, G
 
 Web components are details that describe the infrastructure of an asset as observed through a Microsoft scan. These components provide a high-level understanding of the technologies used on the asset. Microsoft categorizes the specific components and includes version numbers when possible.
 
-![Screenshot that shows the top of the Web components tab.](media/inventory-10.png)
+:::image type="content" source="media/inventory-10.png" alt-text="Screenshot that shows the top of the Web components tab.":::
 
 The **Web components** section provides the category, name, and version of the component and a list of any applicable Common Vulnerabilities and Exposures (CVEs) that should be remediated. Defender EASM also provides **First seen** and **Last seen** date columns and a **Recent** column. A checked box indicates that this infrastructure was observed during the most recent scan of the asset.
 
@@ -244,23 +244,23 @@ For more information on observations, see [Understanding dashboards](understandi
 
 The **Observations** tab features two tables: **Observations** and **Non-applicable observations**. All active observations determined to be **recent** within your attack surface will be in the **Observations** table, whereas the **Non-applicable observations** table lists any observations that have either been manually marked as non-applicable or were determined by the system to no longer be applicable. To mark observations as non-applicable and therefore exclude that particular observation from dashboard counts, simply select the desired observations and select **Set as non-applicable**.  The observation(s) will immediately disappear from the active **Observations** table and will instead appear on the **Non-applicable observations** table. You can revert this change at any time by selection the relevant observation(s) from this table and selecting **Set as applicable**.
 
-   ![Screenshot that shows the Observations tab with multiple CVEs selected to be marked as non-applicable.](media/cves-3.png)
+:::image type="content" source="media/cves-3.png" alt-text="Screenshot that shows the Observations tab with multiple CVEs selected to be marked as non-applicable.":::
 
 <a name="connected-assets"></a>
 ### Connected assets tab
 
 Connected Assets empowers users to graphically link and gather information about assets for investigative analysis. You can explore your environment and its intricate relationships through relationship mappings, which offer clear and concise views. These relationship mappings help you identify hidden connections and potential attack paths. By visually mapping out the relationships between assets and vulnerabilities, you can comprehend your environment's complexity and make well-informed decisions to enhance your security posture and apply choke points effectively. 
 
-[![Screenshot that shows the Connected assets tab.](media/connected-1.png)](media/connected-1.png#lightbox)
+:::image type="content" source="media/connected-1.png" alt-text="Screenshot that shows the Connected assets tab." lightbox="media/connected-1.png":::
 
-On the Connected assets tab, all the assets that are connected to the specified asset are identified in a list. The list provides key information about each connected asset, including:
+On the **Connected assets** tab, all the assets that are connected to the specified asset are identified in a list. The list provides key information about each connected asset, including:
 
-- **Asset:** The identified connected asset.
-- **Kind:** The type of asset.
-- **State:** The state of the asset.
-- **Labels:** Any labels associated with the asset.
-- **First Seen:** When the asset was first discovered.
-- **Last Seen:** When the asset was last identified.
+- **Asset**: The identified connected asset.
+- **Kind**: The type of asset.
+- **State**: The state of the asset.
+- **Labels**: Any labels associated with the asset.
+- **First Seen**: When the asset was first discovered.
+- **Last Seen**: When the asset was last identified.
 
 From the Connected assets tab, you can modify or remove connected assets. You can also sort or filter the asset list to further categorize the list of connected assets. You can also download a CSV report of the listed assets. Any filters applied will be reflected on the CSV export.
 
@@ -271,21 +271,21 @@ The **Resources** tab provides insight on any JavaScript resources running on an
 
 Defender EASM provides the resource URL, resource host, MD5 (Message-Digest Algorithm 5) hash value, and first-seen and last-seen dates to help organizations effectively monitor the use of JavaScript resources across their inventory.
 
-![Screenshot that shows the Resources tab.](media/inventory-12.png)
+:::image type="content" source="media/inventory-12.png" alt-text="Screenshot that shows the Resources tab.":::
 
 <a name="ssl-certificates"></a>
 ### SSL certificates tab
 
 Certificates are used to secure communications between a browser and a web server via SSL. use of certificates ensures that sensitive data in transit can't be read, tampered with, or forged. The SSL certificates tab in Defender EASM lists any SSL certificates detected on the asset, including key data like the issue and expiry dates.
 
-![Screenshot that shows the SSL certificates tab.](media/inventory-13.png)
+:::image type="content" source="media/inventory-13.png" alt-text="Screenshot that shows the SSL certificates tab.":::
 
 <a name="whois"></a>
 ### Whois tab
 
 The Whois protocol is used to query and respond to the databases that store data related to the registration and ownership of internet resources. Whois contains key registration data that can apply to domains, hosts, IP addresses, and IP blocks in Defender EASM. On the **Whois** data tab, Microsoft provides a robust amount of information associated with the registry of the asset.
 
-![Screenshot that shows the Whois Values tab.](media/inventory-14.png)
+:::image type="content" source="media/inventory-14.png" alt-text="Screenshot that shows the Whois Values tab.":::
 
 The following fields are included in the table in the **Values** section on the **Whois** tab.
 
@@ -312,11 +312,9 @@ Many organizations opt to obfuscate their registry information. Sometimes contac
 
 The **Change history** tab displays a list of modifications that have been applied to an asset over time. This information helps you track these changes over time and better understand the lifecycle of the asset. This tab displays a variety of changes, including but not limited to asset states, labels and external IDs. For each change, we list the user who implemented the change and a timestamp.
 
-[![Screenshot that shows the Change history tab.](media/change-history-1.png) ](media/change-history-1.png#lightbox)
+:::image type="content" source="media/change-history-1.png" alt-text="Screenshot that shows the Change history tab." lightbox="media/change-history-1.png":::
 
 ## Related content
 
-For more information about Defender EASM features related to asset details, see the following articles:
-
-- [Understand dashboards](understanding-dashboards.md)
-- [Use and manage discovery](using-and-managing-discovery.md)
+- [Understand Defender EASM dashboards](understanding-dashboards.md)
+- [Use and manage Defender EASM discovery](using-and-managing-discovery.md)

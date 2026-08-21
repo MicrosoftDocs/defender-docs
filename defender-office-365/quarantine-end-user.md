@@ -416,7 +416,7 @@ When you select multiple quarantined messages on the **Email** tab by selecting 
 ## Manage quarantined messages in Microsoft Teams
 
 > [!NOTE]
-> Currently, the quarantine policy for Teams is set to AdminOnlyAccess, which means users can't access quarantined Teams messages. We're actively working to update quarantine policy configurations.
+> Currently, the quarantine policy for Teams is set to **AdminOnlyAccess**, which means users can't access quarantined Teams messages. We're actively working to update quarantine policy configurations.
 
 Zero-hour auto purge (ZAP) is a protection feature that automatically removes potentially malicious chat messages in Microsoft Teams and places them in quarantine. Users can now view and manage these quarantined Teams messages in the Microsoft Defender portal. Quarantine notifications aren't supported for quarantined Teams messages.
 
@@ -485,3 +485,8 @@ On the **Teams messages** tab, select the quarantined message by selecting the c
 - **Preview message**: You can view the details of the message you selected.
 
 Messages are automatically deleted from quarantine after the date shown in the **Expires** column if you don't release or manually remove the messages.
+
+## Related content
+
+- [Quarantined email messages in cloud organizations](quarantine-about.md)
+- [Frequently asked questions - Quarantined messages](quarantine-faq.yml)
