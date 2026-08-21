@@ -42,7 +42,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 August 21, 2026
 
-Microsoft Defender for Cloud has updated how vulnerability assessment CVE details are consumed in Azure Resource Graph. This isn't a retirement of CVE details. CVE information remains available, but detailed CVE properties are now consumed through the `microsoft.security/cvedetails` resource type to improve query performance, scalability, and support for larger data sets.
+Microsoft Defender for Cloud has updated how vulnerability assessment CVE details are consumed in Azure Resource Graph. CVE information remains available, but detailed CVE properties are now consumed through the `microsoft.security/cvedetails` resource type to improve query performance, scalability, and support for larger data sets.
 
 Customers who use existing API or Azure Resource Graph queries that read CVE details from vulnerability assessment records should update those queries to consume CVE details from the updated Azure Resource Graph resource. Queries that aren't updated might not return the expected detailed CVE properties.
 
