@@ -33,9 +33,20 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| August 21, 2026 | Upcoming change | [Upcoming schema change for CVE details in Azure Resource Graph](#upcoming-schema-change-for-cve-details-in-azure-resource-graph) |
 | August 17, 2026 | Upcoming deprecation | [Classic Defender for SQL APIs retirement](#classic-defender-for-sql-apis-retirement) |
 | August 6, 2026 | Public preview | [On-demand malware scanning now supports scanning specific blobs, files, containers, and file shares](#on-demand-malware-scanning-now-supports-scanning-specific-blobs-files-containers-and-file-shares) |
 | August 6, 2026 | CIEM Updates | [Breaking change: Unused actions no longer included in AWS and GCP overprovisioned identity assessments](#breaking-change-unused-actions-no-longer-included-in-aws-and-gcp-overprovisioned-identity-assessments) |
+
+### Upcoming schema change for CVE details in Azure Resource Graph
+
+August 21, 2026
+
+Microsoft Defender for Cloud is updating the Azure Resource Graph schema used for vulnerability assessment CVE details. CVE details are moving to a separate table to improve query performance, scalability, and support for larger data sets.
+
+Customers who use existing API or Azure Resource Graph queries against the current vulnerability assessment data model must update their queries before the schema change takes effect. Queries that aren't updated might stop returning the expected CVE details after the change.
+
+For migration guidance and sample queries, see [Remediate machine vulnerabilities](remediate-vulnerability-findings-vm.md#export-the-results).
 
 ### Classic Defender for SQL APIs retirement
 
