@@ -1,17 +1,17 @@
 ---
 title: Schedule antivirus scans using Microsoft Intune
-description: Configure scheduled Microsoft Defender Antivirus scans with Microsoft Intune, including daily and weekly scan settings and deployment guidance for managed Windows devices.
+description: Configure scheduled Microsoft Defender Antivirus scans in Intune, including daily and weekly schedules, CPU usage, and catch-up scans for Windows devices.
 author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: how-to
 ms.custom: nextgen, msecd-doc-authoring-1015
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-ms.date: 08/20/2026
+ms.date: 08/21/2026
 ms.subservice: ngp
 ms.localizationpriority: medium
 appliesto:
@@ -25,94 +25,137 @@ ai-usage: ai-assisted
 
 # Schedule antivirus scans using Microsoft Intune
 
-You can use Microsoft Intune to schedule Microsoft Defender Antivirus scans on managed Windows devices. This article shows you how to create a scan policy, set up daily and weekly quick scans, and change settings like CPU throttling and catchup scans. These steps are for IT admins who use Intune to keep scan coverage consistent across their devices. To learn more about scan types, see [About scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md).
+Security administrators can use Microsoft Intune to schedule Microsoft Defender Antivirus scans on managed Windows devices. This article explains how to create an antivirus policy, schedule daily and weekly scans, and configure CPU usage and catch-up scan settings. For guidance on choosing a scan type, see [About scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md).
 
 ## Prerequisites
 
-Before you configure scheduled antivirus scans in Intune, make sure your devices meet the following requirements.
+Before you configure scheduled antivirus scans in Intune, verify that your devices use a supported operating system.
 
 ### Supported operating systems
 
-Scheduled antivirus scans through Intune are supported on the following operating systems:
+Intune supports scheduled antivirus scans on the following operating systems:
 
 - Windows
 - Windows Server
 
 ## Configure antivirus scans using Intune
 
-To configure antivirus scans by using Intune, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
+Create an antivirus policy by following <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). Use the following settings:
 
 - **Policy type**: Antivirus
 - **Platform**: Windows
 - **Profile**: Microsoft Defender Antivirus
 - **Basics**: Enter a name and description for the policy.
-- **Configuration settings**: Expand each group of settings, and configure the settings you want to manage with this policy. For more information about these settings, see [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender).
-- **Scope tags**: If your organization is using [scope tags](/intune/intune-service/fundamentals/scope-tags), select the tags you want to use.
+- **Configuration settings**: Expand each group of settings, and configure the settings you want to manage with this policy. For more information about these settings, see [Configure Microsoft Defender Antivirus using Microsoft Intune](use-intune-config-manager-microsoft-defender-antivirus.md).
+- **Scope tags**: If your organization uses [scope tags](/intune/intune-service/fundamentals/scope-tags), select the tags you want to use.
 - **Assignments**: Select the users or groups to receive this policy. For more information, see [Assign policies in Microsoft Intune](/intune/intune-service/configuration/device-profile-assign).
 
-For more information about Intune antivirus endpoint security policies, see [Antivirus policy for endpoint security in Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy).
+For more information, see [Antivirus policy for endpoint security in Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy).
 
-## Use Intune for scheduling daily quick scans
+<a name="use-intune-for-scheduling-daily-quick-scans"></a>
 
-Use the following setting to schedule a daily quick scan in Intune:
+## Schedule daily quick scans using Intune
 
-| Description|Setting|
-| -------- | -------- |
-|Schedule Quick Scan Time|720|
+Use the following Intune setting to schedule a daily quick scan on Windows devices:
 
-> [!NOTE]
-> In the daily quick scan example, a quick scan runs on the Windows clients at 12:00 PM (720). The scan is scheduled at lunch time because many devices are turned off after hours (for example, laptops).
+- **Setting**: **Schedule Quick Scan Time**
+- **Values**:
+  - :::image type="icon" source="media/toggle-off.png" border="false"::: **Not Configured**
+  - :::image type="icon" source="media/toggle-on.png" border="false"::: **Configured**
+    - Enter a time of day from **0** (12:00 AM) through **1380** (11:00 PM). The default value is **120** (2:00 AM).
 
-## Use Intune for scheduling Weekly Scan (Quick or Full)
+For example, a value of **720** schedules the daily quick scan for 12:00 PM.
 
-The following example settings schedule a weekly quick or full scan in Intune:
+<a name="use-intune-for-scheduling-weekly-scan-quick-or-full"></a>
 
-|  Description|Setting|
-| -------- | -------- |
-|Scan Parameter |Quick scan (Default) |
-|Schedule Scan Day|Windows Clients: Wednesday<br>|
-|Schedule Scan Time|Windows Clients: 1020 <br>|
+## Schedule weekly quick or full scans using Intune
 
-> [!NOTE]
-> In this example, a quick scan runs for Windows clients on Wednesdays at 5:00 PM. (1020).
+Use the following Intune settings to schedule a weekly quick or full scan on Windows devices:
+
+- **Setting**: **Scan parameter**
+- **Values**:
+  - **Not configured**
+  - **Quick scan (Default)**
+  - **Full scan**
+
+- **Setting**: **Schedule Scan Day**
+- **Values**:
+  - **Not configured**
+  - **Every day (Default)**
+  - **Sunday** to **Saturday**
+  - **No scheduled scan**
+
+- **Setting**: **Schedule Scan Time**
+- **Values**:
+  - :::image type="icon" source="media/toggle-off.png" border="false"::: **Not Configured**
+  - :::image type="icon" source="media/toggle-on.png" border="false"::: **Configured**
+    - Enter a time of day from **0** (12:00 AM) through **1380** (11:00 PM). The default value is **120** (2:00 AM).
+
+The following example schedules a quick scan on Windows devices every Wednesday at 5:00 PM (**1020**):
+
+|Setting|Value|
+|---|---|
+|Scan parameter|Quick scan (Default)|
+|Schedule Scan Day|Wednesday|
+|Schedule Scan Time|:::image type="icon" source="media/toggle-on.png" border="false"::: **Configured**<br>**1020**|
 
 > [!TIP]
-> Our recommendation for scheduled scans is to configure quick scan together with always-on real-time protection and [cloud protection](cloud-protection-microsoft-defender-antivirus.md), as this combination provides strong coverage against malware that starts with the system and kernel-level malware. Quick scan with always-on real-time protection and cloud protection is the default configuration. In general, there's no need to schedule a full scan, and most users never need to manually run full scans (see [Comparing quick scan, full scan, and custom scan](schedule-antivirus-scans.md)).
+> Microsoft recommends using quick scans with always-on real-time protection and [cloud protection](cloud-protection-microsoft-defender-antivirus.md). This combination provides strong coverage against malware that starts with the system and kernel-level malware. Quick scans with always-on real-time protection and cloud protection are the default configuration.
+>
+> In general, you don't need to schedule a full scan, and most users never need to run full scans manually. For more information, see [Comparing quick scan, full scan, and custom scan](schedule-antivirus-scans.md).
 
 <a name="general-settings-for-scheduled-scan-to-consider"></a>
 ## Configure general settings for scheduled scans
 
-Review the following general scheduled-scan settings when configuring your policy:
+Review the following general scheduled-scan settings when you configure the policy:
 
-|Description| Setting|
-| -------- | -------- |
-|Check For Signatures Before Running Scan |Disabled (Default)|
-|Randomize Schedule Task Times|Not configured|
-|Scheduler Randomization Time|Scheduled tasks aren't randomized|
-|Avg CPU Load Factor|Not Configured (Default, 50)|
-|Enable Low CPU Priority|Disabled (Default)|
-|Disable Catchup Full Scan|Enabled (Default)|
-|Disable Catchup Quick Scan|Disabled (Default)|
+- **Setting**: **Check For Signatures Before Running Scan**
+- **Values**:
+  - **Not configured**
+  - **Disabled (Default)**
+  - **Enabled** (recommended)
 
-The catch-up scan settings use negative names, so their values have inverse effects:
+- **Setting**: **Randomize Schedule Task Times**
+- **Values**:
+  - **Not configured**
+  - **Widen or narrow the randomization period for scheduled scans (Default)** (use **Scheduler Randomization Time** to set the randomization window)
+  - **Scheduled tasks will not be randomized** (recommended)
 
-- **Disable Catchup Full Scan**: **Enabled** disables catch-up full scans. Catch-up full scans are disabled by default.
-- **Disable Catchup Quick Scan**: **Disabled** enables catch-up quick scans. Catch-up quick scans are enabled by default.
+- **Setting**: **Scheduler Randomization Time**
+- **Values**:
+  - :::image type="icon" source="media/toggle-off.png" border="false"::: **Not Configured** (recommended)
+  - :::image type="icon" source="media/toggle-on.png" border="false"::: **Configured**
+    - Enter a value between **1** and **23** hours. The default value is **4** hours.
 
-> [!NOTE]
-> When you schedule scans for times when endpoints aren't in use, scans don't honor the CPU throttling configuration and takes full advantage of the resources available to complete the scan as fast as possible.
+- **Setting**: **Avg CPU Load Factor**
+- **Values**:
+  - :::image type="icon" source="media/toggle-off.png" border="false"::: **Not Configured** (recommended)
+  - :::image type="icon" source="media/toggle-on.png" border="false"::: **Configured**
+    - Enter a percentage from **0** to **100**. The default value is **50**.
 
-<a name="see-also"></a>
-## See also
+- **Setting**: **Enable Low CPU Priority**
+- **Values**:
+  - **Not configured**
+  - **Disabled (Default)** (recommended)
+  - **Enabled**
+
+- **Setting**: **Disable Catchup Full Scan**
+- **Values**:
+  - **Not configured**
+  - **Disabled** (enables catch-up full scans)
+  - **Enabled (Default)** (disables catch-up full scans and matches the Microsoft Defender Antivirus client default)
+
+- **Setting**: **Disable Catchup Quick Scan**
+- **Values**:
+  - **Not configured**
+  - **Disabled** (enables catch-up quick scans)
+  - **Enabled (Default)** (disables catch-up quick scans and matches the Microsoft Defender Antivirus client default)
+
+## Related content
 
 - [Troubleshoot Microsoft Defender Antivirus scan issues](troubleshoot-mdav-scan-issues.md)
-
 - [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md)
-
 - [Troubleshoot performance issues related to real-time protection](troubleshoot-performance-issues.md)
-
 - [Run the client analyzer on Windows](run-analyzer-windows.md)
-
 - [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
-
 - [Microsoft Defender Antivirus full scan considerations and best practices](mdav-scan-best-practices.md)
