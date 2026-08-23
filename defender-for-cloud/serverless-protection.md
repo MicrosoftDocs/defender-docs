@@ -2,7 +2,7 @@
 title: What is Serverless protection?
 description: Learn how Serverless protection in Microsoft Defender for Cloud helps secure serverless resources across Azure and AWS.
 ms.topic: overview
-ms.date: 06/01/2026
+ms.date: 08/19/2026
 #customer intent: As a reader, I want to understand what Serverless protection is in Microsoft Defender for Cloud.
 ai-usage: ai-assisted
 ---
@@ -122,7 +122,7 @@ Learn how to [build queries with Cloud Security Explorer](how-to-manage-cloud-se
 Serverless resources that aren't eligible for vulnerability assessment include:
 
 - Web Apps and function apps that don't have a Running power state.
-- Web Apps and function apps that don't have internet access.
+- Web Apps and function apps that have public network access disabled.
 - Web Apps and function apps with the following kind values:
     - `app,migration`
     - `functionapp,botapp`
