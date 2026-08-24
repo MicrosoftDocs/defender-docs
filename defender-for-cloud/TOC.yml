@@ -899,6 +899,8 @@
           href: sql-azure-vulnerability-assessment-find.md
         - name: Consume and export scan results
           href: defender-for-sql-scan-results.md
+      - name: Prepare for classic Defender for SQL APIs retirement
+        href: migrate-classic-defender-for-sql-apis.md
   - name: Defender for App Service
     items:
       - name: Overview

@@ -2,7 +2,7 @@
 title: Getting Started with Codename MDASH
 description: Onboard agentic code security in the Microsoft Defender portal by accepting terms, connecting your Microsoft Foundry resource, and completing agentic code scanning setup.
 ms.topic: how-to
-ms.date: 05/26/2026
+ms.date: 08/18/2026
 ai-usage: ai-assisted
 ---
 
@@ -29,7 +29,7 @@ To complete this setup, you need:
 
 ## Assign permissions to users using Defender RBAC
 
-Use Microsoft Defender unified role-based access control (RBAC) to grant users the agentic code security permissions they need.
+Use Microsoft Defender unified role-based access control (RBAC) to grant users and groups the agentic code security permissions required to run scans, upload results, and review or manage findings. In this step, you create a custom, feature-scoped role in Microsoft Defender for these specific capabilities, and then assign the role to the users who need access.
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 1. In the navigation pane, select **System** > **Permissions**.
@@ -39,8 +39,10 @@ Use Microsoft Defender unified role-based access control (RBAC) to grant users t
 1. Under **AI Scan Security**, set the permission levels you need (for more information, see [Security posture – AI code scan](/defender-xdr/custom-permissions-details#security-posture--ai-code-scan):
    - **Run scan (Manage)** — required to trigger on-demand or CLI scans.
    - **Upload results (Manage)** — required to upload CLI scan results to Defender.
-   - **Scan results (Read)** — required to view findings in the Defender portal and the initiative.
    - **Scan results (Manage)** — required to triage, dismiss, or otherwise manage findings.
+   - **Scan results (Read)** — required to view findings in the Defender portal and the initiative. This permission does not grant access to the Defender portal. To enable portal access, assign additional permissions, such as [Exposure Management (Read)](/defender-xdr/create-custom-rbac-roles#microsoft-defender-for-cloud). These permissions may also provide access to other data within the assigned scope, beyond codename MDASH data.
+
+
 1. Review the permissions, and select **Apply**.
 1. Select **Next** to go to **Assign users and data sources**. Assign the users who should receive this role.
 1. Select **Add assignment**, and configure users, groups, and data sources.
@@ -106,18 +108,11 @@ For details, see [Codename MDASH - Agentic code scanner initiative](mdash-initia
 ## Related content
 
 - [Agentic code security overview](ai-code-security-overview.md)
-
 - [Connect Microsoft Foundry](mdash-foundry-integration.md)
-
 - [Create a GitHub connector](create-github-connector.md)
-
 - [Create an Azure DevOps connector](create-azure-devops-connector.md)
-
 - [Trigger an on-demand agentic scan](trigger-on-demand-scan.md)
-
 - [Defender CLI setup](defender-cli-authentication.md)
-
 - [Install and run Defender CLI](defender-cli.md)
-
 - [Codename MDASH - Agentic code scanner initiative](mdash-initiative.md)
 

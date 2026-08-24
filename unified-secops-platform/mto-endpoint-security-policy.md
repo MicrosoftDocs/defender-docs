@@ -57,7 +57,6 @@ Edit or delete a security policy by selecting the policy in the Endpoint securit
 
 :::image type="content" source="media/mto-endpoint-security-policy/mto-edit-policy-small.png" alt-text="Screenshot of the editing pane for endpoint security policies page in multitenant management in Microsoft Defender XDR." lightbox="media/mto-endpoint-security-policy/mto-edit-policy.png":::
 
-
 ## Verify endpoint security policy status
 
 To verify that a policy was created, select it from the list and click the policy name. The policy page opens in a new tab. You can also open it through **Edit > Open policy page**.
@@ -77,3 +76,8 @@ Policies distributed across tenants appear in a tree view. The original policy i
 The **Last Distribution Status** column shows the overall status of the distributed copies. The **Tenants** and **Distribution profiles** columns show which tenants received the policy. For more information, see [Content distribution in multitenant management](mto-distribution-profiles.md).
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+
+## Related content
+
+- [Microsoft Defender multitenant management](mto-overview.md)
+- [Set up Microsoft Defender multitenant management](mto-requirements.md)

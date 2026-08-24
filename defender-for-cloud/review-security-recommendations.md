@@ -367,8 +367,11 @@ You can use [Azure Resource Graph](/azure/governance/resource-graph/) to write a
 
 1. Review the results.
 
->[!NOTE]
->If your dashboards or automations currently rely on Sub Assessment APIs or queries, plan to migrate to the Assessment APIs / securityFindings equivalents for the individual recommendation format. During the side by side period, you might see duplicate data (legacy grouped + new individual). Use **Preview/New** version UI tags or API filters to focus on one format and avoid double counting. The Open query entry point can help you generate updated queries from the portal.
+> [!NOTE]
+> The `properties.status.firstEvaluationDate` field indicates when the security assessment was first evaluated for the resource. This value is different from **First seen at** in software inventory, which indicates when the software was first seen on the asset.
+
+> [!NOTE]
+> If your dashboards or automations currently rely on Sub Assessment APIs or queries, plan to migrate to the Assessment APIs / securityFindings equivalents for the individual recommendation format. During the side by side period, you might see duplicate data (legacy grouped + new individual). Use **Preview/New** version UI tags or API filters to focus on one format and avoid double counting. The Open query entry point can help you generate updated queries from the portal.
 
 ::: zone-end
 

@@ -5,16 +5,16 @@ ms.author: chrisda
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.assetid: 5a6f2d7f-d998-4f31-b4f5-f7cbf6f38578
-ms.collection: 
+ms.collection:
   - m365-security
   - tier2
 ms.custom:
-  - msecd-doc-authoring-1016
+  - msecd-doc-authoring-1015
   - seo-marvel-apr2020
   - sfi-image-nochange
 description: Admins can learn about the anti-phishing policies that are available in the built-in security features for all cloud mailboxes and in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 07/17/2026
+ms.date: 08/20/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -220,7 +220,11 @@ Depending on the number of recipients in the message, the first contact safety t
 > [!NOTE]
 > If the message has multiple recipients, whether the tip is shown and to whom is based on a majority model. If most recipients have never or don't often receive messages from the sender, the affected recipients receive the **Some people who received this message...** tip. If you're concerned that this behavior exposes the communication habits of one recipient to another, you shouldn't enable the first contact safety tip and continue to use mail flow rules and the **X-MS-Exchange-EnableFirstContactSafetyTip** header instead.
 >
-> The first contact safety tip isn't stamped in S/MIME signed messages.
+> The first contact safety tip isn't stamped on messages in any of the following scenarios:
+>
+> - The message is S/MIME signed.
+> - The message was affected by a **bypass spam filtering** (SCL -1) mail flow rule (also known as a transport rule) and successfully delivered to the mailbox. For more information, see [Spam confidence level (SCL) in Microsoft 365](anti-spam-spam-confidence-level-scl-about.md).
+> - The message was sent to a mailbox created less than seven days ago.
 
 ## Exclusive settings in anti-phishing policies in Microsoft Defender for Office 365
 

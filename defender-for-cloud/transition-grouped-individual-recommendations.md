@@ -131,6 +131,16 @@ securityresources
 | project DisplayName, Severity, DetectedVersions, FixedVersion, CveId
 ```
 
+> [!NOTE]
+> The `CvesDetails` object continues to provide the `CveId` for each vulnerability. To retrieve additional CVE details, query the `microsoft.security/cvedetails` resource type:
+>
+> ```kusto
+> securityresources
+> | where type =~ "microsoft.security/cvedetails"
+> ```
+>
+> Run queries against the `microsoft.security/cvedetails` resource type at the tenant scope. Queries run at the subscription scope don't return data from this resource type. As a result, fields retrieved from `microsoft.security/cvedetails`, such as `LatestPublishedDate`, `LastModifiedDate`, and `CVSSScore`, aren't returned at the subscription scope.
+
 Key field changes between the two schemas:
 
 | Old field | New field | Note |

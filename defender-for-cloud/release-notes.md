@@ -33,8 +33,30 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| August 21, 2026 | Update | [Update to CVE details data consumption in Azure Resource Graph](#update-to-cve-details-data-consumption-in-azure-resource-graph) |
+| August 17, 2026 | Upcoming deprecation | [Classic Defender for SQL APIs retirement](#classic-defender-for-sql-apis-retirement) |
 | August 6, 2026 | Public preview | [On-demand malware scanning now supports scanning specific blobs, files, containers, and file shares](#on-demand-malware-scanning-now-supports-scanning-specific-blobs-files-containers-and-file-shares) |
-| August 6, 2026 | CIEM Updates | [Breaking change: Unused actions no longer included in AWS and GCP overprovisioned identity assessments]()|
+| August 6, 2026 | CIEM Updates | [Breaking change: Unused actions no longer included in AWS and GCP overprovisioned identity assessments](#breaking-change-unused-actions-no-longer-included-in-aws-and-gcp-overprovisioned-identity-assessments) |
+
+### Update to CVE details data consumption in Azure Resource Graph
+
+August 21, 2026
+
+Microsoft Defender for Cloud has updated how vulnerability assessment CVE details are consumed in Azure Resource Graph. CVE information remains available, but detailed CVE properties are now consumed through the `microsoft.security/cvedetails` resource type to improve query performance, scalability, and support for larger data sets.
+
+Customers who use existing API or Azure Resource Graph queries that read CVE details from vulnerability assessment records should update those queries to consume CVE details from the updated Azure Resource Graph resource. Queries that aren't updated might not return the expected detailed CVE properties.
+
+For migration guidance and sample queries, see [Remediate machine vulnerabilities](remediate-vulnerability-findings-vm.md#export-the-results).
+
+### Classic Defender for SQL APIs retirement
+
+August 17, 2026
+
+The classic Defender for SQL APIs for Vulnerability Assessment and Advanced Threat Protection will be retired on **August 16, 2027**.
+
+If you use these APIs, migrate to the supported configuration model and update any dependent scripts or automation before the retirement date.
+
+For migration guidance, see [Prepare for the retirement of classic Defender for SQL APIs](migrate-classic-defender-for-sql-apis.md).
 
 ### On-demand malware scanning now supports scanning specific blobs, files, containers, and file shares
 

@@ -54,3 +54,7 @@ Review the following prerequisites before you view or manage alert policies.
 In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Alert policy**. Or, to go directly to the **Alert policy** page, use <https://security.microsoft.com/alertpoliciesv2>.
 
 On the **Alert policy** page, you can view and create alert policies. For more information, see [Alert policies in Microsoft 365](/defender-xdr/alert-policies)
+
+## Related content
+
+[Manage incidents and alerts from Microsoft Defender for Office 365 in Microsoft Defender XDR](mdo-sec-ops-manage-incidents-and-alerts.md)
