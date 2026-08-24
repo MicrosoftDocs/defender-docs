@@ -1044,6 +1044,21 @@ See the full list of [Android UX improvements](android-new-ux.md).
 
 For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 
+### iOS | Aug 2026 | Platform Version: 1.1.80120102
+
+#### Release details
+
+| Platform version | Release Date |
+| -------- | -------- |
+| 1.1.80120102 | Aug 20, 2026 |
+
+#### Enhancements and features
+
+|**Feature Area**| **Update Summary**|
+| -------- | -------- |
+| New Features & Enhancements | Introduced Dynamic Preview Rings feature to help organizations safely evaluate new Microsoft Defender for Endpoint mobile capabilities with a targeted set of users before expanding deployment across their environment. You can read more [here](https://review.learn.microsoft.com/en-us/defender-endpoint/mobile-dynamic-preview-rings-configure?branch=main&branchFallbackFrom=pr-en-us-8767) |
+| Security Updates | We have retired the in-app OS Update recommendations in favor of enforcement via MAM / MDM policies. You can read more here - [MC1381122](https://lynx.office.net/messagecenter/MC1381122) |
+
 ### iOS | Aug 2026 | Platform Version: 1.1.79210103
 
 #### Release details
