@@ -25,6 +25,12 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## August 2026
+
+### Expanded automatic auditing for AD CS, AD FS and Entra Connect servers
+
+Automatic Windows event auditing now configures auditing for AD FS, AD CS, and Microsoft Entra Connect. Auditing is configured automatically on any eligible server that runs Defender for Identity sensor v3.x, including servers that aren't domain controllers. For more information, see [Configure Defender for Identity to collect Windows events automatically](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically).
+
 ## July 2026
 
 ### Defender for Identity sensor updates

@@ -1,7 +1,7 @@
 ---
 title: Deploy the Defender for Identity sensor v3.x
 description: Learn the requirements and configuration steps to deploy the Defender for Identity sensor v3.x on domain controllers running Windows Server 2019 or later.
-ms.date: 07/15/2026
+ms.date: 08/23/2026
 ms.topic: how-to
 ms.custom: msecd-doc-authoring-1016
 ms.reviewer: rlitinsky
@@ -124,7 +124,7 @@ Complete these configuration steps after the sensor is activated and running.
 
 ### Configure Windows event auditing
 
-Defender for Identity relies on Windows event logs for many detections. For v3.x sensors on domain controllers, [enable automatic auditing](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically), which handles all auditing settings without manual configuration.
+Defender for Identity relies on Windows event logs for many detections. For v3.x sensors, [enable automatic auditing](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically), which handles all auditing settings without manual configuration.
 
 If automatic auditing isn't available or you opted out, [configure auditing manually](configure-windows-event-collection.md#configure-windows-event-collection-manually) or [configure Windows event collection using PowerShell](configure-windows-event-collection.md#configure-windows-event-collection-using-powershell).
 
