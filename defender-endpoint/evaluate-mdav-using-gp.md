@@ -262,7 +262,7 @@ For more information about MpCmdRun.exe and the `-ValidateMapsConnection` option
 
 Check the latest 'Platform Update' version for the Production channel (GA) in the Microsoft Update Catalog, then compare it with the version on your device:
 
-[Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623+update)
+[Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623)
 
 To check the platform version on your device, run this command in an elevated PowerShell session (open PowerShell by selecting **Run as administrator**). The `AMProductVersion` value in the output is the installed platform version:
 

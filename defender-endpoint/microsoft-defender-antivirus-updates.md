@@ -52,7 +52,7 @@ For more information, see [Manage the sources for Microsoft Defender Antivirus p
 
 - Monthly updates are released in phases, resulting in multiple packages visible in your [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
 
-- The following section lists changes included in the broad release channel. See the [latest broad channel release](https://www.microsoft.com/security/encyclopedia/adlpackages.aspx?action=info).
+- The following section lists changes included in the broad release channel. See the [latest broad channel release](https://definitionupdates.microsoft.com/packages?action=info).
 
 - To learn more about the gradual rollout process, and to see more information about the next release, see [Manage the gradual rollout process for Microsoft Defender updates](manage-gradual-rollout.md).
 
@@ -62,7 +62,7 @@ For more information, see [Manage the sources for Microsoft Defender Antivirus p
 
 - Platform updates can be temporarily postponed if other protection features, such as [Endpoint DLP](/Microsoft-365/compliance/endpoint-dlp-getting-started) or [Device Control](device-control-report.md), are actively monitoring running processes. Platform updates are retried after a reboot or when all monitored services are stopped.
 
-- In the **Microsoft Configuration Manager / Windows Server Update Services** (ConfigMgr/WSUS) catalog, the category **Microsoft Defender for Endpoint** includes updates for the `MSSense` service in [KB5005292](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292). KB5005292 includes updates and fixes to the Microsoft Defender for Endpoint **endpoint detection and response** (EDR) sensor. For more information, see [Microsoft Defender for Endpoint update for EDR Sensor](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) and [What's new in Microsoft Defender for Endpoint on Windows](microsoft-defender-endpoint-releases.md#windows-releases).
+- In the **Microsoft Configuration Manager / Windows Server Update Services** (ConfigMgr/WSUS) catalog, the category **Microsoft Defender for Endpoint** includes updates for the `MSSense` service in [KB5005292](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292). KB5005292 includes updates and fixes to the Microsoft Defender for Endpoint **endpoint detection and response** (EDR) sensor. For more information, see [Microsoft Defender for Endpoint update for EDR Sensor](https://support.microsoft.com/servicing/management-tools/microsoft-defender/update/microsoft-defender-for-endpoint-update-for-edr-sensor) and [What's new in Microsoft Defender for Endpoint on Windows](microsoft-defender-endpoint-releases.md#windows-releases).
 
 ### Previous version updates: Technical upgrade support only
 
