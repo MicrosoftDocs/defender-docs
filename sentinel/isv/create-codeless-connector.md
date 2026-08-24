@@ -5,13 +5,10 @@ ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: krishsa
 ms.topic: how-to
-ms.date: 06/11/2026
+ms.date: 08/24/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1012
-
-
-#Customer intent: As a security engineer, I want to create custom data connectors for Microsoft Sentinel so that I can ingest and analyze data from various sources without writing code.
-
+ms.custom: msecd-doc-authoring-1015
+# customer intent: As a security engineer, I want to create custom data connectors for Microsoft Sentinel so that I can ingest and analyze data from various sources without writing code.
 ---
 # Create a pull codeless connector for Microsoft Sentinel
 
@@ -63,20 +60,16 @@ Research the following components and verify support for them in the [Data Conne
 
 ### Testing APIs
 
-Test your components with an API testing tool like one of the following:
+Test your components with an API testing tool such as one of the following:
 
-  - [Visual Studio Code](https://code.visualstudio.com/download) with an [extension from Visual Studio Marketplace](https://marketplace.visualstudio.com/vscode)
-  - [PowerShell Invoke-RestMethod](/powershell/module/microsoft.powershell.utility/invoke-restmethod)
-  - [Microsoft Edge - Network Console tool](/microsoft-edge/devtools-guide-chromium/network-console/network-console-tool)
-  - [Bruno](https://www.usebruno.com/)
-  - [curl](https://curl.se/)
+- [Visual Studio Code](https://code.visualstudio.com/download) with the [Microsoft Sentinel extension](https://marketplace.visualstudio.com/items?itemName=ms-security.ms-sentinel) from [Visual Studio Marketplace](https://marketplace.visualstudio.com/vscode). The extension supports implementing and testing nested API polling workflows. For setup and usage information, see [Build custom connectors with AI in Microsoft Sentinel](create-custom-connector-builder-agent.md).
+- [PowerShell Invoke-RestMethod](/powershell/module/microsoft.powershell.utility/invoke-restmethod)
+- [Microsoft Edge Network Console tool](/microsoft-edge/devtools-guide-chromium/network-console/network-console-tool)
+- [Bruno](https://www.usebruno.com/)
+- [curl](https://curl.se/)
 
-   > [!CAUTION]  
-   > For scenarios where you have sensitive data, such as credentials, secrets, access tokens, 
-   > API keys, and other similar information, make sure to use a tool that protects your data 
-   > with the necessary security features, works offline or locally, doesn't sync your data to 
-   > the cloud, and doesn't require that you sign in to an online account. This way, you reduce 
-   > the risk around exposing sensitive data to the public.
+> [!CAUTION]
+> For scenarios that use sensitive data, such as credentials, secrets, access tokens, or API keys, use a tool that protects your data. Choose a tool that works offline or locally, doesn't sync your data to the cloud, and doesn't require you to sign in to an online account. These safeguards reduce the risk of exposing sensitive data.
 
 ## Build the data connector
 
@@ -141,7 +134,7 @@ To learn from an example, see the [Data connector definitions reference example 
 
 There are currently three kinds of data connection rules possible for defining your CCF data connector.
 
-- `RestApiPoller` kind allows you to customize paging, authorization and expected request/response payloads for your data source. For more information, see [RestApiPoller data connector connection rules reference](../data-connector-connection-rules-reference.md).
+- `RestApiPoller` kind allows you to customize paging, authorization, and expected request and response payloads for your data source. You can also use nested API polling, currently in public preview, to chain dependent API requests in one polling cycle. For standard connection rule properties, see [RestApiPoller data connector connection rules reference](../data-connector-connection-rules-reference.md). To configure dependent requests, see [Create pull codeless data connectors using nested API polling](custom-connector-nested-api-polling.md).
 - `GCP` kind allows you to decrease your development time by automatically configuring paging and expected response payloads for your Google Cloud Platform (GCP) data source. For more information, see [GCP data connector connection rules reference](../data-connection-rules-reference-gcp.md).
 - `StorageAccountBlobContainer` kind allows you to ingest from an Azure Storage Blob data source. For more information, see [Azure Storage Blob connectors API reference](../data-connection-rules-reference-azure-storage.md), and [Azure Storage Blob connector example](../data-connection-rules-reference-azure-storage.md#authentication-configuration).
 

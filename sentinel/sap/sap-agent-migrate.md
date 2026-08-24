@@ -1,43 +1,46 @@
 ---
-title: Containerized Agent to Agentless Connector migration guide
-description: Learn how to migrate from the containerized SAP agent to the agentless data connector for Microsoft Sentinel Solution for SAP applications.
+title: Migrate to the Microsoft Sentinel agentless SAP data connector
+description: Migrate from the containerized SAP agent to the agentless data connector before retirement so SAP logs continue flowing to Microsoft Sentinel.
 ms.author: monaberdugo
 author: mberdugo
-ms.topic: article
-ms.date: 10/23/2025
+ms.topic: how-to
+ms.date: 08/24/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-
-#Customer intent: As a security operations team member, I want to understand the migration process from the containerized SAP agent to the agentless data connector.
-
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1015
+# customer intent: As a security operations team member, I want to migrate from the containerized SAP agent to the agentless data connector so that SAP log collection continues after the containerized agent is retired.
 ---
 
-# Containerized SAP agent to the agentless data connector migration guide 
+# Migrate to the Microsoft Sentinel agentless SAP data connector
 
-This article outlines the steps required to migrate from the containerized SAP agent to the agentless data connector for Microsoft Sentinel Solution for SAP applications.
+Follow this guide to migrate from the containerized SAP agent to the agentless data connector for the Microsoft Sentinel solution for SAP applications.
 
+Microsoft will retire and permanently disable the containerized data connector agent on September 14, 2026. After this date, the agent stops delivering SAP logs to Microsoft Sentinel. Customers who use the agentless data connector aren't affected.
 
 ## Why move to the agentless data connector?
 
-The migration from the containerized SAP agent to the agentless data connector is a simple exercise that can be accomplished in a few steps. The agentless connector offers several advantages:
+The agentless connector offers these advantages:
 
-- Simplified deployment (zero footprint on SAP NetWeaver)
-- Reduced maintenance overhead (no more container management and standard SAP updates)
-- Future-proof architecture based on SAP Integration Suite and SAP Cloud Connector
-- Improved scalability
+- Simplified deployment with zero footprint on SAP NetWeaver.
+- Reduced maintenance overhead without container management and standard SAP updates.
+- Future-proof architecture based on SAP Integration Suite and SAP Cloud Connector.
+- Improved scalability.
 
-In a nut-shell, the migration process involves deploying the new agentless connector side-by-side with the existing containerized agent, validating log retrieval from the new connector, and finally decommissioning of the deprecated containerized agent.
+The migration process involves deploying the agentless connector side by side with the existing containerized agent, validating log retrieval from the agentless connector, and then decommissioning the containerized agent.
 
-Your existing investment in the Microsoft Sentinel Solution for SAP analytic rules, workbooks, and playbooks remains functional with the agentless data connector. Enhancement of the [kql functions](sap-solution-function-reference.md) used in the solution were applied to support both data ingestion methods side-by-side. They use the fuzzy union operator to combine data from both sources no matter if they exist.
+Existing analytics rules, workbooks, and playbooks for the Microsoft Sentinel solution for SAP applications remain functional with the agentless data connector. Enhancements to the [KQL functions](sap-solution-function-reference.md) support both data ingestion methods side by side. The functions use the fuzzy union operator to combine data from both sources when available.
 
 ## Migration path
 
+Creation of new containerized agents is already disabled. Use the agentless data connector when you onboard new SAP systems, and migrate existing containerized agents before September 14, 2026.
+
 1. **Assess**: Review your existing containerized SAP agent deployment to identify monitored SAP systems, log types collected, and any custom configurations.
-1. **Review**: Familiarize yourself with the approaches for feature parity between the containerized agent and the agentless data connector, including configuration options and capabilities.
-1. **Deploy**: Set up the agentless data connector following the [deployment guide](deploy-sap-security-content.md).
-1. **Validate**: Ensure that logs are being collected correctly from your SAP systems using the agentless data connector. Use kql queries to verify log ingestion.
+1. **Review**: Compare the configuration options and capabilities of the containerized agent and the agentless data connector.
+1. **Deploy**: Set up the agentless data connector by following [Deploy the Microsoft Sentinel solution for SAP applications](deploy-sap-security-content.md).
+1. **Validate**: Confirm that all required SAP tables and log types are being collected correctly from your SAP systems by the agentless data connector. Use KQL queries to verify log ingestion.
     ```kql
     let startTime = ago(1h);
     let endTime = now();
@@ -46,8 +49,8 @@ Your existing investment in the Microsoft Sentinel Solution for SAP analytic rul
     | summarize Count = count() by SourceSystem, bin(TimeGenerated, 5m)
     | order by TimeGenerated desc
     ```
-1. **Monitor**: Run both the containerized agent and the agentless data connector in parallel for a defined period to ensure stability and completeness of log collection.
-1. **Decommission**: Once you have validated that the agentless data connector is functioning correctly, proceed to decommission the containerized SAP agent. See the "[Stop SAP data collection](stop-collection.md)" article for details.
+1. **Monitor**: Run both the containerized agent and the agentless data connector in parallel for a defined period to ensure stable and complete log collection. Confirm that analytics rules, workbooks, hunting queries, and playbooks return the expected results with logs ingested by the agentless connector. After September 14, 2026, these analytics rules and other dependent content stop returning results for affected SAP systems if the required logs aren't ingested through the agentless connector.
+1. **Decommission**: After you validate the agentless data connector, decommission the containerized SAP agent by following [Stop SAP data collection](stop-collection.md).
 
 > [!TIP]
 > Follow the [agentless migration video playlist](https://www.youtube.com/playlist?list=PLmAptfqzxVEV69k9hwfI4zVOb_o6LgfDV) for latest insights for a smooth transition.
@@ -56,7 +59,7 @@ Your existing investment in the Microsoft Sentinel Solution for SAP analytic rul
 > Review the authorizations of the Sentinel user and role on your SAP systems used with the containerized agent. The agentless data connector requires less but different authorizations compared to the containerized SAP agent. Refer to the [configuration guide](/azure/sentinel/sap/preparing-sap#configure-the-microsoft-sentinel-role) for details and SAP role sample for minimum authorizations.
 
 > [!WARNING]
-> Billing exclusions for selected SAP SIDs need to be revisited. Agentless data connector uses different means for identification than the Agent data connector does. Reach out to your account representative ahead of time.
+> The retirement doesn't change pricing or billing meters. However, the agentless data connector uses different identification methods than the containerized data connector. Review billing exclusions for selected SAP SIDs, and contact your account representative before you migrate.
 
 ## Feature parity
 

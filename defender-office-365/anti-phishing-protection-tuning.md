@@ -94,3 +94,7 @@ Use the following best practices to reduce future phishing risk and validate you
 - Forwarding rules to external recipients are often used by attackers to extract data. Use the **Review mailbox forwarding rules** information in [Microsoft Secure Score](/defender-xdr/microsoft-secure-score) to find and even prevent forwarding rules to external recipients. For more information, see [Mitigating Client External Forwarding Rules with Secure Score](/archive/blogs/office365security/mitigating-client-external-forwarding-rules-with-secure-score).
 
   Use the [Autoforwarded messages report](/exchange/monitoring/mail-flow-reports/mfr-auto-forwarded-messages-report) to view specific details about forwarded email.
+
+## Related content
+
+[Anti-phishing protection in cloud organizations](anti-phishing-protection-about.md)

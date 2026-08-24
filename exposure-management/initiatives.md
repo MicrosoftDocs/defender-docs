@@ -1,5 +1,5 @@
 ---
-title: Review security initiatives in Microsoft Security Exposure Management
+title: Review Security Initiatives in Microsoft Security Exposure Management
 description: Learn how to effectively manage and track security initiatives using Microsoft Security Exposure Management to improve your organization's security posture.
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to understand and manage security initiatives so that I can improve my organization's security posture.
@@ -98,7 +98,7 @@ The changes in your score provide you with useful feedback about how well you're
 
 Use the History view to examine how an initiative score changed over time:
 
-1. Select an initiative to open the small overview and then select **Open initiative page-> History** to view changes over time. 
+1. Select an initiative to open the small overview and then select **Open initiative page-> History** to view changes over time.
 
 1. Browse to the time table to choose a specific time point to examine.
     1. If needed, filter for specific time points.
@@ -135,9 +135,8 @@ Security events track initiative and metric score drops to help you understand h
 1. To filter by initiative score drop events or metric score drop events, select **Filter** or the score drop event quantity.
 1. Select a specific event to open it in **Initiatives** or **Metrics**.
 
-## Next steps
+## Related content
 
-- [Improve security insights with exposure insights overview](exposure-insights-overview.md)
+- [Exposure insights overview](exposure-insights-overview.md)
 - [Review security metrics](security-metrics.md)
-- [Explore security events](security-events.md)
 - [Review security recommendations](security-recommendations.md)
