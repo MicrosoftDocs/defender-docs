@@ -138,6 +138,8 @@ securityresources
 > securityresources
 > | where type =~ "microsoft.security/cvedetails"
 > ```
+>
+> Run queries against the `microsoft.security/cvedetails` resource type at the tenant scope. Queries run at the subscription scope don't return data from this resource type. As a result, fields retrieved from `microsoft.security/cvedetails`, such as `LatestPublishedDate`, `LastModifiedDate`, and `CVSSScore`, aren't returned at the subscription scope.
 
 Key field changes between the two schemas:
 
