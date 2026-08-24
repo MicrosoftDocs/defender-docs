@@ -29,7 +29,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
-|iOS |1.1.80120102|Aug 2026|- Build: 1.1.80120102<br>- Release: Aug 20, 2026|[Release details and updates](#ios--aug-2026--platform-version-1.1.80120102)|
+|iOS |1.1.80120102|Aug 2026|- Build: 1.1.80120102<br>- Release: Aug 20, 2026|[Release details and updates](#ios--aug-2026--platform-version-1180120102)|
 |macOS |101.26062.0012  |August 2026 |- Release version: 20.126062.12.0<br>- Engine version: 1.1.26060.12000<br>- Signature version: 1.457.164.0 |[Release details and updates](#macos--august-2026--101260620012) |
 |Android |1.0.9129.0101|Aug 2026|- Build: 1.0.9129.0101<br>- Release: Aug 11, 2026|[Release details and updates](#android--aug-2026--platform-1091290101)|
 |iOS |1.1.79210103|Aug 2026|- Build: 1.1.79210103<br>- Release: Aug 04, 2026|[Release details and updates](#ios--aug-2026--platform-version-1179210103)|
