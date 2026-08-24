@@ -17,8 +17,8 @@ Configure Windows event auditing to enable Defender for Identity detections. The
 
 Configure auditing using one of these methods:
 
-- [Automatic configuration](#configure-defender-for-identity-to-collect-windows-events-automatically) for sensor v3.x on domain controllers (recommended)
-- [Manual configuration](#configure-windows-event-collection-manually) for sensor v2.x, servers that aren't domain controllers, or if you opted out of automatic auditing
+- [Automatic configuration](#configure-defender-for-identity-to-collect-windows-events-automatically) for sensor v3.x on domain controllers, AD FS, AD CS, and Microsoft Entra Connect servers (recommended)
+- [Manual configuration](#configure-windows-event-collection-manually) for sensor v2.x or if you opted out of automatic auditing
 - [PowerShell configuration](#configure-windows-event-collection-using-powershell)
 - [Required Windows events](#required-windows-events) for all server types
 
@@ -28,7 +28,7 @@ If you configure auditing properly, Windows event auditing has minimal effect on
 
 ## Configure Defender for Identity to collect Windows events automatically
 
-If you're deploying sensor v3.x on domain controllers, use automatic Windows auditing. This is the recommended approach; it requires no manual configuration and handles all auditing settings for you.
+If you're deploying the Defender for Identity sensor v3.x, use automatic Windows auditing. This approach requires no manual configuration and handles all auditing settings for you.
 
 ### Turn on automatic Windows auditing
 
@@ -48,14 +48,18 @@ When enabled, the sensor automatically:
     - **Directory services advanced auditing**: Adds audit entries to the domain root object's System Access Control List (SACL) to enable required directory service auditing.
     - **NTLM auditing**: Uses standard Windows Registry APIs to configure the required NTLM auditing registry values.
     - **Domain object auditing**: Modifies the SACL on the Configuration partition to capture changes to directory service configuration objects.
-    - **ADFS auditing**: Adds audit entries to the object's System Access Control List (SACL) of the AD FS configuration container, to enable auditing of AD FS-related directory objects.
-    - **Windows audit policy**: Configures the local Windows audit policies using the Windows Local Security Authority (LSA) audit policy APIs.
-- Applies auditing settings directly to the local system policy of the domain controller.
-- Sends health alerts about the configuration state.
+    - **AD FS auditing**: Automatically configures the following settings:
+        - **Object-level auditing on the AD FS configuration container**: Adds audit entries to the object's System Access Control List (SACL) of the AD FS configuration container, to enable auditing of AD FS-related directory objects.
+        - **Group Policy for event auditing**: Configures the **Audit Application Generated** advanced audit policy (Success and Failure) on the local system by using the Windows Local Security Authority (LSA) audit policy APIs under the sensor's local system account.
+        - Other AD FS auditing settings aren't included in automatic auditing and remain manual, such as AD FS event auditing in AD FS Management and verbose logging for AD FS events.
+    - **AD CS auditing**: Writes the required value to the certificate authority (CA) audit filter in the CA's registry configuration. Automatic auditing modifies an existing audit filter but doesn't create one, so the CA must already have an audit filter configured. The new value takes effect after the Certificate Services (`certsvc`) service restarts. Until the service restarts, Defender for Identity raises a health alert that prompts you to restart it.
+    - **Microsoft Entra Connect auditing**: Configures the **Audit Logon** advanced audit policy (Success and Failure) on Microsoft Entra Connect servers by using the Windows LSA audit policy APIs.
+    - **Windows audit policy**: Configures the local Windows audit policies using the Windows LSA audit policy APIs.
+- Applies auditing settings directly to the local system policy of the server.
 - Runs once every 24 hours.
 
 > [!NOTE]
-> - Automatic Windows event auditing is supported for domain controllers that use the Defender for Identity sensor version 3.x only. It doesn't apply to v2.x domain controllers or to AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers. For those servers, [configure Windows event auditing manually](#configure-windows-event-collection-manually).
+> - Automatic Windows event auditing is supported only for domain controllers and AD FS, AD CS, and Microsoft Entra Connect servers that use Defender for Identity sensor v3.x. For servers that use sensor v2.x, [configure Windows event auditing manually](#configure-windows-event-collection-manually).
 > - If you don't turn on automatic Windows auditing, you **must** [configure Windows event auditing manually](#configure-windows-event-collection-manually) or by [configuring Windows event collection using PowerShell](#configure-windows-event-collection-using-powershell).
 > - GPO settings can conflict with local settings set by the sensor.
 
@@ -162,10 +166,10 @@ Before configuring Windows event collection manually, you can run a PowerShell s
 
 ## Configure Windows event collection manually
 
-This section includes instructions for manually configuring Windows event collection. Use these steps if you're deploying sensor v2.x, deploying on AD FS, AD CS, or Entra Connect servers that aren't domain controllers, or if you opted out of automatic auditing for sensor v3.x.
+This section includes instructions for manually configuring Windows event collection. Use these steps if you're deploying sensor v2.x or if you opted out of automatic auditing for sensor v3.x.
 
 > [!NOTE]
-> **Known issue:** In some v3 sensor environments, health alerts about Windows event auditing might persist even when auditing is correctly configured. This primarily occurs with manual auditing configuration, such as using Group Policy or PowerShell. The sensor remains healthy and detections aren't affected. To resolve, enable **Automatic Windows auditing configuration** in the Defender for Identity portal under **Settings** > **Advanced features**.
+> **Known issue:** In some sensor v3.x environments, health alerts about Windows event auditing might persist even when auditing is correctly configured. This primarily occurs with manual auditing configuration, such as using Group Policy or PowerShell. The sensor remains healthy and detections aren't affected. To resolve, enable **Automatic Windows auditing configuration** in the Defender for Identity portal under **Settings** > **Advanced features**.
 
 The following sections describe configuration for each server type:
 
@@ -428,7 +432,7 @@ Restart-Service certsvc
 
 To configure auditing on Microsoft Entra Connect servers:
 
-1. Create a group policy to apply to your Microsoft Entra Connect servers. 
+1. Create a group policy to apply to your Microsoft Entra Connect servers.
 1. Edit the group policy and configure the following auditing settings:
 
    1. Go to **Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Logon/Logoff\Audit Logon**.
