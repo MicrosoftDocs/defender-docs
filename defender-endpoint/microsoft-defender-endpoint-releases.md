@@ -29,6 +29,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|iOS |1.1.80120102|Aug 2026|- Build: 1.1.80120102<br>- Release: Aug 20, 2026|[Release details and updates](#ios--aug-2026--platform-version-1180120102)|
 |macOS |101.26062.0012  |August 2026 |- Release version: 20.126062.12.0<br>- Engine version: 1.1.26060.12000<br>- Signature version: 1.457.164.0 |[Release details and updates](#macos--august-2026--101260620012) |
 |Android |1.0.9129.0101|Aug 2026|- Build: 1.0.9129.0101<br>- Release: Aug 11, 2026|[Release details and updates](#android--aug-2026--platform-1091290101)|
 |iOS |1.1.79210103|Aug 2026|- Build: 1.1.79210103<br>- Release: Aug 04, 2026|[Release details and updates](#ios--aug-2026--platform-version-1179210103)|
@@ -1043,6 +1044,21 @@ See the full list of [Android UX improvements](android-new-ux.md).
 ## iOS releases
 
 For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
+
+### iOS | Aug 2026 | Platform Version: 1.1.80120102
+
+#### Release details
+
+| Platform version | Release Date |
+| -------- | -------- |
+| 1.1.80120102 | Aug 20, 2026 |
+
+#### Enhancements and features
+
+|**Feature Area**| **Update Summary**|
+| -------- | -------- |
+| New Features & Enhancements | Introduced Dynamic Preview Rings feature to help organizations safely evaluate new Microsoft Defender for Endpoint mobile capabilities with a targeted set of users before expanding deployment across their environment. You can read more [here](mobile-dynamic-preview-rings-configure.md) |
+| Security Updates | We have retired the in-app OS Update recommendations in favor of enforcement via MAM / MDM policies. You can read more here - [MC1381122](https://lynx.office.net/messagecenter/MC1381122) |
 
 ### iOS | Aug 2026 | Platform Version: 1.1.79210103
 
