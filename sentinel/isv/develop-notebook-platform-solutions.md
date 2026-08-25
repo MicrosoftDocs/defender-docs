@@ -18,9 +18,9 @@ ai-usage: ai-assisted
 
 As an ISV partner, you can build, test, package, and publish Jupyter notebook analytics solutions to the Microsoft Security Store as SaaS offers. The Microsoft Sentinel data lake supports Jupyter notebooks that run on managed Spark pools against large security datasets. These notebooks are ideal for low-and-slow attack detection, behavioral baselining, AI/ML-based analytics, sensitive-data-path mapping, data visualizations, and enrichments that traditional KQL detections can't express.
 
-A notebook platform solution is typically designed for historical analysis, complex data transformations and recurring data processing workflows It writes output to a custom table in the data lake, where downstream analytic rules, hunting queries, Security Copilot agents, or MCP tools can consume the results of the notebook solution. The `.zip` package you submit to Partner Center is declared as type `SentinelLake` and contains the notebooks and optionally an ARM template for downstream Azure resources the notebook needs.
+A notebook platform solution is typically designed for historical analysis, complex data transformations, and recurring data processing workflows. It writes output to a custom table in the data lake, where downstream analytic rules, hunting queries, Security Copilot agents, or MCP tools can consume the results of the notebook solution. The `.zip` package you submit to Partner Center is declared as type `SentinelLake` and contains the notebooks and optionally an ARM template for downstream Azure resources the notebook needs.
 
-This article walks you through building, testing, packaging, and publishing a Microsoft Sentinel platform - notebook solution to the Microsoft Security Store. After completing this guide, you'll have:
+This article walks you through building, testing, packaging, and publishing a Microsoft Sentinel platform notebook solution to the Microsoft Security Store. After completing this guide, you'll have:
 
 - A working Jupyter notebook that reads data from the Sentinel data lake
 - A scheduled job that runs the notebook on a managed Spark pool
@@ -33,14 +33,14 @@ Your tenant must be on-boarded to the Microsoft Sentinel data lake. Verify your 
 
 ### Required permissions
 
-| Operation  | Required role |
+| Operation/Resource  | Required role |
 |---|---|
-| Onboarding to the Sentinel data lake | Microsoft Entra ID - Security Administrator or Global Administrator |
+| Onboard to the Sentinel data lake | Microsoft Entra ID - Security Administrator or Global Administrator |
 | Onboard Sentinel workspace to Defender portal | Subscription Owner, or User Access Administrator at subscription scope and Microsoft Sentinel Contributor at subscription or resource group scope |
 | Onboard Sentinel workspace to Data Lake | Subscription Owner or Microsoft Sentinel Contributor at subscription or resource group scope |
 | Run notebooks on the data lake | Microsoft Sentinel Reader or Contributor |
 | Log Analytics workspace (for write-back to analytics tier) | Log Analytics Contributor assigned to the data-lake managed identity `msg-resources-<guid>` |
-| Microsoft Partner Center | Marketplace Publisher account (one-time; same account used for SCC agent publishing) |
+| Microsoft Partner Center | Marketplace Publisher account (one-time; same account used for Security copilot agent publishing) |
 
 > [!NOTE]
 > The Subscription Owner role is required for a one-time data lake onboarding task. Use [Microsoft Entra Privileged Identity Management (PIM)](/entra/id-governance/privileged-identity-management/pim-configure) to temporarily elevate to this role only when needed, then remove access after onboarding completes.
@@ -49,7 +49,7 @@ Your tenant must be on-boarded to the Microsoft Sentinel data lake. Verify your 
 
 - Visual Studio Code.
 - [Microsoft Sentinel VS Code extension](https://marketplace.visualstudio.com/items?itemName=ms-security.ms-sentinel)
-- GitHub Copilot VS Code extension is recommended speeding up notebook authoring.
+- GitHub Copilot VS Code extension is recommended for speeding up notebook authoring.
 - Python 3.10+ installed locally. The Spark kernel runs in Azure but VS Code needs a local interpreter for cell editing.
 
 ## Process overview
@@ -175,7 +175,7 @@ The following patterns cover the most common scenarios:
 | Baseline + drift | Compute per-user or per-host normal behavior; flag rows that drift from baseline. Classic for failed-signin and process-execution analytics. |
 | Cross-table join | Join the lake table you own with built-in tables (SigninLogs, SecurityAlert, DeviceProcessEvents) on shared entities (UPN, host, IP). |
 | ML scoring | Train or load a pretrained model in the notebook; score each row; write top-N risky rows to a custom output table for downstream alerting. |
-| Visual investigation | Plot timelines, heatmaps, and process trees with matplotlib, or plotly; export the notebook as HTML for hand-off. |
+| Visual investigation | Plot timelines, heatmaps, and process trees with matplotlib or plotly; export the notebook as HTML for hand-off. |
 
 > [!TIP]
 > Use markdown cells liberally to document your code. A Security Store reviewer—and the SOC analyst who runs your notebook—needs to understand what each section does without reading the code. Place a markdown cell above every code block explaining purpose, inputs, outputs, and expected output. Reviewers treat unclear notebooks as a hard fail.
@@ -276,7 +276,7 @@ For detailed packaging instructions, see [Package and publish Microsoft Sentinel
 |---|---|
 | `MicrosoftSentinelProvider` not found | Extension not signed in, or you opened a non-Spark kernel. Sign in to the Microsoft Sentinel extension and select the **Microsoft Sentinel** runtime when prompted. |
 | Cell hangs at "Starting Spark session" | First-cell startup takes 3 to 5 minutes. After 6 minutes, check the vCore-utilization indicator in the status bar—your pool may be at capacity. Try a smaller pool size. |
-| `save_as_table` fails with permission denied on analytics tier | The data-lake managed identity `msg-resources-<guid>` doesn't have Log Analytics Contributor on the LogAnalytics workspace, Assign it per the [prerequisites](#prerequisites) and retry. |
+| `save_as_table` fails with permission denied on analytics tier | The data-lake managed identity `msg-resources-<guid>` doesn't have Log Analytics Contributor on the Log Analytics workspace. Assign it per the [prerequisites](#prerequisites) and retry. |
 | Output table appears in **Lake tables** panel but is empty | A `.filter()` likely removed all rows. Add a row count print immediately before `save_as_table` to localize the issue. |
 
 For more information, see [Notebooks troubleshooting](../datalake/notebooks-troubleshooting.md).
