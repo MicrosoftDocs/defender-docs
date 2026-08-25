@@ -425,10 +425,7 @@ For specific scenarios, see the following articles:
 - [Email security with Threat Explorer and Real-time detections in Microsoft Defender for Office 365](threat-explorer-email-security.md)
 - [Investigate malicious email that was delivered](threat-explorer-investigate-delivered-malicious-email.md)
 
-<a name="more-ways-to-use-threat-explorer-and-real-time-detections"></a>
-### Additional threat hunting and response capabilities
-
-In addition to the scenarios outlined in this article, you have more options in Explorer or Real-time detections. For more information, see the following articles:
+## Related content
 
 - [Threat protection status report](reports-email-security.md#threat-protection-status-report)
 - [Automated investigation and response in Microsoft Defender XDR](/defender-xdr/m365d-autoir)

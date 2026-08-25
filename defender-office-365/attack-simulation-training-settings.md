@@ -63,3 +63,9 @@ On the **Simulations** tab, both excluded _and_ included completed simulations a
 If you go directly to the **Simulations** tab and manually toggle **Show excluded simulations** on :::image type="icon" source="media/scc-toggle-on.png" border="false":::, _only_ excluded simulations are shown.
 
 To exclude completed simulations from reporting, see [Exclude completed simulations from reporting](attack-simulation-training-simulations.md#exclude-completed-simulations-from-reporting).
+
+## Related content
+
+- [Get started using Attack simulation training](attack-simulation-training-get-started.md)
+- [Simulate a phishing attack with Attack simulation training](attack-simulation-training-simulations.md)
+- [Simulation automations for Attack simulation training](attack-simulation-training-simulation-automations.md)

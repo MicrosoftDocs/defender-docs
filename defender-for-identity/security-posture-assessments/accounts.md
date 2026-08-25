@@ -168,7 +168,7 @@ The primaryGroupId attribute of a user or computer account grants implicit mem
 
 1. Take appropriate action on those accounts by resetting their attribute to their default values or adding the member to the relevant group:  
 
-  - User accounts: 513 (Domain Users) or 514 (Domain Guests);  
+- User accounts: 513 (Domain Users) or 514 (Domain Guests);  
     
   - Computer accounts: 515 (Domain Computers);  
   
@@ -438,11 +438,11 @@ The safest approach is to use a PowerShell script to configure the device to pre
     :::image type="content" source="../media/ensure-privileged-accounts-with-sensitive-flag/device-profile.png" alt-text="Screenshot of the device profile.":::
 
 
-## Ensure service accounts in Entra ID are not assigned Domain Admin or Global Admin roles
+## Ensure service accounts in Entra ID are not assigned Domain Name Admin or Global Admin roles
 
 **Description**
 
-The **Ensure service accounts are not assigned Domain Admin or Global Admin roles** assessment lists service accounts that hold top-tier administrative roles, including Domain Admin or Global Admin.
+The **Ensure service accounts are not assigned Domain Name Admin or Global Admin roles** assessment lists service accounts that hold top-tier administrative roles, including Domain Name Admin or Global Admin.
 
 **User impact**
 
@@ -450,8 +450,9 @@ Service accounts are commonly used by applications, scripts, and integrations. B
 
 **Implementation**
 
-1. Review the recommended action in the Microsoft Defender portal for **Ensure service accounts are not assigned Domain Admin or Global Admin roles**.
-2. Review the list of exposed entities to identify service accounts assigned Domain Admin, Global Admin, or equivalent privileged roles.
+1. Review the recommended action in the Microsoft Defender portal for **Ensure service accounts are not assigned Domain Name Admin or Global Admin roles**.
+1. Review the list of exposed entities to identify service accounts assigned Domain Name Admin, Global Admin, or equivalent privileged roles.
+
 3. Remove unnecessary top-tier administrative roles from service accounts.
 4. Replace broad permissions with the minimum permissions required for the workload.
 5. Monitor remaining privileged service accounts and rotate their credentials according to organizational policy.
@@ -640,7 +641,7 @@ The following is a description of the risk posed by different delegation types:
 
 **Unconstrained delegation**
 
-  1. Select **Trust this computer for delegation to specified services only**.
+1. Select **Trust this computer for delegation to specified services only**.
       :::image type="content" source="../media/cas-isp-unconstrained-kerberos-1.png" alt-text="Screenshot that shows the option to trust this computer for delegation to specified services only.":::
 
 1. Specify the **Services to which this account can present delegated credentials**.

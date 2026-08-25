@@ -78,7 +78,7 @@ You can use [Group Policy](/windows/win32/srvnodes/group-policy?redirectedfrom=M
 
 1. Expand the section in the **Location** column of the [Group Policy settings table](#group-policy-settings), double-click the setting, and configure the update channel.
 
-1. Deploy the updated GPO as you normally do. For guidance, see [Deploying Group Policy Objects](https://msdn.microsoft.com/library/ee663280(v=vs.85).aspx).
+1. Deploy the updated GPO as you normally do. For guidance, see [Group Policy](/windows/win32/srvnodes/group-policy).
 
 <a name="intune"></a>
 

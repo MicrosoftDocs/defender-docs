@@ -62,9 +62,9 @@ Review the following requirements and considerations before you create or manage
 - A blocked domain or sender entry in Teams should be active within 24 hours.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
-  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
-    - _Add, modify, and delete entries_: Membership in the **Global Administrator**<sup>\*</sup>, **Teams Administrator**, **Security Administrator**, or **Security Operator** roles.
-    - _Read-only access to entries_: **Global Reader**, or **Security Reader** roles.
+  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in these roles gives users the required permissions and_ permissions for other features in Microsoft 365:
+    - *_Add, modify, and delete entries_*: Membership in the **Global Administrator**<sup>\*</sup>, **Teams Administrator**, **Security Administrator**, or **Security Operator** roles.
+    - *_Read-only access to entries_*: **Global Reader** or **Security Reader** roles.
 
     > [!IMPORTANT]
     > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
@@ -86,21 +86,20 @@ Review the following requirements and considerations before you create or manage
 
 ## View block entries for domains and addresses in Teams in the Tenant Allow/Block List
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Tenant Allow/Block Lists** in the **Rules** section. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Tenant Allow/Block Lists** in the **Rules** section. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
-Select the **Teams senders** tab.
+1. Select the **Teams senders** tab.
 
-On the **Teams senders** tab, you can sort the entries by clicking on an available column header. The following columns are available:
+1. On the **Teams senders** tab, you can sort the entries by clicking on an available column header. The following columns are available:
+    - **Value**: The domain or email address.
 
-- **Value**: The domain or email address.
-
-Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific entries.
+1. Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific entries.
 
 ### Remove block entries for domains and addresses in Teams in the Tenant Allow/Block List
 
 Use the following steps to remove blocked domain or sender address entries from the Teams senders list.
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. You can also go directly to the **Tenant Allow/Block Lists** page via <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. On the **Tenant Allow/Block Lists** page, select the **Teams senders** tab.
 
@@ -116,9 +115,7 @@ Use the following steps to remove blocked domain or sender address entries from 
 
    Back on the **Teams senders** tab, the entry is no longer listed. After a few minutes, the blocked domain and addresses disappears from the **Organization settings** tab of the **External access** page in the Microsoft Teams admin center at <https://admin.teams.microsoft.com/company-wide-settings/external-communications>.
 
-## Related articles
-
-For guidance on Teams external access, Teams submissions, and other Tenant Allow/Block List entry types, see the following articles:
+## Related content
 
 - [Managing external access in Teams admin center](/microsoftteams/trusted-organizations-external-meetings-chat?tabs=organization-settings#specify-trusted-microsoft-365-organizations)
 - [Report false positives and false negatives in Teams](submissions-teams.md)

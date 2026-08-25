@@ -283,7 +283,7 @@ Learn about deep analysis in the following video:
 > [!NOTE]
 > Only files from Windows 10, Windows 11, and Windows Server 2012 R2+ can be automatically collected.
 
-You can also submit a sample through the [Microsoft Defender portal](https://www.microsoft.com/security/portal/submission/submit.aspx) if the file wasn't observed on a Windows 10 device (or Windows 11 or Windows Server 2012 R2+), and wait for **Submit for deep analysis** button to become available.
+You can also submit a sample through the [Microsoft Security Intelligence submission portal](https://www.microsoft.com/wdsi/filesubmission) if the file wasn't observed on a Windows 10 device (or Windows 11 or Windows Server 2012 R2+), and wait for **Submit for deep analysis** button to become available.
 
 > [!NOTE]
 > Due to backend processing flows in the Microsoft Defender portal, there could be up to 10 minutes of latency between file submission and availability of the deep analysis feature in Defender for Endpoint.

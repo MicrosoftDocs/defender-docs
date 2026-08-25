@@ -963,7 +963,7 @@ March 26, 2025
 
 Agentless scanning for Azure VMs with CMK encrypted disks is now Generally Available. Both the Defender CSPM plan, and the Defender for Servers P2 provide support for agentless scanning for VMs, now with CMK support across all clouds
 
-Learn how to [enable agentless scanning for Azure VMs with CMK encrypted disks](enable-agentless-scanning-vms.md#enable-for-azure-vms-with-cmk-encrypted-disks).
+Learn how to [enable agentless scanning for Azure VMs with CMK encrypted disks](enable-agentless-scanning-vms.md#azure-vms-with-customer-managed-keys).
 
 ### Upcoming change to the recommendation severity levels
 
@@ -3512,7 +3512,7 @@ You can learn more about the [permissions used to scan AWS instances](faq-permis
 1. Select **Click to download the CloudFormation template**.
 1. Navigate to your AWS environment and apply the updated template.
 
-Learn more about [agentless scanning](concept-agentless-data-collection.md) and [enabling agentless scanning in AWS](enable-agentless-scanning-vms.md#enable-agentless-scanning-on-aws).
+Learn more about [agentless scanning](concept-agentless-data-collection.md) and [enabling agentless scanning in AWS](enable-agentless-scanning-vms.md#aws).
 
 ### Revised JIT (Just-In-Time) rule naming conventions in Defender for Cloud
 

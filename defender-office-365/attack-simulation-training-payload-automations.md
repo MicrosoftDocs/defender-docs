@@ -28,7 +28,7 @@ Payload automations rely on email messages that Defender for Office 365 identifi
 
 For getting started information about Attack simulation training, see [Get started using Attack simulation training](attack-simulation-training-get-started.md).
 
-To see any existing payload automations that you created, open the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Automations** tab \> and then select **Payload automations**. To go directly to the **Automations** tab where you can select **Payload automations**, use <https://security.microsoft.com/attacksimulator?viewid=automations>.
+To see any existing payload automations that you created, open the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Automations** tab, then select **Payload automations**. To go directly to the **Automations** tab where you can select **Payload automations**, use <https://security.microsoft.com/attacksimulator?viewid=automations>.
 
 The following information is shown for each payload automation. You can sort the payload automations by clicking on an available column header.
 
@@ -130,7 +130,7 @@ The payload automation wizard opens with the settings and values of the selected
 > [!WARNING]
 > You can't undo this action. When you delete a payload automation, all collected payloads and run history for that automation are also deleted.
 
-To remove a payload automation, select it from the list by clicking the check box. Select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears, and then select **Confirm** in the dialog.
+To remove a payload automation, select it from the list by selecting the check box. Select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears, then select **Confirm** in the dialog.
 
 ## View payload automation details
 
@@ -167,8 +167,6 @@ Payload automation relies on email messages that are identified as campaigns by 
 <a name="related-links"></a>
 ## Related content
 
-[Get started using Attack simulation training](attack-simulation-training-get-started.md)
-
-[Simulation automations for Attack simulation training](attack-simulation-training-simulation-automations.md)
-
-[Gain insights through Attack simulation training](attack-simulation-training-insights.md)
+- [Get started using Attack simulation training](attack-simulation-training-get-started.md)
+- [Simulation automations for Attack simulation training](attack-simulation-training-simulation-automations.md)
+- [Reports for Attack simulation training](attack-simulation-training-insights.md)

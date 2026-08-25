@@ -35,7 +35,7 @@ Potential reasons:
   - It could be you inadvertently provisioned the license to a different Microsoft Entra ID than the one used for authentication into the service.
 
 For both cases, you should contact Microsoft support at [General Microsoft Defender for Endpoint Support](https://support.microsoft.com/getsupport?wf=0&tenant=ClassicCommercial&oaspworkflow=start_1.0.0.0&locale=en-us&supportregion=en-us&pesid=16055&ccsid=636419533611396913) or
-[Volume license support](https://www.microsoft.com/licensing/servicecenter/Help/Contact.aspx).
+[Volume Licensing support](/microsoft-365/commerce/licenses/contact-vl-support).
 
 :::image type="content" source="media/atp-no-subscriptions-found.png" alt-text="The No subscriptions found page" lightbox="media/atp-no-subscriptions-found.png":::
 
@@ -79,5 +79,4 @@ If you encounter issues with accessing the portal, missing data, or restricted a
 - `https://secure.aadcdn.microsoftonline-p.com`
 - `https://security.microsoft.com`
 - `https://static2.sharepointonline.com`
-
 

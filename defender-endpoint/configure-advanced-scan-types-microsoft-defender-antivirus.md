@@ -51,8 +51,8 @@ For details on configuring Microsoft Configuration Manager (current branch), see
 > [!TIP]
 > Download the Group Policy Reference Spreadsheet. It lists policy settings for computer and user setups in the Administrative template files for Windows. Use it when you edit Group Policy Objects. Here are the most recent versions:
 >
-> - [Group Policy Settings Reference Spreadsheet for Windows 10 May 2020 Update (2004)](https://www.microsoft.com/download/details.aspx?id=101451)
-> - [Group Policy Settings Reference Spreadsheet for Windows 11 October 2021 Update (21H2)](https://www.microsoft.com/download/details.aspx?id=103506)
+> - [Group Policy Settings Reference Spreadsheet for Windows 10 2022 Update (22H2)](https://www.microsoft.com/download/details.aspx?id=104678)
+> - [Group Policy Settings Reference Spreadsheet for Windows 11 2025 Update (25H2)](https://www.microsoft.com/download/details.aspx?id=108395)
 
 1. In Centralized Group Policy, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
