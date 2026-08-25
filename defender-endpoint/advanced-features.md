@@ -6,7 +6,7 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
@@ -18,8 +18,8 @@ appliesto:
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1016
 ---
-# Configure advanced features in Defender for Endpoint
 
+# Configure advanced features in Defender for Endpoint
 
 You can configure the following Defender for Endpoint advanced features depending on the Microsoft security products in your environment.
 
@@ -27,7 +27,7 @@ You can configure the following Defender for Endpoint advanced features dependin
 
 To enable or disable an advanced feature in the Microsoft Defender portal:
 
-1. Go to the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) and sign in. 
+1. Go to the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) and sign in.
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Advanced features**.
 
@@ -42,8 +42,8 @@ Use the following advanced features to get better protected from potentially mal
 The scoped device group correlation setting can be used for scenarios where local SOC operations would like to limit alert correlations only to device groups that they can access. When the scoped device group correlation setting is turned on, an incident composed of alerts that cross-device groups is no longer considered a single incident. The local SOC can then take action on the incident because they have access to one of the device groups involved. However, global SOC sees several different incidents by device group instead of one incident. We don't recommend turning on this setting unless doing so outweighs the benefits of incident correlation across the entire organization.
 
 > [!NOTE]
-> - Changing this setting impacts future alert correlations only.
 >
+> - Changing this setting impacts future alert correlations only.
 > - Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
 ## Enable EDR in block mode
@@ -55,6 +55,7 @@ Endpoint detection and response (EDR) in block mode provides protection from mal
 Turn on the auto-resolve alerts setting to automatically resolve alerts where no threats were found or where detected threats were remediated. If you don't want to have alerts auto resolved, you'll need to manually turn off the feature.
 
 > [!NOTE]
+>
 > - The result of the auto-resolve action may influence the Device risk level calculation which is based on the active alerts found on a device.
 > - If a security operations analyst manually sets the status of an alert to "In progress" or "Resolved" the auto-resolve capability will not overwrite it.
 
@@ -73,7 +74,7 @@ To turn on **Allow or block** files:
 1. In the Microsoft Defender portal, select **Settings** \> **Endpoints** \> **General** \> **Advanced features** \> **Allow or block file**.
 
 1. Toggle the setting between **On** and **Off**.
- 
+
     a. :::image type="content" source="/defender/media/alloworblockfile.png" alt-text="The Endpoints screen" lightbox="/defender/media/alloworblockfile.png":::
 
 1. Select **Save preferences** at the bottom of the page.
@@ -93,7 +94,7 @@ This setting is on by default and applies tenant wide. To show duplicate records
 
 Turning on custom network indicators allows you to create indicators for IP addresses, domains, or URLs, which determine whether they'll be allowed or blocked based on your custom indicator list.
 
-To use this feature, devices must be running Windows 10 version 1709 or later, or Windows 11. 
+To use this feature, devices must be running Windows 10 version 1709 or later, or Windows 11.
 
 For more information, see [Overview of indicators](indicators-overview.md).
 
@@ -158,7 +159,6 @@ Backup quarantined files in a secure and compliant location so they can be downl
 
 This setting makes [streamlined connectivity](configure-device-connectivity.md) the default onboarding package for supported operating systems. You can still use the standard package, but you need to select it from the drop-down on the onboarding page.
 
-
 <a name="live-response"></a>
 ## Enable live response
 
@@ -187,7 +187,7 @@ Automatic attack disruption stops attacks by containing compromised assets that 
 
 The endpoint alert sharing setting sends endpoint security alerts and their triage status to the Microsoft Purview portal. You can use these alerts to improve insider risk management policies and address internal risks before they cause harm. Forwarded data is stored in the same location as your Office 365 data.
 
-After you set up the [Security policy violation indicators](/microsoft-365/compliance/insider-risk-management-settings#indicators) in insider risk management settings, Defender for Endpoint shares alerts with insider risk management for applicable users.
+After you set up the [policy indicators](/purview/insider-risk-management-settings-policy-indicators) in insider risk management settings, Defender for Endpoint shares alerts with insider risk management for applicable users.
 
 <a name="microsoft-intune-connection"></a>
 ## Configure the Microsoft Intune connection
@@ -210,11 +210,11 @@ You can **Turn on** Authenticated telemetry to prevent spoofing telemetry into y
 <a name="preview-features"></a>
 ## Enable preview features
 
-Learn about new features in the Defender for Endpoint preview release. 
+Learn about new features in the Defender for Endpoint preview release.
 
 Try upcoming features by turning on the preview experience. You'll have access to upcoming features, which you can provide feedback on to help improve the overall experience before features are generally available.
 
-If you already have preview features turned on, manage your settings from the main Defender XDR settings. 
+If you already have preview features turned on, manage your settings from the main Defender XDR settings.
 
 For more information, see [Microsoft Defender XDR preview features](/defender-xdr/preview)
 
@@ -230,5 +230,3 @@ For proactive hunting across Microsoft Defender XDR, including threats that span
 
 - [Update data retention settings](preferences-setup.md)
 - [Configure alert notifications](/defender-xdr/configure-email-notifications)
-
-

@@ -6,12 +6,12 @@ ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 - -asr
 ms.topic: how-to
-ms.subservice: 
+ms.subservice:
 ms.date: 07/03/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -73,7 +73,7 @@ IP, URL, and domain indicators are supported on the following operating systems:
 
 ### Network Protection requirements
 
-Network allow and block indicators in Microsoft browsers are controlled by the browser's SmartScreen setting. 
+Network allow and block indicators in Microsoft browsers are controlled by the browser's SmartScreen setting.
 
 For other browsers and applications, network allow and block indicators require that the Microsoft Defender for Endpoint component _Network Protection_ is enabled in **block mode**. For more information on Network Protection and configuration instructions, see [Enable network protection](enable-network-protection.md).
 
@@ -97,9 +97,9 @@ For processes other than Microsoft Edge and Internet Explorer, web protection sc
 - Only single IP addresses are supported (no CIDR blocks or IP ranges) in custom indicators
 - HTTP URLs (including a full URL path) can be blocked for any browser or process
 - HTTPS fully qualified domain names (FQDN) can be blocked in non-Microsoft browsers (indicators specifying a full URL path can only be blocked in Microsoft Edge)
-- Blocking FQDNs in non-Microsoft browsers requires that QUIC and Encrypted Client Hello be disabled in those browsers 
+- Blocking FQDNs in non-Microsoft browsers requires that QUIC and Encrypted Client Hello be disabled in those browsers
 - FQDNs loaded via HTTP2 connection coalescing can only be blocked in Microsoft Edge
-- If there are conflicting URL indicator policies, the longer path is applied. For example, the URL indicator policy `https://support.microsoft.com/office` takes precedence over the URL indicator policy `https://support.microsoft.com`.
+- If there are conflicting URL indicator policies, the longer path is applied. For example, the URL indicator policy `https://support.microsoft.com/microsoft-365/` takes precedence over the URL indicator policy `https://support.microsoft.com`.
 
 ## Network protection implementation
 
@@ -109,7 +109,7 @@ The determination of whether to allow or block access to a site is made after th
 
 Here's an example of how network protection blocking is logged:
 
-1. Suppose that a user attempts to access a website on their device. The site happens to be hosted on a dangerous domain, and it should be blocked by network protection.  
+1. Suppose that a user attempts to access a website on their device. The site happens to be hosted on a dangerous domain, and it should be blocked by network protection.
 
 1. The TCP/IP handshake commences. Before it completes, a `NetworkConnectionEvents` action is logged, and its `ActionType` is listed as `ConnectionSuccess`. However, as soon as the TCP/IP handshake process completes, network protection blocks access to the site. The handshake, logging, and blocking sequence happens quickly. A similar process occurs with [Microsoft Defender SmartScreen](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/); it's after the handshake completes that a determination is made, and access to a site is either blocked or allowed.
 

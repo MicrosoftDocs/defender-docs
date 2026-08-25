@@ -143,7 +143,7 @@ When creating or modifying an Antivirus policy, use this setting on the **Config
 For more information about antivirus policy profiles available in Microsoft Intune, see [Antivirus policy for endpoint security in Intune](/intune/device-configuration/endpoint-security/antivirus).
 
 > [!NOTE]
-> Disabling local list merging overrides controlled folder access settings. It also overrides any protected folders or allowed apps set by the local administrator. For more information about controlled folder access settings, see [Allow a blocked app in Windows Security](https://support.microsoft.com/help/4046851/windows-10-allow-blocked-app-windows-security).
+> Disabling local list merging overrides controlled folder access settings. It also overrides any protected folders or allowed apps set by the local administrator. For more information about controlled folder access settings, see [Allow a blocked app in Windows Security](https://support.microsoft.com/Windows/Security/Threat-Malware-Protection/virus-and-threat-protection-in-the-windows-security-app).
 
 
 ## Related articles
