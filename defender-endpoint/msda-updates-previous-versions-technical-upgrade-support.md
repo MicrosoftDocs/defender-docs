@@ -1419,7 +1419,7 @@ What's new
 > - has a reboot flag for systems that have hanging issues;
 > - is re-released in April 2020 and will not be superseded by newer updates to keep future availability;
 > - is categorized as an update due to the reboot requirement; and
-> - is only be offered with [Windows Update](https://support.microsoft.com/help/4027667/windows-10-update).
+> - is only be offered with [Windows Update](https://support.microsoft.com/Windows/Deployment/Updates-Lifecycle/install-windows-updates).
 
 ### November-2019 (Platform: 4.18.1911.3 | Engine: 1.1.16600.7)
 

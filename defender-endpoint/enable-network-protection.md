@@ -176,7 +176,7 @@ After your Device configuration profile is created and assigned, verify the depl
 <a name="mobile-device-management-mdm"></a>
 ### Enable network protection with mobile device management (MDM)
 
-1. [Update Microsoft Defender anti-malware platform to the latest version](https://support.microsoft.com/topic/update-for-microsoft-defender-antimalware-platform-92e21611-8cf1-8e0e-56d6-561a07d144cc) before you turn network protection on or off.
+1. [Update Microsoft Defender anti-malware platform to the latest version](microsoft-defender-antivirus-updates.md) before you turn network protection on or off.
 
 2. Use the [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#enablenetworkprotection) configuration service provider (CSP) to turn network protection on or off, or to enable audit mode.
 

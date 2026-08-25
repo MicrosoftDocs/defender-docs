@@ -102,7 +102,7 @@ If your Windows Subsystem for Linux isn't installed yet, follow these steps:
 
 > [!NOTE]
 > If `WslService` is running, it stops during the installation process. You do not need to onboard the subsystem separately. Instead, the plug-in automatically onboards to the tenant the Windows host is onboarded to.
-> Microsoft Defender for Endpoint update for plug-in for WSL [KB Update](https://support.microsoft.com/en-us/topic/microsoft-defender-for-endpoint-update-for-plug-in-for-wsl-9f4b2ddc-c47f-4c59-bd02-a3456c667966).
+> Microsoft Defender for Endpoint update for plug-in for WSL [KB Update](https://support.microsoft.com/security/microsoft-defender-for-endpoint-update-for-plug-in-for-wsl).
 
 ## Installation validation checklist
 
@@ -130,7 +130,7 @@ If you want to use the host [windows EDR telemetry proxy](configure-proxy-intern
 
 If you want to use the host [winhttp proxy](configure-proxy-internet.md#configure-the-proxy-server-manually-using-netsh-command) configuration for MDE for WSL plug-in, nothing more is required. The host WinHTTP proxy configuration is adopted by the plug-in automatically.
 
-If you want to use the host [network and network proxy setting](https://support.microsoft.com/windows/use-a-proxy-server-in-windows-03096c53-0554-4ffe-b6ab-8b1deee8dae1#ID0EFD=Windows_11&preserve-view=true) for MDE for WSL plug-in, nothing more is required. The host network proxy configuration is adopted by the plug-in automatically.
+If you want to use the host [network and network proxy setting](https://support.microsoft.com/Windows/Experience/Connectivity-Networking/use-a-proxy-server-in-windows) for MDE for WSL plug-in, nothing more is required. The host network proxy configuration is adopted by the plug-in automatically.
 
 > [!NOTE]
 > WSL defender supports only `http` proxy.
@@ -431,6 +431,5 @@ You can override the default release ring for the plug-in by configuring a regis
    - **Type**: `REG_SZ`
    - **Value**: `Dogfood or External or InsiderFast or Production`
    - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`
-
 
 

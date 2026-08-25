@@ -162,7 +162,7 @@ A user visits a website. If the url has an unknown or uncertain reputation, a to
 >
 >   `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Defender Security Center\Virus and threat protection\FilesBlockedNotificationDisabled = 0`
 >
->   For more information, see [Windows Security app settings](https://support.microsoft.com/windows/windows-security-app-settings-1ec98620-4e41-4b6b-b055-3c4bb115d4ee#bkmk_notifications).
+>   For more information, see [Windows Security app settings](https://support.microsoft.com/Windows/Security/Windows-Security/windows-security-app-settings#bkmk_notifications).
 
 #### Use CSP to enable `Convert warn verdict to block`
 

@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - m365-security
 - ContentEngagementFY23
 - tier2
@@ -20,9 +20,8 @@ ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 
 ai-usage: ai-assisted
 ---
-# Microsoft Defender for Endpoint sensitivity labels protect and prioritize incident response
 
-## Use sensitivity labels in Defender for Endpoint
+# Microsoft Defender for Endpoint sensitivity labels protect and prioritize incident response
 
 A typical advanced persistent threat (APT) lifecycle involves data exfiltration, where data is *taken* from the organization. Sensitivity labels help security teams know where to start. They show which data has the highest priority to protect.
 
@@ -68,8 +67,6 @@ Learn how to use data sensitivity labels to prioritize incident investigation.
 
 For more details about sensitivity labels, see the following articles:
 
-- [Learn about sensitivity labels in Office 365](/Microsoft-365/compliance/sensitivity-labels)
-- [Apply sensitivity labels in email or Office apps](https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)
-- [Use sensitivity labels as a condition in Data Loss Prevention policies](/Microsoft-365/compliance/dlp-sensitivity-label-as-condition)
-
-
+- [Learn about sensitivity labels in Office 365](/purview/sensitivity-labels)
+- [Apply sensitivity labels in email or Office apps](https://support.microsoft.com/Office/security-privacy/apply-sensitivity-labels-to-your-files)
+- [Use sensitivity labels as a condition in Data Loss Prevention policies](/purview/dlp-sensitivity-label-as-condition)

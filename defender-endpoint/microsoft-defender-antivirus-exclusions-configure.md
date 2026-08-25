@@ -341,7 +341,7 @@ For more information, see [Use WMI to configure and manage Microsoft Defender An
 
 ## Configure Microsoft Defender Antivirus exclusions in the Windows Security app
 
-You can use the [Windows Security app](https://support.microsoft.com/windows/stay-protected-with-the-windows-security-app-2ae0363d-0ada-c064-8b56-6a39afb6a963) on individual devices to configure exclusions. This method is useful for testing or for configuring a single device. To configure exclusions on many devices, use one of the enterprise management methods described earlier in this article.
+You can use the [Windows Security app](https://support.microsoft.com/Windows/Security/Windows-Security/stay-protected-with-the-windows-security-app) on individual devices to configure exclusions. This method is useful for testing or for configuring a single device. To configure exclusions on many devices, use one of the enterprise management methods described earlier in this article.
 
 For instructions, see [Add exclusions in the Windows Security app](microsoft-defender-security-center-antivirus.md).
 
