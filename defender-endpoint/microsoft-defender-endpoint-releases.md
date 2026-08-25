@@ -1073,7 +1073,7 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 |**Feature Area**| **Update Summary**|
 | -------- | -------- |
 | New Features & Enhancements | Introduced Dynamic Preview Rings feature to help organizations safely evaluate new Microsoft Defender for Endpoint mobile capabilities with a targeted set of users before expanding deployment across their environment. You can read more [here](mobile-dynamic-preview-rings-configure.md) |
-| Security Updates | We have retired the in-app OS Update recommendations in favor of enforcement via MAM / MDM policies. You can read more here - [MC1381122](https://lynx.office.net/messagecenter/MC1381122) |
+| Security Updates | We have retired the in-app OS Update recommendations in favor of enforcement via MAM / MDM policies |
 
 ### iOS | Aug 2026 | Platform Version: 1.1.79210103
 
