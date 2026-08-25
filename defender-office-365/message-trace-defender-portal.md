@@ -55,3 +55,7 @@ You can use the **View in Explorer** option in the **Message trace search result
 In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Exchange message trace**.
 
 After you select **Exchange message trace**, the **Message trace** page in the new EAC opens. To go directly to the **Message trace** page in the new EAC, use <https://admin.exchange.microsoft.com/#/messagetrace>. For more information, see [Message trace in the new Exchange admin center](/exchange/monitoring/trace-an-email-message/message-trace-modern-eac).
+
+## Related content
+
+[Message Trace FAQ in Exchange Online](/exchange/monitoring/trace-an-email-message/message-trace-faq)

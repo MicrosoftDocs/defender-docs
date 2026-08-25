@@ -226,3 +226,7 @@ If you encounter either of these scenarios, you can create a mail flow rule with
 
 - Rule condition: **Apply this rule if** \> **The sender** \> **IP address is in any of these ranges or exactly matches** \> (your IP address or addresses).
 - Rule action: **Modify the message properties** \> **Set the spam confidence level (SCL)** \> **Bypass spam filtering**.
+
+## Related content
+
+[Preset security policies in cloud organizations](preset-security-policies.md)

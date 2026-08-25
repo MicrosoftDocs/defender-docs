@@ -36,7 +36,7 @@ This article explains how to integrate a Security Information and Event Manageme
 Is your organization using or planning to get a Security Information and Event Management (SIEM) server? You might be wondering how it integrates with Microsoft 365 or Office 365. This article provides a list of resources you can use to integrate your SIEM server with Microsoft 365 services and applications.
 
 > [!TIP]
-> If you don't have a SIEM server yet and are exploring your options, consider **[Microsoft Sentinel](/azure/sentinel/overview)**.
+> If you don't have a SIEM server yet and are exploring your options, consider [Microsoft Sentinel](/azure/sentinel/overview).
 
 ## Do I need a SIEM server?
 
@@ -94,8 +94,5 @@ Use the following steps to connect the Microsoft Defender XDR connector in Micro
 <a name="more-resources"></a>
 ## Related content
 
-The following articles provide additional guidance on integrating security solutions and alerts with your SIEM server:
-
 - [Integrate security solutions in Microsoft Defender for Cloud](/azure/defender-for-cloud/partner-integration)
-
 - [Integrate Microsoft Graph Security API alerts with a SIEM](/graph/security-integration)

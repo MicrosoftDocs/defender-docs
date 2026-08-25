@@ -67,5 +67,5 @@ For details about the available actions in :::image type="icon" source="media/de
 <a name="see-also"></a>
 ## Related content
 
-- [Microsoft Defender for Office 365](mdo-about.md)
+- [Microsoft Defender for Office 365 overview](mdo-about.md)
 - [Automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2](air-about.md)

@@ -255,10 +255,6 @@ You can interact with recommendations in multiple ways. If an option isn't avail
 
 1. [Remediate the recommendation](implement-security-recommendations.md).
 
->[!NOTE]
->During the preview transition, you may see Preview and New version indicators on certain recommendations. These tags distinguish new individual items from grouped ones shown side by side. Use filters to limit the view to one format when needed.
->:::image type="content" source="media/transition-grouped-individual-recommendations/recommendations-tags.png" alt-text="Screenshot of recommendation tags interface showing options for 'New version' and 'Set for deprecation' to filter recommendations." lightbox="media/transition-grouped-individual-recommendations/recommendations-tags.png":::
-
 ::: zone-end
 
 ::: zone pivot="defender-portal"

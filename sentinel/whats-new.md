@@ -4,11 +4,12 @@ description: Learn about the latest new features and announcement in Microsoft S
 author: guywi-ms
 ms.author: guywild
 ms.topic: concept-article
-ms.date: 08/11/2026
+ms.date: 08/24/2026
 ai-usage: ai-assisted
-#Customer intent: As a security team member, I want to stay updated on the latest features and enhancements in Microsoft Sentinel so that I can effectively manage and optimize my organization's security posture.
+# customer intent: As a security team member, I want to stay updated on the latest features and enhancements in Microsoft Sentinel so that I can effectively manage and optimize my organization's security posture.
 ms.custom:
   - build-2025
+  - msecd-doc-authoring-1015
 ---
 
 # What's new in Microsoft Sentinel
@@ -336,7 +337,7 @@ For more information, see [How UEBA empowers analysts and streamlines workflows]
 
 - [Agentless data connector](sap/prerequisites-for-deploying-sap-continuous-threat-monitoring.md) for Sentinel Solution for SAP now generally available. Learn more from our [Tech Community blog](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/microsoft-sentinel-for-sap-agentless-connector-ga/4464490).
 
-- Deprecation: Containerized SAP data connector will be out of support by September 30th 2026. [Migrate to our Agentless SAP data connector](sap/sap-agent-migrate.md) today. All new deployments only have the new agentless connector option that is billed at the same price.
+- Retirement: The containerized SAP data connector agent will be permanently disabled on September 14, 2026, and will stop delivering SAP logs to Microsoft Sentinel. Analytics rules, workbooks, hunting queries, and playbooks that depend on these logs will stop returning results for affected SAP systems. Creation of new containerized agents is already disabled. The generally available agentless data connector is the supported replacement, and the retirement doesn't change pricing or billing meters. [Migrate to the agentless SAP data connector](sap/sap-agent-migrate.md) before the retirement date.
 
 ### Call to action: update queries and automation by July 1, 2026 - standardized account entity naming in incidents and alerts
 

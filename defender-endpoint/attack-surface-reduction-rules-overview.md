@@ -136,7 +136,7 @@ ASR rules require Microsoft Defender Antivirus as the primary anti-virus app on 
 
   Advanced management capabilities aren't available with other licenses (for example, Windows Professional or Microsoft 365 E3). However, you can develop your own monitoring and reporting tools on top of the ASR rule events that are generated in Windows Event Viewer on each device (for example, [Windows Event Forwarding](/windows/security/operating-system-security/device-management/use-windows-event-forwarding-to-assist-in-intrusion-detection)).
 
-  To learn more about Windows licensing, see [Windows Licensing](https://www.microsoft.com/licensing/product-licensing/windows) and get the [Microsoft Volume Licensing Reference Guide](https://www.microsoft.com/download/details.aspx?id=11091).
+  To learn more about Windows licensing, see [Windows Licensing](https://www.microsoft.com/licensing/product-licensing/windows).
 
 ## Supported operating systems for ASR rules
 
