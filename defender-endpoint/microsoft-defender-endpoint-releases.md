@@ -29,6 +29,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|Android |1.0.9212.0102|Aug 2026|- Build: 1.0.9212.0102<br>- Release: Aug 20, 2026|[Release details and updates](#android--aug-2026--platform-1091290101)|
 |iOS |1.1.80120102|Aug 2026|- Build: 1.1.80120102<br>- Release: Aug 20, 2026|[Release details and updates](#ios--aug-2026--platform-version-1180120102)|
 |macOS |101.26062.0012  |August 2026 |- Release version: 20.126062.12.0<br>- Engine version: 1.1.26060.12000<br>- Signature version: 1.457.164.0 |[Release details and updates](#macos--august-2026--101260620012) |
 |Android |1.0.9129.0101|Aug 2026|- Build: 1.0.9129.0101<br>- Release: Aug 11, 2026|[Release details and updates](#android--aug-2026--platform-1091290101)|
@@ -806,6 +807,20 @@ Fixed an issue in the January 2026 release, where real-time scanning of the /dev
 ## Android releases
 
 See the full list of [Android UX improvements](android-new-ux.md).
+
+### Android | Aug 2026 | Platform: 1.0.9212.0102
+
+#### Release details
+
+| Platform version| Release Date |
+| -------- | -------- |
+|1.0.9212.0102|Aug 20, 2026|
+
+#### Enhancements and features
+
+|__Feature Area__| __Update Summary__|
+| -------- | -------- |
+|Feature Enhancements|The Malware Protection card now shows the most recent scan time, making it easier to verify device protection status at a glance.. |
 
 ### Android | Aug 2026 | Platform: 1.0.9129.0101
 
