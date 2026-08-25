@@ -105,7 +105,7 @@ Enable performance mode status via the OMA-URI settings shown in the following t
 ### Manage performance mode with Group Policy
 
 > [!NOTE]
-> The updated Group Policy Template **Configure performance mode status**, located under **Real-Time Protection** is only available after you install the [Windows 11 2024 Update (24H2)](https://www.microsoft.com/en-us/download/details.aspx?id=106254&msockid=361c21bb46b6605111133499470c6155).
+> The updated Group Policy Template **Configure performance mode status**, located under **Real-Time Protection** is only available after you install the [Administrative Templates for Windows 11 2024 Update (24H2)](https://www.microsoft.com/download/details.aspx?id=106254).
   
 1. Using your Group Policy Management Console or Group Policy Editor, go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Real-time Protection**.
 

@@ -66,12 +66,12 @@ To receive Microsoft Defender Offline Scan updates:
 
 - Update Microsoft Defender Antivirus how you normally deploy updates to endpoints. Use a supported version of the: 
 
-  - [Platform Update](https://www.microsoft.com/security/portal/definitions/adl.aspx)
+  - [Platform Update](https://www.microsoft.com/wdsi/defenderupdates)
 
   - [Engine Update](microsoft-defender-antivirus-updates.md)
 
   - Security Intelligence Updates
-    - You can manually download and install the latest protection updates from the [Microsoft Malware Protection Center](https://www.microsoft.com/security/portal/definitions/adl.aspx) 
+    - You can manually download and install the latest protection updates from the [Microsoft Malware Protection Center](https://www.microsoft.com/wdsi/defenderupdates)
     - See the [Manage Microsoft Defender Antivirus Security intelligence updates](manage-protection-updates-microsoft-defender-antivirus.md) article for more information.
 
 - Users must be signed in with local administrator privileges.
@@ -258,6 +258,3 @@ Windows Defender Antivirus downloaded and configured Windows Defender Offline to
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-
-
-
