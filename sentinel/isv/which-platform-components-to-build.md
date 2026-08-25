@@ -20,11 +20,11 @@ The Microsoft Sentinel platform is a cloud-native foundation for security data, 
 
 The Microsoft Sentinel platform includes:
 
-- **Sentinel data lake and connectors**: Cost-efficient storage for raw and processed security telemetry, fed by Sentinel data connectors.
-- **Security Copilot agents**:  Natural-language agents, published to Microsoft Security Store, that investigate, summarize, and recommend actions.
-- **Sentinel MCP server**: A Model Context Protocol endpoint that exposes built-in skills and ISV-published custom KQL tools to consuming agents.
-- **Custom graphs**: Partner-defined graph instances that model relationships between entities for relationship-first investigation.
-- **Jupyter notebook jobs**: Scheduled Spark notebooks that run in the data lake for heavy transformations, ML scoring, and graph construction.
+- [Sentinel data lake and connectors](sentinel-data-lake-onboarding.md): Cost-efficient storage for raw and processed security telemetry, fed by Sentinel data connectors.
+- [Security Copilot agents](build-agent-security-copilot.md):  Natural-language agents, published to Microsoft Security Store, that investigate, summarize, and recommend actions.
+- [Sentinel MCP server](/azure/sentinel/datalake/sentinel-mcp-get-started): A Model Context Protocol endpoint that exposes built-in skills and ISV-published custom KQL tools to consuming agents.
+- [Custom graphs](develop-custom-graph-platform-solutions.md): Partner-defined graph instances that model relationships between entities for relationship-first investigation.
+- [Jupyter notebook jobs](develop-notebook-platform-solutions.md): Scheduled Spark notebooks that run in the data lake for heavy transformations, ML scoring, and graph construction.
 
 
 Microsoft Sentinel platform components — Microsoft Security Copilot agents, Sentinel MCP server integrations, custom graphs, and Jupyter notebook jobs — let ISV partners design solutions that map directly to customer security outcomes.
@@ -38,11 +38,11 @@ Microsoft Sentinel provides a normalized security data layer, an incident and en
 
 | Component | Description | Primary customer benefit |
 |---|---|---|
-| Sentinel data lake and connectors | Cost-efficient storage for raw and processed security telemetry, fed by Sentinel data connectors. | A data plane that downstream Sentinel platform and partner capabilities can analyze without rebuilding pipelines. |
-| Security Copilot agent | A natural-language agent published to Microsoft Security Store. It uses Sentinel MCP tools and ISV-defined skills to investigate, summarize, and recommend actions. | SOC analysts get repeatable, evidence-backed triage and investigation narratives in chat without switching tools. |
-| Sentinel MCP server and custom MCP tool collections | A Model Context Protocol endpoint that exposes built-in skills and ISV-published custom KQL tools that customer agents can call over JSON-RPC. | Programmatic, governed access to Sentinel data and ISV-curated KQL skills from any consuming agent. |
-| Custom graph | A partner-defined graph instance (nodes, edges, properties) built from lake data and refreshed on a schedule. | Relationship-first investigation that answers blast-radius and reachability questions that table joins struggle to express efficiently. |
-| Jupyter notebook jobs | Scheduled Spark notebooks that run in the Sentinel data lake. They perform heavy transformations, ML scoring, or graph construction and write results back as custom tables. | Deterministic, efficient batch processing for ML and aggregations without standing up external compute. |
+| [Sentinel data lake and connectors](sentinel-data-lake-onboarding.md) | Cost-efficient storage for raw and processed security telemetry, fed by Sentinel data connectors. | A data plane that downstream Sentinel platform and partner capabilities can analyze without rebuilding pipelines. |
+| [Security Copilot agents](build-agent-security-copilot.md) | A natural-language agent published to Microsoft Security Store. It uses Sentinel MCP tools and ISV-defined skills to investigate, summarize, and recommend actions. | SOC analysts get repeatable, evidence-backed triage and investigation narratives in chat without switching tools. |
+| [Sentinel MCP server](/azure/sentinel/datalake/sentinel-mcp-get-started) | A Model Context Protocol endpoint that exposes built-in skills and ISV-published custom KQL tools that customer agents can call over JSON-RPC. | Programmatic, governed access to Sentinel data and ISV-curated KQL skills from any consuming agent. |
+| [Custom graphs](develop-custom-graph-platform-solutions.md) | A partner-defined graph instance (nodes, edges, properties) built from lake data and refreshed on a schedule. | Relationship-first investigation that answers blast-radius and reachability questions that table joins struggle to express efficiently. |
+| [Jupyter notebook jobs](develop-notebook-platform-solutions.md) | Scheduled Spark notebooks that run in the Sentinel data lake. They perform heavy transformations, ML scoring, or graph construction and write results back as custom tables. | Deterministic, efficient batch processing for ML and aggregations without standing up external compute. |
 | Sentinel SIEM content | Analytics rules, hunting queries, parsers (ASIM), workbooks, and playbooks published through the SIEM Content Hub. | Out-of-the-box detections, hunting, normalization, and response for the data the ISV ingests. |
 
 ## Build for customer benefit
@@ -252,7 +252,7 @@ If you need help selecting components for your scenario, use the Sentinel Adviso
 
 ## Related content
 
-- [Microsoft Sentinel integration guide](../sentinel-integration-guide.md)
+- [Microsoft Sentinel integration guide](sentinel-integration-guide.md)
 - [Develop a Security Copilot agent platform solution](build-agent-security-copilot.md)
 - [Develop custom Graph platform solutions](develop-custom-graph-platform-solutions.md)
 - [Develop notebook platform solutions](develop-notebook-platform-solutions.md)
