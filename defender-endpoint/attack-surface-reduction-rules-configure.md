@@ -12,7 +12,7 @@ ms.collection:
 - tier2
 - mde-asr
 ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
-ms.date: 07/08/2026
+ms.date: 08/26/2026
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to configure attack surface reduction rules on devices so that I can block risky software behaviors that attackers exploit.
 appliesto:
@@ -74,16 +74,16 @@ In Intune, endpoint security policies are the recommended method to deploy ASR r
 
 ### Configure ASR rules and exclusions in Intune using endpoint security policies
 
-To configure ASR rules using a Microsoft Intune Endpoint Security **Attack surface reduction** policy, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
+To configure ASR rules using a Microsoft Intune Endpoint Security **Attack surface reduction** policy, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these specific settings:
 
 > [!IMPORTANT]
 > Microsoft Defender for Endpoint management supports device objects only. Targeting users isn't supported. Assign the policy to Microsoft Entra device groups, not user groups.
 
-- **Policy type**: Attack surface reduction
-- **Platform**: Windows
-- **Profile**: Attack Surface Reduction Rules
-- **Configuration settings**:
-  - **Attack surface reduction**: Typically, you can enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** or **Warn** mode without testing. You should test other ASR rules in **Audit** mode before you switch them to **Block** or **Warn** mode. For more information, see the [ASR rules deployment guide](attack-surface-reduction-rules-deployment.md).
+- **Policy type**: Select **Attack surface reduction** on the **Endpoint security \| Overview** page.
+- **Platform**: Select **Windows**.
+- **Profile**: Select **Attack Surface Reduction Rules**.
+- **Configuration settings** tab:
+  - **Attack surface reduction rules**: Typically, you can enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** or **Warn** mode without testing. You should test other ASR rules in **Audit** mode before you switch them to **Block** or **Warn** mode. For more information, see the [ASR rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
     After you set the rule mode to **Audit**, **Block**, or **Warn**, an **ASR only per rule exclusions** section appears where you can specify exclusions that apply to that rule only.
 
@@ -218,7 +218,7 @@ ASR rules are active within minutes.
 
 #### Configure global ASR rule exclusions in Intune using custom profiles with OMA-URIs and CSPs
 
-The steps to configure global ASR rule **exclusions** in Intune using a custom profile are very similar to the ASR rule steps in [Configure ASR rules in Intune using custom profiles with OMA-URIs and CSPs](#configure-asr-rules-in-intune-using-custom-profiles-with-oma-uris-and-csps). The only difference is on the **Configuration settings** tab, where you enter the information for ASR rule exceptions instead of ASR rules:
+The steps to configure global ASR rule **exclusions** in Intune using a custom profile are very similar to the ASR rule steps in [Configure ASR rules in Intune using custom profiles with OMA-URIs and CSPs](#configure-asr-rules-in-intune-using-custom-profiles-with-oma-uris-and-csps). The only difference is on the **Configuration settings** tab, where you enter the information for ASR rule exclusions instead of ASR rules:
 
 On the **Configuration settings** tab, select **Add**. In the **Add row** flyout that opens, configure the following settings:
 
@@ -253,9 +253,14 @@ Complete the remaining steps in [Configure ASR rules in Intune using custom prof
 
 If your organization [manages endpoint security policies in the Microsoft Defender portal](endpoint-security-policies-configure.md), you can configure ASR rules and their exclusions with the same endpoint security policies that Intune uses.
 
-On the **Windows** tab of the **Endpoint security policies** page of the Defender portal at <https://security.microsoft.com/policy-inventory>, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create new policy** and then create an **Attack surface reduction** policy. For the full procedure, see [Create an endpoint security policy](endpoint-security-policies-configure.md#create-an-endpoint-security-policy).
+On the **Windows** tab of the **Endpoint security policies** page of the Defender portal at <https://security.microsoft.com/policy-inventory>, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create new policy**, and then use these specific settings:
+
+- **Select platform**: Select **Windows**.
+- **Select template**: Select **Attack surface reduction rules**.
 
 Use the same **Attack Surface Reduction Rules** profile and settings described in [Configure ASR rules and exclusions in Intune using endpoint security policies](#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies). These settings include global attack surface reduction only exclusions and per-ASR rule exclusions.
+
+For the full procedure, see [Create an endpoint security policy](endpoint-security-policies-configure.md#create-an-endpoint-security-policy).
 
 When you assign the policy, note that assignment group limitations apply to devices managed through security settings management. For details, see the [Assignments step](endpoint-security-policies-configure.md#create-an-endpoint-security-policy).
 
