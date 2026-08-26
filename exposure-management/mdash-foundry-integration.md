@@ -71,9 +71,10 @@ For each of the three deployed models, configure the TPM rate limit.
 1. Select **Save**.
 1. Repeat these steps for each deployed model.
 
-> [!IMPORTANT]
-> A minimum of 1,000,000 tokens per minute (TPM) per deployment is required to support MDASH scan throughput.
-
+> [!NOTE]
+> A minimum of 1,000,000 tokens per minute (TPM) is required for each model deployment.
+>
+> To use concurrent scans, increase the TPM rate limit to at least 5,000,000 for each of the three required model deployments. For more information about quota limits and requesting additional capacity, see [Azure OpenAI in Microsoft Foundry Models quotas and limits](/azure/foundry/openai/quotas-limits).
 
 ## Configure content filtering
 
