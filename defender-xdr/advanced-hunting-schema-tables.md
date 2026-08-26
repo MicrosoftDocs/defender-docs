@@ -61,6 +61,7 @@ The following reference lists all the tables in the schema. Each table name link
 | **[AlertInfo](advanced-hunting-alertinfo-table.md)** | Alerts from Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, and Microsoft Defender for Identity, including severity information and threat categorization  |	
 | **[BehaviorEntities](advanced-hunting-behaviorentities-table.md)** (Preview) | Entities (file, process, device, user, and others) that are involved in a behavior in Microsoft Defender for Cloud Apps (not available for GCC) and User and Entity Behavior Analytics (UEBA) |	
 | **[BehaviorInfo](advanced-hunting-behaviorinfo-table.md)** (Preview) | Behaviors from Microsoft Defender for Cloud Apps (not available for GCC) and User and Entity Behavior Analytics (UEBA) |	
+| **[CallActivityEvents](advanced-hunting-callactivityevents-table.md)** | Activities performed during Microsoft Teams calls in your organization |
 | **[CampaignInfo](advanced-hunting-campaigninfo-table.md)** (Preview) | Email campaigns identified by Microsoft Defender for Office 365 |	
 | **[CloudAppEvents](advanced-hunting-cloudappevents-table.md)** | Events involving accounts and objects in Office 365 and other cloud apps and services |	
 | **[CloudAuditEvents](advanced-hunting-cloudauditevents-table.md)** | Cloud audit events for various cloud platforms protected by the organization's Microsoft Defender for Cloud |	

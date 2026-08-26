@@ -294,6 +294,8 @@
             href: advanced-hunting-behaviorentities-table.md
           - name: BehaviorInfo
             href: advanced-hunting-behaviorinfo-table.md
+          - name: CallActivityEvents
+            href: advanced-hunting-callactivityevents-table.md
           - name: CampaignInfo
             href: advanced-hunting-campaigninfo-table.md            
           - name: CloudAppEvents
