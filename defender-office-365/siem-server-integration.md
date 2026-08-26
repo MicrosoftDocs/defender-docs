@@ -6,12 +6,12 @@ ms.author: guywild
 author: guywi-ms
 audience: ITPro
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 ms.localizationpriority: medium
 ms.collection: 
   - m365-security
   - tier2
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
   - Ent_Solutions
   - SIEM
   - seo-marvel-apr2020
@@ -36,7 +36,7 @@ This article explains how to integrate a Security Information and Event Manageme
 Is your organization using or planning to get a Security Information and Event Management (SIEM) server? You might be wondering how it integrates with Microsoft 365 or Office 365. This article provides a list of resources you can use to integrate your SIEM server with Microsoft 365 services and applications.
 
 > [!TIP]
-> If you don't have a SIEM server yet and are exploring your options, consider **[Microsoft Sentinel](/azure/sentinel/overview)**.
+> If you don't have a SIEM server yet and are exploring your options, consider [Microsoft Sentinel](/azure/sentinel/overview).
 
 ## Do I need a SIEM server?
 
@@ -73,6 +73,10 @@ Verify the following requirements:
 - Your account in Microsoft Defender for Office 365 or Microsoft Defender is a *Security Administrator*.
 - Verify that you have *Write permissions in Microsoft Sentinel*.
 
+### Connect Microsoft Sentinel to Microsoft Defender for Office 365 data
+
+Use the following steps to connect the Microsoft Defender XDR connector in Microsoft Sentinel and stream email event data from Microsoft Defender for Office 365 into your SIEM.
+
 1. Navigate to Microsoft Sentinel.
 1. In the left navigation pane, select **Configuration** \> **Data connectors**.
 1. **Search for** Microsoft Defender XDR and select the **Microsoft Defender XDR (preview) connector**.
@@ -83,15 +87,12 @@ Verify the following requirements:
 
 1. Scroll to **Microsoft Defender for Office 365** in the **Connect events** section of the page.
 
-   You can also choose tables from *any other Microsoft Defender product* you find helpful and applicable before you select **Apply Changes** in the next step:
+   You can also choose tables from *any other Microsoft Defender product* you find helpful and applicable before you select **Apply Changes**:
 
 1. Select **EmailEvents**, **EmailUrlInfo**, **EmailAttachmentInfo**, and **EmailPostDeliveryEvents** > and **Apply Changes**.
 
 <a name="more-resources"></a>
 ## Related content
 
-The following articles provide additional guidance on integrating security solutions and alerts with your SIEM server:
-
 - [Integrate security solutions in Microsoft Defender for Cloud](/azure/defender-for-cloud/partner-integration)
-
 - [Integrate Microsoft Graph Security API alerts with a SIEM](/graph/security-integration)

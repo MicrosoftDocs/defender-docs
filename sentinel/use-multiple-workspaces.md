@@ -3,13 +3,13 @@ title: Set up multiple workspaces and tenants in Microsoft Sentinel
 description: If you've defined that your environment needs multiple workspaces, you now set up your multiple workspace architecture in Microsoft Sentinel.
 author: EdB-MSFT
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ms.author: edbaynash
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security architect, I want to use Microsoft Sentinel across multiple workspaces so that I can efficiently monitor and analyze security data across my entire organization.
 
@@ -41,7 +41,7 @@ For each tenant, the Defender portal allows you to connect to one primary worksp
 
 ## Next steps
 
-In this article, you learned how to set up Microsoft Sentinel to extend across multiple workspaces and tenants.
+Now that you've set up Microsoft Sentinel to extend across multiple workspaces and tenants, continue with the next step in the deployment guide.
 
 > [!div class="nextstepaction"]
 >>[Enable User and Entity Behavior Analytics (UEBA)](enable-entity-behavior-analytics.md)

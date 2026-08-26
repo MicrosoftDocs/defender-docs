@@ -12,9 +12,7 @@ ms.collection:
 - magic-ai-copilot 
 ms.topic: concept-article
 ms.update-cycle: 180-days
-ms.date: 07/28/2026
-ms.custom: msecd-doc-authoring-1015
-ai-usage: ai-assisted
+ms.date: 05/12/2026
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -72,10 +70,9 @@ This section details the Microsoft Security Copilot agents that are available in
 
 - [Security Alert Triage Agent (Preview)](#security-alert-triage-agent-preview)
 - [Threat Intelligence Briefing Agent](#threat-intelligence-briefing-agent)
-- [Threat Hunting Agent](#threat-hunting-agent)
+- [Threat Hunting Assistant](#threat-hunting-assistant)
 - [Security Analyst Agent](#security-analyst-agent)
 - [Dynamic Threat Detection Agent](#dynamic-threat-detection-agent)
-- [Data Security Triage Agent in Data Loss Prevention](#data-security-triage-agent-in-data-loss-prevention)
 
 ### Security Alert Triage Agent (Preview)
 
@@ -137,15 +134,15 @@ When running the Threat Intelligence Briefing Agent with an [agent identity](thr
 > [!IMPORTANT]
 > Allow time for permission updates to synchronize across Microsoft Defender services before running the agent.
 
-### Threat Hunting Agent
+### Threat Hunting Assistant
 
-The [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md) revolutionizes threat hunting by enabling you to investigate threats using natural language from start to finish. It not only generates KQL queries but also interprets results, surfaces insights, and guides you through full hunting sessions. These capabilities empower you to hunt threats faster, more accurately, and with greater confidence.
+The [Threat Hunting Assistant](advanced-hunting-security-copilot-threat-hunting-assistant.md) revolutionizes threat hunting by enabling you to investigate threats using natural language from start to finish. It not only generates KQL queries but also interprets results, surfaces insights, and guides you through full hunting sessions. These capabilities empower you to hunt threats faster, more accurately, and with greater confidence.
 
 :::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-answer.png" alt-text="Screenshot of the Copilot pane in advanced hunting with the answer highlighted." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-answer.png":::
 
 ### Security Analyst Agent
 
-The [Security Analyst Agent](/copilot/security/security-analyst-agent) helps security analysts quickly identify, assess, and prioritize risks by performing ready-to-use or custom analyses on security data. The agent provides actionable and prioritized insights, recommendations, and reports to uncover top vulnerabilities and risks. It supports data from Microsoft Defender XDR, Sentinel Log Analytics, or Sentinel Data Lake, and can perform complex analysis tasks such as anomaly detection, clustering, risk scoring, and forecasting without requiring code or queries.
+The [Security Analyst Agent](/copilot/security/security-analyst-agent) helps security analysts quickly identify, assess, and prioritize risks by performing ready-to-use or custom analyses on security data. The agent provides actionable and prioritized insights, recommendations, and reports to uncover top vulnerabilities and risks. It supports data from Microsoft Defender, Sentinel Log Analytics, or Sentinel Data Lake, and can perform complex analysis tasks such as anomaly detection, clustering, risk scoring, and forecasting without requiring code or queries.
 
 | Attribute | Description |
 |---|---|
@@ -159,34 +156,3 @@ The [Security Analyst Agent](/copilot/security/security-analyst-agent) helps sec
 ### Dynamic Threat Detection Agent
 
 The [Dynamic Threat Detection Agent](dynamic-threat-detection-agent.md) in the Defender portal is an always-on, adaptive backend service that uncovers hidden threats across Defender and Microsoft Sentinel environments. It uses AI to identify gaps and uncover false negatives by correlating alerts, events, anomalies, and threat intelligence. When the agent identifies a gap, it generates a dynamic alert with the full context in the alert details, including natural language explanations, mapped [MITRE ATT&CK techniques](https://attack.mitre.org/), and tailored remediation steps.
-
-### Data Security Triage Agent in Data Loss Prevention
-
-The Data Security Triage Agent in Data Loss Prevention (DLP) is an autonomous agent that triages DLP alerts at scale. The agent processes alerts from policies scoped to Exchange, Teams, OneDrive, SharePoint, and Endpoint locations, applying AI-driven reasoning to classify each alert and provide a natural language rationale for its verdict. When configured, the agent can also send remediation reminders in Microsoft Teams to users who last modified files containing sensitive information.
-
-| Attribute | Description |
-|---|---|
-| Identity | Create a new agent identity (recommended) or connect to an existing user account. |
-| License | Microsoft E5 or E7 license or Microsoft Data Loss Prevention (DLP) Add-on license, plus Security Copilot SCU capacity. |
-| Permissions | [See full permissions matrix.](/purview/copilot-in-purview-triage-dlp-agent-get-started#permissions-for-enabling-and-configuring-the-triage-agent-in-dlp-from-microsoft-purview-and-defender-xdr-portals) |
-| Products | Security Copilot, Microsoft Purview Data Loss Prevention, Microsoft Defender XDR. |
-| Plugins | Microsoft Purview plugin must be enabled in Security Copilot. |
-| Role-based access | [See full permissions matrix.](/purview/copilot-in-purview-triage-dlp-agent-get-started#permissions-for-enabling-and-configuring-the-triage-agent-in-dlp-from-microsoft-purview-and-defender-xdr-portals) |
-| Trigger | Runs automatically on a Microsoft-managed schedule when new DLP alerts are generated, or manually one alert at a time. Default alert timeframe: last 30 days. |
-
-> [!NOTE]
-> The Data Security Triage Agent can be deployed from both the Microsoft Purview portal and the Defender XDR portal, but can only be managed, edited, and disabled from the Microsoft Purview portal. After deployment, agent summaries and outputs are viewable in both portals.
- 
-#### Enable the Data Security Triage Agent from the Defender XDR portal
-
-To enable the agent from the Defender portal, follow these steps:
- 
-1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) with an account that has the required permissions.
-2. Select **Security Copilot** > **Security Store**.
-3. Search for or browse to the **Triage Agent in Data Loss Prevention** card.
-4. Select the agent card, then select **Get agent** to begin deployment.
-5. After purchase, select **Security Copilot** > **Agents**, find the agent in the **Ready for setup** section, and select **Set up**.
-6. Choose whether to run automatically or manually, set the alert timeframe, and optionally enable remediation reminders in Microsoft Teams.
-7. Select **Start**. The agent begins triaging DLP alerts within 30 to 60 minutes.
- 
-For detailed configuration options, custom instructions, and policy scoping, see [Get started with the Microsoft Purview Triage Agent in Data Loss Prevention](/purview/copilot-in-purview-triage-dlp-agent-get-started).

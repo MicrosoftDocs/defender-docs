@@ -2,7 +2,8 @@
 title: View exported data in Azure Monitor
 description: Learn how to view the data you exported with continuous export in Azure Monitor and analyze it effectively.
 ms.topic: how-to
-ms.date: 05/24/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security analyst, I want to be able to view the exported data in Azure Monitor so that I can analyze and respond to security alerts and recommendations effectively.
 ai-usage: ai-assisted
 ---
@@ -28,7 +29,7 @@ When you export Defender for Cloud data to a Log Analytics workspace, two main t
 
 You can query these tables in Log Analytics to confirm that continuous export is working.
 
-1. Sign in to the Azure portal at [portal.azure.com](https://portal.azure.com/).
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Search for and select **Log Analytics workspaces**. 
 
@@ -52,7 +53,7 @@ You can query these tables in Log Analytics to confirm that continuous export is
 
 When you export data to Azure Event Hubs, Defender for Cloud continuously streams alerts and recommendations as event messages. You can view these exported events in the Azure portal and analyze them further by connecting a downstream service.
 
-1. Sign in to the Azure portal at [portal.azure.com](https://portal.azure.com/).
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Search for and select **Event Hubs namespaces**.
 
@@ -69,7 +70,7 @@ When you export data to Azure Event Hubs, Defender for Cloud continuously stream
 
 You can create Azure Monitor alerts based on your exported Defender for Cloud data. These alerts let you automatically trigger actions, such as sending email notifications or creating information technology service management (ITSM) tickets, when specific security events occur.
 
-1. Sign in to the Azure portal at [portal.azure.com](https://portal.azure.com/).
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Search for and select **Monitor**.
 
@@ -79,10 +80,10 @@ You can create Azure Monitor alerts based on your exported Defender for Cloud da
 
     :::image type="content" source="media/continuous-export-view-data/azure-monitor-alerts.png" alt-text="Azure Monitor Alerts page with the + Create menu open and Alert rule selected." lightbox="media/continuous-export-view-data/azure-monitor-alerts.png":::
 
-1. Set up your new rule the same way you'd configure log alert rules in Azure Monitor. For details, see [Configure log alert rules](/azure/azure-monitor/alerts/alerts-unified-log):
+1. Set up your new rule by following the Azure Monitor log alert rule process. For details, see [Configure log alert rules](/azure/azure-monitor/alerts/alerts-unified-log):
 
     - For **Resource types**, select the Log Analytics workspace to which you exported security alerts and recommendations.
-    - For **Condition**, select **Custom log search**. In the page that appears, configure the query, lookback period, and frequency period. In the query, enter **SecurityAlert** or **SecurityRecommendation**. 
+    - For **Condition**, select **Custom log search**. In the **Custom log search** configuration pane, configure the query, lookback period, and frequency period. In the query, enter **SecurityAlert** or **SecurityRecommendation**. 
     - Optionally, create action groups to trigger automated responses. For setup guidance, see [Azure Monitor action groups](/azure/azure-monitor/alerts/action-groups). Action groups can send email, create ITSM tickets, run webhooks, and more.
     
 After you save the rule, Defender for Cloud alerts or recommendations appear in Azure Monitor based on your continuous export configuration and alert rule conditions. If you’ve linked an action group, it triggers automatically when the rule criteria are met.

@@ -52,7 +52,7 @@ For more information, see [Manage the sources for Microsoft Defender Antivirus p
 
 - Monthly updates are released in phases, resulting in multiple packages visible in your [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).
 
-- The following section lists changes included in the broad release channel. See the [latest broad channel release](https://www.microsoft.com/security/encyclopedia/adlpackages.aspx?action=info).
+- The following section lists changes included in the broad release channel. See the [latest broad channel release](https://definitionupdates.microsoft.com/packages?action=info).
 
 - To learn more about the gradual rollout process, and to see more information about the next release, see [Manage the gradual rollout process for Microsoft Defender updates](manage-gradual-rollout.md).
 
@@ -60,9 +60,9 @@ For more information, see [Manage the sources for Microsoft Defender Antivirus p
 
 - If you're looking for a list of Microsoft Defender processes, see the spreadsheet provided at [Enable access to Microsoft Defender for Endpoint service URLs in the proxy server](configure-environment.md#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server). The sheet also lists the services and their associated URLs that your network must be able to connect to.
 
-- Platform updates can be temporarily postponed if other protection features, such as [Endpoint DLP](/Microsoft-365/compliance/endpoint-dlp-getting-started) or [Device Control](device-control-report.md), are actively monitoring running processes. Platform updates are retried after a reboot or when all monitored services are stopped.
+- Platform updates can be temporarily postponed if other protection features, such as [Endpoint DLP](/purview/endpoint-dlp-getting-started) or [Device Control](device-control-report.md), are actively monitoring running processes. Platform updates are retried after a reboot or when all monitored services are stopped.
 
-- In the **Microsoft Configuration Manager / Windows Server Update Services** (ConfigMgr/WSUS) catalog, the category **Microsoft Defender for Endpoint** includes updates for the `MSSense` service in [KB5005292](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292). KB5005292 includes updates and fixes to the Microsoft Defender for Endpoint **endpoint detection and response** (EDR) sensor. For more information, see [Microsoft Defender for Endpoint update for EDR Sensor](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) and [What's new in Microsoft Defender for Endpoint on Windows](microsoft-defender-endpoint-releases.md#windows-releases).
+- In the **Microsoft Configuration Manager / Windows Server Update Services** (ConfigMgr/WSUS) catalog, the category **Microsoft Defender for Endpoint** includes updates for the `MSSense` service in [KB5005292](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292). KB5005292 includes updates and fixes to the Microsoft Defender for Endpoint **endpoint detection and response** (EDR) sensor. For more information, see [Microsoft Defender for Endpoint update for EDR Sensor](https://support.microsoft.com/servicing/management-tools/microsoft-defender/update/microsoft-defender-for-endpoint-update-for-edr-sensor) and [What's new in Microsoft Defender for Endpoint on Windows](microsoft-defender-endpoint-releases.md#windows-releases).
 
 ### Previous version updates: Technical upgrade support only
 
@@ -151,7 +151,7 @@ The table provides the Microsoft Defender Antivirus platform and engine versions
 |1703 (RS2)|`4.11.15603.2`|`1.1.13504.0`|Technical upgrade support (only)|
 |1607 (RS1)|`4.10.14393.3683`|`1.1.12805.0`|Technical upgrade support (only)|
 
-For Windows 10 release information, see the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
+For Windows 10 release information, see the [Windows lifecycle fact sheet](/lifecycle/faq/windows).
 
 > [!NOTE]
 > - Windows Server 2016 ships with the same platform version as RS1 and falls under the same support phase: Technical upgrade support (only).
@@ -168,7 +168,7 @@ To avoid a gap in protection, keep your OS installation images up to date with t
 
 Updates are released for x86, x64, and Arm64 Windows architecture.
 
-For more information, see [Microsoft Defender update for Windows operating system installation images](https://support.microsoft.com/help/4568292/defender-update-for-windows-operating-system-installation-images).
+For more information, see [Microsoft Defender update for Windows operating system installation images](https://support.microsoft.com/servicing/Management-Tools/microsoft-defender/update/microsoft-defender-update-for-windows-operating-system-installation-images).
 
 After a new package version is released, support for the previous two versions is reduced to technical support only. To view a list of previous versions, see [Previous DISM updates](msda-updates-previous-versions-technical-upgrade-support.md#previous-dism-updates-no-longer-supported).
 
@@ -221,13 +221,13 @@ After a new package version is released, support for the previous two versions i
 
 | Article | Description  |
 |:---|:---|
-|[Microsoft Defender update for Windows operating system installation images](https://support.microsoft.com/help/4568292/defender-update-for-windows-operating-system-installation-images)  | Review anti-malware update packages for your OS installation images (WIM and VHD files). Get Microsoft Defender Antivirus updates for Windows 10 (Enterprise, Pro, and Home editions), Windows Server 2019, Windows Server 2022, Windows Server 2016, and Windows Server 2012 R2 installation images.  |
+|[Microsoft Defender update for Windows operating system installation images](https://support.microsoft.com/servicing/Management-Tools/microsoft-defender/update/microsoft-defender-update-for-windows-operating-system-installation-images)  | Review anti-malware update packages for your OS installation images (WIM and VHD files). Get Microsoft Defender Antivirus updates for Windows 10 (Enterprise, Pro, and Home editions), Windows Server 2019, Windows Server 2022, Windows Server 2016, and Windows Server 2012 R2 installation images.  |
 |[Manage how protection updates are downloaded and applied](manage-protection-updates-microsoft-defender-antivirus.md) | Protection updates can be delivered through many sources. |
 |[Manage when protection updates should be downloaded and applied](manage-protection-update-schedule-microsoft-defender-antivirus.md) | You can schedule when protection updates should be downloaded. |
 |[Manage updates for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md) | If an endpoint misses an update or scheduled scan, you can force an update or scan the next time a user signs in. |
 |[Manage event-based forced updates](manage-event-based-updates-microsoft-defender-antivirus.md) | You can set protection updates to be downloaded at startup or after certain cloud-delivered protection events. |
 |[Manage updates for mobile devices and virtual machines (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)| You can specify settings, such as whether updates should occur on battery power that's especially useful for mobile devices and virtual machines. |
-| [Microsoft Defender for Endpoint update for EDR Sensor](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) | You can update the EDR sensor (MsSense.exe) that's included in the new Microsoft Defender for Endpoint unified solution package released in 2021.|
+| [Microsoft Defender for Endpoint update for EDR Sensor](https://support.microsoft.com/servicing/Management-Tools/microsoft-defender/update/microsoft-defender-for-endpoint-update-for-edr-sensor) | You can update the EDR sensor (MsSense.exe) that's included in the new Microsoft Defender for Endpoint unified solution package released in 2021.|
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:

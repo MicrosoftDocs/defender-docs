@@ -1,21 +1,21 @@
 ---
 title: Use a Microsoft Sentinel MCP Tool in Microsoft Foundry 
 titleSuffix: Microsoft Security  
-description: Learn how to use Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools or your own custom tool in Microsoft Foundry 
+description: Add Microsoft Sentinel MCP security tool collections or your own custom MCP tools to AI agents in Microsoft Foundry. Includes steps for app registration, authentication, and connecting tools.
 ms.author: pauloliveria
 author: poliveria
 ms.reviewer: macasgra
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #customer intent: As a security analyst, I want to add Sentinel MCP tools in Microsoft Foundry.
 ---
 
-# Use an MCP tool in Microsoft Foundry (preview)
+# Use Microsoft Sentinel MCP tools in Microsoft Foundry (preview)
 
 > [!IMPORTANT]
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.

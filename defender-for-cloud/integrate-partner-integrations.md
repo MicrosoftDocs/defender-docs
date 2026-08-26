@@ -3,17 +3,17 @@ title: Connect partner integrations in Microsoft Defender for Cloud
 description: Connect third-party partner solutions to Microsoft Defender for Cloud to enhance detection, simplify deployment, and extend multicloud protection.
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 05/28/2026
-ms.custom: sfi-image-nochange
+ms.date: 07/03/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to connect partner integrations in Microsoft Defender for Cloud so that I can extend detection and protection across my environment.
 ai-usage: ai-assisted
 ---
 
 # Connect partner integrations in Microsoft Defender for Cloud
 
-Microsoft Defender for Cloud integrates with both Microsoft services and partner solutions. By integrating partner integrations into your environment, you can enhance your security posture and add extra layers of protection to your resources and multicloud environments.
+Microsoft Defender for Cloud works with Microsoft services and partner solutions. You can add partner solutions to improve your security posture. These solutions help protect your resources across multicloud setups.
 
-Each integration offers different benefits and capabilities. For example, some integrations help you to simplify deployment, while others help you to integrate detection, unify monitoring and management, and extend capabilities.
+Each integration offers different benefits. Some help simplify deployment. Others extend detection, monitoring, or management.
 
 You can review the [list of available integrations](partner-integrations.md).
 
@@ -27,7 +27,7 @@ Before you begin, ensure you have the following:
 
 ## Create the partner application
 
-Depending on which integration you want to enable, after you finish the following steps, you might need to complete additional steps on the partner side.
+Complete the following steps to create the app. Some partners might require extra setup on their side.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -45,7 +45,7 @@ Depending on which integration you want to enable, after you finish the followin
 
 ## Create a client secret
 
-Once you create the application, you need to create a client secret.
+After you create the app, add a client secret.
 
 1. Select the application you created.
 
@@ -61,7 +61,7 @@ Once you create the application, you need to create a client secret.
 
 ## Grant subscription permissions to the application
 
-Once you create the client secret, you need to grant permissions to the application.
+Next, give the app access to your subscription.
 
 1. Search for and navigate to **Subscriptions**.
 
@@ -87,7 +87,7 @@ Once you create the client secret, you need to grant permissions to the applicat
 
 1. Follow the steps again to add the **Reader** role.
 
-Repeat these steps for any other relevant subscriptions.
+Repeat the role-assignment steps to assign the **Security Reader** and **Reader** roles for any other relevant subscriptions.
 
 ## Next step
 

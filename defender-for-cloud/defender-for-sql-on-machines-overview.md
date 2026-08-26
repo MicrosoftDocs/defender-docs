@@ -2,7 +2,8 @@
 title: Microsoft Defender for SQL Servers on Machines overview
 description: Protect infrastructure as a service (IaaS) SQL servers across Azure, multicloud, and on-premises environments with vulnerability assessment and threat protection.
 ms.topic: how-to
-ms.date: 05/27/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a user, I want an overview of Defender for SQL Servers on Machines so I can understand capabilities and onboarding options.
 ai-usage: ai-assisted
 ---
@@ -24,7 +25,8 @@ Defender for SQL Servers on Machines identifies and mitigates potential database
 - **Vulnerability assessment**: Defender for Cloud uses vulnerability assessment to discover, track, and assist you in the remediation of potential database vulnerabilities. Assessment scans provide an overview of your SQL machines' security state and provide details of any security findings.
 - **Threat protection**: Defender for Cloud generates alerts when it detects suspicious database activities, potentially harmful attempts to access or exploit SQL machines, SQL injection attacks, anomalous database access, and unusual query patterns. [Review SQL alerts](alerts-sql-database-and-azure-synapse-analytics.md).
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Enable Defender for SQL Servers on Machines](defender-for-sql-usage.md)

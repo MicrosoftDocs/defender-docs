@@ -1,10 +1,10 @@
 ---
 title: Enrich Windows workstation and server data with a local script
 description: Learn about how to enrich Windows workstation and server data on your OT sensor using a local script.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Enrich Windows workstation and server data with a local script (Public preview)

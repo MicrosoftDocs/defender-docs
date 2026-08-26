@@ -1,13 +1,13 @@
 ---
 title: Protect your Smartsheet | Microsoft Defender for Cloud Apps
 description: Connect Smartsheet to Microsoft Defender for Cloud Apps with the API connector to monitor activities and detect anomalous behavior.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
-# How Defender for Cloud Apps helps protect your Smartsheet
+# How Defender for Cloud Apps helps protect your Smartsheet environment
 
 
 
@@ -15,7 +15,8 @@ As a productivity and collaboration cloud solution, Smartsheet holds sensitive i
 
 Connecting Smartsheet to Defender for Cloud Apps gives you improved insights into your Smartsheet activities and provides threat detection for anomalous behavior.
 
-## Main threats
+<a name="main-threats"></a>
+## Main threats to your Smartsheet environment
 
 Connecting Smartsheet to Defender for Cloud Apps helps you address threats such as:
 
@@ -68,9 +69,11 @@ Review our best practices for [securing and collaborating with external users](b
 
 ## Connect Smartsheet to Microsoft Defender for Cloud Apps
 
-This section describes how to connect Microsoft Defender for Cloud Apps to your existing Smartsheet via the App Connector APIs. The resulting connection gives you visibility into and control over your organization's use of Smartsheet.
+The following instructions describe how to connect Microsoft Defender for Cloud Apps to your existing Smartsheet via the App Connector APIs. The resulting connection gives you visibility into and control over your organization's use of Smartsheet.
 
 ### Prerequisites
+
+Before you connect Smartsheet, make sure the following prerequisites are met:
 
 - You must have a Smartsheet license that is part of an Enterprise plan with the Platinum package.
 - The Smartsheet user used to log in to Smartsheet must be a System Admin.
@@ -87,21 +90,21 @@ This section describes how to connect Microsoft Defender for Cloud Apps to your 
 
     1. Enter your Smartsheet email address in the text box:
 
-        ![Screenshot that shows the Developer Sandbox Account Registration page.](media/smartsheet-register-to-developer-tools.png)
+        ![Screenshot of the Developer Sandbox Account Registration page with the email address text box for registering developer tools.](media/smartsheet-register-to-developer-tools.png)
 
     1. An activation mail will appear in your mailbox. Activate Developer Tools by using the activation mail.
 
     1. In Smartsheet, select **Create Developer Profile**. Enter your name and email address. Select **Save** and then **Close**:
 
-       ![Screenshot that shows the name and email text boxes.](media/smartsheet-create-developer-tools.png)
+       ![Screenshot of the Create Developer Profile form with fields for entering your name and email address.](media/smartsheet-create-developer-tools.png)
 
 2. In Smartsheet, select **Developer Tools**:
 
-   ![Screenshot that shows the Developer Tools menu item.](media/smartsheet-entering-developer-tools.png)
+   ![Screenshot of the Smartsheet menu with the Developer Tools option selected.](media/smartsheet-entering-developer-tools.png)
 
 3. In the **Developer Tools** dialog, select **Create New App**:
 
-   ![Screenshot that shows the Create New App button.](media/smartsheet-developer-tools.png)
+   ![Screenshot of the Developer Tools page with the Create New App option.](media/smartsheet-developer-tools.png)
 
 4. In the **Create New App** dialog, provide the following values:
     - **App name**: For example, **Microsoft Defender for Cloud Apps**.
@@ -112,7 +115,7 @@ This section describes how to connect Microsoft Defender for Cloud Apps to your 
     - **Publish App?**: Select.
     - **Logo**: Leave blank.
 
-      ![Screenshot that shows the Create New App dialog.](media/smartsheet-oauth-app-creation.png)
+      ![Screenshot of the Create New App dialog for entering OAuth app details such as app name, description, and redirect URL.](media/smartsheet-oauth-app-creation.png)
 
 5. Select **Save**. Copy the **App client id** and the **App secret** that are generated. You'll need these values when you configure Defender for Cloud Apps.
 
@@ -127,7 +130,7 @@ This section describes how to connect Microsoft Defender for Cloud Apps to your 
 
 1. In the next window, give the connector a descriptive name, and then select **Next**.
 
-    ![Screenshot that shows the Connect Smartsheet button.](media/connect-smartsheet.png)
+    ![Screenshot of the app connector dialog with the Connect Smartsheet option selected.](media/connect-smartsheet.png)
 
 1. On the **Enter details** screen, enter these values and select **Next**:
 

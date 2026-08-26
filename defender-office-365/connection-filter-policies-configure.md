@@ -14,12 +14,12 @@ ms.custom:
   - sfi-ga-nochange
 description: Admins can learn how to configure connection filtering in Microsoft 365 to allow or block emails from email servers.
 ms.service: defender-office-365
-ms.date: 07/03/2026
+ms.date: 07/27/2026
+ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
-ai-usage: ai-assisted
 ---
 
 # Configure connection filtering in cloud organizations
@@ -85,14 +85,14 @@ Use the following steps to modify the default connection filter policy in the Mi
 
    - **Connection filtering** section: Select **Edit connection filter policy**. In the flyout that opens, configure the following settings:
 
-     - **Always allow messages from the following IP addresses or address range**: This setting is the IP Allow List. Click in the box, enter a value, and then press the ENTER key or select the complete value displayed below the box. Valid values are:
+     - **Always allow messages from the following IP addresses or address range**: This setting is the IP Allow List. In the IP Allow List box, enter the IP address or address range and press **Enter**. The entry is added as a separate item (displayed as a gray box with an **X** icon). After confirming the entry appears, select **Save**. Valid values are:
        - Single IP: For example, 192.168.1.1.
        - IP range: For example, 192.168.0.1-192.168.0.254.
        - CIDR IP: For example, 192.168.0.1/25. Valid subnet mask values are /24 through /32. To skip spam filtering for /1 to /23, see [Skip spam filtering for a CIDR IP outside of the available range](#skip-spam-filtering-for-a-cidr-ip-outside-of-the-available-range).
 
        Repeat this step as many times as necessary. To remove an existing entry, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the entry.
 
-   - **Always block messages from the following IP addresses or address range**: This setting is the IP Block List. Enter a single IP (for example, 192.168.1.1), IP range (for example, 192.168.0.1-192.168.0.254), or CIDR IP (for example, 192.168.0.1/25) in the box.
+   - **Always block messages from the following IP addresses or address range**: This setting is the IP Block List. Enter a single IP (for example, 192.168.1.1), IP range (for example, 192.168.0.1-192.168.0.254), or CIDR IP (for example, 192.168.0.1/25) in the box and press **Enter**. The entry is added as a separate item (displayed as a gray box with an **X** icon). After confirming the entry appears, select **Save**.
 
    - **Turn on safe list**: Enable or disable the use of the safe list that specifies known, good senders to skip spam filtering. To use the safe list, select the check box.
 
@@ -185,7 +185,7 @@ This section covers [CIDR IP limitations](#skip-spam-filtering-for-a-cidr-ip-out
 
 The IP Allow List supports only CIDR IPs with a network mask of /24 to /32.
 
-To skip spam filtering on messages from source email servers in the /1 to /23 range, you can use Exchange mail flow rules (also known as transport rules). However, we don't recommend using mail flow rules. Messages are blocked if an IP address in the /1 to /23 CIDR IP range appears on any of Microsoft's proprietary blocklists or non-Microsoft blocklists.
+To skip spam filtering on messages from source email servers in the /1 to /23 range, you can [use Exchange mail flow rules (transport rules)](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl). However, we don't recommend using mail flow rules. Messages are blocked if an IP address in the /1 to /23 CIDR IP range appears on any of Microsoft's proprietary blocklists or non-Microsoft blocklists.
 
 Now that you're fully aware of the potential issues, you can create a mail flow rule with the following settings (at a minimum) to ensure that messages from these IP addresses skip spam filtering:
 
@@ -207,10 +207,14 @@ For example, the source email server 192.168.1.25 sends email from the domains c
    - Rule action: **Modify the message properties** \> **Set the spam confidence level (SCL)** \> **0**.
    - Rule exception: **The sender** \> **domain is** \> fabrikam.com (only the domain or domains that you want to skip spam filtering).
 
+Adding the source IP address to the IP Allow List is supposed to skip spam filtering for all domains from that source. However, this bypass is an input, not a final decision. Like the **Bypass spam filtering** (SCL -1) action in a mail flow rule, the IP Allow List bypass is subject to [Secure by default](secure-by-default.md), which evaluates the request and might not honor it. Some messages from the source can still be filtered.
+
+The **Set the spam confidence level (SCL)** to **0** might no longer reliably return those domains to filtering, because the requested SCL value is an input, not a decision.
+
 ### Scenarios where messages from sources in the IP Allow List are still filtered
 
 > [!NOTE]
-> These scenarios apply to all environments: standalone, hybrid, multi-geo, and cross-forest. Filtering behavior is based on security checks (for example, malware detection, phishing protection, or mail flow rules, not on the deployment model.
+> These scenarios apply to all environments: standalone, hybrid, multi-geo, and cross-forest. Filtering behavior is based on security checks (for example, malware detection, phishing protection, or mail flow rules, not on the deployment model).
 
 Messages from an email server in your IP Allow List are still subject to spam filtering in the following scenarios:
 
@@ -222,3 +226,7 @@ If you encounter either of these scenarios, you can create a mail flow rule with
 
 - Rule condition: **Apply this rule if** \> **The sender** \> **IP address is in any of these ranges or exactly matches** \> (your IP address or addresses).
 - Rule action: **Modify the message properties** \> **Set the spam confidence level (SCL)** \> **Bypass spam filtering**.
+
+## Related content
+
+[Preset security policies in cloud organizations](preset-security-policies.md)

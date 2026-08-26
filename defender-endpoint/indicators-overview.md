@@ -39,7 +39,7 @@ This video shows a walkthrough of creating and adding indicators:
 
 ### About Microsoft indicators
 
-As a general rule, you should only create indicators for known bad IoCs, or for any files / websites that should be explicitly allowed in your organization. For more information on the types of sites that Defender for Endpoint can block by default, see [Microsoft Defender SmartScreen overview](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview).
+As a general rule, you should only create indicators for known bad IoCs, or for any files / websites that should be explicitly allowed in your organization. For more information on the types of sites that Defender for Endpoint can block by default, see [Microsoft Defender SmartScreen overview](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/).
 
 A false positive (FP) refers to a false positive in Microsoft's threat intelligence. If a given resource is not actually a threat, you can create an Allow IoC to allow the resource. You can also help drive improvements to Microsoft's security intelligence by submitting false positives, and suspicious or known-bad IoCs for analysis. If a warning or block is incorrectly shown for a file or application, or if you suspect an undetected file is malware, you can submit a file to Microsoft for review. For more information, see [Submit files for analysis](https://www.microsoft.com/en-us/wdsi/filesubmission/).
 
@@ -65,17 +65,17 @@ Here's an example of how that works:
 
 1. Suppose that a user attempts to access a website on their device. The site happens to be hosted on a dangerous domain, and it should be blocked by network protection.  
 
-1. The three-way handshake via TCP/IP commences. Before it completes, a `NetworkConnectionEvents` action is logged, and its `ActionType` is listed as `ConnectionSuccess`. However, as soon as the three-way handshake process completes, network protection blocks access to the site. All of this happens quickly. A similar process occurs with [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview); it's when the three-way handshake completes that a determination is made, and access to a site is either blocked or allowed.
+1. The three-way handshake via TCP/IP commences. Before it completes, a `NetworkConnectionEvents` action is logged, and its `ActionType` is listed as `ConnectionSuccess`. However, as soon as the three-way handshake process completes, network protection blocks access to the site. All of this happens quickly. A similar process occurs with [Microsoft Defender SmartScreen](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/); it's when the three-way handshake completes that a determination is made, and access to a site is either blocked or allowed.
 
 1. In the Microsoft Defender portal, an alert is listed in the [alerts queue](alerts-queue.md). Details of that alert include both `NetworkConnectionEvents` and `AlertEvents`. You can see that the site was blocked, even though you also have a `NetworkConnectionEvents` item with the ActionType of `ConnectionSuccess`.
 
 #### File hash indicators
 
-In some cases, creating a new indicator for a newly identified file IoC - as an immediate stop-gap measure - might be appropriate to block files or even applications. However, using indicators to attempt to block an application might not provide the expected results as applications are typically composed of many different files. The preferred methods of blocking applications are to use [Windows Defender Application Control (WDAC)](/windows/security/threat-protection/windows-defender-application-control/wdac-and-applocker-overview) or AppLocker.
+In some cases, creating a new indicator for a newly identified file IoC - as an immediate stop-gap measure - might be appropriate to block files or even applications. However, using indicators to attempt to block an application might not provide the expected results as applications are typically composed of many different files. The preferred methods of blocking applications are to use [Windows Defender Application Control (WDAC)](/windows/security/application-security/application-control/app-control-for-business/appcontrol-and-applocker-overview) or AppLocker.
 
 Because each version of an application has a different file hash, using indicators to block hashes isn't recommended.  
 
-[Windows Defender Application Control (WDAC)](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create)
+[Windows Defender Application Control (WDAC)](/windows/security/application-security/application-control/app-control-for-business/design/select-types-of-rules-to-create)
 
 #### Certificate indicators
 
@@ -119,7 +119,7 @@ When your security team creates a new indicator (IoC), the following actions are
 > [!NOTE]
 > For Warn action, To receive the toast notification to be able to bypass the IoC, make sure the **“Files or activities are blocked”** option is enabled under **Virus & Threat Protection notifications**. The corresponding registry key should be set as follows: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Defender Security Center\Virus and threat protection\FilesBlockedNotificationDisabled = 0.  
 >   
->  More details see **[Windows Security app settings](https://support.microsoft.com/windows/windows-security-app-settings-1ec98620-4e41-4b6b-b055-3c4bb115d4ee#bkmk_notifications)**.
+>  More details see **[Windows Security app settings](https://support.microsoft.com/Windows/Security/Windows-Security/windows-security-app-settings#bkmk_notifications)**.
 
 You can create an indicator for:
 
@@ -170,7 +170,6 @@ Customers might experience issues with alerts for IoCs. The following scenarios 
 - [Create contextual IoC](respond-file-alerts.md#add-indicator-to-block-or-allow-a-file)
 - [Use the Microsoft Defender for Endpoint indicators API](api/ti-indicator.md)
 - [Use partner integrated solutions](partner-applications.md)
-
 
 
 

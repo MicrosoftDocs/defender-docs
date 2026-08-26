@@ -11,10 +11,10 @@ ms.collection:
 ms.custom:
   - seo-marvel-apr2020
   - sfi-ga-nochange
-  - msecd-doc-authoring-1016
+  - msecd-doc-authoring-1015
 description: View, create, modify, and delete outbound spam policies in Microsoft Defender for Office 365 and Exchange Online PowerShell.
 ms.service: defender-office-365
-ms.date: 07/03/2026
+ms.date: 08/10/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -28,7 +28,7 @@ ai-usage: ai-assisted
 
 In all organizations with cloud mailboxes, Microsoft 365 automatically checks outbound email messages for spam and unusual sending activity.
 
-Outbound spam from a user in your organization typically indicates a compromised account. Suspicious outbound messages are marked as spam (regardless of the spam confidence level or SCL) and are routed through the [high-risk delivery pool](outbound-spam-high-risk-delivery-pool-about.md) to help protect the reputation of the service (that is, to keep Microsoft 365 source email servers off IP block lists). Admins are automatically notified of suspicious outbound email activity and blocked users via [alert policies](alert-policies-defender-portal.md).
+Outbound spam from a user in your organization typically indicates a compromised account. Suspicious outbound messages are marked as spam and are routed through the [high-risk delivery pool](outbound-spam-high-risk-delivery-pool-about.md) to help protect the reputation of the service (that is, to keep Microsoft 365 source email servers off IP block lists). Admins are automatically notified of suspicious outbound email activity and blocked users via [alert policies](alert-policies-defender-portal.md).
 
 Microsoft 365 uses outbound spam policies as part of your organization's overall defense against spam. For more information, see [Anti-spam protection](anti-spam-protection-about.md).
 
@@ -130,7 +130,7 @@ To create an outbound spam policy in the Microsoft Defender portal, perform the 
 
      Select one of the following actions from the **Automatic forwarding rules** dropdown list:
 
-     - **Automatic - System-controlled**: This value is the default. This value is now the same as **Off - Forwarding is disabled**. When this value was originally introduced, it was equivalent to **On - Forwarding is enabled**. Over time, thanks to the principles of [secure by default](secure-by-default.md), the effect of this value was eventually changed to **Off - Forwarding is disabled** for all customers. For more information, see [All you need to know about automatic email forwarding in Exchange Online](https://techcommunity.microsoft.com/blog/exchange/all-you-need-to-know-about-automatic-email-forwarding-in-exchange-online/2074888).
+     - **Automatic - System-controlled**: This value is the default. When this value was introduced, it was equivalent to **On - Forwarding is enabled**. In 2021, the value changed to **Off - Forwarding is disabled** for new organizations and for existing organizations that weren't actively using the **Automatic - System-controlled** value. For existing organizations that were already using the value, it can remain equivalent to **On - Forwarding is enabled**. Because the behavior can differ by organization, configure **On - Forwarding is enabled** or **Off - Forwarding is disabled** instead of **Automatic - System-controlled**. For more information, see [All you need to know about automatic email forwarding in Exchange Online](https://techcommunity.microsoft.com/blog/exchange/all-you-need-to-know-about-automatic-email-forwarding-in-exchange-online/2074888).
      - **On - Forwarding is enabled**: Automatic external email forwarding isn't disabled by the policy.
      - **Off - Forwarding is disabled**: All automatic external email forwarding is disabled by the policy.
 
@@ -504,6 +504,10 @@ Remove-HostedOutboundSpamFilterRule -Identity "Marketing Department"
 For detailed syntax and parameter information, see [Remove-HostedOutboundSpamFilterRule](/powershell/module/exchangepowershell/remove-hostedoutboundspamfilterrule).
 
 ## Related content
+
+[How outbound spam policy limits apply to Send As and Send on behalf permissions](outbound-spam-policies-send-as-send-on-behalf.md)
+
+[Inventory delegated From addresses for outbound spam policies](outbound-spam-delegated-from-addresses-inventory.md)
 
 [Troubleshoot outbound sending limits in Exchange Online](outbound-spam-sending-limits-troubleshoot.md)
 

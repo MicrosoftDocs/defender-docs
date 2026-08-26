@@ -26,7 +26,7 @@ To see the available landing pages, open the Microsoft Defender portal at <https
 
 **Phish landing pages** in the **Content library** tab has two tabs:
 
-- **Global landing pages** tab: Contains built-in, unmodifiable landing page templates named **Microsoft Landing Page Template 1** to **Microsoft Landing Page Template 5**. These built-in landing pages are localized into 12+ languages.
+- **Global landing pages** tab: Contains built-in, unmodifiable landing page templates named **Microsoft Landing Page Template 1** to **Microsoft Landing Page Template 5**. These built-in landing pages are localized into more than 12 languages.
 - **Tenant landing pages** tab: Contains custom landing pages that you created.
 
 The following information is shown for each landing page. You can sort the landing pages by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
@@ -84,7 +84,7 @@ To create a landing page in Attack simulation training, use the following steps:
 2. On the **Tenant landing pages** tab, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create new** to start the new landing page wizard.
 
    > [!NOTE]
-   > At any point after you name the landing page during the new landing page wizard, you can select **Save and close** to save your progress and continue later. The incomplete landing page has the **Status** value **Draft**. You can pick up where you left off by selecting the landing page from the list and then clicking the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** action that appears.
+   > At any point after you name the landing page during the new landing page wizard, you can select **Save and close** to save your progress and continue later. The incomplete landing page has the **Status** value **Draft**. You can pick up where you left off by selecting the landing page from the list and then selecting the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** action that appears.
    >
    > You can also create landing pages during the creation of simulations and simulation automations. For more information, see [Create a simulation: Select a landing page](attack-simulation-training-simulations.md#select-a-landing-page) and [Create a simulation automation: Select a landing page](attack-simulation-training-simulation-automations.md#select-a-landing-page).
 
@@ -154,7 +154,7 @@ You can't modify built-in landing pages on the **Global landing pages** tab. You
 
 To modify an existing custom landing page on the **Tenant landing pages** tab, do one of the following steps:
 
-- Select the landing page from the list by clicking the check box next to the name. Select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** action that appears.
+- Select the landing page from the list by selecting the check box next to the name. Select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** action that appears.
 - Select **⋮** (**Actions**) next to the **Name** value of the landing page, and then select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit**.
 - Select the landing page from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select **Edit landing page** at the bottom of the flyout.
 
@@ -164,7 +164,7 @@ The landing page wizard opens with the settings and values of the selected landi
 
 To copy an existing landing page on the **Tenant landing pages** or **Global landing pages** tabs, do one of the following steps:
 
-- Select the landing page from the list by clicking the check box, and then select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Create a copy** action that appears.
+- Select the landing page from the list by selecting the check box, and then select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Create a copy** action that appears.
 - Select **⋮** (**Actions**) next to the **Name** value of the landing page, and then select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Create a copy**.
 
 When you copy a custom landing page on the **Tenant landing pages** tab, a copy of the landing page named "\<OriginalName\> - Copy" is added to the list.
@@ -185,7 +185,7 @@ To remove an existing custom landing page from the **Tenant landing pages** tab,
 > [!WARNING]
 > When you delete a landing page, all translations of the landing page are also deleted.
 
-- Select the landing page from the list by clicking the check box next to the name, and then select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears.
+- Select the landing page from the list by selecting the check box next to the name, and then select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears.
 - Select **⋮** (**Actions**) next to the **Name** value of the landing page, and then select :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete**.
 
 In the confirmation dialog that opens, select **Delete**.
@@ -193,8 +193,6 @@ In the confirmation dialog that opens, select **Delete**.
 <a name="related-links"></a>
 ## Related content
 
-[Get started using Attack simulation training](attack-simulation-training-get-started.md)
-
-[Create a phishing attack simulation](attack-simulation-training-simulations.md)
-
-[Simulation automations for Attack simulation training](attack-simulation-training-simulation-automations.md)
+- [Get started using Attack simulation training](attack-simulation-training-get-started.md)
+- [Create a phishing attack simulation](attack-simulation-training-simulations.md)
+- [Simulation automations for Attack simulation training](attack-simulation-training-simulation-automations.md)

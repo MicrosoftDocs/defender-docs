@@ -1,10 +1,10 @@
 ---
 title: Add custom apps to cloud discovery 
 description: This topic provides information about how to add custom apps to cloud discovery in Defender for Cloud Apps to monitor Shadow IT.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Mravela
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 # Add custom apps to cloud discovery
@@ -38,17 +38,15 @@ To add a new custom cloud app, perform the following steps:
 1. Assign a risk **Score** and add **App Notes** to help you track changes for this record.
 1. Select **Create**.
 
-After the app is created, it's available for you in the cloud app catalog.
+After the app is created, the custom app is available for you in the cloud app catalog.
 
-At any time, in the cloud app catalog, you can select the three dots at the end of a custom app's row to edit or delete it.
+At any time, in the cloud app catalog, you can select the three dots at the end of a custom app's row to edit or delete the custom app.
 
->[!NOTE]
-> Custom apps are automatically tagged with the **Custom app** tag after you add them.
-In order to view all your custom apps, set the **App tag** filter to be equal to *Custom app*.
+> [!WARNING]
+> Avoid adding custom apps when you are using the **Remove all tags** feature. Using **Remove all tags** also removes the **Custom app** tag from the app.
 
->[!NOTE]
-> Avoid adding Custom apps when you are using the **Remove all tags** feature. 
-Using Remove all tags will also remove the Custom App tag of the app.
+> [!NOTE]
+> Custom apps are automatically tagged with the **Custom app** tag after you add them. To view all your custom apps, set the **App tag** filter to *Custom app*.
 
 ## Next steps
 

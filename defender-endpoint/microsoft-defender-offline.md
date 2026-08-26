@@ -66,12 +66,12 @@ To receive Microsoft Defender Offline Scan updates:
 
 - Update Microsoft Defender Antivirus how you normally deploy updates to endpoints. Use a supported version of the: 
 
-  - [Platform Update](https://www.microsoft.com/security/portal/definitions/adl.aspx)
+  - [Platform Update](https://www.microsoft.com/wdsi/defenderupdates)
 
   - [Engine Update](microsoft-defender-antivirus-updates.md)
 
   - Security Intelligence Updates
-    - You can manually download and install the latest protection updates from the [Microsoft Malware Protection Center](https://www.microsoft.com/security/portal/definitions/adl.aspx) 
+    - You can manually download and install the latest protection updates from the [Microsoft Malware Protection Center](https://www.microsoft.com/wdsi/defenderupdates)
     - See the [Manage Microsoft Defender Antivirus Security intelligence updates](manage-protection-updates-microsoft-defender-antivirus.md) article for more information.
 
 - Users must be signed in with local administrator privileges.
@@ -189,7 +189,7 @@ To run Microsoft Defender Offline on Windows 7 SP1 or Windows 8.1, create bootab
      - [Download the 64-bit version (msstool64.exe)](https://go.microsoft.com/fwlink/?LinkID=234124)
      - [Download the 32-bit version (msstool32.exe)](https://go.microsoft.com/fwlink/?LinkID=234123)
 
-    If you're not sure which version to download, see [Is my PC running the 32-bit or 64-bit version of Windows?](https://support.microsoft.com/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
+    If you're not sure which version to download, see [Is my PC running the 32-bit or 64-bit version of Windows?](https://support.microsoft.com/Windows/Experience/Compatibility/32-bit-and-64-bit-windows-frequently-asked-questions).
 
 1. To get started, find a blank CD, DVD, or USB flash drive with at least 250 MB of free space, and then run the tool. You are guided through the steps to create the removable media.
 
@@ -258,6 +258,3 @@ Windows Defender Antivirus downloaded and configured Windows Defender Offline to
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-
-
-

@@ -1,9 +1,9 @@
 ---
 title: Manage sensors with Defender for IoT in the Azure portal
 description: Learn how to onboard, view, and manage sensors with Defender for IoT in the Azure portal.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
   - enterprise-iot
   - sfi-image-nochange
 ai-usage: ai-assisted
@@ -129,6 +129,9 @@ You may need to reactivate an OT sensor because you want to:
 - **Change your plan commitment**: If you make changes to your plan, such as changing your price plan to a monthly commitment, you need to reactivate your sensors to reflect the new changes.
 
 To reactivate an OT sensor for any of these reasons, do the following steps:
+
+> [!WARNING]
+> Deleting the existing sensor removes its current registration and disconnects it from the Azure portal. This action can't be undone. Before you continue, make sure you're ready to re-onboard the sensor with new settings.
 
 1. Delete your existing sensor from the **Sites and sensors** page, using the **...** options menu or the sensor details page.
 1. [Onboard the sensor again](onboard-sensors.md), registering it with any new settings.

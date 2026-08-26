@@ -151,7 +151,7 @@ Contextual file and folder exclusions are a Windows-only feature. They aren't av
 You create a contextual exclusion by adding contextual restrictions to a standard [file and folder exclusion](#file-and-folder-exclusions), then apply it the same way as any other exclusion. For the configuration methods, see [Configure custom exclusions for Microsoft Defender Antivirus](microsoft-defender-antivirus-exclusions-configure.md).
 
 > [!NOTE]
-> The [Windows Security app](https://support.microsoft.com/windows/stay-protected-with-the-windows-security-app-2ae0363d-0ada-c064-8b56-6a39afb6a963) doesn't support contextual exclusions.
+> The [Windows Security app](https://support.microsoft.com/Windows/Security/Windows-Security/stay-protected-with-the-windows-security-app) doesn't support contextual exclusions.
 
 Contextual file and folder exclusions use the following syntax:
 

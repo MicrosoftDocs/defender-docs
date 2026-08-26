@@ -77,12 +77,12 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 
 - Devices must be running an x64 version of Windows 7 SP1 or Windows Server 2008 R2 SP1. We recommend having the latest updates installed to avoid reboots and to significantly reduce required installation time.
 
-- For the Defender deployment tool to run on Windows 7 SP1 or Windows Server 2008 R2 SP1, at a minimum, the update KB4474419 for [SHA2 code signing](https://support.microsoft.com/topic/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus-64d1c82d-31ee-c273-3930-69a4cde8e64f) must be installed.
+- For the Defender deployment tool to run on Windows 7 SP1 or Windows Server 2008 R2 SP1, at a minimum, the update KB4474419 for [SHA2 code signing](https://support.microsoft.com/servicing/os/windows/2020/09/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus) must be installed.
 
 
-   - Servicing stack update (SSU) ([KB4490628](https://support.microsoft.com/help/4490628)). If you use Windows Update, the required SSU is offered to you automatically. 
+   - Servicing stack update (SSU) ([KB4490628](https://support.microsoft.com/topic/servicing-stack-update-for-windows-7-sp1-and-windows-server-2008-r2-sp1-march-12-2019-b4dc0cff-d4f2-a408-0cb1-cb8e918feeba)). If you use Windows Update, the required SSU is offered to you automatically.
 
-   - SHA-2 update ([KB4474419](https://support.microsoft.com/help/4474419)) released September 10, 2019. If you use Windows Update, the required SHA-2 update is offered to you automatically. 
+   - SHA-2 update ([KB4474419](https://support.microsoft.com/topic/sha-2-code-signing-support-update-for-windows-server-2008-r2-windows-7-and-windows-server-2008-september-23-2019-84a8aad5-d8d9-2d5c-6d78-34f9aa5f8339)) released September 10, 2019. If you use Windows Update, the required SHA-2 update is offered to you automatically.
 
 - On Server 2008 R2 SP1 devices, .NET 3.5 or a higher version of the .NET framework must also be installed.
 

@@ -5,17 +5,18 @@ description: This article outlines the filter functionality available in Microso
 author: danielledennis
 ms.author: dandennis
 ms.service: defender-easm
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
-# Domain asset filters
+# Use domain asset filters
 
 This article lists the filters that specifically apply to domain assets in Microsoft Defender External Attack Surface Management. Use these filters to refine your inventory searches and locate a specific subset of domain assets. Each filter entry describes the filter's purpose, provides example values, and lists the applicable operators. Some filters offer predefined values from a drop-down list, while others require you to manually enter a value.
 
-## Defined value filters  
+<a name="defined-value-filters"></a>
+## Use defined-value domain asset filters  
 
 The following filters provide a drop-down list of options to select. The available values are predefined. 
 
@@ -24,7 +25,8 @@ The following filters provide a drop-down list of options to select. The availab
 |     Parked Domain      |   Indicates whether a website is registered but not connected to an online service (website, email hosting).   |   true / false                                                                               |   `Equals` `Not Equals`              |
 |     Domain Expiration  |   The registration expiry date range for the domain.                                                           |   Expired, Expires in 30 days, Expires in 60 days, Expires in 90 days, Expires in > 90 days  |   `Equals` `Not Equals` `In` `Not In`  |
 
-## Freeform filters  
+<a name="freeform-filters"></a>
+## Use freeform domain asset filters  
 
 The following filters require that the user manually enters the value with which they want to search. This list is organized according to the number of applicable operators for each filter, then alphabetically. Note that many values are case-sensitive.
 

@@ -1,14 +1,14 @@
 ---
 title: Configure automatic log upload for continuous reports in Microsoft Defender for Cloud Apps
 description: Set up a log collector to automatically upload logs over Syslog or FTP for continuous cloud discovery reports in Microsoft Defender for Cloud Apps.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Mravela
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
-# Configure automatic log upload for continuous reports
+# Configure automatic log upload for Defender for Cloud Apps continuous reports
 
 Log collectors enable you to easily automate log upload from your network. The log collector runs on your network and receives logs over Syslog or FTP. Each log is automatically processed, compressed, and transmitted to the portal. FTP logs are uploaded to Microsoft Defender for Cloud Apps after the file finished the FTP transfer to the Log Collector. For Syslog, the Log Collector writes the received logs to the disk. Then the collector uploads the file to Defender for Cloud Apps when the file size is larger than 40 KB.
 
@@ -36,7 +36,7 @@ Make sure your environment meets the following system requirements:
 > To install a new log collector version, you must stop the log collector, remove the current image, and then install the new one.
 
 > [!NOTE]
-> If you have an existing log collector and want to remove it before deploying it again, or if you simply want to remove it, run the following commands:
+> If you have an existing log collector and want to remove the collector container before deploying the log collector again, or if you simply want to remove the collector container, run the following commands:
 >
 > `docker stop <collector_name>`
 >
@@ -51,7 +51,7 @@ The Log collector can successfully handle log capacity of up to 50 GB per hour. 
 
 ## Related content
 
-The Log Collector supports the **Container** deployment mode. For more information, see:
+The Log Collector supports the **Container** deployment mode. Choose the container deployment guide for your platform:
 
 - [Configure automatic log upload using on-premises Docker on Windows](discovery-docker-windows.md)
 - [Configure automatic log upload using Podman](discovery-linux-podman.md)

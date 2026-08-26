@@ -8,10 +8,10 @@ ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ms.collection: ms-security  
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 # Customer intent: As a security engineer or administrator, I want to create jobs in the Microsoft Sentinel data lake so that I can run KQL queries against the data in the lake tier and promote the results to the analytics tier.
 
@@ -20,7 +20,7 @@ ms.custom: msecd-doc-authoring-1014
 
 #  Create KQL jobs in the Microsoft Sentinel data lake
 
-KQL jobs are one-time or scheduled KQL queries on data in the Microsoft Sentinel data lake and federated tables. Use jobs for investigative and analytical scenarios, such as: 
+Kusto Query Language (KQL) jobs are one-time or scheduled KQL queries on data in the Microsoft Sentinel data lake and federated tables. Federated tables are external data sources, such as Microsoft Entra ID, Microsoft 365, and Microsoft Resource Graph tables, that you can query alongside data lake tables without ingesting the data into your workspace. Use jobs for investigative and analytical scenarios, such as: 
 + Long-running one-time queries for incident investigations and incident response (IR)
 + Data aggregation tasks that support enrichment workflows using low-fidelity logs
 + Historical threat intelligence (TI) matching scans for retrospective analysis
@@ -219,12 +219,17 @@ The following naming and scheduling limitations apply to KQL jobs:
 + Job names can't contain a `#` or a `-`.
 + Job start time must be at least 30 minutes after job creation or editing.
 
+## Source workspaces deletion
+
+If a source workspace referenced by a scheduled KQL job is deleted, the job might continue to run and fail on each scheduled execution until the schedule expires or the job is modified. To prevent repeated failures and unnecessary resource consumption, jobs that reference deleted source workspaces are automatically placed in a **Disabled** state and require user action before they can resume.
 
 ## Data lake ingestion latency
 
 The data lake tier stores data in cold storage. Unlike hot or near real-time analytics tiers, cold storage is optimized for long-term retention and cost efficiency and doesn't provide immediate access to newly ingested data. When new rows are added to existing tables in the data lake or in federated tables, there's a typical latency of up to 15 minutes before the data is available for querying. Account for the ingestion latency when you run queries and schedule KQL jobs by ensuring that lookback windows and job schedules are configured to avoid data that isn't available yet.
 
 To avoid querying data that might not yet be available, include a delay parameter in your KQL queries or jobs. For example, when you schedule automated jobs, set the query's end time to `now() - delay`, where `delay` matches the typical data readiness latency of 15 minutes. This approach ensures that queries only target data that's fully ingested and ready for analysis.
+
+The following KQL query detects events within a 15-minute lookback window while accounting for ingestion delay. The `lookback` variable controls the query time range, and the `delay` variable offsets the window to ensure only fully ingested data is queried.
 
 ``` kql 
 let lookback = 15m;

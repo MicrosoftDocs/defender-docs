@@ -203,7 +203,7 @@ After you install the Endpoint Protection client on your reference computer, ver
 
 ## Configure network protection
 
-Prior to enabling network protection in audit or block mode, ensure that you've installed the antimalware platform update, which can be obtained from the [support page](https://support.microsoft.com/help/4560203/windows-defender-anti-malware-platform-binaries-are-missing).
+Prior to enabling network protection in audit or block mode, ensure that you've installed the antimalware platform update, which can be obtained from the [support page](/troubleshoot/windows-client/networking/network-connectivity-lost).
 
 ## Configure controlled folder access
 

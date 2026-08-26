@@ -1,13 +1,13 @@
 ---
 title: Schedule Microsoft Defender Antivirus protection updates
-description: Schedule the day, time, and interval for when protection updates should be downloaded
+description: Schedule the day, time, and interval for when protection updates should be downloaded.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 07/02/2026
+ms.date: 08/12/2026
 ms.topic: how-to
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1016
+ms.custom: nextgen, msecd-doc-authoring-1015
 ms.reviewer: pahuijbr
 ms.subservice: ngp
 ms.collection: 
@@ -19,6 +19,7 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ai-usage: ai-assisted
+#customer intent: As a security administrator, I want to schedule protection updates so that endpoints receive security intelligence updates at the required times.
 ---
 # Manage the schedule for when protection updates should be downloaded and applied
 
@@ -58,7 +59,7 @@ To schedule protection updates by using Configuration Manager, perform the follo
 
    - Set **Check for Endpoint Protection security intelligence updates at a specific interval...** to **0**.
    - Set **Check for Endpoint Protection security intelligence updates daily at...** to the time when updates should be checked.
-      
+
 1. To check and download updates on a continual interval, Set **Check for Endpoint Protection security intelligence updates at a specific interval...** to the number of hours that should occur between updates.
 
 1. [Deploy the updated policy as usual](/sccm/protect/deploy-use/endpoint-antimalware-policies#deploy-an-antimalware-policy-to-client-computers).
@@ -66,22 +67,63 @@ To schedule protection updates by using Configuration Manager, perform the follo
 ## Use Group Policy to schedule protection updates
 
 > [!IMPORTANT]
-> By default, the update schedule day (`SignatureScheduleDay`) is set to "8" (no day specified) and the update check interval (`SignatureUpdateInterval`) is set to "0" (disabled), so Microsoft Defender Antivirus doesn't schedule protection updates automatically.
-> Enabling `SignatureScheduleDay` or `SignatureUpdateInterval` overrides that default.
+> By default, the update schedule day (`SignatureScheduleDay`) is set to "8" (no day specified) and the update check interval (`SignatureUpdateInterval`) is set to "0" (disabled), so Microsoft Defender Antivirus doesn't schedule protection updates automatically. Enabling `SignatureScheduleDay` or `SignatureUpdateInterval` overrides that default.
 
-1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and click **Edit**.
+To schedule protection updates by using Group Policy, perform the following steps:
 
-1. In the **Group Policy Management Editor** go to **Computer configuration**.
+1. In Centralized Group Policy, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
-1. Click **Policies** then **Administrative templates**.
+1. In the GPMC console tree, expand Group Policy Objects in the forest and domain containing the GPO you want to edit.
 
-1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Security Intelligence Updates** and configure the following settings:
+1. Right-click the GPO, and then select **Edit**.
 
-    1. Double-click the **Specify the day of the week to check for security intelligence updates** setting and set the option to **Enabled**. Enter the day of the week to check for updates. Click **OK**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Security Intelligence Updates**.
 
-    1. Double-click the **Specify the interval to check for security intelligence updates** setting and set the option to **Enabled**. Enter the number of hours between updates. Click **OK**.
+   > [!NOTE]
+   > Group Policy paths before Windows 10, version 2004 (May 2020) might use _Windows_ Defender Antivirus instead of _Microsoft_ Defender Antivirus. Group Policy paths before Windows 10, version 1909 (November 2019) might use _Signature Updates_ instead of _Security Intelligence Updates_. The older and newer names refer to the same policy locations.
 
-    1. Double-click the **Specify the time to check for security intelligence updates** setting and set the option to **Enabled**. Enter the time when updates should be checked. The time is based on the local time of the endpoint. Click **OK**.
+1. In the details pane of **Security Intelligence Updates**, the available settings are:
+   - [Specify the day of the week to check for security intelligence updates](#enable-and-configure-the-security-intelligence-update-day)
+   - [Specify the interval to check for security intelligence updates](#enable-and-configure-the-security-intelligence-update-interval)
+   - [Specify the time to check for security intelligence updates](#enable-and-configure-the-security-intelligence-update-time)
+
+   To open and configure a security intelligence update schedule setting, use any of the following methods:
+   - Double-click the setting.
+   - Right-click the setting, and then select **Edit**.
+   - Select the setting, and then select **Action** \> **Edit**.
+
+> [!TIP]
+> You can also configure Group Policy locally on individual devices by using the Local Group Policy Editor (`gpedit.msc`). Navigate to the same path: **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Security Intelligence Updates**.
+
+### Enable and configure the security intelligence update day
+
+1. In the details pane of **Security Intelligence Updates**, open the **Specify the day of the week to check for security intelligence updates** setting.
+
+1. In the setting window that opens, configure the following options:
+   1. Select **Enabled**.
+   1. **Specify the day of the week to check for security intelligence updates** in the **Options** section: Select the day of the week to check for updates.
+
+   When you're finished, select **OK**.
+
+### Enable and configure the security intelligence update interval
+
+1. In the details pane of **Security Intelligence Updates**, open the **Specify the interval to check for security intelligence updates** setting.
+
+1. In the setting window that opens, configure the following options:
+   1. Select **Enabled**.
+   1. **Specify the interval to check for security intelligence updates** in the **Options** section: Enter a value from `1` to `24` for the number of hours between updates.
+
+   When you're finished, select **OK**.
+
+### Enable and configure the security intelligence update time
+
+1. In the details pane of **Security Intelligence Updates**, open the **Specify the time to check for security intelligence updates** setting.
+
+1. In the setting window that opens, configure the following options:
+   1. Select **Enabled**.
+   1. **Specify the time to check for security intelligence updates** in the **Options** section: Enter the number of minutes after midnight when updates should be checked. For example, enter `120` for 2:00 AM. The schedule is based on the local time of the endpoint.
+
+   When you're finished, select **OK**.
 
 ## Use PowerShell cmdlets to schedule protection updates
 
@@ -128,5 +170,3 @@ See the following for more information and allowed parameters:
 - [Manage event-based forced updates](manage-event-based-updates-microsoft-defender-antivirus.md)
 - [Manage updates for mobile devices and virtual machines (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus in Windows 10 and 11](microsoft-defender-antivirus-windows.md)
-
-

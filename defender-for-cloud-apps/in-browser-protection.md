@@ -1,11 +1,11 @@
 ---
 title: In-browser protection with Microsoft Edge for Business | Microsoft Defender for Cloud Apps
 description: Learn about using in-browser protection with Microsoft Defender for Cloud Apps session policies and Microsoft Edge for Business.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 #customerIntent: As a Defender for Cloud Apps admin, I want to learn about the user experience with in-browser protection.
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # In-browser protection with Microsoft Edge for Business (Preview)
@@ -50,9 +50,9 @@ For instance, these scenarios are served by the reverse proxy:
 
 ## User experience with in-browser protection
 
-To confirm that in-browser protection is active, users need to select the "lock" icon in the browser's address bar and look for the "suitcase" symbol in the form that appears. The symbol indicates that the session is protected by Defender for Cloud Apps. For example:
+To confirm that in-browser protection is active, users need to select the "lock" icon in the browser's address bar and look for the "suitcase" symbol in the form that appears. The suitcase symbol indicates that the session is protected by Defender for Cloud Apps. For example:
 
-![Screenshot of the lock icon in the Microsoft Edge address bar showing the suitcase symbol that indicates the session is protected by Defender for Cloud Apps.](media/in-browser-protection/edge-in-browser-indication.png)
+![Screenshot of the lock icon in the Edge address bar showing the suitcase symbol indicating the session is protected by Defender for Cloud Apps.](media/in-browser-protection/edge-in-browser-indication.png)
 
 Also, the `.mcas.ms` suffix doesn't appear in the browser address bar with in-browser protection, as it does with standard Conditional Access app control, and developer tools are turned off with in-browser protection.
 
@@ -81,9 +81,9 @@ In-browser protection with Microsoft Edge for Business is turned on by default, 
    When you're finished on the **Edge for Business protection** page, select **Save**.
 
 ## Working with Microsoft Purview Endpoint data loss prevention
-Endpoint DLP policies are prioritized and applied if the same context and action are configured for the Endpoint policy and either a Defender for Cloud Apps session policy or a [Purview DLP policy for cloud apps](/purview/dlp-browser-dlp-learn#activities-you-can-monitor-and-take-action-on).
+Endpoint data loss prevention (DLP) policies are prioritized and applied if the same context and action are configured for the Endpoint policy and either a Defender for Cloud Apps session policy or a [Purview DLP policy for cloud apps](/purview/dlp-browser-dlp-learn#activities-you-can-monitor-and-take-action-on).
 
-For example, you have an Endpoint DLP policy that blocks a file upload to Salesforce, and you also have a Defender for Cloud Apps session policy that monitors file uploads to Salesforce. In this scenario, the Endpoint DLP policy is applied.
+For example, if you have an Endpoint DLP policy that blocks a file upload to Salesforce and a Defender for Cloud Apps session policy that monitors file uploads to Salesforce, the Endpoint DLP policy takes priority and is applied.
 
 For more information, see [Learn about Endpoint data loss prevention](/purview/endpoint-dlp-learn-about).
 
@@ -100,7 +100,7 @@ Because the barrier to circumventing session controls using Microsoft Edge is mu
 
      For example, a user is subject to a policy that doesn't align with in-browser protection capabilities (for example, **Protect file upon download**) OR the operating system is incompatible (for instance, Android).
 
-     In this scenario, because the user lacks control over the context, they might opt to use a different browser.
+     When the policy or operating system is incompatible with in-browser protection, the user might opt to use a different browser.
 
      If the applicable policies allow it and the operating system is compatible (Windows 10, 11, macOS), the user is required to use Microsoft Edge.
 

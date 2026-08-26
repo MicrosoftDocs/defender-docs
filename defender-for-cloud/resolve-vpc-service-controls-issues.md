@@ -1,8 +1,9 @@
 ---
 title: Resolve VPC service controls issues
 description: Troubleshoot VPC service controls issues in Microsoft Defender for Cloud to ensure your resources are connected and protected.
-ms.date: 06/05/2025
+ms.date: 07/03/2026
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security professional, I want to resolve VPC service controls issues in Microsoft Defender for Cloud to ensure my resources are connected and protected.
 ai-usage: ai-assisted
 ---
@@ -13,7 +14,7 @@ Google Cloud Platform (GCP) Virtual Private Cloud (VPC) Service Controls provide
 
 To allow Microsoft Defender for Cloud to scan resources within these protected environments, you need to configure ingress and egress policies that allow Defender for Cloud service accounts to operate within the perimeter. This configuration ensures that security scans can be performed without compromising the integrity of the perimeter’s restrictions.
 
-If you're unsure whether your Defender for Cloud account is experiencing issues with VPC Service Controls, you can check your [GCP Logs Explorer](troubleshoot-connectors.md#defender-api-calls-to-gcp) to find out.
+If you're unsure whether your Defender for Cloud account is experiencing issues with VPC Service Controls, you can check your [GCP Logs Explorer](troubleshoot-connectors.md#defender-api-calls-to-gcp) to determine whether VPC Service Controls are blocking Defender for Cloud API calls.
 
 ## Prerequisites
 
@@ -51,9 +52,10 @@ Each VPC Service Controls perimeter in GCP protects one or more projects. Config
 
 1. Select **Save**.
 
-Defender for Cloud triggers agentless disk scanning with API calls. You'll know this configuration works after the next scheduled scan API call, which can take up to 24 hours.
+Defender for Cloud triggers agentless disk scanning with API calls. You'll know the ingress and egress policy configuration works after the next scheduled scan API call, which can take up to 24 hours.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Microsoft Defender for Cloud troubleshooting guide](troubleshooting-guide.md)

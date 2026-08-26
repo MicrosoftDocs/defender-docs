@@ -1,36 +1,36 @@
 ---
-title: Deploy for Unified Security Operations | Microsoft Defender
+title: Deploy Microsoft Security Services for Unified Security Operations
 description: Deploy Microsoft Defender portal services for unified security operations, including Microsoft Defender XDR, Microsoft Sentinel, and other Microsoft Defender services.
 author: guywi-ms
 ms.author: guywild
 ms.topic: how-to #Don't change.
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.collection:
 - usx-security
 - zerotrust-solution
 - msftsolution-secops
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #customer intent: As a security administrator, I want to deploy Microsoft Defender portal services for unified security operations.
 
 ---
 
-# Deploy for unified security operations
+# Deploy Microsoft security services for unified security operations
 
-The Microsoft Defender portal provides unified security operations with Microsoft Defender XDR, Microsoft Sentinel, and other services. Together, Defender portal services provide a comprehensive view of your organization's security posture and helps you to detect, investigate, and respond to threats across your organization.
+The Microsoft Defender portal brings together Microsoft Defender XDR, Microsoft Sentinel, and other services for unified security operations. Use Defender portal services to get a full view of your security posture. You can detect, investigate, and respond to threats across your organization.
 
 Microsoft Security Exposure Management and Microsoft Threat Intelligence are available in any environment that meets the prerequisites, to users configured with required permissions.
 
 ## Prerequisites
 
-- Before you deploy Microsoft Defender services for unified security operations, make sure that you have a plan in place, including a workspace design and an understanding of Microsoft Sentinel costs and billing.
+- Before you deploy Microsoft Defender services for unified security operations, make sure you have a plan in place. Your plan should include a workspace design and an understanding of Microsoft Sentinel costs and billing.
 
   For more information, see [Planning guidance for unified security operations in the Microsoft Defender portal](overview-plan.md).
 
 ## Deploy Microsoft Defender XDR services
 
-Microsoft Defender XDR unifies incident response by integrating key capabilities across services, including Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, and Microsoft Defender for Identity. This unified experience adds powerful features you can access in the Microsoft Defender portal.
+Microsoft Defender XDR unifies incident response by integrating key capabilities across services. These services include Microsoft Defender for Endpoint, Defender for Office 365, Defender for Cloud Apps, and Defender for Identity. Microsoft Defender XDR adds powerful features you can access in the Microsoft Defender portal.
 
 1. Microsoft Defender XDR automatically turns on when eligible customers with the required permissions visit Microsoft Defender portal. For more information, see [Turn on Microsoft Defender XDR](/defender-xdr/m365d-enable).
 
@@ -44,7 +44,7 @@ Microsoft Defender XDR unifies incident response by integrating key capabilities
 
 ## Configure Microsoft Entra ID Protection
 
-Microsoft Defender XDR can ingest and include signals from Microsoft Entra ID Protection, which evaluates risk data from billions of sign-in attempts and evaluates the risk of each sign-in to your environment. Microsoft Entra ID Protection data is used by Microsoft Entra ID to allow or prevent account access, depending on how Conditional Access policies are configured.
+Microsoft Defender XDR can ingest signals from Microsoft Entra ID Protection. This service evaluates risk data from billions of sign-in attempts and scores the risk of each sign-in to your environment. Microsoft Entra ID uses this data to allow or block account access, based on how Conditional Access policies are configured.
 
 Configure Microsoft Entra ID Protection to enhance your security posture and add Microsoft Entra signals to your unified security operations. For more information, see [Configure your Microsoft Entra ID Protection policies](/entra/id-protection/how-to-deploy-identity-protection).
 
@@ -56,22 +56,22 @@ For more information, see [Connect your Azure subscriptions](/azure/defender-for
 
 ## Onboard to Microsoft Security Copilot
 
-Onboard to Microsoft Security Copilot to enhance your security operations by leveraging advanced AI capabilities. Security Copilot assists in threat detection, investigation, and response, providing actionable insights and recommendations to help you stay ahead of potential threats. Use Security Copilot to automate routine tasks, reduce the time to detect and respond to incidents, and improve the overall efficiency of your security team.
+Onboard to Microsoft Security Copilot to enhance your security operations with advanced AI. Security Copilot helps you detect, investigate, and respond to threats. It provides insights and recommendations to help you stay ahead of risks. Use Security Copilot to automate routine tasks, reduce response times, and improve the efficiency of your security team.
 
 For more information, see [Get started with Security Copilot](/copilot/security/get-started-security-copilot).
 
 ## Architect your workspace and onboard to Microsoft Sentinel
 
-The first step in using Microsoft Sentinel is to create a Log Analytics workspace, if you don't have one already. A single Log Analytics workspace might be sufficient for many environments, but many organizations create multiple workspaces to optimize costs and better meet different business requirements. The Defender portal supports a primary workspace and multiple secondary workspaces.
+The first step in using Microsoft Sentinel is to create a Log Analytics workspace, if you don't have one already. A single Log Analytics workspace might be enough for many environments. However, some organizations create multiple workspaces to reduce costs and meet different business needs. The Defender portal supports a primary workspace and multiple secondary workspaces.
 
-1. Create a Security resource group for governance purposes, which allows you to isolate Microsoft Sentinel resources and role-based access to the collection.
+1. Create a Security resource group for governance purposes, which allows you to isolate Microsoft Sentinel resources and role-based access to the resource group.
 1. Create a Log Analytics workspace in the Security resource group and onboard Microsoft Sentinel into it.
 
 For more information, see [Onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard) and [Multiple Microsoft Sentinel workspaces in the Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2310579).
 
 ## Configure roles and permissions
 
-Provision your users based on your documented [roles and permissions access plan](overview-plan.md#plan-roles-and-permissions). To comply with Zero Trust principles, we recommend that you use role-based access control (RBAC) to provide user access only to the resources that are allowed and relevant for each user, instead of providing access to the entire environment.
+Provision your users based on your documented [roles and permissions access plan](overview-plan.md#plan-roles-and-permissions). To follow Zero Trust principles, use role-based access control (RBAC) to give each user access only to the resources they need. Don't provide access to the entire environment.
 
 [!INCLUDE [mininum-access-requirements](includes/mininum-access-requirements.md)]
 
@@ -84,7 +84,7 @@ For more information, see:
 
 ## Onboard to the Defender portal
 
-When you onboard Microsoft Sentinel to the Defender portal, you unify capabilities with Microsoft Defender XDR like incident management and advanced hunting for unified security operations. For more information, see [Connect Microsoft Sentinel to Microsoft Defender](microsoft-sentinel-onboard.md).
+Onboard Microsoft Sentinel to the Defender portal to combine it with Microsoft Defender XDR. This gives you unified incident management and advanced hunting. For more information, see [Connect Microsoft Sentinel to Microsoft Defender](microsoft-sentinel-onboard.md).
 
 ## Fine-tune system configurations
 
@@ -92,9 +92,9 @@ Use the following Microsoft Sentinel configuration options to fine-tune your dep
 
 ### Enable health and auditing
 
-Monitor the health and audit the integrity of supported Microsoft Sentinel resources by turning on the auditing and health monitoring feature in Microsoft Sentinel's Settings page. Get insights on health drifts, such as the latest failure events or changes from success to failure states, and on unauthorized actions, and use health monitoring and audit data to create notifications and other automated actions.
+Turn on the auditing and health monitoring feature in the Microsoft Sentinel Settings page. This feature monitors the health and integrity of supported Microsoft Sentinel resources. Get insights on health drifts, such as recent failure events or changes from success to failure states. You can also track unauthorized actions and use the audit data to create notifications and automated actions.
 
-For more information, see[Turn on auditing and health monitoring for Microsoft Sentinel](/azure/sentinel/enable-monitoring?tabs=azure-portal).
+For more information, see [Turn on auditing and health monitoring for Microsoft Sentinel](/azure/sentinel/enable-monitoring?tabs=azure-portal).
 
 ### Configure Microsoft Sentinel content
 
@@ -128,7 +128,7 @@ For more information, see [Work with anomaly detection analytics rules](/azure/s
 
 ### Use the Microsoft Threat Intelligence analytics rule
 
-Enable the out-of-the-box Microsoft Threat Intelligence analytics rule and verify that the rule matches your log data with Microsoft-generated threat intelligence. For more information, see [Detect threats with threat indicator analytics](/azure/sentinel/understand-threat-intelligence#detect-threats-with-threat-indicator-analytics). Microsoft has a vast repository of threat intelligence data, and this analytic rule uses a subset of it to generate high fidelity alerts and incidents for SOC (security operations centers) teams to triage.
+Enable the out-of-the-box Microsoft Threat Intelligence analytics rule and verify that it matches your log data with Microsoft-generated threat intelligence. For more information, see [Detect threats with threat indicator analytics](/azure/sentinel/understand-threat-intelligence#detect-threats-with-threat-indicator-analytics). Microsoft has a vast repository of threat intelligence data. The Microsoft Threat Intelligence analytics rule uses a subset of that data to generate high-fidelity alerts and incidents for SOC (security operations centers) teams to triage.
 
 ### Avoid duplicate incidents
 
@@ -141,4 +141,3 @@ For more information, see [Microsoft incident creation ](/azure/sentinel/microso
 With fusion, anomaly, and threat intelligence analytic rules enabled, conduct a MITRE Att&ck crosswalk to help you decide which remaining analytic rules to enable and to finish implementing a mature XDR (extended detection and response) process. This empowers you to detect and respond throughout the lifecycle of an attack.
 
 For more information, see [Understand security coverage](/azure/sentinel/mitre-coverage).
-

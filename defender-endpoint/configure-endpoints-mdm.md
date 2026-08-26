@@ -1,6 +1,6 @@
 ---
-title: Onboard Windows devices to Defender for Endpoint using Intune
-description: Use Microsoft Intune to deploy the configuration package on devices so that they're onboarded to the Defender for Endpoint service.
+title: Onboard Windows devices to Microsoft Defender for Endpoint by using Microsoft Intune
+description: Learn how to use Microsoft Intune to onboard and offboard Windows 10 and Windows 11 devices in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
@@ -8,42 +8,43 @@ ms.localizationpriority: medium
 ms.collection:
 - m365-security
 - tier1
-ms.custom: admindeeplinkDEFENDER
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1015
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
-ms.date: 11/17/2025
+ms.date: 08/24/2026
+ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+#customer intent: As a security administrator, I want to onboard Windows devices to Microsoft Defender for Endpoint by using Microsoft Intune so that I can monitor and protect them.
 ---
 
-# Onboard Windows devices to Defender for Endpoint using Intune
+# Onboard Windows devices to Microsoft Defender for Endpoint by using Microsoft Intune
 
 [!INCLUDE [Microsoft Defender deployment tool preview](./includes/defender-deployment-tool-preview.md)]
 
-You can use mobile device management (MDM) solutions to configure Windows 10 devices. Defender for Endpoint supports MDMs by providing OMA-URIs to create policies to manage devices.
+Use Microsoft Intune to onboard Windows 10 and Windows 11 devices to Microsoft Defender for Endpoint. Onboarding configures devices to communicate with Defender for Endpoint for threat detection and device risk assessment. You can also use Intune to offboard devices that no longer need monitoring.
 
-For more information on using Defender for Endpoint CSP, see, [WindowsAdvancedThreatProtection CSP](https://msdn.microsoft.com/library/windows/hardware/mt723296(v=vs.85).aspx) and [WindowsAdvancedThreatProtection DDF file](https://msdn.microsoft.com/library/windows/hardware/mt723297(v=vs.85).aspx).
+Defender for Endpoint supports mobile device management (MDM) configuration through Open Mobile Alliance Uniform Resource Identifier (OMA-URI) settings. For more information, see [WindowsAdvancedThreatProtection CSP](/windows/client-management/mdm/windowsadvancedthreatprotection-csp) and [WindowsAdvancedThreatProtection DDF file](/windows/client-management/mdm/windowsadvancedthreatprotection-ddf).
 
 ## Before you begin
 
-Devices must be enrolled with Intune as your Mobile Device Management (MDM) solution.
+- Enroll the devices in Microsoft Intune as your MDM solution. For more information, see [Device enrollment in Microsoft Intune](/intune/intune-service/fundamentals/deployment-guide-enrollment).
+- To create endpoint detection and response (EDR) policies, use an account with the **Endpoint Security Manager** role or equivalent permissions.
 
-For more information on enabling MDM with Microsoft Intune, see [Device enrollment (Microsoft Intune)](/intune/intune-service/fundamentals/deployment-guide-enrollment).
+Intune is a separate product that's not included with every Defender for Endpoint subscription. You need a subscription that includes Intune, or you can buy Intune separately as a standalone subscription or add-on. For details, see [Microsoft Intune licensing](/intune/intune-service/fundamentals/licenses). If you don't have Intune, review the other methods in [Identify Defender for Endpoint architecture and deployment method](deployment-strategy.md).
 
 ## Onboard devices using Microsoft Intune
 
-Check out [Identify Defender for Endpoint architecture and deployment method](deployment-strategy.md) to see the various paths in deploying Defender for Endpoint.
+Review [Defender for Endpoint architecture and deployment methods](deployment-strategy.md) to select the appropriate onboarding method for your environment.
 
-Follow the instructions from [Intune](/intune/intune-service/protect/advanced-threat-protection-configure#enable-microsoft-defender-for-endpoint-in-intune).
-
-For more information on using Defender for Endpoint CSP, see, [WindowsAdvancedThreatProtection CSP](https://msdn.microsoft.com/library/windows/hardware/mt723296(v=vs.85).aspx) and [WindowsAdvancedThreatProtection DDF file](https://msdn.microsoft.com/library/windows/hardware/mt723297(v=vs.85).aspx).
+To connect Intune to Defender for Endpoint and onboard devices, follow the instructions in [Configure Microsoft Defender for Endpoint with Intune and onboard devices](/intune/device-security/microsoft-defender/configure-integration).
 
 > [!NOTE]
 >
 > - The **Health Status for onboarded devices** policy uses read-only properties and can't be remediated.
-> - Configuration of diagnostic data reporting frequency is only available for devices on Windows 10, version 1703.
-> - Onboarding to Defender for Endpoint will onboard the device to [Data Loss Prevention (DLP)](/Microsoft-365/compliance/endpoint-dlp-learn-about), which is also a part of Microsoft 365 compliance.
+> - The diagnostic data reporting frequency setting was added in Windows 10, version 1703. In Intune EDR policies, the setting is deprecated and doesn't affect new devices.
+> - Onboarding a device to Defender for Endpoint also onboards it to [Endpoint data loss prevention (DLP)](/purview/endpoint-dlp-learn-about).
 
 ## Run a detection test to verify onboarding
 
@@ -51,39 +52,47 @@ After onboarding the device, you can choose to run a detection test to verify th
 
 ## Offboard devices using Mobile Device Management tools
 
-For security reasons, the package used to Offboard devices expires seven days after the date it was downloaded. Expired offboarding packages sent to a device are rejected. When downloading an offboarding package, you're notified of the package's expiry date, and the date is included in the package name.
+For security reasons, the package used to offboard devices expires seven days after you download it. Expired offboarding packages sent to a device are rejected. When you download an offboarding package, the portal displays its expiration date, which is also included in the package name.
 
 > [!NOTE]
-> To avoid unpredictable policy collisions, onboarding and offboarding policies must not be deployed at the same time on a device.
+> To avoid unpredictable policy collisions, don't deploy onboarding and offboarding policies on a device at the same time.
 
-1. Get the offboarding package from the [Microsoft Defender portal](https://security.microsoft.com) as follows:
+1. Get the offboarding package from the Defender portal.
 
-    1. In the navigation pane, select **Settings** \> **Endpoints** \> **Device management** \> **Offboarding**.
+   On the **Offboarding** page in the Defender portal at <https://security.microsoft.com/securitysettings/endpoints/offboarding>, configure the following settings:
 
-    1. Select **Windows 10 or Windows 11** as the operating system.
+   1. At the top of the page, select **Windows 10 and Windows 11**.
+   1. In the **Offboard a device** section that appears, select **Mobile Device Management / Microsoft Intune** as the **Deployment method**.
+   1. At the bottom of the page, select **Download package**, select **Download** in the confirmation dialog, and then save the `WindowsDefenderATPOffboardingPackage_valid_until_YYYY-MM-DD.offboarding.zip` file in a location that's easy to find.
 
-    1. In the **Deployment method** field, select **Mobile Device Management / Microsoft Intune**.
+1. Extract the contents of the `.zip` file (a file named `WindowsDefenderATP_valid_until_YYYY-MM-DD.offboarding`) to a shared, read-only location that's accessible to the admins who are responsible for deploying the package.
 
-    1. Select **Download package**, and save the .zip file.
+1. In the Microsoft Intune admin center, use one of the following deployment methods:
 
-1. Extract the contents of the `.zip` file to a shared, read-only location that can be accessed by the network administrators who'll deploy the package. You should have a file named `WindowsDefenderATP_valid_until_YYYY-MM-DD.offboarding`.
+   - **Custom configuration policy**: To create a custom configuration policy, see <a href="/intune/device-configuration/create-device-profile" target="_blank">Create a device configuration profile in Microsoft Intune</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
+     - **Platform**: Select **Windows 10 and later**.
+     - **Profile type**: Select **Templates**.
+     - **Template name**: Select **Custom**.
+     - **Configuration settings**: Add the following settings:
+       - **OMA-URI**: Enter `./Device/Vendor/MSFT/WindowsAdvancedThreatProtection/Offboarding`.
+       - **Data type**: Select **String**.
+       - **Value**: Paste the value from the content of the `WindowsDefenderATP_valid_until_YYYY-MM-DD` offboarding file.
 
-1. In the [Microsoft Intune admin center](https://intune.microsoft.com), you can use a custom configuration policy or an EDR policy.
-
-   | Method | Procedure |
-   |---|---|
-   | Custom configuration policy | 1. In the navigation pane, select **Devices** \> **By platform** \> **Windows** \> **Manage Devices** \> **Configuration**. <br/><br/>2. Under **Policies** select **Create** \> **New Policy**.<br/><br/>3. In the **Create a profile** slide out, select **Windows 10 and later** as **Platform** and **Templates** as **Profile Type**.<br/><br/>4. Under **Template Name**, select the **Custom** template and select **Create**.<br/><br/>5. Enter a value for **Name** and select **Next**. <br/><br/>6. Under **Configuration settings**, select **Add** and use the following OMA-URI settings: <br/>- Name: Provide a name <br/>- OMA-URI: `./Device/Vendor/MSFT/WindowsAdvancedThreatProtection/Offboarding` <br/> - Date type: String<br/>- Value: Copy and paste the value from the content of the `WindowsDefenderATP_valid_until_YYYY-MM-DD` offboarding file. <br/><br/>7. Make the appropriate group assignments, applicability rules, and on the **Review + create** step, select **Create**. |
-   | EDR policy | 1. In the navigation pane, select **Endpoint security** \> **Manage** \> **Endpoint detection and response**.<br/><br/>2. Under **Endpoint detection and response (EDR) policies**, select **Create policy**.<br/><br/>3. In the **Create a profile** slide out, select **Windows** as **Platform** and **Endpoint detection and response** and select **Create**.<br/><br/>5. Enter a value for **Name** and select **Next**. <br/><br/>6. Under **Configuration settings**, select **Offboard** for the setting **Microsoft Defender for Endpoint client configuration package type**.<br/><br/>7. Copy the value from the content of the `WindowsDefenderATP_valid_until_YYYY-MM-DD` offboarding file and paste it in the **Offboarding (Device)** setting. Then select **Next**.<br/><br/>8. Specify any scope tags if needed, make the appropriate group assignments and on the **Review + create** step, select **Create**. |
-
-   For more information on Microsoft Intune policy settings, see [Windows 10 policy settings in Microsoft Intune](/intune/intune-service/configuration/custom-settings-windows-10).
-
-> [!NOTE]
-> The **Health Status for offboarded devices** policy uses read-only properties and can't be remediated.
+   - **EDR policy**: To create an EDR policy, see <a href="/intune/device-configuration/endpoint-security/deploy-edr" target="_blank">Deploy endpoint detection and response policy with Intune</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
+     - **Platform**: Select **Windows**.
+     - **Profile**: Select **Endpoint detection and response**.
+     - **Configuration settings**:
+       - **Microsoft Defender for Endpoint client configuration package type**: Select **Offboard**.
+       - In the **Offboarding (Device)** setting that appears, paste the value from the content of the `WindowsDefenderATP_valid_until_YYYY-MM-DD` offboarding file.
 
 > [!IMPORTANT]
-> Offboarding causes the device to stop sending sensor data to Defender for Endpoint, but data from the device, including references to any alerts it has, is retained for up to 6 months.
+> The **Health Status for offboarded devices** policy uses read-only properties and can't be remediated.
+>
+> Offboarding stops the device from sending new detection, vulnerability, and security data to Defender for Endpoint. Historical data remains in the Defender portal until the configured retention period expires. The device profile, without data, remains in the device inventory for up to 180 days. For more information, see [Offboard devices](offboard-machines.md).
 
-## Related articles
+<a name='related-articles'></a>
+
+## Related content
 
 - [Onboard Windows devices using Group Policy](configure-endpoints-gp.md)
 - [Onboard Windows devices using Microsoft Configuration Manager](configure-endpoints-sccm.md)

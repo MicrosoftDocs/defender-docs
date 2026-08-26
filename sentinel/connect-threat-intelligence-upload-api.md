@@ -2,17 +2,17 @@
 title: Connect your TIP with the upload API (Preview)
 titleSuffix: Microsoft Sentinel
 
-description: Learn how to connect your threat intelligence platform (TIP) or custom feed using the upload API to Microsoft Sentinel.
+description: Connect a threat intelligence platform or custom feed to Microsoft Sentinel by using the preview upload API. Learn the prerequisites and how STIX-supported uploads ingest indicators without a data connector.
 ms.author: pauloliveria 
 author: poliveria  
 ms.reviewer: yoninave
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 #Customer intent: As a security admin, I want to connect my threat intelligence platform with Microsoft Sentinel using the appropriate API so that I can centralize and enhance threat detection and response capabilities.
 ---
@@ -21,7 +21,7 @@ ai-usage: ai-assisted
 
 Many organizations use threat intelligence platform (TIP) solutions to aggregate threat intelligence feeds from various sources. From the aggregated feed, the data is curated to apply to security solutions such as network devices, EDR/XDR solutions, or security information and event management (SIEM) solutions such as Microsoft Sentinel. The industry standard for describing cyberthreat information is called, "Structured Threat Information Expression" or STIX. By using the upload API which supports STIX objects, you use a more expressive way to import threat intelligence into Microsoft Sentinel.
 
-The upload API ingests threat intelligence into Microsoft Sentinel without the need for a data connector. This article describes what you need to connect. For more information on the API details, see the reference document [Microsoft Sentinel upload API](stix-objects-api.md).
+The upload API ingests threat intelligence into Microsoft Sentinel without the need for a data connector. This article describes what you need to connect a TIP or custom solution to Microsoft Sentinel. For more information on the API details, see the reference document [Microsoft Sentinel upload API](stix-objects-api.md).
 
 :::image type="content" source="media/connect-threat-intelligence-upload-api/threat-intel-upload-api.png" alt-text="Screenshot that shows the threat intelligence import path.":::
 
@@ -40,7 +40,8 @@ For more information about threat intelligence, see [Threat intelligence](unders
 - You must be able to register a Microsoft Entra application.
 - Your Microsoft Entra application must be granted the Microsoft Sentinel Contributor role at the workspace level.
 
-## Instructions
+<a name="instructions"></a>
+## Steps to configure the upload API connection
 
 Follow these steps to import STIX objects from your TIP or custom solution into Microsoft Sentinel:
 
@@ -53,7 +54,7 @@ Follow these steps to import STIX objects from your TIP or custom solution into 
 
 ## Register a Microsoft Entra application
 
-The [default user role permissions](/azure/active-directory/fundamentals/users-default-permissions#restrict-member-users-default-permissions) allow users to create application registrations. If this setting was switched to **No**, you need permission to manage applications in Microsoft Entra. Any of the following Microsoft Entra roles include the required permissions:
+The [default user role permissions](/azure/active-directory/fundamentals/users-default-permissions#restrict-member-users-default-permissions) allow users to create application registrations. If the application registration permission was switched to **No**, you need permission to manage applications in Microsoft Entra. Any of the following Microsoft Entra roles include the required permissions:
 
 - Application administrator
 - Application developer
@@ -95,8 +96,8 @@ Enter these values in the configuration of your integrated TIP or custom solutio
 
 ## Related content
 
-In this article, you learned how to connect your TIP to Microsoft Sentinel. To learn more about using threat intelligence in Microsoft Sentinel, see the following articles:
+For more information, see these articles:
 
 - [Understand threat intelligence](understand-threat-intelligence.md)
-- [Work with threat indicators](work-with-threat-indicators.md) throughout the Microsoft Sentinel experience.
-- Get started detecting threats with [built-in analytics rules](detect-threats-built-in.md) or [custom analytics rules](detect-threats-custom.md) in Microsoft Sentinel.
+- [Work with threat indicators](work-with-threat-indicators.md)
+- Detect threats with [built-in analytics rules](detect-threats-built-in.md) or [custom analytics rules](detect-threats-custom.md)

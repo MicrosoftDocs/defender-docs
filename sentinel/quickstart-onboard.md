@@ -5,8 +5,8 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: soulisabag
 ms.topic: how-to
-ms.date: 06/15/2026
-ms.custom: references_regions, mode-other, msecd-doc-authoring-1014
+ms.date: 07/02/2026
+ms.custom: references_regions, mode-other, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 #Customer intent: As a security operator, set up data connectors in one place so I can monitor and protect my environment.
 
@@ -25,7 +25,7 @@ To onboard to Microsoft Sentinel by using the API, see the latest supported vers
 
 ## Prerequisites
 
-- **Active Azure Subscription**. If you don't have one, create an [Azure free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
+- **Active Azure Subscription**: If you don't have one, create an [Azure free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
 
 - **Permissions**:
 
@@ -37,10 +37,9 @@ To onboard to Microsoft Sentinel by using the API, see the latest supported vers
 
     - If you are a new Microsoft Sentinel customer and have permissions of a subscription [Owner](/azure/role-based-access-control/built-in-roles#owner) or a [User access administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator), your workspace is automatically onboarded to the Defender portal. Users of such workspaces use [Microsoft Sentinel in the Defender portal](microsoft-sentinel-defender-portal.md) only.
 
-- **Microsoft Sentinel is a paid service**. Review the [Microsoft Sentinel pricing options](https://go.microsoft.com/fwlink/?linkid=2104058) and the [Microsoft Sentinel pricing page](https://azure.microsoft.com/pricing/details/azure-sentinel/).
+- **Microsoft Sentinel is a paid service**: Review the [Microsoft Sentinel pricing options](https://go.microsoft.com/fwlink/?linkid=2104058) and the [Microsoft Sentinel pricing page](https://azure.microsoft.com/pricing/details/azure-sentinel/).
 
 - Before deploying Microsoft Sentinel to a production environment, review the [predeployment activities and prerequisites for deploying Microsoft Sentinel](prerequisites.md).
-
 
 <a name="enable"></a>
 
@@ -78,18 +77,18 @@ To add Microsoft Sentinel to an existing Log Analytics workspace, perform the fo
     :::image type="content" source="media/quickstart-onboard/log-analytics-workspace-create.png" alt-text="Screenshot of selecting Create to create a new Log Analytics workspace.":::
 
 1. Select the workspace you want to use and select **Add**. You can run Microsoft Sentinel on more than one workspace, but data is isolated to a single workspace.
- 
+
    - The default workspaces created by Microsoft Defender for Cloud aren't shown in the list. You can't install Microsoft Sentinel on these workspaces.
    - Once deployed on a workspace, Microsoft Sentinel **doesn't support** moving that workspace to another resource group or subscription.
 
 > [!NOTE]
 > If your workspace isn't automatically onboarded to the Defender portal, we recommend onboarding for a unified experience in managing security operations (SecOps) across both Microsoft Sentinel and other Microsoft security services. For more information, see [Onboard Microsoft Sentinel to the Defender portal](/unified-secops-platform/microsoft-sentinel-onboard).
 >
-> If your workspace is automatically onboarded, or if you decide to onboard your workspace now, you can continue the procedures in this article from the Defender portal. If this is your first time using the Defender portal, there will be a delay of a few minutes while the process completes.
+> If your workspace is automatically onboarded, or if you decide to onboard your workspace now, you can continue with [Install a solution from the content hub](#install-a-solution-from-the-content-hub) and [Set up the data connector](#set-up-the-data-connector) from the Defender portal. If this is your first time using the Defender portal, there will be a delay of a few minutes while the process completes.
 
 ## Access Microsoft Sentinel in the Defender portal
 
-**To access Microsoft Sentinel in the Defender portal:**
+To access Microsoft Sentinel in the Defender portal:
 
 1. Sign into the [Defender portal](https://security.microsoft.com).
 
@@ -119,7 +118,8 @@ The content hub in Microsoft Sentinel is the centralized location to discover an
 
 1. On the solution details pane on the side, select **Install**. 
 
-## Set up the data connector
+<a name="set-up-the-data-connector"></a>
+## Set up the Azure Activity data connector
 
 Microsoft Sentinel ingests data from services and apps by connecting to the service and forwarding the events and logs to Microsoft Sentinel. For this quickstart, install the data connector to forward data for Azure Activity to Microsoft Sentinel.
 
@@ -143,9 +143,9 @@ Let's generate some activity data by enabling a rule that was included in the Az
 
 1. In the details pane, select **Create rule** to create a new rule using the **Analytics rule wizard**.
 
-1. In the **Analytics rule wizard - Create a new Scheduled rule** page, change the **Status** to **Enabled**. 
+1. In the **Analytics rule wizard - Create a new Scheduled rule** page, change the **Status** to **Enabled**.
 
-    On this tab and all other tabs in the wizard, leave the default values as they are.
+    On the **General**, **Set rule logic**, **Incident settings**, and **Automated response** tabs, leave the default values as they are.
 
 1. On the **Review and create** tab, select **Create**.
 
@@ -155,7 +155,7 @@ Now that you've enabled the Azure Activity data connector and generated some act
 
 1. In Microsoft Sentinel, select **Configuration** > **Data connectors** and search for and select the **Azure Activity** data connector.
 
-1. In the connector details pane, select **Open connector page**. 
+1. In the connector details pane, select **Open connector page**.
 
 1. Review the **Status** of the data connector. It should be **Connected**.
 
@@ -167,9 +167,9 @@ Now that you've enabled the Azure Activity data connector and generated some act
 
    1. Select **Go to log analytics** to open the **Advanced hunting** page.
 
-    1. On the top of the pane, next to the **New query** tab, select the **+** to add a new query tab.
+   1. On the top of the pane, next to the **New query** tab, select the **+** to add a new query tab.
 
-    1. Run the following query to view the activity date ingested into the workspace:
+   1. Run the following query to view the activity date ingested into the workspace:
 
         ```kusto
         AzureActivity
@@ -197,11 +197,13 @@ Now that you've enabled the Azure Activity data connector and generated some act
 
    ---
 
-## Next steps
+## Summary
 
 In this quickstart, you enabled Microsoft Sentinel and installed a solution from the content hub. Then, you set up a data connector to start ingesting data into Microsoft Sentinel. You also verified that data is being ingested by viewing the data in the workspace.
 
 If you're a new customer who's been automatically onboarded to the Defender portal, your users will access Microsoft Sentinel in the Defender portal only. As you use the Microsoft Sentinel documentation, make sure to select the Defender portal version of the documentation.
 
-- To visualize the data you've collected by using the dashboards and workbooks, see [Visualize collected data](get-visibility.md).
-- To detect threats by using analytics rules, see [Tutorial: Detect threats by using analytics rules in Microsoft Sentinel](tutorial-log4j-detection.md).
+## Related content
+
+- [Visualize collected data on the Microsoft Sentinel Overview page](get-visibility.md).
+- [Tutorial: Detect threats by using analytics rules in Microsoft Sentinel](tutorial-log4j-detection.md)

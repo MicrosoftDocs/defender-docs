@@ -1,8 +1,9 @@
 ---
 title: Scan for misconfigurations in Infrastructure as Code
 description: Learn how to use Microsoft Security DevOps scanning with Microsoft Defender for Cloud to find misconfigurations in Infrastructure as Code (IaC).
-ms.date: 05/28/2026
+ms.date: 07/03/2026
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a developer, I want to learn how to use Microsoft Security DevOps scanning with Microsoft Defender for Cloud to find misconfigurations in Infrastructure as Code (IaC) in a connected GitHub repository or Azure DevOps project.
 ai-usage: ai-assisted
 ---
@@ -11,7 +12,7 @@ ai-usage: ai-assisted
 
 You can set up Microsoft Security DevOps to scan your connected GitHub repository or Azure DevOps project. Use a GitHub action or an Azure DevOps extension to run Microsoft Security DevOps only on your Infrastructure as Code (IaC) source code, and help reduce your pipeline runtime.
 
-This article shows you how to apply a template YAML configuration file to scan your connected repository or project specifically for IaC security issues by using Microsoft Security DevOps rules.
+This article shows you how to apply a template YAML configuration file to scan your connected repository or project specifically for IaC security issues by using Microsoft Security DevOps rules. Before you begin, make sure you have a connected GitHub repository or Azure DevOps project and review the [prerequisites](#prerequisites).
 
 ## Prerequisites
 
@@ -30,13 +31,13 @@ To set up an action and view scan results in GitHub:
 
 1. In the file directory, select **.github** > **workflows** > **msdevopssec.yml**.
 
-   For more information about working with an action in GitHub, see [Prerequisites](github-action.md#configure-the-microsoft-security-devops-github-action-1).
+   For more information about working with an action in GitHub, see [Prerequisites](github-action.md#configure-the-microsoft-security-devops-github-action).
 
 1. Select the **Edit this file** (pencil) icon.
 
    :::image type="content" source="media/tutorial-iac-vulnerabilities/workflow-yaml.png" alt-text="Screenshot that highlights the Edit this file icon for the msdevopssec.yml file." lightbox="media/tutorial-iac-vulnerabilities/workflow-yaml.png":::
 
-1. In the **Run analyzers** section of the YAML file, add this code:
+1. In the **Run analyzers** section of the YAML file, add the following code to enable Infrastructure as Code scanning:
 
    ```yaml
    with:
@@ -46,7 +47,7 @@ To set up an action and view scan results in GitHub:
    > [!NOTE]
    > Values are case sensitive.
 
-   Here's an example:
+   The following screenshot shows an example of the updated YAML configuration:
 
    :::image type="content" source="media/tutorial-iac-vulnerabilities/add-to-yaml.png" alt-text="Screenshot that shows the information to add to the YAML file.":::
 
@@ -163,7 +164,10 @@ To set up an action and view scan results in GitHub:
 
    1. Select the workflow to see the action status.
 
-1. To view the results of the scan, go to **Defender for Cloud** > **DevOps security** (No GHAS pre-requisite) or **Security** > **Code scanning alerts** natively in GitHub (Requires GHAS license).
+1. To view the results of the scan, use one of the following options:
+
+   - Go to **Defender for Cloud** > **DevOps security**. This option doesn't require a GitHub Advanced Security (GHAS) license.
+   - If you have a GitHub Advanced Security (GHAS) license, go to **Security** > **Code scanning alerts** natively in GitHub.
 
 ## Set up and run an Azure DevOps extension to scan your connected IaC source code
 
@@ -179,14 +183,14 @@ To set up an extension and view scan results in Azure DevOps:
 
 1. Select **Edit pipeline**.
 
-1. In the pipeline YAML configuration file, below the `displayName` line for the **MicrosoftSecurityDevOps@1** task, add this code:
+1. In the pipeline YAML configuration file, below the `displayName` line for the **MicrosoftSecurityDevOps@1** task, add the following code to enable Infrastructure as Code scanning:
 
    ```yaml
    inputs:
        categories: 'IaC'
    ```
 
-   Here's an example:
+   The following screenshot shows an example of the pipeline YAML configuration with the IaC category added:
 
    :::image type="content" source="media/tutorial-iac-vulnerabilities/addition-to-yaml.png" alt-text="Screenshot that shows where to add the IaC categories line in the pipeline configuration YAML file.":::
 

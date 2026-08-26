@@ -40,7 +40,7 @@ Any network device that responds to SNMPv2 or SNMPv3 queries can be discovered b
 
 ### Supported Windows versions for the scanner
 
-The scanner is supported on Windows 10, version 1903 and Windows Server, version 1903 and later. For more information, see [Windows 10, version 1903 and Windows Server, version 1903](https://support.microsoft.com/topic/windows-10-update-history-e6058e7c-4116-38f1-b984-4fcacfba5e5d)
+The scanner is supported on Windows 10, version 1903 and Windows Server, version 1903 and later. For more information, see [Windows 10, version 1903 and Windows Server, version 1903](https://support.microsoft.com/servicing/os/windows-10/2020/11/windows-10-update-history-4)
 
 > [!NOTE]
 > You can install up to 40 scanners per tenant.

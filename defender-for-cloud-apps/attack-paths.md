@@ -2,8 +2,8 @@
 title: Investigate OAuth application attack paths in Defender for Cloud Apps
 description: Learn how to identify, analyze, and mitigate attack paths involving OAuth applications using Microsoft Defender for Cloud Apps and Security Exposure Management.
 ms.topic: how-to
-ms.date: 06/16/2026
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.date: 07/03/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 Microsoft Defender for Cloud Apps observed an increase in attackers using OAuth applications to access sensitive data in business-critical applications like Microsoft Teams, SharePoint, Outlook, and more. To support investigation and mitigation, these applications are integrated into the attack path and attack surface map views in Microsoft Security Exposure Management.
 
 
-### Prerequisites
+## Prerequisites
 
 To get started with OAuth application attack path features in Exposure Management, make sure you meet the following requirements.
 
@@ -23,9 +23,9 @@ To get started with OAuth application attack path features in Exposure Managemen
 
 - Optional: To get full access to attack path data, we recommend having an E5 security license, Defender for Endpoint or Defender for Identity license.
 
-### Required roles and permissions
+## Required roles and permissions
 
-To access all Exposure Management experiences, you need either a Unified Role-Based-Access-Control (RBAC) role or an Entra ID role. Only one is required.
+To access all Exposure Management experiences, you need either a Unified Role-Based Access Control (RBAC) role or an Entra ID role. Only one is required.
 
 - **Exposure Management (read)** (Unified RBAC)
 
@@ -42,9 +42,9 @@ Alternatively, you can use one of the following **Entra ID roles**:
 >[!NOTE]
 > Currently available in commercial cloud environments only. Microsoft Security Exposure Management data and capabilities are currently unavailable in U.S Government clouds - GCC, GCC High, DoD, and China Gov.
 
-### Critical Asset Management - Service Principals
+## Critical Asset Management - Service Principals
 
-Service principals are identities that Microsoft Entra ID assigns to applications so they can authenticate and access resources on behalf of the application rather than a user. Microsoft Defender for Cloud Apps defines a set of critical privilege OAuth permissions. OAuth applications with these permissions are considered high-value assets. If compromised, an attacker can gain high privileges to SaaS applications. To reflect this risk, attack paths treat service principals with these permissions as target goals.
+Service principals are identities that Microsoft Entra ID assigns to applications so they can authenticate and access resources on behalf of the application rather than a user. Microsoft Defender for Cloud Apps defines a set of critical privilege OAuth permissions. OAuth applications with these permissions are considered high-value assets. If a high-value OAuth application is compromised, an attacker can gain high privileges to SaaS applications. To reflect this risk, attack paths treat service principals with these permissions as target goals.
 
 #### View permissions for critical assets
 
@@ -94,6 +94,9 @@ For smaller organizations with a manageable number of attack paths, we recommend
 
 1. Optional: If you determine the OAuth application should be disabled, you can disable it from the Applications page.
 
+    > [!WARNING]
+    > Disabling an OAuth application can cause service disruption and loss of access for users and services that depend on it. Verify the application's usage and dependencies before you disable it.
+
 ### Decision maker user flow: Prioritize attack path using choke points
 
 For larger organizations with numerous attack paths that can't be manually investigated, we recommend using attack path data and utilizing the Choke Points experience as a prioritization tool. This approach allows you to:
@@ -117,7 +120,7 @@ If the choke point is an OAuth application, continue the investigation by search
 
 ## Analyze attack surface map and hunt with queries
 
-In the [Attack surface map](/security-exposure-management/cross-workload-attack-surfaces), you can see connections from user-owned apps, OAuth apps, and service principals. This relationship data is available in:
+In the [Attack surface map](/security-exposure-management/cross-workload-attack-surfaces), you can see connections from user-owned apps, OAuth apps, and service principals. Data about connections among user-owned apps, OAuth apps, and service principals is available in:
 
 - ExposureGraphEdges table (shows connections)
 

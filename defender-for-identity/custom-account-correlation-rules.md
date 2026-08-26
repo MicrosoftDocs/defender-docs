@@ -21,6 +21,8 @@ Custom account correlation rules are a Microsoft Defender for Identity setting f
 
 Before you begin, review the license and role requirements in [Prerequisites](#prerequisites).
 
+This article explains how to choose a correlation type, create custom account correlation rules, and edit or remove existing rules in the Microsoft Defender portal.
+
 ## Prerequisites
 
 - An active Microsoft Defender for Identity license, or another license that includes Defender for Identity (such as E5). Without the required license, the policies page is read-only.

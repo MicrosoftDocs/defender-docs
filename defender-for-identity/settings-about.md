@@ -1,11 +1,11 @@
 ---
-title: About page in Microsoft Defender XDR 
+title: View Defender for Identity workspace details on the About page in Microsoft Defender XDR
 description: Learn how to collect important details about your Defender for Identity workspace in Microsoft Defender XDR.
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # View information on the Defender for Identity About page
@@ -28,7 +28,7 @@ The About page provides the following details:
 - Total licenses: The total number of Microsoft Denfender for Identity licenses assigned to the tenant.
 - Active identities during the past 28 days: The total number of on-premises identities that had activity detected by Defender for Identity.
 
-This information can be helpful when troubleshooting issues and opening support tickets. Additionally, you can find the name of your workspace (workspace) which is necessary for configuring your [proxy or firewall](configure-proxy.md#enable-access-to-defender-for-identity-service-urls-in-the-proxy-server).
+This information can help you troubleshoot issues and open support tickets. You can also find your workspace name here. You need the workspace name to configure your [proxy or firewall](configure-proxy.md#enable-access-to-defender-for-identity-service-urls-in-the-proxy-server).
 
 <a name="see-also"></a>
 ## Related content

@@ -60,5 +60,5 @@ Learn how to use the [cloud security explorer](how-to-manage-cloud-security-expl
 ## Related content
 
 - [Identify and remediate attack paths](how-to-manage-attack-path.md)
-- [Enable agentless scanning for machines](enable-agentless-scanning-vms.md#enable-agentless-scanning-on-azure)
+- [Enable agentless scanning for machines](enable-agentless-scanning-vms.md#azure)
 - [Build a query with the cloud security explorer](how-to-manage-cloud-security-explorer.md)

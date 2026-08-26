@@ -4,13 +4,13 @@ description: This article explains how (and why) to take your existing playbooks
 ms.topic: how-to
 ms.author: monaberdugo
 author: mberdugo
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security engineer, I want to migrate my alert-trigger playbooks to automation rules so that I can streamline automation management and prepare for the deprecation of analytics rule triggers.
 
@@ -44,17 +44,17 @@ The ability to invoke playbooks from analytics rules will be **deprecated effect
 
 ## Prerequisites
 
-You'll need the:
+You need these roles:
 
 - **Logic Apps Contributor** role to create and edit playbooks.
 
 - **Microsoft Sentinel Contributor** role to attach a playbook to an automation rule.
 
-For more information, see [Microsoft Sentinel playbook prerequisites](automate-responses-with-playbooks.md#prerequisites).
+To learn more, see [Microsoft Sentinel playbook prerequisites](automate-responses-with-playbooks.md#prerequisites).
 
 ## Create an automation rule from an analytics rule
 
-Use this procedure if you're migrating a playbook that's used by only one analytics rule. If the playbook is used by multiple analytics rules, use [Create a new automation rule from the Automation page](#create-a-new-automation-rule-from-the-automation-page).
+Follow these steps to migrate a playbook that's used by only one analytics rule. If the playbook is used by multiple analytics rules, use [Create a new automation rule from the Automation page](#create-a-new-automation-rule-from-the-automation-page).
 
 1. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), select the **Configuration** > **Analytics** page. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Microsoft Sentinel** > **Configuration** > **Analytics**.
 

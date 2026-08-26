@@ -1,13 +1,13 @@
 ---
-title: Handle ingestion delay in Microsoft Sentinel
-description:  Handle ingestion delay in Microsoft Sentinel scheduled analytics rules.
+title: Handle Ingestion Delay in Microsoft Sentinel
+description: Handle ingestion delay in Microsoft Sentinel scheduled analytics rules.
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security analyst, I want to handle data ingestion delays in scheduled analytics rules so that I can ensure accurate and timely threat detection.
 
@@ -18,7 +18,7 @@ ms.custom: msecd-doc-authoring-1014
 >[!IMPORTANT]
 > [**Custom detections**](/defender-xdr/custom-detections-overview?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json) is now the best way to create new rules across Microsoft Sentinel SIEM Microsoft Defender XDR. With custom detections, you can reduce ingestion costs, get unlimited real-time detections, and benefit from seamless integration with Defender XDR data, functions, and remediation actions with automatic entity mapping. For more information, read [Custom detections are now the unified experience for creating detections in Microsoft Defender XDR](https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/custom-detections-are-now-the-unified-experience-for-creating-detections-in-micr/4463875).
 
-While Microsoft Sentinel can ingest data from [various sources](connect-data-sources.md), ingestion time for each data source may differ in different circumstances.
+Although Microsoft Sentinel can ingest data from [connected data sources](connect-data-sources.md), ingestion time for each data source might differ in different circumstances.
 
 This article describes how ingestion delay might impact your scheduled analytics rules and how you can fix them to cover these gaps.
 
@@ -45,17 +45,15 @@ The event is generated within the first look-back period, but isn't ingested in 
 Use the following approach to account for ingestion delay in scheduled analytics rules.
 
 > [!NOTE]
->
 > You can either solve the issue using the process described below, or implement Microsoft Sentinel's near-real-time detection (NRT) rules. For more information, see [Detect threats quickly with near-real-time (NRT) analytics rules in Microsoft Sentinel](near-real-time-rules.md).
-> 
 
-To solve the issue, you need to know the delay for your data type. For this example, you already know the delay is two minutes. 
+To solve the issue, you need to know the delay for your data type. For this example, you already know the delay is two minutes.
 
 For your own data, you can understand delay using the Kusto `ingestion_time()` function, and calculating the difference between **TimeGenerated** and the ingestion time. For more information, see [Calculate ingestion delay](#calculate-ingestion-delay).
 
 After determining the delay, you can address the problem as follows:
 
-- **Increase the look-back period**. Basic intuition tells you that increasing the look-back period size will help. Since your look-back period is five minutes and your delay is two minutes, setting the look-back period to *seven* minutes will help address this problem. For example, in your rule settings:
+- **Increase the look-back period**: Basic intuition tells you that increasing the look-back period size will help. Since your look-back period is five minutes and your delay is two minutes, setting the look-back period to *seven* minutes will help address this problem. For example, in your rule settings:
 
     :::image type="content" source="media/ingestion-delay/set-look-back.png" alt-text="Screenshot that shows setting the look-back window to seven minutes.":::
 
@@ -63,13 +61,13 @@ After determining the delay, you can address the problem as follows:
 
     :::image type="content" source="media/ingestion-delay/longer-look-back.png" alt-text="Diagram that shows seven-minute look back windows with a delay of two minutes." border="false":::
 
-- **Handle duplication**. Only increasing the look-back period can create duplication, because the look-back windows now overlap. For example, a different event may look as shown in the following diagram:
+- **Handle duplication*:. Only increasing the look-back period can create duplication, because the look-back windows now overlap. For example, a different event may look as shown in the following diagram:
 
     :::image type="content" source="media/ingestion-delay/overlapping-look-back.png" alt-text="Diagram showing how overlapping look-back windows create duplication." border="false":::
 
-    Since the event **TimeGenerated** value is found in both look-back periods, the event fires two alerts. You need to find a way to solve the duplication.
+    Because the event **TimeGenerated** value is found in both look-back periods, the event fires two alerts. You need to find a way to solve the duplication.
 
-- **Associate the event to a specific look-back period**. In the first example, you missed events because your data wasn't ingested when the scheduled query ran. You extended the look-back to include the event, but this caused duplication. You have to associate the event to the window you extended to contain it.
+- **Associate the event to a specific look-back period**: In the first example, you missed events because your data wasn't ingested when the scheduled query ran. You extended the look-back to include the event, but this caused duplication. You have to associate the event to the window you extended to contain it.
 
     Do this by setting `ingestion_time() > ago(5m)`, instead of the original rule `look-back = 5m`. This setting associates the event to the first look-back window. For example:
 
@@ -89,14 +87,15 @@ CommonSecurityLog
 | where ingestion_time() > ago(rule_look_back)
 ```
 
-See more information on the following items used in the preceding example, in the Kusto documentation:
+See more information on the following items used in the preceding example in the Kusto documentation:
+
 - [***let*** statement](/kusto/query/let-statement?view=microsoft-sentinel&preserve-view=true)
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
 - [***ago()*** function](/kusto/query/ago-function?view=microsoft-sentinel&preserve-view=true)
 
 ## Calculate ingestion delay
 
-By default, Microsoft Sentinel scheduled alert rules are configured to have a 5-minute look-back period. However, each data source may have its own, individual ingestion delay. When joining multiple data types, you must understand the different delays for each data type in order to configure the look-back period correctly.
+By default, Microsoft Sentinel scheduled alert rules are configured to have a five-minute look-back period. However, each data source might have its own, individual ingestion delay. When joining multiple data types, you must understand the different delays for each data type in order to configure the look-back period correctly.
 
 The **Workspace Usage Report**, provided in Microsoft Sentinel out-of-the-box, includes a dashboard that shows latency and delays for the different data types flowing into your workspace.
 
@@ -104,13 +103,10 @@ For example:
 
 :::image type="content" source="media/ingestion-delay/end-to-end-latency.png" alt-text="Screenshot of the Workspace Usage Report showing End to End Latency by table":::
 
+## Related content
 
-## Next steps
-
-For more information, see:
-
-- [Create custom analytics rules to detect threats](detect-threats-custom.md)
-- [Customize alert details in Azure Sentinel](customize-alert-details.md)
-- [Manage template versions for your scheduled analytics rules in Azure Sentinel](manage-analytics-rule-templates.md)
-- [Use the health monitoring workbook](monitor-data-connector-health.md)
+- [Create a scheduled analytics rule from scratch](create-analytics-rules.md)
+- [Customize alert details in Microsoft Sentinel](customize-alert-details.md)
+- [Manage template versions for your scheduled analytics rules in Microsoft Sentinel](manage-analytics-rule-templates.md)
+- [Monitor the health of your data connectors](monitor-data-connector-health.md)
 - [Log data ingestion time in Azure Monitor](/azure/azure-monitor/logs/data-ingestion-time)

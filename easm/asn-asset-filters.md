@@ -5,19 +5,19 @@ description: This article outlines the filter functionality available in Microso
 author: danielledennis
 ms.author: dandennis
 ms.service: defender-easm
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # ASN asset filters
 
-This article lists the available filters for Autonomous System Number (ASN) assets in Microsoft Defender External Attack Surface Management. It describes each filter's purpose, expected value format, and supported operators so you can refine your Defender EASM inventory searches to locate a specific ASN or group of ASNs.  
+This article lists the available filters for Autonomous System Number (ASN) assets in Microsoft Defender External Attack Surface Management. Each filter entry describes the filter's purpose, expected value format, and supported operators. Use these filters to refine your Defender EASM inventory searches and locate a specific ASN or group of ASNs.  
 
 ## Freeform filters  
 
-The following filters require that the user manually enters the value with which they want to search.  This list is organized according to the number of applicable operators for each filter, then alphabetically.
+These filters require you to type the search value yourself. The list is sorted by the number of operators each filter supports, then by name.
 
 |       Filter name                  |     Description                                                                                                                                                                                          |     Value format   |     Applicable operators                                                                                                                                                                                                                              |
 |------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

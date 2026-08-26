@@ -14,11 +14,11 @@ ms.custom:
   - sfi-ga-nochange
   - msecd-doc-authoring-1016
 ms.service: defender-office-365
-ms.date: 07/03/2026
+ms.date: 07/17/2026
+ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
-ai-usage: ai-assisted
 ---
 
 # Set up Safe Attachments policies in Microsoft Defender for Office 365
@@ -149,6 +149,20 @@ Verify the following prerequisites before you configure Safe Attachments policie
 
      > [!NOTE]
      > Redirection is available only for the **Monitor** action. For more information, see [Safe Attachments redirection changes (MC424899)](https://admin.microsoft.com/AdminPortal/Home?#/MessageCenter/:/messages/MC424899).
+
+   - **Block messages containing encrypted attachments that could not be scanned**: This section appears only when you select **Block** as the **Safe Attachments unknown malware response** value. The following settings are available:
+
+     - **Block unscanned attachments**: Select this option to quarantine messages that contain encrypted (password-protected) attachments when Safe Attachments can't scan or detonate them. For more information, see [Encrypted (password-protected) attachments in Safe Attachments policies](safe-attachments-about.md#encrypted-password-protected-attachments-in-safe-attachments-policies).
+
+       When you select **Block unscanned attachments**, the following settings appear:
+
+       - **Exclude these attachment types**: Select any attachment types to exclude from this setting:
+         - **Acrobat (pdf)**
+         - **Archive (zip, gzip, 7z, rar, tar only)**
+         - **Office (doc, docx, xls, xlsx, ppt, pptx only)**
+         - **All other file types**
+
+       - **Quarantine policy**: Select the quarantine policy that applies to messages quarantined by this setting. Quarantine policies define what users are able to do to quarantined messages, and whether users receive quarantine notifications. By default, the quarantine policy named DefaultFullAccessWithNotificationPolicy is used. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
    When you're finished on the **Settings** page, select **Next**.
 
@@ -308,7 +322,7 @@ Creating a Safe Attachments policy in PowerShell is a two-step process:
 To create a safe attachment policy, use this syntax:
 
 ```powershell
-New-SafeAttachmentPolicy -Name "<PolicyName>" -Enable $true [-AdminDisplayName "<Comments>"] [-Action <Allow | Block | DynamicDelivery>] [-Redirect <$true | $false>] [-RedirectAddress <SMTPEmailAddress>] [-QuarantineTag <QuarantinePolicyName>]
+New-SafeAttachmentPolicy -Name "<PolicyName>" -Enable $true [-AdminDisplayName "<Comments>"] [-Action <Allow | Block | DynamicDelivery>] [-Redirect <$true | $false>] [-RedirectAddress <SMTPEmailAddress>] [-QuarantineTag <QuarantinePolicyName>] [-EnableBlockingEncryptedAttachments <$true | $false>] [-ExcludedTypesFromBlockingEncryptedAttachments <FileTypes>] [-QuarantineTagForBlockingEncryptedAttachments <QuarantinePolicyName>]
 ```
 
 This example creates a safe attachment policy named Contoso All with the following values:

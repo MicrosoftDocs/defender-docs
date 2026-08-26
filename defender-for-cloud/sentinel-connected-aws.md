@@ -1,8 +1,9 @@
 ---
 title: Connect a Microsoft Sentinel connected AWS account to Defender for Cloud
-description: Troubleshoot AWS connector deployment issues in Microsoft Defender for Cloud to ensure your resources are connected and protected.
-ms.date: 12/10/2025
+description: Configure CloudTrail ingestion for Defender for Cloud when your AWS account is already connected to Microsoft Sentinel. Learn how to use an Amazon SNS fan-out pattern so both services can receive CloudTrail events.
+ms.date: 07/03/2026
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security professional, I want to ensure that my AWS connector is connected to Defender for Cloud correctly and is operating the way it should be.
 ai-usage: ai-assisted
 ---
@@ -17,9 +18,9 @@ This article explains how to enable CloudTrail ingestion for Defender for Cloud 
 
 To complete the procedures in this article, you need:
 
-- A Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free one](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
+- A Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
-- [Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) set up on your Azure subscription.
+- [Enable Microsoft Defender for Cloud on your Azure subscription](get-started.md#enable-defender-for-cloud-on-your-azure-subscription).
 
 - Access to an AWS account.
 
@@ -38,6 +39,8 @@ If your AWS CloudTrail logs already stream to Microsoft Sentinel, you can enable
 > These steps configure AWS resources for shared CloudTrail ingestion. To finalize Defender for Cloud setup, [integrate AWS CloudTrail logs with Microsoft Defender for Cloud](integrate-cloud-trail.md).
 
 ### Create an Amazon SNS topic for CloudTrail
+
+Create an Amazon SNS topic to distribute CloudTrail event notifications to multiple subscribers.
 
 1. In the AWS Management Console, open **Amazon SNS**.
 
@@ -77,6 +80,8 @@ If your AWS CloudTrail logs already stream to Microsoft Sentinel, you can enable
 
 ### Create an SQS queue for Defender for Cloud
 
+Create a dedicated SQS queue that Defender for Cloud uses to receive CloudTrail event notifications from the SNS topic.
+
 1. In **Amazon SQS**, select **Create queue** and choose **Standard**.
 
 1. Enter a name (for example, `DefenderForCloud-SQS`) and create the queue.
@@ -86,6 +91,8 @@ If your AWS CloudTrail logs already stream to Microsoft Sentinel, you can enable
    Apply this policy to each SQS queue that subscribes to the CloudTrail SNS topic. This typically includes:
    - The SQS queue used by Microsoft Sentinel
    - The SQS queue created for Defender for Cloud
+
+   Use the following policy statement to grant the SNS topic permission to send messages to the SQS queue. Replace `<region>`, `<accountid>`, and `<QUEUE_NAME>` with your values:
 
    ```json
    {
@@ -185,7 +192,7 @@ After these changes, both Microsoft Sentinel and Defender for Cloud receive Clou
  
 1. Navigate to the Configure access page in Defender for Cloud.
 
-1. Follow the Create a Stack in AWS instructions, and use the template you saved locally.
+1. Follow the [Create a Stack in AWS](quickstart-onboard-aws.md#connect-your-aws-account) instructions, and use the template you saved locally.
 
     :::image type="content" source="media/sentinel-connected-aws/create-stack.png" alt-text="Screenshot that shows where the create stack instructions are located." lightbox="media/sentinel-connected-aws/create-stack.png":::
 

@@ -1,6 +1,41 @@
 {
   "redirections": [
     {
+      "source_path_from_root": "/sentinel/sap/cross-workspace.md",
+      "redirect_url": "/azure/sentinel/sap/deployment-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/sap/deploy-data-connector-agent-container.md",
+      "redirect_url": "/azure/sentinel/sap/deploy-data-connector-agentless",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/sap/update-sap-data-connector.md",
+      "redirect_url": "/azure/sentinel/sap/deploy-data-connector-agentless",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/sap/reference-update.md",
+      "redirect_url": "/azure/sentinel/sap/deploy-data-connector-agentless",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/sap/reference-kickstart.md",
+      "redirect_url": "/azure/sentinel/sap/deploy-data-connector-agentless",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/sap/reference-systemconfig.md",
+      "redirect_url": "/azure/sentinel/sap/deploy-data-connector-agentless",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/sap/reference-systemconfig-json.md",
+      "redirect_url": "/azure/sentinel/sap/deploy-data-connector-agentless",
+      "redirect_document_id": false
+    },
+    {
       "source_path_from_root": "/sentinel/datalake/sentinel-mcp-graph-tool.md",
       "redirect_url": "/azure/sentinel/datalake/sentinel-mcp-data-exploration-tool#graph-tools-preview",
       "redirect_document_id": false
@@ -3538,6 +3573,11 @@
     {
       "source_path_from_root": "/sentinel/isv/solution-setup-essentials.md",
       "redirect_url": "/azure/sentinel/isv/sentinel-siem-platform-solution-introduction",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/isv/platform-components-to-build.md",
+      "redirect_url": "/azure/sentinel/isv/which-platform-components-to-build",
       "redirect_document_id": false
     }
   ]

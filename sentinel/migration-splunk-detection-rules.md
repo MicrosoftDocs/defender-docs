@@ -1,14 +1,14 @@
 ---
 title: Migrate Splunk detection rules to Microsoft Sentinel
 titleSuffix: Microsoft Sentinel
-description: Learn how to identify, compare, and migrate your Splunk detection rules to Microsoft Sentinel built-in rules.
+description: Learn how to identify, compare, and migrate Splunk detection rules to Microsoft Sentinel analytics rules, including use of the SIEM migration experience to find out-of-the-box matches.
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: soulisabag
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security engineer, I want to migrate Splunk detection rules to KQL so that I can leverage advanced machine learning analytics and improve incident detection and response with Microsoft Sentinel.
@@ -17,13 +17,13 @@ ms.custom: msecd-doc-authoring-1014
 
 # Migrate Splunk detection rules to Microsoft Sentinel
 
-Splunk detection rules are security information and event management (SIEM) components that compare to analytics rules in Microsoft Sentinel. This article describes the concepts to identify, compare, and migrate them to Microsoft Sentinel. The best way to migrate Splunk detection rules to Microsoft Sentinel is to start with the [SIEM migration experience](siem-migration.md), which identifies out-of-the-box (OOTB) analytics rules for automatic translation.
+Splunk detection rules are security information and event management (SIEM) components that compare to analytics rules in Microsoft Sentinel. This article describes the concepts used to identify, compare, and migrate Splunk detection rules to Microsoft Sentinel. The best way to migrate Splunk detection rules to Microsoft Sentinel is to start with the [SIEM migration experience](siem-migration.md), which identifies out-of-the-box (OOTB) analytics rules for automatic translation.
 
 If you want to migrate your Splunk Observability deployment, learn more about how to [migrate from Splunk to Azure Monitor Logs](/azure/azure-monitor/logs/migrate-splunk-to-azure-monitor-logs).
 
 ## Audit rules
 
-Microsoft Sentinel uses machine learning analytics to create high-fidelity and actionable incidents. Some of your existing Splunk detections may be redundant in Microsoft Sentinel, so don't migrate them all blindly. Review the following rule-auditing considerations as you identify your existing detection rules.
+Microsoft Sentinel uses machine learning analytics to create high-fidelity and actionable incidents. Some of your existing Splunk detections may be redundant in Microsoft Sentinel, so don't migrate all Splunk detections blindly. Review the following rule-auditing considerations as you identify your existing detection rules.
 
 - Make sure to select use cases that justify rule migration, considering business priority and efficiency.
 - Check that you [understand Microsoft Sentinel rule types](detect-threats-built-in.md). 
@@ -109,11 +109,12 @@ The following comparison table clarifies how a KQL-based rule in Microsoft Senti
 
 ## Map and compare rule samples
 
-Use the following SPL-to-KQL samples to compare and map rules from Splunk to Microsoft Sentinel in various scenarios.
+Use the SPL-to-KQL sample tables and examples in this section to compare and map rules from Splunk to Microsoft Sentinel in various scenarios.
 
-### Common search commands
+<a name="common-search-commands"></a>
+### Compare common Splunk search commands with KQL examples
 
-The following table maps common SPL search commands to their KQL equivalents in Microsoft Sentinel.
+This table maps common SPL search commands to their KQL equivalents in Microsoft Sentinel.
 
 |SPL command  |Description  |KQL operator |KQL example  |
 |---------|---------|---------|---------|
@@ -122,16 +123,16 @@ The following table maps common SPL search commands to their KQL equivalents in 
 |`eval`   |Calculates an expression. Learn about [common `eval` commands](https://github.com/Azure/Azure-Sentinel/blob/master/Tools/RuleMigration/SPL%20to%20KQL.md#common-eval-commands).   |[extend](/kusto/query/extend-operator?view=microsoft-sentinel&preserve-view=true)    |`T | extend duration = endTime - startTime`         |
 |`fields`     |Removes fields from search results.	    |• [project](/kusto/query/project-operator?view=microsoft-sentinel&preserve-view=true)<br>• [project-away](/kusto/query/project-away-operator?view=microsoft-sentinel&preserve-view=true)   |`T | project cost=price*quantity, price`   |
 |`head/tail`     |Returns the first or last N results.	|[top](/kusto/query/top-operator?view=microsoft-sentinel&preserve-view=true)         |`T | top 5 by Name desc nulls last`    |
-|`lookup`     |Adds field values from an external source.	|• [externaldata](/kusto/query/externaldata-operator?view=microsoft-sentinel&preserve-view=true)<br>• [lookup](/kusto/query/lookup-operator?view=microsoft-sentinel&preserve-view=true)    |[KQL example](#lookup-command-kql-example)   |
+|`lookup`     |Adds field values from an external source.	|• [externaldata](/kusto/query/externaldata-operator?view=microsoft-sentinel&preserve-view=true)<br>• [lookup](/kusto/query/lookup-operator?view=microsoft-sentinel&preserve-view=true)    |[Lookup command KQL example](#lookup-command-kql-example)   |
 |`rename`     |Renames a field. Use wildcards to specify multiple fields.	         |[project-rename](/kusto/query/project-rename-operator?view=microsoft-sentinel&preserve-view=true)         |`T | project-rename new_column_name = column_name`      |
 |`rex`     |Specifies group names using regular expressions to extract fields.	|[matches regex](/kusto/query/regex?view=microsoft-sentinel&preserve-view=true)         |`… | where field matches regex "^addr.*"`         |
 |`search`     |Filters results to results that match the search expression.	 |[search](/kusto/query/search-operator?view=microsoft-sentinel&preserve-view=true)         |`search "X"`         |
 |`sort`     |Sorts the search results by the specified fields.	   |[sort](/kusto/query/sort-operator?view=microsoft-sentinel&preserve-view=true)         |`T | sort by strlen(country) asc, price desc`         |
-|`stats`     |Provides statistics, optionally grouped by fields. Learn more about [common stats commands](https://github.com/Azure/Azure-Sentinel/blob/master/Tools/RuleMigration/SPL%20to%20KQL.md#common-stats-commands).     |[summarize](/kusto/query/summarize-operator?view=microsoft-sentinel&preserve-view=true)         |[KQL example](#stats-command-kql-example) |
-|`mstats`     |Similar to stats, used on metrics instead of events.	  |[summarize](/kusto/query/summarize-operator?view=microsoft-sentinel&preserve-view=true)          |[KQL example](#mstats-command-kql-example) |
+|`stats`     |Provides statistics, optionally grouped by fields. Learn more about [common stats commands](https://github.com/Azure/Azure-Sentinel/blob/master/Tools/RuleMigration/SPL%20to%20KQL.md#common-stats-commands).     |[summarize](/kusto/query/summarize-operator?view=microsoft-sentinel&preserve-view=true)         |[Stats command KQL example](#stats-command-kql-example) |
+|`mstats`     |Similar to stats, used on metrics instead of events.	  |[summarize](/kusto/query/summarize-operator?view=microsoft-sentinel&preserve-view=true)          |[Mstats command KQL example](#mstats-command-kql-example) |
 |`table`     |Specifies which fields to keep in the result set, and retains data in tabular format.	|[project](/kusto/query/project-operator?view=microsoft-sentinel&preserve-view=true)         |`T | project columnA, columnB`         |
 |`top/rare`	     |Displays the most or least common values of a field.	   |[top](/kusto/query/top-operator?view=microsoft-sentinel&preserve-view=true)         |`T | top 5 by Name desc nulls last` | 
-|`transaction`     |Groups search results into transactions.<br><br>[SPL example](#transaction-command-spl-example)         |Example: [row_window_session](/kusto/query/row-window-session-function?view=microsoft-sentinel&preserve-view=true)       |[KQL example](#transaction-command-kql-example) |
+|`transaction`     |Groups search results into transactions.<br><br>[Transaction command SPL example](#transaction-command-spl-example)         |Example: [row_window_session](/kusto/query/row-window-session-function?view=microsoft-sentinel&preserve-view=true)       |[Transaction command KQL example](#transaction-command-kql-example) |
 |`eventstats`     |Generates summary statistics from fields in your events and saves those statistics in a new field.<br><br>[SPL example](#eventstats-command-spl-example)         |Examples:<br>• [join](/kusto/query/join-operator?view=microsoft-sentinel&preserve-view=true)<br>• [make_list](/kusto/query/make-list-aggregation-function?view=microsoft-sentinel&preserve-view=true)<br>• [mv-expand](/kusto/query/mv-expand-operator?view=microsoft-sentinel&preserve-view=true)         |[KQL example](#eventstats-command-kql-example) |
 |`streamstats`     |Find the cumulative sum of a field.<br><br>SPL example:<br>`... | streamstats sum(bytes) as bytes _ total \| timechart`	         |[row_cumsum](/kusto/query/row-cumsum-function?view=microsoft-sentinel&preserve-view=true)         |`...\| serialize cs=row_cumsum(bytes)` |
 |`anomalydetection`     |Find anomalies in the specified field.<br><br>[SPL example](#anomalydetection-command-spl-example)         |[series_decompose_anomalies()](/kusto/query/series-decompose-anomalies-function?view=microsoft-sentinel&preserve-view=true)         |[KQL example](#anomalydetection-command-kql-example) |
@@ -139,7 +140,7 @@ The following table maps common SPL search commands to their KQL equivalents in 
 
 #### `lookup` command: KQL example
 
-The following KQL example uses `externaldata` to replicate the SPL `lookup` pattern by filtering users against an external data source.
+This KQL example uses `externaldata` to replicate the SPL `lookup` pattern by filtering users against an external data source.
 
 ```kusto
 Users 
@@ -150,7 +151,7 @@ h@"?...SAS..." // Secret token to access the blob
 ```
 #### `stats` command: KQL example
 
-The following KQL example uses `summarize` to count transactions and sum totals, grouped by fruit and month.
+This KQL example uses `summarize` to count transactions and sum totals, grouped by fruit and month.
 
 ```kusto
 Sales 
@@ -160,7 +161,7 @@ StartOfMonth=startofmonth(SellDateTime)
 ```
 #### `mstats` command: KQL example
 
-The following KQL example bins metric values into price ranges and counts the records in each range.
+This KQL example bins metric values into price ranges and counts the records in each range.
 
 ```kusto
 T | summarize count() by price_range=bin(price, 10.0) 
@@ -168,7 +169,7 @@ T | summarize count() by price_range=bin(price, 10.0)
 
 #### `transaction` command: SPL example
 
-The following SPL example groups related start and stop events into a single transaction by activity ID.
+This SPL example groups related start and stop events into a single transaction by activity ID.
 
 ```spl
 sourcetype=MyLogTable type=Event
@@ -178,7 +179,7 @@ sourcetype=MyLogTable type=Event
 ```
 #### `transaction` command: KQL example
 
-The following KQL example replicates SPL transaction grouping by joining start and stop events on a shared activity ID and calculating the duration.
+This KQL example replicates SPL transaction grouping by joining start and stop events on a shared activity ID and calculating the duration.
 
 ```kusto
 let Events = MyLogTable | where type=="Event";
@@ -201,7 +202,7 @@ Timestamp, 1h, 5m, ID != prev(ID))
 ```
 #### `eventstats` command: SPL example
 
-The following SPL example calculates per-category event counts in one-minute bins and then appends a per-time-bin total using `eventstats`.
+This SPL example calculates per-category event counts in one-minute bins and then appends a per-time-bin total using `eventstats`.
 
 ```spl
 … | bin span=1m _time
@@ -238,7 +239,7 @@ sum(TotalEvents) by groupBin
 ```
 #### `anomalydetection` command: SPL example
 
-The following SPL example detects anomalies in historical closing price data over a 10-year period.
+This SPL example detects anomalies in historical closing price data over a 10-year period.
 
 ```spl
 sourcetype=nasdaq earliest=-10y
@@ -246,7 +247,7 @@ sourcetype=nasdaq earliest=-10y
 ```
 #### `anomalydetection` command: KQL example
 
-The following KQL example uses time-series analysis functions to detect anomalies in disabled-account sign-in trends over a seven-day lookback period.
+This KQL example uses time-series analysis functions to detect anomalies in disabled-account sign-in trends over a seven-day lookback period.
 
 ```kusto
 let LookBackPeriod= 7d;
@@ -261,9 +262,10 @@ LineFit)=series_fit_line(Trend)
 | extend (anomalies,score) = 
 series_decompose_anomalies(Trend)
 ```
-### Common `eval` commands
+<a name="common-eval-commands"></a>
+### Compare common Splunk `eval` commands with KQL equivalents
 
-The following table maps common SPL `eval` functions to their KQL equivalents in Microsoft Sentinel.
+This table maps common SPL `eval` functions to their KQL equivalents in Microsoft Sentinel.
 
 |SPL command  |Description  |SPL example  |KQL command  |KQL example |
 |---------|---------|---------|---------|---------|
@@ -315,7 +317,7 @@ The following table maps common SPL `eval` functions to their KQL equivalents in
 
 #### `case(X,"Y",…)` SPL example
 
-The following SPL example returns a different message string based on the HTTP error code.
+This SPL example returns a different message string based on the HTTP error code.
 
 ```SPL
 case(error == 404, "Not found",
@@ -324,7 +326,7 @@ error == 200, "OK")
 ```
 #### `case(X,"Y",…)` KQL example
 
-The following KQL example uses `case()` to assign a message based on the error code value.
+This KQL example uses `case()` to assign a message based on the error code value.
 
 ```kusto
 T
@@ -333,7 +335,7 @@ error == 500,"Internal Server Error", "OK")
 ```
 #### `if(X,Y,Z)` KQL example
 
-The following KQL example uses `iif()` to label whether a timestamp falls on the current day.
+This KQL example uses `iif()` to label whether a timestamp falls on the current day.
 
 ```kusto
 iif(floor(Timestamp, 1d)==floor(now(), 1d), 
@@ -341,21 +343,21 @@ iif(floor(Timestamp, 1d)==floor(now(), 1d),
 ```
 #### `isint(X)` KQL example
 
-The following KQL example checks whether `X` has an integer-compatible type by using `gettype` and `iif`.
+This KQL example checks whether `X` has an integer-compatible type by using `gettype` and `iif`.
 
 ```kusto
 iif(gettype(X) =="long","TRUE","FALSE")
 ```
 #### `isstr(X)` KQL example
 
-The following KQL example checks whether `X` is a string value by using `gettype` and `iif`.
+This KQL example checks whether `X` is a string value by using `gettype` and `iif`.
 
 ```kusto
 iif(gettype(X) =="string","TRUE","FALSE")
 ```
 #### `like(X,"y")` example
 
-The following KQL examples show several string-matching operators you can use to replicate SPL `like` pattern matching.
+These KQL examples show several string-matching operators you can use to replicate SPL `like` pattern matching.
 
 ```kusto
 … | where field has "addr"
@@ -368,7 +370,7 @@ The following KQL examples show several string-matching operators you can use to
 ```
 #### `min(X,…)` KQL example
 
-The following KQL examples show different ways to compute minimum values using `min_of`, `min`, and `arg_min`.
+These KQL examples show different ways to compute minimum values using `min_of`, `min`, and `arg_min`.
 
 ```kusto
 min_of (expr_1, expr_2 ...)
@@ -379,7 +381,7 @@ min_of (expr_1, expr_2 ...)
 ```
 #### `mvfilter(X)` KQL example
 
-The following KQL example uses `mv-apply` to filter and reduce multi-valued content, similar to the SPL `mvfilter` function.
+This KQL example uses `mv-apply` to filter and reduce multi-valued content, similar to the SPL `mvfilter` function.
 
 ```kusto
 T | mv-apply Metric to typeof(real) on 
@@ -389,14 +391,14 @@ T | mv-apply Metric to typeof(real) on
 ```
 #### `mvjoin(X,Y)` KQL example
 
-The following KQL example uses `strcat_array` to join array elements into a single string with a custom separator.
+This KQL example uses `strcat_array` to join array elements into a single string with a custom separator.
 
 ```kusto
 strcat_array(dynamic([1, 2, 3]), "->")
 ```
 #### `relative time(X,Y)` KQL example
 
-The following KQL example converts a datetime value to Unix epoch time for relative-time calculations.
+This KQL example converts a datetime value to Unix epoch time for relative-time calculations.
 
 ```kusto
 let toUnixTime = (dt:datetime)
@@ -406,14 +408,14 @@ let toUnixTime = (dt:datetime)
 ```
 #### `replace(X,Y,Z)` KQL example
 
-The following KQL example uses `replace()` with a regex pattern to swap the month and day parts of a date string.
+This KQL example uses `replace()` with a regex pattern to swap the month and day parts of a date string.
 
 ```kusto
 replace( @'^(\d{1,2})/(\d{1,2})/', @'\2/\1/',date)
 ```
 #### `strptime(X,Y)` KQL example
 
-The following KQL example uses `format_datetime` to display only the hours and minutes from a datetime value.
+This KQL example uses `format_datetime` to display only the hours and minutes from a datetime value.
 
 ```kusto
 format_datetime(datetime('2017-08-16 11:25:10'),
@@ -421,7 +423,7 @@ format_datetime(datetime('2017-08-16 11:25:10'),
 ```
 #### `time()` KQL example
 
-The following KQL example formats a datetime value as a time string showing hours, minutes, and seconds.
+This KQL example formats a datetime value as a time string showing hours, minutes, and seconds.
 
 ```kusto
 format_datetime(datetime(2015-12-14 02:03:04),
@@ -430,14 +432,14 @@ format_datetime(datetime(2015-12-14 02:03:04),
 <a name="tostringxy"></a>
 #### `tostring(X,Y)` description
 
-Returns a field value of `X` as a string.
+The SPL `tostring(X,Y)` function converts values to strings and supports several formatting options. It returns a field value of `X` as a string.
 - If the value of `X` is a number, `X` is reformatted to a string value. 
 - If `X` is a boolean value, `X` is reformatted to `TRUE` or `FALSE`.
 - If `X` is a number, the second argument `Y` is optional and can either be `hex` (converts `X` to a hexadecimal), `commas` (formats `X` with commas and two decimal places), or `duration` (converts `X` from a time format in seconds to a readable time format: `HH:MM:SS`).
 
 ##### `tostring(X,Y)` SPL example
 
-The following `tostring` SPL example returns:
+This `tostring` SPL example returns:
 
 ```SPL
 foo=615 and foo2=00:10:15:
@@ -447,14 +449,15 @@ foo, "duration")
 ```
 #### `urldecode(X)` SPL example
 
-The following SPL example decodes a URL-encoded string back to its original form.
+This SPL example decodes a URL-encoded string back to its original form.
 
 ```SPL
 urldecode("http%3A%2F%2Fwww.splunk.com%2Fdownload%3Fr%3Dheader")
 ```
-### Common `stats` commands KQL example
+<a name="common-stats-commands-kql-example"></a>
+### Compare common Splunk `stats` commands with KQL equivalents
 
-The following table maps common SPL `stats` aggregation functions to their KQL equivalents in Microsoft Sentinel.
+This table maps common SPL `stats` aggregation functions to their KQL equivalents in Microsoft Sentinel.
 
 |SPL command  |Description  |KQL command  |KQL example  |
 |---------|---------|---------|---------|

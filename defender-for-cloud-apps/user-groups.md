@@ -1,9 +1,11 @@
 ---
 title: Import user groups from connected apps
 description: This article provides instructions for importing your user groups from connected apps into Defender for Cloud Apps.
-ms.date: 01/29/2023
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Naama-Goldbart 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Import user groups from connected apps
@@ -19,7 +21,7 @@ When you connect apps using API connectors, Microsoft Defender for Cloud Apps en
   - Microsoft 365 administrator
   - Google Workspace administrator
   - Box administrator
-  - All Salesforce standard and custom profiles, for example, Salesforce System Administrator. See the full list [here](https://help.salesforce.com/s/articleView?id=sf.standard_profiles.htm).
+  - All Salesforce standard and custom profiles, for example, Salesforce System Administrator. See the full list of [Salesforce standard profiles](https://help.salesforce.com/s/articleView?id=sf.standard_profiles.htm).
 
 - **Imported groups:** You can import any group from your connected apps. For example, you can import user groups from Microsoft 365 (Active Directory) and other connected apps. These groups enable you to look for threats in your org, not by looking at the whole org or at a specific user, but by looking at a specific group.
 
@@ -29,7 +31,8 @@ When you connect apps using API connectors, Microsoft Defender for Cloud Apps en
   - Check if there's something unusual happening in the executive group.
   - Find if someone from the admin group performed an activity outside the US.
 
-## Import user groups
+<a name="import-user-groups"></a>
+## Import a user group from a connected app
 
 1. In the Defender portal, select **Settings > Cloud Apps > System > User groups > + Import user group**.
 

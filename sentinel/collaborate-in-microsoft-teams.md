@@ -5,10 +5,10 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: idpelleg
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 #Customer intent: As a security analyst, I want to take advantage of Microsoft Teams' integration with Microsoft Sentinel to collaborate efficiently on incident investigations with my team.
 ---
@@ -39,7 +39,7 @@ In order to create teams from Microsoft Sentinel:
 
 - The user creating the team must also have permissions to create teams in Microsoft Teams.
 
-- Any Microsoft Sentinel user, including users with the [Reader](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-reader), [Responder](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-responder), or [Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) roles, can gain access to the created team by requesting access.
+- Any Microsoft Sentinel user, including users with the [Microsoft Sentinel Reader](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-reader), [Microsoft Sentinel Responder](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-responder), or [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) roles, can gain access to the created team by requesting access.
 
 ## Use an incident team to investigate
 
@@ -51,7 +51,7 @@ Investigate together with an *incident team* by integrating Microsoft Teams dire
 
 1. At the bottom of the incident pane that appears on the right, select **Actions** > **Create team (Preview)**.
 
-    [ ![Screenshot of the option to create a Microsoft Teams team for the incident.](media/collaborate-in-microsoft-teams/create-team.png) ](media/collaborate-in-microsoft-teams/create-team.png#lightbox)
+    [ ![Screenshot of the incident page with the option to create a Microsoft Teams team.](media/collaborate-in-microsoft-teams/create-team.png) ](media/collaborate-in-microsoft-teams/create-team.png#lightbox)
 
     The **Incident team** pane opens on the right. Define the following settings for your incident team:
 
@@ -62,19 +62,19 @@ Investigate together with an *incident team* by integrating Microsoft Teams dire
         > [!TIP]
         > If you regularly work with the same users and groups, you may want to select the star :::image type="icon" source="media/collaborate-in-microsoft-teams/save-as-favorite.png" border="false"::: next to each one in the **Selected groups and users** list to save them as favorites.
         >
-        > Favorites are automatically selected the next time you create a team. If you want to remove a favorite from the next team you create, either select **Delete** :::image type="icon" source="media/collaborate-in-microsoft-teams/delete-user-group.png" border="false":::, or select the star :::image type="icon" source="media/collaborate-in-microsoft-teams/save-as-favorite.png" border="false"::: again to remove the team from your favorites altogether.
+        > Favorites are automatically selected the next time you create a team. If you want to remove a favorite from the next team you create, either select **Delete** :::image type="icon" source="media/collaborate-in-microsoft-teams/delete-user-group.png" border="false":::, or select the star :::image type="icon" source="media/collaborate-in-microsoft-teams/save-as-favorite.png" border="false"::: again to remove that user or group from your favorites altogether.
         >
 
 1. When you're done adding users and groups, select **Create team** to create your incident team.
 
     The incident pane refreshes, with a link to your new incident team under the **Team name** title.
 
-    [ ![Screenshot of an incident pane with the Teams integration link added.](media/collaborate-in-microsoft-teams/teams-link-added-to-incident.jpg) ](media/collaborate-in-microsoft-teams/teams-link-added-to-incident.jpg#lightbox)
+    [ ![Screenshot of an incident showing the added link to the related Microsoft Teams team.](media/collaborate-in-microsoft-teams/teams-link-added-to-incident.jpg) ](media/collaborate-in-microsoft-teams/teams-link-added-to-incident.jpg#lightbox)
 
 
 1. Select your **Teams integration** link to switch into Microsoft Teams, where all of the data about your incident is listed on the **Incident page** tab.
 
-    [ ![Screenshot of the incident page displayed in Microsoft Teams.](media/collaborate-in-microsoft-teams/incident-in-teams.png) ](media/collaborate-in-microsoft-teams/incident-in-teams.png#lightbox)
+    [ ![Screenshot of incident details and conversation thread available in Microsoft Teams.](media/collaborate-in-microsoft-teams/incident-in-teams.png) ](media/collaborate-in-microsoft-teams/incident-in-teams.png#lightbox)
 
 Continue the conversation about the investigation in Teams for as long as needed. You have the full incident details directly in Microsoft Teams.
 

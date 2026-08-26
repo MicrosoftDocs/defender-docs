@@ -5,9 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As an administrator, I want to set up my Amazon Web Services environment to send AWS logs to Microsoft Sentinel using one of the Microsoft Sentinel AWS connectors.
@@ -22,7 +22,7 @@ This article outlines the AWS environment setup required to send logs to Microso
 
 ## AWS environment setup overview
 
-This diagram shows how to set up your AWS environment to send logs to Azure:
+This diagram shows how to set up your AWS environment to send logs to Microsoft Sentinel in Azure:
 
 :::image type="content" source="media/connect-aws/s3-connector-architecture.png" alt-text="Screenshot of A W S S 3 connector architecture.":::
 
@@ -50,7 +50,7 @@ This diagram shows how to set up your AWS environment to send logs to Azure:
 
 ### Manual setup
 
-Although you can set up the AWS environment manually by following the steps below, we strongly recommend using the automated tools provided when you [deploy AWS connectors](#4-deploy-aws-connectors) instead. The deploy AWS connectors section provides connector-specific setup instructions and automated configuration options for each supported connector type.
+Although you can set up the AWS environment manually by following the manual setup procedures in this section, we strongly recommend using the automated tools provided in the [Deploy AWS connectors](#4-deploy-aws-connectors) section instead. The [Deploy AWS connectors](#4-deploy-aws-connectors) section provides connector-specific setup instructions, automated configuration scripts, and links to each supported connector type.
 
 #### 1. Create an S3 bucket and SQS queue
 
@@ -83,9 +83,9 @@ Follow these instructions in the AWS documentation:<br>[Creating OpenID Connect 
 | **Thumbprint** | `626d44e704d1ceabe3bf0d53397464ac8080142c` | If created in the IAM console, selecting **Get thumbprint** should give you this result. |
 | **Audience** | Commercial:<br>`api://1462b192-27f7-4cb9-8523-0f4ecb54b47e`<br><br>Government:<br>`api://d4230588-5f84-4281-a9c7-2c15194b28f7` |  |
 
-### 3. Create an AWS assumed role
+#### 3. Create an AWS assumed role
 
-Create an AWS assumed role for the OIDC identity provider you configured in the previous section. When you name the role, the role name must start with `OIDC_`.
+Create an AWS assumed role for the OIDC identity provider you configured in [Create an Open ID Connect (OIDC) web identity provider](#2-create-an-open-id-connect-oidc-web-identity-provider). When you name the role, the role name must start with `OIDC_`.
 
    > [!IMPORTANT]
    > The role name must include the exact prefix `OIDC_`; otherwise, the connector can't function properly.
@@ -142,7 +142,7 @@ See the linked Amazon Web Services documentation for instructions for sending ea
     > [!NOTE]
     > If you choose to customize the log's format, you must include the *start* attribute, as it maps to the *TimeGenerated* field in the Log Analytics workspace. Otherwise, the *TimeGenerated* field is populated with the event's *ingested time*, which doesn't accurately describe the log event.
 
-- [Export your GuardDuty findings to an S3 bucket](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_exportfindings.html).
+- Configure GuardDuty to export findings to your S3 bucket so Microsoft Sentinel can ingest them. For details, see [Export your GuardDuty findings to an S3 bucket](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_exportfindings.html).
 
     > [!NOTE]
     >
@@ -169,6 +169,6 @@ Microsoft Sentinel provides these AWS connectors:
 ## Next steps
 
 To learn more about Microsoft Sentinel, see the following articles:
-- Learn how to [get visibility into your data, and potential threats](get-visibility.md).
-- Get started [detecting threats with Microsoft Sentinel](detect-threats-built-in.md).
-- [Use workbooks](monitor-your-data.md) to monitor your data.
+- [Visualize collected data](get-visibility.md).
+- [Detect threats with built-in analytics rules](detect-threats-built-in.md).
+- [Use Microsoft Sentinel workbooks](monitor-your-data.md) to monitor your data.

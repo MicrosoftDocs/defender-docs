@@ -6,13 +6,14 @@ ms.topic: article
 
 ms.localizationpriority: high
 ms.assetid: 2e3fcfc5-5604-4b88-ac0a-c5c45c03f1db
-ms.collection: 
+ms.collection:
   - m365-security
   - tier2
 description: Admins can learn about the header fields added to incoming messages by the built-in security features for all cloud mailboxes and by Microsoft Defender for Office 365. These header fields provide information about the message and how it was processed.
-ms.custom: seo-marvel-apr2020
+ms.custom: seo-marvel-apr2020, msecd-doc-authoring-1015
 ms.service: defender-office-365
-ms.date: 10/08/2025
+ms.date: 07/27/2026
+ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -60,19 +61,20 @@ The individual fields and values are described in the following table.
 |`IPV:NLI`|The IP address wasn't found on any IP reputation list.|
 |`LANG`|The language that the message was written in as specified by the country code (for example, ru_RU for Russian).|
 |`PTR:[ReverseDNS]`|The PTR record (also known as the reverse DNS lookup) of the source IP address.|
-|`SCL`|The spam confidence level (SCL) of the message. A higher value indicates the message is more likely to be spam. For more information, see [Spam confidence level (SCL)](anti-spam-spam-confidence-level-scl-about.md).|
+|`SCL`|The spam confidence level (SCL) of the message. In cloud organizations, this value doesn't determine whether the message is identified as spam or the action taken on it. It's used primarily in on-premises Exchange environments, including hybrid delivery to the Junk Email folder. To understand how the message was filtered, use the `CAT` and `DIR` values instead. For more information, see [Spam confidence level (SCL)](anti-spam-spam-confidence-level-scl-about.md).|
 |`SFTY`|The message was identified as phishing and is also marked with one of the following values: <ul><li>9.19: Domain impersonation. The sending domain is attempting to [impersonate a protected domain](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365). The safety tip for domain impersonation is added to the message (if domain impersonation is enabled).</li><li>9.20: User impersonation. The sending user is attempting to impersonate a user in the recipient's organization, or [a protected user specified in an anti-phishing policy](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) in Microsoft Defender for Office 365. The safety tip for user impersonation is added to the message (if user impersonation is enabled).</li><li>9.25: First contact safety tip. This value _might_ be an indication of a suspicious or phishing message. For more information, see [First contact safety tip](anti-phishing-policies-about.md#first-contact-safety-tip).</li></ul>|
-|`SFV:BLK`|Filtering was skipped and the message was blocked because it was sent from an address in a user's Blocked Senders list. <p> For more information about how admins can manage a user's Blocked Senders list, see [Configure junk email settings on cloud mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).|
+|`SFV:BLK`|Filtering was skipped and the message was blocked because it was sent from an address in a user's Blocked Senders list. </br></br> For more information about how admins can manage a user's Blocked Senders list, see [Configure junk email settings on cloud mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).|
 |`SFV:NSPM`|Spam filtering marked the message as nonspam and the message was sent to the intended recipients.|
-|`SFV:SFE`|Filtering was skipped and the message was allowed because it was sent from an address in a user's Safe Senders list. <p> For more information about how admins can manage a user's Safe Senders list, see [Configure junk email settings on cloud mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).|
+|`SFV:SFE`|Filtering was skipped and the message was allowed because it was sent from an address in a user's Safe Senders list. </br></br> For more information about how admins can manage a user's Safe Senders list, see [Configure junk email settings on cloud mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).|
 |`SFV:SKA`|The message skipped spam filtering and was delivered to the Inbox because the sender was in the allowed senders list or allowed domains list in an anti-spam policy. For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md).|
 |`SFV:SKB`|The message was marked as spam because it matched a sender in the blocked senders list or blocked domains list in an anti-spam policy. For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md).|
-|`SFV:SKN`|The message was marked as nonspam before processing by spam filtering. For example, the message was marked as SCL -1 or **Bypass spam filtering** by a mail flow rule.|
+|`SFV:SKI`|The message skipped spam filtering because the source IP address was in the IP Allow List in the connection filter policy. For more information, see [Configure connection filtering](connection-filter-policies-configure.md).|
+|`SFV:SKN`|The message bypassed spam filtering due to an [Exchange mail flow rule (transport rule)](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).|
 |`SFV:SKQ`|The message was released from the quarantine and was sent to the intended recipients.|
-|`SFV:SKS`|The message was marked as spam before processing by spam filtering. For example, the message was marked as SCL 5 to 9 by a mail flow rule.|
+|`SFV:SKS`|The message was marked as spam before spam filtering processed it, either by an [Exchange mail flow rule (transport rule) that set the SCL](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl), or by a spam decision passed from on-premises Exchange in a [hybrid deployment](/exchange/exchange-hybrid). These actions are inputs to filtering, not the final decision. [Secure by default](secure-by-default.md) evaluates the request and might not honor it, so `SFV:SKS` is stamped only when the request to mark the message as spam is honored.|
 |`SFV:SPM`|The message was marked as spam by spam filtering.|
-|`SRV:BULK`|The message was identified as bulk email by spam filtering and the bulk complaint level (BCL) threshold. When the _MarkAsSpamBulkMail_ parameter is `On` (it's on by default), a bulk email message is marked as spam (SCL 6). For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md).|
-|`X-CustomSpam: [ASFOption]`|The message matched an Advanced Spam Filter (ASF) setting. To see the X-header value for each ASF setting, see [Advanced Spam Filter (ASF) settings in anti-spam policies](anti-spam-policies-asf-settings-about.md). <br><br> **Note**: ASF adds `X-CustomSpam:` X-header fields to messages _after_ Exchange mail flow rules (also known as transport rules) process messages. You can't use mail flow rules to identify and act on messages filtered by ASF.|
+|`SRV:BULK`|The message was identified as bulk email by spam filtering and the bulk complaint level (BCL) threshold. When the _MarkAsSpamBulkMail_ parameter is `On` (it's on by default), bulk email messages are identified as spam. For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md).|
+|`X-CustomSpam: [ASFOption]`|The message matched an Advanced Spam Filter (ASF) setting. To see the X-header value for each ASF setting, see [Advanced Spam Filter (ASF) settings in anti-spam policies](anti-spam-policies-asf-settings-about.md). <br><br> **Note**: ASF adds `X-CustomSpam:` X-header fields to messages _after_ mail flow rules process messages. You can't use mail flow rules to identify and act on messages filtered by ASF.|
 
 ## X-Microsoft-Antispam message header fields
 

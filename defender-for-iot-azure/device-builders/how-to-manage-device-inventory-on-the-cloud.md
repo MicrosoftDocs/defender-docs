@@ -1,25 +1,25 @@
 ---
-title: Manage IoT and OT devices with the cloud device inventory
+title: Manage IoT and OT Devices with the Cloud Device Inventory
 description: Learn how to manage your IoT and OT devices with the device inventory.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
 # Manage IoT and OT devices with the device inventory
 
-The device inventory can be used to view device systems, and network information. The search, filter, edit columns, and export tools can be used to manage device system and network information.
+You can use the device inventory to view device systems and network information. You can use the Search, Filter, Edit columns, and Export tools to manage device system and network information.
 
 :::image type="content" source="media/how-to-manage-device-inventory-on-the-cloud/device-inventory-screenshot.png" alt-text="A total overview of Defender for IoT's device inventory screen.":::
 
 Some of the benefits of the device inventory include:
 
-- Identify all IOT, and OT devices from different inputs. For example, allowing you to understand which devices in your environment aren't communicating, and will require troubleshooting.
+- Identify all IoT and OT devices from different inputs. For example, this allows you to understand which devices in your environment aren't communicating and require troubleshooting.
 
 - Group, and filter devices by site, type, or vendor.
 
-- Gain visibility into each device, and investigate the different threats, and alerts for each one.
+- Gain visibility into each device and investigate the different threats and alerts for each one.
 
 - Export the entire device inventory to a CSV file for your reports.
 
@@ -27,7 +27,7 @@ Some of the benefits of the device inventory include:
 
 ## Device inventory overview
 
-The Device inventory gives you an overview of all devices within your environment. Here you can see the individual details of each device and filter, and order your search by various options.
+The Device inventory gives you an overview of all devices within your environment. Here you can see the individual details of each device and filter and order your search by various options.
 
 The following table describes the different device properties in the device inventory.
 
@@ -51,7 +51,7 @@ The following table describes the different device properties in the device inve
 | **Site** | The site that contains this device. | - |
 | **Vendor** | The name of the device's vendor, as defined in the MAC address. | - |
 
-**To view the device inventory**:
+To view the device inventory:
 
 1. Open the [Azure portal](https://portal.azure.com).
 
@@ -63,11 +63,11 @@ The following table describes the different device properties in the device inve
 
 In the device inventory table, you can add or remove columns. You can also change the column order by dragging and dropping a field.
 
-**To customize the device inventory table**:
+To customize the device inventory table:
 
 1. Select the :::image type="icon" source="media/how-to-manage-device-inventory-on-the-cloud/edit-columns-icon.png" border="false"::: button.
 
-1. In the Edit columns tab, select the drop-down menu to change the value of a column.
+1. In the **Edit columns** tab, select the drop-down menu to change the value of a column.
 
     :::image type="content" source="media/how-to-manage-device-inventory-on-the-cloud/device-drop-down-menu.png" alt-text="Select the drop-down menu to change the value of a given column.":::
 
@@ -81,29 +81,29 @@ In the device inventory table, you can add or remove columns. You can also chang
 
 1. Select **Save** to save any changes made.
 
-If you want to reset the device inventory to the default settings, in the Edit columns window, select the :::image type="icon" source="media/how-to-manage-device-inventory-on-the-cloud/reset-icon.png" border="false"::: button.
+If you want to reset the device inventory to the default settings, select the :::image type="icon" source="media/how-to-manage-device-inventory-on-the-cloud/reset-icon.png" border="false"::: button in the **Edit columns** tab.
 
 ## Filter the device inventory
 
-You can search, and filter the device inventory to define what information the table displays.
+You can search and filter the device inventory to define what information the table displays.
 
-For a list of filters that can be applied to the device inventory table, see the [Device inventory overview](#device-inventory-overview).
+For a list of filters that you can apply to the device inventory table, see the [Device inventory overview](#device-inventory-overview).
 
-**To filter the device inventory**:
+To filter the device inventory:
 
-1. Select **Add filter**
+1. Select **Add filter**.
 
     :::image type="content" source="media/how-to-manage-device-inventory-on-the-cloud/add-filter.png" alt-text="Select  the add filter button to specify what you want to appear in the device inventory.":::
 
-1. In the Add filter window, select the column drop-down menu to choose which column to filter.
+1. In the **Add filter** window, select the column drop-down menu to choose which column to filter.
 
     :::image type="content" source="media/how-to-manage-device-inventory-on-the-cloud/add-filter-window.png" alt-text="Select which column you want to filter in the device inventory.":::
 
-1. Enter a value in the filter field to filter by.
+1. Enter a value to filter by.
 
-1. Select the **Apply button**.
+1. Select the **Apply** button.
 
-Multiple filters can be applied at one time. The filters aren't saved when you leave the Device inventory page.
+You can apply filters at one time. The filters aren't saved when you leave the **Device inventory** page.
 
 ## View device information
 
@@ -113,15 +113,15 @@ To view a specific devices information, select the device and the device informa
 
 ## Export the device inventory to CSV
 
-You can export your device inventory to a CSV file. Any filters that you apply to the device inventory table will be exported, when you export the table.
+You can export your device inventory to a CSV file. Any filters that you apply to the device inventory table are exported when you export the table.
 
-Select the :::image type="icon" source="media/how-to-manage-device-inventory-on-the-cloud/export-button.png" border="false"::: button to export your current device inventory to a CSV file.
+Select the :::image type="icon" source="media/how-to-manage-device-inventory-on-the-cloud/export-button.png" border="false"::: button to export the device inventory.
 
-## How to identify devices that have not recently communicated with the Azure cloud
+## How to identify devices that haven't recently communicated with the Azure cloud
 
-If you are under the impression that certain devices are not actively communicating, there's a way to check, and see which devices have not communicated in a specified time period.
+If you suspect that certain devices aren't actively communicating, there's a way to check and see which devices haven't communicated in a specified time period.
 
-**To identify all devices that have not communicated recently**:
+To identify all devices that haven't communicated recently:
 
 1. Open the [Azure portal](https://portal.azure.com).
 
@@ -143,10 +143,8 @@ If you are under the impression that certain devices are not actively communicat
 
     :::image type="content" source="media/how-to-manage-device-inventory-on-the-cloud/last-activity-filter.png" alt-text="Screenshot of the add filter screen where you can select the time period to see the last activity.":::
 
-1. Enter a time period, or a custom date range, and select **Apply**.
+1. Enter a time period or a custom date range and select **Apply**.
 
-<a name="see-next"></a>
 ## Related content
 
 - [Welcome to Microsoft Defender for IoT for organizations](overview.md)
-

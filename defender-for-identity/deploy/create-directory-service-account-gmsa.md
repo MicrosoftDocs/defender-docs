@@ -1,16 +1,16 @@
 ---
 title: Configure a gMSA directory service account for Defender for Identity
 description: Create and configure a group managed service account (gMSA) for use as the Directory service account in Microsoft Defender for Identity.
-ms.date: 06/15/2026
+ms.date: 08/03/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1015
 ai-usage: ai-assisted
 ---
 
 # Configure a gMSA directory service account for Defender for Identity
 
-Create and configure a [group managed service account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) for the sensor v2.x to use when reading Active Directory data (querying objects, tracking changes, resolving entities). This is separate from the [action account](manage-action-accounts.md) used to perform remediation actions like disabling users or resetting passwords.
+Create and configure a [group managed service account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) for the sensor v2.x to use when reading Active Directory data (querying objects, tracking changes, resolving entities). This is separate from the [action account](manage-action-accounts.md) used to perform remediation actions like disabling users or resetting passwords. Before you begin, review the [prerequisites](#prerequisites) for creating a gMSA for sensor v2.x deployments.
 
 > [!IMPORTANT]
 > This configuration applies to the sensor v2.x only. The sensor v3.x uses LocalSystem for all AD interactions and doesn't require a gMSA or any other Directory Service Account. If all your sensors are v3.x, skip this page.
@@ -57,15 +57,31 @@ Before you create the gMSA account, make sure the following prerequisites are me
     Add-KdsRootKey -EffectiveImmediately
     ```
 
-1. Run the PowerShell commands as an administrator. This script will: 
+    Although the command name suggests that the key takes effect immediately, wait 10 hours for the KDS root key to replicate and become available on all domain controllers.
+
+    If your test domain has only one domain controller, you can expedite the process by setting the key's effective time to 10 hours earlier.
+
+    > [!IMPORTANT]
+    > Don't use this technique in a production environment.
+
+    ```powershell
+    # For single-DC test environments only
+    Add-KdsRootKey -EffectiveTime (Get-Date).AddHours(-10)
+    ```
+
+1. Run the PowerShell commands as an administrator. This script will:
+
     - Create a gMSA account.
     - Create a group for the gMSA account.
     - Add the specified computer accounts to that group.
+    - Configure the gMSA to use AES128 and AES256 Kerberos encryption.
 
-1. Before running the script: 
+1. Before running the script:
 
     - Update the variable values to match your environment.
     - Make sure to give each gMSA a unique name for each forest or domain.
+
+Define the gMSA creation variables, including the account name, host group, and computer accounts, then run the following script to provision the gMSA:
 
 ```powershell
 # Variables:
@@ -91,9 +107,12 @@ if ($gMSA_HostsGroupName -eq 'Domain Controllers') {
         ForEach-Object { Add-ADGroupMember -Identity $gMSA_HostsGroupName -Members $_ }
 }
 
+# Specify the Kerberos encryption type as AES.
+$kerberosEncType = ('AES128','AES256')
+
 # Create the gMSA:
 New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$env:USERDNSDOMAIN" `
- -PrincipalsAllowedToRetrieveManagedPassword $gMSA_HostsGroup
+ -PrincipalsAllowedToRetrieveManagedPassword $gMSA_HostsGroup -KerberosEncryptionType $kerberosEncType
 ```
 
 
@@ -111,13 +130,15 @@ To refresh the Kerberos ticket, you can:
 
 ## Grant required directory service account permissions
 
+The directory service account requires specific read permissions on Active Directory objects so that the sensor can query directory data. The following include details the required permissions and how to grant them:
+
 [!INCLUDE [dsa-permissions](../includes/dsa-permissions.md)]
 
 ## Verify that the gMSA account has the required rights
 
 The Defender for Identity sensor service, *Azure Advanced Threat Protection Sensor*, runs as a *LocalService* that impersonates the DSA account. If the *Log on as a service* policy is configured but the permission wasn't granted to the gMSA account, the impersonation fails. In that case, you see the following health issue: **Directory services user credentials are incorrect.**
 
-If you see this alert, check to see if the *Log on as a service policy* is configured either in a Group Policy setting or in a Local Security Policy.
+If you see the health issue **Directory services user credentials are incorrect**, check to see if the *Log on as a service policy* is configured either in a Group Policy setting or in a Local Security Policy.
 
 ### Check the Local Security Policy
 
@@ -189,5 +210,3 @@ To connect your sensors with your Active Directory domains, configure Directory 
 ## Troubleshooting
 
 For more information, see [Sensor failed to retrieve the gMSA credentials](../troubleshooting-known-issues.md#sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials).
-
-

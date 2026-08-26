@@ -8,10 +8,10 @@ ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ms.collection: ms-security  
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 # Customer intent: As a security analyst, I need to choose the right tool for querying and analyzing data in Microsoft Sentinel.
 
@@ -19,7 +19,9 @@ ms.custom: msecd-doc-authoring-1014
 
 # Compare KQL jobs, summary rules, and search jobs in Microsoft Sentinel
 
-This article compares KQL jobs, summary rules, and search jobs in Microsoft Sentinel. These features let you query and analyze data in Microsoft Sentinel, and each serves different purposes and use cases.
+## Overview
+
+KQL jobs, summary rules, and search jobs let you query and analyze data in Microsoft Sentinel. Each serves different purposes and use cases.
 
 > [!NOTE]
 > KQL jobs require onboarding to the Microsoft Sentinel data lake. For more information, see [Onboard to the Microsoft Sentinel data lake](./sentinel-lake-onboarding.md).

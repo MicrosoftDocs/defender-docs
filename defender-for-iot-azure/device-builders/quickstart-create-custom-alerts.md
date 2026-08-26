@@ -1,5 +1,5 @@
 ---
-title: Create custom alerts
+title: Create Custom Alerts
 description: Understand, create, and assign custom device alerts for the Microsoft Defender for IoT security service.
 ms.topic: how-to
 ms.date: 06/12/2026
@@ -58,20 +58,20 @@ Use security groups to group your devices into logical categories. After creatin
 
 1. Select on **Custom alerts**.
 
-1. Choose a security group you wish to apply the customization to.
+1. Choose a security group to which you wish to apply the customization.
 
 1. Select **Add a custom alert**.
 
-1. Select a custom alert from the dropdown list.
+1. Select a custom alert from the drop-down list.
 
-1. Edit the required properties, select **OK**.
+1. Edit the required properties and select **OK**.
 
-1. Make sure to select **SAVE**. Without saving the new alert, the alert is deleted the next time you close IoT Hub.
+1. Make sure to select **Save**. Without saving the new alert, the alert is deleted the next time you close IoT Hub.
 
 ## Alerts available for customization
 
 Defender for IoT offers a large number of alerts, which can be customized according to your specific needs. Review the [customizable alert table](concept-customizable-security-alerts.md) for alert severity, data source, description, and our suggested remediation steps if and when each alert is received.
 
-## Next steps
+## Related content
 
 - [Deploy a security agent](how-to-deploy-agent.md)

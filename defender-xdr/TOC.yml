@@ -196,8 +196,8 @@
           items:
           - name: Overview
             href: advanced-hunting-security-copilot.md
-          - name: Use the Threat Hunting Agent
-            href: advanced-hunting-security-copilot-threat-hunting-agent.md
+          - name: Use the Threat Hunting Assistant
+            href: advanced-hunting-security-copilot-threat-hunting-assistant.md
           - name: Generate KQL queries
             href: advanced-hunting-security-copilot-query-assistant.md
         - name: Hunt over Microsoft Sentinel data
@@ -248,6 +248,20 @@
               href: advanced-hunting-fileprofile-function.md
             - name: SeenBy()
               href: advanced-hunting-seenby-function.md
+            - name: UEBA behavior insights
+              items:
+              - name: GetFirstSeenBehaviors()
+                href: advanced-hunting-getfirstseenbehaviors-function.md
+              - name: GetUncommonValueBehaviors()
+                href: advanced-hunting-getuncommonvaluebehaviors-function.md
+              - name: GetHighVolumeAnomalyBehaviors()
+                href: advanced-hunting-gethighvolumeanomalybehaviors-function.md
+              - name: GetAnomalousBehaviorsByKind()
+                href: advanced-hunting-getanomalousbehaviorsbykind-function.md
+              - name: GetAnomalousBehaviorsByValue()
+                href: advanced-hunting-getanomalousbehaviorsbyvalue-function.md
+              - name: GetAnomalousBehaviorsAbout()
+                href: advanced-hunting-getanomalousbehaviorsabout-function.md
           - name: Optimize & handle errors
             items:
             - name: Apply query best practices
@@ -456,8 +470,8 @@
             href: security-alert-triage-agent.md
           - name: Threat Intelligence Briefing Agent
             href: threat-intel-briefing-agent-defender.md
-          - name: Threat Hunting Agent
-            href: advanced-hunting-security-copilot-threat-hunting-agent.md
+          - name: Threat Hunting Assistant
+            href: advanced-hunting-security-copilot-threat-hunting-assistant.md
           - name: Dynamic Threat Detection Agent
             href: dynamic-threat-detection-agent.md
           - name: Security Analyst Agent

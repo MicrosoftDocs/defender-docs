@@ -4,13 +4,13 @@ description: Learn how to automate incident response with Microsoft Sentinel pla
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security analyst, I want to automate incident response using playbooks so that I can streamline and enhance the efficiency of threat management.
@@ -73,7 +73,7 @@ If, in an MSSP scenario, you want to [run a playbook in a customer tenant](../au
     1. In the search box, enter **Azure Security Insights**.
     1. Copy the **Object ID** field. You need to add this extra authorization to your existing Azure Lighthouse delegation.
 
-The **Microsoft Sentinel Automation Contributor** role has a fixed GUID of `f4c81013-99ee-4d62-a7ee-b3f1f648599a`. A sample Azure Lighthouse authorization would look like this in your parameters template:
+The **Microsoft Sentinel Automation Contributor** role has a fixed GUID of `f4c81013-99ee-4d62-a7ee-b3f1f648599a`. To assign the Azure Security Insights app this role in your Azure Lighthouse delegation, add the following authorization entry to your parameters template. Replace the `principalId` value with the Object ID you copied in the previous step:
 
 ```json
 {
@@ -244,8 +244,6 @@ The **Actions** column might also show one of the following statuses:
 View the run history for playbooks on an incident by selecting the **Runs** tab on the **Run playbook on incident** panel. It might take a few seconds for any just-completed run to appear in the list. Selecting a specific run opens the full run log in Logic Apps.
 
 ### Run a playbook manually on an entity
-
-Running a playbook manually on an entity isn't supported in the Defender portal.
 
 Select an entity in one of the following ways, depending on your originating context:
 

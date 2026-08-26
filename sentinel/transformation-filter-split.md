@@ -6,9 +6,9 @@ ms.author: edbaynash
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/20/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security engineer, I want to filter and split incoming data during ingestion so that I can reduce noise, optimize costs, and route data to the appropriate storage tier.
 
@@ -18,7 +18,7 @@ ms.custom: msecd-doc-authoring-1014
 
 As security data volumes continue to grow, organizations face the challenge of balancing cost-effective retention of telemetry used for AI, compliance, and investigations while ensuring that only necessary data is retained in high-performance storage tiers. Use filter and split data transformations in Microsoft Sentinel to address this challenge by modifying data at ingestion time to optimize your data retention strategy.
 
-This article describes how to configure filter and split data transformations without the need to manually create custom Data Collection Rule (DCR) configurations. By tailoring data ingestion, filter and split data transformations improve performance and reduce noise.
+This article describes how to configure filter and split data transformations without the need to manually create custom Data Collection Rule (DCR) configurations. When you tailor data ingestion by using filter and split data transformations, you can improve performance and reduce noise.
 
 By using data transformations, you can optimize your security data pipeline by controlling what data is stored and in which tier. Using filter and split transformations provides the following benefits:
 
@@ -42,17 +42,19 @@ Before you configure filter or split transformation rules, verify the following 
 
 - In the Microsoft Defender portal with unified role-based access control (RBAC), **Data (manage)** permissions under the **Data operations** permissions group.
 
-- For the Microsoft Sentinel workspace, you need the following permissions: 
-- **Log Analytics Contributor** role to provide:
-    - **Microsoft.OperationalInsights/workspaces/write** 
-    - **Microsoft.OperationalInsights/workspaces/tables/write** permissions to the Log Analytics workspace. 
- 
+- For the Microsoft Sentinel workspace, you need the **Log Analytics Contributor** role, which provides:
+  - **Microsoft.OperationalInsights/workspaces/write**
+  - **Microsoft.OperationalInsights/workspaces/tables/write** permissions to the Log Analytics workspace.
+
+- To configure a split transformation:
+    - [Onboard the workspace to the Microsoft Sentinel data lake](datalake/sentinel-lake-onboarding.md).
+    - Ensure that the table is currently in the Analytics tier.
 
 ### Supported tables
 
-Filter and split transformations have different table support requirements:
+Filter and split transformations have different table support requirements. Data Collection Rules (DCRs) determine how data is collected and transformed during ingestion.
 
-- **Filtering**: Supported on any table that supports Data Collection Rules (DCRs).
+- **Filtering**: Supported on any table that supports DCRs.
 - **Splitting**: Supported on any table that supports Analytics only ingestion, Data lake only ingestion, and Data Collection Rules (DCRs).
 
 To verify whether a connector's tables support DCRs, see [Find your Microsoft Sentinel data connector](data-connectors-reference.md).
@@ -89,7 +91,7 @@ Consider the following example of a split transformation:
 Your enterprise ingests millions of firewall log entries daily for threat detection and compliance. Your SOC team needs real-time access to recent logs for active investigations, but must also retain historical logs for regulatory audits. Create a split transformation rule to route real-time data to the Analytics tier and historical data to the Data lake tier.
 
 > [!IMPORTANT]
-> Transformations you create in Microsoft Sentinel may conflict with transformations created in Azure Monitor by using DCRs. For example, if a DCR is already applied to a table where all but a certain region is filtered in and a filter is applied that filters out only that region, no data is ingested. Ensure you understand and check the combined effects of having a DCR and a transformation applied to a table.
+> Transformations you create in Microsoft Sentinel may conflict with transformations created in Azure Monitor by using DCRs. For example, if a DCR is already applied to a table to ingest only data from Region A, and a filter transformation excludes Region A, no data is ingested. Ensure you understand and check the combined effects of having a DCR and a transformation applied to a table.
 
 ## Configure filter transformation rules
 
@@ -158,7 +160,7 @@ Alternatively, select the original table and configure both Analytics and Data l
 
 To manage existing rules, select the table and then select either **Split rule** or **Filter rule** depending on the rule type you want to manage.
 + To disable a rule, select the **Rule status** switch to turn off the rule, and then select **Save**.
-+ To delete a rule, select **Delete**. Deleting a transformation rule immediately stops data processing for that rule and can affect active ingestion.
++ To delete a rule, note that deleting a transformation rule immediately stops data processing for that rule and can affect active ingestion. To proceed, select **Delete**.
 
 Verify rules by running KQL queries to confirm that data is ingested correctly and routed to the correct tier.
 

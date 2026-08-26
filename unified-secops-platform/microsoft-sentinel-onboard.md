@@ -17,7 +17,7 @@ ai-usage: ai-assisted
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 06/15/2026
+ms.date: 08/07/2026
 ms.custom: msecd-doc-authoring-1014
 ---
 
@@ -35,7 +35,7 @@ For more information, see:
 
 ## Prerequisites
 
-Before you begin, review the feature documentation to understand the product changes and limitations.
+Before you begin, review the following feature documentation to understand the product changes and limitations.
 
 - [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
 - [Advanced hunting in the Microsoft Defender portal](/defender-xdr/advanced-hunting-microsoft-defender)
@@ -85,7 +85,7 @@ To unify Microsoft Defender XDR and Microsoft Sentinel security operations in th
 - Account for Defender XDR is a member of the same Microsoft Entra tenant with which Microsoft Sentinel is associated
 - Access to Microsoft Defender XDR in the Defender portal, as described in [Microsoft Defender XDR prerequisites](/microsoft-365/security/mtp/prerequisites#required-permissions)
 
-If applicable, complete these prerequisites:
+If applicable, complete these service-specific prerequisites for unified security operations:
 
 |Service  |Prerequisite  |
 |---------|---------|
@@ -116,7 +116,7 @@ Many Microsoft Sentinel features are built into the Defender portal. For the int
 | **Search**         | - [Search across long time spans in large datasets](/azure/sentinel/search-jobs?tabs=defender-portal)<br>- [Restore archived logs from search](/azure/sentinel/restore) |
 | **Threat management** | - [Visualize and monitor your data by using workbooks](/azure/sentinel/monitor-your-data?tabs=defender-portal)<br>- [Conduct end-to-end threat hunting with Hunts](/azure/sentinel/hunts)<br>- [Use hunting bookmarks for data investigations](/azure/sentinel/bookmarks)<br>- [Use hunting Livestream in Microsoft Sentinel to detect threat](/azure/sentinel/livestream)<br>- [Hunt for security threats with Jupyter notebooks](/azure/sentinel/notebooks-hunt)<br>- [Add indicators in bulk to Microsoft Sentinel threat intelligence from a CSV or JSON file](/azure/sentinel/indicators-bulk-file-import?tabs=defender-portal)<br>- [Work with threat indicators in Microsoft Sentinel](/azure/sentinel/work-with-threat-indicators?tabs=defender-portal)<br>- [Understand security coverage by the MITRE ATT&CK framework](/azure/sentinel/mitre-coverage) |
 | **Content management** | - [Discover and manage Microsoft Sentinel out-of-the-box content](/azure/sentinel/sentinel-solutions-deploy?tabs=defender-portal)<br>- [Microsoft Sentinel content hub catalog](/azure/sentinel/sentinel-solutions-catalog)<br>- [Deploy custom content from your repository](/azure/sentinel/ci-cd) |
-| **Configuration**  | - [Find your Microsoft Sentinel data connector](/azure/sentinel/data-connectors-reference)<br>- [Create custom analytics rules to detect threats](/azure/sentinel/create-analytics-rules?tabs=defender-portal)<br>- [Work with near-real-time (NRT) detection analytics rules in Microsoft Sentinel](/azure/sentinel/create-nrt-rules?tabs=defender-portal)<br>- [Create watchlists](/azure/sentinel/watchlists-create?tabs=defender-portal)<br>- [Manage watchlists in Microsoft Sentinel](/azure/sentinel/watchlists-manage)<br>- [Create automation rules](/azure/sentinel/create-manage-use-automation-rules)<br>- [Create and customize Microsoft Sentinel playbooks from content templates](/azure/sentinel/use-playbook-templates) |
+| **Configuration**  | - [Find your Microsoft Sentinel data connector](/azure/sentinel/data-connectors-reference)<br>- [Create custom analytics rules to detect threats](/azure/sentinel/create-analytics-rules?tabs=defender-portal)<br>- [Work with near-real-time (NRT) detection analytics rules in Microsoft Sentinel](/azure/sentinel/create-nrt-rules?tabs=defender-portal)<br>- [Create watchlists](/azure/sentinel/watchlists-create?tabs=defender-portal)<br>- [Manage watchlists in Microsoft Sentinel](/azure/sentinel/watchlists-manage)<br>- [Create automation rules](/azure/sentinel/create-manage-use-automation-rules)<br>- [Create and customize Microsoft Sentinel playbooks from content templates](/azure/sentinel/use-playbook-templates)<br>- [Generate playbooks by using AI](/azure/sentinel/automation/generate-playbook) |
 
 Find Microsoft Sentinel settings in the Defender portal under **System** > **Settings** > **Microsoft Sentinel**.
 
@@ -156,4 +156,3 @@ If you want to connect a different workspace, on the **Workspaces** page, select
 - [Automatic attack disruption in Microsoft Defender XDR](/defender-xdr/automatic-attack-disruption)
 - [Investigate incidents in Microsoft Defender portal](/defender-xdr/investigate-incidents)
 - [Optimize your security operations](/azure/sentinel/soc-optimization/soc-optimization-access?tabs=defender-portal)
-

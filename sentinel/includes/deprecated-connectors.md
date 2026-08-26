@@ -2,7 +2,7 @@
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: include
-ms.date: 07/27/2026
+ms.date: 08/04/2026
 
 # This file is auto-generated. Do not edit manually. Changes will be overwritten.
 ---
@@ -17,9 +17,9 @@ The [Auth0 Logs (using Azure Function)](https://auth0.com/access-management) dat
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`Auth0AM_CL`|No|No|
+|`Auth0AM_CL`|Yes|Yes|
 
-**Data collection rule support:** Not currently supported
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
 
 **Prerequisites:**
 
@@ -204,9 +204,9 @@ The GitHub audit log connector provides the capability to ingest GitHub logs int
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`GitHubAuditLogPolling_CL`|No|No|
+|`GitHubAuditLogPolling_CL`|Yes|Yes|
 
-**Data collection rule support:** Not currently supported
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
 
 **Prerequisites:**
 
@@ -357,9 +357,9 @@ The IONIX Security Logs data connector ingests logs from the IONIX system direct
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`CyberpionActionItems_CL`|No|No|
+|`CyberpionActionItems_CL`|Yes|Yes|
 
-**Data collection rule support:** Not currently supported
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
 
 **Prerequisites:**
 
@@ -446,8 +446,8 @@ Deprecated, use the 'ESI-Opt' dataconnectors. You can stream all Exchange Audit 
 |[`Event`](/azure/azure-monitor/reference/tables/Event)|Yes|No|
 |[`SecurityEvent`](/azure/azure-monitor/reference/tables/SecurityEvent)|Yes|Yes|
 |[`W3CIISLog`](/azure/azure-monitor/reference/tables/W3CIISLog)|Yes|No|
-|`MessageTrackingLog_CL`|No|No|
-|`ExchangeHttpProxy_CL`|No|No|
+|`MessageTrackingLog_CL`|Yes|Yes|
+|`ExchangeHttpProxy_CL`|Yes|Yes|
 
 **Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
 
@@ -1041,9 +1041,9 @@ The [Okta Single Sign-On (SSO) (using Azure Function)](https://www.okta.com/prod
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`Okta_CL`|No|No|
+|`Okta_CL`|Yes|Yes|
 
-**Data collection rule support:** Not currently supported
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
 
 **Prerequisites:**
 
@@ -1128,9 +1128,9 @@ The [SentinelOne](https://www.sentinelone.com/) data connector provides the capa
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`SentinelOne_CL`|No|No|
+|`SentinelOne_CL`|Yes|Yes|
 
-**Data collection rule support:** Not currently supported
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
 
 **Prerequisites:**
 
@@ -1243,9 +1243,9 @@ The [Sophos Endpoint Protection](https://www.sophos.com/en-us/products/endpoint-
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`SophosEP_CL`|No|No|
+|`SophosEP_CL`|Yes|Yes|
 
-**Data collection rule support:** Not currently supported
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
 
 **Prerequisites:**
 
@@ -1544,9 +1544,9 @@ The Darktrace REST API connector pushes real-time events from Darktrace to Micro
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`darktrace_model_alerts_CL`|No|No|
+|`darktrace_model_alerts_CL`|Yes|Yes|
 
-**Data collection rule support:** Not currently supported
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
 
 **Prerequisites:**
 
@@ -1589,9 +1589,9 @@ This is a legacy connector and is no longer recommended. Please use the **Island
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`Island_Admin_CL`|No|No|
+|`Island_Admin_CL`|Yes|Yes|
 
-**Data collection rule support:** Not currently supported
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
 
 **Prerequisites:**
 
@@ -1619,9 +1619,9 @@ This is a legacy connector and is no longer recommended. Please use the **Island
 
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
-|`Island_User_CL`|No|No|
+|`Island_User_CL`|Yes|Yes|
 
-**Data collection rule support:** Not currently supported
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
 
 **Prerequisites:**
 

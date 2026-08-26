@@ -1,15 +1,15 @@
 ---
 title: Investigate CIS benchmark recommendation
 description: Investigate CIS benchmark recommendation results in Microsoft Defender for IoT using basic portal analysis and advanced Log Analytics queries for OS baseline findings.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
 # Investigate OS baseline (based on CIS benchmark) recommendation
 
-Microsoft Defender for IoT evaluates OS configurations against CIS benchmarks and raises recommendations when a device doesn't meet baseline security checks. This article walks you through two investigation approaches: a basic investigation using the Defender for IoT portal, and an advanced investigation that uses Azure Log Analytics to query OS baseline test results, identify failed checks, and pinpoint affected devices across your fleet. The advanced investigation requires a Log Analytics workspace connected to Defender for IoT. For details, see the [prerequisites](#advanced-os-baseline-security-recommendation-investigation) in the advanced investigation section.
+Microsoft Defender for IoT evaluates OS configurations against CIS benchmarks and raises recommendations when a device doesn't meet baseline security checks. This article walks you through two investigation approaches: a basic investigation using the Defender for IoT portal, and an advanced investigation that uses Azure Log Analytics to query OS baseline test results, identify failed checks, and pinpoint affected devices across your fleet. The advanced investigation requires a Log Analytics workspace connected to Defender for IoT. For details, see [Prerequisites for advanced OS baseline investigation](#advanced-os-baseline-security-recommendation-investigation).
 
 ## Basic OS baseline security recommendation investigation
 

@@ -2,7 +2,7 @@
 title: Transition from grouped to individual recommendations in Defender for Cloud
 description: Learn about the transition from grouped to individual recommendations in Microsoft Defender for Cloud, including operational impacts and best practices.
 ms.topic: best-practice
-ms.date: 06/29/2026
+ms.date: 08/25/2026
 ms.custom: sfi-image-nochange
 #customer intent: As a security administrator, I want to understand the transition from grouped to individual recommendations so that I can adapt my workflows and maintain effective security posture management.
 ai-usage: ai-assisted
@@ -12,24 +12,15 @@ ai-usage: ai-assisted
 
 ## Overview
 
-Defender for Cloud is evolving its posture management model. During this transition, customers may see **two recommendation models side by side**:
+Microsoft Defender for Cloud has completed the transition from grouped recommendations, also known as sub-assessments, to individual recommendations.
 
-- **Grouped recommendations (also known as sub-assessment)**
-- **Individual recommendations**
+Individual recommendations provide a more granular view of security findings. Instead of aggregating multiple findings under a grouped recommendation, each finding is represented as an individual recommendation that can be investigated, prioritized, and remediated separately.
 
-This change improves the way grouped recommendations are presented, prioritized, and managed.
+Grouped recommendations were deprecated on July 31, 2026. Customers should use individual recommendations as the primary model for investigation and remediation.
 
-Operationally, customers should expect workflow adjustments while both models are available.
+This article explains the operational impact of the transition and how to update existing workflows, queries, governance rules, exemptions, and continuous export configurations.
 
-> [!IMPORTANT]
-> Grouped recommendations are deprecated on **July 31, 2026**. We recommend transitioning to individual recommendations before that date.
-
-This article explains what is changing, and outlines the recommended best practices to operate effectively during the transition period.
-
-> [!TIP]
-> The transition is more manageable than it might seem. The key shift is moving from per-recommendation management to **per-category** management. Once you map your existing workflows to the right recommendation category, the path forward is clear.
->
-> If you need to update governance rules, exemptions, continuous export configurations, or existing queries, use the [recommendation transition reference](#recommendation-transition-reference) at the end of this article. It maps each grouped recommendation to its recommendation ID and recommendation category, giving you everything you need to update your configurations and scripts in one place.
+If you need to update existing configurations or queries, use the [recommendation transition reference](#recommendation-transition-reference) at the end of this article. It maps each deprecated grouped recommendation to its recommendation ID and current recommendation category or replacement recommendation.
 
 ## Grouped vs. individual recommendations
 
@@ -37,11 +28,11 @@ The following table summarizes the behavioral and operational differences betwee
 
 | Aspect | Grouped recommendations | Individual recommendations |
 |------|----------------------------------|--------------------------------------|
-| Availability | Available in the Azure portal | Available in Azure and Defender portals |
-| Structure | Aggregates multiple findings under a single parent recommendation (for example, multiple vulnerabilities on virtual machine rolled up into one recommendation) | Flat list where each finding appears as a separate recommendation |
-| Management scope | Managed, exempted, and tracked at the grouped recommendation level | Managed and tracked per finding ([governance](governance-rules.md)), exempted, and export |
-| Prioritization behavior | Prioritization is applied at the grouped level | Prioritization is applied at the individual finding level |
-| Lifecycle status | Set for deprecation during the transition period | Represents the posture model that Defender for Cloud is moving toward |
+| Availability | Deprecated | Available in Azure and Defender portals |
+| Structure | Aggregated multiple findings under a single parent recommendation (for example, multiple vulnerabilities on a virtual machine rolled up into one recommendation) | Flat list where each finding appears as a separate recommendation |
+| Management scope | Was managed, exempted, and tracked at the grouped recommendation level | Managed and tracked per finding, with governance, exemptions, and export applied at the appropriate scope |
+| Prioritization behavior | Prioritization was applied at the grouped level | Prioritization is applied at the individual finding level |
+| Lifecycle status | Deprecated on July 31, 2026 | Current Defender for Cloud posture model |
 
 **Modeling changes examples**:
 
@@ -51,13 +42,11 @@ The following table summarizes the behavioral and operational differences betwee
 
 ---
 
----
-
 ## Adopting individual recommendations
 
-**Best practice:** Start using individual recommendations as your primary model for investigation and remediation. Grouped recommendations are deprecated on **July 31, 2026**.
+**Best practice:** Use individual recommendations as your primary model for investigation and remediation.
 
-The new individual recommendations are now the best‑practice posture model in Defender for Cloud. They provide clear benefits:
+Individual recommendations are the current posture model in Defender for Cloud. They provide clear benefits:
 
 - Granular & accurate prioritization – Each finding is scored individually, helping you focus on what reduces risk fastest.
 
@@ -67,11 +56,11 @@ The new individual recommendations are now the best‑practice posture model in 
 
 - Future‑proof – This is the model that will continue to evolve and be fully supported.
 
-### What is changing
+### What changed
 
-- Each finding appears as a separate recommendation
-- Recommendation volume may increase
-- Prioritization becomes risk-based at the individual finding level
+- Each finding appears as a separate recommendation.
+- Recommendation volume can be higher because findings are represented individually.
+- Prioritization is applied at the individual finding level.
 
 ### Where to start
 
@@ -131,6 +120,16 @@ securityresources
 | project DisplayName, Severity, DetectedVersions, FixedVersion, CveId
 ```
 
+> [!NOTE]
+> The `CvesDetails` object continues to provide the `CveId` for each vulnerability. To retrieve additional CVE details, query the `microsoft.security/cvedetails` resource type:
+>
+> ```kusto
+> securityresources
+> | where type =~ "microsoft.security/cvedetails"
+> ```
+>
+> Run queries against the `microsoft.security/cvedetails` resource type at the tenant scope. Queries run at the subscription scope don't return data from this resource type. As a result, fields retrieved from `microsoft.security/cvedetails`, such as `LatestPublishedDate`, `LastModifiedDate`, and `CVSSScore`, aren't returned at the subscription scope.
+
 Key field changes between the two schemas:
 
 | Old field | New field | Note |
@@ -139,24 +138,6 @@ Key field changes between the two schemas:
 | `properties.additionalData.cve` | `properties.additionalData.CvesDetails` | Use `parse_json()` to expand |
 | `properties.additionalData.softwareVersion` | `properties.additionalData.DetectedSoftwareVersions` | May contain multiple values |
 | `properties.additionalData.recommendedVersion` | `properties.additionalData.FixedVersion` | May be empty if no fix is available |
-
----
-
-## Managing the side-by-side experience
-
-During the transition, both recommendation models may appear simultaneously.
-
-**Best practice:** Actively control which model your teams work with to reduce confusion and duplicate effort.
-
-### Keeping views manageable
-
-- Use recommendation tags to filter your experience:
-  - **New version** for individual recommendations
-  - **Set for deprecation** for grouped recommendations
-- Filter views based on the model your team is currently using
-- Avoid leaving both models unfiltered unless explicitly required
-
-:::image type="content" source="media/transition-grouped-individual-recommendations/recommendations-tags.png" alt-text="Screenshot of recommendation tags interface showing options for 'New version' and 'Set for deprecation' to filter recommendations." lightbox="media/transition-grouped-individual-recommendations/recommendations-tags.png":::
 
 ---
 
@@ -205,7 +186,7 @@ Choose the aggregation that matches the task:
 
 ## How to manage the new individual recommendations
 
-With the transition to **individual recommendations**, all Microsoft Defender for Cloud experiences continue to support **Governance rules**, **Continuous export**, and **[Exemptions](transition-disable-rules-exemptions.md)**. The main change is how these actions are scoped.
+With the transition to **individual recommendations** complete, Microsoft Defender for Cloud continues to support **Governance rules**, **Continuous export**, and **[Exemptions](transition-disable-rules-exemptions.md)**. The main change is how these actions are scoped.
 
 Individual recommendations are created per software update, secret, or issue type. Because they are generated according to your resources' current state, actions are no longer applied to a single static recommendation. Instead, management actions are now applied at the **recommendation category** level.
 
@@ -215,22 +196,92 @@ The updated management experience is available in **Environment settings**, unde
 
 :::image type="content" source="media/transition-grouped-individual-recommendations/recommendation-categories.png" alt-text="Screenshot of available recommendation categories." lightbox="media/transition-grouped-individual-recommendations/recommendation-categories.png":::
 
+## Classic secure score behavior after the transition
+
+After the transition from grouped recommendations to individual recommendations, some classic secure score controls in the Azure portal can be affected by findings that are now represented through the individual recommendations model.
+
+In some cases, a resource might appear as unhealthy in a secure score control even though the previous grouped recommendation is no longer visible under that control.
+
+When this occurs, the applicable resources have associated security findings that contribute to the posture signal for that area. To investigate the underlying findings, switch to **Risk view**, which is the recommended view for reviewing and prioritizing findings.
+
+Risk view provides the current, granular recommendation experience and helps you identify the specific findings that should be reviewed or remediated.
+
+This behavior is expected as part of the transition to individual recommendations. The classic secure score in the Azure portal was designed to remain functionally stable through this transition while customers move to the individual recommendations model for investigation and remediation.
+
+### Remediate vulnerabilities
+
+| Deprecated grouped recommendation | Where to review now |
+|---|---|
+| Machines should have vulnerability findings resolved<br>Deprecated assessment ID: `1195afff-c881-495e-9bc5-1486211ae03f` | Open **Recommendations** and filter by recommendation category `SoftwareUpdate`. |
+| EC2 instances should have vulnerability findings resolved<br>Deprecated assessment ID: `77a4a140-e051-481a-84cc-d4bf2109bd65` | Open **Recommendations** and filter by recommendation category `SoftwareUpdate`. |
+| GCP compute instances should have vulnerability findings resolved<br>Deprecated assessment ID: `0a03fa35-e381-4e2f-ace6-2b9913db3381` | Open **Recommendations** and filter by recommendation category `SoftwareUpdate`. |
+| AKS nodes should have vulnerability findings resolved<br>Deprecated assessment ID: `24a15fbd-cfe4-4dff-b2be-1c367a6b2031` | Open **Recommendations** and filter by recommendation category `ServiceUpgrade`. |
+| Azure registry container images should have vulnerabilities resolved<br>Deprecated assessment ID: `c0b7cfc6-3172-465a-b378-53c7ff2cc0d5` | Open **Recommendations** and filter by recommendation category `SoftwareUpdate`. |
+| Container images in Azure registry should have vulnerability findings resolved<br>Deprecated assessment ID: `33422d8f-ab1e-42be-bc9a-38685bb567b9` | Open **Recommendations** and filter by recommendation category `SoftwareUpdate`. |
+| Azure running container images should have vulnerabilities resolved<br>Deprecated assessment ID: `c609cf0f-71ab-41e9-a3c6-9a1f7fe1b8d5` | Open **Recommendations** and filter by recommendation category `SoftwareUpdate`. |
+| AWS running container images should have vulnerability findings resolved<br>Deprecated assessment ID: `682b2595-d045-4cff-b5aa-46624eb2dd8f` | Open **Recommendations** and filter by recommendation category `SoftwareUpdate`. |
+| GCP running container images should have vulnerability findings resolved<br>Deprecated assessment ID: `e538731a-80c8-4317-a119-13075e002516` | Open **Recommendations** and filter by recommendation category `SoftwareUpdate`. |
+| GitHub repositories should have dependency vulnerability scanning findings resolved<br>Deprecated assessment ID: `945f7b1c-8def-4ab3-a44d-1416060104b3` | Open **Recommendations** and filter by recommendation category `SoftwareUpdate`. |
+| Azure DevOps repositories should have dependency vulnerability scanning findings resolved<br>Deprecated assessment ID: `2ea72208-8558-4011-8dcd-d93375a4003d` | Open **Recommendations** and filter by recommendation category `SoftwareUpdate`. |
+| GitLab projects should have dependency vulnerability scanning findings resolved<br>Deprecated assessment ID: `1bc53aae-c92e-406b-9693-d46caf3934fa` | Open **Recommendations** and filter by recommendation category `SoftwareUpdate`. |
+| GitHub repositories should have Shai-Hulud 2.0 compromised packages findings resolved<br>Deprecated assessment ID: `14c00325-f0ee-4c12-bbaf-4059647d919c` | Open **Recommendations** and filter by recommendation category `SoftwareUpdate`. |
+| Azure DevOps repositories should have Shai-Hulud 2.0 compromised packages findings resolved<br>Deprecated assessment ID: `70f5bbd7-c8bd-4b6f-a877-fa46b2719606` | Open **Recommendations** and filter by recommendation category `SoftwareUpdate`. |
+| GitHub repositories should have code scanning findings resolved<br>Deprecated assessment ID: `18aa4e75-776a-4296-97f0-fe1cf10d679c` | Open **Recommendations** and filter by recommendation category `CodeVulnerabilities`. |
+| Azure DevOps repositories should have code scanning findings resolved<br>Deprecated assessment ID: `99232bb2-9b21-4bbb-8e3c-763673b9923d` | Open **Recommendations** and filter by recommendation category `CodeVulnerabilities`. |
+| GitLab projects should have code scanning findings resolved<br>Deprecated assessment ID: `cd3e4ff3-b1bc-4a42-b10d-e2f9f99e2991` | Open **Recommendations** and filter by recommendation category `CodeVulnerabilities`. |
+
+### Enable access management
+
+The following recommendations were replaced by single new recommendations. Use the new assessment key for future governance, exemption, and export configurations.
+
+| Deprecated grouped recommendation | Where to review now |
+|---|---|
+| Guest accounts with read permissions on Azure resources should be removed<br>Deprecated assessment ID: `fde1c0c9-0fd2-4ecc-87b5-98956cbc1095` | Open **Recommendations** and search for replacement assessment ID `422107c6-5b9a-46a6-bb1d-26ef1cc52d65`. |
+| Guest accounts with write permissions on Azure resources should be removed<br>Deprecated assessment ID: `0354476c-a12a-4fcc-a79d-f0ab7ffffdbb` | Open **Recommendations** and search for replacement assessment ID `009678ce-adce-4c94-9cc8-cfc2bd0c6a06`. |
+| Guest accounts with owner permissions on Azure resources should be removed<br>Deprecated assessment ID: `20606e75-05c4-48c0-9d97-add6daa2109a` | Open **Recommendations** and search for replacement assessment ID `f2864482-b329-4310-8c06-3cf74fe880c5`. |
+| Disabled accounts with read and write permissions on Azure resources should be removed<br>Deprecated assessment ID: `1ff0b4c9-ed56-4de6-be9c-d7ab39645926` | Open **Recommendations** and search for replacement assessment ID `9b4f4dd4-24fc-42ba-9978-2a1cf575d36d`. |
+| Disabled accounts with owner permissions on Azure resources should be removed<br>Deprecated assessment ID: `050ac097-3dda-4d24-ab6d-82568e7a50cf` | Open **Recommendations** and search for replacement assessment ID `a4899b81-b689-4e0d-aa29-45983ab8b7fc`. |
+
+### Implement security configuration best practices
+
+| Deprecated grouped recommendation | Where to review now |
+|---|---|
+| Vulnerabilities in security configuration on your Windows machines should be remediated (powered by Guest Configuration)<br>Deprecated assessment ID: `8c3d9ad0-3639-4686-9cd2-2b2ab2609bda` | Open **Recommendations** and filter by recommendation category `HostMisconfigurations`. |
+| Vulnerabilities in security configuration on your Linux machines should be remediated (powered by Guest Configuration)<br>Deprecated assessment ID: `1f655fb7-63ca-4980-91a3-56dbc2b715c6` | Open **Recommendations** and filter by recommendation category `HostMisconfigurations`. |
+| SQL databases should have vulnerability findings resolved<br>Deprecated assessment ID: `82e20e14-edc5-4373-bfc4-f13121257c37` | Open **Recommendations** and review the SQL vulnerability assessment individual recommendations. |
+| SQL servers on machines should have vulnerability findings resolved<br>Deprecated assessment ID: `f97aa83c-9b63-4f9a-99f6-b22c4398f936` | Open **Recommendations** and review the SQL vulnerability assessment individual recommendations. |
+| EDR configuration issues should be resolved on virtual machines<br>Deprecated assessment ID: `dc5357d0-3858-4d17-a1a3-072840bff5be` | Open **Recommendations** and review replacement assessment IDs `d44de051-1862-48f8-8476-192aee854699`, `aafa7d27-01ae-40c6-a56c-1d0ef04b1d71`, and `506d18a1-d571-4341-aad5-a7d363c5bbd4`. |
+| EDR configuration issues should be resolved on EC2s<br>Deprecated assessment ID: `695abd03-82bd-4d7f-a94c-140e8a17666c` | Open **Recommendations** and review replacement assessment IDs `d44de051-1862-48f8-8476-192aee854699`, `aafa7d27-01ae-40c6-a56c-1d0ef04b1d71`, and `506d18a1-d571-4341-aad5-a7d363c5bbd4`. |
+| EDR configuration issues should be resolved on GCP Virtual machines<br>Deprecated assessment ID: `f36a15fb-61a6-428c-b719-6319538ecfbc` | Open **Recommendations** and review replacement assessment IDs `d44de051-1862-48f8-8476-192aee854699`, `aafa7d27-01ae-40c6-a56c-1d0ef04b1d71`, and `506d18a1-d571-4341-aad5-a7d363c5bbd4`. |
+| GitHub repositories should have API security testing findings resolved<br>Deprecated assessment ID: `7ad00833-a0f0-47b9-b377-5665bd5d9074` | Open **Recommendations** and filter by recommendation category `ApiVulnerabilities`. |
+| Azure DevOps repositories should have API security testing findings resolved<br>Deprecated assessment ID: `d42301a5-4d23-4457-97c8-f2f2e9eb979e` | Open **Recommendations** and filter by recommendation category `ApiVulnerabilities`. |
+| Azure DevOps security posture management findings should be resolved<br>Deprecated assessment ID: `7b123b34-1f78-4902-abb6-3b813abe9866` | Open **Recommendations** and filter by recommendation category `CodeVulnerabilities`. |
+| GitHub repositories should have infrastructure as code scanning findings resolved<br>Deprecated assessment ID: `d9be0ff8-3eb0-4348-82f6-c1e735f85983` | Open **Recommendations** and filter by recommendation category `IacVulnerabilities`. |
+| Azure DevOps repositories should have infrastructure as code scanning findings resolved<br>Deprecated assessment ID: `6588c4d4-fbbb-4fb8-be45-7c2de7dc1b3b` | Open **Recommendations** and filter by recommendation category `IacVulnerabilities`. |
+| GitLab projects should have infrastructure as code scanning findings resolved<br>Deprecated assessment ID: `ec1bface-60ff-46b6-b1dc-67171a4882d5` | Open **Recommendations** and filter by recommendation category `IacVulnerabilities`. |
+| GitHub security posture management findings should be resolved<br>Deprecated assessment ID: `fd104c01-29d0-428d-bb62-2c936addd2cf` | Open **Recommendations** and review the GitHub posture recommendations across the mapped Defender for DevOps categories. |
+
+### Apply system updates
+
+| Deprecated grouped recommendation | Where to review now |
+|---|---|
+| System updates should be installed on your machines (powered by Azure Update Manager)<br>Deprecated assessment ID: `e1145ab1-eb4f-43d8-911b-36ddf771d13f` | Open **Recommendations** and filter by recommendation category `SystemUpdate`. |
+
+If one of these secure score controls shows unhealthy resources but the underlying grouped recommendation isn't visible, review the applicable findings in **Risk view**. The findings are represented through the current individual recommendations model rather than the deprecated grouped recommendation experience.
+
 ## What you should do now
 
-> [!IMPORTANT]
-> Grouped recommendations are deprecated on **July 31, 2026**. Complete your transition before this date to avoid disruption to your workflows.
-
-- Adopt **individual recommendations** for investigation and remediation
-- Define a clear internal operating model for the transition period
-- Use filters and tags to limit views to the model your team is actively using
-- Prioritize **Critical** and **High** risk individual recommendations in daily operations
-- Use aggregation views to scale remediation and investigation efficiently
-- Review your existing scripts and queries that target sub-assessments and update them using the [recommendation transition reference](#recommendation-transition-reference) and query examples in this article
-- Completing your [migration from disable rules to exemptions](transition-disable-rules-exemptions.md)
+- Use individual recommendations as the primary model for investigation and remediation.
+- Use **Risk view** to identify and prioritize findings associated with unhealthy resources.
+- Update Azure Resource Graph queries, governance rules, continuous export configurations, and exemption workflows that relied on grouped recommendations or sub-assessments.
+- Use recommendation categories, such as `SoftwareUpdate`, `SystemUpdate`, `HostMisconfigurations`, and `ExposedSecrets`, where applicable.
+- Expect recommendation volume to increase in some areas because individual findings provide more actionable detail. This increase doesn't necessarily indicate that risk increased.
+- Use the [recommendation transition reference](#recommendation-transition-reference) to identify the current recommendation category or replacement recommendation.
+- Complete your [migration from disable rules to exemptions](transition-disable-rules-exemptions.md).
 
 ## Recommendation transition reference
 
-Use this reference to map each grouped recommendation to its recommendation ID and recommendation category. Recommendations are organized by product. This is your reference for:
+Use this reference to map each deprecated grouped recommendation to its recommendation ID and current recommendation category or replacement recommendation. Recommendations are organized by product. This is your reference for:
 
 - **Updating governance rules, exemption rules, and continuous export** — these now target a recommendation category instead of a specific recommendation key. Find the category for each recommendation you currently manage, then update your configurations to use that category.
 - **Migrating queries** — replace grouped recommendation IDs with the `microsoft.security/assessments` resource type and filter by `properties.metadata.recommendationCategory`. The recommendation ID column helps you verify you're targeting the right recommendations.
@@ -240,14 +291,14 @@ Use this reference to map each grouped recommendation to its recommendation ID a
 >
 > Your queries will also return more results because **recommendation categories span multiple workloads**. In the grouped model, a query was scoped to a specific recommendation ID and resource type, for example, Azure VMs only. In the new model, querying the **SoftwareUpdate** recommendation category returns findings across Azure VMs, EC2 instances, AKS nodes, GCP instances, and containers combined. Adjust your filters accordingly.
 
-Each grouped recommendation transitions to one of two end-states:
+Each grouped recommendation transitioned to one of two end states:
 
 - **Replaced by individual recommendations** — The grouped recommendation is replaced by individual recommendations generated dynamically per finding. Update governance rules, exemptions, and continuous export to target the **Recommendation category** instead of the recommendation ID.
 - **Replaced by a single new recommendation** — The grouped recommendation is replaced by a specific new individual recommendation with a fixed recommendation ID. The recommendation category shows as **Unknown**. Update your configurations to use the **New recommendation ID** directly — don't use the category filter for these recommendations.
 
 ### Microsoft Defender for Servers
 
-The following grouped recommendations transition under Microsoft Defender for Servers.
+The following grouped recommendations transitioned under Microsoft Defender for Servers.
 
 **How to review findings**: [Remediate machine vulnerabilities](remediate-vulnerability-findings-vm.md)
 
@@ -283,7 +334,7 @@ The following grouped recommendations transition under Microsoft Defender for Se
 
 ### Microsoft Defender for Databases
 
-The following grouped SQL recommendations transition under Microsoft Defender for Databases. After the transition, each SQL vulnerability assessment rule appears as an individual recommendation reported on the database resource instead of the server resource. To analyze findings for an Azure SQL database, open the resource in the Azure portal, go to **Microsoft Defender for Cloud**, and select the specific finding to see the rule description, severity, and remediation guidance. For SQL servers on machines, open the **Recommendations** page in Defender for Cloud, find the relevant individual recommendation, and follow the same remediation steps.
+The following grouped SQL recommendations transitioned under Microsoft Defender for Databases. After the transition, each SQL vulnerability assessment rule appears as an individual recommendation reported on the database resource instead of the server resource. To analyze findings for an Azure SQL database, open the resource in the Azure portal, go to **Microsoft Defender for Cloud**, and select the specific finding to see the rule description, severity, and remediation guidance. For SQL servers on machines, open the **Recommendations** page in Defender for Cloud, find the relevant individual recommendation, and follow the same remediation steps.
 
 Learn about [remediation approaches](sql-azure-vulnerability-assessment-find.md#ways-to-remediate-a-finding) and [how to review findings](sql-azure-vulnerability-assessment-find.md#review-and-remediate-vulnerabilities-azure-portal).
 
@@ -296,7 +347,7 @@ Learn about [remediation approaches](sql-azure-vulnerability-assessment-find.md#
 
 ### Microsoft Defender for Containers
 
-The following grouped recommendations transition under Microsoft Defender for Containers. After the transition, container vulnerability findings appear as individual recommendations, with each vulnerable image layer or package surfaced as a separate finding.
+The following grouped recommendations transitioned under Microsoft Defender for Containers. After the transition, container vulnerability findings appear as individual recommendations, with each vulnerable image layer or package surfaced as a separate finding.
 
 **How to review findings**: [View and remediate vulnerabilities for containers running on Kubernetes clusters](view-and-remediate-vulnerabilities-containers.md) | [View and remediate vulnerability assessment findings for registry images](view-and-remediate-vulnerability-registry-images.md)
 
@@ -313,7 +364,7 @@ The following grouped recommendations transition under Microsoft Defender for Co
 
 ### Microsoft Defender for DevOps
 
-The following grouped recommendations transition under Microsoft Defender for DevOps. After the transition, individual findings for code scanning, dependency vulnerabilities, secrets, infrastructure as code issues, and API security appear in the relevant recommendation categories.
+The following grouped recommendations transitioned under Microsoft Defender for DevOps. After the transition, individual findings for code scanning, dependency vulnerabilities, secrets, infrastructure as code issues, and API security appear in the relevant recommendation categories.
 
 **How to review findings**: In Defender for Cloud, go to **Recommendations** and filter by the relevant category: **ApiVulnerabilities**, **SoftwareUpdate**, **CodeVulnerabilities**, **IacVulnerabilities**, or **ExposedSecrets**. Select any individual recommendation to view the affected repository, finding details, and remediation steps.
 

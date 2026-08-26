@@ -1,6 +1,6 @@
 ### YamlMime:FAQ
 metadata:
-  ms.date: 06/23/2026
+  ms.date: 07/24/2026
   title: Anti-spam protection FAQ
   f1.keywords:
     - NOCSH
@@ -203,7 +203,7 @@ sections:
 
           ### How to investigate a false positive
 
-          1. **Examine the message headers**: Look at the `X-Forefront-Antispam-Report` header for the spam confidence level (SCL), bulk complaint level (BCL), and the filtering verdict. Check the `Authentication-Results` header for SPF, DKIM, and DMARC results.
+          1. **Examine the message headers**: Look at the `X-Forefront-Antispam-Report` header for the bulk complaint level (BCL) and the filtering verdict. Check the `Authentication-Results` header for SPF, DKIM, and DMARC results.
 
              For more information about interpreting anti-spam headers, see [Anti-spam message headers](message-headers-eop-mdo.md).
 
@@ -226,18 +226,18 @@ sections:
 
           1. **Create a Tenant Allow/Block List entry**: Temporarily allow the sender, domain, or URL while Microsoft reviews the submission. For more information, see [Tenant Allow/Block List](tenant-allow-block-list-about.md).
 
-          1. **Use mail flow rules** (with caution): Create a mail flow rule to set the SCL to -1 for messages from the specific sender, but only if you're confident the sender is legitimate. For more information, see [Use mail flow rules to set the SCL in messages](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
+          1. **Use mail flow rules** (with caution): Create a mail flow rule to bypass spam filtering for messages from the specific sender, but only if you're confident the sender is legitimate. For more information, see [Use mail flow rules to set the SCL in messages](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
 
           For a complete step-by-step guide, see [How to handle legitimate emails getting blocked (false positives)](step-by-step-guides/how-to-handle-false-positives-in-microsoft-defender-for-office-365.md).
 
       - question: |
           What's the difference between spam and high-confidence spam?
         answer: |
-          Microsoft 365 spam filtering assigns a [spam confidence level (SCL)](anti-spam-spam-confidence-level-scl-about.md) to every inbound message. Messages with SCL 5 or 6 are classified as **Spam**, while messages with SCL 7, 8, or 9 are classified as **High confidence spam**. For a complete breakdown of SCL values and their default actions, see [Spam confidence level (SCL)](anti-spam-spam-confidence-level-scl-about.md).
+          Microsoft 365 spam filtering identifies inbound messages as **Spam** or **High confidence spam** based on message categorization and other signals.
 
           ### Key differences
 
-          ||Spam (SCL 5-6)|High confidence spam (SCL 7-9)|
+          ||Spam|High confidence spam|
           |---|---|---|
           |**Confidence level**|Moderate probability of being spam.|High probability of being spam.|
           |**Default action (default policy)**|Move to Junk Email folder.|Move to Junk Email folder.|
@@ -318,24 +318,16 @@ sections:
 
           Use the following workflow to diagnose and fix bulk email routing issues:
 
-          ```text
-          Is the email going to Junk Email folder?
-          │
-          ├─ Yes → Check message headers for BCL value
-          │        │
-          │        ├─ BCL ≥ threshold → Message classified as Bulk
-          │        │   │
-          │        │   ├─ Raise BCL threshold in anti-spam policy (Option A)
-          │        │   ├─ Change Bulk action to No action (Option B)
-          │        │   └─ Allow specific sender (Option C)
-          │        │
-          │        └─ BCL < threshold → Not a bulk issue; check SCL value
-          │            │
-          │            ├─ SCL 5-6 → Classified as Spam (see "Why was my legitimate email flagged as spam?")
-          │            └─ SCL 7-9 → Classified as High confidence spam
-          │
-          └─ No → Email is delivering correctly
-          ```
+          - **Is the email going to the Junk Email folder?**
+            - **Yes**: Check the message headers for the BCL value.
+              - **BCL is greater than the BCL threshold**: The message is classified as bulk. To fix it, do one of the following actions:
+                - Raise the BCL threshold in the anti-spam policy ([Option A](#option-a-adjust-the-bcl-threshold-recommended-for-organization-wide-tuning)).
+                - Change the Bulk action to No action ([Option B](#option-b-change-the-bulk-email-action)).
+                - Allow the specific sender ([Option C](#option-c-allow-specific-bulk-senders)).
+              - **BCL is less than the BCL threshold**: Not a bulk issue. Check the spam filtering verdict:
+                - Identified as Spam: See [Why was my legitimate email flagged as spam?](#why-was-my-legitimate-email-flagged-as-spam-).
+                - Identified as High confidence spam.
+            - **No**: The email is delivering correctly.
 
           ### Related bulk email resources
 

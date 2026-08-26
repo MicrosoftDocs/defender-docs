@@ -809,6 +809,8 @@
           href: manage-tamper-protection-individual-device.md
         - name: FAQs on tamper protection
           href: faqs-on-tamper-protection.yml
+      - name: Controlled configuration
+        href: secure-controlled-configuration.md
       - name: Turn on block at first sight
         href: configure-block-at-first-sight-microsoft-defender-antivirus.md
       - name: Antimalware Scan Interface (AMSI) integration

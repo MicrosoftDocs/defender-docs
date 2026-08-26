@@ -9,7 +9,7 @@ ms.collection:
   - tier2
 description: Identify why a phishing message was delivered in Microsoft 365 and learn how to adjust anti-phishing settings to help prevent similar messages in the future.
 ms.service: defender-office-365
-ms.date: 07/03/2026
+ms.date: 07/24/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -42,7 +42,7 @@ Reporting phishing messages is helpful in tuning the filters that are used to pr
 
 You can examine the headers of the phishing message to see whether any of your organization's settings allowed similar phishing messages to be delivered. In other words, examining the message headers can help you identify settings in your organization that allowed this phishing message or similar phishing messages to be delivered.
 
-Specifically, check the Spam Filtering Verdict (SFV) value in the **X-Forefront-Antispam-Report** header field. The SFV value indicates whether spam or phishing filtering was skipped. Messages that skip filtering have an entry of `SCL:-1`, which means one of your settings overrode the phishing verdict and allowed delivery of the message. For more information on how to get message headers and the complete list of all available anti-spam and anti-phishing message headers, see [Anti-spam message headers](message-headers-eop-mdo.md).
+Specifically, check the Spam Filtering Verdict (SFV) value in the **X-Forefront-Antispam-Report** header field. The SFV value indicates whether spam or phishing filtering was skipped. For example, messages that used a mail flow rule (transport rule) to skip spam filtering have the value `SFV:SKN`. For more information on how to get message headers and the complete list of all available anti-spam and anti-phishing message headers, see [Anti-spam message headers](message-headers-eop-mdo.md).
 
 > [!TIP]
 > You can copy and paste the contents of a message header into the [Message Header Analyzer](https://mha.azurewebsites.net/) tool. This tool helps parse headers and presents them in a human readable format.
@@ -94,3 +94,7 @@ Use the following best practices to reduce future phishing risk and validate you
 - Forwarding rules to external recipients are often used by attackers to extract data. Use the **Review mailbox forwarding rules** information in [Microsoft Secure Score](/defender-xdr/microsoft-secure-score) to find and even prevent forwarding rules to external recipients. For more information, see [Mitigating Client External Forwarding Rules with Secure Score](/archive/blogs/office365security/mitigating-client-external-forwarding-rules-with-secure-score).
 
   Use the [Autoforwarded messages report](/exchange/monitoring/mail-flow-reports/mfr-auto-forwarded-messages-report) to view specific details about forwarded email.
+
+## Related content
+
+[Anti-phishing protection in cloud organizations](anti-phishing-protection-about.md)

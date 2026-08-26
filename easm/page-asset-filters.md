@@ -1,17 +1,19 @@
 ---
-title: Page Asset Filters
+title: Microsoft Defender EASM page asset filters
 titleSuffix: Defender EASM page asset filters 
 description: This article outlines the filter functionality available in Microsoft Defender External Attack Surface Management for page assets specifically, including operators and applicable field values.
 author: danielledennis
 ms.author: dandennis
 ms.service: defender-easm
-ms.date: 12/14/2022
+ms.date: 07/02/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
-# Page asset filters
+# Reference for page asset filters
 
-These filters specifically apply to page assets. Use these filters when searching for a specific subset of page assets.  
+Microsoft Defender External Attack Surface Management (Defender EASM) inventory includes several filters that apply specifically to page assets. Use these defined-value and freeform filters to search for a specific subset of page assets based on criteria such as IP version, domain status, web components, and more.
 
 ## Defined value filters  
 

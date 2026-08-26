@@ -4,9 +4,11 @@ description: Learn how to build a Microsoft Sentinel Codeless Connector Framewor
 ms.author: edbaynash
 author: EdB-MSFT
 ms.topic: how-to
-ms.date: 07/23/2026
+ms.date: 08/24/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-siem
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1015
 # customer intent: As a security engineer or ISV, I want to create a CCF pull connector that uses nested API polling so that I can ingest data from APIs where one request depends on the response from another request.
 ---
 
@@ -14,11 +16,14 @@ ms.subservice: sentinel-siem
 
 Some REST APIs require sequential calls, where the response from one endpoint provides input that must be passed to another endpoint. The Microsoft Sentinel Codeless Connector Framework (CCF) supports this pattern through nested API polling for `RestApiPoller` connectors.
 
+> [!IMPORTANT]
+> Nested API polling is currently in public preview. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include more legal terms that apply to Azure features in beta, preview, or otherwise not yet released into general availability.
+
 Use nested API polling when a parent API call returns identifiers, cursors, or other values that are required by one or more child API calls. CCF extracts the required values from the parent response, substitutes them into the child request, and sends the child responses to the configured destination table.
 
-This article explains how to configure nested API polling in a CCF pull connector. It focuses on the `RestApiPoller` connection rules where the nesting logic is defined.
+Configure nested API polling in a CCF pull connector by defining the nesting logic in the `RestApiPoller` connection rules.
 
-For the end-to-end process to create and package a CCF connector, see [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md). For the standard `RestApiPoller` request, response, authentication, paging, and DCR properties, see [RestApiPoller data connector connection rules reference](../data-connector-connection-rules-reference.md).
+For the end-to-end process to create and package a CCF connector, see [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md). You can also use the Microsoft Sentinel extension for Visual Studio Code to implement and test nested API polling workflows. For setup and usage information, see [Build custom connectors with AI in Microsoft Sentinel](create-custom-connector-builder-agent.md). For the standard `RestApiPoller` request, response, authentication, paging, and DCR properties, see [RestApiPoller data connector connection rules reference](../data-connector-connection-rules-reference.md).
 
 > [!NOTE]
 > If you're an Independent Software Vendor (ISV) building a Microsoft Sentinel integration using the Codeless Connector Framework, the Microsoft App Assure team may be able to assist. To engage the App Assure team, send an email to [azuresentinelpartner@microsoft.com](mailto:azuresentinelpartner@microsoft.com).

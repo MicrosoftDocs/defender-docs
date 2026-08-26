@@ -17,7 +17,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 ---
 
@@ -25,11 +25,12 @@ ai-usage: ai-assisted
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+## Configure data sources for advanced hunting
 
+[Advanced hunting](advanced-hunting-overview.md) relies on data from various sources. These sources include your devices, your Office 365 workspaces, Microsoft Entra ID, and Microsoft Defender for Identity. To get the most complete data, make sure you have the correct settings in each data source.
 
-[Advanced hunting](advanced-hunting-overview.md) relies on data coming from various sources, including your devices, your Office 365 workspaces, Microsoft Entra ID, and Microsoft Defender for Identity. To get the most comprehensive data possible, ensure that you have the correct settings in the corresponding data sources.
-
-## Advanced security auditing on Windows devices
+<a name="advanced-security-auditing-on-windows-devices"></a>
+## Enable advanced security auditing on Windows devices
 Turn on these advanced auditing settings to ensure you get data about activities on your devices, including local account management, local security group management, and service creation.
 
 | Data | Description | Schema table | How to configure |
@@ -38,7 +39,8 @@ Turn on these advanced auditing settings to ensure you get data about activities
 | Security group management | Events captured as various `ActionType` values indicating local security group creation and other local group management activities | [DeviceEvents](advanced-hunting-deviceevents-table.md) | - Deploy an advanced security audit policy: [Audit Security Group Management](/windows/security/threat-protection/auditing/audit-security-group-management)<br> - [Learn about advanced security audit policies](/windows/security/threat-protection/auditing/advanced-security-auditing) |
 | Service installation | Events captured with the `ActionType` value `ServiceInstalled`, indicating that a service has been created | [DeviceEvents](advanced-hunting-deviceevents-table.md) | - Deploy an advanced security audit policy: [Audit Security System Extension](/windows/security/threat-protection/auditing/audit-security-system-extension)<br> - [Learn about advanced security audit policies](/windows/security/threat-protection/auditing/advanced-security-auditing) |
 
-## Microsoft Defender for Identity sensor on the domain controller
+<a name="microsoft-defender-for-identity-sensor-on-the-domain-controller"></a>
+## Install the Microsoft Defender for Identity sensor on the domain controller
 If you're running Active Directory on premises, you need to install the Microsoft Defender for Identity sensor on the domain controller to get data for Microsoft Defender for Identity. When installed and properly configured, data from on-premises Active Directory also feeds into advanced hunting through Microsoft Defender for Identity and provides a more holistic picture of identity information and events in your network. Data collected by the Defender for Identity sensor also enhances the ability of Microsoft Defender for Identity to generate relevant alerts that are also covered by advanced hunting. 
 
 | Data | Description | Schema table | How to configure |

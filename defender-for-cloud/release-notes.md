@@ -29,16 +29,99 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## August 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| August 21, 2026 | Update | [Update to CVE details data consumption in Azure Resource Graph](#update-to-cve-details-data-consumption-in-azure-resource-graph) |
+| August 17, 2026 | Upcoming deprecation | [Classic Defender for SQL APIs retirement](#classic-defender-for-sql-apis-retirement) |
+| August 6, 2026 | Public preview | [On-demand malware scanning now supports scanning specific blobs, files, containers, and file shares](#on-demand-malware-scanning-now-supports-scanning-specific-blobs-files-containers-and-file-shares) |
+| August 6, 2026 | CIEM Updates | [Breaking change: Unused actions no longer included in AWS and GCP overprovisioned identity assessments](#breaking-change-unused-actions-no-longer-included-in-aws-and-gcp-overprovisioned-identity-assessments) |
+
+### Update to CVE details data consumption in Azure Resource Graph
+
+August 21, 2026
+
+Microsoft Defender for Cloud has updated how vulnerability assessment CVE details are consumed in Azure Resource Graph. CVE information remains available, but detailed CVE properties are now consumed through the `microsoft.security/cvedetails` resource type to improve query performance, scalability, and support for larger data sets.
+
+Customers who use existing API or Azure Resource Graph queries that read CVE details from vulnerability assessment records should update those queries to consume CVE details from the updated Azure Resource Graph resource. Queries that aren't updated might not return the expected detailed CVE properties.
+
+For migration guidance and sample queries, see [Remediate machine vulnerabilities](remediate-vulnerability-findings-vm.md#export-the-results).
+
+### Classic Defender for SQL APIs retirement
+
+August 17, 2026
+
+The classic Defender for SQL APIs for Vulnerability Assessment and Advanced Threat Protection will be retired on **August 16, 2027**.
+
+If you use these APIs, migrate to the supported configuration model and update any dependent scripts or automation before the retirement date.
+
+For migration guidance, see [Prepare for the retirement of classic Defender for SQL APIs](migrate-classic-defender-for-sql-apis.md).
+
+### On-demand malware scanning now supports scanning specific blobs, files, containers, and file shares
+
+August 6, 2026
+
+On-demand malware scanning in Microsoft Defender for Storage now supports targeted scanning of specific items. Instead of scanning an entire storage account, you can scope scans to a single blob or file, a specific container or file share, or all objects matching a path prefix.
+
+You can use filters in the REST API request body to specify which items to scan. When no filters are provided, the scan covers the entire storage account.
+
+Learn more about [on-demand malware scanning](on-demand-malware-scanning.md).
+
+### Breaking change: Unused actions no longer included in AWS and GCP overprovisioned identity assessments
+
+August 6, 2026
+
+To improve the performance and scalability of overprovisioned identity recommendation generation, Microsoft Defender for Cloud will no longer use the **unused actions** when computing overprovisioned identity assessments for **AWS and GCP** environments.
+
+As a result of this change:
+
+- The **Unused actions** list will no longer be displayed as part of overprovisioned identity recommendations for AWS and GCP identities.
+
+- Any workflows or processes that rely on the Unused actions list within Defender for Cloud CIEM will no longer be available for AWS and GCP recommendations.
+
+**Recommended action:**
+
+If you need to validate whether permissions have been used or remain unused, use the native tools and documentation provided by your cloud provider:
+
+- **AWS**: Review IAM access activity and last accessed information in AWS Identity and Access Management (IAM).
+
+- **Google Cloud**: Review IAM usage and access insights through Google Cloud IAM tools and Cloud Asset Inventory.
+
+These permission usage signals are owned and maintained by the respective cloud providers. Defender for Cloud no longer retrieves or presents this information as part of AWS and GCP overprovisioned identity assessments. 
+
+For more information, see [Enable cloud infrastructure entitlement management (CIEM)](/azure/defender-for-cloud/enable-permissions-management)
+
 ## July 2026
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| July 31, 2026 | Deprecation | [Deprecation completed: Legacy grouped recommendations removed from Azure portal](#deprecation-completed-legacy-grouped-recommendations-removed-from-azure-portal) |
+| July 30, 2026 | Upcoming change | [Foundational CSPM moves to opt-in model for new Azure subscriptions](#foundational-cspm-moves-to-opt-in-model-for-new-azure-subscriptions) |
 | July 26, 2026 | GA | [Database-level recommendations for SQL Vulnerability Assessment (GA)](#database-level-recommendations-for-sql-vulnerability-assessment-ga) |
 | July 5, 2026 | Deprecation | [Plan enablement API now blocks onboarding to five deprecated Defender plans](#plan-enablement-api-now-blocks-onboarding-to-five-deprecated-defender-plans) |
 | July 1, 2026 | GA | [New container security capabilities are now generally available](#new-container-security-capabilities-are-now-generally-available) |
 | July 1, 2026 | GA | [Kubernetes misconfiguration enforcement in Defender for Containers is now generally available](#kubernetes-misconfiguration-enforcement-in-defender-for-containers-is-now-generally-available) |
 | July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
-| July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
+
+### Deprecation completed: Legacy grouped recommendations removed from Azure portal
+
+July 31, 2026
+
+Retirement of legacy grouped recommendations (sub-assessments) has started. Customers can no longer access the deprecated data through the API. The Azure portal and Azure Resource Graph might take a few days to reflect the change. Individual recommendations replace the legacy grouped recommendations, as [announced in May 2026](#general-availability-of-individual-recommendations-for-defender-for-cloud-in-azure-portal-and-deprecation-of-legacy-grouped-recommendations).
+Customers who previously relied on grouped recommendations should validate existing automation, reporting, governance workflows, and queries, and migrate any remaining disable rules to exemptions. For more information, see [Transition from grouped to individual recommendations](transition-grouped-individual-recommendations.md)
+
+### Foundational CSPM moves to opt-in model for new Azure subscriptions
+
+July 30, 2026
+
+Starting October 27, 2026, Foundational CSPM will move to an opt-in model and will no longer be enabled by default for new Azure subscriptions. This change gives you more control over how security posture management is configured for each new Azure subscription and is part of the transition of cloud security posture management to the Microsoft Defender portal.
+
+Foundational CSPM will continue to be available at no cost and can be enabled at any time based on your organization's needs.
+
+This change applies only to new Azure subscriptions. Existing Azure subscriptions keep their current configuration, and AWS and GCP environments aren't affected.
+
+For more information, see [Opt in to Foundational CSPM](foundational-cspm-opt-in.md).
 
 ### Database-level recommendations for SQL Vulnerability Assessment (GA)
 

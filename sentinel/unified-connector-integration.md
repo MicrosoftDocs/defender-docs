@@ -1,11 +1,13 @@
 ---
-title: Connect to Microsoft Sentinel using a unified connector
+title: Connect to Microsoft Sentinel using a Unified Connector
 description: Learn how to connect to the Unified Connectors Platform that simplifies connector management across Microsoft security products including Microsoft Sentinel, Defender for Cloud, and Defender for Identity.
 ms.author: monaberdugo
 author: mberdugo
 contributors:
 ms.topic: how-to
-ms.date: 08/10/2025
+ms.date: 07/02/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 
 #customer intent: As a Microsoft Defender for Identity user, I want to simplify my connections by using a unified connector so I can manage my Okta integration more efficiently.
 ---
@@ -28,13 +30,13 @@ The following steps are required if you want to link an existing Okta connector 
 
 The user setting up the Okta connector must have these roles:
 
-- **Log Analytics Contributor** – Required to write data into the Log Analytics workspace and manage the Data Collection Rule (DCR).
-- **Microsoft Sentinel Contributor** – Required to modify connector settings in Sentinel.
+- **Log Analytics Contributor**: Required to write data into the Log Analytics workspace and manage the Data Collection Rule (DCR).
+- **Microsoft Sentinel Contributor**: Required to modify connector settings in Sentinel.
 
 If you connect to both Sentinel and Defender for Identity, you need permissions for both products.
 
 Check user roles under the **Access control (IAM)** section of the **Log analytics workspace**.
-If you assign these roles, allow up to 15 minutes for the changes to take effect.
+If you assign the Log Analytics Contributor and Microsoft Sentinel Contributor roles, allow up to 15 minutes for the changes to take effect.
 
 ### Okta credentials
 
@@ -49,11 +51,11 @@ For information about integrating Okta with Defender for Identity, see [Integrat
 
 To create a unified connector in Microsoft Sentinel:
 
-1. Go to the Data connectors Gallery [directly](https://security.microsoft.com/sentinel/unified-connector), or navigate to it via **System** > **Data management** > **Data connectors**.
+1. Go to the [Data connectors Gallery](https://security.microsoft.com/sentinel/unified-connector), or navigate to it via **System** > **Data management** > **Data connectors**.
 
    :::image type="content" source="./media/unified-connector-integration/connectors-gallery.png" alt-text="Screenshot of connectors gallery.":::
 
-   For more information about the Data connectors Gallery, see [Data connectors Gallery](./unified-connector.md#data-connectors-gallery).
+   For more information, see [Data connectors Gallery](./unified-connector.md#data-connectors-gallery) in the unified connectors article.
 
 1. In the **My connectors** tab, find the **Unified connectors** section.
 
@@ -67,7 +69,7 @@ To create a unified connector in Microsoft Sentinel:
 1. In the **Name and connection details** section, provide the following information:
    - **Connector name**: A descriptive user friendly name for the connector.
    - **Domain name**: The Okta domain, such as `yourcompany.okta.com`.
-   - **API key**: Paste the [API key](#okta-credentials). Include only the token value, not the *Authorization* prefix.
+   - **API key**: Paste the [Okta API token](#okta-credentials). Include only the token value, not the *Authorization* prefix.
    Select **Next**.
 
 1. In the **Select products** section, check the products you want to connect to. Check *SIEM* to enable the connector for Microsoft Sentinel.
@@ -76,7 +78,7 @@ To create a unified connector in Microsoft Sentinel:
 
 1. Configure the product details for each product you selected:
 
-   - Select the required workspace, whose permissions you validated [earlier](#azure-access-permissions).
+   - Select the required workspace, whose permissions you validated in [Azure access permissions](#azure-access-permissions).
    - Select the table manager.
 
 1. Select **Connect**. The **Connect** button is only active when all the required fields are valid.
@@ -95,16 +97,19 @@ Existing connectors appear in the **My Connectors** tab.
 
 ### Edit a connector
 
-To edit a connector, select it and then select **Manage** from the connector side panel.
+To edit a connector, select it and select **Manage** from the connector side panel.
 
 :::image type="content" source="./media/unified-connector-integration/manage-connector.png" alt-text="Screenshot of Okta health page with Manage button highlighted.":::
 
 ### Delete a connector
 
+> [!WARNING]
+> Deleting a connector stops data ingestion and removes the connector configuration. This action can't be undone.
+
 You can delete a connector in one of two ways:
 
-- Select it and then select **Delete** from the connector side panel.
-- Check the connector in the **My Connectors** tab and then select **Delete** from above the connector list.
+- Select it and select **Delete** from the connector side panel.
+- Check the connector in the **My Connectors** tab and select **Delete** from above the connector list.
 
 :::image type="content" source="./media/unified-connector-integration/delete-connector.png" alt-text="Screenshot of Okta connector selected and the delete button highlighted.":::
 
@@ -121,5 +126,7 @@ To verify that the Okta connector is successfully ingesting data into your Log A
 > - The connector will only ingest system logs from one hour before the instance was created.
 
 ## Considerations and limitations
+
+Consider the following limitations when using unified connectors:
 
 - Unified connectors aren't visible in the Content hub. To see all connectors, including the traditional Sentinel connectors, go to the [Data connectors Gallery](https://security.microsoft.com/sentinel/unified-connector).

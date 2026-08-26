@@ -17,7 +17,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 ---
 
@@ -92,7 +92,7 @@ The graph supports two views:
 
 ![Screenshot of the query resources report showing two available view modes for reviewing resource usage over time.](./media/advanced-hunting-limits/resource-usage-over-time.png)
 
-This difference means that, for instance, if on a specific day you ran two queries, one query used 50% of your resources and the other query used 100%, the average daily use value shows 75%, while the top daily use shows 100%.
+The difference between these two views means that, for instance, if on a specific day you ran two queries, one query used 50% of your resources and the other query used 100%, the average daily use value shows 75%, while the top daily use shows 100%.
 
 ## Related articles
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Investigate devices in Microsoft Defender for Endpoint
 description: Learn how to investigate devices by reviewing alerts, timelines, network connections, and security assessments in Microsoft Defender for Endpoint.
 keywords: investigate devices, device timeline, event flags, MITRE ATT&CK, internet-facing devices, device investigation, device details, network connections
@@ -250,13 +250,13 @@ The device timeline includes several features to help you investigate events eff
 :::image type="content" source="media/timeline-device.png" alt-text="Screenshot of the device timeline with events." lightbox="media/timeline-device.png":::
 
 > [!NOTE]
-> For firewall events to be displayed, you need to enable the audit policy, see [Audit Filtering Platform connection](/windows/security/threat-protection/auditing/audit-filtering-platform-connection).
+> For firewall events to be displayed, you need to enable the audit policy, see [Audit Filtering Platform connection](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-filtering-platform-connection).
 >
 > Firewall covers the following events:
 >
-> - [5025](/windows/security/threat-protection/auditing/event-5025) - firewall service stopped
-> - [5031](/windows/security/threat-protection/auditing/event-5031) - application blocked from accepting incoming connections on the network
-> - [5157](/windows/security/threat-protection/auditing/event-5157) - blocked connection
+> - [5025](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-5025) - firewall service stopped
+> - [5031](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-5031) - application blocked from accepting incoming connections on the network
+> - [5157](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-5157) - blocked connection
 
 ### Search, filter, and export events
 

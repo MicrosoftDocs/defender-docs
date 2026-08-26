@@ -11,7 +11,7 @@ ms.collection:
  - must-keep
 ms.topic: reference
 ms.custom: api
-ms.date: 04/18/2025
+ms.date: 08/07/2026
 appliesto:
   - Microsoft Defender XDR
 ---
@@ -34,6 +34,8 @@ The API supports the following **OData** operators:
 - `$filter` on the `lastUpdateTime`, `createdTime`, `status`, and `assignedTo` properties
 - `$top`, with a maximum value of **100**
 - `$skip`
+
+Incident properties, including severity, can change after an incident is created. To detect updates, poll by using the `lastUpdateTime` property and compare the current values with the values retained by your application. Because this endpoint doesn't support server-side filtering by severity, evaluate severity after retrieving the updated incidents.
 
 ## Limitations
 
@@ -93,7 +95,7 @@ classification|The specification for the incident. The property values are: *Unk
 determination|Specifies the determination of the incident. The property values are: *NotAvailable*, *Apt*, *Malware*, *SecurityPersonnel*, *SecurityTesting*, *UnwantedSoftware*, *Other*|NotAvailable
 detectionSource|Specifies source of detection.|Defender for Cloud Apps
 status|Categorize incidents (as *Active*, or *Resolved*). It can help you organize and manage your response to incidents.|Active
-severity|Indicates the possible impact on assets. The higher the severity the bigger the impact. Typically higher severity items require the most immediate attention. <p> One of the following values: *Informational*, *Low*, *Medium, and *High*.|Medium
+severity|Indicates the possible impact on assets. The higher the severity, the bigger the impact. Typically, higher-severity items require the most immediate attention. Severity can change as alerts are added to or removed from the incident. <p> One of the following values: *Informational*, *Low*, *Medium*, and *High*.|Medium
 tags|Array of custom tags associated with an incident, for example to flag a group of incidents with a common characteristic.|\[\]
 comments|Array of comments created by secops when managing the incident, for example additional information about the classification selection.|\[\]
 alerts|Array containing all of the alerts related to the incident, plus other information, such as severity, entities that were involved in the alert, and the source of the alerts.|\[\] (see details on alert fields below)

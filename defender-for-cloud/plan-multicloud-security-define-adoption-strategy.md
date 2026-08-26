@@ -1,8 +1,9 @@
 ---
-title: Planning multicloud security defining adoption strategy lifecycle strategy guidance
+title: Define adoption and lifecycle strategy for multicloud security
 description: Define ownership models, business requirements, and lifecycle planning for multicloud security with Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 05/28/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a cloud security architect, I want to define an adoption strategy so I can align ownership, governance, and rollout planning across multicloud environments.
 ai-usage: ai-assisted
 ---
@@ -31,7 +32,8 @@ Think about your broad requirements:
 
 - **Plan a lifecycle strategy.** As new multicloud resources onboard into Defender for Cloud, you need a strategic plan in place for that onboarding. Remember that you can use [auto-provisioning capabilities](monitoring-components.md?tabs=autoprovision-defendpoint) for easier agent deployment.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Determine data residency requirements](plan-multicloud-security-determine-data-residency-requirements.md)

@@ -1,18 +1,19 @@
 ---
 title: Microsoft Defender for Cloud Apps policy templates
 description: This article provides information on policy templates included in Microsoft Defender for Cloud Apps.
-ms.date: 11/16/2025
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: MayaAbelson
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 
+ai-usage: ai-assisted
 ---
 
 # Defender for Cloud Apps policy templates
 
 We recommend that you simplify policy creation by starting with existing templates whenever possible. This article lists several policy templates available with Microsoft Defender for Cloud Apps. 
 
-For the full list of templates, check the Microsoft Defender Portal.
+For the full list of templates, check the [Microsoft Defender Portal](https://security.microsoft.com).
 
 
 ## Policy template highlights

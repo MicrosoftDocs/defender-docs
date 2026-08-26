@@ -5,10 +5,10 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: soulisabag
 ms.topic: how-to #Required; leave this attribute/value as-is
-ms.date: 06/22/2026
+ms.date: 07/02/2026
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security operations team member, I want to understand the process involved in moving our Microsoft Sentinel experience from the Azure portal to the Defender portal so that I can benefit from unified security operations across my entire environment.
 ---
@@ -17,7 +17,7 @@ ms.custom: msecd-doc-authoring-1014
 
 Microsoft Sentinel is available in the Microsoft Defender portal with [Microsoft Defender XDR](/microsoft-365/security/defender) or on its own. It delivers a unified experience across SIEM and XDR for faster, more accurate threat detection and response, simpler workflows, and better operational efficiency.
 
-This article explains how to transition your Microsoft Sentinel experience from the Azure portal to the Defender portal. If you use Microsoft Sentinel in the Azure portal, transition to Microsoft Defender for unified security operations and the latest features. Before you begin, review the [Prerequisites](#prerequisites) section for required access and preparatory steps. For more information, see [Microsoft Sentinel in the Microsoft Defender portal](microsoft-sentinel-defender-portal.md) or watch our [YouTube playlist](https://www.youtube.com/playlist?list=PL3ZTgFEc7Lyska6WLWBzc8sob-kYA2jPj).
+This article explains how to transition your Microsoft Sentinel experience from the Azure portal to the Defender portal. If you use Microsoft Sentinel in the Azure portal, transition to Microsoft Defender for unified security operations and the latest features. Before you begin, review the [Prerequisites for transitioning to the Defender portal](#prerequisites) section for required access and preparatory steps. For more information, see [Microsoft Sentinel in the Microsoft Defender portal](microsoft-sentinel-defender-portal.md) or watch our [Microsoft Sentinel in the Defender portal video playlist](https://www.youtube.com/playlist?list=PL3ZTgFEc7Lyska6WLWBzc8sob-kYA2jPj).
 
 > [!NOTE]
 > Transitioning to the Defender portal, even for non-E5 customers, has no extra cost for the customer. The customer continues to be billed as usual for their consumption on Sentinel only.
@@ -26,7 +26,7 @@ This article explains how to transition your Microsoft Sentinel experience from 
 
 Before you start, note:
 
-- This article is for customers with an existing workspace enabled for Microsoft Sentinel who want to transition their Microsoft Sentinel experience to the Defender portal. If you're a new customer who onboarded with permissions of a subscription [Owner](/azure/role-based-access-control/built-in-roles#owner) or a [User access administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator), your workspaces are [automatically onboarded to the Defender portal](quickstart-onboard.md).
+- This article is for customers with an existing workspace enabled for Microsoft Sentinel who want to transition their Microsoft Sentinel experience to the Defender portal. If you're a new customer who onboarded with permissions of a subscription [Owner (Azure built-in role)](/azure/role-based-access-control/built-in-roles#owner) or a [User access administrator (Azure built-in role)](/azure/role-based-access-control/built-in-roles#user-access-administrator), your workspaces are automatically onboarded to the Defender portal. For more information, see [Quickstart: Onboard to the Defender portal](quickstart-onboard.md).
 
 - Some Microsoft Sentinel features have new locations in the Defender portal. For more information, see [Quick reference for Microsoft Sentinel feature locations in the Defender portal](microsoft-sentinel-defender-portal.md#quick-reference).
 
@@ -83,7 +83,7 @@ For more information about CMK, see [Set up Microsoft Sentinel customer-managed 
 
 ### Configure multi-workspace and multitenant management
 
-Defender supports one or more workspaces across multiple tenants through the [multitenant portal](https://mto.security.microsoft.com), which serves as a central place to manage incidents and alerts, hunt for threats across tenants, and lets Managed Security Service Partners (MSSPs) see across customers.
+Defender supports one or more workspaces across multiple tenants through the [Microsoft Defender multitenant portal](https://mto.security.microsoft.com), which serves as a central place to manage incidents and alerts, hunt for threats across tenants, and lets Managed Security Service Partners (MSSPs) see across customers.
 
 In multi-workspace scenarios, the multitenant portal lets you connect one primary workspace and multiple secondary workspaces per tenant. Onboard each workspace to the Defender portal separately for each tenant, just like onboarding for a single tenant.
 
@@ -112,7 +112,7 @@ From a Log Analytics perspective, Microsoft Sentinel’s integration into Micros
 Alerts related to Defender products are streamed directly from the [Microsoft Defender connector](/azure/sentinel/connect-microsoft-365-defender) to ensure consistency. Make sure that you have incidents and alerts from this connector turned on in your workspace. Once you have this data connector configured in your workspace, [offboarding the workspace from Microsoft Defender](/unified-secops/microsoft-sentinel-onboard#offboard-microsoft-sentinel) also disconnects the Microsoft Defender connector.
 
 > [!NOTE]
-> This change in connectors results in schema differences for some alerts. For a detailed comparison, see [Alert schema differences: Standalone vs. Microsoft Defender XDR connector](security-alert-schema-differences.md).
+> This connector-routing change results in schema differences for some alerts. For a detailed comparison, see [Alert schema differences: Standalone vs. Microsoft Defender XDR connector](security-alert-schema-differences.md).
 
 To migrate analytics rule incident creation and alert grouping settings, see [Migrate Microsoft Sentinel incident creation rules and alert grouping settings to Defender XDR](/unified-secops-platform/migrate-sentinel-incident-creation-rules-alert-grouping).
 
@@ -153,17 +153,17 @@ Otherwise, continue to deploy solution packages that include various types of se
 
 ### Configure analytics rules
 
-Microsoft Sentinel analytics rules are [available in the Defender portal](microsoft-sentinel-defender-portal.md#configuration) for detection, configuration, and management. The functionalities of analytics rules remain the same, including creation, updating, and management through the wizard, repositories, and the Microsoft Sentinel API. Incident correlation and multi-stage attack detection also continue to work in the Defender portal. The alert correlation functionality managed by the Fusion analytics rule in the Azure portal is handled by the Defender XDR engine in the Defender portal, which consolidates all signals in one place.
+Microsoft Sentinel analytics rules are available in the Defender portal for detection, configuration, and management. For more information, see [Microsoft Sentinel configuration in the Defender portal](microsoft-sentinel-defender-portal.md#configuration). The functionalities of analytics rules remain the same, including creation, updating, and management through the wizard, repositories, and the Microsoft Sentinel API. Incident correlation and multi-stage attack detection also continue to work in the Defender portal. The alert correlation functionality managed by the Fusion analytics rule in the Azure portal is handled by the Defender XDR engine in the Defender portal, which consolidates all signals in one place.
 
 When moving to the Defender portal, the following changes are important to note:
 
 | Feature    | Description    |
 |--------------|-----|
-| **Custom detection rules**   | If you have detection use cases that involve both Defender XDR and Microsoft Sentinel data, where you don't need to retain Defender XDR data for more than 30 days, we recommend creating [custom detection rules](/defender-xdr/custom-detections-overview) that query data from both Microsoft Sentinel and Defender XDR tables. <br><br>This is supported without needing to ingest Defender XDR data into Microsoft Sentinel. For more information, see [Use Microsoft Sentinel custom functions in advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-defender-use-custom-rules#custom-detection-rules). |
+| **Custom detection rules**   | If you have detection use cases that involve both Defender XDR and Microsoft Sentinel data, where you don't need to retain Defender XDR data for more than 30 days, we recommend creating [custom detection rules](/defender-xdr/custom-detections-overview) that query data from both Microsoft Sentinel and Defender XDR tables. <br><br>Creating custom detection rules that query both sources is supported without needing to ingest Defender XDR data into Microsoft Sentinel. For more information, see [Use Microsoft Sentinel custom functions in advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-defender-use-custom-rules#custom-detection-rules). |
 | **Alert correlation**     | In the Defender portal, correlations are automatically applied to alerts against both Microsoft Defender data and third-party data ingested from Microsoft Sentinel, regardless of alert scenarios. <br><br>The criteria used to correlate alerts together in a single incident are part of the Defender portal's proprietary, internal correlation logic. For more information, see [Alert correlation and incident merging in the Defender portal](/defender-xdr/alerts-incidents-correlation).  |
 | **Alert grouping and incident merging**       | While you will still see the alert grouping configuration in Analytics rules, the [Defender XDR correlation engine](/defender-xdr/alerts-incidents-correlation) fully controls alert grouping and incident merging when necessary in the Defender portal. This ensures a comprehensive view of the full attack story by stitching together relevant alerts for multi-stage attacks. <br><br>For example, multiple individual analytics rules configured to generate an incident for each alert may result in merged incidents if they match Defender XDR correlation logic. |
 | **Alert visibility**   | If you have Microsoft Sentinel analytics rules configured to trigger alerts only (see [Configure incident creation settings](create-analytics-rules.md#configure-the-incident-creation-settings)), with incident creation turned off, these alerts aren't visible in the Defender portal.               |
-| **Alert tuning**  | Once your Microsoft Sentinel workspace is onboarded to Defender, all incidents, including those from your Microsoft Sentinel analytics rules, are generated by the Defender XDR engine. As a result, the [alert tuning capabilities](/defender-xdr/investigate-alerts#tune-an-alert) in the Defender portal, previously available only for Defender XDR alerts, can now be applied to alerts from Microsoft Sentinel. <br><br>This feature allows you to streamline incident response by automating the resolution of common alerts, reducing false positives, and minimizing noise, so analysts can prioritize significant security incidents. |
+| **Alert tuning**  | Once your Microsoft Sentinel workspace is onboarded to Defender, all incidents, including those from your Microsoft Sentinel analytics rules, are generated by the Defender XDR engine. As a result, the [alert tuning capabilities](/defender-xdr/investigate-alerts#tune-an-alert) in the Defender portal, previously available only for Defender XDR alerts, can now be applied to alerts from Microsoft Sentinel. <br><br>Alert tuning allows you to streamline incident response by automating the resolution of common alerts, reducing false positives, and minimizing noise, so analysts can prioritize significant security incidents. |
 | **Fusion: Advanced multistate attack detection** | The Fusion analytics rule, which in the Azure portal, creates incidents based on alert correlations made by the Fusion correlation engine, is disabled when you onboard Microsoft Sentinel to the Defender portal. <br><br>You don't lose alert correlation functionality because the Defender portal uses Microsoft Defender XDR's incident-creation and correlation functionalities to replace those of the Fusion engine. <br><br>For more information, see [Advanced multistage attack detection in Microsoft Sentinel](fusion.md) |
 
 ### Configure automation rules and playbooks
@@ -279,9 +279,9 @@ For Microsoft Sentinel customers moving from the Azure portal to the Defender po
 | Feature          | Description         |
 |-------------------|------------|
 | **Threat analytics** | Supported for [Microsoft Defender XDR](/defender-xdr/) customers. An in-product solution provided by Microsoft security researchers, designed to help security teams by offering insights on emerging threats, active threats, and their impacts. The data is presented in an intuitive dashboard with cards, rows of data, filters, and more.  |
-| **Intel Profiles**   | Supported for [Microsoft Defender Threat Intelligence](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti) customers. Categorize threats and behaviors by a Threat Actor Profile, making it easier to track and correlate. These profiles include any Indicators of Compromise (IoC) related to tactics, techniques, and tools used in attacks. |
-| **Intel Explorer**   | Supported for [Microsoft Defender Threat Intelligence](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti) customers.  Consolidates available IoCs and provides threat-related articles as they are posted, enabling security teams to stay updated on emerging threats.                                                        |
-| **Intel Projects**    | Supported for [Microsoft Defender Threat Intelligence](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti) customers. Allows teams to consolidate threat intelligence into a 'project' for reviewing all artifacts related to a specific scenario of interest.            |
+| **Intel Profiles**   | Supported for [Microsoft Defender Threat Intelligence](/defender-xdr/defender-threat-intelligence) customers. Categorize threats and behaviors by a Threat Actor Profile, making it easier to track and correlate. These profiles include any Indicators of Compromise (IoC) related to tactics, techniques, and tools used in attacks. |
+| **Intel Explorer**   | Supported for [Microsoft Defender Threat Intelligence](/defender-xdr/defender-threat-intelligence) customers.  Consolidates available IoCs and provides threat-related articles as they are posted, enabling security teams to stay updated on emerging threats.                                                        |
+| **Intel projects** | Deprecated. To organize and investigate threat indicators, [link indicators to a case](/unified-secops/cases-overview#link-indicators-preview). |
 
 In the Defender portal, use the `ThreatIntelOjbects` and `ThreatIntelIndicators` together with Indicators for Compromise for threat hunting, incident response, Copilot, reporting, and to create relational graphs showing connections between indicators and entities.
 
@@ -291,7 +291,7 @@ For more information about threat management, threat analytics, intelligence pro
 
 - [Threat management](microsoft-sentinel-defender-portal.md#threat-management)
 - [Threat analytics in Microsoft Defender XDR](/defender-xdr/threat-analytics)
-- [Using projects](/defender/threat-intelligence/using-projects)
+- [Link indicators to a case](/unified-secops-platform/cases-overview#link-indicators-preview)
 - [Threat intelligence in Microsoft Sentinel](/azure/sentinel/understand-threat-intelligence)
 
 ### Use workbooks to visualize and report on Microsoft Defender data
@@ -304,7 +304,7 @@ For more information, see [Visualize and monitor your data by using workbooks in
 
 ### Similar incidents (Preview) aren't supported in the Defender portal
 
-The Microsoft Sentinel [similar incidents in case investigations](investigate-cases.md#similar-incidents-preview) feature is in Preview and isn't supported in the Defender portal. This means that when viewing an incident details page in the Defender portal, the **Similar incidents** tab isn't available.
+The Microsoft Sentinel [similar incidents in case investigations](investigate-cases.md#similar-incidents-preview) feature is in Preview and isn't supported in the Defender portal. Because this feature isn't supported in the Defender portal, the **Similar incidents** tab isn't available when viewing an incident details page.
 
 ## Related content
 

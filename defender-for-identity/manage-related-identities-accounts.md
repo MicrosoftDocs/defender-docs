@@ -55,7 +55,7 @@ Use the procedures in this article to manually link accounts to identities and t
 > - Cloud discovery user enrichment and anonymization
 > - RBAC scoping
 >
-> The preceding features continue to use the Cloud Application Accounts inventory.
+> These Defender for Cloud Apps features continue to use the Cloud Application Accounts inventory.
 
 ## Prerequisites
 
