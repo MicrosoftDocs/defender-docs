@@ -186,6 +186,12 @@ The following table lists the URL endpoint services required for devices using D
 
 The following table lists the URL endpoints required for administrative and security operations to access the Microsoft Defender security portals. These endpoints don't need to be accessible to all devices.
 
+> [!NOTE]
+> In addition to the URLs listed in this table, access may also need to be allowed for the URLs listed under Microsoft 365 Unified Domains.
+> 
+> Microsoft 365 Unified Domains
+> https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-365-unified-domains
+
 |URL|Comment|
 |---|---|
 |*.blob.core.windows.net|Used for file downloads from the portal, such as onboarding packages - `https://onboardingpackagescusprd.blob.core.windows.net` and files retrieved from devices.|
