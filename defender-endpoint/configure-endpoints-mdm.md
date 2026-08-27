@@ -69,19 +69,19 @@ For security reasons, the package used to offboard devices expires seven days af
 
 1. In the Microsoft Intune admin center, use one of the following deployment methods:
 
-   - **Custom configuration policy**: To create a custom configuration policy, see <a href="/intune/device-configuration/create-device-profile" target="_blank">Create a device configuration profile in Microsoft Intune</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
+   - **Custom configuration policy**: To create **Windows** device configuration policy, see <a href="/intune/device-configuration/create-device-profile" target="_blank">Create a device configuration profile in Microsoft Intune</a> (opens in a new tab in the Intune documentation). When creating the policy, use these specific settings:
      - **Platform**: Select **Windows 10 and later**.
      - **Profile type**: Select **Templates**.
      - **Template name**: Select **Custom**.
-     - **Configuration settings**: Add the following settings:
+     - **Configuration settings** tab: Add the following settings:
        - **OMA-URI**: Enter `./Device/Vendor/MSFT/WindowsAdvancedThreatProtection/Offboarding`.
        - **Data type**: Select **String**.
        - **Value**: Paste the value from the content of the `WindowsDefenderATP_valid_until_YYYY-MM-DD` offboarding file.
 
-   - **EDR policy**: To create an EDR policy, see <a href="/intune/device-configuration/endpoint-security/deploy-edr" target="_blank">Deploy endpoint detection and response policy with Intune</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
+   - **EDR policy**: To create an **Endpoint detection and response** policy, see <a href="/intune/device-configuration/endpoint-security/deploy-edr" target="_blank">Deploy endpoint detection and response policy with Intune</a> (opens in a new tab in the Intune documentation). When creating the policy, use these specific settings:
      - **Platform**: Select **Windows**.
      - **Profile**: Select **Endpoint detection and response**.
-     - **Configuration settings**:
+     - **Configuration settings** tab:
        - **Microsoft Defender for Endpoint client configuration package type**: Select **Offboard**.
        - In the **Offboarding (Device)** setting that appears, paste the value from the content of the `WindowsDefenderATP_valid_until_YYYY-MM-DD` offboarding file.
 
