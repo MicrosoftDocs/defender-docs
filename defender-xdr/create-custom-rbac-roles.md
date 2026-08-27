@@ -10,7 +10,7 @@ ms.collection:
 - tier3
 ms.custom: msecd-doc-authoring-1014
 ms.topic: how-to
-ms.date: 08/31/2026
+ms.date: 06/16/2026
 ms.reviewer: 
 appliesto:
 - Microsoft Defender for Endpoint Plan 2
@@ -88,8 +88,6 @@ The following steps describe how to create custom roles in the Microsoft Defende
 
         - **Assignment name**: Enter a descriptive name for the assignment.
         - **Employees**: Select Microsoft Entra security groups or individual users to assign users to the role.
-        - **Remote tenant group**: Select one or more GDAP remote tenant groups to assign to this role. Users who are members of the selected remote tenant groups inherit the permissions, data source access, and applicable scopes configured in this assignment. This option enables organizations to extend Microsoft Defender unified RBAC permissions to external tenants through an established GDAP relationship.
-
         - **Data sources**: Select the **Data sources** drop down and then select the services where the assigned users will have the selected permissions. If you assigned read-only permissions for a single data source, such as Microsoft Defender for Endpoint, the assigned users can't read alerts in the other services, such as Microsoft Defender for Office 365 or Microsoft Defender for Identity.
         - **Data collections**: Users assigned in this assignment can be granted permissions either across all available Sentinel workspaces or only to selected workspaces. For example, if a role with 'Security operations - read only permission' is created, one team may be assigned this role for US-Workspace and UK-Workspace, allowing them to access all alerts from these sources. Another assignment can be created for the same role, providing another team in the organization access to only UK-Workspace alerts from Sentinel UK-Workspace.
 
