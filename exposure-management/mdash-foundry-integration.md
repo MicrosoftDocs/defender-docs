@@ -73,8 +73,9 @@ For each of the three deployed models, configure the TPM rate limit.
 
 > [!NOTE]
 > A minimum of 1,000,000 tokens per minute (TPM) is required for each model deployment.
->
-> To use concurrent scans, increase the TPM rate limit to at least 5,000,000 for each of the three required model deployments. For more information about quota limits and requesting additional capacity, see [Azure OpenAI in Microsoft Foundry Models quotas and limits](/azure/foundry/openai/quotas-limits).
+> > To use concurrent scans, increase the TPM rate limit to at least 5,000,000 for each of the three required model deployments.
+> Higher TPM allocations beyond the 5,000,000 TPM requirement can increase the number of concurrent scans available to your organization.
+>  For more information about quota limits and requesting additional capacity, see [Azure OpenAI in Microsoft Foundry Models quotas and limits](/azure/foundry/openai/quotas-limits).
 
 ## Configure content filtering
 
