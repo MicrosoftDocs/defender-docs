@@ -142,7 +142,7 @@ The following table lists the URLs required to access the Microsoft Defender por
 > In addition to the URLs listed in this table, access may also need to be allowed for the URLs listed under Microsoft 365 Unified Domains.
 > 
 > Microsoft 365 Unified Domains
-> https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-365-unified-domains
+> https://learn.microsoft.com/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-365-unified-domains
 
 |Service|Geography|URL|
 |---|---|---|
