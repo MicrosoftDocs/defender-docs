@@ -69,6 +69,10 @@ Use Microsoft Defender unified role-based access control (RBAC) to grant users t
 1. In the navigation pane, select **System** > **Permissions**.
 1. Under **Microsoft Defender XDR**, select **Roles** > **Create custom role**.
 1. On the **Basics** tab, enter a role name and description.
+1. On **Choose permissions**, expand **Security Posture**.
+1. Under **Security Posture** **Select Custom Permissions**, Under **Posture Management** Select**Select Custom Permissions**, set the permission levels you need:
+   - To allow users access to Exposure Management, select **Exposure Management (Read)**. This will grant access to the navigation menus in Exposure Management but not the underlying data.
+1. Review the permissions, and select **Apply**.
 1. On **Choose permissions**, expand **Agentic code security**.
 1. Under **AI Scan Security**, set the permission levels you need:
    - To allow users to run AI scans, select **Run scan (Manage)**.
@@ -78,7 +82,7 @@ Use Microsoft Defender unified role-based access control (RBAC) to grant users t
 
    For more information, see [Security posture – AI code scan](/defender-xdr/custom-permissions-details#security-posture--ai-code-scan).
 
-1. Review the permissions, and select **Apply**.
+
 1. Select **Next** to go to **Assign users and data sources**. Assign the users who should receive this role.
 1. Select **Add assignment**, and configure users, groups, and data sources.
 1. Select **Add**, review the assignments, and select **Next**.
