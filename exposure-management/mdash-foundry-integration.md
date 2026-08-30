@@ -547,7 +547,7 @@ You can switch the authentication method for a connected Foundry resource to be 
 
 1. Go to the Initiative and select Settings.
 
-2. Next to the connected Foundry resource, select **Switch method to Keyless**. For details about both authentication methods, setup steps, and required permissions, see Authentication methods.
+1. Next to the connected Foundry resource, select **Switch method to Keyless**. For details about both authentication methods, setup steps, and required permissions, see [Authentication methods](mdash-foundry-integration.md#Authentication-methods).
 
 3. Select **Validate** to verify the new authentication method.
 
