@@ -77,7 +77,7 @@ For step-by-step instructions on creating an Microsoft Foundry resource and depl
 Provide the required details to connect your Microsoft Foundry resource and validate the connection.
 
 1. Enter the **Project endpoint** (for example: `https://your-foundry.azure.com`) and **API key**.
-1. Choose an authentication method: **Keyless** (recommended) or API key. For details, see Authentication methods.
+1. Choose an authentication method: **Keyless** (recommended) or API key. For details, see [Authentication methods](mdash-foundry-integration.md#Authentication-methods).
 
 1. Select Validate to verify the connection.
 
