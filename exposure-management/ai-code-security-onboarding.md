@@ -24,9 +24,7 @@ To complete this setup, you need:
   - **Option 2 — Defender CLI.** For full details, see [Defender CLI setup](defender-cli-authentication.md). 
 - If outbound traffic is restricted, allow the required domains. For more information, see [Allow list](ai-code-security-overview.md#allow-list).
 - Access to the [Microsoft Defender portal](https://security.microsoft.com) with permission to open **Exposure Management** and **Initiatives**.
-- The Foundry project endpoint. MDASH supports two authentication methods for the Foundry connection.
-
-For details about the available authentication methods, see Authentication methods.
+- The Foundry project endpoint. MDASH supports two authentication methods for the Foundry connection. For details about the available authentication methods, see [Authentication methods](mdash-foundry-integration.md#Authentication-methods).
 
 - Defender unified RBAC permissions assigned. For the required permissions and how to assign them, see [Assign permissions to users using Defender RBAC](#assign-permissions-to-users-using-defender-rbac).
 
