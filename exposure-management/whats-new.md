@@ -32,7 +32,7 @@ Keyless relies on a managed identity instead of a stored secret - no API key is 
 
 Setup uses a one-time onboarding script. API key authentication remains available as an alternative.
 
-For more information, see [Authentication methods](mdash-foundry-integration.md#Authentication-methods).
+For more information, see [Authentication methods](mdash-foundry-integration.md#authentication-methods).
 
 ### Codename MDASH - Cancel scan
 
