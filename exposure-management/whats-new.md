@@ -24,6 +24,16 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 
 ## August 2026
 
+### Keyless authentication for the Microsoft Foundry connection preview
+
+You can now connect your Microsoft Foundry resource to codename MDASH using **Keyless authentication**, the recommended method. 
+
+Keyless relies on a managed identity instead of a stored secret —no API key is kept in Defender, and there's no key to rotate.
+
+Setup uses a one-time onboarding script. API key authentication remains available as an alternative.
+
+For more information, see [Authentication methods](mdash-foundry-integration.md#Authentication-methods).
+
 ### Codename MDASH - Cancel scan
 
 Scan cancellation, previously available only in Defender CLI, is now also available in the Microsoft Defender portal. 
