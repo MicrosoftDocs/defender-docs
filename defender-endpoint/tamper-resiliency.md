@@ -38,7 +38,7 @@ In order to provide an effective defense against tampering, devices must be heal
 
 > [!NOTE]
 > On Windows devices, Microsoft Defender Antivirus can be managed by using Group Policy, Windows Management Instrumentation (WMI), and PowerShell cmdlets. However, those methods are more susceptible to tampering than by using Microsoft Intune, Configuration Manager, or Microsoft Defender for Endpoint Security Configuration Management.
-> If you're using Group Policy, we recommend [disabling local overrides for Microsoft Defender Antivirus settings](configure-local-policy-overrides-microsoft-defender-antivirus.md#configure-local-overrides-for-microsoft-defender-antivirus-settings) and [disabling local list merging](configure-local-policy-overrides-microsoft-defender-antivirus.md#configure-how-locally-and-globally-defined-threat-remediation-and-exclusions-lists-are-merged).
+> If you're using Group Policy, we recommend [disabling local overrides for Microsoft Defender Antivirus settings](configure-local-policy-overrides-microsoft-defender-antivirus.md#configure-local-overrides-for-microsoft-defender-antivirus-settings-using-group-policy) and [disabling local list merging](configure-local-policy-overrides-microsoft-defender-antivirus.md#configure-how-locally-and-globally-defined-threat-remediation-and-exclusions-lists-are-merged).
 
 You can view health status for [Microsoft Defender Antivirus](device-health-microsoft-defender-antivirus-health.md) health and [sensors](device-health-sensor-health-os.md) in the [device health reports in Microsoft Defender for Endpoint](device-health-reports.md).
 

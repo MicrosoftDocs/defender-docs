@@ -1,6 +1,6 @@
 ---
 title: Configure Microsoft Defender Antivirus always-on protection
-description: Configure Microsoft Defender Antivirus always-on protection in Intune or Group Policy to monitor files, programs, and behavior for threats.
+description: Configure Microsoft Defender Antivirus always-on protection with supported management tools to monitor files, programs, and behavior for threats.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
@@ -8,8 +8,8 @@ author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
 ms.topic: how-to
-ms.date: 08/25/2026
-ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 08/31/2026
+ms.custom: nextgen, msecd-doc-authoring-1015
 ms.collection:
 - m365-security
 - tier2
@@ -26,7 +26,7 @@ ai-usage: ai-assisted
 
 # Enable and configure Microsoft Defender Antivirus always-on protection
 
-Always-on protection in Microsoft Defender Antivirus uses real-time protection, behavior monitoring, and heuristics to detect suspicious and malicious activity. Security administrators can use Microsoft Intune or Group Policy to configure these capabilities on Windows devices. Review the supported operating systems before you begin.
+Always-on protection in Microsoft Defender Antivirus uses real-time protection, behavior monitoring, and heuristics to detect suspicious and malicious activity. Security administrators can configure these capabilities on Windows devices by using Microsoft Intune, the Microsoft Defender portal, Microsoft Configuration Manager, or Group Policy. You can also use PowerShell or the Windows Security app. Review the supported operating systems before you begin.
 
 > [!NOTE]
 > [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps keep always-on protection and other security settings from being changed. As a result, when tamper protection is enabled, any changes made to [tamper-protected settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on) are ignored. To temporarily change tamper-protected settings for testing or diagnostics, use [troubleshooting mode](enable-troubleshooting-mode.md). After troubleshooting mode ends, the settings return to their configured values. To make permanent changes, update the policy in the management tool that configures the device.
@@ -43,31 +43,61 @@ The following operating systems support always-on protection:
 
 To use the Intune procedure, enroll Windows devices in Intune.
 
+Before using Configuration Manager, configure it for Endpoint Protection. For more information, see [Configure Endpoint Protection in Configuration Manager](/intune/configmgr/protect/deploy-use/endpoint-protection-configure).
+
 ## Configure always-on protection settings in Microsoft Intune
 
 [!INCLUDE [Intune is recommended but is a separate product](includes/intune-recommended-separate-product.md)]
 
-You can configure always-on protection settings in a Microsoft Intune endpoint security antivirus policy. For more information about creating and assigning antivirus policies, see [Antivirus policy for endpoint security in Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy).
+To configure always-on protection settings in Microsoft Intune, use an endpoint security **Antivirus** policy. For detailed instructions, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create endpoint security policies</a> or <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (links open new tabs in the Intune documentation).
 
-To create a new policy and manage antivirus settings with Intune, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating a new policy for Windows, choose the following options:
+When you create the policy, use these specific settings:
 
+- **Policy type**: Select **Manage** \> **Antivirus** on the **Endpoint security \| Overview** page.
 - **Platform**: Select **Windows**.
 - **Profile**: Select **Microsoft Defender Antivirus**.
-- **Configuration settings**: In the **Defender** section, configure the following settings:
+
+When you create or modify the policy, use these specific settings on the **Configuration settings** tab:
+
+- In the **Defender** section, configure the following settings:
   - **Allow Real-Time Monitoring**: Select **Allowed**.
   - **Allow On Access Protection**: Select **Allowed**.
   - **Real Time Scan Direction**: Select **Monitor all files (bi-directional)**.
   - **Allow behavior monitoring**: Select **Allowed**.
 
-To edit an existing policy for Windows devices, see <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (opens in a new tab in the Intune documentation):
-
-1. On the **Summary** tab of the **Endpoint security \| Antivirus** page, select the policy.
-1. Find the **Configuration settings** section in the **Properties** section:
-   - Expand **Defender** to see the current settings.
-   - Select **Edit** next to **Configuration settings** to update the settings.
-1. Configure **Allow Real-Time Monitoring**, **Allow On Access Protection**, **Real Time Scan Direction**, and **Allow behavior monitoring** by using the values listed for a new policy.
-
 The Microsoft Defender Antivirus profile doesn't include a separate setting for heuristics. Heuristics are part of real-time protection. For descriptions of all available Windows settings, options, defaults, recommendations, and CSP mappings, see [Configure Microsoft Defender Antivirus using Microsoft Intune](use-intune-config-manager-microsoft-defender-antivirus.md#policies-and-settings).
+
+## Configure always-on protection settings in the Microsoft Defender portal
+
+If your organization [manages endpoint security policies in the Microsoft Defender portal](endpoint-security-policies-configure.md), use a Microsoft Defender Antivirus policy to configure always-on protection.
+
+For detailed instructions, see <a href="endpoint-security-policies-configure.md#create-an-endpoint-security-policy" target="_blank">Create an endpoint security policy</a> or <a href="endpoint-security-policies-configure.md#edit-an-endpoint-security-policy" target="_blank">Edit an endpoint security policy</a> (links open new tabs).
+
+When you create the policy on the **Endpoint security policies** page in the Microsoft Defender portal at <https://security.microsoft.com/policy-inventory>, use these specific settings:
+
+- **Select platform**: Select **Windows**.
+- **Select template**: Select **Microsoft Defender Antivirus**.
+
+When you create or modify the policy, use these specific settings on the **Configuration settings** tab:
+
+- In the **Defender** section, configure the following settings:
+  - **Allow Real-Time Monitoring**: Select **Allowed**.
+  - **Allow On Access Protection**: Select **Allowed**.
+  - **Real Time Scan Direction**: Select **Monitor all files (bi-directional)**.
+  - **Allow behavior monitoring**: Select **Allowed**.
+
+The Microsoft Defender Antivirus template doesn't include a separate setting for heuristics. Heuristics are part of real-time protection.
+
+## Configure always-on protection settings in Microsoft Configuration Manager
+
+For instructions to create and deploy an antimalware policy, see [Endpoint Protection antimalware policies in Configuration Manager](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies).
+
+In the **Real-time protection** settings of the antimalware policy, configure the following settings:
+
+- **Enable real-time protection**: Select **Yes**.
+- **Monitor file and program activity on your computer**: Select **Yes**.
+- **Scan system files**: Select **Scan incoming and outgoing files**.
+- **Enable behavior monitoring**: Select **Yes**.
 
 <a name="group-policy"></a>
 
@@ -132,6 +162,40 @@ To disable real-time protection by using Group Policy:
 1. Go to **Microsoft Defender Antivirus** \> **Real-time Protection**.
 1. In the details pane of **Real-time Protection**, open **Turn off real-time protection**.
 1. Select **Enabled**, and then select **OK**.
+
+## Configure always-on protection settings using PowerShell
+
+Run the commands in an elevated PowerShell session (a PowerShell window you opened by selecting **Run as administrator**).
+
+The following command turns on real-time monitoring and behavior monitoring, and configures Microsoft Defender Antivirus to scan incoming and outgoing files:
+
+```powershell
+Set-MpPreference -DisableRealtimeMonitoring $false -DisableBehaviorMonitoring $false -RealTimeScanDirection Both
+```
+
+The following command displays the configured values:
+
+```powershell
+Get-MpPreference | Select-Object DisableRealtimeMonitoring, DisableBehaviorMonitoring, RealTimeScanDirection
+```
+
+Verify that _DisableRealtimeMonitoring_ and _DisableBehaviorMonitoring_ are set to `False`, and _RealTimeScanDirection_ is set to `0`.
+
+For detailed syntax and parameter information, see [**Set-MpPreference**](/powershell/module/defender/set-mppreference) and [**Get-MpPreference**](/powershell/module/defender/get-mppreference).
+
+## Turn on real-time protection in the Windows Security app
+
+The [Windows Security app](microsoft-defender-security-center-antivirus.md) lets you turn on real-time protection on an individual device. It doesn't provide separate controls for all the always-on protection settings described in this article.
+
+To turn on real-time protection in the Windows Security app:
+
+1. Open the **Windows Security** app and select **Virus & threat protection**.
+1. On the **Virus & Threat protection** page, select **Manage settings** in the **Virus & threat protection settings** section.
+1. On the **Virus & threat protection settings** page, slide the **Real-time protection** toggle to :::image type="icon" source="media/toggle-on.png" border="false"::: **On**.
+
+If your organization manages real-time protection, the **Real-time protection** setting might be unavailable. If you turn off real-time protection, it turns on again automatically after a short delay.
+
+For more information, see [Microsoft Defender Antivirus in the Windows Security app](microsoft-defender-security-center-antivirus.md).
 
 ## Related content
 

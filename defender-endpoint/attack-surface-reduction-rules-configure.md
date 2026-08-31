@@ -11,8 +11,8 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
-ms.date: 08/26/2026
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1015
+ms.date: 08/31/2026
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to configure attack surface reduction rules on devices so that I can block risky software behaviors that attackers exploit.
 appliesto:
@@ -74,44 +74,48 @@ In Intune, endpoint security policies are the recommended method to deploy ASR r
 
 ### Configure ASR rules and exclusions in Intune using endpoint security policies
 
-To configure ASR rules using a Microsoft Intune Endpoint Security **Attack surface reduction** policy, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these specific settings:
+To configure ASR rules and exclusions in Microsoft Intune, use an endpoint security **Attack surface reduction** policy. For detailed instructions, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create endpoint security policies</a> or <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (links open new tabs in the Intune documentation).
+
+When you create the policy, use these specific settings:
+
+- **Policy type**: Select **Manage** \> **Attack surface reduction** on the **Endpoint security \| Overview** page.
+- **Platform**: Select **Windows**.
+- **Profile**: Select **Attack Surface Reduction Rules**.
 
 > [!IMPORTANT]
 > Microsoft Defender for Endpoint management supports device objects only. Targeting users isn't supported. Assign the policy to Microsoft Entra device groups, not user groups.
 
-- **Policy type**: Select **Attack surface reduction** on the **Endpoint security \| Overview** page.
-- **Platform**: Select **Windows**.
-- **Profile**: Select **Attack Surface Reduction Rules**.
-- **Configuration settings** tab:
-  - **Attack surface reduction rules**: Typically, you can enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** or **Warn** mode without testing. You should test other ASR rules in **Audit** mode before you switch them to **Block** or **Warn** mode. For more information, see the [ASR rules deployment guide](attack-surface-reduction-rules-deployment.md).
+When you create or modify the policy, use these specific settings on the **Configuration settings** tab:
 
-    After you set the rule mode to **Audit**, **Block**, or **Warn**, an **ASR only per rule exclusions** section appears where you can specify exclusions that apply to that rule only.
+- **Attack surface reduction rules**: Typically, you can enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** or **Warn** mode without testing. You should test other ASR rules in **Audit** mode before you switch them to **Block** or **Warn** mode. For more information, see the [ASR rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
-  - **Attack surface reduction only exclusions**: Use this section to specify exclusions that apply to all ASR rules.
+  After you set the rule mode to **Audit**, **Block**, or **Warn**, an **ASR only per rule exclusions** section appears where you can specify exclusions that apply to that rule only.
 
-    To specify per-ASR rule exclusions or global ASR rule exclusions, use either of the following methods:
+- **Attack surface reduction only exclusions**: Use this section to specify exclusions that apply to all ASR rules.
 
-    - Select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add**. In the box that appears, enter the path or path and filename to exclude. For example:
-      - `C:\folder`
-      - `%ProgramFiles%\folder\file.exe`
-        `C:\path`
+  To specify per-ASR rule exclusions or global ASR rule exclusions, use either of the following methods:
 
-    - Select :::image type="icon" source="media/intune-icon-import.png" border="false"::: **Import** to import a CSV file that contains the names of files and folders to exclude. The CSV file uses the following format:
+  - Select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add**. In the box that appears, enter the path or path and filename to exclude. For example:
+    - `C:\folder`
+    - `%ProgramFiles%\folder\file.exe`
+    - `C:\path`
 
-      ```text
-      AttackSurfaceReductionOnlyExclusions
-      "C:\folder"
-      "%ProgramFiles%\folder\file.exe"
-      "C:\path"
-      ...
-      ```
+  - Select :::image type="icon" source="media/intune-icon-import.png" border="false"::: **Import** to import a CSV file that contains the names of files and folders to exclude. The CSV file uses the following format:
 
-      > [!TIP]
-      > Double quotation marks around the values are optional, and are ignored (aren't used in the values) if you include them. Don't use single quotation marks around the values.
+    ```text
+    AttackSurfaceReductionOnlyExclusions
+    "C:\folder"
+    "%ProgramFiles%\folder\file.exe"
+    "C:\path"
+    ...
+    ```
 
-    For more information about exclusions, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
+    > [!TIP]
+    > Double quotation marks around the values are optional, and are ignored (aren't used in the values) if you include them. Don't use single quotation marks around the values.
 
-  - **Enable controlled folder access**, **Controlled folder access protected folders**, and **Controlled folder access allowed applications**: For more information, see [Configure CFA in Intune using endpoint security policies](controlled-folder-access-configure.md#configure-cfa-in-intune-using-endpoint-security-policies).
+  For more information about exclusions, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
+
+- **Enable controlled folder access**, **Controlled folder access protected folders**, and **Controlled folder access allowed applications**: For more information, see [Configure CFA in Intune using endpoint security policies](controlled-folder-access-configure.md#configure-cfa-in-intune-using-endpoint-security-policies).
 
 <a name="custom-profile-in-intune-alternative-2"></a>
 
@@ -253,16 +257,16 @@ Complete the remaining steps in [Configure ASR rules in Intune using custom prof
 
 If your organization [manages endpoint security policies in the Microsoft Defender portal](endpoint-security-policies-configure.md), you can configure ASR rules and their exclusions with the same endpoint security policies that Intune uses.
 
-On the **Windows** tab of the **Endpoint security policies** page of the Defender portal at <https://security.microsoft.com/policy-inventory>, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create new policy**, and then use these specific settings:
+For detailed instructions, see <a href="endpoint-security-policies-configure.md#create-an-endpoint-security-policy" target="_blank">Create an endpoint security policy</a> or <a href="endpoint-security-policies-configure.md#edit-an-endpoint-security-policy" target="_blank">Edit an endpoint security policy</a> (links open new tabs).
+
+When you create the policy on the **Endpoint security policies** page in the Defender portal at <https://security.microsoft.com/policy-inventory>, use these specific settings:
 
 - **Select platform**: Select **Windows**.
 - **Select template**: Select **Attack surface reduction rules**.
 
-Use the same **Attack Surface Reduction Rules** profile and settings described in [Configure ASR rules and exclusions in Intune using endpoint security policies](#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies). These settings include global attack surface reduction only exclusions and per-ASR rule exclusions.
+When you create or modify the policy, use the same settings described in [Configure ASR rules and exclusions in Intune using endpoint security policies](#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies) on the **Configuration settings** tab. These settings include global attack surface reduction only exclusions and per-ASR rule exclusions.
 
-For the full procedure, see [Create an endpoint security policy](endpoint-security-policies-configure.md#create-an-endpoint-security-policy).
-
-When you assign the policy, note that assignment group limitations apply to devices managed through security settings management. For details, see the [Assignments step](endpoint-security-policies-configure.md#create-an-endpoint-security-policy).
+When you assign the policy, assignment group limitations apply to devices managed through security settings management. For details, see the [Assignments step](endpoint-security-policies-configure.md#create-an-endpoint-security-policy).
 
 <a name="mdm"></a>
 
