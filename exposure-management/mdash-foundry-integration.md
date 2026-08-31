@@ -30,7 +30,47 @@ To create a Microsoft Foundry project, follow these steps.
 
 Wait for the project to be created. When the project overview page appears, your project is ready. 
 
+### Authentication methods
+
+During MDASH onboarding in the Microsoft Defender portal, you're asked to choose how MDASH authenticates to your Microsoft Foundry resource. Use this section before you start onboarding to decide which authentication method to use and to prepare the required values, permissions, and setup steps.
+
+MDASH supports two authentication methods for connecting to your Microsoft Foundry resource: **Keyless** (recommended) and **API key**.
+
+__Keyless (recommended)__
+
+Keyless authentication is recommended for most customers. It uses managed identity and RBAC for access control, avoids storing secrets in Defender, and removes API key rotation from the connection lifecycle.
+
+To use Keyless authentication, run the one-time onboarding script. The minimum permissions required to run the script are:
+
+- Contributor on the managed identity's resource group, to create the managed identity and federated identity credential.
+
+- Role Based Access Control Administrator on the Foundry account, to assign the Foundry User role.
+
+Alternatively, if the Foundry account and managed identity are in the same resource group, Owner on that resource group is sufficient. If they are in different resource groups, Owner is required on both resource groups.
+
+As part of running the script, you'll need to provide your Foundry resource ID. You can find it in the Azure portal under your Foundry resource (__Overview → JSON View → Resource ID__
+
+After the script completes, copy the generated values required by the Defender onboarding flow: Tenant ID and Managed Identity Client ID.
+
+__API key__
+
+API key authentication uses an API key copied from the Microsoft Foundry portal. You are responsible for storing, rotating, and revoking the API key according to your organization's security requirements.
+
 ## Copy the required values
+
+Copy the values that MDASH needs to connect to your Foundry project. The values you need depend on the authentication method you choose during MDASH onboarding in the Microsoft Defender portal.
+
+__Project endpoint__
+
+Locate Project Endpoint, and then copy it. The Project endpoint is required for both authentication methods.
+
+__Keyless (recommended)__
+
+If you plan to use Keyless authentication, run the one-time setup script described in [Authentication methods,](mdash-foundry-integration.md#authentication-methods) and copy the generated values requested by the onboarding flow: Tenant ID and Managed Identity Client ID.
+
+__API key__
+
+If you plan to use API key authentication, locate API Key, and then copy it.
 
 From the Foundry project's **home** page, copy the values that the service needs to connect to your Foundry project.
 
@@ -489,13 +529,31 @@ Complete Defender portal onboarding from the getting started page. For more info
 To replace a connected Foundry with a different one, or to remove the connection, you can disconnect at any time.
 
 1. Go to the **Initiative** and select **Settings** (top-right).
-1. Select **Disconnect** next to the connected Foundry resource, then confirm by selecting **Disconnect**.
 
-Once disconnected, you can leave it as is, or reconnect at any time to the same Foundry or to a different one.
+2. Select **Disconnect** next to the connected Foundry resource, then confirm by selecting **Disconnect**.
+
+Once disconnected, you can leave it as is or reconnect at any time to the same Foundry or to a different one.
 
 > [!NOTE]
 > - Disconnecting the connected Foundry without providing an alternative will disable the use of the agentic code scanning.
-> - Disconnecting only removes the connection from the agentic code scanner. The Microsoft Foundry resource itself isn't deleted.
+> - Disconnecting removes the connection from MDASH. It doesn't delete the Microsoft Foundry resource.
+> 
+For **Keyless** authentication, disconnecting doesn't remove the managed identity, federated identity credential, or RBAC role assignment created for the connection. Remove those resources separately if your organization requires full cleanup.
+For **API key** authentication, disconnecting doesn't delete or rotate the API key in Foundry. Revoke or rotate the key separately if it is no longer needed.
+
+## Switch authentication method
+
+You can switch the authentication method for a connected Foundry resource to be Keyless at any time.
+
+1. Go to the Initiative and select Settings.
+
+1. Next to the connected Foundry resource, select **Switch method to Keyless**. For details about both authentication methods, setup steps, and required permissions, see [Authentication methods](mdash-foundry-integration.md#authentication-methods).
+
+3. Select **Validate** to verify the new authentication method.
+
+4. Select **Save** to apply the change.
+
+Until the new authentication method is validated and saved, MDASH continues to use the existing authentication method for scans.
 
 ## Related content
 
@@ -504,5 +562,6 @@ Once disconnected, you can leave it as is, or reconnect at any time to the same 
 - [Install and run Defender CLI](defender-cli.md)
 - [Trigger an on-demand agentic scan](trigger-on-demand-scan.md)
 - [View results in the initiative](mdash-initiative.md)
+
 - [Scan and secure your source code](/security/zero-trust/prioritizing-defense/scan-secure-source-code)
 
