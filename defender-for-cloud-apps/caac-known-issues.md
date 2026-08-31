@@ -1,16 +1,18 @@
 ---
 title: Conditional Access app control known limitations | Microsoft Defender for Cloud Apps
 description: Learn about known limitations for working with Conditional Access app control in Microsoft Defender for Cloud Apps.
-ms.date: 06/16/2026
+ms.date: 08/28/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Known limitations in Conditional Access app control 
 
-This article describes known limitations for working with Conditional Access app control in Microsoft Defender for Cloud Apps. These limitations cover file size limits for session policies and content inspection, encrypted file handling, IPv6 support, reverse proxy session behavior, and Microsoft Edge in-browser protection. Review this information when you configure session or access policies, or when you troubleshoot unexpected policy behavior.
+## Overview
+
+This article lists known limits for Conditional Access app control in Microsoft Defender for Cloud Apps. These limits cover file size, content inspection, encrypted files, IPv6 support, reverse proxy sessions, and Microsoft Edge in-browser protection. Review this page when you set up policies or fix unexpected behavior.
 
 To learn more about security limitations, contact our support team.
 
@@ -65,7 +67,7 @@ Access and session policies support IPv4 only. If a request is made over IPv6, I
 
 ## Limitations for sessions that the reverse proxy serves
 
-The built-in app, context loss, and file upload limitations in this section apply only to sessions that the reverse proxy serves. Users of Microsoft Edge can benefit from in-browser protection instead of using the reverse proxy, so these limitations don't affect them.
+The following built-in app, context loss, and file upload limitations apply only to sessions that the reverse proxy serves. Users of Microsoft Edge can benefit from in-browser protection instead of using the reverse proxy, so these limitations don't affect them.
 
 ### Built-in app and browser plug-in limitations
 
@@ -104,12 +106,18 @@ The following table lists example results when you define the **Block upload of 
 |A user tries to upload a selection of 200 files by using the file upload dialog. Some are sensitive, and some aren't. |Nonsensitive files are uploaded. <br><br>Sensitive files are blocked. |
 |A user tries to upload a selection of 200 files by using a drag-and-drop operation. Some are sensitive, and some aren't. |The full set of files is blocked. |
 
+### Teams add-ins launched from proxied Google Workspace sessions
+
+When you use Defender for Cloud Apps session control with Google Workspace, launching Microsoft Teams or Teams-integrated functionality from within a proxied Gmail session might not be supported. Certain third-party and nested application authentication flows use separate authentication contexts that can't be maintained through the session proxy. In these scenarios, the Teams experience might bypass the proxied session or fail to load as expected. This behavior is by design and is a known limitation of the current architecture.
+
+To work around this limitation, access Microsoft Teams directly rather than launching it from within the proxied Google Workspace session.
+
 ## Limitations for sessions that are served with Microsoft Edge in-browser protection
 
-The Google Workspace, deep link, and outdated policy enforcement limitations in this section apply only to sessions that are served with Microsoft Edge in-browser protection.
+The following Google Workspace, deep link, and outdated policy enforcement limitations apply only to sessions that are served with Microsoft Edge in-browser protection.
 
 ### Secure Microsoft Edge Session Controls can't be used with Google Workspace in Enterprise Microsoft Edge browsers
-Google Workspace isn't supported with in-browser protection in the Enterprise Microsoft Edge browser. As a result, Secure Microsoft Edge Session controls in Google Workspaces aren't supported. In Google Workspaces, real time DLP files scans aren't supported, the fallback authentication of suffixes is used, and file upload, download, cut, and copy aren't supported.
+Google Workspace isn't supported with in-browser protection in the Enterprise Microsoft Edge browser. As a result, Secure Microsoft Edge Session controls in Google Workspaces aren't supported. In Google Workspaces, real-time data loss prevention (DLP) file scans aren't supported, the fallback authentication of suffixes is used, and file upload, download, cut, and copy aren't supported.
 
 ### Deep link is lost when user switches to Microsoft Edge by clicking 'Continue in Microsoft Edge'  
 

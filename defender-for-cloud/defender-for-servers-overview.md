@@ -2,9 +2,10 @@
 title: Overview of Defender for Servers in Defender for Cloud
 description: Get an overview of the Defender for Servers plan in Microsoft Defender for Cloud, including its features and integration with other Defender services.
 ms.topic: concept-article
-ms.date: 08/07/2026
-# customer intent: I want to understand how the Defender for Servers plan in Defender for Cloud can help reduce security risk and protect against threats.
+ms.date: 08/10/2026
+#customer intent: As a security professional, I want to understand how Defender for Servers reduces security risk so that I can protect machines from threats.
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1015
 ---
 
 # Defender for Servers
@@ -68,6 +69,8 @@ For more details about billing scenarios and licensing, see [Common questions ab
 ## Plan protection features
 
 Plan features are summarized in the table.
+
+For a comparison of AWS and GCP coverage by plan, see the [multicloud workload protection support matrix](multicloud-support-matrix.md).
 
 | Feature | Plan 1 (P1) | Plan 2 (P2) | Cloud availability |
 |--|--|--|--|

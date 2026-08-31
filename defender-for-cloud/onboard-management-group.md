@@ -1,19 +1,24 @@
 ---
-title: Onboard a management group
+title: Onboard a management group to Microsoft Defender for Cloud
 description: Learn how to use a supplied Azure Policy definition to enable Microsoft Defender for Cloud for all the subscriptions in a management group.
 ms.topic: how-to
-ms.date: 05/28/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to onboard management groups to Defender for Cloud so that all subscriptions are covered consistently.
 ai-usage: ai-assisted
 ---
 
 # Enable Defender for Cloud on all subscriptions in a management group
 
+## Overview
+
 You can use Azure Policy to enable Microsoft Defender for Cloud on all the Azure subscriptions within the same management group (MG). This is more convenient than accessing them individually from the portal, and works even if the subscriptions belong to different owners.
 
 ## Prerequisites
 
-Enable the resource provider `_Microsoft.Security_` for the management group using the following Azure CLI command:
+Before you onboard the management group, you must register the required resource provider.
+
+Enable the resource provider `_Microsoft.Security_` for the management group. The following Azure CLI command registers the `Microsoft.Security` resource provider at the management group scope so that Defender for Cloud policies can be assigned and evaluated:
 
 ```azurecli
 az provider register --namespace Microsoft.Security --management-group-id …
@@ -50,7 +55,8 @@ When the definition is assigned, it will:
 
 The remediation task will then enable Defender for Cloud's basic functionality on the non-compliant subscriptions.
 
-## Optional modifications
+<a name="optional-modifications"></a>
+## Optional policy definition modifications
 
 There are various ways you might choose to modify the Azure Policy definition:
 
@@ -76,7 +82,7 @@ There are various ways you might choose to modify the Azure Policy definition:
     },
     ```
 
-    If you change it to the following, only subscriptions set to 'standard' would be classified as compliant:
+    If you change the `existenceCondition` to the following, only subscriptions set to 'standard' would be classified as compliant:
 
     ```json
     "existenceCondition": {
@@ -89,8 +95,9 @@ There are various ways you might choose to modify the Azure Policy definition:
 
     The supplied definition's `deployment` section has a parameter `pricingTier`. By default, this is set to `free`, but you can modify it.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
-> [Enable enhanced protections](connect-azure-subscription.md)
+> [Enable enhanced security features in Defender for Cloud](connect-azure-subscription.md)
 

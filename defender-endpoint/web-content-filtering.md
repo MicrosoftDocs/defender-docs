@@ -50,7 +50,7 @@ Ensure you meet the requirements described in the following table:
 |Portal access|You must have access to the [Microsoft Defender portal](https://security.microsoft.com).|
 |Operating system|Your organization's devices must be running one of the following operating systems with the [latest antivirus/antimalware updates](microsoft-defender-antivirus-updates.md): <br/>- Windows 11<br/>- Windows 10 Anniversary Update (version 1607) or later <br/>- Windows Server 2019 or later <br/>- For macOS availability, see [Network Protection for macOS](network-protection-macos.md)<br/>- For Linux availability, see [Network Protection for Linux](network-protection-linux.md)|
 |Browser|Your devices must be running one of the following browsers: <br/>- Microsoft Edge<br/>- Google Chrome<br/>- Mozilla Firefox<br/>- Brave<br/>- Opera<br/>- Internet Explorer|
-|Related protection|[Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and [network protection](network-protection.md) must be enabled on your organization's devices.|
+|Related protection|[Windows Defender SmartScreen](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/) and [network protection](network-protection.md) must be enabled on your organization's devices.|
 
 <a name="data-handling"></a>
 ## Web content filtering data storage and privacy

@@ -8,15 +8,15 @@ ms.reviewer: amyhari
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ms.collection: ms-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security administrator, I want to set up federated data connectors so that I can query external data sources from the Microsoft Sentinel data lake.
 ---
 
-# Set up federated data connectors in Microsoft Sentinel data lake
+# Set up federated data connectors in Microsoft Sentinel data lake (Preview)
 
 This article explains how to configure federated data connectors to enable querying of external data sources from the Microsoft Sentinel data lake. You can federate with Azure Databricks, Azure Data Lake Storage (ADLS) Gen 2, and Microsoft Fabric. The article walks through creating a service principal, storing credentials in Azure Key Vault, and setting up a connector instance for each supported data source. Use this guide if you're a security administrator who needs to bring external data into Microsoft Sentinel for investigation and analysis.
 
@@ -48,7 +48,7 @@ For Azure Databricks and ADLS Gen 2 federation, you need a service principal wit
    1. Select **New client secret**.
    1. Enter a description and select an expiration period.
    1. Select **Add**.
-   1. Copy the client secret value immediately for use in the next section. You can't retrieve this value after you leave the page.
+   1. Copy the client secret value immediately because you can't retrieve it later. You need this value when you store the secret in Azure Key Vault.
 
 1. **Note the application details**:
    - Application (client) ID
@@ -107,7 +107,7 @@ The process for creating a connector instance varies depending on whether you're
 
 ### [Microsoft Fabric](#tab/fabric)
 
-Use this tab to create a federated connector instance for Microsoft Fabric.
+Use the following steps to create a federated connector instance for Microsoft Fabric.
 
 #### Create a Microsoft Fabric connector instance
 
@@ -145,7 +145,7 @@ To configure the Fabric connector instance:
 
 ### [Azure Data Lake Storage Gen 2](#tab/adls)
 
-Use this tab to create a federated connector instance for Azure Data Lake Storage (ADLS) Gen 2.
+Use the following steps to create a federated connector instance for Azure Data Lake Storage (ADLS) Gen 2.
 
 #### Create an ADLS Gen 2 connector instance
 
@@ -189,7 +189,7 @@ Select **Connect**, to complete the setup for the ADLS Gen 2 connector instance.
 
 ### [Azure Databricks](#tab/databricks)
 
-Use this tab to create a federated connector instance for Azure Databricks.
+Use the following steps to create a federated connector instance for Azure Databricks.
 
 #### Prepare the Azure Databricks environment
 
@@ -210,6 +210,8 @@ Before creating the connector, configure access in your Databricks environment a
 
 <a name="create-the-connector-instance"></a>
 #### Create the Azure Databricks connector instance
+
+Follow these steps to create the Azure Databricks connector instance in the Defender portal:
 
 1. On the **Data federation** > **Catalog** page, select the **Azure Databricks** row.
 1. In the side panel, select **Connect a connector**.

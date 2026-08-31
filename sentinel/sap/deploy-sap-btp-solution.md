@@ -4,8 +4,8 @@ description: Learn how to deploy the Microsoft Sentinel solution for SAP Busines
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.custom: devx-track-azurepowershell, msecd-doc-authoring-1014
-ms.date: 06/12/2026
+ms.custom: devx-track-azurepowershell, msecd-doc-authoring-1016
+ms.date: 07/01/2026
 ai-usage: ai-assisted
 
 
@@ -115,7 +115,7 @@ You also can retrieve the logs via the UI:
 
 ## Mass-Onboard SAP BTP subaccounts at scale
 
-To onboard SAP BTP subaccounts at scale, API and CLI based approaches are recommended. Get started with [this script library](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/SAP%20BTP/Tools/).
+To onboard SAP BTP subaccounts at scale, API and CLI based approaches are recommended. Get started with the [SAP BTP onboarding script library](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/SAP%20BTP/Tools/).
 
 ## Rotate the BTP client secret
 

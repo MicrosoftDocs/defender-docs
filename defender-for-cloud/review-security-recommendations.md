@@ -255,10 +255,6 @@ You can interact with recommendations in multiple ways. If an option isn't avail
 
 1. [Remediate the recommendation](implement-security-recommendations.md).
 
->[!NOTE]
->During the preview transition, you may see Preview and New version indicators on certain recommendations. These tags distinguish new individual items from grouped ones shown side by side. Use filters to limit the view to one format when needed.
->:::image type="content" source="media/transition-grouped-individual-recommendations/recommendations-tags.png" alt-text="Screenshot of recommendation tags interface showing options for 'New version' and 'Set for deprecation' to filter recommendations." lightbox="media/transition-grouped-individual-recommendations/recommendations-tags.png":::
-
 ::: zone-end
 
 ::: zone pivot="defender-portal"
@@ -367,8 +363,11 @@ You can use [Azure Resource Graph](/azure/governance/resource-graph/) to write a
 
 1. Review the results.
 
->[!NOTE]
->If your dashboards or automations currently rely on Sub Assessment APIs or queries, plan to migrate to the Assessment APIs / securityFindings equivalents for the individual recommendation format. During the side by side period, you might see duplicate data (legacy grouped + new individual). Use **Preview/New** version UI tags or API filters to focus on one format and avoid double counting. The Open query entry point can help you generate updated queries from the portal.
+> [!NOTE]
+> The `properties.status.firstEvaluationDate` field indicates when the security assessment was first evaluated for the resource. This value is different from **First seen at** in software inventory, which indicates when the software was first seen on the asset.
+
+> [!NOTE]
+> If your dashboards or automations currently rely on Sub Assessment APIs or queries, plan to migrate to the Assessment APIs / securityFindings equivalents for the individual recommendation format. During the side by side period, you might see duplicate data (legacy grouped + new individual). Use **Preview/New** version UI tags or API filters to focus on one format and avoid double counting. The Open query entry point can help you generate updated queries from the portal.
 
 ::: zone-end
 

@@ -119,7 +119,7 @@ sections:
       - question: |
           I'm switching from a non-Microsoft security solution to Microsoft Defender for Endpoint. Is there an easy way to import my old rules to attack surface reduction?
         answer: |
-          In most cases, it's easier and better to start with the baseline recommendations suggested by [Defender for Endpoint](/windows/security/threat-protection) than to attempt to import rules from another security solution. Use **Audit** mode, monitoring, and analytics to configure Defender for Endpoint.
+          In most cases, it's easier and better to start with the baseline recommendations suggested by [Defender for Endpoint](microsoft-defender-endpoint.md) than to attempt to import rules from another security solution. Use **Audit** mode, monitoring, and analytics to configure Defender for Endpoint.
 
           The default configuration for most attack surface reduction rules, combined with Defender for Endpoint's real-time protection, protects against a large number of exploits and vulnerabilities.
 

@@ -1,8 +1,10 @@
 ---
 title: Configure active monitoring for OT networks - Microsoft Defender for IoT
 description: Describes the available methods for configuring active monitoring on your OT network with Microsoft Defender for IoT.
-ms.date: 06/02/2022
+ms.date: 07/03/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Configure active monitoring for OT networks
@@ -34,7 +36,7 @@ When planning active monitoring:
 
 ## Configure network access
 
-Before you can configure active monitoring, you must also configure your network to allow the sensor's management port IP address access to the OT network where your devices reside.
+Before you configure active monitoring, you must also set up your network to allow the sensor's management port IP address to reach the OT network where your devices are.
 
 For example, the following image highlights in grey the extra network access you must configure from the management interface to the OT network.
 

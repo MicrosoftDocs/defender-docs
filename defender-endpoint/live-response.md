@@ -47,10 +47,10 @@ Devices must be running one of the following supported operating systems and ver
 
 - **Windows 10**:
   - [Windows 10, version 1909](/windows/whats-new/whats-new-windows-10-version-1909) or later.
-  - [Windows 10, version 1903](/windows/whats-new/whats-new-windows-10-version-1903) with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384).
-  - [Windows 10, version 1809 (RS 5)](/windows/whats-new/whats-new-windows-10-version-1809) with [Windows 10 update KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818).
-  - [Windows 10, version 1803 (RS 4)](/windows/whats-new/whats-new-windows-10-version-1803) with [Windows 10 update KB4537795](https://support.microsoft.com/help/4537795/windows-10-update-kb4537795).
-  - [Windows 10, version 1709 (RS 3)](/windows/whats-new/whats-new-windows-10-version-1709) with [Windows 10 update KB4537816](https://support.microsoft.com/help/4537816/windows-10-update-kb4537816).
+  - [Windows 10, version 1903](/windows/whats-new/whats-new-windows-10-version-1903) with [KB4515384](https://support.microsoft.com/servicing/os/windows-10/2019/09/september-10-2019-kb4515384-os-build-18362-356).
+  - [Windows 10, version 1809 (RS 5)](/windows/whats-new/whats-new-windows-10-version-1809) with [Windows 10 update KB4537818](https://support.microsoft.com/servicing/os/windows-10/2020/02/february-25-2020-kb4537818-os-build-17763-1075).
+  - [Windows 10, version 1803 (RS 4)](/windows/whats-new/whats-new-windows-10-version-1803) with [Windows 10 update KB4537795](https://support.microsoft.com/topic/february-25-2020-kb4537795-os-build-17134-1345-36b35e62-d897-2dc3-289c-44a1327c2d8e).
+  - [Windows 10, version 1709 (RS 3)](/windows/whats-new/whats-new-windows-10-version-1709) with [Windows 10 update KB4537816](https://support.microsoft.com/servicing/os/windows-10/2020/02/february-25-2020-kb4537816-os-build-16299-1717).
 
 - **macOS**: Version `101.43.84` or later. Supported on Intel-based and ARM-based macOS devices.
 
@@ -59,12 +59,12 @@ Devices must be running one of the following supported operating systems and ver
 - **Windows Server 2022** or later.
 
 - **Windows Server 2019**:
-  - Version 1903 (with [Windows 10 update KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)) or later.
-  - Version 1809 (with [Windows 10 update KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818)).
+  - Version 1903 (with [Windows 10 update KB4515384](https://support.microsoft.com/servicing/os/windows-10/2019/09/september-10-2019-kb4515384-os-build-18362-356)) or later.
+  - Version 1809 (with [Windows 10 update KB4537818](https://support.microsoft.com/servicing/os/windows-10/2020/02/february-25-2020-kb4537818-os-build-17763-1075)).
 
 - **Windows Server 2016 and Windows Server 2012 R2**:
   - Requires the [Unified Agent](update-agent-mma-windows.md#update-mma-on-your-devices).
-  - We also recommend the patch for the latest sensor version: [Microsoft Defender for Endpoint update for EDR sensor KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac).
+  - We also recommend the patch for the latest sensor version: [Microsoft Defender for Endpoint update for EDR sensor KB5005292](https://support.microsoft.com/servicing/Management-Tools/microsoft-defender/update/microsoft-defender-for-endpoint-update-for-edr-sensor).
   - If you use a static proxy, live response doesn't work as expected for offline down-level servers onboarded using the streamlined method. Consider using a system proxy instead.
 
 - **Azure Stack HCI OS**: Version 23H2 or later.

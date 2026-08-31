@@ -5,12 +5,12 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 #Customer intent: As a security analyst, I want to customize activity tracking on entity timelines so that I can monitor specific events and behaviors relevant to my organization's security needs.
@@ -27,7 +27,7 @@ ai-usage: ai-assisted
 <a name="introduction"></a>
 ## Overview of custom timeline activities
 
-In addition to the activities tracked and presented in the timeline by Microsoft Sentinel out-of-the-box, you can create any other activities you want to keep track of and have them presented on the timeline as well. You can create customized activities based on queries of entity data from any connected data sources. The following examples show how you might use this capability:
+Microsoft Sentinel tracks and presents activities in entity timelines out-of-the-box. You can also create custom activities and have them appear on the timeline. Custom activities are based on queries of entity data from any connected data source. The following examples show how you might use this capability:
 
 - Add new activities to the entity timeline by modifying existing out-of-the-box activity templates.
 
@@ -53,11 +53,11 @@ Follow these steps in the Azure portal to open the activity customization page:
 
 # [Defender portal](#tab/defender)
 
-Follow these steps in the Defender portal to open the Sentinel events view and customize activities for an entity:
+Follow these steps in the Defender portal to customize activities for an entity:
 
-1. In the Microsoft Defender portal, find any entity page.
+1. In the Microsoft Defender portal, open any entity page.
     1. Select **Assets > Devices** or **Identities**.
-    1. Select a device or a user from the list. If you selected a user, then select **View user page** on the following popup.
+    1. Select a device or a user from the list. For a user, select **View user page** on the popup that appears.
 
 1. On the entity page, select the **Sentinel events** tab.
 
@@ -102,7 +102,7 @@ Use the following steps to create a custom activity from an existing out-of-the-
 
     ---
 
-1. The **Activity wizard - Create new activity from template** will open, with its fields already populated from the template. You can make changes as you like in the **General** and **Activity configuration** tabs, or leave everything as is to continue viewing the out-of-the-box activity.
+1. The **Activity wizard - Create new activity from template** will open, with its fields already populated from the template. You can make changes as you like in the **General** and **Activity configuration** tabs, or leave the prepopulated settings unchanged to continue viewing the out-of-the-box activity.
 
 1. When you are satisfied, select the **Review and create** tab. When you see the **Validation passed** message, click the **Create** button at the bottom.
 
@@ -143,9 +143,9 @@ On the **Activity configuration** tab, write or paste the KQL query that will be
 > We recommend that your query uses an [Advanced Security Information Model (ASIM) parser](normalization-about-parsers.md) and not a built-in table. This ensures that the query will support any current or future relevant data source rather than a single data source.
 >
 
-In order to correlate events and detect the custom activity, the KQL requires an input of several parameters, depending on the entity type. The parameters are the various identifiers of the entity in question.
+To correlate events and detect the custom activity, the KQL query requires several parameters that depend on the entity type. These parameters are the identifiers of the entity.
 
-Selecting a strong identifier is better in order to have one-to-one mapping between the query results and the entity. Selecting a weak identifier may yield inaccurate results. [Learn more about entities and strong vs. weak identifiers](entities.md).
+Use a strong identifier for one-to-one mapping between query results and the entity. A weak identifier might yield inaccurate results. [Learn more about entities and strong vs. weak identifiers](entities.md).
 
 The following table provides information about the entities' identifiers.
 
@@ -166,7 +166,7 @@ At least one identifier is required in a query.
 | | Host_AzureID | the Microsoft Entra object ID of the host in Microsoft Entra ID (if Microsoft Entra domain joined) |
 | | Host_OMSAgentID | the OMS Agent ID of the agent installed on a specific host (unique per host) 
 
-Based on the entity selected you will see the available identifiers. Clicking on the relevant identifiers will paste the identifier into the query, at the location of the cursor.
+Based on the entity type you selected on the **General** tab, you'll see the available identifiers. Select an identifier to paste it into the query at the cursor location.
 
 > [!NOTE]
 > - The query can contain **up to 10 fields**, so you must project the fields you want.
@@ -218,7 +218,7 @@ Add any of the following parameters to your query:
     Summarize count() by <each parameter you’ve projected in the activity>, bin (TimeGenerated, Bucket in Hours)
     ```
 
-For example:
+The following example shows an activity title that uses dynamic parameters:
 
 :::image type="content" source="./media/customize-entity-activities/new-activity-title.png" alt-text="Screenshot - See the available values for your activity title":::
 

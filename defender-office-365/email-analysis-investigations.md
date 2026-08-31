@@ -53,7 +53,7 @@ Email clustering analysis also handles SecOps mailboxes, phishing simulations, p
 During email clustering analysis, all clustering queries ignore SecOps mailboxes and phishing simulation URLs that are configured in the Advanced delivery policy (the policy that designates SecOps mailboxes and third-party phishing simulations as trusted). These items aren't shown in the query. Excluding these trusted items keeps the clustering attributes simple and easy to read. Messages sent to SecOps mailboxes are skipped during threat analysis. Messages with phishing simulation URLs are also skipped. None of these excluded messages are removed during remediation.
 
 > [!NOTE]
-> When you open an email cluster in Explorer from the cluster details, the phishing simulation and SecOps mailbox filters are applied but aren't shown. If you change the Explorer filters, dates, or refresh the query within the page, then these filter exclusions are removed. Matching email messages are shown once again. If you refresh the Explorer page by using the browser refresh function, the original query filters reload. The reload includes the phishing simulation/SecOps filters, but removes any later changes you made.
+> When you open an email cluster in Explorer from the cluster details, the phishing simulation and SecOps mailbox filters are applied, but aren't shown. If you change the Explorer filters, dates, or refresh the query within the page, these filter exclusions are removed. Matching email messages are shown once again. If you refresh the Explorer page by using the browser refresh function, the original query filters reload. The reload includes the phishing simulation/SecOps filters, but removes any later changes you made.
 
 ## AIR updates pending email action status
 
@@ -90,8 +90,6 @@ For email or email clusters in the **Entities** tab of an investigation, **Preve
 
 In this example, the email is malicious but not in a mailbox.
 
-## Next steps
-
-After the investigation identifies remediation actions, you can review and approve them:
+## Next step
 
 - [View pending or completed remediation actions](air-review-approve-pending-completed-actions.md)

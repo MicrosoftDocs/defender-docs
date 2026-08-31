@@ -1,5 +1,5 @@
 ---
-title: Connect Microsoft Sentinel to Amazon Web Services to ingest AWS EKS logs
+title: Connect Microsoft Sentinel to Amazon Web Services to Ingest AWS EKS Logs
 description: Use the Amazon Web Services (AWS) S3-based Elastic Kubernetes Service (EKS) connector to ingest AWS EKS audit logs, collected in AWS S3 buckets, to Microsoft Sentinel.
 ms.author: edbaynash
 author: EdB-MSFT
@@ -30,11 +30,11 @@ This connector features an *AWS CloudFormation*-based onboarding script to strea
 
 The **Amazon Web Services S3 EKS** data connector serves the following use cases:
 
-- **Kubernetes security monitoring and threat detection:** Analyze AWS EKS audit logs to help identify and respond to security threats such as unauthorized access, privilege escalation, and suspicious API calls within your Kubernetes clusters. By ingesting these logs into Microsoft Sentinel, you can use its advanced analytics and threat intelligence to detect and investigate malicious activities targeting your containerized workloads.
+- **Kubernetes security monitoring and threat detection**: Analyze AWS EKS audit logs to help identify and respond to security threats such as unauthorized access, privilege escalation, and suspicious API calls within your Kubernetes clusters. By ingesting these logs into Microsoft Sentinel, you can use its advanced analytics and threat intelligence to detect and investigate malicious activities targeting your containerized workloads.
 
-- **Compliance and auditing for containerized environments:** AWS EKS audit logs provide detailed records of all API server interactions, which are crucial for compliance reporting and auditing purposes in containerized environments. The connector ensures that these audit logs are available within Microsoft Sentinel for easy access and analysis, helping meet regulatory requirements for container security.
+- **Compliance and auditing for containerized environments**: AWS EKS audit logs provide detailed records of all API server interactions, which are crucial for compliance reporting and auditing purposes in containerized environments. The connector ensures that these audit logs are available within Microsoft Sentinel for easy access and analysis, helping meet regulatory requirements for container security.
 
-- **DevSecOps and cluster governance:** Monitor developer activities, resource access patterns, and configuration changes within your EKS clusters to ensure proper governance and security practices in your DevSecOps workflows.
+- **DevSecOps and cluster governance**: Monitor developer activities, resource access patterns, and configuration changes within your EKS clusters to ensure proper governance and security practices in your DevSecOps workflows.
 
 This article explains how to configure the Amazon Web Services S3 EKS connector. The process of setting it up has two parts: the AWS side and the Microsoft Sentinel side. Each side's process produces information used by the other side. The exchange of configuration details between the AWS setup and the Microsoft Sentinel setup creates secure communication.
 
@@ -57,7 +57,7 @@ This article explains how to configure the Amazon Web Services S3 EKS connector.
 
 ## Enable and configure the Amazon Web Services S3 EKS connector
 
-To enable and configure the connector, complete the following tasks: 
+To enable and configure the connector, complete the following tasks:
 
 - **In your AWS environment:**
 
@@ -150,7 +150,7 @@ Follow the instructions on the AWS Console page for creating a new stack.
 
     - **EKSClusterName**: Enter the name of your existing EKS cluster.
     - **Microsoft Sentinel Workspace ID**: To find your Workspace ID:
-        - In the Azure portal, in the Microsoft Sentinel navigation menu, expand **Configuration** and select **Settings**. Select the **Workspace settings** tab, and find the Workspace ID on the Log Analytics workspace page.
+        - In the Azure portal, in the Microsoft Sentinel navigation menu, expand **Configuration** and select **Settings**. Select the **Workspace settings** tab and find the Workspace ID on the Log Analytics workspace page.
         - In the Defender portal, in the quick launch menu, expand **System** and select **Settings**. Select **Microsoft Sentinel**, then select **Log Analytics settings** under **Settings for `[WORKSPACE_NAME]`**. Find the Workspace ID on the Log Analytics workspace page, which opens in a new browser tab.
     - **BucketName**: Enter a unique name for the S3 bucket where EKS audit logs are stored.
     - **SentinelSQSQueueName**: Enter a name for the SQS queue (default: MicrosoftSentinelEKSSqs).
@@ -277,11 +277,9 @@ The following common issues and solutions can help you troubleshoot connector se
 
 If you haven't already done so, implement data connector health monitoring so that you can know when connectors aren't receiving data or have other issues. For more information, see [Monitor the health of your data connectors](monitor-data-connector-health.md).
 
-## Next steps
+## Related content
 
-For more information about Microsoft Sentinel and container security monitoring, see the following articles:
-
-- Learn how to [get visibility into your data, and potential threats](get-visibility.md).
-- Get started [detecting threats with Microsoft Sentinel](detect-threats-built-in.md).
-- [Use workbooks](monitor-your-data.md) to monitor your data.
-- Learn about [Microsoft Sentinel solutions for container security](sentinel-solutions-catalog.md).
+- [Visualize collected data on the Overview page](get-visibility.md)
+- [Threat detection in Microsoft Sentinel](threat-detection.md)
+- [Visualize and monitor your data by using workbooks in Microsoft Sentinel](monitor-your-data.md)
+- [Microsoft Sentinel content hub catalog](sentinel-solutions-catalog.md)

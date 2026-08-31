@@ -1,5 +1,5 @@
 ---
-title: Convert dashboards to Azure Workbooks in Microsoft Sentinel
+title: Convert Dashboards to Azure Workbooks in Microsoft Sentinel
 description: Review, plan, and convert your existing dashboards to Azure Workbooks for Microsoft Sentinel.
 author: EdB-MSFT
 ms.author: edbaynash
@@ -17,7 +17,7 @@ ms.custom: msecd-doc-authoring-1016
 
 ---
 
-# Convert dashboards to Azure Workbooks 
+# Convert dashboards to Azure Workbooks
 
 Convert dashboards from your existing security information and event management (SIEM) solution to an Azure workbook for Microsoft Sentinel. Azure Workbooks provide versatility to create custom dashboards for Microsoft Sentinel. This article describes how to review, plan, and convert your current dashboards to Azure Workbooks.
 
@@ -25,9 +25,9 @@ Convert dashboards from your existing security information and event management 
 
 Consider the following steps when you design your migration.
 
-- **Analyze dashboards**. Gather information about your dashboards, including design, parameters, data sources, and other details. Identify the purpose or usage of each dashboard.
-- **Be selective**. Don’t migrate all dashboards without consideration. Focus on dashboards that are critical and used regularly.
-- **Consider permissions**. Consider who are the target users for workbooks. Azure Workbooks use Azure role-based access control (Azure RBAC). For more information, see [Assess control in Azure Workbooks](/azure/azure-monitor/visualize/workbooks-overview#access-control). To create dashboards outside Azure, for example for business executives without Azure access, use a reporting tool such as Power BI.
+- **Analyze dashboards**: Gather information about your dashboards, including design, parameters, data sources, and other details. Identify the purpose or usage of each dashboard.
+- **Be selective**: Don't migrate all dashboards without consideration. Focus on dashboards that are critical and used regularly.
+- **Consider permissions**: Consider who are the target users for workbooks. Azure Workbooks use Azure role-based access control (Azure RBAC). For more information, see [Assess control in Azure Workbooks](/azure/azure-monitor/visualize/workbooks-overview#access-control). To create dashboards outside Azure, for example for business executives without Azure access, use a reporting tool such as Power BI.
 
 ## Prepare for the dashboard conversion
 
@@ -35,13 +35,13 @@ After reviewing your dashboards, complete the following tasks to prepare for you
 
 - Review all of the visualizations in each dashboard. The dashboards in your current SIEM might contain several charts or panels. It's crucial to review the content of your short-listed dashboards to eliminate any unwanted visualizations or data.
 - Capture the dashboard design and interactivity.
-- Identify any design elements that are important to your users. For example, the layout of the dashboard, the arrangement of the charts or even the font size or color of the graphs.
-- Capture any interactivity such as drilldown, filtering, and others that you need to carry over to Azure Workbooks. 
+- Identify any design elements that are important to your users. For example, the layout of the dashboard, the arrangement of the charts, or even the font size or color of the graphs.
+- Capture any interactivity such as drilldown, filtering, and others that you need to carry over to Azure Workbooks.
 - Identify required parameters or user inputs. In most cases, you need to define parameters for users to perform search, filtering, or scoping the results (for example, date range, account name and others). Hence, it's crucial to capture the details around parameters. Here are some of the key parameter requirements to collect:
 
-  - The type of parameter for users to perform selection or input. For example, date range, text, or others.
+  - The type of parameter for users to perform selection or input; for example, date range, text, or others.
   - How the parameters are represented, such as drop-down, text box, or others.
-  - The expected value format, for example, time, string, integer, or others.
+  - The expected value format; for example, time, string, integer, or others.
   - Other properties, such as the default value, allow multi-select, conditional visibility, or others.
 
 ## Convert dashboards
@@ -54,7 +54,7 @@ Azure Workbooks are compatible with a large number of data sources. For more inf
 
 ### 2. Construct or review KQL queries
 
-To construct or review your queries, you mainly work with KQL to visualize your data. You can construct and test your queries in Microsoft Sentinel before converting them to Azure Workbooks. To test the queries from Microsoft Sentinel in the Azure portal, go to **Logs**. From Microsoft Sentinel in the Defender portal, go to **Investigation & response** > **Hunting** > **Advanced hunting**. 
+To construct or review your queries, you mainly work with KQL to visualize your data. You can construct and test your queries in Microsoft Sentinel before converting them to Azure Workbooks. To test the queries from Microsoft Sentinel in the Azure portal, go to **Logs**. From Microsoft Sentinel in the Defender portal, go to **Investigation & response** > **Hunting** > **Advanced hunting**.
 
 Before finalizing your KQL queries, always review and tune the queries to improve query performance. Optimized queries:
 
@@ -69,7 +69,7 @@ For more information, see the following resources:
 
 ### 3. Create or update the workbook
 
-Create a workbook, update the workbook, or clone an existing workbook so that you don’t have to start from scratch. Also, specify how the data or visualizations is represented, arranged, and grouped. There are two common designs:
+Create a workbook, update the workbook, or clone an existing workbook so that you don't have to start from scratch. Also, specify how the data or visualizations is represented, arranged, and grouped. There are two common designs:
 
 - Vertical workbook
 - Tabbed workbook
@@ -83,7 +83,7 @@ For more information, see the following articles:
 
 After defining the workbook structure, you should have identified the required parameters for your workbook. With parameters, you can collect input from the consumers and reference the input in other parts of the workbook. This input is typically used to scope the result set, to set the correct visualization, and allows you to build interactive reports and experiences.
 
-Workbooks allow you to control how your parameter controls are presented to consumers. For example, you select whether the controls are presented as a text box vs. drop down, or single- vs. multi-select. You can also select which values to use, from text, JSON, KQL, or Azure Resource Graph, and more.
+Workbooks allow you to control how your parameter controls are presented to consumers. For example, you select whether the controls are presented as a text box vs. drop-down, or single- vs. multi-select. You can also select which values to use, from text, JSON, KQL, or Azure Resource Graph, and more.
 
 Review the [supported workbook parameters](/azure/azure-monitor/visualize/workbooks-parameters). You can reference these parameter values in other parts of the same workbook by using bindings or value expansions.
 
@@ -103,11 +103,9 @@ Workbooks provide a rich set of capabilities for visualizing your data. Review t
 
 ### 6. Preview and save the workbook
 
-After you save your workbook, specify the parameters, and validate the results. You can also try the [auto-refresh workbook data](tutorial-monitor-your-data.md#refresh-your-workbook-data) or the print feature to [print a workbook or save as PDF](monitor-your-data.md#print-a-workbook-or-save-as-pdf-azure-portal-only).
+After you save your workbook, specify the parameters and validate the results. You can also try the [auto-refresh workbook data](tutorial-monitor-your-data.md#refresh-your-workbook-data) or the print feature to [print a workbook or save as PDF](monitor-your-data.md#print-a-workbook-or-save-as-pdf-azure-portal-only).
 
-## Next steps
-
-In this article, you learned how to convert your dashboards to Azure workbooks. 
+## Next step
 
 > [!div class="nextstepaction"]
 > [Update SOC processes](migration-security-operations-center-processes.md)

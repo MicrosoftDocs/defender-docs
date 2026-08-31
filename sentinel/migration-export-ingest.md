@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Sentinel migration: Ingest data into target platform"
+title: "Microsoft Sentinel Migration: Ingest Data into Target Platform"
 description: Learn how to ingest historical data into your selected target platform.
 author: EdB-MSFT
 ms.author: edbaynash
@@ -54,13 +54,11 @@ Azure Data Explorer (ADX) is a fast, scalable data exploration service. To inges
 To ingest your historical data into Azure Blob Storage:
 
 1. [Install and configure AzCopy](/azure/storage/common/storage-use-azcopy-v10) on the system to which you exported the logs. Alternatively, install AzCopy on another system that has access to the exported logs.  
-1. [Create an Azure Blob Storage account](/azure/storage/common/storage-account-create) and copy the authorized [Microsoft Entra ID](/azure/storage/common/storage-use-azcopy-v10#option-1-use-azure-active-directory) credentials or [Shared Access Signature](/azure/storage/common/storage-use-azcopy-v10#option-2-use-a-sas-token) token.   
+1. [Create an Azure Blob Storage account](/azure/storage/common/storage-account-create) and copy the authorized [Microsoft Entra ID](/azure/storage/common/storage-use-azcopy-v10#option-1-use-azure-active-directory) credentials or [Shared Access Signature](/azure/storage/common/storage-use-azcopy-v10#option-2-use-a-sas-token) token.
 1. [Run AzCopy](/azure/storage/common/storage-use-azcopy-v10#run-azcopy) with the folder path that includes the exported logs as the source, and the Azure Blob Storage connection string as the output.
 
 <a name="next-steps"></a>
 ## Next step
-
-Now that you ingested historical data into your target platform, convert your dashboards to workbooks.
 
 > [!div class="nextstepaction"]
 > [Convert your dashboards to workbooks](migration-convert-dashboards.md)

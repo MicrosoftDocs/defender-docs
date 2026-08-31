@@ -10,7 +10,7 @@ ms.collection:
 - m365-guidance-templates
 - m365-security
 - tier3
-ms.date: 07/02/2026
+ms.date: 07/24/2026
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1016
 ---
@@ -26,9 +26,9 @@ This article is all about helping you **understand the different overrides**, ho
 
 The following table lists all overrides, a description of what that override means and some starting points for troubleshooting. Not all overrides are honored, depending on the circumstance. For example an email that contains malware is automatically blocked regardless if an end user set the sender as a "safe sender". To learn more about how overrides are applied, see [How policies and protections are combined](../how-policies-and-protections-are-combined.md).
 
-| Override |Description|Notes|
-| -------- | -------- | -------- |
-| Third Party Filter  |We detected your MX record points to a non-Microsoft service and you have an SCL-1 transport rule, which overrides most Microsoft 365 filtering and Secure by Default.||
+|Override|Description|Notes|
+|---|---|---|
+|Third Party Filter|We detected your MX record points to a non-Microsoft service and you have a [mail flow rule that bypasses most Microsoft 365 filtering](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl) (SCL -1) and [secure by default](../secure-by-default.md).||
 |Admin initiated time travel|Admin triggered investigation, which leads to zero-hour auto purge (ZAP) modifying the delivery location of messages.|[Zero-hour auto purge (ZAP)](../zero-hour-auto-purge.md)|
 |Antimalware policy block by file type|The file extension for an attachment within the message matched a banned file type listed in the anti-malware policy for the recipient|You may wish to tweak the file extensions listed in the Common attachments filter section of the anti-malware policy. [Configure anti-malware policies](../anti-malware-policies-configure.md).|
 |Antispam policy settings|The message matched a custom option in the anti-spam policy for the recipient. For example: "SPF record: hard fail" or "Empty messages".|Check the "Mark as spam" options in the anti-spam policy for the affected recipient. [Configure anti-spam policies](../anti-spam-policies-configure.md).|

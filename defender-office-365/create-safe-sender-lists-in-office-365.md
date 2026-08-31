@@ -13,7 +13,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about the available and preferred options to allow inbound messages to Microsoft 365.
 ms.service: defender-office-365
-ms.date: 07/03/2026
+ms.date: 07/24/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -60,6 +60,8 @@ Only consider other allow methods (mail flow rules, Outlook Safe Senders, IP All
 > You can't use message headers and mail flow rules to designate an internal sender as a safe sender. The procedures in this section work for external senders only.
 
 Mail flow rules in Exchange Online use conditions and exceptions to identify messages, and actions to specify what should be done to those messages. For more information, see [Mail flow rules (transport rules) in Exchange Online](/Exchange/security-and-compliance/mail-flow-rules/mail-flow-rules).
+
+To create a mail flow rule that bypasses spam filtering, follow the steps in [Use mail flow rules to set the spam confidence level (SCL) in messages](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl). To safely allow senders, use the conditions and actions described in this section.
 
 The following example assumes you need email from contoso.com to skip spam filtering. Configure the following settings:
 

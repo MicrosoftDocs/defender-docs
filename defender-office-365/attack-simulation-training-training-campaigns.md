@@ -505,3 +505,8 @@ The **Details** tab the following information:
   - **Module name**
   - **Content type**
   - **Total duration (mins)**
+
+## Related content
+
+- [Get started using Attack simulation training](attack-simulation-training-get-started.md)
+- [Attack simulation training deployment considerations and FAQ](attack-simulation-training-faq.md)

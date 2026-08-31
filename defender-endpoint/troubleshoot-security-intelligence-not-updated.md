@@ -76,4 +76,4 @@ The following screenshot shows the error **Signature Update failed**.
 
       - The Windows Update service is having issues.
 
-        Review [Guidance for troubleshooting Windows Update issues](/troubleshoot/windows-client/installing-updates-features-roles/troubleshoot-windows-update-issues) and [Troubleshoot problems updating Windows](https://support.microsoft.com/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c).
+        Review [Guidance for troubleshooting Windows Update issues](/troubleshoot/windows-client/installing-updates-features-roles/troubleshoot-windows-update-issues) and [Troubleshoot problems updating Windows](https://support.microsoft.com/Windows/Deployment/Updates-Lifecycle/troubleshoot-problems-updating-windows).

@@ -1,13 +1,13 @@
 ---
 title: Accelerate OT alert workflows - Microsoft Defender for IoT
 description: Learn how to improve Microsoft Defender for IoT OT alert workflows on an OT network sensor.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
-# Accelerate OT alert workflows
+# Manage and accelerate OT alert workflows in Microsoft Defender for IoT
 
 > [!NOTE]
 > Noted features are in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include other legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
@@ -21,6 +21,8 @@ This article describes the following methods for reducing OT network alert fatig
 - **Create alert comments** for your teams to add to individual alerts, streamlining communication and record-keeping across your alerts.
 
 - **Create custom alert rules** to identify specific traffic in your network
+
+Each method requires specific Azure portal permissions or OT sensor access. See the [Prerequisites](#prerequisites) before you begin.
 
 ## Prerequisites
 
@@ -48,7 +50,7 @@ Configure your OT sensors to suppress alerts for specific traffic on your networ
 - For locally managed sensors, create alert exclusion rules on the OT sensor, either using the UI or the API.
 
 > [!IMPORTANT]
-> Rules configured on the Azure portal override any rules configured for the same sensor on the OT sensor. If you're currently using alert exclusion rules on your OT sensor, we recommend that you [migrate them to the Azure portal](#migrate-suppression-rules-from-an-ot-sensor) as suppression rules before you start.
+> Rules configured on the Azure portal override any rules configured for the same sensor on the OT sensor. If you're currently using alert exclusion rules on your OT sensor, we recommend that you [migrate the alert exclusion rules to the Azure portal](#migrate-suppression-rules-from-an-ot-sensor) as suppression rules before you start.
 >
 ### Create alert suppression rules on the Azure portal (Public Preview)
 
@@ -94,7 +96,7 @@ Your rule is added to the list of suppression rules on the **Suppression rules (
 
 ### Migrate suppression rules from an OT sensor
 
-If you're currently using an OT sensor with cloud-connected sensors, we recommend that you migrate any exclusion rules to the Azure portal as suppression rules before you start creating new suppression rules. Any suppression rules configured on the Azure portal override alert exclusion rules that exist for the same sensors on the OT sensor.
+If you're currently using an OT sensor with cloud-connected sensors, we recommend that you migrate any alert exclusion rules from the OT sensor to the Azure portal as suppression rules before you start creating new suppression rules. Any suppression rules configured on the Azure portal override alert exclusion rules that exist for the same sensors on the OT sensor.
 
 **To export alert exclusion rules and import them to the Azure portal**:
 
@@ -146,7 +148,7 @@ The generated data mining report shows a list of the allowed domains and each IP
 
 ## Create alert comments on an OT sensor
 
-Use the following steps to create custom alert comments on your OT sensor that team members can add to individual alerts.
+To create custom alert comments on your OT sensor that team members can add to individual alerts, complete this procedure.
 
 1. Sign into your OT sensor and select **System Settings** > **Network Monitoring** > **Alert Comments**.
 
@@ -195,11 +197,14 @@ To edit a custom alert rule, select the rule and then select the options (**...*
 
 Edits made to custom alert rules, such as changing a severity level or protocol, are tracked in the **Event timeline** page on the OT sensor.
 
-For more information, see [Track sensor activity](how-to-track-sensor-activity.md).
+For information about viewing changes in the Event timeline, see [Track sensor activity](how-to-track-sensor-activity.md).
 
 ### Disable, enable, or delete custom alert rules
 
 Disable custom alert rules to prevent them from running without deleting them altogether.
+
+> [!WARNING]
+> Deleting a custom alert rule permanently removes it. This action can't be undone. If you might need the rule again later, disable it instead.
 
 In the **Custom alert rules** page, select one or more rules, and then select  **Disable**, **Enable**, or **Delete** in the toolbar as needed.
 
@@ -207,7 +212,7 @@ In the **Custom alert rules** page, select one or more rules, and then select  *
 
 Use the [Defender for IoT API](references-work-with-defender-for-iot-apis.md) to create alert exclusion rules from an external ticketing system or other system that manage network maintenance processes.
 
-Use the [maintenanceWindow (Create alert exclusions)](api/management-alert-apis.md#maintenancewindow-create-alert-exclusions) API to define the sensors, analytics engines, start time, and end time to apply the rule.
+Use the [Create alert exclusions API reference](api/management-alert-apis.md#maintenancewindow-create-alert-exclusions) to define the sensors, analytics engines, start time, and end time to apply the rule.
 
 For more information, see [Defender for IoT API reference](references-work-with-defender-for-iot-apis.md).
 

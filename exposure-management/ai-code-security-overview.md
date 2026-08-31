@@ -2,7 +2,7 @@
 title: Codename MDASH Overview
 description: Learn how Codename MDASH - Agentic code scanner uses a multi-model agentic AI system to detect code vulnerabilities with depth and accuracy beyond traditional static analysis.
 ms.topic: overview
-ms.date: 05/26/2026
+ms.date: 08/26/2026
 ms.custom: references_regions
 ai-usage: ai-assisted
 ---
@@ -15,7 +15,7 @@ Codename MDASH is an agentic code scanner within Microsoft Defender that uses a 
 
 This service uses a multistage agentic pipeline where specialized AI agents collaborate to find, validate, and prove vulnerabilities:
 
-- **Prepare** — Ranks files by risk using call-graph analysis and code complexity metrics, prioritizing functions most likely to contain vulnerabilities.
+- **Prepare** — The system ranks files by risk using call-graph analysis and code complexity metrics, prioritizing functions most likely to contain vulnerabilities.
 - **Scan** — More than 100 specialized AI agents (for example, injection-auditor, memory-safety-auditor, auth-bypass-auditor) analyze the ranked code using multiple LLMs. Each agent targets a specific vulnerability class.
 - **Validate** — The system uses taint analysis and type resolution through Language Server Protocol (LSP) servers. A multi-model agentic debate refines confidence and eliminates false positives.
 - **Dedup** — The system consolidates duplicate findings, producing a final set of unique, actionable vulnerabilities.

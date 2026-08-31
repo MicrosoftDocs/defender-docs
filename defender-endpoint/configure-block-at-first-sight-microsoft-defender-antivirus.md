@@ -13,7 +13,7 @@ ms.custom:
 ms.date: 07/02/2026
 ms.subservice: ngp
 ms.topic: how-to
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 - mde-ngp
@@ -23,14 +23,13 @@ appliesto:
 
 ai-usage: ai-assisted
 ---
-# Turn on block at first sight
 
+# Turn on block at first sight
 
 This article describes an antivirus/antimalware feature known as "block at first sight", and describes how to enable block at first sight for your organization. Before you begin, review the [Prerequisites](#prerequisites) section for required settings and supported operating systems.
 
 > [!TIP]
 > This article is intended for enterprise admins and IT Pros who manage security settings for organizations. If you aren't an enterprise admin or IT Pro but you have questions about block at first sight, see the [Not an enterprise admin or IT Pro?](#not-an-enterprise-admin-or-it-pro) section.
-
 
 ## Prerequisites
 
@@ -39,7 +38,6 @@ This article describes an antivirus/antimalware feature known as "block at first
 Block at first sight is supported on the following operating systems:
 
 - Windows
-
 
 ## What is "block at first sight"?
 
@@ -74,16 +72,16 @@ Keep the following details in mind when using block at first sight:
 
 - In many cases, this cloud-based analysis and blocking process can reduce the response time for new malware from hours to seconds.
 
-- You can [specify how long a file should be prevented from running](configure-cloud-block-timeout-period-microsoft-defender-antivirus.md) while the cloud-based protection service analyzes the file. And, you can [customize the message displayed on users' desktops](/windows/security/threat-protection/windows-defender-security-center/wdsc-customize-contact-information) when a file is blocked. You can change the company name, contact information, and message URL.
+- You can [specify how long a file should be prevented from running](configure-cloud-block-timeout-period-microsoft-defender-antivirus.md) while the cloud-based protection service analyzes the file. And, you can [customize the message displayed on users' desktops](/windows/security/operating-system-security/system-security/windows-defender-security-center/wdsc-customize-contact-information) when a file is blocked. You can change the company name, contact information, and message URL.
 
 ## Turn on block at first sight with Microsoft Intune
 
-To enable block at first sight using a Microsoft Intune Endpoint Security **Antivirus** policy, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
+To enable block at first sight using a Microsoft Intune Endpoint Security **Antivirus** policy, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these specific settings:
 
-- **Policy type**: Antivirus
-- **Platform**: Windows
-- **Profile**: Microsoft Defender Antivirus
-- **Configuration settings**: Configure the following settings:
+- **Policy type**: Select **Antivirus** on the **Endpoint security \| Overview** page.
+- **Platform**: Select **Windows**.
+- **Profile**: Select **Microsoft Defender Antivirus**.
+- **Configuration settings** tab: Configure the following settings:
   - **Allow cloud protection**: Select **Allowed. Turns on Cloud Protection (Default)**.
   - **Submit samples consent**: Select one of the following values:
     - **Send safe samples automatically. (Default)**
@@ -215,8 +213,5 @@ For more information about Microsoft Defender Antivirus and related features, se
 
 - [Microsoft Defender Antivirus in Windows](microsoft-defender-antivirus-windows.md)
 - [Enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md)
-- [Stay protected with Windows Security](https://support.microsoft.com/windows/stay-protected-with-windows-security-2ae0363d-0ada-c064-8b56-6a39afb6a963)
+- [Stay protected with Windows Security](https://support.microsoft.com/Windows/Security/Windows-Security/stay-protected-with-the-windows-security-app)
 - [Onboard to Microsoft Defender for Endpoint](onboarding.md)
-
-
-

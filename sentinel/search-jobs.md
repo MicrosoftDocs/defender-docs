@@ -1,5 +1,5 @@
 ---
-title: Search for specific events across large datasets in Microsoft Sentinel
+title: Search for Specific Events Across Large Datasets in Microsoft Sentinel
 description: Learn how to use search jobs to search large datasets.
 ms.author: guywild
 author: guywi-ms
@@ -20,7 +20,7 @@ ai-usage: ai-assisted
 
 # Search for specific events across large datasets in Microsoft Sentinel
 
-Use a search job to retrieve data stored in [long-term retention](/azure/azure-monitor/logs/data-retention-configure#interactive-long-term-and-total-retention), or to scan through large volumes of data, if the log query time-out of 10 minutes isn't sufficient. A search job scans through up to a year of data in a table for specific events. The search job sends its results to a new Analytics table in the same workspace as the source data. 
+Use a search job to retrieve data stored in [long-term retention](/azure/azure-monitor/logs/data-retention-configure#interactive-long-term-and-total-retention), or to scan through large volumes of data, if the log query time-out of 10 minutes isn't sufficient. A search job scans through up to a year of data in a table for specific events. The search job sends its results to a new Analytics table in the same workspace as the source data.
 
 This article explains how to run a search job in Microsoft Sentinel and how to work with the search job results.
 
@@ -34,7 +34,7 @@ See [Search job considerations](/azure/azure-monitor/logs/search-jobs#considerat
 
 ## Start a search job
 
-Go to **Search** in Microsoft Sentinel from the Azure portal or the Microsoft Defender portal to enter your search criteria. Depending on the size of the target dataset, search times vary. While most search jobs take a few minutes to complete, searches across massive data sets that run up to 24 hours are also supported. 
+Go to **Search** in Microsoft Sentinel from the Azure portal or the Microsoft Defender portal to enter your search criteria. Depending on the size of the target dataset, search times vary. While most search jobs take a few minutes to complete, searches across massive data sets that run up to 24 hours are also supported.
 
 1. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Microsoft Sentinel** > **Search**. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), under **General**, select **Search**.
 
@@ -53,7 +53,7 @@ Go to **Search** in Microsoft Sentinel from the Azure portal or the Microsoft De
 1. Change the KQL query as needed and select **Run** to get an updated preview of the search results. Resolve any KQL issues indicated by a squiggly red line in the editor.
 
    :::image type="content" source="media/search-jobs/search-job-advanced-kql-edit.png" alt-text="Screenshot of KQL editor with revised search.":::
- 
+
 1. When you're satisfied with the query and the search results preview, select the ellipses **...** and select **Search job** to open the **Search Job Mode** window.
 
    :::image type="content" source="media/search-jobs/search-job-advanced-kql-ellipsis.png" alt-text="Screenshot of KQL editor with revised search with ellipsis highlighted in order to select Search job, which will open the Search Job Mode window." lightbox="media/search-jobs/search-job-advanced-kql-ellipsis.png":::
@@ -89,10 +89,8 @@ View the status and results of your search job by going to the **Saved Searches*
 1. Add the **Bookmarked** filter to only show preserved entries.
 1. Select **View all bookmarks** to go the **Hunting** page where you can add a bookmark to an existing incident.
 
-## Next steps
+## Related content
 
-To learn more, see the following articles.
-
-- [Hunt with bookmarks](bookmarks.md)
-- [Restore logs from long-term retention](restore.md)
+- [Keep track of data during hunting with Microsoft Sentinel](bookmarks.md)
+- [Restore archived logs from search](restore.md)
 - [Manage data retention in a Log Analytics workspace](/azure/azure-monitor/logs/data-retention-configure)

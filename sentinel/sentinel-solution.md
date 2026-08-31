@@ -1,5 +1,5 @@
 ---
-title: Monitor Zero Trust (TIC 3.0) security architectures with Microsoft Sentinel
+title: Monitor Zero Trust (TIC 3.0) Security Architectures with Microsoft Sentinel
 description: Install and learn how to use the Microsoft Sentinel Zero Trust (TIC3.0) solution for an automated visualization of Zero Trust principles, cross-walked to the Trusted Internet Connections framework.
 ms.date: 07/01/2026
 ms.author: monaberdugo
@@ -33,7 +33,7 @@ Zero Trust and TIC 3.0 aren't the same, but they share many common themes and to
 
 While the Microsoft Sentinel solution for **Zero Trust (TIC 3.0)** provides best practice guidance, Microsoft doesn't guarantee nor imply compliance. All Trusted Internet Connection (TIC) requirements, validations, and controls are governed by the [Cybersecurity & Infrastructure Security Agency](https://www.cisa.gov/resources-tools/programs/trusted-internet-connections-tic).
 
-The **Zero Trust (TIC 3.0)** solution provides visibility and situational awareness for control requirements delivered with Microsoft technologies in predominantly cloud-based environments. Customer experience will vary by user, and some panes may require additional configurations and query modification for operation.
+The **Zero Trust (TIC 3.0)** solution provides visibility and situational awareness for control requirements delivered with Microsoft technologies in predominantly cloud-based environments. Customer experience will vary by user, and some panes might require additional configurations and query modification for operation.
 
 Recommendations don't imply coverage of respective controls, as they're often one of several courses of action for approaching requirements, which is unique to each customer. Recommendations should be considered a starting point for planning full or partial coverage of respective control requirements.
 
@@ -53,18 +53,18 @@ Before installing the **Zero Trust (TIC 3.0)** solution, make sure you have the 
 
 - **Microsoft Defender for Cloud requirements**: In Microsoft Defender for Cloud:
 
-    - Add required regulatory standards to your dashboard. Make sure to add both the *Microsoft Cloud security benchmark* and *NIST SP 800-53 R5 Assessments* to your Microsoft Defender for Cloud dashboard. For more information, see [add a regulatory standard to your dashboard](/azure/security-center/update-regulatory-compliance-packages?WT.mc_id=Portal-fx#add-a-regulatory-standard-to-your-dashboard) in the Microsoft Defender for Cloud documentation.
+  - Add required regulatory standards to your dashboard. Make sure to add both the *Microsoft Cloud security benchmark* and *NIST SP 800-53 R5 Assessments* to your Microsoft Defender for Cloud dashboard. For more information, see [add a regulatory standard to your dashboard](/azure/security-center/update-regulatory-compliance-packages?WT.mc_id=Portal-fx#add-a-regulatory-standard-to-your-dashboard) in the Microsoft Defender for Cloud documentation.
 
-    - Continuously export Microsoft Defender for Cloud data to your Log Analytics workspace. For more information, see [Continuously export Microsoft Defender for Cloud data](/azure/defender-for-cloud/continuous-export?tabs=azure-portal).
+  - Continuously export Microsoft Defender for Cloud data to your Log Analytics workspace. For more information, see [Continuously export Microsoft Defender for Cloud data](/azure/defender-for-cloud/continuous-export?tabs=azure-portal).
 
-- **Required user permissions**. To install the **Zero Trust (TIC 3.0)** solution, you must have access to your Microsoft Sentinel workspace with [Security Reader](/azure/active-directory/roles/permissions-reference#security-reader) permissions.
+- **Required user permissions**: To install the **Zero Trust (TIC 3.0)** solution, you must have access to your Microsoft Sentinel workspace with [Security Reader](/azure/active-directory/roles/permissions-reference#security-reader) permissions.
 
 The **Zero Trust (TIC 3.0)** solution is also enhanced by integrations with other Microsoft Services, such as:
 
 - [Microsoft Defender XDR](https://www.microsoft.com/microsoft-365/security/microsoft-365-defender)
-- [Microsoft Information Protection](https://www.microsoft.com/en-us/security/business/solutions/information-protection/)
-- [Microsoft Entra ID](https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-id)
-- [Microsoft Defender for Cloud](https://www.microsoft.com/en-us/security/business/cloud-security/microsoft-defender-cloud)
+- [Microsoft Information Protection](https://www.microsoft.com//security/business/solutions/information-protection/)
+- [Microsoft Entra ID](https://www.microsoft.com/security/business/identity-access/microsoft-entra-id)
+- [Microsoft Defender for Cloud](https://www.microsoft.com/security/business/cloud-security/microsoft-defender-cloud)
 - [Microsoft Defender for Endpoint](https://www.microsoft.com/microsoft-365/security/endpoint-defender)
 - [Microsoft Defender for Identity](https://www.microsoft.com/microsoft-365/security/identity-defender)
 - [Microsoft Defender for Cloud Apps](https://www.microsoft.com/security/business/siem-and-xdr/microsoft-defender-cloud-apps)
@@ -72,11 +72,11 @@ The **Zero Trust (TIC 3.0)** solution is also enhanced by integrations with othe
 
 ## Install the Zero Trust (TIC 3.0) solution
 
-**To deploy the *Zero Trust (TIC 3.0)* solution from the Azure portal**:
+To deploy the *Zero Trust (TIC 3.0)* solution from the Azure portal:
 
 1. In Microsoft Sentinel, select **Content hub** and locate the **Zero Trust (TIC 3.0)** solution.
 
-1. At the bottom-right, select **View details**, and then **Create**. Select the subscription, resource group, and workspace where you want to install the solution, and then review the related security content that will be deployed.
+1. At the bottom-right, select **View details**, then select **Create**. Select the subscription, resource group, and workspace where you want to install the solution, and then review the related security content that will be deployed.
 
     When you're done, select **Review + Create** to install the solution.
 
@@ -98,19 +98,17 @@ Use the **Zero Trust (TIC 3.0)** workbook to view Zero Trust data and explore qu
 
     > [!TIP]
     > Use the **Guide** toggle at the top of the page to display or hide recommendations and guide panes. Make sure that the correct details are selected in the **Subscription**, **Workspace**, and **TimeRange** options so that you can view the specific data you want to find.
-    >
 
-1. Select the control cards you want to display. For this procedure, select **Adaptive Access Control**, and then continue scrolling to view the displayed card.
+1. Select the control cards you want to display. For this procedure, select **Adaptive Access Control**, then continue scrolling to view the displayed card.
 
     :::image type="content" source="media/sentinel-workbook/review-query-output-sample.png" alt-text="Screenshot of the Adaptive Access Control card.":::
 
     > [!TIP]
-    > Use the **Guides** toggle at the top left to view or hide recommendations and guide panes. For example, these may be helpful when you first access the workbook, but unnecessary once you've understood the relevant concepts.
-    >
+    > Use the **Guides** toggle at the top left to view or hide recommendations and guide panes. For example, these might be helpful when you first access the workbook, but unnecessary once you've understood the relevant concepts.
 
 1. **Explore queries**. For example, at the top right of the **Adaptive Access Control** card, select the three dot **Options** menu, and then select **Open the last run query in the Logs view.**
 
-    The query is opened in the Microsoft Sentinel **Logs** page:
+    The query opens in the Microsoft Sentinel **Logs** page:
 
     :::image type="content" source="media/sentinel-workbook/explore-query-logs.png" alt-text="Screenshot of the selected query in the Microsoft Sentinel Logs page.":::
 
@@ -184,22 +182,14 @@ The following Microsoft Sentinel roles determine what users can do with this con
 
 For more information, see [Permissions in Microsoft Sentinel](roles.md).
 
-## Next steps
-
-For more information, see:
+## Related content
 
 - [Get Started with Microsoft Sentinel](https://azure.microsoft.com/services/azure-sentinel/)
 - [Visualize and monitor your data with workbooks](monitor-your-data.md)
 - [Microsoft Zero Trust Model](https://www.microsoft.com/security/business/zero-trust)
 - [Zero Trust Deployment Center](/security/zero-trust/?WT.mc_id=Portal-fx)
-
-Watch our videos:
-
 - [Demo: Microsoft Sentinel Zero Trust (TIC 3.0) Solution](https://www.youtube.com/watch?v=OVGgRIzAvCI)
 - [Microsoft Sentinel: Zero Trust (TIC 3.0) Workbook Demo](https://www.youtube.com/watch?v=RpDas8fXzdU)
-
-Read our blogs!
-
 - [Announcing the Microsoft Sentinel: Zero Trust (TIC3.0) Solution](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/announcing-the-microsoft-sentinel-zero-trust-tic3-0-solution/ba-p/3031685)
 - [Building and monitoring Zero Trust (TIC 3.0) workloads for federal information systems with Microsoft Sentinel](https://devblogs.microsoft.com/azuregov/building-and-monitoring-zero-trust-tic-3-0-workloads-for-federal-information-systems-with-microsoft-sentinel/)
 - [Zero Trust: 7 adoption strategies from security leaders](https://www.microsoft.com/security/blog/2021/03/31/zero-trust-7-adoption-strategies-from-security-leaders/)

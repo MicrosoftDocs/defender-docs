@@ -64,7 +64,7 @@ Configure outbound access settings for the home tenant by following these steps:
 4. Select **External applications** and set access status to **Allow**.
 5. Set the Applies to to **All external applications**. Select **Save**.
 6. Select **B2B direct connect** and set access status to **Block**.
-7. In the Applies to, select **All users**. 
+7. In the Applies to, select **All users**.
 8. Select **External applications** and set access status to **Block**.
 9. Set the Applies to to **All external applications**. Select **Save**.
 
@@ -111,7 +111,7 @@ To manage tenants from other Microsoft cloud environments:
     :::image type="content" source="/unified-secops-platform/media/mto-cross-cloud/mto-add-from-cloud-small.png" alt-text="Screenshot of the Settings page with the Add tenant option highlighted." lightbox="/unified-secops-platform/media/mto-cross-cloud/mto-add-from-cloud.png":::
 
 3. In the **Add from another cloud** pane, type the tenant ID or domain of the tenant you want to add, then select **Verify tenant**. The verification process looks at the added tenant’s information and permissions.
-    
+
     :::image type="content" source="/unified-secops-platform/media/mto-cross-cloud/mto-verify-tenant-small.png" alt-text="Screenshot of the add tenants pane with the verification highlighted." lightbox="/unified-secops-platform/media/mto-cross-cloud/mto-verify-tenant.png":::
 
 4. Once verified, select **Add tenant** to complete the process.
@@ -130,7 +130,7 @@ After successfully adding tenants from other clouds, you can view the added cros
 > [!NOTE]
 > When a cross-cloud tenant is added to a distribution profile and subsequently removed from cross-cloud visibility, the tenant's name is removed from the tenant list and won’t be available for content management. This is a recognized limitation of cross-cloud visibility and is currently under review. See [Content assignment failure in cross-cloud tenant management](mto-troubleshoot.md#content-assignment-failure-in-cross-cloud-tenant-management) for more information.
 
-## Next steps
+## Related content
 
 - [View and manage incidents and alerts in multitenant management](mto-incidents-alerts.md)
 - [Device inventory in multitenant management](mto-tenant-devices.md#device-inventory)

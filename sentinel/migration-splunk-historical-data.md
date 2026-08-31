@@ -1,5 +1,5 @@
 ---
-title: Export Splunk data to target platform
+title: Export Splunk Data to Target Platform
 titleSuffix: Microsoft Sentinel
 description: Learn how to export your historical data from Splunk for a Microsoft Sentinel migration of security monitoring use cases.
 author: EdB-MSFT
@@ -20,11 +20,11 @@ Use these methods to export historical data from Splunk in CSV format before mig
 
 :::image type="content" source="media/migration-export-ingest/export-data.png" alt-text="Diagram illustrating steps involved in export and ingestion." border="false":::
 
-You can export data from Splunk in several ways. Your selection of an export method depends on the data volumes involved and your level of interactivity. For example, exporting a single, on-demand search via Splunk Web might be appropriate for a low-volume export. Alternatively, if you want to set up a higher-volume, scheduled export, the SDK and REST options work best. 
+You can export data from Splunk in several ways. Your selection of an export method depends on the data volumes involved and your level of interactivity. For example, exporting a single, on-demand search via Splunk Web might be appropriate for a low-volume export. Alternatively, if you want to set up a higher-volume, scheduled export, the SDK and REST options work best.
 
 For large exports, the most stable method for data retrieval is `dump` or the Command Line Interface (CLI). You can export the logs to a local folder on the Splunk server or to another server accessible by Splunk.  
 
-To export your historical data from Splunk, use one of the [Splunk export methods](https://docs.splunk.com/Documentation/Splunk/8.2.5/Search/Exportsearchresults). The output format should be CSV. 
+To export your historical data from Splunk, use one of the [Splunk export methods](https://docs.splunk.com/Documentation/Splunk/8.2.5/Search/Exportsearchresults). The output format should be CSV.
 
 ## CLI example
 
@@ -32,9 +32,10 @@ This CLI example searches for events from the `_internal` index that occur durin
 
 This CLI command exports data recorded between 23:59 and 01:00 on September 14, 2021 to a CSV file: 
 
-```bash
+```spl
 splunk search "index=_internal earliest=09/14/2021:23:59:00 latest=09/16/2021:01:00:00 " -output csv > c:/data.csv  
 ```
+
 ## dump example
 
 This `dump` command exports all events from the `bigdata` index to the `YYYYmmdd/HH/host` location under the `$SPLUNK_HOME/var/run/splunk/dispatch/<sid>/dump/` directory on a local disk. The command uses `MyExport` as the prefix for export filenames, and outputs the results to a CSV file. The command partitions the exported data using the `eval` function before the `dump` command.
@@ -42,7 +43,8 @@ This `dump` command exports all events from the `bigdata` index to the `YYYYmmdd
 ```spl
 index=bigdata | eval _dstpath=strftime(_time, "%Y%m%d/%H") + "/" + host | dump basefilename=MyExport format=csv 
 ```
-## Next steps
+
+## Related content
 
 - [Select a target Azure platform to host the exported historical data](migration-ingestion-target-platform.md)
 - [Choose a data ingestion tool for historical data migration](migration-ingestion-tool.md)

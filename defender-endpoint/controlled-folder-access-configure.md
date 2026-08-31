@@ -283,7 +283,7 @@ Set-MpPreference -ControlledFolderAccessAllowedApplications "C:\Apps\app1.exe","
 
 ## Configure CFA in the Windows Security app
 
-You can use the [Windows Security app](https://support.microsoft.com/windows/stay-protected-with-the-windows-security-app-2ae0363d-0ada-c064-8b56-6a39afb6a963) on individual devices to configure CFA. This method is useful for testing or for configuring a single device. To configure CFA on many devices, use one of the enterprise management methods described earlier in this article.
+You can use the [Windows Security app](https://support.microsoft.com/Windows/Security/Windows-Security/stay-protected-with-the-windows-security-app) on individual devices to configure CFA. This method is useful for testing or for configuring a single device. To configure CFA on many devices, use one of the enterprise management methods described earlier in this article.
 
 > [!NOTE]
 > The Windows Security app supports only **On** (equivalent to the **Enabled** [mode](controlled-folder-access-overview.md#modes-for-cfa)) and **Off** (the **Disabled** mode). To use **Audit Mode** or the disk modification modes, use one of the other methods described in this article.

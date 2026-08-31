@@ -241,7 +241,7 @@ For more information, see [Configure and manage Microsoft Defender Antivirus wit
 
 #### Check the platform update version
 
-The latest "Platform Update" version Production channel (GA) is available in [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623+update).
+The latest "Platform Update" version Production channel (GA) is available in [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623).
 
 To check which "Platform Update" version you have installed, run the following command in PowerShell using the privileges of an administrator:
 

@@ -40,7 +40,7 @@ Review the following prerequisites before you view or manage alert policies.
   - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md):
     - _Create and manage alert policies in the Threat management category_: Membership in the **Organization Management** or **Security Administrator** role groups.
     - _View alerts in the Threat management_ category: Membership in the **Security Reader** role group.
-  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, or **Security Reader** roles gives users the required permissions and permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
     > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
@@ -54,3 +54,7 @@ Review the following prerequisites before you view or manage alert policies.
 In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Alert policy**. Or, to go directly to the **Alert policy** page, use <https://security.microsoft.com/alertpoliciesv2>.
 
 On the **Alert policy** page, you can view and create alert policies. For more information, see [Alert policies in Microsoft 365](/defender-xdr/alert-policies)
+
+## Related content
+
+[Manage incidents and alerts from Microsoft Defender for Office 365 in Microsoft Defender XDR](mdo-sec-ops-manage-incidents-and-alerts.md)

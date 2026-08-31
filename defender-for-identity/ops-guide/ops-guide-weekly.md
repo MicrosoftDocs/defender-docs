@@ -1,5 +1,5 @@
 ---
-title: Weekly operational guide - Microsoft Defender for Identity
+title: Weekly Operational Guide - Microsoft Defender for Identity
 description: Learn about the Microsoft Defender for Identity activities that we recommend for your team on a weekly basis.
 ms.date: 07/02/2026
 ms.topic: how-to
@@ -59,8 +59,6 @@ We recommend that beginners use guided advanced hunting, which provides a query 
 For more information, see [Proactively hunt for threats with advanced hunting in Microsoft Defender](/microsoft-365/security/defender/advanced-hunting-overview).
 
 ## Related content
-
-For more information, see:
 
 - [Microsoft Defender Security operations overview](/security/operations/overview)
 - [Microsoft Defender for Identity operational guide](ops-guide.md)

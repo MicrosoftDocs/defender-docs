@@ -52,7 +52,7 @@ To configure scheduled antivirus scans using Group Policy, follow these steps:
 
 1. Repeat steps 1-3 for each setting you want to configure.
 
-1. Deploy your Group Policy Object as you normally do. If you need help with Group Policy Objects, see [Create a Group Policy Object](/windows/security/threat-protection/windows-firewall/create-a-group-policy-object).
+1. Deploy your Group Policy Object as you normally do. If you need help with Group Policy Objects, see [Create a Group Policy Object](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj717274(v=ws.11)).
 
 > [!NOTE]
 > When configuring scheduled scans, the setting **Start the scheduled scan only when computer is on but not in use** (which is enabled by default) can affect the expected scheduled time by requiring the machine to be idle first.

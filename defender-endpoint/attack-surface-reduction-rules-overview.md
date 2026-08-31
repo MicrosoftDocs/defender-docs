@@ -119,7 +119,7 @@ ASR rules require Microsoft Defender Antivirus as the primary anti-virus app on 
   For more information about modes in Microsoft Defender Antivirus, see [How Microsoft Defender Antivirus affects Defender for Endpoint functionality](microsoft-defender-antivirus-compatibility.md#how-microsoft-defender-antivirus-affects-defender-for-endpoint-functionality).
 
 - [Real-time protection in Microsoft Defender Antivirus](configure-real-time-protection-microsoft-defender-antivirus.md) must be on.
-- [Cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) (also referred to as Microsoft Advanced Protection Service or MAPS) is critical to ASR rule functionality. Cloud protection enhances standard real-time protection and is a critical component of preventing breaches from malware. Some ASR rules specifically have [Cloud-delivery Protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) requirements for [Endpoint Detection and Response (EDR)](overview-endpoint-detection-response.md) alerts in Defender for Endpoint and user notification pop-ups. For details, see [Alerts and notifications from ASR rule actions](attack-surface-reduction-rules-reference.md#alerts-and-notifications-from-asr-rule-actions).
+- [Cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) (also referred to as Microsoft Advanced Protection Service or MAPS) is critical to ASR rule functionality. Cloud protection enhances standard real-time protection and is a critical component of preventing breaches from malware. Some ASR rules specifically have [Cloud-delivery Protection](enable-cloud-protection-microsoft-defender-antivirus.md) requirements for [Endpoint Detection and Response (EDR)](overview-endpoint-detection-response.md) alerts in Defender for Endpoint and user notification pop-ups. For details, see [Alerts and notifications from ASR rule actions](attack-surface-reduction-rules-reference.md#alerts-and-notifications-from-asr-rule-actions).
 
   For the same reason, your environment must allow [connections to the Microsoft Defender Antivirus cloud service](configure-network-connections-microsoft-defender-antivirus.md).
 
@@ -136,7 +136,7 @@ ASR rules require Microsoft Defender Antivirus as the primary anti-virus app on 
 
   Advanced management capabilities aren't available with other licenses (for example, Windows Professional or Microsoft 365 E3). However, you can develop your own monitoring and reporting tools on top of the ASR rule events that are generated in Windows Event Viewer on each device (for example, [Windows Event Forwarding](/windows/security/operating-system-security/device-management/use-windows-event-forwarding-to-assist-in-intrusion-detection)).
 
-  To learn more about Windows licensing, see [Windows Licensing](https://www.microsoft.com/licensing/product-licensing/windows) and get the [Microsoft Volume Licensing Reference Guide](https://www.microsoft.com/download/details.aspx?id=11091).
+  To learn more about Windows licensing, see [Windows Licensing](https://www.microsoft.com/licensing/product-licensing/windows).
 
 ## Supported operating systems for ASR rules
 
@@ -281,7 +281,7 @@ For information about how ASR rule setting conflicts are handled for the availab
 
 ## Notifications and alerts for ASR rules
 
-When an ASR rule in **Block** or **Warn** mode is triggered on a device, a notification is displayed on the device. You can customize the information in the notifications. For more information, see [Customize contact information in Windows Security](/windows/security/threat-protection/windows-defender-security-center/wdsc-customize-contact-information).
+When an ASR rule in **Block** or **Warn** mode is triggered on a device, a notification is displayed on the device. You can customize the information in the notifications. For more information, see [Customize contact information in Windows Security](/windows/security/operating-system-security/system-security/windows-defender-security-center/wdsc-customize-contact-information).
 
 [Endpoint Detection and Response (EDR)](overview-endpoint-detection-response.md) alerts in Defender for Endpoint are generated when supported ASR rules are triggered.
 

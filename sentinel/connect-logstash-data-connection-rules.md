@@ -7,7 +7,7 @@ ms.reviewer: krishsa
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-siem
 ms.topic: how-to
-ms.date: 07/01/2026
+ms.date: 08/21/2026
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1016
 #customer intent: As a security engineer, I want to configure the Logstash output plugin with DCRs so that I can stream external log data into Microsoft Sentinel with full control over the output schema.
@@ -43,8 +43,8 @@ The Logstash engine is composed of three components:
 - Output plugins: Customized sending of collected and processed data to various destinations.
 
 > [!NOTE]
-> - Microsoft supports only the Microsoft Sentinel-provided Logstash output plugin discussed here. The current plugin is **[microsoft-sentinel-log-analytics-logstash-output-plugin](https://github.com/Azure/Azure-Sentinel/tree/master/DataConnectors/microsoft-sentinel-log-analytics-logstash-output-plugin)**, v2.1.0. You can [open a support ticket](https://portal.azure.com/#create/Microsoft.Support) for any issues regarding the output plugin.
-> - Microsoft does not support third-party Logstash output plugins for Microsoft Sentinel, or any other Logstash plugin or component of any type.
+> - Microsoft supports only the Microsoft Sentinel-provided Logstash output plugin discussed here. The current plugin is **[microsoft-sentinel-log-analytics-logstash-output-plugin](https://rubygems.org/gems/microsoft-sentinel-log-analytics-logstash-output-plugin/versions/2.5.0-java)**, v2.5.0. You can [open a support ticket](https://portal.azure.com/#create/Microsoft.Support) for any issues regarding the output plugin.
+> - Microsoft doesn't support third-party Logstash output plugins for Microsoft Sentinel, or any other Logstash plugin or component of any type.
 > - See [Logstash plugin prerequisites](#logstash-plugin-prerequisites) for the plugin's supported Logstash versions.
 
 The plugin sends JSON-formatted data to your Log Analytics workspace using the Logs Ingestion API. The data is ingested into custom logs or a standard table.
@@ -68,13 +68,15 @@ To set up the plugin, follow these steps:
 
 - Install a supported version of Logstash. The plugin supports the following Logstash versions:
 
-    - 7.0 - 7.17.13
-    - 8.0 - 8.9
-    - 8.11 - 8.15
-    - 8.19.2
-    - 9.0.8
-    - 9.1.10
-    - 9.2.4 - 9.2.5
+  - 7.0 - 7.17.13
+  - 8.0 - 8.9 (these versions require a [security update](https://discuss.elastic.co/t/logstash-8-19-14-9-2-8-9-3-3-security-update-esa-2026-29/385816), according to Logstash)
+  - 8.11 - 8.15 (these versions require a [security update](https://discuss.elastic.co/t/logstash-8-19-14-9-2-8-9-3-3-security-update-esa-2026-29/385816), according to Logstash)
+  - 8.19.2 (this version requires a [security update](https://discuss.elastic.co/t/logstash-8-19-14-9-2-8-9-3-3-security-update-esa-2026-29/385816), according to Logstash)
+  - 9.0.8 (this version requires a [security update](https://discuss.elastic.co/t/logstash-8-19-14-9-2-8-9-3-3-security-update-esa-2026-29/385816), according to Logstash)
+  - 9.1.10 (this version requires a [security update](https://discuss.elastic.co/t/logstash-8-19-14-9-2-8-9-3-3-security-update-esa-2026-29/385816), according to Logstash)
+  - 9.2.4 - 9.2.5 (these versions require a [security update](https://discuss.elastic.co/t/logstash-8-19-14-9-2-8-9-3-3-security-update-esa-2026-29/385816), according to Logstash)
+  - 9.3.3
+  - 9.4.0
 
     > [!NOTE]
     > If you use Logstash 8, we recommended that you [disable ECS in the pipeline](https://www.elastic.co/guide/en/logstash/8.4/ecs-ls.html).
@@ -83,7 +85,7 @@ To set up the plugin, follow these steps:
 
 ### Install the plugin
 
-The Microsoft Sentinel output plugin is available in the [Logstash collection on RubyGems](https://rubygems.org/gems/microsoft-sentinel-log-analytics-logstash-output-plugin/versions/2.1.0-java).
+The Microsoft Sentinel output plugin is available in the [Logstash collection on RubyGems](https://rubygems.org/gems/microsoft-sentinel-log-analytics-logstash-output-plugin/versions/2.5.0-java).
 
 - Follow the instructions in the Logstash [Working with plugins](https://www.elastic.co/guide/en/logstash/current/working-with-plugins.html) document to install the **[microsoft-sentinel-log-analytics-logstash-output-plugin](https://github.com/Azure/Azure-Sentinel/tree/master/DataConnectors/microsoft-sentinel-log-analytics-logstash-output-plugin)** plugin. To install to an existing Logstash installation, run the following command:
 
@@ -129,6 +131,7 @@ To create the sample file, follow these steps:
         }
     }
     ```
+
 1. Make sure the referenced file path already exists, then start Logstash.
 
     The plugin writes ten records to a sample file named `sampleFile<epoch seconds>.json` in the configured path once there are 10 events to sample or when the Logstash process exits gracefully. For example: *c:\temp\sampleFile1648453501.json*. Here is part of a sample file that the plugin creates:
@@ -176,7 +179,8 @@ In this scenario, you configure the Logstash input plugin to send syslog events 
         }
     }
     ```
-2. Copy the output plugin configuration below to your Logstash configuration file.
+
+1. Copy the output plugin configuration below to your Logstash configuration file.
 
     ```
     output {
@@ -186,6 +190,7 @@ In this scenario, you configure the Logstash input plugin to send syslog events 
         }
     }
     ```
+
 1. Make sure the file path already exists, then start Logstash.
 
     The plugin writes ten records to a sample file named `sampleFile<epoch seconds>.json` in the configured path once there are 10 events to sample or when the Logstash process exits gracefully. For example: *c:\temp\sampleFile1648453501.json*. Here is part of a sample file that the plugin creates:
@@ -230,12 +235,12 @@ In this section, you create resources to use for your DCR, in one of these scena
 
 To ingest the data to a custom table, follow these steps (based on the [Send data to Azure Monitor Logs using REST API (Azure portal) tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal)):
 
-1. Review the [prerequisites for sending data to Azure Monitor Logs via the Azure portal](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#prerequisites).
-2. [Configure the application](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#create-azure-ad-application).
-3. [Add a custom log table](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#create-new-table-in-log-analytics-workspace).
-4. [Parse and filter sample data](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#parse-and-filter-sample-data) using the sample file you created in [Create a sample file](#create-a-sample-file).
-5. [Collect information from the DCR](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#collect-information-from-the-dcr).
-6. [Assign permissions to the DCR](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#assign-permissions-to-the-dcr).
+1. Review the [prerequisites](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#prerequisites).
+1. [Configure the application](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#create-azure-ad-application).
+1. [Add a custom log table](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#create-new-table-in-log-analytics-workspace).
+1. [Parse and filter sample data](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#parse-and-filter-sample-data) using the sample file you created in the previous section.
+1. [Collect information from the DCR](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#collect-information-from-the-dcr).
+1. [Assign permissions to the DCR](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#assign-permissions-to-the-dcr).
 
     Skip the Send sample data step.
 
@@ -245,18 +250,18 @@ If you come across any issues, see the [Logs Ingestion API troubleshooting steps
 
 To ingest the data to a standard table like Syslog or CommonSecurityLog, you use a process based on the [Send data to Azure Monitor Logs using REST API (Resource Manager templates) tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-api). While the tutorial explains how to ingest data into a custom table, you can easily adjust the process to ingest data into a standard table. The steps below indicate relevant changes in the steps.
 
-1. Review the [prerequisites for sending data to Azure Monitor Logs with Resource Manager templates](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#prerequisites).
-2. [Collect workspace details](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#collect-workspace-details).
-3. [Configure an application](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#create-azure-ad-application).
+1. Review the [prerequisites](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#prerequisites).
+1. [Collect workspace details](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#collect-workspace-details).
+1. [Configure an application](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#create-azure-ad-application).
 
     Skip the Create new table in Log Analytics workspace step. This step isn't relevant when ingesting data into a standard table, because the table is already defined in Log Analytics.
-4. [Create the DCR](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#create-data-collection-rule). In this step:
+1. [Create the DCR](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#create-data-collection-rule). In this step:
 
     - Provide the sample file you created in [Create a sample file](#create-a-sample-file).
     - Use the sample file you created to define the `streamDeclarations` property. Each of the fields in the sample file should have a corresponding column with the same name and the appropriate type (see the example below).
     - Configure the value of the `outputStream` property with the name of the standard table instead of the custom table. Unlike custom tables, standard table names don't have the `_CL` suffix.
     - The prefix of the table name should be `Microsoft-` instead of `Custom-`. In this example, the `outputStream` property value is `Microsoft-Syslog`.
-5. [Assign permissions to a DCR](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#assign-permissions-to-a-dcr).
+1. [Assign permissions to a DCR](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#assign-permissions-to-a-dcr).
 
     Skip the Send sample data step.
 
@@ -348,16 +353,16 @@ The plugin supports two authentication methods: **service principal** (client cr
 
 #### Service principal authentication
 
-To configure the Logstash configuration file to ingest the logs into a custom table using service principal authentication, retrieve the following values: `client_app_Id`, `client_app_secret`, `tenant_id`, `data_collection_endpoint`, `dcr_immutable_id`, and `dcr_stream_name`.
+To configure the Logstash configuration file to ingest the logs into a custom table using service principal authentication, retrieve the following values: `client_id`, `client_secret`, `tenant_id`, `data_collection_endpoint`, `dcr_id`, and `stream_name`.
 
 | Field | How to retrieve |
 | --- | --- |
-| `client_app_Id` | The `Application (client) ID` value you create in step 3 when you [create the DCR resources](#create-the-required-dcr-resources), according to the [Azure portal tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal) or [Resource Manager templates tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-api). |
-| `client_app_secret` | The client secret value you create in step 5 when you [create the DCR resources](#create-the-required-dcr-resources), according to the [Azure portal tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal) or [Resource Manager templates tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-api). |
+| `client_id` | The `Application (client) ID` value you create in step 3 when you [create the DCR resources](#create-the-required-dcr-resources), according to the [Azure portal tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal) or [Resource Manager templates tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-api). |
+| `client_secret` | The client secret value you create in step 5 when you [create the DCR resources](#create-the-required-dcr-resources), according to the [Azure portal tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal) or [Resource Manager templates tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-api). |
 | `tenant_id` | Your subscription's tenant ID. You can find the tenant ID under **Home > Microsoft Entra ID > Overview > Basic Information**. |
 | `data_collection_endpoint` | The value of the `logsIngestion` URI in step 3 when you [create the DCR resources](#create-the-required-dcr-resources), according to the [Azure portal tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal) or [Resource Manager templates tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-api). |
-| `dcr_immutable_id` | The value of the DCR `immutableId` in step 6 when you [create the DCR resources](#create-the-required-dcr-resources), according to the [Azure portal tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal) or [Resource Manager templates tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-api). |
-| `dcr_stream_name` | For custom tables, as explained in step 6 when you create the DCR resources, go to the JSON view of the DCR, and copy the `dataFlows` > `streams` property. See the `dcr_stream_name` in the [Service principal output plugin configuration example](#example-service-principal-output-plugin-configuration). For standard tables, the value is `Custom-SyslogStream`. |
+| `dcr_id` | The value of the DCR `immutableId` in step 6 when you [create the DCR resources](#create-the-required-dcr-resources), according to the [Azure portal tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal) or [Resource Manager templates tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-api). |
+| `stream_name` | For custom tables, as explained in step 6 when you create the DCR resources, go to the JSON view of the DCR, and copy the `dataFlows` > `streams` property. See the `stream_name` in the [Service principal output plugin configuration example](#example-service-principal-output-plugin-configuration). For standard tables, the value is `Custom-SyslogStream`. |
 
 After you retrieve the required values:
 
@@ -370,12 +375,12 @@ After you retrieve the required values:
 ```
 output {
     microsoft-sentinel-log-analytics-logstash-output-plugin {
-      client_app_Id => "<enter your client_app_id value here>"
-      client_app_secret => "<enter your client_app_secret value here>"
+      client_id => "<enter your client_id value here>"
+      client_secret => "<enter your client_secret value here>"
       tenant_id => "<enter your tenant id here>"
       data_collection_endpoint => "<enter your logsIngestion URI here>"
-      dcr_immutable_id => "<enter your DCR immutableId here>"
-      dcr_stream_name => "<enter your stream name here>"
+      dcr_id => "<enter your DCR immutableId here>"
+      stream_name => "<enter your stream name here>"
       create_sample_file=> false
       sample_file_path => "c:\\temp"
     }
@@ -384,67 +389,63 @@ output {
 
 #### Managed identity authentication (passwordless)
 
-When `managed_identity` is set to `true`, the plugin authenticates without a client secret. The plugin automatically detects the appropriate identity mechanism at runtime in the following order:
+When you don't provide service principal credentials (`client_id`, `client_secret`, and `tenant_id`), the plugin authenticates by using [`DefaultAzureCredential`](/azure/developer/java/sdk/authentication/credential-chains#defaultazurecredential-overview) from the Azure SDK. `DefaultAzureCredential` tries a sequence of authentication methods and uses the first one that succeeds. In a server environment, the relevant methods are attempted in this order:
 
-1. **AKS Workload Identity** — If the environment variables `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_FEDERATED_TOKEN_FILE` are present (set automatically by AKS), the plugin performs an OIDC token exchange.
-2. **Azure Arc** — If the Azure Connected Machine Agent (`azcmagent`) is detected on the host, the plugin uses the Azure Arc managed identity endpoint for hybrid and on-premises servers.
-3. **IMDS** — Otherwise, the plugin falls back to the Azure Instance Metadata Service (IMDS) for Azure VMs and VMSS.
+1. **Environment variables**: Reads credentials from environment variables such as `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_CLIENT_SECRET` to authenticate as a service principal.
+1. **Workload identity**: If the plugin runs on an Azure host with workload identity enabled (for example, AKS with the `AZURE_FEDERATED_TOKEN_FILE` environment variable set), the plugin performs an OIDC token exchange.
+1. **Managed identity**: If the host has a managed identity enabled, the plugin authenticates by using that identity. This method covers Azure VMs, Virtual Machine Scale Sets, and Azure Arc-enabled servers.
+
+For the full sequence of credentials that `DefaultAzureCredential` attempts, see [Credential chains in the Azure Identity library for Java](/azure/developer/java/sdk/authentication/credential-chains#defaultazurecredential-overview).
 
 Required configuration for managed identity:
 
 | Field | Description |
 | --- | --- |
-| `managed_identity` | Boolean, `false` by default. Set to `true` to enable passwordless authentication. |
 | `data_collection_endpoint` | String. The logsIngestion URI for your DCE. |
-| `dcr_immutable_id` | String. The DCR immutableId. |
-| `dcr_stream_name` | String. The name of the data stream. |
-| `managed_identity_object_id` | Optional. String, empty by default. The object ID of a user-assigned managed identity. Required when the VM has multiple user-assigned identities. Omit for system-assigned managed identity. |
+| `dcr_id` | String. The DCR immutableId. |
+| `stream_name` | String. The name of the data stream. |
 
-##### Example: System-assigned managed identity
-
-```
-output {
-    microsoft-sentinel-log-analytics-logstash-output-plugin {
-      managed_identity => true
-      data_collection_endpoint => "<enter your DCE logsIngestion URI here>"
-      dcr_immutable_id => "<enter your DCR immutableId here>"
-      dcr_stream_name => "<enter your stream name here>"
-    }
-}
-```
-
-##### Example: User-assigned managed identity
+##### Example: Managed identity
 
 ```
 output {
     microsoft-sentinel-log-analytics-logstash-output-plugin {
-      managed_identity => true
-      managed_identity_object_id => "<enter the object ID of your user-assigned identity>"
       data_collection_endpoint => "<enter your DCE logsIngestion URI here>"
-      dcr_immutable_id => "<enter your DCR immutableId here>"
-      dcr_stream_name => "<enter your stream name here>"
+      dcr_id => "<enter your DCR immutableId here>"
+      stream_name => "<enter your stream name here>"
     }
 }
 ```
 
 > [!NOTE]
 > - When using Azure Arc, the Logstash process must run as a user that is a member of the `himds` group to read the challenge token. For more information, see [Azure Arc managed identity documentation](/azure/azure-arc/servers/managed-identity-authentication).
-> - For security reasons, don't implicitly state sensitive configuration values such as `client_app_secret` in your Logstash configuration file. Store sensitive information in a [Logstash KeyStore](https://www.elastic.co/guide/en/logstash/current/keystore.html#keystore).
+> - For security reasons, don't implicitly state sensitive configuration values such as `client_secret` in your Logstash configuration file. Store sensitive information in a [Logstash KeyStore](https://www.elastic.co/guide/en/logstash/current/keystore.html#keystore).
 > - When you set an empty string as a value for a proxy setting, it unsets any system-wide proxy setting.
 
 #### Optional configuration
 
-| Field | Description | Default value |
+| Key | Default | Description |
 | --- | --- | --- |
-| `azure_cloud` | Used to specify the name of the Azure cloud that is being used. Available values are: `AzureCloud`, `AzureChinaCloud`, and `AzureUSGovernment`. | `AzureCloud` |
-| `key_names` | An array of strings. Provide this field if you want to send a subset of the columns to Log Analytics. | None (field is empty) |
-| `plugin_flush_interval` | Defines the maximal time difference (in seconds) between sending two messages to Log Analytics. | `5` |
-| `retransmission_time` | Sets the amount of time in seconds for retransmitting messages once sending failed. | `10` |
-| `retransmission_delay` | The delay in seconds between each retry attempt when sending log data fails. Increase this value to reduce request rate during throttling (HTTP 429) scenarios. | `2` |
-| `compress_data` | When this field is `True`, the event data is compressed before using the API. Recommended for high throughput pipelines. | `False` |
-| `proxy` | Specify which proxy URL to use for all API calls. | None (field is empty) |
-| `proxy_aad` | Specify which proxy URL to use for API calls to Microsoft Entra ID. Overrides the `proxy` setting. | None (field is empty) |
-| `proxy_endpoint` | Specify which proxy URL to use for API calls to the Data Collection Endpoint. Overrides the `proxy` setting. | None (field is empty) |
+| `azure_cloud` | `AzurePublicCloud` | Azure cloud environment. |
+| `proxy` | (none) | Optional. Base HTTP proxy URL applied to all plugin traffic. Format: `[http://][user:password@]host:port`. When unset, no proxy is used and behavior is unchanged. |
+| `proxy_aad` | (value of `proxy`) | Optional. HTTP proxy URL used only for Microsoft Entra ID authentication and token traffic. Falls back to `proxy` when unset. |
+| `proxy_endpoint` | (value of `proxy`) | Optional. HTTP proxy URL used only for traffic to the Data Collection Endpoint. Falls back to `proxy` when unset. |
+| `keys_to_keep` | (all) | Array of field names to send (subset filtering). |
+| `max_retries_num` | `3` | Max retry attempts for failed sends. |
+| `initial_wait_time_seconds` | `1` | Initial backoff between retries. |
+| `connect_timeout_seconds` | `15` | Timeout for establishing the connection to the ingestion endpoint. Bounds how long an upload can block in the connect phase; a resulting timeout is retried. |
+| `write_timeout_seconds` | `60` | Timeout for sending the request body to the ingestion endpoint. Bounds how long an upload can block in the write phase; a resulting timeout is retried. |
+| `max_graceful_shutdown_time_seconds` | `60` | Max wait for graceful shutdown. |
+| `max_waiting_time_for_batch_seconds` | `10` | Max wait before flushing a batch. |
+| `max_waiting_for_unifier_time_seconds` | `10` | Max wait before flushing the unifier. |
+| `max_batch_size` | `10000` | Maximum number of events per batch. When a batch reaches this size, it's flushed immediately, regardless of the time window. |
+| `input_queue_capacity` | `50000` | Maximum capacity of the input queue. Bounds memory usage under high-volume ingestion. When full, back-pressure is applied to the Logstash pipeline. |
+| `internal_queue_capacity` | `500` | Maximum capacity of the internal queues between batcher, unifier, and sender workers. Bounds memory usage for in-flight batches. |
+| `worker_sleep_time_millis` | `10` | Delay between worker iterations. |
+| `batcher_workers_count` | (auto) | Number of batcher threads. |
+| `sender_workers_count` | (auto) | Number of sender threads. |
+| `unifier_workers_count` | (auto) | Number of unifier threads. |
+| `id` | None | A custom identification tag to be added to sent-batches logs. |
 
 ### Restart Logstash
 
@@ -492,6 +493,48 @@ The following table lists the firewall requirements for scenarios where Azure vi
 | Microsoft Azure operated by 21Vianet | Replace '.com' above with '.cn' | Data collection Endpoint | Port 443 | Outbound | Yes |
 
 ## Plugin version history
+
+### 2.5.0
+
+- Added optional per-plugin proxy configuration for authentication and ingestion traffic using `proxy`, `proxy_aad`, and `proxy_endpoint`.
+- Updated Netty handler, HTTP, HTTP/2, and DNS components from 4.1.133.Final to 4.1.136.Final.
+- Updated Jackson Databind and Jackson Core from 2.18.6 to 2.18.8.
+
+### 2.4.0
+
+- Worker threads now run as bounded, executor-scheduled passes: recoverable exceptions are logged and the worker resumes on the next cycle; fatal JVM errors are logged and re-thrown.
+- Fixed graceful shutdown so in-flight batches are drained (batchers, then unifiers, then senders) before workers stop, bounded by `max_graceful_shutdown_time_seconds`.
+- Added configurable upload timeouts `connect_timeout_seconds` (default 15) and `write_timeout_seconds` (default 60); connect and write timeouts are retried.
+- Added thread ID, exception type, batch size, and DCR stream to batch failure logs.
+
+### 2.3.3
+
+- Fixed loss of numeric and boolean type fidelity: fields backed by Logstash's internal JRuby types (for example, ports and byte counts) are now preserved as native JSON numbers and booleans instead of being converted to strings, ensuring reliable ingestion into DCRs with typed columns.
+
+### 2.3.2
+
+- Fixed silent worker thread death caused by uncaught exceptions in the worker processing loop.
+- Fixed NullPointerException in SenderWorker when Azure returns a LogsUploadException with a null HTTP response.
+- Added resilient error handling with consecutive error tracking to reduce permanent worker failure.
+- Added optional `id` configuration value for telemetry.
+- Added DCR stream to sent-batches logging.
+
+### 2.3.0
+
+- Enabled functionality with Logstash 9.4.
+- Bumped dependency versions for external libraries (azure-sdk-bom, logback, slf4j, Netty).
+
+### 2.2.1
+
+- Adds an info-level logging line when batches are successfully sent.
+
+### 2.2.0
+
+- Adds ability to use either new or old configuration values.
+
+### 2.1.2
+
+- Documentation updates.
 
 ### 2.1.0
 
@@ -552,7 +595,7 @@ RUN apt install netbase -y
 
 For more information, see [JNR regression in Logstash 7.17.0 (Docker)](https://github.com/elastic/logstash/issues/13703).
 
-If your environment's event rate is low, increase the value of *plugin_flush_interval* to 60 or more. You can monitor the ingestion payload using [DCR metrics](/azure/azure-monitor/essentials/data-collection-monitor#dcr-metrics). For more information on *plugin_flush_interval*, see the [Optional configuration](#optional-configuration) table.
+If your environment's event rate is low, increase the value of *max_waiting_time_for_batch_seconds* and *max_waiting_for_unifier_time_seconds* to 60 or more. You can monitor the ingestion payload using [DCR metrics](/azure/azure-monitor/essentials/data-collection-monitor#dcr-metrics). For more information on the waiting time variables, see the [Optional configuration](#optional-configuration) table.
 
 ## Limitations
 

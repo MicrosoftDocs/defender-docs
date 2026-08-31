@@ -100,3 +100,8 @@ For more information, see [Options for non-Microsoft reporting tools](submission
 
 > [!TIP]
 > In [attack simulation training in Defender for Office 365 Plan 2](attack-simulation-training-get-started.md), simulation messages reported by non-Microsoft tools aren't captured in attack simulation reports.
+
+## Related content
+
+- [Microsoft Defender for Office 365 overview](mdo-about.md)
+- [Get started with Microsoft Defender for Office 365](mdo-deployment-guide.md)

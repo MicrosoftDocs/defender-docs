@@ -1,18 +1,20 @@
 ---
 title: Secure OAuth apps accessing non-Graph APIs using app governance
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 description: Learn how to secure apps accessing other APIs using app governance in the Microsoft Defender portal.
 ms.reviewer: shragar
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
 # Secure OAuth apps accessing non-Graph APIs using app governance
 
-Many apps use APIs other than Microsoft Graph to access Microsoft 365 and other resources. With visibility over such apps, you can identify and defend against risks inherent to these apps, including the APIs that they access. Some of these APIs might receive limited support and updates.
+## Overview
 
-App governance provides visibility over OAuth apps registered on Microsoft Entra ID, regardless of whether they access Graph API or other APIs. Additionally, you can monitor these apps and automatically take action if they're noncompliant or exhibit suspicious behavior.
+Many apps use APIs other than Microsoft Graph to access Microsoft 365 and other resources. With visibility over such apps, you can identify and defend against risks inherent to these apps, including the APIs that the apps access. Some non-Microsoft Graph APIs might receive limited support and updates.
+
+App governance provides visibility over OAuth apps registered on Microsoft Entra ID, regardless of whether they access Graph API or other APIs. Additionally, you can monitor these apps and automatically take action if the apps are noncompliant or exhibit suspicious behavior.
 
 You can better protect your organization with the new functionalities and enhancements in the following ways:
 
@@ -40,13 +42,11 @@ To view Microsoft 365 apps that access non-Graph APIs:
 
 ## View APIs used by an app
 
-The **Permissions** tab in the app details pane shows all permissions granted to an app, including both Graph API and non-Graph API permissions. To view the APIs that an app uses:
+The **Permissions** tab in the app details pane lists all permissions granted to an app, including both Graph API and non-Graph API permissions. To view the APIs that an app uses:
 
 1. In the App governance page, select the app you want to investigate.
 
 1. In the app details pane, select the **Permissions** tab.
-
-The Permissions tab lists all permissions granted to the app, including Graph API permissions and non-Graph API permissions.
 
 :::image type="content" source="media/app-governance-secure-apps-access-non-graph-api/other-apis-permissions.png" alt-text="Screenshot that shows the list of APIs and their assigned permissions." lightbox="media/app-governance-secure-apps-access-non-graph-api/other-apis-permissions.png":::
 

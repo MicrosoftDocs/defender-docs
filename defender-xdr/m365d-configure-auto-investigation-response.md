@@ -6,7 +6,7 @@ author: guywi-ms
 ms.topic: how-to
 ms.service: defender-xdr
 ms.localizationpriority: medium
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.collection:
 - m365-security
 - tier2
@@ -31,7 +31,7 @@ This article describes how to configure automated investigation and response in 
 2. [Review or change the automation level for device groups](#review-or-change-the-automation-level-for-device-groups).
 3. [Review your security and alert policies in Office 365](#review-your-security-and-alert-policies-in-office-365).
 
-Then, after you're all set up, you can [view and manage remediation actions in the Action center](m365d-autoir-actions.md). And, if necessary, you can [make changes to automated investigation settings](#need-to-make-changes-to-automated-investigation-settings).
+After configuring automated investigation and response, you can [view and manage remediation actions in the Action center](m365d-autoir-actions.md) and [update automated investigation settings](#need-to-make-changes-to-automated-investigation-settings) as needed.
 
 <a name='prerequisites-for-automated-investigation-and-response-in-microsoft-365-defender'></a>
 
@@ -55,7 +55,7 @@ Whether automated investigations run, and whether remediation actions are taken 
 
 2. Go to **System** \> **Settings** \> **Endpoints** \> **Device groups** under **Permissions**.
 
-3. Review your device group policies. In particular, look at the **Remediation level** column. We recommend using **Full - remediate threats automatically**.  You might need to create or edit your device groups to get the level of automation you want. To get help with this task, see the following articles:
+3. Review your device group policies. In particular, look at the **Remediation level** column. We recommend using **Full - remediate threats automatically**.  You might need to create or edit your device groups to get the level of automation you want. To get help creating or editing device groups, see the following articles:
 
    - [How threats are remediated](/defender-endpoint/automated-investigations#how-threats-are-remediated)
    - [Create and manage device groups](/defender-endpoint/machine-groups)
@@ -72,7 +72,8 @@ If you're using custom policies, use the [Configuration analyzer](/defender-offi
 
 You can review your [alert policies](/defender-office-365/alert-policies-defender-portal) in the Defender portal at <https://security.microsoft.com> \> **Policies & rules** \> **Alert policy** or directly at <https://security.microsoft.com/alertpoliciesv2>. Several default alert policies are in the **Threat management** category. Some of the alert policies in the **Threat management** category can trigger automated investigation and response. To learn more, see [Threat management alert policies](alert-policies.md#threat-management-alert-policies).
 
-## Need to make changes to automated investigation settings?
+<a name="need-to-make-changes-to-automated-investigation-settings"></a>
+## Change automated investigation settings
 
 You can choose from several options to change settings for your automated investigation and response capabilities. Some options are listed in the following table:
 
@@ -81,6 +82,8 @@ You can choose from several options to change settings for your automated invest
 |Specify automation levels for groups of devices|<ol><li>Set up one or more device groups. See [Create and manage device groups](/defender-endpoint/machine-groups). </li><li>In the Microsoft Defender portal, go to **Permissions** \> **Endpoints roles & groups** \> **Device groups**.</li><li>Select a device group and review its **Automation level** setting. (We recommend using **Full - remediate threats automatically**). See [Automation levels in automated investigation and remediation capabilities](/defender-endpoint/automation-levels).</li><li>Repeat steps 2 and 3 as appropriate for all your device groups. </li></ol>|
 
 ## Next steps
+
+Learn more about automated investigation and response capabilities in Microsoft Defender XDR.
 
 ### Related content
 

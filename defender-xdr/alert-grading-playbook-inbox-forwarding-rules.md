@@ -8,9 +8,9 @@ ms.localizationpriority: medium
 ms.collection: 
   - m365-security
   - tier2
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender XDR
 ai-usage: ai-assisted
@@ -70,7 +70,7 @@ Here's an example of the details of alert that was triggered by a malicious inbo
 
 ### Investigate rule parameters
 
-The purpose of this stage is to determine if the rules look suspicious by certain criteria:
+The purpose of the rule-parameter investigation is to determine whether the rules look suspicious based on the following criteria:
 
 Recipients of the forwarding rule:
 
@@ -84,7 +84,7 @@ Filters:
 
 ### Investigate IP address
 
-Review the attributes that related to the IP address that performed the relevant event of rule creation:
+Review the attributes related to the IP address that performed the inbox rule creation event:
 
 1. Search for other suspicious cloud activities that originated from the same IP in the tenant. For instance, suspicious activity might be multiple failed login attempts.
 2. Is the ISP common and reasonable for this user?
@@ -173,7 +173,7 @@ CloudAppEvents
 
 ## Recommended actions
 
-If you confirm that the inbox forwarding rule is malicious, take the following actions to remediate the attack:
+If you confirm that the inbox forwarding rule is malicious, take the following actions to remediate the account compromise:
 
 1. Disable the malicious inbox rule.
 2. Reset the user's account credentials. You can also verify if the user account has been compromised with Microsoft Defender for Cloud Apps, which gets security signals from Microsoft Entra ID Protection.

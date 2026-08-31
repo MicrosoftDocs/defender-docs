@@ -6,7 +6,7 @@ ms.author: abbyweisberg
 ms.service: defender-for-cloud-apps
 ms.topic: how-to
 ms.custom: msecd-doc-authoring-106
-ms.date: 08/07/2026
+ms.date: 08/28/2026
 ai-usage: ai-assisted
 
 #customer intent: As a security admin, I want to migrate my Defender for Cloud Apps file policies to Microsoft Purview so that my data protection continues after file policies are retired.
@@ -29,6 +29,137 @@ Before you begin, confirm you have:
   - Compliance Data Administrator
 - **Defender for Cloud Apps roles**: Cloud App Security Administrator to review your existing file policies.
 - A **Microsoft 365 E5** or **Microsoft 365 E5 Compliance** license (or an equivalent standalone Microsoft Purview DLP license).
+
+## Migrate policies with the DLP to Purview migration tool
+
+Use the **DLP to Purview migration** tool to move eligible file policies to Microsoft Purview without recreating them by hand. The tool reads your existing policies, groups them by migration readiness, shows you the Purview payload it plans to create, and then creates the policies in Purview for you.
+
+### Prerequisites for the migration tool
+
+Before you begin, confirm you meet the following requirements:
+
+- **Supported environment**: You're a commercial cloud customer using a Production environment. The tool isn't available for government or sovereign clouds.
+- **Permissions**: You have Security Administrator permissions to view your Defender for Cloud Apps DLP policies, and Compliance Administrator permissions to create DLP policies in Microsoft Purview.
+- **Existing policies**: You have one or more Defender for Cloud Apps DLP file policies that you want to migrate.
+- **Licensing**: You have the required E5 or Information Protection and Governance (IP&G) licensing for the Purview products.
+- **Purview access**: You can sign in to the Microsoft Purview portal with the Compliance Administrator role to review the migrated policies.
+- **Browser and session**: You use a current, supported browser and keep your session active so migration isn't interrupted.
+
+### What the tool supports
+
+The migration tool supports SharePoint and OneDrive DLP file policies only. The following aren't supported yet:
+
+- Auto-labeling policy migration for Microsoft workloads.
+- DLP and auto-labeling policy migration for non-Microsoft apps, including Google Workspace, Box, Dropbox, and Salesforce.
+
+The wizard shows these unsupported scenarios in a **Coming soon** callout in Step 1, so you can see what's planned for future releases.
+
+> [!TIP]
+> Review your policies before you start. The tool groups policies as **Can migrate**, **Partial migration**, or **Cannot migrate**, so knowing which policies you want to move helps you plan the run.
+
+### Open the migration tool
+
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Cloud apps** > **Policies** > **Policy management**.
+1. Select the **All policies** tab. A banner states that file policies in Defender for Cloud Apps are retired on January 6, 2027, and that you should migrate your existing policies to Microsoft Purview to maintain coverage.
+1. Select **Migrate** on the banner. The **DLP to Purview migration** wizard opens and guides you through four steps.
+
+:::image type="content" source="media/migrate-file-policies-to-purview/banner-migrate-button.png" alt-text="Screenshot of the Policies page in the Microsoft Defender portal showing the file policy retirement banner and the Migrate button." lightbox="media/migrate-file-policies-to-purview/banner-migrate-button.png":::
+
+### Step 1 of 4: Select policies
+
+1. Review your policies, which are grouped under the **Can migrate**, **Partial migration**, and **Cannot migrate** tabs. Each tab shows the number of policies it contains.
+1. Expand a policy's **Notes** to see why it's in that group, such as *Target apps supported in Purview DLP* or *Content inspection can be mapped to Purview SITs*.
+1. Use the checkboxes to select the policies you want to migrate. You can select more than one. Policies already marked **Migrated** can't be selected again.
+1. Use the **Search policies** box to find a specific policy by name.
+1. Review the **Coming soon** callout to see capabilities planned for future releases.
+1. Confirm the count at the bottom of the pane, such as *1 policy ready to migrate*, then select **Next**.
+
+:::image type="content" source="media/migrate-file-policies-to-purview/step-1-select-policies.png" alt-text="Screenshot of Step 1 of the DLP to Purview migration wizard showing policies grouped under the Can migrate, Partial migration, and Cannot migrate tabs." lightbox="media/migrate-file-policies-to-purview/step-1-select-policies.png":::
+
+### Step 2 of 4: Review payload
+
+1. Review the Purview payloads that the tool creates for each selected policy. Warnings call out fields that need manual attention.
+1. Check the **Verdict** for each policy, such as *Fully migratable*.
+1. Select **Show payload** to expand the full payload, and use the copy icon to copy it for your records.
+1. You don't need to enter a policy name. The tool generates the Purview policy name automatically.
+1. Select **Migrate** to start creating the policies in Purview.
+
+:::image type="content" source="media/migrate-file-policies-to-purview/step-2-review-payload.png" alt-text="Screenshot of Step 2 of the wizard showing the migration verdict for a selected policy and the Show payload option." lightbox="media/migrate-file-policies-to-purview/step-2-review-payload.png":::
+
+### Step 3 of 4: Migration in progress
+
+The tool creates your policies and shows a running count, such as *0 of 1 policies processed*. Wait for the process to finish. This screen advances to Step 4 automatically when migration completes.
+
+> [!IMPORTANT]
+> Don't close this window until the migration is complete. Closing the tool early can create improper or incomplete policies in Purview. Wait for the completion screen to load.
+
+:::image type="content" source="media/migrate-file-policies-to-purview/step-3-migration-in-progress.png" alt-text="Screenshot of Step 3 of the wizard showing migration progress and a warning not to close the window." lightbox="media/migrate-file-policies-to-purview/step-3-migration-in-progress.png":::
+
+### Step 4 of 4: Migration complete
+
+1. Review the results table, which lists each policy in three columns: **MDA Policy**, **Purview Policy**, and **Status**. The **MDA Policy** column also shows the policy GUID and rule GUID for each source policy.
+1. Check the status for each row. A successful row shows **Created in Purview**.
+1. Open the [Microsoft Purview DLP policies page](https://purview.microsoft.com/datalossprevention/policies) to review the policies created in Purview.
+1. Select **Done** to close the wizard.
+
+:::image type="content" source="media/migrate-file-policies-to-purview/step-4-migration-complete.png" alt-text="Screenshot of Step 4 of the wizard showing the results table with the MDA Policy, Purview Policy, and Status columns." lightbox="media/migrate-file-policies-to-purview/step-4-migration-complete.png":::
+
+### Review the migrated policies in Purview
+
+Migrated policies appear on the **Data loss prevention** > **Policies** page in the Microsoft Purview portal, with these characteristics:
+
+- **Naming**: The tool names each policy `[Migrated] <original policy name> (1P DLP)`. A source policy that targets both SharePoint and OneDrive produces two Purview policies, one for each location.
+- **Mode**: New policies are created in **Test with notifications** mode, so they don't enforce actions until you turn enforcement on.
+- **Policy sync status**: Newly created policies show **Sync in progress** until the policy finishes deploying.
+
+Validate each policy in test mode before you turn on enforcement and disable the original file policy.
+
+:::image type="content" source="media/migrate-file-policies-to-purview/purview-migrated-policies.png" alt-text="Screenshot of the Data loss prevention Policies page in the Microsoft Purview portal listing the migrated policies." lightbox="media/migrate-file-policies-to-purview/purview-migrated-policies.png":::
+
+### Frequently asked questions about the migration tool
+
+#### Which environments does the tool support?
+
+The migration tool is available for commercial cloud customers in all Production environments. Government and sovereign clouds aren't in scope at this time.
+
+#### How do I open the migration tool?
+
+Select **Migrate** on the retirement banner shown on the **Policies** page in the Microsoft Defender portal. The migration wizard opens directly from the banner.
+
+#### Do I need to name the new Purview policy?
+
+No. The tool generates the Purview policy name automatically, using the format `[Migrated] <original policy name> (1P DLP)`.
+
+#### What do "Can migrate," "Partial migration," and "Cannot migrate" mean?
+
+Your existing policies are grouped by how completely they can be moved. **Can migrate** policies transfer fully, **Partial migration** policies transfer with some settings that might need manual review, and **Cannot migrate** policies aren't supported for migration.
+
+#### Can I select more than one policy at a time?
+
+Yes. Step 1 supports multi-select with checkboxes, so you can migrate several eligible policies in a single run.
+
+#### Where can I see the policies after migration?
+
+After migration completes, open the [Microsoft Purview DLP policies page](https://purview.microsoft.com/datalossprevention/policies) to review the policies that were created in Purview.
+
+#### Does migrating remove my original file policies?
+
+No. Migration creates new equivalent policies in Purview. Review your source and target policies in the Purview portal before you decommission any original policy.
+
+#### What is the "Coming soon" section in Step 1?
+
+It highlights migration capabilities planned for upcoming releases, including auto-labeling policy migration for Microsoft workloads and policy migration for Google Workspace, Box, Dropbox, and Salesforce.
+
+### Known issues with the migration tool
+
+| Issue | Cause | Workaround |
+|---|---|---|
+| Closing the tool during migration | Closing the window or navigating away while Step 3 is running can create incomplete or improperly configured policies. | Keep the tool open until Step 4 appears. If you closed early, review the affected policies in Purview and rerun migration for any that are incomplete. |
+| Policy appears under **Cannot migrate** | The policy uses configuration that automated migration doesn't yet support. | Recreate the policy manually in Purview, or wait for the expanded support noted in the **Coming soon** callout. |
+| Partial results in the completion table | Some selected policies show a non-successful status in the Step 4 results table. | Note the affected **MDA Policy** rows, then rerun the wizard for just those policies. Check the **Status** column for the specific reason. |
+| Banner not visible | The banner might not appear if it was previously dismissed or your view isn't refreshed. | Refresh the portal. If the banner still doesn't appear, confirm you're in a supported commercial Production environment. |
+
+If an issue persists after you try the workaround, contact your support channel and include the policy names and the status shown in the Step 4 results table.
 
 ## Review existing file policies
 
@@ -91,6 +222,33 @@ The following table maps specific Defender for Cloud Apps file policy conditions
 |---|---|---|---|
 | SharePoint Online | SharePoint sites | Equivalent | |
 | OneDrive for Business | OneDrive accounts | Equivalent | |
+
+### Non-Microsoft app support
+
+Microsoft Purview DLP extends to non-Microsoft connected apps, so you can detect, monitor, and protect sensitive data at rest in non-Microsoft SaaS applications. These policies use the same classification engine and policy framework as Microsoft 365 locations.
+
+| Defender for Cloud Apps app | Purview location | Equivalent support | Notes |
+|---|---|---|---|
+| Box | Box | Equivalent (preview) | Requires a Defender for Cloud Apps app connector. |
+| Dropbox | Dropbox | Equivalent (preview) | Requires a Defender for Cloud Apps app connector. |
+| Google Workspace | Google Workspace | Equivalent (preview) | Requires a Defender for Cloud Apps app connector. |
+| Salesforce | Salesforce | Equivalent (preview) | Requires a Defender for Cloud Apps app connector. |
+
+> [!NOTE]
+> Support for non-Microsoft connected apps is in preview, and the apps roll out in phases. Not all apps are available in every tenant at the same time.
+
+Keep the following requirements in mind when you plan this part of your migration:
+
+- **App connector required**: Connect each app to Defender for Cloud Apps with an app connector before you apply a Purview DLP policy to it. Purview uses the existing Defender for Cloud Apps connectors to reach the app. For more information, see [Connect apps](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).
+- **Custom policy template only**: Create these policies with the **Custom** policy template. The predefined Financial, Medical and health, and Privacy templates don't support non-Microsoft app locations.
+- **Separate policies per location type**: You can select several non-Microsoft apps in one policy, but you can't combine them with SharePoint, OneDrive, Exchange, Fabric, or Devices locations in the same policy.
+- **Advanced DLP rules only**: Configure these policies with advanced DLP rules. Available conditions and actions vary by app.
+- **Notification limits**: Policy tips and user overrides aren't supported for non-Microsoft apps.
+
+The DLP to Purview migration tool doesn't migrate non-Microsoft app policies yet, so recreate these policies manually in Purview for now.
+
+> [!TIP]
+> **Learn more:** For the supported app list, prerequisites, and step-by-step instructions to create a DLP policy for these apps, see [Use Microsoft Purview data loss prevention policies for non-Microsoft connected apps](/purview/dlp-non-microsoft-connected-applications) in the Microsoft Purview documentation.
 
 > [!IMPORTANT]
 > Policies in Defender for Cloud Apps and Purview can't coexist. Running equivalent policies in both products at the same time creates enforcement conflicts. Disable Defender for Cloud Apps policies only after you validate and turn on the Purview policies.
@@ -230,3 +388,4 @@ Use these locations to review policy matches and activity after migration:
 - [Learn about data loss prevention](/purview/dlp-learn-about-dlp)
 - [Learn about auto-labeling policies](/purview/apply-sensitivity-label-automatically)
 - [Integrate with Microsoft Purview](azip-integration.md)
+- [Use Microsoft Purview DLP policies for non-Microsoft connected apps](/purview/dlp-non-microsoft-connected-applications)

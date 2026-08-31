@@ -1,10 +1,10 @@
 ---
 title: Provision the Microsoft Defender for IoT Micro Agent by using DPS
 description: Learn how to provision the Microsoft Defender for IoT micro agent using DPS. 
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Provision the Microsoft Defender for IoT micro agent using by DPS
@@ -25,7 +25,8 @@ Before you begin, make sure you have the following prerequisites:
 
 - [IoT Hub Device Provisioning Service](/azure/iot-dps/quick-setup-auto-provision).
 
-## Provision
+<a name="provision"></a>
+## Provision the device through DPS
 
 Perform the following steps to provision the device through DPS:
 
@@ -39,7 +40,7 @@ Perform the following steps to provision the device through DPS:
   
 1. Navigate into your destination IoT Hub.
 
-1. [Create a Defender for IoT micro agent module twin](tutorial-create-micro-agent-module-twin.md) issued by the same certificate.
+1. [Create a Defender for IoT micro agent module twin](tutorial-create-micro-agent-module-twin.md) issued by the same X.509 certificate used for the DPS enrollment.
 
 1. [Configure the micro agent to use the created module](tutorial-standalone-agent-binary-installation.md#authenticate-using-a-module-identity-connection-string) (note that the device does not have to exist yet).
 
@@ -47,7 +48,7 @@ Perform the following steps to provision the device through DPS:
 
 1. Navigate to the configured device in the destination IoT Hub.
 
-1. Create a new module for the device issued by the same CA authenticator.
+1. Create a new module for the device issued by the same CA certificate used for the DPS enrollment.
 
 1. Run the micro agent that you configured to use the created module to confirm it connects to the device.
 

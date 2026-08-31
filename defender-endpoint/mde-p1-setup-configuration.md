@@ -279,7 +279,7 @@ To configure network firewall using a Microsoft Intune Endpoint Security **Firew
 For more information about network firewall profiles available in Microsoft Intune, see [Firewall policy for endpoint security in Intune](/intune/intune-service/protect/endpoint-security-firewall-policy).
 
 > [!TIP]
-> Firewall settings are detailed and can seem complex. Refer to [Best practices for configuring Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/best-practices-configuring).
+> Firewall settings are detailed and can seem complex. Refer to [Best practices for configuring Windows Defender Firewall](/windows/security/operating-system-security/network-security/windows-firewall/configure).
 
 ### Application control
 
@@ -287,11 +287,11 @@ Windows Defender Application Control (WDAC) helps protect your Windows endpoints
 
 To help with planning your WDAC deployment, see the following resources:
 
-- [Application Control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
+- [Application Control for Windows](/windows/security/application-security/application-control/app-control-for-business/appcontrol)
 
-- [Windows Defender Application Control policy design decisions](/windows/security/threat-protection/windows-defender-application-control/understand-windows-defender-application-control-policy-design-decisions)
+- [Windows Defender Application Control policy design decisions](/windows/security/application-security/application-control/app-control-for-business/design/understand-appcontrol-policy-design-decisions)
 
-- [Windows Defender Application Control deployment in different scenarios: types of devices](/windows/security/threat-protection/windows-defender-application-control/types-of-devices)
+- [Windows Defender Application Control deployment in different scenarios: types of devices](/windows/security/application-security/application-control/app-control-for-business/design/common-appcontrol-use-cases)
 
 ## Next steps
 

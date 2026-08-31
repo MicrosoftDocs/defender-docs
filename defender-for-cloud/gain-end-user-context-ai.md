@@ -1,8 +1,9 @@
 ---
 title: Gain application and end-user context for AI alerts
-description: Learn how to enhance AI security by adding user context for alerts with Microsoft Defender for Cloud threat protection.
+description: Learn how to improve AI alert triage in Microsoft Defender for Cloud by adding end-user and application context to Azure AI API calls.
 ms.topic: how-to
-ms.date: 05/28/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #Customer intent: I want to learn how to enhance the security of my AI services by adding end-user context for AI alerts with Microsoft Defender for Cloud threat protection for AI services.
 ai-usage: ai-assisted
 ---
@@ -11,9 +12,9 @@ ai-usage: ai-assisted
 
 Microsoft Defender for Cloud's threat protection for AI services lets you enhance the actionability and security value of generated AI alerts by providing both end-user and application context.
 
-Most AI service scenarios are built as part of an application, so API calls to the AI service originate from a web application, compute instance, or AI gateway. This setup introduces complexity because investigators lack context when they review AI requests to determine the business application or end-user involved.
+Most AI service scenarios are built as part of an application, so API calls to the AI service originate from a web application, compute instance, or AI gateway. This application-mediated architecture introduces complexity because investigators lack context when they review AI requests to determine the business application or end-user involved.
 
-Together, Microsoft Defender for Cloud and Azure AI let you add parameters to Azure AI API calls so Defender for Cloud can capture critical end-user or application context in AI alerts. This leads to more effective triage and results. For example, when you add end-user IP or identity, you can block that user or correlate incidents and alerts by that user. When you add application context, you can prioritize or determine whether suspicious behavior is standard for that application in the organization.
+Together, Microsoft Defender for Cloud and Azure AI let you add parameters to Azure AI API calls so Defender for Cloud can capture critical end-user or application context in AI alerts. Capturing end-user and application context in AI alerts leads to more effective triage and results. For example, when you add end-user IP or identity, you can block that user or correlate incidents and alerts by that user. When you add application context, you can prioritize or determine whether suspicious behavior is standard for that application in the organization.
 
 :::image type="content" source="media/gain-end-user-context-ai/after-code.png" alt-text="Screenshot of the Defender XDR portal showing benefits from adding the code." lightbox="media/gain-end-user-context-ai/after-code.png":::
 
@@ -33,7 +34,7 @@ For end-user context, we recommend passing the `EndUserId` and `SourceIP` fields
 
 For application context, pass the `applicationName` field, as a simple string.
 
-If a field’s name is misspelled, the Azure OpenAI API call will still result in success. 
+If the name of any `UserSecurityContext` field is misspelled, the Azure OpenAI API call still succeeds. 
 
 > [!NOTE]
 > The EndUserId is the Microsoft Entra ID (formerly Azure Active Directory) user object ID used to authenticate end-users within the generative AI application. Sensitive personal information should not be included in this field.
@@ -44,10 +45,12 @@ The exact schema can be found in Azure OpenAI [REST API reference documentation]
 
 The [user security context object](/azure/ai-services/openai/reference-preview#usersecuritycontext) is part of the [request body](/azure/ai-services/openai/reference-preview#createchatcompletionrequest) of the chat completion API.
 
-This feature is currently not supported when applying models deployed through the [Azure AI model inference API](/azure/ai-studio/ai-services/model-inference).
+Adding `UserSecurityContext` parameters for Defender for Cloud alert enrichment is currently not supported when applying models deployed through the [Azure AI model inference API](/azure/ai-studio/ai-services/model-inference).
 
-## Availability
+<a name="availability"></a>
+## Supported APIs and SDK versions
 
+The following table lists the supported APIs and SDK versions for `UserSecurityContext`.
 
 | Source | Version support | Code Example | Comments |
 |----|----| ----| ----|

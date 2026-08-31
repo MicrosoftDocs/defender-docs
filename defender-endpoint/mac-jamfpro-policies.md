@@ -759,7 +759,7 @@ Now you can upload the generated bluetooth-signed. Mobileconfig to Jamf Pro as d
 
 ## Step 11: Schedule scans with Microsoft Defender for Endpoint on macOS
 
-Follow the instructions in [Schedule scans with Microsoft Defender for Endpoint on macOS](/windows/security/threat-protection/microsoft-defender-atp/mac-schedule-scan-atp).
+Follow the instructions in [Schedule scans with Microsoft Defender for Endpoint on macOS](mac-schedule-scan.md).
 
 ## Step 12: Deploy Microsoft Defender for Endpoint on macOS
 

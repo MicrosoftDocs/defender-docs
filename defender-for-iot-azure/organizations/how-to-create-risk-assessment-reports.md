@@ -1,13 +1,13 @@
 ---
 title: Create risk assessment reports on an OT sensor - Microsoft Defender for IoT
 description: Gain insight into network risks detected by individual Defender for IoT OT sensors or an aggregate view of risks detected by all OT sensors.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
-# Create risk assessment reports
+# Create risk assessment reports in Microsoft Defender for IoT
 
 Risk assessment reports provide details about security scores, vulnerabilities, and operational issues for devices that a specific OT network sensor detects. These reports also cover risks from imported firewall rules.
 
@@ -90,7 +90,7 @@ To add backup and anti-virus server addresses:
 
 ## View risk assessment reports for multiple sensors
 
-Use an OT sensor to view risk assessment reports for all connected sensors.
+Use an OT sensor to view risk assessment reports for all OT sensors connected to the same management console.
 
 To generate a report:
 

@@ -1,6 +1,6 @@
 ---
 title: Kubernetes data plane hardening
-description: Learn how to use Microsoft Defender for Cloud's set of Kubernetes data plane hardening security recommendations
+description: Review Kubernetes data plane hardening recommendations in Microsoft Defender for Cloud, configure Azure Policy parameters, and enforce secure workload settings across your clusters.
 ms.topic: how-to
 ms.date: 08/07/2026
 #customer intent: As a security administrator, I want to configure Kubernetes data plane hardening in Defender for Cloud so that I can enforce secure workload policies across clusters.
@@ -12,9 +12,9 @@ ms.custom: msecd-doc-authoring-1015
 
 Kubernetes data plane hardening helps enforce secure configurations for workloads running in your cluster, such as restricting privileged containers, enforcing resource limits, and limiting network access.
 
-In Microsoft Defender for Cloud, data plane hardening is implemented by using [Azure Policy](defender-for-cloud-glossary.md#azure-policy-for-kubernetes) for Kubernetes to evaluate and enforce these configurations. Azure Policy is deployed as part of Defender for Containers when automatic provisioning is enabled.
+In Microsoft Defender for Cloud, data plane hardening is implemented by using [Azure Policy for Kubernetes](defender-for-cloud-glossary.md#azure-policy-for-kubernetes) to evaluate and enforce these configurations. Azure Policy is deployed as part of Defender for Containers when automatic provisioning is enabled.
 
-If Azure Policy for Kubernetes is turned off in the Defender for Containers plan settings, you can deploy it by remediating the relevant recommendation. You can also deploy Azure Policy manually by using [Azure CLI](defender-for-containers-deploy-azure-cli.md) or [Helm](deploy-helm.md) if you disabled automatic provisioning during enablement or excluded specific clusters from automatic provisioning.
+If Azure Policy for Kubernetes is turned off in the Defender for Containers plan settings, you can deploy it by remediating the relevant recommendation. You can also deploy Azure Policy manually by using [Azure CLI to deploy Defender for Containers components](defender-for-containers-deploy-azure-cli.md) or [Helm to deploy Defender for Containers components](deploy-helm.md) if you disabled automatic provisioning during enablement or excluded specific clusters from automatic provisioning.
 
 After Azure Policy for Kubernetes is deployed, Defender for Cloud generates data plane hardening recommendations based on your cluster configuration. This page shows how to review these recommendations, configure policy parameters, and enforce them on your clusters.
 
@@ -30,7 +30,7 @@ To begin, make sure that:
 
 ## Enable Azure Policy for Kubernetes by remediating recommendations
 
-If Azure Policy for Kubernetes isn't deployed or was turned off in the Defender for Containers plan settings, you can install it by remediating the relevant recommendation in Defender for Cloud.
+If Azure Policy for Kubernetes isn't deployed or was turned off in the Defender for Containers plan settings, you can install it by remediating the recommendation that matches your cluster type in Defender for Cloud.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -169,6 +169,8 @@ Deploy the following example YAML files to verify that compliant workloads are d
 
 ### Compliant deployment example
 
+The following deployment uses a trusted container registry, enforces CPU and memory limits, and applies a restrictive security context that disables privilege escalation and runs as a non-root user.
+
 ```yml
 apiVersion: apps/v1
 kind: Deployment
@@ -218,6 +220,8 @@ spec:
 ```
 
 ### Noncompliant deployment example
+
+The following deployment intentionally violates multiple data plane hardening policies, including running a privileged container as root, enabling host networking and shared namespaces, and mounting a host path volume.
 
 ```yml
 apiVersion: apps/v1
@@ -276,7 +280,8 @@ spec:
     targetPort: 9001
 ```
 
-## Learn more
+<a name="learn-more"></a>
+## Related content
 
 - [Deploy Defender for Containers components using Azure CLI](defender-for-containers-deploy-azure-cli.md)
 

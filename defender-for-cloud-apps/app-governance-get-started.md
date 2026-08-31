@@ -1,10 +1,10 @@
 ---
 title: Turn on app governance in Microsoft Defender for Cloud Apps
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: anandd512
 description: Get started with app governance capabilities to govern your apps in  Microsoft Defender for Cloud Apps.
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -16,7 +16,7 @@ This article describes how to turn on Microsoft Defender for Cloud Apps app gove
 
 Before you start, verify that you satisfy the following prerequisites:
 
-- Microsoft Defender for Cloud Apps must be present in your account as either a standalone product or as part of the various [license](#licensing) packages.
+- Microsoft Defender for Cloud Apps must be present in your account as either a standalone product or as part of the various [licensing requirements](#licensing) packages.
 
   If you aren't already a Defender for Cloud Apps customer, you can [sign up for a free trial](https://www.microsoft.com/security/business/cloud-apps-defender).
   
@@ -31,7 +31,7 @@ Before you start, verify that you satisfy the following prerequisites:
 
 ## Turn on app governance
 
-If your organization satisfies the [prerequisites](#prerequisites), go to [Microsoft Defender XDR > Settings > Cloud Apps > App governance](https://security.microsoft.com/cloudapps/settings) and select **Use app governance**. For example:
+If your organization satisfies the [app governance prerequisites](#prerequisites), go to [Microsoft Defender XDR > Settings > Cloud Apps > App governance](https://security.microsoft.com/cloudapps/settings) and select **Use app governance**. For example:
 
 :::image type="content" source="media/app-governance-get-started/app-governance-service-status2.png" alt-text="Screenshot of the App governance toggle in Microsoft Defender XDR." lightbox="media/app-governance-get-started/app-governance-service-status2.png":::
 
@@ -48,11 +48,13 @@ For example:
 
 :::image type="content" source="media/app-governance-get-started/app-governance-service-status.png" alt-text="Screenshot of the App governance waitlist option." lightbox="media/app-governance-get-started/app-governance-service-status.png":::
 
-## Licensing
+<a name="licensing"></a>
+## Licensing requirements
 
 App governance is available to organizations with a valid Defender for Cloud Apps license. For more information, see the [Microsoft 365 licensing datasheet](https://aka.ms/M365EnterprisePlans).
 
-## Roles
+<a name="roles"></a>
+## Required roles
 
 You must have at least one of these roles to turn on app governance:
 

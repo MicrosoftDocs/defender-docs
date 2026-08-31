@@ -44,6 +44,9 @@
         - name: Defender for Cloud support matrices
           displayName: coverage, supported platforms, Cloud services, roles, permissions
           href: support-matrix-defender-for-cloud.md
+        - name: Multicloud support matrices
+          displayName: aws, gcp, multicloud, coverage, supported features
+          href: multicloud-support-matrix.md
         - name: Regional availability for Defender for Cloud plans
           href: regional-availability.md
     - name: Plan multicloud protection
@@ -896,6 +899,8 @@
           href: sql-azure-vulnerability-assessment-find.md
         - name: Consume and export scan results
           href: defender-for-sql-scan-results.md
+      - name: Prepare for classic Defender for SQL APIs retirement
+        href: migrate-classic-defender-for-sql-apis.md
   - name: Defender for App Service
     items:
       - name: Overview

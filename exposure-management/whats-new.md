@@ -22,6 +22,26 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 >
 > `https://aka.ms/msem/rss`
 
+## August 2026
+
+### Keyless authentication for the Microsoft Foundry connection preview
+
+You can now connect your Microsoft Foundry resource to codename MDASH using **Keyless authentication**, the recommended method. 
+
+Keyless relies on a managed identity instead of a stored secret - no API key is kept in Defender, and there's no key to rotate.
+
+Setup uses a one-time onboarding script. API key authentication remains available as an alternative.
+
+For more information, see [Authentication methods](mdash-foundry-integration.md#authentication-methods).
+
+### Codename MDASH - Cancel scan
+
+Scan cancellation, previously available only in Defender CLI, is now also available in the Microsoft Defender portal. 
+
+You can cancel queued or running scans from the scan details page in the **Scans** tab.
+
+For more information, see [Cancel scan](mdash-initiative.md#cancel-a-scan).
+
 ### Codename MDASH - Azure DevOps connector preview
 
 The Azure DevOps connector is now available in preview for Codename MDASH - Agentic code scanner. Security teams can connect Azure DevOps organizations from the Microsoft Defender portal, onboard repositories, and trigger remote on-demand agentic code scans for the onboarded repositories.

@@ -1,5 +1,5 @@
 ---
-title: Start an investigation by searching large datasets - Microsoft Sentinel
+title: Start an Investigation by Searching Large Datasets
 description: Learn about search jobs and restoring data from long-term retention in Microsoft Sentinel.
 author: EdB-MSFT
 ms.topic: how-to
@@ -21,7 +21,7 @@ ai-usage: ai-assisted
 
 One of the primary activities of a security team is to search logs for specific events. For example, you might search logs for the activities of a specific user within a given time-frame.
 
-In Microsoft Sentinel, you can search across long time periods in extremely large datasets by using a search job.  While you can run a search job on any type of log, search jobs are ideally suited to search logs in a long-term retention (formerly known as archive) state. If you need to do a full investigation on log data in long-term retention, you can restore that data into an interactive retention state&mdash;like your regular Log Analytics tables&mdash; to run high performing queries and deeper analysis.
+In Microsoft Sentinel, you can search across long time periods in extremely large datasets by using a search job. Although you can run a search job on any type of log, search jobs are ideally suited to search logs in a long-term retention (formerly known as archive) state. If you need to do a full investigation on such data, you can restore that data into an interactive retention state (like your regular Log Analytics tables) to run high performing queries and deeper analysis.
 
 This article shows you how to run search jobs on large datasets, restore archived log data for deeper investigation, and bookmark search results.
 
@@ -41,7 +41,7 @@ The following screenshot shows example search criteria for a search job.
 
 When you need to do a full investigation on log data in long-term retention, restore a table from the **Search** page in Microsoft Sentinel. Specify a target table and time range for the data you want to restore. Within a few minutes, the log data is restored and available within the Log Analytics workspace. Then you can use the data in high-performance queries that support full KQL.
 
-A restored log table is available in a new table that has a *_RST suffix. The restored data is available as long as the underlying source data is available. But you can delete restored tables at any time without deleting the underlying source data. To save costs, we recommend you delete the restored table when you no longer need it.
+A restored log table is available in a new table that has a `*_RST` suffix. The restored data is available as long as the underlying source data is available. But you can delete restored tables at any time without deleting the underlying source data. To save costs, we recommend you delete the restored table when you no longer need it.
 
 The restore option appears on a saved search, as shown in the screenshot.
 
@@ -57,7 +57,5 @@ Similar to the [threat hunting dashboard](hunting.md#use-the-hunting-dashboard),
 
 ## Related content
 
-To learn more about searching and restoring log data, see the following articles:
-
-- [Search across long time spans in large datasets](search-jobs.md)
-- [Restore logs from long-term retention](restore.md)
+- [Search for specific events across large datasets in Microsoft Sentinel](search-jobs.md)
+- [Restore archived logs from search](restore.md)

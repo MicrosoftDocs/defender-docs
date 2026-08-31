@@ -1,5 +1,5 @@
 ---
-title: Manage and monitor costs for Microsoft Sentinel
+title: Manage and Monitor Costs for Microsoft Sentinel
 description: Learn how to manage and monitor costs and billing for Microsoft Sentinel by using cost analysis in the Azure portal and other methods.
 ms.author: edbaynash
 author: EdB-MSFT
@@ -28,7 +28,7 @@ Microsoft Sentinel costs are only a portion of your monthly Azure bill. Although
 
 ## Prerequisites
 
-To view cost data and perform cost analysis in Cost Management, you must have a supported Azure account type, with at least read access.
+To view cost data and perform cost analysis in Cost Management, you must have a supported Azure account type with at least read access.
 
 While cost analysis in Cost Management supports most Azure account types, not all are supported. To view the full list of supported account types, see [Understand Cost Management data](/azure/cost-management-billing/costs/understand-cost-mgt-data?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn).
 
@@ -36,7 +36,7 @@ For information about assigning access to Microsoft Cost Management data, see [A
 
 ## Manage and monitor costs for the analytics tier
 
-As you use Azure resources with Microsoft Sentinel, you incur costs. Azure resource usage unit costs vary by time intervals such as seconds, minutes, hours, and days, or by unit usage, like bytes and megabytes.
+As you use Azure resources with Microsoft Sentinel, you incur costs. Azure resource usage unit costs vary by time intervals such as seconds, minutes, hours, and days, or by unit usage like bytes and megabytes.
 
 ### View costs by using cost analysis
 
@@ -103,7 +103,7 @@ Usage
 | sort by Solution asc, DataType asc
 ```
 
-See more information on the following items used in the preceding Kusto queries, in the Kusto documentation:
+See more information on the following items used in the preceding examples in the Kusto documentation:
 
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
 - [***extend*** operator](/kusto/query/extend-operator?view=microsoft-sentinel&preserve-view=true)
@@ -129,9 +129,9 @@ This workbook also provides granular ingestion details. The workbook breaks down
 To enable the Workspace Usage Report workbook:
 
 1. In the Microsoft Sentinel left navigation, select **Threat management** > **Workbooks**.
-1. Enter *workspace usage* in the Search bar, and then select **Workspace Usage Report**.
+1. Enter *workspace usage* in the Search bar, then select **Workspace Usage Report**.
 1. Select **View template** to use the workbook as is, or select **Save** to create an editable copy of the workbook. If you save a copy, select **View saved workbook**.
-1. In the workbook, select the **Subscription** and **Workspace** you want to view, and then set the **TimeRange** to the time frame you want to see. You can set the **Show help** toggle to **Yes** to display in-place explanations in the workbook.
+1. In the workbook, select the **Subscription** and **Workspace** you want to view, then set the **TimeRange** to the time frame you want to see. You can set the **Show help** toggle to **Yes** to display in-place explanations in the workbook.
 
 ## Export cost data
 
@@ -155,7 +155,7 @@ After your workspace is onboarded to the Microsoft Sentinel data lake tier, usag
 
 ### Microsoft Sentinel cost management in the Microsoft Defender portal
 
-The new cost management experience, currently in preview and under **Microsoft Sentinel** > **Cost management** in the [Microsoft Defender portal](https://security.microsoft.com), helps you manage and monitor costs associated with your use of the data lake tier.
+The new cost-management experience, currently in preview and under **Microsoft Sentinel** > **Cost management** in the [Microsoft Defender portal](https://security.microsoft.com), helps you manage and monitor costs associated with your use of the data lake tier.
 
 >[!IMPORTANT]
  >To **view usage and limits** (read-only access), you need the **Security Reader** role.
@@ -192,7 +192,7 @@ You can also enable **threshold enforcement** to block usage after a configured 
 After enforcement is enabled and the threshold is exceeded, future queries, jobs, or sessions fail. Users see a **Limit exceeded** error indicating that you reached the configured limit.
 
 > [!NOTE]
-> Enforcement isn't real time. After a limit is reached, it can take up to **4 hours** for the enforced threshold to take effect.
+> Enforcement isn't real time. After a limit is reached, it can take up to **four hours** for the enforced threshold to take effect.
 
 To configure alerts or enforced thresholds on a capability:
 
@@ -228,11 +228,11 @@ To configure alerts or enforced thresholds on a capability:
 
 You can pay for Microsoft Sentinel charges with your Azure Prepayment credit. You can't use Azure Prepayment credit to pay non-Microsoft organizations for their products and services, or for products from Azure Marketplace.
 
-## Next steps
+## Related content
 
 - [Reduce costs for Microsoft Sentinel](billing-reduce-costs.md)
-- Learn [how to optimize your cloud investment with Microsoft Cost Management](/azure/cost-management-billing/costs/cost-mgt-best-practices?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn).
-- Learn more about managing costs with [Cost Management cost analysis](/azure/cost-management-billing/costs/quick-acm-cost-analysis?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn).
-- Learn about how to [analyze and prevent unexpected Azure charges](/azure/cost-management-billing/understand/analyze-unexpected-charges?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn).
-- Take the [Control spending and manage bills with Cost Management](/training/paths/control-spending-manage-bills?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn) guided learning course.
-- For more tips on reducing Log Analytics data volume, see [Azure Monitor best practices - Cost management](/azure/azure-monitor/best-practices-cost).
+- [How to optimize your cloud investment with Cost Management](/azure/cost-management-billing/costs/cost-mgt-best-practices?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn)
+- [Quickstart: Start using Cost Analysis](/azure/cost-management-billing/costs/quick-acm-cost-analysis?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn)
+- [Identify anomalies and unexpected changes in cost](/azure/cost-management-billing/understand/analyze-unexpected-charges?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn)
+- [Control Azure spending and manage bills with Microsoft Cost Management + Billing](/training/paths/control-spending-manage-bills?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn)
+- [Cost optimization in Azure Monitor](/azure/azure-monitor/fundamentals/best-practices-cost)

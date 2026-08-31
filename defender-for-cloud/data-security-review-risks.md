@@ -3,14 +3,14 @@ title: Explore risks to sensitive data
 description: Learn how to use attack paths and security explorer to find and remediate sensitive data risks.
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 05/25/2026
-ms.custom: template-how-to-pattern
+ms.date: 07/03/2026
+ms.custom: template-how-to-pattern, msecd-doc-authoring-1013
 #customer intent: As a security professional, I want to explore sensitive data risks so that I can prioritize remediation across attack paths, alerts, and cloud security insights.
 ai-usage: ai-assisted
 ---
 # Explore risks to sensitive data
 
-This article explains how to investigate sensitive data risks in attack paths, Cloud Security Explorer, and related alerts in Microsoft Defender for Cloud.
+This article explains how to investigate sensitive data risks in attack paths, Cloud Security Explorer, and related alerts in Microsoft Defender for Cloud. You learn how to identify exposed resources that contain sensitive data, prioritize security alerts, and export findings to share with data owners for remediation.
 
 ## Explore and review sensitive data risks
 
@@ -66,13 +66,13 @@ When you open a predefined query, it's populated automatically and can be tweake
 
 When sensitive data discovery is enabled in the Defender for Storage plan, you can prioritize and focus on alerts that affect resources with sensitive data. For details, see [Monitor data security alerts in Defender for Storage](defender-for-storage-data-sensitivity.md).
 
-For PaaS databases and S3 Buckets, findings are reported to Azure Resource Graph (ARG) allowing you to filter and sort by sensitivity labels and sensitive info types in Defender for Cloud Inventory, Alert, and Recommendation blades.
+For platform as a service (PaaS) databases and Amazon S3 buckets, findings are reported to Azure Resource Graph (ARG). You can filter and sort by sensitivity labels and sensitive info types in the Defender for Cloud Inventory, Alert, and Recommendation blades.
 
 ## Export findings
 
 It's common for the security administrator, who reviews sensitive data findings in attack paths or the security explorer, to lack direct access to the data stores. Therefore, they need to share the findings with the data owners, who can then conduct further investigation.
 
-For that purpose, use the **Export** within the **Contains sensitive data** insight.
+To share findings with data owners, use the **Export** within the **Contains sensitive data** insight.
 
 :::image type="content" source="media/data-security-review-risks/export-findings.png" alt-text="Screenshot of how to export insights." lightbox="media/data-security-review-risks/export-findings.png":::
 

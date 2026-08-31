@@ -8,19 +8,22 @@ ms.localizationpriority: medium
 ms.collection:
   - m365-security
   - tier2
-description: Admins can learn how to create automated simulations that contain specific techniques and payloads that launch when the specified conditions are met in Microsoft Defender for Office 365 Plan 2.
-ms.date: 07/03/2026
+description: Learn how to create and manage Attack simulation training automations, including payload selection, user assignment, scheduling, and delivery behavior.
+ms.date: 08/20/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1015
 ai-usage: ai-assisted
+#customer intent: As a security operations administrator, I want to configure simulation automations so that I can run recurring phishing simulations with predictable payload, user, schedule, and delivery behavior.
 ---
 
 # Simulation automations for Attack simulation training
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Attack simulation training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2, simulation automations allow you to run multiple benign cyberattack simulations in your organization. Simulation automations can contain multiple social engineering techniques and payloads, and can start on an automated schedule. Creating a simulation automation is similar to [creating an individual simulation](attack-simulation-training-simulations.md), except for the ability to select multiple techniques, payloads, and the automation schedule.
+Simulation automations in Attack simulation training in Microsoft Defender for Office 365 Plan 2 let you create multiple benign phishing simulations from one reusable configuration. You select the techniques, payloads, users, training, notifications, schedule, and launch behavior. The automation then creates individual simulation runs when the schedule is eligible.
+
+Creating a simulation automation is similar to [creating an individual simulation](attack-simulation-training-simulations.md), except that you can select multiple techniques and payloads and configure an automated schedule.
 
 For getting started information about Attack simulation training, see [Get started using Attack simulation training](attack-simulation-training-get-started.md).
 
@@ -33,6 +36,51 @@ The following information is shown for each simulation automation in the automat
 - **Next launch time**
 - **Last modified**
 - **Created by**
+
+## How simulation automations work
+
+> [!IMPORTANT]
+> A simulation automation, a simulation run, and a delivery batch are different objects. A delivery batch controls when messages are sent. It doesn't create another simulation run or select another payload.
+
+The following terms explain how an automation becomes one or more simulation runs:
+
+- **Simulation automation**: The reusable configuration that contains payload, user, training, notification, schedule, and launch settings.
+- **Eligible launch**: A point in the configured window when the schedule permits the service to create a run. Eligibility means that the automation can attempt to create a run. The final number of runs can vary based on schedule constraints, payload eligibility requirements, and run-creation outcomes.
+- **Simulation run**: An individual simulation created by the automation. Each run has one selected social engineering technique and one selected payload.
+- **Payload selection**: The selection of one payload when a run is created. Multiple selected payloads provide a pool for different runs. They don't distribute different payloads among recipients in the same run.
+- **User assignment**: The decision to distribute users across runs or include all selected users in every run.
+- **Delivery batch**: A group used to stagger send times. Delivery batches don't create runs or select payloads.
+- **Region-aware delivery**: Delivery scheduling based on the user's current time zone setting in Outlook on the web.
+
+The automation uses the following execution lifecycle:
+
+1. The automation schedule determines whether a simulation run is eligible to be created.
+2. When a run is created, the service selects one social engineering technique and one payload for that run.
+3. The service assigns users to the run based on the **Target all selected users in every simulation run** setting.
+4. The selected payload is used for all users assigned to that run.
+5. Region-aware delivery and randomized send times are applied to message delivery.
+6. Delivery batches stagger when messages are sent. They don't select more payloads.
+
+The execution flow is: automation configuration, schedule eligibility, simulation run creation, technique and payload selection, user assignment, delivery scheduling, and message delivery. Payload selection occurs once per run. Delivery scheduling occurs afterward.
+
+## Supported scenarios and limitations
+
+Use a simulation automation to:
+
+- Run a sequence of phishing simulations from one configuration.
+- Vary techniques or payloads between simulation runs.
+- Distribute users across runs or include all selected users in every run.
+- Use randomized or fixed schedules.
+- Align delivery with users' time zones.
+- Stagger message delivery.
+
+Simulation automations don't provide:
+
+- A guarantee that a randomized schedule creates the configured maximum number of runs.
+- A different payload for each recipient in one run.
+- A different payload for each randomized send-time batch.
+- A guarantee that small target populations receive messages at visibly different times.
+- Detailed diagnostics for every potential launch opportunity that doesn't result in a simulation run.
 
 ## Create simulation automations
 
@@ -586,8 +634,17 @@ When you're finished on the **Positive reinforcement notification** page, select
 
 On the **Simulation schedule** page, select one of the following values:
 
-- **Randomized**: You still need to select the schedule on the next page, but the simulations will launch at random times within the schedule.
-- **Fixed**: Simulations will be launched on a given day as per the chosen schedule.
+- **Randomized**: The service chooses eligible launch times within the configured schedule. The maximum number of simulations is an upper bound, not a guaranteed run count.
+- **Fixed**: Simulations launch according to the configured daily, weekly, or monthly recurrence.
+
+The following table can help you choose a schedule:
+
+|Required outcome|Recommended schedule|Reason|
+|---|---|---|
+|Predictable daily, weekly, or monthly recurrence|Fixed|The recurrence and number of occurrences are explicitly configured.|
+|Runs at unpredictable times inside an eligible window|Randomized|The service chooses eligible launch times within the configured constraints.|
+|Exactly one run|Either|Set one fixed occurrence or a randomized maximum of one.|
+|Guaranteed exact count inside a randomized window|Not supported as a guarantee|The randomized maximum is an upper bound, not a committed count.|
 
 When you're finished, select **Next**.
 
@@ -601,16 +658,22 @@ What you see on the **Schedule details** page depends on whether you selected **
 
   - **Automation scoping** section: Configure the following settings:
     - **Select the days of the week that simulations are allowed to start on**: Select one or more days of the week.
-    - **Enter the maximum number of simulations that can be started between the start and end dates**: Enter a value from 1 to 10. This number will also determine the number of payloads to be used. If you choose more payloads than simulations, e.g., 12 payloads for 10 simulations, any 10 of the 12 payloads will be used. If you choose fewer payloads than simulations, e.g., 5 payloads for 8 simulations, some payloads will repeat to cover all the simulations, unless you have chosen **Use unique payloads across simulations within an automation** in the **Launch details**.
-    - **Randomize the time of day that simulation emails can be sent for delivery**: Select **Randomize send times** to randomize the send times. This will stagger email delivery over a 12 hour window.
+    - **Enter the maximum number of simulations that can be started between the start and end dates**: Enter a value from 1 through 10. The value is the upper limit of runs that the automation can create, not an exact count. The actual count can be lower in the following scenarios:
+      - There are fewer eligible launch days.
+      - The automation reaches its end date.
+      - No selected payload matches:
+        - The selected technique.
+        - The configured language and filtering requirements.
+      - Run creation doesn't complete successfully.
+    - **Randomize the time of day that simulation emails can be sent for delivery**: Select **Randomize send times** to stagger simulation-message delivery over a 12-hour window after a run is created.
 
-  - **Automation end** section: Use **Select the date you want the automations to end** to select the end date for the simulations. You can select any future date of upto a year.
+  - **Automation end** section: Use **Select the date you want the automations to end** to select the end date for the simulations. You can select any future date of up to a year.
 
     > [!TIP]
-    > Only one simulation is launched in a day, so we recommend selecting at least as many days as you'd like the simulations to run.
+    > Only one simulation is launched in a day. Select at least as many eligible days as the maximum number of runs you want the automation to be able to create.
 
 - **Fixed** simulation schedule: The following settings are available:
-  - **Automation start** section: Use **Select the date you want the simulations to start from** to select the start date for the simulations. You can select any future date of upto a year.
+  - **Automation start** section: Use **Select the date you want the simulations to start from** to select the start date for the simulations. You can select any future date of up to a year.
 
   - **Automation recurrence** section: Configure the following settings:
     - **Select if you want simulations to launch weekly or monthly**: Select **Weekly** (default) or **Monthly**.
@@ -629,19 +692,50 @@ When you're finished on the **Schedule details** page, select **Next**.
 
 On the **Launch details** page, configure the following additional settings for the automation:
 
-- **Use unique payloads across simulations within an automation** section: By default, **Unique payloads** isn't selected. Make sure you have chosen enough payloads for the number of simulations you want to run. If you have fewer payloads than simulations you want to run, only a fraction of users will be targeted (calculated as ratio of number of payloads by the number of simulations).
+- **Use unique payloads across simulations within an automation** section: By default, **Unique payloads** isn't selected. When enabled, the automation attempts to avoid reusing a payload in different runs while sufficient eligible payloads remain. The setting doesn't assign a unique payload to every recipient in one run.
 
-- **Target all selected users in every simulation run** section: By default, the target users are divided across different simulations. If you select this option, all chosen target users will be included in every simulation run. Make sure you have chosen as many payloads as the number of simulations you want to run; otherwise, the payloads will start repeating.
+- **Target all selected users in every simulation run** section: By default, selected users are distributed across the runs created by the automation. If you select this option, every selected user is included in every run. Every user in a given run receives the one payload selected for that run.
 
 - **Target repeat offenders** section: By default, **Target repeat offenders** is not selected. If you select it, use **Enter the maximum number of times a user can be targeted within this automation** that appears to enter a value from 1 to 10.
 
-- **Send simulation email based upon the user's current time zone setting from Outlook web app** section: By default, **Enable region aware delivery** isn't selected.
+- **Send simulation email based upon the user's current time zone setting from Outlook web app** section: By default, **Enable region aware delivery** isn't selected. When enabled, delivery is based on the user's current time zone setting in Outlook on the web. Users in different time zones can receive the same run at different times. The setting doesn't create more runs or select more payloads.
+
+The following table summarizes how the settings interact:
+
+|Setting|Controls|Doesn't control|
+|---|---|---|
+|Maximum number of simulations|Upper bound on randomized runs|Exact guaranteed run count|
+|Selected payloads|Pool of eligible payloads used by runs|Number of payloads assigned inside one run|
+|Unique payloads|Payload reuse between runs|Per-user or per-batch payload variation|
+|Target all selected users|Whether all users participate in every run|Payload selection or delivery timing|
+|Randomize send times|Delivery-time staggering after run creation|Run creation or payload selection|
+|Region-aware delivery|Delivery timing based on user time zone|Run count or payload selection|
 
 When you're finished on the **Launch details** page, select **Next**.
+
+## Predict simulation automation results
+
+The following examples show how run count, payload selection, user assignment, and delivery batching interact:
+
+- **Eight selected payloads and one run**: With the maximum number of simulations set to one, **Unique payloads** enabled, and **Target all selected users** enabled, the automation can create one run. The service selects one of the eight payloads for that run, and all selected users receive that payload. The other payloads remain unused because no more runs are created.
+- **Eight eligible payloads and eight runs**: With a randomized maximum of eight, **Unique payloads** enabled, sufficient eligible days, and **Target all selected users** enabled, the automation can create up to eight runs. One payload is selected for each created run, and payloads can vary between runs. The maximum remains an upper bound. All eight runs aren't guaranteed.
+- **Users distributed across runs**: With four created runs and **Target all selected users** disabled, selected users are distributed across the four runs. Each user participates in the assigned run, and each run uses its own selected payload.
+- **Fewer than 100 users with randomized send times**: One payload is selected for the run. The target population fits within one documented 100-user batch. The setting doesn't create another run or payload selection, and visibly different recipient delivery times aren't guaranteed.
 
 ## Review simulation automation
 
 On the **Review simulation automation** page, you can review the details of your simulation automation.
+
+Before you submit the automation, verify the following settings:
+
+1. Select **Fixed** for predictable recurrence or **Randomized** for an upper-bound schedule.
+2. Confirm that the schedule contains enough eligible days for the desired maximum.
+3. Treat the randomized value as a maximum, not an exact count.
+4. Confirm that payloads match the selected techniques and language requirements.
+5. Confirm that enough eligible payloads exist for the intended cross-run uniqueness.
+6. Decide whether users are distributed across runs or included in every run.
+7. Confirm whether region-aware delivery and randomized send times are required.
+8. Use the settings interaction table and examples to predict run count, payload selections, user participation, and delivery behavior.
 
 You can select **Edit** in each section to modify the settings within the section. Or you can select **Back** or the specific page in the wizard.
 
@@ -690,6 +784,16 @@ For simulation automations with the **Status** value **Active** or **Inactive**,
 
 You can view the simulation reports for automated campaigns in the **Simulations** tab. Click on the name of the simulation, having a prefix of **AutomatedSimulation_** and automation name available under the column **Created by**. To view the report click anywhere in the simulation row other than the check box next to the name.
 
+## Troubleshoot simulation automations
+
+Use the following guidance to compare observed results with the configured schedule and launch settings:
+
+- **Fewer runs than the randomized maximum**: Check the configured start and end dates, eligible days, whether selected payloads match the selected techniques and configured language and filtering requirements, and run history. If the completed window and available run history don't explain the lower count, preserve the observed configuration and timestamps while you continue the investigation.
+- **All users received the same payload**: Check how many runs were created. One run means one payload for all users in that run. For multiple runs, compare the payload selected for each run. Don't use randomized send-time batches to infer payload selection.
+- **Users received messages at the same or a similar time**: Check **Randomize send times**, population size, documented batch size, region-aware delivery, user time zone settings, and whether the 12-hour delivery window is complete. Randomized send times stagger delivery but don't guarantee a unique time for every recipient.
+- **Automation shows Completed but an expected run is missing**: Compare the automation status, next launch time, run history, expected occurrence, and actual simulation creation time. If the status or next-launch value changes before the expected run appears, or a run is created substantially after its fixed occurrence, record the observed status, next-launch value, run history, and timestamps. More investigation might be required when the observed run history can't be reconciled with the configured schedule and documented behavior.
+- **A selected payload wasn't used**: Compare the number of created runs with the number and eligibility of selected payloads and the **Unique payloads** setting. A payload can remain unused when fewer runs are created than selected payloads.
+
 <a name="frequently-asked-questions-faq-for-simulations-automations"></a>
 ## Frequently asked questions (FAQ) for simulation automations
 
@@ -709,6 +813,8 @@ If you don't select **Target all selected users in every simulation run** on the
 
 If you select **Target all selected users in every simulation run** on the [Launch details](#launch-details) page, all targeted users are part of every simulation that's created by the simulation automation.
 
+Each created simulation run selects one technique and one payload. All users assigned to that run receive the selected payload. Selecting multiple payloads provides a pool for different runs. It doesn't send different payloads to users within one run.
+
 ### How does the Randomize option on the Simulation schedule page work?
 
 The **Randomize** option on the [Simulation schedule](#simulation-schedule) page optimally selects a day within the start date and end date range to launch simulations.
@@ -721,15 +827,34 @@ For every run, a social engineering technique from the list of selected techniqu
 
 ### With a randomized schedule, the maximum number of simulations is between 1 and 10. How does this work?
 
-The **Max number of simulations** value is the maximum number of runs that can be created by this automation. For example, if you select 10, the maximum number of simulations that will be created by this automation is 10. The number of simulations can be fewer depending on the number of targeted users and the availability of payloads.
+The **Max number of simulations** value is the upper limit of runs that the automation can create. For example, if you select 10, the automation can create up to 10 simulations. The actual count can be lower based on:
+
+- The configured window.
+- Eligible days.
+- Whether a selected payload matches the configured technique and filters.
+- Whether run creation completes successfully.
 
 ### If I select only one specific day between two days (for example, Wednesday), how many simulations will I see on the Simulation tab?
 
 If there's only one Wednesday between the start date and end date, the automation has only one valid day to send out the simulation. Even if you selected a higher value for **Max number of simulations**, this value gets overwritten to one.
 
-### How does randomize send times currently work?
+### Does Randomize send times select a payload for every delivery batch?
 
-Randomize send time works in batches of 1,000 users and is meant to be used with a large number of targeted users. If less than 1,000 users are involved in simulations created by automations, batches of 100 users are created for randomized send times.
+No. **Randomize send times** is applied after the run and payload are created. Delivery batches stagger send timing only.
+
+### If I select eight payloads and set the maximum to one, how many payloads are used?
+
+One payload is selected for the one created run. All users assigned to that run receive the selected payload.
+
+### Which schedule should I choose for one simulation every day?
+
+Use a **Fixed** recurrence. A **Randomized** schedule doesn't guarantee a daily launch or an exact run count.
+
+### How does Randomize send times work for fewer than 1,000 users?
+
+**Randomize send times** works in batches of 1,000 users and is intended for a large number of targeted users. If fewer than 1,000 users are involved in simulations created by automations, batches of 100 users are created for randomized send times.
+
+A target population below 100 users fits within one documented batch. Batching affects delivery timing only. It doesn't create more runs or payload selections.
 
 <a name="related-links"></a>
 ## Related content

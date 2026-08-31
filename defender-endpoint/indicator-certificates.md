@@ -33,7 +33,7 @@ This article shows you how to create certificate-based indicators in Microsoft D
 
 It's important to understand the following requirements before creating indicators for certificates:
 
-- This feature is available if your organization uses Microsoft Defender Antivirus (in active mode) and cloud-based protection is enabled. For more information, see [Manage cloud-based protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
+- This feature is available if your organization uses Microsoft Defender Antivirus (in active mode) and cloud-based protection is enabled. For more information, see [Manage cloud-based protection](deploy-manage-report-microsoft-defender-antivirus.md).
 - The anti-malware client version must be `4.18.1901.x` or later.
 - Supported on machines on Windows 10, version 1703 or later, Windows Server 2012 R2 and later, or Azure Stack HCI OS, version 23H2 and later.
 
@@ -85,6 +85,5 @@ Use the following steps to create a certificate indicator from the Settings page
 - [Create indicators for IPs and URLs/domains](indicator-ip-domain.md)
 - [Manage indicators](indicator-manage.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md)
-
 
 

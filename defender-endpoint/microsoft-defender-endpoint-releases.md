@@ -29,8 +29,13 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|Android |1.0.9212.0102|Aug 2026|- Build: 1.0.9212.0102<br>- Release: Aug 20, 2026|[Release details and updates](#android--aug-2026--platform-1092120102)|
+|iOS |1.1.80120102|Aug 2026|- Build: 1.1.80120102<br>- Release: Aug 20, 2026|[Release details and updates](#ios--aug-2026--platform-version-1180120102)|
+|macOS |101.26062.0012  |August 2026 |- Release version: 20.126062.12.0<br>- Engine version: 1.1.26060.12000<br>- Signature version: 1.457.164.0 |[Release details and updates](#macos--august-2026--101260620012) |
+|Android |1.0.9129.0101|Aug 2026|- Build: 1.0.9129.0101<br>- Release: Aug 11, 2026|[Release details and updates](#android--aug-2026--platform-1091290101)|
+|iOS |1.1.79210103|Aug 2026|- Build: 1.1.79210103<br>- Release: Aug 04, 2026|[Release details and updates](#ios--aug-2026--platform-version-1179210103)|
 |macOS |101.26062.0011  |August 2026 |- Release version: 20.126062.11.0<br>- Engine version: 1.1.26040.3000<br>- Signature version: 1.449.26.0 |[Release details and updates](#macos--august-2026--101260620011) |
-|Linux  |101.26062.0005  |August 2026 |- Release version: 30.126052.0012.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates](#linux--aug-2026--101260620005) |
+|Linux  |101.26062.0007  |August 2026 |- Release version: 30.126052.0012.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates](#linux--aug-2026--101260620007) |
 |Windows Antivirus |Platform 4.18.26070.9 / Engine 1.1.26070.7|July 2026|- Platform: 4.18.26070.9<br>- Engine: 1.1.26070.7<br>- Security intelligence: 1.457.11.0|[Release details and updates](#windows-antivirus--july-2026--platform-418260709--engine-11260707)|
 |macOS |101.26062.0009  |July 2026 |- Release version: 20.126062.9.0<br>- Engine version: 1.1.26050.3000<br>- Signature version: 1.455.265.0 |[Release details and updates](#macos--july-2026--101260620009) |
 |Android |1.0.9107.0101|July 2026|- Build: 1.0.9107.0101<br>- Release: July 21, 2026|[Release details and updates](#android--july-2026--platform-1091070101)|
@@ -106,10 +111,10 @@ This table includes supported releases for all supported platforms in the past s
 This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. You can also check the file information section in the monthly cumulative rollup updates in the following articles:
 
 - [Windows 11 release information](/windows/release-health/windows11-release-information)
-- [Windows 10 updates](https://support.microsoft.com/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562)
-- [Windows Server 2022 updates](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee)
-- [Windows Server 2019 updates](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059)
-- [Windows Server 2025 updates](https://support.microsoft.com/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7)
+- [Windows 10 updates](https://support.microsoft.com/servicing/os/windows-10/2022/09/windows-10-update-history)
+- [Windows Server 2022 updates](https://support.microsoft.com/servicing/os/windows-server/2021/07/windows-server-2022-update-history)
+- [Windows Server 2019 updates](https://support.microsoft.com/servicing/os/windows-10/2020/11/windows-10-and-windows-server-2019-update-history)
+- [Windows Server 2025 updates](https://support.microsoft.com/servicing/os/windows-server/2024/10/windows-server-2025-update-history)
 
 ### Windows | February 2026 | Platform: 10.8821
 
@@ -117,13 +122,13 @@ This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. 
 
 | OS | KB |
 | -------- | -------- |
-| Windows Server 2025, all editions | [KB5078740](https://support.microsoft.com/help/5078740) |
-| Windows Server 2022 | [KB5078766](https://support.microsoft.com/help/5078766) |
-| Windows Server 2019, Windows 10 1809 | [KB5078752](https://support.microsoft.com/help/5078752) |
-| Windows 11 26H1 | [KB5077239](https://support.microsoft.com/help/5077239) |
-| Windows 11 24H2, Windows 11 25H2 | [KB5077241](https://support.microsoft.com/help/5077241) |
-| Windows 11 23H2 | [KB5078883](https://support.microsoft.com/help/5078883) |
-| Windows 10 21H2, Windows 10 22H2 | [KB5078885](https://support.microsoft.com/help/5078885) |
+| Windows Server 2025, all editions | [KB5078740](https://support.microsoft.com/servicing/os/windows-server/2026/03/march-10-2026-kb5078740-os-build-26100-32522) |
+| Windows Server 2022 | [KB5078766](https://support.microsoft.com/servicing/os/windows-server/2026/03/march-10-2026-kb5078766-os-build-20348-4893) |
+| Windows Server 2019, Windows 10 1809 | [KB5078752](https://support.microsoft.com/servicing/os/windows-10/2026/03/march-10-2026-kb5078752-os-build-17763-8511) |
+| Windows 11 26H1 | [KB5077239](https://support.microsoft.com/servicing/os/windows-11/2026/02/february-24-2026-kb5077239-os-build-28000-1643-preview) |
+| Windows 11 24H2, Windows 11 25H2 | [KB5077241](https://support.microsoft.com/servicing/os/windows-11/2026/02/february-24-2026-kb5077241-os-builds-26200-7922-and-26100-7922-preview) |
+| Windows 11 23H2 | [KB5078883](https://support.microsoft.com/servicing/os/windows-11/2026/03/march-10-2026-kb5078883-os-build-22631-6783) |
+| Windows 10 21H2, Windows 10 22H2 | [KB5078885](https://support.microsoft.com/topic/march-10-2026-kb5078885-os-builds-19045-7058-and-19044-7058-5738282d-0b7f-426e-a42b-bd7698ab6dbb) |
 
 #### Enhancements and features
 
@@ -139,12 +144,12 @@ This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. 
 
 | OS | KB |
 | -------- | -------- |
-| Windows Server 2025, all editions | [KB5066835](https://support.microsoft.com/help/5066835) |
-| Windows Server 2022 | [KB5066782](https://support.microsoft.com/help/5066782) |
-| Windows Server 2019, Windows 10 1809 | [KB5066586](https://support.microsoft.com/help/5066586) |
-| Windows 11 24H2, Windows 11 25H2 | [KB5065789](https://support.microsoft.com/help/5065789) |
-| Windows 11 23H2 | [KB5065790](https://support.microsoft.com/help/5065790) |
-| Windows 10 21H2, Windows 10 22H2 | [KB5066791](https://support.microsoft.com/help/5066791) |
+| Windows Server 2025, all editions | [KB5066835](https://support.microsoft.com/servicing/os/windows-11/2025/10/october-14-2025-kb5066835-os-builds-26200-6899-and-26100-6899) |
+| Windows Server 2022 | [KB5066782](https://support.microsoft.com/topic/october-14-2025-kb5066782-os-build-20348-4294-f4af3c9e-7a60-4d17-a964-cfe1f1dd15f6) |
+| Windows Server 2019, Windows 10 1809 | [KB5066586](https://support.microsoft.com/servicing/os/windows-10/2025/10/october-14-2025-kb5066586-os-build-17763-7919) |
+| Windows 11 24H2, Windows 11 25H2 | [KB5065789](https://support.microsoft.com/servicing/os/windows-11/2025/09/september-29-2025-kb5065789-os-builds-26200-6725-and-26100-6725-preview) |
+| Windows 11 23H2 | [KB5065790](https://support.microsoft.com/servicing/os/windows-11/2025/09/september-23-2025-kb5065790-os-build-22631-5984-preview) |
+| Windows 10 21H2, Windows 10 22H2 | [KB5066791](https://support.microsoft.com/servicing/os/windows-10/2025/10/october-14-2025-kb5066791-os-builds-19044-6456-and-19045-6456) |
 
 #### Enhancements and features
 
@@ -161,13 +166,13 @@ This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. 
 
 | OS | KB |
 | -------- | -------- |
-| Windows Server 2025, all editions | [KB5063878](https://support.microsoft.com/help/5063878) |
-| Windows Server 2022 | [KB5063880](https://support.microsoft.com/help/5063880) |
-| Windows Server 2019 | [KB5063877](https://support.microsoft.com/help/5063877) |
-| Windows 11 24H2 | [KB5062660](https://support.microsoft.com/help/5062660) |
-| Windows 11 23H2 | [KB5062663](https://support.microsoft.com/help/5062663) |
-| Windows 11 25H2 | [KB5063875](https://support.microsoft.com/help/5063875) |
-| Windows 10 21H2, Windows 10 22H2 | [KB5063709](https://support.microsoft.com/help/5063709) |
+| Windows Server 2025, all editions | [KB5063878](https://support.microsoft.com/topic/august-12-2025-kb5063878-os-build-26100-4946-e4b87262-75c8-4fef-9df7-4a18099ee294) |
+| Windows Server 2022 | [KB5063880](https://support.microsoft.com/servicing/os/windows-server/2025/08/august-12-2025-kb5063880-os-build-20348-4052) |
+| Windows Server 2019 | [KB5063877](https://support.microsoft.com/servicing/os/windows-10/2025/08/august-12-2025-kb5063877-os-build-17763-7678) |
+| Windows 11 24H2 | [KB5062660](https://support.microsoft.com/servicing/os/windows-11/2025/07/july-22-2025-kb5062660-os-build-26100-4770-preview) |
+| Windows 11 23H2 | [KB5062663](https://support.microsoft.com/servicing/os/windows-11/2025/07/july-22-2025-kb5062663-os-builds-22631-5699-preview) |
+| Windows 11 25H2 | [KB5063875](https://support.microsoft.com/servicing/os/windows-11/2025/08/august-12-2025-kb5063875-os-builds-22621-5768-and-22631-5768) |
+| Windows 10 21H2, Windows 10 22H2 | [KB5063709](https://support.microsoft.com/servicing/os/windows-10/2025/08/august-12-2025-kb5063709-os-builds-19044-6216-and-19045-6216) |
 
 #### Enhancements and features
 
@@ -182,9 +187,9 @@ This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. 
 
 | OS | KB |
 | -------- | -------- |
-| Windows 11 24H2 | [KB5058499](https://support.microsoft.com/topic/may-28-2025-kb5058499-os-build-26100-4202-preview-d4c2f1ee-8138-4038-b705-546945076f92) |
-| Windows 11 23H2 | [KB5058502](https://support.microsoft.com/topic/may-27-2025-kb5058502-os-22621-5413-and-22631-5413-preview-6291789c-1eea-4227-9740-a701af6de688) |
-| Windows 10 22/H2 | [KB5058481](https://support.microsoft.com/topic/may-28-2025-kb5058481-os-build-19045-5917-preview-7698d6e7-dd65-494d-b523-aa4c6aa913a2) |
+| Windows 11 24H2 | [KB5058499](https://support.microsoft.com/servicing/os/windows-11/2025/05/may-28-2025-kb5058499-os-build-26100-4202-preview) |
+| Windows 11 23H2 | [KB5058502](https://support.microsoft.com/servicing/os/windows-11/2025/05/may-27-2025-kb5058502-os-builds-22621-5413-and-22631-5413-preview) |
+| Windows 10 22/H2 | [KB5058481](https://support.microsoft.com/servicing/os/windows-10/2025/05/may-28-2025-kb5058481-os-build-19045-5917-preview) |
 
 #### Enhancements and features
 
@@ -202,13 +207,13 @@ This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. 
 
 | OS | KB |
 | -------- | -------- |
-| Windows 11 24H2 | [KB5041865](https://support.microsoft.com/topic/august-27-2024-kb5041865-os-build-26100-1591-preview-5d299921-2b27-4fe0-b414-c2336371b552) |
-| Windows 11 23H2, Windows 11 22H | [KB5041587](https://support.microsoft.com/topic/august-27-2024-kb5041587-os-builds-22621-4112-and-22631-4112-preview-9706ea0e-6f72-430e-b08a-878963dafe08) |
-| Windows 11 21H2 | [KB5043067](https://support.microsoft.com/topic/september-10-2024-kb5043067-os-build-22000-3197-62287850-4f0d-4e4a-9fe8-b026bb1be994) |
-| Windows 10 22H2 | [KB5041582](https://support.microsoft.com/topic/august-29-2024-kb5041582-os-build-19045-4842-preview-f4c4d191-5457-475c-80ac-e1d43cf9c941) |
-| Windows Server 2022 and later | [KB5042881](https://support.microsoft.com/topic/september-10-2024-kb5042881-os-build-20348-2700-5b548143-9613-4e5a-9454-8ed9be8b2bd2) |
-| Windows Server 2019 | [KB5043050](https://support.microsoft.com/topic/september-10-2024-kb5043050-os-build-17763-6293-66e9809a-1838-4474-a6a7-90d64f042f00) |
-| Windows Server 2016, Windows Server 2012 R2 | [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) |
+| Windows 11 24H2 | [KB5041865](https://support.microsoft.com/servicing/os/windows-11/2024/08/august-27-2024-kb5041865-os-build-26100-1591-preview) |
+| Windows 11 23H2, Windows 11 22H | [KB5041587](https://support.microsoft.com/servicing/os/windows-11/2024/08/august-27-2024-kb5041587-os-builds-22621-4112-and-22631-4112-preview) |
+| Windows 11 21H2 | [KB5043067](https://support.microsoft.com/servicing/os/windows-11/2024/09/september-10-2024-kb5043067-os-build-22000-3197) |
+| Windows 10 22H2 | [KB5041582](https://support.microsoft.com/servicing/os/windows-10/2024/08/august-29-2024-kb5041582-os-build-19045-4842-preview) |
+| Windows Server 2022 and later | [KB5042881](https://support.microsoft.com/servicing/os/windows-server/2024/09/september-10-2024-kb5042881-os-build-20348-2700) |
+| Windows Server 2019 | [KB5043050](https://support.microsoft.com/servicing/os/windows-10/2024/09/september-10-2024-kb5043050-os-build-17763-6293-expired) |
+| Windows Server 2016, Windows Server 2012 R2 | [KB5005292](https://support.microsoft.com/servicing/Management-Tools/microsoft-defender/update/microsoft-defender-for-endpoint-update-for-edr-sensor) |
 
 #### Enhancements and features
 
@@ -225,6 +230,20 @@ To share feedback, open Defender for Endpoint on macOS and go to **Help > Send f
 To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device.
 
 For known issues, see [macOS known issues](#macos-known-issues).
+
+### macOS | August-2026 | 101.26062.0012
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 20.126062.12.0  | 1.1.26060.12000 | 1.457.164.0       |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|----------------|
+| General      | Bug and performance fixes |
 
 ### macOS | August-2026 | 101.26062.0011
 
@@ -537,7 +556,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 [!INCLUDE [Linux 101.26012.0007 known issue](includes/linux-build-issue.md)]
 
-### Linux | Aug 2026 | 101.26062.0005
+### Linux | Aug 2026 | 101.26062.0007
 
 #### Release details
 
@@ -552,6 +571,7 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 |Bug fix | Resolved an issue that could cause on-demand antivirus scans (quick, full, and custom) to take longer than expected or appear unresponsive in certain environments. Protection capabilities remained unaffected while scans were in progress. |
 |Security | Engine signature verification is now enabled by default for new installations and upgrades. Defender for Endpoint verifies the engine's digital signature before loading it and doesn't load engines that fail verification. Legacy engine signature verification settings are deprecated. |
 |Visibility | Resolved an issue where the `mdatp health` status could incorrectly show a device as healthy after it was offboarded. |
+|General | Reliability and quality improvements. |
 
 ### Linux | July 2026 | 101.26052.0012
 
@@ -788,6 +808,34 @@ Fixed an issue in the January 2026 release, where real-time scanning of the /dev
 
 See the full list of [Android UX improvements](android-new-ux.md).
 
+### Android | Aug 2026 | Platform: 1.0.9212.0102
+
+#### Release details
+
+| Platform version| Release Date |
+| -------- | -------- |
+|1.0.9212.0102|Aug 20, 2026|
+
+#### Enhancements and features
+
+|__Feature Area__| __Update Summary__|
+| -------- | -------- |
+|Feature Enhancements|The Malware Protection card now shows the most recent scan time, making it easier to verify device protection status at a glance.. |
+
+### Android | Aug 2026 | Platform: 1.0.9129.0101
+
+#### Release details
+
+| Platform version| Release Date |
+| -------- | -------- |
+|1.0.9129.0101|Aug 11, 2026|
+
+#### Enhancements and features
+
+|__Feature Area__| __Update Summary__|
+| -------- | -------- |
+|General|Performance improvements and general bug fixes. |
+
 ### Android | July 2026 | Platform: 1.0.9107.0101
 
 #### Release details
@@ -1011,6 +1059,35 @@ See the full list of [Android UX improvements](android-new-ux.md).
 ## iOS releases
 
 For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
+
+### iOS | Aug 2026 | Platform Version: 1.1.80120102
+
+#### Release details
+
+| Platform version | Release Date |
+| -------- | -------- |
+| 1.1.80120102 | Aug 20, 2026 |
+
+#### Enhancements and features
+
+|**Feature Area**| **Update Summary**|
+| -------- | -------- |
+| New Features & Enhancements | Introduced Dynamic Preview Rings feature to help organizations safely evaluate new Microsoft Defender for Endpoint mobile capabilities with a targeted set of users before expanding deployment across their environment. You can read more [here](mobile-dynamic-preview-rings-configure.md) |
+| Security Updates | We have retired the in-app OS Update recommendations in favor of enforcement via MAM / MDM policies |
+
+### iOS | Aug 2026 | Platform Version: 1.1.79210103
+
+#### Release details
+
+| Platform version | Release Date |
+| -------- | -------- |
+| 1.1.79210103| Aug 4, 2026 |
+
+#### Enhancements and features
+
+|**Feature Area**| **Update Summary**|
+| -------- | -------- |
+|Improvements|Performance improvements and general bug fixes.|
 
 ### iOS | July 2026 | Platform Version: 1.1.79080103
 

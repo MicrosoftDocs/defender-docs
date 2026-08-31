@@ -45,6 +45,7 @@ The Inventory uses [Azure Resource Graph (ARG)](/azure/governance/resource-graph
 1. On the **Resource Health** page for the resource, review information about the resource.
     - The **Recommendations** tab shows any active security recommendations, in order of risk. You can drill down into each recommendation for more details and remediation options.
     - The **Alerts** tab shows any relevant security alerts.
+    - The **Installed applications** tab shows software detected on the resource, when software inventory is available.
 
 ## Review software inventory
 
@@ -61,6 +62,22 @@ To review software inventory details:
     - **Resource count by environment**: The number of resources in each environment.
     - **Unregistered subscriptions**: Any subscription in the selected scope that hasn't yet been connected to Microsoft Defender for Cloud.
 1. Resources connected to Defender for Cloud that run those apps are displayed. Blank options show machines where Defender for Servers or Defender for Endpoint isn't available.
+
+### Review installed applications for a resource
+
+On the **Resource Health** page for a supported resource, select **Installed applications** to review software detected on the asset.
+
+The **Installed applications** tab provides the following information:
+
+| Field | Description |
+|---|---|
+| **Vendor** | The vendor or publisher of the software. |
+| **Software name** | The name of the software product. |
+| **Version** | The detected software version. |
+| **First seen at** | The date and time when the software was first seen on the asset. This field is populated only for software detected through agent-based scanning and is not applicable to software detected by agentless scanning. |
+| **Evidence** | The file paths, registry paths, or both that indicate where the software was detected, when available. |
+| **Number of known vulnerabilities** | The number of known vulnerabilities associated with the detected software version. |
+| **End of support status** | The support lifecycle status of the software or software version, when available. |
 
 ## Filter the inventory
 

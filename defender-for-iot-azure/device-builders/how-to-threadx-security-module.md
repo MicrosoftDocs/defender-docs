@@ -2,12 +2,12 @@
 title: Configure and Customize Defender-IoT-micro-agent for Eclipse ThreadX
 description: Learn about how to configure and customize your Defender-IoT-micro-agent for Eclipse ThreadX.
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
-# Configure and customize Defender-IoT-micro-agent for Eclipse ThreadX
+# Configure and customize Microsoft Defender for IoT micro agent for Eclipse ThreadX
 
 This article describes how to configure the Defender-IoT-micro-agent for your Eclipse ThreadX device to meet your network, bandwidth, and memory requirements. You learn how to select a target distribution, tune device behavior settings, adjust data collection intervals, and enable or disable individual collectors for resource-constrained devices.
 
@@ -31,7 +31,7 @@ Use the following file to configure your device behavior.
 
 In a CMake compilation environment, you must change the default configuration by editing the `netxduo/addons/azure_iot/azure_iot_security_module/configs/<target distribution>.dist` file. Use the following CMake format `set(ASC_XXX ON)`, or the following file `netxduo/addons/azure_iot/azure_iot_security_module/inc/configs/<target distribution>/asc_config.h` for all other environments. For example, `#define ASC_XXX`.
 
-The default behavior of each configuration is provided in the following tables: 
+The default values for the general, data collection, and collector configuration settings are provided in the following tables:
 
 <a name="general-configuration"></a>
 ## Configure general micro agent settings
@@ -57,7 +57,8 @@ The following table lists the data collection configuration settings and their d
 | ASC_MEDIUM_PRIORITY_INTERVAL | Number | 30 | The collector's medium priority group interval (in seconds). |
 | ASC_LOW_PRIORITY_INTERVAL | Number | 145,440  | The collector's low priority group interval (in seconds). |
 
-### Collector network activity
+<a name="collector-network-activity"></a>
+### Configure network activity collection
 
 To customize your collector network activity configuration, use the following:
 

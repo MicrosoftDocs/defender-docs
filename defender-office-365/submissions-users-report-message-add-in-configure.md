@@ -70,7 +70,7 @@ Verify the following permissions and prerequisites before you remove or scope th
     > [!IMPORTANT]
     > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
-- The Report Message and Report Phishing add-ins now use Nested app authentication. For more information, see [Nested app auth requirement set](/javascript/api/requirement-sets/common/nested-app-auth-requirement-sets) . If your Outlook client doesn't support the required NAA authentication, we suggest updating clients in the Microsoft admin center or advising users to use the built-in **Report** button.
+- The Report Message and Report Phishing add-ins now use Nested app authentication. For more information, see [Nested app auth requirement set](/javascript/api/requirement-sets/common/nested-app-auth-requirement-sets). If your Outlook client doesn't support the required NAA authentication, we suggest updating clients in the Microsoft admin center or advising users to use the built-in **Report** button.
 
 - For organizational removals, the organization needs to be configured to use OAuth authentication. For more information, see [Determine if Centralized Deployment of add-ins works for your organization](/Microsoft-365/admin/manage/centralized-deployment-of-add-ins).
 
@@ -79,9 +79,9 @@ Verify the following permissions and prerequisites before you remove or scope th
 ## Remove the Report Message or Report Phishing add-ins
 
 > [!TIP]
-> If you delete the app registration for the add-in in Microsoft Entra ID (formerly Azure Active Directory), the add-in is also deleted from the organization.
+> If you delete the app registration for the add-in in Microsoft Entra ID (formerly Azure Active Directory), you also delete the add-in from the organization.
 
-1. In the Microsoft 365 admin center at <https://admin.microsoft.com>, expand **Show all** if necessary, and then go to **Settings** \> **Integrated apps**. Or, to go directly to the **Integrated apps** page, use <https://admin.microsoft.com/Adminportal/Home#/Settings/IntegratedApps>.
+1. In the Microsoft 365 admin center at <https://admin.microsoft.com>, expand **Show all** if necessary, and then go to **Settings** \> **Integrated apps**. You can also go directly to the **Integrated apps** page via <https://admin.microsoft.com/Adminportal/Home#/Settings/IntegratedApps>.
 
    > [!TIP]
    > Admins in Microsoft 365 GCC High or DoD need to use the Microsoft 365 admin center at <https://portal.office365.us/adminportal/home#/Settings/AddIns> and then select **Settings** \> **Add-ins**.
@@ -155,7 +155,7 @@ The following questions address common concerns about the add-in deprecation, mi
 
 ### Q: Why are the add-ins being deprecated?
 
-A: The add-ins are being deprecated for the following reasons:
+**A**: The add-ins are being deprecated for the following reasons:
 
 - There are security issues with the add-ins that make them unsafe for the organization. Given Microsoft's commitment to safety, they need to be deprecated.
 - The add-ins can't architecturally support functionality that customers keep asking for.
@@ -164,19 +164,19 @@ Therefore, we decided to move to the built-in **Report** button to better serve 
 
 ### Q: What do we mean by the add-ins are in maintenance mode?
 
-A: It means that no improvement will be made to the add-ins. The add-ins will remain functional until they're deprecated. Naturally, any new improvement requests for the add-ins will be rejected.
+**A**: It means that no improvement will be made to the add-ins. The add-ins will remain functional until they're deprecated. Naturally, any new improvement requests for the add-ins will be rejected.
 
 ### Q: Will there be further communication before the add-in are deprecated?
 
-A: Yes. There will be further communication as we progress towards the deprecation.
+**A**: Yes. There will be further communication as we progress towards the deprecation.
 
 ### Q: Some users in my organization are on an older client, which prevents us from migrating. What can I do?
 
-A: We recommend you update clients in the Microsoft admin center or ask users to update their clients. Reach out to Microsoft Support if you have issues updating clients for users.
+**A**: We recommend you update clients in the Microsoft admin center or ask users to update their clients. Reach out to Microsoft Support if you have issues updating clients for users.
 
 ### Q: The Report phishing add-in offers a single report option but the built-in Report button has more options. What can I do?
 
-A: This design was finalized after partnership with more than 50 customers and a Private Preview of approximately two and half years. Many customers who had this question are actually much more comfortable with the built-in **Report** button and have transitioned completely to it.
+**A**: This design was finalized after partnership with more than 50 customers and a Private Preview of approximately two and half years. Many customers who had this question are actually much more comfortable with the built-in **Report** button and have transitioned completely to it.
 
 The built-in **Report** button is a split button. Clicking on the button without using the dropdown list reports the message as phishing. Use the dropdown list to report messages as junk or not junk.
 
@@ -184,21 +184,21 @@ We recommend that you try the built-in **Report** button. If you're still facing
 
 ### Q: I can't scope the built-in Report button, which prevents me from rolling it out. What can I do?
 
-A: This behavior is by design. We think the built-in **Report** button provides a base level of protection for all users, including shared and delegate mailboxes. Scoping the built-in **Report** button to a limited number of users can result in forgetting about those users, which leaves a security gap that can be exploited by attackers. Many customers totaling more than a million users migrated smoothly to the built-in **Report** button without scoping ability. Instead, those customers scoped non-Microsoft add-in buttons or the Microsoft add-ins as they rolled out the built-in **Report** button across the organization.
+**A**: This behavior is by design. We think the built-in **Report** button provides a base level of protection for all users, including shared and delegate mailboxes. Scoping the built-in **Report** button to a limited number of users can result in forgetting about those users, which leaves a security gap that can be exploited by attackers. Many customers totaling more than a million users migrated smoothly to the built-in **Report** button without scoping ability. Instead, those customers scoped non-Microsoft add-in buttons or the Microsoft add-ins as they rolled out the built-in **Report** button across the organization.
 
 If you're looking to scope the functionality for experimentation, we recommend using a test environment.
 
 ### Q: I want to see further improvements in the inbuild report button. What can I do?
 
-A: Raise a design change request (DCR) via Microsoft support.
+**A**: Raise a design change request (DCR) via Microsoft support.
 
 ### Q: Is there a way to keep the add-in but remove the built-in Report button?
 
-A: No. Because of the security issues and architectural limitations described in [Why are the add-ins being deprecated?](#q-why-are-the-add-ins-being-deprecated), the add-ins will be deprecated. There's no way to keep the add-in and remove the built-in **Report** button. To remove the add-in, go to **Settings** \> **Integrated apps** in the Microsoft 365 admin center, select the add-in on the **Deployed apps** tab, and then select **Remove app**.
+**A**: No. Because of the security issues and architectural limitations described in [Why are the add-ins being deprecated?](#q-why-are-the-add-ins-being-deprecated), the add-ins will be deprecated. There's no way to keep the add-in and remove the built-in **Report** button. To remove the add-in, go to **Settings** \> **Integrated apps** in the Microsoft 365 admin center, select the add-in on the **Deployed apps** tab, and then select **Remove app**.
 
 ### Q: What is the recommendation for moving from the add-ins to a non-Microsoft reporting add-in?
 
-A: After you [remove the add-in](#remove-the-report-message-or-report-phishing-add-ins) from the **Deployed apps** tab of the **Integrated apps** page, install the non-Microsoft add-in according to their instructions.
+**A**: After you [remove the add-in](#remove-the-report-message-or-report-phishing-add-ins) from the **Deployed apps** tab of the **Integrated apps** page, install the non-Microsoft add-in according to their instructions.
 
 On the [User reported settings page](submissions-user-reported-messages-custom-mailbox.md) in the Defender portal, you need to do the following steps:
 
@@ -212,4 +212,8 @@ On the [User reported settings page](submissions-user-reported-messages-custom-m
 
 ### Q: I still have questions that aren't answered here. What can I do?
 
-A: No worries. Just raise a support ticket via Microsoft support and we will get right back to you.
+**A**: No worries. Just raise a support ticket via Microsoft support and we'll get right back to you.
+
+## Related content
+
+[User reported settings](submissions-user-reported-messages-custom-mailbox.md)

@@ -1,6 +1,6 @@
 ---
-title: Connect to Microsoft Sentinel using a unified connector
-description: Use unified connectors in Microsoft Sentinel to centralize connector management and replace existing product-specific connectors where applicable.
+title: Connect to Microsoft Sentinel using a Unified Connector
+description: Learn how to connect to the Unified Connectors Platform that simplifies connector management across Microsoft security products including Microsoft Sentinel, Defender for Cloud, and Defender for Identity.
 ms.author: monaberdugo
 author: mberdugo
 contributors:
@@ -30,8 +30,8 @@ The following steps are required if you want to link an existing Okta connector 
 
 The user setting up the Okta connector must have these roles:
 
-- **Log Analytics Contributor** – Required to write data into the Log Analytics workspace and manage the Data Collection Rule (DCR).
-- **Microsoft Sentinel Contributor** – Required to modify connector settings in Sentinel.
+- **Log Analytics Contributor**: Required to write data into the Log Analytics workspace and manage the Data Collection Rule (DCR).
+- **Microsoft Sentinel Contributor**: Required to modify connector settings in Sentinel.
 
 If you connect to both Sentinel and Defender for Identity, you need permissions for both products.
 
@@ -97,7 +97,7 @@ Existing connectors appear in the **My Connectors** tab.
 
 ### Edit a connector
 
-To edit a connector, select it and then select **Manage** from the connector side panel.
+To edit a connector, select it and select **Manage** from the connector side panel.
 
 :::image type="content" source="./media/unified-connector-integration/manage-connector.png" alt-text="Screenshot of Okta health page with Manage button highlighted.":::
 
@@ -108,8 +108,8 @@ To edit a connector, select it and then select **Manage** from the connector sid
 
 You can delete a connector in one of two ways:
 
-- Select it and then select **Delete** from the connector side panel.
-- Check the connector in the **My Connectors** tab and then select **Delete** from above the connector list.
+- Select it and select **Delete** from the connector side panel.
+- Check the connector in the **My Connectors** tab and select **Delete** from above the connector list.
 
 :::image type="content" source="./media/unified-connector-integration/delete-connector.png" alt-text="Screenshot of Okta connector selected and the delete button highlighted.":::
 

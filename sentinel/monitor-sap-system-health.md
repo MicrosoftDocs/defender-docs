@@ -10,6 +10,7 @@ ms.service: microsoft-sentinel
 ai-usage: ai-assisted
 #customerIntent: As a security engineer, I want to learn how to monitor the health and connectivity of our SAP system connection to Microsoft Sentinel.
 
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Monitor the health and role of your SAP systems
@@ -24,7 +25,7 @@ Before you can perform the procedures in this article, you need to have an SAP d
 
 The agentless data connector page lists the SAP systems (SIDs) you configured, but system role and health are no longer surfaced there as a table. Query them from the workspace instead:
 
-- **System role (production or nonproduction)**. Use the [SAPSystems](sap/sap-solution-function-reference.md#sapsystems) KQL function, which reads the *SAP - Systems* watchlist and returns the `SystemRole` value for each SID. Role also affects billing - see [Solution pricing](sap/solution-overview.md#solution-pricing). Typical values include:
+- **System role (production or nonproduction)**. Use the [SAPSystems](sap/sap-solution-function-reference.md#sapsystems) KQL function, which reads the *SAP - Systems* watchlist and returns the `SystemRole` value for each SID. Role also affects billing - see [Solution pricing](sap/sap-applications-overview.md#solution-pricing). Typical values include:
 
     |Value  |Description  |
     |---------|---------|
@@ -63,7 +64,7 @@ The Microsoft Sentinel for SAP solution includes an alert rule template designed
 
 The rule needs at least seven days of loading history to detect the different seasonality patterns. We recommend a value of 14 days for the alert rule **Look back** parameter to allow detection of weekly activity profiles.
 
-Once activated, the rule judges the recent telemetry and log volume observed on the workspace according to the history learned. The rule then alerts on potential issues, dynamically assigning severities according to the scope of the problem.
+Once the alert rule is activated, it judges the recent telemetry and log volume observed on the workspace according to the history learned. The rule then alerts on potential issues, dynamically assigning severities according to the scope of the problem.
 
 To turn on the analytics rule in Microsoft Sentinel, select **Analytics > Rule templates**, and locate the *SAP - Data collection health check* alert rule.
 

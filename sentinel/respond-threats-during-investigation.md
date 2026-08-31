@@ -1,5 +1,5 @@
 ---
-title: Respond to threat actors during investigations and threat hunts in Microsoft Sentinel
+title: Respond to Threat Actors During Investigations and Threat Hunts in Microsoft Sentinel
 description: Take response actions against threat actors directly from Microsoft Sentinel investigations and threat hunts. Use playbooks with the entity trigger to respond without leaving the investigation context.
 ms.author: guywild
 author: guywi-ms
@@ -18,6 +18,7 @@ ai-usage: ai-assisted
 This article shows you how to take response actions against threat actors on the spot, during the course of an incident investigation or threat hunt, without pivoting or context switching out of the investigation or hunt. You accomplish this using playbooks based on the new entity trigger.
 
 The entity trigger currently supports the following entity types:
+
 - [Account entity reference](entities-reference.md#account)
 - [Host entity reference](entities-reference.md#host)
 - [IP address entity reference](entities-reference.md#ip)
@@ -34,13 +35,13 @@ The entity trigger currently supports the following entity types:
 When you're investigating an incident, and you determine that a given entity - a user account, a host, an IP address, a file, and so on - represents a threat, you can take immediate remediation actions on that threat by running a playbook on-demand. You can do likewise if you encounter suspicious entities while proactively hunting for threats outside the context of incidents.
 
 1. Select the entity in whichever context you encounter it, and choose the appropriate means to run a playbook, as follows:
-    - In the **Entities** widget on the **Overview tab** of an incident in the [new incident details page](investigate-incidents.md#explore-the-incidents-entities) (now in Preview), or in its [**Entities tab**](investigate-incidents.md#entities-tab), choose an entity from the list, select the three dots next to the entity, and select **Run playbook (Preview)** from the pop-up menu.
+    - In the **Entities** widget on an incident's **Overview tab** in the [new incident details page](investigate-incidents.md#explore-the-incidents-entities) (now in Preview), or in its [**Entities tab**](investigate-incidents.md#entities-tab), choose an entity from the list, select the three dots next to the entity, and select **Run playbook (Preview)** from the pop-up menu.
 
         :::image type="content" source="media/respond-threats-during-investigation/incident-details-overview.png" alt-text="Screenshot of incident details page.":::
 
         :::image type="content" source="media/respond-threats-during-investigation/entities-tab.png" alt-text="Screenshot of entities tab on incident details page.":::
 
-    - In the **Entities** tab of an incident, choose the entity from the list and select the **Run playbook (Preview)** link at the end of its line in the list.
+    - In an incident's **Entities** tab, choose the entity from the list and select the **Run playbook (Preview)** link at the end of its line in the list.
 
         :::image type="content" source="media/respond-threats-during-investigation/incident-details-page.png" alt-text="Screenshot of selecting entity from incident details page to run a playbook on it.":::
 
@@ -54,7 +55,7 @@ When you're investigating an incident, and you determine that a given entity - a
 
         :::image type="content" source="media/respond-threats-during-investigation/entity-page.png" alt-text="Screenshot of the selected entity page to run a playbook on an entity.":::
 
-1. Selecting **Run playbook (Preview)** from any of the views described in step 1 opens the **Run playbook on *\<entity type>*** panel.    
+1. Selecting **Run playbook (Preview)** from any of the views described in step 1 opens the **Run playbook on *\<entity type>*** panel.
 
     :::image type="content" source="media/respond-threats-during-investigation/run-playbook-on-entity.png" alt-text="Screenshot of Run playbook on entity panel.":::
 
@@ -70,12 +71,9 @@ When you're investigating an incident, and you determine that a given entity - a
 
 1. You can audit the activity of your entity-trigger playbooks in the **Runs** tab. You'll see a list of all the times any playbook has been run on the entity you selected. It might take a few seconds for any just-completed run to appear in this list. Selecting a specific run will open the full run log in Azure Logic Apps.
 
+## Related content
 
-## Next steps
-
-In this article, you learned how to run playbooks manually to remediate threats from entities while in the middle of investigating an incident or hunting for threats.
-
-- Learn more about [investigating incidents](investigate-incidents.md) in Microsoft Sentinel.
-- Learn how to [proactively hunt for threats](hunting.md) using Microsoft Sentinel.
-- Learn more about [entity types in Microsoft Sentinel](entities.md).
-- Learn more about [automating responses with playbooks](automate-responses-with-playbooks.md) in Microsoft Sentinel.
+- [Investigate Microsoft Sentinel incidents in depth in the Azure portal](investigate-incidents.md)
+- [Threat hunting in Microsoft Sentinel](hunting.md)
+- [Entities in Microsoft Sentinel](entities.md)
+- [Automate threat response with playbooks in Microsoft Sentinel](/azure/sentinel/automation/automate-responses-with-playbooks)

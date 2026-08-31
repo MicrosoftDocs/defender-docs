@@ -1,10 +1,10 @@
 ---
-title: Enable data security posture management for Azure datastores
-description: Learn how to enable data security posture management in Microsoft Defender for Cloud for Azure and AWS resources.
+title: Enable data security posture management
+description: Learn how to enable data security posture management in Microsoft Defender for Cloud, including prerequisites and setup guidance for Azure and AWS resources.
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 05/25/2026
-ms.custom: template-how-to-pattern
+ms.date: 07/03/2026
+ms.custom: template-how-to-pattern, msecd-doc-authoring-1013
 #customer intent: As a security professional, I want to enable data security posture management so that I can discover sensitive data and prioritize remediation across supported datastores.
 ai-usage: ai-assisted
 ---
@@ -38,15 +38,19 @@ Follow these steps to enable data security posture management. Don't forget to r
 
 ## Enable in Defender CSPM (AWS)
 
+Follow these steps to enable data security posture management for your AWS resources. Review the prerequisites and then configure scanning for your S3 buckets and RDS instances.
+
 ### Before you start in AWS
 
 Complete the following checks before you enable data security posture management for Amazon Web Services (AWS):
 
-- Don't forget to: [review the requirements](concept-data-security-posture-prepare.md#discovery) for AWS discovery, and [required permissions](concept-data-security-posture-prepare.md#whats-supported).
+- Don't forget to: [AWS discovery requirements](concept-data-security-posture-prepare.md#discovery), and [required permissions for S3 and RDS scanning](concept-data-security-posture-prepare.md#whats-supported).
 - Check that there's no policy that blocks the connection to your Amazon S3 buckets.
 - For Amazon Relational Database Service (RDS) instances, cross-account AWS Key Management Service (KMS) encryption is supported, but additional KMS access policies might prevent access.
 
 ### Enable for AWS resources
+
+After you complete the prerequisites, configure scanning for your AWS resources.
 
 #### Configure S3 buckets and RDS instances
 
@@ -70,7 +74,7 @@ Only scan findings are reported by the scanning platform.
 
 ### Check for S3 blocking policies
 
-If the enable process didn't work because of a blocked policy, check the following:
+If enabling scanning for S3 buckets and RDS instances didn't work because of a blocked policy, check the following:
 
 - Make sure that the S3 bucket policy doesn't block the connection. In the AWS S3 bucket, select the **Permissions** tab > Bucket policy. Check the policy details to make sure the Microsoft Defender for Cloud scanner service running in the Microsoft account in AWS isn't blocked.
 - Make sure that there's no SCP policy that blocks the connection to the S3 bucket. For example, your SCP policy might block read API calls to the AWS Region where your S3 bucket is hosted.
@@ -84,7 +88,10 @@ Sensitive data threat detection is enabled by default when the sensitive data di
 > [!NOTE]
 > If you turn off Defender CSPM, only Azure Storage resources are scanned.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
+
+After you enable data security posture management, continue with the following step:
 
 > [!div class="nextstepaction"]
 > [Review security risks in your data](data-security-review-risks.md)

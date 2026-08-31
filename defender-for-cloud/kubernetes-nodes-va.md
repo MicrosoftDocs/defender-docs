@@ -1,9 +1,9 @@
 ---
 title: Review and remediate Kubernetes node vulnerabilities
 description: Learn how to review and remediate vulnerability findings for Kubernetes nodes in Microsoft Defender for Cloud.
-ms.date: 05/26/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
 ai-usage: ai-assisted
 ---
 
@@ -32,6 +32,8 @@ Before you begin, make sure that:
 
 ## Review vulnerability findings for Kubernetes nodes
 
+To review vulnerability findings for Kubernetes nodes, follow these steps:
+
 1. Sign in to the [Azure portal](https://portal.azure.com).
  
 1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
@@ -53,11 +55,16 @@ Before you begin, make sure that:
 
 ## Remediate Kubernetes node vulnerabilities
 
+To remediate vulnerabilities found on your Kubernetes nodes, follow these steps:
+
 1. Sign in to the [Azure portal](https://portal.azure.com).
  
 1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
-1. Search for and select the recommendation for your environment (see recommendation names above).
+1. Search for and select the relevant recommendation for your environment:
+   - **AKS**: `AKS nodes should have vulnerability findings resolved`
+   - **EKS**: `EKS nodes should have vulnerability findings resolved` (Preview)
+   - **GKE**: `GKE nodes should have vulnerability findings resolved` (Preview)
 
 1. Select **Fix**.
 
@@ -67,7 +74,8 @@ Before you begin, make sure that:
 
    :::image type="content" source="media/kubernetes-nodes-va/node-pool-overview.png" alt-text="Screenshot showing the overview details of the Kubernetes node pool for updating its image." lightbox="media/kubernetes-nodes-va/node-pool-overview.png":::
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Use Cloud Security Explorer to investigate vulnerabilities in a cluster node](cloud-security-explorer-kubernetes-clusters.md#create-a-query-to-identify-vulnerabilities-in-cluster-nodes)

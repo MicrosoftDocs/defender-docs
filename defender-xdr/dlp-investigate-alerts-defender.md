@@ -8,12 +8,12 @@ ms.collection:
   - m365-security
   - tier2
 ms.topic: how-to
-ms.date: 08/09/2026
+ms.date: 07/02/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1018
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Investigate data loss prevention alerts with Microsoft Defender XDR
@@ -92,7 +92,7 @@ Perform the following steps to find and review DLP alerts in the Microsoft Defen
 
 1. View the **Alert story** for details about policy and the sensitive information types detected in the alert. Select the event in the **Related Events** section to see the user activity details.
 
-1. View the matched sensitive content in the **Sensitive info types** tab and the file content in the **Source** tab if you have the required permission (See details <a href="/microsoft-365/compliance/dlp-alerts-dashboard-get-started#roles" target="_blank">here</a>).
+1. View the matched sensitive content in the **Sensitive info types** tab and the file content in the **Source** tab if you have the required permission (see <a href="/microsoft-365/compliance/dlp-alerts-dashboard-get-started#roles" target="_blank">required roles and permissions</a>).
 
 ### Extend DLP alert investigation with advanced hunting
 
@@ -102,7 +102,7 @@ The **CloudAppEvents** table contains all audit logs across all locations like S
 
 #### Before you begin
 
-If you're new to advanced hunting, you should review [Get started with advanced hunting](advanced-hunting-overview.md).
+If you're new to Microsoft Defender advanced hunting, review [Get started with advanced hunting](advanced-hunting-overview.md).
 
 Before you can use advanced hunting you must have [access to the **CloudAppEvents** table](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps) that contains Microsoft Purview DLP audit data.
 
@@ -139,9 +139,9 @@ If the alert is for a file in SharePoint Online or One Drive for Business, you c
 - Download ([data classification content viewer role](/defender-office-365/scc-permissions#role-groups-in-microsoft-defender-for-office-365-and-microsoft-purview-compliance) is required for this action)
 - Withdraw feedback
 
-To take remediation actions on the user, select the **User card** on the top of the alert page to open the user details.
+To take remediation actions on the user associated with the alert, select the **User card** on the top of the alert page to open the user details.
 
-For Devices DLP alerts, select the device card on the top of the alert page to view the device details and take remediation actions on the device.
+For Devices DLP alerts, select the device card on the top of the alert page to view details about the device associated with the alert and take remediation actions.
 
 Go to the incident summary page and select **Manage Incident** to add incident tags, assign, or resolve an incident.
 
@@ -151,4 +151,5 @@ Go to the incident summary page and select **Manage Incident** to add incident t
 - [Incidents overview](incidents-overview.md)
 - [Prioritize incidents](incident-queue.md)
 - [Manage incidents](manage-incidents.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

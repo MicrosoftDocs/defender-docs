@@ -1,9 +1,11 @@
 ---
 ms.topic: include
-ms.date: 10/20/2025
+ms.date: 08/24/2026
 ms.author: monaberdugo
 author: mberdugo
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1015
 ---
 
 > [!IMPORTANT]
-> The data connector agent for SAP is being **deprecated** and will be permanently disabled by **[September 14th 2026](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/transitioning-from-the-http-data-collector-api-to-the-log-ingestion-api%E2%80%A6what-doe/4403568)**. We recommend that you [migrate to the agentless data connector](../sap/sap-agent-migrate.md). Learn more about the agentless approach from our [blog post](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/microsoft-sentinel-for-sap-agentless-connector-ga/4464490).
+> The containerized data connector agent for SAP will be retired and permanently disabled on **[September 14, 2026](https://azure.microsoft.com/updates?id=568457)**. After this date, the agent stops delivering SAP logs to Microsoft Sentinel. Creation of new containerized agents is already disabled. [Migrate to the generally available agentless data connector](../sap/sap-agent-migrate.md), the supported replacement. Customers who already use the agentless connector aren't affected. Learn more about the agentless approach in the [SAP agentless connector announcement](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/microsoft-sentinel-for-sap-agentless-connector-ga/4464490).

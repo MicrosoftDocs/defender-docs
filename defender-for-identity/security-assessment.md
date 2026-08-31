@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for Identity security posture assessments
+title: Microsoft Defender for Identity Security Posture Assessments
 description: Learn how Microsoft Defender for Identity security posture assessments identify misconfigurations and legacy components in Active Directory and provide recommended remediation actions.
 ms.date: 08/07/2026
 ms.topic: how-to
@@ -12,7 +12,7 @@ ai-usage: ai-assisted
 
 Typically, organizations of all sizes have limited visibility into whether or not their on-premise and cloud apps and services could introduce a security vulnerability to their organization. The problem of limited visibility is especially true regarding use of unsupported or outdated components.
 
-While your company might invest significant time and effort on hardening identities and identity infrastructure (such as Active Directory, Active Directory Connect) as an ongoing project, it's easy to remain unaware of common misconfigurations and use of legacy components that represent one of the greatest threat risks to your organization. 
+While your company might invest significant time and effort on hardening identities and identity infrastructure (such as Active Directory, Active Directory Connect) as an ongoing project, it's easy to remain unaware of common misconfigurations and use of legacy components that represent one of the greatest threat risks to your organization.
 
 Microsoft security research reveals that most identity attacks utilize common misconfigurations in Active Directory and continued use of legacy components (such as NTLMv1 protocol) to compromise identities and successfully breach your organization. To combat these misconfigurations and legacy-component risks effectively, Microsoft Defender for Identity now offers proactive identity security posture assessments to detect and recommend actions across your on-premise Active Directory configurations.
 
@@ -51,17 +51,17 @@ For more information, see [Configuring sensors for AD FS, AD CS and Microsoft En
 
 You can view Defender for Identity security posture assessments in the Microsoft Secure Score dashboard in the Microsoft Defender portal.
 
-**To access identity security posture assessments**:
+To access identity security posture assessments:
 
 1. Open the [Microsoft Secure Score dashboard](https://security.microsoft.com/securescore).
 1. Select the **Recommended actions** tab. You can search for a particular recommended action, or filter the results (for example, by the category **Identity**).
 
-    [![Screenshot of the Recommended actions tab in Microsoft Secure Score showing identity security posture assessments.](media/recommended-actions.png)](media/recommended-actions.png#lightbox)
-   
+    :::image type="content" source="media/recommended-actions.png" alt-text="Screenshot of the Recommended actions tab in Microsoft Secure Score showing identity security posture assessments." lightbox="media/recommended-actions.png":::
+
 1. For more details, select the assessment.
 
-    [![Screenshot of the assessments list with a specific security posture assessment selected for detailed view.](media/select-assessment.png)](media/select-assessment.png#lightbox)
-   
+    :::image type="content" source="media/select-assessment.png" alt-text="Screenshot of the assessments list with a specific security posture assessment selected for detailed view." lightbox="media/select-assessment.png":::
+
 [!INCLUDE [secure-score-note](../includes/secure-score-note.md)]
 
 ## Related content

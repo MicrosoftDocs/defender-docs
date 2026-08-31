@@ -1,6 +1,6 @@
 ---
-title: Configure alert notifications
-description: You can use Microsoft Defender for Endpoint to configure email notification settings for security alerts, based on severity and other criteria.
+title: Configure email alert notifications in Microsoft Defender XDR
+description: Configure email notifications in Microsoft Defender XDR so specified recipients are alerted to new security alerts based on severity and other criteria.
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
@@ -9,17 +9,17 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
 - Microsoft Defender for Business
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
-# Configure alert notifications
+# Configure alert notifications in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -49,9 +49,9 @@ You can create rules that determine the devices and alert severities to send ema
 
 2. In the navigation pane, select **Settings** \> **Endpoints** \> **General** \> **Email notifications**.
 
-2. Click **Add item**.
+3. Click **Add item**.
 
-3. Specify the General information:
+4. Specify the General information:
     - **Rule name** - Specify a name for the notification rule.
     - **Include organization name** - Specify the customer name that appears on the email notification.
     - **Include tenant-specific portal link** - Adds a link with the tenant ID to allow access to a specific tenant.
@@ -81,9 +81,13 @@ To edit an existing notification rule, follow these steps:
 
 3. Click **Save notification rule**.
 
-## Delete notification rule
+<a name="delete-notification-rule"></a>
+## Delete a notification rule
 
 To delete a notification rule, follow these steps:
+
+> [!WARNING]
+> Deleting a notification rule is permanent. Future email notifications for that rule will stop, and you must recreate the rule if you remove it by mistake.
 
 1. Select the notification rule you'd like to delete.
 

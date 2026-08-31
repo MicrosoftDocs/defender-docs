@@ -1,5 +1,5 @@
 ---
-title: Connect Microsoft Sentinel to Amazon Web Services to ingest AWS service log data
+title: Connect Microsoft Sentinel to Amazon Web Services to Ingest AWS Service Log Data
 description: Use the AWS connector to delegate Microsoft Sentinel access to AWS resource logs, creating a trust relationship between Amazon Web Services and Microsoft Sentinel.
 ms.author: edbaynash
 author: EdB-MSFT
@@ -23,12 +23,11 @@ The Amazon Web Services (AWS) service log connector is available in two versions
 - [AWS CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html) - [Management](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html) and [data](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html) events
 - [AWS CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html) - [CloudWatch logs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html)
 
-
 # [S3 connector (new)](#tab/s3)
 
 The **S3 connector** tab explains how to configure the AWS S3 connector using one of two methods: 
 
-- [Automatic setup](#automatic-setup) (Recommended) 
+- [Automatic setup](#automatic-setup) (Recommended)
 - [Manual setup](#manual-setup)
 
 ## Prerequisites
@@ -40,15 +39,14 @@ The **S3 connector** tab explains how to configure the AWS S3 connector using on
   - [Installation instructions for the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) (from AWS documentation)
 - Make sure that the logs from your selected AWS service use the format accepted by Microsoft Sentinel:
 
-    - **Amazon VPC**: .csv file in GZIP format with headers; delimiter: space.
-    - **Amazon GuardDuty**: json-line and GZIP formats.
-    - **AWS CloudTrail**: .json file in a GZIP format.
-    - **CloudWatch**: .csv file in a GZIP format without a header. If you need to convert your logs to this format, you can use this [CloudWatch lambda function](#send-formatted-cloudwatch-events-to-s3-using-a-lambda-function-optional).
-
+  - **Amazon VPC**: .csv file in GZIP format with headers; delimiter: space.
+  - **Amazon GuardDuty**: json-line and GZIP formats.
+  - **AWS CloudTrail**: .json file in a GZIP format.
+  - **CloudWatch**: .csv file in a GZIP format without a header. If you need to convert your logs to this format, you can use this [CloudWatch lambda function](#send-formatted-cloudwatch-events-to-s3-using-a-lambda-function-optional).
 
 ## Automatic setup
 
-To simplify the onboarding process, Microsoft Sentinel has provided a [PowerShell script to automate the setup](https://github.com/Azure/Azure-Sentinel/tree/master/DataConnectors/AWS-S3) of the AWS side of the connector - the required AWS resources, credentials, and permissions.
+To simplify the onboarding process, Microsoft Sentinel has provided a [PowerShell script to automate the setup](https://github.com/Azure/Azure-Sentinel/tree/master/DataConnectors/AWS-S3) of the AWS side of the connector; the required AWS resources, credentials, and permissions.
 
 The script:
 
@@ -108,7 +106,7 @@ We recommend using the automatic setup script to deploy this connector. If for w
 
 1. Set up your AWS environment as described in [Set up your Amazon Web Services environment to collect AWS logs to Microsoft Sentinel](connect-aws-configure-environment.md#manual-setup).  
 
-1. In the AWS console: 
+1. In the AWS console:
 
    1. Enter the **Identity and Access Management (IAM)** service and navigate to the list of **Roles**. Select the role you created above.
 
@@ -166,10 +164,11 @@ The **CloudTrail connector (legacy)** tab explains how to configure the AWS Clou
 ## Connect AWS CloudTrail
 
 Setting up this connector has two steps:
+
 - [Create an AWS assumed role and grant access to the AWS Sentinel account](#create-an-aws-assumed-role-and-grant-access-to-the-aws-sentinel-account)
 - [Add the AWS role information to the AWS CloudTrail data connector](#add-the-aws-role-information-to-the-aws-cloudtrail-data-connector)
 
-#### Create an AWS assumed role and grant access to the AWS Sentinel account
+### Create an AWS assumed role and grant access to the AWS Sentinel account
 
 1. In Microsoft Sentinel, select **Data connectors** from the navigation menu.
 
@@ -180,7 +179,7 @@ Setting up this connector has two steps:
 1. In the details pane for the connector, select **Open connector page**.
 
 1. Under **Configuration**, copy the **Microsoft account ID** and the **External ID (Workspace ID)** to your clipboard.
- 
+
 1. In a different browser window or tab, open the AWS console. Follow the [instructions in the AWS documentation for creating a role for an AWS account](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
 
     - For the account type, instead of **This account**, choose **Another AWS account**.
@@ -247,9 +246,8 @@ To deploy the lambda function:
 
 1. Select **Test** to see how the event appears in the S3 bucket.
 
-## Next steps
+## Related content
 
-In this document, you learned how to connect to AWS resources to ingest their logs into Microsoft Sentinel. To learn more about Microsoft Sentinel, see the following articles:
-- Learn how to [get visibility into your data, and potential threats](get-visibility.md).
-- Get started [detecting threats with Microsoft Sentinel](detect-threats-built-in.md).
-- [Use workbooks](monitor-your-data.md) to monitor your data.
+- [Visualize collected data on the Overview page](get-visibility.md)
+- [Threat detection in Microsoft Sentinel](threat-detection.md)
+- [Visualize and monitor your data by using workbooks in Microsoft Sentinel](monitor-your-data.md)

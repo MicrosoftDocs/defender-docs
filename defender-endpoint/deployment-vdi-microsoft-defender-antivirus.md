@@ -2,11 +2,11 @@
 title: Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment
 description: Get an overview of how to configure Microsoft Defender Antivirus in a remote desktop or non-persistent virtual desktop environment.
 ms.localizationpriority: medium
-ms.date: 07/02/2026
+ms.date: 08/20/2026
 ms.topic: how-to
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1016
+ms.custom: nextgen, msecd-doc-authoring-1015
 ms.reviewer: jesquive
 ms.subservice: ngp
 ms.service: defender-endpoint
@@ -20,6 +20,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 ai-usage: ai-assisted
+#customer intent: As a security administrator, I want to configure Microsoft Defender Antivirus for remote desktop or virtual desktop infrastructure so that virtual machines have appropriate protection and performance.
 ---
 
 # Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment
@@ -266,7 +267,12 @@ Use the following scan settings:
 - Turn on catch-up quick scan (Disable catch-up quick scan): `Not configured`
 
    > [!NOTE]
-   > If you want to harden, you could change "Turn on catch-up quick scan" to `Enabled`, which helps when VMs are offline, and have missed two or more consecutive scheduled scans. But since it's running a scheduled scan, it uses additional CPU.
+   > To run a quick scan after a virtual machine misses two consecutive scheduled scans, configure the setting for your management method:
+   >
+   > - Group Policy: Set **Turn on catch-up quick scan** to `Enabled`.
+   > - Intune: Set **Disable Catchup Quick Scan** to `Disabled`.
+   >
+   > Catch-up scans use more CPU when they run.
 
 - Turn on e-mail scanning: `Enabled`
 

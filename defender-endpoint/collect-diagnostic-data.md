@@ -27,7 +27,7 @@ ai-usage: ai-assisted
 This article describes how to collect diagnostic data to send to Microsoft support and engineering teams when they help troubleshoot issues with Microsoft Defender Antivirus.
 
 > [!NOTE]
-> As part of the investigation or response process, you can collect an investigation package from a device. Here's how: [Collect investigation package from devices](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts#collect-investigation-package-from-devices).
+> As part of the investigation or response process, you can collect an investigation package from a device. Here's how: [Collect investigation package from devices](respond-machine-alerts.md#collect-investigation-package-from-devices).
 >
 > For performance-specific issues related to Microsoft Defender Antivirus, see: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 

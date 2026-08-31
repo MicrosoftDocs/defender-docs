@@ -63,13 +63,13 @@ It's recommended to onboard down-level Windows clients via MMA and SCEP **only i
 
 Review the following details to verify minimum system requirements:
 
-- Install the [February 2018 monthly update rollup](https://support.microsoft.com/help/4074598/windows-7-update-kb4074598) - Direct download link from the Windows Update catalog is available [here](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4074598)
+- Install the [February 2018 monthly update rollup](https://support.microsoft.com/servicing/os/windows-7/2018/02/february-13-2018-kb4074598-monthly-rollup) - Direct download link from the Windows Update catalog is available [here](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4074598)
 
-- Install the [March 12, 2019 (or later) Servicing stack update](https://support.microsoft.com/topic/servicing-stack-update-for-windows-7-sp1-and-windows-server-2008-r2-sp1-march-12-2019-b4dc0cff-d4f2-a408-0cb1-cb8e918feeba) - Direct download link from the Windows Update catalog is available [here](https://www.catalog.update.microsoft.com/search.aspx?q=4490628)
+- Install the [March 12, 2019 (or later) Servicing stack update](https://support.microsoft.com/topic/servicing-stack-update-for-windows-7-sp1-and-windows-server-2008-r2-sp1-march-12-2019-b4dc0cff-d4f2-a408-0cb1-cb8e918feeba) - Direct download link from the Windows Update catalog is available [here](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4490628)
 
-- Install the [Update for customer experience and diagnostic telemetry](https://support.microsoft.com/help/3080149/update-for-customer-experience-and-diagnostic-telemetry)
+- Install the [Update for customer experience and diagnostic telemetry](https://support.microsoft.com/servicing/os/windows/2019/11/update-for-customer-experience-and-diagnostic-telemetry)
 
-- Install [Microsoft .NET Framework 4.5.2 or later](https://www.microsoft.com/en-US/download/details.aspx?id=42642)
+- Install [Microsoft .NET Framework 4.5.2 or later](/dotnet/framework/install/guide-for-developers)
 
     > [!NOTE]
     > Installation of .NET 4.5 might require you to restart your computer after installation.
@@ -109,7 +109,7 @@ Defender for Endpoint integrates with System Center Endpoint Protection to provi
 
 The following steps are required to enable this integration:
 
-- Install the [January 2017 anti-malware platform update for Endpoint Protection clients](https://support.microsoft.com/help/3209361/january-2017-anti-malware-platform-update-for-endpoint-protection-clie)
+- Install the [January 2017 anti-malware platform update for Endpoint Protection clients](https://support.microsoft.com/servicing/management-tools/configuration-manager/update/2020/08/january-2017-anti-malware-platform-update-for-endpoint-protection-clients)
 - Configure the SCEP client Cloud Protection Service membership to the **Advanced** setting
 - Configure your network to allow connections to the Microsoft Defender Antivirus cloud. For more information, see [Configure and validate Microsoft Defender Antivirus network connections](configure-network-connections-microsoft-defender-antivirus.md) 
 

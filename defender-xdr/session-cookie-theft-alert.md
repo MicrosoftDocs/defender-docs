@@ -18,7 +18,7 @@ ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 ---
 
@@ -43,10 +43,12 @@ This playbook helps in investigating cases where suspicious behavior is observed
 The results of using this playbook are:
 
 - You have identified the alerts associated with AiTM as malicious (TP) or benign (FP) activities.
-- If identified as malicious, you've taken the necessary action to remediate the attack.
+- If the alerts are identified as malicious, you've taken the necessary action to remediate the attack.
 
 <a name="investigating-steps"></a>
 ## Investigation steps for session cookie theft alerts
+
+Perform the following investigation steps for session cookie theft alerts:
 
 1. Investigate whether the affected user has triggered any other security alerts.
 
@@ -81,7 +83,7 @@ The results of using this playbook are:
 
 ## Advanced hunting queries
 
-[Advanced hunting](advanced-hunting-overview.md) is a query-based threat hunting tool that lets you inspect events in your network and locate threat indicators.
+[Advanced hunting overview](advanced-hunting-overview.md) is a query-based threat hunting tool that lets you inspect events in your network and locate threat indicators.
 
 Before running these queries, ensure you have access to the following tables:
 
@@ -157,5 +159,5 @@ Once you determine that the alert activities are malicious, classify those alert
 
 For more background on AiTM phishing attacks and session cookie theft, see the following resource:
 
-- [From cookie theft to BEC](https://www.microsoft.com/security/blog/2022/07/12/from-cookie-theft-to-bec-attackers-use-aitm-phishing-sites-as-entry-point-to-further-financial-fraud/)
+- [From cookie theft to business email compromise (BEC)](https://www.microsoft.com/security/blog/2022/07/12/from-cookie-theft-to-bec-attackers-use-aitm-phishing-sites-as-entry-point-to-further-financial-fraud/)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

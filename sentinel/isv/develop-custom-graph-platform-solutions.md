@@ -16,10 +16,12 @@ ms.custom: msecd-doc-authoring-1012
 
 # Develop custom graph platform solutions
 
+> [!NOTE]
+> This feature is currently in preview. See [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
+
 A Microsoft Sentinel custom graph solution is a notebook-based solution that defines nodes and edges from Microsoft Sentinel data lake tables, builds a graph, and lets users query that graph with Graph Query Language (GQL).
 
 Use this guide to build, test, materialize, package, and publish a custom graph solution as a SaaS offer in Microsoft Partner Center so customers can discover it in Microsoft Security Store.
-
 
 ## Prerequisites
 
@@ -33,7 +35,7 @@ The following table lists the required permissions for each operation or scope i
 |---|---|
 | Onboarding to the Sentinel data lake | Microsoft Entra ID - Security Administrator or Global Administrator |
 | Onboard Sentinel workspace to Defender portal | Subscription Owner, or User Access Administrator at subscription scope and Microsoft Sentinel Contributor at subscription or resource group scope |
-| Onboard Sentinel workspace to Data Lake | Subscription Owner or Microsoft Sentinel Contributor at subscription or resource group scope |
+| Onboard Sentinel workspace to data lake | Subscription Owner or Microsoft Sentinel Contributor at subscription or resource group scope |
 | Model and build a notebook graph | Custom Microsoft Defender XDR unified RBAC role with `data (manage)` permission over the Microsoft Sentinel data collection |
 | Persist (materialize) a graph | Security Operator, Security Administrator, or Global Administrator |
 | Query a persisted graph | Custom Microsoft Defender XDR unified RBAC role with `security data basics (read)` over the Microsoft Sentinel data collection |
@@ -44,7 +46,7 @@ The following table lists the required permissions for each operation or scope i
 The following tools are required to build and publish a custom graph solution:
 
 - Visual Studio Code.
-- [Microsoft Sentinel extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-security.ms-sentinel). For more information, see [Install Visual Studio Code and the Microsoft Sentinel extension](/azure/sentinel/datalake/notebooks#install-visual-studio-code-and-the-microsoft-sentinel-extension )
+- [Microsoft Sentinel extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-security.ms-sentinel). For more information, see [Install Visual Studio Code and the Microsoft Sentinel extension](/azure/sentinel/datalake/notebooks#install-visual-studio-code-and-the-microsoft-sentinel-extension).
 - Jupyter extension for Visual Studio Code.
 - GitHub Copilot extension and a GitHub Copilot Business or Enterprise plan.
 - Python 3.10 or later on your local machine.
@@ -69,7 +71,7 @@ The following workflow outlines the steps to build and publish a custom graph so
 This task ingests Microsoft Entra ID asset tables used by the sample graph in this guide: `EntraUsers`, `EntraGroups`, `EntraServicePrincipals`, and `EntraMembers`.
 
 1. In the Defender portal, go to **System** > **Settings** > **Microsoft Sentinel** > **Data connectors**.
-1. Enable the Microsoft Entra ID connector so Entra asset tables are ingested into the data lake. For more information, see [Asset data ingestion in the Microsoft Sentinel data lake](../datalake/enable-data-connectors.md)
+1. Enable the Microsoft Entra ID connector so Entra asset tables are ingested into the data lake. For more information, see [Asset data in Microsoft Sentinel data lake](../datalake/enable-data-connectors.md).
 1. Confirm these tables appear in the data lake explorer:
    - `EntraUsers`
    - `EntraGroups`
@@ -88,7 +90,7 @@ Create and run a minimal notebook to verify data lake connectivity before graph 
 
 1. Open Visual Studio Code and sign in to the Microsoft Sentinel extension with the same account that has access to the data lake.
 1. In Visual Studio Code, under Sentinel Extension–Graphs select **Create new notebook**.
-    :::image type="content" source="media/develop-custom-graph-platform-solutions/create-new-workbook.png" lightbox="media/develop-custom-graph-platform-solutions/create-new-workbook.png" alt-text="A screenshot showing the create new notebook option in VS Code.":::
+    :::image type="content" source="media/develop-custom-graph-platform-solutions/create-new-notebook.png" lightbox="media/develop-custom-graph-platform-solutions/create-new-notebook.png" alt-text="A screenshot showing the create new notebook option in VS Code.":::
 
 
 1. Save the notebook, for example `hello-world-show-tables.ipynb`.
@@ -199,7 +201,7 @@ To author a graph with AI assistance, follow these steps:
    | Change time range | `@sentinel Change the time range to the last 7 days` |
    | Fix build error | `@sentinel Fix the error in the graph build step` |
    | Understand code | `@sentinel Explain how edge keys are defined` |
-   | Look up an API without editing | `What parameters does build_graph_with_data() accept? #sentinel` |
+   | Look up an API without editing | `What parameters does build_graph_with_data() accept? #Sentinel` |
 
 > [!TIP]
 > Use `@sentinel /graph-authoring` to create or modify notebook cells. If you need API explanations or sample queries, ask Copilot and include `#Sentinel` for Sentinel-specific answers.
@@ -350,7 +352,7 @@ Test the notebook to ensure it produces the expected graph output:
 
 ## Schedule a graph job to materialize the graph
 
-Graphs created in an interactive session are ephemeral. Schedule a graph job to persist and refresh the graph.  For more information, see [Schedule and manage Microsoft Sentinel graph jobs](../datalake/create-custom-graphs.md#persist-your-custom-graph).
+Graphs created in an interactive session are ephemeral. Schedule a graph job to persist and refresh the graph. For more information, see [Schedule and manage Microsoft Sentinel graph jobs](../datalake/create-custom-graphs.md#persist-your-custom-graph).
 
 
 1. In your graph notebook, select **Create Scheduled Job** > **Create a graph job**.

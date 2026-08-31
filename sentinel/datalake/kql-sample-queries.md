@@ -8,10 +8,10 @@ ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ms.collection: ms-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #customer intent: As a security analyst, I want to run learn from sample KQL queries so that I can investigate incidents and monitor suspicious activity in Microsoft Sentinel data lake.
 ---  
@@ -19,9 +19,9 @@ ms.custom: msecd-doc-authoring-1014
 
 # Sample KQL queries for Microsoft Sentinel data lake
 
-This article provides sample KQL queries that you can use interactively or in KQL jobs to investigate security incidents and monitor for suspicious activity in the Microsoft Sentinel data lake.
+This article provides sample KQL queries that security analysts and SOC engineers can use to investigate incidents and monitor for suspicious activity in the Microsoft Sentinel data lake. The queries cover threat detection, anomaly identification, baseline creation, and indicator-of-compromise matching across data sources such as sign-in logs, audit logs, network traffic, and process execution events. You can run these queries interactively in the KQL query editor or schedule them as KQL jobs for automated monitoring.
 
-## Out of the box queries
+## Out-of-the-box queries
 
 Microsoft Sentinel includes a set of out-of-the-box KQL queries that you can use to explore and analyze data in the data lake. These queries are available in the KQL query editor under the **Queries** tab. For more information, see [Run KQL queries](kql-queries.md#out-of-the-box-queries).
 
@@ -30,7 +30,7 @@ Microsoft Sentinel includes a set of out-of-the-box KQL queries that you can use
 
 **Category**: Threat activities
 
-Analyze trend analysis of Entra ID sign-in logs to detect unusual location changes for users across applications by computing trend lines of location diversity. It highlights the top three accounts with the steepest increase in location variability and lists their associated locations within 21-day windows.
+Analyze trend analysis of Microsoft Entra ID sign-in logs to detect unusual location changes for users across applications by computing trend lines of location diversity. It highlights the top three accounts with the steepest increase in location variability and lists their associated locations within 21-day windows.
  
 ```kql
 SigninLogs
@@ -63,7 +63,7 @@ SigninLogs
 
 **Category**: Anomalies
 
-Identify anomalous sign-in behavior based on location changes for Entra ID users and apps to detect sudden changes in behavior.
+Identify anomalous sign-in behavior based on location changes for Microsoft Entra ID users and apps to detect sudden changes in behavior.
 
 ```kql
 SigninLogs
@@ -447,7 +447,7 @@ QueryUserAgents(timeframe, 0d)
 
 **Category**: Threat activities
 
-Identify any IP indicators of compromise (IOCs) from threat intelligence (TI), by searching for matches in CommonSecurityLog.
+Search CommonSecurityLog for IP addresses that match known indicators of compromise (IOCs) from threat intelligence (TI) feeds.
 
 ```kql
 let IPRegex = '[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}';
@@ -713,7 +713,7 @@ AllLogonEvents
 
 ## Additional sample queries
 
-This section provides additional sample KQL queries for exploring and analyzing data in the Microsoft Sentinel data lake. Each query targets a specific security scenario. You can run them as-is or change them to fit your needs.
+The following sample KQL queries help explore and analyze Microsoft Sentinel data lake data for specific security scenarios. You can run them as-is or change them to fit your needs.
 
 
 ### Identify possible insider threats

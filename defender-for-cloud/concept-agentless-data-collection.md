@@ -51,8 +51,8 @@ Here's how agentless scanning works:
 Defender for Cloud used specific roles and permissions to perform agentless scanning.
 
 - In Azure, these permissions are automatically added to your subscriptions when you enable agentless scanning.
-- In AWS, these permissions are [added to the CloudFormation stack in your AWS connector](enable-agentless-scanning-vms.md#enable-agentless-scanning-on-aws).
-- In GCP, these permissions are [added to the onboarding script in your GCP connector](enable-agentless-scanning-vms.md#enable-agentless-scanning-on-gcp).
+- In AWS, these permissions are [added to the CloudFormation stack in your AWS connector](enable-agentless-scanning-vms.md#aws).
+- In GCP, these permissions are [added to the onboarding script in your GCP connector](enable-agentless-scanning-vms.md#gcp).
 
 ### Azure permissions
 

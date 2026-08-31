@@ -1,15 +1,15 @@
 ---
 title: Install Defender for IoT Micro Agent for Microsoft Edge
 description: Learn how to install, and authenticate the Defender Micro agent for Microsoft Edge.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Install Defender for IoT micro agent for Edge
 
-This article explains how to install, and authenticate the Defender micro agent for Edge. The micro agent runs as a module on Azure IoT Edge devices and provides security monitoring, threat detection, and security posture management for your IoT deployment. The steps in this article cover setting up the required package repositories, installing the agent package on Debian and Ubuntu-based Linux distributions, and validating the installation.
+This article explains how to install and set up the Defender micro agent for Edge. The micro agent runs as a module on Azure IoT Edge devices. It monitors security threats and helps manage your IoT security posture. Before you begin, make sure you complete the [prerequisites](#prerequisites). You'll learn how to add the required package sources, install the agent on Debian and Ubuntu-based Linux systems, and check that it works.
 
 [!INCLUDE [device-agents-note](../includes/device-agents-note.md)]
 
@@ -60,7 +60,9 @@ Before you install the Defender micro agent for Edge, complete the following pre
 <a name="installation"></a>
 ## Install the Defender for IoT micro agent for Edge
 
-1. Install the Defender micro agent package on Debian, and Ubuntu based Linux distributions, using the following command: 
+Perform the following steps to install and validate the Defender for IoT micro agent on supported Linux distributions.
+
+1. Install the Defender micro agent package. Run the following command on Debian or Ubuntu-based Linux systems: 
 
     ```bash
     sudo apt-get install defender-iot-micro-agent-edge
@@ -90,7 +92,7 @@ Before you install the Defender micro agent for Edge, complete the following pre
 
     :::image type="content" source="media/quickstart-standalone-agent-binary-installation/validation-failure.png" alt-text="The baseline validation failure recommendation that occurs in the hub." lightbox="media/quickstart-standalone-agent-binary-installation/validation-failure-expanded.png":::
 
-    Allow up to one hour for the recommendation to appear in your IoT Hub. 
+    Allow up to one hour for the baseline validation failure recommendation to appear in your IoT Hub. 
 
 1. Install a specific version of the Defender IoT micro agent, use the following command:
 
