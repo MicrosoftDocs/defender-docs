@@ -2,7 +2,7 @@
 title: Transition from grouped to individual recommendations in Defender for Cloud
 description: Learn about the transition from grouped to individual recommendations in Microsoft Defender for Cloud, including operational impacts and best practices.
 ms.topic: best-practice
-ms.date: 08/25/2026
+ms.date: 08/31/2026
 ms.custom: sfi-image-nochange
 #customer intent: As a security administrator, I want to understand the transition from grouped to individual recommendations so that I can adapt my workflows and maintain effective security posture management.
 ai-usage: ai-assisted
@@ -80,7 +80,7 @@ The recommendation *Machines should have vulnerability findings resolved* aggreg
 
 **After (individual recommendations model):**
 
-Each individual recommendation has a list of vulnerability findings. Instead of one aggregated entry per machine, you see individual findings per vulnerable software package, spanning Azure VMs, AKS nodes, EC2 instances, GCP instances, and containers, all within the **SoftwareUpdate** recommendation category.
+Each individual recommendation has a list of vulnerability findings. Instead of one aggregated entry per machine, you see individual findings per vulnerable software package, spanning Azure VMs, AKS nodes, EC2 instances, GCP instances, and containers, within the **SoftwareUpdate** and **ServiceUpgrade** recommendation categories.
 
 ### Update your Azure Resource Graph queries
 

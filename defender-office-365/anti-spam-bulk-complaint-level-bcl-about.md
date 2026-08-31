@@ -10,7 +10,7 @@ ms.collection:
   - tier2
 description: Admins can learn about bulk email detection, including the bulk complain level (BCL) values that are used in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 08/05/2026
+ms.date: 08/25/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -160,7 +160,7 @@ The **Promotions** folder in user mailboxes has the following characteristics:
   - If an unrelated **Promotions** folder already exists in the mailbox, a new folder named **Promotions(1)** is created and used.
   - If you rename or move the **Promotions** folder, it continues to work (the name or location of the folder doesn't matter).
 - Bulk mail that would normally be delivered to the **Promotions** folder is delivered to the Inbox in the following scenarios:
-  - The bulk sender is in the user's [Safe Senders list](create-safe-sender-lists-in-office-365.md#use-outlook-safe-senders).
+  - The bulk sender is in a sender allowlist as described in [Create sender allowlists for cloud mailboxes](create-safe-sender-lists-in-office-365.md).
   - The bulk sender is in an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) of the organization. Messages from senders in accepted domains aren't tagged with **Promotions**.
 - If you turn off **Bulk moves enabled** in an existing anti-spam policy, the affected users still have a **Promotions** folder in their mailboxes, but bulk mail is no longer delivered to the **Promotions** folder. You can use Inbox rules with the **Marked with** \> **Promotions** condition as shown in the previous table to move bulk messages to the **Promotions** folder.
 - The system learns from user activity in the **Promotions** folder (moving messages in or out), and remembers the action for future messages.

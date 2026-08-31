@@ -52,15 +52,20 @@ Key fields:
 |---|---|
 | `id` | Short, no-spaces identifier. Must exactly match the subfolder name. |
 | `description` | One-line summary of the solution. |
-| `type` | Must be `SentinelLake` for all Microsoft Sentinel platform solutions(notebooks and graphs). |
+| `type` | Must be `SentinelLake` for all Microsoft Sentinel platform solutions (notebooks and graphs). |
 | `schema.version` | Package schema version. Use `"1.0.0"`. |
 
 ## Create and verify the zip
 
 Create the zip from inside the package folder so that `PackageManifest.yaml` lands at the archive root, not inside a parent folder.
 
+**Windows:**
 
-**Windows or Linux:**
+```powershell
+Compress-Archive -Path "path\to\notebook or graph package" -DestinationPath "path\to\output\notebook-graph-package.zip"
+```
+
+**Linux/WSL:**
 
 ```bash
 cd /path/to/notebook or graph package
@@ -110,7 +115,7 @@ Before you start, have the following ready:
 
 ### Create a new SaaS offer
 
-To create the offer, complete the following steps in Partner Center. For more information, see [How to publish a Microsoft Security Copilot Agent](publish-agent-to-security-store.md) and [Publish a Microsoft Security Copilot agent or Microsoft Sentinel Data Lake Notebook Job in Security Store](/security/store/partners/publish-a-security-copilot-agent-or-analytics-solution-in-security-store)
+To create the offer, complete the following steps in Partner Center. For more information, see [How to publish a Microsoft Security Copilot Agent](publish-agent-to-security-store.md).
 
 1. Sign in to [Microsoft Partner Center](https://partner.microsoft.com/dashboard/home) > **Marketplace offers**.
 1. Select **New offer** > **Software as a Service (SaaS)**.
@@ -129,9 +134,6 @@ To create the offer, complete the following steps in Partner Center. For more in
    > The **Microsoft Security services** tab doesn't appear if this checkbox is not selected. Save the draft and reload the page if the tab is missing after checking the box.
 
 1. Select **Save draft**.
-
-
-
 
 ### Set offer properties
 
@@ -177,7 +179,9 @@ Add preview audience members in Partner Center to allow internal testing before 
 To add preview audience members, follow these steps:
 
 1. Go to Preview audience in left menu
-1. Enter Microsoft Entra IDs of internal users who will test: - Team members - QA testers
+1. Enter Microsoft Entra IDs of internal users who will test:
+    - Team members
+    - QA testers
 1. Select Save draft
 
 ### Access preview
@@ -194,7 +198,7 @@ Invited preview audience members can access the offer listing as follows:
     - Deployment steps 
     - Documentation
 
-For more information see [How to preview and test your offer listing for Security Store](/security/store/preview-and-test-your-offer-listing-for-security-store)
+For more information see [How to preview and test your offer listing for Security Store](/security/store/preview-and-test-your-offer-listing-for-security-store).
 
 ## Publish to Security Store
 

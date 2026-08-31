@@ -175,7 +175,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
 
   - **My reporting mailbox only**: User reported messages go only to the specified reporting mailbox for an admin or the security operations team to analyze.
 
-    Follow the instructions in the **Microsoft and my reporting mailbox** option to select the mailbox in the **Add an Exchange Online mailbox to Send reported items to** box.
+    Follow the instructions in the **Microsoft and my reporting mailbox** option to select the mailbox in the **Add an Exchange Online mailbox to Send reported items to** box. Distribution groups and routing to an external or on-premises mailbox aren't allowed.
 
     On the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>, the **Result** value for these entries is **Not Submitted to Microsoft**. Messages don't go to Microsoft for analysis unless an admin manually submits the message. For instructions, see [Submit user reported messages to Microsoft for analysis](submissions-admin.md#submit-user-reported-messages-to-microsoft-for-analysis).
 

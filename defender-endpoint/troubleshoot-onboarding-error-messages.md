@@ -34,7 +34,7 @@ Potential reasons:
   - It could be a license provisioning issue.
   - It could be you inadvertently provisioned the license to a different Microsoft Entra ID than the one used for authentication into the service.
 
-For both cases, you should contact Microsoft support at [General Microsoft Defender for Endpoint Support](https://support.microsoft.com/getsupport?wf=0&tenant=ClassicCommercial&oaspworkflow=start_1.0.0.0&locale=en-us&supportregion=en-us&pesid=16055&ccsid=636419533611396913) or
+For both cases, you should contact Microsoft support at [General Microsoft Defender for Endpoint Support](https://engagecenter.microsoft.com/) or
 [Volume Licensing support](/microsoft-365/commerce/licenses/contact-vl-support).
 
 :::image type="content" source="media/atp-no-subscriptions-found.png" alt-text="The No subscriptions found page" lightbox="media/atp-no-subscriptions-found.png":::

@@ -54,7 +54,7 @@ Attackers can abuse some folders, so don't exclude the following folders from sc
   - `C:\Users\<UserProfileName>\AppData\Local\Temp\` or `C:\Users\<UserProfileName>\AppData\LocalLow\Temp\`
 
      > [!NOTE]
-     > You **should** exclude the following folders when you use [file-level antivirus protection in SharePoint](https://support.microsoft.com/office/01cbc532-a24e-4bba-8d67-0b1ed733a3d9):
+     > You **should** exclude the following folders when you use [file-level antivirus protection in SharePoint](https://support.microsoft.com/SharePoint/admin/certain-folders-may-have-to-be-excluded-from-antivirus-scanning-when-you-use-file-level-antivirus-so):
      >
      > `C:\Users\ServiceAccount\AppData\Local\Temp` or `C:\Users\Default\AppData\Local\Temp`.
 

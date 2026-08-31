@@ -3574,6 +3574,11 @@
       "source_path_from_root": "/sentinel/isv/solution-setup-essentials.md",
       "redirect_url": "/azure/sentinel/isv/sentinel-siem-platform-solution-introduction",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/isv/platform-components-to-build.md",
+      "redirect_url": "/azure/sentinel/isv/which-platform-components-to-build",
+      "redirect_document_id": false
     }
   ]
 }
