@@ -173,6 +173,8 @@ Currently, only completed or missed one-to-one calls are supported.
 
 What happens to a user reported Teams item depends on the settings in the **Reported items destinations** section on the **User reported settings** page at <https://security.microsoft.com/securitysettings/userSubmission>:
 
+User reporting in Teams is supported only for users with an online Teams mailbox. The reporting mailbox configured in **User reported settings** must also be an Exchange Online mailbox. On-premises mailboxes aren't supported in either scenario.
+
 - **Send the reported items to** \> **Microsoft and my reporting mailbox**: The default user reporting mailbox is the Exchange Online mailbox of the global admin. The value for older Microsoft 365 organizations is unchanged.
 - **Send the reported items to** \> **Microsoft only**
 - **Send the reported items to** \> **My reporting mailbox only**

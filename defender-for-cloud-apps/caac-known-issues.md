@@ -1,7 +1,7 @@
 ---
 title: Conditional Access app control known limitations | Microsoft Defender for Cloud Apps
 description: Learn about known limitations for working with Conditional Access app control in Microsoft Defender for Cloud Apps.
-ms.date: 07/03/2026
+ms.date: 08/28/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ai-usage: ai-assisted
@@ -105,6 +105,12 @@ The following table lists example results when you define the **Block upload of 
 |A user tries to upload a selection of 200 nonsensitive files by using a drag-and-drop operation. |Files are blocked. |
 |A user tries to upload a selection of 200 files by using the file upload dialog. Some are sensitive, and some aren't. |Nonsensitive files are uploaded. <br><br>Sensitive files are blocked. |
 |A user tries to upload a selection of 200 files by using a drag-and-drop operation. Some are sensitive, and some aren't. |The full set of files is blocked. |
+
+### Teams add-ins launched from proxied Google Workspace sessions
+
+When you use Defender for Cloud Apps session control with Google Workspace, launching Microsoft Teams or Teams-integrated functionality from within a proxied Gmail session might not be supported. Certain third-party and nested application authentication flows use separate authentication contexts that can't be maintained through the session proxy. In these scenarios, the Teams experience might bypass the proxied session or fail to load as expected. This behavior is by design and is a known limitation of the current architecture.
+
+To work around this limitation, access Microsoft Teams directly rather than launching it from within the proxied Google Workspace session.
 
 ## Limitations for sessions that are served with Microsoft Edge in-browser protection
 
