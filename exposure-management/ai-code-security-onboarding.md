@@ -24,7 +24,8 @@ To complete this setup, you need:
   - **Option 2 — Defender CLI.** For full details, see [Defender CLI setup](defender-cli-authentication.md). 
 - If outbound traffic is restricted, allow the required domains. For more information, see [Allow list](ai-code-security-overview.md#allow-list).
 - Access to the [Microsoft Defender portal](https://security.microsoft.com) with permission to open **Exposure Management** and **Initiatives**.
-- The Foundry project endpoint and API key from the Foundry setup step.
+- The Foundry project endpoint. MDASH supports two authentication methods for the Foundry connection. For details about the available authentication methods, see [Authentication methods](mdash-foundry-integration.md#authentication-methods).
+
 - Defender unified RBAC permissions assigned. For the required permissions and how to assign them, see [Assign permissions to users using Defender RBAC](#assign-permissions-to-users-using-defender-rbac).
 
 ## Assign permissions to users using Defender RBAC
@@ -76,8 +77,13 @@ For step-by-step instructions on creating an Microsoft Foundry resource and depl
 Provide the required details to connect your Microsoft Foundry resource and validate the connection.
 
 1. Enter the **Project endpoint** (for example: `https://your-foundry.azure.com`) and **API key**.
-1. Select **Validate** to verify the connection. You must successfully validate the resource before you can select **Save**.
-1. Select **Save** to finish onboarding.
+1. Choose an authentication method: **Keyless** (recommended) or API key. For details, see [Authentication methods](mdash-foundry-integration.md#authentication-methods).
+
+1. Select Validate to verify the connection.
+
+1.  Select **Save** to finish onboarding.
+
+Note: You must successfully validate the resource before you can select Save.
 
 ## Step 4: Set up AI scanning
 

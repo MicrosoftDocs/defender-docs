@@ -20,7 +20,10 @@ ms.custom: msecd-doc-authoring-1016
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-You can manage and respond to Microsoft Purview Data Loss Prevention (DLP) alerts and incidents in the Microsoft Defender portal. Open **Incidents & alerts** \> **Incidents** on the quick launch of the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>. From this page, you can:
+> [!NOTE]
+> A built-in alert tuning rule for DLP signals will take effect in early October 2026. In Microsoft Defender XDR, the rule sets these signals as behaviors instead of alerts, so they don't generate alerts or appear in the incident queue. The signals remain available for advanced hunting in the [`BehaviorInfo`](advanced-hunting-behaviorinfo-table.md) and [`BehaviorEntities`](advanced-hunting-behaviorentities-table.md) tables. To continue seeing DLP signals as alerts in Microsoft Defender XDR, disable the rule in **Settings** > **Microsoft Defender XDR** > **Alert tuning**. For more information, see [Built-in alert tuning rules](investigate-alerts.md#built-in-alert-tuning-rules).
+
+When the built-in DLP alert tuning rule is disabled, you can manage and respond to Microsoft Purview Data Loss Prevention (DLP) alerts and incidents in the Microsoft Defender portal. Open **Incidents & alerts** \> **Incidents** on the quick launch of the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>. From this page, you can:
 
 - View all your DLP alerts grouped under incidents in the Microsoft Defender XDR incident queue.
 - View DLP alerts correlated with other DLP alerts, or with alerts from other solutions (Defender for Endpoint, Defender for Office 365, Microsoft Sentinel, and so on), under a single incident.
@@ -41,9 +44,6 @@ To investigate Microsoft Purview Data Loss Prevention incidents in the Microsoft
 - Microsoft 365 E5/A5
 - Microsoft 365 E5/A5 Compliance
 - Microsoft 365 E5/A5 Information Protection and Governance
-
-> [!NOTE]
-> When you are licensed and eligible for this feature, DLP alerts will automatically flow into Microsoft Defender. If you don't want DLP alerts to flow into Defender, open a support case to disable this feature. If you disable automatic DLP alert flow into Microsoft Defender, DLP alerts will surface in the Defender portal as Microsoft Defender for Office alerts.
 
 ### Roles
 
@@ -147,6 +147,7 @@ Go to the incident summary page and select **Manage Incident** to add incident t
 
 ## Related articles
 
+- [Built-in alert tuning rules](investigate-alerts.md#built-in-alert-tuning-rules)
 - [Incidents overview](incidents-overview.md)
 - [Prioritize incidents](incident-queue.md)
 - [Manage incidents](manage-incidents.md)
