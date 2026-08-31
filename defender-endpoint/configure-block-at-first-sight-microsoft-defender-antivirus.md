@@ -20,12 +20,13 @@ ms.collection:
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to configure block at first sight so that Microsoft Defender Antivirus can block new malware within seconds.
 ---
 
 # Configure block at first sight in Microsoft Defender Antivirus
+
+<a name="what-is-block-at-first-sight"></a>
 
 Block at first sight is a threat protection feature of [next-generation protection](next-generation-protection.md). It detects new malware and blocks it within seconds. The feature is enabled when all of the following statements are true:
 
