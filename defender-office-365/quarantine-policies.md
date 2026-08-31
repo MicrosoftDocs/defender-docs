@@ -15,7 +15,7 @@ ms.custom:
   - msecd-doc-authoring-1016
 description: Learn how to create and assign quarantine policies to control what users can do to quarantined messages and configure quarantine notifications.
 ms.service: defender-office-365
-ms.date: 07/17/2026
+ms.date: 08/31/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -593,6 +593,9 @@ If you'd rather use PowerShell to view quarantine policies, do any of the follow
   ```powershell
   Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy
   ```
+
+> [!IMPORTANT]
+> The _PermissionTo\*_ properties returned by **Get-QuarantineMessage** reflect the permissions of the user who runs the cmdlet. For example, admins who have permission to release quarantined messages might see the value `True` for the _PermissionToRelease_, _PermissionToAllowSender_, and _PermissionToDownload_ properties, even when the quarantine policy assigned to the message is `AdminOnlyAccessPolicy`. These values don't represent the actions available to message recipients. To view the end-user permissions configured in a quarantine policy, use **Get-QuarantinePolicy**.
 
 For detailed syntax and parameter information, see [Get-QuarantinePolicy](/powershell/module/exchangepowershell/get-quarantinepolicy).
 

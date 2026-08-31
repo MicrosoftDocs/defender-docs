@@ -15,7 +15,7 @@ ms.custom:
   - sfi-image-nochange
 description: Admins can learn how to view and manage quarantined messages for all users in Microsoft 365 organizations with cloud mailboxes. Admins in organizations with Microsoft Defender for Office 365 can also manage quarantined files in SharePoint, OneDrive, and Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 07/17/2026
+ms.date: 08/31/2026
 ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
@@ -930,6 +930,9 @@ As an alternative to the Microsoft Defender portal, you can use the following [E
 - [Get-QuarantineMessage](/powershell/module/exchangepowershell/get-quarantinemessage)
 - [Preview-QuarantineMessage](/powershell/module/exchangepowershell/preview-quarantinemessage): This cmdlet is for messages only, not quarantined files.
 - [Release-QuarantineMessage](/powershell/module/exchangepowershell/release-quarantinemessage)
+
+> [!IMPORTANT]
+> The _PermissionTo\*_ properties returned by **Get-QuarantineMessage** reflect the permissions of the user who runs the cmdlet. For example, admins who have permission to release quarantined messages might see the value `True` for the _PermissionToRelease_, _PermissionToAllowSender_, and _PermissionToDownload_ properties, even when the quarantine policy assigned to the message is `AdminOnlyAccessPolicy`. These values don't represent the actions available to message recipients. To view the end-user permissions configured in a quarantine policy, use **Get-QuarantinePolicy** as described in [View quarantine policies in PowerShell](quarantine-policies.md#view-quarantine-policies-in-powershell).
 
 <a name="for-more-information"></a>
 ## Related content

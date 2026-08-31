@@ -44,6 +44,9 @@ Before you onboard, make sure you meet these prerequisites:
 
 ### Other prerequisites for Microsoft Purview
 
+> [!IMPORTANT]
+> **Data risk graph is being deprecated.** Beginning September 24, 2026, organizations will no longer be able to onboard or configure data risk graph in Microsoft Purview Insider Risk Management. Beginning September 30, 2026, organizations will no longer be able to onboard or configure data risk graph in Microsoft Purview Data Security Investigations. The feature will be fully retired and no longer available in Insider Risk Management after November 24, 2026, and in Data Security Investigations after November 30, 2026. 
+
 For Microsoft Purview scenarios, you must also meet the following prerequisites before onboarding:
 
 - Contributor access to the Microsoft Sentinel primary workspace to authorize ingestion of your Microsoft 365 activity data to the primary workspace.
