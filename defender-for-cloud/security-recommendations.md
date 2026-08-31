@@ -53,7 +53,7 @@ On the recommendations page, you can review the following risk-prioritized detai
 - **Risk factors**: Environmental factors of the resource affected by the recommendation, which influences the exploitability and the business impact of the underlying security issue.
 - **Attack paths**: The number of attack paths that the recommendation is part of based on the security engine's search for all potential attack paths.
 - **Owner**: The person the recommendation is assigned to.
-- **Status**: The current status of the recommendation (unassigned, on time, overdue).
+- **Status**: The current status of the recommendation (unassigned, on time, overdue, completed). The values offered in the **Status** filter are generated dynamically from the underlying assessment data, so a value appears only when recommendations with that status exist in your environment. For example, **Completed** is available for misconfiguration recommendations, but not for vulnerability assessment (VA) recommendations. A remediated vulnerability finding is no longer returned by its assessment instead of moving to a completed state, so no vulnerability recommendation ever carries the **Completed** status.
 - **Insights**: Information related to the recommendation such as if it's in preview, if it can be denied, if there's a fix option available.
 
 ## Recommendation classification
