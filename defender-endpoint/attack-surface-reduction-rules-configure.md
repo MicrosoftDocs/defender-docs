@@ -432,7 +432,7 @@ On the target device, use the following PowerShell command syntax in an elevated
 The following example uses `Set-MpPreference` to configure four ASR rules in a single command, setting each rule to a different mode (**Enabled**, **Disabled**, or **AuditMode**):
 
 ```powershell
-Set-MpPreference -AttackSurfaceReductionRules_Ids 26190899-1602-49e8-8b27-eb1d0a1ce869,3b576869-a4ec-4529-8536-b80a7769e899,e6db77e5-3df2-4cf1-b95a-636979351e5,01443614-cd74-433a-b99e-2ecdc07bfc25 -AttackSurfaceReductionRules_Actions Enabled,Enabled,Disabled,AuditMode
+Set-MpPreference -AttackSurfaceReductionRules_Ids 26190899-1602-49e8-8b27-eb1d0a1ce869,3b576869-a4ec-4529-8536-b80a7769e899,e6db77e5-3df2-4cf1-b95a-636979351e5b,01443614-cd74-433a-b99e-2ecdc07bfc25 -AttackSurfaceReductionRules_Actions Enabled,Enabled,Disabled,AuditMode
 ```
 
 ### Configure global ASR rule exclusions in PowerShell
