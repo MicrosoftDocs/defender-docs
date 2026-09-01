@@ -1,11 +1,11 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 08/31/2026
+ms.date: 08/12/2026
 ms.topic: overview
 #customer intent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity so that I can take advantage of new features and functionality.
 ms.reviewer: AbbyMSFT
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1015
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -27,11 +27,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## August 2026
 
-### Sensor v2.x installation restriction for new workspaces
-
-In new Defender for Identity workspaces, you can install sensor v2.x only on servers running Windows Server 2016 or earlier. This restriction applies to all server roles. Existing workspaces aren't affected. For more information, see [Select your deployment method](deploy/deploy-defender-identity.md#select-your-deployment-method).
-
-### Expanded automatic auditing for AD CS, AD FS, and Entra Connect servers
+### Expanded automatic auditing for AD CS, AD FS and Entra Connect servers
 
 Automatic Windows event auditing now configures auditing for AD FS, AD CS, and Microsoft Entra Connect. Auditing is configured automatically on any eligible server that runs Defender for Identity sensor v3.x, including servers that aren't domain controllers. For more information, see [Configure Defender for Identity to collect Windows events automatically](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically).
 
@@ -126,7 +122,7 @@ These new alerts were added to the Defender for Identity security alerts:
 - [Failed credential abuse attempt in Entra ID authentication](alerts-xdr.md#failed-credential-abuse-attempt-in-entra-id-authentication)
 - [Malicious sign in from a randomized user agent](alerts-xdr.md#malicious-sign-in-from-a-randomized-user-agent)
 - [Possible use of a stolen session cookie](alerts-xdr.md#possible-use-of-a-stolen-session-cookie)
-- [Stolen session cookie replay detected](alerts-xdr.md#possible-use-of-a-stolen-session-cookie)
+- [Stolen session cookie replay detected](alerts-xdr.md#stolen-session-cookie-replay-detected)
 - [Suspected Conditional Access bypass via non-compliant device](alerts-xdr.md#suspected-conditional-access-bypass-via-non-compliant-device)
 - [Suspicious addition of default third-party MFA method to user account](alerts-xdr.md#suspicious-addition-of-default-thirdparty-mfa-method-to-user-account)
 
