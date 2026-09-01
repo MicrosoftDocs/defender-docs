@@ -102,8 +102,8 @@ In the Microsoft Defender portal, go to **Advanced hunting** and select an exist
 
 To create a custom detection rule by using Defender data, we recommend that the query returns the following columns: 
 1. `Timestamp` or `TimeGenerated` - This column sets the timestamp for generated alerts. If these columns aren't projected from the KQL, the first and last event time for the generated alert is set according to the lookback window of the detection. 
-1. **For Microsoft Defender for Endpoint tables**, include `DeviceId` or `DeviceName` columns to ensure that: 
-    - Alerts are tagged with the correct device group scope 
+1. **For Microsoft Defender for Endpoint tables**, include `DeviceId` and `ReportId` columns to ensure that:
+    - Alerts are tagged with the correct device group scope.
     - Process tree view is built successfully.
 1. **For all other Defender tables**, project `Timestamp` and `ReportId` from the same event to ensure Defender identifies the original event that triggered the alert so that: 
     - Alerts are tagged with the correct entity scope (only relevant for organizations that use Defender XDR scopes) 
