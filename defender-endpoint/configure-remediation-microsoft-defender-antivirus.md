@@ -8,7 +8,7 @@ author: chrisda
 ms.author: chrisda
 ms.topic: how-to
 ms.custom: nextgen, msecd-doc-authoring-1015
-ms.date: 08/12/2026
+ms.date: 08/31/2026
 ai-usage: ai-assisted
 ms.reviewer: yongrhee
 ms.collection:
@@ -24,14 +24,7 @@ appliesto:
 
 # Configure remediation for Microsoft Defender Antivirus detections
 
-When Microsoft Defender Antivirus runs a scan, it attempts to remediate or remove threats that are detected. Remediation actions can include removing a file, sending it to quarantine, or allowing it to remain. This article includes information and links to resources about specifying what actions should be taken when threats are detected on devices. You can choose from several methods, such as:
-
-- [Configure remediation for Microsoft Defender Antivirus detections](#configure-remediation-for-microsoft-defender-antivirus-detections)
-  - [Configure remediation options using Intune](#configure-remediation-options-using-intune)
-  - [Configure remediation options using Configuration Manager](#configure-remediation-options-using-configuration-manager)
-  - [Configure remediation options using Group Policy](#configure-remediation-options-using-group-policy)
-  - [Configure remediation options using PowerShell or WMI](#configure-remediation-options-using-powershell-or-wmi)
-  - [See also](#see-also)
+When Microsoft Defender Antivirus runs a scan, it attempts to remediate or remove threats that are detected. Remediation actions can include removing a file, sending it to quarantine, or allowing it to remain. This article includes information and links to resources about specifying what actions should be taken when threats are detected on devices.
 
 > [!IMPORTANT]
 > Microsoft Defender Antivirus detects and remediates files based on many factors. Sometimes, completing a remediation requires a reboot. Even if the detection is later determined to be a false positive, the reboot must be completed to ensure all additional remediation steps have been completed.
@@ -48,12 +41,19 @@ For scan scheduling and related remediation settings, see [About regular quick a
 
 ## Configure remediation options using Intune
 
-To configure remediation actions using a Microsoft Intune Endpoint Security **Antivirus policy** policy, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
+[!INCLUDE [intune-recommended-separate-product](includes/intune-recommended-separate-product.md)]
 
-- **Policy type**: Attack surface reduction
-- **Platform**: Windows
-- **Profile**: Microsoft Defender Antivirus
-- **Configuration settings**: In the **Threat security default action** section, configure the available settings:
+To configure remediation actions in Microsoft Intune, use an endpoint security **Antivirus** policy. For detailed instructions, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create endpoint security policies</a> or <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (links open new tabs in the Intune documentation).
+
+When you create the policy, use these specific settings:
+
+- **Policy type**: Select **Manage** \> **Antivirus** on the **Endpoint security \| Overview** page.
+- **Platform**: Select **Windows**.
+- **Profile**: Select **Microsoft Defender Antivirus**.
+
+When you create or modify the policy, use these specific settings on the **Configuration settings** tab:
+
+- In the **Threat security default action** section, configure the available settings:
   - **Remediation action for High severity threats**
   - **Remediation action for Severe threats**
   - **Remediation action for Low severity threats**
@@ -80,12 +80,34 @@ To configure remediation actions using a Microsoft Intune Endpoint Security **An
 
 For more information about antivirus policies in Intune, see [Antivirus policy for endpoint security in Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy).
 
+## Configure remediation options in the Microsoft Defender portal
+
+If your organization [manages endpoint security policies in the Microsoft Defender portal](endpoint-security-policies-configure.md), use a Microsoft Defender Antivirus policy to configure remediation actions.
+
+For detailed instructions, see <a href="endpoint-security-policies-configure.md#create-an-endpoint-security-policy" target="_blank">Create an endpoint security policy</a> or <a href="endpoint-security-policies-configure.md#edit-an-endpoint-security-policy" target="_blank">Edit an endpoint security policy</a> (links open new tabs).
+
+When you create the policy on the **Endpoint security policies** page in the Defender portal at <https://security.microsoft.com/policy-inventory>, use these specific settings:
+
+- **Select platform**: Select **Windows**.
+- **Select template**: Select **Microsoft Defender Antivirus**.
+
+When you create or modify the policy, use the same remediation action settings described in [Configure remediation options using Intune](#configure-remediation-options-using-intune) on the **Configuration settings** tab.
+
 ## Configure remediation options using Configuration Manager
 
-If you're using Configuration Manager, see the following articles:
+For instructions to create and deploy an antimalware policy, see [Endpoint Protection antimalware policies in Configuration Manager](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies).
 
-- [Configure Endpoint Protection in Configuration Manager](/intune/configmgr/protect/deploy-use/endpoint-protection-configure)
-- [Default Actions Settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#default-actions-settings)
+Configure the following settings in the antimalware policy:
+
+- **Default Actions Settings**: For each threat severity level, select one of the following remediation actions:
+  - **Recommended**: Use the action recommended in the malware definition file.
+  - **Quarantine**: Quarantine the detected malware without removing it.
+  - **Remove**: Remove the detected malware.
+  - **Allow**: Don't remove or quarantine the detected malware.
+- **Threat Overrides Settings**: For **Threat name and override action**, select **Set** to configure the remediation action for a specific threat ID.
+
+> [!WARNING]
+> **Allow** doesn't remediate detected threats. Use **Allow** only in specialized environments where automatic remediation isn't practical, other threat-response procedures exist, and compensating security controls are deployed.
 
 ## Configure remediation options using Group Policy
 
@@ -125,9 +147,49 @@ Use the following steps to configure remediation options in Group Policy:
 > [!TIP]
 > You can also configure Group Policy locally on individual devices by using the Local Group Policy Editor (`gpedit.msc`). Navigate to the same path: **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus**.
 
-## Configure remediation options using PowerShell or WMI
+<a name="configure-remediation-options-using-powershell-or-wmi"></a>
 
-You can also use the [`Set-MpPreference` PowerShell cmdlet](/powershell/module/defender/set-mppreference) or [`MSFT_MpPreference` WMI class](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal) to configure the threat default-action and remediation settings.
+## Configure remediation options using PowerShell
+
+Run the commands in an elevated PowerShell session (a PowerShell window you opened by selecting **Run as administrator**).
+
+### Configure default actions by threat severity
+
+The following example quarantines low and moderate severity threats and removes high and severe threats:
+
+```powershell
+Set-MpPreference -LowThreatDefaultAction Quarantine -ModerateThreatDefaultAction Quarantine -HighThreatDefaultAction Remove -SevereThreatDefaultAction Remove
+```
+
+### Configure the default action for a specific threat
+
+Replace `<threat-ID>` with the numeric threat ID. The following command quarantines the specified threat:
+
+```powershell
+Set-MpPreference -ThreatIDDefaultAction_Ids <threat-ID> -ThreatIDDefaultAction_Actions Quarantine
+```
+
+To configure multiple threats, specify comma-separated lists of threat IDs and corresponding actions. Each action applies to the threat ID in the same position in the other list.
+
+### Configure quarantine and scan history retention
+
+The following example keeps items in quarantine for 90 days and items in scan history for 30 days:
+
+```powershell
+Set-MpPreference -QuarantinePurgeItemsAfterDelay 90 -ScanPurgeItemsAfterDelay 30
+```
+
+Specify `0` to keep items indefinitely.
+
+### Turn on system restore point creation
+
+The following command allows Microsoft Defender Antivirus to create a system restore point before cleaning or scanning:
+
+```powershell
+Set-MpPreference -DisableRestorePoint $false
+```
+
+For detailed syntax, available remediation actions, and parameter information, see [**Set-MpPreference**](/powershell/module/defender/set-mppreference).
 
 ## See also
 

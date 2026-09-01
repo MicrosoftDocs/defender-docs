@@ -9,7 +9,7 @@ ms.custom: nextgen, msecd-doc-authoring-1015
 ms.reviewer: yongrhee
 ms.subservice: ngp
 ms.topic: how-to
-ms.date: 08/26/2026
+ms.date: 08/31/2026
 ms.collection:
 - m365-security
 - tier2
@@ -41,7 +41,7 @@ The following operating systems support this feature:
 - Windows Server
 
   > [!NOTE]
-  > Windows Server supports this Microsoft Defender Antivirus setting when you configure it directly by using Group Policy or PowerShell. The Microsoft Intune and Microsoft Defender portal procedures in this article can manage supported Windows Server versions through [Defender for Endpoint security settings management](endpoint-security-policies-configure.md).
+  > Windows Server supports this Microsoft Defender Antivirus setting when you configure it directly by using Microsoft Configuration Manager, Group Policy, or PowerShell. The Microsoft Intune and Microsoft Defender portal procedures in this article can manage supported Windows Server versions through [Defender for Endpoint security settings management](endpoint-security-policies-configure.md).
   >
   > To onboard and manage servers through Defender for Endpoint, you need an eligible server license. If your organization accesses Defender for Endpoint only through Defender for Servers, you also need at least one active Defender for Endpoint user subscription license to use security settings management. For more information, see [Server plans](onboard-server.md#server-plans) and [Licensing and subscriptions for security settings management](/intune/device-security/microsoft-defender/security-settings-management#licensing-and-subscriptions).
 
@@ -49,16 +49,18 @@ The following operating systems support this feature:
 
 [!INCLUDE [intune-recommended-separate-product](includes/intune-recommended-separate-product.md)]
 
-To specify the cloud block time-out period using a Microsoft Intune Endpoint Security **Antivirus** policy, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When you create the policy, use these specific settings:
+To specify the cloud block time-out period in Microsoft Intune, use an endpoint security **Antivirus** policy. For detailed instructions, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create endpoint security policies</a> or <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (links open new tabs in the Intune documentation).
 
-- **Policy type**: Select **Antivirus** on the **Endpoint security \| Overview** page.
+When you create the policy, use these specific settings:
+
+- **Policy type**: Select **Manage** \> **Antivirus** on the **Endpoint security \| Overview** page.
 - **Platform**: Select **Windows**.
 - **Profile**: Select **Microsoft Defender Antivirus**.
-- **Configuration settings** tab:
-  - Slide the toggle for **Cloud Extended Timeout** to :::image type="icon" source="media/toggle-on.png" border="false"::: **Configured**.
-  - In the box that appears, specify a value from 0 to 50 seconds. The value is added to the default 10-second time-out period. For example, enter `50` for a total time-out period of 60 seconds.
 
-To change the extended time-out period in an existing antivirus policy, see <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (opens in a new tab in the Intune documentation).
+When you create or modify the policy, use these specific settings on the **Configuration settings** tab:
+
+- Slide the toggle for **Cloud Extended Timeout** to :::image type="icon" source="media/toggle-on.png" border="false"::: **Configured**.
+- In the box that appears, specify a value from 0 to 50 seconds. The value is added to the default 10-second time-out period. For example, enter `50` for a total time-out period of 60 seconds.
 
 <a name="specify-the-extended-time-out-period-using-microsoft-defender-for-endpoint-security-settings-management"></a>
 
@@ -66,17 +68,23 @@ To change the extended time-out period in an existing antivirus policy, see <a h
 
 If your organization [manages endpoint security policies in the Microsoft Defender portal](endpoint-security-policies-configure.md), you specify the cloud block time-out period with the same endpoint security policies that Intune uses.
 
-On the **Windows** tab of the **Endpoint security policies** page of the Defender portal at <https://security.microsoft.com/policy-inventory>, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create new policy**, and then use these specific settings:
+For detailed instructions, see <a href="endpoint-security-policies-configure.md#create-an-endpoint-security-policy" target="_blank">Create an endpoint security policy</a> or <a href="endpoint-security-policies-configure.md#edit-an-endpoint-security-policy" target="_blank">Edit an endpoint security policy</a> (links open new tabs).
+
+When you create the policy on the **Endpoint security policies** page in the Defender portal at <https://security.microsoft.com/policy-inventory>, use these specific settings:
 
 - **Select platform**: Select **Windows**.
 - **Select template**: Select **Microsoft Defender Antivirus**.
-- **Configuration settings**:
-  - Slide the toggle for **Cloud Extended Timeout** to :::image type="icon" source="media/toggle-on.png" border="false"::: **Configured**.
-  - In the box that appears, specify a value from 0 to 50 seconds. The value is added to the default 10-second time-out period. For example, enter `50` for a total time-out period of 60 seconds.
 
-For the full policy creation procedure, see [Create an endpoint security policy](endpoint-security-policies-configure.md#create-an-endpoint-security-policy).
+When you create or modify the policy, use these specific settings on the **Configuration settings** tab:
 
-To change the extended time-out period in an existing policy, see [Edit an endpoint security policy](endpoint-security-policies-configure.md#edit-an-endpoint-security-policy).
+- Slide the toggle for **Cloud Extended Timeout** to :::image type="icon" source="media/toggle-on.png" border="false"::: **Configured**.
+- In the box that appears, specify a value from 0 to 50 seconds. The value is added to the default 10-second time-out period. For example, enter `50` for a total time-out period of 60 seconds.
+
+## Specify the extended time-out period using Microsoft Configuration Manager
+
+For instructions to create and deploy an antimalware policy, see [Endpoint Protection antimalware policies in Configuration Manager](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies).
+
+In the **Cloud Protection Service** settings of the antimalware policy, configure **Allow extended cloud check to block and scan for up to (seconds)**. Enter a value from `0` to `50`. The value is added to the default 10-second time-out period.
 
 ## Specify the extended time-out period using Group Policy
 
