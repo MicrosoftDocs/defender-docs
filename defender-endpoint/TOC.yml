@@ -307,6 +307,8 @@
             href: linux-exclusions.md
           - name: Configure eBPF-based sensor
             href: linux-support-ebpf.md
+          - name: Tamper protection in audit mode (Preview)
+            href: linux-tamper-protection-audit-mode.md
           - name: Detect and block Potentially Unwanted Applications
             href: linux-pua.md
           - name: Configure Offline Security Intelligence Update
