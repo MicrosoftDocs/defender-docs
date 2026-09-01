@@ -19,15 +19,12 @@ ms.topic: reference
 ms.date: 03/28/2025
 ---
 
-# DataSecurityEvents (Preview)
+# DataSecurityEvents
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 
-
-> [!IMPORTANT]
-> Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 The `DataSecurityEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about user activities that violate user-defined or default policies in the Microsoft Purview suite of solutions. Each log represents a single user activity enriched with proprietary Microsoft detections (like sensitive info types) and user-defined enrichment labels like domain categories, sensitivity labels, and others.
 
