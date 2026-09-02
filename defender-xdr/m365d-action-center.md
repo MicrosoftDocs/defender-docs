@@ -1,29 +1,30 @@
 ---
 title: Go to the Action center to view and approve your automated investigation and remediation tasks
 description: Use the Action center to view details about automated investigation and approve pending actions
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords:
-- NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 4/28/2025
-audience: ITPro
+ms.date: 06/15/2026
 ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
 ms.custom:
-- autoir
-- admindeeplinkDEFENDER
+  - msecd-doc-authoring-1014
+  - autoir
+  - admindeeplinkDEFENDER
+  - sfi-ga-nochange
 ms.reviewer: evaldm, isco
 appliesto:
 - Microsoft Defender XDR
+ai-usage: ai-assisted
 #customer intent: As a SOC analyst, I want to understand how to view and approve automated investigation and remediation tasks in the Action center.
 ---
 
-# The Action center
+# Overview of the Action center in Microsoft Defender XDR
+
+[!INCLUDE [defender-endpoint-air-deprecation](../includes/defender-endpoint-air-deprecation.md)]
 
 The Action center provides a "single pane of glass" experience for incident and alert tasks such as:
 
@@ -33,9 +34,10 @@ The Action center provides a "single pane of glass" experience for incident and 
 
 Because the Action center provides a comprehensive view of Microsoft Defender XDR at work, your security operations team can operate more effectively and efficiently.
 
-## The unified Action center
+<a name="the-unified-action-center"></a>
+## How the unified Action center works
 
-The unified Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) lists pending and completed remediation actions for your devices, email & collaboration content, and identities in one location.
+The unified Action center ([Action center](https://security.microsoft.com/action-center)) lists pending and completed remediation actions for your devices, email & collaboration content, and identities in one location.
 
 :::image type="content" source="media/m3d-action-center-unified.png" alt-text="The unified Action center in the Microsoft Defender portal." lightbox="media/m3d-action-center-unified.png":::
 
@@ -48,14 +50,15 @@ You can use the unified Action center if you have appropriate permissions and on
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 
 > [!TIP]
-> To learn more, see [Requirements](./prerequisites.md).
+> To learn more, see [Microsoft Defender XDR prerequisites](./prerequisites.md).
 
 You can navigate to the list of actions pending approval in two different ways:
 
-- Go to [https://security.microsoft.com/action-center](https://security.microsoft.com/action-center); or
-- In the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) homepage, in the Automated investigation & response card, select **View pending actions**.
+- Go to the [Action center in the Microsoft Defender portal](https://security.microsoft.com/action-center); or
+- In the [Microsoft Defender portal](https://security.microsoft.com) homepage, in the Automated investigation & response card, select **View pending actions**.
 
-## Using the Action center
+<a name="using-the-action-center"></a>
+## Use the Action center
 
 1. Go to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> and sign in.
 
@@ -98,7 +101,7 @@ In addition to remediation actions that are taken automatically as a result of [
 
 ## Viewing action source details
 
-The improved Action center includes an **Action source** column that tells you where each action came from. The following table describes possible **Action source** values:
+The Action center includes an **Action source** column that tells you where each action came from. The following table describes possible **Action source** values:
 
 |Action source value|Description|
 |---|---|
@@ -116,7 +119,7 @@ The improved Action center includes an **Action source** column that tells you w
 To perform tasks, such as approving or rejecting pending actions in the Action center, you need specific permissions.
 You have the following options:
 
-- [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
+- [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the following Microsoft Entra roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
   - _Microsoft Defender for Endpoint remediation (devices)_: Membership in the **Security Administrator** role.
   - _Microsoft Defender for Office 365 remediation (Office content and email)_:
     - Membership in the **Security Administrator** role.
@@ -146,6 +149,8 @@ You have the following options:
   - _Microsoft Defender for Endpoint remediation (devices)_: Membership in the **Active remediation actions** role.
 
 ## Next step
+
+For more information, see the following article:
 
 - [View and manage remediation actions](m365d-autoir-actions.md)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

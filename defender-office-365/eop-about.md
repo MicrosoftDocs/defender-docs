@@ -1,11 +1,8 @@
 ---
 title: Built-in security features for all cloud mailboxes
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
 ms.date: 12/10/2025
-audience: ITPro
 ms.topic: overview
 ms.collection: 
   - m365-security
@@ -16,7 +13,6 @@ ms.custom:
   - seo-marvel-apr2020
 description: Learn how the built-in security features for all cloud mailboxes help protect your organization.
 ms.service: defender-office-365
-search.appverid: met150
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>

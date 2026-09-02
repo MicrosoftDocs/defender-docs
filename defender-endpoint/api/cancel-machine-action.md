@@ -1,15 +1,11 @@
 ---
 title: Cancel machine action API
 description: Learn how to cancel an already launched machine action
-search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: reference
-f1.keywords:
-- NOCSH
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3

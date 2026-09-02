@@ -4,14 +4,8 @@ description: Learn how to use Microsoft Defender for Identity within the Microso
 ms.service: defender-xdr
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
-f1.keywords:
-- NOCSH
 ms.date: 02/14/2024
-audience: ITPro
 ms.topic: concept-article
-search.appverid: 
-- MOE150
-- MET150
 ms.collection: 
 - m365-security 
 - tier2
@@ -61,7 +55,7 @@ The following sections describe enhanced Defender for Identity features found in
 
 |Area |Description  |
 |---------|---------|
-| **Identities** area| In the Microsoft Defender portal, expand the **Identities** area to view a **Dashboard** of graphs and widgets with commonly used data, and other identity security pages. The **Health issues** page, listing all health issues for your Defender for Identity deployment, is available under **Settings** > **Identities** > **Deployment**. <br><br>For more information, see [View the ITDR dashboard](/defender-for-identity/dashboard) and [Defender for Identity health issues](/defender-for-identity/health-alerts). |
+| **Identities** area| In the Microsoft Defender portal, expand the **Identities** area to view a **Dashboard** of graphs and widgets with commonly used data, and other identity security pages. The **Health issues** page, listing all health issues for your Defender for Identity deployment, is available under **Settings** > **Identities** > **Deployment**. <br><br>For more information, see [View the Identity Security dashboard](/defender-for-identity/dashboard) and [Defender for Identity health issues](/defender-for-identity/health-alerts). |
 |**Identity page**     |  The Microsoft Defender portal identity details page provides inclusive data about each identity, such as: <br><br>- Any associated alerts <br>- Active Directory account control<br>- Risky lateral movement paths<br>- A timeline of activities and alerts<br>- Details about observed locations, devices, and groups. <br><br>For more information, see [Investigate users in the Microsoft Defender portal](/defender-xdr/investigate-users). |
 |**Device page**     | The Microsoft Defender portal alert evidence lists all devices and users connected to each suspicious activity.  Investigate further by selecting a specific device in an alert to access a device details page.  <br><br>For more information, see [Investigate devices in the Microsoft Defender for Endpoint Devices list](/defender-endpoint/investigate-machines). |
 |**Advanced hunting**     |  The Microsoft Defender portal helps you proactively search for threats and malicious activity by using advanced hunting queries. These powerful queries can be used to locate and review threat indicators and entities for both known and potential threats. <br><br>Build custom detection rules from advanced hunting queries to help you proactively watch for events that might be indicative of breach activity and misconfigured devices. <br><br>For more information, see [Proactively hunt for threats with advanced hunting in the Microsoft Defender portal](/defender-xdr/advanced-hunting-overview).    |

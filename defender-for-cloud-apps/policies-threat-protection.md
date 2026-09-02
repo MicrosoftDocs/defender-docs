@@ -1,22 +1,24 @@
 ---
 title: Common threat protection policies | Microsoft Defender for Cloud Apps
 description: This topic outlines the steps to configure many threat protection policies in Defender for Cloud Apps.
-ms.date: 05/15/2024
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: Ronen-Refaeli
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 # Common Defender for Cloud Apps threat protection policies
 
 
 
-Defender for Cloud Apps enables you to identify high-risk use and cloud security issues, detect abnormal user behavior, and prevent threats in your sanctioned cloud apps. Get visibility into user and admin activities and define policies to automatically alert when suspicious behavior or specific activities that you consider risky are detected. Draw from the vast amount of Microsoft threat intelligence and security research data to help ensure that your sanctioned apps have all the security controls you need in place and help you maintain control over them.
+This article describes common threat protection policies in Defender for Cloud Apps and explains how to configure them. Use these policies to identify high-risk use, detect abnormal user behavior, and prevent threats in your sanctioned cloud apps. Each section covers the prerequisites and steps to set up a specific policy, including both built-in anomaly detections and custom activity policies.
 
 > [!NOTE]
 > When integrating Defender for Cloud Apps with Microsoft Defender for Identity, policies from Defender for Identity also appear on the policies page. For a list of Defender for Identity policies, see [Security Alerts](/defender-for-identity/suspicious-activity-guide).
 
 ## Detect and control user activity from unfamiliar locations
 
-Automatic detection of user access or activity from unfamiliar locations that were never visited by anyone else in your organization.
+This feature detects user access or activity from locations that no one in your organization has visited before.
 
 ### Prerequisites
 
@@ -24,7 +26,7 @@ You must have at least one app connected using [app connectors](enable-instant-v
 
 ### Steps
 
-This detection is automatically configured out-of-the-box to alert you when there's access from new locations. You don't need to take any action to configure this policy. For more information, see [Anomaly detection policies](anomaly-detection-policy.md).
+This detection is set up by default to alert you when access comes from new locations. No action is needed to turn on this policy. For more information, see [Anomaly detection policies](anomaly-detection-policy.md).
 
 ## Detect compromised account by impossible location (impossible travel)
 
@@ -45,7 +47,7 @@ You must have at least one app connected using [app connectors](enable-instant-v
 
     - Set your sensitivity preference for alerting
 
-1. Create the anomaly detection policy.
+1. Create the impossible travel anomaly detection policy.
 
 ## Detect suspicious activity from an "on-leave" employee
 
@@ -67,7 +69,7 @@ Detect when a user, who is on unpaid leave and shouldn't be active on any organi
 
 1. Optional: Set the **Governance** actions to be taken on files when a violation is detected. The governance actions available vary between services. You can choose **Suspend user**.
 
-1. Create the file policy.
+1. Create the activity policy.
 
 ## Detect and notify when outdated browser OS is used
 
@@ -89,7 +91,7 @@ You must have at least one app connected using [app connectors](enable-instant-v
 
 ## Detect and alert when Admin activity is detected on risky IP addresses
 
-Detect admin activities performed from and IP address that is considered a risky IP address, and notify the system admin for further investigation or set a governance action on the admin's account. Learn more [how to work with IP ranges and Risky IP](/defender-cloud-apps/ip-tags).
+A risky IP address is one that Defender for Cloud Apps identifies as suspicious based on threat intelligence. Detect admin activities performed from a risky IP address, and notify the system admin for further investigation or set a governance action on the acting administrator's account. Learn more [how to work with IP ranges and Risky IP](/defender-cloud-apps/ip-tags).
 
 ### Prerequisites
 
@@ -113,7 +115,7 @@ Detect admin activities performed from and IP address that is considered a risky
 
 ## Detect activities by service account from external IP addresses
 
-Detect service account activities originating from non-internal IP addresses. This could indicate suspicious behavior or a compromised account.
+Detect service account activities originating from non-internal IP addresses. Activity from non-internal IP addresses could indicate suspicious behavior or a compromised account.
 
 ### Prerequisites
 
@@ -159,16 +161,14 @@ Automatic detection of potential Ransomware activity.
 
 ### Prerequisites
 
-You must have at least one app connected using [app connectors](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).
+- This detection applies only to Microsoft 365, Google Workspace, Box, and Dropbox.
+- You must have at least one app connected using [app connectors](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).
 
 ### Steps
 
-1. This detection is automatically configured out-of-the-box to alert you when there's a potential ransomware risk detected. You don't need to take any action to configure this policy. For more information, see [Anomaly detection policies](anomaly-detection-policy.md).
+1. This detection is set up by default to alert you when a ransomware risk is found. No action is needed to turn on this policy. For more information, see [Anomaly detection policies](anomaly-detection-policy.md).
 
-2. It's possible to configure the **Scope** of the detection and to customize the Governance actions to be taken when an alert is triggered. For more information about how Defender for Cloud Apps identifies Ransomware, see [Protecting your organization from ransomware](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware).
-
-> [!NOTE]
-> This applies to Microsoft 365, Google Workspace, Box, and Dropbox.
+2. You can configure the **Scope** of the ransomware detection and choose which governance actions to take when an alert fires. To learn how Defender for Cloud Apps spots ransomware, see [Protecting your organization from ransomware](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware).
 
 ## Detect malware in the cloud
 
@@ -181,7 +181,7 @@ Detect files containing malware in your cloud environments by utilizing the Defe
 
 ### Steps
 
-- This detection is automatically configured out-of-the-box to alert you when there's a file that may contain malware. You don't need to take any action to configure this policy. For more information, see [Anomaly detection policies](anomaly-detection-policy.md).
+- The malware detection is automatically configured out-of-the-box to alert you when there's a file that may contain malware. You don't need to take any action to configure this policy. For more information, see [Anomaly detection policies](anomaly-detection-policy.md).
 
 ## Detect rogue admin takeover
 
@@ -214,7 +214,7 @@ If a suspicious inbox rule was set on a user's inbox, it may indicate that the u
 
 ### Steps
 
-- This detection is automatically configured out-of-the-box to alert you when there's a suspicious inbox rule set. You don't need to take any action to configure this policy. For more information, see [Anomaly detection policies](anomaly-detection-policy.md).
+- The suspicious inbox rule detection is automatically configured out-of-the-box to alert you when there's a suspicious inbox rule set. You don't need to take any action to configure this policy. For more information, see [Anomaly detection policies](anomaly-detection-policy.md).
 
 ## Detect leaked credentials
 
@@ -228,7 +228,7 @@ You must have at least one app connected using [app connectors](enable-instant-v
 
 ### Steps
 
-This detection is automatically configured out-of-the-box to alert you when a possible credential leak is detected. You don't need to take any action to configure this policy. For more information, see [Anomaly detection policies](anomaly-detection-policy.md).
+The leaked credentials detection is automatically configured out-of-the-box to alert you when a possible credential leak is detected. You don't need to take any action to configure this policy. For more information, see [Anomaly detection policies](anomaly-detection-policy.md).
 
 ## Detect anomalous file downloads
 
@@ -262,6 +262,9 @@ You must have at least one app connected using [app connectors](enable-instant-v
 
 Detect activities from a location that wasn't recently or was never visited by the user or by any user in your organization.
 
+> [!NOTE]
+> This detection requires an initial learning period of 7 days. During the learning period, Defender for Cloud Apps does not generate alerts for new locations.
+
 ### Prerequisites
 
 You must have at least one app connected using [app connectors](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).
@@ -271,9 +274,6 @@ You must have at least one app connected using [app connectors](enable-instant-v
 1. This detection is automatically configured out-of-the-box to alert you when an anomalous activity occurs from an infrequent country/region. You don't need to take any action to configure this policy. For more information, see [Anomaly detection policies](anomaly-detection-policy.md).
 
 1. It's possible to configure the scope of the detection and to customize the action to be taken when an alert is triggered.
-
-> [!NOTE]
-> Detecting anomalous locations necessitates an initial learning period of 7 days. During the learning period, Defender for Cloud Apps does not generate alerts for new locations.
 
 ## Detect activity performed by a terminated user
 
@@ -289,7 +289,8 @@ You must have at least one app connected using [app connectors](enable-instant-v
 
 1. It's possible to configure the scope of the detection and to customize the action to be taken when an alert is triggered.
 
-## Next steps
+<a name="next-steps"></a>
+## Related content
 
 > [!div class="nextstepaction"]
 > [Best practices for protecting your organization](best-practices.md)

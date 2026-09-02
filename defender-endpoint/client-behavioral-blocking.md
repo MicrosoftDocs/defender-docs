@@ -1,10 +1,9 @@
-﻿---
+---
 title: Client behavioral blocking
 description: Client behavioral blocking is part of behavioral blocking and containment capabilities at Microsoft Defender for Endpoint
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: shwetaj
-audience: ITPro
 ms.topic: concept-article
 ms.service: defender-endpoint
 ms.subservice: ngp
@@ -15,7 +14,6 @@ ms.custom:
 ms.collection: 
 - m365-security
 - tier2
-search.appverid: met150
 ms.date: 04/25/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -76,7 +74,7 @@ If your organization is using Defender for Endpoint, client behavioral blocking 
 - [Defender for Endpoint baselines](configure-machines-security-baseline.md)
 - [Devices onboarded to Defender for Endpoint](onboard-configure.md)
 - [EDR in block mode](edr-in-block-mode.md)
-- [Attack surface reduction](attack-surface-reduction.md)
+- [Attack surface reduction](attack-surface-reduction-rules-overview.md)
 - [Next-generation protection](configure-microsoft-defender-antivirus-features.md) (antivirus, antimalware, and other threat protection capabilities)
 
 > [!TIP]

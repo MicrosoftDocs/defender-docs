@@ -1,11 +1,10 @@
-﻿---
+---
 title: Fix unhealthy sensors in Microsoft Defender for Endpoint
 description: Fix device sensors that are reporting as misconfigured or inactive so that the service receives data from the device.
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -13,7 +12,6 @@ ms.collection:
 ms.topic: article
 ms.date: 03/25/2025
 ms.subservice: onboard
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -40,7 +38,7 @@ Any device that isn't in use for more than seven days retains 'Inactive' status 
 
 ### Device was reinstalled or renamed
 
-A new device entity is generated in Microsoft Defender XDR for reinstalled or renamed devices. The previous device entity remains, with an 'Inactive' status in the portal. If you reinstalled a device and deployed the Defender for Endpoint package, search for the new device name to verify that the device is reporting normally.
+A new device entity is generated in the Defender portal for reinstalled or renamed devices. The previous device entity remains, with an 'Inactive' status in the portal. If you reinstalled a device and deployed the Defender for Endpoint package, search for the new device name to verify that the device is reporting normally.
 
 ### Device was off-boarded
 

@@ -14,9 +14,6 @@ ms.collection:
 - m365-security
 - tier3
 - mde-macos
-search.appverid: met150
-audience: ITPro
-f1.keywords: NOCSH
 ---
 
 # Run the client analyzer on macOS
@@ -56,7 +53,7 @@ If you're experiencing reliability or device health issues with Microsoft Defend
 1. Change to the tool's directory by running the following command:
 
    ```bash
-   cd XMDEClientAnalyzerBinary
+   cd XMDEClientAnalyzerBinary/XMDEClientAnalyzer
    ```
 
 1. Notice that the following two zipped files are produced:
@@ -97,13 +94,13 @@ The tool currently requires Python version 3 or later to be installed on your de
    - **Linux**:
 
      ```bash
-     echo 'CCADC17FDE907E63FBAF0A5F9D0FAA2FC6D03C49CBA62276BDE427D0F512167F XMDEClientAnalyzer.zip| sha256sum -c`
+     echo 'CCADC17FDE907E63FBAF0A5F9D0FAA2FC6D03C49CBA62276BDE427D0F512167F  XMDEClientAnalyzer.zip' | sha256sum -c
      ```
 
    - **macOS**:
 
      ```bash
-     echo 'CCADC17FDE907E63FBAF0A5F9D0FAA2FC6D03C49CBA62276BDE427D0F512167F XMDEClientAnalyzer.zip| shasum -a 256 -c`
+     echo 'CCADC17FDE907E63FBAF0A5F9D0FAA2FC6D03C49CBA62276BDE427D0F512167F  XMDEClientAnalyzer.zip' | shasum -a 256 -c
      ```
 
 3. Extract the contents of `XMDEClientAnalyzer.zip` on the machine.

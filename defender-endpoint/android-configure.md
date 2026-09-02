@@ -1,23 +1,23 @@
 ---
-title: Configure Microsoft Defender for Endpoint on Android features
-description: Describes how to configure Microsoft Defender for Endpoint on Android
+title: Configure Microsoft Defender for Endpoint on Android risk and protection settings
+description: Learn how to configure web protection, network protection, privacy controls, custom indicators, and device tagging for Microsoft Defender for Endpoint on Android using Microsoft Intune.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
-ms.reviewer: denishdonga
+ms.reviewer: mchakraborty
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-android
 ms.topic: how-to
 ms.subservice: android
-search.appverid: met150
-ms.date: 12/17/2025
+ms.date: 06/19/2026
 appliesto:
    - Microsoft Defender for Endpoint Plan 1
    - Microsoft Defender for Endpoint Plan 2
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Configure Defender for Endpoint on Android features
@@ -50,11 +50,12 @@ Defender for Endpoint on Android allows IT Administrators the ability to configu
 >
 > For more information, see [Configure web protection on devices that run Android](/intune/intune-service/protect/advanced-threat-protection-manage-android).
 
-## Network Protection
+<a name="network-protection"></a>
+## Configure network protection
 
-This feature provides protection against rogue Wi-Fi related threats and rogue certificates, which are the primary attack vector for Wi-Fi networks. Admins can list the root Certificate Authority (CA) and private root CA certificates in Microsoft Intune admin center and establish trust with endpoints. It provides the user a guided experience to connect to secure networks and also notifies them if a related threat is detected.
+Network protection provides protection against rogue Wi-Fi related threats and rogue certificates, which are the primary attack vector for Wi-Fi networks. Admins can list the root Certificate Authority (CA) and private root CA certificates in Microsoft Intune admin center and establish trust with endpoints. It provides the user a guided experience to connect to secure networks and also notifies them if a related threat is detected.
 
-It includes several admin controls to offer flexibility, such as the ability to configure the feature from within the Microsoft Intune admin center and add trusted certificates. Admins can enable [privacy controls](android-configure.md#privacy-controls) to configure the data sent to Defender for Endpoint from Android devices.
+Network protection includes several admin controls to offer flexibility, such as the ability to configure the feature from within the Microsoft Intune admin center and add trusted certificates. Admins can enable [privacy controls](android-configure.md#privacy-controls) to configure the data sent to Defender for Endpoint from Android devices.
 
 Network protection in Microsoft Defender for endpoint is enabled by default. Admins can use the following steps to **configure Network protection in Android devices.**
 
@@ -79,27 +80,16 @@ In the Microsoft Intune admin center, navigate to Apps > App configuration polic
 
 1. For other configurations related to Network protection, add the following keys and appropriate corresponding value.
 
-   | Configuration Key| Description|
-   |---|---|
-   |Trusted CA certificate list for Network Protection|Security admins manage this setting to establish trust for root CA and self-signed certificates.|
-   |Enable Network protection in Microsoft Defender|1 - Enable (default), 0- Disable. This setting is used by the IT admin to enable or disable the network protection capabilities in the Defender app.|
-   |Enable Network Protection Privacy|1 - Enable (default), 0 - Disable. Security admins manage this setting to enable or disable privacy in network protection.|
-   |Enable Users to Trust Networks and Certificates|1 - Enable, 0 - Disable (default). Security admins manage this setting to enable or disable the end user's in-app experience to trust and untrust unsecure and suspicious networks and malicious certificates.|
-   |Automatic Remediation of Network Protection Alerts|1 - Enable (default), 0 - Disable. Security admins manage this setting to enable or disable the remediation alerts that are sent when a user performs remediation activities, such as switching to a safer Wi-Fi access point or deleting suspicious certificates detected by Defender. This setting applies exclusively to alerts and does not impact device timeline events. As a result, it will not affect open Wi-Fi networks or self-signed certificates.|
-   |Manage Network Protection detection for Open Networks|2- Enable (default), 1- Audit mode, 0 - Disable. Security admins manage this setting to enable, audit, or disable open network detection, respectively. In 'Audit' mode, events are sent only to the ATP portal with no end user experience. For end user experience, the config should be set to 'Enable' mode.|
-   |Manage Network protection Detection for Certificates|2- Enable, 1- Audit mode, 0 - Disable (default).  In Audit mode, events are sent to SOC admins, but no end-user notifications are displayed to the user when Defender detects a bad certificate. Admins can, however, enable full feature functionality by setting 2 as the value. When the feature is enabled with the value of 2, end-user notifications are sent to the user when Defender detects a bad certificate, and events are also sent to the SOC Admin. |
-   
-1. Add the required groups to which the policy has to be applied. Review and create the policy.
-
    | Configuration Key | Description|
    |---|---|
+   |Trusted CA certificate list for Network Protection|Security admins manage this setting to establish trust for root CA and self-signed certificates.|
    |Enable Network protection in Microsoft Defender|1: Enable (default)<br/> 0: Disable<br/><br/> This setting is used by the IT admin to enable or disable the network protection capabilities in the Defender app.|
    |Enable Network Protection Privacy|1: Enable (default) <br/> 0: Disable <br/><br/> Security admins manage this setting to enable or disable privacy in network protection.|
-   |Enable Users to Trust Networks and Certificates|1: Enable <br/>0: Disable (default) <br/><br/> This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks and malicious certificates.|
+   |Enable Users to Trust Networks and Certificates|1: Enable <br/>0: Disable (default) <br/><br/> This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure networks and malicious certificates.|
    |Automatic Remediation of Network Protection Alerts|1: Enable (default) <br/> 0: Disable <br/><br/> This setting is used by IT admins to enable or disable the remediation alerts that are sent when a user does remediation activities. For example, the user switches to a safer Wi-Fi access point or deletes suspicious certificates that were detected by Defender. This setting only applies to alerts and does not affect device timeline events. As such, it does not apply to the detection of open Wi-Fi networks or self-signed certificates |
-   | Open network detection | 2:  Enable (default)<br/> 1: Audit Mode <br/> 0: Disable <br/><br/>Security admins manage this setting to enable or disable open network detection. |
+   |Manage Network Protection detection for Open Networks| 2:  Enable (default)<br/> 1: Audit Mode <br/> 0: Disable <br/><br/>Security admins manage this setting to enable or disable open network detection. |
    |Manage Network protection Detection for Certificates|2: Enable <br/> 1: Audit mode<br/> 0: Disable (default)<br/><br/>In audit mode, events are sent to SOC admins, but no end user notifications are shown when Defender detects a bad certificate. Admins can enable full feature functionality by setting the value 2. When the value is 2, end user notifications are sent to users and events are sent to SOC admins when Defender detects a bad certificate.|
-   
+
 1. Add the required groups to which the policy has to be applied. Review and create the policy.
 
 > [!NOTE]
@@ -116,9 +106,10 @@ In the Microsoft Intune admin center, navigate to Apps > App configuration polic
 - The previous experience of generating alerts for these activities still continue to apply to GCC tenants.
 
 
-## Privacy Controls
+<a name="privacy-controls"></a>
+## Configure privacy controls
 
-Following privacy controls are available for configuring the data that is sent by Defender for Endpoint from Android devices:
+Privacy controls are settings that let admins limit which threat details Defender for Endpoint sends in alert reports from Android devices. The following privacy controls are available:
 
 |Threat Report     |Details      |
 |--------------------|-------------|
@@ -158,13 +149,13 @@ Admin Privacy Controls (MDM) Use the following steps to enable privacy.
 
 ### End user privacy controls
 
-These controls help the end user to configure the information shared to their organization.
+The end-user privacy controls help the end user to configure the information shared to their organization.
 
 1. For **Android Enterprise work profile**, end user controls won't be visible. Admins control these settings.
 1. For **Android Enterprise personal profile**, the control is displayed under **Settings> Privacy**.
 1. Users see a toggle for Unsafe Site Info, malicious application, and network protection.
 
-These toggles will only be visible if enabled by the admin. Users can decide if they want to send the information to their organization or not.
+The Unsafe Site Info, malicious application, and network protection toggles are only visible if enabled by the admin. Users can decide if they want to send the information to their organization or not.
 
 Enabling/disabling the above privacy controls won't affect the device compliance check or conditional access.
 
@@ -250,7 +241,8 @@ Use the following steps to configure Disable out sign:
 
 1. Select **Next** and assign this profile to targeted devices and users.
 
-## Device Tagging
+<a name="device-tagging"></a>
+## Configure device tagging
 
 Defender for Endpoint on Android enables bulk tagging the mobile devices during onboarding by allowing the admins to set up tags via Intune. Admin can configure the device tags through Intune via configuration policies and push them to user's devices. Once the User installs and activates Defender, the client app passes the device tags to the Security Portal. The Device tags appear against the devices in the Device Inventory. 
 
@@ -270,7 +262,8 @@ Use the following steps to configure the Device tags:
 > [!NOTE]
 > The Defender app needs to be opened for tags to be synced with Intune and passed to Security Portal. It might take up to 18 hours for tags to reflect in the portal.
 
-## Related articles
+<a name="related-articles"></a>
+## Related content
 
 - [Overview of Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md)
 

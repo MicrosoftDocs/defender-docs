@@ -1,10 +1,9 @@
-﻿---
+---
 title: Microsoft Defender Antivirus full scan considerations and best practices
 description: Understand when and how to use full scans with Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.localizationpriority: high
 ms.date: 10/20/2025
-audience: ITPro
 ms.topic: article
 author: chrisda
 ms.author: chrisda
@@ -17,7 +16,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 ---
 # Microsoft Defender Antivirus full scan considerations and best practices
 

@@ -11,9 +11,6 @@ ms.collection:
 - m365-security
 - tier1
 ms.reviewer: efratka
-search.appverid: MET150
-f1.keywords: NOCSH
-audience: Admin
 ---
 
 # Automatic attack disruption in Microsoft Defender for Business

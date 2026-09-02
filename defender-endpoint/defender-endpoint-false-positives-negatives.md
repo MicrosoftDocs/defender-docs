@@ -1,4 +1,4 @@
-﻿---
+---
 title: Address false positives/negatives in Microsoft Defender for Endpoint
 description: Learn how to handle false positives or false negatives in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
@@ -7,7 +7,6 @@ ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
 ms.date: 10/20/2025
-audience: ITPro
 ms.collection:
 - m365-security
 - m365initiative-defender-endpoint
@@ -17,10 +16,10 @@ ms.collection:
 - tier1
 ms.topic: solution-overview
 ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs, yonghree, jcedola
-ms.custom: 
-- FPFN
-- admindeeplinkDEFENDER
-search.appverid: met150
+ms.custom:
+  - FPFN
+  - admindeeplinkDEFENDER
+  - sfi-image-nochange
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -45,8 +44,8 @@ When you have a false positive, a good first step is to try to determine its det
 |Detection source| Information|
 | -------- | -------- |
 |Endpoint Detection and Response (EDR) | The alert is related to EDR in Defender for Endpoint <br/>- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi) <br/>- Work-around: Add an EDR exclusion or tune the alerts|
-|Antivirus|The alert relates to Microsoft Defender Antivirus in active mode (primary) where it blocks. <br/>- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi) <br/>- Work-around: Add [Indicators - File hash - allow ](indicator-file.md) or an [Antivirus exclusion](navigate-defender-endpoint-antivirus-exclusions.md)<br/><br/>If Microsoft Defender Antivirus is in passive mode, EDR in block mode might just detect.|
-| Custom TI| Custom indicators:<br/>- [File hash](indicator-file.md)<br/>- [IP address or URL](indicator-ip-domain.md)<br/>- [Certificates](indicator-certificates.md) <br/><br/>Solution: [Manage indicators](indicator-manage.md). <br/><br/> Or, if you see `CustomEnterpriseBlock`, your detection source could be one of the following capabilities in Defender for Endpoint: <br/><br/>1. [Automated investigation and remediation](automated-investigations.md)<br/>-- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi) <br/>-- Work-around: [Automation folder exclusions  ](manage-automation-folder-exclusions.md)<br/><br/>2. Custom detection rules deriving from [Advanced Hunting](/defender-xdr/advanced-hunting-overview) <br/>-- Solution: [Manage existing custom detection rules  ](/defender-xdr/custom-detection-rules)<br/><br/>3. [EDR in block mode](edr-in-block-mode.md) <br/>-- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi)<br/>-- Work-around: [Indicators – File hash – allow](indicator-file.md) or [Antivirus exclusions](navigate-defender-endpoint-antivirus-exclusions.md)<br/><br/>4. [Live response](live-response.md)<br/>-- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi)<br/>-- Work-around: [Indicators – File hash – allow](indicator-file.md) or [Antivirus exclusions](navigate-defender-endpoint-antivirus-exclusions.md)<br/><br/>5. [PUA protection](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md)<br/>-- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi)<br/>-- Work-around: [Indicators – File hash – allow](indicator-file.md) or [Antivirus exclusions](navigate-defender-endpoint-antivirus-exclusions.md)|
+|Antivirus|The alert relates to Microsoft Defender Antivirus in active mode (primary) where it blocks. <br/>- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi) <br/>- Work-around: Add [Indicators - File hash - allow ](indicator-file.md) or an [Antivirus exclusion](defender-endpoint-exclusions-overview.md)<br/><br/>If Microsoft Defender Antivirus is in passive mode, EDR in block mode might just detect.|
+| Custom TI| Custom indicators:<br/>- [File hash](indicator-file.md)<br/>- [IP address or URL](indicator-ip-domain.md)<br/>- [Certificates](indicator-certificates.md) <br/><br/>Solution: [Manage indicators](indicator-manage.md). <br/><br/> Or, if you see `CustomEnterpriseBlock`, your detection source could be one of the following capabilities in Defender for Endpoint: <br/><br/>1. [Automated investigation and remediation](automated-investigations.md)<br/>-- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi) <br/>-- Work-around: [Automation folder exclusions  ](automation-folder-exclusions-configure.md)<br/><br/>2. Custom detection rules deriving from [Advanced Hunting](/defender-xdr/advanced-hunting-overview) <br/>-- Solution: [Manage existing custom detection rules  ](/defender-xdr/custom-detection-rules)<br/><br/>3. [EDR in block mode](edr-in-block-mode.md) <br/>-- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi)<br/>-- Work-around: [Indicators – File hash – allow](indicator-file.md) or [Antivirus exclusions](defender-endpoint-exclusions-overview.md)<br/><br/>4. [Live response](live-response.md)<br/>-- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi)<br/>-- Work-around: [Indicators – File hash – allow](indicator-file.md) or [Antivirus exclusions](defender-endpoint-exclusions-overview.md)<br/><br/>5. [PUA protection](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md)<br/>-- Solution: Submit the false positive to [https://aka.ms/wdsi](https://aka.ms/wdsi)<br/>-- Work-around: [Indicators – File hash – allow](indicator-file.md) or [Antivirus exclusions](defender-endpoint-exclusions-overview.md)|
 | Smartscreen|[Smartscreen](https://feedback.smartscreen.microsoft.com/smartscreenfaq.aspx): You can [Report an unsafe site](https://www.microsoft.com/en-us/wdsi/support/report-unsafe-site) or [submit a network protection detection](https://www.microsoft.com/wdsi/support/report-exploit-guard)|
 
 ## False positives and how to address them
@@ -94,7 +93,7 @@ Alerts can be classified as false positives or true positives in the Microsoft D
 
 ### Suppress an alert
 
-If you have alerts that are either false positives or that are true positives but for unimportant events, you can suppress those alerts in Microsoft Defender XDR. Suppressing alerts helps reduce noise in your queue.
+If you have alerts that are either false positives or that are true positives but for unimportant events, you can suppress those alerts in the Defender portal. Suppressing alerts helps reduce noise in your queue.
 
 1. In the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139), in the navigation pane, choose **Incidents & alerts** and then select **Alerts**.
 
@@ -174,22 +173,18 @@ When you're done reviewing and undoing actions that were taken as a result of fa
 
 You can roll back and remove a file from quarantine if you determine it's clean after an investigation. Do the following steps on each device where the file was quarantined:
 
-1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
-   1. Open the **Start** menu, and then type **cmd**.
-   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
+In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
 
-1. In the elevated Command Prompt, run the following commands:
+> [!TIP]
+> The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
-   > [!TIP]
-   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
+```dos
+(set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
-   ```dos
-   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+MpCmdRun.exe -Restore -Name EUS:Win32/CustomEnterpriseBlock -All
+```
 
-   MpCmdRun.exe -Restore -Name EUS:Win32/CustomEnterpriseBlock -All
-   ```
-
-   For more information, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
+For more information, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
 
 > [!IMPORTANT]
 > In some scenarios, the **ThreatName** might appear as `EUS:Win32/CustomEnterpriseBlock!cl`. Defender for Endpoint restores all custom blocked files that were quarantined on this device in the last 30 days.
@@ -198,20 +193,18 @@ You can roll back and remove a file from quarantine if you determine it's clean 
 >
 > A quarantined file might not be accessible. This issue can be due to the system no longer having network credentials to access the file. Typically, this issue is a result of an expired access token on a temporary sign-in a system or shared folder.
 
-1. In the pane on the right side of the screen, select **Apply to X more instances of this file**, and then select **Undo**.
-
 ## Part 3: Review or define exclusions
 
 > [!CAUTION]
-> Before you define an exclusion, review the detailed information in [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md). Keep in mind that every exclusion that is defined lowers your level of protection.
+> Before you define an exclusion, review the detailed information in [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md). Keep in mind that every exclusion that is defined lowers your level of protection.
 
 An exclusion is an entity, such as a file or URL, that you specify as an exception to remediation actions. The excluded entity can still get detected, but no remediation actions are taken on that entity. That is, the detected file or process isn't stopped, sent to quarantine, removed, or otherwise changed by Microsoft Defender for Endpoint.
 
-To define exclusions across Microsoft Defender for Endpoint, perform the following tasks:
+To define exclusions across Microsoft Defender for Endpoint, do the following tasks:
 
 - [Create "allow" indicators for Microsoft Defender for Endpoint](#indicators-for-defender-for-endpoint)
 - [Define exclusions for Microsoft Defender Antivirus](#exclusions-for-microsoft-defender-antivirus)
-- For Attack Surface Reduction Rule exclusions [Configure attack surface reduction per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions) or you can leverage [ASR rule only exclusions](enable-attack-surface-reduction.md#exclude-files-and-folders-from-attack-surface-reduction-rules)
+- For attack surface reduction (ASR) rules, configure [global ASR rule exclusions or per-ASR rule exclusions](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
 
 > [!NOTE]
 > Microsoft Defender Antivirus exclusions apply only to antivirus protection, not across other Microsoft Defender for Endpoint capabilities. To exclude files broadly, use [custom indicators](indicators-overview.md) for Microsoft Defender for Endpoint and exclusions for Microsoft Defender Antivirus.
@@ -281,43 +274,31 @@ Before you create indicators for application certificates, make sure the followi
 In general, you shouldn't need to define exclusions for Microsoft Defender Antivirus. Make sure that you define exclusions sparingly, and that you only include the files, folders, processes, and process-opened files that are resulting in false positives. In addition, make sure to review your defined exclusions regularly. We recommend using [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune) to define or edit your antivirus exclusions; however, you can use other methods, such as [Group Policy](/azure/active-directory-domain-services/manage-group-policy) (see [Manage Microsoft Defender for Endpoint](preferences-setup.md)).
 
 > [!TIP]
-> Need help with antivirus exclusions? See [Configure and validate exclusions for Microsoft Defender Antivirus](configure-exclusions-microsoft-defender-antivirus.md).
+> Need help with antivirus exclusions? See [Configure and validate exclusions for Microsoft Defender Antivirus](microsoft-defender-antivirus-exclusions-configure.md).
 
 #### Use Intune to manage antivirus exclusions (for existing policies)
 
-1. In the [Microsoft Intune admin center](https://intune.microsoft.com), choose **Endpoint security** \> **Antivirus**, and then select an existing policy. (If you don't have an existing policy, or you want to create a new policy, skip to [Use Intune to create a new antivirus policy with exclusions](#use-intune-to-create-a-new-antivirus-policy-with-exclusions).)
+To manage antivirus exclusions with Microsoft Intune, see <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (opens in a new tab in the Intune documentation). Choose the following options:
 
-1. Choose **Properties**, and next to **Configuration settings**, choose **Edit**.
-
-1. Expand **Microsoft Defender Antivirus Exclusions** and then specify your exclusions.
-
-   - **Excluded Extensions** are exclusions that you define by file type extension. These extensions apply to any file name that has the defined extension without the file path or folder. Separate each file type in the list must be separated with a `|` character. For example, `lib|obj`. For more information, see [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#excludedextensions).
-   - **Excluded Paths** are exclusions that you define by their location (path). These types of exclusions are also known as file and folder exclusions. Separate each path in the list with a `|` character. For example, `C:\Example|C:\Example1`. For more information, see [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#excludedpaths).
-   - **Excluded Processes** are exclusions for files that are opened by certain processes. Separate each file type in the list with a `|` character. For example, `C:\Example. exe|C:\Example1.exe`. These exclusions aren't for the actual processes. To exclude processes, you can use file and folder exclusions. For more information, see [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#excludedprocesses).
-
-1. Choose **Review + save**, and then choose **Save**.
+- **Policy**: **Antivirus**, then select your Microsoft Defender Antivirus policy
+- **Microsoft Defender Antivirus Exclusions**: Specify your exclusions.
+  - **Excluded Extensions** are exclusions that you define by file type extension. These extensions apply to any file name that has the defined extension without the file path or folder. Separate each file type in the list must be separated with a `|` character. For example, `lib|obj`. For more information, see [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#excludedextensions).
+  - **Excluded Paths** are exclusions that you define by their location (path). These types of exclusions are also known as file and folder exclusions. Separate each path in the list with a `|` character. For example, `C:\Example|C:\Example1`. For more information, see [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#excludedpaths).
+  - **Excluded Processes** are exclusions for files that are opened by certain processes. Separate each file type in the list with a `|` character. For example, `C:\Example. exe|C:\Example1.exe`. These exclusions aren't for the actual processes. To exclude processes, you can use file and folder exclusions. For more information, see [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#excludedprocesses).
 
 #### Use Intune to create a new antivirus policy with exclusions
 
-1. In the [Microsoft Intune admin center](https://intune.microsoft.com), choose **Endpoint security** \> **Antivirus** \> **+ Create Policy**.
+To create a new antivirus policy with exclusions in Microsoft Intune, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
 
-1. Select a platform (such as **Windows 10, Windows 11, and Windows Server**).
-
-1. For **Profile**, select **Microsoft Defender Antivirus exclusions**, and then choose **Create**.
-
-1. On the **Create profile** step, specify a name and description for the profile, and then choose **Next**.
-
-1. On the **Configuration settings** tab, specify your antivirus exclusions, and then choose **Next**.
-
-   - **Excluded Extensions** are exclusions that you define by file type extension. These extensions apply to any file name that has the defined extension without the file path or folder. Separate each file type in the list with a `|` character. For example, `lib|obj`. For more information, see [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#excludedextensions).
-   - **Excluded Paths** are exclusions that you define by their location (path). These types of exclusions are also known as file and folder exclusions. Separate each path in the list with a `|` character. For example, `C:\Example|C:\Example1`. For more information, see [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#excludedpaths).
-   - **Excluded Processes** are exclusions for files that are opened by certain processes. Separate each file type in the list with a `|` character. For example, `C:\Example. exe|C:\Example1.exe`. These exclusions aren't for the actual processes. To exclude processes, you can use file and folder exclusions. For more information, see [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#excludedprocesses).
-
-1. On the **Scope tags** tab, if you're using scope tags in your organization, specify scope tags for the policy you're creating. (See [Scope tags](/intune/intune-service/fundamentals/scope-tags).)
-
-1. On the **Assignments** tab, specify the users and groups to whom your policy should be applied, and then choose **Next**. (If you need help with assignments, see [Assign user and device profiles in Microsoft Intune](/intune/intune-service/configuration/device-profile-assign).)
-
-1. On the **Review + create** tab, review the settings, and then choose **Create**.
+- **Policy type**: Antivirus
+- **Platform**: Windows 10, Windows 11, and Windows Server
+- **Profile**: Microsoft Defender Antivirus exclusions
+- **Configuration settings**: Specify your antivirus exclusions.
+  - **Excluded Extensions** are exclusions that you define by file type extension. These extensions apply to any file name that has the defined extension without the file path or folder. Separate each file type in the list with a `|` character. For example, `lib|obj`. For more information, see [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#excludedextensions).
+  - **Excluded Paths** are exclusions that you define by their location (path). These types of exclusions are also known as file and folder exclusions. Separate each path in the list with a `|` character. For example, `C:\Example|C:\Example1`. For more information, see [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#excludedpaths).
+  - **Excluded Processes** are exclusions for files that are opened by certain processes. Separate each file type in the list with a `|` character. For example, `C:\Example. exe|C:\Example1.exe`. These exclusions aren't for the actual processes. To exclude processes, you can use file and folder exclusions. For more information, see [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#excludedprocesses).
+- **Scope tags**: If you're using scope tags in your organization, specify scope tags for the policy you're creating. (See [Scope tags](/intune/intune-service/fundamentals/scope-tags).)
+- **Assignments**: specify the users and groups to whom your policy should be applied, and then choose **Next**. (If you need help with assignments, see [Assign user and device profiles in Microsoft Intune](/intune/intune-service/configuration/device-profile-assign).)
 
 ## Part 4: Submit a file for analysis
 
@@ -411,7 +392,7 @@ If you've worked through all the steps in this article and still need help, cont
 ## See also
 
 - [Manage Defender for Endpoint](preferences-setup.md)
-- [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+- [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md)
 - [Overview of Microsoft Defender portal](/legal/microsoft-365/api-terms-of-use)
 - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)

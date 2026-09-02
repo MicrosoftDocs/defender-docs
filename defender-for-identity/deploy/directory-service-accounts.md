@@ -8,10 +8,13 @@ ms.reviewer: rlitinsky
 
 # Directory Service Accounts for Microsoft Defender for Identity
 
-This article describes how Microsoft Defender for Identity uses Directory Service Accounts (DSAs).
+Defender for Identity uses Directory Service Accounts (DSAs) to read data from Active Directory, such as querying objects, tracking changes, and resolving entities. This is separate from the [action account](manage-action-accounts.md), which performs remediation actions like disabling users or resetting passwords.
+
+> [!NOTE]
+> Directory Service Accounts apply to the Defender for Identity sensor v2.x only. The sensor v3.x doesn't use DSA or gMSA configuration and uses LocalSystem exclusively. For more information, see [Defender for Identity sensor v3.x service account requirements](deploy-sensor-v3.md#service-account-requirements).
 
 >[!NOTE]
->Regardless of the Directory Service Accounts configured, the sensor service operates under the LocalService identity, and the updater service operates under the LocalSystem identity.
+>Regardless of the Directory Service Accounts configured, the sensor service operates under the LocalSystem identity, and the updater service operates under the LocalSystem identity.
 
 
 While a DSA is optional in some scenarios, we recommend that you configure a DSA for Defender for Identity for full security coverage.
@@ -20,7 +23,7 @@ For example, when you have a DSA configured, the DSA is used to connect to the d
 
 A DSA is required for the following features and functionality:
 
-- When working with a sensor installed on an [AD FS / AD CS server](active-directory-federation-services.md).
+- When working with a sensor installed on an [AD FS, AD CS, or Microsoft Entra Connect server](active-directory-federation-services.md).
 
 - Requesting member lists for local administrator groups from devices seen in network traffic, events and ETW activities via a [SAM-R call](remote-calls-sam.md) made to the device. 
 

@@ -5,13 +5,11 @@ ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: troubleshooting
 ms.subservice: ngp
-search.appverid: met150
 ms.date: 03/20/2026
 ---
 
@@ -189,8 +187,8 @@ For more information, see [Performance analyzer for Microsoft Defender Antivirus
 
 One outcome of this process might be identifying files or paths that you want to exclude from antivirus scans to improve performance. Make sure to review the following articles:
 
-- [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md)
-- [Contextual file and folder exclusions](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md)
+- [Exclusions overview](defender-endpoint-exclusions-overview.md)
+- [Contextual file and folder exclusions](microsoft-defender-antivirus-exclusions-overview.md#contextual-exclusions)
 
 ## Reviewing Event logs
 
@@ -227,4 +225,4 @@ Get-WinEvent -LogName 'Microsoft-Windows-Windows Defender/Operational' | where i
 ## See also
 
 - [About scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md)
-- [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md)
+- [Exclusions overview](defender-endpoint-exclusions-overview.md)

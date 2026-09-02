@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint on Linux resources
 ms.reviewer: gopkr, yujiao
 description: Describes resources for Microsoft Defender for Endpoint on Linux, including how to uninstall it, how to collect diagnostic logs, CLI commands, and known issues with the product.
@@ -6,15 +6,13 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
 ms.topic: troubleshooting-general
 ms.subservice: linux
-search.appverid: met150
-ms.date: 12/14/2025
+ms.date: 04/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -135,33 +133,6 @@ The following table lists commands for some of the most common scenarios. Run `m
 
 ## Quarantine directory for Defender for Endpoint Linux
 The default directory for files quarantined by MDATP is `/var/opt/microsoft/mdatp/quarantine`. For best results, use the command `MDATP threat quarantine` to manage quarantined files, rather than moving or modifying files directly in the quarantine directory. Direct file operations aren't recommended - always use the CLI for safe and supported quarantine management.
-
-## Uninstall Defender for Endpoint on Linux
-
-There are several ways to uninstall Defender for Endpoint on Linux. If you are using a configuration tool such as Puppet, follow the package uninstallation instructions for the configuration tool.
-
-### Offboard Linux devices
-
-To prevent decommissioned devices from showing up in your device inventory, and to help ensure a more accurate Secure Score rating, add device tags to devices that you want to offboard from Defender for Endpoint. Otherwise, you'll see those devices in the [Device inventory](machines-view-overview.md) for 180 days.
-
-1. Create a [device tag](machine-tags.md), and name the tag `decommissioned`. Assign the tag to the Linux devices that you want to offboard from Defender for Endpoint.
-
-1. Create a [Device group](machine-groups.md) and name it something like, `Decommissioned Linux`. Assign this tag to an appropriate user group.
-   
-1. In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, select **Settings** > **Offboard**. In the **Select operating system to start offboarding process**, select **Linux Server**, and then select a deployment method.  
-
-   :::image type="content" source="media/offboard-linux.png" alt-text="Screenshot showing Offboarding page in the Microsoft Defender portal.":::
-
-   Or, if you're using a non-Microsoft device management solution, disable integration with Defender for Endpoint.
-
-1. Uninstall Defender for Endpoint on the devices.
-
-### Manual uninstallation
-
-- `sudo yum remove mdatp` for RHEL and variants(CentOS and Oracle Linux).
-- `sudo zypper remove mdatp` for SLES and variants.
-- `sudo apt-get purge mdatp` for Ubuntu and Debian systems.
-- `sudo dnf remove mdatp` for Mariner.
 
 ## Related content
 

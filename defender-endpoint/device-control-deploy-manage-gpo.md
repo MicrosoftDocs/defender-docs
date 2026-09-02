@@ -1,4 +1,4 @@
-﻿---
+---
 title: Deploy and manage device control in Microsoft Defender for Endpoint with Group Policy           
 description: Learn how to deploy and manage device control in Defender for Endpoint using Group Policy
 author: limwainstein
@@ -7,7 +7,6 @@ ms.date: 01/31/2025
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -15,8 +14,6 @@ ms.collection:
 ms.custom: 
 - partner-contribution
 ms.reviewer: joshbregman, tdoucette
-search.appverid: MET150
-f1.keywords: NOCSH
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

@@ -2,25 +2,21 @@
 title: Get incident notifications by email
 description: Set up email notifications to get notified of new incidents or updates to incidents in the Microsoft Defender portal.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
 ms.topic: how-to
-search.appverid: 
-  - MOE150
-  - MET150
-ms.date: 01/17/2025
+ms.date: 06/15/2026
 appliesto:
 - Microsoft Defender XDR
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
-# Get incident notifications by email
+# Get incident notifications by email in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -69,6 +65,9 @@ Follow these steps to create a new rule and customize email notification setting
 6. Select **Next**. On the **Review rule** page, review the settings of the rule, and then select **Create rule**. Recipients will start receiving incident notifications through email based on the settings.
 
 To edit an existing rule, select it from the list of rules. On the pane with the rule name, select **Edit rule** and make your changes on the **Basics**, **Notification settings**, and **Recipients** pages.
+
+> [!WARNING]
+> Deleting a notification rule removes it permanently and can't be undone.
 
 To delete a rule, select it from the list of rules. On the pane with the rule name, select **Delete**.
 

@@ -1,30 +1,29 @@
 ---
 title: View and manage actions in the Action center
 description: View and manage remediation actions for affected assets using the Action center in the Microsoft Defender portal.
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords: 
-- NOCSH
 ms.author: guywild
 author: guywi-ms
-manager: orspodek
 ms.localizationpriority: medium
-ms.date: 04/28/2025
-audience: ITPro
+ms.date: 06/15/2026
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
 ms.custom: 
+- msecd-doc-authoring-1014
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
 appliesto:
 - Microsoft Defender XDR
+ai-usage: ai-assisted
 #customer intent: As a SOC analyst, I want to understand how to view and manage remediation actions in the Action center
 ---
 
 # View and manage actions in the Action center
+
+[!INCLUDE [defender-endpoint-air-deprecation](../includes/defender-endpoint-air-deprecation.md)]
 
 Threat protection features in Microsoft Defender XDR can result in certain remediation actions. Here are some examples:
 
@@ -33,12 +32,12 @@ Threat protection features in Microsoft Defender XDR can result in certain remed
 - Your security operations team can take remediation actions manually, such as during [advanced hunting](advanced-hunting-overview.md) or while investigating [alerts](investigate-alerts.md) or [incidents](investigate-incidents.md).
 
 > [!NOTE]
-> You must have [appropriate permissions](m365d-action-center.md#required-permissions-for-action-center-tasks) to approve or reject remediation actions. For more information, see the [prerequisites](m365d-configure-auto-investigation-response.md#prerequisites-for-automated-investigation-and-response-in-microsoft-365-defender).
+> You must have [required permissions for Action center tasks](m365d-action-center.md#required-permissions-for-action-center-tasks) to approve or reject remediation actions. For more information, see the [prerequisites for automated investigation and response](m365d-configure-auto-investigation-response.md#prerequisites-for-automated-investigation-and-response-in-microsoft-365-defender).
 
 To navigate to the Action center, take one of the following steps:
 
-- Go to [https://security.microsoft.com/action-center](https://security.microsoft.com/action-center); or
-- In the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), in the Automated investigation & response card, select **Approve in Action Center**.
+- Go to the [Microsoft Defender Action center](https://security.microsoft.com/action-center); or
+- In the [Microsoft Defender portal](https://security.microsoft.com), in the Automated investigation & response card, select **Approve in Action Center**.
 
 ## Review pending actions in the Action center
 
@@ -48,7 +47,7 @@ It's important to approve (or reject) pending actions as soon as possible so tha
 
 2. In the navigation pane under Actions and submissions, choose **Action center**.
 
-3. In the Action center, on the **Pending** tab, select an item in the list. Its flyout pane opens. Here's an example.
+3. In the Action center, on the **Pending** tab, select an item in the list. The item's flyout pane opens. Here's an example.
 
    :::image type="content" source="media/air-actioncenter-itemselected.png" alt-text="The options to approve or reject an action" lightbox="media/air-actioncenter-itemselected.png":::
 
@@ -74,7 +73,9 @@ If you determine that a device or a file isn't a threat, you can undo the remedi
 
 ### Undo one remediation action
 
-1. Go to the Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) and sign in.
+To undo a single remediation action:
+
+1. Go to the [Microsoft Defender Action center](https://security.microsoft.com/action-center) and sign in.
 
 2. On the **History** tab, select an action that you want to undo.
 
@@ -82,13 +83,16 @@ If you determine that a device or a file isn't a threat, you can undo the remedi
 
 ### Undo multiple remediation actions
 
+To undo multiple remediation actions at once:
+
 1. Go to the Action center (https://security.microsoft.com/action-center) and sign in.
 
 2. On the **History** tab, select the actions that you want to undo. Make sure to select items that have the same Action type. A flyout pane opens.
 
 3. In the flyout pane, select **Undo**.
 
-### To remove a file from quarantine across multiple devices 
+<a name="to-remove-a-file-from-quarantine-across-multiple-devices"></a>
+### Remove a file from quarantine across multiple devices 
 
 1. Go to the Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) and sign in.
 

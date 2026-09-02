@@ -1,11 +1,8 @@
 ---
 title: Configuring and controlling external email forwarding in Microsoft 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
 ms.date: 10/06/2025
-audience: ITPro
 ms.topic: overview
 ms.collection: 
 - m365-security
@@ -17,7 +14,6 @@ ms.custom:
 - adminvideo
 description: This article covers external email forwarding, Automatic forwarding, 5.7.520 Access Denied messages, disabling external forwarding, 'Your administrator has disabled external forwarding' messages, and outbound anti-spam policy.
 ms.service: defender-office-365
-search.appverid: met150
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>

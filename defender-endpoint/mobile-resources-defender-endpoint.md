@@ -6,13 +6,11 @@ ms.reviewer: priyankagill
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: concept-article
 ms.subservice: ngp
-search.appverid: met150
 ms.date: 12/17/2025
 ---
 # Resources for Microsoft Defender for Endpoint for mobile devices

@@ -1,15 +1,9 @@
 ---
 title: Security Operations Guide for Teams protection
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.collection:
   - m365-security
   - tier1
@@ -24,7 +18,7 @@ appliesto:
 
 After you [configure Microsoft Teams protection in Microsoft Defender for Office 365](mdo-support-teams-quick-configure.md), you need to integrate Teams protection capabilities into your Security Operations (SecOps) response processes. This process is critical to ensure a high-quality, reliable approach to protect, detect, and respond to collaboration-related security threats.
 
-Involving the SecOps team during the deployment/pilot phases ensures your organization is ready to deal with threats. Teams protection capabilities in Defender for Office 365 are natively integrated into the existing Defender for Office 365 and Defender XDR SecOps tools and work flows.
+Involving the SecOps team during the deployment/pilot phases ensures your organization is ready to deal with threats. Teams protection capabilities in Defender for Office 365 are natively integrated into the existing Defender for Office 365 and Defender SecOps tools and work flows.
 
 Another important step is to ensure SecOps team members have the appropriate permissions to do their tasks.
 
@@ -36,7 +30,7 @@ Another important step is to ensure SecOps team members have the appropriate per
 
 When users report Teams messages or calls as malicious or non malicious, the reported items are sent to Microsoft and/or the reporting mailbox as defined by the [user reported settings in Defender for Office 365](submissions-user-reported-messages-custom-mailbox.md).
 
-The following alerts are automatically generated and correlated to Defender XDR Incidents for malicious and non malicious user reported items in Teams:
+The following alerts are automatically generated and correlated to Defender Incidents for malicious and non malicious user reported items in Teams:
 
 - **Teams message reported by user as security risk**
 - **Teams message message by user as not security risk**
@@ -46,7 +40,7 @@ The following alerts are automatically generated and correlated to Defender XDR 
 > [!TIP]
 > Currently, these alerts don't generate automated investigation and response (AIR) investigations.
 
-We strongly recommend that SecOps team members start triage and investigation from the [Defender XDR incidents queue in the Microsoft Defender portal](/defender-office-365/mdo-sec-ops-manage-incidents-and-alerts) or SIEM/SOAR integration.
+We strongly recommend that SecOps team members start triage and investigation from the [Defender incidents queue in the Microsoft Defender portal](/defender-office-365/mdo-sec-ops-manage-incidents-and-alerts) or SIEM/SOAR integration.
 
 SecOps team members can review submitted Teams message or call details in the following locations in the Defender portal:
 
@@ -85,16 +79,13 @@ SecOps team members can also use allow entries in the Tenant Allow/Block List to
 
 ## Enable SecOps to hunt for threats and detections in Microsoft Teams
 
-SecOps team members can proactively hunt for potentially malicious Teams messages, URL clicks in Teams, and file detected as malicious. You can use this information to find potential threats, analyze patterns, and develop custom detections in Defender XDR to automatically generate incidents.
+SecOps team members can proactively hunt for potentially malicious Teams messages, URL clicks in Teams, and file detected as malicious. You can use this information to find potential threats, analyze patterns, and develop custom detections in Microsoft Defender to automatically generate incidents.
 
 - On the **Explorer** page (Threat Explorer) in the Defender portal at <https://security.microsoft.com/threatexplorerv3>:
   - **Content malware** tab: This tab contains files detected by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams. You can use the [available filters](threat-explorer-real-time-detections-about.md#filterable-properties-in-the-content-malware-view-in-threat-explorer-and-real-time-detections) to hunt on detection data.
   - **URL click** tab: This tab contains all user clicks on URLs in email, in supported Office files in SharePoint and OneDrive, and in Microsoft Teams. You can use the [available filters](threat-explorer-real-time-detections-about.md#filterable-properties-in-the-url-clicks-view-in-threat-explorer) to hunt on detection data.
 
 - On the **Advanced hunting** page in the Defender portal at <https://security.microsoft.com/v2/advanced-hunting>. The following hunting tables are available for Teams-related threats:
-
-  > [!NOTE]
-  > The hunting tables are currently in Preview.
 
   - [MessageEvents](/defender-xdr/advanced-hunting-messageevents-table): Contains raw data about every internal and external Teams message that included a URL. Sender address, Sender display name, Sender type, and more are available in this table.
   - [MessagePostDeliveryEvents](/defender-xdr/advanced-hunting-messagepostdeliveryevents-table): Contains raw data about ZAP events on Teams messages.

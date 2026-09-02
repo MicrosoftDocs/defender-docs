@@ -1,19 +1,17 @@
 ---
-title: Edit or delete roles Microsoft Defender unified role-based access control (RBAC)
+title: Edit or delete roles in Microsoft Defender unified role-based access control (RBAC)
 description: Edit or delete roles in Microsoft Defender Security portal experiences using role-based access control (RBAC)
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
-ms.custom: 
+ms.custom: msecd-doc-authoring-1014
 ms.topic: how-to
-ms.date: 03/02/2025
+ms.date: 06/15/2026
 ms.reviewer: 
-search.appverid: met150
 appliesto:
 - Microsoft Defender for Endpoint Plan 2
 - Microsoft Defender XDR
@@ -23,6 +21,7 @@ appliesto:
 - Microsoft Defender for Cloud
 - Microsoft Security Exposure Management
 - Microsoft Defender for Cloud Apps
+ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to edit or delete roles in Microsoft Defender unified RBAC so that I can manage permissions and access to Microsoft Defender portal experiences.
 ---
 
@@ -37,7 +36,7 @@ In Microsoft Defender unified role-based access control (RBAC), you can edit and
 The following steps guide you on how to edit roles in Microsoft Defender unified RBAC:
 
 > [!IMPORTANT]
-> You must be a Security Administrator or higher in Microsoft Entra ID, or have all the Authorization permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission prerequisites](manage-rbac.md#permissions-prerequisites).
+> You must be a Security Administrator or higher in Microsoft Entra ID, or have all the Authorization permissions assigned in Microsoft Defender Unified RBAC to perform this task. For more information on permissions, see [Permission prerequisites](manage-rbac.md#permissions-prerequisites).
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as security administrator or higher.
 
@@ -66,9 +65,7 @@ If the workload is active, all assigned user permissions are deleted by removing
 ## Export roles
 
 > [!IMPORTANT]
-> Starting February 16, 2025, the Microsoft Defender unified RBAC model will be the default permissions model for new Microsoft Defender Endpoint tenants. These new tenants won't have the capability to export roles and permissions from the current model. Defender for Endpoint tenants with roles and permissions assigned or exported prior to this date will maintain their current roles and permissions configuration.
->
-> Starting March 2, 2025, new Microsoft Defender for Identity tenants will also have the unified RBAC model as their default permissions model. They won't be able to export roles and permissions from the current model. Existing Defender for Identity tenants will maintain their current roles and permissions configuration.
+> Starting 2025, the Microsoft Defender unified RBAC model is the default permissions model for new Microsoft Defender Endpoint tenants and Microsoft Defender for Identity tenants. These tenants can't export roles and permissions from the old model. Defender for Endpoint or Defender for Identity tenants with roles and permissions assigned or exported prior to this date maintain their old roles and permissions configuration.
 
 The Export feature enables you to export the following roles data:
 
@@ -86,7 +83,7 @@ The CSV also includes a snapshot of the Defender unified RBAC activation status 
 The following steps guide you on how to export roles in Microsoft Defender unified RBAC:
 
 > [!NOTE]
-> To export roles, you must be a Security Administrator or higher in Microsoft Entra ID, or have the **Authorization (manage)** permission assigned for all data sources in Microsoft Defender XDR Unified RBAC and have at least one workload activated for Defender XDR Unified RBAC.
+> To export roles, you must be a Security Administrator or higher in Microsoft Entra ID, or have the **Authorization (manage)** permission assigned for all data sources in Microsoft Defender Unified RBAC and have at least one workload activated for Defender Unified RBAC.
 >
 >For more information on permissions, see [Permission prerequisites](manage-rbac.md#permissions-prerequisites).
 
@@ -102,7 +99,8 @@ The following steps guide you on how to export roles in Microsoft Defender unifi
 
 A CSV file containing all the roles data is generated and downloaded to the local computer.
 
-## Next steps
+<a name="next-steps"></a>
+## Related content
 
 - [Learn about RBAC permissions](custom-permissions-details.md)
 - [Map existing RBAC roles to Microsoft Defender unified RBAC roles](compare-rbac-roles.md)

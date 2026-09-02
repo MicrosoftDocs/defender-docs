@@ -1,4 +1,4 @@
-﻿---
+---
 title: Run and customize scheduled and on-demand scans
 description: Customize and initiate Microsoft Defender Antivirus scans on endpoints across your network
 ms.service: defender-endpoint
@@ -14,7 +14,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -28,7 +27,7 @@ You can use Group Policy, PowerShell, and Windows Management Instrumentation (WM
 
 Article | Description
 ---|---
-[Configure and validate file, folder, and process-opened file exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md) | You can exclude files (including files modified by specified processes) and folders from on-demand scans, scheduled scans, and always-on real-time protection monitoring and scanning
+[Configure and validate file, folder, and process-opened file exclusions in Microsoft Defender Antivirus scans](microsoft-defender-antivirus-exclusions-configure.md) | You can exclude files (including files modified by specified processes) and folders from on-demand scans, scheduled scans, and always-on real-time protection monitoring and scanning
 [Configure Microsoft Defender Antivirus scanning options](configure-advanced-scan-types-microsoft-defender-antivirus.md) | You can configure Microsoft Defender Antivirus to include certain types of email storage files, back-up or reparse points, and archived files (such as .zip files) in scans. You can also enable network file scanning
 [Configure remediation for scans](configure-remediation-microsoft-defender-antivirus.md) | Configure what Microsoft Defender Antivirus should do when it detects a threat, and how long quarantined files should be retained in the quarantine folder
 [About scheduled scans](schedule-antivirus-scans.md) | Learn about recurring (scheduled) scans, including when they should run and whether they run as full or quick scans

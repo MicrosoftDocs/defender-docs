@@ -1,24 +1,21 @@
 ---
 title: Tune anti-phishing protection
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid: 
 ms.collection: 
   - m365-security
   - tier2
-  - MET150
-description: Admins can learn to identify the reasons why and how a phishing message what delivered in Microsoft 365, and what to do to prevent more phishing messages in the future.
+description: Identify why a phishing message was delivered in Microsoft 365 and learn how to adjust anti-phishing settings to help prevent similar messages in the future.
 ms.service: defender-office-365
-ms.date: 07/02/2025
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Tune anti-phishing protection
@@ -35,7 +32,7 @@ If you have Microsoft Defender for Office 365 (included or in an add-on subscrip
 - [Safe Attachments in Microsoft Defender for Office 365](safe-attachments-policies-configure.md)
 - [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md). You can temporarily increase the **Phishing email threshold** in the policy from **Standard** to **Aggressive**, **More aggressive**, or **Most aggressive**.
 
-Verify these policies are working. Safe Links and Safe Attachments protection is turned on by default via Built-in protection in [preset security policies](preset-security-policies.md). Anti-phishing has a default policy that applies to all recipients where anti-spoofing protection is turned on by default. Impersonation protection isn't turned on in the policy, and therefore needs to be configured. For instructions, see [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md).
+Verify that Safe Links, Safe Attachments, and anti-phishing policies are working. Safe Links and Safe Attachments protection is turned on by default via Built-in protection in [preset security policies](preset-security-policies.md). Anti-phishing has a default policy that applies to all recipients where anti-spoofing protection is turned on by default. Impersonation protection isn't turned on in the default anti-phishing policy, and therefore needs to be configured. For instructions, see [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md).
 
 ## Report the phishing message to Microsoft
 
@@ -43,9 +40,9 @@ Reporting phishing messages is helpful in tuning the filters that are used to pr
 
 ## Inspect the message headers
 
-You can examine the headers of the phishing message to see if there's anything that you can do yourself to prevent more phishing messages from coming through. In other words, examining the messages headers can help you identify any settings in your organization that were responsible for allowing the phishing messages in.
+You can examine the headers of the phishing message to see whether any of your organization's settings allowed similar phishing messages to be delivered. In other words, examining the message headers can help you identify settings in your organization that allowed this phishing message or similar phishing messages to be delivered.
 
-Specifically, you should check the **X-Forefront-Antispam-Report** header field in the message headers for indications of skipped filtering for spam or phishing in the Spam Filtering Verdict (SFV) value. Messages that skip filtering have an entry of `SCL:-1`, which means one of your settings overrode the phishing verdict and allowed delivery of the message. For more information on how to get message headers and the complete list of all available anti-spam and anti-phishing message headers, see [Anti-spam message headers](message-headers-eop-mdo.md).
+Specifically, check the Spam Filtering Verdict (SFV) value in the **X-Forefront-Antispam-Report** header field. The SFV value indicates whether spam or phishing filtering was skipped. Messages that skip filtering have an entry of `SCL:-1`, which means one of your settings overrode the phishing verdict and allowed delivery of the message. For more information on how to get message headers and the complete list of all available anti-spam and anti-phishing message headers, see [Anti-spam message headers](message-headers-eop-mdo.md).
 
 > [!TIP]
 > You can copy and paste the contents of a message header into the [Message Header Analyzer](https://mha.azurewebsites.net/) tool. This tool helps parse headers and presents them in a human readable format.
@@ -54,7 +51,9 @@ You can also use the [configuration analyzer](configuration-analyzer-for-securit
 
 ## Best practices to stay protected
 
-- On a monthly basis, run [Secure Score](/defender-xdr/microsoft-secure-score) to assess your organization's security settings.
+Use the following best practices to reduce future phishing risk and validate your protection settings.
+
+- On a monthly basis, run [Microsoft Secure Score](/defender-xdr/microsoft-secure-score), a security assessment tool that measures your organization's security posture, to assess your organization's security settings.
 
 - Use [Threat Explorer and real-time detections](threat-explorer-real-time-detections-about.md) to search for good messages quarantined by mistake (false positives) or delivered bad messages (false negatives). You can search by sender, recipient, or message ID. For a quarantined message, use the **Detection technology** value to find an appropriate method to override. For an allowed message, view which policy allowed the message.
 
@@ -72,7 +71,7 @@ You can also use the [configuration analyzer](configuration-analyzer-for-securit
 
 - Periodically review the [Threat Protection Status report](reports-defender-for-office-365.md#threat-protection-status-report) for phishing detections.
 
-- Don't include your Microsoft 365 domains in the allowed senders list or the allowed domains list in anti-spam policies. Although this configuration prevents blocking some legitimate messages, it also results in the delivery of malicious messages normally blocked by the spam and/or phishing filters. Instead of allowing the domain, correct the underlying email delivery problem.
+- Don't include your Microsoft 365 domains in the allowed senders list or the allowed domains list in anti-spam policies. Although adding your Microsoft 365 domains to the allowed senders list or allowed domains list prevents blocking some legitimate messages, it also results in the delivery of malicious messages normally blocked by the spam and/or phishing filters. Instead of allowing the domain, correct the underlying email delivery problem.
 
   If Microsoft 365 blocks legitimate messages from senders in your Microsoft 365 domain, completely configure the SPF, DKIM, and DMARC records in DNS for _all_ of your Microsoft 365 domains:
 

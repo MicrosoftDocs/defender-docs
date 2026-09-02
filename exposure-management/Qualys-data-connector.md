@@ -2,7 +2,7 @@
 title: Integrate Qualys data connector in Microsoft Security Exposure Management
 description: Learn how to the Qualys data connector in Microsoft Security Exposure Management.
 ms.topic: overview
-ms.date: 09/24/2024
+ms.date: 07/16/2026
 ---
 
 # Qualys data connector
@@ -44,25 +44,25 @@ To establish a connection with Qualys in Exposure Management, follow these steps
 
 Qualys connector retrieves data on compute devices, including machines and virtual machines, and vulnerability findings from Qualys on those assets. It also retrieves some networking data to identify those devices.
 
-| **Category**            | **Properties**                                                                 |
-|-------------------------|--------------------------------------------------------------------------------|
-| **Assets/devices**      | - Gateway address<br>- FQDN<br>- IP address<br>- MAC address<br>- OS information<br>- Qualys criticality data |
-| **Vulnerability findings** | Qualys retrieves CVE findings on the assets that it ingests.                    |
+|Category|Properties|
+|---|---|
+|**Assets/devices**|- Gateway address<br>- FQDN<br>- IP address<br>- MAC address<br>- OS information<br>- Qualys criticality data|
+|**Vulnerability findings**|Qualys retrieves CVE findings on the assets that it ingests.|
 
 ## Troubleshooting the Qualys data connector
 
 Here are some common issues that might arise when configuring the Qualys Connector, and suggestions for how to resolve them.
 
-| **Error Type**                                               | **Troubleshooting Action**                                   |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Error code** 401: Authorization failure                    | An authorization failure indicates that credentials might not be correct, or there might not be sufficient permissions to access the Qualys data. Check your credentials and make sure they're correct and valid. Also check that your credentials have the required permissions. See the Qualys [configuration section](#qualys-configuration) for details on how to assign the appropriate role and scope. <br>You can validate your user credentials by running the following command:<br>curl -u "user:password" -H "X-Requested-With: Curl" -X "POST"-d "action=list" "[https://qualysapi.qg1.apps.qualys.ca/qps/rest/2.0/search/am/hostasset](https://qualysapi.qg1.apps.qualys.ca/qps/rest/2.0/search/am/hostasset)" >output.txt |
-| **Error code** 409: Possible insufficient permissions        | Qualys connector utilizes the knowledge_base API, which requires specific permissions. You can see more details in the KnowledgeBase section of [this Qualys API document](https://cdn2.qualys.com/docs/qualys-api-vmpc-user-guide.pdf). <br>To validate the provided user has sufficient permissions, run the following command and verify it succeeds:<br>curl -u "user:password" -H "X-Requested-With: Curl" -X "POST"-d "action=list""[https://qualysapi.qg1.apps.qualys.ca/api/2.0/fo/knowledge_base/vuln/](https://qualysapi.qg1.apps.qualys.ca/api/2.0/fo/knowledge_base/vuln/)" >output.txt <br>In case it fails, refer to Qualys documentation to mitigate. |
-| **Error code 403:** Access forbidden error                   | This error indicates that the provided credentials lack the necessary permissions to run the requested APIs. Update your credentials with the proper permissions as described in the [configuration section](#qualys-configuration), and make sure they have at minimum the Read Asset permissions. |
-| **Error code 404:** Not found error                          | This error indicates that the requested endpoint wasn't found to be reachable. Verify that your Qualys API endpoint is correct, see the [configuration section](#qualys-configuration) for details. |
-| **Error code 429** 'Too many requests"                       | The system periodically pulls data from the configured external providers, which might have a limit on the number of concurrent requests. We recommend creating a dedicated user or account for the connector to avoid reaching this limit. |
-| 'Temporary disconnected' or 'Temporary failure' error message | In the case where this error message appears without any additional information, verify the connector configuration (API endpoint and credentials). If they're valid and the issue doesn't resolve on its own, contact Support. |
-| Not seeing my assets or the vulnerabilities reported by Qualys in the ingested data | See [Retrieved data](#retrieved-data) for a description of the data expected to be retrieved by the Qualys connector. If there's still missing data, contact Support. |
-| Qualys allowed IPs need to be configured to enable Exposure Management connectors to access Qualys | Read how to add the set of IPs to add to your allowlist here: [Allowlist IP addresses](configure-data-connectors.md#allowlist-ip-addresses). |
+|Error Type|Troubleshooting Action|
+|---|---|
+|**Error code** 401: Authorization failure|An authorization failure indicates that credentials might not be correct, or there might not be sufficient permissions to access the Qualys data. Check your credentials and make sure they're correct and valid. Also check that your credentials have the required permissions. See the Qualys [configuration section](#qualys-configuration) for details on how to assign the appropriate role and scope. <br>You can validate your user credentials by running the following command:<br>curl -u "user:password" -H "X-Requested-With: Curl" -X "POST"-d "action=list" "`https://qualysapi.qg1.apps.qualys.ca/qps/rest/2.0/search/am/hostasset`" >output.txt|
+|**Error code** 409: Possible insufficient permissions|Qualys connector utilizes the knowledge_base API, which requires specific permissions. You can see more details in the KnowledgeBase section of [this Qualys API document](https://cdn2.qualys.com/docs/qualys-api-vmpc-user-guide.pdf). <br>To validate the provided user has sufficient permissions, run the following command and verify it succeeds:<br>curl -u "user:password" -H "X-Requested-With: Curl" -X "POST"-d "action=list""`https://qualysapi.qg1.apps.qualys.ca/api/2.0/fo/knowledge_base/vuln/`" >output.txt <br>In case it fails, refer to Qualys documentation to mitigate.|
+|**Error code 403:** Access forbidden error|This error indicates that the provided credentials lack the necessary permissions to run the requested APIs. Update your credentials with the proper permissions as described in the [configuration section](#qualys-configuration), and make sure they have at minimum the Read Asset permissions.|
+|**Error code 404:** Not found error|This error indicates that the requested endpoint wasn't found to be reachable. Verify that your Qualys API endpoint is correct, see the [configuration section](#qualys-configuration) for details.|
+|**Error code 429** 'Too many requests"|The system periodically pulls data from the configured external providers, which might have a limit on the number of concurrent requests. We recommend creating a dedicated user or account for the connector to avoid reaching this limit.|
+|'Temporary disconnected' or 'Temporary failure' error message|In the case where this error message appears without any additional information, verify the connector configuration (API endpoint and credentials). If they're valid and the issue doesn't resolve on its own, contact Support.|
+|Not seeing my assets or the vulnerabilities reported by Qualys in the ingested data|See [Retrieved data](#retrieved-data) for a description of the data expected to be retrieved by the Qualys connector. If there's still missing data, contact Support.|
+|Qualys allowed IPs need to be configured to enable Exposure Management connectors to access Qualys|Read how to add the set of IPs to add to your allowlist here: [Allowlist IP addresses](configure-data-connectors.md#allowlist-ip-addresses).|
 
 ## Next steps
 

@@ -13,9 +13,6 @@ ms.collection:
 - m365-initiative-defender-business
 - tier1
 ms.reviewer: nehabha
-search.appverid: MET150
-f1.keywords: NOCSH
-audience: Admin
 ---
 
 # Mobile threat defense capabilities in Microsoft Defender for Business

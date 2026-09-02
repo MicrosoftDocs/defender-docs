@@ -1,45 +1,47 @@
 ---
 title: Manage custom detection rules in Microsoft Defender XDR
 description: Learn how to manage custom detections rules based on advanced hunting queries.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - m365initiative-m365-defender
   - tier2
 ms.custom:
+- msecd-doc-authoring-1014
 - cx-ti
 - cx-ah
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 05/07/2025
+ms.date: 06/16/2026
+ai-usage: ai-assisted
 ---
 
 # Manage existing custom detection rules
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-You can view the list of existing custom detection rules, check their previous runs, and review the alerts that were triggered. You can also run a rule on demand and modify it.
+## Manage custom detection rules
+
+You can view the list of existing custom detection rules, check their previous runs, and review the alerts that were triggered. You can also run a rule on demand, modify it, or create a new custom detection rule directly from the list.
 
 > [!TIP]
-> Alerts raised by custom detections are available over alerts and incident APIs. For more information, see [Supported Microsoft Defender XDR APIs](api-supported.md).
+> Alerts raised by custom detections are available over alerts and incident APIs. For more information, see [Supported Microsoft Defender APIs](api-supported.md).
 
-For users who have onboarded a Microsoft Sentinel workspace to the unified Microsoft Defender portal, the custom detection rules list includes [analytics rules](advanced-hunting-defender-use-custom-rules.md#analytics-rules). The following sections also apply to analytics rules unless otherwise indicated.
+For users who have onboarded a Microsoft Sentinel workspace to the unified Microsoft Defender portal, the custom detection rules list includes [analytics rules](advanced-hunting-defender-use-custom-rules.md#analytics-rules). The [View existing rules](#view-existing-rules) and [View rule details, modify rule, and run rule](#view-rule-details-modify-rule-and-run-rule) sections also apply to analytics rules unless otherwise indicated.
 
-### View existing rules
+## View existing rules
 
 To view your existing custom detection rules and analytics rules, navigate to **Hunting** > **Custom detection rules**. 
 
 :::image type="content" source="media/custom-detection-manage/unified-custom-det-list-tb.png" alt-text="Screenshot of the Custom detection rules page in the Microsoft Defender portal." lightbox="media/custom-detection-manage/unified-custom-det-list.png":::
+
+To create a new custom detection rule directly from the **Custom detection rules** page, select **+ Create detection rule**. Selecting **+ Create detection rule** opens the custom detection rule wizard where you can define the query, alert details, and response actions. For more information, see [Create custom detection rules](custom-detection-rules.md).
 
 You can filter for any column by going to **Add filter**, selecting the columns you want to filter for, and selecting **Add**. For each of the chosen columns, select the corresponding pill beside **Filters:**, select the columns, then **Apply**.
 
@@ -54,21 +56,21 @@ The page lists all the rules with the following run information:
 - **Next run** - The next scheduled run
 - **Status** - Whether a rule has been turned on or off
 
-### View rule details, modify rule, and run rule
+## View rule details, modify rule, and run rule
 
 To view comprehensive information about a custom detection rule or an analytics rule, go to **Hunting** > **Custom detection rules** and then select the name of rule. You can then view general information about the rule, including information, its run status, and scope. The page also provides the list of triggered alerts and actions.
 
 :::image type="content" source="media/custom-detection-manage/custom-detect-rules-view.png" alt-text="Screenshot of the Custom detection rule details page in the Microsoft Defender portal." lightbox="media/custom-detection-manage/custom-detect-rules-view.png":::
 
-You can also take the following actions on the rule from this page:
+You can also take the following actions on the rule from the rule details page:
 
 - **Open detection rule page** - opens the detection rule page to view triggered alerts and review actions (for custom detection rules only)
 - **Run** - runs the rule immediately; this also resets the interval for the next run (for custom detection rules only)
-- **Edit** - allows you to modify the rule without changing the query
-- **Modify query** - allows you to edit the query in advanced hunting
+- **Edit** - opens the rule wizard where you can modify the rule settings and the query
+- **Modify query** - opens the query directly in advanced hunting for editing
 - **Turn on** / **Turn off** - allows you to enable the rule or stop it from running
-- **Delete** - allows you to turn off the rule and remove it
-- **Exclude from correlation** - allows you to exclude an analytics rule from correlation. This action is in preview and is for analytics rules only. See [Exclude analytics rules from correlation in Microsoft Defender XDR (preview)](exclude-analytics-rules-correlation.md) for more information.
+- **Delete** - turns off the rule and permanently removes it
+- **Include or exclude from correlation** - allows you to include or exclude an analytics rule from correlation. See [Manage analytics rule correlation settings in Microsoft Defender XDR](exclude-analytics-rules-correlation.md) for more information.
 
 #### View and manage triggered alerts 
 
@@ -86,7 +88,8 @@ In the rule details screen (**Hunting** \> **Custom detections** \> **[Rule name
 > To quickly view information and take action on an item in a table, use the selection column [&#10003;] at the left of the table.
 
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 - [Custom detections overview](custom-detections-overview.md)
 - [Advanced hunting overview](advanced-hunting-overview.md)

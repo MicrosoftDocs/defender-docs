@@ -1,13 +1,11 @@
-﻿---
+---
 title: Onboard non-persistent virtual desktop infrastructure (VDI) devices
 description: Deploy the configuration package on virtual desktop infrastructure (VDI) device so that they're onboarded to Microsoft Defender for Endpoint service.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.reviewer: pahuijbr; yonghree
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -21,7 +19,7 @@ appliesto:
 
 ---
 
-# Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR
+# Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender
 
 Virtual desktop infrastructure (VDI) is an IT infrastructure concept that lets end users access enterprise virtual desktops instances from almost any device (such as your personal computer, smartphone, or tablet), eliminating the need for organization to provide users with physical machines. Using VDI devices reduces costs, as IT departments are no longer responsible for managing, repairing, and replacing physical endpoints. Authorized users can access the same company servers, files, apps, and services from any approved device through a secure desktop client or browser. 
 

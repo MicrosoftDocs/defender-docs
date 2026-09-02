@@ -1,24 +1,25 @@
 ---
-title: The Teams Message Entity Panel in Microsoft Defender for Office 365
+title: Teams message entity panel in Microsoft Defender for Office 365
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: how-to
 ms.localizationpriority: high
-search.appverid:
-  - MET150
-  - MOE150
 ms.assetid: e100fe7c-f2a1-4b7d-9e08-622330b83653
 ms.collection:
   - m365-security
   - tier1
   - highpri
-description: Describes the Teams message entity panel for Microsoft Teams in Microsoft Defender for Office 365, how it does post-breach work like ZAP and Safe Links and gives admins a single pane of glass on Teams chat and channel threats like suspicious URLs..
+description: Learn what information and actions are available in the Teams message entity panel in Microsoft Defender for Office 365 for investigating suspicious chats, channels, and URLs.
 ms.service: defender-office-365
-ms.date: 01/13/2026
+ms.date: 07/03/2026
 appliesto:
  - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ms.custom:
+  - sfi-ga-nochange
+  - sfi-image-nochange
+  - msecd-doc-authoring-1016
+ai-usage: ai-assisted
 ---
 
 # The Teams message entity panel in Microsoft Defender for Office 365
@@ -29,7 +30,7 @@ This article explains the information and actions on the Teams message entity pa
 
 ## Permissions and licensing for the Teams message entity panel
 
-To use the Email entity page, you need to be assigned permissions. You have the following options:
+To use the Teams message entity panel, you need to be assigned permissions. You have the following options:
 
 - _Full access_:
   - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in the **Organization Management**, **Security Administrator**, or **Quarantine Administrator** role groups.
@@ -51,7 +52,7 @@ There are no direct links to the Teams message entity panel from the top levels 
   - Select the **Teams messages** tab \> select an entry by clicking anywhere in the row other than the check box.
   - Select the **User reported** tab \> select a Teams entry by clicking anywhere in the row other than the check box. The details flyout that opens is the Teams message entity panel.
 
-    You can filter the entries by selecting :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** \> **Message type** \> **Teams**.
+    You can filter the entries by selecting :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** \> **Message type** \> **Teams**.
 
 - From the **Advanced Hunting** page at <https://security.microsoft.com/v2/advanced-hunting>, select a **TeamsMessageId** value (link) from the **MessageEvents** table in the query results. The details flyout that opens is the Teams message entity panel. For example:
 
@@ -79,9 +80,9 @@ The following information is available at the top of the Teams message entity pa
 - The actions that are available at the top of the flyout depend on where you opened the Teams message entity panel.
 
 > [!TIP]
-> To see details about other Teams messages without leaving the Email summary panel of the current message, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
+> To see details about other Teams messages without leaving the Teams message entity panel of the current message, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
-The next sections in the Teams message entity panel depend on where you opened it:
+The following sections in the Teams message entity panel depend on where you opened it:
 
 - [Quarantined Teams messages](quarantine-admin-manage-messages-files.md#view-quarantined-teams-message-details)
 - [View Teams admin submission details](submissions-admin.md#view-teams-admin-submission-details)
@@ -122,12 +123,14 @@ The rest of the Teams message entity panel contains the following information, r
 
 ## Remove users from Teams chats in the Teams message entity panel
 
+Use the following steps to remove users from a Teams chat from the Teams message entity panel.
+
 > [!TIP]
 > You can only remove _internal_ users in your organization from a chat.
 >
 > When you remove users from a chat, the sender of the chat isn't blocked, and the removed users can start new chats with the sender.
 
-In the Teams entity panel, you can select :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout (often under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions**) to remove users from a Teams chat.
+In the Teams entity panel, you can select :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** at the top of the flyout (often under :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More actions**) to remove users from a Teams chat.
 
 Do the following steps in the **Take action** wizard:
 
@@ -160,7 +163,8 @@ Removing users from a Teams chat is recorded on the **History** tab of the **Act
 > [!TIP]
 > Removing users from Teams chats doesn't create an investigation ID or an automated investigation.
 
-## For more information
+<a name="for-more-information"></a>
+## Related content
 
 [The Microsoft Defender for Office 365 Email Entity Page and how it works](mdo-email-entity-page.md)
 

@@ -1,15 +1,11 @@
 ---
 title: Zero Trust with Microsoft Defender for Office 365
-description: Microsoft Defender for Office 365 contributes to a strong Zero Trust strategy and architecture
-search.appverid: met150
+description: Learn how Microsoft Defender for Office 365 supports Zero Trust principles for email and collaboration workloads, including threat protection capabilities and architecture considerations.
 ms.service: microsoft-365-zero-trust
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
 
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
@@ -17,16 +13,21 @@ ms.collection:
   - essentials-privacy
   - essentials-security
   - essentials-compliance
-ms.date: 05/10/2024
+ms.date: 07/03/2026
 ms.topic: how-to
 adobe-target: true
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Zero Trust with Microsoft Defender for Office 365
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
+<a name="microsoft-defender-for-office-365-and-zero-trust"></a>
+## How Microsoft Defender for Office 365 supports Zero Trust
 
 Microsoft Defender for Office 365 is a cloud-based email filtering service that helps protect your organization against advanced threats to email and collaboration tools (for example, phishing, business email compromise, and malware attacks). Defender for Office 365 also provides investigation, Threat Hunting, and remediation capabilities to help security teams efficiently identify, prioritize, investigate, and respond to threats.
 
@@ -36,7 +37,7 @@ Microsoft Defender for Office 365 is a cloud-based email filtering service that 
 |---|---|---|
 |Always authenticate and authorize based on all available data points.|Limit user access with Just-In-Time and Just-Enough-Access (JIT/JEA), risk-based adaptive policies, and data protection.|Minimize blast radius and segment access. Verify end-to-end encryption and use analytics to get visibility, drive threat detection, and improve defenses.|
 
-Defender for Office 365 is the primary component of the **Assume breach** principle and an important element of your extended detection and response (XDR) deployment with Microsoft Defender XDR. Defender for Office 365 consists of three levels of protection based on your subscription level as described in the following table:
+Defender for Office 365 is the primary component of the **Assume breach** principle and an important element of your extended detection and response (XDR) deployment with Microsoft Defender XDR. Defender for Office 365 consists of three levels of protection based on your subscription level:
 
 |Protection level|Description|
 |---|---|
@@ -44,11 +45,12 @@ Defender for Office 365 is the primary component of the **Assume breach** princi
 |Defender for Office 365 P1|Protects email and collaboration from zero-day malware, phish, and business email compromise.|
 |Defender for Office 365 P2|Adds post-breach investigation, hunting, and response, as well as automation, and simulation (for training).|
 
-## Threat protection for Zero Trust
+<a name="threat-protection-for-zero-trust"></a>
+## Threat protection capabilities that support Zero Trust
 
 The Defender for Office 365 protection or filtering stack can be broken out into four phases:
 
-1. **Edge protection**: Edge blocks are designed to be automatic. For false positives, senders are notified and told how to address their issue. Connectors from trusted partners with limited reputation can ensure deliverability, or temporary overrides can be put in place, when onboarding new endpoints.
+1. **Edge protection**: Edge blocks are designed to be automatic. For false positives, senders are notified and told how to address their issue. Mail flow connectors that route messages from trusted partners with limited reputation can ensure deliverability, or temporary overrides can be put in place, when onboarding new endpoints.
 2. **Sender intelligence**: Critical for catching spam, bulk, impersonation, and unauthorized spoof messages, and also factor into phish detection.
 3. **Content filtering**: The filtering stack begins to handle the specific contents of the mail, including its hyperlinks and attachments.
 4. **Post-delivery protection**: After mail or file delivery, acting on mail that is in various mailboxes and files and links that appear in clients like Microsoft Teams.

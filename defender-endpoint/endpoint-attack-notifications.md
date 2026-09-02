@@ -1,4 +1,4 @@
-﻿---
+---
 title: Endpoint Attack Notifications
 ms.reviewer:
 description: Endpoint Attack Notifications provides proactive hunting for the most important threats to your network.
@@ -6,7 +6,6 @@ ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -15,7 +14,6 @@ ms.custom:
 - cx-ti
 - cx-ean
 ms.subservice: edr
-search.appverid: met150
 ms.date: 03/25/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2

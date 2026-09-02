@@ -1,19 +1,20 @@
-﻿---
+---
 title: Stream Microsoft Defender for Endpoint events to your Storage account
 description: Learn how to configure Microsoft Defender for Endpoint to stream Advanced Hunting events to your Storage account.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
-ms.custom: api
-search.appverid: met150
+ms.custom:
+  - api
+  - sfi-ga-nochange
+  - sfi-image-nochange
 ms.date: 06/28/2024
 appliesto:
   - Microsoft Defender for Endpoint

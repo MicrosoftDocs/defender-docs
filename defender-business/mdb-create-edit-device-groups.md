@@ -1,21 +1,20 @@
 ---
 title: Device groups in Microsoft Defender for Business
 description: Security policies are applied to devices through device groups in Defender for Business.
-search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.reviewer: nehabha
-ms.date: 06/19/2024
-f1.keywords: NOCSH
+ms.date: 07/03/2026
 ms.collection:
 - SMB
 - m365-security
 - m365-initiative-defender-business
 - tier1
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Device groups in Microsoft Defender for Business
@@ -44,9 +43,11 @@ All device groups, including your default device groups and any custom device gr
 
 ## Create a new device group
 
-Currently, in Defender for Business, you can create a new device group while you are in the process of creating or editing a policy, as described in the following procedure:
+In Defender for Business, a _policy_ is a set of security configuration settings that are applied to devices. You create device groups from within the policy creation or editing workflow.
 
-1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
+Currently, you can create a new device group while you're creating or editing a policy, as described in the following procedure:
+
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
 2. In the navigation pane, choose **Configuration management** and select **Device configuration**.
 
@@ -76,7 +77,7 @@ Currently, in Defender for Business, you can create a new device group while you
 
 Currently, in Defender for Business, you can view your existing device groups while you are in the process of creating or editing a policy, as described in the following procedure:
 
-1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
 2. In the navigation pane, choose **Device configuration**.
 
@@ -98,7 +99,7 @@ When you're creating or editing a policy, you might see the **Add all devices** 
 
 :::image type="content" source="media/add-all-devices-option.png" alt-text="Screenshot of the Add All Devices option.":::
 
-If you select this option, all devices enrolled in Microsoft Intune receive the current policy.
+Microsoft Intune is the service that manages and tracks your devices. If you select this option, all devices in Intune get the current policy.
 
 ## Next steps
 

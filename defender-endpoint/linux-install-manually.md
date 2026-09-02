@@ -6,14 +6,12 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
 ms.topic: install-set-up-deploy
 ms.subservice: linux
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Servers
 ms.date: 03/20/2026
@@ -51,7 +49,7 @@ A successful deployment requires the completion of all of the following tasks:
 Before you begin, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements for the current software version.
 
 > [!WARNING]
-> Upgrading your operating system to a new major version after the product installation requires the product to be reinstalled. You need to [Uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux) the existing Defender for Endpoint on Linux application, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux following the steps in this article.
+> Upgrading your operating system to a new major version after the product installation requires the product to be reinstalled. You need to [Uninstall](./linux-off-board-endpoints.md#uninstall-the-defender-application-from-a-linux-server) the existing Defender for Endpoint on Linux application, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux following the steps in this article.
 
 ## Configure the Linux software repository
 
@@ -364,6 +362,8 @@ sudo apt install mdatp
 
 > [!NOTE]
 > If you have multiple Microsoft repositories configured on your device, you can be specific about which repository to install the package from. The following example shows how to install the package from the `production` channel if you also have the `insiders-fast` repository channel configured on this device. This situation can happen if you're using multiple Microsoft products on your device.
+>
+> The version numbers and release codenames in the following code snippets are examples. Use the actual release codename the bash command returns.
 
 ```bash
 cat /etc/apt/sources.list.d/*
@@ -404,13 +404,11 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
 > [!IMPORTANT]
 > If you miss this step, any command executed shows a warning message indicating that the product is unlicensed. Also the `mdatp health` command returns a value of `false`.
 
-1. In the Microsoft Defender portal, go to **Settings** > **Endpoints** > **Device management** > **Onboarding**.
+1. In the Microsoft Defender portal, go to **System** > **Settings** > **Endpoints** > **Device management** > **Onboarding**.
 
 2. In the first drop-down menu, select **Linux Server** as the operating system. In the second drop-down menu, select **Local Script** as the deployment method.
 
 3. Select **Download onboarding package**. Save the file as `WindowsDefenderATPOnboardingPackage.zip`.
-
-   :::image type="content" source="media/portal-onboarding-linux.png" alt-text="Downloading an onboarding package in the Microsoft Defender portal":::
 
 4. From a command prompt, verify that you have the file, and extract the contents of the archive:
 
@@ -518,7 +516,7 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
       
 1. Run an EDR detection test and simulate a detection to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
-   1. Verify that the onboarded Linux server appears in Microsoft Defender XDR. If this is the first onboarding of the machine, it can take up to 20 minutes until it appears.
+   1. Verify that the onboarded Linux server appears in the Defender portal. If this is the first onboarding of the machine, it can take up to 20 minutes until it appears.
       
    1. Download and extract the [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server, and then run the following command: `./mde_linux_edr_diy.sh`
    

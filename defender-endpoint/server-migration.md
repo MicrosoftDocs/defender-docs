@@ -1,13 +1,11 @@
-﻿---
+---
 title: Server migration scenarios for the new version of Microsoft Defender for Endpoint
 description: Read this article to get an overview of how to migrate your servers from the previous, MMA-based solution to the current Defender for Endpoint unified solution package.
-search.appverid: met150
 ms.service: defender-endpoint
 author: paulinbar
 ms.author: painbar
 ms.localizationpriority: medium
-ms.date: 04/16/2025
-audience: ITPro
+ms.date: 06/17/2026
 ms.collection:
 - m365-security
 - tier2
@@ -16,26 +14,29 @@ ms.subservice: onboard
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Server migration scenarios from the previous, MMA-based Microsoft Defender for Endpoint solution
 
 > [!NOTE]
-> On Windows Server 2016, always ensure the operating system and Microsoft Defender Antivirus are fully updated before proceeding with installation or upgrade. To receive regular product improvements and fixes for the EDR Sensor component, ensure Windows Update [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) gets applied or approved after installation. In addition, to keep protection components updated, please reference [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).
+> On Windows Server 2016, always ensure the operating system and Microsoft Defender Antivirus are fully updated before proceeding with installation or upgrade. To receive regular product improvements and fixes for the EDR Sensor component, ensure Windows Update [KB5005292 - Microsoft Defender for Endpoint EDR Sensor update](https://go.microsoft.com/fwlink/?linkid=2168277) gets applied or approved after installation. In addition, to keep protection components updated, please reference [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).
 
-These instructions apply to the new unified solution and installer (MSI) package of Defender for Endpoint for Windows Server 2012 R2 and Windows Server 2016. This article contains high-level instructions for various possible migration scenarios from the previous to the current solution. These high-level steps are intended as guidelines to be adjusted to the deployment and configuration tools available in your environment.
+These instructions apply to the new unified solution and installer (MSI) package of Defender for Endpoint for Windows Server 2012 R2 and Windows Server 2016. This article contains high-level instructions for various possible migration scenarios from the previous Microsoft Monitoring Agent (MMA)-based solution to the current Defender for Endpoint unified solution. These high-level steps are intended as guidelines to be adjusted to the deployment and configuration tools available in your environment. Before you begin, review the [prerequisites for Windows Server 2016 and 2012 R2](onboard-server.md#prerequisites-for-windows-server-2016-and-2012-r2) and ensure your operating system and Microsoft Defender Antivirus are fully updated.
 
 **If you are using Microsoft Defender for Cloud to perform deployment, you can automate installation and upgrade. See [Defender for Servers Plan 2 now integrates with MDE unified solution](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/defender-for-servers-plan-2-now-integrates-with-mde-unified/ba-p/3527534)**
 
 > [!NOTE]
 > Operating system upgrades with Defender for Endpoint installed aren't supported. Offboard, uninstall, upgrade the operating system, and then proceed with installation.
 
-## Installer script
+<a name="installer-script"></a>
+## Migrate using the installer script
 
 > [!NOTE]
 > Make sure the machines you run the script on isn't blocking the execution of the script. The recommended execution policy setting for PowerShell is Allsigned. This requires importing the script's signing certificate into the Local Computer Trusted Publishers store if the script is running as SYSTEM on the endpoint.
 
-To facilitate upgrades when Microsoft Configuration Manager isn't yet available or updated to perform the automated upgrade, you can use this [upgrade script](https://github.com/microsoft/mdefordownlevelserver/archive/refs/heads/main.zip). Download it by selection the "Code" button and downloading the .zip file, then extracting install.ps1. It can help automate the following required steps:
+To facilitate upgrades when Microsoft Configuration Manager isn't yet available or updated to perform the automated upgrade, you can use this [Defender for Endpoint unified solution upgrade script](https://github.com/microsoft/mdefordownlevelserver/archive/refs/heads/main.zip). Download it by selection the "Code" button and downloading the .zip file, then extracting install.ps1. It can help automate the following required steps:
 
 1. Remove the OMS workspace for Defender for Endpoint (OPTIONAL).
 
@@ -66,6 +67,8 @@ For instructions on how to migrate using Configuration Manager before version 22
 
 ## If you are running a non-Microsoft antivirus solution
 
+Perform the following steps to migrate machines that currently use a non-Microsoft antivirus solution to the Defender for Endpoint unified solution.
+
 1. Fully update the machine including Microsoft Defender Antivirus (Windows Server 2016) ensuring [Prerequisites for Windows Server 2016 and 2012 R2](onboard-server.md#prerequisites-for-windows-server-2016-and-2012-r2) are met.
 
 1. Ensure your non-Microsoft antivirus management solution no longer pushes antivirus agents to these machines.
@@ -88,13 +91,15 @@ For instructions on how to migrate using Configuration Manager before version 22
    Value: `0`
 
 > [!TIP]
-> You can use the [installer-script](server-migration.md#installer script) as part of your application to automate the above steps. To enable passive mode, apply the -Passive flag. For example, `.\install.ps1 -RemoveMMA <YOUR_WORKSPACE_ID> -OnboardingScript ".\WindowsDefenderATPOnboardingScript.cmd" -Passive`.
+> You can use the [installer script for server migration](server-migration.md#installer script) as part of your application to automate the above steps. To enable passive mode, apply the -Passive flag. For example, `.\install.ps1 -RemoveMMA <YOUR_WORKSPACE_ID> -OnboardingScript ".\WindowsDefenderATPOnboardingScript.cmd" -Passive`.
 
-In the preceding procedure, steps 2 and 7 apply only if you intend to replace your non-Microsoft antivirus solution. See [Better together: Microsoft Defender Antivirus and Microsoft Defender for Endpoint](why-use-microsoft-defender-antivirus.md).
+In the non-Microsoft antivirus migration procedure, steps 2 and 7 apply only if you intend to replace your non-Microsoft antivirus solution. See [Better together: Microsoft Defender Antivirus and Microsoft Defender for Endpoint](why-use-microsoft-defender-antivirus.md).
 
 <a name="if-you-are-running-system-center-endpoint-protection-but-arent-managing-the-machine-using-configuration-manager-mecmconfigmgr"></a>
 
 ## If you are running System Center Endpoint Protection but aren't managing the machine using Microsoft Configuration Manager
+
+Use the following steps if System Center Endpoint Protection is installed but the machine is not managed by Configuration Manager.
 
 1. Fully update the device, including Microsoft Defender Antivirus (on Windows Server 2016) ensuring [Prerequisites for Windows Server 2016 and 2012 R2](onboard-server.md#prerequisites-for-windows-server-2016-and-2012-r2) are met.
 
@@ -109,14 +114,17 @@ In the preceding procedure, steps 2 and 7 apply only if you intend to replace yo
 1. Apply updates.
 
 > [!TIP]
-> You can use the installer script to automate the steps in the preceding procedure.
+> You can use the installer script to automate the System Center Endpoint Protection migration steps listed above.
 
 ## Microsoft Defender for Cloud scenarios
+
+The following scenarios apply when you use Microsoft Defender for Cloud to manage deployment or upgrades.
 
 ### You're using Microsoft Defender for Cloud. The Microsoft Monitoring Agent (MMA) and/or Microsoft Antimalware for Azure (SCEP) are installed and you want to upgrade.
 
 If you're using Microsoft Defender for Cloud, you can use the automated upgrade process. See [Protect your endpoints with Defender for Cloud's integrated EDR solution: Microsoft Defender for Endpoint](/azure/security-center/security-center-wdatp#enable-the-microsoft-defender-for-endpoint-integration).
 
-## Group Policy configuration
+<a name="group-policy-configuration"></a>
+## Configure Group Policy for server migration
 
 For configuration using Group Policy, ensure you're using the latest ADMX files in your central store to access the correct Defender for Endpoint policy options. For reference, see [How to create and manage the Central Store for Group Policy Administrative Templates in Windows](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) and download the latest files **for use with Windows 10**.

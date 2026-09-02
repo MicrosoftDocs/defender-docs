@@ -1,21 +1,16 @@
 ---
 title: Outbound spam protection
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
-  - MOE150
 ms.assetid: 6a601501-a6a8-4559-b2e7-56b59c96a586
 ms.collection: 
   - m365-security
   - tier2
-ms.custom: 
+ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
 description: Admins can learn about the outbound spam controls in Microsoft 365, and what to do if you need to send mass mailings.
 ms.service: defender-office-365
 ms.date: 09/03/2025
@@ -79,6 +74,7 @@ Use the following resources outside of Microsoft 365 to send bulk email:
 
 ## Related content
 
+- [Troubleshoot outbound sending limits in Exchange Online](outbound-spam-sending-limits-troubleshoot.md)
 - [Troubleshoot email delivery issues with error codes (NDR)](/troubleshoot/exchange/email-delivery/ndr/fix-error-code-550-4-4-7-in-exchange-online)
 - [External sender delivery troubleshooting](external-senders-mail-flow-troubleshooting.md)
 - [Common non-delivery report (NDR) codes explanation](/troubleshoot/exchange/email-delivery/ndr/non-delivery-reports-in-exchange-online)

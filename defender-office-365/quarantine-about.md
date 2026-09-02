@@ -1,23 +1,17 @@
 ---
-title: Quarantined email messages
-f1.keywords:
-  - NOCSH
+title: Quarantined email messages in Microsoft 365
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid:
-  - MOE150
-  - MED150
-  - MET150
 ms.assetid: 4c234874-015e-4768-8495-98fcccfc639b
 ms.collection:
   - m365-security
   - tier1
 ms.custom:
   - seo-marvel-apr2020
-description: Admins can learn about email quarantine in Microsoft 365 that holds potentially dangerous or unwanted messages.
+  - msecd-doc-authoring-1012
+description: Learn about email quarantine in Microsoft 365, including which detections quarantine messages, how retention works, and how admins and users manage quarantined items.
 ms.service: defender-office-365
 ms.date: 02/02/2026
 appliesto:
@@ -36,7 +30,7 @@ In all organizations with cloud mailboxes, quarantine is available to hold poten
 > [!NOTE]
 > In Microsoft 365 operated by 21Vianet in China, quarantine isn't currently available in the Microsoft Defender portal. Quarantine is available only in the classic Exchange admin center (classic EAC).
 >
-> You can't completely turn off quarantine in Microsoft 365. Malware and high-confidence phishing messages are always quarantined to protect the service. Admin can reduce quarantined messages by changing actions to deliver messages to the Junk Email folder instead of quarantinemod in anti-spam polices and anti-phishing policies.
+> You can't completely turn off quarantine in Microsoft 365. Malware and high-confidence phishing messages are always quarantined to protect the service. Admins can reduce quarantined messages by changing actions to deliver messages to the Junk Email folder instead of quarantine in anti-spam policies and anti-phishing policies.
 
 Whether a detected message is quarantined by default depends on the following factors:
 
@@ -44,7 +38,7 @@ Whether a detected message is quarantined by default depends on the following fa
   - Malware detections by [anti-malware policies](anti-malware-policies-configure.md)<sup>\*</sup>.
   - Malware or phishing detections by [Safe Attachments policies](safe-attachments-policies-configure.md), including [Built-in protection](preset-security-policies.md) for Safe Attachments<sup>\*</sup>.
   - High confidence phishing detections by [anti-spam policies](anti-spam-policies-configure.md).
-- Whether you're using the Standard and/or Strict [preset security policies](preset-security-policies.md). The Strict profile quarantines more types of detections than the Standard profile.
+- Whether you're using the Standard or Strict [preset security policies](preset-security-policies.md). The Strict profile quarantines more types of detections than the Standard profile.
 
 <sup>\*</sup> Malware filtering is skipped on SecOps mailboxes that are identified in the advanced delivery policy. For more information, see [Configure the advanced delivery policy for non-Microsoft phishing simulations and email delivery to SecOps mailboxes](advanced-delivery-policy-configure.md).
 
@@ -63,12 +57,14 @@ Threat policies for [supported features](quarantine-policies.md#step-2-assign-a-
 
 ## Quarantine policies
 
-_Quarantine policies_ define what users are able to do or not do to quarantined messages, and whether users receive quarantine notifications for those messages. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
+_Quarantine policies_ define what users can or can't do to quarantined messages, and whether users receive quarantine notifications for those messages. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
 > [!TIP]
 > You can create customized [quarantine notifications for different languages](quarantine-policies.md#customize-quarantine-notifications-for-different-languages). You can also [use a custom logo in quarantine notifications](quarantine-policies.md#customize-all-quarantine-notifications).
 
-The default quarantine policies assigned to protection feature verdicts enforce the historical capabilities that users get for their quarantined messages (messages where they're a recipient). For more information, see the table in [Find and release quarantined messages as a user](quarantine-end-user.md). For example, only admins can work with messages that were quarantined as malware or high confidence phishing. By default, users can work with their messages that were quarantined as spam, bulk, phishing, spoof, user impersonation, domain impersonation, or mailbox intelligence.
+The default quarantine policies assigned to protection feature verdicts enforce the historical capabilities that users get for their quarantined messages (messages where they're a recipient). For more information, see the table in [Find and release quarantined messages as a user](quarantine-end-user.md).
+
+For example, only admins can work with messages that were quarantined as malware or high confidence phishing. By default, users can work with their messages that were quarantined as spam, bulk, phishing, spoof, user impersonation, domain impersonation, or mailbox intelligence.
 
 Admins can create and apply custom quarantine policies that define less restrictive or more restrictive capabilities for users, and also turn on quarantine notifications. For more information, see [Create quarantine policies](quarantine-policies.md#step-1-create-quarantine-policies-in-the-microsoft-defender-portal).
 
@@ -77,7 +73,7 @@ Both users and admins can work with quarantined messages:
 - Admins can work with all types of quarantined messages for all users, including messages that were quarantined as malware, high confidence phishing, or as a result of mail flow rules (also known as transport rules). For more information, see [Manage quarantined messages and files as an admin](quarantine-admin-manage-messages-files.md).
 
   > [!TIP]
-  > For the permissions required to download and release any messages from quarantine, see the permissions entry [here](quarantine-admin-manage-messages-files.md#what-do-you-need-to-know-before-you-begin).
+  > For the permissions required to download and release all messages from quarantine, see [What do you need to know before you begin?](quarantine-admin-manage-messages-files.md#what-do-you-need-to-know-before-you-begin) in Manage quarantined messages and files as an admin.
 
 - Users can work with their quarantined messages based on the protection feature that quarantined the message, and the setting in corresponding quarantine policy. For more information, see [Find and release quarantined messages as a user](quarantine-end-user.md).
 
@@ -92,11 +88,11 @@ Both users and admins can work with quarantined messages:
 
 - Admins can report false positives to Microsoft from quarantine. For more information, see [Take action on quarantined email](quarantine-admin-manage-messages-files.md#take-action-on-quarantined-email) and [Take action on quarantined files](quarantine-admin-manage-messages-files.md#take-action-on-quarantined-files).
 
-- Users can also report false positives to Microsoft from quarantine, depending on the value of the **Reporting from quarantine** setting in [user reported settings](submissions-user-reported-messages-custom-mailbox.md).
+- Users can also report false positives to Microsoft from quarantine, based on the **Reporting from quarantine** setting in [user reported settings](submissions-user-reported-messages-custom-mailbox.md).
 
 ### Quarantine retention
 
-How long quarantined messages or files are held in quarantine before they expire depends why the message or file was quarantined. Features and their corresponding retention periods are described in the following table:
+How long quarantined messages or files are held in quarantine before they expire depends on why the message or file was quarantined. Features and their corresponding retention periods are described in the following table:
 
 |Quarantine reason|Default retention period|Customizable?|Comments|
 |---|---|:---:|---|
@@ -106,7 +102,7 @@ How long quarantined messages or files are held in quarantine before they expire
 |Messages quarantined by mail flow rules where the action is **Deliver the message to the hosted quarantine** (_Quarantine_).|30 days|No||
 |Messages quarantined by Safe Attachments policies in Defender for Office 365 (malware or phishing messages).|30 days|No||
 |Files quarantined by Safe Attachments for SharePoint, OneDrive, and Microsoft Teams (malware files).|30 days|No|Files quarantined in SharePoint or OneDrive are removed from quarantine after 30 days, but the blocked files remain in SharePoint or OneDrive in the blocked state.|
-|Messages in chats and channels quarantined by zero-hour auto protection (ZAP) for Microsoft Teams in Defender for Office 365|30 days|No|
+|Messages in chats and channels quarantined by zero-hour auto protection (ZAP) for Microsoft Teams in Defender for Office 365|30 days|No||
 
 When messages expire from quarantine after the retention period, the messages are permanently deleted and can't be recovered.
 

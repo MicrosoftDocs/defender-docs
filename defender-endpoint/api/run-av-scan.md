@@ -1,11 +1,10 @@
-﻿---
+---
 title: Run antivirus scan API
 description: Use this API to create calls related to running an antivirus scan on a device.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -13,7 +12,6 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -39,7 +37,7 @@ Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
 
 - Windows 10, version  1709 or later, and on Windows 11.
 - Linux Servers. See [Supported Linux distributions](../mde-linux-prerequisites.md#supported-linux-distributions)
-- macOS. See [Microsoft Defender for Endpoint on macOS](../microsoft-defender-endpoint-mac.md#system-requirements)
+- macOS. See [Prerequisites for Defender for Endpoint on macOS](../microsoft-defender-endpoint-mac-prerequisites.md)
 
 ## Permissions
 

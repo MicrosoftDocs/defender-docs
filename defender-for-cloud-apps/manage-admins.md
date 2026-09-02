@@ -1,11 +1,16 @@
 ---
-title: Configure admin access|Microsoft Defender for Cloud Apps
-description: This article provides instructions for setting access to Defender for Cloud Apps for your admins.
-ms.date: 12/21/2023
+title: Configure admin access | Microsoft Defender for Cloud Apps
+description: Set up role-based administrator access in Defender for Cloud Apps and understand how Microsoft Entra ID and Microsoft 365 roles affect permissions.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: Naama-Goldbart
+ms.custom:
+  - msecd-doc-authoring-1014
+  - sfi-ga-blocked
+  - sfi-image-nochange
+ai-usage: ai-assisted
 ---
-# Configure admin access
+# Configure admin access in Defender for Cloud Apps
 
 Microsoft Defender for Cloud Apps supports role-based access control. This article provides instructions for setting access to Defender for Cloud Apps for your admins. For more information about assigning administrator roles, see the articles for [Microsoft Entra ID](/azure/active-directory/roles/permissions-reference) and [Microsoft 365](/microsoft-365/admin/add-users/assign-admin-roles).
 
@@ -19,7 +24,10 @@ Microsoft Defender for Cloud Apps supports role-based access control. This artic
 >
 > - Microsoft 365 and Microsoft Entra roles aren't listed in the Defender for Cloud Apps **Manage admin access** page. To assign roles in Microsoft 365 or Microsoft Entra ID, go to the relevant RBAC settings for that service.
 > - Defender for Cloud Apps uses Microsoft Entra ID to determine the user's [directory level inactivity timeout setting](/azure/azure-portal/set-preferences#change-the-directory-timeout-setting-admin). If a user is configured in Microsoft Entra ID to never sign out when inactive, the same setting applies in Defender for Cloud Apps as well.
-> - Defender for Cloud Apps Information Protection enablement requires an Microsoft Entra Admin ID, such as: Application Administrator or Cloud Application Administrator. For more details, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference) and [Protect your Microsoft 365 environment](/defender-cloud-apps/protect-office-365)
+> - Defender for Cloud Apps Information Protection enablement requires a Microsoft Entra Admin ID, such as: Application Administrator or Cloud Application Administrator. For more details, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference) and [Protect your Microsoft 365 environment](/defender-cloud-apps/protect-office-365)
+
+> [!NOTE]
+> As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate. Defender for Cloud Apps RBAC scoping uses a separate data pipeline that isn't yet integrated with the [Identity inventory](/defender-for-identity/identity-inventory). Correlations defined in the Identity inventory don't affect Defender for Cloud Apps scoping. For a full list of affected features, see [Enable Identity inventory integration](/defender-cloud-apps/general-setup#enable-identity-inventory-integration).
 
 By default, the following Microsoft 365 and [Microsoft Entra ID](/azure/active-directory/roles/permissions-reference) admin roles have access to Defender for Cloud Apps:
 
@@ -114,7 +122,7 @@ You can add additional admins to Defender for Cloud Apps without adding users to
     > [!NOTE]
     > If you want to add external Managed Security Service Providers (MSSPs) as administrators for Defender for Cloud Apps, make sure you first [invite them as a guest](#invite-external-admins) to your organization.
 
-    ![add admins.](media/add-admin.png)
+    ![Screenshot showing the add user dialog to add additional admins in Defender for Cloud Apps.](media/add-admin.png)
 
 1. Next, select the drop-down to set what type of role the admin has. If you select **App/Instance admin**, select the app and instance for the admin to have permissions for.
 
@@ -129,21 +137,21 @@ Defender for Cloud Apps enables you to invite external admins (MSSPs) as adminis
 
 ### To add MSSPs to the MSSP customer Defender for Cloud Apps service
 
-1. Add MSSPs as a guest in the MSSP customer directory using the steps under [Add guest users to the directory](/azure/active-directory/external-identities/add-users-administrator#add-guest-users-to-the-directory).
+1. Add MSSPs as people outside the organization in the MSSP customer directory using the steps under [Add people outside the organization to the directory](/azure/active-directory/external-identities/add-users-administrator#add-guest-users-to-the-directory).
 1. Add MSSPs and assign an administrator role in the MSSP customer Defender for Cloud Apps using the steps under [Add additional admins](#add-additional-admins). Provide the same external email address used when adding them as guests in the MSSP customer directory.
 
 ### Access for MSSPs to the MSSP customer Defender for Cloud Apps service
 
-By default, MSSPs access their Defender for Cloud Apps tenant through the following URL: `https://security.microsoft.com`.
+By default, Managed Security Service Providers (MSSPs) access their Defender for Cloud Apps tenant through the following URL: `https://security.microsoft.com`.
 
 MSSPs however, need to access the MSSP customer Microsoft Defender Portal using a tenant-specific URL in the following format: `https://security.microsoft.com/?tid=<tenant_id>`.
 
-MSSPs can use the following steps to obtain the MSSP customer portal tenant ID and then use the ID to access the tenant-specific URL:
+To obtain the MSSP customer portal tenant ID and access the tenant-specific URL, complete this procedure:
 
 1. As an MSSP, sign in to Microsoft Entra ID with your credentials.
 1. Switch directory to the MSSP customer's tenant.
 1. Select **Microsoft Entra ID** > **Properties**. The MSSP customer tenant ID is in the **Tenant ID** field.
-1. Access the MSSP customer portal by replacing the `customer_tenant_id` value in the following URL: `https://security.microsoft.com/?tid=<tenant_id>`.
+1. Access the MSSP customer portal by replacing the `<tenant_id>` value in the following URL: `https://security.microsoft.com/?tid=<tenant_id>`.
 
 ## Admin activity auditing
 

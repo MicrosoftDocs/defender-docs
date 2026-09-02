@@ -1,18 +1,23 @@
 ---
 title: Protect your NetDocuments environment | Microsoft Defender for Cloud Apps
-description: This article provides information about the benefits of connecting your NetDocuments app to Defender for Cloud Apps using the API connector for visibility and control over use.
-ms.date: 11/27/2025
+description: Connect NetDocuments to Microsoft Defender for Cloud Apps by using the API connector to gain visibility into activity and detect anomalous behavior.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # How Defender for Cloud Apps helps protect your NetDocuments environment
 
-As a productivity and collaboration cloud solution, NetDocuments holds sensitive information to your organization. Any abuse of NetDocuments by a malicious actor or any human error might expose your most critical assets and services to potential attacks.
+As a productivity and collaboration cloud solution, NetDocuments holds sensitive information for an organization. Any abuse of NetDocuments by a malicious actor or any human error might expose an organization's most critical assets and services to potential attacks.
 
-Connecting NetDocuments to Defender for Cloud Apps gives you improved insights into your NetDocuments activities and provides threat detection for anomalous behavior.
+Connecting NetDocuments to Defender for Cloud Apps gives security teams improved insights into NetDocuments activities and provides threat detection for anomalous behavior.
 
-## Main threats
+<a name="main-threats"></a>
+## Main threats to your NetDocuments environment
+
+NetDocuments environments face the following key security threats:
 
 - Compromised accounts and insider threats
 
@@ -24,11 +29,15 @@ Connecting NetDocuments to Defender for Cloud Apps gives you improved insights i
 
 ## How Defender for Cloud Apps helps to protect your environment
 
+Defender for Cloud Apps helps protect your NetDocuments environment with the following best practices:
+
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 
 - [Use the audit trail of activities for forensic investigations](best-practices.md#use-the-audit-trail-of-activities-for-forensic-investigations)
 
 ## Control NetDocuments with policies
+
+The following table lists the policy types you can use to control NetDocuments:
 
 | **Type**                           | **Name**                                                     |
 | ---------------------------------- | ------------------------------------------------------------ |
@@ -57,25 +66,27 @@ Review our best practices for [securing and collaborating with external users](b
 
 ## SaaS security posture management (Preview)
 
-[Connect NetDocument](#connect-netdocuments-to-microsoft-defender-for-cloud-apps) to automatically get security posture recommendations for NetDocument in Microsoft Secure Score. In Secure Score, select **Recommended actions** and filter by **Product** = **NetDocument**. NetDocument supports security recommendations to *Adopt SSO (Single sign on) in NetDocument*.
+After you [connect NetDocuments to Microsoft Defender for Cloud Apps](#connect-netdocuments-to-microsoft-defender-for-cloud-apps), you automatically get security posture recommendations for NetDocuments in Microsoft Secure Score. In Secure Score, select **Recommended actions** and filter by **Product** = **NetDocument**. NetDocument supports security recommendations to *Adopt SSO (Single sign on) in NetDocument*.
 
-For more information, see:
+For more information about SaaS security posture management and Microsoft Secure Score, see:
 
 - [Security posture management for SaaS apps](security-saas.md)
 - [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 
 ## Connect NetDocuments to Microsoft Defender for Cloud Apps
 
-This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing NetDocuments using the App Connector APIs. This connection gives you visibility into and control over your organization's NetDocuments use.
+This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing NetDocuments account using the App Connector APIs. The Defender for Cloud Apps connection to NetDocuments gives administrators visibility into and control over their organization's NetDocuments use.
 
 
 ### Configure NetDocuments
 
+Perform the following steps in NetDocuments to collect the values needed for the connector setup:
+
 1. Sign in to your NetDocuments account with a Full NetDocuments Repository Admin user.
 
-1. Copy your repository ID. You'll need it later.
+1. Copy your repository ID. You enter the repository ID in the **Repository ID** field when you configure Defender for Cloud Apps.
 
-1. Copy your account URL. You'll need it later. Make sure that it matches one of the URLs listed in the table below.
+1. Copy your account URL. You enter the account URL in the **Application URL** field when you configure Defender for Cloud Apps. Make sure that the account URL matches one of the following NetDocuments service URLs.
 
     | Location       |              URL            |
     | -------------- | --------------------------- |
@@ -86,15 +97,17 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 ### Configure Defender for Cloud Apps
 
+Perform the following steps in Defender for Cloud Apps to create the NetDocuments connector:
+
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
 
 1. In the **App connectors** page, select **+Connect an app**, followed by **NetDocuments**.
 
-1. In the next window, give the connector a descriptive name, and press **Next**.
+1. In the connector setup window, give the connector a descriptive name, and select **Next**.
 
-    ![Connect NetDocuments.](media/netdocuments-connecting-screen.png)
+    ![Screenshot of the NetDocuments connection screen prompting the user to name the connector.](media/netdocuments-connecting-screen.png)
 
-1. In the **Enter details** screen, enter the following fields:
+1. In the **Enter details** screen, enter the **Repository ID** and **Application URL** values:
 
     - **Repository ID**: the app repository ID that you saved.
     - **Application URL**: the URL that you saved.
@@ -104,6 +117,8 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**. Make sure the status of the connected App Connector is **Connected**.
 
 ## Rate limits and limitations
+
+Be aware of the following rate limits and limitations for the NetDocuments connector:
 
 - The default rate limit is 100,000 requests per minute.
 - Login/Logouts activities aren't supported by NetDocuments.

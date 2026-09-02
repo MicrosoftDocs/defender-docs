@@ -4,14 +4,14 @@ description: Learn about Security Copilot embedded experience in Microsoft Defen
 keywords: security copilot, threat intelligence, defender threat intelligence, defender ti, Security Copilot, embedded experience, vulnerability impact assessment, threat actor profile, plugins, Microsoft plugins
 ms.service: defender-xdr
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - Tier1
   - security-copilot
   - magic-ai-copilot
 ms.custom:
-- cx-ti
-- cx-mdti
+  - cx-ti
+  - cx-mdti
+  - sfi-image-nochange
 ms.topic: how-to
 ms.update-cycle: 180-days
 ms.date: 09/12/2025

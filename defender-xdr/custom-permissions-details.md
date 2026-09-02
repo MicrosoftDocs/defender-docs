@@ -5,15 +5,14 @@ ms.service: defender-xdr
 ms.author: monaberdugo
 author: mberdugo
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 ms.custom:
 ms.topic: concept-article
-ms.date: 07/13/2025
+ms.date: 05/25/2026
+ai-usage: ai-assisted
 ms.reviewer:
-search.appverid: met150
 appliesto:
 - Microsoft Defender for Endpoint Plan 2
 - Microsoft Defender XDR
@@ -56,6 +55,8 @@ Permissions for managing day-to-day operations and responding to incidents and a
 |Email & collaboration metadata|Read|View email and collaboration data in hunting scenarios, including advanced hunting, threat explorer, campaigns, and email entity.|
 |Email & collaboration content|Read|View and download email content and attachments.|
 |Email & collaboration content: Emails associated with alerts|Read|View and download email content associated with security alerts **Email reported by user as malware or phish** and **Email reported by user as junk**.|
+|Email & collaboration content: Quarantine Emails|Read|View and download quarantined messages for all users.|
+
 
 ## Security posture – Posture management
 
@@ -69,6 +70,17 @@ Permissions for managing the organization's security posture and performing vuln
 |Application handling|Manage|Manage vulnerable applications and software, including blocking and unblocking them in Defender Vulnerability Management.|
 |Security baseline assessment|Manage|Create and manage profiles so you can assess if your devices comply with security industry baselines.|
 |Exposure Management|Read / Manage|View or manage Exposure Management insights, including Microsoft Secure Score recommendations from all products that are covered by Secure Score.|
+
+## Security posture – AI code scan
+
+Permissions for running AI code scans and managing scan results.
+
+|Permission name|Level|Description|
+|---|---|---|
+|Run scan|Manage|Allows users to run AI code scans.|
+|Upload results|Manage|Allows users to upload AI code scan results to Defender.|
+|Scan results|Read|View AI code scan results.|
+|Scan results|Manage|Manage AI code scan results.|
 
 ## Authorization and settings
 

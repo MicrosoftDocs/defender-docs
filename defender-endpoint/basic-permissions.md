@@ -1,4 +1,4 @@
-﻿---
+---
 title: Use basic permissions to access the portal
 description: Learn how to use basic permissions to access the Microsoft Defender for Endpoint portal.
 ms.service: defender-endpoint
@@ -7,24 +7,24 @@ ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
 ms.custom:
+  - msecd-doc-authoring-1014
   - has-azure-ad-ps-ref
   - azure-ad-ref-level-one-done 
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
-search.appverid: met150
-ms.date: 06/25/2024
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
 ---
 # Use basic permissions to access the portal
 
 
-If you want to use basic permissions management for the Microsoft Defender portal, keep in mind that permissions are set to either full access or read only. For granular control over permissions, [use role-based access control](rbac.md).
+This article explains how to set up basic permissions management in the Microsoft Defender portal, including how to assign full access or read-only access using Microsoft Graph PowerShell. If you want to use basic permissions management for the Microsoft Defender portal, keep in mind that permissions are set to either full access or read only. For granular control over permissions, [use role-based access control](rbac.md).
 
 ## Assign user access using Microsoft Graph PowerShell
 
@@ -34,6 +34,8 @@ You can assign users with one of the following levels of permissions:
 - Read-only access
 
 ### Before you begin
+
+Complete the following prerequisites before you assign user access:
 
 - Install Microsoft Graph PowerShell. For more information, see, [How to install Microsoft Graph PowerShell](/powershell/microsoftgraph/installation).
 

@@ -14,7 +14,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender Antivirus
@@ -164,4 +163,5 @@ It's important to keep Microsoft Defender Antivirus (or any antivirus/anti-malwa
 - [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
 - [Microsoft Defender Antivirus management and configuration](configuration-management-reference-microsoft-defender-antivirus.md)
 - [Evaluate Microsoft Defender Antivirus protection](evaluate-microsoft-defender-antivirus.md)
-- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md)
+- [AI agent runtime protection with Microsoft Defender for Endpoint](ai-agent-runtime-protection-overview.md)

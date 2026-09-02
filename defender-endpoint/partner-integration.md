@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint partner opportunities and scenarios
 ms.reviewer: 
 description: Learn how you can extend existing security offerings on top of the open framework and a rich set of APIs to build extensions and integrations with Microsoft Defender for Endpoint.
@@ -7,13 +7,11 @@ ms.subservice: onboard
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: concept-article
-search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 06/08/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -26,6 +24,11 @@ Partners can easily extend their existing security offerings on top of the open 
 
 The APIs span functional areas including detection, management, response, vulnerabilities, and intelligence-wide range of use cases. Based on the use case and need, partners can either stream or query data from Defender for Endpoint. 
 
+The following scenarios serve as examples of the extensibility of the platform. You aren't limited to the examples and we certainly encourage you to use the open framework to discover and explore other scenarios.
+
+For information about how to become a Microsoft Defender for Endpoint partner to integrate your solution in Defender for Endpoint, see the [Microsoft Partner Center](https://partner.microsoft.com).
+
+To find professional services supported by Microsoft Defender XDR, see the [Microsoft Marketplace](https://marketplace.microsoft.com).
 
 ## Scenario 1: External alert correlation and Automated investigation and remediation
 Defender for Endpoint offers unique automated investigation and remediation capabilities to drive incident response at scale. 
@@ -43,10 +46,6 @@ Orchestration solutions can help build playbooks and integrate the rich data mod
 
 ## Scenario 3: Indicators matching 
 Indicator of compromise (IoCs) matching is an essential feature in every endpoint protection solution. This capability is available in Defender for Endpoint and gives the ability to set a list of indicators for prevention, detection, and exclusion of entities. One can define the action to be taken as well as the duration for when to apply the action.
-
-The above scenarios serve as examples of the extensibility of the platform. You aren't limited to the examples and we certainly encourage you to use the open framework to discover and explore other scenarios.
-
-Follow the steps in [Become a Microsoft Defender for Endpoint partner](get-started-partner-integration.md) to integrate your solution in Defender for Endpoint.
 
 ## Related article
 

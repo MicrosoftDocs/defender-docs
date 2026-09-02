@@ -1,16 +1,13 @@
 ---
 title: View or edit policies in Microsoft Defender for Business
 description: Learn how to view, edit, create, and delete cybersecurity policies in Defender for Business. Protect your devices with security policies.
-search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 05/05/2023
+ms.date: 06/10/2026
 ms.reviewer: nehabha
-f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security
@@ -47,18 +44,9 @@ In Defender for Business, there are two main types of default policies that are 
 
 In addition to next-generation protection and firewall policies, there are three other types of policies to configure for the best protection with Defender for Business:
 
-- **Web content filtering**, which turns on web protection for your organization.
-- **Controlled folder access**, which is an important part of ransomware protection (Intune is required to set up and manage)
-- **Attack surface reduction rules**, which help reduce device vulnerability (Intune is required to set up and manage)
-
-[Web content filtering](mdb-web-content-filtering.md), which enables your security team to track and regulate access to websites based on content categories. Examples of categories include adult content, high bandwidth content, and legal liability content. When you set up your web content filtering policy, you enable web protection for your organization. For more information, see [Web content filtering](mdb-web-content-filtering.md).
-
-[Controlled folder access](mdb-controlled-folder-access.md) allows only trusted apps to access protected folders on Windows devices. Think of this capability as ransomware mitigation. You can set up or edit your controlled folder access policy in Microsoft Intune. For more information, see [Set up or edit your controlled folder access policy](mdb-controlled-folder-access.md).
-
-[Attack surface reduction rules](mdb-asr.md) target certain software behaviors that are often considered risky because attackers commonly abuse these behaviors through malware. Examples of such behaviors include launching executable files and scripts that attempt to download or run files. Attack surface reduction rules can constrain software-based risky behaviors, and help keep your organization safe. At a minimum, we recommend configuring standard protection rules to help protect your network without causing disruption for users. For more information, see [Enable your attack surface reduction rules in Microsoft Defender for Business](mdb-asr.md).
-
-> [!NOTE]
-> Intune is required to configure [controlled folder access](mdb-controlled-folder-access.md) and [attack surface reduction rules](mdb-asr.md). Intune isn't included in the standalone version of Defender for Business, but can be added on to your subscription.
+- [Web content filtering](mdb-web-content-filtering.md), which enables your security team to track and regulate access to websites based on content categories. Examples of categories include adult content, high bandwidth content, and legal liability content. When you set up your web content filtering policy, you enable web protection for your organization. For more information, see [Web content filtering](mdb-web-content-filtering.md).
+- [Controlled folder access (CFA)](/defender-endpoint/controlled-folder-access-overview) allows only trusted apps to access protected folders on Windows devices. Think of this capability as ransomware mitigation. For more information, see [Deployment and configuration methods for CFA](/defender-endpoint/controlled-folder-access-overview#deployment-and-configuration-methods-for-cfa).
+- [Attack surface reduction (ASR) rules](/defender-endpoint/attack-surface-reduction-rules-overview) target certain software behaviors that are often considered risky because attackers commonly abuse these behaviors through malware. Examples of such behaviors include launching executable files and scripts that attempt to download or run files. Attack surface reduction rules can constrain software-based risky behaviors, and help keep your organization safe. At a minimum, we recommend configuring the [standard protection rules](/defender-endpoint/attack-surface-reduction-rules-overview#asr-rules) to help protect your network without causing disruption for users. For more information, see [Deployment and configuration methods for ASR rules](/defender-endpoint/attack-surface-reduction-rules-overview#deployment-and-configuration-methods-for-asr-rules).
 
 ## View your existing policies
 
@@ -78,17 +66,15 @@ You can view your existing policies in either Microsoft Defender portal ([https:
 
 ## [**Intune admin center**](#tab/intune)
 
-1. Go to the Intune admin center ([https://intune.microsoft.com/](https://intune.microsoft.com)) and sign in.
+1. On the **Endpoint security \| Overview** page of the Microsoft Intune admin center at <https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/SecurityManagementMenu/~/overview>, select the policy type from the **Manage** section of the navigation pane (for example, **Antivirus**, **Firewall**, or **Attack surface reduction**).
 
-2. In the navigation pane, select **Endpoint security**, and then choose a category, such as **Antivirus**, **Firewall**. or **Attack surface reduction**.
-
-3. Any existing policies are listed for the category you selected. To view more details about a policy, select its name.
+2. Any existing policies are listed for the policy type you selected. To view more details about a policy, select its name.
 
 ---
 
 ## Edit an existing policy
 
-You can view your existing policies in either Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) or the Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)) (if you're using Intune).
+You can edit your existing policies in either Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) or the Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)) (if you're using Intune).
 
 <a name='microsoft-365-defender-portal'></a>
 
@@ -127,15 +113,7 @@ You can view your existing policies in either Microsoft Defender portal ([https:
 
 ## [**Intune admin center**](#tab/intune)
 
-1. Go to the Intune admin center ([https://intune.microsoft.com/](https://intune.microsoft.com)) and sign in.
-
-2. In the navigation pane, select **Endpoint security**, and then choose a category, such as **Antivirus**, **Firewall**. or **Attack surface reduction**.
-
-3. Existing policies are listed. Select a policy to view more details about it.
-
-4. Next to **Configuration settings**, choose **Edit**.
-
-   To get help with this task, see [Edit a policy in Intune](/intune/intune-service/protect/endpoint-security-policy#to-edit-a-policy).
+To edit an existing endpoint security policy (for example, **Antivirus**, **Firewall**, or **Attack surface reduction**) in the Intune admin center, see <a href="/intune/intune-service/protect/endpoint-security-policy#modify-existing-policies" target="_blank">Modify existing policies</a> (opens in a new tab in the Intune documentation).
 
 ---
 
@@ -177,30 +155,16 @@ You can view your existing policies in either Microsoft Defender portal ([https:
 
 ## [**Intune admin center**](#tab/intune)
 
-1. Go to the Intune admin center ([https://intune.microsoft.com/](https://intune.microsoft.com)) and sign in.
+To configure a policy by using Microsoft Intune endpoint security policies, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When you create the policy, select the **Policy type**, **Platform**, and **Profile** for the protection you want to configure. For the full list of policy types, supported platforms, and available profiles, see [Available endpoint security policy types](/intune/intune-service/protect/endpoint-security-policy#available-endpoint-security-policy-types).
 
-2. In the navigation pane, select **Endpoint security**, and then choose a category, such as **Antivirus**, **Firewall**. or **Attack surface reduction**.
+> [!IMPORTANT]
+> Microsoft Defender for Endpoint management supports device objects only. Targeting users isn't supported. Assign the policy to Microsoft Entra device groups, not user groups.
 
-3. Select **+ Create Policy**.
+The following profiles are the most relevant for Defender for Business:
 
-   - If your policy is for Windows devices, in the **Platform** list, choose **Windows 10, Windows 11, and Windows Server**.
-   - If your policy is for Mac, in the **Platform** list, choose **macOS**.
-
-4. In the **Profile** list, select a profile, and then choose **Create**.
-
-   The **Profile** list varies depending on what you selected for **Platform**, as summarized in the following table:
-
-   |Platform|Profile|Description|
-   |---|---|---|
-   |Windows 10, Windows 11, and Windows Server|Microsoft Defender Antivirus exclusions|Select this template to define [exclusions for Microsoft Defender Antivirus](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus).|
-   |Windows 10, Windows 11, and Windows Server|Microsoft Defender Antivirus|Select this template to set up your [next-generation protection policy](mdb-next-generation-protection.md).|
-   |Windows 10, Windows 11, and Windows Server|Windows Security Experience|Select this template to turn on [tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) and to configure what users can see or do with the Windows Security app on their computer.|
-   |macOS|Antivirus|Select this template to set up your [next-generation protection policy](mdb-next-generation-protection.md) for devices running macOS.|
-   |Windows 10, Windows 11, and Windows Server|Microsoft Defender Firewall|Select this template to set up your [firewall protection policy](mdb-firewall.md).|
-   |Windows 10, Windows 11, and Windows Server|Microsoft Defender Firewall Rules|Select this template to set up exceptions to your firewall policy. These exceptions are defined through [custom rules](mdb-firewall.md#manage-your-custom-rules-for-firewall-policies-in-microsoft-defender-for-business).|
-   |Windows 10, Windows 11, and Windows Server|Attack Surface Reduction Rules|Select this template to set up [attack surface reduction rules](mdb-asr.md) or [controlled folder access](mdb-controlled-folder-access.md).|
-
-5. Use the wizard to set up your policy. To get help, see [Manage device security with endpoint security policies in Microsoft Intune](/intune/intune-service/protect/endpoint-security-policy).
+- **Antivirus**: Set up your [next-generation protection policy](mdb-next-generation-protection.md), define [exclusions for Microsoft Defender Antivirus](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus), or turn on [tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection).
+- **Firewall**: Set up your [firewall protection policy](mdb-firewall.md), including [custom rules](mdb-firewall.md#manage-your-custom-rules-for-firewall-policies-in-microsoft-defender-for-business).
+- **Attack surface reduction**: Set up [attack surface reduction (ASR) rules](/defender-endpoint/attack-surface-reduction-rules-configure#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies) or [controlled folder access (CFA)](/defender-endpoint/controlled-folder-access-configure#configure-cfa-in-intune-using-endpoint-security-policies).
 
 ---
 

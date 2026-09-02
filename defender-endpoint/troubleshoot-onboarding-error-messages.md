@@ -1,17 +1,15 @@
-﻿---
+---
 title: Troubleshoot onboarding issues and error messages
 description: Troubleshoot onboarding issues and error message while completing setup of Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: troubleshooting
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 07/18/2024
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -23,11 +21,11 @@ appliesto:
 
 This page provides detailed steps to troubleshoot issues that might occur when setting up your Microsoft Defender for Endpoint service.
 
-If you receive an error message, Microsoft Defender XDR provides a detailed explanation on what the issue is and relevant links are supplied.
+If you receive an error message, the Defender portal provides a detailed explanation on what the issue is and relevant links are supplied.
 
 ## No subscriptions found
 
-If, while you're accessing Microsoft Defender XDR, you get an error message that says, "No subscriptions found," it means that the Microsoft Entra ID used to sign into the Microsoft Defender portal doesn't have a license for Defender for Endpoint.
+If, while you're accessing the Defender portal, you get an error message that says, "No subscriptions found," it means that the Microsoft Entra ID used to sign into the Microsoft Defender portal doesn't have a license for Defender for Endpoint.
 
 Potential reasons:
 
@@ -43,7 +41,7 @@ For both cases, you should contact Microsoft support at [General Microsoft Defen
 
 ## Your subscription has expired
 
-If while accessing Microsoft Defender XDR you get a **Your subscription has expired** message, your online service subscription has expired. Microsoft Defender for Endpoint subscription, like any other online service subscription, has an expiration date.
+If while accessing the Defender portal you get a **Your subscription has expired** message, your online service subscription has expired. Microsoft Defender for Endpoint subscription, like any other online service subscription, has an expiration date.
 
 You can choose to renew or extend the license at any point in time. When accessing the portal after the expiration date, a message appears that says, "Your subscription has expired." The message includes an option to download the device offboarding package, just in case you choose to not renew your subscription.
 

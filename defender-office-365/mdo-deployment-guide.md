@@ -1,20 +1,15 @@
 ---
 title: Get started with Microsoft Defender for Office 365
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: get-started
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
-  - MOE150
 ms.collection: 
   - zerotrust-solution
   - tier1
   - essentials-get-started
 ms.custom:
+  - sfi-ga-nochange
 description: Learn how to get started with the initial deployment and configuration of Microsoft Defender for Office 365.
 ms.service: defender-office-365
 ms.date: 02/06/2026

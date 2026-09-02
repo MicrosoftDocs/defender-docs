@@ -1,20 +1,18 @@
-﻿---
+---
 title: Onboard Windows Servers using a local script
 description: Use a local script to deploy the configuration package on devices to enable onboarding of the devices to the service.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
-ms.date: 11/24/2025
+ms.date: 05/28/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -37,10 +35,10 @@ Check out [Identify Defender for Endpoint architecture and deployment method](de
 > If **Endpoints** isn't available in **System** \> **Settings**, do one or more of the following troubleshooting steps:
 >
 > - Wait a few minutes for the environment to initialize.
-> - Try opening other Microsoft Defender XDR features (for example, Incidents or Hunting).
+> - Try opening other Microsoft Defender features (for example, Incidents or Hunting).
 > - Verify you have the required roles (at least [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator)) and appropriate licensing.
 
-1. Open the configuration package .zip file (*WindowsDefenderATPOnboardingPackage.zip*) that you downloaded from the service onboarding wizard.
+1. Open the configuration package .zip file (*GatewayWindowsDefenderATPOnboardingPackage.zip*) that you downloaded from the service onboarding wizard.
 
    Or, you can get the onboarding package from the Microsoft Defender portal using the following steps:
 
@@ -52,7 +50,7 @@ Check out [Identify Defender for Endpoint architecture and deployment method](de
           - **Standard**: Use the traditional, full set of Microsoft Defender for Endpoint service URLs.
           - **Streamlined**: Simplify firewall/proxy configuration by consolidating connectivity to fewer endpoints. For more information, see [Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint](configure-device-connectivity.md).
         - **Deployment method**: Verify **Local script (for up to 10 devices)** is selected.
-   3. Select **Download onboarding package** to download the *WindowsDefenderATPOnboardingPackage.zip* file.
+   3. Select **Download onboarding package** to download the *GatewayWindowsDefenderATPOnboardingPackage.zip* file.
 
 2. Extract the contents of the .zip file on the device in a location that's easy to find (for example, the Desktop). The .zip file contains a single file named *WindowsDefenderATPLocalOnboardingScript.cmd*.
 
@@ -78,7 +76,7 @@ For information on how you can manually validate that the device is compliant an
 
 ## Configure sample collection settings
 
-On each device, a registry setting configures whether samples can be collected from the device when a request is made through Microsoft Defender XDR to submit a file for deep analysis. The AllowSampleCollection DWORD has the following possible values:
+On each device, a registry setting configures whether samples can be collected from the device when a request is made through the Defender portal to submit a file for deep analysis. The AllowSampleCollection DWORD has the following possible values:
 
 - 0 (00000000): Sample sharing isn't allowed from the device.
 - 1 (00000001): Sharing of all file types is allowed from the device. This value is the default if the registry key doesn't exist.
@@ -105,7 +103,7 @@ For security reasons, the package used to offboard devices expires seven days af
 
 1. Get the package from the Microsoft Defender portal using the following steps:
    1. In the Defender portal at <https://security.microsoft.com>, go to **System** \> **Settings** \> **Endpoints** \> **Device management** section \> **Offboarding**. Or, to go directly to the **Offboarding** page, use <https://security.microsoft.com/securitysettings/endpoints/offboarding>.
-   2. On the **Onboarding** page, configure the following settings:
+   2. On the **Offboarding** page, configure the following settings:
       - At the top of the page, verify **Windows 10 and 11** is selected.
       - **Deployment method**: Verify **Local script (for up to 10 devices)** is selected.
    3. Select **Download package**, and then select **Download** in the confirmation dialog to download the *WindowsDefenderATPOffboardingPackage_valid_until_YYYY-MM-DD.zip* file.

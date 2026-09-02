@@ -1,27 +1,27 @@
-﻿---
-title: Overview of permissions management  
+---
+title: Manage portal access permissions in Microsoft Defender for Endpoint
 description: Assign read and write or read only access to the Microsoft Defender for Endpoint portal.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
-ms.date: 01/28/2025
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
 
+ai-usage: ai-assisted
 ---
 # Overview of permissions management 
 
 
-Defender for Endpoint supports two ways to manage permissions:
+This article helps you understand the available permission models for Microsoft Defender for Endpoint portal access and how to switch between them. Defender for Endpoint supports two ways to manage permissions:
 
 - **Basic permissions management**: Set permissions to either full access or read-only. See [Use basic permissions to access the portal](basic-permissions.md).
 
@@ -33,13 +33,15 @@ Defender for Endpoint supports two ways to manage permissions:
 
 ## Change from basic permissions to RBAC
 
+> [!IMPORTANT]
+> Switching to RBAC is irreversible. After you switch, you can't return to basic permissions management.
+
 If you have basic permissions, you can switch to Role-based access control (RBAC) anytime. Consider the following before making the switch:
 
 - Users who have full access are automatically assigned the default Defender for Endpoint administrator role.
 - Other Microsoft Entra user groups can be assigned to the Defender for Endpoint administrator role after switching to RBAC.
 - Only users who are assigned the Defender for Endpoint administrator role can manage permissions using RBAC. 
 - Users who have read-only access (Security Readers) lose access to the portal until they're assigned a role. Only Microsoft Entra user groups can be assigned a role under RBAC.
-- After switching to RBAC, you can't switch back to using basic permissions management.
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions as it helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.

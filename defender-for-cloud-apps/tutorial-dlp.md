@@ -7,6 +7,9 @@ ms.reviewer: MayaAbelson
 ---
 # Tutorial: Discover and protect sensitive information in your organization
 
+> [!IMPORTANT]
+> File policies retire on January 6, 2027. To maintain file-based data protection, [migrate to Microsoft Purview DLP or auto-labeling policies](migrate-file-policies-to-purview.md).
+
 
 
 In a perfect world, all your employees understand the importance of information protection and work within your policies. In the real world, it's likely that a busy partner who frequently works with accounting information will inadvertently upload a sensitive document to your Box repository with incorrect permissions. A week later you realize your enterprise's confidential information was leaked to your competition.

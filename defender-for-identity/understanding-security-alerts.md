@@ -1,14 +1,18 @@
 ---
-title: Learn to view and manage security alerts | Microsoft Defender for Identity
+title: View and manage Microsoft Defender for Identity security alerts
 description: This article explains how to view and manage Microsoft Defender for Identity security alerts.
-ms.date: 05/08/2025
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
-# View and Manage security alerts
+# View and manage security alerts
 
 The alerts queue shows a list of alerts that were flagged from identities in your network. By default, the queue displays alerts seen in the last seven days in a grouped view. The most recent alerts are shown at the top of the list helping you see the most recent alerts first.
+
+This article explains how to view, filter, investigate, classify, and manage security alerts in Microsoft Defender for Identity.
 
 ## View the alerts queue 
 
@@ -46,7 +50,7 @@ You can apply the following filters to get a more focused view of the alerts.
 
 |Alert |Description  |
 |---------|---------|
-|**Severity**    |   Alert severity is based on several factors, including how much access the attacker might have, the potential impact if the attack succeeds, and the likelihood that the alert is a true positive. For a full list of alert types and their assigned severity levels, see [Security alert name mapping and unique external IDs](alerts-overview.md)     |
+|**Severity**    |   Alert severity is based on several factors, including how much access the attacker might have, the potential impact if the attack succeeds, and the likelihood that the alert is a true positive. For a full list of alert types and their assigned severity levels, see the article [Security alert name mapping and unique external IDs](alerts-overview.md)     |
 |**Status**    | You can choose to filter the list of alerts based on their Status. For example, you can filter to show only alerts that are **New**, **In Progress**, or **Resolved**.        |
 |**Detection sources**    |  You can filter the alerts based on the following Detection sources:   **Microsoft Defender for Identity** or **Microsoft Defender XDR**     |
 |**Tags**    | You can filter the alerts based on Tags assigned to alerts. |
@@ -126,12 +130,12 @@ Whenever a change or comment is made to an alert, it's recorded in the Comments 
 
 ### Classify security alerts
 
-For each alert, ask the following questions to determine the alert classification and help decide what to do next:
+Defender for Identity security alerts can be classified as a true positive (TP), benign true positive (B-TP), or false positive (FP). For each alert, ask the following questions to determine the alert classification and help decide what to do next:
 
 1. Is the security alert a TP, B-TP, or FP?
 1. How common is this specific security alert in your environment?
 1. Was the alert triggered by the same types of computers or users?
-   For example, servers with the same role or users from the same group/department? If the computers or users were similar, you might decide to exclude it to avoid extra future FP alerts.
+   For example, servers with the same role or users from the same group/department? If the computers or users were similar, you might decide to exclude this alert type to avoid extra future FP alerts.
 
 Following proper investigation, all Defender for Identity security alerts can be classified as one of the following activity types:
 
@@ -154,6 +158,8 @@ Tune your alerts to adjust and optimize them, reducing false positives. Alert tu
 For more information, see [Tune an alert](/microsoft-365/security/defender/investigate-alerts#tune-an-alert).
 
 ## Related content
+
+For more information about investigating alerts, see the following articles:
 
 - [Investigate a user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users)
 - [Investigate a computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices)

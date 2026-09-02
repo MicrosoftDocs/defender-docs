@@ -1,4 +1,4 @@
-﻿---
+---
 title: Set up authenticated network scans in Microsoft Defender for Endpoint
 description: Set up authenticated network scans to discover network devices in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
@@ -6,19 +6,18 @@ ms.subservice: onboard
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
-ms.custom: admindeeplinkDEFENDER
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
 ms.topic: how-to
-search.appverid: met150
-ms.date: 01/12/2026
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Vulnerability Management
 
+ai-usage: ai-assisted
 ---
 # Set up authenticated network scans in Microsoft Defender for Endpoint
 
@@ -65,6 +64,7 @@ To select a device that performs the authenticated network scans:
 - To allow the scanner to be authenticated and work properly, add the following domains/URLs:
 
     - `*.security.microsoft.com`
+    - `*.mdiot.microsoft.com`
     - `login.microsoftonline.com`
     - `*.blob.core.windows.net/networkscannerstable/*`
 
@@ -72,6 +72,8 @@ To select a device that performs the authenticated network scans:
     > Not all URLs are specified in the Defender for Endpoint documented list of allowed data collection.
 
 ## Install the scanner
+
+To install the scanner on the designated device:
 
 1. In the Microsoft Defender Portal, select **Settings** \> **Device discovery** \> **Authenticated scans**.
 
@@ -96,9 +98,11 @@ When finished, you should see a message confirming you've signed in.
 > [!NOTE]
 > A scheduled task that searches for updates runs regularly. When the task runs, it compares the version of the scanner on the client device to the version of the agent on the update location. The update location is where Windows looks for updates, such as on a network share or from the internet.
 >
-> If there's a difference between the two versions, the update process determines which files are different and need to be updated on the local computer. Once the required updates are determined, the downloading of the updates start.
+> If there's a difference between the two versions, the update process determines which files are different and need to be updated on the local computer. Once the required updates are determined, the scheduled task starts downloading the updates.
 
 ## Configure a new authenticated network scan
+
+To configure a new authenticated network scan, complete the following steps:
 
 1. In the Microsoft Defender Portal, select **Settings** \> **Device discovery** \> **Authenticated scans**.
 
@@ -118,7 +122,7 @@ When finished, you should see a message confirming you've signed in.
 
 1. Select your **Authentication method**.
 
-   You can select to **Use azure KeyVault for providing credentials:** If you manage your credentials in Azure KeyVault, you can type the Azure KeyVault URL and Azure KeyVault secret name to be accessed by the scanning device to provide credentials. The secret value is dependent on the method you choose, as described in the following table:
+   You can select to **Use azure KeyVault for providing credentials:** If you manage your credentials in Azure KeyVault, you can type the Azure KeyVault URL and Azure KeyVault secret name to be accessed by the scanning device to provide credentials. The secret value depends on the authentication method you select, as shown in the following table:
 
    |Authentication Method|Azure KeyVault secret value|
    |:----|:----:|

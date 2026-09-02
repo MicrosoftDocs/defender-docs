@@ -2,13 +2,12 @@
 title: Schedule Microsoft Defender Antivirus protection updates
 description: Schedule the day, time, and interval for when protection updates should be downloaded
 ms.service: defender-endpoint
-search.appverid: met150
 ms.localizationpriority: medium
-ms.date: 10/20/2025
+ms.date: 07/02/2026
 ms.topic: how-to
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen
+ms.custom: nextgen, msecd-doc-authoring-1016
 ms.reviewer: pahuijbr
 ms.subservice: ngp
 ms.collection: 
@@ -19,14 +18,15 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
 ---
 # Manage the schedule for when protection updates should be downloaded and applied
 
 > [!IMPORTANT]
-> Customers who applied the March 2022 Microsoft Defender engine update (**1.1.19100.5**) might have encountered high resource utilization (CPU and/or memory). Microsoft has released an update (**1.1.19200.5**) that resolves the bugs introduced in the earlier version. Customers are recommended to update to this new engine build of Antivirus Engine (**1.1.19200.5**). To ensure any performance issues are fully fixed, it's recommended to reboot machines after applying update. For more information, see [Monthly platform and engine versions](microsoft-defender-endpoint-releases.md#microsoft-defender-antivirus-releases).
+> Customers who applied the March 2022 Microsoft Defender engine update (**1.1.19100.5**) might have encountered high resource utilization (CPU and/or memory). Microsoft has released an update (**1.1.19200.5**) that resolves the bugs introduced in the earlier version. Customers are recommended to update to Microsoft Defender Antivirus Engine build **1.1.19200.5**. To ensure any performance issues are fully fixed, it's recommended to reboot machines after applying Microsoft Defender Antivirus Engine update 1.1.19200.5. For more information, see [Monthly platform and engine versions](microsoft-defender-endpoint-releases.md#microsoft-defender-antivirus-releases).
 
 
-Microsoft Defender Antivirus lets you determine when it should look for and download updates.
+This article explains how to configure scheduled protection updates for Microsoft Defender Antivirus using Configuration Manager, Group Policy, PowerShell, or WMI. Microsoft Defender Antivirus lets you determine when it should look for and download updates.
 
 You can schedule updates for your endpoints by:
 
@@ -38,11 +38,17 @@ You can also randomize the times when each endpoint checks and downloads protect
 
 ## Prerequisites
 
+Before you configure scheduled protection updates, make sure the following requirements are met.
+
 ### Supported operating systems
+
+The following operating systems are supported:
 
 - Windows
 
 ## Use Configuration Manager to schedule protection updates
+
+To schedule protection updates by using Configuration Manager, perform the following steps:
 
 1. On your Microsoft Configuration Manager console, open the antimalware policy you want to change (select **Assets and Compliance** in the navigation pane on the left, then expand the tree to **Overview** \> **Endpoint Protection** \> **Antimalware Policies**)
 
@@ -60,8 +66,8 @@ You can also randomize the times when each endpoint checks and downloads protect
 ## Use Group Policy to schedule protection updates
 
 > [!IMPORTANT]
-> By default, "SignatureScheduleDay" is set as "8" and "SignatureUpdateInterval" is set as "0" so Microsoft Defender Antivirus won't schedule protection updates.
-Enabling these settings overrides that default.
+> By default, the update schedule day (`SignatureScheduleDay`) is set to "8" (no day specified) and the update check interval (`SignatureUpdateInterval`) is set to "0" (disabled), so Microsoft Defender Antivirus doesn't schedule protection updates automatically.
+> Enabling `SignatureScheduleDay` or `SignatureUpdateInterval` overrides that default.
 
 1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and click **Edit**.
 
@@ -79,7 +85,7 @@ Enabling these settings overrides that default.
 
 ## Use PowerShell cmdlets to schedule protection updates
 
-Use the following cmdlets:
+Use the following cmdlets to set the day, time, and interval for protection update checks:
 
 ```PowerShell
 Set-MpPreference -SignatureScheduleDay
@@ -91,7 +97,7 @@ See [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](u
 
 ## Use Windows Management Instrumentation (WMI) to schedule protection updates
 
-Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
+Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties to configure the signature update schedule day, time, and interval:
 
 ```WMI
 SignatureScheduleDay
@@ -113,7 +119,8 @@ See the following for more information and allowed parameters:
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 
-## Related articles
+<a name="related-articles"></a>
+## Related content
 
 - [Deploy Microsoft Defender Antivirus](deploy-manage-report-microsoft-defender-antivirus.md)
 - [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md)

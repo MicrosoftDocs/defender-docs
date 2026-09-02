@@ -1,4 +1,4 @@
-﻿---
+---
 title: Enable and configure Microsoft Defender Antivirus protection features
 description: Enable behavior-based, heuristic, and real-time protection in Microsoft Defender Antivirus.
 ms.service: defender-endpoint
@@ -13,7 +13,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -49,6 +48,7 @@ See [Use next-gen Microsoft Defender Antivirus technologies through cloud protec
 |---|---|
 | [Detect and block potentially unwanted applications](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md)| Detect and block apps that mighty be unwanted in your network, such as adware, browser modifiers and toolbars, and rogue or fake antivirus apps |
 | [Enable and configure Microsoft Defender Antivirus protection capabilities](configure-real-time-protection-microsoft-defender-antivirus.md)|Enable and configure real-time protection, heuristics, and other always-on Microsoft Defender Antivirus monitoring features |
+| [AI agent runtime protection with Microsoft Defender for Endpoint](ai-agent-runtime-protection-overview.md) | Detect and block attacks targeting local AI agents running on your devices |
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
@@ -62,6 +62,6 @@ See [Use next-gen Microsoft Defender Antivirus technologies through cloud protec
 
 ## See also
 
-- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md)
 
 

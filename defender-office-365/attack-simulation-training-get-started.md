@@ -1,33 +1,30 @@
 ---
 title: Get started using Attack simulation training
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
-  - MOE150
 ms.assetid:
 ms.collection: 
   - m365-security
   - tier2
-ms.custom: 
+ms.custom:
   - seo-marvel-apr2020
-description: Admins can learn how to use Attack simulation training to run simulated phishing and password attacks in their Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 organizations.
+  - sfi-ga-nochange
+  - msecd-doc-authoring-1016
+description: Learn the basics of Attack simulation training in Microsoft Defender for Office 365, including supported attack scenarios, licensing requirements, and how simulations help identify vulnerable users.
 ms.service: defender-office-365
-ms.date: 01/06/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
+ai-usage: ai-assisted
 ---
 
 # Get started using Attack simulation training
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In organizations with Microsoft Defender for Office 365 Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5), you can use Attack simulation training in the Microsoft Defender portal to run realistic attack scenarios in your organization. These simulated attacks can help you identify and find vulnerable users before a real attack impacts your bottom line.
+In organizations with Microsoft Defender for Office 365 Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5), you can use Attack simulation training in the Microsoft Defender portal to run realistic attack scenarios in your organization. The simulated attacks in Attack simulation training can help you identify and find vulnerable users before a real attack impacts your bottom line.
 
 This article explains the basics of Attack simulation training.
 
@@ -36,6 +33,8 @@ Watch this short video to learn more about Attack simulation training.
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=37f13948-e44b-4d1a-ac3b-a13ce02dabec]
 
 ## What do you need to know before you begin?
+
+Before you begin, review the following licensing, environment, and access requirements.
 
 - Attack simulation training requires a Microsoft 365 E5 or [Microsoft Defender for Office 365 Plan 2](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet) license. For more information about licensing requirements, see [Licensing terms](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#licensing-terms).
 
@@ -77,7 +76,7 @@ Watch this short video to learn more about Attack simulation training.
 
 - There are no corresponding PowerShell cmdlets for Attack simulation training.
 
-- Attack simulation and training related data is stored with other customer data for Microsoft 365 services. For more information, see [Microsoft 365 data locations](/microsoft-365/enterprise/o365-data-locations). Attack simulation training is available in the following regions: APC, EUR, and NAM. Countries within these regions where Attack simulation training is available include ARE, AUS, AUT, BRA, CAN, CHE, CHL, DEU, ESP, FRA, GBR, IDN, IND, ISR, ITA, JPN, KOR, LAM, MEX, MYS, NOR, NZL, POL, QAT, SGP, SWE, TWN, and ZAF.
+- Attack simulation and training related data is stored with other customer data for Microsoft 365 services. For more information, see [Microsoft 365 data locations](/microsoft-365/enterprise/o365-data-locations). Attack simulation training is available in the following regions: APC, EUR, and NAM. Countries within these regions where Attack simulation training is available include ARE, AUS, AUT, BRA, CAN, CHE, CHL, DEU, DNK, ESP, FRA, GBR, IDN, IND, ISR, ITA, JPN, KOR, LAM, MEX, MYS, NOR, NZL, POL, QAT, SGP, SWE, TWN, and ZAF.
 
   > [!NOTE]
   > NOR, ZAF, ARE, and DEU are the latest additions. All features except reported email telemetry are available in these regions. We're working to enable the features and we'll notify customers when reported email telemetry becomes available.
@@ -96,7 +95,7 @@ A simulation in Attack simulation training is the overall campaign that delivers
 - The _payload_ used in the simulated phishing message (a link or an attachment), and the composition of the phishing message (for example, package delivered, problem with your account, or you won a prize).
 - The _social engineering technique_. The payload and social engineering technique are closely related.
 
-In Attack simulation training, multiple types of social engineering techniques are available. Except for **How-to Guide**, these techniques were curated from the [MITRE ATT&CK® framework](https://attack.mitre.org/techniques/enterprise/). Different payloads are available for different techniques.
+In Attack simulation training, multiple types of social engineering techniques are available. Except for **How-to Guide**, these techniques were curated from the [MITRE ATT&CK® framework](https://attack.mitre.org/techniques/enterprise/). Different payloads are available for different social engineering techniques in Attack simulation training.
 
 The following social engineering techniques are available:
 
@@ -170,7 +169,7 @@ The URLs that are used by Attack simulation training are listed in the following
 
 ### Create simulations
 
-For instructions on how to create and launch simulations, see [Simulate a phishing attack](attack-simulation-training-simulations.md).
+For instructions on how to create and launch Attack simulation training simulations, see [Simulate a phishing attack](attack-simulation-training-simulations.md).
 
 The _landing page_ in the simulation is where users go when they open the payload. When you create a simulation, you select the landing page to use. You can select from built-in landing pages, custom landing pages that you already created, or you can create a new landing page to use during the creation of the simulation. To create landing pages, see [Landing pages in Attack simulation training](attack-simulation-training-landing-pages.md).
 
@@ -184,9 +183,10 @@ _End user notifications_ in the simulation send periodic reminders to users (for
 >
 >   For more information, see [Simulation automations for Attack simulation training](attack-simulation-training-simulation-automations.md).
 >
-> - To see which departments are more vulnerable to phishing simulations, create identical simulations or simulation automations scoped by department, and then use the [available reports](#reports-and-insights) to compare the results.
+> - To see which departments are more vulnerable to phishing simulations, create identical simulations or simulation automations scoped by department, and then use the [Attack simulation training reports and insights](#reports-and-insights) to compare the results.
 
-### Payloads
+<a name="payloads"></a>
+### Create and manage payloads
 
 Although Attack simulation training contains many built-in payloads for the available social engineering techniques, you can create custom payloads to better suit your business needs, including [copying and customizing an existing payload](attack-simulation-training-payloads.md#copy-payloads). You can create payloads at any time before you create the simulation or during the creation of the simulation. To create payloads, see [Create a custom payload for Attack simulation training](attack-simulation-training-payloads.md#create-payloads).
 
@@ -196,9 +196,10 @@ The best training experience for simulated phishing messages is to make them as 
 
 Attack simulation training also supports using QR codes in payloads. You can choose from the list of built-in QR code payloads, or you can create custom QR code payloads. For more information, see [QR code payloads in Attack simulation training](attack-simulation-training-payloads.md#qr-code-payloads).
 
-### Reports and insights
+<a name="reports-and-insights"></a>
+### View simulation reports and insights
 
-After you create and launch the simulation, you need to see how it's going. For example:
+After you create and launch your phishing simulation, you need to see how it's going. For example:
 
 - Did everyone receive it?
 - Who did what to the simulated phishing message and the payload within it (delete, report, open the payload, enter credentials, etc.).
@@ -206,7 +207,8 @@ After you create and launch the simulation, you need to see how it's going. For 
 
 The available reports and insights for Attack simulation training are described in [Reports for Attack simulation training](attack-simulation-training-insights.md).
 
-### Predicted compromise rate
+<a name="predicted-compromise-rate"></a>
+### Understand the predicted compromise rate
 
 You often need to tailor a simulated phishing campaign for specific audiences. If the phishing message is too close to perfect, almost everyone is fooled by it. If it's too suspicious, no is fooled by it. And, the phishing messages that some users consider difficult to identify are considered easy to identify by other users. So how do you strike a balance?
 
@@ -216,7 +218,7 @@ The _predicted compromise rate (PCR)_ indicates the potential effectiveness when
 - Aggregated and anonymized compromise rates from other simulations.
 - Payload metadata.
 
-PCR allows you to compare the predicted vs. actual click through rates for your phishing simulations. You can also use this data to see how your organization performs compared to predicted outcomes.
+PCR allows you to compare the predicted vs. actual click through rates for your phishing simulations. You can also use PCR and actual click-through-rate data to see how your organization performs compared to predicted outcomes.
 
 PCR information for a payload is available wherever you view and select payloads, and in the following reports and insights:
 
@@ -226,7 +228,8 @@ PCR information for a payload is available wherever you view and select payloads
 > [!TIP]
 > Attack Simulator uses Safe Links in Defender for Office 365 to securely track click data for the URL in the payload message sent to targeted recipients of a phishing campaign, even if the **Track user clicks** setting in Safe Links policies is turned off.
 
-## Training without tricks
+<a name="training-without-tricks"></a>
+## Assign training without running simulations
 
 Traditional phishing simulations present users with suspicious messages and the following goals:
 

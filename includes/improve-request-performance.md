@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: itsela
 author: itsela-ms
 ms.localizationpriority: medium
-manager: dansimp
+manager: bagol
 ms.date: 01/08/2026
 audience: ITPro
 ms.collection: M365-security-compliance 

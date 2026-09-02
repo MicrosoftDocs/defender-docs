@@ -5,8 +5,8 @@ ms.localizationpriority: medium
 f1.keywords:
   - NOCSH
 ms.service: defender-xdr
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 audience: ITPro
 ms.collection: 
   - m365-security
@@ -16,6 +16,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.date: 02/19/2024
+ms.custom: sfi-ga-nochange
 ---
 
 # What's new in Microsoft Secure Score
@@ -34,7 +35,7 @@ The following recommendation is added as a Microsoft Secure Score improvement ac
 
 **Microsoft Defender for Identity:**
 
-- Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)
+- Edit insecure ADCS certificate enrollment IIS endpoints (ESC11)
 
 ## January 2024
 

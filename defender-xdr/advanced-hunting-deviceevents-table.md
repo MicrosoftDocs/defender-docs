@@ -1,15 +1,11 @@
 ---
 title: DeviceEvents table in the advanced hunting schema
 description: Learn about antivirus, firewall, and other event types in the miscellaneous device events (DeviceEvents) table of the advanced hunting schema
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -32,9 +28,9 @@ ms.date: 03/28/2025
 The miscellaneous device events or `DeviceEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about various event types, including events triggered by security controls, such as Microsoft Defender Antivirus and exploit protection. Use this reference to construct queries that return information from this table.
 
 > [!TIP]
-> For detailed information about the events types (`ActionType` values) supported by a table, use the built-in schema reference available in Microsoft Defender XDR.
+> For detailed information about the events types (`ActionType` values) supported by a table, use the built-in schema reference available in the Defender portal.
 
-This advanced hunting table is populated by records from Microsoft Defender for Endpoint. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Endpoint in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+This advanced hunting table is populated by records from Microsoft Defender for Endpoint. If your organization hasn't deployed the service in Microsoft Defender, queries that use the table aren't going to work or return any results. For more information about how to deploy Defender for Endpoint in the Defender portal, read [Deploy supported services](deploy-supported-services.md).
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
@@ -105,7 +101,6 @@ For information on other tables in the advanced hunting schema, [see the advance
 |`IsProcessRemoteSession` | `bool` | Indicates whether the created process was run under a remote desktop protocol (RDP) session (true) or locally (false) |
 | `ProcessRemoteSessionDeviceName` | `string` | Device name of the remote device from which the created process's RDP session was initiated |
 | `ProcessRemoteSessionIP` | `string` | IP address of the remote device from which the created process's RDP session was initiated |
-| `ProcessUniqueId` | `string` | Unique identifier of the process; this is equal to the Process Start Key in Windows devices |
 | `InitiatingProcessUniqueId` | `string` | Unique identifier of the initiating process; this is equal to the Process Start Key in Windows devices |
 
 

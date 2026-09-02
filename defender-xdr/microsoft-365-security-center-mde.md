@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 f1.keywords:
 - NOCSH
 ms.author: guywild
-author: diannegali
+author: guywi-ms
 ms.date: 10/16/2024
 audience: ITPro
 ms.topic: article
@@ -86,7 +86,7 @@ You can find [Microsoft Defender Vulnerability Management](/defender-vulnerabili
 
 The device configuration dashboard is found in **Endpoints > Configuration management > Dashboard**. You can view device security, onboarding via Microsoft Intune and Microsoft Defender for Endpoint, web protection coverage, and attack surface management at a glance.
 
-Security administrators can deploy endpoint security policies to devices in your organization under **Endpoints > Configuration management > Endpoint security policies**. Know more about [endpoint security policies](/defender-endpoint/manage-security-policies).
+Security administrators can deploy endpoint security policies to devices in your organization under **Endpoints > Configuration management > Endpoint security policies**. Know more about [endpoint security policies](/defender-endpoint/endpoint-security-policies-configure).
 
 ### Reports
 
@@ -133,7 +133,7 @@ You can create rules and policies to manage indicators, filter web content, mana
 
 - [Manage indicators](/defender-endpoint/indicator-manage)
 - [Manage automation uploads](/defender-endpoint/manage-automation-file-uploads)
-- [Manage automation folder exclusions](/defender-endpoint/manage-automation-folder-exclusions)
+- [Manage automation folder exclusions](/defender-endpoint/automation-folder-exclusions-configure)
 - [Filter web content](/defender-endpoint/web-content-filtering)
 
 #### Security setting management

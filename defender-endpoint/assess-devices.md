@@ -1,24 +1,21 @@
-﻿---
+---
 title: Review and assess devices in Microsoft Defender for Endpoint
 description: Learn how to review and assess devices discovered by device discovery.
 ms.service: defender-endpoint
 ms.subservice: onboard
-f1.keywords:
-- NOCSH
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
-ms.custom: admindeeplinkDEFENDER
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
 ms.topic: how-to
-search.appverid: met150
-ms.date: 01/12/2026
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
 ---
 # Review and assess devices in Microsoft Defender for Endpoint
 
@@ -29,6 +26,8 @@ This article describes how to review and assess devices discovered by device dis
 ## Prerequisites
 
 ### Supported operating systems
+
+Device discovery supports the following operating systems:
 
 - Windows 10 and later
 - Windows Server 2019 and later.
@@ -88,7 +87,8 @@ DeviceInfo
 | summarize arg_max(Timestamp, *) by DeviceId
 ```
 
-### Query discovered devices details
+<a name="query-discovered-devices-details"></a>
+### Query details for discovered devices
 
 Run this query on the DeviceInfo table to return all discovered devices along with the most up-to-date details for each device:
 
@@ -132,10 +132,10 @@ DeviceNetworkEvents
 
 ## Assess vulnerabilities on discovered devices
 
-Microsoft Defender Vulnerability Management detects risks on your devices and other discovered, unmanaged devices in the network.
+Microsoft Defender Vulnerability Management finds risks on your devices. It also checks unmanaged devices in the network.
 
-To review relevant vulnerabilities, see the **Exposure management** > **Recommendations** page, and other entity pages across the Defender portal.
+To review vulnerabilities, go to **Exposure management** > **Recommendations** in the Defender portal.
 
-For example, search for **SSH** in the security recommendations list to find SSH vulnerabilities related to unmanaged and managed devices.
+For example, search for **SSH** to find SSH vulnerabilities on unmanaged and managed devices.
 
-For more information on vulnerability management features, see [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management).
+To learn more, see [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management).

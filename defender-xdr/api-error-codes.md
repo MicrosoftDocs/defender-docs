@@ -1,21 +1,15 @@
 ---
 title: Common Microsoft Defender XDR REST API error codes
-description: Learn about the common Microsoft Defender XDR REST API error codes.
+description: Learn about the common Microsoft Defender XDRREST API error codes.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: edbaynash
 author: EdB-MSFT
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
  - m365-security
  - tier3
  - must-keep
 ms.topic: reference
-search.appverid: 
-  - MOE150
-  - MET150
 ms.custom: api
 ms.date: 04/18/2025
 appliesto:
@@ -32,7 +26,7 @@ appliesto:
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-Error codes can be returned by an operation on any of the Microsoft Defender XDR APIs. Every error response contains an error message, which can help resolve the problem. The error message column in the table section provides some sample messages. The content of actual messages varies based on the factors that triggered the response. Variable content is indicated by angle brackets (`< >`) in the following table:
+Error codes can be returned by an operation on any of the Microsoft Defender APIs. Every error response contains an error message, which can help resolve the problem. The error message column in the table section provides some sample messages. The content of actual messages varies based on the factors that triggered the response. Variable content is indicated by angle brackets (`< >`) in the following table:
 
 ## Error codes
 

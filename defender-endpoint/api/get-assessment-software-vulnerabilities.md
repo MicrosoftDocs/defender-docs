@@ -1,11 +1,10 @@
-﻿---
+---
 title: Export software vulnerabilities assessment per device
 description: The API response is per device and contains vulnerable software installed on your exposed devices and any known vulnerabilities in these software products. This table also includes operating system information, CVE IDs, and vulnerability severity information.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -13,7 +12,6 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 11/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -294,7 +292,7 @@ GET /api/machines/SoftwareVulnerabilitiesExport
 #### 2.6.1 Request example
 
 ```http
-GET https://api.security.contoso.com/api/machines/SoftwareVulnerabilitiesExport
+GET https://api.security.microsoft.com/api/machines/SoftwareVulnerabilitiesExport
 ```
 
 #### 2.6.2 Response example

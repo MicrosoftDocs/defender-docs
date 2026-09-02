@@ -5,18 +5,18 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - usx-security
 - sentinel-only
 ms.topic: how-to
-ms.date: 01/30/2025
-search.appverid: met150
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Move alerts from one incident to another in the Microsoft Defender portal
@@ -44,7 +44,7 @@ Also, on the details panel on an alert details page, the **Move alert to another
 
 ## Select the alert or alerts to move
 
-1. Open one of the locations mentioned in the previous section.
+1. Open the **Incidents** queue, the **Alerts** tab on the incident details page, the **Alerts** queue, or an alert details page.
 
 1. Select the alert or alerts you want to move by marking the checkboxes at the beginning of their rows in the queue. When one or more alerts are marked, the **Move alerts to another incident** button appears on the toolbar.
 
@@ -55,6 +55,8 @@ Also, on the details panel on an alert details page, the **Move alert to another
 1. If the alert or alerts belong with another existing incident, select **Link to an existing incident**. Otherwise, select **Create a new incident**. Alerts must belong to an incident.
 
 ### Move alert or alerts to an existing incident
+
+To move the selected alerts to an existing incident, complete the following steps:
 
 1. If you selected **Link to an existing incident**, a new text field, **Incident name or ID**, appears immediately following the selection. Begin typing the name or ID number of the incident you want to attach the alert or alerts to. As you type, the list of available incidents is dynamically displayed and filtered by what you type. When you see the one you want in the list, select it.
 
@@ -70,6 +72,8 @@ Also, on the details panel on an alert details page, the **Move alert to another
 
 ### Move alert or alerts to a new incident
 
+To create a new incident for the selected alerts, follow these steps:
+
 1. If you selected **Create a new incident**, enter a comment explaining why you want to move the alerts.
 
 1. Provide feedback explaining why you are moving the alert or alerts by selecting one of the predefined options. This step helps Microsoft improve alert correlation in the future.
@@ -80,14 +84,16 @@ Also, on the details panel on an alert details page, the **Move alert to another
 
     When the process is completed, a new incident is created with the alert or alerts you moved to it. The incident is given a name automatically based on the name of the alert or alerts.
 
-## Activity log
+<a name="activity-log"></a>
+## Review activity log entries for moved alerts
 
 When an alert is correlated with an incident, a message is written to the incident's activity log, attesting that the alert was correlated with it. This message is written in either of the following circumstances:
 
 - An alert is created and automatically correlated with a new or existing incident.
 - An alert is moved from one incident to another. The message appears in the log of the destination incident.
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 - [Alert correlation and incident merging in the Microsoft Defender portal](alerts-incidents-correlation.md)
 - [Merge incidents manually in the Microsoft Defender portal](merge-incidents-manually.md)

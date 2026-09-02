@@ -1,12 +1,17 @@
 ---
-title: File policies
+title: File policies in Microsoft Defender for Cloud Apps
 description: This article describes the procedure for setting up a data policy to monitor and control the data and files in your organization's cloud app use.
-ms.date: 09/01/2025
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: MayaAbelson
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # File policies in Microsoft Defender for Cloud Apps
+
+> [!IMPORTANT]
+> File policies retire on January 6, 2027. To maintain file-based data protection, [migrate to Microsoft Purview DLP or auto-labeling policies](migrate-file-policies-to-purview.md).
 
 File Policies allow you to enforce a wide range of automated processes using the cloud provider's APIs. Policies can be set to provide continuous compliance scans, legal eDiscovery tasks, DLP (Data loss prevention) for sensitive content shared publicly, and many more use cases. Defender for Cloud Apps can monitor any file type based on more than 20 metadata filters. For example, access level and file type.
 
@@ -27,7 +32,7 @@ The engine combines three aspects under each policy:
   > [!NOTE]
   > Only the governance action of the first triggered policy is guaranteed to be applied. For example, if a file policy has a sensitivity label applied to a file, a second file policy can't apply another sensitivity label to it.
 
-Once enabled, the policy continuously scans your cloud environment and identifies files that match the content and context filters, and applies the requested automated actions. These policies detect and remediate any violations for at-rest information or when new content is created. Policies can be monitored using real-time alerts or using console-generated reports.
+Once enabled, the policy continuously scans your cloud environment and identifies files that match the content and context filters, and applies the requested automated actions. File policies detect and remediate any violations for at-rest information or when new content is created. Policies can be monitored using real-time alerts or using console-generated reports.
 
 The following are examples of file policies that can be created:
 
@@ -65,7 +70,7 @@ To create a new file policy, follow this procedure:
 
 1. Assign a **Policy severity** to your policy. If Defender for Cloud Apps is configured to send notifications based on a specific policy severity level, this level determines whether matches for the policy trigger a notification.
 
-1. Select a **Category** and link the policy to the most appropriate risk type. This field is informative only and helps you search for specific policies and alerts later, based on risk type. The risk might already be preselected according to the category for which you chose to create the policy. By default, File policies are set to DLP.
+1. Select a **Category** and link the policy to the most appropriate risk type. The **Category** field is informative only and helps you search for specific policies and alerts later, based on risk type. The risk might already be preselected according to the category for which you chose to create the policy. By default, File policies are set to DLP.
 
 1. **Create a filter for the files this policy will act on** to set which discovered apps trigger this policy. Narrow down the policy filters until you reach an accurate set of files you wish to act upon. Be as restrictive as possible to avoid false positives. For example, if you wish to remove public permissions, remember to add the **Public** filter, if you wish to remove an external user, use the "External" filter and so on.
 
@@ -75,7 +80,7 @@ To create a new file policy, follow this procedure:
     > * If you want to search for a string, enclose the words in quotation marks. This functions like AND. For example, if you search for "malware" "virus," it finds virus-malware-file.exe but it won't find malwarevirusfile.exe and it won't find malware.exe. However, it searches for the exact string. If you search for "malware virus," it won't find "virus" or "virus-malware."\
     > * **Equals** searches only for the complete string. For example, if you search for malware.exe it finds malware.exe but not *malware.exe.txt.*
 
-1. Under the **Apply to** filter, select either **all files**, **all files excluding selected folders** or **selected folders** for Box, SharePoint, Dropbox, or OneDrive. This setting allows you to enforce the file policy across all files in the app or within specific folders. You're then prompted to sign in to the cloud app and add the relevant folders.
+1. Under the **Apply to** filter, select either **all files**, **all files excluding selected folders** or **selected folders** for Box, SharePoint, Dropbox, or OneDrive. The **Apply to** setting allows you to enforce the file policy across all files in the app or within specific folders. You're then prompted to sign in to the cloud app and add the relevant folders.
 
     :::image type="content" source="media/file-policies/screenshot-showing-where-to-apply-file-policies-for-example-all-files-or-selected-folders.png" alt-text="Screenshot showing where to apply file policies, for example to all files or selected folders" lightbox="media/file-policies/screenshot-showing-where-to-apply-file-policies-for-example-all-files-or-selected-folders.png":::
 
@@ -85,7 +90,7 @@ To create a new file policy, follow this procedure:
 
     Once content inspection is enabled, you can choose to use preset expressions or to search for other customized expressions.
 
-    In addition, you can specify a regular expression to exclude a file from the results. This option is highly useful if you have an inner classification keyword standard that you want to exclude from the policy.
+    In addition, you can specify a regular expression to exclude a file from the results. The regular-expression exclusion option is highly useful if you have an inner classification keyword standard that you want to exclude from the policy.
 
     You can set the minimum number of content violations that you want to match before the file is considered a violation. For example, you can choose 10 if you want to be alerted on files with at least 10 credit card numbers found within its content.
 
@@ -106,7 +111,7 @@ To create a new file policy, follow this procedure:
     :::image type="content" source="media/file-policy-edit-and-preview-results.png" alt-text="Screenshot that shows how you can see a preview of the filtered results for file policies.":::
 
 
-1. To view file policy matches, go to **Policies** -> **Policy management**. Here you can see files that are suspected to violate the policy. Filter the results to display only the file policies using the **Type** filter at the top. For more information about the matches for each policy, under the **Count** column, select the number of **matches** for a policy. Alternatively, select the three dots at the end of the row for a policy and choose **View all matches**. This opens the **File policy report**. Select the **Matching now** tab to see files that currently match the policy. Select the **History** tab to see a history back to up to six months of files that matched the policy.
+1. To view file policy matches, go to **Policies** -> **Policy management**. Here you can see files that are suspected to violate the policy. Filter the results to display only the file policies using the **Type** filter at the top. For more information about the matches for each policy, under the **Count** column, select the number of **matches** for a policy. Alternatively, select the three dots at the end of the row for a policy and choose **View all matches**. Selecting **View all matches** opens the **File policy report**. Select the **Matching now** tab to see files that currently match the policy. Select the **History** tab to see a history back to up to six months of files that matched the policy.
 
 ## Limitations
 
@@ -116,6 +121,8 @@ To create a new file policy, follow this procedure:
 
 
 ## File policy best practices
+
+Use the following best practices when creating and managing file policies in Defender for Cloud Apps:
 
 1. Avoid resetting the file policy using the **Reset results and apply actions again** checkbox in production environments unless it's necessary. Doing so initiates a full scan of all files covered by the policy, which can negatively affect performance.
 
@@ -131,7 +138,7 @@ To create a new file policy, follow this procedure:
 
 ## File policy reference
 
-This section provides reference details about policies, providing explanations for each policy type and the fields that can be configured for each policy.
+The following file policy reference provides explanations for each policy type and the fields that can be configured for each policy.
 
 A **File policy** is an API-based policy that enables you to control your organization's content in the cloud, taking into account over 20 file metadata filters (including owner and sharing level) and content inspection results. Based on the policy results, governance actions can be applied. The content inspection engine can be extended via 3rd-party DLP engines and anti-malware solutions.
 
@@ -165,7 +172,7 @@ You can go to the Policy center to review file policy violations.
 
 ## File filters 
 
-File filters allow you to apply specific criteria to your file policies and focus on files that meet conditions such as file type, access level, and share status. This includes file types such as PDF, Office files, RTF, HTML, and code files.
+File filters allow you to apply specific criteria to your file policies and focus on files that meet conditions such as file type, access level, and share status. File filters support file types such as PDF, Office files, RTF, HTML, and code files.
 
 Below is a list of the file filters that can be applied:
 
@@ -286,7 +293,7 @@ You can view more information about each file, by selecting the file itself in t
 - **Matched policies** - See a list of policies the file matched.
 - **Sensitivity labels** - View the list of sensitivity labels from Microsoft Purview Information Protection found in this file. You can then filter by all files matching this label.
 
-The fields in the File drawer provide contextual links to files and drill downs you might want to perform from the drawer directly. For example, if you move your cursor next to the **Owner** field, you can use the "add to filter" icon ![add to filter.](media/activity-filters/add-to-filter-icon.png) to add the owner immediately to the filter of the current page. You can also use the settings cog icon ![settings icon.](media/activity-filters/contextual-settings-icon.png) that pops up to arrive directly at the settings page necessary to modify the configuration of one of the fields, such as **Sensitivity labels**.
+The fields in the File drawer provide contextual links to files and drill downs you might want to perform from the drawer directly. For example, if you move your cursor next to the **Owner** field, you can use the "add to filter" icon ![Icon for adding the selected field value to the current page filter.](media/activity-filters/add-to-filter-icon.png) to add the owner immediately to the filter of the current page. You can also use the settings cog icon ![Icon that opens the contextual settings page for a field.](media/activity-filters/contextual-settings-icon.png) that pops up to arrive directly at the settings page necessary to modify the configuration of one of the fields, such as **Sensitivity labels**.
 
 :::image type="content" source="media/file-policies/file-drawer.png" alt-text="Screenshot showing the file drawer" lightbox="media/file-policies/file-drawer.png":::
 

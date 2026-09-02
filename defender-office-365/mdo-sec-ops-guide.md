@@ -1,27 +1,22 @@
 ---
 title: Security Operations Guide for Defender for Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.collection:
   - zerotrust-solution
   - msftsolution-secops
   - tier1
   - essentials-manage
-ms.custom:
+ms.custom: msecd-doc-authoring-1016
 description: A prescriptive playbook for SecOps personnel to manage Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 02/06/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Microsoft Defender for Office 365 Security Operations Guide
@@ -32,11 +27,11 @@ This article gives an overview of the requirements and tasks for successfully op
 
 The rest of this guide describes the required activities for SecOps personnel. The activities are grouped into prescriptive daily, weekly, monthly, and ad-hoc tasks.
 
-A companion article to this guide provides an overview to [manage incidents and alerts from Defender for Office 365 on the Incidents page in the Microsoft Defender portal](mdo-sec-ops-manage-incidents-and-alerts.md).
+A companion article to this guide provides an overview to [manage Defender for Office 365 incidents and alerts](mdo-sec-ops-manage-incidents-and-alerts.md).
 
 The [Microsoft Defender XDR Security Operations Guide](/defender-xdr/integrate-microsoft-365-defender-secops) contains additional information that you can use for planning and development.
 
-For a video about this information, see <https://youtu.be/eQanpq9N1Ps>.
+For a video about Defender for Office 365 SecOps requirements and tasks, see <https://youtu.be/eQanpq9N1Ps>.
 
 ## Daily activities
 
@@ -66,7 +61,7 @@ Incident queue management and the responsible personas are described in the foll
 |Triage incidents in the Incidents queue at <https://security.microsoft.com/incidents>.|Daily|Verify that all **Medium** and **High** severity incidents from Defender for Office 365 are triaged.|Security Operations Team|
 |Investigate and take Response actions on incidents.|Daily|Investigate all incidents and actively take the recommended or manual response actions.|Security Operations Team|
 |Resolve incidents.|Daily|If the incident has been remediated, resolve the incident. Resolving the incident resolves all linked and related active alerts.|Security Operations Team|
-|Classify incidents.|Daily|Classify incidents as true or false. For true alerts, specify the threat type. This classification helps your security team see threat patterns and defend your organization from them.|Security Operations Team|
+|Classify incidents.|Daily|Classify incidents as true or false. For true alerts, specify the threat type. Classifying incidents and alerts helps your security team see threat patterns and defend your organization from them.|Security Operations Team|
 
 ### Manage false positive and false negative detections
 
@@ -80,8 +75,6 @@ In Defender for Office 365, you manage false positives (good mail marked as bad)
 - The [Tenant Allow/Block List](tenant-allow-block-list-about.md)
 - [Threat Explorer](threat-explorer-real-time-detections-about.md)
 
-For more information, see the [Manage false positive and false negative detections](#manage-false-positive-and-false-negative-detections) section later in this article.
-
 False positive and false negative management and the responsible personas are described in the following table:
 
 |Activity|Cadence|Description|Persona|
@@ -93,9 +86,11 @@ False positive and false negative management and the responsible personas are de
 
 ### Review phishing and malware campaigns that resulted in delivered mail
 
+Review phishing and malware campaigns that resulted in delivered mail, and take action to remove malicious messages from user mailboxes.
+
 |Activity|Cadence|Description|Persona|
 |---|---|---|---|
-|Review email campaigns.|Daily|[Review email campaigns](campaigns.md) that targeted your organization at <https://security.microsoft.com/campaigns>. Focus on campaigns that resulted in messages being delivered to recipients. <br/><br/> Remove messages from campaigns that exist in user mailboxes. This action is required only when a campaign contains email that hasn't already been remediated by actions from incidents, [zero-hour auto purge (ZAP)](zero-hour-auto-purge.md), or manual remediation.|Security Operations Team|
+|Review email campaigns.|Daily|[Review email campaigns](campaigns.md) that targeted your organization at <https://security.microsoft.com/campaigns>. Focus on campaigns that resulted in messages being delivered to recipients. <br/><br/> Remove messages from campaigns that exist in user mailboxes. Removing messages from campaigns is required only when a campaign contains email that hasn't already been remediated by actions from incidents, [zero-hour auto purge (ZAP)](zero-hour-auto-purge.md), or manual remediation.|Security Operations Team|
 
 ## Weekly activities
 
@@ -124,7 +119,7 @@ Use the **[Top targeted users](threat-explorer-real-time-detections-about.md#top
 
 |Activity|Cadence|Description|Persona|
 |---|---|---|---|
-|Review the **Top targeted users** tab in Threat Explorer at <https://security.microsoft.com/threatexplorer>.|Weekly|Use the information to decide if you need to adjust policies or protections for these users. Add the affected users to [Priority accounts](/microsoft-365/admin/setup/priority-accounts) to gain the following benefits: <ul><li>Additional visibility when incidents affect them.</li><li>Tailored heuristics for executive mail flow patterns (priority account protection).</li><li>[Email issues for priority accounts report](/exchange/monitoring/mail-flow-reports/mfr-email-issues-for-priority-accounts-report)</li></ul>|Security Administration <br/><br/> Security Operations Team|
+|Review the **Top targeted users** tab in Threat Explorer at <https://security.microsoft.com/threatexplorer>.|Weekly|Use the Top targeted users data to decide if you need to adjust policies or protections for the identified users. Add the affected users to [Priority accounts](/microsoft-365/admin/setup/priority-accounts) to gain the following benefits: <ul><li>Additional visibility when incidents affect them.</li><li>Tailored heuristics for executive mail flow patterns (priority account protection).</li><li>[Email issues for priority accounts report](/exchange/monitoring/mail-flow-reports/mfr-email-issues-for-priority-accounts-report)</li></ul>|Security Administration <br/><br/> Security Operations Team|
 
 ### Review top malware and phishing campaigns that target your organization
 
@@ -141,19 +136,25 @@ Campaign Views reveals malware and phishing attacks against your organization. F
 
 ### Manual investigation and removal of email
 
+Use the following activity to manually investigate and remove malicious email when needed.
+
 |Activity|Cadence|Description|Persona|
 |---|---|---|---|
 |Investigate and remove bad email in Threat Explorer at <https://security.microsoft.com/threatexplorer> based on user requests.|Ad-hoc|Use the **Trigger investigation** action in Threat Explorer to start an automated investigation and response playbook on any email from the last 30 days. Manually triggering an investigation saves time and effort by centrally including: <ul><li>A root investigation.</li><li>Steps to identify and correlate threats.</li><li>Recommended actions to mitigate those threats.</li></ul> <br/> For more information, see [Example: A user-reported phish message launches an investigation playbook](air-examples.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer) <br/><br/> Or, you can use Threat Explorer to [manually investigate email](threat-explorer-investigate-delivered-malicious-email.md) with powerful search and filtering capabilities and [take manual response action](remediate-malicious-email-delivered-office-365.md) directly from the same place. Available manual actions: <ul><li>Move to Inbox</li><li>Move to Junk</li><li>Move to Deleted items</li><li>Soft delete</li><li>Hard delete.</li></ul>|Security Operations Team|
 
 ### Proactively hunt for threats
 
+Use the following activities to proactively hunt for threats across Defender for Office 365 tools.
+
 |Activity|Cadence|Description|Persona|
 |---|---|---|---|
 |Regular, proactive hunting for threats at: <ul><li><https://security.microsoft.com/threatexplorer></li><li><https://security.microsoft.com/v2/advanced-hunting></li></ul>.|Ad-hoc|Search for threats using [Threat Explorer](threat-explorer-real-time-detections-about.md) and [Advanced hunting](/defender-xdr/advanced-hunting-overview).|Security Operations Team <br/><br/> Threat hunting team|
 |Share hunting queries.|Ad-hoc|Actively share frequently used, useful queries within the security team for faster manual threat hunting and remediation. <br/><br/> Use [Threat trackers](threat-trackers.md) and [shared queries in Advanced hunting](/defender-xdr/advanced-hunting-shared-queries).|Security Operations Team <br/><br/> Threat hunting team|
-|Create custom detection rules at <https://security.microsoft.com/custom_detection>.|Ad-hoc|[Create custom detection rules](/defender-xdr/custom-detections-overview) to proactively monitor events, patterns, and threats based on Defender for Office 365 data in Advance Hunting. Detection rules contain advanced hunting queries that generate alerts based on the matching criteria.|Security Operations Team <br/><br/> Threat hunting team|
+|Create custom detection rules at <https://security.microsoft.com/custom_detection>.|Ad-hoc|[Create custom detection rules](/defender-xdr/custom-detections-overview) to proactively monitor events, patterns, and threats based on Defender for Office 365 data in Advanced hunting. Detection rules contain advanced hunting queries that generate alerts based on the matching criteria.|Security Operations Team <br/><br/> Threat hunting team|
 
 ### Review Defender for Office 365 policy configurations
+
+Review the following policy configuration activities to help maintain your organization's security posture.
 
 |Activity|Cadence|Description|Persona|
 |---|---|---|---|
@@ -162,23 +163,28 @@ Campaign Views reveals malware and phishing attacks against your organization. F
 
 ### Review spoof and impersonation detections
 
+Use the following activity to review spoof and impersonation detections and adjust filtering as needed.
+
 |Activity|Cadence|Description|Persona|
 |---|---|---|---|
 |Review the **Spoof intelligence insight** and the **Impersonation detection insights** at <ul><li><https://security.microsoft.com/spoofintelligence></li><li><https://security.microsoft.com/impersonationinsight></li></ul>.|Ad-hoc <br/><br/> Monthly|Use the [spoof intelligence insight](anti-spoofing-spoof-intelligence.md) and the [impersonation insight](anti-phishing-mdo-impersonation-insight.md) to adjust filtering for spoof and impersonation detections.|Security Administration <br/><br/> Messaging Team|
 
 ### Review priority account membership
 
+Review priority account membership regularly to keep protections aligned with organizational changes.
+
 |Activity|Cadence|Description|Persona|
 |---|---|---|---|
 |Review who's defined as a priority account at <https://security.microsoft.com/securitysettings/userTags>.|Ad-hoc|Keep the membership of [priority accounts](/microsoft-365/admin/setup/priority-accounts) current with organizational changes to get the following benefits for those users: <ul><li>Better visibility in reports.</li><li>Filtering in incidents and alerts.</li><li>Tailored heuristics for executive mail flow patterns (priority account protection).</li></ul> <br/> Use custom [user tags](user-tags-about.md) for other users to get: <ul><li>Better visibility in reports.</li><li>Filtering in incidents and alerts.</li></ul>|Security Operations Team|
 
-## Appendix
+<a name="appendix"></a>
+## Appendix: Defender for Office 365 tools, permissions, and SIEM/SOAR integration
 
 ### Learn about Microsoft Defender for Office 365 tools and processes
 
 Security operations and response team members need to integrate Defender for Office 365 tools and features into existing investigations and response processes. Learning about new tools and capabilities can take time but it's a critical part of the on-boarding process. The simplest way for SecOps and email security team members to learn about Defender for Office 365 is to use the training content that's available as part of the Ninja training content at <https://aka.ms/mdoninja>.
 
-The content is structured for different knowledge levels (Fundamentals, Intermediate, and Advanced) with multiple modules per level.
+The Ninja training content is structured for different knowledge levels (Fundamentals, Intermediate, and Advanced) with multiple modules per level.
 
 Short videos for specific tasks are also available in the [Microsoft Defender for Office 365 YouTube channel](https://www.youtube.com/playlist?list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf).
 
@@ -191,7 +197,7 @@ Permissions for managing Defender for Office 365 in the Microsoft Defender porta
 
 The following permissions (roles and role groups) are available in Defender for Office 365 and can be used to grant access to security team members:
 
-- **Microsoft Defender unified role based access control (RBAC)**: A single permissions management experience that provides one central location for administrators to control user permissions across different security solutions. For more information, see [Microsoft Defender unified RBAC](/defender-xdr/manage-rbac).
+- **Microsoft Defender unified role based access control (RBAC)**: A single permissions management experience that provides one central location for administrators to control user permissions across different security solutions. For more information, see [Microsoft Defender unified RBAC](/defender-xdr/manage-rbac). For Defender for Office 365-specific permissions, see [Unified RBAC permissions for Defender for Office 365](defender-office-365-unified-rbac-permissions.md). For step-by-step configuration, see [How to configure Unified RBAC for Defender for Office 365](step-by-step-guides/configure-unified-rbac-defender-office-365.md).
   - _Read access for email and Teams message headers_: **Security operations/Raw data (email & collaboration)/Email & collaboration metadata (read)**.
   - _Preview and download email messages_: **Security operations/Raw data (email & collaboration)/Email & collaboration content (read)**.
   - _Remediate malicious email_: **Security operations/Security data/Email & collaboration advanced actions (manage)**.
@@ -228,9 +234,9 @@ The following permissions (roles and role groups) are available in Defender for 
 
 ### SIEM/SOAR integration
 
-Defender for Office 365 exposes most of its data through a set of programmatic APIs. These APIs help you automate workflows and make full use of Defender for Office 365 capabilities. Data is available through the [Microsoft Defender XDR APIs](/defender-xdr/api-overview) and can be used to integrate Defender for Office 365 into existing SIEM/SOAR solutions.
+Defender for Office 365 exposes most of its data through a set of programmatic APIs. These APIs help you automate workflows and make full use of Defender for Office 365 capabilities. Data is available through the [Microsoft Defender APIs](/defender-xdr/api-overview) and can be used to integrate Defender for Office 365 into existing SIEM/SOAR solutions.
 
-- [Incident API](/defender-xdr/api-incident): Defender for Office 365 alerts and automated investigations are active parts of incidents in Microsoft Defender XDR. Security teams can focus on what's critical by grouping the full attack scope and all impacted assets together.
+- [Incident API](/defender-xdr/api-incident): Defender for Office 365 alerts and automated investigations are active parts of incidents in Microsoft Defender. Security teams can focus on what's critical by grouping the full attack scope and all impacted assets together.
 
 - [Event streaming API](/defender-xdr/streaming-api): Allows shipping of real-time events and alerts into a single data stream as they happen. Supported event types in Defender for Office 365 include:
   - [EmailAttachmentInfo](/defender-xdr/advanced-hunting-emailattachmentinfo-table)
@@ -266,6 +272,9 @@ Organizations have multiple options for configuring user reported messages. Depe
 
 When a user reports a message as phishing, Defender for Office 365 generates an alert, and the alert triggers an AIR playbook. Incident logic correlates this information to other alerts and events where possible. This consolidation of information helps security teams triage, investigate, and respond to user reported messages.
 
+> [!TIP]
+> In organizations with Defender for Office 365 Plan 2 and Security Copilot, the [Phishing Triage Agent](/defender-xdr/phishing-triage-agent) can autonomously triage and classify user-reported phishing emails at scale, reducing repetitive investigation work and accelerating response.
+
 The submission pipeline in the service follows a tightly integrated process when user report messages and admins submit messages. This process includes:
 
 - Noise reduction.
@@ -295,7 +304,7 @@ For the short-term mitigation of false positives, security teams can't directly 
 
 ## Integrate non-Microsoft reporting tools with Defender for Office 365 user reported messages
 
-If your organization uses a non-Microsoft reporting tool that allows users to internally report suspicious email, you can integrate the tool with the user reported message capabilities of Defender for Office 365. This integration provides the following benefits to security teams:
+If your organization uses a non-Microsoft reporting tool that allows users to internally report suspicious email, you can integrate the tool with the user reported message capabilities of Defender for Office 365. Integrating a non-Microsoft reporting tool with Defender for Office 365 user-reported message capabilities provides the following benefits to security teams:
 
 - Integration with the AIR capabilities of Defender for Office 365.
 - Simplified triage.
@@ -310,15 +319,15 @@ Designate the reporting mailbox where user reported messages are sent on the **U
 > - The reporting mailbox requires specific prerequisites to allow potentially bad messages to be delivered without being filtered or altered. For more information, see [Configuration requirements for the reporting mailbox](submissions-user-reported-messages-custom-mailbox.md#configuration-requirements-for-the-reporting-mailbox).
 > - In [attack simulation training in Defender for Office 365 Plan 2](attack-simulation-training-get-started.md), simulation messages reported by non-Microsoft tools aren't captured in attack simulation reports.
 
-When a user reported message arrives in the reporting mailbox, Defender for Office 365 automatically generates the alert named **Email reported by user as malware or phish**. This alert launches an [AIR playbook](air-examples.md#example-a-user-reported-phishing-message-launches-an-investigation-playbook). The playbook performs a series of automated investigations steps:
+When a user reported message arrives in the reporting mailbox, Defender for Office 365 automatically generates the alert named **Email reported by user as malware or phish**. The **Email reported by user as malware or phish** alert launches an [AIR playbook](air-examples.md#example-a-user-reported-phishing-message-launches-an-investigation-playbook). The playbook performs a series of automated investigations steps:
 
 - Gather data about the specified email.
 - Gather data about the threats and _entities_ related to that email (for example, files, URLs, and recipients).
 - Provide recommended actions for the SecOps team to take based on the investigation findings.
 
-**Email reported by user as malware or phish** alerts, automated investigations and their recommended actions are automatically correlated to incidents in Microsoft Defender XDR. This correlation further simplifies the triage and response process for security teams. If multiple users report the same or similar messages, all of the users and messages are correlated into the same incident.
+**Email reported by user as malware or phish** alerts, automated investigations and their recommended actions are automatically correlated to incidents in Microsoft Defender. Correlating alerts, automated investigations, and recommended actions to incidents further simplifies the triage and response process for security teams. If multiple users report the same or similar messages, all of the users and messages are correlated into the same incident.
 
-Data from alerts and investigations in Defender for Office 365 is automatically compared to alerts and investigations in the other Microsoft Defender XDR products:
+Data from alerts and investigations in Defender for Office 365 is automatically compared to alerts and investigations in the other Microsoft Defender products:
 
 - Microsoft Defender for Endpoint
 - Microsoft Defender for Cloud Apps

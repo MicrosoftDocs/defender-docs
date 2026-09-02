@@ -8,18 +8,16 @@ ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
 ms.date: 03/19/2026
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 ms.topic: article
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 ---
 
-# Microsoft Defender for Endpoint - Mobile Threat Defense
+# Microsoft Defender for Endpoint mobile threat defense on Android and iOS
 
 Microsoft Defender for Endpoint on Android and iOS is our **mobile threat defense (MTD)** solution. Companies are often proactive in protecting computers from vulnerabilities and attacks, but mobile devices often go unmonitored and unprotected. Although mobile platforms have some built-in protection (for example, app isolation and vetted consumer app stores), these platforms remain vulnerable to web-based or other sophisticated attacks. As more people use devices to access sensitive work information, it's imperative that companies deploy an MTD solution to protect devices and resources.
 

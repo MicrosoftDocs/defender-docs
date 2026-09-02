@@ -1,13 +1,11 @@
-﻿---
+---
 title: Get started with troubleshooting mode in Microsoft Defender for Endpoint 
 description: Turn on the Microsoft Defender for Endpoint troubleshooting mode to address various antivirus issues.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
 ms.reviewer: pricci
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -61,7 +59,7 @@ Troubleshooting mode automatically turns off after reaching its expiration time 
 > [!NOTE]
 > Troubleshooting mode is limited to 8 hours per day per device. This cannot be changed. The 8-hour quota resets 24 hours after troubleshooting mode is first enabled.
 
-It can take up to 15 minutes from the time the command is sent from Microsoft Defender XDR to when it becomes active on the device.
+It can take up to 15 minutes from the time the command is sent from the Defender portal to when it becomes active on the device.
 
 Notifications are sent to the user when troubleshooting mode begins and when troubleshooting mode ends. A warning is also sent to indicate that troubleshooting mode is ending soon. The beginning and end of troubleshooting mode is also identified in the [Microsoft Defender portal](https://security.microsoft.com), in the **Device Timeline** on the device page.
 

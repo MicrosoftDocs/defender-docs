@@ -1,4 +1,4 @@
-﻿---
+---
 title: Overview of indicators in Microsoft Defender for Endpoint
 description: Create indicators for a file hash, IP address, URLs, or domains that define the detection, prevention, and exclusion of entities.
 ms.service: defender-endpoint
@@ -6,14 +6,12 @@ ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
 ms.reviewer: ericlaw
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-edr
 ms.topic: concept-article
 ms.subservice: edr
-search.appverid: met150
 ms.date: 04/08/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -149,7 +147,7 @@ The IoC API schema and the threat IDs in Advanced Hunting are updated to align w
 > [!NOTE]
 > There's a limit of 15,000 indicators per tenant. Increases to this limit aren't supported.
 > 
-> File and certificate indicators don't block [exclusions defined for Microsoft Defender Antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/configure-exclusions-microsoft-defender-antivirus). Indicators aren't supported in Microsoft Defender Antivirus when it is in passive mode.
+> File and certificate indicators don't block [exclusions defined for Microsoft Defender Antivirus](/defender-endpoint/microsoft-defender-antivirus-exclusions-overview). Indicators aren't supported in Microsoft Defender Antivirus when it is in passive mode.
 > 
 > The format for importing new indicators (IoCs) has changed according to the new updated actions and alerts settings. We recommend downloading the new CSV format that can be found at the bottom of the import panel.
 >
@@ -168,7 +166,7 @@ Customers might experience issues with alerts for IoCs. The following scenarios 
 
 ## Related articles
 
-- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md)
 - [Create contextual IoC](respond-file-alerts.md#add-indicator-to-block-or-allow-a-file)
 - [Use the Microsoft Defender for Endpoint indicators API](api/ti-indicator.md)
 - [Use partner integrated solutions](partner-applications.md)

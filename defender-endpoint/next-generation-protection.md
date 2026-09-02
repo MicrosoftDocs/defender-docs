@@ -13,7 +13,6 @@ ms.collection:
 - m365-security
 - tier1
 - mde-ngp
-search.appverid: met150
 ms.date: 03/26/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -32,6 +31,7 @@ In addition to Microsoft Defender Antivirus, your next-generation protection ser
 
 - [Behavior-based, heuristic, and real-time antivirus protection](configure-protection-features-microsoft-defender-antivirus.md), which includes always-on scanning using file and process behavior monitoring and other heuristics (also known as *real-time protection*). It also includes detecting and blocking apps that are deemed unsafe, but might not be detected as malware.
 - [Cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md), which includes near-instant detection and blocking of new and emerging threats.
+- [AI agent runtime protection](ai-agent-runtime-protection-overview.md), which monitors activity in the agentic loop and blocks attacks targeting local AI agents running on your devices.
 - [Dedicated protection and product updates](microsoft-defender-antivirus-updates.md), which includes updates related to keeping Microsoft Defender Antivirus up to date.
 
 Next-generation protection is included in both [Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md). Next-generation protection is also included in [Microsoft Defender for Business](/defender-business/mdb-overview) and [Microsoft 365 Business Premium](/microsoft-365/business-premium/m365bp-overview). 

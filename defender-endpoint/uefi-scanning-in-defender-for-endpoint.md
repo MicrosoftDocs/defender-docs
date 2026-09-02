@@ -4,7 +4,6 @@ description: Learn how Microsoft Defender for Endpoint is extending its protecti
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: yongrhee
-audience: ITPro
 ms.topic: concept-article
 ms.service: defender-endpoint
 ms.subservice: ngp
@@ -15,7 +14,6 @@ ms.custom:
 ms.collection: 
 - m365-security
 - tier2
-search.appverid: met150
 ms.date: 05/01/2025
 ---
 

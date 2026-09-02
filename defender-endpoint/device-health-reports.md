@@ -1,13 +1,11 @@
-﻿---
+---
 title: Device health reporting in Microsoft Defender for Endpoint
 description: Use the device health report to track device health, antivirus status and versions, OS platforms, and Windows 10 versions.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-ms.date: 03/25/2025
-audience: ITPro
+ms.date: 06/17/2026
 ms.collection: 
 - m365-security
 - tier2
@@ -16,7 +14,9 @@ ms.subservice: ngp
 ms.reviewer: mkaminska
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
 
+ai-usage: ai-assisted
 ---
 # Device health reports in Microsoft Defender for Endpoint
 
@@ -60,7 +60,7 @@ To access the Device health and antivirus compliance report in the Microsoft Def
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 
-To Assign these permissions:
+To assign the View Data - Threat and vulnerability management (TVM) permission for the Device health and antivirus compliance report:
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) using account with Security administrator or Global administrator role assigned.
 
@@ -76,7 +76,8 @@ To Assign these permissions:
 
 1. In **Permissions**, select **View Data**, and under **View Data** select **Threat and vulnerability management** (TVM).
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 > [!TIP]
 > **Performance tip** Due to a variety of factors (examples listed below) Microsoft Defender Antivirus, like other antivirus software, can cause performance issues on endpoint devices. In some cases, you might need to tune the performance of Microsoft Defender Antivirus to alleviate those performance issues. Microsoft's **Performance analyzer** is a PowerShell command-line tool that helps determine which files, file paths, processes, and file extensions might be causing performance issues; some examples are:

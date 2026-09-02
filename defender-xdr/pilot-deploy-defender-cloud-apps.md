@@ -5,8 +5,9 @@ search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: guywild
-author: brendacarter
+ms.author: abbyweisberg
+author: AbbyMSFT
+ms.reviewer: maelgami
 ms.date: 03/14/2025
 ms.localizationpriority: medium
 audience: ITPro

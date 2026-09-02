@@ -1,15 +1,11 @@
 ---
 title: FileMaliciousContentInfo table in the advanced hunting schema
 description: Learn about the FileMaliciousContentInfo table of the advanced hunting schema
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -33,9 +29,9 @@ ms.date: 12/04/2025
 The `FileMaliciousContentInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about files that were processed by Microsoft Defender for Office 365 in SharePoint Online, OneDrive, and Microsoft Teams. Use this reference to construct queries that return information from this table.
 
 > [!TIP]
-> For detailed information about the events types (`ActionType` values) supported by a table, use the built-in schema reference available in Microsoft Defender XDR.
+> For detailed information about the events types (`ActionType` values) supported by a table, use the built-in schema reference available in the Defender portal.
 
-This advanced hunting table is populated by records from Defender for Office 365. If your organization didn't deploy the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Office 365 in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+This advanced hunting table is populated by records from Defender for Office 365. If your organization didn't deploy the service in Microsoft Defender, queries that use the table aren't going to work or return any results. For more information about how to deploy Defender for Office 365 in the Defender portal, read [Deploy supported services](deploy-supported-services.md).
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 

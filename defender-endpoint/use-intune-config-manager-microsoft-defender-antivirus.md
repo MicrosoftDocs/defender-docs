@@ -1,39 +1,42 @@
-﻿---
+---
 title: Configure Microsoft Defender Antivirus using Microsoft Intune
 description: Use Microsoft Intune to configure Microsoft Defender Antivirus and Endpoint Protection
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen
-ms.date: 05/07/2025
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.reviewer: phuijbr, yongrhee
 ms.subservice: ngp
-audience: ITPro
 ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
 ---
 # Use Microsoft Intune to configure and manage Microsoft Defender Antivirus
 
 
-## Compatibility
+<a name="compatibility"></a>
+## Supported platforms and Intune compatibility
 
-- Microsoft Defender Antivirus using Intune is available on the following platforms:
+Microsoft Defender Antivirus management through Intune is supported on the following platforms:
+
 - Windows 10 and later
 
 You can use the Microsoft Intune family of products to configure Microsoft Defender Antivirus settings, like [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune) and [Configuration Manager](/intune/configmgr/core/understand/introduction).
 
 ### Configure Microsoft Defender Antivirus settings in Intune
 
-1. Go to the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)), and sign in.
+To create and configure a Microsoft Defender Antivirus policy in Intune, perform the following steps:
+
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com), and sign in.
 
 1. Navigate to **Endpoint Security**.
 
@@ -47,9 +50,11 @@ You can use the Microsoft Intune family of products to configure Microsoft Defen
 
 1. Choose **Review + save**.
 
-You can explore the list of settings that can be configured in a **Microsoft Defender Antivirus** policy within Intune.
+The following CSP settings can be configured in a **Microsoft Defender Antivirus** policy within Intune.
 
 ## Policies and settings
+
+This section lists each Microsoft Defender Antivirus policy setting that you can configure in Intune, along with its CSP reference and available options.
 
 ### Allow Archive Scanning
 
@@ -80,7 +85,7 @@ You can explore the list of settings that can be configured in a **Microsoft Def
   CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#allowcloudprotection)
 
 > [!IMPORTANT]
->[We recommend keeping cloud protection turned on, because certain security features and capabilities in Microsoft Defender for Endpoint only work when cloud protection is enabled](./enable-cloud-protection-microsoft-defender-antivirus.md).
+>[We recommend keeping cloud protection turned on, because certain security features and capabilities in Microsoft Defender for Endpoint only work when cloud protection is enabled](enable-cloud-protection-microsoft-defender-antivirus.md).
 
   This policy setting enables you to join Microsoft MAPS (Microsoft Active Protection Service). Microsoft MAPS is the online community that helps you choose how to respond to potential threats. The community also helps stop the spread of new malicious software infections.
 
@@ -95,7 +100,10 @@ You can explore the list of settings that can be configured in a **Microsoft Def
   - How the software operates
   - Its impact on your computer.
 
-#### Settings:
+<a name="settings"></a>
+#### Cloud-delivered protection options
+
+  The following options are available for cloud-delivered protection:
 
   - **Not configured** - The setting reverts to the system default (cloud-delivered protection is turned off).
   - **Not allowed** - Cloud-delivered protection is turned off.
@@ -220,7 +228,10 @@ You can explore the list of settings that can be configured in a **Microsoft Def
 ### Cloud Block Level
    CSP: [CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#cloudblocklevel)
 
-This policy setting controls the level of intensity that Microsoft Defender Antivirus uses when blocking and scanning suspicious files. To use this feature, **Allow cloud protection** must be enabled
+> [!IMPORTANT]
+> Prerequisite: **Allow cloud protection** must be enabled before you configure this setting.
+
+This policy setting controls the level of intensity that Microsoft Defender Antivirus uses when blocking and scanning suspicious files.
   
   - **Not configured** - The setting reverts to the system default blocking level (0x0).
   - **(0x0)Default state** - Default Microsoft Defender Antivirus blocking level.
@@ -289,22 +300,22 @@ This policy setting controls the level of intensity that Microsoft Defender Anti
 
    CSP: [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#excludedextensions)
 
-  Allows administrators to specify a list of file extensions to ignore during a scan. For more details on how these exclusions can be defined you can read this article: [Exclusions based on file extension and folder location](./configure-extension-file-exclusions-microsoft-defender-antivirus.md)
+  Allows administrators to specify a list of file extensions to ignore during a scan. For more details on how these exclusions can be defined you can read this article: [Exclusions based on file extension and folder location](microsoft-defender-antivirus-exclusions-configure.md)
 
 ### Excluded Paths
 
    CSP: [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#excludedpaths)
 
-  Allows administrators to specify a list of directory paths to ignore during a scan. For more details on how these exclusions can be defined you can read this article: [Exclusions based on file extension and folder location](./configure-extension-file-exclusions-microsoft-defender-antivirus.md)
+  Allows administrators to specify a list of directory paths to ignore during a scan. For more details on how these exclusions can be defined you can read this article: [Exclusions based on file extension and folder location](microsoft-defender-antivirus-exclusions-configure.md)
 
 ### Excluded Processes  
 
    CSP: [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#excludedprocesses)
 
-  Allows administrators to specify a list of files that processes can open without being scanned. For more details on how these exclusions can be defined you can read this article: [Exclusions based on file extension and folder location](./configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
+  Allows administrators to specify a list of files that processes can open without being scanned. For more details on how these exclusions can be defined you can read this article: [Exclusions based on file extension and folder location](microsoft-defender-antivirus-exclusions-configure.md)
 
 > [!NOTE]
-> When tamper protection is turned on the exclusions can't be modified and new exclusions can't be added. These exclusions need to [meet some conditions](./manage-tamper-protection-intune.md) for tamper protection to work.
+> When tamper protection is turned on the exclusions can't be modified and new exclusions can't be added. These exclusions need to [meet certain tamper protection conditions](manage-tamper-protection-intune.md) for tamper protection to work.
 
 > [!IMPORTANT]
 > Defining exclusions reduces the protection provided by Microsoft Defender Antivirus.
@@ -358,7 +369,7 @@ This policy setting controls the level of intensity that Microsoft Defender Anti
 
    CSP: [ScheduleScanDay](/windows/client-management/mdm/policy-csp-defender#schedulescanday)
 
-  This policy setting allows you to specify the day of the week to perform a scheduled scan. The scan can also be configured to run every day or to never run at all. This setting interacts with the settings **Scan Parameter** and **Schedule Scan Time**.
+  This policy setting allows you to specify the day of the week to perform a scheduled scan. The scan can also be configured to run every day or to never run at all. This setting interacts with the [**Scan Parameter**](#scan-parameter) setting (which controls whether the scan is a quick scan or full scan) and **Schedule Scan Time**.
 
   - **Not configured** - The setting reverts to the system default.
   - **Every day (default)** - A scheduled scan runs daily.
@@ -378,7 +389,7 @@ This policy setting controls the level of intensity that Microsoft Defender Anti
 
    CSP: [SignatureUpdateFallbackOrder](/windows/client-management/mdm/policy-csp-defender#signatureupdatefallbackorder)
 
-  This policy setting allows you to specify the order in which different security intelligence update sources are contacted. Enter the value as a pipe-separated string, listing the security intelligence update sources in the desired order. Possible values include: "InternalDefinitionUpdateServer," "MicrosoftUpdateServer," "MMPC," and "FileShares."
+  This policy setting allows you to specify the order in which different security intelligence update sources are contacted. Although the underlying policy is stored as a pipe-separated string, Intune presents this setting as a prioritized list of update sources. Administrators should configure the desired order using the Intune UI, where sources are evaluated from top to bottom. Possible values include: "InternalDefinitionUpdateServer," "MicrosoftUpdateServer," "MMPC," and "FileShares."
 
   - **Not configured** - The setting reverts to the system default. Meaning, security intelligence update sources are contacted in a default order.
   - **Enabled** - Security intelligence update sources are contacted in the order specified.
@@ -417,7 +428,7 @@ This policy setting controls the level of intensity that Microsoft Defender Anti
 
    CSP: [DisableLocalAdminMerge](/windows/client-management/mdm/defender-csp#configurationdisablelocaladminmerge)
 
-  When this value is set to no, it gives a local admin the ability to [specify some settings](./configure-local-policy-overrides-microsoft-defender-antivirus.md) on their devices by using the Windows Security app, local Group Policy settings, or PowerShell cmdlets (where appropriate).
+  When this value is set to no, it gives a local admin the ability to [configure local policy overrides for Microsoft Defender Antivirus](configure-local-policy-overrides-microsoft-defender-antivirus.md) on their devices by using the Windows Security app, local Group Policy settings, or PowerShell cmdlets (where appropriate).
 
   - **Not configured** - The setting reverts to the system default.
   - **Enable local admin merge (default)** - Unique items defined in preference settings that are configured by a local administrator merge into the resulting effective policy. If there are conflicts, management settings from Intune policy override local preference settings.
@@ -606,7 +617,8 @@ This policy setting controls the level of intensity that Microsoft Defender Anti
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
-## Related articles
+<a name="related-articles"></a>
+## Related content
 
 - [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
 - [Reference articles for management and configuration tools](configuration-management-reference-microsoft-defender-antivirus.md)

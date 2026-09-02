@@ -2,20 +2,14 @@
 title: Hello World for Microsoft Defender XDR REST API
 description: Learn how to create an app and use a token to access the Microsoft Defender XDR APIs
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: edbaynash
 author: EdB-MSFT
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
  - m365-security
  - tier3
  - must-keep
 ms.topic: reference
-search.appverid: 
-  - MOE150
-  - MET150
 ms.custom: api
 ms.date: 04/18/2025
 appliesto:
@@ -166,11 +160,11 @@ You're all done! You've successfully:
 
 ## Related articles
 
-- [Microsoft Defender XDR APIs overview](api-overview.md)
+- [Microsoft Defender APIs overview](api-overview.md)
 - [Access the Microsoft Defender XDR APIs](api-access.md)
 - [Create an app to access Microsoft Defender XDR without a user](api-create-app-web.md)
-- [Create an app to access Microsoft Defender XDR APIs on behalf of a user](api-create-app-user-context.md)
-- [Create an app with multitenant partner access to Microsoft Defender XDR APIs](api-partner-access.md)
+- [Create an app to access Microsoft Defender APIs on behalf of a user](api-create-app-user-context.md)
+- [Create an app with multitenant partner access to Microsoft Defender APIs](api-partner-access.md)
 - [Manage secrets in your server apps with Azure Key Vault](/training/modules/manage-secrets-with-azure-key-vault/)
 - [OAuth 2.0 Authorization for user sign in and API access](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

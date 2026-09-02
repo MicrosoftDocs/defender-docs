@@ -1,14 +1,10 @@
 ---
 title: Get live response results
 description: Learn how to retrieve a specific live response command result by its index.
-search.appverid: met150
 ms.service: defender-endpoint
-f1.keywords:
-- NOCSH
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3

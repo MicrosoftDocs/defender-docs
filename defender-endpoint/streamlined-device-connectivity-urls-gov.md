@@ -11,10 +11,10 @@ ms.collection:
 - m365-security
 - tier1
 ms.reviewer: pahuijbr
-search.appverid: MET150
-audience: ITPro
-ms.date: 12/25/2025
+ms.date: 06/16/2026
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Microsoft Defender for Endpoint streamlined connectivity URLs - US government environments (Preview)
@@ -23,19 +23,21 @@ appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoi
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
-This article includes a list of the streamlined connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in US Government cloud environments (GCC, GCC High, DoD).
+This article includes a list of the streamlined connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in US Government cloud environments (GCC, GCC High, DoD). Before you configure these URLs, make sure your environment meets the [prerequisites](#prerequisites).
 
 ## Prerequisites
 
-See the prerequisites for [streamlined connectivity](configure-device-connectivity.md#prerequisites).
+Before using the streamlined connectivity URLs listed in this article, ensure your devices meet the required OS versions, have up-to-date antimalware platform and EDR sensor components, and are onboarded using a supported method. For full details, see the prerequisites for [streamlined connectivity](configure-device-connectivity.md#prerequisites).
 
 ### Notes
 
-- Devices running Defender for Endpoint delivered via the Microsoft Monitoring Agent (MMA, also known as the Log Analytics Agent - specifically, Windows 7 SP1, Windows 8.1, Windows Server 2008 R2 and those Windows Server 2012 R2, 2016 devices not upgraded to the modern unified solution) will continue using the associated legacy method. For the list of additional URLs, refer to the Windows 7, 8.1, 2008R2 (MMA) tab.
+- Devices running Defender for Endpoint delivered via the Microsoft Monitoring Agent (MMA, also known as the Log Analytics Agent - specifically, Windows 7 SP1, Windows 8.1, Windows Server 2008 R2 and those Windows Server 2012 R2, 2016 devices not upgraded to the modern unified solution) will continue using the associated legacy method. For the list of additional URLs, refer to the Windows 7, 8.1, 2008R2 (MMA) tab in [Onboard devices using streamlined connectivity for Microsoft Defender for Endpoint](configure-device-connectivity.md).
 
-- Devices running Windows version 1607, 1703, 1709, 1803 can onboard using the new onboarding package but still require a longer list of URLs. The Windows 1607 to 1803 tab lists the additional URLs required.
+- Devices running Windows version 1607, 1703, 1709, 1803 can onboard using the new onboarding package but still require a longer list of URLs. The Windows 1607 to 1803 tab in [Onboard devices using streamlined connectivity for Microsoft Defender for Endpoint](configure-device-connectivity.md) lists the additional URLs required.
 
 ## US Gov URLs
+
+The following tables list the required streamlined connectivity endpoints for US Government cloud environments, organized by function.
 
 ### General URLs
 
@@ -80,10 +82,11 @@ See the prerequisites for [streamlined connectivity](configure-device-connectivi
 |Microsoft Defender for Endpoint|US Gov|CRL|80|www.microsoft.com/pkiops/*|Used when creating the SSL connection to MAPS for updating the CRL|Required|Yes|||Yes|Yes|
 |Microsoft Defender for Endpoint|US Gov|CRL|80|http://www.microsoft.com/pki/certs|Used when creating the SSL connection to MAPS for updating the CRL|Required|Yes|||Yes|Yes|
 
-### Other URLs
+<a name="other-urls"></a>
+### Live Response and notification URLs
 
 > [!NOTE]
-> The URLs in this table are required for Live Response Performance (Direct Connection/Proxy bypass required)
+> The following Live Response performance URLs are required (Direct Connection/Proxy bypass required)
 
 |Service|Geography|Category|Port|Endpoint/URL|Description|Required/Optional|Win 11/10/Server (Unified)|
 |--------|---------|--------|----|------------|-----------|-----------------|-------------------------|
@@ -92,10 +95,11 @@ See the prerequisites for [streamlined connectivity](configure-device-connectivi
 |Microsoft Defender for Endpoint|US Gov|Common|443|login.live.com|Windows Push Notification Services (WNS) - Live Response|Required|Yes|
 
 
-## Security center URLs
+<a name="security-center-urls"></a>
+## Defender portal URLs
 
 > [!NOTE]
-> The following table lists the required URL endpoints for accessing the Microsoft Defender Security Center portal.
+> The following table lists the required URL endpoints for accessing the Microsoft Defender portal.
 
 |Service|Geography|URL|
 |-------|---------|---|
@@ -114,6 +118,18 @@ See the prerequisites for [streamlined connectivity](configure-device-connectivi
 |Microsoft Defender for Endpoint|DoD|https://*.securitycenter.microsoft.us|
 |Microsoft Defender for Endpoint|DoD|https://onboardingpckgsusgvprd.blob.core.usgovcloudapi.net|
 
-## Microsoft Defender process exclusions
+<a name="client-processes"></a>
+## Client processes that require network connectivity
+
+The following Microsoft Defender for Endpoint client processes generate network communications. Make sure that communications from each of these processes are not blocked.
 
 [!INCLUDE [Microsoft Defender for Endpoint processes](includes/streamlined-connectivity-processes.md)]
+
+<a name="change-log"></a>
+## Changelog
+
+|Date|Change log|
+|---|---|
+|03/23/2026|Renamed **Microsoft Defender process exclusions** section to **Client processes**, and aligned the content for all URL lists.|
+|03/03/2026|Added Linux URLs to [General URLs](#general-urls) for internal configuration management: `config.ecs.dod.teams.microsoft.us` (DoD), `config.ecs.gov.teams.microsoft.us` (GCC High), `gccmod.ecs.office.com` (GCC Mod).|
+|10/23/2025|Initial page published (Preview).|

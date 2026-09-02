@@ -8,6 +8,8 @@ ms.service: defender-endpoint
 
 Select the tab for information about exclusions for that operating system.
 
+The processes in this section are exclusively for Microsoft Defender for Endpoint for Windows platforms, including down-level OS. This list doesn't account for any other Windows communications requirements.
+
 ### [**Windows**](#tab/Windows)
 
 The specific exclusions to configure depend on which version of Windows your endpoints or devices are running, and are listed in the following table.

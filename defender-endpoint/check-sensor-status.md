@@ -6,7 +6,6 @@ ms.subservice: onboard
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -15,7 +14,6 @@ ms.date: 03/26/2025
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
-search.appverid: met150
 ---
 
 # Check service health at Microsoft Defender for Endpoint

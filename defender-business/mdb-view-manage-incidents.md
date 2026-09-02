@@ -1,21 +1,20 @@
 ---
 title: View and manage incidents in Microsoft Defender for Business
-description: View and manage alerts, respond to threats, manage devices, and review remediation actions on detected threats in Defender for Business.
-search.appverid: MET150
+description: Learn how to monitor and manage incidents and alerts, and understand alert severity levels in Microsoft Defender for Business.
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 07/03/2026
 ms.reviewer: nehabha
-f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security
 - m365-initiative-defender-business
 - tier1
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # View and manage incidents in Microsoft Defender for Business
@@ -25,15 +24,18 @@ As threats are detected and alerts are triggered, incidents are created. Your co
 **This article includes**:
 
 - [How to monitor your incidents and alerts](#monitor-your-incidents--alerts)
-- [Alert severity](#alert-severity)
+- [Understand alert severity levels](#alert-severity)
 - [Next steps](#next-steps)
 
-## Monitor your incidents & alerts
+<a name="monitor-your-incidents--alerts"></a>
+## Monitor your incidents and alerts
 
-1. In the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), in the navigation pane, go to **Incidents & alerts**, and then select **Incidents**. Any incidents that were created are listed on the page.
+Use the following steps to view and manage incidents in the Microsoft Defender portal:
 
-   > [!IMPORTANT]
-   > If you see an incident tagged with `Attack disruption`, it means an advanced attack was detected. See [Automatic attack disruption](mdb-attack-disruption.md).
+> [!IMPORTANT]
+> If you see an incident tagged with `Attack disruption`, it means an advanced attack was detected. See [Automatic attack disruption](mdb-attack-disruption.md).
+
+1. In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, go to **Incidents & alerts**, and then select **Incidents**. Any incidents that were created are listed on the page.
 
 2. Select an alert to open its flyout pane, where you can learn more about the alert.
 
@@ -69,6 +71,8 @@ The following table lists a few examples of alerts and their severity levels:
 |Suspicious behavior is detected but no remediation actions are taken yet.|**Low**, **Medium**, or **High**. The severity depends on the degree to which the behavior poses a threat to your company.|
 
 ## Next steps
+
+For related guidance, see the following articles:
 
 - [Learn about automatic attack disruption](mdb-attack-disruption.md)
 - [Respond to and mitigate threats in Defender for Business](mdb-respond-mitigate-threats.md)

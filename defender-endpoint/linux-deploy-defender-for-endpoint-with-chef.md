@@ -1,4 +1,4 @@
-﻿---
+---
 title: How to Deploy Defender for Endpoint on Linux with Chef
 description: Learn how to deploy Defender for Endpoint on Linux with Chef.
 ms.service: defender-endpoint
@@ -6,15 +6,13 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
 ms.topic: install-set-up-deploy
 ms.subservice: linux
-search.appverid: met150
-ms.date: 04/17/2025
+ms.date: 05/21/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -42,26 +40,9 @@ Before you get started, see [Prerequisites for Defender for Endpoint on Linux](m
 
 ## Download the onboarding package
 
-1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/) then navigate to **Settings** > **Endpoints** > **Device management** > **Onboarding**.
+[!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
-1. In the first drop-down menu, select **Linux Server** as the operating system. In the second drop-down menu, select **Your preferred Linux configuration management tool** as the deployment method.
-
-1. Select **Download onboarding package** and save the file as `WindowsDefenderATPOnboardingPackage.zip`.
-
-   ![The option to download the onboarded package.](media/portal-onboarding-linux-2.png)
-   
-1. Extract the contents of the archive using the following command:
-
-   ```
-   unzip WindowsDefenderATPOnboardingPackage.zip
-   ```
-   
-   The expected output is:
-   
-   ```
-   Archive:  WindowsDefenderATPOnboardingPackage.zip
-   inflating: mdatp_onboard.json
-   ```
+[!INCLUDE [linux-get-deployment-package-third-party-tools](includes/linux-get-deployment-package-third-party-tools.md)]
    
 ## Create a directory structure
 

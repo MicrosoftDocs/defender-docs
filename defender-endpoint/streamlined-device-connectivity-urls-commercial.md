@@ -11,10 +11,10 @@ ms.collection:
 - m365-security
 - tier1
 ms.reviewer: pahuijbr
-search.appverid: MET150
-audience: ITPro
-ms.date: 12/25/2025
+ms.date: 06/17/2026
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Microsoft Defender for Endpoint streamlined connectivity URLs - commercial
@@ -25,7 +25,7 @@ This article includes a list of the streamlined connectivity URLs required to on
 
 ## Prerequisites
 
-See the [streamlined connectivity prerequisites](configure-device-connectivity.md#prerequisites)
+For device eligibility, component versions, and OS requirements, see the [streamlined connectivity prerequisites](configure-device-connectivity.md#prerequisites).
 
 ### Notes
 
@@ -36,6 +36,8 @@ See the [streamlined connectivity prerequisites](configure-device-connectivity.m
 
 ### URLs used for core functionality
 
+The following table lists the core endpoint URLs required for Microsoft Defender for Endpoint functionality.
+
 > [!NOTE]
 > To ensure successful onboarding, make sure that your devices meet all component update versions and OS requirements: application or anti-malware platform, engine, and Endpoint detection and response (EDR) sensor. Otherwise onboarding might be unsuccessful. You can onboard devices again to switch them to streamlined connectivity if they meet these requirements.
 
@@ -43,9 +45,13 @@ See the [streamlined connectivity prerequisites](configure-device-connectivity.m
 |-|-|-|-|-|-|-|
 |Core Defender for Endpoint services|443|*.endpoint.security.microsoft.com|Core Defender for Endpoint services. Formerly: MAPS, Malware Sample Submission Storage, AutoIR Sample Storage, Command and Control, Cyber data.|Required|Core Defender for Endpoint services. Prerequisites must be met to successfully connect to the new URL patterns.|All|
 |Web & network protection|443|*.smartscreen-prod.microsoft.com *.smartscreen.microsoft.com|Used for Microsoft Defender SmartScreen browsing protection, reporting, notifications, and web content filtering. Network/web protection and custom URL/IP indicators.|Required|Optional in disconnected environments where web browsing and connectivity to external destinations is limited. Required for custom URL/IP indicators.|All|
+|SmartScreen|443|*.smartscreen.microsoft.com *.checkappexec.microsoft.com *.urs.microsoft.com|Used for Microsoft Defender SmartScreen to check application execution for trusted apps|Optional|Needed for checking reputation/trust for downloaded applications|Windows|
+|Defender for Endpoint|443|reflector.defender.microsoft.com|Used by Microsoft Defender to probe IPv6 connectivity|Optional|Helps Microsoft Security Intelligence detect attacker activity.|All|
 |Defender for Endpoint|443|https://config.edge.skype.com/config/v1|Internal configuration management|Required|This URL must be allowed to enable Defender on Linux endpoints to receive internal configurations from the cloud.<br/>**Note**: The "skype" string in this URL is a legacy artifact, unrelated to Skype, and retained solely for backward compatibility.|Linux|
 
 ## URLs used for updates
+
+The following table lists the URLs used to obtain Microsoft Defender for Endpoint updates across supported platforms.
 
 > [!NOTE]
 > You can apply updates from a file share or update server, where you don't need to allow all direct connections from devices. Otherwise, these connections are already required and allowed in your environment for other purposes such as Windows updates.
@@ -53,11 +59,12 @@ See the [streamlined connectivity prerequisites](configure-device-connectivity.m
 |Service |Port |Endpoint or URLs |Endpoint or URL Description |Type |Comments |OS |
 |-|-|-|-|-|-|-|
 |Linux app/platform updates|443|packages.microsoft.com|Official Microsoft repository to download and update the Linux product|Required|Optional if distributing or upgrading Linux installations using a different method|Linux|
-|Mac app or platform updates|443|officecdn-microsoft-com.akamaized.net|Microsoft Office Content Delivery Network (CDN) - product updates for macOS|Required|Optional if distributing or upgrading macOS installations using a different method. Uses the Microsoft AutoUpdate app also used for updating other Microsoft apps such as Office for Mac.|macOS|
 |Windows/Mac/Linux security intelligence updates <br> Windows anti-malware platform updates (alternative download location / direct from Defender cloud)|443|go.microsoft.com <br> definitionupdates.microsoft.com <br>`https://www.microsoft.com/security/encyclopedia/adlpackages.aspx` | Microsoft Defender Antivirus Content Delivery Network (CDN) URLs - Security Intelligence and Windows anti-malware platform updates. Linux and macOS clients use this location as the primary download location.|Required| Optional if updates are downloaded and distributed centrally (WSUS/Mirror/ConfigMgr). Windows clients use this location as an alternative - Microsoft Malware Protection Center (MMPC). Otherwise, Windows client uses the location as a fallback when other configured sources fail. The client then retrieves update packages as determined by the redirection logic.|All|
 |Windows security intelligence and anti-malware platform updates, product updates to EDR sensors. This applies when you use the Microsoft or Windows update as the source or method. |443|*.update.microsoft.com <br> *.delivery.mp.microsoft.com <br> *.windowsupdate.com <br> *.download.windowsupdate.com <br> *.download.microsoft.com|Security intelligence and anti-malware platform updates, when the client is configured to download Defender updates from Windows Update, will be downloaded as they become available.|Required|Optional if updates are being downloaded and distributed centrally (WSUS/Mirror/ConfigMgr)  EDR sensor updates always come as part of regular Windows update release cadence/cycle. EDR logic updates come directly from Defender cloud (command and control). For Windows Server 2012 R2 and 2016, KB5005292 is the update package used to perform periodic updates to the EDR sensor stack.|Windows|
 
 ## URLs used for certificate validation checks
+
+The following table lists the URLs required for Windows certificate validation and trust checks.
 
 > [!NOTE]
 > Certificate validation is performed through the Windows operating system, helping to prevent abuse of compromised certificates. The operating system must be able to connect to these destinations, or, should be updated with the latest certificate trust lists if they can't retrieve them from Microsoft directly. For more information about management of trusted root certificates in disconnected environments, see [Configure trusted roots and disallowed certificates in Windows](/windows-server/identity/ad-cs/configure-trusted-roots-disallowed-certificates).
@@ -72,14 +79,18 @@ See the [streamlined connectivity prerequisites](configure-device-connectivity.m
 |Windows operating system certificate validation checks|80|`crl.microsoft.com`|Certificate Revocation Lists - required to validate certificates|Required|Windows|
 
 
-## Other URLs
+<a name="other-urls"></a>
+## Additional service URLs
+
+The following table lists additional optional or scenario-specific URLs used by Microsoft Defender for Endpoint.
 
 |Service|Port|Endpoint/URLs|Endpoint/URL Description|Type|Comments|OS|
 |-|-|-|-|-|-|-|
 |Live response (push notification model only)|443|login.microsoftonline.com<br> *.wns.windows.com login.live.com|Windows Push Notification Services (WNS) for Live Response is used to expedite live response connections to Windows clients. This service can't be used through a proxy.|Optional|Improves the speed of the live response connection initiation, where a direct connection or a proxy bypass is required on Windows client (non-server) operating systems.|Windows|
 |Vulnerability management network scanner standalone tool|443|\*.security.microsoft.com<br>\*.blob.core.windows.net/networkscannerstable/*<br>login.windows.net|Required for the vulnerability management assessment tool for network devices (network scanner) downloaded from the portal.|Optional|Tool is supported on Windows 8 and later and Windows Server 2012 and later|Windows|
 
-## IP addresses
+<a name="ip-addresses"></a>
+## Required IP addresses for streamlined connectivity
 
 The following Defender for Endpoint-dedicated, static IP ranges can be used as an alternative to URLs in certain scenarios without hostname resolution capability.
 
@@ -98,9 +109,10 @@ Current IP addresses can be found at [Home Page - Azure IP Ranges](https://azure
 |MicrosoftDefenderForEndpoint|MAPS, Malware Sample Submission Storage, AutoIR Sample Storage, Command and Control (response actions), native configuration management.|Core Defender for Endpoint services. Prerequisites must be met to ensure successful connections.|
 |OneDsCollector (EDR Cyberdata)|EDR Cyber data (might include diagnostic data for other Microsoft services)|Cyber data channel. Prerequisites must be met to ensure successful connections.|
 
-## Windows 1607 to 1803
+<a name="windows-1607-to-1803"></a>
+## Connectivity URLs for Windows 1607 to 1803
 
-This section lists the URL endpoint services required for older Windows devices. See the [Common URLs](#common-endpoints) section for other required URLs. These Windows versions are running an older version of the EDR sensor (Sense). Onboarding again isn't supported for migrations. Devices must first offboard and then onboard to apply the new configuration that allows for URL reduction.
+The following table lists the URL endpoint services required for devices running Windows 10 versions 1607 to 1803. See the [Common endpoints](#common-endpoints) section for other required URLs. These Windows versions are running an older version of the EDR sensor (Sense). Onboarding again isn't supported for migrations. Devices must first offboard and then onboard to apply the new configuration that allows for URL reduction.
 
 |Service|Geography|Category|Port|Endpoint/URL|Endpoint/URL Description|Required / Optional|Comments|
 |---|---|---|---|---|---|---|---|
@@ -151,12 +163,13 @@ This section lists the URL endpoint services required for older Windows devices.
 |Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|uk.vortex-win.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Optional|Not required for Windows 10 1803 (RS4) and later / Windows Server 2019 and later|
 |Microsoft Defender for Endpoint|UK|Microsoft Defender for Endpoint UK|443|uk-v20.events.data.microsoft.com|Microsoft Defender for Endpoint EDR Cyber Data|Required||
 
-## Windows 7, 8.1, 2008R2 (MMA)
+<a name="windows-7-81-2008r2-mma"></a>
+## Connectivity URLs for Windows 7, 8.1, and 2008 R2 (MMA)
 
 > [!NOTE]
-> The URLs shown in this table are required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. For more information see how to [eliminate wildcards (*)](https://aka.ms/mde_network_requirements).
+> The URLs shown in this table are required only for devices onboarded using the MMA or LAA. This URL isn't applicable when using the modern, unified solution for Windows Server 2012 R2 and 2016. For more information, see [Microsoft Defender for Endpoint network requirements to eliminate wildcard URLs](https://aka.ms/mde_network_requirements).
 
-This section applies to URL endpoint services required for devices using Defender for Endpoint via the Microsoft Monitoring Agent. These endpoints run on Windows 7, Windows 8.1, Windows Server 2008 R2. For servers not upgraded to the Unified Agent, see [Updating MMA on Windows devices for Microsoft Defender for Endpoint](update-agent-mma-windows.md).
+The following table lists the URL endpoint services required for devices using Defender for Endpoint via the Microsoft Monitoring Agent. These endpoints run on Windows 7, Windows 8.1, Windows Server 2008 R2. For servers not upgraded to the modern unified solution, see [Updating MMA on Windows devices for Microsoft Defender for Endpoint](update-agent-mma-windows.md).
 
 |Category|Port|Endpoint/URL|Endpoint/URL Description|
 |---|---|---|---|
@@ -171,7 +184,7 @@ This section applies to URL endpoint services required for devices using Defende
 
 ## Defender portal URLs
 
-Lists the URL endpoints required for administrative/security operations access the Microsoft Defender Security portals. These endpoints don't need to be accessible to all devices.
+The following table lists the URL endpoints required for administrative and security operations to access the Microsoft Defender security portals. These endpoints don't need to be accessible to all devices.
 
 |URL|Comment|
 |---|---|
@@ -184,6 +197,26 @@ Lists the URL endpoints required for administrative/security operations access t
 |https://*.api.security.microsoft.com|Microsoft Defender Security Center portal/APIs|
 |https://security.microsoft.com|Microsoft Defender XDR admin portal|
 
-## Microsoft Defender process exclusions
+<a name="client-processes"></a>
+## Client processes that require network connectivity
+
+Because the following Microsoft Defender for Endpoint client processes generate network communications, make sure that communications from those processes are not blocked.
 
 [!INCLUDE [Microsoft Defender for Endpoint processes](includes/streamlined-connectivity-processes.md)]
+
+<a name="change-log"></a>
+## Changelog
+
+The following table summarizes recent changes to this article.
+
+|Date|Change Log|
+|---|---|
+|06/02/2026|Added `reflector.defender.microsoft.com` to [Common endpoints](#common-endpoints).|
+|04/14/2026|Removed `officecdn-microsoft-com.akamaized.net` from [URLs used for updates](#urls-used-for-updates). Mac app/platform updates now use the new CDN endpoint referenced in the standard URL list.|
+|04/13/2026|Added SmartScreen row (`*.smartscreen.microsoft.com`, `*.checkappexec.microsoft.com`, `*.urs.microsoft.com`) to [Common endpoints](#common-endpoints).|
+|03/26/2026|Renamed **Microsoft Defender process exclusions** section to **Client processes**, and aligned the content for all URL lists.|
+|03/03/2026|Added Linux URL (`config.edge.skype.com/config/v1`) to [Common endpoints](#common-endpoints).|
+|02/25/2026|Added `*.wdcpalt.microsoft.com` to Windows 1607-1803 section.|
+|04/07/2025|Removed `dm.microsoft.com`.|
+|03/11/2024|Updated Xplat MDE agent version to 101.24022.|
+|02/01/2024|Updated prerequisites.|

@@ -58,6 +58,8 @@
          href: email-authentication-dmarc-configure.md
        - name: Configure trusted ARC sealers
          href: email-authentication-arc-configure.md
+       - name: Troubleshoot email authentication
+         href: email-authentication-troubleshoot.md
      - name: Step 2 - Configure threat policies
        items:
        - name: Preset security policies
@@ -70,6 +72,8 @@
        items:
        - name: Defender for Office 365 permissions
          href: mdo-portal-permissions.md
+       - name: Unified RBAC permissions for Defender for Office 365
+         href: defender-office-365-unified-rbac-permissions.md
        - name: Permissions - Defender for Office 365 and Microsoft Purview
          href: scc-permissions.md
        - name: Microsoft Defender XDR RBAC
@@ -155,13 +159,15 @@
              href: anti-spam-protection-about.md
            - name: Configure anti-spam policies
              href: anti-spam-policies-configure.md
+           - name: Troubleshoot anti-spam policy issues
+             href: anti-spam-policies-troubleshooting.md
            - name: Advanced Spam Filter (ASF) settings
              href: anti-spam-policies-asf-settings-about.md
            - name: What's the difference between junk email and bulk email?
              href: anti-spam-spam-vs-bulk-about.md
            - name: Spam confidence level (SCL)
              href: anti-spam-spam-confidence-level-scl-about.md
-           - name: Bulk complaint level (BCL)
+           - name: Bulk email detection and bulk complaint level (BCL)
              href: anti-spam-bulk-complaint-level-bcl-about.md
            - name: Bulk senders insight
              href: anti-spam-bulk-senders-insight.md
@@ -225,6 +231,8 @@
              href: outbound-spam-high-risk-delivery-pool-about.md
            - name: Restore restricted users
              href: outbound-spam-restore-restricted-users.md
+           - name: Troubleshoot outbound sending limits
+             href: outbound-spam-sending-limits-troubleshoot.md
          - name: Connection filtering in cloud organizations
            items:
            - name: Configure the connection filtering policy
@@ -378,7 +386,7 @@
          href: campaigns.md
        - name: Report suspicious messages and files
          items:
-         - name: Report suspicious email or files to Microsoft
+         - name: Report suspicious email, Teams messages, or files to Microsoft
            href: submissions-report-messages-files-to-microsoft.md
          - name: Admin submissions
            href: submissions-admin.md
@@ -546,6 +554,8 @@
           href: step-by-step-guides/utilize-microsoft-defender-for-office-365-in-sharepoint-online.md
         - name: Tune bulk email filtering
           href: step-by-step-guides/tune-bulk-mail-filtering-walkthrough.md
+        - name: Configure Unified RBAC for Defender for Office 365
+          href: step-by-step-guides/configure-unified-rbac-defender-office-365.md
       - name: Use
         items:
         - name: Track and respond to emerging security threats with campaigns view in Microsoft Defender for Office 365
@@ -560,14 +570,14 @@
           href: step-by-step-guides/how-to-setup-attack-simulation-training-for-automated-attacks-and-training.md
         - name: Optimize and correct threat policies with configuration analyzer
           href: step-by-step-guides/optimize-and-correct-security-policies-with-configuration-analyzer.md
-        - name: Protect your c-suite with priority account protection
-          href: step-by-step-guides/protect-your-c-suite-with-priority-account-protection.md
         - name: Search for emails and remediate threats using Threat Explorer in Microsoft Defender XDR
           href: step-by-step-guides/search-for-emails-and-remediate-threats.md
         - name: How to prioritize and manage Automated Investigations and Response (AIR)
           href: step-by-step-guides/how-to-prioritize-and-manage-automated-investigations-and-response-air.md
         - name: Add Advanced Hunting community queries to Microsoft Defender XDR and Microsoft Sentinel
           href: step-by-step-guides/add-advanced-hunting-community-queries.md
+        - name: Prompt injection protection in Microsoft Defender for Office 365
+          href: step-by-step-guides/prompt-injection-protection-defender-for-office-365.md
       - name: Diagnose
         items:
         - name: Understanding overrides within the email entity page in Microsoft Defender

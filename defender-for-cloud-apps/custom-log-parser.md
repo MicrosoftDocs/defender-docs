@@ -4,6 +4,7 @@ description: This article provides information about how to use the custom log p
 ms.date: 12/20/2023
 ms.topic: how-to
 ms.reviewer: Mravela
+ms.custom: sfi-image-nochange
 ---
 # Use a custom log parser
 

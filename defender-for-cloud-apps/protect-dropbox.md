@@ -1,19 +1,21 @@
 ---
 title: Protect your Dropbox environment | Microsoft Defender for Cloud Apps
-description: Learn how about connecting your Dropbox app to Defender for Cloud Apps using the API connector.
-ms.date: 12/16/2025
+description: Connect Dropbox to Microsoft Defender for Cloud Apps by using the API connector to monitor user activity, detect threats and external sharing risks, and enable automated remediation controls.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # How Defender for Cloud Apps helps protect your Dropbox environment
 
-As a cloud file storage and collaboration tool, Dropbox enables your users to share their documents across your organization and partners in a streamlined and efficient way. Using Dropbox may expose your sensitive data not only internally, but also to external collaborators, or even worse make it publicly available via a shared link. Such incidents can be caused by malicious actors, or by unaware employees.
+As a cloud file storage and collaboration tool, Dropbox enables your users to share their documents across your organization and partners in a streamlined and efficient way. Using Dropbox may expose your sensitive data not only internally, but also to external collaborators, or even worse make it publicly available via a shared link. These data exposure incidents can be caused by malicious actors or unaware employees.
 
 Connecting Dropbox to Defender for Cloud Apps gives you improved insights into your users' activities, provide threat detection using machine learning based anomaly detections, information protection detections such as detecting external information sharing, and enabling automated remediation controls.
 
 > [!NOTE]
-> Dropbox have made changes to the way that shared folders are stored. The scan will be updated in due course to include these Teams Spaces.
+> Dropbox changed the way shared folders are stored, moving them to Team Spaces. The Defender for Cloud Apps file scan will be updated in due course to include Team Spaces.
 
 ## Main threats
 
@@ -36,13 +38,16 @@ Connecting Dropbox to Defender for Cloud Apps gives you improved insights into y
 
 You can use the following built-in policy templates to detect and notify you about potential threats:
 
+> [!IMPORTANT]
+> File policies retire on January 6, 2027. To maintain file-based data protection for this app, [migrate to Microsoft Purview DLP or auto-labeling policies](migrate-file-policies-to-purview.md).
+
 | Type | Name |
 | ---- | ---- |
 | Built-in anomaly detection policy | [Activity from anonymous IP addresses](anomaly-detection-policy.md#activity-from-anonymous-ip-addresses)<br />[Activity from infrequent country](anomaly-detection-policy.md#activity-from-infrequent-country)<br />[Activity from suspicious IP addresses](anomaly-detection-policy.md#activity-from-suspicious-ip-addresses)<br />[Impossible travel](anomaly-detection-policy.md#impossible-travel)<br />[Activity performed by terminated user](anomaly-detection-policy.md#activity-performed-by-terminated-user) (requires Microsoft Entra ID as IdP)<br />[Malware detection](anomaly-detection-policy.md#malware-detection)<br />[Multiple failed login attempts](anomaly-detection-policy.md#multiple-failed-login-attempts)<br />[Ransomware detection](anomaly-detection-policy.md#ransomware-activity)<br />[Unusual file deletion activities](anomaly-detection-policy.md#unusual-activities-by-user)<br />[Unusual file share activities](anomaly-detection-policy.md#unusual-activities-by-user)<br />[Unusual multiple file download activities](anomaly-detection-policy.md#unusual-activities-by-user) |
 | Activity policy template | Logon from a risky IP address<br />Mass download by a single user<br />Potential ransomware activity |
 | File policy template | Detect a file shared with an unauthorized domain<br />Detect a file shared with personal email addresses<br />Detect files with PII/PCI/PHI |
 
-For more information about creating policies, see [Create a policy](control-cloud-apps-with-policies.md#create-a-policy).
+For more information about creating policies, see [Create a policy in Defender for Cloud Apps](control-cloud-apps-with-policies.md#create-a-policy).
 
 ## Automate governance controls
 
@@ -59,7 +64,8 @@ For more information about remediating threats from apps, see [Governing connect
 
 Review our best practices for [securing and collaborating with external users](best-practices.md#secure-collaboration-with-external-users-by-enforcing-real-time-session-controls) and [blocking and protecting the download of sensitive data to unmanaged or risky devices](best-practices.md#block-and-protect-download-of-sensitive-data-to-unmanaged-or-risky-devices).
 
-## SaaS security posture management
+<a name="saas-security-posture-management"></a>
+## SaaS security posture management for Dropbox
 
 [Connect Dropbox](#connect-dropbox-to-microsoft-defender-for-cloud-apps) to automatically get security posture recommendations for Dropbox in Microsoft Secure Score. In Secure Score, select **Recommended actions** and filter by **Product** = **Dropbox**. Dropbox supports security recommendations to *Enable web session timeout for web users*.
 
@@ -70,7 +76,7 @@ For more information, see:
 
 ## Connect Dropbox to Microsoft Defender for Cloud Apps
 
-This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Dropbox account using the connector APIs. This connection gives you visibility into and control over Dropbox use.
+Use the following instructions to connect Microsoft Defender for Cloud Apps to your existing Dropbox account using the connector APIs. This connection gives you visibility into and control over Dropbox use.
 
 Dropbox enables access to files from shared links without signing in, Defender for Cloud Apps registers these users as Unauthenticated users. If you see unauthenticated Dropbox users, it might indicate users who aren't from your organization, or they might be recognized users from within your organization who didn't sign in.
 
@@ -103,6 +109,6 @@ Dropbox enables access to files from shared links without signing in, Defender f
 
 If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
 
-## Next steps
+## Related content
 
 - [Control cloud apps with policies](control-cloud-apps-with-policies.md)

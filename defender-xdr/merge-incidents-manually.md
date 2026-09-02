@@ -5,25 +5,25 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - usx-security
 - sentinel-only
 ms.topic: how-to
-ms.date: 04/09/2025
-search.appverid: met150
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Merge incidents manually in the Microsoft Defender portal (Preview)
 
 Incidents are automatically created in the Microsoft Defender portal when suspicious activities are detected. When two incidents describe parts of the same attack story, Defender usually merges those incidents into a single incident automatically to help you investigate incidents more efficiently and effectively and resolve them more quickly and accurately.
 
-Sometimes, however, the automatic merging doesn't happen, due to certain conditions that prevent it. To learn more about when incidents are or aren't merged, see [Incident correlation and merging](alerts-incidents-correlation.md#incident-correlation-and-merging). In these circumstances, or if you decide independently that two (unmerged) incidents are related and should be investigated as a single unit, you can merge them manually. This article explains how to do so.
+Sometimes, however, automatic incident merging doesn't happen, due to certain conditions that prevent incidents from being merged. To learn more about when incidents are or aren't merged, see [Incident correlation and merging](alerts-incidents-correlation.md#incident-correlation-and-merging). When automatic incident merging doesn't occur, or if you decide independently that two (unmerged) incidents are related and should be investigated as a single unit, you can merge them manually. This article explains how to merge incidents manually.
 
 ## Prerequisites
 
@@ -32,6 +32,8 @@ Sometimes, however, the automatic merging doesn't happen, due to certain conditi
 - Incidents that are candidates for merging must have either the same values as each other, or null values, for the **Assigned to**, **Classification**, and **Determination** fields.
 
 ## Merge incidents from the incident queue page
+
+To merge incidents from the incident queue page, perform the following steps:
 
 1. Open the incident queue. Select **Investigation & response > Incidents & alerts > Incidents** from the quick launch menu in the Microsoft Defender portal.
 
@@ -55,9 +57,11 @@ Sometimes, however, the automatic merging doesn't happen, due to certain conditi
 
 ## Merge incidents from within the incident page
 
+To merge incidents from within an incident page, follow these steps:
+
 1. Select the name of one of the two incidents you want to merge from the incident queue. This could be either the source or the target incident, as Microsoft Defender decides which is which. For more information, see [Details of the merge process](alerts-incidents-correlation.md#details-of-the-merge-process).
 
-1. The incident page appears. There, from the **Actions** menu (the three dots in the upper right corner), select **Merge incidents**.
+1. The incident page appears. On the incident page, from the **Actions** menu (the three dots in the upper right corner), select **Merge incidents**.
 
     :::image type="content" source="media/merge-incidents-manually/merge-incident-from-incident-page.png" alt-text="Screenshot of merging incidents from incident page." lightbox="media/merge-incidents-manually/merge-incident-from-incident-page.png":::
 
@@ -74,6 +78,8 @@ Sometimes, however, the automatic merging doesn't happen, due to certain conditi
     If the merge fails, a dialog box appears with a message that the incidents failed to merge. For the merge to succeed, both incidents must have the same values&mdash;or at least one incident must have a null value&mdash;for **Assigned to**, **Classification**, and **Determination**.
 
 ## Notes
+
+Keep the following behaviors in mind when merging incidents:
 
 - When the incidents are in the process of merging, you can't display or make any changes to either incident.
 

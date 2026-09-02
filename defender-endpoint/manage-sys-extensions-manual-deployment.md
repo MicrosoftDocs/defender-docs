@@ -1,27 +1,29 @@
 ---
 title: Manage system extensions using the manual methods of deployment
-description: Manage system extensions using the manual methods of deployment.
+description: Manually approve system extensions, grant Accessibility and Full Disk Access permissions, and enable notifications for Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: how-to
 ms.subservice: onboard
-search.appverid: met150
-ms.date: 04/04/2025
+ms.date: 06/17/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Manage system extensions using the manual methods of deployment
 
-This article describes the procedures involved when deploying Microsoft Defender for Endpoint manually.
+When you deploy Microsoft Defender for Endpoint on macOS without a mobile device management (MDM) solution, you must manually approve system extensions and grant the required permissions. This article walks macOS administrators through approving system extensions, granting Accessibility and Full Disk Access permissions, enabling notifications, and verifying a healthy deployment state.
 
-## Manual deployment
+<a name="manual-deployment"></a>
+## Configure system extensions and permissions using manual deployment
 
-### System Extensions
+<a name="system-extensions"></a>
+### Approve system extensions manually
 
 You might see the prompt that's shown in the following screenshot:
 
@@ -83,11 +85,14 @@ You might see the prompt that's shown in the following screenshot:
 
 1. On the **Microsoft Defender wants to make changes** pop-up screen, enter your password and select **OK**.
 
-If you run systemextensionsctl list, the following screen appears:
+If you run `systemextensionsctl list`, you see output similar to the following screenshot showing the registered system extensions:
 
 :::image type="content" source="media/result-of-running-systemextenstionsctl-list.png" alt-text="The resultant screen of running the systemextensionsdcl list." lightbox="media/result-of-running-systemextenstionsctl-list.png":::
 
-### Accessibility
+<a name="accessibility"></a>
+### Grant Accessibility permissions manually
+
+Perform the following steps to grant Accessibility access to Microsoft Defender:
 
 1. On the **Security & Privacy** screen, select the **Privacy** tab.
 
@@ -105,7 +110,10 @@ If you run systemextensionsctl list, the following screen appears:
 
    :::image type="content" source="media/checking-md-checkbox.png" alt-text="Checking the Microsoft Defender checkbox." lightbox="media/checking-md-checkbox.png":::
 
-### Full Disk Access
+<a name="full-disk-access"></a>
+### Grant Full Disk Access manually
+
+Perform the following steps to grant Full Disk Access to Microsoft Defender:
 
 1. On the **Security & Privacy** screen, select the **Privacy** tab.
 1. Select **Full Disk Access** from the left navigation pane, and then select the **Lock** icon.
@@ -116,7 +124,10 @@ If you run systemextensionsctl list, the following screen appears:
  
    :::image type="content" source="media/check-md-checkbox.png" alt-text="Checking the MD checkbox." lightbox="media/check-md-checkbox.png":::
 
-### Notifications
+<a name="notifications"></a>
+### Enable notifications manually
+
+Use the following steps to enable notifications for Microsoft Defender:
 
 1. From the **System Preferences** home screen, select **Notifications**.
 
@@ -126,13 +137,16 @@ If you run systemextensionsctl list, the following screen appears:
 
 1. Select **Microsoft Defender** from the left navigation pane.
 
-1. Enable the **Allow Notifications** option; select **Alerts**, and retain the default settings as is.
+1. Enable the **Allow Notifications** option and select **Alerts**. No further changes are required; leave all other notification settings at their defaults.
 
    :::image type="content" source="media/notifications-md.png" alt-text="Selecting Microsoft Defender option from the Notifications screen." lightbox="media/notifications-md.png":::
 
-### What a healthy system looks like
+<a name="what-a-healthy-system-looks-like"></a>
+### Verify a healthy system state
 
 #### Mdatp health output
+
+After completing the manual deployment steps, run `mdatp health` in Terminal to confirm that Microsoft Defender for Endpoint is running correctly. The following screenshot shows an example of healthy output. In a healthy system, real-time protection is enabled, definitions are up to date, and the system extensions are active.
 
 :::image type="content" source="media/mdatp-health-output.png" alt-text="The mdatp health output screen." lightbox="media/mdatp-health-output.png":::
 
@@ -142,6 +156,6 @@ In terminal, run the following command to check the system extensions:
 
 `systemextensionsctl list`
 
-The execution of this command is shown in the following screenshot:
+The following screenshot shows the expected output of `systemextensionsctl list` on a healthy system:
 
 :::image type="content" source="media/command-to-check-system-extensions.png" alt-text="The command to check the system extensions." lightbox="media/command-to-check-system-extensions.png":::

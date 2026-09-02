@@ -1,24 +1,24 @@
-﻿---
+---
 title: Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux
-description: eBPF-based sensor deployment in Microsoft Defender for Endpoint on Linux.
+description: Learn how to use the eBPF-based sensor in Microsoft Defender for Endpoint on Linux to collect supplementary event data and improve performance and system stability.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
 ms.topic: how-to
 ms.subservice: linux
-search.appverid: met150
-ms.date: 12/02/2024
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 # Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux
 
@@ -26,7 +26,7 @@ appliesto:
 
 
 > [!NOTE]
-> Starting with Defender for Endpoint on Linux, version `101.2408.0000`, AuditD is no longer be supported as a supplementary event provider. For more information, see the FAQs at the end of this article.
+> Starting with Defender for Endpoint on Linux, version `101.2408.0000`, AuditD is no longer be supported as a supplementary event provider. For more information, see [FAQs - Transition to eBPF](#faqs---transition-to-ebpf).
 
 The extended Berkeley Packet Filter (eBPF) for Microsoft Defender for Endpoint on Linux provides supplementary event data for Linux operating systems. eBPF helps address several classes of issues seen with the AuditD event provider and is beneficial in the areas of performance and system stability.
 
@@ -46,7 +46,9 @@ In addition, the eBPF sensor uses capabilities of the Linux kernel without requi
 
 ## System prerequisites
 
-The eBPF sensor for Microsoft Defender for Endpoint on Linux is supported on the following minimum distribution and kernel versions:
+The eBPF sensor requires Defender for Endpoint on Linux agent version `101.23082.0006` or later. Ensure your endpoint is updated to a supported agent version before proceeding.
+
+The eBPF sensor is supported on the following minimum distribution and kernel versions:
 
 | Linux Distribution | Distribution version | Kernel version |
 |--------------------|----------------------|----------------|
@@ -65,9 +67,10 @@ The eBPF sensor for Microsoft Defender for Endpoint on Linux is supported on the
 | Alma Linux 9       | 9.2                  | 5.14.0-284     |
 
 > [!NOTE]
-> Oracle Linux 8.8 with kernel version 5.15.0-0.30.20.el8uek.x86_64, 5.15.0-0.30.20.1.el8uek.x86_64 will result in kernel hang when eBPF is enabled as supplementary subsystem provider. This kernel version should not be used for eBPF mode. Refer to Troubleshooting and Diagnostics section for mitigation steps.
+> Oracle Linux 8.8 with kernel version 5.15.0-0.30.20.el8uek.x86_64, 5.15.0-0.30.20.1.el8uek.x86_64 will result in kernel hang when eBPF is enabled as supplementary subsystem provider. This kernel version should not be used for eBPF mode. Refer to the [Troubleshooting and Diagnostics](#troubleshooting-and-diagnostics) section for mitigation steps.
 
-## Use eBPF
+<a name="use-ebpf"></a>
+## Enable and configure the eBPF sensor
 
 The eBPF sensor is automatically enabled for all customers by default for agent versions `101.23082.0006` and later. Customers need to update to a supported version to experience the feature. When the eBPF sensor is enabled on an endpoint, Defender for Endpoint on Linux updates supplementary_events_subsystem to ebpf.
 
@@ -89,7 +92,7 @@ You can also update the mdatp_managed.json file:
 }
 ```
 
-Refer to the link for detailed sample json file - [Set preferences for Microsoft Defender for Endpoint on Linux.](linux-preferences.md)
+For a detailed sample JSON file, see [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md).
 
 > [!IMPORTANT]
 > If you disable eBPF or in the event eBPF is not supported on any specific kernel, supplementary event provider switches to Netlink. All process operations will continue to flow seamlessly, but you may miss out on specific file and socket-related events that eBPF would otherwise capture.
@@ -133,6 +136,8 @@ uname -a
 ```
 
 #### Known Issues
+
+Be aware of the following known issues when using the eBPF sensor on Linux:
 
 1. Enabling eBPF on RHEL 8.1 version with SAP might result in kernel panic. To mitigate this issue, you can take one of the following steps:
 
@@ -252,7 +257,10 @@ Following are some common reasons for placing exclusions for AuditD:
 - Support Channels: You can contact support via the Microsoft Defender portal. Additionally, our knowledge base and community forums are valuable resources for troubleshooting common issues.
 
 
-## See also
+<a name="see-also"></a>
+## Related content
+
+For more information about troubleshooting and resource management for Defender for Endpoint on Linux, see the following articles:
 
 - [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md)
 - [Microsoft Defender for Endpoint on Linux resources](linux-resources.md#collect-diagnostic-information)

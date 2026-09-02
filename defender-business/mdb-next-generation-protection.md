@@ -1,16 +1,13 @@
 ---
 title: Review or edit your next-generation protection policies Microsoft Defender for Business
 description: Learn how to view and edit your next-generation protection policies in Defender for Business. These policies pertain to antivirus and anti-malware protection.
-search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.date: 09/24/2025
 ms.reviewer: nehabha
-f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security
@@ -82,10 +79,10 @@ The following table lists settings and options for next-generation protection in
 |**Use low performance**|This setting is turned off by default. *We recommend keeping this setting turned off.* However, you can turn on this setting to limit the device memory and resources used during scheduled scans. **Important** If you turn on **Use low performance**, it configures the following settings for Microsoft Defender Antivirus: <ul><li>>[AllowArchiveScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning): Archive files aren't scanned.</li><li>[EnableLowCPUPriority](/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority): Scans are assigned a low CPU priority.</li><li>[DisableCatchupFullScan](/windows/client-management/mdm/policy-csp-defender#defender-disablecatchupfullscan): No catch-ups scans if a full antivirus scan is missed.</li><li>[DisableCatchupQuickScan](/windows/client-management/mdm/policy-csp-defender#defender-disablecatchupquickscan): No catch-ups scans if a quick antivirus scan is missed.</li><li>[AvgCPULoadFactor](/windows/client-management/mdm/policy-csp-defender#defender-avgcpuloadfactor): Reduce the average CPU load factor during an antivirus scan from 50 percent to 20 percent.</uli></ul>|
 |**User experience**||
 |**Allow users to access the Windows Security app**|Enable users to open the Windows Security app on their devices. Users can't override settings that you configure in Defender for Business, but they can run a quick scan or view any detected threats.|
-|**Antivirus exclusions**|Exclusions are processes, files, or folders skipped by Microsoft Defender Antivirus scans. *In general, you shouldn't need to define exclusions.* Microsoft Defender Antivirus includes many automatic exclusions based on known operating system behavior and typical management files. Every exclusion reduces your level of protection, so it's important to consider carefully what exclusions to define. Before you add any exclusions, see [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions).|
-|**Process exclusions**|Prevent Microsoft Defender Antivirus from scanning files opened by specific processes. When you add a process to the process exclusion list, Microsoft Defender Antivirus doesn't scan files opened by that process, no matter where the files are located. The process itself is scanned unless it's in the file exclusion list. For more information, see [Configure exclusions for files opened by processes](/defender-endpoint/configure-process-opened-file-exclusions-microsoft-defender-antivirus).|
-|**File extension exclusions**|Prevent Microsoft Defender Antivirus from scanning files with specific extensions. For more information, see [Configure and validate exclusions based on file extension and folder location](/defender-endpoint/configure-extension-file-exclusions-microsoft-defender-antivirus).|
-|**File and folder exclusions**|Prevent Microsoft Defender Antivirus from scanning files in specific folders. For more information, see [Contextual file and folder exclusions](/defender-endpoint/configure-contextual-file-folder-exclusions-microsoft-defender-antivirus).|
+|**Antivirus exclusions**|Exclusions are processes, files, or folders skipped by Microsoft Defender Antivirus scans. *In general, you shouldn't need to define exclusions.* Microsoft Defender Antivirus includes many automatic exclusions based on known operating system behavior and typical management files. Every exclusion reduces your level of protection, so it's important to consider carefully what exclusions to define. Before you add any exclusions, see [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](/defender-endpoint/defender-endpoint-exclusions-overview).|
+|**Process exclusions**|Prevent Microsoft Defender Antivirus from scanning files opened by specific processes. When you add a process to the process exclusion list, Microsoft Defender Antivirus doesn't scan files opened by that process. The process itself is scanned unless it's in the file exclusion list. For more information, see [Process exclusions](/defender-endpoint/microsoft-defender-antivirus-exclusions-overview#process-exclusions).|
+|**File and folder exclusions**|Prevent Microsoft Defender Antivirus from scanning files by name, location, or extension. For more information, see [File and folder exclusions](/defender-endpoint/microsoft-defender-antivirus-exclusions-overview#file-and-folder-exclusions).|
+|**Contextual exclusions**|Prevent Microsoft Defender Antivirus from scanning the file or folder only in a specific context (for example, a specific process accesses the file or only during a specific type of scan). For more information, see [Contextual exclusions](/defender-endpoint/microsoft-defender-antivirus-exclusions-overview#contextual-exclusions).|
 
 ## Other preconfigured settings in Defender for Business
 
@@ -117,7 +114,7 @@ The following table describes preconfigured settings for Defender for Business a
 
 - [Set up your firewall policies](mdb-firewall.md) and [custom rules for firewall policies](mdb-firewall.md).
 - [Set up your web content filtering policy](mdb-web-content-filtering.md) and enable web protection automatically.
-- [Set up your controlled folder access policy](mdb-controlled-folder-access.md) for ransomware protection.
-- [Enable your attack surface reduction rules](mdb-asr.md).
+- [Configure controlled folder access (CFA)](/defender-endpoint/controlled-folder-access-overview#deployment-and-configuration-methods-for-cfa) for ransomware protection.
+- [Enable your attack surface reduction rules](/defender-endpoint/attack-surface-reduction-rules-overview#deployment-and-configuration-methods-for-asr-rules).
 - [Review settings for advanced features and the Microsoft Defender portal](mdb-portal-advanced-feature-settings.md).
 - [Use your vulnerability management dashboard in Microsoft Defender for Business](mdb-view-tvm-dashboard.md)

@@ -1,15 +1,11 @@
 ---
 title: DeviceInfo table in the advanced hunting schema
 description: Learn about OS, computer name, and other machine information in the DeviceInfo table of the advanced hunting schema
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - tier3
 - m365-security
@@ -34,14 +30,14 @@ The `DeviceInfo` table in the [advanced hunting](advanced-hunting-overview.md) s
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 
-This advanced hunting table is populated by records from various Microsoft services. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy a Microsoft service in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+This advanced hunting table is populated by records from various Microsoft services. If your organization hasn't deployed the service in Microsoft Defender, queries that use the table aren't going to work or return any results. For more information about how to deploy a Microsoft service in the Defender portal, read [Deploy supported services](deploy-supported-services.md).
 
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
-| `Timestamp` | `datetime` | Last date and time recorded for the device |
+| `Timestamp` |`datetime` | Last date and time recorded for the device |
 | `DeviceId` | `string` | Unique identifier for the device in the service |
 | `DeviceName` | `string` | Fully qualified domain name (FQDN) of the device |
 | `ClientVersion` | `string` | Version of the endpoint agent or sensor running on the device |
@@ -90,8 +86,13 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `MitigationStatus` | `string` | Indicates the mitigation action applied to a device |
 | `Site` | `string` | Represents the physical location where the device is located |
 | `DiscoverySources` | `string` | Products or services that have seen or reported the device, including when they last reported it. |
+|`DlpInfo`|`string`| Properties related to Endpoint Data Loss Prevention (DLP).[*](#dlp-only) |
+
+<a name="dlp-only"></a>* For information about the properties available in the `DlpInfo` column, see [Troubleshooting endpoint data loss prevention configuration and policy sync. ](/purview/dlp-edlp-tshoot-sync#access-device-attribute-data-using-advanced-hunting)
 
 The DeviceInfo table is updated continuously, and all updates contain the full current device data for that device.
+
+## Sample query
 
 You can use the following sample query to get the latest state of a device:
 

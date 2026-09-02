@@ -4,7 +4,6 @@ description: Learn about content distribution across tenants in the Microsoft De
 author: mberdugo
 ms.author: monaberdugo
 ms.reviewer: tbeerthuis
-search.appverid: ""
 ms.collection: 
 - m365-security
 - tier1
@@ -13,6 +12,7 @@ ms.date: 1/14/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
+ms.custom: sfi-image-nochange
 ---
 
 # Content distribution in multitenant management
@@ -28,6 +28,7 @@ Create distribution profiles to distribute the following types of content across
 - [Analytics rules](/azure/sentinel/scheduled-rules-overview?) for Microsoft Sentinel customers only
 - [Automation rules](/azure/sentinel/create-manage-use-automation-rules)for Microsoft Sentinel customers only
 - [Workbooks](/azure/sentinel/monitor-your-data) for Microsoft Sentinel customers only
+- Parsers, Saved Searches and Functions
 
 ## Prerequisites
 

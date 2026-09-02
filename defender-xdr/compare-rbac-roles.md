@@ -5,15 +5,14 @@ ms.service: defender-xdr
 ms.author: monaberdugo
 author: mberdugo
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 ms.custom:
+  - sfi-ga-nochange
 ms.topic: concept-article
-ms.date: 04/07/2026
+ms.date: 07/10/2026
 ms.reviewer:
-search.appverid: met150
 appliesto:
 - Microsoft Defender for Endpoint Plan 2
 - Microsoft Defender XDR
@@ -41,9 +40,7 @@ This article describes how existing roles and permissions in the available Micro
 This article contains tables describing how to map your existing individual RBAC role defintions to the new Microsoft Defender unified RBAC permissions for the following products:
 
 > [!IMPORTANT]
-> As of February 2025, the Microsoft Defender unified RBAC model is the default permissions model for new Microsoft Defender Endpoint organizations. New organizations can't export roles and permissions from the original permissions model. Existing organizations with roles and permissions assigned or exported before February maintain their current roles and permissions configuration.
->
-> As of March 2025, the Microsoft Defender unified RBAC model is the default permissions model for new Microsoft Defender for Identity organizations. New organizations can't export roles and permissions from the original permissions model. Existing organizations with roles and permissions assigned or exported before March maintain their current roles and permissions configuration.
+> Starting 2025, the Microsoft Defender unified RBAC model is the default permissions model for new Microsoft Defender Endpoint tenants and Microsoft Defender for Identity tenants. These tenants can't export roles and permissions from the old model. Defender for Endpoint or Defender for Identity tenants with roles and permissions assigned or exported prior to this date maintain their old roles and permissions configuration.
 
 Use the tables in the following sections to learn more about how your existing individual RBAC role definitions map to your new Microsoft Defender unified RBAC roles:
 
@@ -52,7 +49,7 @@ Use the tables in the following sections to learn more about how your existing i
 - [Microsoft Defender for Identity](#microsoft-defender-for-identity)
 - [Microsoft Defender for Cloud Apps](#microsoft-defender-for-cloud-apps)
 - [Microsoft Defender for Cloud](#microsoft-defender-for-cloud)
-- [Microsoft Sentinel (Preview)](#microsoft-sentinel-preview)
+- [Microsoft Sentinel](#microsoft-sentinel)
 - [Microsoft Entra Global roles access](#microsoft-entra-global-roles-access)
 
 <a name='microsoft-defender-for-endpoint-and-defender-vulnerability-management'></a>
@@ -92,14 +89,14 @@ You configured Email & collaboration permissions in the Defender portal at <http
 
 |Email & collaboration permission|Type|Microsoft Defender unified RBAC permission|
 |---|---|---|
-|Global Reader|Role group|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Authorization and settings \ Security settings \ Core security settings (read) <br/> Authorization and settings \ System setting (read)|
-|Organization Management|Role group|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Security operations \ Security data \ Email advanced actions (manage) <br/> Security operations \ Security data \ Email quarantine (manage) <br/> Authorization and settings \ Authorization (Read and manage) <br/> Authorization and settings \ Security setting (All permissions) <br/> Authorization and settings \ System settings (Read and manage)|
-|Security Administrator|Role group|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Security operations \ Security data \ Email quarantine (manage) <br/> Authorization and settings \ Authorization (read) <br/> Authorization and settings \ Security setting (All permissions) <br/> Authorization and settings \ System settings (Read and manage)|
-|Security Reader|Role group|Security operations \ Security data \Security data basics (read) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Authorization and settings \ Security settings \ Core security settings (read) <br/> Authorization and settings \ System setting (read)|
+|Global Reader|Role group|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Authorization and settings \ Security settings \ Core security settings (read) <br/> Authorization and settings \ System setting (read)<br/>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read)|
+|Organization Management|Role group|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Security operations \ Security data \ Email advanced actions (manage) <br/> Security operations \ Security data \ Email quarantine (manage) <br/> Authorization and settings \ Authorization (Read and manage) <br/> Authorization and settings \ Security setting (All permissions) <br/> Authorization and settings \ System settings (Read and manage)<br/>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read)|
+|Security Administrator|Role group|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Security operations \ Security data \ Email quarantine (manage) <br/> Authorization and settings \ Authorization (read) <br/> Authorization and settings \ Security setting (All permissions) <br/> Authorization and settings \ System settings (Read and manage)<br/>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read)|
+|Security Reader|Role group|Security operations \ Security data \Security data basics (read) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Authorization and settings \ Security settings \ Core security settings (read) <br/> Authorization and settings \ System setting (read) <br/>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read)|
 |Audit Logs|Role|Security operations \ Security data \ Security data basics (read)|
 |Manage Alerts|Role|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage)|
 |Preview|Role|Security operations\ Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: All Emails (read)|
-|Quarantine|Role|Security operations \ Security data \ Email quarantine (manage)|
+|Quarantine|Role|Security operations \ Security data \ Email quarantine (manage) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read)|
 |Role Management|Role|Authorization and settings \ Authorization (Read and manage)|
 |Search and Purge|Role|Security operations \ Security data \ Email advanced actions (manage)|
 |View-Only Manage Alerts|Role|Security operations \ Security data \ Security data basics (read)|
@@ -118,6 +115,9 @@ You configured protection-related Exchange Online permissions in the Exchange ad
 |View-Only Organization Management|Role group|Authorization and settings \ Security settings (Read-only) <br/> Authorization and settings \ System settings (Read-only)|
 |Tenant AllowBlockList Manager|Role|Authorization and settings \ Security settings \ Detection tuning (manage)|
 |View-only Recipients|Role|Security operations \ Raw data (email & collaboration) \ Email & collaboration metadata (read)|
+|Security Reader|Role group|Authorization and settings \ Security settings \ Core security settings (read)|
+|View-Only Configuration|Role|Authorization and settings \ Security settings \ Core security settings (read)|
+|Security Operator|Role group|Authorization and settings \ Security settings \ Detection tuning (manage)|
 
 <a name='microsoft-defender-for-identity'></a>
 
@@ -143,7 +143,7 @@ Use the following table to learn how your existing permissions for Microsoft Def
 >
 > - Virtually all app governance experiences are controlled by Microsoft Entra ID roles **only**. The only exception is the [OAuthAppInfo table in advanced hunting](advanced-hunting-oauthappinfo-table.md). Unified RBAC permissions in Defender for Cloud Apps grant access to the app governance data in this specific table.
 >
-> - In the [unified alerts and incidents experiences in Defender XDR](investigate-alerts.md), access to app governance data is controlled by Microsoft Entra ID **only**.
+> - In the [unified alerts and incidents experiences in Defender](investigate-alerts.md), access to app governance data is controlled by Microsoft Entra ID **only**.
 >
 >   For more information about permissions in app governance, see [App governance roles](/defender-cloud-apps/app-governance-get-started#roles).
 >
@@ -178,23 +178,25 @@ The following table lists the available uRBAC roles and their permissions.
 > [!NOTE]
 > Roles can be combined for broader access, but always apply least-privilege principles. Some capabilities might require more permissions or feature enablement.
 
-<a name='microsoft-sentinel-preview'></a>
+<a name='microsoft-sentinel'></a>
 
-## Microsoft Sentinel (Preview)
+## Microsoft Sentinel
 
 Use the following table to learn how your existing permissions for Microsoft Sentinel map to the new Microsoft Defender unified RBAC permissions:
 
-|Sentinel permission|Defender unified RBAC permission|
-|---|-----|
-|Sentinel Reader|Security operations \ Security data \ Security data basic (read)|
-|Sentinel Responder|Security operations \ Security data \ Security data basic (read) </br>Security operations \ Security data \ Alerts (manage) </br>Security operations \ Security data \ Response (manage)|
-|Sentinel Contributor|Security operations \ Security data \ Security data basic (read) </br>Security operations \ Security data \ Alerts (manage)  </br>Security operations \ Security data \ Response (manage) </br>Authorization and settings \ Detection tuning (manage)|
+|Sentinel role|URBAC role|Defender unified RBAC permission|
+|---|---|-----|
+|Sentinel Reader|Defender Unified RBAC Reader|Security operations \ Security data \ Security data basic (read)|
+|Sentinel Responder|Defender Unified RBAC Responder|Security operations \ Security data \ Security data basic (read) </br>Security operations \ Security data \ Alerts (manage) </br>Security operations \ Security data \ Response (manage)|
+|Sentinel Contributor|Defender Unified RBAC Contributor and Responder|Security operations \ Security data \ Security data basic (read) </br>Security operations \ Security data \ Alerts (manage)  </br>Security operations \ Security data \ Response (manage) </br>Authorization and settings \ Detection tuning (manage)|
+|N/A|Defender Unified RBAC Scoped Reader|Security operations \ Security data \ Security data basic (read) <br/>Applies only to role assignments with Sentinel Scope applied|
+|N/A|Defender Unified RBAC Data Manager|Data operations \ Data management \ Data (manage)|
 
 The following roles aren't available in unified RBAC and must be managed in the Azure portal: Microsoft Sentinel Playbook Operator, Automation Contributor, and Workbook Contributor.
 
 ### Sample permission mappings of Microsoft Sentinel built-in roles to Microsoft Defender unified RBAC roles
 
-These are examples of the permissions that can be assigned to the users based on their roles in Microsoft Sentinel. As unified RBAC provides the option to have more granular permissions on Microsoft Defender XDR, you can utilize that granularity to separate certain Microsoft Defender XDR permissions on Tier level as well. For example, you can apply Live Response Basic to Tier 1, but Live Response Advanced permission to Tier 2.
+These are examples of the permissions that can be assigned to the users based on their roles in Microsoft Sentinel XDR. As unified RBAC provides the option to have more granular permissions on Microsoft Defender XDR, you can utilize that granularity to separate certain Microsoft Defender permissions on Tier level as well. For example, you can apply Live Response Basic to Tier 1, but Live Response Advanced permission to Tier 2.
 
 If some users need only read access to Microsoft Sentinel SIEM raw data, they can also utilize Log Analytics [Granular RBAC](/azure/azure-monitor/logs/granular-rbac-log-analytics) functionality to scope access to only specific data saved in Log Analytics workspace. Please note that Granular RBAC will not scope access to Microsoft Sentinel incidents, alerts, watchlists, UEBA, TI, or any other Microsoft Sentinel SIEM features.
 
@@ -202,14 +204,14 @@ If some users need only read access to Microsoft Sentinel SIEM raw data, they ca
 |---|---|---|---|
 | Security Analysts | Microsoft Sentinel Responder | Microsoft Sentinel's Resource Group | View data, incidents, workbooks, and other Microsoft Sentinel resources. Manage incidents (assign, dismiss, etc.) |
 | Security Analysts | Microsoft Sentinel Playbook Operator | Microsoft Sentinel's Resource Group (or the Resource Group where Playbooks are stored) | List, view and run playbooks. To attach playbooks to analytics rules, Microsoft Sentinel Contributor role is needed |
-| Security Analysts | Security Operator Unified RBAC role | Microsoft Defender portal | View, investigate, and respond to security threats alerts<br />Manage Microsoft Defender XDR security settings<br />List of URBAC permissions equivalent for Security Operator Entra ID role are listed on this link:<br />/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access |
+| Security Analysts | Security Operator Unified RBAC role | Microsoft Defender portal | View, investigate, and respond to security threats alerts<br />Manage Microsoft Defender security settings<br />List of URBAC permissions equivalent for Security Operator Entra ID role are listed on this link:<br />/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access |
 | Security Engineer | Microsoft Sentinel Contributor | Microsoft Sentinel's Resource Group | View data, incidents, workbooks, and other Microsoft Sentinel resources. Manage incidents (assign, dismiss, etc.). Create and edit workbooks, analytics rules, and other Microsoft Sentinel resources. |
 | Security Engineer | Logic Apps Contributor | Microsoft Sentinel's Resource Group (or the Resource Group where Playbooks are stored) | Run and modify playbooks.<br />Attach playbooks to analytics rules and automation rules. |
 | Security Engineer | Monitoring Contributor | Subscription and/or Resource group and/or An existing data collection rule | Create or edit data collection rules |
 | Security Engineer | Log Analytics Contributor | Microsoft Sentinel's Resource Group | Use the Search feature |
 | Security Engineer | Virtual Machine Contributor Azure Connected Machine Resource Administrator | Virtual machines, virtual machine scale sets Arc-enabled servers | Deploy DCR associations (i.e. to assign rules to the machine) |
 | Security Engineer | Template Spec Contributor | Microsoft Sentinel's Resource Group | Deploy v2.0 solutions from Content hub. |
-| Security Engineer | Security Administrator Unified RBAC role | Microsoft Defender portal | Monitor security-related policies across Microsoft Defender XDR services<br />Manage security threats and alerts<br />View reports<br /><br />List of URBAC permissions equivalent for Security Administrator Entra ID role are listed on this link:<br />/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access |
+| Security Engineer | Security Administrator Unified RBAC role | Microsoft Defender portal | Monitor security-related policies across Microsoft Defender services<br />Manage security threats and alerts<br />View reports<br /><br />List of URBAC permissions equivalent for Security Administrator Entra ID role are listed on this link:<br />/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access |
 | Security Architect | Microsoft Sentinel Contributor | Microsoft Sentinel's Resource Group | View data, incidents, workbooks, and other Microsoft Sentinel resources. Manage incidents (assign, dismiss, etc.). Create and edit workbooks, analytics rules, and other Microsoft Sentinel resources. |
 | Security Architect | User Access Administrator | Microsoft Sentinel's Resource Group | This is privileged role! This permission is needed to onboard Microsoft Sentinel SIEM to Microsoft Defender portal. |
 | Security Architect | Security Administrator | Entara ID Tenant level | This is a privileged role! Users with this role have permissions to manage security-related features in the Microsoft 365 Defender portal, Microsoft Entra ID Protection, Microsoft Entra Authentication, Azure Information Protection, and Microsoft Purview compliance portal.<br /><br />This permission is needed to onboard Microsoft Sentinel SIEM to Microsoft Defender portal, offboard the workspace, or change primary/secondary workspace. |

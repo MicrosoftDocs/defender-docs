@@ -1,38 +1,36 @@
-﻿---
+---
 title: Review alerts in Microsoft Defender for Endpoint
 description: Review alert information, including a visualized alert story and details for each step of the chain.
 ms.service: defender-endpoint
-f1.keywords: 
-  - NOCSH
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
   - mde-edr
 ms.topic: how-to
-ms.date: 5/1/2020
+ms.date: 06/16/2026
 ms.subservice: edr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
 
+ai-usage: ai-assisted
 ---
 # Review alerts in Microsoft Defender for Endpoint
 
 
 The alert page in Microsoft Defender for Endpoint provides full context to the alert, by combining attack signals and alerts related to the selected alert, to construct a detailed alert story.
 
-Quickly triage, investigate, and take effective action on alerts that affect your organization. Understand why they were triggered, and their impact from one location. Learn more in this overview.
+Quickly triage, investigate, and take effective action on alerts that affect your organization. Understand why the alerts were triggered, and their impact from one location. Learn more in this overview.
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=8a9c08a6-558c-47a8-a336-d748acbdaa80]
 
 ## Getting started with an alert
 
-Selecting an alert's name in Defender for Endpoint will land you on its alert page. On the alert page, all the information will be shown in context of the selected alert. Each alert page consists of 4 sections:
+Selecting an alert's name in Defender for Endpoint will land you on the alert's page. On the alert page, all the information will be shown in context of the selected alert. Each alert page consists of 4 sections:
 
 1. **The alert title** shows the alert's name and is there to remind you which alert started your current investigation regardless of what you have selected on the page.
 1. [**Affected assets**](#review-affected-assets) lists cards of devices and users affected by this alert that are clickable for further information and actions.
@@ -64,17 +62,18 @@ Other information available in the details pane when the alert opens includes MI
 
 ## Review affected assets
 
-Selecting a device or a user card in the affected assets sections will switch to the details of the device or user in the details pane.
+Selecting a device or a user card in the Affected assets section will switch to the details of the device or user in the details pane.
 
 - **For devices**, the details pane will display information about the device itself, like Domain, Operating System, and IP. Active alerts and the logged on users on that device are also available. You can take immediate action by isolating the device, restricting app execution, or running an antivirus scan. Alternatively, you could collect an investigation package, initiate an automated investigation, or go to the device page to investigate from the device's point of view.
 
    :::image type="content" source="media/device-page-details.png" alt-text="The details pane when a device is selected" lightbox="media/device-page-details.png":::
 
-- **For users**, the details pane will display detailed user information, such as the user's SAM name and SID, as well as logon types performed by this user and any alerts and incidents related to it. You can select *Open user page* to continue the investigation from that user's point of view.
+- **For users**, the details pane will display detailed user information, such as the user's SAM name and SID, as well as logon types performed by this user and any alerts and incidents related to that user. You can select *Open user page* to continue the investigation from that user's point of view.
 
    :::image type="content" source="media/user-page-details.png" alt-text="The details pane when a  user is selected" lightbox="media/user-page-details.png":::
 
-## Related topics
+<a name="related-topics"></a>
+## Related content
 
 - [View and organize the incidents queue](view-incidents-queue.md)
 - [Investigate incidents](investigate-incidents.md)

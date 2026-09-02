@@ -11,7 +11,6 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Individuals
 ms.subservice: ngp
-search.appverid: met150
 ms.localizationpriority: medium
 ms.custom:
 - partner-contribution
@@ -100,7 +99,7 @@ Uninstall-WindowsFeature Windows-Defender-Gui
   - [How to create and deploy antimalware policies for Endpoint Protection in Configuration Manager](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies)
 - [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](use-group-policy-microsoft-defender-antivirus.md)
 - [Use PowerShell cmdlets to configure and manage Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md)
-- [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md)
+- [Exclusions overview](defender-endpoint-exclusions-overview.md)
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 - [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md)
 - [Run the client analyzer on Windows](run-analyzer-windows.md)

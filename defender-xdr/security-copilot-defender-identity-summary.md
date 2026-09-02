@@ -2,21 +2,15 @@
 title: Summarize identity information with Microsoft Copilot in Microsoft Defender
 description: Summarize an identity information with Microsoft Copilot in Microsoft Defender to investigate identities.
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
   - security-copilot
   - magic-ai-copilot
 ms.topic: concept-article
-search.appverid:
-  - MOE150
-  - MET150
 ms.date: 10/14/2024
 ms.update-cycle: 180-days
 appliesto:

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS
 description: Learn how to set up offline security intelligence updates in Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
@@ -7,18 +7,18 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: sihamilt
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-macos
 ms.topic: how-to
-search.appverid: met150
-ms.date: 12/14/2025
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 # Configure offline security intelligence updates for Microsoft Defender for Endpoint on macOS
 
@@ -30,6 +30,8 @@ This document describes the Offline Security Intelligence Update feature of Micr
 This feature makes it possible for an organization to use a local hosting server (referred to as a *mirror server* in this document) to update the security intelligence (referred to in this document as *definitions* or *signatures*) on macOS endpoints that have limited or no exposure to the internet.
 
 A mirror server is any server in the customer's environment that can connect to the Microsoft cloud to download the signatures. Other macOS endpoints pull the signatures from the mirror server at a predefined interval.
+
+Before you begin, review the [Prerequisites](#prerequisites) for both the mirror server and the macOS endpoints.
 
 ## Key benefits
 
@@ -59,7 +61,7 @@ Signatures pulled to the macOS endpoints from the local server are first verifie
 
 To trigger and configure the update process, update the managed config json file on the macOS endpoints.
 
-The status of the update can be seen on the mdatp CLI.
+The status of the offline security intelligence update can be seen on the mdatp CLI.
 
 The process flow for downloading security intelligence updates to the mirror server is illustrated in the following diagram.
 
@@ -113,7 +115,7 @@ While management and ownership of the mirror server lies solely with the custome
 - [`python_http_server.sh`](#python3): Uses Python 3's built-in HTTP server module to serve files from a specified directory.
 - [`caddy_http_server.sh`](#caddy): Installs and configures the Caddy web server to serve files from a specified directory.
 
-To check that the service is set up correctly after you've set up the server, navigate to "https://localhost:8080".
+To check that the HTTP file server is set up correctly, navigate to "https://localhost:8080".
 
 For production or advanced use cases, refer to the official documentation for each server:
 
@@ -267,7 +269,7 @@ The settings.json file consists of a few variables that the user can configure t
 
 ## Execute the offline security intelligence downloader script
 
-To manually execute the downloader script, configure the parameters in the settings.json file as per the description in the previous section, and use one of the following commands based on the OS of the mirror server:
+To manually execute the downloader script, configure the parameters in the settings.json file (such as `downloadFolder`, `downloadMacUpdates`, and `backupPreviousUpdates`) using the field descriptions in the [settings.json field table](#get-the-offline-security-intelligence-downloader-script), and use one of the following commands based on the OS of the mirror server:
 
 Bash:
 ```bash
@@ -294,9 +296,12 @@ For example, if the script is executed with `downloadFolder=/tmp/wdav-update`, a
 
 We can also use the absolute path of directory (local/remote mount point) like /tmp/wdav-update/mac/production.
 
-Once the mirror server is set up, we need to propagate this URL to the Mac endpoints as the `offlineDefinitionUpdateUrl` in the Managed Configuration as described in the next section.
+Once the mirror server is set up, propagate this URL to the Mac endpoints by setting it as the `offlineDefinitionUpdateUrl` value in the managed configuration file (mdatp_managed.json) as described in [Configure the endpoints](#configure-the-endpoints).
 
 ## Configure the endpoints
+
+> [!IMPORTANT]
+> Defender for Endpoint must already be installed on the macOS endpoint, and you need root or sudo permissions to write to `/etc/opt/microsoft/mdatp/managed/`.
 
 Use the following sample mdatp_managed.json file and update the parameters as per the configuration, then copy the file to the location /etc/opt/microsoft/mdatp/managed/mdatp_managed.json.
 

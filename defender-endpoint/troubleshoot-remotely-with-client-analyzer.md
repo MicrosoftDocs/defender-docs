@@ -5,13 +5,11 @@ ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - mde-edr
 ms.topic: troubleshooting
 ms.subservice: edr
-search.appverid: met150
 ms.date: 01/13/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 2

@@ -1,9 +1,11 @@
 ---
 title: Add custom apps to cloud discovery 
 description: This topic provides information about how to add custom apps to cloud discovery in Defender for Cloud Apps to monitor Shadow IT.
-ms.date: 01/29/2023
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: Mravela
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 # Add custom apps to cloud discovery
 
@@ -17,17 +19,19 @@ By adding a new custom cloud app, Defender for Cloud Apps can match uploaded fir
 
 ## Add a new custom cloud app
 
+To add a new custom cloud app, perform the following steps:
+
 1. In the Microsoft Defender Portal, under **Cloud Apps**, select **Cloud Discovery**. You should see the cloud discovery dashboard.
 
-    ![cloud discovery dashboard menu.](media/cloud-discovery-dashboard-menu.png)
+    ![Screenshot of the Cloud Discovery dashboard menu in the Microsoft Defender Portal.](media/cloud-discovery-dashboard-menu.png)
 
 1. In the top right corner, select the **Action** menu and then select **Add new custom app**.
 
-    ![add custom app menu.](media/add-custom-app-menu.png)
+    ![Screenshot of the Action menu with the Add new custom app option selected.](media/add-custom-app-menu.png)
 
 1. Fill in the fields to define the new app record that will be listed in the cloud app catalog and in cloud discovery after it's discovered in your firewall logs.
 
-    ![custom app.](media/add-custom-app.png)
+    ![Screenshot of the Add custom app page showing fields for defining a new custom app record.](media/add-custom-app.png)
 
 1. Under **Domains**, fill in the unique domains that are used when accessing the custom app. These domains are used to match traffic log messages to this app. If the data source you're using doesn't have app URL information, make sure you fill in the **IPv4** and **IPv6** address fields.
 1. Add the **Hosting platform** and **Azure Subscription ID**. Optionally, specify the app's **Business unit**.
@@ -36,7 +40,7 @@ By adding a new custom cloud app, Defender for Cloud Apps can match uploaded fir
 
 After the app is created, it's available for you in the cloud app catalog.
 
-At any time, you can select the three dots at the end of the row to edit or delete a custom app.
+At any time, in the cloud app catalog, you can select the three dots at the end of a custom app's row to edit or delete it.
 
 >[!NOTE]
 > Custom apps are automatically tagged with the **Custom app** tag after you add them.

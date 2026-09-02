@@ -1,20 +1,18 @@
 ---
 title: Reports in Microsoft Defender for Business
 description: Get an overview of security reports in Defender for Business. Reports show detected threats, alerts, vulnerabilities, and device status.
-search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.date: 09/11/2025
 ms.reviewer: efratka, nehabha
-f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security
 - tier1
+ms.custom: sfi-image-nochange
 ---
 
 # Reports in Microsoft Defender for Business
@@ -140,7 +138,7 @@ The attack surface reduction rules report has three tabs:
 - **Configuration**: Filter on standard protection rules or other attack surface reduction rules.
 - **Add exclusions**: Define exclusions, if needed.
 
-To learn more, see [Attack surface reduction capabilities in Microsoft Defender for Business](mdb-asr.md).
+To learn more, see [Attack surface reduction (ASR) rules report in the Microsoft Defender portal](/defender-endpoint/attack-surface-reduction-rules-report).
 
 To access this report, in the navigation pane, choose **Reports** \> **Endpoints** \> **Attack surface reduction rules**.
 

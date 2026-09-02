@@ -6,15 +6,13 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
 ms.topic: article
 ms.subservice: linux
-search.appverid: met150
-ms.date: 03/12/2026
+ms.date: 06/12/2026
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
@@ -56,9 +54,7 @@ Linux server endpoints should have systemd (system manager) installed.
 
 To use [device isolation functionality](./respond-machine-alerts.md#isolate-devices-from-the-network), the following must be enabled:
 
-- `iptables`
-- `ip6tables`
-- Linux kernel with `CONFIG_NETFILTER`, `CONFIG_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER` for kernel version lower than 5.x and `CONFIG_NETFILTER_XT_MATCH_OWNER` from 5.x kernel.
+- `iptables` and `ip6tables`, or `iptables-nft` and `ip6tables-nft`
 
 ## Network requirements
 
@@ -103,21 +99,33 @@ The following Linux server distributions are supported:
 | Ubuntu LTS | 16.04, 18.04, 20.04, 22.04,24.04 | 20.04, 22.04, 24.04 |
 | Ubuntu Pro | 22.04, 24.04 | 22.04, 24.04 |
 | Debian | 9–13 | 11, 12, 13 |
-| SUSE Linux Enterprise Server | 12.x, 15.x | 15 (SP5, SP6) |
-| Oracle Linux | 7.2+, 8.x, 9.x | 8.x, 9.x |
-| Amazon Linux | 2, 2023 | 2, 2023 |
-| Fedora | 33–42 | - |
-| Rocky Linux | 8.7+, 9.2+ | - |
-| Alma Linux | 8.4+, 9.2+ | - |
-| Mariner | 2 | - |
+| SUSE Linux Enterprise Server | 12.x, 15.x, 16.x | 15 (SP5, SP6), 16.x |
+| Oracle Linux | 7.2+, 8.x, 9.x, 10.x | 8.x, 9.x, 10.x |
+| Amazon Linux | 2, 2023 | 2 (Support retiring 31 October 2026. See notice below.)<br>2023 |
+| Fedora | 33–43 | 40-43 |
+| Rocky Linux | 8.7+, 9.2+, 10.x | 8.7+, 9.2+, 10.x |
+| Alma Linux | 8.4+, 9.2+, 10.x | 8.4+, 9.2+, 10.x |
+| Mariner | 2 | 2 |
+
+> [!IMPORTANT]
+> **Support for Microsoft Defender for Endpoint on Amazon Linux 2 (AL2) running on ARM64 architecture will be deprecated on 31 October 2026**.
+>
+> The last supported Defender version for AL2 (ARM64) is 101.25122.0004 (expiry 31 October 2026). **After that date, official support for AL2 (ARM64) will end**. Customers are advised to migrate to a supported Linux distribution before this date to ensure continued protection and support.
+>
+> This change applies only to ARM64-based AL2 machines. **AMD64/x86_64 architectures are not impacted**.
 
 > [!NOTE]
-> Distributions and versions that aren't explicitly listed above, and custom operating systems, are unsupported (even if they're derived from the officially supported distributions).
+> Distributions and versions that aren't explicitly listed above are unsupported
 > Microsoft Defender for Endpoint is kernel-version agnostic for all other supported distributions and versions. The minimal requirement for the kernel version is `3.10.0-327` or later.
+> 
+> Microsoft Defender for Endpoint on Linux **can be installed and may function** on customized operating systems that meet minimal kernel requirements and are derived from known, standard, vendor‑provided Linux distributions that Microsoft supports. Customers are free to onboard and run Defender for Endpoint on such environments; Microsoft doesn't block onboarding or execution.
+> However, these customized environments aren't part of Microsoft's validated or maintained support baseline. As a result, they're treated as custom OS configurations from a support perspective.
+> Customers are expected to validate Defender for Endpoint within these custom environments and, if needed, reproduce issues on a supported, standard (unmodified) Linux distribution. If an issue can't be reproduced on a supported standard base distribution, Microsoft might not be able to proceed with further investigation or remediation.
+> For full support coverage and a predictable support experience, customers are recommended to run Defender for Endpoint on a supported, vendor-provided Linux distribution as outlined in the official prerequisites.
 
 > [!WARNING]
-> Running Defender for Endpoint on Linux alongside other fanotify-based security solutions is not supported and may lead to unpredictable behavior, including system hangs.
-> If any applications use fanotify in blocking mode, they will appear in the conflicting_applications field of the mdatp health command output.
+> Running Defender for Endpoint on Linux alongside other Fanotify-based security solutions isn't supported and may lead to unpredictable behavior, including system hangs.
+> If any applications use Fanotify in blocking mode, they'll appear in the conflicting_applications field of the mdatp health command output.
 > You can still safely take advantage of Defender for Endpoint on Linux by setting antivirus enforcement level to passive. See [Configure security settings in Microsoft Defender for Endpoint on Linux](linux-preferences.md).
 > **EXCEPTION:** The Linux `FAPolicyD` feature, which also uses Fanotify in blocking mode, is supported with Defender for Endpoint in active mode on RHEL and Fedora platforms, provided that mdatp health reports a healthy status. This exception is based on validated compatibility specific to these distributions.
 
@@ -125,12 +133,12 @@ The following Linux server distributions are supported:
 
 |Real-time protection and quick/full scans|Custom scans|
 |---|---|
-|`btrfs`|All filesystems that are supported for real-time protection and quick/full scans are also supported for custom scans. In addtion, the filesystems listed below are also supported for custom scans.|
+|`btrfs`|All filesystems that are supported for real-time protection and quick/full scans are also supported for custom scans. In addition, the filesystems listed below are also supported for custom scans.|
 |`ecryptfs`|`Efs`|
 |`ext2`|`S3fs`|
 |`ext3`|`Blobfuse`|
-|`ext4`|`Lustr`|
-|`fuse`|`glustrefs`|
+|`ext4`|`Lustre`|
+|`fuse`|`glusterfs`|
 |`fuseblk`|`Afs`|
 |`jfs`|`sshfs`|
 |`nfs` (v3)|`cifs`|
@@ -170,7 +178,7 @@ It's recommended to use Deployment Tool based deployment, as it simplifies the o
 - [Guidance for Defender for Endpoint on Linux Server with SAP](mde-linux-deployment-on-sap.md)
 
 > [!IMPORTANT]
-> On Linux, Microsoft Defender for Endpoint creates an mdatp user with random UID and GID values. If you want to control these values, create an mdatp user before installation using the `/usr/sbin/nologin` shell option. Here's an example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
+> On Linux, Microsoft Defender for Endpoint creates a mdatp user with random UID and GID values. If you want to control these values, create a mdatp user before installation using the `/usr/sbin/nologin` shell option. Here's an example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
 
 If you experience any installation issues, self-troubleshooting resources are available. See the links in the [Related content section](#related-content).
 

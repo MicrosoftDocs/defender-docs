@@ -1,17 +1,15 @@
-﻿---
+---
 title: Troubleshoot onboarding issues related to Security Management for Microsoft Defender for Endpoint
 description: Troubleshoot issues that might arise during the onboarding of devices using Security Management for Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: troubleshooting
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 06/12/2024
 appliesto:
   - Microsoft Defender for Endpoint
@@ -61,7 +59,7 @@ The following table lists errors and directions on what to try/check in order to
 |`15`|Tenant mismatch|The device was successfully onboarded to Microsoft Defender for Endpoint. However, there was an error in the security configuration management flow because your Microsoft Defender for Endpoint tenant ID doesn't match your Microsoft Entra tenant ID. Make sure that the Microsoft Entra tenant ID from your Defender for Endpoint tenant matches the tenant ID in the SCP entry of your domain. For more details, [Troubleshoot onboarding issues related to Security Management for Microsoft Defender for Endpoint](troubleshoot-security-config-mgt.md).|
 |`16`,`17`|Hybrid error - Service Connection Point|The device was successfully onboarded to Microsoft Defender for Endpoint. However, Service Connection Point (SCP) record isn't configured correctly and the device couldn't be joined to Microsoft Entra ID. This could be due to the SCP being configured to join Enterprise DRS. Make sure the SCP record points to Microsoft Entra ID and SCP is configured following best practices. For more information, see [Configure a service connection point](/azure/active-directory/devices/hybrid-azuread-join-manual#configure-a-service-connection-point).|
 |`18`|Certificate error|The device was successfully onboarded to Microsoft Defender for Endpoint. However, there was an error in the security configuration management flow due to a device certificate error. The device certificate belongs to a different tenant. Verify that best practices are followed when creating [trusted certificate profiles](/intune/intune-service/protect/certificates-trusted-root#create-trusted-certificate-profiles).|
-|`36` , `37`| Microsoft Entra Connect misconfiguration |The device was successfully onboarded to Microsoft Defender for Endpoint. However, there was an error in the security configuration management flow due to a misconfiguration in Microsoft Entra Connect. To identify what is preventing the device from registering to Microsoft Entra ID, consider running the [Device Registration Troubleshooter Tool](/samples/azure-samples/dsregtool/dsregtool). For Windows Server 2012 R2, run the  [dedicated troubleshooting instructions](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-legacy).  |
+|`36` , `37`| Microsoft Entra Connect misconfiguration |The device was successfully onboarded to Microsoft Defender for Endpoint. However, there was an error in the security configuration management flow due to a misconfiguration in Microsoft Entra Connect. To identify what is preventing the device from registering to Microsoft Entra ID, consider running the [Device Registration Troubleshooter Tool](https://github.com/Azure-Samples/DSRegTool). For Windows Server 2012 R2, run the  [dedicated troubleshooting instructions](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-legacy).  |
 |`38`,`41`|DNS error|The device was successfully onboarded to Microsoft Defender for Endpoint. However, there was an error in the security configuration management flow due to a DNS error. Check the internet connection and/or DNS settings on the device. The invalid DNS settings might be on the workstation's side. Active Directory requires you to use domain DNS to work properly (and not the router's address). For more information, see [Troubleshoot onboarding issues related to Security Management for Microsoft Defender for Endpoint](troubleshoot-security-config-mgt.md).|
 |`40`|Clock sync issue|The device was successfully onboarded to Microsoft Defender for Endpoint. However, there was an error in the security configuration management flow. Verify that the clock is set correctly and is synced on the device where the error occurs.|
 |`43`|MDE and ConfigMgr|The device is managed using Configuration Manager and Microsoft Defender for Endpoint. Controlling policies through both channels may cause conflicts and undesired results. To avoid this, endpoint security policies should be isolated to a single control plane. |

@@ -1,16 +1,14 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint reports
 description: Access the various reports for devices, protection features, and more in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 ms.topic: article
-search.appverid: met150
 ms.date: 2/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -106,7 +104,7 @@ The following reports provide in-depth information about events and actions rela
   - [Sensor health & OS report](device-health-sensor-health-os.md)
 - [Host firewall reporting](host-firewall-reporting.md)
 - [Web protection monitoring report](web-protection-monitoring.md)
-- [Attack surface reduction rules report](attack-surface-reduction-rules-report.md)
+- [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md)
 - [Device control report](device-control-report.md)
 
 ## Create custom reports using Power BI

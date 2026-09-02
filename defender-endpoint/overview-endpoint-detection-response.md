@@ -6,14 +6,12 @@ ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-edr
 ms.topic: concept-article
 ms.subservice: edr
-search.appverid: met150
 ms.date: 03/26/2025
 ---
 
@@ -42,6 +40,10 @@ When a threat is detected, alerts are created in the system for an analyst to in
 Inspired by the "assume breach" mindset, Defender for Endpoint continuously collects behavioral cyber telemetry. This includes process information, network activities, deep optics into the kernel and memory manager, user login activities, registry and file system changes, and others. The information is stored for six months, enabling an analyst to travel back in time to the start of an attack. The analyst can then pivot in various views and approach an investigation through multiple vectors.
 
 The response capabilities give you the power to promptly remediate threats by acting on the affected entities.
+
+## Automatic attack disruption
+
+Defender for Endpoint signals contribute to [automatic attack disruption](/defender-xdr/automatic-attack-disruption) in Microsoft Defender XDR. Attack disruption uses signal correlation and AI to automatically contain active attacks in progress—such as ransomware, business email compromise, and adversary-in-the-middle attacks—limiting lateral movement and reducing overall impact. Automatic attack disruption works with other Defender XDR sources to contain compromised assets, including automatically disabling compromised user accounts and isolating affected devices.
 
 ## See also
 

@@ -1,18 +1,17 @@
 ---
 title: Stream Microsoft Defender XDR events to your Storage account
 description: Learn how to configure Microsoft Defender XDR to stream Advanced Hunting events to your Storage account.
-search.appverid: met150
 ms.service: defender-xdr
 ms.author: edbaynash
 author: EdB-MSFT
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
-ms.custom: admindeeplinkDEFENDER
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
 ms.topic: how-to
-ms.date: 06/21/2024
+ms.date: 06/16/2026
+ai-usage: ai-assisted
 ---
 
 # Stream Microsoft Defender XDR events to your storage account
@@ -29,16 +28,18 @@ ms.date: 06/21/2024
 
 ## Before you begin
 
+Before you start, complete the following prerequisites:
+
 - Create a [Storage account](/azure/storage/common/storage-account-overview) in your tenant.
-- Sign in to your [Azure tenant](https://ms.portal.azure.com/), and go to **Subscriptions** > **Your subscription** > **Resource Providers** > **Register to Microsoft.Insights**.
+- Sign in to the [Azure portal](https://ms.portal.azure.com/), and go to **Subscriptions** > **Your subscription** > **Resource Providers** > **Register to Microsoft.Insights**.
 
 ### Add contributor permissions
 
-Once the storage account is created, you need to define the user who is signing in as a contributor.
+After the storage account is created, assign the Contributor role to the account that will configure the Streaming API settings.
 
 1. Go to **Storage Account** > **Access control (IAM)**, and then select **Add**.
 
-2. Verify the user is listed under **Role assignments**.
+2. Verify that the account you assigned the Contributor role to is listed under **Role assignments**.
 
 ## Enable raw data streaming
 
@@ -47,7 +48,7 @@ Once the storage account is created, you need to define the user who is signing 
 
 1. Go to the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) and sign in using an account with at least Security Administrator permissions.
 
-2. Go to **Settings** > **Microsoft Defender XDR** > **Streaming API**. To go directly to the **Streaming API** page, use [https://security.microsoft.com/settings/mtp_settings/raw_data_export](https://security.microsoft.com/settings/mtp_settings/raw_data_export).
+2. Go to **Settings** > **Microsoft Defender XDR** > **Streaming API**. To go directly to the **Streaming API** page, use the [Streaming API settings page](https://security.microsoft.com/settings/mtp_settings/raw_data_export).
 
 3. Select **Add**.
 
@@ -68,7 +69,8 @@ Once the storage account is created, you need to define the user who is signing 
 
    5. When you're finished, select **Submit**.
 
-## The schema of the events in the Storage account
+<a name="the-schema-of-the-events-in-the-storage-account"></a>
+## Event schema in the storage account
 
 - A blob container is created for each event type:
 
@@ -91,31 +93,33 @@ Once the storage account is created, you need to define the user who is signing 
 
 - For more information about the schema of Microsoft Defender XDR events, see [Advanced Hunting overview](advanced-hunting-overview.md).
 
-## Data types mapping
+<a name="data-types-mapping"></a>
+## Data type mappings
 
 To get the data types for events properties, follow these steps:
 
 1. Go to the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) and sign in.
 
-2. Go to **Hunting** \> **Advanced hunting**. To go directly to the **Advanced hunting** page, use [https://security.microsoft.com/advanced-hunting](https://security.microsoft.com/advanced-hunting).
+2. Go to **Hunting** \> **Advanced hunting**. To go directly to the **Advanced hunting** page, use the [Advanced hunting page](https://security.microsoft.com/advanced-hunting).
 
-2. On the **Query** tab, run the following query to get the data types mapping for each event:
+2. On the **Query** tab, run the following Kusto query template to retrieve the schema for a specific event type. Replace `{EventType}` with the Advanced Hunting table name you want to inspect (for example, `DeviceInfo`):
 
-   ```text
+   ```kusto
    {EventType}
    | getschema
    | project ColumnName, ColumnType
    ```
 
-   Here's an example for Device Info event:
+   The following example shows the column names and data types returned for a DeviceInfo event, so you can map event properties to their schema:
 
    :::image type="content" source="/defender-endpoint/media/machine-info-datatype-example.png" alt-text="An example device info query" lightbox="/defender-endpoint/media/machine-info-datatype-example.png":::
 
 ## Monitoring created resources
 
-You can monitor the resources created by the streaming API using **Azure Monitor**. For more information, see [Monitor destinations - Azure Monitor](/azure/azure-monitor/logs/logs-data-export?tabs=portal#monitor-destinations).
+You can monitor the Azure Storage export resources and related diagnostics by using **Azure Monitor**. For more information, see [Monitor destinations - Azure Monitor](/azure/azure-monitor/logs/logs-data-export?tabs=portal#monitor-destinations).
 
-## Related articles
+<a name="related-articles"></a>
+## Related content
 
 - [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
 - [Overview of Advanced Hunting](advanced-hunting-overview.md)

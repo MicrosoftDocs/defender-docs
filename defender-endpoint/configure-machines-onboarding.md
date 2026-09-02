@@ -1,22 +1,21 @@
-﻿---
+---
 title: Get devices onboarded to Microsoft Defender for Endpoint
 description: Track onboarding of Intune-managed devices to Microsoft Defender for Endpoint and increase onboarding rate.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 03/10/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange
 ---
 
 # Get devices onboarded to Microsoft Defender for Endpoint
@@ -58,4 +57,4 @@ To configure this connection and deploy onboarding policies, see <a href="/intun
 
 - [Ensure your devices are configured properly](configure-machines.md)
 - [Increase compliance to the Defender for Endpoint security baseline](configure-machines-security-baseline.md)
-- [Optimize ASR rule deployment and detections](configure-machines-asr.md)
+- [Monitor ASR rule activity](attack-surface-reduction-rules-monitor.md)

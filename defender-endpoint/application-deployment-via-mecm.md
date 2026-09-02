@@ -1,13 +1,11 @@
-﻿---
+---
 title: Migrating servers from Microsoft Monitoring Agent to the unified solution
 description: Learn how to migrate down-level servers from Microsoft Monitoring Agent to the new unified solution step-by-step from this article.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: onboard
 author: paulinbar
 ms.author: painbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier1
@@ -16,6 +14,7 @@ ms.date: 03/27/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange
 
 ---
 # Migrating servers from Microsoft Monitoring Agent to the unified solution

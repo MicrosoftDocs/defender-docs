@@ -1,9 +1,8 @@
-﻿---
+---
 title: Evaluate network protection
 description: See how network protection works by testing common scenarios that it protects against.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
 ms.topic: how-to
 author: limwainstein
 ms.author: lwainstein
@@ -13,19 +12,21 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-search.appverid: met150
-ms.date: 04/04/2025
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
 
+ai-usage: ai-assisted
 ---
 # Evaluate network protection
 
+## Overview
 
 [Network protection](network-protection.md) helps prevent employees from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the Internet.
 
-This article helps you evaluate network protection by enabling the feature and guiding you to a testing site. The sites in this evaluation article aren't malicious. They're specially created websites that pretend to be malicious. The site replicates the behavior that would happen if a user visited a malicious site or domain.
+Use the following steps to evaluate network protection by enabling the feature and visiting a testing site. The sites referenced in this evaluation aren't malicious. They're specially created websites that pretend to be malicious. Each test site replicates the behavior that would happen if a user visited a malicious site or domain.
 
 ## Enable network protection in audit mode
 
@@ -41,9 +42,11 @@ Enable network protection in audit mode to see which IP addresses and domains mi
 
 ### Visit a (fake) malicious domain
 
+To verify audit mode behavior, visit a simulated malicious site and confirm that the connection is allowed with a test message.
+
 1. Open Internet Explorer, Google Chrome, or any other browser of your choice.
 
-1. Go to [https://smartscreentestratings2.net](https://smartscreentestratings2.net).
+1. Go to the [SmartScreen test ratings site](https://smartscreentestratings2.net).
 
     The network connection is allowed and a test message displays.
     

@@ -8,7 +8,6 @@ ms.date: 02/03/2026
 ms.topic: how-to
 ms.subservice: reference
 ms.appliesTo: Microsoft Defender for Business and Microsoft Defender for Endpoint Plans 1 and 2
-search.appverid: met150
 ---
 
 # Create an app to access Microsoft Defender for Endpoint without a user

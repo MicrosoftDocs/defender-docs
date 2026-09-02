@@ -1,16 +1,13 @@
 ---
 title: Onboard devices to Microsoft Defender for Business
 description: See how to get devices onboarded to Defender for Business to protect your devices from day one.
-search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 09/24/2025
+ms.date: 04/26/2026
 ms.reviewer: efratka, nehabha, muktaagarwal
-f1.keywords: NOCSH
 ms.collection:
  - SMB
  - m365-security
@@ -105,20 +102,20 @@ You can onboard Windows clients and other devices in Intune by using the Intune 
 
 When you set up automatic enrollment, users add their work account to the device. In the background, the device registers and joins Microsoft Entra ID and is enrolled in Intune.
 
-1. Go to the Azure portal ([https://portal.azure.com/](https://portal.azure.com/)) and sign in.
+1. Go to the Microsoft Entra admin center ([https://entra.microsoft.com/](https://entra.microsoft.com/)) and sign in.
 
-2. Select **Microsoft Entra ID** \> **Mobility (MDM and MAM)** \> **Microsoft Intune**.
+2. Select **Entra ID** > **Mobility** > **Microsoft Intune**.
 
-3. Configure the **MDM User scope** and the **MAM user scope**.
+3. Configure the **MDM User scope** and the **Windows Information Protection (WIP) user scope**.
 
-   :::image type="content" source="media/mem-mam-scope-azure-ad.png" alt-text="Screenshot of setting MDM user scope and MAM user scope in Intune.":::
+   :::image type="content" source="media/mem-wip-scope-entra-admin.png" alt-text="Screenshot of setting MDM user scope and WIP user scope in Entra admin center.":::
 
    - For MDM User scope, we recommend that you select **All** so that all users can automatically enroll their Windows devices.
-   - In the MAM user scope section, we recommend the following default values for the URLs:
+   - In the WIP user scope section, we recommend the following default values for the URLs:
 
-       - **MDM Terms of use URL**
-       - **MDM Discovery URL**
-       - **MDM Compliance URL**
+       - **WIP terms of use URL**
+       - **WIP discovery URL**
+       - **WIP compliance URL**
 
 4. Select **Save**.
 
@@ -373,12 +370,13 @@ After the command runs, the Command Prompt window closes automatically. If succe
 > Make sure that you meet the following requirements before you onboard a Linux Server endpoint:
 >
 > - You have a Microsoft Defender for Business servers license. (For more information, see [How to get Microsoft Defender for Business servers](get-defender-business.md#how-to-get-microsoft-defender-for-business-servers).)
-> - You meet the [prerequisites for Microsoft Defender for Endpoint on Linux](/defender-endpoint/microsoft-defender-endpoint-linux#prerequisites).
+> - You meet the [prerequisites for Microsoft Defender for Endpoint on Linux](/defender-endpoint/mde-linux-prerequisites).
 
 ### Onboard Linux Server endpoints
 
 You can use the following methods to onboard an instance of Linux Server to Defender for Business:
 
+- **Defender deployment tool**: [Deploy Microsoft Defender for Endpoint on Linux with Defender deployment tool](/defender-endpoint/linux-install-with-defender-deployment-tool)
 - **Local script**: [Deploy Microsoft Defender for Endpoint on Linux manually](/defender-endpoint/linux-install-manually).
 - **Ansible**: [Deploy Microsoft Defender for Endpoint on Linux with Ansible](/defender-endpoint/linux-install-with-ansible).
 - **Chef**: [Deploy Defender for Endpoint on Linux with Chef](/defender-endpoint/linux-deploy-defender-for-endpoint-with-chef).

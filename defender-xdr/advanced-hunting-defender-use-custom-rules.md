@@ -1,15 +1,11 @@
 ---
 title: Use Microsoft Sentinel custom functions in advanced hunting in Microsoft Defender
-description: Using functions, saved queries, and custom rules in advanced hunting in the portal unifying Defender XDR and Sentinel data
-search.appverid: met150
+description: Learn how to use Microsoft Sentinel functions, saved queries, and custom rules in advanced hunting in the Microsoft Defender portal.
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - m365initiative-m365-defender
@@ -17,12 +13,14 @@ ms.collection:
   - usx-security
 ms.topic: how-to
 ms.custom:
+- msecd-doc-authoring-1014
 - cx-ti
 - cx-ah
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 12/16/2025
+ms.date: 06/16/2026
+ai-usage: ai-assisted
 ---
 
 # Use Microsoft Sentinel functions, saved queries, and custom rules 
@@ -33,7 +31,7 @@ This article explains how to use Microsoft Sentinel functions, saved queries, an
 
 To use a Microsoft Sentinel function, go to the **Functions** tab and scroll until you find the function that you want. Double-click the function name to insert the function in the query editor. 
 
-You can also select the vertical ellipses ( ![kebab icon](/defender/media/ah-kebab.png) ) to the right of the function and select **Insert to query** to insert the function into a query in the query editor. 
+You can also select the vertical ellipses ( ![Vertical ellipses or kebab menu icon for more options](/defender/media/ah-kebab.png) ) to the right of the function and select **Insert to query** to insert the function into a query in the query editor. 
 
 Other options include:
 - **View details** – Opens the function side pane containing its details.
@@ -46,7 +44,7 @@ For editable functions, more options are available when you select the vertical 
 ### Use adx() operator for Azure Data Explorer queries
 Use the `adx()` operator to query tables stored in Azure Data Explorer. For more information, see [What is Azure Data Explorer?](/azure/data-explorer/data-explorer-overview)
 
-Previously, this feature was only available in log analytics in Microsoft Sentinel. Now, users can use the operator in advanced hunting in the unified Microsoft Defender portal without needing to manually open a Microsoft Sentinel window. 
+Previously, the `adx()` operator was only available in log analytics in Microsoft Sentinel. Now, users can use the operator in advanced hunting in the unified Microsoft Defender portal without needing to manually open a Microsoft Sentinel window. 
 
 In the query editor, enter the query in the following format:
 
@@ -59,18 +57,16 @@ For example, to get the first 10 rows of data from the `StormEvents` table store
 :::image type="content" source="/defender-xdr/media/adx-sample.png" alt-text="Screenshot of adx operator in advanced hunting." lightbox="/defender-xdr/media/adx-sample.png":::
 
 > [!NOTE]
-> The `adx()` operator isn't supported for custom detections.
+> - The `adx()` operator isn't supported for custom detections.
+> - Cross-query between Defender and Microsoft Sentinel tables using `adx()` isn't supported in GCC environments.
 
 ### Use arg() operator for Azure Resource Graph queries
 
 Use the `arg()` operator to query across deployed Azure resources like subscriptions, virtual machines, CPU, storage, and the like.
 
-Previously, this feature was only available in the Logs feature in Microsoft Sentinel. In the Microsoft Defender portal, the `arg()` operator works to combine Azure Resource Graph (arg) queries with Microsoft Sentinel tables (that is, Defender XDR tables aren't supported). By using this operator, you can make the cross-service query in advanced hunting without manually opening a Microsoft Sentinel window.
+Previously, the `arg()` operator was only available in the Logs feature in Microsoft Sentinel. In the Microsoft Defender portal, the `arg()` operator works to combine Azure Resource Graph (arg) queries with Microsoft Sentinel tables (that is, Defender tables aren't supported). By using this operator, you can make the cross-service query in advanced hunting without manually opening a Microsoft Sentinel window.
 
 For more information, see [Query data in Azure Resource Graph by using arg()](/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy#query-data-in-azure-resource-graph-by-using-arg-preview).
-
->[!NOTE]
-> The `arg()` operator isn't supported for analytics rules.
 
 In the query editor, enter *arg("").* followed by the Azure Resource Graph table name. 
 
@@ -89,14 +85,40 @@ BehaviorAnalytics
 ) on $left.name == $right.SourceDevice
 ```
 
+>[!NOTE]
+> - The `arg()` operator isn't supported for analytics rules.
+> - The `arg()` operator only works with Microsoft Sentinel tables. If your query includes Defender tables that haven't been exported to Log analytics, it will fail. To use the `arg()` operator in a query that references Defender tables, ensure that those tables are exported to your Log analytics workspace and contain data.
+
+### Use workspace() operator for cross-workspace queries
+
+Use the `workspace()` operator to query data from a specific Log Analytics workspace in the same or a different resource group or subscription. This operator lets you include log data from other workspaces in your advanced hunting queries.
+
+For more information, see [Query across resources with Azure Monitor](/azure/azure-monitor/logs/cross-workspace-query).
+
+In the query editor, enter the query in the following format:
+
+```Kusto
+workspace('<Workspace ID or Azure Resource ID>').<Table Name>
+```
+
+For example, to retrieve the first 10 rows of the `SigninLogs` table from another workspace:
+
+```Kusto
+workspace('00000000-0000-0000-0000-000000000000').SigninLogs
+| take 10
+```
+
+> [!NOTE]
+> - The `workspace()` operator isn't supported for custom detections.
+> - The `workspace()` operator only works with Microsoft Sentinel tables. If your query includes Defender tables that haven't been exported to Log analytics, it will fail. To use the `workspace()` operator in a query that references Defender tables, ensure that those tables are exported to your Log analytics workspace and contain data.
+
 ### Create custom functions
 
 For more information about creating custom functions in the Defender portal, see [Custom functions in the advanced hunting schema](advanced-hunting-custom-functions.md).
 
-
 ## Use saved queries
 
-To use a saved query from Microsoft Sentinel, go to the **Queries** tab and scroll until you find the query that you want. Double-click the query name to load the query in the query editor. For more options, select the vertical ellipses ( ![kebab icon](/defender/media/ah-kebab.png) ) to the right of the query. From here, you can perform the following actions:
+To use a saved query from Microsoft Sentinel, go to the **Queries** tab and scroll until you find the query that you want. Double-click the query name to load the query in the query editor. For more options, select the vertical ellipses ( ![Vertical ellipses or kebab menu icon for more options](/defender/media/ah-kebab.png) ) to the right of the query. From here, you can perform the following actions:
 
 - **Run query** – Loads the query in the query editor and runs it automatically.
 - **Open in query editor** – Loads the query in the query editor.
@@ -115,10 +137,11 @@ For editable queries, more options are available:
 
 To help discover threats and anomalous behaviors in your environment, you can create customized detection rules. There are two kinds:
 - Analytics rules - to generate detections from rules that query data that is ingested through Microsoft Sentinel
-- Custom detection rules - to generate detections from rules that query data from Defender XDR or from both Microsoft Sentinel and Defender XDR
+- Custom detection rules - to generate detections from rules that query data from Defender or from both Microsoft Sentinel and Defender
 
 
-##### Analytics rules
+<a name="analytics-rules"></a>
+### Analytics rules
 
 For analytics rules that apply to data ingested through the connected Microsoft Sentinel workspace, select **Manage rules > Create analytics rule**.
 
@@ -127,17 +150,17 @@ For analytics rules that apply to data ingested through the connected Microsoft 
 The **Analytics rule wizard** appears. Fill up the required details as described in [Analytics rule wizard—General tab](/azure/sentinel/detect-threats-custom#analytics-rule-wizardgeneral-tab).
 
 
-##### Custom detection rules
-You can create custom detection rules that query data from both Microsoft Sentinel and Defender XDR tables. Select **Manage rules > Create custom detection**. Read [Create custom detection rules](custom-detection-rules.md) for more information. 
+<a name="custom-detection-rules"></a>
+### Custom detection rules
+You can create custom detection rules that query data from both Microsoft Sentinel and Defender tables. Select **Manage rules > Create custom detection**. Read [Create custom detection rules](custom-detection-rules.md) for more information. 
 
+In both custom detection and analytics rule creation, you can only query data ingested as analytics logs (that is, not as basic logs or auxiliary logs. See [log management plans](/azure/sentinel/log-plans#log-management-plans) to check the different tiers) otherwise custom detection or analytics rule creation won't proceed.
 
-In both custom detection and analytics rule creation, you can only query data ingested as analytics logs (that is, not as basic logs or auxiliary logs. See [log management plans](/azure/sentinel/log-plans#log-management-plans) to check the different tiers) otherwise the rule creation won't proceed.
-
-If your Defender XDR data is ingested into Microsoft Sentinel, you have the option to choose between **Create custom detection** and **Create analytics rule**.
+If your Defender data is ingested into Microsoft Sentinel, you have the option to choose between **Create custom detection** and **Create analytics rule**.
 
 
 > [!NOTE]
-> If a Defender XDR table isn't set up to stream to log analytics in Microsoft Sentinel but is recognized as a standard table in Microsoft Sentinel, an analytics rule can be created successfully but the rule won't run correctly since no data is available in Microsoft Sentinel. For these cases, use the custom detection rule wizard instead. 
+> If a Defender table isn't set up to stream to log analytics in Microsoft Sentinel but is recognized as a standard table in Microsoft Sentinel, an analytics rule can be created successfully but the rule won't run correctly since no data is available in Microsoft Sentinel. For these cases, use the custom detection rule wizard instead. 
 
 ## Manage custom analytics and detection rules
 

@@ -1,18 +1,16 @@
-﻿---
+---
 title: Offboard devices
 description: Onboard Windows devices, servers, non-Windows devices from the Microsoft Defender for Endpoint service
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: article
 ms.subservice: onboard
-search.appverid: met150
-ms.date: 10/20/2025
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -22,9 +20,7 @@ appliesto:
 
 # Offboard devices
 
-When you offboard a device from Defender for Endpoint, no new detections, vulnerability, or security data are sent to the Microsoft Defender portal. Seven days after offboarding a device, its status changes to [inactive](fix-unhealthy-sensors.md#inactive-devices). Devices that weren't active within the past 30 days are not factored into your organization's [exposure score](/defender-vulnerability-management/tvm-exposure-score).
-
-Past data, such as alerts, vulnerabilities, and the device timeline, for an offboarded device is displayed in the Microsoft Defender portal until the [configured retention period](data-storage-privacy.md#data-retention) expires. You also see the device profile (without data) in the device inventory for up to 180 days. To view data for active devices only, you can use filters, such as [sensor health state](machines-view-overview.md#use-filters-to-customize-the-device-inventory-views), [device tags](machine-tags.md), or [device groups](machine-groups.md).
+[!INCLUDE [off-board-overview](includes/off-board-overview.md)]
 
 ## Prerequisites
 
@@ -34,9 +30,8 @@ Past data, such as alerts, vulnerabilities, and the device timeline, for an offb
 - Windows Server 2012 R2 and later
 - Azure Stack HCI OS, version 23H2 and later
 - Mac devices
-- Linux servers
 
-## Offboard Windows client devices
+For information about offboarding and uninstalling Microsoft Defender for Endpoint on Linux, see [Offboard Microsoft Defender for Endpoint on Linux](linux-off-board-endpoints.md).
 
 In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, select **Settings** > **Offboard**, and then select an operating system to start the offboarding process.
 
@@ -67,11 +62,9 @@ In the following procedure, steps 1 and 2 are optional if you do not want to see
 
 1. Remove policies for [Tamper Protection](tamperprotection-macos.md). See [Set preferences on Mac: Tamper protection](mac-preferences.md#tamper-protection) or use manual configuration.
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, select **Settings** > **Endpoints** > **Device management** > **Offboarding**, and then select an operating system to start the offboarding process.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), navigate to, **System** > **Settings** > **Endpoints** > **Device management** > **Offboarding**. Select **macOS** in Step 1, then choose your preferred deployment method, and select **Download package** to download the offboarding package.
 
    Or, if you're using a non-Microsoft device management solution, disable integration with Defender for Endpoint.
-
-     :::image type="content" source="media/offboard-machines/remove-endpoint.png" alt-text="Screenshot that shows how to offboard endpoints in the Microsoft Defender portal. " lightbox="media/offboard-machines/remove-endpoint.png":::  
 
 1. Uninstall the Defender for Endpoint app on Mac devices.
 
@@ -80,3 +73,7 @@ In the following procedure, steps 1 and 2 are optional if you do not want to see
 ## Offboard Android or iOS devices
 
 To offboard an Android or iOS device, uninstall the Microsoft Defender app on the device.
+
+## Related content
+
+- [Offboard or uninstall Microsoft Defender for Endpoint on Linux](linux-off-board-endpoints.md)

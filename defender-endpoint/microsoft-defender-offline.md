@@ -1,12 +1,12 @@
-﻿---
+---
 title: Microsoft Defender Offline scan in Windows
 description: You can use Microsoft Defender Offline Scan straight from the Microsoft Defender Antivirus app. You can also manage how it's deployed in your network.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 09/18/2024
+ms.date: 06/16/2026
 author: limwainstein
 ms.author: lwainstein
-ms.custom: nextgen
+ms.custom: nextgen, msecd-doc-authoring-1014
 ms.reviewer: yongrhee
 ms.subservice: ngp
 ms.topic: how-to
@@ -14,13 +14,13 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
   - Microsoft Defender for Individuals
 
+ai-usage: ai-assisted
 ---
 # Run and review the results of a Microsoft Defender Offline scan
 
@@ -54,10 +54,7 @@ The following are the hardware requirements for Microsoft Defender Offline Scan 
 > - ARM Windows 10 
 > - Windows Server Stock Keeping Units (SKU's)
 
-For more information about Windows 10 and Windows 11 requirements, see the following articles: 
-
-- [Minimum hardware requirements](/windows-hardware/design/minimum/minimum-hardware-requirements-overview)
-- [Hardware component guidelines](/windows-hardware/design/component-guidelines/components)
+For more information about Windows 10 and Windows 11 requirements, see [Minimum hardware requirements](/windows-hardware/design/minimum/minimum-hardware-requirements-overview) and [Hardware component guidelines](/windows-hardware/design/component-guidelines/components).
 > [!IMPORTANT]
 > If BitLocker is enabled on the system drive, suspend BitLocker protection before running Microsoft Defender Offline. Otherwise, you may be prompted to enter the BitLocker recovery key when the system restarts into the offline environment. For instructions, see [Suspend BitLocker protection](/troubleshoot/windows-client/windows-security/suspend-bitlocker-protection-non-microsoft-updates). 
 
@@ -97,7 +94,7 @@ If Microsoft Defender Antivirus determines that you need to run Microsoft Defend
 
    The user is also notified within the Microsoft Defender Antivirus client. If you're using Intune to manage devices, you can see the notification in Intune.
 
-- You can manually force an offline scan that is built-in Windows 10, version 1607 or newer, and Windows 11. Or, you can scan through a bootable media for the older Windows OS'es as described [here](#use-the-windows-defender-security-app-to-run-an-offline-scan).
+- You can manually force an offline scan that is built-in Windows 10, version 1607 or newer, and Windows 11. Or, for older operating systems such as Windows 7 SP1 and Windows 8.1, you can create bootable media to run an offline scan (see [Windows 7 Service Pack 1 and Windows 8.1](#in-windows-7-service-pack-1-and-windows-81) later in this article).
 
 In Configuration Manager, you can identify the status of endpoints by navigating to **Monitoring > Overview > Security > Endpoint Protection Status > System Center Endpoint Protection Status**.
 
@@ -133,7 +130,7 @@ Starting with Windows 10, version 1607 or newer, and Windows 11, Microsoft Defen
 
 1. Select the radio button **Microsoft Defender Offline scan** and select **Scan now**.
 
-   The process starts from `C:\ProgramData\Microsoft\Windows Defender\Offline Scanner`.
+   The offline scan process starts from `C:\ProgramData\Microsoft\Windows Defender\Offline Scanner`.
 
 1. You get a prompt to save your work before continuing, similar to the following image:
    
@@ -179,9 +176,9 @@ The following WMI script snippet will immediately run a Microsoft Defender Offli
 wmic /namespace:\\root\Microsoft\Windows\Defender path MSFT_MpWDOScan call Start
 ```
 
-For more information, see [Windows Defender WMIv2 APIs](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal).
+For more information about Windows Defender WMI APIs, see [Windows Defender WMIv2 APIs](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal).
 
-**In Windows 7 Service Pack 1 and Windows 8.1:**
+#### In Windows 7 Service Pack 1 and Windows 8.1:
 
 1. Download Windows Defender Offline and install it to a CD, DVD, or USB flash drive using the following links:
      - [Download the 64-bit version (msstool64.exe)](https://go.microsoft.com/fwlink/?LinkID=234124)

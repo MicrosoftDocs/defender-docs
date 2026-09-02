@@ -1,12 +1,10 @@
-﻿---
+---
 title: Manage Microsoft Defender for Endpoint incidents
 description: Manage incidents by assigning it, updating its status, or setting its classification.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -17,6 +15,7 @@ ms.date: 06/05/2024
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange
 
 ---
 # Manage Microsoft Defender for Endpoint incidents

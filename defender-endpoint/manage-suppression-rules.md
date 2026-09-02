@@ -1,22 +1,22 @@
-﻿---
+---
 title: Manage Microsoft Defender for Endpoint suppression rules
 description: You might need to prevent alerts from appearing in the portal by using suppression rules. Learn how to manage your suppression rules in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
 ms.subservice: edr
-search.appverid: met150
-ms.date: 06/25/2024
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
 
+ai-usage: ai-assisted
 ---
 # Manage suppression rules
 
@@ -35,7 +35,7 @@ You can view a list of all the suppression rules and manage them in one place. Y
 
 1. Select a rule by clicking on the check-box beside the rule name.
 
-1. Click **Turn rule on**, **Edit rule**, or  **Delete rule**. When making changes to a rule, you can choose to release alerts that it has already suppressed, regardless whether or not these alerts match the new criteria. 
+1. Click **Turn rule on**, **Edit rule**, or  **Delete rule**. When making changes to a rule, you can choose to release alerts that the rule has already suppressed, regardless whether or not these alerts match the new criteria. 
 
 
 ## View details of a suppression rule
@@ -44,7 +44,8 @@ You can view a list of all the suppression rules and manage them in one place. Y
 
 1. Select a rule name. Details of the rule is displayed. You'll see the rule details such as  status, scope, action, number of matching alerts, created by, and date when the rule was created. You can also view associated alerts and the rule conditions.
 
-## Related topics
+<a name="related-topics"></a>
+## Related content
 
 - [Manage alerts](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#manage-alerts)
 

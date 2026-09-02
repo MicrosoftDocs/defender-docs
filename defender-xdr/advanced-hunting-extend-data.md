@@ -1,26 +1,24 @@
 ---
 title: Extend advanced hunting coverage with the right settings
 description: Check auditing settings on Windows devices and other settings to help ensure that you get the most comprehensive data in advanced hunting
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.custom:
+- msecd-doc-authoring-1014
 - cx-ti
 - cx-ah
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 03/28/2025
+ms.date: 06/16/2026
+ai-usage: ai-assisted
 ---
 
 # Extend advanced hunting coverage with the right settings
@@ -41,7 +39,7 @@ Turn on these advanced auditing settings to ensure you get data about activities
 | Service installation | Events captured with the `ActionType` value `ServiceInstalled`, indicating that a service has been created | [DeviceEvents](advanced-hunting-deviceevents-table.md) | - Deploy an advanced security audit policy: [Audit Security System Extension](/windows/security/threat-protection/auditing/audit-security-system-extension)<br> - [Learn about advanced security audit policies](/windows/security/threat-protection/auditing/advanced-security-auditing) |
 
 ## Microsoft Defender for Identity sensor on the domain controller
-If you're running Active Directory on premises, you need to install the Microsoft Defender for Identity sensor on the domain controller to get data for Microsoft Defender for Identity. When installed and properly configured, this data also feeds into advanced hunting through Microsoft Defender for Identity and provides a more holistic picture of identity information and events in your network. This data also enhances the ability of Microsoft Defender for Identity to generate relevant alerts that are also covered by advanced hunting. 
+If you're running Active Directory on premises, you need to install the Microsoft Defender for Identity sensor on the domain controller to get data for Microsoft Defender for Identity. When installed and properly configured, data from on-premises Active Directory also feeds into advanced hunting through Microsoft Defender for Identity and provides a more holistic picture of identity information and events in your network. Data collected by the Defender for Identity sensor also enhances the ability of Microsoft Defender for Identity to generate relevant alerts that are also covered by advanced hunting. 
 
 | Data | Description | Schema table | How to configure |
 | --- | --- | --- | --- |
@@ -50,7 +48,8 @@ If you're running Active Directory on premises, you need to install the Microsof
 > [!NOTE]
 > Some tables in this article might not be available in Microsoft Defender for Endpoint. [Turn on Microsoft Defender XDR](m365d-enable.md) to hunt for threats using more data sources. You can move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender XDR by following the steps in [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
 
-## Related topics
+<a name="related-topics"></a>
+## Related content
 
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Understand the schema](advanced-hunting-schema-tables.md)

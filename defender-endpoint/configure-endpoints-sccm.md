@@ -5,15 +5,15 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
-ms.custom: admindeeplinkDEFENDER
+ms.custom:
+  - admindeeplinkDEFENDER
+  - sfi-image-nochange
 ms.topic: install-set-up-deploy
 ms.date: 11/17/2025
 ms.subservice: onboard
-search.appverid: met150
 ---
 
 # Onboard Windows devices using Configuration Manager
@@ -209,7 +209,7 @@ Prior to enabling network protection in audit or block mode, ensure that you've 
 
 Enable the feature in audit mode for at least 30 days. After this period, review detections and create a list of applications that are allowed to write to protected directories.
 
-For more information, see [Evaluate controlled folder access](evaluate-controlled-folder-access.md).
+For more information, see [Monitor controlled folder access (CFA) activity](controlled-folder-access-monitor.md).
 
 ## Run a detection test to verify onboarding
 

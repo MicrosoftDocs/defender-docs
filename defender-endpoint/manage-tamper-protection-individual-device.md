@@ -1,15 +1,15 @@
-﻿---
+---
 title: Manage tamper protection on an individual device
 ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov, oogunrinde
 description: Turn tamper protection on or off for an individual device.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 10/20/2025
-audience: ITPro
+ms.date: 06/16/2026
 ms.topic: how-to
 author: limwainstein
 ms.author: lwainstein
 ms.custom: 
+- msecd-doc-authoring-1014
 - nextgen
 - admindeeplinkDEFENDER
 ms.subservice: ngp
@@ -17,10 +17,10 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
 ---
 # Manage tamper protection on an individual device
 
@@ -32,6 +32,8 @@ If you're a home user, or you aren't subject to settings managed by a security t
 ## Prerequisites
 
 ### Supported operating systems
+
+The following operating systems support tamper protection:
 
 - Windows
 

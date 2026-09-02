@@ -1,17 +1,17 @@
 ---
-title: Manage profiles and approve extensions using Intune
-description: Manage profiles and approve extensions using Intune for Microsoft Defender for Endpoint to work properly on macOS.
+title: Approve Microsoft Defender for Endpoint macOS extensions using the Intune settings catalog
+description: Approve Microsoft Defender for Endpoint macOS system extensions using the Intune settings catalog.
 ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
-ms.date: 01/16/2026
+ms.date: 07/02/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Manage profiles and approve extensions using Intune
@@ -23,7 +23,8 @@ ms.date: 01/16/2026
 
 This article describes how to use the Intune settings catalog to approve the required extensions for macOS policies.
 
-## Intune system extensions policy
+<a name="intune-system-extensions-policy"></a>
+## Configure the Intune system extensions policy
 
 Do the following procedures to approve the required system extensions using the settings catalog.
 
@@ -72,8 +73,8 @@ Do the following procedures to approve the required system extensions using the 
         1. Select **+ Edit instance** in the empty entry row.
         2. In the **Configure instance** flyout that opens, configure the following settings:
            - **Allowed System Extension Types**: Enter the following values, one per box:
-             - `Network`
-             - `EndpointSecurity`
+             - `NetworkExtension`
+             - `EndpointSecurityExtension`
            - **Team identifier**: Enter `UBF8T346G9`.
         3. Select **Save** on the **Configure instance** flyout.
 
@@ -85,7 +86,7 @@ Do the following procedures to approve the required system extensions using the 
 
    When you're finished on the **Configuration settings** tab, select **Next**.
 
-7. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing [scope tags](/intune/intune-service/fundamentals/scope-tags).
+7. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing [scope tags for role-based access control](/intune/intune-service/fundamentals/scope-tags).
 
    When you're finished on the **Scope tags** tab, select **Next**.
 

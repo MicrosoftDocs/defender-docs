@@ -1,11 +1,10 @@
-﻿---
+---
 title: Get started with your Microsoft Defender for Endpoint deployment
 description: Learn how to get started with the deploy, setup, licensing validation, tenant configuration, network configuration stages.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - m365solution-endpointprotect
@@ -13,10 +12,11 @@ ms.collection:
   - highpri
   - tier1
   - essentials-get-started
-ms.custom: admindeeplinkDEFENDER
+ms.custom:
+  - admindeeplinkDEFENDER
+  - sfi-ga-nochange
 ms.topic: get-started
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 06/19/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

@@ -1,11 +1,10 @@
-﻿---
+---
 title: Use Microsoft Defender for Endpoint sensitivity labels to protect your data and prioritize security incident response
-description: Learn how to use Defender for Endpoint sensitivity labels to protect, prioritize, and investigate incidents that involve data loss, dlp, security incidents.
+description: Learn how Microsoft Defender for Endpoint sensitivity labels help protect sensitive data and prioritize incident investigation.
 ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - ContentEngagementFY23
@@ -13,19 +12,21 @@ ms.collection:
  - EngageScoreSep2022
 ms.topic: how-to
 ms.subservice: edr
-search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 
+ai-usage: ai-assisted
 ---
 # Microsoft Defender for Endpoint sensitivity labels protect and prioritize incident response
 
+## Use sensitivity labels in Defender for Endpoint
 
-A typical advanced persistent threat lifecycle (or APT) involves some data exfiltration -- the point at which data is *taken* from the organization. In those situations, sensitivity labels can tell security operations where to start by spelling out what data is highest priority to protect.
+A typical advanced persistent threat (APT) lifecycle involves data exfiltration, where data is *taken* from the organization. Sensitivity labels help security teams know where to start. They show which data has the highest priority to protect.
 
-Defender for Endpoint helps to make prioritization of security incidents simpler with the use of sensitivity labels too. For example, sensitivity labels quickly identify incidents that can involve devices with sensitive information on them (such as confidential information).
+Defender for Endpoint uses sensitivity labels to simplify how you prioritize security incidents. For example, labels help you quickly spot incidents that involve devices with sensitive or confidential information.
 
 Here's how to use sensitivity labels in Defender for Endpoint.
 
@@ -38,7 +39,7 @@ Learn how to use data sensitivity labels to prioritize incident investigation.
 
 1. In Microsoft Defender portal, select **Incidents & alerts** \> **Incidents**.
 
-1. Scroll over to see the **Data sensitivity** column. This column reflects sensitivity labels that are observed on devices related to the incidents providing an indication of whether sensitive files are impacted by the incident.
+1. Scroll over to see the **Data sensitivity** column. This column shows the sensitivity labels found on devices related to each incident. Use it to check whether sensitive files are affected.
 
    :::image type="content" source="media/data-sensitivity-column.png" alt-text="The Highly confidential option in the data sensitivity column" lightbox="media/data-sensitivity-column.png":::
 
@@ -54,19 +55,21 @@ Learn how to use data sensitivity labels to prioritize incident investigation.
 
    :::image type="content" source="media/investigate-devices-tab.png" alt-text="The Device tab" lightbox="media/investigate-devices-tab.png":::
 
-1. Select the devices that store sensitive data and search through the timeline to identify which files might be impacted then take appropriate action to ensure that data is protected.
+1. Select the devices that store sensitive data. Search the timeline to find which files might be affected. Then take action to protect that data.
 
-   You can narrow down the events shown on the device timeline by searching for data sensitivity labels. Doing this shows only events associated with files that the label name.
+   To narrow the results, search the device timeline for a specific sensitivity label. Only events for files that match that label name appear.
 
    :::image type="content" source="media/machine-timeline-labels.png" alt-text="The device timeline with narrowed down search results based on label" lightbox="media/machine-timeline-labels.png":::
 
 > [!TIP]
-> These data points are also exposed through the 'DeviceFileEvents' in advanced hunting, allowing advanced queries and schedule detection to take into account sensitivity labels and file protection status.
+> Sensitivity label and file protection status data are also exposed through the 'DeviceFileEvents' in advanced hunting, allowing advanced queries and schedule detection to take into account sensitivity labels and file protection status.
 
 ## Related information about sensitivity labels
 
+For more details about sensitivity labels, see the following articles:
+
 - [Learn about sensitivity labels in Office 365](/Microsoft-365/compliance/sensitivity-labels)
-- [Learn to apply sensitivity label inside of email or Office](https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)
-- [Learn how to use sensitivity labels as a condition when applying Data Loss Prevention](/Microsoft-365/compliance/dlp-sensitivity-label-as-condition)
+- [Apply sensitivity labels in email or Office apps](https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9)
+- [Use sensitivity labels as a condition in Data Loss Prevention policies](/Microsoft-365/compliance/dlp-sensitivity-label-as-condition)
 
 

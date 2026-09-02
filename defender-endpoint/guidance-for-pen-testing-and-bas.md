@@ -7,14 +7,14 @@ ms.topic: how-to
 author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
-ms.custom: nextgen
-ms.date: 02/19/2025
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
+ai-usage: ai-assisted
 ---
 
 # Guidance for penetration testing and breach-and-attack-simulation scenarios with Microsoft Defender for Endpoint
@@ -23,12 +23,14 @@ This article describes common challenges and potential misconfigurations that mi
 
 ## Common challenges during pen testing
 
+Common challenges during pen testing include:
+
 - Testing the current configuration of the environment, which might not be the optimal configuration for Microsoft Defender for Endpoint or Microsoft Defender Antivirus.
 
 - Concerns about enabling [cloud protection](cloud-protection-microsoft-defender-antivirus.md), as it might proceed to cloud protection detonation if it doesn't find metadata. For more information about Microsoft Defender Antivirus and cloud protection, see [hybrid detection and protection](adv-tech-of-mdav.md).
 
 > [!NOTE]
-> If you're downloading multiple payloads and notice that Microsoft Defender Antivirus doesn't remediate some of the payloads, keep in mind that what's occurring might not be a true positive, and a non-Microsoft vendor might be showing a false positive. See [How to submit possible false negatives for investigation](#how-to-submit-possible-false-negatives-for-investigation) (in this article).
+> If you're downloading multiple payloads and notice that Microsoft Defender Antivirus doesn't remediate some of the payloads, keep in mind that the missed remediation might not be a true positive, and a non-Microsoft vendor might be showing a false positive. See [How to submit possible false negatives for investigation](#how-to-submit-possible-false-negatives-for-investigation) for guidance on reporting undetected payloads to Microsoft.
 
 ## Common misconfigurations of Microsoft Defender Antivirus during pen testing
 
@@ -44,7 +46,7 @@ It's common for penetration testers to disable features of Microsoft Defender An
 
 - [Behavior monitoring](behavior-monitor.md) is enabled.
 
-- Adding [antivirus exclusions](configure-exclusions-microsoft-defender-antivirus.md) to where the payload is, after the payload is copied. After you copy the payload to the device, remove the antivirus exclusion so that Microsoft Defender Antivirus can block detections during pen testing.
+- Adding [antivirus exclusions](microsoft-defender-antivirus-exclusions-configure.md) for the folder where you copied the payload. After you copy the payload to the device, remove the antivirus exclusion so that Microsoft Defender Antivirus can block detections during pen testing.
 
 - Make sure that you don't have antivirus exclusions for your BAS tools, such as AttackIQ, Cymulate, SafeBreach, and others.
 
@@ -56,11 +58,11 @@ It's common for penetration testers to disable features of Microsoft Defender An
 
 - [Protection from potentially unwanted apps](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md) (PUA) is enabled.
 
-- [Attack surface reduction rules](overview-attack-surface-reduction.md)  (ASR rules) are set to block mode.
+- [Attack surface reduction rules](attack-surface-reduction-rules-overview.md)  (ASR rules) are set to block mode.
 
 - [Network Protection](enable-network-protection.md) is set to block mode.
 
-- [Controlled Folder Access](enable-controlled-folders.md) (CFA) is set to block mode.
+- [Controlled Folder Access](controlled-folder-access-configure.md) (CFA) is set to block mode.
 
 It's important to get the settings correct. To resolve misconfiguration issues, use the following articles:
 
@@ -74,17 +76,26 @@ It's important to get the settings correct. To resolve misconfiguration issues, 
 
 ## How to submit possible false negatives for investigation
 
+Use the following steps to submit possible false negatives to Microsoft for investigation.
+
 ### Step 1: Gather the Microsoft Defender for Endpoint diagnostic logs
 
-#### Use the MDE Client Analyzer log
+Gather Microsoft Defender for Endpoint diagnostic logs by using either the MDE Client Analyzer log or the Microsoft Defender Antivirus diagnostic package (MpSupport.cab).
+
+<a name="use-the-mde-client-analyzer-log"></a>
+#### Use the Microsoft Defender for Endpoint (MDE) Client Analyzer log
+
+The following table shows how to collect Client Analyzer logs on each supported operating system.
 
 | Operating system | What to do |
 |--|--|
-| Windows | You can collect diagnostics logs by using [Live Response](run-analyzer-windows.md) or [locally](run-analyzer-windows.md). |
-| Mac | You can collect [locally](run-analyzer-macos.md). |
-| Linux | You can collect using [Live Response](run-analyzer-linux.md) or [locally](run-analyzer-linux.md). |
+| Windows | You can collect diagnostics logs by using [Live Response](run-analyzer-windows.md) or [by running the analyzer locally on Windows](run-analyzer-windows.md). |
+| Mac | You can collect diagnostics logs by [running the analyzer locally on macOS](run-analyzer-macos.md). |
+| Linux | You can collect diagnostics logs by using [Live Response](run-analyzer-linux.md) or [by running the analyzer locally on Linux](run-analyzer-linux.md). |
 
 #### Microsoft Defender Antivirus diagnostic data (MpSupport.cab)
+
+MpSupport.cab is the diagnostic package generated by Microsoft Defender Antivirus that contains log files and configuration data useful for troubleshooting. The following table describes how to collect this data on each operating system.
 
 | Operating system | What to do |
 |--|--|
@@ -94,7 +105,7 @@ It's important to get the settings correct. To resolve misconfiguration issues, 
 
 ### Step 2: Gather information
 
-Ensure you have the following information ready
+Gather your Microsoft Defender OrgID, Device ID, binary names, testing start and end times, and reproduction steps:
 
 - **Microsoft Defender OrgID**. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Microsoft Defender XDR** > **Account** > **Org ID**.
 
@@ -113,9 +124,9 @@ It's crucial to report to Microsoft as soon as possible. The advanced hunting te
 | Portal | Description |
 |--|--|
 | MDSI portal | The MDSI portal is a service provided by Microsoft Defender Security Intelligence. It allows users to submit files for malware analysis. Microsoft Defender security researchers analyze these files to determine if they're threats, unwanted applications, or normal files. The portal is used to report detection concerns to Microsoft Defender Research, submit files for analysis, and track the results of submissions.<br/><br/>|
-| Microsoft Defender portal | If you have a subscription to Microsoft Defender XDR, or your subscription includes Defender for Endpoint Plan 2, you can use the **Submissions** page in the Microsoft Defender portal. |
+| Microsoft Defender portal | If you have a subscription to Microsoft Defender, or your subscription includes Defender for Endpoint Plan 2, you can use the **Submissions** page in the Microsoft Defender portal. |
 
-1. Submit the data you gathered during steps 1-2 by using either the MDSI portal or the Microsoft Defender portal.
+1. Submit the diagnostic logs and device information (OrgID, Device ID, binary names, testing times, and reproduction steps) by using either the MDSI portal or the Microsoft Defender portal.
 
    - **MDSI portal**: Go to the [MDSI portal](https://www.microsoft.com/en-us/wdsi), and then select **Submit files**. Follow the guidance on the page.
    - **The Microsoft Defender portal**: See [Use admin submission for submitting files in Microsoft Defender for Endpoint](admin-submissions-mde.md).
@@ -124,4 +135,4 @@ It's crucial to report to Microsoft as soon as possible. The advanced hunting te
 
 1. Wait for an update. After Microsoft receives the sample, the file is investigated, and a determination is made. If Microsoft determines that the sample file is malicious, we take corrective action to prevent the malware from going undetected.
 
-   If you have questions, [contact support](contact-support.md).
+   If you have questions, [contact Microsoft Defender for Endpoint support](contact-support.md).

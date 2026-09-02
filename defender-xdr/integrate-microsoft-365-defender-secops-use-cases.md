@@ -1,21 +1,17 @@
 ---
 title: Step 5. Develop and test use cases
-description: The basics of developing and testing use cases when integrating Microsoft Defender XDR into your security operations.
+description: Learn how to define, prioritize, and test SOC use cases for Microsoft Defender XDR deployment, including anti-phishing and vulnerability management scenarios.
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - msftsolution-secops
   - tier2
 ms.topic: how-to
-search.appverid:
-  - MOE150
-  - MET150
-ms.date: 07/15/2021
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Step 5. Develop and test use cases
@@ -43,11 +39,11 @@ SOC Oversight activities related to use case development include:
 - Maintaining use case registry
 - Maintaining/updating templates
 
-To facilitate the runbook and playbook creation processes, create a use case decision tree. This figure shows an example.
+To facilitate the runbook and playbook creation processes, create a use case decision tree. The following figure shows an example use case decision tree.
 
 :::image type="content" source="media/integrate-microsoft-365-defender-secops-use-cases/use-case-decision-process.png" alt-text="The use-case decision process" lightbox="media/integrate-microsoft-365-defender-secops-use-cases/use-case-decision-process.png":::
 
-Once a high-level use case standard has been defined and approved, the next step is to create and test an actual use case. The following sections use anti-phishing and threat and vulnerability scanning scenarios as examples.
+Once a high-level use case standard has been defined and approved, the next step is to create and test an actual use case. The [new phishing variant](#use-case-example-1-new-phishing-variant) and [threat and vulnerability scanning](#use-case-example-2-threat-and-vulnerability-scanning) examples illustrate this process.
 
 ## Use case example 1: New phishing variant
 
@@ -69,7 +65,8 @@ Here's an example high-level storyboard for the Microsoft Defender Vulnerability
 
 :::image type="content" source="media/integrate-microsoft-365-defender-secops-use-cases/example-use-case-workflow-storyboard-tvm.png" alt-text="A use-case workflow for threat and vulnerability management" lightbox="media/integrate-microsoft-365-defender-secops-use-cases/example-use-case-workflow-storyboard-tvm.png":::
 
-### Invoke the use case workflow for example 2
+<a name="invoke-the-use-case-workflow-for-example-2"></a>
+### Invoke the threat and vulnerability scanning use case workflow
 
 Here's an example process for threat and vulnerability scanning.
 
@@ -90,7 +87,7 @@ For example, in the anti-phishing scenario example, the SOC teams could have mad
 
 
 
-Additionally, the SOC teams could have made the discoveries outlined in the table below in regard to the Defender Vulnerability Management scenario outlined above:
+Additionally, the SOC teams could have made the following discoveries for the Defender Vulnerability Management scenario:
 
 |SOC team|Requirement|People to meet requirement|Process to meet requirement|Relevant technology|Gap identified|Use case change log|Exempt (Y/N)|
 |---|---|---|---|---|---|---|---|
@@ -102,13 +99,13 @@ In these example use cases, the testing revealed several gaps in the SOC team's 
 
 ## Update production runbooks and playbooks
 
-Once use case testing has been remediated for all gaps, the lessons learned and metrics collected in them can be incorporated into your SOC team's production runbooks (operating processes) and playbooks (incident responses and escalation procedures).
+Once use case testing has been remediated for all gaps, the lessons learned and metrics collected during testing can be incorporated into your SOC team's production runbooks (operating processes) and playbooks (incident responses and escalation procedures).
 
 Maintenance of the SOC team runbooks and playbooks can be organized in a multitude of ways. Each SOC team may be responsible for their own, or there may be a single centralized version for all teams to share in a central repository. Runbook and playbook management for individual organizations is based on size, skill set, roles, and segregation of duties. Once a runbook has been updated, the playbook update process should follow.
 
 ## Use a standard framework for escalation
 
-Playbooks are the steps the SOC teams need to follow when a real event occurs, based on the successful integration and test of the use case. Therefore, it's imperative that the SOC follows a formalized approach to incident response, such as the [NIST Incident Response Standard](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf) that has become one of the leading industry standards for incident response.
+Playbooks are the steps the SOC teams need to follow when a real event occurs, based on the successful integration and test of the use case. Therefore, it's imperative that the SOC follows a formalized approach to incident response, such as the [National Institute of Standards and Technology (NIST) Incident Response Standard](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf) that has become one of the leading industry standards for incident response.
 
 The NIST four step incident response process includes four phases:
 

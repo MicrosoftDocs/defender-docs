@@ -22,7 +22,7 @@ Before you start:
 
 ## Setup and configuration
 
-1. Sign into Microsoft Defender XDR and select **Settings > Cloud Apps > Cloud Discovery > Automatic log upload**.
+1. Sign into the Defender portal and select **Settings > Cloud Apps > Cloud Discovery > Automatic log upload**.
 
 1. Make sure that you have a data source defined on the **Data sources** tab. If you don't, select **Add a data source** to add one. 
 

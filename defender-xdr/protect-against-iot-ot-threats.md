@@ -5,7 +5,6 @@ ms.service: defender-xdr
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.topic: article
 ms.date: 01/20/2024
 appliesto:

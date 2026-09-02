@@ -3,24 +3,25 @@ title: Endpoint security policies in multitenant management
 description: Learn how to manage endpoint security policies for Defender XDR multi-tenant management in the Microsoft Defender portal.
 author: guywi-ms
 ms.author: guywild
-search.appverid: ""
 ms.collection: 
   - m365-security
   - highpri
   - tier1
 ms.topic: how-to
-ms.date: 07/28/2025
+ms.date: 06/15/2026
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
   - Microsoft Defender for Endpoint
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Endpoint security policies in multitenant management
 
-Microsoft Defender for Endpoint security policies help you manage security settings across your devices. In the Microsoft Defender multitenant management portal, the **Endpoints > Configuration management > Endpoint security policies** page allows you to manage security settings on your tenants' devices across multiple tenants.
+Microsoft Defender for Endpoint security policies help you manage security settings across your devices. In the multitenant management portal, go to **Endpoints > Configuration management > Endpoint security policies** to manage these settings across multiple tenants.
 
-For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/defender-endpoint/manage-security-policies).
+For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/defender-endpoint/endpoint-security-policies-configure).
 
 ## Prerequisites
 
@@ -30,13 +31,13 @@ For more information, see [Manage endpoint security policies in Microsoft Defend
 
 - The **Endpoint security policies** page is available only for [users with the security administrator role in Microsoft Defender XDR](/defender-endpoint/assign-portal-access). Other user roles, like Security Reader, don't provide access to the **Endpoint security policies** page. 
 
-    When a user has the required permissions to view policies in the Microsoft Defender portal, the data is presented based on Intune permissions. If the user is in scope for Intune role-based access control, it applies to the list of policies presented in the Microsoft Defender portal.
+    When a user has permissions to view policies in the Microsoft Defender portal, the data shown depends on their Intune permissions. Intune role-based access control, if applied, controls which policies appear in the list.
 
-    We recommend granting security administrators with the [Intune built-in role "Endpoint Security Manager"](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) to effectively align the level of permissions between Intune and Microsoft Defender XDR.
+    We recommend that you assign the [Intune built-in role "Endpoint Security Manager"](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) to security administrators. This role helps align permissions between Intune and Microsoft Defender XDR.
 
 ## Create a new or edit an existing security policy
 
-Use the same procedure to create a new endpoint security policy in the multitenant management portal as you would in the single tenant portal. For more information, see [Create an endpoint security policy](/defender-endpoint/manage-security-policies#create-an-endpoint-security-policy).
+You create endpoint security policies the same way in the multitenant portal as in the single tenant portal. For steps, see [Create an endpoint security policy](/defender-endpoint/endpoint-security-policies-configure#create-an-endpoint-security-policy).
 
 Differences include:
 
@@ -46,7 +47,7 @@ Differences include:
   
   :::image type="content" source="media/mto-endpoint-security-policy/mto-create-policy-small.png" alt-text="Screenshot of the policy creation page in endpoints security policy page in multitenant management." lightbox="media/mto-endpoint-security-policy/mto-create-policy.png":::
 
-- To edit the scope tags, you'll need to go to the [Microsoft Intune admin center](https://intune.microsoft.com/). Editing scope tags must be done in the single tenant portal as multitenant management is not yet supported in the Intune admin center.
+- To edit scope tags, go to the [Microsoft Intune admin center](https://intune.microsoft.com/). The Intune admin center doesn't yet support multitenant management, so you must edit scope tags in the single tenant portal.
 
 Use the **Search** and **Filter** options to find a specific policy in the **Endpoint security policies** page. You can filter policies by tenant name, policy category, policy type, and targets.
 
@@ -57,9 +58,9 @@ Edit or delete a security policy by selecting the policy in the Endpoint securit
 
 ## Verify endpoint security policy status
 
-To verify that you have successfully created a policy, select the policy from the list and click on the policy name to open the policy page. You can also view the policy page through **Edit > Open policy page**. The policy page opens in a new tab.
+To verify that a policy was created, select it from the list and click the policy name. The policy page opens in a new tab. You can also open it through **Edit > Open policy page**.
 
-The policy page displays details of an endpoint security policy, including the status, which devices the policy applies to, and the assigned groups.
+The policy page shows the policy status, which devices it applies to, and the assigned groups.
 
 :::image type="content" source="media/mto-endpoint-security-policy/mto-policy-page-small.png" alt-text="Screenshot of the policy page in multitenant management in Microsoft Defender XDR." lightbox="media/mto-endpoint-security-policy/mto-policy-page.png":::
 
@@ -67,10 +68,10 @@ You can also view the policy in the Microsoft Intune admin center. To do so, sel
 
 ## View distributed policies
 
-Endpoint security policies that are distributed across tenants with the multitenant management portal appear in a hierarchical view, with the original policy serving as the parent. You can find the policies that were distributed from your tenant under the original policy. For example:
+Policies distributed across tenants appear in a tree view. The original policy is the parent, and its copies are listed beneath it. For example:
 
 :::image type="content" source="media/mto-endpoint-security-policy/mto-distributed.png" alt-text="Screenshot of the endpoint security policies page in multitenant management highlighting distributed policies" lightbox="media/mto-endpoint-security-policy/mto-distributed.png":::
 
-The **Last Distribution Status** for the original policy reflects the overall status of its distributed copies, and the **Tenants** and **Distribution profiles** columns indicate the distribution profile recipients of the policy. For more information, see [Content distribution in multitenant management](mto-distribution-profiles.md).
+The **Last Distribution Status** column shows the overall status of the distributed copies. The **Tenants** and **Distribution profiles** columns show which tenants received the policy. For more information, see [Content distribution in multitenant management](mto-distribution-profiles.md).
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Web content filtering
 description: Use web content filtering in Microsoft Defender for Endpoint to track and regulate access to websites based on their content categories.
 ms.service: defender-endpoint
@@ -6,23 +6,22 @@ ms.author: lwainstein
 author: limwainstein
 ms.reviewer: ericlaw
 ms.localizationpriority: medium
-ms.date: 01/05/2026
-audience: ITPro
+ms.date: 06/16/2026
 ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.custom: admindeeplinkDEFENDER
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
 ms.topic: how-to
 ms.subservice: asr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
+ai-usage: ai-assisted
 ---
 
-# Web content filtering
+# Web content filtering in Microsoft Defender for Endpoint
 
 ## What is web content filtering?
 
@@ -30,9 +29,11 @@ Web content filtering is part of the [Web protection](web-protection-overview.md
 
 Configure policies across your device groups to block selected categories. Blocking a category prevents users within specified device groups from accessing URLs associated with the category. For any category that's not blocked, the URLs are automatically audited. Your users can access audited URLs without disruption, and you gather access statistics to help create a more custom policy decision. Your users see a block notification if an element on the page they're viewing is making calls to a blocked resource.
 
-Web content filtering is available in major web browsers, with blocks performed by Windows Defender SmartScreen (Microsoft Edge) and network protection (Chrome, Firefox, Brave, and Opera). For more information about browser support, see the [prerequisites](#prerequisites) section.
+Web content filtering is available in major web browsers, with blocks performed by Windows Defender SmartScreen (Microsoft Edge) and network protection (Chrome, Firefox, Brave, and Opera). Supported browsers include Microsoft Edge, Google Chrome, Mozilla Firefox, Brave, Opera, and Internet Explorer. For the full list of requirements, see the [web content filtering prerequisites](#prerequisites) section in this article.
 
 ## Benefits of web content filtering
+
+Web content filtering provides the following benefits:
 
 - Users are prevented from accessing websites in blocked categories, whether they're browsing on-premises or away.
 - Your security team can access web reports in the same central location, with visibility over actual blocks and web usage.
@@ -51,7 +52,8 @@ Ensure you meet the requirements described in the following table:
 |Browser|Your devices must be running one of the following browsers: <br/>- Microsoft Edge<br/>- Google Chrome<br/>- Mozilla Firefox<br/>- Brave<br/>- Opera<br/>- Internet Explorer|
 |Related protection|[Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and [network protection](network-protection.md) must be enabled on your organization's devices.|
 
-## Data handling
+<a name="data-handling"></a>
+## Web content filtering data storage and privacy
 
 Data is stored in the region that was selected as part of your [Microsoft Defender for Endpoint data handling settings](data-storage-privacy.md). Your data won't leave the data center in that region. Your data won't be shared with any third parties, including our data providers.
 
@@ -100,7 +102,7 @@ To add a new policy, follow these steps:
 
 3. The **Add Policy** wizard opens. On the **General** page, specify a unique, descriptive name for the policy, and then select **Next**.
 
-4. On the **Blocked categories** page, select one or more categories to block as described in the previous table, and then select **next**.
+4. On the **Blocked categories** page, select one or more web content categories to block (such as **Adult content**, **High bandwidth**, **Legal liability**, **Leisure**, or **Uncategorized**), and then select **Next**.
 
 5. On the **Scope** page, specify the device groups the policy is applied to. The default value is **Select all** for **Machine groups**. Select **Next**.
 
@@ -157,7 +159,8 @@ To dispute the category of a domain, navigate to **Reports** \> **Web protection
 
 A panel opens where you can select the priority and add more details such as the suggested category for recategorization. Once you complete the form, select **Submit**. Our team will review the request within one business day. For faster manual unblocking, create a [custom allow indicator](indicator-ip-domain.md).
 
-## Web content filtering cards and details
+<a name="web-content-filtering-cards-and-details"></a>
+## Monitor web content filtering reports
 
 Select **Reports** \> **Web protection** to view cards with information about web content filtering and web threat protection. The following cards provide summary information about web content filtering.
 
@@ -165,7 +168,7 @@ Select **Reports** \> **Web protection** to view cards with information about we
 
 This card lists the parent web content categories with the largest increase or decrease in the number of access attempts. You can explore changes in web activity patterns in your organization from last 30 days, 3 months, or 6 months. Select a category name to view more information.
 
-In the first 30 days of using this feature, your organization might not have enough data to display this information.
+In the first 30 days of using web content filtering, your organization might not have enough data to display the Web activity by category card.
 
 :::image type="content" source="media/web-activity-by-category600.png" alt-text="The web activity by category card" lightbox="media/web-activity-by-category600.png":::
 
@@ -197,13 +200,14 @@ Use the time range filter at the top left of the page to select a time period. Y
 
 - Web Content Filtering is restricted to specific browsers via process name. This means that web content filtering doesn't work when there is a local proxy application in place (such as Fiddler), due to the originating process name being masked. Web content filtering does not function in isolated browser sessions (i.e. Microsoft Defender Application Guard).
 
-- Web Content Filtering is based on Network Protection. Blocking in third-party browsers requires that the browser be configured [properly to enable content inspection](network-protection.md#required-browser-configuration). Because full URLs are not available in third-party browsers, blocking access to certain web applications may require creating a custom block indicator for the application's login page. Keep in mind, such a block might block users from accessing other services associated with the same website.
+- Web Content Filtering is based on Network Protection. Blocking in third-party browsers requires [required browser configuration for content inspection](network-protection.md#required-browser-configuration). Because full URLs are not available in third-party browsers, blocking access to certain web applications may require creating a custom block indicator for the application's login page. Keep in mind, such a block might block users from accessing other services associated with the same website.
 
 - Web Content Filtering classifies billions of URLs, but new sites are added every day, and new sites may not be immediately detected. Even after a site is categorized, the content on any site may change at any time. Classifying a site's content is inherently a subjective process. Given these constraints, you should expect that new sites may not be immediately categorized, and a site's category may be changed at any time. For full control over your users' access to sites, create a Custom Indicator to allow or block the site.
 
 - If you are using Microsoft 365 Business Premium or Microsoft Defender for Business, you can only define a single web content filtering policy for your environment.
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 - [Web protection overview](web-protection-overview.md)
 - [Web threat protection](web-threat-protection.md)

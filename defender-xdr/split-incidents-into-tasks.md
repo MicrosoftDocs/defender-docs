@@ -1,19 +1,20 @@
 ---
 title: Streamline incident response using tasks in the Microsoft Defender portal (Preview)
 description: Create and manage tasks in the Microsoft Defender portal to investigate and resolve incidents collaboratively.
-search.appverid: met150
 ms.service: microsoft-defender
 ms.author: guywild
 author: guywi-ms
-ms.date: 09/04/2025
+ms.date: 06/15/2026
 ms.collection:
 - M365-security-compliance
 - tier1
 - usx-security
 ms.topic: how-to
+ai-usage: ai-assisted
 
 # customer intent: As a security operations analyst, I want to manage incidents using tasks in the Microsoft Defender portal so that I can improve collaboration, efficiency, and accountability in incident investigations.    
 ms.subservice: unified-security-operations
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
 ---
 
 # Streamline incident response using tasks in the Microsoft Defender portal (Preview)
@@ -38,10 +39,12 @@ Categorize, prioritize, assign, and track each task to ensure consistency, colla
 
 ## Permissions required 
 
+You need one of these roles in the Defender portal to work with tasks.
+
 | Action | Permissions required |
 |---|---|
-| View tasks | **Read-only** permissions or **Security data basics (read)** under the **Security operations** permissions group in the Defender portal. |
-| Create tasks | **All read and manage permissions** permissions or **Response (manage)** under the **Security operations** permissions group in the Defender portal. |
+| View tasks | **Read-only** or **Security data basics (read)** in the **Security operations** group. |
+| Create tasks | **All read and manage permissions** or **Response (manage)** in the **Security operations** group. |
 
 For more information about unified RBAC in the Defender portal, see [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 

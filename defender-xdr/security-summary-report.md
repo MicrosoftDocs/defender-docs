@@ -3,17 +3,17 @@ title: Visualize security impact with the unified security summary
 description: Learn how to use the unified security summary in the Microsoft Defender portal to visualize your security impact and achievements.
 ms.service: defender-xdr
 ms.localizationpriority: medium
-audience: ITPro
 author: guywi-ms
 ms.author: guywild
-ms.date: 05/07/2025
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.collection:
 - m365-security
 - tier2
-search.appverid: met150
 appliesto:
 - Microsoft Defender XDR
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #customer intent: As a SOC analyst, I want to know how to showcase security achievements and impact using data from the Microsoft Defender portal.
 ---
 # Highlight security impact and achievements with the unified security summary
@@ -32,7 +32,7 @@ The unified security summary highlights the following information:
   :::image type="content" source="media/security-summary-report/summary-protection-small.png" alt-text="Screenshot of the Protection section in the security summary report" lightbox="media/security-summary-report/summary-protection.png":::
 - **Investigation and response**: This section contains the number of active and resolved alerts and incidents, top 10 critical incidents with each incident’s status and affected number of assets, the number of [automated investigation and response actions](m365d-autoir.md) taken on impacted assets, and the number of email messages where malicious files were automatically identified and extracted through [Microsoft Defender for Office 365 Zero-hour auto purge (ZAP)](/defender-office-365/zero-hour-auto-purge)
   :::image type="content" source="media/security-summary-report/summary-investigation-small.png" alt-text="Screenshot of the Investigation and Response section in the security summary report" lightbox="media/security-summary-report/summary-investigation.png":::
-- **Copilot-powered investigation and response**: This section contains the number of [analyzed files](copilot-in-defender-file-analysis.md) and [scripts](security-copilot-m365d-script-analysis.md) where Microsoft Copilot in Defender was used.
+- **Copilot-powered investigation and response**: This section contains the number of [analyzed files](copilot-in-defender-file-analysis.md) and [analyzed scripts](security-copilot-m365d-script-analysis.md) where Microsoft Copilot in Defender was used.
   :::image type="content" source="media/security-summary-report/summary-copilot-small.png" alt-text="Screenshot of the Copilot section in the security summary report" lightbox="media/security-summary-report/summary-copilot.png":::
 
 SOC teams can use the unified security summary to highlight the impact of their day-to-day operations. They can also emphasize how Microsoft’s automated actions impact the efficient protection of their organization with features like automatic attack disruption stopping attacks before it becomes widespread.
@@ -62,7 +62,7 @@ To access and share the unified security summary, follow these steps:
    > Select a card's title to know more about each card. Selecting the title opens the related Microsoft documentation page.
 5. You can export the summary as a PDF or CSV file. To export, select the dropdown menu on the upper right corner of the page and choose the format.
    :::image type="content" source="media/security-summary-report/export-picker.png" alt-text="Screenshot highlighting the export options in the security summary report":::
-6. If you choose to export the summary as a PDF, an option to customize by adding a logo of your choice is available. Select **Upload** logo to do this. Otherwise, you can select **Generate PDF** to proceed exporting the summary to a PDF file.
+6. If you choose to export the summary as a PDF, an option to customize by adding a logo of your choice is available. Select **Upload logo** to add a logo to the PDF. Otherwise, you can select **Generate PDF** to proceed exporting the summary to a PDF file.
    :::image type="content" source="media/security-summary-report/pdf-dialog.png" alt-text="Screenshot of the export to PDF dialog box":::
 7. When exporting the summary as a CSV file, the file is automatically saved to your device as *Unified security summary_{date and time exported}.csv*. The file contains three columns for the card name, the field name in the card, and the value of the field. Here’s an example.
    :::image type="content" source="media/security-summary-report/csv-sample-values.png" alt-text="Screenshot of the CSV output of the security summary report":::

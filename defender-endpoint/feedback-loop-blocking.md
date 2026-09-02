@@ -1,11 +1,10 @@
-﻿---
+---
 title: Feedback-loop blocking
 description: Feedback-loop blocking, also called rapid protection, is part of behavioral blocking and containment capabilities in Microsoft Defender for Endpoint
 keywords: behavioral blocking, rapid protection, feedback blocking, Microsoft Defender for Endpoint
 author: chrisda
 ms.author: chrisda
 ms.reviewer: shwetaj
-audience: ITPro
 ms.topic: concept-article
 ms.service: defender-endpoint
 ms.localizationpriority: medium
@@ -16,7 +15,6 @@ ms.subservice: edr
 ms.collection: 
 - m365-security
 - tier2
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -55,7 +53,7 @@ If your organization is using Defender for Endpoint, feedback-loop blocking is e
 
 - [EDR in block mode](edr-in-block-mode.md)
 
-- [Attack surface reduction](attack-surface-reduction.md)
+- [Attack surface reduction](attack-surface-reduction-rules-overview.md)
 
 - [Next-generation protection](/windows/security/threat-protection/microsoft-defender-antivirus/configure-microsoft-defender-antivirus-features) (antivirus)
 

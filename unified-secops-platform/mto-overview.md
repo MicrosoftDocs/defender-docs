@@ -3,14 +3,13 @@ title: Microsoft Defender multitenant management
 description: Learn about multitenant management for Microsoft Defender XDR and Microsoft Sentinel in the Microsoft Defender portal.
 author: guywi-ms
 ms.author: guywild
-search.appverid: ""
 ms.collection: 
 - m365-security
 - highpri
 - tier1
 - usx-security
 ms.topic: overview
-ms.date: 07/16/2025
+ms.date: 05/27/2026
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -76,6 +75,7 @@ The following key capabilities are available for each tenant you have access to 
 | **Endpoints** >**Vulnerability Management** > **[Dashboard](mto-dashboard.md)** | The Microsoft Defender Vulnerability Management dashboard provides both security administrators and security operations teams with aggregated vulnerability management information across multiple tenants. |
 | **Endpoints** > **Vulnerability management** > **[Tenants](mto-dashboard.md)** | For all tenants and at a tenant-specific level, explore vulnerability management information across different values such as exposed devices, security recommendations, weaknesses, and critical CVEs. |
 | **Configuration** > **Settings** | Lists the tenants you have access to. Use this page to view and manage your tenants. |
+| **Multi-tenant management** > **[Tenant groups](mto-tenant-groups.md)** | Organize the tenants you manage into named groups and switch the multitenant view between those groups. |
 
 ## Limitations
 
@@ -85,3 +85,4 @@ Mutitenant management supports multitenant single workspaces. This means that yo
 ## Next steps
 
 - [Set up Microsoft Defender multitenant management](mto-requirements.md)
+- [Create and manage tenant groups](mto-tenant-groups.md)

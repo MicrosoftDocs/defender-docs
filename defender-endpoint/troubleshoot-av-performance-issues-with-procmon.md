@@ -13,8 +13,6 @@ ms.collection:
 - m365-security
 ms.custom:
 - partner-contribution
-f1.keywords: NOCSH
-audience: ITPro
 ai-usage: human-only
 ---
 

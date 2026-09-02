@@ -1,10 +1,9 @@
-﻿---
+---
 title: Host firewall reporting in Microsoft Defender for Endpoint
 description: Host and view firewall reporting in Microsoft Defender portal.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 12/18/2025
-audience: ITPro
 ms.topic: concept-article
 author: paulinbar
 ms.author: painbar
@@ -13,8 +12,9 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.custom: admindeeplinkDEFENDER
-search.appverid: met150
+ms.custom:
+  - admindeeplinkDEFENDER
+  - sfi-image-nochange
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

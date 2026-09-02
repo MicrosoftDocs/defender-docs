@@ -1,13 +1,11 @@
-﻿---
+---
 title: Troubleshooting mode scenarios in Microsoft Defender for Endpoint 
 description: Use the Microsoft Defender for Endpoint troubleshooting mode to address various antivirus issues.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.reviewer: pricci
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -24,7 +22,7 @@ appliesto:
 # Troubleshooting mode scenarios in Microsoft Defender for Endpoint 
 
 
-Microsoft Defender for Endpoint troubleshooting mode allows you to troubleshoot various Microsoft Defender Antivirus features by enabling them from the device and testing different scenarios, even if they're controlled by the organization policy. The troubleshooting mode is disabled by default and requires you to turn it on for a device (and/or group of devices) for a limited time. This is exclusively an enterprise-only feature, and requires Microsoft Defender XDR access.
+Microsoft Defender for Endpoint troubleshooting mode allows you to troubleshoot various Microsoft Defender Antivirus features by enabling them from the device and testing different scenarios, even if they're controlled by the organization policy. The troubleshooting mode is disabled by default and requires you to turn it on for a device (and/or group of devices) for a limited time. This is exclusively an enterprise-only feature, and requires Microsoft Defender access.
 
 For troubleshooting performance-specific issues related to Microsoft Defender Antivirus, see: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 
@@ -111,7 +109,7 @@ Attack surface reduction isn't allowing Microsoft Office plugin to work properly
 
 1. After disabling the ASR Rule, confirm that the Microsoft Office plugin now works.
 
-For more information, see [Overview of attack surface reduction](overview-attack-surface-reduction.md). 
+For more information, see [Overview of attack surface reduction](attack-surface-reduction-overview.md). 
 
 ## Scenario 5: Domain blocked by Network Protection
 

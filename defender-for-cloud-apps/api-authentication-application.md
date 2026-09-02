@@ -3,6 +3,7 @@ title: Access with application context
 description: Learn how to design a web app to get programmatic access to Defender for Cloud Apps without a user.
 ms.date: 01/29/2023
 ms.topic: reference
+ms.custom: sfi-image-nochange
 ---
 
 # Access Microsoft Defender for Cloud Apps with application context

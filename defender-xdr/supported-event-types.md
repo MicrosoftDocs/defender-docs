@@ -1,12 +1,10 @@
 ---
 title: Microsoft Defender XDR streaming event types supported in Event Streaming API
 description: Learn which streaming event types (tables) are supported by the streaming API
-search.appverid: met150
 ms.service: defender-xdr
 ms.author: edbaynash
 author: EdB-MSFT
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

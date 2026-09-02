@@ -1,14 +1,10 @@
 ---
 title: What is Microsoft Defender XDR?
 description: Microsoft Defender XDR is a coordinated threat protection solution designed to protect devices, identity, data, and applications.
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords:
-- NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.custom: 
 - admindeeplinkDEFENDER
 - intro-overview
@@ -17,7 +13,7 @@ ms.collection:
 - tier1
 ms.topic: overview
 adobe-target: true
-ms.date: 08/19/2024
+ms.date: 07/17/2026
 appliesto:
 - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -40,6 +36,8 @@ Microsoft Defender XDR helps security teams protect their organizations and dete
 - [**Microsoft Data Loss Prevention**](/microsoft-365/compliance/dlp-learn-about-dlp)
 - [**App Governance**](/defender-cloud-apps/app-governance-manage-app-governance)
 - [**Microsoft Purview Insider Risk Management**](/purview/insider-risk-management-solution-overview)
+- [**Microsoft Security Exposure Management**](/security-exposure-management)
+
 
 With the integrated Microsoft Defender XDR solution, security professionals can stitch together the threat signals that each of these products receive and determine the full scope and impact of the threat; how it entered the environment, what it's affected, and how it's currently impacting the organization. Microsoft Defender XDR takes automatic action to prevent or stop the attack and self-heal affected mailboxes, endpoints, and user identities.
 
@@ -70,7 +68,7 @@ Microsoft Defender XDR's unique cross-product layer augments the individual serv
 
 - Automate response to compromise by triggering self-healing for impacted assets through automated remediation.
 
-- Enable security teams to perform detailed and effective threat hunting across endpoint and Office data.
+- Enable security teams to perform detailed and effective threat hunting over endpoint, identity, email, and cloud app data.
 
 Microsoft Defender XDR cross-product features include:
 
@@ -84,11 +82,11 @@ Microsoft Defender XDR cross-product features include:
 
 - **Self-healing for compromised devices, user identities, and mailboxes** - Microsoft Defender XDR uses AI-powered automatic actions and playbooks to remediate impacted assets back to a secure state. Microsoft Defender XDR leverages automatic remediation capabilities of the suite products to ensure all impacted assets related to an incident are automatically remediated where possible.
 
-- **Cross-product threat hunting** - Security teams can leverage their unique organizational knowledge to hunt for signs of compromise by creating their own custom queries over the raw data collected by the various protection products. Microsoft Defender XDR provides query-based access to 30 days of historic raw signals and alert data across endpoint and Defender for Office 365 data.
+- **Cross-product threat hunting** - Security teams can leverage their unique organizational knowledge to hunt for signs of compromise by creating their own custom queries over the raw data collected by the various protection products. Microsoft Defender XDR provides query-based access to 30 days of historic raw signals and alert data from Defender for Endpoint, Defender for Office 365, Defender for Identity, and Defender for Cloud Apps.
 
 ## Get started
 
-Microsoft Defender XDR licensing requirements must be met before you can enable the service in the Microsoft Defender portal at <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank"><https://security.microsoft.com></a> For more information, see:
+Microsoft Defender XDR licensing requirements must be met before you can enable the service in the Microsoft Defender portal at <https://security.microsoft.com>. For more information, see:
 
 - [Licensing requirements](prerequisites.md#licensing-requirements)
 - [Turn on Microsoft Defender XDR](m365d-enable.md)

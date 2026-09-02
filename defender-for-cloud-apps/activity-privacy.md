@@ -1,14 +1,16 @@
 ---
 title: Configure activity monitoring to protect user privacy
 description: This article provides information about how to configure your activity monitoring to comply with your user privacy policy.
-ms.date: 01/29/2023
+ms.date: 06/16/2026
 ms.topic: how-to
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 # Configure activity monitoring to protect user privacy
 
+## Activity privacy overview
 
-
-Microsoft Defender for Cloud Apps allows enterprises to granularly determine which users they want to monitor based on group membership. Activity privacy will enable you to follow your organization's compliance regulations without compromising user privacy. This is achieved by allowing you to monitor users while maintaining their privacy by hiding their activities in the activity log. Only authorized admins can choose to view these private activities, with each instance being audited in the governance log.
+Microsoft Defender for Cloud Apps allows enterprises to granularly determine which users they want to monitor based on group membership. Activity privacy will enable you to follow your organization's compliance regulations without compromising user privacy. Activity privacy is achieved by allowing you to monitor users while maintaining their privacy by hiding their activities in the activity log. Only authorized admins can choose to view these private activities, with each instance being audited in the governance log.
 
 >[!NOTE]
 > Private activities aren't forwarded to Microsoft Defender XDR Advanced hunting, and aren't passed on in our SIEM integration.
@@ -66,4 +68,4 @@ Once an admin has been granted the appropriate permission to view private activi
 > When you export activities with the **Show private activities** option selected, the activities inside the export are still private, and no activity details are exposed.
 >  
 
-If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support)
+If you run into any problems, we're here to help. To get assistance or support for your product issue, please [contact Microsoft Defender XDR support](/defender-xdr/contact-defender-support)

@@ -1,16 +1,14 @@
-﻿---
+---
 title: Behavior monitoring in Microsoft Defender Antivirus
 description: Learn about Behavior monitoring in Microsoft Defender Antivirus and Defender for Endpoint.
 author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
-audience: ITPro
 ms.topic: article
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.date: 04/29/2025
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -96,7 +94,7 @@ If the value returned is `true`, behavior monitoring is enabled.
 
 You can use Advanced Hunting (AH) to query the status of behavior monitoring.
 
-Requires Microsoft Defender XDR, Microsoft Defender for Endpoint Plan 2, or Microsoft Defender for Business.
+Requires Microsoft Defender, Microsoft Defender for Endpoint Plan 2, or Microsoft Defender for Business.
 
 ```kusto
 let EvalTable = DeviceTvmSecureConfigurationAssessment
@@ -134,7 +132,7 @@ Detections related to behavior monitoring start with "[Behavior](/unified-secops
 
 When investigating high CPU usage in `MsMpEng.exe`, you can temporarily disable behavior monitoring to see if the issues continue.
 
-You can use Performance analyzer for Microsoft Defender Antivirus to find **\path\process**, **process** and/or **file extensions** that are contributing to the high cpu utilization. You can then add these items to [Contextual Exclusion](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md).
+You can use Performance analyzer for Microsoft Defender Antivirus to find **\path\process**, **process** and/or **file extensions** that are contributing to the high cpu utilization. You can then add these items to [Contextual Exclusion](microsoft-defender-antivirus-exclusions-overview.md#contextual-exclusions).
 
 For more information, see [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 

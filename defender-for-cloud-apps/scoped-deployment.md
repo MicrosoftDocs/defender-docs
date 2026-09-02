@@ -1,8 +1,10 @@
 ---
-title: Scope your deployment to include or exclude users or user groups.
-description: This article provides information about how to scope your Defender for Cloud Apps deployment, including and excluding specific users or groups.
-ms.date: 03/19/2026
+title: Scope your Defender for Cloud Apps deployment by users and groups
+description: Control which users and groups are monitored in Defender for Cloud Apps by configuring scoped deployment inclusions and exclusions.
+ms.date: 06/16/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Scope your deployment to specific users or user groups
@@ -11,6 +13,9 @@ Microsoft Defender for Cloud Apps enables you to scope your deployment. Scoping 
 
 > [!NOTE]
 > Scoped deployment **doesn't** reduce the number of files, OAuth applications, or user accounts that are scanned. It only reduces the number of **user activities** based on the selected user group.
+
+> [!NOTE]
+> As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate. Scoped deployment uses a separate data pipeline that isn't yet integrated with the [Identity inventory](/defender-for-identity/identity-inventory). Correlations defined in the Identity inventory don't affect scoped deployment. For a full list of affected features, see [Enable Identity inventory integration](/defender-cloud-apps/general-setup#enable-identity-inventory-integration).
 
 ## Include or exclude user groups
 
@@ -54,7 +59,7 @@ You might not want to use Microsoft Defender for Cloud Apps for all the users in
 
 ## Example results for include and exclude rules
 
-The include and exclude rules you create work together to scope the overall monitoring that Microsoft Defender for Cloud Apps performs. Here's an example of include and exclude rules you can create, and the final result of what Microsoft Defender for Cloud Apps monitors after these rules run.
+The include and exclude rules you create work together to scope the overall monitoring that Microsoft Defender for Cloud Apps performs. Here's an example of include and exclude rules you can create, and the final result of what Microsoft Defender for Cloud Apps monitors after the example include and exclude rules are applied.
 
 If you create the following rules:
 
@@ -80,8 +85,8 @@ The following user activities are monitored:
 
 After you configure scoped deployment, check for new events in the **Activity log** or the **CloudAppEvents** table.
 
-If no new events appear, or events from excluded accounts appear, the scoped user accounts might not be correctly correlated with the application’s account identifiers.This can occur when one application uses a UPN as the account ID and another application uses a different account ID format or a non‑UPN value.
-To resolve this issue, create an additional scoped deployment group that matches the account identifiers used by the affected application.
+If no new events appear, or events from excluded accounts appear, the scoped user accounts might not be correctly correlated with the application’s account identifiers. This issue can occur when one application uses a UPN as the account ID and another application uses a different account ID format or a non‑UPN value.
+To resolve this issue, create an additional scoped deployment group for the app whose account ID format differs from the other connected apps.
 
 
 ## Next steps

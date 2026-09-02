@@ -2,23 +2,19 @@
 title: Investigate and respond to container threats in the Microsoft Defender portal
 description: Investigate and respond to container attacks and threats with cloud investigation and response actions in the Microsoft Defender portal.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
 ms.topic: how-to
-search.appverid: 
-  - MOE150
-  - MET150
-ms.date: 11/18/2025
+ms.date: 06/15/2026
 appliesto:
 - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 - <a href="https://learn.microsoft.com/unified-secops-platform/" target="_blank">Microsoft Sentinel in the Defender portal</a>
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 # Investigate and respond to container threats in the Microsoft Defender portal
 
@@ -31,13 +27,13 @@ Security operations can now investigate and respond to container-related alerts 
 
 As organizations use containers and Kubernetes on platforms like Azure Kubernetes Service (AKS), Google Kubernetes Engine (GKE), ad Amazon Elastic Kubernetes Service (EKS), the attack surface expands, increasing security challenges. Containers can also be targeted by threat actors and used for malicious purposes.
 
-Security operations center (SOC) analysts can now easily track container threats with near real-time alerts and immediately respond to these threats by isolating or terminating container pods. This integration allows analysts to instantly mitigate a container attack from their environment in a click.
+Security operations center (SOC) analysts can now easily track container threats with near real-time alerts and immediately respond to these threats by isolating or terminating container pods. These cloud-native response actions allow analysts to instantly mitigate a container attack from their environment in a click.
 
-Analysts can then investigate the full scope of the attack with the ability to hunt for related activities within the incident graph. They can also further apply preventive actions with the availability of potential attack paths in the incident graph. Using the information from the attack paths allows security teams to inspect the paths and prevent possible breaches. In addition, Threat analytics reports specific to container threats and attacks are available for analysts to gain more information and apply recommendations for container attack response and prevention.
+Analysts can then investigate the full scope of the attack with the ability to hunt for related activities within the incident graph. They can also further apply preventive actions with the availability of potential attack paths in the incident graph. Using attack path information from the incident graph allows security teams to inspect vulnerable paths and prevent possible breaches. In addition, Threat analytics reports specific to container threats and attacks are available for analysts to gain more information and apply recommendations for container attack response and prevention.
 
 ## Prerequisites
 
-Users on AKS, EKS, and GKE platforms can take advantage of the cloud response actions, cloud-related investigation logs, and attack paths in the Microsoft Defender portal with the following licenses:
+Users on AKS, EKS, and GKE platforms can use cloud response actions, investigation logs, and attack paths in the Microsoft Defender portal with the following licenses:
 
 |Required license|Actions|
 |---|---|
@@ -45,12 +41,12 @@ Users on AKS, EKS, and GKE platforms can take advantage of the cloud response ac
 |[Microsoft Defender for Cloud Security Posture Management](/azure/defender-for-cloud/concept-cloud-security-posture-management)|View attack paths in the incident graph|
 |[Microsoft Security Copilot](/copilot/security/microsoft-security-copilot)|View and apply guided responses to investigate and remediate container threats|
 
-The following Microsoft Defender for Containers are required for the cloud response actions in the Microsoft Defender portal:
+Cloud response actions in the Microsoft Defender portal require the following Microsoft Defender for Containers components:
 
 -	Defender sensor 
 -	Kubernetes API access
 
-For more information about these components, see [Configure Microsoft Defender for Containers components](/azure/defender-for-cloud/defender-for-containers-enable).
+For more information, see [Configure Microsoft Defender for Containers components](/azure/defender-for-cloud/defender-for-containers-enable).
 
 ### Network policy requirement
 
@@ -73,9 +69,10 @@ To verify your network plugins are supported, follow the steps to access your pl
 
 The **terminate pod** response action functions regardless of the presence of a network policy.
 
-## Permissions
+<a name="permissions"></a>
+## Required permissions
 
-To perform any of the response actions, users must have the following permissions for Microsoft Defender for Cloud in the Microsoft Defender unified role-based access control:
+Response actions require the following permissions for Microsoft Defender for Cloud in Microsoft Defender unified role-based access control (RBAC):
 
 |Permission name|Level|
 |:---|:---:|
@@ -129,11 +126,11 @@ The [CloudAuditEvents](advanced-hunting-cloudauditevents-table.md) table contain
 
 ## Troubleshoot issues
 
-The following section addresses issues that you might encounter when investigating and responding to container threats. 
+This section addresses issues that you might encounter when investigating and responding to container threats.
 
 ### The isolate pod or restrict pod access response action is not available
 
-If the isolate pod or restrict pod access action is grayed out, you need to verify that you have the necessary permissions to perform this action. Refer to the [Permissions](#permissions) section to check and validate that you have the correct permissions.
+If the isolate pod or restrict pod access action is grayed out, verify that you have the necessary permissions to perform the selected action. Refer to the [Permissions](#permissions) section to check and validate that you have the correct permissions.
 
 See [Permissions in Microsoft Defender unified role-based access control (RBAC)](custom-permissions-details.md) for more information.
 
@@ -182,7 +179,8 @@ You need to confirm that the target pod's state is active or valid. To check if 
 
   > kubectl get pod &lt;pod-name&gt;
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 - [Microsoft Defender for Containers architecture](/azure/defender-for-cloud/defender-for-containers-architecture?tabs=defender-for-container-arch-aks)
 - [Kubeaudit events in advanced hunting](/azure/defender-for-cloud/kubeaudit-events-advanced-hunting)

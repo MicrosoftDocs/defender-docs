@@ -1,7 +1,6 @@
 ---
 title: What's new in Microsoft Defender for Endpoint archive
 description: See what features were available for Microsoft Defender for Endpoint in past releases.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: reference
 ms.author: lwainstein
@@ -9,7 +8,6 @@ author: limwainstein
 ms.localizationpriority: medium
 ms.date: 02/18/2026
 ai-usage: ai-assisted
-audience: ITPro
 ms.collection:
 - m365-security
 - tier1
@@ -55,6 +53,8 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Microsoft Defender Core service](microsoft-defender-core-service-overview.md) - GA. Microsoft Defender Core service helps with the stability and performance of Microsoft Defender Antivirus.
 
+- **(Windows)** Sense version 10.8798 - GA. Simplified and unified the update experience for Defender for Endpoint agents. This release is the first step toward enabling EDR updates through Microsoft Update, which allows EDR components to be delivered independently from OS updates on Windows 10 and Windows 11 devices. Added granular control for response actions during onboarding so you can define which actions are enabled or disabled. See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#windows--july-2025--platform-108798).
+
 ## May 2025
 
 - **(Android)** Alerts for activities related to open wireless connection and certificates are now detected as events. Starting May 19, 2025, connecting or disconnecting to open wireless networks and download/installation/removal of self-signed certificates appear as events in the Timeline tab instead of alerts. For more information, see [Network protection](android-configure.md#network-protection).
@@ -97,7 +97,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## November-December 2024
 
-- New demonstration scenarios - GA. Five new demonstration scenarios are available: [AMSI demos](mde-demonstration-amsi.md), [Cloud protection demo](defender-endpoint-demonstration-cloud-delivered-protection.md), [Controlled folder access (block ransomware) demo](defender-endpoint-demonstration-controlled-folder-access.md), [Endpoint detection and response (EDR) detection test](edr-detection.md), [URL reputation (SmartScreen) demo](defender-endpoint-demonstration-smartscreen-url-reputation.md).
+- New demonstration scenarios - GA. Five new demonstration scenarios are available: [AMSI demos](mde-demonstration-amsi.md), [Cloud protection demo](defender-endpoint-demonstration-cloud-delivered-protection.md), [Controlled folder access (block ransomware) demo](defender-endpoint-demonstration-controlled-folder-access-ransomware.md), [Endpoint detection and response (EDR) detection test](edr-detection.md), [URL reputation (SmartScreen) demo](defender-endpoint-demonstration-smartscreen-url-reputation.md).
 
 ## December 2024
 
@@ -166,7 +166,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## September 2022
 
-- [Attack surface reduction rules report now available in the Microsoft Defender portal](attack-surface-reduction-rules-report.md). <br/>The attack surface reduction rules report is now available in the Microsoft Defender portal. This ASR report provides information about the attack surface reduction rules that are applied to devices in your organization and helps you detect threats, block potential threats, and get visibility into ASR and device configuration.
+- [Attack surface reduction rules report now available in the Microsoft Defender portal](attack-surface-reduction-rules-report.md). <br/>The attack surface reduction rules report is now available in the Microsoft Defender portal. This ASR rules report provides information about ASR rules applied to devices and helps you detect threats, block potential threats, and get visibility into ASR and device configuration.
 
 - [Built-in protection](built-in-protection.md) (preview) is rolling out. Built-in protection is a set of default settings, such as tamper protection turned on, to help protect devices from ransomware and other threats.
 
@@ -361,9 +361,9 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## October 2018
 
-- [Attack surface reduction rules](attack-surface-reduction.md)<BR>All Attack surface reduction rules are now supported on Windows Server 2019.
+- [Attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md)<BR>All ASR rules are now supported on Windows Server 2019.
 
-- [Controlled folder access](enable-controlled-folders.md)<BR> Controlled folder access is now supported on Windows Server 2019.
+- [Controlled folder access (CFA)](controlled-folder-access-configure.md)<BR> CFA is now supported on Windows Server 2019.
 
 - [Custom detection](/defender-xdr/custom-detections-overview)<BR>With custom detections, you can create custom queries to monitor events for any kind of behavior such as suspicious or emerging threats. This can be done by using the power of advanced hunting through the creation of custom detection rules.
 
@@ -380,9 +380,9 @@ Threat Analytics is a set of interactive reports published by the Microsoft Defe
 
 - There are two new attack surface reduction rules in Windows 10 version 1809:
 
-  - Block Adobe Reader from creating child processes
+  - [Block Adobe Reader from creating child processes](attack-surface-reduction-rules-reference.md#block-adobe-reader-from-creating-child-processes)
 
-  - Block Office communication application from creating child processes
+  - [Block Office communication application from creating child processes](attack-surface-reduction-rules-reference.md#block-all-office-applications-from-creating-child-processes)
 
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 
@@ -396,17 +396,17 @@ Threat Analytics is a set of interactive reports published by the Microsoft Defe
 
 - [Advanced Hunting](/defender-xdr/advanced-hunting-query-language)<BR>Query data using advanced hunting in Microsoft Defender for Endpoint.
 
-- [Attack surface reduction rules](attack-surface-reduction.md)<BR>The newly introduced attack surface reduction rules are:
+- [Attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md)<BR>The newly introduced ASR rules are:
 
-  - Use advanced protection against ransomware
+  - [Use advanced protection against ransomware](attack-surface-reduction-rules-reference.md#use-advanced-protection-against-ransomware)
 
-  - Block credential stealing from the Windows local security authority subsystem (lsass.exe)
+  - [Block credential stealing from the Windows local security authority subsystem](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
-  - Block process creations originating from PSExec and WMI commands
+  - [Block process creations originating from PSExec and WMI commands](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands)
 
-  - Block untrusted and unsigned processes that run from USB
+  - [Block untrusted and unsigned processes that run from USB](attack-surface-reduction-rules-reference.md#block-untrusted-and-unsigned-processes-that-run-from-usb)
 
-  - Block executable content from email client and webmail
+  - [Block executable content from email client and webmail](attack-surface-reduction-rules-reference.md#block-executable-content-from-email-client-and-webmail)
 
 - [Automated investigation and remediation](automated-investigations.md)<BR> Use Automated investigations to investigate and remediate threats.
 
@@ -417,7 +417,7 @@ Threat Analytics is a set of interactive reports published by the Microsoft Defe
 
 - [Microsoft Defender for Endpoint Community center](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/bd-p/MicrosoftDefenderATP)<BR>The Microsoft Defender for Endpoint Community Center is a place where community members can learn, collaborate, and share experiences about the product.
 
-- [Controlled folder access](enable-controlled-folders.md)<BR>You can now block untrusted processes from writing to disk sectors using Controlled Folder Access.
+- [Controlled folder access](controlled-folder-access-configure.md)<BR>You can now block untrusted processes from writing to disk sectors using Controlled Folder Access.
 
 - [Onboard Windows and Mac client devices to Microsoft Defender for Endpoint](onboard-client.md)<BR>Microsoft Defender for Endpoint provides a centralized security operations experience for Windows and non-Windows platforms. You'll be able to see alerts from various supported operating systems (OS) in Microsoft Defender Security Center and better protect your organization's network.
 

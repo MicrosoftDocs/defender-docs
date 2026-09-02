@@ -1,12 +1,10 @@
 ---
 title: Fetch Microsoft Defender XDR incidents 
 description: Learn how to fetch Microsoft Defender XDR incidents from a customer tenant
-search.appverid: met150
 ms.service: defender-xdr
 ms.author: edbaynash
 author: EdB-MSFT
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m65-security-compliance
 - tier3
@@ -41,13 +39,13 @@ To fetch incidents into your SIEM system, you'll need to take the following step
 
 - Step 1: Create a third-party application
 - Step 2: Get access and refresh tokens from your customer's tenant
-- Step 3: allow your application on Microsoft Defender XDR
+- Step 3: allow your application on Microsoft Defender
 
 <a name='step-1-create-an-application-in-azure-active-directory-azure-ad'></a>
 
 ### Step 1: Create an application in Microsoft Entra ID
 
-You'll need to create an application and grant it permissions to fetch alerts from your customer's Microsoft Defender XDR tenant.
+You'll need to create an application and grant it permissions to fetch alerts from your customer's Microsoft Defender tenant.
 
 1. Sign in to the [Microsoft Entra admin center](https://aad.portal.azure.com/).
 
@@ -155,9 +153,9 @@ After providing your credentials, you'll need to grant consent to the applicatio
 
 <a name='step-3-allow-your-application-on-microsoft-365-defender'></a>
 
-### Step 3: Allow your application on Microsoft Defender XDR
+### Step 3: Allow your application on Microsoft Defender
 
-You'll need to allow the application you created in Microsoft Defender XDR.
+You'll need to allow the application you created in Microsoft Defender.
 
 You'll need to have **Manage portal system settings** permission to allow the application. Otherwise, you'll need to request your customer to allow the application for you.
 

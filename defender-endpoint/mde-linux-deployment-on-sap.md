@@ -1,4 +1,4 @@
-﻿---
+---
 title: Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP 
 description: Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP 
 ms.service: defender-endpoint
@@ -6,14 +6,12 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: cgardin  
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
 ms.topic: install-set-up-deploy
 ms.subservice: linux
-search.appverid: met150
 ms.date: 03/28/2025
 ms.custom: 
 - partner-contribution
@@ -162,8 +160,8 @@ sudo azsecd status
 
 The following articles detail how to configure antivirus exclusions for processes, files, and folders per individual VM:
 
-- [Set up exclusions for Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md)
-- [Common mistakes to avoid when defining exclusions](common-exclusion-mistakes-microsoft-defender-antivirus.md)
+- [Set up exclusions for Microsoft Defender Antivirus scans](microsoft-defender-antivirus-exclusions-configure.md)
+- [Exclusions to avoid in Microsoft Defender Antivirus and Defender for Endpoint](defender-endpoint-exclusions-common-mistakes.md)
 
 ## Scheduling a daily antivirus scan (optional)
 

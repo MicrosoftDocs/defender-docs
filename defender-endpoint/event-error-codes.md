@@ -1,31 +1,32 @@
-﻿---
+---
 title: Review events and errors using Event Viewer
 description: Get descriptions and further troubleshooting steps (if necessary) for all events reported by the Microsoft Defender for Endpoint service.
 ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-audience: ITPro
 ms.reviewer: yongrhee
 ms.collection: 
 - m365-security
 - tier3
 - mde-ngp
 ms.topic: how-to
-ms.date: 03/25/2025
+ms.date: 07/02/2026
 ms.subservice: ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 # Review events and errors using Event Viewer
 
+This article provides descriptions and troubleshooting steps for events reported by the Microsoft Defender for Endpoint service. Use the Windows Event Viewer on individual devices to review these events and determine appropriate actions to resolve issues with the service.
 
 ## View events in the Defender for Endpoint service event log
 
-You can review event IDs in the [Event Viewer](/shows/inside/event-viewer) on individual devices. This can help when, for example, a device isn't appearing in the Devices list. In this scenario, you can look for event IDs on the device and then use the table below to determine further troubleshooting steps based on the corresponding event ID.
+You can review event IDs in the [Event Viewer](/shows/inside/event-viewer) on individual devices. Reviewing event IDs in Event Viewer can help when, for example, a device isn't appearing in the Devices list. In this scenario, you can look for event IDs on the device and then use the event ID reference table in this article to determine further troubleshooting steps based on the corresponding event ID.
 
 To open the Defender for Endpoint service event log:
 
@@ -40,7 +41,7 @@ To open the Defender for Endpoint service event log:
 
 1. Events recorded by the service appear in the log.
 
-See the following table for a list of events recorded by the service.
+The service event ID table in this article lists events recorded by the service.
 
    |Event ID|Message|Description|Action|
    |---|---|---|---|
@@ -55,7 +56,7 @@ See the following table for a list of events recorded by the service.
    |9|Microsoft Defender for Endpoint service failed to change its start type. Failure code: `variable`.|**During onboarding:** The device didn't onboard correctly and isn't reporting to the portal. <br/><br/>**During offboarding:** Failed to change the service start type. The offboarding process continues. |Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard client devices](onboard-client.md).|
    |10|Microsoft Defender for Endpoint service failed to persist the onboarding information. Failure code: `variable`.|The device didn't onboard correctly and isn't reporting to the portal.|Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard client devices running Windows or macOS](onboard-client.md).|
    |11|Onboarding or reonboarding of Defender for Endpoint service completed.|The device onboarded correctly.|Normal operating notification; no action required. <br/><br/> It might take several hours for the device to appear in the portal.|
-   |12|Microsoft Defender for Endpoint failed to apply the default configuration.|Service was unable to apply the default configuration.|This error should resolve after a short period of time.|
+   |12|Microsoft Defender for Endpoint failed to apply the default configuration.|Service was unable to apply the default configuration.|The default configuration error should resolve after a short period of time.|
    |13|Microsoft Defender for Endpoint device ID calculated: `variable`.|Normal operating process.|Normal operating notification; no action required.|
    |15|Microsoft Defender for Endpoint can't start command channel with URL: `variable`.|Variable = URL of the Defender for Endpoint processing servers. <br/><br/> The service couldn't contact the external processing servers at that URL.|Check the connection to the URL. See [Configure proxy and Internet connectivity](configure-proxy-internet.md).|
    |17|Microsoft Defender for Endpoint service failed to change the Connected User Experiences and Telemetry service location. Failure code: `variable`.|An error occurred with the Windows telemetry service.|[Ensure the diagnostic data service is enabled](troubleshoot-onboarding.md#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy)">Ensure the diagnostic data service is enabled. <br/><br/> Check that the onboarding settings and scripts were deployed properly. Try to redeploy the configuration packages. <br/><br/> See [Onboard client devices running Windows or macOS](onboard-client.md).|
@@ -89,7 +90,7 @@ See the following table for a list of events recorded by the service.
    |49|Invalid cloud configuration command received and ignored. Version: %1, status: %2, error code: %3, message: %4|Received an invalid configuration file from the cloud service that was ignored.|If this error persists, contact Support.|
    |50|New cloud configuration applied successfully. Version: %1.|Successfully applied a new configuration from the cloud service.|Normal operating notification; no action required.|
    |51|New cloud configuration failed to apply, version: %1. Successfully applied the last known good configuration, version %2.|Received a bad configuration file from the cloud service. Last known good configuration was applied successfully.|If this error persists, contact Support.|
-   |52|New cloud configuration failed to apply, version: %1. Also failed to apply last known good configuration, version %2. Successfully applied the default configuration.|Received a bad configuration file from the cloud service. Failed to apply the last known good configuration - and the default configuration was applied.|The service will attempt to download a new configuration file within 5 minutes. If you don't see event #50 - contact Support.|
+   |52|New cloud configuration failed to apply, version: %1. Also failed to apply last known good configuration, version %2. Successfully applied the default configuration.|Received a bad configuration file from the cloud service. Failed to apply the last known good configuration - and the default configuration was applied.|The service attempts to download a new configuration file within 5 minutes. If the "New cloud configuration applied successfully" event (Event ID 50) doesn't appear after 5 minutes, contact Support.|
    |53|Cloud configuration loaded from persistent storage, version: %1.|The configuration was loaded from persistent storage on service startup.|Normal operating notification; no action required.|
    |55|Failed to create the Secure ETW autologger. Failure code: %1|Failed to create the secure ETW logger.|Reboot the device. If this error persists, contact Support.|
    |56|Failed to remove the Secure ETW autologger. Failure code: %1|Failed to remove the secure ETW session on offboarding.|Contact Support.|
@@ -126,7 +127,7 @@ See the following table for a list of events recorded by the service.
    |96|Microsoft Defender for Endpoint Init has called. Result code: %2|The SenseCE executable has called MCE initialization.|Normal operating notification; no action required.|
    |97|There are connectivity issues to the Cloud for the DLP scenario|There are network connectivity issues that affect the DLP classification flow.|Check the network connectivity.|
    |98|The connectivity to the Cloud for the DLP scenario has been restored|The connectivity to the network was restored and the DLP classification flow can continue.|Normal operating notification; no action required.|
-   |99|Sense has encountered the following error while communicating with server: (%1). Result: (%2)|A communication error occurred.|Check the following events in the event log for further details.|
+   |99|Sense has encountered the following error while communicating with server: (%1). Result: (%2)|A communication error occurred.|Check subsequent events in the Microsoft-Windows-SENSE/Operational event log for further details.|
    |100|Microsoft Defender for Endpoint executable failed to start. Failure code: %1|The SenseCE executable has failed to start.|Reboot the device. If this error persists, contact Support.|
    |102|Microsoft Defender for Endpoint Network Detection and Response executable has started|The SenseNdr executable has started.|Normal operating notification; no action required.|
    |103|Microsoft Defender for Endpoint Network Detection and Response executable has ended|The SenseNdr executable has ended.|Normal operating notification; no action required.|
@@ -205,7 +206,7 @@ To open the System event log:
 1. Select **Start** on the Windows menu, type **Event Viewer**, and press **Enter**  to open the Event Viewer.
 2. In the log list, under **Log Summary**, scroll until you see **System**. Double-click the item to open the log.
 
-You can use this table for more information on the Defender for Endpoint events in the System events log and to determine further troubleshooting steps.
+Use the following table to find more information on Defender for Endpoint events in the System event log and to determine further troubleshooting steps.
 
    |Event ID|Message|Description|Action|
    |---|---|---|---|
