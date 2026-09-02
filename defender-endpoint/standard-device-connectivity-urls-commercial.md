@@ -139,7 +139,7 @@ The following table lists the URLs required to access the Microsoft Defender por
 > All URLs in this table are required to have access to the Microsoft Defender Security Center Portal URL.
 
 > [!NOTE]
-> In addition to the URLs listed in this table, you might also need to allow the URLs listed under [Microsoft 365 unified domains](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-365-unified-domains).
+> In addition to the URLs listed in this table, you might also need to allow the URLs listed under [Microsoft 365 unified domains](/microsoft-365/enterprise/urls-and-ip-address-ranges#microsoft-365-unified-domains).
 
 |Service|Geography|URL|
 |---|---|---|
