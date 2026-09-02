@@ -37,14 +37,18 @@ For more information, see [Conditional Access policies](/azure/active-directory/
 > Microsoft Defender for Cloud Apps utilizes the application **Microsoft Defender for Cloud Apps - Session Controls** as part of the Conditional Access App Control service for user sign-in. This application is located within the 'Enterprise Applications' section of Entra ID. 
 To protect your SaaS applications with Session Controls, you must allow access to this application.
 > 
->If you have any Conditional Access policies that have **“Block Access”** selected in the **“Grant Access”** Control under a Microsoft Entra ID Conditional Access policy scoped to this app, end users will not be able to access the protected applications under session controls. <br><br>
->It's important to ensure that this application isn't unintentionally restricted by any Conditional Access policies. For policies that restrict all or certain applications, please ensure this application is listed as an exception in the **Target resources** or confirm that the blocking policy is deliberate.
-> 
->You may need to add create the following service principal to make the app available in the Conditional Access app picker.
-># Connect with the appropriate scopes to create service principal
-Connect-MgGraph -Scopes "Application.ReadWrite.All"
-
-# Create service principal for the service **Microsoft Defender for Cloud Apps - Session Controls**
-New-MgServicePrincipal -AppId 8a0c2593-9cbc-4f86-a247-beb7aab00d83<br>  
+> If you have any Conditional Access policies that have **“Block Access”** selected in the **“Grant Access”** Control under a Microsoft Entra ID Conditional Access policy scoped to this app, end users will not be able to access the protected applications under session controls.
 >
->To ensure your location-based conditional access policies function correctly, include the **Microsoft Defender for Cloud Apps – Session Controls** application in those policies.
+> It's important to ensure that this application isn't unintentionally restricted by any Conditional Access policies. For policies that restrict all or certain applications, ensure this application is listed as an exception in the **Target resources** or confirm that the blocking policy is deliberate.
+>
+> You may need to add the following service principal to make the app available in the Conditional Access app picker.
+>
+> ```powershell
+> # Connect with the appropriate scopes to create service principal
+> Connect-MgGraph -Scopes "Application.ReadWrite.All"
+> 
+> # Create service principal for the service **Microsoft Defender for Cloud Apps - Session Controls**
+> New-MgServicePrincipal -AppId 8a0c2593-9cbc-4f86-a247-beb7aab00d83
+> ```
+> 
+> To ensure your location-based conditional access policies function correctly, include the **Microsoft Defender for Cloud Apps – Session Controls** application in those policies.
