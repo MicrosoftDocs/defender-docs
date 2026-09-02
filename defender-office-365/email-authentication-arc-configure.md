@@ -125,6 +125,7 @@ When you add a trusted ARC sealer in Microsoft 365, you enter the domain shown i
 |**Mimecast**|`mimecast.com`|`arc-2018`|Used by all Mimecast Email Security gateway deployments.|
 |**Barracuda**|`barracudanetworks.com`|`arc1`|Used by Barracuda Email Gateway Defense and Email Security Gateway.|
 |**Sophos**|`sophos.com`|`arc`|Used by Sophos Central Email Security.|
+|**IIJ**|`securemx.jp`|`arc20250414`|Used by IIJ Secure MX Service. Selector values may change over time due to key rotation.|
 
 > [!IMPORTANT]
 > The ARC sealer domain is **not** your organization's domain. It's the vendor's signing domain that appears in the `d=` field of the ARC-Seal header. Always verify the actual `d=` value from a message header before you configure the trusted sealer.
@@ -211,6 +212,24 @@ Sophos Central Email Security adds ARC headers using `d=sophos.com`.
    Set-ArcConfig -Identity Default -ArcTrustedSealers "sophos.com"
    ```
 
+<a name="iij"></a>
+### Configure trusted ARC sealers for IIJ
+
+IIJ Secure MX Service adds ARC headers using `d=securemx.jp`.
+
+1. **Verify the ARC sealer domain from a message header**: Locate the `d=` value in the `ARC-Seal` header to confirm the IIJ sealing domain. Look for the following pattern in message headers:
+
+   ```text
+   ARC-Seal: i=1;a=rsa-sha256;d=securemx.jp;s=arc20250414;t=1785207616;cv=none;
+   b=<signature>
+   ```
+
+1. **Add the trusted ARC sealer in Microsoft 365**: [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and run the following command:
+
+   ```powershell
+   Set-ArcConfig -Identity Default -ArcTrustedSealers "securemx.jp"
+   ```
+
 <a name="multiple-vendors"></a>
 ### Configure trusted ARC sealers for multiple vendors
 
@@ -223,7 +242,7 @@ If your organization uses multiple email services that add ARC seals, [connect t
 > Only add vendors that you actively use and trust. Adding unnecessary ARC sealers increases your attack surface because a compromised vendor could pass spoofed messages through your authentication checks.
 
 ```powershell
-Set-ArcConfig -Identity Default -ArcTrustedSealers "pphosted.com","mimecast.com","barracudanetworks.com","sophos.com"
+Set-ArcConfig -Identity Default -ArcTrustedSealers "pphosted.com","mimecast.com","barracudanetworks.com","sophos.com","securemx.jp"
 ```
 
 ### Find your vendor's ARC sealer domain
@@ -336,6 +355,7 @@ Set-ArcConfig -Identity Default -ArcTrustedSealers "pphosted.com"
 |Mimecast|Enable via **Administration** \> **Gateway** \> **Policies** \> **Definitions** \> **ARC Signing**.|
 |Barracuda|ARC is enabled by default in Email Gateway Defense. Verify in **Inbound Settings** \> **Anti-Phishing**.|
 |Sophos|Enable in **Sophos Central** \> **Email Security** \> **Settings** \> **ARC**.|
+|IIJ|ARC is enabled by default. No configuration is required.|
 
 > [!IMPORTANT]
 > If your vendor doesn't support ARC, consider alternative solutions:
