@@ -90,6 +90,9 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `RecipientDomain` | `string` | Domain address of the recipient |
 | `EmailSize` | `long` | Size of the email message in bytes |
 | `IsFirstContact` | `int` | Whether the email was the first contact between the sender and recipient (1 if yes, 0 if no) |
+| `ReplyTo` | `string` | The Reply-To address defined in the email |
+| `ReturnPath` | `string` | The Return-Path address defined in the email |
+| `ReturnPathDomain` | `string` | Domain address of the Return-Path defined in the email |
 
 > [!NOTE]
 >\* The `LatestDeliveryLocation` and `LatestDeliveryAction` columns are **not** available in the Streaming API. 
