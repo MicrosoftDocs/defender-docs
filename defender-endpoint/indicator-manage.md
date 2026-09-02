@@ -63,7 +63,7 @@ The following table shows the supported parameters.
 | rbacGroups|String|Comma-separated list of RBAC groups the indicator would be applied to. <br/>**Optional** |
 | category|String|Category of the alert. Examples include: Execution and credential access. <br/>**Optional** |
 | mitretechniques|String|MITRE techniques code/id (comma separated). For more information, see [Enterprise tactics](https://attack.mitre.org/tactics/enterprise/). <br/> **Optional** <br/>It's recommended to add a value in category when a MITRE technique. |
-| GenerateAlert|String|Whether the alert should be generated. Possible Values are: `True` or `False`. The API action `AlertAndBlock` is equivalent to setting `action` to `BlockAndRemediate` with `GenerateAlert=True` (rendered in the portal as "Block and remediate" with "Generate alert" ticked). <br/>**Optional** |
+| GenerateAlert|String|Whether the alert should be generated. Possible values are: `True` or `False`. In the Indicators API, `AlertAndBlock` is an alias for setting `action` to `BlockAndRemediate` with `generateAlert` set to `True` (rendered in the portal as **Block and remediate** with **Generate alert** selected). <br/>**Optional** |
 
 > [!NOTE]
 > Classless Inter-Domain Routing (CIDR) notation for IP addresses is not supported. For more information, see [Microsoft Defender for Endpoint alert categories are now aligned with MITRE ATT&CK!](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/microsoft-defender-atp-alert-categories-are-now-aligned-with/ba-p/732748).
