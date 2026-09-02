@@ -39,7 +39,7 @@ If your request is throttled, it returns a `429` response code. The response bod
 
 ## Permissions
 
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Access the Microsoft Defender XDR APIs](api-access.md).
+One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Access the Microsoft Defender APIs](api-access.md).
 
 Permission type|Permission|Permission display name
 ---|---|---

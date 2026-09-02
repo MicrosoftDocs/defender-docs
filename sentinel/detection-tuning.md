@@ -1,10 +1,13 @@
 ---
 title: Get fine-tuning recommendations for your analytics rules in Microsoft Sentinel
 description: Learn how to fine-tune your threat detection rules in Microsoft Sentinel, using automatically generated recommendations, to reduce false positives while maintaining threat detection coverage.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
-ms.date: 11/09/2021
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security analyst, I want to receive fine-tuning recommendations for my Microsoft Sentinel analytics rules so that I can optimize threat detection and reduce false positives.
 
@@ -13,7 +16,7 @@ ms.date: 11/09/2021
 # Get fine-tuning recommendations for your analytics rules in Microsoft Sentinel
 
 >[!IMPORTANT]
-> [**Custom detections**](/defender-xdr/custom-detections-overview?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json) is now the best way to create new rules across Microsoft Sentinel SIEM Microsoft Defender XDR. With custom detections, you can reduce ingestion costs, get unlimited real-time detections, and benefit from seamless integration with Defender XDR data, functions, and remediation actions with automatic entity mapping. For more information, read [this blog](https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/custom-detections-are-now-the-unified-experience-for-creating-detections-in-micr/4463875).
+> [**Custom detections**](/defender-xdr/custom-detections-overview?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json) is now the best way to create new rules across Microsoft Sentinel SIEM Microsoft Defender XDR. With custom detections, you can reduce ingestion costs, get unlimited real-time detections, and benefit from seamless integration with Defender XDR data, functions, and remediation actions with automatic entity mapping. For more information, read [Custom detections are now the unified experience for creating detections in Microsoft Defender XDR](https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/custom-detections-are-now-the-unified-experience-for-creating-detections-in-micr/4463875).
 
 > [!IMPORTANT]
 >
@@ -21,17 +24,17 @@ ms.date: 11/09/2021
 
 Fine-tuning threat detection rules in your SIEM can be a difficult, delicate, and continuous process of balancing between maximizing your threat detection coverage and minimizing false positive rates. Microsoft Sentinel simplifies and streamlines this process by using machine learning to analyze billions of signals from your data sources as well as your responses to incidents over time, deducing patterns and providing you with actionable recommendations and insights that can significantly lower your tuning overhead and allow you to focus on detecting and responding to actual threats.
 
-Tuning recommendations and insights are now built in to your analytics rules. This article will explain what these insights show, and how you can implement the recommendations.
+Tuning recommendations and insights are now built in to your analytics rules. This article will explain what these insights show, and how you can implement the tuning recommendations.
 
 ## View rule insights and tuning recommendations
 
 To see if Microsoft Sentinel has any tuning recommendations for any of your analytics rules, select **Analytics** from the Microsoft Sentinel navigation menu.
 
-Any rules that have recommendations will display a lightbulb icon, as shown here:
+Any rules that have recommendations display a lightbulb icon next to the rule name:
 
 :::image type="content" source="media/detection-tuning/rule-list-with-insight.png" alt-text="Screenshot of list of analytics rules with recommendation indicator." lightbox="media/detection-tuning/rule-list-with-insight.png":::
 
-Edit the rule to view the recommendations along with the other insights. They will appear together on the **Set rule logic** tab of the analytics rule wizard, below the **Results simulation** display.
+Edit an analytics rule that displays the lightbulb icon to view its recommendations along with the other insights. They will appear together on the **Set rule logic** tab of the analytics rule wizard, below the **Results simulation** display.
 
 :::image type="content" source="media/detection-tuning/tuning-insights.png" alt-text="Screenshot of tuning insights in analytics rule." lightbox="media/detection-tuning/tuning-insights.png":::
 

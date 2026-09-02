@@ -1,8 +1,9 @@
 ---
 title: Stream Logs to Microsoft Sentinel via Logstash and DCR-Based API
 description: Learn how to configure the Logstash output plugin with Data Collection Rules to stream logs into custom or standard tables in Microsoft Sentinel.
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: krishsa
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-siem
 ms.topic: how-to

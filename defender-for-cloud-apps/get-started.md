@@ -3,6 +3,7 @@ title: Get started | Microsoft Defender for Cloud Apps
 description: This quickstart outlines the process for getting Defender for Cloud Apps up and running so you have cloud app use, insight, and control.
 ms.date: 07/24/2025
 ms.topic: quickstart
+ms.custom: sfi-image-nochange
 ---
 
 # Get started with Microsoft Defender for Cloud Apps
@@ -65,6 +66,9 @@ After you connect an app, you can gain deeper visibility so you can investigate 
 **Recommended tasks**
 
 -  Enable file monitoring and create file policies
+
+> [!IMPORTANT]
+> File policies retire on January 6, 2027. To maintain file-based data protection, [migrate to Microsoft Purview DLP or auto-labeling policies](migrate-file-policies-to-purview.md).
 
 - To enable File monitoring of Microsoft 365 files, you are required to use a relevant Entra Admin ID, such as Application Administrator or Cloud Application Administrator. For more details, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
 

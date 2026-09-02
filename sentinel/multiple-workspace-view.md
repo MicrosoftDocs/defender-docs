@@ -1,12 +1,15 @@
 ---
-title: Work with Microsoft Sentinel incidents in many workspaces at once | Microsoft Docs
+title: Work with Microsoft Sentinel incidents in many workspaces at once
 description: How to view incidents in multiple workspaces concurrently in Microsoft Sentinel.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: idpelleg
 ms.topic: how-to
-ms.date: 10/17/2024
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security analyst, I want to manage and investigate incidents across multiple workspaces and tenants so that I can maintain comprehensive visibility and control over my organization's security posture.
 
@@ -23,7 +26,8 @@ If you onboard Microsoft Sentinel to the Microsoft Defender portal, see:
 - [Multiple Microsoft Sentinel workspaces in the Defender portal](/azure/sentinel/workspaces-defender-portal) 
 - [Microsoft Defender multitenant management](/defender-xdr/mto-overview)
 
-## Entering multiple workspace view
+<a name="entering-multiple-workspace-view"></a>
+## Enter multiple-workspace view
 
 When you open Microsoft Sentinel, you're presented with a list of all the workspaces to which you have access rights, across all selected tenants and subscriptions. Selecting the name of a single workspace brings you into that workspace. To choose multiple workspaces, select all the corresponding checkboxes, and then select the **View incidents** button at the top of the page.
 
@@ -35,9 +39,10 @@ In the list of workspaces, you can see the directory, subscription, location, an
 
 :::image type="content" source="./media/multiple-workspace-view/workspaces.png" alt-text="Screenshot of selecting multiple workspaces.":::
 
-## Working with incidents
+<a name="working-with-incidents"></a>
+## Work with incidents across workspaces
 
-Multiple workspace view is currently available only for incidents. This page looks and functions in most ways like the regular [Incidents](investigate-cases.md) page, with the following important differences:
+Multiple workspace view is currently available only for incidents. The multiple workspace view incidents page looks and functions in most ways like the regular [Incidents](investigate-cases.md) page, with the following important differences:
 
 :::image type="content" source="./media/multiple-workspace-view/incidents.png" alt-text="Screenshot of viewing incidents across multiple workspaces." lightbox="./media/multiple-workspace-view/incidents.png":::
 
@@ -50,9 +55,8 @@ Multiple workspace view is currently available only for incidents. This page loo
 
 - If you choose a single incident and select **View full details** or **Actions** > **Investigate**, you'll from then on be in the data context of that incident's workspace and no others.
 
-## Next steps
+<a name="next-steps"></a>
+## Related content
 
-In this article, you learned how to view and work with incidents in multiple Microsoft Sentinel workspaces concurrently. To learn more about Microsoft Sentinel, see the following articles:
-
-- Learn how to [get visibility into your data, and potential threats](get-visibility.md).
-- Get started [detecting threats with Microsoft Sentinel](detect-threats-built-in.md).
+- [Get visibility into your data and potential threats](get-visibility.md)
+- [Detect threats with Microsoft Sentinel](detect-threats-built-in.md)

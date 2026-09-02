@@ -5,44 +5,40 @@ ms.service: defender-endpoint
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
-ms.date: 04/04/2025
+ms.date: 07/02/2026
 ms.collection: 
 - m365-security
 - tier2
 - mde-edr
-ms.custom: admindeeplinkDEFENDER
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
 ms.topic: how-to
 ms.subservice: edr
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
 
+ai-usage: ai-assisted
 ---
 # Review remediation actions following an automated investigation
 
+This article explains how to review, approve, or reject remediation actions that result from automated investigations in Microsoft Defender for Endpoint. Depending on your organization's automation settings, some remediation actions are taken automatically while others require approval.
 
 ## Remediation actions
 
 When an [automated investigation](automated-investigations.md) runs, a verdict is generated for each piece of evidence investigated. Verdicts can be *Malicious*, *Suspicious*, or *No threats found*.
 
-Depending on
-
-- the type of threat,
-- the resulting verdict, and
-- how your organization's [device groups](machine-groups.md) are configured,
-
-Remediation actions can occur automatically or only upon approval by your organization's security operations team.
+Whether remediation actions occur automatically or require approval by your organization's security operations team depends on the type of threat, the resulting verdict, and how your organization's [device groups](machine-groups.md) are configured.
 
 > [!NOTE]
 > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
 
 Here are a few examples:
 
-- **Example 1**: Fabrikam's device groups are set to **Full - remediate threats automatically** (the recommended setting). In this case, remediation actions are taken automatically for artifacts that are considered to be malicious following an automated investigation (see [Review completed actions](#review-completed-actions)).
+- **Example 1**: Fabrikam's device groups are set to **Full - remediate threats automatically** (the recommended setting). With this setting, remediation actions are taken automatically for artifacts that are considered to be malicious following an automated investigation (see [Review completed actions](#review-completed-actions)).
 
-- **Example 2**: Contoso's devices are included in a device group that is set for **Semi - require approval for any remediation**. In this case, Contoso's security operations team must review and approve all remediation actions following an automated investigation (see [Review pending actions](#review-pending-actions)).
+- **Example 2**: Contoso's devices are included in a device group that is set for **Semi - require approval for any remediation**. With this setting, Contoso's security operations team must review and approve all remediation actions following an automated investigation (see [Review pending actions](#review-pending-actions)).
 
-- **Example 3**: Tailspin Toys has their device groups set to **No automated response** (not recommended). In this case, automated investigations don't occur. No remediation actions are taken or pending, and no actions are logged in the [Action center](auto-investigation-action-center.md) for their devices (see [Manage device groups](machine-groups.md#manage-device-groups)).
+- **Example 3**: Tailspin Toys has their device groups set to **No automated response** (not recommended). With this setting, automated investigations don't occur. No remediation actions are taken or pending, and no actions are logged in the [Action center](auto-investigation-action-center.md) for their devices (see [Manage device groups](machine-groups.md#manage-device-groups)).
 
 Whether taken automatically or upon approval, an automated investigation and remediation can result in one or more of the remediation actions:
 
@@ -54,6 +50,8 @@ Whether taken automatically or upon approval, an automated investigation and rem
 - Remove a scheduled task
 
 ## Review pending actions
+
+To review pending remediation actions in the Action center, perform the following steps:
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
@@ -87,6 +85,8 @@ For incidents with a remediation status of **Pending approval**, you can also ap
 
 ## Review completed actions
 
+To review completed remediation actions, follow these steps:
+
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
 1. In the navigation pane, choose **Action center**.
@@ -113,7 +113,9 @@ If you've determined that a device or a file isn't a threat, you can undo remedi
 
 ### To undo multiple actions at one time
 
-1. Go to the Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) and sign in.
+Use the following steps to undo multiple remediation actions at once:
+
+1. Go to the [Action center](https://security.microsoft.com/action-center) and sign in.
 
 1. On the **History** tab, select the actions that you want to undo. Make sure to select items that have the same Action type. A flyout pane opens.
 
@@ -121,7 +123,9 @@ If you've determined that a device or a file isn't a threat, you can undo remedi
 
 ### To remove a file from quarantine across multiple devices
 
-1. Go to the Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) and sign in.
+Use the following steps to remove a quarantined file from multiple devices at once:
+
+1. Go to the [Action center](https://security.microsoft.com/action-center) and sign in.
 
 1. On the **History** tab, select an item that has the Action type **Quarantine file**.
 
@@ -129,7 +133,7 @@ If you've determined that a device or a file isn't a threat, you can undo remedi
 
 ## Automation levels, automated investigation results, and resulting actions
 
-Automation levels affect whether certain remediation actions are taken automatically or only upon approval. Sometimes your security operations team has more steps to take, depending on the results of an automated investigation. The following table summarizes automation levels, results of automated investigations, and what to do in each case.
+Automation levels control whether remediation actions run automatically or need approval. Your security operations team might need to take extra steps based on the investigation results. The following table lists each automation level, its results, and what to do.
 
 |Device group setting|Automated investigation results|What to do|
 |---|---|---|

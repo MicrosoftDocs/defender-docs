@@ -1,23 +1,24 @@
 ---
 title: Enable and update Microsoft Defender Antivirus on Windows Server
-description: Learn how to enable and update Microsoft Defender Antivirus on Windows Server
+description: Enable or re-enable Microsoft Defender Antivirus on Windows Server and update the platform when the feature was previously disabled or uninstalled.
 ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: high
-ms.date: 05/01/2025
-ms.collection: 
+ms.date: 07/02/2026
+ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-ms.custom: intro-overview
+ms.custom: intro-overview, msecd-doc-authoring-1016
 ms.topic: how-to
 ms.subservice: ngp
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
+ai-usage: ai-assisted
 ---
 
 # Enable and update Defender Antivirus to the latest version on Windows Server
@@ -25,6 +26,8 @@ appliesto:
 This article describes how to enable and update Microsoft Defender Antivirus on Windows Server. You'd use the procedures in this article if Microsoft Defender Antivirus was previously disabled or uninstalled.
 
 ## Enable and update Microsoft Defender Antivirus on Windows Server
+
+Perform the following steps to enable and update Microsoft Defender Antivirus on Windows Server:
 
 1. Install the latest [servicing stack updates](/windows/deployment/update/servicing-stack-updates).
 
@@ -50,16 +53,14 @@ First, ensure that Microsoft Defender Antivirus is not disabled either through G
 
 If Microsoft Defender Antivirus features and installation files were previously removed from Windows Server 2016, follow the guidance in [Configure a Windows Repair Source](/windows-hardware/manufacture/desktop/configure-a-windows-repair-source) to restore the feature installation files.
 
-On Windows Server 2016 you might need to use the `-WdEnable` option on the MpCmdRun command-line tool to re-enable Microsoft Defender Antivirus.
+On Windows Server 2016, you might need to use the Microsoft Defender Antivirus command-line utility (MpCmdRun.exe) with the `-WdEnable` option to re-enable Microsoft Defender Antivirus.
 
-1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
-   1. Open the **Start** menu, and then type **cmd**.
-   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
-
-1. In the elevated Command Prompt, run the following commands:
+1. In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
 
    > [!TIP]
    > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
+
+   Use the following Command Prompt sequence to switch to the latest Microsoft Defender platform folder and re-enable Windows Defender with MpCmdRun.exe:
 
    ```dos
    (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
@@ -71,9 +72,9 @@ On Windows Server 2016 you might need to use the `-WdEnable` option on the MpCmd
 
 ## Re-enable Microsoft Defender Antivirus on Windows Server if it was uninstalled
 
-In case the Defender feature was uninstalled/removed, you can add it back.
+If the Defender feature was uninstalled or removed, you can reinstall the feature.
 
-1. In an elevated Command Prompt, run the following commands:
+1. In an elevated Command Prompt, run the following DISM commands to enable the Microsoft Defender Antivirus features on Windows Server:
 
    ```powershell
    # Windows Server 2016
@@ -82,16 +83,16 @@ In case the Defender feature was uninstalled/removed, you can add it back.
    Dism /Online /Enable-Feature /FeatureName:Windows-Defender
 
    Dism /Online /Enable-Feature /FeatureName:Windows-Defender-Gui
-   
+
    # Windows Server 1803 or Windows Server 2019 or later
    Dism /Online /Enable-Feature /FeatureName:Windows-Defender
    ```
 
    > [!TIP]
-   > You can also use [Server Manager or PowerShell to install the Microsoft Defender Antivirus feature](microsoft-defender-antivirus-on-windows-server.md#install-microsoft-defender-antivirus-on-windows-server).
+   > You can also use [Server Manager or PowerShell to install the Microsoft Defender Antivirus feature](microsoft-defender-antivirus-windows-server-configure.md#install-microsoft-defender-antivirus-on-windows-server).
 
 1. Reboot the system.
 
 ## Related articles
 
-[Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
+- [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)

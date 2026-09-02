@@ -11,7 +11,9 @@ ms.collection:
 - must-keep
 ms.topic: reference
 ms.subservice: reference
-ms.custom: api
+ms.custom:
+  - api
+  - sfi-ga-nochange
 ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint
@@ -28,7 +30,7 @@ Offboard device from Defender for Endpoint.
 
 ### Supported operating systems
 
-- This API is supported on Windows 11, Windows 10, version 1703 and later; Windows Server 2019 and later; Windows Server 2012 R2 and Windows Server 2016 when using the [new, unified agent for Defender for Endpoint](../update-agent-mma-windows.md#upgrade-to-the-new-unified-agent-for-defender-for-endpoint).
+- This API is supported on Windows 11, Windows 10, version 1703 and later; Windows Server 2019 and later; Windows Server 2012 R2 and Windows Server 2016 when using the [new, unified agent for Defender for Endpoint](../update-agent-mma-windows.md#upgrade-to-the-new-agent-for-defender-for-endpoint).
 
 ## Limitations
 
@@ -42,7 +44,7 @@ Microsoft recommends that you use roles with the fewest permissions. This helps 
 
 When obtaining a token using user credentials:
 
-- The user must have an appropriate role assigned. For more information,see: [Permission options](../user-roles.md#permission-options).
+- The user must have an appropriate role assigned. For more information, see: [Permission options](../user-roles.md#permission-options).
 
 - The user must have access to the device, based on device group settings. For more information, see: [Create and manage device groups](../machine-groups.md).
 

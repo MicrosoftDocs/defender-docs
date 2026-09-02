@@ -1,6 +1,6 @@
 ---
 title: View and manage incidents and alerts in Microsoft Defender multitenant management
-description: Learn about incidents and alerts in Microsoft Defender multitenant management
+description: View, triage, and manage incidents and alerts across multiple tenants and Microsoft Sentinel workspaces in Microsoft Defender multitenant management.
 author: guywi-ms
 ms.author: guywild
 ms.collection: 
@@ -9,10 +9,12 @@ ms.collection:
   - tier1
   - usx-security
 ms.topic: how-to
-ms.date: 03/20/2025
+ms.date: 06/15/2026
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # View and manage incidents and alerts in Microsoft Defender multitenant management
@@ -82,7 +84,7 @@ For more information, see [Manage alerts](/defender-xdr/investigate-alerts#manag
 
 ## Move alerts
 
-Move an alert to a different incident to help you better organize and correlate related security events. For example, you might find that multiple alerts are part of the same security breach, and want to include them all in the same incident. This ensures that all relevant information is grouped together, enabling more efficient investigation and response.
+Move an alert to a different incident to help you better organize and correlate related security events. For example, you might find that multiple alerts are part of the same security breach, and want to include them all in the same incident. Grouping related alerts into the same incident ensures that all relevant information is grouped together, enabling more efficient investigation and response.
 
 To move one or more alerts:
 

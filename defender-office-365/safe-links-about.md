@@ -5,7 +5,7 @@ ms.author: chrisda
 ms.topic: overview
 f1_keywords:
   - '197503'
-ms.date: 02/10/2026
+ms.date: 05/22/2026
 ms.localizationpriority: medium
 ms.collection:
   - Strat_O365_IP
@@ -76,7 +76,7 @@ The following table describes scenarios for Safe Links in Microsoft 365 and Offi
 
 Recipient filters use conditions and exceptions to identify the internal recipients that the policy applies to. At least one condition is required. You can use the following recipient filters for conditions and exceptions:
 
-- **Users**: One or more mailboxes, mail users, or mail contacts in the organization.
+- **Users**: One or more mailboxes, or mail users in the organization.
 - **Groups**:
   - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
   - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
@@ -163,7 +163,7 @@ You turn on or turn off Safe Links protection for Microsoft Teams in Safe Links 
 URLs in Teams are checked against a list of known malicious links when the protected user clicks the link (time-of-click protection). URLs aren't rewritten. If a link is found to be malicious, users have the following experiences:
 
 - If the link was clicked in a Teams conversation, group chat, or from channels, the warning page as shown in the screenshot appears in the default web browser.
-- If the link was clicked from a pinned tab, the warning page appears in the Teams interface within that tab. The option to open the link in a web browser is disabled for security reasons.
+- If the link was clicked from a pinned tab, the warning page appears in a new browser tab.
 - Depending on how the **Let users click through to the original URL** setting in the policy is configured, the user is or isn't allowed to click through to the original URL (**Continue anyway (not recommended)** in the screenshot). We recommend that you don't select the **Let users click through to the original URL** setting so users can't click through to the original URL.
 
 If the user who sent the link isn't protected by a Safe Links policy where Teams protection is turned on, the user is free to click through to the original URL on their computer or device.
@@ -231,6 +231,9 @@ These settings apply to Safe Links in email, Teams, and Office apps:
 - **Track user clicks**: Turn on or turn off storing Safe Links click data for URLs clicked. We recommend that you leave this setting selected (on).
 
   In Safe Links for Office apps, this setting applies to the desktop versions Word, Excel, PowerPoint, and Visio.
+
+  > [!TIP]
+  > In [advanced hunting](/defender-xdr/advanced-hunting-urlclickevents-table), click events on URLs wrapped by Safe Links have the `AppName` value `Mail` in the `UrlClickEvents` table.
 
   If you select this setting, the following settings are available:
 

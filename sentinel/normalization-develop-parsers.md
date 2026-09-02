@@ -1,11 +1,12 @@
 ---
-title: Develop Microsoft Sentinel Advanced Security Information Model (ASIM) parsers | Microsoft Docs
+title: Develop Microsoft Sentinel Advanced Security Information Model (ASIM) parsers
 description: This article explains how to develop, test, and deploy Microsoft Sentinel Advanced Security Information Model (ASIM) parsers.
 ms.author: edbaynash
 author: EdB-MSFT
-ms.reviewer: ofshezaf
 ms.topic: how-to
-ms.date: 11/09/2021
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security analyst, I want to develop custom ASIM parsers so that I can normalize and analyze security event data from various sources in a consistent format.
@@ -38,23 +39,19 @@ The following workflow describes the high level steps in developing a custom ASI
 
 1. Identify the schemas or schemas that the events sent from the source represent. For more information, see [Schema overview](normalization-about-schemas.md).
 
-1. [Map](#planning-mapping) the source event fields to the identified schema or schemas. 
+1. [Map source events to the schema](#planning-mapping) for the identified schema or schemas. 
 
-1. [Develop](#developing-parsers) one or more ASIM parsers for your source. You'll need to develop a filtering parser and a parameter-less parser for each schema relevant to the source.
+1. [Develop ASIM parsers](#developing-parsers) for your source. You'll need to develop a filtering parser and a parameter-less parser for each schema relevant to the source.
 
-1. [Test](#test-parsers) your parser.
+1. [Test your parser](#test-parsers).
 
-1. [Deploy](#deploy-parsers) the parsers into your Microsoft Sentinel workspaces.
+1. [Deploy the parsers](#deploy-parsers) into your Microsoft Sentinel workspaces.
 
 1. Update the relevant ASIM unifying parser to reference the new custom parser. For more information, see [Managing ASIM parsers](normalization-manage-parsers.md). 
 
 1. You might also want to [contribute your parsers](#contribute-parsers) to the primary ASIM distribution. Contributed parsers may also be made available in all workspaces as built-in parsers.  
 
-This article guides you through the process's development, testing, and deployment steps.
-
-> [!TIP]
-> Also watch the [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k) or review the related [slide deck](https://1drv.ms/b/s!AnEPjr8tHcNmjGtoRPQ2XYe3wQDz?e=R3dWeM). For more information, see [Next steps](#next-steps).
->
+The following sections describe how to develop, test, and deploy custom ASIM source-specific parsers.
 
 ### Collect sample logs
 
@@ -72,9 +69,10 @@ A representative set of logs should include:
 >
 
 
-## Planning mapping
+<a name="planning-mapping"></a>
+## Plan field mappings
 
-Before you develop a parser, map the information available in the source event or events to the schema you identified:
+Before you develop a parser, map the source event fields to the target ASIM schema or schemas selected for your source:
 
 - Map all mandatory fields and preferably also recommended fields.
 - Try to map any information available from the source to normalized fields. If not available as part of th selected schema, consider mapping to fields available in other schemas.
@@ -90,7 +88,10 @@ A custom parser is a KQL query developed in the Microsoft Sentinel **Logs** page
 **Filter** > **Parse** > **Prepare fields**
 
 
-### Filtering
+<a name="filtering"></a>
+### Filter relevant source records
+
+Filtering ensures that your parser selects only the source records relevant to the target schema, which is the first step in the parser query pipeline.
 
 #### Filtering the relevant records
 
@@ -133,7 +134,7 @@ When developing [filtering parsers](normalization-about-parsers.md#optimizing-pa
 
 When filtering, make sure that you:
 
-- **Filter before parsing using physical fields**. If the filtered results are not accurate enough, repeat the test after parsing to fine-tune your results. For more information, see [filtering optimization](#optimization).
+- **Filter before parsing using physical fields**. If the filtered results are not accurate enough, repeat the test after parsing to fine-tune your results. For more information, see [optimize filtering performance](#optimization).
  - **Do not filter if the parameter is not defined and still has the default value**. 
   
 The following examples show how to implement filtering for a string parameter, where the default value is usually '\*', and for a list parameter, where the default value is usually an empty list.
@@ -169,7 +170,8 @@ Syslog | where ProcessName == "named" and SyslogMessage has "client"
 > Parsers should not filter by time, as the query using the parser already filters for time.
 >
 
-### Parsing
+<a name="parsing"></a>
+### Parse source data into ASIM fields
 
 Once the query selects the relevant records, it may need to parse them. Typically, parsing is needed if multiple event fields are conveyed in a single text field.
 
@@ -186,7 +188,10 @@ The KQL operators that perform parsing are listed below, ordered by their perfor
 | [parse_json()](/kusto/query/parse-json-function) function | Parse the values in a string formatted as JSON. If only a few values are needed from the JSON, using `parse`, `extract`, or `extract_all` provides better performance.        |
 | [parse_xml()](/kusto/query/parse-xml-function) function    |    Parse the values in a string formatted as XML. If only a few values are needed from the XML, using `parse`, `extract`, or `extract_all` provides better performance.     |
 
-### Normalizing
+<a name="normalizing"></a>
+### Normalize fields to the ASIM schema
+
+Normalization converts source field names, values, and formats to the standard ASIM schema representation, ensuring consistency across data sources.
 
 #### Mapping field names
 
@@ -263,7 +268,7 @@ Microsoft Sentinel provides handy functions for common lookup values. For exampl
 | invoke _ASIM_ResolveDnsResponseCode('DnsResponseCode')
 ```
 
-The first option accepts as a parameter the value to look up and let you choose the output field and therefore useful as a general lookup function. The second option is more geared towards parsers, takes as input the name of the source field, and updates the needed ASIM field, in this case `DnsResponseCodeName`.
+`_ASIM_LookupDnsResponseCode` accepts the value to look up as a parameter and lets you choose the output field, making it useful as a general lookup function. `_ASIM_ResolveDnsResponseCode` is more geared toward parsers: it takes the name of the source field as input and updates the needed ASIM field, in this case `DnsResponseCodeName`.
 
 For a full list of ASIM help functions, refer to [ASIM functions](normalization-functions.md)
 
@@ -465,8 +470,8 @@ You may want to contribute the parser to the primary ASIM distribution. If accep
 To contribute your parsers:
 
 - Develop both a filtering parser and a parameter-less parser.
-- Create a YAML file for the parser as described in [Deploying Parsers](#deploy-parsers) above.
-- Make sure that your parsers pass all [testings](#test-parsers) with no errors. If any warnings are left, [document them](#documenting-accepted-warnings) in the parser YAML file.
+- Create a YAML file for the parser as described in [Deploying Parsers](#deploy-parsers).
+- Make sure that your parsers pass all [parser tests](#test-parsers) with no errors. If any warnings are left, [document accepted warnings](#documenting-accepted-warnings) in the parser YAML file.
 - Create a pull request against the [Microsoft Sentinel GitHub repository](https://github.com/Azure/Azure-Sentinel), including:
   - Your parsers YAML files in the ASIM parser folders (`/Parsers/ASim<schema>/Parsers`)
   - Representative sample data according to the [samples submission guidelines](#samples-submission-guidelines).
@@ -527,9 +532,8 @@ To submit your test results, use the following steps:
 - Include both files in your PR in the folder `/Parsers/ASim<schema>/Tests`.
 
 
-## Next steps
+## Related content    
 
-This article discusses developing ASIM parsers.
 
 Learn more about ASIM parsers:
 
@@ -540,7 +544,7 @@ Learn more about ASIM parsers:
 
 Learn more about the ASIM in general: 
 
-- Watch the [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k) or review the [slides](https://1drv.ms/b/s!AnEPjr8tHcNmjGtoRPQ2XYe3wQDz?e=R3dWeM)
 - [Advanced Security Information Model (ASIM) overview](normalization.md)
 - [Advanced Security Information Model (ASIM) schemas](normalization-about-schemas.md)
 - [Advanced Security Information Model (ASIM) content](normalization-content.md)
+- [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k) 

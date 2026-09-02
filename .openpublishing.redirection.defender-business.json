@@ -4,6 +4,11 @@
       "source_path": "defender-business/mdb-preview.md",
       "redirect_url": "/defender-xdr/preview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-business/mdb-controlled-folder-access.md",
+      "redirect_url": "/defender-endpoint/controlled-folder-access-overview#deployment-and-configuration-methods-for-cfa",
+      "redirect_document_id": false
     }
   ]
 }

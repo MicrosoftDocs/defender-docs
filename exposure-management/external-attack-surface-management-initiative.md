@@ -2,7 +2,12 @@
 title: External Attack Surface Management Initiative
 description: Learn how to get MDEASM insights into your corporate attack surface with the initiative in Microsoft Security Exposure Management.
 ms.topic: how-to
-ms.date: 05/27/2025
+ms.date: 06/15/2026
+ms.custom:
+  - msecd-doc-authoring-1014
+  - sfi-ga-nochange
+  - sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 
@@ -16,7 +21,7 @@ There are two ways to use this initiative:
 
 ## Using the EASM initiative with pre-built footprint
 
-This approach with the initiative provides high-level insights without a full connection to the MDEASM subscription and supports pre-built footprints only and doesn't require an active MDEASM subscription.
+The pre-built footprint option provides high-level insights without a full connection to an MDEASM subscription and doesn't require an active MDEASM subscription.
 
 **Prerequisites**: To configure your External Attack Surface initiative, you need to have **Global Administrator** role, or **Core security settings (manage)** permissions.
 
@@ -39,17 +44,18 @@ This approach with the initiative provides high-level insights without a full co
 ## Using the EASM initiative with full MDEASM integration
 
 **Prerequisites**:
-This approach requires a full MDEASM subscription (trial or paid) and provides comprehensive exposure analysis and asset-level details.
+Full integration with MDEASM requires a full MDEASM subscription (trial or paid) and provides comprehensive exposure analysis and asset-level details.
 To configure your External Attack Surface initiative, you need to have **Global Administrator** role, or **Core security settings (manage)** permissions.
 
 > [!NOTE]
 > External attack surface assets do not support scoping, so all users with access can see all collected data.
 
-### Environment setup:
+<a name="environment-setup"></a>
+### Set up the environment for full MDEASM integration
 
 To deploy an MDEASM resource, follow these steps:
 
-1. Log into [https://portal.azure.com](https://portal.azure.com).
+1. Log into the [Azure portal](https://portal.azure.com).
 2. Create a Resource Group with the appropriate subscription and region.
 3. Deploy an MDEASM Resource within that group, see, [Create a Defender EASM Azure resource](/azure/external-attack-surface-management/deploying-the-defender-easm-azure-resource). Each new resource will automatically get a free 30 day trial.
 
@@ -74,6 +80,8 @@ For more information, see [Discovering your attack surface](/azure/external-atta
 
 ### Configure the initiative
 
+Perform the following steps to connect the initiative to your MDEASM data source:
+
 1. Go to the **Initiatives** page, select the **External Attack Surface Protection**, then choose **Open initiative page**.
 1. Go to the **Connect data source** to open the settings tab.
 
@@ -96,6 +104,7 @@ You can review your security initiative data through security metrics that refle
 
 Also explore the data integrated from EASM using the attack surface map to uncover insights related to your attack surface. You can search for various assets such as IP addresses, domains, hosts, and more, and review the findings on these assets.
 
-## Next steps
+<a name="next-steps"></a>
+## Related content
 
 - [Investigate security initiative metrics](security-metrics.md)

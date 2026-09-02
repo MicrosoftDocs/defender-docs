@@ -1,8 +1,10 @@
 ---
 title: Create cloud discovery policies
-description: This article provides information about working with cloud discovery policies.
-ms.date: 01/29/2023
+description: Create app discovery policies in Microsoft Defender for Cloud Apps to detect newly discovered apps and configure anomaly detection for cloud discovery logs.
+ms.date: 06/16/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 # Create cloud discovery policies
 
@@ -18,7 +20,7 @@ Discovery policies enable you to set alerts that notify you when new apps are de
 
 1. Select **Create policy** and then select **App discovery policy**.
 
-    ![Create a cloud discovery policy.](media/create-policy-from-shadow-it-tab.png)
+    ![Screenshot of the Shadow IT tab showing the Create policy menu with the App discovery policy option.](media/create-policy-from-shadow-it-tab.png)
 
 1. Give your policy a name and description. If you want, you can base it on a template. For more information on policy templates, see [Control cloud apps with policies](control-cloud-apps-with-policies.md).
 
@@ -51,9 +53,9 @@ For example, if you're interested in discovering risky hosting apps found in you
 
 Set the policy filters to discover any services found in the **hosting services** category, and that have a risk score of 1, indicating they're highly risky.
 
-Set the thresholds that should trigger an alert for a certain discovered app at the bottom. For instance, alert only if over 100 users in the environment used the app and if they downloaded a certain amount of data from the service. Additionally, you can set the limit of daily alerts you wish to receive.
+In the **Trigger a policy match if all the following occur on the same day** section, set the thresholds that should trigger an alert for a certain discovered app. For instance, alert only if over 100 users in the environment used the app and if they downloaded a certain amount of data from the service. Additionally, you can set the limit of daily alerts you wish to receive.
 
-![app discovery policy example.](media/app-discovery-policy-example.png "app discovery policy example")
+![Screenshot of app discovery policy settings showing filter and threshold options for risky hosting apps.](media/app-discovery-policy-example.png "app discovery policy example")
 
 ## Cloud discovery anomaly detection
 
@@ -63,7 +65,7 @@ Defender for Cloud Apps searches all the logs in your cloud discovery for anomal
 
 1. Select **Create policy** and select **Cloud Discovery anomaly detection policy**.
 
-    ![cloud discovery anomaly detection policy menu.](media/cloud-discovery-anomaly-detection-policy-menu.png "cloud discovery anomaly detection policy menu")
+    ![Screenshot of the Create policy menu with the Cloud Discovery anomaly detection policy option selected.](media/cloud-discovery-anomaly-detection-policy-menu.png "cloud discovery anomaly detection policy menu")
 
 1. Give your policy a name and description. If you want, you can base it on a template, For more information on policy templates, see [Control cloud apps with policies](control-cloud-apps-with-policies.md).
 
@@ -86,7 +88,7 @@ Defender for Cloud Apps searches all the logs in your cloud discovery for anomal
 
 1. Select **Create**.
 
-    ![new discovery anomaly policy.](media/new-discovery-anomaly-policy.png "new discovery anomaly policy")
+    ![Screenshot of the new discovery anomaly policy page showing anomaly detection criteria and alert settings.](media/new-discovery-anomaly-policy.png "new discovery anomaly policy")
 
 ## Next steps
 

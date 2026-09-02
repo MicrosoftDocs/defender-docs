@@ -2,15 +2,15 @@
 title: Define an access restriction policy for Standard-plan playbooks
 description: This article shows how to define an access restriction policy for Microsoft Sentinel Standard-plan playbooks, so that they can support private endpoints.
 ms.topic: how-to
-author: mberdugo
 ms.author: monaberdugo
-ms.reviewer: Anat Gilenson
-ms.date: 07/1/2025
+author: mberdugo
+ms.date: 06/12/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 #Customer intent: As a security engineer using Standard-plan playbooks, I want to define an access restriction policy for playbooks so that I can ensure only authorized services can access sensitive workflows.
 
@@ -34,6 +34,8 @@ For more information, see:
 > [!INCLUDE [unified-soc-preview-without-alert](../includes/unified-soc-preview-without-alert.md)]
 
 ## Define an access restriction policy
+
+Perform the following steps to define an access restriction policy for a Standard-plan playbook.
 
 1. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), select the **Configuration** > **Automation** page. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Microsoft Sentinel** > **Configuration** > **Automation**.
 

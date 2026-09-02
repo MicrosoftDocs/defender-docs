@@ -1,14 +1,17 @@
 ---
 title: Aggregate Microsoft Sentinel data with summary rules
 description: Learn how to aggregate large sets of Microsoft Sentinel data across log tiers with summary rules.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to #Don't change
-ms.date: 07/01/2025
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #customer intent: As a SOC engineer, I want to create summary rules in Microsoft Sentinel to aggregate insights from incoming verbose log to optimize costs and query performance.
 
@@ -25,7 +28,7 @@ Use [summary rules](/azure/azure-monitor/logs/summary-rules) in Microsoft Sentin
 
 Microsoft Sentinel stores summary rule results in custom tables with the **Analytics** data plan. For more information on data plans and storage costs, see [Log table plans](/azure/azure-monitor/logs/basic-logs-configure).
 
-This article explains how to create summary rules or deploy pre-built summary rule templates in Microsoft Sentinel, and provides examples of common scenarios for using summary rules.
+This section explains how to create summary rules, deploy pre-built templates, and review common usage scenarios in Microsoft Sentinel.
 
 > [!IMPORTANT]
 > [!INCLUDE [unified-soc-preview-without-alert](includes/unified-soc-preview-without-alert.md)]
@@ -40,7 +43,7 @@ To create summary rules in Microsoft Sentinel:
 
 - To create summary rules in the Microsoft Defender portal, you must first onboard your workspace to the Defender portal. For more information, see [Connect Microsoft Sentinel to the Microsoft Defender portal](/microsoft-365/security/defender/microsoft-sentinel-onboard).
 
-We recommend that you [experiment with your summary rule query](hunts.md) in the **Logs** page before creating your rule. Verify that the query doesn't reach or near the [query limit](/azure/azure-monitor/logs/summary-rules#restrictions-and-limitations), and check that the query produces the intended schema and expected results. If the query is close to the query limits, consider using a smaller `binSize` to process less data per bin. You can also modify the query to return fewer records or remove fields with higher volume.
+We recommend that you experiment with your summary rule query on the [Hunts](hunts.md) page before creating your rule. Verify that the query doesn't reach or near the [summary rules restrictions and limitations](/azure/azure-monitor/logs/summary-rules#restrictions-and-limitations), and check that the query produces the intended schema and expected results. If the query is close to the query limits, consider using a smaller `binSize` to process less data per bin. You can also modify the query to return fewer records or remove fields with higher volume.
 
 ## Create a new summary rule
 
@@ -105,6 +108,9 @@ Existing summary rules are listed on the **Summary rules** page, where you can r
 - Disable or enable the rule.
 - Edit the rule configuration
  
+> [!WARNING]
+> Deleting a summary rule is irreversible.
+
 To delete a rule, select the rule row and then select **Delete** in the toolbar at the top of the page.
 
 > [!NOTE]
@@ -208,7 +214,7 @@ Most of the data sources are raw logs that are noisy and have high volume, but h
 
 1. **Create an alert**:
 
-    Creating an analytics rule in Microsoft Sentinel that alerts based on results from the **MaliciousIPDetection** table. This step is crucial for proactive threat detection and incident response.
+    Creating an analytics rule in Microsoft Sentinel that alerts based on results from the **MaliciousIPDetection** table. Creating an analytics rule is crucial for proactive threat detection and incident response.
 
 **Sample summary rule**:
 

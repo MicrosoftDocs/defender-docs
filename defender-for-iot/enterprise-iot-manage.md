@@ -1,12 +1,14 @@
 ---
 title: Manage enterprise IoT security for Microsoft Defender for IoT in the Defender portal
-description: Learn how to manage enterprise IoT devices using Microsoft Defender for IoT in the Microsoft Defender portal.
+description: Learn how to monitor enterprise IoT devices and review security alerts, recommendations, and vulnerabilities in Microsoft Defender for IoT in the Defender portal.
 ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 08/25/2024
+ms.date: 06/11/2026
 ms.topic: how-to
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
+ai-usage: ai-assisted
 ---
 
 # Manage enterprise IoT security
@@ -14,6 +16,10 @@ ms.topic: how-to
 Enterprise IoT security improves the monitoring and protection of the IoT devices in your network, such as printers, smart TVs, Voice over Internet Protocol (VoIP) devices, conferencing systems and purpose-built, proprietary devices.
 
 When enterprise IoT is activated, the data for recommendations and vulnerabilities is shown in the Microsoft Defender portal.
+
+This article describes how to view alerts, security recommendations, and vulnerabilities for your IoT devices, use advanced hunting queries to identify threats, and turn off enterprise IoT security when you no longer need it.
+
+This article explains how to view enterprise IoT security data, hunt for threats, use advanced hunting queries to monitor your IoT devices, and turn off enterprise IoT security in the Defender portal.
 
 ## View enterprise IoT data in the Defender portal
 
@@ -41,7 +47,7 @@ On the **Device inventory** page, select **Go hunt** to query devices using tabl
 
 ## Advanced hunting queries for enterprise IoT
 
-This section lists sample advanced hunting queries that you can use in Microsoft Defender to help you monitor and secure your IoT devices with enterprise IoT security.
+The following sample advanced hunting queries can help you monitor and secure your IoT devices with enterprise IoT security in Microsoft Defender.
 
 ### Find devices by specific type or subtype
 
@@ -75,6 +81,6 @@ Customers with ME5/E5 Security plans who no longer need the **enterprise IoT sec
 
 1. Toggle the option to **Off**.
 
-You stop getting security value in the Defender portal, including purpose-built alerts, vulnerabilities, and recommendations.
+When enterprise IoT security is turned off, you stop getting security value in the Defender portal, including purpose-built alerts, vulnerabilities, and recommendations.
 
 Customers with a Microsoft Defender for Endpoint P2 license who don't add a standalone license by the time the trial ends, have the trial automatically canceled, and lose access to enterprise IoT security features. For more information, see [purchase a standalone license](enterprise-iot-get-started.md#purchase-the-standalone-license).

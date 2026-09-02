@@ -2,17 +2,20 @@
 title: Use a Microsoft Sentinel MCP tool in Microsoft Copilot Studio
 titleSuffix: Microsoft Security  
 description: Learn how to add Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools or your own custom tool in Microsoft Copilot Studio
-author: poliveria
-ms.topic: how-to
-ms.date: 11/18/2025
 ms.author: pauloliveria
+author: poliveria
+ms.reviewer: macasgra
+ms.topic: how-to
+ms.date: 06/12/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #customer intent: As a security analyst, I want to add Sentinel MCP tools in Microsoft Copilot Studio.
 ---
 
-# Use an MCP tool in Microsoft Copilot Studio (preview)
+# Use a Microsoft Sentinel MCP tool in Microsoft Copilot Studio (preview)
 
 > [!IMPORTANT]
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
@@ -58,6 +61,8 @@ Custom MCP tools let you build deterministic workflows by prescribing exactly wh
 >Open two browser tabs or windows because you'll switch between your tenant's [Azure portal](https://portal.azure.com) and your Copilot Studio page.
 
 ### Step 1: Register an app in Azure portal
+Register a Microsoft Entra application that Copilot Studio uses to authenticate with your custom MCP tool.
+
 1.	Open your tenant's Azure portal, then go to **App registrations** > **New registration**.
 
     :::image type="content" source="media/sentinel-mcp/custom-azure-new-reg.png" alt-text="Screenshot of Azure portal with New registration option highlighted." lightbox="media/sentinel-mcp/custom-azure-new-reg.png":::
@@ -98,6 +103,8 @@ Custom MCP tools let you build deterministic workflows by prescribing exactly wh
 
 ### Step 2: Add your custom MCP tool to an agent
 
+In Copilot Studio, create a new MCP tool entry for the custom tool you registered in Azure.
+
 1.	Open Copilot Studio and select the agent where you want to add your custom tool. From the agent's **Overview** page, go to the **Tools** section and select **+ Add tool**.
 
 1. On the pop-up window that appears, select **+ New tool**.
@@ -129,7 +136,9 @@ Custom MCP tools let you build deterministic workflows by prescribing exactly wh
      :::image type="content" source="media/sentinel-mcp/custom-studio-redirect.png" alt-text="Screenshot of the URL redirect details in Copilot Studio Add tool setup." lightbox="media/sentinel-mcp/custom-studio-redirect.png":::
 
 ### Step 3: Authenticate Copilot Studio to use your custom tool
- 
+
+Configure a redirect URI so that Copilot Studio can authenticate with your custom MCP tool.
+
 1. Go back to your tenant's Azure portal and into the app you just added then select **Add a redirect URI**.
  
 1. Select **+ Add a platform** > **Web**.
@@ -139,7 +148,7 @@ Custom MCP tools let you build deterministic workflows by prescribing exactly wh
 
 1. In the **Redirect URIs** text box, add the redirect URL you copied then select **Configure**. 
 
-1. Go back to the Copilot Studio pop-window window and select **Next**.
+1. Return to the **Add tool** dialog in Copilot Studio, where the redirect URL was generated, and select **Next**.
 
 
 1. Select **Create new connection**. If the tool connects successfully, a green check mark appears beside the connection. 

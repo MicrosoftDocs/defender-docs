@@ -1,7 +1,7 @@
 ---
-title: Top scoring in industry tests - Microsoft Defender XDR
+title: Top scoring in industry tests - Microsoft Defender
 ms.reviewer:
-description: View the latest scores and analysis of Microsoft Defender XDR. It consistently achieves high scores in independent tests (AV-TEST, AV Comparatives, SE Labs, MITRE ATT&CK). View the latest scores and analysis.
+description: View the latest scores and analysis of Microsoft Defender. It consistently achieves high scores in independent tests (AV-TEST, AV Comparatives, SE Labs, MITRE ATT&CK). View the latest scores and analysis.
 ms.service: defender-xdr
 ms.localizationpriority: high
 ms.author: guywild
@@ -23,15 +23,15 @@ ms.date: 02/16/2021
 
 <a name='microsoft-365-defender'></a>
 
-## Microsoft Defender XDR
+## Microsoft Defender
 
-[Microsoft Defender XDR](microsoft-365-defender.md) is a unified pre- and post-breach enterprise defense suite. It natively coordinates detection, prevention, investigation, and response across endpoints, identities, email, and applications to provide integrated protection against sophisticated attacks.
+[Microsoft Defender](microsoft-365-defender.md) is a unified pre- and post-breach enterprise defense suite. It natively coordinates detection, prevention, investigation, and response across endpoints, identities, email, and applications to provide integrated protection against sophisticated attacks.
 
-Microsoft Defender XDR combines the capabilities of [Microsoft Defender for Endpoint](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp), [Microsoft Defender for Office 365](https://www.microsoft.com/microsoft-365/exchange/advance-threat-protection), [Microsoft Defender for Identity](https://azure.microsoft.com/features/azure-advanced-threat-protection/), [Microsoft Entra ID Protection](/azure/active-directory/identity-protection/overview-identity-protection), and [Microsoft Defender for Cloud Apps](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/cloud-app-security) into a single solution.
+Microsoft Defender combines the capabilities of [Microsoft Defender for Endpoint](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp), [Microsoft Defender for Office 365](https://www.microsoft.com/microsoft-365/exchange/advance-threat-protection), [Microsoft Defender for Identity](https://azure.microsoft.com/features/azure-advanced-threat-protection/), [Microsoft Entra ID Protection](/azure/active-directory/identity-protection/overview-identity-protection), and [Microsoft Defender for Cloud Apps](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/cloud-app-security) into a single solution.
 
 ### MITRE: Demonstrated real-world detection, response, and protection from advanced attacks
 
-Core to MITRE's testing approach is emulating real-world attacks to understand whether solutions can adequately detect and respond to them. While the test focused on endpoint detection and response, MITRE's simulated APT29 attack spans multiple attack domains, creating opportunities to empower defenders beyond just endpoint protection. Microsoft expanded visibility beyond the endpoint with Microsoft Defender XDR.
+Core to MITRE's testing approach is emulating real-world attacks to understand whether solutions can adequately detect and respond to them. While the test focused on endpoint detection and response, MITRE's simulated APT29 attack spans multiple attack domains, creating opportunities to empower defenders beyond just endpoint protection. Microsoft expanded visibility beyond the endpoint with Microsoft Defender.
 
 - ATT&CK-based evaluation of Microsoft Defender XDR - April 2022: [Microsoft Defender XDR demonstrates industry-leading protection in the 2022 MITRE Engenuity ATT&CK&reg; Evaluations]([Microsoft Security Blog: Microsoft Defender XDR demonstrates industry-leading protection in the 2022 MITRE Engenuity ATT&CK&reg; Evaluations](https://www.microsoft.com/en-us/security/blog/2022/04/05/microsoft-365-defender-demonstrates-industry-leading-protection-in-the-2022-mitre-engenuity-attck-evaluations/))
 
@@ -63,7 +63,7 @@ The AV-TEST Product Review and Certification Report tests on three categories: p
 
 - March - April 2021 AV-TEST Business User test: [Protection score 6.0/6.0](https://www.av-test.org/en/antivirus/business-windows-client/windows-10/april-2021/microsoft-defender-antivirus-4.18-212216/)
 
-- January - February 2021 AV-TEST Business User test: [Protection score 6.0/6.0](https://www.av-test.org/en/antivirus/business-windows-client/windows-10/february-2021/microsoft-defender-antivirus-4.18-212117/) | [Analysis](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4CflZ)
+- January - February 2021 AV-TEST Business User test: [Protection score 6.0/6.0](https://www.av-test.org/en/antivirus/business-windows-client/windows-10/february-2021/microsoft-defender-antivirus-4.18-212117/)
 
 ### AV-Comparatives: Protection rating of 99.8% in the latest test
 
@@ -77,7 +77,7 @@ Business Security Test consists of three main parts: the Real-World Protection T
 
 - Business Security Test 2020 (August - November): [Real-World Protection Rate 99.8%](https://www.av-comparatives.org/tests/business-security-test-2020-august-november/)
 
-- Business Security Test 2020 (March - June): [Real-World Protection Rate 99.7%](https://www.av-comparatives.org/tests/business-security-test-2020-march-june/) | [Analysis](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3Esbl)
+- Business Security Test 2020 (March - June): [Real-World Protection Rate 99.7%](https://www.av-comparatives.org/tests/business-security-test-2020-march-june/)
 
 ### SE Labs: AAA award in the latest test
 
@@ -113,7 +113,7 @@ Microsoft Defender for Endpoint's EDR and endpoint protection capabilities have 
 
 Independent security industry tests aim to evaluate the best antivirus and security products in an unbiased manner. However, Microsoft sees a wider and broader set of threats beyond what's tested in the evaluations highlighted in this article. In an average month, Microsoft's security products identify over 100 million new threats. Even if an independent tester can acquire and test 1% of those threats, that is a million tests across 20 or 30 products. In other words, the vastness of the malware landscape makes it difficult to evaluate the quality of protection against real world threats.
 
-The capabilities within Microsoft Defender for Endpoint provide [additional layers of protection](https://cloudblogs.microsoft.com/microsoftsecure/2017/12/11/detonating-a-bad-rabbit-windows-defender-antivirus-and-layered-machine-learning-defenses) that aren't factored into industry antivirus tests, and address some of the latest and most sophisticated threats. Isolating AV from the rest of Defender for Endpoint creates a partial picture of how Microsoft's security stack operates in the real world. For example, attack surface reduction and endpoint detection & response capabilities can help prevent malware from getting onto devices in the first place. We've proven that [Microsoft Defender for Endpoint components catch samples](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE2ouJA) that Microsoft Defender Antivirus missed in these industry tests. It's more representative of how effectively Microsoft's security suite protects customers in the real world.
+The capabilities within Microsoft Defender for Endpoint provide [additional layers of protection](https://cloudblogs.microsoft.com/microsoftsecure/2017/12/11/detonating-a-bad-rabbit-windows-defender-antivirus-and-layered-machine-learning-defenses) that aren't factored into industry antivirus tests, and address some of the latest and most sophisticated threats. Isolating AV from the rest of Defender for Endpoint creates a partial picture of how Microsoft's security stack operates in the real world. For example, attack surface reduction and endpoint detection & response capabilities can help prevent malware from getting onto devices in the first place. It's more representative of how effectively Microsoft's security suite protects customers in the real world.
 
 [Learn more about Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) and evaluate it in your own network by signing up for a [90-day trial](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp), or [enabling Preview features on existing tenants](preview.md).
 

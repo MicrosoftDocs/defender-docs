@@ -1,10 +1,11 @@
 ---
 title: Threat analytics for Microsoft Sentinel users (preview)
 description: Learn about threat analytics and how Microsoft Sentinel users can access it in the Microsoft Defender portal.
+ms.author: pauloliveria
 author: poliveria
+ms.reviewer: prtanej
 ms.topic: concept-article
 ms.date: 11/18/2025
-ms.author: pauloliveria
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.collection: usx-security

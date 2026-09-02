@@ -2,18 +2,21 @@
 title: User tags in Microsoft Defender for Office 365
 author: chrisda
 ms.author: chrisda
-ms.date: 06/13/2025
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.collection:
   - m365-security
   - tier2
 ms.custom:
+  - msecd-doc-authoring-1016
+  - sfi-ga-nochange
 description: Admins can learn how to identify specific groups of users with user tags in Microsoft Defender for Office 365. Tag filtering is available across alerts, reports, and investigations in Microsoft Defender for Office 365 to quickly identify the tagged users.
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # User tags in Microsoft Defender for Office 365
@@ -38,6 +41,8 @@ To see how user tags are part of the strategy to help protect high-impact user a
 
 ## What do you need to know before you begin?
 
+Before you begin, make sure you can access the Microsoft Defender portal and that you have the required permissions.
+
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **User tags** page, use <https://security.microsoft.com/securitysettings/userTags>.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
@@ -57,13 +62,15 @@ To see how user tags are part of the strategy to help protect high-impact user a
 
 - You can also manage and monitor the Priority account tag in the Microsoft 365 admin center. For instructions, see [Manage and monitor priority accounts](/microsoft-365/admin/setup/priority-accounts).
 
-- For information about securing _privileged accounts_ (admin accounts), see [this article](/purview/privileged-access-management).
+- For information about securing _privileged accounts_ (admin accounts), see [Privileged access management](/purview/privileged-access-management).
 
 ## Use the Microsoft Defender portal to create user tags
 
+Use the following steps to create a custom user tag in the Microsoft Defender portal:
+
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Settings** \> **Email & collaboration** \> **User tags**. Or, to go directly to the **User tags** page, use <https://security.microsoft.com/securitysettings/userTags>.
 
-2. On the **User tags** page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create** to start the new tag wizard.
+2. On the **User tags** page, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create** to start the new tag wizard.
 
 3. On the **Define tag** page, configure the following settings:
    - **Name**: Enter a unique, descriptive name for the tag. You can't rename a tag after you create it.
@@ -73,19 +80,19 @@ To see how user tags are part of the strategy to help protect high-impact user a
 
 4. On the **Assign members** page, do either of the following steps:
 
-   - Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add members**. In the **Add members** flyout that opens, do any of the following steps to add individual users or groups in the **Search users and groups to add** box:
+   - Select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add members**. In the **Add members** flyout that opens, do any of the following steps to add individual users or groups in the **Search users and groups to add** box:
      - Click in the box and scroll through the list to select a user or group.
      - Or, start typing a name to filter the list, and then select the value below the box.
 
-     To add more members, click in an empty area in the box and repeat the previous step.
+     To add more members, click in an empty area in the box, and then type another name or scroll the list to select another user or group.
 
-     To remove individual entries from the box, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the entry.
+     To remove individual entries from the box, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the entry.
 
      When you're finished on the **Add members** flyout, select **Add**.
 
-     Back on the **Assign members** page, the users and groups that you added are listed by **Name** and **Type**. To remove entries from the list, select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** next to the entry.
+     Back on the **Assign members** page, the users and groups that you added are listed by **Name** and **Type**. To remove entries from the list, select :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** next to the entry.
 
-   - Select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Import** to select a text file that contains the email addresses of the users or groups (one entry per line).
+   - Select :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Import** to select a text file that contains the email addresses of the users or groups (one entry per line).
 
    When you're finished on the **Assign members** page, select **Next**.
 
@@ -113,9 +120,9 @@ On the **User tags** page, you can sort the entries by clicking on an available 
 - **Last modified**
 - **Created on**
 
-Use :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to filter the user tags by **Last modified date**.
+Use :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to filter the user tags by **Last modified date**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific user tag.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific user tag.
 
 Select a user tag by clicking anywhere in the row other than the check box next to the name to open the details flyout for the user tag.
 
@@ -132,10 +139,10 @@ The details flyout of the user tag contains the following information, based on 
 
 After you select the user tag, use either of the following methods to modify it:
 
-- **On the User tags page**: Select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
-- **In the details flyout of the selected user tag**: Select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action at the top of the flyout.
+- **On the User tags page**: Select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** action that appears.
+- **In the details flyout of the selected user tag**: Select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** action at the top of the flyout.
 
-The same wizard and most of the same settings are available as described in the [Use the Microsoft Defender portal to create user tags](#use-the-microsoft-defender-portal-to-create-user-tags) section earlier in this article, with the following exceptions:
+The modify tag wizard uses the same **Define tag**, **Assign members**, and **Review tag** pages described in [Use the Microsoft Defender portal to create user tags](#use-the-microsoft-defender-portal-to-create-user-tags), with the following exceptions:
 
 - You can't rename or change the description of the Priority account tag, so the **Define tag** page isn't available for the Priority account tag.
 - The **Define tag** page is available for custom tags, but you can't rename the tag; you can only change the description.
@@ -144,10 +151,13 @@ The same wizard and most of the same settings are available as described in the 
 
 You can't remove the built-in Priority account tag.
 
+> [!WARNING]
+> Removing a custom user tag is permanent and can't be undone. The tag is removed from all users and groups it's assigned to, and it's no longer available in reports and features. Make sure you want to delete the tag before you proceed.
+
 After you select the custom tag, use either of the following methods to remove it:
 
-- **On the User tags page**: Select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
-- **In the details flyout of the selected user tag**: Select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action at the top of the flyout.
+- **On the User tags page**: Select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears.
+- **In the details flyout of the selected user tag**: Select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action at the top of the flyout.
 
 Read the warning in the confirmation dialog that opens, and then select **Yes, remove**.
 
@@ -180,7 +190,10 @@ After you apply system tags or custom tags to users, you can use those tags as f
 
 For information about where the effects of priority account protection are visible, see [Review differentiated protection from priority account protection](priority-accounts-turn-on-priority-account-protection.md#review-differentiated-protection-from-priority-account-protection).
 
-## More information
+<a name="more-information"></a>
+## Related content
+
+For more information about priority accounts, see the following articles:
 
 - [Configure and review priority account protection](priority-accounts-turn-on-priority-account-protection.md)
 - [Manage and monitor priority accounts](/microsoft-365/admin/setup/priority-accounts)

@@ -233,7 +233,7 @@ This query results in a list of users logged into more than one critical device,
 let IdentitiesAndCriticalDevices = ExposureGraphNodes
 | where
  // Critical Device
- (set_has_element(Categories, "device") and isnotnull(NodeProperties.rawData.criticalityLevel) and NodeProperties.rawData.criticalityLevel.criticalityLevel < 4)
+ (set_has_element(Categories, "device") and isnotnull(NodeProperties.rawData.criticalityLevel) and NodeProperties.rawData.criticalityLevel.criticalityLevel > 4)
  // or identity
  or set_has_element(Categories, "identity");
 ExposureGraphEdges

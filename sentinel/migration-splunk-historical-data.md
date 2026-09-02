@@ -5,7 +5,9 @@ description: Learn how to export your historical data from Splunk for a Microsof
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 03/11/2024
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security engineer, I want to export historical data from Splunk so that I can migrate it to Microsoft Sentinel for analysis and storage.
@@ -14,7 +16,7 @@ ms.date: 03/11/2024
 
 # Export historical data from Splunk
 
-This article describes how to export your historical data from Splunk. After you complete the steps in this article, you can [select a target platform](migration-ingestion-target-platform.md) to host the exported data, and then [select an ingestion tool](migration-ingestion-tool.md) to migrate the data.
+This article describes how to export your historical data from Splunk. After you complete the steps in this article, you can [select a target Azure platform for your exported historical data](migration-ingestion-target-platform.md), and then [select a data ingestion tool for migrating historical data](migration-ingestion-tool.md).
 
 :::image type="content" source="media/migration-export-ingest/export-data.png" alt-text="Diagram illustrating steps involved in export and ingestion." border="false":::
 
@@ -26,7 +28,7 @@ To export your historical data from Splunk, use one of the [Splunk export method
 
 ## CLI example
 
-This CLI example searches for events from the `_internal` index that occur during the time window that the search string specifies. The example then specifies to output the events in a CSV format to the **data.csv** file.You can export a maximum of 100 events by default. To increase this number, set the `-maxout` argument. For example, if you set `-maxout` to `0`, you can export an unlimited number of events.
+This CLI example searches for events from the `_internal` index that occur during the time window specified in the search command. The example then specifies to output the events in a CSV format to the **data.csv** file.You can export a maximum of 100 events by default. To increase this number, set the `-maxout` argument. For example, if you set `-maxout` to `0`, you can export an unlimited number of events.
 
 This CLI command exports data recorded between 23:59 and 01:00 on September 14, 2021 to a CSV file: 
 
@@ -37,11 +39,11 @@ splunk search "index=_internal earliest=09/14/2021:23:59:00 latest=09/16/2021:01
 
 This `dump` command exports all events from the `bigdata` index to the `YYYYmmdd/HH/host` location under the `$SPLUNK_HOME/var/run/splunk/dispatch/<sid>/dump/` directory on a local disk. The command uses `MyExport` as the prefix for export filenames, and outputs the results to a CSV file. The command partitions the exported data using the `eval` function before the `dump` command.
 
-```
+```spl
 index=bigdata | eval _dstpath=strftime(_time, "%Y%m%d/%H") + "/" + host | dump basefilename=MyExport format=csv 
 ```
 ## Next steps
 
 - [Select a target Azure platform to host the exported historical data](migration-ingestion-target-platform.md)
-- [Select a data ingestion tool](migration-ingestion-tool.md)
+- [Choose a data ingestion tool for historical data migration](migration-ingestion-tool.md)
 - [Ingest historical data into your target platform](migration-export-ingest.md)

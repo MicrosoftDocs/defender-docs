@@ -6,13 +6,15 @@ ms.author: chrisda
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 05/30/2025
+ms.date: 07/03/2026
 ms.reviewer: nehabha
 ms.collection:
 - SMB
 - m365-security
 - m365-initiative-defender-business
 - tier1
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Manage devices in Microsoft Defender for Business
@@ -27,6 +29,8 @@ In Defender for Business, you can manage devices as follows:
 
 ## View the list of onboarded devices
 
+Use the following steps to view onboarded devices on the **Device inventory** page.
+
 :::image type="content" source="media/mdb-device-inventory.png" alt-text="Screenshot of device inventory":::
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Assets** \> **Devices**. Or, to go directly to the **Device inventory** page, use <https://security.microsoft.com/machines>.
@@ -37,18 +41,20 @@ If no devices are listed, see [Onboard devices to Defender for Business](mdb-onb
 
 ## Take action on a device that has threat detections
 
+Use the following steps to take available response actions on a device that has threat detections.
+
 :::image type="content" source="media/mdb-selected-device.png" alt-text="Screenshot of a selected device with details and actions available.":::
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Assets** \> **Devices**. Or, to go directly to the **Device inventory** page, use <https://security.microsoft.com/machines>.
 2. On the **Device inventory** page, select a device from the list.
-3. In the details flyout that opens, select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More**, and then select an available action (for example, **Run antivirus scan** or **Initiate Automated Investigation**).
+3. In the details flyout that opens, select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More**, and then select an available action (for example, **Run antivirus scan** or **Initiate Automated Investigation**).
 
 ## View the state of Microsoft Defender Antivirus
 
 Microsoft Defender Antivirus is a key component of next-generation protection in Defender for Business. To view the state of Microsoft Defender Antivirus, you have several options:
 
 - Use the [Device health report](mdb-reports.md#device-health-report).
-- Use one of the methods described in [How to confirm the state of Microsoft Defender Antivirus](/defender-endpoint/microsoft-defender-antivirus-compatibility#how-to-confirm-the-state-of-microsoft-defender-antivirus).
+- Use methods such as PowerShell, Group Policy, or the Windows Security app as described in [How to confirm the state of Microsoft Defender Antivirus](/defender-endpoint/microsoft-defender-antivirus-compatibility#how-to-confirm-the-state-of-microsoft-defender-antivirus).
 
 Microsoft Defender Antivirus has one of the following states on devices:
 
@@ -80,7 +86,7 @@ Microsoft Defender Antivirus has one of the following states on devices:
 
 ### What to expect when Microsoft Defender Antivirus detects threats
 
-When Microsoft Defender Antivirus detects threat, the following things happen:
+When Microsoft Defender Antivirus detects a threat, the following things happen:
 
 - Users receive [notifications in Windows](https://support.microsoft.com/windows/feeca47f-0baf-5680-16f0-8801db1a8466).
 - Detections are listed in the [Windows Security app](/windows/security/operating-system-security/system-security/windows-defender-security-center/windows-defender-security-center) on the **Protection history** page.
@@ -101,13 +107,15 @@ To learn more about different threats, visit the [Microsoft Security Intelligenc
 
 ## Onboard a device
 
-For more information, see [Onboard devices to Defender for Business](mdb-onboard-devices.md).
+To onboard a device to Defender for Business, see [Onboard devices to Defender for Business](mdb-onboard-devices.md).
 
 ## Offboard a device
 
-For more information, see [Offboarding a device](mdb-offboard-devices.md).
+To remove a device from Defender for Business, see [Offboarding a device](mdb-offboard-devices.md).
 
 ## Next steps
+
+See the following related articles:
 
 - [View and manage incidents in Defender for Business](mdb-view-manage-incidents.md)
 - [Respond to and mitigate threats in Defender for Business](mdb-respond-mitigate-threats.md)

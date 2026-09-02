@@ -33,7 +33,7 @@ The `IdentityLogonEvents` table in the [advanced hunting](advanced-hunting-overv
 > [!NOTE]
 > This table covers Microsoft Entra logon activities tracked by Defender for Cloud Apps, specifically interactive sign-ins and authentication activities using ActiveSync and other legacy protocols. Non-interactive logons that are not available in this table can be viewed in the Microsoft Entra audit log. [Learn more about connecting Defender for Cloud Apps to Microsoft 365](/cloud-app-security/connect-office-365-to-microsoft-cloud-app-security)
 
-This advanced hunting table is populated by records from Microsoft Defender for Identity or Microsoft Sentinel and Microsoft Entra ID. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Identity in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+This advanced hunting table is populated by records from Microsoft Defender for Identity or Microsoft Sentinel and Microsoft Entra ID. If your organization hasn't deployed the service in Microsoft Defender, queries that use the table aren't going to work or return any results. For more information about how to deploy Defender for Identity in the Defender portal, read [Deploy supported services](deploy-supported-services.md).
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 

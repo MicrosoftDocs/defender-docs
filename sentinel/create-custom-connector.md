@@ -1,10 +1,11 @@
 ---
 title: Resources for creating Microsoft Sentinel custom connectors
 description: Learn about available resources for creating custom connectors for Microsoft Sentinel. Methods include the Log Analytics API, Logstash, Logic Apps, PowerShell, and Azure Functions.
+ms.author: edbaynash
 author: EdB-MSFT
+ms.reviewer: krishsa
 ms.topic: concept-article
 ms.date: 11/06/2024
-ms.author: edbaynash
 #Customer intent: As a security engineer, I want to know which Microsoft Sentinel custom data connector would be most appropriate to build for ingesting data from sources with no out-of-the-box solution.
 
 ---
@@ -44,7 +45,7 @@ The Codeless Connector Framework (CCF) provides a configuration file that can be
 
 Connectors created using the CCF are fully SaaS, without any requirements for service installations, and also include health monitoring and full support from Microsoft Sentinel.
 
-For more information, see [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md).
+For more information, see [Create a codeless connector for Microsoft Sentinel](isv/create-codeless-connector.md).
 
 ## Connect with the Azure Monitor Agent
 

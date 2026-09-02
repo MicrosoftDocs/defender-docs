@@ -1,10 +1,12 @@
 ---
 title: Quarterly or ad hoc operational guide - Microsoft Defender for Identity
 description: Learn about the Microsoft Defender for Identity activities that we recommend for your team on a quarterly or ad-hoc basis.
-ms.date: 01/29/2024
+ms.date: 06/15/2026
 ms.topic: how-to
 #customerIntent: As a Microsoft Defender for Identity customer, I want to know the recommended activities for my team on a quarterly or ad-hoc basis.
 ms.reviewer: martin77s
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Quarterly / ad hoc operational guide - Microsoft Defender for Identity
@@ -14,6 +16,8 @@ This article reviews the Microsoft Defender for Identity activities we recommend
 Perform ad hoc activities as issues arise in your organization, or as part of a quarterly operational review.
 
 ## Review Microsoft service health
+
+Check the current status of Microsoft services to identify any known issues that might affect your environment.
 
 **Where**: Check the following locations:
 
@@ -35,7 +39,7 @@ For more information, see [Review Defender for Identity health issues](ops-guide
 
 We recommend that you periodically verify your organization's server setup process to make sure that it includes installing the Defender for Identity sensor. This ensures that all new domain controllers, AD CS, and AD FS servers are protected right away.
 
-For more information, see [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](../deploy/deploy-defender-identity.md).
+For more information, see [Deploy Microsoft Defender for Identity with Microsoft Defender](../deploy/deploy-defender-identity.md).
 
 ## Check domain configuration via PowerShell
 
@@ -43,7 +47,7 @@ For more information, see [Deploy Microsoft Defender for Identity with Microsoft
 
 **Persona**: Security administrators
 
-We recommend that you periodically run the **Test-MDIConfiguration** PowerShell command to test whether your domain controller Advanced Audit Policy settings are configured correctly. Misconfigured Advanced Audit Policy settings can cause gaps in the Event Log and incomplete Defender for Identity coverage.
+We recommend that you periodically run the **Test-MDIConfiguration** PowerShell command. This command tests whether your domain controller Advanced Audit Policy settings are configured correctly. Misconfigured settings can cause gaps in the Event Log and incomplete Defender for Identity coverage.
 
 For more information, see:
 
@@ -55,7 +59,7 @@ For more information, see:
 
 For more information, see:
 
-- [Microsoft Defender XDR Security operations overview](/security/operations/overview)
+- [Microsoft Defender Security operations overview](/security/operations/overview)
 - [Microsoft Defender for Identity operational guide](ops-guide.md)
 - [Daily operational guide - Microsoft Defender for Identity](ops-guide-daily.md)
 - [Weekly operational guide - Microsoft Defender for Identity](ops-guide-weekly.md)

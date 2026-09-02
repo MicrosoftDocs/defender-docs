@@ -4,6 +4,7 @@ ms.date: 08/18/2025
 ms.topic: how-to
 description: Learn how app governance in Microsoft Defender for Cloud Apps helps you hunt for resources accessed and activities carried out by apps in your environment.
 ms.reviewer: shragar
+ms.custom: sfi-image-nochange
 ---
 
 # Hunt for threats in app activities

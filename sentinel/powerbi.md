@@ -1,10 +1,13 @@
 ---
 title: Create a Power BI report from Microsoft Sentinel data
-description: Learn how to create a Power BI report using an exported query from Microsoft Sentinel. Share your report with others in the Power BI service and a Teams channel.
-author: guywi-ms
+description: Learn how to create a Power BI report from Microsoft Sentinel data by exporting a KQL query, building visualizations in Power BI Desktop, publishing to the Power BI service, and sharing the report in a Teams channel.
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
-ms.date: 10/16/2024
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security analyst, I want to create and share Power BI reports from Microsoft Sentinel data so that I can provide insights to stakeholders without granting them direct access to Microsoft Sentinel.
@@ -20,7 +23,7 @@ You can base Power BI reports on data from Microsoft Sentinel and share those re
 Microsoft Sentinel runs on Log Analytics workspaces, and you can use Kusto Query Language (KQL) to query the data.
 
 
-This article provides a scenario-based procedure to view analysis reports in Power BI for your Microsoft Sentinel data. For more information, see [Connect data sources](connect-data-sources.md) and [Visualize collected data](get-visibility.md).
+This article provides a scenario-based procedure to view analysis reports in Power BI for your Microsoft Sentinel data. For background on connecting Microsoft Sentinel to data sources, see [Connect data sources](connect-data-sources.md). For general guidance on creating visualizations in Microsoft Sentinel, see [Visualize collected data](get-visibility.md).
 
 In this article, you:
 
@@ -48,7 +51,7 @@ Create, run, and export a KQL query from Microsoft Sentinel.
 
 1. To create a simple query, in Microsoft Sentinel, select **Logs**. If your workspace is onboarded to the Microsoft Defender portal, select **General > Logs**. 
 
-1. In the query editor, under **New Query 1**, enter the following query, or any other Microsoft Sentinel query for your data:
+1. In the query editor, under **New Query 1**, enter the following query to summarize sign-in attempts by application over the last seven days, including failed and successful counts. You can also use any other Microsoft Sentinel query for your data:
    
    ```kusto
    SigninLogs
@@ -58,7 +61,7 @@ Create, run, and export a KQL query from Microsoft Sentinel.
    | sort by Failed
    ```
 
-   See more information on the following items used in the preceding example, in the Kusto documentation:
+   See more information about the operators and functions used in the sample `SigninLogs` query, in the Kusto documentation:
    - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
    - [***summarize*** operator](/kusto/query/summarize-operator?view=microsoft-sentinel&preserve-view=true)
    - [***top*** operator](/kusto/query/top-operator?view=microsoft-sentinel&preserve-view=true)
@@ -157,6 +160,8 @@ You also want to show what percentage of sign-in attempts failed for each applic
    
 ### Refresh the data and save the report
 
+Refresh the dataset to retrieve the latest Microsoft Sentinel data, and then save the report.
+
 1. Select **Refresh** to get the latest data from Microsoft Sentinel.
    
    :::image type="content" source="media/powerbi/refresh.png" alt-text="Screenshot showing the Refresh button in the ribbon.":::
@@ -167,7 +172,7 @@ You also want to show what percentage of sign-in attempts failed for each applic
 
 To create a Power BI workspace for sharing the report:
 
-1. Sign in to [powerbi.com](https://powerbi.com) with the same account you used for Power BI Desktop and Microsoft Sentinel read access.
+1. Sign in to the [Power BI service](https://powerbi.com) with the same account you used for Power BI Desktop and Microsoft Sentinel read access.
    
 1. Under **Workspaces**, select **Create a workspace**. Name the workspace *Management Reports*, and select **Save**.
    

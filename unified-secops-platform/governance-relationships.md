@@ -4,9 +4,11 @@ description: Learn how to set up governance relationships for managing multiple 
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 04/14/2026
+ms.date: 06/15/2026
 
 #customer-intent: As a security administrator for a managed security service provider (MSSP), I want to configure delegated access to my customers' tenants through governance relationships, so that I can manage their security operations without needing full administrative access.
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Configure delegated access with governance relationships for multitenant organizations (preview)
@@ -18,9 +20,9 @@ This article explains how to configure governance relationships for multitenant 
 
 ## Overview
 
-Governance relationships enable governing tenants to manage security operations across multiple customer tenants with fine-grained role assignments. This capability supports multitenant organizations (MTOs) and MSSPs that need to provide security services across multiple Microsoft Entra tenants.
+Governance relationships enable governing tenants (the home tenants that manage access) to manage security operations across multiple customer tenants (the tenants that grant delegated access) with fine-grained role assignments. This capability supports multitenant organizations (MTOs) and managed security service providers (MSSPs) that need to provide security services across multiple Microsoft Entra tenants.
 
-This is the same governance relationships model used in [Microsoft Entra ID](/entra/id-governance/tenant-governance/governance-relationships) for delegating administrative access, but extended to support Microsoft Defender XDR workloads. By configuring governance relationships for Microsoft Defender, you can assign specific security roles to groups in the governing tenant, allowing them to manage security incidents, alerts, and configurations in the governed tenant without granting full administrative access.
+Governance relationships for Microsoft Defender use the same model as [Microsoft Entra ID](/entra/id-governance/tenant-governance/governance-relationships) for delegating administrative access, but extended to support Microsoft Defender XDR workloads. By configuring governance relationships for Microsoft Defender, you can assign specific security roles to groups in the governing tenant, allowing them to manage security incidents, alerts, and configurations in the governed tenant without granting full administrative access.
 
 ### Key concepts
 
@@ -46,9 +48,9 @@ Permissions:
 
 ## Enable tenant governance settings
 
-Before you can configure delegated access, you must enable your tenant to receive governance invitations. This setting is disabled by default.
+Before you can configure delegated access, you must enable the governed tenant to receive governance invitations. This setting is disabled by default.
 
-Go to the Delegated access page and turn on the Enable invitations toggle.
+In the governed tenant in the Microsoft Defender portal, go to **System** > **Permissions** > **Delegated Access**, and turn on the **Enable invitations** toggle.
 
 :::image type="content" source="media/governance-relationships/enable-invitations.png" alt-text="Screenshot showing governance invitations enabled in tenant settings.":::
 
@@ -172,6 +174,8 @@ Assigning Microsoft Sentinel roles enables multitenant management features inclu
 
 ### Assign permissions to resource group
 
+Before you assign permissions, ensure you have the [User Access Administrator](/azure/role-based-access-control/built-in-roles/privileged#user-access-administrator) role in Azure RBAC and at least the [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator) role in Entra RBAC.
+
 Follow these steps to grant Microsoft Sentinel permissions to your delegated access groups.
 
 1. In the governed tenant, sign in to the [Azure portal](https://portal.azure.com).
@@ -195,6 +199,8 @@ Follow these steps to grant Microsoft Sentinel permissions to your delegated acc
 1. Select **Review + assign** to complete the assignment.
 
 ## Troubleshooting
+
+Use the following guidance to resolve common issues when configuring governance relationships.
 
 ### Security group not displayed when creating a template
 

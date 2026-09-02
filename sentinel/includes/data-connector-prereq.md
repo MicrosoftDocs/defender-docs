@@ -1,6 +1,7 @@
 ---
 title: Note for data connector prerequisites
 ms.author: edbaynash
+ms.reviewer: krishsa
 ms.date: 05/04/2026
 ms.topic: include
 ---

@@ -1,12 +1,15 @@
 ---
-title: Collect data from Cisco firewall devices running ASA
-description: "Use Microsoft Sentinel connectors to collect logs from Cisco firewall devices in Adaptive Security Appliance (ASA) and Common Event Format (CEF) formats."
-author: guywi-ms
-ms.date: 03/24/2025
-ms.service: microsoft-sentinel
+title: Collect data from Cisco Secure Firewall devices with ASA or FTD connectors
+description: "Learn when to use the Microsoft Sentinel connectors for Cisco Secure Firewall devices running ASA or FTD, with links to the appropriate installation steps."
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
+ms.date: 06/15/2026
+ms.service: microsoft-sentinel
 ms.topic: how-to
 ms.collection: sentinel-data-connector
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Collect data from Cisco firewall devices
@@ -21,13 +24,13 @@ To collect syslog from FTD or ASA devices, use the [Cisco ASA/FTD via AMA connec
 
 To collect CEF logs from a Cisco FTD device:
 
-1.	Install and configure the eNcore eStreamer client, which collects logs from FTD devices (via the Firewall Management Center) and converts them to Common Event Format (CEF). For more information, see the full Cisco [install guide](https://www.cisco.com/c/en/us/td/docs/security/firepower/670/api/eStreamer_enCore/eStreamereNcoreSentinelOperationsGuide_409.html).
+> [!WARNING]
+> The eNcore client is no longer being updated, and Cisco recommends the syslog format for new deployments. Use the following steps only if you specifically need the CEF path.
 
-    > [!NOTE]
-    > The eNcore client is no longer being updated, and Cisco recommends the syslog format for new deployments.
+1.	Install and configure the eNcore eStreamer client, which collects logs from FTD devices (via the Firewall Management Center) and converts them to Common Event Format (CEF). For more information, see the full [Cisco eStreamer eNcore installation guide](https://www.cisco.com/c/en/us/td/docs/security/firepower/670/api/eStreamer_enCore/eStreamereNcoreSentinelOperationsGuide_409.html).
 
 1. Install [CEF via AMA connector](connect-cef-syslog-ama.md). 
 
-## Next steps
+## Next step
 
 Learn more about [Microsoft Sentinel data connectors](connect-data-sources.md).

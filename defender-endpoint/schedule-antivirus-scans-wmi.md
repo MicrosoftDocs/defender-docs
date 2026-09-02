@@ -1,12 +1,12 @@
 ---
 title: Schedule antivirus scans using Windows Management Instrumentation
-description: Schedule antivirus scans using WMI
+description: Use Windows Management Instrumentation (WMI) to configure scheduled Microsoft Defender Antivirus scans, including scan timing, idle-only scans, remediation scheduling, and daily quick scan settings.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen
-ms.date: 10/20/2025
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.reviewer: pauhijbr, ksarens, yongrhee
 ms.subservice: ngp
 ms.topic: how-to
@@ -20,22 +20,27 @@ appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
 ---
 # Schedule antivirus scans using Windows Management Instrumentation (WMI)
 
 
-This article describes how to configure scheduled scans using WMI. To learn more about scheduling scans and about scan types, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md).
+This article describes how to configure scheduled Microsoft Defender Antivirus scans using Windows Management Instrumentation (WMI). WMI is useful for administrators who manage scan schedules programmatically or in environments where Group Policy isn't available. You'll learn how to set scan timing, configure idle-only scans, schedule remediation, and define daily quick scan times. To learn more about scheduling scans and about scan types, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md).
 
 ## Prerequisites
 
 ### Supported operating systems
+
+WMI-based scan scheduling is supported on the following operating systems:
 
 - Windows
 - Windows Server
 
 ## Use Windows Management Instrumentation (WMI) to schedule scans
 
-Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
+**MSFT_MpPreference** is the WMI class used to configure Microsoft Defender Antivirus preferences. Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
+
+The following WMI properties control scan scheduling and behavior in the Defender configuration class:
 
 ```WMI
 ScanParameters
@@ -48,7 +53,12 @@ For more information and allowed parameters, see [Windows Defender WMIv2 APIs](/
 
 ## WMI for scheduling scans when an endpoint isn't in use
 
+> [!CAUTION]
+> When you schedule scans for times when endpoints aren't in use, scans don't honor the CPU throttling configuration and will take full advantage of the resources available to complete the scan as fast as possible.
+
 Use the [Set method of the MSFT_MpPreference class](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) for the following properties:
+
+The following WMI property controls whether scans run only when the device is idle:
 
 ```WMI
 ScanOnlyIfIdleEnabled
@@ -56,13 +66,12 @@ ScanOnlyIfIdleEnabled
 
 For more information about APIs and allowed parameters, see [Windows Defender WMIv2 APIs](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal).
 
-> [!NOTE]
-> When you schedule scans for times when endpoints aren't in use, scans don't honor the CPU throttling configuration and will take full advantage of the resources available to complete the scan as fast as possible.
-
 
 ## WMI for scheduling scans to complete remediation
 
-Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
+Remediation is the follow-up action that Microsoft Defender Antivirus takes to address detected threats after a scan, such as quarantining or removing malicious files. You can schedule when remediation occurs by using the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
+
+The following WMI properties define the remediation schedule day and time:
 
 ```WMI
 RemediationScheduleDay
@@ -74,6 +83,8 @@ For more information and allowed parameters, see [Windows Defender WMIv2 APIs](/
 ## WMI for scheduling daily scans
 
 Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class for the following properties:
+
+Use this WMI property to specify the scheduled daily quick scan time:
 
 ```WMI
 ScanScheduleQuickScanTime

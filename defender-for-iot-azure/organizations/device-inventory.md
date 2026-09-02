@@ -45,7 +45,7 @@ Defender for IoT device inventory is available in the following locations:
 |Location  |Description   | Extra inventory support |
 |---------|---------|---------|
 |**Azure portal**     | OT devices detected from all cloud-connected OT sensors.      |     - If you also use [Microsoft Sentinel](iot-solution.md), incidents in Microsoft Sentinel are linked to related devices in Defender for IoT. <br><br>- Use Defender for IoT [workbooks](workbooks.md) for visibility into all cloud-connected device inventory, including related alerts and vulnerabilities.   |
-| **Microsoft Defender XDR** | Enterprise IoT devices detected by Microsoft Defender for Endpoint agents | Correlate devices across Microsoft Defender XDR in purpose-built alerts, vulnerabilities, and recommendations. |
+| **Microsoft Defender** | Enterprise IoT devices detected by Microsoft Defender for Endpoint agents | Correlate devices in Microsoft Defender in purpose-built alerts, vulnerabilities, and recommendations. |
 |**OT network sensor consoles**     |   Devices detected by that OT sensor      |    - View all detected devices across a network device map<br><br>- View related events on the **Event timeline** |
 
 For more information, see:

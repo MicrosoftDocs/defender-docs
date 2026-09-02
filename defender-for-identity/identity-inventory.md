@@ -9,8 +9,11 @@ author: AbbyMSFT
 ms.author: abbyweisberg
 ms.service: microsoft-defender-for-identity
 ms.topic: article
-ms.custom: msecd-doc-authoring-106
-ms.date: 04/15/2026
+ms.custom:
+  - msecd-doc-authoring-106
+  - sfi-ga-nochange
+  - sfi-image-nochange
+ms.date: 06/22/2026
 ms.reviewer: maelgami 
 appliesto: 
 - Microsoft Defender for Identity
@@ -111,7 +114,7 @@ The **Identities** list highlights key details for each human identity, includin
 | UPN (User Principal Name) | The unique sign-in name of the identity in an email-like format. |
 | Identity environment | Indicates whether the identity is on-premises (originates from Active Directory), Cloud only (Entra ID) or Hybrid (synced from Azure Active Directory to Microsoft Entra ID). |
 | Identity provider | The name of the identity provider. |
-| Risk score | The risk score dynamically calculated for the identity. |
+| Risk score | A score from 0 to 100 that's dynamically calculated for the identity. The score reflects how likely the identity is to be compromised and how much damage a compromise could cause. For details, see [Risk score tab](/defender-xdr/investigate-users#risk-score-tab). |
 | Criticality level | The criticality level assigned to the identity. |
 | Tags | Custom labels that help categorize identities considered high-value assets. For example, **Sensitive**, **Honeytoken**, or **Privileged Accounts** managed by a [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) (PIM) service. |
 | SID | The Security Identifier, a unique value used to identify the identity in Active Directory. |
@@ -134,18 +137,19 @@ These statistics highlight non-human identities that might need prioritization. 
 
 | Name | Description |
 | --------- | --------- |
-| Risky | The number of non-human identities with a high risk score. Risk scores are based on factors described in the [Risk score tab of the identity](/defender-xdr/investigate-non-human-identities#risk-score). |
-| Highly privileged | The number of non-human identities with high-privilege permissions, such as admin consent or broad application permissions. |
+| Risky | The number of non-human identities with a high risk score. Risk scores are based on factors described in the [Risk score tab of the identity](/defender-cloud-apps/app-governance-visibility-insights-view-apps#getting-detailed-information-on-an-app). |
+| Highly privileged | The number of non-human identities that have at least one high-privilege API permission or high-privilege Microsoft Entra role. |
 | Overprivileged | The number of non-human identities with more permissions than they use. |
 | Unused | The number of non-human identities with no recent sign-in activity. |
 | External unverified publishers | The number of non-human identities from unverified external publishers. |
 | New | The number of recently discovered non-human identities. |
+| Used by AI agents (Preview) | The number of Entra ID service principals used by AI agents. |
 
 ### Non-human identity details
 
 The **Non-Human identities** tab contains these sections:
 
-- **Entra ID**: OAuth apps registered in Microsoft Entra ID.
+- **Entra ID**: All service principals registered in Microsoft Entra ID, excluding managed identities and Microsoft first-party applications.
 - **Active Directory**: On-premises service accounts.
 - **Salesforce**: OAuth apps registered in Salesforce.
 - **Google Workspace**: OAuth apps registered in Google.
@@ -156,13 +160,16 @@ The **Identities** list highlights key details for each non-human identity, incl
 | --------- | --------- |
 | Display name | The full name of the identity as shown in the directory. |
 | Status | Shows whether the identity is enabled or disabled, and if disabled, by whom. |
-| Risk score | Shows the identity risk score (1-100). Higher values indicate greater risk. |
+| Risk score | Shows the identity risk score, from 0 to 100. Higher values indicate greater risk. |
 | Graph API access | Shows whether the identity has at least one Graph API permission. |
-| Permission type | Shows whether the identity has application (app only), dedicated, or mixed permission. |
+| Permission type | Shows the type of permissions assigned to the identity: <ul><li>**Delegated**: Delegated API permissions only, no roles.</li><li>**Application**: Application API permissions only, no roles.</li><li>**Microsoft Entra roles**: Microsoft Entra roles only, no API permissions.</li><li>**Mixed**: A combination of any two or more of the above.</li><li>**None**: No API permissions or Entra roles assigned.</li></ul> |
 | Origin | Shows whether the identity originated in the tenant or is registered in an external tenant. |
-| Content type | Shows whether the identity has admin or user-only consent. For identities with only user consent, the total consented users are shown. Identities with admin consent have broad access to all data, unless access policies and other restrictions limit that access. |
+| Consent type | Shows whether the identity has admin or user-only consent. For identities with only user consent, the total consented users are shown. Identities with admin consent have broad access to all data, unless access policies and other restrictions limit that access. |
 | Publisher | Publisher of the identity and their verification status. |
 | Last used | Last time the identity signed in. This data is tracked only back to June 1, 2022. |
+| Used by AI agents (Preview) | Shows the name of the AI agent platform whose agents use the Entra ID service principal, such as Copilot Studio or Azure AI Foundry. To view the specific Copilot Studio agent connected to the service principal, expand the OAuth app node in the [Graph tab](/defender-cloud-apps/app-governance-visibility-insights-view-apps#graph-tab). |
+
+### Respond to high-risk identities
 
 For Microsoft Entra ID identities, select **Create new policy** to set up a governance policy that automatically responds when high-risk apps appear. Use the built-in **New high risk app** template for a quick setup, or create a custom policy with risk score as a policy condition.
 

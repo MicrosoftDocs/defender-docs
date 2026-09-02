@@ -10,11 +10,12 @@ ms.localizationpriority: medium
 ms.collection: 
 - m365-security
 - tier2
-ms.custom: migrationguides
-ms.date: 03/26/2025
+ms.custom: migrationguides, msecd-doc-authoring-1014
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ai-usage: ai-assisted
 ---
 
 # Migrate servers from Microsoft Defender for Endpoint to Microsoft Defender for Servers
@@ -37,8 +38,8 @@ Before you enable Defender for Cloud, it's important to know how to manage antiv
 
 - <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus</a>
 - [Manage Microsoft Defender Antivirus in your business](configuration-management-reference-microsoft-defender-antivirus.md)
-- [Defender for Endpoint exclusions](navigate-defender-endpoint-antivirus-exclusions.md)
-- [Managing exclusions reference](managing-exclusions.md)
+- [Defender for Endpoint exclusions](defender-endpoint-exclusions-overview.md)
+- [Managing exclusions reference](defender-endpoint-exclusions-configuration-reference.md)
 - [Troubleshoot performance issues related to real-time protection](troubleshoot-performance-issues.md)
 - [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](troubleshoot-microsoft-defender-antivirus.yml)
 
@@ -49,7 +50,7 @@ To enable Defender for Servers for Azure VMs and non-Azure servers connected thr
 1. If you aren't already using Azure, plan your environment following the [Azure Well-Architected Framework](/azure/architecture/framework/).
 1. Enable [Defender for Cloud](/azure/defender-for-cloud/get-started) on your subscription.
 
-1. [Enable a Defender for Servers plan on your subscription](/azure/defender-for-cloud/enable-enhanced-security). In case you're using Defender for Servers Plan 2, make sure to also enable it on the Log Analytics workspace your machines are connected to. It enables you to use optional features, like [File Integrity Monitoring](/azure/defender-for-cloud/file-integrity-monitoring-overview).
+1. [Enable a Defender for Servers plan on your subscription](/azure/defender-for-cloud/enable-enhanced-security). In case you're using Defender for Servers Plan 2, make sure to also enable it on the Log Analytics workspace your machines are connected to. Enabling Defender for Servers Plan 2 on the Log Analytics workspace lets you use optional features, like [File Integrity Monitoring](/azure/defender-for-cloud/file-integrity-monitoring-overview).
 
 1. Make sure the [Defender for Endpoint integration](/azure/defender-for-cloud/integration-defender-for-endpoint) is enabled on your subscription. If you have preexisting Azure subscriptions, you might see one or both of the two opt-in buttons shown in the following image:
 
@@ -71,7 +72,7 @@ See [Connect your non-Azure machines to Microsoft Defender for Cloud with Defend
 
 ## How do I migrate on-premises machines to Defender for Servers?
 
-You have several options. 
+For on-premises machines, you have several onboarding options:
 
 - Use direct onboarding in Defender for Cloud. See [Connect your non-Azure machines to Microsoft Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint).
 - Create a connection to Azure using Azure Arc. See [Connect your non-Azure machines to Microsoft Defender for Cloud](/azure/defender-for-cloud/quickstart-onboard-machines).
@@ -82,7 +83,7 @@ If you're using Amazon Web Services (AWS) or Google Cloud Platform (GCP), follow
 
 1. Create a new multicloud connector on your subscription. For more information about this connector, see [AWS accounts](/azure/defender-for-cloud/quickstart-onboard-aws?pivots=env-settings) or [GCP projects](/azure/defender-for-cloud/quickstart-onboard-gcp?pivots=env-settings).
 
-1. On your multicloud connector, enable Defender for Servers on [AWS](/azure/defender-for-cloud/quickstart-onboard-aws?pivots=env-settings#prerequisites) or [GCP](/azure/defender-for-cloud/quickstart-onboard-gcp?pivots=env-settings#configure-the-servers-plan) connectors.
+1. On your multicloud connector, enable Defender for Servers on [AWS connectors](/azure/defender-for-cloud/quickstart-onboard-aws?pivots=env-settings#prerequisites) or [GCP connectors](/azure/defender-for-cloud/quickstart-onboard-gcp?pivots=env-settings#configure-the-servers-plan).
 
 1. Enable autoprovisioning on the multicloud connector for the Azure Arc agent, Defender for Endpoint extension, and Vulnerability Assessment. For Defender for Servers Plan 2, enable agentless machine scanning.
 
@@ -95,7 +96,7 @@ For more information, see the following resources:
 
 ## What happens once all migration steps are completed?
 
-After you complete the relevant migration steps, Defender for Cloud deploys the `MDE.Windows` or `MDE.Linux` extension to your Azure VMs and non-Azure machines connected through Azure Arc (including VMs in AWS and GCP compute).
+After you complete the relevant migration steps, Defender for Cloud deploys the Defender for Endpoint extension (`MDE.Windows` or `MDE.Linux`) to your Azure VMs and non-Azure machines connected through Azure Arc (including VMs in AWS and GCP compute).
 
 The extension acts as a management and deployment interface, which orchestrates and wraps the Defender for Endpoint installation scripts inside the operating system and reflects its provisioning state to the Azure management plane. The installation process recognizes an existing Defender for Endpoint installation and connects it to Defender for Cloud by automatically adding Defender for Endpoint service tags.
 

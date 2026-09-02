@@ -1,0 +1,2235 @@
+---
+title: Reference table for all data security recommendations in Microsoft Defender for Cloud
+description: This article lists all Microsoft Defender for Cloud data security recommendations that help you harden and protect your resources.
+ms.service: defender-for-cloud
+ms.topic: reference
+ms.date: 06/30/2026
+ms.custom: generated
+ai-usage: ai-assisted
+---
+
+# Data security recommendations
+
+This article lists all the data security recommendations you might see in Microsoft Defender for Cloud.
+
+The recommendations that appear in your environment are based on the resources that you're protecting and on your customized configuration. You can [see the recommendations in the portal](https://portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/5) that apply to your resources.
+
+To learn about actions that you can take in response to these recommendations, see [Remediate recommendations in Defender for Cloud](implement-security-recommendations.md).
+
+
+> [!TIP]
+> If a recommendation description says *No related policy*, usually it's because that recommendation is dependent on a different recommendation.
+>
+> For example, the recommendation *Endpoint protection health failures should be remediated* relies on the recommendation that checks whether an endpoint protection solution is installed (*Endpoint protection solution should be installed*). The underlying recommendation *does* have a policy.
+> Limiting policies to only foundational recommendations simplifies policy management.
+
+## Azure data recommendations
+
+### Azure Cosmos DB should disable public network access
+
+**Description**: Disabling public network access improves security by ensuring that your Cosmos DB account isn't exposed on the public internet. Creating private endpoints can limit exposure of your Cosmos DB account. [Learn more](/azure/cosmos-db/how-to-configure-private-endpoints#blocking-public-network-access-during-account-creation).
+(Related policy: [Azure Cosmos DB should disable public network access](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f797b37f7-06b8-444c-b1ad-fc62867f335a)).
+
+**Severity**: Medium
+
+### (Enable if required) Azure Cosmos DB accounts should use customer-managed keys to encrypt data at rest
+
+**Description**: Recommendations to use customer-managed keys for encryption of data at rest are not assessed by default, but are available to enable for applicable scenarios. Data is encrypted automatically using platform-managed keys, so the use of customer-managed keys should only be applied when obligated by compliance or restrictive policy requirements.
+To enable this recommendation, navigate to your Security Policy for the applicable scope, and update the *Effect* parameter for the corresponding policy to audit or enforce the use of customer-managed keys. Learn more in [Manage security policies](tutorial-security-policy.md).
+Use customer-managed keys to manage the encryption at rest of your Azure Cosmos DB. By default, the data is encrypted at rest with service-managed keys, but customer-managed keys (CMK) are commonly required to meet regulatory compliance standards. CMKs enable the data to be encrypted with an Azure Key Vault key created and owned by you. You have full control and responsibility for the key lifecycle, including rotation and management. Learn more about CMK encryption at <https://aka.ms/cosmosdb-cmk>.
+(Related policy: [Azure Cosmos DB accounts should use customer-managed keys to encrypt data at rest](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f1f905d99-2ab7-462c-a6b0-f709acca6c8f)).
+
+**Severity**: Low
+
+
+
+
+
+### (Enable if required) Azure Machine Learning workspaces should be encrypted with a customer-managed key (CMK)
+
+**Description**: Recommendations to use customer-managed keys for encryption of data at rest are not assessed by default, but are available to enable for applicable scenarios. Data is encrypted automatically using platform-managed keys, so the use of customer-managed keys should only be applied when obligated by compliance or restrictive policy requirements.
+To enable this recommendation, navigate to your Security Policy for the applicable scope, and update the *Effect* parameter for the corresponding policy to audit or enforce the use of customer-managed keys. Learn more in [Manage security policies](tutorial-security-policy.md).
+Manage encryption at rest of your Azure Machine Learning workspace data with customer-managed keys (CMK). By default, customer data is encrypted with service-managed keys, but CMKs are commonly required to meet regulatory compliance standards. CMKs enable the data to be encrypted with an Azure Key Vault key created and owned by you. You have full control and responsibility for the key lifecycle, including rotation and management. Learn more about CMK encryption at <https://aka.ms/azureml-workspaces-cmk>.
+(Related policy: [Azure Machine Learning workspaces should be encrypted with a customer-managed key (CMK)](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fba769a63-b8cc-4b2d-abf6-ac33c7204be8)).
+
+**Severity**: Low
+
+
+### Azure SQL Database should be running TLS version 1.2 or newer
+
+**Description**: Setting TLS version to 1.2 or newer improves security by ensuring your Azure SQL Database can only be accessed from clients using TLS 1.2 or newer. Using versions of TLS less than 1.2 is not recommended since they have well documented security vulnerabilities.
+(Related policy: [Azure SQL Database should be running TLS version 1.2 or newer](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f32e6bbec-16b6-44c2-be37-c5b672d103cf)).
+
+**Severity**: Medium
+
+### Azure SQL Managed Instances should disable public network access
+
+**Description**: Disabling public network access (public endpoint) on Azure SQL Managed Instances improves security by ensuring that they can only be accessed from inside their virtual networks or via Private Endpoints. Learn more about [public network access](https://aka.ms/mi-public-endpoint).
+(Related policy: [Azure SQL Managed Instances should disable public network access](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f9dfea752-dd46-4766-aed1-c355fa93fb91)).
+
+**Severity**: Medium
+
+### Cosmos DB accounts should use private link
+
+**Description**: Azure Private Link lets you connect your virtual network to Azure services without a public IP address at the source or destination. The Private Link platform handles the connectivity between the consumer and services over the Azure backbone network. When private endpoints are mapped to your Cosmos DB account, data leakage risks are reduced. Learn more about [private links](/azure/cosmos-db/how-to-configure-private-endpoints).
+(Related policy: [Cosmos DB accounts should use private link](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f58440f8a-10c5-4151-bdce-dfbaad4a20b7)).
+
+**Severity**: Medium
+
+
+### (Enable if required) MySQL servers should use customer-managed keys to encrypt data at rest
+
+**Description**: Recommendations to use customer-managed keys for encryption of data at rest are not assessed by default, but are available to enable for applicable scenarios. Data is encrypted automatically using platform-managed keys, so the use of customer-managed keys should only be applied when obligated by compliance or restrictive policy requirements.
+To enable this recommendation, navigate to your Security Policy for the applicable scope, and update the *Effect* parameter for the corresponding policy to audit or enforce the use of customer-managed keys. Learn more in [Manage security policies](tutorial-security-policy.md).
+Use customer-managed keys to manage the encryption at rest of your MySQL servers. By default, the data is encrypted at rest with service-managed keys, but customer-managed keys (CMK) are commonly required to meet regulatory compliance standards. CMKs enable the data to be encrypted with an Azure Key Vault key created and owned by you. You have full control and responsibility for the key lifecycle, including rotation and management.
+(Related policy: [Bring your own key data protection should be enabled for MySQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f83cef61d-dbd1-4b20-a4fc-5fbc7da10833)).
+
+**Severity**: Low
+
+### (Enable if required) PostgreSQL servers should use customer-managed keys to encrypt data at rest
+
+**Description**: Recommendations to use customer-managed keys for encryption of data at rest are not assessed by default, but are available to enable for applicable scenarios. Data is encrypted automatically using platform-managed keys, so the use of customer-managed keys should only be applied when obligated by compliance or restrictive policy requirements.
+To enable this recommendation, navigate to your Security Policy for the applicable scope, and update the *Effect* parameter for the corresponding policy to audit or enforce the use of customer-managed keys. Learn more in [Manage security policies](tutorial-security-policy.md).
+Use customer-managed keys to manage the encryption at rest of your PostgreSQL servers. By default, the data is encrypted at rest with service-managed keys, but customer-managed keys (CMK) are commonly required to meet regulatory compliance standards. CMKs enable the data to be encrypted with an Azure Key Vault key created and owned by you. You have full control and responsibility for the key lifecycle, including rotation and management.
+(Related policy: [Bring your own key data protection should be enabled for PostgreSQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f18adea5e-f416-4d0f-8aa8-d24321e3e274)).
+
+**Severity**: Low
+
+### (Enable if required) SQL managed instances should use customer-managed keys to encrypt data at rest
+
+**Description**: Recommendations to use customer-managed keys for encryption of data at rest are not assessed by default, but are available to enable for applicable scenarios. Data is encrypted automatically using platform-managed keys, so the use of customer-managed keys should only be applied when obligated by compliance or restrictive policy requirements.
+To enable this recommendation, navigate to your Security Policy for the applicable scope, and update the *Effect* parameter for the corresponding policy to audit or enforce the use of customer-managed keys. Learn more in [Manage security policies](tutorial-security-policy.md).
+Implementing Transparent Data Encryption (TDE) with your own key provides you with increased transparency and control over the TDE Protector, increased security with an HSM-backed external service, and promotion of separation of duties. This recommendation applies to organizations with a related compliance requirement.
+(Related policy: [SQL managed instances should use customer-managed keys to encrypt data at rest](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f048248b0-55cd-46da-b1ff-39efd52db260)).
+
+**Severity**: Low
+
+### (Enable if required) SQL servers should use customer-managed keys to encrypt data at rest
+
+**Description**: Recommendations to use customer-managed keys for encryption of data at rest are not assessed by default, but are available to enable for applicable scenarios. Data is encrypted automatically using platform-managed keys, so the use of customer-managed keys should only be applied when obligated by compliance or restrictive policy requirements.
+To enable this recommendation, navigate to your Security Policy for the applicable scope, and update the *Effect* parameter for the corresponding policy to audit or enforce the use of customer-managed keys. Learn more in [Manage security policies](tutorial-security-policy.md).
+Implementing Transparent Data Encryption (TDE) with your own key provides increased transparency and control over the TDE Protector, increased security with an HSM-backed external service, and promotion of separation of duties. This recommendation applies to organizations with a related compliance requirement.
+(Related policy: [SQL servers should use customer-managed keys to encrypt data at rest](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f0d134df8-db83-46fb-ad72-fe0c9428c8dd)).
+
+**Severity**: Low
+
+### (Enable if required) Storage accounts should use customer-managed key (CMK) for encryption
+
+**Description**: Recommendations to use customer-managed keys for encryption of data at rest are not assessed by default, but are available to enable for applicable scenarios. Data is encrypted automatically using platform-managed keys, so the use of customer-managed keys should only be applied when obligated by compliance or restrictive policy requirements.
+To enable this recommendation, navigate to your Security Policy for the applicable scope, and update the *Effect* parameter for the corresponding policy to audit or enforce the use of customer-managed keys. Learn more in [Manage security policies](tutorial-security-policy.md).
+Secure your storage account with greater flexibility using customer-managed keys (CMKs). When you specify a CMK, that key is used to protect and control access to the key that encrypts your data. Using CMKs provides additional capabilities to control rotation of the key encryption key or cryptographically erase data.
+(Related policy: [Storage accounts should use customer-managed key (CMK) for encryption](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f6fac406b-40ca-413b-bf8e-0bf964659c25)).
+
+**Severity**: Low
+
+### Storage account public access should be disallowed
+
+**Description:** Anonymous public read access to containers and blobs in Azure Storage is a convenient way to share data, but might present security risks. To prevent data breaches caused by undesired anonymous access, Microsoft recommends preventing public access to a storage account unless your scenario requires it.
+
+Related policy: [Storage account public access should be disallowed](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F4fa4b6c0-31ca-4c0d-b10d-24b96f62a751)
+
+**Severity**: Medium
+
+### All advanced threat protection types should be enabled in SQL managed instance advanced data security settings
+
+**Description**: It is recommended to enable all advanced threat protection types on your SQL managed instances. Enabling all types protects against SQL injection, database vulnerabilities, and any other anomalous activities.
+(No related policy)
+
+**Severity**: Medium
+
+### All advanced threat protection types should be enabled in SQL server advanced data security settings
+
+**Description**: It is recommended to enable all advanced threat protection types on your SQL servers. Enabling all types protects against SQL injection, database vulnerabilities, and any other anomalous activities.
+(No related policy)
+
+**Severity**: Medium
+
+### API Management services should use a virtual network
+
+**Description**: Azure Virtual Network deployment provides enhanced security, isolation, and allows you to place your API Management service in a non-internet routable network that you control access to. These networks can then be connected to your on-premises networks using various VPN technologies, which enable access to your backend services within the network and/or on-premises. The developer portal and API gateway can be configured to be accessible either from the Internet or only within the virtual network.
+(Related policy: [API Management services should use a virtual network](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fef619a2c-cc4d-4d03-b2ba-8c94a834d85b)).
+
+**Severity**: Medium
+
+### App Configuration should use private link
+
+**Description**: Azure Private Link lets you connect your virtual network to Azure services without a public IP address at the source or destination. The private link platform handles the connectivity between the consumer and services over the Azure backbone network. By mapping private endpoints to your app configuration instances instead of the entire service, you'll also be protected against data leakage risks. Learn more at: <https://aka.ms/appconfig/private-endpoint>.
+(Related policy: [App Configuration should use private link](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fca610c1d-041c-4332-9d88-7ed3094967c7)).
+
+**Severity**: Medium
+
+### Audit retention for SQL servers should be set to at least 90 days
+
+**Description**: Audit SQL servers configured with an auditing retention period of less than 90 days.
+(Related policy: [SQL servers should be configured with 90 days auditing retention or higher.](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f89099bee-89e0-4b26-a5f4-165451757743))
+
+**Severity**: Low
+
+### Auditing on SQL server should be enabled
+
+**Description**: Enable auditing on your SQL Server to track database activities across all databases on the server and save them in an audit log.
+(Related policy: [Auditing on SQL server should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fa6fb4358-5bf4-4ad7-ba82-2cd2f41ce5e9)).
+
+**Severity**: Low
+
+### Auto provisioning of the Log Analytics agent should be enabled on subscriptions
+
+**Description**: To monitor for security vulnerabilities and threats, Microsoft Defender for Cloud collects data from your Azure virtual machines. Data is collected by the Log Analytics agent, formerly known as the Microsoft Monitoring Agent (MMA), which reads various security-related configurations and event logs from the machine and copies the data to your Log Analytics workspace for analysis. We recommend enabling auto provisioning to automatically deploy the agent to all supported Azure VMs and any new ones that are created.
+(Related policy: [Auto provisioning of the Log Analytics agent should be enabled on your subscription](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f475aae12-b88a-4572-8b36-9b712b2b3a17)).
+
+**Severity**: Low
+
+### Azure Cache for Redis should reside within a virtual network
+
+**Description**: Azure Virtual Network (VNet) deployment provides enhanced security and isolation for your Azure Cache for Redis, as well as subnets, access control policies, and other features to further restrict access. When an Azure Cache for Redis instance is configured with a VNet, it is not publicly addressable and can only be accessed from virtual machines and applications within the VNet.
+(Related policy: [Azure Cache for Redis should reside within a virtual network](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f7d092e0a-7acd-40d2-a975-dca21cae48c4)).
+
+**Severity**: Medium
+
+### Azure Database for MySQL should have a Microsoft Entra administrator provisioned
+
+**Description**: Provision a Microsoft Entra administrator for your Azure Database for MySQL to enable Microsoft Entra authentication. Microsoft Entra authentication enables simplified permission management and centralized identity management of database users and other Microsoft services
+(Related policy: [a Microsoft Entra administrator should be provisioned for MySQL servers](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f146412e9-005c-472b-9e48-c87b72ac229e)).
+
+**Severity**: Medium
+
+### Azure Database for PostgreSQL should have a Microsoft Entra administrator provisioned
+
+**Description**: Provision a Microsoft Entra administrator for your Azure Database for PostgreSQL to enable Microsoft Entra authentication. Microsoft Entra authentication enables simplified permission management and centralized identity management of database users and other Microsoft services  
+(Related policy: [a Microsoft Entra administrator should be provisioned for PostgreSQL servers](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fb4dec045-250a-48c2-b5cc-e0c4eec8b5b4)).
+
+**Severity**: Medium
+
+### Azure Database for PostgreSQL flexible server should have Microsoft Entra authentication only enabled
+
+**Description**: Disabling local authentication methods and requiring Microsoft Entra authentication improves security by ensuring that Azure Database for PostgreSQL flexible server can be accessed by Microsoft Entra identities only (Related policy: [Azure PostgreSQL flexible server should have Microsoft Entra Only Authentication enabled](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2ffa498b91-8a7e-4710-9578-da944c68d1fe)).
+
+**Severity**: Medium
+
+### Azure Cosmos DB accounts should have firewall rules
+
+**Description**: Firewall rules should be defined on your Azure Cosmos DB accounts to prevent traffic from unauthorized sources. Accounts that have at least one IP rule defined with the virtual network filter enabled are deemed compliant. Accounts disabling public access are also deemed compliant.
+(Related policy: [Azure Cosmos DB accounts should have firewall rules](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f862e97cf-49fc-4a5c-9de4-40d4e2e7c8eb)).
+
+**Severity**: Medium
+
+### Azure Event Grid domains should use private link
+
+**Description**: Azure Private Link lets you connect your virtual network to Azure services without a public IP address at the source or destination. The private link platform handles the connectivity between the consumer and services over the Azure backbone network. By mapping private endpoints to your Event Grid domains instead of the entire service, you'll also be protected against data leakage risks. Learn more at: <https://aka.ms/privateendpoints>.
+(Related policy: [Azure Event Grid domains should use private link](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f9830b652-8523-49cc-b1b3-e17dce1127ca)).
+
+**Severity**: Medium
+
+### Azure Event Grid topics should use private link
+
+**Description**: Azure Private Link lets you connect your virtual network to Azure services without a public IP address at the source or destination. The private link platform handles the connectivity between the consumer and services over the Azure backbone network. By mapping private endpoints to your topics instead of the entire service, you'll also be protected against data leakage risks. Learn more at: <https://aka.ms/privateendpoints>.
+(Related policy: [Azure Event Grid topics should use private link](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f4b90e17e-8448-49db-875e-bd83fb6f804f)).
+
+**Severity**: Medium
+
+### Azure Machine Learning workspaces should use private link
+
+**Description**: Azure Private Link lets you connect your virtual network to Azure services without a public IP address at the source or destination. The private link platform handles the connectivity between the consumer and services over the Azure backbone network. By mapping private endpoints to your Azure Machine Learning workspaces instead of the entire service, you'll also be protected against data leakage risks. Learn more at: <https://aka.ms/azureml-workspaces-privatelink>.
+(Related policy: [Azure Machine Learning workspaces should use private link](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f40cec1dd-a100-4920-b15b-3024fe8901ab)).
+
+**Severity**: Medium
+
+### Azure SignalR Service should use private link
+
+**Description**: Azure Private Link lets you connect your virtual network to Azure services without a public IP address at the source or destination. The private link platform handles the connectivity between the consumer and services over the Azure backbone network. By mapping private endpoints to your  SignalR resources instead of the entire service, you'll also be protected against data leakage risks. Learn more at: <https://aka.ms/asrs/privatelink>.
+(Related policy: [Azure SignalR Service should use private link](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f53503636-bcc9-4748-9663-5348217f160f)).
+
+**Severity**: Medium
+
+### Azure Spring Cloud should use network injection
+
+**Description**: Azure Spring Cloud instances should use virtual network injection for the following purposes: 1. Isolate Azure Spring Cloud from Internet. 2. Enable Azure Spring Cloud to interact with systems in either on premises data centers or Azure service in other virtual networks. 3. Empower customers to control inbound and outbound network communications for Azure Spring Cloud.
+(Related policy: [Azure Spring Cloud should use network injection](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2faf35e2a4-ef96-44e7-a9ae-853dd97032c4)).
+
+**Severity**: Medium
+
+### SQL servers should have a Microsoft Entra administrator provisioned
+
+**Description**: Provision a Microsoft Entra administrator for your SQL server to enable Microsoft Entra authentication. Microsoft Entra authentication enables simplified permission management and centralized identity management of database users and other Microsoft services.
+(Related policy: [a Microsoft Entra administrator should be provisioned for SQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f1f314764-cb73-4fc9-b863-8eca98ac36e9)).
+
+**Severity**: High
+
+### Azure Synapse Workspace authentication mode should be Microsoft Entra ID Only
+
+**Description**: Azure Synapse Workspace authentication mode should be Microsoft Entra ID Only
+ Microsoft Entra ID only authentication methods improves security by ensuring that Synapse Workspaces exclusively require Microsoft Entra ID identities for authentication. [Learn more](https://aka.ms/Synapse).
+(Related policy: [Synapse Workspaces should use only Microsoft Entra ID identities for authentication](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f2158ddbe-fefa-408e-b43f-d4faef8ff3b8)).
+
+**Severity**: Medium
+
+### Code repositories should have code scanning findings resolved
+
+**Description**: Defender for DevOps has found vulnerabilities in code repositories. To improve the security posture of the repositories, it is highly recommended to remediate these vulnerabilities.
+(No related policy)
+
+**Severity**: Medium
+
+### Code repositories should have Dependabot scanning findings resolved
+
+**Description**: Defender for DevOps has found vulnerabilities in code repositories. To improve the security posture of the repositories, it is highly recommended to remediate these vulnerabilities.
+(No related policy)
+
+**Severity**: Medium
+
+### Code repositories should have infrastructure as code scanning findings resolved
+
+**Description**: Defender for DevOps has found infrastructure as code security configuration issues in repositories. The issues shown below have been detected in template files. To improve the security posture of the related cloud resources, it is highly recommended to remediate these issues.
+(No related policy)
+
+**Severity**: Medium
+
+### Code repositories should have secret scanning findings resolved
+
+**Description**: Defender for DevOps has found a secret in code repositories. This should be remediated immediately to prevent a security breach. Secrets found in repositories can be leaked or discovered by adversaries, leading to compromise of an application or service. For Azure DevOps, the Microsoft Security DevOps CredScan tool only scans builds on which it has been configured to run. Therefore, results might not reflect the complete status of secrets in your repositories.
+(No related policy)
+
+**Severity**: High
+
+### Cognitive Services accounts should enable data encryption
+
+**Description**: This policy audits any Cognitive Services accounts that are not using data encryption. For each account with storage, you should enable data encryption with either customer managed or Microsoft managed key.
+(Related policy: [Cognitive Services accounts should enable data encryption](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f2bdd0062-9d75-436e-89df-487dd8e4b3c7)).
+
+**Severity**: Low
+
+### Cognitive Services accounts should use customer owned storage or enable data encryption
+
+**Description**: This policy audits any Cognitive Services account not using customer owned storage nor data encryption. For each Cognitive Services account with storage, use either customer owned storage or enable data encryption. Aligns with Microsoft Cloud Security Benchmark.
+(Related policy: [Cognitive Services accounts should use customer owned storage or enable data encryption.](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f11566b39-f7f7-4b82-ab06-68d8700eb0a4))
+
+**Severity**: Low
+
+### Diagnostic logs in Azure Data Lake Store should be enabled
+
+**Description**: Enable logs and retain them for up to a year. This enables you to recreate activity trails for investigation purposes when a security incident occurs or your network is compromised.
+(Related policy: [Diagnostic logs in Azure Data Lake Store should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f057ef27e-665e-4328-8ea3-04b3122bd9fb)).
+
+**Severity**: Low
+
+### Diagnostic logs in Data Lake Analytics should be enabled
+
+**Description**: Enable logs and retain them for up to a year. This enables you to recreate activity trails for investigation purposes when a security incident occurs or your network is compromised.
+(Related policy: [Diagnostic logs in Data Lake Analytics should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fc95c74d9-38fe-4f0d-af86-0c7d626a315c)).
+
+**Severity**: Low
+
+### Email notification for high severity alerts should be enabled
+
+**Description**: To ensure the relevant people in your organization are notified when there is a potential security breach in one of your subscriptions, enable email notifications for high severity alerts in Defender for Cloud.
+(Related policy: [Email notification for high severity alerts should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f6e2593d9-add6-4083-9c9b-4b7d2188c899)).
+
+**Severity**: Low
+
+### Email notification to subscription owner for high severity alerts should be enabled
+
+**Description**: To ensure your subscription owners are notified when there is a potential security breach in their subscription, set email notifications to subscription owners for high severity alerts in Defender for Cloud.
+(Related policy: [Email notification to subscription owner for high severity alerts should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f0b15565f-aa9e-48ba-8619-45960f2c314d)).
+
+**Severity**: Medium
+
+### Enforce SSL connection should be enabled for MySQL database servers
+
+**Description**: Azure Database for MySQL supports connecting your Azure Database for MySQL server to client applications using Secure Sockets Layer (SSL).
+Enforcing SSL connections between your database server and your client applications helps protect against 'man in the middle' attacks by encrypting the data stream between the server and your application.
+This configuration enforces that SSL is always enabled for accessing your database server.
+(Related policy: [Enforce SSL connection should be enabled for MySQL database servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fe802a67a-daf5-4436-9ea6-f6d821dd0c5d)).
+
+**Severity**: Medium
+
+### Enforce SSL connection should be enabled for PostgreSQL database servers
+
+**Description**: Azure Database for PostgreSQL supports connecting your Azure Database for PostgreSQL server to client applications using Secure Sockets Layer (SSL).
+Enforcing SSL connections between your database server and your client applications helps protect against 'man in the middle' attacks by encrypting the data stream between the server and your application.
+This configuration enforces that SSL is always enabled for accessing your database server.
+(Related policy: [Enforce SSL connection should be enabled for PostgreSQL database servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fd158790f-bfb0-486c-8631-2dc6b4e8e6af)).
+
+**Severity**: Medium
+
+### Function apps should have vulnerability findings resolved
+
+**Description**: Runtime vulnerability scanning for functions scans your function apps for security vulnerabilities and exposes detailed findings. Resolving the vulnerabilities can greatly improve your serverless applications security posture and protect them from attacks.
+(No related policy)
+
+**Severity**: High
+
+### Geo-redundant backup should be enabled for Azure Database for MySQL
+
+**Description**: Azure Database for MySQL allows you to choose the redundancy option for your database server.
+It can be set to a geo-redundant backup storage in which the data is not only stored within the region in which your server is hosted, but is also replicated to a paired region to provide recovery options in case of a region failure.
+Configuring geo-redundant storage for backup is only allowed when creating a server.
+(Related policy: [Geo-redundant backup should be enabled for Azure Database for MySQL](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f82339799-d096-41ae-8538-b108becf0970)).
+
+**Severity**: Low
+
+### Geo-redundant backup should be enabled for Azure Database for PostgreSQL
+
+**Description**: Azure Database for PostgreSQL allows you to choose the redundancy option for your database server.
+It can be set to a geo-redundant backup storage in which the data is not only stored within the region in which your server is hosted, but is also replicated to a paired region to provide recovery options in case of a region failure.
+Configuring geo-redundant storage for backup is only allowed when creating a server.
+(Related policy: [Geo-redundant backup should be enabled for Azure Database for PostgreSQL](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f48af4db5-9b8b-401c-8e74-076be876a430)).
+
+**Severity**: Low
+
+### GitHub repositories should have Code scanning enabled
+
+**Description**: GitHub uses code scanning to analyze code in order to find security vulnerabilities and errors in code. Code scanning can be used to find, triage, and prioritize fixes for existing problems in your code. Code scanning can also prevent developers from introducing new problems. Scans can be scheduled for specific days and times, or scans can be triggered when a specific event occurs in the repository, such as a push. If code scanning finds a potential vulnerability or error in code, GitHub displays an alert in the repository.   A vulnerability is a problem in a project's code that could be exploited to damage the confidentiality, integrity, or availability of the project.
+(No related policy)
+
+**Severity**: Medium
+
+### GitHub repositories should have Dependabot scanning enabled
+
+**Description**: GitHub sends Dependabot alerts when it detects vulnerabilities in code dependencies that affect repositories. A vulnerability is a problem in a project's code that could be exploited to damage the confidentiality, integrity, or availability of the project or other projects that use its code. Vulnerabilities vary in type, severity, and method of attack. When code depends on a package that has a security vulnerability, this vulnerable dependency can cause a range of problems.
+(No related policy)
+
+**Severity**: Medium
+
+### GitHub repositories should have Secret scanning enabled
+
+**Description**: GitHub scans repositories for known types of secrets, to prevent fraudulent use of secrets that were accidentally committed to repositories. Secret scanning will scan the entire Git history on all branches present in the GitHub repository for any secrets. Examples of secrets are tokens and private keys that a service provider can issue for authentication. If a secret is checked into a repository, anyone who has read access to the repository can use the secret to access the external service with those privileges. Secrets should be stored in a dedicated, secure location outside the repository for the project.
+(No related policy)
+
+**Severity**: High
+
+### Microsoft Defender for Azure SQL Database servers should be enabled
+
+**Description**: Microsoft Defender for SQL is a unified package that provides advanced SQL security capabilities.
+It includes functionality for surfacing and mitigating potential database vulnerabilities, detecting anomalous activities that could indicate a threat to your database, and discovering and classifying sensitive data.
+
+Protections from this plan are charged as shown on the [Defender plans](https://aka.ms/pricing-security-center) page. If you don't have any Azure SQL Database servers in this subscription, you won't be charged. If you later create Azure SQL Database servers on this subscription, they'll automatically be protected and charges will begin. Learn about the [pricing details per region](https://aka.ms/pricing-security-center).
+
+Learn more in [Introduction to Microsoft Defender for SQL](defender-for-sql-introduction.md).
+(Related policy: [Azure Defender for Azure SQL Database servers should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fmicrosoft.authorization%2fpolicyDefinitions%2f7fe3b40f-802b-4cdd-8bd4-fd799c948cc2)).
+
+**Severity**: High
+
+### Microsoft Defender for DNS should be enabled
+
+**Description**: Microsoft Defender for DNS provides an additional layer of protection for your cloud resources by continuously monitoring all DNS queries from your Azure resources. Defender for DNS alerts you about suspicious activity at the DNS layer. Learn more in [Introduction to Microsoft Defender for DNS](defender-for-dns-introduction.md). Enabling this Defender plan results in charges. Learn about the pricing details per region on Defender for Cloud's pricing page: [Defender for Cloud Pricing](https://azure.microsoft.com/services/defender-for-cloud/#pricing).
+(No related policy)
+
+**Severity**: High
+
+### Microsoft Defender for open-source relational databases should be enabled
+
+**Description**: Microsoft Defender for open-source relational databases detects anomalous activities indicating unusual and potentially harmful attempts to access or exploit databases. Learn more in [Introduction to Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md).
+
+Enabling this plan will result in charges for protecting your open-source relational databases. If you don't have any open-source relational databases in this subscription, no charges will be incurred. If you create any open-source relational databases on this subscription in the future, they will automatically be protected and charges will begin at that time.
+(No related policy)
+
+**Severity**: High
+
+### Microsoft Defender for Resource Manager should be enabled
+
+**Description**: Microsoft Defender for Resource Manager automatically monitors the resource management operations in your organization. Defender for Cloud detects threats and alerts you about suspicious activity. Learn more in [Introduction to Microsoft Defender for Resource Manager](defender-for-resource-manager-introduction.md). Enabling this Defender plan results in charges. Learn about the pricing details per region on Defender for Cloud's pricing page: [Defender for Cloud Pricing](https://azure.microsoft.com/services/defender-for-cloud/#pricing).
+(No related policy)
+
+**Severity**: High
+
+### Microsoft Defender for SQL on machines should be enabled on workspaces
+
+**Description**: Microsoft Defender for servers brings threat detection and advanced defenses for your Windows and Linux machines.
+With this Defender plan enabled on your subscriptions but not on your workspaces, you're paying for the full capability of Microsoft Defender for servers but missing out on some of the benefits.
+When you enable Microsoft Defender for servers on a workspace, all machines reporting to that workspace will be billed for Microsoft Defender for servers - even if they're in subscriptions without Defender plans enabled. Unless you also enable Microsoft Defender for servers on the subscription, those machines won't be able to take advantage of just-in-time VM access, adaptive application controls, and network detections for Azure resources.
+Learn more in [Introduction to Microsoft Defender for servers](defender-for-servers-introduction.md).
+(No related policy)
+
+**Severity**: Medium
+
+### Microsoft Defender for SQL servers on machines should be enabled
+
+**Description**: Microsoft Defender for SQL is a unified package that provides advanced SQL security capabilities.
+It includes functionality for surfacing and mitigating potential database vulnerabilities, detecting anomalous activities that could indicate a threat to your database, and discovering and classifying sensitive data.
+
+Remediating this recommendation will result in charges for protecting your SQL servers on machines. If you don't have any SQL servers on machines in this subscription, no charges will be incurred.
+If you create any SQL servers on machines on this subscription in the future, they will automatically be protected and charges will begin at that time.
+[Learn more about Microsoft Defender for SQL servers on machines.](/azure/azure-sql/database/advanced-data-security)
+(Related policy: [Azure Defender for SQL servers on machines should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fmicrosoft.authorization%2fpolicyDefinitions%2f6581d072-105e-4418-827f-bd446d56421b)).
+
+**Severity**: High
+
+### Microsoft Defender for SQL should be enabled for unprotected Azure SQL servers
+
+**Description**: Microsoft Defender for SQL is a unified package that provides advanced SQL security capabilities. It surfaces and mitigates potential database vulnerabilities, and detects anomalous activities that could indicate a threat to your database. Microsoft Defender for SQL is billed as shown on [pricing details per region](https://aka.ms/pricing-security-center).
+(Related policy: [Advanced data security should be enabled on your SQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fmicrosoft.authorization%2fpolicydefinitions%2fabfb4388-5bf4-4ad7-ba82-2cd2f41ceae9)).
+
+**Severity**: High
+
+### Microsoft Defender for SQL should be enabled for unprotected SQL Managed Instances
+
+**Description**: Microsoft Defender for SQL is a unified package that provides advanced SQL security capabilities. It surfaces and mitigates potential database vulnerabilities, and detects anomalous activities that could indicate a threat to your database. Microsoft Defender for SQL is billed as shown on [pricing details per region](https://aka.ms/pricing-security-center).
+(Related policy: [Advanced data security should be enabled on SQL Managed Instance](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fabfb7388-5bf4-4ad7-ba99-2cd2f41cebb9)).
+
+**Severity**: High
+
+### Microsoft Defender for Storage should be enabled
+
+**Description**: Microsoft Defender for storage detects unusual and potentially harmful attempts to access or exploit storage accounts.
+
+Protections from this plan are charged as shown on the **Defender plans** page. If you don't have any Azure Storage accounts in this subscription, you won't be charged. If you later create Azure Storage accounts on this subscription, they'll automatically be protected and charges will begin. Learn about the [pricing details per region](https://aka.ms/pricing-security-center).
+Learn more in [Introduction to Microsoft Defender for Storage](defender-for-storage-introduction.md).
+(Related policy: [Azure Defender for Storage should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fmicrosoft.authorization%2fpolicyDefinitions%2f308fbb08-4ab8-4e67-9b29-592e93fb94fa)).
+
+**Severity**: High
+
+### Network Watcher should be enabled
+
+**Description**: Network Watcher is a regional service that enables you to monitor and diagnose conditions at a network scenario level in, to, and from Azure. Scenario level monitoring enables you to diagnose problems at an end-to-end network level view. Network diagnostic and visualization tools available with Network Watcher help you understand, diagnose, and gain insights to your network in Azure.
+(Related policy: [Network Watcher should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fb6e2945c-0b7b-40f5-9233-7a5323b5cdc6)).
+
+**Severity**: Low
+
+### Private endpoint connections on Azure SQL Database should be enabled
+
+**Description**: Private endpoint connections enforce secure communication by enabling private connectivity to Azure SQL Database.
+(Related policy: [Private endpoint connections on Azure SQL Database should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f7698e800-9299-47a6-b3b6-5a0fee576eed)).
+
+**Severity**: Medium
+
+### Private endpoint should be enabled for MySQL servers
+
+**Description**: Private endpoint connections enforce secure communication by enabling private connectivity to Azure Database for MySQL.
+Configure a private endpoint connection to enable access to traffic coming only from known networks and prevent access from all other IP addresses, including within Azure.
+(Related policy: [Private endpoint should be enabled for MySQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f7595c971-233d-4bcf-bd18-596129188c49)).
+
+**Severity**: Medium
+
+### Private endpoint should be enabled for PostgreSQL servers
+
+**Description**: Private endpoint connections enforce secure communication by enabling private connectivity to Azure Database for PostgreSQL.
+Configure a private endpoint connection to enable access to traffic coming only from known networks and prevent access from all other IP addresses, including within Azure.
+(Related policy: [Private endpoint should be enabled for PostgreSQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f0564d078-92f5-4f97-8398-b9f58a51f70b)).
+
+**Severity**: Medium
+
+### Public network access on Azure SQL Database should be disabled
+
+**Description**: Disabling the public network access property improves security by ensuring your Azure SQL Database can only be accessed from a private endpoint. This configuration denies all logins that match IP or virtual network based firewall rules.
+(Related policy: [Public network access on Azure SQL Database should be disabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f1b8ca024-1d5c-4dec-8995-b1a932b41780)).
+
+**Severity**: Medium
+
+### Public network access should be disabled for Cognitive Services accounts
+
+**Description**: This policy audits any Cognitive Services account in your environment with public network access enabled. Public network access should be disabled so that only connections from private endpoints are allowed.
+(Related policy: [Public network access should be disabled for Cognitive Services accounts](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f0725b4dd-7e76-479c-a735-68e7ee23d5ca)).
+
+**Severity**: Medium
+
+### Public network access should be disabled for MySQL servers
+
+**Description**: Disable the public network access property to improve security and ensure your Azure Database for MySQL can only be accessed from a private endpoint. This configuration strictly disables access from any public address space outside of Azure IP range, and denies all logins that match IP or virtual network-based firewall rules.
+(Related policy: [Public network access should be disabled for MySQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fd9844e8a-1437-4aeb-a32c-0c992f056095)).
+
+**Severity**: Medium
+
+### Public network access should be disabled for PostgreSQL servers
+
+**Description**: Disable the public network access property to improve security and ensure your Azure Database for PostgreSQL can only be accessed from a private endpoint. This configuration disables access from any public address space outside of Azure IP range, and denies all logins that match IP or virtual network-based firewall rules.
+(Related policy: [Public network access should be disabled for PostgreSQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fb52376f7-9612-48a1-81cd-1ffe4b61032c)).
+
+**Severity**: Medium
+
+### Redis Cache should allow access only via SSL
+
+**Description**: Enable only connections via SSL to Redis Cache. Use of secure connections ensures authentication between the server and the service and protects data in transit from network layer attacks such as man-in-the-middle, eavesdropping, and session-hijacking.
+(Related policy: [Only secure connections to your Azure Cache for Redis should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f22bee202-a82f-4305-9a2a-6d7f44d4dedb)).
+
+**Severity**: High
+
+### SQL databases should have vulnerability findings resolved
+
+**Description**: SQL Vulnerability assessment scans your database for security vulnerabilities, and exposes any deviations from best practices such as misconfigurations, excessive permissions, and unprotected sensitive data. Resolving the vulnerabilities found can greatly improve your database security posture. [Learn more](https://aka.ms/SQL-Vulnerability-Assessment/)
+(Related policy: [Vulnerabilities on your SQL databases should be remediated](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fmicrosoft.authorization%2fpolicydefinitions%2ffeedbf84-6b99-488c-acc2-71c829aa5ffc)).
+
+**Severity**: High
+
+### SQL managed instances should have vulnerability assessment configured
+
+**Description**: Vulnerability assessment can discover, track, and help you remediate potential database vulnerabilities.
+(Related policy: [Vulnerability assessment should be enabled on SQL Managed Instance](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f1b7aa243-30e4-4c9e-bca8-d0d3022b634a)).
+
+**Severity**: High
+
+### SQL servers on machines should have vulnerability findings resolved
+
+**Description**: SQL Vulnerability assessment scans your database for security vulnerabilities, and exposes any deviations from best practices such as misconfigurations, excessive permissions, and unprotected sensitive data. Resolving the vulnerabilities found can greatly improve your database security posture. [Learn more](https://aka.ms/explore-vulnerability-assessment-reports/)
+(Related policy: [Vulnerabilities on your SQL servers on machine should be remediated](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fmicrosoft.authorization%2fpolicydefinitions%2f6ba6d016-e7c3-4842-b8f2-4992ebc0d72d)).
+
+**Severity**: High
+
+### SQL servers should have a Microsoft Entra administrator provisioned
+
+**Description**: Provision a Microsoft Entra administrator for your SQL server to enable Microsoft Entra authentication. Microsoft Entra authentication enables simplified permission management and centralized identity management of database users and other Microsoft services.
+(Related policy: [a Microsoft Entra administrator should be provisioned for SQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f1f314764-cb73-4fc9-b863-8eca98ac36e9)).
+
+**Severity**: High
+
+### SQL servers should have vulnerability assessment configured
+
+**Description**: Vulnerability assessment can discover, track, and help you remediate potential database vulnerabilities.
+(Related policy: [Vulnerability assessment should be enabled on your SQL servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fef2a8f2a-b3d9-49cd-a8a8-9a3aaaf647d9)).
+
+**Severity**: High
+
+### Storage account should use a private link connection
+
+**Description**: Private links enforce secure communication, by providing private connectivity to the storage account
+(Related policy: [Storage account should use a private link connection](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f6edd7eda-6dd8-40f7-810d-67160c639cd9)).
+
+**Severity**: Medium
+
+### Storage accounts should be migrated to new Azure Resource Manager resources
+
+**Description**: To benefit from new capabilities in Azure Resource Manager, you can migrate existing deployments from the Classic deployment model. Resource Manager enables security enhancements such as: stronger access control (RBAC), better auditing, ARM-based deployment and governance, access to managed identities, access to key vault for secrets, Azure AD-based authentication, and support for tags and resource groups for easier security management. [Learn more](/azure/virtual-machines/windows/migration-classic-resource-manager-overview)
+(Related policy: [Storage accounts should be migrated to new Azure Resource Manager resources](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f37e0d2fe-28a5-43d6-a273-67d37d1f5606)).
+
+**Severity**: Low
+
+### Storage accounts should prevent shared key access
+
+**Description**: Audit requirement of Microsoft Entra ID (Microsoft Entra ID) to authorize requests for your storage account. By default, requests can be authorized with either Microsoft Entra ID credentials, or by using the account access key for Shared Key authorization. Of these two types of authorization, Microsoft Entra ID provides superior security and ease of use over shared Key, and is recommended by Microsoft.
+(Related policy: [policy](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%8c6a50c6-9ffd-4ae7-986f-5fa6111f9a54))
+
+> [!NOTE]
+> Some Azure services still require Shared Key access to function. For example, Microsoft Configuration Manager (SCCM) Cloud Management Gateway (CMG) uses Shared Key-based authorization for its underlying storage accounts. Disabling Shared Key access on storage accounts used by CMG breaks CMG functionality. If you use CMG or other services that depend on Shared Key access, [exempt those storage accounts](exempt-resource.md) from this recommendation rather than applying the remediation. Keep the related Azure Policy in **Audit** mode instead of **Deny** for these accounts, and document the business justification for the exception.
+
+**Severity**: Medium
+
+### Storage accounts should restrict network access using virtual network rules
+
+**Description**: Protect your storage accounts from potential threats using virtual network rules as a preferred method instead of IP-based filtering. Disabling IP-based filtering prevents public IPs from accessing your storage accounts.
+(Related policy: [Storage accounts should restrict network access using virtual network rules](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f2a1a9cdf-e04d-429a-8416-3bfb72a1b26f)).
+
+**Severity**: Medium
+
+### Subscriptions should have a contact email address for security issues
+
+**Description**: To ensure the relevant people in your organization are notified when there is a potential security breach in one of your subscriptions, set a security contact to receive email notifications from Defender for Cloud.
+(Related policy: [Subscriptions should have a contact email address for security issues](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f4f4f78b8-e367-4b10-a341-d9a4ad5cf1c7))
+
+**Severity**: Low
+
+### Transparent Data Encryption on SQL databases should be enabled
+
+**Description**: Enable transparent data encryption to protect data-at-rest and meet compliance requirements
+(Related policy: [Transparent Data Encryption on SQL databases should be enabled](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f17k78e20-9358-41c9-923c-fb736d382a12)).
+
+**Severity**: Low
+
+### VM Image Builder templates should use private link
+
+**Description**: Audit VM Image Builder templates that do not have a virtual network configured. When a virtual network is not configured, a public IP is created and used instead, which might directly expose resources to the internet and increase the potential attack surface.
+(Related policy: [VM Image Builder templates should use private link](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f2154edb9-244f-4741-9970-660785bccdaa)).
+
+**Severity**: Medium
+
+### Web Application Firewall (WAF) should be enabled for Application Gateway
+
+**Description**: Deploy Azure Web Application Firewall (WAF) in front of public facing web applications for additional inspection of incoming traffic. Web Application Firewall (WAF) provides centralized protection of your web applications from common exploits and vulnerabilities such as SQL injections, Cross-Site Scripting, local and remote file executions. You can also restrict access to your web applications by countries/regions, IP address ranges, and other http(s) parameters via custom rules.
+(Related policy: [Web Application Firewall (WAF) should be enabled for Application Gateway](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f564feb30-bf6a-4854-b4bb-0d2d2d1e6c66)).
+
+**Severity**: Low
+
+### Web Application Firewall (WAF) should be enabled for Azure Front Door Service service
+
+**Description**: Deploy Azure Web Application Firewall (WAF) in front of public facing web applications for additional inspection of incoming traffic. Web Application Firewall (WAF) provides centralized protection of your web applications from common exploits and vulnerabilities such as SQL injections, Cross-Site Scripting, local and remote file executions. You can also restrict access to your web applications by countries/regions, IP address ranges, and other http(s) parameters via custom rules.
+(Related policy: [Web Application Firewall (WAF) should be enabled for Azure Front Door Service?service](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f055aa869-bc98-4af8-bafc-23f1ab6ffe2c))
+
+**Severity**: Low
+
+
+### Geo-redundant backups should be enabled for PostgreSQL Servers
+
+**Description**: **What is geo-redundant backup?** Geo-redundant backup replicates server backups to a paired Azure region, providing resilience against regional failures.
+
+**Why is it a security concern?** If geo-redundant backups are disabled, a regional outage could result in data loss and extended downtime, impacting availability and compliance.
+
+**How could attackers exploit it or how could it lead to data breaches?** While not directly exploitable, lack of geo-redundancy increases the impact of disasters or targeted attacks on a single region.
+
+**Severity**: Low
+
+### require_secure_transport should be set to **on** for Azure Database for PostgreSQL servers
+
+**Description**: **What is require_secure_transport?** require_secure_transport is a server-level parameter that enforces the use of SSL/TLS for all client connections to PostgreSQL. When set to on, clients must connect using encrypted channels.
+
+**Why is it a security concern?** If this setting is disabled (off), clients may connect over unencrypted channels, exposing sensitive data such as credentials, queries, and results to interception or manipulation.
+
+**How could attackers exploit it or how could it lead to data breaches?** An attacker on the network could perform a man-in-the-middle attack, intercepting or altering data exchanged between the client and server if encryption is not enforced.
+
+**Severity**: High
+
+### Private endpoint should be configured for Azure Database for PostgreSQL Servers
+
+**Description**: 
+
+**What is a private endpoint?** A private endpoint in Azure allows resources to be accessed securely over a private IP address within a virtual network. For Azure Database for PostgreSQL servers, configuring a private endpoint ensures that database traffic does not traverse the public internet.
+
+**Why is it a security concern?** Without a private endpoint, the server may be exposed to public network access, increasing the risk of unauthorized access, data interception, and denial-of-service attacks.
+
+**How could attackers exploit it or how could it lead to data breaches?** An attacker could scan public IP ranges to discover exposed servers and attempt brute-force or exploit-based attacks. Public exposure also increases the risk of data exfiltration via compromised clients.
+
+**Severity**: High
+
+### 'Allow access to Azure services' should be disabled for PostgreSQL Servers
+
+**Description**: 
+
+**What is 'Allow access to Azure services'?** This setting creates a firewall rule that permits all Azure services to connect to the PostgreSQL server. While convenient, it introduces significant risk by allowing connections from any Azure subscription.
+
+**Why is it a security concern?** Enabling this setting bypasses network isolation controls, potentially exposing the database to unauthorized access from external Azure tenants.
+
+**How could attackers exploit it or how could it lead to data breaches?** An attacker operating from another Azure subscription could attempt brute-force attacks or exploit vulnerabilities if this rule is enabled.
+
+**Severity**: High
+
+### Public IP access should be disabled for Azure Database for PostgreSQL Servers
+
+**Description**: 
+
+**What is public network access?** Public network access allows clients to connect to the PostgreSQL server over the internet using its public IP address. While convenient, it introduces significant risk by exposing the server to external attacks.
+
+**Why is it a security concern?** If public access is enabled, attackers can scan IP ranges and attempt brute-force or exploit-based attacks against the server.
+
+**How could attackers exploit it or how could it lead to data breaches?** An attacker could gain unauthorized access or disrupt service availability by exploiting vulnerabilities exposed through public endpoints.
+
+**Severity**: Medium
+
+### pgaudit.log_level should be set to “log” for Azure Database for PostgreSQL Servers
+
+**Description**: 
+
+**What is pgaudit.log_level?** pgaudit.log_level is a configuration parameter that determines the PostgreSQL log level used for audit messages generated by the pgaudit extension. Valid values include log, notice, warning, and info.
+
+**Why is it a security concern?** If pgaudit.log_level is set to a level other than log, audit messages may be suppressed or redirected, reducing visibility into critical database activity. This can hinder detection of suspicious behavior and delay incident response.
+
+**How could attackers exploit it or how could it lead to data breaches?** An attacker could perform unauthorized actions that go unlogged if the audit level is set too low or too high, bypassing monitoring systems and forensic tools.
+
+**Note:** This recommendation is relevant only if the pgaudit extension is installed. The pgaudit extension must be installed per database, but the pgaudit.log_level setting is configured at the server level.
+
+**Severity**: Medium
+
+### pgaudit.log should include role, ddl, and misc for Azure Database for PostgreSQL Servers
+
+**Description**: 
+
+**What is pgaudit.log?** pgaudit.log is a configuration parameter that defines which classes of statements are logged by the pgaudit extension. Common classes include READ, WRITE, ROLE, DDL, and MISC.
+
+**Why is it a security concern?** If ROLE, DDL, and MISC are not included in pgaudit.log, critical operations such as privilege changes, schema modifications, and session-level commands may go unlogged. This reduces visibility into potentially malicious or unauthorized activity.
+
+**How could attackers exploit it or how could it lead to data breaches?** An attacker could escalate privileges, alter database structure, or execute session-level commands without detection if these classes are excluded from audit logging.
+
+**Note:** This recommendation is relevant only if the pgaudit extension is installed. The pgaudit extension must be installed per database, but the pgaudit.log setting is configured at the server level.
+
+**Severity**: High
+
+### pgaudit.log_statement_once should be set to “on” for Azure Database for PostgreSQL Servers
+
+**Description**: 
+
+**What is pgaudit.log_statement_once?** pgaudit.log_statement_once is a configuration parameter that controls whether audit logs include repeated statements more than once per session. When set to on, only the first occurrence of a repeated statement is logged.
+
+**Why is it a security concern?** If this setting is disabled (off), repeated statements may flood the audit logs, making it harder to identify meaningful activity and increasing storage and processing overhead.
+
+**How could attackers exploit it or how could it lead to data breaches?** While not directly exploitable, excessive logging can obscure malicious activity in a flood of benign entries, delaying detection and response.
+
+**Note:** This recommendation is relevant only if the pgaudit extension is installed. The pgaudit extension must be installed per database, but the pgaudit.log_statement_once setting is configured at the server level.
+
+**Severity**: Medium
+
+### pgaudit.log_statement should be set to “on” for Azure Database for PostgreSQL Servers
+
+**Description**: 
+
+**What is pgaudit.log_statement?** pgaudit.log_statement is a configuration parameter that controls whether the full SQL statement text is included in audit logs generated by the pgaudit extension. When set to on, it ensures that each logged action includes the exact command executed.
+
+**Why is it a security concern?** If pgaudit.log_statement is not set to on, audit logs may lack the actual SQL statements, making it difficult to understand what actions were performed. This reduces the effectiveness of monitoring and incident response.
+
+**How could attackers exploit it or how could it lead to data breaches?** Without full statement logging, malicious or unauthorized queries may be recorded only as generic actions, obscuring the true intent and impact of the activity.
+
+**Note:** This recommendation is relevant only if the pgaudit extension is installed. The pgaudit extension must be installed per database, but the pgaudit.log_statement setting is configured at the server level.
+
+**Severity**: Medium
+
+### logfiles.retention_days should be greater than 3 for PostgreSQL Servers
+
+**Description**: 
+
+**What is logfiles.retention_days?** This parameter defines how many days PostgreSQL server logs are retained. The default is 3 days, which may be insufficient for compliance or investigation needs.
+
+**Why is it a security concern?** If logs are purged too quickly, security teams may not have enough historical data to detect patterns, investigate incidents, or meet regulatory requirements.
+
+**How could attackers exploit it or how could it lead to data breaches?** Attackers could rely on short retention periods to cover their tracks, knowing that evidence will be deleted quickly.
+
+**Severity**: Medium
+
+### connection_throttle should be set to “on” for PostgreSQL Servers
+
+**Description**: 
+
+**What is connection_throttle?** connection_throttle is a PostgreSQL configuration parameter that controls whether connection throttling is enabled. When set to on, the server can limit excessive connection attempts, reducing risk from brute-force or DoS attacks.
+
+**Why is it a security concern?** If disabled (off), attackers can flood the server with connection attempts, potentially exhausting resources and causing downtime.
+
+**How could attackers exploit it or how could it lead to data breaches?** Attackers could launch a DoS attack by opening thousands of connections, impacting availability and possibly creating conditions for privilege escalation during recovery.
+
+**Severity**: Medium
+
+## AWS data recommendations
+
+### 'Delete on termination' setting should be enabled for EBS volumes attached instance
+
+**Description**: Defender for Cloud identified a missing 'Delete on termination setting' EBS volume attached instance. This setting automatically removes the instance's primary storage upon termination. Without it, orphaned volumes may retain sensitive data, increasing the risk of unauthorized access and compliance issues.
+
+**Severity**: Low
+
+### Access logging should be enabled for LightSail buckets
+
+**Description**: Defender for Cloud identified that access logging is not configured on your LightSail bucket. Access logging records activities performed on the bucket and helps verify that only authorized actions occur. Without it, unauthorized access may go undetected, reducing security visibility and complicating forensic investigations and incident response.
+
+**Severity**: Low
+
+### Audit logs export should be enabled on Amazon DocumentDB clusters
+
+**Description**: Defender for Cloud identified that audit log export to CloudWatch is disabled in Amazon DocumentDB clusters. Audit logs capture critical information about user and system activities that support forensic analysis during security incidents. Without this information, there is an increased risk that unauthorized actions may go undetected, potentially delaying incident response and remediation.
+
+**Severity**: Low
+
+### Auto minor version upgrades should be enabled on MemoryDB clusters
+
+**Description**: Defender for Cloud identified MemoryDB cluster without auto minor-version upgrades enabled. MemoryDB clusters rely on these upgrades to automatically install essential security patches and minor software improvements. Without this automation, clusters could remain vulnerable to security issues. Enabling the upgrade process helps maintain a robust security posture.
+
+**Severity**: Low
+
+### Automated backup policies should be enabled on AlloyDB clusters
+
+**Description**: Defender for Cloud identified that the automated backup policy is disabled for the AlloyDB cluster, meaning daily snapshots for recovery are not automatically created. Without these backups, your clusters are exposed to risks such as data loss from accidental deletion or ransomware, which could compromise disaster recovery and compliance requirements.
+
+**Severity**: Medium
+
+### Automated snapshot retention should be enabled for Redshift clusters
+
+**Description**: Defender for Cloud identified that automated snapshot retention is not enabled for your Amazon Redshift cluster. Automated snapshots provide point-in-time recovery capabilities for your data warehouse. Without proper retention, critical recovery data may be lost, increasing the risk of data loss from accidental deletion, corruption, or ransomware attacks, and potentially violating compliance requirements.
+
+**Severity**: Low
+
+### Automatic backups should be enabled for Elasticache clusters
+
+**Description**: Defender for Cloud identified that automatic backups are not enabled for your Elasticache clusters. Elasticache clusters are critical caching resources that, without regular backups, are vulnerable to data loss from accidental or malicious deletions. This poses a risk of extended downtime and compromised data integrity, potentially impacting overall service reliability. We recommend enabling automatic backups to safeguard your data and maintain operational continuity.
+
+**Severity**: Medium
+
+### Automatic backups should be enabled for serverless Elasticache
+
+**Description**: Defender for Cloud identified that automatic backups are not enabled for your serverless ElastiCache. Without periodic snapshots, your ElastiCache lacks a recovery point to restore data in cases of accidental or malicious deletion, increasing the risk of irrecoverable data loss. Enabling automatic backups minimizes potential disruptions and protects the integrity of your cached data.
+
+**Severity**: Medium
+
+### Automatic backups should be enabled on FSx for Lustre
+
+**Description**: Defender for Cloud identified that an FSx for Lustre file system that does not have automatic backups enabled. Automatic backups are scheduled, incremental snapshots that preserve recovery points. Without these backups, the file system is at risk of irreversible data loss from accidental deletions, corruption, or malicious activities. Enabling automatic backups is essential for maintaining data resilience and ensuring business continuity.
+
+**Severity**: Medium
+
+### Automatic backups should be enabled on FSx for OpenZFS
+
+**Description**: Defender for Cloud identified an FSx for OpenZFS file system that does not have automatic backups enabled. Automatic backups are scheduled, incremental snapshots that serve as recovery points. Without them, the FSx for OpenZFS resource is prone to severe data loss from accidental deletions, file corruption or potentially malicious activities.
+
+**Severity**: Medium
+
+### Automatic backups should be enabled on FSx for Windows File Server
+
+**Description**: Defender for Cloud identified that automatic backups have not been configured on your FSx for Windows File Server. Automatic backups create regular recovery points that are essential for quickly restoring data in the event of accidental deletion, malicious activity, or system failures. This poses a risk of extended downtime and potentially irreversible data loss, since without these recovery points there is no managed snapshot to restore from.
+
+**Severity**: Medium
+
+### Automatic security updates should be enabled on RedisOSS ElastiCache clusters
+
+**Description**: Defender for Cloud identified that auto-upgrade is disabled in your RedisOSS ElastiCache clusters. Auto-upgrade automatically installs the latest security patches and software updates to protect cluster nodes from known vulnerabilities. This poses a risk by leaving your clusters open to cyberattacks that exploit outdated software. Learn more.
+
+**Severity**: Low
+
+### Automatic snapshots should be enabled for MemoryDB clusters
+
+**Description**: Defender for Cloud identified MemoryDB cluster without automatic snapshot configuration. Automated snapshot automatically preserves resource snapshots for a specified duration, ensuring critical recovery data is available after incidents. Without it, there is an increased risk of data loss through accidental deletion or corruption.
+
+**Severity**: Medium
+
+### AWS Key Management Service encryption should be configured for EventBridge Pipe
+
+**Description**: Configuring AWS Key Management Service (KMS) encryption for EventBridge Pipe ensures that data at rest is encrypted using customer-controlled keys, providing enhanced security and compliance capabilities. This measure allows to better manage and rotate encryption keys according to internal policies or regulatory requirements. If this is not implemented, the data will be encrypted using AWS-managed keys, which may not meet stringent security or compliance standards. This recommendation is particularly important for organizations handling sensitive or regulated data, such as personally identifiable information (PII), financial records, or intellectual property. To implement this, configure the EventBridge Pipe to use a customer-managed KMS key in the AWS Management Console or via the AWS CLI.
+
+**Severity**: Low
+
+### AWS Key Management Service encryption should be enabled for SageMaker domain
+
+**Description**: Defender for Cloud identified that your SageMaker domain is using AWS-managed KMS keys instead of customer-managed keys. AWS KMS encryption protects data at rest by allowing you to control key management-including rotation and access-ensuring compliance with stringent security requirements. Without customer-managed keys, sensitive data may be at higher risk of unauthorized access and non-compliance. Learn more.
+
+**Severity**: Low
+
+### AWS Key Management Service encryption should be enabled on SageMaker endpoints
+
+**Description**: Defender for Cloud identified a lack of AWS Key Management Service (KMS) encryption on Sagemaker endpoints. KMS encryption secures sensitive data by managing encryption keys-including their lifecycle activities such as generation, rotation, and deletion. Without KMS enabled, endpoints risk exposure to data breaches and unauthorized access. Learn more.
+
+**Severity**: Medium
+
+### Backup retention should be enabled for LightSail Relational Database Service
+
+**Description**: Defender for Cloud identified that backup retention is disabled on your LightSail Relational Database Service. Backup retention automatically saves backups of your database over time so that you can restore data in case of accidental deletion or malicious corruption. Without it, recovery becomes more difficult and you risk losing up-to-date data if an attacker compromises your database.
+
+**Severity**: Medium
+
+### Broad Owner or Editor roles should be eliminated from service accounts on BigQuery datasets
+
+**Description**: Defender for Cloud identified service accounts with excessive permissions on BigQuery datasets. The evaluation discovered service accounts assigned broad roles such as OWNER, WRITER, or roles/bigquery.admin that provide more access than necessary. This poses a risk of lateral movement and data exfiltration if these credentials are compromised. It is essential to restrict permissions to roles that align with the service account's functional requirements, such as 'BigQuery Data Viewer' or 'BigQuery Data Editor'
+
+**Severity**: High
+
+### CloudWatch query metrics should be enabled on Athena workgroups
+
+**Description**: Defender for Cloud identified an Athena workgroup without CloudWatch query metrics publishing enabled. This poses a risk of detection evasion and silent data harvesting, since without metrics on query volume, scanned bytes, and execution counts, anomalous activity such as a single principal suddenly scanning very large data volumes goes unnoticed, letting reconnaissance and slow exfiltration through Athena run undetected.
+
+**Severity**: Medium
+
+### Cluster endpoint encryption should be enabled for DAX clusters
+
+**Description**: Defender for Cloud identified that cluster endpoint encryption is not enabled in clusters. Cluster endpoint encryption protects data during transmission between clients and the cluster. Without it, sensitive information may be intercepted or accessed by unauthorized parties, potentially compromising data confidentiality and integrity. Enable encryption to secure data in transit and reduce the risk of cyber attacks.
+
+**Severity**: Medium
+
+### Cross-account access should be restricted on Amazon SNS topics
+
+**Description**: Defender for Cloud identified that your Amazon SNS topic is configured for cross-account access, allowing external AWS accounts to interact with it. Cross-account access means that users outside your trusted environment can publish or subscribe to your topics. This poses a risk by potentially exposing sensitive notifications to unauthorized parties and misuse. Restricting such access will help secure your topic from external threats.
+
+**Severity**: Medium
+
+### Customer-managed encryption keys should be enabled for CodeArtifact domains
+
+**Description**: Defender for Cloud identified that customer-managed keys (CMKs) are not enabled on your domains. CMKs are encryption keys that you control, including their lifecycle, rotation, and access policies. Without CMK configuration, your domains rely solely on provider-managed keys, reducing oversight and potentially leaving sensitive data more vulnerable to unauthorized access.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled for Datastream streams
+
+**Description**: Defender for Cloud identified Datastream streams that are not using Customer-Managed Encryption Keys (CMEK). This assessment evaluates whether your Datastream streams have CMEK enabled, a control that allows direct key rotation and access policy management. Without CMEK, the automatic encryption provided by Google Cloud may not meet the stringent requirements for sensitive data, leaving your workload more exposed to potential key compromise or unauthorized access. Learn more: https://cloud.google.com/datastream/docs
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled for ElastiCache clusters
+
+**Description**: Defender for Cloud identified ElastiCache clusters that lack Customer Managed Key (CMK) encryption. CMK encryption uses custom keys that allow for controlled rotation and enhanced security compared to default keys. This poses a risk by potentially exposing your clusters to unauthorized data access and compliance issues. Learn more.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled for GCP Spanner databases
+
+**Description**: Defender for Cloud identified databases that are not configured with customer-managed encryption keys (CMEK). CMEK refers to encryption keys created and managed by your organization, as opposed to platform-managed keys. Without CMEK, databases may not meet regulatory or policy requirements, potentially exposing your data to unauthorized access or compliance issues due to reduced control over key lifecycle management.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled for Memorystore for Redis instances
+
+**Description**: Defender for Cloud identified that customer managed encryption keys are not enabled for Memorystore for Redis instances. This evaluation checks if encryption operations are solely managed by default Google-managed keys, which restricts key rotation, audit logging, and timely access control enhancements. Such limitations pose a risk by potentially compromising data protection and compliance efforts, as organizations lack explicit ownership and governance over their encryption keys.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled for Pub/Sub topics
+
+**Description**: Defender for Cloud identified Pub/Sub topics using default Google-managed encryption keys instead of customer-managed encryption keys (CMEK). CMEK allows you to control key rotation and access policies, while reliance on default keys limits control and may increase the risk of unauthorized access and compliance issues. Learn more.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled for Vertex AI Datastore
+
+**Description**: Defender for Cloud identified that Vertex AI Datastore is not configured with Customer Managed Encryption Keys (CMK), meaning it rely on the default Google-managed encryption. This poses a risk because GCP-managed keys do not allow you to control rotation policies, set granular access permissions, or audit key usage, potentially failing to meet strict compliance and data sovereignty requirements in regulated industries.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled for Vertex AI Engine
+
+**Description**: Defender for Cloud identified that Vertex AI Engine instance is not configured with Customer Managed Encryption Keys (CMK), meaning it rely on the default Google-managed encryption. This poses a risk because GCP-managed keys do not allow you to control rotation policies, set granular access permissions, or audit key usage, potentially failing to meet strict compliance and data sovereignty requirements in regulated industries.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled on AlloyDB clusters
+
+**Description**: Defender for Cloud identified that AlloyDB cluster is not configured with Customer Managed Encryption Keys (CMK), meaning it rely on the default Google-managed encryption. This poses a risk because GCP-managed keys do not allow you to control rotation policies, set granular access permissions, or audit key usage, potentially failing to meet strict compliance and data sovereignty requirements in regulated industries.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled on Amazon SNS topics
+
+**Description**: Defender for Cloud identified that your AWS SNS topics are using default encryption instead of customer-managed keys (CMK). CMK encryption enables you to control key policies and audit key usage, offering improved protection against unauthorized access and supporting compliance with internal and regulatory security standards. This configuration oversight may expose sensitive data to increased risks.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled on Artifact Registry repositories
+
+**Description**: Defender for Cloud identified that repositories are secured using platform-managed encryption keys instead of customer-managed encryption keys (CMEK). CMEK are keys that you control, offering advanced lifecycle management and stricter access control. Using platform-managed keys increases the risk of data protection vulnerabilities and may not meet compliance requirements. We recommend configuring CMEK to enhance encryption security and control.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled on Comprehend EntityRecognizer Models
+
+**Description**: Defender for Cloud identified an Amazon Comprehend EntityRecognizer without customer-managed encryption keys configured for the trained model. This poses a risk of reduced control over model encryption and potential unauthorized access. The ModelKmsKeyId property specifies the KMS key used to encrypt trained custom models. Using customer-managed keys ensures model integrity and provides greater control over access to sensitive ML models.
+
+**Severity**: Medium
+
+### Customer-managed encryption keys should be enabled on Comprehend EntityRecognizer Volume
+
+**Description**: Defender for Cloud identified an Amazon Comprehend EntityRecognizer without customer-managed encryption keys configured for the storage volume. This poses a risk of reduced control over data encryption and potential unauthorized access. The VolumeKmsKeyId property specifies the KMS key used to encrypt data on the storage volume attached to ML compute instances. Using customer-managed keys provides greater control over encryption and helps protect sensitive training data.
+
+**Severity**: Medium
+
+### Customer-managed encryption keys should be enabled on Filestore instances
+
+**Description**: Defender for Cloud identified Filestore instances without Customer-Managed Encryption Keys (CMEK). This poses a risk of reduced control over encryption key rotation and access policies in Cloud KMS, which could compromise compliance with regulatory and organizational standards. Learn more: https://cloud.google.com/filestore/docs/cmek
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be enabled on MemoryDB clusters
+
+**Description**: Defender for Cloud identified that MemoryDB cluster is not using Customer Managed Keys (CMK) for encryption. Using Customer Managed Keys (CMK) allow enhanced control over key lifecycle and detailed auditing, ensuring that encryption practices meet compliance requirements.
+
+**Severity**: Low
+
+### Customer-managed encryption keys should be used on DMS replication instances
+
+**Description**: Defender for Cloud identified that encryption at rest is not enabled on your AWS DMS replication instance. This poses a risk of unauthorized data exposure if the underlying storage is compromised. Encryption at rest protects sensitive data by encrypting it while stored on disk, ensuring that even if physical storage media is accessed, the data remains unreadable without the proper KMS key.
+
+**Severity**: Medium
+
+### Customer Managed Key encryption at rest should be configured on Amazon MSK clusters
+
+**Description**: Defender for Cloud identified Amazon MSK provisioned clusters using an AWS-managed KMS key for data-at-rest encryption instead of a Customer Managed Key (CMK). Without a CMK, the customer cannot rotate the key on a defined schedule, revoke key access to render the data unreadable if the cluster is compromised or audit per-operation key usage through CloudTrail. MSK Serverless clusters do not support CMK and are excluded from this assessment.
+(No related policy)
+
+**Severity**: Medium
+
+### Customer-managed KMS encryption at rest should be configured on Amazon Kendra indexes
+
+**Description**: Defender for Cloud identified that an Amazon Kendra index is not configured with a customer-managed KMS key for encryption at rest. This poses a risk of reduced control over key rotation, access policies, and auditability. Using a customer-managed key helps enforce least-privilege access to encrypted data and supports stronger separation of duties.
+
+**Severity**: Medium
+
+### Customer-managed KMS encryption should be enabled on Amazon Bedrock Agents
+
+**Description**: Defender for Cloud identified that Amazon Bedrock Custom Models are being deployed without customer-managed KMS encryption in place. Amazon Bedrock Custom Models can be created or imported without explicitly selecting a customer-managed key, which causes model artifacts to be encrypted with AWS-managed keys instead. This poses a risk by reducing control over key rotation, strict access policies, and audit transparency, potentially leading to compliance and security vulnerabilities.
+
+**Severity**: Low
+
+### Customer-managed KMS key for encryption at rest should be configured on Amazon MQ broker
+
+**Description**: Defender for Cloud identified Amazon MQ brokers that use AWS-owned KMS keys for encryption at rest instead of customer-managed keys. Using customer-managed KMS keys provides stronger control over key policies, rotation and auditability compared to AWS-owned keys. This helps meet compliance requirements, enables granular access control and reduces reliance on default key management configurations.
+
+**Severity**: Medium
+
+### Customer-managed KMS key should be configured for encryption on Amazon AppFlow Flows
+
+**Description**: Defender for Cloud identified Amazon AppFlow Flows that are not encrypted with a customer-managed KMS key. Using customer-managed KMS keys provides stronger control over key policies, rotation and auditability compared to AWS-owned keys. This helps meet compliance requirements and reduces reliance on default key management configurations.
+
+**Severity**: Medium
+
+### Customer-managed KMS key should be configured on OpenSearch Service domains
+
+**Description**: Defender for Cloud identified OpenSearch Service domains that use AWS-owned keys for encryption at rest instead of a customer-managed KMS key. Using non-customer-managed keys limits control over key access policies, key rotation and key usage auditing, increasing the risk of unauthorized data access.
+(No related policy)
+
+**Severity**: Medium
+
+### Customer-managed KMS keys should be used for encryption on Amazon Keyspaces tables without replica regions
+
+**Description**: Defender for Cloud identified an Amazon Keyspaces table using AWS-owned KMS keys instead of customer-managed keys for encryption. This poses a risk of reduced control over encryption key management, including key rotation and access policies. Customer-managed KMS keys provide greater control over encryption and enable stricter security controls. Note: Tables configured with replication regions use AWS-owned keys by default; customer-managed KMS keys are not supported for multi-region tables.
+
+**Severity**: Medium
+
+### Data encryption at rest should be enabled on ElastiCache clusters
+
+**Description**: Defender for Cloud identified that encryption at rest is not enabled on your ElastiCache cluster. Encryption at rest converts stored data into a cryptographically secure format, protecting information even if the underlying storage is breached. Without this safeguard, unauthorized access or data tampering may occur, risking compliance and overall system integrity.
+
+**Severity**: Medium
+
+### Data integrity verification should be enabled on DataSync tasks
+
+**Description**: Defender for Cloud identified a DataSync task with verify mode set to NONE, so DataSync does not validate that data written to the destination matches the source. This poses a risk of silent data manipulation, since corruption or tampering of files during or after transfer between on-premises and AWS storage will not be detected, undermining trust in the destination data.
+
+**Severity**: Low
+
+### Database drop protection should be enabled for GCP Spanner databases
+
+**Description**: Defender for Cloud identified that database drop protection is disabled for your databases. Database drop protection prevents accidental or unauthorized deletion by requiring additional confirmation before removing a database. Without this safeguard, your critical data is exposed to potential loss from human error or misconfigured automation.
+
+**Severity**: Medium
+
+### Default backup schedule for new databases should be enabled
+
+**Description**: Enabling a default backup schedule for new Spanner Instance ensures automated data protection right from the creation of the databases. This helps in maintaining consistent backups without manual intervention and reduces the risk of human error. Regular backups provide recovery options in case of accidental data deletion, corruption, or system failures. If the default backup schedule is not enabled, new databases may remain unprotected and vulnerable, increasing the risk of permanent data loss. It is recommended to enable this setting to enhance database resiliency and business continuity.
+
+**Severity**: Medium
+
+### Defined snapshots retention periods should be enforced for Redshift clusters
+
+**Description**: Defender for Cloud identified indefinite retention in Amazon Redshift snapshots, where snapshots are configured to never expire (retention period set to -1). This poses a risk of accumulating unnecessary storage costs and prolonged exposure of potentially sensitive data. Defining a retention period ensures that outdated snapshots are automatically purged, reducing both financial impact and security vulnerabilities.
+
+**Severity**: Low
+
+### Deletion protection should be enabled on Amazon DocumentDB clusters
+
+**Description**: Defender for Cloud identified that deletion protection is not enabled on your Amazon DocumentDB clusters. Deletion protection is a safeguard that prevents accidental or malicious removal of database clusters. Without it, your DocumentDB clusters are exposed to risks of unauthorized deletions leading to significant downtime and operational disruption. Activate deletion protection to maintain the security and availability of your data.
+
+**Severity**: Medium
+
+### Deletion protection should be enabled on Firestore databases
+
+**Description**: Defender for Cloud identified Firestore databases with deletion protection disabled in Firestore. Deletion protection prevents databases from being removed unless explicitly turned off. Without this safeguard, accidental or malicious deletions may lead to irreversible data loss and operational disruptions in production environments.
+
+**Severity**: Medium
+
+### Deletion protection should be enabled on Neptune DB clusters
+
+**Description**: Defender for Cloud identified that deletion protection is not enabled on your Neptune DB cluster. This poses a risk of accidental or malicious data loss, as the database can be permanently deleted without any safeguard. Enabling deletion protection ensures the cluster cannot be removed until the setting is explicitly disabled, protecting critical data from unintended destruction.
+
+**Severity**: Medium
+
+### Encryption at rest should be enabled for EBS volumes in Auto Scaling Groups
+
+**Description**: Defender for Cloud identified Auto Scaling Group launch templates that provision EBS volumes without encryption at rest. This poses a risk of unauthorized data exposure, as snapshots or copies of unencrypted volumes can be read by any principal with sufficient EBS permissions, bypassing the running instance's access controls. Encryption at rest ensures that storage-level access alone does not reveal the data, since decryption additionally requires permissions on the KMS key.
+
+**Severity**: Medium
+
+### Encryption at rest should be enabled on OpenSearch Service domains
+
+**Description**: Defender for Cloud identified OpenSearch Service domains without encryption at rest enabled. Without encryption at rest, stored data can be exposed if underlying storage is accessed without authorization, increasing the risk of unauthorized access to sensitive data.
+(No related policy)
+
+**Severity**: Medium
+
+### Encryption at rest should be enabled on Neptune DB instances
+
+**Description**: Defender for Cloud identified that encryption at rest is not enabled on your Neptune DB instance. This poses a risk of unauthorized access to sensitive data if the underlying storage is compromised. Encryption at rest protects stored data by encrypting it using a secure key, ensuring that data remains unreadable without proper decryption credentials.
+
+**Severity**: Medium
+
+### Encryption in transit should be enabled on cluster-based cache
+
+**Description**: Defender for Cloud identified that encryption in transit is not enabled in your cluster-based cache used by ElastiCache. Encryption in transit safeguards data as it moves between cache nodes and client applications. Without it, sensitive information may be exposed to interception or tampering during transmission, creating a risk of data breaches and non-compliance with security best practices.
+
+**Severity**: Medium
+
+### Encryption in transit should be enabled on MemoryDB clusters
+
+**Description**: Defender for Cloud identified that TLS (Transport Layer Security) encryption is not enabled on your MemoryDB cluster. TLS secures data and client communications by encrypting transmitted information. Without TLS enabled, data in transit is susceptible to interception and alteration by unauthorized parties.
+
+**Severity**: Medium
+
+### Encryption with AWS Key Management Service should be enabled on EventBridge Event Bus
+
+**Description**: Defender for Cloud identified that your EventBridge Event Bus is not using a customer-managed AWS Key Management Service key for data encryption. Customer-managed KMS keys provide enhanced control with key rotation features, which are critical for protecting sensitive data. Without this configuration, your Event Bus relies on AWS-managed keys that may not meet strict compliance and security standards.
+
+**Severity**: Low
+
+### Ensure AWS Backup plans include cross-Region or cross-account copy actions
+
+**Description**: AWS Backup plans without cross-Region or cross-account copy actions store recovery points in a single location, increasing the risk of data loss due to regional outages, account compromise, or ransomware. Configuring copy actions improves backup resilience by ensuring recovery points are preserved in an independent security and availability boundary.
+
+**Severity**: Low
+
+### Expected S3 bucket owner should be configured for query results on Athena workgroups
+
+**Description**: Defender for Cloud identified Athena workgroups without an expected S3 bucket owner configured for query results, or whose ResultConfiguration can be overridden by callers because EnforceWorkGroupConfiguration is disabled. This poses a risk of bucket-name squatting: if the configured result bucket is deleted or its name predicted, an attacker can create a bucket with the same name in their own AWS account, and Athena would write sensitive query results into the attacker-controlled bucket.
+
+**Severity**: Low
+
+### Explicit prompt override control should be configured for Amazon Bedrock Agents
+
+**Description**: Defender for Cloud identified uncontrolled prompt override settings in Amazon Bedrock Agents. These agents, which execute generative AI tasks, are at risk when prompt override controls are misconfigured-allowing unsafe instructions to bypass established safety mechanisms. This misconfiguration could result in unpredictable AI behavior and potential security or compliance breaches, undermining the trusted operation of your services.
+
+**Severity**: Medium
+
+### File access auditing should be enabled on FSx for Windows File Server
+
+**Description**: Defender for Cloud identified that file access auditing is not enabled on FSx for Windows File Server. File access auditing involves monitoring and logging file operations such as reads and modifications to create an audit trail. Without these logs, unauthorized file access or modifications may go undetected, increasing the risk of delayed incident response and hampering forensic investigations.
+
+**Severity**: Low
+
+### File-level audit visibility should be configured on DataSync tasks
+
+**Description**: Defender for Cloud identified a DataSync task without file-level audit visibility: the log level is not set to log all transferred objects, and no Standard Task Report with transferred-file details is configured. This poses a risk of undetected data exfiltration, since without per-file records forensic teams cannot determine which objects were copied to an attacker-controlled destination.
+
+**Severity**: Medium
+
+### Glue Data Catalog metadata registration should be configured on AppFlow flows
+
+**Description**: Defender for Cloud identified AppFlow flows with Amazon S3 destination that do not have Glue Data Catalog metadata registration enabled. Without catalog integration, data schemas and lineage are not recorded, reducing governance visibility and increasing the risk of undetected or untracked data movement.
+
+**Severity**: Low
+
+### In-transit encryption should be enabled for Memorystore for Redis instances
+
+**Description**: Defender for Cloud identified that in-transit encryption is disabled for Memorystore for Redis instances. In-transit encryption, usually provided via TLS, safeguards data as it travels across the network. Without it, sensitive cached data is transmitted in plaintext, exposing it to interception, traffic inspection, and man-in-the-middle attacks, which may compromise data confidentiality and integrity.
+
+**Severity**: Medium
+
+### KMS managed key configuration should be enabled for SQS server side encryption
+
+**Description**: Defender for Cloud identified that your SQS queue is not configured to use KMS managed keys for server-side encryption. KMS managed keys are fully controlled by the Key Management Service and provide enhanced oversight of key lifecycle and access auditing. Without these controls, your queue faces increased risk of unauthorized key usage and reduced protection of sensitive data at rest.
+
+**Severity**: Medium
+
+### KMS-based encryption should be enforced for query results on Athena workgroups
+
+**Description**: Defender for Cloud identified an Athena workgroup that does not enforce KMS-based encryption (SSE-KMS or CSE-KMS) with a customer-managed key for query results. This poses a risk of unauthorized data access: without customer-managed keys, access cannot be revoked via key policy if credentials are compromised; without workgroup enforcement, callers can bypass encryption settings at query time.
+
+**Severity**: Low
+
+### Knowledge Base field mapping should be securely configured on Amazon Bedrock
+
+**Description**: Defender for Cloud identified misconfigured field mappings in Amazon Bedrock Knowledge Bases. This poses a risk of corrupting embeddings and causing inaccurate document retrieval, potentially leading to unsafe or misleading outputs in retrieval-augmented generation (RAG) pipelines when mappings for vector, text, and metadata fields are incomplete or incorrect.
+
+**Severity**: High
+
+### LockConfiguration should be enabled on Backup Vault
+
+**Description**: Defender for Cloud identified that the LockConfiguration is not enabled on your Backup Vault. LockConfiguration prevents unauthorized modifications or deletions of critical backup settings, ensuring that recovery points remain secure. Without this control, the Backup Vault is at increased risk of accidental or malicious changes that can compromise data resilience and backup integrity. Learn more.
+
+**Severity**: Medium
+
+### Logging should be enabled and encrypted on EMR clusters
+
+**Description**: Defender for Cloud identified EMR clusters that either do not publish cluster logs to Amazon S3 or Amazon CloudWatch Logs, or publish logs without encryption configured for the chosen destination. Cluster logs may contain operational details such as application logs, query text and error traces. Without log publishing, visibility into cluster activity is reduced, and without encryption on the chosen log destination there is a risk of unauthorized access to log contents.
+
+**Severity**: Medium
+
+### Managed admin credentials should be enabled for Amazon Redshift clusters
+
+**Description**: Defender for Cloud identified that your Amazon Redshift clusters are not using managed admin credentials. Managed admin credentials involve securely storing administrative credentials in AWS Secrets Manager with automatic rotation, which minimizes the risk of credential exposure. Without this setup, there is an increased risk of unauthorized database access and potential data breaches.
+
+**Severity**: Medium
+
+### Object versioning should be enabled on LightSail buckets
+
+**Description**: Defender for Cloud identified that object versioning is disabled on your LightSail bucket. Object versioning automatically saves and retains historical copies of objects, which is essential for recovering data from accidental deletions, modifications, or corruption. Without this feature, any unauthorized changes or errors can permanently compromise your data integrity.
+
+**Severity**: Low
+
+### Parser override should be disabled for Amazon Bedrock Agents
+
+**Description**: Defender for Cloud identified a custom parser override setting (ParserMode = OVERRIDDEN) in Amazon Bedrock Agents. Custom parser overrides modify the default parsing mechanism to meet specific output requirements but can increase operational complexity, potentially causing parsing errors or exposing security vulnerabilities if not rigorously maintained. We recommend disabling this override unless strict output validation is essential.
+
+**Severity**: High
+
+### Point-in-Time Recovery (PITR) should be enabled on Amazon Keyspaces tables
+
+**Description**: Defender for Cloud identified an Amazon Keyspaces (Cassandra) table with Point-in-Time Recovery (PITR) disabled. Without PITR, malicious or accidental destructive operations (DROP/TRUNCATE TABLE, mass DELETE, ransomware-style overwrite via compromised credentials) cannot be rolled back, resulting in permanent data loss. PITR allows tables to be restored to any point in time within the recovery window, providing protection against data destruction and ransomware impact.
+
+**Severity**: Medium
+
+### Point-in-Time Recovery should be enabled for Firestore databases
+
+**Description**: Defender for Cloud identified Firestore databases with Point-in-Time Recovery (PITR) disabled. PITR is a feature that enables data recovery from a specific timestamp within the retention period, protecting against accidental deletions and erroneous writes. Without PITR, your databases are at risk of extended data loss and potential challenges in restoring data integrity after incidents.
+
+**Severity**: Medium
+
+### Prompt execution state should be enabled for critical agent stages on Amazon Bedrock
+
+**Description**: Defender for Cloud identified disabled prompt execution state for critical agent stages in Amazon Bedrock. Critical agent stages-such as orchestration and knowledge base response generation-are vital for ensuring complete reasoning and accurate outputs. Disabling these stages poses a risk of generating unsafe, incomplete, or incorrect responses, which could lead to compromised agent behavior and overall system integrity.
+
+**Severity**: High
+
+### Public Access Block configuration should be enabled on AWS S3 Access Point
+
+**Description**: Defender for Cloud identified the Public Access Block configuration is not enabled on your AWS S3 Access Point. Public Access Block settings are designed to prevent inadvertent public exposure by automatically blocking public access to S3 resources, regardless of bucket or object-level permissions. Without this setting, there's an increased risk of unauthorized access to sensitive data stored in your S3 buckets.
+
+**Severity**: High
+
+### Public access for publishers should be disabled on Amazon SNS topics
+
+**Description**: Defender for Cloud identified that your SNS topics have unrestricted publisher access enabled. This setting allows any entity to publish notifications to your topics, which can lead to unauthorized alerts, spam, or even malicious messages that weaken your notification system reliability and security. By ensuring publisher access is restricted, you minimize these risks and enhance the overall integrity of your messaging infrastructure.
+
+**Severity**: High
+
+### Public access for subscribers should be disabled on Amazon SNS topic
+
+**Description**: Defender for Cloud identified that SNS Topic subscriptions are publicly accessible. Here, "public access" means any entity can subscribe and receive notifications, exposing your messaging system to unauthorized monitoring and data leakage. Such exposure can allow malicious actors to intercept or misuse sensitive information. We recommend configuring subscriptions to allow only approved subscribers. Learn more.
+
+**Severity**: High
+
+### Public email domains should be barred from receiving privileged roles on BigQuery
+
+**Description**: Defender for Cloud identified highly privileged BigQuery roles (e.g., OWNER, WRITER, or Admin) assigned to members with public email domains. Public email domains are external to your organization's identity lifecycle management, which poses a risk of unauthorized data modification, deletion, or permission escalation.
+
+**Severity**: High
+
+### Public read access on LightSail buckets should be disabled
+
+**Description**: Defender for Cloud identified that your LightSail bucket permits public read access. This setting allows anyone to access stored objects without authentication, making sensitive data vulnerable to unauthorized exposure and exploitation.
+
+**Severity**: High
+
+### Public sharing should be disabled on QuickSight accounts
+
+**Description**: Defender for Cloud identified that public sharing is enabled in Amazon QuickSight account settings. This poses a risk of unauthorized data access, as dashboards and visuals can be shared publicly without requiring a QuickSight account or AWS credentials. Disable public sharing to reduce the risk of data exposure.
+
+**Severity**: Medium
+
+### Query results output location should be configured on Athena workgroups
+
+**Description**: Defender for Cloud identified an Athena workgroup without a centrally defined S3 output location for query results. This poses a risk of query results landing in unmanaged or attacker-controlled S3 buckets: without a workgroup-level output location, callers must specify their own destination at query time, bypassing centralized audit, bucket policies, and data governance controls.
+
+**Severity**: Low
+
+### Resource labels should be configured on Artifact Registry repositories
+
+**Description**: Defender for Cloud identified missing resource labels in repositories. Resource labels are key-value pairs that categorize repositories and enable automated enforcement of security policies. Without proper labels, there is an increased risk of misconfigurations and unauthorized access due to inconsistent security controls.
+
+**Severity**: Low
+
+### Secure connectors should be enabled for AlloyDB instances
+
+**Description**: Defender for Cloud identified insecure client connection settings in AlloyDB instance. The evaluation checks the 'Require connectors' property, which when set to false permits direct PostgreSQL protocol connections without a secure mediator such as the AlloyDB Auth Proxy. This bypasses IAM-based authentication and automatic TLS encryption, increasing the risk of weaker authentication and potential exposure of unencrypted traffic within your VPC.
+
+**Severity**: Medium
+
+### Security configuration should be enabled on EMR clusters
+
+**Description**: Defender for Cloud identified EMR clusters that are not associated with a security configuration. A security configuration defines settings for encryption, authentication (Kerberos is recommended), authorization etc. Without a security configuration, data processed and stored within EMR clusters may be exposed to unauthorized access.
+
+**Severity**: High
+
+### Security groups should be configured for MemoryDB clusters
+
+**Description**: Defender for Cloud identified MemoryDB cluster without any security groups configured. Security groups function as firewall rules that regulate both inbound and outbound traffic for your cluster. Without them, your cluster is exposed to the risk of unauthorized access and potential data breaches. Enabling security groups can significantly reduce this risk by ensuring that only approved traffic is allowed to access your MemoryDB cluster.
+
+**Severity**: Medium
+
+### Security groups should be configured to restrict access for ElastiCache
+
+**Description**: Defender for Cloud identified insufficient security group configurations in your ElastiCache service. Security groups are network filters that control traffic between resources; when not properly configured, they fail to enforce fine-grain access restrictions, potentially exposing your cache to unauthorized access and exploitation. This increases the risk of data breaches and other security incidents. Learn more.
+
+**Severity**: Low
+
+### Security groups should restrict access for ElastiCache
+
+**Description**: Defender for Cloud identified lax security group restrictions in your ElastiCache setup. Security groups act as virtual firewalls that manage user and instance access, and insufficient segmentation can result in unauthorized access, increasing the risk of data exposure and potential malicious activity. We recommend reviewing and enforcing granular access rules to ensure that only authorized users and processes interact with your ElastiCache resources.
+
+**Severity**: Low
+
+### Security logs should be enabled for ElastiCache Replication Group
+
+**Description**: Defender for Cloud identified that logging is not enabled for your ElastiCache Replication Group. This recommendation was triggered upon detecting the absence of engine-logs, which capture detailed operational events, or slow-logs, which track latency issues. Without these logs, potential anomalies and unauthorized activities may go undetected, increasing the risk of delayed incident response or security breaches. Learn more.
+
+**Severity**: Low
+
+### Sensitive data exposure mitigation should be enabled on AWS CloudFormation stack outputs
+
+**Description**: Defender for Cloud identified exposed sensitive outputs in your AWS CloudFormation stack. CloudFormation outputs are used to pass data between stacks but should not include sensitive information such as passwords, API keys, tokens, or credentials. Exposing these details increases the risk of unauthorized data access. Remove these outputs or securely store secret data using AWS Secrets Manager or SSM Parameter Store. For more details, visit: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html
+
+**Severity**: High
+
+### Sensitive parameters should have NoEcho attribute enabled on AWS CloudFormation stacks
+
+**Description**: Defender for Cloud identified AWS CloudFormation stacks with parameters missing the NoEcho attribute. The NoEcho attribute masks sensitive values from logs and outputs, preventing credentials and other confidential data from being inadvertently exposed. Without it, your stacks may leak critical information, heightening the risk of unauthorized access. We recommend updating your templates to incorporate the NoEcho setting where applicable.
+
+**Severity**: High
+
+### Server-side encryption should be enabled for Amazon Bedrock Knowledge Bases data sources
+
+**Description**: Defender for Cloud identified a lack of specific server-side encryption configuration in Amazon Bedrock Knowledge Base data sources. Without proper ServerSideEncryptionConfiguration, ingested documents, metadata, and processing artifacts may be stored unencrypted or with AWS-managed keys, reducing customer control over encryption, key rotation, and audit capabilities, thus increasing the risk of unauthorized data access and diminished security governance.
+
+**Severity**: Medium
+
+### Server-side encryption should be enabled on Kinesis streams
+
+**Description**: Defender for Cloud identified missing server-side encryption on Kinesis data streams. This poses a risk of unauthorized disclosure of stream records at rest, because anyone with read access to the underlying storage can retrieve plaintext data.
+
+**Severity**: Medium
+
+### Server-side encryption should be enabled on SQS queues
+
+**Description**: Defender for Cloud identified that server-side encryption (SSE) is not enabled on your SQS queues. SSE is a method that uses encryption keys to transform sensitive data into an unreadable format until it is properly decrypted. Without this safeguard, your SQS queues are at risk of unauthorized data access, potentially exposing sensitive information and leading to data breaches and compliance issues.
+
+**Severity**: High
+
+### Strict cross-account access restrictions should be configured on LightSail buckets
+
+**Description**: Defender for Cloud identified cross-account access in your LightSail bucket. Cross-account access occurs when AWS accounts outside your trusted environment are granted permissions to access bucket objects. This poses a risk of unauthorized data exposure if these external accounts are unknown or unmonitored. Restricting access exclusively to accounts with a legitimate need can help safeguard your sensitive information.
+
+**Severity**: Medium
+
+### Termination protection should be enabled on Amazon QuickSight accounts
+
+**Description**: Defender for Cloud identified that termination protection is disabled on the Amazon QuickSight account. This poses a risk of permanent data loss and service disruption, because an unauthorized or compromised principal could delete the QuickSight subscription and remove all dashboards, datasets, analyses, and account configuration.
+
+**Severity**: Medium
+
+### Unattached EBS volumes should be removed or attached to EC2 instance
+
+**Description**: Defender for Cloud identified unattached EBS volume. EBS volumes are persistent block storage devices intended for attachment to EC2 instances. Unattached volumes may indicate orphaned resources from terminated instances, increasing the attack surface and possibly holding sensitive data that no longer receives active security monitoring.
+
+**Severity**: Low
+
+### Unexpired subscriptions should have expiration policies configured on Pub/Sub subscriptions
+
+**Description**: Defender for Cloud identified missing expiration policies in Pub/Sub subscriptions. Expiration policies determine how long an inactive subscription remains active before auto deletion. Without this configuration, subscriptions may continue storing data indefinitely, leading to increased storage costs and a higher risk of sensitive information being retained longer than necessary. For more information, visit https://cloud.google.com/pubsub/docs/subscription-properties#expiration_period
+
+**Severity**: Low
+
+### Unused CodeArtifact domains should be removed
+
+**Description**: Defender for Cloud identified CodeArtifact domains lacking active repositories or artifacts in CodeArtifact. An unused domain is one that does not host current content but may still hold legacy settings such as outdated permissions or encryption keys. This poses a risk by expanding your control plane attack surface and potentially allowing unauthorized access. Learn more.
+
+**Severity**: Low
+
+### VPC configuration should be enabled on Amazon Comprehend EntityRecognizer
+
+**Description**: Defender for Cloud identified an Amazon Comprehend EntityRecognizer that is not configured to run inside a customer VPC. Without a VpcConfig, the training compute uses AWS-managed networking with default outbound internet access, providing no customer-controlled boundary on what the training job can reach. Configuring VpcConfig with security groups and subnets places the training compute inside the customer VPC, where Security Groups, route tables, and (optionally) VPC endpoints constrain its outbound network access. This restricts a compromised training-time component from exfiltrating training data (which often contains sensitive entity samples such as PII or business identifiers) to attacker-controlled endpoints, and enables VPC Flow Logs for audit.
+
+**Severity**: Medium
+
+### Workgroup configuration enforcement should be enabled on Athena workgroups
+
+**Description**: Defender for Cloud identified an Athena workgroup that does not enforce workgroup-level configuration. This poses a risk of client-side override attacks, where a caller supplies its own ResultConfiguration at query time (via SDK, JDBC, or API) to ship sensitive query results to an attacker-controlled S3 bucket or to weaken encryption, bypassing the workgroup's centrally defined output location and encryption controls.
+
+**Severity**: High
+## AWS/GCP cross-category data and networking recommendations
+
+### In-transit encryption should be enabled for Memorystore for Redis clusters
+
+**Description**: Defender for Cloud identified that in-transit encryption is missing on your Redis clusters. In-transit encryption (TLS) secures data traveling between clients and your Redis clusters, including authentication credentials and cached data. Without TLS, attackers with network access through shared VPCs, peered networks, or compromised workloads could intercept or alter this sensitive data, increasing the risk of data exposure and manipulation.
+
+**Severity**: Medium
+
+### Public network access should be disabled for LightSail Relational Database Service
+
+**Description**: Defender for Cloud identified that public network access is enabled on your LightSail Relational Database Service. Public network access means that the database accepts connections over the internet, which bypasses network restrictions and exposes it to unauthorized access. This configuration increases the risk of data exfiltration or data loss by providing potential entry points for attackers.
+
+**Severity**: High
+
+### Amazon Aurora clusters should have backtracking enabled
+
+**Description**: This control checks whether Amazon Aurora clusters have backtracking enabled.
+
+Backups help you to recover more quickly from a security incident. They also ensure the recoverability of your systems. Aurora backtracking reduces the time to recover a database to a point in time. It doesn't require a database restore to do so.
+
+For more information about backtracking in Aurora, see [Backtracking an Aurora DB cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Managing.Backtrack.html) in the Amazon Aurora User Guide.
+
+**Severity**: Medium
+
+### Amazon EBS snapshots shouldn't be publicly restorable
+
+**Description**: Amazon EBS snapshots shouldn't be publicly restorable by everyone unless explicitly allowed, to avoid accidental exposure of data. Additionally, permission to change Amazon EBS configurations should be restricted to authorized AWS accounts only.
+
+**Severity**: High
+
+### Amazon ECS task definitions should have secure networking modes and user definitions
+
+**Description**: This control checks whether an active Amazon ECS task definition that has host networking mode also has privileged or user container definitions.
+ The control fails for task definitions that have host network mode and container definitions where privileged=false or is empty and user=root or is empty.
+If a task definition has elevated privileges, it is because the customer specifically opted in to that configuration.
+ This control checks for unexpected privilege escalation when a task definition has host networking enabled but the customer didn't opt in to elevated privileges.
+
+**Severity**: High
+
+### Amazon Elasticsearch Service domains should encrypt data sent between nodes
+
+**Description**: This control checks whether Amazon ES domains have node-to-node encryption enabled. HTTPS (TLS) can be used to help prevent potential attackers from eavesdropping on or manipulating network traffic using person-in-the-middle or similar attacks. Only encrypted connections over HTTPS (TLS) should be allowed. Enabling node-to-node encryption for Amazon ES domains ensures that intra-cluster communications are encrypted in transit. There can be a performance penalty associated with this configuration. You should be aware of and test the performance trade-off before enabling this option.
+
+**Severity**: Medium
+
+### Amazon Elasticsearch Service domains should have encryption at rest enabled
+
+**Description**: It's important to enable encryptions rest of Amazon ES domains to protect sensitive data
+
+**Severity**: Medium
+
+### Amazon RDS database should be encrypted using customer managed key
+
+**Description**: This check identifies RDS databases that are encrypted with default KMS keys and not with customer managed keys. As a leading practice, use customer managed keys to encrypt the data on your RDS databases and maintain control of your keys and data on sensitive workloads.
+
+**Severity**: Medium
+
+### Amazon RDS instance should be configured with automatic backup settings
+
+**Description**: This check identifies RDS instances, which aren't set with the automatic backup setting. If Automatic Backup is set, RDS creates a storage volume snapshot of your DB instance, backing up the entire DB instance and not just individual databases, which provide for point-in-time recovery. The automatic backup happens during the specified backup window time and keeps the backups for a limited period of time as defined in the retention period. It's recommended to set automatic backups for your critical RDS servers that help in the data restoration process.
+
+**Severity**: Medium
+
+### Amazon Redshift clusters should have audit logging enabled
+
+**Description**: This control checks whether an Amazon Redshift cluster has audit logging enabled.
+Amazon Redshift audit logging provides additional information about connections and user activities in your cluster. This data can be stored and secured in Amazon S3 and can be helpful in security audits and investigations. For more information, see [Database audit logging](https://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html) in the *Amazon Redshift Cluster Management Guide*.
+
+**Severity**: Medium
+
+### Amazon Redshift clusters should have automatic snapshots enabled
+
+**Description**: This control checks whether Amazon Redshift clusters have automated snapshots enabled. It also checks whether the snapshot retention period is greater than or equal to seven.
+
+Backups help you to recover more quickly from a security incident. They ensure the recoverability of your systems. Amazon Redshift takes periodic snapshots by default. This control checks whether automatic snapshots are enabled and retained for at least seven days. For more information about Amazon Redshift automated snapshots, see [Automated snapshots](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-snapshots.html#about-automated-snapshots) in the *Amazon Redshift Cluster Management Guide*.
+
+**Severity**: Medium
+
+### Amazon Redshift clusters should prohibit public access
+
+**Description**: We recommend Amazon Redshift clusters to avoid public accessibility by evaluating the 'publiclyAccessible' field in the cluster configuration item.
+
+**Severity**: High
+
+### Amazon Redshift should have automatic upgrades to major versions enabled
+
+**Description**: This control checks whether automatic major version upgrades are enabled for the Amazon Redshift cluster.
+Enabling automatic major version upgrades ensures that the latest major version updates to Amazon Redshift clusters are installed during the maintenance window.
+ These updates might include security patches and bug fixes. Keeping up to date with patch installation is an important step in securing systems.
+
+**Severity**: Medium
+
+### Amazon SQS queues should be encrypted at rest
+
+**Description**: This control checks whether Amazon SQS queues are encrypted at rest.
+Server-side encryption (SSE) allows you to transmit sensitive data in encrypted queues. To protect the content of messages in queues, SSE uses keys managed in AWS KMS.
+For more information, see [Encryption at rest](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html) in the Amazon Simple Queue Service Developer Guide.
+
+**Severity**: Medium
+
+### An RDS event notifications subscription should be configured for critical cluster events
+
+**Description**: This control checks whether an Amazon RDS event subscription exists that has notifications enabled for the following source type:
+ Event category key-value pairs. DBCluster: [Maintenance and failure].
+ RDS event notifications use Amazon SNS to make you aware of changes in the availability or configuration of your RDS resources. These notifications allow for rapid response.
+For more information about RDS event notifications, see [Using Amazon RDS event notification](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html) in the Amazon RDS User Guide.
+
+**Severity**: Low
+
+### An RDS event notifications subscription should be configured for critical database instance events
+
+**Description**: This control checks whether an Amazon RDS event subscription exists with notifications enabled for the following source type:
+ Event category key-value pairs. ```DBInstance```: [Maintenance, configuration change and failure].
+RDS event notifications use Amazon SNS to make you aware of changes in the availability or configuration of your RDS resources. These notifications allow for rapid response.
+For more information about RDS event notifications, see [Using Amazon RDS event notification](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html) in the Amazon RDS User Guide.
+
+**Severity**: Low
+
+### An RDS event notifications subscription should be configured for critical database parameter group events
+
+**Description**: This control checks whether an Amazon RDS event subscription exists with notifications enabled for the following source type:
+ Event category key-value pairs. DBParameterGroup: ["configuration","change"].
+ RDS event notifications use Amazon SNS to make you aware of changes in the availability or configuration of your RDS resources. These notifications allow for rapid response.
+For more information about RDS event notifications, see [Using Amazon RDS event notification](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html) in the Amazon RDS User Guide.
+
+**Severity**: Low
+
+### An RDS event notifications subscription should be configured for critical database security group events
+
+**Description**: This control checks whether an Amazon RDS event subscription exists with notifications enabled for the following source type: Event category key-value pairs.DBSecurityGroup: [Configuration, change, failure].
+ RDS event notifications use Amazon SNS to make you aware of changes in the availability or configuration of your RDS resources. These notifications allow for a rapid response.
+For more information about RDS event notifications, see [Using Amazon RDS event notification](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html) in the Amazon RDS User Guide.
+
+**Severity**: Low
+
+### API Gateway REST and WebSocket API logging should be enabled
+
+**Description**: This control checks whether all stages of an Amazon API Gateway REST or WebSocket API have logging enabled.
+ The control fails if logging isn't enabled for all methods of a stage or if logging Level is neither ERROR nor INFO.
+ API Gateway REST or WebSocket API stages should have relevant logs enabled. API Gateway REST and WebSocket API execution logging provides detailed records of requests made to API Gateway REST and WebSocket API stages.
+ The stages include API integration backend responses, Lambda authorizer responses, and the requestId for AWS integration endpoints.
+
+**Severity**: Medium
+
+### API Gateway REST API cache data should be encrypted at rest
+
+**Description**: This control checks whether all methods in API Gateway REST API stages that have cache enabled are encrypted. The control fails if any method in an API Gateway REST API stage is configured to cache and the cache isn't encrypted.
+ Encrypting data at rest reduces the risk of data stored on disk being accessed by a user not authenticated to AWS. It adds another set of access controls to limit unauthorized users ability access the data. For example, API permissions are required to decrypt the data before it can be read.
+ API Gateway REST API caches should be encrypted at rest for an added layer of security.
+
+**Severity**: Medium
+
+### API Gateway REST API stages should be configured to use SSL certificates for backend authentication
+
+**Description**: This control checks whether Amazon API Gateway REST API stages have SSL certificates configured.
+ Backend systems use these certificates to authenticate that incoming requests are from API Gateway.
+ API Gateway REST API stages should be configured with SSL certificates to allow backend systems to authenticate that requests originate from API Gateway.
+
+**Severity**: Medium
+
+### API Gateway REST API stages should have AWS X-Ray tracing enabled
+
+**Description**: This control checks whether AWS X-Ray active tracing is enabled for your Amazon API Gateway REST API stages.
+ X-Ray active tracing enables a more rapid response to performance changes in the underlying infrastructure. Changes in performance could result in a lack of availability of the API.
+ X-Ray active tracing provides real-time metrics of user requests that flow through your API Gateway REST API operations and connected services.
+
+**Severity**: Low
+
+### API Gateway should be associated with an AWS WAF web ACL
+
+**Description**: This control checks whether an API Gateway stage uses an AWS WAF web access control list (ACL).
+ This control fails if an AWS WAF web ACL isn't attached to a REST API Gateway stage.
+ AWS WAF is a web application firewall that helps protect web applications and APIs from attacks. It enables you to configure an ACL, which is a set of rules that allow, block, or count web requests based on customizable web security rules and conditions that you define.
+ Ensure that your API Gateway stage is associated with an AWS WAF web ACL to help protect it from malicious attacks.
+
+**Severity**: Medium
+
+### Application and Classic Load Balancers logging should be enabled
+
+**Description**: This control checks whether the Application Load Balancer and the Classic Load Balancer have logging enabled. The control fails if `access_logs.s3.enabled` is false.
+Elastic Load Balancing provides access logs that capture detailed information about requests sent to your load balancer. Each log contains information such as the time the request was received, the client's IP address, latencies, request paths, and server responses. You can use access logs to analyze traffic patterns and to troubleshoot issues.
+To learn more, see [Access logs for your Classic Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/access-log-collection.html) in User Guide for Classic Load Balancers.
+
+**Severity**: Medium
+
+### Attached EBS volumes should be encrypted at-rest
+
+**Description**: This control checks whether the EBS volumes that are in an attached state are encrypted. To pass this check, EBS volumes must be in use and encrypted. If the EBS volume isn't attached, then it isn't subject to this check.
+For an added layer of security of your sensitive data in EBS volumes, you should enable EBS encryption at rest. Amazon EBS encryption offers a straightforward encryption solution for your EBS resources that doesn't require you to build, maintain, and secure your own key management infrastructure. It uses AWS KMS customer master keys (CMK) when creating encrypted volumes and snapshots.
+To learn more about Amazon EBS encryption, see [Amazon EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) in the Amazon EC2 User Guide for Linux Instances.
+
+**Severity**: Medium
+
+### AWS Database Migration Service replication instances shouldn't be public
+
+**Description**: To protect your replicated instances from threats. A private replication instance should have a private IP address that you can't access outside of the replication network.
+ A replication instance should have a private IP address when the source and target databases are in the same network, and the network is connected to the replication instance's VPC using a VPN, AWS Direct Connect, or VPC peering.
+ You should also ensure that access to your AWS DMS instance configuration is limited to only authorized users.
+ To do this, restrict users' IAM permissions to modify AWS DMS settings and resources.
+
+**Severity**: High
+
+### Classic Load Balancer listeners should be configured with HTTPS or TLS termination
+
+**Description**: This control checks whether your Classic Load Balancer listeners are configured with HTTPS or TLS protocol for front-end (client to load balancer) connections. The control is applicable if a Classic Load Balancer has listeners. If your Classic Load Balancer doesn't have a listener configured, then the control doesn't report any findings.
+The control passes if the Classic Load Balancer listeners are configured with TLS or HTTPS for front-end connections.
+The control fails if the listener isn't configured with TLS or HTTPS for front-end connections.
+Before you start to use a load balancer, you must add one or more listeners. A listener is a process that uses the configured protocol and port to check for connection requests. Listeners can support both HTTP and HTTPS/TLS protocols. You should always use an HTTPS or TLS listener, so that the load balancer does the work of encryption and decryption in transit.
+
+**Severity**: Medium
+
+### Classic Load Balancers should have connection draining enabled
+
+**Description**: This control checks whether Classic Load Balancers have connection draining enabled.
+Enabling connection draining on Classic Load Balancers ensures that the load balancer stops sending requests to instances that are deregistering or unhealthy. It keeps the existing connections open. This is useful for instances in Auto Scaling groups, to ensure that connections aren't severed abruptly.
+
+**Severity**: Medium
+
+### CloudFront distributions should have AWS WAF enabled
+
+**Description**: This control checks whether CloudFront distributions are associated with either AWS WAF or AWS WAFv2 web ACLs. The control fails if the distribution isn't associated with a web ACL.
+AWS WAF is a web application firewall that helps protect web applications and APIs from attacks. It allows you to configure a set of rules, called a web access control list (web ACL), that allow, block, or count web requests based on customizable web security rules and conditions that you define. Ensure your CloudFront distribution is associated with an AWS WAF web ACL to help protect it from malicious attacks.
+
+**Severity**: Medium
+
+### CloudFront distributions should have logging enabled
+
+**Description**: This control checks whether server access logging is enabled on CloudFront distributions. The control fails if access logging isn't enabled for a distribution.
+ CloudFront access logs provide detailed information about every user request that CloudFront receives. Each log contains information such as the date and time the request was received, the IP address of the viewer that made the request, the source of the request, and the port number of the request from the viewer.
+These logs are useful for applications such as security and access audits and forensics investigation. For more information on how to analyze access logs, see Querying Amazon CloudFront logs in the Amazon Athena User Guide.
+
+**Severity**: Medium
+
+### CloudFront distributions should require encryption in transit
+
+**Description**: This control checks whether an Amazon CloudFront distribution requires viewers to use HTTPS directly or whether it uses redirection. The control fails if ViewerProtocolPolicy is set to allow-all for defaultCacheBehavior or for cacheBehaviors.
+HTTPS (TLS) can be used to help prevent potential attackers from using person-in-the-middle or similar attacks to eavesdrop on or manipulate network traffic. Only encrypted connections over HTTPS (TLS) should be allowed. Encrypting data in transit can affect performance. You should test your application with this feature to understand the performance profile and the impact of TLS.
+
+**Severity**: Medium
+
+### CloudTrail logs should be encrypted at rest using KMS CMKs
+
+**Description**: We recommended configuring CloudTrail to use SSE-KMS.
+Configuring CloudTrail to use SSE-KMS provides more confidentiality controls on log data as a given user must have S3 read permission on the corresponding log bucket and must be granted decrypt permission by the CMK policy.
+
+**Severity**: Medium
+
+### Connections to Amazon Redshift clusters should be encrypted in transit
+
+**Description**: This control checks whether connections to Amazon Redshift clusters are required to use encryption in transit. The check fails if the Amazon Redshift cluster parameter require_SSL isn't set to *1*.
+TLS can be used to help prevent potential attackers from using person-in-the-middle or similar attacks to eavesdrop on or manipulate network traffic. Only encrypted connections over TLS should be allowed. Encrypting data in transit can affect performance. You should test your application with this feature to understand the performance profile and the impact of TLS.
+
+**Severity**: Medium
+
+### Connections to Elasticsearch domains should be encrypted using TLS 1.2
+
+**Description**: This control checks whether connections to Elasticsearch domains are required to use TLS 1.2. The check fails if the Elasticsearch domain TLSSecurityPolicy isn't Policy-Min-TLS-1-2-2019-07.
+HTTPS (TLS) can be used to help prevent potential attackers from using person-in-the-middle or similar attacks to eavesdrop on or manipulate network traffic. Only encrypted connections over HTTPS (TLS) should be allowed. Encrypting data in transit can affect performance. You should test your application with this feature to understand the performance profile and the impact of TLS. TLS 1.2 provides several security enhancements over previous versions of TLS.
+
+**Severity**: Medium
+
+### DynamoDB tables should have point-in-time recovery enabled
+
+**Description**: This control checks whether point-in-time recovery (PITR) is enabled for an Amazon DynamoDB table.
+
+Backups help you to recover more quickly from a security incident. They also ensure the recoverability of your systems. DynamoDB point-in-time recovery automates backups for DynamoDB tables. It reduces the time to recover from accidental delete or write operations.
+
+DynamoDB tables that have PITR enabled can be restored to any point in time in the last 35 days.
+
+**Severity**: Medium
+
+### EBS default encryption should be enabled
+
+**Description**: This control checks whether account-level encryption is enabled by default for Amazon Elastic Block Store(Amazon EBS).
+ The control fails if the account level encryption isn't enabled.
+When encryption is enabled for your account, Amazon EBS volumes and snapshot copies are encrypted at rest. This adds another layer of protection for your data.
+For more information, see [Encryption by default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-by-default) in the Amazon EC2 User Guide for Linux Instances.
+
+The following instance types don't support encryption: R1, C1, and M1.
+
+**Severity**: Medium
+
+### Elastic Beanstalk environments should have enhanced health reporting enabled
+
+**Description**: This control checks whether enhanced health reporting is enabled for your AWS Elastic Beanstalk environments.
+Elastic Beanstalk enhanced health reporting enables a more rapid response to changes in the health of the underlying infrastructure. These changes could result in a lack of availability of the application.
+Elastic Beanstalk enhanced health reporting provides a status descriptor to gauge the severity of the identified issues and identify possible causes to investigate. The Elastic Beanstalk health agent, included in supported Amazon Machine Images (AMIs), evaluates logs and metrics of environment EC2 instances.
+
+**Severity**: Low
+
+### Elastic Beanstalk managed platform updates should be enabled
+
+**Description**: This control checks whether managed platform updates are enabled for the Elastic Beanstalk environment.
+Enabling managed platform updates ensures that the latest available platform fixes, updates, and features for the environment are installed. Keeping up to date with patch installation is an important step in securing systems.
+
+**Severity**: High
+
+### Elastic Load Balancer shouldn't have ACM certificate expired or expiring in 90 days.
+
+**Description**: This check identifies Elastic Load Balancers (ELB) which are using ACM certificates expired or expiring in 90 days. AWS Certificate Manager (ACM) is the preferred tool to provision, manage, and deploy your server certificates. With ACM. You can request a certificate or deploy an existing ACM or external certificate to AWS resources. As a best practice, it's recommended to reimport expiring/expired certificates while preserving the ELB associations of the original certificate.
+
+**Severity**: High
+
+### Elasticsearch domain error logging to CloudWatch Logs should be enabled
+
+**Description**: This control checks whether Elasticsearch domains are configured to send error logs to CloudWatch Logs.
+You should enable error logs for Elasticsearch domains and send those logs to CloudWatch Logs for retention and response. Domain error logs can assist with security and access audits, and can help to diagnose availability issues.
+
+**Severity**: Medium
+
+### Elasticsearch domains should be configured with at least three dedicated master nodes
+
+**Description**: This control checks whether Elasticsearch domains are configured with at least three dedicated master nodes. This control fails if the domain doesn't use dedicated master nodes. This control passes if Elasticsearch domains have five dedicated master nodes. However, using more than three master nodes might be unnecessary to mitigate the availability risk, and will result in more cost.
+An Elasticsearch domain requires at least three dedicated master nodes for high availability and fault-tolerance. Dedicated master node resources can be strained during data node blue/green deployments because there are more nodes to manage. Deploying an Elasticsearch domain with at least three dedicated master nodes ensures sufficient master node resource capacity and cluster operations if a node fails.
+
+**Severity**: Medium
+
+### Elasticsearch domains should have at least three data nodes
+
+**Description**: This control checks whether Elasticsearch domains are configured with at least three data nodes and zoneAwarenessEnabled is true.
+An Elasticsearch domain requires at least three data nodes for high availability and fault-tolerance. Deploying an Elasticsearch domain with at least three data nodes ensures cluster operations if a node fails.
+
+**Severity**: Medium
+
+### Elasticsearch domains should have audit logging enabled
+
+**Description**: This control checks whether Elasticsearch domains have audit logging enabled. This control fails if an Elasticsearch domain doesn't have audit logging enabled.
+Audit logs are highly customizable. They allow you to track user activity on your Elasticsearch clusters, including authentication successes and failures, requests to OpenSearch, index changes, and incoming search queries.
+
+**Severity**: Medium
+
+### Enhanced monitoring should be configured for RDS DB instances and clusters
+
+**Description**: This control checks whether enhanced monitoring is enabled for your RDS DB instances.
+In Amazon RDS, Enhanced Monitoring enables a more rapid response to performance changes in underlying infrastructure. These performance changes could result in a lack of availability of the data. Enhanced Monitoring provides real-time metrics of the operating system that your RDS DB instance runs on. An agent is installed on the instance. The agent can obtain metrics more accurately than is possible from the hypervisor layer.
+Enhanced Monitoring metrics are useful when you want to see how different processes or threads on a DB instance use the CPU. For more information, see [Enhanced Monitoring](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html) in the *Amazon RDS User Guide*.
+
+**Severity**: Low
+
+### Ensure rotation for customer created CMKs is enabled
+
+**Description**: AWS Key Management Service (KMS) allows customers to rotate the backing key, which is key material stored within the KMS that is tied to the key ID of the Customer Created customer master key (CMK).
+ It's the backing key that is used to perform cryptographic operations such as encryption and decryption.
+ Automated key rotation currently retains all prior backing keys so that decryption of encrypted data can take place transparently. It's recommended that CMK key rotation be enabled.
+ Rotating encryption keys helps reduce the potential impact of a compromised key as data encrypted with a new key can't be accessed with a previous key that might have been exposed.
+
+**Severity**: Medium
+
+### Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket
+
+**Description**: S3 Bucket Access Logging generates a log that contains access records Ensure S3 bucket access logging is enabled on the CloudTrail S3 bucket for each request made to your S3 bucket.
+ An access log record contains details about the request, such as the request type, the resources specified in the request worked, and the time and date the request was processed.
+It's recommended that bucket access logging be enabled on the CloudTrail S3 bucket.
+By enabling S3 bucket logging on target S3 buckets, it's possible to capture all events, which might affect objects within target buckets. Configuring logs to be placed in a separate bucket allows access to log information, which can be useful in security and incident response workflows.
+
+**Severity**: Low
+
+### Ensure the S3 bucket used to store CloudTrail logs isn't publicly accessible
+
+**Description**: CloudTrail logs a record of every API call made in your AWS account. These log files are stored in an S3 bucket.
+ It's recommended that the bucket policy, or access control list (ACL), applied to the S3 bucket that CloudTrail logs to prevent public access to the CloudTrail logs.
+Allowing public access to CloudTrail log content might aid an adversary in identifying weaknesses in the affected account's use or configuration.
+
+**Severity**: High
+
+### IAM shouldn't have expired SSL/TLS certificates
+
+**Description**: This check identifies expired SSL/TLS certificates. To enable HTTPS connections to your website or application in AWS, you need an SSL/TLS server certificate. You can use ACM or IAM to store and deploy server certificates. Removing expired SSL/TLS certificates eliminates the risk that an invalid certificate will be deployed accidentally to a resource such as AWS Elastic Load Balancer (ELB), which can damage the credibility of the application/website behind the ELB. This check generates alerts if there are any expired SSL/TLS certificates stored in AWS IAM. As a best practice, it's recommended to delete expired certificates.
+
+**Severity**: High
+
+### Imported ACM certificates should be renewed after a specified time period
+
+**Description**: This control checks whether ACM certificates in your account are marked for expiration within 30 days. It checks both imported certificates and certificates provided by AWS Certificate Manager.
+ACM can automatically renew certificates that use DNS validation. For certificates that use email validation, you must respond to a domain validation email.
+ ACM also doesn't automatically renew certificates that you import. You must renew imported certificates manually.
+For more information about managed renewal for ACM certificates, see [Managed renewal for ACM certificates](https://docs.aws.amazon.com/acm/latest/userguide/managed-renewal.html) in the AWS Certificate Manager User Guide.
+
+**Severity**: Medium
+
+### Over-provisioned identities in accounts should be investigated to reduce the Permission Creep Index (PCI)
+
+**Description**: Over-provisioned identities in accounts should be investigated to reduce the Permission Creep Index (PCI) and to safeguard your infrastructure. Reduce the PCI by removing the unused high risk permission assignments. High PCI reflects risk associated with the identities with permissions that exceed their normal or required usage.
+
+**Severity**: Medium
+
+### RDS automatic minor version upgrades should be enabled
+
+**Description**: This control checks whether automatic minor version upgrades are enabled for the RDS database instance.
+Enabling automatic minor version upgrades ensures that the latest minor version updates to the relational database management system (RDBMS) are installed. These upgrades might include security patches and bug fixes. Keeping up to date with patch installation is an important step in securing systems.
+
+**Severity**: High
+
+### RDS cluster snapshots and database snapshots should be encrypted at rest
+
+**Description**: This control checks whether RDS DB snapshots are encrypted.
+This control is intended for RDS DB instances. However, it can also generate findings for snapshots of Aurora DB instances, Neptune DB instances, and Amazon DocumentDB clusters. If these findings aren't useful, then you can suppress them.
+Encrypting data at rest reduces the risk that an unauthenticated user gets access to data that is stored on disk. Data in RDS snapshots should be encrypted at rest for an added layer of security.
+
+**Severity**: Medium
+
+### RDS clusters should have deletion protection enabled
+
+**Description**: This control checks whether RDS clusters have deletion protection enabled.
+This control is intended for RDS DB instances. However, it can also generate findings for Aurora DB instances, Neptune DB instances, and Amazon DocumentDB clusters. If these findings aren't useful, then you can suppress them.
+Enabling cluster deletion protection is another layer of protection against accidental database deletion or deletion by an unauthorized entity.
+When deletion protection is enabled, an RDS cluster can't be deleted. Before a deletion request can succeed, deletion protection must be disabled.
+
+**Severity**: Low
+
+### RDS DB clusters should be configured for multiple Availability Zones
+
+**Description**: RDS DB clusters should be configured for multiple the data that is stored.
+ Deployment to multiple Availability Zones allows for automate Availability Zones to ensure availability of ed failover in the event of an Availability Zone availability issue and during regular RDS maintenance events.
+
+**Severity**: Medium
+
+### RDS DB clusters should be configured to copy tags to snapshots
+
+**Description**: Identification and inventory of your IT assets is a crucial aspect of governance and security.
+ You need to have visibility of all your RDS DB clusters so that you can assess their security posture and act on potential areas of weakness.
+ Snapshots should be tagged in the same way as their parent RDS database clusters.
+ Enabling this setting ensures that snapshots inherit the tags of their parent database clusters.
+
+**Severity**: Low
+
+### RDS DB instances should be configured to copy tags to snapshots
+
+**Description**: This control checks whether RDS DB instances are configured to copy all tags to snapshots when the snapshots are created.
+Identification and inventory of your IT assets is a crucial aspect of governance and security.
+ You need to have visibility of all your RDS DB instances so that you can assess their security posture and take action on potential areas of weakness.
+ Snapshots should be tagged in the same way as their parent RDS database instances. Enabling this setting ensures that snapshots inherit the tags of their parent database instances.
+
+**Severity**: Low
+
+### RDS DB instances should be configured with multiple Availability Zones
+
+**Description**: This control checks whether high availability is enabled for your RDS DB instances.
+ RDS DB instances should be configured for multiple Availability Zones (AZs). This ensures the availability of the data stored. Multi-AZ deployments allow for automated failover if there's an issue with Availability Zone availability and during regular RDS maintenance.
+
+**Severity**: Medium
+
+### RDS DB instances should have deletion protection enabled
+
+**Description**: This control checks whether your RDS DB instances that use one of the listed database engines have deletion protection enabled.
+Enabling instance deletion protection is another layer of protection against accidental database deletion or deletion by an unauthorized entity.
+While deletion protection is enabled, an RDS DB instance can't be deleted. Before a deletion request can succeed, deletion protection must be disabled.
+
+**Severity**: Low
+
+### RDS DB instances should have encryption at rest enabled
+
+**Description**: This control checks whether storage encryption is enabled for your Amazon RDS DB instances.
+This control is intended for RDS DB instances. However, it can also generate findings for Aurora DB instances, Neptune DB instances, and Amazon DocumentDB clusters. If these findings aren't useful, then you can suppress them.
+ For an added layer of security for your sensitive data in RDS DB instances, you should configure your RDS DB instances to be encrypted at rest. To encrypt your RDS DB instances and snapshots at rest, enable the encryption option for your RDS DB instances. Data that is encrypted at rest includes the underlying storage for DB instances, its automated backups, read replicas, and snapshots.
+RDS encrypted DB instances use the open standard AES-256 encryption algorithm to encrypt your data on the server that hosts your RDS DB instances. After your data is encrypted, Amazon RDS handles authentication of access and decryption of your data transparently with a minimal impact on performance. You don't need to modify your database client applications to use encryption.
+Amazon RDS encryption is currently available for all database engines and storage types. Amazon RDS encryption is available for most DB instance classes. To learn about DB instance classes that don't support Amazon RDS encryption, see [Encrypting Amazon RDS resources](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Encryption.html) in the *Amazon RDS User Guide*.
+
+**Severity**: Medium
+
+### RDS DB Instances should prohibit public access
+
+**Description**: We recommend that you also ensure that access to your RDS instance's configuration is limited to authorized users only, by restricting users' IAM permissions to modify RDS instances' settings and resources.
+
+**Severity**: High
+
+### RDS snapshots should prohibit public access
+
+**Description**: We recommend only allowing authorized principals to access the snapshot and change Amazon RDS configuration.
+
+**Severity**: High
+
+### Remove unused Secrets Manager secrets
+
+**Description**: This control checks whether your secrets have been accessed within a specified number of days. The default value is 90 days. If a secret wasn't accessed within the defined number of days, this control fails.
+Deleting unused secrets is as important as rotating secrets. Unused secrets can be abused by their former users, who no longer need access to these secrets. Also, as more users get access to a secret, someone might have mishandled and leaked it to an unauthorized entity, which increases the risk of abuse. Deleting unused secrets helps revoke secret access from users who no longer need it. It also helps to reduce the cost of using Secrets Manager. Therefore, it's essential to routinely delete unused secrets.
+
+**Severity**: Medium
+
+### S3 buckets should have cross-region replication enabled
+
+**Description**: Enabling S3 cross-region replication ensures that multiple versions of the data are available in different distinct Regions.
+ This allows you to protect your S3 bucket against DDoS attacks and data corruption events.
+
+**Severity**: Low
+
+### S3 buckets should have server-side encryption enabled
+
+**Description**: Enable server-side encryption to protect data in your S3 buckets.
+ Encrypting the data can prevent access to sensitive data in the event of a data breach.
+
+**Severity**: Medium
+
+### Secrets Manager secrets configured with automatic rotation should rotate successfully
+
+**Description**: This control checks whether an AWS Secrets Manager secret rotated successfully based on the rotation schedule. The control fails if **RotationOccurringAsScheduled** is **false**. The control doesn't evaluate secrets that don't have rotation configured.
+Secrets Manager helps you improve the security posture of your organization. Secrets include database credentials, passwords, and third-party API keys. You can use Secrets Manager to store secrets centrally, encrypt secrets automatically, control access to secrets, and rotate secrets safely and automatically.
+Secrets Manager can rotate secrets. You can use rotation to replace long-term secrets with short-term ones. Rotating your secrets limits how long an unauthorized user can use a compromised secret. For this reason, you should rotate your secrets frequently.
+In addition to configuring secrets to rotate automatically, you should ensure that those secrets rotate successfully based on the rotation schedule.
+To learn more about rotation, see [Rotating your AWS Secrets Manager secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html) in the AWS Secrets Manager User Guide.
+
+**Severity**: Medium
+
+### Secrets Manager secrets should be rotated within a specified number of days
+
+**Description**: This control checks whether your secrets have been rotated at least once within 90 days.
+Rotating secrets can help you to reduce the risk of an unauthorized use of your secrets in your AWS account. Examples include database credentials, passwords, third-party API keys, and even arbitrary text. If you don't change your secrets for a long period of time, the secrets are more likely to be compromised.
+As more users get access to a secret, it can become more likely that someone mishandled and leaked it to an unauthorized entity. Secrets can be leaked through logs and cache data. They can be shared for debugging purposes and not changed or revoked once the debugging completes. For all these reasons, secrets should be rotated frequently.
+You can configure your secrets for automatic rotation in AWS Secrets Manager. With automatic rotation, you can replace long-term secrets with short-term ones, significantly reducing the risk of compromise.
+Security Hub recommends that you enable rotation for your Secrets Manager secrets. To learn more about rotation, see [Rotating your AWS Secrets Manager secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html) in the AWS Secrets Manager User Guide.
+
+**Severity**: Medium
+
+### SNS topics should be encrypted at rest using AWS KMS
+
+**Description**: This control checks whether an SNS topic is encrypted at rest using AWS KMS.
+Encrypting data at rest reduces the risk of data stored on disk being accessed by a user not authenticated to AWS. It also adds another set of access controls to limit the ability of unauthorized users to access the data.
+For example, API permissions are required to decrypt the data before it can be read. SNS topics should be [encrypted at-rest](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html) for an added layer of security. For more information, see Encryption at rest in the Amazon Simple Notification Service Developer Guide.
+
+**Severity**: Medium
+
+### VPC flow logging should be enabled in all VPCs
+
+**Description**: VPC Flow Logs provide visibility into network traffic that passes through the VPC and can be used to detect anomalous traffic or insight during security events.
+
+**Severity**: Medium
+
+
+
+
+## GCP data recommendations
+
+### Ensure '3625 (trace flag)' database flag for Cloud SQL SQL Server instance is set to 'off'
+
+**Description**: It's recommended to set "3625 (trace flag)" database flag for Cloud SQL SQL Server instance to "off."
+ Trace flags are frequently used to diagnose performance issues or to debug stored procedures or complex computer systems, but they might also be recommended by Microsoft Support to address behavior that is negatively impacting a specific workload.
+ All documented trace flags and those recommended by Microsoft Support are fully supported in a production environment when used as directed.
+ "3625(trace log)" Limits the amount of information returned to users who aren't members of the sysadmin fixed server role, by masking the parameters of some error messages using '******.'
+ This can help prevent disclosure of sensitive information. Hence this is recommended to disable this flag.
+ This recommendation is applicable to SQL Server database instances.
+
+**Severity**: Medium
+
+### Ensure 'external scripts enabled' database flag for Cloud SQL SQL Server instance is set to 'off'
+
+**Description**: It's recommended to set "external scripts enabled" database flag for Cloud SQL SQL Server instance to off.
+ "external scripts enabled" enable the execution of scripts with certain remote language extensions.
+ This property is OFF by default.
+ When Advanced Analytics Services is installed, setup can optionally set this property to true.
+ As the "External Scripts Enabled" feature allows scripts external to SQL such as files located in an R library to be executed, which could adversely affect the security of the system, hence this should be disabled.
+ This recommendation is applicable to SQL Server database instances.
+
+**Severity**: High
+
+### Ensure 'remote access' database flag for Cloud SQL SQL Server instance is set to 'off'
+
+**Description**: It's recommended to set "remote access" database flag for Cloud SQL SQL Server instance to "off."
+ The "remote access" option controls the execution of stored procedures from local or remote servers on which instances of SQL Server are running.
+ This default value for this option is 1.
+ This grants permission to run local stored procedures from remote servers or remote stored procedures from the local server.
+ To prevent local stored procedures from being run from a remote server or remote stored procedures from being run on the local server, this must be disabled.
+ The Remote Access option controls the execution of local stored procedures on remote servers or remote stored procedures on local server.
+ 'Remote access' functionality can be abused to launch a Denial-of-Service (DoS) attack on remote servers by off-loading query processing to a target, hence this should be disabled.
+ This recommendation is applicable to SQL Server database instances.
+
+**Severity**: High
+
+### Ensure 'skip_show_database' database flag for Cloud SQL Mysql instance is set to 'on'
+
+**Description**: It's recommended to set "skip_show_database" database flag for Cloud SQL Mysql instance to "on."
+ 'skip_show_database' database flag prevents people from using the SHOW DATABASES statement if they don't have the SHOW DATABASES privilege.
+ This can improve security if you have concerns about users being able to see databases belonging to other users.
+ Its effect depends on the SHOW DATABASES privilege: If the variable value is ON, the SHOW DATABASES statement is permitted only to users who have the SHOW DATABASES privilege, and the statement displays all database names.
+ If the value is OFF, SHOW DATABASES is permitted to all users, but displays the names of only those databases for which the user has the SHOW DATABASES or other privilege.
+ This recommendation is applicable to Mysql database instances.
+
+**Severity**: Low
+
+### Ensure that a Default Customer-managed encryption key (CMEK) is specified for all BigQuery Data Sets
+
+**Description**: BigQuery by default encrypts the data as rest by employing Envelope Encryption using Google managed cryptographic keys.
+ The data is encrypted using the data encryption keys and data encryption keys themselves are further encrypted using key encryption keys.
+This is seamless and does not require any additional input from the user.
+However, if you want to have greater control, Customer-managed encryption keys (CMEK) can be used as encryption key management solution for BigQuery Data Sets.
+BigQuery by default encrypts the data as rest by employing Envelope Encryption using Google managed cryptographic keys.
+ This is seamless and doesn't require any additional input from the user.
+For greater control over the encryption, customer-managed encryption keys (CMEK) can be used as encryption key management solution for BigQuery Data Sets.
+ Setting a Default Customer-managed encryption key (CMEK) for a data set ensure any tables created in future will use the specified CMEK if none other is provided.
+
+Google doesn't store your keys on its servers and can't access your protected data unless you provide the key.
+
+This also means that if you forget or lose your key, there's no way for Google to recover the key or to recover any data encrypted with the lost key.
+
+**Severity**: Medium
+
+### Ensure that all BigQuery Tables are encrypted with Customer-managed encryption key (CMEK)
+
+**Description**: BigQuery by default encrypts the data as rest by employing Envelope Encryption using Google managed cryptographic keys.
+ The data is encrypted using the data encryption keys and data encryption keys themselves are further encrypted using key encryption keys.
+ This is seamless and does not require any additional input from the user.
+ However, if you want to have greater control, Customer-managed encryption keys (CMEK) can be used as encryption key management solution for BigQuery Data Sets.
+ If CMEK is used, the CMEK is used to encrypt the data encryption keys instead of using google-managed encryption keys.
+BigQuery by default encrypts the data as rest by employing Envelope Encryption using Google managed cryptographic keys.
+This is seamless and doesn't require any additional input from the user.
+For greater control over the encryption, customer-managed encryption keys (CMEK) can be used as encryption key management solution for BigQuery tables.
+The CMEK is used to encrypt the data encryption keys instead of using google-managed encryption keys.
+ BigQuery stores the table and CMEK association and the encryption/decryption is done automatically.
+Applying the Default Customer-managed keys on BigQuery data sets ensures that all the new tables created in the future will be encrypted using CMEK but existing tables need to be updated to use CMEK individually.
+
+Google doesn't store your keys on its servers and can't access your protected data unless you provide the key.
+ This also means that if you forget or lose your key, there's no way for Google to recover the key or to recover any data encrypted with the lost key.
+
+**Severity**: Medium
+
+### Ensure that BigQuery datasets are not anonymously or publicly accessible
+
+**Description**: It's recommended that the IAM policy on BigQuery datasets doesn't allow anonymous and/or public access.
+  Granting permissions to allUsers or allAuthenticatedUsers allows anyone to access the dataset.
+Such access might not be desirable if sensitive data is being stored in the dataset.
+ Therefore, ensure that anonymous and/or public access to a dataset isn't allowed.
+
+**Severity**: High
+
+### Ensure that Cloud SQL database instances are configured with automated backups
+
+**Description**: It's recommended to have all SQL database instances set to enable automated backups.
+ Backups provide a way to restore a Cloud SQL instance to recover lost data or recover from a problem with that instance.
+ Automated backups need to be set for any instance that contains data that should be protected from loss or damage.
+ This recommendation is applicable for SQL Server, PostgreSql, MySql generation 1, and MySql generation 2 instances.
+
+**Severity**: High
+
+### Ensure that Cloud SQL database instances are not opened to the world
+
+**Description**: Database Server should accept connections only from trusted Network(s)/IP(s) and restrict access from the world.
+ To minimize attack surface on a Database server instance, only trusted/known and required IP(s) should be approved to connect to it.
+ An authorized network shouldn't have IPs/networks configured to 0.0.0.0/0, which will allow access to the instance from anywhere in the world. Note that authorized networks apply only to instances with public IPs.
+
+**Severity**: High
+
+### Ensure that Cloud SQL database instances do not have public IPs
+
+**Description**: It's recommended to configure Second Generation Sql instance to use private IPs instead of public IPs.
+ To lower the organization's attack surface, Cloud SQL databases shouldn't have public IPs.
+ Private IPs provide improved network security and lower latency for your application.
+
+**Severity**: High
+
+### Ensure that Cloud Storage bucket is not anonymously or publicly accessible
+
+**Description**: It's recommended that IAM policy on Cloud Storage bucket doesn't allows anonymous or public access.
+Allowing anonymous or public access grants permissions to anyone to access bucket content.
+ Such access might not be desired if you're storing any sensitive data.
+ Hence, ensure that anonymous or public access to a bucket isn't allowed.
+
+**Severity**: High
+
+### Ensure that Cloud Storage buckets have uniform bucket-level access enabled
+
+**Description**: It's recommended that uniform bucket-level access is enabled on Cloud Storage buckets.
+ It's recommended to use uniform bucket-level access to unify and simplify how you grant access to your Cloud Storage resources.
+ Cloud Storage offers two systems for granting users permission to access your buckets and objects:
+ Cloud Identity and Access Management (Cloud IAM) and Access Control Lists (ACLs).  
+ These systems act in parallel - in order for a user to access a Cloud Storage resource, only one of the systems needs to grant the user permission.
+ Cloud IAM is used throughout Google Cloud and allows you to grant a variety of permissions at the bucket and project levels.
+ ACLs are used only by Cloud Storage and have limited permission options, but they allow you to grant permissions on a per-object basis.
+
+ In order to support a uniform permissioning system, Cloud Storage has uniform bucket-level access.
+ Using this feature disables ACLs for all Cloud Storage resources:
+ access to Cloud Storage resources then is granted exclusively through Cloud IAM.
+ Enabling uniform bucket-level access guarantees that if a Storage bucket isn't publicly accessible,
+no object in the bucket is publicly accessible either.
+
+**Severity**: Medium
+
+### Ensure that Compute instances have Confidential Computing enabled
+
+**Description**: Google Cloud encrypts data at-rest and in-transit, but customer data must be decrypted for processing. Confidential Computing is a breakthrough technology that encrypts data in-use-while it's being processed.
+ Confidential Computing environments keep data encrypted in memory and elsewhere outside the central processing unit (CPU).
+Confidential VMs leverage the Secure Encrypted Virtualization (SEV) feature of AMD EPYC CPUs.
+ Customer data will stay encrypted while it's used, indexed, queried, or trained on.
+ Encryption keys are generated in hardware, per VM, and not exportable. Thanks to built-in hardware optimizations of both performance and security, there's no significant performance penalty to Confidential Computing workloads.
+Confidential Computing enables customers' sensitive code and other data encrypted in memory during processing. Google doesn't have access to the encryption keys.
+Confidential VM can help alleviate concerns about risk related to either dependency on Google infrastructure or Google insiders' access to customer data in the clear.
+
+**Severity**: High
+
+### Ensure that retention policies on log buckets are configured using Bucket Lock
+
+**Description**: Enabling retention policies on log buckets will protect logs stored in cloud storage buckets from being overwritten or accidentally deleted.
+ It's recommended to set up retention policies and configure Bucket Lock on all storage buckets that are used as log sinks.
+ Logs can be exported by creating one or more sinks that include a log filter and a destination. As Stackdriver Logging receives new log entries, they're compared against each sink.
+ If a log entry matches a sink's filter, then a copy of the log entry is written to the destination.
+ Sinks can be configured to export logs in storage buckets.
+ It's recommended to configure a data retention policy for these cloud storage buckets and to lock the data retention policy; thus permanently preventing the policy from being reduced or removed.
+ This way, if the system is ever compromised by an attacker or a malicious insider who wants to cover their tracks, the activity logs are definitely preserved for forensics and security investigations.
+
+**Severity**: Low
+
+### Ensure that the Cloud SQL database instance requires all incoming connections to use SSL
+
+**Description**: It's recommended to enforce all incoming connections to SQL database instance to use SSL.
+ SQL database connections if successfully trapped (MITM); can reveal sensitive data like credentials, database queries, query outputs etc.
+ For security, it's recommended to always use SSL encryption when connecting to your instance.
+ This recommendation is applicable for Postgresql, MySql generation 1, and MySql generation 2 instances.
+
+**Severity**: High
+
+### Ensure that the 'contained database authentication' database flag for Cloud SQL on the SQL Server instance is set to 'off'
+
+**Description**: It's recommended to set "contained database authentication" database flag for Cloud SQL on the SQL Server instance is set to "off."
+ A contained database includes all database settings and metadata required to define the database and has no configuration dependencies on the instance of the Database Engine where the database is installed.
+ Users can connect to the database without authenticating a login at the Database Engine level.
+ Isolating the database from the Database Engine makes it possible to easily move the database to another instance of SQL Server.
+ Contained databases have some unique threats that should be understood and mitigated by SQL Server Database Engine administrators.
+ Most of the threats are related to the USER WITH PASSWORD authentication process, which moves the authentication boundary from the Database Engine level to the database level, hence this is recommended to disable this flag.
+ This recommendation is applicable to SQL Server database instances.
+
+**Severity**: Medium
+
+### Ensure that the 'cross db ownership chaining' database flag for Cloud SQL SQL Server instance is set to 'off'
+
+**Description**: It's recommended to set "cross db ownership chaining" database flag for Cloud SQL SQL Server instance to "off."
+ Use the "cross db ownership" for chaining option to configure cross-database ownership chaining for an instance of Microsoft SQL Server.
+ This server option allows you to control cross-database ownership chaining at the database level or to allow cross-database ownership chaining for all databases.
+ Enabling "cross db ownership" isn't recommended unless all of the databases hosted by the instance of SQL Server must participate in cross-database ownership chaining and you're aware of the security implications of this setting.
+ This recommendation is applicable to SQL Server database instances.
+
+**Severity**: Medium
+
+### Ensure that the 'local_infile' database flag for a Cloud SQL Mysql instance is set to 'off'
+
+**Description**: It's recommended to set the local_infile database flag for a Cloud SQL MySQL instance to off.
+The local_infile flag controls the server-side LOCAL capability for LOAD DATA statements. Depending on the local_infile setting, the server refuses or permits local data loading by clients that have LOCAL enabled on the client side.
+To explicitly cause the server to refuse LOAD DATA LOCAL statements (regardless of how client programs and libraries are configured at build time or runtime), start ```mysqld``` with local_infile disabled. local_infile can also be set at runtime.
+Due to security issues associated with the local_infile flag, it's recommended to disable it. This recommendation is applicable to MySQL database instances.
+
+**Severity**: Medium
+
+### Ensure that the log metric filter and alerts exist for Cloud Storage IAM permission changes
+
+**Description**: It's recommended that a metric filter and alarm be established for Cloud Storage Bucket IAM changes.
+Monitoring changes to cloud storage bucket permissions might reduce the time needed to detect and correct permissions on sensitive cloud storage buckets and objects inside the bucket.
+
+**Severity**: Low
+
+### Ensure that the log metric filter and alerts exist for SQL instance configuration changes
+
+**Description**: It's recommended that a metric filter and alarm be established for SQL instance configuration changes.
+Monitoring changes to SQL instance configuration changes might reduce the time needed to detect and correct misconfigurations done on the SQL server.
+Below are a few of the configurable options that might impact the security posture of an SQL instance:
+
+- Enable auto backups and high availability: Misconfiguration might adversely impact business continuity, disaster recovery, and high availability
+- Authorize networks: Misconfiguration might increase exposure to untrusted networks
+
+**Severity**: Low
+
+### Ensure that there are only GCP-managed service account keys for each service account
+
+**Description**: User managed service accounts shouldn't have user-managed keys.
+ Anyone who has access to the keys will be able to access resources through the service account. GCP-managed keys are used by Cloud Platform services such as App Engine and Compute Engine. These keys can't be downloaded. Google will keep the keys and automatically rotate them on an approximately weekly basis.
+ User-managed keys are created, downloadable, and managed by users. They expire 10 years from creation.
+For user-managed keys, the user has to take ownership of key management activities, which include:
+
+- Key storage
+- Key distribution
+- Key revocation
+- Key rotation
+- Key protection from unauthorized users
+- Key recovery
+
+Even with key owner precautions, keys can be easily leaked by less than optimum common development practices like checking keys into the source code or leaving them in the Downloads directory, or accidentally leaving them on support blogs/channels. It's recommended to prevent user-managed service account keys.
+
+**Severity**: Low
+
+### Ensure 'user connections' database flag for Cloud SQL SQL Server instance is set as appropriate
+
+**Description**: It's recommended to set "user connections" database flag for Cloud SQL SQL Server instance according to organization-defined value.
+ The "user connections" option specifies the maximum number of simultaneous user connections that are allowed on an instance of SQL Server.
+ The actual number of user connections allowed also depends on the version of SQL Server that you're using, and also the limits of your application or applications and hardware.
+ SQL Server allows a maximum of 32,767 user connections.
+ Because user connections are a dynamic (self-configuring) option, SQL Server adjusts the maximum number of user connections automatically as needed, up to the maximum value allowable.
+ For example, if only 10 users are logged in, 10 user connection objects are allocated.
+ In most cases, you don't have to change the value for this option.
+ The default is 0, which means that the maximum (32,767) user connections are allowed.
+ This recommendation is applicable to SQL Server database instances.
+
+**Severity**: Low
+
+### Ensure 'user options' database flag for Cloud SQL SQL Server instance is not configured
+
+**Description**: It's recommended that, "user options" database flag for Cloud SQL SQL Server instance shouldn't be configured.
+ The "user options" option specifies global defaults for all users.
+ A list of default query processing options is established for the duration of a user's work session.
+ The user options setting allows you to change the default values of the SET options (if the server's default settings aren't appropriate).
+ A user can override these defaults by using the SET statement.
+ You can configure user options dynamically for new logins.
+ After you change the setting of user options, new login sessions use the new setting; current login sessions aren't affected.
+ This recommendation is applicable to SQL Server database instances.
+
+**Severity**: Low
+
+### Logging for GKE clusters should be enabled
+
+**Description**: This recommendation evaluates whether the loggingService property of a cluster contains the location Cloud Logging should use to write logs.
+
+**Severity**: High
+
+### Object versioning should be enabled on storage buckets where sinks are configured
+
+**Description**: This recommendation evaluates whether the enabled field in the bucket's versioning property is set to true.
+
+**Severity**: High
+
+### Over-provisioned identities in projects should be investigated to reduce the Permission Creep Index (PCI)
+
+**Description**: Over-provisioned identities in projects should be investigated to reduce the Permission Creep Index (PCI) and to safeguard your infrastructure. Reduce the PCI by removing the unused high risk permission assignments. High PCI reflects risk associated with the identities with permissions that exceed their normal or required usage.
+
+**Severity**: Medium
+
+### Projects that have cryptographic keys should not have users with Owner permissions
+
+**Description**: This recommendation evaluates the IAM allow policy in project metadata for principals assigned roles/Owner.
+
+**Severity**: Medium
+
+### Storage buckets used as a log sink should not be publicly accessible
+
+**Description**: This recommendation evaluates the IAM policy of a bucket for the principals allUsers or allAuthenticatedUsers, which grant public access.
+
+**Severity**: High
+
+## Related content
+
+- [Learn about security recommendations](security-policy-concept.md)
+- [Review security recommendations](review-security-recommendations.md)

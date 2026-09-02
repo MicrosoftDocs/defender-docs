@@ -1,19 +1,21 @@
 ---
 title: Configure automated investigation and response capabilities in Microsoft Defender XDR
-description: Configure automated investigation and response with self-healing in Microsoft Defender XDR
+description: Set up automated investigation and response in Microsoft Defender XDR by reviewing prerequisites, configuring automation levels for device groups, and checking security and alert policies to enable self-healing workflows.
 ms.author: guywild
 author: guywi-ms
 ms.topic: how-to
 ms.service: defender-xdr
 ms.localizationpriority: medium
-ms.date: 04/28/2025
+ms.date: 06/15/2026
 ms.collection:
 - m365-security
 - tier2
-ms.custom: 
+ms.custom:
+- msecd-doc-authoring-1014
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
+ai-usage: ai-assisted
 #customer intent: As a SOC analyst, I want to configure automated investigation and response capabilities in Microsoft Defender XDR
 ---
 
@@ -34,6 +36,8 @@ Then, after you're all set up, you can [view and manage remediation actions in t
 <a name='prerequisites-for-automated-investigation-and-response-in-microsoft-365-defender'></a>
 
 ## Prerequisites for automated investigation and response in Microsoft Defender XDR
+
+The following table lists the requirements for automated investigation and response in Microsoft Defender XDR.
 
 |Requirement|Details|
 |---|---|
@@ -77,6 +81,8 @@ You can choose from several options to change settings for your automated invest
 |Specify automation levels for groups of devices|<ol><li>Set up one or more device groups. See [Create and manage device groups](/defender-endpoint/machine-groups). </li><li>In the Microsoft Defender portal, go to **Permissions** \> **Endpoints roles & groups** \> **Device groups**.</li><li>Select a device group and review its **Automation level** setting. (We recommend using **Full - remediate threats automatically**). See [Automation levels in automated investigation and remediation capabilities](/defender-endpoint/automation-levels).</li><li>Repeat steps 2 and 3 as appropriate for all your device groups. </li></ol>|
 
 ## Next steps
+
+### Related content
 
 - [Remediation actions in Microsoft Defender XDR](m365d-remediation-actions.md)
 - [Visit the Action center](m365d-action-center.md)

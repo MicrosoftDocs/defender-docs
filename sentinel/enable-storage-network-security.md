@@ -1,12 +1,14 @@
 ---
 title: Enable Network Security for Azure Storage blob connectors
 description: Learn how to enable network security for Azure Storage connector resources. Follow step-by-step instructions to secure your storage accounts with Network Security Perimeters.
-author: EdB-MSFT
 ms.author: edbaynash
-ms.reviewer: edbaynash
-ms.date: 02/08/2026
+author: EdB-MSFT
+ms.reviewer: krishsa
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.service: microsoft-sentinel
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #customer intent: As a security engineer, I want to configure a Network Security Perimeter for storage accounts used in storage blob connectors
 ---
 
@@ -17,7 +19,13 @@ This article provides step-by-step instructions on how to enable network securit
 
 ## Prerequisites
 
-Before enabling network security, create your connector resources. See [Set up your Azure Storage Connector to stream logs to Microsoft Sentinel](setup-azure-storage-connector.md), including the Event Grid system topic used to stream blob creation events to the Azure Storage queue.
+Before you begin, you must have the following Azure Storage connector resources already deployed and configured:
+
+- **Azure Storage account** — The storage account integrated with your Azure Storage connector.
+- **Azure Storage queue** — The queue that receives blob creation event notifications.
+- **Event Grid system topic** — The system topic on the storage account that streams blob creation events to the storage queue.
+
+If you haven't created these resources yet, see [Set up your Azure Storage Connector to stream logs to Microsoft Sentinel](setup-azure-storage-connector.md).
 
 To complete this setup, ensure you have the following permissions:
 
@@ -28,9 +36,12 @@ To complete this setup, ensure you have the following permissions:
 
 ## Enable Network Security
 
-To enable network security on the storage resources integrated with your Azure Storage connector, create a Network Security Perimeter (NSP), associate the storage account with it, and configure the rules to allow traffic from Event Grid and other required sources while blocking unauthorized access. Use the following steps to complete the configuration.
+To enable network security on the storage resources integrated with your Azure Storage connector, create a Network Security Perimeter (NSP), associate the storage account with it, and configure the rules to allow traffic from Event Grid and other required sources while blocking unauthorized access. Use the following steps to complete the Network Security Perimeter configuration for the storage account.
 
 ### Create a Network Security Perimeter
+
+To create a Network Security Perimeter in the Azure portal, perform the following steps:
+
 1. In the Azure portal, search for *Network Security Perimeters*
 
 1. Select **Create**.
@@ -43,6 +54,9 @@ To enable network security on the storage resources integrated with your Azure S
    :::image type="content" source="./media/enable-storage-network-security/create-network-security-perimeter.png" lightbox="./media/enable-storage-network-security/create-network-security-perimeter.png" alt-text="A screenshot showing the creation of a Network Security Perimeter in the Azure portal.":::
 
 ### Associate the Storage Account with the Network Security Perimeter
+
+To associate the storage account with the Network Security Perimeter, perform the following steps:
+
 1. Open your newly created Network Security Perimeter resource in the Azure portal.
 
 1. Select **Profiles**, then select the profile name you used when creating the NSP resource.
@@ -57,6 +71,8 @@ The access mode is set to **Transition** by default, allowing you to validate th
 
 ### Enable System-Assigned Identity on Event Grid System Topic
 
+To enable a system-assigned managed identity on the Event Grid system topic, perform the following steps:
+
 1. From your storage account, navigate to the **Events** tab.
 
 1. Select the **System Topic** used to stream blob creation events to the storage queue.
@@ -66,12 +82,14 @@ The access mode is set to **Transition** by default, allowing you to validate th
 1. Select **Identity**.
 
 1. On the **System assigned** tab, set the **Status** to **On**.
-1. Select **Save**, then copy the **Object ID** of the managed identity for later use.
+1. Select **Save**, then copy the **Object ID** of the managed identity. You need this Object ID when assigning the **Storage Queue Data Message Sender** role in the next section.
 
    :::image type="content" source="./media/enable-storage-network-security/create-system-assigned-identity.png" lightbox="./media/enable-storage-network-security/create-system-assigned-identity.png" alt-text="A screenshot showing the creation of a managed identity for an Event Grid System Topic in the Azure portal.":::
 
 
 ### Grant RBAC permissions on the Storage Queue
+
+To grant the Event Grid system topic managed identity permission to send messages to the storage queue, perform the following steps:
 
 1. Navigate to your **Storage Account**.
 
@@ -79,13 +97,15 @@ The access mode is set to **Transition** by default, allowing you to validate th
 1. Select **Add**.
 1. Search for and select the **Storage Queue Data Message Sender** role (scope: the storage account).
 1. Select the **Members** tab and then **Select members**.
-1. In the **Select members** pane, paste the Object ID for the Event Grid system topic managed identity created in the previous step.
+1. In the **Select members** pane, paste the Object ID of the system-assigned managed identity for the Event Grid system topic.
 1. Select the managed identity and then select **Select**.
 1. Select **Review + assign** to complete the role assignment.
    :::image type="content" source="./media/enable-storage-network-security/add-role-assignment.png" lightbox="./media/enable-storage-network-security/add-role-assignment.png" alt-text="A screenshot showing the assignment of the Storage Queue Data Message Sender role to a managed identity in the Azure portal.":::
 
 
 ### Enable Managed Identity on the event subscription
+
+To enable managed identity on the event subscription, perform the following steps:
 
 1. Open the **Event Grid System Topic**.
 
@@ -100,7 +120,7 @@ The access mode is set to **Transition** by default, allowing you to validate th
 
 ### Configure Inbound Access rules on the Network Security Perimeter profile
 
-The following rules are required to allow Event Grid to deliver messages to the storage account while blocking unauthorized access. Depending on the system sending data to the storage account or accessing the storage resources, you may need to add additional inbound rules. Review your scenario and traffic patterns to safely apply the necessary rules, and allow time for rule propagation.
+The following rules are required to allow Event Grid to deliver messages to the storage account while blocking unauthorized access. Depending on the system sending data to the storage account or accessing the storage resources, you may need to add additional inbound rules. Review your scenario and traffic patterns to determine whether you need only the required Event Grid rules or additional inbound NSP rules, and allow time for rule propagation.
 
 #### Rule 1: Allow the Subscription (Event Grid Delivery)
 
@@ -132,15 +152,16 @@ Event Grid delivery doesn't originate from fixed public IPs. The NSP validates d
 
 1. Enter a **Rule name**, for example `Allow-Scuba`.
 1. Select **IP address ranges** from the **Source type** drop-down.
-1. Open the [service tag download](/azure/virtual-network/service-tags-overview#discover-service-tags-by-using-downloadable-json-files) page.
+1. Open the [Download Azure service tags JSON files](/azure/virtual-network/service-tags-overview#discover-service-tags-by-using-downloadable-json-files) page.
 1. Select your cloud, for example **Azure Public**.
 1. Select the **Download** button and open the downloaded file to get the list of IP ranges.
 1. Find the `Scuba` service tag and copy the associated IPv4 ranges.
-1. Paste the IPv4 ranges into the **Allowed Sources** field after removing any quotes and trailing commas.
-1. Select **Add** to create the rule.
 
    > [!IMPORTANT]
    > Remove the quotes from the IP ranges and ensure that there's no trailing comma on the last entry before pasting them into the **Allowed Sources** field. Service tag ranges update over time; refresh regularly to keep rules current.
+
+1. Paste the IPv4 ranges into the **Allowed Sources** field after removing any quotes and trailing commas.
+1. Select **Add** to create the rule.
 
    :::image type="content" source="./media/enable-storage-network-security/scuba-ipv4-addresses.png" lightbox="./media/enable-storage-network-security/scuba-ipv4-addresses.png" alt-text="A screenshot showing a part of the ServiceTags_Public.json file with the Scuba service tag and IPv4 ranges highlighted.":::
 
@@ -166,7 +187,7 @@ Once validation is successful, set the access mode to **Enforced** as follows:
 
 ### Post-enforcement validation
 
-Following enforcement, monitor the environment closely for any blocked traffic that may indicate misconfigurations. Validate the Event Grid configuration isn't impacted by reviewing the Event Grid system topic subscription metrics.
+After you set the NSP access mode to **Enforced**, monitor the environment closely for any blocked traffic that may indicate misconfigurations. Validate the Event Grid configuration isn't impacted by reviewing the Event Grid system topic subscription metrics.
 
 Use the diagnostic logs to investigate and resolve any issues that arise. Review the metrics on the storage account (queue ingress and errors) and Event Grid (delivery success) to validate for any errors. Roll back to Transition Mode if you experience any disruption and repeat investigation using the diagnostic logs.
 
@@ -188,5 +209,5 @@ Setting the storage account to **Secured by Perimeter** ensures that all traffic
 
 In this article, you learned how to enable network security on the storage resources integrated with your Azure Storage connector. For more information, see the [Network Security Perimeter](/azure/private-link/network-security-perimeter-concepts) articles.
 
-- Review data-connection rules in [`data-connection-rules-reference-azure-storage.md`](data-connection-rules-reference-azure-storage.md).
-- Troubleshoot connector networking issues in [`azure-storage-blob-connector-troubleshoot.md`](azure-storage-blob-connector-troubleshoot.md).
+- Review data-connection rules in [Azure Storage data connection rules reference](data-connection-rules-reference-azure-storage.md).
+- Troubleshoot connector networking issues in [Troubleshoot the Azure Storage Blob connector](azure-storage-blob-connector-troubleshoot.md).

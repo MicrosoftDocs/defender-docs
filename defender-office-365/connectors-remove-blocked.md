@@ -9,13 +9,16 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
+  - msecd-doc-authoring-1016
+  - sfi-ga-nochange
 description: Admins can learn how to remove connectors from the Restricted entities page in the Microsoft Defender portal. Connectors are added to the Restricted entities page after signs of compromise.
 ms.service: defender-office-365
-ms.date: 6/14/2023
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Remove blocked connectors from the Restricted entities page
@@ -33,19 +36,21 @@ In all organizations with cloud mailboxes, several things happen if an [inbound 
 
 > Your message couldn't be delivered. The most common reason for this is that your organization's email connector is suspected of sending spam or phish and it's no longer allowed to send email. Contact your email admin for assistance. Remote Server returned '550;5.7.711 Access denied, bad inbound connector. AS(2204).'
 
-For more information about compromised connectors and how to regain control of them, see [Respond to a compromised connector](connectors-detect-respond-to-compromise.md).
+For more information about compromised connectors and how to regain control of those connectors, see [Respond to a compromised connector](connectors-detect-respond-to-compromise.md).
 
-The procedures in this article explain how admins can remove connectors from the **Restricted entities** page in the Microsoft Defender portal or in Exchange Online PowerShell.
+The following procedures explain how admins can remove connectors from the **Restricted entities** page in the Microsoft Defender portal or in Exchange Online PowerShell.
 
 For more information about compromised _user accounts_ and how to remove them from the **Restricted entities** page, see [Remove blocked users from the Restricted entities page](outbound-spam-restore-restricted-users.md).
 
 ## What do you need to know before you begin?
 
+Before you begin, make sure you have access to the required tools and permissions:
+
 - Open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Restricted entities** page, use <https://security.microsoft.com/restrictedentities>.
 
 - To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-- You need to be assigned permissions before you can do the procedures in this article. You have the following options:
+- You need to be assigned permissions before you can remove connectors from the **Restricted entities** page. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Detection tuning (manage)** or **Authorization and settings/Security settings/Core security settings (read)**.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
     - _Remove connectors from the Restricted entities page_: Membership in the **Organization Management** or **Security Administrator** role groups.
@@ -55,7 +60,7 @@ For more information about compromised _user accounts_ and how to remove them fr
     > [!IMPORTANT]
     > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
-- Before you follow the procedures in this article to remove a connector from the **Restricted entities** page, be sure to follow the required steps to regain control of the connector as described in [Respond to a compromised connector](connectors-detect-respond-to-compromise.md).
+- Before you remove a connector from the **Restricted entities** page, be sure to follow the required steps to regain control of the connector as described in [Respond to a compromised connector](connectors-detect-respond-to-compromise.md).
 
 ## Remove a connector from the Restricted entities page in the Microsoft Defender portal
 
@@ -65,18 +70,18 @@ For more information about compromised _user accounts_ and how to remove them fr
 
    Select a column header to sort by that column.
 
-   To change the list of entities from normal to compact spacing, select :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
+   To change the list of entities from normal to compact spacing, select :::image type="icon" source="media/defender-portal-icon-standard.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/defender-portal-icon-compact.png" border="false"::: **Compact list**.
 
-   Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific connectors.
+   Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific connectors.
 
 3. Select the connector to unblock by selecting the check box for the entity, and then selecting the **Unblock** action that appears on the page.
 
 4. In the **Unblock entity** flyout that opens, read the details about the restricted connector. You should go through the recommendations to ensure you're taking the proper actions in case the connector is compromised.
 
-   When you're finished in the **Unblock entity** flyout, select **Unblock**.
-
    > [!NOTE]
    > It might take up to 1 hour for all restrictions to be removed from the connector.
+
+   When you're finished in the **Unblock entity** flyout, select **Unblock**.
 
 ## Verify the alert settings for restricted connectors
 
@@ -87,7 +92,7 @@ The default alert policy named **Suspicious connector activity** automatically n
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Alert policy**. Or, to go directly to the **Alert policy** page, use <https://security.microsoft.com/alertpoliciesv2>.
 
-2. On the **Alert policy** page, find the alert named **Suspicious connector activity**. You can sort the alerts by name, or use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find the alert.
+2. On the **Alert policy** page, find the alert named **Suspicious connector activity**. You can sort the alerts by name, or use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to find the alert.
 
    Select the **Suspicious connector activity** alert by clicking anywhere in the row other than the check box next to the name.
 
@@ -95,18 +100,18 @@ The default alert policy named **Suspicious connector activity** automatically n
    - **Status**: Verify the alert is turned on :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
    - Expand the **Set your recipients section** and verify the **Recipients** and **Daily notification limit** values.
 
-     To change the values, select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit recipient settings** in the section or select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit policy** at the top of the flyout.
+     To change the values, select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit recipient settings** in the section or select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit policy** at the top of the flyout.
 
      - On the **Decide if you want to notify people when this alert is triggered** page of the wizard that opens, verify or change the following settings:
        - Verify **Opt-in for email notifications** is selected.
-       - **Email recipients**: The default value is **TenantAdmins** (**Global Administrator** members). To add more recipients, click in the empty area of the box. A list of recipients appears, and you can start typing a name to filter and select a recipient. Remove an existing recipient from the box by selecting :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to their name.
+       - **Email recipients**: The default value is **TenantAdmins** (**Global Administrator** members). To add more recipients, click in the empty area of the box. A list of recipients appears, and you can start typing a name to filter and select a recipient. Remove an existing recipient from the box by selecting :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to their name.
        - **Daily notification limit**: The default value is **No limit**.
 
        When you're finished on the **Decide if you want to notify people when this alert is triggered** page, select **Next**.
 
      - On the **Review your settings** page, select **Submit**, and then select **Done**.
 
-4. Back in the **Suspicious connector activity** flyout, select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: at the top of the flyout.
+4. Back in the **Suspicious connector activity** flyout, select :::image type="icon" source="media/defender-portal-icon-remove.png" border="false"::: at the top of the flyout.
 
 ## Use Exchange Online PowerShell to view and remove connectors from the Restricted entities page
 
@@ -132,7 +137,10 @@ Remove-BlockedConnector -ConnectorId <ConnectorID>
 
 For detailed syntax and parameter information, see [Remove-BlockedConnector](/powershell/module/exchangepowershell/remove-blockedconnector).
 
-## More information
+<a name="more-information"></a>
+## Related content
+
+For more information about compromised connectors and restricted users, see the following articles:
 
 - [Respond to a compromised connector](connectors-detect-respond-to-compromise.md)
-- [Remove blocked users](outbound-spam-restore-restricted-users.md)
+- [Remove blocked users from the Restricted entities page](outbound-spam-restore-restricted-users.md)

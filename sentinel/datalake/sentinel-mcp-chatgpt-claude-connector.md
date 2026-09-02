@@ -2,14 +2,17 @@
 title: Use the Microsoft Sentinel MCP connector in ChatGPT or Claude
 titleSuffix: Microsoft Security  
 description: Learn how to turn on and use a custom Microsoft Sentinel's Model Context Protocol (MCP) connector in ChatGPT or Claude
-author: poliveria
-ms.topic: how-to
-ms.date: 04/06/2026
 ms.author: pauloliveria
+author: poliveria
+ms.reviewer: macasgra
+ms.topic: how-to
+ms.date: 06/12/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.custom:
+ - msecd-doc-authoring-1014
  - sfi-ga-nochange
+ai-usage: ai-assisted
 #customer intent: As a security analyst, I want to use a custom Microsoft Sentinel MCP connector in ChatGPT.
 ---
 
@@ -18,7 +21,7 @@ ms.custom:
 > [!IMPORTANT]
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-This article shows you how to enable and use a custom Microsoft Sentinel Model Context Protocol (MCP) connector in ChatGPT by OpenAI or Claude by Anthropic. By using this approach, Security Operations Center (SOC) analysts can run security tasks by using Microsoft Sentinel MCP. 
+This article shows you how to enable and use a custom Microsoft Sentinel Model Context Protocol (MCP) connector in ChatGPT by OpenAI or Claude by Anthropic. By using a custom Microsoft Sentinel MCP connector in ChatGPT or Claude, Security Operations Center (SOC) analysts can run security tasks by using Microsoft Sentinel MCP. Before you begin, make sure you meet the [prerequisites](#prerequisites), including a supported subscription and a registered Microsoft Entra application.
 
 
 ## Prerequisites
@@ -50,14 +53,19 @@ To add a Microsoft Entra application, follow these steps:
 1. On the **APIs my organization uses** tab, search for `Sentinel Platform Services`.
 1. Choose **SentinelPlatform.DelegatedAccess**, and then select **Add permissions**.
 1. Select **Manage** > **Certificates & secrets** and select **New client secret**.
-1. Add a **Description** for your client secret and set an expiration date. Select **Add**. 
-1. Copy the **Value** and save it in a secure manner. This value disappears once you navigate away from the page. 
+1. Add a **Description** for your client secret and set an expiration date.
+
+    > [!IMPORTANT]
+    > The client secret value is shown only once and disappears after you leave the page. Be ready to copy and securely save it before you continue.
+
+1. Select **Add**, and then immediately copy the **Value** and save it in a secure location. 
 1. Go back to your app's **Overview** page and copy its **Application (client) ID**. 
 
-## Create and use a custom Microsoft  MCP connector
+<a name="create-and-use-a-custom-microsoft--mcp-connector"></a>
+## Create and use a custom Microsoft Sentinel MCP connector
 
 
-To create and use a custom Microsoft  connector, follow these steps:
+To create and use a custom Microsoft Sentinel MCP connector, follow the instructions on the tab for your platform:
 
 ### [ChatGPT](#tab/chatgpt)
 
@@ -78,9 +86,11 @@ To create and use a custom Microsoft  connector, follow these steps:
 **To attach and use the connector:**
 1.	Start a new chat in ChatGPT.
 1.	Select the **(+)** icon next to the message box.
-1.	Select **More** > **Microsoft  MCP Connector**. The connector's tools become available automatically, and ChatGPT can begin calling Microsoft Sentinel operations on your behalf.
+1.	Select **More** > **Microsoft  MCP Connector**. The Microsoft Sentinel MCP connector's tools become available automatically, and ChatGPT can begin calling Microsoft Sentinel operations on your behalf.
 
 ### [Claude](#tab/claude)
+
+To create and use a custom Microsoft Sentinel MCP connector in Claude, complete the following steps.
 
 **To create a custom connector:**
 
@@ -96,7 +106,7 @@ To create and use a custom Microsoft  connector, follow these steps:
 
 **To attach and use the connector:**
 
-Start a new chat in Claude. The connector tools become available automatically, and Claude can begin calling Microsoft Sentinel operations on your behalf. 
+Start a new chat in Claude. The Microsoft Sentinel MCP connector tools become available automatically, and Claude can begin calling Microsoft Sentinel operations on your behalf. 
 
 >[!NOTE]
 > You can only use the [data exploration tool collection](sentinel-mcp-data-exploration-tool.md). 

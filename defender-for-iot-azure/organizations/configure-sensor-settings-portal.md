@@ -1,13 +1,15 @@
 ---
 title: Configure OT sensor settings from the Azure portal - Microsoft Defender for IoT
 description: Learn how to configure settings for OT network sensors from Microsoft Defender for IoT on the Azure portal.
-ms.date: 12/27/2022
+ms.date: 06/12/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Configure OT sensor settings from the Azure portal (Public preview)
 
-After [onboarding](onboard-sensors.md) a new OT network sensor to Microsoft Defender for IoT, you might want to define several settings directly on the OT sensor console, such as [adding local users](manage-users-sensor.md).
+After [onboarding an OT sensor](onboard-sensors.md) a new OT network sensor to Microsoft Defender for IoT, you might want to define several settings directly on the OT sensor console, such as [managing local users on the OT sensor](manage-users-sensor.md).
 
 The OT sensor settings listed in this article are also available directly from the Azure portal. Use the Azure portal to apply these settings in bulk across multiple cloud-connected OT sensors at a time, or across all cloud-connected OT sensors in a specific site or zone. This article describes how to view and configure view OT network sensor settings from the Azure portal.
 
@@ -19,7 +21,7 @@ The OT sensor settings listed in this article are also available directly from t
 
 To define OT sensor settings, make sure that you have the following:
 
-- **An Azure subscription onboarded to Defender for IoT**. If you need to, [sign up for a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn), and then use the [Quickstart: Get started with Defender for IoT](getting-started.md) to start a free trial.
+- **An Azure subscription onboarded to Defender for IoT**. If you need to, [sign up for a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn), and then use the [Quickstart: Get started with Defender for IoT](getting-started.md) to set up your OT plan.
 
 - **Permissions**:
 
@@ -93,7 +95,7 @@ If you're in a situation where the OT sensor is disconnected from Azure, and you
 
 **To gain write access to blocked OT sensor settings**:
 
-1. On the Azure portal, in the **Sensor settings (Preview)** page, locate the setting you want to edit and open it for editing. For more information, see [View and edit current OT sensor settings](#view-and-edit-current-ot-sensor-settings) above.
+1. On the Azure portal, in the **Sensor settings (Preview)** page, locate the setting you want to edit and open it for editing. For more information, see [View and edit current OT sensor settings](#view-and-edit-current-ot-sensor-settings).
 
     Edit the scope of the setting so that it no longer includes the OT sensor, and any changes you make while the OT sensor is disconnected aren't overwritten when you connect it back to Azure.
 
@@ -110,9 +112,9 @@ Continue by updating the relevant setting directly on the OT network sensor. For
 
 ## Add sensor settings
 
-Use the following sections to learn more about the individual OT sensor settings available from the Azure portal.
+This section describes the individual OT sensor setting types that you can configure from the Azure portal. Each subsection provides field-level details for one setting type.
 
-The **Type** settings are:
+The available sensor setting types in the **Type** dropdown list are:
 
 - [Active Directory](#active-directory)
 - [Bandwidth cap](#bandwidth-cap)
@@ -127,7 +129,8 @@ To add a new setting **Type**, select **Sites and sensors** > **Sensor settings*
 
 :::image type="content" source="media/configure-sensor-settings-portal/sensor-settings-type.png" alt-text="The screenshot shows the sensor settings page with the type dropdown list options.":::
 
-### Active Directory
+<a name="active-directory"></a>
+### Configure Active Directory settings
 
 To configure Active Directory settings from the Azure portal, define values for the following options:
 
@@ -148,7 +151,8 @@ To configure Active Directory settings from the Azure portal, define values for 
 
 To add another Active Directory server, select **+ Add Server** and define those server values.
 
-### Bandwidth cap
+<a name="bandwidth-cap"></a>
+### Configure a bandwidth cap
 
 For a bandwidth cap, define the maximum bandwidth you want the sensor to use for outgoing communication from the sensor to the cloud, either in Kbps or Mbps.
 
@@ -156,19 +160,23 @@ For a bandwidth cap, define the maximum bandwidth you want the sensor to use for
 
 **Minimum required for a stable connection to Azure**: 350 Kbps. At this minimum setting, connections to the sensor console might be slower than usual.
 
-### NTP
+<a name="ntp"></a>
+### Configure NTP settings
 
 To configure an NTP server for your sensor from the Azure portal, define an IP/Domain address of a valid IPv4 NTP server using port 123.
 
-### Local subnets
+<a name="local-subnets"></a>
+### Configure local subnet settings
 
 To focus the Azure device inventory on devices that are in your OT scope, you need to manually edit the subnet list to include only the locally monitored subnets that are in your OT scope.
 
-Subnets in the subnet list are automatically configured as ICS subnets, which means that Defender for IoT recognizes these subnets as OT networks. You can edit this setting when you [configure the subnets](#configure-subnets-in-the-azure-portal).
+Subnets in the subnet list are automatically configured as ICS subnets, which means that Defender for IoT recognizes these subnets as OT networks. You can edit the ICS subnet setting when you [configure subnets in the Azure portal](#configure-subnets-in-the-azure-portal).
 
 Once the subnets are configured, the network location of the devices is shown in the *Network location* (Public preview) column in the Azure device inventory. All of the devices associated with the listed subnets are displayed as *local*, while devices associated with detected subnets not included in the list are displayed as *routed*.
 
 #### Configure subnets in the Azure portal
+
+Use the following steps to configure local subnets in the Azure portal:
 
 1. Under **Local subnets**, review the configured subnets. To focus the device inventory and view local devices in the inventory, delete any subnets that are not in your IoT/OT scope by selecting the options menu (...) on any subnet you want to delete.
 
@@ -180,15 +188,17 @@ Once the subnets are configured, the network location of the devices is shown in
 
     - **ICS Subnet** is on by default, which means that Defender for IoT recognizes the subnet as an OT network. To mark a subnet as non-ICS, toggle off **ICS Subnet**.
 
-### VLAN naming
+<a name="vlan-naming"></a>
+### Configure VLAN naming settings
 
 To define a VLAN for your OT sensor, enter the VLAN ID and a meaningful name.
 
 Select **Add VLAN** to add more VLANs as needed.
 
-### Public addresses
+<a name="public-addresses"></a>
+### Configure public address settings
 
-Add the public addresses of internal devices into this configuration to ensure that the sensor includes them in the inventory and doesn't treat them as internet communication.
+Some internal devices use public IP addresses. Add those public IP addresses to the sensor's public address list so that the sensor includes the devices in inventory and doesn't classify their traffic as internet communication.
 
 1. In the **Settings** tab, type the **IP address** and **Mask** address.
 
@@ -199,11 +209,13 @@ Add the public addresses of internal devices into this configuration to ensure t
 1. Select **Next**.
 1. Review the details and select **Create** to add the address to the public addresses list.
 
-### Single sign-on
+<a name="single-sign-on"></a>
+### Configure single sign-on settings
 
-With Single sign-on (SSO), users simply sign into the sensor console and don't need multiple login credentials across different sensors and sites. For more information, see [create SSO configuration](set-up-sso.md#create-sso-configuration).
+Single sign-on (SSO) lets users access the sensor console with one set of credentials across multiple sensors and sites, instead of maintaining separate login credentials for each. To set up SSO for your sensors, see [create SSO configuration](set-up-sso.md#create-sso-configuration).
 
-### DHCP ranges
+<a name="dhcp-ranges"></a>
+### Configure DHCP range settings
 
 Add the range of IP addresses to configure the DHCP settings that can apply to a device that might have multiple IP addresses associated with it.
 

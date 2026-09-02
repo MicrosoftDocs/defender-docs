@@ -1,14 +1,16 @@
 ---
 title: Use Defender for Cloud Apps Conditional Access app control | Microsoft Defender for Cloud Apps
 description: Learn how to use Microsoft Defender for Cloud Apps Conditional Access app control to create access and session policies for real-time monitoring and control over access to cloud apps.
-ms.date: 05/15/2024
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Use Defender for Cloud Apps Conditional Access app control
 
-This article provides an overview of how to use Microsoft Defender for Cloud Apps app control to create access and session policies. Conditional Access app control provides real-time monitoring and control over user access to cloud apps.
+Use Microsoft Defender for Cloud Apps Conditional Access app control to create access and session policies that monitor and control user access to cloud apps in real time. This guide walks through onboarding your apps, setting up a Conditional Access policy, and creating and testing your access and session policies.
 
 ## Conditional Access app control usage flow (Preview)
 
@@ -38,14 +40,16 @@ The following articles provide sample processes for configuring a non-Microsoft 
 
 ## Prerequisites: 
 
-1. Ensure your firewall configurations allow traffic from all the IP addresses listed on [Network requirements](network-requirements.md).
-1. Confirm that your application possesses a complete certificate chain. Incomplete or partial certificate chains may lead to unexpected behavior in applications when monitored with Conditional Access app control policies.
+Before you configure Conditional Access app control, make sure the following prerequisites are met:
+
+1. Make sure your firewall allows traffic from all IP addresses listed in [Network requirements](network-requirements.md).
+1. Check that your app has a full certificate chain. Missing parts of the chain can cause unexpected app behavior with Conditional Access app control policies.
 
 ## Create a Microsoft Entra ID Conditional Access policy
 
-In order for your access or session policy to work, you must also have Microsoft Entra ID Conditional Access policy, which creates the permissions to control traffic.
+Your access or session policy requires a Microsoft Entra ID Conditional Access policy to control traffic.
 
-We embedded a sample of this process in the [access](access-policy-aad.md) and [session](session-policy-aad.md) policy creation documentation. 
+For a sample of creating a Conditional Access policy, see the [access policy](access-policy-aad.md) and [session policy](session-policy-aad.md) creation docs. 
 
 For more information, see [Conditional Access policies](/azure/active-directory/conditional-access/overview) and [Building a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies).
 

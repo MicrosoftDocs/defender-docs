@@ -5,7 +5,6 @@ ms.topic: overview
 ms.date: 07/30/2025
 ---
 
-
 # What is Microsoft Security Exposure Management?
 
 Microsoft Security Exposure Management is a security solution that provides a unified view of security posture across company assets and workloads spanning endpoints, cloud resources, and external attack surfaces. Security Exposure Management enriches asset information with security context that helps you to proactively manage attack surfaces, protect critical assets, and explore and mitigate exposure risk across your entire digital estate.
@@ -47,6 +46,7 @@ With Security Exposure Management you can:
     - You can use the enterprise exposure graph and attack surface map to visualize and understand potential threats across your hybrid infrastructure.
     - You can also focus on choke points through which many attack paths flow, including those that bridge on-premises and cloud environments.
     - Actionable recommendations help you to mitigate identified attack paths across all domains.
+  - You can assess, prioritize, and remediate vulnerabilities across devices and cloud resources through [Microsoft Defender Vulnerability Management integration in Security Exposure Management](vulnerability-management-integration.md).
 
 - **Connect your data**: Security Exposure Management supports a variety of data connectors to integrate with different security solutions and data sources, including external vendors and cloud platforms.
   - Consolidate security data from multiple sources including third-party tools (ServiceNow CMDB, Tenable, Qualys, Rapid7) into a single, unified view within the Exposure Management platform.

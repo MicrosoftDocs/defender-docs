@@ -1,6 +1,6 @@
 ---
 title: Stream Microsoft Defender XDR events to Azure Event Hubs
-description: Learn how to configure Microsoft Defender XDR to stream Advanced Hunting events to your Event Hubs.
+description: Configure Microsoft Defender XDR to stream events to Azure Event Hubs for downstream processing and integration.
 ms.service: defender-xdr
 ms.author: edbaynash
 author: EdB-MSFT
@@ -8,9 +8,10 @@ ms.localizationpriority: medium
 ms.collection: 
 - m365-security
 - tier3
-ms.custom: admindeeplinkDEFENDER
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
 ms.topic: how-to
-ms.date: 09/24/2024
+ms.date: 06/16/2026
+ai-usage: ai-assisted
 ---
 
 # Configure Microsoft Defender XDR to stream Advanced Hunting events to your Azure event hub
@@ -54,7 +55,7 @@ Before you configure Microsoft Defender XDR to stream data to Event Hubs, ensure
 
 1. To export the event data to a single Event Hub, enter your **event hub name** and your **event hub Namespace resource ID**.
 
-   To get your **event hub Namespace resource ID**, go to your Azure Event Hubs namespace page on [Azure](https://ms.portal.azure.com/) > **Properties** tab > copy the text under **Resource ID**:
+   To get your **event hub Namespace resource ID**, go to your Azure Event Hubs namespace page on the [Azure portal](https://ms.portal.azure.com/) > **Properties** tab > copy the text under **Resource ID**:
 
    :::image type="content" source="media/streaming-api-event-hub/event-hub-resource-id.png" alt-text="An Event Hub resource ID" lightbox="media/streaming-api-event-hub/event-hub-resource-id.png":::
 
@@ -62,7 +63,8 @@ Before you configure Microsoft Defender XDR to stream data to Event Hubs, ensure
 
 1. Choose the events you want to stream and select **Save**.
 
-## The schema of the events in Azure Event Hub
+<a name="the-schema-of-the-events-in-azure-event-hub"></a>
+## Event schema in Azure Event Hub
 
 ```JSON
 {
@@ -86,13 +88,14 @@ Before you configure Microsoft Defender XDR to stream data to Event Hubs, ensure
 
 - In Advanced Hunting, the **DeviceInfo** table has a column named **MachineGroup** which contains the group of the device. Here, every event is decorated with this column as well.
 
-## Data types mapping
+<a name="data-types-mapping"></a>
+## Data type mappings
 
 To get the data types for event properties, do the following steps:
 
 1. Sign in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> and go to [Advanced Hunting page](https://security.microsoft.com/hunting-package).
 
-2. Run the following query to get the data types mapping for each event:
+2. Replace `{EventType}` with your event table name and run the following query to retrieve the column names and data types for that event:
 
    ```kusto
    {EventType}
@@ -106,7 +109,9 @@ To get the data types for event properties, do the following steps:
 
 ## Estimating initial Event Hub capacity
 The following advanced hunting query can help provide a rough estimate of data volume throughput and initial event hub capacity based on events/sec and estimated MB/sec. We recommend running the query during regular business hours so as to capture 'real' throughput.
- 
+
+Use this query to estimate table volume over the past seven days. The output shows the average events per second and estimated MB/sec for each table, which you can use to determine the required event hub throughput units.
+
 ```kusto
 let bytes_ = 1000;
 union withsource=MDTables MyDefenderTable // TODO: Insert desired tables one by one separated by a comma (for example: DeviceEvents, DeviceInfo) or with a wildcard (Device*)
@@ -124,7 +129,7 @@ To check the different Event Hub limits, review [Azure Event Hubs quota and limi
 ## Monitoring created resources
 
 You can monitor the resources created by the streaming API using **Azure Monitor**. 
-For more information, see [Log Analytics workspace data export in Azure Monitor](/azure/azure-monitor/logs/logs-data-export). 
+To learn how to export log data for analyzing streaming API resources, see [Log Analytics workspace data export in Azure Monitor](/azure/azure-monitor/logs/logs-data-export). 
 
 ## Related articles
 

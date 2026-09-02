@@ -1,13 +1,15 @@
 ---
-title: Feature support and retirement
-description: Defender for IoT will continue to support C, C#, and Edge until March 1, 2022. 
-ms.date: 01/01/2023
+title: Microsoft Defender for IoT feature support and retirement
+description: Review Microsoft Defender for IoT feature support status and retirement timelines for different capabilities.
+ms.date: 06/12/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
-# Feature support and retirement
+# Microsoft Defender for IoT feature support and retirement
 
-This article describes Microsoft Defender for IoT features and support for different capabilities within Defender for IoT.
+This article covers the support status and retirement timelines for Microsoft Defender for IoT micro agent capabilities. It includes information about the legacy Defender-IoT-micro-agent, the deprecation of C, C#, and Edge Defender-IoT-micro-agent variants, and the transition to the newer micro agent experience.
 
 ## Legacy Defender for IoT micro-agent
 

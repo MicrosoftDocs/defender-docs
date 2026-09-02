@@ -131,7 +131,7 @@ The retention of backup files depends on the sensor's architecture, as each hard
 
 Microsoft Defender for IoT shares data, including customer data, among the following Microsoft products, also licensed by the customer.
 
-- Microsoft Defender XDR
+- Microsoft Defender
 - Microsoft Sentinel
 - Microsoft Threat Intelligence Center
 - Microsoft Defender for Cloud

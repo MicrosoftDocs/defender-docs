@@ -1,8 +1,9 @@
 ---
 title: BCDR Recommendations for Working With Microsoft Sentinel
 description: Learn about Business Continuity and Disaster Recovery (BCDR) in Microsoft Sentinel, including availability zones and cross-region disaster recovery strategies.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: concept-article
 ms.date: 06/29/2025
 appliesto:

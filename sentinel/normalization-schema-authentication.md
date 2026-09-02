@@ -1,9 +1,8 @@
 ---
-title: The Advanced Security Information Model (ASIM) Authentication normalization schema reference | Microsoft Docs
+title: The Advanced Security Information Model (ASIM) Authentication normalization schema reference
 description: This article describes the Microsoft Sentinel Authentication normalization schema.
 ms.author: edbaynash
 author: EdB-MSFT
-ms.reviewer: ofshezaf
 ms.topic: reference
 ms.date: 11/09/2021
 
@@ -51,13 +50,19 @@ The following filtering parameters are available:
 |----------|-----------|-------------|
 | **starttime** | datetime | Filter only authentication events that ran at or after this time. This parameter filters on the `TimeGenerated` field, which is the standard designator for the time of the event, regardless of the parser-specific mapping of the EventStartTime and EventEndTime fields. |
 | **endtime** | datetime | Filter only authentication events that finished running at or before this time. This parameter filters on the `TimeGenerated` field, which is the standard designator for the time of the event, regardless of the parser-specific mapping of the EventStartTime and EventEndTime fields. |
-| **targetusername_has** | string | Filter only authentication events that have any of the listed user names. |
+| **srcipaddr_has_any_prefix** | dynamic | Filter only authentication events for which the source IP address prefix is in one of the listed values. Prefixes should end with a `.`, for example: `10.0.`. |
+| **srchostname_has_any** | dynamic | Filter only authentication events for which the source hostname is any of the listed values. |
+| **username_has_any** | dynamic | Filter only authentication events for which the user name is any of the listed values. |
+| **targetappname_has_any** | dynamic | Filter only authentication events for which the target application name is any of the listed values. |
+| **eventtype_in** | dynamic | Filter only authentication events for which the event type is any of the listed values. |
+| **eventresult** | string | Filter only authentication events with a specific **EventResult** value. |
+| **eventresultdetails_in** | dynamic | Filter only authentication events for which the event result details is any of the listed values. |
 
 
 For example, to filter only authentication events from the last day to a specific user, use:
 
 ```kusto
-imAuthentication (targetusername_has = 'johndoe', starttime = ago(1d), endtime=now())
+imAuthentication (username_has_any = dynamic(['johndoe']), starttime = ago(1d), endtime=now())
 ```
 
 
@@ -286,12 +291,10 @@ These are the changes in version 0.1.4 of the schema:
 - Added the fields `ActingOriginalAppType` and `TargetOriginalAppType`.
 - Added the alias `Application`.
 
-## Next steps
+## Related content
 
-For more information, see:
-
-- Watch the [ASIM Webinar](https://www.youtube.com/watch?v=WoGD-JeC7ng) or review the [slides](https://1drv.ms/b/s!AnEPjr8tHcNmjDY1cro08Fk3KUj-?e=murYHG)
 - [Advanced Security Information Model (ASIM) overview](normalization.md)
 - [Advanced Security Information Model (ASIM) schemas](normalization-about-schemas.md)
 - [Advanced Security Information Model (ASIM) parsers](normalization-parsers-overview.md)
 - [Advanced Security Information Model (ASIM) content](normalization-content.md)
+- [Azure Sentinel Webinar: The Information Model-Understanding Normalization in Azure Sentinel](https://www.youtube.com/watch?v=WoGD-JeC7ng)

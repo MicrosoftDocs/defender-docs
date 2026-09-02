@@ -2,8 +2,9 @@
 title: Plan costs and understand pricing and billing
 titleSuffix: Microsoft Sentinel
 description: Learn how to plan your Microsoft Sentinel costs, and understand pricing and billing using the pricing calculator and other methods.
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: daniha
 ms.topic: concept-article
 ms.date: 04/01/2026
 ms.collection: usx-security
@@ -114,6 +115,8 @@ Similarly, if your graph queries take one minute to complete, the cost is determ
 
 Any notebook/Spark compute and Data lake storage consumed for data transformations to build node and edges for the graph is billed independently per existing Sentinel data lake meters (Data lake storage and Advanced Data Insights).
 
+You can monitor usage for custom graphs by using [Microsoft Sentinel cost management in the Microsoft Defender portal](billing-monitor-costs.md#microsoft-sentinel-cost-management-in-the-microsoft-defender-portal).
+
 #### Sentinel Model Context Protocol (MCP) server
 
 Sentinel MCP server is an interface layer that exposes Sentinel platform capabilities to AI agents. There's no extra cost for using the MCP server itself. MCP tools use underlying Sentinel platform services, such as data lake queries or graph operations, which are billed based on their respective meters. In addition, certain tools, such as entity analyzer, may consume [Security Compute Units (SCUs)](/copilot/security/manage-usage) when AI reasoning execution is required. Customers are charged only for the underlying platform services and compute they consume.
@@ -139,6 +142,11 @@ In addition, when using entity analyzer, customers are charged for the KQL queri
 To learn more about the triage tool, see [Triage tool collection](/azure/sentinel/datalake/sentinel-mcp-triage-tool).
 
 Installing, configuring, and using the triage tool carries no cost, provided you're onboarded to the required products and services. You can get access to triage at no additional charge when Microsoft Defender, Microsoft Defender for Endpoint, or Microsoft Sentinel is set up in the Microsoft Defender portal.
+
+##### Microsoft Sentinel MCP graph tool  
+To learn more about the graph tool, see [Graph tools](/azure/sentinel/datalake/sentinel-mcp-data-exploration-tool#graph-tools-preview). 
+
+Installing and configuring the Microsoft Sentinel MCP graph tools doesn't incur any cost. Charges apply only when the tools are used to query the graph, which triggers the graph meter.
 
 ### Understand your Microsoft Sentinel bill
 

@@ -1,15 +1,17 @@
 ---
-title: Customize activities on Microsoft Sentinel entity timelines | Microsoft Docs
-description: Add customized activities to those Microsoft Sentinel tracks and displays on the timeline of entity pages
-author: guywi-ms
+title: Customize activities on Microsoft Sentinel entity timelines
+description: Add custom activities that Microsoft Sentinel displays on entity page timelines to highlight organization-specific events and context.
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
-ms.date: 10/16/2024
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 #Customer intent: As a security analyst, I want to customize activity tracking on entity timelines so that I can monitor specific events and behaviors relevant to my organization's security needs.
 
@@ -22,7 +24,8 @@ ms.custom: sfi-image-nochange
 > - Activity customization is in **PREVIEW**. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 > - [!INCLUDE [unified-soc-preview-without-alert](includes/unified-soc-preview-without-alert.md)]
 
-## Introduction
+<a name="introduction"></a>
+## Overview of custom timeline activities
 
 In addition to the activities tracked and presented in the timeline by Microsoft Sentinel out-of-the-box, you can create any other activities you want to keep track of and have them presented on the timeline as well. You can create customized activities based on queries of entity data from any connected data sources. The following examples show how you might use this capability:
 
@@ -30,12 +33,17 @@ In addition to the activities tracked and presented in the timeline by Microsoft
 
 - Add new activities from custom logs. For example, from a physical access-control log, you can add a user's entry and exit activities for a particular restricted area&mdash;say, a server room&mdash;to the user's timeline.
 
-## Getting started
+<a name="getting-started"></a>
+## Open the activity customization page
+
+To open the activity customization page, choose the tab that matches the portal you're using:
 
 - Users of Microsoft Sentinel in the Azure portal, select the **Azure portal** tab below.
 - Users of the Microsoft Defender portal, select the **Defender portal** tab.
 
 # [Azure portal](#tab/azure)
+
+Follow these steps in the Azure portal to open the activity customization page:
 
 1. From the Microsoft Sentinel navigation menu, select **Entity behavior**.
 
@@ -44,6 +52,8 @@ In addition to the activities tracked and presented in the timeline by Microsoft
     :::image type="content" source="./media/customize-entity-activities/entity-behavior-blade.png" alt-text="Entity behavior page":::
 
 # [Defender portal](#tab/defender)
+
+Follow these steps in the Defender portal to open the Sentinel events view and customize activities for an entity:
 
 1. In the Microsoft Defender portal, find any entity page.
     1. Select **Assets > Devices** or **Identities**.
@@ -62,9 +72,11 @@ On the **Customize Sentinel activities** page, you'll see a list of any activiti
 
 - Once you create or customize an activity, your entity pages will display *only* those activities, which appear in the **My activities** tab.
 
-- If you want to continue seeing the out-of-the-box activities in your entity pages, you must create an activity for each template you want to be tracked and displayed. Follow the instructions under "Create an activity from a template" below.
+- If you want to continue seeing the out-of-the-box activities in your entity pages, you must create an activity for each template you want to be tracked and displayed. Follow the instructions in [Create an activity from a template](#create-an-activity-from-a-template).
 
 ## Create an activity from a template
+
+Use the following steps to create a custom activity from an existing out-of-the-box template.
 
 1. Select the **Activity templates** tab to see the various activities available by default. You can filter the list by entity type as well as by data source. Selecting an activity from the list will display the following information in the details pane:
 
@@ -100,7 +112,11 @@ From the top of the activities page, click on **Add activity** to start the acti
 
 The **Activity wizard - Create new activity** will open, with its fields blank.
 
-### General tab
+<a name="general-tab"></a>
+### Configure general activity settings
+
+On the **General** tab, provide the basic metadata for the activity.
+
 1. Enter a name for your activity (example: "user added to group").
 
 1. Enter a description of the activity (example: "user group membership change based on Windows event ID 4728").
@@ -115,11 +131,12 @@ The **Activity wizard - Create new activity** will open, with its fields blank.
 
     :::image type="content" source="./media/customize-entity-activities/create-new-activity.png" alt-text="Screenshot - Create a new activity":::
 
-### Activity configuration tab
+<a name="activity-configuration-tab"></a>
+### Configure the activity query and display settings
 
 #### Writing the activity query
 
-Here you will write or paste the KQL query that will be used to detect the activity for the chosen entity, and determine how it will be represented in the timeline.
+On the **Activity configuration** tab, write or paste the KQL query that will be used to detect the activity for the chosen entity, and determine how it will be represented in the timeline.
 
 > [!IMPORTANT]
 >
@@ -207,7 +224,7 @@ For example:
 
 When you are satisfied with your query and activity title, select **Next : Review**.
 
-See more information on the following items used in the preceding examples, in the Kusto documentation:
+See more information about the KQL operators and functions used in the activity query samples, in the Kusto documentation:
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
 - [***project*** operator](/kusto/query/project-operator?view=microsoft-sentinel&preserve-view=true)
 - [***summarize*** operator](/kusto/query/summarize-operator?view=microsoft-sentinel&preserve-view=true)
@@ -216,7 +233,10 @@ See more information on the following items used in the preceding examples, in t
 
 [!INCLUDE [kusto-reference-general-no-alert](includes/kusto-reference-general-no-alert.md)]
 
-### Review and create tab
+<a name="review-and-create-tab"></a>
+### Review settings and create the activity
+
+Use the **Review and create** tab to validate your configuration and finalize the activity.
 
 1. Verify all the configuration information of your custom activity.
 
@@ -241,7 +261,7 @@ You can also use the **Activities** filter to present or hide specific activitie
 
 ## Next steps
 
-In this document, you learned how to create custom activities for your entity page timelines. To learn more about Microsoft Sentinel, see the following articles:
+To learn more about entities and custom timeline activities, see the following articles:
 - Get the complete picture on [entity pages](entity-pages.md).
 - Learn about [User and Entity Behavior Analytics (UEBA)](identify-threats-with-entity-behavior-analytics.md).
 - See the full list of [entities and identifiers](entities-reference.md).

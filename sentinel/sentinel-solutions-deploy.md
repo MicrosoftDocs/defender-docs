@@ -1,13 +1,15 @@
 ---
 title: Discover and deploy Microsoft Sentinel out-of-the-box content from Content hub
 description: Learn how to find and deploy Sentinel packaged solutions containing data connectors, analytics rules, hunting queries, workbooks, and other content.
+ms.author: edbaynash
 author: EdB-MSFT
 ms.topic: how-to
-ms.date: 01/14/2025
-ms.author: edbaynash
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security operations administrator, I want to discover, install, and centrally manage out-of-the-box content so that I can efficiently enhance and maintain my security monitoring capabilities.
@@ -16,7 +18,7 @@ appliesto:
 
 # Discover and manage Microsoft Sentinel out-of-the-box content
 
-The Microsoft Sentinel Content hub is your centralized location to discover and manage out-of-the-box (built-in) content. There you find packaged solutions for end-to-end products by domain or industry. You have access to the vast number of standalone contributions hosted in our GitHub repository and feature blades.
+The Microsoft Sentinel Content hub is your centralized location to discover and manage out-of-the-box (built-in) content. In the Content hub, you find packaged solutions for end-to-end products by domain or industry. You have access to the vast number of standalone contributions hosted in our GitHub repository and feature blades.
 
 - Discover solutions and standalone content with a consistent set of filtering capabilities based on status, content type, support, provider, and category.
 
@@ -74,7 +76,7 @@ For more information, see [Categories for Microsoft Sentinel out-of-the-box cont
 
 ## Install or update content
 
-Install standalone content and solutions individually or all together in bulk. For more information on bulk operations, see [Bulk install and update content](#bulk-install-and-update-content) in the next section. 
+Install standalone content and solutions individually or all together in bulk. For more information on bulk operations, see [Bulk install and update content](#bulk-install-and-update-content).
 
 If a solution that you deployed has updates since you last deployed it, the list view shows **Update** in the status column. The solution is also included in the **Updates** count at the top of the page.
 
@@ -100,9 +102,9 @@ Here's an example showing the install of an individual solution.
 
 ### Install with dependencies
 
-Some solutions have dependencies to install, including many [domain solutions](sentinel-solutions-catalog.md#domain-solutions) and solutions that use the unified AMA connectors for [CEF, Syslog](cef-syslog-ama-overview.md), or [custom logs](connect-custom-logs-ama.md). 
+Some solutions have dependencies to install, including many [domain solutions](sentinel-solutions-catalog.md#domain-solutions) and solutions that use the unified Azure Monitor Agent (AMA) connectors for [CEF, Syslog](cef-syslog-ama-overview.md), or [custom logs](connect-custom-logs-ama.md). 
 
-In such cases, select **Install with dependencies** to ensure that the required data connectors are also installed. From there, select one or more of the dependencies to install them along with the original solution. The original solution you chose to install is always selected by default. 
+If the solution has dependencies, select **Install with dependencies** to ensure that the required data connectors are also installed. In the dependency selection pane, select one or more of the dependencies to install them along with the original solution. The original solution you chose to install is always selected by default. 
 
 If one or more of the dependency solutions is already installed, but has updates, use the **Install/Update** button to both install and update all selected solutions in bulk. For example:
 
@@ -155,7 +157,8 @@ Centrally manage content items for installed solutions from the content hub.
 
 The following sections provide some tips on how to work with the different content types as you manage a solution.
 
-#### Data connector
+<a name="data-connector"></a>
+#### Connect a data connector
 
 To connect a data connector, complete the configuration steps.
 1. Select **Open connector page**. 
@@ -165,7 +168,8 @@ To connect a data connector, complete the configuration steps.
 
    After you configure the data connector and logs are detected, the status changes to **Connected**.
 
-#### Analytics rule 
+<a name="analytics-rule"></a>
+#### Enable an analytics rule
 
 Create a rule from a template or edit an existing rule.
 
@@ -177,7 +181,8 @@ Create a rule from a template or edit an existing rule.
 
     :::image type="content" source="media/sentinel-solutions-deploy/manage-solution-analytics-rule.png" alt-text="Screenshot of analytics rule content item in solution for Azure Activity." lightbox="media/sentinel-solutions-deploy/manage-solution-analytics-rule.png":::
 
-#### Hunting query
+<a name="hunting-query"></a>
+#### Run or customize a hunting query
 
 Run the provided hunting query or customize it.
 
@@ -189,7 +194,8 @@ Run the provided hunting query or customize it.
 
    From the hunting gallery, you can create a clone of the read-only hunting query template by going to the ellipses menu. Hunting queries created in this way display as items in the content hub **Created content** column.
 
-#### Workbook
+<a name="workbook"></a>
+#### Create a workbook from a template
 
 To customize a workbook created from a template, create an instance of a workbook.
 
@@ -200,7 +206,8 @@ To customize a workbook created from a template, create an instance of a workboo
 
     :::image type="content" source="media/sentinel-solutions-deploy/manage-solution-workbook.png" alt-text="Screenshot of saved workbook item in solution for Azure Activity." lightbox="media/sentinel-solutions-deploy/manage-solution-workbook.png" :::
 
-#### Parser
+<a name="parser"></a>
+#### Use a parser
 
 When a solution is installed, any parsers included are added as workspace functions in Log Analytics.
 
@@ -209,7 +216,8 @@ When a solution is installed, any parsers included are added as workspace functi
 
     :::image type="content" source="media/sentinel-solutions-deploy/manage-solution-parser.png" alt-text="Screenshot of parser content type in a solution." lightbox="media/sentinel-solutions-deploy/manage-solution-parser.png":::
 
-#### Playbook
+<a name="playbook"></a>
+#### Create a playbook from a template
 
 Create a playbook from a template.
 
@@ -231,8 +239,6 @@ When contacting support, you might need other details about your solution, such 
 :::image type="content" source="media/sentinel-solutions-deploy/usage-support.png" alt-text="Screenshot of usage and support details for a solution.":::
 
 ## Next steps
-
-In this document, you learned how to find and deploy built-in solutions and standalone content for Microsoft Sentinel.
 
 - Learn more about [Microsoft Sentinel solutions](sentinel-solutions.md).
 - See the full Microsoft Sentinel solutions catalog in the [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?filters=solution-templates&page=1&search=sentinel).

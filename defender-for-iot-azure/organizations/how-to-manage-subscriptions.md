@@ -1,8 +1,10 @@
 ---
 title: Manage OT plans and licenses - Microsoft Defender for IoT
 description: Manage Microsoft Defender for IoT plans and licenses for OT monitoring.
-ms.date: 06/19/2023
+ms.date: 06/12/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Manage OT plans and licenses
@@ -11,9 +13,9 @@ Your Microsoft Defender for IoT deployment for OT monitoring is managed through 
 
 If you're looking to manage support for enterprise IoT security, see [Manage enterprise IoT monitoring support with Microsoft Defender for IoT](manage-subscriptions-enterprise.md).
 
-This article is relevant for commercial Defender for IoT customers.
+These licensing and plan-management instructions apply to commercial Defender for IoT customers.
 
-If you're a government customer, see [government customers trial license](getting-started.md#government-customers-trial-license) or contact your Microsoft sales representative for more information.
+If you're a government customer, contact your Microsoft sales representative for more information.
 
 ## Prerequisites
 
@@ -23,7 +25,7 @@ Before performing the procedures in this article, make sure that you have:
 
     For more information, see [Buy or remove Microsoft 365 licenses for a subscription](/microsoft-365/commerce/licenses/buy-licenses) and [About admin roles in the Microsoft 365 admin center](/microsoft-365/admin/add-users/about-admin-roles).
 
-- An Azure subscription. If you need to, [sign up for a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
+- An Azure subscription. If you need an Azure subscription, [Sign up for a free Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - A [Security admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner) user role for the Azure subscription that you're using for the integration
 
@@ -37,19 +39,21 @@ This procedure describes how to purchase Defender for IoT licenses in the Micros
 
 1. Go to the [Microsoft 365 admin center](https://portal.office.com/AdminPortal/Home#/catalog) **Billing > Purchase services**. If you don't have this option, select **Marketplace** instead.
 
-1. Search for **Microsoft Defender for IoT**, and then locate the **Microsoft Defender for IoT** license for your site size.
+1. Search for **Defender for IoT**.
 
-1. Follow the options through to buy the license and add it to your Microsoft 365 products.
+1. Choose the license appropriate for the size of your site.
+
+1. Complete the purchasing instructions.
 
    Make sure to select the number of licenses you want to purchase, based on the number of sites you want to monitor at the selected size.
 
 > [!IMPORTANT]
-> All license management procedures are done from the Microsoft 365 admin center, including buying, canceling, renewing, setting to auto-renew, auditing, and more. For more information, see the [Microsoft 365 admin center help](/microsoft-365/admin/).
+> All license management procedures are done from the Microsoft 365 admin center, including buying, canceling, renewing, setting to auto-renew, auditing, and more. For more information, see the [Microsoft 365 admin center documentation](/microsoft-365/admin/).
 >
 
 ## Add an OT plan to your Azure subscription
 
-This procedure describes how to add an OT plan for Defender for IoT in the Azure portal, based on the licenses you'd purchased in the [Microsoft 365 admin center](#purchase-a-defender-for-iot-license).
+This procedure describes how to add an OT plan for Defender for IoT in the Azure portal, based on the Defender for IoT licenses you purchased in the Microsoft 365 admin center (see [Purchase a Defender for IoT license](#purchase-a-defender-for-iot-license)).
 
 **To add an OT plan in Defender for IoT**:
 
@@ -60,7 +64,7 @@ This procedure describes how to add an OT plan for Defender for IoT in the Azure
    > [!NOTE]
    > If your subscription isn't listed, check your account details and confirm your permissions with the subscription owner. Also make sure that you have the right subscriptions selected in your Azure settings > **Directories + subscriptions** page.
 
-   The **Price plan** value is updated automatically to reflect your Microsoft 365 licenses.
+   The **Price plan** value is updated automatically to reflect your purchased Microsoft Defender for IoT licenses in Microsoft 365.
 
 1. Select **Next** and review the details for any of your licensed sites. The details listed on the **Review and purchase** pane reflect any licenses you've purchased from the Microsoft 365 admin center.
 
@@ -68,7 +72,7 @@ This procedure describes how to add an OT plan for Defender for IoT in the Azure
 
 1. When you're finished, select **Save**.
 
-Your new plan is listed under the relevant subscription on the **Plans and pricing** > **Plans** page.
+Your new plan is listed under the Azure subscription you selected on the **Plans and pricing** > **Plans** page.
 
 ## Cancel a Defender for IoT plan for OT networks
 
@@ -90,28 +94,7 @@ You might need to cancel a Defender for IoT plan from your Azure subscription, f
 
 Canceling an OT plan in the Azure portal *doesn't* also cancel your Defender for IoT license. To change your billed licenses, make sure that you also cancel your Defender for IoT license from the Microsoft 365 admin center.
 
-For more information, see the [Microsoft 365 admin center documentation](/microsoft-365/commerce/subscriptions/manage-self-service-purchases-admins#cancel-a-purchase-or-trial-subscription).
-
-## The trial license
-
-A trial license covers a site with up to 1,000 devices for a minimum of 30 days. To start a trial license, see [start a Microsoft Defender for IoT trial](getting-started.md).
-
-### Extend a trial license in the Admin Center
-
-If you need more time to evaluate the product and security value of Defender for IoT the trial license can be extended up until 15 days before the end of the trial. Within the last 15 days the trial can’t be extended.
-
-To extend the trial, either:
-
-1. Use the [Microsoft 365 Admin Center](https://admin.microsoft.com/Adminportal/Home?#/homepage) portal and follow the [extend your trial instructions](/microsoft-365/commerce/try-or-buy-microsoft-365#extend-your-trial).
-
-    The trial extension request must be made by a user with Global or Billing Admin permissions on the customer tenant. For more information, see admin roles in [Microsoft 365 Admin Center](https://admin.microsoft.com/Adminportal/Home?#/homepage).
-
-1. Contact your sale's team representative who can help you extend your license.
-
->[!NOTE]
->
->A trial license can be extended by the customer up until 15 days before the end of the trial using the [Microsoft 365 Admin Center](https://admin.microsoft.com/Adminportal/Home?#/homepage).
->
+For more information, see the [Cancel a purchase or trial subscription in Microsoft 365](/microsoft-365/commerce/subscriptions/manage-self-service-purchases-admins#cancel-a-purchase-or-trial-subscription).
 
 ## Migrate from a legacy OT plan
 
@@ -156,23 +139,23 @@ Existing customers can continue to use any legacy OT plan, with no changes in fu
 
 If the number of actual devices detected by Defender for IoT exceeds the number of committed devices currently listed on your subscription, you might see a warning message in the Azure portal and on your OT sensor that you have exceeded the maximum number of devices for your subscription.
 
-This warning indicates you need to update the number of committed devices on the relevant subscription to the actual number of devices being monitored. Select the link in the warning message to take you to the **Plans and pricing** page, with the **Edit plan** pane already open.
+The exceeded-device-limit warning indicates that you need to update the number of committed devices on the affected subscription to match the actual number of devices being monitored. Select the link in the warning message to take you to the **Plans and pricing** page, with the **Edit plan** pane already open.
 
 ### Move existing sensors to a different subscription
 
-If you have multiple legacy subscriptions and are migrating to a Microsoft 365 plan, you'll first need to consolidate your sensors to a single subscription. To do this, you need to register the sensors under the new subscription and remove them from the original subscription.
+If you have multiple legacy subscriptions and are migrating to a Microsoft 365 plan, you'll first need to consolidate your sensors to a single subscription. To consolidate your sensors, register the sensors under the new subscription and remove them from the original subscription.
 
-- Devices are synchronized from the sensor to the new subscription automatically.
+- Devices are synchronized automatically from each sensor to the new subscription.
 
 - Manual edits made in the portal aren't migrated.
 
-- New alerts created by the sensor are created under the new subscription, and existing alerts in the old subscription can be closed in bulk.
+- New alerts created by each sensor are created under the new subscription, and existing alerts in the old subscription can be closed in bulk.
 
 **To move sensors to a different subscription**:
 
-1. In the Azure portal, [onboard the sensor](onboard-sensors.md) from scratch to the new subscription in order to create a new activation file. When onboarding your sensor:
+1. In the Azure portal, for each sensor you want to move, [onboard the sensor](onboard-sensors.md) from scratch to the new subscription in order to create a new activation file. When onboarding each sensor:
 
-   - Replicate site and sensor hierarchy as is.
+   - Replicate the existing site and sensor hierarchy from the original subscription.
 
    - For sensors monitoring overlapping network segments, create the activation file under the same zone. Identical devices that are detected in more than one sensor in a zone are merged into one device.
 
@@ -184,13 +167,15 @@ If you have multiple legacy subscriptions and are migrating to a Microsoft 365 p
 
 ### Edit a legacy plan on the Azure portal
 
+Use the following steps to edit a legacy Defender for IoT plan in the Azure portal.
+
 1. In the Azure portal, go to **Defender for IoT** > **Plans and pricing**.
 
 1. On the subscription row, select the options menu (**...**) at the right > select **Edit plan**.
 
 1. Make any of the following changes as needed:
 
-   - Change your price plan from a trial to a monthly, annual, or Microsoft 365 plan
+   - Change your price plan to a monthly, annual, or Microsoft 365 plan
    - Update the number of [committed devices](best-practices/plan-prepare-deploy.md#calculate-devices-in-your-network) (monthly and annual plans only)
    - Update the number of sites (annual plans only)
 

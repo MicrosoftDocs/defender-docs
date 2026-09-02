@@ -2,7 +2,7 @@
 title: 'Quickstart: Accessing Microsoft Defender Threat Intelligence (Defender TI)'
 description: Learn how to access Microsoft Defender Threat Intelligence (Defender TI) in the Microsoft Defender portal, configure your profile and preferences, and access help resources.
 ms.topic: quickstart
-ms.date: 09/12/2025
+ms.date: 07/16/2026
 ms.custom: 
 - template-overview
 - cx-ti
@@ -17,7 +17,9 @@ ms.collection: essentials-get-started
 
 This guide walks you through how to access Microsoft Threat Intelligence (Defender TI) from the Microsoft Defender portal, adjust the portal's theme to make it easier on your eyes when using it, and find sources for enrichment so you can see more results when gathering threat intelligence. 
 
+<!-- Image removed: source file quickstart-intel-explorer.png is missing from the repo.
 :::image type="content" source="/defender/threat-intelligence/media/quickstart-intel-explorer.png" alt-text="Screenshot of the Microsoft Defender Threat Intelligence Intel explorer in the Microsoft Defender portal." lightbox="/defender/threat-intelligence/media/quickstart-intel-explorer.png":::
+-->
 
 ## Prerequisites
 
@@ -35,7 +37,9 @@ This guide walks you through how to access Microsoft Threat Intelligence (Defend
    - Intel explorer
    - Intel projects
 
+    <!-- Image removed: source file quickstart-navigation.png is missing from the repo.
     :::image type="content" source="/defender/threat-intelligence/media/quickstart-navigation.png" alt-text="Screenshot of the Microsoft Defender portal with the Threat intelligence navigation  links highlighted." lightbox="/defender/threat-intelligence/media/quickstart-navigation.png":::
+    -->
 
 ## Adjust the Defender portal's display theme to dark or light mode
 
@@ -71,7 +75,9 @@ Select the **Clear** button in the flyout panel or close the banner message to c
 
 Select the **Help** icon in the upper right-hand corner of the Defender portal. The side panel displays a search bar where you can type your problem or support question.
 
+<!-- Image removed: source file quickstart-help.png is missing from the repo.
 :::image type="content" source="/defender/threat-intelligence/media/quickstart-help.png" alt-text="Screenshot of the Microsoft Defender portal with the Help side panel open and highlighted." lightbox="/defender/threat-intelligence/media/quickstart-help.png":::
+-->
 
 You can also review Microsoft's [licensing resources](https://www.microsoft.com/licensing/docs) and [privacy statement](https://privacy.microsoft.com/privacystatement) by selecting **Legal** and **Privacy & Cookies**, respectively, at the lower right hand of the **Help** side panel.
 

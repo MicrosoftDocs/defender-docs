@@ -9,12 +9,14 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
-ms.date: 02/19/2025
+ms.date: 06/15/2026
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
 - Microsoft Defender for Business
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #customer intent: As a security administrator, I want to create dynamic rules for devices in asset rule management so that I can automatically assign tags and device values based on certain criteria.
 ---
 
@@ -58,9 +60,10 @@ The following steps guide you on how to create a new dynamic rule in Microsoft D
    >[!NOTE]
    > It may take up to 1 hour for changes to be reflected in the portal.
 
-### Dynamic tags in the Device Inventory
+<a name="dynamic-tags-in-the-device-inventory"></a>
+### View dynamic tags in Device Inventory
 
-You can see the dynamic tags assigned in the Device Inventory view.
+You can see the dynamic tags assigned on the **Device Inventory** page in the Microsoft Defender portal.
 
 > [!NOTE]
 > Dynamic tags are not supported by [security baseline assessments](/defender-vulnerability-management/tvm-security-baselines).
@@ -75,8 +78,9 @@ To see tags on individual devices:
 
    :::image type="content" source="media/configure-asset-rules/manage-machine-tags.png" alt-text="Screenshot of the machine tags page" lightbox="media/configure-asset-rules/manage-machine-tags.png":::
 
-### Updating rules
+<a name="updating-rules"></a>
+### Update an existing dynamic rule
 
-Dynamic tags and device values set by dynamic rules can't be manually updated. To edit, delete or turn off a rule, in the **Asset Rule Management** page select the rule and choose an action.
+Dynamic tags and device values set by dynamic rules can't be manually updated. To edit, delete, or turn off a rule, on the **Asset Rule Management** page, select the rule and then select **Edit**, **Delete**, or **Turn off**.
 
 :::image type="content" source="media/configure-asset-rules/update-rule.png" alt-text="Screenshot of the rule details page" lightbox="media/configure-asset-rules/update-rule.png":::
