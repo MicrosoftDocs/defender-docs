@@ -10,7 +10,7 @@ ms.custom:
   - msecd-doc-authoring-1015
   - nextgen
   - sfi-image-nochange
-ms.date: 08/31/2026
+ms.date: 09/02/2026
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection:
@@ -72,7 +72,7 @@ To configure block at first sight in Microsoft Intune, use an endpoint security 
 
 When you create the policy, use these specific settings:
 
-- **Policy type**: Select **Manage** \> **Antivirus** on the **Endpoint security \| Overview** page.
+- **Policy type**: Go to **Manage** \> **Antivirus** on the **Endpoint security \| Overview** page at <https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/SecurityManagementMenu/~/overview>.
 - **Platform**: Select **Windows**.
 - **Profile**: Select **Microsoft Defender Antivirus**.
 
@@ -224,7 +224,7 @@ For detailed syntax and parameter information, see [**Set-MpPreference**](/power
 
 ## Configure block at first sight in the Windows Security app
 
-On a device that isn't managed by an organization, you can configure block at first sight in the Windows Security app. Although the app doesn't have a setting named **Block at first sight**, the feature turns on when you enable cloud-delivered protection and automatic sample submission.
+On an unmanaged device, you can configure block at first sight in the [Windows Security app](https://support.microsoft.com/Windows/Security/Windows-Security/stay-protected-with-the-windows-security-app). Although the app doesn't have a setting named **Block at first sight**, the feature turns on when you enable cloud-delivered protection and automatic sample submission.
 
 > [!NOTE]
 > If Group Policy manages these settings, they appear greyed-out in the Windows Security app and can't be changed locally.
@@ -233,9 +233,9 @@ On a device that isn't managed by an organization, you can configure block at fi
 
 To configure block at first sight, follow these steps:
 
-1. Open the Windows Security app, and then select **Virus & threat protection**.
-1. On the **Virus & threat protection** page, select **Manage settings** in the **Virus & threat protection settings** section.
-1. On the **Virus & threat protection settings** page, take one of the following actions:
+1. In the **Windows security** app on the device, go to **Virus & threat protection**.
+1. In the **Virus & threat protection** pane, in the **Virus & threat protection settings** section, select **Manage settings**.
+1. In the **Virus & threat protection settings** pane, take one of the following actions:
    - To turn on block at first sight, turn on **Cloud-delivered protection** and **Automatic sample submission**.
    - To turn off block at first sight, turn off either setting.
 

@@ -78,7 +78,7 @@ To configure ASR rules and exclusions in Microsoft Intune, use an endpoint secur
 
 When you create the policy, use these specific settings:
 
-- **Policy type**: Select **Manage** \> **Attack surface reduction** on the **Endpoint security \| Overview** page.
+- **Policy type**: Go to **Manage** \> **Attack surface reduction** on the **Endpoint security \| Overview** page at <https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/SecurityManagementMenu/~/overview>.
 - **Platform**: Select **Windows**.
 - **Profile**: Select **Attack Surface Reduction Rules**.
 

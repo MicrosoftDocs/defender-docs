@@ -8,7 +8,7 @@ author: chrisda
 ms.author: chrisda
 ms.topic: how-to
 ms.custom: nextgen, msecd-doc-authoring-1015
-ms.date: 08/31/2026
+ms.date: 09/02/2026
 ai-usage: ai-assisted
 ms.reviewer: yongrhee
 ms.collection:
@@ -47,7 +47,7 @@ To configure remediation actions in Microsoft Intune, use an endpoint security *
 
 When you create the policy, use these specific settings:
 
-- **Policy type**: Select **Manage** \> **Antivirus** on the **Endpoint security \| Overview** page.
+- **Policy type**: Go to **Manage** \> **Antivirus** on the **Endpoint security \| Overview** page at <https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/SecurityManagementMenu/~/overview>.
 - **Platform**: Select **Windows**.
 - **Profile**: Select **Microsoft Defender Antivirus**.
 
@@ -76,7 +76,7 @@ When you create or modify the policy, use these specific settings on the **Confi
   > - Other procedures exist to respond to detected threats.
   > - Compensating security controls are deployed.
   >
-  > Use standard remediation actions (Clean, Quarantine, Remove, or Block) in all other environments.
+  > Use standard remediation actions (**Clean**, **Quarantine**, **Remove**, or **Block**) in all other environments.
 
 For more information about antivirus policies in Intune, see [Antivirus policy for endpoint security in Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy).
 
