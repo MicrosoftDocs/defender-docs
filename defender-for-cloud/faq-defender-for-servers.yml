@@ -56,7 +56,7 @@ sections:
         
           The discount becomes effective starting on the approval date. It isn't retroactive.
 
-          The discount is not automatically continued when the licensed that served as basis for discount is being extended/renewed. 
+          The discount doesn't automatically continue if the license that served as the basis for the discount is extended or renewed.
 
       - question: |
           What's the free data ingestion allowance? 
