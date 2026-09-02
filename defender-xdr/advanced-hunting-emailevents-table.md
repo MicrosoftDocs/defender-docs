@@ -4,7 +4,7 @@ description: Learn about events associated with Microsoft 365 emails in the Emai
 ms.service: defender-xdr
 ms.subservice: adv-hunting
 ms.author: pauloliveria
-author: poliveria
+author: ajajshaikh
 ms.localizationpriority: medium
 ms.collection: 
 - m365-security
