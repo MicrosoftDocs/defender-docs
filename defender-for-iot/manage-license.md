@@ -5,15 +5,17 @@ ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 06/25/2024
+ms.date: 06/11/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
-# Manage your license
+# Manage your Microsoft Defender for IoT license
 
-After using a trial license, and deciding to use Microsoft Defender for IoT permanently, you must purchase a full license. To purchase the correct license, you need to know the total number of devices within your network so that you can choose the correct sized license for your network.
+After setting up a license for Microsoft Defender for IoT, you can manage and update it as needed. To purchase the correct license, you need to know the total number of devices within your network so that you can choose the correct sized license for your network.
 
-This article shows how to make changes to your license, including the steps to choose the best size license to purchase, and upgrading from a trial to permanent license.
+This article shows how to make changes to your license, including the steps to choose the best size license to purchase.
 
 [!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 

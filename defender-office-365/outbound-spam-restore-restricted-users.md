@@ -1,30 +1,27 @@
 ---
 title: Remove blocked users from the Restricted entities page
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 f1_keywords:
   - 'ms.exch.eac.ActionCenter.Restricted.Users.RestrictedUsers'
 ms.localizationpriority: high
-search.appverid:
-  - MET150
 ms.assetid: 712cfcc1-31e8-4e51-8561-b64258a8f1e5
 ms.collection:
   - m365-security
   - tier2
 description: Admins can learn how to remove user accounts from the Restricted entities page in the Microsoft Defender portal. Users are added to the Restricted entities page for sending outbound spam, typically as a result of account compromise.
 ms.custom:
-- seo-marvel-apr2020
+  - msecd-doc-authoring-1016
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
 ms.service: defender-office-365
-ms.date: 05/07/2025
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 #customer intent: As an admin, I need steps to unblock users restricted for outbound spam, including required checks and portal/PowerShell actions so I can safely restore sending.
 ---
 
@@ -39,19 +36,21 @@ In all organizations with cloud mailboxes, several things happen if a user excee
 
   A _restricted entity_ is a **user account** or a **connector** that's blocked from sending email due to indications of compromise, which typically includes exceeding message receiving and sending limits.
 
-- If the user tries to send email, the message is returned in a non-delivery report (also known as an NDR or bounce message) with the error code [5.1.8](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-1-8-in-exchange-online) and the following text:
+- If the user tries to send email, the message is returned in a non-delivery report (also known as an NDR or bounce message) with the error code [Fix error code 5.1.8 in Exchange Online](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-1-8-in-exchange-online) and the following text:
 
 > "Your message couldn't be delivered because you weren't recognized as a valid sender. The most common reason for this is that
 > your email address is suspected of sending spam and it's no longer allowed to send email.  Contact  your email admin for
 > assistance. Remote Server returned '550 5.1.8 Access denied, bad outbound sender."
 
-For more information about compromised user accounts and how to regain control of them, see [Responding to a compromised email account](responding-to-a-compromised-email-account.md).
+For more information about compromised user accounts and how to regain control of those accounts, see [Responding to a compromised email account](responding-to-a-compromised-email-account.md).
 
 The procedures in this article explain how admins can remove user accounts from the **Restricted entities** page in the Microsoft Defender portal or in Exchange Online PowerShell.
 
-For more information about compromised _connectors_ and how to remove them from the **Restricted entities** page, see [Remove blocked connectors from the Restricted entities page](connectors-remove-blocked.md).
+For more information about compromised _connectors_ and how to remove connectors from the **Restricted entities** page, see [Remove blocked connectors from the Restricted entities page](connectors-remove-blocked.md).
 
 ## What do you need to know before you begin?
+
+Before you begin, make sure you have access to the required tools and permissions:
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Restricted users** page, use <https://security.microsoft.com/restrictedusers>.
 
@@ -77,9 +76,9 @@ For more information about compromised _connectors_ and how to remove them from 
 
    Select a column header to sort by that column.
 
-   To change the list of entities from normal to compact spacing, select :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
+   To change the list of entities from normal to compact spacing, select :::image type="icon" source="media/defender-portal-icon-standard.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/defender-portal-icon-compact.png" border="false"::: **Compact list**.
 
-   Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific users.
+   Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific users.
 
 3. Select the user to unblock by selecting the check box for the entity, and then selecting the **Unblock** action that appears on the page.
 
@@ -91,7 +90,7 @@ For more information about compromised _connectors_ and how to remove them from 
 
    When you're finished on the **Unblock user page**, select **Submit**.
 
-6. Select **Yes** in the warning dialog that opens.
+6. A warning dialog confirms that you're about to remove the sending restriction for the selected user. If you verified that the account is secured, select **Yes** to confirm.
 
    > [!NOTE]
    > Under most circumstances, all restrictions should be removed from the user within one hour. Transient technical issues might cause a longer wait time, but the total wait should be no longer than 24 hours.
@@ -105,7 +104,7 @@ The default alert policy named **User restricted from sending email** automatica
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Alert policy**. Or, to go directly to the **Alert policy** page, use <https://security.microsoft.com/alertpoliciesv2>.
 
-2. On the **Alert policy** page, find the alert named **User restricted from sending email**. You can sort the alerts by name, or use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find the alert.
+2. On the **Alert policy** page, find the alert named **User restricted from sending email**. You can sort the alerts by name, or use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to find the alert.
 
    Select the **User restricted from sending email** alert by clicking anywhere in the row other than the check box next to the name.
 
@@ -113,18 +112,18 @@ The default alert policy named **User restricted from sending email** automatica
    - **Status**: Verify the alert is turned on :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
    - Expand the **Set your recipients section** and verify the **Recipients** and **Daily notification limit** values.
 
-     To change the values, select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit recipient settings** in the section or select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit policy** at the top of the flyout.
+     To change the values, select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit recipient settings** in the section or select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit policy** at the top of the flyout.
 
      - On the **Decide if you want to notify people when this alert is triggered** page of the wizard that opens, verify or change the following settings:
        - Verify **Opt-in for email notifications** is selected.
-       - **Email recipients**: The default value is **TenantAdmins** group (**Global Administrator** members). To add more recipients, click in the empty area of the box. A list of recipients appears, and you can start typing a name to filter and select a recipient. Remove an existing recipient from the box by selecting :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to their name.
+       - **Email recipients**: The default value is **TenantAdmins** group (**Global Administrator** members). To add more recipients, click in the empty area of the box. A list of recipients appears, and you can start typing a name to filter and select a recipient. Remove an existing recipient from the box by selecting :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to their name.
        - **Daily notification limit**: The default value is **No limit**.
 
        When you're finished on the **Decide if you want to notify people when this alert is triggered** page, select **Next**.
 
      - On the **Review your settings** page, select **Submit**, and then select **Done**.
 
-4. Back in the **User restricted from sending email** flyout, select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: at the top of the flyout.
+4. Back in the **User restricted from sending email** flyout, select :::image type="icon" source="media/defender-portal-icon-remove.png" border="false"::: at the top of the flyout.
 
 ## Use Exchange Online PowerShell to view and remove users from the Restricted entities page
 
@@ -150,7 +149,9 @@ Remove-BlockedSenderAddress -SenderAddress <emailaddress>
 
 For detailed syntax and parameter information, see [Remove-BlockedSenderAddress](/powershell/module/exchangepowershell/remove-blockedsenderaddress).
 
-## More information
+<a name="more-information"></a>
+## Related content
 
+- [Troubleshoot outbound sending limits in Exchange Online](outbound-spam-sending-limits-troubleshoot.md)
 - [Responding to a compromised email account](responding-to-a-compromised-email-account.md)
 - [Remove blocked connectors from the Restricted entities page](connectors-remove-blocked.md)

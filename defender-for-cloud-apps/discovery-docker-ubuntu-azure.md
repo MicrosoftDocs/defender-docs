@@ -1,9 +1,11 @@
 ---
 title: Configure automatic log upload using Docker in Azure 
-description: This article describes the process configuring automatic log upload for continuous reports in Defender for Cloud Apps using a Docker on Linux in Azure.
-ms.date: 01/29/2023
+description: Set up automatic log uploads for continuous reports in Defender for Cloud Apps by deploying a Docker-based log collector on Ubuntu or CentOS in Azure. Covers prerequisites, data source configuration, and deployment steps.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: Mravela
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 # Configure automatic log upload using Docker in Azure
 
@@ -49,7 +51,7 @@ If you require more than 10 data sources, we recommend that you split the data s
     >[!NOTE]
     >Integrating with secure transfer protocols (FTPS and Syslog – TLS) often requires additional settings on your firewall/proxy. For more information, see [Advanced log collector management](log-collector-advanced-management.md).
 
-Repeat this process for each firewall and proxy whose logs can be used to detect traffic on your network.
+Repeat these data source creation steps for each firewall and proxy whose logs can be used to detect traffic on your network.
 
 We recommend that you set up a dedicated data source per network device, enabling you to monitor the status of each device separately for investigation purposes, and to explore Shadow IT Discovery per device if each device is used by a different user segment.
 
@@ -70,9 +72,9 @@ We recommend that you set up a dedicated data source per network device, enablin
 
     :::image type="content" source="media/discovery-docker-ubuntu-azure/import-collector.png" alt-text="Screenshot of the command to copy from the Create log collector dialog.":::
 
-1. Select the ![copy to clipboard icon.](media/copy-icon.png) **Copy** icon next to the command to copy it to your clipboard.
+1. Select the ![Copy the command to clipboard.](media/copy-icon.png) **Copy** icon next to the command to copy it to your clipboard.
 
-    The details displayed in the **Create log collector** dialog differ, depending on the selected source and receiver types. For example, if you selected Syslog, the dialog includes details about which port the syslog listener is listening on.
+    The details displayed in the **Create log collector** dialog differ, depending on the source type and receiver type you chose when creating the data source. For example, if you selected Syslog, the dialog includes details about which port the syslog listener is listening on.
 
     Copy the contents of the screen and save them locally, as you'll need them when you configure the log collector to communicate with Defender for Cloud Apps.
 
@@ -83,7 +85,7 @@ We recommend that you set up a dedicated data source per network device, enablin
 
 ## Deploy your machine in Azure
 
-This procedure describes how to deploy your machine with Ubuntu. The deployment steps for other platforms are slightly different.
+This procedure describes how to deploy your machine with Ubuntu. The deployment steps for other platforms are slightly different. Docker CE is installed as part of this procedure (step 5). Make sure you have root access to the machine before you begin.
 
 1. Create a new Ubuntu machine in your Azure environment.
 1. After the machine is up, open the ports:
@@ -169,7 +171,7 @@ This procedure describes how to deploy your machine with Ubuntu. The deployment 
 
 ## Configure network appliance on-premises settings
 
-Configure your network firewalls and proxies to periodically export logs to the dedicated Syslog port of the FTP directory according to the directions in the dialog. For example:
+Configure your network firewalls and proxies to periodically export logs to the dedicated Syslog port of the FTP directory according to the directions in the **Create log collector** dialog. The following example shows the destination path format for a data source named `BlueCoat_HQ`, where `<machine_name>` is the name of your log collector machine:
 
 ```bash
 BlueCoat_HQ - Destination path: \<<machine_name>>\BlueCoat_HQ\
@@ -205,11 +207,14 @@ Verify that the logs are being uploaded to Defender for Cloud Apps and that repo
     >[!NOTE]
     >When applying filters on continuous reports, the selection will be included, not excluded. For example, if you apply a filter on a certain user group, only that user group will be included in the report.
 
-     ![Screenshot of a custom continuous report.](media/custom-continuous-report.png)
+     ![Screenshot of the custom continuous report configuration page with filter options for data source, user group, and IP address ranges.](media/custom-continuous-report.png)
 
 ## Remove your log collector
 
-If you have an existing log collector and want to remove it before deploying it again, or if you simply want to remove it, run the following commands:
+> [!WARNING]
+> Removing the log collector container stops all log ingestion for the associated data sources. No logs are uploaded until you redeploy or reconfigure a new log collector.
+
+If you have an existing log collector and want to remove it before deploying it again, or if you simply want to remove it, run the following commands to stop and delete the log collector Docker container:
 
 ```console
 docker stop <collector_name>

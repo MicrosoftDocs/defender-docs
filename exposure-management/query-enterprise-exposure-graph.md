@@ -1,11 +1,7 @@
 ---
 title: Query the enterprise exposure graph in Microsoft Security Exposure Management
 description: Learn how to query the enterprise exposure graph to understand security risk in Microsoft Security Exposure Management.
-author: dlanger
-ms.author: dlanger
-manager: ornat-spodek
 ms.topic: overview
-ms.service: exposure-management
 ms.date: 07/30/2025
 ---
 
@@ -237,7 +233,7 @@ This query results in a list of users logged into more than one critical device,
 let IdentitiesAndCriticalDevices = ExposureGraphNodes
 | where
  // Critical Device
- (set_has_element(Categories, "device") and isnotnull(NodeProperties.rawData.criticalityLevel) and NodeProperties.rawData.criticalityLevel.criticalityLevel < 4)
+ (set_has_element(Categories, "device") and isnotnull(NodeProperties.rawData.criticalityLevel) and NodeProperties.rawData.criticalityLevel.criticalityLevel > 4)
  // or identity
  or set_has_element(Categories, "identity");
 ExposureGraphEdges

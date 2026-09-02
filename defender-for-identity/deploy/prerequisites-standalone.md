@@ -73,7 +73,7 @@ The following table lists the extra ports that the Defender for Identity standal
 
 ## Windows event log requirements
 
-Defender for Identity detection relies on specific [Windows Event logs](event-collection-overview.md) that the sensor parses from your domain controllers. For the correct events to be audited and included in the Windows Event log, your domain controllers require accurate Windows Advanced Audit Policy settings.
+Defender for Identity detection relies on specific [Windows Event logs](configure-windows-event-collection.md) that the sensor parses from your domain controllers. For the correct events to be audited and included in the Windows Event log, your domain controllers require accurate Windows Advanced Audit Policy settings.
 
 For more information, see, [Advanced audit policy check](../configure-windows-event-collection.md) and [Advanced security audit policies](/windows/security/threat-protection/auditing/advanced-security-auditing) in the Windows documentation.
 

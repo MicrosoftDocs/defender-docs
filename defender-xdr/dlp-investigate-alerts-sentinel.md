@@ -1,22 +1,16 @@
 ---
 title: Investigate data loss prevention alerts with Microsoft Sentinel
-description: Investigate data loss prevention alerts in Microsoft Sentinel.
-f1.keywords: 
-  - NOCSH
+description: Learn how to use the Microsoft Defender XDR connector in Microsoft Sentinel to import, correlate, and investigate data loss prevention (DLP) alerts across data sources.
 ms.service: defender-xdr
 ms.author: monaberdugo
 author: mberdugo
-ms.localizationpriority: medium
-manager: laurawi
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier2
 ms.topic: how-to
-search.appverid: 
-  - MOE150
-  - met150
-ms.date: 07/11/2023
+ms.date: 06/16/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Investigate data loss prevention alerts with Microsoft Sentinel
@@ -25,24 +19,25 @@ ms.date: 07/11/2023
 
 **Applies to:**
 
-- Microsoft Defender XDR
+- Microsoft Defender
 - Microsoft Sentinel
 
-## Before you start
+<a name="before-you-start"></a>
+## Prepare to investigate DLP alerts in Microsoft Sentinel
 
-See, [Investigate data loss prevention alerts with Microsoft Defender XDR](dlp-investigate-alerts-defender.md) for more details.
+See, [Investigate data loss prevention alerts with Microsoft Defender](dlp-investigate-alerts-defender.md) for more details.
 
 ## DLP investigation experience in Microsoft Sentinel
 
 You can use the Microsoft Defender XDR connector in Microsoft Sentinel to import all DLP incidents into Sentinel to extend your correlation, detection, and investigation across other data sources and extend your automated orchestration flows using Sentinel's native SOAR capabilities.
 
-1. Follow instructions on Connect data from Microsoft Defender XDR to Microsoft Sentinel to import all incidents including DLP incidents and alerts into Sentinel. Enable `CloudAppEvents` event connector to pull all Office 365 audit logs into Sentinel.
+1. Follow instructions on Connect data from Microsoft Defender XDR to Microsoft Sentinel to import all incidents including DLP incidents and alerts into Sentinel. Enable the `CloudAppEvents` event connector, which imports Office 365 audit log events into Microsoft Sentinel, to pull all Office 365 audit logs into Sentinel.
 
-   You should be able to see your DLP incidents in Sentinel once the above connector is set up.
+   You should be able to see your DLP incidents in Sentinel once the Microsoft Defender XDR connector and the `CloudAppEvents` event connector are set up.
 
 2. Select **Alerts** to view the alert page.
 
-3. You can use **AlertType**, **startTime**, and **endTime** to query the **CloudAppEvents** table to get all the user activities that contributed to the alert. Use this query to identify the underlying activities:
+3. You can use **AlertType**, **startTime**, and **endTime** to query the **CloudAppEvents** table to get all the user activities that contributed to the alert. Use this query to identify the underlying activities. The query retrieves a specific security alert by its `SystemAlertId`, then correlates it with `CloudAppEvents` to return the user activities that occurred within the alert time window. Replace the empty `SystemAlertId` value with the ID of the alert you want to investigate.
 
 ```kusto
 let Alert = SecurityAlert

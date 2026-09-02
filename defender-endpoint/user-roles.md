@@ -1,4 +1,4 @@
-﻿---
+---
 title: Create and manage roles for role-based access control
 description: Create roles and define the permissions assigned to the role as part of the role-based access control implementation in the Microsoft Defender XDR
 ms.service: defender-endpoint
@@ -6,22 +6,24 @@ ms.subservice: onboard
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
-ms.custom: admindeeplinkDEFENDER
+ms.custom:
+  - msecd-doc-authoring-1014
+  - admindeeplinkDEFENDER
+  - sfi-ga-nochange
 ms.topic: how-to
-search.appverid: met150
-ms.date: 02/12/2025
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
 ---
 # Create and manage roles for role-based access control
 
+This article explains how to create, edit, and delete custom roles for role-based access control (RBAC) in Microsoft Defender for Endpoint. You can define permissions for each role and assign the role to Microsoft Entra security groups to control user access to portal features.
 
 [!include[Prerelease information](../includes/prerelease.md)]
 
@@ -52,7 +54,7 @@ The following steps guide you on how to create roles in the Microsoft Defender p
 
 1. **Save and close**.
 
-1. Apply the configuration settings.
+1. Apply the role and group assignment settings.
 
 > [!IMPORTANT]
 > After creating roles, you'll need to create a device group and provide access to the device group by assigning it to a role that you created.
@@ -61,6 +63,8 @@ The following steps guide you on how to create roles in the Microsoft Defender p
 > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
 ### Permission options
+
+The following permissions are available when you configure roles:
 
 - **View data**
   - **Security Operations** - View all security operations data in the portal
@@ -99,6 +103,8 @@ For more information on the available commands, see [Investigate devices using L
 
 ## Edit roles
 
+To edit an existing role, perform the following steps:
+
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) using account with the Security administrator role assigned.
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
@@ -112,6 +118,8 @@ For more information on the available commands, see [Investigate devices using L
 1. Select **Save and close**.
 
 ## Delete roles
+
+To delete a role that you no longer need, perform the following steps:
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) using account with the Security Administrator role assigned.
 

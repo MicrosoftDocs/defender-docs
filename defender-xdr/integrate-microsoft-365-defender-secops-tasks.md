@@ -2,21 +2,16 @@
 title: Step 6. Identify SOC maintenance tasks
 description: Identify SOC maintenance tasks when integrating Microsoft Defender XDR into your security operations.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
   - msftsolution-secops
   - tier2
 ms.topic: how-to
-search.appverid: 
-  - MOE150
-  - MET150
-ms.date: 07/15/2021
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Step 6. Identify SOC maintenance tasks
@@ -26,7 +21,9 @@ ms.date: 07/15/2021
 **Applies to:**
 - Microsoft Defender XDR
 
-Here are the periodic or as-needed tasks to maintain your SOC for Microsoft Defender XDR.
+## Maintain your SOC for Microsoft Defender XDR
+
+Here are the periodic or as-needed tasks to maintain your SOC for Microsoft Defender XDR. The following table outlines each recurring activity, its recommended cadence, and the team typically responsible for it. Use these tasks to ensure your security operations center stays aligned with Microsoft Defender XDR capabilities.
 
 |Activity|Description|Cadence|Team assigned|
 |---|---|---|---|
@@ -43,5 +40,5 @@ Integrate these tasks into your current SOC processes.
 
 ## Next steps
 
-You should review the guides referred to in this content and in the [Microsoft Defender XDR library](/microsoft-365/security/defender) to determine how your own implementation of Microsoft Defender XDR should be structured and integrated.
+Review the previous steps in this integration guide and the [Microsoft Defender XDR library](/microsoft-365/security/defender) to determine how your own implementation of Microsoft Defender XDR should be structured and integrated.
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

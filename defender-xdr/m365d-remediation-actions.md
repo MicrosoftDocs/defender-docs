@@ -1,15 +1,10 @@
 ---
 title: Get notified about remediation actions
 description: Get an overview of remediation actions that follow automated investigations in the Microsoft Defender portal
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier3
@@ -25,6 +20,8 @@ appliesto:
 # Get notified about remediation actions
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
+[!INCLUDE [defender-endpoint-air-deprecation](../includes/defender-endpoint-air-deprecation.md)]
 
 During and after an automated investigation, remediation actions are identified for malicious or suspicious items. Some kinds of remediation actions are taken on devices, also referred to as endpoints. Other remediation actions are taken on identities, accounts, and email content. In addition, some types of remediation actions can occur automatically, whereas other types of remediation actions are taken manually by your organization's security team. When an automated investigation results in one or more remediation actions, the investigation completes only when the remediation actions are taken, approved, or rejected.
 

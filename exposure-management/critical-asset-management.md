@@ -1,11 +1,7 @@
 ---
 title: Overview of critical asset management in Microsoft Security Exposure Management
 description: Learn about critical asset management in Microsoft Security Exposure Management.
-ms.author: dlanger
-author: dlanger
-manager: ornat-spodek
 ms.topic: overview
-ms.service: exposure-management
 ms.date: 07/30/2025
 ---
 
@@ -13,7 +9,7 @@ ms.date: 07/30/2025
 
 [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) streamlines the identification and prioritization of business-critical assets across all domains including devices, identities, and cloud resources, enabling risk-managers and SOC teams to focus efforts where they matter most and reduce overall attack surface risk. With the integration of Defender for Cloud in the Defender portal, asset classification now covers the unified inventory spanning endpoints, cloud environments, and external attack surfaces. Asset classification is driven by proprietary classifiers, which can be fine-tuned manually to reflect organizational context. This article details the underlying mechanisms used for identifying and classifying assets within the Critical Assets Protection framework.
 
-- Microsoft Defender XDR automatically detects and categorizes critical assets, streamlining identification and enabling immediate protection.  
+- Microsoft Defender automatically detects and categorizes critical assets, streamlining identification and enabling immediate protection.  
 - Your security team can prioritize security investigations, posture recommendations, and remediation steps to focus on critical assets and systems first.
 
 ## Predefined classifications

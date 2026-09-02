@@ -1,16 +1,11 @@
 ---
 title: Overview of custom detections in Microsoft Defender XDR
 description: Understand how you can use advanced hunting to create custom detections and generate alerts.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
@@ -21,7 +16,7 @@ ms.topic: overview
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 06/27/2024
+ms.date: 05/19/2026
 ---
 
 # Custom detections overview
@@ -32,7 +27,7 @@ ms.date: 06/27/2024
 
 With custom detections, you can proactively monitor for and respond to various events and system states, including suspected breach activity and misconfigured endpoints. Custom detections are customizable detection rules that automatically trigger alerts and response actions.
 
-Custom detections work with [advanced hunting](advanced-hunting-overview.md), which provides a powerful, flexible query language that covers a broad set of event and system information from your network. You can set them to run at regular intervals, generating alerts and taking response actions whenever there are matches.
+Custom detections work with [advanced hunting](advanced-hunting-overview.md), which provides a powerful, flexible query language that covers a broad set of event and system information from your network. You can set them to run at regular intervals, generating alerts and taking response actions whenever there are matches. You can create custom detection rules from the advanced hunting query editor or directly from the custom detection rules list.
 
 Custom detections provide:
 
@@ -40,6 +35,10 @@ Custom detections provide:
 - Automatic response actions
 
 Optimizing your queries in custom detection rules is important in avoiding time-outs and ensuring efficiency. There are several resources available that provide guidance on optimizing your queries in  [Advanced hunting query best practices](advanced-hunting-best-practices.md).
+
+## Manage custom detections as code (Preview)
+
+You can manage custom detection rules as code in a GitHub or Azure DevOps repository using the Microsoft Security BICEP extension. Deploy custom detections through Microsoft Sentinel Repositories for automatic sync, or use BICEP CLI for custom pipelines. For more information, see [Deploy custom detection rules as code](/azure/sentinel/ci-cd-custom-content#deploy-custom-detection-rules-as-code-preview).
 
 ## See also
 

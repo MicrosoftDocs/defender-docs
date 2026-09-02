@@ -4,10 +4,9 @@ description: Learn about new features in Microsoft 365 security
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -23,6 +22,7 @@ appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Identity
   - Microsoft Defender for Cloud Apps
+ms.custom: sfi-ga-nochange
 ---
 
 # Microsoft Defender XDR preview features

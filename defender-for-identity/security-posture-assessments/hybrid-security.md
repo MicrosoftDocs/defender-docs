@@ -1,13 +1,15 @@
 ---
-title: 'Hybrid security posture assessments'
+title: 'Remediate hybrid security posture assessments in Defender for Identity'
 description: View all hybrid security posture assessments for Microsoft Defender for Identity.
 ms.service: microsoft-defender-for-identity
 ms.topic: how-to
-ms.date: 09/10/2025
+ms.date: 06/15/2026
 ms.reviewer: LiorShapiraa
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
-# Hybrid security posture assessments
+# Remediate hybrid security posture assessments in Defender for Identity
 
 
 This article lists all hybrid security posture assessments for Microsoft Defender for Identity.
@@ -20,11 +22,11 @@ This article lists all hybrid security posture assessments for Microsoft Defende
 **Description**
 
 
-This report lists all Microsoft Entra seamless SSO computer accounts with password last set over 90 days ago.
+The **Change password for Microsoft Entra seamless SSO account** assessment lists all Microsoft Entra seamless SSO computer accounts with password last set over 90 days ago.
 
 **User impact**
 
-Microsoft Entra seamless SSO automatically signs in users when they're using their corporate desktops that are connected to your corporate network. Seamless SSO provides your users with easy access to your cloud-based applications without using any other on-premises components. When setting up Microsoft Entra Seamless SSO, a computer account named AZUREADSSOACC is created in Active Directory. By default, the password for this Azure SSO computer account isn't automatically updated every 30 days. This password functions as a shared secret between AD and Microsoft Entra, enabling Microsoft Entra to decrypt Kerberos tickets used in the seamless SSO process between Active Directory and Microsoft Entra ID. If an attacker gains control of this account, they can generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user within the Microsoft Entra tenant that has been synchronized from
+Microsoft Entra seamless SSO automatically signs in users when they're using their corporate desktops that are connected to your corporate network. Seamless SSO provides your users with easy access to your cloud-based applications without using any other on-premises components. When setting up Microsoft Entra Seamless SSO, a computer account named AZUREADSSOACC is created in Active Directory. By default, the password for this Azure SSO computer account isn't automatically updated every 30 days. The AZUREADSSOACC account password functions as a shared secret between AD and Microsoft Entra, enabling Microsoft Entra to decrypt Kerberos tickets used in the seamless SSO process between Active Directory and Microsoft Entra ID. If an attacker gains control of this account, they can generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user within the Microsoft Entra tenant that has been synchronized from Active Directory.
 
 
 **Implementation**
@@ -36,14 +38,14 @@ Microsoft Entra seamless SSO automatically signs in users when they're using the
 1. Take appropriate action on those accounts by following the steps described in [how to roll over the Microsoft Entra SSO account password](https://aka.ms/RollOverAzureadssoAccount) article. 
 
 > [!NOTE]
-> This security assessment is available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services and Sign on method as part of Microsoft Entra Connect configuration is set to single sign-on and the SSO computer account exists. Learn more about Microsoft Entra seamless sign-on [here](/entra/identity/hybrid/connect/how-to-connect-sso).
+> The **Change password for Microsoft Entra seamless SSO account** security assessment is available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services and Sign on method as part of Microsoft Entra Connect configuration is set to single sign-on and the SSO computer account exists. Learn more about [Microsoft Entra seamless sign-on](/entra/identity/hybrid/connect/how-to-connect-sso).
 
 
 ## Rotate password for Microsoft Entra Connect AD DS Connector account
 
 **Description**
 
-This report lists all MSOL accounts in your organization with password last set over 90 days ago.
+The **Rotate password for Microsoft Entra Connect AD DS Connector account** assessment lists all MSOL accounts in your organization with password last set over 90 days ago.
 
 **User impact**
 
@@ -53,24 +55,24 @@ Smart attackers are likely to target Microsoft Entra Connect in on-premises envi
 
 **Implementation**
 
-1. Review the recommended action at[ https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for **Rotate password for Microsoft Entra Connect AD DS Connector account.**
+1. Review the recommended action at [Microsoft Secure Score actions](https://security.microsoft.com/securescore?viewid=actions) for **Rotate password for Microsoft Entra Connect AD DS Connector account.**
 
 1. Review the list of exposed entities to discover which of your AD DS Connector accounts have a password more than 90 days old.
 
 1. Take appropriate action on those accounts by following the steps on [how to change the AD DS Connector account password](https://aka.ms/MicrosoftEntraIdPasswordChangeSyncService).
 
 > [!NOTE]
-> This security assessment is only available if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services.
+> The **Rotate password for Microsoft Entra Connect AD DS Connector account** security assessment is only available if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services.
 
 
 ## Remove unnecessary replication permissions for Microsoft Entra Connect AD DS Connector account
 
 **Description**
 
-Smart attackers are likely to target Microsoft Entra Connect in on-premises environments, and for good reason. The Microsoft Entra Connect server can be a prime target, especially based on the permissions assigned to the AD DS Connector account (created in on-premises AD with the MSOL_ prefix). In the default 'express' installation of Microsoft Entra Connect, the connector service account is granted replication permissions, among others, to ensure proper synchronization. If Password Hash Sync isn’t configured, it’s important to remove unnecessary permissions to minimize the potential attack surface.
+Smart attackers are likely to target Microsoft Entra Connect in on-premises environments, and for good reason. The Microsoft Entra Connect server can be a prime target, especially based on the permissions assigned to the AD DS Connector account (created in on-premises AD with the MSOL_ prefix). In the default 'express' installation of Microsoft Entra Connect, the connector service account is granted replication permissions, among others, to ensure proper synchronization. If [Password Hash Sync](/entra/identity/hybrid/connect/whatis-phs) (a feature that synchronizes password hashes from on-premises AD to Microsoft Entra ID) isn’t configured, it’s important to remove unnecessary permissions to minimize the potential attack surface.
 
 > [!NOTE]
-> - This security assessment is available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services.
+> - The **Remove unnecessary replication permissions for Microsoft Entra Connect AD DS Connector account** security assessment is available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services.
 > 
 > - If the Password Hash Sync (PHS) sign-on method is set up, AD DS Connector accounts with replication permissions won't be affected because those permissions are necessary.
 > -  For environments with multiple Microsoft Entra Connect servers, it’s crucial to install sensors on each server to ensure Microsoft Defender for Identity can fully monitor your setup. If detected that your Microsoft Entra Connect configuration doesn't utilize Password Hash Sync, which means that replication permissions aren't necessary for the accounts in the Exposed Entities list. Ensure that each exposed MSOL account isn't required for Replication Permissions by any other applications.
@@ -92,16 +94,16 @@ Smart attackers are likely to target Microsoft Entra Connect in on-premises envi
 **Description**
 
 
-Microsoft Entra Connect accounts like AD DS Connector account (also known as MSOL_) and Microsoft Entra Seamless SSO computer account (AZUREADSSOACC) have powerful privileges, including replication and password reset rights. If these accounts are granted unsafe permissions, attackers could exploit them to gain unauthorized access, escalate privileges, or take control of hybrid identity infrastructure. This could lead to account takeovers, unauthorized directory modifications, and a broader compromise of both on-premises and cloud environments.
+Microsoft Entra Connect accounts like AD DS Connector account (also known as MSOL_) and Microsoft Entra Seamless Single Sign-On (SSO) computer account (AZUREADSSOACC) have powerful privileges, including replication and password reset rights. If these accounts are granted unsafe permissions, attackers could exploit them to gain unauthorized access, escalate privileges, or take control of hybrid identity infrastructure. This could lead to account takeovers, unauthorized directory modifications, and a broader compromise of both on-premises and cloud environments.
 
 
 > [!NOTE]
-> This security assessment will be available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services and Sign on method as part of Microsoft Entra Connect configuration is set to single sign-on and the SSO computer account exists. Learn more about Microsoft Entra seamless sign-on **[here](/entra/identity/hybrid/connect/how-to-connect-sso)**.
+> The **Remove unsafe permissions on sensitive Microsoft Entra Connect accounts** security assessment will be available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services and Sign on method as part of Microsoft Entra Connect configuration is set to single sign-on and the SSO computer account exists. Learn more about **[Microsoft Entra seamless sign-on](/entra/identity/hybrid/connect/how-to-connect-sso)**.
 
 
 **Implementation**
 
-1. Review the recommended action at[ https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for Remove unsafe permissions on sensitive Microsoft Entra Connect accounts.
+1. Review the recommended action at [Microsoft Secure Score actions](https://security.microsoft.com/securescore?viewid=actions) for Remove unsafe permissions on sensitive Microsoft Entra Connect accounts.
 
 1. Review the list of exposed entities to identify accounts with unsafe permissions. For example:
 
@@ -123,11 +125,11 @@ Smart attackers often target Microsoft Entra Connect in on-premises environments
 Starting with [Entra Connect build 1.4.###.#](/entra/identity/hybrid/connect/reference-connect-accounts-permissions), Enterprise Admin and Domain Admin accounts can no longer be used as the AD DS Connector account. This best practice prevents over-privileging the connector account, reducing the risk of domain-wide compromise if the account is targeted by attackers. Organizations must now create or assign a lower-privileged account specifically for directory synchronization, ensuring better adherence to the principle of least privilege and protecting critical admin accounts.
 
 > [!NOTE]
-> This security assessment will be available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services.
+> The **Replace Enterprise or Domain Admin account for Microsoft Entra Connect AD DS Connector account** security assessment will be available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services.
 
 **Implementation**
 
-1. Review the recommended action at[ https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for Replace Enterprise or Domain Admin account for Microsoft Entra Connect AD DS Connector account.
+1. Review the recommended action at [Microsoft Secure Score actions](https://security.microsoft.com/securescore?viewid=actions) for Replace Enterprise or Domain Admin account for Microsoft Entra Connect AD DS Connector account.
 
 1. Review the exposed accounts and their group memberships. The list contains members of Domain/Enterprise Admins through direct and recursive membership.
 

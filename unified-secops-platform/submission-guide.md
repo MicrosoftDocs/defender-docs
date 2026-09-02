@@ -1,19 +1,13 @@
 ---
 title: Submit files for analysis by Microsoft
 description: Learn how to submit files to Microsoft for malware analysis, how to track your submissions, and dispute detections.
-ms.reviewer:
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
-ms.localizationpriority: medium
-ms.author: pauloliveria
 author: poliveria
-manager: dansimp
-audience: ITPro
+ms.author: pauloliveria
+ms.reviewer:
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: faq
-search.appverid: met150
 ms.date: 05/10/2024
 ---
 
@@ -98,4 +92,4 @@ Your submission is immediately scanned by our systems to give you the latest det
 
 ## See also
 
-[Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](/defender-endpoint/defender-endpoint-antivirus-exclusions)
+[Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](/defender-endpoint/defender-endpoint-exclusions-overview)

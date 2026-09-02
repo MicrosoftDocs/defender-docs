@@ -2,21 +2,14 @@
 title: Microsoft Defender XDR incidents APIs and the incidents resource type
 description: Learn about the methods and properties of the Incidents resource type in Microsoft Defender XDR.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: edbaynash
 author: EdB-MSFT
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
  - m365-security
  - tier3
  - must-keep
 ms.topic: reference
-search.appverid: 
-  - MOE150
-  - MET150
 ms.custom: api
 ms.date: 04/18/2025
 appliesto:
@@ -33,7 +26,7 @@ appliesto:
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-An [incident](incidents-overview.md) is a collection of related alerts that help describe an attack. Events from different entities in your organization are aggregated automatically by Microsoft Defender XDR. You can use the incidents API to programmatically access your organization's incidents and related alerts.
+An [incident](incidents-overview.md) is a collection of related alerts that help describe an attack. Events from different entities in your organization are aggregated automatically by Microsoft Defender. You can use the incidents API to programmatically access your organization's incidents and related alerts.
 
 ## Quotas and resource allocation
 

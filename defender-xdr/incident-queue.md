@@ -2,22 +2,15 @@
 title: Prioritize incidents in the Microsoft Defender portal
 description: Learn how to prioritize and filter incidents in the Microsoft Defender portal to improve your organization's security response. Discover actionable steps to manage incidents effectively.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
   - m365-security
   - usx-security
   - tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: concept-article
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 10/26/2025
 appliesto: 
 - Microsoft Defender XDR 
@@ -26,7 +19,7 @@ appliesto:
 
 # Prioritize incidents in the Microsoft Defender portal
 
-The Microsoft Defender portal applies correlation analytics and aggregates related alerts and automated investigations from different products into an incident. Microsoft Sentinel and Defender XDR also trigger unique alerts on activities that can only be identified as malicious given the end-to-end visibility in the unified platform across the entire suite of products. This view gives your security analysts the broader attack story, which helps them better understand and deal with complex threats across your organization.
+The Microsoft Defender portal applies correlation analytics and aggregates related alerts and automated investigations from different products into an incident. Microsoft Sentinel and Defender also trigger unique alerts on activities that can only be identified as malicious given the end-to-end visibility in the unified platform across the entire suite of products. This view gives your security analysts the broader attack story, which helps them better understand and deal with complex threats across your organization.
 
 [!INCLUDE [unified-soc-preview](../includes/unified-soc-preview.md)]
 
@@ -76,7 +69,7 @@ The **Export** button allows you to export the filtered data in the incident que
 
 ### Incident names
 
-For more visibility at a glance, Microsoft Defender XDR generates incident names automatically, based on alert attributes such as the number of endpoints affected, users affected, detection sources, or categories. This specific naming allows you to quickly understand the scope of the incident.
+For more visibility at a glance, Microsoft Defender generates incident names automatically, based on alert attributes such as the number of endpoints affected, users affected, detection sources, or categories. This specific naming allows you to quickly understand the scope of the incident.
 
 For example: *Multi-stage incident on multiple endpoints reported by multiple sources.*
 

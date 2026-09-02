@@ -1,5 +1,5 @@
 ---
-title: How to use Power Automate Connector to set up a Flow for events
+title: Use the Microsoft Defender for Endpoint Power Automate connector to create event-triggered flows
 ms.reviewer: 
 description: Use Microsoft Defender for Endpoint Flow connector to create a flow that will be triggered anytime a new event occurs on your tenant.
 ms.service: defender-endpoint
@@ -7,23 +7,22 @@ ms.subservice: reference
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
-ms.date: 03/21/2025
+ms.date: 06/17/2026
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
-# How to use Power Automate Connector to set up a Flow for events
+# Use the Power Automate connector to create an event flow
 
 
-Automating security procedures is a standard requirement for every modern Security Operations Center (SOC). For SOC teams to operate in the most efficient way, automation is a must. Use Microsoft Power Automate to help you create automated workflows and build an end-to-end procedure automation within a few minutes. Microsoft Power Automate supports different connectors that were built exactly for that.  
+Automating security procedures is a standard requirement for every modern Security Operations Center (SOC). For SOC teams to operate in the most efficient way, automation is a must. Use Microsoft Power Automate to help you create automated workflows and build an end-to-end procedure automation within a few minutes. Microsoft Power Automate supports different connectors that were built exactly for automating security workflows.  
 
 Use this article to guide you in creating automations that are triggered by an event, such as when a new alert is created in your tenant. Microsoft Defender API has an official Power Automate Connector with many capabilities. 
 
@@ -32,9 +31,10 @@ Use this article to guide you in creating automations that are triggered by an e
 > [!NOTE]
 > For more information about premium connectors licensing prerequisites, see [Licensing for premium connectors](/power-automate/triggers-introduction#licensing-for-premium-connectors).
 
-## Usage example
+<a name="usage-example"></a>
+## Example: Create an event-triggered flow
 
-The following example demonstrates how to create a Flow that is triggered anytime a new Alert occurs on your tenant. You'll be guided on defining what event starts the flow and what next action will be taken when that trigger occurs.  
+The following example demonstrates how to create a Flow that is triggered anytime a new Alert occurs on your tenant. You'll define what event starts the flow and which follow-up action the flow takes when the trigger occurs.  
 
 1. Log in to [Microsoft Power Automate](https://make.powerautomate.com).
 
@@ -50,11 +50,13 @@ The following example demonstrates how to create a Flow that is triggered anytim
 
     :::image type="content" source="media/api-flow-3.png" alt-text="A trigger description" lightbox="media/api-flow-3.png":::
 
-    All you need to do now is choose your next steps.
-    For example, you can isolate the device if the Severity of the Alert is High and send an email about it.
-    The Alert trigger provides only the Alert ID and the Machine ID. You can use the connector to expand these entities.
+    Next, add actions to retrieve alert details and define the automated response.
+    For example, you can isolate the device if the Severity of the Alert is High and send an email about the alert.
+    The Alert trigger provides only the Alert ID and the Machine ID. You can use the Microsoft Defender ATP connector to expand these entities.
 
 ### Get the Alert entity using the connector
+
+Perform the following steps to retrieve the full Alert entity by using the connector:
 
 1. Choose **Microsoft Defender ATP** for the new step.
 
@@ -65,6 +67,8 @@ The following example demonstrates how to create a Flow that is triggered anytim
     :::image type="content" source="media/api-flow-4.png" alt-text="The Alerts pane"  lightbox="media/api-flow-4.png":::
 
 ### Isolate the device if the Alert's severity is High
+
+Use the following steps to isolate the device when the alert severity is High:
 
 1. Add **Condition** as a new step.
 
@@ -80,6 +84,9 @@ The following example demonstrates how to create a Flow that is triggered anytim
 
     You can also create a **scheduled** flow that runs Advanced Hunting queries and much more!
 
-## Related topic
+<a name="related-topic"></a>
+## Related content
 
-- [Microsoft Defender for Endpoint APIs](/defender-vulnerability-management/tvm-supported-os)
+For more information, see the following resource:
+
+- [Supported operating systems and platforms for Defender Vulnerability Management](/defender-vulnerability-management/tvm-supported-os)

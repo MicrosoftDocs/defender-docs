@@ -1,9 +1,11 @@
 ---
 title: Protect your Box environment | Microsoft Defender for Cloud Apps
-description: Learn how about connecting your Box app to Defender for Cloud Apps using the API connector.
-ms.date: 12/01/2025
+description: Learn how to connect Box to Microsoft Defender for Cloud Apps using the API connector for activity visibility, threat detection, and remediation controls.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # How Defender for Cloud Apps helps protect your Box environment
@@ -14,6 +16,8 @@ Connecting Box to Defender for Cloud Apps gives you improved insights into your 
 
 ## Main threats
 
+The main threats to consider in a Box environment include:
+
 - Compromised accounts and insider threats
 - Data leakage
 - Insufficient security awareness
@@ -22,6 +26,8 @@ Connecting Box to Defender for Cloud Apps gives you improved insights into your 
 - Unmanaged bring your own device (BYOD)
 
 ## How Defender for Cloud Apps helps to protect your environment
+
+Defender for Cloud Apps helps protect your Box environment in the following ways:
 
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 - [Discover, classify, label, and protect regulated and sensitive data stored in the cloud](best-practices.md#discover-classify-label-and-protect-regulated-and-sensitive-data-stored-in-the-cloud)
@@ -32,6 +38,9 @@ Connecting Box to Defender for Cloud Apps gives you improved insights into your 
 ## Control Box with built-in policies and policy templates
 
 You can use the following built-in policy templates to detect and notify you about potential threats:
+
+> [!IMPORTANT]
+> File policies retire on January 6, 2027. To maintain file-based data protection for this app, [migrate to Microsoft Purview DLP or auto-labeling policies](migrate-file-policies-to-purview.md).
 
 | Type | Name |
 | ---- | ---- |
@@ -61,7 +70,7 @@ Review our best practices for [securing and collaborating with external users](b
 This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Box account using the App Connector APIs. This connection gives you visibility into and control over Box use. For information about how Defender for Cloud Apps protects Box, see [Protect Box](protect-box.md).
 
 > [!NOTE]
-> Deploying with an account that isn't an Admin account leads to a failure in the API test and doesn't allow Defender for Cloud Apps to scan all of the files in Box. If this is a problem for you, you can deploy with a Co-Admin that has all of the privileges checked, but the API test will continue to fail and files owned by other admins in Box will not be scanned.
+> Deploying with an account that isn't an Admin account leads to a failure in the API test and doesn't allow Defender for Cloud Apps to scan all of the files in Box. If the inability to scan all files is a problem for you, you can deploy with a Co-Admin that has all of the privileges checked, but the API test will continue to fail and files owned by other admins in Box will not be scanned.
 
 ### Configure Box
 
@@ -81,11 +90,13 @@ Your data center details are shown in the Defender for Cloud Apps **About** page
 
 ### Connect Defender for Cloud Apps
 
+After you configure Box, complete the following steps to connect your Box instance to Defender for Cloud Apps:
+
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
 
 1. In the **App connectors** page, select **+Connect an app**, and then select **Box**.
 
-    ![Connect Box.](media/connect-box.png "Connect Box")
+    ![Screenshot showing the Box option in the App connectors page.](media/connect-box.png "Connect Box")
 
 1. In the **Instance name** page, enter a name for the connection. Then select **Next**.
 
@@ -107,6 +118,8 @@ Your data center details are shown in the Defender for Cloud Apps **About** page
 To enable near real-time scanning, files on which activities are detected are moved to the beginning of the scan queue. For example, a file that is edited, updated, or shared is scanned right away rather than waiting for the regular scan process. Near real-time scanning doesn't apply to files that aren't inherently modified. For example, files that are viewed, previewed, printed, or exported are scanned as part of the regularly scheduled scan.
 
 ## Related articles
+
+For more information about Box integration with Defender for Cloud Apps, see the following resources:
 
 - If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
 

@@ -2,14 +2,16 @@
 title: Contact Microsoft Defender support
 description: Learn how to contact Microsoft Defender support via the Defender portal.
 ms.topic: how-to
-ms.date: 10/20/2025
+ms.date: 06/15/2026
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 # Contact Microsoft Defender support
 
-Microsoft Defender support process is designed to help you find solutions to common problems and submit support cases to the Microsoft support team.
+Microsoft Defender support process is designed to help you find solutions to common problems and submit support cases to the Microsoft support team. This article explains how to access the support widget in the Defender portal, review suggested self-help articles, and open a service request when you need direct assistance.
 
 ## Prerequisites
 
@@ -26,6 +28,7 @@ You must meet the following requirements before you can open a support case:
 
 ## Access the widget
 
+To open the support widget in the Defender portal, follow these steps:
 
 1. Select the question mark on the top right of the Defender portal page
 
@@ -44,7 +47,7 @@ You must meet the following requirements before you can open a support case:
 
 ## View insights and suggested support articles
 
-This option includes articles that might be related to the question you might ask. Just start typing the question in the search box and articles related to your search show up.
+This section shows articles related to your question. Type your question in the search box to find matching articles.
 
 :::image type="content" source="media/contact-defender-support/answer-to-support-question.png" alt-text="Screenshot that shows the auto generated answer for the relevant support question that was asked." lightbox="media/contact-defender-support/answer-to-support-question.png":::
 
@@ -52,7 +55,7 @@ In case the suggested articles aren't sufficient, you can open a service request
 
 ## Submit a support request
 
-To open a service request, select the **Contact support**. This opens a form where you can provide details about the issue you're facing.
+To open a service request, select the **Contact support** button. This opens a form where you can provide details about the issue you're facing.
 
 
 1. Fill in a title and description for the issue you're facing, the phone number and email address where we can reach you.

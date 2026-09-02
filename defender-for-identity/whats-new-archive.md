@@ -1,8 +1,9 @@
 ---
 title: What's new archive
 description: This article lists Microsoft Defender for Identity release notes for versions and features released over 6 months ago.
-ms.date: 02/08/2026
+ms.date: 05/24/2026
 ms.topic: reference
+ms.custom: sfi-image-nochange
 ---
 
 # What's new archive for Microsoft Defender for Identity
@@ -15,6 +16,133 @@ For information about the latest versions and features, see [What's new in Micro
 > Starting June 15 2022, Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2008 R2. We recommend that you identify any remaining Domain Controllers (DCs) or AD FS servers that are still running Windows Server 2008 R2 as an operating system and make plans to update them to a supported operating system.
 >
 >For the two months after June 15 2022, the sensor will continue to function. After this two-month period, starting August 15, 2022, the sensor will no longer function on Windows Server 2008 R2 platforms. More details can be found at: <https://aka.ms/mdi/2008r2>
+
+## October 2025
+
+We're excited to announce that the Microsoft Defender for Identity sensor v3.x is now generally available (GA).
+The [Microsoft Defender for Identity sensor v3.x](/defender-for-identity/deploy/activate-sensor) provides enhanced coverage, improved performance across your environment and offering easier deployment and management for domain controllers.
+
+### Microsoft Defender for Identity sensor version updates
+
+|Version number|Updates|
+|---|---|
+|2.249|The improved event log query method now captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also delivers other security enhancements and performance improvements.|
+
+## September 2025
+
+### Defender for Identity alerts transitioned to the unified Defender alerting experience
+
+As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the unified Defender alerting format. Keep in mind that all alerts are based on detections from Defender for Identity sensors.
+
+|Classic Alert Title|External ID|XDR Alert Name|Detector ID|
+|---|---|---|---|
+|Active Directory attributes Reconnaissance using LDAP|2210|[LDAP reconnaissance attributes in Active Directory](alerts-xdr.md)|xdr_LdapSensitiveAttributeReconnaissance|
+|User and IP address reconnaissance|2012|[Suspicious Server Message Block (SMB) enumeration from untrusted host](alerts-xdr.md#suspicious-server-message-block-smb-enumeration-from-untrusted-host)|xdr_SmbSessionEnumeration|
+|Account enumeration reconnaissance|2003|[Suspected account enumeration (Kerberos, NTLM, AD FS)](alerts-xdr.md#suspected-account-enumeration-kerberos-ntlm-ad-fs)|xdr_SuspectedAccountEnumeration|
+|Suspected brute-force attack (LDAP)|2004|[Suspected brute-force attack on Lightweight Directory Access Protocol (LDAP) authentication](alerts-xdr.md#suspected-brute-force-attack-on-lightweight-directory-access-protocol-ldap-authentication)|xdr_LdapBindBruteforce|
+|||[Suspected password spray attack on Lightweight Directory Access Protocol (LDAP) authentication](alerts-xdr.md#suspected-password-spray-attack-on-lightweight-directory-access-protocol-ldap-authentication)|xdr_LdapBindBruteforce|
+|Suspicious network connection over Encrypting File System Remote Protocol|2416|[Suspicious network connection over Encrypting File System Remote Protocol](alerts-xdr.md#suspicious-network-connection-over-encrypting-file-system-remote-protocol)|xdr_SuspiciousConnectionOverEFSRPC|
+
+### Additional security value in the Defender for Identity sensor v3.x
+
+Apply the **Unified sensor RPC audit*- tag to your Defender for Identity sensor v3.x in the **Asset rule management*- page for enhanced protection. Learn more [here](/defender-for-identity/deploy/deploy-sensor-v3).
+
+### Identity posture recommendations view on the identity page (preview)
+
+A new tab on the Identity profile page contains all active identity-related identity security posture assessments (ISPMs). This page consolidates all identity-specific security posture assessments into a single contextual view, helping security teams quickly spot weaknesses and take targeted actions.
+For more information, see [Investigate users in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-users).
+
+### New Regional Availability: United Arab Emirates
+
+Defender for Identity data centers are now also deployed in the United Arab Emirates, North, and Central regions. For the most current list of regional deployments, see [Defender for Identity data locations](/defender-for-identity/privacy-compliance/#data-location).
+
+### New API support for the Defender for Identity sensor v3.x (Preview)
+
+We're excited to announce the availability of a new Graph-based API for managing the Defender for Identity sensor v3.x server actions.
+This capability is currently in preview and available in API Beta version.
+
+This API allows customers to:
+
+- Monitor the status of servers deployed with the Defender for Identity sensor v3.x.
+- Enable or disable the automatic activation of eligible servers.
+- Activate or deactivate the sensor on eligible server.
+
+For more information, see [Managing the Defender for Identity sensor v3.x actions using Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true).
+
+### Microsoft Defender for Identity sensor version updates
+
+|Version number|Updates|
+|---|---|
+|2.249|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
+
+### Updates to multiple detections to reduce noise and improve alert accuracy
+
+Several Defender for Identity detections are being updated to reduce noise and improve accuracy, making alerts more reliable and actionable. As the rollout continues, you might see a decrease in the number of alerts raised.
+
+The improvements will gradually take effect across the following detections:
+
+- Suspicious communication over DNS
+- Suspected Netlogon privilege elevation attempt (CVE-2020-1472)
+- Honeytoken authentication activity
+- Remote code execution attempt over DNS
+- Suspicious password reset by Microsoft Entra Connect account
+- Data exfiltration over SMB
+- Suspected skeleton key attack (encryption downgrade)
+- Suspicious modification of Resource Based Constrained Delegation by a machine account
+- Remote code execution attempt
+
+### Unified connectors is now available for Okta single sign-on connectors (Preview)
+
+Microsoft Defender for Identity supports the [Unified connectors](/azure/sentinel/unified-connector) experience, starting with the Okta single sign-on connector. The unified connector enables Defender for Identity to collect Okta system logs once and share them across supported Microsoft security products, reducing API usage and improving connector efficiency.
+
+For more information, see: [Connect Okta to Microsoft Defender for Identity (Preview)](okta-integration.md)
+
+## August 2025
+
+### Microsoft Entra ID risk level is now available in near real time in Microsoft Defender for Identity (Preview)
+
+Microsoft Entra ID risk level is now available on the Identity Inventory assets page, the identity details page, and in the IdentityInfo table in Advanced Hunting, and includes the Microsoft Entra ID risk score. SOC analysts can use this data to correlate risky users with sensitive or highly privileged users, create custom detections based on current or historical user risk, and improve investigation context.
+
+Previously, Defender for Identity tenants received Microsoft Entra ID risk level in the IdentityInfo table through user and entity behavior analytics (UEBA). With this update, the Microsoft Entra ID risk level is now updated in near real time through Microsoft Defender for Identity.
+
+For UEBA tenants without a Microsoft Defender for Identity license, synchronization of Microsoft Entra ID risk level to the IdentityInfo table remains unchanged.
+
+### New security assessment: Remove inactive service accounts
+
+Microsoft Defender for Identity now includes a new security assessment that helps you identify and remove inactive service accounts in your organization. This assessment lists Active Directory service accounts that were inactive for the past 90 days, to help you mitigate security risks associated with unused accounts.
+
+For more information, see: Security Assessment: [Remove Inactive Service Accounts (Preview)](/defender-for-identity/remove-inactive-service-account).
+
+### New Graph based API for response actions (preview)
+
+We're excited to announce a new Graph-based API for initiating and managing remediation actions in Microsoft Defender for Identity.
+
+This capability is currently in preview and available in API Beta version.
+
+For more information, see [Managing response actions through Graph API](/graph/api/resources/security-identityaccounts?view=graph-rest-beta&preserve-view=true).
+
+### Identity scoping is now generally available (GA)
+
+Identity scoping is now generally available across all environments. Organizations can now define and refine the scope of MDI monitoring and gain granular control over which entities and resources are included in security analysis.
+
+For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
+
+### New security posture assessment: Remove discoverable passwords in Active Directory account attributes (Preview)
+
+The new security posture assessment highlights unsecured Active Directory attributes that contain passwords or credential clues and recommends steps to remove them, helping reduce the risk of identity compromise.
+
+For more information, see: [Security Assessment: Remove discoverable passwords in Active Directory account attributes (Preview)](/defender-for-identity/security-posture-assessments/accounts#remove-discoverable-passwords-in-active-directory-account-attributes-preview)
+
+### Microsoft Defender for Identity sensor version updates
+
+|Version number|Updates|
+|---|---|
+|2.247|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
+|2.246|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
+
+### Detection update: Suspected Brute Force attack (Kerberos, NTLM)
+
+Improved detection logic to include scenarios where accounts were locked during attacks. As a result, the number of triggered alerts might increase.
 
 ## July 2025
 
@@ -824,7 +952,7 @@ Released May 15, 2023
 
 - New health alert for verifying that ADFS Container Auditing is configured correctly. For more information, see [Microsoft Defender for Identity sensor health alerts](health-alerts.md).
 
-- The Microsoft Defender 365 **Identity** page includes UI updates for the lateral movement path experience. No functionality was changed. For more information, see [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](understand-lateral-movement-paths.md).
+- The Microsoft Defender 365 **Identity** page includes UI updates for the lateral movement path experience. No functionality was changed.
 
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -845,7 +973,7 @@ In Microsoft Defender XDR, create rule conditions based on evidence types, and t
 Released April 23, 2023
 
 - New health alert for verifying that Directory Services Configuration Container Auditing is configured correctly, as described in the [health alerts page](health-alerts.md).
-- New workspaces for AD tenants mapped to New Zealand are created in the Australia East region. For the most current list of regional deployment, see [Defender for Identity components](architecture.md#defender-for-identity-components).
+- New workspaces for AD tenants mapped to New Zealand are created in the Australia East region.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## March 2023

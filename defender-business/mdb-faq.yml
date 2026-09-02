@@ -5,12 +5,11 @@ metadata:
   search.appverid: MET150
   author: chrisda
   ms.author: chrisda
-  manager: bagol
   audience: Admin
   ms.topic: faq
   ms.service: defender-business
   ms.localizationpriority: medium
-  ms.date: 05/20/2025
+  ms.date: 06/10/2026
   ms.reviewer: efratka, nehabha
   f1.keywords: NOCSH
   ms.collection:
@@ -105,7 +104,7 @@ sections:
         answer: |
           Yes, but with limitations.
 
-          Defender for Business includes built-in Attack Surface Reduction (ASR) rules. For more information, see [Enable your attack surface reduction rules in Microsoft Defender for Business](mdb-asr.md).
+          Defender for Business includes built-in attack surface reduction features. For more information, see [Attack surface reduction in Microsoft Defender for Business](mdb-asr.md).
 
           You can't create custom ASR rules in Defender for Business. You need [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune) to create ASR rules.
 
@@ -113,9 +112,9 @@ sections:
 
           [Device control in Microsoft Defender for Endpoint](/defender-endpoint/device-control-overview) prevents users, endpoints, or both from using unauthorized removable storage media.
 
-      - question: How do I configure attack surface reduction rules and capabilities in Defender for Business?
+      - question: How do I configure attack surface reduction capabilities in Defender for Business?
         answer: |
-          Use Intune to configure your attack surface reduction rules. Other attack surface reduction capabilities can be configured in the Microsoft Defender portal. See [Attack surface reduction capabilities in Defender for Business](mdb-asr.md).
+          See [Attack surface reduction in Microsoft Defender for Business](mdb-asr.md).
 
       - question: How do I run custom reports with Defender for Business?
         answer: |
@@ -153,7 +152,7 @@ sections:
           - Sensitivity labeling.
           - Data loss prevention for email and files.
 
-          For more information, see [Microsoft 365 User Subscription Suites for Small and Medium-sized Businesses](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWR6bM).
+          For more information, see [Microsoft 365 User Subscription Suites for Small and Medium-sized Businesses](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/bade/documents/products-and-services/en-us/education/Modern-Work-Plan-Comparison-SMB.pdf).
 
       - question: What are the differences between Defender for Business and Defender for Endpoint Plans 1 and 2?
         answer: |
@@ -170,7 +169,7 @@ sections:
         answer: |
           No.
 
-          Microsoft Defender for Business doesn't support mixed licensing. An organization with Defender for Business (included in Microsoft 365 Business Premium) and with Defender for Endpoint Plan 2 (included in Microsoft 365 E5 Security) defaults to the Defender for Business experience.
+          Microsoft Defender for Business doesn't support mixed licensing. An organization with Defender for Business (included in Microsoft 365 Business Premium) and with Defender for Endpoint Plan 2 (included in Microsoft 365 E5 Security) defaults to the Defender for Business experience. Separate Licensing is required for GCC, GCC High, DoD. For more information, see the [full government plans comparison table](https://www.microsoft.com/en-us/microsoft-365/enterprise/government-plans-and-pricing?msockid=39a1c296c261646b379ad7dfc3db65ec#comparison-pdf).
 
           For example, you have 80 users licensed for Defender for Business as part of a Microsoft 365 Business Premium, and you add Microsoft 365 E5 Security for 30 of those users. The experience for all users defaults to Defender for Business.
 

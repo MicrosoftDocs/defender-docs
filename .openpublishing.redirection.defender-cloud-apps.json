@@ -1,6 +1,21 @@
 {
   "redirections": [
     {
+      "source_path": "defender-for-cloud-apps/ai-agent-inventory.md",
+      "redirect_url": "/defender-xdr/security-for-ai/ai-agent-inventory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-cloud-apps/ai-agent-protection.md",
+      "redirect_url": "/defender-xdr/security-for-ai/defender-security-for-ai",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-cloud-apps/real-time-agent-protection-during-runtime.md",
+      "redirect_url": "/defender-xdr/security-for-ai/ai-agent-real-time-protection",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-for-cloud-apps/lifecycle-management.md",
       "redirect_url": "/defender-cloud-apps/ops-guide/ops-guide",
       "redirect_document_id": false
@@ -990,7 +1005,7 @@
       "redirect_url": "/defender-cloud-apps/what-is-defender-for-cloud-apps",
       "redirect_document_id": true
     },
-     {
+    {
       "source_path": "defender-for-cloud-apps/tutorial-ueba.md",
       "redirect_url": "/defender-cloud-apps/",
       "redirect_document_id": true
@@ -1029,6 +1044,41 @@
       "source_path": "defender-for-cloud-apps/security-saas.md",
       "redirect_url": "/defender-cloud-apps/posture-overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-cloud-apps/webinars.md",
+      "redirect_url": "/defender-cloud-apps/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-cloud-apps/app-governance-app-policies-get-started.md",
+      "redirect_document_id": false,
+      "redirect_url": "/defender-cloud-apps/app-governance-app-policies-overview"
+    },
+    {
+      "source_path": "defender-for-cloud-apps/app-governance-predefined-policies.md",
+      "redirect_document_id": false,
+      "redirect_url": "/defender-cloud-apps/app-governance-app-policies-overview"
+    },
+    {
+      "source_path": "defender-for-cloud-apps/app-governance-app-policies-manage.md",
+      "redirect_document_id": false,
+      "redirect_url": "/defender-cloud-apps/app-governance-app-policies-create"
+    },
+    {
+      "source_path": "defender-for-cloud-apps/app-governance-detect-remediate-get-started.md",
+      "redirect_document_id": false,
+      "redirect_url": "/defender-cloud-apps/app-governance-detect-remediate-overview"
+    },
+    {
+      "source_path": "defender-for-cloud-apps/app-governance-monitor-apps-unusual-data-usage.md",
+      "redirect_document_id": false,
+      "redirect_url": "/defender-cloud-apps/app-governance-detect-remediate-overview"
+    },
+    {
+      "source_path": "defender-for-cloud-apps/app-governance-visibility-insights-get-started.md",
+      "redirect_document_id": false,
+      "redirect_url": "/defender-cloud-apps/app-governance-visibility-insights-overview"
     }
   ]
 }

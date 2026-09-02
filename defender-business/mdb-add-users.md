@@ -1,20 +1,18 @@
 ---
 title: Add users and assign licenses in Microsoft Defender for Business
-description: Add users and assign Defender for Business licenses to protect their devices
-search.appverid: MET150
+description: Add users, assign Microsoft Defender for Business licenses, and verify that multifactor authentication (MFA) is enabled to help protect devices.
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 08/25/2025
+ms.date: 07/03/2026
 ms.collection:
 - m365-security
 - tier1
 ms.reviewer: efratka
-f1.keywords: NOCSH
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Add users and assign licenses in Microsoft Defender for Business
@@ -23,11 +21,12 @@ After you sign up for Microsoft Defender for Business, your first step is to add
 
 :::image type="content" source="media/mdb-setup-step2.png" alt-text="Visual depicting step 2 - add users and assign licenses in Defender for Business.":::
 
-## Add users and assign licenses
+<a name="add-users-and-assign-licenses"></a>
+## Add users and assign licenses in the Microsoft 365 admin center
 
 For complete instructions, see [Add users and assign licenses at the same time](/microsoft-365/admin/add-users/add-users).
 
-<a name='make-sure-mfa-is-enabled'></a>)
+<a name='make-sure-mfa-is-enabled'></a>
 
 ## Verify MFA is enabled for users
 
@@ -40,6 +39,8 @@ To verify that security defaults is enabled in your organization, see [Set up mu
    If you don't have any licenses available, you can still add a user and buy additional licenses. For more information about adding users, see [Add users and assign licenses at the same time](/Microsoft-365/admin/add-users/add-users).
 
 ## Next steps
+
+Continue setting up Defender for Business:
 
 - [Step 3: Assign security roles and permissions in Microsoft Defender for Business](mdb-roles-permissions.md).
 

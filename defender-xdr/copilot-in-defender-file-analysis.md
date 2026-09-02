@@ -2,22 +2,15 @@
 title: Analyze files with Microsoft Copilot in Microsoft Defender
 description: Analyze files with Microsoft Copilot in Microsoft Defender.
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
   - security-copilot
   - magic-ai-copilot 
 ms.topic: concept-article
-search.appverid:
-  - MOE150
-  - MET150
 ms.date: 04/25/2025
 ms.update-cycle: 180-days
 appliesto:
@@ -49,7 +42,7 @@ The file analysis capability of Copilot in Defender reduces the barrier to learn
 
 The file analysis capability is available in Microsoft Defender for customers who have provisioned access to Security Copilot. 
 
-Security Copilot standalone portal users also have the file analysis capability and other Defender XDR capabilities through the Microsoft Defender XDR plugin. Know more about [preinstalled plugins in Security Copilot](/security-copilot/manage-plugins#preinstalled-plugins).
+Security Copilot standalone portal users also have the file analysis capability and other Defender capabilities through the Microsoft Defender XDR plugin. Know more about [preinstalled plugins in Security Copilot](/security-copilot/manage-plugins#preinstalled-plugins).
 
 ## Key features
 

@@ -3,7 +3,6 @@ title: Run the client analyzer on macOS
 description: Learn how to use the Defender for Endpoint Client Analyzer on Mac to identify health or performance issue causes.
 ms.author: chrisda
 author: chrisda
-manager: bagol
 ms.reviewer: joshbregman
 ms.service: defender-endpoint
 ms.subservice: macos
@@ -15,9 +14,6 @@ ms.collection:
 - m365-security
 - tier3
 - mde-macos
-search.appverid: met150
-audience: ITPro
-f1.keywords: NOCSH
 ---
 
 # Run the client analyzer on macOS
@@ -57,7 +53,7 @@ If you're experiencing reliability or device health issues with Microsoft Defend
 1. Change to the tool's directory by running the following command:
 
    ```bash
-   cd XMDEClientAnalyzerBinary
+   cd XMDEClientAnalyzerBinary/XMDEClientAnalyzer
    ```
 
 1. Notice that the following two zipped files are produced:
@@ -98,13 +94,13 @@ The tool currently requires Python version 3 or later to be installed on your de
    - **Linux**:
 
      ```bash
-     echo 'CCADC17FDE907E63FBAF0A5F9D0FAA2FC6D03C49CBA62276BDE427D0F512167F XMDEClientAnalyzer.zip| sha256sum -c`
+     echo 'CCADC17FDE907E63FBAF0A5F9D0FAA2FC6D03C49CBA62276BDE427D0F512167F  XMDEClientAnalyzer.zip' | sha256sum -c
      ```
 
    - **macOS**:
 
      ```bash
-     echo 'CCADC17FDE907E63FBAF0A5F9D0FAA2FC6D03C49CBA62276BDE427D0F512167F XMDEClientAnalyzer.zip| shasum -a 256 -c`
+     echo 'CCADC17FDE907E63FBAF0A5F9D0FAA2FC6D03C49CBA62276BDE427D0F512167F  XMDEClientAnalyzer.zip' | shasum -a 256 -c
      ```
 
 3. Extract the contents of `XMDEClientAnalyzer.zip` on the machine.
@@ -235,18 +231,18 @@ Usage example `./mde_support_tool.sh trace --length 5`
 
 ### Defender for Endpoint on macOS troubleshooting
 
-[Troubleshooting mode in Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-troubleshoot-mode)
+[Troubleshooting mode in Microsoft Defender for Endpoint on macOS](mac-troubleshoot-mode.md)
 
-[Troubleshoot installation issues for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-support-install)
+[Troubleshoot installation issues for Microsoft Defender for Endpoint on macOS](mac-support-install.md)
 
-[Troubleshoot license issues for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-support-license)
+[Troubleshoot license issues for Microsoft Defender for Endpoint on macOS](mac-support-license.md)
 
-[Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-support-sys-ext)
+[Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS](mac-support-sys-ext.md)
 
-[Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on macOS](/defender-endpoint/troubleshoot-cloud-connect-mdemac)
+[Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on macOS](troubleshoot-cloud-connect-mdemac.md)
 
-[Overview for how to troubleshoot performance issues for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-support-perf-overview)
+[Overview for how to troubleshoot performance issues for Microsoft Defender for Endpoint on macOS](mac-support-perf-overview.md)
 
-[Address false positives/negatives in Microsoft Defender for Endpoint](/defender-endpoint/defender-endpoint-false-positives-negatives)
+[Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 
 

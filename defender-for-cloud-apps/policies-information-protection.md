@@ -1,17 +1,22 @@
 ---
 title: Commonly used information protection policies | Microsoft Defender for Cloud Apps
 description: This article outlines the steps to configure many information protection policies in Defender for Cloud Apps.
-ms.date: 05/15/2024
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: MayaAbelson
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 # Commonly used Microsoft Defender for Cloud Apps information protection policies
+
+> [!IMPORTANT]
+> File policies retire on January 6, 2027. To maintain file-based data protection, [migrate to Microsoft Purview DLP or auto-labeling policies](migrate-file-policies-to-purview.md).
 
 
 
 Defender for Cloud Apps file policies allow you to enforce a wide range of automated processes. Policies can be set to provide information protection, including continuous compliance scans, legal eDiscovery tasks, and DLP for sensitive content shared publicly.
 
-Defender for Cloud Apps can monitor any file type based on more than 20 metadata filters, for example, access level, and file type. For more information, see [File policies](data-protection-policies.md).
+Defender for Cloud Apps can monitor any file type based on more than 20 metadata filters, for example, access level, and file type. For details about available metadata filters and policy configuration options, see [File policies](data-protection-policies.md).
 
 ## Detect and prevent external sharing of sensitive data
 
@@ -19,9 +24,11 @@ Detect when files with personally identifying information or other sensitive dat
 
 ### Prerequisites
 
-You must have at least one app connected using [app connectors](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).
+You must have at least one app connected using [app connectors to connect apps](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).
 
 ### Steps
+
+To create a file policy that detects externally shared sensitive data:
 
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new **File policy**.
 
@@ -45,6 +52,8 @@ Detect when files that are labeled **Confidential** and are stored in a cloud se
 
 ### Steps
 
+To create a file policy that detects externally shared confidential data:
+
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new **File policy**.
 
 1. Set the filter **Sensitivity label** to **Microsoft Purview Information Protection** equals the **Confidential** label, or your company's equivalent.
@@ -67,16 +76,18 @@ Detect files containing personally identifying information and other sensitive d
 
 ### Steps
 
+Use the following procedure to create the policy:
+
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new **File policy**.
 
 1. Under **Inspection method**, select **Data Classification Service (DCS)** and under **Select type** select the type of sensitive information you want DCS to inspect.
 
 1. Under **Governance actions**, check **Apply sensitivity label** and select the sensitivity label that your company uses to restrict access to company employees.
 
-1. Create the file policy.
+    > [!NOTE]
+    > The ability to apply a sensitivity label directly in Defender for Cloud Apps is currently only supported for Box, Google Workspace, SharePoint online and OneDrive for Business.
 
-> [!NOTE]
-> The ability to apply a sensitivity label directly in Defender for Cloud Apps is currently only supported for Box, Google Workspace, SharePoint online and OneDrive for Business.
+1. Create the file policy.
 
 ## Detect data access from an unauthorized location
 
@@ -84,9 +95,11 @@ Detect when files are accessed from an unauthorized location, based on your orga
 
 ### Prerequisites
 
-You must have at least one app connected using [app connectors](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).
+You must have at least one app connected using [app connectors to connect apps](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).
 
 ### Steps
+
+To create the activity policy, perform the following steps:
 
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new **Activity policy**.
 
@@ -100,7 +113,8 @@ You must have at least one app connected using [app connectors](enable-instant-v
 
 1. Create the Activity policy.
 
-## Detect and protect confidential data store in a non-compliant SP site
+<a name="detect-and-protect-confidential-data-store-in-a-non-compliant-sp-site"></a>
+## Detect and protect confidential data store in a non-compliant SharePoint site
 
 Detect files that are labeled as confidential and are stored in a non-compliant SharePoint site.
 
@@ -109,6 +123,8 @@ Detect files that are labeled as confidential and are stored in a non-compliant 
 Sensitivity labels are configured and used inside the organization.
 
 ### Steps
+
+Perform the following steps to detect and protect confidential data in a non-compliant SharePoint site:
 
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new **File policy**.
 
@@ -132,15 +148,17 @@ You must have at least one app connected using [app connectors](enable-instant-v
 
 ### Steps
 
+Use the following steps to create the policy from the template:
+
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new **File policy**.
 
-1. Select and apply the policy template **Externally shared source code**
+1. Select and apply the policy template **Externally shared source code**.
 
 1. Optional: Customize the list of file **Extensions** to match your organization's source code file extensions.
 
 1. Optional: Set the **Governance** actions to be taken on files when a violation is detected. The governance actions available vary between services. For example, in Box, **Send policy-match digest to file owner** and **Put in admin quarantine**.
 
-1. Select and apply the policy template.
+1. Create the file policy.
 
 ## Detect unauthorized access to group data
 
@@ -151,6 +169,8 @@ Detect when certain files that belong to a specific user group are being accesse
 You must have at least one app connected using [app connectors](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).
 
 ### Steps
+
+Perform the following steps to detect unauthorized access to group data:
 
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new **Activity policy**.
 
@@ -179,6 +199,8 @@ You must have an AWS instance connected using [app connectors](enable-instant-vi
 
 ### Steps
 
+Perform the following steps to detect publicly accessible S3 buckets:
+
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new **File policy**.
 
 1. Select and apply the policy template **Publicly accessible S3 buckets (AWS)**.
@@ -199,16 +221,18 @@ Detect files that are shared in cloud storage apps and contain personally identi
 
 ### Steps
 
+Use the following steps to create the GDPR-related data protection policy:
+
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new **File policy**.
 
 1. Under **Inspection method**, select **Data Classification Service (DCS)**, and under **Select type** select one or more information types that comply with the GDPR compliance, for example: EU debit card number, EU drivers license number, EU national/regional identification number, EU passport number, EU SSN, SU tax identification number.
 
 1. Set the **Governance** actions to be taken on files when a violation is detected, by selecting **Apply sensitivity label** for each supported app.
 
-1. Create the file policy.
+    > [!NOTE]
+    > Currently, **Apply sensitivity label** is only supported for Box, Google Workspace, SharePoint online and OneDrive for business.
 
-> [!NOTE]
-> Currently, **Apply sensitivity label** is only supported for Box, Google Workspace, SharePoint online and OneDrive for business.
+1. Create the file policy.
 
 ## Block downloads for external users in real time
 
@@ -221,6 +245,8 @@ Make sure your app is a SAML-based app that uses Microsoft Entra ID for single s
 For more information on supported apps, see [Supported apps and clients](proxy-intro-aad.md#supported-apps-and-clients).
 
 ### Steps
+
+Perform the following steps to block downloads for external users in real time:
 
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new **Session policy**.
 
@@ -248,6 +274,8 @@ Make sure your app is a SAML-based app that uses Microsoft Entra ID for single s
 For more information on supported apps, see [Supported apps and clients](proxy-intro-aad.md#supported-apps-and-clients).
 
 ### Steps
+
+Perform the following steps to enforce read-only mode for external users:
 
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new  **Session policy**.
 
@@ -281,6 +309,8 @@ For more information on supported apps, see [Supported apps and clients](proxy-i
 - Sensitivity labels from Microsoft Purview Information Protection must be configured and used inside your organization.
 
 ### Steps
+
+Use the following procedure to block uploads of unclassified documents in real time:
 
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new **Session policy**.
 

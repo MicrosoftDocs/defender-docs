@@ -1,26 +1,28 @@
 ---
 title: Optimize and correct threat policies with configuration analyzer
-description: The steps to optimize and correct threat policies with configuration analyzer. Configuration analyzer is a central location and single pane of glass for administering and viewing the email threat policies you have configured in your tenant.
+description: Use Configuration Analyzer to compare your email threat policies with Standard and Strict recommendations, apply suggested changes, and review historical configuration changes.
 ms.service: defender-office-365
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-guidance-templates
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
-ms.date: 01/31/2023
+ms.date: 07/02/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Optimize and correct threat policies with configuration analyzer
 
-Configuration analyzer is a central location and single pane of glass for administering and viewing the email threat policies you have configured in your tenant. You can perform a side-to-side comparison of your settings to our Standard and Strict recommended settings, apply recommendations and view historical changes that affected your posture.
+## Overview
 
-## What you'll need
+Configuration analyzer is a central location for managing email threat policies in your tenant. Compare your settings with Standard and Strict recommendations. You can also apply changes and review past updates that affected your security posture.
+
+<a name="what-youll-need"></a>
+## Prerequisites
 
 - A Microsoft 365 organization with cloud mailboxes.
 - Sufficient permissions (Security Administrator role)
@@ -28,17 +30,19 @@ Configuration analyzer is a central location and single pane of glass for admini
 
 ## Compare settings and apply recommendations
 
-1. Navigate to [https://security.microsoft.com/configurationAnalyzer](https://security.microsoft.com/configurationAnalyzer).
-1. Pick either **Standard recommendations** or **Strict recommendations** from the top menu based on the side-to-side comparison you'd like to make.
-1. Recommendations for policy changes will be displayed. (If applicable)
-1. You can then select a recommendation, note the recommended action, policy which the recommendation is applicable to, setting name & current configuration etc.
-1. With a recommendation selected, you can press **Apply recommendation** and then **OK** on the confirmation message that appears.
-1. If you wish to manually edit a policy, or confirm settings directly within the policy, you can press **View policy** instead of **Apply recommendation** which will load a new tab and take you directly to the affected policy for ease.
+Perform the following steps to compare your settings and apply recommended changes:
+
+1. Navigate to [Configuration analyzer in the Microsoft Defender portal](https://security.microsoft.com/configurationAnalyzer).
+1. Select **Standard recommendations** or **Strict recommendations** from the top menu.
+1. If your settings differ from the chosen baseline, suggested changes appear.
+1. Select a recommendation to view the suggested action, affected policy, and current setting.
+1. To apply it, select **Apply recommendation**, then select **OK** to confirm.
+1. To edit a policy directly, select **View policy** instead. A new tab opens with the policy for the selected recommendation.
 
 ## View historical configuration changes
 
-While in **Configuration analyzer** you can select **Configuration drift analysis and history** from the top menu bar.
+In **Configuration analyzer**, select **Configuration drift analysis and history** from the top menu bar.
 
-The page which loads will show you the modifications to your threat policies in the timeframe selected by the filters, along with data about the change and if it increased or decreased your overall posture.
+This page shows changes made to your threat policies in the selected time range. It also shows whether each change improved or lowered your security posture.
 
 To learn more details about Configuration Analyzer, see [Configuration analyzer](../configuration-analyzer-for-security-policies.md).

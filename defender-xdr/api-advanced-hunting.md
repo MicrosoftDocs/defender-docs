@@ -2,21 +2,14 @@
 title: Microsoft Defender XDR advanced hunting API
 description: Learn how to run advanced hunting queries using Microsoft Defender XDR's advanced hunting API
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: edbaynash
 author: EdB-MSFT
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
  - m365-security
  - tier3
  - must-keep
 ms.topic: reference
-search.appverid: 
-  - MOE150
-  - MET150
 ms.custom: api
 ms.date: 04/18/2025
 appliesto:
@@ -33,7 +26,7 @@ appliesto:
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-[Advanced hunting](advanced-hunting-overview.md) is a threat-hunting tool that uses [specially constructed queries](advanced-hunting-query-language.md) to examine the past 30 days of event data in Microsoft Defender XDR. You can use advanced hunting queries to inspect unusual activity, detect possible threats, and even respond to attacks. The advanced hunting API allows you to programmatically query event data.
+[Advanced hunting](advanced-hunting-overview.md) is a threat-hunting tool that uses [specially constructed queries](advanced-hunting-query-language.md) to examine the past 30 days of event data in Microsoft Defender. You can use advanced hunting queries to inspect unusual activity, detect possible threats, and even respond to attacks. The advanced hunting API allows you to programmatically query event data.
 
 ## Quotas and resource allocation
 
@@ -49,7 +42,7 @@ The following conditions relate to all queries.
 
 ## Permissions
 
-One of the following permissions is required to call the advanced hunting API. To learn more, including how to choose permissions, see [Access the Microsoft Defender XDR Protection APIs](api-access.md).
+One of the following permissions is required to call the advanced hunting API. To learn more, including how to choose permissions, see [Access the Microsoft Defender Protection APIs](api-access.md).
 
 Permission type | Permission | Permission display name
 -|-|-

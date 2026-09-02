@@ -2,21 +2,14 @@
 title: Update incident API
 description: Learn how to update incidents using Microsoft Defender XDR API
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
 ms.author: edbaynash
 author: EdB-MSFT
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
  - m365-security
  - tier3
  - must-keep
 ms.topic: reference
-search.appverid:
-  - MOE150
-  - MET150
 ms.custom: api
 ms.date: 04/25/2025
 appliesto:
@@ -46,7 +39,7 @@ If your request is throttled, it returns a `429` response code. The response bod
 
 ## Permissions
 
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Access the Microsoft Defender XDR APIs](api-access.md).
+One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Access the Microsoft Defender APIs](api-access.md).
 
 Permission type|Permission|Permission display name
 ---|---|---

@@ -2,13 +2,9 @@
 title: Incidents and alerts in the Microsoft Defender portal
 description: An introduction to incidents and alerts, and the differences between them, in the Microsoft Defender portal.
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
@@ -16,9 +12,6 @@ ms.collection:
   - sentinel-only
 ms.custom: admindeeplinkDEFENDER
 ms.topic: concept-article
-search.appverid:
-  - MOE150
-  - MET150
 ms.date: 12/22/2025
 appliesto: 
 - Microsoft Defender XDR
@@ -43,7 +36,7 @@ Instead, the correlation engines and algorithms in the Microsoft Defender portal
 - A list of the tactics that were used
 - Lists of all the involved and impacted users, devices, and other resources
 - A visual representation of how all the players in the story interact
-- Logs of automatic investigation and response processes that Defender XDR initiated and completed
+- Logs of automatic investigation and response processes that Defender initiated and completed
 - Collections of evidence supporting the attack story: bad actors' user accounts and device information and address, malicious files and processes, relevant threat intelligence, and so on
 - A textual summary of the attack story
 
@@ -51,7 +44,7 @@ Incidents also provide you with a framework for managing and documenting your in
 
 ## Alert sources and threat detection
 
-Alerts in the Microsoft Defender portal come from many sources. These sources include the many services that are part of Microsoft Defender XDR, as well as other services with varying degrees of integration with the Microsoft Defender portal.
+Alerts in the Microsoft Defender portal come from many sources. These sources include the many services that are part of Microsoft Defender, as well as other services with varying degrees of integration with the Microsoft Defender portal.
 
 For example, when Microsoft Sentinel is [onboarded](/unified-secops-platform/microsoft-sentinel-onboard) to the Microsoft Defender portal, the correlation engine in the Defender portal has access to all the raw data ingested by Microsoft Sentinel, which you can find in Defender's **Advanced hunting** tables.
 
@@ -69,7 +62,7 @@ The Microsoft Defender portal includes tools and methods to automate or otherwis
 | ----------- | ----------- |
 | **[Manage](manage-incidents.md) and [investigate](investigate-incidents.md) incidents** | Make sure that you prioritize your incidents according to severity and then work through them to investigate. Use advanced hunting to search for threats, and get ahead of emerging threats with threat analytics. |
 | **[Split incidents into tasks](split-incidents-into-tasks.md)** | Use tasks in the Microsoft Defender portal to investigate and resolve incidents collaboratively across your operations teams. Managing incidents with tasks helps to improve efficiency in incident response and ensure accountability for investigation outcomes. |
-| **[Automatically investigate and resolve alerts](/defender-xdr/m365d-autoir)** | If enabled to do so, Microsoft Defender XDR can automatically investigate and resolve alerts from Microsoft 365 and Entra ID sources through automation and artificial intelligence. |
+| **[Automatically investigate and resolve alerts](/defender-xdr/m365d-autoir)** | If enabled to do so, Microsoft Defender can automatically investigate and resolve alerts from Microsoft 365 and Entra ID sources through automation and artificial intelligence. |
 | **[Configure automatic attack disruption actions](automatic-attack-disruption.md)** | Use high-confidence signals collected from Microsoft Defender XDR and Microsoft Sentinel to automatically disrupt active attacks at machine speed, containing the threat and limiting the impact. |
 | **[Configure Microsoft Sentinel automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules)** | Use automation rules to automate triage, assignment, and management of incidents, regardless of their source. Help your team's efficiency even more by configuring your rules to apply tags to incidents based on their content, suppress noisy (false positive) incidents, and close resolved incidents that meet the appropriate criteria, specifying a reason and adding comments. |
 | **[Proactively hunt with advanced hunting](advanced-hunting-overview.md)** | Use Kusto Query Language (KQL) to proactively inspect events in your network by querying the logs collected in the Defender portal. Advanced hunting supports a guided mode for users looking for the convenience of a query builder. |
@@ -80,4 +73,4 @@ The Microsoft Defender portal includes tools and methods to automate or otherwis
 
 ## Related items
 
-To learn more about alert correlation and incident merging in the Defender portal, see [Alerts, incidents, and correlation in Microsoft Defender XDR](alerts-incidents-correlation.md)
+To learn more about alert correlation and incident merging in the Defender portal, see [Alerts, incidents, and correlation in Microsoft Defender](alerts-incidents-correlation.md)

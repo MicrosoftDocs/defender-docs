@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "defender-xdr/responsible-ai-copilot-defender.md",
+      "redirect_url": "/defender-xdr/application-card-copilot-defender",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-xdr/microsoft-365-security-center-defender-cloud-apps.md",
       "redirect_url": "/defender-cloud-apps/microsoft-365-security-center-defender-cloud-apps",
       "redirect_document_id": false
@@ -13,6 +18,11 @@
     {
       "source_path": "defender-xdr/eval-create-eval-environment.md",
       "redirect_url": "/defender-xdr/pilot-deploy-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/ai-agent-inventory.md",
+      "redirect_url": "/defender-xdr/security-for-ai/ai-agent-inventory",
       "redirect_document_id": false
     },
     {
@@ -220,7 +230,7 @@
       "redirect_url": "/defender-xdr/automatic-attack-disruption",
       "redirect_document_id": false
     },
-  {
+    {
       "source_path": "defender-xdr/deception-overview.md",
       "redirect_url": "/defender-xdr/automatic-attack-disruption",
       "redirect_document_id": false
@@ -324,6 +334,141 @@
       "source_path": "defender-xdr/microsoft-365-security-center-defender-cloud.md",
       "redirect_url": "/azure/defender-for-cloud/concept-integration-365",
       "redirect_document_id": false
-    }                                                
+    },
+    {
+      "source_path": "defender-xdr/faq-incident-notifications-xdr.md",
+      "redirect_url": "/defender-xdr/faq-managed-response",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/defender-experts-for-hunting.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-hunting-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/before-you-begin-defender-experts.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-hunting-prerequisites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/onboarding-defender-experts-for-hunting.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-hunting-onboarding",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/access-den-graph-api.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-hunting-graph-api",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/experts-on-demand.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-hunting-ask-experts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/defender-experts-report.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-hunting-report",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/faq-defender-experts-hunting.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-hunting-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/dex-xdr-overview.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-mdr-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/before-you-begin-xdr.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-mdr-prerequisites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/get-started-xdr.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-mdr-get-started",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/start-using-mdex-xdr.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-mdr-start-using",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/managed-detection-and-response-xdr.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-mdr-managed-response",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/defender-experts-scoped-coverage.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-mdr-scoped-coverage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/communicate-defender-experts-xdr.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-mdr-communication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/reports-xdr.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-mdr-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/third-party-enrichment-defender-experts.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-mdr-third-party-enrichment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/auditing.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-mdr-auditing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/additional-information-xdr.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-mdr-considerations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/frequently-asked-questions.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-mdr-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/faq-managed-response.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-mdr-faq-managed-response",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/dex-xdr-permissions.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-mdr-permissions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/dex-servers-overview.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-servers-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/get-started-dex-servers.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-servers-get-started",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/teams-restrictions-dexapp.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-teams-app-permissions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/defender-experts-managed-security-guide.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-mssp-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-xdr/faq-cloud-coverage-defender-experts.md",
+      "redirect_url": "/defender-xdr/defender-experts/defender-experts-faq-cloud-coverage",
+      "redirect_document_id": false
+    }
   ]
 }

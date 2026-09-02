@@ -8,16 +8,13 @@ ms.service: defender-endpoint
 ms.topic: troubleshooting
 ms.date: 11/22/2024
 ms.subservice: ngp
-manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp 
 ms.custom: 
 - partner-contribution
-f1.keywords: NOCSH 
 ai-usage: human-only
 ---
 
@@ -53,7 +50,7 @@ New-MpPerformanceRecording -RecordTo <String>
 
 The `New-MpPerformanceRecording` cmdlet collects a performance recording of Microsoft Defender Antivirus scans. These performance recordings contain Microsoft-Antimalware-Engine and NT kernel process events and can be analyzed after collection using the [Get-MpPerformanceReport](#get-mpperformancereport) cmdlet.
 
-This `New-MpPerformanceRecording` cmdlet provides an insight into problematic files that could cause a degradation in the performance of Microsoft Defender Antivirus. This tool is provided as is, and isn't intended to provide suggestions on [exclusions](navigate-defender-endpoint-antivirus-exclusions.md). Exclusions can reduce the level of protection on your endpoints. Exclusions, if any, should be defined with caution.
+This `New-MpPerformanceRecording` cmdlet provides an insight into problematic files that could cause a degradation in the performance of Microsoft Defender Antivirus. This tool is provided as is, and isn't intended to provide suggestions on [exclusions](defender-endpoint-exclusions-overview.md). Exclusions can reduce the level of protection on your endpoints. Exclusions, if any, should be defined with caution.
 
 For more information on the performance analyzer, see [Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer) docs.
 

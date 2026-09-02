@@ -1,25 +1,21 @@
 ---
-title: Create blocklists
-f1.keywords: 
-  - NOCSH
+title: Create blocklists for inbound email in Microsoft 365
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier2
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150s
 description: Admins can learn about the available and preferred options to block inbound messages to Microsoft 365.
 ms.service: defender-office-365
-ms.date: 10/06/2025
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Create sender blocklists for cloud mailboxes
@@ -36,7 +32,7 @@ The following list contains the available methods to block senders from most rec
 4. Exchange mail flow rules (also known as transport rules).
 5. The IP Block List in the default connection filter policy.
 
-The rest of this article contains specifics about each method.
+The following sections describe each method in more detail.
 
 > [!TIP]
 > Always submit messages in your blocklists to Microsoft for analysis. For instructions, see [Report questionable email to Microsoft](submissions-admin.md#report-questionable-email-to-microsoft). If the messages or message sources are determined to be harmful, Microsoft can automatically block the messages, and you don't need to manually maintain entries in your own blocklists.
@@ -49,7 +45,7 @@ The rest of this article contains specifics about each method.
 
 Our number one recommended option for blocking mail from specific senders or domains is the Tenant Allow/Block List. For instructions, see [Create block entries for domains and email addresses](tenant-allow-block-list-email-spoof-configure.md#create-block-entries-for-domains-and-email-addresses) and [Create block entries for spoofed senders](tenant-allow-block-list-email-spoof-configure.md#create-block-entries-for-spoofed-senders).
 
-Email messages from these senders are marked as _high confidence spam_ (SCL = 9). The [anti-spam policy](anti-spam-policies-configure.md) that detected the message for the recipient determines what happens to the messages. In the [Standard and Strict preset security policies](preset-security-policies.md), high confidence spam messages are quarantined.
+Email messages from senders or domains that you block by using Tenant Allow/Block List entries are marked as _high confidence spam_ (SCL = 9). The [anti-spam policy](anti-spam-policies-configure.md) that detected the message for the recipient determines what happens to the messages. In the [Standard and Strict preset security policies](preset-security-policies.md), high confidence spam messages are quarantined.
 
 As an added benefit, users in the organization can't _send_ email to these blocked domains and addresses. The message is returned in the following non-delivery report (also known as an NDR or bounce message): `550 5.7.703 Your message can't be delivered because messages to XXX, YYY are blocked by your organization using Tenant Allow Block List.` The entire message is blocked for all internal and external recipients of the message, even if only one recipient email address or domain is defined in a block entry.
 
@@ -71,16 +67,16 @@ When messages are successfully blocked due to a user's Blocked Senders list, the
 
 When multiple users are affected, the scope is wider, so the next best option is blocked sender lists or blocked domain lists in custom anti-spam policies or the default anti-spam policy. Messages from senders on the lists are marked as **High confidence spam**, and the action that you configured for the **High Confidence Spam** filter verdict is taken on the messages. For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md).
 
-The maximum limit for these lists is approximately 1,000 entries.
+The maximum limit for blocked sender lists and blocked domain lists in anti-spam policies is approximately 1,000 entries.
 
 ## Use mail flow rules
 
 Mail flow rules can also look for keywords or other properties in the unwanted messages.
 
-Regardless of the conditions or exceptions that you use to identify the messages, you configure the action to set the spam confidence level (SCL) of the message to 9, which marks the message as **High confidence spam**. For more information, see [Use mail flow rules to set the SCL in messages](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
-
 > [!IMPORTANT]
 > It's easy to create rules that block too many messages or that don't block enough messages. Use specific criteria that identify _only_ the messages you want to block. Also, be sure to [monitor the usage of the rule](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#monitor-rule-usage) to ensure everything works as expected.
+
+Regardless of the conditions or exceptions that you use to identify the messages, you configure the action to set the spam confidence level (SCL) of the message to 9, which marks the message as **High confidence spam**. For more information, see [Use mail flow rules to set the SCL in messages](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
 
 ## Use the IP Block List in the default connection filter policy
 

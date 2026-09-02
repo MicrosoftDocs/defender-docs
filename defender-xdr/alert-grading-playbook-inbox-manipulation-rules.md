@@ -2,24 +2,18 @@
 title: Alert classification for suspicious inbox manipulation rules
 description: Alert classification for suspicious inbox manipulation rules to review the alerts and take recommended actions to remediate the attack and protect your network.
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
   - m365-security
   - tier2
-ms.custom: admindeeplinkDEFENDER
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
 ms.topic: how-to
-search.appverid:
-  - MOE150
-  - met150
-ms.date: 04/18/2025
+ms.date: 06/15/2026
 appliesto:
   - Microsoft Defender XDR
+ai-usage: ai-assisted
 #customer intent: As a SOC analyst, I want to know how to review and classify suspicious inbox manipulation rules alerts so that I can take the necessary actions to remediate the attack and protect my network.
 ---
 
@@ -39,17 +33,20 @@ The results of using this playbook are:
 
 - You take the necessary action if emails were forwarded to a malicious email address.
 
-## Inbox manipulation rules
+<a name="inbox-manipulation-rules"></a>
+## Overview of inbox manipulation rules
 
 Inbox rules are set to automatically manage email messages based on predefined criteria. For example, you can create an inbox rule to move all messages from your manager into another folder, or forward messages you receive to another email address.
 
-### Malicious inbox manipulation rules
+<a name="malicious-inbox-manipulation-rules"></a>
+### How attackers use malicious inbox manipulation rules
 
 Attackers might set up email rules to hide incoming emails in the compromised user mailbox to obscure their malicious activities from the user. They might also set rules in the compromised user mailbox to delete emails, move the emails into another less noticeable folder (like RSS), or forward mails to an external account. Some rules might move all the emails to another folder and mark them as "read", while some rules might move only mails that contain specific keywords in the email message or subject.
 
 For example, the inbox rule might be set to look for keywords like "invoice," "phish," "do not reply," "suspicious email," or "spam," among others, and move them to an external email account. Attackers might also use the compromised user mailbox to distribute spam, phishing emails, or malware.
 
-## Workflow
+<a name="workflow"></a>
+## Investigation workflow for suspicious inbox manipulation rules
 
 Here's the workflow to identify suspicious inbox manipulation rule activities.
 
@@ -57,7 +54,7 @@ Here's the workflow to identify suspicious inbox manipulation rule activities.
 
 ## Investigation steps
 
-This section contains detailed step-by-step guidance to respond to the incident and take the recommended steps to protect your organization from further attacks.
+The following investigation steps provide detailed step-by-step guidance to respond to the incident and take the recommended steps to protect your organization from further attacks.
 
 ### 1. Review the alerts
 
@@ -98,7 +95,7 @@ Here's an example of a "delete all incoming emails" rule configuration (as seen 
 Review the attributes of the IP address that performed the relevant event of rule creation:
 
 - Search for other suspicious cloud activities that originated from the same IP in the tenant. For instance, suspicious activity might be multiple failed login attempts.
-- Is the ISP common and reasonable for this user?
+- Is the internet service provider (ISP) common and reasonable for this user?
 - Is the location common and reasonable for this user?
 
 ### 4. Investigate suspicious activity by the user prior to creating the rules
@@ -123,7 +120,7 @@ For instance, for multiple failed logins, examine:
 
 [Advanced Hunting](advanced-hunting-overview.md) is a query-based threat hunting tool that lets you inspect events in your network to locate threat indicators.
 
-Use this query to find all the new inbox rule events during specific time window.
+Use the following query to find all new inbox rule events for a specific user during a given time window. Replace the `user_id` variable with the affected user's account ID before running the query.
 
 ```kusto
 let start_date = now(-10h);
@@ -139,7 +136,7 @@ CloudAppEvents
 
 The *RuleConfig* column will provide the new inbox rule configuration.
 
-Use this query to check whether the ISP is common for the user by looking at the history of the user.
+Use the following query to determine whether the ISP associated with the alert is common for the user. The query examines the user's activity over the previous 60 days leading up to the alert to establish a baseline of typical ISP usage. An unfamiliar ISP might indicate unauthorized access.
 
 ```kusto
 let alert_date = now(); //enter alert date
@@ -151,7 +148,7 @@ CloudAppEvents
 | make-series ActivityCount = count() default = 0 on Timestamp  from (alert_date-timeback) to (alert_date-1h) step 12h by ISP
 ```
 
-Use this query to check whether the country/region is common for the user by looking at the history of the user.
+Use the following query to check whether the country/region associated with the alert activity is common for the user. The query reviews the user's sign-in history over the previous 60 days to establish a baseline. Activity from an unfamiliar country/region can indicate that the account was accessed by an unauthorized party.
 
 ```kusto
 let alert_date = now(); //enter alert date
@@ -163,7 +160,7 @@ CloudAppEvents
 | make-series ActivityCount = count() default = 0 on Timestamp  from (alert_date-timeback) to (alert_date-1h) step 12h by CountryCode
 ```
 
-Use this query to check whether the user agent is common for the user by looking at the history of the user.
+Use the following query to check whether the user agent string associated with the alert activity is common for the user. The query reviews the user's activity over the previous 60 days to establish a baseline. An unusual or unexpected user agent can indicate that the account was accessed by an attacker using a different browser or automation tool.
 
 ```kusto
 let alert_date = now(); //enter alert date
@@ -176,6 +173,8 @@ CloudAppEvents
 ```
 
 ## Recommended actions
+
+After confirming a true positive alert, take the following actions to remediate the attack:
 
 1. Disable the malicious inbox rule.
 2. Reset the user account's credentials. You can also verify if the user account has been compromised with Microsoft Defender for Cloud Apps, which gets security signals from Microsoft Entra ID Protection.
