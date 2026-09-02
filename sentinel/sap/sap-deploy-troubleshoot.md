@@ -149,7 +149,13 @@ Use the following symptom-to-SAP-note mapping for incident triage:
 | SAP Cloud Connector sessions appear stale or unresponsive | SAP note [2485510](https://me.sap.com/notes/0002485510) |
 | Repeated shared-connector saturation from other integrations | Isolate Microsoft Sentinel traffic on a dedicated SAP Cloud Connector instance |
 
+## Invalid Credential or cannot get credential for example OAuth2 access token
 
+Besides normal misconfigurations of credentials during registration of the SAP RFC destination on the data connector pane on Microsoft Sentinel, this could be a symptom of attempting integration with unsupported SAP Cloud Platform Integration in the NEO environment. See SAP note [3351844](https://me.sap.com/notes/3351844) for details the end-of-life of services in the NEO environment. Microsoft Sentinel Solution for SAP officially supports SAP Cloud Integration in the Cloud Foundry environment. See the reference on the [SAP preparation guide](preparing-sap.md#configure-sap-btp-settings).
+
+Customers that want to protect their SAP landscape using Cloud Platform Integration in the NEO environment ahead of their migration to SAP Cloud Integration on the Cloud Foundry environment (Integration Suite), can do so by adopting the provided "Data Collector Scheduler" iflow.
+
+It uses a simplified scheduler. The SAP threat protection scope remains the same. The Sentinel hosted Scheduler is dropped from the setup to avoid the mentioned handshake error with the downside of the Sentinel team having no insight on the healthiness of the Cloud Integration endpoints other than the SAP log data arrival. Often this is no concern, since the scope of monitoring resides with the SAP Cloud Platform Integration team anyways.
 
 ## Related content
 
