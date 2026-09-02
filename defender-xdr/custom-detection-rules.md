@@ -22,7 +22,7 @@ appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Defender for Endpoint Plan 2
 ms.topic: how-to
-ms.date: 07/02/2026
+ms.date: 09/02/2026
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to create custom detection rules so that I can proactively monitor for threats and automate response actions using advanced hunting queries.
 ---
@@ -373,6 +373,21 @@ Apply these actions to devices in the `DeviceId` column of the query results:
 - Both the **Disable user** and **Reset user authentication** options require the user security identifier (SID), which are in the columns `AccountSid`, `InitiatingProcessAccountSid`, `RequestAccountSid`, and `OnPremSid`.
 
 - For Microsoft Entra identities, `AccountObjectId` parameter is needed for all actions.
+
+- Custom detection rules can apply governance actions to supported SaaS identities returned by queries that use the `CloudAppEvents` table. This capability is in preview.
+
+- To apply SaaS actions, the query results must include `AccountObjectId`, `InstanceId`, `ApplicationId`, and `AppInstanceId`, along with other required columns such as `Timestamp`. You can use joins as long as the required columns are present in the query results.
+
+> [!IMPORTANT]
+> If the selected governance action or SaaS service isn't supported, the rule doesn't take an action.
+
+The following table lists the supported governance actions for SaaS identities:
+
+| SaaS service | Supported governance actions |
+| --- | --- |
+| Box | **Disable user** |
+| Google Workspace | **Disable user**, **Force password reset** |
+| Salesforce | **Disable user** |
 
 For more information on user actions, see [Remediation actions in Microsoft Defender for Identity](/defender-for-identity/remediation-actions) and [Remediation actions in Microsoft Defender for Cloud Apps](/defender-cloud-apps/governance-actions).
 
