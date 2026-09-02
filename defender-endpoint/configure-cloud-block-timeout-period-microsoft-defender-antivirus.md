@@ -9,7 +9,7 @@ ms.custom: nextgen, msecd-doc-authoring-1015
 ms.reviewer: yongrhee
 ms.subservice: ngp
 ms.topic: how-to
-ms.date: 08/31/2026
+ms.date: 09/02/2026
 ms.collection:
 - m365-security
 - tier2
@@ -53,7 +53,7 @@ To specify the cloud block time-out period in Microsoft Intune, use an endpoint 
 
 When you create the policy, use these specific settings:
 
-- **Policy type**: Select **Manage** \> **Antivirus** on the **Endpoint security \| Overview** page.
+- **Policy type**: Go to **Manage** \> **Antivirus** on the **Endpoint security \| Overview** page at <https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/SecurityManagementMenu/~/overview>.
 - **Platform**: Select **Windows**.
 - **Profile**: Select **Microsoft Defender Antivirus**.
 

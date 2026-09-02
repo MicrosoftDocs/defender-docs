@@ -8,7 +8,7 @@ author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
 ms.topic: how-to
-ms.date: 08/31/2026
+ms.date: 09/02/2026
 ms.custom: nextgen, msecd-doc-authoring-1015
 ms.collection:
 - m365-security
@@ -53,7 +53,7 @@ To configure always-on protection settings in Microsoft Intune, use an endpoint 
 
 When you create the policy, use these specific settings:
 
-- **Policy type**: Select **Manage** \> **Antivirus** on the **Endpoint security \| Overview** page.
+- **Policy type**: Go to **Manage** \> **Antivirus** on the **Endpoint security \| Overview** page at <https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/SecurityManagementMenu/~/overview>.
 - **Platform**: Select **Windows**.
 - **Profile**: Select **Microsoft Defender Antivirus**.
 
@@ -185,13 +185,13 @@ For detailed syntax and parameter information, see [**Set-MpPreference**](/power
 
 ## Turn on real-time protection in the Windows Security app
 
-The [Windows Security app](microsoft-defender-security-center-antivirus.md) lets you turn on real-time protection on an individual device. It doesn't provide separate controls for all the always-on protection settings described in this article.
+You can use the [Windows Security app](https://support.microsoft.com/Windows/Security/Windows-Security/stay-protected-with-the-windows-security-app) to turn on real-time protection on an individual device. It doesn't provide separate controls for all the always-on protection settings described in this article.
 
 To turn on real-time protection in the Windows Security app:
 
-1. Open the **Windows Security** app and select **Virus & threat protection**.
-1. On the **Virus & Threat protection** page, select **Manage settings** in the **Virus & threat protection settings** section.
-1. On the **Virus & threat protection settings** page, slide the **Real-time protection** toggle to :::image type="icon" source="media/toggle-on.png" border="false"::: **On**.
+1. In the **Windows security** app on the device, go to **Virus & threat protection**.
+1. In the **Virus & threat protection** pane, in the **Virus & threat protection settings** section, select **Manage settings**.
+1. In the **Virus & threat protection settings** pane, slide the **Real-time protection** toggle to :::image type="icon" source="media/toggle-on.png" border="false"::: **On**.
 
 If your organization manages real-time protection, the **Real-time protection** setting might be unavailable. If you turn off real-time protection, it turns on again automatically after a short delay.
 
