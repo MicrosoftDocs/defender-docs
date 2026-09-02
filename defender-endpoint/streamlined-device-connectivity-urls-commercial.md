@@ -187,7 +187,7 @@ The following table lists the URL endpoint services required for devices using D
 The following table lists the URL endpoints required for administrative and security operations to access the Microsoft Defender security portals. These endpoints don't need to be accessible to all devices.
 
 > [!NOTE]
-> In addition to the URLs listed in this table, you might also need to allow access to the URLs listed under [Microsoft 365 Unified Domains](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-365-unified-domains).
+> In addition to the URLs listed in this table, you might also need to allow access to the URLs listed under [Microsoft 365 Unified Domains](/microsoft-365/enterprise/urls-and-ip-address-ranges#microsoft-365-unified-domains).
 
 |URL|Comment|
 |---|---|
