@@ -3,8 +3,8 @@ title: EmailEvents table in the advanced hunting schema
 description: Learn about events associated with Microsoft 365 emails in the EmailEvents table of the advanced hunting schema
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-ms.author: pauloliveria
-author: poliveria
+ms.author: ajajshaikh
+author: ajaj-shaikh
 ms.localizationpriority: medium
 ms.collection: 
 - m365-security
@@ -80,6 +80,9 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `AdditionalFields` | `string` | Additional information about the entity or event |
 | `LatestDeliveryLocation`* | `string` | Last known location of the email |
 |`LatestDeliveryAction`* | `string` | Last known action attempted on an email by the service or by an admin through manual remediation |
+|`OriginalThreatTypes` | `string` | Verdict from the email filtering stack on whether the email contains malware, phishing, or other threats at the time of delivery |
+|`OriginalDetectionMethods` | `string` | Methods used to detect malware, phishing, or other threats found in the email at the time of delivery |
+|`OriginalConfidenceLevel` | `string` | List of confidence levels of any spam or phishing verdicts at the time of delivery |
 |`DistributionList` | `string` | Name of the distribution list (DL) to which the email was sent, if applicable; in cases of nested DLs, it shows the top-level list |
 | `ExchangeTransportRule` | `string` | Mail flow rules (also known as transport rules) that took action on the email while it was in transit; mail flow rules are similar to the Inbox rules available in Outlook and Outlook on the web |
 | `ForwardingInformation` | `string` | JSON array of forwarding details, including the forwarding user and the forwarding type |
@@ -90,6 +93,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `RecipientDomain` | `string` | Domain address of the recipient |
 | `EmailSize` | `long` | Size of the email message in bytes |
 | `IsFirstContact` | `int` | Whether the email was the first contact between the sender and recipient (1 if yes, 0 if no) |
+| `Topics` | `string` | Topics column provides granular, multilabel topic classifications that describe what an email is about |
 
 > [!NOTE]
 >\* The `LatestDeliveryLocation` and `LatestDeliveryAction` columns are **not** available in the Streaming API. 
