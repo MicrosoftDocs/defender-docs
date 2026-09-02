@@ -1,16 +1,11 @@
 ---
 title: EntraIdSignInEvents table in the advanced hunting schema (preview)
 description: Learn about the Microsoft Entra sign-in events table of the advanced hunting schema.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -21,7 +16,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 02/05/2026
+ms.date: 02/09/2026
 ---
 
 # EntraIdSignInEvents
@@ -52,8 +47,9 @@ For information on other tables in the advanced hunting schema, see the [advance
 |`AccountDisplayName`|`string`|Name displayed in the address book entry for the account user. This is usually a combination of the given name, middle initial, and surname of the user.|
 |`AccountObjectId`|`string`|Unique identifier for the account in Microsoft Entra ID|
 |`AccountUpn`|`string`|User principal name (UPN) of the account|
+|`IsConfidentialClient`|`boolean`|Indicates if the sign in was done via confidential client applications|
 |`IsExternalUser`|`int`|Indicates if the user that signed in is external. Possible values: -1 (not set), 0 (not external), 1 (external).|
-|`IsGuestUser`|`boolean`|Indicates whether the user that signed in is a guest in the tenant|
+|`IsGuestUser`|`boolean`|Indicates if the sign in was done via confidential client applications|
 |`AlternateSignInName`|`string`|On-premises user principal name (UPN) of the user signing in to Microsoft Entra ID|
 |`LastPasswordChangeTimestamp`|`datetime`|Date and time when the user that signed in last changed their password|
 |`ResourceDisplayName`|`string`|Display name of the resource accessed. The display name can contain any character.|

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Production ring deployment using Group Policy and network share
 description: Microsoft Defender Antivirus is an enterprise endpoint security platform that helps defend against advanced persistent threats. This article provides information about how to use a ring deployment method to update your Microsoft Defender Antivirus clients using Group Policy over a network share.
 ms.service: defender-endpoint
@@ -6,15 +6,14 @@ ms.author: chrisda
 author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: high
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier1
-ms.custom: intro-overview
+ms.custom:
+  - intro-overview
+  - sfi-image-nochange
 ms.topic: install-set-up-deploy
 ms.subservice: ngp
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
@@ -156,7 +155,7 @@ Set up a network file share (UNC/mapped drive) to download security intelligence
 1. Set the share location in the policy to the share.
 
     > [!NOTE]
-    > Do not add the x64 (or x86) folder in the path. The mpcmdrun.exe process adds it automatically.
+    > Do not add the x64 (or x86) folder in the path. The MpCmdRun.exe process adds it automatically.
 
 ## Setting up the Pilot (UAT/Test/QA) environment
 
@@ -207,8 +206,8 @@ In [Group Policy Management Console](/previous-versions/windows/it-pro/windows-s
 
 ### Related articles
 
-- [Antivirus profiles - Devices managed by Microsoft Intune](/mem/intune/protect/endpoint-security-antivirus-policy#antivirus-profiles)
-- [Use Endpoint security Antivirus policy to manage Microsoft Defender update behavior (Preview)](/mem/intune/fundamentals/whats-new#use-endpoint-security-antivirus-policy-to-manage-microsoft-defender-update-behavior-preview)
+- [Antivirus profiles - Devices managed by Microsoft Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy#antivirus-profiles)
+- [Use Endpoint security Antivirus policy to manage Microsoft Defender update behavior (Preview)](/intune/intune-service/fundamentals/whats-new#use-endpoint-security-antivirus-policy-to-manage-microsoft-defender-update-behavior-preview)
 - [Manage the gradual rollout process for Microsoft Defender updates](manage-gradual-rollout.md)
 
 ## Setting up the production environment
@@ -263,11 +262,11 @@ If you encounter problems with your deployment, create or append your Microsoft 
 
    :::image type="content" source="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-gp-policy-define-order.png" alt-text="Screenshot that shows a screen capture of the Define the order of sources for downloading security intelligence updates page." lightbox="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-gp-policy-define-order.png":::
 
-1. Select **Define the order of sources for downloading security intelligence updates**.
+1. Select **Define file shares for downloading security intelligence updates**.
 
 1. Select the radio button named **Disabled**, select **Apply**, and then select **OK**. The disabled option is shown in the following figure:
 
-   :::image type="content" source="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-gp-policy-disabled.png" alt-text="Screenshot that shows a screen capture of the Define the order of sources for downloading security intelligence updates page with Security Intelligence updates disabled." lightbox="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-gp-policy-disabled.png":::
+   :::image type="content" source="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-gp-policy-disabled.png" alt-text="Screenshot that shows a screen capture of the Define file shares for downloading security intelligence updates page." lightbox="media/microsoft-defender-antivirus-deploy-ring-group-policy-wsus-gp-policy-disabled.png":::
 
 1. The change is active when Group Policy updates. There are two methods to refresh Group Policy:
 

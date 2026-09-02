@@ -1,20 +1,18 @@
 ---
-title: Permissions in Microsoft Defender XDR Unified role-based access control (RBAC)
-description: Learn about the custom permissions available in Microsoft Defender XDR Security role-based access control (RBAC)
+title: Permissions in Microsoft Defender unified role-based access control (RBAC)
+description: Learn about the custom permissions available in Microsoft Defender Security role-based access control (RBAC)
 ms.service: defender-xdr
 ms.author: monaberdugo
 author: mberdugo
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 ms.custom:
 ms.topic: concept-article
-ms.date: 07/13/2025
+ms.date: 05/25/2026
+ai-usage: ai-assisted
 ms.reviewer:
-search.appverid: met150
 appliesto:
 - Microsoft Defender for Endpoint Plan 2
 - Microsoft Defender XDR
@@ -26,10 +24,10 @@ appliesto:
 - Microsoft Defender for Cloud Apps
 ---
 
-# Permissions in Microsoft Defender XDR Unified role-based access control (RBAC)
+# Permissions in Microsoft Defender unified role-based access control (RBAC)
 <a name='microsoft-365-defender-unified-rbac-permission-details'></a>
 
-Use Microsoft Defender Unified role-based access control (RBAC) to manage permissions for users and groups in your organization. Unified RBAC supports selecting permissions from each permission group to customize a role.
+Use Microsoft Defender unified role-based access control (RBAC) to manage permissions for users and groups in your organization. Unified RBAC supports selecting permissions from each permission group to customize a role.
 
 This article provides details about the permissions available to configure for your users, based on the tasks they need to do.
 
@@ -56,6 +54,9 @@ Permissions for managing day-to-day operations and responding to incidents and a
 |---|---|---|---|
 |Email & collaboration metadata|Read|View email and collaboration data in hunting scenarios, including advanced hunting, threat explorer, campaigns, and email entity.|
 |Email & collaboration content|Read|View and download email content and attachments.|
+|Email & collaboration content: Emails associated with alerts|Read|View and download email content associated with security alerts **Email reported by user as malware or phish** and **Email reported by user as junk**.|
+|Email & collaboration content: Quarantine Emails|Read|View and download quarantined messages for all users.|
+
 
 ## Security posture – Posture management
 
@@ -69,6 +70,17 @@ Permissions for managing the organization's security posture and performing vuln
 |Application handling|Manage|Manage vulnerable applications and software, including blocking and unblocking them in Defender Vulnerability Management.|
 |Security baseline assessment|Manage|Create and manage profiles so you can assess if your devices comply with security industry baselines.|
 |Exposure Management|Read / Manage|View or manage Exposure Management insights, including Microsoft Secure Score recommendations from all products that are covered by Secure Score.|
+
+## Security posture – AI code scan
+
+Permissions for running AI code scans and managing scan results.
+
+|Permission name|Level|Description|
+|---|---|---|
+|Run scan|Manage|Allows users to run AI code scans.|
+|Upload results|Manage|Allows users to upload AI code scan results to Defender.|
+|Scan results|Read|View AI code scan results.|
+|Scan results|Manage|Manage AI code scan results.|
 
 ## Authorization and settings
 
@@ -96,5 +108,5 @@ The following permissions can be assigned for both Microsoft Sentinel SIEM and d
 ## Next steps
 
 - [Create custom roles](create-custom-rbac-roles.md)
-- [Activate Microsoft Defender XDR Unified RBAC](activate-defender-rbac.md)
+- [Activate Microsoft Defender unified RBAC](activate-defender-rbac.md)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

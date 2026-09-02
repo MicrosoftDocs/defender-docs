@@ -1,18 +1,18 @@
 ---
 title: Review security initiatives in Security Exposure Management
 description: Learn how to effectively manage and track security initiatives using Microsoft Security Exposure Management to improve your organization's security posture.
+ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to understand and manage security initiatives so that I can improve my organization's security posture.
-ms.author: dlanger
-author: dlanger
-manager: ornat-spodek
 ms.topic: how-to
-ms.service: exposure-management
-ms.date: 07/30/2025
+ms.date: 06/15/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
 ---
 
 # Review security initiatives
 
-[Microsoft Security Exposure Management](microsoft-security-exposure-management.md) offers a focused, metric-driven way of tracking exposure in specific security areas using security initiatives. This article describes how to work with initiatives.
+## Work with security initiatives
+
+[Microsoft Security Exposure Management](microsoft-security-exposure-management.md) offers a focused, metric-driven way of tracking exposure in specific security areas using security initiatives. This article describes how to view initiatives and their scores, set target scores, check score trends and history, and review associated metrics and recommendations. Before you start, review the [prerequisites](#prerequisites).
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ The initiatives page provides detailed insights into your security initiatives a
 
 1. Navigate to the [Microsoft Defender portal](https://security.microsoft.com/).
 
-2. From the Exposure management section on the navigation bar, select **Exposure insights -> Initiatives** to open the [initiatives](https://security.microsoft.com/exposure-initiatives) page.
+2. From the Exposure management section on the navigation bar, select **Exposure insights -> Initiatives** to open the [Exposure insights initiatives](https://security.microsoft.com/exposure-initiatives) page.
 
     :::image type="content" source="./media/initiatives/initiatives-window.png" alt-text="Screenshot of the Security Exposure Management Initiatives window.":::
 
@@ -65,6 +65,9 @@ The initiatives page provides detailed insights into your security initiatives a
 :::image type="content" source="./media/initiatives/initiatives-ransomware.png" alt-text="Screenshot of the ransomware initiative.":::
 
 ## Set target score
+
+To set a custom target score for an initiative, follow these steps:
+
 1. To customize your initiative's target score, select **Initiatives.**
 
 1. Select the individual initiative and then **Set target score** to open the set initiative target score window.
@@ -77,10 +80,12 @@ The initiatives page provides detailed insights into your security initiatives a
 
 The changes in your score provide you with useful feedback about how well you're meeting the goals of your initiatives.
 
-1. From your initiative page, check the overall **14 day change trend graph** and **14 day drift change** to track the changes in your initiative score, visually and as a percentage.
-1. For initiatives with metrics, you can examine this data per metric as well.
+1. From the individual initiative details page, check the overall **14 day change trend graph** and **14 day drift change** to track the changes in your initiative score, visually and as a percentage.
+1. For initiatives with metrics, you can examine the trend and drift data per metric as well.
 
 ## Check history
+
+Use the History view to examine how an initiative score changed over time:
 
 1. Select an initiative to open the small overview and then select **Open initiative page-> History** to view changes over time. 
 
@@ -93,6 +98,8 @@ The changes in your score provide you with useful feedback about how well you're
 :::image type="content" source="media/exposure-insights-overview/initiatives-history-details-redcued.jpg" alt-text="Screenshot of history side panel" lightbox="media/initiatives/initiatives-history-details.png":::
 
 ## Review metrics and recommendations
+
+Use the following views to review initiative metrics and related recommendations:
 
 1. To review metrics associated with your initiative, select **Exposure insights -> Initiatives-> Security metrics**.
 1. Sort by heading, as needed.

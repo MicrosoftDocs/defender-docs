@@ -3,6 +3,7 @@ title: Working with the app page
 description: This article describes how the app page works in Defender for Cloud Apps.
 ms.date: 05/15/2024
 ms.topic: concept-article
+ms.custom: sfi-image-nochange
 ---
 # Working with the app page
 

@@ -1,14 +1,8 @@
 ---
 title: Vulnerability management in multitenant management
 description: Learn about the capabilities of the vulnerability management dashboard in multitenant management in Microsoft Defender XDR
-search.appverid: met150
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
-ms.author: guywild
 author: guywi-ms
-ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
+ms.author: guywild
 ms.collection: 
   - m365-security
   - highpri

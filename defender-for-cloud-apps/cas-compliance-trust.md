@@ -70,7 +70,7 @@ Your data is kept and is available to you while the license is under grace perio
 
 Defender for Cloud Apps shares data, including customer data, among the following Microsoft products also licensed by the customer. For customers in the Government Community Cloud (GCC), data sharing between government and commercial cloud environments might occur, depending on the location of the service offering.
 
-- Microsoft Defender XDR
+- Microsoft Defender
 - Microsoft Defender for Cloud
 - Microsoft Sentinel
 - Microsoft Defender for Endpoint

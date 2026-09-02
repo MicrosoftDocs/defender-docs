@@ -1,16 +1,11 @@
 ---
 title: AssignedIPAddresses() function in advanced hunting for Microsoft Defender XDR
 description: Learn how to use the AssignedIPAddresses() function to get the latest IP addresses assigned to a device
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

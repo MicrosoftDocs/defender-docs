@@ -1,22 +1,21 @@
-﻿---
+---
 title: Manage automation file uploads
-description: Enable content analysis and configure the file extension and email attachment extensions that will be submitted for analysis
+description: Enable content analysis and specify file and email attachment extensions to automatically upload for cloud inspection during automated investigation in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
-search.appverid: met150
-ms.date: 06/25/2024
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
 
+ai-usage: ai-assisted
 ---
 # Manage automation file uploads
 
@@ -34,6 +33,8 @@ For example, if you add *exe* and *bat* as file or attachment extension names, t
 
 ## Add file extension names and attachment extension names
 
+Use the following steps to add file extension names and attachment extension names for automated investigation.
+
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
@@ -48,12 +49,13 @@ For example, if you add *exe* and *bat* as file or attachment extension names, t
    - **File extension names** - Suspicious files except email attachments will be submitted for additional inspection
 
 > [!NOTE]
-> By default you will see several extension names are automatically filled. One of them is **_double quotes (")_**, this will include files that don't have any file extensions at all.
+> By default, several extension names are automatically filled. One of them is **_double quotes (")_**, which includes files that don't have any file extensions at all.
 
 
-## Related topics
+<a name="related-topics"></a>
+## Related content
 
-- [Manage automation folder exclusions](manage-automation-folder-exclusions.md)
+- [Manage automation folder exclusions](automation-folder-exclusions-configure.md)
 
 
 

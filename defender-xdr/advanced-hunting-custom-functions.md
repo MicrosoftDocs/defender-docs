@@ -1,27 +1,24 @@
 ---
 title: Custom functions in the advanced hunting schema
-description: Learn about writing your own custom functions for hunting 
-search.appverid: met150
+description: Create reusable custom functions in advanced hunting to simplify and share query logic across hunting queries.
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
-ms.custom: 
+ms.custom:
+- msecd-doc-authoring-1014
 - cx-ti
 - cx-ah
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 01/23/2026
+ms.date: 06/16/2026
+ai-usage: ai-assisted
 ---
 
 # Use custom functions
@@ -30,7 +27,7 @@ ms.date: 01/23/2026
 
 
 **Applies to:**
-- Microsoft Defender XDR
+- Microsoft Defender
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
@@ -43,9 +40,9 @@ This article explains the different types of functions available in advanced hun
 
 Advanced hunting includes three different types of functions:
 
-![Function types](media/advanced-hunting-custom-functions/function-types.png)
+![Screenshot of the three function types available in advanced hunting.](media/advanced-hunting-custom-functions/function-types.png)
 
-- **Built-in functions** – Prebuilt functions included with Microsoft Defender XDR advanced hunting. All advanced hunting instances provide these functions, and you can't modify them.
+- **Built-in functions** – Prebuilt functions included with Microsoft Defender advanced hunting. All advanced hunting instances provide these functions, and you can't modify them.
 - **Shared functions** – Custom functions that users create. All users in a specific tenant can access these functions. Users can modify and control these functions.
 - **My functions** – Custom functions that a user creates. Only the user who created these functions can view and modify them.
 
@@ -53,7 +50,7 @@ Advanced hunting includes three different types of functions:
 
 Microsoft Sentinel customers who previously created and saved custom functions in their [Log analytics workspace](/azure/azure-monitor/logs/log-analytics-workspace-overview) can access these functions in the Defender portal, under **Shared functions** > **Sentinel workspace functions**. You can use these functions for workbooks, analytics rules, and running advanced hunting queries in the Defender portal, but not in custom detection rules.
 
-For more information about custom detections in the Defender portal, see [Create custom detection rules](custom-detection-rules.md).
+For more information about custom detection rules in the Defender portal, see [Create custom detection rules](custom-detection-rules.md).
 
 > [!NOTE]
 > When creating a new function in advanced hunting, you can't use the same name as the ones imported and saved in the **Sentinel workspace functions**.
@@ -61,10 +58,10 @@ For more information about custom detections in the Defender portal, see [Create
 
 ## Write your own custom function
 
-To create a function from the current query in the editor:
+In the **Advanced hunting** query editor, after composing a query, create a function from it as follows:
 
 1. Select **Save** and then **Save as function**.
-  ![Save as function](media/advanced-hunting-custom-functions/save-as-function.png)
+  ![Screenshot of the Save menu with Save as function option highlighted.](media/advanced-hunting-custom-functions/save-as-function.png)
 
 1. In the **Save as function** flyout panel, provide the following information:
 
@@ -73,7 +70,7 @@ To create a function from the current query in the editor:
     - **Description** - A description that helps other users understand the purpose of the function and how it works.
     - **Parameters** - Add a parameter for each variable in the function that requires a value when it's used. For more information, see [Add parameters to your custom function](#add-parameters-to-your-custom-function).
 
-    ![Save as function dialog box](media/advanced-hunting-custom-functions/save-as-function-dialog-box.png)
+    ![Screenshot of the Save as function flyout panel with name, location, description, and parameters fields.](media/advanced-hunting-custom-functions/save-as-function-dialog-box.png)
 
 1. Select **Save**.
 
@@ -102,7 +99,7 @@ To create tabular parameters for your custom function:
 1. Enter a **Name** and **Default value** for the table.
 1. Map each column that your query references to the table. Select **Add column**, and then enter the column's properties.
 
-![Table parameter in custom functions](media/advanced-hunting-custom-functions/save-as-function-table.png)
+![Screenshot of the table parameter configuration with column mapping in custom functions.](media/advanced-hunting-custom-functions/save-as-function-table.png)
 
 > [!NOTE]
 >- You can save a function with more than one table. 
@@ -116,21 +113,22 @@ Add a function to the current query by double-clicking on its name or selecting 
 
 If a query requires arguments, provide them by using the following syntax: *function_name(parameter 1, parameter 2, ...)*
 
-![Open in query editor](media/advanced-hunting-custom-functions/open-in-query-editor.png)
+![Screenshot of the Open in query editor option in the function context menu.](media/advanced-hunting-custom-functions/open-in-query-editor.png)
 
 > [!NOTE]
 > You can't use functions inside another function.
 
-## Work with function codes
+<a name="work-with-function-codes"></a>
+## View and edit function code
 You can view the code of a function to understand how it works or to modify its code. Select the three dots to the right of the function and select **Load function code** to open a new tab with the function code. 
 
-![Load function code](media/advanced-hunting-custom-functions/load-function-code.png)
+![Screenshot of the Load function code option in the function context menu.](media/advanced-hunting-custom-functions/load-function-code.png)
 
 ## Edit a custom function
 
 Edit the properties of a function by selecting the three dots to the right of the function and selecting **Edit details**. Make any modifications that you want to the properties and parameters of the function, and then select **Save**.
 
-![Edit function code](media/advanced-hunting-custom-functions/edit-function.png)
+![Screenshot of the Edit details option in the function context menu.](media/advanced-hunting-custom-functions/edit-function.png)
 
 If the function code is already loaded in the editor, you can also select **Save** to apply any changes to the code or properties of the function.
 

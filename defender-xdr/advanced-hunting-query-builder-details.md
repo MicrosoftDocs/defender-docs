@@ -1,28 +1,25 @@
 ---
 title: Supported data types and filters in guided mode for hunting in Microsoft Defender XDR
 description: Refine your query by using the different guided mode capabilities in advanced hunting in Microsoft Defender XDR.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
   - m365-security
   - m365initiative-m365-defender
   - tier2
 ms.custom:
+- msecd-doc-authoring-1014
 - cx-ti
 - cx-ah
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 03/28/2025
+ms.date: 06/16/2026
+ai-usage: ai-assisted
 ---
 
 # Refine your query in guided mode 
@@ -33,30 +30,33 @@ ms.date: 03/28/2025
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+
+This article explains how to refine your advanced hunting queries in guided mode in Microsoft Defender XDR. Learn how to use supported data types, subgroups, smart auto-complete, event type filters, sample sizes, and how to switch from guided mode to advanced (KQL) mode.
+
 ## Use different data types
 
 Advanced hunting in guided mode supports several data types that you can use to fine-tune your query.
 
 - Numbers<br>
-![Screenshot of numbers as third condition](media/advanced-hunting-query-builder-details/21-numbers.png)
+![Screenshot of the query builder with a numeric field added as a condition](media/advanced-hunting-query-builder-details/21-numbers.png)
 
 - Strings<br>
-![Screenshot of strings as third condition](media/advanced-hunting-query-builder-details/21-string.png)
+![Screenshot of the query builder with a string field configured as a condition](media/advanced-hunting-query-builder-details/21-string.png)
 
    In the free text box, type the value and press **Enter** to add it. Note that the delimiter between values is **Enter**.<br>
 
-   ![Screenshot showing different conditions you can use](media/advanced-hunting-query-builder-details/23-string2.png)
+   ![Screenshot of the query builder showing multiple string values entered as filter conditions](media/advanced-hunting-query-builder-details/23-string2.png)
 
 - Boolean<br>
-![Screenshot of Boolean values as third condition](media/advanced-hunting-query-builder-details/24-boolean.png)
+![Screenshot of the query builder with a Boolean field used as a condition](media/advanced-hunting-query-builder-details/24-boolean.png)
 
 
 - Datetime<br>
-![Screenshot of datetime values as third condition](media/advanced-hunting-query-builder-details/25-datetime.png)
+![Screenshot of the query builder with a datetime field configured as a condition](media/advanced-hunting-query-builder-details/25-datetime.png)
 
 
 - Closed list - You don't need to remember the exact value you're looking for. You can easily choose from a suggested closed list that supports multi-selection.<br>
-![Screenshot of a closed list used as third condition](media/advanced-hunting-query-builder-details/26-closed.png)
+![Screenshot of the query builder with a predefined list of values available for multi-selection as a condition](media/advanced-hunting-query-builder-details/26-closed.png)
 
 
 ## Use subgroups
@@ -64,7 +64,7 @@ You can create groups of conditions by clicking **Add subgroup**:
 
 ![Screenshot highlighting Add subgroup button](media/advanced-hunting-query-builder-details/27-subgroup1.png)
 
-![Screenshot showing use of subgroups](media/advanced-hunting-query-builder-details/28-subgroup2.png)
+![Screenshot showing use of subgroups in query builder conditions](media/advanced-hunting-query-builder-details/28-subgroup2.png)
 
 ## Use smart auto-complete for search
 Smart auto-complete for searching devices and user accounts is supported. 
@@ -77,7 +77,7 @@ You can even look for specific event types like all failed logons, file modifica
 
 For instance, if you want to add a condition that looks for registry value deletions, you can go to the **Registry Events** section and select **EventType**.
 
-![Screenshot of various EventTypes](media/advanced-hunting-query-builder-details/30-eventtype1.png)
+![Screenshot of various EventTypes available in the Registry Events section](media/advanced-hunting-query-builder-details/30-eventtype1.png)
 
 Selecting EventType under Registry Events allows you to choose from different registry events, including the one you're hunting for, **RegistryValueDeleted**.
 
@@ -89,7 +89,7 @@ Selecting EventType under Registry Events allows you to choose from different re
 ## Test your query with a smaller sample size
 If you're still working on your query and would like to see its performance and some sample results quickly, adjust the number of records to return by picking a smaller set through the **Sample size** dropdown menu. 
  
-![Screenshot of sample size dropdown menu](media/advanced-hunting-query-builder-details/32-sample-size.png)
+![Screenshot of the sample size dropdown menu in guided mode](media/advanced-hunting-query-builder-details/32-sample-size.png)
 
 The sample size is set to 10,000 results by default, which is the maximum number of records that can be returned in hunting. However, we highly recommend lowering the sample size to 10 or 100 to quickly test your query, as doing so consumes less resources while you're still working on improving the query.
 
@@ -102,13 +102,14 @@ You can click on **Edit in KQL** to view the KQL query generated by your selecte
 
 ![Screenshot showing same query from guided to advanced](media/advanced-hunting-query-builder-details/33-edit-kql-2.png)
 
-In the above example, the selected view is All, therefore you can see that the KQL query searches all tables that have file properties of name and SHA256, and in all the relevant columns covering these properties. 
+In the file-name and SHA256 query example shown in the previous screenshot, the selected view is All, so the KQL query searches all tables that have file properties of name and SHA256, and in all the relevant columns covering these properties. 
 
 If you change the view to **Emails & collaboration**, the query is narrowed down to:
 
 ![Screenshot showing same query from guided to advanced but with limited domain](media/advanced-hunting-query-builder-details/34-edit-kql-3.png)
 
-## See also
+<a name="see-also"></a>
+## Related content
  - [Advanced hunting quotas and usage parameters](advanced-hunting-limits.md)
  - [Extend advanced hunting coverage with the right settings](advanced-hunting-extend-data.md)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

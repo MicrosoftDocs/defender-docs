@@ -1,34 +1,32 @@
-﻿---
+---
 title: Manage tamper protection using tenant attach with Configuration Manager, version 2006
 ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov, oogunrinde
-manager: bagol
 description: Turn tamper protection on or off using tenant attach with Configuration Manager.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 10/20/2025
-audience: ITPro
+ms.date: 06/16/2026
 ms.topic: how-to
 author: limwainstein
 ms.author: lwainstein
 ms.custom: 
+- msecd-doc-authoring-1014
 - nextgen
 - admindeeplinkDEFENDER
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
   - Microsoft Defender Antivirus
-
+ai-usage: ai-assisted
 ---
 # Manage tamper protection using tenant attach with Configuration Manager, version 2006
 
 
-[Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps protect certain [security settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on), such as virus and threat protection, from being disabled or changed. If you're part of your organization's security team, and you're using [version 2006 of Configuration Manager](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2006), you can manage the tamper protection feature for devices by using a method called *tenant attach*. Tenant attach enables you to sync your on-premises-only Configuration Manager devices into the Intune admin center, and then deliver endpoint security configuration policies to on-premises collections & devices. 
+[Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps protect certain [security settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on), such as virus and threat protection, from being disabled or changed. If you're part of your organization's security team, and you're using [version 2006 of Configuration Manager](/intune/configmgr/core/plan-design/changes/whats-new-in-version-2006), you can manage the tamper protection feature for devices by using a method called *tenant attach*. Tenant attach enables you to sync your on-premises-only Configuration Manager devices into the Intune admin center, and then deliver endpoint security configuration policies to on-premises collections & devices. 
 
 Using Configuration Manager with tenant attach, you can turn on (or off) the tamper protection feature for some or all devices. 
 
@@ -39,28 +37,34 @@ Using Configuration Manager with tenant attach, you can turn on (or off) the tam
 
 ## Prerequisites
 
+Make sure your environment meets the following requirements before you configure tamper protection with tenant attach.
+
 ### Supported operating systems
+
+Tamper protection using tenant attach is supported on the following operating systems:
 
 - Windows
 
-## Turn tamper protection using tenant attach
+<a name="turn-tamper-protection-using-tenant-attach"></a>
+## Turn tamper protection on or off by using tenant attach
 
-1. Set up tenant attach. To learn more, see [Get started: Create and deploy endpoint security policies from the admin center](/mem/configmgr/tenant-attach/endpoint-security-get-started).
+First, set up tenant attach. To learn more, see [Get started: Create and deploy endpoint security policies from the admin center](/intune/configmgr/tenant-attach/endpoint-security-get-started).
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** \> **Antivirus**, and then choose **+ Create Policy**.
+Then, create a new policy. To create a new policy, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
 
-   - In the **Platform** list, select **Windows 10, Windows 11, and Windows Server (ConfigMgr)**.
-   - In the **Profile** list, select **Windows Security experience (preview)**.
+- **Policy type**: Antivirus
+- **Platform**: Windows 10, Windows 11, and Windows Server (ConfigMgr)
+- **Profile**: Windows Security experience (preview)
+- **Configuration settings**: Set **Enable tamper protection to prevent Microsoft Defender from being disabled** to **Enabled** under **Windows Security**
 
-1. On the **Configuration settings** step, under **Windows Security**, set **Enable tamper protection to prevent Microsoft Defender from being disabled** to **Enabled**.
+Finish selecting options and settings for your policy and deploy the policy to your devices.
 
-1. Finish selecting options and settings for your policy.
+:::image type="content" source="media/tamper-protect-configmgr.png" alt-text="Screenshot showing Windows Security settings with tamper protection enabled.":::
 
-1. Deploy the policy to your devices.
+<a name="see-also"></a>
+## Related content
 
-    :::image type="content" source="media/tamper-protect-configmgr.png" alt-text="Screenshot showing Windows Security settings with tamper protection enabled.":::
-
-## See also
+The following resources provide more information about tamper protection:
 
 - [Frequently asked questions (FAQs) on tamper protection](faqs-on-tamper-protection.yml)
 - [Tech Community Blog: Announcing Tamper Protection for Configuration Manager Tenant Attach clients](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/announcing-tamper-protection-for-configuration-manager-tenant/ba-p/1700246#.X3QLR5Ziqq8.linkedin)

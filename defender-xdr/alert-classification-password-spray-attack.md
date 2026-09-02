@@ -1,25 +1,19 @@
 ---
 title: Alert classification for password spray attacks
-description: Alert classification guide for password spray attacks coming to review the alerts and take recommended actions to remediate the attack and protect your network.
+description: Investigate and classify password spray attack alerts as true or false positives. Includes recommended remediation steps to help protect your organization.
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
   - m365-security
   - tier2
-ms.custom: admindeeplinkDEFENDER
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
 ms.topic: how-to
-search.appverid:
-  - MOE150
-  - met150
-ms.date: 04/18/2025
+ms.date: 06/15/2026
 appliesto:
   - Microsoft Defender XDR
+ai-usage: ai-assisted
 #customer intent: As a SOC analyst, I want to know how to investigate and classify alerts for password spray attacks so that I can take the necessary actions to remediate the attack and protect my network.
 ---
 
@@ -27,7 +21,7 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Threat actors use innovative ways to compromise their target environments. One type of attack gaining traction is the password spray attack, where attackers aim to access many accounts within a network with minimal effort. Unlike traditional brute force attacks, where threat actors try many passwords on a single account, password spray attacks focus on guessing the correct password for many accounts with a limited set of commonly used passwords. It makes the attack particularly effective against organizations with weak or easily guessable passwords, leading to severe data breaches and financial losses for organizations.
+Threat actors use innovative ways to compromise their target environments. One type of attack gaining traction is the password spray attack, where attackers aim to access many accounts within a network with minimal effort. Unlike traditional brute force attacks, where threat actors try many passwords on a single account, password spray attacks focus on guessing the correct password for many accounts with a limited set of commonly used passwords. This approach makes the attack particularly effective against organizations with weak or easily guessable passwords, leading to severe data breaches and financial losses for organizations.
 
 Attackers use automated tools to repeatedly attempt to gain access to a specific account or system using a list of commonly used passwords. Attackers sometimes abuse legitimate cloud services by creating many virtual machines (VMs) or containers to launch a password spray attack.
 
@@ -41,13 +35,17 @@ The intended results of using this guide are:
 
 ## Investigation steps
 
-This section contains step-by-step guidance to respond to the alert and take the recommended actions to protect your organization from further attacks.
+The following investigation steps provide guidance to respond to the alert and take the recommended actions to protect your organization from further attacks.
 
 ### 1. Investigate the security alerts
+
+Review the alert details for indicators that the sign-in activity is suspicious.
 
   - **Are the alerted sign-in attempts coming from a suspicious location?** Check sign-in attempts from locations other than those typical for impacted user accounts. Multiple sign-in attempts from one or many users are helpful indicators.
 
 ### 2. Investigate suspicious user activity
+
+Examine the impacted user's recent activity for signs of account misuse across services and locations.
 
   - **Are there unusual events with uncommon properties?** Unique properties for an impacted user, like unusual ISP, country/region, or city, might indicate suspicious sign-in patterns. 
 
@@ -86,7 +84,7 @@ This section contains step-by-step guidance to respond to the alert and take the
 
 [Advanced hunting](advanced-hunting-overview.md) is a query-based threat hunting tool that lets you inspect events in your network and locate threat indicators.
 
-Use these queries to gather more information related to the alert and determine whether the activity is suspicious.
+Use these queries to gather more information related to the password spray alert and determine whether the activity is suspicious.
 
 Ensure you have access to the following tables:
 - [AadSignInEventsBeta](advanced-hunting-aadsignineventsbeta-table.md)
@@ -133,7 +131,7 @@ IdentityLogonEvents
 | summarize SuccessCount = countif(ActionType == "LogonSuccess"), FailureCount = countif(ActionType == "LogonFailed") by ISP
 ```
 
-Use this query to identify MFA fatigue attacks.
+Use this query to identify MFA fatigue attacks. It looks for Microsoft Entra ID sign-ins with MFA call exhaustion errors, which are common indicators of MFA fatigue attempts.
 
 ```kusto
 AADSignInEventsBeta
@@ -177,7 +175,7 @@ CloudAppEvents
 | project Timestamp, ReportId, AccountObjectId, ActivityObjects, TargetObjectId
 ```
 
-Use this query to find new email inbox rules created by the impacted user.
+Use this query to find suspicious inbox rules created by the impacted user during sessions associated with suspected compromise. This query helps identify post-compromise activity where attackers create inbox rules to hide or redirect email.
 
 ```kusto
 CloudAppEvents
@@ -202,4 +200,5 @@ Once you determine that the activities associated with this alert are malicious,
 
 - [Overview of alert classification](alert-classification-playbooks.md)
 - [Investigate alerts](investigate-alerts.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

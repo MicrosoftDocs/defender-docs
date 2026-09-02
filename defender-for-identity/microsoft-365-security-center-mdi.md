@@ -4,14 +4,8 @@ description: Learn how to use Microsoft Defender for Identity within the Microso
 ms.service: defender-xdr
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
-f1.keywords:
-- NOCSH
 ms.date: 02/14/2024
-audience: ITPro
 ms.topic: concept-article
-search.appverid: 
-- MOE150
-- MET150
 ms.collection: 
 - m365-security 
 - tier2
@@ -61,12 +55,12 @@ The following sections describe enhanced Defender for Identity features found in
 
 |Area |Description  |
 |---------|---------|
-| **Identities** area| In the Microsoft Defender portal, expand the **Identities** area to view a **Dashboard** of graphs and widgets with commonly used data, a **Health issues** page, listing all health issues for your Defender for Identity deployment, and a **Tools** page, with links to commonly used tools and documentation. <br><br>For more information, see [View the ITDR dashboard](/defender-for-identity/dashboard) and [Defender for Identity health issues](/defender-for-identity/health-alerts). |
+| **Identities** area| In the Microsoft Defender portal, expand the **Identities** area to view a **Dashboard** of graphs and widgets with commonly used data, and other identity security pages. The **Health issues** page, listing all health issues for your Defender for Identity deployment, is available under **Settings** > **Identities** > **Deployment**. <br><br>For more information, see [View the Identity Security dashboard](/defender-for-identity/dashboard) and [Defender for Identity health issues](/defender-for-identity/health-alerts). |
 |**Identity page**     |  The Microsoft Defender portal identity details page provides inclusive data about each identity, such as: <br><br>- Any associated alerts <br>- Active Directory account control<br>- Risky lateral movement paths<br>- A timeline of activities and alerts<br>- Details about observed locations, devices, and groups. <br><br>For more information, see [Investigate users in the Microsoft Defender portal](/defender-xdr/investigate-users). |
 |**Device page**     | The Microsoft Defender portal alert evidence lists all devices and users connected to each suspicious activity.  Investigate further by selecting a specific device in an alert to access a device details page.  <br><br>For more information, see [Investigate devices in the Microsoft Defender for Endpoint Devices list](/defender-endpoint/investigate-machines). |
 |**Advanced hunting**     |  The Microsoft Defender portal helps you proactively search for threats and malicious activity by using advanced hunting queries. These powerful queries can be used to locate and review threat indicators and entities for both known and potential threats. <br><br>Build custom detection rules from advanced hunting queries to help you proactively watch for events that might be indicative of breach activity and misconfigured devices. <br><br>For more information, see [Proactively hunt for threats with advanced hunting in the Microsoft Defender portal](/defender-xdr/advanced-hunting-overview).    |
 |**Global search**     | Use the search bar at the top of the Microsoft Defender portal page to search for any entity being monitored by Microsoft Defender XDR, including identities, endpoints, Office 365 data, Active Directory groups (Preview), and more. <br><br>Select results directly from the search drop-down, or select **All users** or **All devices** to see all entities associated with a given search term.  |
-| **Lateral movement paths** | The Microsoft Defender portal provides lateral movement path data on the **Advanced hunting** page and the **Lateral movement paths** security assessment, in addition to the **Lateral movement paths** tab on the user details page. <br><br> For more information, see [Understand and investigate lateral movement paths (LMPs) with Microsoft Defender for Identity](/defender-for-identity/understand-lateral-movement-paths). |
+
 
 ### Detection and response
 
@@ -84,13 +78,13 @@ The following table lists the changes in navigation between Microsoft Defender f
 | **Defender for** Identity  | **The Microsoft Defender portal**                                   |
 | -------------------------- | ------------------------------------------------------------ |
 | **Timeline**                   |- Microsoft Defender portal Alerts/Incidents queue                |
-| **Reports**                    |The following types of reports are available from the **Reports** > **Identities** > **Report management** page in the Microsoft Defender portal, either for immediate download or scheduled for a periodic email delivery: <br><br>- A summary report of alerts and health issues you should take care of. <br>- A list of each time a modification is made to sensitive groups. <br>- A list of source computer and account passwords that are detected as being sent in clear text.<br>- A list of the sensitive accounts exposed in lateral movement paths. <br><br>For more information, see [Report management](/defender-for-identity/reports).  |
+| **Reports**                    |The following types of reports are available from the **Reports** > **Identities** > **Report management** page in the Microsoft Defender portal, either for immediate download or scheduled for a periodic email delivery: <br><br>- A summary report of alerts and health issues you should take care of. <br>- A list of each time a modification is made to sensitive groups. <br>- A list of source computer and account passwords that are detected as being sent in clear text. <br> For more information, see [Report management](/defender-for-identity/reports).  |
 | **Identity page**                  | Microsoft Defender portal user details page                             |
 | **Device page**                | Microsoft Defender portal device details page                           |
 | **Group page**                 | Microsoft Defender portal groups side pane                      |
 | **Alert page**                 | Microsoft Defender portal alert details page <br><br>**Tip**: Use [alert tuning](/defender-xdr/investigate-alerts#tune-an-alert) to optimize the alerts you see in the Microsoft Defender portal.                        |
 | **Search**                     | Microsoft Defender portal global search                                |
-| **Health issues**              | Microsoft Defender portal **Identities > Health issues**                          |
+| **Health issues**              | Microsoft Defender portal **Settings > Identities > Health issues**                          |
 | **Entity activities**          | - **Advanced hunting** <br>- Device page > **Timeline** <br>- Identity page > **Timeline** tab  <br>- **Group** pane > **Timeline** tab                                           |
 | **Settings**                   | **Settings** -> **Identities**                                       |
 | **Users and accounts**         | **Assets** -> **Identities**                                         |

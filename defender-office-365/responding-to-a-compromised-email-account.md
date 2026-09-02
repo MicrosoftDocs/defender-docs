@@ -1,14 +1,7 @@
 ---
-title: Responding to a Compromised Email Account
-f1.keywords:
-  - NOCSH
-  - Hijacked account
-  - Hacked account
-  - Compromised account
+title: Respond to a compromised email account in Microsoft 365
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.collection:
   - o365_security_incident_response
@@ -17,18 +10,18 @@ ms.collection:
   - highpri
   - tier1
 ms.custom:
+  - msecd-doc-authoring-1016
   - TopSMBIssues
   - seo-marvel-apr2020
 ms.localizationpriority: high
-search.appverid:
-  - MET150
 description: Learn how to recognize and respond to a compromised email account using tools available in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 03/31/2025
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Respond to a compromised cloud email account
@@ -63,15 +56,18 @@ One or more of the following activities might indicate an account associated wit
 - Recently added [external email forwarding](outbound-spam-policies-external-email-forwarding.md).
 - Suspicious email message signatures. For example, a fake banking signature or a prescription drug signature.
 
-If the mailbox exhibits any of these symptoms, use the steps in the next section to regain control of the account.
+If the mailbox exhibits any of these symptoms, use the steps in [Secure and Restore Email Function to a Compromised Microsoft 365 Mail Enabled Account](#secure-and-restore-email-function-to-a-compromised-microsoft-365-mail-enabled-account) to regain control of the account.
 
-## Secure and Restore Email Function to a Compromised Microsoft 365 Mail Enabled Account
+<a name="secure-and-restore-email-function-to-a-compromised-microsoft-365-mail-enabled-account"></a>
+## Secure and restore email functionality for a compromised Microsoft 365 mail-enabled account
 
 After the attacker gains access to an account, you need to block access to the account as soon as possible.
 
 The following steps address known methods that might allow the attacker to maintain persistence and regain control of the account later. Be sure to address each step.
 
 ### Step 1: Disable the affected user account
+
+Use the following guidance to disable the affected user account during the investigation.
 
 - Disabling the compromised account is preferred and highly recommended until you complete the investigation.
 
@@ -124,15 +120,15 @@ The following steps address known methods that might allow the attacker to maint
 
 ### Step 2: Revoke User Access
 
-This step immediately invalidates any active access using the stolen credentials, and prevents the attacker from accessing more sensitive data or doing unauthorized actions on the compromised account.
+Revoking active sessions immediately invalidates any active access using the stolen credentials, and prevents the attacker from accessing more sensitive data or doing unauthorized actions on the compromised account.
 
-1. Run the following command in an elevated PowerShell window (a PowerShell window you open by selecting **Run as administrator**):
+1. If your environment blocks local script execution, set the PowerShell execution policy to `RemoteSigned` so you can install and run the required Microsoft Graph modules. Run the following command in an elevated PowerShell window (a PowerShell window you open by selecting **Run as administrator**):
 
    ```powershell
    Set-ExecutionPolicy RemoteSigned
    ```
 
-2. If necessary, run the following commands to install the required modules for Microsoft Graph PowerShell:
+2. If necessary, install the Microsoft Graph PowerShell modules required to authenticate and revoke active user sessions:
 
    ```powershell
    Install-Module Microsoft.Graph.Authentication
@@ -140,19 +136,19 @@ This step immediately invalidates any active access using the stolen credentials
    Install-Module Microsoft.Graph.Users.Actions
    ```
 
-3. Connect to Microsoft Graph by running the following command:
+3. Connect to Microsoft Graph with the `User.RevokeSessions.All` permission scope so you can invalidate the user's active sign-in sessions:
 
    ```powershell
    Connect-MgGraph -Scopes User.RevokeSessions.All
    ```
 
-4. Replace \<UPN\> with the user's account (user principal name or UPN), and then run the following command:
+4. To revoke all active sign-in sessions and invalidate existing refresh tokens for the affected user, replace \<UPN\> with the user's account (user principal name or UPN), and then run the following command:
 
    ```powershell
    Revoke-MgUserSignInSession -UserId <UPN>
    ```
 
-   For example:
+   For example, the following command revokes all active sessions for the user `jason@contoso.onmicrosoft.com`:
 
    ```powershell
    Revoke-MgUserSignInSession -UserId jason@contoso.onmicrosoft.com
@@ -164,7 +160,7 @@ For more information, see [Revoke user access in an emergency in Microsoft Entra
 
 Identify and remove any suspicious devices added by an attacker. Also, ensure any unrecognized MFA methods are removed to secure the user's account.
 
-For instructions, see [MFA methods removed](/entra/identity/authentication/howto-mfa-userdevicesettings#manage-user-authentication-options)
+For instructions, see [Manage user authentication options](/entra/identity/authentication/howto-mfa-userdevicesettings#manage-user-authentication-options).
 
 ### Step 4: Review the list of applications with user consent
 
@@ -189,13 +185,13 @@ Remove any suspicious mailbox forwarding that the attacker added.
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-2. To see if mailbox forwarding (also known as *SMTP forwarding*) is configured on the mailbox, replace \<Identity\> with the name, email address, or account name of the mailbox, and then run the following command:
+2. To check whether the mailbox has forwarding settings that redirect messages to another recipient (also known as *SMTP forwarding*), replace \<Identity\> with the name, email address, or account name of the mailbox, and then run the following command:
 
    ```powershell
    Get-Mailbox -Identity \<Identity\> | Format-List Forwarding*Address,DeliverTo*
    ```
 
-   For example:
+   For example, the following command inspects the forwarding settings on Jason's mailbox:
 
    ```powershell
    Get-Mailbox -Identity jason@contoso.com | Format-List Forwarding*Address,DeliverTo*
@@ -209,13 +205,13 @@ Remove any suspicious mailbox forwarding that the attacker added.
      - True: Messages are delivered to this mailbox and forwarded to the specified recipient.
      - False: Messages are forwarded to the specified recipient. Messages aren't delivered to this mailbox.
 
-3. To see if any Inbox rules are forwarding email from the mailbox, replace \<Identity\> with the name, email address, or account name of the mailbox, and then run the following command:
+3. To review all Inbox rules (including hidden ones) for rules that redirect or forward messages without the user's knowledge, replace \<Identity\> with the name, email address, or account name of the mailbox, and then run the following command:
 
    ```powershell
    Get-InboxRule -Mailbox <Identity> -IncludeHidden | Format-List Name,Enabled,RedirectTo,Forward*,Identity
    ```
 
-   For example:
+   For example, the following command inspects Inbox rules on Jason's mailbox for suspicious forwarding behavior:
 
    ```powershell
    Get-InboxRule -Mailbox jason@contoso.com -IncludeHidden | Format-List Name,Enabled,RedirectTo,Forward*,Identity
@@ -241,7 +237,8 @@ Remove any suspicious mailbox forwarding that the attacker added.
 
 For more information, see [Control automatic external email forwarding](/defender-office-365/outbound-spam-policies-external-email-forwarding).
 
-## Perform an Investigation
+<a name="perform-an-investigation"></a>
+## Investigate the compromised account
 
 When a user reports unusual symptoms, it's crucial to conduct a thorough investigation. The Microsoft Entra admin center and the Microsoft Defender portal provide several tools to help examining suspicious activity on user accounts. Be sure to review the audit logs from the onset of the suspicious activity until you complete the remediation steps.
 
@@ -270,14 +267,17 @@ By analyzing the provided logs, you can pinpoint the specific time frame that re
 
 ## After the investigation is complete
 
-1. If you disabled the account during the investigation, reset the password and then enable the account as described [earlier in this article](#step-1-disable-the-affected-user-account)
+Complete the following tasks after you finish the investigation:
+
+1. If you disabled the account during the investigation, reset the password and then enable the account as described in [Step 1: Disable the affected user account](#step-1-disable-the-affected-user-account).
 
 2. If the account was used to send spam or a high volume of email, it's likely that the mailbox is blocked from sending mail. Remove the user from the Restricted entities page as described in [Remove blocked users from the Restricted entities page](outbound-spam-restore-restricted-users.md).
 
-## More resources
+<a name="more-resources"></a>
+## Related content
 
-[Detect and Remediate Outlook Rules and Custom Forms Injections Attacks](detect-and-remediate-outlook-rules-forms-attack.md)
+For related guidance, see the following resources:
 
-[Detect and Remediate Illicit Consent Grants](detect-and-remediate-illicit-consent-grants.md)
-
-[Report spam, nonspam, phishing, suspicious email, and files to Microsoft](submissions-report-messages-files-to-microsoft.md)
+- [Detect and Remediate Outlook Rules and Custom Forms Injections Attacks](detect-and-remediate-outlook-rules-forms-attack.md)
+- [Detect and Remediate Illicit Consent Grants](detect-and-remediate-illicit-consent-grants.md)
+- [Report spam, nonspam, phishing, suspicious email, and files to Microsoft](submissions-report-messages-files-to-microsoft.md)

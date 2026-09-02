@@ -1,4 +1,4 @@
-﻿---
+---
 title: Integrate Microsoft Defender for Endpoint with other Microsoft solutions
 description: Learn how Microsoft Defender for Endpoint integrates with other Microsoft solutions, including Microsoft Defender for Identity and Microsoft Defender for Cloud.
 author: limwainstein
@@ -6,13 +6,10 @@ ms.author: lwainstein
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: concept-article
-search.appverid: met150
 ms.date: 03/26/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -64,7 +61,7 @@ The Skype for Business integration provides a way for analysts to communicate wi
 
 <a name='microsoft-365-defender'></a>
 
-## Microsoft Defender XDR
+## Microsoft Defender
 
 With Microsoft Defender XDR, Microsoft Defender for Endpoint, and various Microsoft security solutions form a unified pre- and post-breach enterprise defense suite that natively integrates across endpoint, identity, email, and applications to detect, prevent, investigate, and automatically respond to sophisticated attacks.
 

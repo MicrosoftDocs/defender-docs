@@ -1,22 +1,17 @@
 ---
 title: Microsoft Defender for Office 365 trial user guide
-f1.keywords:
-- NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: article
 ms.collection: 
 - m365-security
 - tier1
 ms.localizationpriority: high
 ms.service: defender-office-365
-search.appverid:
-- MOE150
-- MET150
 description: "Microsoft Defender for Office 365 solutions trial user guide."
-ms.custom: trial-user guide
+ms.custom:
+  - trial-user guide
+  - sfi-image-nochange
 ms.date: 02/24/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -251,4 +246,4 @@ Equip your users with the right knowledge to identify threats and report suspici
 - **Fast Track Get Started Guide**: [Microsoft Defender for Office 365](https://go.microsoft.com/fwlink/p/?linkid=2197415)
 - **Microsoft Defender for Office 365 documentation**: Get detailed information on how Defender for Office 365 works and how to best implement it for your organization. Visit the [Microsoft Defender for Office 365 documentation](mdo-about.md).
 - **What's included**: For a full list of Office 365 email security features listed by product tier, view the [Feature Matrix](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability).
-- **Why Defender for Office 365**: The [Defender for Office 365 Datasheet](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FCiy) shows the top 10 reasons customers choose Microsoft.
+- **Why Defender for Office 365**: The [Defender for Office 365 Datasheet](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Defender-For-Office-365-Datasheet.pdf) shows the top 10 reasons customers choose Microsoft.

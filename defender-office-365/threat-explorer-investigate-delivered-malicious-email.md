@@ -1,30 +1,26 @@
 ---
-title: Investigate malicious email that was delivered in Microsoft 365, find and investigate malicious email
+title: Investigate malicious email delivered in Microsoft 365
 keywords: TIMailData-Inline, Security Incident, incident, Microsoft Defender for Endpoint PowerShell, email malware, compromised users, email phish, email malware, read email headers, read headers, open email headers,special actions
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-ms.date: 2/27/2024
-audience: ITPro
+ms.date: 07/03/2026
 ms.topic: how-to
 
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.assetid: 8f54cd33-4af7-4d1b-b800-68f8818e5b2a
 ms.collection:
   - m365-security
   - tier1
 description: Learn how to use threat investigation and response capabilities to find and investigate malicious email.
 ms.custom:
-- seo-marvel-apr2020
+  - msecd-doc-authoring-1016
+  - seo-marvel-apr2020
+  - sfi-image-nochange
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Investigate malicious email that was delivered in cloud organizations
@@ -51,6 +47,8 @@ This article explains how to use Threat Explorer and Real-time detections to fin
 
 ## What do you need to know before you begin?
 
+Review the following licensing, permissions, and filtering considerations before you begin.
+
 - Threat Explorer is included in Defender for Office 365 Plan 2. Real-time detections is included in Defender for Office Plan 1:
   - The differences between Threat Explorer and Real-time detections are described in [About Threat Explorer and Real-time detections in Microsoft Defender for Office 365](threat-explorer-real-time-detections-about.md).
   - The differences between Defender for Office 365 Plan 2 and Defender for Office Plan 1 are described in the [Defender for Office 365 Plan 1 vs. Plan 2 cheat sheet](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet).
@@ -60,6 +58,8 @@ This article explains how to use Threat Explorer and Real-time detections to fin
 - For permissions and licensing requirements for Threat Explorer and Real-time detections, see [Permissions and licensing for Threat Explorer and Real-time detections](threat-explorer-real-time-detections-about.md#permissions-and-licensing-for-threat-explorer-and-real-time-detections).
 
 ## Find suspicious email that was delivered
+
+Use the following steps to locate suspicious delivered email in Threat Explorer or Real-time detections.
 
 1. Use one of the following steps to open Threat Explorer or Real-time detections:
    - **Threat Explorer**: In the Defender portal at <https://security.microsoft.com>, go to **Email & Security** \> **Explorer**. Or, to go directly to the **Explorer** page, use <https://security.microsoft.com/threatexplorerv3>.
@@ -90,7 +90,7 @@ This article explains how to use Threat Explorer and Real-time detections to fin
      - **Quarantine**
      - **Unknown**: For example, after delivery, an Inbox rule moved the message to a default folder (for example, Draft or Archive) instead of to the Inbox or Junk Email folder.
 
-   - **Last delivery location**: Where email ended-up after any automatic or manual post-delivery actions by the system or admins. The same values are available from **Original delivery location**.
+   - **Last delivery location**: Where email ended-up after any automatic or manual post-delivery actions by the system or admins. The available values are the same as **Original delivery location**: Deleted items folder, Dropped, Failed, Inbox/folder, Junk folder, On-prem/external, Quarantine, and Unknown.
 
    - **Directionality**: Valid values are:
      - **Inbound**
@@ -160,18 +160,18 @@ This article explains how to use Threat Explorer and Real-time detections to fin
 
 The **Email** tab (view) in the details area of the **[All email](threat-explorer-real-time-detections-about.md#email-view-for-the-details-area-of-the-all-email-view-in-threat-explorer)**, **[Malware](threat-explorer-real-time-detections-about.md#email-view-for-the-details-area-of-the-malware-view-in-threat-explorer-and-real-time-detections)**, or **[Phish](threat-explorer-real-time-detections-about.md#email-view-for-the-details-area-of-the-phish-view-in-threat-explorer-and-real-time-detections)** views contains the details you need to investigate suspicious email.
 
-For example, Use the **Delivery Action**, **Original delivery location**, and **Last delivery location** columns in the **Email** tab (view) to get a complete picture of where the affected messages went. The values were explained in Step 4.
+For example, use the **Delivery Action**, **Original delivery location**, and **Last delivery location** columns in the **Email** tab (view) to get a complete picture of where the affected messages went. **Delivery Action** shows whether the message was delivered, junked, or blocked. **Original delivery location** shows where the message went initially (for example, Inbox, Junk folder, or Quarantine), and **Last delivery location** shows where the message ended up after any post-delivery actions by the system or admins.
 
-Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to selectively export up to 200,000 filtered or unfiltered results to a CSV file.
+Use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to selectively export up to 200,000 filtered or unfiltered results to a CSV file.
 
 ## Remediate malicious email that was delivered
 
-After you identify the malicious email messages that were delivered, you can remove them from recipient mailboxes. For instructions, see [Remediate malicious email delivered](remediate-malicious-email-delivered-office-365.md).
+After you identify the malicious email messages that were delivered, you can remove them from recipient mailboxes. For instructions, see [Remediate malicious email delivered in Office 365](remediate-malicious-email-delivered-office-365.md).
 
 ## Related articles
 
-[Remediate malicious email delivered in Office 365](remediate-malicious-email-delivered-office-365.md)
+For more information, see the following articles:
 
-[Microsoft Defender for Office 365](office-365-ti.md)
-
-[View reports for Defender for Office 365](reports-defender-for-office-365.md)
+- [Remediate malicious email delivered in Office 365](remediate-malicious-email-delivered-office-365.md)
+- [Microsoft Defender for Office 365](office-365-ti.md)
+- [View reports for Defender for Office 365](reports-defender-for-office-365.md)

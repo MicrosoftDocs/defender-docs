@@ -1,16 +1,11 @@
 ---
 title: Details and results of an automated investigation
 description: View the results and key findings of automated investigation in Microsoft Defender XDR
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords: 
-- NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 04/28/2025
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -27,6 +22,8 @@ appliesto:
 # Details and results of an automated investigation
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
+[!INCLUDE [defender-endpoint-air-deprecation](../includes/defender-endpoint-air-deprecation.md)]
 
 With Microsoft Defender XDR, when an [automated investigation](m365d-autoir.md) runs, details about that investigation are available both during and after the automated investigation process. If you have the [necessary permissions](m365d-action-center.md#required-permissions-for-action-center-tasks), you can view those details in an investigation details view that provides you with up-to-date status and the ability to approve any pending actions. 
 

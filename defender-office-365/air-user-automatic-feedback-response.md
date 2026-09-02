@@ -3,14 +3,16 @@ title: Automatic user notifications for user reported phishing results in AIR
 description: Admins can learn about the automatic feedback response feature that sends the results of automated investigation and response (AIR) to user reported phishing messages.
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.reviewer: kellycrider
 ms.topic: overview
-ms.date: 11/17/2024
+ms.date: 07/10/2026
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ms.custom:
+  - sfi-ga-nochange
+  - sfi-image-nochange
 ---
 
 # Automatic user notifications for user reported phishing results in AIR
@@ -18,6 +20,9 @@ appliesto:
 In Microsoft 365 organizations with [Microsoft Defender for Office 365 Plan 2](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet), when a user reports a message as phishing, an investigation is automatically created in [automated investigation and response (AIR)](air-about.md). Admins can configure the user reported message settings to send an email notification to the user who reported the message based on the verdict from AIR. This notification is also known as _automatic feedback response_. For more information, see [User reported settings](submissions-user-reported-messages-custom-mailbox.md).
 
 This article explains how to enable and customize automatic feedback response for specific AIR verdicts, how the notification email messages are sent, and what the notifications look like.
+
+> [!TIP]
+> In organizations with Defender for Office 365 Plan 2 and Security Copilot, the [Phishing Triage Agent](/defender-xdr/phishing-triage-agent) complements AIR by autonomously triaging and classifying user-reported phishing emails before investigation begins, reducing manual workload for security teams.
 
 ## What do you need to know before you begin?
 
@@ -42,14 +47,14 @@ This article explains how to enable and customize automatic feedback response fo
 
    :::image type="content" source="media/air-automatic-feedback.png" alt-text="Automatic feedback response options on the User reported settings page." lightbox="media/air-automatic-feedback.png":::
 
-4. The notification email uses the same template as when an admin selects :::image type="icon" source="media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify** on the **Submissions** page at <https://security.microsoft.com/reportsubmission>.
+4. The notification email uses the same template as when an admin selects :::image type="icon" source="media/defender-portal-icon-mark-and-notify.png" border="false"::: **Mark as and notify** on the **Submissions** page at <https://security.microsoft.com/reportsubmission>.
 
    You can customize the notification email by selecting the **Customize results email** link.
 
    In the **Customize admin review email notifications** flyout that opens, configure the following settings on the **Phishing** (which corresponds to the **Phishing or malware** automatic feedback response option), **Junk** and **No threats found** tabs:
 
-   - **Email body results text**: Enter the custom text to use. You can use different text for **Phishing**, **Junk** and **No threats found**.
-   - **Email footer text**: Enter the custom message footer text to use. The same text is used for **Phishing**, **Junk** and **No threats found**.
+   - **Email body results text**: Enter the custom text to use. You can use different text for **Phishing**, **Junk** and **No threats found**. The maximum length is 1115 characters.
+   - **Email footer text**: Enter the custom message footer text to use. The same text is used for **Phishing**, **Junk** and **No threats found**. The maximum length is 1115 characters.
 
    :::image type="content" source="media/air-automatic-feedback-customize-email-notifications.png" alt-text="The user email notification customization options on the User reported settings page." lightbox="media/air-automatic-feedback-customize-email-notifications.png":::
 

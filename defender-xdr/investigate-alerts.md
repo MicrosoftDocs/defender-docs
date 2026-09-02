@@ -2,26 +2,23 @@
 title: Investigate alerts in Microsoft Defender XDR
 description: Investigate alerts seen across devices, users, and mailboxes.
 ms.service: defender-xdr
-f1.keywords:
-- NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection:
 - m365-security
 - m365initiative-m365-defender
 - tier1
-ms.custom: admindeeplinkDEFENDER
+ms.custom:
+  - msecd-doc-authoring-1014
+  - admindeeplinkDEFENDER
+  - sfi-ga-nochange
 ms.topic: how-to
-search.appverid:
-- MOE150
-- met150
-ms.date: 01/23/2026
+ms.date: 06/15/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
+ai-usage: ai-assisted
 ---
 
 # Investigate alerts in Microsoft Defender XDR
@@ -31,11 +28,14 @@ appliesto:
 > [!NOTE]
 > This article describes security alerts in Microsoft Defender XDR. However, you can use alert policies to send email notifications to yourself or other admins when users perform specific activities in Microsoft 365. For more information, see [Alert policies in the Microsoft Defender portal](alert-policies.md).
 
+> [!NOTE]
+> While this article is specific to Defender XDR, you don't necessarily need an XDR license to access these alerts. For example, if you have Microsoft Defender for Office 365, you get alerts in the locations mentioned in this article. Depending on your license level, you have access to some Defender XDR settings in the Defender settings catalog. For more information on Defender for 365, see the [Microsoft Defender for Office 365 documentation](/defender-office-365/).
+
 Alerts are signals that result from various threat detection activities. These signals are produced by the many security services that reside in the Microsoft Defender portal, and they indicate the occurrence of malicious or suspicious events in your environment.
 
-These suspicious events are typically part of a broader attack story. In the Microsoft Defender portal, alerts represent individual pieces of evidence that Defender XDR correlates together to form [incidents](incidents-overview.md). Incidents tell the whole attack story; however, analyzing alerts can be valuable when deeper analysis is required.
+These suspicious events are typically part of a broader attack story. In the Microsoft Defender portal, alerts represent individual pieces of evidence that Defender XDR correlates together to form [incidents](incidents-overview.md) (see [Incidents overview](incidents-overview.md)). Incidents tell the whole attack story; however, analyzing alerts can be valuable when deeper analysis is required.
 
-The **Alerts queue** shows the current set of alerts. You can view the entire alerts queue from **Incidents & alerts > Alerts** on the quick launch of the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139). You can also see the alerts for each incident on the **incidents queue**, and on each individual incident's page, on the **Alerts** tab.
+The **Alerts queue** shows the current set of alerts. You can view the entire alerts queue from **Incidents & alerts > Alerts** on the quick launch of the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139). You can also see the alerts for each incident on the [Incidents queue](incidents-overview.md), and on each individual incident's page, on the **Alerts** tab.
 
 :::image type="content" source="media/investigate-alerts/alerts-page-defender-small.png" alt-text="The Alerts section in the Microsoft Defender portal" lightbox="media/investigate-alerts/alerts-page-defender.png":::
 
@@ -88,25 +88,21 @@ To search for specific alerts, enter the search term in the search bar. You can 
 
 :::image type="content" source="media/investigate-alerts/alerts-search-bar-small.png" alt-text="Highlighting the search bar in the Alerts queue" lightbox="media/investigate-alerts/alerts-search-bar.png":::
 
-## Required roles for Defender for Office 365 alerts
+## Permissions
 
-You'll need to have any of the following roles to access Microsoft Defender for Office 365 alerts:
+Access to alerts in the Microsoft Defender portal is controlled by Microsoft Defender permissions and role assignments.
 
-- For Microsoft Entra global roles:
-  - Global Administrator
-  - Security Administrator
-  - Security Operator
-  - Global Reader
-  - Security Reader
+### Role assignments
 
-- Office 365 Security & Compliance Role Groups
-  - Compliance Administrator
-  - Organization Management
+You can receive the permissions required to view alerts through these role assignments:
 
-- A [custom role](custom-roles.md)
+- Microsoft Entra roles, such as Security Reader, Security Operator, or Security Administrator.
+- Microsoft Defender custom roles that include permissions to access security data, such as Security data basics (read).
+
+For more information, see [Permissions in Microsoft Defender unified role-based access control (RBAC)](manage-rbac.md).
 
 > [!NOTE]
-> Microsoft recommends using roles with fewer permissions for better security. The Global Administrator role, which has many permissions, should only be used in emergencies when no other role fits.
+> Microsoft Sentinel data continues to use Microsoft Sentinel workspace permissions. To view alerts that contain Microsoft Sentinel data, you need the appropriate Azure RBAC permissions on the corresponding Sentinel workspace. For more information, see [Connect Microsoft Sentinel to the Microsoft Defender portal](/unified-secops-platform/microsoft-sentinel-onboard).
 
 ## Analyze an alert
 
@@ -172,13 +168,13 @@ You can also access **Alert service settings** directly from the **Incidents** p
 
 ### Analyze affected assets
 
-The **Actions taken** section has a list of impacted assets, such as mailboxes, devices, and users affected by this alert.
+On an alert details page, the **Actions taken** section lists impacted assets, such as mailboxes, devices, and users affected by the alert.
 
 You can also select **View in action center** to view the **History** tab of the **Action center** in the Microsoft Defender portal.
 
 ### Trace an alert's role in the alert story
 
-The alert story displays all assets or entities related to the alert in a process tree view. The alert in the title is the one in focus when you first land on your selected alert's page. Assets in the alert story are expandable and clickable. They provide additional information and expedite your response by allowing you to take action right in the context of the alert page.
+The alert story displays all assets or entities related to the alert in a process tree view. On the alert details page, the alert named in the page title is the one initially in focus. Assets in the alert story are expandable and clickable. They provide additional information and expedite your response by allowing you to take action right in the context of the alert page.
 
 > [!NOTE]
 > The alert story section may contain more than one alert, with additional alerts related to the same execution tree appearing before or after the alert you've selected.
@@ -207,6 +203,7 @@ The **Manage alert** pane allows you to view or specify:
 - A comment on the alert.
 
 > [!NOTE]
+>
 > - In August 2022, previously supported alert determination values (`Apt` and `SecurityPersonnel`) were deprecated and are no longer available via the API.
 >
 > - One way of managing alerts it through the use of tags. The tagging capability for Microsoft Defender for Office 365 is currently in preview, rolling out incrementally.
@@ -233,24 +230,33 @@ The **Recommendations** tab provides next-step actions and advice for investigat
 
 ## Tune an alert
 
+
+As a security operations center (SOC) analyst, one of the top issues is triaging the sheer number of alerts that are triggered daily. While wanting to focus only on high severity and high priority alerts, analysts are also required to triage and resolve lower priority alerts, which tend to be a manual process.
 Alert tuning (previously *alert suppression*) lets you hide or resolve alerts automatically when expected organizational behavior occurs and rule conditions are met. This streamlines your alert queue and saves triage time.
 
-Alert tuning rules support conditions based on *evidence types* such as files, processes, scheduled tasks, and other evidence that triggers alerts.
+Alert tuning rules support conditions based on *evidence types* such as files, processes, scheduled tasks, and other types of evidence that trigger alerts. After creating an alert tuning rule, apply it to the selected alert or any alert type that meets the defined conditions to tune the alert.
 
-> [!NOTE]
-> Alert tuning is generally available for Defender for Endpoint. In preview, it extends to other Microsoft Defender XDR services, including Defender for Office 365, Defender for Identity, Defender for Cloud Apps, and Microsoft Entra ID Protection.
+Microsoft Defender XDR includes built-in alert tuning rules that help reduce reporting noise from common benign activity. These built-in rules suppress alerts without affecting other features like AIR investigations and email notifications. If the AIR investigation detects malicious or suspicious activity, Defender XDR reactivates the suppressed alert.
 
-Microsoft Defender XDR also includes built-in alert tuning rules (currently in Preview) that suppress alerts from common benign activity without affecting Automated Investigation and Response (AIR) investigations and email notifications.
+You can also create your own custom alert tuning rules to perform one of the following actions when specific conditions are met:
+
+- **Hide alert**: Suppresses the alert and prevents incident creation. Hidden alerts remain in *AlertInfo* and *AlertEvidence* tables.
+This action is only applicable for Defender for Endpoint alerts.
+- **Resolve alert**: Automatically resolves the alert and related incidents. Matching alerts and their associated incidents are triggered with resolved status.
+- **Set as behavior**: Converts matching signals into behaviors. They won’t appear in the alert queue or trigger incidents. Data remains in *BehaviorInfo* and *BehaviorEntities* tables for hunting. This action isn't supported for Defender for Cloud or Microsoft Defender for Office 365 alerts.
+
+Microsoft Defender XDR also includes built-in alert tuning rules that suppress alerts from common benign activity without affecting Automated Investigation and Response (AIR) investigations and email notifications.
 
 > [!CAUTION]
 > Use alert tuning with caution, for scenarios where known, internal business applications or security tests trigger expected activity.
-
 
 ### Create rule conditions to tune alerts
 
 Create alert tuning rules from the Microsoft Defender XDR **Settings** area or from an alert details page. Select one of the following tabs to continue.
 
-#### [Settings page](#tab/settings)
+#### [Create a rule from the Settings page](#tab/settings)
+
+To create an alert tuning rule from the Settings page, follow these steps:
 
 1. In the Microsoft Defender portal, select **Settings > Microsoft Defender XDR > Alert tuning**.
 
@@ -270,11 +276,13 @@ Create alert tuning rules from the Microsoft Defender XDR **Settings** area or f
 
    - To set multiple rule conditions, select **Add filter** and use **AND**, **OR**, and grouping options to define the relationships between the multiple evidence types that trigger the alert. Further evidence properties are automatically populated as a new subgroup, where you can define your condition values. Condition values aren't case sensitive, and some properties support wildcards.
 
-1. In the **Action** area of the **Tune alert** pane, select the relevant action you want the rule to take, either **Hide alert** or **Resolve alert**.
+1. In the **Action** area of the **Tune alert** pane, select the relevant action you want the rule to take. Choose from **Hide alert**, **Resolve alert**, or **Set as behavior**.
 
 1. Enter a meaningful name for your alert and a comment to describe the alert, and then select **Save**.
 
-#### [Alerts page](#tab/alerts)
+#### [Create a rule from the Alerts page](#tab/alerts)
+
+To create an alert tuning rule from an alert details page, follow these steps:
 
 1. In the Microsoft Defender portal, go to the **Alerts** page or an alert details page. If you're on the **Alerts** page, first select the alert you want to tune, and then select **Tune alert**. Depending on your screen resolution, you might need to select the ellipsis (**...**) to see the **Tune alert** option. For example:
 
@@ -284,23 +292,23 @@ Create alert tuning rules from the Microsoft Defender XDR **Settings** area or f
 
    :::image type="content" source="./media/investigate-alerts/tune-alert-pane-alert-details.png" alt-text="Screenshot of the Tune alert pane from the Alerts page.":::
 
-1. Configure the following details, and then select **Save**:
+1. In the **Alert types** area, select to apply the alert tuning rule only to alerts of the selected type, or any alert type based on the same conditions. If you select **Any alert type based on certain conditions**, also select the service sources where you want the rule to apply. Only services where you have permissions are shown in the list. For example:
 
-  1. In the **Alert types** area, select to apply the alert tuning rule only to alerts of the selected type, or any alert type based on the same conditions. If you select **Any alert type based on certain conditions**, also select the service sources where you want the rule to apply. Only services where you have permissions are shown in the list. For example:
+    :::image type="content" source="./media/investigate-alerts/alert-tuning-alert-details-service-sources.png" alt-text="Screenshot of the Service sources area showing in the Tune alert pane.":::
 
-      :::image type="content" source="./media/investigate-alerts/alert-tuning-alert-details-service-sources.png" alt-text="Screenshot of the Service sources area showing in the Tune alert pane.":::
+1. In the **Conditions** area, add a condition for the alert's triggers. For example, if you want to prevent an alert from being triggered when a specific file is created, define a condition for the **File:Custom** trigger, and define the file details:
 
-  1. In the **Conditions** area, add a condition for the alert's triggers. For example, if you want to prevent an alert from being triggered when a specific file is created, define a condition for the **File:Custom** trigger, and define the file details:
+    :::image type="content" source="./media/investigate-alerts/alert-tuning-alert-details-conditions.png" alt-text="Screenshot of the Conditions area in the Alert tuning pane.":::
 
-      :::image type="content" source="./media/investigate-alerts/alert-tuning-alert-details-conditions.png" alt-text="Screenshot of the Conditions area in the Alert tuning pane.":::
+     - Listed triggers differ, depending on the service sources you selected. Triggers are all indicators of compromise (IOCs), such as files, processes, scheduled tasks, and other evidence types that might trigger an alert, including AntiMalware Scan Interface (AMSI) scripts, Windows Management Instrumentation (WMI) events, or scheduled tasks.
 
-      - Listed triggers differ, depending on the service sources you selected. Triggers are all indicators of compromise (IOCs), such as files, processes, scheduled tasks, and other evidence types that might trigger an alert, including AntiMalware Scan Interface (AMSI) scripts, Windows Management Instrumentation (WMI) events, or scheduled tasks.
+     - To set multiple rule conditions, select **Add filter** and use **AND**, **OR**, and grouping options to define the relationships between the multiple evidence types that trigger the alert. Further evidence properties are automatically populated as a new subgroup, where you can define your condition values. Condition values aren't case sensitive, and some properties support wildcards.
 
-      - To set multiple rule conditions, select **Add filter** and use **AND**, **OR**, and grouping options to define the relationships between the multiple evidence types that trigger the alert. Further evidence properties are automatically populated as a new subgroup, where you can define your condition values. Condition values aren't case sensitive, and some properties support wildcards.
+1. In the **Action** area of the **Tune alert** pane, select the relevant action you want the rule to take. Choose from **Hide alert**, **Resolve alert**, or **Set as behavior**.
 
-  1. In the **Action** area of the **Tune alert** pane, select the relevant action you want the rule to take, either **Hide alert** or **Resolve alert**.
+1. Enter a meaningful name for your alert and a comment to describe the alert.
 
-  1. Enter a meaningful name for your alert and a comment to describe the alert.
+1. Select **Save**
 
 ---
 
@@ -326,22 +334,24 @@ Modern security operations (SecOps) teams need automation to work effectively. T
 
 ### Criteria for resolving alerts
 
+In this Power Automate example, the flow checks the following criteria to decide whether to resolve the alert automatically:
+
 - User has Out-of-office message turned on
 - User isn't tagged as high risk
 
-If both are true, SecOps marks the alert as legitimate travel and resolves it. A notification is posted in Microsoft Teams after the alert is resolved.
+If the user has an Out-of-office message turned on and isn't tagged as high risk, SecOps marks the alert as legitimate travel and resolves it. A notification is posted in Microsoft Teams after the alert is resolved.
 
 ### Connect Power Automate to Microsoft Defender for Cloud Apps
 
 To create the automation, you'll need an API token before you can connect Power Automate to Microsoft Defender for Cloud Apps.
 
-1. Open [Microsoft Defender](https://security.microsoft.com/) and select **Settings** > **Cloud Apps** > **API token**, and then select **Add token** in the **API tokens** tab.
+1. Open the [Microsoft Defender portal](https://security.microsoft.com/) and select **Settings** > **Cloud Apps** > **API token**, and then select **Add token** in the **API tokens** tab.
 
 2. Provide a name for your token, and then select **Generate**. Save the token as you'll need it later.
 
 ### Create an automated flow
 
-Watch this short video to learn how automation works efficiently to create a smooth workflow and how to connect Power Automate to Defender for Cloud Apps.
+Watch the following video to learn how to connect Power Automate to Defender for Cloud Apps and create an automated alert triage workflow.
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=01afebcb-850c-4a6f-abb4-692188ac6de7]
 
@@ -355,9 +365,10 @@ For more information, see [Microsoft Security Copilot Dynamic Threat Detection A
 
 ## Next steps
 
-As needed for in-process incidents, continue your [investigation](investigate-incidents.md).
+As needed for in-process incidents, continue your [incident investigation](investigate-incidents.md).
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 - [Incidents overview](incidents-overview.md)
 - [Manage incidents](manage-incidents.md)

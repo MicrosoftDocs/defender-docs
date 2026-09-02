@@ -1,6 +1,6 @@
 ---
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.date: 06/19/2025
 ms.topic: include
 ms.service: defender-endpoint

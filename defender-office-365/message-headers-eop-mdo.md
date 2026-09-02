@@ -1,16 +1,10 @@
 ---
 title: Anti-spam message headers
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: article
 
 ms.localizationpriority: high
-search.appverid: 
-  - MET150
 ms.assetid: 2e3fcfc5-5604-4b88-ac0a-c5c45c03f1db
 ms.collection: 
   - m365-security

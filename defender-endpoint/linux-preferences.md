@@ -6,31 +6,28 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-ms.date: 02/05/2024
-manager: bagol
-audience: ITPro
+ms.date: 06/17/2026
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
 ms.topic: how-to
 ms.subservice: linux
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Configure security settings in Microsoft Defender for Endpoint on Linux
-
-## Configure your security settings
 
 Microsoft Defender for Endpoint on Linux includes antivirus, anti-malware protection, endpoint detection, and response capabilities. This article summarizes important security settings to configure and includes links to other resources.
 
 |Settings|Description|
 |---|---|
 |1. Configure static proxy discovery.|Configuring a static proxy helps ensure telemetry is submitted and helps avoid network timeouts. Perform this task during and after your Defender for Endpoint installation. <br/><br/> For more information, see [Configure Microsoft Defender for Endpoint on Linux for static proxy discovery](linux-static-proxy-configuration.md).|
-|2. Configure your antivirus scans.|You can schedule automatic antivirus scans by using either Anacron or Crontab. <br/><br/> For more information, see the following articles: <ul><li>[Use Anacron to schedule an antivirus scan in Microsoft Defender for Endpoint on Linux](/defender-endpoint/schedule-antivirus-scan-anacron)</li><li>[Use Crontab to schedule an antivirus scan in Microsoft Defender for Endpoint on Linux](/defender-endpoint/schedule-antivirus-scan-crontab)</li></ul>|
+|2. Configure your antivirus scans.|You can schedule automatic antivirus scans using built-in scheduled scan settings, or by using Anacron or Crontab. <br/><br/> For more information, see the following articles: <ul><li>[Schedule antivirus scans on Linux (preview)](schedule-antivirus-scans-linux.md)</li><li>[Use Anacron to schedule an antivirus scan in Microsoft Defender for Endpoint on Linux](schedule-antivirus-scan-anacron.md)</li><li>[Use Crontab to schedule an antivirus scan in Microsoft Defender for Endpoint on Linux](schedule-antivirus-scan-crontab.md)</li></ul>|
 |3. Configure your security settings and policies.|You can use the Microsoft Defender portal (Defender for Endpoint Security Settings Management) or a configuration profile (`.json` file) to configure Defender for Endpoint on Linux. Or, you can use command line to configure certain settings. <br/><br/> For more information, see the following articles: <ul><li>[Defender for Endpoint Security Settings Management](#defender-for-endpoint-security-settings-management)</li><li> [Configuration profile](#configuration-profile)</li><li>[Command line](linux-resources.md#configure-from-the-command-line)</li></ul>|
 |4. Configure and validate exclusions (as appropriate)|You can exclude certain files, folders, processes, and process-opened files from Defender for Endpoint on Linux. Global exclusions apply to real-time protection (RTP), behavior monitoring (BM), and endpoint detection and response (EDR), thus stopping all associated antivirus detections, EDR alerts, and visibility for the excluded item. <br/><br/> For more information, see [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](linux-exclusions.md).|
 |5. Configure the eBPF-based sensor.|The extended Berkeley Packet Filter (eBPF) for Microsoft Defender for Endpoint on Linux is automatically enabled for all customers by default for agent versions `101.23082.0006` and later. It provides supplementary event data for Linux operating systems and helps reduce the possibility of conflicts between applications. <br/><br/> For more information, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](linux-support-ebpf.md).|
@@ -54,7 +51,7 @@ You can use the command line to configure specific settings, gather diagnostics,
 
 ### Defender for Endpoint Security Settings Management
 
-You can configure Defender for Endpoint on Linux in the Microsoft Defender portal at ([https://security.microsoft.com](https://security.microsoft.com)) using Defender for Endpoint Security Settings Management. For more information, including how to create, edit, and verify security policies, see [Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus](mde-security-settings-management.md).
+You can configure Defender for Endpoint on Linux in the Microsoft Defender portal at ([Microsoft Defender portal](https://security.microsoft.com)) using Defender for Endpoint Security Settings Management. For more information, including how to create, edit, and verify security policies, see <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus</a>.
 
 ### Configuration profile
 
@@ -62,7 +59,7 @@ You can configure settings in Defender for Endpoint on Linux through a configura
 
 In other words, users in your enterprise aren't able to change preferences that are set through this configuration profile. If exclusions were added through the managed configuration profile, they can only be removed through the managed configuration profile. The command line works for exclusions added locally.
 
-This article describes the structure of this profile (including a recommended profile you can use to get started) and instructions on how to deploy the profile.
+This section describes the structure of the Defender for Endpoint on Linux configuration profile, includes a recommended starter profile, and explains how to deploy it.
 
 #### Configuration profile structure
 
@@ -70,7 +67,7 @@ The configuration profile is a `.json` file that consists of entries identified 
 
 Typically, you use a configuration management tool to push a file named `mdatp_managed.json` to the location `/etc/opt/microsoft/mdatp/managed/`.
 
-The top level of the configuration profile includes product-wide preferences and entries for subareas of the product, which are explained in more detail in the next sections.
+The top level of the configuration profile includes product-wide preferences and entries for subareas of the product, such as [Antivirus engine preferences](#antivirus-engine-preferences), [Cloud-delivered protection preferences](#cloud-delivered-protection-preferences), [Advanced optional features](#advanced-optional-features), and [Network protection configurations](#network-protection-configurations).
 
 #### Recommended configuration profile
 
@@ -153,12 +150,28 @@ The following configuration profile contains entries for all settings described 
             "value":"audit"
          }
       ],
-      "scanFileModifyPermissions":false,
+      "scanFileModifyPermissions":true,
       "scanFileModifyOwnership":false,
       "scanNetworkSocketEvent":false,
       "offlineDefinitionUpdateUrl": "http://172.22.199.67:8000/linux/production/<EXAMPLE DO NOT USE>",
       "offlineDefinitionUpdateFallbackToCloud":false,
-      "offlineDefinitionUpdate":"disabled"
+      "offlineDefinitionUpdate":"disabled",
+      "scheduledScan": "enabled"
+   },
+   "scheduledScan":{
+      "weeklyConfiguration":{
+         "dayOfWeek": 7,
+         "scanType": "full",
+         "timeOfDay": 180
+      },
+      "dailyConfiguration":{
+         "timeOfDay": 180
+      },
+      "runScanWhenIdle": true,
+      "lowPriorityScheduledScan": true,
+      "checkForDefinitionsUpdate": true,
+      "ignoreExclusions": false,
+      "randomizeScanStartTime": 3
    },
    "cloudService":{
       "enabled":true,
@@ -176,7 +189,7 @@ The following configuration profile contains entries for all settings described 
         "enableRawSocketEvent":"disabled",
         "enableBootLoaderCalls":"disabled",
         "enableProcessCalls":"disabled",
-        "enablePseudofsCalls":"diabled",
+        "enablePseudofsCalls":"disabled",
         "enableEbpfModuleLoadEvents":"disabled",
         "sendLowfiEvents":"disabled"
       },
@@ -252,11 +265,14 @@ The *antivirusEngine* section of the configuration profile manages the preferenc
 |**Key**|`antivirusEngine`|Antivirus Engine|
 |**Data type**|Dictionary (nested preference)|Collapsed Section|
 
-See the following subsections for a description of the dictionary contents and policy properties.
+For descriptions of the dictionary contents and policy properties, see [Enforcement level for Microsoft Defender Antivirus](#enforcement-level-for-microsoft-defender-antivirus), [Scan exclusions](#scan-exclusions), [Threat type settings](#threat-type-settings), and [Exclusion merge policy](#exclusion-merge-policy).
 
 #### Enforcement level for Microsoft Defender Antivirus
 
-Specifies the enforcement preference of antivirus engine. There are three values for setting enforcement level:
+Specifies the enforcement preference of the antivirus engine. There are three values for setting enforcement level:
+
+> [!IMPORTANT]
+> Only one enforcement level can be configured at a time. You can configure either `passive` or `real-time` mode, but not both.
 
 - **Real-time** (`real_time`): Real-time protection (scan files as they're modified) is enabled.
 
@@ -272,11 +288,17 @@ Specifies the enforcement preference of antivirus engine. There are three values
   - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true`.
   - [Endpoint detection and response (EDR)](overview-endpoint-detection-response.md) is on. The output of the `mdatp health` command on the device shows `engine not loaded` for the `engine_load_version` property. The engine is related to antivirus, not EDR.
 
+To verify whether real-time protection is enabled on the device, run:
+
+```bash
+mdatp health --field real_time_protection_enabled
+```
+
 > [!NOTE]
 >
 > - Available in Defender for Endpoint version `101.10.72` or later.
 > - In version `101.23062.0001` or later, the default value is `passive`. In previous versions, the default was `real_time`.
-> - We also recommended using [scheduled scans](/defender-endpoint/schedule-antivirus-scan-crontab) as per requirement.
+> - We also recommended using [scheduled scans](schedule-antivirus-scans-linux.md) as per requirement.
 
 #### Enable or disable behavior monitoring (if RTP is enabled)
 
@@ -366,7 +388,7 @@ Entities excluded from scans. You specify exclusions as an array of items. Admin
 |**Key**|`exclusions`|Scan exclusions|
 |**Data type**|Dictionary (nested preference)|Dynamic Properties List|
 
-See the following subsections for a description of the dictionary contents.
+For a description of the dictionary contents, see [Type of exclusion](#type-of-exclusion), [Path to excluded content](#path-to-excluded-content), [Path type (file / directory)](#path-type-file--directory), [File extension excluded from the scan](#file-extension-excluded-from-the-scan), and [Process excluded from the scan](#process-excluded-from-the-scan).
 
 #### Type of exclusion
 
@@ -541,7 +563,7 @@ Control how certain threat types are handled.
 |**Key**|`threatTypeSettings`|Threat type settings|
 |**Data type**|Dictionary (nested preference)|Dynamic Properties List|
 
-See the following subsections for a description of the dictionary contents.
+For a description of the dictionary contents, see [Threat type](#threat-type) and [Action to take](#action-to-take).
 
 #### Threat type
 
@@ -621,14 +643,17 @@ The `exclusionSettings` section of the configuration profile configures various 
 |**Key**|`exclusionSettings`|
 |**Data type**|Dictionary (nested preference)|
 
-See the following sections for a description of the dictionary contents.|
+For a description of the dictionary contents, see [Merge policy](#merge-policy), [Exclusion merge policy](#exclusion-merge-policy), and [Exclusions](#exclusions).
 
 > [!NOTE]
 >
 > - Previously configured antivirus exclusions in the [antivirusEngine](#antivirus-engine-preferences) section in managed JSON continue to function.
 > - You can specify antivirus exclusions in this section or in the `antivirusEngine`) section. You should add all other exclusion type in this section, because the `exclusionSettings` section is designed to centrally host all exclusion types.
 
-### Merge policy
+<a name="merge-policy"></a>
+### Exclusion settings merge policy
+
+The following setting controls how admin-defined and user-defined exclusions are combined.
 
 ### Exclusion merge policy
 
@@ -752,7 +777,7 @@ You can configure the following settings to enable certain advanced scanning fea
 Specifies whether Defender for Endpoint scans files when their permissions changed to set the executed bits.
 
 > [!NOTE]
-> This setting is meaningful only when `enableFilePermissionEvents` is enabled. For more information, see the [Advanced optional features](#configure-monitoring-of-file-modify-permissions-events) section later in this article.
+> This setting is meaningful only when `enableFilePermissionEvents` is enabled. For more information, see [Configure monitoring of file modify permissions events](#configure-monitoring-of-file-modify-permissions-events).
 
 |Description|JSON Value|Microsoft Defender portal value|
 |---|---|---|
@@ -768,7 +793,7 @@ Specifies whether Defender for Endpoint scans files when their permissions chang
 Specifies whether Defender for Endpoint scans files with changed ownership.
 
 > [!NOTE]
-> This setting is meaningful only when `enableFileOwnershipEvents` is enabled. For more information, see the [Advanced optional features](#configure-monitoring-of-file-modify-ownership-events) section later in this article.
+> This setting is meaningful only when `enableFileOwnershipEvents` is enabled. For more information, see [Configure monitoring of file modify ownership events](#configure-monitoring-of-file-modify-ownership-events).
 
 |Description|JSON Value|Microsoft Defender portal value|
 |---|---|---|
@@ -789,7 +814,7 @@ Specifies whether Defender for Endpoint scans network socket events. For example
 > [!NOTE]
 >
 > - This setting is meaningful only when Behavior Monitoring is enabled.
-> - This setting is meaningful only when `enableRawSocketEvent` is enabled. For more information, see the [Advanced optional features](#configure-monitoring-of-raw-socket-events) section later in this article.
+> - This setting is meaningful only when `enableRawSocketEvent` is enabled. For more information, see [Configure monitoring of raw socket events](#configure-monitoring-of-raw-socket-events).
 
 |Description|JSON Value|Microsoft Defender portal value|
 |---|---|---|
@@ -799,6 +824,157 @@ Specifies whether Defender for Endpoint scans network socket events. For example
 
 > [!NOTE]
 > Available in Defender for Endpoint version `101.23062.0010` or later.
+
+### Scheduled scan preferences (preview)
+
+The `scheduledScan` section of the configuration profile configures built-in scheduled antivirus scans. To enable scheduled scans, set `antivirusEngine.scheduledScan` to `"enabled"`.
+
+> [!NOTE]
+> Available in Defender for Endpoint version `101.26032.0000` or later.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`scheduledScan`|
+|**Data type**|Dictionary (nested preference)|
+
+See the following subsections for a description of the dictionary contents.
+
+For the full details on scheduled scan configuration, including how to use Security Settings Management policies and the command line, see [Schedule antivirus scans on Linux (preview)](schedule-antivirus-scans-linux.md).
+
+#### Enable scheduled scans
+
+Specifies whether scheduled scans are enabled.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`antivirusEngine.scheduledScan`|
+|**Data type**|String|
+|**Possible values**|`disabled` (default) <br/>`enabled`|
+
+#### Weekly scan configuration
+
+Configures a weekly scan with a specific day, time, and scan type.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`weeklyConfiguration`|
+|**Data type**|Dictionary (nested preference)|
+
+##### Day of the week
+
+Specifies the day the weekly scan runs.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`dayOfWeek`|
+|**Data type**|Integer|
+|**Possible values**|`0` (disabled, default) <br/>`1`–`7` (Sunday–Saturday) <br/>`8` (every day)|
+
+##### Scan type (weekly)
+
+Specifies the scan type for weekly scans.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`scanType`|
+|**Data type**|String|
+|**Possible values**|`quick` (default) <br/>`full`|
+
+##### Time of day (weekly)
+
+Specifies when the weekly scan runs. The value is in minutes from midnight (local time).
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`timeOfDay`|
+|**Data type**|Integer|
+|**Possible values**|`0`–`1440`. Default: `120` (2:00 AM)|
+
+#### Daily scan configuration
+
+Configures a daily quick scan at a specific time each day.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`dailyConfiguration`|
+|**Data type**|Dictionary (nested preference)|
+
+##### Time of day (daily)
+
+Specifies when the daily quick scan runs. The value is in minutes from midnight (local time).
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`timeOfDay`|
+|**Data type**|Integer|
+|**Possible values**|`0`–`1440`. Default: `0`|
+
+##### Interval
+
+Runs a quick scan every N hours (interval-based scheduling).
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`interval`|
+|**Data type**|Integer|
+|**Possible values**|Integer (hours). `0` = disabled (default)|
+
+> [!NOTE]
+> `interval` and `timeOfDay` (daily) are independent settings. If both are configured, they create separate quick scan schedules and can result in multiple scans per day.
+
+#### Advanced scheduled scan settings
+
+The following settings let you fine-tune how scheduled scans run.
+
+##### Run scan when idle
+
+Delays the scan until the system is idle.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`runScanWhenIdle`|
+|**Data type**|Boolean|
+|**Possible values**|`false` (default) <br/>`true`|
+
+##### Low priority scheduled scan
+
+Runs scans with reduced CPU priority.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`lowPriorityScheduledScan`|
+|**Data type**|Boolean|
+|**Possible values**|`false` (default) <br/>`true`|
+
+##### Check for definitions update
+
+Checks for the latest security intelligence updates before starting the scan.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`checkForDefinitionsUpdate`|
+|**Data type**|Boolean|
+|**Possible values**|`false` (default) <br/>`true`|
+
+##### Ignore exclusions
+
+Runs scans without honoring configured exclusions.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`ignoreExclusions`|
+|**Data type**|Boolean|
+|**Possible values**|`false` (default) <br/>`true`|
+
+##### Randomize scan start time
+
+Randomizes the scan start time within a defined window (in hours) to avoid simultaneous scans on multiple devices.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`randomizeScanStartTime`|
+|**Data type**|Integer|
+|**Possible values**|`0`–`23`. Default: `0` (no randomization)|
 
 ### Cloud-delivered protection preferences
 
@@ -826,7 +1002,7 @@ Specify whether cloud-delivered protection is enabled on the device. To improve 
 
 ### Diagnostic collection level
 
-Specify the level of diagnostic information sent to Microsoft. For more information, see [Privacy for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-privacy).
+Specify the level of diagnostic information sent to Microsoft. For more information, see [Privacy for Microsoft Defender for Endpoint on Linux](linux-privacy.md).
 
 Diagnostic data is used to keep Defender for Endpoint secure and up to date, detect, diagnose and fix problems, and also make product improvements.
 
@@ -883,7 +1059,8 @@ Specifies whether security intelligence updates are installed automatically.
 
 Depending on the enforcement level, the automatic security intelligence updates are installed differently. In RTP mode, updates are installed periodically. In Passive or On-Demand mode, updates are installed before every scan.
 
-### Advanced optional features
+<a name="advanced-optional-features"></a>
+### Configure advanced optional features
 
 Use the following settings to enable certain advanced optional features.
 
@@ -895,7 +1072,7 @@ Use the following settings to enable certain advanced optional features.
 |**Key**|features|*Not available*|
 |**Data type**|Dictionary (nested preference)|*n/a*|
 
-See the following subsections for a description of the dictionary contents.
+For a description of the dictionary contents, see [Module load feature](#module-load-feature), [Remediate Infected File feature](#remediate-infected-file-feature), and [Supplementary sensor configurations](#supplementary-sensor-configurations).
 
 ### Module load feature
 
@@ -938,7 +1115,7 @@ Use the following settings to configure certain advanced supplementary sensor fe
 |**Key**|`supplementarySensorConfigurations`|*Not available*|
 |**Data type**|Dictionary (nested preference)|*n/a*|
 
-See the following sections for a description of the dictionary contents.
+For a description of the dictionary contents, see [Configure monitoring of file modify permissions events](#configure-monitoring-of-file-modify-permissions-events), [Configure monitoring of file modify ownership events](#configure-monitoring-of-file-modify-ownership-events), [Configure monitoring of raw socket events](#configure-monitoring-of-raw-socket-events), and [Report suspicious antivirus events to EDR](#report-suspicious-antivirus-events-to-edr).
 
 #### Configure monitoring of file modify permissions events
 
@@ -1123,9 +1300,11 @@ Use the following settings to configure advanced Network Protection inspection f
 |**Key**|`networkProtection`|Network protection|
 |**Data type**|Dictionary (nested preference)|Collapsed section|
 
-See the following subsections for a description of the dictionary contents.
+For a description of the dictionary contents, see [Enforcement Level](#enforcement-level) and [Configure ICMP inspection](#configure-icmp-inspection).
 
 #### Enforcement Level
+
+Use this setting to control how network protection is enforced on the device.
 
 |Description|JSON Value|Microsoft Defender portal value|
 |---|---|---|
@@ -1152,6 +1331,9 @@ Specifies whether ICMP events are monitored and scanned.
 ## Add tag or group ID to the configuration profile
 
 When you first run the `mdatp health` command, the tag and group ID values are blank. To add a tag or group ID to the `mdatp_managed.json` file, follow these steps:
+
+> [!CAUTION]
+> Before editing the file, make sure you add a comma after the closing curly bracket at the end of the `cloudService` block and preserve the two closing curly brackets shown in the example. The only supported key name for tags is `GROUP`. Invalid JSON formatting breaks the configuration.
 
 1. Open the configuration profile from the path `/etc/opt/microsoft/mdatp/managed/mdatp_managed.json`.
 
@@ -1185,6 +1367,8 @@ When you first run the `mdatp health` command, the tag and group ID values are b
    > - Currently, the only supported key name for tags is `GROUP`.
 
 ## Configuration profile validation
+
+### Validate the managed JSON file
 
 The configuration profile must be a valid JSON-formatted file. Many tools are available for you to verify the configuration profile. For example, run the following command if you have `python` installed on your device:
 

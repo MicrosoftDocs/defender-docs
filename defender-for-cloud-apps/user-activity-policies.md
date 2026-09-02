@@ -1,9 +1,11 @@
 ---
 title: Create activity policies | Microsoft Defender for Cloud Apps
-description: This article provides instructions for creating and working with activity policies.
-ms.date: 01/29/2023
+description: Create and manage activity policies in Microsoft Defender for Cloud Apps to monitor user actions, automate enforcement, and generate alerts for suspicious activity.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: Ronen-Refaeli
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Create Microsoft Defender for Cloud Apps activity policies
@@ -15,7 +17,7 @@ Activity policies allow you to enforce a wide range of automated processes using
 After you set an activity detection policy, it starts to generate alerts - alerts are only generated on activities that occur after you create the policy.
 
 > [!NOTE]
->  - Policies that trigger more than 200,000 matches per day, or 100,000 matches per 3 hours, may be disabled automatically. You can try refining policies by adding additional filters or, if you're using policies for reporting purposes, consider [saving them as queries](activity-filters-queries.md#activity-queries) instead.
+>  - Policies that trigger more than 200,000 matches per day, or 100,000 matches per 3 hours, may be disabled automatically. You can try refining policies by adding additional filters or, if you're using policies for reporting purposes, consider [saving activity filters as queries](activity-filters-queries.md#activity-queries) instead.
 >   - It may take up to 15 minutes from setting up a new policy to deployment.
 
 ## Custom alerts
@@ -34,7 +36,7 @@ To create a new activity policy, follow this procedure:
 
 1. Select **Create policy** and select **Activity policy**.
 
-    ![Create a Threat Detection policy.](media/create-policy-from-threat-detection-tab.png)
+    ![Screenshot of the Threat Detection tab showing the Create policy menu with Activity policy option.](media/create-policy-from-threat-detection-tab.png)
 
 1. Give your policy a name and description, if you want you can base it on a template, for more information on policy templates, see [Control cloud apps with policies](control-cloud-apps-with-policies.md).
 
@@ -42,7 +44,7 @@ To create a new activity policy, follow this procedure:
 
    To ensure that you only include results where the specified filter field has a value, we recommend adding the same field again using the **is set** test. For example, when filtering by **Location** *does not equal* a specified list of countries/regions, also add a filter for **Location** *is set*. You can also preview the filter results by selecting **Edit and preview results**. For example:
 
-   ![Screenshot of filter settings, showing location field is set.](media/activity-example-location-isset.png)
+   ![Screenshot of activity filter settings with a Location does not equal filter and a Location is set filter configured together.](media/activity-example-location-isset.png)
 
    When a filter is set to *does not equal* and the attribute doesn't exist on the event, the event won't be filtered out. For example, filtering on **Device Tag does not equal Microsoft Entra hybrid joined** doesn't filter out events that don't contain **Device tag**, even if the device is Microsoft Entra joined.
 
@@ -68,17 +70,17 @@ Take a look at these examples:
 
     Beneath the **Activity filters** field, configure the parameters for which the alert will be triggered.
 
-    ![Policy example for multiple failed sign-in attempts.](media/multiple-failed-log-on-attempts-policy-example.png "multiple failed log on attempts policy example")
+    ![Screenshot of a policy configured to detect multiple failed sign-in attempts within a set time period.](media/multiple-failed-log-on-attempts-policy-example.png "multiple failed log on attempts policy example")
 
 - High download rate
 
     You can set your policy so that you receive an alert when there has been an unexpected or uncharacteristic level of downloading activity. To configure this sort of policy, under **Rate** parameters, choose the parameters to trigger the alert.
 
-    ![high download rate example.](media/high-download-rate-example.png "high download rate example")
+    ![Screenshot of a policy example configured to detect a high download rate.](media/high-download-rate-example.png "high download rate example")
 
 ## Activity policy reference
 
-This section has reference details about policies, explanations for each policy type, and the fields that can be configured for each policy.
+The following reference describes activity policy types, their components, and the fields that can be configured for each policy.
 
 An **Activity policy** is an API-based policy that enables you to monitor your organization's activities in the cloud. The policy takes into account over 20 file metadata filters including device type and location. Based on the policy results, notifications can be generated and users can be suspended from the cloud app.
 Each policy is composed of the following parts:

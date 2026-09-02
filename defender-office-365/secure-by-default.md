@@ -1,17 +1,10 @@
 ---
 title: Secure by default in Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-ms.date: 02/03/2026
-audience: ITPro
+ms.date: 02/13/2026
 ms.topic: concept-article
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.collection:
   - m365-security
   - tier2
@@ -39,7 +32,7 @@ However, security needs to be balanced with productivity. This balance includes:
 All organizations with cloud mailboxes automatically receive email protection. This protection includes:
 
 - Email with suspected malware is automatically quarantined. The quarantine policy used by the anti-malware policy controls whether recipients are notified. For more information, see [Configure anti-malware policies](anti-malware-policies-configure.md).
-- Email identified as high confidence phishing is quarantined due to secure by default and the action configured for high confidence phishing in the relevant anti-spam policy.
+- Email identified as high confidence phishing is quarantined by default.
 
 For more information, see [Built-in security features for all cloud mailboxes](eop-about.md).
 

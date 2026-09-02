@@ -1,14 +1,9 @@
 ---
 title: "Improve Security Posture and Reduce Risk"
 description: Provides an overview of solutions that help reduce security risk in the Microsoft Defender portal.
-search.appverid: met150
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
-ms.author: guywild
 author: guywi-ms
-ms.localizationpriority: medium
+ms.author: guywild
 ms.date: 02/05/2025
-audience: ITPro
 ms.collection:
 - M365-security-compliance
 - tier1
@@ -49,6 +44,6 @@ Solution | Details | Capabilities
 --- | --- | ---
 **[Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management)**<br/><br/>Reduce security risk by reducing attack surfaces. | Automatically discover assets, including devices, identities, cloud apps, and more. Extend visibility to non-Microsoft solutions.<br/><br/>Organize data into security initiatives to monitor, track, measure, and prioritize posture in the areas that are most important to you.<br/><br/>Discover and visualize attack surfaces and potential blast radius.<br/><br/>[Get contextual insights to understand, prioritize, and mitigate security risk.](overview-msem-strategy.md)
 **[Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)**<br/><br/>Detect real-time threats to cloud workloads, and proactively improve security posture. | Cloud security posture management capabilities assess the posture of resources across Azure, AWS, GCP, and on-premises. Defender for Cloud improves security posture for machines, containers, sensitive data, databases, AI workloads, storage, and DevOps.<br/><br/>Security recommendations provide information and manual/automatic actions to remediate issues and harden resource security.
-**[Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)**<br/><br/>Improve security posture and protect against threats. | Defender for Endpoint includes a number of security posture management features.<br/><br/>[Attack surface reduction](/defender-endpoint/overview-attack-surface-reduction) proactively blocks common activities associated with malicious actions, and provides [attack surface reduction rules](/defender-endpoint/attack-surface-reduction) to constrain risky software-based behavior.<br/><br/>Other features include [controlled folder access](/defender-endpoint/controlled-folders), [peripheral device control](/defender-endpoint/device-control-overview), [exploit protection](/defender-endpoint/exploit-protection), [network](/defender-endpoint/network-protection) and [web](/defender-endpoint/network-protection) protection.
+**[Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)**<br/><br/>Improve security posture and protect against threats. | Defender for Endpoint includes a number of security posture management features.<br/><br/>[Attack surface reduction](/defender-endpoint/overview-attack-surface-reduction) proactively blocks common activities associated with malicious actions, and provides [attack surface reduction rules](/defender-endpoint/attack-surface-reduction) to constrain risky software-based behavior.<br/><br/>Other features include [controlled folder access](/defender-endpoint/controlled-folder-access-overview), [peripheral device control](/defender-endpoint/device-control-overview), [exploit protection](/defender-endpoint/exploit-protection), [network](/defender-endpoint/network-protection) and [web](/defender-endpoint/network-protection) protection.
 **[Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)**<br/><br/>Remediate security vulnerabilities across the organization. | Defender Vulnerability Management continuously identifies vulnerabilities and misconfigurations, providing contextual insights into potential threats and recommendations to mitigate them.
 **[Microsoft Secure Score](/defender-xdr/microsoft-secure-score)**<br/><br/>Measure organizational security posture. | Secure Score helps to monitor the security posture of Microsoft 365 workloads, including devices, identities, and apps. [Compare Security Score with security posture in Security Exposure Management](/security-exposure-management/compare-secure-score-security-exposure-management).

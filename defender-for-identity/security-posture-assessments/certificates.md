@@ -1,9 +1,11 @@
 ---
-title: Certificates
-description: This article provides an overview of Microsoft Defender for Identity's certificate security posture assessment report.
-ms.date: 09/14/2025
+title: Certificates security posture assessments - Microsoft Defender for Identity
+description: Learn how to identify and remediate certificate-related security risks in Active Directory Certificate Services (AD CS) using Microsoft Defender for Identity security posture assessments.
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.reviewer: LiorShapiraa
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Security assessment: Certificates
@@ -121,6 +123,7 @@ This assessment is available only to customers who installed a sensor on an AD C
 
 **Implementation**
 
+Use the following steps to review and remediate the Certificate Authority ACL configuration.
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for misconfigured Certificate Authority ACLs. For example:
 
@@ -206,7 +209,7 @@ Even though the certificate can’t be used for impersonating user authenticatio
 
 **Description**
 
-This recommendation directly addresses the recently published [CVE-2024-49019](https://msrc.microsoft.com/update-guide/advisory/CVE-2024-49019), which highlights security risks associated with vulnerable AD CS configurations. This security posture assessment lists all vulnerable certificate templates found in customer environments due to unpatched AD CS servers.
+The **Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)** recommendation directly addresses the recently published [CVE-2024-49019](https://msrc.microsoft.com/update-guide/advisory/CVE-2024-49019), which highlights security risks associated with vulnerable AD CS configurations. This security posture assessment lists all vulnerable certificate templates found in customer environments due to unpatched AD CS servers.
 
 Certificate templates that are vulnerable to [CVE-2024-49019](https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2024-49019) allow an attacker to issue a certificate with arbitrary Application Policies and Subject Alternative Name. The certificate can be used to escalate privileges, possibly resulting with full domain compromise. 
 
@@ -244,7 +247,7 @@ If a certificate template has the *Supply in the request* option turned on, the 
 > [!IMPORTANT]
 > If the certificate is also permitted for authentication and there aren't any mitigation measures enforced, such as *Manager approval* or required authorized signatures, the certificate template is dangerous as it allows any unprivileged user to take over any arbitrary user, including a domain admin user.
 >
-> This specific setting is one of the most common misconfigurations.
+> The *Supply in the request* setting is one of the most common misconfigurations.
 > 
 
 **Implementation**
@@ -308,6 +311,7 @@ If there's a template where the `EDITF_ATTRIBUTESUBJECTALTNAME2` setting is turn
     net stop certsvc & net start certsvc
     ```
 
-## Next steps
+<a name="next-steps"></a>
+## Related content
 
-- [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
+- [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)

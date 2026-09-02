@@ -1,4 +1,4 @@
-﻿---
+---
 title: Automation levels in automated investigation and remediation
 description: Get an overview of automation levels and how they work in Microsoft Defender for Endpoint
 author: chrisda
@@ -7,24 +7,24 @@ ms.subservice: edr
 ms.author: chrisda
 ms.localizationpriority: medium
 ms.date: 04/04/2025
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-edr
 ms.topic: article
 ms.custom: AIR
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
 
 ---
+
 # Automation levels in automated investigation and remediation capabilities
 
 
 Automated investigation and remediation (AIR) capabilities in Microsoft Defender for Business are preconfigured and aren't configurable. In Microsoft Defender for Endpoint, you can configure AIR to one of several levels of automation. Your automation level affects whether remediation actions following AIR investigations are taken automatically or only upon approval.
+
+[!INCLUDE [AIR deprecation note](includes/air-deprecation-note.md)]
 
 - *Full automation* (recommended) means remediation actions are taken automatically on artifacts determined to be malicious. (*Full automation is set by default in Defender for Business*.)
 - *Semi-automation* means some remediation actions are taken automatically, but other remediation actions await approval before being taken. (See the table in [Levels of automation](#levels-of-automation).)

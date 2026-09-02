@@ -1,30 +1,31 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint Network protection demonstrations
 description: Shows how Network protection prevents employees from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the Internet.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 - demo
 ms.topic: how-to
 ms.subservice: asr
-ms.date: 03/04/2025
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 # Network protection demonstrations
 
 Network Protection helps reduce the attack surface of your devices from Internet-based events. It prevents employees from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the Internet.
+
+This article walks you through how to demonstrate and test Network Protection on Windows, macOS, and Linux devices. You'll enable Network Protection, navigate to a test site, and verify that the connection is blocked as expected.
 
 ## Prerequisites
 
@@ -116,10 +117,10 @@ Run the following command to Clean-up:
 mdatp config network-protection enforcement-level --value audit
 ```
 
-## See also
+<a name="see-also"></a>
+## Related content
 
-[Network Protection](network-protection.md)
-
-[Microsoft Defender for Endpoint - demonstration scenarios](defender-endpoint-demonstrations.md)
+- For an overview of Network Protection capabilities, see [Network Protection](network-protection.md).
+- For other demonstration scenarios, see [Microsoft Defender for Endpoint - demonstration scenarios](defender-endpoint-demonstrations.md).
 
 

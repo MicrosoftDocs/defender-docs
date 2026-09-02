@@ -1,26 +1,22 @@
 ---
 title: Submit malware and good files to Microsoft for analysis
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.assetid: 12eba50e-661d-44b8-ae94-a34bc47fb84d
 ms.collection:
   - m365-security
   - tier1
 description: Admins and end-users can learn about submitting undetected malware or mis-identified malware attachments to Microsoft for analysis.
 ms.service: defender-office-365
-ms.date: 6/20/2023
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Submit malware, non-malware, and other suspicious files to Microsoft for analysis
@@ -36,13 +32,15 @@ You've probably heard the following best practices for years:
 - Avoid opening files downloaded from the internet unless they're from a verified source.
 - Don't use anonymous USB drives.
 
-But what can you do if you receive a message with a suspicious attachment or have a suspicious file on your system? In these cases, you should submit the suspicious attachment or file to Microsoft. Conversely, if an attachment in an email message or file was incorrectly identified as malware or some other threat, you can submit that, too.
+But what can you do if you receive a message with a suspicious attachment or have a suspicious file on your system? In these cases, you should submit the suspicious attachment or file to Microsoft. Conversely, if an attachment in an email message or file was incorrectly identified as malware or some other threat, you can submit the attachment or file, too.
 
 ## What do you need to know before you begin?
 
+Before you begin, review the following information about what qualifies as malware, phishing, and related submissions:
+
 - All Microsoft 365 organizations that send or receive email include anti-malware protection that's automatically enabled. For more information, see [Anti-malware protection](anti-malware-protection-about.md).
 
-- Messages with attachments that contain scripts or other malicious executables are considered malware, and you can use the procedures in this article to report them.
+- Messages with attachments that contain scripts or other malicious executables are considered malware, and you can use the submission options described in this section to report them.
 
 - Messages with links to malicious sites are considered phishing. For more information about reporting phishing and good messages, see [Report messages and files to Microsoft](submissions-report-messages-files-to-microsoft.md).
 
@@ -50,7 +48,7 @@ But what can you do if you receive a message with a suspicious attachment or hav
 
 ## Submit malware files to Microsoft
 
-Organizations that have a Microsoft Defender XDR subscription, or Microsoft Defender XDR for Endpoint Plan 2 can submit files using the **Submissions** page in the Microsoft Defender portal. For more information, see [Use admin submission for submitting files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
+Organizations that have a Microsoft Defender subscription, or Microsoft Defender for Endpoint Plan 2 can submit files using the **Submissions** page in the Microsoft Defender portal. For more information, see [Use admin submission for submitting files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
 
 Or, you can go to the Microsoft Security Intelligence page at <https://www.microsoft.com/wdsi/filesubmission> to submit the file. To receive analysis updates, sign in or enter a valid email address. We recommend using your Microsoft work or school account.
 
@@ -58,16 +56,16 @@ After you've uploaded the file or files, note the **Submission ID** that's creat
 
 :::image type="content" source="media/EOP-Malware-Protection-Center.png" alt-text="The submission details in the Windows Defender Security Intelligence website" lightbox="media/EOP-Malware-Protection-Center.png":::
 
-After we receive the sample, we'll investigate. If we determine that the sample file is malicious, we take corrective action to prevent the malware from going undetected.
+After we receive the submitted file, we'll investigate. If we determine that the sample file is malicious, we take corrective action to prevent the malware from going undetected.
 
 If you continue receiving infected messages or attachments, then you should copy the message headers from the email message, and contact Microsoft Customer Service and Support for further assistance. Be sure to have your **Submission ID** ready as well.
 
 ## Submit good files to Microsoft
 
-Organizations that have a Microsoft Defender XDR Subscription or Microsoft Defender XDR for Endpoint Plan 2 can submit files using the **Submissions** page in the Microsoft Defender portal. For more information, see [Use admin submission for submitting files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
+Organizations that have a Microsoft Defender Subscription or Microsoft Defender for Endpoint Plan 2 can submit files using the **Submissions** page in the Microsoft Defender portal. For more information, see [Use admin submission for submitting files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
 
 Or, you can go to the Microsoft Security Intelligence page at <https://www.microsoft.com/wdsi/filesubmission> to submit the file. To receive analysis updates, sign in or enter a valid email address. We recommend using your Microsoft work or school account.
 
 You can also submit a file that you believe was incorrectly identified as malware to the website. (Just select **No** for the question **Do you believe this file contains malware?**)
 
-After we receive the sample, we'll investigate. If we determine that the sample file is clean, we take corrective action to prevent the file from being detected as malware.
+After we receive the submitted file, we'll investigate. If we determine that the submitted file is clean, we take corrective action to prevent the file from being detected as malware.

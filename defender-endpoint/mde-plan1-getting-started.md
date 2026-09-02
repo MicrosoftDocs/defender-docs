@@ -1,18 +1,14 @@
-﻿---
+---
 title: Get started with Microsoft Defender for Endpoint Plan 1
 description: Get started using Defender for Endpoint Plan 1. Learn how to use the Microsoft Defender portal, manage alerts and devices, and view reports. 
-search.appverid: MET150 
 author: limwainstein
 ms.author: lwainstein
-manager: bagol 
-audience: ITPro
 ms.topic: overview
 ms.date: 03/21/2025
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
 ms.reviewer: shlomiakirav
-f1.keywords: NOCSH
 ms.collection: 
 - m365-security
 - tier1

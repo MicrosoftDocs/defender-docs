@@ -1,10 +1,15 @@
 ---
 title: Microsoft Data Classification Services integration
 description: This article describes the process Defender for Cloud Apps follows when performing DLP content inspection using Microsoft Data Classification Service.
-ms.date: 01/29/2023
+ms.date: 06/16/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 # Microsoft Data Classification Services integration
+
+> [!IMPORTANT]
+> File policies retire on January 6, 2027. To maintain file-based data protection, [migrate to Microsoft Purview DLP or auto-labeling policies](migrate-file-policies-to-purview.md).
 
 
 
@@ -22,11 +27,11 @@ You can set the **Inspection method** to use the **Microsoft Data Classification
 
 1. In the [file policy](data-protection-policies.md) page, under **Inspection method**, select **Data Classification Service**. You can also set the **Inspection method** in the [session policy](session-policy-aad.md) page with **Control file download (with inspection)** selected.
 
-    ![data classification service setting.](media/dcs-enable.png)
+    ![Data Classification Service inspection method setting in file policy.](media/dcs-enable.png)
 2. Select whether the policy should apply when **any** or **all** of the criteria are met.
 3. **Choose inspection type** by selecting the **Sensitive information types**.
 
-    ![Choose data classification service inspection type.](media/dcs-sensitive-information-type.png)
+    ![Screenshot of the file policy configuration page with sensitive information types selected as the Data Classification Service inspection type.](media/dcs-sensitive-information-type.png)
 
 4. You can use the [default sensitive information types](/microsoft-365/compliance/sensitive-information-type-entity-definitions) to define what happens to files protected by Microsoft Defender for Cloud Apps. You can also reuse any of your [Microsoft 365 custom sensitive information types](/microsoft-365/compliance/create-a-custom-sensitive-information-type).
     > [!NOTE]
@@ -42,9 +47,9 @@ Setting these policies enables you to easily extend the strength of the Microsof
 
 Defender for Cloud Apps already includes the ability to explore policy file matches that contain sensitive information types (SITs). Now Defender for Cloud Apps also allows you to differentiate between multiple SITs in the same file match. This feature, known as short evidence, lets Defender for Cloud Apps better manage and protect your organization's sensitive data.
 
-The short evidence feature is relevant for file policies that contain content inspection using the DCS engine.
+The short evidence feature is relevant for file policies that contain content inspection using the Data Classification Service (DCS) engine.
 
-1. Configure a file policy and choose the relevant DCS classifiers. If you already use a file policy with DCS, this feature will work for all the feature's files.
+1. Configure a file policy and choose the relevant DCS classifiers. If you already use a file policy with DCS, the short evidence feature will work for all files evaluated by that policy.
 
 1. On the **Policies** page, enter the relevant file policy and select the policy matches.
 

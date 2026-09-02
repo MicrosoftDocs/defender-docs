@@ -1,28 +1,30 @@
 ---
 title: Daily operational guide - Microsoft Defender for Identity
 description: Learn about the Microsoft Defender for Identity activities that we recommend for your team on a daily basis.
-ms.date: 01/29/2024
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.reviewer: martin77s
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Daily operational guide - Microsoft Defender for Identity
 
-This article reviews the Microsoft Defender for Identity activities we recommend for your team on a daily basis.
+This article reviews the Microsoft Defender for Identity activities we recommend for your team on a daily basis. It covers key tasks such as reviewing identity security dashboards, triaging incidents, tuning alerts, proactive threat hunting, and monitoring deployment health. These daily activities are intended for SOC analysts, security administrators, and identity management teams to help maintain a strong security posture and quickly detect identity-based threats.
 
-## Review the ITDR dashboard
+## Review the Identity Security dashboard
 
-**Where**: In Microsoft Defender XDR, under select **Identities** > **Dashboard**.
+**Where**: In Microsoft Defender, under select **Identities** > **Dashboard**.
 
 **Persona**: SOC analysts, security administrators, identity, and access management administrators
 
-Use Defender for Identity's **Dashboard** page to view critical insights and real-time data about identity threat detection and response (ITDR). On a daily basis, we recommend that you focus on the **Top insights**, **Identity related incidents**, and **Entra ID users at risk** widgets.
+Use Defender for Identity's **Dashboard** page to view critical insights and real-time data about identity security. On a daily basis, we recommend that you focus on the **Top insights**, **Identity related incidents**, and **Entra ID users at risk** widgets.
 
-For more information, see [Work with Defender for Identity's ITDR dashboard (Preview)](../dashboard.md).
+For more information, see [Work with Defender for Identity's Identity Security dashboard (Preview)](../dashboard.md).
 
 ## Triage incidents by priority
 
-**Where**: In Microsoft Defender XDR, select **Incidents & alerts**
+**Where**: In Microsoft Defender, select **Incidents & alerts**
 
 **Persona**: SOC analysts
 
@@ -55,7 +57,7 @@ For more information, see [Work with Defender for Identity's ITDR dashboard (Pre
 
 ## Configure tuning rules for benign true positives / false positive alerts
 
-**Where**: In Microsoft Defender XDR, select **Hunting > Advanced hunting**
+**Where**: In Microsoft Defender, select **Hunting > Advanced hunting**
 
 **Persona**: Security and compliance administrators, SOC analysts
 
@@ -67,23 +69,23 @@ For more information, see [Tune an alert](/microsoft-365/security/defender/inves
 
 ## Proactively hunt
 
-**Where**: In Microsoft Defender XDR, select **Hunting > Advanced hunting**.
+**Where**: In Microsoft Defender, select **Hunting > Advanced hunting**.
 
 **Persona**: SOC analysts
 
 You might want to proactively hunt on a daily or weekly basis, depending on your level as a SOC analyst.
 
-Use Microsoft Defender XDR advanced hunting to proactively explore through the last 30 days of raw data, including Defender for Identity data correlated with data streaming from other Microsoft Defender XDR services.
+Use Microsoft Defender advanced hunting to proactively explore through the last 30 days of raw data, including Defender for Identity data correlated with data streaming from other Microsoft Defender services.
 
 Inspect events in your network to locate threat indicators and entities, including both known and potential threats.
 
 We recommend that beginners use guided advanced hunting, which provides a query builder. If you're comfortable using Kusto Query Language (KQL), build queries from scratch as needed for your investigations.
 
-For more information, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/microsoft-365/security/defender/advanced-hunting-overview).
+For more information, see [Proactively hunt for threats with advanced hunting in Microsoft Defender](/microsoft-365/security/defender/advanced-hunting-overview).
 
 ## Review Defender for Identity health issues
 
-**Where**: In Microsoft Defender XDR, select **Identities > Health issues**.
+**Where**: In Microsoft Defender, select **Identities > Health issues**.
 
 **Persona**: Security administrators, Active Directory administrators
 
@@ -97,7 +99,7 @@ For more information, see [Microsoft Defender for Identity health issues](../hea
 
 For more information, see:
 
-- [Microsoft Defender XDR Security operations overview](/security/operations/overview)
+- [Microsoft Defender Security operations overview](/security/operations/overview)
 - [Microsoft Defender for Identity operational guide](ops-guide.md)
 - [Weekly operational guide - Microsoft Defender for Identity](ops-guide-weekly.md)
 - [Monthly operational guide - Microsoft Defender for Identity](ops-guide-monthly.md)

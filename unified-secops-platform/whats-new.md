@@ -1,28 +1,32 @@
 ---
 title: "What's new for Microsoft's unified security operations?"
 description: Lists the new features and functionality available for Microsoft unified security operations.
-search.appverid: met150
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
-ms.author: guywild
 author: guywi-ms
-ms.localizationpriority: medium
+ms.author: guywild
 ms.date: 01/30/2026
-manager: orspodek
-audience: ITPro
 ms.collection:
 - M365-security-compliance
 - tier1
 - usx-security
 ms.topic: concept-article
+ms.custom: sfi-image-nochange
 ---
 
 # What's new for Microsoft unified security operations
 
 This article lists recent features added for unified security operations in the Microsoft Defender portal.
 
-## January 2026
+## February 2026
 
+### New content types for cross-tenant distribution now generally available
+
+The following content types are now generally available for [distribution across multiple tenants](./mto-distribution-profiles.md) in the Microsoft Defender multitenant portal:
+
+- Analytics rules
+- Automation rules
+- Workbooks
+
+## January 2026
 
 ### Updated date: Microsoft Sentinel in the Azure portal to be retired March 2027
 

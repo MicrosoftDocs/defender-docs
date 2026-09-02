@@ -117,6 +117,9 @@ Defender for Cloud Apps provides you with the ability to investigate and monitor
 **Best practice**: Create data exposure policies  
 **Detail**: Use file policies to detect information sharing and scan for confidential information in your cloud apps. Create the following file policies to alert you when data exposures are detected:
 
+> [!IMPORTANT]
+> File policies retire on January 6, 2027. To maintain file-based data protection, [migrate to Microsoft Purview DLP or auto-labeling policies](migrate-file-policies-to-purview.md).
+
 * Files shared externally containing sensitive data
 * Files shared externally and labeled as **Confidential**
 * Files shared with unauthorized domains

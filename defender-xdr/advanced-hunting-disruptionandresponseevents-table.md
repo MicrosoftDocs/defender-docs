@@ -1,16 +1,11 @@
 ---
 title: DisruptionAndResponseEvents table in the advanced hunting schema
 description: Learn about the DisruptionAndResponseEvents table in the advanced hunting schema
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -21,14 +16,11 @@ ms.topic: reference
 ms.date: 06/11/2025
 ---
 
-# DisruptionAndResponseEvents (Preview)
+# DisruptionAndResponseEvents
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-> [!IMPORTANT]
-> Some information relates to prereleased product which might be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
-The `DisruptionAndResponseEvents` table in the [advanced hunting](advanced-hunting-overview.md) contains information about [automatic attack disruption](automatic-attack-disruption.md) and [predictive shielding](shield-predict-threats.md) events in Microsoft Defender XDR. These events include both block and policy application events related to triggered attack disruption policies, and automatic actions that were taken across related workloads.
+The `DisruptionAndResponseEvents` table in the [advanced hunting](advanced-hunting-overview.md) contains information about [automatic attack disruption](automatic-attack-disruption.md) and [predictive shielding](shield-predict-threats.md) events in Microsoft Defender. These events include both block and policy application events related to triggered attack disruption policies, and automatic actions that were taken across related workloads.
 
 Users can use this table to increase their visibility and awareness of active, complex attacks disrupted by automatic attack disruption. Understanding the scope of even complex attacks, their context, impact, and why disruption actions were taken, can help users make better and faster decisions and allocate resources more efficiently.
 
@@ -36,7 +28,7 @@ Users can use this table to increase their visibility and awareness of active, c
 
 The `DisruptionAndResponseEvents` table:
 
-- Is populated by records from various Microsoft security services. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return complete results. For more information about how to deploy supported services in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+- Is populated by records from various Microsoft security services. If your organization hasn't deployed the service in Microsoft Defender, queries that use the table aren't going to work or return complete results. For more information about how to deploy supported services in the Defender portal, read [Deploy supported services](deploy-supported-services.md).
 - Doesn't contain the execution of actions like contain user or disable user. The table only reflects the outcomes of these actions, such as blocked logon attempts or policy applications. For the full context of these actions, the [Action Center](m365d-action-center.md) logs all events.
 - Exposes only Defender for Endpoint-based controls.
 

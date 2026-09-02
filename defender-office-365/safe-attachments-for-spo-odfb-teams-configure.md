@@ -1,29 +1,25 @@
 ---
 title: Turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
-  - MOE150
 ms.assetid: 07e76024-0c80-40dc-8c48-1dd0d0f863cb
 ms.collection: 
   - m365-security
   - SPO_Content
   - tier2
 description: Admins can learn how to turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, including how to set alerts for detected files.
-ms.custom: 
-- seo-marvel-apr2020
+ms.custom:
+  - msecd-doc-authoring-1016
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
 ms.service: defender-office-365
-ms.date: 08/05/2025
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams
@@ -36,7 +32,9 @@ You turn on or turn off Safe Attachments for Office 365 for SharePoint, OneDrive
 
 ## What do you need to know before you begin?
 
-- You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Safe Attachments** page, use <https://security.microsoft.com/safeattachmentv2>.
+Before you begin, make sure you have the following access, permissions, and setup in place:
+
+- You open the Microsoft Defender portal at [Microsoft Defender portal](https://security.microsoft.com). To go directly to the **Safe Attachments** page, use [Safe Attachments](https://security.microsoft.com/safeattachmentv2).
 
 - To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -58,9 +56,11 @@ You turn on or turn off Safe Attachments for Office 365 for SharePoint, OneDrive
 
 ## Step 1: Use the Microsoft Defender portal to turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams
 
+Perform the following steps to turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams in the Microsoft Defender portal:
+
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Safe Attachments** in the **Policies** section. Or, to go directly to the **Safe Attachments** page, use <https://security.microsoft.com/safeattachmentv2>.
 
-2. On the **Safe Attachments** page, select :::image type="icon" source="media/m365-cc-sc-gear-icon.png" border="false"::: **Global settings**.
+2. On the **Safe Attachments** page, select :::image type="icon" source="media/defender-portal-icon-gear.png" border="false"::: **Global settings**.
 
 3. In the **Global settings** flyout that opens, go to the **Protect files in SharePoint, OneDrive, and Microsoft Teams** section.
 
@@ -70,7 +70,7 @@ You turn on or turn off Safe Attachments for Office 365 for SharePoint, OneDrive
 
 ### Use Exchange Online PowerShell to turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams
 
-If you'd rather use PowerShell to turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and run the following command:
+If you'd rather use PowerShell to enable Defender for Office 365 protection for SharePoint, OneDrive, and Microsoft Teams so that malicious files in those services can be detected and acted on, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and run the following command:
 
 ```powershell
 Set-AtpPolicyForO365 -EnableATPForSPOTeamsODB $true
@@ -84,7 +84,7 @@ By default, users can't open, move, copy, or share<sup>\*</sup> malicious files 
 
 <sup>\*</sup> If users go to **Manage access**, the **Share** option is still available.
 
-To prevent users from downloading malicious files, [connect to SharePoint Online PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) and run the following command:
+To configure the SharePoint tenant to block users from downloading files that have been identified as malicious, [connect to SharePoint Online PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) and run the following command:
 
 ```powershell
 Set-SPOTenant -DisallowInfectedFileDownload $true
@@ -103,7 +103,7 @@ You can create an alert policy that notifies admins when Safe Attachments for Sh
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Alert policy**. To go directly to the **Alert policy** page, use <https://security.microsoft.com/alertpolicies>.
 
-2. On the **Alert policy** page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **New alert policy** to start the new alert policy wizard.
+2. On the **Alert policy** page, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **New alert policy** to start the new alert policy wizard.
 
 3. On the **Name your alert, categorize it, and choose a severity** page, configure the following settings:
    - **Name**: Type a unique and descriptive name. For example, **Malicious Files in Libraries**.
@@ -131,7 +131,7 @@ You can create an alert policy that notifies admins when Safe Attachments for Sh
 
    When you're finished n the **Review your settings** page, select **Submit**.
 
-7. On this page, you can review the alert policy in read-only mode.
+7. On the confirmation page, you can review the alert policy in read-only mode.
 
    When you're finished, select **Done**.
 
@@ -139,7 +139,7 @@ You can create an alert policy that notifies admins when Safe Attachments for Sh
 
 ### Use Security & Compliance PowerShell to create an alert policy for detected files
 
-If you'd rather use PowerShell to create the same alert policy as described in the previous section, [connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) and run the following command:
+If you'd rather use PowerShell to create an alert policy that notifies administrators whenever malware is detected in SharePoint, OneDrive, or Microsoft Teams libraries, [connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) and run the following command:
 
 ```powershell
 New-ProtectionAlert -Name "Malicious Files in Libraries" -Description "Notifies admins when malicious files are detected in SharePoint, OneDrive, or Microsoft Teams" -AggregationType None -Category ThreatManagement -ThreatType Activity -Operation FileMalwareDetected -NotifyUser "admin1@contoso.com","admin2@contoso.com"
@@ -150,6 +150,8 @@ The default _Severity_ value is Low. To specify Medium or High, include the _Sev
 For detailed syntax and parameter information, see [New-ProtectionAlert](/powershell/module/exchangepowershell/new-protectionalert).
 
 ### How do you know these procedures worked?
+
+Use the following methods to confirm that each procedure completed successfully:
 
 - To verify you successfully turned on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, use either of the following steps:
 
@@ -163,7 +165,7 @@ For detailed syntax and parameter information, see [New-ProtectionAlert](/powers
 
     For detailed syntax and parameter information, see [Get-AtpPolicyForO365](/powershell/module/exchangepowershell/get-atppolicyforo365).
 
-- To verify you successfully blocked people from downloading malicious files, open SharePoint Online PowerShell, and run the following command to verify the property value:
+- To verify you successfully blocked people from downloading malicious files, open SharePoint Online PowerShell, and run the following command to check whether downloads of infected files are blocked:
 
   ```powershell
   Get-SPOTenant | Format-List DisallowInfectedFileDownload

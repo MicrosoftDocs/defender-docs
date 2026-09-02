@@ -1,23 +1,21 @@
 ---
 title: Configure automated investigation and response capabilities in Microsoft Defender XDR
-description: Configure automated investigation and response with self-healing in Microsoft Defender XDR
-search.appverid: MET150
+description: Set up automated investigation and response in Microsoft Defender XDR by reviewing prerequisites, configuring automation levels for device groups, and checking security and alert policies to enable self-healing workflows.
 ms.author: guywild
 author: guywi-ms
-manager: dansimp
-audience: ITPro
 ms.topic: how-to
 ms.service: defender-xdr
 ms.localizationpriority: medium
-ms.date: 04/28/2025
+ms.date: 06/15/2026
 ms.collection:
 - m365-security
 - tier2
-ms.custom: 
+ms.custom:
+- msecd-doc-authoring-1014
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-f1.keywords: CSH
+ai-usage: ai-assisted
 #customer intent: As a SOC analyst, I want to configure automated investigation and response capabilities in Microsoft Defender XDR
 ---
 
@@ -39,20 +37,19 @@ Then, after you're all set up, you can [view and manage remediation actions in t
 
 ## Prerequisites for automated investigation and response in Microsoft Defender XDR
 
+The following table lists the requirements for automated investigation and response in Microsoft Defender XDR.
+
 |Requirement|Details|
 |---|---|
 |Subscription requirements|One of these subscriptions: <ul><li>Microsoft 365 E5</li><li>Microsoft 365 A5</li><li>Microsoft 365 E3 with the Microsoft Defender Suite add-on</li><li>Microsoft 365 A3 with the Microsoft 365 A5 Security add-on</li><li>Office 365 E5 plus Enterprise Mobility + Security E5 plus Windows E5</li></ul> <br/> See [Microsoft Defender XDR licensing requirements](./prerequisites.md#licensing-requirements).|
 |Network requirements|<ul><li>[Microsoft Defender for Identity](/azure-advanced-threat-protection/what-is-atp) enabled</li><li>[Microsoft Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security) configured</li><li>[Microsoft Defender for Identity integration](/cloud-app-security/mdi-integration)</li></ul>|
 |Windows device requirements|<ul><li>Windows 11</li><li>Windows 10, version 1709 or later installed (See [Windows release information](/windows/release-information/))</li><li>The following threat protection services are configured:<ul><li>[Microsoft Defender for Endpoint](/defender-endpoint/onboard-windows-client)</li><li>[Microsoft Defender Antivirus](/windows/security/threat-protection/windows-defender-antivirus/configure-windows-defender-antivirus-features)</li></ul></li></ul>|
 |Protection for email content and Office files|<ul><li>[Microsoft Defender for Office 365 is configured](/defender-office-365/mdo-deployment-guide#step-2-configure-protection-policies)</li><li>[Automated investigation and remediation capabilities in Defender for Endpoint are configured](/defender-endpoint/configure-automated-investigations-remediation) (required for manual response actions, such as deleting email messages on devices)</li></ul>|
-|Permissions|To configure automated investigation and response capabilities, you must have one of the following roles assigned in either Microsoft Entra ID (<https://portal.azure.com>) or in the Microsoft 365 admin center (<https://admin.microsoft.com>): <ul><li>Global Administrator</li><li>Security Administrator</li></ul>To work with automated investigation and response capabilities, such as by reviewing, approving, or rejecting pending actions, see [Required permissions for Action center tasks](m365d-action-center.md#required-permissions-for-action-center-tasks).|
-
-> [!NOTE]
-> Microsoft recommends using roles with fewer permissions for better security. The Global Administrator role, which has many permissions, should only be used in emergencies when no other role fits.
+|Permissions|To configure automated investigation and response capabilities, you must have one of the following roles assigned in either Microsoft Entra ID (<https://portal.azure.com>) or in the Microsoft 365 admin center (<https://admin.microsoft.com>): <ul><li>Security Administrator or higher</li></ul>To work with automated investigation and response capabilities, such as by reviewing, approving, or rejecting pending actions, see [Required permissions for Action center tasks](m365d-action-center.md#required-permissions-for-action-center-tasks).|
 
 ## Review or change the automation level for device groups
 
-Whether automated investigations run, and whether remediation actions are taken automatically or only upon approval for your devices depend on certain settings, such as your organization's device group policies. Review the configured automation level for your device group policies. You must be a global administrator or security administrator to perform the following procedure:
+Whether automated investigations run, and whether remediation actions are taken automatically or only upon approval for your devices depend on certain settings, such as your organization's device group policies. Review the configured automation level for your device group policies. You must be at least a security administrator to perform the following procedure:
 
 1. Go to the Microsoft Defender portal at <https://security.microsoft.com> and sign in.
 
@@ -84,6 +81,8 @@ You can choose from several options to change settings for your automated invest
 |Specify automation levels for groups of devices|<ol><li>Set up one or more device groups. See [Create and manage device groups](/defender-endpoint/machine-groups). </li><li>In the Microsoft Defender portal, go to **Permissions** \> **Endpoints roles & groups** \> **Device groups**.</li><li>Select a device group and review its **Automation level** setting. (We recommend using **Full - remediate threats automatically**). See [Automation levels in automated investigation and remediation capabilities](/defender-endpoint/automation-levels).</li><li>Repeat steps 2 and 3 as appropriate for all your device groups. </li></ol>|
 
 ## Next steps
+
+### Related content
 
 - [Remediation actions in Microsoft Defender XDR](m365d-remediation-actions.md)
 - [Visit the Action center](m365d-action-center.md)

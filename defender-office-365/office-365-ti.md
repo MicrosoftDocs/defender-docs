@@ -1,23 +1,17 @@
 ---
 title: Threat investigation & response capabilities in Microsoft Defender for Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.date: 10/10/2023
-audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.assetid: 32405da5-bee1-4a4b-82e5-8399df94c512
 ms.collection:
   - m365-security
   - tier1
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
 description: Learn about threat investigation and response capabilities in Microsoft Defender for Office 365 Plan.
 ms.service: defender-office-365
 appliesto:
@@ -58,7 +52,7 @@ To view and use this report in the Microsoft Defender portal at <https://securit
 
 This feature is only available if you have an active Office 365 E5 or G5 or Microsoft 365 E5 or G5 subscription or the Threat Intelligence add-on. For more information, see the Office 365 Enterprise E5 product page.
 
-Data from Microsoft Defender for Office 365 is incorporated into Microsoft Defender XDR to conduct a comprehensive security investigation across Office 365 mailboxes and Windows devices.
+Data from Microsoft Defender for Office 365 is incorporated into Microsoft Defender to conduct a comprehensive security investigation in Office 365 mailboxes and Windows devices.
 
 ### Incidents
 
@@ -97,7 +91,7 @@ Microsoft Defender for Office 365 uses role-based access control. Permissions ar
 >
 > - [Permissions in the Microsoft Defender portal](mdo-portal-permissions.md)
 > - [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference)
-> - [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac)
+> - [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/manage-rbac)
 
 |Activity|Roles and permissions|
 |---|---|

@@ -3,6 +3,7 @@ title: Investigate and remediate risky OAuth apps | Microsoft Defender for Cloud
 description: This tutorial provides information on how to investigate and remediate risky OAuth apps in Defender for Cloud Apps.
 ms.date: 01/23/2024
 ms.topic: tutorial
+ms.custom: sfi-image-nochange
 ---
 # Investigate and remediate risky OAuth apps
 
@@ -91,7 +92,7 @@ After you determine that an app is suspicious and you want to investigate it, we
 After you determine that an OAuth app is risky, Defender for Cloud Apps provides the following remediation options:
 
 - **Manual remediation**:
-You can easily [ban revoke an app from the OAuth apps page](manage-app-permissions.md#ban-or-approve-an-app)
+You can easily [ban or revoke an app from the OAuth apps page](manage-app-permissions.md#ban-or-approve-an-app)
 
 - **Automatic remediation**: You can create a policy that [automatically revokes an app or revokes a specific user from an app](app-permission-policy.md).
 

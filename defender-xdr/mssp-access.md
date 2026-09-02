@@ -1,25 +1,20 @@
 ---
 title: Provide managed security service provider (MSSP) access
-description: Learn about changes from the Microsoft Defender Security Center to the Microsoft Defender portal.
+description: Learn how to grant managed security service providers (MSSPs) delegated access to Microsoft Defender using role-based access control and Microsoft Entra ID Governance.
 ms.service: defender-xdr
 ms.localizationpriority: medium
-f1.keywords:
-- NOCSH
 ms.author: guywild
 author: guywi-ms
-manager: dansimp
-audience: ITPro
 ms.topic: how-to
-search.appverid: 
-- MOE150
-- MET150
 ms.collection: 
 - m365-security
 - tier2 
-ms.date: 11/19/2024
+ms.date: 06/15/2026
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Defender for Endpoint
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Provide managed security service provider (MSSP) access 
@@ -39,9 +34,7 @@ To implement a multitenant delegated access solution, take the following steps:
 
 3. Manage access requests and audits in [Microsoft Myaccess](/azure/active-directory/governance/entitlement-management-request-approve).
 
-<a name='enable-role-based-access-controls-in-microsoft-defender-for-endpoint-in-microsoft-365-defender-portal'></a>
-
-## Enable role-based access controls in Microsoft Defender for Endpoint in Microsoft Defender portal
+## Enable role-based access controls in Microsoft Defender for Endpoint in Microsoft Defender portal {#enable-role-based-access-controls-in-microsoft-defender-for-endpoint-in-microsoft-365-defender-portal}
 
 1. **Create access groups for MSSP resources in Customer Microsoft Entra ID: Groups**
 
@@ -105,13 +98,14 @@ To implement a multitenant delegated access solution, take the following steps:
 
 4. **Provide access request link to MSSP resources from Customer Microsoft Entra ID: Identity Governance**
 
-    The My Access portal link is used by MSSP SOC analysts to request access via the access packages created. The link is durable, meaning the same link might be used over time for new analysts. The analyst request goes into a queue for approval by the **MSSP Analyst Approvers**.
+    The My Access portal link is used by MSSP SOC analysts to request access via the MSSP access packages. The My Access request link is durable, meaning it can be reused over time for new analysts. The analyst request goes into a queue for approval by the **MSSP Analyst Approvers**.
 
     :::image type="content" source="media/mssp-access/access-properties.png" alt-text="The access properties in the Microsoft Defender portal" lightbox="media/mssp-access/access-properties.png":::
 
-    The link is located on the overview page of each access package.
+    The My Access request link is located on the overview page of each access package.
 
-## Manage access
+<a name="manage-access"></a>
+## Manage MSSP access requests
 
 1. Review and authorize access requests in Customer and/or MSSP myaccess.
 

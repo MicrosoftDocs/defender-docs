@@ -6,6 +6,9 @@ ms.topic: how-to
 ---
 # Working with the RegEx engine
 
+> [!IMPORTANT]
+> File policies retire on January 6, 2027. To maintain file-based data protection, [migrate to Microsoft Purview DLP or auto-labeling policies](migrate-file-policies-to-purview.md).
+
 
 
 This article provides instructions for using RegEx for pattern matching in Defender for Cloud Apps policies.

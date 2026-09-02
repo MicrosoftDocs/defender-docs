@@ -3,7 +3,7 @@ title: Go to the Security Analyzer setup guide
 description: Learn about the Security Analyzer setup guide.
 ms.reviewer: 
 ms.date: 05/23/2024
-manager: deniseb
+manager: bagol
 ms.author: chrisda
 author: chrisda
 ms.service: microsoft-365-security

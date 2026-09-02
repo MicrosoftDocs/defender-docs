@@ -1,14 +1,11 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint demonstration scenarios
 description: Lists Microsoft Defender for Endpoint demonstration scenarios that you can run.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
@@ -20,14 +17,13 @@ appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender for Individuals
   - Microsoft Defender Antivirus
-
 ---
-# Microsoft Defender for Endpoint - demonstration scenarios
 
+# Microsoft Defender for Endpoint - demonstration scenarios
 
 Demonstration scenarios help you learn about the capabilities of Microsoft Defender for Endpoint on Windows, Mac, and Linux. Demonstration scenarios are provided for the following Microsoft Defender for Endpoint protection areas:
 
-- Attack surface protection (**ASR**)
+- Attack surface reduction protection (**ASR**)
 - Next Generation Protection (**NGP**)
 - Endpoint detection and response (**EDR**)
 
@@ -50,8 +46,8 @@ The following table lists the available demonstrations alphabetically, with thei
 |[App reputation demonstration](defender-endpoint-demonstration-app-reputation.md)| NGP | Navigate to the app reputation page to see the demonstration scenario using Microsoft Edge.|
 |[Behavior Monitoring demonstration](demonstration-behavior-monitoring.md)| NGP |Confirm that behavior monitoring is detecting and blocking malware. |
 |[Cloud-delivered protection demonstration](defender-endpoint-demonstration-cloud-delivered-protection.md)| NGP |Confirm that cloud-delivered protection is working properly on your computer. |
-| [Controlled folder access (CFA) demonstration (block script)](defender-endpoint-demonstration-controlled-folder-access-test-tool.md)| ASR | Download the CFA test tool. |
-| [Controlled folder access (CFA) demonstrations (block ransomware)](defender-endpoint-demonstration-controlled-folder-access.md)|  ASR| Download and execute a sample file to trigger CFA ransomware protection.|
+| [Controlled folder access (CFA) demonstration (block script)](defender-endpoint-demonstration-controlled-folder-access-block-app.md)| ASR | Download the CFA test tool. |
+| [Controlled folder access (CFA) demonstrations (block ransomware)](defender-endpoint-demonstration-controlled-folder-access-ransomware.md)|  ASR| Download and execute a sample file to trigger CFA ransomware protection.|
 |[Endpoint Detection and Response (EDR) detections](edr-detection.md)| EDR |Confirm that EDR is detecting cyber threats such as malware.|
 | [Exploit protection (EP) demonstrations](defender-endpoint-demonstration-exploit-protection.md) | ASR | Apply custom exploit protection settings. |
 | [Network protection demonstrations](defender-endpoint-demonstration-network-protection.md)| ASR | Navigate to a suspicious URL to trigger network protection. |
@@ -60,11 +56,8 @@ The following table lists the available demonstrations alphabetically, with thei
 
 ## See also
 
-[Attack surface protection overview](overview-attack-surface-reduction.md)
-[Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
+[Attack surface protection overview](attack-surface-reduction-overview.md)
+[Attack surface reduction (ASR) rules deployment overview](attack-surface-reduction-rules-deployment.md)
 [Next Generation Protection overview](next-generation-protection.md)
 [Endpoint detection and response overview](overview-endpoint-detection-response.md)
 [Microsoft Defender for Endpoint security blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/bg-p/MicrosoftDefenderATPBlog)
-
-
-
