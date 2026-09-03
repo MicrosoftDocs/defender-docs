@@ -163,7 +163,7 @@ You turn on or turn off Safe Links protection for Microsoft Teams in Safe Links 
 URLs in Teams are checked against a list of known malicious links when the protected user clicks the link (time-of-click protection). URLs aren't rewritten. If a link is found to be malicious, users have the following experiences:
 
 - If the link was clicked in a Teams conversation, group chat, or from channels, the warning page as shown in the screenshot appears in the default web browser.
-- If the link was clicked from a pinned tab, the warning page appears in the Teams interface within that tab. The option to open the link in a web browser is disabled for security reasons.
+- If the link was clicked from a pinned tab, the warning page appears in a new browser tab.
 - Depending on how the **Let users click through to the original URL** setting in the policy is configured, the user is or isn't allowed to click through to the original URL (**Continue anyway (not recommended)** in the screenshot). We recommend that you don't select the **Let users click through to the original URL** setting so users can't click through to the original URL.
 
 If the user who sent the link isn't protected by a Safe Links policy where Teams protection is turned on, the user is free to click through to the original URL on their computer or device.
