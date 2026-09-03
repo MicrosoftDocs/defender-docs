@@ -29,6 +29,23 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## September 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| September 3, 2026 | GA | [General availability of Defender for Cosmos DB in Azure Government cloud](#general-availability-of-defender-for-cosmos-db-in-azure-government-cloud) |
+
+### General availability of Defender for Cosmos DB in Azure Government cloud
+
+September 3, 2026
+
+With this general availability announcement, the Defender for Cosmos DB plan in Azure Government cloud now aligns with the commercial cloud offering in feature coverage and runtime protection capabilities.
+
+For more information about Microsoft Defender for Cosmos DB, see [Overview of Microsoft Defender for Cosmos DB](/azure/defender-for-cloud/concept-defender-for-cosmos).
+
+For more information about feature and cloud availability, see [Support matrix for Defender for Cloud](/azure/defender-for-cloud/support-matrix-defender-for-cloud).
+
+
 ## August 2026
 
 | Date | Category | Update |
