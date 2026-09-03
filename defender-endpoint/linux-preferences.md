@@ -280,7 +280,7 @@ Specifies the enforcement preference of the antivirus engine. There are four val
 |Enforcement level|Description|
 |---|---|
 |**Real-time**|Actively monitors, detects, and remediates threats in real time.|
-|**Audit**|Actively monitors and detects threats in real time without automatically remediating them.|
+|**Audit**(Preview)|Actively monitors and detects threats in real time without automatically remediating them.|
 |**On-demand**|Detects and remediates threats only during manual or scheduled scans.|
 |**Passive**|Doesn't provide real-time threat detection. Threats can still be detected during manual or scheduled scans.|
 
@@ -775,10 +775,29 @@ You can configure the following settings to enable certain advanced scanning fea
 > [!IMPORTANT]
 > Enabling these features might affect device performance. We recommended the default values unless recommended otherwise by Microsoft Support.
 
+### Configure Memory Scan scanning (Preview)
+
+Specifies whether Microsoft Defender for Endpoint scans process memory for known malicious behaviors and memory-resident threats.
+
+> [!NOTE]
+> The level of protection provided by Memory Scan depends on the Behavior Monitoring and Antivirus configuration:
+> - **Protection**: Behavior Monitoring enabled + Antivirus Enforcement Level set to Realtime
+> - **Detection(without remediation)**: Behavior Monitoring enabled + Antivirus Enforcement Level set to Audit
+> - **EDR visibility(without AV scan)**: Antivirus Enforcement Level set to Passive or On-demand, regardless of the Behavior Monitoring state
+
+|Description|JSON Value|Microsoft Defender portal value|
+|---|---|---|
+|**Key**|`MemoryScan`|Memory scan (inside Advanced Settings)|
+|**Data type**|Boolean|Dropdown|
+|**Possible values**|`Disabled` (default) <br/>`Enabled`|Not Configured<br/>Disabled(default)<br/>Enabled|
+
+> [!NOTE]
+> Available in Defender for Endpoint version `101.26071.0005` or later in Insiders-slow channel.
+
 #### Configure scanning of file modify permissions events
 
 Specifies whether Defender for Endpoint scans files when their permissions changed to set the executed bits.
-
+nnng
 > [!NOTE]
 > This setting is meaningful only when `enableFilePermissionEvents` is enabled. For more information, see [Configure monitoring of file modify permissions events](#configure-monitoring-of-file-modify-permissions-events).
 
