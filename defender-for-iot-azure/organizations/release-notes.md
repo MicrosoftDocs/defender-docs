@@ -39,6 +39,7 @@ Cloud features may be dependent on a specific sensor version. Such features are 
 | Version / Patch |  Release date | Scope     | Supported until |
 | ------- |  ------------ | ----------- | ------------------- |
 | **26.1** | | | |
+| 26.1.1 | 06/2026 | Minor |05/2027 |
 | 26.1.0 | 04/2026 | Major |03/2027 |
 | **25.2** | | | |
 | 25.2.2 | 02/2026 | Minor |01/2027 |
@@ -89,6 +90,21 @@ Version numbers are listed only in this article and in the [What's new in Micros
 To understand whether a feature is supported in your sensor version, check the relevant version section below and its listed features.
 
 ## Versions 26.1.x
+
+### Version 26.1.1
+
+**Release date**: 06/2026
+
+**Supported until**: 05/2027
+
+**Scope**: Minor
+
+This version includes the following updates:
+
+- CVE updates
+- Bug fixes for stability improvements
+
+Scope: Minor
 
 ### Version 26.1.0
 

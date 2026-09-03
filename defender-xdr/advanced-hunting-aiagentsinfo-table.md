@@ -25,11 +25,13 @@ ms.date: 04/15/2026
 
 > [!IMPORTANT]
 > Some information relates to prereleased product that may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+>
+> The `AIAgentsInfo` table is transitioning to the [`AgentsInfo`](advanced-hunting-agentsinfo-table.md) table. Microsoft Agent 365 customers should use the `AgentsInfo` table today. The `AIAgentsInfo` table remains accessible until July 1, 2026. Update your queries to use `AgentsInfo` before this date. For more information, see [Advanced hunting schema - Naming changes](advanced-hunting-schema-changes.md).
 
 The `AIAgentsInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about AI agents and their associated entities. Use this reference to construct queries that return information from this table.
 
 Microsoft Defender populates this table through connectors in Microsoft Defender for Cloud Apps Power Plaform and Microsoft Agent 365. If your organization doesn't deploy these services, queries that use the table don't work or return any results. For more information, see:
-- [Deploy services supported by Microsoft Defender XDR](deploy-supported-services.md)
+- [Deploy services supported by Microsoft Defender](deploy-supported-services.md)
 - [Overview of Microsoft Agent 365](/microsoft-agent-365/overview)
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).

@@ -4,11 +4,12 @@ ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov, oogunrinde
 description: Turn tamper protection on or off for your organization in Microsoft Intune.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 12/30/2025
+ms.date: 06/16/2026
 ms.topic: how-to
 author: limwainstein
 ms.author: lwainstein
 ms.custom: 
+- msecd-doc-authoring-1014
 - nextgen
 - admindeeplinkDEFENDER
 ms.subservice: ngp
@@ -22,6 +23,7 @@ appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
 ---
 
 # Manage tamper protection for your organization using Microsoft Intune
@@ -65,51 +67,35 @@ Tamper protection helps protect certain [security settings](prevent-changes-to-s
 
 ## Turn tamper protection on (or off) in Microsoft Intune
 
-1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, go to **Endpoint security**. On the **Endpoint security \| Overview** page, select **Antivirus** in the **Manage** section. Or, to go directly to the **Endpoint security \| Antivirus** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/SecurityManagementMenu/~/antivirus>.
+To create an antivirus policy in Microsoft Intune that turns tamper protection on or off for your devices, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings::
 
-2. On the **Summary** tab of the **Endpoint security \| Antivirus** page, select **Create policy** in the **AV policies** section.
-
-3. On the **Create a profile** flyout that opens, configure the following settings:
-   - **Platform**: Select **Windows**.
-   - **Profile**: Select **Windows Security Experience**.
-
-   Select **Create**.
-
-4. The **Create policy** wizard opens. On the **Basics** tab, configure the following settings:
-   - **Name**: Enter a unique, descriptive name for the policy.
-   - **Description**: Enter an optional description.
-
-   Select **Next**.
-
-5. On the **Configuration settings** tab, **Tamper protection (device)** is available in the **Defender** section. Select **On**, and then select **Next**.
-
-   :::image type="content" source="media/turnontamperprotectinmem.png" alt-text="Turn tamper protection turned on with Intune" lightbox="media/turnontamperprotectinmem.png":::
-
-6. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing scope tags. When you're finished, select **Next**.
-
-7. On the **Assignments** tab, click in the box, select **All users**, click in the box again, and then select select **All Devices**. Verify the **Target type** value is **Include** for both, and then select **Next**.
-
-8. On the **Review + create** tab, verify the settings, and then select **Save**.
+- **Policy type**": Antivirus
+- **Platform**: Windows
+- **Profile**: Windows Security Experience
+- **Basics**: Enter an name and description for your policy.
+- **Configuration settings**: Turn **Tamper protection (device)** on in the **Defender** section
+- **Scope tags**: If your organization is using [scope tags](/intune/intune-service/fundamentals/scope-tags), select the tags you want to use
+- **Assignments**: Select **All users** and **All Devices**. Verify the **Target type** value is **Include** for both.
 
 ## Tamper protection for antivirus exclusions
 
-If your organization has [exclusions defined for Microsoft Defender Antivirus](configure-exclusions-microsoft-defender-antivirus.md), tamper protection protects those exclusions, provided all of the following conditions are met:
+Your organization can define [exclusions for Microsoft Defender Antivirus](microsoft-defender-antivirus-exclusions-configure.md). Tamper protection can protect those exclusions too, if the following conditions are all met:
 
 |Condition|Criteria|
 |---|---|
-|Microsoft Defender platform|Devices are running Microsoft Defender platform `4.18.2211.5` or later. For more information, see [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).|
-|`DisableLocalAdminMerge` setting|This setting is also known as preventing local list merging. `DisableLocalAdminMerge` must be enabled so that settings configured on a device aren't merged with organization policies, such as settings in Intune. For more information, see [DisableLocalAdminMerge](/windows/client-management/mdm/defender-csp).|
-|Device management|Devices are either managed in Intune only, or are managed with Configuration Manager only. Sense must be enabled.|
-|Antivirus exclusions|Microsoft Defender Antivirus exclusions are managed in Microsoft Intune or Configuration Manager. For more information, see [Settings for Microsoft Defender Antivirus policy in Microsoft Intune for Windows devices](/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows). <br/><br/>Functionality to protect Microsoft Defender Antivirus exclusions is enabled on devices. For more information, see [How to determine whether antivirus exclusions are tamper protected on a Windows device](#how-to-determine-whether-antivirus-exclusions-are-tamper-protected-on-a-windows-device).|
+|Microsoft Defender platform|Devices must run platform version `4.18.2211.5` or later. See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#platform-and-engine-releases).|
+|`DisableLocalAdminMerge` setting|This setting prevents local list merging. Enable `DisableLocalAdminMerge` so that device settings don't merge with org policies (such as Intune settings). See [DisableLocalAdminMerge](/windows/client-management/mdm/defender-csp).|
+|Device management|Devices must be managed in Intune only or Configuration Manager only. Sense must be enabled.|
+|Antivirus exclusions|Exclusions must be managed in Intune or Configuration Manager. See [Microsoft Defender Antivirus policy settings for Windows devices](/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows). <br/><br/>The exclusion protection feature must be enabled on devices. See [How to determine whether antivirus exclusions are tamper protected on a Windows device](#how-to-determine-whether-antivirus-exclusions-are-tamper-protected-on-a-windows-device).|
 
 > [!NOTE]
-> For example, when Configuration Manager is used solely to manage exclusions and the required conditions are met, exclusions from Configuration Manager are tamper protected. In this case, there's no need to push antivirus exclusions using Microsoft Intune.
+> If Configuration Manager is the sole tool managing exclusions and all conditions are met, those exclusions are tamper protected. You don't need to also push exclusions through Intune.
 
-For more detailed information about Microsoft Defender Antivirus exclusions, see [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
+To learn more about antivirus exclusions, see [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md).
 
 ## How to determine whether antivirus exclusions are tamper protected on a Windows device
 
-You can use a registry key to determine whether the functionality to protect Microsoft Defender Antivirus exclusions is enabled. The following procedure describes how to view, but not change, tamper protection status.
+You can use a registry key to determine whether the functionality to protect Microsoft Defender Antivirus exclusions is enabled. Use this procedure to view, but not change, tamper protection status.
 
 1. On a Windows device open Registry Editor. (Read-only mode is fine; you're not editing the registry key.)
 

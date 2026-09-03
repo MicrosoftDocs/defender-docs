@@ -9,10 +9,12 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 01/14/2025
+ms.date: 06/15/2026
 appliesto:
 - Microsoft Defender for Endpoint Plan 2
 - Microsoft Defender XDR
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 #customer intent: As a SOC analyst, I want to learn how to use the audit log to search for Microsoft Defender XDR activities to help with investigation.
 ---
@@ -66,7 +68,8 @@ For step-by-step instructions, see [Search the audit log in the compliance porta
 
 Audit log record retention is based on Microsoft Purview retention policies. For more information, see [Manage audit log retention policies](/purview/audit-log-retention-policies).
 
-## Microsoft Defender XDR activities
+<a name="microsoft-defender-xdr-activities"></a>
+## Microsoft Defender XDR audit log activity reference
 
 For a list of all events that are logged for user and admin activities in Microsoft Defender XDR in the Microsoft 365 audit log, see:
 
@@ -74,7 +77,8 @@ For a list of all events that are logged for user and admin activities in Micros
 - [Incident activities in Microsoft Defender XDR in the audit log](/purview/audit-log-activities#microsoft-defender-xdr-custom-detection-activities)
 - [Suppression rule activities in Microsoft Defender XDR in the audit log](/purview/audit-log-activities#microsoft-defender-xdr-suppression-rule-activities)
 
-## Microsoft Defender for Endpoint activities
+<a name="microsoft-defender-for-endpoint-activities"></a>
+## Microsoft Defender for Endpoint audit log activity reference
 
 For a list of all events that are logged for user and admin activities in Microsoft Defender for Endpoint in the Microsoft 365 audit log, see:
 
@@ -85,7 +89,7 @@ For a list of all events that are logged for user and admin activities in Micros
 
 ## Search for events using a PowerShell script
 
-You can use the following PowerShell code snippet to query the Office 365 Management API to retrieve information about Microsoft Defender XDR events:
+You can use the following PowerShell code snippet to query the Office 365 Management API to retrieve information about Microsoft Defender XDR events. The script connects to Exchange Online PowerShell, establishes a remote session, and then searches the unified audit log for the specified record type and date range.
 
 ```PowerShell
 $cred = Get-Credential
@@ -95,7 +99,7 @@ Search-UnifiedAuditLog -StartDate 2023/03/12 -EndDate 2023/03/20 -RecordType <ID
 ```
 
 >[!NOTE]
-> See the API column in Audit activities included for the record type values.
+> See the API column in [Audit log activities](/purview/audit-log-activities) for the record type values.
 
 For more information, see [Use a PowerShell script to search the audit log](/purview/audit-log-search-script)
 

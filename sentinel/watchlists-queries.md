@@ -4,12 +4,13 @@ description: Use watchlists in KQL search queries or detection rules with built-
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 3/14/2024
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 
 #Customer intent: As a security analyst, I want to use watchlists in my queries and detection rules so that I can efficiently correlate and analyze data to detect potential threats.
@@ -26,7 +27,7 @@ For optimal query performance, use **SearchKey** as the key for joins in your qu
 
 ## Build queries with watchlists
 
-To use a watchlist in search query, write a Kusto query that uses the _GetWatchlist('watchlist-name') function and uses **SearchKey** as the key for your join.
+To use a watchlist in a search query, write a Kusto Query Language (KQL) query that uses the _GetWatchlist('watchlist-name') function and uses **SearchKey** as the key for your join.
 
 1. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Microsoft Sentinel** > **Configuration** > **Watchlist**. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), under **Configuration**, select **Watchlist**.
 1. Select the watchlist you want to use.
@@ -58,7 +59,7 @@ To use a watchlist in search query, write a Kusto query that uses the _GetWatchl
 
 ## Create an analytics rule with a watchlist
 
-To use watchlists in analytics rules, create a rule using the _GetWatchlist('watchlist-name') function in the query.
+The _GetWatchlist('watchlist-name') function returns the contents of a specified watchlist so you can reference watchlist data directly in a query. To use watchlists in analytics rules, create a rule that includes this function in the rule query.
 
 1. Under **Configuration**, select **Analytics**.
 1. Select **Create** and the type of rule you want to create.
@@ -102,7 +103,7 @@ To use watchlists in analytics rules, create a rule using the _GetWatchlist('wat
     )
     ```
 
-    The following image shows this last query used in the rule query.
+    The following screenshot shows the inline `_GetWatchlist('ipwatchlist')` query used in the rule query.
 
     :::image type="content" source="./media/watchlists-queries/sentinel-watchlist-analytics-rule.png" alt-text="Screenshot that shows how to use watchlists in analytics rules.":::
 
@@ -110,9 +111,10 @@ To use watchlists in analytics rules, create a rule using the _GetWatchlist('wat
 
 Watchlists are refreshed in your workspace every 12 days, updating the `TimeGenerated` field. For more information, see [Create custom analytics rules to detect threats](detect-threats-custom.md).
 
-## View list of watchlist aliases
+<a name="view-list-of-watchlist-aliases"></a>
+## View the list of watchlist aliases
 
-You might need to see a list of watchlist aliases to identify a watchlist to use in a query or analytics rule.
+A watchlist alias is the unique identifier used to reference a watchlist in queries and analytics rules. You might need to see a list of watchlist aliases to identify a watchlist to use in a query or analytics rule.
 
 1. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), under **General**, select **Logs**.<br> In the [Defender portal](https://security.microsoft.com/), select **Investigation & response** > **Hunting** > **Advanced hunting**.
 1. On the **New Query** page, run the following query: `_GetWatchlistAlias`. 
@@ -120,7 +122,7 @@ You might need to see a list of watchlist aliases to identify a watchlist to use
 
    :::image type="content" source="./media/watchlists-queries/sentinel-watchlist-alias.png" alt-text="Screenshot that shows a list of watchlists." lightbox="./media/watchlists-queries/sentinel-watchlist-alias.png":::
 
-See more information on the following items used in the preceding examples, in the Kusto documentation:
+For more information about the Kusto operators and statements used in the examples on this page, see the Kusto documentation:
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
 - [***project*** operator](/kusto/query/project-operator?view=microsoft-sentinel&preserve-view=true)
 - [***lookup*** operator](/kusto/query/lookup-operator?view=microsoft-sentinel&preserve-view=true)
@@ -131,9 +133,9 @@ See more information on the following items used in the preceding examples, in t
 
 ## Related content
 
-In this document, you learned how to use watchlists in Microsoft Sentinel to enrich data and improve investigations. To learn more about Microsoft Sentinel, see the following articles:
+To learn more about watchlists and Microsoft Sentinel, see the following articles:
 
 - [Create watchlists](watchlists-create.md)
-- Learn how to [get visibility into your data and potential threats](get-visibility.md).
-- Get started [detecting threats with Microsoft Sentinel](./detect-threats-built-in.md).
+- [Visualize collected data](get-visibility.md).
+- [Detect threats with built-in analytics rules](./detect-threats-built-in.md).
 - [Use workbooks](monitor-your-data.md) to monitor your data.

@@ -1,8 +1,9 @@
 ---
 title: Microsoft Sentinel health tables reference
 description: Learn about the fields in the SentinelHealth tables, used for health monitoring and analysis.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: reference
 ms.date: 08/20/2025
 ms.service: microsoft-sentinel

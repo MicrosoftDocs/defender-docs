@@ -9,10 +9,12 @@ ms.collection:
 - tier1
 - usx-security
 ms.topic: how-to
-ms.date: 03/17/2025
+ms.date: 06/15/2026
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Set up Microsoft Defender multitenant management
@@ -86,7 +88,8 @@ The features available in multitenant management now appear on the navigation ba
 
    :::image type="content" source="media/mto-requirements/mto-tenant-selection.png" alt-text="Screenshot of Microsoft Defender multitenant management." lightbox="media/mto-requirements/mto-tenant-selection.png":::
 
-## Next step
+<a name="next-step"></a>
+## Related content
 
 Use these articles to get started with Microsoft Defender multitenant management:
 

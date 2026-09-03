@@ -8,15 +8,18 @@ ms.assetid: 5a6f2d7f-d998-4f31-b4f5-f7cbf6f38578
 ms.collection: 
   - m365-security
   - tier2
-ms.custom: 
+ms.custom:
+  - msecd-doc-authoring-1016
   - seo-marvel-apr2020
+  - sfi-image-nochange
 description: Admins can learn about the anti-phishing policies that are available in the built-in security features for all cloud mailboxes and in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 04/14/2026
+ms.date: 07/17/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 #customer intent:As a security administrator, I need clear, step‑by‑step guidance for configuring anti‑phishing policies—especially spoofing and impersonation protections—so I can protect users and minimize false positives.
 ---
 
@@ -53,7 +56,7 @@ To configure anti-phishing policies, see the following articles:
 
 ## Comparison of anti-phishing policies for all cloud mailboxes and in Defender for Office 365
 
-The high-level differences between the anti-phishing policies for all cloud mailboxes and anti-phishing policies in Defender for Office 365 are described in the following table:
+The anti-phishing policies for all cloud mailboxes and anti-phishing policies in Defender for Office 365 share several features (default policy, custom policies, common policy settings, spoof settings, and first contact safety tip), but only Defender for Office 365 includes impersonation settings and phishing email thresholds. The specific feature comparison is:
 
 |Feature|Anti-phishing policies<br>for all cloud mailboxes|Anti-phishing policies<br>in Defender for Office 365|
 |---|:---:|:---:|
@@ -77,7 +80,7 @@ The following policy settings are available in anti-phishing policies for all cl
 
 - **Users, groups, and domains** and **Exclude these users, groups, and domains**: Recipient filters to identify the internal recipients that the policy applies to. At least one condition is required in custom policies. Conditions and exceptions aren't available in the default policy (the default policy applies to all recipients). You can use the following recipient filters for conditions and exceptions:
 
-  - **Users**: One or more mailboxes, mail users, or mail contacts in the organization.
+  - **Users**: One or more mailboxes, or mail users in the organization.
   - **Groups**:
     - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
     - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
@@ -98,14 +101,14 @@ The following policy settings are available in anti-phishing policies for all cl
     The policy is applied to `romain@contoso.com` _only_ if he's also a member of the Executives group. Otherwise, the policy isn't applied to him.
 
   > [!TIP]
-  > At least one selection in the **Users, groups, and domains** settings is required in custom anti-phishing policies to identify the message **recipients that the policy applies to**. Anti-phishing policies in Defender for Office 365 also have [impersonation settings](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) where you can specify **sender email addresses or sender domains that receive impersonation protection** as described later in this article.
+  > At least one selection in the **Users, groups, and domains** settings is required in custom anti-phishing policies to identify the message **recipients that the policy applies to**. Anti-phishing policies in Defender for Office 365 also have [impersonation settings](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) where you can specify **sender email addresses or sender domains that receive impersonation protection**.
 
 ## Spoof settings
 
 Spoofing is when the From address in an email message (the sender address that email clients show) doesn't match the domain of the email source. For more information about spoofing, see [Anti-spoofing protection](anti-phishing-protection-spoofing-about.md).
 
 > [!TIP]
-> For a comparison of spoofing versus impersonation, see the [Spoofing vs. impersonation](#spoofing-vs-impersonation) section later in this article.
+> For a comparison of spoofing versus impersonation, see [Spoofing vs. impersonation](#spoofing-vs-impersonation).
 
 The following spoof settings are available in anti-phishing policies for all cloud mailboxes and in anti-phishing policies in Defender for Office 365:
 
@@ -122,7 +125,7 @@ The following spoof settings are available in anti-phishing policies for all clo
   > - You don't need to disable anti-spoofing protection if your MX record doesn't point to Microsoft 365; you enable Enhanced Filtering for Connectors instead. For instructions, see [Enhanced Filtering for Connectors in Exchange Online](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
   > - Disabling anti-spoofing protection only disables _implicit_ spoofing protection from [composite authentication](email-authentication-about.md#composite-authentication) checks. For information about how anti-spoofing protection and the source domains's domain's DMARC policy (`p=quarantine` or `p=reject` in the DMARC TXT record) affect _explicit_ [DMARC](email-authentication-dmarc-configure.md) checks, see the [Spoof protection and sender DMARC policies](#spoof-protection-and-sender-dmarc-policies) section.
 
-- **Unauthenticated sender indicators**: Available in the **Safety tips & indicators** section only when spoof intelligence is turned on. See the details in the next section.
+- **Unauthenticated sender indicators**: Available in the **Safety tips & indicators** section only when spoof intelligence is turned on. For details, see [Unauthenticated sender indicators](#unauthenticated-sender-indicators).
 - **Actions**: For messages from blocked spoofed senders (automatically blocked by spoof intelligence ([composite authentication](email-authentication-about.md#composite-authentication) failure plus malicious intent) or manually blocked in the Tenant Allow/Block list), you can also specify the action to take on the messages:
   - **Move messages to the recipients' Junk Email folders**: The default value. The message is delivered to the mailbox and moved to the Junk Email folder. For more information, see [Configure junk email settings on cloud mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).
   - **Quarantine the message**: Sends the message to quarantine instead of the intended recipients. For information about quarantine, see the following articles:
@@ -148,23 +151,23 @@ In anti-phishing policies, you can control whether `p=quarantine` or `p=reject` 
 
 :::image type="content" source="media/anti-phishing-policies-honor-dmarc-settings.png" alt-text="DMARC settings in an anti-phishing policy." lightbox="media/anti-phishing-policies-honor-dmarc-settings.png":::
 
-The relationship between spoof intelligence and whether sender DMARC policies are honored is described in the following table:
+The action taken on a spoofed message depends on whether spoof intelligence is enabled and whether the **Honor DMARC policy** setting is turned on. The combinations and their resulting behaviors are:
 
 > [!TIP]
 > It's important to understand that a [composite authentication](email-authentication-about.md#composite-authentication) failure doesn't directly result in a message being blocked. Our system uses a holistic evaluation strategy that considers the overall suspicious nature of a message along with composite authentication results. This method mitigates the risk of incorrectly blocking legitimate email from domains that might not strictly adhere to email authentication protocols. This balanced approach helps distinguish genuinely malicious email from legitimate message senders who fail to conform to standard email authentication practices.
 
 |&nbsp;|Honor DMARC policy On|Honor DMARC policy Off|
 |---|---|---|
-|**Spoof intelligence On**|Separate actions for implicit and explicit email authentication failures: <ul><li><u>Implicit failures</u>: Use the **If the message is detected as spoof by spoof intelligence** action (_AuthenticationFailAction_) in the anti-phishing policy.</li><li><u>Explicit failures</u>: <ul><li>DMARC policy `p=quarantine`: Use the **If the message is detected as spoof and DMARC policy is set as p=quarantine** action in the anti-phishing policy.</li><li>DMARC policy `p=reject`: Use the **If the message is detected as spoof and DMARC policy is set as p=reject** action in the anti-phishing policy.</li><li>DMARC policy `p=none`: Microsoft 365 takes no action based on DMARC, but other protection features in the filtering stack are still able to act on the message.</li></ul></li></ul>|The **If the message is detected as spoof by spoof intelligence** action (_AuthenticationFailAction_) in the anti-phishing policy is used for both implicit and explicit email authentication failures. Explicit email authentication failures ignore `p=quarantine`, `p=reject`, `p=none`, or other values in the DMARC policy.|
-|**Spoof intelligence Off**|Implicit email authentication checks aren't used. <br/><br/> Explicit email authentication failures: <ul><li>DMARC policy `p=quarantine`: Use the **If the message is detected as spoof and DMARC policy is set as p=quarantine** action in the anti-phishing policy.</li><li>DMARC policy `p=reject`: Use the **If the message is detected as spoof and DMARC policy is set as p=reject** action in the anti-phishing policy.</li><li>DMARC policy `p=none`: The message isn't identified as spoofing by Microsoft 365, but other protection features in the filtering stack are still able to act on the message.</li></ul>|Implicit email authentication checks aren't used. <br/><br/> Explicit email authentication failures: <ul><li>DMARC policy `p=quarantine`, `p=reject`: Use the **If the message is detected as spoof by spoof intelligence** action (_AuthenticationFailAction_) in the anti-phishing policy.</li><li>DMARC policy `p=none`: Microsoft 365 takes no action based on DMARC, but other protection features in the filtering stack are still able to act on the message.|
+|**Spoof intelligence On**|Separate actions for implicit and explicit email authentication failures: <ul><li><u>Implicit failures</u>: Use the **If the message is detected as spoof by spoof intelligence** action (**_AuthenticationFailAction_**) in the anti-phishing policy.</li><li><u>Explicit failures</u>: <ul><li>DMARC policy `p=quarantine`: Use the **If the message is detected as spoof and DMARC policy is set as p=quarantine** action in the anti-phishing policy.</li><li>DMARC policy `p=reject`: Use the **If the message is detected as spoof and DMARC policy is set as p=reject** action in the anti-phishing policy.</li><li>DMARC policy `p=none`: Microsoft 365 takes no action based on DMARC, but other protection features in the filtering stack are still able to act on the message.</li></ul></li></ul>|The **If the message is detected as spoof by spoof intelligence** action (**_AuthenticationFailAction_**) in the anti-phishing policy is used for both implicit and explicit email authentication failures. Explicit email authentication failures ignore `p=quarantine`, `p=reject`, `p=none`, or other values in the DMARC policy.|
+|**Spoof intelligence Off**|Implicit email authentication checks aren't used. <br/><br/> Explicit email authentication failures: <ul><li>DMARC policy `p=quarantine`: Use the **If the message is detected as spoof and DMARC policy is set as p=quarantine** action in the anti-phishing policy.</li><li>DMARC policy `p=reject`: Use the **If the message is detected as spoof and DMARC policy is set as p=reject** action in the anti-phishing policy.</li><li>DMARC policy `p=none`: The message isn't identified as spoofing by Microsoft 365, but other protection features in the filtering stack are still able to act on the message.</li></ul>|Implicit email authentication checks aren't used. <br/><br/> Explicit email authentication failures: <ul><li>DMARC policy `p=quarantine`, `p=reject`: Use the **If the message is detected as spoof by spoof intelligence** action (**_AuthenticationFailAction_**) in the anti-phishing policy.</li><li>DMARC policy `p=none`: Microsoft 365 takes no action based on DMARC, but other protection features in the filtering stack are still able to act on the message.|
 
 > [!NOTE]
 > If the MX record for the Microsoft 365 domain points to a non-Microsoft service or device that sits in front of Microsoft 365, the **Honor DMARC policy** setting is applied only if [Enhanced Filtering for Connectors](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) is enabled for the connector that receives inbound messages.
 >
 > Customers can override the **Honor DMARC policy** setting for specific email messages and/or senders using the following methods:
 >
-> - [Admins](configure-junk-email-settings-on-exo-mailboxes.md#use-exchange-online-powershell-to-configure-the-safelist-collection-on-a-mailbox) or [users](https://support.microsoft.com/office/48c9f6f7-2309-4f95-9a4d-de987e880e46) can add the senders to the Safe Senders list in the user's mailbox.
-> - Admins can use the [spoof intelligence insight](anti-spoofing-spoof-intelligence.md#override-the-spoof-intelligence-verdict) or the [Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-spoofed-senders) to allow messages from the spoofed sender.
+> - [Admins can use Exchange Online PowerShell to configure the safelist collection](configure-junk-email-settings-on-exo-mailboxes.md#use-exchange-online-powershell-to-configure-the-safelist-collection-on-a-mailbox) or [users can update their Safe Senders list in Outlook](https://support.microsoft.com/office/48c9f6f7-2309-4f95-9a4d-de987e880e46) to add the senders to the Safe Senders list in the user's mailbox.
+> - Admins can use the [spoof intelligence insight](anti-spoofing-spoof-intelligence.md#override-the-spoof-intelligence-verdict), the [Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-spoofed-senders), or [allowed sender or domain lists in anti-spam policies](create-safe-sender-lists-in-office-365.md#use-allowed-sender-lists-or-allowed-domain-lists-in-anti-spam-policies) to allow messages from the spoofed sender.
 > - Admins create an Exchange mail flow rule (also known as a transport rule) for all users that allows messages for those particular senders.
 > - Admins create an Exchange mail flow rule for all users for rejected email that fails the organization's DMARC policy.
 
@@ -172,7 +175,7 @@ The relationship between spoof intelligence and whether sender DMARC policies ar
 
 Unauthenticated sender indicators are part of the [Spoof settings](#spoof-settings) that are available in the **Safety tips & indicators** section in anti-phishing policies for all cloud mailboxes and in anti-phishing policies in Defender for Office 365. The following settings are available only when spoof intelligence is turned on:
 
-- **Show (?) for unauthenticated senders for spoof**: Adds a question mark to the sender's photo in the From box if the message doesn't pass SPF or DKIM checks **and** the message doesn't pass DMARC or [composite authentication](email-authentication-about.md#composite-authentication). When this setting is turned off, the question mark isn't added to the sender's photo.
+- **Show (?) for unauthenticated senders for spoof**: Adds a question mark to the sender's photo in the From box if the message doesn't pass SPF or DKIM checks **and** the message doesn't pass DMARC or [composite authentication](email-authentication-about.md#composite-authentication) (Microsoft's combined assessment of SPF, DKIM, and DMARC results). When this setting is turned off, the question mark isn't added to the sender's photo.
 
   :::image type="content" source="media/anti-phishing-policies-safety-tip-unauthenticated-senders.png" alt-text="Screenshot of an unauthenticated sender in an email message." lightbox="media/anti-phishing-policies-safety-tip-unauthenticated-senders.png":::
 
@@ -238,12 +241,12 @@ Impersonation is where the sender or the sender's email domain in a message look
 
 An impersonated domain might otherwise be considered legitimate (the domain is registered, email authentication DNS records are configured, etc.), except the intent of the domain is to deceive recipients.
 
-The impersonation settings described in the following sections are available only in anti-phishing policies in Defender for Office 365.
+The impersonation settings for [user impersonation protection](#user-impersonation-protection), [domain impersonation protection](#domain-impersonation-protection), [mailbox intelligence](#mailbox-intelligence-impersonation-protection), [impersonation safety tips](#impersonation-safety-tips), and [trusted senders and domains](#trusted-senders-and-domains) are available only in anti-phishing policies in Defender for Office 365.
 
 > [!TIP]
 > Details about detected impersonation attempts are available in the impersonation insight. For more information, see [Impersonation insight in Defender for Office 365](anti-phishing-mdo-impersonation-insight.md).
 >
-> For a comparison of impersonation versus spoofing, see the [Spoofing vs. impersonation](#spoofing-vs-impersonation) section later in this article.
+> For a comparison of impersonation versus spoofing, see [Spoofing vs. impersonation](#spoofing-vs-impersonation).
 
 #### User impersonation protection
 
@@ -395,7 +398,7 @@ The chance of false positives (good messages marked as bad) increases as you inc
 **Impersonation** is an attacker mimicking a trusted user, domain, or brand to trick the recipient into believing the email is genuine. The attacker often uses subtle variations of the actual user or domain name (for example, `mithun@ćóntoso.com` instead of `mithun@contoso.com`).
 
 - Anti-phishing protection for all cloud mailboxes doesn't include impersonation protection.
-- Defender for Office 365 includes impersonation protection for users, domains, and brands, allowing admins to define trusted entities and thresholds for detection.
+- Defender for Office 365 includes impersonation protection for users and domains, allowing admins to define trusted entities and thresholds for detection.
 
 Impersonation can pass email authentication checks (SPF, DKIM, and DMARC) if the attacker created a lookalike domain and published valid DNS records. Despite passing authentication, the attacker is still impersonating a trusted domain or user to deceive recipients. This behavior highlights the importance of the advanced impersonation protection provided by Defender for Office 365.
 

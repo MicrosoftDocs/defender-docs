@@ -10,9 +10,10 @@ ms.collection:
   - tier2
 description: Admins can learn how to find and use the Defender for Office 365 reports that are available in the Microsoft Defender portal.
 ms.custom:
-- seo-marvel-apr2020
+  - seo-marvel-apr2020
+  - sfi-image-nochange
 ms.service: defender-office-365
-ms.date: 4/27/2026
+ms.date: 05/21/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -22,7 +23,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In organizations with Microsoft Defender for Office 365 Plan 1 or Plan 2 (for example, Microsoft 365 E5 or Microsoft Business Premium) a variety of security-related reports are available. If you have the [necessary permissions](#what-permissions-are-needed-to-view-the-defender-for-office-365-reports), you can view and download these reports in the Microsoft Defender portal.
+In organizations with Microsoft Defender for Office 365 Plan 1 or Plan 2 (for example, Microsoft 365 E3/G3, Microsoft 365 Business Premium, or Microsoft 365 E5/A5/G5) a variety of security-related reports are available. If you have the [necessary permissions](#what-permissions-are-needed-to-view-the-defender-for-office-365-reports), you can view and download these reports in the Microsoft Defender portal.
 
 The reports are available in the Microsoft Defender portal at <https://security.microsoft.com> on the **Email & collaboration reports** page at **Reports** \> **Email & collaboration** \> **Email & collaboration reports**. Or, to go directly to the **Email & collaboration reports** page, use <https://security.microsoft.com/emailandcollabreport>.
 
@@ -73,7 +74,7 @@ On the **Mail latency report** page, the following tabs are available:
 Regardless of the tab you select, the chart shows messages organized into the following categories:
 
 - **Overall**
-- **Detonation** (these values are explained in the :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** values)
+- **Detonation** (these values are explained in the :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** values)
 
 Hover over a category in the chart to see a breakdown of the latency in each category.
 
@@ -88,7 +89,7 @@ In the details table below the chart, the following information is available:
 - **90th percentile**
 - **99th percentile**
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)**: **Start date** and **End date**
 - **Message view**: Select one of the following values:
@@ -97,9 +98,9 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
     - **Inline detonation**: Safe Links and Safe Attachments fully test links and attachments in messages before delivery.
     - **Asynchronous detonation**: [Dynamic delivery](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies) of attachments by Safe Attachments and links in email tested by Safe Links after delivery.
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-On the **Mail latency report** page, the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** action is available.
+On the **Mail latency report** page, the :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** action is available.
 
 ## Post-delivery activities report
 
@@ -137,7 +138,7 @@ The details table below the graph shows the following information:
   - Narrow the width of appropriate columns.
   - Zoom out in your web browser.
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)**: **Start date** and **End date**.
 - **Updated threat**: Select one ore more of the following values:
@@ -146,9 +147,9 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
   - **Phishing**
   - **Malware**
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-On the **Post delivery activities** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](reports-email-security.md#schedule-recurring-reports)** and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** actions are available.
+On the **Post delivery activities** page, the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **[Create schedule](reports-email-security.md#schedule-recurring-reports)** and :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** actions are available.
 
 :::image type="content" source="media/post-delivery-activities-report.png" alt-text="The Post-delivery activities report." lightbox="media/post-delivery-activities-report.png":::
 
@@ -159,12 +160,14 @@ On the **Post delivery activities** page, the :::image type="icon" source="media
 >
 > This report is currently in Preview, isn't available in all organizations, and is subject to change.
 
-The **Protection & posture insights** report is an on-demand, tenant-specific report that helps you understand how effectively your organization is protected against threats targeting email and collaboration workloads. The report brings together protection effectiveness, security posture, and threat activity into a single, downloadable view. You can use it to assess risk, identify configuration gaps, and communicate security outcomes to stakeholders.
+The **Protection & posture insights** report is an on-demand, tenant-specific report. It helps you understand how effectively your organization is protected against threats that target email and collaboration workloads. The report brings together protection effectiveness, security posture, and threat activity into a single, downloadable view. You can use it to assess risk, identify configuration gaps, and communicate security outcomes to stakeholders.
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Protection & posture insights**, and then select **Generate** to create the report. After the report is generated, the following actions are available:
 
 - **Download report**: Download the report as an HTML file.
-- **Open report**: Open the report in the Defender portal. The report is long, so you need to scroll to see all sections. **Print as PDF** is available to save or print the report.
+- **Open report**: Open the report in the Defender portal. The report is long, so scroll to view all sections, or use the navigation bar to jump directly to areas of interest within the report. **Print as PDF** is available to save or print the report.
+
+The report includes data from the previous 30 days, and you can generate a new version of the report once every 24 hours. If the report generation fails, you can retry after 60 minutes.
 
 :::image type="content" source="media/protection-posture-insights-report-widget-post-generate.png" alt-text="Screenshot of the Protection & posture insights report widget after report generation with Download report and Open report available." lightbox="media/protection-posture-insights-report-widget-post-generate.png":::
 
@@ -191,16 +194,16 @@ Use the report to:
 ### Report sections
 
 - **Executive Summary**: An overview of how many threats and unwanted messages were detected during the reporting period.
-- **Effectiveness**: Complete transparency into the threats that Defender for Office 365 blocked within email.
-- **Threat Landscape**: Broader attacker behaviors and techniques via threat intelligence articles.
-- **Threat Classification**: Threats detected with AI, attributing their intent and type using large language model (LLM) analysis.
+- **Effectiveness**: Full visibility into the threats that Defender for Office 365 blocked in email.
+- **Threat Landscape**: Broader attacker behaviors and techniques based on threat intelligence articles.
+- **Threat Classification**: Threats detected by AI that attributes intent and type by using large language model (LLM) analysis.
 - **Zero-Day Threats (Detonation)**: Threats detected through sandboxing, indicating exposure to advanced attacks and evasion techniques.
 - **Priority Accounts**: The top five users tagged as priority accounts that were targeted with phishing and malware.
 - **Policy Coverage**: Whether your policy configuration ensures all users benefit from key protections.
 - **Delivery Locations**: Where threats ultimately land, directly reflecting user exposure.
 - **Detection Trends**: How threat activity and detection volumes changed over the reporting period.
 - **Inbound Detection Technology**: Which detection layers are doing the work, helping assess defense-in-depth.
-- **Phish Threshold Policy Level**: Detection aggressiveness to outcomes and false-positive risk.
+- **Phish Threshold Policy Level**: How detection aggressiveness relates to outcomes and false-positive risk.
 - **Quarantine Statistics**: The percentage of quarantined email messages that were ultimately released (likely false positives) to help you further tune your protection.
 
 ### Frequently asked questions
@@ -275,7 +278,7 @@ The details table below the chart provides the following near-real-time view of 
 - **App**
 - **Tags**: For more information about user tags, see [User tags](user-tags-about.md).
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)**: **Start date** and **End date**.
 - **Action**: The same URL click protection actions as previously described. By default, **Allowed** and **Allowed by tenant admin** aren't selected.
@@ -284,9 +287,9 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 - **Recipients (separated by commas)**
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-On the **URL threat protection** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](reports-email-security.md#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](reports-email-security.md#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** actions are available.
+On the **URL threat protection** page, the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **[Create schedule](reports-email-security.md#schedule-recurring-reports)**, :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Request report](reports-email-security.md#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** actions are available.
 
 ### View data by URL click by application in the URL protection report
 
@@ -310,7 +313,7 @@ The details table below the chart provides the following near-real-time view of 
 - **App**
 - **Tags**: For more information about user tags, see [User tags](user-tags-about.md).
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)**: **Start date** and **End date**.
 - **Application**: The same click by application values as previously described.
@@ -320,9 +323,9 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 - **Recipients (separated by commas)**
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-On the **URL threat protection** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](reports-email-security.md#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](reports-email-security.md#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** actions are available.
+On the **URL threat protection** page, the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **[Create schedule](reports-email-security.md#schedule-recurring-reports)**, :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Request report](reports-email-security.md#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** actions are available.
 
 ## Other reports to view
 

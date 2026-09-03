@@ -10,11 +10,14 @@ ms.collection:
 - tier2
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-image-nochange
+  - msecd-doc-authoring-1016
 description: Admins can learn about deployment considerations and frequently asked questions regarding Attack simulation and training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 organizations.
 ms.service: defender-office-365
-ms.date: 02/06/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
+ai-usage: ai-assisted
 ---
 
 # Attack simulation training deployment considerations and FAQ
@@ -35,9 +38,9 @@ A URL reputation service might identify one or more of the URLs that are used by
 
 :::image type="content" source="media/attack-sim-training-faq-chrome-deceptive-site-message.png" alt-text="The Deceptive site ahead warning in Google Chrome" lightbox="media/attack-sim-training-faq-chrome-deceptive-site-message.png":::
 
-This issue doesn't affect Microsoft Edge.
+The deceptive-site warning from Google Safe Browsing doesn't affect Microsoft Edge.
 
-As part of the planning phase, be sure to check the availability of the URL in your supported web browsers before you use the URL in a phishing campaign. If Google Safe Browsing blocks the URLs, [follow this guidance](https://support.google.com/chrome/a/answer/7532419) from Google to allow access to the URLs.
+As part of the planning phase, be sure to check the availability of the URL in your supported web browsers before you use the URL in a phishing campaign. If Google Safe Browsing blocks the URLs, [allow URLs in Google Chrome Enterprise](https://support.google.com/chrome/a/answer/7532419) to grant access to the URLs.
 
 Refer to [Get started using Attack simulation training](attack-simulation-training-get-started.md) for the list of URLs that are currently used by Attack simulation training.
 
@@ -49,7 +52,7 @@ Intermediate security devices or filters might block or drop your phishing simul
 - Web Application Firewall (WAF) solutions
 - Non-Microsoft filter drivers (for example, kernel mode filters)
 
-While we see few customers being blocked at this layer, it does happen. If you encounter problems, consider configuring the following URLs to bypass scanning by your security devices or filters as required:
+While few customers are blocked at this layer, blocking at this layer does happen. If you encounter problems, consider configuring the following URLs to bypass scanning by your security devices or filters as required:
 
 - The simulated phishing URLs as described in [Get started using Attack simulation training](attack-simulation-training-get-started.md).
 - `https://security.microsoft.com/attacksimulator`
@@ -81,10 +84,12 @@ If you use a dedicated security operations (SecOps) mailbox, be sure to identify
 
 ### How can I stagger the delivery of simulation messages?
 
+You can stagger delivery by using the following features:
+
 - Simulations offer [region aware delivery](#q-how-does-region-aware-delivery-work).
 - Simulation automations have a [simulation schedule page](attack-simulation-training-simulation-automations.md#simulation-schedule) where you can randomize delivery and configure other delivery details.
 
-Either way, it's important to use different payloads to avoid discussion and identification among users.
+Whether you use region aware delivery or a simulation automation schedule, use different payloads to avoid discussion and identification among users.
 
 ### Why are images in simulation messages blocked by Outlook?
 
@@ -92,14 +97,14 @@ By default, Outlook is configured to block automatic image downloads in messages
 
 ### I see clicks or compromise events from users who insist they didn't click the link in the simulation message OR I see clicks within a few seconds of delivery for many users (false positives). What's going on?
 
-These events can occur when other security devices or applications inspect simulation messages. For example (but not limited to):
+Unexpected clicks and compromise events can occur when other security devices or applications inspect simulation messages. For example (but not limited to):
 
 - Applications or plugins within Outlook that inspect or intercept the message.
 - Email security applications.
 - Endpoint security or anti-virus software.
 - Security orchestration, automation, and response (SOAR) playbooks that automatically triage or automatically respond to reported messages.
 
-These types of applications can look at web content to detecting phishing, so you need to define exclusions for simulation messages in these applications.
+Outlook add-ins, email security tools, endpoint security software, and SOAR playbooks can inspect web content to detect phishing, so you need to define exclusions for simulation messages in those tools.
 
 EmailLinkClicked_IP and EmailLinkClicked_TimeStamp data might give more details about the event. For example, if a click occurred a few seconds after delivery, and the IP address doesn't belong to Microsoft, your company, or the user, then it's likely that a non-Microsoft filtering system or another service intercepted the message.
 
@@ -151,7 +156,7 @@ Yes. For more information, see [Training campaigns in Attack simulation training
 
 ### How do I find out about simulation messages that weren't delivered?
 
-The [Users tab](attack-simulation-training-simulations.md#users-tab) for the simulation is filterable by **Simulation message delivery: Failed to deliver**.
+The [Users tab](attack-simulation-training-simulations.md#users-tab) for each simulation is filterable by **Simulation message delivery: Failed to deliver**.
 
 If you own the sender domain, the undelivered simulation report is returned in a non-delivery report (also known as an NDR or bounce message). For more information about the codes in the NDR, see [Email non-delivery reports and SMTP errors in Exchange Online](/exchange/troubleshoot/email-delivery/ndr/non-delivery-reports-in-exchange-online).
 
@@ -211,7 +216,7 @@ Attack simulation training supports on-premises mailboxes, but with reduced repo
 
 ### Simulation reports aren't updated immediately
 
-Detailed simulation reports aren't updated immediately after you launch a campaign. Don't worry; this behavior is expected.
+Detailed simulation reports aren't updated immediately after you launch a campaign. Don't worry; the delay in report updates is expected.
 
 Every simulation campaign has a lifecycle. When first created, the simulation is in the **Scheduled** state. When the simulation starts, it transitions to the **In progress** state. When completed, the simulation transitions to the **Completed** state.
 
@@ -277,6 +282,8 @@ We find that campaigns assigned to Microsoft Entra groups are easier to manage.
 Currently, there are 94 built-in trainings on the [Training modules](attack-simulation-training-training-modules.md) page.
 
 ### Q: How are languages used for experiences like training modules and notifications?
+
+Language behavior varies by experience:
 
 - **Training modules**: The browser locale settings are used. But once the training is assigned to a user, the language selection persists, and future trainings are assigned in that language.
 - **End user notifications**: The mailbox locale/language settings are used.
@@ -393,6 +400,10 @@ A: Yes. First you archive the payload, then you delete the archived payload. For
 
 A: Not directly. You can copy the built-in payload and then modify the copy. For instructions, see [Copy payloads](attack-simulation-training-payloads.md#copy-payloads).
 
+### Q: What is Microsoft's guidance on the third-party brands or logos used in the built-in (global) payloads?
+
+A: Microsoft provides Attack simulation training payloads to help customers simulate real-world attack techniques. Microsoft does not provide legal advice, and customers remain responsible for determining the appropriate use of any payloads in their own environment. For questions relating to applicable laws, trademark use, or other legal considerations, customers should consult their own legal advisors. This guidance applies equally to global payloads (provided by Microsoft) and tenant payloads (custom payloads that you create). For the detailed legal considerations, see [Create payloads](attack-simulation-training-payloads.md#create-payloads).
+
 ### Q: I'm trying to run a QR code simulation, but scanning the QR code shows me 'ping successful' instead of the landing page?
 
 A: When you insert a QR code in the payload editor, it maps to the base phishing URL that you selected in the **Phishing link** section \> **Select URL**. The QR code is inserted in the email message as an image. If you switch from the **Text** tab to the **Code** tab, you see the inserted image in Base64 format. The beginning of the image contains `<div id="QRcode"...>`. Make sure to verify that the finished payload contains `<div id="QRcode"...>` before you use it in a simulation.
@@ -401,9 +412,11 @@ During simulation creation, if you scan the QR code or you use **Send a Test** t
 
 When the payload is used in a simulation, the service replaces the QR code with a dynamically generated QR code to track click and compromise metrics. The size, position, and shape of the QR code matches the configuration options you configured in the payload. Scanning the QR code during an actual simulation takes you to the configured landing page.
 
-### Q: I'm trying to create a payload in HTML, but the payload editor seems to remove certain content from my design?
+### Q: I'm trying to create a payload in HTML, but the payload editor seems to remove certain content from my design or doesn't save the payload?
 
 A: Currently, the following HTML tags aren't supported in the payload editor: `applet, base, basefont, command, embed, frame, frameset, iframe, keygen, link, meta, noframes, noscript, param, script, object, title`.
+
+Payloads containing the following case-insensitive terms are blocked: `IRS, I.R.S., Internal Revenue Service, Inland Revenue Service, Treasury`. This behavior aligns with the restrictions on using certain government-related trademarks and symbols described in [Create payloads](attack-simulation-training-payloads.md#create-payloads). If your payload is rejected unexpectedly, review the content for these terms and remove them.
 
 ### Q: What happens if you modify the content used in an existing simulation?
 
@@ -414,7 +427,7 @@ A: You can modify key elements that are used in a simulation independently of th
 - Login page
 - Landing page
 
-The simulation content is evaluated at the time of launch, so what's used in the simulation depends on the status of the simulation when you modified the content:
+The simulation content is evaluated at the time of launch, so which payload, module, login page, or landing page is used in the simulation depends on the status of the simulation when you modified the content:
 
 - **Active** or **In progress**: This simulation was already launched, so any content changes aren't used.
 - **Scheduled**: The simulation hasn't been launched yet, so any content changes are used in the situation when it launches.

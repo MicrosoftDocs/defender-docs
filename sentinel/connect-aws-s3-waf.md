@@ -1,20 +1,23 @@
 ---
 title: Connect Microsoft Sentinel to Amazon Web Services to ingest AWS WAF logs
 description: Use the Amazon Web Services (AWS) S3-based Web Application Firewall (WAF) connector to ingest AWS WAF logs, collected in AWS S3 buckets, to Microsoft Sentinel.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: ofshezaf
 ms.topic: how-to
-ms.date: 04/06/2025
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #Customer intent: As a security operator, I want to ingest web application firewall (WAF) from my Amazon Web Services S3 bucket to my Microsoft Sentinel workspace, so that security analysts can monitor activity on these systems and detect security threats.
 ---
 
 # Connect Microsoft Sentinel to Amazon Web Services to ingest AWS WAF logs
 
-Use the Amazon Web Services (AWS) S3-based Web Application Firewall (WAF) connector to ingest AWS WAF logs, collected in AWS S3 buckets, to Microsoft Sentinel. AWS WAF logs are detailed records of the web traffic analyzed by the AWS WAF against web access control lists (ACLs). These records contain information such as the time AWS WAF received the request, the specifics of the request, and the action taken by the rule that the request matched. These logs and this analysis are essential for maintaining the security and performance of web applications.
+Use the Amazon Web Services (AWS) S3-based Web Application Firewall (WAF) connector to ingest AWS WAF logs, collected in AWS S3 buckets, to Microsoft Sentinel. AWS WAF logs are detailed records of the web traffic analyzed by the AWS WAF against web access control lists (ACLs). These records contain information such as the time AWS WAF received the request, the specifics of the request, and the action taken by the rule that the request matched. These logs and this traffic analysis are essential for maintaining the security and performance of web applications.
 
 This connector features an *AWS CloudFormation*-based onboarding script to streamline the creation of the AWS resources used by the connector.
 
@@ -31,9 +34,11 @@ The **Amazon Web Services S3 WAF** data connector serves the following use cases
 
 - **Compliance and auditing:** AWS WAF logs provide detailed records of web ACL traffic, which can be crucial for compliance reporting and auditing purposes. The connector ensures that these logs are available within Sentinel for easy access and analysis.
 
-This article explains how to configure the Amazon Web Services S3 WAF connector. The process of setting it up has two parts: the AWS side and the Microsoft Sentinel side. Each side's process produces information used by the other side. This two-way authentication creates secure communication.
+This article explains how to configure the Amazon Web Services S3 WAF connector. The process of setting it up has two parts: the AWS side and the Microsoft Sentinel side. Each side's process produces information used by the other side. Exchanging this configuration information between AWS and Microsoft Sentinel enables secure authenticated communication.
 
 ## Prerequisites
+
+Before you begin, make sure the following prerequisites are met:
 
 - You must have write permission on the Microsoft Sentinel workspace.
 
@@ -59,7 +64,7 @@ The process of enabling and configuring the connector consists of the following 
 
 - **In Microsoft Sentinel:**
 
-    - Configure the **Amazon Web Services S3 WAF Connector** in the Microsoft Sentinel portal by adding **log collectors** that poll the queue and retrieve log data from the S3 bucket. [See the instructions below](#add-log-collectors).
+    - Configure the **Amazon Web Services S3 WAF Connector** in the Microsoft Sentinel portal by adding **log collectors** that poll the queue and retrieve log data from the S3 bucket. For more information, see [Add log collectors](#add-log-collectors).
 
 ## Set up the AWS environment
 
@@ -149,6 +154,8 @@ When the resource stacks are all created, return to the browser tab open to the 
     :::image type="content" source="media/connect-aws-s3-waf/enter-collector-details.png" alt-text="Screenshot of adding new collector for WAF logs.":::
 
 ## Test and monitor the connector
+
+Use the following steps to verify that the connector is ingesting data and to enable ongoing health monitoring:
 
 1. After the connector is set up, go to the **Logs** page (or the **Advanced hunting** page in the Defender portal) and run the following query. If you get any results, the connector is working properly.
 

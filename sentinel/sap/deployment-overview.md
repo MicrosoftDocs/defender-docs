@@ -1,8 +1,8 @@
 ---
 title: Deploy the Microsoft Sentinel solution for SAP applications
 description: Get an introduction to the process of deploying the Microsoft Sentinel solution for SAP applications.
-author: mberdugo
 ms.author: monaberdugo
+author: mberdugo
 ms.topic: overview
 ms.date: 09/30/2025
 appliesto:
@@ -136,7 +136,7 @@ For more information, see [Stop SAP data collection](stop-collection.md).
 
 For more information, see:
 
-- [About Microsoft Sentinel content and solutions](../sentinel-solutions.md).
+- [About Microsoft Sentinel content and solutions](../sentinel-solutions.md)
 - [Monitor the health and role of your SAP systems](../monitor-sap-system-health.md)
 - [Update Microsoft Sentinel's SAP data connector agent](update-sap-data-connector.md)
 

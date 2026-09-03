@@ -42,7 +42,7 @@ The API supports the following **OData** operators:
 
 ## Permissions
 
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Access Microsoft Defender XDR APIs](api-access.md)
+One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Access Microsoft Defender APIs](api-access.md)
 
 Permission type|Permission|Permission display name
 ---|---|---

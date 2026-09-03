@@ -9,6 +9,7 @@ ms.collection:
 - tier1
 - usx-security
 ms.topic: overview
+ms.custom: sfi-image-nochange
 
 # customer intent: As a security operations center leader, I want to learn about the services and features available in the Microsoft Defender portal for unified security operations to help me determine whether it meets my organization's requirements.
 ---

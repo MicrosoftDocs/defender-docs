@@ -4,6 +4,7 @@ description: This article walks you through the process of identifying deprecate
 author: mberdugo
 ms.author: monaberdugo
 ms.service: microsoft-sentinel
+ms.reviewer: tbeerthuis
 ms.topic: concept-article
 ms.date: 12/30/2025
 

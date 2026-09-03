@@ -1,9 +1,10 @@
 ---
 title: Investigate devices in the OT sensor device map
 description: Learn how to use the device map on an OT sensor which provides a graphical representation of devices and the connections between them.
-ms.date: 01/25/2023
+ms.date: 06/12/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Investigate devices on a device map
@@ -16,7 +17,7 @@ Use a device map to retrieve, analyze, and manage device information, either all
 
 To perform the procedures in this article, make sure that you have:
 
-- An OT network sensor [installed](ot-deploy/install-software-ot-sensor.md), [configured, and activated](ot-deploy/activate-deploy-sensor.md), with network traffic ingested.
+- An OT network sensor [Install OT sensor software](ot-deploy/install-software-ot-sensor.md), [configured and activated](ot-deploy/activate-deploy-sensor.md), with network traffic ingested.
 
 - Access to your OT sensor. Users with the **Viewer** role can view data on the map. To import or export data or edit the map view, you need access as a **Security Analyst** or **Admin** user. For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](roles-on-premises.md).
 
@@ -24,7 +25,7 @@ To view devices across multiple sensors in a zone, you'll also need an OT sensor
 
 ## View devices on OT sensor device map
 
-1. Sign into your OT sensor and select **Device map**. All devices detected by the OT sensor are displayed by default according to [Purdue layer](best-practices/understand-network-architecture.md).
+1. Sign into your OT sensor and select **Device map**. All devices detected by the OT sensor are displayed by default according to [Purdue network architecture](best-practices/understand-network-architecture.md).
 
     On the OT sensor's device map:
 
@@ -46,7 +47,7 @@ To view devices across multiple sensors in a zone, you'll also need an OT sensor
     - The number of devices grouped in a subnet in an IT network, if relevant. This number of devices is shown in a black circle.
     - Whether the device is newly detected or unauthorized.
 
-1. Right-click a specific device and select **View properties** to drill down further to the **Map View** tab on the device's [device details page](how-to-investigate-sensor-detections-in-a-device-inventory.md#view-the-device-inventory).
+1. Right-click a specific device and select **View properties** to drill down further to the **Map View** tab on the device's [View the device inventory](how-to-investigate-sensor-detections-in-a-device-inventory.md#view-the-device-inventory) page.
 
 ### Modify the OT sensor map display
 
@@ -55,28 +56,28 @@ Use any of the following map tools to modify the data shown and how it's display
 |Name  |Description  |
 |---------|---------|
 |**Refresh map**     | Select to refresh the map with updated data.        |
-| **Notifications** | Select to view [device notifications](#manage-device-notifications). |
+| **Notifications** | Select to view and [manage device notifications](#manage-device-notifications). |
 |**Search by IP / MAC**     | Filter the map to display only devices connected to a specific IP or MAC address.       |
 |**Multicast/broadcast**     | Select to edit the filter that shows or hides multicast and broadcast devices.    By default, multicast and broadcast traffic is hidden.      |
 |**Add filter**  (Last seen)   | Select to filter devices displayed by those shown in a specific time period, from the last five minutes to the last seven days.       |
 |**Reset filters**     |   Select to reset the *Last seen* filter.      |
-|**Highlight**     | Select to highlight the devices in a specific [device group](#built-in-device-map-groups). Highlighted devices are shown on the map in blue. <br><br>Use the **Search groups** box to search for device groups to highlight, or expand your group options, and then select the group you want to highlight.       |
-|**Filter**     |  Select to filter the map to show only the devices in a specific [device group](#built-in-device-map-groups). <br><br>Use the **Search groups** box to search for device groups, or expand your group options, and then select the group you want to filter by.        |
+|**Highlight**     | Select to highlight the devices in a specific [built-in device map group](#built-in-device-map-groups). Highlighted devices are shown on the map in blue. <br><br>Use the **Search groups** box to search for device groups to highlight, or expand your group options, and then select the group you want to highlight.       |
+|**Filter**     |  Select to filter the map to show only the devices in a specific [built-in device map group](#built-in-device-map-groups). <br><br>Use the **Search groups** box to search for device groups, or expand your group options, and then select the group you want to filter by.        |
 | **Zoom** <br>:::image type="icon" source="media/how-to-work-with-maps/zoom-in-icon-v2.png" border="false"::: / :::image type="icon" source="media/how-to-work-with-maps/zoom-out-icon-v2.png"  border="false"::: | Zoom in on the map to view the connections between each device, either using the mouse or the **+**/**-** buttons on the right of the map. |
 | **Fit to screen** <br>:::image type="icon" source="media/how-to-work-with-maps/fit-to-screen-icon.png" border="false":::    |  Zooms out to fit all devices on the screen      |
 |**Fit to selection**<br>:::image type="icon" source="media/how-to-work-with-maps/fit-to-selection-icon.png" border="false":::     |  Zooms out enough to fit all selected devices on the screen      |
-|**IT/OT Presentation Options** <br> :::image type="icon" source="media/how-to-work-with-maps/collapse-view-icon.png" border="false":::    |Select **Disable Display IT Networks Groups** to prevent the ability to [collapse subnets](#view-it-subnets-from-an-ot-sensor-device-map) in the map. This option is selected on by default.        |
+|**IT/OT Presentation Options** <br> :::image type="icon" source="media/how-to-work-with-maps/collapse-view-icon.png" border="false":::    |Select **Disable Display IT Networks Groups** to prevent the ability to [view IT subnets from an OT sensor device map](#view-it-subnets-from-an-ot-sensor-device-map) in the map. This option is selected on by default.        |
 |**Layout options** <br>:::image type="icon" source="media/how-to-work-with-maps/layouts-icon-v2.png" border="false":::    |  Select one of the following: <br>- **Pin layout**. Select to save device locations if you've dragged them to new places on the map. <br />- **Layout by connection**. Select to view devices organized by their connections. <br />- **Layout by Purdue**. Select to view devices organized by their Purdue layers.        |
 
 To see device details, select a device and expand the device details pane on the right. In a device details pane:
 
-- Select **Activity Report** to jump to the device's [data mining report](how-to-create-data-mining-queries.md)
-- Select **Event Timeline** to jump to the device's [event timeline](how-to-track-sensor-activity.md)
-- Select **Device Details** to jump to a full [device details page](how-to-investigate-sensor-detections-in-a-device-inventory.md#view-the-device-inventory).
+- Select **Activity Report** to jump to the device's [data mining queries report](how-to-create-data-mining-queries.md)
+- Select **Event Timeline** to jump to the device's [sensor activity tracking timeline](how-to-track-sensor-activity.md)
+- Select **Device Details** to jump to [View the device inventory](how-to-investigate-sensor-detections-in-a-device-inventory.md#view-the-device-inventory).
 
 ### View IT subnets from an OT sensor device map
 
-By default, IT devices are automatically aggregated by [subnet](../how-to-control-what-traffic-is-monitored.md#define-ot-and-iot-subnets), so that the map focuses on your local OT and IoT networks.
+By default, IT devices are automatically aggregated by [OT and IoT subnet definitions](../how-to-control-what-traffic-is-monitored.md#define-ot-and-iot-subnets), so that the map focuses on your local OT and IoT networks.
 
 **To expand an IT subnet**:
 
@@ -135,6 +136,8 @@ Use one of the following options to import and export device data:
 
 ## Edit devices
 
+To edit device properties or perform other actions on a device from the device map:
+
 1. Sign into an OT sensor and select **Device map**.
 
 1. Right-click a device to open the device options menu, and then select any of the following options:
@@ -143,11 +146,11 @@ Use one of the following options to import and export device data:
     |---------|---------|
     |**Edit properties**     |   Opens the edit pane where you can edit device properties, such as authorization, name, description, OS platform, device type, Purdue level and if it is a scanner or programming device.     |
     |**View properties**     |    Opens the device's details page.      |
-    |**Authorize/Unauthorize**     |    Changes the device's [authorization status](device-inventory.md#unauthorized-devices).     |
-    |**Mark as Important / Non-Important**     |    Changes the device's [importance](device-inventory.md#important-ot-devices) status, highlighting business critical servers on the map with a star and elsewhere, including OT sensor reports and the Azure device inventory.     |
+    |**Authorize/Unauthorize**     |    Changes the device's authorization status. For more information, see [Unauthorized devices in Device inventory](device-inventory.md#unauthorized-devices).     |
+    |**Mark as Important / Non-Important**     |    Changes the device's [important OT devices](device-inventory.md#important-ot-devices) status, highlighting business critical servers on the map with a star and elsewhere, including OT sensor reports and the Azure device inventory.     |
     |**Show Alerts** / **Show Events**     |  Opens the **Alerts** or **Event Timeline** tab on the device's details page.   |
     |  **Activity Report**   | Generates an activity report for the device for the selected timespan.        |
-    | **Simulate Attack Vectors**    |   Generates an [attack vector simulation](how-to-create-attack-vector-reports.md) for the selected device.      |
+    | **Simulate Attack Vectors**    |   Generates an attack vector simulation for the selected device. For more information, see [Create attack vector reports](how-to-create-attack-vector-reports.md).      |
     | **Add to custom group**    | Creates a new [custom group](#create-a-custom-device-group) with the selected device.        |
     |  **Delete**   | Deletes the device from the inventory.     |
 
@@ -155,7 +158,7 @@ Use one of the following options to import and export device data:
 
 You may want to merge devices if the OT sensor detected multiple network entities associated with a unique device, such as a PLC with four network cards, or a single laptop with both WiFi and a physical network card.
 
-You can only merge [authorized devices](device-inventory.md#unauthorized-devices). 
+You can only merge authorized devices. For more information, see [Unauthorized devices in Device inventory](device-inventory.md#unauthorized-devices). 
 
 > [!IMPORTANT]
 > You can't undo a device merge. If you mistakenly merged two devices, delete the devices and then wait for the sensor to rediscover both.
@@ -189,13 +192,14 @@ For example, you might receive a notification about an inactive device that need
 1. Each notification may have different mitigation options. Do one of the following:
 
     - Handle one notification at a time, selecting a specific mitigation action, or selecting **Dismiss** to close the notification with no activity.
-    - Select **Select All** to show which notifications can be [handled together](#handling-multiple-notifications-together). Clear selections for specific notifications, and then select **Accept All** or **Dismiss All** to handle any remaining selected notifications together.
+    - Select **Select All** to show which notifications can be [handling multiple notifications together](#handling-multiple-notifications-together). Clear selections for specific notifications, and then select **Accept All** or **Dismiss All** to handle any remaining selected notifications together.
 
 > [!NOTE]
-> Selected notifications are automatically resolved if they aren't dismissed or otherwise handled within 14 days. For more information, see the action indicated in the **Auto-resolve** column in the table [below](#device-notification-responses).
+> Selected notifications are automatically resolved if they aren't dismissed or otherwise handled within 14 days. For more information, see the **Auto-resolve** column in [Respond to device notifications](#device-notification-responses).
 >
 
-### Handling multiple notifications together
+<a name="handling-multiple-notifications-together"></a>
+### Handle multiple notifications together
 
 You may have situations where you'd want to handle multiple notifications together, such as:
 
@@ -205,9 +209,10 @@ You may have situations where you'd want to handle multiple notifications togeth
 
 When you handle multiple notifications together, you may still have remaining notifications that need to be handled manually, such as for new IP addresses or no subnets detected.
 
-### Device notification responses
+<a name="device-notification-responses"></a>
+### Respond to device notifications
 
-The following table lists available responses for each notification, and when we recommend using each one:
+Each device notification type has specific available responses. Use the recommended response for each notification type:
 
 | Type | Description | Available responses | Auto-resolve|
 |--|--|--|--|
@@ -218,7 +223,7 @@ The following table lists available responses for each notification, and when we
 
 ## View a device map for a specific zone
 
-If you're working with an OT sensor with sites and zones configured, device maps are also available for each zone.
+If you're working with an OT sensor with sites and zones configured, device maps are also available for each zone. Before you begin, make sure you have multiple sensors connected and assigned to sites and zones, as described in [Prerequisites](#prerequisites).
 
 On the OT sensor console, zone maps show all network elements related to a selected zone, including OT sensors, detected devices, and more.
 
@@ -253,10 +258,10 @@ The following table lists the device groups available out-of-the-box on the OT s
 
 | Group name | Description |
 |--|--|
-| **Attack vector simulations** | Vulnerable devices detected in attack vector reports, where the **Show in Device Map** option is [toggled on](how-to-create-attack-vector-reports.md).|
+| **Attack vector simulations** | Vulnerable devices detected in attack vector reports, where the **Show in Device Map** option is toggled on. For more information, see [Create attack vector reports](how-to-create-attack-vector-reports.md).|
 | **Authorization** | Devices that were either discovered during an initial learning period or were later manually marked as *authorized* devices.|
 | **Cross subnet connections** | Devices that communicate from one subnet to another subnet. |
-| **Device inventory filters** | Any devices based on a [filter](how-to-investigate-sensor-detections-in-a-device-inventory.md) created in the OT sensor's **Device inventory** page. |
+| **Device inventory filters** | Any devices based on a [Device inventory filter](how-to-investigate-sensor-detections-in-a-device-inventory.md) created in the OT sensor's **Device inventory** page. |
 | **Known applications** | Devices that use reserved ports, such as TCP.  |
 | **Last activity** | Devices grouped by the time frame they were last active, for example: One hour, six hours, one day, or seven days. |
 | **Non-standard ports** | Devices that use non-standard ports or ports that haven't been assigned an alias. |

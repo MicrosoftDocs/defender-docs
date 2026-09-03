@@ -1,14 +1,17 @@
 ---
-title: Sample KQL queries for Microsoft Sentinel data lake
+title: Sample KQL Queries for Microsoft Sentinel Data Lake
 titleSuffix: Microsoft Security
 description: Use KQL queries to explore and analyze data in the Microsoft Sentinel data lake.
+ms.author: edbaynash
 author: EdB-MSFT
+ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to
-ms.date: 12/10/2025
-ms.author: edbaynash
+ms.date: 06/12/2026
 ms.collection: ms-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #customer intent: As a security analyst, I want to run learn from sample KQL queries so that I can investigate incidents and monitor suspicious activity in Microsoft Sentinel data lake.
 ---  
@@ -710,7 +713,7 @@ AllLogonEvents
 
 ## Additional sample queries
 
-The following sample queries can be used to explore and analyze data in the Microsoft Sentinel data lake.
+This section provides additional sample KQL queries for exploring and analyzing data in the Microsoft Sentinel data lake. Each query targets a specific security scenario. You can run them as-is or change them to fit your needs.
 
 
 ### Identify possible insider threats
@@ -768,7 +771,7 @@ SigninLogs
 
 ## Sample queries for KQL jobs
 
-The following queries can be used in KQL jobs to automate investigations and monitoring tasks in the Microsoft Sentinel data lake.
+Use these KQL job queries to automate investigations and monitoring tasks in the Microsoft Sentinel data lake.
 
 
 
@@ -841,7 +844,6 @@ IP_Indicators
 
 ```
 
-
 ### Suspicious travel activity
 
 Look for successful sign-ins from countries or regions not previously seen for a given user, which may signal account compromise or suspicious travel activity in the last 180 days.
@@ -853,8 +855,6 @@ SigninLogs
 | summarize CountriesAccessed = make_set(Location) by UserPrincipalName
 | where array_length(CountriesAccessed) > 3  // Adjust threshold
 ```
-
-
 
 ### Daily sign-in baseline
 
@@ -876,8 +876,6 @@ SigninLogs
 | where array_length(NewLocations) > 0
 ```
 
-
-
 ### Daily location trend per user and application
 
 A daily job to summarize sign-in activity by user and application, showing the list and count of distinct geographic locations and IPs used in the last 24 hours.
@@ -891,7 +889,6 @@ SigninLogs
   | summarize LocationList = make_set(locationString), LocationCount=dcount(locationString), 
   DistinctSourceIp = dcount(IPAddress), LogonCount = count() by Day, AppDisplayName, UserPrincipalName
 ```
-
 
 ### Daily process execution trend
 
@@ -908,3 +905,7 @@ A daily job to track process creation events (Event ID 4688) from `SecurityEvent
   DistinctParent = dcount(ParentProcessName), NoofCommandLines = dcount(CommandLine) by Day, NewProcessName
 ```
 
+## Related content
+
+- [KQL and the Microsoft Sentinel data lake](kql-overview.md)
+- [Run KQL queries on the Microsoft Sentinel data lake](kql-queries.md)

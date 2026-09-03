@@ -1,24 +1,25 @@
 ---
-title: Deploy the Microsoft Sentinel for SAP data connector agent container using expert configuration options | Microsoft Docs
-description: Learn how to deploy the Microsoft Sentinel for SAP data connector environments using expert configuration options, such as and on-premises machine and custom, manual configurations.
-author: mberdugo
+title: Deploy the Microsoft Sentinel for SAP data connector agent container using expert configuration options
+description: Deploy and configure the Microsoft Sentinel for SAP data connector agent container using expert, custom, manual, or on-premises configuration options. Use this guidance for advanced deployment scenarios beyond the standard portal experience.
 ms.author: monaberdugo
+author: mberdugo
 ms.topic: how-to
-ms.date: 09/30/2025
+ms.date: 06/12/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom:
+ms.custom: msecd-doc-authoring-1014
   - devx-track-azurecli
   - sfi-ropc-nochange
+ai-usage: ai-assisted
 #Customer intent: As an SAP BASIS team member, I want to deploy and configure a custom Microsoft Sentinel for SAP applications data connector so that I can securely integrate SAP logs into my cloud-based SIEM for enhanced monitoring and analysis.
 
 ---
 
 # Deploy the Microsoft Sentinel for SAP data connector agent container with expert options
 
-This article provides procedures for deploying and configuring the Microsoft Sentinel for SAP data connector agent container with expert, custom, or manual configuration options. For typical deployments we recommend that you use the [portal](deploy-data-connector-agent-container.md#deploy-the-data-connector-agent-from-the-portal-preview) instead.
+This article provides procedures for deploying and configuring the Microsoft Sentinel for SAP data connector agent container with expert, custom, or manual configuration options. Before you begin, make sure you complete the [prerequisites](#prerequisites). For typical deployments we recommend that you use the [portal-based deployment](deploy-data-connector-agent-container.md#deploy-the-data-connector-agent-from-the-portal-preview) instead.
 
 Content in this article is intended for your **SAP BASIS** teams. For more information, see [Deploy an SAP data connector agent from the command line](deploy-command-line.md).
 
@@ -126,9 +127,9 @@ This procedure describes how to deploy the Microsoft Sentinel for SAP data conne
 
     For more information, see [Manually configure the Microsoft Sentinel for SAP data connector](#manually-configure-the-microsoft-sentinel-for-sap-data-connector) and [Define the SAP logs that are sent to Microsoft Sentinel](#define-the-sap-logs-that-are-sent-to-microsoft-sentinel).
 
-    To test your configuration, you might want to add the user and password directly to the **systemconfig.json** configuration file. While we recommend that you use Azure Key vault to store your credentials, you can also use an **env.list** file, [Docker secrets](#manually-configure-the-microsoft-sentinel-for-sap-data-connector), or you can add your credentials directly to the **systemconfig.json** file.
+    To test your configuration, you might want to add the user and password directly to the **systemconfig.json** configuration file. While we recommend that you use Azure Key vault to store your credentials, you can also use an **env.list** file, [the manual configuration section, which covers Docker secrets](#manually-configure-the-microsoft-sentinel-for-sap-data-connector), or you can add your credentials directly to the **systemconfig.json** file.
 
-    For more information, see [SAL logs connector configurations](#sal-logs-connector-settings).
+    For more information about settings like email extraction, API retries, and audit log options, see [SAL logs connector settings](#sal-logs-connector-settings).
 
 1. Save your updated **systemconfig.json** file in the **sapcon** directory on your machine.
 
@@ -185,7 +186,7 @@ This procedure describes how to deploy the Microsoft Sentinel for SAP data conne
 
 ## Manually configure the Microsoft Sentinel for SAP data connector
 
-When deployed via the CLI, the Microsoft Sentinel for SAP data connector is configured in the **systemconfig.json** file, which you cloned to your SAP data connector machine as part of the [deployment procedure](#perform-an-expert--custom-installation). Use the content in this section to manually configure data connector settings.
+When deployed via the CLI, the Microsoft Sentinel for SAP data connector is configured in the **systemconfig.json** file, which you cloned to your SAP data connector machine as part of the [Perform an expert / custom installation](#perform-an-expert--custom-installation) procedure. Use the content in this section to manually configure data connector settings.
 
 For more information, see [Systemconfig.json file reference](reference-systemconfig-json.md), or [Systemconfig.ini file reference](reference-systemconfig.md) for legacy systems.
 
@@ -201,7 +202,7 @@ For more information, see [Microsoft Sentinel solution for SAP applications solu
 
 #### Configure a default profile
 
-The following code configures a default configuration:
+The default profile enables the broadest set of ABAP logs, including audit, job, spool, change document, application, workflow, and change request logs. Use this profile when you want comprehensive logging for post-breach investigations and extended hunting. The following code shows how to enable the default logging profile in **systemconfig.json**:
 
 ```json
 "logs_activation_status": {
@@ -224,7 +225,7 @@ The following code configures a default configuration:
 
 #### Configure a detection-focused profile
 
-Use the following code to configure a detection-focused profile, which includes the core security logs of the SAP landscape required for the most of the analytics rules to perform well. Post-breach investigations and hunting capabilities are limited.
+Unlike the default profile, the detection-focused profile disables non-essential logs such as job, spool, and workflow logs while keeping core security logs like the audit log, change documents, and change requests enabled. Use the following code to configure this profile, which includes only the logs required for most analytics rules to perform well. Post-breach investigations and hunting capabilities are limited with this configuration.
 
 ```json
 "logs_activation_status": {
@@ -275,7 +276,7 @@ Use the following code to configure a detection-focused profile, which includes 
       "usracl_full": "False",
 ```
 
-Use the following code to configure a minimal profile, which includes the SAP Security Audit Log, which is the most important source of data that the Microsoft Sentinel solution for SAP applications uses to analyze activities on the SAP landscape. Enabling this log is the minimal requirement to provide any security coverage.
+To minimize data ingestion volume while still maintaining basic security coverage, use the following code to configure a minimal profile. Unlike the default and detection-focused profiles, this configuration disables all table selectors and limits log collection to only the SAP Security Audit Log, change documents, and change requests. The SAP Security Audit Log is the most important data source that the Microsoft Sentinel solution for SAP applications uses to analyze activities on the SAP landscape, and enabling it is the minimal requirement to provide any security coverage.
 
 ```json
 "logs_activation_status": {
@@ -326,11 +327,14 @@ Use the following code to configure a minimal profile, which includes the SAP Se
       "usracl_full": "False",
 ```
 
-### SAL logs connector settings
+<a name="sal-logs-connector-settings"></a>
+### Configure SAL logs connector settings
 
 Add the following code to the Microsoft Sentinel for SAP data connector **systemconfig.json** file to define other settings for SAP logs ingested into Microsoft Sentinel.
 
 For more information, see [Perform an expert / custom SAP data connector installation](#perform-an-expert--custom-installation).
+
+The following `connector_configuration` example controls runtime behaviors such as API retry handling, user email extraction, and data extraction intervals. Review these settings to tune the connector for your environment.
 
 ```json
     "connector_configuration": {
@@ -351,7 +355,8 @@ This section enables you to configure the following parameters:
 |**auditlogforcelegacyfiles**     |  Determines whether the system forces the use of audit logs with legacy system capabilities, such as from SAP BASIS version 7.4 with lower patch levels.|
 |**timechunk**     |   Determines that the system waits a specific number of minutes as an interval between data extractions. Use this parameter if you have a large amount of data expected. <br><br>For example, during the initial data load during your first 24 hours, you might want to have the data extraction running only every 30 minutes to give each data extraction enough time. In such cases, set this value to **30**.  |
 
-### Configuring an ABAP SAP Control instance
+<a name="configuring-an-abap-sap-control-instance"></a>
+### Configure an ABAP SAP Control instance
 
 To ingest all ABAP logs into Microsoft Sentinel, including both NW RFC and SAP Control Web Service-based logs, configure the following ABAP SAP Control details:
 
@@ -362,7 +367,8 @@ To ingest all ABAP logs into Microsoft Sentinel, including both NW RFC and SAP C
 |**abaptz**     |Enter the time zone configured on your SAP Control ABAP server, in GMT format. <br>For example: `GMT+3`         |
 |**abapseverity**     |Enter the lowest, inclusive, severity level for which you want to ingest ABAP logs into Microsoft Sentinel. Values include: <br><br>- **0** = All logs <br>- **1** = Warning <br>- **2** = Error     |
 
-### Configuring a Java SAP Control instance
+<a name="configuring-a-java-sap-control-instance"></a>
+### Configure a Java SAP Control instance
 
 To ingest SAP Control Web Service logs into Microsoft Sentinel, configure the following JAVA SAP Control instance details:
 
@@ -373,11 +379,12 @@ To ingest SAP Control Web Service logs into Microsoft Sentinel, configure the fo
 |**javatz**     |Enter the time zone configured on your SAP Control Java server, in GMT format. <br>For example: `GMT+3`         |
 |**javaseverity**     |Enter the lowest, inclusive, severity level for which you want to ingest Web Service logs into Microsoft Sentinel. Values include: <br><br>- **0** = All logs <br>- **1** = Warning <br>- **2** = Error     |
 
-### Configuring User Master data collection
+<a name="configuring-user-master-data-collection"></a>
+### Configure user master data collection
 
 To ingest tables directly from your SAP system with details about your users and role authorizations, configure your **systemconfig.json** file with a `True`/`False` statement for each table.
 
-For example:
+The following sample `abap_table_selector` configuration specifies which ABAP user master data tables are collected in full or incrementally. Set each table entry to `True` to enable collection or `False` to skip it. This example enables all supported tables for a comprehensive deployment:
 
 ```json
     "abap_table_selector": {

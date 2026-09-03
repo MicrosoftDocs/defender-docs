@@ -29,7 +29,7 @@ The defender-deployment tool supports both manual and bulk onboarding through th
 
 Before you get started, see [Prerequisites for Microsoft Defender for Endpoint on Linux](./mde-linux-prerequisites.md) for a description of prerequisites and system requirements. Additionally, the following requirements also need to be met:
 
-- Allow connection to the URL: `msdefender.download.prss.microsoft.com`. Before you begin deployment, make sure to run the [connectivity test](#check-connectivity-issues), which checks if the URLs Defender for Endpoint uses are accessible or not.
+- Allow connection to the URL: `msdefender.download.prss.microsoft.com`. Before you begin deployment, make sure to run the [connectivity test](#troubleshoot-deployment-issues), which checks if the URLs Defender for Endpoint uses are accessible or not.
 - The endpoint must have either **wget** or **curl** installed.
 
 The deployment tool enforces the following set of prerequisites checks, which if not met will abort the deployment process:
@@ -37,7 +37,7 @@ The deployment tool enforces the following set of prerequisites checks, which if
 - Device memory: Greater than 1 GB
 - Available disk space on the device: Greater than 2GB
 - Glibc library version on the device: Newer than 2.17
-- mdatp version on the device: Must be a supported version and not expired. To check product expiration date, run the command `-mdatp health`.
+- Defender build version: Must be supported and not expired. To check the product expiration date, run the command `-mdatp health`.
 
 > [!TIP]
 > Before running the deployment tool to onboard Defender onto your Linux server, it's recommended to run the tool with the `--pre-req` option to help identify and fix any potential issues that might impact the deployment.
@@ -48,9 +48,9 @@ The deployment tool enforces the following set of prerequisites checks, which if
 
     1. Go to **Settings** > **Endpoints** > **Device management** > **Onboarding**.
 
-    1. In the Step 1 drop-down menu, select **Linux Server (Preview)** as the operating system.
+    1. In the Step 1 drop-down menu, select **Linux** as the operating system.
 
-    1. Under **Download and apply onboarding packages or files**, select the **Download package** button.
+    1. Under **Download and apply onboarding packages or files**, select the **Download package** button under **Defender deployment tool**.
     
       >[!NOTE]
       >Since this package installs and onboards the agent, it's a tenant specific package and must not be used across tenants.
@@ -97,19 +97,81 @@ The deployment tool enforces the following set of prerequisites checks, which if
     
    | **Scenario** | **Command** |
    |:-------------|:------------|
-   | Check for unmet non-blocking prerequisites | `sudo ./defender_deployment_tool.sh --pre-req-non-blocking` |
+   | Check for unmet prerequisites | `sudo ./defender_deployment_tool.sh --pre-req` |
    | Run the connectivity test | `sudo ./defender_deployment_tool.sh --connectivity-test` |
    | Deploy to a custom location | `sudo ./defender_deployment_tool.sh --install-path /usr/microsoft/` |
-   | Deploy from the insider-slow channel | `sudo ./defender_deployment_tool.sh --channel insiders-slow` |
+   | Deploy from a locally configured package repository | `sudo ./defender_deployment_tool.sh --use-local-repo`<br><br>This option can't be combined with `--channel` or `--clean`. |
+   | Deploy from a specific channel | `sudo ./defender_deployment_tool.sh --channel insiders-slow` |
    | Deploy using a proxy | `sudo ./defender_deployment_tool.sh --http-proxy <http://username:password@proxy_host:proxy_port>` |
    | Deploy a specific agent version | `sudo ./defender_deployment_tool.sh --mdatp 101.25042.0003 --channel prod` |
    | Upgrade to a specific agent version | `sudo ./defender_deployment_tool.sh --upgrade --mdatp 101.24082.0004` |
    | Downgrade to a specific agent version | `sudo ./defender_deployment_tool.sh --downgrade --mdatp 101.24082.0004` |
-   | Uninstall Defender | `sudo ./defender_deployment_tool.sh --remove` |
+   | Uninstall Defender | `sudo ./defender_deployment_tool.sh --remove` For more information, see [Offboard or uninstall Microsoft Defender for Endpoint on Linux](linux-off-board-endpoints.md) |
    | Only onboard if Defender is already installed | `sudo ./defender_deployment_tool.sh --only-onboard` |
-   | Offboard Defender | `sudo ./defender_deployment_tool.sh --offboard MicrosoftDefenderATPOffboardingLinuxServer.py`<br>*(Note: The latest offboarding file can be downloaded from the Microsoft Defender portal)* |
+   | <a name="ddt-offboard-switch-linux"></a>Offboard Defender | `sudo ./defender_deployment_tool.sh --offboard MicrosoftDefenderATPOffboardingLinuxServer.py`<br>*(Note: Before using the --offboard option, you must first download the latest offboarding script from the Defender portal at System > Settings > Endpoints > Offboarding). For other methods of offboarding, see [Offboard or uninstall Microsoft Defender for Endpoint on Linux](linux-off-board-endpoints.md).* |
 
-## Verify deployment status
+## Monitor deployment progress in the Microsoft Defender portal
+
+As the Defender deployment tool runs, it sends a progress event to the Defender portal at the start and end of each deployment step. These events let you track deployment status for all your devices without signing in to each one, and pinpoint the step where a failed deployment stopped.
+
+Check the onboarding status for a device in **Device inventory**. To check fleet-wide onboarding status, use an advanced hunting query. To see the stepwise progress, see the device timeline. Go to **Device inventory**, select the device, and then select **Timeline**.
+
+To filter deployment events on the timeline, enter `DefenderDeployment` in the timeline search box. Each event reads `Defender deployment tool: <step> succeeded` or `Defender deployment tool: <step> failed`, and includes any extra details the tool reports for that step. The following screenshot shows a successful install run.
+
+### Deployment timeline
+
+A successful install-and-onboard run produces the following sequence of events:
+
+| Order | Step (`ActionName`) | Description |
+|---|---|---|
+| 1 | Start | The deployment tool starts. The event includes the tool version and the operation: install, upgrade, downgrade, remove, or offboard. |
+| 2 | Download | The tool downloads the installer script from Microsoft. This step is skipped if you supply a pre-staged script with the `--script` option. |
+| 3 | Prerequisite check | The tool validates the system requirements, such as memory, disk space, glibc, and kernel features. |
+| 4 | Installation | The tool installs the Microsoft Defender for Endpoint package. The event includes the installed agent version. |
+| 5 | Sensor initialization | The agent finishes onboarding, and the sensor is licensed and active. |
+| 6 | Sequence completion | The full deployment sequence finishes. This step is always the last event for a run. |
+
+A remove, upgrade, or offboard run includes only the steps that apply to it. If a step fails, the tool sends a failure event for that step, along with an exit code and an error description that explains what went wrong.
+
+### Query deployment status with advanced hunting
+
+To inspect the events for a specific device, run the following query in [advanced hunting](/defender-xdr/advanced-hunting-overview). Replace `<DeviceId>` with the target device ID. To find the device ID, go to **Device inventory**, or run `mdatp health --field edr_device_id` on the device.
+
+```kusto
+DeviceEvents
+| where Timestamp > ago(1d)
+| where ActionType == "DefenderDeploymentToolEvent"
+| where DeviceId == "<DeviceId>"
+| extend Details = parse_json(AdditionalFields)
+| project
+    Timestamp,
+    DeviceName,
+    Step = tostring(Details.ActionName),
+    Succeeded = tobool(Details.IsSuccess),
+    ExitCode = toint(Details.ExitCode),
+    Data = tostring(Details.Data),
+    ErrorDescription = tostring(Details.ErrorDescription)
+| sort by Timestamp asc
+```
+
+To get a deployment status summary for all your devices, run the following query. It returns the most recent step that each device reported in the last 30 days, and classifies each device as **Onboarded**, **Onboarding Failed**, or still onboarding:
+
+```kusto
+DeviceEvents
+| where Timestamp > ago(30d)
+| where ActionType == "DefenderDeploymentToolEvent"
+| extend Details = parse_json(AdditionalFields)
+| extend Step = tostring(Details.ActionName), Succeeded = tobool(Details.IsSuccess)
+| summarize arg_max(Timestamp, DeviceName, Step, Succeeded) by DeviceId
+| extend Status = case(
+    Step == "Sequence completion" and Succeeded, "Onboarded",
+    Step == "Sequence completion" and not(Succeeded), "Onboarding Failed",
+    not(Succeeded), strcat("Failed at: ", Step),
+    "Onboarding")
+| project DeviceId, DeviceName, LastEvent = Timestamp, LastStep = Step, Status
+```
+
+## Verify AV/EDR functioning
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com/), open the device inventory. It might take 5-20 minutes for the device to show up in the portal.
 
@@ -162,37 +224,44 @@ The deployment tool enforces the following set of prerequisites checks, which if
          ./mde_linux_edr_diy.sh
          ```
 
-    1. After a few minutes, a detection should be raised in the Microsoft Defender XDR.
+    1. After a few minutes, a detection should be raised in Microsoft Defender XDR.
 
     1. Check the alert details, machine timeline, and perform your typical investigation steps.
 
-## Check connectivity issues
+## Troubleshoot deployment issues
 
-If you're experiencing any connectivity issues, run this command to perform a connectivity test:
+1. Check deployment error logs:
 
-```bash
-sudo ./defender_deployment_tool.sh --connectivity-test
-```
+   - `/tmp/defender_deployment_tool.log` records the deployment tool's activity.
+   - `/tmp/defender_deployment_tool_telemetry.log` records the progress events that the tool sends to the Microsoft Defender portal.
 
-This test might take some time to run as it performs checks for every URL needed by mdatp and find any issues if present. If the issue persists, refer to the troubleshooting guide.
+1. If you're experiencing any connectivity issues, run this command to perform a connectivity test:
 
-## Troubleshoot the installation
+   ```bash
+   sudo ./defender_deployment_tool.sh --connectivity-test
+   ```
 
-Whenever you run the Defender deployment tool, the activity gets logged in this file:
+   It might take some time to run as it performs checks for every URL needed by Defender and finds issues, if any.
 
-`/tmp/defender_deployment_tool.log`
+1. Run the [advanced hunting query](#query-deployment-status-with-advanced-hunting) for the device and look for the most recent event where `Succeeded` is `false`. The `Step` field identifies the failed step, and the `ErrorDescription` and `ExitCode` fields explain why:
 
-If you experience any installation issues, first check the log file. If that doesn't help you resolve the issue, try following these steps:
+   - If the deployment fails at the **Download** step, the installer script couldn't be downloaded. Verify that the device has `curl` or `wget` installed and that it allows outbound HTTPS connectivity to Microsoft download endpoints.
 
-1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](./linux-resources.md#log-installation-issues).
+   - If the deployment fails at the **Prerequisite check** step, the device doesn't meet the minimum system requirements. The `ErrorDescription` field lists the failed checks, separated by `|`. Non-blocking failures have a `(non_blocking)` prefix and don't stop the deployment.
 
-1. For information about common installation issues, see [Installation issues](./linux-support-install.md).
+   - If the deployment fails at the **Installation** step, the package manager couldn't install the agent. Common causes include a misconfigured package repository, a missing dependency, or a requested `mdatp` version that isn't available in the selected channel.
 
-1. If health of the device is false, see [Defender for Endpoint agent health issues](./health-status.md).
+   - If the deployment fails at the **Sensor initialization** step, the agent installed but didn't finish onboarding within the expected time. Run `mdatp health` on the device, and check the `licensed`, `healthy`, and `org_id` fields.
 
-1. For product performance issues, see [Troubleshoot performance issues](./linux-support-perf.md).
+   - If deployment events don't appear in the portal for a device, check `/tmp/defender_deployment_tool_telemetry.log` on that device to confirm whether the tool sent them.
 
-1. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](./linux-support-connectivity.md).
+1. If that doesn't help you resolve the issue, try checking the following steps:
+
+   - [Log installation issues](./linux-resources.md#log-installation-issues).
+   - [Installation issues](./linux-support-install.md).
+   - [Defender for Endpoint agent health issues](./health-status.md).
+   - [Troubleshoot performance issues](./linux-support-perf.md).
+   - [Troubleshoot cloud connectivity issues](./linux-support-connectivity.md).
 
 ## How to switch between channels after you have deployed from a channel
 

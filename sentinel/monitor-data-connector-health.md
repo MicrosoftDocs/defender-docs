@@ -1,14 +1,17 @@
 ---
 title: Monitor the health of your Microsoft Sentinel data connectors
 description: Use the SentinelHealth data table and the Health Monitoring workbook to keep track of your data connectors' connectivity and performance.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: ofshezaf
 ms.topic: how-to
-ms.date: 08/20/2025
+ms.date: 06/15/2026
 ms.service: microsoft-sentinel
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security analyst, I want to monitor the health and performance of my data connectors so that I can ensure uninterrupted data ingestion and quickly address any issues.
 
@@ -25,6 +28,8 @@ The following features allow you to perform this monitoring from within Microsof
 - ***SentinelHealth* data table**: Querying this table provides insights on health drifts, such as latest failure events per connector, or connectors with changes from success to failure states, which you can use to create alerts and other automated actions. The *SentinelHealth* data table is currently supported only for [selected data connectors](#supported-data-connectors).
 
 - [**View the health and status of your connected SAP systems**](monitor-sap-system-health.md): Review health information for your SAP systems under the SAP data connector, and use an alert rule template to get information about the health of the SAP agent's data collection.
+
+This article explains how to use the data collection health monitoring workbook and the *SentinelHealth* data table to monitor data connector health, run diagnostic queries, and configure automated alerts for health drifts.
 
 ## Use the health monitoring workbook
 
@@ -50,7 +55,7 @@ There are three tabbed sections in this workbook:
 
 - The **Overview** tab shows the general status of data ingestion in the selected workspace: volume measures, EPS rates, and time last log received.
 
-- The **Data collection anomalies** tab will help you to detect anomalies in the data collection process, by table and data source. Each tab presents anomalies for a particular table (the **General** tab includes a collection of tables). The anomalies are calculated using the **series_decompose_anomalies()** function that returns an **anomaly score**. [Learn more about this function](/kusto/query/series-decompose-anomalies-function?view=microsoft-sentinel&preserve-view=true&WT.mc_id=Portal-fx). Set the following parameters for the function to evaluate:
+- The **Data collection anomalies** tab will help you to detect anomalies in the data collection process, by table and data source. Each tab presents anomalies for a particular table (the **General** tab includes a collection of tables). The anomalies are calculated using the **series_decompose_anomalies()** function that returns an **anomaly score**. [Learn more about the series_decompose_anomalies() function](/kusto/query/series-decompose-anomalies-function?view=microsoft-sentinel&preserve-view=true&WT.mc_id=Portal-fx). Set the following parameters for the function to evaluate:
 
     - **AnomaliesTimeRange**: This time picker applies only to the data collection anomalies view.
     - **SampleInterval**: The time interval in which data is sampled in the given time range. The anomaly score is calculated only on the last interval's data.
@@ -81,13 +86,13 @@ The *SentinelHealth* data table is currently supported only for the following da
 - [Microsoft Defender for Endpoint](connect-microsoft-defender-advanced-threat-protection.md)
 - [Threat Intelligence - TAXII](connect-threat-intelligence-taxii.md)
 - [Threat Intelligence Platforms](connect-threat-intelligence-tip.md)
-- Any connector based on [Codeless Connector Framework](create-codeless-connector.md)
+- Any connector based on [Codeless Connector Framework](isv/create-codeless-connector.md)
 
 ### Understanding SentinelHealth table events
 
 The following types of health events are logged in the *SentinelHealth* table:
 
-- **Data fetch status change**. Logged once an hour as long as a data connector status remains stable, with either continuous success or failure events. For as long as a data connector's status does not change, monitoring only hourly works to prevent redundant auditing and reduce table size. If the data connector's status has continuous failures, additional details about the failures are included in the *ExtendedProperties* column.
+- **Data fetch status change**. To prevent redundant auditing and reduce table size, Microsoft Sentinel logs this event once an hour while a data connector's status remains stable with either continuous success or failure events. If the data connector's status has continuous failures, additional details about the failures are included in the *ExtendedProperties* column.
 
     If the data connector's status changes, either from a success to failure, from failure to success, or has changes in failure reasons, the event is logged immediately to allow your team to take proactive and immediate action.
 
@@ -154,7 +159,7 @@ latestStatus
 | where NextToLastStatus == 'Success' and LastStatus == 'Failure'
 ```
 
-See more information on the following items used in the preceding examples, in the Kusto documentation:
+See more information on the following Kusto operators and functions used in the SentinelHealth health-drift queries, in the Kusto documentation:
 - [***let*** statement](/kusto/query/let-statement?view=microsoft-sentinel&preserve-view=true)
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
 - [***project*** operator](/kusto/query/project-operator?view=microsoft-sentinel&preserve-view=true)
@@ -169,11 +174,11 @@ See more information on the following items used in the preceding examples, in t
 
 While you can use the Microsoft Sentinel [analytics rules](automate-incident-handling-with-automation-rules.md) to configure automation in Microsoft Sentinel logs, if you want to be notified and take immediate action for health drifts in your data connectors, we recommend that you use [Azure Monitor alert rules](/azure/azure-monitor/alerts/alerts-overview).
 
-For example:
+The following steps show how to create an Azure Monitor alert rule that uses a SentinelHealth query to detect data connector health drifts:
 
 1. In an Azure Monitor alert rule, select your Microsoft Sentinel workspace as the rule scope, and **Custom log search** as the first condition.
 
-1. Customize the alert logic as needed, such as frequency or lookback duration, and then use [queries](#run-queries-to-detect-health-drifts) to search for health drifts.
+1. Customize the alert logic as needed, such as frequency or lookback duration, and then use the [health drift detection queries](#run-queries-to-detect-health-drifts) to search for health drifts.
 
 1. For the rule actions, select an existing action group or create a new one as needed to configure push notifications or other automated actions such as triggering a Logic App, Webhook, or Azure Function in your system.
 

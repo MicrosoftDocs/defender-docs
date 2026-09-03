@@ -1,11 +1,13 @@
 ---
 title: Configure multistage attack detection (Fusion) rules in Microsoft Sentinel
 description: Create and configure attack detection rules based on Fusion technology in Microsoft Sentinel.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
-ms.date: 01/30/2022
-ms.custom: sfi-image-nochange
+ms.date: 06/15/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 #Customer intent: As a security engineer, I want to configure multistage attack detection rules so that analysts can more easily identify and respond to complex multistage threats with high accuracy.
 
@@ -13,7 +15,7 @@ ms.custom: sfi-image-nochange
 # Configure multistage attack detection (Fusion) rules in Microsoft Sentinel
 
 >[!IMPORTANT]
-> [**Custom detections**](/defender-xdr/custom-detections-overview?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json) is now the best way to create new rules across Microsoft Sentinel SIEM Microsoft Defender XDR. With custom detections, you can reduce ingestion costs, get unlimited real-time detections, and benefit from seamless integration with Defender XDR data, functions, and remediation actions with automatic entity mapping. For more information, read [this blog](https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/custom-detections-are-now-the-unified-experience-for-creating-detections-in-micr/4463875).
+> [**Custom detections**](/defender-xdr/custom-detections-overview?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json) is now the best way to create new rules across Microsoft Sentinel SIEM Microsoft Defender XDR. With custom detections, you can reduce ingestion costs, get unlimited real-time detections, and benefit from seamless integration with Defender XDR data, functions, and remediation actions with automatic entity mapping. For more information, read [Custom detections are now the unified experience for creating detections in Microsoft Defender XDR](https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/custom-detections-are-now-the-unified-experience-for-creating-detections-in-micr/4463875).
 
 > [!IMPORTANT]
 > The new version of the Fusion analytics rule is currently in **PREVIEW**. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
@@ -27,7 +29,7 @@ Customized for your environment, this detection technology not only reduces [fal
 
 ## Configure Fusion rules
 
-This detection is enabled by default in Microsoft Sentinel. To check or change its status, use the following instructions:
+The Fusion analytics rule is enabled by default in Microsoft Sentinel. To check or change its status, use the following instructions:
 
 1. Sign in to the [Azure portal](https://portal.azure.com) and enter **Microsoft Sentinel**.
 
@@ -37,7 +39,7 @@ This detection is enabled by default in Microsoft Sentinel. To check or change i
 
     :::image type="content" source="./media/configure-fusion-rules/selecting-fusion-rule-type.png" alt-text="Screenshot of Fusion analytics rule." lightbox="./media/configure-fusion-rules/selecting-fusion-rule-type.png":::
 
-1. To change the status, select this entry. On the **Advanced Multistage Attack Detection** preview pane, select **Edit**.
+1. To change the status, select the **Advanced Multistage Attack Detection** entry. On the **Advanced Multistage Attack Detection** preview pane, select **Edit**.
 
 1. In the **General** tab of the **Analytics rule wizard**, note the status (Enabled/Disabled), or change it if you want.
 
@@ -122,7 +124,7 @@ This detection is enabled by default in Microsoft Sentinel. To check or change i
     - [Suspicious Resource deployment](https://github.com/Azure/Azure-Sentinel/blob/83c6d8c7f65a5f209f39f3e06eb2f7374fd8439c/Detections/AzureActivity/NewResourceGroupsDeployedTo.yaml)
     - [Palo Alto Threat signatures from Unusual IP addresses](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/PaloAlto-PAN-OS/Analytic%20Rules/PaloAlto-UnusualThreatSignatures.yaml)
     
-    To add queries that aren't currently available as a rule template, see [Create a custom analytics rule from scratch](detect-threats-custom.md). 
+    To add queries that aren't available in the **Rule templates** gallery, see [Create a custom analytics rule from scratch](detect-threats-custom.md). 
     
     - [New Admin account activity seen which wasn't seen historically](https://github.com/Azure/Azure-Sentinel/blob/83c6d8c7f65a5f209f39f3e06eb2f7374fd8439c/Hunting%20Queries/OfficeActivity/new_adminaccountactivity.yaml)
 

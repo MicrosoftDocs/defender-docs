@@ -1,5 +1,5 @@
 ---
-title: Understanding overrides within the email entity page in Microsoft Defender for Office 365
+title: Understand Overrides Within the Email Entity Page in Microsoft Defender for Office 365
 description: Shows the different overrides in the email entity page in Microsoft Defender for Office 365 to help admins troubleshoot configurations.
 author: MSFTBen
 ms.author: benharri
@@ -10,10 +10,12 @@ ms.collection:
 - m365-guidance-templates
 - m365-security
 - tier3
-ms.date: 08/14/2023
+ms.date: 06/12/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
-# Understanding overrides within the email entity page in Microsoft Defender for Office 365
+# Understand overrides within the email entity page in Microsoft Defender for Office 365
 
 Within the Microsoft Defender for Office 365 *[email entity page](../mdo-email-entity-page.md)*, there's a wealth of useful information about an email, including if applicable the **overrides** which affected that message, and potentially the location that the message was delivered or moved to post delivery.
 
@@ -21,12 +23,12 @@ This article is all about helping you **understand the different overrides**, ho
 
 ## Overrides details table
 
-The following table lists all overrides, a description of what that override means and some starting points for troubleshooting. Not all overrides are honored, depending on the circumstance. For example an email that contains malware is automatically blocked regardless if an end user set the sender as a "safe sender". To learn more about how overrides are applied see [this table](../how-policies-and-protections-are-combined.md).
+The following table lists all overrides, a description of what that override means and some starting points for troubleshooting. Not all overrides are honored, depending on the circumstance. For example an email that contains malware is automatically blocked regardless if an end user set the sender as a "safe sender". To learn more about how overrides are applied, see [How policies and protections are combined](../how-policies-and-protections-are-combined.md).
 
 | Override |Description|Notes|
 | -------- | -------- | -------- |
 | Third Party Filter  |We detected your MX record points to a non-Microsoft service and you have an SCL-1 transport rule, which overrides most Microsoft 365 filtering and Secure by Default.||
-|Admin initiated time travel|Admin triggered investigation, which leads to zero-hour auto purge (ZAP) modifying the delivery location of messages.|[Learn more about ZAP.](../zero-hour-auto-purge.md)|
+|Admin initiated time travel|Admin triggered investigation, which leads to zero-hour auto purge (ZAP) modifying the delivery location of messages.|[Zero-hour auto purge (ZAP)](../zero-hour-auto-purge.md)|
 |Antimalware policy block by file type|The file extension for an attachment within the message matched a banned file type listed in the anti-malware policy for the recipient|You may wish to tweak the file extensions listed in the Common attachments filter section of the anti-malware policy. [Learn more](../anti-malware-policies-configure.md).|
 |Antispam policy settings|The message matched a custom option in the anti-spam policy for the recipient. For example: "SPF record: hard fail" or "Empty messages".|Check the "Mark as spam" options in the anti-spam policy for the affected recipient. [Learn more](../anti-spam-policies-configure.md).|
 |Connection policy|The message originated from an allowed / blocked IP within your connection filter policy.|Check the "Connection filter policy" within the anti-spam policies section of the security portal. [Learn more](../connection-filter-policies-configure.md).|
@@ -34,23 +36,23 @@ The following table lists all overrides, a description of what that override mea
 |Exclusive mode (User override)|The recipient has chosen to mark all messages as spam unless they're received from a sender in their trusted contact list.|The recipient has likely configured: "Don't trust email unless it comes from someone in my Safe Senders and Recipients list" within the Junk email settings in Outlook or OWA. [Learn more](/powershell/module/exchangepowershell/set-mailboxjunkemailconfiguration).|
 |Filtering skipped due to on-premises organization|The message was marked as nonspam by your Exchange on-premises environment before being delivered to Exchange Online|You should review your on-premises environment to locate the source of the override.|
 |IP region filter from policy|The message was detected as coming from a country/region that an admin has selected to block in the anti-spam policy for the recipient.|Modify the "From these countries/regions" option within the anti-spam policy applied to the affected recipient. [Learn more](../anti-spam-policies-configure.md).|
-|Language filter from policy|The message was detected as containing a language that an admin has selected to block in the anti-spam policy for the recipient.|Modify the "Contains specific languages" option within the anti-spam policy to the affected recipient. [Learn more](../anti-spam-policies-configure.md).|
-|Phishing simulation|The message met the criteria defined by an administrator to be considered a phishing simulation message.|Criteria are within the "Phishing simulation" tab within Advanced delivery in the security portal. [Learn more](../advanced-delivery-policy-configure.md).|
-|Quarantine release| The recipient or an administrator released this message from quarantine.|[Learn more](../quarantine-end-user.md).|
+|Language filter from policy|The message was detected as containing a language that an admin has selected to block in the anti-spam policy for the recipient.|Modify the "Contains specific languages" option within the anti-spam policy to the affected recipient. [Configure anti-spam policies](../anti-spam-policies-configure.md).|
+|Phishing simulation|The message met the criteria defined by an administrator to be considered a phishing simulation message.|Criteria are within the "Phishing simulation" tab within Advanced delivery in the security portal. [Configure Advanced delivery policy](../advanced-delivery-policy-configure.md).|
+|Quarantine release| The recipient or an administrator released this message from quarantine.|[Release messages from quarantine](../quarantine-end-user.md).|
 |SecOps Mailbox|The message was sent to the specific security operations mailbox defined by an administrator.|Mailboxes are defined within the "SecOps mailbox" tab within Advanced delivery in the security portal. [Learn more](../advanced-delivery-policy-configure.md).|
-|Sender address list (Admin Override)|The message matched an entry in the allowed/blocked senders within the anti-spam policy for the recipient.|Check the "Allowed and blocked senders and domains" section of the relevant anti-spam policy. (allows with this method aren't recommended). [Learn more](../create-safe-sender-lists-in-office-365.md).|
+|Sender address list (Admin Override)|The message matched an entry in the allowed/blocked senders within the anti-spam policy for the recipient.|Check the "Allowed and blocked senders and domains" section of the relevant anti-spam policy. (allows with this method aren't recommended). [Create safe sender lists in Office 365](../create-safe-sender-lists-in-office-365.md).|
 |Sender address list (User override)|The recipient has manually set this sender address to be delivered to the inbox (allowed) or junk email folder (blocked).|The recipient has likely configured "Safe senders and domains" or "Blocked senders and domains" within the Junk email settings in Outlook or OWA. [Learn more](/powershell/module/exchangepowershell/set-mailboxjunkemailconfiguration).|
 |Sender domain list (Admin Override)|The message matched an entry in the allowed/blocked domains within the anti-spam policy for the recipient.|Check the "Allowed and blocked senders and domains" section of the relevant anti-spam policy. (allows with this method aren't recommended). [Learn more](../create-safe-sender-lists-in-office-365.md).|
 |Sender domain list (User override)|The recipient has manually set the sending domain to be delivered to the inbox (allowed) or junk email folder (blocked).|The recipient has likely configured "Safe senders and domains" or "Blocked senders and domains" within the Junk email settings in Outlook or OWA. [Learn more](/powershell/module/exchangepowershell/set-mailboxjunkemailconfiguration).|
-|Tenant Allow/Block List file|An entry was matched for a file hash listed in the Tenant allow/block list.|Review the entires within the "Tenant Allow/Block Lists" page within the security portal. [Learn more](../tenant-allow-block-list-about.md).|
+|Tenant Allow/Block List file|An entry was matched for a file hash listed in the Tenant allow/block list.|Review the entires within the "Tenant Allow/Block Lists" page within the security portal. [About the Tenant Allow/Block List](../tenant-allow-block-list-about.md).|
 |Tenant Allow/Block List sender email address|An entry was matched for a sender address listed in the Tenant allow/block list.|Review the entires within the "Tenant Allow/Block Lists" page within the security portal. [Learn more](../tenant-allow-block-list-about.md).|
 |Tenant Allow/Block List spoof|An entry was matched for spoof detection in the Tenant allow/block list.|Review the entires within the "Tenant Allow/Block Lists" page within the security portal. [Learn more](../tenant-allow-block-list-about.md).|
 |Tenant Allow/Block List URL| An entry was matched for a URL listed in the Tenant allow/block list.|Review the entires within the "Tenant Allow/Block Lists" page within the security portal. [Learn more](../tenant-allow-block-list-about.md).|
-|Trusted contact list (User override)|The recipient has chosen to mark contacts in their contacts folder as trusted senders automatically.|The recipient has likely configured: "Trust email from my contacts" within the Junk email settings in Outlook or OWA. [Learn more](/powershell/module/exchangepowershell/set-mailboxjunkemailconfiguration).|
-|Trusted domain (User override)|The recipient has added this domain to their safe recipients list within Outlook, emails sent to this domain aren't treated as junk email.|The recipient has likely configured "Safe Recipients" within Outlook's Junk email options. [Learn more](https://support.microsoft.com/office/block-or-allow-junk-email-settings-48c9f6f7-2309-4f95-9a4d-de987e880e46).|
+|Trusted contact list (User override)|The recipient has chosen to mark contacts in their contacts folder as trusted senders automatically.|The recipient has likely configured: "Trust email from my contacts" within the Junk email settings in Outlook or OWA. [Set-MailboxJunkEmailConfiguration cmdlet](/powershell/module/exchangepowershell/set-mailboxjunkemailconfiguration).|
+|Trusted domain (User override)|The recipient has added this domain to their safe recipients list within Outlook, emails sent to this domain aren't treated as junk email.|The recipient has likely configured "Safe Recipients" within Outlook's Junk email options. [Block or allow junk email settings in Outlook](https://support.microsoft.com/office/block-or-allow-junk-email-settings-48c9f6f7-2309-4f95-9a4d-de987e880e46).|
 |Trusted recipient (User override)|The recipient has added this sender to their safe recipients list within Outlook, emails sent to this sender aren't treated as junk email.|The recipient has likely configured "Safe Recipients" within Outlook's Junk email options. [Learn more](https://support.microsoft.com/office/block-or-allow-junk-email-settings-48c9f6f7-2309-4f95-9a4d-de987e880e46).|
-|Trusted senders only (User override)|This override has same behavior as the Exclusive mode (User override), primarily used in outlook.com.|See "Exclusive mode (User override)"|
+|Trusted senders only (User override)|This override marks all messages as spam unless they're received from a sender in the recipient's trusted contact list, primarily used in outlook.com. This behavior is the same as Exclusive mode (User override).|The recipient has likely configured: "Don't trust email unless it comes from someone in my Safe Senders and Recipients list" within the Junk email settings. [Learn more](/powershell/module/exchangepowershell/set-mailboxjunkemailconfiguration).|
 
-## Next steps
+## Next step
 
-You can find a similar detailed table covering all the different detection technologies at [aka.ms/emailtech](understand-detection-technology-in-email-entity.md).
+You can find a similar detailed table covering all the different detection technologies at [Understand detection technology in the email entity](understand-detection-technology-in-email-entity.md).

@@ -1,8 +1,10 @@
 ---
 title: Maintain threat intelligence packages on OT network sensors - Microsoft Defender for IoT
 description: Learn how to maintain threat intelligence packages on OT network sensors.
-ms.date: 08/28/2023
+ms.date: 06/12/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 
@@ -21,11 +23,12 @@ CVE scores shown are aligned with the [National Vulnerability Database (NVD)](ht
 >
 > Announcements about new packages are available from our [TechCommunity blog](https://techcommunity.microsoft.com/t5/azure-defender-for-iot/bd-p/AzureDefenderIoT).
 
-## Permissions
+<a name="permissions"></a>
+## Permissions required to manage threat intelligence packages
 
-To perform the procedures in this article, make sure that you have:
+To manage threat intelligence packages on OT network sensors, make sure that you have:
 
-- One or more OT sensors [onboarded](onboard-sensors.md) to Azure.
+- One or more OT sensors [onboarded to Defender for IoT](onboard-sensors.md).
 
 - Relevant permissions on the Azure portal and any OT network sensors you want to update.
 
@@ -49,15 +52,15 @@ In the Azure portal, select **Sites and sensors** > **Threat intelligence update
 
 Update threat intelligence packages on your OT sensors using any of the following methods:
 
-- [Have updates pushed](#automatically-push-updates-to-cloud-connected-sensors) to cloud-connected OT sensors automatically as they're released.
-- [Manually push](#manually-push-updates-to-cloud-connected-sensors) updates to cloud-connected OT sensors.
-- [Download an update package](#manually-update-locally-managed-sensors) and manually upload it to your OT sensor.
+- [Automatically push updates to cloud-connected OT sensors](#automatically-push-updates-to-cloud-connected-sensors) as they're released.
+- [Manually push updates to cloud-connected OT sensors](#manually-push-updates-to-cloud-connected-sensors).
+- [Download and manually upload an update package to locally managed OT sensors](#manually-update-locally-managed-sensors).
 
 ### Automatically push updates to cloud-connected sensors
 
 Threat intelligence packages can be automatically updated to cloud-connected sensors as they're released by Defender for IoT.
 
-Ensure automatic package update by onboarding your cloud-connected sensor with the **Automatic Threat Intelligence Updates** option enabled. For more information, see [Onboard OT sensors to Defender for IoT](onboard-sensors.md).
+Ensure automatic threat intelligence package updates by onboarding your cloud-connected sensor with the **Automatic Threat Intelligence Updates** option enabled. For more information, see [Onboard OT sensors to Defender for IoT](onboard-sensors.md).
 
 **To change the update mode after you've onboarded your OT sensor**:
 
@@ -88,7 +91,7 @@ The **Threat Intelligence update status** field displays the update progress for
 If you're working with locally managed OT sensors, you need to download the updated threat intelligence packages and upload them manually on your sensors.
 
 > [!TIP]
-> This option can also be used for cloud-connected sensors if you don't want to push the updates from the Azure portal.
+> The manual download-and-upload method can also be used for cloud-connected sensors if you don't want to push the updates from the Azure portal.
 >
 
 **To download threat intelligence packages**:

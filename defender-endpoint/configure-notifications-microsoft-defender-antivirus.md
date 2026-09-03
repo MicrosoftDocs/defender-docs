@@ -7,8 +7,8 @@ ms.localizationpriority: medium
 author: chrisda
 ms.topic: how-to
 ms.author: chrisda
-ms.custom: nextgen
-ms.date: 10/20/2025
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.reviewer: yongrhee
 ms.collection: 
 - m365-security
@@ -19,11 +19,14 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
 ---
 # Configure Microsoft Defender Antivirus notifications that appear on endpoints
 
 
-In Windows 10 and Windows 11, application notifications about malware detection and remediation are more robust, consistent, and concise. Microsoft Defender Antivirus notifications appear on endpoints when scans are completed and threats are detected. Notifications follow both scheduled and manually triggered scans. These notifications also appear in the **Notification Center**, and a summary of scans and threat detections appear at regular time intervals.
+This article explains how to configure Microsoft Defender Antivirus notifications on Windows endpoints, including threat-detection, scan-completion, and reboot-required notifications.
+
+In Windows 10 and Windows 11, application notifications about malware detection and remediation are more robust, consistent, and concise. Microsoft Defender Antivirus notifications appear on endpoints when scans are completed and threats are detected. Notifications follow both scheduled and manually triggered scans. Notifications for completed scans and detected threats also appear in the **Notification Center**, and a summary of scans and threat detections appear at regular time intervals.
 
 If you're part of your organization's security team, you can configure how notifications appear on endpoints, such as notifications that prompt for a system reboot or that indicate a threat was detected and remediated.
 
@@ -31,11 +34,14 @@ If you're part of your organization's security team, you can configure how notif
 
 ### Supported operating systems
 
-- Windows
+The following operating systems are supported:
+
+- Windows 10
+- Windows 11
 
 ## Configure antivirus notifications using Group Policy or the Windows Security app
 
-You can configure the display of more notifications, such as recent threat detection summaries, in the [Windows Security app](microsoft-defender-security-center-antivirus.md) and with Group Policy.
+You can configure the display of enhanced notifications (additional notification summaries such as recent threat detections) in the [Windows Security app](microsoft-defender-security-center-antivirus.md) and with Group Policy.
 
 
 | Setting| Description |
@@ -57,6 +63,11 @@ You can configure the display of more notifications, such as recent threat detec
 
 ### Use Group Policy to disable other notifications
 
+> [!IMPORTANT]
+> Disabling other notifications won't disable critical notifications, such as threat detection and remediation alerts.
+
+To disable additional notifications by using Group Policy, perform the following steps:
+
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 
 1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
@@ -67,12 +78,14 @@ You can configure the display of more notifications, such as recent threat detec
 
 1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** > **Reporting**.
 
-1. Double-click **Turn off enhanced notifications**, and set the option to **Enabled**. Then select **OK**. This setting prevents more notifications from appearing.
+1. Double-click **Turn off enhanced notifications**, and set the option to **Enabled**. Then select **OK**. Enabling **Turn off enhanced notifications** prevents additional notifications from appearing.
 
 > [!IMPORTANT]
 > Disabling other notifications won't disable critical notifications, such as threat detection and remediation alerts.
 
 ### Use the Windows Security app to disable additional notifications
+
+Use the following steps to disable additional notifications in the Windows Security app:
 
 1. Open the Windows Security app by clicking the shield icon in the task bar or searching the start menu for **Security**.
 
@@ -87,7 +100,9 @@ You can configure the display of more notifications, such as recent threat detec
 
 ## Configure standard notifications on endpoints using Group Policy
 
-You can use Group Policy to:
+### Hide notifications with Group Policy
+
+You can use Group Policy to configure Microsoft Defender Antivirus notifications in the following ways:
 
 - Display more, customized text on endpoints when the user needs to perform an action
 - Hide all notifications on endpoints
@@ -99,6 +114,8 @@ To add custom contact information to endpoint notifications, see [Customize the 
 
 ### Use Group Policy to hide notifications
 
+To hide all notifications by using Group Policy, perform the following steps:
+
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 
 1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
@@ -109,9 +126,11 @@ To add custom contact information to endpoint notifications, see [Customize the 
 
 1. Double-click **Suppress all notifications** and set the option to **Enabled**. 
 
-1. Select **OK**. This setting prevents more notifications from appearing.
+1. Select **OK**. Enabling **Suppress all notifications** prevents additional notifications from appearing.
 
 ### Use Group Policy to hide reboot notifications
+
+To hide reboot notifications by using Group Policy, perform the following steps:
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 
@@ -125,7 +144,7 @@ To add custom contact information to endpoint notifications, see [Customize the 
 
 1. Double-click **Suppresses reboot notifications** and set the option to **Enabled**. 
 
-1. Select **OK**. This setting prevents more notifications from appearing.
+1. Select **OK**. Enabling **Suppresses reboot notifications** prevents reboot notifications from appearing.
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:

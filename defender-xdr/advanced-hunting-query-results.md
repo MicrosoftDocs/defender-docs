@@ -1,6 +1,6 @@
 ---
 title: Work with advanced hunting query results in Microsoft Defender
-description: Make the most of the query results returned by advanced hunting in Microsoft Defender
+description: View advanced hunting query results as tables or charts, export data, drill into entity details, and refine queries directly from the results pane.
 ms.service: defender-xdr
 ms.subservice: adv-hunting
 ms.author: pauloliveria
@@ -10,13 +10,16 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
-- cx-ti
-- cx-ah
+  - msecd-doc-authoring-1014
+  - cx-ti
+  - cx-ah
+  - sfi-image-nochange
 ms.topic: how-to
-ms.date: 03/06/2026
+ms.date: 06/16/2026
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
+ai-usage: ai-assisted
 ---
 
 # Work with advanced hunting query results
@@ -65,8 +68,7 @@ AlertInfo
 | summarize Total = count() by Severity
 ```
 
-When rendering the results, a column chart displays each severity value as a separate column:
-
+When rendering the results, a column chart displays each severity value as a separate column. You can also add the `render` operator to the query to explicitly render the results as a column chart:
 
 ```kusto
 AlertInfo
@@ -78,7 +80,7 @@ AlertInfo
 
 #### Phishing emails across top ten sender domains
 
-If you're dealing with a list of values that isn't finite, use the `Top` operator to chart only the values with the most instances. For example, to get the top 10 sender domains with the most phishing emails, use the following query:
+If you're dealing with a list of values that isn't finite, use the `top` operator, which returns only the highest-ranking rows by a specified column, to chart the values with the most instances. For example, to get the top 10 sender domains with the most phishing emails, use the following query:
 
 ```kusto
 EmailEvents
@@ -205,7 +207,7 @@ A notification appears to inform you that the item was successfully added to **F
 You can do the same for your saved functions, queries, and custom detections in their respective **Favorites** sections right under each tab (**Functions**, **Queries**, and **Detection Rules**).
 
 > [!NOTE]
-> Some tables in this article might not be available at Microsoft Defender for Endpoint. [Turn on Microsoft Defender XDR](m365d-enable.md) to hunt for threats using more data sources. You can move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender XDR by following the steps in [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
+> Some tables in this article might not be available at Microsoft Defender for Endpoint. [Turn on Microsoft Defender](m365d-enable.md) to hunt for threats using more data sources. You can move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender by following the steps in [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
 
 ## Automatic timeline rendering
 
@@ -221,7 +223,7 @@ The timeline automatically adjusts its resolution based on the range of results.
 
 ### Filter the timeline results
 
-Select any point on the timeline to filter both the results and the timeline to that specific time range. The timeline also updates its scale to match the selected time period. When you filter by a specific range, it zooms in to show event distribution in high resolution.
+Select any point on the timeline to filter both the results and the timeline to that specific time range. The timeline also updates its scale to match the selected time period. When you filter by a specific range, the timeline zooms in to show event distribution in high resolution.
 
 #### [Unfiltered timeline](#tab/unfiltered)
 
@@ -272,7 +274,8 @@ The timeline appears only if your results meet the following conditions:
 - Your results include more than 40 events.
 - Your results include a `Timestamp` or `timeGenerated` column.
 
-## Related topics
+<a name="related-topics"></a>
+## See also
 
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Learn the query language](advanced-hunting-query-language.md)

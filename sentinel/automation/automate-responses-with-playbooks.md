@@ -2,13 +2,15 @@
 title: Automate Threat Response with Playbooks in Microsoft Sentinel
 description: Learn how to automate threat response in Microsoft Sentinel using playbooks to efficiently manage security alerts and incidents.
 ms.topic: how-to
-author: mberdugo
 ms.author: monaberdugo
-ms.date: 05/27/2025
+author: mberdugo
+ms.date: 06/12/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #Customer intent: As a SOC analyst, I want to automate threat response using playbooks so that I can efficiently manage security alerts and incidents, reducing manual intervention and focusing on deeper investigations.
 
 ---
@@ -46,6 +48,8 @@ You need the following roles to use Azure Logic Apps to create and run playbooks
 [!INCLUDE [playbooks-roles](../includes/playbooks-roles.md)]
 
 ### Extra permissions required for Microsoft Sentinel to run playbooks
+
+Microsoft Sentinel also needs additional permissions to run playbooks on your behalf.
 
 [!INCLUDE [playbooks-service-account-permissions](../includes/playbooks-service-account-permissions.md)]
 

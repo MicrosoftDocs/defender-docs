@@ -1,10 +1,13 @@
 ---
 title: Connect Microsoft Sentinel to other Microsoft services with an API-based data connector
-description: Learn how to connect Microsoft Sentinel to Microsoft services with API-based connections.
-author: guywi-ms
+description: Learn the common setup concepts, connection methods, and requirements for API-based Microsoft service data connectors in Microsoft Sentinel.
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: ofshezaf
 ms.topic: how-to
-ms.date: 02/24/2023
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security engineer, I want to connect various Microsoft services to Microsoft Sentinel using API-based data connectors so that I can centralize and streamline security event monitoring and incident management.
 
@@ -12,13 +15,15 @@ ms.date: 02/24/2023
 
 # Connect Microsoft Sentinel to other Microsoft services with an API-based data connector
 
-This article describes how to make API-based connections to Microsoft Sentinel. Microsoft Sentinel uses the Azure foundation to provide built-in, service-to-service support for data ingestion from many Azure and Microsoft 365 services, Amazon Web Services, and various Windows Server services. There are a few different methods through which these connections are made.
+This article describes how to make API-based connections to Microsoft Sentinel. Microsoft Sentinel uses the Azure foundation to provide built-in, service-to-service support for data ingestion from many Azure and Microsoft 365 services, Amazon Web Services, and various Windows Server services. There are a few different methods through which API-based connections to Microsoft Sentinel are made.
 
-This article presents information that is common to the group of API-based data connectors.
+The following requirements and steps apply to Microsoft Sentinel API-based data connectors.
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 
 ## Prerequisites
+
+Before you connect a service, make sure you meet the following prerequisites:
 
 - You must have read and write permissions on the Log Analytics workspace.
 - You must have a Security administrator role on your Microsoft Sentinel workspace's tenant, or the equivalent permissions.
@@ -34,11 +39,13 @@ This article presents information that is common to the group of API-based data 
   |Microsoft 365|- Your Microsoft 365 deployment must be on the same tenant as your Microsoft Sentinel workspace.<br>- Other charges may apply.|
   |Microsoft Power BI|- Your Office 365 deployment must be on the same tenant as your Microsoft Sentinel workspace.<br>- Other charges may apply.|
   |Microsoft Purview Information Protection|- Your Office 365 deployment must be on the same tenant as your Microsoft Sentinel workspace.<br>- Other charges may apply.|
-  |Microsoft Purview Insider Risk Management (IRM)    |- Valid subscription for Microsoft 365 E5/A5/G5, or their accompanying Compliance or IRM add-ons.<br>- [Microsoft Purview Insider Risk Management](/microsoft-365/compliance/insider-risk-management) fully onboarded, and [IRM policies](/microsoft-365/compliance/insider-risk-management-policies) defined and producing alerts.<br>- [Microsoft 365 IRM configured](/microsoft-365/compliance/insider-risk-management-settings#export-alerts-preview) to enable the export of IRM alerts to the Office 365 Management Activity API in order to receive the alerts through the Microsoft Sentinel connector. |
+  |Microsoft Purview Insider Risk Management (IRM)    |- Valid subscription for Microsoft 365 E5/A5/G5, or their accompanying Compliance or IRM add-ons.<br>- [Microsoft Purview Insider Risk Management](/microsoft-365/compliance/insider-risk-management) fully onboarded, and [IRM policies](/microsoft-365/compliance/insider-risk-management-policies) defined and producing alerts.<br>- [Insider Risk Management settings for exporting alerts](/microsoft-365/compliance/insider-risk-management-settings#export-alerts-preview) configured to enable the export of IRM alerts to the Office 365 Management Activity API in order to receive the alerts through the Microsoft Sentinel connector. |
 
 
 
 ## Connect to Microsoft services via API-based connectors
+
+To connect a Microsoft service by using an API-based connector, complete the following steps:
 
 1. From the Microsoft Sentinel navigation menu, select **Data connectors**.
 

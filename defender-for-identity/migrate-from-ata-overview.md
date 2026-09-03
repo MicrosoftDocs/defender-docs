@@ -1,12 +1,19 @@
 ---
 title: Migrate from Advanced Threat Analytics | Microsoft Defender for Identity
 description: Learn how to move an existing Advanced Threat Analytics installation to Microsoft Defender for Identity.
-ms.date: 02/21/2024
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.reviewer: martin77s
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
-# Advanced Threat Analytics (ATA) to Microsoft Defender for Identity
+# Migrate from Advanced Threat Analytics (ATA) to Microsoft Defender for Identity
+
+> [!IMPORTANT]
+> ATA is end of life. ATA ended Mainstream Support on January 12, 2021, and Extended Support ended in January 2026. No further updates, including security fixes, will be provided. For more information, read [End of mainstream support for Advanced Threat Analytics](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
+>
+> We strongly recommend migrating to Defender for Identity as soon as possible using the steps in this article.
 
 This article describes how to migrate from an existing ATA installation to a Microsoft Defender for Identity sensor, and includes the following steps:
 
@@ -21,7 +28,7 @@ This article describes how to migrate from an existing ATA installation to a Mic
 
 ATA is a standalone on-premises solution with multiple components, such as the ATA Center that requires dedicated hardware on-premises.
 
-Defender for Identity is a cloud-based security solution that uses your on-premises Active Directory signals. The solution is highly scalable and is frequently updated.
+Defender for Identity is a cloud-based security solution that uses your on-premises Active Directory signals. Defender for Identity is highly scalable and is frequently updated.
 
 In contrast to the ATA sensor, the Defender for Identity sensor also uses data sources such as Event Tracing for Windows (ETW) enabling Defender for Identity to deliver extra detections. Defender for Identity also provides:
 
@@ -38,8 +45,6 @@ Defender for Identity also uses the Microsoft 365 security portfolio to automati
 > While you can migrate to Defender for Identity from any ATA version, your ATA data isn't migrated. Therefore, we recommend that you plan to retain your ATA Data Center and any alerts required for ongoing investigations until all ATA alerts are closed or remediated.
 >
 
-> [!NOTE]
-> The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA ended Mainstream Support on January 12, 2021. Extended Support will continue until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
 
 ## Prerequisites
 
@@ -53,9 +58,9 @@ Before starting the migration, gather all of the following information:
 
 - **Account details for your [Directory Services](directory-service-accounts.md) account**.
 
-- **Syslog notification [settings](/defender-for-identity/notifications)**.
+- **Syslog [notification settings](/defender-for-identity/notifications)**.
 
-- **Email [notification details](notifications.md)**.
+- **Email [notification settings](notifications.md)**.
 
 - **All [ATA role group memberships](/advanced-threat-analytics/ata-role-groups)**.
 
@@ -67,7 +72,7 @@ Before starting the migration, gather all of the following information:
 
 - **A complete list of all entities, such as computers, groups, or users, that you want to manually tag as *Sensitive* entities**. For more information, see [Defender for Identity entity tags in Microsoft Defender XDR](entity-tags.md).
 
-- **Report scheduling [details](/defender-for-identity/classic-reports)**, including a list of all reports and scheduled timing.
+- **[Report scheduling and classic reports](/defender-for-identity/classic-reports)**, including a list of all reports and scheduled timing.
 
 > [!CAUTION]
 > Do not uninstall the ATA Center until all ATA Gateways are removed. Uninstalling the ATA Center with ATA Gateways still running leaves your organization exposed with no threat protection.
@@ -82,13 +87,11 @@ Use the following steps to migrate to Defender for Identity:
 
 1. Install the Defender for Identity Sensor on all domain controllers:
 
-    1. [Download the Defender for Identity sensor files](download-sensor.md) and retrieve the access key.
-
-    1. [Install Defender for Identity sensors on your domain controllers](install-sensor.md).
+    1. [Download and install the Defender for Identity sensor](deploy/install-sensor.md) on your domain controllers.
 
 1. [Configure the your Defender for Identity sensor](configure-sensor-settings.md).
 
-After the migration is complete, allow two hours for the initial sync to be completed before moving on with validation tasks.
+After the migration is complete, allow two hours for the Defender for Identity sensor initial synchronization to complete before starting validation tasks.
 
 ## Validate your migration
 
@@ -107,9 +110,10 @@ After completing your migration to Defender for Identity, do the following to cl
     - **Decommission the ATA Center**. We recommend keeping ATA data online for a period of time. 
     - **Back up Mongo DB** if you want to keep the ATA data indefinitely. For more information, see [Backing up the ATA database](/advanced-threat-analytics/ata-database-management#backing-up-the-ata-database).
 
-## Related information
+<a name="related-information"></a>
+## Related content
 
-After migrating to Defender for Identity, learn more about investigating alerts in Microsoft Defender XDR. For more information, see:
+After migrating to Defender for Identity, learn more about investigating alerts in Microsoft Defender XDR:
 
 - [Understanding security alerts](understanding-security-alerts.md)
 - [Investigate Defender for Identity security alerts in Microsoft Defender XDR](manage-security-alerts.md)

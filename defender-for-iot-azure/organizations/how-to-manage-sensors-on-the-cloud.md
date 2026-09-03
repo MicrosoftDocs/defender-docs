@@ -1,16 +1,17 @@
 ---
 title: Manage sensors with Defender for IoT in the Azure portal
 description: Learn how to onboard, view, and manage sensors with Defender for IoT in the Azure portal.
-ms.date: 12/19/2023
+ms.date: 06/12/2026
 ms.topic: how-to
-ms.custom:
+ms.custom: msecd-doc-authoring-1014
   - enterprise-iot
   - sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Manage sensors with Defender for IoT in the Azure portal
 
-This article describes how to view and manage sensors with [Microsoft Defender for IoT in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_IoT_Defender/IoTDefenderDashboard/Getting_Started).
+This article describes how to view and manage sensors with [Microsoft Defender for IoT in the Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_IoT_Defender/IoTDefenderDashboard/Getting_Started). Learn how to monitor sensor health, edit site and sensor settings, update threat intelligence, retrieve forensic data, and upload diagnostics logs for support.
 
 ## Prerequisites
 
@@ -71,6 +72,8 @@ Use the options on the **Sites and sensor** page and a sensor details page to do
 
 ### OT sensor updates
 
+The following table lists OT sensor update actions available from the Azure portal.
+
 |Task |Description  |
 |---------|---------|
 | :::image type="icon" source="media/how-to-manage-sensors-on-the-cloud/icon-update.png" border="false"::: **Sensor update (Preview)** | OT sensors only. <br><br>Run remote updates on OT sensors directly from the Azure portal, or download update packages to update manually. <br><br>For more information, see [Update Defender for IoT OT monitoring software](update-ot-software.md). |
@@ -78,6 +81,8 @@ Use the options on the **Sites and sensor** page and a sensor details page to do
 |:::image type="icon" source="media/how-to-manage-sensors-on-the-cloud/icon-edit.png" border="false":::  **Edit automatic threat intelligence updates**     | Individual, OT sensors only. <br><br>Available from the **...** options menu or a sensor details page.  <br><br>Select **Edit** and then toggle the **Automatic Threat Intelligence Updates (Preview)** option on or off as needed. Select **Submit** to save your changes. |
 
 ### Sensor deployment and access
+
+The following deployment and access actions are available for sensors in the Azure portal.
 
 |Task |Description  |
 |---------|---------|
@@ -89,6 +94,8 @@ Use the options on the **Sites and sensor** page and a sensor details page to do
 |<a name="endpoint"></a> **Download endpoint details** | OT sensors only.<br><br>Available from the **Sites and sensors** toolbar **More actions** menu. <br><br>Download the list of endpoints that must be enabled as secure endpoints from OT network sensors. Make sure that HTTPS traffic is enabled over port 443 to the listed endpoints for your sensor to connect to Azure. Outbound allow rules are defined once for all OT sensors onboarded to the same subscription.<br><br>To enable this option, select a sensor with a supported software version, or a site with one or more sensors with supported versions. |
 
 ### Sensor maintenance and troubleshooting
+
+The following maintenance and troubleshooting actions are available for supported sensors.
 
 |Task |Description  |
 |---------|---------|
@@ -119,11 +126,11 @@ You may need to reactivate an OT sensor because you want to:
 
 - **Associate the sensor to a new site**:  Re-register the sensor with new site definitions and use the new activation file to activate.
 
-- **Change your plan commitment**: If you make changes to your plan, such as changing your price plan from a trial to a monthly commitment, you need to reactivate your sensors to reflect the new changes.
+- **Change your plan commitment**: If you make changes to your plan, such as changing your price plan to a monthly commitment, you need to reactivate your sensors to reflect the new changes.
 
-In such cases, do the following steps:
+To reactivate an OT sensor for any of these reasons, do the following steps:
 
-1. [Delete your existing sensor](#sensor-management-options-from-the-azure-portal).
+1. Delete your existing sensor from the **Sites and sensors** page, using the **...** options menu or the sensor details page.
 1. [Onboard the sensor again](onboard-sensors.md), registering it with any new settings.
 1. [Upload your new activation file](how-to-manage-individual-sensors.md#upload-a-new-activation-file).
 
@@ -167,23 +174,25 @@ For more information, see our [Sensor health message reference](sensor-health-me
 
 ## Upload a diagnostics log for support
 
-If you need to open a support ticket for a locally managed sensor, upload a diagnostics log to the Azure portal for the support team.
+When you open a support ticket for a locally managed sensor, upload a diagnostics log to the Azure portal.
 
 > [!TIP]
-> For cloud-connected sensors, the diagnostics log is automatically available to your support team when you open a support ticket.
+> For cloud-connected sensors, the diagnostics log is sent to your support team automatically.
 >
 
 **To upload a diagnostics report**:
 
-1. Make sure you have the diagnostics report available for upload. For more information, see [Download a diagnostics log for support](how-to-troubleshoot-sensor.md#download-a-diagnostics-log-for-support).
+1. Get the diagnostics report ready. For more information, see [Download a diagnostics log for support](how-to-troubleshoot-sensor.md#download-a-diagnostics-log-for-support).
 
-1. In Defender for IoT in the Azure portal, go to the **Sites and sensors** page and select the locally managed sensor that's related to your support ticket.
+1. In the Azure portal, go to **Sites and sensors** in Defender for IoT. Select the locally managed sensor for your support ticket.
 
-1. For your selected sensor, select the **...** options menu on the right > **Send diagnostic files to support**. For example:
+1. Select the **...** options menu on the right > **Send diagnostic files to support**. For example:
 
     :::image type="content" source="media/how-to-manage-sensors-on-the-cloud/upload-diagnostics-log.png" alt-text="Screenshot of the send diagnostic files to support option." lightbox="media/how-to-manage-sensors-on-the-cloud/upload-diagnostics-log.png":::
 
 ## Next steps
+
+For more information, see the following articles:
 
 > [!div class="nextstepaction"]
 > [Define and view OT sensor settings from the Azure portal (Public preview)](configure-sensor-settings-portal.md)

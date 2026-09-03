@@ -12,11 +12,13 @@ ms.collection:
 - mde-linux
 ms.topic: how-to
 ms.subservice: linux
-ms.date: 06/06/2025
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 # Configure and validate exclusions for Microsoft Defender for Endpoint on Linux
 
@@ -24,7 +26,7 @@ appliesto:
 This article provides information on how to define antivirus and global exclusions for Microsoft Defender for Endpoint. Antivirus exclusions apply to on-demand scans, real-time protection (RTP), and behavior monitoring (BM). Global exclusions apply to real-time protection (RTP), behavior monitoring (BM), and endpoint detection and response (EDR), thus stopping all the associated antivirus detections, EDR alerts, and visibility for the excluded item.
 
 > [!IMPORTANT]
-> The antivirus exclusions described in this article apply to only antivirus capabilities, and not to endpoint detection and response (EDR). Files that you exclude by using the antivirus exclusions described in this article can still result in EDR alerts and other detections. Global exclusions described in this section apply to antivirus and EDR capabilities, thus stopping all associated antivirus protection, EDR alerts, and detections. Global exclusions are available in production for Defender for Endpoint on Linux, version `101.23092.0012` or later. For EDR-only exclusions, [contact support](/microsoft-365/admin/get-help-support).
+> The antivirus exclusions described in this article apply to only antivirus capabilities, and not to endpoint detection and response (EDR). Files that you exclude by using the antivirus exclusions described in this article can still result in EDR alerts and other detections. Global exclusions described in this section apply to antivirus and EDR capabilities, thus stopping all associated antivirus protection, EDR alerts, and detections. Global exclusions are available in production for Defender for Endpoint on Linux, version `101.23092.0012` or later. For EDR-only exclusions, [get help and support in the Microsoft 365 admin center](/microsoft-365/admin/get-help-support).
 
 You can exclude certain files, folders, processes, and process-opened files from Defender for Endpoint on Linux.
 
@@ -37,7 +39,7 @@ Exclusions can be useful to avoid incorrect detections on files or software that
 
 ## Supported exclusion scopes
 
-As described in an earlier section, we support two exclusion scopes: antivirus (`epp`) and global (`global`) exclusions.
+Defender for Endpoint on Linux supports two exclusion scopes: antivirus (`epp`) and global (`global`) exclusions.
 
 Antivirus exclusions can be used to exclude trusted files and processes from real-time protection while still having EDR visibility. Global exclusions are applied at sensor level and to mute the events that match exclusion conditions early in the flow, before any processing is done, thus stopping all EDR alerts and antivirus detections.
 
@@ -69,6 +71,8 @@ The following table shows the exclusion types supported by Defender for Endpoint
 
 ### File, folder, and process exclusions support the following wildcards:
 
+The following table describes the wildcard patterns you can use when defining file, folder, and process exclusions.
+
 Wildcard|Description|Examples|
 ---|---|---
 \*|Matches any number of any characters including none <br/> *(note if this wildcard isn't used at the end of the path then it substitutes only one folder)* | `/var/*/tmp` includes any file in `/var/abc/tmp` and its subdirectories, and `/var/def/tmp` and its subdirectories. It doesn't include `/var/abc/log` or `/var/def/log` <p> <p> `/var/*/` only includes any files in its subdirectories such as `/var/abc/`, but not files directly inside `/var`. 
@@ -83,9 +87,10 @@ Wildcard|Description|Examples|
 
 You can configure exclusions using a management JSON configuration, Defender for Endpoint security settings management, or the command line.
 
-### Using the management console
+<a name="using-the-management-console"></a>
+### Configure exclusions using a management console
 
-In enterprise environments, exclusions can also be managed through a configuration profile. Typically, you would use a configuration management tool like Puppet, Ansible, or another management console to push a file with the name `mdatp_managed.json` at the location `/etc/opt/microsoft/mdatp/managed/`. For more information, see [Set preferences for Defender for Endpoint on Linux](linux-preferences.md). Please refer to the following sample of `mdatp_managed.json`. 
+In enterprise environments, exclusions can also be managed through a configuration profile. Typically, you would use a configuration management tool like Puppet, Ansible, or another management console to push a file with the name `mdatp_managed.json` at the location `/etc/opt/microsoft/mdatp/managed/`. For more information, see [Set preferences for Defender for Endpoint on Linux](linux-preferences.md). The following `mdatp_managed.json` example shows how to configure antivirus and global exclusions for files, folders, extensions, and processes: 
 
 ```JSON
 {
@@ -132,7 +137,8 @@ In enterprise environments, exclusions can also be managed through a configurati
 }
 ```
 
-### Using Defender for Endpoint security settings management
+<a name="using-defender-for-endpoint-security-settings-management"></a>
+### Configure exclusions using Defender for Endpoint security settings management
 
 > [!NOTE]
 > Make sure to review the prerequisites: [Defender for Endpoint security settings management prerequisites](/intune/intune-service/protect/mde-security-integration#prerequisites)
@@ -167,9 +173,10 @@ Create a dynamic Microsoft Entra group based on the operating system type to ens
 
 1. On the **Review + create** page, when you're done, select **Save**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
-For more information refer: [Manage endpoint security policies in Microsoft Defender for Endpoint](manage-security-policies.md#create-an-endpoint-security-policy).
+For more information about creating endpoint security policies, see [Manage endpoint security policies in Microsoft Defender for Endpoint](endpoint-security-policies-configure.md#create-an-endpoint-security-policy).
 
-### Using the command line
+<a name="using-the-command-line"></a>
+### Configure exclusions using the command line
 
 Run the following command to see the available switches for managing exclusions:
 

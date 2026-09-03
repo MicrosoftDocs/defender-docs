@@ -15,6 +15,9 @@ ms.subservice: ngp
 ms.reviewer: mkaminska, yongrhee
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
+ms.custom:
+  - sfi-ga-nochange
+  - sfi-image-nochange
 
 ---
 # Device health, Microsoft Defender Antivirus health report
@@ -30,7 +33,7 @@ The Device Health report provides information about the devices in your organiza
 > For devices to appear **correctly** in Microsoft Defender Antivirus device health reports, they must meet the following prerequisites:  
 >
 > - Device is onboarded to Microsoft Defender for Endpoint
-> - OS: Windows 10, Windows 11, Windows Server 2012 R2/, 2016 R2/ 2019/2022 (not onboarded via Microsoft Management Agent), macOS, Linux
+> - OS: Windows 10, Windows 11, Windows Server 2012 R2 or later (not onboarded via Microsoft Management Agent), macOS, Linux
 > - Sense (MsSense.exe) version: **10.8210.** *+.
 >
 > **OS build dependency (Windows 10 2016 LTSB / 1607):**  

@@ -12,7 +12,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Zero-hour auto purge (ZAP) in all organizations with cloud mailboxes handles messages in mailboxes retroactively identified as spam, phishing, or malware.
 ms.service: defender-office-365
-ms.date: 01/15/2026
+ms.date: 06/01/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -22,7 +22,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In all organizations with cloud mailboxes, zero-hour auto purge (ZAP) retroactively detects and neutralizes malicious phishing, spam, or malware messages that were delivered to cloud mailboxes. ZAP doesn't work in on-premises mailboxes protected by Microsoft 365.
+In all organizations with cloud mailboxes, zero-hour auto purge (ZAP) retroactively detects and neutralizes malicious phishing, spam, or malware messages that were delivered to cloud mailboxes. ZAP doesn't work in on-premises mailboxes protected by Microsoft 365. ZAP also acts on messages in the Deleted Items folder, using the same per-verdict actions configured in your anti-spam, anti-phishing, and anti-malware policies.
 
 > [!NOTE]
 > ZAP is also able to retroactively detect existing malicious chat messages in Microsoft Teams.
@@ -32,7 +32,12 @@ Spam and malware signatures in the service are updated in real-time on a daily b
 - Zero-day malware that was undetectable during mail flow.
 - Content weaponized after delivery to users.
 
-ZAP addresses these issues by continually monitoring spam and malware signature updates in the service, and is seamless for users. ZAP finds and takes automated action on messages that are already in a user's mailbox. ZAP's search is limited to the last 48 hours of delivered email. Users aren't notified if ZAP detects and moves a message.
+ZAP addresses these issues by continually monitoring spam and malware signature updates in the service, and is seamless for users. ZAP finds and takes automated action on messages that are already in a user's mailbox. ZAP acts on delivered mail through two paths:
+
+- **Per-message reevaluation** rescans individual messages within **48 hours** of delivery.
+- **Campaign-based remediation** retroactively acts on messages later identified as part of a malicious campaign, **including messages older than 48 hours** — typically within a few hours to a few days after delivery.
+
+Users aren't notified when ZAP moves a message.
 
 Watch this short video to learn how ZAP in Microsoft Defender for Office 365 automatically detects and neutralizes threats in email.
 
@@ -207,7 +212,7 @@ It's important for you to carefully consider the implications of bypassing filte
 
 There are no special licensing requirements for ZAP for malware, spam, and phishing. ZAP works on all mailboxes hosted in Exchange Online. ZAP doesn't work in on-premises mailboxes that are protected by Microsoft 365.
 
-ZAP for Teams protection requires Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 licenses.
+ZAP for Teams protection requires Microsoft Defender for Office 365 Plan 1 or Plan 2 licenses.
 
 ### Does ZAP work on messages in other folders in the mailbox (for example, messages moved by Inbox rules)?
 

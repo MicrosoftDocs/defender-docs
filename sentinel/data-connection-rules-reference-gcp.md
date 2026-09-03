@@ -3,10 +3,11 @@ title: GCP data connector reference for the Codeless Connector Framework
 titleSuffix: Microsoft Sentinel
 description: This article provides reference JSON fields and properties for creating the GCP data connector type and its data connection rules as part of the Codeless Connector Framework.
 services: sentinel
+ms.author: edbaynash
 author: EdB-MSFT
+ms.reviewer: krishsa
 ms.topic: reference
 ms.date: 9/30/2024
-ms.author: edbaynash
 
 ---
 
@@ -16,7 +17,7 @@ To create a Google Cloud Platform (GCP) data connector with the Codeless Connect
 
 Each `dataConnector` represents a specific *connection* of a Microsoft Sentinel data connector. One data connector might have multiple connections, which fetch data from different endpoints. The JSON configuration built using this reference document is used to complete the deployment template for the CCF data connector. 
 
-For more information, see [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md#create-the-deployment-template).
+For more information, see [Create a codeless connector for Microsoft Sentinel](isv/create-codeless-connector.md#create-the-deployment-template).
 
 ## Build the GCP CCF data connector
 
@@ -24,7 +25,7 @@ Simplify the development of connecting your GCP data source with a sample GCP CC
 
 [**GCP CCF example template**](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/Templates/Connector_GCP_CCP_template.json)
 
-With most of the deployment template sections filled out, you only need to build the first two components, the output table and the DCR. For more information, see the [Output table definition](create-codeless-connector.md#output-table-definition) and [Data Collection Rule (DCR)](create-codeless-connector.md#data-collection-rule) sections.
+With most of the deployment template sections filled out, you only need to build the first two components, the output table and the DCR. For more information, see the [Output table definition](isv/create-codeless-connector.md#output-table-definition) and [Data Collection Rule (DCR)](isv/create-codeless-connector.md#data-collection-rule) sections.
 
 ## Data Connectors - Create or update 
 
@@ -75,7 +76,7 @@ The request body for a `GCP` CCF data connector has the following structure:
 | **name** | True | string | The unique name of the connection matching the URI parameter |
 | **kind** | True | string | Must be `GCP` |
 | **etag** |  | GUID | Leave empty for creation of new connectors. For update operations, the etag must match the existing connector's etag (GUID). |
-| properties.connectorDefinitionName |  | string | The name of the DataConnectorDefinition resource that defines the UI configuration of the data connector. For more information, see [Data Connector Definition](create-codeless-connector.md#data-connector-user-interface). |
+| properties.connectorDefinitionName |  | string | The name of the DataConnectorDefinition resource that defines the UI configuration of the data connector. For more information, see [Data Connector Definition](isv/create-codeless-connector.md#data-connector-user-interface). |
 | properties.**auth**	| True | Nested JSON | Describes the credentials for polling the GCP data. For more information, see [authentication configuration](#authentication-configuration). |
 | properties.**request** | True | Nested JSON | Describes the GCP project Id and GCP subscription for polling the data. For more information, see [request configuration](#request-configuration). |
 | properties.**dcrConfig** |  | Nested JSON | Required parameters when the data is sent to a Data Collection Rule (DCR). For more information, see [DCR configuration](#dcr-configuration). |
@@ -84,7 +85,7 @@ The request body for a `GCP` CCF data connector has the following structure:
 
 Authentication to GCP from Microsoft Sentinel uses a GCP Pub/Sub. You must configure the authentication separately. Use the Terraform scripts [here](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/GCP/Terraform/sentinel_resources_creation/GCPInitialAuthenticationSetup/GCPInitialAuthenticationSetup.tf). For more information, see [GCP Pub/Sub authentication from another cloud provider](https://cloud.google.com/docs/authentication/provide-credentials-adc#wlif).
 
-As a best practice, use parameters in the auth section instead of hard-coding credentials. For more information, see [Secure confidential input](create-codeless-connector.md#secure-confidential-input).
+As a best practice, use parameters in the auth section instead of hard-coding credentials. For more information, see [Secure confidential input](isv/create-codeless-connector.md#secure-confidential-input).
 
 In order to create the deployment template which also uses parameters, you need to escape the parameters in this section with an extra starting `[`. This allows the parameters to assign a value based on the user interaction with the connector. For more information, see [Template expressions escape characters](/azure/azure-resource-manager/templates/template-expressions#escape-characters).
 

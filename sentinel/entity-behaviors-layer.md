@@ -1,12 +1,14 @@
 ---
 title: Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel
 description: The Microsoft Sentinel UEBA behaviors layer translates security telemetry into normalized behavioral patterns for investigation, hunting, and detection engineering.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
 ms.reviewer: mshechter
-ms.date: 12/29/2025
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.service: microsoft-sentinel
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #Customer intent: As a security analyst, I want to use the UEBA behaviors layer to translate raw security telemetry into human-readable patterns with MITRE ATT&CK context for faster threat detection and investigation.
 ---
 
@@ -21,7 +23,7 @@ Unlike alerts or anomalies, behaviors don’t necessarily indicate risk - they c
 - **Context**: Add MITRE ATT&CK mapping and entity roles for instant security relevance.
 - **Consistency**: Provide a unified schema across diverse log sources.
 
-This abstraction layer enables faster threat detection, investigation, and response across your security operations, without requiring deep familiarity with every log source. 
+The UEBA behaviors layer enables faster threat detection, investigation, and response across your security operations, without requiring deep familiarity with every log source. 
 
 This article explains how the UEBA behaviors layer works, how to enable the behaviors layer, and how to use behaviors to enhance security operations.  
 
@@ -32,7 +34,7 @@ Watch the [UEBA behaviors webinar](https://www.youtube.com/watch?v=SqbxmGdMP7c) 
 Behaviors are part of Microsoft Sentinel’s [User and Entity Behavior Analytics (UEBA)](../sentinel/identify-threats-with-entity-behavior-analytics.md) capabilities, providing normalized, contextualized activity summaries that complement anomaly detection and enrich investigations. 
 
 ### Compare behaviors, anomalies, and alerts
-This table shows how behaviors differ from anomalies and alerts:
+The following table shows how behaviors differ from anomalies and alerts:
 
 | **Capability**   | **What it represents** | **Purpose** |
 |---------------|-------------------------|-------------|
@@ -71,7 +73,7 @@ The UEBA behaviors layer stores behavior records in two types of tables:
 - A *behavior information* table, which contains the behavior title, description, MITRE mappings, categories, and links to raw logs, and
 - A *behavior‑related entities* table, which lists all entities involved in the behavior and their roles.
 
-These tables integrate seamlessly with your existing workflows for detection rules, investigations, and incident analysis. They process all types of security activity—not just suspicious events—and provide comprehensive visibility into both normal and anomalous behavior patterns.
+The behavior information and behavior-related entities tables integrate seamlessly with your existing workflows for detection rules, investigations, and incident analysis. They process all types of security activity—not just suspicious events—and provide comprehensive visibility into both normal and anomalous behavior patterns.
 
 For information about using behaviors tables, see [Best practices and troubleshooting tips for querying behaviors](#best-practices-and-troubleshooting-tips-for-querying-behaviors).  
 
@@ -81,7 +83,7 @@ For information about using behaviors tables, see [Best practices and troublesho
 
 ## Use cases and examples
 
-Here's how analysts, hunters, and detection engineers can use behaviors during investigations, hunting, and alert creation.
+The following examples show how analysts, hunters, and detection engineers can use behaviors during investigations, hunting, and alert creation.
 
 ### Investigation and incident enrichment
 
@@ -142,7 +144,7 @@ Behaviors allow hunters to search on TTPs and activity summaries, rather than wr
     | project TimeGenerated, Title, Description, TableName
     ```
 
-  - Specific user:
+  - Specific user — retrieve all behaviors associated with a particular user over the last 7 days to build a complete activity timeline:
 
     ```kusto
     // Find all behaviors for a specific user over last 7 days
@@ -203,7 +205,7 @@ The UEBA behaviors layer currently focuses on these non-Microsoft data sources t
 <sup>1</sup> `CommonSecurityLog` can contain logs from many vendors. The UEBA behaviors layer only generates behaviors for **supported vendors and log types**. If the table receives logs from an unsupported vendor, you won't see any behaviors even though the data source is connected.
 
 > [!IMPORTANT]
-> You must enable these sources separately from other UEBA capabilities. For example, if you enabled AWSCloudTrail for UEBA analytics and anomalies, you still need to enable it separately for behaviors.
+> You must enable each supported data source for behaviors separately from other UEBA capabilities. For example, if you enabled AWSCloudTrail for UEBA analytics and anomalies, you still need to enable it separately for behaviors.
 
 
 ## Prerequisites
@@ -230,9 +232,8 @@ To start aggregating UEBA behaviors, **make sure to connect at least one support
 
 To enable the UEBA behaviors layer in your workspace:
 
-1. In the Defender portal, select **System > Settings > Microsoft Sentinel > SIEM workspaces**.
-1. Select the Sentinel workspace where you want to enable the UEBA behaviors layer.
-1. Select **Enable behavior analytics > Configure UEBA > New! Behaviors layer**.
+1. In the Defender portal, select **Settings > Microsoft Sentinel > UEBA**.
+1. Select **New! Behaviors layer**.
 1. Toggle on **Enable Behaviors layer**.
 1. Select **Connect all data sources** or select the specific data sources from the list.
 
@@ -255,12 +256,12 @@ Using the UEBA behaviors layer results in the following costs:
 
 ## Best practices and troubleshooting tips for querying behaviors
 
-This section explains how to query behaviors from both the Defender portal and your Sentinel workspace. While the schemas are identical, the data scope differs:
+The following guidance explains how to query behaviors from both the Defender portal and your Sentinel workspace. While the schemas are identical, the data scope differs:
 
 - In the Defender portal, the behavior tables include UEBA behaviors ***and*** behaviors from connected Defender services, such as Microsoft Defender for Cloud Apps and Microsoft Defender for Cloud.
 - In the Sentinel workspace, the behavior tables include ***only*** UEBA behaviors generated from logs ingested into that specific workspace.
 
-This table shows which behavior tables to use in each environment:
+The following table lists which behavior tables to use in each environment:
 
 | **Environment** | **Tables to use** | **Use cases** |
 |-------------|-------------------|---------------|
@@ -269,7 +270,7 @@ This table shows which behavior tables to use in each environment:
 
 For more practical examples of using behaviors, see [Use cases and examples](#use-cases-and-examples).
 
-For more information about Kusto Query Language (KQL), see [Kusto query language overview](/kusto/query/?view=microsoft-sentinel).
+For more information about Kusto Query Language (KQL), see [Kusto query language overview](/kusto/query/?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json).
 
 - **Filter for UEBA behaviors in the Defender portal**
 
@@ -299,7 +300,7 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
 
   Use the `BehaviorId` field to join `BehaviorInfo` with `BehaviorEntities`. 
 
-  For example:
+  The following query correlates recent behavior records with their associated entities, so you can see each behavior alongside the users, hosts, or IP addresses involved:
 
   ```kusto
   BehaviorInfo
@@ -320,6 +321,8 @@ For more information about Kusto Query Language (KQL), see [Kusto query language
   - For [Azure Monitor workbooks](../sentinel/monitor-your-data.md) and any artifacts built directly on your Sentinel workspace, make sure to query the `SentinelBehaviorInfo` and `SentinelBehaviorEntities` tables in your Sentinel workspace.
 
 ### Troubleshooting 
+
+Use the following tips to troubleshoot common issues with UEBA behaviors.
 
 - **If behaviors aren't being generated**: Ensure supported data sources are actively sending logs to the Analytics tier, confirm the data source toggle is on, and wait 15–30 minutes after enabling.
 - **I see fewer behaviors than expected**: Our coverage of supported behavior types is partial and growing. For more information, see [Supported data sources and behaviors](#supported-data-sources-and-behaviors). The UEBA behaviors layer might also not be able to detect a behavior pattern if there are very few instances of a specific behavior type.

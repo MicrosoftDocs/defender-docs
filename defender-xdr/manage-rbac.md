@@ -8,9 +8,10 @@ ms.localizationpriority: medium
 ms.collection: 
 - m365-security
 - tier3
-ms.custom: 
+ms.custom:
+  - sfi-ga-nochange
 ms.topic: overview
-ms.date: 04/12/2026
+ms.date: 07/10/2026
 ms.reviewer: Tomas Beerthuis
 
 #customer intent: As a security administrator, I want to manage permissions and access to Microsoft Defender portal experiences using unified role-based access control (RBAC).
@@ -38,6 +39,8 @@ The Microsoft Defender unified role-based access control (RBAC) model provides a
 
 > [!IMPORTANT]
 > Starting 2025, the Microsoft Defender unified RBAC model is the default permissions model for new Microsoft Defender Endpoint tenants and Microsoft Defender for Identity tenants. These tenants can't export roles and permissions from the old model. Defender for Endpoint or Defender for Identity tenants with roles and permissions assigned or exported prior to this date maintain their old roles and permissions configuration.
+
+Starting July 2026, the Microsoft Defender unified RBAC model is also the default permissions model for new Microsoft Defender for Office 365 Plan 2 organizations. For more information, see [MC1246006](https://admin.microsoft.com/Adminportal/Home#/MessageCenter/:/messages/MC1246006).
 
 <a name='whats-supported-by-the-microsoft-365-defender-unified-rbac-model'></a>
 

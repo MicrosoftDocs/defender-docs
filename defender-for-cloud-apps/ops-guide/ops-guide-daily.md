@@ -17,9 +17,9 @@ Alerts and incidents are two of the most important items your security operation
 
 - If you're working with a SIEM system, your SIEM system is usually the first stop for triage. SIEM systems provide more context with extra logs and SOAR functionality. Then, use Microsoft Defender XDR for a deeper understanding of an alert or incident timeline.
 
-### Triage your incidents from Microsoft Defender XDR
+### Triage your incidents from Microsoft Defender
 
-**Where**: In Microsoft Defender XDR, select **Incidents & alerts**
+**Where**: In the Defender portal, select **Incidents & alerts**
 
 **Persona**: SOC analysts
 
@@ -31,7 +31,7 @@ Alerts and incidents are two of the most important items your security operation
     |---------|---------|
     |**Status**     |  New, In progress       |
     |**Severity**     |  High, Medium, Low       |
-    |**Service source**     |  Keep all service sources checked. Keeping all service source checked should list alerts with the most fidelity, with correlation across other Microsoft XDR workloads. Select **Defender for Cloud Apps** to view items that come specifically from Defender for Cloud Apps.       |
+    |**Service source**     |  Keep all service sources checked. Keeping all service source checked should list alerts with the most fidelity, with correlation in other Microsoft Defender workloads. Select **Defender for Cloud Apps** to view items that come specifically from Defender for Cloud Apps.       |
 
 1. Select each incident to review all details. Review all tabs in the incident, the activity log, and advanced hunting.
 
@@ -51,8 +51,8 @@ Alerts and incidents are two of the most important items your security operation
 
 For more information, see:
 
-- [Prioritize incidents in Microsoft Defender XDR](/microsoft-365/security/defender/incident-queue)
-- [Investigate alerts in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-alerts)
+- [Prioritize incidents in Microsoft Defender](/microsoft-365/security/defender/incident-queue)
+- [Investigate alerts in Microsoft Defender](/microsoft-365/security/defender/investigate-alerts)
 - [Incident response playbooks](/security/operations/incident-response-playbooks)
 - [How to investigate anomaly detection alerts](../investigate-anomaly-alerts.md)
 - [Manage app governance alerts](../app-governance-manage-alerts.md)
@@ -68,9 +68,9 @@ For more information, see:
 - [Connect data from Microsoft Defender XDR to Microsoft Sentinel](/azure/sentinel/connect-microsoft-365-defender)
 - [Generic SIEM integration](../siem.md)
 
-Integrating Microsoft Defender XDR with Microsoft Sentinel allows you to stream all Microsoft Defender XDR incidents into Microsoft Sentinel and keep them synchronized between both portals. Microsoft Defender XDR incidents in Microsoft Sentinel include all associated alerts, entities, and relevant information, providing enough context to triage and run a preliminary investigation.
+Integrating Microsoft Defender with Microsoft Sentinel allows you to stream all Microsoft Defender incidents into Microsoft Sentinel and keep them synchronized between both portals. Microsoft Defender incidents in Microsoft Sentinel include all associated alerts, entities, and relevant information, providing enough context to triage and run a preliminary investigation.
 
-Once in Microsoft Sentinel, incidents remain synchronized with Microsoft Defender XDR so that you can use the features from both portals in your investigation.
+Once in Microsoft Sentinel, incidents remain synchronized with Microsoft Defender so that you can use the features from both portals in your investigation.
 
 - When installing Microsoft Sentinel's data connector for Microsoft Defender XDR, make sure to include the Microsoft Defender for Cloud Apps option.
 - Consider using a [streaming API](/microsoft-365/security/defender/streaming-api) to send data to an event hub, where it can be consumed through any partner SIEM with an event hub connector, or placed in Azure Storage.
@@ -93,7 +93,7 @@ For more information, see:
 
 Cloud app threat detection is where many SOC analysts focus their daily activities, identifying high-risk users who showing abnormal behavior.
 
-Defender for Cloud Apps threat detection uses Microsoft threat intelligence and security research data. Alerts are available in Microsoft Defender XDR and should be [triaged regularly](#review-alerts-and-incidents).
+Defender for Cloud Apps threat detection uses Microsoft threat intelligence and security research data. Alerts are available in the Defender portal and should be [triaged regularly](#review-alerts-and-incidents).
 
 When security administrators and SOC analysts deal with alerts, they handle the following main types of threat detection policies:
 
@@ -116,7 +116,7 @@ Make sure to create the threat protection policies needed by your organization, 
 
 App governance offers in-depth visibility and control over OAuth apps. App governance helps to combat increasingly sophisticated campaigns that exploit the apps deployed on-premises and in cloud infrastructures, establishing a starting point for privilege escalation, lateral movement, and data exfiltration.
 
-App governance is provided together with Defender for Cloud Apps. Alerts are also available in Microsoft Defender XDR, and should be [triaged regularly](#review-alerts-and-incidents). 
+App governance is provided together with Defender for Cloud Apps. Alerts are also available in the Defender portal, and should be [triaged regularly](#review-alerts-and-incidents). 
 
 For more information, see:
 
@@ -165,7 +165,7 @@ For more information, see:
 
 - [View and manage incidents and alerts](/unified-secops-platform/mto-incidents-alerts)
 - [View your app details with app governance](../app-governance-visibility-insights-view-apps.md)
-- [Getting detailed information on an app](../app-governance-visibility-insights-view-apps.md#getting-detailed-information-on-an-app)
+- [Get detailed information about an app](../app-governance-visibility-insights-view-apps.md#get-detailed-information-about-an-app)
 
 ### Create and manage app governance policies
 
@@ -178,7 +178,7 @@ We recommend that you check your OAuth apps daily for regular in-depth visibilit
 For more information, see:
 
 - [Create app policies in app governance](../app-governance-app-policies-create.md)
-- [Manage app policies](../app-governance-app-policies-manage.md)
+- [Manage app policies](../app-governance-app-policies-create.md#manage-app-policies)
 
 ## Review Conditional Access app control
 
@@ -193,7 +193,7 @@ To configure Conditional Access app control, select **Settings > Cloud apps > Co
 
 Conditional Access app control provides you with the ability to monitor and control user app access and sessions in real time, based on access and session policies.
 
-Generated alerts are available in Microsoft Defender XDR and should be [triaged regularly](#review-alerts-and-incidents).
+Generated alerts are available in the Defender portal and should be [triaged regularly](#review-alerts-and-incidents).
 
 By default, there's no access or session policies deployed, and therefore no related alerts available. You can onboard any web app to work with access and session controls, Microsoft Entra ID apps are automatically onboarded. We recommend that you create session and access policies as needed for your organization.
 
@@ -222,7 +222,7 @@ For more information, see [Review alerts and incidents](#review-alerts-and-incid
 
 Defender for cloud apps analyzes your traffic logs against the cloud apps catalog of over 31,000 cloud apps. Apps are ranked and scored based on more than 90 risk factors to provide ongoing visibility into cloud use, Shadow IT, and the risks that Shadow IT poses into your organization.
 
-Alerts related to cloud discovery are available in Microsoft Defender XDR and should be [triaged regularly](#review-alerts-and-incidents).
+Alerts related to cloud discovery are available in the Defender portal and should be [triaged regularly](#review-alerts-and-incidents).
 
 Create app discovery policies to start alerting and tagging newly discovered apps based on certain conditions, like risk scores, categories, and app behaviors like daily traffic and downloaded data.
 
@@ -286,6 +286,9 @@ For more information, see:
 **Persona**: Security and Compliance administrators, SOC analysts
 
 Defender for Cloud Apps file policies and alerts allow you to enforce a wide range of automated processes. Create policies to provide information protection, including continuous compliance scans, legal eDiscovery tasks, and data loss protection (DLP) for sensitive content shared publicly.
+
+> [!IMPORTANT]
+> File policies retire on January 6, 2027. To maintain file-based data protection, [migrate to Microsoft Purview DLP or auto-labeling policies](../migrate-file-policies-to-purview.md).
 
 In addition to [triaging alerts and incidents](#review-alerts-and-incidents), we recommend that your SOC teams run extra, proactive actions and queries. In the **Cloud apps > Files** page, check for the following questions:
 

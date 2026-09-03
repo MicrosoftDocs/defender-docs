@@ -2,14 +2,17 @@
 title: Create custom hunting queries in Microsoft Sentinel
 titleSuffix: Microsoft Sentinel
 description: Learn how to create a custom query to hunt for threats. 
-author: mberdugo 
 ms.author: monaberdugo 
+author: mberdugo 
+ms.reviewer: efratka
 ms.topic: how-to
-ms.date: 04/24/2024
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security analyst, I want to create and edit custom hunting queries so that I can proactively identify and mitigate security threats specific to my organization's environment.
@@ -18,7 +21,9 @@ ms.collection: usx-security
 
 # Create custom hunting queries in Microsoft Sentinel
 
-Hunt for security threats across your organization's data sources with custom hunting queries. Microsoft Sentinel provides built-in hunting queries to help you find issues in the data you have on your network. But you can create your own custom queries. For more information about hunting queries, see [Threat hunting in Microsoft Sentinel](hunting.md).
+## Overview
+
+Hunt for security threats across your organization's data sources with custom hunting queries. Microsoft Sentinel provides built-in hunting queries to help you find issues in the data you have on your network. In addition to built-in hunting queries, you can create custom hunting queries. For more information about hunting queries, see [Threat hunting in Microsoft Sentinel](hunting.md).
 
 ## Create a new query
 
@@ -68,7 +73,7 @@ Clone a custom or built-in query and edit it as needed.
 
 ## Edit an existing custom query
 
-Only queries that from a custom content source can be edited. Other content sources have to be edited at that source.
+Only queries that come from a custom content source can be edited. Queries from other content sources must be edited in their original content source.
 
 1. From the **Hunting** > **Queries** tab, select the hunting query you want to change. 
 

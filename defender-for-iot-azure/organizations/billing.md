@@ -11,7 +11,7 @@ ms.custom: enterprise-iot
 
 > [!NOTE]
 > This article is relevant for commercial Defender for IoT customers.
-> If you're a government customer, see [government customers trial license](getting-started.md#government-customers-trial-license) or contact your Microsoft sales representative for more information.
+> If you're a government customer, contact your Microsoft sales representative for more information.
 
 
 As you plan your Microsoft Defender for IoT deployment, you typically want to understand the Defender for IoT pricing plans and billing models so you can optimize your costs.
@@ -21,15 +21,11 @@ As you plan your Microsoft Defender for IoT deployment, you typically want to un
 **Enterprise IoT monitoring** supports 5 devices per Microsoft 365 E5 (ME5) or E5 Security license, or is available as standalone, per-device licenses for Microsoft Defender for Endpoint P2 customers.
 
 
-## Free trial
+## Enterprise IoT free trial
 
-To evaluate Defender for IoT, start a free trial as follows:
+To evaluate Defender for IoT for Enterprise IoT networks, use a trial, standalone license as an add-on to Microsoft Defender for Endpoint. Trial licenses support 100 devices. For more information, see [Securing IoT devices in the enterprise](concept-enterprise.md) and [Enable Enterprise IoT security with Defender for Endpoint](eiot-defender-for-endpoint.md).
 
-- **For OT networks**, use a trial license. Deploy one or more Defender for IoT sensors on your network to monitor traffic, analyze data, generate alerts, learn about network risks and vulnerabilities, and more. An OT trial supports a **Large** site license. For more information, see [Start a Microsoft Defender for IoT trial](getting-started.md).
-
-- **For Enterprise IoT networks**, use a trial, standalone license as an add-on to Microsoft Defender for Endpoint. Trial licenses support 100 devices. For more information, see [Securing IoT devices in the enterprise](concept-enterprise.md) and [Enable Enterprise IoT security with Defender for Endpoint](eiot-defender-for-endpoint.md).
-
-For general information, see [licenses and the trial license](license-and-trial-license-extention.md).
+For current OT licensing and onboarding options, see [Defender for IoT licenses overview](license-and-trial-license-extention.md).
 
 ## Defender for IoT devices
 

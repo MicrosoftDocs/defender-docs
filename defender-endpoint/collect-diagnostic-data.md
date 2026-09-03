@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen
-ms.date: 03/20/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.reviewer: pahuijbr, yongrhee
 ms.subservice: ngp
 ms.topic: how-to
@@ -19,6 +19,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
   - Microsoft Defender for Individuals
+ai-usage: ai-assisted
 ---
 
 # Collect Microsoft Defender Antivirus diagnostic data
@@ -32,13 +33,11 @@ This article describes how to collect diagnostic data to send to Microsoft suppo
 
 <a name="redirect-diagnostic-data-to-a-unc-share"></a>
 
+## Collect diagnostic data using MpCmdRun
+
 On at least two devices that are experiencing the same issue, use the following procedures to generate the diagnostic log files:
 
-1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
-   1. Open the **Start** menu, and then type **cmd**.
-   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
-
-1. In the elevated Command Prompt, do one of the following steps:
+1. In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), do one of the following steps:
 
    - **Save the diagnostics log files on the local device**: Run the following commands:
 
@@ -71,7 +70,7 @@ On at least two devices that are experiencing the same issue, use the following 
      - `<HHMM>` is the Universal Coordinated Time (UTC) when you ran the MpCmdRun command (for example 2221 for 22:21 UTC).
 
     > [!NOTE]
-    > If you don't have write access to the location specified by the command, the diagnostic log files are still saved to the default location `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab` on the local device. But the last step that copies and renames the .cab file to the `-SupportLogLocation` path fails.
+    > If you don't have write access to the location specified by the command, the diagnostic log files are still saved to the default location `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab` on the local device. But copying and renaming the .cab file to the `-SupportLogLocation` path fails.
 
      In this example, you ran the following commands on the device named LAPTOP01 on March 18 at 22:21 UTC:
 
@@ -97,7 +96,7 @@ On at least two devices that are experiencing the same issue, use the following 
 
 ## Use group policy to specify where diagnostic log files are copied
 
-You can use group policy on the local device (registry-based settings) or in [the Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#the-central-store) on a domain controller to specify where the diagnostic log files are copied after they're generated on the local device. Setting the location in group policy eliminates the need to use the `-SupportLogLocation` option in the MpCmdRun command as described in the previous section.
+You can use group policy on the local device (registry-based settings) or in [the Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#the-central-store) on a domain controller to specify where the diagnostic log files are copied after they're generated on the local device. Setting the location in group policy eliminates the need to use the `-SupportLogLocation` option in the `MpCmdRun.exe -GetFiles` command.
 
 To set the _SupportLogLocation_ value in group policy, do the following steps:
 

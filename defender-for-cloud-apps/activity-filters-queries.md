@@ -1,8 +1,13 @@
 ---
 title: Filter and query activities | Microsoft Defender for Cloud Apps
-description: This article provides a list of Defender for Cloud Apps activity filters and queries and explains how to work with them.
-ms.date: 12/21/2023
+description: Use activity filters and saved queries in Microsoft Defender for Cloud Apps to investigate events, narrow results, and refine activity searches.
+ms.date: 06/16/2026
 ms.topic: how-to
+ms.custom:
+  - msecd-doc-authoring-1014
+  - sfi-ga-nochange
+  - sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Filter and query Defender for Cloud Apps activities
@@ -11,9 +16,10 @@ ms.topic: how-to
 
 This article provides descriptions and instructions for Defender for Cloud Apps activity filters and queries.
 
-## Activity filters
+<a name="activity-filters"></a>
+## Use activity filters
 
-Below is a list of the activity filters that can be applied. Most filters support multiple values and *NOT* to provide you with a powerful tool for policy creation.
+The following list describes the activity filters that can be applied. Most filters support multiple values and *NOT* to provide you with a powerful tool for policy creation.
 
 - Activity ID - Search only for specific activities by their ID. This filter is useful when you connect Microsoft Defender for Cloud Apps to your SIEM (using the SIEM agent) and you want to further investigate alerts using Defender for Cloud Apps.
 
@@ -56,8 +62,8 @@ Below is a list of the activity filters that can be applied. Most filters suppor
 
 - IP address – The raw IP address, category, or tag from which the activity was performed.
   - Raw IP address - Enables you to search for activities that were performed on or by raw IP addresses. The raw IPs can equal, don't equal, start with, or don't start with a particular sequence.
-  - IP category - The category of the IP address from which the activity was performed, for example, all activities from the administrative IP address range. The categories need to be configured to include the relevant IP addresses. Some IPs might be categorized by default. for example, there are IP addresses that are considered by Microsoft threat intelligence sources will be categorized as risky. To learn how to configure the IP categories, see [Organize the data according to your needs](ip-tags.md).
-  - IP tag - The tag of the IP address from which the activity was performed, for example, all activities from anonymous proxy IP addresses. Defender for Cloud Apps creates a set of built-in IP tags that aren't configurable. Additionally, you can configure your IP tags. For more information about configuring your IP tags, see [Organize the data according to your needs](ip-tags.md).
+  - IP category - The category of the IP address from which the activity was performed, for example, all activities from the administrative IP address range. The categories need to be configured to include the relevant IP addresses. Some IPs might be categorized by default. for example, there are IP addresses that are considered by Microsoft threat intelligence sources will be categorized as risky. To learn how to configure the IP categories, see [Work with IP address tags and ranges](ip-tags.md).
+  - IP tag - The tag of the IP address from which the activity was performed, for example, all activities from anonymous proxy IP addresses. Defender for Cloud Apps creates a set of built-in IP tags that aren't configurable. Additionally, you can configure your IP tags. For more information about configuring your IP tags, see [Work with IP address tags](ip-tags.md).
   The built-in IP tags include the following:
     - Microsoft apps (14 of them)
     - Anonymous proxy
@@ -106,11 +112,12 @@ Below is a list of the activity filters that can be applied. Most filters suppor
 
 - User agent tag - Built-in user agent tag, for example, all activities from outdated operating systems or outdated browsers.
 
-## Activity queries
+<a name="activity-queries"></a>
+## Create and run activity queries
 
 To make investigation even simpler, you can now create custom queries and save them for later use.
 
-1. In the **Activity log** page, use the filters as described above to drill down into your apps as necessary.
+1. In the **Activity log** page, use the [activity filters](#activity-filters) to drill down into your apps as necessary.
 
    :::image type="content" source="media/activity-log-query.png" alt-text="Use filters to make query.":::
 
@@ -118,11 +125,11 @@ To make investigation even simpler, you can now create custom queries and save t
 
 1. In the **Save query** pop-up, name your query.
 
-   ![new query.](media/new-activity-query.png)
+   ![Screenshot of the Save query dialog box where you enter a name for your new activity query.](media/new-activity-query.png)
    
-1. To use this query again in the future, under **Queries**, scroll down to **Saved queries** and select your query.
+1. To use the saved query again in the future, under **Queries**, scroll down to **Saved queries** and select your query.
 
-   ![open query.](media/select-activity-query.png)
+   ![Screenshot of the Saved queries list where you select a previously saved activity query to reuse.](media/select-activity-query.png)
    
 Defender for Cloud Apps also provides you with **Suggested queries**. Suggested queries provide you with recommended avenues of investigation that filter your activities. You can edit these queries and save them as custom queries. The following are optional suggested queries:
 
@@ -142,7 +149,7 @@ Defender for Cloud Apps also provides you with **Suggested queries**. Suggested 
 
 - Successful log in - Filters all your activities to display only those activities that involve successful sign-ins, including impersonate action, impersonate sign-in, single sign-o sign-ins, and sign-in from a new device.
 
-  ![query activities.](media/queries-activity.png)
+  ![Screenshot of suggested activity queries in Defender for Cloud Apps, including admin activities, download activities, and successful log in.](media/queries-activity.png)
   
 Additionally, you can use the suggested queries as a starting point for a new query. First, select one of the suggested queries. Then, make changes as needed and finally select **Save as** to create a new **Saved query**.
 
@@ -150,9 +157,9 @@ Additionally, you can use the suggested queries as a starting point for a new qu
 
 To investigate activities older than 30 days, you can navigate to the **Activity log** and select **Investigate 6 months back** in the top right-hand corner of the screen:
 
-![Select investigate 6 months back.](media/investigate-six-months-back.png)
+![Screenshot of the Activity log page with the Investigate 6 months back option highlighted in the top right corner.](media/investigate-six-months-back.png)
 
-From there you can define the filters as is normally done with the **Activity Log**, with the following differences:
+In the **Investigate 6 months back** view, you can define the filters as you normally would in the **Activity Log**, with the following differences:
 
 - **The date filter is mandatory and is limited to a one week span**. This means that while you can query activities for up to six months back, you can only do so for a one week period at a time.
 
@@ -168,7 +175,7 @@ From there you can define the filters as is normally done with the **Activity Lo
 
 For example: 
 
-![Filter after selecting investigate 6 months back.](media/filter-six-months-back.png)
+![Screenshot of activity log filters with the six-month investigation view showing available filter fields such as Activity ID, Activity type, and IP address.](media/filter-six-months-back.png)
 
 
 ### Export activities six months back
@@ -176,7 +183,7 @@ For example:
 
 You can export all activities from the past six months by clicking the Export button in the top-left corner  of the Activity log page.
 
-![Click the export icon to export records.](media/activity-filters-queries/export-button-of-activity-logs.png)
+![Screenshot of the Export button on the Activity log page used to export activity records.](media/activity-filters-queries/export-button-of-activity-logs.png)
 
 > [!NOTE]
 > **Required Permissions for Exporting Capabilities:** To utilize the exporting features, users must be assigned one of the following roles:
@@ -195,13 +202,13 @@ When exporting data:
 - You can choose to exclude private activities.  
 - The exported file is limited to 100,000 records and is delivered in CSV format.
 
-Once the export is complete, the file is available under **Exported reports**.
+Once the export is complete, the exported file is available under **Exported reports**.
 
 To access exported files and check export status, navigate to **Reports -> Cloud Apps** in Microsoft 365 Defender portal to view the status of the export process and access past exports.  
 
 Reports that include private activities are marked with an Eye icon in the reports page.  
 
-![eye-icon](media/activity-filters-queries/eye-icon-to-indicate-private-report.png)
+![Icon indicating that the exported report includes private activities](media/activity-filters-queries/eye-icon-to-indicate-private-report.png)
 
 ## Next steps
 

@@ -1,17 +1,19 @@
 ---
-title: Respond to threat actors while investigating or threat hunting in Microsoft Sentinel in the Azure portal
-description: This article shows you how to take response actions against threat actors on the spot, during the course of an incident investigation or threat hunt, without pivoting or context switching out of the investigation or hunt. You accomplish this using playbooks based on the new entity trigger.
-author: guywi-ms
+title: Respond to threat actors during investigations and threat hunts in Microsoft Sentinel
+description: Take response actions against threat actors directly from Microsoft Sentinel investigations and threat hunts. Use playbooks with the entity trigger to respond without leaving the investigation context.
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
-ms.date: 01/17/2023
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 #Customer intent: As a security analyst, I want to run playbooks on identified threats during investigations or threat hunts so that I can take immediate remediation actions without disrupting my workflow.
 ---
 
-# Respond to threat actors while investigating or threat hunting in Microsoft Sentinel in the Azure portal
+# Respond to threat actors during investigations and threat hunts in Microsoft Sentinel
 
 This article shows you how to take response actions against threat actors on the spot, during the course of an incident investigation or threat hunt, without pivoting or context switching out of the investigation or hunt. You accomplish this using playbooks based on the new entity trigger.
 
@@ -52,13 +54,13 @@ When you're investigating an incident, and you determine that a given entity - a
 
         :::image type="content" source="media/respond-threats-during-investigation/entity-page.png" alt-text="Screenshot of the selected entity page to run a playbook on an entity.":::
 
-1. These will all open the **Run playbook on *\<entity type>*** panel.    
+1. Each of these actions opens the **Run playbook on *\<entity type>*** panel.    
 
     :::image type="content" source="media/respond-threats-during-investigation/run-playbook-on-entity.png" alt-text="Screenshot of Run playbook on entity panel.":::
 
-    In any of these panels, you'll see two tabs: **Playbooks** and **Runs**.
+    In the **Run playbook on *\<entity type>*** panel, you'll see two tabs: **Playbooks** and **Runs**.
 
-1. In the **Playbooks** tab, you'll see a list of all the playbooks that you have access to and that use the **Microsoft Sentinel Entity** trigger for that entity type (in this case, user accounts). Select the **Run** button for the playbook you want to run it immediately.
+1. In the **Playbooks** tab, you'll see a list of all the playbooks that you have access to and that use the **Microsoft Sentinel Entity** trigger for the selected entity type (for example, user accounts). Select the **Run** button for the playbook you want to run it immediately.
 
     If you don't see the playbook you want to run in the list, it means Microsoft Sentinel doesn't have permissions to run playbooks in that resource group.
 
@@ -75,5 +77,5 @@ In this article, you learned how to run playbooks manually to remediate threats 
 
 - Learn more about [investigating incidents](investigate-incidents.md) in Microsoft Sentinel.
 - Learn how to [proactively hunt for threats](hunting.md) using Microsoft Sentinel.
-- Learn more about [entities](entities.md) in Microsoft Sentinel.
-- Learn more about [playbooks](automate-responses-with-playbooks.md) in Microsoft Sentinel.
+- Learn more about [entity types in Microsoft Sentinel](entities.md).
+- Learn more about [automating responses with playbooks](automate-responses-with-playbooks.md) in Microsoft Sentinel.

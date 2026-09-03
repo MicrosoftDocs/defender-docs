@@ -54,11 +54,11 @@ sections:
 
       - question: What is the difference between Advanced Threat Analytics (ATA) and Defender for Identity?
         answer: |
+          ATA has reached end of life. ATA ended Mainstream Support on January 12, 2021, and Extended Support ended in January 2026. No further updates, including security fixes, will be provided. For more information, see [End of mainstream support for Advanced Threat Analytics](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
+
           ATA is a standalone on-premises solution with multiple components, such as the ATA Center that requires dedicated hardware on-premises.
 
           Defender for Identity is a cloud-based security solution that uses your on-premises Active Directory signals. The solution is highly scalable and is frequently updated.
-          
-          The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA ended Mainstream Support on January 12, 2021. Extended Support continues until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
           
           In contrast to the ATA sensor, the Defender for Identity sensor also uses data sources such as Event Tracing for Windows (ETW) enabling Defender for Identity to deliver extra detections.
           
@@ -86,6 +86,11 @@ sections:
 
       - question: Is my data isolated from other customer data?
         answer: Yes, your data is isolated through access authentication and logical segregation based on customer identifiers. Each customer can only access data collected from their own organization and generic data that Microsoft provides.
+
+      - question: When using Microsoft Defender for Identity (MDI), is end-user consent required for overseas data transfer under Japan's Act on the Protection of Personal Information (APPI)?
+        answer: |
+          In general, end-user consent isn't required. Providing personal data to MDI is typically treated as outsourcing (not a provision to a third party in a foreign country) under APPI.
+          Ensure you have appropriate contractual and supervisory safeguards in place, and consult your legal counsel for your specific scenario.
 
       - question: Do I have the flexibility to select where to store my data?
         answer: |

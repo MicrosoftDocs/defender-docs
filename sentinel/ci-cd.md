@@ -1,29 +1,27 @@
 ---
-title: Deploy custom content from your repository (Preview)
+title: Deploy custom content from your repository
 titleSuffix: Microsoft Sentinel
 description: This article describes how to create connections with a GitHub or Azure DevOps repository where you can manage your custom content and deploy it to Microsoft Sentinel.
 author: mberdugo 
 ms.topic: how-to
-ms.date: 12/31/2024
+ms.date: 06/15/2026
 ms.author: monaberdugo 
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-
-
+ai-usage: ai-assisted
 #Customer intent: As a security administrator or MSSP analyst, I want to manage dynamic Microsoft Sentinel content as code based on source control repositories using CI/CD pipelines. I want to automate updates and ensure consistent configurations across workspaces in my security monitoring environment. As an MSSP content manager, I want to deploy one solution to many customer workspaces and still be able to tailor custom content for their environments.
-ms.custom:
+ms.custom: msecd-doc-authoring-1014
   - build-2025
 ---
 
-# Deploy content as code from your repository (Preview)
+# Deploy content as code from your repository
 
-When creating custom content, you can manage it from your own Microsoft Sentinel workspaces, or an external source control repository. This article describes how to create and manage connections between Microsoft Sentinel and GitHub or Azure DevOps repositories. Managing your content in an external repository allows you to make updates to that content outside of Microsoft Sentinel, and have it automatically deployed to your workspaces. For more information, see [Update custom content with repository connections](ci-cd-custom-content.md).
+When creating custom content, you can manage it from your own Microsoft Sentinel workspaces, or an external source control repository. This article describes how to create and manage connections between Microsoft Sentinel and GitHub or Azure DevOps repositories. Managing your content in an external repository allows you to make updates to that content outside of Microsoft Sentinel, and have the updated content automatically deployed to your workspaces. For more information, see [Update custom content with repository connections](ci-cd-custom-content.md).
 
 > [!IMPORTANT]
-> - The Microsoft Sentinel **Repositories** feature is currently in **PREVIEW**. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
-> - [!INCLUDE [unified-soc-preview](includes/unified-soc-preview-without-alert.md)]
+> [!INCLUDE [unified-soc-preview](includes/unified-soc-preview-without-alert.md)]
 
 ## Prerequisites
 
@@ -32,13 +30,18 @@ Microsoft Sentinel currently supports connections to GitHub and Azure DevOps rep
 - You have an **Owner** role in the resource group that contains your Microsoft Sentinel workspace
 - Custom content files you want to deploy to your workspaces are in a supported format. For supported formats, see [Plan your repository content](ci-cd-custom-content.md#plan-your-repository-content).
 - The account you use to create the connection is in your home tenant. External identities, such as B2B guest accounts, and delegated access aren’t supported.
+- **(Custom detection rules only)** A Microsoft 365 E5 license (or equivalent license that includes Microsoft Defender XDR) and Microsoft Sentinel workspaces onboarded to the Microsoft Defender portal. For more information, see [Deploy custom detection rules as code](ci-cd-custom-content.md#deploy-custom-detection-rules-as-code-preview).
 
 ### [GitHub prerequisites](#tab/github)
+
+Before connecting to GitHub, make sure you have the following prerequisites:
 
 - Collaborator access to your GitHub repository 
 - Actions enabled for GitHub and Pipelines enabled for Azure DevOps
 
 ### [Azure DevOps prerequisites](#tab/azure-devops)
+
+Before connecting to Azure DevOps, ensure that the following prerequisites are met:
 
 - Project Administrator access to your Azure DevOps repository
 - Third-party application access via OAuth enabled for Azure DevOps [application connection policies](/azure/devops/organizations/accounts/change-application-access-policies#manage-a-policy).
@@ -52,7 +55,7 @@ For more information on deployable content types, see [Plan your repository cont
 
 This procedure describes how to connect a GitHub or Azure DevOps repository to your Microsoft Sentinel workspace.
 
-Each connection can support multiple types of custom content, including analytics rules, automation rules, hunting queries, parsers, playbooks, and workbooks. For more information, see [About Microsoft Sentinel content and solutions](sentinel-solutions.md).
+Each connection can support multiple types of custom content, including analytics rules, automation rules, custom detection rules (Preview), hunting queries, parsers, playbooks, and workbooks. For more information, see [About Microsoft Sentinel content and solutions](sentinel-solutions.md).
 
 You can't create duplicate connections, with the same repository and branch, in a single Microsoft Sentinel workspace.
 
@@ -132,7 +135,7 @@ The default workflow only deploys content that is modified since the last deploy
 
 When you successfully create a connection to your source control repository, your content is deployed to Sentinel. We recommend that you edit content stored in a connected repository *only* in the repository, and not in Microsoft Sentinel. For example, to make changes to your analytics rules, do so directly in GitHub or Azure DevOps.
 
-If you edit the content in Microsoft Sentinel instead, make sure to export it to your source control repository to prevent your changes from being overwritten the next time the repository content is deployed to your workspace.
+If you edit the content in Microsoft Sentinel instead, make sure to export the edited content to your source control repository to prevent your changes from being overwritten the next time the repository content is deployed to your workspace.
 
 ## Delete content
 
@@ -167,5 +170,5 @@ Use your custom content in Microsoft Sentinel in the same way that you'd use out
 For more information, see:
 
 - [Customize repository deployments](ci-cd-custom-deploy.md)
-- [Discover and deploy Microsoft Sentinel solutions (Public preview)](sentinel-solutions-deploy.md)
+- [Discover and deploy Microsoft Sentinel solutions](sentinel-solutions-deploy.md)
 - [Microsoft Sentinel data connectors](connect-data-sources.md)

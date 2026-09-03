@@ -1,11 +1,11 @@
 ---
 title: Take response actions on a device in Microsoft Defender for Endpoint
-description: Take response actions on a device such as isolating devices, collecting an investigation package, managing tags, running an antivirus scan, and restricting app execution.
+description: Respond to attacks on a device in Microsoft Defender for Endpoint by isolating it, collecting an investigation package, running a scan, or restricting apps.
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-ms.date: 12/31/2025
+ms.date: 06/30/2026
 ms.collection:
 - m365-security
 - tier2
@@ -13,7 +13,11 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: edr
 appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1015
 ---
 
 # Take response actions on a device
@@ -26,7 +30,7 @@ Response actions run along the top of a specific device page and include:
 
 - Manage tags
 - Initiate automated investigation
-- Initiate live response Session
+- Initiate live response session
 - Collect investigation package
 - Run antivirus scan
 - Restrict app execution
@@ -35,7 +39,7 @@ Response actions run along the top of a specific device page and include:
 - Consult a threat expert
 - Action center
 
-[![Screenshot that shows response actions across the top of a device page in the Microsoft Defender portal.](media/response-actions.png)](media/response-actions.png#lightbox)
+:::image type="content" source="media/response-actions.png" alt-text="Screenshot that shows response actions across the top of a device page in the Microsoft Defender portal." lightbox="media/response-actions.png":::
 
 > [!NOTE]
 > [Defender for Endpoint Plan 1](defender-endpoint-plan-1.md) includes only the following manual response actions:
@@ -43,24 +47,22 @@ Response actions run along the top of a specific device page and include:
 > - Run antivirus scan
 > - Isolate device
 > - Stop and quarantine a file
-> - Add an indicator to block or allow a file.
+> - Add an indicator to block or allow a file
 >
 > [Microsoft Defender for Business](/defender-business/mdb-overview) doesn't include the "Stop and quarantine a file" action at this time.
 >
 > Your subscription must include Defender for Endpoint Plan 2 to have all of the response actions described in this article.
 
- You can find device pages from any of the following views:
+You can find device pages from any of the following views:
 
 - **Alerts queue**: Select the device name beside the device icon from the alerts queue.
 - **Devices list**: Select the heading of the device name from the devices list.
 - **Search box**: Select **Device** from the drop-down menu and enter the device name.
 
 > [!IMPORTANT]
-> For information on availability and support for each response action, see the supported minimum operating system requirements for each feature.
+> For information on availability and support for each response action, see the supported minimum operating system requirements listed in [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md).
 
-### Limiting high-impact response actions on high-value assets
-
-Some high-impact response actions can be restricted on high-value assets to prevent potential business disruption. For more information, see [Restrict response actions on high-value assets](./restrict-response-actions-high-value-assets.md).
+Some high-impact response actions can be restricted on high-value assets to prevent potential business disruption. For more information, see [Restrict response actions on high-value assets](restrict-response-actions-high-value-assets.md).
 
 ## Manage tags
 
@@ -98,22 +100,22 @@ Or, use this alternate procedure:
 
 1. Select **Collect Investigation Package** from the response actions section of the device page.
 
-   ![Image of collect investigation package](media/collect-investigation-package.png)
-   
+   :::image type="content" source="media/collect-investigation-package.png" alt-text="Screenshot of the device page option to collect an investigation package." lightbox="media/collect-investigation-package.png":::
+
 1. Add comments and then select **Confirm**.
 
-   ![Image of confirm comment](media/comments-confirm.png)
-   
+   :::image type="content" source="media/comments-confirm.png" alt-text="Screenshot of the confirmation dialog for adding a comment to the action." lightbox="media/comments-confirm.png":::
+
 1. Select **Action center** from the response actions section of the device page.
 
-   ![Image of action center](media/action-center-selected.png)
-   
+   :::image type="content" source="media/action-center-selected.png" alt-text="Screenshot of the Action center selected in the response actions section of the device page." lightbox="media/action-center-selected.png":::
+
 1. Select **Package collection package available** to download the collection package.
 
-   ![Image of download package](media/download-package.png)
-   
+   :::image type="content" source="media/download-package.png" alt-text="Screenshot of the option to download the collected investigation package from the Action center." lightbox="media/download-package.png":::
+
    > [!NOTE]
-   > The collection of the investigation package might fail if a device has a low battery level or is on a metered connection.
+   > Collection of the investigation package might fail if the target device has a low battery level or is on a metered connection.
 
 ### Investigation package contents for Windows devices
 
@@ -159,19 +161,19 @@ As part of the investigation or response process, you can remotely initiate an a
 
 > [!IMPORTANT]
 >
-> - This action is supported for macOS and Linux for client version 101.98.84 and above. You can also use live response to run the action. For more information on live response, see [Investigate entities on devices using live response](live-response.md)
+> - The remote antivirus scan action is supported for macOS and Linux for client version 101.98.84 and above. You can also use live response to run the action. For more information on live response, see [Investigate entities on devices using live response](live-response.md)
 > - A Microsoft Defender Antivirus scan can run alongside other antivirus solutions, whether Microsoft Defender Antivirus is the active antivirus solution or not. Microsoft Defender Antivirus can be in Passive mode. For more information, see [Microsoft Defender Antivirus compatibility](microsoft-defender-antivirus-compatibility.md).
 
-One you have selected **Run antivirus scan**, select the scan type that you'd like to run (quick or full) and add a comment before confirming the scan.
+Once you have selected **Run antivirus scan**, select the scan type that you'd like to run (quick or full) and add a comment before confirming the scan.
 
-:::image type="content" source="media/run-antivirus.png" alt-text="The notification to select quick scan or full scan and add comment" lightbox="media/run-antivirus.png":::
+:::image type="content" source="media/run-antivirus.png" alt-text="Screenshot of the notification to select a quick or full scan and add a comment." lightbox="media/run-antivirus.png":::
 
-The Action center shows the scan information and the device timeline include a new event, reflecting that a scan action was submitted on the device. Microsoft Defender Antivirus alerts reflect any detections that surfaced during the scan.
+The Action center shows the scan information and the device timeline includes a new event, reflecting that a scan action was submitted on the device. Microsoft Defender Antivirus alerts reflect any detections that surfaced during the scan.
 
 > [!NOTE]
-> When triggering a scan using Defender for Endpoint response action, Microsoft Defender antivirus `ScanAvgCPULoadFactor` value applies and limits the CPU impact of the scan.
+> When triggering a scan using Defender for Endpoint response action, Microsoft Defender Antivirus `ScanAvgCPULoadFactor` value applies and limits the CPU impact of the scan.
 > If `ScanAvgCPULoadFactor` isn't configured, the default value is a limit of 50% maximum CPU load during a scan.
-> For more information, see [configure-advanced-scan-types-microsoft-defender-antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/configure-advanced-scan-types-microsoft-defender-antivirus).
+> For more information, see [Configure advanced scan types for Microsoft Defender Antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/configure-advanced-scan-types-microsoft-defender-antivirus).
 
 ## Restrict app execution
 
@@ -179,31 +181,31 @@ In addition to containing an attack by stopping malicious processes, you can als
 
 > [!IMPORTANT]
 >
-> - This action is available for devices on Windows 10, version 1709 or later, Windows 11, and Windows Server 2019 or later.
-> - This feature is available if your organization uses Microsoft Defender Antivirus.
-> - This action needs to meet the Windows Defender Application Control code integrity policy formats and signing requirements. For more information, see [Code integrity policy formats and signing](/windows/security/threat-protection/windows-defender-application-control/use-code-signing-to-simplify-application-control-for-classic-windows-applications)).
+> - Restrict app execution is available for devices on Windows 10, version 1709 or later, Windows 11, and Windows Server 2019 or later.
+> - Restrict app execution is available if your organization uses Microsoft Defender Antivirus.
+> - Restrict app execution needs to meet the Windows Defender Application Control code integrity policy formats and signing requirements. For more information, see [Code integrity policy formats and signing](/windows/security/threat-protection/windows-defender-application-control/use-code-signing-to-simplify-application-control-for-classic-windows-applications).
 
-To restrict an application from running, a code integrity policy is applied that only allows files to run if they're signed by a Microsoft issued certificate. This method of restriction can help prevent an attacker from controlling compromised devices and performing further malicious activities.
+To restrict an application from running, a code integrity policy is applied that only allows files to run if they're signed by a Microsoft issued certificate. Restricting app execution to only Microsoft-signed files can help prevent an attacker from controlling compromised devices and performing further malicious activities.
 
 > [!NOTE]
-> You are able to reverse the restriction of applications from running at any time. The button on the device page changes to say **Remove app restrictions**, and then you take the same steps as restricting app execution.
+> You can reverse the restriction of applications from running at any time. The button on the device page changes to say **Remove app restrictions**, and then you take the same steps as restricting app execution.
 
-Once you have selected **Restrict app execution** on the device page, type a comment and select **Confirm**. The Action center shows the scan information and the device timeline include a new event.
+Once you have selected **Restrict app execution** on the device page, type a comment and select **Confirm**. The Action center shows the scan information and the device timeline includes a new event.
 
-:::image type="content" source="media/restrict-app-execution.png" alt-text="The application restriction notification" lightbox="media/restrict-app-execution.png":::
+:::image type="content" source="media/restrict-app-execution.png" alt-text="Screenshot of the app restriction confirmation notification." lightbox="media/restrict-app-execution.png":::
 
-### Notification on device user
+### Device user notification for app restriction
 
 When an app is restricted, the following notification is displayed to inform the user that an app is being restricted from running:
 
-:::image type="content" source="media/atp-app-restriction.png" alt-text="The application restriction message" lightbox="media/atp-app-restriction.png":::
+:::image type="content" source="media/atp-app-restriction.png" alt-text="Screenshot of the app restriction message shown to the device user." lightbox="media/atp-app-restriction.png":::
 
 > [!NOTE]
 > The notification isn't available on Windows Server 2016 and Windows Server 2012 R2.
 
 ## Isolate devices from the network
 
-Depending on the severity of the attack and the sensitivity of the device, you might want to isolate the device from the network. This action can help prevent the attacker from controlling the compromised device and performing further activities such as data exfiltration and lateral movement.
+Depending on the severity of the attack and the sensitivity of the device, you might want to isolate the device from the network. Device isolation can help prevent the attacker from controlling the compromised device and performing further activities such as data exfiltration and lateral movement.
 
 **Important points to keep in mind**:
 
@@ -216,7 +218,7 @@ Depending on the severity of the attack and the sensitivity of the device, you m
   - `ip6tables`
   - Linux kernel with `CONFIG_NETFILTER`, `CONFIG_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER` for kernel version lower than 5.x and `CONFIG_NETFILTER_XT_MATCH_OWNER` from 5.x kernel.
 
-- Selective isolation is available for devices running on Windows 11, Windows 10 version 1703 or later, Windows Server 2012 R2 and later, Azure Stack HCI OS, version 23H2 and later, and macOS. For more information about selective isolation, see [Isolation exclusions](./isolation-exclusions.md).
+- Selective isolation is available for devices running on Windows 11, Windows 10 version 1703 or later, Windows Server 2012 R2 and later, Azure Stack HCI OS, version 23H2 and later, and macOS. For more information about selective isolation, see [Isolation exclusions](network-isolation-exclusions.md).
 - When isolating a device, only certain processes and destinations are allowed. Therefore, devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
 - The feature supports VPN connection.
 - You must have at least the `Active remediation actions` role assigned. For more information, see [Create and manage roles](user-roles.md).
@@ -224,6 +226,7 @@ Depending on the severity of the attack and the sensitivity of the device, you m
 - Exclusions, such as e-mail, messaging application, and other applications for both macOS and Linux isolation aren't supported.
 - An isolated device is removed from isolation when an administrator modifies or adds a new `iptable` rule to the isolated device.
 - Isolating a server running on Microsoft Hyper-V blocks network traffic to all child virtual machines of the server.
+- Device isolation is automatically lifted after seven days.
 
 The device isolation feature disconnects the compromised device from the network while retaining connectivity to the Defender for Endpoint service, which continues to monitor the device. On Windows 10, version 1709 or later, you can use selective isolation for more control over the network isolation level. You can also choose to enable Outlook and Microsoft Teams connectivity.
 
@@ -232,20 +235,89 @@ The device isolation feature disconnects the compromised device from the network
 >
 > If a device is inactive or offline when an isolation action is submitted, Microsoft Defender for Endpoint retries enforcing the isolation for up to three days. If the device doesn't reconnect in that time, the isolation won't be retried, and administrators should reissue the isolation action after the device becomes active.
 
-
-
-Once you have selected **Isolate device** on the device page, type a comment and select **Confirm**. The Action center shows the scan information and the device timeline include a new event.
+Once you have selected **Isolate device** on the device page, type a comment and select **Confirm**. The Action center shows the scan information and the device timeline includes a new event.
 
 :::image type="content" source="media/isolate-device.png" alt-text="An isolated device details page" lightbox="media/isolate-device.png":::
 
 > [!NOTE]
-> The device remains connected to the Defender for Endpoint service even if it's isolated from the network. If you've chosen to enable Outlook and Skype for Business communication, then you're able to communicate to the user while the device is isolated. Selective isolation only works on the classic versions of Outlook and Microsoft Teams.
+> The notification isn't available on non-Windows platforms.
+
+<a id="isolate-device-automatic-attack-disruption"></a>
+
+## Isolate device - automatic attack disruption (Preview)
+
+When a device in your organization is suspected to be compromised, Microsoft Defender for Endpoint can automatically isolate the device as part of [automatic attack disruption](/defender-xdr/automatic-attack-disruption). Automatic isolation helps reduce the risk of further impact on the organization, limit attacker lateral movement, and prevent impacts such as data exfiltration and ransomware propagation.
+
+When a device is isolated automatically:
+
+- The compromised device is disconnected from the network, reducing the risk of further impact on the organization.
+- The device retains connectivity to the Microsoft Defender for Endpoint service, which continues to monitor the device.
+
+> [!NOTE]
+> Automatic device isolation works only on end-user workstations that are onboarded and managed by Microsoft Defender for Endpoint.
+>
+> To manually isolate a device, see [Isolate devices from the network](#isolate-devices-from-the-network).
+
+### View automatic device isolation actions
+
+After automatic isolation is applied, you can review the action and its status in the Defender portal:
+
+- Open the relevant incident and review the **Activities** tab.
+
+    :::image type="content" source="/defender/media/defender-endpoint/view-automatic-device-isolation-activities.png" alt-text="Screenshot showing how to view automatic device isolation in the Activities tab." lightbox="/defender/media/defender-endpoint/view-automatic-device-isolation-activities.png":::
+
+- Open the affected device page and confirm the device isolation status.
+- Open **Action center** to review action history and current state.
+
+    :::image type="content" source="/defender/media/defender-endpoint/view-automatic-device-isolation-action.png" alt-text="Screenshot showing how to view automatic device isolation in the Action center." lightbox="/defender/media/defender-endpoint/view-automatic-device-isolation-action.png":::
+
+### Safeguards and business impact
+
+Before deploying or responding to automatic device isolation, consider the following:
+
+- **Scoped action**: Isolation targets specific devices involved in the incident rather than broadly throughout the environment.
+- **Time-limited isolation**: Isolation is automatically undone after a defined time window. You can also release isolation earlier after completing investigation and remediation.
+- **Customer control**: Security operators can review the incident context and take follow-up actions, including releasing isolation when it's safe to do so.
+
+### Isolation exclusions and automatic attack disruption exclusions
+
+There are two types of exclusions relevant to automatic device isolation:
+
+- [Selective isolation exclusions](network-isolation-exclusions.md): Define which processes and network destinations remain accessible on an isolated device. Use these to preserve critical communications (for example, management tools or business applications) while the device is isolated. Selective isolation exclusions are available for devices running on Windows 11, Windows 10 version 1703 or later, Windows Server 2012 R2 and later, Azure Stack HCI OS, version 23H2 and later, and macOS.
+- [Automatic attack disruption exclusions](/defender-xdr/automatic-attack-disruption-exclusions): Define which devices or entities are excluded from automatic disruption actions entirely. Use these to prevent business-critical devices from being isolated in the first place.
+
+> [!NOTE]
+> When an isolation exclusion rule is defined, automatic attack disruption uses selective isolation by default and isolates the device according to the configured isolation exclusion rules.
+
+If an automatically isolated device is business-critical, prioritize rapid validation and stakeholder coordination. Release isolation only after you confirm appropriate containment and remediation steps are in place. Consider using [automatic attack disruption exclusions](/defender-xdr/automatic-attack-disruption-exclusions) to reduce the likelihood of isolating devices that can't tolerate interruption.
+
+### Confirm automatic device isolation
+
+To confirm that a device was automatically isolated, follow these steps:
+
+1. Open the relevant incident generated by automatic attack disruption in the [Microsoft Defender portal](https://security.microsoft.com).
+1. Review the **Activity** tab or **Action center** to see which automated response actions were applied.
+1. Open the affected device page and confirm that the device status shows that it's isolated.
+    - If the isolation action shows as failed or pending, confirm that the device is online and can report to Defender for Endpoint. You can retry from the device action panel if available.
+    - If a device appears isolated but you can't collect investigation data, verify that your investigation method (for example, live response) is supported for that device and scenario. Also confirm required service endpoints are reachable in your network configuration. For more information, see [Investigate entities on devices using live response](live-response.md) and [Configure device connectivity and proxy settings in Microsoft Defender for Endpoint](configure-device-connectivity.md).
+
+### Release a device from automatic isolation
+
+You can release the device from containment at any time after you mitigate the risk and complete investigation:
+
+1. Select the device from the **Device inventory** or open the device page.
+1. Select **Release from isolation** from the action menu.
+
+For more information about releasing devices, see [Isolate devices from the network](#isolate-devices-from-the-network).
+
+> [!NOTE]
+> If isolation is removed unexpectedly, check whether a time-limited undo window applies in your environment and review the action history for the release event.
 
 ### Forcibly release device from isolation
 
 The device isolation feature is an invaluable tool for safeguarding devices against external threats. However, there are instances when isolated devices become unresponsive.
 
-There's a downloadable script for these instances that you can run to forcibly release devices from isolation. The script is available through a link in the UI.
+There's a downloadable script for these instances that you can run to forcibly release devices from isolation. The script is available through a link on the device page in the Microsoft Defender portal.
 
 > [!NOTE]
 >
@@ -263,15 +335,15 @@ To forcibly release device from isolation:
 
 To forcibly release a device from isolation, the device must be running Windows. The following versions are supported:
 
-- Windows 10 21H2 and 22H2 with KB KB5023773.
+- Windows 10 21H2 and 22H2 with KB5023773.
 - Windows 11 version 21H2, all editions with KB5023774.
 - Windows 11 version 22H2, all editions with KB5023778.
 
-### Notification on device user
+### Device user notification for isolation
 
 When a device is being isolated, the following notification is displayed to inform the user that the device is being isolated from the network:
 
-:::image type="content" source="media/atp-notification-isolate.png" alt-text="A no network connection message" lightbox="media/atp-notification-isolate.png":::
+:::image type="content" source="media/atp-notification-isolate.png" alt-text="Screenshot of the no network connection message shown to the device user." lightbox="media/atp-notification-isolate.png":::
 
 > [!NOTE]
 > The notification isn't available on non-Windows platforms.
@@ -286,7 +358,7 @@ You can identify critical assets by the **critical asset** tag on the device or 
 
 ## Contain devices from the network
 
-When you have identified an unmanaged device that is compromised or potentially compromised, you might want to contain that device from the network to prevent the potential attack from moving laterally across the network. When you contain a device any Microsoft Defender for Endpoint onboarded device blocks incoming and outgoing communication with that device. This action can help prevent neighboring devices from becoming compromised while the security operations analyst locates, identifies, and remediates the threat on the compromised device.
+When you have identified an unmanaged device that is compromised or potentially compromised, you might want to contain that device from the network to prevent the potential attack from moving laterally across the network. When you contain a device any Microsoft Defender for Endpoint onboarded device blocks incoming and outgoing communication with that device. Containing a device can help prevent neighboring devices from becoming compromised while the security operations analyst locates, identifies, and remediates the threat on the compromised device.
 
 > [!NOTE]
 > Blocking incoming and outgoing communication with a 'contained' device is supported on onboarded Microsoft Defender for Endpoint Windows 10 and Windows Server 2019+ devices.
@@ -319,7 +391,7 @@ A device can also be contained from the device page by selecting **Contain devic
 
 > [!IMPORTANT]
 >
-> - If a contained device changes its IP address, all Microsoft Defenders for Endpoint onboarded devices recognize this and start blocking communications with the new IP address. The original IP address is no longer be blocked (It might take up to 5 minutes to see these changes).
+> - If a contained device changes its IP address, all Microsoft Defender for Endpoint onboarded devices recognize this and start blocking communications with the new IP address. The original IP address is no longer blocked (It might take up to 5 minutes to see these changes).
 > - In cases where the contained device's IP is used by another device on the network, a warning while containing the device with a link to advanced hunting (with a pre-populated query) is displayed. This provides visibility to other devices using the same IP to help you make a conscious decision if you'd like to continue containing the device.
 > - In cases where the contained device is a network device, a warning appears with a message that containment can cause network connectivity issues (for example, containing a router that's acting as a default gateway). At this point, you're able to choose whether to contain the device or not.
 
@@ -331,7 +403,7 @@ You can stop containing a device at any time.
 
 1. Select the device from the **Device inventory** or open the device page.
 
-1. Select **Release from containment** from the action menu. This action restores the device's connection to the network.
+1. Select **Release from containment** from the action menu. Releasing from containment restores the device's connection to the network.
 
 ## Contain IP addresses of undiscovered devices
 
@@ -341,27 +413,27 @@ You can stop containing a device at any time.
 Defender for Endpoint can also contain IP addresses associated with devices that are undiscovered or aren't onboarded to Defender for Endpoint. The capability to contain an IP address prevents attackers from spreading attacks to other noncompromised devices. Containing an IP address results in Defender for Endpoint-onboarded devices blocking incoming and outgoing communication with devices using the contained IP address
 
 > [!NOTE]
-> Blocking incoming and outgoing communication with a 'contained' device is supported on onboarded Defender for Endpoint Windows 10, Windows 11, Windows 2012 R2, and Windows 2016 devices.
+> Blocking incoming and outgoing communication with a 'contained' device is supported on onboarded Defender for Endpoint Windows 10, Windows 11, Windows Server 2012 R2, and Windows Server 2016 devices.
 
 Containing an IP address associated with undiscovered devices or devices not onboarded to Defender for Endpoint is done automatically through [automatic attack disruption](/defender-xdr/automatic-attack-disruption). The Contain IP policy automatically blocks a malicious IP address when Defender for Endpoint detects the IP address to be associated with an undiscovered device or a device not onboarded.
 
 A message indicating that the action is applied appears on the applicable incident, device, or IP page. Here’s an example.
 
-:::image type="content" source="/defender/media/defender-endpoint/contain-ip-attack-disrupt-small.png" alt-text="Highlighting a contained IP address in the incident graph." lightbox="/defender/media/defender-endpoint/contain-ip-attack-disrupt.png":::
+:::image type="content" source="/defender/media/defender-endpoint/contain-ip-attack-disrupt-small.png" alt-text="Screenshot that highlights a contained IP address in the incident graph." lightbox="/defender/media/defender-endpoint/contain-ip-attack-disrupt.png":::
 
-After an IP address is contained, you can view the action in the History view of the Action Center. You can see when the action occurred and identify the IP addresses that were contained.
+After an IP address is contained, you can view the action in the History view of the Action center. You can see when the action occurred and identify the IP addresses that were contained.
 
-:::image type="content" source="/defender/media/defender-endpoint/contain-ip-action-center-small.png" alt-text="View the contained IP address in the Action center." lightbox="/defender/media/defender-endpoint/contain-ip-action-center.png":::
+:::image type="content" source="/defender/media/defender-endpoint/contain-ip-action-center-small.png" alt-text="Screenshot of the contained IP address in the Action center." lightbox="/defender/media/defender-endpoint/contain-ip-action-center.png":::
 
 If a contained IP address is part of an incident, an indicator is present on the [incident graph](/defender-xdr/investigate-incidents#attack-story) and on the incident's [evidence and response](/defender-xdr/investigate-incidents#evidence-and-response) tab. Here’s an example.
 
-:::image type="content" source="/defender/media/defender-endpoint/contain-ip-evidence-small.png" alt-text="Highlighting a contained IP address in the Evidence and response tab of an incident." lightbox="/defender/media/defender-endpoint/contain-ip-evidence.png":::
+:::image type="content" source="/defender/media/defender-endpoint/contain-ip-evidence-small.png" alt-text="Screenshot that highlights a contained IP address in the Evidence and response tab of an incident." lightbox="/defender/media/defender-endpoint/contain-ip-evidence.png":::
 
-You can stop an IP address' containment at any time. To stop containment, select the **Contain IP** action in the **Action Center**. In the flyout, select **Undo**. This action restores the IP address’ connection to the network.
+You can stop an IP address' containment at any time. To stop containment, select the **Contain IP** action in the **Action center**. In the flyout, select **Undo**. This action restores the IP address’ connection to the network.
 
 ## Contain user from the network
 
-When an identity in your network might be compromised, you must prevent that identity from accessing the network and different endpoints. Defender for Endpoint can contain an identity, blocking it from access, and helping prevent attacks, specifically, ransomware. When an identity is contained, any supported Microsoft Defender for Endpoint onboarded device blocks incoming traffic in specific protocols related to attacks (deny network logons, RPC, SMB, RDP), terminate ongoing remote sessions and logoff existing RDP connections (terminating the session itself including all its related processes), while enabling legitimate traffic. This action can significantly help to reduce the impact of an attack. When an identity is contained, security operations analysts have extra time to locate, identify, and remediate the threat to the compromised identity. Once contained by automatic attack disruption, a user is automatically removed from containment in the next five days.
+When an identity in your network might be compromised, you must prevent that identity from accessing the network and different endpoints. Defender for Endpoint can contain an identity, blocking it from access, and helping prevent attacks, specifically, ransomware. When an identity is contained, any supported Microsoft Defender for Endpoint onboarded device blocks incoming traffic in specific protocols related to attacks (deny network logons, RPC, SMB, RDP), terminate ongoing remote sessions and logoff existing RDP connections (terminating the session itself including all its related processes), while enabling legitimate traffic. Containing an identity can significantly help to reduce the impact of an attack. When an identity is contained, security operations analysts have extra time to locate, identify, and remediate the threat to the compromised identity. Once contained by automatic attack disruption, a user is automatically removed from containment in the next five days.
 
 ### Contain user important notes
 
@@ -377,13 +449,13 @@ Currently, containing users is only available automatically by using automatic a
 
 ### View the contain user actions
 
-After a user is contained, you can view the action in this History view of the Action Center. Here, you can see when the action occurred, and which users in your organization were contained:
+After a user is contained, you can view the action in the History view of the Action center. Here, you can see when the action occurred, and which users in your organization were contained:
 
-:::image type="content" source="/defender/media/defender-endpoint/user-contain-action-center.png" alt-text="View the user contain action in the action center" lightbox="/defender/media/defender-endpoint/user-contain-action-center.png":::
+:::image type="content" source="/defender/media/defender-endpoint/user-contain-action-center.png" alt-text="Screenshot of the user contain action in the Action center." lightbox="/defender/media/defender-endpoint/user-contain-action-center.png":::
 
 Furthermore, after an identity is considered "contained", that user will be blocked by Defender for Endpoint and can't perform any malicious lateral movement or remote encryption on or to any supported Defender for Endpoint onboarded device. These blocks show up as alerts to help you quickly see the devices the compromised user attempted access and potential attack techniques:
 
-:::image type="content" source="/defender/media/defender-endpoint/user-contain-lateral-move-block.png" alt-text="Shows a user contain lateral movement block event" lightbox="/defender/media/defender-endpoint/user-contain-lateral-move-block.png":::
+:::image type="content" source="/defender/media/defender-endpoint/user-contain-lateral-move-block.png" alt-text="Screenshot of a user contain lateral movement block event." lightbox="/defender/media/defender-endpoint/user-contain-lateral-move-block.png":::
 
 To view the current status of the contain user action and other actions, see [Track the action status in the Activities tab (Preview)](/defender-xdr/autoad-results#track-the-action-status-in-the-activities-tab-preview).
 
@@ -396,25 +468,27 @@ To view the current status of the contain user action and other actions, see [Tr
 
 You can release the blocks and containment on a user at any time:
 
-1. Select the **Contain User** action in the **Action Center**. In the side pane, select **Undo**.
+1. Select the **Contain User** action in the **Action center**. In the side pane, select **Undo**.
 
 1. Select the user from either the user inventory, Incident page side pane, or alert side pane and select **Undo**.
 
 This action restores the user's connection to the network.
 
-:::image type="content" source="/defender/media/defender-endpoint/undo-user-contain-action.png" alt-text="Shows user contain undo option in the action center" lightbox="/defender/media/defender-endpoint/undo-user-contain-action.png":::
+:::image type="content" source="/defender/media/defender-endpoint/undo-user-contain-action.png" alt-text="Screenshot of the user contain undo option in the Action center." lightbox="/defender/media/defender-endpoint/undo-user-contain-action.png":::
 
 ### Investigation capabilities with Contain User
 
 After a user is contained, you can investigate the potential threat by viewing the blocked actions by the compromised user. In the device timeline view, you can see information about specific events, including protocol and interface granularity, and the relevant MITRE Technique associated it.
 
-:::image type="content" source="/defender/media/defender-endpoint/event-blocked by-contained-user.png" alt-text="Shows blocked event details for a contained users" lightbox="/defender/media/defender-endpoint/event-blocked by-contained-user.png":::
+:::image type="content" source="/defender/media/defender-endpoint/event-blocked-by-contained-user.png" alt-text="Screenshot of blocked event details for a contained user." lightbox="/defender/media/defender-endpoint/event-blocked-by-contained-user.png":::
 
-In addition, you can expand the investigation by using advanced hunting. Look for any action type starting with *contain* in the `DeviceEvents` table. Then, you can view all the different singular blocking events in relation to Contain User in your tenant, dive deeper into the context of each block, and extract the different entities and techniques associated with those events.
+In addition, you can expand the investigation by using advanced hunting. Look for any action type starting with *contain* in the `DeviceEvents` table. Then, you can view all the different singular blocking events in relation to Contain User in your organization, dive deeper into the context of each block, and extract the different entities and techniques associated with those events.
 
-:::image type="content" source="/defender/media/defender-endpoint/user-contain-advanced-hunting.png" alt-text="Shows advanced hunting for user contain events" lightbox="/defender/media/defender-endpoint/user-contain-advanced-hunting.png":::
+:::image type="content" source="/defender/media/defender-endpoint/user-contain-advanced-hunting.png" alt-text="Screenshot of advanced hunting for user contain events." lightbox="/defender/media/defender-endpoint/user-contain-advanced-hunting.png":::
 
-## GPO hardening (Preview)
+<a id="gpo-hardening-preview"></a>
+
+## GPO hardening - predictive shielding (Preview)
 
 As part of the [predictive shielding](/defender-xdr/shield-predict-threats) (Preview) feature, Defender for Endpoint automatically applies the GPO hardening action. Group Policy Object (GPO) hardening temporarily stops new GPO policies from being applied to devices identified as high risk. This action helps prevent potential compromise by limiting changes to critical configurations.
 
@@ -422,7 +496,9 @@ To enrich predictive shielding actions, we recommend you use the Microsoft Defen
 
 After the action is applied, you can view the action impact in the incident graph, track the actions in the Action center, and investigate further using advanced hunting. For more information, see [Manage predictive shielding actions](/defender-xdr/shield-predict-threats-manage).
 
-## Safeboot hardening (Preview)
+<a id="safeboot-hardening-preview"></a>
+
+## Safeboot hardening - predictive shielding (Preview)
 
 As part of the [predictive shielding](/defender-xdr/shield-predict-threats) (Preview) feature, Defender for Endpoint automatically applies the Safeboot hardening action. Safeboot hardening helps protect devices from being compromised by enforcing stricter boot settings on devices that are predicted to be at high risk of compromise.
 
@@ -434,13 +510,13 @@ To view the current status of the Safeboot hardening action and other actions, s
 
 ## Consult a threat expert
 
-You can consult a Microsoft threat expert for more insights regarding a potentially compromised device or already compromised ones. Microsoft Threat Experts can be engaged directly from within the Microsoft Defender XDR for timely and accurate response. Experts provide insights not just regarding a potentially compromised device, but also to better understand complex threats, targeted attack notifications that you get, or if you need more information about the alerts, or a threat intelligence context that you see on your portal dashboard.
+You can consult a Microsoft threat expert for more insights regarding a potentially compromised device or already compromised ones. Microsoft Threat Experts can be engaged directly from within the Defender portal for timely and accurate response. Experts provide insights not just regarding a potentially compromised device, but also to better understand complex threats, targeted attack notifications that you get, or if you need more information about the alerts, or a threat intelligence context that you see on your portal dashboard.
 
 See [Configure and manage Endpoint Attack Notifications](configure-microsoft-threat-experts.md) for details.
 
 ## Check activity details and status
 
-The Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) provides information on actions that were taken on a device or file. You are able to view the following details:
+The Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) provides information on actions that were taken on a device or file. You can view the following details:
 
 - Investigation package collection
 - Antivirus scan
@@ -449,7 +525,7 @@ The Action center ([https://security.microsoft.com/action-center](https://securi
 
 All other related details are also shown, for example, submission date/time, submitting user, and if the action succeeded or failed.
 
-:::image type="content" source="media/action-center-details.png" alt-text="The action center with information" lightbox="media/action-center-details.png":::
+:::image type="content" source="media/action-center-details.png" alt-text="Screenshot of the Action center with action details." lightbox="media/action-center-details.png":::
 
 The **Activities** tab in the **Incident** page shows the details and status of actions that were taken as part of the incident response. For more information, see [Track the action status in the Activities tab (Preview)](/defender-xdr/autoad-results#track-the-action-status-in-the-activities-tab-preview).
 
@@ -458,4 +534,3 @@ The **Activities** tab in the **Incident** page shows the details and status of 
 - [Take response actions on a file](respond-file-alerts.md)
 - [Manual response actions in Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md#manual-response-actions)
 - [Report inaccuracy](/defender-vulnerability-management/tvm-security-recommendation#report-inaccuracy)
-

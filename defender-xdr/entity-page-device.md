@@ -14,6 +14,7 @@ ms.date: 03/27/2024
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
+ms.custom: sfi-image-nochange
 ---
 
 <!-- redirected from device-profile.md -->
@@ -144,6 +145,17 @@ You can elect not to show events from Microsoft Sentinel in the main timeline, a
 :::image type="content" source="media/entity-page-device/entity-device-timeline-settings.png" alt-text="Screenshot of entity device timeline settings toggle.":::
 
 For more information about these activity events, see [Entity pages in Microsoft Sentinel](/azure/sentinel/entity-pages?tabs=defender-portal#entity-pages).
+
+#### Strong identifier requirements for unified timeline (Sentinel to XDR mapping)
+
+To ensure that custom activity data (for example, Sophos alerts) is correctly mapped and visible in **Microsoft Defender XDR** (`security.microsoft.com`) under the **Device Timeline**, the ingested data must include a strong identifier combination for the host.
+
+#### Required strong identifiers
+
+At a minimum, include one of the following strong identifier combinations:
+
+- `HostName` + `NTDomain`
+- `HostName` + `DnsDomain`
 
 > [!NOTE]
 >
@@ -358,7 +370,7 @@ Response actions run along the top of a specific device page and include:
 
 ## Related topics
 
-- [Microsoft Defender XDR overview](microsoft-365-defender.md)
+- [Microsoft Defender overview](microsoft-365-defender.md)
 - [Turn on Microsoft Defender XDR](m365d-enable.md)
 - [User entity page in Microsoft Defender](investigate-users.md)
 - [IP address entity page in Microsoft Defender](entity-page-ip.md)

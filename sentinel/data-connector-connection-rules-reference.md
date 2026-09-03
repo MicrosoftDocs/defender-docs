@@ -3,10 +3,11 @@ title: RestApiPoller data connector reference for the Codeless Connector Framewo
 titleSuffix: Microsoft Sentinel
 description: This article provides reference JSON fields and properties to create the RestApiPoller data connector type and its data connection rules for the Codeless Connector Framework.
 services: sentinel
+ms.author: edbaynash
 author: EdB-MSFT
+ms.reviewer: krishsa
 ms.topic: reference
 ms.date: 9/30/2024
-ms.author: edbaynash
 
 #Customer intent: As a security engineer, I want to reference paging, authentication, and payload options to create and configure RestApiPoller data connectors by using the Codeless Connector Framework. By using RestApiPoller data connectors, I can integrate a specific data source into Microsoft Sentinel without writing custom code.
 
@@ -18,7 +19,7 @@ You can create a `RestApiPoller` data connector with the Codeless Connector Fram
 
 Each data connector represents a specific *connection* of a Microsoft Sentinel data connector. One data connector might have multiple connections, which fetch data from different endpoints. You can complete the deployment template for the CCF data connector by using the JSON configuration that you build with this article.
 
-For more information, see [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md#create-the-deployment-template).
+For more information, see [Create a codeless connector for Microsoft Sentinel](isv/create-codeless-connector.md#create-the-deployment-template).
 
 ## Creating or updating data connectors
 
@@ -72,7 +73,7 @@ The request body for a `RestApiPoller` CCF data connector has the following stru
 | `name` | True | String | The unique name of the connection that matches the URI parameter. |
 | `kind` | True | String | The `kind` value. This field must be set to `RestApiPoller`. |
 | `etag` |  | GUID | The `etag` value. This field must be left empty for new connector creation. For update operations, `etag` must match the existing connector `etag` (GUID). |
-| `properties.connectorDefinitionName` |  | String | The name of the `DataConnectorDefinition` resource that defines the UI configuration of the data connector. For more information, go to [Data connector definition](create-codeless-connector.md#data-connector-user-interface). |
+| `properties.connectorDefinitionName` |  | String | The name of the `DataConnectorDefinition` resource that defines the UI configuration of the data connector. For more information, go to [Data connector definition](isv/create-codeless-connector.md#data-connector-user-interface). |
 | `properties.auth`	| True | Nested JSON | The authentication properties for polling the data. For more information, go to [Authentication configuration](#authentication-configuration). |
 | `properties.request` | True | Nested JSON | The request payload for polling the data, such as the API endpoint. For more information, go to [Request configuration](#request-configuration). |
 | `properties. response` | True | Nested JSON | The response object and nested message the API returns when it polls the data. For more information, go to [Response configuration](#response-configuration). |
@@ -91,7 +92,7 @@ The CCF supports the following authentication types:
 > [!NOTE]
 > CCF OAuth2 implementation doesn't support client certificate credentials.
 
-As a best practice, use parameters in the authentication section instead of hard-coding credentials. For more information, see [Secure confidential input](create-codeless-connector.md#secure-confidential-input).
+As a best practice, use parameters in the authentication section instead of hard-coding credentials. For more information, see [Secure confidential input](isv/create-codeless-connector.md#secure-confidential-input).
 
 To create the deployment template, which also uses parameters, you need to escape the parameters in this section with an extra starting `[`. This step allows the parameters to assign a value based on the user interaction with the connector. For more information, see [Template expressions escape characters](/azure/azure-resource-manager/templates/template-expressions#escape-characters).
 

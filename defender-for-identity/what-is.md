@@ -96,7 +96,7 @@ Sensors run on your identity infrastructure, capturing and parsing relevant netw
 
 Only the required signals are sent to the Defender for Identity cloud service, minimizing performance impact and avoiding complex network changes.
 
-The cloud service analyzes identity signals and integrates them with other Microsoft Defender workloads, contributing identity intelligence to correlated alerts and incidents across Microsoft Defender XDR.
+The cloud service analyzes identity signals and integrates them with other Microsoft Defender workloads, contributing identity intelligence to correlated alerts and incidents in Microsoft Defender.
 
 ## Next steps
 

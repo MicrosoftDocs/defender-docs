@@ -9,9 +9,11 @@ ms.collection:
   - m365-security
   - tier2
 description: Admins can learn how to create automated simulations that contain specific techniques and payloads that launch when the specified conditions are met in Microsoft Defender for Office 365 Plan 2.
-ms.date: 04/23/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
+ai-usage: ai-assisted
 ---
 
 # Simulation automations for Attack simulation training
@@ -41,14 +43,25 @@ To create a simulation automation, do the following steps:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com/>, go to **Email & collaboration** \> **Attack simulation training** \> **Automations** tab \> **Simulation automations**. or, to go directly to the **Automations** tab where you can select **Simulation automations**, use <https://security.microsoft.com/attacksimulator?viewid=automations>.
 
-2. On the **Simulation automations** page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create automation** to start the new simulation automation wizard.
+2. On the **Simulation automations** page, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create automation** to start the new simulation automation wizard.
 
    :::image type="content" source="media/attack-sim-training-sim-automations-create.png" alt-text="The Create simulation button on the Simulation automations tab in Attack simulation training in the Microsoft Defender portal" lightbox="media/attack-sim-training-sim-automations-create.png":::
 
-   The following sections describe the steps and configuration options to create a simulation automation.
+   The wizard walks you through these configuration steps:
+
+   - [Name and describe the simulation automation](#name-and-describe-the-simulation-automation)
+   - [Select social engineering techniques](#select-one-or-more-social-engineering-techniques)
+   - [Select payloads and login pages](#select-payloads-and-login-pages)
+   - [Target users](#target-users)
+   - [Assign training](#assign-training)
+   - [Select end user notifications](#select-end-user-notifications)
+   - [Simulation schedule](#simulation-schedule)
+   - [Schedule details](#schedule-details)
+   - [Launch details](#launch-details)
+   - [Review simulation automation](#review-simulation-automation).
 
    > [!NOTE]
-   > At any point after you name the simulation automation during the new simulation automation wizard, you can select **Save and close** to save your progress and continue later. The incomplete simulation automation has the **Status** value **Draft**. You can pick up where you left off by selecting the simulation automation from the list and then clicking the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit automation** action that appears.
+   > At any point after you name the simulation automation during the new simulation automation wizard, you can select **Save and close** to save your progress and continue later. The incomplete simulation automation has the **Status** value **Draft**. You can pick up where you left off by selecting the simulation automation from the list and then clicking the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit automation** action that appears.
 
 ## Name and describe the simulation automation
 
@@ -94,7 +107,7 @@ On the **Select payloads and login page** page, select one of the following opti
   - **Language**: The language of the payload content. Microsoft's payload catalog (global) provides payloads in 29+ languages.
   - **Predicted compromise rate (%)**: Historical data across Microsoft 365 that predicts the percentage of people who will be compromised by this payload (users compromised / total number of users who receive the payload). For more information, see [Predicted compromise rate](attack-simulation-training-get-started.md#predicted-compromise-rate).
 
-  Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to search for the name of an existing payload.
+  Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to search for the name of an existing payload.
 
   If you select a payload from the list by clicking anywhere in the row other than the check box next to the name, details about the payload are shown in a flyout:
 
@@ -106,9 +119,9 @@ On the **Select payloads and login page** page, select one of the following opti
   > [!TIP]
   > To see details about other payloads without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
-  Leave the payload details flyout open to change the login page or create a new login page to use as described in the following subsections.
+  Leave the payload details flyout open to change the login page or create a new login page as described in [Select login pages](#select-login-pages).
 
-  Or, if you're finished in the payload details flyout, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: **Close** to return to the **Select payloads and login page** page, verify one or more of the required payloads are selected and then select **Next** to continue.
+  Or, if you're finished in the payload details flyout, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: **Close** to return to the **Select payloads and login page** page, verify one or more of the required payloads are selected and then select **Next** to continue.
 
   :::image type="content" source="media/attack-sim-training-simulations-select-payload-details-payload-tab.png" alt-text="The Payload tab in the payload details flyout in Attack simulation training in the Microsoft Defender portal" lightbox="media/attack-sim-training-simulations-select-payload-details-payload-tab.png":::
 
@@ -127,7 +140,7 @@ To view the complete login page, use the **Page 1** and **Page 2** links at the 
 
 Use one of the following procedures to change the login page that's used in the payload or to create a new login page to use in the flyout:
 
-- Change the login page that's used in the payload: Select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Change login page** on the **Login page** tab of the payload details flyout.
+- Change the login page that's used in the payload: Select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Change login page** on the **Login page** tab of the payload details flyout.
 
   On the **Select login page** flyout that opens, The following information is shown for each login page:
 
@@ -136,34 +149,35 @@ Use one of the following procedures to change the login page that's used in the 
   - **Source**: For built-in login pages, the value is **Global**. For custom login pages, the value is **Tenant**.
   - **Created by**: For built-in login pages, the value is **Microsoft**. For custom login pages, the value is the UPN of the user who created the login page.
   - **Last modified**
-  - **Actions**: Select :::image type="icon" source="media/m365-cc-sc-eye-icon.png" border="false"::: **Preview** to preview the login page.
+  - **Actions**: Select :::image type="icon" source="media/defender-portal-icon-eye.png" border="false"::: **Preview** to preview the login page.
 
-  Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find a login page in the list by typing part of the login name, and then pressing the ENTER key.
+  Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to find a login page in the list by typing part of the login name, and then pressing the ENTER key.
 
-  Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to filter the login pages by **Source** or **Language**.
+  Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to filter the login pages by **Source** or **Language**.
 
-  When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+  When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
   :::image type="content" source="media/attack-sim-training-simulations-select-payload-select-login-page.png" alt-text="The Select login page flyout from the Login page tab in payload details flyout in Attack simulation training in the Microsoft Defender portal." lightbox="media/attack-sim-training-simulations-select-payload-select-login-page.png":::
 
-  On the **Select login page** flyout, select the check box next to the name of the login page to use, and then select **Save**. Back on the **Login page** tab of the payload details flyout, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: **Close** to return to the **Select payloads and login page** page.
+  On the **Select login page** flyout, select the check box next to the name of the login page to use, and then select **Save**. Back on the **Login page** tab of the payload details flyout, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: **Close** to return to the **Select payloads and login page** page.
 
-- Create a new login page to use in the payload: Select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Change login page** on the **Login page** tab of the payload details flyout.
+- Create a new login page to use in the payload: Select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Change login page** on the **Login page** tab of the payload details flyout.
 
-  On the **Select login page** flyout that opens, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create new**.
+  On the **Select login page** flyout that opens, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create new**.
 
-  The creation steps are the same as at **Attack simulation training** \> **Content library** tab \> **Login pages** \> **Tenant login pages** tab. For instructions, see [Create login pages](attack-simulation-training-login-pages.md#create-login-pages).
+  To create a login page, follow the steps in [Create login pages](attack-simulation-training-login-pages.md#create-login-pages).
 
-  Back on the **Select login page** flyout, select the check box next to the name of the login page to use, and then select **Save**. Back on the **Login page** tab of the payload details flyout, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: **Close** to return to the **Select payloads and login page** page.
+  Back on the **Select login page** flyout, select the check box next to the name of the login page to use, and then select **Save**. Back on the **Login page** tab of the payload details flyout, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: **Close** to return to the **Select payloads and login page** page.
 
 On the **Select payloads and login page** page, verify the payloads that you configured and/or want to use are selected.
 
 When you're finished on the **Select a payload and login page** page, select **Next**.
 
-### Configure OAuth Payload
+<a name="configure-oauth-payload"></a>
+### Configure OAuth payloads
 
 > [!NOTE]
-> This page is available only if you selected **OAuth Consent Grant** on the [Select social engineering techniques](#select-one-or-more-social-engineering-techniques) page and a corresponding payload.
+> The **Configure OAuth payload** page is available only if you selected **OAuth Consent Grant** on the [Select social engineering techniques](#select-one-or-more-social-engineering-techniques) page and a corresponding payload.
 
 On the **Configure OAuth payload** page, configure the following settings:
 
@@ -180,15 +194,16 @@ On the **Configure OAuth payload** page, configure the following settings:
 
 When you're finished on  the **Configure OAuth payload** page, select **Next**.
 
-## Target users
+<a name="target-users"></a>
+## Select target users
 
 On the **Target users** page, select who receives the simulation. Use the following options to select users:
 
-- **Include all users in your organization**: **Include all users in your organization**: The unmodifiable list of users is shown in groups of 10. You can use **Next** and **Previous** below the list of users to scroll through the list. You can also use :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** on the page to find specific users.
+- **Include all users in your organization**: **Include all users in your organization**: The unmodifiable list of users is shown in groups of 10. You can use **Next** and **Previous** below the list of users to scroll through the list. You can also use :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** on the page to find specific users.
 
 - **Include only specific users and groups**: At first, no users or groups are shown on the **Targeted users** page. To add users or groups to the simulation, choose one of the following options:
 
-  - :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add users**: In the **Add users** flyout that opens, you find and select users and groups to receive the simulation. The following group types are supported:
+  - :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add users**: In the **Add users** flyout that opens, you find and select users and groups to receive the simulation. The following group types are supported:
     - Microsoft 365 Groups (static and dynamic)
     - Distribution groups (static only)
     - Mail-enabled Security groups (static only)
@@ -198,7 +213,7 @@ On the **Target users** page, select who receives the simulation. Use the follow
 
     The following search tools are available:
 
-    - **Search for users or groups**: If you click in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and do one of the following actions, the **Filter users by categories** options on the **Add users** flyout are replaced by a **User list** section:
+    - **Search for users or groups**: If you click in the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and do one of the following actions, the **Filter users by categories** options on the **Add users** flyout are replaced by a **User list** section:
       - Type three or more characters and then press the ENTER key. Any users or group names that contain those characters are shown in the **User list** section by **Name** and **Email**.
       - Type less than three characters or no characters and then press the ENTER key. No users are shown in the **User list** section, but you can type three or more characters in the **Search** box to search for users and groups.
 
@@ -219,27 +234,27 @@ On the **Target users** page, select who receives the simulation. Use the follow
         - **Repeat offenders**: For more information, see [Configure the repeat offender threshold](attack-simulation-training-settings.md#configure-the-repeat-offender-threshold).
 
       - **User tags**: User tags are identifiers for specific groups of users (for example, Priority accounts). For more information, see [User tags in Microsoft Defender for Office 365](user-tags-about.md). Use the following options:
-        - **Search**: In :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search by user tags**, you can type part of the user tag name and then press Enter. You can select some or all of the results.
+        - **Search**: In :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search by user tags**, you can type part of the user tag name and then press Enter. You can select some or all of the results.
         - Select **All user tags**
         - Select existing user tags. If the link is available, select **See all user tags** to see the complete list of available tags.
 
       - **City**: Use the following options:
-        - **Search**: In :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search by City**, you can type part of the City value and then press Enter. You can select some or all of the results.
+        - **Search**: In :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search by City**, you can type part of the City value and then press Enter. You can select some or all of the results.
         - Select **All City**
         - Select existing City values. If the link is available, select **See all Cities** to see the complete list of available City values.
 
       - **Country**: Use the following options:
-        - **Search**: In :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search by Country**, you can type part of the Country value and then press Enter. You can select some or all of the results.
+        - **Search**: In :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search by Country**, you can type part of the Country value and then press Enter. You can select some or all of the results.
         - Select **All Country**
         - Select existing City values. If the link is available, select **See all Countries** to see the complete list of available Country values.
 
       - **Department**: Use the following options:
-        - **Search**: In :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search by Department**, you can type part the Department value and then press Enter. You can select some or all of the results.
+        - **Search**: In :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search by Department**, you can type part the Department value and then press Enter. You can select some or all of the results.
         - Select **All Department**
         - Select existing Department values. If the link is available, select **See all Departments** to see the complete list of available Department values.
 
       - **Title**: Use the following options:
-        - **Search**: In :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search by Title**, you can type part of the Title value and then press Enter. You can select some or all of the results.
+        - **Search**: In :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search by Title**, you can type part of the Title value and then press Enter. You can select some or all of the results.
         - Select **All Title**
         - Select existing Title values. If the link is available, select **See all Titles** to see the complete list of available Title values.
 
@@ -258,17 +273,18 @@ On the **Target users** page, select who receives the simulation. Use the follow
 
       Select the **Add x users** button to add the selected users or groups on the **Target users** page and to return to the **Target users** page.
 
-  - :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Import**: In the dialog that opens, specify a CSV file that contains one email address per line.
+  - :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Import**: In the dialog that opens, specify a CSV file that contains one email address per line.
 
     After you find a select the CSV file, the users are imported and shown on the **Targeted users** page.
 
-  On the main **Target users** page, you can use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find selected users. You can also select :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Delete** and then **Confirm** in the confirmation dialog to remove specific users.
+  On the main **Target users** page, you can use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to find selected users. You can also select :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Delete** and then **Confirm** in the confirmation dialog to remove specific users.
 
-  To add more users and groups, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add users** or :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Import** on the **Target users** page and repeat the previous steps.
+  To add more users and groups, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add users** or :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Import** on the **Target users** page and repeat the previous steps.
 
 When you're finished on the **Target users** page, select **Next**.
 
-## Assign training
+<a name="assign-training"></a>
+## Configure training assignments
 
 On the **Assign training** page, you can assign trainings for the simulation. We recommend that you assign training for each simulation, as employees who go through training are less susceptible to similar attacks.
 
@@ -299,12 +315,13 @@ Use the following options on the page to assign trainings as part of the simulat
 
 When you're finished on the **Assign training** page, select **Next**.
 
-### Training assignment
+<a name="training-assignment"></a>
+### Select training courses
 
 > [!NOTE]
-> This page is available only if you selected **Select training courses and modules myself** on the **Assign training** page.
+> The **Training assignment** page is available only if you selected **Select training courses and modules myself** on the **Assign training** page.
 
-On the **Training assignment** page, select the trainings that you want to add to the simulation by selecting :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add trainings**.
+On the **Training assignment** page, select the trainings that you want to add to the simulation by selecting :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add trainings**.
 
 In the **Add training** flyout that opens, use the following tabs to select trainings to include in the simulation:
 
@@ -320,7 +337,7 @@ On either tab, the following information is shown for each training:
 - **Duration (mins)**
 - **Preview**: Select **Preview** to see the training.
 
-On either tab, you can use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find trainings. Type part of the training name and press the ENTER key.
+On either tab, you can use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to find trainings. Type part of the training name and press the ENTER key.
 
 On either tab, select one or more trainings by selecting the check box next to the training name. To select all trainings, select the check box in the **Training name** column header. When you're finished, select **Add**.
 
@@ -336,7 +353,7 @@ Back on the **Training assignment** page, the selected trainings are now listed.
   > [!TIP]
   > **Clicked payload** doesn't apply to every social engineering technique. For more information, see [Training assignment trigger behavior by technique](attack-simulation-training-insights.md#training-assignment-trigger-behavior-by-technique).
 
-- **Delete**: Select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** to remove the training from the simulation.
+- **Delete**: Select :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** to remove the training from the simulation.
 
 :::image type="content" source="media/attack-sim-training-training-assignment.png" alt-text="The Training assignment page in Attack simulation training in the Microsoft Defender portal" lightbox="media/attack-sim-training-training-assignment.png":::
 
@@ -360,9 +377,9 @@ Select one of the following options:
     - **Add logo**: Select **Browse logo image** to find and select a .png, .jpeg, or .gif file. The logo size should be a maximum of 210 x 70 to avoid distortion. To remove the logo, select **Remove uploaded logo image**.
     - **Select default language**: This setting is required. Select one of the following values: **Chinese (Simplified)**, **Chinese (Traditional, Taiwan)**, **Dutch**, **English**, **Spanish**, **French**, **German**, **Italian**, **Japanese**, **Korean**, **Portuguese, or **Russian**.
 
-  - **Tenant landing pages** tab: Contains any custom landing pages that you created. To create a new landing page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create new**. The creation steps are the same as at **Attack simulation training** \> **Content library** tab \> **Phish landing pages** \> **Tenant landing pages** tab. For instructions, see [Create landing pages](attack-simulation-training-landing-pages.md#create-landing-pages).
+  - **Tenant landing pages** tab: Contains any custom landing pages that you created. To create a new landing page, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create new**. To create a landing page, follow the steps in [Create landing pages](attack-simulation-training-landing-pages.md#create-landing-pages).
 
-  On both tabs, the following information is shown for each landing page. You can sort the landing pages by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default columns are marked with an asterisk (<sup>\*</sup>):
+  On both tabs, the following information is shown for each landing page. You can sort the landing pages by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. The default columns are marked with an asterisk (<sup>\*</sup>):
 
   - **Name**<sup>\*</sup>
   - **Language**<sup>\*</sup>: If the landing page contains multiple translations, the first two languages are shown directly. To see the remaining languages, hover over the numeric icon (for example, **+10**).
@@ -375,9 +392,9 @@ Select one of the following options:
   - **Modified by**<sup>\*</sup>
   - **Last modified**<sup>\*</sup>
 
-  To find a landing page in the list, type part of the landing page name in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and then press the ENTER key.
+  To find a landing page in the list, type part of the landing page name in the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and then press the ENTER key.
 
-  Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to filter the landing pages by language.
+  Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to filter the landing pages by language.
 
   When a landing page is selected, if you click anywhere in the row, a details flyout opens that shows more information about the landing page:
 
@@ -421,7 +438,7 @@ On the **Select end user notification** page, select from the following notifica
   - **Delivery preferences**: You need to configure the following delivery preferences before you can continue:
     - For **Microsoft default positive reinforcement notification**, select **Do not deliver**, **Deliver after campaign ends**, or **Deliver during campaign**.
     - For **Microsoft default training reminder notification**, select **Twice a week** or **Weekly**.
-  - **Actions**: If you select :::image type="icon" source="media/m365-cc-sc-view-icon.png" border="false"::: **View**, a **Review notification** page opens with the following information:
+  - **Actions**: If you select :::image type="icon" source="media/defender-portal-icon-view.png" border="false"::: **View**, a **Review notification** page opens with the following information:
     - **Preview** tab: View the notification message as users see it.
       - To view the message in different languages, use the **Select language** box.
       - Use the **Select payload to preview** box to select the notification message for simulations that contain multiple payloads.
@@ -444,7 +461,7 @@ When you're finished on the **Select end user notification** page, select **Next
 ### Select a training assignment notification
 
 > [!NOTE]
-> This page is available only if you selected **Customized end user notifications** on the [Select end user notifications](#select-end-user-notifications) page.
+> The **Training assignment notification** page is available only if you selected **Customized end user notifications** on the [Select end user notifications](#select-end-user-notifications) page.
 
 The **Training assignment notification** page shows the following notifications and their configured languages:
 
@@ -462,7 +479,7 @@ For more information, see [End-user notifications for Attack simulation training
 Do one of the following steps:
 
 - Select an existing notification to use:
-  - To search for an existing notification in the list, type part of the notification name in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and then press the ENTER key.
+  - To search for an existing notification in the list, type part of the notification name in the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and then press the ENTER key.
   - When you select a notification by clicking anywhere in the row other than the check box, a details flyout opens that shows more information about the notification:
     - The **Preview** tab shows what the notification looks like to users.
     - The **Details** tab shows the properties of the notification.
@@ -471,7 +488,7 @@ Do one of the following steps:
 
   On the **Training assignment notification** page, select a notification to use by selecting the check box next to the name.
 
-- Create a new notification to use: Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create new**. The creation steps are identical to [Create end-user notifications](attack-simulation-training-end-user-notifications.md#create-end-user-notifications).
+- Create a new notification to use: Select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create new**. The creation steps are identical to [Create end-user notifications](attack-simulation-training-end-user-notifications.md#create-end-user-notifications).
 
   > [!NOTE]
   > On the **Define details** page of the new notification wizard, be sure to select the value **Training assignment notification** for the notification type.
@@ -483,7 +500,7 @@ When you're finished on the **Training assignment notification** page, select **
 ### Select a training reminder notification
 
 > [!NOTE]
-> This page is available only if you selected **Customized end user notifications** on the [Select end user notifications](#select-end-user-notifications) page.
+> The **Training reminder notification** page is available only if you selected **Customized end user notifications** on the [Select end user notifications](#select-end-user-notifications) page.
 
 The **Training reminder notification** page shows the following notifications and their configured languages:
 
@@ -501,7 +518,7 @@ For more information, see [End-user notifications for Attack simulation training
 In **Set frequency for reminder notification**, select **Weekly** (the default value) or **Twice a week**, and then do one of the following steps:
 
 - Select an existing notification to use:
-  - To search for an existing notification in the list, type part of the notification name in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and then press the ENTER key.
+  - To search for an existing notification in the list, type part of the notification name in the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and then press the ENTER key.
   - When you select a notification by clicking  anywhere in the row other than the check box, a details flyout opens that shows more information about the notification:
     - The **Preview** tab shows what the notification looks like to users.
     - The **Details** tab shows the properties of the notification.
@@ -510,7 +527,7 @@ In **Set frequency for reminder notification**, select **Weekly** (the default v
 
   On the **Training reminder notification** page, select a notification to use by selecting the check box next to the name.
 
-- **Create a new notification to use**: Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create new**. The creation steps are identical to [Create end-user notifications](attack-simulation-training-end-user-notifications.md#create-end-user-notifications).
+- **Create a new notification to use**: Select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create new**. The creation steps are identical to [Create end-user notifications](attack-simulation-training-end-user-notifications.md#create-end-user-notifications).
 
   > [!NOTE]
   > On the **Define details** page of the new notification wizard, be sure to select the value **Training reminder notification** for the notification type.
@@ -522,7 +539,7 @@ When you're finished on the **Training reminder notification** page, select **Ne
 ### Select a positive reinforcement notification
 
 > [!NOTE]
-> This page is available only if you selected **Customized end user notifications** on the [Select end user notifications](#select-end-user-notifications) page.
+> The **Positive reinforcement notification** page is available only if you selected **Customized end user notifications** on the [Select end user notifications](#select-end-user-notifications) page.
 
 You have the following options in the **Delivery preferences** section for positive reinforcement notifications:
 
@@ -544,7 +561,7 @@ You have the following options in the **Delivery preferences** section for posit
 
   For more information, see [End-user notifications for Attack simulation training](attack-simulation-training-end-user-notifications.md).
 
-  To search for an existing notification in the list, type part of the notification name in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and then press the ENTER key.
+  To search for an existing notification in the list, type part of the notification name in the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and then press the ENTER key.
 
   When you select a notification by clicking anywhere in the row other than the check box, a details flyout opens that shows more information about the notification:
 
@@ -555,7 +572,7 @@ You have the following options in the **Delivery preferences** section for posit
 
   On the **Positive reinforcement notification** page, select an existing notification to use by selecting the check box next to the name.
 
-- Create a new positive reinforcement notification to use: Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create new**. The creation steps are identical to [Create end-user notifications](attack-simulation-training-end-user-notifications.md#create-end-user-notifications).
+- Create a new positive reinforcement notification to use: Select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create new**. The creation steps are identical to [Create end-user notifications](attack-simulation-training-end-user-notifications.md#create-end-user-notifications).
 
   > [!NOTE]
   > On the **Define details** page of the new notification wizard, be sure to select the value **Positive reinforcement notification** for the notification type.
@@ -564,7 +581,8 @@ You have the following options in the **Delivery preferences** section for posit
 
 When you're finished on the **Positive reinforcement notification** page, select **Next**.
 
-## Simulation schedule
+<a name="simulation-schedule"></a>
+## Configure the simulation schedule
 
 On the **Simulation schedule** page, select one of the following values:
 
@@ -573,7 +591,8 @@ On the **Simulation schedule** page, select one of the following values:
 
 When you're finished, select **Next**.
 
-## Schedule details
+<a name="schedule-details"></a>
+## Configure schedule details
 
 What you see on the **Schedule details** page depends on whether you selected **Randomized** or **Fixed** for the simulation schedule on the previous page.
 
@@ -605,7 +624,8 @@ What you see on the **Schedule details** page depends on whether you selected **
 
 When you're finished on the **Schedule details** page, select **Next**.
 
-## Launch details
+<a name="launch-details"></a>
+## Configure launch details
 
 On the **Launch details** page, configure the following additional settings for the automation:
 
@@ -633,7 +653,7 @@ When you're finished on the **New automation created** page, select **Done**.
 
 Back on the **Simulation automations** page on the **Automations** tab, the simulation automation that you created is now listed with the **Status** value **Inactive**.
 
-To turn on the simulation automation, see the next section.
+To turn on the simulation automation, see [Turn on or turn off a simulation automation](#turn-on-or-turn-off-a-simulation-automation).
 
 ## Turn on or turn off a simulation automation
 
@@ -641,13 +661,13 @@ To turn on the simulation automation, see the next section.
 - You can turn off simulation automations with the **Status** value **Active**.
 - You can't turn on or turn off incomplete simulation automations with the **Status** value **Draft**.
 
-To turn on an **Inactive** simulation automation, select it from the list by clicking the check box next to the name. Select the :::image type="icon" source="media/m365-cc-sc-turn-on-off-icon.png" border="false"::: **Turn on** action that appears, and then select **Confirm** in the dialog. The **Status** value changes to **Active**.
+To turn on an **Inactive** simulation automation, select it from the list by clicking the check box next to the name. Select the :::image type="icon" source="media/defender-portal-icon-turn-on-off.png" border="false"::: **Turn on** action that appears, and then select **Confirm** in the dialog. The **Status** value changes to **Active**.
 
-To turn off an **Active** simulation automation, select it from the list by clicking the check box next to the name. Select the :::image type="icon" source="media/m365-cc-sc-turn-on-off-icon.png" border="false"::: **Turn off** action that appears, and then select **Confirm** in the dialog. The **Status** value changes to **Inactive**.
+To turn off an **Active** simulation automation, select it from the list by clicking the check box next to the name. Select the :::image type="icon" source="media/defender-portal-icon-turn-on-off.png" border="false"::: **Turn off** action that appears, and then select **Confirm** in the dialog. The **Status** value changes to **Inactive**.
 
 ## Remove simulation automations
 
-To remove a simulation automation, select the simulation automation from the list by clicking the check box next to the name. Select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears, and then select **Confirm** in the dialog.
+To remove a simulation automation, select the check box next to its name. Select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears, and then select **Confirm** in the dialog.
 
 ## View simulation automation details
 
@@ -670,9 +690,10 @@ For simulation automations with the **Status** value **Active** or **Inactive**,
 
 You can view the simulation reports for automated campaigns in the **Simulations** tab. Click on the name of the simulation, having a prefix of **AutomatedSimulation_** and automation name available under the column **Created by**. To view the report click anywhere in the simulation row other than the check box next to the name.
 
-## Frequently asked questions (FAQ) for simulations automations
+<a name="frequently-asked-questions-faq-for-simulations-automations"></a>
+## Frequently asked questions (FAQ) for simulation automations
 
-This section contains some of the most common questions about Simulation automations.
+The following frequently asked questions cover common issues with simulation automations.
 
 ### Why does the Status value under Automations show Completed, but the Status value under Simulations show In progress?
 
@@ -694,13 +715,13 @@ The **Randomize** option on the [Simulation schedule](#simulation-schedule) page
 
 ### How does the Randomize option on the Select a payload and login page work?
 
-The **Randomize** option on the [Select payloads and login pages](#select-payloads-and-login-pages) page works as follows:
+The **Randomize** option on the [Select payloads and login pages](#select-payloads-and-login-pages) page automatically picks a technique and a payload instead of requiring you to select them manually.
 
-For every run, a social engineering technique from the list of selected techniques is chosen, and then a random payload for that technique will be chosen from both **Global payloads** (built-in) and **Tenant payloads** (custom). This behavior helps to ensure that the selected payload wasn't part of any previous run for this particular automation.
+For every run, a social engineering technique from the list of selected techniques is chosen, and then a random payload for that technique is chosen from both **Global payloads** (built-in) and **Tenant payloads** (custom). This behavior helps to ensure that the selected payload wasn't part of any previous run for this particular automation.
 
 ### With a randomized schedule, the maximum number of simulations is between 1 and 10. How does this work?
 
-This number is the maximum number of runs that can be created by this automation. For example, if you select 10, the maximum number of simulations that will be created by this automation is 10. The number of simulations can be fewer depending on the number of targeted users and the availability of payloads.
+The **Max number of simulations** value is the maximum number of runs that can be created by this automation. For example, if you select 10, the maximum number of simulations that will be created by this automation is 10. The number of simulations can be fewer depending on the number of targeted users and the availability of payloads.
 
 ### If I select only one specific day between two days (for example, Wednesday), how many simulations will I see on the Simulation tab?
 
@@ -710,7 +731,8 @@ If there's only one Wednesday between the start date and end date, the automatio
 
 Randomize send time works in batches of 1,000 users and is meant to be used with a large number of targeted users. If less than 1,000 users are involved in simulations created by automations, batches of 100 users are created for randomized send times.
 
-## Related links
+<a name="related-links"></a>
+## Related content
 
 [Get started using Attack simulation training](attack-simulation-training-get-started.md)
 

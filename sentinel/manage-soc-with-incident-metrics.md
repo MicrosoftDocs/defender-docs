@@ -1,11 +1,13 @@
 ---
-title: Manage your SOC better with incident metrics in Microsoft Sentinel | Microsoft Docs
+title: Manage your SOC better with incident metrics in Microsoft Sentinel
 description: Use information from the Microsoft Sentinel incident metrics screen and workbook to help you manage your Security Operations Center (SOC).
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: idpelleg
 ms.topic: how-to
-ms.custom: mvc
-ms.date: 11/09/2021
+ms.custom: mvc, msecd-doc-authoring-1014
+ms.date: 06/15/2026
+ai-usage: ai-assisted
 
 #Customer intent: As a security operations manager, I want to analyze incident metrics using customizable workbooks and queries so that I can monitor and improve my team's performance and efficiency.
 
@@ -23,7 +25,7 @@ The **SecurityIncident** table is built into Microsoft Sentinel. You'll find it 
 
 :::image type="content" source="./media/manage-soc-with-incident-metrics/security-incident-table.png" alt-text="Security incidents table":::
 
-Every time you create or update an incident, a new log entry will be added to the table. This allows you to track the changes made to incidents, and allows for even more powerful SOC metrics, but you need to be mindful of this when constructing queries for this table as you may need to remove duplicate entries for an incident (dependent on the exact query you are running). 
+Every time you create or update an incident, a new log entry will be added to the table. This allows you to track the changes made to incidents, and allows for even more powerful SOC metrics, but you need to be mindful that each incident update creates a new log entry when constructing queries for this table, as you may need to remove duplicate entries for an incident (dependent on the exact query you are running). 
 
 For example, if you wanted to return a list of all incidents sorted by their incident number but only wanted to return the most recent log per incident, you could do this using the KQL [***summarize*** operator](/kusto/query/summarize-operator?view=microsoft-sentinel&preserve-view=true) with the [***arg_max()*** aggregation function](/kusto/query/arg-max-aggregation-function?view=microsoft-sentinel&preserve-view=true):
 
@@ -31,7 +33,10 @@ For example, if you wanted to return a list of all incidents sorted by their inc
 SecurityIncident
 | summarize arg_max(LastModifiedTime, *) by IncidentNumber
 ```
-### More sample queries
+<a name="more-sample-queries"></a>
+### Sample KQL queries for incident metrics
+
+The following examples show common KQL queries you can use with the **SecurityIncident** table.
 
 Incident state - all incidents by status and severity in a given time frame:
 
@@ -88,11 +93,14 @@ You can find this new workbook template by choosing **Workbooks** from the Micro
 
 You can use the template to create your own custom workbooks tailored to your specific needs.
 
-## SecurityIncidents schema
+<a name="securityincidents-schema"></a>
+## Review the SecurityIncidents schema
+
+The following schema reference describes the fields available in the **SecurityIncident** table.
 
 [!INCLUDE [SecurityIncidents schema](includes/sentinel-schema-security-incident.md)]
 
 ## Next steps
 
-- To get started with Microsoft Sentinel, you need a subscription to Microsoft Azure. If you do not have a subscription, you can sign up for a [free trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
-- Learn how to [onboard your data to Microsoft Sentinel](quickstart-onboard.md), and [get visibility into your data, and potential threats](get-visibility.md).
+- To get started with Microsoft Sentinel, you need a subscription to Microsoft Azure. If you do not have a subscription, you can sign up for an [Azure free trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
+- Learn how to [onboard your data to Microsoft Sentinel](quickstart-onboard.md), and [get visibility into your data and potential threats in Microsoft Sentinel](get-visibility.md).

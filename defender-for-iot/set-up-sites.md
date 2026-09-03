@@ -1,15 +1,17 @@
 ---
 title: Set up and create sites for site security with Microsoft Defender for IoT in the Defender portal
-description: This article describes how to set up and create a site as part of the site security feature included in Microsoft Defender for IoT in the Microsoft Defender portal.
+description: Create and configure sites in the Defender portal's Site security page so security teams can monitor and assess the security status of OT production environments.
 ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 08/26/2024
+ms.date: 06/11/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
-# Set up sites
+# Set up sites in Microsoft Defender for IoT
 
 Microsoft Defender for IoT in the Microsoft Defender portal includes the **Site security** page, which offers an overview of the security state of your entire operational technology (OT) environment. Your organization's security team use this page to regularly monitor the security status of your production sites.
 
@@ -21,9 +23,11 @@ Learn more about the [site security benefits and use cases](site-security-overvi
 
 ## Prerequisites
 
+Before you create a site, make sure you meet the following prerequisites:
+
 - Review [the general prerequisites for Microsoft Defender for IoT](prerequisites.md).
 - Review the required site security permissions according to [RBAC requirements](set-up-rbac.md).
-- Get a Microsoft Defender for IoT trial license. For more information, see [Microsoft Defender for IoT subscriptions settings](get-started.md).
+- Have a Microsoft Defender for IoT license. For more information, see [Get started with Defender for IoT](get-started.md).
 - We recommend you have IP or MAC address details of at least one OT device at the site that is discovered by Microsoft Defender for Endpoint.
 
 ## Create a site
@@ -43,7 +47,8 @@ To set up a site and associate the OT devices in your network to it:
 
 1. When completed, select **Next** to associate devices to the site.
 
-## Associate devices
+<a name="associate-devices"></a>
+## Associate devices with a site
 
 In this stage, you configure Defender for IoT to associate devices to the site, so it can correctly identify and associate all types of devices at the same site.
 
@@ -62,11 +67,11 @@ In this stage, you configure Defender for IoT to associate devices to the site, 
 
     1. Open the location and check that at least one of these devices exists at your site.
 
-        Check each location, because Defender for IoT might list your devices in more than one suggested location. If this happens, select all of the suggested locations that include an identified device. You can select any number of locations. However, you can't edit the list of devices that appear at a specific location.
+        Check each location, because Defender for IoT might list your devices in more than one suggested location. If Defender for IoT lists your devices in more than one suggested location, select all of the suggested locations that include an identified device. You can select any number of locations. However, you can't edit the list of devices that appear at a specific location.
 
 1. Review the devices and select the suggested sites to associate with the site. You might need to select more than one suggested site.
 
-    Use the **Group** column to check the ID for each suggested site. Sites with the same ID indicate that the devices are likely located at the same physical location. As these suggested sites are expected to belong to the same site, review and confirm that the devices listed are correct before making your selections and associating the suggested sites.
+    Use the **Group** column to check the ID for each suggested site. Sites with the same ID indicate that the devices are likely located at the same physical location. Because suggested sites with the same Group ID are expected to belong to the same physical site, review and confirm that the listed devices are correct before you associate those suggested sites.
 
     :::image type="content" source="media/set-up-sites/site-security-associate-group.png" alt-text="Screenshot showing the associate devices screen and the suggested list of OT devices per location with the Group column in the site set-up page of Microsoft Defender for IoT in the Microsoft Defender portal." lightbox="media/set-up-sites/site-security-associate-group.png" :::
   
@@ -74,7 +79,8 @@ In this stage, you configure Defender for IoT to associate devices to the site, 
 
 [!INCLUDE [defender-iot-site-association](includes/site-association.md)]
 
-## Preview devices
+<a name="preview-devices"></a>
+## Preview devices before assigning them to a site
 
 In this stage, you review all of the devices discovered by the system. This gives admins the opportunity to review and remove devices before confirming the site creation. A list of all devices to be associated with this site is displayed.
 
@@ -113,11 +119,12 @@ Review the information for the site you want to create:
     Regarding device data:
 
     - The site data in the **Device Inventory** under **Site tag** and **Site attribute** starts to appear after each OT device performs network activity and contacts the Defender portal. For some devices, this happens quickly, but for other devices, the data takes time to appear in the inventory. When the site tag and attribute data appears, the device is protected by Defender for IoT, including all of the security value, such as alerts, vulnerabilities, and more.
-    - Any new devices that are added to the network are automatically detected and added to the **Device Inventory**. If a device is moved to a different or new location within the network, these changes are automatically made to the network.
+    - Any new devices that are added to the network are automatically detected and added to the **Device Inventory**. If a device is moved to a different or new location within the network, the device's location and site association in the **Device Inventory** are updated automatically.
 
 1. Select **Create device group** to [create a device group](#add-device-group) now, or select **Close** and [set up a device group at a later stage](/defender-endpoint/machine-groups).
 
-## Add device group
+<a name="add-device-group"></a>
+## Add a device group to a site
 
 Use a device group to make sure that the correct users have access to the site. To create a device group:
 
@@ -152,7 +159,7 @@ To move a group up or down, drag the row to the correct position in the list. Fo
 
 ## Assign device group roles and permissions
 
-To get the full benefit of the Device group, you might need to create roles and permission settings. For more information, see [role based access control in Microsoft Defender for Endpoint](/defender-endpoint/rbac), and [create and manage roles in Microsoft Defender for Endpoint](/defender-endpoint/user-roles).
+To get the full benefit of the device group you created, you might need to create roles and permission settings. For more information, see [role based access control in Microsoft Defender for Endpoint](/defender-endpoint/rbac), and [create and manage roles in Microsoft Defender for Endpoint](/defender-endpoint/user-roles).
 
 ## Next steps
 

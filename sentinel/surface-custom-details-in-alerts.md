@@ -1,14 +1,17 @@
 ---
-title: Surface custom details in Microsoft Sentinel alerts | Microsoft Docs
+title: Surface custom details in Microsoft Sentinel alerts
 description: Extract and surface custom event details in alerts in Microsoft Sentinel analytics rules, for better and more complete incident information
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: idpelleg
 ms.topic: how-to
-ms.date: 04/26/2022
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security analyst, I want to surface custom event details in alerts so that I can triage, investigate, and respond to incidents more efficiently.
@@ -21,11 +24,13 @@ ms.collection: usx-security
 
 Using the **custom details** feature in the **analytics rule wizard**, you can surface event data in the alerts that are constructed from those events, making the event data part of the alert properties. In effect, this gives you immediate event content visibility in your incidents, enabling you to triage, investigate, draw conclusions, and respond with much greater speed and efficiency.
 
-The procedure detailed below is part of the analytics rule creation wizard. It's treated here independently to address the scenario of adding or changing custom details in an existing analytics rule.
+Use this procedure to add or modify custom details in an existing scheduled query analytics rule. These steps are part of the analytics rule creation wizard but are treated here independently.
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
 ## How to surface custom event details
+
+Perform the following steps to surface custom event details in an analytics rule.
 
 1. Enter the **Analytics** page in the portal through which you access Microsoft Sentinel:
 
@@ -47,7 +52,7 @@ The procedure detailed below is part of the analytics rule creation wizard. It's
 
     :::image type="content" source="media/surface-custom-details-in-alerts/alert-enrichment.png" alt-text="Find and select custom details":::
 
-1. In the now-expanded **Custom details** section, add key-value pairs corresponding to the details you want to surface:
+1. In the expanded **Custom details** section, add key-value pairs for the details you want to surface:
 
     1. In the **Key** field, enter a name of your choosing that will appear as the field name in alerts.
 
@@ -55,7 +60,7 @@ The procedure detailed below is part of the analytics rule creation wizard. It's
     
         :::image type="content" source="media/surface-custom-details-in-alerts/custom-details.png" alt-text="Add custom details":::
 
-1. Click **Add new** to surface more details, repeating the last steps to define key-value pairs. 
+1. To surface more details, click **Add new** and enter a **Key** name and select a **Value** from the drop-down list for each additional key-value pair.
 
     If you change your mind, or if you made a mistake, you can remove a custom detail by clicking the trash can icon next to the **Value** drop-down list for that detail.
 
@@ -68,9 +73,10 @@ The procedure detailed below is part of the analytics rule creation wizard. It's
     >
     > - The combined size limit for all custom details and their values in a single alert is **2 KB**. Values in excess of this limit are dropped.
 
-## Next steps
+<a name="next-steps"></a>
+## Related content
 
-In this document, you learned how to surface custom details in alerts using Microsoft Sentinel analytics rules. To learn more about Microsoft Sentinel, see the following articles:
+Learn more about alert enrichment and analytics rules in Microsoft Sentinel:
 
 - Explore the other ways to enrich your alerts:
     - [Map data fields to entities in Microsoft Sentinel](map-data-fields-to-entities.md)

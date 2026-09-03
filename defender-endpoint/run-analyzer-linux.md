@@ -411,8 +411,8 @@ This mode collects installation related information like distro and system requi
 
   -h, --help                show this help message and exit
   -d, --distro              Check for distro support
-  -m, --min-requirement     Check for the system info against offical minimum requirements
-  -e, --external-dep        Check for externel package dependency
+  -m, --min-requirement     Check for the system info against official minimum requirements
+  -e, --external-dep        Check for external package dependency
   -c, --connectivity        Check for connectivity for services used by MDE
   -a, --all                 Run all checks
   -o ONBOARDING_SCRIPT, --onboarding-script ONBOARDING_SCRIPT
@@ -528,7 +528,7 @@ The XMDE Client Analyzer can be run during a Live Response session either by usi
 
 If Microsoft Defender for Endpoint is already installed on the device, you can run the Client Analyzer directly from the agent installation without downloading or installing additional packages.
 
-- Create an `MDESupportToolBinary.sh` file and paste the following content into it.
+- For Client Analyzer binary shipped with Microsoft Defender for Linux, create an `MDESupportToolBinary.sh` file and paste the following content into it.
 
    ```bash
    #! /usr/bin/bash
@@ -538,13 +538,17 @@ If Microsoft Defender for Endpoint is already installed on the device, you can r
 
    echo "Running MDESupportTool"
    ./MDESupportTool $@
+   ```
 
-   Execute:
+- Execute:
+
+   ```bash
    run MDESupportToolBinary.sh -parameters "--bypass-disclaimer -d"
+   ```
 
+- For Client Analyzer Python shipped with Microsoft Defender for Linux, create an `MDESupportToolPython.sh` file and paste the following content into it.
 
-   MDESupportToolPython.sh
-
+   ```bash
    #! /usr/bin/bash
 
    echo "cd /opt/microsoft/mdatp/tools/client_analyzer/python"
@@ -552,10 +556,12 @@ If Microsoft Defender for Endpoint is already installed on the device, you can r
 
    echo "Running MDESupportTool"
    ./mde_support_tool.sh $@
+   ```
 
-   Execute:
+- Execute:
+
+   ```bash
    run MDESupportToolPython.sh -parameters "--bypass-disclaimer -d"
-
    ```
 
 ### Install the XMDE Client Analyzer

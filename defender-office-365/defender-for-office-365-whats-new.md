@@ -5,14 +5,18 @@ keywords: what's new in Microsoft Defender for Office 365, ga, generally availab
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
-ms.date: 04/02/2026
+ms.date: 07/10/2026
 ms.collection:
   - m365-security
   - tier1
 ms.topic: whats-new
-ms.custom: seo-marvel-apr2020
+ms.custom:
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
+  - msecd-doc-authoring-1015
 ms.reviewer: vippand
 ms.service: defender-office-365
+ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -34,6 +38,24 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Endpoint](/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/defender-cloud-apps/release-notes)
+
+## July 2026
+
+- **Unified RBAC is the default permission model for new Defender for Office 365 Plan 2 organizations**: Starting July 2026, new Microsoft Defender for Office 365 Plan 2 organizations use the Microsoft Defender unified role-based access control (Unified RBAC) model by default. For more information, see [Configure Unified RBAC for Microsoft Defender for Office 365](step-by-step-guides/configure-unified-rbac-defender-office-365.md) and [MC1246006](https://admin.microsoft.com/Adminportal/Home#/MessageCenter/:/messages/MC1246006).
+
+- **Microsoft Defender for Office 365 Plan 1 included in Microsoft 365 E3**: Microsoft 365 E3 now includes Microsoft Defender for Office 365 Plan 1. For more information about what's included in each plan, see [Microsoft Defender for Office 365 Plan 1 vs. Plan 2 cheat sheet](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet).
+
+- **Prompt injection protection**: Microsoft Defender for Office 365 now detects prompt injection attacks hidden in inbound email. For more information, see [Prompt injection protection in Microsoft Defender for Office 365](step-by-step-guides/prompt-injection-protection-defender-for-office-365.md).
+
+## April 2026
+
+- **Promotions folder for bulk email (preview)**: You can configure anti-spam policies to deliver bulk mail below the BCL threshold to the **Promotions** folder in supported versions of Outlook. For more information, see [Deliver bulk mail below the BCL threshold to the Promotions folder](anti-spam-bulk-complaint-level-bcl-about.md#deliver-bulk-mail-below-the-bcl-threshold-to-the-promotions-folder).
+
+- **Security Copilot email summary on the Email entity page**: If you have a [Microsoft Security Copilot](/copilot/security/get-started-security-copilot) subscription, you can generate an AI summary of email entity data directly from the [Email entity page](mdo-email-entity-page.md) by selecting the **Copilot** action.
+
+- **Remove users from Teams chats is generally available**: The ability to [remove internal users from Teams chats](teams-message-entity-panel.md#remove-users-from-teams-chats-in-the-teams-message-entity-panel) in the Teams message entity panel is now generally available.
+
+- **New RBAC permission for email content associated with alerts**: A new granular Unified RBAC permission **Email & collaboration content: Emails associated with alerts (read)** allows analysts to preview or download email messages associated with specific security alerts. For more information, see [Email entity page actions](mdo-email-entity-page.md#actions-on-the-email-entity-page).
 
 ## March 2026
 
@@ -85,7 +107,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## May 2025
 
-- In government cloud environments, :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** replaces the **Message actions** drop down list on the **Email** tab (view) of the details area of the **All email**, **Malware**, or **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md):
+- In government cloud environments, :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** replaces the **Message actions** drop down list on the **Email** tab (view) of the details area of the **All email**, **Malware**, or **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md):
   - SecOps personnel can now create organization block entries on URLs and files via the [Tenant Allow/Block List](tenant-allow-block-list-about.md) directly from Threat Explorer.
   - For 100 or fewer messages selected in Threat Explorer, SecOps personnel can take multiple actions on the selected messages from the same page. For example:
     - Purge email messages or propose email remediation.
@@ -145,7 +167,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - (GA) Learning hub resources have moved from the Microsoft Defender portal to [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118). Access Microsoft Defender XDR Ninja training, learning paths, training modules and more. Browse the [list of learning paths](/training/browse/?products=m365-ems-cloud-app-security%2Cdefender-for-cloud-apps%2Cdefender-identity%2Cm365-information-protection%2Cm365-threat-protection%2Cmdatp%2Cdefender-office365&expanded=m365%2Coffice-365), and filter by product, role, level, and subject.
 
-- (GA) SecOps personnel can now release email messages from quarantine or move messages from quarantine back to user Inboxes directly from :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** in Threat Explorer, Advanced hunting, custom detection, the Email entity page, and the Email summary panel. This capability allows security operators to manage false positives more efficiently and without losing context. For more information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+- (GA) SecOps personnel can now release email messages from quarantine or move messages from quarantine back to user Inboxes directly from :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** in Threat Explorer, Advanced hunting, custom detection, the Email entity page, and the Email summary panel. This capability allows security operators to manage false positives more efficiently and without losing context. For more information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
 - We're introducing intra-org protection data into three of our core customer facing reports: the [Mailflow status report](reports-email-security.md#mailflow-status-report), [Threat protection status report](reports-email-security.md#threat-protection-status-report), and [Top senders and recipient report](reports-email-security.md#top-senders-and-recipients-report). Admins and security operators now have insight into how [the built-in security features for all cloud mailboxes](eop-about.md) and Defender for Office 365 protect users from malicious email traffic inside the organization. For more information, see [Email security report changes in the Microsoft Defender portal](reports-email-security.md#email-security-report-changes-in-the-microsoft-defender-portal).
 
@@ -164,7 +186,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - **Last used date** added to Tenant Allow/Block List entries for domains and email addresses, files, and URLs.
 - **Enhanced clarity in submissions results**: Admins and security operators now see enhanced results within submissions across email, Microsoft Teams messages, email attachments, URLs, and user-reported messages. These updates aim to eliminate any ambiguity associated with the current submission results. The results are refined to ensure clarity, consistency, and conciseness, making the submission results more actionable for you. [Learn more](submissions-admin.md).
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** replaces the **Message actions** drop down list on the **Email** tab (view) of the details area of the **All email**, **Malware**, or **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md):
+- :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** replaces the **Message actions** drop down list on the **Email** tab (view) of the details area of the **All email**, **Malware**, or **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md):
   - SecOps personnel can now create organization block entries on URLs and files via the [Tenant Allow/Block List](tenant-allow-block-list-about.md) directly from Threat Explorer.
   - For 100 or fewer messages selected in Threat Explorer, SecOps personnel can take multiple actions on the selected messages from the same page. For example:
     - Purge email messages or propose email remediation.

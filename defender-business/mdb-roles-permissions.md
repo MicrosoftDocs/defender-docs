@@ -6,7 +6,7 @@ ms.author: chrisda
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 07/03/2026
 ms.reviewer: efratka, nehabha
 ms.collection:
 - SMB
@@ -14,6 +14,8 @@ ms.collection:
 - m365solution-mdb-setup
 - highpri
 - tier1
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Assign security roles and permissions in Microsoft Defender for Business
@@ -32,7 +34,10 @@ Your organization's security team needs certain permissions to perform tasks, su
 
 Permissions are granted through certain roles in the [Microsoft Entra ID](/entra/identity/role-based-access-control/manage-roles-portal). These roles can be assigned in the Microsoft 365 admin center or in the Microsoft Entra admin center.
 
-## What to do
+<a name="what-to-do"></a>
+## Choose where to assign roles and permissions
+
+Use the following links to learn about Defender for Business roles, manage assignments, and continue to the next steps:
 
 1. [Learn about roles in Defender for Business](#roles-in-defender-for-business).
 2. [View or edit role assignments for your security team](#view-and-edit-role-assignments).
@@ -44,7 +49,7 @@ The following table describes the main roles that are assigned in Defender for B
 
 |Permission level|Description|
 |---|---|
-|**Security Administrator**|Security Administrators can perform the following tasks: <ul><li>View and manage security policies</li><li>View, respond to, and manage alerts</li><li>Take response actions on devices with detected threats</li><li>View security information and reports</li></ul> <br/> In general, security admins use the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) to perform security tasks.|
+|**Security Administrator**|Security Administrators can perform the following tasks: <ul><li>View and manage security policies</li><li>View, respond to, and manage alerts</li><li>Take response actions on devices with detected threats</li><li>View security information and reports</li></ul> <br/> In general, security admins use the [Microsoft Defender portal](https://security.microsoft.com) to perform security tasks.|
 |**Security Reader**|Security Readers can perform the following tasks: <ul><li>View a list of onboarded devices</li><li>View security policies</li><li>View alerts and detected threats</li><li>View security information and reports </li></ul> <br/> Security readers can't add or edit security policies, nor can they onboard devices.|
 
 For more information about roles, see the following articles:
@@ -61,7 +66,9 @@ You can use the Microsoft 365 admin center or the Microsoft Entra admin center t
 
 ## [**Microsoft 365 admin center**](#tab/M365Admin)
 
-1. Go to the Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) and sign in.
+Use the following steps to open a user account in the Microsoft 365 admin center and manage role assignments:
+
+1. Go to the [Microsoft 365 admin center](https://admin.microsoft.com) and sign in.
 
 2. In the navigation pane, go to **Users** \> **Active users**.
 
@@ -78,7 +85,9 @@ You can use the Microsoft 365 admin center or the Microsoft Entra admin center t
 
 ## [**Microsoft Entra admin center**](#tab/Entra)
 
-1. Go to the Microsoft Entra admin center ([https://entra.microsoft.com](https://entra.microsoft.com/)) and sign in.
+Use the following steps in the Microsoft Entra admin center to open a user account and manage assigned roles:
+
+1. Go to the [Microsoft Entra admin center](https://entra.microsoft.com/) and sign in.
 
 2. In the navigation pane, go to **Users** \> **All users**.
 
@@ -95,5 +104,7 @@ You can use the Microsoft 365 admin center or the Microsoft Entra admin center t
 
 ## Next steps
 
-- Proceed to [Step 4: Set up email notifications for your security team](mdb-email-notifications.md).
-- [Step 5: Onboard devices to Microsoft Defender for Business](mdb-onboard-devices.md)
+After you assign roles and permissions, continue with the remaining Defender for Business setup steps:
+
+- [Set up email notifications for your security team](mdb-email-notifications.md). Configure email notifications so your security team receives alerts about new threats and vulnerabilities.
+- [Onboard devices to Microsoft Defender for Business](mdb-onboard-devices.md). Enroll your organization's devices so they're protected by Defender for Business.

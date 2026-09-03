@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "defender-office-365/step-by-step-guides/protect-your-c-suite-with-priority-account-protection.md",
+      "redirect_url": "/microsoft-365/admin/security-and-compliance/priority-accounts",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-office-365/zero-trust-continuous-access-evaluation-microsoft-365.md",
       "redirect_url": "/security/zero-trust/zero-trust-continuous-access-evaluation-microsoft-365",
       "redirect_document_id": false

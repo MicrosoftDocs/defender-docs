@@ -1,10 +1,13 @@
 ---
-title: Manage multiple tenants in Microsoft Sentinel as a Managed Security Service Provider | Microsoft Docs
+title: Manage multiple tenants in Microsoft Sentinel as a Managed Security Service Provider
 description: How to onboard and manage multiple tenants in Microsoft Sentinel as a Managed Security Service Provider (MSSP) using Azure Lighthouse.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: yobasha
 ms.topic: how-to
-ms.date: 11/11/2024
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As an MSSP, I want to manage multiple Microsoft Sentinel tenants from my own Azure tenant so that I can efficiently provide SOC services to my customers.
 
@@ -15,7 +18,7 @@ ms.date: 11/11/2024
 If you're a managed security service provider (MSSP) and you're using [Azure Lighthouse](/azure/lighthouse/overview) to offer security operations center (SOC) services to your customers, you can manage your customers' Microsoft Sentinel resources directly from your own Azure tenant, without having to connect to the customer's tenant. 
 
 > [!IMPORTANT]
-> After **March 31, 2027**, Microsoft Sentinel will no longer be supported in the Azure portal and will be available only in the Microsoft Defender portal. All customers using Microsoft Sentinel in the Azure portal will be [redirected to the Defender portal and will use Microsoft Sentinel in the Defender portal only](overview.md#microsoft-sentinel-in-the-azure-portal-retirement-timeline).
+> After **March 31, 2027**, Microsoft Sentinel will no longer be supported in the Azure portal and will be available only in the Microsoft Defender portal. All customers using Microsoft Sentinel in the Azure portal will be [redirected to the Defender portal](overview.md#microsoft-sentinel-in-the-azure-portal-retirement-timeline).
 >
 > If you're still using Microsoft Sentinel in the Azure portal, we recommend that you start planning your move to the Defender portal to ensure a smooth experience and to take full advantage of unified security operations and multitenant management capabilities offered by the Defender portal. For guidance and best practices, see the [Microsoft Defender portal implementation guide for MSSPs](/unified-secops/playbook-managed-security). 
 
@@ -41,6 +44,8 @@ If you have registered Microsoft Sentinel in your tenant, and your customers in 
 
 ## Access Microsoft Sentinel in managed tenants
 
+To access your customers' Microsoft Sentinel workspaces from your own tenant, perform the following steps:
+
 1. Under **Directory + subscription**, select the delegated directories (directory = tenant), and the subscriptions where your customer's Microsoft Sentinel workspaces are located.
 
     :::image type="content" source="media/multiple-tenants-service-providers/directory-subscription.png" alt-text="Choose tenants and subscriptions":::
@@ -52,7 +57,7 @@ If you have registered Microsoft Sentinel in your tenant, and your customers in 
 
 ## Related content
 
-In this document, you learned how to manage multiple Microsoft Sentinel tenants seamlessly. To learn more about Microsoft Sentinel, see the following articles:
+For more information about Microsoft Sentinel, see the following articles:
 
 - Learn how to [get visibility into your data, and potential threats](get-visibility.md).
 - Get started [detecting threats with Microsoft Sentinel](detect-threats-built-in.md).

@@ -1,54 +1,59 @@
 ---  
-title: KQL jobs, summary rules, and search jobs
+title: KQL Jobs, Summary Rules, and Search Jobs
 titleSuffix: Microsoft Security  
 description: A comparison of KQL jobs, summary rules, and search jobs in Microsoft Sentinel to choose the best tool for querying and analyzing security data.
+ms.author: edbaynash  
 author: EdB-MSFT  
+ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to
-ms.date: 03/29/2026
-ms.author: edbaynash  
+ms.date: 06/12/2026
 ms.collection: ms-security  
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 # Customer intent: As a security analyst, I need to choose the right tool for querying and analyzing data in Microsoft Sentinel.
 
 ---
 
-# KQL jobs, summary rules, and search jobs
+# Compare KQL jobs, summary rules, and search jobs in Microsoft Sentinel
 
 This article compares KQL jobs, summary rules, and search jobs in Microsoft Sentinel. These features let you query and analyze data in Microsoft Sentinel, and each serves different purposes and use cases.
 
 > [!NOTE]
 > KQL jobs require onboarding to the Microsoft Sentinel data lake. For more information, see [Onboard to the Microsoft Sentinel data lake](./sentinel-lake-onboarding.md).
 
-+ **KQL jobs**: Run one-time or scheduled asynchronous queries on data stored in the Microsoft Sentinel data lake. KQL jobs are best for incident investigations using historical logs, enrichment using low-fidelity logs, and scenarios that need queries with joins or unions across multiple tables. For more information, see [KQL jobs](kql-jobs.md).
+- **KQL jobs**: Run one-time or scheduled asynchronous queries on data stored in the Microsoft Sentinel data lake. KQL jobs are best for incident investigations using historical logs, enrichment using low-fidelity logs, and scenarios that need queries with joins or unions across multiple tables. For more information, see [KQL jobs](kql-jobs.md).
 
-+ **Summary rules**: Run frequent summarization jobs to aggregate high volume data such as network and firewall logs. Summary rules run in the background and store results in custom tables in the analytics tier.  For more information, see [Summary rules](../summary-rules.md).
+- **Summary rules**: Run frequent summarization jobs to aggregate high volume data such as network and firewall logs. Summary rules run in the background and store results in custom tables in the analytics tier.  For more information, see [Summary rules](../summary-rules.md).
 
-+ **Search jobs**: Run one-time, long-running asynchronous queries across large datasets. Search jobs are useful when you need to hydrate large volumes of data from a single table into a new custom table within the analytics tier for further investigation or forensic analysis. For more information, see [Search jobs](../search-jobs.md).
+- **Search jobs**: Run one-time, long-running asynchronous queries across large datasets. Search jobs are useful when you need to hydrate large volumes of data from a single table into a new custom table within the analytics tier for further investigation or forensic analysis. For more information, see [Search jobs](../search-jobs.md).
 
 ## Usage scenarios and feature choice
 
-The following section helps you decide which feature is best for your needs.
+Use the guidance below to decide which feature best fits your needs.
 
 If you have any of the following requirements, use KQL jobs:
 
-+ You need to query up to 12 years of historical data.
-+ You need to run complex queries involving full KQL operators including joins or unions.
-+ You need scheduled or ad-hoc investigation capabilities.
+- You need to query up to 12 years of historical data.
+- You need to run complex queries involving full KQL operators including joins or unions.
+- You need scheduled or ad-hoc investigation capabilities.
 
 Use summary rules if you have any of the following requirements:
 
-+ Data is in a workspace that isn't onboarded to Microsoft Sentinel data lake, for example, data in Auxiliary or Basic tiers.
-+ You need frequent summarization, for example, every 20 minutes.
-+ You want to use out-of-the-box summary rules templates.
+- Data is in a workspace that isn't onboarded to Microsoft Sentinel data lake, for example, data in Auxiliary or Basic tiers.
+- You need frequent summarization, for example, every 20 minutes.
+- You want to use out-of-the-box summary rules templates.
 
 If you have any of the following requirements, use search jobs:
 
-+ You have data in archive tier. If you're onboarded to Microsoft Sentinel data lake, to access data older than your onboarding date, use search jobs. For data from your onboarding date onward, use KQL jobs.
-+ You need to hydrate large volumes of data from a single table.
+- You have data in archive tier. If you're onboarded to Microsoft Sentinel data lake, to access data older than your onboarding date, use search jobs. For data from your onboarding date onward, use KQL jobs.
+- You need to hydrate large volumes of data from a single table.
 
 ## Feature comparison
+
+The following table compares KQL jobs, summary rules, and search jobs across scope, limits, and pricing.
 
 | Feature | KQL Jobs | Summary Rules | Search jobs |
 |---|---|---|---|
@@ -66,8 +71,9 @@ If you have any of the following requirements, use search jobs:
 | **Pricing model** | GB of data analyzed | Analytics tier: free; Basic and auxiliary tier: Data scan (Log Analytics pricing model) | GB of data analyzed |
 | **Template support** / Health monitoring | Template Support: No<br>Health Monitoring: No | Template Support: Yes (Content Hub, ARM)<br>Health Monitoring: LASummaryLogs | Template Support: No<br>Health Monitoring: No |
 
+## Related content
 
-## Related articles
+For more information about the features discussed in this article, see the following resources:
 
 - [KQL and the Microsoft Sentinel data lake](kql-overview.md)
 - [Jupyter notebooks and the Microsoft Sentinel data lake](notebooks-overview.md)

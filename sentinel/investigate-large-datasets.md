@@ -3,13 +3,14 @@ title: Start an investigation by searching large datasets - Microsoft Sentinel
 description: Learn about search jobs and restoring data from long-term retention in Microsoft Sentinel.
 author: EdB-MSFT
 ms.topic: how-to
-ms.date: 03/03/2024
+ms.date: 06/15/2026
 ms.author: edbaynash
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 
 #Customer intent: As a security analyst, I want to search and restore log data from long-term retention so that I can conduct thorough investigations on historical events.
@@ -22,6 +23,8 @@ One of the primary activities of a security team is to search logs for specific 
 
 In Microsoft Sentinel, you can search across long time periods in extremely large datasets by using a search job.  While you can run a search job on any type of log, search jobs are ideally suited to search logs in a long-term retention (formerly known as archive) state. If you need to do a full investigation on such data, you can restore that data into an interactive retention state&mdash;like your regular Log Analytics tables&mdash; to run high performing queries and deeper analysis.
 
+This article shows you how to run search jobs on large datasets, restore archived log data for deeper investigation, and bookmark search results.
+
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
 ## Search large datasets
@@ -30,7 +33,7 @@ Use a search job to retrieve data stored in [long-term retention](/azure/azure-m
 
 Search results are stored in a table named with a `_SRCH` suffix.
 
-This image shows example search criteria for a search job.
+The following screenshot shows example search criteria for a search job.
 
 :::image type="content" source="media/investigate-large-datasets/search-job-criteria.png" alt-text="Screenshot of search page with search criteria of administrator, time range last 1 year, and a table selected.":::
 
@@ -40,7 +43,7 @@ When you need to do a full investigation on log data in long-term retention, res
 
 A restored log table is available in a new table that has a *_RST suffix. The restored data is available as long as the underlying source data is available. But you can delete restored tables at any time without deleting the underlying source data. To save costs, we recommend you delete the restored table when you no longer need it.
 
-The following image shows the restore option on a saved search.
+The restore option appears on a saved search, as shown in the screenshot.
 
 :::image type="content" source="media/investigate-large-datasets/search-results-restore.png" alt-text="Screenshot of the restore link on a saved search.":::
 
@@ -52,7 +55,9 @@ See [Restore limitations](/azure/azure-monitor/logs/restore#limitations) in the 
 
 Similar to the [threat hunting dashboard](hunting.md#use-the-hunting-dashboard), bookmark rows that contain information you find interesting so you can attach them to an incident or refer to them later. For more information, see [Create bookmarks](hunting.md#create-bookmarks).
 
-## Next steps
+## Related content
+
+To learn more about searching and restoring log data, see the following articles:
 
 - [Search across long time spans in large datasets](search-jobs.md)
 - [Restore logs from long-term retention](restore.md)

@@ -1,10 +1,11 @@
 ---
 title: Anomalies detected by the Microsoft Sentinel machine learning engine
 description: Learn about the anomalies detected by Microsoft Sentinel's machine learning engines.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: reference
-ms.date: 09/08/2024
+ms.date: 05/07/2026
 
 #Customer intent: As a security analyst, I want to understand the types of anomalies detected by machine learning models in my SIEM solution so that I can effectively monitor and respond to potential security threats.
 
@@ -70,11 +71,16 @@ UEBA detects anomalies based on these anomaly rules:
 - [UEBA Anomalous Failed Sign-in](#ueba-anomalous-failed-sign-in)
 - [UEBA Anomalous Federated or SAML Identity Activity in AwsCloudTrail](#ueba-anomalous-federated-or-saml-identity-activity-in-awscloudtrail)
 - [UEBA Anomalous IAM Privilege Modification in AwsCloudTrail](#ueba-anomalous-iam-privilege-modification-in-awscloudtrail)
+- [UEBA Anomalous Infrastructure Usage in GCP Audit Logs](#ueba-anomalous-infrastructure-usage-in-gcp-audit-logs)
+- [UEBA Anomalous Login in GCP Audit Logs](#ueba-anomalous-login-in-gcp-audit-logs)
 - [UEBA Anomalous Logon in AwsCloudTrail](#ueba-anomalous-logon-in-awscloudtrail)
 - [UEBA Anomalous MFA Failures in Okta_CL](#ueba-anomalous-mfa-failures-in-okta_cl)
 - [UEBA Anomalous Password Reset](#ueba-anomalous-password-reset)
 - [UEBA Anomalous Privilege Granted](#ueba-anomalous-privilege-granted)
+- [UEBA Anomalous Privileged Action in GCP Audit Logs](#ueba-anomalous-privileged-action-in-gcp-audit-logs)
+- [UEBA Anomalous Resource Deployment in GCP Audit Logs](#ueba-anomalous-resource-deployment-in-gcp-audit-logs)
 - [UEBA Anomalous Secret or KMS Key Access in AwsCloudTrail](#ueba-anomalous-secret-or-kms-key-access-in-awscloudtrail)
+- [UEBA Anomalous Secret or KMS Key Access in GCP Audit Logs](#ueba-anomalous-secret-or-kms-key-access-in-gcp-audit-logs)
 - [UEBA Anomalous Sign-in](#ueba-anomalous-sign-in)
 - [UEBA Anomalous STS AssumeRole Behavior in AwsCloudTrail](#ueba-anomalous-sts-assumerole-behavior-in-awscloudtrail)
 
@@ -158,7 +164,7 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 | Attribute                        | Value                                                               |
 | -------------------------------- | ------------------------------------------------------------------- |
 | **Anomaly type:**                | UEBA                                                                |
-| **Data sources:**                | Okta Cloud Logs                                                     |
+| **Data sources:**                | Okta Cloud Logs (Okta_CL and OktaV2_CL)                            |
 | **MITRE ATT&CK tactics:**        | Persistence, Privilege Escalation                                   |
 | **MITRE ATT&CK techniques:**     | T1098 - Account Manipulation, T1556 - Modify Authentication Process |
 | **Activity:**                    | user.session.impersonation.grant<br>user.session.impersonation.initiate<br>user.session.start<br>app.oauth2.admin.consent.grant_success<br>app.oauth2.authorize.code_success<br>device.desktop_mfa.recovery_pin.generate<br>user.authentication.auth_via_mfa<br>user.mfa.attempt_bypass<br>user.mfa.factor.deactivate<br>user.mfa.factor.reset_all<br>user.mfa.factor.suspend<br>user.mfa.okta_verify |
@@ -280,6 +286,34 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 
 [Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
 
+### UEBA Anomalous Infrastructure Usage in GCP Audit Logs
+
+**Description:** Unusual patterns of infrastructure operations in Google Cloud Platform (GCP), identified by comparing the user's IP address, user agent, ISP, and service access patterns against their historical behavior. Anomalies such as first-time access to infrastructure services, uncommon tools or applications, or unusual operational patterns might indicate lateral movement, resource abuse, or unauthorized infrastructure modifications.
+
+| Attribute                        | Value                                                              |
+| -------------------------------- | ------------------------------------------------------------------ |
+| **Anomaly type:**                | UEBA                                                               |
+| **Data sources:**                | GCP Audit Logs                                                     |
+| **MITRE ATT&CK tactics:**        | Discovery, Impact                                                  |
+| **MITRE ATT&CK techniques:**     | T1580 – Cloud Infrastructure Discovery, T1496 – Resource Hijacking |
+| **Activity:**                    | Non-create/insert operations on iamcredentials.googleapis.com, cloudresourcemanager.googleapis.com, container.googleapis.com, bigquerydatapolicy.googleapis.com, autoscaling.googleapis.com, run.googleapis.com, redis.googleapis.com, securitycenter.googleapis.com, compute.googleapis.com, storage.googleapis.com, k8s.io, cloudsql.googleapis.com, bigquery.googleapis.com, bigquerydatatransfer.googleapis.com, cloudfunctions.googleapis.com, appengine.googleapis.com, dns.googleapis.com |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
+### UEBA Anomalous Login in GCP Audit Logs
+
+**Description:** Unusual authentication activity in Google Cloud Platform (GCP) detected through login-related entries in GCP Audit Logs. Anomalies are determined by deviations in user behavior based on attributes such as geolocation, IP address, ISP, and user agent compared to the user's historical login patterns. Such deviations might indicate unauthorized access attempts, compromised credentials, or impossible travel scenarios.
+
+| Attribute                        | Value                                                              |
+| -------------------------------- | ------------------------------------------------------------------ |
+| **Anomaly type:**                | UEBA                                                               |
+| **Data sources:**                | GCP Audit Logs                                                     |
+| **MITRE ATT&CK tactics:**        | Initial Access                                                     |
+| **MITRE ATT&CK techniques:**     | T1078 – Valid Accounts                                             |
+| **Activity:**                    | login.googleapis.com                                               |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
 ### UEBA Anomalous Logon in AwsCloudTrail
 
 **Description:** Unusual logon activity in Amazon Web Services (AWS) services based on CloudTrail events such as ConsoleLogin and other authentication-related attributes. Anomalies are determined by deviations in user behavior based on attributes like geolocation, device fingerprint, ISP, and access method, and may indicate unauthorized access attempts or potential policy violations.
@@ -302,7 +336,7 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 | Attribute                        | Value                                                              |
 | -------------------------------- | ------------------------------------------------------------------ |
 | **Anomaly type:**                | UEBA                                                               |
-| **Data sources:**                | Okta Cloud Logs                                                    |
+| **Data sources:**                | Okta Cloud Logs (Okta_CL and OktaV2_CL)                           |
 | **MITRE ATT&CK tactics:**        | Persistence, Privilege Escalation                                  |
 | **MITRE ATT&CK techniques:**     | T1078 - Valid Accounts, T1556 - Modify Authentication Process      |
 | **Activity:**                    | app.oauth2.admin.consent.grant_success<br>app.oauth2.authorize.code_success<br>device.desktop_mfa.recovery_pin.generate<br>user.authentication.auth_via_mfa<br>user.mfa.attempt_bypass<br>user.mfa.factor.deactivate<br>user.mfa.factor.reset_all<br>user.mfa.factor.suspend<br>user.mfa.okta_verify |
@@ -338,6 +372,34 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 
 [Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
 
+### UEBA Anomalous Privileged Action in GCP Audit Logs
+
+**Description:** Deviations in Identity and Access Management (IAM) administrative behavior in Google Cloud Platform (GCP), such as first-time querying of grantable roles, retrieval or creation of service accounts and their keys, or modifications to IAM policies. A significantly higher volume of privileged or admin actions compared to the user's historical behavior might indicate privilege escalation, persistence through service accounts, or reconnaissance of available permissions.
+
+| Attribute                        | Value                                                              |
+| -------------------------------- | ------------------------------------------------------------------ |
+| **Anomaly type:**                | UEBA                                                               |
+| **Data sources:**                | GCP Audit Logs                                                     |
+| **MITRE ATT&CK tactics:**        | Privilege Escalation, Persistence                                  |
+| **MITRE ATT&CK techniques:**     | T1098 – Account Manipulation, T1078 – Valid Accounts               |
+| **Activity:**                    | QueryGrantableRoles, GetServiceAccount, ListServiceAccountKeys, CreateServiceAccount, GetIAMPolicy, ListApplicablePolicies, GetPolicy, CreateServiceAccountKey, and admin-related operations on iam.googleapis.com, firestore.googleapis.com, bigtableadmin.googleapis.com, alloydb.googleapis.com, admin.googleapis.com |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
+### UEBA Anomalous Resource Deployment in GCP Audit Logs
+
+**Description:** Unusual resource creation or deployment activity in Google Cloud Platform (GCP), including first-time provisioning of compute instances, storage buckets, Kubernetes clusters, Cloud Functions, or other infrastructure resources. A significantly higher rate of resource deployments compared to the user's historical behavior might indicate unauthorized resource deployment for cryptomining, data staging, or establishing persistent footholds in the environment.
+
+| Attribute                        | Value                                                              |
+| -------------------------------- | ------------------------------------------------------------------ |
+| **Anomaly type:**                | UEBA                                                               |
+| **Data sources:**                | GCP Audit Logs                                                     |
+| **MITRE ATT&CK tactics:**        | Execution, Persistence                                             |
+| **MITRE ATT&CK techniques:**     | T1610 – Deploy Container, T1578 – Modify Cloud Compute Infrastructure |
+| **Activity:**                    | Create and insert operations on apigee.googleapis.com, appengine.googleapis.com, bigquery.googleapis.com, bigquerydatatransfer.googleapis.com, cloudfunctions.googleapis.com, cloudsql.googleapis.com, compute.googleapis.com, container.googleapis.com, dataproc.googleapis.com, datastore.googleapis.com, dns.googleapis.com, firestore.googleapis.com, k8s.io, osconfig.googleapis.com, run.googleapis.com, storage.googleapis.com |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
 ### UEBA Anomalous Secret or KMS Key Access in AwsCloudTrail
 
 **Description:** Suspicious access to AWS Secrets Manager, or Key Management Service (KMS) resources. First-time access or unusually high access frequency might indicate credential harvesting or data exfiltration attempts.
@@ -349,6 +411,20 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 | **MITRE ATT&CK tactics:**        | Credential Access, Collection                                      |
 | **MITRE ATT&CK techniques:**     | T1555 - Credentials from Password Stores                          |
 | **Activity:**                    | GetSecretValue<br>BatchGetSecretValue <br>ListKeys<br>ListSecrets<br>PutSecretValue<br>CreateSecret<br>UpdateSecret<br>DeleteSecret<br>CreateKey<br>PutKeyPolicy |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
+### UEBA Anomalous Secret or KMS Key Access in GCP Audit Logs
+
+**Description:** Suspicious access to Google Cloud Secret Manager or Cloud KMS resources. First-time access to a secret vault, key, or certificate, unusual access patterns among peers, or a significantly higher volume of access compared to the user's historical baseline might indicate credential harvesting, data exfiltration attempts, or abuse of compromised service accounts.
+
+| Attribute                        | Value                                                              |
+| -------------------------------- | ------------------------------------------------------------------ |
+| **Anomaly type:**                | UEBA                                                               |
+| **Data sources:**                | GCP Audit Logs                                                     |
+| **MITRE ATT&CK tactics:**        | Credential Access, Collection                                      |
+| **MITRE ATT&CK techniques:**     | T1555 – Credentials from Password Stores, T1552 – Unsecured Credentials |
+| **Activity:**                    | Administrative operations on cloudkms.googleapis.com, secretmanager.googleapis.com (excluding AccessSecretVersion, AsymmetricDecrypt, GetPublicKey, AsymmetricSign) |
 
 [Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
 

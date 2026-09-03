@@ -1,5 +1,5 @@
 ---
-title: Email authentication
+title: How email authentication works in Microsoft 365
 author: chrisda
 ms.author: chrisda
 ms.topic: how-to
@@ -7,15 +7,17 @@ ms.assetid:
 ms.collection:
   - m365-security
   - tier2
-ms.custom: TopSMBIssues
+ms.custom: TopSMBIssues, msecd-doc-authoring-1016
 ms.localizationpriority: high
 description: Admins can learn how email authentication (SPF, DKIM, DMARC) works and how Microsoft 365 uses traditional email authentication and composite email authentication to allow and block spoofed messages.
 ms.service: defender-office-365
-ms.date: 07/07/2025
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
+#customer intent: As an IT administrator, I want to understand how email authentication (SPF, DKIM, DMARC, and composite authentication) works in Microsoft 365 so I can protect my organization from spoofing and phishing attacks.
 ---
 
 # Email authentication in cloud organizations
@@ -41,12 +43,9 @@ To configure email authentication for mail **sent from** Microsoft 365 organizat
 
 To prevent email authentication failures due to services that modify **inbound** mail sent to your Microsoft 365 organization, see [Configure trusted ARC sealers](email-authentication-arc-configure.md).
 
-The rest of this article explains:
+To diagnose and fix email authentication failures, see [Troubleshoot email authentication in Microsoft 365](email-authentication-troubleshoot.md).
 
-- [Why internet email needs authentication](#why-internet-email-needs-authentication)
-- [How SPF, DKIM, and DMARC work together to authenticate email message senders](#how-spf-dkim-and-dmarc-work-together-to-authenticate-email-message-senders)
-- [How Microsoft uses email authentication to check inbound mail sent to Microsoft 365](#inbound-email-authentication-for-mail-sent-to-microsoft-365)
-- [How to avoid email authentication failures when sending mail to Microsoft 365](#how-to-avoid-email-authentication-failures-when-sending-mail-to-microsoft-365)
+This article also covers why internet email needs authentication, how SPF, DKIM, and DMARC work together to authenticate email message senders, how Microsoft uses implicit and composite email authentication to check inbound mail sent to Microsoft 365, and how to avoid email authentication failures when sending mail to Microsoft 365.
 
 [!INCLUDE [MDO Setup guide](../includes/mdo-setup-guide.md)]
 
@@ -100,7 +99,7 @@ Clearly, SMTP email needs verifying message senders are who they claim to be!
 
 ## How SPF, DKIM, and DMARC work together to authenticate email message senders
 
-This section describes why you need SPF, DKIM, and DMARC for domains on the internet.
+Internet domains need SPF, DKIM, and DMARC to work together for effective email authentication.
 
 - **SPF**: As explained in [Set up SPF to identify valid email sources for your custom cloud domains](email-authentication-spf-configure.md), SPF uses a TXT record in DNS to:
   - Identify valid sources of mail from the MAIL FROM domain.
@@ -127,7 +126,7 @@ This section describes why you need SPF, DKIM, and DMARC for domains on the inte
   - Messages from an email hosting service where the same MAIL FROM address is used for mail from other domains.
   - Messages that encounter server-based email forwarding.
 
-  Because the DKIM signature in the message header isn't affected or altered in these scenarios, these messages are able to pass DKIM.
+  Because the DKIM signature in the message header isn't affected or altered during email forwarding or when a hosting service uses the same MAIL FROM address for multiple domains, these messages are able to pass DKIM.
 
   **DKIM issues**: The domain that DKIM uses to sign a message doesn't need to match the domain in the From address shown in email clients.
 
@@ -140,9 +139,11 @@ This section describes why you need SPF, DKIM, and DMARC for domains on the inte
 
   **How DMARC helps SPF and DKIM**: As previously described, SPF makes no attempt to match the domain in MAIL FROM domain and From addresses. DKIM doesn't care if the domain that signed the message matches the domain in the From address.
 
-  DMARC addresses these deficiencies by using SPF and DKIM to confirm that the domains in the MAIL FROM and From addresses match.
+  DMARC addresses the lack of domain alignment checks in SPF and DKIM by confirming that the domains in the MAIL FROM and From addresses match.
 
   **DMARC issues**: Legitimate services that modify messages in transit before delivery break SPF, DKIM, and therefore DMARC checks.
+
+  When messages are automatically forwarded between domains or organizations, DMARC alignment can fail even for legitimate service senders. For example, if a Microsoft service domain (such as voicemail.microsoft.com) fails DMARC after forwarding, use a scoped allow entry in the [Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-spoofed-senders) or authenticated relay rather than allowing the entire sending domain.
 
 - **ARC**: As explained in [Configure trusted ARC sealers](email-authentication-arc-configure.md), legitimate services that modify messages in transit can use ARC to preserve the original email authentication information of modified messages.
 
@@ -164,7 +165,7 @@ Using these other signals, messages that would otherwise fail traditional email 
 
 ### Composite authentication
 
-The results of Microsoft 365's implicit authentication checks are combined and stored in a single value named _composite authentication_ or `compauth` for short. The `compauth` value is stamped into the **Authentication-Results** header in the message headers. The **Authentication-Results** header uses the following syntax:
+The results of Microsoft 365's implicit authentication checks are combined and stored in a single value named _composite authentication_ or `compauth` for short. The **Authentication-Results** header is a message header field that records the outcome of email authentication checks. The `compauth` value is stamped into the **Authentication-Results** header in the message headers. The **Authentication-Results** header uses the following syntax:
 
 ```text
 Authentication-Results:

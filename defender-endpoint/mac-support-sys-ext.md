@@ -12,10 +12,13 @@ ms.collection:
 - mde-macos
 ms.topic: troubleshooting-general
 ms.subservice: macos
-ms.date: 04/16/2025
+ms.date: 08/11/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+
+ai-usage: ai-assisted
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1015
 ---
 
 # Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS
@@ -144,8 +147,8 @@ If you're using Intune, see [Manage macOS software update policies in Intune](/i
 
    :::image type="content" source="media/screen-on-clicking-refresh-devices.png" alt-text="The screen that appears on clicking Refresh devices." lightbox="media/screen-on-clicking-refresh-devices.png":::
 
-1. In Launchpad, type **System Preferences**.
-1. Double-click **Profiles**.
+1. Open **System Settings**.
+1. Select **General** > **Device Management** to review installed management profiles. The exact location can vary by macOS version.
 
    > [!NOTE]
    > If you aren't MDM joined, you won't see **Profiles** as an option.  Contact your MDM support team to see why the **Profiles** option isn't visible. You should be able to see the different profiles such as **System Extensions**, **Accessibility**, **Background Services**, **Notifications**, **Microsoft AutoUpdate**, and so on, as shown in the preceding screenshot.
@@ -162,6 +165,9 @@ The section [Sections that provide guidance on enabling profiles needed for Micr
 > For example: `FullDiskAccess (piloting) - macOS - Default - MDE`
 
 Using the recommended naming convention enables you to confirm that the correct profiles are dropping down at the time of checking.
+
+> [!IMPORTANT]
+> Deploy each Defender for Endpoint mobile configuration as a separate payload provided for that setting. Don't combine the onboarding, system extension, network filter, privacy preferences, background service, notification, or accessibility payloads into one custom payload. The management service might accept a merged or structurally modified payload, but macOS or Defender for Endpoint might ignore it.
 
 > [!TIP]
 > To ensure that the correct profiles are coming down, instead of typing.mobileconfig (plist)**, you can download this profile from GitHub, to avoid typos elongated hyphens.
@@ -259,12 +265,10 @@ The tool compares your profiles with what we have published in GitHub, and repor
 
      OR
 
-     - Run the script directly from the Web by running the following commands:
+     - Run the script directly from the web:
 
        ```bash
-       sudo curl https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mdm/analyze_profiles.py
-
-       | python3 -
+       curl -fsSL https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mdm/analyze_profiles.py | sudo python3 -
        ```
 
 The output shows all potential issues with profiles.

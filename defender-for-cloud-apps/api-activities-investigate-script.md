@@ -1,9 +1,11 @@
 ---
 title: Investigate activities using the API 
 description: This article provides information on how to use the API to investigate user activity in Defender for Cloud Apps.
-ms.date: 01/29/2023
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: Naama-Goldbart
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 # Investigate activities using the API
 
@@ -16,12 +18,17 @@ The activities API mode is optimized for scanning and retrieval of large quantit
 > [!NOTE]
 > For large quantities of activities and large scale deployments, we recommended that you use the [SIEM agent](siem.md) for activity scanning.
 
-## To use the activity scan script
+<a name="to-use-the-activity-scan-script"></a>
+## Use the activity scan script
+
+To scan activity data, send a POST request to the activities endpoint with scan mode enabled:
 
 1. Run the query on your data.
-1. If there are more records than could be listed in a single scan, you'll get a return command with `nextQueryFilters` that you should run. You'll get this command each time you scan until the query has returned all the results.
+1. If there are more records than could be listed in a single scan, the response includes `nextQueryFilters`. Use `nextQueryFilters` as the filter parameter in each subsequent query until the response returns all the results.
 
 ## Request body parameters
+
+The request body supports the following parameters:
 
 - "filters": Filter objects with all the search filters for the request, see [Activity filters](activity-filters-queries.md) for more information. To avoid having your requests be throttled, make sure to include a limitation on your query, for example, query the last day's activities, or filter for a particular app.
 - "isScan": Boolean. Enables the scanning mode.
@@ -33,11 +40,13 @@ The activities API mode is optimized for scanning and retrieval of large quantit
 
 ## Response parameters
 
+The response includes the following parameters:
+
 - "data": the returned data. Will contain up to "limit" number of records each iteration. If there are more records to be pulled (hasNext=true), the last few records are dropped to ensure that all data is listed only once.
 - "hasNext": Boolean. Denotes whether another iteration on the data is needed.
 - "nextQueryFilters": If another iteration is needed, it contains the consecutive JSON query to be run. Use this as the "filters" parameter in the next request. If the "hasNext" parameter is set to False, this parameter will be missing since you've iterated over all of the data.
 
-The following Python example gets all the activities from the past day from Exchange Online.
+The following Python example gets all the activities from the past day from Exchange Online. The script sends the prepared filters to the Activities API in scan mode and iterates through paginated responses using `nextQueryFilters` until all matching activity records are retrieved.
 
 ``` python
 import requests
@@ -77,4 +86,4 @@ print('Got {} records in total'.format(len(records)))
 > [!div class="nextstepaction"]
 > [Best practices for protecting your organization](best-practices.md)
 
-If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support).
+If you run into any problems, we're here to help. To get assistance or support for your product issue, please [contact Defender XDR support](/defender-xdr/contact-defender-support).

@@ -2,10 +2,13 @@
 title: Migrate Splunk detection rules to Microsoft Sentinel
 titleSuffix: Microsoft Sentinel
 description: Learn how to identify, compare, and migrate your Splunk detection rules to Microsoft Sentinel built-in rules.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: soulisabag
 ms.topic: how-to
-ms.date: 09/23/2024
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security engineer, I want to migrate Splunk detection rules to KQL so that I can leverage advanced machine learning analytics and improve incident detection and response with Microsoft Sentinel.
@@ -14,24 +17,24 @@ ms.date: 09/23/2024
 
 # Migrate Splunk detection rules to Microsoft Sentinel
 
-Splunk detection rules are security information and event management (SIEM) components that compare to analytics rules in Microsoft Sentinel. This article describes the concepts to identify, compare, and migrate them to Microsoft Sentinel. The best way is to start with the [SIEM migration experience](siem-migration.md), which identifies out-of-the-box (OOTB) analytics rules to automatically translate to.
+Splunk detection rules are security information and event management (SIEM) components that compare to analytics rules in Microsoft Sentinel. This article describes the concepts to identify, compare, and migrate them to Microsoft Sentinel. The best way to migrate Splunk detection rules to Microsoft Sentinel is to start with the [SIEM migration experience](siem-migration.md), which identifies out-of-the-box (OOTB) analytics rules for automatic translation.
 
 If you want to migrate your Splunk Observability deployment, learn more about how to [migrate from Splunk to Azure Monitor Logs](/azure/azure-monitor/logs/migrate-splunk-to-azure-monitor-logs).
 
 ## Audit rules
 
-Microsoft Sentinel uses machine learning analytics to create high-fidelity and actionable incidents. Some of your existing Splunk detections may be redundant in Microsoft Sentinel, so don't migrate them all blindly. Review these considerations as you identify your existing detection rules.
+Microsoft Sentinel uses machine learning analytics to create high-fidelity and actionable incidents. Some of your existing Splunk detections may be redundant in Microsoft Sentinel, so don't migrate them all blindly. Review the following rule-auditing considerations as you identify your existing detection rules.
 
 - Make sure to select use cases that justify rule migration, considering business priority and efficiency.
 - Check that you [understand Microsoft Sentinel rule types](detect-threats-built-in.md). 
 - Check that you understand the [rule terminology](#compare-rule-terminology).
 - Review outdated rules that don't have alerts for the past 6-12 months, and determine whether they're still relevant.
 - Eliminate low-level threats or alerts that you routinely ignore.
-- Confirm connected data sources and review your data connection methods. Microsoft Sentinel Analytics require that the data type is present in the Log Analytics workspace before a rule is enabled. Revisit data collection conversations to ensure data depth and breadth across the use cases you plan to detect. Then use the [SIEM migration experience](siem-migration.md) to ensure the data sources are mapped appropriately.
+- Microsoft Sentinel Analytics require that the data type is present in the Log Analytics workspace before a rule is enabled. Confirm that your required data sources are connected and review your data connection methods. Revisit data collection conversations to ensure data depth and breadth across the use cases you plan to detect. Then use the [SIEM migration experience](siem-migration.md) to ensure the data sources are mapped appropriately.
 
 ## Migrate rules
 
-After you identify the Splunk detections to migrate, review these considerations for the migration process:
+After you identify the Splunk detections to migrate, review the following migration-process considerations:
 
 - Compare the existing functionality of Microsoft Sentinel's OOTB analytics rules with your current use cases. Use the [SIEM migration experience](siem-migration.md) to see which Splunk detections are automatically converted to OOTB templates.
 - Translate detections that don't align to OOTB analytics rules. The best way to translate Splunk detections automatically is with the [SIEM migration experience](siem-migration.md).
@@ -41,6 +44,8 @@ After you identify the Splunk detections to migrate, review these considerations
 For more information, see [best practices for migrating detection rules](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/best-practices-for-migrating-detection-rules-from-arcsight/ba-p/2216417).
 
 ### Rule migration steps
+
+Follow these steps to validate, translate, and test each Splunk detection rule during migration to Microsoft Sentinel.
 
 1. Verify that you have a testing system in place for each rule you want to migrate.
 
@@ -68,13 +73,13 @@ For more information, see [best practices for migrating detection rules](https:/
 
     - **If you have detections that aren't covered by Microsoft Sentinel's OOTB rules**, first try the [SIEM migration experience](siem-migration.md) for automatic translation.
 
-    - **If neither the OOTB rules nor the SIEM migration completely translate the detection**, create the rule manually. In such cases, use the following steps to create your rule:
+    - **If neither the OOTB rules nor the SIEM migration completely translate the detection**, create the rule manually. Use the following steps to create your rule:
 
         1. **Identify the data sources you want to use in your rule**. Identify the Microsoft Sentinel tables you want to query by creating a mapping table between data sources and data tables.
 
         1. **Identify any attributes, fields, or entities** in your data that you want to use in your rules.
 
-        1. **Identify your rule criteria and logic**. At this stage, consider finding rule templates as samples for how to construct your KQL queries.
+        1. **Identify your rule criteria and logic**. When identifying your rule criteria and logic, consider using rule templates as samples for how to construct your KQL queries.
 
             Consider filters, correlation rules, active lists, reference sets, watchlists, detection anomalies, aggregations, and so on. You might use references provided by your legacy SIEM to understand [how to best map your query syntax](#map-and-compare-rule-samples).            
 
@@ -93,7 +98,7 @@ Learn more about analytics rules:
 
 ## Compare rule terminology
 
-This table helps you to clarify the concept of a rule based on Kusto Query Language (KQL) in Microsoft Sentinel compared to a Splunk detection based on Search Processing Language (SPL).
+The following comparison table clarifies how a KQL-based rule in Microsoft Sentinel corresponds to an SPL-based detection in Splunk.
 
 | |Splunk |Microsoft Sentinel |
 |---------|---------|---------|
@@ -104,9 +109,11 @@ This table helps you to clarify the concept of a rule based on Kusto Query Langu
 
 ## Map and compare rule samples
 
-Use these samples to compare and map rules from Splunk to Microsoft Sentinel in various scenarios.
+Use the following SPL-to-KQL samples to compare and map rules from Splunk to Microsoft Sentinel in various scenarios.
 
 ### Common search commands
+
+The following table maps common SPL search commands to their KQL equivalents in Microsoft Sentinel.
 
 |SPL command  |Description  |KQL operator |KQL example  |
 |---------|---------|---------|---------|
@@ -132,6 +139,8 @@ Use these samples to compare and map rules from Splunk to Microsoft Sentinel in 
 
 #### `lookup` command: KQL example
 
+The following KQL example uses `externaldata` to replicate the SPL `lookup` pattern by filtering users against an external data source.
+
 ```kusto
 Users 
 | where UserID in ((externaldata (UserID:string) [
@@ -141,6 +150,8 @@ h@"?...SAS..." // Secret token to access the blob
 ```
 #### `stats` command: KQL example
 
+The following KQL example uses `summarize` to count transactions and sum totals, grouped by fruit and month.
+
 ```kusto
 Sales 
 | summarize NumTransactions=count(), 
@@ -149,11 +160,15 @@ StartOfMonth=startofmonth(SellDateTime)
 ```
 #### `mstats` command: KQL example
 
+The following KQL example bins metric values into price ranges and counts the records in each range.
+
 ```kusto
 T | summarize count() by price_range=bin(price, 10.0) 
 ```
 
 #### `transaction` command: SPL example
+
+The following SPL example groups related start and stop events into a single transaction by activity ID.
 
 ```spl
 sourcetype=MyLogTable type=Event
@@ -162,6 +177,8 @@ sourcetype=MyLogTable type=Event
 | Table City, ActivityId, StartTime, Duration
 ```
 #### `transaction` command: KQL example
+
+The following KQL example replicates SPL transaction grouping by joining start and stop events on a shared activity ID and calculating the duration.
 
 ```kusto
 let Events = MyLogTable | where type=="Event";
@@ -183,6 +200,8 @@ Use `row_window_session()` to calculate session start values for a column in a s
 Timestamp, 1h, 5m, ID != prev(ID))
 ```
 #### `eventstats` command: SPL example
+
+The following SPL example calculates per-category event counts in one-minute bins and then appends a per-time-bin total using `eventstats`.
 
 ```spl
 … | bin span=1m _time
@@ -219,11 +238,15 @@ sum(TotalEvents) by groupBin
 ```
 #### `anomalydetection` command: SPL example
 
+The following SPL example detects anomalies in historical closing price data over a 10-year period.
+
 ```spl
 sourcetype=nasdaq earliest=-10y
 | anomalydetection Close _ Price
 ```
 #### `anomalydetection` command: KQL example
+
+The following KQL example uses time-series analysis functions to detect anomalies in disabled-account sign-in trends over a seven-day lookback period.
 
 ```kusto
 let LookBackPeriod= 7d;
@@ -239,6 +262,8 @@ LineFit)=series_fit_line(Trend)
 series_decompose_anomalies(Trend)
 ```
 ### Common `eval` commands
+
+The following table maps common SPL `eval` functions to their KQL equivalents in Microsoft Sentinel.
 
 |SPL command  |Description  |SPL example  |KQL command  |KQL example |
 |---------|---------|---------|---------|---------|
@@ -290,12 +315,16 @@ series_decompose_anomalies(Trend)
 
 #### `case(X,"Y",…)` SPL example
 
+The following SPL example returns a different message string based on the HTTP error code.
+
 ```SPL
 case(error == 404, "Not found",
 error == 500,"Internal Server Error",
 error == 200, "OK")
 ```
 #### `case(X,"Y",…)` KQL example
+
+The following KQL example uses `case()` to assign a message based on the error code value.
 
 ```kusto
 T
@@ -304,21 +333,29 @@ error == 500,"Internal Server Error", "OK")
 ```
 #### `if(X,Y,Z)` KQL example
 
+The following KQL example uses `iif()` to label whether a timestamp falls on the current day.
+
 ```kusto
 iif(floor(Timestamp, 1d)==floor(now(), 1d), 
 "today", "anotherday")
 ```
 #### `isint(X)` KQL example
 
+The following KQL example checks whether `X` has an integer-compatible type by using `gettype` and `iif`.
+
 ```kusto
 iif(gettype(X) =="long","TRUE","FALSE")
 ```
 #### `isstr(X)` KQL example
 
+The following KQL example checks whether `X` is a string value by using `gettype` and `iif`.
+
 ```kusto
 iif(gettype(X) =="string","TRUE","FALSE")
 ```
 #### `like(X,"y")` example
+
+The following KQL examples show several string-matching operators you can use to replicate SPL `like` pattern matching.
 
 ```kusto
 … | where field has "addr"
@@ -331,6 +368,8 @@ iif(gettype(X) =="string","TRUE","FALSE")
 ```
 #### `min(X,…)` KQL example
 
+The following KQL examples show different ways to compute minimum values using `min_of`, `min`, and `arg_min`.
+
 ```kusto
 min_of (expr_1, expr_2 ...)
 
@@ -340,6 +379,8 @@ min_of (expr_1, expr_2 ...)
 ```
 #### `mvfilter(X)` KQL example
 
+The following KQL example uses `mv-apply` to filter and reduce multi-valued content, similar to the SPL `mvfilter` function.
+
 ```kusto
 T | mv-apply Metric to typeof(real) on 
 (
@@ -348,10 +389,14 @@ T | mv-apply Metric to typeof(real) on
 ```
 #### `mvjoin(X,Y)` KQL example
 
+The following KQL example uses `strcat_array` to join array elements into a single string with a custom separator.
+
 ```kusto
 strcat_array(dynamic([1, 2, 3]), "->")
 ```
 #### `relative time(X,Y)` KQL example
+
+The following KQL example converts a datetime value to Unix epoch time for relative-time calculations.
 
 ```kusto
 let toUnixTime = (dt:datetime)
@@ -361,10 +406,14 @@ let toUnixTime = (dt:datetime)
 ```
 #### `replace(X,Y,Z)` KQL example
 
+The following KQL example uses `replace()` with a regex pattern to swap the month and day parts of a date string.
+
 ```kusto
 replace( @'^(\d{1,2})/(\d{1,2})/', @'\2/\1/',date)
 ```
 #### `strptime(X,Y)` KQL example
+
+The following KQL example uses `format_datetime` to display only the hours and minutes from a datetime value.
 
 ```kusto
 format_datetime(datetime('2017-08-16 11:25:10'),
@@ -372,11 +421,14 @@ format_datetime(datetime('2017-08-16 11:25:10'),
 ```
 #### `time()` KQL example
 
+The following KQL example formats a datetime value as a time string showing hours, minutes, and seconds.
+
 ```kusto
 format_datetime(datetime(2015-12-14 02:03:04),
 'h:m:s')
 ```
-#### `tostring(X,Y)`
+<a name="tostringxy"></a>
+#### `tostring(X,Y)` description
 
 Returns a field value of `X` as a string.
 - If the value of `X` is a number, `X` is reformatted to a string value. 
@@ -385,7 +437,7 @@ Returns a field value of `X` as a string.
 
 ##### `tostring(X,Y)` SPL example
 
-This example returns:
+The following `tostring` SPL example returns:
 
 ```SPL
 foo=615 and foo2=00:10:15:
@@ -395,10 +447,14 @@ foo, "duration")
 ```
 #### `urldecode(X)` SPL example
 
+The following SPL example decodes a URL-encoded string back to its original form.
+
 ```SPL
 urldecode("http%3A%2F%2Fwww.splunk.com%2Fdownload%3Fr%3Dheader")
 ```
 ### Common `stats` commands KQL example
+
+The following table maps common SPL `stats` aggregation functions to their KQL equivalents in Microsoft Sentinel.
 
 |SPL command  |Description  |KQL command  |KQL example  |
 |---------|---------|---------|---------|
@@ -422,7 +478,7 @@ urldecode("http%3A%2F%2Fwww.splunk.com%2Fdownload%3Fr%3Dheader")
 
 ## Next steps
 
-In this article, you learned how to map your migration rules from Splunk to Microsoft Sentinel. 
+You learned how to identify, compare, and map Splunk detection rules to Microsoft Sentinel analytics rules. Continue migrating your SOAR automation.
 
 > [!div class="nextstepaction"]
 > [Migrate your SOAR automation](migration-splunk-automation.md)
