@@ -5,9 +5,11 @@ ms.collection: M365-security-compliance
 ms.service: defender-for-cloud-apps
 author: AbbyMSFT
 ms.topic: include
-ms.date: 12/31/2023
+ms.date: 09/03/2026
 ms.author: abbyweisberg
-ms.custom: include file
+ms.custom: include file, msecd-doc-authoring-1015
+ai-usage: ai-assisted
+#customer intent: As a security administrator, I want to configure Conditional Access App Control so that I can protect access to SaaS applications.
 ---
 
 ### Sample: Create Microsoft Entra ID Conditional Access policies for use with Defender for Cloud Apps
@@ -34,14 +36,11 @@ After confirming your settings using [policy impact or report-only mode](/entra/
 For more information, see [Conditional Access policies](/azure/active-directory/conditional-access/overview) and [Building a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies).
 
 > [!NOTE]
-> Microsoft Defender for Cloud Apps utilizes the application **Microsoft Defender for Cloud Apps - Session Controls** as part of the Conditional Access App Control service for user sign-in. This application is located within the 'Enterprise Applications' section of Entra ID. 
-To protect your SaaS applications with Session Controls, you must allow access to this application.
-> 
-> If you have any Conditional Access policies that have **“Block Access”** selected in the **“Grant Access”** Control under a Microsoft Entra ID Conditional Access policy scoped to this app, end users will not be able to access the protected applications under session controls.
+> Microsoft Defender for Cloud Apps uses the **Microsoft Defender for Cloud Apps - Session Controls** enterprise application for user sign-in through Conditional Access App Control. To protect software as a service (SaaS) applications with session controls, allow access to this application.
 >
-> It's important to ensure that this application isn't unintentionally restricted by any Conditional Access policies. For policies that restrict all or certain applications, ensure this application is listed as an exception in the **Target resources** or confirm that the blocking policy is deliberate.
+> A Microsoft Entra Conditional Access policy that selects **Block access** under **Grant** and targets this application prevents users from accessing protected applications through session controls. For policies that block all or selected applications, exclude the session controls application under **Target resources** unless blocking it is intentional.
 >
-> You may need to add the following service principal to make the app available in the Conditional Access app picker.
+> If the session controls application doesn't appear in the Conditional Access application picker, create its service principal by using Microsoft Graph PowerShell:
 >
 > ```powershell
 > # Connect with the appropriate scopes to create service principal
@@ -51,4 +50,4 @@ To protect your SaaS applications with Session Controls, you must allow access t
 > New-MgServicePrincipal -AppId 8a0c2593-9cbc-4f86-a247-beb7aab00d83
 > ```
 > 
-> To ensure your location-based conditional access policies function correctly, include the **Microsoft Defender for Cloud Apps – Session Controls** application in those policies.
+> Include the **Microsoft Defender for Cloud Apps - Session Controls** application in location-based Conditional Access policies to ensure the policies work correctly.
