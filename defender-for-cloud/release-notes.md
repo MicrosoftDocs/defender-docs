@@ -34,6 +34,23 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | Date | Category | Update |
 | -------- | -------- | -------- |
 | September 3, 2026 | GA | [General availability of Defender for Cosmos DB in Azure Government cloud](#general-availability-of-defender-for-cosmos-db-in-azure-government-cloud) |
+| September 3, 2026 | GA | [AWS GuardDuty coverage status is now shown on the S3 asset page](#aws-guardduty-coverage-status-is-now-shown-on-the-S3-asset-page) |
+
+### AWS GuardDuty coverage status is now shown on the S3 asset page
+
+September 3, 2026
+
+Microsoft Defender for Cloud now shows Amazon GuardDuty coverage status for AWS S3 buckets, in the **Cloud security details** section of the S3 asset page.
+
+Two statuses are shown for each bucket, each as **Enabled** or **Disabled**:
+
+- GuardDuty Extended Threat Detection
+- GuardDuty Malware Protection
+
+The two are enabled independently in AWS, so a bucket can have one on and the other off.
+
+If you protect AWS storage with GuardDuty, you can now see which S3 buckets are covered without leaving the Defender portal or signing in to the AWS console.
+
 
 ### General availability of Defender for Cosmos DB in Azure Government cloud
 
