@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 08/05/2026
+ms.date: 09/01/2026
 ai-usage: ai-assisted
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
@@ -29,6 +29,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|Windows Antivirus |Platform 4.18.26080.3 / Engine 1.1.26080.3|August 2026|- Platform: 4.18.26080.3<br>- Engine: 1.1.26080.3<br>- Security intelligence: 1.159.11.0|[Release details and updates](#windows-antivirus--august-2026--platform-418260803--engine-11260803)|
 |Android |1.0.9212.0102|Aug 2026|- Build: 1.0.9212.0102<br>- Release: Aug 20, 2026|[Release details and updates](#android--aug-2026--platform-1092120102)|
 |iOS |1.1.80120102|Aug 2026|- Build: 1.1.80120102<br>- Release: Aug 20, 2026|[Release details and updates](#ios--aug-2026--platform-version-1180120102)|
 |macOS |101.26062.0012  |August 2026 |- Release version: 20.126062.12.0<br>- Engine version: 1.1.26060.12000<br>- Signature version: 1.457.164.0 |[Release details and updates](#macos--august-2026--101260620012) |
@@ -1238,6 +1239,30 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 ## Microsoft Defender Antivirus releases
 
 For more information about Microsoft Defender Antivirus updates, see [Microsoft Defender Antivirus security intelligence product updates and support](microsoft-defender-antivirus-updates.md).
+
+### Windows Antivirus | August 2026 | Platform 4.18.26080.3 | Engine 1.1.26080.3
+
+#### Release details
+
+| Component | Version | Date |
+| -------- | -------- | -------- |
+| Platform | 4.18.26080.3 | September 1, 2026 |
+| Engine | 1.1.26080.3 | September 1, 2026 |
+| Security intelligence<sup>1</sup> | 1.159.11.0 | September 1, 2026 |
+| Support phase | Security and Critical Updates | - |
+
+<sup>1</sup>The security intelligence version listed here is relevant to the listed engine release. Newer versions of security intelligence are released regularly. For more information, see
+[Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/wdsi/defenderupdates).
+
+#### Enhancements and features
+
+- Added health monitoring for environments where Cisco Umbrella affects Network Protection.
+- Hardened Defender Antivirus against unauthorized network authentication credential exposure.
+- Fixed BitLocker encryption-state detection when encrypted volumes have no drive letter.
+- Fixed platform updates that could remain stuck when the staging folder for the update has been purged.
+- Resolved an issue with increased disk I/O due to cleanup failing when the shared signature root location contained whitespace.
+- Fixed path exclusions for AMSI scans when local memory-scan exceptions are enabled.
+- Fixed an issue with the ASR warn unblock option that didn't prompt users for [admin approval](attack-surface-reduction-rules-overview.md#modes-for-asr-rules).
 
 ### Windows Antivirus | July 2026 | Platform 4.18.26070.9 | Engine 1.1.26070.7
 
