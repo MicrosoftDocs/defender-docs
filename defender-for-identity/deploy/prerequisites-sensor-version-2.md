@@ -16,6 +16,9 @@ The Defender for Identity sensor v2.x has the following requirements. The v2.x s
 > [!TIP]
 > For domain controllers running Windows Server 2019 or later, we recommend deploying the [sensor v3.x](deploy-sensor-v3.md) instead.
 
+> [!TIP]
+> For servers running Windows Server 2019 or later, we recommend deploying the [Defender for Identity sensor v3.x](deploy-sensor-v3.md) instead.
+
 ## Licensing requirements
 
 Deploying Defender for Identity requires one of the following Microsoft 365 licenses:

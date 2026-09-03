@@ -1,7 +1,7 @@
 ---
 title: Deploy the Defender for Identity sensor v3.x
-description: Learn the requirements and configuration steps to deploy the Defender for Identity sensor v3.x on domain controllers running Windows Server 2019 or later.
-ms.date: 08/23/2026
+description: Learn the requirements and configuration steps to deploy the Defender for Identity sensor v3.x on eligible identity-role servers.
+ms.date: 08/31/2026
 ms.topic: how-to
 ms.custom: msecd-doc-authoring-1016
 ms.reviewer: rlitinsky
@@ -10,7 +10,7 @@ ai-usage: ai-assisted
 
 # Deploy the Defender for Identity sensor v3.x
 
-Deploy the Defender for Identity sensor v3.x on supported domain controllers. Complete the prerequisite checks before activation, then configure auditing and identity settings afterward.
+Deploy the Defender for Identity sensor v3.x on eligible domain controllers and AD FS, AD CS, or Microsoft Entra Connect servers that aren't domain controllers. Complete the prerequisite checks before activation, then configure auditing and identity settings.
 
 ## Before you activate
 
@@ -35,13 +35,17 @@ Make sure that the server on which you're activating the sensor:
 
 #### Supported server types
 
-The v3.x sensor supports domain controllers, including domain controllers with these identity roles:
+The v3.x sensor supports domain controllers. It also supports servers that aren't domain controllers and run the following identity roles:
 
 - Active Directory Federation Services (AD FS)
 - Active Directory Certificate Services (AD CS)
 - Microsoft Entra Connect
 
-Use the [Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md) for servers that aren't domain controllers and run AD FS, AD CS, or Microsoft Entra Connect.
+> [!NOTE]
+> Activating the Defender for Identity sensor v3.x on AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers is in preview. Manual activation and automatic Windows event auditing are supported. Automatic activation and migration aren't currently supported for these servers and will be added in a future update.
+
+> [!IMPORTANT]
+> If you deploy the Defender for Identity sensor v3.x only on AD FS, AD CS, or Microsoft Entra Connect servers, you must also install at least one v3.x sensor on a domain controller.
 
 ### Licensing requirements
 
@@ -83,9 +87,9 @@ The following table describes memory requirements on the server running the Defe
 > [!IMPORTANT]
 > When running as a virtual machine, always allocate all memory to the virtual machine.
 
-Version 3 of the sensor prevents the sensor from overusing CPU or memory by limiting CPU utilization at 30%, and memory usage to 1.5 GB. However, if any other service uses substantial system resources, the domain controller might still experience performance strain. If the sensor reaches the CPU limit, it throttles some event processing. If the sensor reaches the memory limit, the sensor service might restart.
+The Defender for Identity sensor v3.x limits CPU utilization to 30% and memory usage to 1.5 GB. However, if another service uses substantial system resources, the server might still experience performance strain. If the sensor reaches the CPU limit, it throttles some event processing. If the sensor reaches the memory limit, the sensor service might restart.
 
-Refer to the [Defender for Identity Capacity Planning documentation](/defender-for-identity/deploy/capacity-planning) to determine whether your domain controller servers have enough resources for a Microsoft Defender for Identity sensor. 
+Refer to the [Defender for Identity Capacity Planning documentation](/defender-for-identity/deploy/capacity-planning) to determine whether your servers have enough resources for a Microsoft Defender for Identity sensor.
 
 ### Service account requirements
 
@@ -101,11 +105,12 @@ If you're migrating from sensor v2.x and previously had a gMSA configured for [a
 > [!IMPORTANT]
 > If any of your sensors are v3.x, select **Automatically use the sensor's local system account** for all sensors. The v3.x sensors use the local system account regardless of gMSA configuration.
 
-#### DSA and gMSA health alerts in environments with both v2 and v3 sensors
+<a name="dsa-and-gmsa-health-alerts-in-environments-with-both-v2-and-v3-sensors"></a>
+#### DSA and gMSA health alerts in environments with both v2.x and v3.x sensors
 
-If your workspace still has a Directory Service Account (DSA) or group Managed Service Account (gMSA) configured because v2 sensors on AD FS, AD CS, or Entra Connect servers still require it, DSA and gMSA credentials continue to be validated on all sensors in the workspace, including v3 sensors. If DSA or gMSA credential validation fails, the **Directory services user credentials are incorrect** health alert appears. Workspace-level validation of DSA and gMSA credentials on all sensors is by design. Defender for Identity validates DSA and gMSA credentials at the workspace level for all sensors as long as those accounts exist, regardless of whether individual sensors use them for auditing or response actions.
+If your workspace still has a Directory Service Account (DSA) or group Managed Service Account (gMSA) configured because v2.x sensors on AD FS, AD CS, or Entra Connect servers still require it, DSA and gMSA credentials continue to be validated on all sensors in the workspace, including v3.x sensors. If DSA or gMSA credential validation fails, the **Directory services user credentials are incorrect** health alert appears. Workspace-level validation of DSA and gMSA credentials on all sensors is by design. Defender for Identity validates DSA and gMSA credentials at the workspace level for all sensors as long as those accounts exist, regardless of whether individual sensors use them for auditing or response actions.
 
-V3 sensors ignore the DSA and gMSA for auditing and response actions, but they're still included in workspace-level credential validation. To stop receiving this health alert on v3 sensors, remove the workspace-level DSA or gMSA after all sensors are fully migrated to v3 and no v2 sensors require it.
+Defender for Identity v3.x sensors ignore the DSA and gMSA for auditing and response actions, but they're still included in workspace-level credential validation. To stop receiving this health alert on v3.x sensors, remove the workspace-level DSA or gMSA after all sensors are fully migrated to v3.x and no v2.x sensors require it.
 
 ### Test your prerequisites
 
@@ -140,7 +145,7 @@ Starting with the July 2026 Defender for Identity sensor release (sensor version
 Use the following recommended settings to help ensure stable sensor performance:
 
 - Set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.
-- Synchronize the time on servers and domain controllers where you install the sensor to within five minutes of each other.
+- Synchronize the time on servers where you install the sensor to within five minutes of each other.
 
 ## Next step
 
