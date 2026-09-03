@@ -11,10 +11,13 @@ ms.collection:
 - tier2
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
-ms.date: 11/17/2025
+ms.date: 09/03/2026
+ms.custom: msecd-doc-authoring-1015
+ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+#customer intent: As a security administrator, I want to onboard Windows and Linux servers to Defender for Endpoint so that I can protect and monitor them.
 
 ---
 
@@ -40,9 +43,19 @@ To onboard servers to Defender for Endpoint, [server licenses](/office365/servic
 - [Microsoft Defender for Business servers](/defender-business/get-defender-business#how-to-get-microsoft-defender-for-business-servers) (for small and medium-sized businesses only)
 
 > [!TIP]
-> For most organizations, Microsoft recommends onboarding servers through **Microsoft Defender for Servers Plan 2** as part of [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-servers-overview). Plan 2 includes the same Defender for Endpoint server protection capabilities as the standalone "Microsoft Defender for Endpoint for servers" SKU, and adds capabilities specific to server workloads: agentless vulnerability, malware, and secrets scanning; file integrity monitoring; just-in-time machine access; regulatory compliance assessment; premium Microsoft Defender Vulnerability Management; OS configuration assessment against the Microsoft Cloud Security Benchmark; and a free 500 MB/day data ingestion allowance per protected machine. Defender for Cloud also automatically onboards the Defender for Endpoint extension to supported Azure VMs and Azure Arc-enabled machines, removing the need for per-machine onboarding scripts. For a feature comparison, see [Defender for Servers plan features](/azure/defender-for-cloud/defender-for-servers-overview#plan-protection-features).
+> For most organizations, Microsoft recommends onboarding servers through **Microsoft Defender for Servers Plan 2** as part of [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-servers-overview). Plan 2 includes Defender for Endpoint server protection and capabilities specific to server workloads:
 >
-> If you have a specific reason not to use Defender for Cloud (for example, fully air-gapped environments or workloads under a separate licensing perimeter), the standalone *Microsoft Defender for Endpoint for servers* SKU and *Microsoft Defender for Business servers* are valid alternatives.
+> - Agentless machine scanning for vulnerabilities, malware, and secrets
+> - File integrity monitoring
+> - Just-in-time virtual machine access
+> - Regulatory compliance assessment
+> - Premium Microsoft Defender Vulnerability Management capabilities
+> - Operating system configuration assessment based on the Microsoft Cloud Security Benchmark
+> - A 500-MB daily data ingestion benefit for each protected machine
+>
+> Defender for Cloud automatically onboards the Defender for Endpoint extension to supported Azure virtual machines and Azure Arc-enabled machines, so you don't need per-machine onboarding scripts. For a feature comparison, see [Defender for Servers plan features](/azure/defender-for-cloud/defender-for-servers-overview#plan-protection-features).
+>
+> If your organization doesn't use Defender for Cloud, the standalone Microsoft Defender for Endpoint for servers and Microsoft Defender for Business servers licenses are alternatives.
 
 ## Integration with Microsoft Defender for Servers
 
@@ -250,4 +263,3 @@ After offboarding, you can proceed to uninstall the unified solution package on 
 - [Troubleshooting Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
 - [Troubleshoot onboarding issues related to Security Management for Defender for Endpoint](troubleshoot-security-config-mgt.md#troubleshoot-onboarding-issues-related-to-security-management-for-microsoft-defender-for-endpoint)
 - [Microsoft Defender for Endpoint - Mobile Threat Defense](mtd.md) (for iOS and Android devices)
-
