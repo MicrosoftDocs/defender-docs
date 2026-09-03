@@ -78,46 +78,77 @@ Use the following table to learn how your existing permissions for Microsoft Def
 
 ## Microsoft Defender for Office 365
 
-Use the following tables to learn how your existing email, collaboration, and protection-related Exchange Online permissions for Defender for Office 365 map to the new Microsoft Defender unified RBAC permissions:
+Use the following tables to learn how your existing email and collaboration permissions and protection-related Exchange Online permissions for Defender for Office 365 map to Microsoft Defender unified RBAC permissions:
 
 - [Email and collaboration permissions mapping](#email--collaboration-permissions-mapping)
 - [Exchange Online permissions mapping](#exchange-online-permissions-mapping)
+
+> [!NOTE]
+> When you activate Defender unified RBAC for the Email & collaboration workload, only source roles and role groups that are actively assigned to at least one user are imported. Built-in roles and role groups without active user assignments aren't imported.
 
 ### Email & collaboration permissions mapping
 
 You configured Email & collaboration permissions in the Defender portal at <https://security.microsoft.com/emailandcollabpermissions>.
 
-|Email & collaboration permission|Type|Microsoft Defender unified RBAC permission|
-|---|---|---|
-|Global Reader|Role group|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Authorization and settings \ Security settings \ Core security settings (read) <br/> Authorization and settings \ System setting (read)<br/>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read)|
-|Organization Management|Role group|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Security operations \ Security data \ Email advanced actions (manage) <br/> Security operations \ Security data \ Email quarantine (manage) <br/> Authorization and settings \ Authorization (Read and manage) <br/> Authorization and settings \ Security setting (All permissions) <br/> Authorization and settings \ System settings (Read and manage)<br/>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read)|
-|Security Administrator|Role group|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Security operations \ Security data \ Email quarantine (manage) <br/> Authorization and settings \ Authorization (read) <br/> Authorization and settings \ Security setting (All permissions) <br/> Authorization and settings \ System settings (Read and manage)<br/>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read)|
-|Security Reader|Role group|Security operations \ Security data \Security data basics (read) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Authorization and settings \ Security settings \ Core security settings (read) <br/> Authorization and settings \ System setting (read) <br/>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read)|
-|Audit Logs|Role|Security operations \ Security data \ Security data basics (read)|
-|Manage Alerts|Role|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage)|
-|Preview|Role|Security operations\ Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: All Emails (read)|
-|Quarantine|Role|Security operations \ Security data \ Email quarantine (manage) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read)|
-|Role Management|Role|Authorization and settings \ Authorization (Read and manage)|
-|Search and Purge|Role|Security operations \ Security data \ Email advanced actions (manage)|
-|View-Only Manage Alerts|Role|Security operations \ Security data \ Security data basics (read)|
-|View-Only Recipients|Role|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read)|
-|View-only Audit Logs|Role|Security operations \ Security data \ Security data basics (read)|
+| Email & collaboration permission | Type | Microsoft Defender unified RBAC permission |
+| --- | --- | --- |
+| Global Reader | Role group | Security operations \ Security data \ Security data basics (read)<br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read)<br>Security operations \ Security data \ Response (manage)<br>Authorization and settings \ Security settings \ Core security settings (read)<br>Authorization and settings \ System setting (read)<br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read) |
+| Organization Management | Role group | Security operations \ Security data \ Security data basics (read)<br>Security operations \ Security data \ Alerts (manage)<br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read)<br>Security operations \ Security data \ Response (manage)<br>Security operations \ Security data \ Email advanced actions (manage)<br>Security operations \ Security data \ Email quarantine (manage)<br>Authorization and settings \ Authorization (Read and manage)<br>Authorization and settings \ Security setting (All permissions)<br>Authorization and settings \ System settings (Read and manage)<br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read) |
+| Security Administrator | Role group | Security operations \ Security data \ Security data basics (read)<br>Security operations \ Security data \ Alerts (manage)<br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read)<br>Security operations \ Security data \ Response (manage)<br>Security operations \ Security data \ Email quarantine (manage)<br>Authorization and settings \ Authorization (read)<br>Authorization and settings \ Security setting (All permissions)<br>Authorization and settings \ System settings (Read and manage)<br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read) |
+| Security Reader | Role group | Security operations \ Security data \ Security data basics (read)<br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read)<br>Security operations \ Security data \ Response (manage)<br>Authorization and settings \ Security settings \ Core security settings (read)<br>Authorization and settings \ System setting (read)<br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read) |
+| Security Operator | Role group | Security operations \ Security data \ Security data basics (read)<br>Security operations \ Security data \ Alerts (manage)<br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read)<br>Security operations \ Security data \ Response (manage)<br>Authorization and settings \ Security settings \ Core security settings (read)<br>Authorization and settings \ System setting (read)<br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read) |
+| Audit Manager | Role group | Security operations \ Security data \ Security data basics (read) |
+| Audit Reader | Role group | Security operations \ Security data \ Security data basics (read) |
+| Quarantine Administrator | Role group | Security operations \ Security data \ Email quarantine (manage)<br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read) |
+| Security Reader | Role | Security operations \ Security data \ Security data basics (read)<br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read)<br>Security operations \ Security data \ Response (manage)<br>Authorization and settings \ Security settings (Read-only)<br>Authorization and settings \ System setting (read)<br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read) |
+| Security Administrator | Role | Security operations \ Security data \ Security data basics (read)<br>Security operations \ Security data \ Alerts (manage)<br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read)<br>Security operations \ Security data \ Response (manage)<br>Security operations \ Security data \ Email quarantine (manage)<br>Authorization and settings \ Authorization (read)<br>Authorization and settings \ Security setting (All permissions)<br>Authorization and settings \ System settings (Read and manage)<br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read) |
+| Audit Logs | Role | Security operations \ Security data \ Security data basics (read) |
+| Manage Alerts | Role | Security operations \ Security data \ Security data basics (read)<br>Security operations \ Security data \ Alerts (manage) |
+| Preview | Role | Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: All Emails (read) |
+| Quarantine | Role | Security operations \ Security data \ Email quarantine (manage)<br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: Quarantine Emails (read) |
+| Role Management | Role | Authorization and settings \ Authorization (Read and manage) |
+| Search and Purge | Role | Security operations \ Security data \ Email advanced actions (manage) |
+| View-Only Manage Alerts | Role | Security operations \ Security data \ Security data basics (read) |
+| View-Only Recipients | Role | Security operations \ Security data \ Security data basics (read)<br>Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) |
+| View-only Audit Logs | Role | Security operations \ Security data \ Security data basics (read) |
+| Compliance Administrator | Role | Security operations \ Security data \ Security data basics (read)<br>Security operations \ Security data \ Alerts (manage) |
+| DLP Compliance Management | Role | Security operations \ Security data \ Security data basics (read)<br>Security operations \ Security data \ Alerts (manage) |
+| Organization Configuration | Role | Security operations \ Security data \ Security data basics (read)<br>Security operations \ Security data \ Alerts (manage) |
+| Record Management | Role | Security operations \ Security data \ Security data basics (read)<br>Security operations \ Security data \ Alerts (manage) |
+| Retention Management | Role | Security operations \ Security data \ Security data basics (read)<br>Security operations \ Security data \ Alerts (manage) |
+| View-Only DLP Compliance Management | Role | Security operations \ Security data \ Security data basics (read) |
+| View-Only Record Management | Role | Security operations \ Security data \ Security data basics (read) |
+| View-Only Retention Management | Role | Security operations \ Security data \ Security data basics (read) |
+
+To identify which built-in Microsoft Purview role groups include a given role, see [Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview](https://learn.microsoft.com/en-us/defender-office-365/scc-permissions#role-groups-in-microsoft-defender-for-office-365-and-microsoft-purview).
+
+> [!NOTE]
+> Permissions are mapped at the individual-role level. When an imported assignment is based on a role group, the resulting Microsoft Defender unified RBAC role receives the union of the mapped permissions for the roles assigned to that role group. Depending on how the source permission was assigned, you might see either a role name or a role-group name in the imported Microsoft Defender unified RBAC view.
+>
+> As a result, Microsoft Purview or custom role groups that aren't listed explicitly in the table can still appear in the imported view if they contain mapped roles. To determine the effective permissions for an unlisted role group, identify its assigned roles using the preceding Microsoft Purview documentation, and combine the corresponding role mappings in the table.
+>
+> For example, the **Preview** role is assigned by default to the following Microsoft Purview role groups: **Data Investigator**, **eDiscovery Manager**, **Privacy Management**, **Privacy Management Administrators**, **Privacy Management Analysts**, **Privacy Management Contributors**, **Privacy Management Investigators**, **Privacy Management Viewers**, **Subject Rights Request Administrators**, and **Subject Rights Request Approvers**. These role groups can therefore appear in the imported view with the mapped Preview permission. Data Investigator also contains **Search and Purge**, so it additionally receives the mapped Email advanced actions permission.
+>
+> The **Preview** role maps to **Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: All Emails (read)**. In the Defender unified RBAC experience, selecting this permission—whether through role import or manual role configuration—also selects **Security operations \ Security data \ Security data basics (read)** and **Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read)** as prerequisites. An administrator can review and update the resulting role and its assignments in the Defender unified RBAC role experience as appropriate.
 
 ### Exchange Online permissions mapping
 
 You configured protection-related Exchange Online permissions in the Exchange admin center (EAC) at <https://admin.exchange.microsoft.com/#/adminRoles>.
 
-|Exchange Online permission|Type|Microsoft Defender unified RBAC permission|
-|---|---|---|
-|Hygiene Management|Role group|Security operations \ Security data \ Email quarantine (manage) <br/> Authorization and settings \ Security settings \ Core security settings (manage) <br/> Authorization and settings \ Security settings \ Detection tuning (manage)|
-|Organization Management|Role group|Security operations \ Raw data (email & collaboration) \ Email & collaboration metadata (read) <br/> Authorization and settings \ Security settings \ Core security settings (manage) <br/> Authorization and settings \ Security settings \ Detection tuning (manage) <br/> Authorization and settings \ System settings (Read and manage)|
-|Security Administrator|Role group|Authorization and settings \ Security settings \ Detection tuning (manage) <br/> Authorization and settings \ System settings (Read and manage)|
-|View-Only Organization Management|Role group|Authorization and settings \ Security settings (Read-only) <br/> Authorization and settings \ System settings (Read-only)|
-|Tenant AllowBlockList Manager|Role|Authorization and settings \ Security settings \ Detection tuning (manage)|
-|View-only Recipients|Role|Security operations \ Raw data (email & collaboration) \ Email & collaboration metadata (read)|
-|Security Reader|Role group|Authorization and settings \ Security settings \ Core security settings (read)|
-|View-Only Configuration|Role|Authorization and settings \ Security settings \ Core security settings (read)|
-|Security Operator|Role group|Authorization and settings \ Security settings \ Detection tuning (manage)|
+> [!NOTE]
+> In the **Activate workloads** experience in the Defender portal, the role groups and roles in the following table are activated under the workload named **Exchange Online permissions**.
+
+| Exchange Online permission | Type | Microsoft Defender unified RBAC permission |
+| --- | --- | --- |
+| Hygiene Management | Role group | Security operations \ Security data \ Email quarantine (manage)<br>Authorization and settings \ Security settings \ Core security settings (manage)<br>Authorization and settings \ Security settings \ Detection tuning (manage) |
+| Organization Management | Role group | Security operations \ Raw data (email & collaboration) \ Email & collaboration metadata (read)<br>Authorization and settings \ Security settings \ Core security settings (manage)<br>Authorization and settings \ Security settings \ Detection tuning (manage)<br>Authorization and settings \ System settings (Read and manage) |
+| Security Administrator | Role group | Authorization and settings \ Security settings \ Detection tuning (manage)<br>Authorization and settings \ System settings (Read and manage) |
+| View-Only Organization Management | Role group | Authorization and settings \ Security settings (Read-only)<br>Authorization and settings \ System settings (Read-only) |
+| Tenant AllowBlockList Manager | Role | Authorization and settings \ Security settings \ Detection tuning (manage) |
+| View-only Recipients | Role | Security operations \ Raw data (email & collaboration) \ Email & collaboration metadata (read) |
+| Security Reader | Role group | Authorization and settings \ Security settings \ Core security settings (read) |
+| View-Only Configuration | Role | Authorization and settings \ Security settings \ Core security settings (read) |
+| Security Operator | Role group | Authorization and settings \ Security settings \ Detection tuning (manage) |
 
 <a name='microsoft-defender-for-identity'></a>
 
