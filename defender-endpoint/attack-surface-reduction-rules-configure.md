@@ -259,7 +259,7 @@ If your organization [manages endpoint security policies in the Microsoft Defend
 
 For detailed instructions, see <a href="endpoint-security-policies-configure.md#create-an-endpoint-security-policy" target="_blank">Create an endpoint security policy</a> or <a href="endpoint-security-policies-configure.md#edit-an-endpoint-security-policy" target="_blank">Edit an endpoint security policy</a> (links open new tabs).
 
-When you create the policy on the **Endpoint security policies** page in the Defender portal at <https://security.microsoft.com/policy-inventory>, use these specific settings:
+When you create the policy on the **Windows policies** tab of the **Endpoint security policies** page in the Defender portal at <https://security.microsoft.com/policy-inventory?osPlatform=Windows>, use these specific settings:
 
 - **Select platform**: Select **Windows**.
 - **Select template**: Select **Attack surface reduction rules**.
