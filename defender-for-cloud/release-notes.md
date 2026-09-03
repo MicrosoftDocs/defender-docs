@@ -33,8 +33,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| September 3, 2026 | GA | [General availability of Defender for Cosmos DB in Azure Government cloud](#general-availability-of-defender-for-cosmos-db-in-azure-government-cloud) |
 | September 3, 2026 | GA | [AWS GuardDuty coverage status is now shown on the S3 asset page](#aws-guardduty-coverage-status-is-now-shown-on-the-S3-asset-page) |
+| September 3, 2026 | GA | [General availability of Defender for Cosmos DB in Azure Government cloud](#general-availability-of-defender-for-cosmos-db-in-azure-government-cloud) |
 
 ### AWS GuardDuty coverage status is now shown on the S3 asset page
 
