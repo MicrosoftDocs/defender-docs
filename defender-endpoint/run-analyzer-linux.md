@@ -411,8 +411,8 @@ This mode collects installation related information like distro and system requi
 
   -h, --help                show this help message and exit
   -d, --distro              Check for distro support
-  -m, --min-requirement     Check for the system info against offical minimum requirements
-  -e, --external-dep        Check for externel package dependency
+  -m, --min-requirement     Check for the system info against official minimum requirements
+  -e, --external-dep        Check for external package dependency
   -c, --connectivity        Check for connectivity for services used by MDE
   -a, --all                 Run all checks
   -o ONBOARDING_SCRIPT, --onboarding-script ONBOARDING_SCRIPT
