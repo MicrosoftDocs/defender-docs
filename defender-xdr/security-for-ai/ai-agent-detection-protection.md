@@ -29,6 +29,10 @@ Microsoft Defender detects and enables security teams to investigate threats to 
 - Ensure that your AI agent emits observability data to Microsoft 365:
   - Agents built with Microsoft Copilot Studio, Microsoft Foundry, and declarative agents built with the Microsoft 365 Copilot Agent Builder send observability data to Microsoft 365 by default.
   - For AI agents built on other platforms, enable observability using the Microsoft Agent 365 SDK, as described in the [Agent 365 development lifecycle documentation](/microsoft-agent-365/developer/a365-dev-lifecycle#1-build-and-run-agent).
+    > [!NOTE]
+    > Threat detection is supported only for published Microsoft Foundry agents. Unpublished agents, including agents used only in a playground environment, aren’t supported.
+    > For more information, see [Publish agents to Microsoft 365 Copilot and Microsoft Teams in the Foundry portal](/azure/foundry/agents/how-to/publish-copilot?tabs=portal)
+    
 - To detect threats to local AI agents that run on endpoints, set up [AI agent runtime protection in Microsoft Defender for Endpoint](/defender-endpoint/configure-ai-agent-runtime-protection). Microsoft Defender for Endpoint must run in active mode. Local agents are onboarded separately from cloud agents.
 - *(Optional)* To include the prompt snippets that triggered a detection as evidence in alerts, enable [prompt evidence collection](ai-agent-real-time-protection.md#control-prompt-evidence-in-alerts). This setting is enabled by default.
 
