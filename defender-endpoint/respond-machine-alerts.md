@@ -210,6 +210,7 @@ Depending on the severity of the attack and the sensitivity of the device, you m
 **Important points to keep in mind**:
 
 - In environments that use web proxies (including Proxy Auto Configuration (PAC), WPAD, or static/direct proxy configurations), devices might not be able to recover from network isolation. Use selective isolation in such cases. When using selective isolation, exclusion settings aren't required to avoid this scenario.
+- This issue can also occur when device isolation is triggered as full isolation by automatic attack disruption. To have automatic attack disruption use selective isolation, define an [isolation exclusion rule](network-isolation-exclusions.md).
 - Isolating devices from the network is supported for macOS for client version 101.98.84 and above. You can also use live response to run the action. For more information on live response, see [Investigate entities on devices using live response](live-response.md)
 - Full isolation is available for devices running Windows 11, Windows 10, version 1703 or later, Windows Server 2012 R2 and later, and Azure Stack HCI OS, version 23H2 and later.
 - Isolating devices from the network is supported when Defender is running in passive mode on all supported Windows operating systems, macOS and Linux supported versions.
