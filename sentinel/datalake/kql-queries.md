@@ -176,6 +176,7 @@ Keep the following limitations and considerations in mind when running KQL queri
     + `arg()`
     + `externaldata()`
     + `ingestion_time()`
+    + `estimate_data_size()`
 
 + There is a 15-minute latency between when data is ingested into the data lake or federated tables, and when it becomes available for querying. This means that newly ingested data may not be immediately queryable.
   

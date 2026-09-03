@@ -1,7 +1,7 @@
 ---
 title: Manage and Update Sensors
 description: Learn how to view, manage, and update Microsoft Defender for Identity sensors in the Microsoft Defender portal, including sensor health, migration state, and delayed updates.
-ms.date: 07/15/2026
+ms.date: 09/01/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ms.custom: msecd-doc-authoring-1016
@@ -73,7 +73,7 @@ The migration state column indicates whether a Defender for Identity sensor runn
 
 For a server to be eligible for migration, it must be:
 
-- A domain controller without additional identity roles (AD FS, AD CS, or Microsoft Entra Connect) running. Domain controllers with identity roles support v3.x for new deployments, but in-place migration isn't currently supported for these servers.
+- A domain controller, including a domain controller that also runs AD FS, AD CS, or Microsoft Entra Connect.
 - Running a Defender for Identity sensor v2.x.
 - Running Windows Server 2019 or later.
 - Includes the July 2026 or later cumulative update.

@@ -538,7 +538,7 @@ Once disconnected, you can leave it as is or reconnect at any time to the same F
 > - Disconnecting the connected Foundry without providing an alternative will disable the use of the agentic code scanning.
 > - Disconnecting removes the connection from MDASH. It doesn't delete the Microsoft Foundry resource.
 > 
-For **Keyless** authentication, disconnecting doesn't remove the managed identity, federated identity credential, or RBAC role assignment created for the connection. When you disconnect the Foundry resource in the portal, the confirmation dialog provides an optional cleanup script that removes these resources—select **Copy script** to run it. Running it is optional; remove those separately if your organization requires full cleanup. 
+For **Keyless** authentication, disconnecting doesn't remove the managed identity, federated identity credential, or RBAC role assignment created for the connection. When you disconnect the Foundry resource in the portal, the confirmation dialog provides an optional cleanup script that removes these resources—select **Copy script** to run it. Running it is optional - run it if your organization requires full cleanup. 
 
 For **API key** authentication, disconnecting doesn't delete or rotate the API key in Foundry. Revoke or rotate the key separately if it is no longer needed.
 

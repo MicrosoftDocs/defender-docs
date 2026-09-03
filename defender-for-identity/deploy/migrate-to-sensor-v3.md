@@ -3,7 +3,7 @@ title: Migrate from sensor v2.x to sensor v3.x
 description: Learn how to migrate from the Defender for Identity sensor v2.x to the sensor v3.x with no downtime using the Sensors page in the Microsoft Defender portal.
 author: AbbyMSFT
 ms.author: abbyweisberg
-ms.date: 07/15/2026
+ms.date: 09/01/2026
 ms.topic: how-to
 ms.service: microsoft-defender-for-identity
 ms.custom: msecd-doc-authoring-1016
@@ -20,9 +20,12 @@ Before migrating, review the [prerequisites](#prerequisites) and [sensor version
 
 ## Prerequisites
 
+> [!NOTE]
+> Migration isn't currently supported for AD FS, AD CS, or Microsoft Entra Connect servers that aren't domain controllers. Support will be added in a future update.
+
 To migrate, each server must meet the following requirements:
 
-- Domain controller without additional identity roles
+- Domain controller, including a domain controller that also runs AD FS, AD CS, or Microsoft Entra Connect
 - Defender for Identity sensor v2.x (version 2.254.19112.470 or later)
 - Windows Server 2019 or later
 - Microsoft Defender for Endpoint deployed, with the July 2026 or later Windows Server cumulative update installed.

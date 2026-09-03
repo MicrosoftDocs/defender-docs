@@ -186,7 +186,7 @@ When you create or modify the policy, use this specific setting on the **Configu
 
 |Setting|Value|
 |---|---|
-|Configure Protection (Device) (Preview)|Tamper Protection (On)|
+|Tamper Protection (Device)|Tamper Protection (On)|
 
 ## Validate Microsoft Defender Antivirus protection
 
