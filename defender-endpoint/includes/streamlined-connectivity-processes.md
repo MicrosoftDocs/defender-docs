@@ -31,7 +31,7 @@ For macOS devices, the following table lists processes to exclude in your non-Mi
 | `telemetryd_v1`<br/>Telemetry daemon for EDR | `/Library/Application Support/Microsoft/Defender/`  |
 | `Netext`<br/>Network extension  | `/Library/SystemExtensions/*/com.microsoft.wdav.netext.systemextension/Contents/MacOS/` |
 | `Epsext` <br/>Endpoint security extension | `/Library/SystemExtensions/*/com.microsoft.wdav.epsext.systemextension/Contents/MacOS/`  |
-| `msupdate`<br/>Microsoft AutoUpdate update tool | `/Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app/Contents/MacOS` |
+| `msupdate`<br/>Microsoft AutoUpdate update tool | `/Library/Application Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app/Contents/MacOS` |
 
 ### [**Linux**](#tab/Linux)
 
