@@ -87,19 +87,20 @@ Whether Microsoft Defender Antivirus runs in active mode, passive mode, or is di
 - The version of Windows installed on an endpoint
 - Whether Microsoft Defender Antivirus is the primary antivirus/antimalware solution on the endpoint
 - Whether the endpoint is onboarded to Defender for Endpoint
+- Whether Smart App Control is enabled
 
 The following table summarizes the state of Microsoft Defender Antivirus in several scenarios.
 
-| Antivirus/antimalware solution | Onboarded to Defender for Endpoint? | Microsoft Defender Antivirus state | Smart App Control State |
+| Antivirus/antimalware solution | Onboarded to Defender for Endpoint? | Smart App Control State | Microsoft Defender Antivirus state |
 |---|---|---|---|
-| Microsoft Defender Antivirus | Yes | Active mode | N/A  |
-| Microsoft Defender Antivirus | No | Active mode | On, Evaluation, or Off |
-| A non-Microsoft antivirus/antimalware solution | Yes | Passive mode (automatically) | Evaluation or On|
-| A non-Microsoft antivirus/antimalware solution | No | Passive mode | Evaluation or On|
-| A non-Microsoft antivirus/antimalware solution | No | Disabled (automatically) | N/A or Off|
+| Microsoft Defender Antivirus | Yes | On, Evaluation, or Off | Active mode |
+| Microsoft Defender Antivirus | No | Off or Evaluation | Active mode |
+| Microsoft Defender Antivirus | No | On | Hybrid mode |
+| A non-Microsoft antivirus/antimalware solution | Yes or No | Evaluation or On | Passive mode |
+| A non-Microsoft antivirus/antimalware solution | No | Off | Disabled |
 
 > [!NOTE]
-> Smart App Control is a consumer-only product that's used on new Windows 11 installs. It can run alongside your antivirus software and block apps that are considered to be malicious or untrusted. [Learn more about Smart App Control](https://support.microsoft.com/Windows/Security/Threat-Malware-Protection/smart-app-control-frequently-asked-questions).
+> Smart App Control is a feature on Windows 11. It can block apps that are considered to be malicious or untrusted. [Learn more about Smart App Control](https://support.microsoft.com/Windows/Security/Threat-Malware-Protection/smart-app-control-frequently-asked-questions).
 
 ## Windows Server and passive mode
 
