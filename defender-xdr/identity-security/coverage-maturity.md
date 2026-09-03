@@ -1,7 +1,7 @@
 ---
 title: View your identity coverage and maturity (Preview)
 description: Learn how to use the Coverage and maturity page in Microsoft Defender to check your identity protection status and close coverage gaps in your environments.
-ms.date: 07/02/2026
+ms.date: 09/02/2026
 ms.topic: how-to
 ms.author: abbyweisberg
 author: AbbyMSFT
@@ -152,15 +152,37 @@ The **Coverage progress** list includes the following columns. Select the checkb
 | Column | Description |
 | --- | --- |
 | **Action name** | The setup task, such as connecting a specific app, sensor, or partner solution. |
+| **Observed** | Whether the application or integration is detected in your environment. This column isn't available in the **On-premises identities** side panel. |
 | **Impact** | The security impact of completing the action. |
 | **Effort** | The estimated effort to complete the action. |
 
+Most side panels include a **Show Only Observed Applications** toggle. By default, only observed applications and integrations are shown. Turn off the toggle to also see other supported applications and integrations that aren't currently observed.
+
+### On-premises identities panel
+
+The On-premises identities panel shows sensor onboarding and migration progress for discovered servers.
+
+:::image type="content" source="media/on-premises-identities-side-panel.png" alt-text="Screenshot that shows the On-premises identities side panel in Microsoft Defender." lightbox="media/on-premises-identities-side-panel.png":::
+
+The panel includes the following metrics:
+
+| Metric | Description |
+| --- | --- |
+| **Onboarded manually** | Servers that are onboarded with sensor version 2. |
+| **Activated** | Servers ready for one-click sensor version 3 activation. |
+| **Migrated** | Sensors running version 2 that are eligible to move to sensor version 3. |
+
+The **Coverage progress** list can include the following action names:
+
+| Action name | Description |
+| --- | --- |
+| **Activate V3** | Servers ready for one-click sensor version 3 activation. |
+| **Onboarding manually** | Servers that aren't eligible for activation and should be onboarded with sensor version 2. |
+| **Migration** | Sensors running version 2 that are eligible to move to sensor version 3. |
+
 ### SaaS identities panel
 
-The SaaS identities panel includes additional options that aren't available for other coverage sources:
-
-- An **Observed** column that indicates whether each application is detected in your environment.
-- A **Show Only Observed Applications** toggle. By default, only observed applications are shown. Turn off the toggle to also see other supported SaaS apps that aren't currently observed.
+The SaaS identities panel shows observed SaaS applications and other supported SaaS apps that you can connect.
 
 :::image type="content" source="media/saas-identities-side-panel.png" alt-text="Screenshot that shows the SaaS identities side panel with the Observed column and Show Only Observed Applications toggle in Microsoft Defender." lightbox="media/saas-identities-side-panel.png":::
 
