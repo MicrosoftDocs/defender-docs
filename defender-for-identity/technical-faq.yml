@@ -87,6 +87,11 @@ sections:
       - question: Is my data isolated from other customer data?
         answer: Yes, your data is isolated through access authentication and logical segregation based on customer identifiers. Each customer can only access data collected from their own organization and generic data that Microsoft provides.
 
+      - question: When using Microsoft Defender for Identity (MDI), is end-user consent required for overseas data transfer under Japan's Act on the Protection of Personal Information (APPI)?
+        answer: |
+          In general, end-user consent isn't required. Providing personal data to MDI is typically treated as outsourcing (not a provision to a third party in a foreign country) under APPI.
+          Ensure you have appropriate contractual and supervisory safeguards in place, and consult your legal counsel for your specific scenario.
+
       - question: Do I have the flexibility to select where to store my data?
         answer: |
           No. When your Defender for Identity workspace is created, it's stored automatically in the Azure region that's closest to your Microsoft Entra tenant's geographical location. Once your Defender for Identity workspace is created, Defender for Identity data can't be moved to a different region.
