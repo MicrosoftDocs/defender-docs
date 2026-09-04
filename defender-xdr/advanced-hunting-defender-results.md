@@ -1,6 +1,6 @@
 ---
 title: Work with results containing Microsoft Sentinel data
-description: Work with advanced hunting in the portal unifying Defender XDR and Sentinel data
+description: Learn how to explore and act on advanced hunting query results that include Microsoft Sentinel data in the Microsoft Defender portal, including linking results to incidents and taking response actions.
 ms.service: defender-xdr
 ms.subservice: adv-hunting
 ms.author: pauloliveria
@@ -19,7 +19,7 @@ ms.custom:
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 ---
 
@@ -28,6 +28,7 @@ ai-usage: ai-assisted
 <a name="explore-results"></a>
 ## Explore advanced hunting results
 
+Use the following options to inspect and work with advanced hunting results inline.
 
 :::image type="content" source="media/advanced-hunting-defender-results/advanced-hunting-unified-results.png" alt-text="Screenshot of advanced hunting results with options to expand result rows in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-unified-results.png":::
 
@@ -47,7 +48,7 @@ For Microsoft Defender XDR data, you can take further action by selecting the ch
 
 ## Link query results to an incident
 
-You can use the link to incident feature to add advanced hunting query results to a new or existing incident under investigation. The link to incident feature helps you easily capture records from advanced hunting activities, which allows you to create a richer timeline or context of events regarding an incident.
+You can use the link to incident feature to add advanced hunting query results to a new or existing incident under investigation. The **Link to incident** feature helps you capture records from advanced hunting activities, which allows you to create a richer timeline or context of events regarding an incident.
 
 ### Link results to new or existing incidents
 
@@ -99,7 +100,7 @@ Perform the following steps to link advanced hunting query results to a new or e
 > [!NOTE]
 > For queries containing only Defender data, only entity types that are available in Defender tables are shown.
 
-6. After an entity type is selected, select an identifier type that exists in the selected records so that it can be used to identify this entity. Each entity type has a list of supported identifiers, as can be seen in the relevant drop down. Read the description displayed when hovering on each identifier to better understand it.
+6. After an entity type is selected, select an identifier type that exists in the selected records so that it can be used to identify this entity. Each entity type has a list of supported identifiers, as can be seen in the relevant drop down. Read the description displayed when hovering over each identifier to better understand the identifier.
 7. After selecting the identifier, select a column from the query results that contain the selected identifier. You can select **Explore query and results** to open the advanced hunting context panel. The advanced hunting context panel allows you to explore your query and results to make sure you chose the right column for the selected identifier. 
      <br>
     :::image type="content" source="media/advanced-hunting-defender-results-identifier.png" alt-text="Screenshot of the link to incident wizard entities branch in the Microsoft Defender portal" lightbox="media/advanced-hunting-defender-results-identifier.png":::

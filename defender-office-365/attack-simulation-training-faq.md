@@ -14,7 +14,7 @@ ms.custom:
   - msecd-doc-authoring-1016
 description: Admins can learn about deployment considerations and frequently asked questions regarding Attack simulation and training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 organizations.
 ms.service: defender-office-365
-ms.date: 07/03/2026
+ms.date: 07/30/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ai-usage: ai-assisted
@@ -338,7 +338,7 @@ A: No. Currently, cross-organization simulations aren't supported. Verify that a
 
 ### Q: How does region aware delivery work?
 
-A: Region aware delivery uses the time zone attribute of the targeted user's mailbox to determine when to deliver the message. There might be a time difference of ± one hour in the email delivery based on the user's time zone. For example, consider the following scenario:
+A: Region aware delivery uses the time zone attribute of the targeted user's mailbox, with "not before" logic, to determine when to deliver the message. Each recipient receives the simulation at the scheduled time of day in their own mailbox time zone, and never before it. If that local time has already passed on the launch day, the recipient receives the message at the same local time on the following day. Because simulation messages are delivered in throttled batches, delivery completes progressively after the scheduled start and might take longer for large simulations. For example, consider the following scenario:
 
 - At 7:00 AM in the Pacific time zone (UTC-8), an admin creates and schedules a campaign to start at 9:00 AM on the same day.
 - UserA is in the Eastern time zone (UTC-5).

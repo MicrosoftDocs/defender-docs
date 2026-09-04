@@ -104,9 +104,9 @@ When you set up automatic enrollment, users add their work account to the device
 
 1. Go to the Microsoft Entra admin center ([https://entra.microsoft.com/](https://entra.microsoft.com/)) and sign in.
 
-2. Select **Entra ID** > **Mobility** > **Microsoft Intune**.
+1. Select **Entra ID** > **Mobility** > **Microsoft Intune**.
 
-3. Configure the **MDM User scope** and the **Windows Information Protection (WIP) user scope**.
+1. Configure the **MDM User scope** and the **Windows Information Protection (WIP) user scope**.
 
    :::image type="content" source="media/mem-wip-scope-entra-admin.png" alt-text="Screenshot of setting MDM user scope and WIP user scope in Entra admin center.":::
 
@@ -117,9 +117,9 @@ When you set up automatic enrollment, users add their work account to the device
        - **WIP discovery URL**
        - **WIP compliance URL**
 
-4. Select **Save**.
+1. Select **Save**.
 
-5. After a device is enrolled in Intune, you can add it to a device group in Defender for Business. [Learn more about device groups in Defender for Business](mdb-create-edit-device-groups.md).
+1. After a device is enrolled in Intune, you can add it to a device group in Defender for Business. [Learn more about device groups in Defender for Business](mdb-create-edit-device-groups.md).
 
 > [!TIP]
 > To learn more, see [Enable Windows automatic enrollment](/intune/intune-service/enrollment/windows-enroll).

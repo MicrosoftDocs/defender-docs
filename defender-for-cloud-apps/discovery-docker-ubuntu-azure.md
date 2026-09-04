@@ -1,10 +1,10 @@
 ---
 title: Configure automatic log upload using Docker in Azure 
 description: Set up automatic log uploads for continuous reports in Defender for Cloud Apps by deploying a Docker-based log collector on Ubuntu or CentOS in Azure. Covers prerequisites, data source configuration, and deployment steps.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Mravela
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 # Configure automatic log upload using Docker in Azure
@@ -23,6 +23,7 @@ Before you start, make sure that your environment meets the following requiremen
 |**CPU architecture**     |     Intel 64 and AMD 64    |
 |**RAM**     |     4 GB    |
 | **Firewall configuration** | As defined in [Network requirements](network-requirements.md#log-collector) |
+| **Root access** | Root access to the log collector machine is required for Docker deployment |
 
 ### Plan your log collectors by performance
 
@@ -35,6 +36,8 @@ Each log collector can successfully handle log capacity of up to 50 GB per hour 
 If you require more than 10 data sources, we recommend that you split the data sources between multiple log collectors.
 
 ## Define your data sources
+
+Perform the following steps to define your data sources:
 
 1. In the Microsoft Defender Portal, select **Settings > Cloud Apps > Cloud Discovery > Automatic log upload**.
 
@@ -57,6 +60,8 @@ We recommend that you set up a dedicated data source per network device, enablin
 
 ## Create a log collector
 
+Perform the following steps to create a log collector:
+
 1. In the Microsoft Defender Portal, select **Settings > Cloud Apps > Cloud Discovery > Automatic log upload**.
 
 1. On the **Log collectors** tab, select **Add log collector**.
@@ -72,9 +77,9 @@ We recommend that you set up a dedicated data source per network device, enablin
 
     :::image type="content" source="media/discovery-docker-ubuntu-azure/import-collector.png" alt-text="Screenshot of the command to copy from the Create log collector dialog.":::
 
-1. Select the ![Copy the command to clipboard.](media/copy-icon.png) **Copy** icon next to the command to copy it to your clipboard.
+1. Select the ![Copy the command to clipboard icon.](media/copy-icon.png) **Copy** icon next to the command to copy it to your clipboard.
 
-    The details displayed in the **Create log collector** dialog differ, depending on the source type and receiver type you chose when creating the data source. For example, if you selected Syslog, the dialog includes details about which port the syslog listener is listening on.
+    The details displayed in the **Create log collector** dialog differ, depending on the source type and receiver type you chose when creating each data source. For example, if you selected Syslog, the dialog includes details about which port the syslog listener is listening on.
 
     Copy the contents of the screen and save them locally, as you'll need them when you configure the log collector to communicate with Defender for Cloud Apps.
 
@@ -85,7 +90,7 @@ We recommend that you set up a dedicated data source per network device, enablin
 
 ## Deploy your machine in Azure
 
-This procedure describes how to deploy your machine with Ubuntu. The deployment steps for other platforms are slightly different. Docker CE is installed as part of this procedure (step 5). Make sure you have root access to the machine before you begin.
+This procedure describes how to deploy the log collector host machine with Ubuntu. The deployment steps for other platforms are slightly different. Docker CE is installed later in this procedure during the Docker installation step. Make sure you have root access to the machine before you begin.
 
 1. Create a new Ubuntu machine in your Azure environment.
 1. After the machine is up, open the ports:
@@ -161,7 +166,7 @@ This procedure describes how to deploy your machine with Ubuntu. The deployment 
 
     ---
 
-1. Run the command that you'd copied earlier from the **Create log collector** dialog. For example:
+1. Run the collector configuration command that you copied from the **Create log collector** dialog. For example:
 
     ```bash
     (echo db3a7c73eb7e91a0db53566c50bab7ed3a755607d90bb348c875825a7d1b2fce) | docker run --name MyLogCollector -p 21:21 -p 20000-20099:20000-20099 -e "PUBLICIP='192.168.1.1'" -e "PROXY=192.168.10.1:8080" -e "CONSOLE=mod244533.us.portal.cloudappsecurity.com" -e "COLLECTOR=MyLogCollector" --security-opt apparmor:unconfined --cap-add=SYS_ADMIN --restart unless-stopped -a stdin -i mcr.microsoft.com/mcas/logcollector starter
@@ -169,17 +174,18 @@ This procedure describes how to deploy your machine with Ubuntu. The deployment 
 
 1. To verify that the log collector is running properly, run the following command: `docker logs <collector_name>`. You should get the results: **Finished successfully!**
 
-## Configure network appliance on-premises settings
+<a name="configure-network-appliance-on-premises-settings"></a>
+## Configure on-premises network appliance settings
 
 Configure your network firewalls and proxies to periodically export logs to the dedicated Syslog port of the FTP directory according to the directions in the **Create log collector** dialog. The following example shows the destination path format for a data source named `BlueCoat_HQ`, where `<machine_name>` is the name of your log collector machine:
 
-```bash
+```text
 BlueCoat_HQ - Destination path: \<<machine_name>>\BlueCoat_HQ\
 ```
 
 ### Verify your deployment in Defender for Cloud Apps
 
-Check the collector status in the **Log collector** table and make sure the status is **Connected**. If it's **Created**, it's possible the log collector connection and parsing haven't completed.
+If the status is **Created**, the log collector connection and parsing might still be in progress. Check the collector status in the **Log collector** table and confirm that the status changes to **Connected**.
 
 For example:
 

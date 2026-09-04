@@ -3,7 +3,7 @@ title: Configure custom exclusions for Microsoft Defender Antivirus
 description: Learn how to exclude specific files, folders, and processes from Microsoft Defender Antivirus scans by using Intune, MDM, Group Policy, PowerShell, or WMI.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 07/02/2026
+ms.date: 08/12/2026
 author: chrisda
 ms.author: chrisda
 ms.custom: nextgen, msecd-doc-authoring-1015
@@ -178,9 +178,16 @@ To configure file extension, folder, and process exclusions in Microsoft Configu
 
 To configure exclusions by using Group Policy, follow these steps:
 
-1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure, and then select **Edit**.
+1. In Centralized Group Policy, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
+
+1. In the GPMC console tree, expand Group Policy Objects in the forest and domain containing the GPO you want to edit.
+
+1. Right-click the GPO, and then select **Edit**.
 
 1. In the **Group Policy Management Editor**, go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Exclusions**.
+
+   > [!NOTE]
+   > Group Policy paths before Windows 10, version 2004 (May 2020) might use _Windows_ Defender Antivirus instead of _Microsoft_ Defender Antivirus. Both names refer to the same policy location.
 
 1. In the details pane of **Exclusions**, the available settings are:
 
@@ -197,8 +204,6 @@ To configure exclusions by using Group Policy, follow these steps:
 > You can also configure Group Policy locally on individual devices by using the Local Group Policy Editor (`gpedit.msc`). Navigate to the same path: **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Exclusions**.
 
 > [!NOTE]
-> Group Policy paths before Windows 10, version 2004 (May 2020) might use _Windows_ Defender Antivirus instead of _Microsoft_ Defender Antivirus. Both names refer to the same policy location.
->
 > Exclusion changes you make in Group Policy appear in the [Windows Security app exclusions](#configure-microsoft-defender-antivirus-exclusions-in-the-windows-security-app).
 
 ### Configure file and folder exclusions in Group Policy
@@ -336,7 +341,7 @@ For more information, see [Use WMI to configure and manage Microsoft Defender An
 
 ## Configure Microsoft Defender Antivirus exclusions in the Windows Security app
 
-You can use the [Windows Security app](https://support.microsoft.com/windows/stay-protected-with-the-windows-security-app-2ae0363d-0ada-c064-8b56-6a39afb6a963) on individual devices to configure exclusions. This method is useful for testing or for configuring a single device. To configure exclusions on many devices, use one of the enterprise management methods described earlier in this article.
+You can use the [Windows Security app](https://support.microsoft.com/Windows/Security/Windows-Security/stay-protected-with-the-windows-security-app) on individual devices to configure exclusions. This method is useful for testing or for configuring a single device. To configure exclusions on many devices, use one of the enterprise management methods described earlier in this article.
 
 For instructions, see [Add exclusions in the Windows Security app](microsoft-defender-security-center-antivirus.md).
 

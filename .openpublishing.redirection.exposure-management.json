@@ -1,0 +1,19 @@
+{
+  "redirections": [
+    {
+      "source_path": "exposure-management/security-events.md",
+      "redirect_url": "/security-exposure-management/initiatives",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exposure-management/review-attack-paths.md",
+      "redirect_url": "/security-exposure-management/work-attack-paths-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "exposure-management/compare-secure-score-security-exposure-management.md",
+      "redirect_url": "/security-exposure-management/microsoft-security-exposure-management",
+      "redirect_document_id": true
+    }
+  ]
+}

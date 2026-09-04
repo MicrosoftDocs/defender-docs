@@ -2,6 +2,7 @@
 title: Use the data ingestion benefit in Microsoft Defender for Cloud
 description: Defender for Servers Plan 2 includes 500 MB of free daily data ingestion per node to Log Analytics. Learn how the benefit is calculated and applied.
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security admin, I want to understand how the data ingestion benefit is applied so that I can estimate eligible Log Analytics coverage and avoid unexpected charges.
 ms.date: 07/12/2026
 ai-usage: ai-assisted
@@ -46,6 +47,8 @@ The benefit supports the following security data types. For the full category li
 - [Update](/azure/azure-monitor/reference/tables/update) and [UpdateSummary](/azure/azure-monitor/reference/tables/updatesummary) when the Update Management solution isn't running in the workspace or solution targeting is enabled.
 - [MDCFileIntegrityMonitoringEvents](/azure/azure-monitor/reference/tables/mdcfileintegritymonitoringevents)
 - [WindowsEvent](/azure/azure-monitor/reference/tables/windowsevent)
+- [DeviceCustomFileEvents](/azure/azure-monitor/reference/tables/devicecustomfileevents)
+- [DeviceCustomRegistryEvents](/azure/azure-monitor/reference/tables/devicecustomregistryevents)
 
 > [!NOTE]
 > Although `WindowsEvent` is listed, only security events from the `Microsoft-SecurityEvent` stream that go to the `SecurityEvent` table qualify for the 500 MB/day allowance. Application, System, or other event log channels aren't covered and are billed as regular ingestion.

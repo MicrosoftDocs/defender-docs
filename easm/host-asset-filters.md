@@ -1,14 +1,14 @@
 ---
-title: Host Asset Filters
+title: Host asset inventory filters in Microsoft Defender EASM
 titleSuffix: Defender EASM host asset filters 
 description: This article outlines the filter functionality available in Microsoft Defender External Attack Surface Management for host assets specifically, including operators and applicable field values.
 author: danielledennis
 ms.author: dandennis
 ms.service: defender-easm
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Host asset filters

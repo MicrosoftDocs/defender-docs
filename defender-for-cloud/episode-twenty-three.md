@@ -22,7 +22,7 @@ ai-usage: ai-assisted
 
 ## Recommended resources
 
-- [Learn more](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti) about Defender TI.
+- [Learn more](/defender-xdr/defender-threat-intelligence) about Defender TI.
 - Subscribe to [Microsoft Security on YouTube](https://www.youtube.com/playlist?list=PL3ZTgFEc7LysiX4PfHhdJPR7S8mGO14YS)
 - Join our [Tech Community](https://aka.ms/SecurityTechCommunity)
 - For more about [Microsoft Security](https://msft.it/6002T9HQY)

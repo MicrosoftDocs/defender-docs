@@ -2,7 +2,8 @@
 title: Set up continuous export with Azure Policy
 description: Learn how to set up continuous export of Microsoft Defender for Cloud security alerts and recommendations with Azure Policy.
 ms.topic: how-to
-ms.date: 05/24/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security analyst, I want to learn how to set up continuous export of alerts and recommendations with Azure Policy so that I can analyze the data in Log Analytics or Azure Event Hubs.
 ai-usage: ai-assisted
 ---
@@ -37,7 +38,7 @@ Automating monitoring and incident response can reduce investigation and mitigat
 
 To deploy continuous export configurations across your organization, use the provided Azure Policy `DeployIfNotExist` policies.
 
-To implement these policies:
+To implement the Azure Policy `DeployIfNotExist` policies for continuous export:
 
 1. Select a policy to apply:
 
@@ -59,7 +60,8 @@ To implement these policies:
 1. Review the summary page.
 1. Select **Create**.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Setup continuous export to an event hub behind a firewall](continuous-export-event-hub-firewall.md)

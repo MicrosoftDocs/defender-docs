@@ -1,10 +1,10 @@
 ---
 title: Import extra data for detected OT devices - Microsoft Defender for IoT
 description: Learn how to manually enhance the device data automatically detected by your Microsoft Defender for IoT OT sensor with extra, imported data.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Import extra data for detected OT devices
@@ -17,14 +17,16 @@ This article describes how you can manually import the missing data to your OT s
 
 Before performing the procedures in this article, you must have:
 
-- An OT network sensor with [software installed](ot-deploy/install-software-ot-sensor.md), [configured, and activated](ot-deploy/activate-deploy-sensor.md).
+- An OT network sensor with [OT sensor software installed](ot-deploy/install-software-ot-sensor.md) and [configured and activated](ot-deploy/activate-deploy-sensor.md).
 
 - Access to your OT network sensor as an **Admin** user. For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](roles-on-premises.md).
 
 - An understanding of the extra device data you want to import. Use that understanding to choose one of the following import methods:
 
-    - **Import data from the device map** to import device names, operating systems, groups, or Purdue layer
-    - **Import data from system settings** to import device IP addresses, operating systems, patch levels, or authorization statuses
+  - **Import data from the device map** to import device names, operating systems, groups, or Purdue layer
+  - **Import data from system settings** to import device IP addresses, operating systems, patch levels, or authorization statuses
+
+- Excel or another application that can create and edit `.csv` files.
 
 > [!TIP]
 > A device's authorization status affects the alerts that are triggered by the OT sensor for the selected device. You'll receive alerts for any devices *not* listed as authorized devices, as they'll be considered to be unauthorized.
@@ -62,10 +64,10 @@ Your device data is updated.
 1. In your .csv file, type the following details for each device:
 
     - **IP Address**. Enter the device's IP address.
-    - **Device OS**. Enter one of the device operating systems listed in the [supported values for the Device OS table](#supported-values-for-device-operating-system).
+    - **Device OS**. Enter one of the device operating systems listed in the [supported device operating system values](#supported-values-for-device-operating-system).
     - **Last Update**. Enter the date that the device was last updated, in `YYYY-MM-DD` format.
 
-To fill in the Device OS column, use the [device information example](#device-information-example) for sample device details and the [supported values table](#supported-values-for-device-operating-system) for supported operating system values.
+To fill in the Device OS column, use the [example device information CSV entry](#device-information-example) for sample device details and the [supported device operating system values](#supported-values-for-device-operating-system) table for reference.
 
 ### Device information example
 
@@ -74,7 +76,6 @@ The following table shows an example of correctly formatted device information i
 |**IP Address**  |**Device OS**|**Last Update**  |
 |---------|---------|---------|
 |192.168.19.200   |  Windows 7  |  2017-11-01  |
-
 
 ### Supported values for Device operating system
 
@@ -103,16 +104,15 @@ The following table lists the supported values you can enter in the **Device OS*
 | Windows Vista 64 |  |  |
 | Windows XP |  |  |
 
+1. Sign into your OT sensor and select **System settings > Import settings > Device information**.
 
-3. Sign into your OT sensor and select **System settings > Import settings > Device information**.
+1. In the **Device information** pane, select **+ Import file** and then select your edited .csv file.
 
-4. In the **Device information** pane, select **+ Import file** and then select your edited .csv file.
-
-5. Select **Close** to save your changes.
+1. Select **Close** to save your changes.
 
 ### Import device authorization status
 
-After importing device authorization status, any devices *not* included in the import list are newly defined as not-authorized, and you'll start to receive new alerts about any traffic on each of these devices.
+After importing device authorization status, any devices *not* included in the authorized devices import list are newly defined as not-authorized, and you'll start to receive new alerts about any traffic on each of these devices.
 
 1. Download the Defender for IoT [device authorization file](https://download.microsoft.com/download/8/2/3/823c55c4-7659-4236-bfda-cc2427be2cee/CSS/authorized_devices%20-%20example.csv) and open it for editing.
 
@@ -126,7 +126,7 @@ After importing device authorization status, any devices *not* included in the i
 
 1. Select **Close** to save your changes.
 
-## Next steps
+## Related content
 
 - [Detect Windows workstations and servers with a local script](detect-windows-endpoints-script.md) 
 - [Manage your OT device inventory from a sensor console](how-to-investigate-sensor-detections-in-a-device-inventory.md).

@@ -73,7 +73,7 @@ This section describes the configuration options available to customize the user
 
 The following screenshot shows a sample data connector page, highlighted with numbers that correspond to notable areas of the user interface.
 
-:::image type="content" source="media/create-codeless-connector/sample-data-connector-page.png" alt-text="Screenshot of a sample data connector page with sections labeled 1 through 9.":::
+:::image type="content" source="isv/media/create-codeless-connector/sample-data-connector-page.png" alt-text="Screenshot of a sample data connector page with sections labeled 1 through 9.":::
 
 Each of the following elements of the `connectorUiConfig` section needed to configure the user interface correspond to the CustomizableConnectorUiConfig portion of the API.
 
@@ -284,7 +284,7 @@ Here are some examples of the `Textbox` type. These examples correspond to the p
 
  Example:
 
-:::image type="content" source="media/create-codeless-connector/copy-field-value.png" alt-text="Screenshot of a copy value button in a field.":::
+:::image type="content" source="isv/media/create-codeless-connector/copy-field-value.png" alt-text="Screenshot of a copy value button in a field.":::
 
 **Sample code**:
 
@@ -445,11 +445,11 @@ Here are some examples of the `Textbox` type. These examples correspond to the p
 
 Here's an example of an inline information message:
 
-:::image type="content" source="media/create-codeless-connector/inline-information-message.png" alt-text="Screenshot of an inline information message.":::
+:::image type="content" source="isv/media/create-codeless-connector/inline-information-message.png" alt-text="Screenshot of an inline information message.":::
 
 In contrast, the following image shows an information message that's not inline:
 
-:::image type="content" source="media/create-codeless-connector/non-inline-information-message.png" alt-text="Screenshot of an information message that's not inline.":::
+:::image type="content" source="isv/media/create-codeless-connector/non-inline-information-message.png" alt-text="Screenshot of an information message that's not inline.":::
 
 |Array Value  |Type  |Description  |
 |---------|---------|---------|
@@ -461,7 +461,7 @@ In contrast, the following image shows an information message that's not inline:
 
 Here's an example of an expandable instruction group:
 
-:::image type="content" source="media/create-codeless-connector/accordion-instruction-area.png" alt-text="Screenshot of an expandable, extra instruction group.":::
+:::image type="content" source="isv/media/create-codeless-connector/accordion-instruction-area.png" alt-text="Screenshot of an expandable, extra instruction group.":::
 
 |Array Value  | Required | Type  |Description  |
 |---------|---------|---------|---------|
@@ -477,9 +477,9 @@ For a detailed example, see the configuration JSON for the [Windows DNS connecto
 
 Some **InstallAgent** types appear as a button, others appear as a link. Here are examples of both:
 
-:::image type="content" source="media/create-codeless-connector/link-by-button.png" alt-text="Screenshot of a link added as a button.":::
+:::image type="content" source="isv/media/create-codeless-connector/link-by-button.png" alt-text="Screenshot of a link added as a button.":::
 
-:::image type="content" source="media/create-codeless-connector/link-by-text.png" alt-text="Screenshot of a link added as inline text.":::
+:::image type="content" source="isv/media/create-codeless-connector/link-by-text.png" alt-text="Screenshot of a link added as inline text.":::
 
 |Array Values  | Required |Type  |Description  |
 |---------|---------|---------|------------|

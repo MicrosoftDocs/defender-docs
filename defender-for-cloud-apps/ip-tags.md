@@ -1,9 +1,11 @@
 ---
 title: Work with IP ranges and tags
-description: This article provides instructions for working with IP tags and IP categories.
-ms.date: 01/29/2023
+description: Learn how to define IP address ranges, assign categories and custom tags, use built-in cloud and threat-intelligence tags, and override geolocation data in Microsoft Defender for Cloud Apps.
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Mravela
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Work with IP ranges and tags
@@ -12,11 +14,11 @@ ms.reviewer: Mravela
 
 To easily identify known IP addresses, such as your physical office IP addresses, you need to set IP address ranges. IP address ranges allow you to tag, categorize, and customize the way logs and alerts are displayed and investigated. Each group of IP ranges can be categorized based on a preset list of IP categories. You're also able to create custom IP tags for your IP ranges. Additionally, you can override public geolocation information based on your internal network knowledge. Both IPv4 and IPv6 are supported.
 
-Defender for Cloud Apps comes preconfigured with built-in IP ranges for popular cloud providers such as Azure and Microsoft 365. Additionally, we have built-in tagging based on Microsoft threat intelligence including anonymous proxy, Botnet, and Tor. You can see the full list in the drop-down on the IP address ranges page.
+Defender for Cloud Apps comes preconfigured with built-in IP ranges for popular cloud providers such as Azure and Microsoft 365. Additionally, we have built-in tagging based on Microsoft threat intelligence including anonymous proxy, Botnet, and Tor. You can see the full list of built-in IP tags in the drop-down on the IP address ranges page.
 
 > [!NOTE]
 >
-> - To use these built-in tags as part of a search, refer to their ID in the Defender for Cloud Apps API documentation.
+> - To use these built-in tags as part of a search, refer to the tag IDs in the Defender for Cloud Apps API documentation.
 > - You can add IP ranges in bulk by creating a script using the [IP address ranges API](api-data-enrichment.md).
 > - You can't add IP ranges with overlapping IP addresses.
 > - To view the API documentation, go to [API documentation](api-introduction.md).
@@ -45,9 +47,9 @@ In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps*
 
     - **VPN**: These IPs should be any IP addresses you use for remote workers. By using this category, you can avoid raising [impossible travel](anomaly-detection-policy.md#impossible-travel) alerts when employees connect from their home locations via the corporate VPN.
 
-    To include the IP range in a category, select a category from the drop-down menu.
+    To include the IP range in a category, select a category from the **Categories** drop-down menu.
 
-1. To **Tag** the activities from these IP addresses enter a tag. Entering a word into the box creates the tag. After you already have a configured tag, you can easily add it to additional IP ranges by choosing it from the list. You can add more than one IP tag for each range. IP tags can be used when building policies. Along with IP tags you configure, Defender for Cloud Apps has built-in tags that aren't configurable. You can see the list of tags under the [IP tags filter](activity-filters.md#ip-address-insights).
+1. To **Tag** the activities from these IP addresses enter a tag. Entering a word into the box creates the tag. After you create a tag, you can add that tag to additional IP ranges by selecting the tag from the existing tags list. You can add more than one IP tag for each range. IP tags can be used when building policies. Along with IP tags you configure, Defender for Cloud Apps has built-in tags that aren't configurable. You can see the list of built-in IP tags under the [IP tags filter](activity-filters.md#ip-address-insights).
 
     > [!NOTE]
     > 
@@ -58,7 +60,7 @@ In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps*
 
 1. When you're done, select **Create**.
 
-    ![newipaddress range.](media/newipaddress-range.png "newipaddress range")
+    ![Screenshot showing the dialog to create a new IP address range in Defender for Cloud Apps.](media/newipaddress-range.png "newipaddress range")
    
 ## Next steps
 

@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.subservice: onboard
-ms.date: 06/15/2026
+ms.date: 07/28/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -71,16 +71,18 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 
 - While the tool checks for connectivity against your specific tenant before proceeding, other connectivity requirements, such as access to the consolidated *\*.endpoint.security.microsoft.com/*\*, apply to (additional) functionality you might want to use with the product. See [Configure your network environment to ensure connectivity with the Defender for Endpoint service](./configure-environment.md).
 
+[!INCLUDE [Streamlined connectivity SSL inspection requirement](./includes/streamlined-connectivity-no-ssl-inspection.md)]
+
 ### Additional prerequisites for Windows 7 SP1 and Windows Server 2008 R2 SP1
 
 - Devices must be running an x64 version of Windows 7 SP1 or Windows Server 2008 R2 SP1. We recommend having the latest updates installed to avoid reboots and to significantly reduce required installation time.
 
-- For the Defender deployment tool to run on Windows 7 SP1 or Windows Server 2008 R2 SP1, at a minimum, the update KB4474419 for [SHA2 code signing](https://support.microsoft.com/topic/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus-64d1c82d-31ee-c273-3930-69a4cde8e64f) must be installed.
+- For the Defender deployment tool to run on Windows 7 SP1 or Windows Server 2008 R2 SP1, at a minimum, the update KB4474419 for [SHA2 code signing](https://support.microsoft.com/servicing/os/windows/2020/09/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus) must be installed.
 
 
-   - Servicing stack update (SSU) ([KB4490628](https://support.microsoft.com/help/4490628)). If you use Windows Update, the required SSU is offered to you automatically. 
+   - Servicing stack update (SSU) ([KB4490628](https://support.microsoft.com/topic/servicing-stack-update-for-windows-7-sp1-and-windows-server-2008-r2-sp1-march-12-2019-b4dc0cff-d4f2-a408-0cb1-cb8e918feeba)). If you use Windows Update, the required SSU is offered to you automatically.
 
-   - SHA-2 update ([KB4474419](https://support.microsoft.com/help/4474419)) released September 10, 2019. If you use Windows Update, the required SHA-2 update is offered to you automatically. 
+   - SHA-2 update ([KB4474419](https://support.microsoft.com/topic/sha-2-code-signing-support-update-for-windows-server-2008-r2-windows-7-and-windows-server-2008-september-23-2019-84a8aad5-d8d9-2d5c-6d78-34f9aa5f8339)) released September 10, 2019. If you use Windows Update, the required SHA-2 update is offered to you automatically.
 
 - On Server 2008 R2 SP1 devices, .NET 3.5 or a higher version of the .NET framework must also be installed.
 
@@ -208,7 +210,7 @@ The following examples illustrate how to use the tool.
       DefenderDT.exe -MakeConfig
       ```
 
-  2. Use Notepad to open the *DefenderDTconfig.txt* file that was created in the directory. Specify parameters you want to use.
+  2. Use Notepad to open the *MdeConfig.txt* file that was created in the directory. Specify parameters you want to use.
 
      For example:
 
@@ -274,13 +276,13 @@ The following examples illustrate how to use the tool.
       DefenderDT.exe -File:\\server\DDT\Defenderconfig.txt
       ```
 
-      If the *DefenderDTconfig.txt* file is stored in the same directory as the tool, you don't need to specify a path.
+      If the *MdeConfig.txt* file is stored in the same directory as the tool, you don't need to specify a path.
 
 ## Using Group Policy for deployment
 
 The following steps show how to create a scheduled task to run the tool using Group Policy:
 
-1. Place the files *DefenderDT.exe* and *WindowsDefenderATP.onboarding* on a shared location that can be accessed by the device. If you've previously created an *DefenderDTconfig.txt* configuration file, place it in the same location.
+1. Place the files *DefenderDT.exe* and *WindowsDefenderATP.onboarding* on a shared location that can be accessed by the device. If you've previously created an *MDEConfig.txt* configuration file, place it in the same location.
 
 1. To create a new Group Policy Object (GPO), open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) (GPMC), right-click Group Policy Objects you want to configure and select **New**. Enter the name of the new GPO in the dialogue box that is displayed and select **OK**.
 

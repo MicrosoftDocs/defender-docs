@@ -30,7 +30,9 @@ To detect, investigate, and hunt for AI agent threats after they occur, see [Det
 Real-time protection inspects AI agent activity throughout the agentic loop and blocks risky actions before they execute. Coverage depends on the agent type:
 
 - **Agent 365 tool invocations**: Defender integrates with [Work IQ MCP](/microsoft-agent-365/tooling-servers-overview) to evaluate tool invocations before they run, including invocations of customer MCP tools [onboarded to Agent 365](/microsoft-365/admin/manage/manage-tools-for-agent). Agents that rely on unsupported tools or don't integrate with Work IQ MCP aren't covered.
-- **Copilot Studio agents**: Covered by evaluating tool invocations, which doesn't depend on Work IQ MCP. To enable it, make sure that Copilot Studio is connected. For more information, see [Enable security for AI agents using Microsoft Defender](get-started-defender-security-for-ai.md).
+- **Copilot Studio agents (Preview)**: Protection evaluates tool invocations, which doesn't depend on Work IQ MCP. To enable it, make sure that Copilot Studio is connected. For more information, see [Enable security for AI agents using Microsoft Defender](get-started-defender-security-for-ai.md).
+- **Foundry agents (Preview):** Protection evaluates user requests, agent responses, tool invocations, and tool responses.
+
 - **Local AI agents**: Covered through [endpoint runtime protection in Microsoft Defender for Endpoint](/defender-endpoint/ai-agent-runtime-protection-overview).
 
 For cloud agents, there are two types of real-time protection rules:

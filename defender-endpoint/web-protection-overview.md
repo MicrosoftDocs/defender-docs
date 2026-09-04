@@ -6,12 +6,12 @@ ms.author: lwainstein
 author: limwainstein
 ms.reviewer: ericlaw
 ms.localizationpriority: medium
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
-ms.custom: partner-contribution, msecd-doc-authoring-1014
+ms.custom: partner-contribution, msecd-doc-authoring-1016
 ms.topic: how-to
 ms.subservice: asr
 appliesto:
@@ -22,6 +22,7 @@ ai-usage: ai-assisted
 ---
 # Web protection in Microsoft Defender for Endpoint
 
+This article explains how web protection in Microsoft Defender for Endpoint helps secure your devices against web threats and regulate unwanted content. It covers the core capabilities—web threat protection, web content filtering, and custom indicators—along with browser support, policy precedence rules, troubleshooting, and advanced hunting queries. This information is intended for security administrators and IT professionals who manage Defender for Endpoint.
 
 <a name="about-web-protection"></a>
 ## Overview
@@ -135,7 +136,7 @@ The following table shows the responses and their correlated features.
 
 ## Advanced hunting for web protection
 
-Kusto queries in advanced hunting can be used to summarize web protection blocks in your organization for up to 30 days. These queries use the response categories from the [Troubleshoot endpoint blocks](#troubleshoot-endpoint-blocks) table to distinguish between the various sources of blocks and summarize them in a user-friendly manner. For example, to find WCF blocks detected by SmartScreen in Microsoft Edge, run the following query:
+Kusto queries in advanced hunting can be used to summarize web protection blocks in your organization for up to 30 days. These queries use the response categories from the [Troubleshoot endpoint blocks](#troubleshoot-endpoint-blocks) table to distinguish between the various sources of blocks and summarize them in a user-friendly manner. For example, to find Web Content Filtering (WCF) blocks detected by SmartScreen in Microsoft Edge, run the following query. This query filters `DeviceEvents` for SmartScreen URL warning actions and extracts key fields such as device name, timestamp, URL, and the experience category to identify web content filtering blocks.
 
 ```kusto
 DeviceEvents

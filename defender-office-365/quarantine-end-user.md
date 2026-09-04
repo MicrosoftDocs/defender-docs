@@ -9,13 +9,13 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
-  - msecd-doc-authoring-1016
+  - msecd-doc-authoring-1015
   - seo-marvel-apr2020
   - sfi-image-nochange
 description: Users can learn how to view and manage quarantined email messages in Microsoft 365 that were meant to be delivered to them.
 ms.service: defender-office-365
 adobe-target: true
-ms.date: 07/03/2026
+ms.date: 07/17/2026
 ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
@@ -128,6 +128,7 @@ To filter the entries, select :::image type="icon" source="media/defender-portal
   - **Malware**: Anti-malware policies in [the built-in security features for all cloud mailboxes](eop-about.md) or in Safe Attachments policies in Defender for Office 365. The **Policy Type** value indicates which feature was used.
   - **Phishing**: The spam filter verdict was **Phishing** or anti-phishing protection quarantined the message ([spoof settings](anti-phishing-policies-about.md#spoof-settings) or [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)).
   - **High confidence phishing**
+  - **Password protected item**: Safe Attachments quarantined the message because it contains an encrypted (password-protected) attachment that can't be scanned. For more information, see [Release messages that contain encrypted (password-protected) attachments](#release-messages-that-contain-encrypted-password-protected-attachments).
 - **Blocked sender**: One of the following values:
   - **Don't show blocked senders** (default)
   - **Show all senders**
@@ -278,6 +279,23 @@ The message is delivered to your Inbox (or some other folder, depending on any [
 > [!NOTE]
 > Releasing a message from quarantine re-delivers it to your mailbox rather than restoring it in place. As a result, the message appears in Outlook with the re-delivery time as the delivery timestamp instead of the original delivery time. The original send date is preserved in the message headers.
 
+##### Release messages that contain encrypted (password-protected) attachments
+
+If a message is quarantined because it contains an encrypted (password-protected) attachment that Safe Attachments couldn't scan, the message has the **Password protected item** quarantine reason value. You're prompted to enter the password for the attachment when you release the message. Enter the password that the sender used to protect the file. If the message has multiple password-protected attachments, they must all use the same password, and you enter that password once to evaluate and possibly release the message.
+
+Microsoft Defender for Office 365 uses the password to run a new scan of the attachment before the message is released. The password is used only to open and rescan the attachment. It isn't stored. The message stays in quarantine while the attachment is rescanned:
+
+- If the attachment is found to be safe, the message is released to your mailbox.
+- If the attachment is found to be malicious or still can't be scanned, the message stays in quarantine for an admin to review.
+
+> [!NOTE]
+> You have only one attempt to submit the correct password each time you open the password entry screen. Retrying with a different password on the same screen isn't supported. If needed, close the password entry screen, reopen it, and enter the correct password.
+
+You can't release these messages directly from a quarantine notification email. If you receive a quarantine notification for one of these messages, select **Review message** to open the message in the Microsoft Defender portal. On the **Quarantine** page, select :::image type="icon" source="media/defender-portal-icon-check-mark.png" border="false"::: **Release email**, and then enter the attachment password when you're prompted.
+
+> [!IMPORTANT]
+> Enter only the password for the attachment. Don't enter your account password, banking password, or other unrelated credentials in the release view. Supply the attachment password only when you expected the message and can validate the sender. If you didn't expect a protected message, report it to your security team instead of releasing it.
+
 #### Request the release of quarantined email
 
 If your quarantine policy doesn't allow you to directly release a message, you can request that an admin release it.
@@ -398,7 +416,7 @@ When you select multiple quarantined messages on the **Email** tab by selecting 
 ## Manage quarantined messages in Microsoft Teams
 
 > [!NOTE]
-> Currently, the quarantine policy for Teams is set to AdminOnlyAccess, which means users can't access quarantined Teams messages. We're actively working to update quarantine policy configurations.
+> Currently, the quarantine policy for Teams is set to **AdminOnlyAccess**, which means users can't access quarantined Teams messages. We're actively working to update quarantine policy configurations.
 
 Zero-hour auto purge (ZAP) is a protection feature that automatically removes potentially malicious chat messages in Microsoft Teams and places them in quarantine. Users can now view and manage these quarantined Teams messages in the Microsoft Defender portal. Quarantine notifications aren't supported for quarantined Teams messages.
 
@@ -467,3 +485,8 @@ On the **Teams messages** tab, select the quarantined message by selecting the c
 - **Preview message**: You can view the details of the message you selected.
 
 Messages are automatically deleted from quarantine after the date shown in the **Expires** column if you don't release or manually remove the messages.
+
+## Related content
+
+- [Quarantined email messages in cloud organizations](quarantine-about.md)
+- [Frequently asked questions - Quarantined messages](quarantine-faq.yml)

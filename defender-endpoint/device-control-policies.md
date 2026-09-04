@@ -3,7 +3,7 @@ title: Device control policies in Microsoft Defender for Endpoint
 description: Learn about Device control policies in Defender for Endpoint
 author: limwainstein
 ms.author: lwainstein
-ms.date: 10/23/2025
+ms.date: 07/28/2026
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -18,8 +18,8 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
 ---
+
 # Device control policies in Microsoft Defender for Endpoint
 
 
@@ -263,7 +263,7 @@ The following table provides more context for the XML code snippet:
 | `Option` | If type is `AuditDenied` | - `0`: nothing <br/>- `1`: show notification <br/>- `2`: send event <br/>- `3`: show notification and send event |
 | `AccessMask` | Defines the access | See the following section [Understand mask access](#understand-mask-access-windows) |
 | `Sid` | Local user SID or user SID group, or the SID of the Microsoft Entra object or the Object ID. It defines whether to apply this policy over a specific user or user group. One entry can have a maximum of one SID and an entry without any SID means to apply the policy over the device. | SID |
-| `ComputerSid` | Local computer SID or computer SID group, or the SID of the Microsoft Entra object or the Object Id. It defines whether to apply this policy over a specific device or device group. One entry can have a maximum of one ComputerSID and an entry without any ComputerSID means to apply the policy over the device. If you want to apply an Entry to a specific user and specific device, add both SID and ComputerSID into the same Entry. | SID |
+| `ComputerSid` | Local computer SID or computer SID group, or the Microsoft Entra group object ID. It defines whether to apply this policy over a specific device or device group. One entry can have a maximum of one ComputerSID and an entry without any ComputerSID means to apply the policy over the device. If you want to apply an Entry to a specific user and specific device, add both SID and ComputerSID into the same Entry. Microsoft Entra device object IDs currently aren't supported. | SID |
 | `Parameters` | Condition for an entry, such as network condition. | Can add groups (nondevice types) or even put parameters into parameters. For more information, see the [advanced conditions](#advanced-conditions) section (in this article).  |
 
 #### Understand mask access (Windows)

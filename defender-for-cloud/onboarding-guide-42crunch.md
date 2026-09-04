@@ -1,13 +1,16 @@
 ---
 title: Technical onboarding guide for 42Crunch (preview)
-description: Learn how to use 42Crunch with Microsoft Defender.
-ms.date: 05/28/2026
+description: Onboard 42Crunch to Microsoft Defender for Cloud to integrate API security audit and scan findings into a centralized DevSecOps workflow (preview).
+ms.date: 07/03/2026
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As an API security engineer, I want to onboard 42Crunch with Defender for Cloud so that API security findings are visible and actionable in a centralized workflow.
 ai-usage: ai-assisted
 ---
 
 # 42Crunch technical onboarding guide
+
+## Overview
 
 42Crunch enables a standardized approach to securing APIs that automates the enforcement of API security compliance across distributed development and security teams. The 42Crunch API security platform empowers developers to build security from the integrated development environment (IDE) into the CI/CD pipeline. This seamless DevSecOps approach to API security reduces governance costs and accelerates the delivery of secure APIs.
 
@@ -19,7 +22,8 @@ Scans can run automatically as part of a CI/CD pipeline or manually through an I
 
 Because the quality of the API specification largely determines the scan coverage and effectiveness, it's important to ensure that your OpenAPI specification is well-defined. 42Crunch **Audit** performs a static analysis of the OpenAPI specification file aimed at helping the developer to improve the security and quality of the specification. The Audit determines a composite security score from 0-100 for each specification file. As developers remediate security and semantic issues identified by the Audit, the score improves. 42Crunch recommends an [Audit score of at least 70 before running a Conformance scan](https://docs.42crunch.com/latest/content/concepts/data_dictionaries.htm).
 
-## Enablement
+<a name="enablement"></a>
+## Enable 42Crunch in Microsoft Defender for Cloud
 
 > [!NOTE]
 > The following steps walk through the process of setting up the free version of 42Crunch. See the [FAQ section](#faq) to learn about the differences between the free and paid versions of 42Crunch and how to purchase 42Crunch on Azure Marketplace.
@@ -28,7 +32,7 @@ Through relying on the 42Crunch [Audit](https://42crunch.com/api-security-audit)
 
 ## Connect your DevOps environments to Microsoft Defender for Cloud
 
-This feature requires connecting your DevOps environment to Defender for Cloud.
+Viewing 42Crunch scan results in Defender for Cloud requires connecting your DevOps environment to Defender for Cloud.
 
 See [how to onboard your GitHub organizations](quickstart-onboard-github.md).
 
@@ -40,7 +44,8 @@ The REST API Static Security Testing action locates REST API contracts that foll
 
 The action is powered by [42Crunch API Security Audit](https://docs.42crunch.com/latest/content/concepts/api_contract_security_audit.htm). Security Audit performs a static analysis of the API definition that includes more than 300 checks on best practices and potential vulnerabilities on how the API defines authentication, authorization, transport, and request/response schemas.
 
-### For GitHub environments
+<a name="for-github-environments"></a>
+### Configure 42Crunch Audit for GitHub environments
 
 Install the 42Crunch API Security Audit plugin within your CI/CD pipeline by completing the following steps:
 
@@ -55,7 +60,7 @@ To create a new default workflow:
 
 1. Choose **Setup a workflow yourself**.
 1. Rename the workflow from `main.yaml` to `42crunch-audit.yml`.
-1. Go to [https://github.com/marketplace/actions/42crunch-rest-api-static-security-testing-freemium#full-workflow-example](https://github.com/marketplace/actions/42crunch-rest-api-static-security-testing-freemium#full-workflow-example).
+1. Go to the [42Crunch REST API Static Security Testing full workflow example](https://github.com/marketplace/actions/42crunch-rest-api-static-security-testing-freemium#full-workflow-example).
 1. Copy the full sample workflow and paste it in the workflow editor.
 
    > [!NOTE]
@@ -100,6 +105,8 @@ After running the workflow, it might take up to 30 minutes for the results to sh
 
 #### Navigate to Defender for Cloud
 
+To view the 42Crunch Audit findings in Defender for Cloud, complete the following steps:
+
 1. Select **Recommendations**.
 1. Select **All recommendations**.
 1. Filter by searching for **API security testing**.
@@ -109,7 +116,10 @@ The selected recommendation shows all 42Crunch Audit findings. You completed the
 
 :::image type="content" source="media/onboarding-guide-42crunch/api-recommendations.png" alt-text="Screenshot showing API summary." lightbox="media/onboarding-guide-42crunch/api-recommendations.png":::
 
-### For Azure DevOps environments
+<a name="for-azure-devops-environments"></a>
+### Configure 42Crunch Audit for Azure DevOps environments
+
+To configure 42Crunch Audit in Azure DevOps, complete the following steps:
 
 1. Install the [42Crunch Azure DevOps extension](https://marketplace.visualstudio.com/items?itemName=42Crunch.42c-cicd-audit-freemium) on your organization.
 1. Create a new pipeline in your Azure DevOps project. For a tutorial for creating your first pipeline, see [Create your first pipeline](/azure/devops/pipelines/create-first-pipeline).
@@ -164,9 +174,9 @@ The selected recommendation shows all 42Crunch Audit findings. You completed the
 
 API Scan continually scans the API to ensure conformance to the OpenAPI contract and detect vulnerabilities at testing time. It detects OWASP API Security Top 10 issues early in the API lifecycle and validates that your APIs can handle unexpected requests.
 
-The scan requires a nonproduction live API endpoint, and the required credentials (API key/access token). [Follow these steps](https://github.com/42Crunch/apisecurity-tutorial) to configure the 42Crunch Scan.
+The scan requires a nonproduction live API endpoint, and the required credentials (API key/access token). See the [42Crunch API security tutorial](https://github.com/42Crunch/apisecurity-tutorial) to configure the 42Crunch Scan.
 
-Refer to the **azure-pipelines-scan.yaml** in the tutorial for the ADO specific tasks.
+Refer to the **azure-pipelines-scan.yaml** file in the [42Crunch API Security tutorial](https://github.com/42Crunch/apisecurity-tutorial) for the Azure DevOps-specific tasks.
 
 ## FAQ
 
@@ -192,7 +202,7 @@ For the full enterprise version of the 42Crunch platform, the following data is 
 
 ### How is 42Crunch licensed?
 
-42Crunch is licensed based on a combination of the number of APIs and the number of developers that are provisioned on the platform. For example pricing bundles, see [this marketplace listing](https://azuremarketplace.microsoft.com/marketplace/apps/42crunch1580391915541.42crunch_developer_first_api_security_platform?tab=overview). Custom pricing is available through private offers on the Azure commercial marketplace. For a custom quote, reach out to <mailto:sales@42crunch.com>.
+42Crunch is licensed based on a combination of the number of APIs and the number of developers that are provisioned on the platform. For example pricing bundles, see the [42Crunch Developer-First API Security Platform marketplace listing](https://azuremarketplace.microsoft.com/marketplace/apps/42crunch1580391915541.42crunch_developer_first_api_security_platform?tab=overview). Custom pricing is available through private offers on the Azure commercial marketplace. For a custom quote, reach out to <mailto:sales@42crunch.com>.
 
 ### What's the difference between the free and paid version of 42Crunch?
 
@@ -204,11 +214,12 @@ For the paid enterprise version of 42Crunch, Audits and scans are still executed
 
 ### Is 42Crunch available on the Azure commercial marketplace?
 
-Yes, 42Crunch is [available for purchase on the Microsoft commercial marketplace here](https://azuremarketplace.microsoft.com/marketplace/apps/42crunch1580391915541.42crunch_developer_first_api_security_platform).
+Yes, 42Crunch is available for purchase on the [42Crunch Developer-First API Security Platform offer on Microsoft commercial marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/42crunch1580391915541.42crunch_developer_first_api_security_platform).
 
 Purchases of 42Crunch made through the Azure commercial marketplace count towards your Minimum Azure Consumption Commitments (MACC).
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Review Microsoft Defender for APIs overview](defender-for-apis-introduction.md)

@@ -6,10 +6,11 @@ author: guywi-ms
 ms.reviewer: itaicohen
 ms.service: microsoft-defender
 ms.update-cycle: 180-days
-ms.date: 06/28/2026
+ms.date: 08/07/2026
 audience: Admin
 ms.topic: concept-article
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1015
 #customer-intent: As a security administrator, I want to learn how to detect, investigate, and hunt for threats to AI agents using Microsoft Defender.
 ---
 
@@ -28,12 +29,16 @@ Microsoft Defender detects and enables security teams to investigate threats to 
 - Ensure that your AI agent emits observability data to Microsoft 365:
   - Agents built with Microsoft Copilot Studio, Microsoft Foundry, and declarative agents built with the Microsoft 365 Copilot Agent Builder send observability data to Microsoft 365 by default.
   - For AI agents built on other platforms, enable observability using the Microsoft Agent 365 SDK, as described in the [Agent 365 development lifecycle documentation](/microsoft-agent-365/developer/a365-dev-lifecycle#1-build-and-run-agent).
+    > [!NOTE]
+    > Threat detection is supported only for published Microsoft Foundry agents. Unpublished agents, including agents used only in a playground environment, aren’t supported.
+    > For more information, see [Publish agents to Microsoft 365 Copilot and Microsoft Teams in the Foundry portal](/azure/foundry/agents/how-to/publish-copilot?tabs=portal)
+    
 - To detect threats to local AI agents that run on endpoints, set up [AI agent runtime protection in Microsoft Defender for Endpoint](/defender-endpoint/configure-ai-agent-runtime-protection). Microsoft Defender for Endpoint must run in active mode. Local agents are onboarded separately from cloud agents.
 - *(Optional)* To include the prompt snippets that triggered a detection as evidence in alerts, enable [prompt evidence collection](ai-agent-real-time-protection.md#control-prompt-evidence-in-alerts). This setting is enabled by default.
 
 ## Detect AI agent threats in near-real-time
 
-Microsoft Defender continuously monitors AI agent activity and detects suspicious and malicious behavior for all Agent 365‑managed agents. Defender analyzes agent telemetry, tool usage, and execution patterns to identify threats such as *jailbreak attempts*, *XPIA attempts*, *malicious content propagation*, *secrets and credentials leak*, *evasion techniques*, *suspicious user access*, and more.
+Microsoft Defender continuously monitors AI agent activity and detects suspicious and malicious behavior for all Agent 365-managed agents. Defender analyzes agent telemetry, tool usage, and execution patterns to identify threats such as _jailbreak attempts_, _indirect prompt injection (XPIA) attempts_, _malicious content propagation_, _secret and credential leakage_, _evasion techniques_, _large language model (LLM) reconnaissance_, and _suspicious user or IP access_.
 
 Microsoft Defender surfaces detections as near‑real‑time alerts in the Defender portal and enables security teams to investigate them using familiar security operations workflows, including alert triage, incident correlation, and Advanced Hunting.
 

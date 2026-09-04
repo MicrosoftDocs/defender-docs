@@ -4,12 +4,12 @@ description: Learn how to create and manage custom graphs in Microsoft Sentinel 
 ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: sourinpaul
-ms.date: 06/18/2026
+ms.date: 07/01/2026
 ms.topic: how-to 
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-graph
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #customer intent: As a security researcher, I want to create custom graphs in my tenant so that I can continuously monitor and detect systemic threats.
 ---
@@ -334,7 +334,7 @@ The following sample creates a graph to traverse Microsoft Entra group membershi
 
 You've now created a graph in the notebook.
 
-To show a visual representation of the graph, in a new cell paste and run the following sample Graph Query Language (GQL) query. This query traverses nested Microsoft Entra group memberships up to eight levels deep and displays the resulting relationships:
+The following Python example runs a Graph Query Language (GQL) query against the graph you just created to explore nested group relationships. Use queries like this one after graph creation to traverse membership hierarchies and uncover indirect access paths. To try it, paste the code into a new notebook cell and run it. This sample query traverses nested Microsoft Entra group memberships up to eight levels deep and displays the resulting relationships:
 
 ```python
 # Query 1: Find nested group relationships nexting up to 8 levels deep

@@ -7,7 +7,7 @@ ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
-ms.date: 05/02/2025
+ms.date: 07/28/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
 ms.reviewer: shlomiakirav
@@ -128,13 +128,13 @@ With network firewall protection, you can set rules that determine which network
 - Safeguard sensitive data and intellectual property
 - Extend your security investment
 
-To learn more, see [Windows Defender Firewall with advanced security](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security).
+To learn more, see [Windows Defender Firewall with advanced security](/windows/security/operating-system-security/network-security/windows-firewall).
 
 ### Application control
 
 Application control protects your Windows endpoints by running only trusted applications and code in the system core (kernel). Your security team can define application control rules that consider an application's attributes, such as its codesigning certificates, reputation, launching process, and more. Application control is available in Windows 10 or later.
 
-To learn more, see [Application control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control).
+To learn more, see [Application control for Windows](/windows/security/application-security/application-control/app-control-for-business/appcontrol).
 
 ## Centralized management
 
@@ -168,6 +168,12 @@ To learn more, see [Get started with Microsoft Defender for Endpoint Plan 1](mde
 With the Defender for Endpoint APIs, you can automate workflows and integrate with your organization's custom solutions.
 
 To learn more, see [Defender for Endpoint APIs](api/management-apis.md).
+
+## Licensing
+
+Defender for Endpoint Plan 1 is available as a standalone subscription or as part of Microsoft 365 E3. For server deployments, you can license Defender for Endpoint Plan 1 for servers separately.
+
+If you're also using [Microsoft Defender for Servers](/azure/defender-for-cloud/defender-for-servers-overview) as part of Defender for Cloud, check if you're eligible for a [licensing discount when you have both Defender for Endpoint and Defender for Servers](/azure/defender-for-cloud/faq-defender-for-servers#can-i-get-a-discount-if-i-already-have-a-microsoft-defender-for-endpoint-license-).
 
 ## Next steps
 

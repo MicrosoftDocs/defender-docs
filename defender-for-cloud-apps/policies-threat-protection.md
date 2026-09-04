@@ -1,11 +1,11 @@
 ---
 title: Common threat protection policies | Microsoft Defender for Cloud Apps
 description: This topic outlines the steps to configure many threat protection policies in Defender for Cloud Apps.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Ronen-Refaeli
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Common Defender for Cloud Apps threat protection policies
 
@@ -18,7 +18,7 @@ This article describes common threat protection policies in Defender for Cloud A
 
 ## Detect and control user activity from unfamiliar locations
 
-This feature detects user access or activity from locations that no one in your organization has visited before.
+The activity from unfamiliar locations detection identifies user access or activity from locations that no one in your organization has visited before.
 
 ### Prerequisites
 
@@ -26,11 +26,11 @@ You must have at least one app connected using [app connectors](enable-instant-v
 
 ### Steps
 
-This detection is set up by default to alert you when access comes from new locations. No action is needed to turn on this policy. For more information, see [Anomaly detection policies](anomaly-detection-policy.md).
+The unfamiliar locations detection is set up by default to alert you when access comes from new locations. No action is needed to turn on this policy. For more information, see [Anomaly detection policies](anomaly-detection-policy.md).
 
 ## Detect compromised account by impossible location (impossible travel)
 
-Automatic detection of user access or activity from 2 different locations within a time period that is shorter than the time it takes to travel between the two.
+The impossible travel detection identifies user access or activity from two different locations within a time period that is shorter than the time it takes to travel between them.
 
 ### Prerequisites
 
@@ -67,7 +67,7 @@ Detect when a user, who is on unpaid leave and shouldn't be active on any organi
 
 1. Set the filter **User group** equals to the name of the user groups you created in Microsoft Entra ID for the unpaid leave users.
 
-1. Optional: Set the **Governance** actions to be taken on files when a violation is detected. The governance actions available vary between services. You can choose **Suspend user**.
+1. Optional: Set the **Governance** actions to be taken when a violation is detected. Governance actions are automated responses—such as notifying a user, suspending an account, or revoking access—that vary between services. You can choose **Suspend user**.
 
 1. Create the activity policy.
 
@@ -161,7 +161,7 @@ Automatic detection of potential Ransomware activity.
 
 ### Prerequisites
 
-- This detection applies only to Microsoft 365, Google Workspace, Box, and Dropbox.
+- Ransomware detection applies only to Microsoft 365, Google Workspace, Box, and Dropbox.
 - You must have at least one app connected using [app connectors](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).
 
 ### Steps
@@ -172,7 +172,7 @@ Automatic detection of potential Ransomware activity.
 
 ## Detect malware in the cloud
 
-Detect files containing malware in your cloud environments by utilizing the Defender for Cloud Apps integration with the Microsoft's Threat Intelligence engine.
+Detect files containing malware in your cloud environments by utilizing the Defender for Cloud Apps integration with Microsoft Threat Intelligence, Microsoft's security analysis capability that identifies known malicious indicators such as malware signatures and suspicious IP addresses.
 
 ### Prerequisites
 

@@ -1,6 +1,6 @@
 ---
 title: Endpoint detection and response in block mode
-description: Learn about endpoint detection and response in block mode
+description: Learn about endpoint detection and response in block mode.
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: pahuijbr, kausd
@@ -9,11 +9,13 @@ ms.service: defender-endpoint
 ms.subservice: edr
 ms.localizationpriority: medium
 ms.custom:
+  - msecd-doc-authoring-1015
   - next-gen
   - mde-edr
   - admindeeplinkDEFENDER
   - sfi-ga-nochange
-ms.date: 10/20/2025
+ms.date: 08/12/2026
+ai-usage: ai-assisted
 ms.collection:
 - m365-security
 - tier2
@@ -21,6 +23,7 @@ ms.collection:
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
+#customer intent: As a security administrator, I want to understand endpoint detection and response in block mode so that endpoints can remediate malicious artifacts when Microsoft Defender Antivirus isn't the primary antivirus product.
 ---
 
 # Endpoint detection and response in block mode
@@ -65,6 +68,7 @@ When EDR in block mode is turned on, and a malicious artifact is detected, Defen
 ## Enable EDR in block mode
 
 > [!IMPORTANT]
+>
 > - Make sure the [requirements](#requirements-for-edr-in-block-mode) are met before turning on EDR in block mode.
 > - Defender for Endpoint Plan 2 licenses are required.
 > - Beginning with [platform version 4.18.2202.X](microsoft-defender-antivirus-updates.md), you can set EDR in block mode to target specific device groups using Intune CSPs. You can continue to set EDR in block mode tenant-wide in the [Microsoft Defender portal](https://security.microsoft.com).
@@ -90,17 +94,23 @@ For more information on the Defender CSP used for EDR in block mode, see "Config
 
 You can use Group Policy to enable EDR in block mode.
 
-1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
+1. In Centralized Group Policy, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
-1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
+1. In the GPMC console tree, expand Group Policy Objects in the forest and domain containing the GPO you want to edit.
 
-1. In the **Group Policy Management Editor** go to **Computer configuration** and then select **Administrative templates**.
+1. Right-click the GPO, and then select **Edit**.
 
-1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Features**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Features**.
 
-1. Double-click **Enable EDR in block mode** and set the option to **Enabled**.
+1. In the details pane of **Features**, open the **Enable EDR in block mode** setting. To open the setting, use any of the following methods:
+   - Double-click the setting.
+   - Right-click the setting, and then select **Edit**.
+   - Select the setting, and then select **Action** \> **Edit**.
 
-1. Select **OK**.
+1. In the setting window that opens, select **Enabled**, and then select **OK**.
+
+> [!TIP]
+> You can also configure Group Policy locally on individual devices by using the Local Group Policy Editor (`gpedit.msc`). Navigate to the same path: **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Features**.
 
 ## Requirements for EDR in block mode
 
@@ -125,6 +135,3 @@ The following table lists requirements for EDR in block mode:
 ## See also
 
 - [Endpoint detection and response (EDR) in block mode frequently asked questions (FAQ)](edr-block-mode-faqs.yml)
-
-
-

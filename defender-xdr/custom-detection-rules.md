@@ -22,7 +22,7 @@ appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Defender for Endpoint Plan 2
 ms.topic: how-to
-ms.date: 07/02/2026
+ms.date: 09/02/2026
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to create custom detection rules so that I can proactively monitor for threats and automate response actions using advanced hunting queries.
 ---
@@ -33,11 +33,14 @@ ai-usage: ai-assisted
 
 Custom detection rules are [advanced hunting](advanced-hunting-overview.md) queries you design and tweak to proactively monitor various events and system states, including suspected breach activity and misconfigured endpoints. You can set them to run at regular intervals, generating alerts and taking response actions whenever there are matches.
 
+This article walks you through creating and configuring a custom detection rule, including preparing the query, setting alert details, specifying automated response actions, and defining the rule scope.
+
 ## Required permissions for managing custom detections
 
-To manage custom detections, you need roles with permissions for the data these detections target. For example, to manage custom detections on multiple data sources (Microsoft Defender and Microsoft Sentinel, or multiple Defender workloads), you need all the applicable Defender and Sentinel roles. For more information, see the following sections.
+To manage custom detections, you need roles with permissions for the data these detections target. For example, to manage custom detections on multiple data sources (Microsoft Defender and Microsoft Sentinel, or multiple Defender workloads), you need all the applicable Defender and Sentinel roles. For more information, see [Microsoft Defender XDR](#microsoft-defender-xdr) and [Microsoft Sentinel](#microsoft-sentinel).
 
-### Microsoft Defender XDR
+<a name="microsoft-defender-xdr"></a>
+### Required permissions in Microsoft Defender XDR
 To manage custom detections on Microsoft Defender data, you need to be assigned one of these roles:
 
 - **Security settings (manage)** - Users with this [Microsoft Defender permission](manage-rbac.md) can manage security settings in the Microsoft Defender portal.
@@ -53,7 +56,8 @@ Likewise, since the `IdentityLogonEvents` table holds authentication activity in
 > [!NOTE]
 > To manage custom detections, Security Operators must have the Manage Security Settings permission in Microsoft Defender for Endpoint if RBAC is turned on.
 
-### Microsoft Sentinel
+<a name="microsoft-sentinel"></a>
+### Required permissions in Microsoft Sentinel
 
 To manage custom detections on Microsoft Sentinel data, you need to be assigned the **Microsoft Sentinel Contributor** role or higher. Users with this [Azure role](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor) can manage Microsoft Sentinel SIEM workspace data, including alerts and detections. You can assign this role on a specific primary workspace, Azure resource group, or an entire subscription.
 
@@ -98,8 +102,8 @@ In the Microsoft Defender portal, go to **Advanced hunting** and select an exist
 
 To create a custom detection rule by using Defender data, we recommend that the query returns the following columns: 
 1. `Timestamp` or `TimeGenerated` - This column sets the timestamp for generated alerts. If these columns aren't projected from the KQL, the first and last event time for the generated alert is set according to the lookback window of the detection. 
-1. **For Microsoft Defender for Endpoint tables**, include `DeviceId` or `DeviceName` columns to ensure that: 
-    - Alerts are tagged with the correct device group scope 
+1. **For Microsoft Defender for Endpoint tables**, include `DeviceId` and `ReportId` columns to ensure that:
+    - Alerts are tagged with the correct device group scope.
     - Process tree view is built successfully.
 1. **For all other Defender tables**, project `Timestamp` and `ReportId` from the same event to ensure Defender identifies the original event that triggered the alert so that: 
     - Alerts are tagged with the correct entity scope (only relevant for organizations that use Defender XDR scopes) 
@@ -130,7 +134,7 @@ There are various ways to ensure more complex queries return these columns. For 
 > Avoid filtering custom detections by using the `Timestamp` or `TimeGenerated` column. The service prefilters data for custom detections based on the detection lookback. Filter the results by `Timestamp` or `TimeGenerated` columns only if you want to add additional filtering to ensure a specific sunset of the lookback window is evaluated.  
 
 
-The following sample query counts the number of unique devices (`DeviceId`) with antivirus detections and uses this count to find only the devices with more than five detections. To return the latest `Timestamp` and the corresponding `ReportId`, it uses the `summarize` operator with the `arg_max` function.
+The following sample query shows how to return the recommended columns in a more complex query. It counts the number of unique devices (`DeviceId`) with antivirus detections and finds only devices with more than five detections. To return the latest `Timestamp` and the corresponding `ReportId`, it uses the `summarize` operator with the `arg_max` function. This query references a single table and uses only supported operators, which also makes it compatible with [Continuous (NRT) frequency](#continuous-nrt-frequency).
 
 ```kusto
 DeviceEvents
@@ -213,7 +217,7 @@ Near real-time detections support the following tables:
 
 |Microsoft Defender XDR| Microsoft Sentinel|
 |----------------------|-------------------|
-|<ul><li>`AlertEvidence`<li>`CloudAppEvents`<li>`DeviceEvents`<li>`DeviceFileCertificateInfo`<li>`DeviceFileEvents`<li>`DeviceImageLoadEvents`<li>`DeviceLogonEvents`<li>`DeviceNetworkEvents`<li>`DeviceNetworkInfo`<li>`DeviceInfo`<li>`DeviceProcessEvents`<li>`DeviceRegistryEvents`<li>`EmailAttachmentInfo`<li>`EmailEvents` (except `LatestDeliveryLocation` and `LatestDeliveryAction` columns)<li>`EmailPostDeliveryEvents`<li>`EmailUrlInfo`<li>`IdentityDirectoryEvents`<li>`IdentityLogonEvents`<li>`IdentityQueryEvents`<li>`UrlClickEvents`</ul>| <ul><li>`ABAPAuditLog_CL`<li>`ABAPChangeDocsLog_CL`<li>`AuditLogs`<li>`AWSCloudTrail`<li>`AWSGuardDuty`<li>`AzureActivity`<li>`CommonSecurityLog`<li>`GCPAuditLogs`<li>`MicrosoftGraphActivityLogs`<li>`OfficeActivity`<li>`Okta_CL`<li>`OktaV2_CL`<li>`ProofpointPOD`<li>`ProofPointTAPClicksPermitted_CL`<li>`ProofPointTAPMessagesDelivered_CL`<li>`SecurityAlert`<li>`SecurityEvent`<li>`SigninLogs`</ul> 
+|<ul><li>`AlertEvidence`<li>`CloudAppEvents`<li>`DeviceEvents`<li>`DeviceFileCertificateInfo`<li>`DeviceFileEvents`<li>`DeviceImageLoadEvents`<li>`DeviceLogonEvents`<li>`DeviceNetworkEvents`<li>`DeviceNetworkInfo`<li>`DeviceInfo`<li>`DeviceProcessEvents`<li>`DeviceRegistryEvents`<li>`EmailAttachmentInfo`<li>`EmailEvents` (except `LatestDeliveryLocation` and `LatestDeliveryAction` columns)<li>`EmailPostDeliveryEvents`<li>`EmailUrlInfo`<li>`IdentityDirectoryEvents`<li>`IdentityLogonEvents`<li>`IdentityQueryEvents`<li>`UrlClickEvents`</ul>| <ul><li>`ABAPAuditLog_C`<li>`ABAPChangeDocsLog_CL`<li>`AuditLogs`<li>`AWSCloudTrail`<li>`AWSGuardDuty`<li>`AzureActivity`<li>`CommonSecurityLog`<li>`GCPAuditLogs`<li>`MicrosoftGraphActivityLogs`<li>`OfficeActivity`<li>`Okta_CL`<li>`OktaV2_CL`<li>`ProofpointPOD`<li>`ProofPointTAPClicksPermitted_CL`<li>`ProofPointTAPMessagesDelivered_CL`<li>`SecurityAlert`<li>`SecurityEvent`<li>`SigninLogs`</ul> 
 
 > [!NOTE]
 > Only generally available columns support **Continuous (NRT)** frequency.
@@ -347,11 +351,11 @@ If your custom detection rule uses Defender data, it can automatically take acti
 
 Apply these actions to devices in the `DeviceId` column of the query results:
 
-- **Isolate device** - Uses Microsoft Defender for Endpoint to apply full network isolation, preventing the device from connecting to any application or service. [Learn more about Microsoft Defender for Endpoint machine isolation](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts#isolate-devices-from-the-network).
-- **Collect investigation package** - Collects device information in a ZIP file. [Learn more about the Microsoft Defender for Endpoint investigation package](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts#collect-investigation-package-from-devices).
+- **Isolate device** - Uses Microsoft Defender for Endpoint to apply full network isolation, preventing the device from connecting to any application or service. For more information, see [Microsoft Defender for Endpoint machine isolation](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts#isolate-devices-from-the-network).
+- **Collect investigation package** - Collects device information in a ZIP file. For more information, see [Collect investigation package from devices](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts#collect-investigation-package-from-devices).
 - **Run antivirus scan** - Performs a full Microsoft Defender Antivirus scan on the device.
 - **Initiate investigation** - Initiates an [automated investigation](m365d-autoir.md) on the device.
-- **Restrict app execution** - Sets restrictions on device to allow only files that are signed with a Microsoft-issued certificate to run. [Learn more about app restrictions with Microsoft Defender for Endpoint](/defender-endpoint/respond-machine-alerts#restrict-app-execution).
+- **Restrict app execution** - Sets restrictions on device to allow only files that are signed with a Microsoft-issued certificate to run. For more information, see [App restrictions in Microsoft Defender for Endpoint](/defender-endpoint/respond-machine-alerts#restrict-app-execution).
 
 #### Actions on files
 
@@ -369,6 +373,21 @@ Apply these actions to devices in the `DeviceId` column of the query results:
 - Both the **Disable user** and **Reset user authentication** options require the user security identifier (SID), which are in the columns `AccountSid`, `InitiatingProcessAccountSid`, `RequestAccountSid`, and `OnPremSid`.
 
 - For Microsoft Entra identities, `AccountObjectId` parameter is needed for all actions.
+
+- Custom detection rules can apply governance actions to supported SaaS identities returned by queries that use the `CloudAppEvents` table. This capability is in preview.
+
+- To apply SaaS actions, the query results must include `AccountObjectId`, `InstanceId`, `ApplicationId`, and `AppInstanceId`, along with other required columns such as `Timestamp`. You can use joins as long as the required columns are present in the query results.
+
+> [!IMPORTANT]
+> If the selected governance action or SaaS service isn't supported, the rule doesn't take an action.
+
+The following table lists the supported governance actions for SaaS identities:
+
+| SaaS service | Supported governance actions |
+| --- | --- |
+| Box | **Disable user** |
+| Google Workspace | **Disable user**, **Force password reset** |
+| Salesforce | **Disable user** |
 
 For more information on user actions, see [Remediation actions in Microsoft Defender for Identity](/defender-for-identity/remediation-actions) and [Remediation actions in Microsoft Defender for Cloud Apps](/defender-cloud-apps/governance-actions).
 

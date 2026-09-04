@@ -5,9 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security engineer, I want to get specific labeling data from Microsoft Purview, so analysts can track, analyze, report on the data and use it for compliance purposes.
 ---
@@ -39,7 +39,7 @@ This connector replaces the Azure Information Protection (AIP) data connector. T
 
 > [!IMPORTANT]
 >
-> As of **March 31, 2023**, the AIP analytics and audit logs public preview will be retired, and moving forward will be using the [Microsoft 365 auditing solution](/microsoft-365/compliance/auditing-solutions-overview).
+> As of **March 31, 2023**, the AIP analytics and audit logs public preview will be retired. Customers should use the [Microsoft 365 auditing solution](/microsoft-365/compliance/auditing-solutions-overview) moving forward.
 >
 > For more information: 
 > - See [Removed and retired services](/azure/information-protection/removed-sunset-services#azure-information-protection-analytics).

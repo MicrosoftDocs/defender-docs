@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting known issues
 description: Describes how you can troubleshoot issues in Microsoft Defender for Identity.
-ms.date: 02/04/2026
+ms.date: 09/02/2026
 ms.topic: troubleshooting
 ms.reviewer: rlitinsky
 ms.custom:
@@ -485,9 +485,16 @@ Sample logs that might indicate the issue:
 
 If permissions need to be reconfigured, follow the steps outlined in this [guide](deploy/active-directory-federation-services.md).
 
-## Auditing health alerts persist on sensor v3
+<a name='auditing-health-alerts-persist-on-sensor-v3'></a>
 
-In some v3 sensor environments, auditing health alerts might persist even when Windows auditing is correctly configured. This primarily occurs with manual auditing configuration, such as using Group Policy or PowerShell. The sensor remains healthy and detections aren't affected. To resolve, enable **Automatic Windows auditing configuration** in the Defender for Identity portal under **Settings** > **Advanced features**.
+## Auditing health alerts persist on sensor v3.x
+
+In some environments running Microsoft Defender for Identity sensor v3.x, the following health alerts may persist even when auditing is configured correctly:
+
+- Auditing on the ADFS container is not enabled as required
+- Auditing on the Configuration container is not enabled as required
+
+This issue primarily occurs in environments that configure auditing manually, such as through Group Policy or PowerShell. The sensor remains healthy, and detections aren't affected. To resolve the issue, in the Microsoft Defender portal, go to **Settings** > **Identities** > **Advanced features**, and enable **Automatic Windows auditing configuration**. This issue is expected to be resolved in a future sensor update.
 
 ## Next steps
 

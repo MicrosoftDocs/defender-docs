@@ -48,7 +48,6 @@ If you're using Intune to manage Defender for Endpoint settings, you can use it 
 - **Scope tags** You can remove the default scope and select other existing [scope tags](/intune/intune-service/fundamentals/scope-tags). 
 - **Assignments**: Specify groups of users or devices to receive your policy. For more information, see [Assign policies in Intune](/intune/intune-service/configuration/device-profile-assign).
 
-
 ## Device control profiles
 
 In Intune, each row in the **Device Control** section represents a device control policy. You can add and remove policies using **+ Add** and **– Remove**. The name of the policy appears in the warning to users, and in advanced hunting and reports.

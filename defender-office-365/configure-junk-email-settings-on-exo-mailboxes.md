@@ -9,7 +9,7 @@ ms.collection:
   - tier2
 description: Admins can learn how to configure the junk email settings in Exchange Online mailboxes. Many of these settings are available to users in Outlook or Outlook on the web.
 ms.service: defender-office-365
-ms.date: 07/03/2026
+ms.date: 08/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -26,7 +26,7 @@ All Microsoft 365 organizations with cloud mailboxes include anti-spam protectio
 
 But, there are also specific anti-spam settings that admins can configure on individual mailboxes in Exchange Online:
 
-- **Deliver messages to the Junk Email folder based on anti-spam policies**: When an anti-spam policy is configured with the action **Move message to Junk Email folder** for a spam filtering verdict, the message is delivered to the Junk Email folder of the mailbox. For more information about spam filtering verdicts in anti-spam policies, see [Configure anti-spam policies](anti-spam-policies-configure.md). Similarly, if zero-hour auto purge (ZAP) determines that a delivered message is spam or phishing, the message is moved to the Junk Email folder for **Move message to Junk Email folder** spam filtering verdict actions. For more information about ZAP, see [Zero-hour auto purge (ZAP) in Exchange Online](zero-hour-auto-purge.md).
+- **Deliver messages to the Junk Email folder based on anti-spam policies**: When an anti-spam policy is configured with the action **Move message to Junk Email folder** for a spam filtering verdict, the message is delivered to the mailbox's Junk Email folder. For more information about spam filtering verdicts in anti-spam policies, see [Configure anti-spam policies](anti-spam-policies-configure.md). Similarly, if zero-hour auto purge (ZAP) determines that a delivered message is spam or phishing, the message is moved to the Junk Email folder for **Move message to Junk Email folder** spam filtering verdict actions. For more information about ZAP, see [Zero-hour auto purge (ZAP) in Exchange Online](zero-hour-auto-purge.md).
 
 - **Junk email settings that users configure for themselves in Outlook or Outlook on the web**: The _safelist collection_ is the Safe Senders list, the Safe Recipients list, and the Blocked Senders list on each mailbox. The entries in these lists determine whether the message is delivered to the Inbox or the Junk Email folder. Users can configure the safelist collection for their own mailboxes in Outlook or Outlook on the web (formerly known as Outlook Web App or OWA). Admins can configure the safelist collection on any user's mailbox.
 
@@ -37,19 +37,21 @@ If the sender is in the user's Safe Senders list, the message is delivered to th
 Admins can use Exchange Online PowerShell to configure entries in the safelist collection on mailboxes (the Safe Senders list, the Safe Recipients list, and the Blocked Senders list).
 
 > [!NOTE]
-> Messages from senders in user Safe Senders lists skip content filtering (the SCL is -1). To prevent users from adding entries to their Safe Senders lists, use [Group Policy](/microsoft-365-apps/outlook/email-security/deploy-junk-email-settings) to configure client-side Junk Email Filter settings in Outlook. Policy filtering, Content filtering, and Defender for Office 365 checks are still applied to the messages.
+> Entries in user Safe Senders lists are inputs to spam filtering, but don't determine the final verdict. Malware, high confidence phishing, and other detections take precedence. For more information, see [Secure by default in Office 365](secure-by-default.md).
+>
+> To prevent users from adding entries to their Safe Senders lists, use [Group Policy](/microsoft-365-apps/outlook/email-security/deploy-junk-email-settings) to configure client-side Junk Email Filter settings in Outlook.
 >
 > Microsoft 365 uses a mail flow delivery agent to route messages to the Junk Email folder. It doesn't use the junk email rule in the mailbox. The _Enabled_ parameter on the **Set-MailboxJunkEmailConfiguration** cmdlet in Exchange Online PowerShell has no effect on mail flow in cloud mailboxes. Microsoft 365 routes messages based on the actions set in anti-spam policies. The user's Safe Senders list and Blocked Senders list continue to work as usual.
 
-## What do you need to know before you begin?
+## Prerequisites
 
 - You can only use Exchange Online PowerShell to do the procedures in this article. To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - You need to be assigned permissions in Exchange Online before you can do the procedures in this article. Specifically, you need the **Mail Recipients** role (which is assigned to the **Organization Management**, **Recipient Management**, and **Custom Mail Recipients** role groups by default) or the **User Options** role (which is assigned to the **Organization Management** and **Help Desk** role groups by default). To add users to role groups in Exchange Online, see [Modify role groups in Exchange Online](/Exchange/permissions-exo/role-groups#modify-role-groups). Users with default permissions can do these same procedures on their own mailboxes, as long as they have [access to Exchange Online PowerShell](/powershell/exchange/disable-access-to-exchange-online-powershell).
 
-- In hybrid environments where the built-in security features for cloud mailboxes protect on-premises Exchange mailboxes, you need to configure Exchange mail flow rules (also known as transport rules) in your on-premises Exchange organization to recognize the spam filtering verdicts from the cloud. For details, see [Deliver cloud-detected spam to the Junk Email folder in on-premises mailboxes](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
+- In hybrid environments where the built-in security features for cloud mailboxes protect on-premises Exchange mailboxes, you need to configure Exchange mail flow rules (transport rules) in your on-premises Exchange organization to recognize the spam filtering verdicts from the cloud. For details, see [Deliver cloud-detected spam to the Junk Email folder in on-premises mailboxes](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
 
-  After you manually create the rule in Microsoft 365 to match the rule in on-premises Exchange, the rule replicates in hybrid environments.
+    After you manually create the rule in Microsoft 365 to match the rule in on-premises Exchange, the rule replicates in hybrid environments.
 
 - By design, safe senders for shared mailboxes aren't synchronized to Microsoft Entra ID or Microsoft 365.
 
@@ -57,7 +59,7 @@ Admins can use Exchange Online PowerShell to configure entries in the safelist c
 
 A mailbox's _safelist collection_ consists of the Safe Senders list, the Safe Recipients list, and the Blocked Senders list. By default, users can configure the safelist collection on their own mailboxes in Outlook or Outlook on the web. Admins can use the corresponding parameters on the **Set-MailboxJunkEmailConfiguration** cmdlet to configure the safelist collection on a user's mailbox. The following table maps each **Set-MailboxJunkEmailConfiguration** parameter to the corresponding junk email setting in Outlook and Outlook on the web.
 
-|Parameter on Set-MailboxJunkEmailConfiguration|Junk Email Options in Outlook|Junk email settings in Outlook on the web|
+|Parameter on `Set-MailboxJunkEmailConfiguration`|Junk Email Options in Outlook|Junk email settings in Outlook on the web|
 |---|---|---|
 |_BlockedSendersAndDomains_|**Blocked Senders** tab|**Blocked Senders and domains** section|
 |_ContactsTrusted_|**Safe Senders** tab \> **Also trust email from my Contacts**|**Filters** sections \> **Trust email from my contacts**|
@@ -87,13 +89,13 @@ The following example configures the following settings for the safelist collect
 - Remove the value `chris@fourthcoffee.com` from the Safe Senders list and the Safe Recipients list.
 - Configure contacts in the Contacts folder to be treated as trusted senders.
 
-```PowerShell
+```powershell
 Set-MailboxJunkEmailConfiguration "Ori Epstein" -BlockedSendersAndDomains @{Add="shopping@fabrikam.com"} -TrustedSendersAndDomains @{Remove="chris@fourthcoffee.com"} -ContactsTrusted $true
 ```
 
 To remove a blocked domain from the Blocked Senders list of every user mailbox in the organization, run the following bulk update command:
 
-```PowerShell
+```powershell
 $All = Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize Unlimited; $All | foreach {Set-MailboxJunkEmailConfiguration $_.Name -BlockedSendersAndDomains @{Remove="contoso.com"}}
 ```
 
@@ -106,7 +108,7 @@ For detailed syntax and parameter information, see [Set-MailboxJunkEmailConfigur
 
 To verify you successfully configured the safelist collection on a mailbox, use any of the following procedures:
 
-- Replace _\<MailboxIdentity\>_ with the name, alias, or email address of the mailbox, and run the following command to verify the property values:
+- Replace \<MailboxIdentity\> with the name, alias, or email address of the mailbox, and run the following command to verify the property values:
 
   ```PowerShell
   Get-MailboxJunkEmailConfiguration -Identity "<MailboxIdentity>" | Format-List trusted*,contacts*,blocked*
@@ -126,13 +128,8 @@ When the Outlook Junk Email Filter is set to the default value **No automatic fi
 
 > [!NOTE]
 > In Microsoft 365 organizations, we recommend that you leave the Junk Email Filter in Outlook set to **No automatic filtering** to prevent unnecessary conflicts (both positive and negative) with the spam filtering verdicts from Microsoft 365.
-
-When the Outlook Junk Email Filter is set to **Low** or **High**, the Outlook Junk Email Filter uses its own SmartScreen filter technology to identify and move spam to the Junk Email folder. This spam classification is separate from the spam confidence level (SCL) from Microsoft 365. In fact, Outlook ignores the SCL from Microsoft 365 (unless Microsoft 365 marked the message to skip spam filtering) and uses its own criteria to determine whether the message is spam. It's possible that the spam verdict from Microsoft 365 and Outlook might align. For more information about these settings, see [Change the level of protection in the Junk Email Filter](https://support.microsoft.com/office/e89c12d8-9d61-4320-8c57-d982c8d52f6b).
-
-> [!NOTE]
-> In November 2016, Microsoft stopped producing spam definition updates for the SmartScreen filters in Exchange and Outlook. The existing SmartScreen spam definitions were left in place, but their effectiveness will likely degrade over time. For more information, see [Deprecating support for SmartScreen in Outlook and Exchange](https://techcommunity.microsoft.com/blog/exchange/deprecating-support-for-smartscreen-in-outlook-and-exchange/605332).
-
-So, the Outlook Junk Email Filter is able to use the mailbox's safelist collection and its own spam classification to move messages to the Junk Email folder.
+>
+> When the Outlook Junk Email Filter is set to **Low** or **High**, the Outlook Junk Email Filter uses its own SmartScreen filter technology to identify and move spam to the Junk Email folder. This spam classification is separate from the spam filtering verdict from Microsoft 365. For more information about these settings, see [Change the level of protection in the Junk Email Filter](https://support.microsoft.com/Outlook/change-the-level-of-protection-in-the-junk-email-filter-in-outlook).
 
 Outlook and Outlook on the web both support the safelist collection. The safelist collection is saved in the Exchange Online mailbox so that the changes to the safelist collection in Outlook appear in Outlook on the web, and vice-versa.
 

@@ -1,10 +1,10 @@
 ---
 title: View and manage Microsoft Defender for Identity security alerts
-description: This article explains how to view and manage Microsoft Defender for Identity security alerts.
-ms.date: 06/15/2026
+description: Learn how to view, filter, investigate, classify, and manage security alerts in Microsoft Defender for Identity using the alerts queue in the Microsoft Defender portal.
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -64,13 +64,14 @@ You can access individual alerts from multiple locations, by selecting the alert
 - The pages of individual **Devices**
 - The **Advanced hunting** page
 
-## The alerts page
+<a name="the-alerts-page"></a>
+## Understand the alerts page
 
 The alerts page provides context into the alert, by combining attack signals and alerts related to the selected alert to construct a detailed alert story. The alerts page helps you quickly triage, investigate, and take effective action on alerts.
 
 > [!NOTE]
 > Microsoft Defender for Identity alerts currently appear in two different layouts in the Microsoft Defender portal. 
-> While the alert views show different information, all alerts are based on Defender for Identity collected data. The differences in layout and information shown are part of an ongoing transition to a unified alerting experience across Microsoft Defender products.
+> While the alert views show different information, all alerts are based on Defender for Identity collected data. The differences between these two alert layouts are part of an ongoing transition to a unified alerting experience across Microsoft Defender products.
 
 To view alerts from both Defender for Identity and Defender XDR, select **Filter**, then under **Service sources** choose **Microsoft Defender for Identity** and **Defender XDR**, and select **Apply**:
 
@@ -78,7 +79,7 @@ To view alerts from both Defender for Identity and Defender XDR, select **Filter
 
 ### Microsoft Defender for Identity alerts
 
-At the top of the page, there are sections for the **Accounts**, **Destination Host**, and **Source Host** of the alert. Depending on the alert, you might see details about additional hosts, accounts, IP addresses, domains, and security groups. Select any of them to get more details about the entities involved.
+At the top of the page, there are sections for the **Accounts**, **Destination Host**, and **Source Host** of the alert. Depending on the alert, you might see details about additional hosts, accounts, IP addresses, domains, and security groups. Select any listed entity to get more details about the entities involved.
 - The **Alert story** section gives information to provide a complete story with the details of the alert. The alert story is divided into two sections: 
     - **What happened** includes the alert's timeline and the entities involved in the alert.
     - **Alert graph** provides a visual representation of the alert, including the entities involved in the alert and their relationships. The graph helps you understand how the entities are connected and how they relate to the alert.
@@ -94,7 +95,7 @@ At the top of the page, there are sections for the **Accounts**, **Destination H
 
 ### Microsoft Defender XDR alerts
 
-At the top of the page, there are sections for the **Accounts**, **Destination Host**, and **Source Host** of the alert. Depending on the alert, you might see buttons for details about additional hosts, accounts, IP addresses, domains, and security groups. Select any of them to get more details about the entities involved.
+At the top of the page, there are sections for the **Accounts**, **Destination Host**, and **Source Host** of the alert. Depending on the alert, you might see buttons for details about additional hosts, accounts, IP addresses, domains, and security groups. Select any of these entities to get more details about the entities involved.
 
 - The **Alert story** section gives information to provide a complete story with the details of the alert. The alert story is divided into two sections: 
     - **What happened** includes the alert's timeline and the entities involved in the alert.
@@ -108,6 +109,13 @@ At the top of the page, there are sections for the **Accounts**, **Destination H
 ## Manage security alerts 
 
 Selecting an alert opens the Alert management pane, where you can perform the following actions:
+
+- [Change the status of an alert](#change-the-status-of-an-alert)
+- [Move an alert to another incident](#move-an-alert-to-another-incident)
+- [Assign alerts](#assign-alerts)
+- [Add comments to an alert](#add-comments-to-an-alert)
+- [Classify security alerts](#classify-security-alerts)
+- [Tuning alerts](#tuning-alerts)
 
 ### Change the status of an alert
 You can categorize alerts as New, In Progress, or Resolved by changing their status as your investigation progresses. This helps you organize and manage how your team can respond to alerts. For example, a team leader can review all New alerts, and decide to assign them to the In Progress queue for further analysis. The team leader might assign the alert to the Resolved queue if they know the alert is benign, or coming from a device that is irrelevant (such as one belonging to a security administrator), or is being dealt with through an earlier alert.
@@ -123,14 +131,14 @@ If an alert isn't yet assigned, you can select Assign to me to assign the alert 
 :::image type="content" source="media/understanding-security-alerts/alert-state.png" alt-text="Screenshot that shows how to assign an alert to yourself." lightbox="media/understanding-security-alerts/alert-state.png":::
 
 ### Add comments to an alert
-You can add comments to an alert to provide additional context or information. This is useful for sharing insights with your team or documenting your investigation process.
+You can add comments to an alert to provide additional context or information. Adding comments is useful for sharing insights with your team or documenting your investigation process.
 Whenever a change or comment is made to an alert, it's recorded in the Comments and history section.
 
 :::image type="content" source="media/understanding-security-alerts/comments-history.png" alt-text="Screenshot showing the Comments & history section in the Microsoft Defender portal. A text box is provided for entering comments." lightbox="media/understanding-security-alerts/comments-history.png":::
 
 ### Classify security alerts
 
-Defender for Identity security alerts can be classified as a true positive (TP), benign true positive (B-TP), or false positive (FP). For each alert, ask the following questions to determine the alert classification and help decide what to do next:
+Defender for Identity security alerts can be classified as true positive, benign true positive, or false positive. These classifications are abbreviated as TP, B-TP, and FP throughout this section. For each alert, ask the following questions to determine the alert classification and help decide what to do next:
 
 1. Is the security alert a TP, B-TP, or FP?
 1. How common is this specific security alert in your environment?
@@ -151,9 +159,10 @@ Following proper investigation, all Defender for Identity security alerts can be
 > An increase of alerts of the exact same type typically reduces the suspicious/importance level of the alert. For repeated alerts, verify configurations, and use security alert details and definitions to understand exactly what is happening that trigger the repeats.
 
 
-### Tuning alerts
+<a name="tuning-alerts"></a>
+### Tune security alerts
 
-Tune your alerts to adjust and optimize them, reducing false positives. Alert tuning allows your SOC teams to focus on high-priority alerts and improve threat detection coverage across your system. In Microsoft Defender XDR, create rule conditions based on evidence types, and then apply your rule on any rule type that matches your conditions. 
+Tune your alerts to adjust and optimize them, reducing false positives. Alert tuning allows your SOC teams to focus on high-priority alerts and improve threat detection coverage in your system. In Microsoft Defender, create rule conditions based on evidence types, and then apply your rule on any rule type that matches your conditions. 
 
 For more information, see [Tune an alert](/microsoft-365/security/defender/investigate-alerts#tune-an-alert).
 

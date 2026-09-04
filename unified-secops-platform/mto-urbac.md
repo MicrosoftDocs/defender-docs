@@ -8,18 +8,18 @@ ms.collection:
 - highpri
 - tier1
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 # customer intent: To learn how to create, delete, import, and edit roles in the unified role-based access control in Microsoft Defender multitenant management.
 ---
 
 # Manage unified role-based access control in multitenant management
 
-Use the Microsoft Defender multitenant management portal to manage unified role-based access control (URBAC) across multiple tenants. You can view permissions and access for all your tenants in one place. You can also manage these permissions from a central location. This article covers how to view custom roles, create or edit roles, delete roles, and import roles from tenant workloads.
+Use the Microsoft Defender multitenant management portal to manage unified role-based access control (URBAC) across multiple tenants. You can view permissions and access for all your tenants in one place. You can also manage these permissions from a central location. The following sections explain how to view custom roles, create or edit roles, delete roles, and import roles from tenant workloads.
 
 ## View custom roles
 
@@ -27,7 +27,7 @@ In the multitenant portal, navigate to the **Permissions & roles page** by selec
 
 :::image type="content" source="media/mto-urbac/urbac-main.png" alt-text="Screenshot of main Permissions and roles page":::
 
-From this page, you can create or edit a custom role. You can also import and delete roles. Use the **Search** function to find a specific role. To narrow results, filter roles by data source, permissions category, assignee type, or tenant name.
+From the **Permissions & roles** page, you can create or edit a custom role. You can also import and delete roles. Use the **Search** function to find a specific role. To narrow results, filter roles by data source, permissions category, assignee type, or tenant name.
 
 ## Create or edit a custom role (Preview)
 
@@ -57,7 +57,9 @@ You can create a custom role to provide flexibility and control over access to s
 
 8. In the **Assignments** page, select **Add assignment** or **Create assignment** to assign users and data sources.
 
-9. In the **Add assignments** pane, enter the assignment name. Add the team members you want to assign. Select the data sources they can access and the identity scopes they need. Then select **Add**. Here's an example.
+1. In the **Add assignments** pane, enter the assignment name. Add the team members you want to assign. Select the data sources they can access and the identity scopes they need, then select **Add**.
+
+    The following screenshot shows an example of the **Add assignments** pane:
 
    :::image type="content" source="media/mto-urbac/urbac-create-assignment.png" alt-text="Screenshot of the options in the Add Assignments pane":::
 
@@ -74,11 +76,11 @@ To edit an existing role, select the three dots beside the role name in the Perm
 > [!WARNING]
 > Deleting a role is permanent and removes all access assignments for that role. Review the selected roles carefully before you continue.
 
-To delete roles, select one or more roles from the list. You can choose roles from different tenants. Then select **Delete roles**.
+To delete roles, select one or more roles from the list. You can choose roles from different tenants, then select **Delete roles**.
 
 :::image type="content" source="media/mto-urbac/urbac-delete-multiple.png" alt-text="Screenshot highlighting multiple role selection for deletion":::
 
-To delete a single role, select the three dots next to the role name. Then select **Delete**.
+To delete a single role, select the three dots next to the role name, then select **Delete**.
 
 :::image type="content" source="media/mto-urbac/urbac-delete-option.png" alt-text="Screenshot of the Delete option in the Permissions page":::
 
@@ -90,7 +92,7 @@ The **Delete role** option is also available when editing a specific role.
 
 You can import existing roles from a tenant’s workloads to migrate permissions and assignments. Imported roles become available in the Permissions and roles list.
 
-To import roles, follow these steps: 
+To import roles, follow these steps:
 
 1. Navigate to **System > Permissions**.
 
@@ -102,10 +104,15 @@ To import roles, follow these steps:
 
    :::image type="content" source="media/mto-urbac/urbac-import-workload.png" alt-text="Screenshot of the Workloads page in the Import role scenario":::
 
-5. In the **Roles** page, select all or some of the roles that you want to import from the Eligible roles list. To review the permissions and assignments for a role, select the role name. Here's an example.
+5. In the **Roles** page, select all or some of the roles that you want to import from the Eligible roles list. To review the permissions and assignments for a role, select the role name. The following screenshot shows an example of the role review pane.
 
    :::image type="content" source="media/mto-urbac/urbac-import-review-role.png" alt-text="Screenshot of the role review pane in the Import role scenario":::
 
 6. Review the details then select **Submit** to finish importing the roles.
 
 To learn more about unified RBAC, see [Microsoft Defender unified role-based access control](/defender-xdr/manage-rbac).
+
+## Related content
+
+- [Microsoft Defender multitenant management](mto-overview.md)
+- [Set up Microsoft Defender multitenant management](mto-requirements.md)

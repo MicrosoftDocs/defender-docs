@@ -1,14 +1,16 @@
 ---
-title: Microsoft Sentinel integration 
-description: Learn how to integrate Microsoft Sentinel with Microsoft Defender for Cloud Apps to centralize monitoring of alerts and discovery data.
-ms.date: 06/16/2026
+title: Integrate Microsoft Sentinel with Microsoft Defender for Cloud Apps
+description: Learn how to set up the Microsoft Sentinel integration for Microsoft Defender for Cloud Apps to monitor alerts and discovery data. SIEM agents are deprecated; Microsoft Sentinel integration (Preview) is still supported.
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Naama-Goldbart 
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
 # Set up Microsoft Sentinel integration for Defender for Cloud Apps (Preview)
+
+## Integrate Microsoft Defender for Cloud Apps with Microsoft Sentinel
 
 > [!IMPORTANT]
 > **Deprecation Notice: Microsoft Defender for Cloud Apps SIEM Agents**
@@ -64,6 +66,8 @@ For more information, see:
 - [Microsoft Defender for Cloud Apps for US Government offerings](editions-cloud-app-security-gcc.md)
 
 ### Integrating with Microsoft Sentinel
+
+Use the following steps to integrate Defender for Cloud Apps with Microsoft Sentinel.
 
 1. In the Microsoft Defender Portal, select **Settings > Cloud Apps**.
 
@@ -132,7 +136,7 @@ You can use Microsoft Power BI with Defender for Cloud Apps data in Microsoft Se
 To get started:
 
 1. In Power BI, import queries from Microsoft Sentinel for Defender for Cloud Apps data. For more information, see [Import Azure Monitor log data into Power BI](/azure/azure-monitor/logs/log-powerbi).
-1. [Install the Defender for Cloud Apps Shadow IT Discovery app](https://aka.ms/MCASShadowITReporting) and connect it to your discovery log data to view the built-in Shadow IT Discovery dashboard. To connect the app, open it in Power BI, select **Connect**, enter your Microsoft Sentinel workspace ID, and then sign in. For detailed steps, see [Connect the Defender for Cloud Apps app](#connect-the-defender-for-cloud-apps-app).
+1. [Install the Defender for Cloud Apps Shadow IT Discovery app](https://aka.ms/MCASShadowITReporting) and connect it to your discovery log data to view the built-in Shadow IT Discovery dashboard. To connect the app, open it in Power BI, select **Connect**, enter your Microsoft Sentinel workspace ID, and then sign in. For detailed steps, see [Connect the Defender for Cloud Apps Shadow IT Discovery app](#connect-the-defender-for-cloud-apps-app).
 
     > [!NOTE]
     > Currently, the app is not published on Microsoft AppSource. Therefore, you may need to contact your Power BI admin for permissions to install the app.

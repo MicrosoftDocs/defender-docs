@@ -1,4 +1,4 @@
-﻿---
+---
 title: Investigate devices in Microsoft Defender for Endpoint
 description: Learn how to investigate devices by reviewing alerts, timelines, network connections, and security assessments in Microsoft Defender for Endpoint.
 keywords: investigate devices, device timeline, event flags, MITRE ATT&CK, internet-facing devices, device investigation, device details, network connections
@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: concept-article
 ms.subservice: edr
 search.appverid: met150
-ms.date: 02/25/2026
+ms.date: 07/23/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
@@ -83,6 +83,9 @@ Response actions run along the top of a specific device page and include:
 - Action center
 
 You can take response actions in the Action center, in a specific device page, or in a specific file page.
+
+> [!NOTE]
+> On devices onboarded as [high-value assets](restrict-response-actions-high-value-assets.md), some response actions might be unavailable or appear grayed out. The permitted actions are defined when the device is onboarded and can't be changed remotely. If an action you expect is missing, review the device's selective response actions configuration.
 
 For more information on how to take action on a device, see [Take response action on a device](respond-machine-alerts.md).
 
@@ -247,13 +250,13 @@ The device timeline includes several features to help you investigate events eff
 :::image type="content" source="media/timeline-device.png" alt-text="Screenshot of the device timeline with events." lightbox="media/timeline-device.png":::
 
 > [!NOTE]
-> For firewall events to be displayed, you need to enable the audit policy, see [Audit Filtering Platform connection](/windows/security/threat-protection/auditing/audit-filtering-platform-connection).
+> For firewall events to be displayed, you need to enable the audit policy, see [Audit Filtering Platform connection](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-filtering-platform-connection).
 >
 > Firewall covers the following events:
 >
-> - [5025](/windows/security/threat-protection/auditing/event-5025) - firewall service stopped
-> - [5031](/windows/security/threat-protection/auditing/event-5031) - application blocked from accepting incoming connections on the network
-> - [5157](/windows/security/threat-protection/auditing/event-5157) - blocked connection
+> - [5025](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-5025) - firewall service stopped
+> - [5031](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-5031) - application blocked from accepting incoming connections on the network
+> - [5157](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-5157) - blocked connection
 
 ### Search, filter, and export events
 

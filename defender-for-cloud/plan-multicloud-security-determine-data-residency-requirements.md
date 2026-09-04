@@ -1,33 +1,39 @@
 ---
-title: Planning multicloud security determine data residency requirements and agent considerations guidance
+title: Determine data residency requirements and agent considerations for multicloud security
 description: Learn about determining data residency requirements when planning multicloud deployment with Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 05/31/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Determine data residency requirements
 
-This article is one of a series providing guidance as you design a cloud security posture management (CSPM) and cloud workload protection platform (CWPP) solution across multicloud resources with Microsoft Defender for Cloud.
+## Overview
 
-## Goal
+This guide helps you determine data residency requirements for a multicloud deployment that uses cloud security posture management (CSPM) and cloud workload protection platform (CWPP) solutions in Microsoft Defender for Cloud.
+
+<a name="goal"></a>
+## Data residency planning goals
 
 Identify data residency requirements for your multicloud deployment and understand how Defender for Cloud plans and agents affect where data is processed and stored.
 
-## Get started
+<a name="get-started"></a>
+## Get started with data residency planning
 
-When you protect assets across clouds, identify which plans to enable for your required protection and whether each plan requires agent components.
+When you protect assets across clouds, identify which plans to enable and whether each plan requires agents.
 
 As part of this analysis, identify regional and legal requirements for data handling.
 
 ## Agent considerations for data residency
 
-There are data considerations around agents and extensions used by Defender for Cloud.
+Consider data residency and data handling implications for the agents and extensions used by Defender for Cloud.
 
 - **CSPM:** Cloud security posture management (CSPM) functionality in Defender for Cloud is agentless. No agents are required for CSPM to work.
 - **CWPP:** Cloud workload protection platform (CWPP) functionality in Defender for Cloud can require agents to collect data.
 
-## Defender for Servers plan
+<a name="defender-for-servers-plan"></a>
+## Data residency considerations for Defender for Servers
 
 Agents are used in the Defender for Servers plan as follows:
 
@@ -35,7 +41,8 @@ Agents are used in the Defender for Servers plan as follows:
 - The [Azure Connected Machine agent](/azure/azure-arc/servers/agent-overview) is installed on multicloud machines that onboard as Azure Arc machines. Defender for Cloud should be enabled in the subscription in which the Azure Arc machines are located.
 - Defender for Cloud leverages the Connected Machine agent to install extensions (such as Microsoft Defender for Endpoint) that are needed for [Defender for Servers](./defender-for-servers-introduction.md) functionality.
 
-## Defender for Containers plan
+<a name="defender-for-containers-plan"></a>
+## Data residency considerations for Defender for Containers
 
 [Defender for Containers](./defender-for-containers-introduction.md) protects your multicloud container deployments running in:
 
@@ -57,18 +64,20 @@ Defender for Containers has both sensor-based and agentless components.
 > [!IMPORTANT]
 > Kubernetes audit log data collection uses the Amazon EKS or GCP logging service in the source cloud. Confirm regional storage and transfer behavior to meet your organization's privacy and internal residency requirements.
 
-## Defender for Databases plan
+<a name="defender-for-databases-plan"></a>
+## Data residency considerations for Defender for Databases
 
 For the [Defender for Databases plan](./quickstart-enable-database-protections.md) in a multicloud scenario, you use Azure Arc to manage multicloud Structured Query Language (SQL) Server databases. The SQL Server instance is installed on a virtual or physical machine connected to Azure Arc.
 
+- Automatic SQL server discovery and registration needs to be set to On to allow SQL database discovery on the machines.
 - The [Azure Connected Machine agent](/azure/azure-arc/servers/agent-overview) is installed on machines connected to Azure Arc.
 - The Defender for Databases plan should be enabled in the subscription in which the Azure Arc machines are located.
 - The Log Analytics agent for Microsoft Defender SQL Servers should be provisioned on the Azure Arc machines. It collects security-related configuration settings and event logs from machines.
-- Automatic SQL server discovery and registration needs to be set to On to allow SQL database discovery on the machines.
 
-When it comes to the actual AWS and GCP resources that are protected by Defender for Cloud, their location is set directly from the AWS and GCP clouds.
+For AWS and GCP resources protected by Defender for Cloud, the resource location is determined directly by AWS and GCP.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Determine compliance requirements](plan-multicloud-security-determine-compliance-requirements.md)

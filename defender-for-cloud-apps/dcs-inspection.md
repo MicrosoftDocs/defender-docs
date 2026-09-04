@@ -1,12 +1,12 @@
 ---
 title: Microsoft Data Classification Services integration
 description: This article describes the process Defender for Cloud Apps follows when performing DLP content inspection using Microsoft Data Classification Service.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
-# Microsoft Data Classification Services integration
+# Integrate Microsoft Data Classification Services with Microsoft Defender for Cloud Apps
 
 > [!IMPORTANT]
 > File policies retire on January 6, 2027. To maintain file-based data protection, [migrate to Microsoft Purview DLP or auto-labeling policies](migrate-file-policies-to-purview.md).
@@ -16,7 +16,7 @@ ms.custom: msecd-doc-authoring-1014
 Microsoft Defender for Cloud Apps enables you to natively use the Microsoft Data Classification Service to classify the files in your cloud apps. Microsoft Data Classification Service provides a unified information protection experience across Microsoft 365, Microsoft Information Protection, and Microsoft Defender for Cloud Apps. The classification service allows you to extend your data classification efforts to the third-party cloud apps protected by Microsoft Defender for Cloud Apps, using the decisions you already made across an even greater number of apps.
 
 >[!NOTE]
-> This feature is currently available in the US, Europe, Australia, India, Canada, Japan, and APAC.
+> The Microsoft Data Classification Service integration is currently available in the US, Europe, Australia, India, Canada, Japan, and APAC.
 
 >[!NOTE]
 > To enable the Data Classification Service option in File Policies, the "Microsoft 365" App Connector is required.
@@ -37,7 +37,7 @@ You can set the **Inspection method** to use the **Microsoft Data Classification
     > [!NOTE]
     > You can configure your policy to use advanced classification types such as [Fingerprints](/microsoft-365/compliance/document-fingerprinting?view=o365-worldwide&preserve-view=true), [Exact Data Match](/microsoft-365/compliance/sit-learn-about-exact-data-match-based-sits), and [trainable classifiers](/microsoft-365/compliance/classifier-get-started-with).
 
-5. Optionally, you can unmask the last four characters of a match. By default, matches are masked and shown in their context, and include the 40 characters before and after the match. If you select this checkbox, it will unmask the last four characters of the match itself.
+5. Optionally, you can unmask the last four characters of a match. By default, matches are masked and shown in their context, and include the 40 characters before and after the match. If you select this checkbox, the policy unmasks the last four characters of the match itself.
 
 6. Leveraging file policies, you can also set alerts and governance actions for the policy. For more information, see [file policies](data-protection-policies.md) and [governance actions](governance-actions.md). Leveraging session policies, you can also monitor and control actions in real-time when a file matches a DCS type. For more information, see [session policy](session-policy-aad.md).
 

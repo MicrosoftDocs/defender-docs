@@ -2,8 +2,8 @@
 title: How to consume and export scan results
 description: Access vulnerability assessment findings in Azure Resource Graph and use multiple methods to query, view, and export scan results for reporting and remediation.
 ms.topic: how-to
-ms.date: 05/27/2026
-ms.custom: sfi-image-nochange
+ms.date: 07/03/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
 #customer intent: As a user, I want to query and export SQL vulnerability scan results so I can investigate findings and report on remediation progress.
 ai-usage: ai-assisted
 ---
@@ -22,7 +22,7 @@ This article describes several ways to consume and export your scan results.
 
 ## Query and export findings in ARG with Defender for Cloud
 
-Use this method to query findings from Defender for Cloud and export results for reporting.
+Use the Defender for Cloud Recommendations page to query findings in Azure Resource Graph (ARG) and export results for reporting.
 
 **To query and export your findings with ARG with Defender for Cloud**:
 
@@ -30,30 +30,24 @@ Use this method to query findings from Defender for Cloud and export results for
 
 1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
 
-1. Search for and select either:
-
-    - For Azure SQL databases - `SQL databases should have vulnerability findings resolved`.
-
-    - For SQL servers on machines - `SQL servers on machines should have vulnerability findings resolved`.
+1. Set the **Scanner** filter to **SQL Vulnerability Assessment**.
 
 1. Select **Open Query**.
-
-1. Select either:
-
-    - **Query returning affected resources** - Returns a list of the resources that are currently affected (recommendation status per resource).
-    - **Query returning security findings** -  Returns a list of all security findings (findings and subassessments aggregated per applicable resources).
-    
-    :::image type="content" source="media/defender-for-sql-scan-results/open-query-options.png" alt-text="Screenshot of the Recommendations page, with the Open query dropdown indicated in the upper-left. The dropdown shows two options: query returning affected resource and query returning security findings." lightbox="media/defender-for-sql-scan-results/open-query-options.png":::
 
 1. Select **Run query**.
 
 1. Select **Download as CSV**.
 
+The query changes based on the recommendations view you've selected.
+
+:::image type="content" source="media/defender-for-sql-scan-results/select-recommendations-view.png" alt-text="Screenshot of the recommendation view options with By Title selected." lightbox="media/defender-for-sql-scan-results/select-recommendations-view.png":::
+
 These queries are editable. You can customize them for a specific resource, a set of findings, or a finding status.
 
-## Query and export findings in ARG
+<a name="query-and-export-findings-in-arg"></a>
+## Query findings directly in Resource Graph Explorer
 
-Use this method to query findings directly in Resource Graph Explorer when you need advanced query customization.
+Use Resource Graph Explorer to query findings directly when you need advanced query customization.
 
 **To query and export your findings with ARG**:
 
@@ -63,40 +57,52 @@ Use this method to query findings directly in Resource Graph Explorer when you n
 
 1. Edit and enter the following query. Replace the placeholders in the `resourceId` filter with the resource ID of your SQL database:
 
-    ```kusto
-    securityresources
-    | where type =~ "microsoft.security/assessments/subassessments"
-    | extend assessmentKey=extract(@"(?i)providers/Microsoft.Security/assessments/([^/]*)", 1, id), subAssessmentId=tostring(properties.id), parentResourceId= extract("(.+)/providers/Microsoft.Security", 1, id)
-    | extend resourceIdTemp = iff(properties.resourceDetails.id != "", properties.resourceDetails.id, extract("(.+)/providers/Microsoft.Security", 1, id))
-    | extend resourceId = iff(properties.resourceDetails.source =~ "OnPremiseSql", strcat(resourceIdTemp, "/servers/", properties.resourceDetails.serverName, "/databases/" , properties.resourceDetails.databaseName), resourceIdTemp)
-    | where resourceId =~ "/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Sql/servers/<server-name>/databases/<database-name>"
-    | where assessmentKey =~ "82e20e14-edc5-4373-bfc4-f13121257c37"
-    | project resourceId,
-    subscriptionId,
-    assessmentKey,
-    subAssessmentId,
-    name=properties.displayName,
-    description=properties.description,
-    severity=properties.status.severity,
-    status=properties.status.code,
-    cause=properties.status.cause,
-    category=properties.category,
-    impact=properties.impact,
-    remediation=properties.remediation,
-    benchmarks=properties.additionalData.benchmarks
-    ```
-
+   ```kusto
+   securityresources
+   | where type =~ "microsoft.security/assessments"
+   | extend assessmentKey=extract(@"(?i)providers/Microsoft.Security/assessments/([^/]*)", 1, id), parentResourceId= extract("(.+)/providers/Microsoft.Security", 1, id)
+   | extend resourceIdTemp = iff(properties.resourceDetails.id != "", properties.resourceDetails.id, extract("(.+)/providers/Microsoft.Security", 1, id))
+   | extend scanner = (// AssessmentsQueryBuilder.columnDefinitions.scanner
+   (tostring(
+   coalesce(bag_keys(parse_json(tostring(properties.additionalData.ScannersDetails)))[0], bag_keys(parse_json(tostring(properties.additionalData.ScannersDetails)))[0],
+   properties.additionalData.scanner, properties.additionalData.scanner, 
+   properties.additionalData.Scanner, properties.additionalData.Scanner, 
+   properties.additionalData.SecretScannerName, properties.additionalData.SecretScannerName,
+   properties.additionalData.ToolName, properties.additionalData.ToolName,
+   properties.additionalData.ScannerName, properties.additionalData.ScannerName,
+   todynamic("N/A")))))
+   | where scanner in~ ("SQL Vulnerability Assessment")
+   | extend resourceId = iff(properties.resourceDetails.source =~ "OnPremiseSql", strcat(resourceIdTemp, "/servers/", properties.resourceDetails.serverName, "/databases/" , properties.resourceDetails.databaseName), resourceIdTemp)
+   | where resourceId =~ "/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Sql/servers/<server-name>/databases/<database-name>"
+   | project resourceId,
+   subscriptionId,
+   assessmentKey,
+   RuleId=properties.additionalData.ruleId,
+   name=properties.displayName,
+   description=properties.metadata.description,
+   severity=properties.additionalData.severity,
+   status=properties.status.code,
+   cause=properties.status.cause,
+   category=properties.additionalData.category,
+   impact=properties.additionalData.impact,
+   remediation=properties.metadata.remediationDescription,
+   benchmarks=properties.additionalData.benchmarks,
+   scanner,
+   HasBaseline=properties.additionalData.hasBaseline
+   ```
+   
 1. Select **Run query**.
 
 1. Select **Download as CSV**.
 
     :::image type="content" source="media/defender-for-sql-scan-results/run-and-download.png" alt-text="Screenshot of Resource Graph Explorer page with Run query and Download as CSV controls highlighted." lightbox="media/defender-for-sql-scan-results/run-and-download.png":::
 
-This query is editable. You can customize it for a specific resource, a set of findings, or a finding status.
+The Resource Graph Explorer query is editable. You can customize it for a specific resource, a set of findings, or a finding status.
 
-## Open a Query from your SQL database
+<a name="open-a-query-from-your-sql-database"></a>
+## Open a query from your SQL database
 
-Use this method to query vulnerability findings for a specific SQL database from the database resource page.
+Use the SQL database resource page to query vulnerability findings for a specific SQL database.
 
 **To open a query from your SQL database**:
 
@@ -118,7 +124,7 @@ Use this method to query vulnerability findings for a specific SQL database from
 
     :::image type="content" source="media/defender-for-sql-scan-results/run-and-download.png" alt-text="Screenshot of Resource Graph Explorer page with Run query and Download as CSV controls highlighted." lightbox="media/defender-for-sql-scan-results/run-and-download.png":::
 
-This query is editable. You can customize it for a specific resource, a set of findings, or a finding status.
+The query opened from the SQL database resource page is editable. You can customize it for a specific resource, a set of findings, or a finding status.
 
 ## Automate email notifications with Logic Apps
 

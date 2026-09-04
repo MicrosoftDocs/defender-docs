@@ -19,15 +19,12 @@ ms.topic: reference
 ms.date: 03/28/2025
 ---
 
-# DataSecurityBehaviors (Preview)
+# DataSecurityBehaviors
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 
-
-> [!IMPORTANT]
-> Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 The `DataSecurityBehaviors` table in the [advanced hunting](advanced-hunting-overview.md) schema contains insights about potentially suspicious user behaviors that violate the user-defined or default policies configured in the Microsoft Purview suite of solutions. 
 
@@ -56,6 +53,8 @@ Use this reference to construct queries that return information from this table.
 |`AccountUpn`|	`string`|	User principal name (UPN) of the account|
 |`AccountEmail`|	`string`|	Email address of the account|
 |`Application`|	`string`	|Application that performed the recorded action|
+|`PolicyInfo`|`dynamic`|Policy information associated with the behavior|
+|`Policies`|`string`|List of insider risk management policies associated with the behavior|
 |`DeviceInfo`|	`dynamic`|	List of device information for the device involved in this behavior, including device ID, device name, and the number of events in which the device is involved; in JSON array format|
 |`SensitivityLabelInfo`|	`dynamic`|	List of sensitivity labels assigned to content involved in this behavior, including the unique identifier for the Microsoft Information Protection sensitivity label assigned to the related content, the name of the sensitivity label, and the number of events in the behavior involving this label; in JSON array format|
 |`SensitiveInfoTypesInfo`|	`dynamic`	|List of sensitive info types detected in the content involved in this behavior, including the unique identifier for the sensitive info type, the name of the sensitive info type, and the number of events in the behavior involving this sensitive info type; in JSON array format|

@@ -1,15 +1,15 @@
 ---
 title: Control the OT traffic monitored by Microsoft Defender for IoT
 description: Learn how to control the OT network traffic monitored by Microsoft Defender for IoT.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
 # Control the OT traffic monitored by Microsoft Defender for IoT
 
-This article is one in a series of articles describing the [deployment path](ot-deploy/ot-deploy-path.md) for OT monitoring with Microsoft Defender for IoT.
+This article is one in a series of articles describing the [OT sensor deployment path](ot-deploy/ot-deploy-path.md) for OT monitoring with Microsoft Defender for IoT.
 
 :::image type="content" source="media/deployment-paths/progress-fine-tuning-ot-monitoring.png" alt-text="Diagram of a progress bar with Fine-tune OT monitoring highlighted." border="false" lightbox="media/deployment-paths/progress-fine-tuning-ot-monitoring.png":::
 
@@ -21,7 +21,7 @@ After installing, activating, and configuring your OT network sensor, use the to
 
 Before performing the procedures in this article, you must have:
 
-- An OT network sensor [installed and set up](ot-deploy/install-software-ot-sensor.md), then [configured and activated](ot-deploy/activate-deploy-sensor.md).
+- An OT network sensor [installed and set up](ot-deploy/install-software-ot-sensor.md), then [configured and activated as an OT sensor](ot-deploy/activate-deploy-sensor.md).
 
 - Access to your OT network sensor as an **Admin** user.  For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](roles-on-premises.md).
 
@@ -51,11 +51,11 @@ If the traffic shown on the **Deployment** page isn't what you expect, you might
 
 ## Fine tune your subnet list
 
-After having analyzed the traffic your sensor is monitoring and fine tuning the deployment, you may need to further fine tune your subnet list. Use this procedure to ensure that your subnets are configured correctly.
+After having analyzed the traffic your sensor is monitoring and fine tuning the deployment, you may need to further fine tune your subnet list. Use the following subnet configuration procedure to ensure that your subnets are configured correctly.
 
 While your OT sensor automatically learns your network subnets during the initial deployment, we recommend analyzing the detected traffic and updating the subnets as needed to optimize your map views and device inventory.
 
-Also use this procedure to also define subnet settings, determining how devices are displayed in the [OT sensor device map](how-to-work-with-the-sensor-device-map.md) and the [Azure device inventory](device-inventory.md).
+You can also use the subnet configuration procedure to define subnet settings, determining how devices are displayed in the [OT sensor device map](how-to-work-with-the-sensor-device-map.md) and the [Azure device inventory](device-inventory.md).
 
 - **In the device map**, IT devices are automatically aggregated by subnet, where you can expand and collapse each subnet view to drill down as needed.
 - **In the Azure device inventory**, once the subnets have been configured, use the *Network location* (Public preview) filter to view *local* or *routed* devices as defined in your subnets list. All of the devices associated with the listed subnets are displayed as *local*, while devices associated with detected subnets not included in the list will be displayed as *routed*.
@@ -86,20 +86,19 @@ While the OT network sensor automatically learns the subnets in your network, we
     |**Segregated**     |   Select to show this subnet separately when displaying the device map according to Purdue level.  |
     | **Remove subnet** | Select to remove any subnets that aren't related to your IoT/OT network scope.|
 
-    In the subnet grid, subnets marked as **ICS subnet** are recognized as OT networks. The **ICS subnet** setting is read-only in this grid, but you can [manually define a subnet as ICS](#manually-define-a-subnet-as-ics) if there's an OT subnet not being recognized correctly.
+    In the subnet grid, subnets marked as **ICS subnet** are recognized as OT networks. The **ICS subnet** setting is read-only in this grid, but if there's an OT subnet not being recognized correctly, you can [manually define a subnet as ICS](#manually-define-a-subnet-as-ics) by changing the device type.
 
 1. When you're done, select **Save** to save your updates.
 
 > [!TIP]
 > Once the **Auto subnet learning** setting is disabled and the subnet list has been edited to include only the locally monitored subnets that are in your IoT/OT scope, you can filter the Azure device inventory by *Network location* to view only the devices defined as *local*. For more information, see [View the device inventory](legacy-central-management/how-to-investigate-all-enterprise-sensor-detections-in-a-device-inventory.md#view-the-device-inventory).
->
 
 ### Manually define a subnet as ICS
 
 If you have an OT subnet that isn't being marked automatically as an ICS subnet by the sensor, edit the device type for any of the devices in the relevant subnet to an ICS or IoT device type. The subnet will then be automatically marked by the sensor as an ICS subnet.
 
 > [!NOTE]
-> To manually change the subnet to be marked as ICS, change the device type in the device inventory in the OT sensor. In the Azure portal, subnets in the subnet list are marked as ICS by default in the [sensor settings](configure-sensor-settings-portal.md#local-subnets).
+> To manually change the subnet to be marked as ICS, change the device type in the device inventory in the OT sensor. In the Azure portal, subnets in the subnet list are marked as ICS by default in the [OT sensor settings for local subnets](configure-sensor-settings-portal.md#local-subnets).
 
 **To change the device type to manually update the subnet**:
 
@@ -115,7 +114,7 @@ For more information, see [Edit device details](how-to-investigate-sensor-detect
 
 ## Customize port and VLAN names
 
-Use the following procedures to enrich the device data shown in Defender for IoT by customizing port and VLAN names on your OT network sensors.
+Use the port naming and VLAN naming procedures in this section to enrich the device data shown in Defender for IoT by customizing port and VLAN names on your OT network sensors.
 
 For example, you might want to assign a name to a nonreserved port that shows unusually high activity in order to call it out, or to assign a name to a VLAN number in order to identify it quicker.
 
@@ -128,7 +127,7 @@ Defender for IoT automatically assigns names to most universally reserved ports,
 
 Port names are shown in Defender for IoT when viewing device groups from the [OT sensor device map](how-to-work-with-the-sensor-device-map.md), or when you create OT sensor reports that include port information.
 
-**To customize a port name:**
+To customize a port name:
 
 1. Sign into your OT sensor as an **Admin** user.
 
@@ -144,7 +143,7 @@ VLANs are either discovered automatically by the OT network sensor or added manu
 
 VLAN's support is based on 802.1q (up to VLAN ID 4094).
 
-**To configure VLAN names on an OT network sensor:**
+To configure VLAN names on an OT network sensor:
 
 1. Sign in to your OT sensor as an **Admin** user.
 
@@ -160,7 +159,7 @@ VLAN's support is based on 802.1q (up to VLAN ID 4094).
 
 Enhance device data enrichment by configuring multiple DNS servers to carryout reverse lookups and resolve host names or FQDNs associated with the IP addresses detected in network subnets. For example, if a sensor discovers an IP address, it might query multiple DNS servers to resolve the host name. You need the DNS server address, server port and the subnet addresses.
 
-**To define the DNS server lookup**:
+To define the DNS server lookup:
 
 1. On your OT sensor console, select **System settings** > **Network monitoring** and under **Active Discovery**, select **Reverse DNS Lookup**.
 
@@ -181,7 +180,7 @@ For more information, see [Configure reverse DNS lookup](configure-reverse-dns-l
 
 ### Test the DNS configuration
 
-Use a test device to verify that the reverse DNS lookup settings configured in [Define DNS servers](#define-dns-servers) work as expected.
+Use a test device to verify that the reverse DNS lookup settings configured in the [Define DNS servers](#define-dns-servers) section work as expected.
 
 1. On your sensor console, select **System settings** > **Network monitoring** and under **Active Discovery**, select **Reverse DNS Lookup**.
 
@@ -200,7 +199,7 @@ Your OT network might consist of both static and dynamic IP addresses.
 
 If you're working with dynamic networks, you need to handle IP addresses changes as they occur, by defining DHCP address ranges on each OT network sensor. When an IP address is defined as a DHCP address, Defender for IoT identifies any activity happening on the same device, regardless of IP address changes.
 
-**To define DHCP address ranges**:
+To define DHCP address ranges:
 
 1. Sign into your OT sensor and select **System settings** > **Network monitoring** > **DHCP Ranges**.
 

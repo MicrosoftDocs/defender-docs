@@ -9,20 +9,20 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 
 ai-usage: ai-assisted
 ---
-# Manage automation file uploads
+# Manage automation file uploads in Microsoft Defender for Endpoint
 
 
 Enable the content analysis capability so that certain files and email attachments can automatically be uploaded to the cloud for additional inspection in Automated investigation.
 
-Microsoft uses various file investigation mechanisms to inspect and analyze files.
+Microsoft uses cloud-based file inspection mechanisms to inspect and analyze files.
 
 Identify the files and email attachments by specifying the file extension names and email attachment extension names.
 
@@ -42,7 +42,7 @@ Use the following steps to add file extension names and attachment extension nam
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Rules** \> **Automation uploads**.
 
-1. Toggle the content analysis setting between **On** and **Off**.
+1. Toggle **Content analysis** between **On** and **Off**.
 
 1. Configure the following extension names and separate extension names with a comma:
 

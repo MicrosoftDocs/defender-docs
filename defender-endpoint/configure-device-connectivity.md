@@ -3,7 +3,7 @@ title: Onboarding devices using streamlined connectivity for Microsoft Defender 
 description: Learn how to use a streamlined domain or static IP ranges during onboarding when connecting devices to Microsoft Defender for Endpoint.         
 author: paulinbar
 ms.author: painbar
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -19,7 +19,7 @@ appliesto:
   - Microsoft Defender Vulnerability Management
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
@@ -107,7 +107,7 @@ The following illustration shows the streamlined connectivity process and the co
 
 Once you confirm prerequisites are met, ensure your network environment is properly configured to support the streamlined connectivity method. Follow the steps outlined in [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md). 
 
-Defender for Endpoint service URLs consolidated under simplified domain should no longer be required for connectivity. However, some URLs aren't included in the consolidation. 
+Defender for Endpoint service URLs consolidated under the simplified domain (`*.endpoint.security.microsoft.com` or `*.endpoint.security.microsoft.us`) should no longer be required for connectivity. However, some Defender for Endpoint service URLs aren't included in the simplified-domain consolidation. 
 
 Streamlined connectivity allows you to use the following option to configure cloud connectivity:
 
@@ -135,7 +135,7 @@ With streamlined connectivity, IP-based solutions can be used as an alternative 
 - Defender for Endpoint Command and Control
 
 > [!IMPORTANT]
-> The EDR Cyber data service (OneDsCollector) *must* be configured separately if you are using the IP method (this service is only consolidated on a URL level).You must also maintain connectivity with other required services including SmartScreen, CRL, Windows Update, and other services.<br/>
+> The EDR Cyber data service (OneDsCollector) *must* be configured separately if you are using the IP method (the EDR Cyber data service is only consolidated at the URL level).You must also maintain connectivity with other required services including SmartScreen, CRL, Windows Update, and other services.<br/>
 
 In order to stay up to date on IP ranges, it's recommended to refer to the following Azure service tags for Microsoft Defender for Endpoint services. The latest IP ranges are found in the service tag. For more information, see [Azure IP ranges](https://azureipranges.azurewebsites.net/).
 
@@ -144,7 +144,7 @@ In order to stay up to date on IP ranges, it's recommended to refer to the follo
 | `MicrosoftDefenderForEndpoint` | Cloud-delivered protection, malware sample submission storage, Auto-IR sample storage,  Defender for Endpoint command and control. |
 | `OneDsCollector` | Defender for Endpoint cyber and diagnostic data <br/><br/> Note: The traffic under this service tag isn't limited to Defender for Endpoint and can include diagnostic data traffic for other Microsoft services. |
 
-For latest service tags list, refer to the [Azure service tags](/azure/virtual-network/service-tags-overview) documentation.
+For the latest list of Azure service tags, including the Defender for Endpoint-related tags listed in the preceding table, refer to the [Azure service tags](/azure/virtual-network/service-tags-overview) documentation.
 
 > [!IMPORTANT]
 > In compliance with Defender for Endpoint security and compliance standards, your data will be processed and stored in accordance with your tenant's physical location. Based on client location, traffic may flow through any of these IP regions (which correspond to Azure datacenter regions). For more information, see [Data storage and privacy](data-storage-privacy.md).  
@@ -165,7 +165,7 @@ To test streamlined connectivity for devices not yet onboarded to Defender for E
 
 - Run `mdeclientanalyzer.cmd -g <GW_US, GW_UK, GW_EU>` , where parameter is of GW_US, GW_EU, GW_UK. GW refers to the streamlined option. Run with applicable tenant geo.
 
-As a supplementary check, you can also use the client analyzer to test whether a device meets prerequisites: [MDEClientAnalyzerPreview.zip](https://aka.ms/MDEClientAnalyzerPreview).
+As a supplementary check, you can also use the client analyzer to test whether a device meets prerequisites: [Download the Microsoft Defender for Endpoint client analyzer preview](https://aka.ms/MDEClientAnalyzerPreview).
  
 
 > [!NOTE]

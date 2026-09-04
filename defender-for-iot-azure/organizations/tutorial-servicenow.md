@@ -33,12 +33,12 @@ For more information about the Microsoft Defender for IoT option, see the [Vulne
 
 For more information, see the [ServiceNow documentation](https://docs.servicenow.com/) and the [ServiceNow terms of service](https://www.servicenow.com/standard-privacy/terms-of-service.html).
 
-## Next steps
-
-Access the ServiceNow integrations from the ServiceNow store:
+## Related content
 
 - [Service Graph Connector (SGC)](https://store.servicenow.com/sn_appstore_store.do#!/store/application/ddd4bf1b53f130104b5cddeeff7b1229)
 - [Vulnerability Response (VR)](https://store.servicenow.com/sn_appstore_store.do#!/store/application/463a7907c3313010985a1b2d3640dd7e)
+
+## Next step
 
 > [!div class="nextstepaction"]
 > [Integrations with Microsoft and partner services](integrate-overview.md)

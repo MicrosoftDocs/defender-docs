@@ -10,12 +10,12 @@ ms.collection:
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Configure device proxy connectivity to the Defender for Endpoint service
@@ -67,7 +67,7 @@ Configure a registry-based static proxy for Defender for Endpoint detection and 
 > [!NOTE]
 > Always ensure to apply the latest updates to ensure successful connectivity to Defender for Endpoint services. 
 
-The static proxy settings are configurable through group policy (GP), both settings under group policy values should be configured. These Group Policy settings are available in Administrative Templates.
+The static proxy settings are configurable through group policy (GP). Configure both Group Policy settings: **Configure Authenticated Proxy usage for the Connected User Experience and Telemetry Service** and **Configure connected user experiences and telemetry**. These Group Policy settings are available in Administrative Templates.
 
 - **Administrative Templates > Windows Components > Data Collection and Preview Builds > Configure Authenticated Proxy usage for the Connected User Experience and Telemetry Service**.
 
@@ -125,7 +125,7 @@ Configure the static proxy using the Group Policy available in Administrative Te
 >
 > For resiliency purposes and the real-time nature of cloud-delivered protection, Microsoft Defender Antivirus caches the last known working proxy. Ensure your proxy solution does not perform SSL inspection, as that breaks the secure cloud connection.
 >
-> Microsoft Defender Antivirus doesn't use the static proxy to connect to Windows Update or Microsoft Update for downloading updates. Instead, it uses a system-wide proxy if configured to use Windows Update, or the configured internal update source according to the [configured fallback order](manage-protection-updates-microsoft-defender-antivirus.md).
+> Microsoft Defender Antivirus doesn't use the static proxy to connect to Windows Update or Microsoft Update for downloading updates. Instead, it uses a system-wide proxy if configured to use Windows Update, or the configured internal update source according to the [Microsoft Defender Antivirus protection update fallback order](manage-protection-updates-microsoft-defender-antivirus.md).
 >
 > If necessary, you can use **Administrative Templates > Windows Components > Microsoft Defender Antivirus > Define proxy auto-config (.pac)** for connecting to the network. If you need to set up advanced configurations with multiple proxies, use **Administrative Templates > Windows Components > Microsoft Defender Antivirus > Define addresses to bypass proxy server** and prevent Microsoft Defender Antivirus from using a proxy server for those destinations.
 > 
@@ -139,13 +139,13 @@ Configure the static proxy using the Group Policy available in Administrative Te
 Use `netsh` to configure a system-wide static proxy.
 
 > [!NOTE]
-> This configuration affects all applications, including Windows services which use `WinHTTP` with default proxy.
+> The `netsh winhttp set proxy` configuration affects all applications, including Windows services which use `WinHTTP` with default proxy.
 
 1. Open an elevated command line:
    1. Go to **Start** and type `cmd`.
    1. Right-click **Command prompt** and select **Run as administrator**.
 
-1. Enter the following command and press **Enter**:
+1. To configure the system-wide WinHTTP proxy, enter the following command and press **Enter**:
 
    ```cmd
    netsh winhttp set proxy <proxy>:<port>
@@ -153,7 +153,7 @@ Use `netsh` to configure a system-wide static proxy.
 
    For example: `netsh winhttp set proxy 10.0.0.6:8080`
 
-1. To reset the `winhttp` proxy, enter the following command and press **Enter**:
+1. To remove the current WinHTTP proxy configuration and return to direct connectivity, enter the following command and press **Enter**:
 
    ```cmd
    netsh winhttp reset proxy

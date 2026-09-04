@@ -1,5 +1,5 @@
 ---
-title: Triage tool collection in Microsoft Sentinel MCP server
+title: Triage Tool Collection in Microsoft Sentinel MCP Server
 titleSuffix: Microsoft Security  
 description: Explore the Microsoft Sentinel MCP triage tools for incident triage and hunting, including tools to fetch incidents, alerts, entities, and run hunting queries.
 ms.author: pauloliveria
@@ -10,32 +10,33 @@ ms.date: 06/18/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #customer intent: As a security analyst, I want to know the different tools available to triage incidents and hunt for threats 
 ---
 
 # Prioritize incidents and hunt for threats with triage collection
 
-The triage collection in the Microsoft Sentinel Model Context Protocol (MCP) server integrates your AI models with APIs that support incident triage and hunting. This integration lets you prioritize incidents quickly and hunt over your own data easily, reducing mean time to resolution, risk exposure, and dwell time.
+The triage collection in the Microsoft Sentinel Model Context Protocol (MCP) server integrates your AI models with APIs that support incident triage and hunting. This integration lets you prioritize incidents quickly and hunt over your own data easily, reducing mean time to resolution, risk exposure, and dwell time. This article describes how to add the triage collection, lists the available tools and their parameters, and provides sample prompts. Before you begin, make sure you meet the [prerequisites](#prerequisites).
 
 Use the tool for the following scenarios:
+
 - **Incident triage:** Prioritize incidents quickly by using your own AI models, reducing mean time to resolution. Use the tools to fetch incidents, alerts, alerts evidence, entities, and other data.
 - **Hunting:** Hunt over your data easily by using your own AI models, reducing risk exposure and dwell time. Use the tools to run hunting queries and fetch the required data during your hunt.
-
 
 ## Prerequisites
 
 To access the triage tool collection, you must have the following prerequisites:
+
 - Microsoft Defender XDR, Microsoft Defender for Endpoint, or Microsoft Sentinel onboarded to the Defender portal
 - Any of the supported AI-powered code editors and agent-building platforms:
-    - [Visual Studio Code](sentinel-mcp-use-tool-visual-studio-code.md) 
+  - [Visual Studio Code](sentinel-mcp-use-tool-visual-studio-code.md) 
 
 ## Add the triage collection
 
-To add the triage collection, first set up Microsoft Sentinel's unified MCP server interface. Follow the instructions for compatible platforms listed in the **Prerequisites** section.
+To add the triage collection, first set up Microsoft Sentinel's unified MCP server interface. Follow the instructions for compatible platforms listed in the [Prerequisites](#prerequisites) section.
 
-Use the following endpoint URL to connect your code editor or agent platform to the triage collection:
+Use the following MCP endpoint URL for the triage collection to connect your code editor or agent platform and retrieve incident triage and hunting data:
 
 ```text
 https://sentinel.microsoft.com/mcp/triage
@@ -47,7 +48,7 @@ The following tools are available in the triage collection.
 
 ### List security incidents (`ListIncidents`)
 
-This tool lists security incidents and filters them by date range, severity, status, assigned analyst, and investigation state. 
+This tool lists security incidents and filters them by date range, severity, status, assigned analyst, and investigation state.
 
 | Parameters | Required? | Description |
 |---|---|---|
@@ -94,14 +95,15 @@ This tool retrieves a security alert by ID. It returns the complete alert detail
 |---|---|---|
 | `AlertID`| Yes | Unique identifier of the alert |
 
-### List advanced hunting tables (`FetchAdvancedHuntingTablesOverview`) 
+### List advanced hunting tables (`FetchAdvancedHuntingTablesOverview`)
+
 This tool lists the names of available advanced hunting tables and their brief descriptions. It's essential for understanding data sources before writing Kusto Query Language (KQL) queries.
 
 | Parameters | Required? | Description |
 |---|---|---|
 | `tableNames` | No |Advanced hunting table names |
 
-### Get advanced hunting table schema (`FetchAdvancedHuntingTablesDetailedSchema`) 
+### Get advanced hunting table schema (`FetchAdvancedHuntingTablesDetailedSchema`)
 
 This tool retrieves complete column schemas with descriptions for specified advanced hunting tables. The information it provides is crucial for constructing error-free KQL queries. Use this tool before calling `RunAdvancedHuntingQuery`.
 
@@ -111,14 +113,14 @@ This tool retrieves complete column schemas with descriptions for specified adva
 
 ### Run hunting query (`RunAdvancedHuntingQuery`)
 
-Run an advanced hunting query by using KQL across supported Microsoft Defender tables to proactively search for threats. To understand data sources, first run `FetchAdvancedHuntingTablesOverview`. For error-free KQL, first run `FetchAdvancedHuntingTablesDetailedSchema`.
+Run an advanced hunting query by using Kusto Query Language (KQL) across supported Microsoft Defender tables to proactively search for threats. To understand data sources, first run `FetchAdvancedHuntingTablesOverview`. For error-free KQL, first run `FetchAdvancedHuntingTablesDetailedSchema`.
 
 | Parameters | Required? | Description |
 |---|---|---|
 | `kqlQuery` |Yes |KQL query to run over the selected table |
 | `timestamp` |No |Timestamp to choose for the query |
 
-### Get file information (`GetDefenderFileInfo`) 
+### Get file information (`GetDefenderFileInfo`)
 
 Get file details such as hashes, size, type, publisher, signer certificate info, and global prevalence with first and last seen timestamps.
 
@@ -142,7 +144,7 @@ List all security alerts generated by a specific file in your organization, incl
 |---|---|---|
 | `fileHash` |Yes |SHA-1 hash of the file. SHA-256 and MD5 aren't supported for this endpoint.  |
 
-### Get file-related devices (`GetDefenderFileRelatedMachines`)   
+### Get file-related devices (`GetDefenderFileRelatedMachines`)
 
 List all devices that encountered a specific file to assess its spread in your environment.
 
@@ -150,7 +152,7 @@ List all devices that encountered a specific file to assess its spread in your e
 |---|---|---|
 | `fileHash` |Yes |SHA-1 hash of the file. SHA-256 and MD5 aren't supported for this endpoint.  |
 
-### List threat indicators (`ListDefenderIndicators`)   
+### List threat indicators (`ListDefenderIndicators`)
  
 List tenant indicators of compromise (IOCs) in Microsoft Defender for Endpoint. Use filters for type, value, action, and severity.
 
@@ -165,7 +167,7 @@ List tenant indicators of compromise (IOCs) in Microsoft Defender for Endpoint. 
 | `createdAfter` |No | Return indicators created after this timestamp |
 | `createdBefore` |No |Return indicators created before this timestamp |
 
-### List automated investigations (`ListDefenderInvestigations`)   
+### List automated investigations (`ListDefenderInvestigations`)
 
 List automated investigation cases in Defender for Endpoint. Use filters for state, target device, start time, or triggering alert ID.
 
@@ -178,7 +180,7 @@ List automated investigation cases in Defender for Endpoint. Use filters for sta
 | `top` |No | Limits the number of items returned in the response|
 
 
-### Get automated investigation (`GetDefenderInvestigation`)   
+### Get automated investigation (`GetDefenderInvestigation`)
 
 Get details of a specific automated investigation, including state, timestamps, target device, and triggering alert.
 
@@ -186,15 +188,15 @@ Get details of a specific automated investigation, including state, timestamps, 
 |---|---|---|
 | `ID`| Yes|Unique identifier of the investigation |
 
-### Get all security alerts for an IP address (`GetDefenderIpAlerts`)   
+### Get all security alerts for an IP address (`GetDefenderIpAlerts`)
 
-List all security alerts in the organization that are related to a specified IP address. 
+List all security alerts in the organization that are related to a specified IP address.
 
 | Parameters | Required? | Description |
 |---|---|---|
 | `ipAddress` |Yes |IP address to retrieve related alerts for |
 
-### Get statistics for an IP address (`GetDefenderIpStatistics`)   
+### Get statistics for an IP address (`GetDefenderIpStatistics`)
 
 Get statistics for a given IP address, including the number of distinct devices that communicated with it.
 
@@ -203,7 +205,7 @@ Get statistics for a given IP address, including the number of distinct devices 
 | `ipAddress` |Yes | IP address to retrieve statistics for|
 
 
-### Get endpoint device (`GetDefenderMachine`)   
+### Get endpoint device (`GetDefenderMachine`)
 
 Get detailed information about a specific Defender for Endpoint device, including operating system details, health status, risk score, and exposure level. 
 
@@ -211,7 +213,7 @@ Get detailed information about a specific Defender for Endpoint device, includin
 |---|---|---|
 | `ID`|Yes | Unique identifier of the device|
 
-### Get security alerts related to a device (`GetDefenderMachineAlerts`)   
+### Get security alerts related to a device (`GetDefenderMachineAlerts`)
 
 List all security alerts associated with a specific device for a device-centric view of threats.
 
@@ -219,7 +221,7 @@ List all security alerts associated with a specific device for a device-centric 
 |---|---|---|
 | `ID`|Yes | Unique identifier of the device|
 
-### Get users that signed into a device (`GetDefenderMachineLoggedOnUsers`)   
+### Get users that signed into a device (`GetDefenderMachineLoggedOnUsers`)
 
 List accounts that signed in to a device. For each user, the API provides context such as the account username and domain.
 
@@ -227,7 +229,7 @@ List accounts that signed in to a device. For each user, the API provides contex
 |---|---|---|
 | `ID`|Yes |Unique identifier of the device |
 
-### Get device vulnerabilities (`GetDefenderMachineVulnerabilities`)   
+### Get device vulnerabilities (`GetDefenderMachineVulnerabilities`)
 
 List discovered security vulnerabilities on a device with Common Vulnerabilities and Exposures (CVE) details and risk assessment scores.
 
@@ -235,7 +237,7 @@ List discovered security vulnerabilities on a device with Common Vulnerabilities
 |---|---|---|
 | `ID`|Yes |Unique identifier of the device |
 
-### Find device by internal IP address (`FindDefenderMachineByIp`)   
+### Find device by internal IP address (`FindDefenderMachineByIp`)
 
 List all devices that communicated with a specific internal IP address in the time range of 15 minutes before and after the given timestamp, for network mapping and lateral movement analysis.
 
@@ -244,7 +246,7 @@ List all devices that communicated with a specific internal IP address in the ti
 | `ipAddress` |Yes | Internal IP address to search for|
 | `timestamp` |Yes | The timestamp that defines the query window, checking 15 minutes before and 15 minutes after the specified time |
 
-### List remediation tasks (`ListDefenderRemediationActivities`)   
+### List remediation tasks (`ListDefenderRemediationActivities`)
 
 List remediation tasks and their execution status across devices. Each remediation activity corresponds to a security recommendation or task.
 
@@ -259,7 +261,7 @@ List remediation tasks and their execution status across devices. Each remediati
 | `top` |No | Limits the number of items returned in the response|
 
 
-### Get detailed remediation task information (`GetDefenderRemediationActivity`)   
+### Get detailed remediation task information (`GetDefenderRemediationActivity`)
 
 Get detailed remediation task information, including execution status, results, and affected devices.
 
@@ -267,7 +269,7 @@ Get detailed remediation task information, including execution status, results, 
 |---|---|---|
 | `ID`|Yes | Unique identifier of the remediation activity|
 
-### List security alerts related to a user account (`ListUserRelatedAlerts`) 
+### List security alerts related to a user account (`ListUserRelatedAlerts`)
 
 List all security alerts associated with a specific user account. This information is essential for user-centric threat investigations and behavior analysis.
 
@@ -275,7 +277,7 @@ List all security alerts associated with a specific user account. This informati
 |---|---|---|
 | `ID`|Yes |Unique identifier of the user account |
 
-### List all devices active for a user (`ListUserRelatedMachines`) 
+### List all devices active for a user (`ListUserRelatedMachines`)
 
 List all devices where a specific user has active or recent sign-in sessions. Use this tool to track user activity and analyze lateral movement.
 
@@ -283,7 +285,7 @@ List all devices where a specific user has active or recent sign-in sessions. Us
 |---|---|---|
 |`ID` |Yes |Unique identifier of the user account |
 
-### List all devices affected by a vulnerability (`ListDefenderMachinesByVulnerability`) 
+### List all devices affected by a vulnerability (`ListDefenderMachinesByVulnerability`)
 
 List all devices affected by a specific CVE vulnerability. This tool is critical for patch management prioritization.
 
@@ -291,7 +293,7 @@ List all devices affected by a specific CVE vulnerability. This tool is critical
 |---|---|---|
 | `cveID`| Yes| CVE identifier of the vulnerability|
 
-### List vulnerabilities affecting software (`ListDefenderVulnerabilitiesBySoftware`) 
+### List vulnerabilities affecting software (`ListDefenderVulnerabilitiesBySoftware`)
 
 List vulnerabilities that affect specific software on a specific device for targeted vulnerability assessment.
 
@@ -307,8 +309,8 @@ List vulnerabilities that affect specific software on a specific device for targ
 The following sample prompts demonstrate what you can do with the triage collection:
 
 - List the last five incidents from my tenant and assess which one is the most urgent to triage
-- Provide the alerts for <specific incident\> and analyze the alert evidence for maliciousness 
-- Run a hunting query to check which users interacted with <entity\> 
+- Provide the alerts for <specific incident\> and analyze the alert evidence for maliciousness
+- Run a hunting query to check which users interacted with <entity\>
 
 ## Limitations
 
@@ -319,7 +321,7 @@ The triage collection has the following limitations:
 - Microsoft Sentinel users can't choose which workspace to use.
 - You can't query data in Microsoft Sentinel lake. You can use the [data exploration tools](sentinel-mcp-data-exploration-tool.md) instead.
 
-
 ## Related content
+
 - [What is Microsoft Sentinel's support for Model Context Protocol (MCP)?](sentinel-mcp-overview.md) 
 - [Get started with Microsoft Sentinel MCP server](sentinel-mcp-get-started.md)

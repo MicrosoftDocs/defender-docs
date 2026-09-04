@@ -11,15 +11,15 @@ ms.collection:
   - tier1
   - security-copilot
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
-# Microsoft Security Copilot Security Analyst Agent
+# Microsoft Security Copilot Security Analyst Agent overview
 
 [!INCLUDE [Prerelease](../includes/prerelease.md)]
 
@@ -43,6 +43,8 @@ You must have access to Security Copilot and Defender XDR or Sentinel Log Analyt
 
 
 ### Access and setup requirements
+
+Review the following access and setup requirements before configuring the agent.
 
 - **Access Requirements**
 
@@ -69,9 +71,9 @@ The agent currently supports three data sources:
 
 There are two methods for specifying the data source:
 
-**Natural language prompts**: Add the data source to your instruction. For example:
+**Natural language prompts**: Add the data source to your instruction. Use the following sample prompt to ask the agent to investigate whether privilege escalation or role elevation events are followed by sensitive data access using Sentinel Log Analytics data:
 
-```
+```text
 Analyze if there are privilege escalation or role elevation activities that are followed by sensitive data access in my enterprise. Please use Sentinel Log Analytics for this.
 ```
 
@@ -84,7 +86,7 @@ Once configured in a prompt, the data source setting persists for the entire ses
 > [!IMPORTANT]
 > The agent always honors your instructions. If there is a conflict between the Agent Settings and a prompt instruction, the prompt instruction takes precedence.
 >
-> If no data source is specified using either method, the agent first tries to retrieve data from Defender XDR. If that fails due to data unavailability or a permission issue, the agent retries from Sentinel Log Analytics.
+> If no data source is specified using either method, the agent first tries to retrieve data from Defender XDR. If the Defender XDR retrieval attempt fails due to data unavailability or a permission issue, the agent retries from Sentinel Log Analytics.
 
 
 ## Configure the Security Analyst Agent (optional)
@@ -140,9 +142,9 @@ Perform the following steps to use the Security Analyst Agent in Microsoft Defen
 
 1. Go to the [Microsoft Defender portal](https://defender.microsoft.com), and then select **Advanced hunting** under **Investigation and response**.
 
-1. Open Copilot, and then select **Security Analyst Agent**.
+1. Open Copilot, select the three-dot menu (**More actions**) in the side pane, and then select **Switch to Security Analyst Agent**.
 
-    :::image type="content" source="./media/security-analyst-agent/security-analyst-agent-select.png" alt-text="Screenshot of selecting Security Analyst Agent in Microsoft Defender Advanced hunting.":::
+    :::image type="content" source="./media/security-analyst-agent/security-analyst-agent-select.png" alt-text="Screenshot of the More actions menu in the Security Copilot side pane, showing the Switch to Security Analyst Agent option.":::
 
 1. Enter your security analysis prompt in natural language, or select one of the suggested prompts.
 
@@ -167,20 +169,34 @@ Perform the following steps to use the Security Analyst Agent in Microsoft Defen
 
 1. Use the feedback buttons on the response to share whether the output was helpful.
 
+## Switch back to the Threat Hunting Assistant
+
+To return to the Threat Hunting Assistant, select the three-dot menu (**More actions**) in the Security Copilot side pane, and then select **Switch to Threat Hunting Assistant**.
+
+:::image type="content" source="./media/security-analyst-agent/security-analyst-agent-switch-back.png" alt-text="Screenshot of the More actions menu in the Security Analyst Agent side pane, showing the Switch to Threat Hunting Assistant option.":::
+
+> [!NOTE]
+> Switching between the Security Analyst Agent and the Threat Hunting Assistant resets your conversation with Security Copilot.
 
 
-## Interpreting the report
+
+<a name="interpreting-the-report"></a>
+## Interpret the Security Analyst Agent report
 
 The report is organized into the following sections to help you review the analysis and supporting evidence.
 
-### Executive summary
-The Executive summary provides a clear narrative of how the analysis was performed, outlining the steps taken and the data considered. It explains the filtering criteria, time ranges, and any ranking applied, all in straightforward language so readers can easily follow the process.
+<a name="executive-summary"></a>
+### Review the executive summary
+In the report, the Executive summary section provides a clear narrative of how the analysis was performed, outlining the steps taken and the data considered. It explains the filtering criteria, time ranges, and any ranking applied, all in straightforward language so readers can easily follow the process.
 
-### Key insights
+<a name="key-insights"></a>
+### Review key insights
 Here you’ll find the most significant findings from the analysis, presented in a concise and meaningful way. Each insight includes a brief explanation of why it matters and, where relevant, references to supporting evidence.
 
-### Visualizations
+<a name="visualizations"></a>
+### Interpret report visualizations
 The Visualizations section contains charts or graphs that add depth and clarity to the report, helping readers quickly interpret patterns or relationships in the data. Visuals are included only when they provide unique value to the analysis.
 
-### Artifacts
-Artifacts are the supporting files that accompany the report, such as a comprehensive CSV of all analyzed entities and, when applicable, detailed evidence files. These resources allow readers to explore the full dataset behind the findings. Artifacts include the KQL query that was used by the agent to retrieve the data (please note the agent only uses KQL for data retrieval, analysis is done in python), comprehensive plan that was formulated for performing the task.
+<a name="artifacts"></a>
+### Review report artifacts
+Artifacts are the supporting files that accompany the Security Analyst Agent report, such as a comprehensive CSV of all analyzed entities and, when applicable, detailed evidence files. These resources allow readers to explore the full dataset behind the findings. Artifacts include the KQL query that was used by the agent to retrieve the data (please note the agent only uses KQL for data retrieval, analysis is done in python), comprehensive plan that was formulated for performing the task.

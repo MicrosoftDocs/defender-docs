@@ -1,17 +1,19 @@
 ---
 title: Create snapshot cloud discovery reports
 description: This article provides information about how to upload logs manually to create a snapshot report of your cloud discovery apps.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Mravela
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 # Create snapshot cloud discovery reports
 
+## Create a Cloud Discovery snapshot report
 
+It's important to upload a log manually and let Microsoft Defender for Cloud Apps parse it before trying to use the automatic log collector. For information on how the log collector works and the expected log format, including required traffic log attributes and conditions, see [Using traffic logs for cloud discovery](#log-format).
 
-It's important to upload a log manually and let Microsoft Defender for Cloud Apps parse it before trying to use the automatic log collector. For information on how the log collector works and the expected log format, including required traffic log attributes and conditions, see [Using traffic logs for cloud discovery](#log-format) later in this article.
+This article explains how to create a Cloud Discovery snapshot report in Microsoft Defender for Cloud Apps by manually uploading traffic logs from your firewall or proxy. Use a snapshot report to validate your log format and get initial visibility into cloud app usage before setting up the automatic log collector.
 
 If you don't have a log yet and you want to see an example of what your log should look like, download a sample log file. Follow the snapshot report creation procedure to see what your log should look like.
 

@@ -29,9 +29,8 @@ To use automated investigation and response (AIR), your subscription must includ
 
 [!INCLUDE [AIR deprecation note](includes/air-deprecation-note.md)]
 
-[!INCLUDE [AIR deprecation note](includes/air-deprecation-note.md)]
-
 > [!NOTE]
+>
 > - Automated investigation and response (AIR) requires Microsoft Defender Antivirus for running in passive mode or active mode. If Microsoft Defender Antivirus is disabled or uninstalled, Automated Investigation and Response will not function correctly.
 > - Automated investigation and response on Windows Server 2012 R2 and Windows Server 2016 requires the [Unified Agent](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2) to be installed.
 
@@ -42,8 +41,8 @@ Automated investigation and response is supported on the following operating sys
 - Windows Server 2012 R2 (Preview)
 - Windows Server 2016 (Preview)
 - Windows Server 2019 and later
-- Windows 10, version 1709 (OS Build 16299.1085 with [KB4493441](https://support.microsoft.com/help/4493441/windows-10-update-kb4493441)) or later
-- Windows 10, version 1803 (OS Build 17134.704 with [KB4493464](https://support.microsoft.com/help/4493464/windows-10-update-kb4493464)) or later
+- Windows 10, version 1709 (OS Build 16299.1085 with [KB4493441](https://support.microsoft.com/servicing/os/windows-10/2019/04/april-9-2019-kb4493441-os-build-16299-1087)) or later
+- Windows 10, version 1803 (OS Build 17134.704 with [KB4493464](https://support.microsoft.com/servicing/os/windows-10/2019/04/april-9-2019-kb4493464-os-build-17134-706)) or later
 - Windows 10, version [1803 release information](/windows/release-information/status-windows-10-1809-and-windows-server-2019) or later
 - Windows 11
 - Azure Stack HCI OS, version 23H2 and later
@@ -81,7 +80,7 @@ As alerts are triggered, and an automated investigation runs, a verdict is gener
 
 As verdicts are reached, automated investigations can result in one or more remediation actions. Examples of remediation actions include sending a file to quarantine, stopping a service, removing a scheduled task, and more. For a complete list, see [Remediation actions](manage-auto-investigation.md#remediation-actions).
 
-Depending on the [level of automation](automation-levels.md) set for your organization, as well as other security settings, remediation actions can occur automatically or only upon approval by your security operations team. Additional security settings that can affect automatic remediation include [protection from potentially unwanted applications](/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus) (PUA).
+Depending on the [level of automation](automation-levels.md) set for your organization, as well as other security settings, remediation actions can occur automatically or only upon approval by your security operations team. Additional security settings that can affect automatic remediation include [protection from potentially unwanted applications](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md) (PUA).
 
 All remediation actions, whether pending or completed, are tracked in the [Action center](auto-investigation-action-center.md). If necessary, your security operations team can undo a remediation action. To learn more, see [Review and approve remediation actions following an automated investigation](manage-auto-investigation.md).
 
@@ -101,8 +100,7 @@ Use the following resources to continue configuring and learning about automated
 
 For related information, see the following articles:
 
-- [PUA protection](/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus)
+- [PUA protection](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md)
 - [Automated investigation and response in Microsoft Defender for Office 365](/defender-office-365/air-about)
 - [Automated investigation and response in Microsoft Defender XDR](/defender-xdr/m365d-autoir)
-
 

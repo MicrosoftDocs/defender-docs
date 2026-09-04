@@ -12,7 +12,7 @@ ms.custom:
   - msecd-doc-authoring-1016
 description: Configure where user reported messages go for analysis in Microsoft Defender for Office 365. Set up a reporting mailbox and choose Microsoft, mailbox-only, or both.
 ms.service: defender-office-365
-ms.date: 07/03/2026
+ms.date: 08/07/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -106,7 +106,7 @@ On the **User reported settings** page, the available settings for reporting mes
   |Show a success (pop-up) message after the message is reported|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
   |Customize (pop-up) messages for **Report phishing**, **Report junk**, **Report not junk**, **Phishing reported**, and **Junk reported** in up to seven languages|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_absent_icon.png":::|
   |Reported item destination|<ul><li>Microsoft and reporting mailbox</li><li>Reporting mailbox only</li><li>Microsoft only</li></ul>|<ul><li>Microsoft and reporting mailbox</li><li>Reporting mailbox only</li></ul>|
-  |Email users the results of the investigation|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
+  |Email users the results of the investigation. Default result emails are localized based on the recipient's preferred language.|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
   |Customize the body and footer of the results email for **Phishing**, **Junk**, and **No threats found**|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
   |Customize the logo in all reporting experiences|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
   |Allow reporting for quarantined items|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
@@ -175,7 +175,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
 
   - **My reporting mailbox only**: User reported messages go only to the specified reporting mailbox for an admin or the security operations team to analyze.
 
-    Follow the instructions in the **Microsoft and my reporting mailbox** option to select the mailbox in the **Add an Exchange Online mailbox to Send reported items to** box.
+    Follow the instructions in the **Microsoft and my reporting mailbox** option to select the mailbox in the **Add an Exchange Online mailbox to Send reported items to** box. Distribution groups and routing to an external or on-premises mailbox aren't allowed.
 
     On the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>, the **Result** value for these entries is **Not Submitted to Microsoft**. Messages don't go to Microsoft for analysis unless an admin manually submits the message. For instructions, see [Submit user reported messages to Microsoft for analysis](submissions-admin.md#submit-user-reported-messages-to-microsoft-for-analysis).
 
@@ -188,6 +188,8 @@ When **Monitor reported messages in Outlook** is selected and you also select **
   > - In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD), the only available value for **Send reported items to** is **My reporting mailbox only**. The other two options are unavailable for compliance reasons (data isn't allowed to leave the organization boundary).
 
 - **Email notifications** section: These options affect the notification email message that's sent to users when an admin selects :::image type="icon" source="media/defender-portal-icon-mark-and-notify.png" border="false"::: **Mark as and notify** on the **Submissions** page at <https://security.microsoft.com/reportsubmission>. The following options are available:
+
+  The default admin review outcome email is automatically localized based on the recipient's preferred language. This default template is used for manual **Mark as and notify** actions and automatic investigation result notifications. If you customize the email body or footer, recipients receive the text that you configure instead of the localized default text.
 
   - **Results email** section:
     - Select **Customize results email**. In the **Customize admin review email notifications** flyout that opens, configure the following settings on the **Phishing**, **Junk**, and **No threats found** tabs:
@@ -259,6 +261,8 @@ When **Monitor reported messages in Outlook** is selected and you also select **
     On the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>, the **Result** value for these entries is **Not Submitted to Microsoft**. Messages don't go to Microsoft for analysis unless an admin manually submits the message. For instructions, see [Submit user reported messages to Microsoft for analysis](submissions-admin.md#submit-user-reported-messages-to-microsoft-for-analysis).
 
 - **Email notifications** section: These options affect the notification email message that's sent to users when an admin selects :::image type="icon" source="media/defender-portal-icon-mark-and-notify.png" border="false"::: **Mark as and notify** on the **Submissions** page at <https://security.microsoft.com/reportsubmission>. The following options are available:
+
+  The default admin review outcome email is automatically localized based on the recipient's preferred language. This default template is used for manual **Mark as and notify** actions and automatic investigation result notifications. If you customize the email body or footer, recipients receive the text that you configure instead of the localized default text.
 
   - **Results email** section:
     - Select **Customize results email**. In the **Customize admin review email notifications** flyout that opens, configure the following settings on the **Phishing**, **Junk**, and **No threats found** tabs:

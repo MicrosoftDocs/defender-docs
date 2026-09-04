@@ -11,7 +11,7 @@ ms.collection:
 - tier3
 ms.topic: concept-article
 ms.subservice: ngp
-ms.date: 12/17/2025
+ms.date: 07/21/2026
 ---
 # Resources for Microsoft Defender for Endpoint for mobile devices
 
@@ -40,6 +40,7 @@ Microsoft Defender for Endpoint provides multiple capabilities on mobile devices
 |Disable/enable sign out| Sign out option can be disabled for an end user. This helps prevent tampering with the device.|Disable sign out = 1(default)/0 |DisableSignOut = 1/0 |DisableSignOut = 1/0 |
 |Device tagging| Defender for Endpoint enables bulk tagging mobile devices during onboarding. Admins can set up tags using this configuration by using Intune.|Device tag (Value as String)|DefenderDeviceTag (Value as String) |DefenderDeviceTag (Value as String)|
 |Optional Permissions| Admins can make some permissions optional for the end user while onboarding Defender for Endpoint. Users see an option to grant these permissions later.| NA|DefenderOptionalVPN = 0(default)/1, DefenderOptionalAccessibility = 0(default)/1|DefenderOptionalVPN = 0(default)/1, DefenderOptionalAccessibility = 0(default)/1|
+|[Dynamic Preview Rings](mobile-dynamic-preview-rings-configure.md)| Admins can enable preview features on the production Defender app for a selected group of users. |DefenderPreview = 0(default)/1|DefenderPreview = 0(default)/1|DefenderPreview = 0(default)/1|
 
 ## Alerts severity and privacy information
 

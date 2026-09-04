@@ -2,16 +2,19 @@
 title: Discover generative AI workloads
 description: Learn how to use the cloud security explorer to determine which AI workloads and models are running in your environment.
 ms.topic: how-to
-ms.date: 05/28/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 # customer intent: As a user, I want to learn how to identify AI workloads and models in my environment so that I can assess their security posture.
 ai-usage: ai-assisted
 ---
 
 # Discover generative AI workloads
 
-The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud provides a comprehensive view of your organization's AI Bill of Materials (AI BOM). The instructions in this article explain how to use the cloud security explorer to identify the AI workloads and models that are running in your environment. With the results, you can assess the security posture of the scanned AI workloads.
+The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud provides a comprehensive view of your organization's AI Bill of Materials (AI BOM). The instructions in this article explain how to use the cloud security explorer to identify the AI workloads and models that are running in your environment. With the cloud security explorer query results, you can assess the security posture of the scanned AI workloads.
 
 ## Prerequisites
+
+Before you begin, make sure you have the following prerequisites:
 
 - Read about [AI security posture management](ai-security-posture.md).
 
@@ -45,9 +48,10 @@ The cloud security explorer can be used to identify generative AI workloads and 
 
 1. Select a node to review the findings.
 
-    The findings show the deployed models that are running on your resources and specific model metadata regarding those deployments.
+    The node findings show the deployed models that are running on your resources and specific model metadata for those deployments.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Explore risks to pre-deployment generative AI artifacts](explore-ai-risk.md)

@@ -2,7 +2,7 @@
 title: Defender CLI setup for agentic code security
 description: Set up Defender CLI authentication to run agentic code scans locally or in CI/CD pipelines.
 ms.topic: how-to
-ms.date: 07/08/2026
+ms.date: 08/13/2026
 ai-usage: ai-assisted
 ---
 
@@ -124,6 +124,8 @@ Use this approach to let users authenticate with their Defender credentials for 
 
 ### Prerequisites
 
+Before you can run the Defender CLI commands, make sure your account has been assigned at least one of the following permissions:
+
 - At least **Security Administrator** role in Microsoft Entra ID.
 - Required permissions assigned in Microsoft Defender unified RBAC. For more information, see [Assign permissions to users using Defender RBAC](ai-code-security-onboarding.md#assign-permissions-to-users-using-defender-rbac).
 
@@ -142,7 +144,7 @@ Run the following command to start a device code sign-in flow for Defender inter
 ```bash
 az login \
   --tenant <DEFENDER_DFD_TENANT_ID> \
-  --scope b1a78a13-a596-4366-b37d-406048fa4a23/Defender.InteractiveLogin \
+  --scope c2fd607e-fe6e-41bd-ae58-08e2f24014aa/Defender.InteractiveLogin \
   --allow-no-subscriptions \
   --use-device-code
 ```

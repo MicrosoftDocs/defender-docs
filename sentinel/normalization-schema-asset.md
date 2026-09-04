@@ -103,8 +103,8 @@ This section defines information about the asset owner. If your asset has multip
 
 | Field | Class | Type | Description |
 |-------|-------|------|-------------|
-| **AADTenantId** | Mandatory | string | The Azure Active Directory tenant identifier associated with the asset or entity. |
-| **IdentityDirectoryName** | Optional | string | The name of the identity directory, such as Azure AD, GCP, AWS, associated with the entity. |
+| **AADTenantId** | Mandatory | string | The Microsoft Entra tenant identifier associated with the asset or entity. |
+| **IdentityDirectoryName** | Optional | string | The name of the identity directory, such as Microsoft Entra ID, GCP, or AWS, associated with the entity. |
 | **IdentityDirectoryId** | Mandatory | string | The identifier of the identity directory associated with the entity. |
 | **AdditionalFields** | Optional | dynamic | Additional information about the entity that is not captured by other fields in the schema. |
 

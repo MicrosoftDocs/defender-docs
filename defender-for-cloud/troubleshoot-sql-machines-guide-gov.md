@@ -1,9 +1,9 @@
 ---
-title: Troubleshoot Defender for SQL on Machines deployment government
+title: Troubleshoot Defender for SQL on Machines deployment in government clouds
 description: Troubleshoot deployment issues for SQL Servers on machines using the Azure Monitoring Agent (AMA) autoprovisioning process.
-ms.date: 04/23/2025
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: references_regions
+ms.custom: references_regions, msecd-doc-authoring-1013
 #customer intent: As a security professional, I want to ensure that my deployment of SQL servers on machines is correct and protects my resources.
 ai-usage: ai-assisted
 ---
@@ -109,7 +109,7 @@ After locating a subscription with misconfigurations, resolve the misconfigurati
 
 After identifying misconfigurations, start by fixing DCR issues, then workspace issues, and finally identity issues at the subscription level.
 
-Fix misconfigurations in the correct order. DCR resolution relies on workspace resolution, and workspace resolution relies on identity resolution. If you try to resolve these misconfigurations out of order, they aren't resolved.
+Fix misconfigurations in the correct order. DCR resolution relies on workspace resolution, and workspace resolution relies on identity resolution. If you try to resolve these misconfigurations out of order, the misconfigurations aren't resolved.
 
 1. Navigate to **Policy** > **Compliance**.
 
@@ -140,17 +140,19 @@ Fix misconfigurations in the correct order. DCR resolution relies on workspace r
 
 1. Select **Remediate**.
 
-1. Repeat these steps for each noncompliant policy and subscription.
+1. Repeat the remediation-task process for each noncompliant policy and subscription.
 
 ### Input custom values with PowerShell deployment script
 
-If you couldn't resolve subscription issues with the workbook, Defender for SQL Servers on Machines provides a PowerShell deployment script that enables you to input your own values for workspace, DCR, and user Identity. To use the PowerShell script, follow the [instructions on this page](enable-defender-sql-at-scale.md).
+If you couldn't resolve subscription issues with the workbook, Defender for SQL Servers on Machines provides a PowerShell deployment script that enables you to input your own values for workspace, DCR, and user Identity. To use the PowerShell script, follow the [instructions in Enable Defender for SQL at scale](enable-defender-sql-at-scale.md).
 
 ## Step 7: Resolve misconfigurations at the resource level
 
 After resolving misconfigurations at the subscription level, resolve misconfigurations at the resource level, including DCRA misconfigurations and incomplete AMA or Defender for SQL extension deployment.
 
 ### Troubleshoot extension misconfigurations
+
+Use the following steps to troubleshoot extension-related policy misconfigurations.
 
 1. In the Azure portal, navigate to **Policy** > **Compliance**.
 
@@ -168,6 +170,8 @@ After resolving misconfigurations at the subscription level, resolve misconfigur
 1. For each policy that is noncompliant, review the compliance reason and select **Create remediation task** to resolve it.
 
 ### Troubleshoot DCRA misconfigurations
+
+Use the following steps to troubleshoot DCRA misconfigurations for the affected subscription.
 
 1. In the Azure portal, Search for and select **[Data collection rules](https://ms.portal.azure.com/#browse/microsoft.insights%2Fdatacollectionrules)**.
 

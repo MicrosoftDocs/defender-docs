@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-asr
-ms.date: 07/01/2026
+ms.date: 08/31/2026
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to enable controlled folder access on devices so that I can protect important files and folders from ransomware and other malicious apps.
 appliesto:
@@ -41,45 +41,47 @@ CFA is available in the following operating systems:
 
 [!INCLUDE [Intune is recommended but is a separate product](includes/intune-recommended-separate-product.md)]
 
-In Intune, endpoint security policies are the recommended method to deploy CFA.
+To configure CFA in Microsoft Intune, use an endpoint security **Attack surface reduction** policy. For detailed instructions, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create endpoint security policies</a> or <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (links open new tabs in the Intune documentation).
 
-To configure CFA using a Microsoft Intune Endpoint Security **Attack surface reduction** policy, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
+When you create the policy, use these specific settings:
 
-- **Policy type**: Attack surface reduction
-- **Platform**: Windows
-- **Profile**: Attack Surface Reduction Rules
-- **Configuration settings**: After you configure the [attack surface reduction (ASR) rules settings](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies), configure the following CFA settings:
-  - **Enable controlled folder access**: Select an available [mode value](controlled-folder-access-overview.md#modes-for-cfa). After you assess the effect of CFA in **Audit Mode**, you can set it to **Enabled**.
+- **Policy type**: Select **Manage** \> **Attack surface reduction** on the **Endpoint security \| Overview** page.
+- **Platform**: Select **Windows**.
+- **Profile**: Select **Attack Surface Reduction Rules**.
 
-  - **Controlled folder access protected folders**: To add more folders that get CFA protection, use either of the following methods:
-    - Select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add**. In the box that appears, enter the path to include. For example:
-      - `C:\Data\Reports`
-      - `C:\Data\Finance`
+When you create or modify the policy, after you configure the [attack surface reduction (ASR) rules settings](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies), use these specific CFA settings on the **Configuration settings** tab:
 
-    - Select :::image type="icon" source="media/intune-icon-import.png" border="false"::: **Import** to import a CSV file that contains the paths to include. The CSV file uses the following format:
+- **Enable controlled folder access**: Select an available [mode value](controlled-folder-access-overview.md#modes-for-cfa). After you assess the effect of CFA in **Audit Mode**, you can set it to **Enabled**.
 
-      ```text
-      ControlledFolderAccessProtectedFolders
-      "C:\folder1"
-      "C:\folder2"
-      ...
-      ```
+- **Controlled folder access protected folders**: To add more folders that get CFA protection, use either of the following methods:
+  - Select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add**. In the box that appears, enter the path to include. For example:
+    - `C:\Data\Reports`
+    - `C:\Data\Finance`
 
-      > [!TIP]
-      > Double quotation marks around the values are optional, and are ignored (aren't used in the values) if you include them. Don't use single quotation marks around the values.
-
-  - **Controlled folder access allowed applications**: To specify apps that are allowed to make changes to files in protected folders, use the same :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add** or :::image type="icon" source="media/intune-icon-import.png" border="false"::: **Import** methods described for **Controlled folder access protected folders**, specifying the path and file name of each app.
-
-    The CSV file uses the following format:
+  - Select :::image type="icon" source="media/intune-icon-import.png" border="false"::: **Import** to import a CSV file that contains the paths to include. The CSV file uses the following format:
 
     ```text
-    ControlledFolderAccessAllowedApplications
-    "C:\Apps\app1.exe"
-    "%ProgramFiles%\Fabrikam\DriveManager\*\DriveService.exe"
+    ControlledFolderAccessProtectedFolders
+    "C:\folder1"
+    "C:\folder2"
     ...
     ```
 
-    The path of each app can include environment variables and wildcards, as described in [Allow apps to modify files in protected folders](controlled-folder-access-overview.md#allow-apps-to-modify-files-in-protected-folders).
+    > [!TIP]
+    > Double quotation marks around the values are optional, and are ignored (aren't used in the values) if you include them. Don't use single quotation marks around the values.
+
+- **Controlled folder access allowed applications**: To specify apps that are allowed to make changes to files in protected folders, use the same :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add** or :::image type="icon" source="media/intune-icon-import.png" border="false"::: **Import** methods described for **Controlled folder access protected folders**, specifying the path and file name of each app.
+
+  The CSV file uses the following format:
+
+  ```text
+  ControlledFolderAccessAllowedApplications
+  "C:\Apps\app1.exe"
+  "%ProgramFiles%\Fabrikam\DriveManager\*\DriveService.exe"
+  ...
+  ```
+
+  The path of each app can include environment variables and wildcards, as described in [Allow apps to modify files in protected folders](controlled-folder-access-overview.md#allow-apps-to-modify-files-in-protected-folders).
 
 For more information about attack surface reduction profiles in Microsoft Intune, see [Manage attack surface reduction settings with Microsoft Intune](/intune/intune-service/protect/endpoint-security-asr-policy#attack-surface-reduction-profiles).
 
@@ -87,11 +89,16 @@ For more information about attack surface reduction profiles in Microsoft Intune
 
 If your organization [manages endpoint security policies in the Microsoft Defender portal](endpoint-security-policies-configure.md), you can configure CFA with the same endpoint security policies that Intune uses.
 
-On the **Windows** tab of the **Endpoint security policies** page of the Defender portal at <https://security.microsoft.com/policy-inventory>, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create new policy** and then create an **Attack surface reduction** policy. For the full procedure, see [Create an endpoint security policy](endpoint-security-policies-configure.md#create-an-endpoint-security-policy).
+For detailed instructions, see <a href="endpoint-security-policies-configure.md#create-an-endpoint-security-policy" target="_blank">Create an endpoint security policy</a> or <a href="endpoint-security-policies-configure.md#edit-an-endpoint-security-policy" target="_blank">Edit an endpoint security policy</a> (links open new tabs).
 
-Use the same **Attack Surface Reduction Rules** profile and CFA settings described in [Configure CFA in Intune using endpoint security policies](#configure-cfa-in-intune-using-endpoint-security-policies).
+When you create the policy on the **Windows policies** tab of the **Endpoint security policies** page in the Defender portal at <https://security.microsoft.com/policy-inventory?osPlatform=Windows>, use these specific settings:
 
-When you assign the policy, note that assignment group limitations apply to devices managed through security settings management. For details, see the [Assignments step](endpoint-security-policies-configure.md#create-an-endpoint-security-policy).
+- **Select platform**: Select **Windows**.
+- **Select template**: Select **Attack surface reduction rules**.
+
+When you create or modify the policy, use the same CFA settings described in [Configure CFA in Intune using endpoint security policies](#configure-cfa-in-intune-using-endpoint-security-policies) on the **Configuration settings** tab.
+
+When you assign the policy, assignment group limitations apply to devices managed through security settings management. For details, see the [Assignments step](endpoint-security-policies-configure.md#create-an-endpoint-security-policy).
 
 <a name="mobile-device-management-mdm"></a>
 
@@ -283,7 +290,7 @@ Set-MpPreference -ControlledFolderAccessAllowedApplications "C:\Apps\app1.exe","
 
 ## Configure CFA in the Windows Security app
 
-You can use the [Windows Security app](https://support.microsoft.com/windows/stay-protected-with-the-windows-security-app-2ae0363d-0ada-c064-8b56-6a39afb6a963) on individual devices to configure CFA. This method is useful for testing or for configuring a single device. To configure CFA on many devices, use one of the enterprise management methods described earlier in this article.
+You can use the [Windows Security app](https://support.microsoft.com/Windows/Security/Windows-Security/stay-protected-with-the-windows-security-app) on individual devices to configure CFA. This method is useful for testing or for configuring a single device. To configure CFA on many devices, use one of the enterprise management methods described earlier in this article.
 
 > [!NOTE]
 > The Windows Security app supports only **On** (equivalent to the **Enabled** [mode](controlled-folder-access-overview.md#modes-for-cfa)) and **Off** (the **Disabled** mode). To use **Audit Mode** or the disk modification modes, use one of the other methods described in this article.

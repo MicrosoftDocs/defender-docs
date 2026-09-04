@@ -68,7 +68,7 @@ To use the standalone ClientAnalyzer binary, complete the following steps.
 1. Verify the download:
 
     ```bash
-    echo '0C8F010D09557478E0CF626D439D5F7EAB1F6C7EEFF69FF1E98A7289520983E1 XMDEClientAnalyzerBinary.zip' | sha256sum -c
+    echo '5F906591D33D675F14D73D5B658A796CEC7480B023B18D45C5D687713A4D4FBB XMDEClientAnalyzerBinary.zip' | sha256sum -c
     ```
 
 1. Extract the contents of `XMDEClientAnalyzerBinary.zip` on the machine.
@@ -149,7 +149,7 @@ To run this client analyzer, follow these steps:
 1. Verify the download:
 
     ```bash
-    echo '62F92CD9D191063663FBAC7B29E1C967C8F9A30B9B769DA5E968FC4276C1F030 XMDEClientAnalyzerPython.zip' | sha256sum -c
+    echo '0B7C350A1C19E049416B1C8FB7ED857569DDCC32FB90453A3FCCD083487C0B4E XMDEClientAnalyzerPython.zip' | sha256sum -c
     ```
 
 1. Extract the contents of `XMDEClientAnalyzer.zip` on the machine:
@@ -543,7 +543,7 @@ If Microsoft Defender for Endpoint is already installed on the device, you can r
 - Execute:
 
    ```bash
-   run MDESupportToolBinary.sh -parameters "--bypass-disclaimer -d"
+   ./MDESupportToolBinary.sh --bypass-disclaimer -d
    ```
 
 - For Client Analyzer Python shipped with Microsoft Defender for Linux, create an `MDESupportToolPython.sh` file and paste the following content into it.
@@ -561,7 +561,7 @@ If Microsoft Defender for Endpoint is already installed on the device, you can r
 - Execute:
 
    ```bash
-   run MDESupportToolPython.sh -parameters "--bypass-disclaimer -d"
+   ./MDESupportToolPython.sh --bypass-disclaimer -d
    ```
 
 ### Install the XMDE Client Analyzer

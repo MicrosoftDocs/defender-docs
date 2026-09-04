@@ -1,8 +1,9 @@
 ---
 title: Configure the Microsoft Security DevOps Azure DevOps extension
-description: Learn how to configure the Microsoft Security DevOps Azure DevOps extension.
+description: Install the Microsoft Security DevOps extension in Azure DevOps, configure YAML pipelines with static analysis tools, and upload SARIF findings to Defender for Cloud.
 ms.topic: how-to
-ms.date: 05/26/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a DevOps engineer, I want to configure the Microsoft Security DevOps extension in Azure DevOps so I can run security analyzers in my pipelines and send findings to Defender for Cloud.
 ai-usage: ai-assisted
 ---
@@ -30,9 +31,12 @@ Microsoft Security DevOps uses the following open-source tools:
 
 ## Prerequisites
 
+Before you install the extension, make sure you meet the following prerequisite:
+
 - You need Project Collection Administrator privileges in your Azure DevOps organization to install the extension. If you don't have access, request these privileges from your Azure DevOps administrator.
 
-## Configure the Microsoft Security DevOps Azure DevOps extension
+<a name="configure-the-microsoft-security-devops-azure-devops-extension"></a>
+## Install the extension
 
 To install the Microsoft Security DevOps extension:
 
@@ -56,6 +60,9 @@ To install the Microsoft Security DevOps extension:
 1. Select **Proceed to organization**.
 
 ## Configure pipelines using YAML
+
+> [!TIP]
+> Optional: Install the SARIF SAST Scans Tab extension if you want SARIF analysis results to appear automatically in the pipeline's **Scans** tab.
 
 To configure a pipeline with YAML:
 
@@ -116,7 +123,7 @@ To configure a pipeline with YAML:
 
 Defender for Cloud can ingest SARIF results from other security tools for code-to-cloud visibility. To upload these results, ensure your Azure DevOps repositories are [onboarded to Defender for Cloud](quickstart-onboard-devops.md). After onboarding, Defender for Cloud continuously monitors the `CodeAnalysisLogs` artifact for SARIF output.
 
-Use the `PublishBuildArtifacts@1` task to publish SARIF files to the `CodeAnalysisLogs` artifact. For example:
+Use the `PublishBuildArtifacts@1` task to publish SARIF files to the `CodeAnalysisLogs` artifact. The following YAML step publishes the SARIF results file as a build artifact so that Defender for Cloud can ingest the findings:
 
 ```yml
 - task: PublishBuildArtifacts@1

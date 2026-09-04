@@ -12,7 +12,8 @@ ms.collection:
 - mde-macos
 ms.topic: troubleshooting-general
 ms.subservice: macos
-ms.date: 12/15/2025
+search.appverid: met150
+ms.date: 07/28/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -28,7 +29,7 @@ Troubleshooting mode is disabled by default, and requires you to turn it on for 
 
 ## What do you need to know before you begin
 
-During the troubleshooting mode, you can:
+During troubleshooting mode, you can perform the following operations:
 
 - Use Microsoft Defender for Endpoint on macOS functional troubleshooting /application compatibility (false positives).
 - Local admins, with appropriate permissions, can change the following policy locked configurations on individual endpoints:
@@ -42,7 +43,7 @@ During the troubleshooting mode, you can:
   |groupIds|`mdatp edr group-ids --group-id [group]`||
   |Endpoint DLP|`mdatp config data_loss_prevention --value enabled`|`mdatp config data_loss_prevention --value disabled`|
 
-During troubleshooting mode, you can't:
+During troubleshooting mode, you can't perform the following operations:
 
 - Disable tamper protection for Microsoft Defender for Endpoint on macOS.
 - Uninstall the Microsoft Defender for Endpoint on macOS.

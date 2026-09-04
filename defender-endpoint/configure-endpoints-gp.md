@@ -81,7 +81,7 @@ You can use Group Policy (GP) to configure settings, such as settings for the sa
 
    - Copy `AtpConfiguration.adml` into `C:\Windows\PolicyDefinitions\en-US`.
 
-   If you're using a [Central Store for Group Policy Administrative Templates](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra), copy the following files from the
+   If you're using a [Central Store for Group Policy Administrative Templates](/troubleshoot/windows-client/group-policy/create-and-manage-central-store), copy the following files from the
     configuration package:
 
    - Copy `AtpConfiguration.admx` into `\\<forest.root>\SysVol\<forest.root>\Policies\PolicyDefinitions`.

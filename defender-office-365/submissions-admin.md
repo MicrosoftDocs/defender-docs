@@ -13,7 +13,7 @@ ms.custom:
   - sfi-image-nochange
 description: "Admins can learn how to use the Submissions page in the Microsoft Defender portal to submit messages, URLs, and email attachments to Microsoft for analysis. Reasons for submission include: legitimate messages that were blocked, suspicious messages that were allowed, suspected phishing email, spam, malware, and other potentially harmful messages."
 ms.service: defender-office-365
-ms.date: 07/03/2026
+ms.date: 07/30/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -55,7 +55,7 @@ For more information about how **users** can submit messages and files to Micros
 
 For other ways that **admins** can report messages to Microsoft in the Defender portal, see [Related reporting settings for admins](submissions-report-messages-files-to-microsoft.md#related-reporting-settings-for-admins).
 
-## What do you need to know before you begin?
+## Prerequisites
 
 Before you use the **Submissions** page, review the following requirements and considerations:
 
@@ -73,7 +73,7 @@ Before you use the **Submissions** page, review the following requirements and c
   - Same submissions in a 24 hour period: Three submissions
   - Same submissions in a 15-minute period: One submission
 
-- If the [User reported settings](submissions-user-reported-messages-custom-mailbox.md) in the organization send user reported messages (email and [Microsoft Teams](submissions-teams.md)) to Microsoft (exclusively or in addition to the reporting mailbox), we do the same checks as when admins submit messages to Microsoft for analysis from the **Submissions** page. So, submitting or resubmitting messages to Microsoft is useful to admins only for messages that have never been submitted to Microsoft, or when you disagree with the original verdict.
+- If the [User reported settings](submissions-user-reported-messages-custom-mailbox.md) in the organization send user reported messages (email and [Microsoft Teams](submissions-teams.md)) to Microsoft (exclusively or in addition to the reporting mailbox), we do the same checks as when admins submit messages to Microsoft for analysis from the **Submissions** page, so submitting or resubmitting messages to Microsoft is useful to admins only for messages that have never been submitted to Microsoft, or when you disagree with the original verdict.
 
 - A **Files** tab is available on the **Submissions** page only in organizations with Microsoft Defender or Microsoft Defender for Endpoint Plan 2. For information and instructions to submit files from the **Files** tab, see [Submit files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
 
@@ -102,10 +102,8 @@ To report a questionable email message to Microsoft for analysis, perform the fo
 
    - **Choose at least one recipient who had an issue**: Specify the recipients to run a policy check against. The policy check determines if the email bypassed scanning due to user or organization policies or override.
 
-   - **Why are you submitting this message to Microsoft?**: Select one of the following values:
+   - **Why are you submitting this message to Microsoft?**: You can select either:
      - **It appears suspicious**: Select this value only when you don't know or you're unsure of the message verdict and you would like to get a verdict from Microsoft. Select **Submit**, and then go to Step 6.
-
-     or
 
      - **I've confirmed it's a threat**: In all other cases, select this value after you've already determined the message verdict as malicious. Select one of the following values in the **Choose a category** section that appears:
        - **Phish**
@@ -116,10 +114,8 @@ To report a questionable email message to Microsoft for analysis, perform the fo
 
        :::image type="content" source="media/admin-submission-email-block.png" alt-text="Submit a false negative (bad) email to Microsoft for analysis on the Submissions page in the Defender portal." lightbox="media/admin-submission-email-block.png":::
 
-5. On the second page of the **Submit to Microsoft for analysis** flyout that opens, do one of the following steps:
+5. On the second page of the **Submit to Microsoft for analysis** flyout that opens, you can either:
    - Select **Submit**.
-
-   or
 
    - Select **Block all emails from this sender or domain**: This option creates a block entry for the sender domain or email address in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
 
@@ -166,8 +162,6 @@ To submit a questionable email attachment to Microsoft for analysis, perform the
    - **Why are you submitting this email attachment to Microsoft?**: Select one of the following values:
      - **It appears suspicious**: Select this value if you're unsure and you want a verdict from Microsoft, select **Submit**, and then go to Step 6.
 
-     or
-
      - **I've confirmed it's a threat**: Select this value if you're sure that the item is malicious, and then select one of the following values in the **Choose a category** section that appears:
        - **Phish**
        - **Malware**
@@ -176,10 +170,8 @@ To submit a questionable email attachment to Microsoft for analysis, perform the
 
        :::image type="content" source="media/admin-submission-file-block.png" alt-text="Submit a false negative (bad) email attachment to Microsoft for analysis on the Submissions page in the Defender portal." lightbox="media/admin-submission-file-block.png":::
 
-5. On the second page of the **Submit to Microsoft for analysis** flyout that opens, do one of the following steps:
+5. On the second page of the **Submit to Microsoft for analysis** flyout that opens, you can choose one of the following:
    - Select **Submit**.
-
-   or
 
    - Select **Block this file**: This option creates a block entry for the file in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
 
@@ -220,8 +212,6 @@ To report a questionable URL to Microsoft for analysis, perform the following st
    - **Why are you submitting this URL to Microsoft?**: Select one of the following values:
      - **It appears suspicious**: Select this value if you're unsure and you want a verdict from Microsoft, select **Submit**, and then go to Step 6.
 
-     or
-
      - **I've confirmed it's a threat**: Select this value if you're sure that the item is malicious, and then select one of the following values in the **Choose a category** section that appears:
        - **Phish**
        - **Malware**
@@ -230,10 +220,8 @@ To report a questionable URL to Microsoft for analysis, perform the following st
 
        :::image type="content" source="media/admin-submission-url-block.png" alt-text="Submit a false negative (bad) URL to Microsoft for analysis on the Submissions page in the Defender portal." lightbox="media/admin-submission-url-block.png":::
 
-5. On the second page of the **Submit to Microsoft for analysis** flyout that opens, do one of the following steps:
+5. On the second page of the **Submit to Microsoft for analysis** flyout that opens, select one of the following options:
    - Select **Submit**.
-
-   or
 
    - Select **Block this URL**: This option creates a block entry for the URL in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
 
@@ -279,16 +267,12 @@ After a few moments, the block entry is available on the **URL** tab on the **Te
    - **Why are you submitting this message to Microsoft?**: Select one of the following values:
      - **It appears clean**: Select this value only when you don't know or you're unsure of the message verdict and you would like to get a verdict from Microsoft. Select **Submit**, and then go to Step 6.
 
-     or
-
      - **I've confirmed it's clean**: In all other cases, select this value after you've already determined the message verdict as clean. Select **Next**.
 
    :::image type="content" source="media/admin-submission-email-allow.png" alt-text="Submit a false positive (good) email to Microsoft for analysis on the Submissions page in the Defender portal." lightbox="media/admin-submission-email-allow.png":::
 
-5. On the second page of the **Submit to Microsoft for analysis** flyout that opens, do one of the following steps:
+5. On the second page of the **Submit to Microsoft for analysis** flyout that opens, select one of the following options:
    - Select **Submit**.
-
-   or
 
    - Select **Allow this message**: This option creates an allow entry for the elements of the message in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
 
@@ -341,19 +325,15 @@ To report a good email attachment to Microsoft for analysis, perform the followi
 
    - **File**: Select **Browse files** to find and select the file to submit.
 
-   - **Why are you submitting the message to Microsoft?**: Select one of the following values:
+   - **Why are you submitting the message to Microsoft?**: Select one of the following options:
      - **It appears clean**: Select this value if you're unsure and you want a verdict from Microsoft, select **Submit**, and then go to Step 6.
-
-     or
 
      - **I've confirmed it's clean**: Select this value if you're sure that the item is clean, and then select **Next**.
 
    :::image type="content" source="media/admin-submission-file-allow.png" alt-text="Submit a false positive (good) email attachment to Microsoft for analysis on the Submissions page in the Defender portal." lightbox="media/admin-submission-file-allow.png":::
 
-5. On the second page of the **Submit to Microsoft for analysis** flyout that opens, do one of the following steps:
+5. On the second page of the **Submit to Microsoft for analysis** flyout that opens, select one of the following options:
    - Select **Submit**.
-
-   or
 
    - Select **Allow this file**: This option creates a allow entry for the file in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
 
@@ -385,7 +365,7 @@ After a few moments, the allow entry is available on the **Files** tab on the **
 
 ### Report good URLs to Microsoft
 
-For URLs reported as false positives, we allow subsequent messages that contain variations of the original URL. For example, you use the **Submissions** page to report the incorrectly blocked URL `www.contoso.com/abc`. If your organization later receives a message that contains the URL (for example but not limited to: `www.contoso.com/abc`, `www.contoso.com/abc?id=1`, `www.contoso.com/abc/def/gty/uyt?id=5`, or `www.contoso.com/abc/whatever`), the message won't be blocked based on the URL. In other words, you don't need to report multiple variations of the same URL as good to Microsoft.
+For URLs reported as false positives, we allow subsequent messages that contain variations of the original URL. For example, you use the **Submissions** page to report the incorrectly blocked URL `www.contoso.com/abc`. If your organization later receives a message that contains the URL (for example, but not limited to: `www.contoso.com/abc`, `www.contoso.com/abc?id=1`, `www.contoso.com/abc/def/gty/uyt?id=5`, or `www.contoso.com/abc/whatever`), the message won't be blocked based on the URL. In other words, you don't need to report multiple variations of the same URL as good to Microsoft.
 
 1. In the Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
@@ -399,19 +379,15 @@ For URLs reported as false positives, we allow subsequent messages that contain 
 
    - **URL**: Enter the full URL (for example, `https://www.fabrikam.com/marketing.html`), and then select it in the box that appears. You can also provide a top level domain (for example, `https://www.fabrikam.com/*`), and then select it in the box that appears. You can enter up to 50 URL at once.
 
-   - **Why are you submitting this URL to Microsoft?**: Select one of the following values:
+   - **Why are you submitting this URL to Microsoft?**: Select one of the following options:
      - **It appears clean**: Select this value if you're unsure and you want a verdict from Microsoft, select **Submit**, and then go to Step 6.
-
-     or
 
      - **I've confirmed it's clean**: Select this value if you're sure that the item is clean, and then select **Next**.
 
        :::image type="content" source="media/admin-submission-url-allow.png" alt-text="Submit a false positive (good) URL to Microsoft for analysis on the Submissions page in the Defender portal." lightbox="media/admin-submission-url-allow.png":::
 
-5. On the second page of the **Submit to Microsoft for analysis** flyout that opens, do one of the following steps:
+5. On the second page of the **Submit to Microsoft for analysis** flyout that opens, select one of the following options:
    - Select **Submit**.
-
-   or
 
    - Select **Allow this URL**: This option creates an allow entry for the URL in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
 
@@ -963,10 +939,10 @@ For email messages, admins can see what users are reporting on the **User report
   - [Supported non-Microsoft reporting tools](submissions-user-reported-messages-custom-mailbox.md#options-for-non-microsoft-reporting-tools)
 - **Teams messages**: [User reporting settings for Teams messages](submissions-teams.md#user-reporting-settings-for-teams-messages) is turned on.
 
-**Notes**:
-
-- User reported messages that are sent to Microsoft only or to Microsoft and the [reporting mailbox](submissions-user-reported-messages-custom-mailbox.md) appear on the **User reported** tab.
-- User reported messages that are sent only to the reporting mailbox appear on the **User reported** tab with the **Result** value **Not Submitted to Microsoft**. Admins should report these messages to Microsoft for analysis.
+> [!NOTE]
+>
+>- User-reported messages that are sent to Microsoft only or to Microsoft and the [reporting mailbox](submissions-user-reported-messages-custom-mailbox.md) appear on the **User reported** tab.
+>- User-reported messages that are sent only to the reporting mailbox appear on the **User reported** tab with the **Result** value **Not Submitted to Microsoft**. Admins should report these messages to Microsoft for analysis.
 
 In organizations with Microsoft Defender for Office 365 Plan 1 or Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5), admins can also see [user reported messages in Microsoft Teams](submissions-teams.md).
 
@@ -1191,11 +1167,9 @@ In the **Submit to Microsoft for analysis** flyout that opens, do the following 
 
     - **I've confirmed it's clean**: Select this value if you're sure that the item is clean, and then select **Next**.
 
-      On the next page of the flyout, do one of the following steps:
+      On the next page of the flyout, select one of the following options:
 
       - Select **Submit**, and then select **Done**.
-
-      or
 
       - Select **Allow this message**: This option creates an allow entry for the elements of the message in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
 
@@ -1220,11 +1194,9 @@ In the **Submit to Microsoft for analysis** flyout that opens, do the following 
 
       Select **Next**.
 
-      On the next page of the flyout, do one of the following steps:
+      On the next page of the flyout, select one of the following options:
 
       - Select **Submit**, and then select **Done**.
-
-      or
 
       - Select **Block all emails from this sender or domain**: This option creates a block entry for the sender domain or email address in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
 
@@ -1272,6 +1244,8 @@ For more information, see [A security administrator triggers an investigation fr
 
 After an admin submits a user reported message to Microsoft from the **User reported** tab, admins can use the :::image type="icon" source="media/defender-portal-icon-mark-and-notify.png" border="false"::: **Mark as and notify** action to mark the message with a verdict and send a templated notification message to the user who reported the message.
 
+When automatic notifications use the default notification template, users receive the notification in their preferred language based on their Outlook language settings. Custom notification templates configured by admins aren't affected.
+
 - Available verdicts for email messages:
   - **No threats found**
   - **Phishing**
@@ -1300,3 +1274,8 @@ In organizations with Microsoft Defender for Office 365 (add-on licenses or incl
 - :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take actions** (email messages only): This action starts the same Action wizard that's available on the Email entity page. For more information, see [Actions on the Email entity page](mdo-email-entity-page.md#actions-on-the-email-entity-page).
 
 - :::image type="icon" source="media/defender-portal-icon-view-alert.png" border="false"::: **View alert**. An alert is triggered when an admin submission is created or updated. Selecting this action takes you to the details of the alert.
+
+## Related content
+
+- [Admin review for user reported messages](submissions-admin-review-user-reported-messages.md)
+- [Report phishing and suspicious emails in Outlook for admins](submissions-outlook-report-messages.md)

@@ -4,12 +4,12 @@ description: Walk through the Getting Started Guide For Microsoft Sentinel ML No
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 
@@ -73,7 +73,7 @@ The **Getting Started Guide For Microsoft Sentinel ML Notebooks** notebook inclu
 |**Querying Data from Microsoft Sentinel**     | Helps you verify, configure, and test Microsoft Sentinel settings. Use the code in this section to authenticate to Microsoft Sentinel and run a sample query to test the connection.        |
 |**Configure and test external data providers (VirusTotal and Maxmind GeoLite2)**     | Helps you configure settings for VirusTotal, as a sample threat intelligence service, and MaxMind GeoLite2, as a sample geo-location lookup service. Use the code in this section to run sample queries against these data providers to test the provider connections.|
 
-The code in the **Getting Started Guide For Microsoft Sentinel ML Notebooks** launches the **MpConfigEdit** tool, which has series of tabs for configuring your notebook environment. As you make changes in the **MpConfigEdit** tool, make sure to save your changes before proceeding to the next tab. Settings for the notebook are stored in the **msticpyconfig.yaml** file, which is automatically populated with initial details for your workspace. 
+The code in the **Getting Started Guide For Microsoft Sentinel ML Notebooks** launches a tabbed configuration tool called **MpConfigEdit**, which you use to configure your notebook environment. As you make changes in the **MpConfigEdit** tool, make sure to save your changes before proceeding to the next tab. Settings for the notebook are stored in the **msticpyconfig.yaml** file, which is automatically populated with initial details for your workspace. 
 
 Make sure to read through the markdown cells carefully so that you understand the notebook configuration process completely, including each of the settings and the **msticpyconfig.yaml** file. Next steps, extra resources, and frequently asked questions from the [Azure Sentinel Notebooks wiki](https://github.com/Azure/Azure-Sentinel-Notebooks/wiki/) are linked from the end of the notebook.
 

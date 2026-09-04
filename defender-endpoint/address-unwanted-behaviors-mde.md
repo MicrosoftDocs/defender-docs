@@ -3,14 +3,14 @@ title: Address unwanted behaviors in Microsoft Defender for Endpoint
 description: Use exclusions, indicators, and other techniques to address false positives, performance issues, and app incompatibilities in Microsoft Defender for Endpoint.
 author: limwainstein
 ms.author: lwainstein
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
 ms.reviewer: joshbregman
 ms.custom:
-- msecd-doc-authoring-1014
+- msecd-doc-authoring-1016
 - partner-contribution
 - msecd-doc-authoring-1012
 ms.collection:
@@ -44,7 +44,7 @@ At a high level, the process for addressing an unwanted behavior in Defender for
    | The [Microsoft Defender portal](https://security.microsoft.com) | To help identify what's happening, take one or more of the following actions: <br/>- [Investigate alerts](alerts-queue.md) <br/>- [Use advanced hunting](/defender-xdr/advanced-hunting-overview) <br/>- [View reports](threat-protection-reports.md) |
    | On the device | To identify the issue, take one or more of the following steps: <br/>- [Use performance analyzer tools](tune-performance-defender-antivirus.md) <br/>- [Review event logs and error codes](troubleshoot-microsoft-defender-antivirus.yml) <br/>- [Check your protection history](microsoft-defender-security-center-antivirus.md) |
 
-2. Depending on your findings from the previous step, you might take one or more of the following actions:
+2. Depending on your findings about which capability is causing the unwanted behavior, you might take one or more of the following actions:
 
    - [Suppress alerts in the Microsoft Defender portal](manage-suppression-rules.md)
    - [Define custom remediation actions](configure-remediation-microsoft-defender-antivirus.md)
@@ -122,25 +122,25 @@ In this scenario, a third-party app that isn't a threat is detected and identifi
 
 In this scenario, a legitimate app is detected and identified as malicious by an [attack surface reduction (ASR) rule](attack-surface-reduction-rules-overview.md) in Microsoft Defender Antivirus. The ASR rule [Block JavaScript or VBScript from launching downloaded executable content](attack-surface-reduction-rules-reference.md#block-javascript-or-vbscript-from-launching-downloaded-executable-content) blocks any downloaded content when the user tries to use the app.
 
-For the available methods to see ASR rule detections in Defender for Endpoint, see [Monitor attack surface reduction (ASR) rule activity](attack-surface-reduction-rules-monitor.md).
+To learn how to view ASR rule detections in Defender for Endpoint, see [Monitor attack surface reduction (ASR) rule activity](attack-surface-reduction-rules-monitor.md).
 
 **How to address**:
 
 Use the **Attack surface reduction rules** report to see the detections, affected devices, and affected files. In particular, you can download the full file and path information for the affected files to exclude from the ASR rule on the [Add exclusions tab](attack-surface-reduction-rules-report.md#manage-exclusions-on-the-add-exclusions-tab) of the report.
 
-For the available methods to configure ASR rule exclusions, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
+To learn how to configure ASR rule exclusions, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
 
 ### Word templates that contain macros that launch other apps are blocked
 
 In this scenario, the ASR rule [Block Win32 API calls from Office macros](attack-surface-reduction-rules-reference.md#block-win32-api-calls-from-office-macros) blocks Microsoft Word when a user opens documents created from Microsoft Word templates that contain macros, and those macros launch other applications.
 
-For the available methods to see ASR rule detections in Defender for Endpoint, see [Monitor attack surface reduction (ASR) rule activity](attack-surface-reduction-rules-monitor.md).
+To learn how to view ASR rule detections in Defender for Endpoint, see [Monitor attack surface reduction (ASR) rule activity](attack-surface-reduction-rules-monitor.md).
 
 **How to address**:
 
 Use the **Attack surface reduction rules** report to see the detections, affected devices, and affected files. In particular, you can download the full file and path information for the affected files to exclude from the ASR rule on the [Add exclusions tab](attack-surface-reduction-rules-report.md#manage-exclusions-on-the-add-exclusions-tab) of the report.
 
-For the available methods to configure ASR rule exclusions, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
+To learn how to configure ASR rule exclusions, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
 
 ## See also
 

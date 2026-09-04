@@ -6,12 +6,12 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 
@@ -24,6 +24,7 @@ ai-usage: ai-assisted
 Watchlists in Microsoft Sentinel help you correlate data from a data source you provide with the events in your Microsoft Sentinel environment. For example, you might create a watchlist with a list of high value assets, terminated employees, or service accounts in your environment.
 
 You can create a watchlist by using any of the following methods:
+
 - [Upload a watchlist file from a local folder](#upload-a-watchlist-from-a-local-folder)
 - [Upload a watchlist file from your Azure Storage account](#create-a-large-watchlist-from-file-in-azure-storage-preview)
 - [Create a watchlist manually](#create-a-watchlist-manually-preview)
@@ -120,14 +121,14 @@ To upload a large watchlist file to your Azure Storage account, use AzCopy or th
 
 Upload files and directories to Blob storage by using the AzCopy v10 command-line utility. To learn more, see [Upload files to Azure Blob storage by using AzCopy](/azure/storage/common/storage-use-azcopy-blobs-upload).
 
-1. If you don't already have a storage container, create the destination blob container by running the following command.
+1. If you don't already have a storage container, create the destination blob container in your storage account to hold the watchlist file. Run the following command.
 
    ```azcopy
    azcopy make 
    https://<storage-account-name>.<blob or dfs>.core.windows.net/<container-name>
    ```
 
-1. Upload the local watchlist CSV file to the blob container by running the following command.
+1. Upload the local watchlist CSV file to the blob container so it can be referenced by a SAS URL. Run the following command.
 
    ```azcopy
    azcopy copy '<local-file-path>' 'https://<storage-account-name>.<blob or dfs>.core.windows.net/<container-name>/<blob-name>'
@@ -135,7 +136,7 @@ Upload files and directories to Blob storage by using the AzCopy v10 command-lin
 
 #### Upload your file in Azure portal
 
-If you don't use AzCopy, upload your file by using the Azure portal. Go to your storage account in Azure portal to upload the CSV file with your watchlist data.
+If you don't use AzCopy, upload your watchlist CSV file by using the Azure portal. Go to your storage account in Azure portal to upload the CSV file with your watchlist data.
 
 1. If you don't already have an existing storage container, [create a container](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container). For the level of public access to the container, use the default which is set to **Private (no anonymous access)**.
 1. [Upload a block blob](/azure/storage/blobs/storage-quickstart-blobs-portal#upload-a-block-blob) to upload your CSV file to the storage account.
@@ -163,6 +164,8 @@ Before you use a SAS URI, add the Azure portal to the Cross-Origin Resource Shar
 For more information, see [CORS support for Azure Storage](/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services).
 
 ### Step 4: Add the watchlist to a workspace
+
+To add the watchlist from Azure Storage to your Microsoft Sentinel workspace, complete the following steps:
 
 1. In the [Defender portal](https://security.microsoft.com/), go to **Microsoft Sentinel** > **Configuration** > **Watchlist**.
 
@@ -256,10 +259,8 @@ If you delete and recreate a watchlist, you might see both the deleted and recre
 
 ## Related content
 
-For more information about watchlists and Microsoft Sentinel, see:
-
-- Learn how to [get visibility into your data and potential threats](get-visibility.md)
-- Get started [detecting threats with Microsoft Sentinel](./detect-threats-built-in.md)
-- [Use workbooks](monitor-your-data.md) to monitor your data.
-- [Manage watchlists](watchlists-manage.md)
-- [Build queries and detection rules with watchlists](watchlists-queries.md)
+- [Visualize collected data on the Microsoft Sentinel Overview page](get-visibility.md)
+- [Threat detection in Microsoft Sentinel](detect-threats-built-in.md)
+- [Visualize and monitor your data by using workbooks in Microsoft Sentinel](monitor-your-data.md)
+- [Manage watchlists in Microsoft Sentinel](watchlists-manage.md)
+- [Build queries or detection rules with watchlists in Microsoft Sentinel](watchlists-queries.md)

@@ -1,7 +1,7 @@
 ---
-title: Evaluate Microsoft Defender Antivirus and Exploit Guard with Endpoint security policies
+title: Evaluate Microsoft Defender Antivirus with security policies
 ms.reviewer: yongrhee
-description: Configure, activate, and test Microsoft Defender Antivirus protection features using Endpoint security policies in Security Settings Management on Windows 10, Windows 11, and Windows Server.
+description: Learn how to evaluate Microsoft Defender Antivirus protection settings on Windows devices by using endpoint security policies in the Microsoft Defender portal.
 ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
@@ -11,222 +11,196 @@ ms.collection:
 - tier2
 ms.topic: how-to
 ms.subservice: edr
-ms.date: 07/02/2026
+ms.date: 09/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1016
+ms.custom: msecd-doc-authoring-1015
+#customer intent: As a security administrator, I want to configure and evaluate Microsoft Defender Antivirus protection settings on test devices so that I can assess their effect before deployment.
 ---
 
-# Evaluate Microsoft Defender Antivirus by using Microsoft Defender for Endpoint security settings management
+# Evaluate Microsoft Defender Antivirus with endpoint security policies
 
-This article explains how to use [Microsoft Defender for Endpoint Security Settings Management (Endpoint security policies)](/intune/intune-service/protect/mde-security-integration) to configure, activate, and test key protection features in Microsoft Defender Antivirus (MDAV) and Microsoft Defender Exploit Guard (Microsoft Defender EG). The features covered include real-time protection, cloud-delivered protection, network protection, attack surface reduction (ASR) rules, and tamper protection.
+Use endpoint security policies in the Microsoft Defender portal to configure and test Microsoft Defender Antivirus and Windows protection features. The evaluation includes real-time protection, cloud-delivered protection, network protection, attack surface reduction (ASR) rules, and tamper protection.
 
-These procedures require Windows 10 or later, or Windows Server 2016 or later, and devices must be onboarded to Microsoft Defender for Endpoint.
+## Prerequisites
 
-If you have any questions about a detection that MDAV makes, or you discover a missed detection, you can submit a file to us at our [sample submission help site](/unified-secops-platform/submission-guide).
+Before you begin, make sure you have:
+
+- Windows 10 or later, or Windows Server 2016 or later.
+- Devices onboarded to Microsoft Defender for Endpoint and managed through [Defender for Endpoint security settings management](/intune/intune-service/protect/mde-security-integration). The devices don't need to be enrolled in Microsoft Intune.
+- The licenses, permissions, and setup described in [Prerequisites for managing endpoint security policies](endpoint-security-policies-configure.md#prerequisites).
 
 <a name="use-microsoft-defender-endpoint-security-settings-management-endpoint-security-policies-to-enable-the-features"></a>
-## Use Endpoint security policies to evaluate Microsoft Defender Antivirus features
 
-The following guidance describes the [Microsoft Defender for Endpoint Security Settings Management (Endpoint security policies)](/intune/intune-service/protect/mde-security-integration) settings that configure the Microsoft Defender Antivirus protection features you should use during your evaluation.
+## Configure evaluation policies
 
-MDAV indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also review detections in the MDAV app. To review scan results in the MDAV app, see [Review Microsoft Defender Antivirus scan results](review-scan-results-microsoft-defender-antivirus.md).
+Create separate endpoint security policies for Microsoft Defender Antivirus settings, ASR rules, and tamper protection. For the complete steps to create, assign, save, edit, and verify policies, see [Create an endpoint security policy](endpoint-security-policies-configure.md#create-an-endpoint-security-policy) and [Edit an endpoint security policy](endpoint-security-policies-configure.md#edit-an-endpoint-security-policy).
+
+Microsoft Defender Antivirus indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also [review Microsoft Defender Antivirus scan results](review-scan-results-microsoft-defender-antivirus.md).
 
 The Windows event log also records detection and engine events. For a list of event IDs and their corresponding actions, see [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](troubleshoot-microsoft-defender-antivirus.yml).
 
-To configure the options that you must use to test the protection features, do the following steps:
+### Configure Microsoft Defender Antivirus settings
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Endpoints** \> **Configuration management** \> **Endpoint security policies**. Or, to go directly to the **Endpoint security policies** page, use <https://security.microsoft.com/policy-inventory> Windows policies.
-1. On the **Endpoint security policies** page, verify the **Windows policies** tab is selected, and then select **Create new policy**
-1. On the **Create a new policy flyout** that opens, configure the following settings:
-   - **Select a platform**: Select **Windows**.
-   - **Select template**: Select **Microsoft Defender Antivirus**.
+To configure the antivirus evaluation settings, use a **Microsoft Defender Antivirus** policy.
 
-   Select **Create policy**.
+When you create the policy on the **Windows policies** tab of the **Endpoint security policies** page in the Defender portal at <https://security.microsoft.com/policy-inventory?osPlatform=Windows>, use these specific settings:
 
-1. The create a new policy wizard opens. On the **Basics** page, configure the following settings:
-   - **Name**: Enter a unique name for the policy.
-   - **Description**: Enter an optional description.
+- **Select platform**: Select **Windows**.
+- **Select template**: Select **Microsoft Defender Antivirus**.
 
-   Select **Next**
+When you create or modify the policy, configure the following evaluation settings on the **Configuration settings** tab:
 
-1. On the **Configuration settings** page, configure the settings in the **Defender** section as described in the following tables:
+- **Real-time Protection**:
 
-   - **Real-time Protection**:
+  |Setting|Value|
+  |---|---|
+  |Allow Realtime Monitoring|Allowed. Turns on and runs the real-time monitoring service (default).|
+  |Real Time Scan Direction|Monitor all files (bi-directional) (default).|
+  |Allow Behavior Monitoring|Allowed. Turns on real-time behavior monitoring (default).|
+  |Allow On Access Protection|Allowed (default).|
+  |PUA Protection|PUA Protection on. Detected items are blocked. They appear in history along with other threats.|
 
-     |Setting|Value|
-     |---|---|
-     |Allow Realtime Monitoring|Allowed. Turns on and runs the real-time monitoring service. (Default)|
-     |Real Time Scan Direction|Monitor all files (bi-directional). (Default)|
-     |Allow Behavior Monitoring|Allowed. Turns on real-time behavior monitoring (Default).|
-     |Allow On Access Protection|Allowed. (Default)|
-     |PUA Protection|PUA Protection on. Detected items are blocked. They will show in history along with other threats.|
+- **Cloud protection features**:
 
-   - **Cloud protection features**:
+  |Setting|Value|
+  |---|---|
+  |Allow Cloud Protection|Allowed. Turns on cloud protection (default).|
+  |Cloud Block Level|High|
+  |Cloud Extended Timeout|Configured, 50|
+  |Submit Samples Consent|Send all samples automatically|
 
-     |Setting|Value|
-     |---|---|
-     |Allow Cloud Protection|Allowed. Turns on Cloud Protection. (Default)|
-     |Cloud Block Level|High|
-     |Cloud Extended Time-out|Configured, 50|
-     |Submit Samples Consent|Send all samples automatically|
+  Standard security intelligence updates can take hours to prepare and deliver. Microsoft cloud-delivered protection can deliver updated protection against emerging threats in seconds. For more information, see [Use next-gen technologies in Microsoft Defender Antivirus through cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md).
 
-     Standard security intelligence updates can take hours to prepare and deliver. Our cloud-delivered protection service can deliver updated protection against emerging threats in seconds. For more information, see [Use next-gen technologies in Microsoft Defender Antivirus through cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md).
+- **Scans**:
 
-   - **Scans**:
+  |Setting|Value|
+  |---|---|
+  |Allow Email Scanning|Allowed. Turns on email scanning.|
+  |Allow scanning of all downloaded files and attachments|Allowed (default).|
+  |Allow Script Scanning|Allowed (default).|
+  |Allow Archive Scanning|Allowed. Scans archive files (default).|
+  |Allow Scanning Network Files|Allowed. Scans network files (default).|
+  |Allow Full Scan Removable Drive Scanning|Allowed. Scans removable drives.|
 
-     |Setting|Value|
-     |---|---|
-     |Allow Email Scanning|Allowed. Turns on email scanning.|
-     |Allow scanning of all downloaded files and attachments|Allowed. (Default)|
-     |Allow Script Scanning|Allowed. (Default)|
-     |Allow Archive Scanning|Allowed. Scans the archive files. (Default)|
-     |Allow Scanning Network Files|Allowed. Scans network files. (Default)|
-     |Allow Full Scan Removable Drive Scanning|Allowed. Scans removable drives.|
+- **Network Protection**:
 
-   - **Network Protection**:
+  |Setting|Value|
+  |---|---|
+  |Enable Network Protection|Enabled (block mode)|
+  |Allow Network Protection Down Level|Network protection will be enabled downlevel.|
+  |Allow Datagram Processing On Win Server|Datagram processing on Windows Server is disabled (default).|
+  |Disable DNS over TCP parsing|DNS over TCP parsing is enabled (default).|
+  |Disable HTTP parsing|HTTP parsing is enabled (default).|
+  |Disable SSH parsing|SSH parsing is enabled (default).|
+  |Disable TLS parsing|TLS parsing is enabled (default).|
 
-     |Setting|Value|
-     |---|---|
-     |Enable Network Protection|Enabled (block mode)|
-     |Allow Network Protection Down Level|Network protection will be enabled downlevel.|
-     |Allow Datagram Processing On Win Server|Datagram processing on Windows Server is enabled.|
-     |Disable DNS over TCP parsing|DNS over TCP parsing is enabled (Default)|
-     |Disable HTTP parsing|HTTP parsing is enabled (Default)|
-     |Disable SSH parsing|SSH parsing is enabled (Default)|
-     |Disable TLS parsing|parsing is enabled (Default)|
+  > [!NOTE]
+  > Keep **Allow Datagram Processing On Win Server** disabled on server roles with high UDP traffic. Enabling this setting can affect network performance and reliability. For more information, see [Configure network protection in Microsoft Defender Antivirus](enable-network-protection.md).
 
-   - **Security Intelligence updates**:
+- **Security Intelligence updates**:
 
-     |Setting|Value|
-     |---|---|
-     |Signature Update Interval|Configured, 4|
-     |Signature Update Fallback Order|<ol><li>Select **Add** for as many fallback sources as you want to specify.</li><li>Enter one of the following values in each box in the order you want: <ul><li>`InternalDefinitionUpdateServer`: Your own WSUS server with Microsoft Defender Antivirus updates allowed.</li><li>`MicrosoftUpdateServer`: Microsoft Update.</li><li>`MMPC`: `https://www.microsoft.com/wdsi/definitions`</li></ul></li></ol> </br> To remove a fallback source (populated or empty), select the check box next to the box, and then select **Remove**.|
+  |Setting|Value|
+  |---|---|
+  |Signature Update Interval|Configured, 4|
+  |Signature Update Fallback Order|<ol><li>Select **Add** for as many fallback sources as you want to specify.</li><li>Enter one of the following values in each box in the order you want: <ul><li>`InternalDefinitionUpdateServer`: Your own WSUS server with Microsoft Defender Antivirus updates allowed.</li><li>`MicrosoftUpdateServer`: Microsoft Update.</li><li>`MMPC`: `https://www.microsoft.com/wdsi/definitions`</li></ul></li></ol><br/>To remove a fallback source (populated or empty), select the check box next to the box, and then select **Remove**.|
 
-   - **Local administrator AV**:
+- **Local administrator AV**:
 
-     Disable local administrator AV settings such as exclusions, and set the policies from the Microsoft Defender for Endpoint Security Settings Management as described in the following table:
+  Prevent local administrators from changing Microsoft Defender Antivirus settings such as exclusions. Manage the settings through Defender for Endpoint security settings management.
 
-     |Setting|Value|
-     |---|---|
-     |Disable Local Admin Merge|Disable Local Admin Merge|
+  |Setting|Value|
+  |---|---|
+  |Disable Local Admin Merge|Disable Local Admin Merge|
 
-   - **Threat severity default action**:
+- **Threat severity default action**:
 
-     |Setting|Value|
-     |---|---|
-     |Remediation action for High severity threats|Quarantine. Move files to quarantine.|
-     |Remediation action for Severe threats|Quarantine. Move files to quarantine.|
-     |Remediation action for Low severity threats|Quarantine. Move files to quarantine.|
-     |Remediation action for Moderate severity threats|Quarantine. Move files to quarantine.|
+  |Setting|Value|
+  |---|---|
+  |Remediation action for High severity threats|Quarantine. Move files to quarantine.|
+  |Remediation action for Severe threats|Quarantine. Move files to quarantine.|
+  |Remediation action for Low severity threats|Quarantine. Move files to quarantine.|
+  |Remediation action for Moderate severity threats|Quarantine. Move files to quarantine.|
 
-   - **Quarantine options**
+- **Quarantine options**:
 
-     |Setting|Value|
-     |---|---|
-     |Days to Retain Cleaned Malware|Configured, 60|
-     |Allow User UI Access|Allowed. Let users access UI. (Default)|
+  |Setting|Value|
+  |---|---|
+  |Days to Retain Cleaned Malware|Configured, 60|
+  |Allow User UI Access|Allowed. Lets users access the UI (default).|
 
-   When you're finished on the **Configuration settings** page, select **Next**.
+<a name="attack-surface-reduction-rules"></a>
 
-1. On the **Assignments** page, click in the box and select from the following values:
-   - **All users** or **All devices**.
-   - When you find and select one or more available groups, you can use the **Target type** value on the group entry to to **Include** or **Exclude** the group members.
+### Configure attack surface reduction rules
 
-   When you're finished on the **Assignments** page, select **Next**.
+To configure the ASR rule evaluation settings, use an **Attack Surface Reduction Rules** policy. For more information about ASR rules, see [ASR rules](attack-surface-reduction-rules-overview.md#asr-rules).
 
-1. On the **Review + create** page, review your settings. Select **Back** or select the page name to make changes.
+For information about the available rule actions, see [Modes for ASR rules](attack-surface-reduction-rules-overview.md#modes-for-asr-rules).
 
-   When you're finished on the **Review + create** page, select **Save**.
+When you create the policy on the **Windows policies** tab of the **Endpoint security policies** page in the Defender portal at <https://security.microsoft.com/policy-inventory?osPlatform=Windows>, use these specific settings:
 
-When the policy creation is complete, you're taken to the details page of the new policy.
+- **Select platform**: Select **Windows**.
+- **Select template**: Select **Attack Surface Reduction Rules**.
 
-Select **Endpoint security policies** at the top of the page to return to the **Endpoint security policies** page where the new policy is listed with the **Policy type** value **Microsoft Defender Antivirus**.
+When you create or modify the policy, configure the following evaluation settings on the **Configuration settings** tab:
 
-### Attack surface reduction rules
-
-To enable attack surface reduction (ASR) rules using the endpoint security policies, do the following steps:
-
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Endpoints** \> **Configuration management** \> **Endpoint security policies**. Or, to go directly to the **Endpoint security policies** page, use <https://security.microsoft.com/policy-inventory> Windows policies.
-1. On the **Endpoint security policies** page, verify the **Windows policies** tab is selected, and then select **Create new policy**
-1. On the **Create a new policy flyout** that opens, configure the following settings:
-   - **Select a platform**: Select **Windows**.
-   - **Select template**: Select **Attack Surface Reduction Rules**.
-
-   Select **Create policy**.
-
-1. The create a new policy wizard opens. On the **Basics** page, configure the following settings:
-   - **Name**: Enter a unique name for the policy.
-   - **Description**: Enter an optional description.
-
-   Select **Next**
-
-1. On the **Configuration settings** page, configure the settings based on the following recommendations:
-
-   |Setting|Value|
-   |---|---|
-   |Block executable content from email client and webmail|Block|
-   |Block Adobe Reader from creating child processes|Block|
-   |Block execution of potentially obfuscated scripts|Block|
-   |Block abuse of exploited vulnerable signed drivers (Device)|Block|
-   |Block Win32 API calls from Office macros|Block|
-   |Block executable files from running unless they meet a prevalence, age, or trusted list criterion|Block|
-   |Block Office communication application from creating child processes|Block|
-   |Block all Office applications from creating child processes|Block|
-   |Block use of copied or impersonated system tools|Block|
-   |Block JavaScript or VBScript from launching downloaded executable content|Block|
-   |Block credential stealing from the Windows local security authority subsystem|Block|
-   |Block Webshell creation for Servers|Block|
-   |Block Office applications from creating executable content|Block|
-   |Block untrusted and unsigned processes that run from USB|Block|
-   |Block Office applications from injecting code into other processes|Block|
-   |Block persistence through WMI event subscription|Block|
-   |Use advanced protection against ransomware|Block|
-   |Block process creations originating from PSExec and WMI commands|Block (If you have Configuration Manager (formerly SCCM), or other management tools that use WMI you might need to set this to **Audit** instead of **Block**)|
-   |Block rebooting machine in Safe Mode|Block|
-   |Enable Controlled Folder Access|Enabled|
+|Setting|Value|
+|---|---|
+|Block executable content from email client and webmail|Audit|
+|Block Adobe Reader from creating child processes|Audit|
+|Block execution of potentially obfuscated scripts|Audit|
+|Block abuse of exploited vulnerable signed drivers (Device)|Audit|
+|Block Win32 API calls from Office macros|Audit|
+|Block executable files from running unless they meet a prevalence, age, or trusted list criterion|Audit|
+|Block Office communication application from creating child processes|Audit|
+|Block all Office applications from creating child processes|Audit|
+|Block use of copied or impersonated system tools|Audit|
+|Block JavaScript or VBScript from launching downloaded executable content|Audit|
+|Block credential stealing from the Windows local security authority subsystem|Audit|
+|Block Webshell creation for Servers|Audit|
+|Block Office applications from creating executable content|Audit|
+|Block untrusted and unsigned processes that run from USB|Audit|
+|Block Office applications from injecting code into other processes|Audit|
+|Block persistence through WMI event subscription|Audit|
+|Use advanced protection against ransomware|Audit|
+|Block process creations originating from PSExec and WMI commands|Audit|
+|Block rebooting machine in Safe Mode|Audit|
+|Enable Controlled Folder Access|Audit Mode|
 
 > [!TIP]
-> If a rule blocks behavior that is acceptable in your organization, add the per-rule exclusions named "Attack Surface Reduction Only Exclusions." Additionally, change the rule from **Enabled** to **Audit** to prevent unwanted blocks.
+> If audit events identify behavior that's acceptable in your organization, add an **Attack Surface Reduction Only Exclusions** per-rule exclusion. For more information, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
+>
+> Review the audit events before you enable ASR rules or controlled folder access in block mode. For more information, see [Test your ASR rules deployment](attack-surface-reduction-rules-deployment-test.md).
 
-1. On the **Assignments** page, click in the box and select from the following values:
-   - **All users** or **All devices**.
-   - When you find and select one or more available groups, you can use the **Target type** value on the group entry to to **Include** or **Exclude** the group members.
+<a name="enable-tamper-protection"></a>
 
-   When you're finished on the **Assignments** page, select **Next**.
+### Configure tamper protection
 
-1. On the **Review + create** page, review your settings. Select **Back** or select the page name to make changes.
+To configure tamper protection, use a **Windows Security Experience** policy.
 
-   When you're finished on the **Review + create** page, select **Save**.
+When you create the policy on the **Windows policies** tab of the **Endpoint security policies** page in the Defender portal at <https://security.microsoft.com/policy-inventory?osPlatform=Windows>, use these specific settings:
 
-When the policy creation is complete, you're taken to the details page of the new policy.
+- **Select platform**: Select **Windows**.
+- **Select template**: Select **Windows Security Experience**.
 
-Select **Endpoint security policies** at the top of the page to return to the **Endpoint security policies** page where the new policy is listed with the **Policy type** value **Attack surface reduction rules**.
+When you create or modify the policy, use this specific setting on the **Configuration settings** tab:
 
-#### Enable Tamper Protection
+|Setting|Value|
+|---|---|
+|Tamper Protection (Device)|Tamper Protection (On)|
 
-To enable Tamper Protection by using endpoint security policies, complete the following steps:
+## Validate Microsoft Defender Antivirus protection
 
-1. Sign in to [Microsoft Defender XDR](https://sip.security.microsoft.com/).
-1. Go to **Endpoints > Configuration management > Endpoint security policies > Windows policies > Create new policy**.
-1. Select **Windows 10, Windows 11, and Windows Server** from the **Select Platform** drop-down list.
-1. Select **Security Experience** from the **Select Template** drop-down list.
-1. Select **Create policy**. The **Create a new policy** page appears.
-1. On the **Basics** page, enter a name and description for the profile in the **Name** and **Description** fields, respectively.
-1. Select **Next**.
-1. On the **Configuration settings** page, expand the groups of settings, and then select the settings that you want to manage with this profile.
-1. Set the policies for the chosen groups of settings by configuring them as described in the following table:
+Use the following procedures to verify cloud connectivity and update versions on the evaluation devices.
 
-   |Description|Setting|
-   |---|---|
-   |TamperProtection (Device)|On|
+<a name="check-the-cloud-protection-network-connectivity"></a>
 
-#### Check the Cloud Protection network connectivity
+### Check cloud protection network connectivity
 
-Cloud Protection (also known as the Microsoft Active Protection Service, or MAPS) is a feature of Microsoft Defender Antivirus that uses cloud-based machine learning and analysis to provide faster threat detection. The device must be able to reach the cloud protection service over the network for this feature to work correctly.
+Cloud protection uses cloud-based machine learning and analysis to provide faster threat detection. The device must be able to reach Microsoft cloud-delivered protection for this feature to work correctly.
 
-Verify that Cloud Protection network connectivity is working during your penetration testing.
+The following procedure applies to Windows 10 or later and Windows Server 2019 or later.
 
-**Prerequisite:** Open Command Prompt as an administrator (select **Run as administrator**) before running the following commands.
+Run the following commands in an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**):
 
 > [!TIP]
 > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
@@ -239,43 +213,43 @@ MpCmdRun.exe -ValidateMapsConnection
 
 For more information, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
 
-#### Check the platform update version
+### Check the platform update version
 
-The latest "Platform Update" version Production channel (GA) is available in [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623+update).
-
-To check which "Platform Update" version you have installed, run the following command in PowerShell using the privileges of an administrator:
+Run the following command in an elevated PowerShell session to display the Microsoft Defender Antivirus platform version installed on the device:
 
 ```powershell
 Get-MPComputerStatus | Format-Table AMProductVersion
 ```
 
-#### Check the Security Intelligence Update version
+Compare the output with the latest production channel version in the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623).
 
-The latest "Security Intelligence Update" version is available in [Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware - Microsoft Security Intelligence](https://www.microsoft.com/wdsi/defenderupdates).
+### Check the security intelligence update version
 
-To check which "Security Intelligence Update" version you have installed, run the following command in PowerShell using the privileges of an administrator:
+Run the following command in an elevated PowerShell session to display the security intelligence version installed on the device:
 
 ```powershell
 Get-MPComputerStatus | Format-Table AntivirusSignatureVersion
 ```
 
-#### Check the Engine Update version
+Compare the output with the **Security intelligence update** version on the [Microsoft Defender Antivirus security intelligence and product updates](https://www.microsoft.com/wdsi/defenderupdates) page.
 
-The latest scan "engine update" version is available in [Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware - Microsoft Security Intelligence](https://www.microsoft.com/wdsi/defenderupdates).
+### Check the engine update version
 
-To check which "Engine Update" version you have installed, run the following command in PowerShell using the privileges of an administrator:
+Run the following command in an elevated PowerShell session to display the Microsoft Defender Antivirus engine version installed on the device:
 
 ```powershell
 Get-MPComputerStatus | Format-Table AMEngineVersion
 ```
 
+Compare the output with the **Engine version** on the [Microsoft Defender Antivirus security intelligence and product updates](https://www.microsoft.com/wdsi/defenderupdates) page.
+
 If you find that your settings aren't taking effect, you might have a conflict. For information on how to resolve conflicts, see [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
 
-#### For False Negatives (FNs) submissions
+<a name="for-false-negatives-fns-submissions"></a>
 
-A false negative (FN) occurs when Microsoft Defender Antivirus doesn't detect a file or activity that is actually malicious. If you encounter a missed detection during your evaluation, submit the undetected file to Microsoft for analysis so that protection can be updated.
+## Submit missed detections
 
-For information on how to make FN submissions, see:
+If Microsoft Defender Antivirus doesn't detect a malicious file or activity during your evaluation, submit the undetected file to Microsoft for analysis:
 
-- [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md) if you have Microsoft Defender, Microsoft Defender for Endpoint P2/P1, or Microsoft Defender for Business.
-- [Submit files for analysis](/unified-secops-platform/submission-guide) if you have Microsoft Defender Antivirus.
+- For Microsoft Defender for Endpoint Plan 1, Plan 2, or Microsoft Defender for Business, see [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md).
+- For Microsoft Defender Antivirus, see [Submit files for analysis](/unified-secops-platform/submission-guide).

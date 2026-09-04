@@ -3,10 +3,10 @@ title: Migrate from sensor v2.x to sensor v3.x
 description: Learn how to migrate from the Defender for Identity sensor v2.x to the sensor v3.x with no downtime using the Sensors page in the Microsoft Defender portal.
 author: AbbyMSFT
 ms.author: abbyweisberg
-ms.date: 07/15/2026
+ms.date: 09/01/2026
 ms.topic: how-to
 ms.service: microsoft-defender-for-identity
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 #customer intent: As a security admin, I want to migrate my Defender for Identity sensors from v2.x to v3.x so that I can use the latest sensor without downtime or data loss.
@@ -16,13 +16,16 @@ ai-usage: ai-assisted
 
 You can migrate your Defender for Identity sensors from v2.x to v3.x directly from the Microsoft Defender portal. The migration automatically completes the switchover and maintains your server configurations and security monitoring, with no downtime or data duplication.
 
-Before migrating, review the [sensor version limitations](deploy-sensor-v3.md#sensor-version-limitations), including that v3.x doesn't support VPN integration or syslog notifications.
+Before migrating, review the [prerequisites](#prerequisites) and [sensor version limitations](deploy-sensor-v3.md#sensor-version-limitations), including that v3.x doesn't support VPN integration or syslog notifications.
 
 ## Prerequisites
 
+> [!NOTE]
+> Migration isn't currently supported for AD FS, AD CS, or Microsoft Entra Connect servers that aren't domain controllers. Support will be added in a future update.
+
 To migrate, each server must meet the following requirements:
 
-- Domain controller without additional identity roles
+- Domain controller, including a domain controller that also runs AD FS, AD CS, or Microsoft Entra Connect
 - Defender for Identity sensor v2.x (version 2.254.19112.470 or later)
 - Windows Server 2019 or later
 - Microsoft Defender for Endpoint deployed, with the July 2026 or later Windows Server cumulative update installed.
@@ -40,7 +43,8 @@ Servers that meet all prerequisites appear as **Ready for migration** on the **S
 > [!NOTE]
 > The migration typically takes up to 20 minutes. During this time, the v2.x sensor continues to run until the v3.x sensor is ready, so your server stays protected without interruption.
 
-### Migration states
+<a name="migration-states"></a>
+### Understand migration states
 
 The **Migration state** column on the **Sensors** page shows the current status of each server:
 
@@ -56,25 +60,30 @@ The **Migration state** column on the **Sensors** page shows the current status 
 
 For optimal protection and monitoring, complete the configuration steps described in [Defender for Identity sensor v3.x prerequisites](deploy-sensor-v3.md), including:
 
-- [Configure RPC auditing](deploy-sensor-v3.md#configure-rpc-auditing).
 - [Configure automatic Windows event auditing](deploy-sensor-v3.md#configure-windows-event-auditing). Existing auditing configurations from the v2.x sensor are preserved and converted for v3.x, but we recommend [enabling automatic Windows event auditing](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically) for optimal configuration validation.
 - [Switch action accounts from gMSA to local system](deploy-sensor-v3.md#service-account-requirements). The v3.x sensor uses the local system identity for response actions. If you had a gMSA configured for [action accounts](manage-action-accounts.md), select **Automatically use the sensor's local system account** in the Microsoft Defender portal. If gMSA remains enabled for action accounts, response actions (including attack disruption) won't work.
 - [Understand DSA and gMSA health alerts in environments with both v2 and v3 sensors](deploy-sensor-v3.md#dsa-and-gmsa-health-alerts-in-environments-with-both-v2-and-v3-sensors). If your workspace still has a Directory Service Account (DSA) or group Managed Service Account (gMSA) configured for v2 sensors, DSA and gMSA credentials continue to be validated on all sensors, including v3 sensors. This is by design. V3 sensors ignore the DSA and gMSA for auditing and response actions, but credential validation occurs at the workspace level. To stop receiving the **Directory services user credentials are incorrect** health alert, remove the DSA or gMSA after all sensors are migrated to v3.
+- [Configure RPC auditing](deploy-sensor-v3.md#configure-rpc-auditing). Starting with sensor version 3.0.8 (July 2026 release), RPC auditing is enabled automatically when you upgrade the sensor, so no manual configuration is required.
+
+> [!IMPORTANT]
+> The v3.x sensor updates through Windows Update as part of the server's operating system update process. The per-sensor **Delayed update** option available for v2.x sensors doesn't apply to v3.x. For more information, see [Manage and update sensors](../sensor-settings.md#update-sensors).
 
 ## Troubleshoot "Not ready for migration" status
 
-If a server shows **Not ready for migration**, use the Microsoft Defender for Endpoint Client Analyzer and the following table to identify which condition is failing:
+When a server is marked **Not ready for migration**, hover over the status on the **Sensors** page to see a tooltip that lists the reasons the server doesn't meet the migration prerequisites.
 
-| Condition | How to verify | Resolution if failing |
+The following table lists each reason that can appear in the tooltip, how to verify it, and how to resolve it:
+
+| Reason shown in the tooltip | How to verify | Resolution |
 |---|---|---|
-| Defender for Endpoint sensor is running | Client Analyzer report shows **Sense service Status** is **Running**. | Verify Microsoft Defender for Endpoint onboarding is complete. |
-| Defender for Endpoint onboarding info exists | Client Analyzer: Check `RegOnboardingInfoPolicy.Json` in the results ZIP. If empty, the policy key is missing. The connectivity log also shows *"OnboardingInfo could not be found in the registry"* if missing. | Re-onboard the server to Microsoft Defender for Endpoint. |
-| Device has a registered Defender for Endpoint device ID | Client Analyzer report shows **Device ID** field contains a valid GUID. | Verify Microsoft Defender for Endpoint onboarding completed successfully. Re-onboard the server if `SenseMachineId` is empty. |
-| Defender for Identity v2.x sensor is running | Go to the **Sensors** page in the portal and validate the **Service status** column shows **Running**, or run `sc query AATPSensorUpdater` and confirm the service state is **Running**. | Start the `AATPSensorUpdater` service. If the service fails to start, reinstall the v2.x sensor. |
-| Defender for Identity v2.x sensor version is 2.254 or later | Check the installed sensor version in **Programs and Features** or on the **Sensors** page in the portal. | Update the Defender for Identity v2 sensor to version 2.254.19112.470 or later. Ensure delayed updates aren't blocking the update. |
-| Defender for Endpoint sensor version is 10.8735 or later | Client Analyzer report: the **Sense version** field displays the installed version. | Update the Defender for Endpoint sensor to the latest version. |
-| Windows Server 2019 or later with July 2026 or later cumulative update | Run `winver` to confirm the OS version and build number. | Upgrade the operating system to Windows Server 2019 or later and install the July 2026 or later cumulative update. |
-| Domain controller without additional identity roles | Verify the server is a pure domain controller and doesn't run AD FS, AD CS, or Entra Connect alongside the DC role. | Migration is only supported on pure domain controllers. Use the v2.x sensor for servers with additional roles. |
+| Device isn't properly onboarded to Microsoft Defender for Endpoint. | Run the Microsoft Defender for Endpoint Client Analyzer and check `RegOnboardingInfoPolicy.Json` in the results ZIP. The connectivity log shows *"OnboardingInfo could not be found in the registry"* if the onboarding info is missing. | Re-onboard the server to Microsoft Defender for Endpoint. |
+| Operating system version isn't supported. Requires Windows Server 2019 or later. | Run `winver` to confirm the operating system version and build number. | Upgrade the operating system to Windows Server 2019 or later and install the July 2026 or later cumulative update. |
+| Microsoft Defender for Endpoint sensor version is outdated or unsupported. | In the Client Analyzer report, check the **Sense version** field. | Update the Microsoft Defender for Endpoint sensor to the latest version. |
+| Microsoft Defender for Endpoint (Sense) service isn't running. | In the Client Analyzer report, confirm the **Sense service Status** is **Running**. | Start the Sense service and verify Microsoft Defender for Endpoint onboarding is complete. |
+| Migration is currently supported only for domain controllers. | Confirm the server is a domain controller. | In-place migration is available only for domain controllers. |
+| Microsoft Defender for Endpoint device ID is missing or not registered. | In the Client Analyzer report, confirm the **Device ID** field contains a valid GUID. | Verify Microsoft Defender for Endpoint onboarding completed successfully, and re-onboard the server if the device ID is empty. |
+| Sensor v2.x status is unreachable or disconnected. | On the **Sensors** page, check the sensor's status. | Verify network connectivity between the server and the Defender for Identity service, and confirm the sensor v2.x is running. |
+| Sensor v2.x service status is not running. | On the **Sensors** page, confirm the **Service status** column shows **Running**, or run `sc query AATPSensorUpdater` to confirm the service state. | Start the `AATPSensorUpdater` service. If the service fails to start, reinstall the sensor v2.x. |
 
 ## Troubleshoot migration failures
 

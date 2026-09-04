@@ -2,18 +2,19 @@
 title: Explore and investigate Defender for SQL security alerts
 description: View and investigate SQL security alerts through the Alerts page, affected machine security pages, workload protections dashboard, or alert email links.
 ms.topic: how-to
-ms.date: 05/25/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to investigate Defender for SQL security alerts so that I can understand suspicious activity and remediate the affected resources.
 ai-usage: ai-assisted
 ---
 
 # Explore and investigate Defender for SQL security alerts
 
-Use this article to review Microsoft Defender for SQL alerts and investigate suspicious activity across affected resources. The guidance helps you open alerts quickly and follow through with deeper investigation when needed.
+This article shows how to review Microsoft Defender for SQL alerts. Learn how to spot suspicious activity and take action on affected resources. You can open alerts quickly and follow up with a deeper look when needed.
 
 ## View and investigate SQL alerts
 
-This article explains how to access and review security alerts from Microsoft Defender for SQL. When Defender for SQL detects suspicious database activity or potential vulnerabilities, it generates alerts that require investigation.
+You can access and review security alerts from Microsoft Defender for SQL. Defender for SQL creates alerts when it detects suspicious database activity or possible weak points. Each alert needs your review.
 
 There are several ways to view Microsoft Defender for SQL alerts in Microsoft Defender for Cloud:
 
@@ -22,7 +23,8 @@ There are several ways to view Microsoft Defender for SQL alerts in Microsoft De
 - The [workload protections dashboard](workload-protections-dashboard.md), which shows security coverage across resources.
 - Through the direct link provided in the alert's email.
 
-## How to view alerts
+<a name="how-to-view-alerts"></a>
+## Open SQL security alerts in Defender for Cloud
 
 To view security alerts in Microsoft Defender for Cloud, follow these steps:
 

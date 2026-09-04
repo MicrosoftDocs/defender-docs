@@ -11,11 +11,11 @@ ms.collection:
 - m365-security
 - tier1
 ms.reviewer: pahuijbr
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Microsoft Defender for Endpoint standard connectivity URLs - US government
@@ -83,6 +83,7 @@ The following table lists the Microsoft Defender URLs required for US government
 |Microsoft Defender Antivirus|US Gov|MU / WU|443|`*.windowsupdate.com`|MU / WU - Security intelligence and product updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
 |Microsoft Defender Antivirus|US Gov|MU (ADL)|443|`*.download.windowsupdate.com`|ADL - Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
 |Microsoft Defender Antivirus|US Gov|MU (ADL)|443|`*.download.microsoft.com`|ADL - Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
+|Microsoft Defender Antivirus|US Gov|MU (ADL)|443|`*.definitionupdates.microsoft.com`|ADL - Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
 |Microsoft Defender Antivirus|US Gov|MU (ADL)|443|`fe3cr.delivery.mp.microsoft.com/ClientWebService/client.asmx`|ADL - Alternate location for Microsoft Defender Antivirus Security intelligence updates|Optional|Yes|Yes|Yes|||Optional if updates are being managed internally (WSUS/FileShare/ConfigMgr)|
 |Microsoft Defender Antivirus|GCC|MAPS|443|`unitedstates4.cp.wd.microsoft.us`|MAPS - Used by Microsoft Defender Antivirus to provide cloud-delivered protection|Required|Yes||||||
 |Microsoft Defender Antivirus|GCC High|MAPS|443|`unitedstates1.cp.wd.microsoft.us`|MAPS - Used by Microsoft Defender Antivirus to provide cloud-delivered protection|Required|Yes||||||
@@ -123,6 +124,8 @@ The following Defender for Endpoint-related client processes generate network co
 
 <a name="change-log"></a>
 ## Changelog
+
+The following table summarizes recent changes to this article.
 
 |Date|Change log|
 |---|---|

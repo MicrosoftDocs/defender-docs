@@ -11,8 +11,8 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
-ms.date: 07/02/2026
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1015
+ms.date: 08/31/2026
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to configure attack surface reduction rules on devices so that I can block risky software behaviors that attackers exploit.
 appliesto:
@@ -25,17 +25,38 @@ appliesto:
 
 [Attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md) target risky software behavior on Windows devices that attackers commonly exploit through malware (for example, launching scripts that download files, running obfuscated scripts, and injecting code into other processes). This article describes how to enable and configure ASR rules.
 
-For best results, use enterprise-level management solutions like Microsoft Intune or Microsoft Configuration Manager to manage ASR rules. ASR rule settings from Intune or Configuration Manager overwrite any conflicting settings from group policy or PowerShell on startup.
+For best results, use enterprise-level management solutions like Microsoft Intune or Microsoft Configuration Manager to manage ASR rules. ASR rule settings from Intune or Configuration Manager overwrite conflicting PowerShell settings on startup. To learn how conflicts between MDM and Group Policy settings are resolved, see [How policy conflicts are handled](#how-policy-conflicts-are-handled).
 
 ## Prerequisites
 
 For more information, see [Requirements for ASR rules](attack-surface-reduction-rules-overview.md#requirements-for-asr-rules).
 
+## How policy conflicts are handled
+
+When the same ASR rule is configured through more than one method, precedence is resolved as described in the following list:
+
+- **Local device settings (Set-MpPreference)**: These settings have the lowest precedence. Any policy-based method overwrites them on startup.
+
+- **Group Policy**: Overwrites conflicting local device settings on startup. When both Group Policy and a mobile device management (MDM) solution configure the same ASR rule, Group Policy takes precedence by default, unless _MDMWinsOverGP_ is enabled (see the next item). To avoid conflicts, don't configure the same ASR rules in both Group Policy and MDM.
+
+- **MDM**: Microsoft Intune or another MDM solution overwrites conflicting local device settings on startup. Whether MDM also overwrites Group Policy depends on the _MDMWinsOverGP_ setting in the [ControlPolicyConflict Policy CSP](/windows/client-management/mdm/policy-csp-controlpolicyconflict):
+  - A value of `0` (the default) means the Group Policy setting takes precedence.
+  - A value of `1` means the MDM setting applies and the conflicting Group Policy setting is blocked.
+
+  You can configure _MDMWinsOverGP_ **only** through Policy CSP, for example, by using an [Intune custom profile with an OMA-URI](#configure-asr-rules-in-intune-using-custom-profiles-with-oma-uris-and-csps) or [in another MDM solution](#configure-asr-rules-in-any-mdm-solution-using-the-policy-csp). There's no Group Policy setting or PowerShell cmdlet for it. In an Intune custom profile, use the following setting:
+
+  **OMA-URI**: `./Device/Vendor/MSFT/Policy/Config/ControlPolicyConflict/MDMWinsOverGP`<br/>
+  **Data type**: Integer<br/>
+  **Value**: `1`
+
+  > [!NOTE]
+  > [Controlled configuration](secure-controlled-configuration.md) enforces settings from Intune or Microsoft Defender for Endpoint security settings management only and ignores conflicting Group Policy, Configuration Manager, and local device settings.
+
+- **Microsoft Configuration Manager**: Applies ASR rules through the Policy CSP in both classic Exploit Guard policy mode and tenant attach mode, so it follows the same MDM precedence and _MDMWinsOverGP_ behavior.
+
 <a name="exclude-files-and-folders-from-attack-surface-reduction-rules"></a>
 
 <a name='file-and-folder-exclusions-for-asr-rules'></a>
-
-<a name='how-policy-conflicts-are-handled'></a>
 
 <a name="configuration-methods"></a>
 
@@ -53,44 +74,48 @@ In Intune, endpoint security policies are the recommended method to deploy ASR r
 
 ### Configure ASR rules and exclusions in Intune using endpoint security policies
 
-To configure ASR rules using a Microsoft Intune Endpoint Security **Attack surface reduction** policy, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
+To configure ASR rules and exclusions in Microsoft Intune, use an endpoint security **Attack surface reduction** policy. For detailed instructions, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create endpoint security policies</a> or <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (links open new tabs in the Intune documentation).
+
+When you create the policy, use these specific settings:
+
+- **Policy type**: Go to **Manage** \> **Attack surface reduction** on the **Endpoint security \| Overview** page at <https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/SecurityManagementMenu/~/overview>.
+- **Platform**: Select **Windows**.
+- **Profile**: Select **Attack Surface Reduction Rules**.
 
 > [!IMPORTANT]
 > Microsoft Defender for Endpoint management supports device objects only. Targeting users isn't supported. Assign the policy to Microsoft Entra device groups, not user groups.
 
-- **Policy type**: Attack surface reduction
-- **Platform**: Windows
-- **Profile**: Attack Surface Reduction Rules
-- **Configuration settings**:
-  - **Attack surface reduction**: Typically, you can enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** or **Warn** mode without testing. You should test other ASR rules in **Audit** mode before you switch them to **Block** or **Warn** mode. For more information, see the [ASR rules deployment guide](attack-surface-reduction-rules-deployment.md).
+When you create or modify the policy, use these specific settings on the **Configuration settings** tab:
 
-    After you set the rule mode to **Audit**, **Block**, or **Warn**, an **ASR only per rule exclusions** section appears where you can specify exclusions that apply to that rule only.
+- **Attack surface reduction rules**: Typically, you can enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** or **Warn** mode without testing. You should test other ASR rules in **Audit** mode before you switch them to **Block** or **Warn** mode. For more information, see the [ASR rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
-  - **Attack surface reduction only exclusions**: Use this section to specify exclusions that apply to all ASR rules.
+  After you set the rule mode to **Audit**, **Block**, or **Warn**, an **ASR only per rule exclusions** section appears where you can specify exclusions that apply to that rule only.
 
-    To specify per-ASR rule exclusions or global ASR rule exclusions, use either of the following methods:
+- **Attack surface reduction only exclusions**: Use this section to specify exclusions that apply to all ASR rules.
 
-    - Select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add**. In the box that appears, enter the path or path and filename to exclude. For example:
-      - `C:\folder`
-      - `%ProgramFiles%\folder\file.exe`
-        `C:\path`
+  To specify per-ASR rule exclusions or global ASR rule exclusions, use either of the following methods:
 
-    - Select :::image type="icon" source="media/intune-icon-import.png" border="false"::: **Import** to import a CSV file that contains the names of files and folders to exclude. The CSV file uses the following format:
+  - Select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add**. In the box that appears, enter the path or path and filename to exclude. For example:
+    - `C:\folder`
+    - `%ProgramFiles%\folder\file.exe`
+    - `C:\path`
 
-      ```text
-      AttackSurfaceReductionOnlyExclusions
-      "C:\folder"
-      "%ProgramFiles%\folder\file.exe"
-      "C:\path"
-      ...
-      ```
+  - Select :::image type="icon" source="media/intune-icon-import.png" border="false"::: **Import** to import a CSV file that contains the names of files and folders to exclude. The CSV file uses the following format:
 
-      > [!TIP]
-      > Double quotation marks around the values are optional, and are ignored (aren't used in the values) if you include them. Don't use single quotation marks around the values.
+    ```text
+    AttackSurfaceReductionOnlyExclusions
+    "C:\folder"
+    "%ProgramFiles%\folder\file.exe"
+    "C:\path"
+    ...
+    ```
 
-    For more information about exclusions, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
+    > [!TIP]
+    > Double quotation marks around the values are optional, and are ignored (aren't used in the values) if you include them. Don't use single quotation marks around the values.
 
-  - **Enable controlled folder access**, **Controlled folder access protected folders**, and **Controlled folder access allowed applications**: For more information, see [Configure CFA in Intune using endpoint security policies](controlled-folder-access-configure.md#configure-cfa-in-intune-using-endpoint-security-policies).
+  For more information about exclusions, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
+
+- **Enable controlled folder access**, **Controlled folder access protected folders**, and **Controlled folder access allowed applications**: For more information, see [Configure CFA in Intune using endpoint security policies](controlled-folder-access-configure.md#configure-cfa-in-intune-using-endpoint-security-policies).
 
 <a name="custom-profile-in-intune-alternative-2"></a>
 
@@ -197,7 +222,7 @@ ASR rules are active within minutes.
 
 #### Configure global ASR rule exclusions in Intune using custom profiles with OMA-URIs and CSPs
 
-The steps to configure global ASR rule **exclusions** in Intune using a custom profile are very similar to the ASR rule steps in [Configure ASR rules in Intune using custom profiles with OMA-URIs and CSPs](#configure-asr-rules-in-intune-using-custom-profiles-with-oma-uris-and-csps). The only difference is on the **Configuration settings** tab, where you enter the information for ASR rule exceptions instead of ASR rules:
+The steps to configure global ASR rule **exclusions** in Intune using a custom profile are very similar to the ASR rule steps in [Configure ASR rules in Intune using custom profiles with OMA-URIs and CSPs](#configure-asr-rules-in-intune-using-custom-profiles-with-oma-uris-and-csps). The only difference is on the **Configuration settings** tab, where you enter the information for ASR rule exclusions instead of ASR rules:
 
 On the **Configuration settings** tab, select **Add**. In the **Add row** flyout that opens, configure the following settings:
 
@@ -232,11 +257,16 @@ Complete the remaining steps in [Configure ASR rules in Intune using custom prof
 
 If your organization [manages endpoint security policies in the Microsoft Defender portal](endpoint-security-policies-configure.md), you can configure ASR rules and their exclusions with the same endpoint security policies that Intune uses.
 
-On the **Windows** tab of the **Endpoint security policies** page of the Defender portal at <https://security.microsoft.com/policy-inventory>, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create new policy** and then create an **Attack surface reduction** policy. For the full procedure, see [Create an endpoint security policy](endpoint-security-policies-configure.md#create-an-endpoint-security-policy).
+For detailed instructions, see <a href="endpoint-security-policies-configure.md#create-an-endpoint-security-policy" target="_blank">Create an endpoint security policy</a> or <a href="endpoint-security-policies-configure.md#edit-an-endpoint-security-policy" target="_blank">Edit an endpoint security policy</a> (links open new tabs).
 
-Use the same **Attack Surface Reduction Rules** profile and settings described in [Configure ASR rules and exclusions in Intune using endpoint security policies](#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies). These settings include global attack surface reduction only exclusions and per-ASR rule exclusions.
+When you create the policy on the **Windows policies** tab of the **Endpoint security policies** page in the Defender portal at <https://security.microsoft.com/policy-inventory?osPlatform=Windows>, use these specific settings:
 
-When you assign the policy, note that assignment group limitations apply to devices managed through security settings management. For details, see the [Assignments step](endpoint-security-policies-configure.md#create-an-endpoint-security-policy).
+- **Select platform**: Select **Windows**.
+- **Select template**: Select **Attack surface reduction rules**.
+
+When you create or modify the policy, use the same settings described in [Configure ASR rules and exclusions in Intune using endpoint security policies](#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies) on the **Configuration settings** tab. These settings include global attack surface reduction only exclusions and per-ASR rule exclusions.
+
+When you assign the policy, assignment group limitations apply to devices managed through security settings management. For details, see the [Assignments step](endpoint-security-policies-configure.md#create-an-endpoint-security-policy).
 
 <a name="mdm"></a>
 
@@ -294,10 +324,10 @@ For instructions, see the attack surface reduction information in [Create and de
 
 <a name="group-policy"></a>
 
-## Configure ASR rules and exclusions in group policy
+## Configure ASR rules and exclusions in Group Policy
 
 > [!WARNING]
-> If you manage your computers and devices with Intune, Microsoft Configuration Manager, or other enterprise-level management software, the management software overwrites any conflicting group policy settings on startup.
+> If you manage your computers and devices with Intune, Microsoft Configuration Manager, or other enterprise-level management software, the management software can overwrite conflicting Group Policy settings. To learn how these conflicts are resolved, see [How policy conflicts are handled](#how-policy-conflicts-are-handled).
 
 1. In Centralized Group Policy, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
@@ -320,16 +350,16 @@ For instructions, see the attack surface reduction information in [Create and de
 > [!TIP]
 > You can also configure Group Policy locally on individual devices by using the Local Group Policy Editor (`gpedit.msc`). Navigate to the same path: **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Microsoft Defender Exploit Guard** \> **Attack Surface Reduction**.
 
-The available settings are described in [Configure ASR rules in group policy](#configure-asr-rules-in-group-policy), [Configure global ASR rule exclusions in group policy](#configure-global-asr-rule-exclusions-in-group-policy), and [Configure per-ASR rule exclusions in group policy](#configure-per-asr-rule-exclusions-in-group-policy).
+The available settings are described in [Configure ASR rules in Group Policy](#configure-asr-rules-in-group-policy), [Configure global ASR rule exclusions in Group Policy](#configure-global-asr-rule-exclusions-in-group-policy), and [Configure per-ASR rule exclusions in Group Policy](#configure-per-asr-rule-exclusions-in-group-policy).
 
 > [!IMPORTANT]
-> Quotation marks, leading spaces, trailing spaces, and extra characters aren't supported in any of the ASR rule-related values in group policy.
+> Quotation marks, leading spaces, trailing spaces, and extra characters aren't supported in any of the ASR rule-related values in Group Policy.
 >
 > Group Policy paths before Windows 10 version 2004 (May 2020) might use _Windows_ Defender Antivirus instead of _Microsoft_ Defender Antivirus. Both names refer to the same policy location.
 
 <a name="enable-asr-rules"></a>
 
-### Configure ASR rules in group policy
+### Configure ASR rules in Group Policy
 
 Use the following steps to configure ASR rules and their modes in the Group Policy **Attack Surface Reduction** settings:
 
@@ -357,7 +387,7 @@ Use the following steps to configure ASR rules and their modes in the Group Poli
 
 <a name="enable-exclusions-for-all-asr-rules-in-group-policy"></a>
 
-### Configure global ASR rule exclusions in group policy
+### Configure global ASR rule exclusions in Group Policy
 
 The paths or filenames with paths you specify are used as exclusions for all ASR rules.
 
@@ -381,7 +411,7 @@ The paths or filenames with paths you specify are used as exclusions for all ASR
 
 <a name="enable-per-rule-exclusions-in-group-policy"></a>
 
-### Configure per-ASR rule exclusions in group policy
+### Configure per-ASR rule exclusions in Group Policy
 
 The paths or filenames with paths you specify are used as exclusions for specific ASR rules.
 
@@ -432,7 +462,7 @@ On the target device, use the following PowerShell command syntax in an elevated
 The following example uses `Set-MpPreference` to configure four ASR rules in a single command, setting each rule to a different mode (**Enabled**, **Disabled**, or **AuditMode**):
 
 ```powershell
-Set-MpPreference -AttackSurfaceReductionRules_Ids 26190899-1602-49e8-8b27-eb1d0a1ce869,3b576869-a4ec-4529-8536-b80a7769e899,e6db77e5-3df2-4cf1-b95a-636979351e5b,01443614-cd74-433a-b99e-2ecdc07bfc25 -AttackSurfaceReductionRules_Actions Enabled,Enabled,Disabled,AuditMode
+Set-MpPreference -AttackSurfaceReductionRules_Ids 26190899-1602-49e8-8b27-eb1d0a1ce869,3b576869-a4ec-4529-8536-b80a7769e899,e6db77e5-3df2-4cf1-b95a-636979351e5,01443614-cd74-433a-b99e-2ecdc07bfc25 -AttackSurfaceReductionRules_Actions Enabled,Enabled,Disabled,AuditMode
 ```
 
 ### Configure global ASR rule exclusions in PowerShell

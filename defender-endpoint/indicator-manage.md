@@ -1,7 +1,7 @@
 ---
 title: Manage indicators in Microsoft Defender for Endpoint
 ms.reviewer:
-description: Manage indicators for a file hash, IP address, URLs, or domains that define the detection, prevention, and exclusion of entities.
+description: Edit, delete, or import file hash, IP address, URL/domain, and certificate indicators in Microsoft Defender for Endpoint from the Settings > Endpoints > Indicators page.
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
@@ -12,13 +12,13 @@ ms.collection:
 - mde-asr
 ms.topic: how-to
 ms.subservice: asr
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Manage indicators in Microsoft Defender for Endpoint
 
@@ -34,7 +34,7 @@ ms.custom: msecd-doc-authoring-1014
 
 You can upload indicators from a CSV file that defines indicator attributes, actions, and other details.
 
-Download the sample indicators CSV file from the import page to review the supported column attributes.
+Download the sample indicators CSV file from the **Indicators** import page (under **Settings** > **Endpoints** > **Indicators**) to review the supported column attributes.
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
 
@@ -48,7 +48,7 @@ Download the sample indicators CSV file from the import page to review the suppo
 
 > [!NOTE]
 > Only 500 indicators can be uploaded for each batch. 
-> Attempting to import indicators with specific categories requires the string to be written in Pascal case convention and only accepts the category list available at the portal.
+> Attempting to import indicators with specific categories requires the string to be written in Pascal case convention and only accepts the category list available in the Microsoft Defender portal.
 
 The following table shows the supported parameters.
 
@@ -64,7 +64,7 @@ The following table shows the supported parameters.
 | recommendedActions|String|TI indicator alert recommended actions. <br/>**Optional** |
 | rbacGroups|String|Comma-separated list of RBAC groups the indicator would be applied to. <br/>**Optional** |
 | category|String|Category of the alert. Examples include: Execution and credential access. <br/>**Optional** |
-| mitretechniques|String|MITRE techniques code/id (comma separated). For more information, see [Enterprise tactics](https://attack.mitre.org/tactics/enterprise/). <br/> **Optional** <br/>It's recommended to add a value in category when a MITRE technique. |
+| mitretechniques|String|MITRE techniques code/id (comma separated). For more information, see [Enterprise tactics](https://attack.mitre.org/tactics/enterprise/). <br/> **Optional** <br/>It's recommended to provide a value in the category field when you specify a MITRE technique in the mitretechniques field. |
 | GenerateAlert|String|Whether the alert should be generated. Possible Values are: `True` or `False`. <br/>**Optional** |
 
 > [!NOTE]

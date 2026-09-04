@@ -1,30 +1,32 @@
 ---
-title: Best practices and troubleshooting for Microsoft Sentinel MCP tool collection
+title: Best Practices and Troubleshooting for Microsoft Sentinel MCP Tool Collection
 titleSuffix: Microsoft Security  
 description: Learn about the best practices for using Microsoft Sentinel's collection of MCP tools and how to troubleshoot them 
 ms.author: pauloliveria
 author: poliveria
 ms.reviewer: macasgra
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #customer intent: As a security analyst, I want to understand how to troubleshoot issues when using Microsoft Sentinel's collection of MCP tools 
 ---
 
-# Microsoft Sentinel MCP tool collection best practices and troubleshooting 
+# Microsoft Sentinel MCP tool collection best practices and troubleshooting
 
 This article outlines best practices to using Microsoft Sentinel's collection of Model Context Protocol (MCP) tools. It also provides steps you can take to troubleshoot common issues you might experience while using them.
 
 ## Best practices
 
+Use the following best practices when working with Microsoft Sentinel's MCP tools:
+
 - **Make sure your MCP client is compatible and up to date.** Microsoft Sentinel's MCP server implements the latest authorization specifications from MCP. Before connecting to the MCP server, make sure that your client is [compatible with the MCP server](sentinel-mcp-get-started.md#add-microsoft-sentinels-collection-of-mcp-tools) and up to date to help prevent connectivity and common authentication issues.
 - **Be specific in your prompts.** Good prompts deliver good results. If your prompts take longer to generate results, or if the agent's responses lack in ground truth, try writing more specific prompts. For example, a prompt that says `For user <UPN>, baseline their network, file, sign-in, and device events over 90 days and compare with +/- 10 minutes to find anomalies or suspicious activities to help me triage the severity and priority of this alert.` is far better than a prompt that says `What is risky about <UPN>?`.
 - **Pick your workspace.** All Microsoft Sentinel security data is associated with a workspace. Our tools that use the data lake optionally require a workspace ID. If you work with multiple workspaces, be specific on what workspace ID you want your tools to run. For example, for tools that use the data lake, use the [`list_sentinel_workspaces` tool](sentinel-mcp-data-exploration-tool.md#list-workspaces-list_sentinel_workspaces) to identify the workspace you want to run your tools against.
-- **Troubleshoot common issues.** Familiarize yourself with common issues or error messages and respective troubleshooting steps provided in the [Troubleshooting](#troubleshooting) section that follows.
+- **Troubleshoot common issues.** Familiarize yourself with common issues or error messages and the recommended actions to resolve them in the [Troubleshooting](#troubleshooting) table later in this article.
 
 ## Troubleshooting
 
@@ -55,18 +57,18 @@ To debug what your GitHub Copilot agent did and prepare your case for troublesho
 
 ### Exporting HAR file for troubleshooting custom tools
 
-To troubleshoot issues with your custom tool, collect an HTTP archive (HAR) file. The HAR file records all network requests your browser makes. It's useful for debugging loading or API issues.
+To troubleshoot issues with your custom tool, collect an HTTP archive (HAR) file. The HAR file records all network requests made in the browser session where you reproduce the issue. It's useful for debugging loading or API issues.
 
 To collect the HAR file, follow these steps:
 
 > [!IMPORTANT]
-> After you open Developer Tools, don't perform any other actions until you enable network capture settings. Actions taken before capture is enabled aren't recorded.
+> Open Developer Tools and enable network capture before reproducing the issue. Any requests made before Developer Tools is open and capture is enabled aren't recorded.
 
 1. Open the page where the issue occurred. Open **Developer Tools** by pressing **F12** or right-clicking the page and selecting **Inspect**.
 1. Go to the **Network** tab, then choose **Preserve log**.
-1. Keep Developer Tools open before you start the action. Any requests you make before Developer Tools is open aren't recorded.
 1. Reproduce the issue by performing the actions that caused it.
 1. Select **Export HAR** at the top of the Network tab to save the HAR file. Share it together with the information on what you did.
 
 ## Related content
+
 - [Troubleshoot KQL queries for the Microsoft Sentinel data lake](kql-troubleshoot.md)

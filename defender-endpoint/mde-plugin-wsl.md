@@ -8,30 +8,36 @@ ms.service: defender-endpoint
 ms.subservice: onboard
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - partner-contribution
   - sfi-image-nochange
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
-
 ai-usage: ai-assisted
 ---
+
 # Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)
 
+This article explains how to install, configure, and troubleshoot the Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL) 2. The plug-in supports both traditional WSL 2 distributions and WSL containers (WSLc) running on supported Windows devices and are onboarded to Microsoft Defender for Endpoint Plan 2.
+
+> [!NOTE]
+> WSL container (WSLc) support is currently in [Public Preview](https://devblogs.microsoft.com/commandline/wsl-container-is-now-available-for-public-preview/). To participate in the Public Preview and obtain the WSLc-compatible preview version of the Microsoft Defender for Endpoint plug-in for WSL, complete the [registration form](https://aka.ms/WSLcpublicpreviewregistration)
 
 ## Overview
 
-Windows Subsystem for Linux (WSL) 2, which replaces the previous version of WSL (supported by Microsoft Defender for Endpoint without a plug-in), provides a Linux environment that is seamlessly integrated with Windows, yet is isolated using virtualization technology. The Defender for Endpoint for WSL plug-in enables Defender for Endpoint to provide more visibility into all running WSL containers by plugging into the isolated subsystem.
+Windows Subsystem for Linux (WSL) 2, which replaces the previous version of WSL (supported by Microsoft Defender for Endpoint without a plug-in), provides a Linux environment that is seamlessly integrated with Windows, yet is isolated using virtualization technology. The Microsoft Defender for Endpoint plug-in supports both the traditional WSL 2 Linux distributions and the new WSL containers (WSLc). The Defender for Endpoint for WSL plug-in enables Defender for Endpoint to provide more visibility into all running WSL containers by plugging into the isolated subsystem.
 
 ## Prerequisites
 
-- WSL version `2.0.7.0` or later must be running with at least one active distro. Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than `2.0.7.0`, run `wsl --update --pre-release` to get the latest update.
+Before you install the Defender for Endpoint WSL plug-in, make sure the following prerequisites are met:
 
+- WSL version `2.0.7.0` or later must be running with at least one active distro. Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than `2.0.7.0`, run `wsl --update --pre-release` to get the latest update.
+- For WSL containers (WSLc), WSL version 2.9.5 or later is required. WSLc support is currently in Public Preview and requires a supported preview version of the Microsoft Defender for Endpoint plug-in for WSL.
 - The Windows client device must be onboarded to Defender for Endpoint.
 
 ### Supported operating systems
@@ -46,32 +52,30 @@ The following operating systems support the Defender for Endpoint WSL plug-in:
 Be aware of the following considerations before you start:
 
 - The plug-in doesn't support automatic updates on versions prior to `1.24.522.2`. On version `1.24.522.2` and later. Updates are supported through Windows Update across all rings. Updates through Windows Server Update Services (WSUS), System Center Configuration Manager (SCCM), and Microsoft Update catalog are supported only in the Production ring to ensure package stability.
-
 - It takes a few minutes for the plug-in to fully instantiate, and up to 30 minutes for a WSL2 instance to onboard itself. Short-lived WSL container instances might result in the WSL2 instance not showing up in the [Microsoft Defender portal](https://security.microsoft.com). When any distribution has been running long enough (at least 30 minutes), the WSL2 instance does show up in the Microsoft Defender portal.
-
 - Running a custom kernel and custom kernel command line is not supported. Although the plug-in does not block running in that configuration, it does not guarantee visibility within WSL when you're running a custom kernel and custom kernel command line. We recommend blocking such configurations with [Microsoft Intune wsl settings](/windows/wsl/intune).
-
 - The plug-in is not supported on machines with an ARM64 processor.
-
 - The plug-in is not supported on multi-session variants of Windows 10 and 11.
-
 - The plug-in provides visibility into events from WSL, but other features like antimalware, threat and vulnerability management, and response commands are not available for the WSL logical device.
-
+- Detection and alerting behavior can vary between Linux distributions.
 
 ## Software components and installer file names
 
-Installer: `DefenderPlugin-x64-0.24.426.1.msi`. You can download it from the onboarding page in the [Microsoft Defender portal](https://security.microsoft.com). (Go to **Settings** > **Endpoints** > **Onboarding**.)
+Installer: `Defenderplugin-x64-1.26.813.1.msi`. You can download the installer from the onboarding page in the [Microsoft Defender portal](https://security.microsoft.com). (Go to **Settings** \> **Endpoints** \> **Onboarding** \> **Windows Subsystem for Linux 2 (plug-in)**.)
+
+> [!NOTE]
+> The installer referenced above is intended for WSL 2 deployments.
+>
+> Support for WSL containers (WSLc) is currently in Public Preview and requires a preview version of the Microsoft Defender for Endpoint plug-in for WSL. To participate in the WSLc Public Preview and obtain the preview installer, complete the following [registration form](https://aka.ms/WSLcpublicpreviewregistration)
 
 Installation directories:
 
 - `%ProgramFiles%`
-
 - `%ProgramData%`
 
 Components installed:
 
 - `DefenderforEndpointPlug-in.dll`. This DLL is the library to load Defender for Endpoint to work within WSL. You can find it at `%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\plug-in`.
-
 - `healthcheck.exe`. This program checks the health status of Defender for Endpoint and enables you to see the installed versions of WSL, plug-in, and Defender for Endpoint. You can find it at `%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools`.
 
 <a name="installation-steps"></a>
@@ -79,7 +83,7 @@ Components installed:
 
 If your Windows Subsystem for Linux isn't installed yet, follow these steps:
 
-1. Open Terminal or Command Prompt. (In Windows, go to **Start** > **Command Prompt**. Or, right-click the start button and then select **Terminal**.)
+1. Open Terminal or Command Prompt. (In Windows, go to **Start** \> **Command Prompt**. Or, right-click the start button and then select **Terminal**.)
 
 1. Run the command `wsl -–install`.
 
@@ -87,11 +91,15 @@ If your Windows Subsystem for Linux isn't installed yet, follow these steps:
 
    1. Using Terminal or Command Prompt, run `wsl –-update` to make sure you have the latest version.
 
+      For WSL containers (WSLc), run `wsl --update --pre-release` to install the latest WSL preview release required for WSLc functionality.
+
    1. Run the `wsl` command to ensure WSL is running before testing.
 
 1. Install the plug-in by following these steps:
 
    1. Install the MSI file downloaded from the onboarding section in the Microsoft Defender portal (**Settings** > **Endpoints** > **Onboarding** > **Windows Subsystem for Linux 2 (plug-in)**).
+
+      For WSL containers (WSLc), install the WSLc-compatible Public Preview version of the Microsoft Defender for Endpoint plug-in.
 
    1. Open a command prompt/terminal and run `wsl`.
 
@@ -99,9 +107,11 @@ If your Windows Subsystem for Linux isn't installed yet, follow these steps:
 
 > [!NOTE]
 > If `WslService` is running, it stops during the installation process. You do not need to onboard the subsystem separately. Instead, the plug-in automatically onboards to the tenant the Windows host is onboarded to.
-> Microsoft Defender for Endpoint update for plug-in for WSL [KB Update](https://support.microsoft.com/en-us/topic/microsoft-defender-for-endpoint-update-for-plug-in-for-wsl-9f4b2ddc-c47f-4c59-bd02-a3456c667966).
+> Microsoft Defender for Endpoint update for plug-in for WSL [KB Update](https://support.microsoft.com/security/microsoft-defender-for-endpoint-update-for-plug-in-for-wsl).
 
 ## Installation validation checklist
+
+Use the following checklist to verify that the plug-in installed correctly and is running as expected:
 
 1. After update or installation, wait for at least five minutes for the plug-in to fully initialize and write log output.
 
@@ -110,6 +120,9 @@ If your Windows Subsystem for Linux isn't installed yet, follow these steps:
 1. Run the command: `cd "%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools"`.
 
 1. Run the command `.\healthcheck.exe`.
+
+   For WSL containers (WSLc), verify that all active WSLc VMs are listed in the HealthCheck output and that each VM reports a healthy Defender status.
+
 1. Review the details of Defender and WSL and make sure they match or exceed the following requirements:
 
    - **Plug-in Version**: `1.24.522.2`
@@ -125,7 +138,7 @@ If you want to use the host [windows EDR telemetry proxy](configure-proxy-intern
 
 If you want to use the host [winhttp proxy](configure-proxy-internet.md#configure-the-proxy-server-manually-using-netsh-command) configuration for MDE for WSL plug-in, nothing more is required. The host WinHTTP proxy configuration is adopted by the plug-in automatically.
 
-If you want to use the host [network and network proxy setting](https://support.microsoft.com/windows/use-a-proxy-server-in-windows-03096c53-0554-4ffe-b6ab-8b1deee8dae1#ID0EFD=Windows_11&preserve-view=true) for MDE for WSL plug-in, nothing more is required. The host network proxy configuration is adopted by the plug-in automatically.
+If you want to use the host [network and network proxy setting](https://support.microsoft.com/Windows/Experience/Connectivity-Networking/use-a-proxy-server-in-windows) for MDE for WSL plug-in, nothing more is required. The host network proxy configuration is adopted by the plug-in automatically.
 
 > [!NOTE]
 > WSL defender supports only `http` proxy.
@@ -154,9 +167,13 @@ On starting your wsl machine, wait for 5 minutes and then run `healthcheck.exe` 
 
 > [!NOTE]
 > The `ConnectivityTest` registry key is no longer supported.
+>
 > To set a proxy for use in WSL containers (the distributions running on the subsystem), see [Advanced settings configuration in WSL](/windows/wsl/wsl-config).
 
 ## Verifying functionality and SOC analyst experience
+
+> [!NOTE]
+> The investigation experience, including Device Timeline, Alerts, Incidents, and Advanced Hunting, is the same for WSL 2 and WSLc workloads.
 
 After installing the plug-in, the subsystem and all its running containers are onboarded to the [Microsoft Defender portal](https://security.microsoft.com).
 
@@ -168,15 +185,15 @@ After installing the plug-in, the subsystem and all its running containers are o
 
    You can see all WSL instances in your environment with an active Defender for Endpoint plug-in for WSL. These instances represent all distributions running inside WSL on a given host. The hostname of a *device* matches that of the Windows host. However, it's represented as a Linux device.
 
-1. Open the device page. In the **Overview** pane, there's a link for where the device is hosted. The link enables you to understand that the device is running on a Windows host. You can then pivot to the Windows host for further investigation and/or response.
+1. Open the device page. In the **Overview** pane, the hosting link shows that the device is running on a Windows host. You can select this link to pivot to the Windows host for further investigation and/or response.
 
-   :::image type="content" source="media/mdeplugin-wsl/wsl-ui-overview.png" alt-text="Screenshot showing device overview." lightbox="media/mdeplugin-wsl/wsl-ui-overview.png":::  
+   :::image type="content" source="media/mdeplugin-wsl/wsl-ui-overview.png" alt-text="Screenshot showing device overview." lightbox="media/mdeplugin-wsl/wsl-ui-overview.png":::
 
 The timeline is populated, similar to Defender for Endpoint on Linux, with events from inside the subsystem (file, process, network). You can observe activity and detections in the timeline view. Alerts and incidents are generated as appropriate as well.
 
 ## Setting up custom tag for your WSL machine
 
-The plug-in onboards the WSL machine with the tag `WSL2`. Should you or your organization need a custom tag, please follow the steps outlined below:
+The plug-in onboards the WSL machine with the tag `WSL2`. If you or your organization need a custom tag, follow these steps to configure one:
 
 1. Open Registry Editor as an administrator.
 
@@ -193,11 +210,10 @@ The plug-in onboards the WSL machine with the tag `WSL2`. Should you or your org
 
    1. Run the `wsl` command.
 
-1. Wait for 5-10 minutes for the portal to reflect the changes. 
+1. Wait for 5-10 minutes for the portal to reflect the changes.
 
 > [!NOTE]
-> The custom tag value configured in the `GROUP` registry entry is suffixed with `_WSL2`.
-> For example, if the `GROUP` registry value is `Microsoft`, the custom tag appears as `Microsoft_WSL2` in the portal.
+> The custom tag value configured in the `GROUP` registry entry is suffixed with `_WSL2`. For example, if the `GROUP` registry value is `Microsoft`, the custom tag appears as `Microsoft_WSL2` in the portal.
 
 ### Test the plug-in
 
@@ -220,6 +236,8 @@ Treat the machine as if it were a regular Linux host in your environment to perf
 <a name="advanced-hunting"></a>
 ### Use advanced hunting to investigate WSL devices
 
+The Advanced Hunting experience is identical for WSL 2 and WSL container workloads. Existing queries continue to work without modification.
+
 In the Advanced Hunting schema, under the `DeviceInfo` table, there's a new attribute called `HostDeviceId` that you can use to map a WSL instance to its Windows host device. Here are a few sample hunting queries:
 
 #### Get all WSL device IDs for the current organization/tenant
@@ -227,10 +245,10 @@ In the Advanced Hunting schema, under the `DeviceInfo` table, there's a new attr
 Use the following query to list all WSL device IDs in your tenant:
 
 ```kusto
-//Get all WSL device ids for the current organization/tenant 
-let wsl_endpoints = DeviceInfo  
+//Get all WSL device ids for the current organization/tenant
+let wsl_endpoints = DeviceInfo
 | where OSPlatform == "Linux" and isnotempty(HostDeviceId)
-| distinct DeviceId; 
+| distinct DeviceId;
 wsl_endpoints
 ```
 
@@ -239,8 +257,8 @@ wsl_endpoints
 Use the following query to map each WSL device ID to its corresponding Windows host device ID:
 
 ```kusto
-//Get WSL device ids and their corresponding host device ids 
-DeviceInfo  
+//Get WSL device ids and their corresponding host device ids
+DeviceInfo
 | where OSPlatform == "Linux" and isnotempty(HostDeviceId)
 | distinct WSLDeviceId=DeviceId, HostDeviceId
 ```
@@ -251,16 +269,18 @@ Use the following query to find WSL devices where `curl` or `wget` was executed:
 
 ```kusto
 //Get a list of WSL device ids where curl or wget was run
-let wsl_endpoints = DeviceInfo  
+let wsl_endpoints = DeviceInfo
 | where OSPlatform == "Linux" and isnotempty(HostDeviceId)
-| distinct DeviceId; 
-DeviceProcessEvents   
-| where FileName == "curl" or FileName == "wget" 
-| where DeviceId in (wsl_endpoints) 
+| distinct DeviceId;
+DeviceProcessEvents
+| where FileName == "curl" or FileName == "wget"
+| where DeviceId in (wsl_endpoints)
 | sort by Timestamp desc
 ```
 
 ## Troubleshooting
+
+[!NOTE] For troubleshooting related to WSLc, check this [section](/windows/wsl/tutorials/wsl-containers#troubleshooting).
 
 Use the following troubleshooting steps to diagnose and resolve common issues with the Defender for Endpoint WSL plug-in.
 
@@ -279,7 +299,7 @@ If you see an error on launching WSL, such as `A fatal error was returned by plu
 If you see this message, start a WSL distribution and wait before rerunning the health check:
 
 :::image type="content" source="media/mdeplugin-wsl/wsl-health-check.png" alt-text="Screenshot showing PowerShell output." lightbox="media/mdeplugin-wsl/wsl-health-check.png":::
-   
+
 1. Open a terminal instance and run the command `wsl`.
 
 1. Wait for at least five minutes before rerunning the health check.
@@ -289,7 +309,7 @@ If you see this message, start a WSL distribution and wait before rerunning the 
 You might see the following message while telemetry is still initializing:
 
 :::image type="content" source="media/mdeplugin-wsl/wsl-health-check-telemetry.png" alt-text="Screenshot showing health telemetry status." lightbox="media/mdeplugin-wsl/wsl-health-check-telemetry.png":::
-   
+
 If the "Waiting for Telemetry" message occurs, wait for five minutes and rerun `healthcheck.exe`.
 
 ### You don't see any devices in the Microsoft Defender portal, or you don't see any events in the timeline
@@ -297,13 +317,13 @@ If the "Waiting for Telemetry" message occurs, wait for five minutes and rerun `
 Check the following things:
 
 - If you aren't seeing a machine object, make sure sufficient time has passed for onboarding to complete (typically up to 10 minutes).
-      
+
 - Make sure to use the right filters, and that you have the appropriate permissions assigned to view all device objects. (For example, is your account/group is restricted to a specific group?)
-      
+
 - Use the health check tool to provide an overview of overall plug-in health. Open Terminal, and run the `healthcheck.exe` tool from `%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools`.
-   
+
    :::image type="content" source="media/mdeplugin-wsl/wsl-health-check-support.png" alt-text="Screenshot showing status in PowerShell." lightbox="media/mdeplugin-wsl/wsl-health-check-support.png":::
-     
+
 - Enable the connectivity test and check for Defender for Endpoint connectivity in WSL. If the connectivity test fails, provide the output of the health check tool to our support team.
 
 ### Connectivity test reports "invalid" in health check
@@ -312,30 +332,33 @@ If the connectivity test reports `invalid`, use the following checks to diagnose
 
 - If your machine has a proxy setup, run the command `healthCheck --extendedProxy`. This will provide information on which proxy(s) is set on your machine and whether these configurations are invalid for WSL defender.
 
-   ![Screenshot of the extended proxy health check output showing proxy configurations detected on the machine for WSL Defender](media/mde-plugin-wsl/extend-healthcheck-proxy-doc.png)
-  
-- If running `healthCheck --extendedProxy` does not resolve the issue, include the following configuration settings in the `.wslconfig` located in your `%UserProfile%` and restart WSL. Details about settings can be found in [WSL Settings](/windows/wsl/wsl-config#main-wsl-settings).
+   ![Screenshot of the healthCheck --extendedProxy command output showing proxy configurations detected on the machine for the WSL Defender plug-in.](media/mde-plugin-wsl/extend-healthcheck-proxy-doc.png)
+
+- If running `healthCheck --extendedProxy` does not resolve the connectivity test failure, include the following configuration settings in the `.wslconfig` file located in your `%UserProfile%` and restart WSL. Details about settings can be found in [WSL Settings](/windows/wsl/wsl-config#main-wsl-settings).
 
    **In Windows 11**
 
-   ```
+   Add the following settings to your `.wslconfig` file to enable DNS tunneling and mirrored networking:
+
+   ```ini
 
    # Settings apply across all Linux distros running on WSL 2
    [wsl2]
 
    dnsTunneling=true
 
-   networkingMode=mirrored  
+   networkingMode=mirrored
    ```
 
    **In Windows 10**
 
-   ```bash
+   Add the following setting to your `.wslconfig` file to disable the DNS proxy:
+
+   ```ini
    # Settings apply across all Linux distros running on WSL 2
    [wsl2]
-   
+
    dnsProxy=false
-   
    ```
 
 ### Connectivity issues persist
@@ -347,20 +370,19 @@ Collect the networking logs by following these steps:
 1. Download and run: `.\collect-networking-logs.ps1`
 
    ```powershell
-   
    Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/microsoft/WSL/master/diagnostics/collect-networking-logs.ps1" -OutFile collect-networking-logs.ps1
    Set-ExecutionPolicy Bypass -Scope Process -Force
    .\collect-networking-logs.ps1
-   
    ```
 
 1. Open a new command prompt and run the following command: `wsl`.
-      
+
 1. Open an elevated(admin) command prompt and run the following command: `wsl --debug-shell`.
 
 1. In debug shell, run: `mdatp connectivity test`.
 
 1. Allow the connectivity test to be completed.
+
 1. Stop the .ps1 ran in step #2.
 
 1. Share the generated .zip file along with a support bundle collected by running `healthcheck.exe --supportBundle` from `%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools`.
@@ -369,14 +391,16 @@ Collect the networking logs by following these steps:
 
 To collect diagnostic information for support, generate a support bundle using the following steps:
 
-1. If you run into any other challenges or issues, open Terminal, and run the following commands to generate a support bundle:
+1. If you run into any other challenges or issues, open Terminal. First, navigate to the Defender for Endpoint WSL plug-in tools directory, and then run the `healthcheck.exe` tool to generate a support bundle:
 
    ```powershell
    cd "%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools"
    ```
 
+   Then, run the following command to generate a support bundle that collects diagnostic information for troubleshooting:
+
    ```powershell
-   .\healthcheck.exe --supportBundle 
+   .\healthcheck.exe --supportBundle
    ```
 
    The support bundle can be found in the path provided by the previous command.
@@ -397,28 +421,25 @@ Microsoft Defender Endpoint plug-in for WSL supports Linux distributions running
 
 1. Set the **Allow WSL1** setting to **Disabled**, to ensure that only WSL 2 distributions can be used.
 
-   Alternately, if you want to keep using WSL 1, or not use the Intune Policy, you can selectively associate your installed distributions to run on WSL 2, by running the command in PowerShell:
+   Alternately, if you want to keep using WSL 1, or not use the Intune Policy, you can selectively upgrade a specific installed distribution from WSL 1 to WSL 2 by running the following command in PowerShell:
 
    ```powershell
    wsl --set-version <YourDistroName> 2
    ```
 
-   To have WSL 2 as your default WSL version for new distributions to be installed in the system, run the following command in PowerShell:
+   To ensure that all future distributions are created with WSL 2 by default, run the following command in PowerShell to set WSL 2 as the default version:
 
    ```powershell
    wsl --set-default-version 2
    ```
 
-### Override Release ring
+<a name="override-release-ring"></a>
+### Override the release ring for the WSL plug-in
 
 You can override the default release ring for the plug-in by configuring a registry setting.
 
 - The plug-in uses the Windows EDR ring by default. If you wish to switch to an earlier ring, set `OverrideReleaseRing` to one of the following under registry and restart WSL:
-
-   - **Name**: `OverrideReleaseRing`
-   - **Type**: `REG_SZ`
-   - **Value**: `Dogfood or External or InsiderFast or Production`
-   - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`
-
-
-
+  - **Name**: `OverrideReleaseRing`
+  - **Type**: `REG_SZ`
+  - **Value**: `Dogfood or External or InsiderFast or Production`
+  - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`

@@ -5,8 +5,8 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: tutorial
-ms.date: 05/16/2024
-ms.custom: fasttrack-edit
+ms.date: 08/07/2026
+ms.custom: fasttrack-edit, msecd-doc-authoring-1015
 
 
 #Customer intent: As a security operations team member, I want to complete advanced training on Microsoft Sentinel so that I can enhance my skills in threat detection, incident response, and security automation.
@@ -63,6 +63,7 @@ This skill-up training is a level-400 training that's based on the [Microsoft Se
 - Do you have a feature idea to share with us? Let us know on the [Microsoft Sentinel user voice page](https://feedback.azure.com/d365community/forum/37638d17-0625-ec11-b6e6-000d3a4f07b8).
 - Are you a premier customer? You might want the on-site or remote, four-day _Microsoft Sentinel Fundamentals Workshop_. Contact your Customer Success Account Manager for more details.
 - Do you have a specific issue? Ask (or answer others) on the [Microsoft Sentinel Tech Community](https://techcommunity.microsoft.com/t5/microsoft-sentinel/bd-p/MicrosoftSentinel). Or you can email your question or issue to us at <MicrosoftSentinel@microsoft.com>.
+- For hands-on practice, use the [Microsoft Sentinel Training Lab](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/introducing-the-microsoft-sentinel-training-lab-hands-on/ba-p/4513274), an open source lab with guided exercises for hunting, detection engineering, incident investigation, cost monitoring, and data lake workflows.
 
 
 ### Module 1: Get started with Microsoft Sentinel
@@ -359,7 +360,7 @@ What is Microsoft Sentinel content?
 
 The value of Microsoft Sentinel security is a combination of its built-in capabilities and your ability to create custom capabilities and customize the built-in ones. Among built-in capabilities, there are User and Entity Behavior Analytics (UEBA), machine learning, or out-of-box analytics rules. Customized capabilities are often referred to as "content" and include analytic rules, hunting queries, workbooks, playbooks, and so on.
 
-In this section, we grouped the modules that help you learn how to create such content or modify built-in-content to your needs. We start with KQL, the lingua franca of Azure Microsoft Sentinel. The following modules discuss one of the content building blocks such as rules, playbooks, and workbooks. They wrap up by discussing use cases, which encompass elements of different types that address specific security goals, such as threat detection, hunting, or governance. 
+In this section, we grouped the modules that help you learn how to create such content or modify built-in-content to your needs. We start with KQL, the lingua franca of Microsoft Sentinel. The following modules discuss one of the content building blocks such as rules, playbooks, and workbooks. They wrap up by discussing use cases, which encompass elements of different types that address specific security goals, such as threat detection, hunting, or governance.
 
 ### Module 10: Kusto Query Language
 
@@ -560,7 +561,7 @@ To learn about the most recent updates, view the ["Future of Users Entity Behavi
 
 ### Module 19: Monitoring Microsoft Sentinel's health
 
-Part of operating a SIEM is making sure that it works smoothly and is an evolving area in Azure Microsoft Sentinel. Use the following to monitor Microsoft Sentinel's health:
+Part of operating a SIEM is making sure that it works smoothly and is an evolving area in Microsoft Sentinel. Use the following to monitor Microsoft Sentinel's health:
 
 - Measure the efficiency of your [Security operations](manage-soc-with-incident-metrics.md#security-operations-efficiency-workbook) ([video](https://www.youtube.com/watch?v=jRucUysVpxI&ab_channel=MicrosoftSecurityCommunity)).
 

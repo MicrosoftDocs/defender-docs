@@ -1,23 +1,51 @@
 - name: Microsoft Security Exposure Management
   href: index.yml
   expanded: true
-  items: 
+  items:
     - name: Overview
       items:
       - name: What is Microsoft Security Exposure Management?
         href: microsoft-security-exposure-management.md
-      - name: What's new 
+      - name: What's new
         href: whats-new.md
       - name: Integration and licensing
-        href: integration-licensing.md       
-      - name: Compare Secure Score and Security Exposure Management
-        href: compare-secure-score-security-exposure-management.md      
+        href: integration-licensing.md
+
     - name: Get started
       items:
       - name: Prerequisites and support
         href: prerequisites.md
       - name: Start using Security Exposure Management
         href: get-started-exposure-management.md
+
+    - name: Connect your data
+      items:
+      - name: Overview
+        href: overview-data-connectors.md
+      - name: Configure your data connectors
+        href: configure-data-connectors.md
+      - name: CMDB data connectors
+        items:
+          - name: ServiceNow
+            href: ServiceNow-data-connector.md
+      - name: Cloud Security data connectors
+        items:
+          - name: Wiz
+            href: wiz-data-connector.md
+          - name: Palo Alto Prisma
+            href: palo-alto-prisma-data-connector.md
+      - name: Vulnerability Management data connectors
+        items:
+          - name: Qualys
+            href: qualys-data-connector.md
+          - name: Rapid7
+            href: rapid7-data-connector.md
+          - name: Tenable
+            href: tenable-data-connector.md
+      - name: Getting value from your data connectors
+        href: value-data-connectors.md
+
+    - name: Explore your attack surface
     - name: Secure now
       items:
       - name: Overview
@@ -50,6 +78,8 @@
           href: mdash-foundry-integration.md
         - name: Create a GitHub connector
           href: create-github-connector.md
+        - name: Create an Azure DevOps connector
+          href: create-azure-devops-connector.md
         - name: Defender CLI setup
           href: defender-cli-authentication.md
         - name: Codename MDASH FAQ
@@ -81,24 +111,51 @@
           href: mdash-audit-log-events.md
         - name: Microsoft Defender Code admin consent script
           href: microsoft-defender-code-admin-consent-script.md
+        - name: Microsoft Defender Code script for Azure DevOps connector
+          href: microsoft-defender-code-script-azure-devops-connector.md
     - name: Explore cross-workload attack surfaces
       items:
       - name: Overview
         href: cross-workload-attack-surfaces.md
-      - name: Schemas and operators overview
+      - name: Explore with the attack surface map
+        href: enterprise-exposure-map.md
+      - name: Work with attack paths
+        href: work-attack-paths-overview.md
+      - name: Schemas and operators
         href: schemas-operators.md
       - name: Query the enterprise exposure graph
         href: query-enterprise-exposure-graph.md
-      - name: Explore with the attack surface map
-        href: enterprise-exposure-map.md    
-    - name: Identify and manage critical assets
+
+    - name: Prioritize risks
       items:
-      - name: Overview
+      - name: Critical asset management overview
         href: critical-asset-management.md
       - name: Review and classify critical assets
         href: classify-critical-assets.md
+      - name: Review security recommendations
+        href: security-recommendations.md
+      - name: Vulnerability management integration
+        href: vulnerability-management-integration.md
       - name: Predefined classifications
         href: predefined-classification-rules-and-levels.md
+
+    - name: Investigate & act
+      items:
+      - name: Exposure insights overview
+        href: exposure-insights-overview.md
+      - name: Review security initiatives
+        href: initiatives.md
+      - name: Security initiatives catalog
+        href: initiatives-list.md
+        items:
+          - name: External attack surface management initiative
+            href: external-attack-surface-management-initiative.md
+      - name: Review security metrics
+        href: security-metrics.md
+      - name: Risk evaluation framework changelog
+        href: risk-evaluation-changelog.md
+
+    - name: Prioritizing defense
     -  name: Data connectors (preview)
        items:
        - name: Overview
@@ -139,8 +196,6 @@
       items:      
         - name: Overview
           href: work-attack-paths-overview.md
-        - name: Review attack paths
-          href: review-attack-paths.md
     - name: Vulnerability management
       items:
         - name: Vulnerability management integration with Exposure Management
@@ -164,8 +219,6 @@
           href: security-metrics.md
         - name: Review security recommendations
           href: security-recommendations.md
-        - name: Explore security events
-          href: security-events.md
     - name: Microsoft Defender XDR docs
       items: 
        - name: Microsoft Defender XDR
@@ -184,9 +237,21 @@
          href: /defender-vulnerability-management
     - name: Related products
       items:
-      - name: Defender for Cloud
-        href: /azure/defender-for-cloud
-      - name: Entra
-        href: /entra/
-      - name: Defender EASM
-        href: /azure/external-attack-surface-management/
+      - name: What customers can do today
+        href: /security/zero-trust/prioritizing-defense/prioritizing-defense-overview
+        maintainContext: true
+      - name: Stay current on Microsoft software
+        href: /security/zero-trust/prioritizing-defense/stay-current-microsoft-software
+        maintainContext: true
+      - name: Scan and secure your source code
+        href: /security/zero-trust/prioritizing-defense/scan-secure-source-code
+        maintainContext: true
+      - name: Adopt updates for open-source software (OSS) components
+        href: /security/zero-trust/prioritizing-defense/adopt-open-source-updates
+        maintainContext: true
+      - name: Minimize internet-facing exposure
+        href: /security/zero-trust/prioritizing-defense/minimize-internet-exposure
+        maintainContext: true
+      - name: Implement baseline security measures
+        href: /security/zero-trust/prioritizing-defense/baseline-security-measures
+        maintainContext: true

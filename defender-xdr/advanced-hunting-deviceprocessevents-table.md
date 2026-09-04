@@ -1,6 +1,6 @@
 ---
 title: DeviceProcessEvents table in the advanced hunting schema
-description: Learn about the process spawning or creation events in the DeviceProcessEventstable of the advanced hunting schema
+description: Learn about the process spawning or creation events in the DeviceProcessEvents table of the advanced hunting schema
 ms.service: defender-xdr
 ms.subservice: adv-hunting
 ms.author: pauloliveria
@@ -16,7 +16,8 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/28/2025
+ms.date: 08/07/2026
+ai-usage: ai-assisted
 ---
 
 # DeviceProcessEvents
@@ -32,6 +33,9 @@ The `DeviceProcessEvents` table in the [advanced hunting](advanced-hunting-overv
 This advanced hunting table is populated by records from Microsoft Defender for Endpoint. If your organization hasn't deployed the service in Microsoft Defender, queries that use the table aren't going to work or return any results. For more information about how to deploy Defender for Endpoint in the Defender portal, read [Deploy supported services](deploy-supported-services.md).
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
+
+> [!NOTE]
+> `InitiatingProcessSignerType` and `InitiatingProcessSignatureStatus` describe the initiating process, not the newly created process. The `ProcessVersionInfo*` columns contain file version metadata and don't indicate whether the created process is digitally signed. To retrieve signing information for the created process, join its `SHA1` value with the [DeviceFileCertificateInfo](advanced-hunting-devicefilecertificateinfo-table.md) table.
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
@@ -105,6 +109,21 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `InitiatingProcessUniqueId` | `string` | Unique identifier of the initiating process; this is equal to the Process Start Key in Windows devices |
 | `LogonID`|`long` |A unique identifier for the user initiating the event, enabling attribution of process activity to the originating interactive user across privilege escalation and session transitions. This field is located inside AdditionalFields/InitiatingProcessPosixEffectiveUser|
 
+## Retrieve signature information for created processes
+
+The following query returns process creation events and adds available signing certificate information for the created process:
+
+```kusto
+DeviceProcessEvents
+| where isnotempty(SHA1)
+| join kind=leftouter (
+    DeviceFileCertificateInfo
+    | project SHA1, IsSigned, IsTrusted, Signer, Issuer
+) on SHA1
+| project Timestamp, DeviceName, FileName, FolderPath, ProcessCommandLine,
+    InitiatingProcessFileName, InitiatingProcessSignatureStatus,
+    IsSigned, IsTrusted, Signer, Issuer
+```
 
 ## Related topics
 - [Advanced hunting overview](advanced-hunting-overview.md)

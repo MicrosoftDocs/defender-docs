@@ -5,9 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: yobasha
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As an MSSP, I want to manage multiple Microsoft Sentinel tenants from my own Azure tenant so that I can efficiently provide SOC services to my customers.
 
@@ -24,13 +24,15 @@ If you're a managed security service provider (MSSP) and you're using [Azure Lig
 
 ## Prerequisites
 
+Before you manage multiple tenants in Microsoft Sentinel, complete the following prerequisite:
+
 - [Onboard Azure Lighthouse](/azure/lighthouse/how-to/onboard-customer)
 
 ## Verify registration of Microsoft Sentinel resource providers
 
-To manage multiple tenants properly, your MSSP tenant must have the Microsoft Sentinel resource providers registered on at least one subscription, and each of your customers' tenants must have the resource providers registered. 
+Your MSSP tenant must have the Microsoft Sentinel resource providers registered on at least one subscription. Each of your customers' tenants must also have those resource providers registered.
 
-If you have registered Microsoft Sentinel in your tenant, and your customers in theirs, you're ready to get started and can continue with [Access Microsoft Sentinel in managed tenants](#access-microsoft-sentinel-in-managed-tenants).
+If you already registered Microsoft Sentinel in your tenant, and your customers did the same in theirs, you can skip ahead to [Access Microsoft Sentinel in managed tenants](#access-microsoft-sentinel-in-managed-tenants).
 
 **To verify registration**:
 
@@ -38,7 +40,7 @@ If you have registered Microsoft Sentinel in your tenant, and your customers in 
 
 1. From the navigation menu on the subscription screen, under **Settings**, select **Resource providers**.
 
-1. From the ***subscription name* | Resource providers** screen, search for and select *Microsoft.OperationalInsights* and *Microsoft.SecurityInsights*, and check the **Status** column. If the provider's status is *NotRegistered*, select **Register**.
+1. From the ***subscription name* | Resource providers** screen, search for *Microsoft.OperationalInsights* and *Microsoft.SecurityInsights*. Select each one and check the **Status** column. If the status is *NotRegistered*, select **Register**.
 
     :::image type="content" source="media/multiple-tenants-service-providers/check-resource-provider.png" alt-text="Screenshot of checking resource providers.":::
 
@@ -46,14 +48,14 @@ If you have registered Microsoft Sentinel in your tenant, and your customers in 
 
 To access your customers' Microsoft Sentinel workspaces from your own tenant, perform the following steps:
 
-1. Under **Directory + subscription**, select the delegated directories (directory = tenant), and the subscriptions where your customer's Microsoft Sentinel workspaces are located.
+1. Under **Directory + subscription**, select the delegated directories (each directory maps to a tenant). Also select the subscriptions that contain your customer's Microsoft Sentinel workspaces.
 
     :::image type="content" source="media/multiple-tenants-service-providers/directory-subscription.png" alt-text="Choose tenants and subscriptions":::
 
 1. Open Microsoft Sentinel, where you'll see all the workspaces in the selected subscriptions and can work with them seamlessly, just like any workspace in your own tenant.
 
 > [!NOTE]
-> You can't deploy connectors in Microsoft Sentinel from within a managed workspace configured with Azure Lighthouse alone. To deploy a connector in this manner, you must also configure GDAP. For detailed information on this topic, see [Microsoft Defender portal implementation guide for MSSPs](/unified-secops/playbook-managed-security).
+> You can't deploy connectors in Microsoft Sentinel from a managed workspace that uses only Azure Lighthouse. You must also configure GDAP. For more details, see [Microsoft Defender portal implementation guide for MSSPs](/unified-secops/playbook-managed-security).
 
 ## Related content
 

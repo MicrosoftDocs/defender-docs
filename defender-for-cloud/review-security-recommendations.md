@@ -1,9 +1,9 @@
 ---
-title: Review Security Recommendations
+title: Review security recommendations in Microsoft Defender for Cloud
 description: Learn how to review security recommendations in Microsoft Defender for Cloud to improve the security posture of your environments.
 ms.topic: how-to
-ms.date: 06/30/2026
-ms.custom: sfi-image-nochange
+ms.date: 07/03/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security analyst, I want to learn how to review security recommendations in Microsoft Defender for Cloud so that I can improve the security posture of my environments.
 ai-usage: ai-assisted
@@ -23,7 +23,7 @@ For detailed information about security recommendations, including risk factors,
 > - These recommendations are marked as Preview. This tag indicates that the recommendation is in an early state and doesn't affect Secure Score yet.
 > - Secure Score currently applies to the parent recommendation only, not to each individual item.
 >
-> If you see both formats or recommendations with a Preview tag, this condition is expected during the transition. The goal is to improve clarity and allow you to act on specific recommendations more easily. For more information, see [Transition from grouped to individual recommendations](transition-grouped-individual-recommendations.md).
+> Seeing both formats or recommendations with a Preview tag is expected during the transition. This transition aims to improve clarity and allow you to act on specific recommendations more easily. For more information, see [Transition from grouped to individual recommendations](transition-grouped-individual-recommendations.md).
 
 ## Prerequisites
 
@@ -52,7 +52,7 @@ Review recommendations and make sure all the details are correct before you reso
    - **Vulnerabilities**: Software vulnerabilities requiring patches.
    - **Exposed Secrets**: Credentials and secrets that might be compromised.
    
-These category tabs can help you focus your view by security category so that you can choose to see everything at once or drill down into specific areas.
+The **All recommendations**, **Misconfigurations**, **Vulnerabilities**, and **Exposed Secrets** tabs can help you focus your view by security category so that you can choose to see everything at once or drill down into specific areas.
 
    > [!NOTE]
    > When you select a security category filter, both the recommendations list and the summary cards update to reflect only the recommendations in that category.
@@ -75,7 +75,7 @@ The Azure portal provides three distinct ways to view and interact with recommen
 
 #### Flat list view
 
-This view displays a list of all recommendations organized by individual assets, ordered by risk level. Each row represents a single recommendation affecting a specific resource.
+The flat list view displays a list of all recommendations organized by individual assets, ordered by risk level. Each row represents a single recommendation affecting a specific resource.
 
 :::image type="content" source="media/review-security-recommendations/review-by-findings.png" alt-text="Screenshot of Azure portal Flat list view showing a list of critical storage account recommendations by resource." lightbox="media/review-security-recommendations/review-by-findings.png":::
 
@@ -91,13 +91,13 @@ When you select a recommendation row, a side panel opens displaying:
 
 #### Resource views
 
-In addition to **Group by title**, the Azure portal supports **Group by resource**. This groups all findings for the same asset in one place, which is helpful when a single owner is responsible for an asset and should receive all of its findings together.
+In addition to **Group by title**, the Azure portal supports **Group by resource**. Grouping by resource places all findings for the same asset in one place, which is helpful when a single owner is responsible for an asset and should receive all of its findings together.
 
 :::image type="content" source="media/review-security-recommendations/review-by-resource.png" alt-text="Screenshot of Azure security portal grouped by resource, showing critical findings, risk levels, recommendations, and owner columns." lightbox="media/review-security-recommendations/review-by-resource.png":::
 
 #### Recommendation title view
 
-This view aggregates recommendations by title, showing a consolidated list ordered by risk level. Each row represents all instances of a particular recommendation across your environment.
+The recommendation title view aggregates recommendations by title, showing a consolidated list ordered by risk level. Each row represents all instances of a particular recommendation across your environment.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -168,7 +168,7 @@ The Defender portal provides two distinct ways to view and interact with recomme
 
 #### Recommendation per asset view
 
-This view displays a list of all recommendations organized by individual assets, ordered by risk level. Each row represents a single recommendation affecting a specific resource.
+The recommendation per asset view displays a list of all recommendations organized by individual assets, ordered by risk level. Each row represents a single recommendation affecting a specific resource.
 
 When you select a recommendation row, a side panel opens displaying:
 
@@ -182,7 +182,7 @@ When you select a recommendation row, a side panel opens displaying:
 
 #### Recommendation title view
 
-This view aggregates recommendations by title, showing a consolidated list ordered by risk level. Each row represents all instances of a particular recommendation across your environment.
+The recommendation title view aggregates recommendations by title, showing a consolidated list ordered by risk level. Each row represents all instances of a particular recommendation across your environment.
 
 When you select an aggregated recommendation row, a side panel opens displaying:
 
@@ -194,7 +194,7 @@ When you select an aggregated recommendation row, a side panel opens displaying:
 
 #### Recommendation per resource view
 
-In addition to Group by title, the portal supports Group by resource. This groups all findings for the same asset in one place, which is helpful when a single owner is responsible for an asset and should receive all of its findings together.
+In addition to Group by title, the portal supports Group by resource. Grouping by resource places all findings for the same asset in one place, which is helpful when a single owner is responsible for an asset and should receive all of its findings together.
 
 :::image type="content" source="media/review-security-recommendations/defender-portal-recommendation-side-pane.png" alt-text="Screenshot of recommendations side pane." lightbox="media/review-security-recommendations/defender-portal-recommendation-side-pane.png":::
 
@@ -206,7 +206,7 @@ Alternative access paths to recommendations:
 > [!NOTE]
 > **Why you might see different resources between the Azure portal and Defender portal:**
 >
-> - **Deleted resources**: You might notice deleted resources still showing in the Azure portal. This condition happens because the Azure portal currently shows the last known state of resources. The product team is working to fix this condition so that deleted resources no longer appear.
+> - **Deleted resources**: You might notice deleted resources still showing in the Azure portal. Deleted resources can still appear because the Azure portal currently shows the last known state of resources. The product team is working to fix this condition so that deleted resources no longer appear.
 > - **Azure Policy resources**: Some resources that come from Azure Policy might not show up in the Defender portal. During preview, the portal only displays resources that have security context and contribute to meaningful security insights.
 > - Resources tied to free subscriptions don't currently appear in the Defender portal.
 
@@ -217,7 +217,7 @@ Alternative access paths to recommendations:
 
 ::: zone pivot="azure-portal"
 
-You can interact with recommendations in multiple ways. If an option isn't available, that option isn't relevant to the recommendation.
+You can interact with recommendations in multiple ways. If an option isn't available, that option isn't relevant to the selected recommendation.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -254,10 +254,6 @@ You can interact with recommendations in multiple ways. If an option isn't avail
 1. (Optional) To view the associated recommendation page, select **Open the vulnerability page**.
 
 1. [Remediate the recommendation](implement-security-recommendations.md).
-
->[!NOTE]
->During the preview transition, you may see Preview and New version indicators on certain recommendations. These tags distinguish new individual items from grouped ones shown side by side. Use filters to limit the view to one format when needed.
->:::image type="content" source="media/transition-grouped-individual-recommendations/recommendations-tags.png" alt-text="Screenshot of recommendation tags interface showing options for 'New version' and 'Set for deprecation' to filter recommendations." lightbox="media/transition-grouped-individual-recommendations/recommendations-tags.png":::
 
 ::: zone-end
 
@@ -367,8 +363,11 @@ You can use [Azure Resource Graph](/azure/governance/resource-graph/) to write a
 
 1. Review the results.
 
->[!NOTE]
->If your dashboards or automations currently rely on Sub Assessment APIs or queries, plan to migrate to the Assessment APIs / securityFindings equivalents for the individual recommendation format. During the side by side period, you might see duplicate data (legacy grouped + new individual). Use **Preview/New** version UI tags or API filters to focus on one format and avoid double counting. The Open query entry point can help you generate updated queries from the portal.
+> [!NOTE]
+> The `properties.status.firstEvaluationDate` field indicates when the security assessment was first evaluated for the resource. This value is different from **First seen at** in software inventory, which indicates when the software was first seen on the asset.
+
+> [!NOTE]
+> If your dashboards or automations currently rely on Sub Assessment APIs or queries, plan to migrate to the Assessment APIs / securityFindings equivalents for the individual recommendation format. During the side by side period, you might see duplicate data (legacy grouped + new individual). Use **Preview/New** version UI tags or API filters to focus on one format and avoid double counting. The Open query entry point can help you generate updated queries from the portal.
 
 ::: zone-end
 

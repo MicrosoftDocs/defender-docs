@@ -15,7 +15,7 @@ ms.custom:
   - cx-ah
   - sfi-image-nochange
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -59,9 +59,10 @@ By default, advanced hunting displays query results as tabular data. You can als
 
 When rendering charts, advanced hunting automatically identifies columns of interest and the numeric values to aggregate. To get meaningful charts, construct your queries to return the specific values you want to see visualized. Here are some sample queries and the resulting charts.
 
-#### Alerts by severity
+<a name="alerts-by-severity"></a>
+#### Example chart: Alerts by severity
 
-Use the `summarize` operator to get a numeric count of the values you want to chart. The following query uses the `summarize` operator to count the number of alerts by severity.
+Use the `summarize` operator to get a numeric count of the values you want to chart. The following query counts alerts by severity so you can visualize their distribution:
 
 ```kusto
 AlertInfo
@@ -78,9 +79,10 @@ AlertInfo
 
 :::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-column-chart-new.png" alt-text="An example of a chart that displays advanced hunting results in the Microsoft Defender portal" lightbox="./media/advanced-hunting-query-results/advanced-hunting-column-chart-new.png":::
 
-#### Phishing emails across top ten sender domains
+<a name="phishing-emails-across-top-ten-sender-domains"></a>
+#### Example chart: Phishing emails across top ten sender domains
 
-If you're dealing with a list of values that isn't finite, use the `top` operator, which returns only the highest-ranking rows by a specified column, to chart the values with the most instances. For example, to get the top 10 sender domains with the most phishing emails, use the following query:
+If you're dealing with a list of values that isn't finite, use the `top` operator, which returns only the highest-ranking rows by a specified column, to chart the values with the most instances. For example, the following query summarizes phishing-related email events by sender domain and returns the top 10 most common sources:
 
 ```kusto
 EmailEvents
@@ -94,8 +96,9 @@ Use the pie chart view to effectively show distribution across the top domains:
 :::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-pie-chart-new.png" alt-text="The pie chart that displays advanced hunting results in the Microsoft Defender portal" lightbox="./media/advanced-hunting-query-results/advanced-hunting-pie-chart-new.png":::
 
 
-#### File activities over time
-By using the `summarize` operator with the `bin()` function, you can check for events involving a particular indicator over time. The following query counts events involving the file `invoice.doc` at 30-minute intervals to show spikes in activity related to that file:
+<a name="file-activities-over-time"></a>
+#### Example chart: File activities over time
+By using the `summarize` operator with the `bin()` function, you can check for events involving a particular indicator over time. The following query searches across cloud app and device file events for activity involving the file `invoice.doc`, counting matches at 30-minute intervals to show spikes in activity:
 
 ```kusto
 CloudAppEvents
@@ -129,7 +132,7 @@ You can narrow the results down even further to specific data by selecting the n
 
 :::image type="content" source="./media/advanced-hunting-query-results/add-filter3.png" alt-text="Screenshot of new filter pill in advanced hunting." lightbox="./media/advanced-hunting-query-results/add-filter3.png":::
 
-This selection opens a dropdown showing the possible filters you can use. Select one or more of the check boxes, and then select **Apply**.
+Selecting the newly added filter opens a dropdown showing the possible filters you can use. Select one or more of the check boxes, and then select **Apply**.
 
 :::image type="content" source="./media/advanced-hunting-query-results/add-filter4.png" alt-text="Screenshot of new filter's dropdown in advanced hunting." lightbox="./media/advanced-hunting-query-results/add-filter4.png":::
 
@@ -213,6 +216,9 @@ You can do the same for your saved functions, queries, and custom detections in 
 
 By default, a timeline appears above the advanced hunting results that displays event counts over time. The timeline automatically renders based on the `Timestamp` or `timeGenerated` column in the query results. It automatically updates when you apply filters and can help you quickly identify abnormal behavior and trends and focus on interesting results.
 
+> [!NOTE]
+> The timeline appears only when your results include more than 40 events and contain a `Timestamp` or `timeGenerated` column.
+
 :::image type="content" source="./media/advanced-hunting-query-results/advanced-hunting-query-results-timeline.png" alt-text="Screenshot of the timeline above the query results in advanced hunting." lightbox="./media/advanced-hunting-query-results/advanced-hunting-query-results-timeline.png":::
 
 You can select whether to display the timeline by default in the **Chart preferences** settings.
@@ -275,7 +281,7 @@ The timeline appears only if your results meet the following conditions:
 - Your results include a `Timestamp` or `timeGenerated` column.
 
 <a name="related-topics"></a>
-## See also
+## Related content
 
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Learn the query language](advanced-hunting-query-language.md)

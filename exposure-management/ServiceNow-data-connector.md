@@ -1,7 +1,9 @@
 ---
-title: Integrate ServiceNow data connector in Microsoft Security Exposure Management
+title: ServiceNow data connector in Microsoft Security Exposure Management
 description: Learn how to the ServiceNow data connector in Microsoft Security Exposure Management.
 ms.topic: overview
+ms.author: dlanger
+author: dlanger
 ms.date: 10/23/2025
 ---
 
@@ -42,7 +44,7 @@ Use OAuth 2.0 client credentials to avoid storing a long‑lived password and to
 
 ### Create the OAuth client (Application Registry)
 
-1. Go to: System OAuth -> Application Registry.
+1. Go to: System OAuth > Application Registry.
 1. Select: Create an OAuth API endpoint for external clients.
 1. Fill mandatory fields (Name, etc.). Leave Redirect URL and Login URL blank (not used for client credentials).
 1. Ensure Public Client remains unchecked (must be a confidential client).

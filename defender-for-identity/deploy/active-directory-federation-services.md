@@ -1,19 +1,22 @@
 ---
 title: Configure sensors for AD FS, AD CS, and Microsoft Entra Connect | Microsoft Defender for Identity
 description: Learn how to configure Microsoft Defender for Identity on Active Directory Federation Services (AD FS), Active Directory Certificate Services (AD CS), and Microsoft Entra Connect servers.
-ms.date: 06/15/2026
+ms.date: 08/31/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
+#customer intent: As a security administrator, I want to configure Defender for Identity sensors on AD FS, AD CS, and Microsoft Entra Connect servers so that identity activity from these servers is monitored.
 ---
 
 # Configure sensors for AD FS, AD CS, and Microsoft Entra Connect
 
-Install and configure the Defender for Identity sensor v2.x on Active Directory Federation Services (AD FS), Active Directory Certificate Services (AD CS), and Microsoft Entra Connect servers that aren't domain controllers. Before you begin, make sure you've completed the [prerequisites](#prerequisites) listed later in this article.
+## Install and configure sensors on non-domain-controller servers
+
+Install and configure the Defender for Identity sensor v2.x on Active Directory Federation Services (AD FS), Active Directory Certificate Services (AD CS), and Microsoft Entra Connect servers that aren't domain controllers. Before you begin, make sure you've completed the [sensor installation prerequisites](prerequisites-sensor-version-2.md).
 
 > [!TIP]
-> If your AD FS, AD CS, or Microsoft Entra Connect role runs on a domain controller with Windows Server 2019 or later, deploy the [sensor v3.x](deploy-sensor-v3.md) instead. This article applies only to servers that aren't domain controllers.
+> Deploying the Defender for Identity sensor v3.x on AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers is in preview. Use [sensor v3.x](deploy-sensor-v3.md) on eligible servers running Windows Server 2019 or later. Use the sensor v2.x procedures in this article only for supported servers running Windows Server 2016 or earlier.
 
 These considerations apply:
 
@@ -23,7 +26,7 @@ These considerations apply:
 
 ## Prerequisites
 
-Prerequisites for installing Defender for Identity sensors on AD FS, AD CS, or Microsoft Entra Connect servers can be found in [Microsoft Defender for Identity prerequisites](prerequisites-sensor-version-2.md) article.
+For general sensor prerequisites, see the [Microsoft Defender for Identity prerequisites](prerequisites-sensor-version-2.md) article. The following additional requirements apply to AD FS, AD CS, and Microsoft Entra Connect servers.
 
 A sensor installed on an AD FS, AD CS, or Microsoft Entra Connect server can't use the local service account to connect to the domain. Instead, you need to configure a [Directory Service Account](directory-service-accounts.md).
 
@@ -117,7 +120,7 @@ $SQLConnection.Close()
 >
 > Microsoft recommends that you use the most secure authentication flow available. The authentication flow described in this procedure requires a very high degree of trust in the application, and carries risks that aren't present in other flows. You should only use this flow when other more secure flows, such as managed identities, aren't viable.
 
-Sensors running on Microsoft Entra Connect servers need to have access to the ADSync database, and have execute permissions for the relevant stored procedures. If you have more than one Microsoft Entra Connect server, make sure to run the following PowerShell script on each server to grant ADSync database access and stored procedure permissions. 
+Sensors running on Microsoft Entra Connect servers need to have access to the ADSync database, and have execute permissions for the relevant stored procedures. If you have more than one Microsoft Entra Connect server, make sure to run the following PowerShell script on each server to grant ADSync database access and stored procedure permissions.
 
 To grant the sensor permissions to the Microsoft Entra Connect ADSync database by using PowerShell:
 

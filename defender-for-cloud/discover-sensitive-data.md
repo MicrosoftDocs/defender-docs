@@ -2,28 +2,29 @@
 title: Discover sensitive data in cloud resources
 description: Learn how to discover resources with sensitive data types in the Data and AI security dashboard in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 06/02/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to discover sensitive data so that I can protect it.
 ai-usage: ai-assisted
 ---
 
 # Discover sensitive data in cloud resources
 
-Use sensitive data discovery in Microsoft Defender for Cloud to find cloud resources that expose sensitive information. This article shows you how to open sensitive data findings in the Data and AI security dashboard and investigate related recommendations and alerts. If you plan to follow these steps, complete the prerequisites in the next section first.
+Use sensitive data discovery in Microsoft Defender for Cloud to find cloud resources that expose sensitive information. This article shows you how to open sensitive data findings in the Data and AI security dashboard and investigate related recommendations and alerts. If you plan to follow these steps, complete the [Prerequisites](#prerequisites) first.
 
 ## Prerequisites
 
-Before you can discover sensitive data in your cloud resources, complete the following prerequisites:
+Complete these steps before you start:
 
-- Enable Defender cloud security posture management (Defender CSPM). For setup instructions, see [Enable Defender CSPM](tutorial-enable-cspm-plan.md).
-- Enable sensitive data discovery. For setup instructions, see [Enable Defender CSPM plan components](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan).
-- Enable Defender for Storage. For setup instructions, see [Enable Defender for Storage](tutorial-enable-storage-plan.md).
-- Enable Defender for Databases. For setup instructions, see [Enable Defender for Databases](tutorial-enable-databases-plan.md).
-- Register each relevant Azure subscription to the Microsoft.Security resource provider. For setup instructions, see [Register resource provider](/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider).
+- [Enable Defender CSPM](tutorial-enable-cspm-plan.md).
+- [Enable sensitive data discovery](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan).
+- [Enable Defender for Storage](tutorial-enable-storage-plan.md).
+- [Enable Defender for Databases](tutorial-enable-databases-plan.md).
+- [Register each Azure subscription](/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider) to the Microsoft.Security resource provider.
 
 ## View resources with sensitive data
 
-Resources with sensitive data are at risk of unauthorized access. Use this procedure to identify those resources and investigate the related findings.
+Resources with sensitive data might be exposed to unwanted access. Use these steps to find those resources and review the results.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -39,7 +40,7 @@ Resources with sensitive data are at risk of unauthorized access. Use this proce
 
 1. Review each record found and select **View details** to see more information about the resource.
 
-1. Select the resource name to view all recommendations and alerts associated with that resource.
+1. Select the resource name to see its recommendations and alerts.
 
 1. Remediate recommendations. For guidance, see [Implement security recommendations](implement-security-recommendations.md).
 

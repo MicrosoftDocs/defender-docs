@@ -1,20 +1,25 @@
 ---
-title: Planning multicloud security determining business needs guidance
+title: Determine business needs for multicloud security planning
 description: Learn about determining business needs to meet business goals in multicloud environment with Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 05/31/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Determine business needs
 
-This article is part of a series to provide guidance as you design a cloud security posture management (CSPM) and cloud workload protection platform (CWPP) solution across multicloud resources with Microsoft Defender for Cloud.
+## Identify business requirements for multicloud security
 
-## Goal
+Use this guidance to design a cloud security posture management (CSPM) and cloud workload protection platform (CWPP) solution across multicloud resources with Microsoft Defender for Cloud. In this article, you identify your organization's business needs for multicloud security, assess key requirements, and map those needs to Defender for Cloud capabilities for protecting Amazon Web Services (AWS) and Google Cloud Platform (GCP) resources.
+
+<a name="goal"></a>
+## Business planning goals
 
 Identify how Defender for Cloud multicloud capabilities can help your organization meet business goals and protect Amazon Web Services (AWS) and Google Cloud Platform (GCP) resources.
 
-## Get started
+<a name="get-started"></a>
+## Start assessing business needs
 
 The first step in designing a multicloud security solution is to determine your business needs. Every company, even in the same industry, has different requirements. Best practices provide general guidance, but your unique business needs define your specific requirements.
 
@@ -39,7 +44,7 @@ Defender for Cloud provides a single management point for protecting Azure, on-p
 - Providing vulnerability management solutions for servers and containers.
 - Protecting critical workloads, including containers, servers, and databases, against malicious attacks.
 
-The diagram below shows the Defender for Cloud architecture. Defender for Cloud can:
+The following diagram shows the Defender for Cloud architecture. Defender for Cloud can:
 
 - Provide unified visibility and recommendations across multicloud environments. There’s no need to switch between different portals to see the status of your resources.
 - Compare your resource configuration against industry standards, regulations, and benchmarks. For details, see [Assign regulatory compliance standards](./assign-regulatory-compliance-standards.md).

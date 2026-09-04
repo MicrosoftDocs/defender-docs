@@ -5,9 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: ofshezaf
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security analyst, I want to monitor Azure Virtual Desktop environments using Microsoft Sentinel so that I can enhance remote work capabilities while maintaining security.
 
@@ -40,7 +40,7 @@ For more information, see [Push Azure Virtual Desktop data to your Log Analytics
 
 ## Find your data
 
-After a successful connection is established, run queries in Microsoft Sentinel against your Log Analytics data.
+After Azure Virtual Desktop data is connected to Microsoft Sentinel, run queries against your Log Analytics data.
 
 For example, see sample queries from the [Azure Virtual Desktop documentation](/azure/virtual-desktop/diagnostics-log-analytics).
 

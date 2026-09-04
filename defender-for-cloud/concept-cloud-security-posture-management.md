@@ -2,9 +2,10 @@
 title: What is Cloud Security Posture Management (CSPM)
 description: Learn more about Cloud Security Posture Management (CSPM) in Microsoft Defender for Cloud and how it helps improve your security posture.
 ms.topic: concept-article
-ms.date: 07/01/2026
+ms.date: 08/07/2026
 #customer intent: As a reader, I want to understand the concept of Cloud Security Posture Management (CSPM) in Microsoft Defender for Cloud.
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1015
 ---
 
 # What is Cloud Security Posture Management (CSPM)
@@ -13,14 +14,19 @@ Cloud Security Posture Management (CSPM) is a core feature of Microsoft Defender
 
 Defender for Cloud continually assesses your cloud infrastructure against security standards defined for your Azure subscriptions, Amazon Web Service (AWS) accounts, and Google Cloud Platform (GCP) projects. Defender for Cloud issues security recommendations to help you identify and reduce cloud misconfigurations and security risks.
 
-By default, when you enable Defender for Cloud on an Azure subscription, the [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md) standard is enabled and provides recommendations to secure your multicloud environment. The [secure score](secure-score-security-controls.md) based on some of the MCSB recommendations helps you monitor cloud compliance. A higher score indicates a lower identified risk level.
+For Azure Database for PostgreSQL flexible server, Defender CSPM continuously evaluates server-level and database-level configurations against PostgreSQL security best practices. The assessments identify network security, auditing, and operational resilience issues. If Defender CSPM is already enabled, the assessments provide risk-prioritized recommendations without requiring other configuration.
 
-## CSPM Plans
+When Foundational CSPM is enabled, the [Microsoft Cloud Security Benchmark (MCSB)](concept-regulatory-compliance.md) standard provides recommendations to help secure your multicloud environment. The [secure score](secure-score-security-controls.md) based on some of the MCSB recommendations helps you monitor cloud compliance. A higher score indicates a lower identified risk level.
+
+> [!IMPORTANT]
+> Starting October 27, 2026, Foundational CSPM will move to an opt-in model and will no longer be enabled by default for new Azure subscriptions. The free plan will continue to be available at no cost and can be enabled at any time based on your organization's needs. Existing subscriptions that already have Foundational CSPM enabled will remain enabled unless you turn off the plan. For more information, see [Opt in to Foundational CSPM](foundational-cspm-opt-in.md).
+
+## CSPM plans
 
 Defender for Cloud offers two CSPM plans:
 
-- **Foundational CSPM** (free): Enabled by default for all onboarded subscriptions and accounts.
-- **Defender CSPM** (paid): Provides extra capabilities beyond the foundational CSPM plan, including advanced CSPM tools for cloud visibility and compliance monitoring. This version of the plan offers more advanced security posture features such as AI security posture, attack path analysis, risk prioritization, and more.
+- **Foundational CSPM** (free): Available at no cost. Starting October 27, 2026, new Azure subscriptions must opt in. AWS and GCP onboarding isn't affected.
+- **Defender CSPM** (paid): Provides extra capabilities beyond the Foundational CSPM plan, including advanced CSPM tools for cloud visibility and compliance monitoring. This plan offers advanced security posture features such as AI security posture, attack path analysis, and risk prioritization.
 
 ## Plan availability
 
@@ -95,7 +101,7 @@ Defender for Cloud supports integrations with partner systems for incident manag
 |---|---|---|
 | Compute | Virtual machines, Virtual Machine scale sets, classic VMs | Deallocated VMs, Databricks VMs |
 | Storage | Storage accounts | Accounts without blob containers or file shares |
-| Databases | SQL servers, PostgreSQL/MySQL servers, Synapse workspaces | – |
+| Databases | SQL servers, Azure Database for PostgreSQL flexible servers, Azure Database for MySQL flexible servers, Synapse workspaces | - |
 
 ### AWS
 

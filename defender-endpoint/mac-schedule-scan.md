@@ -6,7 +6,7 @@ author: paulinbar
 ms.author: painbar
 ms.reviewer: joshbregman
 ms.localizationpriority: medium
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 ms.collection: 
 - m365-security
 - tier3
@@ -16,7 +16,7 @@ ms.subservice: macos
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 
 ai-usage: ai-assisted
 ---
@@ -64,13 +64,13 @@ Your scheduled scan runs at the date, time, and frequency you defined in your `p
 
 In the following example, the daily quick scan configuration is set to run at 885 minutes after midnight (2:45 p.m.). The weekly configuration is set to run a full scan on Wednesday at 880 minutes after midnight (2:40 p.m.). And it's set to ignore exclusions and run a low-priority scan.
 
-Use the plist schema shown here to configure a daily quick scan and a weekly full scan with the scheduled scan parameters described in the preceding table.
+Use the plist schema shown here to configure a daily quick scan and a weekly full scan with the scheduled scan parameters described in the [scheduled scan parameter table](#schedule-scans-by-deploying-a-plist-in-microsoft-defender-for-endpoint-on-macos) in this article.
 
-Open a text editor and use the Intune mobileconfig and JamF plist examples in this section as a guide for your own scheduled scan file.
+Open a text editor and use the [Intune mobileconfig](#for-intune) and [JamF plist](#for-jamf-and-other-third-party-mdms) examples that follow as a guide for your own scheduled scan file.
 
 #### For Intune
 
-Use the following mobileconfig plist sample to deploy this scheduled scan configuration through Intune.
+The following mobileconfig plist sample defines a complete Intune configuration profile that enables scheduled scanning with a daily quick scan and a weekly full scan.
 
 ``` XML
 <?xml version="1.0" encoding="UTF-8"?> 
@@ -152,7 +152,7 @@ Use the following mobileconfig plist sample to deploy this scheduled scan config
 
 #### For JamF and other third-party MDMs
 
-Use the following plist sample for JamF and other third-party MDM solutions.
+The following plist sample configures the same daily quick scan and weekly full scan settings for JamF and other third-party MDM solutions. Save this content as `com.microsoft.wdav.plist`.
 
 ``` XML
 <?xml version="1.0" encoding="UTF-8"?> 
@@ -203,11 +203,11 @@ In the results, you should be able to see [managed].
 
 In this hourly, daily, and weekly scheduled scan example, an hourly quick scan runs every 6 hours, a daily quick scan is set to run at 885 minutes after midnight (2:45 p.m.), and a weekly full scan runs on Wednesdays at 880 minutes after midnight (2:40 p.m.).
 
-Open a text editor and use the Intune mobileconfig and JamF plist examples in this section as a guide for your own scheduled scan file.
+Open a text editor and use the [Intune mobileconfig](#for-intune-1) and [JamF plist](#for-jamf-and-other-third-party-mdms-1) examples that follow as a guide for your own scheduled scan file.
 
 #### For Intune:
 
-Use the following mobileconfig plist sample to deploy this scheduled scan configuration through Intune.
+The following mobileconfig plist sample packages the hourly, daily, and weekly Defender scheduled scan settings into a complete Intune configuration profile. Use this sample to deploy the scheduled scan configuration through Intune.
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?> 
@@ -291,7 +291,7 @@ Use the following mobileconfig plist sample to deploy this scheduled scan config
 
 #### For JamF and other third-party MDMs
 
-Use the following plist sample for JamF and other third-party MDM solutions.
+The following plist sample configures the same hourly, daily, and weekly scheduled scan settings for JamF and other third-party MDM solutions. Save this content as `com.microsoft.wdav.plist`.
 
 ```XML
     <?xml version="1.0" encoding="UTF-8"?> 
@@ -334,7 +334,7 @@ Use the following plist sample for JamF and other third-party MDM solutions.
 
 ### Upload the plist file to Jamf Pro
 
-To upload the scheduled scan plist configuration to Jamf Pro, complete the following steps:
+Use these steps to upload either of the JamF plist examples from [Example 1](#example-1-schedule-a-daily-quick-scan-and-weekly-full-scan-using-a-plist) or [Example 2](#example-2-schedule-an-hourly-quick-scan-a-daily-quick-scan-and-weekly-full-scan-using-a-plist) to Jamf Pro:
 
 1. Go to **Computers > Configuration Profiles.**
 
@@ -357,7 +357,9 @@ To upload the scheduled scan plist configuration to Jamf Pro, complete the follo
 <a name="option-3-configure-scheduled-scans-through-cli-tool"></a>
 ### Configure scheduled scans using the mdatp CLI
 
-To enable scheduled scan feature:
+The Microsoft Defender for Endpoint command-line tool (`mdatp`) provides commands to configure scheduled scans directly from the terminal.
+
+To enable the scheduled scan feature:
 
 |Version|Command|
 |---|---|
@@ -387,7 +389,7 @@ To schedule weekly scans:
 
 :::image type="content" source="media/schedule-scans-mac/schedule-scan-pic3.png" alt-text="Screenshot of schedule weekly scan.":::
 
-For other configuration options:
+You can also configure definition updates and low-priority threading for scheduled scans:
 
 - To check for definitions update before scheduled scans:
 
@@ -399,9 +401,7 @@ For other configuration options:
 
 ### Check that the scheduled scan ran
 
-Use the following command:
-
-`mdatp scan list`
+To list completed scheduled scans and their results, run `mdatp scan list`:
 
 :::image type="content" source="media/schedule-scans-mac/schedule-scan-pic4.png" alt-text="Screenshot of schedule ran.":::`\<snip\>`
 

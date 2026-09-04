@@ -25,7 +25,7 @@ Tampering is the general term used to describe attackers attempts to impair the 
 
 ## Organization wide tamper resiliency is built on Zero Trust
 
-The foundation for defending against tampering is following a [Zero Trust](/windows/security/zero-trust-windows-device-health) model.
+The foundation for defending against tampering is following a [Zero Trust](/windows/security/book/security-foundation) model.
 
 - Follow the best practice of least privilege. See [Access control overview for Windows](/windows/security/identity-protection/access-control/access-control).
 - Configure [Conditional Access policies](/azure/active-directory/conditional-access/overview) to keep untrusted users and devices isolated.
@@ -38,7 +38,7 @@ In order to provide an effective defense against tampering, devices must be heal
 
 > [!NOTE]
 > On Windows devices, Microsoft Defender Antivirus can be managed by using Group Policy, Windows Management Instrumentation (WMI), and PowerShell cmdlets. However, those methods are more susceptible to tampering than by using Microsoft Intune, Configuration Manager, or Microsoft Defender for Endpoint Security Configuration Management.
-> If you're using Group Policy, we recommend [disabling local overrides for Microsoft Defender Antivirus settings](configure-local-policy-overrides-microsoft-defender-antivirus.md#configure-local-overrides-for-microsoft-defender-antivirus-settings) and [disabling local list merging](configure-local-policy-overrides-microsoft-defender-antivirus.md#configure-how-locally-and-globally-defined-threat-remediation-and-exclusions-lists-are-merged).
+> If you're using Group Policy, we recommend [disabling local overrides for Microsoft Defender Antivirus settings](configure-local-policy-overrides-microsoft-defender-antivirus.md#configure-local-overrides-for-microsoft-defender-antivirus-settings-using-group-policy) and [disabling local list merging](configure-local-policy-overrides-microsoft-defender-antivirus.md#configure-how-locally-and-globally-defined-threat-remediation-and-exclusions-lists-are-merged).
 
 You can view health status for [Microsoft Defender Antivirus](device-health-microsoft-defender-antivirus-health.md) health and [sensors](device-health-sensor-health-os.md) in the [device health reports in Microsoft Defender for Endpoint](device-health-reports.md).
 
@@ -51,7 +51,7 @@ Attackers use various tampering techniques to disable Microsoft Defender for End
 | [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) | Windows | - Terminating/suspending processes<br/>- Stopping/pausing/suspending services<br/>- Modifying registry settings including exclusions<br/>- Manipulating/hijacking DLLs<br/>- Manipulation/modification of the file system<br/>- Agent integrity |
 | [Tamper protection](tamperprotection-macos.md) | Mac | - Terminating/suspending processes<br/>- Manipulation/modification of the file system<br/>- Agent integrity|
 | [Attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md) | Windows | Kernel drivers (see [Block abuse of exploited vulnerable signed drivers (Device)](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers-device))|
-| [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-operational-guide) (WDAC) | Windows | Kernel drivers (see [Microsoft vulnerable driver block list](/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules))|
+| [Windows Defender Application Control](/windows/security/application-security/application-control/app-control-for-business/operations/appcontrol-operational-guide) (WDAC) | Windows | Kernel drivers (see [Microsoft vulnerable driver block list](/windows/security/application-security/application-control/app-control-for-business/design/microsoft-recommended-driver-block-rules))|
 
 
 ## Understanding the different ways to prevent driver based tampering on Windows
@@ -66,11 +66,11 @@ Microsoft provides several ways to keep devices well protected and up to date ag
 
 The block list is updated with each new major release of Windows, typically 1-2 times per year. Microsoft will occasionally publish future updates through regular Windows servicing. With Windows 11 2022 update, the vulnerable driver block list is enabled by default for all devices, but requires either memory integrity (also known as hypervisor-protected code integrity or HVCI), Smart App Control, or S mode to be active.
 
-See [Microsoft vulnerable driver block list](/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules#microsoft-vulnerable-driver-blocklist).
+See [Microsoft vulnerable driver block list](/windows/security/application-security/application-control/app-control-for-business/design/microsoft-recommended-driver-block-rules#microsoft-vulnerable-driver-blocklist).
 
 For devices that don't meet those requirements, this list of drivers can be blocked by using Windows Defender Application Control policy.
 
-See [Vulnerable Driver block list XML](/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules#microsoft-vulnerable-driver-blocklist).
+See [Vulnerable Driver block list XML](/windows/security/application-security/application-control/app-control-for-business/design/microsoft-recommended-driver-block-rules#microsoft-vulnerable-driver-blocklist).
 
 ### Faster updates - Block exploited vulnerable and signed drivers ASR rule
 
@@ -80,7 +80,7 @@ For more information, see [Block abuse of exploited vulnerable signed drivers (D
 
 ### Block other drivers - Windows Defender Application Control (WDAC)
 
-Attackers might attempt to use drivers that aren't blocked by either the recommended driver block list or an ASR rule. In this case, customers can protect themselves by using [WDAC to create a policy to block](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-operational-guide)
+Attackers might attempt to use drivers that aren't blocked by either the recommended driver block list or an ASR rule. In this case, customers can protect themselves by using [WDAC to create a policy to block](/windows/security/application-security/application-control/app-control-for-business/operations/appcontrol-operational-guide)
 
 WDAC also provides an audit mode to help understand the impact of applying the policy in block mode to avoid accidentally impacting legitimate use.
 
@@ -126,4 +126,4 @@ When tampering is detected, an alert is raised. Some of the alert titles for tam
 
 If the [Block abuse of exploited vulnerable signed drivers (Device)](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers) attack surface reduction rule is triggered, the event is viewable in the [ASR Report](attack-surface-reduction-rules-report.md) and in [Advanced Hunting](attack-surface-reduction-rules-monitor.md#asr-rule-events-in-advanced-hunting).
 
-If [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide) (WDAC) is enabled, the [block and audit activity can be seen in Advanced Hunting](/windows/security/threat-protection/windows-defender-application-control/querying-application-control-events-centrally-using-advanced-hunting).
+If [Windows Defender Application Control](/windows/security/application-security/application-control/app-control-for-business/deployment/appcontrol-deployment-guide) (WDAC) is enabled, the [block and audit activity can be seen in Advanced Hunting](/windows/security/application-security/application-control/app-control-for-business/operations/querying-application-control-events-centrally-using-advanced-hunting).

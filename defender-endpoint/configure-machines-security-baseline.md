@@ -10,13 +10,13 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 06/17/2026
+ms.date: 07/03/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Increase compliance with the Microsoft Defender for Endpoint security baseline
 
@@ -24,7 +24,7 @@ ms.custom: msecd-doc-authoring-1014
 
 Security baselines ensure that security features are configured according to guidance from both security experts and expert Windows system administrators. When deployed, the Defender for Endpoint security baseline sets Defender for Endpoint security controls to provide optimal protection.
 
-To understand security baselines and how they're assigned on Intune using configuration profiles, [Security baselines FAQ](/intune/intune-service/protect/security-baselines#q--a).
+To understand security baselines and how they're assigned in Intune using configuration profiles, see [Security baselines FAQ](/intune/intune-service/protect/security-baselines#q--a).
 
 Before you can deploy and track compliance to security baselines:
 
@@ -33,7 +33,7 @@ Before you can deploy and track compliance to security baselines:
 
 ## Compare the Microsoft Defender for Endpoint and the Windows Intune security baselines
 
-The Windows Intune security baseline provides a comprehensive set of recommended settings needed to securely configure devices running Windows, including browser settings, PowerShell settings, and settings for some security features like Microsoft Defender Antivirus. In contrast, the Defender for Endpoint baseline provides settings that optimize all the security controls in the Defender for Endpoint stack, including settings for endpoint detection and response (EDR) and settings also found in the Windows Intune security baseline. For more information about each baseline, see:
+The Windows Intune security baseline provides a comprehensive set of recommended settings needed to securely configure devices running Windows, including browser settings, PowerShell settings, and settings for some security features like Microsoft Defender Antivirus. In contrast, the Defender for Endpoint baseline provides settings that optimize all the security controls in the Defender for Endpoint stack, including settings for endpoint detection and response (EDR) and settings also found in the Windows Intune security baseline. For more information about the Windows Intune security baseline and the Defender for Endpoint baseline, see:
 
 - [Windows security baseline settings for Intune](/intune/intune-service/protect/security-baseline-settings-mdm-all)
 - [Microsoft Defender for Endpoint baseline settings for Intune](/intune/intune-service/protect/security-baseline-settings-defender)

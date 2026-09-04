@@ -9,12 +9,12 @@ ms.collection:
 - tier1
 - usx-security
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Set up Microsoft Defender multitenant management
@@ -25,7 +25,7 @@ This article describes the steps you need to take to start using multitenant man
 2. [Verify your tenant access](#verify-your-tenant-access)
 3. [Set up Microsoft Defender multitenant management](#set-up-multitenant-management)
 
->[!Note]
+> [!NOTE]
 >- In multitenant management, interactions between the multitenant user and the managed tenants could involve accessing data and managing configurations. The ability to undertake these actions is determined by the permissions a managed tenant has granted the multitenant user.
 >- [Data privacy](/defender-xdr/data-privacy), [role-based access control (RBAC)](/defender-xdr/m365d-permissions) and [Licensing](/defender-xdr/prerequisites#licensing-requirements) are respected by Microsoft Defender multi-tenant management.
 
@@ -43,7 +43,6 @@ The following table lists the basic requirements you need to use multitenant man
 
 We recommend that you set up [multifactor authentication trust](/azure/active-directory/external-identities/authentication-conditional-access) for each tenant to avoid missing data in Microsoft Defender multitenant management.
 
-
 ## Verify your tenant access
 
 In order to view and manage the data you have access to in Microsoft Defender multitenant management, you need to ensure you have the necessary permissions. For each tenant you want to view and manage, you need to either:
@@ -52,6 +51,8 @@ In order to view and manage the data you have access to in Microsoft Defender mu
 - [Verify your tenant access with GDAP](#verify-your-tenant-access-with-gdap)
 
 ### Verify your tenant access with Microsoft Entra B2B
+
+Perform the following steps to verify your tenant access with Microsoft Entra B2B:
 
 1. Go to [My account](https://myaccount.microsoft.com/organizations).
 2. Under **Organizations > Other organizations you collaborate with** see the list of organizations you have guest access to.
@@ -81,7 +82,7 @@ The first time you use Microsoft Defender multitenant management, you need setup
 
 3. Choose the tenants you want to manage and select **Add**
 
-> [!Note]
+> [!NOTE]
 > The Microsoft Defender multitenant view currently has a limit of 100 target tenants.
 
 The features available in multitenant management now appear on the navigation bar and you're ready to view and manage security data across all your tenants.
@@ -91,10 +92,8 @@ The features available in multitenant management now appear on the navigation ba
 <a name="next-step"></a>
 ## Related content
 
-Use these articles to get started with Microsoft Defender multitenant management:
-
-- [View and manage incidents and alerts](mto-incidents-alerts.md)
-- [Advanced hunting](mto-advanced-hunting.md)
-- [Multitenant devices](mto-tenant-devices.md)
-- [Vulnerability management](mto-dashboard.md)
-- [Manage tenants](mto-tenants.md)
+- [View and manage incidents and alerts in Microsoft Defender multitenant management](mto-incidents-alerts.md)
+- [Advanced hunting in Microsoft Defender multitenant management](mto-advanced-hunting.md)
+- [Devices in multitenant management](mto-tenant-devices.md)
+- [Vulnerability management in multi-tenant management](mto-dashboard.md)
+- [Manage tenants with Microsoft Defender multitenant management](mto-tenants.md)

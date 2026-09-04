@@ -254,6 +254,16 @@ The findings for this one scan run, scoped to that scan's branch. Includes:
 > [!NOTE]
 > The main Security recommendations tab always shows the latest scan per branch. The drawer is the only place where you can see exactly what a specific past scan found at the moment it ran. This detail is useful for audits, incident review, or comparing two consecutive runs on the same branch.
 
+#### Cancel a scan
+
+From the **Scans** tab, select the queued or running scan that you want to cancel. In the scan details page, select **Cancel scan**.
+
+The confirmation dialog shows the scan start time, the user who triggered the scan, tokens already consumed, and scan duration.
+
+Select a cancellation reason, optionally add more details, and then select Confirm.
+
+Canceling a scan does not refund tokens that have already been consumed. During a scan, MDASH makes live LLM calls that consume tokens as work is processed. If you cancel a scan that is already running, MDASH stops scheduling new work, but you are still charged for any tokens consumed before the cancellation takes effect. Canceling a scan can prevent additional token consumption from future work, but it does not refund tokens that have already been used.
+
 ## Quick reference: which view to use when
 
 | If you want to… | Go to |
@@ -267,6 +277,7 @@ The findings for this one scan run, scoped to that scan's branch. Includes:
 | See what a specific past scan found (point-in-time) | Scans tab → select a row to open the drawer |
 | Tell remote scans apart from CLI runs | Any tab → Source / Run-type labels and filters |
 | See a run's token cost and origin | Scans tab → open a run → Summary |
+|Cancel a queued or running scan|Scans tab → select a row to open the drawer -> Select Cancel scan|
 
 ## Data scope and freshness
 

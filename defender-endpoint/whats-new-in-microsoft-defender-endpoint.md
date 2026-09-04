@@ -26,13 +26,36 @@ For recent releases of Microsoft Defender for Endpoint, including build numbers,
 
 Learn more about [Preview features](/defender-xdr/preview).
 
-## July
+## September 2026
 
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
+|Feature |[Memory scan for Linux](linux-preferences.md#advanced-scan-options) |Preview |Memory Scan extends Microsoft Defender for Endpoint protection capabilities on Linux by enabling inspection of process memory for known malicious behaviours and memory-resident threats, providing an additional layer of protection against advanced attacks. Memory-resident threats are increasingly challenging for security teams because they can execute directly in memory with little or no footprint on disk, making them more difficult to detect using traditional file-based scanning techniques. Memory Scan helps improve visibility into these threats and strengthens protection against sophisticated attack methods such as in-memory malware and malicious code injection.<br><br>**Available in Defender version 101.26071.0005 or later in Insiders-slow channel.** |
+|Feature |[Microsoft Defender for Endpoint plug-in support for WSL containers (WSLc)](/defender-endpoint/mde-plugin-wsl) |Preview |Extend Microsoft Defender for Endpoint protection to workloads running in WSL containers (WSLc). Gain visibility into WSL container activity through device inventory, alerts, incidents, device timeline, and Advanced Hunting, helping security teams investigate and respond to threats across both Windows and Linux workloads.<br><br>**Available in Public Preview. To enroll, complete the [registration form](https://aka.ms/WSLcpublicpreviewregistration).** |
+
+
+## August 2026
+
+|Type  |Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|-------------|
+|Feature |[Tamper protection in audit mode for Linux](linux-tamper-protection-audit-mode.md) |Preview |Detects and alerts on unauthorized modifications to Defender configurations, files, directories, processes, and services, including attempts by root users. Tampering activity is surfaced through alerts, the device timeline, and Advanced Hunting without blocking the activity.<br><br>**Available in Microsoft Defender for Endpoint on Linux version 101.26072.0004 or later in Insiders-slow channel.** |
+|Feature |[Antivirus audit mode for Linux](linux-preferences.md#antivirus-antimalware-and-edr-settings-in-defender-for-endpoint-on-linux) |Preview |Provides real-time malware detection and alerting without automatically quarantining files or terminating processes. This enables organizations to evaluate Defender detection efficacy and performance on sensitive workloads before enabling enforcement.<br><br>**Available in Microsoft Defender for Endpoint on Linux version 101.26062.0007 or later.** |
+|Feature |[Offboarding API support for Linux](api/offboard-machine-api.md) |GA |Enables organizations to automate the offboarding of Linux servers from Microsoft Defender for Endpoint through the Offboard machine API, simplifying device lifecycle management at scale.<br><br>**Available in Microsoft Defender for Endpoint on Linux version 101.26062.0007 or later.** |
+|Release - macOS |Build 101.26062.0012 |GA |Release version 20.126062.12.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--august-2026--101260620012).|
+|Feature |[Vulnerability assessment for Microsoft Store applications](/defender-vulnerability-management/tvm-software-inventory#microsoft-store-applications) |Preview |You can now monitor vulnerabilities on devices running Microsoft Store applications, including Microsoft Teams, Mozilla Firefox, WhatsApp, Slack, Dropbox, DuckDuckGo, Dell Command, HP Smart, HP Support Assistant, Dell SupportAssist for Home PCs, and NVIDIA Control Panel (see [Microsoft Store applications](/defender-vulnerability-management/tvm-software-inventory#microsoft-store-applications) for the full list). Use the **Software evidence** area in the software page to view the file path for the vulnerable application, along with a suggested query showing the vulnerable app, version, and file location. |
+|Release - macOS |Build 101.26062.0011 |GA |Release version 20.126062.11.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--august-2026--101260620011).|
+
+
+## July 2026
+
+|Type  |Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|-------------|
+|Release - macOS |Build 101.26062.0009 |GA |Release version 20.126062.9.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--july-2026--101260620009).|
 |Release - iOS |Build 1.1.78290102 |GA |Release version 1.1.78290102 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#ios--july-2026--platform-version-1178290102). |
 | Feature | [AI agent runtime protection updates](ai-agent-runtime-protection-overview.md) | Preview | AI agent runtime protection includes these enhancements:<br><br>- Vendor-supported agent event interfaces now work with standard platform and engine update channels, so no Beta channel configuration is required. Agent-native event inspection now supports Codex CLI and the GitHub Copilot app.<br>- Network inspection is now supported for agents that don't expose vendor-supported event interfaces, including OpenClaw and similar Node.js-based Claw agents.<br><br>For more information, see [AI agent runtime protection with Microsoft Defender for Endpoint](ai-agent-runtime-protection-overview.md). |
 |Release - macOS |Build 101.26052.0016 |GA |Release version 20.126052.16.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--july-2026--101260520016).|
+|Feature |[Defender Deployment Tool for Linux](linux-install-with-defender-deployment-tool.md) |GA |Available from Defender for Endpoint on Linux version 101.26042.0011 and later. <br/><br/>The Defender Deployment Tool for Linux simplifies deployment by combining installation, onboarding, upgrades, and uninstallation into a single workflow. The tool automates prerequisite validation, supports custom installation paths, enables deployment of specific Defender versions from preferred update channels, and works seamlessly in environments that use local repositories. <br/><br/> In addition to a simplified deployment experience, customers can now gain complete visibility into deployment progress through Device Timeline integration, providing step-by-step installation, upgrade, and onboarding status, Advanced Hunting queries for fleet-wide deployment monitoring, and detailed error reporting, including deployment stage, status, exit code, and failure reason to simplify troubleshooting. These capabilities help administrators quickly identify deployment issues, track onboarding progress, and understand deployment outcomes across their Linux estate. Available from Defender version 101.26042.0011 onwards.| 
+
 
 ## June 2026
 

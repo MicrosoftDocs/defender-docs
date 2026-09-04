@@ -1,7 +1,9 @@
 ---
-title: Integrate Wiz data connector in Microsoft Security Exposure Management
+title: Wiz data connector in Microsoft Security Exposure Management
 description: Learn how to set up the Wiz data connector in Microsoft Security Exposure Management.
 ms.topic: overview
+ms.author: dlanger
+author: dlanger
 ms.date: 08/27/2025
 ---
 

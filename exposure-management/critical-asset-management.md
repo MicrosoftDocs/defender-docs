@@ -2,6 +2,8 @@
 title: Overview of critical asset management in Microsoft Security Exposure Management
 description: Learn about critical asset management in Microsoft Security Exposure Management.
 ms.topic: overview
+ms.author: dlanger
+author: dlanger
 ms.date: 07/30/2025
 ---
 
@@ -11,6 +13,9 @@ ms.date: 07/30/2025
 
 - Microsoft Defender automatically detects and categorizes critical assets, streamlining identification and enabling immediate protection.  
 - Your security team can prioritize security investigations, posture recommendations, and remediation steps to focus on critical assets and systems first.
+
+> [!TIP]
+> If you arrived here from an alert or incident investigation in Microsoft Defender XDR, critical asset information tells you whether the affected device, identity, or cloud resource is classified as business-critical. Assets marked as critical appear with a crown indicator in the Defender portal. To view or adjust classifications, go to **Exposure management** > **Critical assets** in the [Microsoft Defender portal](https://security.microsoft.com). To manage classifications, see [Review and classify critical assets](classify-critical-assets.md). If you manage cloud assets in Microsoft Defender for Cloud, see [Critical assets protection in Microsoft Defender for Cloud](/azure/defender-for-cloud/critical-assets-protection).
 
 ## Predefined classifications
 
@@ -49,15 +54,7 @@ In another example, on the [**Attack surface map**](enterprise-exposure-map.md),
 
 ## Working with asset classifications
 
-You can work with critical asset settings as follows:
-
-- **Create custom classifications**: You can create new critical asset classifications for devices, identities, and cloud resources from any domain (Azure, AWS, GCP, or on-premises), tailored to your organization.
-  - You use the query builder to define a new classification. For example, you might build a query to define devices with a specific naming convention as critical, or cloud resources with specific tags as critical.
-  - Creating critical asset classification queries is also useful for limited cases where not all assets of interest are identified across the unified inventory.
-- **Add assets to classifications**: You can manually add assets from any domain to critical asset classifications in the unified asset management experience.
-- **Modify criticality levels**: You can choose to edit criticality levels according to your organization's risk profile across all asset types.
-- **Edit custom classifications**: You can edit, delete, and turn off custom classifications. Predefined classifications can't be modified. The "turn off" rule functionality is available for predefined queries. However, it might not be visible to some users due to specific issues.
-- **Third-party data integration**: Assets discovered via third-party connectors (such as ServiceNow CMDB) can be automatically tagged as critical if they meet certain criteria, enhancing critical asset identification across the unified inventory.
+You can create custom asset classifications, add assets manually, modify criticality levels, and edit or turn off custom classifications. Third-party connector data can also trigger automatic critical asset tagging. For step-by-step instructions, see [Review and classify critical assets](classify-critical-assets.md).
 
 ## Reviewing critical assets
 
@@ -74,4 +71,7 @@ The Critical Asset Protection initiative helps prioritize business-critical syst
 
 ## Next steps
 
-[Classify critical assets](classify-critical-assets.md).
+- [Review and classify critical assets](classify-critical-assets.md)
+- [Predefined classifications](predefined-classification-rules-and-levels.md)
+- [Critical Asset Protection initiative](initiatives-list.md)
+- [Critical assets protection in Microsoft Defender for Cloud](/azure/defender-for-cloud/critical-assets-protection)

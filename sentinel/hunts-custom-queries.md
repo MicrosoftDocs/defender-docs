@@ -1,18 +1,18 @@
 ---
 title: Create custom hunting queries in Microsoft Sentinel
 titleSuffix: Microsoft Sentinel
-description: Learn how to create a custom query to hunt for threats. 
+description: Create custom hunting queries in Microsoft Sentinel to proactively investigate suspicious activity across your data sources. Learn how to write, clone, and edit KQL-based hunting queries for threat investigation.
 ms.author: monaberdugo 
 author: mberdugo 
 ms.reviewer: efratka
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security analyst, I want to create and edit custom hunting queries so that I can proactively identify and mitigate security threats specific to my organization's environment.
@@ -27,7 +27,7 @@ Hunt for security threats across your organization's data sources with custom hu
 
 ## Create a new query
 
-In Microsoft Sentinel, create a custom hunting query from the **Hunting** > **Queries** tab.
+To create a custom hunting query, first open **Hunting** in Microsoft Sentinel, and then select the **Queries** tab.
 
 1. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Microsoft Sentinel** > **Threat management** > **Hunting**. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), under **Threat management**  select **Hunting**.
 
@@ -73,7 +73,7 @@ Clone a custom or built-in query and edit it as needed.
 
 ## Edit an existing custom query
 
-Only queries that come from a custom content source can be edited. Queries from other content sources must be edited in their original content source.
+Only queries that come from a custom content source can be edited. Queries from other content sources, such as content hub solutions or repositories, must be edited in the content source where the query was originally created.
 
 1. From the **Hunting** > **Queries** tab, select the hunting query you want to change. 
 

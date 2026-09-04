@@ -5,12 +5,12 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: idpelleg
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security engineer, I want to integrate and synchronize alerts from cloud security tools into Microsoft Sentinel so that analysts can efficiently monitor, analyze, and respond to security incidents across my organization's hybrid and multicloud environments.
 
@@ -52,7 +52,7 @@ ms.custom: msecd-doc-authoring-1014
 
 - You'll need to enable at least one plan within Microsoft Defender for Cloud for each subscription where you want to enable the connector. To enable Microsoft Defender plans on a subscription, you must have the **Security Admin** role for that subscription.
 
-- You'll need the `SecurityInsights` resource provider to be registered for each subscription where you want to enable the connector. Review the guidance on the [resource provider registration status](/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider) and the ways to register it.
+- You'll need the `SecurityInsights` resource provider to be registered for each subscription where you want to enable the connector. Review the guidance on the [resource provider registration status](/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider) and the ways to register the `SecurityInsights` resource provider.
 
 ## Connect to Microsoft Defender for Cloud
 
@@ -76,7 +76,7 @@ To connect Microsoft Defender for Cloud to Microsoft Sentinel and start ingestin
 
 1. In the **Microsoft Defender plans** column of the list, you can see if Microsoft Defender plans are enabled on your subscription, which is a [connector prerequisite](#prerequisites).
 
-    The value for each subscription in this column is either blank, meaning no Defender plans are enabled, **All enabled**, or **Some enabled**. Those that say **Some enabled** also have an **Enable all** link you can select, that takes you to your Microsoft Defender for Cloud configuration dashboard for that subscription, where you can choose Defender plans to enable.
+    The value for each subscription in this column is either blank, meaning no Defender plans are enabled, **All enabled**, or **Some enabled**. Subscriptions whose value is **Some enabled** also have an **Enable all** link you can select, that takes you to your Microsoft Defender for Cloud configuration dashboard for that subscription, where you can choose Defender plans to enable.
 
     The **Enable Microsoft Defender for all subscriptions** link button on the bar above the list takes you to your Microsoft Defender for Cloud Getting Started page, where you can choose on which subscriptions to enable Microsoft Defender for Cloud altogether. For example:
 
@@ -92,7 +92,7 @@ To connect Microsoft Defender for Cloud to Microsoft Sentinel and start ingestin
 
 ## Find and analyze your data
 
-Security alerts are stored in the *SecurityAlert* table in your Log Analytics workspace. To query security alerts in Log Analytics, use the following Kusto query as a starting point:
+Security alerts are stored in the *SecurityAlert* table in your Log Analytics workspace. To query Defender for Cloud security alerts in Log Analytics, use the following Kusto query to retrieve alerts where the product name is Azure Security Center:
 
 ```kusto
 SecurityAlert 
@@ -105,8 +105,8 @@ On the **Microsoft Defender for Cloud** connector page in Microsoft Sentinel, se
 
 ## Related content
 
-In this article, you learned how to connect Microsoft Defender for Cloud to Microsoft Sentinel and synchronize alerts between them. To learn more about Microsoft Sentinel, see the following articles:
+For more information about monitoring and detecting threats with Microsoft Sentinel, see the following articles:
 
-- Learn how to [get visibility into your data and potential threats](get-visibility.md).
+- [Get visibility into your data and potential threats](get-visibility.md).
 - Get started [detecting threats with Microsoft Sentinel](detect-threats-built-in.md).
 - Write your own rules to [detect threats](detect-threats-custom.md).

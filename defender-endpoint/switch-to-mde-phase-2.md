@@ -1,12 +1,12 @@
 ---
-title: Migrate to Microsoft Defender for Endpoint - Setup
+title: Set up Microsoft Defender for Endpoint during migration
 description: Move to Defender for Endpoint. Review the setup process, which includes installing Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 ms.collection:
   - m365-security
   - m365solution-migratetomdatp
@@ -15,7 +15,7 @@ ms.collection:
   - highpri
   - tier1
 ms.topic: how-to
-ms.custom: migrationguides, msecd-doc-authoring-1014
+ms.custom: migrationguides, msecd-doc-authoring-1016
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho, yongrhee
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -25,7 +25,7 @@ ai-usage: ai-assisted
 ---
 # Migrate to Microsoft Defender for Endpoint - Phase 2: Setup
 
-|[![Phase 1: Prepare your environment for migration to Defender for Endpoint.](media/phase-diagrams/prepare.png#lightbox)](switch-to-mde-phase-1.md)<br/>[Phase 1: Prepare](switch-to-mde-phase-1.md)|![Phase 2: Set up your Defender for Endpoint environment.](media/phase-diagrams/setup.png#lightbox)<br/>Phase 2: Set up|[![Phase 3: Onboard devices to Microsoft Defender for Endpoint.](media/phase-diagrams/onboard.png#lightbox)](switch-to-mde-phase-3.md)<br/>[Phase 3: Onboard](switch-to-mde-phase-3.md)|
+|[![Diagram of migration phase 1: prepare your environment for migration to Defender for Endpoint.](media/phase-diagrams/prepare.png#lightbox)](switch-to-mde-phase-1.md)<br/>[Phase 1: Prepare your environment](switch-to-mde-phase-1.md)|![Diagram of migration phase 2: set up your Defender for Endpoint environment.](media/phase-diagrams/setup.png#lightbox)<br/>Phase 2: Set up|[![Diagram of migration phase 3: onboard devices to Microsoft Defender for Endpoint.](media/phase-diagrams/onboard.png#lightbox)](switch-to-mde-phase-3.md)<br/>[Phase 3: Onboard devices to Defender for Endpoint](switch-to-mde-phase-3.md)|
 |---|---|---|
 ||*You're here!*||
 
@@ -79,7 +79,8 @@ In the exclusion-list step, you add Defender for Endpoint to the exclusion list 
 > [!IMPORTANT]
 > As a best practice, keep your organization's devices and endpoints up to date. Make sure to get the **[latest updates for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md)**, and keep your organization's operating systems and productivity apps up to date.
 
-## Step 3: Configure Defender for Endpoint
+<a name="step-3-configure-defender-for-endpoint"></a>
+## Step 3: Configure Defender for Endpoint onboarding and protection settings
 
 Configure your Defender for Endpoint capabilities before devices are onboarded.
 
@@ -93,7 +94,7 @@ Configure your Defender for Endpoint capabilities before devices are onboarded.
    |Screen|What it means|
    |---|---|
    |:::image type="content" source="media/mde-hangon-provisioning.png" alt-text="Screenshot showing message that says hang on because MDE isn't provisioned yet." lightbox="media/mde-hangon-provisioning.png":::|Defender for Endpoint isn't finished provisioning yet. You might have to wait a little while for the process to finish.|
-   |:::image type="content" source="media/device-inventory-empty.png" alt-text="Screenshot showing device inventory page with no device onboarded yet." lightbox="media/device-inventory-empty.png":::|Defender for Endpoint is provisioned. In this case, proceed to the next step.|
+   |:::image type="content" source="media/device-inventory-empty.png" alt-text="Screenshot showing device inventory page with no device onboarded yet." lightbox="media/device-inventory-empty.png":::|Defender for Endpoint is provisioned. In this case, proceed to step 2, Turn on tamper protection.|
 
 1. Turn on [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md). We recommend turning tamper protection on for your whole organization. You can do this task in the [Microsoft Defender portal](https://security.microsoft.com).
 
@@ -137,7 +138,7 @@ Configure your Defender for Endpoint capabilities before devices are onboarded.
    |---|---|
    |[Intune](/intune/intune-service/fundamentals/tutorial-walkthrough-endpoint-manager)|1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** \> **Configuration profiles**, and then select the profile type you want to configure. If you haven't yet created a **Device restrictions** profile type, or if you want to create a new one, see [Configure device restriction settings in Microsoft Intune](/intune/intune-service/configuration/device-restrictions-configure).<br/><br/>2. Select **Properties**, and then select **Configuration settings: Edit**<br/><br/>3. Expand **Microsoft Defender Antivirus**.<br/><br/>4. Enable **Cloud-delivered protection**.<br/><br/>5. In the **Prompt users before sample submission** dropdown, select **Send all samples automatically**.<br/><br/>6. In the **Detect potentially unwanted applications** dropdown, select **Enable** or **Audit**.<br/><br/>7. Select **Review + save**, and then choose **Save**. <br/><br/> **TIP**: For more information about Intune device profiles, including how to create and configure their settings, see [What are Microsoft Intune device profiles?](/intune/intune-service/configuration/device-profiles).|
    |[Configuration Manager](/intune/configmgr)|See [Create and deploy antimalware policies for Endpoint Protection in Configuration Manager](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies). <br/><br/> When you create and configure your antimalware policies, make sure to review the [real-time protection settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#real-time-protection-settings) and [enable block at first sight](configure-block-at-first-sight-microsoft-defender-antivirus.md).
-   |[Advanced Group Policy Management](/microsoft-desktop-optimization-pack/agpm/) <br/> or <br/> [Group Policy Management Console](/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus)|1. Go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus**.<br/><br/>2. Look for a policy called **Turn off Microsoft Defender Antivirus**.<br/><br/>3. Choose **Edit policy setting**, and make sure that policy is disabled. Disabling that policy enables Microsoft Defender Antivirus. (You might see *Windows Defender Antivirus* instead of *Microsoft Defender Antivirus* in some versions of Windows.)|
+   |[Advanced Group Policy Management](/microsoft-desktop-optimization-pack/agpm/) <br/> or <br/> [Group Policy Management Console](use-group-policy-microsoft-defender-antivirus.md)|1. Go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus**.<br/><br/>2. Look for a policy called **Turn off Microsoft Defender Antivirus**.<br/><br/>3. Choose **Edit policy setting**, and make sure that policy is disabled. Disabling that policy enables Microsoft Defender Antivirus. (You might see *Windows Defender Antivirus* instead of *Microsoft Defender Antivirus* in some versions of Windows.)|
    |Control Panel in Windows|Follow the guidance here: [Company Portal device setting requirements for Windows](/intune/intune-service/user-help/update-device-settings-windows). (You might see *Windows Defender Antivirus* instead of *Microsoft Defender Antivirus* in some versions of Windows.)|
 
    *If you have Defender for Endpoint Plan 1, your initial setup and configuration is complete. If you have Defender for Endpoint Plan 2, continue through steps 6-7.*
@@ -162,7 +163,8 @@ When configuring Microsoft Defender Antivirus exclusions, you add your existing 
 
 [Learn more about exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md).
 
-### Keep the following points about exclusions in mind
+<a name="keep-the-following-points-about-exclusions-in-mind"></a>
+### Important considerations for Microsoft Defender Antivirus exclusions
 
 When you add [exclusions to Microsoft Defender Antivirus scans](/defender-endpoint/microsoft-defender-antivirus-exclusions-configure), you should add path and process exclusions.
 

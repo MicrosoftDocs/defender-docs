@@ -4,7 +4,7 @@ description: Learn how Microsoft Defender Antivirus works alongside non-Microsof
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 07/02/2026
+ms.date: 08/21/2026
 ms.topic: how-to
 author: chrisda
 ms.author: chrisda
@@ -87,19 +87,20 @@ Whether Microsoft Defender Antivirus runs in active mode, passive mode, or is di
 - The version of Windows installed on an endpoint
 - Whether Microsoft Defender Antivirus is the primary antivirus/antimalware solution on the endpoint
 - Whether the endpoint is onboarded to Defender for Endpoint
+- Whether Smart App Control is enabled
 
 The following table summarizes the state of Microsoft Defender Antivirus in several scenarios.
 
-| Antivirus/antimalware solution | Onboarded to Defender for Endpoint? | Microsoft Defender Antivirus state | Smart App Control State |
+| Antivirus/antimalware solution | Onboarded to Defender for Endpoint? | Smart App Control State | Microsoft Defender Antivirus state |
 |---|---|---|---|
-| Microsoft Defender Antivirus | Yes | Active mode | N/A  |
-| Microsoft Defender Antivirus | No | Active mode | On, Evaluation, or Off |
-| A non-Microsoft antivirus/antimalware solution | Yes | Passive mode (automatically) | Evaluation or On|
-| A non-Microsoft antivirus/antimalware solution | No | Passive mode | Evaluation or On|
-| A non-Microsoft antivirus/antimalware solution | No | Disabled (automatically) | N/A or Off|
+| Microsoft Defender Antivirus | Yes | On, Evaluation, or Off | Active mode |
+| Microsoft Defender Antivirus | No | Off or Evaluation | Active mode |
+| Microsoft Defender Antivirus | No | On | Hybrid mode |
+| A non-Microsoft antivirus/antimalware solution | Yes or No | Evaluation or On | Passive mode |
+| A non-Microsoft antivirus/antimalware solution | No | Off | Disabled |
 
 > [!NOTE]
-> Smart App Control is a consumer-only product that's used on new Windows 11 installs. It can run alongside your antivirus software and block apps that are considered to be malicious or untrusted. [Learn more about Smart App Control](https://support.microsoft.com/topic/what-is-smart-app-control-285ea03d-fa88-4d56-882e-6698afdb7003).
+> Smart App Control is a feature on Windows 11. It can block apps that are considered to be malicious or untrusted. [Learn more about Smart App Control](https://support.microsoft.com/Windows/Security/Threat-Malware-Protection/smart-app-control-frequently-asked-questions).
 
 ## Windows Server and passive mode
 
@@ -172,7 +173,7 @@ Defender for Endpoint affects whether Microsoft Defender Antivirus can run in pa
 | [File scanning and detection information](review-scan-results-microsoft-defender-antivirus.md) | Yes | Yes <br/>[See note 2: scan scheduling in passive mode](#notes-about-protection-states) | No |
 | [Threat remediation](configure-remediation-microsoft-defender-antivirus.md) | Yes |[See note 3: threat remediation in passive mode](#notes-about-protection-states) | No |
 | [Security intelligence updates](microsoft-defender-antivirus-updates.md) | Yes | Yes <br/>[See note 4: security intelligence updates in passive mode](#notes-about-protection-states) | No |
-| [Data Loss Prevention](/Microsoft-365/compliance/endpoint-dlp-learn-about) | Yes | Yes | No |
+| [Data Loss Prevention](/purview/endpoint-dlp-learn-about) | Yes | Yes | No |
 | [Controlled folder access (CFA)](controlled-folder-access-overview.md) | Yes |No | No |
 | [Web content filtering](web-content-filtering.md) | Yes | [See note 5: web content filtering in passive mode](#notes-about-protection-states) | No |
 | [Device control](device-control-report.md) | Yes | Yes | No |
@@ -191,7 +192,7 @@ Defender for Endpoint affects whether Microsoft Defender Antivirus can run in pa
 
    1. "Start the scheduled scan only when computer is on but not in use" is set to "Not configured or enabled". A Windows Task Scheduler is created unless you set "Start the scheduled scan only when computer is on but not in use" to disabled.
 
-   1. "Turn on catch-up quick scan" is set to "Not configured or enabled". Every 30 days (default number of days) a quick catchup scan continues to occur unless "Turn on catch-up quick scan" is set to disabled. Scan tasks that are set up in Windows Task Scheduler continue to run according to their schedule. If you have scheduled tasks, you can remove them, if preferred.
+   1. "Turn on catch-up quick scan" is set to "enabled". Every 30 days (default number of days) a quick catchup scan continues to occur unless "Turn on catch-up quick scan" is set to disabled. Scan tasks that are set up in Windows Task Scheduler continue to run according to their schedule. If you have scheduled tasks, you can remove them, if preferred.
 
    1. "Turn on scan after security intelligence update" is set to "Not configured or enabled". By default, a quick scan occurs after a "Security Intelligence Update" unless you set "Turn on scan after security intelligence update" to disabled.
 
@@ -203,7 +204,7 @@ Defender for Endpoint affects whether Microsoft Defender Antivirus can run in pa
 
 > [!IMPORTANT]
 >
-> - [Endpoint data loss prevention](/microsoft-365/compliance/endpoint-dlp-learn-about) protection continues to operate normally when Microsoft Defender Antivirus is in either active or passive mode.
+> - [Endpoint data loss prevention](/purview/endpoint-dlp-learn-about) protection continues to operate normally when Microsoft Defender Antivirus is in either active or passive mode.
 > - Don't disable, stop, or modify any of the associated services that are used by Microsoft Defender Antivirus, Defender for Endpoint, or the Windows Security app. This recommendation includes the `wscsvc`, `SecurityHealthService`, `MsSense`, `Sense`, `WinDefend`, or `MsMpEng` services and processes. Manually modifying these services can cause severe instability on your devices and can make your network vulnerable. Disabling, stopping, or modifying those services can also cause problems when using non-Microsoft antivirus solutions and how their information is displayed in the [Windows Security app](microsoft-defender-security-center-antivirus.md).
 > - In Defender for Endpoint, you can turn EDR in block mode on, even if Microsoft Defender Antivirus isn't your primary antivirus solution. EDR in block mode detects and remediate malicious items that are found on the device (post breach). To learn more, see [EDR in block mode](edr-in-block-mode.md).
 > - In Defender for Endpoint, EDR response actions always operate in passive mode, even if EDR is not in block mode.
@@ -310,4 +311,4 @@ Microsoft Defender for Endpoint extends antivirus and endpoint protection to mac
 
 - [Microsoft Defender Antivirus on Windows clients](microsoft-defender-antivirus-windows.md)
 - [EDR in block mode](edr-in-block-mode.md)
-- [Learn about Endpoint data loss prevention](/microsoft-365/compliance/endpoint-dlp-learn-about)
+- [Learn about Endpoint data loss prevention](/purview/endpoint-dlp-learn-about)

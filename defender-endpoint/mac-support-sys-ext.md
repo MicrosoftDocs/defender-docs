@@ -151,7 +151,7 @@ If you're using Intune, see [Manage macOS software update policies in Intune](/i
 1. Select **General** > **Device Management** to review installed management profiles. The exact location can vary by macOS version.
 
    > [!NOTE]
-   > If you aren't MDM joined, you won't see **Profiles** as an option.  Contact your MDM support team to see why the **Profiles** option isn't visible. You should be able to see the different profiles such as **System Extensions**, **Accessibility**, **Background Services**, **Notifications**, **Microsoft AutoUpdate**, and so on, as shown in the preceding screenshot.
+   > If you aren't MDM joined, you won't see **Device Management** as an option. Contact your MDM support team to see why the **Device Management** option isn't visible. You should be able to see the different profiles, such as **System Extensions**, **Accessibility**, **Background Services**, **Notifications**, and **Microsoft AutoUpdate**, as shown in the preceding screenshot.
 
 If you're using JamF, use sudo jamf policy. For more information, see [Policy Management](https://docs.jamf.com/10.26.0/jamf-pro/administrator-guide/Policy_Management.html#:~:text=To%20manually%20trigger%20the%20policy%20using%20the%20jamf,pre-defined%20trigger%2C%20replace%20%3CtriggerName%3E%20with%20the%20appropriate%20value.).
 

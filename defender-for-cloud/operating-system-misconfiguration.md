@@ -2,22 +2,23 @@
 title: Operating system misconfigurations
 description: Apply security recommendations to harden operating system baseline configurations with Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 05/28/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to review and remediate operating system baseline misconfigurations so I can reduce risk across my environment.
 ai-usage: ai-assisted
 ---
 
 # Operating system misconfigurations
 
-Microsoft Defender for Cloud provides security recommendations to improve organizational security posture and reduce risk. An important element in risk reduction is to harden machines across your business environment.
+Microsoft Defender for Cloud provides security recommendations to improve organizational security posture and reduce risk. An important element in risk reduction is to harden machines across your business environment. This article explains how to assess and remediate operating system baseline misconfigurations using the Azure Machine Configuration extension and Defender Vulnerability Management.
 
 ## Assessment (Azure Machine Configuration extension)
 
-Defender for Cloud assesses and enforces best-practice security configurations using [built-in Azure policy initiatives](policy-reference.md). The [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) is Defender for Cloud's default initiative.
+Defender for Cloud uses [built-in Azure policy initiatives](policy-reference.md) to assess and apply security configurations. The default initiative is the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction).
 
 MCSB includes compute security baselines for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems.
 
-Operating system recommendations based on these MCSB compute security baselines aren't included as part of Defender for Cloud's [free foundational security posture capabilities](concept-cloud-security-posture-management.md#cspm-plans).
+These OS baseline recommendations aren't part of the [free security posture features](concept-cloud-security-posture-management.md#cspm-plans) in Defender for Cloud.
 
 - The recommendations are available when Defender for Servers Plan 2 is enabled.
 - When Defender for Servers Plan 2 is enabled, relevant Azure policies are enabled on the subscription:
@@ -49,14 +50,17 @@ Additional features provided by the machine configuration extension outside Defe
 
 ## Assessment (Defender Vulnerability Management)
 
-Microsoft Defender for Cloud integrates natively with Microsoft Defender for Endpoint and Microsoft Defender Vulnerability Management to provide machines with vulnerability protection, and endpoint detection and response (EDR) capabilities.
+Defender for Cloud integrates with Microsoft Defender for Endpoint and Microsoft Defender Vulnerability Management. This integration gives machines vulnerability protection and endpoint detection and response (EDR) features.
 
-As part of that integration, [security baselines assessment](/defender-vulnerability-management/tvm-security-baselines) is provided by Defender Vulnerability Management.
+As part of the integration with Defender Vulnerability Management, [security baselines assessment](/defender-vulnerability-management/tvm-security-baselines) is provided.
 
-- Security baselines assessment uses customized security baseline profiles.
-- Profiles are basically a template that consists of device configuration settings, and benchmarks against which to compare them.
+- Security baselines assessment uses custom baseline profiles.
+- Each profile is a template of device settings and benchmarks to compare them against.
 
-### Support
+<a name="support"></a>
+### Supported systems and requirements
+
+The following requirements and limitations apply to security baselines assessment:
 
 - Assessing devices against the Defender Vulnerability Management security baselines assessment profiles is currently available in public preview.
 - Defender for Servers Plan 2 must be enabled, and the Defender for Endpoint agent must be running on machines you want to assess.

@@ -14,7 +14,7 @@ ms.subservice: reference
 ms.custom:
   - api
   - sfi-ga-nochange
-ms.date: 11/13/2025
+ms.date: 08/11/2026
 appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Endpoint Plan 1 and Plan 2
@@ -30,13 +30,17 @@ Offboard device from Defender for Endpoint.
 
 ### Supported operating systems
 
-- This API is supported on Windows 11, Windows 10, version 1703 and later; Windows Server 2019 and later; Windows Server 2012 R2 and Windows Server 2016 when using the [new, unified agent for Defender for Endpoint](../update-agent-mma-windows.md#upgrade-to-the-new-agent-for-defender-for-endpoint).
+| Operating system | Supported versions |
+|---|---|
+| Windows client | Windows 11 and Windows 10, version 1703 and later |
+| Windows Server | Windows Server 2019 and later; Windows Server 2012 R2 and Windows Server 2016 when using the [new, unified agent for Defender for Endpoint](../update-agent-mma-windows.md#upgrade-to-the-new-agent-for-defender-for-endpoint) |
+| macOS | [macOS 14 and later](../microsoft-defender-endpoint-releases.md#macos-releases) |
+| Linux | [Supported Linux distributions](../mde-linux-prerequisites.md#supported-linux-distributions) |
 
 ## Limitations
 
 - Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
-- This API is not supported on macOS or Linux devices.
-- Running the offboarding API only stops the sensor service from running, but it does not remove the onboarding information from the registry like an offboarding script does.
+- On Windows devices, running the offboarding API only stops the sensor service. It doesn't remove the onboarding information from the registry like an offboarding script does.
 
 ## Permissions
 

@@ -35,7 +35,7 @@ Spam and malware signatures in the service are updated in real-time on a daily b
 ZAP addresses these issues by continually monitoring spam and malware signature updates in the service, and is seamless for users. ZAP finds and takes automated action on messages that are already in a user's mailbox. ZAP acts on delivered mail through two paths:
 
 - **Per-message reevaluation** rescans individual messages within **48 hours** of delivery.
-- **Campaign-based remediation** retroactively acts on messages later identified as part of a malicious campaign, **including messages older than 48 hours** — typically within a few hours to a few days after delivery.
+- **Campaign-based remediation** retroactively acts on messages later identified as part of a malicious campaign, **including messages older than 48 hours**. This remediation typically happens within a few hours to a few days after delivery.
 
 Users aren't notified when ZAP moves a message.
 

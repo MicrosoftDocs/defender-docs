@@ -1,16 +1,17 @@
 ---
 title: Detection exclusions in Microsoft Defender XDR
 description: Learn how to configure Microsoft Defender for Identity detection exclusions in Microsoft Defender XDR.
-ms.date: 06/15/2026
+ms.date: 08/10/2026
 ms.topic: how-to
 ms.reviewer: LiorShapiraa
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
+#customer intent: As a security administrator, I want to configure and migrate Defender for Identity detection exclusions so that I can reduce false positives and preserve tuning as detections move to Defender XDR.
 ---
 
-# Configure Defender for Identity detection exclusions in Microsoft Defender XDR
+# Configure Defender for Identity detection exclusions in Microsoft Defender
 
-This article explains how to configure [Microsoft Defender for Identity](/defender-for-identity) detection exclusions in [Microsoft Defender XDR](/microsoft-365/security/defender/overview-security-center).
+This article explains how to configure [Microsoft Defender for Identity](/defender-for-identity) detection exclusions in [Microsoft Defender](/microsoft-365/security/defender/overview-security-center).
 
 Microsoft Defender for Identity enables the exclusion of specific IP addresses, computers, domains, or users from a number of detections.
 
@@ -21,12 +22,15 @@ For example, a **DNS Reconnaissance** alert could be triggered by a security sca
 > 
 >- Among the most common domains with [Suspicious communication over DNS](other-alerts.md#suspicious-communication-over-dns-external-id-2031) alerts, we observed the domains that were most frequently excluded from the alert. These domains are added to the exclusions list by default, but you have the option to remove them.
 
+> [!IMPORTANT]
+> As Defender for Identity detections move to the Microsoft Defender XDR detection engine, existing detection exclusions don't automatically carry over. After a detection moves, previously configured exclusions stop applying, and alerts that were previously suppressed can reappear. To preserve your tuning, re-create equivalent tuning by using [alert tuning rules](/microsoft-365/security/defender/investigate-alerts#tune-an-alert) in the Microsoft Defender portal.
+
 ## How to add detection exclusions
 
 To add detection exclusions, complete the following steps.
 
 > [!NOTE]
-> When replacing an existing exclusion with an alert tuning rule, identify the detection associated with the excluded entity and map it to the corresponding detector in alert tuning. After creating the tuning rule, verify that the detector appears under Alert tuning in the Microsoft Defender portal to ensure that the intended alert scope is preserved.
+> When you replace an exclusion with an alert tuning rule, find the detection for the excluded entity. Then map it to the matching detector in alert tuning. After you create the rule, check that the detector shows under **Alert tuning** in the Microsoft Defender portal. This confirms that the alert scope is correct.
 
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/)
@@ -55,7 +59,7 @@ To configure exclusions for a specific detection rule, follow these steps:
        :::image type="content" source="media/detect-exclusions/detection-rule-details.png" alt-text="Screenshot of the detection rule details.":::
    
     1. To add an exclusion, select the **Excluded entities** button.
-    1. Choose the exclusion type. Different excluded entities are available for each rule. They include users, devices, domains, and IP addresses. In this example, the choices are **Exclude devices** and **Exclude IP addresses**.
+    1. Choose the exclusion type, such as users, devices, domains, or IP addresses. Each rule supports different entity types. In this example, the choices are **Exclude devices** and **Exclude IP addresses**.
 
         :::image type="content" source="media//detect-exclusions/exclude-devices-or-ip-addresses.png" alt-text="Screenshot showing the options to exclude devices or IP addresses.":::
 
@@ -71,17 +75,17 @@ To configure exclusions for a specific detection rule, follow these steps:
 
         :::image type="content" source="media//detect-exclusions/exclude-ip-addresses.png" alt-text="Screenshot showing the exclusion of IP addresses.":::
 
-    1. Once you've added exclusions, you can export the list or remove the exclusions by returning to the **Excluded entities** button. In this example, we've returned to **Exclude devices**. To export the list, select the down arrow button.
+    1. After you add exclusions, you can export or remove them. Return to the **Excluded entities** button. In this example, select **Exclude devices**. To export the list, select the down arrow button.
 
         :::image type="content" source="media//detect-exclusions/return-to-exclude-devices.png" alt-text="Screenshot showing how to return to exclude devices.":::
 
-    1. To delete an exclusion, select the exclusion and select the trash icon.
+    1. To delete an exclusion, select the exclusion and select the trash icon. Deleting an exclusion removes it immediately and may cause related alerts to resume.
 
         :::image type="content" source="media//detect-exclusions/delete-exclusion.png" alt-text="Screenshot showing how to delete an exclusion.":::
 
 ## Global excluded entities
 
-You can now also configure exclusions by **Global excluded entities**. Global exclusions allow you to define certain entities (IP addresses, subnets, devices, or domains) to be excluded across all of the detections Microsoft Defender for Identity has. So for example, if you exclude a device, the exclusion will only apply to those detections that have device identification as part of the detection.
+You can also configure exclusions by using **Global excluded entities**. Global exclusions let you exclude certain entities (IP addresses, subnets, devices, or domains) from all Defender for Identity detections. For example, if you exclude a device, the exclusion applies only to detections that use device identification.
 
 1. Select **Global excluded entities** to see the categories of entities that you can exclude.
 

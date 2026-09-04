@@ -1,6 +1,6 @@
 ---
 title: Alert classification for suspicious inbox manipulation rules
-description: Alert classification for suspicious inbox manipulation rules to review the alerts and take recommended actions to remediate the attack and protect your network.
+description: Investigate alerts for suspicious inbox manipulation rules, determine whether they are true or false positives, and follow recommended remediation steps for compromised accounts.
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
@@ -8,9 +8,9 @@ ms.localizationpriority: medium
 ms.collection:
   - m365-security
   - tier2
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender XDR
 ai-usage: ai-assisted
@@ -23,7 +23,7 @@ ai-usage: ai-assisted
 
 Threat actors can use compromised user accounts for many malicious purposes including reading emails in a user's inbox, creating inbox rules to forward emails to external accounts, deleting traces, and sending phishing mails. Malicious inbox rules are common during business email compromise (BEC) and phishing campaigns and it's important to monitor for them consistently.
 
-This playbook helps you investigate any incident related to suspicious inbox manipulation rules configured by attackers and take recommended actions to remediate the attack and protect your network. This playbook is for security teams, including security operations center (SOC) analysts and IT administrators who review, investigate, and grade the alerts. You can quickly grade alerts as either a true positive (TP) or a false positive (TP) and take recommended actions for the TP alerts to remediate the attack.
+This playbook helps you investigate any incident related to suspicious inbox manipulation rules configured by attackers and take recommended actions to remediate the attack and protect your network. This playbook is for security teams, including security operations center (SOC) analysts and IT administrators who review, investigate, and grade the alerts. You can quickly grade alerts as either a true positive (TP) or a false positive (FP) and take recommended actions for the TP alerts to remediate the attack.
 
 The results of using this playbook are:
 
@@ -76,7 +76,7 @@ Determine if the rules look suspicious according to the following rule parameter
 
    If there are filtering by keywords, then check whether the keywords seem suspicious to you (common scenarios are to filter emails related to the attacker activities, such as "phish," "spam," and "do not reply," among others).
 
-   If there is no filter at all, it might be suspicious as well.
+   If there is no filter at all, a rule with no filter might be suspicious as well.
 
 - Destination folder
 
@@ -100,7 +100,7 @@ Review the attributes of the IP address that performed the relevant event of rul
 
 ### 4. Investigate suspicious activity by the user prior to creating the rules
 
-You can review all user activities before rules were created, check for indicators of compromise, and investigate user actions that seem suspicious.
+You can review all user activities before the suspicious inbox rules were created, check for indicators of compromise, and investigate user actions that seem suspicious.
 
 For instance, for multiple failed logins, examine:
 
@@ -114,7 +114,7 @@ For instance, for multiple failed logins, examine:
 
 - Incident
 
-   Check whether the alert is associated with other alerts that indicate an incident. If so, then check whether the incident contains other true positive alerts.
+   Check whether the investigated alert is associated with other alerts that indicate an incident. If so, then check whether the incident contains other true positive alerts.
 
 ## Advanced hunting queries
 
@@ -187,4 +187,5 @@ After confirming a true positive alert, take the following actions to remediate 
 - [Suspicious email forwarding activity](alert-grading-playbook-email-forwarding.md)
 - [Suspicious inbox forwarding rules](alert-grading-playbook-inbox-forwarding-rules.md)
 - [Investigate alerts](investigate-alerts.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

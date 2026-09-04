@@ -1,16 +1,16 @@
 ---
 title: Connect SailPoint Identity Security Cloud to Microsoft Defender for Identity (Preview)
 description: Learn how to connect your SailPoint Identity Security Cloud app to Defender for Identity using the API connector.
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.reviewer: Himanch
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Connect SailPoint Identity Security Cloud to Microsoft Defender for Identity (Preview)
 
-This article describes how to connect Defender for Identity to your SailPoint Identity Security Cloud account. This connection helps you see and manage SailPoint identities. Before you start, review the [prerequisites](#prerequisites).
+This article describes how to connect SailPoint Identity Security Cloud to Microsoft Defender for Identity by using the API connector in the Microsoft Defender portal. After you set up this integration, security administrators can gain visibility into SailPoint-managed identities, investigate identity-related threats, and monitor account activity directly from Defender for Identity. Before you start, make sure you have the required SailPoint IdentityNow Admin role and the necessary Microsoft Entra or Defender XDR permissions. For full details, review the [prerequisites for connecting SailPoint](#prerequisites).
 
 ## Prerequisites 
 
@@ -20,7 +20,7 @@ Make sure you meet these requirements before you start:
 
 - The IdentityNow Admin role is required only to create an application.
 
-**Microsoft Entra and Defender XDR role-based access options**
+**Microsoft Entra and Defender role-based access options**
 
 Your account needs one of these access options to set up the connector:
 
@@ -30,7 +30,7 @@ Your account needs one of these access options to set up the connector:
 
     - Security Admin 
 
-- **Defender XDR Unified RBAC permission:** 
+- **Defender Unified RBAC permission:**
     - Core security settings (manage)
 
 ## Connect SailPoint Identity Security Cloud to Microsoft Defender for Identity 
@@ -39,10 +39,9 @@ To set up the connection, create a personal access token in SailPoint and then c
 
 ### Create a SailPoint Identity Security Cloud Personal Access Token
 
-Create a personal access token in SailPoint Identity Security Cloud for this integration:
+Before you begin, create a dedicated SailPoint Identity Security Cloud user for this integration. Then create a personal access token for that user:
 
-1. Sign in to SailPoint Identity Security Cloud.
-1. Create a dedicated SailPoint Identity Security Cloud user for this integration.
+1. Sign in to SailPoint Identity Security Cloud as the dedicated user.
 1. Go to **User's Preferences > Personal Access Tokens**.
 1. Select **New Token**.
 1. Add the following scopes to the token:
@@ -75,6 +74,7 @@ Use the Defender portal to configure the SailPoint connector:
 1. Review the information and select **Connect**.
 1. Verify that the SailPoint Identity connector appears in the **My Connector** table as **Connection Status: Ok**.
 
-## Related articles
+<a name="related-articles"></a>
+## Related content
 
 - [How Microsoft Defender for Identity protects your SailPoint identity accounts](sail-point-overview.md)

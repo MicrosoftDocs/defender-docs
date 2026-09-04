@@ -12,19 +12,19 @@ ms.collection:
 - mde-asr
 ms.topic: how-to
 ms.subservice: asr
-ms.date: 06/17/2026
+ms.date: 07/03/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Create indicators for certificates in Microsoft Defender for Endpoint
 
 
 
-You can create indicators for certificates. Some common use cases include:
+This article shows you how to create certificate-based indicators in Microsoft Defender for Endpoint to allow or block signed applications. Some common use cases include:
 
 - Scenarios when you need to deploy blocking technologies, such as [attack surface reduction rules](attack-surface-reduction-rules-overview.md) but need to allow behaviors from signed applications by adding the certificate in the allowlist.
 - Blocking the use of a specific signed application across your organization. By creating an indicator to block the certificate of the application, Microsoft Defender Antivirus prevents file executions (block and remediate), and automated investigation and remediation behaves the same.
@@ -33,7 +33,7 @@ You can create indicators for certificates. Some common use cases include:
 
 It's important to understand the following requirements before creating indicators for certificates:
 
-- This feature is available if your organization uses Microsoft Defender Antivirus (in active mode) and cloud-based protection is enabled. For more information, see [Manage cloud-based protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
+- This feature is available if your organization uses Microsoft Defender Antivirus (in active mode) and cloud-based protection is enabled. For more information, see [Manage cloud-based protection](deploy-manage-report-microsoft-defender-antivirus.md).
 - The anti-malware client version must be `4.18.1901.x` or later.
 - Supported on machines on Windows 10, version 1703 or later, Windows Server 2012 R2 and later, or Azure Stack HCI OS, version 23H2 and later.
 
@@ -51,7 +51,7 @@ It's important to understand the following requirements before creating indicato
 
 > [!NOTE]
 > In situations where a certificate-based indicator is configured to **Block**, but a file hash indicator for one of its signed files is configured to **Allow**, this configuration is **not supported by design**. 
-> Certificate-based indicators have higher precedence in the Defender evaluation pipeline and will always override file hash allow indicators.
+> Certificate-based indicators have higher precedence in the Microsoft Defender for Endpoint evaluation pipeline and will always override file hash allow indicators.
 > A configuration that simultaneously:
 > - blocks a certificate, and
 > - attempts to allow one of its signed files via file hash
@@ -61,8 +61,10 @@ It's important to understand the following requirements before creating indicato
 <a name="create-an-indicator-for-certificates-from-the-settings-page"></a>
 ## Create an indicator for certificates from the settings page
 
+Use the following steps to create a certificate indicator from the Settings page.
+
 > [!IMPORTANT]
-> Creating or removing a certificate IoC can take up to 3 hours.
+> Creating or removing a certificate indicator of compromise (IoC) can take up to 3 hours.
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
 
@@ -83,6 +85,5 @@ It's important to understand the following requirements before creating indicato
 - [Create indicators for IPs and URLs/domains](indicator-ip-domain.md)
 - [Manage indicators](indicator-manage.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-exclusions-overview.md)
-
 
 

@@ -7,12 +7,12 @@ ms.author: pauloliveria
 author: poliveria  
 ms.reviewer: yoninave
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 
@@ -68,14 +68,14 @@ To enable the data connector, complete the following steps:
 
 1. When the data starts to flow into your Microsoft Sentinel workspace, the connector status changes to **Connected**.
 
-After the connector status displays **Connected**, the ingested intelligence is available for use in the `TI map...` analytics rules. For more information, see [Use threat indicators in analytics rules](use-threat-indicators-in-analytics-rules.md). 
+After the connector status displays **Connected**, threat intelligence ingested from the Defender Threat Intelligence data connector is available for use in the `TI map...` analytics rules. For more information, see [Use threat indicators in analytics rules](use-threat-indicators-in-analytics-rules.md). 
 
-Find the new intelligence in the management interface or directly in **Logs** by querying the `ThreatIntelIndicators` table. For more information, see [Work with threat intelligence](work-with-threat-indicators.md).
+Find the threat intelligence ingested from the Defender Threat Intelligence connector in the management interface or directly in **Logs** by querying the `ThreatIntelIndicators` table. For more information, see [Work with threat intelligence](work-with-threat-indicators.md).
 
 ## Related content
 
 After you connect the Defender Threat Intelligence data connector, explore these resources to learn more:
 
-- Learn about [What is Defender Threat Intelligence?](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti)
-- Get started with the [Defender Threat Intelligence portal](/defender/threat-intelligence/learn-how-to-access-microsoft-defender-threat-intelligence-and-make-customizations-in-your-portal).
+- Learn about [What is Defender Threat Intelligence?](/defender-xdr/defender-threat-intelligence)
+- Get started with [Microsoft Threat Intelligence in Microsoft Defender XDR](/defender-xdr/defender-threat-intelligence).
 - [Use matching analytics to detect threats](use-matching-analytics-to-detect-threats.md)

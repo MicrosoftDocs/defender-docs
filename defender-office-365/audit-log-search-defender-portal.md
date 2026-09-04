@@ -50,3 +50,7 @@ Review the following prerequisites before you search the audit log.
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Audit**. Or, to go directly to the **Audit** page, use <https://security.microsoft.com/auditlogsearch>.
 2. On the **Audit** page, create the audit log search. For instructions, see [Audit New Search](/purview/audit-new-search) or [Use a PowerShell script to search the audit log](/purview/audit-log-search-script).
+
+## Related content
+
+[Search the audit log for events in Microsoft Defender XDR](/defender-xdr/microsoft-xdr-auditing)

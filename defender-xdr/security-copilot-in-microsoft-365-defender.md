@@ -212,7 +212,7 @@ Empower your security organization to make informed decisions with the latest th
 
 #### Monitor threat intelligence
 
-Ask Copilot to summarize the relevant threats impacting your environment, to prioritize resolving threats based on your exposure levels, or to find threat actors that might be targeting your industry. Read more about [Security Copilot in threat intelligence](/defender/threat-intelligence/using-copilot-threat-intelligence-defender-xdr).
+Ask Copilot to summarize the relevant threats impacting your environment, to prioritize resolving threats based on your exposure levels, or to find threat actors that might be targeting your industry. Read more about [Security Copilot in threat intelligence](defender-threat-intelligence.md#use-microsoft-copilot-in-defender-for-threat-intelligence).
 
 :::image type="content" source="./media/security-copilot-in-microsoft-365-defender/copilot-defender-threat-intel-small.png" alt-text="Screenshot of the Copilot pane in threat intelligence in Defender." lightbox="./media/security-copilot-in-microsoft-365-defender/copilot-defender-threat-intel-full.png":::
 
@@ -268,7 +268,7 @@ Copilot uses [preinstalled Microsoft plugins](/security-copilot/manage-plugins#p
 - [Generate identity summaries](security-copilot-defender-identity-summary.md)
 - [Generate KQL queries](advanced-hunting-security-copilot.md)
 - [Create incident reports](security-copilot-m365d-create-incident-report.md)
-- [Use threat intelligence](/defender/threat-intelligence/security-copilot-and-defender-threat-intelligence)
+- [Use threat intelligence](security-copilot-and-defender-threat-intelligence.md)
 - [Get started with Security Copilot](/security-copilot/get-started-security-copilot)
 - [Privacy and data security in Copilot](/security-copilot/privacy-data-security)
 - [Security Copilot Responsible AI FAQs](/security-copilot/responsible-ai-overview-security-copilot)

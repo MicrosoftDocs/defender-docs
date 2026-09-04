@@ -6,11 +6,11 @@ ms.author: pauloliveria
 author: poliveria
 ms.reviewer: macasgra
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.custom:
- - msecd-doc-authoring-1014
+ - msecd-doc-authoring-1016
  - sfi-ga-nochange
 ai-usage: ai-assisted
 #customer intent: As a security analyst, I want to use a custom Microsoft Sentinel MCP connector in ChatGPT.
@@ -56,7 +56,7 @@ To add a Microsoft Entra application, follow these steps:
 1. Add a **Description** for your client secret and set an expiration date.
 
     > [!IMPORTANT]
-    > The client secret value is shown only once and disappears after you leave the page. Be ready to copy and securely save it before you continue.
+    > The client secret value is shown only once and disappears after you leave the page. Be ready to copy and save it in a secure location before you continue.
 
 1. Select **Add**, and then immediately copy the **Value** and save it in a secure location. 
 1. Go back to your app's **Overview** page and copy its **Application (client) ID**. 
@@ -65,12 +65,14 @@ To add a Microsoft Entra application, follow these steps:
 ## Create and use a custom Microsoft Sentinel MCP connector
 
 
-To create and use a custom Microsoft Sentinel MCP connector, follow the instructions on the tab for your platform:
+To create and use a custom Microsoft Sentinel MCP connector, follow the instructions for your platform. For ChatGPT, see the ChatGPT section. For Claude, see the Claude section.
 
 ### [ChatGPT](#tab/chatgpt)
 
+Use the following steps to create and use the Microsoft Sentinel MCP connector in ChatGPT.
+
 >[!NOTE]
->- If you're using the ChatGPT desktop application, you must first complete this connector setup in the ChatGPT web version.
+>- If you're using the ChatGPT desktop application, you must first complete the ChatGPT custom connector setup in the ChatGPT web version.
 >- For ChatGPT Enterprise, an administrator can roll out a connector to all users in that ChatGPT organization. 
 
 **To create a custom connector:**

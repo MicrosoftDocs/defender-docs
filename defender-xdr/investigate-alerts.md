@@ -14,7 +14,7 @@ ms.custom:
   - admindeeplinkDEFENDER
   - sfi-ga-nochange
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -39,7 +39,7 @@ The **Alerts queue** shows the current set of alerts. You can view the entire al
 
 :::image type="content" source="media/investigate-alerts/alerts-page-defender-small.png" alt-text="The Alerts section in the Microsoft Defender portal" lightbox="media/investigate-alerts/alerts-page-defender.png":::
 
-Alerts from different Microsoft security solutions like Microsoft Defender for Endpoint, Defender for Office 365, Microsoft Sentinel, Defender for Cloud, Defender for Identity, Defender for Cloud Apps, Defender XDR, App Governance, Microsoft Entra ID Protection, and Microsoft Data Loss Prevention appear here.
+Alerts from different Microsoft security solutions like Microsoft Defender for Endpoint, Defender for Office 365, Microsoft Sentinel, Defender for Cloud, Defender for Identity, Defender for Cloud Apps, Defender XDR, App Governance, Microsoft Entra ID Protection, and Microsoft Data Loss Prevention appear in the Alerts queue.
 
 By default, the alerts queue in the Microsoft Defender portal displays the new and in progress alerts from the last seven days. The most recent alert is at the top of the list so you can see it first. You can also find the **total number of alerts** in the queue indicated beside the Search bar. The total number of alerts varies depending on the filters used in the queue.
 
@@ -67,7 +67,7 @@ You can filter alerts according to these criteria:
 > [!NOTE]
 > Microsoft Defender XDR customers can now filter incidents with alerts where a compromised device communicated with operational technology (OT) devices connected to the enterprise network through the [device discovery integration of Microsoft Defender for IoT and Microsoft Defender for Endpoint](/defender-endpoint/device-discovery#device-discovery-integration). To filter these incidents, select **Any** in the Service/detection sources, then select **Microsoft Defender for IoT** in the Product name or see [Investigate incidents and alerts in Microsoft Defender for IoT in the Defender portal](/defender-for-iot/investigate-threats/). You can also use device groups to filter for site-specific alerts. For more information about Defender for IoT prerequisites, see [Get started with enterprise IoT monitoring in Microsoft Defender XDR](/azure/defender-for-iot/organizations/eiot-defender-for-endpoint/).
 
-An alert can have system tags and/or custom tags with certain color backgrounds. Custom tags use the white background while system tags typically use red or black background colors. System tags identify the following in an incident: 
+An alert can have system tags and/or custom tags with white, red, or black backgrounds. Custom tags use the white background while system tags typically use red or black background colors. System tags identify the following in an incident: 
 
 - A **type of attack**, like ransomware or credential phishing
 - **Automatic actions**, like automatic investigation and response and automatic attack disruption
@@ -88,11 +88,13 @@ To search for specific alerts, enter the search term in the search bar. You can 
 
 :::image type="content" source="media/investigate-alerts/alerts-search-bar-small.png" alt-text="Highlighting the search bar in the Alerts queue" lightbox="media/investigate-alerts/alerts-search-bar.png":::
 
-## Permissions
+<a name="permissions"></a>
+## Required permissions to investigate alerts
 
 Access to alerts in the Microsoft Defender portal is controlled by Microsoft Defender permissions and role assignments.
 
-### Role assignments
+<a name="role-assignments"></a>
+### Required role assignments
 
 You can receive the permissions required to view alerts through these role assignments:
 
@@ -117,11 +119,11 @@ An alert page is composed of these sections:
 - Alert story, which is the chain of events and alerts related to this alert in chronological order
 - Summary details
 
-Throughout an alert page, you can select the ellipses (**...**) beside any entity to see available actions, such as linking the alert to another incident. The list of available actions depends on the type of alert.
+Throughout an alert page, you can select the ellipses (**...**) beside any entity to see available actions, such as linking the alert to another incident. The list of available actions depends on the selected alert's type.
 
 ### Alert sources
 
-Microsoft Defender XDR alerts come from solutions like Microsoft Defender for Endpoint, Defender for Office 365, Defender for Identity, Defender for Cloud Apps, the app governance add-on for Microsoft Defender for Cloud Apps, Microsoft Entra ID Protection, and Microsoft Data Loss Prevention. You might notice alerts with prepended characters in the alert. The following table provides guidance to help you understand the mapping of alert sources based on the prepended character on the alert.
+Microsoft Defender XDR alerts come from solutions like Microsoft Defender for Endpoint, Defender for Office 365, Defender for Identity, Defender for Cloud Apps, the app governance add-on for Microsoft Defender for Cloud Apps, Microsoft Entra ID Protection, and Microsoft Data Loss Prevention. You might notice prepended characters in the alert ID. The following table provides guidance to help you understand the mapping of alert sources based on the prepended character on the alert.
 
 > [!NOTE]
 >
@@ -161,7 +163,7 @@ To configure alert service settings in Microsoft Defender XDR:
 
     :::image type="content" source="media/investigate-alerts/alert-service-settings-entra.png" alt-text="Screenshot of Microsoft Entra ID Protection alerts setting in the Microsoft Defender portal." lightbox="media/investigate-alerts/alert-service-settings-entra.png":::
 
-You can also access **Alert service settings** directly from the **Incidents** page in the Microsoft Defender portal.
+You can access **Alert service settings** from the **Incidents** page in the Microsoft Defender portal.
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
@@ -185,7 +187,8 @@ The details page shows the details of the selected alert, with details and actio
 
 Once you've selected an entity of interest, the details page changes to display information about the selected entity type, historic information when it's available, and options to take action on this entity directly from the alert page.
 
-## Manage alerts
+<a name="manage-alerts"></a>
+## Manage alert status and classification
 
 To manage an alert, select **Manage alert** in the summary details section of the alert page. For a single alert, here's an example of the **Manage alert** pane.
 
@@ -206,7 +209,7 @@ The **Manage alert** pane allows you to view or specify:
 >
 > - In August 2022, previously supported alert determination values (`Apt` and `SecurityPersonnel`) were deprecated and are no longer available via the API.
 >
-> - One way of managing alerts it through the use of tags. The tagging capability for Microsoft Defender for Office 365 is currently in preview, rolling out incrementally.
+> - One way of managing alerts is through the use of tags. The tagging capability for Microsoft Defender for Office 365 is currently in preview, rolling out incrementally.
 >
 > Currently, modified tag names are only applied to alerts created *after* the update. Alerts that were generated before the modification will not reflect the updated tag name.
 
@@ -218,7 +221,7 @@ From the **Manage alerts** pane, you can then classify all of the related alerts
 
 :::image type="content" source="media/investigate-alerts/alerts-ss-alerts-select-related.png" lightbox="media/investigate-alerts/alerts-ss-alerts-select-related.png" alt-text="Screenshot of managing related alerts in the Microsoft Defender portal":::
 
-If similar alerts were already classified in the past, you can save time by using Microsoft Defender XDR recommendations to learn how the other alerts were resolved. From the summary details section, select **Recommendations**.
+If similar alerts were already classified in the past, you can save time by using Microsoft Defender XDR recommendations to learn how previously classified similar alerts were resolved. From the summary details section, select **Recommendations**.
 
 :::image type="content" source="media/investigate-alerts/alerts-ss-alerts-recommendations.png" lightbox="media/investigate-alerts/alerts-ss-alerts-recommendations.png" alt-text="Screenshot of an example of selecting recommendations for an alert":::
 
@@ -241,11 +244,9 @@ Microsoft Defender XDR includes built-in alert tuning rules that help reduce rep
 You can also create your own custom alert tuning rules to perform one of the following actions when specific conditions are met:
 
 - **Hide alert**: Suppresses the alert and prevents incident creation. Hidden alerts remain in *AlertInfo* and *AlertEvidence* tables.
-This action is only applicable for Defender for Endpoint alerts.
+The **Hide alert** action is only applicable for Defender for Endpoint alerts.
 - **Resolve alert**: Automatically resolves the alert and related incidents. Matching alerts and their associated incidents are triggered with resolved status.
 - **Set as behavior**: Converts matching signals into behaviors. They won’t appear in the alert queue or trigger incidents. Data remains in *BehaviorInfo* and *BehaviorEntities* tables for hunting. This action isn't supported for Defender for Cloud or Microsoft Defender for Office 365 alerts.
-
-Microsoft Defender XDR also includes built-in alert tuning rules that suppress alerts from common benign activity without affecting Automated Investigation and Response (AIR) investigations and email notifications.
 
 > [!CAUTION]
 > Use alert tuning with caution, for scenarios where known, internal business applications or security tests trigger expected activity.
@@ -316,6 +317,9 @@ To create an alert tuning rule from an alert details page, follow these steps:
 > The **alert title (Name)** is based on the **alert type (IoaDefinitionId)**, which decides the alert title. Two alerts that have the same alert type can change to a different alert title. 
 > The *Hide alert* feature is only available in Defender for Endpoint alerts.
 
+> [!NOTE]
+> Alert suppression is not compatible for custom detections. Make sure to fine-tune your custom detections to avoid false positives.
+
 After creating your alert tuning rule from an alert details page, in the **Successful rule creation** page that appears, add any of the alert-related IOCs as indicators to an *allow list* to prevent them from being blocked in the future. IOCs that are configured as part of the alert tuning rule are selected by default. For example:
 
 1. Add a file to the **Select evidence (IOC) to allow** list. By default, the file that triggered the alert is already selected.
@@ -365,7 +369,7 @@ For more information, see [Microsoft Security Copilot Dynamic Threat Detection A
 
 ## Next steps
 
-As needed for in-process incidents, continue your [incident investigation](investigate-incidents.md).
+For incidents that remain active, continue investigating by following [Investigate incidents](investigate-incidents.md).
 
 <a name="see-also"></a>
 ## Related content

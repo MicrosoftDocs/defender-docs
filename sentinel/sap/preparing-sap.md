@@ -1,96 +1,59 @@
 ---
 title: Configure your SAP system for the Microsoft Sentinel solution
 titleSuffix: Microsoft Sentinel
-description: Learn about extra preparations required in your SAP system to install the SAP data connector agent and connect Microsoft Sentinel to your SAP system.
+description: Learn about extra preparations required in your SAP system to connect Microsoft Sentinel to your SAP system.
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 08/04/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #Customer intent: As an SAP BASIS team member, I want to configure SAP authorizations and deploy optional SAP Change Requests so that I can ensure proper connectivity and log retrieval from SAP systems for security monitoring.
-zone_pivot_groups: sentinel-sap-connection
 
 ---
 
 # Configure your SAP system for the Microsoft Sentinel solution
 
-This article describes how to prepare your SAP environment for connecting to the SAP data connector. Before you begin, make sure you've reviewed the [prerequisites for deploying the Microsoft Sentinel solution for SAP applications](prerequisites-for-deploying-sap-continuous-threat-monitoring.md). Preparation differs, depending on whether you're using the containerized data connector agent. Select the option at the top of the page that matches your environment.
+This article describes how to prepare your SAP environment for connecting to the SAP data connector. Before you begin, make sure you've reviewed the [prerequisites for deploying the Microsoft Sentinel solution for SAP applications](prerequisites-for-deploying-sap-continuous-threat-monitoring.md).
 
-:::zone pivot="connection-agent"
-This article is part of the second step in deploying the Microsoft Sentinel solution for SAP applications.
 
-[!INCLUDE [data-connector-agent-deprecation](../includes/data-connector-agent-deprecation.md)]
-
-:::image type="content" source="media/deployment-steps/prepare-sap-environment.png" alt-text="Diagram of the deployment flow for the Microsoft Sentinel solution for SAP applications, with the preparing SAP step highlighted." border="false":::
-
-The procedures in this article are typically performed by your **SAP BASIS** team.
-:::zone-end
-
-:::zone pivot="connection-agentless"
 This article is part of the second step in deploying the Microsoft Sentinel solution for SAP applications. While steps that are performed in Microsoft Sentinel require that the solution be installed first, other preparations in the SAP environment can happen in parallel.
 
 :::image type="content" source="media/deployment-steps/prepare-sap-environment-agentless.png" alt-text="Diagram of the deployment flow for the Microsoft Sentinel solution for SAP applications, with the preparing SAP step highlighted." border="false":::
 
 Many of the procedures in this article are typically performed by your **SAP BASIS** team. Some steps include your **security** team too.
-:::zone-end
 
 ## Prerequisites
 
 - Before you start, make sure to review the [prerequisites for deploying the Microsoft Sentinel solution for SAP applications](prerequisites-for-deploying-sap-continuous-threat-monitoring.md).
-:::zone pivot="connection-agentless"
-- If you're working with the agentless data connector, some steps are performed in Microsoft Sentinel and require that you [deploy the Microsoft Sentinel solution for SAP applications](deploy-sap-security-content.md) first.
+- Some steps are performed in Microsoft Sentinel and require that you [deploy the Microsoft Sentinel solution for SAP applications](deploy-sap-security-content.md) first.
 
-:::zone-end
 
 ## Configure the Microsoft Sentinel role
 
 To allow the SAP data connector to connect to your SAP system, you must create an SAP system role specifically for this purpose.
 
-:::zone pivot="connection-agent"
 
-We recommend creating this role by deploying the *NPLK900271* SAP change request (CR): [K900271.NPL](https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/SAP/CR/K900271.NPL) | [R900271.NPL](https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/SAP/CR/R900271.NPL)
-
-Deploy the CRs on your SAP system as needed just as you'd deploy other CRs. We strongly recommend that deploying SAP CRs is done by an experienced SAP system administrator. For more information, see the SAP documentation on [deploying transport change requests](https://help.sap.com/docs/ABAP_PLATFORM_NEW/4a368c163b08418890a406d413933ba7/e15d9acae75c11d2b451006094b9ea64.html?locale=en-US&version=LATEST).
-
-Alternately, load the role authorizations from the [**MSFTSEN_SENTINEL_CONNECTOR**](https://aka.ms/SAP_Sentinel_Connector_Role) file, which includes all the basic permissions for the data connector to operate.
-
-Experienced SAP administrators might choose to create the role manually and assign it the appropriate permissions. In such cases, create a role manually with the relevant authorizations required for the logs you want to ingest. For more information, see [Required ABAP authorizations](required-abap-authorizations.md). Examples in our documentation use the **/MSFTSEN/SENTINEL_RESPONDER** name.
-
-When configuring the role, we recommend that you:
-
-- Generate an active role profile for Microsoft Sentinel by running the **PFCG** transaction.
-- Use `/MSFTSEN/SENTINEL_RESPONDER` as the role name.
-
-:::zone-end
-
-:::zone pivot="connection-agentless"
 
 Create a role using the [**MSFTSEN_SENTINEL_READER**](https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/SAP/Sample%20Authorizations%20Role%20File/MSFTSEN_SENTINEL_READER.SAP) template, which includes all the basic permissions for the data connector to operate.
 
-:::zone-end
 
 For more information, see the SAP documentation on [creating roles](https://help.sap.com/docs/ABAP_PLATFORM_NEW/ad77b44570314f6d8c3a8a807273084c/4c93141f5c153c91e10000000a42189c.html).
 
-### Create a user
+<a name="create-a-user"></a>
+### Create an SAP user for the Microsoft Sentinel role
 
 The Microsoft Sentinel solution for SAP applications requires a user account to connect to your SAP system. When creating your user:
 
-:::zone pivot="connection-agent"
-- Make sure to create a system user.
-- Assign the **/MSFTSEN/SENTINEL_RESPONDER** role to the user, which you created when you [configured the Microsoft Sentinel role](#configure-the-microsoft-sentinel-role).
-:::zone-end
 
-:::zone pivot="connection-agentless"
 - Make sure to create a system user.
 - Assign the **MSFTSEN_SENTINEL_READER** role to the user, which you created when you [configured the Microsoft Sentinel role](#configure-the-microsoft-sentinel-role).
-:::zone-end
 
-For more information, see the [SAP documentation](https://help.sap.com/docs/ABAP_PLATFORM_NEW/ad77b44570314f6d8c3a8a807273084c/4cb5f7ac9cb33c94e10000000a42189c.html?version=LATEST).
+For more information, see the SAP documentation on [creating user accounts](https://help.sap.com/docs/ABAP_PLATFORM_NEW/ad77b44570314f6d8c3a8a807273084c/4cb5f7ac9cb33c94e10000000a42189c.html?version=LATEST).
 
 ## Configure SAP auditing
 
@@ -104,65 +67,30 @@ We recommend that you configure auditing for *all* messages from the audit log, 
 > [!TIP]
 > For SAP systems managed by SAP RISE/ECS, Security Audit Log enablement is part of the shared responsibility agreement. Verify with your SAP contact if auditing is already active by default or if any additional steps need to be taken. [SAP S/4HANA Cloud public edition](https://azuremarketplace.microsoft.com/marketplace/apps/sap_jasondau.azure-sentinel-solution-s4hana-public?tab=Overview) systems have auditing enabled by default.
 
-:::zone pivot="connection-agentless"
 For full monitoring coverage with the agentless data connector, we recommend that you enable monitoring on all client IDs of your monitored SAP systems, including clients 000 and 066.
-:::zone-end
 
 For more information, see [Analysis and recommended settings of the Security Audit Log (SM19/RSAU)](https://community.sap.com/t5/application-development-blog-posts/analysis-and-recommended-settings-of-the-security-audit-log-sm19-rsau/ba-p/13297094).
 
 ## Configure your system to use SNC for secure connections
 
-By default, the SAP data connector agent connects to an SAP server using a remote function call (RFC) connection and a username and password for authentication.
+By default, the SAP data connectors use a remote function call (RFC) connection and a username and password to authenticate to the SAP system.
 
-However, you might need to make the connection on an encrypted channel or use client certificates for authentication. In these cases, use Smart Network Communications (SNC) from SAP to secure your data connections, as described in this section.
+To encrypt the RFC connection or use certificate-based authentication, configure SAP Smart Network Communications (SNC). Work with your SAP administrators and your organization's public key infrastructure (PKI) team to plan the SNC configuration. Follow SAP guidance for the SAP components, certificates, and trust relationships in your environment.
 
-In a production environment, we strongly recommend that your consult with SAP administrators to create a deployment plan for configuring SNC. For more information, see the SAP documentation on [configuring SNC](https://help.sap.com/docs/ABAP_PLATFORM_NEW/e73bba71770e4c0ca5fb2a3c17e8e229/e656f466e99a11d1a5b00000e835363f.html). 
+Before you configure the Microsoft Sentinel connection:
 
-When configuring SNC:
-
-- If the client certificate was issued by an enterprise certification authority, transfer the issuing CA and root CA certificates to the system where you plan to create the data connector agent.
-- If you're using the data connector agent, make sure to also enter the relevant values and use the relevant procedures when [configuring the SAP data connector agent container](deploy-data-connector-agent-container.md). If you're using the agentless data connector, the SNC configuration is done in the SAP Cloud Connector.
-
-
-For more information about SNC, see [Getting started with SAP SNC for RFC integrations - SAP blog](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-members/getting-started-with-sap-snc-for-rfc-integrations/ba-p/13983462).
-
-:::zone pivot="connection-agent"
-
-## Configure support for extra data retrieval (recommended)
-
-While enabling extra data retrieval is optional, we recommend that you enable the SAP data connector to retrieve the following content information from your SAP system:
-
-- **DB Table** and **Spool Output** logs
-- **Client IP address information** from the security audit logs
-
-1. Deploy the relevant CRs from the [Microsoft Sentinel GitHub repository](https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/SAP/CR), according to your SAP version:
-
-    | SAP BASIS versions | Recommended CR |
-    | --- | --- | --- |
-    | **750 and higher** | *NPLK900202*: [K900202.NPL](https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/SAP/CR/K900202.NPL), [R900202.NPL](https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/SAP/CR/R900202.NPL) <br><br>When deploying this CR any of the following SAP versions, also deploy [2641084 - Standardized read access to data of Security Audit Log](https://launchpad.support.sap.com/#/notes/2641084): <br>- 750 SP04 to SP12<br>- 751 SP00 to SP06<br>- 752 SP00 to SP02  | 
-    | **740**  | *NPLK900201*: [K900201.NPL](https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/SAP/CR/K900201.NPL), [R900201.NPL](https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/SAP/CR/R900201.NPL) |
-
-    Deploy the CRs on your SAP system as needed just as you'd deploy other CRs. We strongly recommend that deploying SAP CRs is done by an experienced SAP system administrator. For more information, see the SAP documentation on [deploying transport change requests](https://help.sap.com/docs/ABAP_PLATFORM_NEW/4a368c163b08418890a406d413933ba7/e15d9acae75c11d2b451006094b9ea64.html?locale=en-US&version=LATEST).
-
-    For more information, see [Analysis and recommended settings of the Security Audit Log (SM19/RSAU)](https://community.sap.com/t5/application-development-blog-posts/analysis-and-recommended-settings-of-the-security-audit-log-sm19-rsau/ba-p/13297094) and the [SAP documentation](https://help.sap.com/docs/ABAP_PLATFORM_NEW/4a368c163b08418890a406d413933ba7/e15d9acae75c11d2b451006094b9ea64.html?locale=en-US&version=LATEST).
-
-1. To support SAP BASIS versions 7.31-7.5 SP12 in sending client IP address information to Microsoft Sentinel, activate logging for SAP table USR41. For more information, see the [SAP documentation](https://help.sap.com/doc/saphelp_scm700_ehp02/7.0.2/en-US/73/86ce4dc98d461283f25940367dd9c3/frameset.htm).
+- Configure SNC for SAP NetWeaver Application Server for ABAP (AS ABAP). For an example that uses CommonCryptoLib, see [SAP Note 2979858: Example SNC Configuration for AS ABAP with COMMONCRYPTOLIB](https://me.sap.com/notes/2979858/E).
+- Decide whether to use certificates signed by your organization's certification authority (CA) or self-signed certificates. Establish trust between the SAP system and the component that initiates the RFC connection. For SAP certificate guidance, see [SAP Note 2970934: How to create the CSR and how to import the certificate response for ABAP system](https://me.sap.com/notes/2970934/E).
+- Validate the SNC connection according to SAP guidance before you connect Microsoft Sentinel.
 
 
-## Verify that the PAHI table is updated at regular intervals
+For the agentless data connector, configure SNC in SAP Cloud Connector. For more information, see [SAP KBA 3536285: SAP Cloud Connector - How to set up general SNC settings for SAP Cloud Connector](https://me.sap.com/notes/3536285/E).
 
-The SAP PAHI table includes data on the history of the SAP system, the database, and SAP parameters. In some cases, the Microsoft Sentinel solution for SAP applications can't monitor the SAP PAHI table at regular intervals, due to missing or faulty configuration. It's important to update the PAHI table and to monitor it frequently, so that the Microsoft Sentinel solution for SAP applications can alert on suspicious actions that might happen at any time throughout the day. For more information, see:
+If you use SAP Cloud Connector high availability, also validate SNC after switching to the shadow instance.
 
-- [SAP note 12103](https://launchpad.support.sap.com/#/notes/12103)
-- [Monitoring the configuration of static SAP security parameters (Preview)](sap-solution-security-content.md#monitor-the-configuration-of-static-sap-security-parameters-preview)
+For more information, see the SAP documentation on [configuring SNC](https://help.sap.com/docs/ABAP_PLATFORM_NEW/e73bba71770e4c0ca5fb2a3c17e8e229/e656f466e99a11d1a5b00000e835363f.html) and [Getting started with SAP SNC for RFC integrations](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-members/getting-started-with-sap-snc-for-rfc-integrations/ba-p/13983462).
 
-If the PAHI table is updated regularly, the `SAP_COLLECTOR_FOR_PERFMONITOR` job is scheduled and runs hourly. If the `SAP_COLLECTOR_FOR_PERFMONITOR` job doesn't exist, make sure to configure it as needed. 
 
-For more information, see [Database Collector in Background Processing](https://help.sap.com/doc/saphelp_nw75/7.5.5/c4/3a735b505211d189550000e829fbbd/frameset.htm) and [Configuring the Data Collector](https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_752/3364beced9d145a5ad185c89a1e04658/c43a818c505211d189550000e829fbbd.html).
-
-:::zone-end
-
-:::zone pivot="connection-agentless"
 
 ## Configure SAP BTP settings
 
@@ -195,7 +123,7 @@ To prepare SAP Business Technology Platform (BTP) for the agentless data connect
 
 1. Create an instance of the SAP Process Integration Runtime in your subaccount using service plan **integration-flow** (not API!).
 
-1. Create a service key for the SAP Process Integration Runtime and save the JSON contents to a secure location. You must activate the cloud integration capability before creating a service key for SAP Process Integration Runtime.
+1. After verifying that the cloud integration capability is activated, create a service key for the SAP Process Integration Runtime and save the JSON contents to a secure location.
 
 For more information, see the SAP documentation on [Initial Setup of SAP Integration Suite](https://help.sap.com/docs/integration-suite/sap-integration-suite/initial-setup).
 
@@ -208,8 +136,8 @@ This procedure has steps both in Microsoft Sentinel and your SAP system, and req
 1. In the **Configuration** section, expand and follow the instructions in the **Initial connector configuration - Run the steps below once:** section. These steps will require both your SecuritySOC engineer and the SAP admin.
     1. Trigger automatic deployment of Azure resources (SOC Engineer).
        If, after you deploy the Azure resources, the values in the steps 2 and 3 aren't automatically populated, close and re-expand step 1 to refresh the values in steps 2 and 3.
-   1. Deploy an OAuth2 client credentials artifact in the SAP Integration (SAP Admin).
-      
+    1. Deploy an OAuth2 client credentials artifact in the SAP Integration (SAP Admin).
+
     1. Deploy the SAP agentless data connector package to the SAP Integration Suite (SAP Admin). This procedure is performed from  the SAP Integration Suite portal ([SAP Cloud Integration Web UI](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/overview-of-sap-cloud-integration-web-ui)).
 
         1. Open the **Discover** section.
@@ -234,42 +162,55 @@ Configure SAP Cloud Connector to enable communication between your SAP backend s
 1. Add new resources to the system mapping for each of the following function names:
 
    - **RSAU_API_GET_LOG_DATA**, to fetch SAP security audit log data
-      
+
    - **BAPI_USER_GET_DETAIL**, to retrieve SAP user details
-      
+
    - **RFC_READ_TABLE**, to read data from required tables
-      
+
    - **SIAG_ROLE_GET_AUTH**, to retrieve security role authorizations
-      
+
    - **/OSP/SYSTEM_TIMEZONE**, to retrieve SAP system timezone details
 
-    > [!NOTE] 
+    > [!NOTE]
     > The **MSFTSEN_SENTINEL_READER** role described in [Configure the Microsoft Sentinel role](#configure-the-microsoft-sentinel-role) is configured for least privilege access. This ensures function modules such as RFC_READ_TABLE are used only as needed. Consider [SAP's best practices for RFC access](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/configure-access-control-rfc#loioca5868997e48468395cf0ca4882f5783__limit) and SAP Unified Connectivity (UCON) settings to control function module access beyond the controls of SAP Cloud Connector and the SAP role.
-      
+
 1. Add a new destination in SAP BTP that points the virtual host you'd created earlier. Use the following details to populate the new SAP BTP RFC destination for Microsoft Sentinel:
 
-   - **Name:** Enter the name you want to use for the Microsoft Sentinel connection
-      
-   - **Type** `RFC`
-      
-   - **Proxy Type:** `On-Premise`
-      
+   - **Name**: Enter the name you want to use for the Microsoft Sentinel connection
+
+   - **Type**: `RFC`
+
+   - **Proxy Type**: `On-Premise`
+
    - **User**: Enter the [ABAP user account](#create-a-user) you created earlier for Microsoft Sentinel
-      
-   - **Authorization Type:** `CONFIGURED USER`
-      
-   - **Additional properties:**
-   
+
+   - **Authorization Type**: `CONFIGURED USER`
+
+   - **Additional properties**:
+
       - `jco.client.ashost = <virtual host name>`
-            
+
       - `jco.client.client = <client e.g. 001>`
-            
+
       - `jco.client.sysnr = <system number = 00>`
-            
+
       - `jco.client.lang = EN`
-            
-   - **Location**: Only required when you connect multiple Cloud Connectors to the same BTP subaccount.  For more information, see the SAP documentation on [parameters influencing communication behavior](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/parameters-influencing-communication-behavior).
-   
+
+   - **Location**: Only required when you connect multiple Cloud Connectors to the same BTP subaccount. For more information, see the SAP documentation on [parameters influencing communication behavior](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/parameters-influencing-communication-behavior).
+
+## Optimize SAP Cloud Connector sizing, throughput, and isolation
+
+Default SAP Cloud Connector settings suit most environments. Tune it before you go live when Microsoft Sentinel ingestion is high volume, bursty, or shares an SAP Cloud Connector with other integrations.
+
+1. Confirm sizing for the Cloud Connector master instance: [Sizing for master instance](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/sizing-for-master-instance).
+1. If SAP Cloud Integration (CPI) reports `IOError on tunnel socket during connect attempt`, use SAP note [3403815](https://me.sap.com/notes/0003403815) to tune throughput and request limits.
+1. Enable runtime monitoring: [Cloud Connector monitoring](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/cloud-connector-monitoring).
+1. Recover stale or stuck SAP Cloud Connector sessions by following SAP note [2485510](https://me.sap.com/notes/0002485510).
+
+> [!TIP]
+> Dedicate an SAP Cloud Connector instance to Microsoft Sentinel traffic when the shared connector runs close to saturation, when other integrations cause volatile load patterns, or when security or regulatory requirements mandate isolation. A dedicated instance protects ingestion from noisy-neighbor incidents and simplifies capacity planning, change control, and audit scope.
+
+
 ## Run the prerequisite checker
 
 Run the prerequisite checker to validate that your SAP system is ready for integration with Microsoft Sentinel.
@@ -280,14 +221,12 @@ Run the prerequisite checker to validate that your SAP system is ready for integ
 
 1. On the Sentinel portal, scroll further down in the **Configuration** area, and expand and follow the instructions in the **Add monitored SAP Systems - Run the steps below for each monitored SAP system:** area for each SAP system you want to monitor.
 
-    In the **Add monitored SAP Systems** wizard in Microsoft Sentinel, at the step named **Connect SAP System to Microsoft Sentinel / SOC Engineer**, continue with [Connect your SAP system to Microsoft Sentinel](deploy-data-connector-agent-container.md).
+    In the **Add monitored SAP Systems** wizard in Microsoft Sentinel, at the step named **Connect SAP System to Microsoft Sentinel / SOC Engineer**, continue with [Connect your SAP system to Microsoft Sentinel](deploy-data-connector-agentless.md).
 
-:::zone-end
 
 
 <a name="next-step"></a>
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Connect your SAP system to Microsoft Sentinel](deploy-data-connector-agent-container.md)
-
+> [Connect your SAP system to Microsoft Sentinel](deploy-data-connector-agentless.md)

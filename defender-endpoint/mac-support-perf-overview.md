@@ -40,7 +40,7 @@ When troubleshooting performance issues for Microsoft Defender for Endpoint on m
 |Daemon name|Component|First troubleshooting step|
 |---|---|---|
 |`wdavdaemon`|Core (privileged)|Collect Client Analyzer performance data and hot event sources.|
-|`wdavdaemon_unprivileged`|Antivirus and endpoint protection platform (EPP)|Use real-time protection statistics to identify files and processes that trigger scans.|
+|`wdavdaemon_unprivileged`|Antivirus and endpoint protection platform (EPP)|Use [real-time protection statistics](mac-support-perf.md#troubleshoot-performance-issues-using-real-time-protection-statistics) to identify files and processes that trigger scans.|
 |`wdavdaemon_enterprise`|Endpoint detection and response (EDR)|Collect Client Analyzer performance data and hot event sources.|
 
 For all three processes, record the process name, CPU and memory use, duration, device model and processor, Defender version, macOS version, enforcement mode, workload, and other security products. Gather [Microsoft Defender for Endpoint Client Analyzer](overview-client-analyzer.md) files while the issue occurs.

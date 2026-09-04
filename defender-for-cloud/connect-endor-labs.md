@@ -2,9 +2,9 @@
 title: Connect Endor Labs to Defender for Cloud
 description: Learn how to connect Endor Labs with Microsoft Defender for Cloud to enhance vulnerability analysis and gain visibility of critical vulnerabilities.
 ms.topic: how-to
-ms.date: 05/24/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
 #customer intent: As a user, I want to learn how to connect my Endor Labs account with Microsoft Defender for Cloud so that I can enhance vulnerability analysis and gain visibility from code to runtime.
 ---
 
@@ -16,18 +16,18 @@ This article explains the benefits and steps to connect Endor Labs to Defender f
 
 ## Prerequisites
 
-- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
+- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for an Azure free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
-- You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
+- You must [enable Microsoft Defender for Cloud on your Azure subscription](get-started.md#enable-defender-for-cloud-on-your-azure-subscription).
 
 - You must [enable Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md) on your Azure subscription.
 
 - Connect your DevOps environments to Defender for Cloud:
-  - [Azure DevOps organizations](quickstart-onboard-devops.md)
-  - [GitHub organizations](quickstart-onboard-github.md)
-  - [GitLab groups](quickstart-onboard-devops.md)
+  - [Connect Azure DevOps organizations to Defender for Cloud](quickstart-onboard-devops.md)
+  - [Connect GitHub organizations to Defender for Cloud](quickstart-onboard-github.md)
+  - [Connect GitLab groups to Defender for Cloud](quickstart-onboard-devops.md)
 
-- Have an Endor Labs account. For more information, see [Endor Labs](https://www.endorlabs.com/).
+- Have an Endor Labs account. For more information, see the [Endor Labs product site](https://www.endorlabs.com/).
 
 - Have an Endor Labs Application Programming Interface (API) key with read-only permissions. For setup instructions, see [Creating API keys in Endor Labs](https://docs.endorlabs.com/administration/api-keys/). We recommend an expiration date of 180 days.
 
@@ -40,11 +40,12 @@ This article explains the benefits and steps to connect Endor Labs to Defender f
 
 - Findings from Endor Labs are only shown if the corresponding repository is also connected to Defender for Cloud.
 
-## Connect Endor Labs
+<a name="connect-endor-labs"></a>
+## Connect Endor Labs to Defender for Cloud
 
 To connect your Endor Labs account to Defender for Cloud:
 
-1. Sign in to the Azure portal at [portal.azure.com](https://portal.azure.com/).
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
 

@@ -5,9 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: idpelleg
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - mvc
   - sfi-image-nochange
 ai-usage: ai-assisted
@@ -31,7 +31,7 @@ You can configure Microsoft Sentinel to automatically create incidents every tim
 > - Enabled [**Microsoft Defender XDR incident integration**](microsoft-365-defender-sentinel-integration.md), or 
 > - Onboarded Microsoft Sentinel to the [**Microsoft Defender portal**](microsoft-sentinel-defender-portal.md).
 >
-> In these scenarios, Microsoft Defender XDR [correlates alerts into incidents](/defender-xdr/alerts-incidents-correlation) generated in Microsoft services.
+> If you enabled Microsoft Defender XDR incident integration or onboarded Microsoft Sentinel to the Microsoft Defender portal, Microsoft Defender XDR [correlates alerts into incidents](/defender-xdr/alerts-incidents-correlation) generated in Microsoft services.
 >
 > If you use incident creation rules for other Microsoft security solutions or products not integrated into Defender XDR, such as Microsoft Purview Insider Risk Management, and you plan to onboard to the Defender portal, replace your incident creation rules with [scheduled analytics rules](scheduled-rules-overview.md).
 
@@ -39,7 +39,8 @@ You can configure Microsoft Sentinel to automatically create incidents every tim
 
 Connect your security solution by installing the appropriate solution from the **Content Hub** in Microsoft Sentinel and setting up the data connector. For more information, see [Discover and manage Microsoft Sentinel out-of-the-box content](sentinel-solutions-deploy.md) and [Microsoft Sentinel data connectors](connect-data-sources.md).
 
-## Enable automatic incident generation in data connector
+<a name="enable-automatic-incident-generation-in-data-connector"></a>
+## Enable automatic incident generation in a Microsoft security data connector
 
 The most direct way to automatically create incidents from alerts generated from Microsoft security solutions is to configure the solution's data connector to create incidents:
 
@@ -53,7 +54,7 @@ The most direct way to automatically create incidents from alerts generated from
    >
    > If you don't see the **Create incidents – Recommended** section, you most likely have enabled incident integration in your Microsoft Defender XDR connector, or you have onboarded Microsoft Sentinel to the Defender portal.
    >
-   > In either case, this article does not apply to your environment, since your incidents are created by the Microsoft Defender correlation engine instead of by Microsoft Sentinel.
+   > If you have enabled incident integration in your Microsoft Defender XDR connector or onboarded Microsoft Sentinel to the Defender portal, this article does not apply to your environment, since your incidents are created by the Microsoft Defender correlation engine instead of by Microsoft Sentinel.
 
 ## Create incident creation rules from a Microsoft Security template
 
@@ -93,5 +94,5 @@ You can create more than one **Microsoft Security** analytics rule per **Microso
 
 Use the following resources to continue setting up and learning Microsoft Sentinel:
 
-- To get started with Microsoft Sentinel, you need a subscription to Microsoft Azure. If you do not have a subscription, you can sign up for a [free trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
+- To get started with Microsoft Sentinel, you need a subscription to Microsoft Azure. If you do not have a subscription, you can sign up for a [Azure account purchase options and free trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - Learn how to [onboard your data to Microsoft Sentinel](quickstart-onboard.md), and [get visibility into your data and potential threats](get-visibility.md).

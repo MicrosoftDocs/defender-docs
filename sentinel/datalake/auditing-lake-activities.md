@@ -7,9 +7,9 @@ ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: amyhari
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #customer intent: As a SOC analyst, I want to learn how to use the audit log to search for Microsoft Sentinel data lake activities to help with investigation.
 
@@ -74,6 +74,8 @@ Audit log record retention is based on Microsoft Purview retention policies. For
 
 ## Search for events using a PowerShell script
 
+Before you run this script, make sure you have the **View-Only Audit Logs** or **Audit Logs** role in Exchange Online and that you can connect to Exchange Online via remote PowerShell.
+
 You can use the following PowerShell code snippet to query the Office 365 Management API to retrieve information about Microsoft Sentinel data lake and graph audit events. This script opens a remote Exchange Online session, imports the session cmdlets, and then runs `Search-UnifiedAuditLog` to search for audit log entries within a specified date range and record type.
 
 ```PowerShell
@@ -86,7 +88,7 @@ Search-UnifiedAuditLog -StartDate 2023/03/12 -EndDate 2023/03/20 -RecordType <ID
 >[!NOTE]
 > See the API column in [Audit activities](/purview/audit-log-activities) for the record type values.
 
-For more information, see [Use a PowerShell script to search the audit log](/purview/audit-log-search-script)
+For instructions on using PowerShell to search the audit log, see [Use a PowerShell script to search the audit log](/purview/audit-log-search-script)
 
 ## Related content
 

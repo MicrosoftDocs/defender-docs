@@ -8,10 +8,10 @@ ms.reviewer: sourinpaul
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ms.collection: ms-security  
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 # Customer intent: As a security admin, I want to set up connectors for Microsoft Sentinel data lake so that I can mirror and retain security data for long-term analysis.
 
@@ -21,7 +21,7 @@ ms.custom: msecd-doc-authoring-1014
 
 The Microsoft Sentinel data lake mirrors data from Microsoft Sentinel workspaces. When you onboard to Microsoft Sentinel data lake, your existing Microsoft Sentinel data connectors are configured to send data to both the analytics tier - your Microsoft Sentinel workspaces, and mirror the data to the data lake tier for longer term storage. After onboarding, configure your connectors to retain data in each tier according to your requirements.
 
-The following sections explain how to set up connectors for the Microsoft Sentinel data lake and configure retention. For more information on onboarding, see [Onboarding to Microsoft Sentinel data lake](sentinel-lake-onboarding.md).
+This article explains how to [configure retention and data tiering](#configure-retention-and-data-tiering), manage [XDR data](#microsoft-sentinel-xdr-data), [custom log tables](#custom-log-tables), [auxiliary log tables](#auxiliary-log-tables), and [direct ingestion](#direct-ingestion-to-the-data-lake) for the Microsoft Sentinel data lake. For more information on onboarding, see [Onboarding to Microsoft Sentinel data lake](sentinel-lake-onboarding.md).
 
 ## Configure retention and data tiering
 
@@ -40,7 +40,8 @@ To configure retention and tiering for your connectors, see [Configure data conn
 
 By default, Microsoft Defender XDR retains threat hunting data in the Analytics tier for 30 days. This data is always available. Some XDR tables can be ingested into the analytics and data lake tiers by increasing the retention time to more than 30 days. You can also ingest XDR data directly into the data lake tier without the analytics tier. For more information, see [Manage XDR data in Microsoft Sentinel](../manage-data-overview.md#manage-xdr-data-in-microsoft-sentinel).
 
-## Custom log tables
+<a name="custom-log-tables"></a>
+## Understand custom log table support for the Microsoft Sentinel data lake
 
 Microsoft Monitoring Agent(MMA) and Log analytics Agent (CLV1) custom tables aren't mirrored to the data lake.
   

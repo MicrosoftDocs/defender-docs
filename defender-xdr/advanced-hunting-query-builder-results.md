@@ -1,6 +1,6 @@
 ---
 title: Work with query results in guided mode for hunting in Microsoft Defender XDR
-description: Use and customize query results in guided mode for advanced hunting in Microsoft Defender XDR
+description: Learn how to review, export, and customize query results in guided mode for advanced hunting in Microsoft Defender XDR, including adding or removing columns in the Results tab.
 ms.service: defender-xdr
 ms.subservice: adv-hunting
 ms.author: pauloliveria
@@ -17,7 +17,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 ---
 
@@ -30,11 +30,13 @@ ai-usage: ai-assisted
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
+This article explains how to view and work with query results in guided mode for advanced hunting, including exporting results, reviewing runtime and resource usage information, and customizing which columns appear.
+
 In hunting using guided mode, the results of the query appear in the **Results** tab.
 
 ![Screenshot of the Results tab showing query output in guided mode for advanced hunting](media/advanced-hunting-query-builder-results/35-query-results.png)
 
-You can work on the results further by exporting them to a CSV file by selecting **Export**. This downloads the CSV file for your use.
+You can work on the results further by exporting them to a CSV file. Selecting **Export** downloads the CSV file for your use.
 
 You can view other information in the Results view:
 
@@ -49,13 +51,14 @@ A few standard columns are included in the results for easy viewing.
 To view more columns:
 
 1. Select **Customize columns** in the upper right-hand portion of the results view.
-2. From here, select the columns to include in the results view and deselect columns to hide.
+2. In the **Customize columns** pane, select the columns to include in the results view and clear the columns to hide.
 
-   ![Screenshot of the Customize columns picker showing available columns that users can select or deselect to control which fields appear in the query results view](media/advanced-hunting-query-builder-results/36-columns.png)
+   ![Screenshot of the Customize columns picker showing available columns to control which fields appear in query results](media/advanced-hunting-query-builder-results/36-columns.png)
 
 3. Select **Apply** to view results with the added columns. Use the scroll bars if necessary.
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 - [Advanced hunting quotas and usage parameters](advanced-hunting-limits.md)
 - [Switch to advanced mode](advanced-hunting-query-builder-details.md#switch-to-advanced-mode-after-building-a-query)

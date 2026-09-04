@@ -1,18 +1,18 @@
 ---
 title: Protect your Amazon Web Services environment
 description: Learn how to connect your Amazon Web Services (AWS) environment to Microsoft Defender for Cloud Apps using the API connector to monitor activities and detect threats.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
 # How Defender for Cloud Apps helps protect your Amazon Web Services (AWS) environment
 
-Amazon Web Services is an IaaS provider that enables your organization to host and manage their entire workloads in the cloud. Along with the benefits of using infrastructure in the cloud, your organization's most critical assets might be exposed to threats. Exposed assets include storage instances with potentially sensitive information, compute resources that operate some of your most critical applications, ports, and virtual private networks that enable access to your organization.
+Amazon Web Services (AWS) is an IaaS provider that lets your organization host and manage workloads in the cloud. While cloud infrastructure offers many benefits, it can also expose critical assets to threats. These assets include storage instances with sensitive data, compute resources that run key applications, ports, and virtual private networks.
 
-Connecting AWS to Defender for Cloud Apps helps you secure your assets and detect potential threats by monitoring administrative and sign-in activities, notifying on possible brute force attacks, malicious use of a privileged user account, unusual deletions of virtual machines (VMs), and publicly exposed storage buckets.
+Connect AWS to Defender for Cloud Apps to secure your assets and detect threats. The connector monitors admin and sign-in activity. It notifies you about brute force attacks, misuse of privileged accounts, unusual VM deletions, and publicly exposed storage buckets.
 
 ## Main threats
 
@@ -23,9 +23,10 @@ Connecting AWS to Defender for Cloud Apps helps you detect and respond to the fo
 - Data leakage
 - Resource misconfiguration and insufficient access control
 
-## How Defender for Cloud Apps helps to protect your environment
+<a name="how-defender-for-cloud-apps-helps-to-protect-your-environment"></a>
+## Protect your environment with Defender for Cloud Apps
 
-Defender for Cloud Apps helps protect your AWS environment in the following ways:
+Defender for Cloud Apps protects your AWS environment by helping you:
 
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 - [Limit exposure of shared data and enforce collaboration policies](best-practices.md#limit-exposure-of-shared-data-and-enforce-collaboration-policies)
@@ -48,7 +49,7 @@ For more information about creating policies, see [Create a policy](control-clou
 
 ## Automate governance controls
 
-In addition to monitoring for potential threats, you can apply and automate the following AWS governance actions to remediate detected threats:
+You can also apply and automate AWS governance actions to fix detected threats:
 
 | Type | Action |
 | ---- | ---- |
@@ -63,7 +64,7 @@ Review our best practices for [blocking and protecting the download of sensitive
 
 ## Connect Amazon Web Services to Microsoft Defender for Cloud Apps
 
-Use the connector APIs to connect your existing Amazon Web Services (AWS) account to Microsoft Defender for Cloud Apps. For information about how Defender for Cloud Apps protects AWS, see [Protect AWS](protect-aws.md).
+Defender for Cloud Apps provides connector APIs that integrate with supported cloud services to ingest activity data. Use these APIs to connect your existing Amazon Web Services (AWS) account to Defender for Cloud Apps. For information about how Defender for Cloud Apps protects AWS, see [Protect AWS](protect-aws.md).
 
 You can connect AWS **Security auditing** to Defender for Cloud Apps connections to gain visibility into and control over AWS app use.
 
@@ -104,7 +105,7 @@ To configure AWS auditing for Defender for Cloud Apps, perform the following ste
      }
     ```
 
-1. Select **Download .csv** to save a copy of the new user's credentials. You'll need them later.
+1. Select **Download .csv** to save a copy of the new user's credentials. You'll need these credentials later.
 
    
    > [!NOTE]

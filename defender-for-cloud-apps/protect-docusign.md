@@ -1,10 +1,10 @@
 ---
 title: Protect your DocuSign environment | Microsoft Defender for Cloud Apps
 description: Connect DocuSign to Microsoft Defender for Cloud Apps by using the API connector to monitor admin activity and user sign-ins, and detect anomalous behavior.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli 
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -20,18 +20,20 @@ Connecting your DocuSign environment to Defender for Cloud Apps gives you improv
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
 
-## Main threats
+<a name="main-threats"></a>
+## Main threats to your DocuSign environment
 
-Using DocuSign without Defender for Cloud Apps can leave your organization vulnerable to the following threats:
+Without Defender for Cloud Apps, your DocuSign environment is open to these threats:
 
 - Compromised accounts and insider threats
 - Data leakage
 - Insufficient security awareness
 - Unmanaged bring your own device (BYOD)
 
-## How Defender for Cloud Apps helps to protect your environment
+<a name="how-defender-for-cloud-apps-helps-to-protect-your-environment"></a>
+## Protect your environment with Defender for Cloud Apps
 
-Defender for Cloud Apps helps you protect your DocuSign environment with the following best practices:
+Use these best practices to help protect your DocuSign environment:
 
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 
@@ -48,7 +50,7 @@ In Secure Score, select **Recommended actions** and filter by **Product** = **Do
 
 For more information, see:
 
-- [Connect DocuSign to Microsoft Defender for Cloud Apps](#connect-docusign-to-microsoft-defender-for-cloud-apps)
+- [Connect DocuSign to Microsoft Defender for Cloud Apps](protect-docusign.md#connect-docusign-to-microsoft-defender-for-cloud-apps)
 - [Security posture management for SaaS apps](security-saas.md)
 - [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 
@@ -79,7 +81,7 @@ Review our best practices for [securing and collaborating with external users](b
 
 ## Connect DocuSign to Microsoft Defender for Cloud Apps
 
-This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing DocuSign environment using the App Connector APIs. This connection gives you visibility into and control over your organization’s DocuSign use.
+Use the App Connector APIs to connect Microsoft Defender for Cloud Apps to your existing DocuSign environment. This connection gives you visibility into and control over your organization’s DocuSign use.
 
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
@@ -104,9 +106,9 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 ### Configure DocuSign
 
-Collect the following values from DocuSign to use during the connector setup:
+Before you begin, sign in with a DocuSign account that is mapped to your organization and has Account Admin permissions. Then collect the following values to use during the connector setup:
 
-1. Sign into a DocuSign account that is mapped to your organization (you should be an account Admin for that account).  
+1. Go to your DocuSign account.  
 
 1. Go to **Settings** and then **Apps and keys**.
 

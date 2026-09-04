@@ -39,8 +39,8 @@ CFA is based on the following elements:
 
 When an app with an unknown reputation triggers CFA, the following events happen:
 
-- A pop-up notification appears on the device. For example, `Controlled folder access blocked C:\...\ApplicationName... from making changes to memory.` You can customize the information in the notification. For more information, see [Customize contact information in Windows Security](/windows/security/threat-protection/windows-defender-security-center/wdsc-customize-contact-information).
-- A `Protected memory access blocked` entry appears on the [Protection History page of the Windows Security app](https://support.microsoft.com/windows/protection-history-f1e5fd95-09b4-46d1-b8c7-1059a1e09708) on the device.
+- A pop-up notification appears on the device. For example, `Controlled folder access blocked C:\...\ApplicationName... from making changes to memory.` You can customize the information in the notification. For more information, see [Customize contact information in Windows Security](/windows/security/operating-system-security/system-security/windows-defender-security-center/wdsc-customize-contact-information).
+- A `Protected memory access blocked` entry appears on the [Protection History page of the Windows Security app](https://support.microsoft.com/Windows/Security/Windows-Security/protection-history-in-the-windows-security-app) on the device.
 - The block or audit is recorded as an event that you can [monitor](controlled-folder-access-monitor.md).
 
 CFA works best with [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), which provides detailed reporting on events and blocks as part of the usual [alert investigation scenarios](investigate-alerts.md).
@@ -65,7 +65,7 @@ CFA requires Microsoft Defender Antivirus as the primary antivirus app on Window
 
   Advanced management capabilities aren't available with other licenses (for example, Windows Professional or Microsoft 365 E3). However, you can develop your own monitoring and reporting tools based on the CFA events generated in Windows Event Viewer on each device (for example, [Windows Event Forwarding](/windows/security/operating-system-security/device-management/use-windows-event-forwarding-to-assist-in-intrusion-detection)).
 
-  To learn more about Windows licensing, see [Windows Licensing](https://www.microsoft.com/licensing/product-licensing/windows) and get the [Microsoft Volume Licensing Reference Guide](https://www.microsoft.com/download/details.aspx?id=11091).
+  To learn more about Windows licensing, see [Windows Licensing](https://www.microsoft.com/licensing/product-licensing/windows).
 
 ## Supported operating systems for CFA
 

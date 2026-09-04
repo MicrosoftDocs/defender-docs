@@ -11,10 +11,10 @@ ms.collection:
   - m365solution-scenario
   - highpri
   - tier1
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -34,7 +34,7 @@ In this Microsoft Defender for Endpoint deployment guide, you're guided through 
 
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
-This Defender for Endpoint deployment guide covers only deployments that use Microsoft Configuration Manager. Defender for Endpoint supports the use of other onboarding tools but we won't cover those scenarios in the deployment guide. For more information, see [Identify Defender for Endpoint architecture and deployment method](deployment-strategy.md).
+This Defender for Endpoint deployment guide covers only deployments that use Microsoft Configuration Manager. Defender for Endpoint supports the use of other onboarding tools but this deployment guide doesn't cover those onboarding-tool scenarios. For more information, see [Identify Defender for Endpoint architecture and deployment method](deployment-strategy.md).
 
 [!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
 
@@ -46,7 +46,8 @@ Checking the license state and whether the license was properly provisioned can 
 
 - In the [Microsoft Azure portal](https://portal.azure.com/#home), under **Manage Microsoft Entra ID**, select **View**. Then, under **Manage**, select **Licenses**. 
 
-## Cloud Service Provider validation
+<a name="cloud-service-provider-validation"></a>
+## Validate your Cloud Solution Provider setup
 
 If you're a Cloud Service Provider (CSP) partner managing a customer tenant, you can check which licenses are provisioned and verify their state through the Microsoft 365 admin center.
 
@@ -56,7 +57,8 @@ If you're a Cloud Service Provider (CSP) partner managing a customer tenant, you
 
    :::image type="content" source="media/atp-O365-admin-portal-customer.png" alt-text="The Office 365 admin portal" lightbox="media/atp-O365-admin-portal-customer.png":::
 
-## Tenant Configuration
+<a name="tenant-configuration"></a>
+## Configure your tenant settings
 
 To provision Defender for Endpoint in your tenant, follow these steps:
 
@@ -67,11 +69,13 @@ To provision Defender for Endpoint in your tenant, follow these steps:
    - Under **Assets**, select **Devices**.
    - Under **Endpoints**, select an item, such as **Dashboard** or **Endpoint security policies**.
    
-## Data center location
+<a name="data-center-location"></a>
+## Review data center location requirements
 
-Microsoft Defender for Endpoint stores and process data in the [same location as used by Microsoft Defender XDR](/defender-xdr/m365d-enable). If Microsoft Defender XDR hasn't been turned on yet, onboarding to Defender for Endpoint also turns on Defender XDR, and a new data center location is automatically selected based on the location of active Microsoft 365 security services. The selected data center location is shown on the screen.
+Microsoft Defender for Endpoint stores and process data in the [same location as used by Microsoft Defender XDR](/defender-xdr/m365d-enable). If Microsoft Defender XDR hasn't been turned on yet, onboarding to Defender for Endpoint also turns on Defender XDR, and a new data center location is automatically selected based on the location of active Microsoft 365 security services. The selected data center location is shown in the Microsoft Defender portal.
 
-## Network configuration
+<a name="network-configuration"></a>
+## Configure network access for deployment
 
 Ensure devices can connect to the Defender for Endpoint cloud services. The use of a proxy is recommended. See the following articles to configure your network:
 
@@ -81,12 +85,12 @@ Ensure devices can connect to the Defender for Endpoint cloud services. The use 
 
 1. [Verify client connectivity to Microsoft Defender for Endpoint service URLs](verify-connectivity.md).
 
-In environments that restrict outbound URL-based filtering, you might want to allow traffic to specific IP addresses. Not all services are accessible in this way and you need to evaluate how to address this potential issue in your environment. For example, you might need to download updates to a central location and then distribute them. For more information, see [Configure connectivity using static IP ranges](./configure-device-connectivity.md#option-2-configure-connectivity-using-static-ip-ranges).
+In environments that restrict outbound URL-based filtering, you might want to allow traffic to specific IP addresses. Not all services are accessible through specific IP addresses, and you need to evaluate how to address this potential issue in your environment. For example, you might need to download updates to a central location and then distribute them. For more information, see [Configure connectivity using static IP ranges](./configure-device-connectivity.md#option-2-configure-connectivity-using-static-ip-ranges).
 
 <a name="next-step"></a>
 ## Next steps
 
-After you complete the environment setup described in this article, proceed to assign the required roles and permissions:
+After you complete the environment setup described in this guide, proceed to assign the required roles and permissions:
 
 > [!div class="nextstepaction"]
 > [Step 2 - Assign roles and permissions](prepare-deployment.md)

@@ -1,16 +1,16 @@
 ---
 title: Connect Zoom | Microsoft Defender for Cloud Apps
 description: This article provides information about how to connect your Zoom environment  to Defender for Cloud Apps using the API connector for visibility and control over use.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Connect Zoom to Microsoft Defender for Cloud Apps (Preview)
 
-Zoom is an online video conferencing and collaboration tool. Zoom holds critical data of your organization, and this exposure makes it a target for malicious actors. This article explains how to connect your Zoom environment to Microsoft Defender for Cloud Apps by using the API connector. After you complete this connection, you can monitor Zoom activity, detect threats, and review security posture recommendations to help protect your organization's Zoom data. Before you begin, review the [prerequisites](#prerequisites) for connecting Zoom to Defender for Cloud Apps.
+Zoom is an online video conferencing and collaboration tool. Zoom holds critical data of your organization, and this exposure makes Zoom a target for malicious actors. This article explains how to connect your Zoom environment to Microsoft Defender for Cloud Apps by using the API connector. After you complete this connection, you can monitor Zoom activity, detect threats, and review security posture recommendations to help protect your organization's Zoom data. Before you begin, review the prerequisites listed in the following section to make sure your environment is ready to connect Zoom to Defender for Cloud Apps.
 
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
@@ -26,7 +26,7 @@ For example, recommendations for Zoom include:
 
 If a connector already exists and you don't see Zoom recommendations yet, refresh the connection by disconnecting the API connector, and then reconnecting it with the `“account:read:admin`, `chat_channel:read:admin` and `user:read:admin”` permissions.
 
-For more information, see: 
+For more information about SaaS security posture management and Microsoft Secure Score, see:
 
 - [Security posture management for SaaS apps](security-saas.md)
 - [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
@@ -56,6 +56,8 @@ The Zoom connector is subject to the following API rate limits:
 - **Business accounts**: 80 requests per second
 
 ## How to connect Zoom to Defender for Cloud Apps
+
+Perform the following steps to connect Zoom to Microsoft Defender for Cloud Apps:
 
 1. Sign into Zoom as an account owner or admin.
 

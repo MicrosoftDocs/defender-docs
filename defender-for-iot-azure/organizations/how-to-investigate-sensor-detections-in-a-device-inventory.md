@@ -1,15 +1,15 @@
 ---
 title: Manage your OT device inventory from a sensor console
 description: Learn how to view and manage OT devices (assets) from the Device inventory page on a sensor console.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
 # Manage your OT device inventory from a sensor console
 
-Use the **Device inventory** page from a sensor console to manage all OT and IT devices detected by that console. Identify new devices detected, devices that might need troubleshooting, and more.
+Use the **Device inventory** page from a sensor console to manage all OT and IT devices detected by that console. This article describes how to view, filter, and edit devices in the inventory, export inventory data to CSV, merge duplicate devices, and delete inactive devices.
 
 For more information, see [Devices monitored by Defender for IoT](architecture.md#devices-monitored-by-defender-for-iot).
 
@@ -19,7 +19,7 @@ For more information, see [Devices monitored by Defender for IoT](architecture.m
 
 ## View the device inventory
 
-This procedure describes how to view detected devices in the **Device inventory** page in an OT sensor console.
+To view devices detected by your OT sensor, use the **Device inventory** page.
 
 1. Sign-in to your OT sensor console, and then select **Device inventory**.
 
@@ -84,7 +84,7 @@ To export device inventory data, on the **Device inventory** page, select **Expo
 The device inventory is exported with any filters currently applied, and you can save the file locally.
 
 > [!NOTE]
-> In the exported file, date values are based on the region settings for the machine you're using to access the OT sensor. We recommend exporting data only from a machine with the same region settings as your sensor. For more information, see [Synchronize time zones on an OT sensor](how-to-manage-individual-sensors.md#synchronize-time-zones-on-an-ot-sensor).
+> In the exported file, date values use the region settings of the machine that accesses the OT sensor. Export data from a machine with the same region settings as your sensor. For more information, see [Synchronize time zones on an OT sensor](how-to-manage-individual-sensors.md#synchronize-time-zones-on-an-ot-sensor).
 > 
 
 ## Merge devices
@@ -98,11 +98,12 @@ Examples of this scenario might include a PLC with four network cards, a laptop 
 > - You can only merge authorized devices.
 > - Device merges are irreversible. If you merge devices incorrectly, you'll have to delete the merged device and wait for the sensor to rediscover both devices.
 > - Alternately, merge devices from the [Device map](how-to-work-with-the-sensor-device-map.md) page.
+
 When merging, you instruct the sensor to combine the device properties of two devices into one. When you merge the devices, the Device Properties window and sensor reports will be updated with the new device property details.
 
 For example, if you merge two devices, each with an IP address, both IP addresses will appear as separate interfaces in the Device Properties window.
 
-**To merge devices from the device inventory:**
+To merge duplicate devices from the device inventory, perform the following steps:
 
 1. In the **Device inventory** page, select the devices you want to merge, and then select **Merge** in the toolbar at the top of the page.
 
@@ -114,7 +115,7 @@ The devices are merged, and a confirmation message appears at the top right.
 
 You may want to view devices in your network that have been inactive and delete them.
 
-For example, devices may become inactive because of misconfigured SPAN ports, changes in network coverage, or by unplugging the devices from the network
+For example, devices may become inactive because of misconfigured SPAN ports, changes in network coverage, or because devices were unplugged from the network
 
 **To view inactive devices**, filter the device inventory to display devices that have been inactive.
 
@@ -152,13 +153,11 @@ This procedure is supported for the admin users only, including the default priv
 1. Select **Apply**.
 1. Select **Delete Inactive Devices**. In the prompt displayed, enter the reason you're deleting the devices, and then select **Delete**.
 
-All devices detected within the range of the filter will be deleted. If you delete a large number of devices, the delete process may take a few minutes.
+All devices detected within the range of the currently applied **Last Activity** filter will be deleted. If you delete a large number of devices, the delete process may take a few minutes.
 
 For more information, see [Default privileged on-premises users](roles-on-premises.md#default-privileged-on-premises-users).
 
-## Next steps
-
-For more information, see:
+## Related content
 
 - [Defender for IoT device inventory](device-inventory.md)
 - [Control what traffic is monitored](how-to-control-what-traffic-is-monitored.md)

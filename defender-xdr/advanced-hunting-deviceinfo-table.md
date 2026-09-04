@@ -6,46 +6,46 @@ ms.subservice: adv-hunting
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - tier3
 - m365-security
-ms.custom: 
+ms.custom:
 - cx-ti
 - cx-ah
+- msecd-doc-authoring-1015
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/28/2025
+ms.date: 07/27/2026
+ai-usage: ai-assisted
+#customer intent: As a security analyst, I want to understand the columns in the DeviceInfo table so that I can write advanced hunting queries that return device information.
 ---
 
 # DeviceInfo
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
 The `DeviceInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about devices in the organization, including OS version, active users, and computer name. Use this reference to construct queries that return information from this table.
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-
 This advanced hunting table is populated by records from various Microsoft services. If your organization hasn't deployed the service in Microsoft Defender, queries that use the table aren't going to work or return any results. For more information about how to deploy a Microsoft service in the Defender portal, read [Deploy supported services](deploy-supported-services.md).
-
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
 | Column name | Data type | Description |
-|-------------|-----------|-------------|
-| `Timestamp` |`datetime` | Last date and time recorded for the device |
+| ----------- | --------- | ----------- |
+| `Timestamp` | `datetime` | Last date and time recorded for the device |
 | `DeviceId` | `string` | Unique identifier for the device in the service |
 | `DeviceName` | `string` | Fully qualified domain name (FQDN) of the device |
 | `ClientVersion` | `string` | Version of the endpoint agent or sensor running on the device |
-| `PublicIP` | `string` | Public IP address used by the onboarded device to connect to the Microsoft  Defender for Endpoint service. This could be the IP address of the device itself, a NAT device, or a proxy. |
+| `PublicIP` | `string` | Public IP address used by the onboarded device to connect to the Microsoft Defender for Endpoint service. This could be the IP address of the device itself, a NAT device, or a proxy. |
 | `OSArchitecture` | `string` | Architecture of the operating system running on the device |
 | `OSPlatform` | `string` | Platform of the operating system running on the device. This indicates specific operating systems, including variations within the same family, such as Windows 11, Windows 10 and Windows 7. |
 | `OSBuild` | `long` | Build version of the operating system running on the device |
-| `IsAzureADJoined` | `boolean` | Boolean indicator of whether device is joined to the Microsoft Entra ID |
+| `IsAzureADJoined` | `boolean` | Boolean indicator of whether device is joined to Microsoft Entra ID |
 | `JoinType` | `string` | The device's Microsoft Entra ID join type |
 | `AadDeviceId` | `string` | Unique identifier for the device in Microsoft Entra ID |
 | `LoggedOnUsers` | `string` | List of all users that are logged on the device at the time of the event in JSON array format |
@@ -53,7 +53,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `OSVersion` | `string` | Version of the operating system running on the device |
 | `MachineGroup` | `string` | Machine group of the device. This group is used by role-based access control to determine access to the device. |
 | `ReportId` | `long` | Event identifier based on a repeating counter. To identify unique events, this column must be used in conjunction with the DeviceName and Timestamp columns. |
-| `OnboardingStatus` | `string` | Indicates whether the device is currently onboarded or not to  Microsoft Defender For Endpoint or if the device is not supported |
+| `OnboardingStatus` | `string` | Indicates whether the device is currently onboarded or not to Microsoft Defender for Endpoint or if the device is not supported |
 | `AdditionalFields` | `string` | Additional information about the event in JSON array format |
 | `DeviceCategory` | `string` | Broader classification that groups certain device types under the following categories: Endpoint, Network device, IoT, Unknown |
 | `DeviceType` | `string` | Type of device based on purpose and functionality, such as network device, workstation, server, mobile, gaming console, or printer |
@@ -65,18 +65,18 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `MergedDeviceIds` | `string` | Previous device IDs that have been assigned to the same device |
 | `MergedToDeviceId` | `string` | The most recent device ID assigned to a device |
 | `IsInternetFacing` | `boolean` | Indicates whether the device is internet-facing |
-| `SensorHealthState` | `string` | Indicates health of the device's EDR sensor, if onboarded to Microsoft Defender For Endpoint |
-| `IsExcluded`| `bool` | Determines if the device is currently excluded from Microsoft Defender for Vulnerability Management experiences |
+| `SensorHealthState` | `string` | Indicates health of the device's EDR sensor, if onboarded to Microsoft Defender for Endpoint |
+| `IsExcluded` | `bool` | Determines if the device is currently excluded from Microsoft Defender for Vulnerability Management experiences |
 | `ExclusionReason` | `string` | Indicates the reason for device exclusion |
 | `ExposureLevel` | `string` | The device's level of vulnerability to exploitation based on its exposure score; can be: Low, Medium, High |
-| `AssetValue`| `string` | Priority or value assigned to the device in relation to its importance in computing the organization's exposure score; can be: Low, Normal (Default), High |
+| `AssetValue` | `string` | Priority or value assigned to the device in relation to its importance in computing the organization's exposure score; can be: Low, Normal (Default), High |
 | `DeviceManualTags` | `string` | Device tags created manually using the portal UI or public API |
 | `DeviceDynamicTags` | `string` | Device tags added and removed dynamically based on dynamic rules |
 | `ConnectivityType` | `string` | Type of connectivity from the device to the cloud |
 | `HostDeviceId` | `string` | Device ID of the device running Windows Subsystem for Linux |
 | `AzureResourceId` | `string` | Unique identifier of the Azure resource associated with the device |
 | `AwsResourceName` | `string` | Unique identifier specific to Amazon Web Services devices, containing the Amazon resource name |
-| `GcpFullResourceName` | `string` | Unique identifier specific to Google Cloud Platform devices, containing a combination of zone and ID for GCP|
+| `GcpFullResourceName` | `string` | Unique identifier specific to Google Cloud Platform devices, containing a combination of zone and ID for GCP |
 | `HardwareUuid` | `string` | Universally Unique Identifier (UUID) of the device's hardware |
 | `CloudPlatforms` | `string` | The cloud platforms that the device belongs to. Can be Azure, Amazon Web Services, Google Cloud Platform and Azure Arc. |
 | `AzureVmId` | `string` | Unique identifier assigned to the device in Azure |
@@ -85,8 +85,9 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `OsBuildRevision` | `string` | Build revision number of the operating system running on the machine |
 | `MitigationStatus` | `string` | Indicates the mitigation action applied to a device |
 | `Site` | `string` | Represents the physical location where the device is located |
-| `DiscoverySources` | `string` | Products or services that have seen or reported the device, including when they last reported it. |
-|`DlpInfo`|`string`| Properties related to Endpoint Data Loss Prevention (DLP).[*](#dlp-only) |
+| `DiscoverySources` | `string` | Products or services that have seen or reported the device, including when they last reported it |
+| `DeviceRoles` | `string` | Device roles and characteristics associated with the device, in JSON format. Includes roles identified by the system or defined by users, confidence levels, and the last time each role was seen. |
+| `DlpInfo` | `string` | Properties related to Endpoint Data Loss Prevention (DLP).[*](#dlp-only) |
 
 <a name="dlp-only"></a>* For information about the properties available in the `DlpInfo` column, see [Troubleshooting endpoint data loss prevention configuration and policy sync. ](/purview/dlp-edlp-tshoot-sync#access-device-attribute-data-using-advanced-hunting)
 

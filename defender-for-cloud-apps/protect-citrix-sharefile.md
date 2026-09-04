@@ -1,11 +1,11 @@
 ---
 title: Connect Citrix ShareFile | Microsoft Defender for Cloud Apps
 description: Connect Citrix ShareFile to Microsoft Defender for Cloud Apps using the API connector to gain visibility into user activity and improve threat detection and control.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Connect Citrix ShareFile to Microsoft Defender for Cloud Apps
@@ -14,11 +14,12 @@ ms.custom: msecd-doc-authoring-1014
 
 Citrix ShareFile is a secure content collaboration, file sharing and sync solution that supports all the document-centric tasks and workflow needs of small and large businesses. Citrix ShareFile holds critical data of your organization, and that critical role makes it a target for malicious actors.
 
-Connecting Citrix ShareFile to Defender for Cloud Apps gives you improved insights into your users' activities and provides threat detection using machine learning based anomaly detections.
+Connecting Citrix ShareFile to Defender for Cloud Apps gives you improved insights into your users' activities and provides threat detection using machine learning based anomaly detections. Before you start, make sure you meet the [prerequisites](#prerequisites) described later in this article.
 
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
-## Main threats
+<a name="main-threats"></a>
+## Main threats to your Citrix ShareFile environment
 
 Connecting Citrix ShareFile to Defender for Cloud Apps helps you address the following threats:
 
@@ -29,11 +30,14 @@ Connecting Citrix ShareFile to Defender for Cloud Apps helps you address the fol
 
 ## How Defender for Cloud Apps helps to protect your environment
 
+Defender for Cloud Apps can help protect your Citrix ShareFile environment in the following ways:
+
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 
 - [Use the audit trail of activities for forensic investigations](best-practices.md#use-the-audit-trail-of-activities-for-forensic-investigations)
  
-## SaaS security posture management  
+<a name="saas-security-posture-management"></a>
+## SaaS security posture management for Citrix ShareFile
 
 To see security posture recommendations for Citrix Share File in Microsoft Secure Score, create an API connector via the **Connectors** tab, with **Owner** and **Enterprise** permissions. In Secure Score, select **Recommended actions** and filter by **Product** = **CitrixSF**.
 
@@ -59,6 +63,8 @@ Complete the following prerequisites and steps to connect Citrix ShareFile to Mi
 The Citrix Share file user used for logging into Citrix Share file must have Access Company account permissions.
 
 ### Create API keys
+
+Perform the following steps to create the API keys required for the connector:
 
 1. Go to [ShareFile API Documentation](https://api.sharefile.com/), and sign in to your organization account.
 
@@ -88,6 +94,8 @@ The Citrix Share file user used for logging into Citrix Share file must have Acc
 
 ### Configure Defender for Cloud Apps
 
+Use the following steps to configure the Citrix ShareFile connector in Defender for Cloud Apps:
+
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
 
 1. In the **App connectors** page, select **+Connect an app**, followed by **Citrix ShareFile**.
@@ -98,7 +106,7 @@ The Citrix Share file user used for logging into Citrix Share file must have Acc
 
     ![Screenshot of the Citrix ShareFile connector dialog with instance name field.](media/connect-citrix-sharefile-instance-name.png "Screenshot of the Citrix ShareFile connector dialog with instance name field")
 
-1. In the next screen, enter the following fields:
+1. In the Citrix ShareFile connector details screen, enter the following fields:
 
     - The **Client ID** and **Client Secret** that you created in the Citrix ShareFile API portal.
     - **Client Subdomain**: Enter your account's subdomain. For example, if your account's URL is "mycompany.sharefile.com", you would enter "mycompany".

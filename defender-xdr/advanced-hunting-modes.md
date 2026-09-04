@@ -19,7 +19,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 ---
 
@@ -27,9 +27,9 @@ ai-usage: ai-assisted
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+## Use guided and advanced modes in advanced hunting
 
-
-You can find the **advanced hunting** page by going to the left navigation bar in the Microsoft Defender portal and selecting **Hunting** > **Advanced hunting**. If the navigation bar is collapsed, select the hunting icon ![Icon for advanced hunting in the Microsoft Defender portal navigation bar](./media/advanced-hunting-modes/hunting-icon.png).
+You can find the **advanced hunting** page by going to the left navigation bar in the Microsoft Defender portal and selecting **Hunting** > **Advanced hunting**. If the navigation bar is collapsed, select the hunting icon ![Screenshot of the Advanced hunting icon in the Microsoft Defender portal navigation bar](./media/advanced-hunting-modes/hunting-icon.png).
 
 In the **advanced hunting** page, two modes are supported:
 
@@ -51,9 +51,9 @@ When you open the advanced hunting page for the first time after guided mode (gu
 
 To take the tour, select **Take tour** when the guided hunting invitation banner appears:
 
-[![Image of a guided hunting banner prompting the user to take the tour](./media/advanced-hunting-modes/1-guided-hunting-banner-tb.png)](./media/advanced-hunting-modes/1-guided-hunting-banner.png#lightbox)
+[![Screenshot of the guided hunting prompt with an option to take the tour](./media/advanced-hunting-modes/1-guided-hunting-banner-tb.png)](./media/advanced-hunting-modes/1-guided-hunting-banner.png#lightbox)
 
-Follow the blue teaching bubbles that appear throughout the page and select **Next** to advance to the next teaching bubble.
+Follow the blue teaching bubbles that appear throughout the page and select **Next** to continue through the tour.
 
 You can take the tour again at any time by going to **Help resources** > **Learn more** and selecting **Take the tour**.
 

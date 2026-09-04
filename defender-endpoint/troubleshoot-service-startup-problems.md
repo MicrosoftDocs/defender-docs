@@ -52,7 +52,6 @@ The configuration of Microsoft Defender Antivirus changed. If you expected this 
 |`HKLM\SOFTWARE\Microsoft\Windows Defender\Diagnostics\RolledbackPlatformHealthData = <OVERALL>:<BAD>, <AGE>:<36>, <DIRTY_SHUTDOWNS>:<22>`|`Default\Diagnostics\RolledbackPlatformHealthData = 0`|
 |`Default\ServiceStartStates = 0x0`|`HKLM\SOFTWARE\Microsoft\Windows Defender\ServiceStartStates = 0x1`|
 |`HKLM\SOFTWARE\Microsoft\Windows Defender\ServiceStartStates = 0x1`|`Default\ServiceStartStates = 0x0`|
-|`Default\ProductAppDataPath = C:\ProgramData\Microsoft\Windows Defender`|`HKLM\SOFTWARE\Microsoft\Windows Defender\ProductAppDataPath = C:\ProgramData\Microsoft\Windows Defender`|
 |`Default\IsServiceRunning = 0x0`|`HKLM\SOFTWARE\Microsoft\Windows Defender\IsServiceRunning = 0x1`|
 |`Default\ProductAppDataPath = C:\ProgramData\Microsoft\Windows Defender`|`HKLM\SOFTWARE\Microsoft\Windows Defender\ProductAppDataPath = C:\ProgramData\Microsoft\Windows Defender`|
 |`Default\IsServiceRunning = 0x0`|`HKLM\SOFTWARE\Microsoft\Windows Defender\IsServiceRunning = 0x1`|

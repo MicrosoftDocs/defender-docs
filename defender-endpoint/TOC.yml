@@ -307,6 +307,8 @@
             href: linux-exclusions.md
           - name: Configure eBPF-based sensor
             href: linux-support-ebpf.md
+          - name: Tamper protection in audit mode (Preview)
+            href: linux-tamper-protection-audit-mode.md
           - name: Detect and block Potentially Unwanted Applications
             href: linux-pua.md
           - name: Configure Offline Security Intelligence Update
@@ -343,10 +345,14 @@
               href: ios-new-ux.md
             - name: Mobile device resources for Defender for Endpoint
               href: mobile-resources-defender-endpoint.md
+            - name: Configure Dynamic Preview Rings for Microsoft Defender on mobile
+              href: mobile-dynamic-preview-rings-configure.md
             - name: Configure Defender for Endpoint on Android features
               href: android-configure.md
             - name: Configure Defender for Endpoint on Android risk signals using app protection policy
               href: android-configure-mam.md
+            - name: Android Mobile Threat Defense (MTD) Role
+              href: android-mobile-threat-defense-role.md
             - name: Privacy for Defender for Endpoint on Android
               href: android-privacy.md
             - name: Configure Defender for Endpoint on iOS features
@@ -805,6 +811,8 @@
           href: manage-tamper-protection-individual-device.md
         - name: FAQs on tamper protection
           href: faqs-on-tamper-protection.yml
+      - name: Controlled configuration
+        href: secure-controlled-configuration.md
       - name: Turn on block at first sight
         href: configure-block-at-first-sight-microsoft-defender-antivirus.md
       - name: Antimalware Scan Interface (AMSI) integration

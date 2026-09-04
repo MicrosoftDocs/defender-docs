@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity sensor v2.x prerequisites | Microsoft Defender for Identity
 description: Learn the prerequisites for installing the Microsoft Defender for Identity sensor v2.x on domain controllers and identity servers.
-ms.date: 06/18/2025
+ms.date: 06/08/2026
 ms.topic: install-set-up-deploy
 ms.reviewer: rlitinsky
 ---
@@ -15,6 +15,9 @@ The Defender for Identity sensor v2.x has the following requirements. The v2.x s
 
 > [!TIP]
 > For domain controllers running Windows Server 2019 or later, we recommend deploying the [sensor v3.x](deploy-sensor-v3.md) instead.
+
+> [!TIP]
+> For servers running Windows Server 2019 or later, we recommend deploying the [Defender for Identity sensor v3.x](deploy-sensor-v3.md) instead.
 
 ## Licensing requirements
 
@@ -46,7 +49,7 @@ The following table summarizes the server requirements and recommendations for t
 
 | Prerequisite / Recommendation |Description  |
 |---------|---------|
-|Specifications  |  Make sure to install Defender for Identity on Windows version 2016 or higher, on a domain controller server with a minimum of:<br><br>- two cores<br>- 6 GB of RAM<br>- 6 GB of disk space required, 10 GB recommended, including space for Defender for Identity binaries and logs <br><br>Defender for Identity supports read-only domain controllers (RODC).     |
+|Specifications  |  The Defender for Identity sensor requires the following resources beyond those already used by the operating system and domain controller services:<br><br>- two cores<br>- 6 GB of RAM<br>- 6 GB of disk space required, 10 GB recommended, including space for Defender for Identity binaries and logs <br><br>Defender for Identity supports read-only domain controllers (RODC).     |
 |Performance   | For optimal performance, set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.        |
 |Network interface configuration | If you're using VMware virtual machines, make sure the virtual machine's NIC configuration has Large Send Offload (LSO) disabled. For more information, see [VMware virtual machine sensor issue](../troubleshooting-known-issues.md#vmware-virtual-machine-sensor-issue) for more details.|
 |Maintenance window|   We recommend scheduling a maintenance window for your domain controllers, as a restart might be required if the installation runs and a restart is already pending, or if .NET Framework needs to be installed. <br><br>If .NET Framework version 4.7 or later isn't already found on the system, .NET Framework version 4.7 is installed, and might require a restart.      |

@@ -12,7 +12,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about the anti-spam settings and filters that help prevent spam in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 05/22/2026
+ms.date: 07/24/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -32,8 +32,8 @@ To help reduce junk email, Microsoft 365 includes junk email protection using pr
 
 Microsoft 365 uses the following spam filtering verdicts to classify messages:
 
-- **Spam**: The message received a [spam-confidence level (SCL)](anti-spam-spam-confidence-level-scl-about.md) of 5 or 6.
-- **High confidence spam**: The message received an SCL of 7, 8, or 9.
+- **Spam**: Spam filtering identified the message as spam.
+- **High confidence spam**: Spam filtering identified the message as high confidence spam.
 - **Phishing**
 - **High confidence phishing**: As part of [secure by default](secure-by-default.md), high confidence phishing messages are always quarantined. Users can't release their own quarantined high confidence phishing messages, regardless of any available settings configured by admins.
 - **Bulk**: The message source met or exceeded the configured [bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md) threshold.
@@ -101,7 +101,7 @@ For more information about BCL, see [Bulk complaint level (BCL)](anti-spam-bulk-
 > [!TIP]
 > By default, the PowerShell only setting _MarkAsSpamBulkMail_ is `On` in anti-spam policies in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). This setting dramatically affects the results of a **Bulk compliant level (BCL) met or exceeded** filtering verdict:
 >
-> - **_MarkAsSpamBulkMail_ is On**: A BCL that's greater than or equal to the threshold value is converted to an SCL 6 that corresponds to a filtering verdict of **Spam**, and the action for the **Bulk compliant level (BCL) met or exceeded** filtering verdict is taken on the message.
+> - **_MarkAsSpamBulkMail_ is On**: A BCL that's greater than or equal to the threshold value is identified as spam, and the action for the **Bulk compliant level (BCL) met or exceeded** filtering verdict is taken on the message.
 > - **_MarkAsSpamBulkMail_ is Off**: The message is stamped with the BCL, but _no action_ is taken for a **Bulk compliant level (BCL) met or exceeded** filtering verdict. In effect, the BCL threshold and **Bulk compliant level (BCL) met or exceeded** filtering verdict action are irrelevant.
 
 ### Spam properties in anti-spam policies

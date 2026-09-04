@@ -202,8 +202,6 @@ To make a login page the default on the **Tenant login pages** or **Global login
 <a name="related-links"></a>
 ## Related content
 
-[Get started using Attack simulation training](attack-simulation-training-get-started.md)
-
-[Create a phishing attack simulation](attack-simulation-training-simulations.md)
-
-[Simulation automations for Attack simulation training](attack-simulation-training-simulation-automations.md)
+- [Get started using Attack simulation training](attack-simulation-training-get-started.md)
+- [Simulate a phishing attack with Attack simulation training](attack-simulation-training-simulations.md)
+- [Simulation automations for Attack simulation training](attack-simulation-training-simulation-automations.md)

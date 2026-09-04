@@ -14,7 +14,9 @@ ms.topic: concept-article
 ms.custom: 
 - cx-ti
 - cx-dex
-ms.date: 05/18/2026
+- msecd-doc-authoring-1018
+ms.date: 07/29/2026
+ai-usage: ai-assisted
 ---
 
 # Before you begin using Defender Experts MDR
@@ -75,9 +77,26 @@ As part of the service's built-in [Microsoft Defender Experts Hunting](defender-
 
 [Learn more about Microsoft's commercial licensing terms](https://www.microsoft.com/licensing/terms/productoffering/Microsoft365/MCA).
 
-## Access requirements
+## Plan 2 prerequisites
 
-Work with your Commercial Executive to transact the Defender Experts MDR and Defender Experts for Servers SKUs.
+Defender Experts MDR Plan 2 operates on the telemetry you collect in Microsoft Sentinel, so it has onboarding prerequisites and baseline criteria in addition to the requirements described earlier in this article. These prerequisites let the service detect and investigate reliably in the sources you want covered.
+
+Plan 2 requires the following:
+
+- A supported endpoint detection and response (EDR) product deployed on all endpoints.
+- Supported email security and identity protection products deployed for all users. A basic identity and access management solution isn't sufficient. Assets without these products are considered uncovered.
+- A supported cloud-native application protection platform (CNAPP) or cloud workload protection platform (CWPP) solution deployed for any cloud or on-premises infrastructure to be monitored.
+- Data ingested through the built-in Microsoft Sentinel connectors into the standard Microsoft Sentinel tables.
+- Appropriate access granted to Defender Experts for the Microsoft Sentinel workspaces to be monitored.
+- Microsoft Sentinel connected to the Microsoft Defender portal. For more information, see [Connect Microsoft Sentinel to the Microsoft Defender portal](/azure/sentinel/move-to-defender).
+- Baseline data configuration, including a 90-day Log Analytics retention period for data sources that require real-time detection and monitoring.
+- User and Entity Behavior Analytics (UEBA) enabled for supported data sources.
+
+For the non-Microsoft sources that Plan 2 covers, see [Third-party source coverage for Plan 2](defender-experts-mdr-overview.md#third-party-source-coverage-for-plan-2).
+
+<!-- TODO: Product and engineering to verify this Plan 2 prerequisite list before the PR leaves draft. Specifically confirm: the 90-day Log Analytics retention requirement and which data sources it applies to; which data sources require UEBA; the least-privileged Azure role a customer needs to grant expert access to the primary workspace or resource group; and whether onboarding is limited to the primary Microsoft Sentinel workspace. -->
+
+## Access requirements
 
 Defender Experts MDR and Defender Experts for Servers request for certain roles and permissions for you to fully access the service capabilities. [Learn more](defender-experts-mdr-permissions.md)
 
@@ -89,11 +108,13 @@ The following sections provide additional information about the service's data u
 
 ### Data collection, usage, and retention
 
-All data used for hunting from existing Defender services stays in your original Microsoft Defender service storage location. [Learn more](/microsoft-365/enterprise/o365-data-locations).
-
-Defender Experts MDR operational data, such as case tickets and analyst notes, are generated and stored in a Microsoft data center in the European Union region for customers whose Defender data is in scope of EU data boundary and in the US region for other customers, irrespective of the Microsoft Defender service storage location. Data generated for the reporting dashboard is stored in your Microsoft Defender service storage location. Reporting data and operational data are retained for a grace period of no more than 90 days after your subscription expires. If you terminate your subscription, data is deleted within 30 days.
-
-Microsoft experts hunt over [advanced hunting logs](../advanced-hunting-schema-tables.md) in Microsoft Defender advanced hunting tables. The data in these tables depend on the set of Defender services you enable (for example, Defender for Endpoint, Defender for Office 365, Defender for Identity, Defender for Cloud Apps, and Microsoft Entra ID). Experts also use a large set of internal threat intelligence data to inform their hunting and automation.
+- All data used for hunting from existing Defender services continues to reside in the customer's original Microsoft Defender service storage location.
+- Data generated for Defender Experts reports and other experiences in the Defender portal is stored in the customer's Microsoft Defender service storage location.
+- Defender Experts MDR Plan 1 for Gov operational data, such as case tickets and analyst notes, is generated and stored in Microsoft data centers in the US region for GCC customers.
+- Defender Experts MDR operational data, such as case tickets and analyst notes, is generated and stored in Microsoft data centers in the EU region for customers whose Defender data is in scope of European Union data boundary.
+- Defender Experts MDR operational data, such as case tickets and analyst notes, is generated and stored in Microsoft data centers worldwide for other customers, irrespective of their Microsoft Defender service storage location.
+- Reporting data and operational data will be retained for a grace period of no more than 90 days after a customer's subscription expires. If the customer terminates their subscription, data will be deleted within 30 days.
+- Microsoft experts hunt over [advanced hunting logs](../advanced-hunting-schema-tables.md) in Microsoft Defender advanced hunting tables. The data in these tables depends on the set of Defender services you enable (for example, Defender for Endpoint, Defender for Office 365, Defender for Identity, Defender for Cloud Apps, and Microsoft Entra ID). Experts also use a large set of internal threat intelligence data to inform their hunting and automation.
 
 > [!NOTE]
 > Microsoft Defender for Cloud is integrated with Microsoft Defender. This integration allows security teams to access Defender for Cloud alerts and incidents within the Microsoft Defender portal. The Defender Experts for Servers service accesses data through the Defender portal, so the same data collection, usage, and retention policies apply to this service.
@@ -104,7 +125,7 @@ When you purchase and onboard to Defender Experts MDR and Defender Experts for S
 
 ### Availability
 
-Customers can access this service worldwide in commercial public clouds. To learn more, contact your Microsoft account team.
+Defender Experts MDR follows Microsoft 365 and Office 365 international availability. The service is available for customers in our commercial public cloud. In addition, the Defender Experts MDR Plan 1 for Gov service is available to GCC customers who do not require FedRAMP authorization, such as many State & Local Government (SLG) customers. Defender Experts MDR is not available in government cloud (i.e. to GCC-H, DoD, etc. customers) and sovereign cloud at this time.
 
 ### Language
 

@@ -5,9 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: ofshezaf
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security engineer, I want to connect various Microsoft services to Microsoft Sentinel using API-based data connectors so that I can centralize and streamline security event monitoring and incident management.
 
@@ -55,7 +55,7 @@ To connect a Microsoft service by using an API-based connector, complete the fol
 
 1. If on the connector page there is a section titled **Create incidents - recommended!**, select **Enable** if you want to automatically create incidents from alerts.
 
-You can find and query the data for each service using the table names that appear in the section for the service's connector in the [Data connectors reference](data-connectors-reference.md) page.
+You can find and query the data for each service using the table names listed under each connector's section on the [Data connectors reference](data-connectors-reference.md) page. For example, Microsoft Entra ID Protection data appears in the [Microsoft Entra ID Protection connector](data-connectors-reference.md#microsoft-entra-id-protection) section of that reference.
 
 ## Related content
 

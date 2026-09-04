@@ -7,12 +7,12 @@ ms.author: painbar
 author: paulinbar
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 ai-usage: ai-generated
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
-# Schedule antivirus scans on Linux (preview)
+# Schedule antivirus scans on Linux
 
 This article describes how to configure scheduled antivirus scans on Microsoft Defender for Endpoint on Linux. It's intended for IT and security administrators who manage Linux devices and want to ensure continuous antivirus protection through centralized scan scheduling. Before you begin, review the [prerequisites](#prerequisites) to ensure your environment meets the necessary requirements.
 
@@ -148,9 +148,10 @@ The following example configures:
 }
 ```
 
-### Use command line
+<a name="use-command-line"></a>
+### Use the command line to configure scheduled scans
 
-You can configure scheduled antivirus scans directly on a Linux device using the mdatp command-line tool. This approach is useful for testing or single-device configuration.
+You can configure scheduled antivirus scans directly on a Linux device using the Microsoft Defender for Endpoint command-line tool (`mdatp`). This approach is useful for testing or single-device configuration.
 
 **Enable scheduled scans:**
 

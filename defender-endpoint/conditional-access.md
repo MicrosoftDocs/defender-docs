@@ -10,36 +10,37 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Enable Conditional Access to better protect users, devices, and data
 
+## Overview
 
 Conditional Access is a capability that helps you better protect your users and enterprise information by making sure that only secure devices have access to applications.
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=d5655a77-d21f-4da4-b00c-3260d0bf13d6]
 
-With Conditional Access, you can control access to enterprise information based on the risk level of a device. This helps keep trusted users on trusted devices using trusted applications.
+With Conditional Access, you can control access to enterprise information based on the risk level of a device. Conditional Access helps keep trusted users on trusted devices using trusted applications.
 
 You can define security conditions under which devices and applications can run and access information from your network by enforcing policies to stop applications from running until a device returns to a compliant state.
 
 The implementation of Conditional Access in Defender for Endpoint is based on Microsoft Intune (Intune) device compliance policies and Microsoft Entra Conditional Access policies.
 
-The compliance policy is used with Conditional Access to allow only devices that fulfill one or more device compliance policy rules to access applications.
+A device compliance policy is used with Conditional Access to allow only devices that fulfill one or more device compliance policy rules to access applications.
 
 ## Understand the Conditional Access flow
 
 Conditional Access is put in place so that when a threat is seen on a device, access to sensitive content is blocked until the threat is remediated.
 
-The flow begins with devices being seen to have a low, medium, or high risk. These risk determinations are then sent to Intune.
+The flow begins with devices being seen to have a low, medium, or high risk. The low, medium, or high risk determinations are then sent to Intune.
 
-Depending on how you configure policies in Intune, Conditional Access can be set up so that when certain conditions are met, the policy is applied.
+Depending on how you configure policies in Intune, Conditional Access can be set up so that when certain conditions are met, the Conditional Access policy is applied.
 
 For example, you can configure Intune to apply Conditional Access on devices that have a high risk.
 
@@ -52,7 +53,7 @@ To resolve the risk found on a device, you need to return the device to a compli
 There are three ways to address a risk:
 
 1. Use Manual or automated remediation.
-1. Resolve active alerts on the device. This removes the risk from the device.
+1. Resolve active alerts on the device. Resolving active alerts removes the risk from the device.
 1. You can remove the device from the active policies and consequently, Conditional Access won't be applied on the device.
 
 Manual remediation requires a secops admin to investigate an alert and address the risk seen on the device. For automated remediation configuration settings, see [Configure Conditional Access](configure-conditional-access.md).
@@ -63,8 +64,8 @@ The following example sequence of events explains Conditional Access in action:
 
 1. A user opens a malicious file and Defender for Endpoint flags the device as high risk.
 1. The high risk assessment is passed along to Intune. In parallel, an automated investigation is initiated to remediate the identified threat. A manual remediation can also be done to remediate the identified threat.
-1. Based on the policy created in Intune, the device is marked as not compliant. The assessment is then communicated to Microsoft Entra ID by the Intune Conditional Access policy. In Microsoft Entra ID, the corresponding policy is applied to block access to applications.
-1. The manual or automated investigation and remediation is completed and the threat is removed. Defender for Endpoint sees that there's no risk on the device and Intune assesses the device to be in a compliant state. Microsoft Entra ID applies the policy, which allows access to applications.
+1. Based on the policy created in Intune, the device is marked as not compliant. The not-compliant assessment is then communicated to Microsoft Entra ID by the Intune Conditional Access policy. In Microsoft Entra ID, the corresponding policy is applied to block access to applications.
+1. The manual or automated investigation and remediation is completed and the threat is removed. Defender for Endpoint sees that there's no risk on the device and Intune assesses the device to be in a compliant state. Microsoft Entra ID applies the Conditional Access policy, which allows access to applications.
 1. Users can now access applications.
 
 <a name="related-topic"></a>

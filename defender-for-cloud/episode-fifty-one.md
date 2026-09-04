@@ -2,8 +2,9 @@
 title: Defender for Open-Source Relational Databases multicloud
 description: Learn about Microsoft's Defender for Cloud Defender for Open-Source Relational Databases multicloud capabilities
 ms.topic: reference
-ms.date: 10/05/2025
+ms.date: 08/07/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1015
 ---
 
 # Defender for Open-Source Relational Databases multicloud
@@ -14,7 +15,7 @@ ai-usage: ai-assisted
 > [!VIDEO https://aka.ms/docs/player?id=b500f9ce-ef69-4c97-8205-c167138ddb68]
 
 - [02:13](/shows/mdc-in-the-field/open-source-relational-databases-multicloud#time=02m13s) - Understanding the new additions for database protection in multicloud environments.
-- [05:52](/shows/mdc-in-the-field/open-source-relational-databases-multicloud#time=05m52s) - RDS protection in public preview
+- [05:52](/shows/mdc-in-the-field/open-source-relational-databases-multicloud#time=05m52s) - Amazon Relational Database Service (RDS) protection, which is now generally available.
 - [07:00](/shows/mdc-in-the-field/open-source-relational-databases-multicloud#time=07m00s) - Threat detection alerts for databases in multicloud environment.
 - [08:53](/shows/mdc-in-the-field/open-source-relational-databases-multicloud#time=08m53s) - Demonstration
 

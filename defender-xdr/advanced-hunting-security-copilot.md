@@ -17,7 +17,7 @@ ms.custom:
 - cx-ah
 ms.topic: how-to
 ms.update-cycle: 180-days
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender
 - Microsoft Defender XDR
@@ -29,44 +29,60 @@ ai-usage: ai-assisted
 
 [!INCLUDE [Prerelease](../includes/prerelease.md)]
 
-[Microsoft Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md) provides two powerful capabilities in advanced hunting to enhance threat hunting and security analysis. 
+[Microsoft Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md) provides the Threat Hunting Assistant in advanced hunting to enhance threat hunting and security analysis. The Threat Hunting Assistant runs in one of two modes, depending on how much help you want.
 
-The following table describes these capabilities, where they're best used, and the expected output:
+The following table describes each capability, where to use it, and the expected output:
 
-| Capability | Description |Output |Experience |
+| Mode | Description |Output |Experience |
 | ------------- | ------------- |------------- |------------- |
-| [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md) (preview) | AI-powered conversational threat hunting agent that's best used for complete investigations, multistep hunting, exploratory analysis, and getting direct answers |Conversational answers, Kusto query language (KQL) queries, results, insights, and recommendations|Investigation-focused |
-| [Query assistant](advanced-hunting-security-copilot-query-assistant.md) | Natural language to KQL query generation that's best used for generating queries |KQL query with explanation|Query-focused |
+| **Rich insights**<br>[Threat Hunting Assistant](advanced-hunting-security-copilot-threat-hunting-assistant.md) | AI-powered conversational threat hunting experience that's best used for complete investigations, multistep hunting, exploratory analysis, and getting direct answers |Conversational answers, Kusto query language (KQL) queries, results, insights, and recommendations|Investigation-focused |
+| **Query only**<br>[Query assistant](advanced-hunting-security-copilot-query-assistant.md) | Natural language to KQL query generation that's best used for generating queries |KQL query with explanation|Query-focused |
 
-The Threat Hunting Agent and Query assistant empower you to hunt threats faster, more accurately, and with greater confidence without needing to write KQL queries.
+The Threat Hunting Assistant and Query assistant empower you to hunt threats faster, more accurately, and with greater confidence without needing to write KQL queries.
 
-## Get access
+<a name="get-access"></a>
+## Get access to Security Copilot in advanced hunting
 Users with access to Security Copilot can use these capabilities in advanced hunting.
 
-You can only use one capability at a time. By default, the Threat Hunting Agent is the active mode. To switch to Query assistant mode, in the Security Copilot side pane, select the three-dot menu, then toggle the **Threat Hunting Agent** switch off.
+You can use one mode at a time. **Rich insights** is the default mode. The active mode appears as a badge next to **Threat hunting assistant** at the top of the Security Copilot side pane.
 
-![Screenshot of Security Copilot in advanced hunting showing the Threat Hunting Agent mode is active.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-access.png)
+To change modes, select the three-dot menu (**More actions**) in the Security Copilot side pane, point to **Threat hunting assistant mode**, then select **Rich insights** or **Query only**.
+
+![Screenshot of the Threat hunting assistant mode submenu in the Security Copilot side pane, showing Rich insights selected and Query only available.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-access.png)
+
+To use the Security Analyst Agent instead, select **Switch to Security Analyst Agent** from the same menu.
 
 >[!NOTE]
->- Switching between modes is only available in specific user environments. 
->- Switching between modes resets your conversation with Security Copilot. 
+>- Mode selection isn't available on non-primary workspaces.
+>- Switching modes starts a new chat and clears your current conversation. You're asked to confirm before the switch happens.
+
+To switch to Query assistant mode, in the Security Copilot side pane, select the three-dot menu, then toggle the **Threat Hunting Agent** switch off.
+
+![Screenshot of Security Copilot in advanced hunting showing the Threat Hunting Agent mode is active.](./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-access.png)
 
 
 ## Scope of Security Copilot in advanced hunting
 
 ### Use case support
-The Threat Hunting Agent and Query assistant both fully support generation of simple to medium complexity queries, which includes filter operation, and/or aggregation. Complex use cases (queries with joins, filtering, and aggregation) are supported, but we recommend validating their accuracy. Help us improve by [providing feedback on Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md#provide-feedback) with incorrect queries or response examples. 
+The Threat Hunting Assistant handles questions ranging from simple filters and aggregations to queries that span several tables. When a question needs data from more than one table, the assistant selects the relevant tables and joins them.
+
+As with any AI-generated content, review the generated query and its results before you act on them. Help us improve by [providing feedback on Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md#provide-feedback) with incorrect queries or response examples. 
 
 ### Best practices
-Use the following best practices when prompting the Threat Hunting Agent or Query assistant:
+Use the following best practices when prompting the Threat Hunting Assistant or Query assistant:
 
 - **Be unambiguous.** Ask questions with a clear subject. For example, "logins" could mean device logins or cloud logins.
 - **Ask one question at a time.** Ask for a single task or type of information at a time. Don't expect the AI model to perform several unrelated tasks at once. You can always ask follow-up questions instead of combining unrelated asks into a single prompt.
 - **Be specific.** If you know anything about the data you're looking for, provide that information in your question.
 
-### Supported tables
-The Threat Hunting Agent and Query assistant support the following tables in advanced hunting:
+### How the assistant finds your data
 
-| Microsoft Defender tables | Microsoft Sentinel tables |
-| ------------- | ------------- |
-|<ul><li>AADSignInEventsBeta <li>AADSpnSignInEventsBeta <li>AlertEvidence <li>AlertInfo <li>BehaviorEntities <li>BehaviorInfo <li>CloudAppEvents <li>CloudAuditEvents <li>CloudDnsEvents <li>CloudProcessEvents <li>DeviceAlertEvents <li>DeviceBaselineComplianceAssessment <li>DeviceBaselineComplianceAssessmentKB <li>DeviceBaselineComplianceProfiles <li>DeviceEvents<li>DeviceFileCertificateInfo <li>DeviceFileEvents <li>DeviceImageLoadEvents <li>DeviceInfo <li>DeviceInternetFacing <li>DeviceLogonEvents <li>DeviceNetworkEvents <li>DeviceNetworkInfo <li>DeviceProcessEvents <li>DeviceRegistryEvents <li>DeviceScriptEvents <li>DeviceTvmInfoGathering <li>DeviceTvmInfoGatheringKB <li>DeviceTvmSecureConfigurationAssessment <li>DeviceTvmSecureConfigurationAssessmentKB <li>DeviceTvmSoftwareEvidenceBeta <li>DeviceTvmSoftwareInventory <li>DeviceTvmSoftwareVulnerabilities <li>DeviceTvmSoftwareVulnerabilitiesKB <li>DynamicEventCollection <li>EmailAttachmentInfo <li>EmailEvents <li>EmailPostDeliveryEvents <li>EmailUrlInfo <li>IdentityDirectoryEvents <li>IdentityInfo <li>IdentityLogonEvents <li>IdentityQueryEvents <li>UrlClickEvents</ul> |<ul><li>AADManagedIdentitySignInLogs <li>AADNonInteractiveUserSignInLogs <li>AADProvisioningLogs <li>AADRiskyUsers <li>AADServicePrincipalSignInLogs <li>AADUserRiskEvents <li>ABAPAuditLog_CL <li>AlertEvidence <li>AlertInfo <li>Anomalies <li>AppDependencies <li>AppTraces <li>AuditLogs <li>AWSCloudTrail <li>AWSGuardDuty <li>AzureActivity <li>AzureDevOpsAuditing <li>AzureDiagnostics <li>AzureMetrics <li>BehaviorAnalytics <li>CloudAppEvents <li>CloudAuditEvents <li>CloudDnsEvents <li>CloudProcessEvents <li>CommonSecurityLog <li>ContainerInventory <li>ContainerLog <li>DeviceEvents <li>DeviceFileCertificateInfo <li>DeviceFileEvents <li>DeviceImageLoadEvents <li>DeviceInfo <li>DeviceLogonEvents <li>DeviceNetworkEvents <li>DeviceNetworkInfo <li>DeviceProcessEvents <li>DeviceRegistryEvents <li>DnsEvents <li>Dynamics365Activity <li>EmailPostDeliveryEvents <li>Event <li>Heartbeat <li>IdentityInfo <li>InsightsMetrics <li>IntuneAuditLogs <li>IntuneDevices <li>LAQueryLogs <li>MicrosoftAzureBastionAuditLogs <li>MicrosoftPurviewInformationProtection <li>OfficeActivity <li>Perf <li>PowerBIActivity <li>ProtectionStatus <li>SecurityAlert <li>SecurityEvent <li>SecurityIncident <li>SecurityRecommendation <li>SigninLogs <li>SqlAtpStatus <li>StorageBlobLogs <li>StorageFileLogs <li>Syslog <li>ThreatIntelligenceIndicator <li>Update <li>UrlClickEvents <li>Usage <li>UserAccessAnalytics <li>UserPeerAnalytics <li>VMBoundPort <li>VMComputer <li>VMConnection <li>VMProcess <li>WindowsEvent <li>W3CIISLog <li>WindowsFirewall</ul>|
+The Threat Hunting Assistant discovers the data available in your environment as it works, instead of using a fixed list of tables. For each question, it:
+
+1. Lists the tables you have access to.
+1. Inspects the schema of the tables that look relevant.
+1. Selects the tables needed to answer the question, and joins them when more than one is required.
+
+This includes custom tables in your Microsoft Sentinel workspace.
+
+Discovery follows your own permissions, so the assistant only reaches data that you can already query in advanced hunting. It runs read-only queries and can't run commands that change data or configuration.

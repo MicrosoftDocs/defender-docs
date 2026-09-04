@@ -2,9 +2,11 @@
 title: 'Accounts security posture assessment'
 ms.service: microsoft-defender-for-identity
 ms.topic: article
-ms.date: 11/11/2025
+ms.date: 08/18/2026
 ms.reviewer: LiorShapiraa
 description: Lists all Microsoft Defender for Identity security posture assessments for Active Directory accounts, with detailed impacts and remediation steps to help improve your Secure Score.
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1020
 ---
 
 # Accounts security posture assessments 
@@ -14,7 +16,9 @@ description: Lists all Microsoft Defender for Identity security posture assessme
 > While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status might still take time until it's marked as **Completed**.
 
 
-## Remove stale Active Directory accounts (Preview)
+<a name='remove-stale-active-directory-accounts-preview'></a>
+
+## Remove stale Active Directory accounts
 
 **Description**
 
@@ -41,7 +45,9 @@ Stale accounts pose a security risk because they provide potential targets for a
 1. Remove accounts for former employees to prevent unauthorized access.
 
 
-##  Microsoft Entra ID privileged user accounts that are also privileged in Active Directory (Preview)
+<a name='microsoft-entra-id-privileged-user-accounts-that-are-also-privileged-in-active-directory-preview'></a>
+
+##  Microsoft Entra ID privileged user accounts that are also privileged in Active Directory
 
 
 **Description**
@@ -162,7 +168,7 @@ The primaryGroupId attribute of a user or computer account grants implicit mem
 
 1. Take appropriate action on those accounts by resetting their attribute to their default values or adding the member to the relevant group:  
 
-  - User accounts: 513 (Domain Users) or 514 (Domain Guests);  
+- User accounts: 513 (Domain Users) or 514 (Domain Guests);  
     
   - Computer accounts: 515 (Domain Computers);  
   
@@ -229,7 +235,9 @@ If the KRBTGT account's password is compromised, an attacker can use its hash to
 > For the official and supported procedure, see [Reset the krbtgt password](/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-the-krbtgt-password).
 
 
-## Change password for on-premises account with potentially leaked credentials (Preview)
+<a name='change-password-for-on-premises-account-with-potentially-leaked-credentials-preview'></a>
+
+## Change password for on-premises account with potentially leaked credentials
 
 **Description**
 
@@ -339,6 +347,44 @@ This is required to display the Security tab on domain objects.
 1. Select Apply, and then select OK.
 
 
+## Ensure external and guest accounts are not granted privileged roles
+
+**Description**
+
+The **Ensure external and guest accounts are not granted privileged roles** assessment lists external and guest identities that hold privileged roles in the tenant.
+
+**User impact**
+
+Guest and external accounts enable collaboration, but their security posture may depend on another organization's controls. If an external identity with privileged access is compromised, attackers can gain a privileged foothold in your tenant and use it for persistence, escalation, or access to sensitive data.
+
+**Implementation**
+
+1. Review the recommended action in the Microsoft Defender portal for **Ensure external and guest accounts are not granted privileged roles**.
+2. Review the list of exposed entities to identify guest and external accounts assigned privileged or sensitive roles.
+3. Remove privileged access from guest and external accounts unless there is a documented business requirement.
+4. Replace persistent privileged access with time-bound and governed access where possible.
+5. Monitor guest and external accounts that retain sensitive access.
+
+
+## Ensure non-admin identities cannot have WriteDACL permissions on sensitive groups
+
+**Description**
+
+The **Ensure non-admin identities cannot have WriteDACL permissions on sensitive groups** assessment lists non-admin identities that can modify access control permissions on sensitive groups.
+
+**User impact**
+
+WriteDACL permissions allow an identity to modify an object's access control list. When a non-admin identity has this permission over a sensitive group, that identity can grant itself or another identity privileged control. Attackers often abuse this type of permission to escalate privileges in Active Directory environments.
+
+**Implementation**
+
+1. Review the recommended action in the Microsoft Defender portal for **Ensure non-admin identities cannot have WriteDACL permissions on sensitive groups**.
+2. Review the list of exposed entities to identify non-admin identities with WriteDACL permissions on sensitive groups.
+3. Remove unnecessary WriteDACL permissions from sensitive group objects.
+4. Restrict permission-management capabilities to trusted administrative roles.
+5. Validate that sensitive group permissions match your intended administrative model.
+
+
 ## Ensure privileged accounts are not delegated
 
 **Description**
@@ -390,6 +436,26 @@ The safest approach is to use a PowerShell script to configure the device to pre
   For example:  
 
     :::image type="content" source="../media/ensure-privileged-accounts-with-sensitive-flag/device-profile.png" alt-text="Screenshot of the device profile.":::
+
+
+## Ensure service accounts in Entra ID are not assigned Domain Name Admin or Global Admin roles
+
+**Description**
+
+The **Ensure service accounts are not assigned Domain Name Admin or Global Admin roles** assessment lists service accounts that hold top-tier administrative roles, including Domain Name Admin or Global Admin.
+
+**User impact**
+
+Service accounts are commonly used by applications, scripts, and integrations. Because these accounts aren't tied to a person, they can be over-provisioned, long-lived, and overlooked. If a service account with top-tier privileges is compromised, attackers can use it as a direct path to broad administrative control across the environment.
+
+**Implementation**
+
+1. Review the recommended action in the Microsoft Defender portal for **Ensure service accounts are not assigned Domain Name Admin or Global Admin roles**.
+1. Review the list of exposed entities to identify service accounts assigned Domain Name Admin, Global Admin, or equivalent privileged roles.
+
+3. Remove unnecessary top-tier administrative roles from service accounts.
+4. Replace broad permissions with the minimum permissions required for the workload.
+5. Monitor remaining privileged service accounts and rotate their credentials according to organizational policy.
 
 
 ## Entities exposing credentials in clear text
@@ -456,7 +522,9 @@ LAPS simplifies password management while helping customers implement more recom
    :::image type="content" source="../media/laps-unprotected-devices.png" alt-text="Screenshot that shows the remediation steps for devices unprotected by LAPS." lightbox="../media/laps-unprotected-devices.png":::
 
 
-## Remove discoverable passwords in Active Directory account attributes (Preview)
+<a name='remove-discoverable-passwords-in-active-directory-account-attributes-preview'></a>
+
+## Remove discoverable passwords in Active Directory account attributes
 
 **Description**
 
@@ -505,7 +573,9 @@ To address this security assessment, follow these steps:
 1. Remove sensitive information from the listed attribute fields using standard directory management tools (for example, PowerShell or ADSI Edit).
 1. Fully remove the sensitive information. Don’t just mask the value. Partial obfuscation (for example, P@ssw***) can still offer useful clues to attackers.
 
-## Remove Stale Service Accounts (Preview)
+<a name='remove-stale-service-accounts-preview'></a>
+
+## Remove Stale Service Accounts
 
 **Description**
 
@@ -571,7 +641,7 @@ The following is a description of the risk posed by different delegation types:
 
 **Unconstrained delegation**
 
-  1. Select **Trust this computer for delegation to specified services only**.
+1. Select **Trust this computer for delegation to specified services only**.
       :::image type="content" source="../media/cas-isp-unconstrained-kerberos-1.png" alt-text="Screenshot that shows the option to trust this computer for delegation to specified services only.":::
 
 1. Specify the **Services to which this account can present delegated credentials**.

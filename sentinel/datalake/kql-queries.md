@@ -8,15 +8,15 @@ ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ms.collection: ms-security  
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---  
  
 #  Run KQL queries on the Microsoft Sentinel data lake
  
-Data lake exploration in the Microsoft Defender portal provides a unified interface to analyze your data lake. It lets you run KQL (Kusto Query Language) queries, create jobs, and manage them. Before you begin, make sure you meet the [prerequisites](#prerequisites), including data lake onboarding and required permissions.
+Data lake exploration in the Microsoft Defender portal provides a unified interface to analyze your data lake. It lets you run KQL (Kusto Query Language) queries, create jobs, and manage them. Before you begin, make sure you meet the [prerequisites for querying the data lake](#prerequisites), including data lake onboarding and required permissions.
 
 The **KQL queries** page under **Data lake exploration** lets you edit and run KQL queries on data lake resources and federated tables. Create jobs to promote data from the data lake to the analytics tier, or create aggregate tables in the data lake tier. Run jobs on demand or schedule them. The **Jobs** page lets you manage jobs; enable, disable, edit, or delete. For more information, see [Create jobs in the Microsoft Sentinel data lake](kql-jobs.md).
 
@@ -104,6 +104,8 @@ For more information on sample queries, see [Sample KQL queries for Microsoft Se
 
 ## Async queries
 
+Async queries let you run long-running KQL queries in the background so you can continue working in the portal while the query processes on the server. Use async queries when your query might exceed the 8-minute synchronous timeout or when working with broad time ranges.
+
 ### Run async queries
 
 You can run long-running queries asynchronously, so you can keep working while the query runs on the server. To run a query asynchronously:
@@ -139,7 +141,7 @@ Jobs are used to run KQL queries against the data in the data lake tier and prom
 
 You can run KQL queries against the Microsoft Sentinel data lake using Azure Data Explorer (ADX). ADX provides a powerful query engine and advanced analytics capabilities. To connect to the data lake using ADX, create a new connection using the following URI: `https://api.securityplatform.microsoft.com/lake/kql`
 
-When querying tables in the data lake using ADX, you must use the `external_table()` function to access the data. For example:
+When querying tables in the data lake using ADX, you must use the `external_table()` function to access the data. The following example query retrieves a sample of 100 records from the `AADRiskyUsers` external table:
 
 ```kql
 external_table("AADRiskyUsers")
@@ -163,7 +165,7 @@ Keep the following limitations and considerations in mind when running KQL queri
     + `.show databases entities`
     + `.show database`
     
-+ When you use the `stored_query_results` command, provide the time range in the KQL query. The time selector above the query editor doesn't work with this command.
++ When you use the `stored_query_results` command, provide the time range in the KQL query. The query editor time range selector doesn't work with the `stored_query_results` command.
 
 + Using out-of-the-box or custom functions isn't supported in KQL queries against the data lake.
 
@@ -174,6 +176,7 @@ Keep the following limitations and considerations in mind when running KQL queri
     + `arg()`
     + `externaldata()`
     + `ingestion_time()`
+    + `estimate_data_size()`
 
 + There is a 15-minute latency between when data is ingested into the data lake or federated tables, and when it becomes available for querying. This means that newly ingested data may not be immediately queryable.
   

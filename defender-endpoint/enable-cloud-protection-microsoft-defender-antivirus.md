@@ -6,9 +6,9 @@ ms.localizationpriority: medium
 ms.topic: how-to
 author: chrisda
 ms.author: chrisda
-ms.date: 07/02/2026
+ms.date: 08/12/2026
 ms.reviewer: pahuijbr
-ms.custom: nextgen, msecd-doc-authoring-1016
+ms.custom: nextgen, msecd-doc-authoring-1015
 ms.subservice: asr
 ms.collection:
 - m365-security
@@ -20,6 +20,7 @@ appliesto:
   - Microsoft Defender Antivirus
 
 ai-usage: ai-assisted
+#customer intent: As a security administrator, I want to turn on cloud protection so that Microsoft Defender Antivirus can use cloud-delivered detection and protection features.
 ---
 # Turn on cloud protection in Microsoft Defender Antivirus
 
@@ -43,20 +44,18 @@ Microsoft Defender Antivirus cloud protection helps protect against malware on y
 
 [![Diagram of Defender for Endpoint features that depend on cloud protection, such as tamper protection, block at first sight, and ASR rules.](media/mde-cloud-protection.png#lightbox)](enable-cloud-protection-microsoft-defender-antivirus.md)
 
+The following table summarizes the features and capabilities that depend on cloud protection:
 
-The following table summarizes the features and capabilities that depend on cloud protection: <br/><br/>
-
-| Feature/Capability  | Subscription requirement |  Description  |
-|---------|---------|--------|
+| Feature/Capability  | Subscription requirement | Description |
+| --- | --- | --- |
 | **Checking against metadata in the cloud**. The Microsoft Defender Antivirus cloud service uses machine learning models as an extra layer of defense. These machine learning models include metadata, so when a suspicious or malicious file is detected, its metadata is checked. <br/><br/>To learn more, see [Blog: Get to know the advanced technologies at the core of Microsoft Defender for Endpoint next-generation protection](https://www.microsoft.com/security/blog/2019/06/24/inside-out-get-to-know-the-advanced-technologies-at-the-core-of-microsoft-defender-atp-next-generation-protection/)  | Microsoft Defender for Endpoint Plan 1 or Plan 2 (Standalone or included in a plan like Microsoft 365 E3 or E5) |
 | **[Cloud protection and sample submission](cloud-protection-microsoft-antivirus-sample-submission.md)**. Files and executables can be sent to the Microsoft Defender Antivirus cloud service for detonation and analysis. Automatic sample submission relies on cloud protection, although it can also be configured as a standalone setting.<br/><br/>To learn more, see [Cloud protection and sample submission in Microsoft Defender Antivirus](cloud-protection-microsoft-antivirus-sample-submission.md). | Microsoft Defender for Endpoint Plan 1 or Plan 2 (Standalone or included in a plan like Microsoft 365 E3 or E5) |
 | **[Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md)**. Tamper protection helps protect against unwanted changes to your organization's security settings. <br/><br/>To learn more, see [Protect security settings with tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md).  | Microsoft Defender for Endpoint Plan 2 (Standalone or included in a plan like Microsoft 365 E5) |
-| **[Block at first sight](configure-block-at-first-sight-microsoft-defender-antivirus.md)** <br/>Block at first sight detects new malware and blocks it within seconds. When a suspicious or malicious file is detected, block at first sight capabilities queries the cloud protection backend and applies heuristics, machine learning, and automated analysis of the file to determine whether it's a threat.<br/><br/>To learn more, see [What is "block at first sight"?](configure-block-at-first-sight-microsoft-defender-antivirus.md#what-is-block-at-first-sight)  | Microsoft Defender for Endpoint Plan 1 or Plan 2 (Standalone or included in a plan like Microsoft 365 E3 or E5) |
+| **[Block at first sight](configure-block-at-first-sight-microsoft-defender-antivirus.md)** <br/>Block at first sight detects new malware and blocks it within seconds. When a suspicious or malicious file is detected, block at first sight capabilities queries the cloud protection backend and applies heuristics, machine learning, and automated analysis of the file to determine whether it's a threat.<br/><br/>To learn more, see [What is "block at first sight"?](configure-block-at-first-sight-microsoft-defender-antivirus.md)  | Microsoft Defender for Endpoint Plan 1 or Plan 2 (Standalone or included in a plan like Microsoft 365 E3 or E5) |
 | **[Emergency signature updates](microsoft-defender-antivirus-updates.md#security-intelligence-updates)**. When malicious content is detected, emergency signature updates and fixes are deployed. Rather than wait for the next regular update, you can receive these fixes and updates within minutes. <br/><br/>To learn more about updates, see [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md). | Microsoft Defender for Endpoint Plan 2 (Standalone or included in a plan like Microsoft 365 E5) |
 | **[Endpoint detection and response (EDR) in block mode](edr-in-block-mode.md)**. EDR in block mode provides extra protection when Microsoft Defender Antivirus isn't the primary antivirus product on a device. EDR in block mode remediates artifacts found during EDR-generated scans that the non-Microsoft, primary antivirus solution might have missed. When enabled for devices with Microsoft Defender Antivirus as the primary antivirus solution, EDR in block mode provides the added benefit of automatically remediating artifacts identified during EDR-generated scans. <br/><br/>To learn more, see [EDR in block mode](edr-in-block-mode.md). | Microsoft Defender for Endpoint Plan 2 (Standalone or included in a plan like Microsoft 365 E5) |
 | **[Attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md)**. ASR rules block risky behavior from apps. Some ASR rules require cloud protection. For m9ore information, see [Requirements for ASR rules](attack-surface-reduction-rules-overview.md#requirements-for-asr-rules). | Microsoft Defender for Endpoint Plan 1 or Plan 2 (Standalone or included in a plan like Microsoft 365 E3 or E5) |
 | **[Indicators of compromise (IoCs)](indicators-overview.md)**. In Defender for Endpoint, IoCs can be configured to define the detection, prevention, and exclusion of entities. Examples: <br/>"Allow" indicators can be used to define exceptions to antivirus scans and remediation actions.<br/>"Alert and block" indicators can be used to prevent files or processes from executing. <br/><br/>To learn more, see [Create indicators](indicators-overview.md). | Microsoft Defender for Endpoint Plan 2 (Standalone or included in a plan like Microsoft 365 E5) |
-
 
 ## Methods to configure cloud protection
 
@@ -67,7 +66,7 @@ You can turn Microsoft Defender Antivirus cloud protection on or off by using on
   - [Methods to configure cloud protection](#methods-to-configure-cloud-protection)
   - [Use Microsoft Intune to turn on cloud protection](#use-microsoft-intune-to-turn-on-cloud-protection)
   - [Use Group Policy to turn on cloud protection](#use-group-policy-to-turn-on-cloud-protection)
-  - [Use PowerShell cmdlets to turn on cloud protection](#use-powershell-cmdlets-to-turn-on-cloud-protection)
+  - [Use PowerShell cmdlets to turn on cloud protection](#use-powershell-to-turn-on-cloud-protection)
   - [Use Windows Management Instrumentation (WMI) to turn on cloud protection](#use-windows-management-instruction-wmi-to-turn-on-cloud-protection)
   - [Turn on cloud protection on individual clients with the Windows Security app](#turn-on-cloud-protection-on-individual-clients-with-the-windows-security-app)
   - [See also](#see-also)
@@ -104,53 +103,80 @@ When modifying an existing policy, see <a href="/intune/device-configuration/end
 
 ## Use Group Policy to turn on cloud protection
 
+> [!NOTE]
+> MAPS settings are equal to cloud-delivered protection.
+
 To enable cloud protection by using Group Policy, perform the following steps:
 
-1. On your Group Policy management device, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and select **Edit**.
+1. In Centralized Group Policy, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
-1. In the **Group Policy Management Editor**, go to **Computer configuration**.
+1. In the GPMC console tree, expand Group Policy Objects in the forest and domain containing the GPO you want to edit.
 
-1. Select **Administrative templates**.
+1. Right-click the GPO, and then select **Edit**.
 
-1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus > MAPS**
-
-    > [!NOTE]
-    > MAPS settings are equal to cloud-delivered protection.
-
-1. Double-click **Join Microsoft MAPS**. Ensure the option is turned on and set to **Basic MAPS** or **Advanced MAPS**. Select **OK**.
-
-    You can choose to send basic or additional information about detected software:
-
-    - Basic MAPS: Basic membership sends basic information to Microsoft about malware and potentially unwanted software that has been detected on your device. Information includes where the software came from (like URLs and partial paths), the actions taken to resolve the threat, and whether the actions were successful.
-
-    - Advanced MAPS: In addition to basic information, advanced membership sends detailed information about malware and potentially unwanted software, including the full path to the software, and detailed information about how the software has affected your device.
-
-1. Double-click **Send file samples when further analysis is required**. Ensure that the first option is set to **Enabled** and that the other options are set to either:
-
-   - **Send safe samples** (1)
-   - **Send all samples** (3)
+1. In the **Group Policy Management Editor**, go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **MAPS**.
 
    > [!NOTE]
-   > The **Send safe samples** (1) option means that most samples are sent automatically. Files that are likely to contain personal information prompt the user for additional confirmation.
-   > Setting the option to **Always Prompt** (0) lowers the protection state of the device. Setting it to **Never send** (2) means that the [Block at First Sight](configure-block-at-first-sight-microsoft-defender-antivirus.md) feature of Microsoft Defender for Endpoint won't work.
+   > Group Policy paths before Windows 10, version 2004 (May 2020) might use _Windows_ Defender Antivirus instead of _Microsoft_ Defender Antivirus. Both names refer to the same policy location.
 
-1. Select **OK**.
+1. In the details pane of **MAPS**, the available settings are:
+   - [Join Microsoft MAPS](#enable-and-configure-join-microsoft-maps)
+   - [Send file samples when further analysis is required](#enable-and-configure-send-file-samples-when-further-analysis-is-required)
 
-## Use PowerShell cmdlets to turn on cloud protection
+   To open and configure a cloud protection setting, use any of the following methods:
+   - Double-click the setting.
+   - Right-click the setting, and then select **Edit**.
+   - Select the setting, and then select **Action** \> **Edit**.
 
-The following cmdlets enable advanced cloud-delivered protection (Microsoft Active Protection Service (MAPS)) reporting and configure automatic sample submission for all file types:
+> [!TIP]
+> You can also configure Group Policy locally on individual devices by using the Local Group Policy Editor (`gpedit.msc`). Navigate to the same path: **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **MAPS**.
 
-```PowerShell
-Set-MpPreference -MAPSReporting Advanced
-Set-MpPreference -SubmitSamplesConsent SendAllSamples
+### Enable and configure Join Microsoft Maps
+
+1. In the details pane of **MAPS**, open the **Join Microsoft MAPS** setting.
+
+1. In the setting window that opens, configure the following options:
+   1. Select **Enabled**.
+   1. **Join Microsoft MAPS** in the **Options** section: Select one of the following values:
+      - **Basic MAPS**: Basic membership sends basic information to Microsoft about malware and potentially unwanted software that has been detected on your device. Information includes where the software came from (like URLs and partial paths), the actions taken to resolve the threat, and whether the actions were successful.
+      - **Advanced MAPS**: In addition to basic information, advanced membership sends detailed information about malware and potentially unwanted software, including the full path to the software, and detailed information about how the software has affected your device.
+
+   When you're finished, select **OK**.
+
+### Enable and configure Send file samples when further analysis is required
+
+1. In the details pane of **MAPS**, open the **Send file samples when further analysis is required** setting.
+
+1. In the setting window that opens, configure the following options:
+   1. Select **Enabled**.
+   1. **Send file samples when further analysis is required** in the **Options** section: Select one of the following values:
+      - **Send safe samples**: Most samples are sent automatically. Files that are likely to contain personal information prompt the user for more confirmation.
+      - **Send all samples**
+
+   When you're finished, select **OK**.
+
+> [!NOTE]
+>
+> - **Always Prompt** lowers the protection state of the device.
+> - **Never send** lowers the protection state of the device and disables [Block at First Sight](configure-block-at-first-sight-microsoft-defender-antivirus.md).
+
+<a name="use-powershell-cmdlets-to-turn-on-cloud-protection"></a>
+
+## Use PowerShell to turn on cloud protection
+
+The following command in an elevated PowerShell prompt (a PowerShell window you opened by selecting **Run as administrator**) enables advanced cloud-delivered protection (Microsoft Active Protection Service (MAPS)) reporting and configures automatic sample submission for all file types:
+
+```powershell
+Set-MpPreference -MAPSReporting Advanced -SubmitSamplesConsent SendAllSamples
 ```
 
-For more information on how to use PowerShell with Microsoft Defender Antivirus, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Microsoft Defender Antivirus cmdlets](/powershell/module/defender/). [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender) also has more information specifically on [-SubmitSamplesConsent](/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent).
+_SubmitSamplesConsent_ supports the following values:
 
-> [!IMPORTANT]
-> You can set **-SubmitSamplesConsent** to `SendSafeSamples` (the default, recommended setting), `NeverSend`, or `AlwaysPrompt`.
-> The `SendSafeSamples` setting means that most samples are sent automatically. Files that are likely to contain personal information result in a prompt for the user to continue, and require confirmation.
-> The `NeverSend` and `AlwaysPrompt` settings lower the protection level of the device. Furthermore, the `NeverSend` setting means that the [Block at First Sight](configure-block-at-first-sight-microsoft-defender-antivirus.md) feature of Microsoft Defender for Endpoint won't work.
+- `SendSafeSamples`: The default, recommended setting. Most samples are sent automatically. Files that are likely to contain personal information result in a prompt for the user to continue, and require confirmation.
+- `AlwaysPrompt`: Lowers the protection state of the device.
+- `NeverSend`: Lowers the protection state of the device and disables [Block at First Sight](configure-block-at-first-sight-microsoft-defender-antivirus.md).
+
+For more information on how to use PowerShell with Microsoft Defender Antivirus, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Microsoft Defender Antivirus cmdlets](/powershell/module/defender/). [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender) also has more information specifically on [-SubmitSamplesConsent](/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent).
 
 <a name='use-windows-management-instruction-wmi-to-turn-on-cloud-protection'></a>
 
@@ -184,13 +210,12 @@ For more information about allowed parameters, see [Windows Defender WMIv2 APIs]
 ## See also
 
 - [Use Microsoft cloud protection in Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md)
-
 - [Configuration Manager: Microsoft Defender for Endpoint](/intune/configmgr/protect/deploy-use/defender-advanced-threat-protection)
-
 - [Use PowerShell cmdlets to manage Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md)
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
+>
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
 > - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
@@ -198,6 +223,3 @@ For more information about allowed parameters, see [Windows Defender WMIv2 APIs]
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-
-
-

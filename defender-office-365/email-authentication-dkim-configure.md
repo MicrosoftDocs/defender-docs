@@ -905,4 +905,4 @@ For mail coming _into_ Microsoft 365, you might also need to configure trusted A
 To diagnose and fix email authentication failures, see [Troubleshoot email authentication in Microsoft 365](email-authentication-troubleshoot.md).
 
 > [!TIP]
-> Exchange 2016 and Exchange 2019 are known to modify messages that flow through them, which can affect DKIM.
+> Exchange 2016 and later are known to modify messages that flow through them, which can affect DKIM.

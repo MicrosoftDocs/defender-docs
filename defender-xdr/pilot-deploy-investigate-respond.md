@@ -1,6 +1,6 @@
 ---
-title: Investigate and respond to incidents in Microsoft Defender XDR
-description: Walk through attack simulations and tutorials, then use Microsoft Defender XDR to investigate and respond to incidents with automated investigation and advanced hunting.
+title: Investigate and respond to incidents in Microsoft Defender
+description: Walk through attack simulations and tutorials, then use Microsoft Defender to investigate and respond to incidents with automated investigation and advanced hunting.
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords: 
@@ -8,7 +8,7 @@ f1.keywords:
 ms.localizationpriority: medium
 ms.author: guywild
 author: guywi-ms
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 audience: ITPro
 ms.collection: 
   - m365-security
@@ -19,23 +19,23 @@ ms.collection:
   - tier1
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #customer intent: To learn how to investigate and respond to attacks using Microsoft Defender XDR.
 appliesto:
    - Microsoft Defender XDR
 ---
 
-# Investigate and respond using Microsoft Defender XDR
+# Investigate and respond using Microsoft Defender
 
-This article outlines the process to create incidents with attack simulations and tutorials and use Microsoft Defender XDR to investigate and respond. Before starting this process, be sure you've reviewed the overall process for [piloting and deploying Microsoft Defender XDR](pilot-deploy-overview.md) and you have at least piloted some of the components of Microsoft Defender XDR.
+This article outlines the process to create incidents with attack simulations and tutorials and use Microsoft Defender to investigate and respond. Before starting this process, be sure you've reviewed the overall process for [piloting and deploying Microsoft Defender](pilot-deploy-overview.md) and you have at least piloted some of the components of Microsoft Defender.
 
-An incident in Microsoft Defender XDR is a collection of correlated alerts and associated data that make up the story of an attack. Microsoft 365 services and apps create alerts when they detect a suspicious or malicious event or activity. Individual alerts provide valuable clues about a completed or ongoing attack. However, attacks typically employ various techniques against different types of entities, such as devices, users, and mailboxes. The result is multiple alerts for multiple entities in your tenant.
+An incident in Microsoft Defender is a collection of correlated alerts and associated data that make up the story of an attack. Microsoft 365 services and apps create alerts when they detect a suspicious or malicious event or activity. Individual alerts provide valuable clues about a completed or ongoing attack. However, attacks typically employ various techniques against different types of entities, such as devices, users, and mailboxes. The result is multiple alerts for multiple entities in your tenant.
 
 > [!NOTE]
 > If you're brand new to security analysis and incident response, see the [Respond to your first incident walkthrough](respond-first-incident-365-defender.md) to get a guided tour of a typical process of analysis, remediation, and post-incident review.
 
 
-## End-to-end deployment for Microsoft Defender XDR
+## End-to-end deployment for Microsoft Defender
 
 This is article 6 of 6 in a series to help you deploy the components of Microsoft Defender XDR, including investigating and responding to incidents.
 
@@ -46,12 +46,12 @@ The articles in this series correspond to the following phases of end-to-end dep
 | Phase | Link |
 |---|---|
 | A. Start the pilot | [Start the pilot](pilot-deploy-overview.md#start-the-pilot)|
-| B. Pilot and deploy Microsoft Defender XDR components | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
+| B. Pilot and deploy Microsoft Defender components | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
 |C. Investigate and respond to threats | **Practice incident investigation and response** (this article) |
 
-At any time during your pilot and deployment, you can test Microsoft Defender XDR's incident response and automated investigation and remediation capabilities by creating an incident with a simulated attack and using the Microsoft Defender portal to investigate and respond.
+At any time during your pilot and deployment, you can test Microsoft Defender's incident response and automated investigation and remediation capabilities by creating an incident with a simulated attack and using the Microsoft Defender portal to investigate and respond.
 
-## Workflow for incident investigation and response using Microsoft Defender XDR
+## Workflow for incident investigation and response using Microsoft Defender
 
 Here's the workflow for investigating and responding to incidents using Microsoft Defender XDR in your production environment.
 
@@ -72,12 +72,12 @@ Follow these steps:
 
 ## Step 1. Gather threat intelligence to identify adversaries and their infrastructure
 
-Microsoft Defender Threat Intelligence (Defender TI) provides threat intelligence information such as specific indicators of compromise (IOCs) and research and analyses straight from Microsoft experts and other sources. You can read articles or search for threat actors, vulnerabilities, and other IOCs to gain insight on the types of threats that you might want to investigate.
+Microsoft Threat Intelligence in Microsoft Defender XDR provides indicators of compromise (IOCs), threat research, and analysis from Microsoft experts and other sources. You can review threat intelligence articles or search for threat actors, vulnerabilities, and other indicators to support your investigations. You can read articles or search for threat actors, vulnerabilities, and other IOCs to gain insight on the types of threats that you might want to investigate.
 
-- For a tutorial on how to perform indicator searches and gather threat and adversary intelligence using Defender TI, see: [Tutorial: Gathering threat intelligence and infrastructure chaining](/defender/threat-intelligence/gathering-threat-intelligence-and-infrastructure-chaining)
-- For a tutorial on how to perform indicator searches to gather vulnerability intelligence using Defender TI, see: [Tutorial: Gathering vulnerability intelligence](/defender/threat-intelligence/gathering-vulnerability-intelligence)
+- For a tutorial on how to perform indicator searches and gather threat and adversary intelligence, see: [Tutorial: Gather threat intelligence and perform infrastructure chaining](gathering-threat-intelligence-and-infrastructure-chaining.md)
+- For a tutorial on how to perform indicator searches to gather vulnerability intelligence, see: [Tutorial: Gather vulnerability intelligence](gathering-vulnerability-intelligence.md)
 
-For more information, see [What is Microsoft Defender Threat Intelligence (Defender TI)?](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti)
+For more information, see [Microsoft Threat Intelligence in Microsoft Defender XDR](defender-threat-intelligence.md)
 
 ## Step 2. Simulate attacks with the Microsoft Defender portal
 
@@ -97,15 +97,15 @@ Defender for Office 365 with Microsoft 365 E5 or Microsoft Defender for Office 3
 
 1. Create a simulation
 
-   For step by step instructions on how to create and launch a new simulation, see [Simulate a phishing attack](/defender-office-365/attack-simulation-training-simulations).
+   For step-by-step instructions on how to create and launch a new simulation, see [Simulate a phishing attack](/defender-office-365/attack-simulation-training-simulations).
 
 2. Create a payload
 
-   For step by step instructions on how to create a payload for use within a simulation, see [Create a custom payload for attack simulation training](/defender-office-365/attack-simulation-training-payloads).
+   For step-by-step instructions on how to create a payload for use within a simulation, see [Create a custom payload for attack simulation training](/defender-office-365/attack-simulation-training-payloads).
 
 3. Gaining insights
 
-   For step by step instructions on how to gain insights with reporting, see [Gain insights through attack simulation training](/defender-office-365/attack-simulation-training-insights).
+   For step-by-step instructions on how to gain insights with reporting, see [Gain insights through attack simulation training](/defender-office-365/attack-simulation-training-insights).
 
    > [!VIDEO https://learn-video.azurefd.net/vod/player?id=37f13948-e44b-4d1a-ac3b-a13ce02dabec]
 
@@ -140,7 +140,7 @@ First, you need to add endpoints to your pilot environment.
 
 First, you need to add an isolated AD DS domain controller and a Windows device to your pilot environment.
 
-1. Verify your pilot environment tenant has [enabled Microsoft Defender XDR](m365d-enable.md#confirm-that-the-service-is-on).
+1. Verify your pilot environment tenant has [enabled Microsoft Defender](m365d-enable.md#confirm-that-the-service-is-on).
 
 2. Verify that your domain controller:
 
@@ -160,17 +160,17 @@ If you use tenant and device groups, create a dedicated device group for the tes
 
 One alternative is to host your AD DS domain controller and test device as virtual machines in Microsoft Azure infrastructure services. You can use the instructions in [Phase 1 of the simulated enterprise Test Lab Guide](/microsoft-365/enterprise/simulated-ent-base-configuration-microsoft-365-enterprise#phase-1-create-a-simulated-intranet), but skip the creation of the APP1 virtual machine.
 
-Here's the result.
+The following diagram shows the completed pilot environment.
 
 :::image type="content" source="media/pilot-deploy-investigate-respond/eval-defender-eval-investigate-respond-endpoints-tlg.png" alt-text="A diagram of the evaluation environment using the simulated enterprise Test Lab Guide." lightbox="media/pilot-deploy-investigate-respond/eval-defender-eval-investigate-respond-endpoints-tlg.png":::
 
-You'll simulate a sophisticated attack that leverages advanced techniques to hide from detection. The attack enumerates opened Server Message Block (SMB) sessions on domain controllers and retrieves recent IP addresses of users' devices. This category of attacks usually doesn't include files dropped on the victim's device and they occur solely in memory. They "live off the land" by using existing system and administrative tools and inject their code into system processes to hide their execution. Such behavior allows them to evade detection and persist on the device.
+You'll simulate an advanced attack that uses stealth techniques to hide from detection. The attack lists open Server Message Block (SMB) sessions on domain controllers. It also retrieves recent IP addresses of users' devices. Fileless in-memory attacks like this one don't drop files on the victim's device. Instead, they run only in memory. They "live off the land" by using built-in system and admin tools. They also inject code into system processes to hide what they're doing. This behavior helps them evade detection and persist on the device.
 
-In this simulation, our sample scenario starts with a PowerShell script. In the real world, a user might be tricked into running a script or the script might run from a remote connection to another computer from a previously infected device, which indicates that the attacker is attempting to move laterally in the network. Detection of these scripts can be difficult because administrators also often run scripts remotely to carry out various administrative activities.
+In this simulation, the scenario starts with a PowerShell script. In the real world, a user might be tricked into running a script. The script might also run from a remote connection to another computer from a previously infected device. This behavior suggests the attacker is trying to move laterally in the network. These scripts are hard to detect because admins also run scripts remotely for routine tasks.
 
 :::image type="content" source="media/pilot-deploy-investigate-respond/mtpdiydiagram.png" alt-text="A screenshot of the Fileless PowerShell attack with process injection and SMB reconnaissance attack." lightbox="media/pilot-deploy-investigate-respond/mtpdiydiagram.png":::
 
-During the simulation, the attack injects shellcode into a seemingly innocent process. The scenario requires the use of notepad.exe. We chose this process for the simulation, but attackers would more likely target a long-running system process, such as svchost.exe. The shellcode then goes on to contact the attacker's command-and-control (C2) server to receive instructions on how to proceed. The script attempts executing reconnaissance queries against the domain controller (DC). Reconnaissance allows an attacker to get information about recent user login information. Once attackers have this information, they can move laterally in the network to get to a specific sensitive account
+During the simulation, the attack injects shellcode into a seemingly innocent process. The scenario requires the use of notepad.exe. We chose this process for the simulation, but attackers would more likely target a long-running system process, such as svchost.exe. The shellcode then goes on to contact the attacker's command-and-control (C2) server to receive instructions on how to proceed. The script attempts executing reconnaissance queries against the domain controller (DC). Reconnaissance allows an attacker to get information about recent user login information. Once attackers have this information, they can move laterally in the network to get to a specific sensitive account.
 
 > [!IMPORTANT]
 > For optimum results, follow the attack simulation instructions as closely as possible.
@@ -207,13 +207,13 @@ A few seconds later, the Notepad app will open. A simulated attack code will be 
 
 The simulated attack code will attempt to communicate to an external IP address (simulating the C2 server) and then attempt reconnaissance against the domain controller through SMB.
 
-You'll see this message displayed on the PowerShell console when this script completes:
+The following console output confirms that the simulated reconnaissance action completed successfully against the domain controller:
 
 ```console
 ran NetSessionEnum against [DC Name] with return code result 0
 ```
 
-To see the Automated Incident and Response feature in action, keep the notepad.exe process open. You'll see Automated Incident and Response stop the Notepad process.
+To see the Automated Incident and Response feature in action, keep the `notepad.exe` process open. You'll see Automated Incident and Response stop the Notepad process.
 
 ### Investigate the incident for the simulated attack
 
@@ -234,7 +234,7 @@ Switching to the SOC analyst point of view, you can now start to investigate the
 
 #### Investigate the attack as a single incident
 
-Microsoft Defender XDR correlates analytics and aggregates all related alerts and investigations from different products into one incident entity. By doing so, Microsoft Defender XDR shows a broader attack story, allowing the SOC analyst to understand and respond to complex threats.
+Microsoft Defender correlates analytics and aggregates all related alerts and investigations from different products into one incident entity. By doing so, Microsoft Defender shows a broader attack story, allowing the SOC analyst to understand and respond to complex threats.
 
 The alerts generated during this simulation are associated with the same threat, and as a result, are automatically aggregated as a single incident.
 
@@ -244,7 +244,7 @@ To view the incident:
 
 2. From the navigation pane, select **Incidents & Alerts > Incidents**.
 
-3. Select the newest item by clicking on the circle located left of the incident name. A side panel displays additional information about the incident, including all the related alerts. Each incident has a unique name that describes it based on the attributes of the alerts it includes.
+3. Select the newest item by selecting the circle to the left of the incident name. A side panel displays additional information about the incident, including all the related alerts. Each incident has a unique name that describes it based on the attributes of the alerts it includes.
 
    The alerts that are shown in the dashboard can be filtered based on service resources: Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, Microsoft Defender for Endpoint, Microsoft Defender XDR, and Microsoft Defender for Office 365.
 
@@ -259,7 +259,7 @@ To view the incident:
 Let's look at some of the alerts generated during the simulated attack.
 
 > [!NOTE]
-> We'll walk through only a few of the alerts generated during the simulated attack. Depending on the version of Windows and the Microsoft Defender XDR products running on your test device, you might see more alerts that appear in a slightly different order.
+> We'll walk through only a few of the alerts generated during the simulated attack. Depending on the version of Windows and the Microsoft Defender products running on your test device, you might see more alerts that appear in a slightly different order.
 
 :::image type="content" source="media/pilot-deploy-investigate-respond/fig6.png" alt-text="A screenshot of an example of a generated alert." lightbox="media/pilot-deploy-investigate-respond/fig6.png":::
 
@@ -277,7 +277,7 @@ Microsoft Defender for Endpoint detections often target the most common attribut
 
 We employ large-scale learning algorithms to establish the normal behavior of common processes within an organization and worldwide and watch for when these processes show anomalous behaviors. These anomalous behaviors often indicate that extraneous code was introduced and is running in an otherwise trusted process.
 
-For this scenario, the process <i>notepad.exe</i> is exhibiting abnormal behavior, involving communication with an external location. This outcome is independent of the specific method used to introduce and execute the malicious code.
+For this scenario, the process <i>notepad.exe</i> is exhibiting abnormal behavior, involving communication with an external location. The detection of this abnormal external communication is independent of the specific method used to introduce and execute the malicious code.
 
 > [!NOTE]
 > Because this alert is based on machine learning models that require additional backend processing, it might take some time before you see this alert in the portal.
@@ -294,7 +294,7 @@ When you select an IP address in the alert process tree, the IP address details 
 
 ##### Alert: User and IP address reconnaissance (SMB) (Source: Microsoft Defender for Identity)
 
-Enumeration using Server Message Block (SMB) protocol enables attackers to get recent user logon information that helps them move laterally through the network to access a specific sensitive account.
+Enumeration using Server Message Block (SMB) protocol enables attackers to get recent user sign-in information that helps them move laterally through the network to access a specific sensitive account.
 
 In this detection, an alert is triggered when the SMB session enumeration runs against a domain controller.
 
@@ -331,7 +331,7 @@ Select the user name to open the user's profile page where further investigation
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=340dee63-452a-4d4b-9ca3-562206a4bc23]
 
-Navigate back to the incident in the Microsoft Defender portal. The **Investigations** tab in the **Incident** page shows the automated investigations that were triggered by Microsoft Defender for Identity and Microsoft Defender for Endpoint. In this example, only the automated investigation triggered by Defender for Endpoint is displayed. By default, Defender for Endpoint automatically remediates the artifacts found in the queue, which requires remediation.
+Navigate back to the incident in the Microsoft Defender portal. The **Investigations** tab in the **Incident** page shows the automated investigations that were triggered by Microsoft Defender for Identity and Microsoft Defender for Endpoint. In the following screenshot, only the automated investigation triggered by Defender for Endpoint is displayed. By default, Defender for Endpoint automatically remediates the artifacts found in the queue, which requires remediation.
 
 :::image type="content" source="media/pilot-deploy-investigate-respond/fig14.png" alt-text="A screenshot of an example of the automated investigations related to the incident." lightbox="media/pilot-deploy-investigate-respond/fig14.png":::
 
@@ -371,15 +371,15 @@ You get to the incident queue from **Incidents & alerts > Incidents** on the qui
 
 :::image type="content" source="media/incidents-ss-incidents.png" alt-text="A screenshot of the Incidents & alerts section in the Microsoft Defender portal." lightbox="media/incidents-ss-incidents.png":::
 
-The **Most recent incidents and alerts** section shows a graph of the number of alerts received and incidents created in the last 24 hours.
+The **Most recent incidents and alerts** section shows a graph of alerts and incidents from the last 24 hours.
 
-To examine the list of incidents and prioritize their importance for assignment and investigation, you can: 
+To review and prioritize incidents, you can: 
 
-- Configure customizable columns (select **Choose columns**) to give you visibility into different characteristics of the incident or the impacted entities. This helps you make an informed decision regarding the prioritization of incidents for analysis.
+- Select **Choose columns** to show details about each incident or its affected entities. Use these details to decide which incidents to analyze first.
 
-- Use filtering to focus on a specific scenario or threat. Applying filters on the incident queue can help determine which incidents require immediate attention. 
+- Apply filters to focus on a specific threat or scenario. Filters help you spot which incidents need quick action. 
 
-From the default incident queue, select **Filters** to see a **Filters** pane, from which you can specify a specific set of incidents. Here's an example.
+From the incident queue, select **Filters** to open the **Filters** pane. Use it to narrow the list to a specific set of incidents. Here's an example.
 
 :::image type="content" source="media/pilot-deploy-investigate-respond/incidents-ss-incidents-filters.png" alt-text="A screenshot of the Filters pane of the Incidents & alerts section in the Microsoft Defender portal." lightbox="media/pilot-deploy-investigate-respond/incidents-ss-incidents-filters.png":::
 
@@ -422,7 +422,7 @@ Here are the ways you can manage your incidents:
   
 - Add comments
 
-  Use comments for progress, notes, or other information based on your security team best practices. The full comment history is available from the **Comments and history** option in the details page of an incident.
+  Use comments to track progress, add notes, or share other details. You can view the full comment history from the **Comments and history** option on the incident details page.
 
 For more information, see [Manage incidents](manage-incidents.md).
 
@@ -430,18 +430,18 @@ For more information, see [Manage incidents](manage-incidents.md).
 
 ## Step 5. Examine automated investigation and response with the Action center
 
-Depending on how automated investigation and response capabilities are configured for your organization, remediation actions are taken automatically or only upon approval by your security operations team. All actions, whether pending or completed, are listed in the [Action center](m365d-action-center.md), which lists pending and completed remediation actions for your devices, email & collaboration content, and identities in one location.
+Based on your organization's setup, remediation actions run automatically or wait for your security team to approve them. The [Action center](m365d-action-center.md) lists all actions in one place, whether pending or done. It covers devices, email & collaboration content, and identities.
 
 Here's an example.
 
 :::image type="content" source="media/m3d-action-center-unified.png" alt-text="A screenshot of the Unified Action center in the Microsoft Defender portal." lightbox="media/m3d-action-center-unified.png":::
 
-From the Action center, you can select pending actions and then approve or reject them in the flyout pane. Here's an example.
+From the Action center, select pending actions. Then approve or reject them in the flyout pane. Here's an example.
 
 :::image type="content" source="media/air-actioncenter-itemselected.png" alt-text="A screenshot of the pane displaying the options to approve or reject an action in the Microsoft Defender portal." lightbox="media/air-actioncenter-itemselected.png":::
 
 
-Approve (or reject) pending actions as soon as possible so that your automated investigations can proceed and complete in a timely manner.
+Approve or reject pending actions as soon as you can. This helps your automated investigations finish on time.
 
 For more information, see [Automated investigation and response](m365d-autoir.md) and [Action center](m365d-action-center.md).
 
@@ -457,16 +457,16 @@ For more information, see [Automated investigation and response](m365d-autoir.md
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=197cbd32-a06e-4efc-ade0-0c9875d7b105]
 
 
-If the [optional fileless PowerShell attack simulation](pilot-deploy-investigate-respond.md#simulate-an-attack-with-an-isolated-domain-controller-and-client-device-optional) were a real attack that had already reached the credential access stage, you can use advanced hunting at any point in the incident investigation to proactively search through events and records in the network using what you already know from the generated alerts and affected entities. 
+If the [optional fileless PowerShell attack simulation](pilot-deploy-investigate-respond.md#simulate-an-attack-with-an-isolated-domain-controller-and-client-device-optional) were a real attack that reached the credential access stage, you can use advanced hunting at any point in the investigation. Advanced hunting lets you search through events and records in the network using what you already know from alerts and affected entities. 
 
-For instance, based on information in the [User and IP address reconnaissance (SMB)](pilot-deploy-investigate-respond.md#alert-user-and-ip-address-reconnaissance-smb-source-microsoft-defender-for-identity) alert, you can use the `IdentityDirectoryEvents` table to find all the SMB session enumeration events, or find more discovery activities in various other protocols in Microsoft Defender for Identity data using the `IdentityQueryEvents` table.
+For example, use info from the [User and IP address reconnaissance (SMB)](pilot-deploy-investigate-respond.md#alert-user-and-ip-address-reconnaissance-smb-source-microsoft-defender-for-identity) alert to query the `IdentityDirectoryEvents` table for SMB session enumeration events. You can also find discovery activity in other protocols by querying the `IdentityQueryEvents` table.
 
 
 ### Hunting environment requirements
 
 There's a single internal mailbox and device required for this simulation. You'll also need an external email account to send the test message.
 
-1. Verify that your tenant has [enabled Microsoft Defender XDR](m365d-enable.md#confirm-that-the-service-is-on).
+1. Verify that your tenant has [enabled Microsoft Defender](m365d-enable.md#confirm-that-the-service-is-on).
 2. Identify a target mailbox to be used for receiving email.
 
    - This mailbox must be monitored by Microsoft Defender for Office 365
@@ -510,7 +510,7 @@ There's a single internal mailbox and device required for this simulation. You'l
    1. Select **Run query**. You might have differing results depending on your pilot environment.
 
       > [!NOTE]
-      > See the next step for filtering options to limit data return.
+      > You can add a **where** condition to filter results, as shown in the following step.
 
       :::image type="content" source="media/pilot-deploy-investigate-respond/advanced-hunting-incident-response-try-1.png" alt-text="A screenshot of the Advanced Hunting page in the Microsoft Defender portal." lightbox="media/pilot-deploy-investigate-respond/advanced-hunting-incident-response-try-1.png":::
 
@@ -530,7 +530,7 @@ There's a single internal mailbox and device required for this simulation. You'l
 
 4. Now that you have verified that you can see the email, add a filter for the attachments. Focus on all emails with attachments in the environment. For this simulation, focus on inbound emails, not those that are being sent out from your environment. Remove any filters you have added to locate your message and add "| where **AttachmentCount > 0** and **EmailDirection** == **"Inbound""**
 
-   The following query will show you the result with a shorter list than your initial query for all email events:
+   The following query returns only inbound emails that have attachments, which narrows the results from your initial query:
 
    ```console
    EmailEvents
@@ -539,7 +539,7 @@ There's a single internal mailbox and device required for this simulation. You'l
 
 5. Next, include the information about the attachment (such as: file name, hashes) to your result set. To do so, join the **EmailAttachmentInfo** table. The common fields to use for joining, in this case are **NetworkMessageId** and **RecipientObjectId**.
 
-   The following query also includes an additional line "| **project-rename EmailTimestamp=Timestamp**" that will help identify which timestamp was related to the email versus timestamps related to file actions that you'll add in the next step.
+   The following query builds on the previous one by joining the **EmailAttachmentInfo** table to add attachment details (such as file name and hashes) to your results. It also renames the timestamp field to **EmailTimestamp** so you can distinguish email timestamps from file action timestamps in later steps.
 
    ```console
    EmailEvents
@@ -550,7 +550,7 @@ There's a single internal mailbox and device required for this simulation. You'l
 
 6. Next, use the **SHA256** value from the **EmailAttachmentInfo** table to find **DeviceFileEvents** (file actions that happened on the endpoint) for that hash. The common field here will be the SHA256 hash for the attachment.
 
-   The resulting table now includes details from the endpoint (Microsoft Defender for Endpoint) such as device name, what action was done (in this case, filtered to only include FileCreated events), and where the file was stored. The account name associated with the process will also be included.
+   The following query extends the previous one by joining the **DeviceFileEvents** table using the **SHA256** hash. This correlates email attachments with file actions on the endpoint, so you can see which devices received the file and what happened to it. The results include endpoint details from Microsoft Defender for Endpoint, such as device name, action type (filtered to FileCreated events), file storage location, and the account name associated with the process.
 
    ```console
    EmailEvents
@@ -593,13 +593,13 @@ Custom detections will run the query according to the frequency you set, and the
 
    :::image type="content" source="media/pilot-deploy-investigate-respond/fig23.png" alt-text="A screenshot of the Alert details page in the Microsoft Defender portal." lightbox="media/pilot-deploy-investigate-respond/fig23.png":::
 
-   Ensure that you fill out the fields with clarity to help give the next user an informed decision about this detection rule alert
+   Ensure that you fill out the fields with clarity to help give the next user an informed decision about this detection rule alert.
 
 3. Select what entities are impacted in this alert. In this case, select **Device** and **Mailbox**.
 
    :::image type="content" source="media/pilot-deploy-investigate-respond/fig24.png" alt-text="A screenshot of the Impacted entities details page in the Microsoft Defender portal." lightbox="media/pilot-deploy-investigate-respond/fig24.png":::
 
-4. Determine what actions should take place if the alert is triggered. In this case, run an antivirus scan, though other actions could be taken.
+4. Determine what actions should take place if the alert is triggered. For this detection rule, run an antivirus scan, though other actions could be taken.
 
    :::image type="content" source="media/pilot-deploy-investigate-respond/fig25.png" alt-text="A screenshot of the Actions page in the Microsoft Defender portal." lightbox="media/pilot-deploy-investigate-respond/fig25.png":::
 
@@ -608,7 +608,7 @@ Custom detections will run the query according to the frequency you set, and the
    :::image type="content" source="media/pilot-deploy-investigate-respond/fig26.png" alt-text="A screenshot of the Scope page in the Microsoft Defender portal." lightbox="media/pilot-deploy-investigate-respond/fig26.png":::
 
 
-   For this pilot, you might want to limit this rule to a subset of testing devices in your production environment.
+   For this Microsoft Defender XDR pilot deployment, you might want to limit this rule to a subset of testing devices in your production environment.
 
 6. Select **Create**. Then, select **Custom detection rules** from the navigation panel.
 
@@ -630,4 +630,4 @@ See [Get expert training on advanced hunting](advanced-hunting-expert-training.m
 <a name="next-step"></a>
 ## Next steps
 
-Incorporate information from [Investigate and respond with Microsoft Defender XDR](incident-response-overview.md) into your SecOps processes.
+Incorporate information from [Investigate and respond with Microsoft Defender](incident-response-overview.md) into your SecOps processes.
