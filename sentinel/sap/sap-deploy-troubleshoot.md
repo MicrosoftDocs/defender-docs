@@ -159,7 +159,7 @@ It uses a simplified scheduler. The SAP threat protection scope remains the same
 
 ## CL_SAL_HELPER=>TT_R_CLIENT type not found
 
-This error can occur for various reasons in a variety of SAP Support Package levels that require import of SAP notes to fix the underlying bugs in the SAP standard code. Ensure the function module RSAU_API_GET_LOG_DATA is **remote enabled**, trigger a manual run from the SAP transaction code SE37, and **inspect the output**. The response must show at least one entry in ET_LOG export parameters table.
+This error can occur for various reasons in a variety of SAP Support Package levels that require import of SAP notes to fix the underlying bugs in the SAP standard code. Ensure the function module RSAU_API_GET_LOG_DATA is **remote enabled**, trigger a [manual run from the SAP transaction code SE37](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/SAP/Tools/IntegrationSuite/AUDIT-LOG-SMOKE-TEST.md), and **inspect the output**. The response must show at least one entry in ET_LOG export parameters table.
 
 The [connector prerequisites section](prerequisites-for-deploying-sap-continuous-threat-monitoring.md#sap-prerequisites-for-the-agentless-data-connector) lists typical SAP support notes that helped customers in such situations before. The list is not considered complete and only serves as entry point into a customer's individual path to fix SAP's standard functions, which may vary based on their current support package level and associated upgrade journey.
 
