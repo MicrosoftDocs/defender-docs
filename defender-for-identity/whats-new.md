@@ -122,7 +122,6 @@ These new alerts were added to the Defender for Identity security alerts:
 - [Failed credential abuse attempt in Entra ID authentication](alerts-xdr.md#failed-credential-abuse-attempt-in-entra-id-authentication)
 - [Malicious sign in from a randomized user agent](alerts-xdr.md#malicious-sign-in-from-a-randomized-user-agent)
 - [Possible use of a stolen session cookie](alerts-xdr.md#possible-use-of-a-stolen-session-cookie)
-- [Stolen session cookie replay detected](alerts-xdr.md#stolen-session-cookie-replay-detected)
 - [Suspected Conditional Access bypass via non-compliant device](alerts-xdr.md#suspected-conditional-access-bypass-via-non-compliant-device)
 - [Suspicious addition of default third-party MFA method to user account](alerts-xdr.md#suspicious-addition-of-default-thirdparty-mfa-method-to-user-account)
 
