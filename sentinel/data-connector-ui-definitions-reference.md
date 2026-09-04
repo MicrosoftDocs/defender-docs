@@ -24,7 +24,7 @@ To create a data connector with the Codeless Connector Framework (CCF), use this
 
 - `connectorUiConfig` - defines the visual elements and text displayed on the data connector page in Microsoft Sentinel.
 
-For more information, see [Create a codeless connector](create-codeless-connector.md).
+For more information, see [Create a codeless connector](isv/create-codeless-connector.md).
 
 ## Data connector definitions - Create or update
 

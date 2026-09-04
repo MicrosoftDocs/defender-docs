@@ -102,24 +102,24 @@ You can onboard Windows clients and other devices in Intune by using the Intune 
 
 When you set up automatic enrollment, users add their work account to the device. In the background, the device registers and joins Microsoft Entra ID and is enrolled in Intune.
 
-1. Go to the Azure portal ([https://portal.azure.com/](https://portal.azure.com/)) and sign in.
+1. Go to the Microsoft Entra admin center ([https://entra.microsoft.com/](https://entra.microsoft.com/)) and sign in.
 
-2. Select **Microsoft Entra ID** \> **Mobility (MDM and MAM)** \> **Microsoft Intune**.
+1. Select **Entra ID** > **Mobility** > **Microsoft Intune**.
 
-3. Configure the **MDM User scope** and the **MAM user scope**.
+1. Configure the **MDM User scope** and the **Windows Information Protection (WIP) user scope**.
 
-   :::image type="content" source="media/mem-mam-scope-azure-ad.png" alt-text="Screenshot of setting MDM user scope and MAM user scope in Intune.":::
+   :::image type="content" source="media/mem-wip-scope-entra-admin.png" alt-text="Screenshot of setting MDM user scope and WIP user scope in Entra admin center.":::
 
    - For MDM User scope, we recommend that you select **All** so that all users can automatically enroll their Windows devices.
-   - In the MAM user scope section, we recommend the following default values for the URLs:
+   - In the WIP user scope section, we recommend the following default values for the URLs:
 
-       - **MDM Terms of use URL**
-       - **MDM Discovery URL**
-       - **MDM Compliance URL**
+       - **WIP terms of use URL**
+       - **WIP discovery URL**
+       - **WIP compliance URL**
 
-4. Select **Save**.
+1. Select **Save**.
 
-5. After a device is enrolled in Intune, you can add it to a device group in Defender for Business. [Learn more about device groups in Defender for Business](mdb-create-edit-device-groups.md).
+1. After a device is enrolled in Intune, you can add it to a device group in Defender for Business. [Learn more about device groups in Defender for Business](mdb-create-edit-device-groups.md).
 
 > [!TIP]
 > To learn more, see [Enable Windows automatic enrollment](/intune/intune-service/enrollment/windows-enroll).

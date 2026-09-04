@@ -11,9 +11,7 @@ ms.custom: msecd-doc-authoring-1016
 > [!IMPORTANT]
 > File policies retire on January 6, 2027. To maintain file-based data protection, [migrate to Microsoft Purview DLP or auto-labeling policies](migrate-file-policies-to-purview.md).
 
-
-
-Microsoft Defender for Cloud Apps supports regular expressions (RegEx) for pattern matching in content inspection and file policies. This article covers the supported RegEx syntax, known limitations, and provides examples to help you build effective expressions for your policies.
+Microsoft Defender for Cloud Apps supports regular expressions (RegEx) for pattern matching in content inspection and file policies. Use the supported RegEx syntax, known limitations, and examples to build effective expressions for your policies.
 
 ## Regular expressions in Defender for Cloud Apps
 
