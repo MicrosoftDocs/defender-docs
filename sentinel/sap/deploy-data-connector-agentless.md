@@ -161,6 +161,7 @@ The following parameters control overall data collection behavior for the agentl
 | **ingestion-cycle-days** | Time, in days, given to ingest the full User Master data, including all roles and users. This parameter doesn't affect the ingestion of changes to User Master data. | Integer, between **1**-**14** | **7** |
 | **collect-user-master-data-users** | Determines whether User Details data is ingested or not to the tables `ABAPUserDetails`. | **true**: Ingested, **false**: Not ingested | **true** |
 | **collect-user-master-data-roles** | Determines whether Role Authorization data is ingested or not to the tables `ABAPAuthorizationDetails`. | **true**: Ingested, **false**: Not ingested | **true** |
+| **excluded-audit-users** | SAP users excluded from audit log selection. Often used to balance chatty batch jobs user log volumes vs. threat protection value. | Comma separated list of user names | |
 | **offset-in-seconds** | Determines the offset, in seconds, for both the start and end times of a data collection window. Use this parameter to delay data collection by the configured number of seconds. | Integer, between **1**-**600** | **60** |
 
 #### Audit Log parameters
