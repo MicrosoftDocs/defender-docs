@@ -120,7 +120,7 @@ You configured Email & collaboration permissions in the Defender portal at <http
 | View-Only Record Management | Role | Security operations \ Security data \ Security data basics (read) |
 | View-Only Retention Management | Role | Security operations \ Security data \ Security data basics (read) |
 
-To identify which built-in Microsoft Purview role groups include a given role, see [Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview](https://learn.microsoft.com/en-us/defender-office-365/scc-permissions#role-groups-in-microsoft-defender-for-office-365-and-microsoft-purview).
+To identify which built-in Microsoft Purview role groups include a given role, see [Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview](/defender-office-365/scc-permissions#role-groups-in-microsoft-defender-for-office-365-and-microsoft-purview).
 
 > [!NOTE]
 > Permissions are mapped at the individual-role level. When an imported assignment is based on a role group, the resulting Microsoft Defender unified RBAC role receives the union of the mapped permissions for the roles assigned to that role group. Depending on how the source permission was assigned, you might see either a role name or a role-group name in the imported Microsoft Defender unified RBAC view.
